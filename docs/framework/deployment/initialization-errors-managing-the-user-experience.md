@@ -5,105 +5,97 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: a0b03f2b5c0c656b8800d1b2ceff9b774a5c65d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# .NET Framework 初始化錯誤：管理使用者經驗
-Common Language Runtime \(CLR\) 啟動系統是用來決定執行 Managed 應用程式程式碼的 CLR 版本。  在某些情況下，啟動系統可能會找不到 CLR 的版本。  這種情況通常發生在應用程式需要的 CLR 版本無效或未安裝在特定電腦上。  如果找不到要求的版本， CLR 啟動系統從呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會顯示錯誤訊息給執行應用程式的使用者。  本文提供了HRESULT程式碼清單並說明如何防止錯誤訊息出現。  
+# <a name="net-framework-initialization-errors-managing-the-user-experience"></a><span data-ttu-id="3d9b6-102">.NET Framework 初始化錯誤：管理使用者經驗</span><span class="sxs-lookup"><span data-stu-id="3d9b6-102">.NET Framework Initialization Errors: Managing the User Experience</span></span>
+<span data-ttu-id="3d9b6-103">Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應用程式碼的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-103">The common language runtime (CLR) activation system determines the version of the CLR that will be used to run managed application code.</span></span> <span data-ttu-id="3d9b6-104">在某些情況下，啟用系統可能找不到要載入的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-104">In some cases, the activation system might not be able to find a version of the CLR to load.</span></span> <span data-ttu-id="3d9b6-105">應用程式需要無效或未安裝在指定電腦上的 CLR 版本時，通常會發生這種情況。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-105">This situation typically occurs when an application requires a CLR version that is invalid or not installed on a given computer.</span></span> <span data-ttu-id="3d9b6-106">如果找不到要求的版本，CLR 啟用系統會從已呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會向執行應用程式的使用者顯示錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-106">If the requested version is not found, the CLR activation system returns an HRESULT error code from the function or interface that was called, and may display an error message to the user who is running the application.</span></span> <span data-ttu-id="3d9b6-107">本文提供 HRESULT 代碼清單，並說明如何防止顯示錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-107">This article provides a list of HRESULT codes and explains how you can prevent the error message from being displayed.</span></span>  
   
- CLR 可記錄基礎結構，協助您偵錯 CLR 啟動的問題，如 [如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)所述。  此基礎結構應該不會和 [組件繫結記錄檔](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)混淆，因二者完全不同。  
+ <span data-ttu-id="3d9b6-108">CLR 提供記錄基礎結構來協助您偵錯 CLR 啟用問題 (如[如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)中所述)。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-108">The CLR provides logging infrastructure to help you debug CLR activation issues, as described in [How to: Debug CLR Activation Issues](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).</span></span> <span data-ttu-id="3d9b6-109">此基礎結構不應該與[組件繫結記錄](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)混淆，兩者完全不同。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-109">This infrastructure should not be confused with [assembly binding logs](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), which are entirely different.</span></span>  
   
-## CLR 啟動 HRESULT 程式碼  
- CLR 啟動應用程式開發介面會傳回 HRESULT 編碼，以向主機報告啟動作業的結果。  CLR 主機應用程式永遠應該在其他作業執行之前先參閱這些傳回值。  
+## <a name="clr-activation-hresult-codes"></a><span data-ttu-id="3d9b6-110">CLR 啟用 HRESULT 代碼</span><span class="sxs-lookup"><span data-stu-id="3d9b6-110">CLR Activation HRESULT Codes</span></span>  
+ <span data-ttu-id="3d9b6-111">CLR 啟用 API 會傳回 HRESULT 代碼，以向主機報告啟用作業的結果。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-111">The CLR activation APIs return HRESULT codes to report the result of an activation operation to a host.</span></span> <span data-ttu-id="3d9b6-112">CLR 主機應該一律先查閱這些傳回值，再繼續其他作業。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-112">CLR hosts should always consult these return values before proceeding with additional operations.</span></span>  
   
--   CLR\_E\_SHIM\_RUNTIMELOAD  
+-   <span data-ttu-id="3d9b6-113">CLR_E_SHIM_RUNTIMELOAD</span><span class="sxs-lookup"><span data-stu-id="3d9b6-113">CLR_E_SHIM_RUNTIMELOAD</span></span>  
   
--   CLR\_E\_SHIM\_RUNTIMEEXPORT  
+-   <span data-ttu-id="3d9b6-114">CLR_E_SHIM_RUNTIMEEXPORT</span><span class="sxs-lookup"><span data-stu-id="3d9b6-114">CLR_E_SHIM_RUNTIMEEXPORT</span></span>  
   
--   CLR\_E\_SHIM\_INSTALLROOT  
+-   <span data-ttu-id="3d9b6-115">CLR_E_SHIM_INSTALLROOT</span><span class="sxs-lookup"><span data-stu-id="3d9b6-115">CLR_E_SHIM_INSTALLROOT</span></span>  
   
--   CLR\_E\_SHIM\_INSTALLCOMP  
+-   <span data-ttu-id="3d9b6-116">CLR_E_SHIM_INSTALLCOMP</span><span class="sxs-lookup"><span data-stu-id="3d9b6-116">CLR_E_SHIM_INSTALLCOMP</span></span>  
   
--   CLR\_E\_SHIM\_LEGACYRUNTIMEALREADYBOUND  
+-   <span data-ttu-id="3d9b6-117">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span><span class="sxs-lookup"><span data-stu-id="3d9b6-117">CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND</span></span>  
   
--   CLR\_E\_SHIM\_SHUTDOWNINPROGRESS  
+-   <span data-ttu-id="3d9b6-118">CLR_E_SHIM_SHUTDOWNINPROGRESS</span><span class="sxs-lookup"><span data-stu-id="3d9b6-118">CLR_E_SHIM_SHUTDOWNINPROGRESS</span></span>  
   
-## 初始化錯誤的 UI  
- 如果 CLR 啟動系統無法載入應用程式需要執行階段的正確版本，則會顯示錯誤訊息給使用者以通知他們的電腦未正確設定執行應用程式，並提供其機會來補救此狀況。  在這種情況下，通常會出現下列錯誤訊息。  使用者可以選擇 **Yes**前往Microsoft網站，即可為應用程式下載正確的 .NET Framework 版本。  
+## <a name="ui-for-initialization-errors"></a><span data-ttu-id="3d9b6-119">初始化錯誤的 UI</span><span class="sxs-lookup"><span data-stu-id="3d9b6-119">UI for Initialization Errors</span></span>  
+ <span data-ttu-id="3d9b6-120">如果 CLR 啟用系統無法載入應用程式所需執行階段的正確版本，則會向使用者顯示錯誤訊息，通知他們的電腦未正確設定成執行應用程式，並提供機會來修正這個狀況。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-120">If the CLR activation system cannot load the correct version of the runtime that is required by an application, it displays an error message to users to inform them that their computer is not properly configured to run the application, and provides them with an opportunity to remedy the situation.</span></span> <span data-ttu-id="3d9b6-121">在此情況下，通常會顯示下列錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-121">The following error message is typically presented in this situation.</span></span> <span data-ttu-id="3d9b6-122">使用者可以選擇 [是] 前往 Microsoft 網站，以在其中下載應用程式的正確 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-122">The user can choose **Yes** to go to a Microsoft website where they can download the correct .NET Framework version for the application.</span></span>  
   
- ![&#91;.NET Framework 初始化錯誤&#93; 對話方塊](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog")  
-初始化錯誤下的典型錯誤訊息  
+ <span data-ttu-id="3d9b6-123">![[.NET Framework 初始化錯誤] 對話方塊](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog")</span><span class="sxs-lookup"><span data-stu-id="3d9b6-123">![.NET Framework Initialization Error dialog box](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog")</span></span>  
+<span data-ttu-id="3d9b6-124">初始化錯誤的一般錯誤訊息</span><span class="sxs-lookup"><span data-stu-id="3d9b6-124">Typical error message for initialization errors</span></span>  
   
-## 解決初始化錯誤。  
- 身為開發人員，您可以控制 .NET Framework 初始化錯誤訊息的各種選項。  例如，您可以使用應用程式開發介面旗標以不顯示訊息，如下一節中所述。  不過，您還是必須解決防止應用程式載入要求的執行階段的問題。  否則，應用程式可能無法執行，或部分功能可能無法使用。  
+## <a name="resolving-the-initialization-error"></a><span data-ttu-id="3d9b6-125">解決初始化錯誤</span><span class="sxs-lookup"><span data-stu-id="3d9b6-125">Resolving the Initialization Error</span></span>  
+ <span data-ttu-id="3d9b6-126">身為開發人員，您會有各種不同的選項可控制 .NET Framework 初始化錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-126">As a developer, you have a variety of options for controlling the .NET Framework initialization error message.</span></span> <span data-ttu-id="3d9b6-127">例如，您可以使用 API 旗標來防止顯示訊息，如下節所討論。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-127">For example, you can use an API flag to prevent the message from being displayed, as discussed in the next section.</span></span> <span data-ttu-id="3d9b6-128">不過，您仍然必須解決問題，防止應用程式載入所要求的執行階段。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-128">However, you still have to resolve the issue that prevented your application from loading the requested runtime.</span></span> <span data-ttu-id="3d9b6-129">否則，您的應用程式可能根本未執行，或某些功能可能無法使用。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-129">Otherwise, your application may not run at all, or some functionality may not be available.</span></span>  
   
- 若要修正基礎問題並提供最佳的使用者經驗 \(更少的錯誤訊息\)，我們的建議如下:  
+ <span data-ttu-id="3d9b6-130">若要解決基礎問題，並提供最佳使用者體驗 (錯誤訊息較少)，建議使用下列各項：</span><span class="sxs-lookup"><span data-stu-id="3d9b6-130">To resolve the underlying issues and provide the best user experience (fewer error messages), we recommend the following:</span></span>  
   
--   在 .NET Framework 3.5 \(及舊版\) 應用程式：設定應用程式支援 .NET Framework 4 或 4.5 \(請參閱\)[命令](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。  
+-   <span data-ttu-id="3d9b6-131">.NET Framework 3.5 (和更早版本) 應用程式：設定應用程式以支援 .NET Framework 4 或 4.5 (請參閱[指示](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md))。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-131">For .NET Framework 3.5 (and earlier) applications: Configure your application to support the .NET Framework 4 or 4.5 (see [instructions](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).</span></span>  
   
--   在 .NET Framework 4 應用程式：安裝 .NET Framework 4 可轉散發套件\(在應用程式安裝中的一部分\)。  請參閱 [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。  
+-   <span data-ttu-id="3d9b6-132">.NET Framework 4 應用程式：在應用程式安裝期間安裝 .NET Framework 4 可轉散發套件。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-132">For .NET Framework 4 applications: Install the .NET Framework 4 redistributable package as part of your application setup.</span></span> <span data-ttu-id="3d9b6-133">請參閱[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-133">See [Deployment Guide for Developers](../../../docs/framework/deployment/deployment-guide-for-developers.md).</span></span>  
   
-## 控制錯誤訊息  
- 顯示錯誤資訊以通知「所要求的 .NET Framework 版本找不到」對使用者可被視為一個有用的服務或次要解析錯誤。  不論是哪種情況，您可以傳遞旗標來控制這個 UI 以對應啟動應用程式開發介面。  
+## <a name="controlling-the-error-message"></a><span data-ttu-id="3d9b6-134">控制錯誤訊息</span><span class="sxs-lookup"><span data-stu-id="3d9b6-134">Controlling the Error Message</span></span>  
+ <span data-ttu-id="3d9b6-135">顯示可溝通找不到所要求 .NET Framework 版本的錯誤訊息，可以檢視為使用者的有用服務或較不惱人。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-135">Displaying an error message to communicate that a requested .NET Framework version was not found can be viewed as either a helpful service or a minor annoyance to users.</span></span> <span data-ttu-id="3d9b6-136">在任一情況下，您都可以將旗標傳遞給啟用 API 來控制此 UI。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-136">In either case, you can control this UI by passing flags to the activation APIs.</span></span>  
   
- [ICLRMetaHostPolicy::GetRequestedRuntime](../Topic/ICLRMetaHostPolicy::GetRequestedRuntime%20Method.md) 方法會接受一個 [METAHOST\_POLICY\_FLAGS](../../../ocs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 列舉成員做為輸入。  如果CLR 的要求版本找不到，則可以加入 METAHOST\_POLICY\_SHOW\_ERROR\_DIALOG 旗標來要求錯誤訊息 。  根據預設，錯誤訊息不會顯示。\( [ICLRMetaHost::GetRuntime](../Topic/ICLRMetaHost::GetRuntime%20Method.md) 方法不接受這個旗標，且不提供任何其他方式顯示錯誤訊息\)。  
+ <span data-ttu-id="3d9b6-137">[ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法會接受 [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 列舉成員作為輸入。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-137">The [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method accepts a [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumeration member as input.</span></span> <span data-ttu-id="3d9b6-138">如果找不到所要求的 CLR 版本，您可以包括 METAHOST_POLICY_SHOW_ERROR_DIALOG 旗標來要求錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-138">You can include the METAHOST_POLICY_SHOW_ERROR_DIALOG flag to request an error message if the requested version of the CLR is not found.</span></span> <span data-ttu-id="3d9b6-139">根據預設，不會顯示錯誤訊息</span><span class="sxs-lookup"><span data-stu-id="3d9b6-139">By default, the error message is not displayed.</span></span> <span data-ttu-id="3d9b6-140">([ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 方法不接受這個旗標，並且不提供任何其他方式來顯示錯誤訊息)。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-140">(The [ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) method does not accept this flag, and does not provide any other way to display the error message.)</span></span>  
   
- Windows 提供 [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242) 函式，可讓您設定是否要顯示處理序執行的程式碼所造成的錯誤訊息。  您可以指定 SEM\_FAILCRITICALERRORS 旗標以防止錯誤訊息出現。  
+ <span data-ttu-id="3d9b6-141">Windows 提供了 [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242) 函式，可讓您用來宣告是否要顯示處理序內執行的程式碼所造成的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-141">Windows provides a [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242) function that you can use to declare whether you want error messages to be shown as a result of code that runs within your process.</span></span> <span data-ttu-id="3d9b6-142">您可以指定 SEM_FAILCRITICALERRORS 旗標，以防止顯示錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-142">You can specify the SEM_FAILCRITICALERRORS flag to prevent the error message from being displayed.</span></span>  
   
- 不過，在某些情況下，覆寫應用程式處理序設定的 SEM\_FAILCRITICALERRORS 設定是很重要的。  例如，如果您有裝載 CLR，並在處理序所裝載設定 SEM\_FAILCRITICALERRORS 的原生 COM 元件，您可能想要以顯示該特定應用程式處理序中之錯誤訊息的影響覆寫旗標。  在這種情況下，您可以使用下列的旗標覆寫 SEM\_FAILCRITICALERRORS:  
+ <span data-ttu-id="3d9b6-143">不過，在某些情況下，務必覆寫應用程式處理序所設定的 SEM_FAILCRITICALERRORS 設定。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-143">However, in some scenarios, it is important to override the SEM_FAILCRITICALERRORS setting set by an application process.</span></span> <span data-ttu-id="3d9b6-144">例如，如果您的原生 COM 元件裝載 CLR，並裝載在設定 SEM_FAILCRITICALERRORS 的處理序中，則根據在該特定應用程式處理序中顯示錯誤訊息的影響，您可能會想要覆寫旗標。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-144">For example, if you have a native COM component that hosts the CLR and that is hosted in a process where SEM_FAILCRITICALERRORS is set, you may want to override the flag, depending on the impact of displaying error messages within that particular application process.</span></span> <span data-ttu-id="3d9b6-145">在此情況下，您可以使用下列其中一個旗標來覆寫 SEM_FAILCRITICALERRORS：</span><span class="sxs-lookup"><span data-stu-id="3d9b6-145">In this case, you can use one of the following flags to override SEM_FAILCRITICALERRORS:</span></span>  
   
--   使用 [ICLRMetaHostPolicy::GetRequestedRuntime](../Topic/ICLRMetaHostPolicy::GetRequestedRuntime%20Method.md) 方法的 METAHOST\_POLICY\_IGNORE\_ERROR\_MODE。  
+-   <span data-ttu-id="3d9b6-146">搭配使用 METAHOST_POLICY_IGNORE_ERROR_MODE 與 [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-146">Use METAHOST_POLICY_IGNORE_ERROR_MODE with the [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method.</span></span>  
   
--   使用 [GetRequestedRuntimeInfo](../../../ocs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) 函式的 RUNTIME\_INFO\_IGNORE\_ERROR\_MODE。  
+-   <span data-ttu-id="3d9b6-147">搭配使用 RUNTIME_INFO_IGNORE_ERROR_MODE 與 [GetRequestedRuntimeInfo](../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) 函式。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-147">Use RUNTIME_INFO_IGNORE_ERROR_MODE with the [GetRequestedRuntimeInfo](../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) function.</span></span>  
   
-## CLR\-Provided Hosts 的UI 原則  
- CLR 包含一組主機應用程式中不同的案例，而且這些主機全部都會顯示錯誤訊息，當它們在載入執行階段時必要版本時遇到問題。  下表提供主應用程式及其錯誤訊息原則清單。  
+## <a name="ui-policy-for-clr-provided-hosts"></a><span data-ttu-id="3d9b6-148">CLR 所提供主機的 UI 原則</span><span class="sxs-lookup"><span data-stu-id="3d9b6-148">UI Policy for CLR-Provided Hosts</span></span>  
+ <span data-ttu-id="3d9b6-149">CLR 會針對各種情況包括一組主機，而且這些主機只要在載入必要執行階段版本時發生問題時就會顯示錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-149">The CLR includes a set of hosts for a variety of scenarios, and these hosts all display an error message when they encounter problems loading the required version of the runtime.</span></span> <span data-ttu-id="3d9b6-150">下表提供主機和其錯誤訊息原則清單。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-150">The following table provides a list of hosts and their error message policies.</span></span>  
   
-|CLR 主應用程式|描述|錯誤訊息原則|錯誤訊息可以停用嗎?|  
-|---------------|--------|------------|----------------|  
-|Managed EXE host|啟動 Managed EXE。|在一個遺漏的 .NET Framework 版本的情況下顯示|否|  
-|Managed COM host|載入 Managed COM 元件至處理序。|在一個遺漏的 .NET Framework 版本的情況下顯示|是，藉由設定 SEM\_FAILCRITICALERRORS 旗標|  
-|ClickOnce 主應用程式|啟動 ClickOnce 應用程式。|在一個遺漏的 .NET Framework 版本的情況下顯示，從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]開始。|否|  
-|XBAP 主應用程式|啟動 XBAP WPF 應用程式。|在一個遺漏的 .NET Framework 版本的情況下顯示，從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]開始。|否|  
+|<span data-ttu-id="3d9b6-151">CLR 主機</span><span class="sxs-lookup"><span data-stu-id="3d9b6-151">CLR host</span></span>|<span data-ttu-id="3d9b6-152">描述</span><span class="sxs-lookup"><span data-stu-id="3d9b6-152">Description</span></span>|<span data-ttu-id="3d9b6-153">錯誤訊息原則</span><span class="sxs-lookup"><span data-stu-id="3d9b6-153">Error message policy</span></span>|<span data-ttu-id="3d9b6-154">可以停用錯誤訊息？</span><span class="sxs-lookup"><span data-stu-id="3d9b6-154">Can error message be disabled?</span></span>|  
+|--------------|-----------------|--------------------------|------------------------------------|  
+|<span data-ttu-id="3d9b6-155">Managed EXE 主機</span><span class="sxs-lookup"><span data-stu-id="3d9b6-155">Managed EXE host</span></span>|<span data-ttu-id="3d9b6-156">啟動 Managed EXE。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-156">Launches managed EXEs.</span></span>|<span data-ttu-id="3d9b6-157">會在遺漏 .NET Framework 版本時顯示</span><span class="sxs-lookup"><span data-stu-id="3d9b6-157">Is shown in case of a missing .NET Framework version</span></span>|<span data-ttu-id="3d9b6-158">否</span><span class="sxs-lookup"><span data-stu-id="3d9b6-158">No</span></span>|  
+|<span data-ttu-id="3d9b6-159">Managed COM 主機</span><span class="sxs-lookup"><span data-stu-id="3d9b6-159">Managed COM host</span></span>|<span data-ttu-id="3d9b6-160">將 Managed COM 元件載入處理序。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-160">Loads managed COM components into a process.</span></span>|<span data-ttu-id="3d9b6-161">會在遺漏 .NET Framework 版本時顯示</span><span class="sxs-lookup"><span data-stu-id="3d9b6-161">Is shown in case of a missing .NET Framework version</span></span>|<span data-ttu-id="3d9b6-162">是，設定 SEM_FAILCRITICALERRORS 旗標</span><span class="sxs-lookup"><span data-stu-id="3d9b6-162">Yes, by setting the SEM_FAILCRITICALERRORS flag</span></span>|  
+|<span data-ttu-id="3d9b6-163">ClickOnce 主機</span><span class="sxs-lookup"><span data-stu-id="3d9b6-163">ClickOnce host</span></span>|<span data-ttu-id="3d9b6-164">啟動 ClickOnce 應用程式。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-164">Launches ClickOnce applications.</span></span>|<span data-ttu-id="3d9b6-165">從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，會在遺漏 .NET Framework 版本時顯示</span><span class="sxs-lookup"><span data-stu-id="3d9b6-165">Is shown in case of a missing .NET Framework version, starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]</span></span>|<span data-ttu-id="3d9b6-166">否</span><span class="sxs-lookup"><span data-stu-id="3d9b6-166">No</span></span>|  
+|<span data-ttu-id="3d9b6-167">XBAP 主機</span><span class="sxs-lookup"><span data-stu-id="3d9b6-167">XBAP host</span></span>|<span data-ttu-id="3d9b6-168">啟動 WPF XBAP 應用程式。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-168">Launches WPF XBAP applications.</span></span>|<span data-ttu-id="3d9b6-169">從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，會在遺漏 .NET Framework 版本時顯示</span><span class="sxs-lookup"><span data-stu-id="3d9b6-169">Is shown in case of a missing .NET Framework version, starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]</span></span>|<span data-ttu-id="3d9b6-170">否</span><span class="sxs-lookup"><span data-stu-id="3d9b6-170">No</span></span>|  
   
-## [!INCLUDE[win8](../../../includes/win8-md.md)] 行為和 UI  
- CLR 啟動系統在做為 Windows 作業系統上的其他版本所做的 [!INCLUDE[win8](../../../includes/win8-md.md)] 提供相同的行為和 UI，除了遇到載入 CLR 2.0 的問題。  [!INCLUDE[win8](../../../includes/win8-md.md)] 包含使用 CLR 4.5的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，。不過， [!INCLUDE[win8](../../../includes/win8-md.md)] 不包含 .NET Framework 2.0、3.0 或 3.5，此兩者都使用 CLR 2.0。  因此，必須依賴 CLR 2.0 的應用程式在 [!INCLUDE[win8](../../../includes/win8-md.md)] 預設為不會執行。  相反地，它們顯示下列對話方塊讓使用者可安裝 .NET Framework 3.5。  使用者也可以在控制台中啟用 .NET Framework 3.5。  這兩種選擇在本文 [Installing the .NET Framework 3.5 on Windows 8 and later versions](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md)中會討論到。  
+## <a name="includewin8includeswin8-mdmd-behavior-and-ui"></a>[!INCLUDE[win8](../../../includes/win8-md.md)]<span data-ttu-id="3d9b6-171"> 行為和 UI</span><span class="sxs-lookup"><span data-stu-id="3d9b6-171"> Behavior and UI</span></span>  
+ <span data-ttu-id="3d9b6-172">CLR 啟用系統在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供的行為和 UI 與其他 Windows 作業系統版本相同，但載入 CLR 2.0 時發生問題時除外。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-172">The CLR activation system provides the same behavior and UI on [!INCLUDE[win8](../../../includes/win8-md.md)] as it does on other versions of the Windows operating system, except when it encounters issues loading CLR 2.0.</span></span> [!INCLUDE[win8](../../../includes/win8-md.md)]<span data-ttu-id="3d9b6-173"> 包括使用 CLR 4.5 的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-173"> includes the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], which uses CLR 4.5.</span></span> <span data-ttu-id="3d9b6-174">不過，[!INCLUDE[win8](../../../includes/win8-md.md)] 不會包括全都使用 CLR 2.0 的 .NET Framework 2.0、3.0 或 3.5。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-174">However, [!INCLUDE[win8](../../../includes/win8-md.md)] does not include the .NET Framework 2.0, 3.0, or 3.5, which all use CLR 2.0.</span></span> <span data-ttu-id="3d9b6-175">因此，相依於 CLR 2.0 的應用程式預設不會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上執行。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-175">As a result, applications that depend on CLR 2.0 do not run on [!INCLUDE[win8](../../../includes/win8-md.md)] by default.</span></span> <span data-ttu-id="3d9b6-176">相反地，它們會顯示下列對話方塊，讓使用者可以安裝 .NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-176">Instead, they display the following dialog box to enable users to install the .NET Framework 3.5.</span></span> <span data-ttu-id="3d9b6-177">使用者也可以在控制台中啟用 .NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-177">Users can also enable the .NET Framework 3.5 in Control Panel.</span></span> <span data-ttu-id="3d9b6-178">[在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md) 文章討論這兩個選項。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-178">Both options are discussed in the article [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).</span></span>  
   
- ![在 Windows 8 上安裝 3.5 時顯示的對話方塊](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
-視需要提示安裝 .NET Framework 3.5  
+ <span data-ttu-id="3d9b6-179">![在 Windows 8 上安裝 3.5 時顯示的對話方塊](../../../docs/framework/deployment/media/installdialog.png "installdialog")</span><span class="sxs-lookup"><span data-stu-id="3d9b6-179">![Dialog box for 3.5 install on Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog")</span></span>  
+<span data-ttu-id="3d9b6-180">視需要提示安裝 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="3d9b6-180">Prompt for installing the .NET Framework 3.5 on demand</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 取代了在使用者電腦上的 .NET Framework 4 \(CLR 4\)。  因此， .NET Framework 4 應用程式緊密地執行，在 [!INCLUDE[win8](../../../includes/win8-md.md)]中不會顯示這個對話方塊。  
+>  <span data-ttu-id="3d9b6-181">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會取代使用者電腦上的 .NET Framework 4 (CLR 4)。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-181">The [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] replaces the .NET Framework 4 (CLR 4) on the user's computer.</span></span> <span data-ttu-id="3d9b6-182">因此，.NET Framework 4 應用程式會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上平順地執行，而不會顯示此對話方塊。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-182">Therefore, .NET Framework 4 applications run seamlessly, without displaying this dialog box, on [!INCLUDE[win8](../../../includes/win8-md.md)].</span></span>  
   
- 在 .NET Framework 3.5 安裝時，使用者可以執行需要 .NET Framework 2.0，3.0 或 3.5 為目標的應用程式，在他們的 [!INCLUDE[win8](../../../includes/win8-md.md)] 電腦上。  他們也可以執行 .NET Framework 1.0 和 1.1 版應用程式，在這些應用程式不明確地設定只執行在 .NET Framework 1.0 或 1.1 的情況下。  請參閱 [從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)。  
+ <span data-ttu-id="3d9b6-183">安裝 .NET Framework 3.5 時，使用者可以在其 [!INCLUDE[win8](../../../includes/win8-md.md)] 電腦上執行相依於 .NET Framework 2.0、3.0 或 3.5 的應用程式。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-183">When the .NET Framework 3.5 is installed, users can run applications that depend on the .NET Framework 2.0, 3.0, or 3.5 on their [!INCLUDE[win8](../../../includes/win8-md.md)] computers.</span></span> <span data-ttu-id="3d9b6-184">他們也可以執行 .NET Framework 1.0 和 1.1 應用程式，但前提是這些應用程式未明確地設定成只在 .NET Framework 1.0 或 1.1 上執行。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-184">They can also run .NET Framework 1.0 and 1.1 applications, provided that those applications are not explicitly configured to run only on the .NET Framework 1.0 or 1.1.</span></span> <span data-ttu-id="3d9b6-185">請參閱[從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-185">See [Migrating from the .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).</span></span>  
   
- 從[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]開始，CLR 啟動記錄已經被改善，以包含記錄「何時、為何初始化錯誤訊息被顯示」的項目。  如需詳細資訊，請參閱[如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。  
+ <span data-ttu-id="3d9b6-186">從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，已改善 CLR 啟用記錄，可包括記錄何時和為何顯示初始化錯誤訊息的記錄項目。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-186">Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], CLR activation logging has been improved to include log entries that record when and why the initialization error message is displayed.</span></span> <span data-ttu-id="3d9b6-187">如需詳細資訊，請參閱[如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。</span><span class="sxs-lookup"><span data-stu-id="3d9b6-187">For more information, see [How to: Debug CLR Activation Issues](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).</span></span>  
   
-## 請參閱  
- [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
- [HOW TO：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
- [如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
- [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)
-
+## <a name="see-also"></a><span data-ttu-id="3d9b6-188">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3d9b6-188">See Also</span></span>  
+ [<span data-ttu-id="3d9b6-189">開發人員部署手冊</span><span class="sxs-lookup"><span data-stu-id="3d9b6-189">Deployment Guide for Developers</span></span>](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+ [<span data-ttu-id="3d9b6-190">操作說明：設定應用程式以支援 .NET Framework 4 或 4.5</span><span class="sxs-lookup"><span data-stu-id="3d9b6-190">How to: Configure an App to Support .NET Framework 4 or 4.5</span></span>](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+ [<span data-ttu-id="3d9b6-191">如何：偵錯 CLR 啟用問題</span><span class="sxs-lookup"><span data-stu-id="3d9b6-191">How to: Debug CLR Activation Issues</span></span>](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+ [<span data-ttu-id="3d9b6-192">在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="3d9b6-192">Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8</span></span>](../../../docs/framework/install/dotnet-35-windows-10.md)

@@ -5,113 +5,105 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- side-by-side execution
+helpviewer_keywords: side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 25a5092da1526bc266c5cc483cc3cd81d2ac3385
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1628d75ab7f842c6b7486a1d57f490b4d876ee28
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# .NET Framework 並存執行
-並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。  在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
+# <a name="side-by-side-execution-in-the-net-framework"></a><span data-ttu-id="e4408-102">.NET Framework 並存執行</span><span class="sxs-lookup"><span data-stu-id="e4408-102">Side-by-Side Execution in the .NET Framework</span></span>
+<span data-ttu-id="e4408-103">並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。</span><span class="sxs-lookup"><span data-stu-id="e4408-103">Side-by-side execution is the ability to run multiple versions of an application or component on the same computer.</span></span> <span data-ttu-id="e4408-104">在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-104">You can have multiple versions of the common language runtime, and multiple versions of applications and components that use a version of the runtime, on the same computer at the same time.</span></span>  
   
- 下圖顯示在同一台電腦上有幾個應用程式使用執行階段的兩個不同版本。  應用程式 A、B 和 C 使用 Runtime 1.0 版，而應用程式 D 則使用 Runtime 1.1 版。  
+ <span data-ttu-id="e4408-105">下圖顯示在同一台電腦上有幾個應用程式使用執行階段的兩個不同版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-105">The following illustration shows several applications using two different versions of the runtime on the same computer.</span></span> <span data-ttu-id="e4408-106">應用程式 A、B 和 C 使用 Runtime 1.0 版，而應用程式 D 則使用 Runtime 1.1 版。</span><span class="sxs-lookup"><span data-stu-id="e4408-106">Applications A, B, and C use runtime version 1.0, while application D uses runtime version 1.1.</span></span>  
   
- ![並存執行](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
-兩個版本執行階段的並存執行  
+ <span data-ttu-id="e4408-107">![並存執行](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")</span><span class="sxs-lookup"><span data-stu-id="e4408-107">![Side&#45;by&#45;side execution](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")</span></span>  
+<span data-ttu-id="e4408-108">兩個版本執行階段的並存執行</span><span class="sxs-lookup"><span data-stu-id="e4408-108">Side-by-side execution of two versions of the runtime</span></span>  
   
- .NET Framework 包含通用語言執行平台以及內含 API 類型的組件集合。  Runtime 和 .NET Framework 組件的版本為個別指定。  例如，4.0 版的執行階段實際上是 4.0.319 版，而 1.0 版的 .NET Framework 組件則是 1.0.3300.0 版。  
+ <span data-ttu-id="e4408-109">.NET Framework 包含通用語言執行平台以及內含 API 類型的組件集合。</span><span class="sxs-lookup"><span data-stu-id="e4408-109">The .NET Framework consists of the common language runtime and a collection of assemblies that contain the API types.</span></span> <span data-ttu-id="e4408-110">Runtime 和 .NET Framework 組件的版本為個別指定。</span><span class="sxs-lookup"><span data-stu-id="e4408-110">The runtime and the .NET Framework assemblies are versioned separately.</span></span> <span data-ttu-id="e4408-111">例如，4.0 版的執行階段實際上是 4.0.319 版，而 1.0 版的 .NET Framework 組件則是 1.0.3300.0 版。</span><span class="sxs-lookup"><span data-stu-id="e4408-111">For example, version 4.0 of the runtime is actually version 4.0.319, while version 1.0 of the .NET Framework assemblies is version 1.0.3300.0.</span></span>  
   
- 下圖顯示在同一台電腦上有幾個應用程式使用元件的兩個不同版本。  應用程式 A 和 B 使用 1.0 版的元件，而應用程式 C 則使用相同元件的 2.0 版。  
+ <span data-ttu-id="e4408-112">下圖顯示在同一台電腦上有幾個應用程式使用元件的兩個不同版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-112">The following illustration shows several applications using two different versions of a component on the same computer.</span></span> <span data-ttu-id="e4408-113">應用程式 A 和 B 使用 1.0 版的元件，而應用程式 C 則使用相同元件的 2.0 版。</span><span class="sxs-lookup"><span data-stu-id="e4408-113">Application A and B use version 1.0 of the component while Application C uses version 2.0 of the same component.</span></span>  
   
- ![並存執行](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
-兩個版本元件的並存執行  
+ <span data-ttu-id="e4408-114">![並存執行](../../../docs/framework/deployment/media/compsbs.gif "compsbs")</span><span class="sxs-lookup"><span data-stu-id="e4408-114">![Side&#45;by&#45;side execution](../../../docs/framework/deployment/media/compsbs.gif "compsbs")</span></span>  
+<span data-ttu-id="e4408-115">兩個版本元件的並存執行</span><span class="sxs-lookup"><span data-stu-id="e4408-115">Side-by-side execution of two versions of a component</span></span>  
   
- 並存執行提供更多控制權，供您控制應用程式所繫結之元件版本，以及應用程式所使用的執行階段版本。  
+ <span data-ttu-id="e4408-116">並存執行提供更多控制權，供您控制應用程式所繫結之元件版本，以及應用程式所使用的執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-116">Side-by-side execution gives you more control over which versions of a component an application binds to, and more control over which version of the runtime an application uses.</span></span>  
   
-## 並存執行的優點  
- 在 Windows XP 和 .NET Framework 推出之前，由於應用程式無法辨別相同程式碼的不相容版本，因此會發生 DLL 衝突的狀況。  DLL 中包含的類型資訊只繫結至檔案名稱，  故應用程式無從得知 DLL 中包含的類型是否與應用程式建置時所用的類型相同。  因此，新版元件可能會覆寫舊版元件並破壞應用程式。  
+## <a name="benefits-of-side-by-side-execution"></a><span data-ttu-id="e4408-117">並存執行的優點</span><span class="sxs-lookup"><span data-stu-id="e4408-117">Benefits of Side-by-Side Execution</span></span>  
+ <span data-ttu-id="e4408-118">在 Windows XP 和 .NET Framework 推出之前，由於應用程式無法辨別相同程式碼的不相容版本，因此會發生 DLL 衝突的狀況。</span><span class="sxs-lookup"><span data-stu-id="e4408-118">Prior to Windows XP and the .NET Framework, DLL conflicts occurred because applications were unable to distinguish between incompatible versions of the same code.</span></span> <span data-ttu-id="e4408-119">DLL 中包含的類型資訊只繫結至檔案名稱，</span><span class="sxs-lookup"><span data-stu-id="e4408-119">Type information contained in a DLL was bound only to a file name.</span></span> <span data-ttu-id="e4408-120">故應用程式無從得知 DLL 中包含的類型是否與應用程式建置時所用的類型相同。</span><span class="sxs-lookup"><span data-stu-id="e4408-120">An application had no way of knowing if the types contained in a DLL were the same types that the application was built with.</span></span> <span data-ttu-id="e4408-121">因此，新版元件可能會覆寫舊版元件並破壞應用程式。</span><span class="sxs-lookup"><span data-stu-id="e4408-121">As a result, a new version of a component could overwrite an older version and break applications.</span></span>  
   
- 並存執行和 .NET Framework 提供下列功能以消除 DLL 的衝突：  
+ <span data-ttu-id="e4408-122">並存執行和 .NET Framework 提供下列功能以消除 DLL 的衝突：</span><span class="sxs-lookup"><span data-stu-id="e4408-122">Side-by-side execution and the .NET Framework provide the following features to eliminate DLL conflicts:</span></span>  
   
--   強式名稱的組件。  
+-   <span data-ttu-id="e4408-123">強式名稱的組件。</span><span class="sxs-lookup"><span data-stu-id="e4408-123">Strong-named assemblies.</span></span>  
   
-     並存執行使用強式名稱的組件，將類型資訊繫結至組件的特定版本。  這可防止應用程式或元件繫結至組件的無效版本。  強式名稱的組件也允許多個版本的檔案存在同一台電腦上，並供應用程式使用。  如需詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)。  
+     <span data-ttu-id="e4408-124">並存執行使用強式名稱的組件，將類型資訊繫結至組件的特定版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-124">Side-by-side execution uses strong-named assemblies to bind type information to a specific version of an assembly.</span></span> <span data-ttu-id="e4408-125">這可防止應用程式或元件繫結至組件的無效版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-125">This prevents an application or component from binding to an invalid version of an assembly.</span></span> <span data-ttu-id="e4408-126">強式名稱的組件也允許多個版本的檔案存在同一台電腦上，並供應用程式使用。</span><span class="sxs-lookup"><span data-stu-id="e4408-126">Strong-named assemblies also allow multiple versions of a file to exist on the same computer and to be used by applications.</span></span> <span data-ttu-id="e4408-127">如需詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="e4408-127">For more information, see [Strong-Named Assemblies](../../../docs/framework/app-domains/strong-named-assemblies.md).</span></span>  
   
--   版本感知程式碼儲存區。  
+-   <span data-ttu-id="e4408-128">版本感知程式碼儲存區。</span><span class="sxs-lookup"><span data-stu-id="e4408-128">Version-aware code storage.</span></span>  
   
-     .NET Framework 在全域組件快取中提供版本感知程式碼儲存區。  全域組件快取是一種全電腦程式碼快取，存在於已經安裝 .NET Framework 的所有電腦上。  它是依據版本、文化特性和發行者資訊來儲存組件，並且可以支援多個版本的元件和應用程式。  如需詳細資訊，請參閱[全域組件快取](../../../docs/framework/app-domains/gac.md)。  
+     <span data-ttu-id="e4408-129">.NET Framework 在全域組件快取中提供版本感知程式碼儲存區。</span><span class="sxs-lookup"><span data-stu-id="e4408-129">The .NET Framework provides version-aware code storage in the global assembly cache.</span></span> <span data-ttu-id="e4408-130">全域組件快取是一種全電腦程式碼快取，存在於已經安裝 .NET Framework 的所有電腦上。</span><span class="sxs-lookup"><span data-stu-id="e4408-130">The global assembly cache is a computer-wide code cache present on all computers with the .NET Framework installed.</span></span> <span data-ttu-id="e4408-131">它是依據版本、文化特性和發行者資訊來儲存組件，並且可以支援多個版本的元件和應用程式。</span><span class="sxs-lookup"><span data-stu-id="e4408-131">It stores assemblies based on version, culture, and publisher information, and supports multiple versions of components and applications.</span></span> <span data-ttu-id="e4408-132">如需詳細資訊，請參閱[全域組件快取](../../../docs/framework/app-domains/gac.md)。</span><span class="sxs-lookup"><span data-stu-id="e4408-132">For more information, see [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).</span></span>  
   
--   隔離性。  
+-   <span data-ttu-id="e4408-133">隔離性。</span><span class="sxs-lookup"><span data-stu-id="e4408-133">Isolation.</span></span>  
   
-     使用 .NET Framework，您可以建立隔離執行的應用程式和元件。  這種隔離執行的功能是並存執行的基本構成要素。  隔離的主要因素在於能夠掌握您要使用的資源，並且能放心地在應用程式或元件的多個版本之間共用資源。  隔離也包括使用版本特定的方式儲存檔案。  如需隔離的詳細資訊，請參閱[建立並存執行元件的方針](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
+     <span data-ttu-id="e4408-134">使用 .NET Framework，您可以建立隔離執行的應用程式和元件。</span><span class="sxs-lookup"><span data-stu-id="e4408-134">Using the .NET Framework, you can create applications and components that execute in isolation.</span></span> <span data-ttu-id="e4408-135">這種隔離執行的功能是並存執行的基本構成要素。</span><span class="sxs-lookup"><span data-stu-id="e4408-135">Isolation is an essential component of side-by-side execution.</span></span> <span data-ttu-id="e4408-136">隔離的主要因素在於能夠掌握您要使用的資源，並且能放心地在應用程式或元件的多個版本之間共用資源。</span><span class="sxs-lookup"><span data-stu-id="e4408-136">It involves being aware of the resources you are using and sharing resources with confidence among multiple versions of an application or component.</span></span> <span data-ttu-id="e4408-137">隔離也包括使用版本特定的方式儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="e4408-137">Isolation also includes storing files in a version-specific way.</span></span> <span data-ttu-id="e4408-138">如需隔離的詳細資訊，請參閱[建立並存執行元件的方針](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。</span><span class="sxs-lookup"><span data-stu-id="e4408-138">For more information about isolation, see [Guidelines for Creating Components for Side-by-Side Execution](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).</span></span>  
   
-## 版本相容性  
- .NET Framework 的 1.0 和 1.1 版設計成可彼此相容。  用 .NET Framework 1.0 版建置的應用程式應該可以在 1.1 版上執行，而用 .NET Framework 1.1 版建置的應用程式也應該可以在 1.0 版上執行。  但請注意，.NET Framework 1.1 版中加入的 API 功能無法在 1.0 版的 .NET Framework 中使用。  以 2.0 版建立的應用程式僅能在 2.0 版上執行。  2.0 版的應用程式在 1.1 或之前的版本上無法執行。  
+## <a name="version-compatibility"></a><span data-ttu-id="e4408-139">版本相容性</span><span class="sxs-lookup"><span data-stu-id="e4408-139">Version Compatibility</span></span>  
+ <span data-ttu-id="e4408-140">.NET Framework 的 1.0 和 1.1 版設計成可彼此相容。</span><span class="sxs-lookup"><span data-stu-id="e4408-140">Versions 1.0 and 1.1 of the .NET Framework are designed to be compatible with one another.</span></span> <span data-ttu-id="e4408-141">用 .NET Framework 1.0 版建置的應用程式應該可以在 1.1 版上執行，而用 .NET Framework 1.1 版建置的應用程式也應該可以在 1.0 版上執行。</span><span class="sxs-lookup"><span data-stu-id="e4408-141">An application built with the .NET Framework version 1.0 should run on version 1.1, and an application built with the .NET Framework version 1.1 should run on version 1.0.</span></span> <span data-ttu-id="e4408-142">但請注意，.NET Framework 1.1 版中加入的 API 功能無法在 1.0 版的 .NET Framework 中使用。</span><span class="sxs-lookup"><span data-stu-id="e4408-142">Note, however, that API features added in version 1.1 of the .NET Framework will not work with version 1.0 of the .NET Framework.</span></span> <span data-ttu-id="e4408-143">以 2.0 版建立的應用程式僅能在 2.0 版上執行。</span><span class="sxs-lookup"><span data-stu-id="e4408-143">Applications created with version 2.0 will run on version 2.0 only.</span></span> <span data-ttu-id="e4408-144">2.0 版的應用程式在 1.1 或之前的版本上無法執行。</span><span class="sxs-lookup"><span data-stu-id="e4408-144">Version 2.0 applications will not run on version 1.1 or earlier.</span></span>  
   
- .NET Framework 的版本被視為一個由執行階段及其關聯的 .NET Framework 組件組成的單一單位 \(這個概念稱為「組件的版本對應轉換」\)。  您可以將組件繫結重新導向，以包含 .NET Framework 組件的其他版本，但是覆寫預設組件繫結可能會有風險，因此部署之前必須經過棈密的測試。  
+ <span data-ttu-id="e4408-145">.NET Framework 的版本被視為一個由執行階段及其關聯的 .NET Framework 組件組成的單一單位 (這個概念稱為「組件的版本對應轉換」)。</span><span class="sxs-lookup"><span data-stu-id="e4408-145">Versions of the .NET Framework are treated as a single unit consisting of the runtime and its associated .NET Framework assemblies (a concept referred to as assembly unification).</span></span> <span data-ttu-id="e4408-146">您可以將組件繫結重新導向，以包含 .NET Framework 組件的其他版本，但是覆寫預設組件繫結可能會有風險，因此部署之前必須經過棈密的測試。</span><span class="sxs-lookup"><span data-stu-id="e4408-146">You can redirect assembly binding to include other versions of the .NET Framework assemblies, but overriding the default assembly binding can be risky and must be rigorously tested before deployment.</span></span>  
   
-## 找出執行階段版本資訊  
- 編譯應用程式或元件時所使用的執行階段版本資訊，以及應用程式執行所需的執行階段版本資訊，會分開儲存在兩個位置。  編譯應用程式或元件時所使用的執行階段版本資訊會儲存在 Managed 可執行檔中；  而應用程式或元件所需的執行階段版本資訊則儲存在應用程式組態檔中。  
+## <a name="locating-runtime-version-information"></a><span data-ttu-id="e4408-147">找出執行階段版本資訊</span><span class="sxs-lookup"><span data-stu-id="e4408-147">Locating Runtime Version Information</span></span>  
+ <span data-ttu-id="e4408-148">編譯應用程式或元件時所使用的執行階段版本資訊，以及應用程式執行所需的執行階段版本資訊，會分開儲存在兩個位置。</span><span class="sxs-lookup"><span data-stu-id="e4408-148">Information on which runtime version an application or component was compiled with and which versions of the runtime the application requires to run are stored in two locations.</span></span> <span data-ttu-id="e4408-149">編譯應用程式或元件時所使用的執行階段版本資訊會儲存在 Managed 可執行檔中；</span><span class="sxs-lookup"><span data-stu-id="e4408-149">When an application or component is compiled, information on the runtime version used to compile it is stored in the managed executable.</span></span> <span data-ttu-id="e4408-150">而應用程式或元件所需的執行階段版本資訊則儲存在應用程式組態檔中。</span><span class="sxs-lookup"><span data-stu-id="e4408-150">Information on the runtime versions the application or component requires is stored in the application configuration file.</span></span>  
   
-### Managed 可執行檔中的執行階段版本資訊  
- 每個 Managed 應用程式和元件的可攜式執行檔 \(PE\) 標頭會包含建置時所使用的執行階段版本資訊。  Common Language Runtime 使用這項資訊來決定應用程式執行時最有可能需要的執行階段版本。  
+### <a name="runtime-version-information-in-the-managed-executable"></a><span data-ttu-id="e4408-151">Managed 可執行檔中的執行階段版本資訊</span><span class="sxs-lookup"><span data-stu-id="e4408-151">Runtime Version Information in the Managed Executable</span></span>  
+ <span data-ttu-id="e4408-152">每個 Managed 應用程式和元件的可攜式執行檔 (PE) 標頭會包含建置時所使用的執行階段版本資訊。</span><span class="sxs-lookup"><span data-stu-id="e4408-152">The portable executable (PE) file header of each managed application and component contains information about the runtime version it was built with.</span></span> <span data-ttu-id="e4408-153">Common Language Runtime 使用這項資訊來決定應用程式執行時最有可能需要的執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-153">The common language runtime uses this information to determine the most likely version of the runtime the application needs to run.</span></span>  
   
-### 應用程式組態檔中的執行階段版本資訊  
- 除了 PE 檔標頭中的資訊之外，還可使用提供執行階段版本資訊的應用程式組態檔來部署應用程式。  應用程式組態檔是以 XML 為基礎的檔案，它是由應用程式開發人員所設計，並與應用程式一起發行。  如果這個檔案中有 [\<startup\> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)的 [\<requiredRuntime\> 項目](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)，則會指定該應用程式支援哪個版本的執行階段和元件。  您也可以在測試中使用這個檔案測試應用程式與各種執行階段版本的相容性。  
+### <a name="runtime-version-information-in-the-application-configuration-file"></a><span data-ttu-id="e4408-154">應用程式組態檔中的執行階段版本資訊</span><span class="sxs-lookup"><span data-stu-id="e4408-154">Runtime Version Information in the Application Configuration File</span></span>  
+ <span data-ttu-id="e4408-155">除了 PE 檔標頭中的資訊之外，還可使用提供執行階段版本資訊的應用程式組態檔來部署應用程式。</span><span class="sxs-lookup"><span data-stu-id="e4408-155">In addition to the information in the PE file header, an application can be deployed with an application configuration file that provides runtime version information.</span></span> <span data-ttu-id="e4408-156">應用程式組態檔是以 XML 為基礎的檔案，它是由應用程式開發人員所設計，並與應用程式一起發行。</span><span class="sxs-lookup"><span data-stu-id="e4408-156">The application configuration file is an XML-based file that is created by the application developer and that ships with an application.</span></span> <span data-ttu-id="e4408-157">如果這個檔案中有 [\<startup> 區段](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)的 [\<requiredRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)，則會指定該應用程式支援哪個版本的執行階段和元件。</span><span class="sxs-lookup"><span data-stu-id="e4408-157">The [\<requiredRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) of the [\<startup> section](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md), if it is present in this file, specifies which versions of the runtime and which versions of a component the application supports.</span></span> <span data-ttu-id="e4408-158">您也可以在測試中使用這個檔案測試應用程式與各種執行階段版本的相容性。</span><span class="sxs-lookup"><span data-stu-id="e4408-158">You can also use this file in testing to test an application's compatibility with different versions of the runtime.</span></span>  
   
- Unmanaged 程式碼 \(包括 COM 和 COM\+ 應用程式\) 可以有應用程式組態檔，以供執行階段用來與 Managed 程式碼互動。  應用程式組態檔會影響您透過 COM 啟動的任何 Managed 程式碼。  這個檔案可以指定程式碼支援的執行階段版本，以及組件重新導向。  根據預設，呼叫 Managed 程式碼的 COM Interop 應用程式會使用電腦上安裝的最新版執行階段。  
+ <span data-ttu-id="e4408-159">Unmanaged 程式碼 (包括 COM 和 COM+ 應用程式) 可以有應用程式組態檔，以供執行階段用來與 Managed 程式碼互動。</span><span class="sxs-lookup"><span data-stu-id="e4408-159">Unmanaged code, including COM and COM+ applications, can have application configuration files that the runtime uses for interacting with managed code.</span></span> <span data-ttu-id="e4408-160">應用程式組態檔會影響您透過 COM 啟動的任何 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="e4408-160">The application configuration file affects any managed code that you activate through COM.</span></span> <span data-ttu-id="e4408-161">這個檔案可以指定程式碼支援的執行階段版本，以及組件重新導向。</span><span class="sxs-lookup"><span data-stu-id="e4408-161">The file can specify which runtime versions it supports, as well as assembly redirects.</span></span> <span data-ttu-id="e4408-162">根據預設，呼叫 Managed 程式碼的 COM Interop 應用程式會使用電腦上安裝的最新版執行階段。</span><span class="sxs-lookup"><span data-stu-id="e4408-162">By default, COM interop applications calling to managed code use the latest version of the runtime installed on the computer.</span></span>  
   
- 如需應用程式組態檔的詳細資訊，請參閱[設定應用程式](../../../docs/framework/configure-apps/index.md)。  
+ <span data-ttu-id="e4408-163">如需應用程式組態檔的詳細資訊，請參閱[設定應用程式](../../../docs/framework/configure-apps/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e4408-163">For more information about the application configuration files, see [Configuring Apps](../../../docs/framework/configure-apps/index.md).</span></span>  
   
-## 決定要載入的執行階段版本  
- Common Language Runtime 使用下列資訊來決定要為應用程式載入的執行階段版本：  
+## <a name="determining-which-version-of-the-runtime-to-load"></a><span data-ttu-id="e4408-164">決定要載入的執行階段版本</span><span class="sxs-lookup"><span data-stu-id="e4408-164">Determining Which Version of the Runtime to Load</span></span>  
+ <span data-ttu-id="e4408-165">Common Language Runtime 使用下列資訊來決定要為應用程式載入的執行階段版本：</span><span class="sxs-lookup"><span data-stu-id="e4408-165">The common language runtime uses the following information to determine which version of the runtime to load for an application:</span></span>  
   
--   可用的執行階段版本。  
+-   <span data-ttu-id="e4408-166">可用的執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-166">The runtime versions that are available.</span></span>  
   
--   應用程式支援的執行階段版本。  
+-   <span data-ttu-id="e4408-167">應用程式支援的執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-167">The runtime versions that an application supports.</span></span>  
   
-### 支援的執行階段版本  
- 執行階段使用應用程式組態檔和可攜式執行檔 \(PE\) 標頭，來決定應用程式支援的執行階段版本。  如果應用程式組態檔不存在，執行階段會載入應用程式的 PE 檔標頭中指定的執行階段版本 \(如果該版本可用的話\)。  
+### <a name="supported-runtime-versions"></a><span data-ttu-id="e4408-168">支援的執行階段版本</span><span class="sxs-lookup"><span data-stu-id="e4408-168">Supported Runtime Versions</span></span>  
+ <span data-ttu-id="e4408-169">執行階段使用應用程式組態檔和可攜式執行檔 (PE) 標頭，來決定應用程式支援的執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-169">The runtime uses the application configuration file and the portable executable (PE) file header to determine which version of the runtime an application supports.</span></span> <span data-ttu-id="e4408-170">如果應用程式組態檔不存在，執行階段會載入應用程式的 PE 檔標頭中指定的執行階段版本 (如果該版本可用的話)。</span><span class="sxs-lookup"><span data-stu-id="e4408-170">If no application configuration file is present, the runtime loads the runtime version specified in the application's PE file header, if that version is available.</span></span>  
   
- 如果應用程式組態檔存在，執行階段會根據下列程序的結果來決定要載入的適當執行階段版本：  
+ <span data-ttu-id="e4408-171">如果應用程式組態檔存在，執行階段會根據下列程序的結果來決定要載入的適當執行階段版本：</span><span class="sxs-lookup"><span data-stu-id="e4408-171">If an application configuration file is present, the runtime determines the appropriate runtime version to load based on the results of the following process:</span></span>  
   
-1.  執行階段檢查應用程式組態檔中的 [\<supportedRuntime\> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 項目。  如果 **\<supportedRuntime\>** 項目中指定了一個或多個支援的執行階段版本，執行階段會載入第一個 **\<supportedRuntime\>** 項目所指定的執行階段版本。  如果無法使用這個版本，執行階段會檢查下一個 **\<supportedRuntime\>** 項目並嘗試載入指定的執行階段版本。  如果這個執行階段版本不能使用，則會檢查後面的 **\<supportedRuntime\>** 項目。  如果沒有可用的受支援執行階段版本，執行階段便無法載入執行階段版本並顯示訊息給使用者 \(請參閱步驟 3\)。  
+1.  <span data-ttu-id="e4408-172">執行階段檢查應用程式組態檔中的 [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)項目。</span><span class="sxs-lookup"><span data-stu-id="e4408-172">The runtime examines the [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) element in the application configuration file.</span></span> <span data-ttu-id="e4408-173">如果 **\<supportedRuntime>** 項目中指定了一或多個支援的執行階段版本，執行階段會載入第一個 **\<supportedRuntime>** 項目所指定的執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-173">If one or more of the supported runtime versions specified in the **\<supportedRuntime>** element are present, the runtime loads the runtime version specified by the first **\<supportedRuntime>** element.</span></span> <span data-ttu-id="e4408-174">如果無法使用這個版本，執行階段會檢查下一個 **\<supportedRuntime>** 項目並嘗試載入指定的執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-174">If this version is not available, the runtime examines the next **\<supportedRuntime>** element and attempts to load the runtime version specified.</span></span> <span data-ttu-id="e4408-175">如果這個執行階段版本不能使用，則會檢查後面的 **\<supportedRuntime>** 項目。</span><span class="sxs-lookup"><span data-stu-id="e4408-175">If this runtime version is not available, subsequent **\<supportedRuntime>** elements are examined.</span></span> <span data-ttu-id="e4408-176">如果沒有可用的受支援執行階段版本，執行階段便無法載入執行階段版本並顯示訊息給使用者 (請參閱步驟 3)。</span><span class="sxs-lookup"><span data-stu-id="e4408-176">If none of the supported runtime versions are available, the runtime fails to load a runtime version and displays a message to the user (see step 3).</span></span>  
   
-2.  執行階段讀取應用程式可執行檔的 PE 檔標頭。  如果有 PE 檔標頭指定的執行階段版本可用，執行階段便會載入該版本。  如果無法使用指定的執行階段版本，執行階段會搜尋 Microsoft 判斷可與 PE 標頭中的執行階段版本相容的執行階段版本。  如果找不到該版本，則會繼續進行本程序中的步驟 3。  
+2.  <span data-ttu-id="e4408-177">執行階段讀取應用程式可執行檔的 PE 檔標頭。</span><span class="sxs-lookup"><span data-stu-id="e4408-177">The runtime reads the PE file header of the application's executable file.</span></span> <span data-ttu-id="e4408-178">如果有 PE 檔標頭指定的執行階段版本可用，執行階段便會載入該版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-178">If the runtime version specified by the PE file header is available, the runtime loads that version.</span></span> <span data-ttu-id="e4408-179">如果無法使用指定的執行階段版本，執行階段會搜尋 Microsoft 判斷可與 PE 標頭中的執行階段版本相容的執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-179">If the runtime version specified is not available, the runtime searches for a runtime version determined by Microsoft to be compatible with the runtime version in the PE header.</span></span> <span data-ttu-id="e4408-180">如果找不到該版本，則會繼續進行本程序中的步驟 3。</span><span class="sxs-lookup"><span data-stu-id="e4408-180">If that version is not found, the process continues to step 3.</span></span>  
   
-3.  執行階段顯示訊息，指出應用程式支援的執行階段版本無法使用。  此時不會載入執行階段。  
+3.  <span data-ttu-id="e4408-181">執行階段顯示訊息，指出應用程式支援的執行階段版本無法使用。</span><span class="sxs-lookup"><span data-stu-id="e4408-181">The runtime displays a message stating that the runtime version supported by the application is unavailable.</span></span> <span data-ttu-id="e4408-182">此時不會載入執行階段。</span><span class="sxs-lookup"><span data-stu-id="e4408-182">The runtime is not loaded.</span></span>  
   
     > [!NOTE]
-    >  您可以使用登錄機碼 HKLM\\Software\\Microsoft\\.NETFramework 下的 NoGuiFromShim 值，或使用環境變數 COMPLUS\_NoGuiFromShim，來隱藏這項訊息。  例如，您可以隱藏通常不需與使用者互動之應用程式 \(例如自動安裝或 Windows 服務\) 的訊息。  隱藏這項訊息之後，執行階段會將訊息寫入事件記錄檔。  將登錄值 NoGuiFromShim 設定為 1，以隱藏電腦上所有應用程式的這項訊息。  或者，將 COMPLUS\_NoGuiFromShim 環境變數設定為 1，以隱藏特定使用者內容中所執行之應用程式的這項訊息。  
+    >  <span data-ttu-id="e4408-183">您可以使用登錄機碼 HKLM\Software\Microsoft\\.NETFramework 下的 NoGuiFromShim 值，或使用環境變數 COMPLUS_NoGuiFromShim，來隱藏這項訊息。</span><span class="sxs-lookup"><span data-stu-id="e4408-183">You can suppress the display of this message by using the NoGuiFromShim value under the registry key HKLM\Software\Microsoft\\.NETFramework or using the environment variable COMPLUS_NoGuiFromShim.</span></span> <span data-ttu-id="e4408-184">例如，您可以隱藏通常不需與使用者互動之應用程式 (例如自動安裝或 Windows 服務) 的訊息。</span><span class="sxs-lookup"><span data-stu-id="e4408-184">For example, you can suppress the message for applications that do not typically interact with the user, such as unattended installations or Windows services.</span></span> <span data-ttu-id="e4408-185">隱藏這項訊息之後，執行階段會將訊息寫入事件記錄檔。</span><span class="sxs-lookup"><span data-stu-id="e4408-185">When this message display is suppressed, the runtime writes a message to the event log.</span></span>  <span data-ttu-id="e4408-186">將登錄值 NoGuiFromShim 設定為 1，以隱藏電腦上所有應用程式的這項訊息。</span><span class="sxs-lookup"><span data-stu-id="e4408-186">Set the registry value NoGuiFromShim to 1 to suppress this message for all applications on a computer.</span></span> <span data-ttu-id="e4408-187">或者，將 COMPLUS_NoGuiFromShim 環境變數設定為 1，以隱藏特定使用者內容中所執行之應用程式的這項訊息。</span><span class="sxs-lookup"><span data-stu-id="e4408-187">Alternately, set the COMPLUS_NoGuiFromShim environment variable to 1 to suppress the message for applications running in a particular user context.</span></span>  
   
 > [!NOTE]
->  載入執行階段版本之後，組件繫結重新導向可以指定載入個別 .NET Framework 組件的不同版本。  這些繫結重新導向只會影響被重新導向的特定組件。  
+>  <span data-ttu-id="e4408-188">載入執行階段版本之後，組件繫結重新導向可以指定載入個別 .NET Framework 組件的不同版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-188">After a runtime version is loaded, assembly binding redirects can specify that a different version of an individual .NET Framework assembly be loaded.</span></span> <span data-ttu-id="e4408-189">這些繫結重新導向只會影響被重新導向的特定組件。</span><span class="sxs-lookup"><span data-stu-id="e4408-189">These binding redirects affect only the specific assembly that is redirected.</span></span>  
   
-## 部分限定的組件名稱和並存執行  
- 由於不完整的組件參考可能會造成並存問題，因此只能用來繫結至應用程式目錄中的組件。  請避免在您的程式碼中使用不完整的組件參考。  
+## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a><span data-ttu-id="e4408-190">部分限定的組件名稱和並存執行</span><span class="sxs-lookup"><span data-stu-id="e4408-190">Partially Qualified Assembly Names and Side-by-Side Execution</span></span>  
+ <span data-ttu-id="e4408-191">由於不完整的組件參考可能會造成並存問題，因此只能用來繫結至應用程式目錄中的組件。</span><span class="sxs-lookup"><span data-stu-id="e4408-191">Because they are a potential source of side-by-side problems, partially qualified assembly references can be used only to bind to assemblies within an application directory.</span></span> <span data-ttu-id="e4408-192">請避免在您的程式碼中使用不完整的組件參考。</span><span class="sxs-lookup"><span data-stu-id="e4408-192">Avoid partially qualified assembly references in your code.</span></span>  
   
- 若要減少程式碼中不完整的組件參考，您可以在應用程式組態檔中使用 [\<qualifyAssembly\>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 項目，讓程式碼中不完整的組件參考變完整。  請使用 **\<qualifyAssembly\>** 項目，只指定不完整參考中未設定的欄位。  以 **fullName** 屬性列出的組件識別必須包含使組件名稱完整的所有必要資訊：組件名稱、公開金鑰、文化特性和版本。  
+ <span data-ttu-id="e4408-193">若要減少程式碼中不完整的組件參考，您可以在應用程式組態檔中使用 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 項目，讓程式碼中不完整的組件參考變完整。</span><span class="sxs-lookup"><span data-stu-id="e4408-193">To mitigate partially qualified assembly references in code, you can use the [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) element in an application configuration file to fully qualify partially qualified assembly references that occur in code.</span></span> <span data-ttu-id="e4408-194">請使用 **\<qualifyAssembly>** 項目，只指定不完整參考中未設定的欄位。</span><span class="sxs-lookup"><span data-stu-id="e4408-194">Use the **\<qualifyAssembly>** element to specify only fields that were not set in the partial reference.</span></span> <span data-ttu-id="e4408-195">以 **fullName** 屬性列出的組件識別必須包含使組件名稱完整的所有必要資訊：組件名稱、公開金鑰、文化特性和版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-195">The assembly identity listed in the **fullName** attribute must contain all the information needed to fully qualify the assembly name: assembly name, public key, culture, and version.</span></span>  
   
- 下列範例示範使組件 `myAssembly` 完整的應用程式組態檔項目。  
+ <span data-ttu-id="e4408-196">下列範例示範使組件 `myAssembly` 完整的應用程式組態檔項目。</span><span class="sxs-lookup"><span data-stu-id="e4408-196">The following example shows the application configuration file entry to fully qualify an assembly called `myAssembly`.</span></span>  
   
-```  
+```xml  
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
 <qualifyAssembly partialName="myAssembly"   
 fullName="myAssembly,  
@@ -121,21 +113,20 @@ publicKeyToken=...,
 </assemblyBinding>   
 ```  
   
- 當組件載入陳述式參考 `myAssembly` 時，這些組態檔設定便會使執行階段自動將不完整的 `myAssembly` 參考轉譯成完整的參考。  例如，Assembly.Load\("myAssembly"\) 會變成 Assembly.Load\("myAssembly, version\=1.0.0.0, publicKeyToken\=..., culture\=neutral"\)。  
+ <span data-ttu-id="e4408-197">當組件載入陳述式參考 `myAssembly` 時，這些組態檔設定便會使執行階段自動將不完整的 `myAssembly` 參考轉譯成完整的參考。</span><span class="sxs-lookup"><span data-stu-id="e4408-197">Whenever an assembly load statement references `myAssembly`, these configuration file settings cause the runtime to automatically translate the partially qualified `myAssembly` reference to a fully qualified reference.</span></span> <span data-ttu-id="e4408-198">例如，Assembly.Load("myAssembly") 會變成 Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral")。</span><span class="sxs-lookup"><span data-stu-id="e4408-198">For example, Assembly.Load("myAssembly") becomes Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral").</span></span>  
   
 > [!NOTE]
->  您可以使用 **LoadWithPartialName** 方法，略過禁止從全域組件快取載入不完整參考組件的 Common Language Runtime 限制。  這個方法只能用於遠端處理案例，因為它很容易造成並存執行的問題。  
+>  <span data-ttu-id="e4408-199">您可以使用 **LoadWithPartialName** 方法，略過禁止從全域組件快取載入不完整參考組件的 Common Language Runtime 限制。</span><span class="sxs-lookup"><span data-stu-id="e4408-199">You can use the **LoadWithPartialName** method to bypass the common language runtime restriction that prohibits partially referenced assemblies from being loaded from the global assembly cache.</span></span> <span data-ttu-id="e4408-200">這個方法只能用於遠端處理案例，因為它很容易造成並存執行的問題。</span><span class="sxs-lookup"><span data-stu-id="e4408-200">This method should be used only in remoting scenarios as it can easily cause problems in side-by-side execution.</span></span>  
   
-## 相關主題  
+## <a name="related-topics"></a><span data-ttu-id="e4408-201">相關主題</span><span class="sxs-lookup"><span data-stu-id="e4408-201">Related Topics</span></span>  
   
-|標題|描述|  
-|--------|--------|  
-|[如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
-|[設定組件繫結重新導向](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|說明如何將組件繫結參考重新導向至 .NET Framework 組件的特定版本。|  
-|[同處理序並存執行](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|討論如何使用同處理序並存執行階段主機啟用，在單一處理序中執行多個版本的 CLR。|  
-|[Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|提供組件的概觀。|  
-|[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)|提供應用程式定義域的概觀。|  
+|<span data-ttu-id="e4408-202">標題</span><span class="sxs-lookup"><span data-stu-id="e4408-202">Title</span></span>|<span data-ttu-id="e4408-203">說明</span><span class="sxs-lookup"><span data-stu-id="e4408-203">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="e4408-204">如何：啟用和停用自動繫結重新導向</span><span class="sxs-lookup"><span data-stu-id="e4408-204">How to: Enable and Disable Automatic Binding Redirection</span></span>](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|<span data-ttu-id="e4408-205">說明如何將應用程式繫結至組件的特定版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-205">Describes how to bind an application to a specific version of an assembly.</span></span>|  
+|[<span data-ttu-id="e4408-206">設定組件繫結重新導向</span><span class="sxs-lookup"><span data-stu-id="e4408-206">Configuring Assembly Binding Redirection</span></span>](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|<span data-ttu-id="e4408-207">說明如何將組件繫結參考重新導向至 .NET Framework 組件的特定版本。</span><span class="sxs-lookup"><span data-stu-id="e4408-207">Explains how to redirect assembly binding references to a specific version of the .NET Framework assemblies.</span></span>|  
+|[<span data-ttu-id="e4408-208">同處理序並存執行</span><span class="sxs-lookup"><span data-stu-id="e4408-208">In-Process Side-by-Side Execution</span></span>](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|<span data-ttu-id="e4408-209">討論如何使用同處理序並存執行階段主機啟用，在單一處理序中執行多個版本的 CLR。</span><span class="sxs-lookup"><span data-stu-id="e4408-209">Discusses how you can use in-process side-by-side runtime host activation to run multiple versions of the CLR in a single process.</span></span>|  
+|[<span data-ttu-id="e4408-210">Common Language Runtime 中的組件</span><span class="sxs-lookup"><span data-stu-id="e4408-210">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|<span data-ttu-id="e4408-211">提供組件的概觀。</span><span class="sxs-lookup"><span data-stu-id="e4408-211">Provides a conceptual overview of assemblies.</span></span>|  
+|[<span data-ttu-id="e4408-212">應用程式定義域</span><span class="sxs-lookup"><span data-stu-id="e4408-212">Application Domains</span></span>](../../../docs/framework/app-domains/application-domains.md)|<span data-ttu-id="e4408-213">提供應用程式定義域的概觀。</span><span class="sxs-lookup"><span data-stu-id="e4408-213">Provides a conceptual overview of application domains.</span></span>|  
   
-## <a name="reference"></a>參考資料  
- [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-
+## <a name="reference"></a><span data-ttu-id="e4408-214">參考資料</span><span class="sxs-lookup"><span data-stu-id="e4408-214">Reference</span></span>  
+ [<span data-ttu-id="e4408-215">\<supportedRuntime> 項目</span><span class="sxs-lookup"><span data-stu-id="e4408-215">\<supportedRuntime> Element</span></span>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

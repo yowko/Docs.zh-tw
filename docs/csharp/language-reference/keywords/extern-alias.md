@@ -1,73 +1,53 @@
 ---
 title: "外部別名 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- alias_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: alias_CSharpKeyword
 helpviewer_keywords:
 - extern alias keyword [C#]
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4e995586c08659853538726a12679770cd1ada37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66b399aaf6d4b3ba27957f3eadad3c1079ed2e90
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="extern-alias-c-reference"></a>外部別名 (C# 參考)
-您可能必須參考兩個具有相同完整類型名稱的組件版本。 例如，您可能必須在相同的應用程式中使用兩個或多個組件版本。 藉由使用外部組件別名，來自每個組件的命名空間可包裝在別名所命名的根層級命名空間內，這樣即可讓它們在相同的檔案中使用。  
+# <a name="extern-alias-c-reference"></a><span data-ttu-id="9a953-102">外部別名 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="9a953-102">extern alias (C# Reference)</span></span>
+<span data-ttu-id="9a953-103">您可能必須參考兩個具有相同完整類型名稱的組件版本。</span><span class="sxs-lookup"><span data-stu-id="9a953-103">You might have to reference two versions of assemblies that have the same fully-qualified type names.</span></span> <span data-ttu-id="9a953-104">例如，您可能必須在相同的應用程式中使用兩個或多個組件版本。</span><span class="sxs-lookup"><span data-stu-id="9a953-104">For example, you might have to use two or more versions of an assembly in the same application.</span></span> <span data-ttu-id="9a953-105">藉由使用外部組件別名，來自每個組件的命名空間可包裝在別名所命名的根層級命名空間內，這樣即可讓它們在相同的檔案中使用。</span><span class="sxs-lookup"><span data-stu-id="9a953-105">By using an external assembly alias, the namespaces from each assembly can be wrapped inside root-level namespaces named by the alias, which enables them to be used in the same file.</span></span>  
   
 > [!NOTE]
->  [extern](../../../csharp/language-reference/keywords/extern.md) 關鍵字也可作為方法修飾詞，用於宣告以 Unmanaged 程式碼撰寫的方法。  
+>  <span data-ttu-id="9a953-106">[extern](../../../csharp/language-reference/keywords/extern.md) 關鍵字也可作為方法修飾詞，用於宣告以 Unmanaged 程式碼撰寫的方法。</span><span class="sxs-lookup"><span data-stu-id="9a953-106">The [extern](../../../csharp/language-reference/keywords/extern.md) keyword is also used as a method modifier, declaring a method written in unmanaged code.</span></span>  
   
- 若要參考兩個具有相同完整類型名稱的組件，則必須在命令提示字元中指定別名，如下所示：  
+ <span data-ttu-id="9a953-107">若要參考兩個具有相同完整類型名稱的組件，則必須在命令提示字元中指定別名，如下所示：</span><span class="sxs-lookup"><span data-stu-id="9a953-107">To reference two assemblies with the same fully-qualified type names, an alias must be specified at a command prompt, as follows:</span></span>  
   
  `/r:GridV1=grid.dll`  
   
  `/r:GridV2=grid20.dll`  
   
- 這會建立外部別名 `GridV1` 和 `GridV2`。 若要從程式內使用這些別名，請使用 `extern` 關鍵字參考別名。 例如:   
+ <span data-ttu-id="9a953-108">這會建立外部別名 `GridV1` 和 `GridV2`。</span><span class="sxs-lookup"><span data-stu-id="9a953-108">This creates the external aliases `GridV1` and `GridV2`.</span></span> <span data-ttu-id="9a953-109">若要從程式內使用這些別名，請使用 `extern` 關鍵字參考別名。</span><span class="sxs-lookup"><span data-stu-id="9a953-109">To use these aliases from within a program, reference them by using the `extern` keyword.</span></span> <span data-ttu-id="9a953-110">例如: </span><span class="sxs-lookup"><span data-stu-id="9a953-110">For example:</span></span>  
   
  `extern alias GridV1;`  
   
  `extern alias GridV2;`  
   
- 每個外部別名宣告會引進另一個與全域命名空間平行 (但不在其內) 的根層級命名空間。 因此，來自每個組件的類型可使用其完整名稱 (源自適當的命名空間別名) 來參考，而不會有模擬兩可的情況。  
+ <span data-ttu-id="9a953-111">每個外部別名宣告會引進另一個與全域命名空間平行 (但不在其內) 的根層級命名空間。</span><span class="sxs-lookup"><span data-stu-id="9a953-111">Each extern alias declaration introduces an additional root-level namespace that parallels (but does not lie within) the global namespace.</span></span> <span data-ttu-id="9a953-112">因此，來自每個組件的類型可使用其完整名稱 (源自適當的命名空間別名) 來參考，而不會有模擬兩可的情況。</span><span class="sxs-lookup"><span data-stu-id="9a953-112">Thus types from each assembly can be referred to without ambiguity by using their fully qualified name, rooted in the appropriate namespace-alias.</span></span>  
   
- 在上述範例中，`GridV1::Grid` 是來自 `grid.dll` 的方格控制項，而 `GridV2::Grid` 是來自 `grid20.dll` 的方格控制項。  
+ <span data-ttu-id="9a953-113">在上述範例中，`GridV1::Grid` 是來自 `grid.dll` 的方格控制項，而 `GridV2::Grid` 是來自 `grid20.dll` 的方格控制項。</span><span class="sxs-lookup"><span data-stu-id="9a953-113">In the previous example, `GridV1::Grid` would be the grid control from `grid.dll`, and `GridV2::Grid` would be the grid control from `grid20.dll`.</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="9a953-114">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="9a953-114">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [:: 運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
- [/reference (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
-
+## <a name="see-also"></a><span data-ttu-id="9a953-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9a953-115">See Also</span></span>  
+ [<span data-ttu-id="9a953-116">C# 參考</span><span class="sxs-lookup"><span data-stu-id="9a953-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="9a953-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="9a953-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9a953-118">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="9a953-118">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="9a953-119">命名空間關鍵字</span><span class="sxs-lookup"><span data-stu-id="9a953-119">Namespace Keywords</span></span>](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [<span data-ttu-id="9a953-120">:: 運算子</span><span class="sxs-lookup"><span data-stu-id="9a953-120">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+ [<span data-ttu-id="9a953-121">/reference (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="9a953-121">/reference (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

@@ -1,30 +1,33 @@
 ---
-title: "使用使用者篩選的例外狀況處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "例外狀況, 使用者篩選"
-  - "使用者篩選的例外狀況"
+title: "使用使用者篩選的例外狀況處理常式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-filtered exceptions
+- exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a71a722063448fb0d568f4bfb4f71d4e01c57454
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用使用者篩選的例外狀況處理常式
-目前，Visual Basic 支援使用者篩選的例外狀況。  使用者篩選的例外處理常式根據您對例外狀況定義的需求，攔截並處理例外狀況。  這些處理常式會使用 **Catch** 陳述式配合 **When** 關鍵字。  
+# <a name="using-user-filtered-exception-handlers"></a><span data-ttu-id="4ddec-102">使用使用者篩選的例外狀況處理常式</span><span class="sxs-lookup"><span data-stu-id="4ddec-102">Using User-Filtered Exception Handlers</span></span>
+<span data-ttu-id="4ddec-103">目前，Visual Basic 支援使用者篩選的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="4ddec-103">Currently, Visual Basic supports user-filtered exceptions.</span></span> <span data-ttu-id="4ddec-104">使用者篩選例外狀況處理常式會依據您定義的例外狀況需求，攔截和處理例外狀況。</span><span class="sxs-lookup"><span data-stu-id="4ddec-104">User-filtered exception handlers catch and handle exceptions based on requirements you define for the exception.</span></span> <span data-ttu-id="4ddec-105">這些處理常式會使用 **Catch** 陳述式搭配 **When** 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="4ddec-105">These handlers use the **Catch** statement with the **When** keyword.</span></span>  
   
- 這個技術在特定例外狀況物件對應至多個錯誤時很有用處。  在這個情形中，物件基本上具有屬性，包含與錯誤相關聯的特定錯誤碼。  您可以在運算式中使用錯誤碼屬性，只選取您想要在那個 **Catch** 子句中處理的特定錯誤。  
+ <span data-ttu-id="4ddec-106">當特定例外狀況物件對應至多個錯誤時，這個技術非常有用。</span><span class="sxs-lookup"><span data-stu-id="4ddec-106">This technique is useful when a particular exception object corresponds to multiple errors.</span></span> <span data-ttu-id="4ddec-107">在此情況下，物件通常會有一個屬性，其中包含與錯誤相關聯的特定錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="4ddec-107">In this case, the object typically has a property that contains the specific error code associated with the error.</span></span> <span data-ttu-id="4ddec-108">您可以在運算式中使用錯誤碼屬性，只選取您想要在該 **Catch**子句中處理的特定錯誤。</span><span class="sxs-lookup"><span data-stu-id="4ddec-108">You can use the error code property in the expression to select only the particular error you want to handle in that **Catch** clause.</span></span>  
   
- 下列 Visual Basic 範例說明 **Catch\/When** 陳述式。  
+ <span data-ttu-id="4ddec-109">下列 Visual Basic 範例示範 **Catch/When**陳述式。</span><span class="sxs-lookup"><span data-stu-id="4ddec-109">The following Visual Basic example illustrates the **Catch/When** statement.</span></span>  
   
 ```  
 Try  
@@ -34,12 +37,12 @@ Try
 End Try  
 ```  
   
- 使用者篩選的子句的運算式並不以任何方式來限制。  如果例外狀況在使用者篩選運算式執行時發生，便會捨棄該例外狀況，並將篩選運算式視為已經評估成 false。  在此情形下，Common Language Runtime 會繼續搜尋目前例外狀況的處理常式。  
+ <span data-ttu-id="4ddec-110">不會以任何方式限制使用者篩選子句的運算式。</span><span class="sxs-lookup"><span data-stu-id="4ddec-110">The expression of the user-filtered clause is not restricted in any way.</span></span> <span data-ttu-id="4ddec-111">如果在使用者篩選運算式執行期間發生例外狀況，會捨棄該例外狀況，且篩選運算式會被視為必須評估為 false。</span><span class="sxs-lookup"><span data-stu-id="4ddec-111">If an exception occurs during execution of the user-filtered expression, that exception is discarded and the filter expression is considered to have evaluated to false.</span></span> <span data-ttu-id="4ddec-112">在此情況下，通用語言執行平台會繼續搜尋目前例外狀況的處理常式。</span><span class="sxs-lookup"><span data-stu-id="4ddec-112">In this case, the common language runtime continues the search for a handler for the current exception.</span></span>  
   
-## 組合特定例外狀況和使用者篩選的子句  
- Catch 陳述式可以包含特定例外狀況和使用者篩選的子句兩者。  執行階段首先會測試特定例外狀況。  如果特定例外狀況成功，執行階段即執行使用者篩選條件。  泛用篩選條件可以包含宣告於類別篩選條件中的變數的參考。  注意，兩個篩選子句的順序不能相反。  
+## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a><span data-ttu-id="4ddec-113">結合特定例外狀況和使用者篩選的子句</span><span class="sxs-lookup"><span data-stu-id="4ddec-113">Combining the Specific Exception and the User-Filtered Clauses</span></span>  
+ <span data-ttu-id="4ddec-114">Catch 陳述式可以包含特定例外狀況和使用者篩選的子句。</span><span class="sxs-lookup"><span data-stu-id="4ddec-114">A catch statement can contain both the specific exception and the user-filtered clauses.</span></span> <span data-ttu-id="4ddec-115">執行階段會先測試特定例外狀況。</span><span class="sxs-lookup"><span data-stu-id="4ddec-115">The runtime tests the specific exception first.</span></span> <span data-ttu-id="4ddec-116">如果特定例外狀況成功，則執行階段會執行使用者篩選。</span><span class="sxs-lookup"><span data-stu-id="4ddec-116">If the specific exception succeeds, the runtime executes the user filter.</span></span> <span data-ttu-id="4ddec-117">一般篩選可以包含類別篩選中所宣告之變數的參考。</span><span class="sxs-lookup"><span data-stu-id="4ddec-117">The generic filter can contain a reference to the variable declared in the class filter.</span></span> <span data-ttu-id="4ddec-118">請注意，無法反轉兩個篩選子句的順序。</span><span class="sxs-lookup"><span data-stu-id="4ddec-118">Note that the order of the two filter clauses cannot be reversed.</span></span>  
   
- 下列 Visual Basic 範例示範 **Catch** 陳述式中的特定例外狀況 `ClassLoadException`，以及使用 **When** 關鍵字的使用者篩選子句。  
+ <span data-ttu-id="4ddec-119">下列 Visual Basic 範例會顯示 **Catch** 陳述式中的特定例外狀況 `ClassLoadException`，以及使用 **When** 關鍵字的使用者篩選子句。</span><span class="sxs-lookup"><span data-stu-id="4ddec-119">The following Visual Basic example shows the specific exception `ClassLoadException` in the **Catch** statement as well as the user-filtered clause using the **When** keyword.</span></span>  
   
 ```  
 Try  
@@ -48,9 +51,6 @@ Try
       'Catch statements.  
 End Try  
 ```  
-  
-## 請參閱  
- [如何：使用 Try\/Catch 區塊攔截例外狀況](../../../docs/standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md)   
- [如何：使用 Catch 區塊中的特定例外狀況](../../../docs/standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)   
- [例外狀況的最佳作法](../../../docs/standard/exceptions/best-practices-for-exceptions.md)   
- [例外狀況處理基礎觀念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+
+## <a name="see-also"></a><span data-ttu-id="4ddec-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4ddec-120">See Also</span></span>
+[<span data-ttu-id="4ddec-121">例外狀況</span><span class="sxs-lookup"><span data-stu-id="4ddec-121">Exceptions</span></span>](index.md)

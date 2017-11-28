@@ -1,47 +1,27 @@
 ---
 title: "#<a name=\"undef-c-reference\"></a>undef (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#undef'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#undef directive [C#]'
+f1_keywords: '#undef'
+helpviewer_keywords: '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7a3c162c0ecb8bb39cc13a34dcd15fa3ce96ebb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: acdd043535ef319f2af40c809e7fe4af612cb17d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="undef-c-reference"></a>#undef (C# 參考)
-`#undef` 可讓您取消定義符號，如此一來，在 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指示詞中使用符號作為運算式，運算式就會評估為 `false`。  
+# <a name="undef-c-reference"></a><span data-ttu-id="3f6fe-102">#undef (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="3f6fe-102">#undef (C# Reference)</span></span>
+<span data-ttu-id="3f6fe-103">`#undef` 可讓您取消定義符號，如此一來，在 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指示詞中使用符號作為運算式，運算式就會評估為 `false`。</span><span class="sxs-lookup"><span data-stu-id="3f6fe-103">`#undef` lets you undefine a symbol, such that, by using the symbol as the expression in a [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `false`.</span></span>  
   
- 使用 [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 指示詞或 [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 編譯器選項可以定義符號。 `#undef` 指示詞必須先出現在檔案中，才能使用亦非指示詞的任何陳述式。  
+ <span data-ttu-id="3f6fe-104">使用 [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 指示詞或 [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 編譯器選項可以定義符號。</span><span class="sxs-lookup"><span data-stu-id="3f6fe-104">A symbol can be defined either with the [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) directive or the [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="3f6fe-105">`#undef` 指示詞必須先出現在檔案中，才能使用亦非指示詞的任何陳述式。</span><span class="sxs-lookup"><span data-stu-id="3f6fe-105">The `#undef` directive must appear in the file before you use any statements that are not also directives.</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="3f6fe-106">範例</span><span class="sxs-lookup"><span data-stu-id="3f6fe-106">Example</span></span>  
   
 ```csharp
 // preprocessor_undef.cs  
@@ -61,9 +41,8 @@ class MyClass
 }  
 ```  
   
- **未定義 DEBUG**   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
-
+ <span data-ttu-id="3f6fe-107">**未定義 DEBUG**</span><span class="sxs-lookup"><span data-stu-id="3f6fe-107">**DEBUG is not defined**</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3f6fe-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f6fe-108">See Also</span></span>  
+ [<span data-ttu-id="3f6fe-109">C# 參考</span><span class="sxs-lookup"><span data-stu-id="3f6fe-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="3f6fe-110">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="3f6fe-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3f6fe-111">C# 前置處理器指示詞</span><span class="sxs-lookup"><span data-stu-id="3f6fe-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

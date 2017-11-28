@@ -1,69 +1,50 @@
 ---
 title: "成員 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 成員 (C# 程式設計手冊)
-類別和結構具有代表資料與行為的成員。  類別的成員包括類別中宣告的所有成員，以及其繼承階層中所有類別內的所有成員 \(但不包括建構函式和解構函式\)。  衍生類別 \(Derived Class\) 可以繼承基底類別 \(Base Class\) 中的 Private 成員，但無法加以存取。  
+# <a name="members-c-programming-guide"></a><span data-ttu-id="c995b-102">成員 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="c995b-102">Members (C# Programming Guide)</span></span>
+<span data-ttu-id="c995b-103">類別和結構的成員可表示其資料與行為。</span><span class="sxs-lookup"><span data-stu-id="c995b-103">Classes and structs have members that represent their data and behavior.</span></span> <span data-ttu-id="c995b-104">類別的成員包含在所有類別中宣告的成員，以及在其繼承階層架構之所有類別中宣告的所有成員 (建構函式和完成項除外)。</span><span class="sxs-lookup"><span data-stu-id="c995b-104">A class's members include all the members declared in the class, along with all members (except constructors and finalizers) declared in all classes in its inheritance hierarchy.</span></span> <span data-ttu-id="c995b-105">基底類別中的私用成員可繼承衍生類別，但卻無法從衍生類別進行存取。</span><span class="sxs-lookup"><span data-stu-id="c995b-105">Private members in base classes are inherited but are not accessible from derived classes.</span></span>  
   
- 下表列出類別或結構可能包含的成員類型：  
+ <span data-ttu-id="c995b-106">下表列出類別或結構可以包含的成員類型：</span><span class="sxs-lookup"><span data-stu-id="c995b-106">The following table lists the kinds of members a class or struct may contain:</span></span>  
   
-|成員|描述|  
-|--------|--------|  
-|[欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)|欄位是在類別範圍 \(Class Scope\) 宣告的變數。  欄位可以是內建的數字型別 \(Numeric Type\) 或其他類別的執行個體 \(Instance\)。  例如，日曆類別可能會有包含目前日期的欄位。|  
-|[常數](../../../csharp/programming-guide/classes-and-structs/constants.md)|常數是欄位或屬性，其值是在編譯期間設定且無法變更。|  
-|[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)|屬性是類別的方法，會當做類別的欄位進行存取。  屬性可以保護類別欄位，而不會在物件不知情的狀況下變更。|  
-|[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)|方法會定義類別可以執行的行動。  方法可以使用提供輸入資料的參數，並可透過參數傳回輸出資料。  方法也可以不使用參數，而直接傳回值。|  
-|[事件](../../../csharp/programming-guide/events/index.md)|事件會通知其他物件有關發生的動作，例如按鈕的按下動作或方法成功完成。  事件可使用委派來定義與觸發。|  
-|[運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|多載運算子 \(Overload Operator\) 被視為是類別成員。  當您多載運算子時，會將其定義為類別中的公用靜態方法。  預先定義的運算子 \(`+`、`*`、`<` 等\) 不視為成員。  如需詳細資訊，請參閱[多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。|  
-|[索引子](../../../csharp/programming-guide/indexers/index.md)|索引子可讓物件以類似於陣列的方式進行索引。|  
-|[建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)|建構函式是在物件初次建立時所呼叫的方法，  通常是用來初始化物件的資料。|  
-|[解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)|解構函式在 C\# 中很少用到。  解構函式是在即將從記憶體移除物件時，由 Runtime Execution Engine 所呼叫的方法。  它們通常是用來確認必須釋放的任何資源都已適當的處理。|  
-|[巢狀類型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|巢狀型別是在其他型別中宣告的型別。  巢狀型別通常用來描述只有包含型別會使用的物件。|  
+|<span data-ttu-id="c995b-107">成員</span><span class="sxs-lookup"><span data-stu-id="c995b-107">Member</span></span>|<span data-ttu-id="c995b-108">說明</span><span class="sxs-lookup"><span data-stu-id="c995b-108">Description</span></span>|  
+|------------|-----------------|  
+|[<span data-ttu-id="c995b-109">欄位</span><span class="sxs-lookup"><span data-stu-id="c995b-109">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="c995b-110">欄位是在類別範圍中宣告的變數。</span><span class="sxs-lookup"><span data-stu-id="c995b-110">Fields are variables declared at class scope.</span></span> <span data-ttu-id="c995b-111">欄位可以是內建的數字類型或其他類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c995b-111">A field may be a built-in numeric type or an instance of another class.</span></span> <span data-ttu-id="c995b-112">例如，行事曆類別可能包含目前日期的欄位。</span><span class="sxs-lookup"><span data-stu-id="c995b-112">For example, a calendar class may have a field that contains the current date.</span></span>|  
+|[<span data-ttu-id="c995b-113">常數</span><span class="sxs-lookup"><span data-stu-id="c995b-113">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="c995b-114">常數是欄位或屬性，其值於編譯時期設定且無法變更。</span><span class="sxs-lookup"><span data-stu-id="c995b-114">Constants are fields or properties whose value is set at compile time and cannot be changed.</span></span>|  
+|[<span data-ttu-id="c995b-115">屬性</span><span class="sxs-lookup"><span data-stu-id="c995b-115">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="c995b-116">屬性是類別上的方法，可供存取，就像類別上的欄位一樣。</span><span class="sxs-lookup"><span data-stu-id="c995b-116">Properties are methods on a class that are accessed as if they were fields on that class.</span></span> <span data-ttu-id="c995b-117">屬性可以保護類別欄位，以免在物件不知情的情況下受到變更。</span><span class="sxs-lookup"><span data-stu-id="c995b-117">A property can provide protection for a class field to keep it from being changed without the knowledge of the object.</span></span>|  
+|[<span data-ttu-id="c995b-118">方法</span><span class="sxs-lookup"><span data-stu-id="c995b-118">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="c995b-119">方法會定義類別可以執行的動作。</span><span class="sxs-lookup"><span data-stu-id="c995b-119">Methods define the actions that a class can perform.</span></span> <span data-ttu-id="c995b-120">方法可接受參數以提供輸入資料，並藉由參數傳回輸出資料。</span><span class="sxs-lookup"><span data-stu-id="c995b-120">Methods can take parameters that provide input data, and can return output data through parameters.</span></span> <span data-ttu-id="c995b-121">方法也可以不使用參數，直接傳回值。</span><span class="sxs-lookup"><span data-stu-id="c995b-121">Methods can also return a value directly, without using a parameter.</span></span>|  
+|[<span data-ttu-id="c995b-122">事件</span><span class="sxs-lookup"><span data-stu-id="c995b-122">Events</span></span>](../../../csharp/programming-guide/events/index.md)|<span data-ttu-id="c995b-123">事件會提供發生次數的通知 (例如按鈕點選) 或針對其他物件成功完成方法的通知。</span><span class="sxs-lookup"><span data-stu-id="c995b-123">Events provide notifications about occurrences, such as button clicks or the successful completion of a method, to other objects.</span></span> <span data-ttu-id="c995b-124">您可以使用委派來定義和觸發事件。</span><span class="sxs-lookup"><span data-stu-id="c995b-124">Events are defined and triggered by using delegates.</span></span>|  
+|[<span data-ttu-id="c995b-125">運算子</span><span class="sxs-lookup"><span data-stu-id="c995b-125">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="c995b-126">系統會將多載運算子視為類別成員。</span><span class="sxs-lookup"><span data-stu-id="c995b-126">Overloaded operators are considered class members.</span></span> <span data-ttu-id="c995b-127">當您多載運算子時，可將其定義為類別中的公用靜態方法。</span><span class="sxs-lookup"><span data-stu-id="c995b-127">When you overload an operator, you define it as a public static method in a class.</span></span> <span data-ttu-id="c995b-128">系統不會將預先定義的運算子 (`+`、`*`、`<` 等等) 視為成員。</span><span class="sxs-lookup"><span data-stu-id="c995b-128">The predefined operators (`+`, `*`, `<`, and so on) are not considered members.</span></span> <span data-ttu-id="c995b-129">如需詳細資訊，請參閱[可多載的運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="c995b-129">For more information, see [Overloadable Operators](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span></span>|  
+|[<span data-ttu-id="c995b-130">索引子</span><span class="sxs-lookup"><span data-stu-id="c995b-130">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)|<span data-ttu-id="c995b-131">索引子可讓您以類似陣列的方式來對物件進行索引。</span><span class="sxs-lookup"><span data-stu-id="c995b-131">Indexers enable an object to be indexed in a manner similar to arrays.</span></span>|  
+|[<span data-ttu-id="c995b-132">建構函式</span><span class="sxs-lookup"><span data-stu-id="c995b-132">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="c995b-133">建構函式是第一次建立物件時所呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="c995b-133">Constructors are methods that are called when the object is first created.</span></span> <span data-ttu-id="c995b-134">它們通常會用來初始化物件的資料。</span><span class="sxs-lookup"><span data-stu-id="c995b-134">They are often used to initialize the data of an object.</span></span>|  
+|[<span data-ttu-id="c995b-135">完成項</span><span class="sxs-lookup"><span data-stu-id="c995b-135">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)|<span data-ttu-id="c995b-136">在 C# 中很少使用完成項。</span><span class="sxs-lookup"><span data-stu-id="c995b-136">Finalizers are used very rarely in C#.</span></span> <span data-ttu-id="c995b-137">完成項是即將從記憶體中移除物件時，由執行階段執行引擎所呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="c995b-137">They are methods that are called by the runtime execution engine when the object is about to be removed from memory.</span></span> <span data-ttu-id="c995b-138">它們通常用來確保任何必須發行的資源有受到妥善處理。</span><span class="sxs-lookup"><span data-stu-id="c995b-138">They are generally used to make sure that any resources which must be released are handled appropriately.</span></span>|  
+|[<span data-ttu-id="c995b-139">巢狀型別</span><span class="sxs-lookup"><span data-stu-id="c995b-139">Nested Types</span></span>](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|<span data-ttu-id="c995b-140">巢狀型別是在其他類型中宣告的類型。</span><span class="sxs-lookup"><span data-stu-id="c995b-140">Nested types are types declared within another type.</span></span> <span data-ttu-id="c995b-141">如果某些類型包含物件，巢狀型別通常用於描述僅供該類型使用的這些物件。</span><span class="sxs-lookup"><span data-stu-id="c995b-141">Nested types are often used to describe objects that are used only by the types that contain them.</span></span>|  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [索引子](../../../csharp/programming-guide/indexers/index.md)   
- [事件](../../../csharp/programming-guide/events/index.md)   
- [巢狀類型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
- [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
- [多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
-
+## <a name="see-also"></a><span data-ttu-id="c995b-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c995b-142">See Also</span></span>  
+ [<span data-ttu-id="c995b-143">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="c995b-143">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c995b-144">類別</span><span class="sxs-lookup"><span data-stu-id="c995b-144">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [<span data-ttu-id="c995b-145">方法</span><span class="sxs-lookup"><span data-stu-id="c995b-145">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="c995b-146">建構函式</span><span class="sxs-lookup"><span data-stu-id="c995b-146">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="c995b-147">完成項</span><span class="sxs-lookup"><span data-stu-id="c995b-147">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [<span data-ttu-id="c995b-148">屬性</span><span class="sxs-lookup"><span data-stu-id="c995b-148">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="c995b-149">欄位</span><span class="sxs-lookup"><span data-stu-id="c995b-149">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [<span data-ttu-id="c995b-150">索引子</span><span class="sxs-lookup"><span data-stu-id="c995b-150">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="c995b-151">事件</span><span class="sxs-lookup"><span data-stu-id="c995b-151">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="c995b-152">巢狀型別</span><span class="sxs-lookup"><span data-stu-id="c995b-152">Nested Types</span></span>](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+ [<span data-ttu-id="c995b-153">運算子</span><span class="sxs-lookup"><span data-stu-id="c995b-153">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+ [<span data-ttu-id="c995b-154">多載運算子</span><span class="sxs-lookup"><span data-stu-id="c995b-154">Overloadable Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

@@ -1,41 +1,32 @@
 ---
 title: "呼叫端資訊 (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="caller-information-c"></a>呼叫端資訊 (C#)
-使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  
+# <a name="caller-information-c"></a><span data-ttu-id="a832a-102">呼叫端資訊 (C#)</span><span class="sxs-lookup"><span data-stu-id="a832a-102">Caller Information (C#)</span></span>
+<span data-ttu-id="a832a-103">使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。</span><span class="sxs-lookup"><span data-stu-id="a832a-103">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="a832a-104">您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="a832a-104">You can obtain file path of the source code, the line number in the source code, and the member name of the caller.</span></span> <span data-ttu-id="a832a-105">這項資訊有助於追蹤、偵錯及建立診斷工具。</span><span class="sxs-lookup"><span data-stu-id="a832a-105">This information is helpful for tracing, debugging, and creating diagnostic tools.</span></span>  
   
- 若要取得這項資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 命名空間中定義的 Caller Info 屬性：  
+ <span data-ttu-id="a832a-106">若要取得這項資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。</span><span class="sxs-lookup"><span data-stu-id="a832a-106">To obtain this information, you use attributes that are applied to optional parameters, each of which has a default value.</span></span> <span data-ttu-id="a832a-107">下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：</span><span class="sxs-lookup"><span data-stu-id="a832a-107">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:</span></span>  
   
-|屬性|描述|類型|  
+|<span data-ttu-id="a832a-108">屬性</span><span class="sxs-lookup"><span data-stu-id="a832a-108">Attribute</span></span>|<span data-ttu-id="a832a-109">描述</span><span class="sxs-lookup"><span data-stu-id="a832a-109">Description</span></span>|<span data-ttu-id="a832a-110">類型</span><span class="sxs-lookup"><span data-stu-id="a832a-110">Type</span></span>|  
 |---|---|---|  
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含呼叫端的原始程式檔完整路徑。 這是編譯時間的檔案路徑。|`String`|  
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|原始程式檔中呼叫方法所在的行號。|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法或屬性名稱。 請參閱本主題稍後的[成員名稱](#MEMBERNAMES)。|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|<span data-ttu-id="a832a-111">包含呼叫端的原始程式檔完整路徑。</span><span class="sxs-lookup"><span data-stu-id="a832a-111">Full path of the source file that contains the caller.</span></span> <span data-ttu-id="a832a-112">這是編譯時間的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="a832a-112">This is the file path at compile time.</span></span>|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|<span data-ttu-id="a832a-113">原始程式檔中呼叫方法所在的行號。</span><span class="sxs-lookup"><span data-stu-id="a832a-113">Line number in the source file at which the method is called.</span></span>|`Integer`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|<span data-ttu-id="a832a-114">呼叫端的方法或屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="a832a-114">Method or property name of the caller.</span></span> <span data-ttu-id="a832a-115">請參閱本主題稍後的[成員名稱](#MEMBERNAMES)。</span><span class="sxs-lookup"><span data-stu-id="a832a-115">See [Member Names](#MEMBERNAMES) later in this topic.</span></span>|`String`|  
   
-## <a name="example"></a>範例  
- 下列範例將示範如何使用 Caller Info 屬性。 每次呼叫 `TraceMessage` 方法時，呼叫端資訊會替代做為選擇性參數的引數。  
+## <a name="example"></a><span data-ttu-id="a832a-116">範例</span><span class="sxs-lookup"><span data-stu-id="a832a-116">Example</span></span>  
+ <span data-ttu-id="a832a-117">下列範例將示範如何使用 Caller Info 屬性。</span><span class="sxs-lookup"><span data-stu-id="a832a-117">The following example shows how to use Caller Info attributes.</span></span> <span data-ttu-id="a832a-118">每次呼叫 `TraceMessage` 方法時，呼叫端資訊會替代做為選擇性參數的引數。</span><span class="sxs-lookup"><span data-stu-id="a832a-118">On each call to the `TraceMessage` method, the caller information is substituted as arguments to the optional parameters.</span></span>  
   
 ```csharp  
 public void DoProcessing()  
@@ -61,37 +52,36 @@ public void TraceMessage(string message,
 //  source line number: 31  
 ```  
   
-## <a name="remarks"></a>備註  
- 您必須為每個選擇性參數指定明確的預設值。 您無法將 Caller Info 屬性套用至未指定為選擇性的參數。  
+## <a name="remarks"></a><span data-ttu-id="a832a-119">備註</span><span class="sxs-lookup"><span data-stu-id="a832a-119">Remarks</span></span>  
+ <span data-ttu-id="a832a-120">您必須為每個選擇性參數指定明確的預設值。</span><span class="sxs-lookup"><span data-stu-id="a832a-120">You must specify an explicit default value for each optional parameter.</span></span> <span data-ttu-id="a832a-121">您無法將 Caller Info 屬性套用至未指定為選擇性的參數。</span><span class="sxs-lookup"><span data-stu-id="a832a-121">You can't apply Caller Info attributes to parameters that aren't specified as optional.</span></span>  
   
- Caller Info 屬性不會讓參數成為選擇性， 而是會影響省略引數時傳入的預設值。  
+ <span data-ttu-id="a832a-122">Caller Info 屬性不會讓參數成為選擇性，</span><span class="sxs-lookup"><span data-stu-id="a832a-122">The Caller Info attributes don't make a parameter optional.</span></span> <span data-ttu-id="a832a-123">而是會影響省略引數時傳入的預設值。</span><span class="sxs-lookup"><span data-stu-id="a832a-123">Instead, they affect the default value that's passed in when the argument is omitted.</span></span>  
   
- 在編譯時期，Caller Info 的值會做為常值發出至中繼語言 (IL)。 結果不受模糊化所影響，與 <xref:System.Exception.StackTrace%2A> 屬性中例外狀況的結果不同。  
+ <span data-ttu-id="a832a-124">在編譯時期，Caller Info 的值會做為常值發出至中繼語言 (IL)。</span><span class="sxs-lookup"><span data-stu-id="a832a-124">Caller Info values are emitted as literals into the Intermediate Language (IL) at compile time.</span></span> <span data-ttu-id="a832a-125">結果不受模糊化所影響，與 <xref:System.Exception.StackTrace%2A> 屬性中例外狀況的結果不同。</span><span class="sxs-lookup"><span data-stu-id="a832a-125">Unlike the results of the <xref:System.Exception.StackTrace%2A> property for exceptions, the results aren't affected by obfuscation.</span></span>  
   
- 您可以明確提供選擇性引數來控制呼叫端資訊，或是隱藏呼叫端資訊。  
+ <span data-ttu-id="a832a-126">您可以明確提供選擇性引數來控制呼叫端資訊，或是隱藏呼叫端資訊。</span><span class="sxs-lookup"><span data-stu-id="a832a-126">You can explicitly supply the optional arguments to control the caller information or to hide caller information.</span></span>  
   
-###  <a name="MEMBERNAMES"></a> 成員名稱  
- 您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構] 未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：  
+###  <span data-ttu-id="a832a-127"><a name="MEMBERNAMES"></a> 成員名稱</span><span class="sxs-lookup"><span data-stu-id="a832a-127"><a name="MEMBERNAMES"></a> Member Names</span></span>  
+ <span data-ttu-id="a832a-128">您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。</span><span class="sxs-lookup"><span data-stu-id="a832a-128">You can use the `CallerMemberName` attribute to avoid specifying the member name as a `String` argument to the called method.</span></span> <span data-ttu-id="a832a-129">利用這個技巧就可以避免發生 [重新命名重構] 未變更 `String` 值這個問題。</span><span class="sxs-lookup"><span data-stu-id="a832a-129">By using this technique, you avoid the problem that **Rename Refactoring** doesn't change the `String` values.</span></span> <span data-ttu-id="a832a-130">這項優點對於下列工作特別有用：</span><span class="sxs-lookup"><span data-stu-id="a832a-130">This benefit is especially useful for the following tasks:</span></span>  
   
--   使用追蹤和診斷常式。  
+-   <span data-ttu-id="a832a-131">使用追蹤和診斷常式。</span><span class="sxs-lookup"><span data-stu-id="a832a-131">Using tracing and diagnostic routines.</span></span>  
   
--   當繫結資料時，實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 這個介面可讓物件的屬性告知繫結的控制項屬性已變更，所以控制項可以顯示更新的資訊。 沒有 `CallerMemberName` 屬性 (Attribute)，您就必須指定屬性 (Property) 名稱做為常值。  
+-   <span data-ttu-id="a832a-132">當繫結資料時，實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。</span><span class="sxs-lookup"><span data-stu-id="a832a-132">Implementing the <xref:System.ComponentModel.INotifyPropertyChanged> interface when binding data.</span></span> <span data-ttu-id="a832a-133">這個介面可讓物件的屬性告知繫結的控制項屬性已變更，所以控制項可以顯示更新的資訊。</span><span class="sxs-lookup"><span data-stu-id="a832a-133">This interface allows the property of an object to notify a bound control that the property has changed, so that the control can display the updated information.</span></span> <span data-ttu-id="a832a-134">沒有 `CallerMemberName` 屬性 (Attribute)，您就必須指定屬性 (Property) 名稱做為常值。</span><span class="sxs-lookup"><span data-stu-id="a832a-134">Without the `CallerMemberName` attribute, you must specify the property name as a literal.</span></span>  
   
- 下圖顯示當您使用 `CallerMemberName` 屬性時，傳回的成員名稱。  
+ <span data-ttu-id="a832a-135">下圖顯示當您使用 `CallerMemberName` 屬性時，傳回的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="a832a-135">The following chart shows the member names that are returned when you use the `CallerMemberName` attribute.</span></span>  
   
-|呼叫發生於|成員名稱結果|  
+|<span data-ttu-id="a832a-136">呼叫發生於</span><span class="sxs-lookup"><span data-stu-id="a832a-136">Calls occurs within</span></span>|<span data-ttu-id="a832a-137">成員名稱結果</span><span class="sxs-lookup"><span data-stu-id="a832a-137">Member name result</span></span>|  
 |-------------------------|------------------------|  
-|方法、屬性或事件|產生呼叫的方法、屬性或事件的名稱。|  
-|建構函式|字串 ".ctor"|  
-|靜態建構函式|字串 ".cctor"|  
-|解構函式|字串 "Finalize"|  
-|使用者定義的運算子或轉換|產生的成員名稱，例如 "op_Addition"。|  
-|屬性建構函式|套用屬性的成員名稱。 如果屬性為成員內的任何項目 (例如參數、傳回值或泛型類型參數)，這個結果會是與該項目相關聯的成員名稱。|  
-|無包含的成員 (例如，組件層級或套用至類型的屬性)。|選擇性參數的預設值。|  
+|<span data-ttu-id="a832a-138">方法、屬性或事件</span><span class="sxs-lookup"><span data-stu-id="a832a-138">Method, property, or event</span></span>|<span data-ttu-id="a832a-139">產生呼叫的方法、屬性或事件的名稱。</span><span class="sxs-lookup"><span data-stu-id="a832a-139">The name of the method, property, or event from which the call originated.</span></span>|  
+|<span data-ttu-id="a832a-140">建構函式</span><span class="sxs-lookup"><span data-stu-id="a832a-140">Constructor</span></span>|<span data-ttu-id="a832a-141">字串 ".ctor"</span><span class="sxs-lookup"><span data-stu-id="a832a-141">The string ".ctor"</span></span>|  
+|<span data-ttu-id="a832a-142">靜態建構函式</span><span class="sxs-lookup"><span data-stu-id="a832a-142">Static constructor</span></span>|<span data-ttu-id="a832a-143">字串 ".cctor"</span><span class="sxs-lookup"><span data-stu-id="a832a-143">The string ".cctor"</span></span>|  
+|<span data-ttu-id="a832a-144">解構函式</span><span class="sxs-lookup"><span data-stu-id="a832a-144">Destructor</span></span>|<span data-ttu-id="a832a-145">字串 "Finalize"</span><span class="sxs-lookup"><span data-stu-id="a832a-145">The string "Finalize"</span></span>|  
+|<span data-ttu-id="a832a-146">使用者定義的運算子或轉換</span><span class="sxs-lookup"><span data-stu-id="a832a-146">User-defined operators or conversions</span></span>|<span data-ttu-id="a832a-147">產生的成員名稱，例如 "op_Addition"。</span><span class="sxs-lookup"><span data-stu-id="a832a-147">The generated name for the member, for example, "op_Addition".</span></span>|  
+|<span data-ttu-id="a832a-148">屬性建構函式</span><span class="sxs-lookup"><span data-stu-id="a832a-148">Attribute constructor</span></span>|<span data-ttu-id="a832a-149">套用屬性的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="a832a-149">The name of the member to which the attribute is applied.</span></span> <span data-ttu-id="a832a-150">如果屬性為成員內的任何項目 (例如參數、傳回值或泛型類型參數)，這個結果會是與該項目相關聯的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="a832a-150">If the attribute is any element within a member (such as a parameter, a return value, or a generic type parameter), this result is the name of the member that's associated with that element.</span></span>|  
+|<span data-ttu-id="a832a-151">無包含的成員 (例如，組件層級或套用至類型的屬性)。</span><span class="sxs-lookup"><span data-stu-id="a832a-151">No containing member (for example, assembly-level or attributes that are applied to types)</span></span>|<span data-ttu-id="a832a-152">選擇性參數的預設值。</span><span class="sxs-lookup"><span data-stu-id="a832a-152">The default value of the optional parameter.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)   
- [常見屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
- [程式設計概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="a832a-153">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a832a-153">See Also</span></span>  
+ [<span data-ttu-id="a832a-154">屬性 (C#)</span><span class="sxs-lookup"><span data-stu-id="a832a-154">Attributes (C#)</span></span>](../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [<span data-ttu-id="a832a-155">常見屬性 (C#)</span><span class="sxs-lookup"><span data-stu-id="a832a-155">Common Attributes (C#)</span></span>](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+ [<span data-ttu-id="a832a-156">具名和選擇性引數</span><span class="sxs-lookup"><span data-stu-id="a832a-156">Named and Optional Arguments</span></span>](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [<span data-ttu-id="a832a-157">程式設計概念 (C#)</span><span class="sxs-lookup"><span data-stu-id="a832a-157">Programming Concepts (C#)</span></span>](../../../csharp/programming-guide/concepts/index.md)

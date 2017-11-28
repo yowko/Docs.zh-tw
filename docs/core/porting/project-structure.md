@@ -1,129 +1,88 @@
 ---
 title: "組織專案以支援 .NET Framework 及 .NET Core"
-description: "組織專案以支援 .NET Framework 及 .NET Core"
-keywords: ".NET、.NET Core"
+description: "協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。"
+keywords: ".NET, .NET Core, .NET Framework, 專案配置, 多個架構"
 author: conniey
 ms.author: mairaw
-ms.date: 07/18/2016
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 93bec65e3bbee93855d6f5bce5e2d6cea8bb9f3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a><span data-ttu-id="685c8-104">組織專案以支援 .NET Framework 及 .NET Core</span><span class="sxs-lookup"><span data-stu-id="685c8-104">Organizing your project to support .NET Framework and .NET Core</span></span>
 
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>組織專案以支援 .NET Framework 及 .NET Core
+<span data-ttu-id="685c8-105">本文可協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。</span><span class="sxs-lookup"><span data-stu-id="685c8-105">This article helps project owners who want to compile their solution against .NET Framework and .NET Core side-by-side.</span></span> <span data-ttu-id="685c8-106">它提供數個選項，組織專案以協助開發人員達成此目標。</span><span class="sxs-lookup"><span data-stu-id="685c8-106">It provides several options to organize projects to help developers achieve this goal.</span></span> <span data-ttu-id="685c8-107">下列清單提供當您決定如何使用 .NET Core 設定專案配置時，要考量的一些典型案例。</span><span class="sxs-lookup"><span data-stu-id="685c8-107">The following list provides some typical scenarios to consider when you're deciding how to setup your project layout with .NET Core.</span></span> <span data-ttu-id="685c8-108">此清單不一定涵蓋您想要的所有項目，根據專案需求決定優先順序。</span><span class="sxs-lookup"><span data-stu-id="685c8-108">The list may not cover everything you want; prioritize based on your project's needs.</span></span>
 
-> [!WARNING]
-> 本主題尚未針對最新版工具進行更新。
+* <span data-ttu-id="685c8-109">[**將現有的專案和 .NET Core 專案合併成單一專案**][option-csproj]</span><span class="sxs-lookup"><span data-stu-id="685c8-109">[**Combine existing projects and .NET Core projects into single projects**][option-csproj]</span></span>
 
-本文是為了協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。  它提供數個選項，組織專案以協助開發人員達成此目標。  以下是當您決定如何使用 .NET Core 設定專案配置時，要考量的一些典型案例。  它們不一定涵蓋您想要的所有項目，專案需求決定優先順序。
+  <span data-ttu-id="685c8-110">*適用於︰*</span><span class="sxs-lookup"><span data-stu-id="685c8-110">*What this is good for:*</span></span>
+  * <span data-ttu-id="685c8-111">藉由編譯單一專案而非編譯多個專案，每個都會以不同的 .NET Framework 版本或平台為目標，以簡化建置流程。</span><span class="sxs-lookup"><span data-stu-id="685c8-111">Simplifying your build process by compiling a single project rather than compiling multiple projects, each targeting a different .NET Framework version or platform.</span></span>
+  * <span data-ttu-id="685c8-112">因為您必須管理單一專案檔，所以簡化多目標專案的來源檔案管理。</span><span class="sxs-lookup"><span data-stu-id="685c8-112">Simplifying source file management for multi-targeted projects because you must manage a single project file.</span></span> <span data-ttu-id="685c8-113">新增/移除來源檔案時，替代方案需要您手動同步處理這些專案與其他專案。</span><span class="sxs-lookup"><span data-stu-id="685c8-113">When adding/removing source files, the alternatives require you to manually sync these with your other projects.</span></span>
+  * <span data-ttu-id="685c8-114">輕鬆產生 NuGet 封裝以供耗用。</span><span class="sxs-lookup"><span data-stu-id="685c8-114">Easily generating a NuGet package for consumption.</span></span>
+  * <span data-ttu-id="685c8-115">讓您使用編譯器指示詞，在程式庫中針對特定的 .NET Framework 版本撰寫程式碼。</span><span class="sxs-lookup"><span data-stu-id="685c8-115">Allows you to write code for a specific .NET Framework version in your libraries through the use of compiler directives.</span></span>
 
-* [**將現有的專案和 .NET Core 專案合併成單一專案**][option-xproj]
-  
-  *適用於︰*
-  * 藉由編譯單一專案而非編譯多個專案，每個都會以不同的 .NET Framework 版本或平台為目標，以簡化建置流程。
-  * 因為您必須管理單一專案檔案，所以簡化多目標專案的來源檔案管理。  新增/移除來源檔案時，替代方案需要您手動同步處理這些專案與其他專案。
-  * 輕鬆產生 NuGet 封裝以供耗用。
-  * 讓您使用編譯器指示詞，在程式庫中針對特定的 .NET Framework 版本撰寫程式碼。
-  
-  *不支援的情節：*
-  * 不允許開發人員不使用 Visual Studio 2015 開啟現有的專案。 若要支援舊版的 Visual Studio，[將專案檔放在不同的資料夾](#support-vs)是較好的選擇。
-  * 不允許您在相同的方案檔中，跨不同專案類型共用 .NET Core 程式庫。 若要支援此功能，[建立可攜式類別庫](#support-pcl)是較好的選擇。
-  * 不允許 MSBuild 目標和工作支援的專案組建或負載修改。 若要支援此功能，[建立可攜式類別庫](#support-pcl)是較好的選擇。
+  <span data-ttu-id="685c8-116">*不支援的情節：*</span><span class="sxs-lookup"><span data-stu-id="685c8-116">*Unsupported scenarios:*</span></span>
+  * <span data-ttu-id="685c8-117">需要開發人員使用 Visual Studio 2017 開啟現有的專案。</span><span class="sxs-lookup"><span data-stu-id="685c8-117">Requires developers to use Visual Studio 2017 to open existing projects.</span></span> <span data-ttu-id="685c8-118">若要支援舊版的 Visual Studio，[將專案檔放在不同的資料夾](#support-vs)是較好的選擇。</span><span class="sxs-lookup"><span data-stu-id="685c8-118">To support older versions of Visual Studio, [keeping your project files in different folders](#support-vs) is a better option.</span></span>
 
-* <a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**][option-xproj-folder]
-  
-  *適用於︰*
-  * 繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2015 的開發人員/參與者。
-  * 減少現有專案中製造新 bug 的可能性，因為這些專案不需要任何程式碼變換。
+* <span data-ttu-id="685c8-119"><a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**][option-csproj-folder]</span><span class="sxs-lookup"><span data-stu-id="685c8-119"><a name="support-vs"></a>[**Keep existing projects and new .NET Core projects separate**][option-csproj-folder]</span></span>
 
-* <a name="support-pcl"></a>[**保留現有的專案並建立以 .NET Core 為目標的可攜式類別庫 (PCL)**][option-pcl]
+  <span data-ttu-id="685c8-120">*適用於︰*</span><span class="sxs-lookup"><span data-stu-id="685c8-120">*What this is good for:*</span></span>
+  * <span data-ttu-id="685c8-121">繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2017 的開發人員/參與者。</span><span class="sxs-lookup"><span data-stu-id="685c8-121">Continuing to support development on existing projects without having to upgrade for developers/contributors who may not have Visual Studio 2017.</span></span>
+  * <span data-ttu-id="685c8-122">減少現有專案中製造新Bug 的可能性，因為這些專案不需要任何程式碼變換。</span><span class="sxs-lookup"><span data-stu-id="685c8-122">Decreasing the possibility of creating new bugs in existing projects because no code churn is required in those projects.</span></span>
 
-  *適用於︰*
-  * 參考桌面的 .NET Core 程式庫及/或相同方案中以完整 .NET Framework 為目標的 Web 專案。
-  * 支援修改專案組建或載入程序。 這些修改可以包含 `*.csproj` 檔案中的 MSBuild 工作和目標。
+## <a name="example"></a><span data-ttu-id="685c8-123">範例</span><span class="sxs-lookup"><span data-stu-id="685c8-123">Example</span></span>
 
-  *不支援的情節：*
-  * 不允許您針對特定的 .NET Framework 版本撰寫程式碼，因為不支援[預先定義的前置處理器符號][how-to-multitarget]。
+<span data-ttu-id="685c8-124">請考慮以下的儲存機制︰</span><span class="sxs-lookup"><span data-stu-id="685c8-124">Consider the repository below:</span></span>
 
-## <a name="example"></a>範例
+<span data-ttu-id="685c8-125">![現有專案][example-initial-project]</span><span class="sxs-lookup"><span data-stu-id="685c8-125">![Existing project][example-initial-project]</span></span>
 
-請考慮以下的儲存機制︰
+<span data-ttu-id="685c8-126">[**原始程式碼**][example-initial-project-code]</span><span class="sxs-lookup"><span data-stu-id="685c8-126">[**Source Code**][example-initial-project-code]</span></span>
 
-![現有專案][example-initial-project]
+<span data-ttu-id="685c8-127">下列描述幾種方式以新增這個存放庫的 .NET Core 支援，視現有專案的條件約束和複雜性而定。</span><span class="sxs-lookup"><span data-stu-id="685c8-127">The following describes several ways to add support for .NET Core for this repository depending on the constraints and complexity of the existing projects.</span></span>
 
-[**原始程式碼**][example-initial-project-code]
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a><span data-ttu-id="685c8-128">使用多目標 .NET Core 專案取代現有的專案</span><span class="sxs-lookup"><span data-stu-id="685c8-128">Replace existing projects with a multi-targeted .NET Core project</span></span>
 
-有幾種不同的方式可以加入此儲存機制的 .NET Core 支援，視現有專案的條件約束和複雜性而定，後文會說明。
+<span data-ttu-id="685c8-129">重新組織存放庫，以便移除任何現有的 *\*.csproj* 檔案，並建立以多個架構為目標的單一 *\*.csproj* 檔案。</span><span class="sxs-lookup"><span data-stu-id="685c8-129">Reorganize the repository so that any existing *\*.csproj* files are removed and a single *\*.csproj* file is created that targets multiple frameworks.</span></span> <span data-ttu-id="685c8-130">這是很不錯的選擇，因為單一專案能夠編譯不同的架構。</span><span class="sxs-lookup"><span data-stu-id="685c8-130">This is a great option because a single project is able to compile for different frameworks.</span></span> <span data-ttu-id="685c8-131">它也可以處理個別目標架構的不同編譯選項及相依性。</span><span class="sxs-lookup"><span data-stu-id="685c8-131">It also has the power to handle different compilation options and dependencies per targeted framework.</span></span>
 
-## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project-xproj"></a>使用多目標 .NET Core 專案 (xproj) 取代現有的專案
+<span data-ttu-id="685c8-132">![建立以多個架構為目標的 csproj][example-csproj]</span><span class="sxs-lookup"><span data-stu-id="685c8-132">![Create an csproj that targets multiple frameworks][example-csproj]</span></span>
 
-儲存機制可以重新組織，以便移除任何現有的 `*.csproj` 檔案，並建立以多個架構為目標的單一 `*.xproj` 檔案。  這是很不錯的選擇，因為單一專案能夠編譯不同的架構。  它也有能力處理不同的編譯選項、相依性等等。 依目標架構。
+<span data-ttu-id="685c8-133">[**原始程式碼**][example-csproj-code]</span><span class="sxs-lookup"><span data-stu-id="685c8-133">[**Source Code**][example-csproj-code]</span></span>
 
-![建立以多個架構為目標的 xproj][example-xproj]
+<span data-ttu-id="685c8-134">要注意的變更如下︰</span><span class="sxs-lookup"><span data-stu-id="685c8-134">Changes to note are:</span></span>
+* <span data-ttu-id="685c8-135">將 *packages.config* 和 *\*.csproj* 取代為新的 [.NET Core *\*.csproj*][example-csproj-netcore]。</span><span class="sxs-lookup"><span data-stu-id="685c8-135">Replacement of *packages.config* and *\*.csproj* with a new [.NET Core *\*.csproj*][example-csproj-netcore].</span></span> <span data-ttu-id="685c8-136">NuGet 套件是使用 `<PackageReference> ItemGroup` 所指定。</span><span class="sxs-lookup"><span data-stu-id="685c8-136">NuGet packages are specified with `<PackageReference> ItemGroup`.</span></span>
 
-[**原始程式碼**][example-xproj-code]
+## <a name="keep-existing-projects-and-create-a-net-core-project"></a><span data-ttu-id="685c8-137">保留現有的專案並建立 .NET Core 專案</span><span class="sxs-lookup"><span data-stu-id="685c8-137">Keep existing projects and create a .NET Core project</span></span>
 
-要注意的變更如下︰
-* 新增 `global.json`
-* 將 `packages.config` 和 `*.csproj` 替換成 `project.json` 和 `*.xproj`
-* [Car's project.json][example-xproj-projectjson] 及其[測試專案][example-xproj-projectjson-test]中，支援建置現有 .NET Framework 以及其他架構的變更
+<span data-ttu-id="685c8-138">如果現有的專案以較舊的架構為目標，您可能想要保持這些專案不變，使用 .NET Core 專案以未來的架構為目標。</span><span class="sxs-lookup"><span data-stu-id="685c8-138">If there are existing projects that target older frameworks, you may want to leave these projects untouched and use a .NET Core project to target future frameworks.</span></span>
 
-## <a name="create-a-portable-class-library-pcl-to-target-net-core"></a>建立以 .NET Core 為目標的可攜式類別庫 (PCL)
+<span data-ttu-id="685c8-139">![在不同資料夾中有現有專案的 .NET Core 專案][example-csproj-different-folder]</span><span class="sxs-lookup"><span data-stu-id="685c8-139">![.NET Core project with existing project in different folder][example-csproj-different-folder]</span></span>
 
-如果現有的專案在其 `*.csproj` 檔案中包含複雜的建置作業或內容，建立 PCL 會很容易。
+<span data-ttu-id="685c8-140">[**原始程式碼**][example-csproj-different-code]</span><span class="sxs-lookup"><span data-stu-id="685c8-140">[**Source Code**][example-csproj-different-code]</span></span>
 
-![][example-pcl]
+<span data-ttu-id="685c8-141">要注意的變更如下︰</span><span class="sxs-lookup"><span data-stu-id="685c8-141">Changes to note are:</span></span>
+* <span data-ttu-id="685c8-142">.NET Core 和現有的專案保存在不同的資料夾中。</span><span class="sxs-lookup"><span data-stu-id="685c8-142">The .NET Core and existing projects are kept in separate folders.</span></span>
+    * <span data-ttu-id="685c8-143">將專案放在不同的資料夾中，可避免強迫使用 Visual Studio 2017。</span><span class="sxs-lookup"><span data-stu-id="685c8-143">Keeping projects in separate folders avoids forcing you to have Visual Studio 2017.</span></span> <span data-ttu-id="685c8-144">您可以建立不同的解決方案只開啟舊的專案。</span><span class="sxs-lookup"><span data-stu-id="685c8-144">You can create a separate solution that only opens the old projects.</span></span>
 
-[**原始程式碼**][example-pcl-code]
+## <a name="see-also"></a><span data-ttu-id="685c8-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="685c8-145">See Also</span></span>
 
-要注意的變更如下︰
-*  將 `project.json` 重新命名為 `{project-name}.project.json`
-    * 嘗試還原相同目錄中的程式庫封裝時，這可避免 Visual Studio 中的潛在衝突。 如需詳細資訊，請參閱 [NuGet 常見問題集](https://docs.nuget.org/consume/nuget-faq#working-with-packages)的「_我在同一個資料夾中有多個專案，我該如何為每個專案使用不同的 packages.config 或 project.json 檔案的？_」
-    *  **替代**︰在另一個資料夾中建立 PCL，並參考原始的原始程式碼避免這個問題。  將 PCL 放在另一個資料夾中的額外好處，是沒有 Visual Studio 2015 的使用者仍可使用較舊的專案，不必載入新的方案。
-*  若要在建立 PCL 之後以 .NET Standard 為目標，請在 Visual Studio 中開啟 [Project's Properties]\(專案的內容)。 在 [目標] 區段中，按一下 [以 .NET 平台標準為目標] 連結。  重複相同的步驟可以反轉這項變更。
-
-## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留現有的專案並建立 .NET Core 專案
-
-如果現有的專案以較舊的架構為目標，您可能想要保持這些專案不變，使用 .NET Core 專案以未來的架構為目標。
-
-![在不同資料夾中有現有 PCL 的 .NET Core 專案][example-xproj-different-folder]
-
-[**原始程式碼**][example-xproj-different-code]
-
-要注意的變更如下︰
-* .NET Core 和現有的專案保存在不同的資料夾中。
-    * 這會避免前文中因為同一資料夾中有多個 project.json/package.config 檔案所造成的封裝還原問題。
-    * 將專案放在不同的資料夾中，可避免強迫使用 Visual Studio 2015 (因 project.json 之故)。  您可以建立不同的解決方案只開啟舊的專案。
-
-## <a name="see-also"></a>另請參閱
-
-如需移至 project.json 和 xproj 的詳細指引，請參閱 [.NET Core 移轉文件][porting-doc]。
+<span data-ttu-id="685c8-146">如需移轉至 .NET Core 的詳細指引，請參閱 [.NET Core 移植文件][porting-doc]。</span><span class="sxs-lookup"><span data-stu-id="685c8-146">Please see the [.NET Core porting documentation][porting-doc] for more guidance on migrating to .NET Core.</span></span>
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "現有專案"
 [example-initial-project-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library/
 
-[example-xproj]: media/project-structure/project.xproj.png "建立以多個架構為目標的 xproj"
-[example-xproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/
-[example-xproj-projectjson]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/src/Car/project.json
-[example-xproj-projectjson-test]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/tests/Car.Tests/project.json
+[example-csproj]: media/project-structure/project.csproj.png "建立以多個架構為目標的 csproj"
+[example-csproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj/
+[example-csproj-netcore]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
 
-[example-xproj-different-folder]: media/project-structure/project.xproj.different.png "在不同資料夾中有現有 PCL 的 .NET Core 專案"
-[example-xproj-different-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj-keep-csproj/
+[example-csproj-different-folder]: media/project-structure/project.csproj.different.png "在不同資料夾中有現有 PCL 的 .NET Core 專案"
+[example-csproj-different-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj-keep-existing/
 
-[example-pcl]: media/project-structure/project.pcl.png "以 .NET Core 為目標的 PCL"
-[example-pcl-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-pcl
-
-[option-xproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project-xproj
-[option-pcl]: #create-a-portable-class-library-pcl-to-target-net-core
-[option-xproj-folder]: #keep-existing-projects-and-create-a-net-core-project
-
-[how-to-multitarget]: ../tutorials/libraries.md#how-to-multitarget
-
+[option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
+[option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project

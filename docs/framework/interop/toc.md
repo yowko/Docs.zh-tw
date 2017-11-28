@@ -1,6 +1,6 @@
 # [與 Unmanaged 程式碼互通](index.md)
 ## [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
-### [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)
+### [匯入型別程式庫作為組件](importing-a-type-library-as-an-assembly.md)
 ### [如何：將參考加入至類型程式庫](how-to-add-references-to-type-libraries.md)
 ### [如何：從類型程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)
 ### [編譯 Interop 專案](compiling-an-interop-project.md)

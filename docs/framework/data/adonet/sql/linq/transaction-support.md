@@ -1,35 +1,38 @@
 ---
-title: "交易支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "異動支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7c1d438a83f090795a158ade1dfdbb7d2b2df863
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 交易支援
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援三種不同的交易模型。  以下按照執行檢查的順序列出這些模型。  
+# <a name="transaction-support"></a><span data-ttu-id="3e7bd-102">異動支援</span><span class="sxs-lookup"><span data-stu-id="3e7bd-102">Transaction Support</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="3e7bd-103">支援三種不同的交易模型。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-103"> supports three distinct transaction models.</span></span> <span data-ttu-id="3e7bd-104">以下按照執行檢查的順序列出這些模型。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-104">The following lists these models in the order of checks performed.</span></span>  
   
-## 明確本機交易  
- 呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 後，如果 <xref:System.Data.Linq.DataContext.Transaction%2A> 屬性已設為 \(`IDbTransaction`\) 交易，則會在相同交易的情況下執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 呼叫。  
+## <a name="explicit-local-transaction"></a><span data-ttu-id="3e7bd-105">明確本機交易</span><span class="sxs-lookup"><span data-stu-id="3e7bd-105">Explicit Local Transaction</span></span>  
+ <span data-ttu-id="3e7bd-106">呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 後，如果 <xref:System.Data.Linq.DataContext.Transaction%2A> 屬性已設為 (`IDbTransaction`) 交易，則會在相同交易的情況下執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 呼叫。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-106">When <xref:System.Data.Linq.DataContext.SubmitChanges%2A> is called, if the <xref:System.Data.Linq.DataContext.Transaction%2A> property is set to a (`IDbTransaction`) transaction, the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> call is executed in the context of the same transaction.</span></span>  
   
- 順利執行交易後，您必須負責認可或復原此交易。  對應至此交易的連接必須符合用於建構 <xref:System.Data.Linq.DataContext> 的連接。  如果使用不同的連接，則會擲回例外狀況。  
+ <span data-ttu-id="3e7bd-107">順利執行交易後，您必須負責認可或復原此交易。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-107">It is your responsibility to commit or rollback the transaction after successful execution of the transaction.</span></span> <span data-ttu-id="3e7bd-108">對應至此交易的連接必須符合用於建構 <xref:System.Data.Linq.DataContext> 的連接。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-108">The connection corresponding to the transaction must match the connection used for constructing the <xref:System.Data.Linq.DataContext>.</span></span> <span data-ttu-id="3e7bd-109">如果使用不同的連接，則會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-109">An exception is thrown if a different connection is used.</span></span>  
   
-## 明確可散發交易  
- 您可以在使用中的 <xref:System.Transactions.Transaction> 範圍內呼叫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] API \(包含但不限於 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>\)。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會偵測到該呼叫在交易的範圍內，而不會建立新交易。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在此情況下也可避免關閉連接。  您可以在此種交易的情況中執行查詢和 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 執行。  
+## <a name="explicit-distributable-transaction"></a><span data-ttu-id="3e7bd-110">明確可散發異動</span><span class="sxs-lookup"><span data-stu-id="3e7bd-110">Explicit Distributable Transaction</span></span>  
+ <span data-ttu-id="3e7bd-111">您可以呼叫[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Api (包括但不是限於<xref:System.Data.Linq.DataContext.SubmitChanges%2A>) 範圍中的作用中<xref:System.Transactions.Transaction>。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-111">You can call [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] APIs (including but not limited to <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) in the scope of an active <xref:System.Transactions.Transaction>.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="3e7bd-112">偵測到該呼叫交易範圍內，而不會建立新的交易。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-112"> detects that the call is in the scope of a transaction and does not create a new transaction.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="3e7bd-113">也可避免在此情況下關閉連接。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-113"> also avoids closing the connection in this case.</span></span> <span data-ttu-id="3e7bd-114">您可以在此種交易的情況中執行查詢和 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 執行。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-114">You can perform query and <xref:System.Data.Linq.DataContext.SubmitChanges%2A> executions in the context of such a transaction.</span></span>  
   
-## 隱含交易  
- 當您呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會查看此呼叫是否在 <xref:System.Transactions.Transaction> 的範圍內，或者 `Transaction` 屬性 \(`IDbTransaction`\) 是否設為使用者啟動的本機交易。  如果兩種交易都找不到，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會啟動本機交易 \(`IDbTransaction`\) 並用它來執行所產生的 SQL 命令。  當所有 SQL 命令都已順利完成後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會認可本機交易並傳回結果。  
+## <a name="implicit-transaction"></a><span data-ttu-id="3e7bd-115">隱含異動</span><span class="sxs-lookup"><span data-stu-id="3e7bd-115">Implicit Transaction</span></span>  
+ <span data-ttu-id="3e7bd-116">當您呼叫<xref:System.Data.Linq.DataContext.SubmitChanges%2A>，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會查看此呼叫是否在範圍內<xref:System.Transactions.Transaction>或`Transaction`屬性 (`IDbTransaction`) 設定為使用者啟動的本機交易。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-116">When you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] checks to see whether the call is in the scope of a <xref:System.Transactions.Transaction> or if the `Transaction` property (`IDbTransaction`) is set to a user-started local transaction.</span></span> <span data-ttu-id="3e7bd-117">如果兩種交易，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]啟動本機交易 (`IDbTransaction`) 並用它來執行所產生的 SQL 命令。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-117">If it finds neither transaction, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] starts a local transaction (`IDbTransaction`) and uses it to execute the generated SQL commands.</span></span> <span data-ttu-id="3e7bd-118">當所有 SQL 命令已順利都完成時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]認可本機交易並傳回結果。</span><span class="sxs-lookup"><span data-stu-id="3e7bd-118">When all SQL commands have been successfully completed, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] commits the local transaction and returns.</span></span>  
   
-## 請參閱  
- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [HOW TO：使用交易括住資料提交](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+## <a name="see-also"></a><span data-ttu-id="3e7bd-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3e7bd-119">See Also</span></span>  
+ [<span data-ttu-id="3e7bd-120">背景資訊</span><span class="sxs-lookup"><span data-stu-id="3e7bd-120">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="3e7bd-121">如何： 使用異動括資料提交</span><span class="sxs-lookup"><span data-stu-id="3e7bd-121">How to: Bracket Data Submissions by Using Transactions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

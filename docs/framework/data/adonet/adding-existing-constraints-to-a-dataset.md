@@ -1,32 +1,38 @@
 ---
-title: "將現有條件約束加入 DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將現有條件約束加入至資料集"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0e457113eff471c620ccdbf78337d2013d7a62bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 將現有條件約束加入 DataSet
-**DataAdapter** 的 **Fill** 方法只使用來自資料來源的資料表資料行和資料列填入 <xref:System.Data.DataSet>；雖然條件約束一般是由資料來源所設定，但 **Fill** 方法預設不會將這個結構描述資訊加入 **DataSet**。  若要以資料來源的現有主索引鍵條件約束資訊填入 **DataSet**，您可以呼叫 **DataAdapter** 的 **FillSchema** 方法，或在呼叫 **Fill** 前先將 **DataAdapter** 的 **MissingSchemaAction** 屬性設定為 **AddWithKey**。  這樣能確保 **DataSet** 內的主索引鍵條件約束反映出資料來源內的主索引鍵條件約束。  不包含外部索引鍵條件約束資訊，且必須明確建立 \(如 [DataTable 條件約束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md) 所示\)。  
+# <a name="adding-existing-constraints-to-a-dataset"></a><span data-ttu-id="3182b-102">將現有條件約束加入至資料集</span><span class="sxs-lookup"><span data-stu-id="3182b-102">Adding Existing Constraints to a DataSet</span></span>
+<span data-ttu-id="3182b-103">**填滿**方法**DataAdapter**填滿<xref:System.Data.DataSet>只能搭配資料表資料行和資料列從資料來源; 雖然條件約束通常由設定資料來源，**填滿**方法不會加入此結構描述資訊**資料集**預設。</span><span class="sxs-lookup"><span data-stu-id="3182b-103">The **Fill** method of the **DataAdapter** fills a <xref:System.Data.DataSet> only with table columns and rows from a data source; though constraints are commonly set by the data source, the **Fill** method does not add this schema information to the **DataSet** by default.</span></span> <span data-ttu-id="3182b-104">填入**資料集**與資料來源的現有主索引鍵條件約束資訊，您可以呼叫**FillSchema**方法**DataAdapter**，或設定**MissingSchemaAction**屬性**DataAdapter**至**Missingschemaaction**之前先呼叫**填滿**。</span><span class="sxs-lookup"><span data-stu-id="3182b-104">To populate a **DataSet** with existing primary key constraint information from a data source, you can either call the **FillSchema** method of the **DataAdapter**, or set the **MissingSchemaAction** property of the **DataAdapter** to **AddWithKey** before calling **Fill**.</span></span> <span data-ttu-id="3182b-105">這可確保該主索引鍵中的條件約束**資料集**反映出在資料來源。</span><span class="sxs-lookup"><span data-stu-id="3182b-105">This will ensure that primary key constraints in the **DataSet** reflect those at the data source.</span></span> <span data-ttu-id="3182b-106">外部索引鍵條件約束資訊就不會包含與必須明確地如下所示建立[DataTable 條件約束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。</span><span class="sxs-lookup"><span data-stu-id="3182b-106">Foreign key constraint information is not included and must be created explicitly, as shown in [DataTable Constraints](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span></span>  
   
- 將資料填入 **DataSet** 前先將結構描述資訊加入其中，便能確保 **DataSet** 內的 <xref:System.Data.DataTable> 物件包含主索引鍵條件約束。  這麼一來，再次呼叫以填入 **DataSet** 時，便會使用主索引鍵資料行資訊來比對資料來源的新資料列和每個 **DataTable** 中的目前資料列，然後以資料來源的資料覆寫資料表中的目前資料。  若無結構描述資訊，則來自資料來源的新資料列會附加至 **DataSet**，而造成資料列重複。  
+ <span data-ttu-id="3182b-107">加入至結構描述資訊**資料集**填入資料可確保 primary key 條件約束隨附於之前<xref:System.Data.DataTable>中的物件**資料集**。</span><span class="sxs-lookup"><span data-stu-id="3182b-107">Adding schema information to a **DataSet** before filling it with data ensures that primary key constraints are included with the <xref:System.Data.DataTable> objects in the **DataSet**.</span></span> <span data-ttu-id="3182b-108">如此一來，當其他呼叫以填入**資料集**所做的主要索引鍵資料行資訊用來比對資料來源的新資料列的目前資料列中每個**DataTable**，以及在目前的資料從資料來源的資料會覆寫資料表。</span><span class="sxs-lookup"><span data-stu-id="3182b-108">As a result, when additional calls to fill the **DataSet** are made, the primary key column information is used to match new rows from the data source with current rows in each **DataTable**, and current data in the tables is overwritten with data from the data source.</span></span> <span data-ttu-id="3182b-109">如果沒有結構描述資訊，從資料來源的新資料列會附加至**資料集**，並產生重複的資料列。</span><span class="sxs-lookup"><span data-stu-id="3182b-109">Without the schema information, the new rows from the data source are appended to the **DataSet**, resulting in duplicate rows.</span></span>  
   
 > [!NOTE]
->  如果資料來源中的資料行定義為自動遞增，則 **FillSchema** 方法或 **MissingSchemaAction** 為 **AddWithKey** 的 **Fill** 方法，會建立 **DataColumn**，並將其 **AutoIncrement** 屬性設為 `true`。  但是您必須自行設定 **AutoIncrementStep** 和 **AutoIncrementSeed** 的值。  如需自動遞增資料行的詳細資訊，請參閱 [建立 AutoIncrement 資料行](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)。  
+>  <span data-ttu-id="3182b-110">如果資料來源中的資料行識別為自動遞增**FillSchema**方法，或**填滿**方法**MissingSchemaAction**的**Missingschemaaction**，建立**DataColumn**與**AutoIncrement**屬性設定為`true`。</span><span class="sxs-lookup"><span data-stu-id="3182b-110">If a column in a data source is identified as auto-incrementing, the **FillSchema** method, or the **Fill** method with a **MissingSchemaAction** of **AddWithKey**, creates a **DataColumn** with an **AutoIncrement** property set to `true`.</span></span> <span data-ttu-id="3182b-111">不過，您必須設定**AutoIncrementStep**和**AutoIncrementSeed**值。</span><span class="sxs-lookup"><span data-stu-id="3182b-111">However, you will need to set the **AutoIncrementStep** and **AutoIncrementSeed** values yourself.</span></span> <span data-ttu-id="3182b-112">如需自動遞增資料行的詳細資訊，請參閱[建立自動遞增資料行](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)。</span><span class="sxs-lookup"><span data-stu-id="3182b-112">For more information about auto-incrementing columns, see [Creating AutoIncrement Columns](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).</span></span>  
   
- 若您使用 **FillSchema** 或將 **MissingSchemaAction** 設定為 **AddWithKey**，則資料來源需要進行其他的作業來判斷主索引鍵資料行資訊。  這些其他作業可能會降低效能。  如果您在設計階段就已知道主索引鍵資訊，建議您明確地指定主索引鍵資料行，以達到最佳效能。  如需明確設定資料表之主索引鍵資訊的詳細資訊，請參閱 [定義主索引鍵](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
+ <span data-ttu-id="3182b-113">使用**FillSchema**或設定**MissingSchemaAction**至**Missingschemaaction**需要進行額外處理，在資料來源來判斷主要索引鍵資料行資訊。</span><span class="sxs-lookup"><span data-stu-id="3182b-113">Using **FillSchema** or setting the **MissingSchemaAction** to **AddWithKey** requires extra processing at the data source to determine primary key column information.</span></span> <span data-ttu-id="3182b-114">這些其他作業可能會降低效能。</span><span class="sxs-lookup"><span data-stu-id="3182b-114">This additional processing can hinder performance.</span></span> <span data-ttu-id="3182b-115">如果您在設計階段就已知道主索引鍵資訊，建議您明確地指定主索引鍵資料行，以達到最佳效能。</span><span class="sxs-lookup"><span data-stu-id="3182b-115">If you know the primary key information at design time, we recommend that you explicitly specify the primary key column or columns in order to achieve optimal performance.</span></span> <span data-ttu-id="3182b-116">如需明確設定為資料表的主索引鍵資訊，請參閱[定義主索引鍵](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。</span><span class="sxs-lookup"><span data-stu-id="3182b-116">For information about explicitly setting primary key information for a table, see [Defining Primary Keys](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).</span></span>  
   
- 下列程式碼範例顯示如何使用 **FillSchema** 將結構描述資訊加入 **DataSet**。  
+ <span data-ttu-id="3182b-117">下列程式碼範例示範如何將結構描述資訊加入**資料集**使用**FillSchema**。</span><span class="sxs-lookup"><span data-stu-id="3182b-117">The following code example shows how to add schema information to a **DataSet** using **FillSchema**.</span></span>  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -42,7 +48,7 @@ custAdapter.FillSchema(custDataSet, SchemaType.Source, "Customers");
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
- 下列程式碼範例顯示如何使用 **Fill** 方法的 **MissingSchemaAction.AddWithKey** 屬性，將結構描述資訊加入 **DataSet**。  
+ <span data-ttu-id="3182b-118">下列程式碼範例示範如何將結構描述資訊加入**資料集**使用**MissingSchemaAction.AddWithKey**屬性**填滿**方法。</span><span class="sxs-lookup"><span data-stu-id="3182b-118">The following code example shows how to add schema information to a **DataSet** using the **MissingSchemaAction.AddWithKey** property of the **Fill** method.</span></span>  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -58,14 +64,14 @@ custAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
-## 處理多重結果集  
- 如果 **DataAdapter** 發現從 **SelectCommand** 傳回的多個結果集，它便會在 **DataSet** 內建立多個資料表。  會給予資料表一個以零為基礎的 **Table** *N* 增量預設名稱，從 **Table** 開始，而非 "Table0"。  如果資料表名稱做為引數傳遞至 **FillSchema** 方法，則會給予資料表一個以零為基礎的 **TableName** *N* 增量名稱，從 **TableName** 開始，而非 "TableName0"。  
+## <a name="handling-multiple-result-sets"></a><span data-ttu-id="3182b-119">處理多重結果集</span><span class="sxs-lookup"><span data-stu-id="3182b-119">Handling Multiple Result Sets</span></span>  
+ <span data-ttu-id="3182b-120">如果**DataAdapter**遇到多個結果集傳回**SelectCommand**，它會建立多個資料表中的**資料集**。</span><span class="sxs-lookup"><span data-stu-id="3182b-120">If the **DataAdapter** encounters multiple result sets returned from the **SelectCommand**, it will create multiple tables in the **DataSet**.</span></span> <span data-ttu-id="3182b-121">以零為起始的遞增預設名稱將會給予資料表**資料表** *N*開始，**資料表**而非"Table0"。</span><span class="sxs-lookup"><span data-stu-id="3182b-121">The tables will be given a zero-based incremental default name of **Table** *N*, starting with **Table** instead of "Table0".</span></span> <span data-ttu-id="3182b-122">如果資料表名稱會做為引數傳遞**FillSchema**方法，則會給予資料表的以零為起始的增量名稱**TableName** *N*，從**TableName**而非"TableName0"。</span><span class="sxs-lookup"><span data-stu-id="3182b-122">If a table name is passed as an argument to the **FillSchema** method, the tables will be given a zero-based incremental name of **TableName** *N*, starting with **TableName** instead of "TableName0".</span></span>  
   
 > [!NOTE]
->  若傳回多個結果集的命令呼叫 **OleDbDataAdapter** 物件的 **FillSchema** 方法，則只會傳回來自第一個結果集的結構描述資訊。  使用 **OleDbDataAdapter** 傳回多個結果集的結構描述資訊時，建議您指定 **AddWithKey** 的 **MissingSchemaAction**，並在呼叫 **Fill** 方法時取得結構描述資訊。  
+>  <span data-ttu-id="3182b-123">如果**FillSchema**方法**OleDbDataAdapter**傳回多個結果集的命令呼叫物件時，會傳回只從第一個結果集的結構描述資訊。</span><span class="sxs-lookup"><span data-stu-id="3182b-123">If the **FillSchema** method of the **OleDbDataAdapter** object is called for a command that returns multiple result sets, only the schema information from the first result set is returned.</span></span> <span data-ttu-id="3182b-124">傳回多個結果的結構描述資訊。 當設定使用**OleDbDataAdapter**，建議您指定**MissingSchemaAction**的**Missingschemaaction**呼叫時，取得結構描述資訊和**填滿**方法。</span><span class="sxs-lookup"><span data-stu-id="3182b-124">When returning schema information for multiple result sets using the **OleDbDataAdapter**, it is recommended that you specify a **MissingSchemaAction** of **AddWithKey** and obtain the schema information when calling the **Fill** method.</span></span>  
   
-## 請參閱  
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [DataSet、DataTable 及 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [擷取和修改 ADO.NET 中的資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3182b-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3182b-125">See Also</span></span>  
+ [<span data-ttu-id="3182b-126">Dataadapter 和 Datareader</span><span class="sxs-lookup"><span data-stu-id="3182b-126">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="3182b-127">DataSet、DataTable 和 DataView</span><span class="sxs-lookup"><span data-stu-id="3182b-127">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="3182b-128">在 ADO.NET 中擷取和修改資料</span><span class="sxs-lookup"><span data-stu-id="3182b-128">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="3182b-129">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="3182b-129">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

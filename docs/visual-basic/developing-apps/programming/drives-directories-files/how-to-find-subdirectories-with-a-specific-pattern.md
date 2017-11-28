@@ -1,78 +1,57 @@
 ---
 title: "如何：在 Visual Basic 中尋找具有特定模式的子目錄"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0c4549f417e86e82897ca32d8d7cf22aaf462c90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3719c13c74b873927382d2ff3ca733e3fd8fe945
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Find Subdirectories with a Specific Pattern in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> 方法會傳回唯讀的字串集合，代表目錄中子目錄的路徑名稱。  您可以使用 `wildCards` 參數，指定特定的模式。  如果要在搜尋中納入子目錄的內容，請將 `searchType` 參數設定為 `SearchOption.SearchAllSubDirectories`。  
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a><span data-ttu-id="b4e6f-102">如何：在 Visual Basic 中尋找具有特定模式的子目錄</span><span class="sxs-lookup"><span data-stu-id="b4e6f-102">How to: Find Subdirectories with a Specific Pattern in Visual Basic</span></span>
+<span data-ttu-id="b4e6f-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> 方法會傳回代表目錄中子目錄之路徑名稱的唯讀字串集合。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> method returns a read-only collection of strings representing the path names for the subdirectories in a directory.</span></span> <span data-ttu-id="b4e6f-104">您可以使用 `wildCards` 參數指定特定模式。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span> <span data-ttu-id="b4e6f-105">如果您想要在搜尋中包括子目錄的內容，請將 `searchType` 參數設定為 `SearchOption.SearchAllSubDirectories`。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-105">If you would like to include the contents of subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.</span></span>  
   
- 如果找不到與指定模式相符的目錄，則會傳回空的集合。  
+ <span data-ttu-id="b4e6f-106">如果找不到符合指定模式的目錄，則會傳回空集合。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-106">An empty collection is returned if no directories matching the specified pattern are found.</span></span>  
   
-### 若要尋找具有特定模式的子目錄  
+### <a name="to-find-subdirectories-with-a-specific-pattern"></a><span data-ttu-id="b4e6f-107">尋找具有特定模式的子目錄</span><span class="sxs-lookup"><span data-stu-id="b4e6f-107">To find subdirectories with a specific pattern</span></span>  
   
--   使用 `GetDirectories` 方法，以提供要搜尋之目錄的名稱和路徑。  下列範例會傳回在目錄結構中，名稱中含有 "Logs" 這個字的所有目錄，並將這些目錄加入至 `ListBox1` 中。  
+-   <span data-ttu-id="b4e6f-108">使用 `GetDirectories` 方法，並提供您想要搜尋之目錄的名稱和路徑。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-108">Use the `GetDirectories` method, supplying the name and path of the directory you want to search.</span></span> <span data-ttu-id="b4e6f-109">下列範例會傳回目錄結構中名稱包含 "Logs" 單字的所有目錄，並將它們新增至 `ListBox1`。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-109">The following example returns all the directories in the directory structure that contain the word "Logs" in their name, and adds them to `ListBox1`.</span></span>  
   
      [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-subdirectories-with-a-specific-pattern_1.vb)]  
   
-## 穩固程式設計  
- 下列情形可能會造成例外狀況 \(Exception\)：  
+## <a name="robust-programming"></a><span data-ttu-id="b4e6f-110">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="b4e6f-110">Robust Programming</span></span>  
+ <span data-ttu-id="b4e6f-111">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="b4e6f-111">The following conditions may cause an exception:</span></span>  
   
--   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 \(開頭為 \\\\.  \\\) \(<xref:System.ArgumentException>\).  
+-   <span data-ttu-id="b4e6f-112">因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (開頭為 \\\\.\\) (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-112">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   路徑無效，因為它是 `Nothing` \(<xref:System.ArgumentNullException>\)。  
+-   <span data-ttu-id="b4e6f-113">路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-113">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   一或多個指定的萬用字元 \(Wildcard Character\) 為 `Nothing`、空字串，或只包含空格 \(<xref:System.ArgumentNullException>\)。  
+-   <span data-ttu-id="b4e6f-114">一或多個指定的萬用字元是 `Nothing`、空字串，或只包含空格 (<xref:System.ArgumentNullException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-114">One or more of the specified wildcard characters is `Nothing`, an empty string, or contains only spaces (<xref:System.ArgumentNullException>).</span></span>  
   
--   `directory` 不存在 \(<xref:System.IO.DirectoryNotFoundException>\)。  
+-   <span data-ttu-id="b4e6f-115">`directory` 不存在 (<xref:System.IO.DirectoryNotFoundException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-115">`directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
--   `directory` 會指向現有的檔案 \(<xref:System.IO.IOException>\)。  
+-   <span data-ttu-id="b4e6f-116">`directory` 指向現有檔案 (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-116">`directory` points to an existing file (<xref:System.IO.IOException>).</span></span>  
   
--   路徑超過系統定義的最大長度 \(<xref:System.IO.PathTooLongException>\)。  
+-   <span data-ttu-id="b4e6f-117">路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-117">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   路徑中的檔案或資料夾名稱含有冒號 \(:\)，或者是無效的格式 \(<xref:System.NotSupportedException>\)。  
+-   <span data-ttu-id="b4e6f-118">路徑中的檔案或資料夾名稱包含冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-118">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   使用者缺乏必要的使用權限來檢視路徑 \(<xref:System.Security.SecurityException>\)。  
+-   <span data-ttu-id="b4e6f-119">使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-119">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
--   使用者缺乏必要的使用權限 \(<xref:System.UnauthorizedAccessException>\)。  
+-   <span data-ttu-id="b4e6f-120">使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="b4e6f-120">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>   
- [如何：尋找具有特定模式的檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
-
+## <a name="see-also"></a><span data-ttu-id="b4e6f-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b4e6f-121">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>  
+ [<span data-ttu-id="b4e6f-122">如何：尋找具有特定模式的檔案</span><span class="sxs-lookup"><span data-stu-id="b4e6f-122">How to: Find Files with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

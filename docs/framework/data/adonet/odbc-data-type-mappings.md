@@ -1,47 +1,50 @@
 ---
-title: "ODBC 資料類型對應 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ODBC 資料類型對應"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 82c4a84f1aee5872a899d8d42a06d22abc10b603
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ODBC 資料類型對應
-下表顯示來自 .NET Framework Data Provider for ODBC \(<xref:System.Data.Odbc>\) 之資料型別的推斷 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別。  同時也一併列出 <xref:System.Data.Odbc.OdbcDataReader> 具型別的存取子方法。  
+# <a name="odbc-data-type-mappings"></a><span data-ttu-id="c7fa2-102">ODBC 資料類型對應</span><span class="sxs-lookup"><span data-stu-id="c7fa2-102">ODBC Data Type Mappings</span></span>
+<span data-ttu-id="c7fa2-103">下表顯示來自 .NET Framework Data Provider for ODBC ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 之資料型別的推斷 <xref:System.Data.Odbc> 型別。</span><span class="sxs-lookup"><span data-stu-id="c7fa2-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>).</span></span> <span data-ttu-id="c7fa2-104">同時也一併列出 <xref:System.Data.Odbc.OdbcDataReader> 具型別的存取子方法。</span><span class="sxs-lookup"><span data-stu-id="c7fa2-104">The typed accessor methods for the <xref:System.Data.Odbc.OdbcDataReader> are also listed.</span></span>  
   
-|ODBC 型別|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類型|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 具型別的存取子|  
-|-------------|--------------------------------------------------------------------|-------------------------------------------------------------------------|  
-|SQL\_BIGINT|Int64|GetInt64\(\)|  
-|SQL\_BINARY|Byte\[\]|GetBytes\(\)|  
-|SQL\_BIT|Boolean|GetBoolean\(\)|  
-|SQL\_CHAR|String<br /><br /> Char\[\]|GetString\(\)<br /><br /> GetChars\(\)|  
-|SQL\_DECIMAL|Decimal|GetDecimal\(\)|  
-|SQL\_DOUBLE|Double|GetDouble\(\)|  
-|SQL\_GUID|Guid|GetGuid\(\)|  
-|SQL\_INTEGER|Int32|GetInt32\(\)|  
-|SQL\_LONG\_VARCHAR|String<br /><br /> Char\[\]|GetString\(\)<br /><br /> GetChars\(\)|  
-|SQL\_LONGVARBINARY|Byte\[\]|GetBytes\(\)|  
-|SQL\_NUMERIC|Decimal|GetDecimal\(\)|  
-|SQL\_REAL|Single|GetFloat\(\)|  
-|SQL\_SMALLINT|Int16|GetInt16\(\)|  
-|SQL\_TINYINT|Byte|GetByte\(\)|  
-|SQL\_TYPE\_TIMES|DateTime|GetDateTime\(\)|  
-|SQL\_TYPE\_TIMESTAMP|DateTime|GetDateTime\(\)|  
-|SQL\_VARBINARY|Byte\[\]|GetBytes\(\)|  
-|SQL\_WCHAR|String<br /><br /> Char\[\]|GetString\(\)<br /><br /> GetChars\(\)|  
-|SQL\_WLONGVARCHAR|String<br /><br /> Char\[\]|GetString\(\)<br /><br /> GetChars\(\)|  
-|SQL\_WVARCHAR|String<br /><br /> Char\[\]|GetString\(\)<br /><br /> GetChars\(\)|  
+|<span data-ttu-id="c7fa2-105">ODBC 型別</span><span class="sxs-lookup"><span data-stu-id="c7fa2-105">ODBC type</span></span>|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]<span data-ttu-id="c7fa2-106"> 類型</span><span class="sxs-lookup"><span data-stu-id="c7fa2-106"> type</span></span>|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]<span data-ttu-id="c7fa2-107"> 具型別的存取子</span><span class="sxs-lookup"><span data-stu-id="c7fa2-107"> typed accessor</span></span>|  
+|---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
+|<span data-ttu-id="c7fa2-108">SQL_BIGINT</span><span class="sxs-lookup"><span data-stu-id="c7fa2-108">SQL_BIGINT</span></span>|<span data-ttu-id="c7fa2-109">Int64</span><span class="sxs-lookup"><span data-stu-id="c7fa2-109">Int64</span></span>|<span data-ttu-id="c7fa2-110">GetInt64()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-110">GetInt64()</span></span>|  
+|<span data-ttu-id="c7fa2-111">SQL_BINARY</span><span class="sxs-lookup"><span data-stu-id="c7fa2-111">SQL_BINARY</span></span>|<span data-ttu-id="c7fa2-112">Byte[]</span><span class="sxs-lookup"><span data-stu-id="c7fa2-112">Byte[]</span></span>|<span data-ttu-id="c7fa2-113">GetBytes()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-113">GetBytes()</span></span>|  
+|<span data-ttu-id="c7fa2-114">SQL_BIT</span><span class="sxs-lookup"><span data-stu-id="c7fa2-114">SQL_BIT</span></span>|<span data-ttu-id="c7fa2-115">Boolean</span><span class="sxs-lookup"><span data-stu-id="c7fa2-115">Boolean</span></span>|<span data-ttu-id="c7fa2-116">GetBoolean()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-116">GetBoolean()</span></span>|  
+|<span data-ttu-id="c7fa2-117">SQL_CHAR</span><span class="sxs-lookup"><span data-stu-id="c7fa2-117">SQL_CHAR</span></span>|<span data-ttu-id="c7fa2-118">String</span><span class="sxs-lookup"><span data-stu-id="c7fa2-118">String</span></span><br /><br /> <span data-ttu-id="c7fa2-119">Char[]</span><span class="sxs-lookup"><span data-stu-id="c7fa2-119">Char[]</span></span>|<span data-ttu-id="c7fa2-120">GetString()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-120">GetString()</span></span><br /><br /> <span data-ttu-id="c7fa2-121">GetChars()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-121">GetChars()</span></span>|  
+|<span data-ttu-id="c7fa2-122">SQL_DECIMAL</span><span class="sxs-lookup"><span data-stu-id="c7fa2-122">SQL_DECIMAL</span></span>|<span data-ttu-id="c7fa2-123">Decimal</span><span class="sxs-lookup"><span data-stu-id="c7fa2-123">Decimal</span></span>|<span data-ttu-id="c7fa2-124">GetDecimal()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-124">GetDecimal()</span></span>|  
+|<span data-ttu-id="c7fa2-125">SQL_DOUBLE</span><span class="sxs-lookup"><span data-stu-id="c7fa2-125">SQL_DOUBLE</span></span>|<span data-ttu-id="c7fa2-126">Double</span><span class="sxs-lookup"><span data-stu-id="c7fa2-126">Double</span></span>|<span data-ttu-id="c7fa2-127">GetDouble()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-127">GetDouble()</span></span>|  
+|<span data-ttu-id="c7fa2-128">SQL_GUID</span><span class="sxs-lookup"><span data-stu-id="c7fa2-128">SQL_GUID</span></span>|<span data-ttu-id="c7fa2-129">Guid</span><span class="sxs-lookup"><span data-stu-id="c7fa2-129">Guid</span></span>|<span data-ttu-id="c7fa2-130">GetGuid()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-130">GetGuid()</span></span>|  
+|<span data-ttu-id="c7fa2-131">SQL_INTEGER</span><span class="sxs-lookup"><span data-stu-id="c7fa2-131">SQL_INTEGER</span></span>|<span data-ttu-id="c7fa2-132">Int32</span><span class="sxs-lookup"><span data-stu-id="c7fa2-132">Int32</span></span>|<span data-ttu-id="c7fa2-133">GetInt32()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-133">GetInt32()</span></span>|  
+|<span data-ttu-id="c7fa2-134">SQL_LONG_VARCHAR</span><span class="sxs-lookup"><span data-stu-id="c7fa2-134">SQL_LONG_VARCHAR</span></span>|<span data-ttu-id="c7fa2-135">String</span><span class="sxs-lookup"><span data-stu-id="c7fa2-135">String</span></span><br /><br /> <span data-ttu-id="c7fa2-136">Char[]</span><span class="sxs-lookup"><span data-stu-id="c7fa2-136">Char[]</span></span>|<span data-ttu-id="c7fa2-137">GetString()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-137">GetString()</span></span><br /><br /> <span data-ttu-id="c7fa2-138">GetChars()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-138">GetChars()</span></span>|  
+|<span data-ttu-id="c7fa2-139">SQL_LONGVARBINARY</span><span class="sxs-lookup"><span data-stu-id="c7fa2-139">SQL_LONGVARBINARY</span></span>|<span data-ttu-id="c7fa2-140">Byte[]</span><span class="sxs-lookup"><span data-stu-id="c7fa2-140">Byte[]</span></span>|<span data-ttu-id="c7fa2-141">GetBytes()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-141">GetBytes()</span></span>|  
+|<span data-ttu-id="c7fa2-142">SQL_NUMERIC</span><span class="sxs-lookup"><span data-stu-id="c7fa2-142">SQL_NUMERIC</span></span>|<span data-ttu-id="c7fa2-143">Decimal</span><span class="sxs-lookup"><span data-stu-id="c7fa2-143">Decimal</span></span>|<span data-ttu-id="c7fa2-144">GetDecimal()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-144">GetDecimal()</span></span>|  
+|<span data-ttu-id="c7fa2-145">SQL_REAL</span><span class="sxs-lookup"><span data-stu-id="c7fa2-145">SQL_REAL</span></span>|<span data-ttu-id="c7fa2-146">Single</span><span class="sxs-lookup"><span data-stu-id="c7fa2-146">Single</span></span>|<span data-ttu-id="c7fa2-147">GetFloat()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-147">GetFloat()</span></span>|  
+|<span data-ttu-id="c7fa2-148">SQL_SMALLINT</span><span class="sxs-lookup"><span data-stu-id="c7fa2-148">SQL_SMALLINT</span></span>|<span data-ttu-id="c7fa2-149">Int16</span><span class="sxs-lookup"><span data-stu-id="c7fa2-149">Int16</span></span>|<span data-ttu-id="c7fa2-150">GetInt16()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-150">GetInt16()</span></span>|  
+|<span data-ttu-id="c7fa2-151">SQL_TINYINT</span><span class="sxs-lookup"><span data-stu-id="c7fa2-151">SQL_TINYINT</span></span>|<span data-ttu-id="c7fa2-152">Byte</span><span class="sxs-lookup"><span data-stu-id="c7fa2-152">Byte</span></span>|<span data-ttu-id="c7fa2-153">GetByte()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-153">GetByte()</span></span>|  
+|<span data-ttu-id="c7fa2-154">SQL_TYPE_TIMES</span><span class="sxs-lookup"><span data-stu-id="c7fa2-154">SQL_TYPE_TIMES</span></span>|<span data-ttu-id="c7fa2-155">DateTime</span><span class="sxs-lookup"><span data-stu-id="c7fa2-155">DateTime</span></span>|<span data-ttu-id="c7fa2-156">GetDateTime()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-156">GetDateTime()</span></span>|  
+|<span data-ttu-id="c7fa2-157">SQL_TYPE_TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="c7fa2-157">SQL_TYPE_TIMESTAMP</span></span>|<span data-ttu-id="c7fa2-158">DateTime</span><span class="sxs-lookup"><span data-stu-id="c7fa2-158">DateTime</span></span>|<span data-ttu-id="c7fa2-159">GetDateTime()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-159">GetDateTime()</span></span>|  
+|<span data-ttu-id="c7fa2-160">SQL_VARBINARY</span><span class="sxs-lookup"><span data-stu-id="c7fa2-160">SQL_VARBINARY</span></span>|<span data-ttu-id="c7fa2-161">Byte[]</span><span class="sxs-lookup"><span data-stu-id="c7fa2-161">Byte[]</span></span>|<span data-ttu-id="c7fa2-162">GetBytes()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-162">GetBytes()</span></span>|  
+|<span data-ttu-id="c7fa2-163">SQL_WCHAR</span><span class="sxs-lookup"><span data-stu-id="c7fa2-163">SQL_WCHAR</span></span>|<span data-ttu-id="c7fa2-164">String</span><span class="sxs-lookup"><span data-stu-id="c7fa2-164">String</span></span><br /><br /> <span data-ttu-id="c7fa2-165">Char[]</span><span class="sxs-lookup"><span data-stu-id="c7fa2-165">Char[]</span></span>|<span data-ttu-id="c7fa2-166">GetString()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-166">GetString()</span></span><br /><br /> <span data-ttu-id="c7fa2-167">GetChars()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-167">GetChars()</span></span>|  
+|<span data-ttu-id="c7fa2-168">SQL_WLONGVARCHAR</span><span class="sxs-lookup"><span data-stu-id="c7fa2-168">SQL_WLONGVARCHAR</span></span>|<span data-ttu-id="c7fa2-169">String</span><span class="sxs-lookup"><span data-stu-id="c7fa2-169">String</span></span><br /><br /> <span data-ttu-id="c7fa2-170">Char[]</span><span class="sxs-lookup"><span data-stu-id="c7fa2-170">Char[]</span></span>|<span data-ttu-id="c7fa2-171">GetString()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-171">GetString()</span></span><br /><br /> <span data-ttu-id="c7fa2-172">GetChars()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-172">GetChars()</span></span>|  
+|<span data-ttu-id="c7fa2-173">SQL_WVARCHAR</span><span class="sxs-lookup"><span data-stu-id="c7fa2-173">SQL_WVARCHAR</span></span>|<span data-ttu-id="c7fa2-174">String</span><span class="sxs-lookup"><span data-stu-id="c7fa2-174">String</span></span><br /><br /> <span data-ttu-id="c7fa2-175">Char[]</span><span class="sxs-lookup"><span data-stu-id="c7fa2-175">Char[]</span></span>|<span data-ttu-id="c7fa2-176">GetString()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-176">GetString()</span></span><br /><br /> <span data-ttu-id="c7fa2-177">GetChars()</span><span class="sxs-lookup"><span data-stu-id="c7fa2-177">GetChars()</span></span>|  
   
-## 請參閱  
- [擷取和修改 ADO.NET 中的資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="c7fa2-178">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c7fa2-178">See Also</span></span>  
+ [<span data-ttu-id="c7fa2-179">在 ADO.NET 中擷取和修改資料</span><span class="sxs-lookup"><span data-stu-id="c7fa2-179">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="c7fa2-180">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="c7fa2-180">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

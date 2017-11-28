@@ -1,82 +1,62 @@
 ---
 title: "@ (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '@'
-dev_langs:
-- CSharp
+f1_keywords: '@'
 helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d4dc8c81a9afd60add4c2a62be6804a0f6446124
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 219c12e4e3c9b847400f00a135d58506c72d2e7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="-c-compiler-options"></a>@ (C# 編譯器選項)
-@ 選項可讓您指定檔案，內含要編譯的編譯器選項和原始程式碼檔。  
+# <a name="-c-compiler-options"></a><span data-ttu-id="8eda2-102">@ (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="8eda2-102">@ (C# Compiler Options)</span></span>
+<span data-ttu-id="8eda2-103">@ 選項可讓您指定檔案，內含要編譯的編譯器選項和原始程式碼檔。</span><span class="sxs-lookup"><span data-stu-id="8eda2-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="8eda2-104">語法</span><span class="sxs-lookup"><span data-stu-id="8eda2-104">Syntax</span></span>  
   
 ```  
 @response_file  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a><span data-ttu-id="8eda2-105">引數</span><span class="sxs-lookup"><span data-stu-id="8eda2-105">Arguments</span></span>  
  `response_file`  
- 列出要編譯之編譯器選項或原始程式碼檔的檔案。  
+ <span data-ttu-id="8eda2-106">列出要編譯之編譯器選項或原始程式碼檔的檔案。</span><span class="sxs-lookup"><span data-stu-id="8eda2-106">A file that lists compiler options or source code files to compile.</span></span>  
   
-## <a name="remarks"></a>備註  
- 編譯器將會處理編譯器選項和原始程式碼檔，就像已在命令列上指定它們一樣。  
+## <a name="remarks"></a><span data-ttu-id="8eda2-107">備註</span><span class="sxs-lookup"><span data-stu-id="8eda2-107">Remarks</span></span>  
+ <span data-ttu-id="8eda2-108">編譯器將會處理編譯器選項和原始程式碼檔，就像已在命令列上指定它們一樣。</span><span class="sxs-lookup"><span data-stu-id="8eda2-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
   
- 若要在編譯中指定多個回應檔，請指定多個回應檔選項。 例如：  
+ <span data-ttu-id="8eda2-109">若要在編譯中指定多個回應檔，請指定多個回應檔選項。</span><span class="sxs-lookup"><span data-stu-id="8eda2-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="8eda2-110">例如：</span><span class="sxs-lookup"><span data-stu-id="8eda2-110">For example:</span></span>  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- 在回應檔中，多個編譯器選項和原始程式碼檔可以出現在一行上。 單一編譯器選項規格必須出現在一行上 (無法跨越多行)。 回應檔可以有開頭為 # 符號的註解。  
+ <span data-ttu-id="8eda2-111">在回應檔中，多個編譯器選項和原始程式碼檔可以出現在一行上。</span><span class="sxs-lookup"><span data-stu-id="8eda2-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="8eda2-112">單一編譯器選項規格必須出現在一行上 (無法跨越多行)。</span><span class="sxs-lookup"><span data-stu-id="8eda2-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="8eda2-113">回應檔可以有開頭為 # 符號的註解。</span><span class="sxs-lookup"><span data-stu-id="8eda2-113">Response files can have comments that begin with the # symbol.</span></span>  
   
- 在回應檔內指定編譯器選項，就像在命令列上發出這些命令一樣。 如需詳細資訊，請參閱[從命令列建置](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
+ <span data-ttu-id="8eda2-114">在回應檔內指定編譯器選項，就像在命令列上發出這些命令一樣。</span><span class="sxs-lookup"><span data-stu-id="8eda2-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="8eda2-115">如需詳細資訊，請參閱[從命令列建置](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="8eda2-115">See [Building from the Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
   
- 編譯器會處理遇到的命令選項。 因此，命令列引數可以覆寫回應檔中先前列出的選項。 相反地，回應檔中的選項將會覆寫在命令列或其他回應檔中先前所列的選項。  
+ <span data-ttu-id="8eda2-116">編譯器會處理遇到的命令選項。</span><span class="sxs-lookup"><span data-stu-id="8eda2-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="8eda2-117">因此，命令列引數可以覆寫回應檔中先前列出的選項。</span><span class="sxs-lookup"><span data-stu-id="8eda2-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="8eda2-118">相反地，回應檔中的選項將會覆寫在命令列或其他回應檔中先前所列的選項。</span><span class="sxs-lookup"><span data-stu-id="8eda2-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
   
- C# 提供 csc.rsp 檔案，而此檔案位於與 csc.exe 檔案相同的目錄中。 如需 csc.rsp 的詳細資訊，請參閱 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
+ <span data-ttu-id="8eda2-119">C# 提供 csc.rsp 檔案，而此檔案位於與 csc.exe 檔案相同的目錄中。</span><span class="sxs-lookup"><span data-stu-id="8eda2-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="8eda2-120">如需 csc.rsp 的詳細資訊，請參閱 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="8eda2-120">See [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
   
- 無法在 Visual Studio 開發環境中設定此編譯器選項，也無法以程式設計方式進行變更。  
+ <span data-ttu-id="8eda2-121">無法在 Visual Studio 開發環境中設定此編譯器選項，也無法以程式設計方式進行變更。</span><span class="sxs-lookup"><span data-stu-id="8eda2-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
   
-## <a name="example"></a>範例  
- 以下是範例回應檔中的數行：  
+## <a name="example"></a><span data-ttu-id="8eda2-122">範例</span><span class="sxs-lookup"><span data-stu-id="8eda2-122">Example</span></span>  
+ <span data-ttu-id="8eda2-123">以下是範例回應檔中的數行：</span><span class="sxs-lookup"><span data-stu-id="8eda2-123">The following are a few lines from a sample response file:</span></span>  
   
 ```console  
 # build the first output file  
 /target:exe /out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="8eda2-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8eda2-124">See Also</span></span>  
+ [<span data-ttu-id="8eda2-125">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="8eda2-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

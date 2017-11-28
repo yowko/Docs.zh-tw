@@ -1,55 +1,45 @@
 ---
 title: "範例 XML 文件 (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 05a0d9db7fe78d62b648688222a6bacd1b87b978
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4fb20e2c40e6059c6bbf99b7bce5b6dd363df7a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-documents-linq-to-xml"></a>範例 XML 文件 (LINQ to XML)
-下列範例檔案用於整個 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的程式碼範例和程式碼片段。  
+# <a name="sample-xml-documents-linq-to-xml"></a><span data-ttu-id="f6697-102">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f6697-102">Sample XML Documents (LINQ to XML)</span></span>
+<span data-ttu-id="f6697-103">下列範例檔案用於整個 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的程式碼範例和程式碼片段。</span><span class="sxs-lookup"><span data-stu-id="f6697-103">The following example files are used in the code samples and code snippets throughout the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span>  
   
 > [!NOTE]
->  此處所描述的範例公司、組織、產品、網域名稱、電子郵件地址、商標、人員、地點與事件均屬虛構。 並非影射任何真實的公司、組織、產品、網域名稱、電子郵件地址、商標、人員、地點或事件。  
+>  <span data-ttu-id="f6697-104">此處所描述的範例公司、組織、產品、網域名稱、電子郵件地址、商標、人員、地點與事件均屬虛構。</span><span class="sxs-lookup"><span data-stu-id="f6697-104">The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious.</span></span> <span data-ttu-id="f6697-105">並非影射任何真實的公司、組織、產品、網域名稱、電子郵件地址、商標、人員、地點或事件。</span><span class="sxs-lookup"><span data-stu-id="f6697-105">No association with any real company, organization, product, domain name, e-mail address, logo, person, places, or events is intended or should be inferred.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="f6697-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="f6697-106">In This Section</span></span>  
   
-|主題|說明|  
+|<span data-ttu-id="f6697-107">主題</span><span class="sxs-lookup"><span data-stu-id="f6697-107">Topic</span></span>|<span data-ttu-id="f6697-108">說明</span><span class="sxs-lookup"><span data-stu-id="f6697-108">Description</span></span>|  
 |-----------|-----------------|  
-|[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)|包含典型採購訂單的 XML 文件。|  
-|[範例 XML 檔：命名空間中的典型採購訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|在命名空間中，包含典型採購訂單的 XML 文件。|  
-|[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|包含多個採購訂單的 XML 文件。|  
-|[範例 XML 檔：命名空間中的多份採購訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|在命名空間中，包含多個採購訂單的 XML 文件。|  
-|[範例 XML 檔：測試組態 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|包含某些虛擬測試組態資料的 XML 文件。|  
-|[範例 XML 檔：命名空間中的測試組態](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|在命名空間中，包含某些虛擬測試組態資料的 XML 文件。|  
-|[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|包含客戶和訂單的 XML 文件。|  
-|[範例 XSD 檔：客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|驗證 [範例 XML 檔：客戶和訂單 (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92) 的 XML 結構描述定義 (XSD)。|  
-|[範例 XML 檔：位於相同命名空間中的客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|在命名空間中，包含客戶和訂單的 XML 文件。|  
-|[範例 XML 檔：數值資料 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|包含適合加總與群組之資料的 XML 文件。|  
-|[範例 XML 檔：命名空間中的數值資料](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|在命名空間中，包含適合加總與群組之資料的 XML 文件。|  
-|[範例 XML 檔：書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|包含書籍目錄的 XML 文件。|  
-|[範例 XML 檔：合併的採購訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|呈現包含不同命名空間中之採購訂單的 XML 文件。|  
+|[<span data-ttu-id="f6697-109">範例 XML 檔：典型採購訂單 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f6697-109">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)|<span data-ttu-id="f6697-110">包含典型採購訂單的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-110">An XML document that contains a typical purchase order.</span></span>|  
+|[<span data-ttu-id="f6697-111">範例 XML 檔：命名空間中的典型採購訂單</span><span class="sxs-lookup"><span data-stu-id="f6697-111">Sample XML File: Typical Purchase Order in a Namespace</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|<span data-ttu-id="f6697-112">在命名空間中，包含典型採購訂單的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-112">An XML document in a namespace that contains a typical purchase order.</span></span>|  
+|[<span data-ttu-id="f6697-113">範例 XML 檔：多份採購訂單 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f6697-113">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|<span data-ttu-id="f6697-114">包含多個採購訂單的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-114">An XML document that contains multiple purchase orders.</span></span>|  
+|[<span data-ttu-id="f6697-115">範例 XML 檔：命名空間中的多份採購訂單</span><span class="sxs-lookup"><span data-stu-id="f6697-115">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|<span data-ttu-id="f6697-116">在命名空間中，包含多個採購訂單的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-116">An XML document in a namespace that contains multiple purchase orders.</span></span>|  
+|[<span data-ttu-id="f6697-117">範例 XML 檔：測試組態 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f6697-117">Sample XML File: Test Configuration (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|<span data-ttu-id="f6697-118">包含某些虛擬測試組態資料的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-118">An XML document that contains some pseudo test configuration data.</span></span>|  
+|[<span data-ttu-id="f6697-119">範例 XML 檔：命名空間中的測試組態</span><span class="sxs-lookup"><span data-stu-id="f6697-119">Sample XML File: Test Configuration in a Namespace</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|<span data-ttu-id="f6697-120">在命名空間中，包含某些虛擬測試組態資料的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-120">An XML document in a namespace that contains some pseudo test configuration data.</span></span>|  
+|[<span data-ttu-id="f6697-121">範例 XML 檔：客戶和訂單 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f6697-121">Sample XML File: Customers and Orders (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|<span data-ttu-id="f6697-122">包含客戶和訂單的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-122">An XML document that contains customers and orders.</span></span>|  
+|[<span data-ttu-id="f6697-123">範例 XSD 檔：客戶和訂單</span><span class="sxs-lookup"><span data-stu-id="f6697-123">Sample XSD File: Customers and Orders</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|<span data-ttu-id="f6697-124">驗證 [範例 XML 檔：客戶和訂單 (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92) 的 XML 結構描述定義 (XSD)。</span><span class="sxs-lookup"><span data-stu-id="f6697-124">An Xml Schema Definition (XSD) that validates the [Sample XML File: Customers and Orders (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).</span></span>|  
+|[<span data-ttu-id="f6697-125">範例 XML 檔：位於相同命名空間中的客戶和訂單</span><span class="sxs-lookup"><span data-stu-id="f6697-125">Sample XML File: Customers and Orders in a Namespace</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|<span data-ttu-id="f6697-126">在命名空間中，包含客戶和訂單的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-126">An XML document in a namespace that contains customers and orders.</span></span>|  
+|[<span data-ttu-id="f6697-127">範例 XML 檔：數值資料 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f6697-127">Sample XML File: Numerical Data (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|<span data-ttu-id="f6697-128">包含適合加總與群組之資料的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-128">An XML document that contains data suitable for summing and grouping.</span></span>|  
+|[<span data-ttu-id="f6697-129">範例 XML 檔：命名空間中的數值資料</span><span class="sxs-lookup"><span data-stu-id="f6697-129">Sample XML File: Numerical Data in a Namespace</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|<span data-ttu-id="f6697-130">在命名空間中，包含適合加總與群組之資料的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-130">An XML document in a namespace that contains data suitable for summing and grouping.</span></span>|  
+|[<span data-ttu-id="f6697-131">範例 XML 檔：書籍 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f6697-131">Sample XML File: Books (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|<span data-ttu-id="f6697-132">包含書籍目錄的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-132">An XML document that contains a catalog of books.</span></span>|  
+|[<span data-ttu-id="f6697-133">範例 XML 檔：合併的採購訂單</span><span class="sxs-lookup"><span data-stu-id="f6697-133">Sample XML File: Consolidated Purchase Orders</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|<span data-ttu-id="f6697-134">呈現包含不同命名空間中之採購訂單的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="f6697-134">Presents an XML document that contains purchase orders that are in different namespaces.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="f6697-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f6697-135">See Also</span></span>  
+ [<span data-ttu-id="f6697-136">程式設計手冊 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f6697-136">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

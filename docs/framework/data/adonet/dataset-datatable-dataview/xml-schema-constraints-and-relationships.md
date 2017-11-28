@@ -1,32 +1,35 @@
 ---
-title: "XML 結構描述條件約束和關聯性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XML 結構描述條件約束和關聯性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a324c3b7f24d3395382067ea5581313af58e13f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# XML 結構描述條件約束和關聯性
-您可以在 XML 結構描述定義語言 \(XSD\) 結構描述中，指定條件約束 \(唯一的、索引鍵和 keyref 條件約束\) 以及關聯性 \(使用 **msdata:Relationship** 註釋\)。  這個主題會說明 XML 結構描述中指定的條件約束和關聯性如何經過解譯以產生 <xref:System.Data.DataSet>。  
+# <a name="xml-schema-constraints-and-relationships"></a><span data-ttu-id="60a8f-102">XML 結構描述條件約束和關聯性</span><span class="sxs-lookup"><span data-stu-id="60a8f-102">XML Schema Constraints and Relationships</span></span>
+<span data-ttu-id="60a8f-103">在 XML 結構描述定義語言 (XSD) 結構描述中，您可以指定條件約束 (唯一的索引鍵和 keyref 條件約束) 和關聯性 (使用**msdata: relationship**註解)。</span><span class="sxs-lookup"><span data-stu-id="60a8f-103">In an XML Schema definition language (XSD) schema, you can specify constraints (unique, key, and keyref constraints) and relationships (using the **msdata:Relationship** annotation).</span></span> <span data-ttu-id="60a8f-104">這個主題會說明 XML 結構描述中指定的條件約束和關聯性如何經過解譯以產生 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="60a8f-104">This topic explains how the constraints and relationships specified in an XML Schema are interpreted to generate the <xref:System.Data.DataSet>.</span></span>  
   
- 一般而言，如果您想在 **DataSet** 內只產生關聯性，則可以在 XML 結構描述內指定 **msdata:Relationship** 註釋。  如需詳細資訊，請參閱[從 XML 結構描述 \(XSD\) 產生 DataSet 關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)。  如果您要在 **DataSet** 中產生條件約束，則需要指定條件約束 \(唯一的、索引鍵和 keyref 條件約束\)。  請注意，索引鍵條件約束和 keyref 條件約束也用於產生關聯性，詳情請見這個主題的後續說明。  
+ <span data-ttu-id="60a8f-105">一般而言，在 XML 結構描述中，您可以指定**msdata: relationship**註解，如果您想要產生中的關聯性**資料集**。</span><span class="sxs-lookup"><span data-stu-id="60a8f-105">In general, in an XML Schema, you specify the **msdata:Relationship** annotation if you want to generate only relationships in the **DataSet**.</span></span> <span data-ttu-id="60a8f-106">如需詳細資訊，請參閱[產生從 XML 結構描述 (XSD) 的資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)。</span><span class="sxs-lookup"><span data-stu-id="60a8f-106">For more information, see [Generating DataSet Relations from XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md).</span></span> <span data-ttu-id="60a8f-107">指定條件約束 (唯一的索引鍵和 keyref) 如果您想要產生的條件約束**資料集**。</span><span class="sxs-lookup"><span data-stu-id="60a8f-107">You specify constraints (unique, key, and keyref) if you want to generate constraints in the **DataSet**.</span></span> <span data-ttu-id="60a8f-108">請注意，索引鍵條件約束和 keyref 條件約束也用於產生關聯性，詳情請見這個主題的後續說明。</span><span class="sxs-lookup"><span data-stu-id="60a8f-108">Note that the key and keyref constraints are also used to generate relationships, as explained later in this topic.</span></span>  
   
-## 從索引鍵條件約束和 keyref 條件約束產生關聯性  
- 取代指定 **msdata:Relationship** 註釋，您可以指定索引鍵條件約束和 keyref 條件約束，這些條件約束會在 XML 結構描述對應處理序期間，在 **DataSet** 中不只產生條件約束，也會產生關聯性。  但是，如果在 **keyref** 項目中指定 `msdata:ConstraintOnly="true"`，**DataSet** 將只包含條件約束，而不包含關聯性。  
+## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a><span data-ttu-id="60a8f-109">從索引鍵條件約束和 keyref 條件約束產生關聯性</span><span class="sxs-lookup"><span data-stu-id="60a8f-109">Generating a Relationship from key and keyref Constraints</span></span>  
+ <span data-ttu-id="60a8f-110">而不是指定**msdata: relationship**註釋，您可以指定索引鍵和 keyref XML 結構描述對應處理序時使用，以產生而不是只是條件約束的關聯性的條件約束**資料集**。</span><span class="sxs-lookup"><span data-stu-id="60a8f-110">Instead of specifying the **msdata:Relationship** annotation, you can specify key and keyref constraints, which are used during the XML Schema mapping process to generate not only the constraints but also the relationship in the **DataSet**.</span></span> <span data-ttu-id="60a8f-111">不過，如果您指定`msdata:ConstraintOnly="true"`中**keyref**項目，**資料集**會包含條件約束，而不會包含關聯性。</span><span class="sxs-lookup"><span data-stu-id="60a8f-111">However, if you specify `msdata:ConstraintOnly="true"` in the **keyref** element, the **DataSet** will include only the constraints and will not include the relationship.</span></span>  
   
- 下列範例所顯示的 XML 結構描述包含無巢狀的 **Order** 和 **OrderDetail** 項目，  結構描述也指定索引鍵條件約束和 keyref 條件約束。  
+ <span data-ttu-id="60a8f-112">下列範例顯示 XML 結構描述，其中包含**順序**和**OrderDetail**無巢狀項目。</span><span class="sxs-lookup"><span data-stu-id="60a8f-112">The following example shows an XML Schema that includes **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="60a8f-113">結構描述也指定索引鍵條件約束和 keyref 條件約束。</span><span class="sxs-lookup"><span data-stu-id="60a8f-113">The schema also specifies key and keyref constraints.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -66,7 +69,7 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- XML 結構描述對應處理序期間產生的 **DataSet** 包含 **Order** 和 **OrderDetail** 資料表。  此外，**DataSet** 也包含關聯性和條件約束。  下列範例會顯示這些關聯性和條件約束。  請注意，結構描述未指定 **msdata:Relationship** 註釋，而是使用索引鍵條件約束和 keyref 條件約束產生關聯。  
+ <span data-ttu-id="60a8f-114">**資料集**XML 結構描述對應處理程序包括期間產生**順序**和**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="60a8f-114">The **DataSet** that is generated during the XML Schema mapping process includes the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="60a8f-115">此外，**資料集**包含關聯性和條件約束。</span><span class="sxs-lookup"><span data-stu-id="60a8f-115">In addition, the **DataSet** includes relationships and constraints.</span></span> <span data-ttu-id="60a8f-116">下列範例會顯示這些關聯性和條件約束。</span><span class="sxs-lookup"><span data-stu-id="60a8f-116">The following example shows these relationships and constraints.</span></span> <span data-ttu-id="60a8f-117">請注意，未指定結構描述**msdata: relationship**註解; 相反地，將索引鍵和 keyref 條件約束用來產生關聯。</span><span class="sxs-lookup"><span data-stu-id="60a8f-117">Note that the schema does not specify the **msdata:Relationship** annotation; instead, the key and keyref constraints are used to generate the relation.</span></span>  
   
 ```  
 ....ConstraintName: OrderNumberKey  
@@ -92,9 +95,9 @@ caps.handback.revision: 4
 ..Nested: False  
 ```  
   
- 在上一個結構描述範例中，**Order** 和 **OrderDetail** 項目無巢狀化。  下列的結構描述範例中，這些項目則為巢狀化。  不過這個範例中沒有指定 **msdata:Relationship** 註釋，所以我們假設這些項目具有隱含關聯。  如需詳細資訊，請參閱[對應巢狀結構描述項目間的隱含關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)。  結構描述也指定索引鍵條件約束和 keyref 條件約束。  
+ <span data-ttu-id="60a8f-118">在先前的結構描述範例中，**順序**和**OrderDetail**無巢狀項目。</span><span class="sxs-lookup"><span data-stu-id="60a8f-118">In the previous schema example, the **Order** and **OrderDetail** elements are not nested.</span></span> <span data-ttu-id="60a8f-119">下列的結構描述範例中，這些項目則為巢狀化。</span><span class="sxs-lookup"><span data-stu-id="60a8f-119">In the following schema example, these elements are nested.</span></span> <span data-ttu-id="60a8f-120">不過，沒有**msdata: relationship**註解指定; 因此，假設具有隱含關聯。</span><span class="sxs-lookup"><span data-stu-id="60a8f-120">However, no **msdata:Relationship** annotation is specified; therefore, an implicit relation is assumed.</span></span> <span data-ttu-id="60a8f-121">如需詳細資訊，請參閱[地圖隱含關聯性之間巢狀結構描述元素](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)。</span><span class="sxs-lookup"><span data-stu-id="60a8f-121">For more information, see [Map Implicit Relations Between Nested Schema Elements](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md).</span></span> <span data-ttu-id="60a8f-122">結構描述也指定索引鍵條件約束和 keyref 條件約束。</span><span class="sxs-lookup"><span data-stu-id="60a8f-122">The schema also specifies key and keyref constraints.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -136,14 +139,14 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- 從 XML 結構描述對應處理序產生的 **DataSet** 包括兩個資料表：  
+ <span data-ttu-id="60a8f-123">**資料集**所產生的 XML 結構描述對應處理序包含兩個資料表：</span><span class="sxs-lookup"><span data-stu-id="60a8f-123">The **DataSet** resulting from the XML Schema mapping process includes two tables:</span></span>  
   
 ```  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- **DataSet** 也包含兩個關聯性 \(一個以 **msdata:relationship** 註釋為基礎，另一個採用索引鍵條件約束和 keyref 條件約束\) 和各種條件約束。  下列範例顯示關聯和條件約束。  
+ <span data-ttu-id="60a8f-124">**資料集**也包含兩個關聯性 (其中根據**msdata: relationship**附註和其他基礎的索引鍵和 keyref 條件約束) 和各種條件約束。</span><span class="sxs-lookup"><span data-stu-id="60a8f-124">The **DataSet** also includes the two relationships (one based on the **msdata:relationship** annotation and the other based on the key and keyref constraints) and various constraints.</span></span> <span data-ttu-id="60a8f-125">下列範例顯示關聯和條件約束。</span><span class="sxs-lookup"><span data-stu-id="60a8f-125">The following example shows the relations and constraints.</span></span>  
   
 ```  
 ..RelationName: Order_OrderDetail  
@@ -191,8 +194,8 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- 如果 keyref 條件約束參考的巢狀資料表包含 **msdata:IsNested\="true"** 註釋，則 **DataSet** 會以 keyref 條件約束和相關的唯一的\/索引鍵條件約束，建立單一巢狀關聯性。  
+ <span data-ttu-id="60a8f-126">如果 keyref 條件約束參考巢狀資料表包含**msdata: isnested ="true"**註釋，**資料集**會建立單一巢狀關聯性為基礎的 keyref 條件約束和相關/唯一索引鍵條件約束。</span><span class="sxs-lookup"><span data-stu-id="60a8f-126">If a keyref constraint referring to a nested table contains the **msdata:IsNested="true"** annotation, the **DataSet** will create a single nested relationship that is based on the keyref constraint and the related unique/key constraint.</span></span>  
   
-## 請參閱  
- [從 XML 結構描述 \(XSD\) 衍生 DataSet 關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="60a8f-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="60a8f-127">See Also</span></span>  
+ [<span data-ttu-id="60a8f-128">從 XML 結構描述 (XSD) 衍生資料集關聯式結構</span><span class="sxs-lookup"><span data-stu-id="60a8f-128">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="60a8f-129">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="60a8f-129">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

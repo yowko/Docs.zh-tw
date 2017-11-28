@@ -5,73 +5,66 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - platform invoke, marshaling data
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70383e7623852935c0192e700b798a5f0ec554aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
-若要呼叫從 Unmanaged 程式庫匯出的函式，.NET Framework 應用程式需要代表此 Unmanaged 函式之 Managed 程式碼中的函式原型。 若要建立使平台叫用正確地封送處理資料的原型，您必須執行下列動作：  
+# <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="ff610-102">使用平台叫用封送處理資料</span><span class="sxs-lookup"><span data-stu-id="ff610-102">Marshaling Data with Platform Invoke</span></span>
+<span data-ttu-id="ff610-103">若要呼叫從 Unmanaged 程式庫匯出的函式，.NET Framework 應用程式需要代表此 Unmanaged 函式之 Managed 程式碼中的函式原型。</span><span class="sxs-lookup"><span data-stu-id="ff610-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="ff610-104">若要建立使平台叫用正確地封送處理資料的原型，您必須執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="ff610-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  
   
--   將 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性套用至使用 Managed 程式碼的靜態函式或方法。  
+-   <span data-ttu-id="ff610-105">將 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性套用至使用 Managed 程式碼的靜態函式或方法。</span><span class="sxs-lookup"><span data-stu-id="ff610-105">Apply the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute to the static function or method in managed code.</span></span>  
   
--   將 Unmanaged 資料類型替代為 Managed 資料類型。  
+-   <span data-ttu-id="ff610-106">將 Unmanaged 資料類型替代為 Managed 資料類型。</span><span class="sxs-lookup"><span data-stu-id="ff610-106">Substitute managed data types for unmanaged data types.</span></span>  
   
- 您可以使用 Unmanaged 函式所提供的文件，以選擇性欄位套用屬性，並且將 Unmanaged 資料類型替代為 Managed 資料類型，來建構對等的 Managed 原型。 如需如何套用 **DllImportAttribute** 的指示，請參閱[使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)。  
+ <span data-ttu-id="ff610-107">您可以使用 Unmanaged 函式所提供的文件，以選擇性欄位套用屬性，並且將 Unmanaged 資料類型替代為 Managed 資料類型，來建構對等的 Managed 原型。</span><span class="sxs-lookup"><span data-stu-id="ff610-107">You can use the documentation supplied with an unmanaged function to construct an equivalent managed prototype by applying the attribute with its optional fields and substituting managed data types for unmanaged types.</span></span> <span data-ttu-id="ff610-108">如需如何套用 **DllImportAttribute** 的指示，請參閱[使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="ff610-108">For instructions about how to apply the **DllImportAttribute**, see [Consuming Unmanaged DLL Functions](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).</span></span>  
   
- 本節提供範例，示範如何建立 Managed 函式原型，供傳遞引數至函式和接收 Unmanaged 程式庫所匯出函式的傳回值。 此範例也會示範使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性和 <xref:System.Runtime.InteropServices.Marshal> 類別來明確封送處理資料的時機。  
+ <span data-ttu-id="ff610-109">本節提供範例，示範如何建立 Managed 函式原型，供傳遞引數至函式和接收 Unmanaged 程式庫所匯出函式的傳回值。</span><span class="sxs-lookup"><span data-stu-id="ff610-109">This section provides samples that demonstrate how to create managed function prototypes for passing arguments to and receiving return values from functions exported by unmanaged libraries.</span></span> <span data-ttu-id="ff610-110">此範例也會示範使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性和 <xref:System.Runtime.InteropServices.Marshal> 類別來明確封送處理資料的時機。</span><span class="sxs-lookup"><span data-stu-id="ff610-110">The samples also demonstrate when to use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute and the <xref:System.Runtime.InteropServices.Marshal> class to explicitly marshal data.</span></span>  
   
-## <a name="platform-invoke-data-types"></a>平台叫用資料類型  
- 下表列出 Win32 API (Wtypes.h 中所列) 和 C 樣式函式中所使用的資料類型。 許多 Unmanaged 程式庫包含傳遞資料類型做為參數和傳回值的函式。 第三個行列出對應的 .NET Framework 內建實值類型或您在 Managed 程式碼中使用的類別。 在某些情況下，您可將本表格中所列的類型取代為相同大小的類型。  
+## <a name="platform-invoke-data-types"></a><span data-ttu-id="ff610-111">平台叫用資料類型</span><span class="sxs-lookup"><span data-stu-id="ff610-111">Platform invoke data types</span></span>  
+ <span data-ttu-id="ff610-112">下表列出 Win32 API (Wtypes.h 中所列) 和 C 樣式函式中所使用的資料類型。</span><span class="sxs-lookup"><span data-stu-id="ff610-112">The following table lists data types used in the Win32 API (listed in Wtypes.h) and C-style functions.</span></span> <span data-ttu-id="ff610-113">許多 Unmanaged 程式庫包含傳遞資料類型做為參數和傳回值的函式。</span><span class="sxs-lookup"><span data-stu-id="ff610-113">Many unmanaged libraries contain functions that pass these data types as parameters and return values.</span></span> <span data-ttu-id="ff610-114">第三個行列出對應的 .NET Framework 內建實值類型或您在 Managed 程式碼中使用的類別。</span><span class="sxs-lookup"><span data-stu-id="ff610-114">The third column lists the corresponding .NET Framework built-in value type or class that you use in managed code.</span></span> <span data-ttu-id="ff610-115">在某些情況下，您可將本表格中所列的類型取代為相同大小的類型。</span><span class="sxs-lookup"><span data-stu-id="ff610-115">In some cases, you can substitute a type of the same size for the type listed in the table.</span></span>  
   
-|在 Wtypes.h 中的 Unmanaged 類型|Unmanaged C 語言類型|Managed 類別名稱|說明|  
+|<span data-ttu-id="ff610-116">在 Wtypes.h 中的 Unmanaged 類型</span><span class="sxs-lookup"><span data-stu-id="ff610-116">Unmanaged type in Wtypes.h</span></span>|<span data-ttu-id="ff610-117">Unmanaged C 語言類型</span><span class="sxs-lookup"><span data-stu-id="ff610-117">Unmanaged C language type</span></span>|<span data-ttu-id="ff610-118">Managed 類別名稱</span><span class="sxs-lookup"><span data-stu-id="ff610-118">Managed class name</span></span>|<span data-ttu-id="ff610-119">說明</span><span class="sxs-lookup"><span data-stu-id="ff610-119">Description</span></span>|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=fullName>|在 32 位元 Windows 作業系統上為 32 位元，在 64 位元 Windows 作業系統上為 64 位元。|  
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=fullName>|8 位元|  
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=fullName>|16 位元|  
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=fullName>|16 位元|  
-|**INT**|**int**|<xref:System.Int32?displayProperty=fullName>|32 位元|  
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=fullName>|32 位元|  
-|**LONG**|**long**|<xref:System.Int32?displayProperty=fullName>|32 位元|  
-|**BOOL**|**long**|<xref:System.Byte>|32 位元|  
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 位元|  
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 位元|  
-|**CHAR**|**char**|<xref:System.Char?displayProperty=fullName>|使用 ANSI 裝飾。|  
-|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=fullName>|使用 Unicode 裝飾。|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 ANSI 裝飾。|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 ANSI 裝飾。|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 Unicode 裝飾。|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 Unicode 裝飾。|  
-|**FLOAT**|**Float**|<xref:System.Single?displayProperty=fullName>|32 位元|  
-|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=fullName>|64 位元|  
+|<span data-ttu-id="ff610-120">**HANDLE**</span><span class="sxs-lookup"><span data-stu-id="ff610-120">**HANDLE**</span></span>|<span data-ttu-id="ff610-121">**void\***</span><span class="sxs-lookup"><span data-stu-id="ff610-121">**void\***</span></span>|<xref:System.IntPtr?displayProperty=nameWithType>|<span data-ttu-id="ff610-122">在 32 位元 Windows 作業系統上為 32 位元，在 64 位元 Windows 作業系統上為 64 位元。</span><span class="sxs-lookup"><span data-stu-id="ff610-122">32 bits on 32-bit Windows operating systems, 64 bits on 64-bit Windows operating systems.</span></span>|  
+|<span data-ttu-id="ff610-123">**BYTE**</span><span class="sxs-lookup"><span data-stu-id="ff610-123">**BYTE**</span></span>|<span data-ttu-id="ff610-124">**unsigned char**</span><span class="sxs-lookup"><span data-stu-id="ff610-124">**unsigned char**</span></span>|<xref:System.Byte?displayProperty=nameWithType>|<span data-ttu-id="ff610-125">8 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-125">8 bits</span></span>|  
+|<span data-ttu-id="ff610-126">**SHORT**</span><span class="sxs-lookup"><span data-stu-id="ff610-126">**SHORT**</span></span>|<span data-ttu-id="ff610-127">**short**</span><span class="sxs-lookup"><span data-stu-id="ff610-127">**short**</span></span>|<xref:System.Int16?displayProperty=nameWithType>|<span data-ttu-id="ff610-128">16 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-128">16 bits</span></span>|  
+|<span data-ttu-id="ff610-129">**WORD**</span><span class="sxs-lookup"><span data-stu-id="ff610-129">**WORD**</span></span>|<span data-ttu-id="ff610-130">**unsigned short**</span><span class="sxs-lookup"><span data-stu-id="ff610-130">**unsigned short**</span></span>|<xref:System.UInt16?displayProperty=nameWithType>|<span data-ttu-id="ff610-131">16 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-131">16 bits</span></span>|  
+|<span data-ttu-id="ff610-132">**INT**</span><span class="sxs-lookup"><span data-stu-id="ff610-132">**INT**</span></span>|<span data-ttu-id="ff610-133">**int**</span><span class="sxs-lookup"><span data-stu-id="ff610-133">**int**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|<span data-ttu-id="ff610-134">32 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-134">32 bits</span></span>|  
+|<span data-ttu-id="ff610-135">**UINT**</span><span class="sxs-lookup"><span data-stu-id="ff610-135">**UINT**</span></span>|<span data-ttu-id="ff610-136">**unsigned int**</span><span class="sxs-lookup"><span data-stu-id="ff610-136">**unsigned int**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="ff610-137">32 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-137">32 bits</span></span>|  
+|<span data-ttu-id="ff610-138">**LONG**</span><span class="sxs-lookup"><span data-stu-id="ff610-138">**LONG**</span></span>|<span data-ttu-id="ff610-139">**long**</span><span class="sxs-lookup"><span data-stu-id="ff610-139">**long**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|<span data-ttu-id="ff610-140">32 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-140">32 bits</span></span>|  
+|<span data-ttu-id="ff610-141">**BOOL**</span><span class="sxs-lookup"><span data-stu-id="ff610-141">**BOOL**</span></span>|<span data-ttu-id="ff610-142">**long**</span><span class="sxs-lookup"><span data-stu-id="ff610-142">**long**</span></span>|<xref:System.Byte>|<span data-ttu-id="ff610-143">32 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-143">32 bits</span></span>|  
+|<span data-ttu-id="ff610-144">**DWORD**</span><span class="sxs-lookup"><span data-stu-id="ff610-144">**DWORD**</span></span>|<span data-ttu-id="ff610-145">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="ff610-145">**unsigned long**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="ff610-146">32 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-146">32 bits</span></span>|  
+|<span data-ttu-id="ff610-147">**ULONG**</span><span class="sxs-lookup"><span data-stu-id="ff610-147">**ULONG**</span></span>|<span data-ttu-id="ff610-148">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="ff610-148">**unsigned long**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="ff610-149">32 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-149">32 bits</span></span>|  
+|<span data-ttu-id="ff610-150">**CHAR**</span><span class="sxs-lookup"><span data-stu-id="ff610-150">**CHAR**</span></span>|<span data-ttu-id="ff610-151">**char**</span><span class="sxs-lookup"><span data-stu-id="ff610-151">**char**</span></span>|<xref:System.Char?displayProperty=nameWithType>|<span data-ttu-id="ff610-152">使用 ANSI 裝飾。</span><span class="sxs-lookup"><span data-stu-id="ff610-152">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="ff610-153">**WCHAR**</span><span class="sxs-lookup"><span data-stu-id="ff610-153">**WCHAR**</span></span>|<span data-ttu-id="ff610-154">**wchar_t**</span><span class="sxs-lookup"><span data-stu-id="ff610-154">**wchar_t**</span></span>|<xref:System.Char?displayProperty=nameWithType>|<span data-ttu-id="ff610-155">使用 Unicode 裝飾。</span><span class="sxs-lookup"><span data-stu-id="ff610-155">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="ff610-156">**LPSTR**</span><span class="sxs-lookup"><span data-stu-id="ff610-156">**LPSTR**</span></span>|<span data-ttu-id="ff610-157">**char\***</span><span class="sxs-lookup"><span data-stu-id="ff610-157">**char\***</span></span>|<span data-ttu-id="ff610-158"><xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="ff610-158"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="ff610-159">使用 ANSI 裝飾。</span><span class="sxs-lookup"><span data-stu-id="ff610-159">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="ff610-160">**LPCSTR**</span><span class="sxs-lookup"><span data-stu-id="ff610-160">**LPCSTR**</span></span>|<span data-ttu-id="ff610-161">**Const char\***</span><span class="sxs-lookup"><span data-stu-id="ff610-161">**Const char\***</span></span>|<span data-ttu-id="ff610-162"><xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="ff610-162"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="ff610-163">使用 ANSI 裝飾。</span><span class="sxs-lookup"><span data-stu-id="ff610-163">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="ff610-164">**LPWSTR**</span><span class="sxs-lookup"><span data-stu-id="ff610-164">**LPWSTR**</span></span>|<span data-ttu-id="ff610-165">**wchar_t\***</span><span class="sxs-lookup"><span data-stu-id="ff610-165">**wchar_t\***</span></span>|<span data-ttu-id="ff610-166"><xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="ff610-166"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="ff610-167">使用 Unicode 裝飾。</span><span class="sxs-lookup"><span data-stu-id="ff610-167">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="ff610-168">**LPCWSTR**</span><span class="sxs-lookup"><span data-stu-id="ff610-168">**LPCWSTR**</span></span>|<span data-ttu-id="ff610-169">**Const wchar_t\***</span><span class="sxs-lookup"><span data-stu-id="ff610-169">**Const wchar_t\***</span></span>|<span data-ttu-id="ff610-170"><xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="ff610-170"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="ff610-171">使用 Unicode 裝飾。</span><span class="sxs-lookup"><span data-stu-id="ff610-171">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="ff610-172">**FLOAT**</span><span class="sxs-lookup"><span data-stu-id="ff610-172">**FLOAT**</span></span>|<span data-ttu-id="ff610-173">**Float**</span><span class="sxs-lookup"><span data-stu-id="ff610-173">**Float**</span></span>|<xref:System.Single?displayProperty=nameWithType>|<span data-ttu-id="ff610-174">32 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-174">32 bits</span></span>|  
+|<span data-ttu-id="ff610-175">**DOUBLE**</span><span class="sxs-lookup"><span data-stu-id="ff610-175">**DOUBLE**</span></span>|<span data-ttu-id="ff610-176">**Double**</span><span class="sxs-lookup"><span data-stu-id="ff610-176">**Double**</span></span>|<xref:System.Double?displayProperty=nameWithType>|<span data-ttu-id="ff610-177">64 位元</span><span class="sxs-lookup"><span data-stu-id="ff610-177">64 bits</span></span>|  
   
- 如需 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的對應類型，請參閱 [簡介](../../../docs/standard/class-library-overview.md)。  
+ <span data-ttu-id="ff610-178">如需 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的對應類型，請參閱 [簡介](../../../docs/standard/class-library-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ff610-178">For corresponding types in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++, see the [Introduction to the .NET Framework Class Library](../../../docs/standard/class-library-overview.md).</span></span>  
   
-## <a name="pinvokelibdll"></a>PinvokeLib.dll  
- 下列程式碼定義 Pinvoke.dll 所提供的程式庫函式。 本節所描述的許多範例會呼叫此程式庫。  
+## <a name="pinvokelibdll"></a><span data-ttu-id="ff610-179">PinvokeLib.dll</span><span class="sxs-lookup"><span data-stu-id="ff610-179">PinvokeLib.dll</span></span>  
+ <span data-ttu-id="ff610-180">下列程式碼定義 Pinvoke.dll 所提供的程式庫函式。</span><span class="sxs-lookup"><span data-stu-id="ff610-180">The following code defines the library functions provided by Pinvoke.dll.</span></span> <span data-ttu-id="ff610-181">本節所描述的許多範例會呼叫此程式庫。</span><span class="sxs-lookup"><span data-stu-id="ff610-181">Many samples described in this section call this library.</span></span>  
   
-### <a name="example"></a>範例  
+### <a name="example"></a><span data-ttu-id="ff610-182">範例</span><span class="sxs-lookup"><span data-stu-id="ff610-182">Example</span></span>  
  [!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]  
   
  [!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]
-

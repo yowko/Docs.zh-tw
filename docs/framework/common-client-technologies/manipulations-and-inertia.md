@@ -5,32 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3731bf83-dba5-478c-94a5-1d7c36443073
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 45f36483477c9f6f670de0ac3f44a446f7ae4ee4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Manipulations and Inertia
-*操作*和*慣性*處理器類別會協助您的應用程式在畫面上以自然直覺的方式移動使用者介面 \(UI\) 項目。  操作讓使用者可以透過滑鼠裝置、手寫筆或 \(在可以直接進行觸控的情節中\) 手指等操作工具移動、旋轉元件並且調整元件大小。  *慣性*會模擬移動中 UI 項目所受到的摩擦力，藉以模擬真實世界中的移動行為。  這會讓項目的移動速度 \(線性速度和角速度\) 逐漸變慢到停止為止。  
+# <a name="manipulations-and-inertia"></a><span data-ttu-id="7d22d-102">操作和慣性</span><span class="sxs-lookup"><span data-stu-id="7d22d-102">Manipulations and Inertia</span></span>
+<span data-ttu-id="7d22d-103">「操作」和和「慣性」處理器類別可協助應用程式以自然且直覺的方式移動螢幕上的使用者介面 (UI) 項目。</span><span class="sxs-lookup"><span data-stu-id="7d22d-103">The *manipulations* and *inertia* processor classes assist your application in moving user interface (UI) elements on the screen in a natural and intuitive way.</span></span> <span data-ttu-id="7d22d-104">「操作」可讓使用者使用操作工具移動、旋轉以及調整元件大小，例如滑鼠裝置、手寫筆或在觸控式情況下使用手指。</span><span class="sxs-lookup"><span data-stu-id="7d22d-104">Manipulations enable users to move, rotate, and resize components by using manipulators, such as a mouse device, a stylus, or (in a direct touch-enabled scenario) their fingers.</span></span> <span data-ttu-id="7d22d-105">「慣性」藉由在項目上模擬摩擦力，可模擬移動的 UI 項目在真實世界中的行為。</span><span class="sxs-lookup"><span data-stu-id="7d22d-105">*Inertia* emulates real-world behavior for UI elements that are in motion by simulating friction forces on the elements.</span></span> <span data-ttu-id="7d22d-106">這可讓項目在停止前逐漸減緩移動 (直線和有角度的方向)。</span><span class="sxs-lookup"><span data-stu-id="7d22d-106">This enables elements to gradually slow their movement (both linear and angular) before coming to a stop.</span></span>  
   
- 操作和慣性處理可以用於各種 UI 架構，例如 Microsoft Windows Presentation Foundation \(WPF\) 或 Microsoft XNA。  
+ <span data-ttu-id="7d22d-107">操作和慣性處理可以用於不同的 UI 架構，例如 Microsoft Windows Presentation Foundation (WPF) 或 Microsoft XNA。</span><span class="sxs-lookup"><span data-stu-id="7d22d-107">Manipulations and inertia processing can be used in a variety of UI frameworks, such as Microsoft Windows Presentation Foundation (WPF) or Microsoft XNA.</span></span>  
   
-## 在本節中  
- [Manipulations and Inertia Overview](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7d22d-108">本章節內容</span><span class="sxs-lookup"><span data-stu-id="7d22d-108">In This Section</span></span>  
+ [<span data-ttu-id="7d22d-109">操作和慣性概觀</span><span class="sxs-lookup"><span data-stu-id="7d22d-109">Manipulations and Inertia Overview</span></span>](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)  
   
- [Using Manipulations and Inertia in an XNA Application](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [<span data-ttu-id="7d22d-110">在 XNA 應用程式中使用操作和慣性</span><span class="sxs-lookup"><span data-stu-id="7d22d-110">Using Manipulations and Inertia in an XNA Application</span></span>](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a><span data-ttu-id="7d22d-111">參考資料</span><span class="sxs-lookup"><span data-stu-id="7d22d-111">Reference</span></span>  
  <xref:System.Windows.Input.Manipulations>
-

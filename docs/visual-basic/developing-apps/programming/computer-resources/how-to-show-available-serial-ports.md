@@ -1,77 +1,58 @@
 ---
 title: "如何：在 Visual Basic 中顯示可用的序列埠"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - serial ports, availability
 - My.Computer.Ports.SerialPortNames property
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1dc12d8ad4c27eff346ccb6a7f5fd2ae3bd76701
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bab6177c788a847b46586db19a525c1a1b36476d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中顯示可用的序列埠
-本主題描述如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用 `My.Computer.Ports` 來顯示電腦的可用序列埠。  
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a><span data-ttu-id="4de2e-102">如何：在 Visual Basic 中顯示可用的序列埠</span><span class="sxs-lookup"><span data-stu-id="4de2e-102">How to: Show Available Serial Ports in Visual Basic</span></span>
+<span data-ttu-id="4de2e-103">本主題描述如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用 `My.Computer.Ports` 來顯示電腦的可用序列埠。</span><span class="sxs-lookup"><span data-stu-id="4de2e-103">This topic describes how to use `My.Computer.Ports` to show the available serial ports of the computer in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- 序列埠的名稱會放在 <xref:System.Windows.Forms.ListBox> 控制項中，以便使用者選取所要使用的序列埠。  
+ <span data-ttu-id="4de2e-104">為了允許使用者選取所要使用的序列埠，序列埠的名稱放在 <xref:System.Windows.Forms.ListBox> 控制項中。</span><span class="sxs-lookup"><span data-stu-id="4de2e-104">To allow a user to select which port to use, the names of the serial ports are placed in a <xref:System.Windows.Forms.ListBox> control.</span></span>  
   
-## <a name="example"></a>範例  
- 此範例會針對 `My.Computer.Ports.SerialPortNames` 屬性傳回的所有字串執行迴圈。 這些字串是電腦上可用序列埠的名稱。  
+## <a name="example"></a><span data-ttu-id="4de2e-105">範例</span><span class="sxs-lookup"><span data-stu-id="4de2e-105">Example</span></span>  
+ <span data-ttu-id="4de2e-106">此範例會針對 `My.Computer.Ports.SerialPortNames` 屬性傳回的所有字串執行迴圈。</span><span class="sxs-lookup"><span data-stu-id="4de2e-106">This example loops over all the strings that the `My.Computer.Ports.SerialPortNames` property returns.</span></span> <span data-ttu-id="4de2e-107">這些字串是電腦上可用序列埠的名稱。</span><span class="sxs-lookup"><span data-stu-id="4de2e-107">These strings are the names of the available serial ports on the computer.</span></span>  
   
- 一般而言，使用者會從可用的序列埠清單中，選取應用程式應該使用的序列埠。 在此範例中，序列埠名稱會儲存在 <xref:System.Windows.Forms.ListBox> 控制項中。 如需詳細資訊，請參閱 [ListBox 控制項](http://msdn.microsoft.com/library/b0172473-c5f2-411e-aaa4-c8f17cb5eed4)。  
+ <span data-ttu-id="4de2e-108">一般而言，使用者會從可用的序列埠清單中，選取應用程式應該使用的序列埠。</span><span class="sxs-lookup"><span data-stu-id="4de2e-108">Typically, a user selects which serial port the application should use from the list of available ports.</span></span> <span data-ttu-id="4de2e-109">在這個範例中，序列埠名稱會儲存在 <xref:System.Windows.Forms.ListBox> 控制項中。</span><span class="sxs-lookup"><span data-stu-id="4de2e-109">In this example, the serial port names are stored in a <xref:System.Windows.Forms.ListBox> control.</span></span> <span data-ttu-id="4de2e-110">如需詳細資訊，請參閱 [ListBox 控制項](../../../../framework/winforms/controls/listbox-control-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="4de2e-110">For more information, see [ListBox Control](../../../../framework/winforms/controls/listbox-control-windows-forms.md).</span></span>  
   
  [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-show-available-serial-ports_1.vb)]  
   
- 這個程式碼範例也可作為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，該程式碼片段會位於 [連接和網路] 中。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
+ <span data-ttu-id="4de2e-111">這個程式碼範例也可用為 IntelliSense 程式碼片段。</span><span class="sxs-lookup"><span data-stu-id="4de2e-111">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="4de2e-112">在程式碼片段選擇器中，該程式碼片段會位於 [連接和網路] 中。</span><span class="sxs-lookup"><span data-stu-id="4de2e-112">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="4de2e-113">如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。</span><span class="sxs-lookup"><span data-stu-id="4de2e-113">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 這個範例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="4de2e-114">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4de2e-114">Compiling the Code</span></span>  
+ <span data-ttu-id="4de2e-115">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="4de2e-115">This example requires:</span></span>  
   
--   System.Windows.Forms.dll 的專案參考。  
+-   <span data-ttu-id="4de2e-116">System.Windows.Forms.dll 的專案參考。</span><span class="sxs-lookup"><span data-stu-id="4de2e-116">A project reference to System.Windows.Forms.dll.</span></span>  
   
--   存取 <xref:System.Windows.Forms> 命名空間的成員。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+-   <span data-ttu-id="4de2e-117"><xref:System.Windows.Forms> 命名空間成員的存取權。</span><span class="sxs-lookup"><span data-stu-id="4de2e-117">Access to the members of the <xref:System.Windows.Forms> namespace.</span></span> <span data-ttu-id="4de2e-118">新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。</span><span class="sxs-lookup"><span data-stu-id="4de2e-118">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="4de2e-119">如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。</span><span class="sxs-lookup"><span data-stu-id="4de2e-119">For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
--   您的表單具有名為 `ListBox1` 的 <xref:System.Windows.Forms.ListBox> 控制項。  
+-   <span data-ttu-id="4de2e-120">您的表單會有名為 `ListBox1` 的 <xref:System.Windows.Forms.ListBox> 控制項。</span><span class="sxs-lookup"><span data-stu-id="4de2e-120">That your form have a <xref:System.Windows.Forms.ListBox> control named `ListBox1`.</span></span>  
   
-## <a name="robust-programming"></a>穩固程式設計  
- 您不一定要使用 <xref:System.Windows.Forms.ListBox> 控制項來顯示可用的序列埠名稱。 您可以改用 <xref:System.Windows.Forms.ComboBox> 或其他控制項。 如果應用程式不需要使用者的回應，您還可以使用 <xref:System.Windows.Forms.TextBox> 控制項顯示資訊。  
+## <a name="robust-programming"></a><span data-ttu-id="4de2e-121">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="4de2e-121">Robust Programming</span></span>  
+ <span data-ttu-id="4de2e-122">您不一定要使用 <xref:System.Windows.Forms.ListBox> 控制項來顯示可用的序列埠名稱。</span><span class="sxs-lookup"><span data-stu-id="4de2e-122">You do not have to use the <xref:System.Windows.Forms.ListBox> control to display the available serial port names.</span></span> <span data-ttu-id="4de2e-123">相反地，您可以使用 <xref:System.Windows.Forms.ComboBox> 或其他控制項。</span><span class="sxs-lookup"><span data-stu-id="4de2e-123">Instead, you can use a <xref:System.Windows.Forms.ComboBox> or other control.</span></span> <span data-ttu-id="4de2e-124">如果應用程式不需要使用者的回應，您還可以使用 <xref:System.Windows.Forms.TextBox> 控制項來顯示資訊。</span><span class="sxs-lookup"><span data-stu-id="4de2e-124">If the application does not need a response from the user, you can use a <xref:System.Windows.Forms.TextBox> control to display the information.</span></span>  
   
 > [!NOTE]
->  在 Windows 98 上執行時，`My.Computer.Ports.SerialPortNames` 所傳回的序列埠名稱可能不正確。 為了避免應用程式錯誤，請在使用序列埠名稱開啟序列埠時，使用例外狀況處理，例如 `Try...Catch...Finally` 陳述式或 `Using` 陳述式。  
+>  <span data-ttu-id="4de2e-125">在 Windows 98 上執行時，`My.Computer.Ports.SerialPortNames` 所傳回的序列埠名稱可能不正確。</span><span class="sxs-lookup"><span data-stu-id="4de2e-125">The port names returned by `My.Computer.Ports.SerialPortNames` may be incorrect when run on Windows 98.</span></span> <span data-ttu-id="4de2e-126">為了避免應用程式錯誤，請在使用序列埠名稱開啟序列埠時，使用例外狀況處理，例如 `Try...Catch...Finally` 陳述式或 `Using` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4de2e-126">To prevent application errors, use exception handling, such as the `Try...Catch...Finally` statement or the `Using` statement, when using the port names to open ports.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Devices.Ports>   
- [如何：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
- [如何：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
- [如何：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
-
+## <a name="see-also"></a><span data-ttu-id="4de2e-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4de2e-127">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Devices.Ports>  
+ [<span data-ttu-id="4de2e-128">如何：撥接與序列埠連接的數據機</span><span class="sxs-lookup"><span data-stu-id="4de2e-128">How to: Dial Modems Attached to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [<span data-ttu-id="4de2e-129">如何：將字串傳送至序列埠</span><span class="sxs-lookup"><span data-stu-id="4de2e-129">How to: Send Strings to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [<span data-ttu-id="4de2e-130">如何：接收來自序列埠的字串</span><span class="sxs-lookup"><span data-stu-id="4de2e-130">How to: Receive Strings From Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)

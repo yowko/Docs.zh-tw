@@ -1,64 +1,43 @@
 ---
 title: "&amp; 運算子 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '&_CSharpKeyword'
-dev_langs:
-- CSharp
+f1_keywords: '&_CSharpKeyword'
 helpviewer_keywords:
 - bitwise AND operator [C#]
 - ampersand operator (&) [C#]
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: eceee8e01ba46f65c6b182a40d14e62aaba5dd53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d92a860df6fcc9acf14aab4ec558556735ac8aac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="amp-operator-c-reference"></a>&amp; 運算子 (C# 參考)
-& 運算子可以作為一元或二元運算子。  
+# <a name="amp-operator-c-reference"></a><span data-ttu-id="3fef5-102">&amp; 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="3fef5-102">&amp; Operator (C# Reference)</span></span>
+<span data-ttu-id="3fef5-103">& 運算子可以作為一元或二元運算子。</span><span class="sxs-lookup"><span data-stu-id="3fef5-103">The & operator can function as either a unary or a binary operator.</span></span>  
   
-## <a name="remarks"></a>備註  
- 一元 & 運算子會傳回運算元的位址 (需要 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 內容)。  
+## <a name="remarks"></a><span data-ttu-id="3fef5-104">備註</span><span class="sxs-lookup"><span data-stu-id="3fef5-104">Remarks</span></span>  
+ <span data-ttu-id="3fef5-105">一元 & 運算子會傳回運算元的位址 (需要 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 內容)。</span><span class="sxs-lookup"><span data-stu-id="3fef5-105">The unary & operator returns the address of its operand (requires [unsafe](../../../csharp/language-reference/keywords/unsafe.md) context).</span></span>  
   
- 整數型別和 `bool` 會預先定義二元 & 運算子。 對於整數型別，& 會計算其運算元的邏輯位元 AND。 對於 `bool` 運算元，& 會計算其運算元的邏輯 AND；亦即，如果且唯有當其兩個運算元都是 `true` 時，結果會是 `true`。  
+ <span data-ttu-id="3fef5-106">整數型別和 `bool` 會預先定義二元 & 運算子。</span><span class="sxs-lookup"><span data-stu-id="3fef5-106">Binary & operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="3fef5-107">對於整數型別，& 會計算其運算元的邏輯位元 AND。</span><span class="sxs-lookup"><span data-stu-id="3fef5-107">For integral types, & computes the logical bitwise AND of its operands.</span></span> <span data-ttu-id="3fef5-108">對於 `bool` 運算元，& 會計算其運算元的邏輯 AND；亦即，如果且唯有當其兩個運算元都是 `true` 時，結果會是 `true`。</span><span class="sxs-lookup"><span data-stu-id="3fef5-108">For `bool` operands, & computes the logical AND of its operands; that is, the result is `true` if and only if both its operands are `true`.</span></span>  
   
- 不論第一個運算子的值為何，`&` 運算子都會評估兩個運算子。 例如:   
+ <span data-ttu-id="3fef5-109">不論第一個運算子的值為何，`&` 運算子都會評估兩個運算子。</span><span class="sxs-lookup"><span data-stu-id="3fef5-109">The `&` operator evaluates both operators regardless of the first one's value.</span></span> <span data-ttu-id="3fef5-110">例如: </span><span class="sxs-lookup"><span data-stu-id="3fef5-110">For example:</span></span>  
   
- [!code-cs[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
+ [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
- 使用者定義型別可以多載二進位 `&` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。 整數類資料類型上的作業通常允許用於列舉型別。 二元運算子多載時，對應的指派運算子 (若有) 也會隱含地多載。  
+ <span data-ttu-id="3fef5-111">使用者定義型別可以多載二進位 `&` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。</span><span class="sxs-lookup"><span data-stu-id="3fef5-111">User-defined types can overload the binary `&` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="3fef5-112">整數類資料類型上的作業通常允許用於列舉型別。</span><span class="sxs-lookup"><span data-stu-id="3fef5-112">Operations on integral types are generally allowed on enumeration.</span></span> <span data-ttu-id="3fef5-113">二元運算子多載時，對應的指派運算子 (若有) 也會隱含地多載。</span><span class="sxs-lookup"><span data-stu-id="3fef5-113">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>  
   
-## <a name="example"></a>範例  
- [!code-cs[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
+## <a name="example"></a><span data-ttu-id="3fef5-114">範例</span><span class="sxs-lookup"><span data-stu-id="3fef5-114">Example</span></span>  
+ [!code-csharp[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="3fef5-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3fef5-115">See Also</span></span>  
+ [<span data-ttu-id="3fef5-116">C# 參考</span><span class="sxs-lookup"><span data-stu-id="3fef5-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="3fef5-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="3fef5-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3fef5-118">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="3fef5-118">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

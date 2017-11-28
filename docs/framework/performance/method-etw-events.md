@@ -5,172 +5,169 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="method-etw-events"></a>方法 ETW 事件
-<a name="top"></a> 這些事件會收集方法的特定資訊。 若要進行符號解析，需使用這些事件的承載。 此外，這些事件會提供實用資訊，例如呼叫方法的次數。  
+# <a name="method-etw-events"></a><span data-ttu-id="b0620-102">方法 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="b0620-102">Method ETW Events</span></span>
+<span data-ttu-id="b0620-103"><a name="top"></a> 這些事件會收集方法的特定資訊。</span><span class="sxs-lookup"><span data-stu-id="b0620-103"><a name="top"></a> These events collect information that is specific to methods.</span></span> <span data-ttu-id="b0620-104">若要進行符號解析，需使用這些事件的承載。</span><span class="sxs-lookup"><span data-stu-id="b0620-104">The payload of these events is required for symbol resolution.</span></span> <span data-ttu-id="b0620-105">此外，這些事件會提供實用資訊，例如呼叫方法的次數。</span><span class="sxs-lookup"><span data-stu-id="b0620-105">In addition, these events provide helpful information such as the number of times a method was called.</span></span>  
   
- 所有方法事件都具「告知性 (4)」的層級。 所有方法的詳細資訊事件都具「詳細資訊 (5)」的層級。  
+ <span data-ttu-id="b0620-106">所有方法事件都具「告知性 (4)」的層級。</span><span class="sxs-lookup"><span data-stu-id="b0620-106">All method events have a level of "Informational (4)".</span></span> <span data-ttu-id="b0620-107">所有方法的詳細資訊事件都具「詳細資訊 (5)」的層級。</span><span class="sxs-lookup"><span data-stu-id="b0620-107">All method verbose events have a level of "Verbose (5)".</span></span>  
   
- 所有方法事件都是由執行階段提供者下的 `JITKeyword` (0x10) 關鍵字或 `NGenKeyword` (0x20) 關鍵字，或由取消提供者下的 `JitRundownKeyword` (0x10) 或 `NGENRundownKeyword` (0x20) 所引發。  
+ <span data-ttu-id="b0620-108">所有方法事件都是由執行階段提供者下的 `JITKeyword` (0x10) 關鍵字或 `NGenKeyword` (0x20) 關鍵字，或由取消提供者下的 `JitRundownKeyword` (0x10) 或 `NGENRundownKeyword` (0x20) 所引發。</span><span class="sxs-lookup"><span data-stu-id="b0620-108">All method events are raised by the `JITKeyword` (0x10) keyword or the `NGenKeyword` (0x20) keyword under the runtime provider, or `JitRundownKeyword` (0x10) or `NGENRundownKeyword` (0x20) under the rundown provider.</span></span>  
   
- CLR 方法事件會進一步細分為下列：  
+ <span data-ttu-id="b0620-109">CLR 方法事件會進一步細分為下列：</span><span class="sxs-lookup"><span data-stu-id="b0620-109">CLR method events are further subdivided into the following:</span></span>  
   
--   [方法事件](#clr_method_events)  
+-   [<span data-ttu-id="b0620-110">方法事件</span><span class="sxs-lookup"><span data-stu-id="b0620-110">CLR Method Events</span></span>](#clr_method_events)  
   
--   [CLR 方法標記事件](#clr_method_marker_events)  
+-   [<span data-ttu-id="b0620-111">CLR 方法標記事件</span><span class="sxs-lookup"><span data-stu-id="b0620-111">CLR Method Marker Events</span></span>](#clr_method_marker_events)  
   
--   [CLR 方法詳細資料事件](#clr_method_verbose_events)  
+-   [<span data-ttu-id="b0620-112">CLR 方法詳細資料事件</span><span class="sxs-lookup"><span data-stu-id="b0620-112">CLR Method Verbose Events</span></span>](#clr_method_verbose_events)  
   
--   [MethodJittingStarted 事件](#methodjittingstarted_event)  
+-   [<span data-ttu-id="b0620-113">MethodJittingStarted 事件</span><span class="sxs-lookup"><span data-stu-id="b0620-113">MethodJittingStarted Event</span></span>](#methodjittingstarted_event)  
   
 <a name="clr_method_events"></a>   
-## <a name="clr-method-events"></a>方法事件  
- 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。  
+## <a name="clr-method-events"></a><span data-ttu-id="b0620-114">方法事件</span><span class="sxs-lookup"><span data-stu-id="b0620-114">CLR Method Events</span></span>  
+ <span data-ttu-id="b0620-115">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="b0620-115">The following table shows the keyword and level.</span></span> <span data-ttu-id="b0620-116">(如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。</span><span class="sxs-lookup"><span data-stu-id="b0620-116">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|引發事件的關鍵字|層級|  
+|<span data-ttu-id="b0620-117">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="b0620-117">Keyword for raising the event</span></span>|<span data-ttu-id="b0620-118">層級</span><span class="sxs-lookup"><span data-stu-id="b0620-118">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10) 執行階段提供者|告知性 (4)|  
-|`NGenKeyword` (0x20) 執行階段提供者|告知性 (4)|  
-|`JitRundownKeyword` (0x10) 取消提供者|告知性 (4)|  
-|`NGENRundownKeyword` (0x20) 取消提供者|告知性 (4)|  
+|<span data-ttu-id="b0620-119">`JITKeyword` (0x10) 執行階段提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-119">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="b0620-120">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="b0620-120">Informational (4)</span></span>|  
+|<span data-ttu-id="b0620-121">`NGenKeyword` (0x20) 執行階段提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-121">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="b0620-122">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="b0620-122">Informational (4)</span></span>|  
+|<span data-ttu-id="b0620-123">`JitRundownKeyword` (0x10) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-123">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="b0620-124">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="b0620-124">Informational (4)</span></span>|  
+|<span data-ttu-id="b0620-125">`NGENRundownKeyword` (0x20) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-125">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="b0620-126">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="b0620-126">Informational (4)</span></span>|  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="b0620-127">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="b0620-127">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|描述|  
+|<span data-ttu-id="b0620-128">事件</span><span class="sxs-lookup"><span data-stu-id="b0620-128">Event</span></span>|<span data-ttu-id="b0620-129">事件 ID</span><span class="sxs-lookup"><span data-stu-id="b0620-129">Event ID</span></span>|<span data-ttu-id="b0620-130">描述</span><span class="sxs-lookup"><span data-stu-id="b0620-130">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodLoad_V1`|136|在 Just-In-Time 載入 (JIT 載入) 方法或 NGEN 映像載入時引發。 動態和泛型的方法並不會使用這個版本的方法載入。 JIT Helper 永遠不會使用這個版本。|  
-|`MethodUnLoad_V1`|137|在模組已卸載或應用程式定義域損毀時引發。 動態方法永遠不會使用這個版本的方法卸載。|  
-|`MethodDCStart_V1`|137|於啟動取消期間列舉方法。|  
-|`MethodDCEnd_V1`|138|於結束取消期間列舉方法。|  
+|`MethodLoad_V1`|<span data-ttu-id="b0620-131">136</span><span class="sxs-lookup"><span data-stu-id="b0620-131">136</span></span>|<span data-ttu-id="b0620-132">在 Just-In-Time 載入 (JIT 載入) 方法或 NGEN 映像載入時引發。</span><span class="sxs-lookup"><span data-stu-id="b0620-132">Raised when a method is just-in-time loaded (JIT-loaded) or an NGEN image is loaded.</span></span> <span data-ttu-id="b0620-133">動態和泛型的方法並不會使用這個版本的方法載入。</span><span class="sxs-lookup"><span data-stu-id="b0620-133">Dynamic and generic methods do not use this version for method loads.</span></span> <span data-ttu-id="b0620-134">JIT Helper 永遠不會使用這個版本。</span><span class="sxs-lookup"><span data-stu-id="b0620-134">JIT helpers never use this version.</span></span>|  
+|`MethodUnLoad_V1`|<span data-ttu-id="b0620-135">137</span><span class="sxs-lookup"><span data-stu-id="b0620-135">137</span></span>|<span data-ttu-id="b0620-136">在模組已卸載或應用程式定義域損毀時引發。</span><span class="sxs-lookup"><span data-stu-id="b0620-136">Raised when a module is unloaded, or an application domain is destroyed.</span></span> <span data-ttu-id="b0620-137">動態方法永遠不會使用這個版本的方法卸載。</span><span class="sxs-lookup"><span data-stu-id="b0620-137">Dynamic methods never use this version for method unloads.</span></span>|  
+|`MethodDCStart_V1`|<span data-ttu-id="b0620-138">137</span><span class="sxs-lookup"><span data-stu-id="b0620-138">137</span></span>|<span data-ttu-id="b0620-139">於啟動取消期間列舉方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-139">Enumerates methods during a start rundown.</span></span>|  
+|`MethodDCEnd_V1`|<span data-ttu-id="b0620-140">138</span><span class="sxs-lookup"><span data-stu-id="b0620-140">138</span></span>|<span data-ttu-id="b0620-141">於結束取消期間列舉方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-141">Enumerates methods during an end rundown.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="b0620-142">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="b0620-142">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="b0620-143">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="b0620-143">Field name</span></span>|<span data-ttu-id="b0620-144">資料類型</span><span class="sxs-lookup"><span data-stu-id="b0620-144">Data type</span></span>|<span data-ttu-id="b0620-145">描述</span><span class="sxs-lookup"><span data-stu-id="b0620-145">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|方法的唯一識別碼。 若是 JIT Helper 方法，其設為方法的起始位址。|  
-|ModuleID|win:UInt64|這個方法所屬之模組的識別碼 (0 代表 JIT Helper)。|  
-|MethodStartAddress|win:UInt64|方法的起始位址。|  
-|MethodSize|win:UInt32|方法的大小。|  
-|MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|  
-|MethodFlags|win:UInt32|0x1：動態方法。<br /><br /> 0x2：泛型方法。<br /><br /> 0x4：JIT 編譯的程式碼方法 (否則為 NGEN 原生映像程式碼)。<br /><br /> 0x8：Helper 方法。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
+|<span data-ttu-id="b0620-146">MethodID</span><span class="sxs-lookup"><span data-stu-id="b0620-146">MethodID</span></span>|<span data-ttu-id="b0620-147">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="b0620-147">win:UInt64</span></span>|<span data-ttu-id="b0620-148">方法的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="b0620-148">Unique identifier of a method.</span></span> <span data-ttu-id="b0620-149">若是 JIT Helper 方法，其設為方法的起始位址。</span><span class="sxs-lookup"><span data-stu-id="b0620-149">For JIT helper methods, this is set to the start address of the method.</span></span>|  
+|<span data-ttu-id="b0620-150">ModuleID</span><span class="sxs-lookup"><span data-stu-id="b0620-150">ModuleID</span></span>|<span data-ttu-id="b0620-151">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="b0620-151">win:UInt64</span></span>|<span data-ttu-id="b0620-152">這個方法所屬之模組的識別碼 (0 代表 JIT Helper)。</span><span class="sxs-lookup"><span data-stu-id="b0620-152">Identifier of the module to which this method belongs (0 for JIT helpers).</span></span>|  
+|<span data-ttu-id="b0620-153">MethodStartAddress</span><span class="sxs-lookup"><span data-stu-id="b0620-153">MethodStartAddress</span></span>|<span data-ttu-id="b0620-154">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="b0620-154">win:UInt64</span></span>|<span data-ttu-id="b0620-155">方法的起始位址。</span><span class="sxs-lookup"><span data-stu-id="b0620-155">Start address of the method.</span></span>|  
+|<span data-ttu-id="b0620-156">MethodSize</span><span class="sxs-lookup"><span data-stu-id="b0620-156">MethodSize</span></span>|<span data-ttu-id="b0620-157">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b0620-157">win:UInt32</span></span>|<span data-ttu-id="b0620-158">方法的大小。</span><span class="sxs-lookup"><span data-stu-id="b0620-158">Size of the method.</span></span>|  
+|<span data-ttu-id="b0620-159">MethodToken</span><span class="sxs-lookup"><span data-stu-id="b0620-159">MethodToken</span></span>|<span data-ttu-id="b0620-160">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b0620-160">win:UInt32</span></span>|<span data-ttu-id="b0620-161">0 代表動態方法和 JIT Helper。</span><span class="sxs-lookup"><span data-stu-id="b0620-161">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="b0620-162">MethodFlags</span><span class="sxs-lookup"><span data-stu-id="b0620-162">MethodFlags</span></span>|<span data-ttu-id="b0620-163">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b0620-163">win:UInt32</span></span>|<span data-ttu-id="b0620-164">0x1：動態方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-164">0x1: Dynamic method.</span></span><br /><br /> <span data-ttu-id="b0620-165">0x2：泛型方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-165">0x2: Generic method.</span></span><br /><br /> <span data-ttu-id="b0620-166">0x4：JIT 編譯的程式碼方法 (否則為 NGEN 原生映像程式碼)。</span><span class="sxs-lookup"><span data-stu-id="b0620-166">0x4: JIT-compiled code method (otherwise NGEN native image code).</span></span><br /><br /> <span data-ttu-id="b0620-167">0x8：Helper 方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-167">0x8: Helper method.</span></span>|  
+|<span data-ttu-id="b0620-168">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="b0620-168">ClrInstanceID</span></span>|<span data-ttu-id="b0620-169">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="b0620-169">win:UInt16</span></span>|<span data-ttu-id="b0620-170">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="b0620-170">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="b0620-171">回到頁首</span><span class="sxs-lookup"><span data-stu-id="b0620-171">Back to top</span></span>](#top)  
   
 <a name="clr_method_marker_events"></a>   
-## <a name="clr-method-marker-events"></a>CLR 方法標記事件  
- 只有在取消提供者下會引發這些事件。 它們表示在啟動或結束取消期間的方法列舉結尾。 (也就是說，啟用 `NGENRundownKeyword`、 `JitRundownKeyword`、 `LoaderRundownKeyword`、或 `AppDomainResourceManagementRundownKeyword` 關鍵字時會將其引發。)  
+## <a name="clr-method-marker-events"></a><span data-ttu-id="b0620-172">CLR 方法標記事件</span><span class="sxs-lookup"><span data-stu-id="b0620-172">CLR Method Marker Events</span></span>  
+ <span data-ttu-id="b0620-173">只有在取消提供者下會引發這些事件。</span><span class="sxs-lookup"><span data-stu-id="b0620-173">These events are raised only under the rundown provider.</span></span> <span data-ttu-id="b0620-174">它們表示在啟動或結束取消期間的方法列舉結尾。</span><span class="sxs-lookup"><span data-stu-id="b0620-174">They signify the end of method enumeration during a start or end rundown.</span></span> <span data-ttu-id="b0620-175">(也就是說，啟用 `NGENRundownKeyword`、 `JitRundownKeyword`、 `LoaderRundownKeyword`、或 `AppDomainResourceManagementRundownKeyword` 關鍵字時會將其引發。)</span><span class="sxs-lookup"><span data-stu-id="b0620-175">(That is, they are raised when the `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`, or `AppDomainResourceManagementRundownKeyword` keyword is enabled.)</span></span>  
   
- 下表說明關鍵字和層級。  
+ <span data-ttu-id="b0620-176">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="b0620-176">The following table shows the keyword and level.</span></span>  
   
-|引發事件的關鍵字|層級|  
+|<span data-ttu-id="b0620-177">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="b0620-177">Keyword for raising the event</span></span>|<span data-ttu-id="b0620-178">層級</span><span class="sxs-lookup"><span data-stu-id="b0620-178">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementRundownKeyword` (0x800) 取消提供者|告知性 (4)|  
-|`JitRundownKeyword` (0x10) 取消提供者|告知性 (4)|  
-|`NGENRundownKeyword` (0x20) 取消提供者|告知性 (4)|  
+|<span data-ttu-id="b0620-179">`AppDomainResourceManagementRundownKeyword` (0x800) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-179">`AppDomainResourceManagementRundownKeyword` (0x800) rundown provider</span></span>|<span data-ttu-id="b0620-180">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="b0620-180">Informational (4)</span></span>|  
+|<span data-ttu-id="b0620-181">`JitRundownKeyword` (0x10) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-181">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="b0620-182">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="b0620-182">Informational (4)</span></span>|  
+|<span data-ttu-id="b0620-183">`NGENRundownKeyword` (0x20) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-183">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="b0620-184">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="b0620-184">Informational (4)</span></span>|  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="b0620-185">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="b0620-185">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|說明|  
+|<span data-ttu-id="b0620-186">事件</span><span class="sxs-lookup"><span data-stu-id="b0620-186">Event</span></span>|<span data-ttu-id="b0620-187">事件 ID</span><span class="sxs-lookup"><span data-stu-id="b0620-187">Event ID</span></span>|<span data-ttu-id="b0620-188">說明</span><span class="sxs-lookup"><span data-stu-id="b0620-188">Desciption</span></span>|  
 |-----------|--------------|----------------|  
-|`DCStartInit_V1`|147|在啟動取消期間、列舉開始之前傳送。|  
-|`DCStartComplete_V1`|145|在啟動取消期間、列舉結尾時傳送。|  
-|`DCEndInit_V1`|148|在結束取消期間、開始列舉之前傳送。|  
-|`DCEndComplete_V1`|146|在結束取消期間、列舉結尾時傳送。|  
+|`DCStartInit_V1`|<span data-ttu-id="b0620-189">147</span><span class="sxs-lookup"><span data-stu-id="b0620-189">147</span></span>|<span data-ttu-id="b0620-190">在啟動取消期間、列舉開始之前傳送。</span><span class="sxs-lookup"><span data-stu-id="b0620-190">Sent before the start of the enumeration during a start rundown.</span></span>|  
+|`DCStartComplete_V1`|<span data-ttu-id="b0620-191">145</span><span class="sxs-lookup"><span data-stu-id="b0620-191">145</span></span>|<span data-ttu-id="b0620-192">在啟動取消期間、列舉結尾時傳送。</span><span class="sxs-lookup"><span data-stu-id="b0620-192">Sent at the end of the enumeration during a start rundown.</span></span>|  
+|`DCEndInit_V1`|<span data-ttu-id="b0620-193">148</span><span class="sxs-lookup"><span data-stu-id="b0620-193">148</span></span>|<span data-ttu-id="b0620-194">在結束取消期間、開始列舉之前傳送。</span><span class="sxs-lookup"><span data-stu-id="b0620-194">Sent before the start of the enumeration during an end rundown.</span></span>|  
+|`DCEndComplete_V1`|<span data-ttu-id="b0620-195">146</span><span class="sxs-lookup"><span data-stu-id="b0620-195">146</span></span>|<span data-ttu-id="b0620-196">在結束取消期間、列舉結尾時傳送。</span><span class="sxs-lookup"><span data-stu-id="b0620-196">Sent at the end of the enumeration during an end rundown.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="b0620-197">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="b0620-197">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="b0620-198">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="b0620-198">Field name</span></span>|<span data-ttu-id="b0620-199">資料類型</span><span class="sxs-lookup"><span data-stu-id="b0620-199">Data type</span></span>|<span data-ttu-id="b0620-200">描述</span><span class="sxs-lookup"><span data-stu-id="b0620-200">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
+|<span data-ttu-id="b0620-201">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="b0620-201">ClrInstanceID</span></span>|<span data-ttu-id="b0620-202">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="b0620-202">win:UInt16</span></span>|<span data-ttu-id="b0620-203">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="b0620-203">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="b0620-204">回到頁首</span><span class="sxs-lookup"><span data-stu-id="b0620-204">Back to top</span></span>](#top)  
   
 <a name="clr_method_verbose_events"></a>   
-## <a name="clr-method-verbose-events"></a>CLR 方法詳細資料事件  
- 下表說明關鍵字和層級。  
+## <a name="clr-method-verbose-events"></a><span data-ttu-id="b0620-205">CLR 方法詳細資料事件</span><span class="sxs-lookup"><span data-stu-id="b0620-205">CLR Method Verbose Events</span></span>  
+ <span data-ttu-id="b0620-206">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="b0620-206">The following table shows the keyword and level.</span></span>  
   
-|引發事件的關鍵字|層級|  
+|<span data-ttu-id="b0620-207">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="b0620-207">Keyword for raising the event</span></span>|<span data-ttu-id="b0620-208">層級</span><span class="sxs-lookup"><span data-stu-id="b0620-208">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10) 執行階段提供者|詳細資訊 (5)|  
-|`NGenKeyword` (0x20) 執行階段提供者|詳細資訊 (5)|  
-|`JitRundownKeyword` (0x10) 取消提供者|詳細資訊 (5)|  
-|`NGENRundownKeyword` (0x20) 取消提供者|詳細資訊 (5)|  
+|<span data-ttu-id="b0620-209">`JITKeyword` (0x10) 執行階段提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-209">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="b0620-210">詳細資訊 (5)</span><span class="sxs-lookup"><span data-stu-id="b0620-210">Verbose (5)</span></span>|  
+|<span data-ttu-id="b0620-211">`NGenKeyword` (0x20) 執行階段提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-211">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="b0620-212">詳細資訊 (5)</span><span class="sxs-lookup"><span data-stu-id="b0620-212">Verbose (5)</span></span>|  
+|<span data-ttu-id="b0620-213">`JitRundownKeyword` (0x10) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-213">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="b0620-214">詳細資訊 (5)</span><span class="sxs-lookup"><span data-stu-id="b0620-214">Verbose (5)</span></span>|  
+|<span data-ttu-id="b0620-215">`NGENRundownKeyword` (0x20) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-215">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="b0620-216">詳細資訊 (5)</span><span class="sxs-lookup"><span data-stu-id="b0620-216">Verbose (5)</span></span>|  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="b0620-217">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="b0620-217">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|描述|  
+|<span data-ttu-id="b0620-218">事件</span><span class="sxs-lookup"><span data-stu-id="b0620-218">Event</span></span>|<span data-ttu-id="b0620-219">事件 ID</span><span class="sxs-lookup"><span data-stu-id="b0620-219">Event ID</span></span>|<span data-ttu-id="b0620-220">描述</span><span class="sxs-lookup"><span data-stu-id="b0620-220">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodLoadVerbose_V1`|143|在 JIT 載入方法或 NGEN 映像載入時引發。 動態和泛型的方法一律會使用這個版本的方法載入。 JIT Helper 一律會使用這個版本。|  
-|`MethodUnLoadVerbose_V1`|144|在動態方法損毀、模組已卸載或應用程式定義域損毀時引發。 動態方法永遠一律會使用這個版本的方法卸載。|  
-|`MethodDCStartVerbose_V1`|141|於啟動取消期間列舉方法。|  
-|`MethodDCEndVerbose_V1`|142|於結束取消期間列舉方法。|  
+|`MethodLoadVerbose_V1`|<span data-ttu-id="b0620-221">143</span><span class="sxs-lookup"><span data-stu-id="b0620-221">143</span></span>|<span data-ttu-id="b0620-222">在 JIT 載入方法或 NGEN 映像載入時引發。</span><span class="sxs-lookup"><span data-stu-id="b0620-222">Raised when a method is JIT-loaded or an NGEN image is loaded.</span></span> <span data-ttu-id="b0620-223">動態和泛型的方法一律會使用這個版本的方法載入。</span><span class="sxs-lookup"><span data-stu-id="b0620-223">Dynamic and generic methods always use this version for method loads.</span></span> <span data-ttu-id="b0620-224">JIT Helper 一律會使用這個版本。</span><span class="sxs-lookup"><span data-stu-id="b0620-224">JIT helpers always use this version.</span></span>|  
+|`MethodUnLoadVerbose_V1`|<span data-ttu-id="b0620-225">144</span><span class="sxs-lookup"><span data-stu-id="b0620-225">144</span></span>|<span data-ttu-id="b0620-226">在動態方法損毀、模組已卸載或應用程式定義域損毀時引發。</span><span class="sxs-lookup"><span data-stu-id="b0620-226">Raised when a dynamic method is destroyed, a module is unloaded, or an application domain is destroyed.</span></span> <span data-ttu-id="b0620-227">動態方法永遠一律會使用這個版本的方法卸載。</span><span class="sxs-lookup"><span data-stu-id="b0620-227">Dynamic methods always use this version for method unloads.</span></span>|  
+|`MethodDCStartVerbose_V1`|<span data-ttu-id="b0620-228">141</span><span class="sxs-lookup"><span data-stu-id="b0620-228">141</span></span>|<span data-ttu-id="b0620-229">於啟動取消期間列舉方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-229">Enumerates methods during a start rundown.</span></span>|  
+|`MethodDCEndVerbose_V1`|<span data-ttu-id="b0620-230">142</span><span class="sxs-lookup"><span data-stu-id="b0620-230">142</span></span>|<span data-ttu-id="b0620-231">於結束取消期間列舉方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-231">Enumerates methods during an end rundown.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="b0620-232">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="b0620-232">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="b0620-233">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="b0620-233">Field name</span></span>|<span data-ttu-id="b0620-234">資料類型</span><span class="sxs-lookup"><span data-stu-id="b0620-234">Data type</span></span>|<span data-ttu-id="b0620-235">描述</span><span class="sxs-lookup"><span data-stu-id="b0620-235">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|方法的唯一識別項。 若是 JIT Helper 方法，其設為方法的起始位址。|  
-|ModuleID|win:UInt64|這個方法所屬之模組的識別碼 (0 代表 JIT Helper)。|  
-|MethodStartAddress|win:UInt64|起始位址：|  
-|MethodSize|win:UInt32|方法的長度。|  
-|MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|  
-|MethodFlags|win:UInt32|0x1：動態方法。<br /><br /> 0x2：泛型方法。<br /><br /> 0x4：JIT 編譯方法 (否則由 NGen.exe 產生)<br /><br /> 0x8：Helper 方法。|  
-|MethodNameSpace|win:UnicodeString|與方法相關聯的完整命名空間名稱。|  
-|MethodName|win:UnicodeString|與方法相關聯的完整類別名稱。|  
-|MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
+|<span data-ttu-id="b0620-236">MethodID</span><span class="sxs-lookup"><span data-stu-id="b0620-236">MethodID</span></span>|<span data-ttu-id="b0620-237">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="b0620-237">win:UInt64</span></span>|<span data-ttu-id="b0620-238">方法的唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="b0620-238">Unique identifier of the method.</span></span> <span data-ttu-id="b0620-239">若是 JIT Helper 方法，其設為方法的起始位址。</span><span class="sxs-lookup"><span data-stu-id="b0620-239">For JIT helper methods, set to the start address of the method.</span></span>|  
+|<span data-ttu-id="b0620-240">ModuleID</span><span class="sxs-lookup"><span data-stu-id="b0620-240">ModuleID</span></span>|<span data-ttu-id="b0620-241">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="b0620-241">win:UInt64</span></span>|<span data-ttu-id="b0620-242">這個方法所屬之模組的識別碼 (0 代表 JIT Helper)。</span><span class="sxs-lookup"><span data-stu-id="b0620-242">Identifier of the module to which this method belongs (0 for JIT helpers).</span></span>|  
+|<span data-ttu-id="b0620-243">MethodStartAddress</span><span class="sxs-lookup"><span data-stu-id="b0620-243">MethodStartAddress</span></span>|<span data-ttu-id="b0620-244">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="b0620-244">win:UInt64</span></span>|<span data-ttu-id="b0620-245">起始位址：</span><span class="sxs-lookup"><span data-stu-id="b0620-245">Start address.</span></span>|  
+|<span data-ttu-id="b0620-246">MethodSize</span><span class="sxs-lookup"><span data-stu-id="b0620-246">MethodSize</span></span>|<span data-ttu-id="b0620-247">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b0620-247">win:UInt32</span></span>|<span data-ttu-id="b0620-248">方法的長度。</span><span class="sxs-lookup"><span data-stu-id="b0620-248">Method length.</span></span>|  
+|<span data-ttu-id="b0620-249">MethodToken</span><span class="sxs-lookup"><span data-stu-id="b0620-249">MethodToken</span></span>|<span data-ttu-id="b0620-250">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b0620-250">win:UInt32</span></span>|<span data-ttu-id="b0620-251">0 代表動態方法和 JIT Helper。</span><span class="sxs-lookup"><span data-stu-id="b0620-251">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="b0620-252">MethodFlags</span><span class="sxs-lookup"><span data-stu-id="b0620-252">MethodFlags</span></span>|<span data-ttu-id="b0620-253">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b0620-253">win:UInt32</span></span>|<span data-ttu-id="b0620-254">0x1：動態方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-254">0x1: Dynamic method.</span></span><br /><br /> <span data-ttu-id="b0620-255">0x2：泛型方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-255">0x2: Generic method.</span></span><br /><br /> <span data-ttu-id="b0620-256">0x4：JIT 編譯方法 (否則由 NGen.exe 產生)</span><span class="sxs-lookup"><span data-stu-id="b0620-256">0x4: JIT-compiled method (otherwise, generated by NGen.exe)</span></span><br /><br /> <span data-ttu-id="b0620-257">0x8：Helper 方法。</span><span class="sxs-lookup"><span data-stu-id="b0620-257">0x8: Helper method.</span></span>|  
+|<span data-ttu-id="b0620-258">MethodNameSpace</span><span class="sxs-lookup"><span data-stu-id="b0620-258">MethodNameSpace</span></span>|<span data-ttu-id="b0620-259">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="b0620-259">win:UnicodeString</span></span>|<span data-ttu-id="b0620-260">與方法相關聯的完整命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="b0620-260">Full namespace name associated with the method.</span></span>|  
+|<span data-ttu-id="b0620-261">MethodName</span><span class="sxs-lookup"><span data-stu-id="b0620-261">MethodName</span></span>|<span data-ttu-id="b0620-262">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="b0620-262">win:UnicodeString</span></span>|<span data-ttu-id="b0620-263">與方法相關聯的完整類別名稱。</span><span class="sxs-lookup"><span data-stu-id="b0620-263">Full class name associated with the method.</span></span>|  
+|<span data-ttu-id="b0620-264">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="b0620-264">MethodSignature</span></span>|<span data-ttu-id="b0620-265">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="b0620-265">win:UnicodeString</span></span>|<span data-ttu-id="b0620-266">方法的簽章 (以逗號分隔的類型名稱清單)。</span><span class="sxs-lookup"><span data-stu-id="b0620-266">Signature of the method (comma-separated list of type names).</span></span>|  
+|<span data-ttu-id="b0620-267">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="b0620-267">ClrInstanceID</span></span>|<span data-ttu-id="b0620-268">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="b0620-268">win:UInt16</span></span>|<span data-ttu-id="b0620-269">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="b0620-269">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="b0620-270">回到頁首</span><span class="sxs-lookup"><span data-stu-id="b0620-270">Back to top</span></span>](#top)  
   
 <a name="methodjittingstarted_event"></a>   
-## <a name="methodjittingstarted-event"></a>MethodJittingStarted 事件  
- 下表說明關鍵字和層級。  
+## <a name="methodjittingstarted-event"></a><span data-ttu-id="b0620-271">MethodJittingStarted 事件</span><span class="sxs-lookup"><span data-stu-id="b0620-271">MethodJittingStarted Event</span></span>  
+ <span data-ttu-id="b0620-272">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="b0620-272">The following table shows the keyword and level.</span></span>  
   
-|引發事件的關鍵字|層級|  
+|<span data-ttu-id="b0620-273">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="b0620-273">Keyword for raising the event</span></span>|<span data-ttu-id="b0620-274">層級</span><span class="sxs-lookup"><span data-stu-id="b0620-274">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10) 執行階段提供者|詳細資訊 (5)|  
-|`NGenKeyword` (0x20) 執行階段提供者|詳細資訊 (5)|  
-|`JitRundownKeyword` (0x10) 取消提供者|詳細資訊 (5)|  
-|`NGENRundownKeyword` (0x20) 取消提供者|詳細資訊 (5)|  
+|<span data-ttu-id="b0620-275">`JITKeyword` (0x10) 執行階段提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-275">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="b0620-276">詳細資訊 (5)</span><span class="sxs-lookup"><span data-stu-id="b0620-276">Verbose (5)</span></span>|  
+|<span data-ttu-id="b0620-277">`NGenKeyword` (0x20) 執行階段提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-277">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="b0620-278">詳細資訊 (5)</span><span class="sxs-lookup"><span data-stu-id="b0620-278">Verbose (5)</span></span>|  
+|<span data-ttu-id="b0620-279">`JitRundownKeyword` (0x10) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-279">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="b0620-280">詳細資訊 (5)</span><span class="sxs-lookup"><span data-stu-id="b0620-280">Verbose (5)</span></span>|  
+|<span data-ttu-id="b0620-281">`NGENRundownKeyword` (0x20) 取消提供者</span><span class="sxs-lookup"><span data-stu-id="b0620-281">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="b0620-282">詳細資訊 (5)</span><span class="sxs-lookup"><span data-stu-id="b0620-282">Verbose (5)</span></span>|  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="b0620-283">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="b0620-283">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|描述|  
+|<span data-ttu-id="b0620-284">事件</span><span class="sxs-lookup"><span data-stu-id="b0620-284">Event</span></span>|<span data-ttu-id="b0620-285">事件 ID</span><span class="sxs-lookup"><span data-stu-id="b0620-285">Event ID</span></span>|<span data-ttu-id="b0620-286">描述</span><span class="sxs-lookup"><span data-stu-id="b0620-286">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJittingStarted`|145|當某個方法正在進行 JIT 編譯時引發。|  
+|`MethodJittingStarted`|<span data-ttu-id="b0620-287">145</span><span class="sxs-lookup"><span data-stu-id="b0620-287">145</span></span>|<span data-ttu-id="b0620-288">當某個方法正在進行 JIT 編譯時引發。</span><span class="sxs-lookup"><span data-stu-id="b0620-288">Raised when a method is being JIT-compiled.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="b0620-289">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="b0620-289">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="b0620-290">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="b0620-290">Field name</span></span>|<span data-ttu-id="b0620-291">資料類型</span><span class="sxs-lookup"><span data-stu-id="b0620-291">Data type</span></span>|<span data-ttu-id="b0620-292">描述</span><span class="sxs-lookup"><span data-stu-id="b0620-292">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|方法的唯一識別項。|  
-|ModuleID|win:UInt64|這個方法所屬之模組的識別碼。|  
-|MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|  
-|MethodILSize|win:UInt32|正在進行 JIT 編譯之方法的 Microsoft Intermediate Language (MSIL) 大小。|  
-|MethodNameSpace|win:UnicodeString|與方法相關聯的完整類別名稱。|  
-|MethodName|win:UnicodeString|方法的名稱。|  
-|MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
+|<span data-ttu-id="b0620-293">MethodID</span><span class="sxs-lookup"><span data-stu-id="b0620-293">MethodID</span></span>|<span data-ttu-id="b0620-294">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="b0620-294">win:UInt64</span></span>|<span data-ttu-id="b0620-295">方法的唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="b0620-295">Unique identifier of the method.</span></span>|  
+|<span data-ttu-id="b0620-296">ModuleID</span><span class="sxs-lookup"><span data-stu-id="b0620-296">ModuleID</span></span>|<span data-ttu-id="b0620-297">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="b0620-297">win:UInt64</span></span>|<span data-ttu-id="b0620-298">這個方法所屬之模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b0620-298">Identifier of the module to which this method belongs.</span></span>|  
+|<span data-ttu-id="b0620-299">MethodToken</span><span class="sxs-lookup"><span data-stu-id="b0620-299">MethodToken</span></span>|<span data-ttu-id="b0620-300">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b0620-300">win:UInt32</span></span>|<span data-ttu-id="b0620-301">0 代表動態方法和 JIT Helper。</span><span class="sxs-lookup"><span data-stu-id="b0620-301">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="b0620-302">MethodILSize</span><span class="sxs-lookup"><span data-stu-id="b0620-302">MethodILSize</span></span>|<span data-ttu-id="b0620-303">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b0620-303">win:UInt32</span></span>|<span data-ttu-id="b0620-304">正在進行 JIT 編譯之方法的 Microsoft Intermediate Language (MSIL) 大小。</span><span class="sxs-lookup"><span data-stu-id="b0620-304">The size of the Microsoft intermediate language (MSIL) for the method that is being JIT-compiled.</span></span>|  
+|<span data-ttu-id="b0620-305">MethodNameSpace</span><span class="sxs-lookup"><span data-stu-id="b0620-305">MethodNameSpace</span></span>|<span data-ttu-id="b0620-306">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="b0620-306">win:UnicodeString</span></span>|<span data-ttu-id="b0620-307">與方法相關聯的完整類別名稱。</span><span class="sxs-lookup"><span data-stu-id="b0620-307">Full class name associated with the method.</span></span>|  
+|<span data-ttu-id="b0620-308">MethodName</span><span class="sxs-lookup"><span data-stu-id="b0620-308">MethodName</span></span>|<span data-ttu-id="b0620-309">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="b0620-309">win:UnicodeString</span></span>|<span data-ttu-id="b0620-310">方法的名稱。</span><span class="sxs-lookup"><span data-stu-id="b0620-310">Name of the method.</span></span>|  
+|<span data-ttu-id="b0620-311">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="b0620-311">MethodSignature</span></span>|<span data-ttu-id="b0620-312">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="b0620-312">win:UnicodeString</span></span>|<span data-ttu-id="b0620-313">方法的簽章 (以逗號分隔的類型名稱清單)。</span><span class="sxs-lookup"><span data-stu-id="b0620-313">Signature of the method (comma-separated list of type names).</span></span>|  
+|<span data-ttu-id="b0620-314">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="b0620-314">ClrInstanceID</span></span>|<span data-ttu-id="b0620-315">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="b0620-315">win:UInt16</span></span>|<span data-ttu-id="b0620-316">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="b0620-316">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="b0620-317">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b0620-317">See Also</span></span>  
+ [<span data-ttu-id="b0620-318">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="b0620-318">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

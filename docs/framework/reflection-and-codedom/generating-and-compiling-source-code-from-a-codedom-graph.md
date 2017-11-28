@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - code compilers
 - CodeDOM, generating source code
@@ -30,78 +33,76 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 55ba7c1b9dd7e8c912903fb9827e0073a8329abb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b01517d7d8c12d9a0191293fb52f429bb83bf40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 從 CodeDOM 圖表產生和編譯原始程式碼
-<xref:System.CodeDom.Compiler> 命名空間提供的介面可從 CodeDOM 物件 Graph 產生原始程式碼，並管理支援編譯器的編譯工作。  程式碼提供者可以根據 CodeDOM 物件 Graph，在特定程式語言中產生原始程式碼。  衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別通常可以為提供者支援的語言，提供產生及編譯程式碼的方法。  
+# <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a><span data-ttu-id="ce5de-102">從 CodeDOM 圖表產生和編譯原始程式碼</span><span class="sxs-lookup"><span data-stu-id="ce5de-102">Generating and Compiling Source Code from a CodeDOM Graph</span></span>
+<span data-ttu-id="ce5de-103"><xref:System.CodeDom.Compiler> 命名空間提供的介面，可從 CodeDOM 物件圖形產生原始程式碼以及使用支援的編譯器管理編譯。</span><span class="sxs-lookup"><span data-stu-id="ce5de-103">The <xref:System.CodeDom.Compiler> namespace provides interfaces for generating source code from CodeDOM object graphs and for managing compilation with supported compilers.</span></span> <span data-ttu-id="ce5de-104">程式碼提供者可根據 CodeDOM 圖表以特定的程式設計語言產生原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="ce5de-104">A code provider can produce source code in a particular programming language according to a CodeDOM graph.</span></span> <span data-ttu-id="ce5de-105">衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別一般會針對提供者支援的語言，提供產生及編譯程式碼的方法。</span><span class="sxs-lookup"><span data-stu-id="ce5de-105">A class that derives from <xref:System.CodeDom.Compiler.CodeDomProvider> can typically provide methods for generating and compiling code for the language the provider supports.</span></span>  
   
-## 使用 CodeDOM 程式碼提供者產生原始程式碼  
- 若要在特定語言中產生原始程式碼，您需要表示要產生之原始程式碼結構的 CodeDOM 物件 Graph。  
+## <a name="using-a-codedom-code-provider-to-generate-source-code"></a><span data-ttu-id="ce5de-106">使用 CodeDOM 程式碼提供者產生原始程式碼</span><span class="sxs-lookup"><span data-stu-id="ce5de-106">Using a CodeDOM code provider to generate source code</span></span>  
+ <span data-ttu-id="ce5de-107">若要以特定語言產生原始程式碼，您需要能代表要產生的原始程式碼結構的 CodeDOM 圖表。</span><span class="sxs-lookup"><span data-stu-id="ce5de-107">To generate source code in a particular language, you need a CodeDOM graph that represents the structure of the source code to generate.</span></span>  
   
- 下列範例會示範如何建立 <xref:Microsoft.CSharp.CSharpCodeProvider> 的執行個體：  
+ <span data-ttu-id="ce5de-108">以下範例示範如何建立 <xref:Microsoft.CSharp.CSharpCodeProvider> 的執行個體：</span><span class="sxs-lookup"><span data-stu-id="ce5de-108">The following example demonstrate how to create an instance of a <xref:Microsoft.CSharp.CSharpCodeProvider>:</span></span>  
   
  [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)]
  [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)]
  [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
   
- 用來產生程式碼的 Graph 通常包含在 <xref:System.CodeDom.CodeCompileUnit> 中。  若要替包含 CodeDOM 物件 Graph 的 **CodeCompileUnit** 產生程式碼，請呼叫程式碼提供者的 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法。  這個方法有一個 <xref:System.IO.TextWriter> 的參數，用來產生原始程式碼，因此有時需要先建立可以寫入的 **TextWriter**。  下列範例示範從 **CodeCompileUnit** 產生程式碼，並將產生的原始程式碼寫入名為 HelloWorld.cs 的檔案。  
+ <span data-ttu-id="ce5de-109">產生程式碼的圖表一般是包含在 <xref:System.CodeDom.CodeCompileUnit> 中。</span><span class="sxs-lookup"><span data-stu-id="ce5de-109">The graph for code generation is typically contained in a <xref:System.CodeDom.CodeCompileUnit>.</span></span> <span data-ttu-id="ce5de-110">若要為包含 CodeDOM 圖表的 **CodeCompileUnit** 產生程式碼，其中，請呼叫程式碼提供者的 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="ce5de-110">To generate code for a **CodeCompileUnit** that contains a CodeDOM graph, call the <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> method of the code provider.</span></span> <span data-ttu-id="ce5de-111">此方法包含 <xref:System.IO.TextWriter> 用來產生原始程式碼的參數，因此有時候必須先建立可以寫入的 **TextWriter**。</span><span class="sxs-lookup"><span data-stu-id="ce5de-111">This method has a parameter for a <xref:System.IO.TextWriter> that it uses to generate the source code, so it is sometimes necessary to first create a **TextWriter** that can be written to.</span></span> <span data-ttu-id="ce5de-112">以下範例示範從 **CodeCompileUnit** 產生程式碼，以及將產生的原始程式碼寫入名為 HelloWorld.cs 的檔案。</span><span class="sxs-lookup"><span data-stu-id="ce5de-112">The following example demonstrates generating code from a **CodeCompileUnit** and writing the generated source code to a file named HelloWorld.cs.</span></span>  
   
  [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)]
  [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)]
  [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
-## 使用 CodeDOM 程式碼提供者編譯組件  
- **叫用編譯**  
+## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a><span data-ttu-id="ce5de-113">使用 CodeDOM 程式碼提供者編譯組件</span><span class="sxs-lookup"><span data-stu-id="ce5de-113">Using a CodeDOM code provider to compile assemblies</span></span>  
+ <span data-ttu-id="ce5de-114">**叫用編譯**</span><span class="sxs-lookup"><span data-stu-id="ce5de-114">**Invoking compilation**</span></span>  
   
- 若要使用 CodeDom 提供者編譯組件，您必須具有要編譯之原始程式碼的語言編譯器，或是可以藉此產生要編譯之原始程式碼的 CodeDOM 物件 Graph。  
+ <span data-ttu-id="ce5de-115">若要使用 CodeDom 提供者編譯組件，您必須有可以編譯器語言進行編譯的原始程式碼，或有可以產生要編譯之原始程式碼的 CodeDOM 圖表。</span><span class="sxs-lookup"><span data-stu-id="ce5de-115">To compile an assembly using a CodeDom provider, you must have either source code to compile in a language for which you have a compiler, or a CodeDOM graph that source code to compile can be generated from.</span></span>  
   
- 如果要從 CodeDOM 物件 Graph 編譯，請將包含 Graph 的 <xref:System.CodeDom.CodeCompileUnit> 傳遞給程式碼提供者的 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A> 方法。  如果您的原始程式碼檔案使用編譯器了解的語言，請將包含原始程式碼的檔案名稱傳遞給 CodeDom 提供者的 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> 方法。  您也可以將包含原始程式碼的字串 \(使用編譯器了解的語言\) 傳遞給 CodeDom 提供者的 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromSource%2A> 方法。  
+ <span data-ttu-id="ce5de-116">如要從 CodeDOM 圖表編譯，請將包含圖表的 <xref:System.CodeDom.CodeCompileUnit> 傳送至程式碼提供者的 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="ce5de-116">If you are compiling from a CodeDOM graph, pass the <xref:System.CodeDom.CodeCompileUnit> containing the graph to the <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A> method of the code provider.</span></span> <span data-ttu-id="ce5de-117">如果您有以編譯器了解的語言撰寫的原始程式碼檔案，請將包含原始程式碼的檔案名稱傳遞給 CodeDom 提供者的 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="ce5de-117">If you have a source code file in a language that the compiler understands, pass the name of the file containing the source code to the <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> method of the CodeDom provider.</span></span> <span data-ttu-id="ce5de-118">您也可以將包含原始程式碼的字串 (此程式碼是以編譯器了解的語言撰寫)，傳遞到 CodeDom 提供者的 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromSource%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="ce5de-118">You can also pass a string containing source code in a language that the compiler understands to the <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromSource%2A> method of the CodeDom provider.</span></span>  
   
- **設定編譯參數**  
+ <span data-ttu-id="ce5de-119">**設定編譯參數**</span><span class="sxs-lookup"><span data-stu-id="ce5de-119">**Configuring compilation parameters**</span></span>  
   
- CodeDom 提供者的所有標準編譯叫用方法，都有型別為 <xref:System.CodeDom.Compiler.CompilerParameters> 的參數，表示要用於編譯的選項。  
+ <span data-ttu-id="ce5de-120">CodeDom 提供者的所有標準編譯叫用方法都有一個類型為 <xref:System.CodeDom.Compiler.CompilerParameters> 的參數，指示編譯要使用的選項。</span><span class="sxs-lookup"><span data-stu-id="ce5de-120">All of the standard compilation-invoking methods of a CodeDom provider have a parameter of type <xref:System.CodeDom.Compiler.CompilerParameters> that indicates the options to use for compilation.</span></span>  
   
- 您可以在 **CompilerParameters** 的 <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A> 屬性中，指定輸出組件的檔案名稱。  否則將會使用預設的輸出檔案名稱。  
+ <span data-ttu-id="ce5de-121">您可以在 **CompilerParameters** 的 <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A> 屬性中指定輸出組件的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="ce5de-121">You can specify a file name for the output assembly in the <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A> property of the **CompilerParameters**.</span></span> <span data-ttu-id="ce5de-122">否則，會使用預設的輸出檔名稱。</span><span class="sxs-lookup"><span data-stu-id="ce5de-122">Otherwise, a default output file name will be used.</span></span>  
   
- 依預設，新的 **CompilerParameters** 在初始化時，其 <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> 屬性會設定為 **false**。  如果您正在編譯可執行程式，必須將 **GenerateExecutable** 屬性設定為 **true**。  **GenerateExecutable** 設定為 **false** 時，編譯器將會產生類別庫。  
+ <span data-ttu-id="ce5de-123">根據預設，新的 **CompilerParameters** 是以其設為 **false** 的 <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> 屬性初始化。</span><span class="sxs-lookup"><span data-stu-id="ce5de-123">By default, a new **CompilerParameters** is initialized with its <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> property set to **false**.</span></span> <span data-ttu-id="ce5de-124">如要編譯可執行檔程式，**GenerateExecutable** 屬性必須設定為 **true**。</span><span class="sxs-lookup"><span data-stu-id="ce5de-124">If you are compiling an executable program, you must set the **GenerateExecutable** property to **true**.</span></span> <span data-ttu-id="ce5de-125">當 **GenerateExecutable** 設為 **false** 時，編譯器會產生類別庫。</span><span class="sxs-lookup"><span data-stu-id="ce5de-125">When the **GenerateExecutable** is set to **false**, the compiler will generate a class library.</span></span>  
   
- 如果在 CodeDOM 物件 Graph 中編譯可執行檔，必須在 Graph 中定義 <xref:System.CodeDom.CodeEntryPointMethod>。  如果有多個程式碼進入點，可能需要先確定是由哪個類別定義要使用的進入點，然後將 **CompilerParameters** 的 <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A> 屬性設定為該類別名稱。  
+ <span data-ttu-id="ce5de-126">如要從 CodeDOM 圖表編譯可執行檔，即必須在圖表中定義 <xref:System.CodeDom.CodeEntryPointMethod>。</span><span class="sxs-lookup"><span data-stu-id="ce5de-126">If you are compiling an executable from a CodeDOM graph, a <xref:System.CodeDom.CodeEntryPointMethod> must be defined in the graph.</span></span> <span data-ttu-id="ce5de-127">如果有多個程式碼進入點，**CompilerParameters** 的 <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A>屬性可能需要設定成類別名稱，定義要使用的進入點。</span><span class="sxs-lookup"><span data-stu-id="ce5de-127">If there are multiple code entry points, it may be necessary to set the <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A> property of the **CompilerParameters** to the name of the class that defines the entry point to use.</span></span>  
   
- 若要在產生的可執行檔中加入偵錯資訊，請將 <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> 屬性設定為 **true**。  
+ <span data-ttu-id="ce5de-128">若要在產生的可執行檔中包含偵錯資訊，請將 <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> 屬性設為 **true**。</span><span class="sxs-lookup"><span data-stu-id="ce5de-128">To include debug information in a generated executable, set the <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> property to **true**.</span></span>  
   
- 如果專案參考任何組件，您必須將組件名稱指定為 <xref:System.Collections.Specialized.StringCollection> 中的項目，如同叫用編譯時使用的 **CompilerParameters** 的 <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A> 屬性。  
+ <span data-ttu-id="ce5de-129">如果您的專案參考任何組件，組件名稱必須指定為 <xref:System.Collections.Specialized.StringCollection> 中的項目，當成叫用編譯時使用之 **CompilerParameters** 的 <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="ce5de-129">If your project references any assemblies, you must specify the assembly names as items in a <xref:System.Collections.Specialized.StringCollection> as the <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A> property of the **CompilerParameters** you use when invoking compilation.</span></span>  
   
- 將 <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A> 屬性設為 **true**，可以編譯寫入記憶體而不是磁碟的組件。  在記憶體中產生組件時，可取得由 <xref:System.CodeDom.Compiler.CompilerResults> 之 <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> 屬性所產生組件的參考。  如果是將組件寫入磁碟，您可以從 **CompilerResults** 的 <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> 屬性取得產生的組件所在路徑。  
+ <span data-ttu-id="ce5de-130">您可以將 <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A> 屬性設為 **true**，編譯寫入記憶體而非磁碟的組件。</span><span class="sxs-lookup"><span data-stu-id="ce5de-130">You can compile an assembly that is written to memory rather than disk by setting the <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A> property to **true**.</span></span> <span data-ttu-id="ce5de-131">當組件在記憶體中產生時，您的程式碼可從 <xref:System.CodeDom.Compiler.CompilerResults> 的 <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> 屬性取得所產生組件的參考。</span><span class="sxs-lookup"><span data-stu-id="ce5de-131">When an assembly is generated in memory, your code can obtain a reference to the generated assembly from the <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> property of a <xref:System.CodeDom.Compiler.CompilerResults>.</span></span> <span data-ttu-id="ce5de-132">如果組件寫入至磁碟，您可從 **CompilerResults** 的 <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A>屬性取得所產生組件的路徑。</span><span class="sxs-lookup"><span data-stu-id="ce5de-132">If an assembly is written to disk, you can obtain the path to the generated assembly from the <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> property of a **CompilerResults**.</span></span>  
   
- 若要指定叫用編譯程序時要用的自定指令行引數字串，請在 <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> 屬性中設定字串。  
+ <span data-ttu-id="ce5de-133">若要在叫用編譯處理序時指定使用的自訂命令列引數字串，請在 <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> 屬性中設定字串。</span><span class="sxs-lookup"><span data-stu-id="ce5de-133">To specify a custom command-line arguments string to use when invoking the compilation process, set the string in the <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> property.</span></span>  
   
- 如果叫用編譯器程序時需要 Win32 安全性權杖，請在 <xref:System.CodeDom.Compiler.CompilerParameters.UserToken%2A> 屬性中指定權杖。  
+ <span data-ttu-id="ce5de-134">如果需要 Win32 安全性權杖才能叫用編譯器處理序，請在 <xref:System.CodeDom.Compiler.CompilerParameters.UserToken%2A> 屬性中指定權杖。</span><span class="sxs-lookup"><span data-stu-id="ce5de-134">If a Win32 security token is required to invoke the compiler process, specify the token in the <xref:System.CodeDom.Compiler.CompilerParameters.UserToken%2A> property.</span></span>  
   
- 若要將 Win32 資源檔連結到編譯的組件中，請在 <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A> 屬性中指定 Win32 資源檔的名稱。  
+ <span data-ttu-id="ce5de-135">若要將 Win32 資源檔連結至已編譯的組件，請在 <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A> 屬性中指定 Win32 資源檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="ce5de-135">To link a Win32 resource file into the compiled assembly, specify the name of the Win32 resource file in the <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A> property.</span></span>  
   
- 若要指定暫停編譯的警告層級，請將 <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> 屬性設為代表暫停編譯之警告層級的整數。  將 <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> 屬性設定為 **true**，也可以將編譯器設定為遭遇警告時即暫停編譯。  
+ <span data-ttu-id="ce5de-136">若要指定中斷編譯的警告層級，請將 <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> 屬性設為整數，表示要中斷編譯的警告層級。</span><span class="sxs-lookup"><span data-stu-id="ce5de-136">To specify a warning level at which to halt compilation, set the <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> property to an integer that represents the warning level at which to halt compilation.</span></span> <span data-ttu-id="ce5de-137">您也可以將 <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> 屬性設成 **true**，設定編譯器在出現警告時中斷編譯。</span><span class="sxs-lookup"><span data-stu-id="ce5de-137">You can also configure the compiler to halt compilation if warnings are encountered by setting the <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> property to **true**.</span></span>  
   
- 下列程式碼範例將示範如何使用衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別的 CodeDom 提供者來編譯原始程式檔。  
+ <span data-ttu-id="ce5de-138">下列程式碼範例示範使用衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別的 CodeDom 提供者編譯來源檔案。</span><span class="sxs-lookup"><span data-stu-id="ce5de-138">The following code example demonstrates compiling a source file using a CodeDom provider derived from the <xref:System.CodeDom.Compiler.CodeDomProvider> class.</span></span>  
   
  [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)]
  [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)]
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
-## 初期支援的語言  
- .NET Framework 提供下列語言的程式碼編譯器和程式碼產生器：C\#、Visual Basic、C\+\+ 和 JScript。  CodeDOM 支援可藉由實作語言專屬的程式碼產生器和程式碼編譯器擴充至其他語言。  
+## <a name="languages-with-initial-support"></a><span data-ttu-id="ce5de-139">初期支援的語言</span><span class="sxs-lookup"><span data-stu-id="ce5de-139">Languages with Initial Support</span></span>  
+ <span data-ttu-id="ce5de-140">.NET Framework 提供下列語言的程式碼編譯器和程式碼產生器：C#、Visual Basic、C++ 和 JScript。</span><span class="sxs-lookup"><span data-stu-id="ce5de-140">The .NET Framework provides code compilers and code generators for the following languages: C#, Visual Basic, C++, and JScript.</span></span> <span data-ttu-id="ce5de-141">實作特定語言的程式碼產生器和程式碼編譯器，即可擴充 CodeDOM 對其他語言的支援。</span><span class="sxs-lookup"><span data-stu-id="ce5de-141">CodeDOM support can be extended to other languages by implementing language-specific code generators and code compilers.</span></span>  
   
-## 請參閱  
- <xref:System.CodeDom>   
- <xref:System.CodeDom.Compiler>   
- [產生和編譯動態原始程式碼](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)   
- [CodeDOM 快速參考](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
-
+## <a name="see-also"></a><span data-ttu-id="ce5de-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce5de-142">See Also</span></span>  
+ <xref:System.CodeDom>  
+ <xref:System.CodeDom.Compiler>  
+ [<span data-ttu-id="ce5de-143">動態原始程式碼的產生和編譯</span><span class="sxs-lookup"><span data-stu-id="ce5de-143">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ [<span data-ttu-id="ce5de-144">CodeDOM 快速參考</span><span class="sxs-lookup"><span data-stu-id="ce5de-144">CodeDOM Quick Reference</span></span>](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)

@@ -1,12 +1,9 @@
 ---
 title: "如何：實作自訂事件存取子 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - accessors [C#], event accessors
 - add accessor [C#]
@@ -14,35 +11,20 @@ helpviewer_keywords:
 - events [C#], remove accessor
 - remove accessor [C#]
 ms.assetid: bf903abf-03a4-4f7b-ab6b-b7e59bc2ee1e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3ff5fedeeaa427bb62991f9b406c167647dc376d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 71e1c16c9c6426ffb95020e4d7211dc1000f6796
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-implement-custom-event-accessors-c-programming-guide"></a>如何：實作自訂事件存取子 (C# 程式設計手冊)
-事件是一種特殊的多點傳送委派，只能從宣告所在類別內叫用。 在事件引發時，用戶端程式碼透過提供應該叫用的方法參考，來訂閱事件。 這些方法會透過類似屬性存取子的事件存取子新增至委派叫用清單，不同之處在於事件存取子名為 `add` 和 `remove`。 在大部分情況下，您不必提供自訂事件存取子。 當程式碼中不提供任何自訂事件存取子時，編譯器會自動新增它們。 不過，在某些情況下，您可能必須提供自訂行為。 [如何：實作介面事件](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)主題示範其中一個這類案例。  
+# <a name="how-to-implement-custom-event-accessors-c-programming-guide"></a><span data-ttu-id="dfb83-102">如何：實作自訂事件存取子 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="dfb83-102">How to: Implement Custom Event Accessors (C# Programming Guide)</span></span>
+<span data-ttu-id="dfb83-103">事件是一種特殊的多點傳送委派，只能從宣告所在類別內叫用。</span><span class="sxs-lookup"><span data-stu-id="dfb83-103">An event is a special kind of multicast delegate that can only be invoked from within the class that  it is declared in.</span></span> <span data-ttu-id="dfb83-104">在事件引發時，用戶端程式碼透過提供應該叫用的方法參考，來訂閱事件。</span><span class="sxs-lookup"><span data-stu-id="dfb83-104">Client code subscribes to the event by providing a reference to a method that should be invoked when the event is fired.</span></span> <span data-ttu-id="dfb83-105">這些方法會透過類似屬性存取子的事件存取子新增至委派叫用清單，不同之處在於事件存取子名為 `add` 和 `remove`。</span><span class="sxs-lookup"><span data-stu-id="dfb83-105">These methods are added to the delegate's invocation list through event accessors, which resemble property accessors, except that event accessors are named `add` and `remove`.</span></span> <span data-ttu-id="dfb83-106">在大部分情況下，您不必提供自訂事件存取子。</span><span class="sxs-lookup"><span data-stu-id="dfb83-106">In most cases, you do not have to supply custom event accessors.</span></span> <span data-ttu-id="dfb83-107">當程式碼中不提供任何自訂事件存取子時，編譯器會自動新增它們。</span><span class="sxs-lookup"><span data-stu-id="dfb83-107">When no custom event accessors are supplied in your code, the compiler will add them automatically.</span></span> <span data-ttu-id="dfb83-108">不過，在某些情況下，您可能必須提供自訂行為。</span><span class="sxs-lookup"><span data-stu-id="dfb83-108">However, in some cases you may have to provide custom behavior.</span></span> <span data-ttu-id="dfb83-109">[如何：實作介面事件](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)主題示範其中一個這類案例。</span><span class="sxs-lookup"><span data-stu-id="dfb83-109">One such case is shown in the topic [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
   
-## <a name="example"></a>範例  
- 下例示範如何實作自訂新增和移除事件存取子。 雖然您可以替代存取子中的任何程式碼，但建議您先鎖定事件，再新增或移除新的事件處理常式方法。  
+## <a name="example"></a><span data-ttu-id="dfb83-110">範例</span><span class="sxs-lookup"><span data-stu-id="dfb83-110">Example</span></span>  
+ <span data-ttu-id="dfb83-111">下例示範如何實作自訂新增和移除事件存取子。</span><span class="sxs-lookup"><span data-stu-id="dfb83-111">The following example shows how to implement custom add and remove event accessors.</span></span> <span data-ttu-id="dfb83-112">雖然您可以替代存取子中的任何程式碼，但建議您先鎖定事件，再新增或移除新的事件處理常式方法。</span><span class="sxs-lookup"><span data-stu-id="dfb83-112">Although you can substitute any code inside the accessors, we recommend that you lock the event before you add or remove a new event handler method.</span></span>  
   
 ```  
 event EventHandler IDrawingObject.OnDraw  
@@ -64,7 +46,6 @@ event EventHandler IDrawingObject.OnDraw
         }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [事件](../../../csharp/programming-guide/events/index.md)   
- [event](../../../csharp/language-reference/keywords/event.md)
-
+## <a name="see-also"></a><span data-ttu-id="dfb83-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dfb83-113">See Also</span></span>  
+ [<span data-ttu-id="dfb83-114">事件</span><span class="sxs-lookup"><span data-stu-id="dfb83-114">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="dfb83-115">event</span><span class="sxs-lookup"><span data-stu-id="dfb83-115">event</span></span>](../../../csharp/language-reference/keywords/event.md)

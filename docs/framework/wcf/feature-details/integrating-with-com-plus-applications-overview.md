@@ -1,115 +1,115 @@
 ---
-title: "整合 COM+ 應用程式概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF, COM+ 整合"
-  - "Windows Communication Foundation, COM+ 整合"
+title: "整合 COM+ 應用程式概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation, COM+ integration
+- WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d1c4488421f4162d70fc47f8dd4d04c9374f25fc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 整合 COM+ 應用程式概觀
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供用來建立分散式應用程式的豐富環境。  若您已正在使用裝載於 COM\+ 之中的元件架構應用程式邏輯，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 擴充現有邏輯，而不必重新撰寫程式碼。  一個常見案例就是當您要透過 Web 服務，公開現有的 COM\+ 或 Enterprise Services 商務邏輯之時。  
+# <a name="integrating-with-com-applications-overview"></a><span data-ttu-id="b8d7a-102">整合 COM+ 應用程式概觀</span><span class="sxs-lookup"><span data-stu-id="b8d7a-102">Integrating with COM+ Applications Overview</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="b8d7a-103"> 提供用來建立分散式應用程式的豐富環境。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-103"> provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="b8d7a-104">若您已正在使用裝載於 COM+ 之中的元件架構應用程式邏輯，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 擴充現有邏輯，而不必重新撰寫程式碼。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-104">If you are already using component-based application logic hosted in COM+, you can use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="b8d7a-105">一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-105">A common scenario is when you want to expose existing COM+ or Enterprise Services business logic through Web Services.</span></span>  
   
- 當 COM\+ 元件上的介面公開為 Web 服務時，這些服務的規格和合約就會由在應用程式初始化時所執行的自動對映來決定。  下列清單會顯示這個對應的概念模型：  
+ <span data-ttu-id="b8d7a-106">當 COM+ 元件上的介面公開為 Web 服務時，這些服務的規格和合約就會由在應用程式初始化時所執行的自動對映來決定。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-106">When an interface on a COM+ component is exposed as a Web service, the specification and contract of these services are determined by an automatic mapping that is performed at application initialization time.</span></span> <span data-ttu-id="b8d7a-107">下列清單會顯示這個對應的概念模型：</span><span class="sxs-lookup"><span data-stu-id="b8d7a-107">The following list shows the conceptual model for this mapping:</span></span>  
   
--   對每個公開的 COM 類別定義一個服務。  
+-   <span data-ttu-id="b8d7a-108">對每個公開的 COM 類別定義一個服務。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-108">One service is defined for each exposed COM class.</span></span>  
   
--   服務的合約是直接衍生自選取之元件的介面定義而得，且組態中可能已定義方法排除。  
+-   <span data-ttu-id="b8d7a-109">服務的合約是直接衍生自選取之元件的介面定義而得，且組態中可能已定義方法排除。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-109">The contract for the service is derived directly from the selected component's interface definition with the possibility of method exclusion defined in configuration.</span></span>  
   
--   該合約中的作業直接衍生自元件之介面定義上的方法。  
+-   <span data-ttu-id="b8d7a-110">該合約中的作業直接衍生自元件之介面定義上的方法。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-110">The operations in that contract are derived directly from the methods on the component's interface definition.</span></span>  
   
--   那些作業的參數則直接衍生自 COM 互通性型別，而此型別會對應至元件的方法參數。  
+-   <span data-ttu-id="b8d7a-111">那些作業的參數則直接衍生自 COM 互通性型別，而此型別會對應至元件的方法參數。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-111">The parameters for those operations are derived directly from the COM interoperability type that corresponds to the component's method parameters.</span></span>  
   
- 在服務組態檔中提供服務的預設位址和傳輸繫結，不過可依需求重新設定這些項目。  
-  
-> [!NOTE]
->  只要 COM\+ 介面和組態保持不變，已公開的 Web 服務合約就會保持不變。  對有些介面的修改並不會自動更新可用的服務，並且需要重新執行 COM\+ 服務模型組態工具 \(ComSvcConfig.exe\)。  
-  
- 以 Web 服務使用時，會繼續強制執行 COM\+ 應用程式與其元件的驗證和授權需求。  
-  
- 如果呼叫端初始化 Web 服務交易，則標示為可交易的元件就會在該交易範圍內登記。  
-  
- 下列為將 COM\+ 元件的介面公開為 Web 服務、而不用修改元件的必要步驟：  
-  
-1.  判斷 COM\+ 元件的介面是否可以公開為 Web 服務。  
-  
-2.  選取適當的裝載模式。  
-  
-3.  使用 COM\+ 服務模型組態工具 \(ComSvcConfig.exe\) 以新增介面的 Web 服務。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何使用 ComSvcConfig.exe 的詳細資訊，請參閱 [HOW TO：使用 COM\+ 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
-  
-4.  在應用程式組態檔中進行其他服務設定。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何設定元件的詳細資訊，請參閱 [HOW TO：設定 COM\+ 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
-  
-## 支援的介面  
- 對於可公開為 Web 服務之介面的型別，有一些限制存在。  不支援下列介面型別：  
-  
--   將物件參考做為參數進行傳遞的介面：將會在＜限制的物件參考支援＞這一節描述下列限制的物件參考方法。  
-  
--   傳遞型別的介面與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 互通性轉換不相容。  
-  
--   應用程式的介面，該介面由 COM\+ 裝載時，會啟用應用程式共用。  
-  
--   元件的介面，這些介面已對應用程式標示為私用。  
-  
--   COM\+ 基礎結構介面。  
-  
--   來自系統應用程式的介面。  
-  
--   來自 Enterprise Services 元件的介面，這些元件尚未加入至全域組件快取。  
-  
-### 限制的物件參考支援  
- 由於一些已部署的 COM\+ 元件確實會依參考參數而使用物件 \(例如，傳回 ADO 資料錄集 \(Recordset\) 物件\)，因此 COM\+ 整合中就包括物件參考參數的限制支援。  支援會受限於實作 `IPersistStream` COM 介面的物件。  其中包括 ADO 資料錄集物件，並且可針對特定於應用程式的 COM 物件來實作。  
-  
- 為了啟用這項支援，ComSvcConfig.exe 工具提供了 **allowreferences** 參數，這個參數會停用一般方法簽章參數，並檢查工具的執行狀況以確定未使用物件參考參數。  此外，必須在 \<`persistableTypes`\> 組態項目內 \(此項目為 \<`comContract`\> 項目的子項\) 命名及識別您當做參數傳遞的物件型別。  
-  
- 使用這個功能時，COM\+ 整合服務會使用 `IPersistStream` 介面來序列化或還原序列化物件執行個體。  如果物件執行個體不支援 `IPersistStream`，就會擲回例外狀況。  
-  
- 在用戶端應用程式中，您可以使用 <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> 物件上的方法，將物件傳遞至服務並以類似方法接收物件。  
+ <span data-ttu-id="b8d7a-112">在服務組態檔中提供服務的預設位址和傳輸繫結，不過可依需求重新設定這些項目。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-112">Default addresses and transport bindings for the service are provided in a service configuration file, but these can be reconfigured as required.</span></span>  
   
 > [!NOTE]
->  由於自訂和平台特定的序列化方法本質，此項最適合在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務之間使用。  
+>  <span data-ttu-id="b8d7a-113">只要 COM+ 介面和組態保持不變，已公開的 Web 服務合約就會保持不變。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-113">The contracts for the exposed Web services remain constant as long as the COM+ interfaces and configuration remain unchanged.</span></span> <span data-ttu-id="b8d7a-114">對有些介面的修改並不會自動更新可用的服務，並且需要重新執行 COM+ 服務模型組態工具 (ComSvcConfig.exe)。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-114">A modification to several interfaces does not automatically update the available services and requires re-running the COM+ Service Model Configuration tool (ComSvcConfig.exe).</span></span>  
   
-## 選取主控模式  
- COM\+ 會以下列其中一個主控模式公開 Web 服務：  
+ <span data-ttu-id="b8d7a-115">以 Web 服務使用時，會繼續強制執行 COM+ 應用程式與其元件的驗證和授權需求。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-115">The authentication and authorization requirements of the COM+ application and its components continue to be enforced when used as a Web service.</span></span>  
   
--   COM\+ 主控  
+ <span data-ttu-id="b8d7a-116">如果呼叫端初始化 Web 服務交易，則標示為可交易的元件就會在該交易範圍內登記。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-116">If the caller initiates a Web service transaction, components marked as transactional enlist within that transaction scope.</span></span>  
   
-     會在應用程式的專用 COM\+ 伺服器處理序 \(Dllhost.exe\) 內主控 Web 服務。  使用這個模式時，需要先明確的啟動應用程式，它才可以接收 Web 服務要求。  可以使用 COM\+ \[以 NT 服務執行\] 或 \[當閒置時仍繼續執行\] 選項，防止應用程式與其服務因閒置而導致關機。  這個模式會對伺服器應用程式提供 Web 服務和 DCOM 存取。  
+ <span data-ttu-id="b8d7a-117">下列為將 COM+ 元件的介面公開為 Web 服務、而不用修改元件的必要步驟：</span><span class="sxs-lookup"><span data-stu-id="b8d7a-117">The following steps are required to expose a COM+ component's interface as a Web service without modifying the component:</span></span>  
   
--   Web 主控  
+1.  <span data-ttu-id="b8d7a-118">判斷 COM+ 元件的介面是否可以公開為 Web 服務。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-118">Determine whether the COM+ component's interface can be exposed as a Web service.</span></span>  
   
-     Web 服務會在 Web 伺服器工作處理序內主控。  這個模式在接收初始化要求時，不需要使用 COM\+。  如果收到這個要求時應用程式不在使用中，會在處理要求之前自動啟動該應用程式。  這個模式也會對伺服器應用程式提供 Web 服務和 DCOM 存取，但會對 Web 服務要求造成處理序躍點。  通常會需要用戶端啟用模擬。  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，可以使用 <xref:System.ServiceModel.Security.WindowsClientCredential> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 屬性來啟用模擬，而這個類別會當做一般 <xref:System.ServiceModel.ChannelFactory%601> 類別的屬性和 <xref:System.Security.Principal.TokenImpersonationLevel> 列舉值來存取。  
+2.  <span data-ttu-id="b8d7a-119">選取適當的裝載模式。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-119">Select an appropriate hosting mode.</span></span>  
   
--   Web 主控同處理序  
+3.  <span data-ttu-id="b8d7a-120">使用 COM+ 服務模型組態工具 (ComSvcConfig.exe) 以新增介面的 Web 服務。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-120">Use the COM+ Service Model Configuration tool (ComSvcConfig.exe) to add a Web service for the interface.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b8d7a-121">如何使用 ComSvcConfig.exe，請參閱[How to： 使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-121"> how to use ComSvcConfig.exe, see [How to: Use the COM+ Service Model Configuration Tool](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).</span></span>  
   
-     會在 Web 伺服器工作處理序內主控 Web 服務和 COM\+ 應用程式邏輯。  如此可自動啟動 Web 主控模式，而不會對 Web 服務要求造成處理序躍點。  缺點則為無法透過 DCOM 存取伺服器應用程式。  
+4.  <span data-ttu-id="b8d7a-122">在應用程式組態檔中進行其他服務設定。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-122">Configure any additional service settings in the application configuration file.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b8d7a-123">如何設定元件，請參閱[How to： 設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-123"> how to configure a component, see [How to: Configure COM+ Service Settings](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).</span></span>  
   
-### 安全性考量  
- 和其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務一樣，將會藉由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道的組態設定來管理所公開服務的安全性設定。  但不會強制執行傳統 DCOM 安全性設定，例如 DCOM 全機器的權限設定。  若要強制執行 COM\+ 應用程式角色，則必須對元件啟用「元件層級存取檢查」授權。  
+## <a name="supported-interfaces"></a><span data-ttu-id="b8d7a-124">支援的介面</span><span class="sxs-lookup"><span data-stu-id="b8d7a-124">Supported Interfaces</span></span>  
+ <span data-ttu-id="b8d7a-125">對於可公開為 Web 服務之介面的型別，有一些限制存在。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-125">There are some restrictions on the type of interfaces that can be exposed as a Web service.</span></span> <span data-ttu-id="b8d7a-126">不支援下列介面型別：</span><span class="sxs-lookup"><span data-stu-id="b8d7a-126">The following types of interfaces are not supported:</span></span>  
   
- 使用未受保護的繫結時，通訊就會因開放而遭到竄改或導致資訊洩漏。  若要避免發生這個情況，建議您使用受到保護的繫結。  
+-   <span data-ttu-id="b8d7a-127">將物件參考做為參數進行傳遞的介面：將會在＜限制的物件參考支援＞這一節描述下列限制的物件參考方法。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-127">Interfaces that pass object references as parameters - the following limited object reference approach is described in the Limited Object Reference Support section.</span></span>  
   
- 針對 COM\+ 主控和 Web 主控的模式，用戶端應用程式必須讓伺服器處理序可模擬用戶端使用者。  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端中將模擬層級設定為 <xref:System.Security.Principal.TokenImpersonationLevel> 就可這樣進行。  
+-   <span data-ttu-id="b8d7a-128">傳遞型別的介面與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 互通性轉換不相容。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-128">Interfaces that pass types that are not compatible with the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM interoperability conversions.</span></span>  
   
- 使用 Internet Information Services \(IIS\) 或 Windows Process Activation Service \(WAS\) 搭配 HTTP 傳輸時，就可以使用 Httpcfg.exe 工具來保留傳輸端點位址。  在其他組態中，保護不受充當為預期服務之惡意服務的攻擊可說是相當重要。  若要防止在目的端點上啟動惡意服務，可以將合法的服務設定為以 NT 服務來執行。  這樣可讓合法服務在任何惡意服務之前，先宣告端點位址。  
+-   <span data-ttu-id="b8d7a-129">應用程式的介面，該介面由 COM+ 裝載時，會啟用應用程式共用。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-129">Interfaces for applications that have application pooling enabled when hosted by COM+.</span></span>  
   
- 使用設定的 COM\+ 角色將 COM\+ 應用程式公開為 Web 主控服務時，必須將「啟動 IIS 處理序帳戶」新增至其中一個應用程式角色中。  必須新增這個帳戶 \(其名稱通常為 IWAM\_machinename\)，才能在使用之後讓物件正常關機。  這個帳戶不應該授與任何其他的權限。  
+-   <span data-ttu-id="b8d7a-130">元件的介面，這些介面已對應用程式標示為私用。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-130">Interfaces of components that are marked as private to the application.</span></span>  
   
- 在整合應用程式上無法使用 COM\+ 處理序回收功能。  如果應用程式是設定為使用處理序回收，而且是在 COM\+ 主控的處理序中執行元件，將無法啟動服務。  這項需求不包括使用 Web 主控同處理序模式的服務，因為這個服務中未套用處理序回收設定。  
+-   <span data-ttu-id="b8d7a-131">COM+ 基礎結構介面。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-131">COM+ infrastructure interfaces.</span></span>  
   
-## 請參閱  
- [整合 COM 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+-   <span data-ttu-id="b8d7a-132">來自系統應用程式的介面。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-132">Interfaces from the system application.</span></span>  
+  
+-   <span data-ttu-id="b8d7a-133">來自 Enterprise Services 元件的介面，這些元件尚未加入至全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-133">Interfaces from Enterprise Services components that have not been added to the global assembly cache.</span></span>  
+  
+### <a name="limited-object-reference-support"></a><span data-ttu-id="b8d7a-134">限制的物件參考支援</span><span class="sxs-lookup"><span data-stu-id="b8d7a-134">Limited Object Reference Support</span></span>  
+ <span data-ttu-id="b8d7a-135">由於一些已部署的 COM+ 元件確實會依參考參數而使用物件 (例如，傳回 ADO 資料錄集 (Recordset) 物件)，因此 COM+ 整合中就包括物件參考參數的限制支援。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-135">Because a number of deployed COM+ components do use objects by reference parameters, such as returning an ADO Recordset object, COM+ integration includes limited support for object reference parameters.</span></span> <span data-ttu-id="b8d7a-136">支援會受限於實作 `IPersistStream` COM 介面的物件。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-136">The support is limited to objects that implement the `IPersistStream` COM interface.</span></span> <span data-ttu-id="b8d7a-137">其中包括 ADO 資料錄集物件，並且可針對特定於應用程式的 COM 物件來實作。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-137">This includes ADO Recordset objects and can be implemented for application specific COM objects.</span></span>  
+  
+ <span data-ttu-id="b8d7a-138">若要啟用這項支援，ComSvcConfig.exe 工具提供**allowreferences**停用一般方法簽章參數，並檢查此工具會執行以確保物件參考參數，未使用的參數.</span><span class="sxs-lookup"><span data-stu-id="b8d7a-138">To enable this support, the ComSvcConfig.exe tool provides the **allowreferences** switch that disables the regular method signature parameter and checks that the tool runs to ensure that object reference parameters are not being used.</span></span> <span data-ttu-id="b8d7a-139">此外，必須在 <`persistableTypes`> 組態項目內 (此項目為 <`comContract`> 項目的子項) 命名及識別您當做參數傳遞的物件型別。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-139">In addition, the object types that you pass as parameters must be named and identified within the <`persistableTypes`> configuration element that is a child of the <`comContract`> element.</span></span>  
+  
+ <span data-ttu-id="b8d7a-140">使用這個功能時，COM+ 整合服務會使用 `IPersistStream` 介面來序列化或還原序列化物件執行個體。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-140">When this feature is used, the COM+ integration service uses the `IPersistStream` interface to serialize or deserialize the object instance.</span></span> <span data-ttu-id="b8d7a-141">如果物件執行個體不支援 `IPersistStream`，就會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-141">If the object instance does not support `IPersistStream`, an exception is thrown.</span></span>  
+  
+ <span data-ttu-id="b8d7a-142">在用戶端應用程式中，您可以使用 <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> 物件上的方法，將物件傳遞至服務並以類似方法接收物件。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-142">Within a client application, the methods on the <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> object can be used to pass an object in to a service and similarly to retrieve an object.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="b8d7a-143">由於自訂和平台特定的序列化方法本質，此項最適合在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務之間使用。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-143">Due to the custom and platform-specific nature of the serialization approach, this is best suited for use between [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
+  
+## <a name="selecting-the-hosting-mode"></a><span data-ttu-id="b8d7a-144">選取主控模式</span><span class="sxs-lookup"><span data-stu-id="b8d7a-144">Selecting the Hosting Mode</span></span>  
+ <span data-ttu-id="b8d7a-145">COM+ 會以下列其中一個主控模式公開 Web 服務：</span><span class="sxs-lookup"><span data-stu-id="b8d7a-145">COM+ exposes Web services in one of the following hosting modes:</span></span>  
+  
+-   <span data-ttu-id="b8d7a-146">COM+ 主控</span><span class="sxs-lookup"><span data-stu-id="b8d7a-146">COM+-hosted</span></span>  
+  
+     <span data-ttu-id="b8d7a-147">會在應用程式的專用 COM+ 伺服器處理序 (Dllhost.exe) 內主控 Web 服務。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-147">The Web service is hosted within the application's dedicated COM+ server process (Dllhost.exe).</span></span> <span data-ttu-id="b8d7a-148">使用這個模式時，需要先明確的啟動應用程式，它才可以接收 Web 服務要求。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-148">This mode requires the application to be explicitly started before it can receive Web service requests.</span></span> <span data-ttu-id="b8d7a-149">可以使用 COM+ [以 NT 服務執行] 或 [當閒置時仍繼續執行] 選項，防止應用程式與其服務因閒置而導致關機。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-149">The COM+ options "Run as an NT Service" or "Leave running when idle" can be used to prevent idle shutdown of the application and its services.</span></span> <span data-ttu-id="b8d7a-150">這個模式會對伺服器應用程式提供 Web 服務和 DCOM 存取。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-150">This mode provides both Web service and DCOM access to the server application.</span></span>  
+  
+-   <span data-ttu-id="b8d7a-151">Web 主控</span><span class="sxs-lookup"><span data-stu-id="b8d7a-151">Web-hosted</span></span>  
+  
+     <span data-ttu-id="b8d7a-152">Web 服務會在 Web 伺服器工作處理序內主控。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-152">The Web service is hosted within a Web server worker process.</span></span> <span data-ttu-id="b8d7a-153">這個模式在接收初始化要求時，不需要使用 COM+。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-153">This mode does not require COM+ to be active when the initial request is received.</span></span> <span data-ttu-id="b8d7a-154">如果收到這個要求時應用程式不在使用中，會在處理要求之前自動啟動該應用程式。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-154">If the application is not active when this request is received, it is automatically activated prior to processing the request.</span></span> <span data-ttu-id="b8d7a-155">這個模式也會對伺服器應用程式提供 Web 服務和 DCOM 存取，但會對 Web 服務要求造成處理序躍點。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-155">This mode also provides both Web service and DCOM access to the server application, but causes a process hop for Web service requests.</span></span> <span data-ttu-id="b8d7a-156">通常會需要用戶端啟用模擬。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-156">This typically requires the client to enable impersonation.</span></span> <span data-ttu-id="b8d7a-157">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，可以使用 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential> 屬性來啟用模擬，而這個類別會當做一般 <xref:System.ServiceModel.ChannelFactory%601> 類別的屬性和 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 列舉值來存取。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-157">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], this can be done with the <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> property of the <xref:System.ServiceModel.Security.WindowsClientCredential> class, which is accessed as a property of the generic <xref:System.ServiceModel.ChannelFactory%601> class, as well as the <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> enumeration value.</span></span>  
+  
+-   <span data-ttu-id="b8d7a-158">Web 主控同處理序</span><span class="sxs-lookup"><span data-stu-id="b8d7a-158">Web-hosted in-process</span></span>  
+  
+     <span data-ttu-id="b8d7a-159">會在 Web 伺服器工作處理序內主控 Web 服務和 COM+ 應用程式邏輯。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-159">The Web service and the COM+ application logic are hosted within the Web server worker process.</span></span> <span data-ttu-id="b8d7a-160">如此可自動啟動 Web 主控模式，而不會對 Web 服務要求造成處理序躍點。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-160">This provides automatic activation of the Web-hosted mode without causing a process hop for Web service requests.</span></span> <span data-ttu-id="b8d7a-161">缺點則為無法透過 DCOM 存取伺服器應用程式。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-161">The disadvantage is that the server application cannot be accessed through DCOM.</span></span>  
+  
+### <a name="security-considerations"></a><span data-ttu-id="b8d7a-162">安全性考量</span><span class="sxs-lookup"><span data-stu-id="b8d7a-162">Security Considerations</span></span>  
+ <span data-ttu-id="b8d7a-163">和其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務一樣，將會藉由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道的組態設定來管理所公開服務的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-163">Like other [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services, the security settings for the exposed service are administered through configuration settings for the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel.</span></span> <span data-ttu-id="b8d7a-164">但不會強制執行傳統 DCOM 安全性設定，例如 DCOM 全機器的權限設定。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-164">Traditional DCOM security settings such as the DCOM machine-wide permissions settings are not enforced.</span></span> <span data-ttu-id="b8d7a-165">若要強制執行 COM+ 應用程式角色，則必須對元件啟用「元件層級存取檢查」授權。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-165">To enforce COM+ application roles, "component-level access checks" authorization must be enabled for the component.</span></span>  
+  
+ <span data-ttu-id="b8d7a-166">使用未受保護的繫結時，通訊就會因開放而遭到竄改或導致資訊洩漏。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-166">The use of a non-secured binding can leave communication open to tampering or information disclosure.</span></span> <span data-ttu-id="b8d7a-167">若要避免發生這個情況，建議您使用受到保護的繫結。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-167">To prevent this, it is recommended that you use a secured binding.</span></span>  
+  
+ <span data-ttu-id="b8d7a-168">針對 COM+ 主控和 Web 主控的模式，用戶端應用程式必須讓伺服器處理序可模擬用戶端使用者。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-168">For the COM+-hosted and Web-hosted modes, client applications must permit the server process to impersonate the client user.</span></span> <span data-ttu-id="b8d7a-169">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端中將模擬層級設定為 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 就可這樣進行。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-169">This can be done in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients by setting the impersonation level to <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.</span></span>  
+  
+ <span data-ttu-id="b8d7a-170">使用 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 搭配 HTTP 傳輸時，就可以使用 Httpcfg.exe 工具來保留傳輸端點位址。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-170">With Internet Information Services (IIS) or Windows Process Activation Service (WAS) using the HTTP transport, the Httpcfg.exe tool can be used to reserve a transport endpoint address.</span></span> <span data-ttu-id="b8d7a-171">在其他組態中，保護不受充當為預期服務之惡意服務的攻擊可說是相當重要。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-171">In other configurations, it is important to protect against rogue services that act as the intended service.</span></span> <span data-ttu-id="b8d7a-172">若要防止在目的端點上啟動惡意服務，可以將合法的服務設定為以 NT 服務來執行。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-172">To prevent a rogue service from starting at the desired endpoint, the legitimate service can be configured to run as an NT service.</span></span> <span data-ttu-id="b8d7a-173">這樣可讓合法服務在任何惡意服務之前，先宣告端點位址。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-173">This enables the legitimate service to claim the endpoint address prior to any rogue services.</span></span>  
+  
+ <span data-ttu-id="b8d7a-174">公開 COM + 應用程式設定 COM + 角色做為 Web 主控服務，當 「 啟動 IIS 處理序帳戶 」 必須新增至其中一個應用程式的角色。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-174">When exposing a COM+ application with configured COM+ roles as a Web-hosted service, the "Launch IIS Process Account" must be added to one of the application’s roles.</span></span> <span data-ttu-id="b8d7a-175">必須新增這個帳戶 (其名稱通常為 IWAM_machinename)，才能在使用之後讓物件正常關機。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-175">This account, typically with the name IWAM_machinename, must be added to enable clean shutdown of objects after use.</span></span> <span data-ttu-id="b8d7a-176">這個帳戶不應該授與任何其他的權限。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-176">The account should not be granted any additional permissions.</span></span>  
+  
+ <span data-ttu-id="b8d7a-177">在整合應用程式上無法使用 COM+ 處理序回收功能。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-177">The COM+ process recycling features cannot be used on integrated applications.</span></span> <span data-ttu-id="b8d7a-178">如果應用程式是設定為使用處理序回收，而且是在 COM+ 主控的處理序中執行元件，將無法啟動服務。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-178">If the application is configured to use process recycling and the components are running in a COM+ hosted process, the service fails to start.</span></span> <span data-ttu-id="b8d7a-179">這項需求不包括使用 Web 主控同處理序模式的服務，因為這個服務中未套用處理序回收設定。</span><span class="sxs-lookup"><span data-stu-id="b8d7a-179">This requirement does not include services using the Web-hosted in-process mode because the process recycling settings are not applied.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b8d7a-180">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8d7a-180">See Also</span></span>  
+ [<span data-ttu-id="b8d7a-181">整合 COM 應用程式概觀</span><span class="sxs-lookup"><span data-stu-id="b8d7a-181">Integrating with COM Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

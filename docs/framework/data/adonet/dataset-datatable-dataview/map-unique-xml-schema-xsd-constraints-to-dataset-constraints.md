@@ -1,34 +1,37 @@
 ---
-title: "將 XML 結構描述 (XSD) 的唯一條件約束對應至 DataSet 條件約束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 66183768b5b48608dc69a4021b27816595c43b4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 將 XML 結構描述 (XSD) 的唯一條件約束對應至 DataSet 條件約束
-XML 結構描述定義語言 \(XSD\) 結構描述中，**unique** 項目是用來指定項目或屬性上條件約束的唯一性。  在將 XML 結構描述轉譯到關聯式結構描述的處理序中，會將 XML 結構描述內項目或屬性上指定的唯一的條件約束 \(Constraint\)，對應到所產生的對應 <xref:System.Data.DataSet> 內 <xref:System.Data.DataTable> 的唯一的條件約束。  
+# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="72543-102">將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="72543-102">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="72543-103">中的 XML 結構描述定義語言 (XSD) 結構描述**唯一**項目會指定元素或屬性上條件約束的唯一性。</span><span class="sxs-lookup"><span data-stu-id="72543-103">In an XML Schema definition language (XSD) schema, the **unique** element specifies the uniqueness constraint on an element or attribute.</span></span> <span data-ttu-id="72543-104">在將 XML 結構描述轉譯到關聯式結構描述的處理序中，會將 XML 結構描述內項目或屬性上指定的唯一的條件約束 (Constraint)，對應到所產生的對應 <xref:System.Data.DataTable> 內 <xref:System.Data.DataSet> 的唯一的條件約束。</span><span class="sxs-lookup"><span data-stu-id="72543-104">In the process of translating an XML Schema into a relational schema, the unique constraint specified on an element or attribute in the XML Schema is mapped to a unique constraint in the <xref:System.Data.DataTable> in the corresponding <xref:System.Data.DataSet> that is generated.</span></span>  
   
- 下表列出您可在 **unique** 項目中指定的 **msdata** 屬性。  
+ <span data-ttu-id="72543-105">下表概述**msdata**屬性中，您可以指定**唯一**項目。</span><span class="sxs-lookup"><span data-stu-id="72543-105">The following table outlines the **msdata** attributes that you can specify in the **unique** element.</span></span>  
   
-|屬性名稱|描述|  
-|----------|--------|  
-|**msdata:ConstraintName**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。  否則會由 **name** 屬性提供條件約束名稱的值。|  
-|**msdata:PrimaryKey**|如果 **unique** 項目中出現 `PrimaryKey="true"`，則會將 **IsPrimaryKey** 屬性設定為 **true** 以建立唯一的條件約束。|  
+|<span data-ttu-id="72543-106">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="72543-106">Attribute name</span></span>|<span data-ttu-id="72543-107">說明</span><span class="sxs-lookup"><span data-stu-id="72543-107">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="72543-108">**即**</span><span class="sxs-lookup"><span data-stu-id="72543-108">**msdata:ConstraintName**</span></span>|<span data-ttu-id="72543-109">如果指定這個屬性，則它的值會被當成條件約束名稱使用。</span><span class="sxs-lookup"><span data-stu-id="72543-109">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="72543-110">否則，**名稱**屬性提供條件約束名稱的值。</span><span class="sxs-lookup"><span data-stu-id="72543-110">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
+|<span data-ttu-id="72543-111">**msdata**</span><span class="sxs-lookup"><span data-stu-id="72543-111">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="72543-112">如果`PrimaryKey="true"`存在於**唯一**項目，以建立唯一條件約束**IsPrimaryKey**屬性設定為**true**。</span><span class="sxs-lookup"><span data-stu-id="72543-112">If `PrimaryKey="true"` is present in the **unique** element, a unique constraint is created with the **IsPrimaryKey** property set to **true**.</span></span>|  
   
- 下列範例會顯示使用 **unique** 項目指定唯一性條件約束的 XML 結構描述。  
+ <span data-ttu-id="72543-113">下列範例顯示 XML 結構描述使用**唯一**項目指定唯一性條件約束。</span><span class="sxs-lookup"><span data-stu-id="72543-113">The following example shows an XML Schema that uses the **unique** element to specify a uniqueness constraint.</span></span>  
   
-```  
+```xml  
 <xs:schema id="SampleDataSet"   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -50,56 +53,48 @@ XML 結構描述定義語言 \(XSD\) 結構描述中，**unique** 項目是用�
       <xs:element ref="Customers" />  
     </xs:choice>  
   </xs:complexType>  
-   <xs:unique      
-msdata:ConstraintName="UCustID"      
-name="UniqueCustIDConstr" >        
-<xs:selector xpath=".//Customers" />        
-<xs:field xpath="CustomerID" />      
-</xs:unique>  
+   <xs:unique     msdata:ConstraintName="UCustID"     name="UniqueCustIDConstr" >       <xs:selector xpath=".//Customers" />       <xs:field xpath="CustomerID" />     </xs:unique>  
 </xs:element>  
 </xs:schema>  
 ```  
   
- 結構描述中的 **unique** 項目指定文件執行個體中所有 **Customers** 項目的 **CustomerID** 項目子系值必須是唯一的。  建置 **DataSet** 的過程中，對應處理序會讀取這個結構描述並產生下列表格：  
+ <span data-ttu-id="72543-114">**唯一**結構描述中的元素會指定所有**客戶**文件中的項目執行個體的值**CustomerID**子元素必須是唯一。</span><span class="sxs-lookup"><span data-stu-id="72543-114">The **unique** element in the schema specifies that for all **Customers** elements in a document instance, the value of the **CustomerID** child element must be unique.</span></span> <span data-ttu-id="72543-115">在建置**資料集**，對應處理序讀取這個結構描述，並產生下列資料表：</span><span class="sxs-lookup"><span data-stu-id="72543-115">In building the **DataSet**, the mapping process reads this schema and generates the following table:</span></span>  
   
 ```  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- 對應處理序也會在 **CustomerID** 資料行上建立唯一的條件約束，如下列 **DataSet** 所示   \(為了便於了解，此處僅顯示相關屬性\)。  
+ <span data-ttu-id="72543-116">對應處理序也上建立 unique 條件約束**CustomerID**資料行，如下所示**資料集**。</span><span class="sxs-lookup"><span data-stu-id="72543-116">The mapping process also creates a unique constraint on the **CustomerID** column, as shown in the following **DataSet**.</span></span> <span data-ttu-id="72543-117">(為了便於了解，此處僅顯示相關屬性)。</span><span class="sxs-lookup"><span data-stu-id="72543-117">(For simplicity, only relevant properties are shown.)</span></span>  
   
 ```  
-  
       DataSetName: MyDataSet  
 TableName: Customers  
   ColumnName: CustomerID  
       AllowDBNull: True  
       Unique: True  
-  ConstraintName: UcustID  
-      Type: UniqueConstraint  
+  ConstraintName: UcustID       Type: UniqueConstraint  
       Table: Customers  
       Columns: CustomerID   
       IsPrimaryKey: False  
 ```  
   
- 產生的 **DataSet** 中，唯一的條件約束的 **IsPrimaryKey** 屬性設定為 **False**。  資料行上的 **unique** 屬性指出 **CustomerID** 資料行值必須是唯一的 \(但是也可以由資料行的 **AllowDBNull** 屬性指定為 Null 參考\)。  
+ <span data-ttu-id="72543-118">在**資料集**所產生， **IsPrimaryKey**屬性設定為**False**的唯一條件約束。</span><span class="sxs-lookup"><span data-stu-id="72543-118">In the **DataSet** that is generated, the **IsPrimaryKey** property is set to **False** for the unique constraint.</span></span> <span data-ttu-id="72543-119">**唯一**資料行上的屬性是指出**CustomerID**必須是唯一的資料行值 (但可以是 null 參考，所指定**AllowDBNull**屬性的資料行）。</span><span class="sxs-lookup"><span data-stu-id="72543-119">The **unique** property on the column indicates that the **CustomerID** column values must be unique (but they can be a null reference, as specified by the **AllowDBNull** property of the column).</span></span>  
   
- 如果您修改結構描述，並將選擇性的 **msdata:PrimaryKey** 屬性值設定為 **True**，即可在資料表上建立唯一的條件約束。  將 **AllowDBNull** 資料行屬性設定為 **False**，並將條件約束的 **IsPrimaryKey** 屬性設定為 **True**，即可使 **CustomerID** 資料行成為主索引鍵資料行。  
+ <span data-ttu-id="72543-120">如果您修改結構描述，並設定選擇性**msdata**屬性值，以**True**，資料表上建立 unique 條件約束。</span><span class="sxs-lookup"><span data-stu-id="72543-120">If you modify the schema and set the optional **msdata:PrimaryKey** attribute value to **True**, the unique constraint is created on the table.</span></span> <span data-ttu-id="72543-121">**AllowDBNull**資料行屬性設定為**False**，而**IsPrimaryKey**屬性設定為條件約束**True**，即可使**CustomerID**資料行主索引鍵資料行。</span><span class="sxs-lookup"><span data-stu-id="72543-121">The **AllowDBNull** column property is set to **False**, and the **IsPrimaryKey** property of the constraint set to **True**, thus making the **CustomerID** column a primary key column.</span></span>  
   
- 您可以在 XML 結構描述中，將唯一的條件約束指定給合併的項目或屬性。  下列範例會說明如何藉由在結構描述中新增其他的 **xs:field** 項目，以指定 **CustomerID** 與 **CompanyName** 值組合，讓這些值在任何狀況中，對所有 **Customers** 而言都是唯一的。  
+ <span data-ttu-id="72543-122">您可以在 XML 結構描述中，將唯一的條件約束指定給合併的項目或屬性。</span><span class="sxs-lookup"><span data-stu-id="72543-122">You can specify a unique constraint on a combination of elements or attributes in the XML Schema.</span></span> <span data-ttu-id="72543-123">下列範例示範如何指定的組合**CustomerID**和**CompanyName**值必須是唯一的所有**客戶**在任何情況下，由加入另一個**customers**結構描述中的項目。</span><span class="sxs-lookup"><span data-stu-id="72543-123">The following example demonstrates how to specify that a combination of **CustomerID** and **CompanyName** values must be unique for all **Customers** in any instance, by adding another **xs:field** element in the schema.</span></span>  
   
-```  
-  
-      <xs:unique     
-         msdata:ConstraintName="SomeName"    
-         name="UniqueCustIDConstr" >   
-  <xs:selector xpath=".//Customers" />   
-  <xs:field xpath="CustomerID" />   
-  <xs:field xpath="CompanyName" />   
+```xml  
+      <xs:unique     
+         msdata:ConstraintName="SomeName"    
+         name="UniqueCustIDConstr" >   
+  <xs:selector xpath=".//Customers" />   
+  <xs:field xpath="CustomerID" />   
+  <xs:field xpath="CompanyName" />   
 </xs:unique>  
 ```  
   
- 這是產生之 **DataSet** 中建立的條件約束。  
+ <span data-ttu-id="72543-124">這是建立在產生的條件約束**資料集**。</span><span class="sxs-lookup"><span data-stu-id="72543-124">This is the constraint that is created in the resulting **DataSet**.</span></span>  
   
 ```  
 ConstraintName: SomeName  
@@ -108,7 +103,7 @@ ConstraintName: SomeName
   IsPrimaryKey: False  
 ```  
   
-## 請參閱  
- [將 XML 結構描述 \(XSD\) 條件約束對應至 DataSet 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [從 XML 結構描述 \(XSD\) 產生 DataSet 關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="72543-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72543-125">See Also</span></span>  
+ [<span data-ttu-id="72543-126">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="72543-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="72543-127">從 XML 結構描述 (XSD) 產生資料集關聯</span><span class="sxs-lookup"><span data-stu-id="72543-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="72543-128">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="72543-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

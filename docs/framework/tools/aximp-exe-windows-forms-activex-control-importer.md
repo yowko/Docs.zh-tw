@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
 - ActiveX Control Importer
@@ -21,80 +15,78 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 61f0fc0a157e80499bbc4da4d99bcd6ed15ddefd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8772fc3a562cc8c6afc17593b5d1f16a34665238
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Aximp.exe (Windows Forms ActiveX Control Importer)
-ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫中的類型定義，轉換成 Windows Form 控制項。  
+# <a name="aximpexe-windows-forms-activex-control-importer"></a><span data-ttu-id="4b172-102">Aximp.exe (Windows Form ActiveX 控制項匯入工具)</span><span class="sxs-lookup"><span data-stu-id="4b172-102">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>
+<span data-ttu-id="4b172-103">ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫中的類型定義，轉換成 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-103">The ActiveX Control Importer converts type definitions in a COM type library for an ActiveX control into a Windows Forms control.</span></span>  
   
- Windows Form 只能裝載 Windows Form 控制項，也就是衍生自 <xref:System.Windows.Forms.Control> 的類別。  Aximp.exe 會產生 ActiveX 控制項的包裝函式類別，可以在 Windows Form 上裝載。  這可讓您使用相同的設計階段支援和程式設計方法論，以適用於其他 Windows Form 控制項。  
+ <span data-ttu-id="4b172-104">Windows Form 只能裝載 Windows Form 控制項，也就是衍生自 <xref:System.Windows.Forms.Control> 的類別。</span><span class="sxs-lookup"><span data-stu-id="4b172-104">Windows Forms can only host Windows Forms controls — that is, classes that are derived from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="4b172-105">Aximp.exe 會產生 ActiveX 控制項的包裝函式類別，可以在 Windows Form 上裝載。</span><span class="sxs-lookup"><span data-stu-id="4b172-105">Aximp.exe generates a wrapper class for an ActiveX control that can be hosted on a Windows Form.</span></span> <span data-ttu-id="4b172-106">這可讓您使用相同的設計階段支援和程式設計方法論，以適用於其他 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-106">This allows you to use the same design-time support and programming methodology applicable to other Windows Forms controls.</span></span>  
   
- 若要裝載 ActiveX 控制項，您必須產生衍生自 <xref:System.Windows.Forms.AxHost> 的包裝函式控制項。  這個包裝函式控制項包含基礎 ActiveX 控制項的執行個體。  它知道如何與 ActiveX 控制項進行通訊，但是會顯示為 Windows Form 控制項。  這個產生的控制項會裝載 ActiveX 控制項並公開其屬性、方法和事件，如同這些產生的控制項。  
+ <span data-ttu-id="4b172-107">若要裝載 ActiveX 控制項，您必須產生衍生自 <xref:System.Windows.Forms.AxHost> 的包裝函式控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-107">To host the ActiveX control, you must generate a wrapper control that derives from <xref:System.Windows.Forms.AxHost>.</span></span> <span data-ttu-id="4b172-108">這個包裝函式控制項包含基礎 ActiveX 控制項的執行個體。</span><span class="sxs-lookup"><span data-stu-id="4b172-108">This wrapper control contains an instance of the underlying ActiveX control.</span></span> <span data-ttu-id="4b172-109">它知道如何與 ActiveX 控制項進行通訊，但是會顯示為 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-109">It knows how to communicate with the ActiveX control, but it appears as a Windows Forms control.</span></span> <span data-ttu-id="4b172-110">這個產生的控制項會裝載 ActiveX 控制項並公開其屬性、方法和事件，如同這些產生的控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-110">This generated control hosts the ActiveX control and exposes its properties, methods, and events as those of the generated control.</span></span>  
   
- 此工具會自動與 Visual Studio 一起安裝。  若要執行此工具，請使用 \[開發人員命令提示字元\] \(或 Windows 7 中的 \[Visual Studio 命令提示字元\]\)。  如需詳細資訊，請參閱 [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ <span data-ttu-id="4b172-111">此工具會自動與 Visual Studio 一起安裝。</span><span class="sxs-lookup"><span data-stu-id="4b172-111">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="4b172-112">若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。</span><span class="sxs-lookup"><span data-stu-id="4b172-112">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="4b172-113">如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="4b172-113">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- 在命令提示字元下輸入下列命令：  
+ <span data-ttu-id="4b172-114">在命令提示字元下輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="4b172-114">At the command prompt, type the following:</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="4b172-115">語法</span><span class="sxs-lookup"><span data-stu-id="4b172-115">Syntax</span></span>  
   
 ```  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## 備註  
+## <a name="remarks"></a><span data-ttu-id="4b172-116">備註</span><span class="sxs-lookup"><span data-stu-id="4b172-116">Remarks</span></span>  
   
-|引數|描述|  
-|--------|--------|  
-|*file*|原始程式檔的名稱，包含要轉換的 ActiveX 控制項。  檔案引數必須有 .dll 或 .ocx 副檔名。|  
+|<span data-ttu-id="4b172-117">引數</span><span class="sxs-lookup"><span data-stu-id="4b172-117">Argument</span></span>|<span data-ttu-id="4b172-118">說明</span><span class="sxs-lookup"><span data-stu-id="4b172-118">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="4b172-119">*file*</span><span class="sxs-lookup"><span data-stu-id="4b172-119">*file*</span></span>|<span data-ttu-id="4b172-120">原始程式檔的名稱，包含要轉換的 ActiveX 控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-120">The name of the source file that contains the ActiveX control to convert.</span></span> <span data-ttu-id="4b172-121">檔案引數必須有 .dll 或 .ocx 副檔名。</span><span class="sxs-lookup"><span data-stu-id="4b172-121">The file argument must have the extension .dll or .ocx.</span></span>|  
   
-|選項|描述|  
-|--------|--------|  
-|`/delaysign`|指定 Aximp.exe 使用延遲簽署來簽署產生的控制項。  您必須指定這個選項來配合 `/keycontainer:`、`/keyfile:` 或 `/publickey:` 選項。  如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)。|  
-|`/help`|顯示工具的命令語法和選項。|  
-|`/keycontainer:` *containerName*|使用 *containerName* 所指定之金鑰容器中的公開\/私密金鑰組，以強式名稱簽署產生的控制項。|  
-|`/keyfile:` *filename*|使用 *filename* 中找到的發行者正式公開\/私密金鑰組，以強式名稱簽署產生的控制項。|  
-|`/nologo`|隱藏 Microsoft 程式啟始資訊顯示。|  
-|`/out:` *filename*|指定要建立的組件名稱。|  
-|`/publickey:` *filename*|使用由 *filename* 所指定之檔案中找到的公開金鑰，以強式名稱簽署產生的控制項。|  
-|`/rcw:` *filename*|使用指定的執行階段可呼叫包裝函式，而不是產生新的執行階段可呼叫包裝函式。  您可以指定多個執行個體。  目前的目錄用於相對路徑。  如需詳細資訊，請參閱[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)。|  
-|`/silent`|隱藏顯示成功訊息。|  
-|`/source`|產生 Windows Form 包裝函式的 C\# 原始程式碼。|  
-|`/verbose`|指定詳細資訊模式；顯示其他進度資訊。|  
-|`/?`|顯示工具的命令語法和選項。|  
+|<span data-ttu-id="4b172-122">選項</span><span class="sxs-lookup"><span data-stu-id="4b172-122">Option</span></span>|<span data-ttu-id="4b172-123">說明</span><span class="sxs-lookup"><span data-stu-id="4b172-123">Description</span></span>|  
+|------------|-----------------|  
+|`/delaysign`|<span data-ttu-id="4b172-124">指定 Aximp.exe 使用延遲簽署來簽署產生的控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-124">Specifies to Aximp.exe to sign the resulting control using delayed signing.</span></span> <span data-ttu-id="4b172-125">您必須使用 `/keycontainer:`、`/keyfile:` 或 `/publickey:` 選項來指定此選項。</span><span class="sxs-lookup"><span data-stu-id="4b172-125">You must specify this option with either the `/keycontainer:`, `/keyfile:`, or `/publickey:` option.</span></span> <span data-ttu-id="4b172-126">如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)。</span><span class="sxs-lookup"><span data-stu-id="4b172-126">For more information on the delayed signing process, see [Delay Signing an Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).</span></span>|  
+|`/help`|<span data-ttu-id="4b172-127">顯示工具的命令語法和選項。</span><span class="sxs-lookup"><span data-stu-id="4b172-127">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="4b172-128">`/keycontainer:` *containerName*</span><span class="sxs-lookup"><span data-stu-id="4b172-128">`/keycontainer:` *containerName*</span></span>|<span data-ttu-id="4b172-129">使用 *containerName* 所指定之金鑰容器中的公開/私密金鑰組，以強式名稱簽署產生的控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-129">Signs the resulting control with a strong name using the public/private key pair found in the key container specified by *containerName*.</span></span>|  
+|<span data-ttu-id="4b172-130">`/keyfile:` *filename*</span><span class="sxs-lookup"><span data-stu-id="4b172-130">`/keyfile:` *filename*</span></span>|<span data-ttu-id="4b172-131">使用 *filename* 中找到的發行者正式公開/私密金鑰組，以強式名稱簽署產生的控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-131">Signs the resulting control with a strong name using the publisher's official public/private key pair found in *filename*.</span></span>|  
+|`/nologo`|<span data-ttu-id="4b172-132">隱藏 Microsoft 程式啟始資訊顯示。</span><span class="sxs-lookup"><span data-stu-id="4b172-132">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="4b172-133">`/out:` *filename*</span><span class="sxs-lookup"><span data-stu-id="4b172-133">`/out:` *filename*</span></span>|<span data-ttu-id="4b172-134">指定要建立的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="4b172-134">Specifies the name of the assembly to create.</span></span>|  
+|<span data-ttu-id="4b172-135">`/publickey:` *filename*</span><span class="sxs-lookup"><span data-stu-id="4b172-135">`/publickey:` *filename*</span></span>|<span data-ttu-id="4b172-136">使用由 *filename* 所指定之檔案中找到的公開金鑰，以強式名稱簽署產生的控制項。</span><span class="sxs-lookup"><span data-stu-id="4b172-136">Signs the resulting control with a strong name using the public key found in the file specified by *filename*.</span></span>|  
+|<span data-ttu-id="4b172-137">`/rcw:` *filename*</span><span class="sxs-lookup"><span data-stu-id="4b172-137">`/rcw:` *filename*</span></span>|<span data-ttu-id="4b172-138">使用指定的執行階段可呼叫包裝函式，而不是產生新的執行階段可呼叫包裝函式。</span><span class="sxs-lookup"><span data-stu-id="4b172-138">Uses the specified runtime callable wrapper instead of generating a new one.</span></span> <span data-ttu-id="4b172-139">您可以指定多個執行個體。</span><span class="sxs-lookup"><span data-stu-id="4b172-139">You may specify multiple instances.</span></span> <span data-ttu-id="4b172-140">目前的目錄用於相對路徑。</span><span class="sxs-lookup"><span data-stu-id="4b172-140">The current directory is used for relative paths.</span></span> <span data-ttu-id="4b172-141">如需詳細資訊，請參閱[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)。</span><span class="sxs-lookup"><span data-stu-id="4b172-141">For more information, see [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md).</span></span>|  
+|`/silent`|<span data-ttu-id="4b172-142">隱藏顯示成功訊息。</span><span class="sxs-lookup"><span data-stu-id="4b172-142">Suppresses the display of success messages.</span></span>|  
+|`/source`|<span data-ttu-id="4b172-143">產生 Windows Form 包裝函式的 C# 原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="4b172-143">Generates C# source code for the Windows Forms wrapper.</span></span>|  
+|`/verbose`|<span data-ttu-id="4b172-144">指定詳細資訊模式；顯示其他進度資訊。</span><span class="sxs-lookup"><span data-stu-id="4b172-144">Specifies verbose mode; displays additional progress information.</span></span>|  
+|`/?`|<span data-ttu-id="4b172-145">顯示工具的命令語法和選項。</span><span class="sxs-lookup"><span data-stu-id="4b172-145">Displays command syntax and options for the tool.</span></span>|  
   
- Aximp.exe 會一次轉換整個 ActiveX 控制項類型程式庫並產生一組組件，其中包含通用語言執行平台中繼資料，並控制原始類型程式庫中定義之類型的實作。  根據下列模式為產生的檔案命名：  
+ <span data-ttu-id="4b172-146">Aximp.exe 會一次轉換整個 ActiveX 控制項類型程式庫並產生一組組件，其中包含通用語言執行平台中繼資料，並控制原始類型程式庫中定義之類型的實作。</span><span class="sxs-lookup"><span data-stu-id="4b172-146">Aximp.exe converts an entire ActiveX Control type library at one time and produces a set of assemblies that contain the common language runtime metadata and control implementation for the types defined in the original type library.</span></span> <span data-ttu-id="4b172-147">根據下列模式為產生的檔案命名：</span><span class="sxs-lookup"><span data-stu-id="4b172-147">The generated files are named according to the following pattern:</span></span>  
   
- 適用於 COM 類型的通用語言執行平台 Proxy：*progid*.dll  
+ <span data-ttu-id="4b172-148">適用於 COM 類型的 Common Language Runtime Proxy：*progid*.dll</span><span class="sxs-lookup"><span data-stu-id="4b172-148">common language runtime proxy for COM types: *progid*.dll</span></span>  
   
- 適用於 ActiveX 控制項的 Windows Form Proxy \(其中 Ax 代表 ActiveX\)：Ax*progid*.dll  
+ <span data-ttu-id="4b172-149">適用於 ActiveX 控制項的 Windows Forms Proxy (其中 Ax 代表 ActiveX)：Ax*progid*.dll</span><span class="sxs-lookup"><span data-stu-id="4b172-149">Windows Forms proxy for ActiveX controls (where Ax signifies ActiveX): Ax*progid*.dll</span></span>  
   
 > [!NOTE]
->  如果 ActiveX 控制項的成員名稱符合 .NET Framework 中定義的名稱，則 Aximp.exe 在建立 AxHost 衍生類別時就會在成員名稱前面加上 "Ctl"。  例如，如果您的 ActiveX 控制項有一個名為 "Layout" 的成員，它在 AxHost 衍生類別中就會被重新命名為 "CtlLayout"，因為 Layout 事件是在 .NET Framework 中定義的。  
+>  <span data-ttu-id="4b172-150">如果 ActiveX 控制項的成員名稱符合 .NET Framework 中定義的名稱，則 Aximp.exe 在建立 AxHost 衍生類別時就會在成員名稱前面加上 "Ctl"。</span><span class="sxs-lookup"><span data-stu-id="4b172-150">If the name of a member of the ActiveX control matches a name defined in the .NET Framework, Aximp.exe will prefix the member name with "Ctl" when it creates the AxHost derived class.</span></span> <span data-ttu-id="4b172-151">例如，如果您的 ActiveX 控制項有一個名為 "Layout" 的成員，它在 AxHost 衍生類別中就會被重新命名為 "CtlLayout"，因為 Layout 事件是在 .NET Framework 中定義的。</span><span class="sxs-lookup"><span data-stu-id="4b172-151">For example, if your ActiveX control has a member named "Layout," it is renamed "CtlLayout" in the AxHost derived class because the Layout event is defined within the .NET Framework.</span></span>  
   
- 您可以使用 [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 這類工具，檢查這些產生的檔案。  
+ <span data-ttu-id="4b172-152">您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 這類工具，檢查這些產生的檔案。</span><span class="sxs-lookup"><span data-stu-id="4b172-152">You can examine these generated files with tools such as [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
   
- 不支援使用 Aximp.exe 來產生 ActiveX WebBrowser 控制項 \(shdocvw.dll\) 的 .NET 組件。  
+ <span data-ttu-id="4b172-153">不支援使用 Aximp.exe 來產生 ActiveX WebBrowser 控制項 (shdocvw.dll) 的 .NET 組件。</span><span class="sxs-lookup"><span data-stu-id="4b172-153">Using Aximp.exe to generate a .NET assembly for the ActiveX WebBrowser control (shdocvw.dll) is not supported.</span></span>  
   
- 當您在 shdocvw.dll 上執行 Aximp.exe 時，必定會在執行這個工具的目錄中建立另一個名為 shdocvw.dll 的檔案。  如果這個產生的檔案是置於 Documents and Settings 目錄中，它將會對 Microsoft Internet Explorer 和 Windows 檔案總管造成問題。  當電腦重新開機時，Windows 會在搜尋 system32 目錄之前，先在 Documents and Settings 目錄中尋找 shdocvw.dll 的複本。  它會使用在 Documents and Settings 目錄中找到的複本，並嘗試載入 Managed 包裝函式。  Internet Explorer 和 Windows 檔案總管將無法正常運作，因為它們必須依賴位於 system32 目錄中之 shdocvw.dll 版本中的轉譯引擎。  如果發生這種問題，請刪除 Documents and Settings 目錄中的 shdocvw.dll 複本，然後重新啟動電腦。  
+ <span data-ttu-id="4b172-154">當您在 shdocvw.dll 上執行 Aximp.exe 時，必定會在執行這個工具的目錄中建立另一個名為 shdocvw.dll 的檔案。</span><span class="sxs-lookup"><span data-stu-id="4b172-154">When you run Aximp.exe over shdocvw.dll, it will always create another file named shdocvw.dll in the directory from which the tool is run.</span></span> <span data-ttu-id="4b172-155">如果這個產生的檔案是置於 Documents and Settings 目錄中，它將會對 Microsoft Internet Explorer 和 Windows 檔案總管造成問題。</span><span class="sxs-lookup"><span data-stu-id="4b172-155">If this generated file is placed in the Documents and Settings directory, it causes problems for Microsoft Internet Explorer and Windows Explorer.</span></span> <span data-ttu-id="4b172-156">當電腦重新開機時，Windows 會在搜尋 system32 目錄之前，先在 Documents and Settings 目錄中尋找 shdocvw.dll 的複本。</span><span class="sxs-lookup"><span data-stu-id="4b172-156">When the computer is rebooted, Windows looks in the Documents and Settings directory before the system32 directory to find a copy of shdocvw.dll.</span></span> <span data-ttu-id="4b172-157">它會使用在 Documents and Settings 目錄中找到的複本，並嘗試載入 Managed 包裝函式。</span><span class="sxs-lookup"><span data-stu-id="4b172-157">It will use the copy it finds in Documents and Settings and attempt to load the managed wrappers.</span></span> <span data-ttu-id="4b172-158">Internet Explorer 和 Windows 檔案總管將無法正常運作，因為它們必須依賴位於 system32 目錄中之 shdocvw.dll 版本中的轉譯引擎。</span><span class="sxs-lookup"><span data-stu-id="4b172-158">Internet Explorer and Windows Explorer will not function properly because they rely on the rendering engine in the version of shdocvw.dll located in the system32 directory.</span></span> <span data-ttu-id="4b172-159">如果發生這種問題，請刪除 Documents and Settings 目錄中的 shdocvw.dll 複本，然後重新啟動電腦。</span><span class="sxs-lookup"><span data-stu-id="4b172-159">If this problem occurs, delete the copy of shdocvw.dll in the Documents and Settings directory and reboot the computer.</span></span>  
   
- 使用 Aximp.exe 搭配 shdocvw.dll 來建立用於應用程式開發的 .NET 組件時，可能也會導致問題。  在這種情況下，您的應用程式將會載入 shdocvw.dll 的系統版本和產生的版本，而且系統版本具有優先權。  在這個情況下，當您試圖將 Web 網頁載入到 WebBrowser ActiveX 控制項內部時，系統會以 \[開啟\/儲存\] 對話方塊提示使用者。  當使用者按一下 \[**開啟**\] 時，Web 網頁將會在 Internet Explorer 內開啟。  這種情形只會在使用執行 Internet Explorer 第 6 版 \(含\) 以前版本的電腦上發生。  若要避免這個問題，請使用 Managed <xref:System.Windows.Forms.WebBrowser> 控制項或使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 來產生 Managed shdocvw.dll，詳細資訊請參閱 [如何：將參考加入至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)。  
+ <span data-ttu-id="4b172-160">使用 Aximp.exe 搭配 shdocvw.dll 來建立用於應用程式開發的 .NET 組件時，可能也會導致問題。</span><span class="sxs-lookup"><span data-stu-id="4b172-160">Using Aximp.exe with shdocvw.dll to create a .NET assembly for use in application development can also cause problems.</span></span> <span data-ttu-id="4b172-161">在這種情況下，您的應用程式將會載入 shdocvw.dll 的系統版本和產生的版本，而且系統版本具有優先權。</span><span class="sxs-lookup"><span data-stu-id="4b172-161">In this case, your application will load both the system version of shdocvw.dll and the generated version, and may give the system version priority.</span></span> <span data-ttu-id="4b172-162">在這個情況下，當您試圖將 Web 網頁載入到 WebBrowser ActiveX 控制項內部時，系統會以 [開啟/儲存] 對話方塊提示使用者。</span><span class="sxs-lookup"><span data-stu-id="4b172-162">In this case, when you attempt to load a Web page inside the WebBrowser ActiveX control, users may be prompted with an Open/Save dialog box.</span></span> <span data-ttu-id="4b172-163">當使用者按一下 [開啟] 時，將會在 Internet Explorer 中開啟網頁。</span><span class="sxs-lookup"><span data-stu-id="4b172-163">When the user clicks **Open**, the Web page will be opened in Internet Explorer.</span></span> <span data-ttu-id="4b172-164">這種情形只會在使用執行 Internet Explorer 第 6 版 (含) 以前版本的電腦上發生。</span><span class="sxs-lookup"><span data-stu-id="4b172-164">This occurs only with computers that are running Internet Explorer version 6 or earlier.</span></span> <span data-ttu-id="4b172-165">若要避免這個問題，請使用 Managed <xref:System.Windows.Forms.WebBrowser> 控制項或使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 來產生 Managed shdocvw.dll，如[如何：將參考新增至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)中所述。</span><span class="sxs-lookup"><span data-stu-id="4b172-165">To prevent this problem, use the managed <xref:System.Windows.Forms.WebBrowser> control or use [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] to generate the managed shdocvw.dll as described in [How to: Add References to Type Libraries](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).</span></span>  
   
-## 範例  
- 下列命令會產生 Media Player 控制項 `msdxm.ocx` 的 MediaPlayer.dll 和 AxMediaPlayer.dll。  
+## <a name="example"></a><span data-ttu-id="4b172-166">範例</span><span class="sxs-lookup"><span data-stu-id="4b172-166">Example</span></span>  
+ <span data-ttu-id="4b172-167">下列命令會產生 Media Player 控制項 `msdxm.ocx` 的 MediaPlayer.dll 和 AxMediaPlayer.dll。</span><span class="sxs-lookup"><span data-stu-id="4b172-167">The following command generates MediaPlayer.dll and AxMediaPlayer.dll for the Media Player control `msdxm.ocx`.</span></span>  
   
 ```  
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [工具](../../../docs/framework/tools/index.md)   
- [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-
+## <a name="see-also"></a><span data-ttu-id="4b172-168">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4b172-168">See Also</span></span>  
+ [<span data-ttu-id="4b172-169">工具</span><span class="sxs-lookup"><span data-stu-id="4b172-169">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="4b172-170">Ildasm.exe (IL 反組譯工具)</span><span class="sxs-lookup"><span data-stu-id="4b172-170">Ildasm.exe (IL Disassembler)</span></span>](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

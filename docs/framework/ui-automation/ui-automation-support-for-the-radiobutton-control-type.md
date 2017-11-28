@@ -1,88 +1,91 @@
 ---
-title: "UI Automation Support for the RadioButton Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Radio Button"
-  - "UI Automation, Radio Button control type"
-  - "RadioButton control type"
+title: "RadioButton 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Radio Button
+- UI Automation, Radio Button control type
+- RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: e3b2723aaf61d25afb6164da8c3c6ca7a61e9e52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the RadioButton Control Type
+# <a name="ui-automation-support-for-the-radiobutton-control-type"></a><span data-ttu-id="53ee4-102">RadioButton 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="53ee4-102">UI Automation Support for the RadioButton Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="53ee4-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="53ee4-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="53ee4-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="53ee4-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供 RadioButton 控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。  
+ <span data-ttu-id="53ee4-105">本主題提供 RadioButton 控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="53ee4-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the RadioButton control type.</span></span> <span data-ttu-id="53ee4-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。</span><span class="sxs-lookup"><span data-stu-id="53ee4-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="53ee4-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。</span><span class="sxs-lookup"><span data-stu-id="53ee4-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 選項按鈕包含一個圓形按鈕和應用程式定義的文字 \(標籤\)、圖示或點陣圖，其中會指出使用者可以藉由選取按鈕所進行的選擇。 應用程式通常會在群組方塊中使用選項按鈕，讓使用者選擇一組相關但彼此互斥的選項。 例如，應用程式可能會顯示一組選項按鈕，讓使用者可以針對用戶端區域所選取的文字選取偏好的格式。 使用者可以選取對應的選項按鈕，決定要靠左對齊、靠右對齊或置中對齊的格式。 使用者通常一次只能從一組選項按鈕選取一個選項。  
+ <span data-ttu-id="53ee4-108">選項按鈕包含一個圓形按鈕和應用程式定義的文字 (標籤)、圖示或點陣圖，其中會指出使用者可以藉由選取按鈕所進行的選擇。</span><span class="sxs-lookup"><span data-stu-id="53ee4-108">A radio button consists of a round button and application-defined text (a label), an icon, or a bitmap that indicates a choice the user can make by selecting the button.</span></span> <span data-ttu-id="53ee4-109">應用程式通常會在群組方塊中使用選項按鈕，讓使用者選擇一組相關但彼此互斥的選項。</span><span class="sxs-lookup"><span data-stu-id="53ee4-109">An application typically uses radio buttons in a group box to permit the user to choose from a set of related, but mutually exclusive options.</span></span> <span data-ttu-id="53ee4-110">例如，應用程式可能會顯示一組選項按鈕，讓使用者可以針對用戶端區域所選取的文字選取偏好的格式。</span><span class="sxs-lookup"><span data-stu-id="53ee4-110">For example, the application might present a group of radio buttons from which the user can select a format preference for text selected in the client area.</span></span> <span data-ttu-id="53ee4-111">使用者可以選取對應的選項按鈕，決定要靠左對齊、靠右對齊或置中對齊的格式。</span><span class="sxs-lookup"><span data-stu-id="53ee4-111">The user could select a left-aligned, right-aligned, or centered format by selecting the corresponding radio button.</span></span> <span data-ttu-id="53ee4-112">使用者通常一次只能從一組選項按鈕選取一個選項。</span><span class="sxs-lookup"><span data-stu-id="53ee4-112">Typically, the user can select only one option at a time from a set of radio buttons.</span></span>  
   
- 下列章節會定義 RadioButton 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用於所有清單控制項。  
+ <span data-ttu-id="53ee4-113">下列章節會定義 RadioButton 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="53ee4-113">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the RadioButton control type.</span></span> <span data-ttu-id="53ee4-114">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有清單控制項。</span><span class="sxs-lookup"><span data-stu-id="53ee4-114">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all list controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述選項按鈕控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="53ee4-115">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="53ee4-115">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="53ee4-116">下表描述選項按鈕控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="53ee4-116">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to radio button controls and describes what can be contained in each view.</span></span> <span data-ttu-id="53ee4-117">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="53ee4-117">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|RadioButton|RadioButton|  
+|<span data-ttu-id="53ee4-118">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="53ee4-118">Control View</span></span>|<span data-ttu-id="53ee4-119">內容檢視</span><span class="sxs-lookup"><span data-stu-id="53ee4-119">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="53ee4-120">RadioButton</span><span class="sxs-lookup"><span data-stu-id="53ee4-120">RadioButton</span></span>|<span data-ttu-id="53ee4-121">RadioButton</span><span class="sxs-lookup"><span data-stu-id="53ee4-121">RadioButton</span></span>|  
   
- 控制項檢視或內容檢視中沒有任何子系。  
+ <span data-ttu-id="53ee4-122">控制項檢視或內容檢視中沒有任何子系。</span><span class="sxs-lookup"><span data-stu-id="53ee4-122">There are no children in the control view or the content view.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與 RadioButton 控制項類型特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="53ee4-123">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="53ee4-123">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="53ee4-124">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與 RadioButton 控制項類型特別有關。</span><span class="sxs-lookup"><span data-stu-id="53ee4-124">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to the RadioButton control type.</span></span> <span data-ttu-id="53ee4-125">如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="53ee4-125">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|選項按鈕控制項的名稱，是在保持選取狀態之按鈕旁的文字。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|選項按鈕控制項可點選的點，必須是用滑鼠指標按一下即可以設定選取選項按鈕的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|選項按鈕是自行設定標籤的控制項。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|RadioButton|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「選項按鈕」|對應到 RadioButton 控制項類型的當地語系化字串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|選項按鈕控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|選項按鈕控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="53ee4-126"> 屬性</span><span class="sxs-lookup"><span data-stu-id="53ee4-126"> Property</span></span>|<span data-ttu-id="53ee4-127">值</span><span class="sxs-lookup"><span data-stu-id="53ee4-127">Value</span></span>|<span data-ttu-id="53ee4-128">備註</span><span class="sxs-lookup"><span data-stu-id="53ee4-128">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="53ee4-129">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="53ee4-129">See notes.</span></span>|<span data-ttu-id="53ee4-130">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="53ee4-130">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="53ee4-131">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="53ee4-131">See notes.</span></span>|<span data-ttu-id="53ee4-132">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="53ee4-132">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="53ee4-133">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="53ee4-133">See notes.</span></span>|<span data-ttu-id="53ee4-134">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="53ee4-134">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="53ee4-135">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="53ee4-135">See notes.</span></span>|<span data-ttu-id="53ee4-136">選項按鈕控制項的名稱，是在保持選取狀態之按鈕旁的文字。</span><span class="sxs-lookup"><span data-stu-id="53ee4-136">The radio button control’s name is the text that is displayed beside the button that maintains selection state.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="53ee4-137">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="53ee4-137">See notes.</span></span>|<span data-ttu-id="53ee4-138">選項按鈕控制項可點選的點，必須是用滑鼠指標按一下即可以設定選取選項按鈕的點。</span><span class="sxs-lookup"><span data-stu-id="53ee4-138">The radio button control’s clickable point MUST be a point that sets selection on the radio button if clicked with a mouse pointer.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="53ee4-139">選項按鈕是自行設定標籤的控制項。</span><span class="sxs-lookup"><span data-stu-id="53ee4-139">Radio buttons are self-labeling controls.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="53ee4-140">RadioButton</span><span class="sxs-lookup"><span data-stu-id="53ee4-140">RadioButton</span></span>|<span data-ttu-id="53ee4-141">此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="53ee4-141">This value is the same for all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="53ee4-142">「選項按鈕」</span><span class="sxs-lookup"><span data-stu-id="53ee4-142">"radio button"</span></span>|<span data-ttu-id="53ee4-143">對應到 RadioButton 控制項類型的當地語系化字串。</span><span class="sxs-lookup"><span data-stu-id="53ee4-143">Localized string corresponding to the RadioButton Control Type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="53ee4-144">True</span><span class="sxs-lookup"><span data-stu-id="53ee4-144">True</span></span>|<span data-ttu-id="53ee4-145">選項按鈕控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。</span><span class="sxs-lookup"><span data-stu-id="53ee4-145">The radio button control is always included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="53ee4-146">True</span><span class="sxs-lookup"><span data-stu-id="53ee4-146">True</span></span>|<span data-ttu-id="53ee4-147">選項按鈕控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。</span><span class="sxs-lookup"><span data-stu-id="53ee4-147">The radio button control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式  
- 下表列出所有選項按鈕控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="53ee4-148">必要的使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="53ee4-148">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="53ee4-149">下表列出所有選項按鈕控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="53ee4-149">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by all radio button controls.</span></span> <span data-ttu-id="53ee4-150">如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="53ee4-150">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式\/控制項模式屬性|支援\/值|備註|  
-|--------------------|-----------|--------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|是|所有選項按鈕控制項都必須支援選取項目模式，才能夠被選取。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|請參閱備註。|必須填寫 `SelectionContainerProperty`，才能讓使用者介面自動化用戶端對於特定內容中的其他選項按鈕，判斷有哪些彼此相關聯。  若為 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 版本的選項按鈕，將不會支援這個屬性，因為無法從該舊版架構取得此資訊。|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|永不|選項按鈕一旦設定就無法循環其狀態。  選項按鈕絕對一律不支援此模式。|  
+|<span data-ttu-id="53ee4-151">控制項模式/控制項模式屬性</span><span class="sxs-lookup"><span data-stu-id="53ee4-151">Control Pattern/Control Pattern Property</span></span>|<span data-ttu-id="53ee4-152">支援/值</span><span class="sxs-lookup"><span data-stu-id="53ee4-152">Support/Value</span></span>|<span data-ttu-id="53ee4-153">備註</span><span class="sxs-lookup"><span data-stu-id="53ee4-153">Notes</span></span>|  
+|-----------------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|<span data-ttu-id="53ee4-154">是</span><span class="sxs-lookup"><span data-stu-id="53ee4-154">Yes</span></span>|<span data-ttu-id="53ee4-155">所有選項按鈕控制項都必須支援選取項目模式，才能夠被選取。</span><span class="sxs-lookup"><span data-stu-id="53ee4-155">All radio button controls must support the Selection Item pattern to enable themselves to be selected.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|<span data-ttu-id="53ee4-156">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="53ee4-156">See notes.</span></span>|<span data-ttu-id="53ee4-157">必須填寫 `SelectionContainerProperty` ，才能讓使用者介面自動化用戶端對於特定內容中的其他選項按鈕，判斷有哪些彼此相關聯。</span><span class="sxs-lookup"><span data-stu-id="53ee4-157">The `SelectionContainerProperty` must always be completed so that a UI Automation client can determine what other radio buttons within a specific context relate to one another.</span></span>  <span data-ttu-id="53ee4-158">若為 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 版本的選項按鈕，將不會支援這個屬性，因為無法從該舊版架構取得此資訊。</span><span class="sxs-lookup"><span data-stu-id="53ee4-158">For the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] version of the radio button, this property will not be supported because it is not possible to obtain this information from that legacy framework.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|<span data-ttu-id="53ee4-159">永不</span><span class="sxs-lookup"><span data-stu-id="53ee4-159">Never</span></span>|<span data-ttu-id="53ee4-160">選項按鈕一旦設定就無法循環其狀態。</span><span class="sxs-lookup"><span data-stu-id="53ee4-160">The radio button cannot cycle through its state once it has been set.</span></span>  <span data-ttu-id="53ee4-161">選項按鈕絕對一律不支援此模式。</span><span class="sxs-lookup"><span data-stu-id="53ee4-161">This pattern must never be supported on radio button.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列出所有選項按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱[UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="53ee4-162">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="53ee4-162">Required UI Automation Events</span></span>  
+ <span data-ttu-id="53ee4-163">下表列出所有選項按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="53ee4-163">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all radio button controls.</span></span> <span data-ttu-id="53ee4-164">如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="53ee4-164">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|必要項|無|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。|永不|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="53ee4-165"> 事件</span><span class="sxs-lookup"><span data-stu-id="53ee4-165"> Event</span></span>|<span data-ttu-id="53ee4-166">支援</span><span class="sxs-lookup"><span data-stu-id="53ee4-166">Support</span></span>|<span data-ttu-id="53ee4-167">備註</span><span class="sxs-lookup"><span data-stu-id="53ee4-167">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|<span data-ttu-id="53ee4-168">必要項</span><span class="sxs-lookup"><span data-stu-id="53ee4-168">Required</span></span>|<span data-ttu-id="53ee4-169">無</span><span class="sxs-lookup"><span data-stu-id="53ee4-169">None</span></span>|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|<span data-ttu-id="53ee4-170">必要項</span><span class="sxs-lookup"><span data-stu-id="53ee4-170">Required</span></span>|<span data-ttu-id="53ee4-171">無</span><span class="sxs-lookup"><span data-stu-id="53ee4-171">None</span></span>|  
+|<span data-ttu-id="53ee4-172"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="53ee4-172"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> property-changed event.</span></span>|<span data-ttu-id="53ee4-173">永不</span><span class="sxs-lookup"><span data-stu-id="53ee4-173">Never</span></span>|<span data-ttu-id="53ee4-174">無</span><span class="sxs-lookup"><span data-stu-id="53ee4-174">None</span></span>|  
+|<span data-ttu-id="53ee4-175"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="53ee4-175"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="53ee4-176">必要項</span><span class="sxs-lookup"><span data-stu-id="53ee4-176">Required</span></span>|<span data-ttu-id="53ee4-177">無</span><span class="sxs-lookup"><span data-stu-id="53ee4-177">None</span></span>|  
+|<span data-ttu-id="53ee4-178"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="53ee4-178"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="53ee4-179">必要項</span><span class="sxs-lookup"><span data-stu-id="53ee4-179">Required</span></span>|<span data-ttu-id="53ee4-180">無</span><span class="sxs-lookup"><span data-stu-id="53ee4-180">None</span></span>|  
+|<span data-ttu-id="53ee4-181"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="53ee4-181"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="53ee4-182">必要項</span><span class="sxs-lookup"><span data-stu-id="53ee4-182">Required</span></span>|<span data-ttu-id="53ee4-183">無</span><span class="sxs-lookup"><span data-stu-id="53ee4-183">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="53ee4-184">必要項</span><span class="sxs-lookup"><span data-stu-id="53ee4-184">Required</span></span>|<span data-ttu-id="53ee4-185">無</span><span class="sxs-lookup"><span data-stu-id="53ee4-185">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="53ee4-186">必要項</span><span class="sxs-lookup"><span data-stu-id="53ee4-186">Required</span></span>|<span data-ttu-id="53ee4-187">無</span><span class="sxs-lookup"><span data-stu-id="53ee4-187">None</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.RadioButton>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="53ee4-188">另請參閱</span><span class="sxs-lookup"><span data-stu-id="53ee4-188">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.RadioButton>  
+ [<span data-ttu-id="53ee4-189">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="53ee4-189">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="53ee4-190">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="53ee4-190">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

@@ -8,28 +8,25 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - sockets, code examples
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 759585d1029742f6f45e9f7253282af05accc82e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f7cf48f98b60d287cea1615cc8aefef6151c805c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="synchronous-client-socket-example"></a>同步用戶端通訊端範例
-下列範例程式會建立連線到伺服器的用戶端。 伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。 應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="08f7b-102">同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="08f7b-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="08f7b-103">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="08f7b-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="08f7b-104">伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="08f7b-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="08f7b-105">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="08f7b-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -47,12 +44,12 @@ Public Class SynchronousSocketClient
   
         ' Establish the remote endpoint for the socket.  
         ' This example uses port 11000 on the local computer.  
-        Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+        Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
         Dim remoteEP As New IPEndPoint(ipAddress, 11000)  
   
         ' Create a TCP/IP socket.  
-        Dim sender As New Socket(AddressFamily.InterNetwork, _  
+        Dim sender As New Socket(ipAddress.AddressFamily, _  
             SocketType.Stream, ProtocolType.Tcp)  
   
         ' Connect the socket to the remote endpoint.  
@@ -97,12 +94,12 @@ public class SynchronousSocketClient {
         try {  
             // Establish the remote endpoint for the socket.  
             // This example uses port 11000 on the local computer.  
-            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
             // Create a TCP/IP  socket.  
-            Socket sender = new Socket(AddressFamily.InterNetwork,   
+            Socket sender = new Socket(ipAddress.AddressFamily,   
                 SocketType.Stream, ProtocolType.Tcp );  
   
             // Connect the socket to the remote endpoint. Catch any errors.  
@@ -147,8 +144,7 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [同步伺服器通訊端範例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
- [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
-
+## <a name="see-also"></a><span data-ttu-id="08f7b-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="08f7b-106">See Also</span></span>  
+ [<span data-ttu-id="08f7b-107">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="08f7b-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [<span data-ttu-id="08f7b-108">使用同步用戶端通訊端</span><span class="sxs-lookup"><span data-stu-id="08f7b-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [<span data-ttu-id="08f7b-109">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="08f7b-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

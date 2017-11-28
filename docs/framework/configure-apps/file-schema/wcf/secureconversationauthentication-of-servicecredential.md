@@ -1,54 +1,63 @@
 ---
-title: "&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0fb9ff476812b6b889750e8eb7b80efce801f041
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;
-指定安全對話服務的設定。  
+# <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a><span data-ttu-id="c5bac-102">&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="c5bac-102">&lt;secureConversationAuthentication&gt; of &lt;serviceCredential&gt;</span></span>
+<span data-ttu-id="c5bac-103">指定安全對話服務的設定。</span><span class="sxs-lookup"><span data-stu-id="c5bac-103">Specifies the settings for a secure conversation service.</span></span>  
   
-## 語法  
+ <span data-ttu-id="c5bac-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c5bac-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c5bac-105">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="c5bac-105">\<behaviors></span></span>  
+<span data-ttu-id="c5bac-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="c5bac-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="c5bac-107">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="c5bac-107">\<behavior></span></span>  
+<span data-ttu-id="c5bac-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="c5bac-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="c5bac-109">\<s ></span><span class="sxs-lookup"><span data-stu-id="c5bac-109">\<secureConversationAuthentication></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c5bac-110">語法</span><span class="sxs-lookup"><span data-stu-id="c5bac-110">Syntax</span></span>  
   
+```xml  
 <secureConversationAuthentication securityStateEncoderType="String" />  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c5bac-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c5bac-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="c5bac-112">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c5bac-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="c5bac-113">屬性</span><span class="sxs-lookup"><span data-stu-id="c5bac-113">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|`securityStateEncoderType`|字串，指定要使用的 <xref:System.ServiceModel.Security.SecurityStateEncoder> 型別。|  
+|<span data-ttu-id="c5bac-114">屬性</span><span class="sxs-lookup"><span data-stu-id="c5bac-114">Attribute</span></span>|<span data-ttu-id="c5bac-115">描述</span><span class="sxs-lookup"><span data-stu-id="c5bac-115">Description</span></span>|  
+|---------------|-----------------|  
+|`securityStateEncoderType`|<span data-ttu-id="c5bac-116">字串，指定要使用的 <xref:System.ServiceModel.Security.SecurityStateEncoder> 型別。</span><span class="sxs-lookup"><span data-stu-id="c5bac-116">A string that specifies the type of <xref:System.ServiceModel.Security.SecurityStateEncoder> to be used.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="c5bac-117">子元素</span><span class="sxs-lookup"><span data-stu-id="c5bac-117">Child Elements</span></span>  
+ <span data-ttu-id="c5bac-118">無。</span><span class="sxs-lookup"><span data-stu-id="c5bac-118">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="c5bac-119">父項目</span><span class="sxs-lookup"><span data-stu-id="c5bac-119">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用於驗證 \(Authenticate\) 服務的認證，以及用戶端認證的驗證 \(Validation\) 相關設定。|  
+|<span data-ttu-id="c5bac-120">項目</span><span class="sxs-lookup"><span data-stu-id="c5bac-120">Element</span></span>|<span data-ttu-id="c5bac-121">說明</span><span class="sxs-lookup"><span data-stu-id="c5bac-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c5bac-122">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="c5bac-122">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="c5bac-123">指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。</span><span class="sxs-lookup"><span data-stu-id="c5bac-123">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
   
-## 備註  
- 使用此組態項目指定安全性內容權杖 \(SCT\) Cookie 序列化的已知宣告型別清單，以及指定可編碼與確保 Cookie 資訊安全的編碼器。  如需 SCT 的詳細資訊，請參閱<xref:System.ServiceModel.Security.SecureConversationServiceCredential>。  
+## <a name="remarks"></a><span data-ttu-id="c5bac-124">備註</span><span class="sxs-lookup"><span data-stu-id="c5bac-124">Remarks</span></span>  
+ <span data-ttu-id="c5bac-125">使用此組態項目指定安全性內容權杖 (SCT) Cookie 序列化的已知宣告型別清單，以及指定可編碼與確保 Cookie 資訊安全的編碼器。</span><span class="sxs-lookup"><span data-stu-id="c5bac-125">Use this configuration element to specify a list of known claim types for the Security Context Token (SCT) cookies serialization, as well as an encoder to encode and secure cookies information.</span></span> <span data-ttu-id="c5bac-126">如需 SCT 的詳細資訊，請參閱<xref:System.ServiceModel.Security.SecureConversationServiceCredential>。</span><span class="sxs-lookup"><span data-stu-id="c5bac-126">For more information on SCT, see <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.</span></span>  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>   
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>   
- <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>   
+## <a name="see-also"></a><span data-ttu-id="c5bac-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c5bac-127">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>  
+ <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>  
+ <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>  
  <xref:System.ServiceModel.Security.SecureConversationServiceCredential>

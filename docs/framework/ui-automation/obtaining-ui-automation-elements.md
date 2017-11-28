@@ -1,109 +1,112 @@
 ---
-title: "Obtaining UI Automation Elements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, obtaining elements"
-  - "elements, UI Automation, obtaining"
+title: "取得 UI 自動化項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, obtaining elements
+- elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-caps.latest.revision: 23
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: f657d4289e46f84246059010a2f9550d1c831d3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Obtaining UI Automation Elements
+# <a name="obtaining-ui-automation-elements"></a><span data-ttu-id="2cb91-102">取得 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="2cb91-102">Obtaining UI Automation Elements</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱[Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="2cb91-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="2cb91-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="2cb91-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="2cb91-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題描述取得 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 項目之 <xref:System.Windows.Automation.AutomationElement> 物件的各種方式。  
+ <span data-ttu-id="2cb91-105">本主題描述取得 <xref:System.Windows.Automation.AutomationElement> 項目之 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 物件的各種方式。</span><span class="sxs-lookup"><span data-stu-id="2cb91-105">This topic describes the various ways of obtaining <xref:System.Windows.Automation.AutomationElement> objects for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
   
 > [!CAUTION]
->  如果用戶端應用程式可能會嘗試尋找本身使用者介面中的項目，您就必須在個別執行緒上進行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 呼叫。 如需詳細資訊，請參閱[UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+>  <span data-ttu-id="2cb91-106">如果用戶端應用程式可能會嘗試尋找本身使用者介面中的項目，您就必須在個別執行緒上進行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 呼叫。</span><span class="sxs-lookup"><span data-stu-id="2cb91-106">If your client application might attempt to find elements in its own user interface, you must make all [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] calls on a separate thread.</span></span> <span data-ttu-id="2cb91-107">如需詳細資訊，請參閱 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。</span><span class="sxs-lookup"><span data-stu-id="2cb91-107">For more information, see [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).</span></span>  
   
 <a name="The_Root_Element"></a>   
-## 根項目  
- 對於 <xref:System.Windows.Automation.AutomationElement> 物件的所有搜尋都必須有一個開始位置。 這可以是任何項目，包括桌面、應用程式視窗或控制項。  
+## <a name="root-element"></a><span data-ttu-id="2cb91-108">根項目</span><span class="sxs-lookup"><span data-stu-id="2cb91-108">Root Element</span></span>  
+ <span data-ttu-id="2cb91-109">對於 <xref:System.Windows.Automation.AutomationElement> 物件的所有搜尋都必須有一個開始位置。</span><span class="sxs-lookup"><span data-stu-id="2cb91-109">All searches for <xref:System.Windows.Automation.AutomationElement> objects must have a starting-place.</span></span> <span data-ttu-id="2cb91-110">這可以是任何項目，包括桌面、應用程式視窗或控制項。</span><span class="sxs-lookup"><span data-stu-id="2cb91-110">This can be any element, including the desktop, an application window, or a control.</span></span>  
   
- 受所有項目繼承的桌面根項目取自靜態 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=fullName> 屬性。  
+ <span data-ttu-id="2cb91-111">所有項目會繼承而來，桌面的根項目取自靜態<xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="2cb91-111">The root element for the desktop, from which all elements are descended, is obtained from the static <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> property.</span></span>  
   
 > [!CAUTION]
->  一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A> 的直接子系。 如果搜尋子代可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您就應該要從應用程式視窗或較低層級的容器開始搜尋。  
+>  <span data-ttu-id="2cb91-112">一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。</span><span class="sxs-lookup"><span data-stu-id="2cb91-112">In general, you should try to obtain only direct children of the <xref:System.Windows.Automation.AutomationElement.RootElement%2A>.</span></span> <span data-ttu-id="2cb91-113">如果搜尋子代可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。</span><span class="sxs-lookup"><span data-stu-id="2cb91-113">A search for descendants may iterate through hundreds or even thousands of elements, possibly resulting in a stack overflow.</span></span> <span data-ttu-id="2cb91-114">如果您嘗試取得較低層級的特定項目，您就應該要從應用程式視窗或較低層級的容器開始搜尋。</span><span class="sxs-lookup"><span data-stu-id="2cb91-114">If you are attempting to obtain a specific element at a lower level, you should start your search from the application window or from a container at a lower level.</span></span>  
   
 <a name="Using_Conditions"></a>   
-## Conditions  
- 對於可用來擷取 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目的大部分技術，您都必須指定 <xref:System.Windows.Automation.Condition>，這是一組準則，定義您想要擷取哪些項目。  
+## <a name="conditions"></a><span data-ttu-id="2cb91-115">Conditions</span><span class="sxs-lookup"><span data-stu-id="2cb91-115">Conditions</span></span>  
+ <span data-ttu-id="2cb91-116">對於可用來擷取 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目的大部分技術，您都必須指定 <xref:System.Windows.Automation.Condition>，這是一組準則，定義您想要擷取哪些項目。</span><span class="sxs-lookup"><span data-stu-id="2cb91-116">For most techniques you can use to retrieve [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements, you must specify a <xref:System.Windows.Automation.Condition>, which is a set of criteria defining what elements you want to retrieve.</span></span>  
   
- 最簡單的條件是 <xref:System.Windows.Automation.Condition.TrueCondition>，是一種預先定義的物件，會指定要傳回之搜尋範圍內的所有項目。<xref:System.Windows.Automation.Condition.FalseCondition>，也就是 <xref:System.Windows.Automation.Condition.TrueCondition> 的反向，並不是很有用，原因在於它可能會讓任何項目都無法被找到。  
+ <span data-ttu-id="2cb91-117">最簡單的條件是 <xref:System.Windows.Automation.Condition.TrueCondition>，是一種預先定義的物件，會指定要傳回之搜尋範圍內的所有項目。</span><span class="sxs-lookup"><span data-stu-id="2cb91-117">The simplest condition is <xref:System.Windows.Automation.Condition.TrueCondition>, a predefined object specifying that all elements within the search scope are to be returned.</span></span> <span data-ttu-id="2cb91-118"><xref:System.Windows.Automation.Condition.FalseCondition>，也就是 <xref:System.Windows.Automation.Condition.TrueCondition>的反向，並不是很有用，原因在於它可能會讓任何項目都無法被找到。</span><span class="sxs-lookup"><span data-stu-id="2cb91-118"><xref:System.Windows.Automation.Condition.FalseCondition>, the converse of <xref:System.Windows.Automation.Condition.TrueCondition>, is less useful, as it would prevent any elements from being found.</span></span>  
   
- 有三個預先定義的條件可單獨使用，或與其他條件組合使用：<xref:System.Windows.Automation.Automation.ContentViewCondition>、<xref:System.Windows.Automation.Automation.ControlViewCondition> 和 <xref:System.Windows.Automation.Automation.RawViewCondition>。<xref:System.Windows.Automation.Automation.RawViewCondition> 供本身使用，相當於 <xref:System.Windows.Automation.Condition.TrueCondition>，原因在於它不會依其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 或 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 屬性篩選項目。  
+ <span data-ttu-id="2cb91-119">有三個預先定義的條件可單獨使用，或與其他條件組合使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。</span><span class="sxs-lookup"><span data-stu-id="2cb91-119">Three other predefined conditions can be used alone or in combination with other conditions: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>, and <xref:System.Windows.Automation.Automation.RawViewCondition>.</span></span> <span data-ttu-id="2cb91-120"><xref:System.Windows.Automation.Automation.RawViewCondition>供本身使用，相當於 <xref:System.Windows.Automation.Condition.TrueCondition>，原因在於它不會依其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 或 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 屬性篩選項目。</span><span class="sxs-lookup"><span data-stu-id="2cb91-120"><xref:System.Windows.Automation.Automation.RawViewCondition>, used by itself, is equivalent to <xref:System.Windows.Automation.Condition.TrueCondition>, because it does not filter elements by their <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> or <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> properties.</span></span>  
   
- 其他條件可從一個以上的 <xref:System.Windows.Automation.PropertyCondition> 物件建置，其中每個物件都會指定屬性值。 例如，<xref:System.Windows.Automation.PropertyCondition> 可能指定該項目是否已啟用，或者它是否支援特定的控制項模式。  
+ <span data-ttu-id="2cb91-121">其他條件可從一個以上的 <xref:System.Windows.Automation.PropertyCondition> 物件建置，其中每個物件都會指定屬性值。</span><span class="sxs-lookup"><span data-stu-id="2cb91-121">Other conditions are built up from one or more <xref:System.Windows.Automation.PropertyCondition> objects, each of which specifies a property value.</span></span> <span data-ttu-id="2cb91-122">例如， <xref:System.Windows.Automation.PropertyCondition> 可能指定該項目是否已啟用，或者它是否支援特定的控制項模式。</span><span class="sxs-lookup"><span data-stu-id="2cb91-122">For example, a <xref:System.Windows.Automation.PropertyCondition> might specify that the element is enabled, or that it supports a certain control pattern.</span></span>  
   
- 條件可以使用布林邏輯加以組合，方法是建構 <xref:System.Windows.Automation.AndCondition>、<xref:System.Windows.Automation.OrCondition> 和 <xref:System.Windows.Automation.NotCondition> 類型的物件。  
+ <span data-ttu-id="2cb91-123">條件可以使用布林邏輯加以組合，方法是建構 <xref:System.Windows.Automation.AndCondition>、 <xref:System.Windows.Automation.OrCondition>和 <xref:System.Windows.Automation.NotCondition>類型的物件。</span><span class="sxs-lookup"><span data-stu-id="2cb91-123">Conditions can be combined using Boolean logic by constructing objects of types <xref:System.Windows.Automation.AndCondition>, <xref:System.Windows.Automation.OrCondition>, and <xref:System.Windows.Automation.NotCondition>.</span></span>  
   
 <a name="Search_Scope"></a>   
-## 搜尋範圍  
- 使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 或 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 完成的搜尋必須具備範圍以及開始位置。  
+## <a name="search-scope"></a><span data-ttu-id="2cb91-124">搜尋範圍</span><span class="sxs-lookup"><span data-stu-id="2cb91-124">Search Scope</span></span>  
+ <span data-ttu-id="2cb91-125">使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 或 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 完成的搜尋必須具備範圍以及開始位置。</span><span class="sxs-lookup"><span data-stu-id="2cb91-125">Searches done by using <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> or <xref:System.Windows.Automation.AutomationElement.FindAll%2A> must have a scope as well as a starting-place.</span></span>  
   
- 此範圍定義要搜尋之開始位置周圍的空間。 這可能包含項目本身，及該項目的同層級、父系、祖系、直接子系和子系。  
+ <span data-ttu-id="2cb91-126">此範圍定義要搜尋之開始位置周圍的空間。</span><span class="sxs-lookup"><span data-stu-id="2cb91-126">The scope defines the space around the starting-place that is to be searched.</span></span> <span data-ttu-id="2cb91-127">這可能包含項目本身，及該項目的同層級、父系、祖系、直接子系和子系。</span><span class="sxs-lookup"><span data-stu-id="2cb91-127">This might include the element itself, its siblings, its parent, its ancestors, its immediate children, and its descendants.</span></span>  
   
- 此搜尋範圍由 <xref:System.Windows.Automation.TreeScope> 列舉值的位元組合所定義。  
+ <span data-ttu-id="2cb91-128">此搜尋範圍由 <xref:System.Windows.Automation.TreeScope> 列舉值的位元組合所定義。</span><span class="sxs-lookup"><span data-stu-id="2cb91-128">The scope of a search is defined by a bitwise combination of values from the <xref:System.Windows.Automation.TreeScope> enumeration.</span></span>  
   
 <a name="Finding_a_Known_Element"></a>   
-## 尋找已知的項目  
- 若要尋找已知的項目，且該項目由其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>、<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A> 或某些其他屬性或屬性組合所識別，則使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 方法最為容易。 如果要搜尋的項目是應用程式視窗，則搜尋開始點可以是 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>。  
+## <a name="finding-a-known-element"></a><span data-ttu-id="2cb91-129">尋找已知的項目</span><span class="sxs-lookup"><span data-stu-id="2cb91-129">Finding a Known Element</span></span>  
+ <span data-ttu-id="2cb91-130">若要尋找已知的項目，且該項目由其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>、 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>或某些其他屬性或屬性組合所識別，則使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 方法最為容易。</span><span class="sxs-lookup"><span data-stu-id="2cb91-130">To find a known element, identified by its <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>, or some other property or combination of properties, it is easiest to use the <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> method.</span></span> <span data-ttu-id="2cb91-131">如果要搜尋的項目是應用程式視窗，則搜尋開始點可以是 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>。</span><span class="sxs-lookup"><span data-stu-id="2cb91-131">If the element sought is an application window, the starting-point of the search can be the <xref:System.Windows.Automation.AutomationElement.RootElement%2A>.</span></span>  
   
- 用這種方式在自動化測試情節中尋找 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目最好用。  
+ <span data-ttu-id="2cb91-132">用這種方式在自動化測試情節中尋找 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目最好用。</span><span class="sxs-lookup"><span data-stu-id="2cb91-132">This way of finding [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements is most useful in automated testing scenarios.</span></span>  
   
 <a name="Finding_Elements_in_a_Subtree"></a>   
-## 在子樹狀結構中尋找項目  
- 若要尋找符合與已知項目相關之特定準則的所有項目，您可以使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 例如，您或許可以使用這個方法，從清單或功能表上擷取清單項目或功能表項目，或識別在對話方塊中的所有控制項。  
+## <a name="finding-elements-in-a-subtree"></a><span data-ttu-id="2cb91-133">在子樹狀結構中尋找項目</span><span class="sxs-lookup"><span data-stu-id="2cb91-133">Finding Elements in a Subtree</span></span>  
+ <span data-ttu-id="2cb91-134">若要尋找符合與已知項目相關之特定準則的所有項目，您可以使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。</span><span class="sxs-lookup"><span data-stu-id="2cb91-134">To find all elements meeting specific criteria that are related to a known element, you can use <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.</span></span> <span data-ttu-id="2cb91-135">例如，您或許可以使用這個方法，從清單或功能表上擷取清單項目或功能表項目，或識別在對話方塊中的所有控制項。</span><span class="sxs-lookup"><span data-stu-id="2cb91-135">For example, you could use this method to retrieve list items or menu items from a list or menu, or to identify all controls in a dialog box.</span></span>  
   
 <a name="Walking_a_Subtree"></a>   
-## 逐一查看子樹狀結構  
- 如果您事先不知道您的用戶端可搭配使用的應用程式，您可以建構所需所有項目的子樹狀結構，方法是使用 <xref:System.Windows.Automation.TreeWalker> 類別。 您的應用程式可能會執行這項操作以回應焦點變更的事件；也就是當應用程式或控制項收到輸入的焦點時，使用者介面自動化用戶端會檢查子系，也可能檢查已取得焦點之項目的所有子系。  
+## <a name="walking-a-subtree"></a><span data-ttu-id="2cb91-136">逐一查看子樹狀結構</span><span class="sxs-lookup"><span data-stu-id="2cb91-136">Walking a Subtree</span></span>  
+ <span data-ttu-id="2cb91-137">如果您事先不知道您的用戶端可搭配使用的應用程式，您可以建構所需所有項目的子樹狀結構，方法是使用 <xref:System.Windows.Automation.TreeWalker> 類別。</span><span class="sxs-lookup"><span data-stu-id="2cb91-137">If you have no prior knowledge of the applications that your client may be used with, you can construct a subtree of all elements of interest by using the <xref:System.Windows.Automation.TreeWalker> class.</span></span> <span data-ttu-id="2cb91-138">您的應用程式可能會執行這項操作以回應焦點變更的事件；也就是當應用程式或控制項收到輸入的焦點時，使用者介面自動化用戶端會檢查子系，也可能檢查已取得焦點之項目的所有子系。</span><span class="sxs-lookup"><span data-stu-id="2cb91-138">Your application might do this in response to a focus-changed event; that is, when an application or control receives input focus, the UI Automation client examines children and perhaps all descendants of the focused element.</span></span>  
   
- 而可使用 <xref:System.Windows.Automation.TreeWalker> 的另一種方式為識別項目的祖系。 例如，您可以向上查看樹狀結構來識別控制項的父視窗。  
+ <span data-ttu-id="2cb91-139">而可使用 <xref:System.Windows.Automation.TreeWalker> 的另一種方式為識別項目的祖系。</span><span class="sxs-lookup"><span data-stu-id="2cb91-139">Another way in which <xref:System.Windows.Automation.TreeWalker> can be used is to identify the ancestors of an element.</span></span> <span data-ttu-id="2cb91-140">例如，您可以向上查看樹狀結構來識別控制項的父視窗。</span><span class="sxs-lookup"><span data-stu-id="2cb91-140">For example, by walking up the tree you can identify the parent window of a control.</span></span>  
   
- 您可以建立此類別的物件 \(藉由傳遞 <xref:System.Windows.Automation.Condition> 定義所需項目\) 來使用 <xref:System.Windows.Automation.TreeWalker>，或使用下列其中一種預先定義的物件，該物件定義為 <xref:System.Windows.Automation.TreeWalker> 的欄位。  
+ <span data-ttu-id="2cb91-141">您可以建立此類別的物件 (藉由傳遞 <xref:System.Windows.Automation.TreeWalker> 定義所需項目) 來使用 <xref:System.Windows.Automation.Condition>，或使用下列其中一種預先定義的物件，該物件定義為 <xref:System.Windows.Automation.TreeWalker>的欄位。</span><span class="sxs-lookup"><span data-stu-id="2cb91-141">You can use <xref:System.Windows.Automation.TreeWalker> either by creating an object of the class (defining the elements of interest by passing a <xref:System.Windows.Automation.Condition>), or by using one of the following predefined objects that are defined as fields of <xref:System.Windows.Automation.TreeWalker>.</span></span>  
   
 |||  
 |-|-|  
-|<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>|只尋找其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 屬性是 `true` 的項目。|  
-|<xref:System.Windows.Automation.TreeWalker.ControlViewWalker>|只尋找其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 屬性是 `true` 的項目。|  
-|<xref:System.Windows.Automation.TreeWalker.RawViewWalker>|尋找所有項目。|  
+|<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>|<span data-ttu-id="2cb91-142">只尋找其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 屬性是 `true`的項目。</span><span class="sxs-lookup"><span data-stu-id="2cb91-142">Finds only elements whose <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> property is `true`.</span></span>|  
+|<xref:System.Windows.Automation.TreeWalker.ControlViewWalker>|<span data-ttu-id="2cb91-143">只尋找其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 屬性是 `true`的項目。</span><span class="sxs-lookup"><span data-stu-id="2cb91-143">Finds only elements whose <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> property is `true`.</span></span>|  
+|<xref:System.Windows.Automation.TreeWalker.RawViewWalker>|<span data-ttu-id="2cb91-144">尋找所有項目。</span><span class="sxs-lookup"><span data-stu-id="2cb91-144">Finds all elements.</span></span>|  
   
- 在您取得 <xref:System.Windows.Automation.TreeWalker> 之後，用法就非常簡單。 只要呼叫 `Get` 方法在子樹狀結構的項目之間瀏覽即可。  
+ <span data-ttu-id="2cb91-145">在您取得 <xref:System.Windows.Automation.TreeWalker>之後，用法就非常簡單。</span><span class="sxs-lookup"><span data-stu-id="2cb91-145">After you have obtained a <xref:System.Windows.Automation.TreeWalker>, using it is straightforward.</span></span> <span data-ttu-id="2cb91-146">只要呼叫 `Get` 方法在子樹狀結構的項目之間瀏覽即可。</span><span class="sxs-lookup"><span data-stu-id="2cb91-146">Simply call the `Get` methods to navigate among elements of the subtree.</span></span>  
   
- <xref:System.Windows.Automation.TreeWalker.Normalize%2A> 方法可用來瀏覽至項目，該項目位於另一個不屬於該檢視之項目的子樹狀結構中。 例如，假設您已使用 <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> 建立子樹狀結構檢視。 您的應用程式接著會收到通知，指出捲軸已接收輸入焦點。 因為捲軸不是內容項目，所以不會出現在子樹狀結構檢視中。 不過，您可以將代表此捲軸的 <xref:System.Windows.Automation.AutomationElement> 傳遞至 <xref:System.Windows.Automation.TreeWalker.Normalize%2A>，並擷取內容檢視中最接近的祖系。  
+ <span data-ttu-id="2cb91-147"><xref:System.Windows.Automation.TreeWalker.Normalize%2A> 方法可用來瀏覽至項目，該項目位於另一個不屬於該檢視之項目的子樹狀結構中。</span><span class="sxs-lookup"><span data-stu-id="2cb91-147">The <xref:System.Windows.Automation.TreeWalker.Normalize%2A> method can be used for navigating to an element in the subtree from another element that is not part of the view.</span></span> <span data-ttu-id="2cb91-148">例如，假設您已使用 <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>建立子樹狀結構檢視。</span><span class="sxs-lookup"><span data-stu-id="2cb91-148">For example, suppose you have created a view of a subtree by using <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>.</span></span> <span data-ttu-id="2cb91-149">您的應用程式接著會收到通知，指出捲軸已接收輸入焦點。</span><span class="sxs-lookup"><span data-stu-id="2cb91-149">Your application then receives notification that a scroll bar has received the input focus.</span></span> <span data-ttu-id="2cb91-150">因為捲軸不是內容項目，所以不會出現在子樹狀結構檢視中。</span><span class="sxs-lookup"><span data-stu-id="2cb91-150">Because a scroll bar is not a content element, it is not present in your view of the subtree.</span></span> <span data-ttu-id="2cb91-151">不過，您可以將代表此捲軸的 <xref:System.Windows.Automation.AutomationElement> 傳遞至 <xref:System.Windows.Automation.TreeWalker.Normalize%2A> ，並擷取內容檢視中最接近的祖系。</span><span class="sxs-lookup"><span data-stu-id="2cb91-151">However, you can pass the <xref:System.Windows.Automation.AutomationElement> representing the scroll bar to <xref:System.Windows.Automation.TreeWalker.Normalize%2A> and retrieve the nearest ancestor that is in the content view.</span></span>  
   
 <a name="Other_Ways_to_Retrieve_an_Element"></a>   
-## 擷取項目的其他方式  
- 除了搜尋和瀏覽以外，您也可以用下列方式擷取 <xref:System.Windows.Automation.AutomationElement>。  
+## <a name="other-ways-to-retrieve-an-element"></a><span data-ttu-id="2cb91-152">擷取項目的其他方式</span><span class="sxs-lookup"><span data-stu-id="2cb91-152">Other Ways to Retrieve an Element</span></span>  
+ <span data-ttu-id="2cb91-153">除了搜尋和瀏覽以外，您也可以用下列方式擷取 <xref:System.Windows.Automation.AutomationElement> 。</span><span class="sxs-lookup"><span data-stu-id="2cb91-153">In addition to searches and navigation, you can retrieve an <xref:System.Windows.Automation.AutomationElement> in the following ways.</span></span>  
   
-### 從事件擷取  
- 當您的應用程式收到 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件時，傳遞至事件處理常式的來源物件是 <xref:System.Windows.Automation.AutomationElement>。 例如，如果您已訂閱焦點變更事件，則傳遞給 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> 的來源是接收此焦點的項目。  
+### <a name="from-an-event"></a><span data-ttu-id="2cb91-154">從事件擷取</span><span class="sxs-lookup"><span data-stu-id="2cb91-154">From an Event</span></span>  
+ <span data-ttu-id="2cb91-155">當您的應用程式收到 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件時，傳遞至事件處理常式的來源物件是 <xref:System.Windows.Automation.AutomationElement>。</span><span class="sxs-lookup"><span data-stu-id="2cb91-155">When your application receives a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event, the source object passed to your event handler is an <xref:System.Windows.Automation.AutomationElement>.</span></span> <span data-ttu-id="2cb91-156">例如，如果您已訂閱焦點變更事件，則傳遞給 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> 的來源是接收此焦點的項目。</span><span class="sxs-lookup"><span data-stu-id="2cb91-156">For example, if you have subscribed to focus-changed events, the source passed to your <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> is the element that received the focus.</span></span>  
   
- 如需詳細資訊，請參閱[Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)。  
+ <span data-ttu-id="2cb91-157">如需詳細資訊，請參閱 [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="2cb91-157">For more information, see [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).</span></span>  
   
-### 從點擷取  
- 如果您有螢幕座標 \(例如滑鼠指標位置\)，您就可以使用靜態 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> 方法來擷取 <xref:System.Windows.Automation.AutomationElement>。  
+### <a name="from-a-point"></a><span data-ttu-id="2cb91-158">從點擷取</span><span class="sxs-lookup"><span data-stu-id="2cb91-158">From a Point</span></span>  
+ <span data-ttu-id="2cb91-159">如果您有螢幕座標 (例如滑鼠指標位置)，您就可以使用靜態 <xref:System.Windows.Automation.AutomationElement> 方法來擷取 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> 。</span><span class="sxs-lookup"><span data-stu-id="2cb91-159">If you have screen coordinates (for example, a cursor position), you can retrieve an <xref:System.Windows.Automation.AutomationElement> by using the static <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> method.</span></span>  
   
-### 從視窗控制代碼擷取  
- 若要從 HWND 擷取 <xref:System.Windows.Automation.AutomationElement>，請使用靜態 <xref:System.Windows.Automation.AutomationElement.FromHandle%2A> 方法。  
+### <a name="from-a-window-handle"></a><span data-ttu-id="2cb91-160">從視窗控制代碼擷取</span><span class="sxs-lookup"><span data-stu-id="2cb91-160">From a Window Handle</span></span>  
+ <span data-ttu-id="2cb91-161">若要從 HWND 擷取 <xref:System.Windows.Automation.AutomationElement> ，請使用靜態 <xref:System.Windows.Automation.AutomationElement.FromHandle%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="2cb91-161">To retrieve an <xref:System.Windows.Automation.AutomationElement> from an HWND, use the static <xref:System.Windows.Automation.AutomationElement.FromHandle%2A> method.</span></span>  
   
-### 從取得焦點的控制項擷取  
- 您可以從靜態 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> 屬性擷取 <xref:System.Windows.Automation.AutomationElement>，其代表取得焦點的控制項。  
+### <a name="from-the-focused-control"></a><span data-ttu-id="2cb91-162">從取得焦點的控制項擷取</span><span class="sxs-lookup"><span data-stu-id="2cb91-162">From the Focused Control</span></span>  
+ <span data-ttu-id="2cb91-163">您可以從靜態 <xref:System.Windows.Automation.AutomationElement> 屬性擷取 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> ，其代表取得焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="2cb91-163">You can retrieve an <xref:System.Windows.Automation.AutomationElement> that represents the focused control from the static <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> property.</span></span>  
   
-## 請參閱  
- [Find a UI Automation Element Based on a Property Condition](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)   
- [Navigate Among UI Automation Elements with TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+## <a name="see-also"></a><span data-ttu-id="2cb91-164">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2cb91-164">See Also</span></span>  
+ [<span data-ttu-id="2cb91-165">尋找 UI 自動化的項目，根據屬性條件</span><span class="sxs-lookup"><span data-stu-id="2cb91-165">Find a UI Automation Element Based on a Property Condition</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [<span data-ttu-id="2cb91-166">UI 自動化項目使用 TreeWalker 巡覽</span><span class="sxs-lookup"><span data-stu-id="2cb91-166">Navigate Among UI Automation Elements with TreeWalker</span></span>](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [<span data-ttu-id="2cb91-167">UI 自動化樹狀目錄概觀</span><span class="sxs-lookup"><span data-stu-id="2cb91-167">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

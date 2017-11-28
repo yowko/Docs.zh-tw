@@ -1,70 +1,51 @@
 ---
 title: "&lt;例外狀況&gt; (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - exception
 - <exception>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd859a09bfbe9f814bf57f0987fd49ded9ba7100
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bdcbe116db4ed0f63ea73c524c482266b4ac1a38
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltexceptiongt-c-programming-guide"></a>&lt;例外狀況&gt; (C# 程式設計手冊)
-## <a name="syntax"></a>語法  
+# <a name="ltexceptiongt-c-programming-guide"></a><span data-ttu-id="cf2e0-102">&lt;例外狀況&gt; (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="cf2e0-102">&lt;exception&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="cf2e0-103">語法</span><span class="sxs-lookup"><span data-stu-id="cf2e0-103">Syntax</span></span>  
   
-```  
+```xml  
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a>參數  
- cref = " `member`"  
- 可從目前編譯環境取得之例外狀況的參考。 編譯器會檢查指定的例外狀況是否存在，並將 `member` 轉譯為輸出 XML 中的標準項目名稱。 `member` 必須出現在雙引號內 (" ")。  
+#### <a name="parameters"></a><span data-ttu-id="cf2e0-104">參數</span><span class="sxs-lookup"><span data-stu-id="cf2e0-104">Parameters</span></span>  
+ <span data-ttu-id="cf2e0-105">cref = " `member`"</span><span class="sxs-lookup"><span data-stu-id="cf2e0-105">cref = " `member`"</span></span>  
+ <span data-ttu-id="cf2e0-106">可從目前編譯環境取得之例外狀況的參考。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-106">A reference to an exception that is available from the current compilation environment.</span></span> <span data-ttu-id="cf2e0-107">編譯器會檢查指定的例外狀況是否存在，並將 `member` 轉譯為輸出 XML 中的標準項目名稱。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-107">The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="cf2e0-108">`member` 必須出現在雙引號內 (" ")。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-108">`member` must appear within double quotation marks (" ").</span></span>  
   
- 如需如何建立泛型型別 cref 參考的詳細資訊，請參閱[\<請參閱>](../../../csharp/programming-guide/xmldoc/see.md)。  
+ <span data-ttu-id="cf2e0-109">如需如何建立泛型型別 cref 參考的詳細資訊，請參閱[\<請參閱>](../../../csharp/programming-guide/xmldoc/see.md)。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-109">For more information on how to create a cref reference to a generic type, see [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span></span>  
   
  `description`  
- 例外狀況的描述。  
+ <span data-ttu-id="cf2e0-110">例外狀況的描述。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-110">A description of the exception.</span></span>  
   
-## <a name="remarks"></a>備註  
- \<exception> 標記可讓您指定可以擲回的例外狀況。 這個標記可以套用至方法、屬性、事件和索引子的定義。  
+## <a name="remarks"></a><span data-ttu-id="cf2e0-111">備註</span><span class="sxs-lookup"><span data-stu-id="cf2e0-111">Remarks</span></span>  
+ <span data-ttu-id="cf2e0-112">\<exception> 標記可讓您指定可以擲回的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-112">The \<exception> tag lets you specify which exceptions can be thrown.</span></span> <span data-ttu-id="cf2e0-113">這個標記可以套用至方法、屬性、事件和索引子的定義。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-113">This tag can be applied to definitions for methods, properties, events, and indexers.</span></span>  
   
- 編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
+ <span data-ttu-id="cf2e0-114">編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
- 如需例外狀況處理的詳細資訊，請參閱[例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)。  
+ <span data-ttu-id="cf2e0-115">如需例外狀況處理的詳細資訊，請參閱[例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)。</span><span class="sxs-lookup"><span data-stu-id="cf2e0-115">For more information about exception handling, see [Exceptions and Exception Handling](../../../csharp/programming-guide/exceptions/index.md).</span></span>  
   
-## <a name="example"></a>範例  
- [!code-cs[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
+## <a name="example"></a><span data-ttu-id="cf2e0-116">範例</span><span class="sxs-lookup"><span data-stu-id="cf2e0-116">Example</span></span>  
+ [!code-csharp[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="cf2e0-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cf2e0-117">See Also</span></span>  
+ [<span data-ttu-id="cf2e0-118">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="cf2e0-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="cf2e0-119">建議使用的文件註解標籤</span><span class="sxs-lookup"><span data-stu-id="cf2e0-119">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

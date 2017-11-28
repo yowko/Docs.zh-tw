@@ -1,56 +1,62 @@
 ---
-title: "攔截器 (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查詢攔截器 [WCF Data Services]"
-  - "WCF Data Services, 自訂"
+title: "攔截器 (WCF 資料服務)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, customizing
+- query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7aad516b819723c97a40a016a46ddcbe0fcdf4d2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 攔截器 (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓應用程式攔截要求訊息，讓您可以將自訂邏輯加入至作業。  您可以使用此自訂邏輯驗證傳入訊息中的資料。  您還可以使用它進一步限制查詢要求的範圍，例如，以根據要求來插入自訂授權原則。  
+# <a name="interceptors-wcf-data-services"></a><span data-ttu-id="a4c0c-102">攔截器 (WCF 資料服務)</span><span class="sxs-lookup"><span data-stu-id="a4c0c-102">Interceptors (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="a4c0c-103">讓應用程式攔截要求訊息，您可以將自訂邏輯加入作業。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-103"> enables an application to intercept request messages so that you can add custom logic to an operation.</span></span> <span data-ttu-id="a4c0c-104">您可以使用這個自訂邏輯驗證傳入訊息中的資料。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-104">You can use this custom logic to validate data in incoming messages.</span></span> <span data-ttu-id="a4c0c-105">您還可以使用它進一步限制查詢要求的範圍，例如，以根據要求來插入自訂授權原則。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-105">You can also use it to further restrict the scope of a query request, such as to insert a custom authorization policy on a per request basis.</span></span>  
   
- 攔截由資料服務中特別屬性化的方法執行。  在訊息處理期間的適當時間點，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會呼叫這些方法。  攔截器是依實體集為基礎而定義的，而且攔截器方法不像服務作業一樣可以接受要求的參數。  查詢攔截器方法會在處理 HTTP GET 要求時呼叫，必須傳回 Lambda 運算式以判斷查詢結果是否應傳回攔截器實體集的執行個體。  資料服務會使用此運算式進一步精簡所要求的作業。  以下是查詢攔截器的定義範例。  
+ <span data-ttu-id="a4c0c-106">攔截由資料服務中特別屬性化的方法執行。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-106">Interception is performed by specially attributed methods in the data service.</span></span> <span data-ttu-id="a4c0c-107">在訊息處理期間的適當時間點，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會呼叫這些方法。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-107">These methods are called by [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] at the appropriate point in message processing.</span></span> <span data-ttu-id="a4c0c-108">攔截器會定義以每個實體集為基礎，並像服務作業可以攔截器方法無法接受要求的參數。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-108">Interceptors are defined on a per-entity set basis, and interceptor methods cannot accept parameters from the request like service operations can.</span></span> <span data-ttu-id="a4c0c-109">查詢攔截器方法會處理 HTTP GET 要求時呼叫，必須傳回 lambda 運算式，決定是否要設定攔截器實體的執行個體應該傳回查詢結果。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-109">Query interceptor methods, which are called when processing an HTTP GET request, must return a lambda expression that determines whether an instance of the interceptor's entity set should be returned by the query results.</span></span> <span data-ttu-id="a4c0c-110">資料服務會使用此運算式進一步精簡所要求的作業。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-110">This expression is used by the data service to further refine the requested operation.</span></span> <span data-ttu-id="a4c0c-111">以下是查詢攔截器的定義範例。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-111">The following is an example definition of a query interceptor.</span></span>  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- 如需詳細資訊，請參閱[HOW TO：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ <span data-ttu-id="a4c0c-112">如需詳細資訊，請參閱[如何： 攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-112">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
- 變更處理非查詢作業時呼叫的攔截器，必須傳回 `void` \(在 Visual Basic 為 `Nothing`\)。  變更攔截器方法必須接受下列兩個參數：  
+ <span data-ttu-id="a4c0c-113">變更處理非查詢作業時呼叫的攔截器，必須傳回 `void` (在 Visual Basic 為 `Nothing`)。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-113">Change interceptors, which are called when processing non-query operations, must return `void` (`Nothing` in Visual Basic).</span></span> <span data-ttu-id="a4c0c-114">變更攔截器方法必須接受下列兩個參數：</span><span class="sxs-lookup"><span data-stu-id="a4c0c-114">Change interceptor methods must accept the following two parameters:</span></span>  
   
-1.  其類型相容於實體集實體類型的參數。  資料服務叫用變更攔截器時，此參數的值會反映出要求所傳送的實體資訊。  
+1.  <span data-ttu-id="a4c0c-115">其類型相容於實體集實體類型的參數。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-115">A parameter of a type that is compatible with the entity type of the entity set.</span></span> <span data-ttu-id="a4c0c-116">資料服務叫用變更攔截器時，此參數的值會反映出要求所傳送的實體資訊。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-116">When the data service invokes the change interceptor, the value of this parameter will reflect the entity information that is sent by the request.</span></span>  
   
-2.  類型為 <xref:System.Data.Services.UpdateOperations> 的參數。  資料服務叫用變更攔截器時，此參數的值會反映出要求嘗試執行的作業。  
+2.  <span data-ttu-id="a4c0c-117">類型為 <xref:System.Data.Services.UpdateOperations> 的參數。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-117">A parameter of type <xref:System.Data.Services.UpdateOperations>.</span></span> <span data-ttu-id="a4c0c-118">資料服務叫用變更攔截器時，此參數的值會反映出要求嘗試執行的作業。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-118">When the data service invokes the change interceptor, the value of this parameter will reflect the operation that the request is trying to perform.</span></span>  
   
- 以下是變更攔截器的定義範例。  
+ <span data-ttu-id="a4c0c-119">以下是變更攔截器的定義範例。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-119">The following is an example definition of a change interceptor.</span></span>  
   
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- 如需詳細資訊，請參閱[HOW TO：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ <span data-ttu-id="a4c0c-120">如需詳細資訊，請參閱[如何： 攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-120">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
- 攔截支援的屬性如下。  
+ <span data-ttu-id="a4c0c-121">攔截支援的屬性如下。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-121">The following attributes are supported for interception.</span></span>  
   
- **\[QueryInterceptor\(** *EnitySetName* **\)\]**  
- 收到目標實體集資源的 HTTP GET 要求時，會呼叫套用 <xref:System.Data.Services.QueryInterceptorAttribute> 屬性的方法。  這些方法必須永遠以 `Expression<Func<T,bool>>` 形式傳回 Lambda 運算式。  
+ <span data-ttu-id="a4c0c-122">**[QueryInterceptor (** *EnitySetName* **)]**</span><span class="sxs-lookup"><span data-stu-id="a4c0c-122">**[QueryInterceptor(** *EnitySetName* **)]**</span></span>  
+ <span data-ttu-id="a4c0c-123">收到目標實體集資源的 HTTP GET 要求時，會呼叫套用 <xref:System.Data.Services.QueryInterceptorAttribute> 屬性的方法。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-123">Methods with the <xref:System.Data.Services.QueryInterceptorAttribute> attribute applied are called when an HTTP GET request is received for the targeted entity set resource.</span></span> <span data-ttu-id="a4c0c-124">這些方法必須永遠以 `Expression<Func<T,bool>>` 形式傳回 Lambda 運算式。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-124">These methods must always return a lambda expression in the form of `Expression<Func<T,bool>>`.</span></span>  
   
- **\[ChangeInterceptor\(** *EnitySetName* **\)\]**  
- 當目標實體集資源收到 HTTP GET 要求以外的 HTTP 要求時，會呼叫套用 <xref:System.Data.Services.ChangeInterceptorAttribute> 屬性的方法。  這些方法必須永遠傳回 `void` \(在 Visual Basic 中為 `Nothing`\)。  
+ <span data-ttu-id="a4c0c-125">**[ChangeInterceptor (** *EnitySetName* **)]**</span><span class="sxs-lookup"><span data-stu-id="a4c0c-125">**[ChangeInterceptor(** *EnitySetName* **)]**</span></span>  
+ <span data-ttu-id="a4c0c-126">當目標實體集資源收到 HTTP GET 要求以外的 HTTP 要求時，會呼叫套用 <xref:System.Data.Services.ChangeInterceptorAttribute> 屬性的方法。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-126">Methods with the <xref:System.Data.Services.ChangeInterceptorAttribute> attribute applied are called when an HTTP request other than HTTP GET request is received for the targeted entity set resource.</span></span> <span data-ttu-id="a4c0c-127">這些方法必須永遠傳回 `void` (在 Visual Basic 中為 `Nothing`)。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-127">These methods must always return `void` (`Nothing` in Visual Basic).</span></span>  
   
- 如需詳細資訊，請參閱[HOW TO：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ <span data-ttu-id="a4c0c-128">如需詳細資訊，請參閱[如何： 攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="a4c0c-128">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
-## 請參閱  
- [服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="a4c0c-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4c0c-129">See Also</span></span>  
+ [<span data-ttu-id="a4c0c-130">服務作業</span><span class="sxs-lookup"><span data-stu-id="a4c0c-130">Service Operations</span></span>](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

@@ -1,32 +1,38 @@
 ---
-title: "操作資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "操作資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5117d2aba6fe368a7a17e3d35d8c4887582267e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 操作資料
-引進 Multiple Active Result Set \(MARS\) 之前，開發人員必須使用多重連接或伺服器端游標來解析某些案例。  此外，當在交易中使用多重連接時，需要繫結連接 \(使用 **sp\_getbindtoken** 及 **sp\_bindsession**\)。  下列案例顯示如何以啟用 MARS 的連接取代多重連接。  
+# <a name="manipulating-data"></a><span data-ttu-id="03cb2-102">操作資料</span><span class="sxs-lookup"><span data-stu-id="03cb2-102">Manipulating Data</span></span>
+<span data-ttu-id="03cb2-103">引進 Multiple Active Result Set (MARS) 之前，開發人員必須使用多重連接或伺服器端游標來解析某些案例。</span><span class="sxs-lookup"><span data-stu-id="03cb2-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="03cb2-104">此外，當在交易中使用多個連接時，繫結連接 (使用**sp_getbindtoken**和**sp_bindsession**) 所需。</span><span class="sxs-lookup"><span data-stu-id="03cb2-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="03cb2-105">下列案例顯示如何以啟用 MARS 的連接取代多重連接。</span><span class="sxs-lookup"><span data-stu-id="03cb2-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  
   
-## 搭配使用多個命令與 MARS  
- 下列主控台應用程式示範如何使用具有兩個 <xref:System.Data.SqlClient.SqlCommand> 物件的兩個 <xref:System.Data.SqlClient.SqlDataReader> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。  
+## <a name="using-multiple-commands-with-mars"></a><span data-ttu-id="03cb2-106">搭配使用多個命令與 MARS</span><span class="sxs-lookup"><span data-stu-id="03cb2-106">Using Multiple Commands with MARS</span></span>  
+ <span data-ttu-id="03cb2-107">下列主控台應用程式示範如何使用具有兩個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。</span><span class="sxs-lookup"><span data-stu-id="03cb2-107">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span>  
   
-### 範例  
- 範例會開啟到 **AdventureWorks** 資料庫的單一連接。  使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。  當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。  
+### <a name="example"></a><span data-ttu-id="03cb2-108">範例</span><span class="sxs-lookup"><span data-stu-id="03cb2-108">Example</span></span>  
+ <span data-ttu-id="03cb2-109">範例會開啟的單一連接**AdventureWorks**資料庫。</span><span class="sxs-lookup"><span data-stu-id="03cb2-109">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="03cb2-110">使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。</span><span class="sxs-lookup"><span data-stu-id="03cb2-110">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="03cb2-111">當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。</span><span class="sxs-lookup"><span data-stu-id="03cb2-111">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
   
 > [!NOTE]
->  下列範例使用包含於 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的 **AdventureWorks** 範例資料庫。  範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。  視環境需要修改連接字串。  
+>  <span data-ttu-id="03cb2-112">下列範例使用範例**AdventureWorks**資料庫隨附[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="03cb2-112">The following example uses the sample **AdventureWorks** database included with [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="03cb2-113">範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。</span><span class="sxs-lookup"><span data-stu-id="03cb2-113">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="03cb2-114">視環境需要修改連接字串。</span><span class="sxs-lookup"><span data-stu-id="03cb2-114">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -167,14 +173,14 @@ static void Main()
 }  
 ```  
   
-## 使用 MARS 讀取及更新資料  
- MARS 允許將連接用於讀取作業及資料操作語言 \(DML\) 作業 \(具有多個暫止作業\)。  使用此功能，應用程式即無需處理連接繁忙錯誤。  此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。  最後，因為多個作業可在單一連接上進行操作，所以它們可共用相同的交易內容，無需使用 **sp\_getbindtoken** 及 **sp\_bindsession** 系統預存程序。  
+## <a name="reading-and-updating-data-with-mars"></a><span data-ttu-id="03cb2-115">使用 MARS 讀取及更新資料</span><span class="sxs-lookup"><span data-stu-id="03cb2-115">Reading and Updating Data with MARS</span></span>  
+ <span data-ttu-id="03cb2-116">MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。</span><span class="sxs-lookup"><span data-stu-id="03cb2-116">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="03cb2-117">使用此功能，應用程式即無需處理連接繁忙錯誤。</span><span class="sxs-lookup"><span data-stu-id="03cb2-117">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="03cb2-118">此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。</span><span class="sxs-lookup"><span data-stu-id="03cb2-118">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="03cb2-119">最後，多個作業可在單一連接上進行操作，因為它們可共用相同的交易內容，因而不須使用**sp_getbindtoken**和**sp_bindsession**系統預存程序。</span><span class="sxs-lookup"><span data-stu-id="03cb2-119">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
   
-### 範例  
- 下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlCommand> 物件的兩個 <xref:System.Data.SqlClient.SqlDataReader> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。  第一個命令物件會擷取信用評等為 5 的廠商清單。  第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。  第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。  會執行計算以決定新的 **OnOrderQty**。  然後會使用第三個命令物件，以新值更新 **ProductVendor** 資料表。  這整個處理序會在單一交易中發生，並在結束時復原。  
+### <a name="example"></a><span data-ttu-id="03cb2-120">範例</span><span class="sxs-lookup"><span data-stu-id="03cb2-120">Example</span></span>  
+ <span data-ttu-id="03cb2-121">下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。</span><span class="sxs-lookup"><span data-stu-id="03cb2-121">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="03cb2-122">第一個命令物件會擷取信用評等為 5 的廠商清單。</span><span class="sxs-lookup"><span data-stu-id="03cb2-122">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="03cb2-123">第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。</span><span class="sxs-lookup"><span data-stu-id="03cb2-123">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="03cb2-124">第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。</span><span class="sxs-lookup"><span data-stu-id="03cb2-124">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="03cb2-125">會執行計算以決定新**OnOrderQty**應該是。</span><span class="sxs-lookup"><span data-stu-id="03cb2-125">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="03cb2-126">第三個命令物件然後用來更新**ProductVendor**以新值的資料表。</span><span class="sxs-lookup"><span data-stu-id="03cb2-126">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="03cb2-127">這整個處理序會在單一異動中發生，並在結束時復原。</span><span class="sxs-lookup"><span data-stu-id="03cb2-127">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
   
 > [!NOTE]
->  下列範例使用包含於 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的 **AdventureWorks** 範例資料庫。  範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。  視環境需要修改連接字串。  
+>  <span data-ttu-id="03cb2-128">下列範例使用範例**AdventureWorks**資料庫隨附[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="03cb2-128">The following example uses the sample **AdventureWorks** database included with [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="03cb2-129">範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。</span><span class="sxs-lookup"><span data-stu-id="03cb2-129">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="03cb2-130">視環境需要修改連接字串。</span><span class="sxs-lookup"><span data-stu-id="03cb2-130">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -406,6 +412,6 @@ private static string GetConnectionString()
 }  
 ```  
   
-## 請參閱  
- [Multiple Active Result Set \(MARS\)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="03cb2-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03cb2-131">See Also</span></span>  
+ [<span data-ttu-id="03cb2-132">Multiple Active Result Sets (MARS)</span><span class="sxs-lookup"><span data-stu-id="03cb2-132">Multiple Active Result Sets (MARS)</span></span>](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [<span data-ttu-id="03cb2-133">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="03cb2-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

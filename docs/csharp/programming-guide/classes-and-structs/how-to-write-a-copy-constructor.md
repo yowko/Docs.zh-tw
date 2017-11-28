@@ -1,52 +1,33 @@
 ---
 title: "如何：撰寫複製建構函式 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f15d8fabc49cbff5515b78a7d2fb6f9e49d0704e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 712d9d5e792d025dd7c91d4c1809eeba96759757
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：撰寫複製建構函式 (C# 程式設計手冊)
-C\# 不提供物件的複製建構函式，不過，您可以自行撰寫複製建構函式。  
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a><span data-ttu-id="fcf60-102">如何：撰寫複製建構函式 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="fcf60-102">How to: Write a Copy Constructor (C# Programming Guide)</span></span>
+<span data-ttu-id="fcf60-103">C# 未提供物件的複製建構函式，但您可以自行撰寫一個。</span><span class="sxs-lookup"><span data-stu-id="fcf60-103">C# doesn't provide a copy constructor for objects, but you can write one yourself.</span></span>  
   
-## 範例  
- 在下列範例中，`Person` [類別](../../../csharp/language-reference/keywords/class.md)會定義接受 `Person` 執行個體做為引數的複製建構函式。  引數的屬性值會指派給新的 `Person` 執行個體的屬性。  程式碼包含替代的複製建構函式，這會傳送您要複製到類別之執行個體建構函式的執行個體的 `Name` 和 `Age` 屬性。  
+## <a name="example"></a><span data-ttu-id="fcf60-104">範例</span><span class="sxs-lookup"><span data-stu-id="fcf60-104">Example</span></span>  
+ <span data-ttu-id="fcf60-105">在下列範例中，`Person`[類別](../../../csharp/language-reference/keywords/class.md)定義接受 `Person` 執行個體作為其引數的複製建構函式。</span><span class="sxs-lookup"><span data-stu-id="fcf60-105">In the following example, the `Person`[class](../../../csharp/language-reference/keywords/class.md) defines a copy constructor that takes, as its argument, an instance of `Person`.</span></span> <span data-ttu-id="fcf60-106">引數的屬性值會指派給新 `Person` 執行個體的屬性。</span><span class="sxs-lookup"><span data-stu-id="fcf60-106">The values of the properties of the argument are assigned to the properties of the new instance of `Person`.</span></span> <span data-ttu-id="fcf60-107">這個程式碼包含替代的複製建構函式，可將您想要複製之執行個體的 `Name` 和 `Age` 屬性傳送給類別的執行個體建構函式。</span><span class="sxs-lookup"><span data-stu-id="fcf60-107">The code contains an alternative copy constructor that sends the `Name` and `Age` properties of the instance that you want to copy to the instance constructor of the class.</span></span>  
   
- [!code-cs[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
+ [!code-csharp[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
   
-## 請參閱  
- <xref:System.ICloneable>   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-
+## <a name="see-also"></a><span data-ttu-id="fcf60-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fcf60-108">See Also</span></span>  
+ <xref:System.ICloneable>  
+ [<span data-ttu-id="fcf60-109">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="fcf60-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="fcf60-110">類別和結構</span><span class="sxs-lookup"><span data-stu-id="fcf60-110">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="fcf60-111">建構函式</span><span class="sxs-lookup"><span data-stu-id="fcf60-111">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="fcf60-112">完成項</span><span class="sxs-lookup"><span data-stu-id="fcf60-112">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)

@@ -1,64 +1,44 @@
 ---
 title: "get (C# 參考)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - get_CSharpKeyword
 - get
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- get keyword [C#]
+helpviewer_keywords: get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a2e8426e5c5be16be0114b5ccc66f30793ce7dda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88603864ae0a31a193cab211b8ce8061ec63c169
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="get-c-reference"></a>get (C# 參考)
+# <a name="get-c-reference"></a><span data-ttu-id="8818d-102">get (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="8818d-102">get (C# Reference)</span></span>
 
-`get` 關鍵字會在屬性或索引子中定義「存取子」方法，以傳回屬性值或索引子項目。 如需詳細資訊，請參閱[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)。  
+<span data-ttu-id="8818d-103">`get` 關鍵字會在屬性或索引子中定義「存取子」方法，以傳回屬性值或索引子項目。</span><span class="sxs-lookup"><span data-stu-id="8818d-103">The `get` keyword defines an *accessor* method in a property or indexer that returns the property value or the indexer element.</span></span> <span data-ttu-id="8818d-104">如需詳細資訊，請參閱[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)。</span><span class="sxs-lookup"><span data-stu-id="8818d-104">For more information, see [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md), [Auto-Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) and [Indexers](../../../csharp/programming-guide/indexers/index.md).</span></span>  
   
-下列範例會為名為 `Seconds` 的屬性定義 `get` 和 `set` 存取子。 它使用名為 `_seconds` 的私用欄位來支援屬性值。  
+<span data-ttu-id="8818d-105">下列範例會為名為 `Seconds` 的屬性定義 `get` 和 `set` 存取子。</span><span class="sxs-lookup"><span data-stu-id="8818d-105">The following example defines both a `get` and a `set` accessor for a property named `Seconds`.</span></span> <span data-ttu-id="8818d-106">它使用名為 `_seconds` 的私用欄位來支援屬性值。</span><span class="sxs-lookup"><span data-stu-id="8818d-106">It uses a private field named `_seconds` to back the property value.</span></span>  
  
- [!code-cs[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
+ [!code-csharp[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
   
-`get` 存取子通常是由傳回值的單一陳述式所組成，如上述範例所示。 從 C# 7 開始，您可以將 `get` 存取子實作為運算式主體成員。 下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。
+<span data-ttu-id="8818d-107">`get` 存取子通常是由傳回值的單一陳述式所組成，如上述範例所示。</span><span class="sxs-lookup"><span data-stu-id="8818d-107">Often, the `get` accessor consists of a single statement that returns a value, as it did in the previous example.</span></span> <span data-ttu-id="8818d-108">從 C# 7 開始，您可以將 `get` 存取子實作為運算式主體成員。</span><span class="sxs-lookup"><span data-stu-id="8818d-108">Starting with C# 7, you can implement the `get` accessor as an expression-bodied member.</span></span> <span data-ttu-id="8818d-109">下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。</span><span class="sxs-lookup"><span data-stu-id="8818d-109">The following example implements both the `get` and the `set` accessor as expression-bodied members.</span></span>
 
- [!code-cs[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
+ [!code-csharp[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
  
-如果屬性的 `get` 和 `set` 存取子只會設定或擷取私用支援欄位中的值，而不會執行其他作業，則在此簡單的情況下，您可以利用 C# 編譯器的自動實作屬性支援。 下列程式碼範例會將 `Hours` 實作為自動實作屬性。 
+<span data-ttu-id="8818d-110">如果屬性的 `get` 和 `set` 存取子只會設定或擷取私用支援欄位中的值，而不會執行其他作業，則在此簡單的情況下，您可以利用 C# 編譯器的自動實作屬性支援。</span><span class="sxs-lookup"><span data-stu-id="8818d-110">For simple cases in which a property's `get` and `set` accessors perform no other operation than setting or retrieving a value in a private backing field, you can take advantage of the C# compiler's support for auto-implemented properties.</span></span> <span data-ttu-id="8818d-111">下列程式碼範例會將 `Hours` 實作為自動實作屬性。</span><span class="sxs-lookup"><span data-stu-id="8818d-111">The following example implements `Hours` as an auto-implemented property.</span></span> 
   
- [!code-cs[get#2](../../../../samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]  
+ [!code-csharp[get#2](../../../../samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]  
   
-## <a name="c-language-specification"></a>C# 語言規格
+## <a name="c-language-specification"></a><span data-ttu-id="8818d-112">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="8818d-112">C# Language Specification</span></span>
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
-
+## <a name="see-also"></a><span data-ttu-id="8818d-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8818d-113">See Also</span></span>  
+ [<span data-ttu-id="8818d-114">C# 參考</span><span class="sxs-lookup"><span data-stu-id="8818d-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="8818d-115">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="8818d-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ <span data-ttu-id="8818d-116">[C# 關鍵字](../../../csharp/language-reference/keywords/index.md)[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)</span><span class="sxs-lookup"><span data-stu-id="8818d-116">[C# Keywords](../../../csharp/language-reference/keywords/index.md) [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md)</span></span>

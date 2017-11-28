@@ -9,111 +9,109 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 977dd60bb21b466a6bec357a6dec73aa9a931ead
-ms.lasthandoff: 05/02/2017
-
+ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="samples-and-tutorials"></a><span data-ttu-id="ce5df-104">範例和教學課程</span><span class="sxs-lookup"><span data-stu-id="ce5df-104">Samples and tutorials</span></span>
 
-# <a name="samples-and-tutorials"></a>範例和教學課程
+<span data-ttu-id="ce5df-105">.NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。</span><span class="sxs-lookup"><span data-stu-id="ce5df-105">The .NET documentation contains a set of samples and tutorials that teach you about .NET.</span></span> <span data-ttu-id="ce5df-106">本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。</span><span class="sxs-lookup"><span data-stu-id="ce5df-106">This topic describes how to find, view, and download .NET Core, ASP.NET Core, and C# samples and tutorials.</span></span> <span data-ttu-id="ce5df-107">您可以在 [F# 基礎網站 (英文)](http://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。</span><span class="sxs-lookup"><span data-stu-id="ce5df-107">Find resources to learn the F# programming language on the [F# Foundation's site](http://fsharp.org/learn.html).</span></span> <span data-ttu-id="ce5df-108">如果您對使用線上程式碼編輯器探索 C# 有興趣，請嘗試這些[互動式教學課程 (英文)](http://go.microsoft.com/fwlink/p/?LinkId=817234)。</span><span class="sxs-lookup"><span data-stu-id="ce5df-108">If you're interested in exploring C# using an online code editor, try these [interactive tutorials](http://go.microsoft.com/fwlink/p/?LinkId=817234).</span></span> <span data-ttu-id="ce5df-109">如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。</span><span class="sxs-lookup"><span data-stu-id="ce5df-109">For instructions on how to view and download sample code, see the [Viewing and downloading samples](#viewing-and-downloading-samples) section.</span></span>
 
-.NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。 本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。 您可以在 [F# 基礎網站 (英文)](http://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。 如果您對使用線上程式碼編輯器探索 C# 有興趣，請嘗試這些[互動式教學課程 (英文)](http://go.microsoft.com/fwlink/p/?LinkId=817234)。 如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。
+## <a name="net-core"></a><span data-ttu-id="ce5df-110">.NET Core</span><span class="sxs-lookup"><span data-stu-id="ce5df-110">.NET Core</span></span>
 
-## <a name="net-core"></a>.NET Core
+### <a name="samples"></a><span data-ttu-id="ce5df-111">範例</span><span class="sxs-lookup"><span data-stu-id="ce5df-111">Samples</span></span>
 
-### <a name="samples"></a>範例
+<span data-ttu-id="ce5df-112">**[使用 DotNet 測試的 .NET Core 單元測試](../core/testing/unit-testing-with-dotnet-test.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-112">**[Unit Testing in .NET Core using dotnet test](../core/testing/unit-testing-with-dotnet-test.md)**</span></span>
 
-**[使用 DotNet 測試的 .NET Core 單元測試](../core/testing/unit-testing-with-dotnet-test.md)**
+<span data-ttu-id="ce5df-113">此指南說明如何建立 ASP.NET Core Web 應用程式及相關聯的單元測試。</span><span class="sxs-lookup"><span data-stu-id="ce5df-113">This guide shows you how to create an ASP.NET Core web app and associated unit tests.</span></span> <span data-ttu-id="ce5df-114">它會從建立簡單的 Web 服務應用程式開始，然後再新增測試。</span><span class="sxs-lookup"><span data-stu-id="ce5df-114">It starts by creating a simple web service app and then adds tests.</span></span> <span data-ttu-id="ce5df-115">它接著會建立更多測試，來引導新功能的實作。</span><span class="sxs-lookup"><span data-stu-id="ce5df-115">It continues with creating more tests to guide implementing new features.</span></span> <span data-ttu-id="ce5df-116">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-116">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此指南說明如何建立 ASP.NET Core Web 應用程式及相關聯的單元測試。 它會從建立簡單的 Web 服務應用程式開始，然後再新增測試。 它接著會建立更多測試，來引導新功能的實作。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+### <a name="tutorials"></a><span data-ttu-id="ce5df-117">教學課程</span><span class="sxs-lookup"><span data-stu-id="ce5df-117">Tutorials</span></span>
 
-### <a name="tutorials"></a>教學課程
+<span data-ttu-id="ce5df-118">**[使用 CLI 工具撰寫 .NET Core 主控台應用程式︰逐步指南](../core/tutorials/using-with-xplat-cli.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-118">**[Writing .NET Core console apps using the CLI tools: A step-by-step guide](../core/tutorials/using-with-xplat-cli.md)**</span></span>
 
-**[使用 CLI 工具撰寫 .NET Core 主控台應用程式︰逐步指南](../core/tutorials/using-with-xplat-cli.md)**
+<span data-ttu-id="ce5df-119">此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="ce5df-119">This guide shows you how to use the .NET Core CLI tooling to build cross-platform console apps.</span></span> <span data-ttu-id="ce5df-120">它會從基本的主控台應用程式開始，最終會跨越多個專案 (包括測試)。</span><span class="sxs-lookup"><span data-stu-id="ce5df-120">It starts with a basic console app and eventually spans multiple projects, including testing.</span></span> <span data-ttu-id="ce5df-121">您會逐步新增各種功能，並同時增加您的知識。</span><span class="sxs-lookup"><span data-stu-id="ce5df-121">You add features step-by-step, building your knowledge as you go.</span></span> <span data-ttu-id="ce5df-122">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/console-apps) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-122">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/core/console-apps) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。 它會從基本的主控台應用程式開始，最終會跨越多個專案 (包括測試)。 您會逐步新增各種功能，並同時增加您的知識。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/console-apps) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-123">**[使用跨平台工具撰寫程式庫](../core/tutorials/libraries.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-123">**[Writing Libraries with Cross Platform Tools](../core/tutorials/libraries.md)**</span></span>
 
-**[使用跨平台工具撰寫程式庫](../core/tutorials/libraries.md)**
+<span data-ttu-id="ce5df-124">此範例涵蓋如何使用跨平台 CLI 工具撰寫 .NET 的程式庫。</span><span class="sxs-lookup"><span data-stu-id="ce5df-124">This sample covers how to write libraries for .NET using cross-platform CLI tools.</span></span> <span data-ttu-id="ce5df-125">這些工具提供可在所有支援的作業系統上運作的有效率且低階體驗。</span><span class="sxs-lookup"><span data-stu-id="ce5df-125">These tools provide an efficient and low-level experience that works across any supported operating system.</span></span> <span data-ttu-id="ce5df-126">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-126">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此範例涵蓋如何使用跨平台 CLI 工具撰寫 .NET 的程式庫。 這些工具提供可在所有支援的作業系統上運作的有效率且低階體驗。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+## <a name="aspnet-core"></a><span data-ttu-id="ce5df-127">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="ce5df-127">ASP.NET Core</span></span>
 
-## <a name="aspnet-core"></a>ASP.NET Core
+<span data-ttu-id="ce5df-128">請參閱 [ASP.NET Core 教學課程 (英文)](/aspnet/core/tutorials/)。</span><span class="sxs-lookup"><span data-stu-id="ce5df-128">See the [ASP.NET Core tutorials](/aspnet/core/tutorials/).</span></span> <span data-ttu-id="ce5df-129">ASP.NET Core 文件中的許多文章都有針對它們所撰寫的範例連結。</span><span class="sxs-lookup"><span data-stu-id="ce5df-129">Many articles in the ASP.NET Core documentation have links to samples written for them.</span></span>
 
-請參閱 [ASP.NET Core 教學課程 (英文)](https://docs.microsoft.com/aspnet/core/tutorials/)。 ASP.NET Core 文件中的許多文章都有針對它們所撰寫的範例連結。
+## <a name="c-language"></a><span data-ttu-id="ce5df-130">C# 語言</span><span class="sxs-lookup"><span data-stu-id="ce5df-130">C# language</span></span>
 
-## <a name="c-language"></a>C# 語言
+### <a name="samples"></a><span data-ttu-id="ce5df-131">範例</span><span class="sxs-lookup"><span data-stu-id="ce5df-131">Samples</span></span>
 
-### <a name="samples"></a>範例
+<span data-ttu-id="ce5df-132">**[迭代器](../csharp/iterators.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-132">**[Iterators](../csharp/iterators.md)**</span></span>
 
-**[迭代器](../csharp/iterators.md)**
+<span data-ttu-id="ce5df-133">此範例示範建立及使用 C# 迭代器的語法和功能。</span><span class="sxs-lookup"><span data-stu-id="ce5df-133">This sample demonstrates the syntax and features for creating and consuming C# iterators.</span></span> <span data-ttu-id="ce5df-134">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-134">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此範例示範建立及使用 C# 迭代器的語法和功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-135">**[索引子](../csharp/indexers.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-135">**[Indexers](../csharp/indexers.md)**</span></span>
 
-**[索引子](../csharp/indexers.md)**
+<span data-ttu-id="ce5df-136">此範例示範 C# 索引子的語法和功能。</span><span class="sxs-lookup"><span data-stu-id="ce5df-136">This sample demonstrates the syntax and features for C# indexers.</span></span> <span data-ttu-id="ce5df-137">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-137">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此範例示範 C# 索引子的語法和功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-138">**[委派和事件](../csharp/delegates-events.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-138">**[Delegates and Events](../csharp/delegates-events.md)**</span></span>
 
-**[委派和事件](../csharp/delegates-events.md)**
+<span data-ttu-id="ce5df-139">此範例示範 C# 委派和事件的語法和功能。</span><span class="sxs-lookup"><span data-stu-id="ce5df-139">This sample demonstrates the syntax and features for C# delegates and events.</span></span> <span data-ttu-id="ce5df-140">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-140">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events) is available in the dotnet/docs repository on GitHub.</span></span> <span data-ttu-id="ce5df-141">以事件為焦點的[第二個範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/events) 也位於相同的存放庫中。</span><span class="sxs-lookup"><span data-stu-id="ce5df-141">A [second sample](https://github.com/dotnet/docs/tree/master/samples/csharp/events) focused on events is also in the same repository.</span></span>
 
-此範例示範 C# 委派和事件的語法和功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events) 可在 GitHub 上的 dotnet/docs 存放庫取得。 以事件為焦點的[第二個範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/events) 也位於相同的存放庫中。
+<span data-ttu-id="ce5df-142">**[運算式樹狀架構](../csharp/expression-trees.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-142">**[Expression Trees](../csharp/expression-trees.md)**</span></span>
 
-**[運算式樹狀架構](../csharp/expression-trees.md)**
+<span data-ttu-id="ce5df-143">此範例示範可使用運算式樹狀架構解決的許多問題。</span><span class="sxs-lookup"><span data-stu-id="ce5df-143">This sample demonstrates many of the problems that can be solved by using Expression Trees.</span></span> <span data-ttu-id="ce5df-144">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-144">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此範例示範可使用運算式樹狀架構解決的許多問題。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-145">**LINQ 範例**</span><span class="sxs-lookup"><span data-stu-id="ce5df-145">**LINQ Samples**</span></span>
 
-**LINQ 範例**
+<span data-ttu-id="ce5df-146">這一系列範例示範 Language Integrated Query (LINQ) 的許多功能。</span><span class="sxs-lookup"><span data-stu-id="ce5df-146">This series of samples demonstrate many of the features of Language Integrated Query (LINQ).</span></span> <span data-ttu-id="ce5df-147">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-147">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) is available in the dotnet/docs repository on GitHub.</span></span>
 
-這一系列範例示範 Language Integrated Query (LINQ) 的許多功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+### <a name="tutorials"></a><span data-ttu-id="ce5df-148">教學課程</span><span class="sxs-lookup"><span data-stu-id="ce5df-148">Tutorials</span></span>
 
-### <a name="tutorials"></a>教學課程
+<span data-ttu-id="ce5df-149">**[主控台應用程式](../csharp/tutorials/console-teleprompter.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-149">**[Console Application](../csharp/tutorials/console-teleprompter.md)**</span></span>
 
-**[主控台應用程式](../csharp/tutorials/console-teleprompter.md)**
+<span data-ttu-id="ce5df-150">此教學課程示範主控台 I/O、主控台應用程式的結構，以及以工作為基礎之非同步程式設計模型的基本概念。</span><span class="sxs-lookup"><span data-stu-id="ce5df-150">This tutorial demonstrates Console I/O, the structure of a console app, and the basics of the task-based asynchronous programming model.</span></span> <span data-ttu-id="ce5df-151">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-151">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此教學課程示範主控台 I/O、主控台應用程式的結構，以及以工作為基礎之非同步程式設計模型的基本概念。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-152">**[REST 用戶端](../csharp/tutorials/console-webapiclient.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-152">**[REST Client](../csharp/tutorials/console-webapiclient.md)**</span></span>
 
-**[REST 用戶端](../csharp/tutorials/console-webapiclient.md)**
+<span data-ttu-id="ce5df-153">此教學課程示範 Web 通訊、JSON 序列化，以及 C# 語言的物件導向功能。</span><span class="sxs-lookup"><span data-stu-id="ce5df-153">This tutorial demonstrates web communications, JSON serialization, and object-oriented features of the C# language.</span></span> <span data-ttu-id="ce5df-154">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-154">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此教學課程示範 Web 通訊、JSON 序列化，以及 C# 語言的物件導向功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-155">**[使用 LINQ](../csharp/tutorials/working-with-linq.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-155">**[Working with LINQ](../csharp/tutorials/working-with-linq.md)**</span></span>
 
-**[使用 LINQ](../csharp/tutorials/working-with-linq.md)**
+<span data-ttu-id="ce5df-156">此教學課程示範 LINQ 的許多功能及支援的語言項目。</span><span class="sxs-lookup"><span data-stu-id="ce5df-156">This tutorial demonstrates many of the features of LINQ and the language elements that support it.</span></span> <span data-ttu-id="ce5df-157">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-157">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此教學課程示範 LINQ 的許多功能及支援的語言項目。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-158">**[裝載於 Docker 的微服務](../csharp/tutorials/microservices.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-158">**[Microservices hosted in Docker](../csharp/tutorials/microservices.md)**</span></span>
 
-**[裝載於 Docker 的微服務](../csharp/tutorials/microservices.md)**
+<span data-ttu-id="ce5df-159">此教學課程示範如何建置 ASP.NET Core 微服務並將其裝載於 Docker 中。</span><span class="sxs-lookup"><span data-stu-id="ce5df-159">This tutorial demonstrates building an ASP.NET Core microservice and hosting it in Docker.</span></span> <span data-ttu-id="ce5df-160">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-160">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此教學課程示範如何建置 ASP.NET Core 微服務並將其裝載於 Docker 中。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-161">**[使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-161">**[Getting started with .NET Core on macOS using Visual Studio for Mac](../core/tutorials/using-on-mac-vs.md)**</span></span>
 
-**[使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**
+<span data-ttu-id="ce5df-162">此教學課程示範如何使用 Visual Studio for Mac 建置簡單 .NET Core 主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="ce5df-162">This tutorial shows you how to build a simple .NET Core console app using Visual Studio for Mac.</span></span>
 
-此教學課程示範如何使用 Visual Studio for Mac 建置簡單 .NET Core 主控台應用程式。
+<span data-ttu-id="ce5df-163">**[使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](../core/tutorials/using-on-mac-vs-full-solution.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-163">**[Building a complete .NET Core solution on macOS using Visual Studio for Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**</span></span>
 
-**[使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](../core/tutorials/using-on-mac-vs-full-solution.md)**
+<span data-ttu-id="ce5df-164">本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。</span><span class="sxs-lookup"><span data-stu-id="ce5df-164">This tutorial shows you how to build a complete .NET Core solution that includes a reusable library and unit testing.</span></span>
 
-本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
+## <a name="deploying-to-containers"></a><span data-ttu-id="ce5df-165">部署至容器</span><span class="sxs-lookup"><span data-stu-id="ce5df-165">Deploying to containers</span></span>
 
-## <a name="deploying-to-containers"></a>部署至容器
+<span data-ttu-id="ce5df-166">**[在 Windows Docker 容器中執行 ASP.NET MVC 應用程式](../framework/docker/aspnetmvc.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-166">**[Running ASP.NET MVC Applications in Windows Docker Containers](../framework/docker/aspnetmvc.md)**</span></span>
 
-**[在 Windows Docker 容器中執行 ASP.NET MVC 應用程式](../framework/docker/aspnetmvc.md)**
+<span data-ttu-id="ce5df-167">此教學課程示範如何在 Windows Docker 容器中部署現有的 ASP.NET MVC 應用程式。</span><span class="sxs-lookup"><span data-stu-id="ce5df-167">This tutorial demonstrates how to deploy an existing ASP.NET MVC app in a Windows Docker Container.</span></span> <span data-ttu-id="ce5df-168">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-168">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此教學課程示範如何在 Windows Docker 容器中部署現有的 ASP.NET MVC 應用程式。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+<span data-ttu-id="ce5df-169">**[在 Windows 容器中執行 .NET Framework 主控台應用程式](../framework/docker/console.md)**</span><span class="sxs-lookup"><span data-stu-id="ce5df-169">**[Running .NET Framework Console Applications in Windows Containers](../framework/docker/console.md)**</span></span>
 
-**[在 Windows 容器中執行 .NET Framework 主控台應用程式](../framework/docker/console.md)**
+<span data-ttu-id="ce5df-170">此教學課程示範如何在 Windows 容器中部署現有的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="ce5df-170">This tutorial demonstrates how to deploy an existing console app in a Windows container.</span></span> <span data-ttu-id="ce5df-171">[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) 可在 GitHub 上的 dotnet/docs 存放庫取得。</span><span class="sxs-lookup"><span data-stu-id="ce5df-171">The [completed sample](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) is available in the dotnet/docs repository on GitHub.</span></span>
 
-此教學課程示範如何在 Windows 容器中部署現有的主控台應用程式。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+## <a name="viewing-and-downloading-samples"></a><span data-ttu-id="ce5df-172">檢視和下載範例</span><span class="sxs-lookup"><span data-stu-id="ce5df-172">Viewing and downloading samples</span></span>
 
-## <a name="viewing-and-downloading-samples"></a>檢視和下載範例
+<span data-ttu-id="ce5df-173">許多主題都會顯示可從 GitHub 檢視或下載的原始程式碼和範例。</span><span class="sxs-lookup"><span data-stu-id="ce5df-173">Many topics show source code and samples that are available for viewing or download from GitHub.</span></span> <span data-ttu-id="ce5df-174">若要檢視範例，請依循範例連結。</span><span class="sxs-lookup"><span data-stu-id="ce5df-174">To view a sample, just follow the sample link.</span></span> <span data-ttu-id="ce5df-175">若要下載程式碼，請遵循這些指示：</span><span class="sxs-lookup"><span data-stu-id="ce5df-175">To download the code, follow these instructions:</span></span>
 
-許多主題都會顯示可從 GitHub 檢視或下載的原始程式碼和範例。 若要檢視範例，請依循範例連結。 若要下載程式碼，請遵循這些指示：
-
-1. 透過執行下列其中一項程序，來下載包含範例程式碼的存放庫：
-   * 將存放庫的 ZIP 檔案下載至本機系統。 將壓縮的封存解壓縮。
-   * 將存放庫[分岔 (英文)](https://help.github.com/articles/fork-a-repo/)，並將該分岔[複製 (英文)](https://help.github.com/articles/cloning-a-repository/) 到您的本機系統。 分岔和複製可讓您將變更認可至您的分岔，並針對官方文件存放庫建立提取要求，來為文件做出貢獻。 如需詳細資訊，請參閱 [.NET 文件參與指南 (英文)](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) 及 [ASP.NET 文件參與指南 (英文)](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md)。
-   * 於本機複製存放庫。 如果您將文件存放庫直接複製到本機系統，您將無法直接對官方存放庫做出認可，也因此無法於稍後為文件做出貢獻。 如果您想要保留於稍後參與文件的機會，請使用先前描述的分岔和複製程序。
-1. 於存放庫的資料夾內瀏覽至範例的位置。 範例位置的相對路徑會在您依循範例連結時，顯示於瀏覽器的網址列中。
-1. 您有數個選項可以執行範例：
-   * 使用 [dotnet CLI 工具](../core/tools/index.md)：在主控台視窗中，瀏覽至範例的資料夾，並使用 dotnet CLI 命令。
-   * 使用 [Visual Studio](https://www.visualstudio.com/) 或 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)：從功能表列選取 [檔案] > [開啟] > [專案/方案]，瀏覽至範例專案資料夾，並選取專案檔案 (*.csproj* 或 *.fsproj*) 來開啟範例。
-   * 使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)：從功能表列選取 [檔案] > [開啟資料夾]，並選取範例的專案資料夾來開啟範例。
-   * 使用支援 .NET Core 專案的另一個 IDE。
-
+1. <span data-ttu-id="ce5df-176">透過執行下列其中一項程序，來下載包含範例程式碼的存放庫：</span><span class="sxs-lookup"><span data-stu-id="ce5df-176">Download the repository that contains the sample code by performing one of the following procedures:</span></span>
+   * <span data-ttu-id="ce5df-177">將存放庫的 ZIP 檔案下載至本機系統。</span><span class="sxs-lookup"><span data-stu-id="ce5df-177">Download a ZIP of the repository to your local system.</span></span> <span data-ttu-id="ce5df-178">將壓縮的封存解壓縮。</span><span class="sxs-lookup"><span data-stu-id="ce5df-178">Un-ZIP the compressed archive.</span></span>
+   * <span data-ttu-id="ce5df-179">將存放庫[分岔 (英文)](https://help.github.com/articles/fork-a-repo/)，並將該分岔[複製 (英文)](https://help.github.com/articles/cloning-a-repository/) 到您的本機系統。</span><span class="sxs-lookup"><span data-stu-id="ce5df-179">[Fork](https://help.github.com/articles/fork-a-repo/) the repository and [clone](https://help.github.com/articles/cloning-a-repository/) the fork to your local system.</span></span> <span data-ttu-id="ce5df-180">分岔和複製可讓您將變更認可至您的分岔，並針對官方文件存放庫建立提取要求，來為文件做出貢獻。</span><span class="sxs-lookup"><span data-stu-id="ce5df-180">Forking and cloning permits you to make contributions to the documentation by committing changes to your fork and then creating a pull request for the official docs repository.</span></span> <span data-ttu-id="ce5df-181">如需詳細資訊，請參閱 [.NET 文件參與指南 (英文)](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) 及 [ASP.NET 文件參與指南 (英文)](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md)。</span><span class="sxs-lookup"><span data-stu-id="ce5df-181">For more information, see the [.NET Documentation Contributing Guide](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) and the [ASP.NET Docs Contributing Guide](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md).</span></span>
+   * <span data-ttu-id="ce5df-182">於本機複製存放庫。</span><span class="sxs-lookup"><span data-stu-id="ce5df-182">Clone the repository locally.</span></span> <span data-ttu-id="ce5df-183">如果您將文件存放庫直接複製到本機系統，您將無法直接對官方存放庫做出認可，也因此無法於稍後為文件做出貢獻。</span><span class="sxs-lookup"><span data-stu-id="ce5df-183">If you clone a docs repository directly to your local system, you won't be able to make commits directly against the official repository, so you won't be able to make documentation contributions later.</span></span> <span data-ttu-id="ce5df-184">如果您想要保留於稍後參與文件的機會，請使用先前描述的分岔和複製程序。</span><span class="sxs-lookup"><span data-stu-id="ce5df-184">Use the fork and clone procedure previously described if you want to preserve the opportunity to contribute to the documentation later.</span></span>
+1. <span data-ttu-id="ce5df-185">於存放庫的資料夾內瀏覽至範例的位置。</span><span class="sxs-lookup"><span data-stu-id="ce5df-185">Navigate within the repository's folders to the sample's location.</span></span> <span data-ttu-id="ce5df-186">範例位置的相對路徑會在您依循範例連結時，顯示於瀏覽器的網址列中。</span><span class="sxs-lookup"><span data-stu-id="ce5df-186">The relative path to the sample's location appears in your browser's address bar when you follow the link to the sample.</span></span>
+1. <span data-ttu-id="ce5df-187">您有數個選項可以執行範例：</span><span class="sxs-lookup"><span data-stu-id="ce5df-187">To run a sample, you have several options:</span></span>
+   * <span data-ttu-id="ce5df-188">使用 [dotnet CLI 工具](../core/tools/index.md)：在主控台視窗中，瀏覽至範例的資料夾，並使用 dotnet CLI 命令。</span><span class="sxs-lookup"><span data-stu-id="ce5df-188">Use the [dotnet CLI tools](../core/tools/index.md): In a console window, navigate to the sample's folder and use dotnet CLI commands.</span></span>
+   * <span data-ttu-id="ce5df-189">使用 [Visual Studio](https://www.visualstudio.com/) 或 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)：從功能表列選取 [檔案] > [開啟] > [專案/方案]，瀏覽至範例專案資料夾，並選取專案檔案 (*.csproj* 或 *.fsproj*) 來開啟範例。</span><span class="sxs-lookup"><span data-stu-id="ce5df-189">Use [Visual Studio](https://www.visualstudio.com/) or [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/): Open the sample by selecting **File > Open > Project/Solution** from the menu bar, navigate to the sample project folder, and select the project file (*.csproj* or *.fsproj*).</span></span>
+   * <span data-ttu-id="ce5df-190">使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)：從功能表列選取 [檔案] > [開啟資料夾]，並選取範例的專案資料夾來開啟範例。</span><span class="sxs-lookup"><span data-stu-id="ce5df-190">Use [Visual Studio Code](https://code.visualstudio.com/): Open the sample by selecting **File > Open Folder** from the menu bar and selecting the sample's project folder.</span></span>
+   * <span data-ttu-id="ce5df-191">使用支援 .NET Core 專案的另一個 IDE。</span><span class="sxs-lookup"><span data-stu-id="ce5df-191">Use a different IDE that supports .NET Core projects.</span></span>

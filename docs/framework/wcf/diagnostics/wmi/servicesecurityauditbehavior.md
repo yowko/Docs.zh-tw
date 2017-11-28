@@ -1,25 +1,28 @@
 ---
-title: "ServiceSecurityAuditBehavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceSecurityAuditBehavior
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c5809e7-5364-44ce-bc71-848be4672e2a
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 1ce712bbdb258c477a2ee56f47281b1a1d09ec54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceSecurityAuditBehavior
-ServiceSecurityAuditBehavior  
+# <a name="servicesecurityauditbehavior"></a><span data-ttu-id="3294b-102">ServiceSecurityAuditBehavior</span><span class="sxs-lookup"><span data-stu-id="3294b-102">ServiceSecurityAuditBehavior</span></span>
+<span data-ttu-id="3294b-103">ServiceSecurityAuditBehavior</span><span class="sxs-lookup"><span data-stu-id="3294b-103">ServiceSecurityAuditBehavior</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="3294b-104">語法</span><span class="sxs-lookup"><span data-stu-id="3294b-104">Syntax</span></span>  
   
 ```  
 class ServiceSecurityAuditBehavior : Behavior  
@@ -31,45 +34,45 @@ class ServiceSecurityAuditBehavior : Behavior
 };  
 ```  
   
-## 方法  
- ServiceSecurityAuditBehavior 類別並未定義任何方法。  
+## <a name="methods"></a><span data-ttu-id="3294b-105">方法</span><span class="sxs-lookup"><span data-stu-id="3294b-105">Methods</span></span>  
+ <span data-ttu-id="3294b-106">ServiceSecurityAuditBehavior 類別並未定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="3294b-106">The ServiceSecurityAuditBehavior class does not define any methods.</span></span>  
   
-## 屬性  
- ServiceSecurityAuditBehavior 類別有下列屬性：  
+## <a name="properties"></a><span data-ttu-id="3294b-107">屬性</span><span class="sxs-lookup"><span data-stu-id="3294b-107">Properties</span></span>  
+ <span data-ttu-id="3294b-108">ServiceSecurityAuditBehavior 類別有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="3294b-108">The ServiceSecurityAuditBehavior class has the following properties:</span></span>  
   
-### AuditLogLocation  
- 資料型別：字串  
+### <a name="auditloglocation"></a><span data-ttu-id="3294b-109">AuditLogLocation</span><span class="sxs-lookup"><span data-stu-id="3294b-109">AuditLogLocation</span></span>  
+ <span data-ttu-id="3294b-110">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="3294b-110">Data type: string</span></span>  
   
- 存取類型：唯讀  
+ <span data-ttu-id="3294b-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="3294b-111">Access type: Read-only</span></span>  
   
- 稽核記錄檔的位置。  
+ <span data-ttu-id="3294b-112">稽核記錄檔的位置。</span><span class="sxs-lookup"><span data-stu-id="3294b-112">The location of the audit log.</span></span>  
   
-### MessageAuthenticationAuditLevel  
- 資料型別：字串  
+### <a name="messageauthenticationauditlevel"></a><span data-ttu-id="3294b-113">MessageAuthenticationAuditLevel</span><span class="sxs-lookup"><span data-stu-id="3294b-113">MessageAuthenticationAuditLevel</span></span>  
+ <span data-ttu-id="3294b-114">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="3294b-114">Data type: string</span></span>  
   
- 存取類型：唯讀  
+ <span data-ttu-id="3294b-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="3294b-115">Access type: Read-only</span></span>  
   
- 用於記錄稽核事件之訊息驗證等級的類型。  
+ <span data-ttu-id="3294b-116">用於記錄稽核事件之訊息驗證等級的類型。</span><span class="sxs-lookup"><span data-stu-id="3294b-116">The type of message authentication level that is used to log audit events.</span></span>  
   
-### ServiceAuthorizationAuditLevel  
- 資料型別：字串  
+### <a name="serviceauthorizationauditlevel"></a><span data-ttu-id="3294b-117">ServiceAuthorizationAuditLevel</span><span class="sxs-lookup"><span data-stu-id="3294b-117">ServiceAuthorizationAuditLevel</span></span>  
+ <span data-ttu-id="3294b-118">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="3294b-118">Data type: string</span></span>  
   
- 存取類型：唯讀  
+ <span data-ttu-id="3294b-119">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="3294b-119">Access type: Read-only</span></span>  
   
- 稽核記錄檔中記錄之授權事件的類型。  
+ <span data-ttu-id="3294b-120">稽核記錄檔中記錄之授權事件的類型。</span><span class="sxs-lookup"><span data-stu-id="3294b-120">The types of authorization events that are recorded in the audit log.</span></span>  
   
-### SuppressAuditFailure  
- 資料型別：布林值  
+### <a name="suppressauditfailure"></a><span data-ttu-id="3294b-121">SuppressAuditFailure</span><span class="sxs-lookup"><span data-stu-id="3294b-121">SuppressAuditFailure</span></span>  
+ <span data-ttu-id="3294b-122">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="3294b-122">Data type: boolean</span></span>  
   
- 存取類型：唯讀  
+ <span data-ttu-id="3294b-123">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="3294b-123">Access type: Read-only</span></span>  
   
- 布林值，指定隱藏寫入稽核記錄檔錯誤的行為。  
+ <span data-ttu-id="3294b-124">布林值，指定隱藏寫入稽核記錄檔錯誤的行為。</span><span class="sxs-lookup"><span data-stu-id="3294b-124">A boolean value that specifies the behavior for suppressing failures of writing to the audit log.</span></span>  
   
-## 需求  
+## <a name="requirements"></a><span data-ttu-id="3294b-125">需求</span><span class="sxs-lookup"><span data-stu-id="3294b-125">Requirements</span></span>  
   
-|MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|  
+|<span data-ttu-id="3294b-126">MOF</span><span class="sxs-lookup"><span data-stu-id="3294b-126">MOF</span></span>|<span data-ttu-id="3294b-127">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="3294b-127">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="3294b-128">命名空間</span><span class="sxs-lookup"><span data-stu-id="3294b-128">Namespace</span></span>|<span data-ttu-id="3294b-129">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="3294b-129">Defined in root\ServiceModel</span></span>|  
   
-## 請參閱  
+## <a name="see-also"></a><span data-ttu-id="3294b-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3294b-130">See Also</span></span>  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>

@@ -1,104 +1,83 @@
 ---
 title: "如何：在 Visual Basic 中記錄例外狀況"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 320bc5d06f4c8e673745b600fd369af287fe8105
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: adf2dc683a139d21f24379efc779d4510a2057eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Log Exceptions in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-您可以使用 `My.Application.Log` 和 `My.Log` 物件，記錄應用程式中所發生的例外狀況資訊。  這些範例會顯示如何使用 `My.Application.Log.WriteException` 方法，記錄您明確攔截的例外狀況，以及未處理的例外狀況。  
+# <a name="how-to-log-exceptions-in-visual-basic"></a><span data-ttu-id="06974-102">如何：在 Visual Basic 中記錄例外狀況</span><span class="sxs-lookup"><span data-stu-id="06974-102">How to: Log Exceptions in Visual Basic</span></span>
+<span data-ttu-id="06974-103">您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之例外狀況的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="06974-103">You can use the `My.Application.Log` and `My.Log` objects to log information about exceptions that occur in your application.</span></span> <span data-ttu-id="06974-104">下列範例示範如何使用 `My.Application.Log.WriteException` 方法，以記錄您明確攔截到的例外狀況和未處理的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="06974-104">These examples show how to use the `My.Application.Log.WriteException` method to log exceptions that you catch explicitly and exceptions that are unhandled.</span></span>  
   
- 如需記錄追蹤資訊，請使用 `My.Application.Log.WriteEntry` 方法。  如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>。  
+ <span data-ttu-id="06974-105">如需記錄追蹤資訊，請使用 `My.Application.Log.WriteEntry` 方法。</span><span class="sxs-lookup"><span data-stu-id="06974-105">For logging tracing information, use the `My.Application.Log.WriteEntry` method.</span></span> <span data-ttu-id="06974-106">如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>。</span><span class="sxs-lookup"><span data-stu-id="06974-106">For more information, see <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A></span></span>  
   
-### 若要記錄已處理的例外狀況  
+### <a name="to-log-a-handled-exception"></a><span data-ttu-id="06974-107">記錄已處理的例外狀況</span><span class="sxs-lookup"><span data-stu-id="06974-107">To log a handled exception</span></span>  
   
-1.  建立會產生例外狀況資訊的方法。  
+1.  <span data-ttu-id="06974-108">建立將產生例外狀況資訊的方法。</span><span class="sxs-lookup"><span data-stu-id="06974-108">Create the method that will generate the exception information.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#9](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_1.vb)]  
   
-2.  使用 `Try...Catch` 區塊，攔截例外狀況。  
+2.  <span data-ttu-id="06974-109">使用 `Try...Catch` 區塊來攔截例外狀況。</span><span class="sxs-lookup"><span data-stu-id="06974-109">Use a `Try...Catch` block to catch the exception.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#6](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_2.vb)]  
   
-3.  將會產生例外狀況的程式碼放入 `Try` 區塊中。  
+3.  <span data-ttu-id="06974-110">將可產生例外狀況的程式碼放在 `Try` 區塊中。</span><span class="sxs-lookup"><span data-stu-id="06974-110">Put the code that could generate an exception in the `Try` block.</span></span>  
   
-     取消 `Dim` 和 `MsgBox` 行的註解，會造成 <xref:System.NullReferenceException> 例外狀況。  
+     <span data-ttu-id="06974-111">取消 `Dim` 和 `MsgBox` 行的註解，造成 <xref:System.NullReferenceException> 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="06974-111">Uncomment the `Dim` and `MsgBox` lines to cause a <xref:System.NullReferenceException> exception.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
   
-4.  在 `Catch` 區塊中，使用 `My.Application.Log.WriteException` 方法寫入例外狀況資訊。  
+4.  <span data-ttu-id="06974-112">在 `Catch` 區塊中，使用 `My.Application.Log.WriteException` 方法來寫入例外狀況資訊。</span><span class="sxs-lookup"><span data-stu-id="06974-112">In the `Catch` block, use the `My.Application.Log.WriteException` method to write the exception information.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#8](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_4.vb)]  
   
-     下列範例顯示完整記錄已處理的例外狀況的程式碼。  
+     <span data-ttu-id="06974-113">下列範例顯示用於記錄已處理例外狀況的完整程式碼。</span><span class="sxs-lookup"><span data-stu-id="06974-113">The following example shows the complete code for logging a handled exception.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#10](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_5.vb)]  
   
-### 若要記錄未處理的例外狀況  
+### <a name="to-log-an-unhandled-exception"></a><span data-ttu-id="06974-114">記錄未處理的例外狀況</span><span class="sxs-lookup"><span data-stu-id="06974-114">To log an unhandled exception</span></span>  
   
-1.  在 \[**方案總管**\] 中選取專案。  在 \[**專案**\] 功能表上，選擇 \[**屬性**\]。  
+1.  <span data-ttu-id="06974-115">在 **方案總管**中選取專案。</span><span class="sxs-lookup"><span data-stu-id="06974-115">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="06974-116">在 [ **專案** ] 功能表上，選擇 [ **屬性**]。</span><span class="sxs-lookup"><span data-stu-id="06974-116">On the **Project** menu, choose **Properties**.</span></span>  
   
-2.  按一下 [應用程式]  索引標籤。  
+2.  <span data-ttu-id="06974-117">按一下 [應用程式]  索引標籤。</span><span class="sxs-lookup"><span data-stu-id="06974-117">Click the **Application** tab.</span></span>  
   
-3.  按一下 [檢視應用程式事件]  按鈕以開啟 [程式碼編輯器]。  
+3.  <span data-ttu-id="06974-118">按一下 [檢視應用程式事件]  按鈕以開啟 [程式碼編輯器]。</span><span class="sxs-lookup"><span data-stu-id="06974-118">Click the **View Application Events** button to open the Code Editor.</span></span>  
   
-     這會開啟 ApplicationEvents.vb 檔案。  
+     <span data-ttu-id="06974-119">這會開啟 ApplicationEvents.vb 檔案。</span><span class="sxs-lookup"><span data-stu-id="06974-119">This opens the ApplicationEvents.vb file.</span></span>  
   
-4.  在程式碼編輯器中開啟 ApplicationEvents.vb 檔案。  在 \[**一般**\] 功能表上，選擇 \[**MyApplication 事件**\]。  
+4.  <span data-ttu-id="06974-120">在 [程式碼編輯器] 中開啟 ApplicationEvents.vb 檔案。</span><span class="sxs-lookup"><span data-stu-id="06974-120">Have the ApplicationEvents.vb file open in the Code Editor.</span></span> <span data-ttu-id="06974-121">在 [一般] 功能表上，選擇 [MyApplication 事件]。</span><span class="sxs-lookup"><span data-stu-id="06974-121">On the **General** menu, choose **MyApplication Events**.</span></span>  
   
-5.  在 \[**宣告**\] 功能表中，選擇 \[**UnhandledException**\]。  
+5.  <span data-ttu-id="06974-122">在 [宣告] 功能表上，選擇 [未處理的例外狀況]。</span><span class="sxs-lookup"><span data-stu-id="06974-122">On the **Declarations** menu, choose **UnhandledException**.</span></span>  
   
-     應用程式會在主應用程式執行之前引發 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。  
+     <span data-ttu-id="06974-123">應用程式在主應用程式執行之前，引發 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。</span><span class="sxs-lookup"><span data-stu-id="06974-123">The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> event before the main application runs.</span></span>  
   
-6.  將 `My.Application.Log.WriteException` 方法加入至 `UnhandledException` 事件處理常式。  
+6.  <span data-ttu-id="06974-124">將 `My.Application.Log.WriteException` 方法加入 `UnhandledException` 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="06974-124">Add the `My.Application.Log.WriteException` method to the `UnhandledException` event handler.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#4](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_6.vb)]  
   
-     下列範例顯示完整的程式碼，記錄未處理的例外狀況。  
+     <span data-ttu-id="06974-125">下列範例顯示用於記錄未處理例外狀況的完整程式碼。</span><span class="sxs-lookup"><span data-stu-id="06974-125">The following example shows the complete code for logging an unhandled exception.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#5](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_7.vb)]  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
- [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [如何：寫入記錄訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-
+## <a name="see-also"></a><span data-ttu-id="06974-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="06974-126">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  
+ [<span data-ttu-id="06974-127">使用應用程式記錄檔</span><span class="sxs-lookup"><span data-stu-id="06974-127">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [<span data-ttu-id="06974-128">如何：寫入記錄檔訊息</span><span class="sxs-lookup"><span data-stu-id="06974-128">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [<span data-ttu-id="06974-129">逐步解說：判斷 My.Application.Log 寫入資訊的位置</span><span class="sxs-lookup"><span data-stu-id="06974-129">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="06974-130">逐步解說：變更 My.Application.Log 寫入資訊的位置</span><span class="sxs-lookup"><span data-stu-id="06974-130">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

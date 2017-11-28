@@ -1,31 +1,27 @@
 ---
 title: "如何：排序項目 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 2a9fba878a5f760996566a566cee94a2ca16dcee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a5c17b13f6f637559e2f99426b71947e795e0516
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-sort-elements-c"></a>如何：排序項目 (C#)
-此範例顯示如何撰寫排序其結果的查詢。  
+# <a name="how-to-sort-elements-c"></a><span data-ttu-id="73af1-102">如何：排序項目 (C#)</span><span class="sxs-lookup"><span data-stu-id="73af1-102">How to: Sort Elements (C#)</span></span>
+<span data-ttu-id="73af1-103">此範例顯示如何撰寫排序其結果的查詢。</span><span class="sxs-lookup"><span data-stu-id="73af1-103">This example shows how to write a query that sorts its results.</span></span>  
   
-## <a name="example"></a>範例  
- 此範例使用下列 XML 文件︰[範例 XML 檔：數值資料 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+## <a name="example"></a><span data-ttu-id="73af1-104">範例</span><span class="sxs-lookup"><span data-stu-id="73af1-104">Example</span></span>  
+ <span data-ttu-id="73af1-105">此範例使用下列 XML 文件︰[範例 XML 檔：數值資料 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="73af1-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -38,7 +34,7 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="73af1-106">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="73af1-106">This code produces the following output:</span></span>  
   
 ```  
 0.99  
@@ -50,10 +46,10 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="73af1-107">範例</span><span class="sxs-lookup"><span data-stu-id="73af1-107">Example</span></span>  
+ <span data-ttu-id="73af1-108">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="73af1-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="73af1-109">如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="73af1-109">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的數值資料](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。  
+ <span data-ttu-id="73af1-110">此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的數值資料](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="73af1-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -67,7 +63,7 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="73af1-111">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="73af1-111">This code produces the following output:</span></span>  
   
 ```  
 0.99  
@@ -79,7 +75,6 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [排序資料 (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)   
- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="73af1-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="73af1-112">See Also</span></span>  
+ [<span data-ttu-id="73af1-113">排序資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="73af1-113">Sorting Data (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+ [<span data-ttu-id="73af1-114">基本查詢 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="73af1-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

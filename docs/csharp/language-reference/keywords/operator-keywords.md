@@ -1,86 +1,67 @@
 ---
 title: "運算子關鍵字 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1d30e85dd76f37c797ec212b9e0700ab93a21a67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f1109fb343ebed3dc66e14664ed5ba470750f59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="operator-keywords-c-reference"></a>運算子關鍵字 (C# 參考)
-用來執行其他動作，例如建立物件、檢查物件的執行階段類型，取得類型的大小和其他動作。 本節將介紹下列關鍵字：  
+# <a name="operator-keywords-c-reference"></a><span data-ttu-id="332b7-102">運算子關鍵字 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="332b7-102">Operator Keywords (C# Reference)</span></span>
+<span data-ttu-id="332b7-103">用來執行其他動作，例如建立物件、檢查物件的執行階段類型，取得類型的大小和其他動作。</span><span class="sxs-lookup"><span data-stu-id="332b7-103">Used to perform miscellaneous actions such as creating objects, checking the run-time type of an object, obtaining the size of a type, and other actions.</span></span> <span data-ttu-id="332b7-104">本節將介紹下列關鍵字：</span><span class="sxs-lookup"><span data-stu-id="332b7-104">This section introduces the following keywords:</span></span>  
   
--   [as](../../../csharp/language-reference/keywords/as.md) 將物件轉換為相容類型。  
+-   <span data-ttu-id="332b7-105">[as](../../../csharp/language-reference/keywords/as.md) 將物件轉換為相容類型。</span><span class="sxs-lookup"><span data-stu-id="332b7-105">[as](../../../csharp/language-reference/keywords/as.md) Converts an object to a compatible type.</span></span>  
   
--   [await](../../../csharp/language-reference/keywords/await.md) 除非等候的工作完成，否則會暫止非同步方法。  
+-   <span data-ttu-id="332b7-106">[await](../../../csharp/language-reference/keywords/await.md) 除非等候的工作完成，否則會暫止非同步方法。</span><span class="sxs-lookup"><span data-stu-id="332b7-106">[await](../../../csharp/language-reference/keywords/await.md) Suspends an async method until an awaited task is completed.</span></span>  
   
--   [is](../../../csharp/language-reference/keywords/is.md) 檢查物件的執行階段類型。  
+-   <span data-ttu-id="332b7-107">[is](../../../csharp/language-reference/keywords/is.md) 檢查物件的執行階段類型。</span><span class="sxs-lookup"><span data-stu-id="332b7-107">[is](../../../csharp/language-reference/keywords/is.md) Checks the run-time type of an object.</span></span>  
   
--   [new](../../../csharp/language-reference/keywords/new.md)  
+-   [<span data-ttu-id="332b7-108">new</span><span class="sxs-lookup"><span data-stu-id="332b7-108">new</span></span>](../../../csharp/language-reference/keywords/new.md)  
   
-    -   [new 運算子](../../../csharp/language-reference/keywords/new-operator.md) 建立物件。  
+    -   <span data-ttu-id="332b7-109">[new 運算子](../../../csharp/language-reference/keywords/new-operator.md) 建立物件。</span><span class="sxs-lookup"><span data-stu-id="332b7-109">[new Operator](../../../csharp/language-reference/keywords/new-operator.md) Creates objects.</span></span>  
   
-    -   [new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md) 隱藏繼承的成員。  
+    -   <span data-ttu-id="332b7-110">[new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md) 隱藏繼承的成員。</span><span class="sxs-lookup"><span data-stu-id="332b7-110">[new Modifier](../../../csharp/language-reference/keywords/new-modifier.md) Hides an inherited member.</span></span>  
   
-    -   [new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md) 限定型別參數。  
+    -   <span data-ttu-id="332b7-111">[new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md) 限定型別參數。</span><span class="sxs-lookup"><span data-stu-id="332b7-111">[new Constraint](../../../csharp/language-reference/keywords/new-constraint.md) Qualifies a type parameter.</span></span>  
   
--   [nameof](nameof.md) 取得變數、類型或成員的簡單 (不完整) 字串名稱。
+-   <span data-ttu-id="332b7-112">[nameof](nameof.md) 取得變數、類型或成員的簡單 (不完整) 字串名稱。</span><span class="sxs-lookup"><span data-stu-id="332b7-112">[nameof](nameof.md) Obtains the simple (unqualified) string name of a variable, type, or member.</span></span>
  
--   [sizeof](../../../csharp/language-reference/keywords/sizeof.md) 取得類型的大小。  
+-   <span data-ttu-id="332b7-113">[sizeof](../../../csharp/language-reference/keywords/sizeof.md) 取得類型的大小。</span><span class="sxs-lookup"><span data-stu-id="332b7-113">[sizeof](../../../csharp/language-reference/keywords/sizeof.md) Obtains the size of a type.</span></span>  
   
--   [typeof](../../../csharp/language-reference/keywords/typeof.md) 取得類型的 **System.Type** 物件。  
+-   <span data-ttu-id="332b7-114">[typeof](../../../csharp/language-reference/keywords/typeof.md) 取得類型的 **System.Type** 物件。</span><span class="sxs-lookup"><span data-stu-id="332b7-114">[typeof](../../../csharp/language-reference/keywords/typeof.md) Obtains the **System.Type** object for a type.</span></span>  
   
--   [true](../../../csharp/language-reference/keywords/true.md)  
+-   [<span data-ttu-id="332b7-115">true</span><span class="sxs-lookup"><span data-stu-id="332b7-115">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
   
-    -   [true 運算子](../../../csharp/language-reference/keywords/true-operator.md) 傳回布林值 true 以表示 true，否則傳回 false。  
+    -   <span data-ttu-id="332b7-116">[true 運算子](../../../csharp/language-reference/keywords/true-operator.md) 傳回布林值 true 以表示 true，否則傳回 false。</span><span class="sxs-lookup"><span data-stu-id="332b7-116">[true Operator](../../../csharp/language-reference/keywords/true-operator.md) Returns the boolean value true to indicate true and returns false otherwise.</span></span>  
   
-    -   [true 常值](../../../csharp/language-reference/keywords/true-literal.md) 代表布林值 true。  
+    -   <span data-ttu-id="332b7-117">[true 常值](../../../csharp/language-reference/keywords/true-literal.md) 代表布林值 true。</span><span class="sxs-lookup"><span data-stu-id="332b7-117">[true Literal](../../../csharp/language-reference/keywords/true-literal.md) Represents the boolean value true.</span></span>  
   
--   [false](../../../csharp/language-reference/keywords/false.md)  
+-   [<span data-ttu-id="332b7-118">false</span><span class="sxs-lookup"><span data-stu-id="332b7-118">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
   
-    -   [false 運算子](../../../csharp/language-reference/keywords/false-operator.md) 傳回布林值 true 以表示 false，否則傳回 false。  
+    -   <span data-ttu-id="332b7-119">[false 運算子](../../../csharp/language-reference/keywords/false-operator.md) 傳回布林值 true 以表示 false，否則傳回 false。</span><span class="sxs-lookup"><span data-stu-id="332b7-119">[false Operator](../../../csharp/language-reference/keywords/false-operator.md) Returns the Boolean value true to indicate false and returns false otherwise.</span></span>  
   
-    -   [false 常值](../../../csharp/language-reference/keywords/false-literal.md) 代表布林值 false。  
+    -   <span data-ttu-id="332b7-120">[false 常值](../../../csharp/language-reference/keywords/false-literal.md) 代表布林值 false。</span><span class="sxs-lookup"><span data-stu-id="332b7-120">[false Literal](../../../csharp/language-reference/keywords/false-literal.md) Represents the boolean value false.</span></span>  
   
--   [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) 配置堆疊上的記憶體區塊。  
+-   <span data-ttu-id="332b7-121">[stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) 配置堆疊上的記憶體區塊。</span><span class="sxs-lookup"><span data-stu-id="332b7-121">[stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) Allocates a block of memory on the stack.</span></span>  
   
- [陳述式](../../../csharp/language-reference/keywords/statement-keywords.md)一節涵蓋了可作為運算子和陳述式的下列關鍵字：  
+ <span data-ttu-id="332b7-122">[陳述式](../../../csharp/language-reference/keywords/statement-keywords.md)一節涵蓋了可作為運算子和陳述式的下列關鍵字：</span><span class="sxs-lookup"><span data-stu-id="332b7-122">The following keywords, which can be used as operators and as statements, are covered in the [Statements](../../../csharp/language-reference/keywords/statement-keywords.md) section:</span></span>  
   
--   [checked](../../../csharp/language-reference/keywords/checked.md) 指定 checked 內容。  
+-   <span data-ttu-id="332b7-123">[checked](../../../csharp/language-reference/keywords/checked.md) 指定 checked 內容。</span><span class="sxs-lookup"><span data-stu-id="332b7-123">[checked](../../../csharp/language-reference/keywords/checked.md) Specifies checked context.</span></span>  
   
--   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 指定 unchecked 內容。  
+-   <span data-ttu-id="332b7-124">[unchecked](../../../csharp/language-reference/keywords/unchecked.md) 指定 unchecked 內容。</span><span class="sxs-lookup"><span data-stu-id="332b7-124">[unchecked](../../../csharp/language-reference/keywords/unchecked.md) Specifies unchecked context.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="332b7-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="332b7-125">See Also</span></span>  
+ [<span data-ttu-id="332b7-126">C# 參考</span><span class="sxs-lookup"><span data-stu-id="332b7-126">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="332b7-127">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="332b7-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="332b7-128">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="332b7-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="332b7-129">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="332b7-129">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

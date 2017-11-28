@@ -7,5 +7,3 @@
 ## [如何：使用規則運算式搜尋字串](how-to-search-strings-using-regular-expressions.md)
 ## [如何：判斷字串是否表示數值](how-to-determine-whether-a-string-represents-a-numeric-value.md)
 ## [如何：將字串轉換為 DateTime](how-to-convert-a-string-to-a-datetime.md)
-## [如何：在舊版編碼方式和 Unicode 間轉換](how-to-convert-between-legacy-encodings-and-unicode.md)
-## [如何：將 RTF 轉換為純文字](how-to-convert-rtf-to-plain-text.md)

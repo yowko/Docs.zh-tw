@@ -1,32 +1,35 @@
 ---
-title: "WCF 新聞訂閱概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 新聞訂閱概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 629ec17ea01ec29480f15f5921d09e7497e9f8c8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# WCF 新聞訂閱概觀
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會針對公開來自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的新聞訂閱摘要提供支援。新聞訂閱是一種應用程式整合機制，可讓伺服器透過稱為摘要的互通格式來公開一些應用程式資料。摘要是一種應用程式資料的集合，內含一些摘要層級的中繼資料 \(標題、作者、URL 與其他中繼資料\) 以及一系列的摘要項目。摘要中的項目通常會依照時間順序，從距今最近的時間往回排列。摘要項目包含一組標準的項目層級中繼資料 \(標題、URL、建立日期、分類，與其他項目層級的中繼資料\) 以及任意數量的特定應用程式資料。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時支援 Really Simple Syndication \(RSS\) 2.0 和 Atom 1.0 這兩種最常見的新聞訂閱摘要類型。  
+# <a name="wcf-syndication-overview"></a><span data-ttu-id="516a2-102">WCF 新聞訂閱概觀</span><span class="sxs-lookup"><span data-stu-id="516a2-102">WCF Syndication Overview</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="516a2-103"> 會針對公開來自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的新聞訂閱摘要提供支援。</span><span class="sxs-lookup"><span data-stu-id="516a2-103"> provides support for exposing syndication feeds from a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="516a2-104">新聞訂閱是一種應用程式整合機制，可讓伺服器透過稱為摘要的互通格式來公開一些應用程式資料。</span><span class="sxs-lookup"><span data-stu-id="516a2-104">Syndication is a mechanism of application integration in which a server exposes some application data in an interoperable format known as a feed.</span></span> <span data-ttu-id="516a2-105">摘要是一種應用程式資料的集合，內含一些摘要層級的中繼資料 (標題、作者、URL 與其他中繼資料) 以及一系列的摘要項目。</span><span class="sxs-lookup"><span data-stu-id="516a2-105">A feed is a collection of application data that consists of some feed-level metadata (title, author, URL, and other metadata) and a series of feed items.</span></span> <span data-ttu-id="516a2-106">摘要中的項目通常會依照時間順序，從距今最近的時間往回排列。</span><span class="sxs-lookup"><span data-stu-id="516a2-106">Within the feed, the feed items are usually time-ordered in reverse chronological order.</span></span> <span data-ttu-id="516a2-107">摘要項目包含一組標準的項目層級中繼資料 (標題、URL、建立日期、分類，與其他項目層級的中繼資料) 以及任意數量的特定應用程式資料。</span><span class="sxs-lookup"><span data-stu-id="516a2-107">A feed item consists of a standard set of item-level metadata (title, URL, creation date, category, and other item-level metadata) and an arbitrary amount of application specific data.</span></span> <span data-ttu-id="516a2-108">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時支援 Really Simple Syndication (RSS) 2.0 和 Atom 1.0 這兩種最常見的新聞訂閱摘要類型。</span><span class="sxs-lookup"><span data-stu-id="516a2-108">The two most common types of syndication feeds are Really Simple Syndication (RSS) 2.0 and Atom 1.0, both of which are supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## 物件模型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會定義一組特定的新聞訂閱類別，讓您在不受格式影響的情況下使用摘要、摘要項目與相關的中繼資料：<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem>、<xref:System.ServiceModel.Syndication.SyndicationPerson>、<xref:System.ServiceModel.Syndication.SyndicationLink> 和其他特定的新聞訂閱類別。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時定義了以 WCF REST 程式設計模型為基礎所建置的基礎結構類別，以便提供包含下列各項的新聞訂閱支援：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 和 <xref:System.ServiceModel.Syndication.RSS20FeedFormatter>。摘要格式器類別支援在 RSS 2.0 和 Atom 1.0 格式之間來回序列化物件模型。  
+## <a name="object-model"></a><span data-ttu-id="516a2-109">物件模型</span><span class="sxs-lookup"><span data-stu-id="516a2-109">Object Model</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="516a2-110"> 會定義一組特定的新聞訂閱類別，讓您在不受格式影響的情況下使用摘要、摘要項目與相關的中繼資料：<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem>、<xref:System.ServiceModel.Syndication.SyndicationPerson>、<xref:System.ServiceModel.Syndication.SyndicationLink> 和其他特定的新聞訂閱類別。</span><span class="sxs-lookup"><span data-stu-id="516a2-110"> defines a set of syndication-specific classes that allow you to work with feeds, feed items, and the related metadata in a format-independent way: <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationPerson>, <xref:System.ServiceModel.Syndication.SyndicationLink>, and other syndication-specific classes.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="516a2-111">也會定義在 WCF REST 程式設計模型提供新聞訂閱支援包括建置的基礎結構類別： <xref:System.ServiceModel.Syndication.Atom10FeedFormatter>，和<!--zz <xref:System.ServiceModel.Syndication.RSS20FeedFormatter>--> `RSS20FeedFormatter`。</span><span class="sxs-lookup"><span data-stu-id="516a2-111"> also defines infrastructure classes that build on the WCF REST Programming Model to provide syndication support including: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter>, and  <!--zz <xref:System.ServiceModel.Syndication.RSS20FeedFormatter>--> `RSS20FeedFormatter`.</span></span> <span data-ttu-id="516a2-112">摘要格式器類別支援在 RSS 2.0 和 Atom 1.0 格式之間來回序列化物件模型。</span><span class="sxs-lookup"><span data-stu-id="516a2-112">The feed formatter classes support serializing the object model to and from RSS 2.0 and Atom 1.0.</span></span>  
   
-## 案例  
- 今日最常見的新聞訂閱應用就是網誌，也就是網誌作者會定期發行一些資訊。這些內容可以是文字、影像、聲音，或其他類型的資訊。許多報紙與雜誌也會透過新聞訂閱方式來發行新聞報導或文章。只要訂閱這類摘要，使用者就可以隨時取得這些網站的最新資訊。儘管新聞訂閱最常與網誌和出版社產生關聯，它還可以和其他用來公開大量資訊的應用程式搭配使用，例如，使用新聞訂閱摘要來公開 Bug 資料庫。您可以建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務來公開稱為 `CodeDefects` 的作業。這項作業所採用的參數能夠針對您要擷取 Bug 的人員指定其電子郵件地址。用戶端可以使用下列 URL 來呼叫作業：http:\/\/someserver\/bugDatabase\/CodeDefects?user\=johndoe。  
+## <a name="scenarios"></a><span data-ttu-id="516a2-113">案例</span><span class="sxs-lookup"><span data-stu-id="516a2-113">Scenarios</span></span>  
+ <span data-ttu-id="516a2-114">今日最常見的新聞訂閱應用就是網誌，也就是網誌作者會定期發行一些資訊。</span><span class="sxs-lookup"><span data-stu-id="516a2-114">A common use of syndication today is blogging, where the blog author periodically publishes some sort of information.</span></span> <span data-ttu-id="516a2-115">這些內容可以是文字、影像、聲音，或其他類型的資訊。</span><span class="sxs-lookup"><span data-stu-id="516a2-115">This can be text, images, audio, or other types of information.</span></span> <span data-ttu-id="516a2-116">許多報紙與雜誌也會透過新聞訂閱方式來發行新聞報導或文章。</span><span class="sxs-lookup"><span data-stu-id="516a2-116">Many newspapers and magazines also publish news stories or articles using syndication.</span></span> <span data-ttu-id="516a2-117">只要訂閱這類摘要，使用者就可以隨時取得這些網站的最新資訊。</span><span class="sxs-lookup"><span data-stu-id="516a2-117">By subscribing to such a feed, a user can keep up to date with all the new information coming from such sites.</span></span> <span data-ttu-id="516a2-118">儘管新聞訂閱最常與網誌和出版社產生關聯，它還可以和其他用來公開大量資訊的應用程式搭配使用，例如，使用新聞訂閱摘要來公開 Bug 資料庫。</span><span class="sxs-lookup"><span data-stu-id="516a2-118">Although syndication is most commonly associated with blogs and publishers, it can be used with any application that exposes a collection of information; for example, a bug database you want to expose using a syndication feed.</span></span> <span data-ttu-id="516a2-119">您可以建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務來公開稱為 `CodeDefects` 的作業。</span><span class="sxs-lookup"><span data-stu-id="516a2-119">You can create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that exposes an operation called `CodeDefects`.</span></span> <span data-ttu-id="516a2-120">這項作業所採用的參數能夠針對您要擷取 Bug 的人員指定其電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="516a2-120">This operation could take a parameter that specifies the email address of the person whose bugs you want to retrieve.</span></span> <span data-ttu-id="516a2-121">用戶端可以使用下列 URL 來呼叫作業：http://someserver/bugDatabase/CodeDefects?user=johndoe。</span><span class="sxs-lookup"><span data-stu-id="516a2-121">A client can use the following URL to call the operation: http://someserver/bugDatabase/CodeDefects?user=johndoe.</span></span>  
   
-## 新聞訂閱格式  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 新聞訂閱平台支援 RSS 2.0 和 Atom 1.0。  
+## <a name="syndication-formats"></a><span data-ttu-id="516a2-122">新聞訂閱格式</span><span class="sxs-lookup"><span data-stu-id="516a2-122">Syndication Formats</span></span>  
+ <span data-ttu-id="516a2-123">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 新聞訂閱平台支援 RSS 2.0 和 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="516a2-123">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] syndication platform supports RSS 2.0 and Atom 1.0.</span></span>  
   
-## 請參閱  
- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a><span data-ttu-id="516a2-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="516a2-124">See Also</span></span>  
+ [<span data-ttu-id="516a2-125">WCF Web HTTP 程式設計模型</span><span class="sxs-lookup"><span data-stu-id="516a2-125">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

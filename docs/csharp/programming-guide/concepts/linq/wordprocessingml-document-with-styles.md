@@ -1,39 +1,35 @@
 ---
 title: "WordprocessingML 文件以及樣式"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 7a551d43114c5896e40230265447eeedb7fca2b2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 476f6cbd7b29f77ffad6d5a072297f94452ffff4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="wordprocessingml-document-with-styles"></a>WordprocessingML 文件以及樣式
-更複雜的 WordprocessingML 文件擁有使用樣式格式化的段落。  
+# <a name="wordprocessingml-document-with-styles"></a><span data-ttu-id="d821e-102">WordprocessingML 文件以及樣式</span><span class="sxs-lookup"><span data-stu-id="d821e-102">WordprocessingML Document with Styles</span></span>
+<span data-ttu-id="d821e-103">更複雜的 WordprocessingML 文件擁有使用樣式格式化的段落。</span><span class="sxs-lookup"><span data-stu-id="d821e-103">More complicated WordprocessingML documents have paragraphs that are formatted with styles.</span></span>  
   
- 關於 WordprocessingML 文件結構的一些注意事項將很有幫助。 WordprocessingML 文件會儲存在封裝中。 這些封裝有多個部分 (用於封裝內容時，這些封裝擁有明確的意義、基本上，這些部分是壓縮在一起以組成封裝的檔案)。 如果文件包含使用樣式格式化的段落，將會有一個文件部分包含已套用樣式的段落。 同時，也會有包含文件所參考之樣式的樣式部分。  
+ <span data-ttu-id="d821e-104">關於 WordprocessingML 文件結構的一些注意事項將很有幫助。</span><span class="sxs-lookup"><span data-stu-id="d821e-104">A few notes about the makeup of WordprocessingML documents are helpful.</span></span> <span data-ttu-id="d821e-105">WordprocessingML 文件會儲存在封裝中。</span><span class="sxs-lookup"><span data-stu-id="d821e-105">WordprocessingML documents are stored in packages.</span></span> <span data-ttu-id="d821e-106">這些封裝有多個部分 (用於封裝內容時，這些封裝擁有明確的意義、基本上，這些部分是壓縮在一起以組成封裝的檔案)。</span><span class="sxs-lookup"><span data-stu-id="d821e-106">Packages have multiple parts (parts have an explicit meaning when used in the context of packages; essentially, parts are files that are zipped together to comprise a package).</span></span> <span data-ttu-id="d821e-107">如果文件包含使用樣式格式化的段落，將會有一個文件部分包含已套用樣式的段落。</span><span class="sxs-lookup"><span data-stu-id="d821e-107">If a document contains paragraphs that are formatted with styles, there will be a document part that contains paragraphs that have styles applied to them.</span></span> <span data-ttu-id="d821e-108">同時，也會有包含文件所參考之樣式的樣式部分。</span><span class="sxs-lookup"><span data-stu-id="d821e-108">There will also be a style part that contains the styles that are referred to by the document.</span></span>  
   
- 存取封裝時，最好透過這些部分之間的關聯性 (而非使用任意路徑) 進行。 這個問題超出＜管理 WordprocessingML 文件中的內容＞教學課程的範圍，但隨附在此教學課程中的範例程式會示範正確的方法。  
+ <span data-ttu-id="d821e-109">存取封裝時，最好透過這些部分之間的關聯性 (而非使用任意路徑) 進行。</span><span class="sxs-lookup"><span data-stu-id="d821e-109">When accessing packages, it is important that you do so through the relationships between parts, rather than using an arbitrary path.</span></span> <span data-ttu-id="d821e-110">這個問題超出＜管理 WordprocessingML 文件中的內容＞教學課程的範圍，但隨附在此教學課程中的範例程式會示範正確的方法。</span><span class="sxs-lookup"><span data-stu-id="d821e-110">This issue is beyond the scope of the Manipulating Content in a WordprocessingML Document tutorial, but the example programs that are included in this tutorial demonstrate the correct approach.</span></span>  
   
-## <a name="a-document-that-uses-styles"></a>使用樣式的文件  
- 顯示在 [WordprocessingML 文件的組織結構 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 主題中的 WordML 範例相當簡單。 下列文件較為複雜：該文件擁有使用樣式格式化的段落。 查看組成 Office Open XML 文件之 XML 的最簡單方式是執行[輸出 Office Open XML 文件部分內容的範例 (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)。  
+## <a name="a-document-that-uses-styles"></a><span data-ttu-id="d821e-111">使用樣式的文件</span><span class="sxs-lookup"><span data-stu-id="d821e-111">A Document that Uses Styles</span></span>  
+ <span data-ttu-id="d821e-112">顯示在 [WordprocessingML 文件的組織結構 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 主題中的 WordML 範例相當簡單。</span><span class="sxs-lookup"><span data-stu-id="d821e-112">The WordML example presented in the [Shape of WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) topic is a very simple one.</span></span> <span data-ttu-id="d821e-113">下列文件較為複雜：該文件擁有使用樣式格式化的段落。</span><span class="sxs-lookup"><span data-stu-id="d821e-113">The following document is more complicated: It has paragraphs that are formatted with styles.</span></span> <span data-ttu-id="d821e-114">查看組成 Office Open XML 文件之 XML 的最簡單方式是執行[輸出 Office Open XML 文件部分內容的範例 (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)。</span><span class="sxs-lookup"><span data-stu-id="d821e-114">The easiest way to see the XML that makes up an Office Open XML document is to run the [Example that Outputs Office Open XML Document Parts (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).</span></span>  
   
- 在下列文件中，第一個段落的樣式為 `Heading1`。 具有預設樣式的段落有好幾個。 同時，具有樣式 `Code` 的段落也有好幾個。 由於這個相對複雜度，這是利用 LINQ to XML 進行剖析更有趣的文件。  
+ <span data-ttu-id="d821e-115">在下列文件中，第一個段落的樣式為 `Heading1`。</span><span class="sxs-lookup"><span data-stu-id="d821e-115">In the following document, the first paragraph has the style `Heading1`.</span></span> <span data-ttu-id="d821e-116">具有預設樣式的段落有好幾個。</span><span class="sxs-lookup"><span data-stu-id="d821e-116">There are a number of paragraphs that have the default style.</span></span> <span data-ttu-id="d821e-117">同時，具有樣式 `Code` 的段落也有好幾個。</span><span class="sxs-lookup"><span data-stu-id="d821e-117">There are also a number of paragraphs that have the style `Code`.</span></span> <span data-ttu-id="d821e-118">由於這個相對複雜度，這是利用 LINQ to XML 進行剖析更有趣的文件。</span><span class="sxs-lookup"><span data-stu-id="d821e-118">Because of this relative complexity, this is a more interesting document to parse with LINQ to XML.</span></span>  
   
- 在具有非預設樣式的段落中，段落項目擁有一個名稱為 `w:pPr` 的子項目，而該子項目的子項目為 `w:pStyle`。 該項目所擁有的屬性 `w:val` 包含樣式名稱。 如果段落具有預設樣式，表示該段落項目沒有 `w:p.Pr` 子項目。  
+ <span data-ttu-id="d821e-119">在具有非預設樣式的段落中，段落項目擁有一個名稱為 `w:pPr` 的子項目，而該子項目的子項目為 `w:pStyle`。</span><span class="sxs-lookup"><span data-stu-id="d821e-119">In those paragraphs with non-default styles, the paragraph elements have a child element named `w:pPr`, which in turn has a child element `w:pStyle`.</span></span> <span data-ttu-id="d821e-120">該項目所擁有的屬性 `w:val` 包含樣式名稱。</span><span class="sxs-lookup"><span data-stu-id="d821e-120">That element has an attribute, `w:val`, which contains the style name.</span></span> <span data-ttu-id="d821e-121">如果段落具有預設樣式，表示該段落項目沒有 `w:p.Pr` 子項目。</span><span class="sxs-lookup"><span data-stu-id="d821e-121">If the paragraph has the default style, it means that the paragraph element does not have a `w:p.Pr` child element.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -149,6 +145,5 @@ ms.lasthandoff: 07/28/2017
 </w:document>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
-
+## <a name="see-also"></a><span data-ttu-id="d821e-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d821e-122">See Also</span></span>  
+ [<span data-ttu-id="d821e-123">Office Open XML WordprocessingML 文件的詳細資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="d821e-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

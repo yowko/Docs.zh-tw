@@ -1,36 +1,27 @@
 ---
 title: "如何：剖析字串 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 37e09885b00830f319a829e900f33927498df0e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8aa6e0235a5a9e834167b74897121a1ab003078b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-parse-a-string-c"></a>如何：剖析字串 (C#)
-本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="a49c6-102">如何：剖析字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="a49c6-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="a49c6-103">本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="a49c6-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a>範例  
- 下列 C# 程式碼顯示如何剖析字串。  
+## <a name="example"></a><span data-ttu-id="a49c6-104">範例</span><span class="sxs-lookup"><span data-stu-id="a49c6-104">Example</span></span>  
+ <span data-ttu-id="a49c6-105">下列 C# 程式碼顯示如何剖析字串。</span><span class="sxs-lookup"><span data-stu-id="a49c6-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -62,6 +53,5 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="a49c6-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a49c6-106">See Also</span></span>  
+ [<span data-ttu-id="a49c6-107">剖析 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="a49c6-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

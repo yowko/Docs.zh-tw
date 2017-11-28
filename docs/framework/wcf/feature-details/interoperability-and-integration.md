@@ -1,60 +1,63 @@
 ---
-title: "互通性與整合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "互通性與整合"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 70398a66ac7036a2db8250acbe3927ad378f21b7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 互通性與整合
-本章節涵蓋與 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的互通性與整合的內容。  
+# <a name="interoperability-and-integration"></a><span data-ttu-id="33a35-102">互通性與整合</span><span class="sxs-lookup"><span data-stu-id="33a35-102">Interoperability and Integration</span></span>
+<span data-ttu-id="33a35-103">本章節涵蓋與 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的互通性與整合的內容。</span><span class="sxs-lookup"><span data-stu-id="33a35-103">This section covers interoperability and integration with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## 在本節中  
- [Web 服務通訊協定互通性手冊](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 已設計成與可支援一組規格 \(即所謂的 Web 服務規格\) 的 Web 服務相互操作。本主題會列出支援的規格以及支援這些規格的繫結。  
+## <a name="in-this-section"></a><span data-ttu-id="33a35-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="33a35-104">In This Section</span></span>  
+ [<span data-ttu-id="33a35-105">Web 服務通訊協定互通性手冊</span><span class="sxs-lookup"><span data-stu-id="33a35-105">Web Services Protocols Interoperability Guide</span></span>](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="33a35-106"> 已設計成與可支援一組規格 (即所謂的 Web 服務規格) 的 Web 服務相互操作。</span><span class="sxs-lookup"><span data-stu-id="33a35-106"> is built to interoperate with Web services that support a set of specifications known as the Web services specifications.</span></span> <span data-ttu-id="33a35-107">本主題會列出支援的規格以及支援這些規格的繫結。</span><span class="sxs-lookup"><span data-stu-id="33a35-107">This topic lists specifications that are supported and the bindings that support them.</span></span>  
   
- [整合 COM\+ 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- 討論如何將 COM\+ 應用程式公開為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+ [<span data-ttu-id="33a35-108">整合 COM + 應用程式</span><span class="sxs-lookup"><span data-stu-id="33a35-108">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ <span data-ttu-id="33a35-109">討論如何將 COM+ 應用程式公開為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。</span><span class="sxs-lookup"><span data-stu-id="33a35-109">Discusses how COM+ applications can be exposed as [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- [整合 COM 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)  
- 討論 COM 應用程式用來呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的各種方法。  
+ [<span data-ttu-id="33a35-110">整合 COM 應用程式</span><span class="sxs-lookup"><span data-stu-id="33a35-110">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)  
+ <span data-ttu-id="33a35-111">討論 COM 應用程式用來呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的各種方法。</span><span class="sxs-lookup"><span data-stu-id="33a35-111">Discusses the various methods for COM applications to call [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- [將 .NET 遠端處理應用程式移轉到 WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- 說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何搭配 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理使用。  
+ [<span data-ttu-id="33a35-112">.NET 遠端處理應用程式移轉至 WCF</span><span class="sxs-lookup"><span data-stu-id="33a35-112">Migrating .NET Remoting Applications to WCF</span></span>](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
+ <span data-ttu-id="33a35-113">說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何搭配 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理使用。</span><span class="sxs-lookup"><span data-stu-id="33a35-113">Describes how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can be used with [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting.</span></span>  
   
- [與 Web Services Enhancements 3.0 的互通性](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
- 說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何搭配以 Web Services Enhancements \(WSE\) 3.0 實作的 Web 服務使用。  
+ [<span data-ttu-id="33a35-114">互通性與 Web Services Enhancements 3.0</span><span class="sxs-lookup"><span data-stu-id="33a35-114">Interoperability with Web Services Enhancements 3.0</span></span>](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
+ <span data-ttu-id="33a35-115">說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何搭配以 Web Services Enhancements (WSE) 3.0 實作的 Web 服務使用。</span><span class="sxs-lookup"><span data-stu-id="33a35-115">Describes how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can be used with Web services implemented with Web Services Enhancements (WSE) 3.0.</span></span>  
   
- [從 WSE 3.0 Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  
- 說明如何將 WSE 3.0 Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+ [<span data-ttu-id="33a35-116">WSE 3.0 Web 服務移轉至 WCF</span><span class="sxs-lookup"><span data-stu-id="33a35-116">Migrating WSE 3.0 Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  
+ <span data-ttu-id="33a35-117">說明如何將 WSE 3.0 Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。</span><span class="sxs-lookup"><span data-stu-id="33a35-117">Describes how to migrate a WSE 3.0 Web service to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [與 ASP.NET Web 服務的互通性](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
- 說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務相互操作。  
+ [<span data-ttu-id="33a35-118">與 ASP.NET Web 服務互通性</span><span class="sxs-lookup"><span data-stu-id="33a35-118">Interoperability with ASP.NET Web Services</span></span>](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
+ <span data-ttu-id="33a35-119">說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務相互操作。</span><span class="sxs-lookup"><span data-stu-id="33a35-119">Describes how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can interoperate with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web services.</span></span>  
   
- [將 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 說明如何將 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+ [<span data-ttu-id="33a35-120">ASP.NET Web 服務移轉至 WCF</span><span class="sxs-lookup"><span data-stu-id="33a35-120">Migrating ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
+ <span data-ttu-id="33a35-121">說明如何將 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。</span><span class="sxs-lookup"><span data-stu-id="33a35-121">Describes how to migrate an [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [將 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 說明如何將 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+ [<span data-ttu-id="33a35-122">ASP.NET Web 服務移轉至 WCF</span><span class="sxs-lookup"><span data-stu-id="33a35-122">Migrating ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
+ <span data-ttu-id="33a35-123">說明如何將 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。</span><span class="sxs-lookup"><span data-stu-id="33a35-123">Describes how to migrate an [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [將 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 說明如何將 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+ [<span data-ttu-id="33a35-124">ASP.NET Web 服務移轉至 WCF</span><span class="sxs-lookup"><span data-stu-id="33a35-124">Migrating ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
+ <span data-ttu-id="33a35-125">說明如何將 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。</span><span class="sxs-lookup"><span data-stu-id="33a35-125">Describes how to migrate an [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [與 POX 應用程式的互通性](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
- 說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何提供使用 "Plain Old XML" \(POX\) 訊息的伺服器和用戶端。  
+ [<span data-ttu-id="33a35-126">與 POX 應用程式的互通性</span><span class="sxs-lookup"><span data-stu-id="33a35-126">Interoperability with POX Applications</span></span>](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
+ <span data-ttu-id="33a35-127">說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何提供使用 "Plain Old XML" (POX) 訊息的伺服器和用戶端。</span><span class="sxs-lookup"><span data-stu-id="33a35-127">Describes how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides both services and clients that use "Plain Old XML" (POX) messages.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="33a35-128">參考資料</span><span class="sxs-lookup"><span data-stu-id="33a35-128">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## 相關章節  
- [延伸 WCF](../../../../docs/framework/wcf/extending/extending-wcf.md)
+## <a name="related-sections"></a><span data-ttu-id="33a35-129">相關章節</span><span class="sxs-lookup"><span data-stu-id="33a35-129">Related Sections</span></span>  
+ [<span data-ttu-id="33a35-130">擴充 WCF</span><span class="sxs-lookup"><span data-stu-id="33a35-130">Extending WCF</span></span>](../../../../docs/framework/wcf/extending/extending-wcf.md)

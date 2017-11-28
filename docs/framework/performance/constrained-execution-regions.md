@@ -5,125 +5,122 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 81de172df01879af97aa66b0892a97505178c93c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="constrained-execution-regions"></a>限制的執行區域
-限制的執行區域 (CER) 是編寫可靠 Managed 程式碼的機制一部分。 CER 定義一個區域，其中限制 Common Language Runtime (CLR) 擲回頻外例外狀況，而頻外例外狀況會防止執行區域中的整個程式碼。 在該區域內，使用者程式碼無法執行導致擲回頻外例外狀況的程式碼。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 方法的前面必須緊接著 `try` 區塊，並將 `catch`、`finally` 和 `fault` 區塊標記為限制的執行區域。 標記為限制的區域之後，程式碼只能呼叫具有強式可靠性合約的其他程式碼；而且，除非程式碼已準備好處理失敗，否則程式碼不應該配置非預期或不可靠的方法，或是對其進行虛擬呼叫。 CLR 會針對在 CER 中執行的程式碼延遲執行緒中止。  
+# <a name="constrained-execution-regions"></a><span data-ttu-id="de1e0-102">限制的執行區域</span><span class="sxs-lookup"><span data-stu-id="de1e0-102">Constrained Execution Regions</span></span>
+<span data-ttu-id="de1e0-103">限制的執行區域 (CER) 是編寫可靠 Managed 程式碼的機制一部分。</span><span class="sxs-lookup"><span data-stu-id="de1e0-103">A constrained execution region (CER) is part of a mechanism for authoring reliable managed code.</span></span> <span data-ttu-id="de1e0-104">CER 定義一個區域，其中限制 Common Language Runtime (CLR) 擲回頻外例外狀況，而頻外例外狀況會防止執行區域中的整個程式碼。</span><span class="sxs-lookup"><span data-stu-id="de1e0-104">A CER defines an area in which the common language runtime (CLR) is constrained from throwing out-of-band exceptions that would prevent the code in the area from executing in its entirety.</span></span> <span data-ttu-id="de1e0-105">在該區域內，使用者程式碼無法執行導致擲回頻外例外狀況的程式碼。</span><span class="sxs-lookup"><span data-stu-id="de1e0-105">Within that region, user code is constrained from executing code that would result in the throwing of out-of-band exceptions.</span></span> <span data-ttu-id="de1e0-106"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 方法的前面必須緊接著 `try` 區塊，並將 `catch`、`finally` 和 `fault` 區塊標記為限制的執行區域。</span><span class="sxs-lookup"><span data-stu-id="de1e0-106">The <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method must immediately precede a `try` block and marks `catch`, `finally`, and `fault` blocks as constrained execution regions.</span></span> <span data-ttu-id="de1e0-107">標記為限制的區域之後，程式碼只能呼叫具有強式可靠性合約的其他程式碼；而且，除非程式碼已準備好處理失敗，否則程式碼不應該配置非預期或不可靠的方法，或是對其進行虛擬呼叫。</span><span class="sxs-lookup"><span data-stu-id="de1e0-107">Once marked as a constrained region, code must only call other code with strong reliability contracts, and code should not allocate or make virtual calls to unprepared or unreliable methods unless the code is prepared to handle failures.</span></span> <span data-ttu-id="de1e0-108">CLR 會針對在 CER 中執行的程式碼延遲執行緒中止。</span><span class="sxs-lookup"><span data-stu-id="de1e0-108">The CLR delays thread aborts for code that is executing in a CER.</span></span>  
   
- 除了已標註的 `try` 區塊之外，限制的執行區域還會以不同的形式用於 CLR 中，值得注意的是在衍生自 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 類別的類別以及使用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 方法執行之程式碼中執行的重要完成項。  
+ <span data-ttu-id="de1e0-109">除了已標註的 `try` 區塊之外，限制的執行區域還會以不同的形式用於 CLR 中，值得注意的是在衍生自 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 類別的類別以及使用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 方法執行之程式碼中執行的重要完成項。</span><span class="sxs-lookup"><span data-stu-id="de1e0-109">Constrained execution regions are used in different forms in the CLR in addition to an annotated `try` block, notably critical finalizers executing in classes derived from the <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> class and code executed using the <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> method.</span></span>  
   
-## <a name="cer-advance-preparation"></a>CER 事先準備  
- CLR 會事先準備 CER，以避免記憶體不足的情況。 需要事先準備，讓 CLR 不會在 Just-In-Time 編譯或類型載入期間導致記憶體不足。  
+## <a name="cer-advance-preparation"></a><span data-ttu-id="de1e0-110">CER 事先準備</span><span class="sxs-lookup"><span data-stu-id="de1e0-110">CER Advance Preparation</span></span>  
+ <span data-ttu-id="de1e0-111">CLR 會事先準備 CER，以避免記憶體不足的情況。</span><span class="sxs-lookup"><span data-stu-id="de1e0-111">The CLR prepares CERs in advance to avoid out-of-memory conditions.</span></span> <span data-ttu-id="de1e0-112">需要事先準備，讓 CLR 不會在 Just-In-Time 編譯或類型載入期間導致記憶體不足。</span><span class="sxs-lookup"><span data-stu-id="de1e0-112">Advance preparation is required so the CLR does not cause an out of memory condition during just-in-time compilation or type loading.</span></span>  
   
- 開發人員需要指出程式碼區域為 CER：  
+ <span data-ttu-id="de1e0-113">開發人員需要指出程式碼區域為 CER：</span><span class="sxs-lookup"><span data-stu-id="de1e0-113">The developer is required to indicate that a code region is a CER:</span></span>  
   
--   完整呼叫歷程圖中已套用 <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 屬性的最上層 CER 區域和方法會事先備妥。 <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 只能是狀態保證 <xref:System.Runtime.ConstrainedExecution.Cer.Success> 或 <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>。  
+-   <span data-ttu-id="de1e0-114">完整呼叫歷程圖中已套用 <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 屬性的最上層 CER 區域和方法會事先備妥。</span><span class="sxs-lookup"><span data-stu-id="de1e0-114">The top level CER region and methods in the full call graph that have the <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> attribute applied are prepared in advance.</span></span> <span data-ttu-id="de1e0-115"><xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 只能是狀態保證 <xref:System.Runtime.ConstrainedExecution.Cer.Success> 或 <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>。</span><span class="sxs-lookup"><span data-stu-id="de1e0-115">The <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> can only state guarantees of <xref:System.Runtime.ConstrainedExecution.Cer.Success> or <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.</span></span>  
   
--   針對無法靜態判斷的呼叫 (例如虛擬分派)，無法進行事先準備。 在這些情況下，請使用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 方法。 使用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 方法時，應該將 <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> 屬性套用至清除程式碼。  
+-   <span data-ttu-id="de1e0-116">針對無法靜態判斷的呼叫 (例如虛擬分派)，無法進行事先準備。</span><span class="sxs-lookup"><span data-stu-id="de1e0-116">Advance preparation cannot be performed for calls that cannot be statically determined, such as virtual dispatch.</span></span> <span data-ttu-id="de1e0-117">在這些情況下，請使用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="de1e0-117">Use the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> method in these cases.</span></span> <span data-ttu-id="de1e0-118">使用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 方法時，應該將 <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> 屬性套用至清除程式碼。</span><span class="sxs-lookup"><span data-stu-id="de1e0-118">When using the <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> method, the <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> attribute should be applied to the clean up code.</span></span>  
   
-## <a name="constraints"></a>條件約束  
- 使用者只能使用他們以 CER 撰寫的程式碼類型。 程式碼不會導致頻外例外狀況，例如可能是下列作業所導致：  
+## <a name="constraints"></a><span data-ttu-id="de1e0-119">條件約束</span><span class="sxs-lookup"><span data-stu-id="de1e0-119">Constraints</span></span>  
+ <span data-ttu-id="de1e0-120">使用者只能使用他們以 CER 撰寫的程式碼類型。</span><span class="sxs-lookup"><span data-stu-id="de1e0-120">Users are constrained in the type of code they can write in a CER.</span></span> <span data-ttu-id="de1e0-121">程式碼不會導致頻外例外狀況，例如可能是下列作業所導致：</span><span class="sxs-lookup"><span data-stu-id="de1e0-121">The code cannot cause an out-of-band exception, such as might result from the following operations:</span></span>  
   
--   明確配置。  
+-   <span data-ttu-id="de1e0-122">明確配置。</span><span class="sxs-lookup"><span data-stu-id="de1e0-122">Explicit allocation.</span></span>  
   
--   Boxing。  
+-   <span data-ttu-id="de1e0-123">Boxing。</span><span class="sxs-lookup"><span data-stu-id="de1e0-123">Boxing.</span></span>  
   
--   取得鎖定。  
+-   <span data-ttu-id="de1e0-124">取得鎖定。</span><span class="sxs-lookup"><span data-stu-id="de1e0-124">Acquiring a lock.</span></span>  
   
--   幾乎會呼叫未備妥的方法。  
+-   <span data-ttu-id="de1e0-125">幾乎會呼叫未備妥的方法。</span><span class="sxs-lookup"><span data-stu-id="de1e0-125">Calling unprepared methods virtually.</span></span>  
   
--   呼叫具有弱式或不存在可靠性合約的方法。  
+-   <span data-ttu-id="de1e0-126">呼叫具有弱式或不存在可靠性合約的方法。</span><span class="sxs-lookup"><span data-stu-id="de1e0-126">Calling methods with a weak or nonexistent reliability contract.</span></span>  
   
- 在 .NET Framework 版本 2.0 中，這些條件約束是指導方針。 診斷是透過程式碼分析工具所提供。  
+ <span data-ttu-id="de1e0-127">在 .NET Framework 版本 2.0 中，這些條件約束是指導方針。</span><span class="sxs-lookup"><span data-stu-id="de1e0-127">In the .NET Framework version 2.0, these constraints are guidelines.</span></span> <span data-ttu-id="de1e0-128">診斷是透過程式碼分析工具所提供。</span><span class="sxs-lookup"><span data-stu-id="de1e0-128">Diagnostics are provided through code analysis tools.</span></span>  
   
-## <a name="reliability-contracts"></a>可靠性合約  
- <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 是一個自訂屬性，記載所指定方法的可靠性保證和損毀狀態。  
+## <a name="reliability-contracts"></a><span data-ttu-id="de1e0-129">可靠性合約</span><span class="sxs-lookup"><span data-stu-id="de1e0-129">Reliability Contracts</span></span>  
+ <span data-ttu-id="de1e0-130"><xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 是一個自訂屬性，記載所指定方法的可靠性保證和損毀狀態。</span><span class="sxs-lookup"><span data-stu-id="de1e0-130">The <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> is a custom attribute that documents the reliability guarantees and the corruption state of a given method.</span></span>  
   
-### <a name="reliability-guarantees"></a>可靠性保證  
- 可靠性保證是以 <xref:System.Runtime.ConstrainedExecution.Cer> 列舉值呈現，指出所指定方法的可靠性程度：  
+### <a name="reliability-guarantees"></a><span data-ttu-id="de1e0-131">可靠性保證</span><span class="sxs-lookup"><span data-stu-id="de1e0-131">Reliability Guarantees</span></span>  
+ <span data-ttu-id="de1e0-132">可靠性保證是以 <xref:System.Runtime.ConstrainedExecution.Cer> 列舉值呈現，指出所指定方法的可靠性程度：</span><span class="sxs-lookup"><span data-stu-id="de1e0-132">Reliability guarantees, represented by <xref:System.Runtime.ConstrainedExecution.Cer> enumeration values, indicate the degree of reliability of a given method:</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. 在例外狀況下，此方法可能會失敗。 在此情況下，此方法會向呼叫端方法回報成功還是失敗。 此方法必須包含在 CER 中，確保它可以報告傳回值。  
+-   <span data-ttu-id="de1e0-133"><xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.</span><span class="sxs-lookup"><span data-stu-id="de1e0-133"><xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.</span></span> <span data-ttu-id="de1e0-134">在例外狀況下，此方法可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="de1e0-134">Under exceptional conditions, the method might fail.</span></span> <span data-ttu-id="de1e0-135">在此情況下，此方法會向呼叫端方法回報成功還是失敗。</span><span class="sxs-lookup"><span data-stu-id="de1e0-135">In this case, the method reports back to the calling method whether it succeeded or failed.</span></span> <span data-ttu-id="de1e0-136">此方法必須包含在 CER 中，確保它可以報告傳回值。</span><span class="sxs-lookup"><span data-stu-id="de1e0-136">The method must be contained in a CER to ensure that it can report the return value.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.None>. 方法、類型或組件沒有 CER 的概念，而且很可能無法在 CER 內安全地呼叫，進而大幅降低狀態損毀。 它不會利用 CER 保證。 這具有如下表示：  
+-   <span data-ttu-id="de1e0-137"><xref:System.Runtime.ConstrainedExecution.Cer.None>.</span><span class="sxs-lookup"><span data-stu-id="de1e0-137"><xref:System.Runtime.ConstrainedExecution.Cer.None>.</span></span> <span data-ttu-id="de1e0-138">方法、類型或組件沒有 CER 的概念，而且很可能無法在 CER 內安全地呼叫，進而大幅降低狀態損毀。</span><span class="sxs-lookup"><span data-stu-id="de1e0-138">The method, type, or assembly has no concept of a CER and is most likely not safe to call within a CER without substantial mitigation from state corruption.</span></span> <span data-ttu-id="de1e0-139">它不會利用 CER 保證。</span><span class="sxs-lookup"><span data-stu-id="de1e0-139">It does not take advantage of CER guarantees.</span></span> <span data-ttu-id="de1e0-140">這具有如下表示：</span><span class="sxs-lookup"><span data-stu-id="de1e0-140">This implies the following:</span></span>  
   
-    1.  在例外狀況下，此方法可能會失敗。  
+    1.  <span data-ttu-id="de1e0-141">在例外狀況下，此方法可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="de1e0-141">Under exceptional conditions the method might fail.</span></span>  
   
-    2.  此方法不一定會報告失敗。  
+    2.  <span data-ttu-id="de1e0-142">此方法不一定會報告失敗。</span><span class="sxs-lookup"><span data-stu-id="de1e0-142">The method might or might not report that it failed.</span></span>  
   
-    3.  不會寫入此方法來使用 CER，這是最常見案例。  
+    3.  <span data-ttu-id="de1e0-143">不會寫入此方法來使用 CER，這是最常見案例。</span><span class="sxs-lookup"><span data-stu-id="de1e0-143">The method is not written to use a CER, the most likely scenario.</span></span>  
   
-    4.  如果未將方法、類型或組件明確地識別為成功，則會將它隱含地識別為 <xref:System.Runtime.ConstrainedExecution.Cer.None>。  
+    4.  <span data-ttu-id="de1e0-144">如果未將方法、類型或組件明確地識別為成功，則會將它隱含地識別為 <xref:System.Runtime.ConstrainedExecution.Cer.None>。</span><span class="sxs-lookup"><span data-stu-id="de1e0-144">If a method, type, or assembly is not explicitly identified to succeed, it is implicitly identified as <xref:System.Runtime.ConstrainedExecution.Cer.None>.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.Success>. 在例外狀況下，此方法一定會成功。 為了達到這個層級的可靠性，您應該一律建構所呼叫方法的 CER，即使是從非 CER 區域內呼叫它也是一樣。 如果方法如預期完成，則方法會成功，但可以主觀檢視成功。 例如，將 Count 標上 `ReliabilityContractAttribute(Cer.Success)` 表示在 CER 下執行時，一律會傳回 <xref:System.Collections.ArrayList> 中的項目計數，而且絕不會讓內部欄位處於未定狀態。  不過，也會將 <xref:System.Threading.Interlocked.CompareExchange%2A> 方法標記為成功，並了解成功可能表示因競爭條件而無法將值取代為新值。  重點在於此方法會依記載的運作方式運作，而且不需要寫入 CER 程式碼，以預期正確行為以外的任何異常行為，但不可靠程式碼看起來都一樣。  
+-   <span data-ttu-id="de1e0-145"><xref:System.Runtime.ConstrainedExecution.Cer.Success>.</span><span class="sxs-lookup"><span data-stu-id="de1e0-145"><xref:System.Runtime.ConstrainedExecution.Cer.Success>.</span></span> <span data-ttu-id="de1e0-146">在例外狀況下，此方法一定會成功。</span><span class="sxs-lookup"><span data-stu-id="de1e0-146">Under exceptional conditions, the method is guaranteed to succeed.</span></span> <span data-ttu-id="de1e0-147">為了達到這個層級的可靠性，您應該一律建構所呼叫方法的 CER，即使是從非 CER 區域內呼叫它也是一樣。</span><span class="sxs-lookup"><span data-stu-id="de1e0-147">To achieve this level of reliability you should always construct a CER around the method that is called, even when it is called from within a non-CER region.</span></span> <span data-ttu-id="de1e0-148">如果方法如預期完成，則方法會成功，但可以主觀檢視成功。</span><span class="sxs-lookup"><span data-stu-id="de1e0-148">A method is successful if it accomplishes what is intended, although success can be viewed subjectively.</span></span> <span data-ttu-id="de1e0-149">例如，將 Count 標上 `ReliabilityContractAttribute(Cer.Success)` 表示在 CER 下執行時，一律會傳回 <xref:System.Collections.ArrayList> 中的項目計數，而且絕不會讓內部欄位處於未定狀態。</span><span class="sxs-lookup"><span data-stu-id="de1e0-149">For example, marking Count with `ReliabilityContractAttribute(Cer.Success)` implies that when it is run under a CER, it always returns a count of the number of elements in the <xref:System.Collections.ArrayList> and it can never leave the internal fields in an undetermined state.</span></span>  <span data-ttu-id="de1e0-150">不過，也會將 <xref:System.Threading.Interlocked.CompareExchange%2A> 方法標記為成功，並了解成功可能表示因競爭條件而無法將值取代為新值。</span><span class="sxs-lookup"><span data-stu-id="de1e0-150">However, the <xref:System.Threading.Interlocked.CompareExchange%2A> method is marked as success as well, with the understanding that success may mean the value could not be replaced with a new value due to a race condition.</span></span>  <span data-ttu-id="de1e0-151">重點在於此方法會依記載的運作方式運作，而且不需要寫入 CER 程式碼，以預期正確行為以外的任何異常行為，但不可靠程式碼看起來都一樣。</span><span class="sxs-lookup"><span data-stu-id="de1e0-151">The key point is that the method behaves in the way it is documented to behave, and CER code does not need to be written to expect any unusual behavior beyond what correct but unreliable code would look like.</span></span>  
   
-### <a name="corruption-levels"></a>損毀層級  
- 損毀層級是以 <xref:System.Runtime.ConstrainedExecution.Consistency> 列舉值呈現，指出所指定環境中有多少狀態可能損毀：  
+### <a name="corruption-levels"></a><span data-ttu-id="de1e0-152">損毀層級</span><span class="sxs-lookup"><span data-stu-id="de1e0-152">Corruption levels</span></span>  
+ <span data-ttu-id="de1e0-153">損毀層級是以 <xref:System.Runtime.ConstrainedExecution.Consistency> 列舉值呈現，指出所指定環境中有多少狀態可能損毀：</span><span class="sxs-lookup"><span data-stu-id="de1e0-153">Corruption levels, represented by <xref:System.Runtime.ConstrainedExecution.Consistency> enumeration values, indicate how much state may be corrupted in a given environment:</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. 在例外狀況下，Common Language Runtime (CLR) 不保證目前應用程式定義域中的狀態一致性。  
+-   <span data-ttu-id="de1e0-154"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>.</span><span class="sxs-lookup"><span data-stu-id="de1e0-154"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>.</span></span> <span data-ttu-id="de1e0-155">在例外狀況下，Common Language Runtime (CLR) 不保證目前應用程式定義域中的狀態一致性。</span><span class="sxs-lookup"><span data-stu-id="de1e0-155">Under exceptional conditions, the common language runtime (CLR) makes no guarantees regarding state consistency in the current application domain.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. 在例外狀況下，保證此方法將狀態損毀限制為目前執行個體。  
+-   <span data-ttu-id="de1e0-156"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>.</span><span class="sxs-lookup"><span data-stu-id="de1e0-156"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>.</span></span> <span data-ttu-id="de1e0-157">在例外狀況下，保證此方法將狀態損毀限制為目前執行個體。</span><span class="sxs-lookup"><span data-stu-id="de1e0-157">Under exceptional conditions, the method is guaranteed to limit state corruption to the current instance.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>：在例外狀況下，CLR 不保證相關狀態一致性；亦即，此狀況可能會損毀處理序。  
+-   <span data-ttu-id="de1e0-158"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>：在例外狀況下，CLR 不保證相關狀態一致性；亦即，此狀況可能會損毀處理序。</span><span class="sxs-lookup"><span data-stu-id="de1e0-158"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Under exceptional conditions, the CLR makes no guarantees regarding state consistency; that is, the condition might corrupt the process.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. 在例外狀況下，此方法一定不會損毀狀態。  
+-   <span data-ttu-id="de1e0-159"><xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>.</span><span class="sxs-lookup"><span data-stu-id="de1e0-159"><xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>.</span></span> <span data-ttu-id="de1e0-160">在例外狀況下，此方法一定不會損毀狀態。</span><span class="sxs-lookup"><span data-stu-id="de1e0-160">Under exceptional conditions, the method is guaranteed not to corrupt state.</span></span>  
   
-## <a name="reliability-trycatchfinally"></a>可靠性 try/catch/finally  
- 可靠性 `try/catch/finally` 是一種例外狀況處理機制，且預測性保證的層級與未管理版本相同。 `catch/finally` 區塊是 CER。 區塊中的方法需要事先準備，而且必須為不可中斷。  
+## <a name="reliability-trycatchfinally"></a><span data-ttu-id="de1e0-161">可靠性 try/catch/finally</span><span class="sxs-lookup"><span data-stu-id="de1e0-161">Reliability try/catch/finally</span></span>  
+ <span data-ttu-id="de1e0-162">可靠性 `try/catch/finally` 是一種例外狀況處理機制，且預測性保證的層級與未管理版本相同。</span><span class="sxs-lookup"><span data-stu-id="de1e0-162">The reliability `try/catch/finally` is an exception handling mechanism with the same level of predictability guarantees as the unmanaged version.</span></span> <span data-ttu-id="de1e0-163">`catch/finally` 區塊是 CER。</span><span class="sxs-lookup"><span data-stu-id="de1e0-163">The `catch/finally` block is the CER.</span></span> <span data-ttu-id="de1e0-164">區塊中的方法需要事先準備，而且必須為不可中斷。</span><span class="sxs-lookup"><span data-stu-id="de1e0-164">Methods in the block require advance preparation and must be noninterruptible.</span></span>  
   
- 在 .NET Framework 版本 2.0 中，程式碼會透過在 try 區塊之前立即呼叫 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>，以通知執行階段 try 是可靠的。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 是 <xref:System.Runtime.CompilerServices.RuntimeHelpers> 的成員，即編譯器支援類別。 直接呼叫 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 以透過編譯器暫止可用性。  
+ <span data-ttu-id="de1e0-165">在 .NET Framework 版本 2.0 中，程式碼會透過在 try 區塊之前立即呼叫 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>，以通知執行階段 try 是可靠的。</span><span class="sxs-lookup"><span data-stu-id="de1e0-165">In the .NET Framework version 2.0, code informs the runtime that a try is reliable by calling <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> immediately preceding a try block.</span></span> <span data-ttu-id="de1e0-166"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 是 <xref:System.Runtime.CompilerServices.RuntimeHelpers> 的成員，即編譯器支援類別。</span><span class="sxs-lookup"><span data-stu-id="de1e0-166"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> is a member of <xref:System.Runtime.CompilerServices.RuntimeHelpers>, a compiler support class.</span></span> <span data-ttu-id="de1e0-167">直接呼叫 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 以透過編譯器暫止可用性。</span><span class="sxs-lookup"><span data-stu-id="de1e0-167">Call <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> directly pending its availability through compilers.</span></span>  
   
-## <a name="noninterruptible-regions"></a>不可中斷區域  
- 不可中斷區域會將一組指示分組為 CER。  
+## <a name="noninterruptible-regions"></a><span data-ttu-id="de1e0-168">不可中斷區域</span><span class="sxs-lookup"><span data-stu-id="de1e0-168">Noninterruptible Regions</span></span>  
+ <span data-ttu-id="de1e0-169">不可中斷區域會將一組指示分組為 CER。</span><span class="sxs-lookup"><span data-stu-id="de1e0-169">A noninterruptible region groups a set of instructions into a CER.</span></span>  
   
- 在 .NET Framework 版本 2.0 中，透過編譯器支援暫止可用性，使用者程式碼會建立不可中斷區域，而此不可中斷區域具有在 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 方法呼叫之前包含空 try/catch 區塊的可靠 try/catch/finally。  
+ <span data-ttu-id="de1e0-170">在 .NET Framework 版本 2.0 中，透過編譯器支援暫止可用性，使用者程式碼會建立不可中斷區域，而此不可中斷區域具有在 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 方法呼叫之前包含空 try/catch 區塊的可靠 try/catch/finally。</span><span class="sxs-lookup"><span data-stu-id="de1e0-170">In .NET Framework version 2.0, pending availability through compiler support, user code creates non-interruptible regions with a reliable try/catch/finally that contains an empty try/catch block preceded by a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method call.</span></span>  
   
-## <a name="critical-finalizer-object"></a>關鍵完成項物件  
- 記憶體回收將執行完成項的 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 保證。 配置時，會事先準備完成項和其呼叫歷程圖。 完成項方法是在 CER 中執行，而且必須遵守 CER 和完成項的所有條件約束。  
+## <a name="critical-finalizer-object"></a><span data-ttu-id="de1e0-171">關鍵完成項物件</span><span class="sxs-lookup"><span data-stu-id="de1e0-171">Critical Finalizer Object</span></span>  
+ <span data-ttu-id="de1e0-172">記憶體回收將執行完成項的 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 保證。</span><span class="sxs-lookup"><span data-stu-id="de1e0-172">A <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> guarantees that garbage collection will execute the finalizer.</span></span> <span data-ttu-id="de1e0-173">配置時，會事先準備完成項和其呼叫歷程圖。</span><span class="sxs-lookup"><span data-stu-id="de1e0-173">Upon allocation, the finalizer and its call graph are prepared in advance.</span></span> <span data-ttu-id="de1e0-174">完成項方法是在 CER 中執行，而且必須遵守 CER 和完成項的所有條件約束。</span><span class="sxs-lookup"><span data-stu-id="de1e0-174">The finalizer method executes in a CER, and must obey all the constraints on CERs and finalizers.</span></span>  
   
- 任何繼承自 <xref:System.Runtime.InteropServices.SafeHandle> 和 <xref:System.Runtime.InteropServices.CriticalHandle> 的類型都一定會在 CER 內執行其完成項。 在 <xref:System.Runtime.InteropServices.SafeHandle> 衍生類別中實作 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>，以執行釋放控制代碼所需的任何程式碼。  
+ <span data-ttu-id="de1e0-175">任何繼承自 <xref:System.Runtime.InteropServices.SafeHandle> 和 <xref:System.Runtime.InteropServices.CriticalHandle> 的類型都一定會在 CER 內執行其完成項。</span><span class="sxs-lookup"><span data-stu-id="de1e0-175">Any types inheriting from <xref:System.Runtime.InteropServices.SafeHandle> and <xref:System.Runtime.InteropServices.CriticalHandle> are guaranteed to have their finalizer execute within a CER.</span></span> <span data-ttu-id="de1e0-176">在 <xref:System.Runtime.InteropServices.SafeHandle> 衍生類別中實作 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>，以執行釋放控制代碼所需的任何程式碼。</span><span class="sxs-lookup"><span data-stu-id="de1e0-176">Implement <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> in <xref:System.Runtime.InteropServices.SafeHandle> derived classes to execute any code that is required to free the handle.</span></span>  
   
-## <a name="code-not-permitted-in-cers"></a>CER 中不允許的程式碼  
- CER 中不允許下列作業：  
+## <a name="code-not-permitted-in-cers"></a><span data-ttu-id="de1e0-177">CER 中不允許的程式碼</span><span class="sxs-lookup"><span data-stu-id="de1e0-177">Code Not Permitted in CERs</span></span>  
+ <span data-ttu-id="de1e0-178">CER 中不允許下列作業：</span><span class="sxs-lookup"><span data-stu-id="de1e0-178">The following operations are not permitted in CERs:</span></span>  
   
--   明確配置。  
+-   <span data-ttu-id="de1e0-179">明確配置。</span><span class="sxs-lookup"><span data-stu-id="de1e0-179">Explicit allocations.</span></span>  
   
--   取得鎖定。  
+-   <span data-ttu-id="de1e0-180">取得鎖定。</span><span class="sxs-lookup"><span data-stu-id="de1e0-180">Acquiring a lock.</span></span>  
   
--   Boxing。  
+-   <span data-ttu-id="de1e0-181">Boxing。</span><span class="sxs-lookup"><span data-stu-id="de1e0-181">Boxing.</span></span>  
   
--   多維陣列存取。  
+-   <span data-ttu-id="de1e0-182">多維陣列存取。</span><span class="sxs-lookup"><span data-stu-id="de1e0-182">Multidimensional array access.</span></span>  
   
--   透過反映的方法呼叫。  
+-   <span data-ttu-id="de1e0-183">透過反映的方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="de1e0-183">Method calls through reflection.</span></span>  
   
--   <xref:System.Threading.Monitor.Enter%2A> 或 <xref:System.IO.FileStream.Lock%2A>。  
+-   <span data-ttu-id="de1e0-184"><xref:System.Threading.Monitor.Enter%2A> 或 <xref:System.IO.FileStream.Lock%2A>。</span><span class="sxs-lookup"><span data-stu-id="de1e0-184"><xref:System.Threading.Monitor.Enter%2A> or <xref:System.IO.FileStream.Lock%2A>.</span></span>  
   
--   安全性檢查。 請不要執行要求，而是連結要求。  
+-   <span data-ttu-id="de1e0-185">安全性檢查。</span><span class="sxs-lookup"><span data-stu-id="de1e0-185">Security checks.</span></span> <span data-ttu-id="de1e0-186">請不要執行要求，而是連結要求。</span><span class="sxs-lookup"><span data-stu-id="de1e0-186">Do not perform demands, only link demands.</span></span>  
   
--   COM 物件和 Proxy 的 <xref:System.Reflection.Emit.OpCodes.Isinst> 和 <xref:System.Reflection.Emit.OpCodes.Castclass>  
+-   <span data-ttu-id="de1e0-187">COM 物件和 Proxy 的 <xref:System.Reflection.Emit.OpCodes.Isinst> 和 <xref:System.Reflection.Emit.OpCodes.Castclass></span><span class="sxs-lookup"><span data-stu-id="de1e0-187"><xref:System.Reflection.Emit.OpCodes.Isinst> and <xref:System.Reflection.Emit.OpCodes.Castclass> for COM objects and proxies</span></span>  
   
--   取得或設定 Transparent Proxy 上的欄位。  
+-   <span data-ttu-id="de1e0-188">取得或設定 Transparent Proxy 上的欄位。</span><span class="sxs-lookup"><span data-stu-id="de1e0-188">Getting or setting fields on a transparent proxy.</span></span>  
   
--   序列化：  
+-   <span data-ttu-id="de1e0-189">序列化：</span><span class="sxs-lookup"><span data-stu-id="de1e0-189">Serialization.</span></span>  
   
--   函式指標和委派。  
+-   <span data-ttu-id="de1e0-190">函式指標和委派。</span><span class="sxs-lookup"><span data-stu-id="de1e0-190">Function pointers and delegates.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [可靠性最佳做法](../../../docs/framework/performance/reliability-best-practices.md)
-
+## <a name="see-also"></a><span data-ttu-id="de1e0-191">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de1e0-191">See Also</span></span>  
+ [<span data-ttu-id="de1e0-192">可靠性最佳做法</span><span class="sxs-lookup"><span data-stu-id="de1e0-192">Reliability Best Practices</span></span>](../../../docs/framework/performance/reliability-best-practices.md)

@@ -1,78 +1,80 @@
 ---
-title: "HOW TO：建立雙工聯合繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：建立雙工聯合繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0a682b84a90e64e0242a3490986cb526c7f028b8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：建立雙工聯合繫結
-<xref:System.ServiceModel.WSFederationHttpBinding> 只支援資料包以及要求\/回覆訊息交換合約。若要使用雙工訊息交換合約，必須建立自訂繫結。下列程序示範如何在組態檔中完成這項工作、使用訊息模式安全性進行 HTTP 與 TCP 傳輸的方法以及利用混合模式安全性進行 TCP 傳輸。這三種繫結方式的完整程式碼範例會列於本主題的結尾。  
+# <a name="how-to-create-a-duplex-federated-binding"></a><span data-ttu-id="89562-102">HOW TO：建立雙工聯合繫結</span><span class="sxs-lookup"><span data-stu-id="89562-102">How to: Create a Duplex Federated Binding</span></span>
+<span data-ttu-id="89562-103"><xref:System.ServiceModel.WSFederationHttpBinding> 只支援資料包以及要求/回覆訊息交換合約。</span><span class="sxs-lookup"><span data-stu-id="89562-103"><xref:System.ServiceModel.WSFederationHttpBinding> only supports the datagram and request/reply message exchange contracts.</span></span> <span data-ttu-id="89562-104">若要使用雙工訊息交換合約，必須建立自訂繫結。</span><span class="sxs-lookup"><span data-stu-id="89562-104">To use the duplex message exchange contract, you must create a custom binding.</span></span> <span data-ttu-id="89562-105">下列程序示範如何在組態檔中完成這項工作、使用訊息模式安全性進行 HTTP 與 TCP 傳輸的方法以及利用混合模式安全性進行 TCP 傳輸。</span><span class="sxs-lookup"><span data-stu-id="89562-105">The following procedures show how to do this in configuration, using Message mode security for the HTTP and TCP transports, and using mixed mode security for the TCP transport.</span></span> <span data-ttu-id="89562-106">這三種繫結方式的完整程式碼範例會列於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="89562-106">Sample code showing all 3 bindings is at the end of this topic.</span></span>  
   
- 您也可以撰寫程式碼建立繫結。如需要建立之繫結項目堆疊的說明，請參閱 [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
+ <span data-ttu-id="89562-107">您也可以撰寫程式碼建立繫結。</span><span class="sxs-lookup"><span data-stu-id="89562-107">You can also create the binding in code.</span></span> <span data-ttu-id="89562-108">如需建立在繫結項目堆疊的說明，請參閱[How to： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。</span><span class="sxs-lookup"><span data-stu-id="89562-108">For a description of the binding elements stack to create, see [How to: Create a Custom Binding Using the SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).</span></span>  
   
-### 若要以 HTTP 建立雙工聯合自訂繫結  
+### <a name="to-create-a-duplex-federated-custom-binding-with-http"></a><span data-ttu-id="89562-109">若要以 HTTP 建立雙工聯合自訂繫結</span><span class="sxs-lookup"><span data-stu-id="89562-109">To create a duplex federated custom binding with HTTP</span></span>  
   
-1.  在組態檔的 [\<繫結\>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 節點中，建立一個 [\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)項目。  
+1.  <span data-ttu-id="89562-110">在[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)節點的組態檔中，建立[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-110">In the [\<bindings>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) node of the configuration file, create a [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) element.</span></span>  
   
-2.  在 [\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 項目內部，建立一個 [\<繫結\>](../../../../docs/framework/misc/binding.md) 項目，且其中的 `name` 屬性要設為 `FederationDuplexHttpMessageSecurityBinding`。  
+2.  <span data-ttu-id="89562-111">內部[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)項目，建立[\<繫結 >](../../../../docs/framework/misc/binding.md)具有項目`name`屬性設為`FederationDuplexHttpMessageSecurityBinding`。</span><span class="sxs-lookup"><span data-stu-id="89562-111">Inside the [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) element, create a [\<binding>](../../../../docs/framework/misc/binding.md) element with the `name` attribute set to `FederationDuplexHttpMessageSecurityBinding`.</span></span>  
   
-3.  在 [\<繫結\>](../../../../docs/framework/misc/binding.md) 項目內部，建立一個 [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 項目，且其中的 `authenticationMode` 屬性要設為 `SecureConversation`。  
+3.  <span data-ttu-id="89562-112">內部[\<繫結 >](../../../../docs/framework/misc/binding.md)項目，建立[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)具有項目`authenticationMode`屬性設為`SecureConversation`。</span><span class="sxs-lookup"><span data-stu-id="89562-112">Inside the [\<binding>](../../../../docs/framework/misc/binding.md) element, create a [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element with the `authenticationMode` attribute set to `SecureConversation`.</span></span>  
   
-4.  在 [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目內部，建立一個 [\<secureConversationBootstrap\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) 項目，且其中的 `authenticationMode` 屬性要設為 `IssuedTokenForCertificate`或 `IssuedTokenForSslNegotiated`。  
+4.  <span data-ttu-id="89562-113">內部[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目，建立[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)具有項目`authenticationMode`屬性設為`IssuedTokenForCertificate`或`IssuedTokenForSslNegotiated`.</span><span class="sxs-lookup"><span data-stu-id="89562-113">Inside the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element, create a [\<secureConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element with the `authenticationMode` attribute set to `IssuedTokenForCertificate` or `IssuedTokenForSslNegotiated`.</span></span>  
   
-5.  接著 [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<compositeDuplex\>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) 項目。  
+5.  <span data-ttu-id="89562-114">遵循[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目，建立空白[ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-114">Following the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element, create an empty [\<compositeDuplex>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) element.</span></span>  
   
-6.  接著 [\<compositeDuplex\>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)[\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目。  
+6.  <span data-ttu-id="89562-115">遵循[ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)項目，建立空白[ \<oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-115">Following the [\<compositeDuplex>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) element, create an empty [\<oneWay>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) element.</span></span>  
   
-7.  接著 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<httpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) 項目。  
+7.  <span data-ttu-id="89562-116">遵循[ \<oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)項目，建立空白[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-116">Following the [\<oneWay>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) element, create an empty [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) element.</span></span>  
   
-### 若要以 TCP 訊息安全性模式建立雙工聯合自訂繫結  
+### <a name="to-create-a-duplex-federated-custom-binding-with-tcp-message-security-mode"></a><span data-ttu-id="89562-117">若要以 TCP 訊息安全性模式建立雙工聯合自訂繫結</span><span class="sxs-lookup"><span data-stu-id="89562-117">To create a duplex federated custom binding with TCP message security mode</span></span>  
   
-1.  在組態檔的 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目。  
+1.  <span data-ttu-id="89562-118">在[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)節點的組態檔中，建立[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-118">In the [\<bindings>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) node of the configuration file, create a [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) element.</span></span>   
   
-2.  在 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目內部，建立一個 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目，且其中的 `name` 屬性要設為 `FederationDuplexTcpMessageSecurityBinding`。  
+2.  <span data-ttu-id="89562-119">內部[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)項目，建立[\<繫結 >](../../../../docs/framework/misc/binding.md)具有項目`name`屬性設為`FederationDuplexTcpMessageSecurityBinding`。</span><span class="sxs-lookup"><span data-stu-id="89562-119">Inside the [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) element, create a [\<binding>](../../../../docs/framework/misc/binding.md) element with the `name` attribute set to `FederationDuplexTcpMessageSecurityBinding`.</span></span>  
   
-3.  在 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目內部，建立一個[\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 項目，且其中的 `authenticationMode`屬性要設為 `SecureConversation`。  
+3.  <span data-ttu-id="89562-120">內部[\<繫結 >](../../../../docs/framework/misc/binding.md)項目，建立[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)具有項目`authenticationMode`屬性設為`SecureConversation`。</span><span class="sxs-lookup"><span data-stu-id="89562-120">Inside the [\<binding>](../../../../docs/framework/misc/binding.md) element, create a [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element with the `authenticationMode` attribute set to `SecureConversation`.</span></span>  
   
-4.  在 [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目內部，建立一個 [\<secureConversationBootstrap\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) 項目，且其中的 `authenticationMode` 屬性要設為 `IssuedTokenForCertificate`或 `IssuedTokenForSslNegotiated`。  
+4.  <span data-ttu-id="89562-121">內部[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目，建立[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)具有項目`authenticationMode`屬性設為`IssuedTokenForCertificate`或`IssuedTokenForSslNegotiated`.</span><span class="sxs-lookup"><span data-stu-id="89562-121">Inside the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element, create a [\<secureConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element with the `authenticationMode` attribute set to `IssuedTokenForCertificate` or `IssuedTokenForSslNegotiated`.</span></span>  
   
-5.  接著 [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<tcpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) 項目。  
+5.  <span data-ttu-id="89562-122">遵循[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目，建立空白[ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-122">Following the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element, create an empty [\<tcpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) element.</span></span>  
   
-### 若要以 TCP 混合安全性模式建立雙工聯合自訂繫結  
+### <a name="to-create-a-duplex-federated-custom-binding-with-tcp-mixed-security-mode"></a><span data-ttu-id="89562-123">若要以 TCP 混合安全性模式建立雙工聯合自訂繫結</span><span class="sxs-lookup"><span data-stu-id="89562-123">To create a duplex federated custom binding with TCP mixed security mode</span></span>  
   
-1.  在組態檔的 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目。  
+1.  <span data-ttu-id="89562-124">在[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)節點的組態檔中，建立[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-124">In the [\<bindings>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) node of the configuration file, create a [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) element.</span></span>   
   
-2.  在 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目內部，建立一個 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目，且其中的 `name` 屬性要設為 `FederationDuplexTcpTransportSecurityWithMessageCredentialBinding`。  
+2.  <span data-ttu-id="89562-125">內部[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)項目，建立[\<繫結 >](../../../../docs/framework/misc/binding.md)具有項目`name`屬性設為`FederationDuplexTcpTransportSecurityWithMessageCredentialBinding`。</span><span class="sxs-lookup"><span data-stu-id="89562-125">Inside the [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) element, create a [\<binding>](../../../../docs/framework/misc/binding.md) element with the `name` attribute set to `FederationDuplexTcpTransportSecurityWithMessageCredentialBinding`.</span></span>  
   
-3.  在 [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) 項目內部，建立一個[\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 項目，且其中的 `authenticationMode`屬性要設為 `SecureConversation`。  
+3.  <span data-ttu-id="89562-126">內部[\<繫結 >](../../../../docs/framework/misc/binding.md)項目，建立[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)具有項目`authenticationMode`屬性設為`SecureConversation`。</span><span class="sxs-lookup"><span data-stu-id="89562-126">Inside the [\<binding>](../../../../docs/framework/misc/binding.md) element, create a [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element with the `authenticationMode` attribute set to `SecureConversation`.</span></span>  
   
-4.  在 [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目內部，建立一個 [\<secureConversationBootstrap\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) 項目，且其中的 `authenticationMode` 屬性要設為 `IssuedTokenForCertificate`或 `IssuedTokenForSslNegotiated`。  
+4.  <span data-ttu-id="89562-127">內部[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目，建立[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)具有項目`authenticationMode`屬性設為`IssuedTokenForCertificate`或`IssuedTokenForSslNegotiated`.</span><span class="sxs-lookup"><span data-stu-id="89562-127">Inside the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element, create a [\<secureConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element with the `authenticationMode` attribute set to `IssuedTokenForCertificate` or `IssuedTokenForSslNegotiated`.</span></span>  
   
-5.  接著 [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<SSL 資料流安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) 項目。  
+5.  <span data-ttu-id="89562-128">遵循[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目，建立空白[ \<sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-128">Following the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element, create an empty [\<sslStreamSecurity>](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) element.</span></span>  
   
-6.  接著 [\<SSL 資料流安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)[\<tcpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) 項目。  
+6.  <span data-ttu-id="89562-129">遵循[ \<sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)項目，建立空白[ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)項目。</span><span class="sxs-lookup"><span data-stu-id="89562-129">Following the [\<sslStreamSecurity>](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) element, create an empty [\<tcpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) element.</span></span>  
   
-## 範例程式碼  
+## <a name="code-sample"></a><span data-ttu-id="89562-130">範例程式碼</span><span class="sxs-lookup"><span data-stu-id="89562-130">Code Sample</span></span>  
   
-#### 3 個繫結的範例  
+#### <a name="sample-with-3-bindings"></a><span data-ttu-id="89562-131">3 個繫結的範例</span><span class="sxs-lookup"><span data-stu-id="89562-131">Sample with 3 Bindings</span></span>  
   
-1.  將下列程式碼插入組態檔。  
+1.  <span data-ttu-id="89562-132">將下列程式碼插入組態檔。</span><span class="sxs-lookup"><span data-stu-id="89562-132">Insert the following code into your configuration file.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="89562-133">範例</span><span class="sxs-lookup"><span data-stu-id="89562-133">Example</span></span>  
   
-```  
-  
+```xml  
 <bindings>  
    <customBinding>  
       <binding name="FederationDuplexHttpMessageSecurityBinding">  
@@ -103,5 +105,4 @@ caps.handback.revision: 7
        </binding>              
     </customBinding>  
 </bindings>  
-  
 ```

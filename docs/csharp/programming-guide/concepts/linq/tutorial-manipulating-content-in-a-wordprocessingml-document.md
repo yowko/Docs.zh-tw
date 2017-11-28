@@ -1,47 +1,42 @@
 ---
 title: "教學課程：管理 WordprocessingML 文件中的內容 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 3ddd3f35d1a1b6761aace8460aceda638f169f05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 293e8de848f83517211e3f3ed640102a2c534764
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>教學課程：管理 WordprocessingML 文件中的內容 (C#)
-本教學課程顯示如何應用功能性轉換方法與 LINQ to XML 來管理 XML 文件。 C# 範例會查詢並管理 Microsoft Word 所儲存之 Office Open XML WordprocessingML 文件中的資訊。  
+# <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a><span data-ttu-id="ab028-102">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-102">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>
+<span data-ttu-id="ab028-103">本教學課程顯示如何應用功能性轉換方法與 LINQ to XML 來管理 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="ab028-103">This tutorial shows how to apply the functional transformational approach and LINQ to XML to manipulate XML documents.</span></span> <span data-ttu-id="ab028-104">C# 範例會查詢並管理 Microsoft Word 所儲存之 Office Open XML WordprocessingML 文件中的資訊。</span><span class="sxs-lookup"><span data-stu-id="ab028-104">The C# examples query and manipulate information in Office Open XML WordprocessingML documents that are saved by Microsoft Word.</span></span>  
   
- 如需詳細資訊，請參閱 [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573) 網站。  
+ <span data-ttu-id="ab028-105">如需詳細資訊，請參閱 [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573) 網站。</span><span class="sxs-lookup"><span data-stu-id="ab028-105">For more information, see the [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573) Web site.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="ab028-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="ab028-106">In This Section</span></span>  
   
-|主題|描述|  
+|<span data-ttu-id="ab028-107">主題</span><span class="sxs-lookup"><span data-stu-id="ab028-107">Topic</span></span>|<span data-ttu-id="ab028-108">描述</span><span class="sxs-lookup"><span data-stu-id="ab028-108">Description</span></span>|  
 |-----------|-----------------|  
-|[WordprocessingML 文件的型態 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|提供 WordprocessingML 文件詳細資料的快速說明。|  
-|[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|提供逐步指示來建立此教學課程中，查詢的來源文件。|  
-|[尋找預設段落樣式 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)|顯示查詢來尋找文件之預設樣式的名稱。|  
-|[擷取段落及其樣式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)|顯示擷取文件之段落集合的查詢。|  
-|[擷取段落的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)|擴大上一個查詢來擷取每個段落的文字。|  
-|[使用擴充方法進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)|使用擴充方法重構來簡化程式碼。|  
-|[使用純虛擬函式進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)|使用虛擬函式重構進一步簡化程式碼。|  
-|[以不同的組織結構投影 (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)|利用與原始文件不同的組織結構投影 XML 來完成 XML 轉換。|  
-|[尋找 Word 文件中的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|使用上一個查詢來尋找文件中指定的文字字串。|  
-|[Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|提供 Office Open XML WordprocessingML 文件的一些詳細資料。|  
+|[<span data-ttu-id="ab028-109">WordprocessingML 文件的型態 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-109">Shape of WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|<span data-ttu-id="ab028-110">提供 WordprocessingML 文件詳細資料的快速說明。</span><span class="sxs-lookup"><span data-stu-id="ab028-110">Provides a quick explanation of details of a WordprocessingML document.</span></span>|  
+|[<span data-ttu-id="ab028-111">建立來源 Office Open XML 文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-111">Creating the Source Office Open XML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|<span data-ttu-id="ab028-112">提供逐步指示來建立此教學課程中，查詢的來源文件。</span><span class="sxs-lookup"><span data-stu-id="ab028-112">Provides step-by-step instructions to create the source document for queries in this tutorial.</span></span>|  
+|[<span data-ttu-id="ab028-113">尋找預設段落樣式 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-113">Finding the Default Paragraph Style (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)|<span data-ttu-id="ab028-114">顯示查詢來尋找文件之預設樣式的名稱。</span><span class="sxs-lookup"><span data-stu-id="ab028-114">Shows a query to find the name of the default style for a document.</span></span>|  
+|[<span data-ttu-id="ab028-115">擷取段落及其樣式 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-115">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)|<span data-ttu-id="ab028-116">顯示擷取文件之段落集合的查詢。</span><span class="sxs-lookup"><span data-stu-id="ab028-116">Shows a query that retrieves a collection of the paragraphs of a document.</span></span>|  
+|[<span data-ttu-id="ab028-117">擷取段落的文字 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-117">Retrieving the Text of the Paragraphs (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)|<span data-ttu-id="ab028-118">擴大上一個查詢來擷取每個段落的文字。</span><span class="sxs-lookup"><span data-stu-id="ab028-118">Augments the previous query to retrieve the text of each paragraph.</span></span>|  
+|[<span data-ttu-id="ab028-119">使用擴充方法進行重構 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-119">Refactoring Using an Extension Method (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)|<span data-ttu-id="ab028-120">使用擴充方法重構來簡化程式碼。</span><span class="sxs-lookup"><span data-stu-id="ab028-120">Simplifies the code by refactoring using an extension method.</span></span>|  
+|[<span data-ttu-id="ab028-121">使用純虛擬函式進行重構 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-121">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)|<span data-ttu-id="ab028-122">使用虛擬函式重構進一步簡化程式碼。</span><span class="sxs-lookup"><span data-stu-id="ab028-122">Further simplifies the code by refactoring using a pure function.</span></span>|  
+|[<span data-ttu-id="ab028-123">以不同的組織結構投影 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-123">Projecting XML in a Different Shape (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)|<span data-ttu-id="ab028-124">利用與原始文件不同的組織結構投影 XML 來完成 XML 轉換。</span><span class="sxs-lookup"><span data-stu-id="ab028-124">Completes an XML transformation by projecting XML in a different shape than the original document.</span></span>|  
+|[<span data-ttu-id="ab028-125">尋找 Word 文件中的文字 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-125">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|<span data-ttu-id="ab028-126">使用上一個查詢來尋找文件中指定的文字字串。</span><span class="sxs-lookup"><span data-stu-id="ab028-126">Uses the previous queries to find a specified text string in a document.</span></span>|  
+|[<span data-ttu-id="ab028-127">Office Open XML WordprocessingML 文件的詳細資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-127">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|<span data-ttu-id="ab028-128">提供 Office Open XML WordprocessingML 文件的一些詳細資料。</span><span class="sxs-lookup"><span data-stu-id="ab028-128">Provides some details of Office Open XML WordprocessingML documents.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [XML 純功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)   
- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-
+## <a name="see-also"></a><span data-ttu-id="ab028-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ab028-129">See Also</span></span>  
+ [<span data-ttu-id="ab028-130">XML 純功能性轉換 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-130">Pure Functional Transformations of XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+ [<span data-ttu-id="ab028-131">純功能性轉換簡介 (C#)</span><span class="sxs-lookup"><span data-stu-id="ab028-131">Introduction to Pure Functional Transformations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

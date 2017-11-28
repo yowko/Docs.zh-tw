@@ -1,79 +1,59 @@
 ---
 title: "-main (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /main
-dev_langs:
-- CSharp
+f1_keywords: /main
 helpviewer_keywords:
 - -main compiler option [C#]
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4a6dca6e62dbf69783babf2e16dc4e7c36c6705c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eee7ef4698f4b6bf7c90ff8e22a1a3ae106bec35
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="main-c-compiler-options"></a>/main (C# 編譯器選項)
-如果有多個類別包含 **Main** 方法，這個選項會指定含有程式進入點的類別。  
+# <a name="main-c-compiler-options"></a><span data-ttu-id="21799-102">/main (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="21799-102">/main (C# Compiler Options)</span></span>
+<span data-ttu-id="21799-103">如果有多個類別包含 **Main** 方法，這個選項會指定含有程式進入點的類別。</span><span class="sxs-lookup"><span data-stu-id="21799-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="21799-104">語法</span><span class="sxs-lookup"><span data-stu-id="21799-104">Syntax</span></span>  
   
-```  
+```console  
 /main:class  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a><span data-ttu-id="21799-105">引數</span><span class="sxs-lookup"><span data-stu-id="21799-105">Arguments</span></span>  
  `class`  
- 含有 **Main** 方法的類型。  
+ <span data-ttu-id="21799-106">含有 **Main** 方法的類型。</span><span class="sxs-lookup"><span data-stu-id="21799-106">The type that contains the **Main** method.</span></span>  
   
-## <a name="remarks"></a>備註  
- 如果編譯的 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法中包含一個以上的型別，您可以指定哪個型別含有要作為程式進入點的 **Main** 方法。  
+## <a name="remarks"></a><span data-ttu-id="21799-107">備註</span><span class="sxs-lookup"><span data-stu-id="21799-107">Remarks</span></span>  
+ <span data-ttu-id="21799-108">如果編譯的 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法中包含一個以上的型別，您可以指定哪個型別含有要作為程式進入點的 **Main** 方法。</span><span class="sxs-lookup"><span data-stu-id="21799-108">If your compilation includes more than one type with a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method, you can specify which type contains the **Main** method that you want to use as the entry point into the program.</span></span>  
   
- 在編譯 .exe 檔案時，即可使用此選項。  
+ <span data-ttu-id="21799-109">在編譯 .exe 檔案時，即可使用此選項。</span><span class="sxs-lookup"><span data-stu-id="21799-109">This option is for use when compiling an .exe file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="21799-110">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="21799-110">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  開啟專案的 [屬性] 頁面。  
+1.  <span data-ttu-id="21799-111">開啟專案的 [屬性] 頁面。</span><span class="sxs-lookup"><span data-stu-id="21799-111">Open the project's **Properties** page.</span></span>  
   
-2.  按一下 [應用程式] 屬性頁。  
+2.  <span data-ttu-id="21799-112">按一下 [應用程式] 屬性頁。</span><span class="sxs-lookup"><span data-stu-id="21799-112">Click the **Application** property page.</span></span>  
   
-3.  修改 [啟始物件] 屬性。  
+3.  <span data-ttu-id="21799-113">修改 [啟始物件] 屬性。</span><span class="sxs-lookup"><span data-stu-id="21799-113">Modify the **Startup object** property.</span></span>  
   
-     若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>。  
+     <span data-ttu-id="21799-114">若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>。</span><span class="sxs-lookup"><span data-stu-id="21799-114">To set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span></span>  
   
-## <a name="example"></a>範例  
- 編譯 `t2.cs` 和 `t3.cs`，將 **Main** 方法的位置指定在 `Test2` 中：  
+## <a name="example"></a><span data-ttu-id="21799-115">範例</span><span class="sxs-lookup"><span data-stu-id="21799-115">Example</span></span>  
+ <span data-ttu-id="21799-116">編譯 `t2.cs` 和 `t3.cs`，將 **Main** 方法的位置指定在 `Test2` 中：</span><span class="sxs-lookup"><span data-stu-id="21799-116">Compile `t2.cs` and `t3.cs`, specifying that the **Main** method will be found in `Test2`:</span></span>  
   
-```  
+```console  
 csc t2.cs t3.cs /main:Test2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="21799-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="21799-117">See Also</span></span>  
+ [<span data-ttu-id="21799-118">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="21799-118">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="21799-119">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="21799-119">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

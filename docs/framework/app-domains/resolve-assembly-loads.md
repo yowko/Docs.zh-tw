@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], resolving loads
 - application domains, loading assemblies
@@ -16,77 +19,75 @@ helpviewer_keywords:
 - assemblies [.NET Framework], loading
 - application domains, resolving assembly loads
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 33dc3bfd3c70d5ea1105fb47c283aa8cf1c827c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0fe3347c640b7e99487d630cbfac97e774bda7bb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 解析組件載入
-.NET Framework 為需要更充分掌控組件載入的應用程式提供了 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件。  藉由處理這個事件，您的應用程式就能從一般探查路徑將組件載入至載入內容、選取要載入的數個組件版本、發出動態組件及將它傳回等。  本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
+# <a name="resolving-assembly-loads"></a><span data-ttu-id="db37b-102">解析組件載入</span><span class="sxs-lookup"><span data-stu-id="db37b-102">Resolving Assembly Loads</span></span>
+<span data-ttu-id="db37b-103">.NET Framework 提供需要更能控制組件載入之應用程式的 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。</span><span class="sxs-lookup"><span data-stu-id="db37b-103">The .NET Framework provides the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event for applications that require greater control over assembly loading.</span></span> <span data-ttu-id="db37b-104">藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。</span><span class="sxs-lookup"><span data-stu-id="db37b-104">By handling this event, your application can load an assembly into the load context from outside the normal probing paths, select which of several assembly versions to load, emit a dynamic assembly and return it, and so on.</span></span> <span data-ttu-id="db37b-105">本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。</span><span class="sxs-lookup"><span data-stu-id="db37b-105">This topic provides guidance for handling the <xref:System.AppDomain.AssemblyResolve> event.</span></span>  
   
 > [!NOTE]
->  若要解析僅限反映之內容中的組件負載，請改用 <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=fullName> 事件。  
+>  <span data-ttu-id="db37b-106">若要解析僅限反映內容中的組件載入，請改為使用 <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> 事件。</span><span class="sxs-lookup"><span data-stu-id="db37b-106">For resolving assembly loads in the reflection-only context, use the <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> event instead.</span></span>  
   
-## AssemblyResolve 事件的運作方式  
- 當您為 <xref:System.AppDomain.AssemblyResolve> 事件註冊處理常式時，處理常式會在執行階段無法藉由名稱繫結至組件時叫用。  例如，從使用者程式碼呼叫下列方法可能導致引發 <xref:System.AppDomain.AssemblyResolve> 事件：  
+## <a name="how-the-assemblyresolve-event-works"></a><span data-ttu-id="db37b-107">AssemblyResolve 事件運作方式</span><span class="sxs-lookup"><span data-stu-id="db37b-107">How the AssemblyResolve Event Works</span></span>  
+ <span data-ttu-id="db37b-108">當您註冊 <xref:System.AppDomain.AssemblyResolve> 事件的處理常式時，只要執行階段無法依名稱繫結至組件，就會叫用處理常式。</span><span class="sxs-lookup"><span data-stu-id="db37b-108">When you register a handler for the <xref:System.AppDomain.AssemblyResolve> event, the handler is invoked whenever the runtime fails to bind to an assembly by name.</span></span> <span data-ttu-id="db37b-109">例如，從使用者程式碼呼叫下列方法可能會引發 <xref:System.AppDomain.AssemblyResolve> 事件：</span><span class="sxs-lookup"><span data-stu-id="db37b-109">For example, calling the following methods from user code can cause the <xref:System.AppDomain.AssemblyResolve> event to be raised:</span></span>  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=fullName> 方法多載或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法多載，它的第一個引數是字串，代表要載入之組件的顯示名稱 \(也就是 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName> 屬性要傳回的字串\)。  
+-   <span data-ttu-id="db37b-110">第一個引數是字串的 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法多載或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，可代表要載入之組件的顯示名稱 (即 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 屬性所傳回的字串)。</span><span class="sxs-lookup"><span data-stu-id="db37b-110">An <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> method overload or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overload whose first argument is a string that represents the display name of the assembly to load (that is, the string returned by the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property).</span></span>  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=fullName> 方法多載或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法多載，它的第一個引數是識別要載入之組件的 <xref:System.Reflection.AssemblyName> 物件。  
+-   <span data-ttu-id="db37b-111">第一個引數是 <xref:System.Reflection.AssemblyName> 物件的 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法多載或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，可識別要載入的組件。</span><span class="sxs-lookup"><span data-stu-id="db37b-111">An <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> method overload or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overload whose first argument is an <xref:System.Reflection.AssemblyName> object that identifies the assembly to load.</span></span>  
   
--   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> 方法多載。  
+-   <span data-ttu-id="db37b-112"><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法多載。</span><span class="sxs-lookup"><span data-stu-id="db37b-112">An <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> method overload.</span></span>  
   
--   <xref:System.AppDomain.CreateInstance%2A?displayProperty=fullName> 或 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=fullName> 方法多載，它會執行個體化另一個應用程式定義域中的物件。  
+-   <span data-ttu-id="db37b-113">執行個體化另一個應用程式定義域中物件的 <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 方法多載。</span><span class="sxs-lookup"><span data-stu-id="db37b-113">An <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> or <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> method overload that instantiates an object in another application domain.</span></span>  
   
-### 事件處理常式執行的工作  
- <xref:System.AppDomain.AssemblyResolve> 事件的處理常式會接收 <xref:System.ResolveEventArgs.Name%2A?displayProperty=fullName> 屬性中，要載入之組件的顯示名稱。  如果處理常式無法辨識組件名稱，則會傳回 null \(在 Visual Basic 中為 `Nothing`，在 Visual C\+\+ 中則為 `nullptr`\)。  
+### <a name="what-the-event-handler-does"></a><span data-ttu-id="db37b-114">事件處理常式執行的作業</span><span class="sxs-lookup"><span data-stu-id="db37b-114">What the Event Handler Does</span></span>  
+ <span data-ttu-id="db37b-115"><xref:System.AppDomain.AssemblyResolve> 事件的處理常式會在 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 屬性中接收要載入之組件的顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="db37b-115">The handler for the <xref:System.AppDomain.AssemblyResolve> event receives the display name of the assembly to be loaded, in the <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="db37b-116">如果處理常式無法辨識組件名稱，則會傳回 Null (在 Visual Basic 中為 `Nothing`，在 Visual C++ 中則為 `nullptr`)。</span><span class="sxs-lookup"><span data-stu-id="db37b-116">If the handler does not recognize the assembly name, it returns null (`Nothing` in Visual Basic, `nullptr` in Visual C++).</span></span>  
   
- 如果處理常式可辨識組件名稱，則可以載入和傳回符合要求的組件。  下列清單描述一些範例情節。  
+ <span data-ttu-id="db37b-117">如果處理常式可辨識組件名稱，則可以載入並傳回滿足要求的組件。</span><span class="sxs-lookup"><span data-stu-id="db37b-117">If the handler recognizes the assembly name, it can load and return an assembly that satisfies the request.</span></span> <span data-ttu-id="db37b-118">下列清單描述一些範例情節。</span><span class="sxs-lookup"><span data-stu-id="db37b-118">The following list describes some sample scenarios.</span></span>  
   
--   如果處理常式知道某個版本組件的位置，則可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName> 方法載入組件，如果成功的話，也可以傳回載入的組件。  
+-   <span data-ttu-id="db37b-119">如果處理常式知道組件版本的位置，則可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> 方法來載入組件，而且可以在成功時傳回載入的組件。</span><span class="sxs-lookup"><span data-stu-id="db37b-119">If the handler knows the location of a version of the assembly, it can load the assembly by using the <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> or <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> method, and can return the loaded assembly if successful.</span></span>  
   
--   如果處理常式可以存取儲存為位元組陣列的組件資料庫，則可以使用其中一個採用位元組陣列的 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法多載。  
+-   <span data-ttu-id="db37b-120">如果處理常式可以存取儲存為位元組陣列之組件的資料庫，則可以使用其中一個接受位元組陣列的 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載來載入位元組陣列。</span><span class="sxs-lookup"><span data-stu-id="db37b-120">If the handler has access to a database of assemblies stored as byte arrays, it can load a byte array by using one of the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overloads that take a byte array.</span></span>  
   
--   處理常式可以產生動態組件並將它傳回。  
+-   <span data-ttu-id="db37b-121">處理常式可以產生動態組件，並將它傳回。</span><span class="sxs-lookup"><span data-stu-id="db37b-121">The handler can generate a dynamic assembly and return it.</span></span>  
   
 > [!NOTE]
->  處理常式壁需將組件載入至載入來源內容、載入內容或無內容。  如果處理常式使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=fullName> 方法將組件載入至僅限反映內容，則引發 <xref:System.AppDomain.AssemblyResolve> 事件的載入嘗試會失敗。  
+>  <span data-ttu-id="db37b-122">此處理常式必須將組件載入到載入來源內容、到載入內容，或沒有內容。如果此處理常式使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 方法以將組件載入僅限反映的內容，則引發 <xref:System.AppDomain.AssemblyResolve> 事件的載入嘗試會失敗。</span><span class="sxs-lookup"><span data-stu-id="db37b-122">The handler must load the assembly into the load-from context, into the load context, or without context.If the handler loads the assembly into the reflection-only context by using the <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> or the <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> method, the load attempt that raised the <xref:System.AppDomain.AssemblyResolve> event fails.</span></span>  
   
- 處理常式必須負責傳回適合的組件。  處理常式可以藉由將 <xref:System.ResolveEventArgs.Name%2A?displayProperty=fullName> 屬性值傳遞至 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 建構函式的方式，剖析所要求組件的顯示名稱。  從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，處理常式可以使用 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=fullName> 屬性判斷目前的要求是否相依於另一個組件。  這項資訊有助於識別將滿足相依性的組件。  
+ <span data-ttu-id="db37b-123">它負責讓事件處理常式傳回適當的組件。</span><span class="sxs-lookup"><span data-stu-id="db37b-123">It is the responsibility of the event handler to return a suitable assembly.</span></span> <span data-ttu-id="db37b-124">處理常式可以將 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 屬性值傳遞給 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 建構函式，以剖析所要求組件的顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="db37b-124">The handler can parse the display name of the requested assembly by passing the <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> property value to the <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> constructor.</span></span> <span data-ttu-id="db37b-125">從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，處理常式可以使用 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 屬性來判斷目前的要求是否為另一個組件的相依性。</span><span class="sxs-lookup"><span data-stu-id="db37b-125">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the handler can use the <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property to determine whether the current request is a dependency of another assembly.</span></span> <span data-ttu-id="db37b-126">這項資訊可以協助識別將符合相依性的組件。</span><span class="sxs-lookup"><span data-stu-id="db37b-126">This information can help identify an assembly that will satisfy the dependency.</span></span>  
   
- 事件處理常式可傳回與所要求版本不同的組件版本。  
+ <span data-ttu-id="db37b-127">事件處理常式可以傳回的組件版本與所要求的版本不同。</span><span class="sxs-lookup"><span data-stu-id="db37b-127">The event handler can return a different version of the assembly than the version that was requested.</span></span>  
   
- 在大部分情況下，處理常式傳回的組件會出現在載入內容中，無論處理常式將它載入何種內容。  例如，如果處理常式使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法將組件載入至載入來源內容，當處理常式傳回組件時，該組件會出現在載入內容中。  不過，在下列情況下，當處理常式傳回組件時，該組件會顯示為無內容狀態：  
+ <span data-ttu-id="db37b-128">在大部分情況下，處理常式所傳回的組件會出現在載入內容中，不論處理常式將它載入的內容為何。</span><span class="sxs-lookup"><span data-stu-id="db37b-128">In most cases, the assembly that is returned by the handler appears in the load context, regardless of the context the handler loads it into.</span></span> <span data-ttu-id="db37b-129">例如，如果處理常式使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法將組件載入到載入來源內容，則在處理常式傳回載入內容時，組件就會出現在載入內容中。</span><span class="sxs-lookup"><span data-stu-id="db37b-129">For example, if the handler uses the <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> method to load an assembly into the load-from context, the assembly appears in the load context when the handler returns it.</span></span> <span data-ttu-id="db37b-130">不過，在下列情況下，組件在處理常式傳回它時沒有內容：</span><span class="sxs-lookup"><span data-stu-id="db37b-130">However, in the following case the assembly appears without context when the handler returns it:</span></span>  
   
--   處理常式載入無內容的組件。  
+-   <span data-ttu-id="db37b-131">處理常式會載入沒有內容的組件。</span><span class="sxs-lookup"><span data-stu-id="db37b-131">The handler loads an assembly without context.</span></span>  
   
--   <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=fullName> 屬性不是 null。  
+-   <span data-ttu-id="db37b-132"><xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 屬性不是 Null。</span><span class="sxs-lookup"><span data-stu-id="db37b-132">The <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property is not null.</span></span>  
   
--   發出要求的組件 \(也就是 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=fullName> 屬性傳回的組件\) 是在無內容的情況下載入。  
+-   <span data-ttu-id="db37b-133">已載入發出要求的組件 (即 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 屬性所傳回的組件)，但沒有內容。</span><span class="sxs-lookup"><span data-stu-id="db37b-133">The requesting assembly (that is, the assembly that is returned by the <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property) was loaded without context.</span></span>  
   
- 如需有關內容的詳細資訊，請參閱 <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=fullName> 方法多載。  
+ <span data-ttu-id="db37b-134">如需內容的資訊，請參閱 <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> 方法多載。</span><span class="sxs-lookup"><span data-stu-id="db37b-134">For information about contexts, see the <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> method overload.</span></span>  
   
- 同一個應用程式定義域中可以載入同一個組件的多個版本。  不建議您採用這個做法，因為這樣可能導致型別指派的問題。  請參閱 [組件載入的最佳作法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)。  
+ <span data-ttu-id="db37b-135">相同組件的多個版本可以載入相同的應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="db37b-135">Multiple versions of the same assembly can be loaded into the same application domain.</span></span> <span data-ttu-id="db37b-136">不建議這種做法，因為它可能會導致類型指派問題。</span><span class="sxs-lookup"><span data-stu-id="db37b-136">This practice is not recommended, because it can lead to type assignment problems.</span></span> <span data-ttu-id="db37b-137">請參閱[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)。</span><span class="sxs-lookup"><span data-stu-id="db37b-137">See [Best Practices for Assembly Loading](../../../docs/framework/deployment/best-practices-for-assembly-loading.md).</span></span>  
   
-### 事件處理常式不應執行的工作  
- 處理 <xref:System.AppDomain.AssemblyResolve> 事件的首要規則就是，您不應該嘗試傳回無法辨識的組件。  當您撰寫處理常式時，應該知道哪些組件可能引發事件。  您的處理常式應針對其他組件傳回 null。  
+### <a name="what-the-event-handler-should-not-do"></a><span data-ttu-id="db37b-138">事件處理常式不應該執行的作業</span><span class="sxs-lookup"><span data-stu-id="db37b-138">What the Event Handler Should Not Do</span></span>  
+ <span data-ttu-id="db37b-139">處理 <xref:System.AppDomain.AssemblyResolve> 事件的主要規則是您不應該嘗試傳回無法辨識的組件。</span><span class="sxs-lookup"><span data-stu-id="db37b-139">The primary rule for handling the <xref:System.AppDomain.AssemblyResolve> event is that you should not try to return an assembly you do not recognize.</span></span> <span data-ttu-id="db37b-140">當您撰寫處理常式時，應該知道哪些組件可能會引發此事件。</span><span class="sxs-lookup"><span data-stu-id="db37b-140">When you write the handler, you should know which assemblies might cause the event to be raised.</span></span> <span data-ttu-id="db37b-141">針對其他組件，您的處理常式應該傳回 Null。</span><span class="sxs-lookup"><span data-stu-id="db37b-141">Your handler should return null for other assemblies.</span></span>  
   
 > [!IMPORTANT]
->  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，會針對附屬組件引發 <xref:System.AppDomain.AssemblyResolve> 事件。  這項變更會影響針對舊版 .NET Framework 撰寫的事件處理常式 \(如果處理常式嘗試解析所有組件載入要求\)。  忽略無法辨識之組件的事件處理常式則不受這項變更的影響：它們會傳回 null，並且遵循一般後援機制。  
+>  <span data-ttu-id="db37b-142">從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，會針對附屬組件引發 <xref:System.AppDomain.AssemblyResolve> 事件。</span><span class="sxs-lookup"><span data-stu-id="db37b-142">Beginning with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], the <xref:System.AppDomain.AssemblyResolve> event is raised for satellite assemblies.</span></span> <span data-ttu-id="db37b-143">如果處理常式嘗試解析所有組件載入要求，則這項變更會影響針對舊版 .NET Framework 所撰寫的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="db37b-143">This change affects an event handler that was written for an earlier version of the .NET Framework, if the handler tries to resolve all assembly load requests.</span></span> <span data-ttu-id="db37b-144">略過無法辨識之組件的事件處理常式不會受到這項變更的影響：它們會傳回 Null，並遵循正常後援機制。</span><span class="sxs-lookup"><span data-stu-id="db37b-144">Event handlers that ignore assemblies they do not recognize are not affected by this change: They return null, and normal fallback mechanisms are followed.</span></span>  
   
- 載入組件時，事件處理常式不可使用可能反覆引發 <xref:System.AppDomain.AssemblyResolve> 事件的任何 <xref:System.AppDomain.Load%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法多載，因為這樣可能導致堆疊溢位 \(請參考本主題前段提供的清單\)。即使您針對載入要求提供例外狀況處理，這種情況仍然會發生，因為直到所有事件處理常式都傳回之後，才會擲回例外狀況。  因此，下列程式碼會在找不到 `MyAssembly` 時導致堆疊溢位：  
+ <span data-ttu-id="db37b-145">載入組件時，事件處理常式不得使用任何 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，而此方法多載可以遞迴引發 <xref:System.AppDomain.AssemblyResolve> 事件，因為這可能會導致堆疊溢位。</span><span class="sxs-lookup"><span data-stu-id="db37b-145">When loading an assembly, the event handler must not use any of the <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overloads that can cause the <xref:System.AppDomain.AssemblyResolve> event to be raised recursively, because this can lead to a stack overflow.</span></span> <span data-ttu-id="db37b-146">(請參閱本主題稍早所提供的清單)。即使您提供載入要求的例外狀況處理，也會發生這種情況，因為在傳回所有事件處理常式之前不會擲回任何例外狀況。</span><span class="sxs-lookup"><span data-stu-id="db37b-146">(See the list provided earlier in this topic.) This happens even if you provide exception handling for the load request, because no exception is thrown until all event handlers have returned.</span></span> <span data-ttu-id="db37b-147">因此，如果找不到 `MyAssembly`，則下列程式碼會導致堆疊溢位：</span><span class="sxs-lookup"><span data-stu-id="db37b-147">Thus, the following code results in a stack overflow if `MyAssembly` is not found:</span></span>  
   
  [!code-cpp[AssemblyResolveRecursive#1](../../../samples/snippets/cpp/VS_Snippets_CLR/assemblyresolverecursive/cpp/example.cpp#1)]
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
-
+## <a name="see-also"></a><span data-ttu-id="db37b-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db37b-148">See Also</span></span>  
+ [<span data-ttu-id="db37b-149">組件載入的最佳做法</span><span class="sxs-lookup"><span data-stu-id="db37b-149">Best Practices for Assembly Loading</span></span>](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ [<span data-ttu-id="db37b-150">使用應用程式定義域</span><span class="sxs-lookup"><span data-stu-id="db37b-150">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)

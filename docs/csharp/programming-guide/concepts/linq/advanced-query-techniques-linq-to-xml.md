@@ -1,43 +1,38 @@
 ---
 title: "進階查詢技術 (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 5898813d5773f13fa2c969b065e5ab1412726e9e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 91460ed99854edda829503d451728c4274d7ba2b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="advanced-query-techniques-linq-to-xml-c"></a>進階查詢技術 (LINQ to XML) (C#)
-本節提供更進階的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢技術範例。  
+# <a name="advanced-query-techniques-linq-to-xml-c"></a><span data-ttu-id="67fb4-102">進階查詢技術 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-102">Advanced Query Techniques (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="67fb4-103">本節提供更進階的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢技術範例。</span><span class="sxs-lookup"><span data-stu-id="67fb4-103">This section provides examples of more advanced [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query techniques.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="67fb4-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="67fb4-104">In This Section</span></span>  
   
-|主題|描述|  
+|<span data-ttu-id="67fb4-105">主題</span><span class="sxs-lookup"><span data-stu-id="67fb4-105">Topic</span></span>|<span data-ttu-id="67fb4-106">描述</span><span class="sxs-lookup"><span data-stu-id="67fb4-106">Description</span></span>|  
 |-----------|-----------------|  
-|[如何：聯結兩個集合 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|顯示如何利用 `Join` 子句來使用 XML 資料中的關聯性。|  
-|[如何：使用群組建立階層 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|顯示如何群組資料，然後根據該群組產生 XML。|  
-|[如何：使用 XPath 查詢 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md)|顯示如何根據 XPath 查詢擷取集合。|  
-|[如何：撰寫 LINQ to XML 座標軸方法 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)|顯示如何撰寫 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 座標軸方法。|  
-|[如何：執行文字到 XML 的資料流轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md)|顯示如何將非常大的文字檔轉換為 XML，同時維護小的記憶體使用量。|  
-|[如何：列出樹狀結構中的所有節點 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md)|呈現列出 XML 樹狀中所有節點的公用程式方法。 這在為修改 XML 樹狀結構的程式碼偵錯時相當實用。|  
-|[如何：從 Office Open XML 文件擷取段落 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)|呈現的程式碼可開啟 Office Open XML 文件、擷取 XElement 物件集合中的段落、段落的文字與段落的樣式。|  
-|[如何：修改 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|呈現會開啟、修改與儲存 Office Open XML 文件的程式碼。|  
-|[如何：從檔案系統填入 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|呈現從檔案系統建立 XML 樹狀結構的程式碼。|  
+|[<span data-ttu-id="67fb4-107">如何：聯結兩個集合 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-107">How to: Join Two Collections (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|<span data-ttu-id="67fb4-108">顯示如何利用 `Join` 子句來使用 XML 資料中的關聯性。</span><span class="sxs-lookup"><span data-stu-id="67fb4-108">Shows how to use the `Join` clause to take advantage of relationships in XML data.</span></span>|  
+|[<span data-ttu-id="67fb4-109">如何：使用群組建立階層 (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-109">How to: Create Hierarchy Using Grouping (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|<span data-ttu-id="67fb4-110">顯示如何群組資料，然後根據該群組產生 XML。</span><span class="sxs-lookup"><span data-stu-id="67fb4-110">Shows how to group data, and then generate XML based on the grouping.</span></span>|  
+|[<span data-ttu-id="67fb4-111">如何：使用 XPath 查詢 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-111">How to: Query LINQ to XML Using XPath (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md)|<span data-ttu-id="67fb4-112">顯示如何根據 XPath 查詢擷取集合。</span><span class="sxs-lookup"><span data-stu-id="67fb4-112">Shows how to retrieve collections based on XPath queries.</span></span>|  
+|[<span data-ttu-id="67fb4-113">如何：撰寫 LINQ to XML 座標軸方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-113">How to: Write a LINQ to XML Axis Method (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)|<span data-ttu-id="67fb4-114">顯示如何撰寫 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 座標軸方法。</span><span class="sxs-lookup"><span data-stu-id="67fb4-114">Shows how to write a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axis method.</span></span>|  
+|[<span data-ttu-id="67fb4-115">如何：執行文字到 XML 的資料流轉換 (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-115">How to: Perform Streaming Transformations of Text to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md)|<span data-ttu-id="67fb4-116">顯示如何將非常大的文字檔轉換為 XML，同時維護小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="67fb4-116">Shows how to transform very large text files into XML while maintaining a small memory footprint.</span></span>|  
+|[<span data-ttu-id="67fb4-117">如何：列出樹狀結構中的所有節點 (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-117">How to: List All Nodes in a Tree (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md)|<span data-ttu-id="67fb4-118">呈現列出 XML 樹狀中所有節點的公用程式方法。</span><span class="sxs-lookup"><span data-stu-id="67fb4-118">Presents a utility method that lists all nodes in an XML tree.</span></span> <span data-ttu-id="67fb4-119">這在為修改 XML 樹狀結構的程式碼偵錯時相當實用。</span><span class="sxs-lookup"><span data-stu-id="67fb4-119">This is useful for debugging code that modifies an XML tree.</span></span>|  
+|[<span data-ttu-id="67fb4-120">如何：從 Office Open XML 文件擷取段落 (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-120">How to: Retrieve Paragraphs from an Office Open XML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)|<span data-ttu-id="67fb4-121">呈現的程式碼可開啟 Office Open XML 文件、擷取 XElement 物件集合中的段落、段落的文字與段落的樣式。</span><span class="sxs-lookup"><span data-stu-id="67fb4-121">Presents code that opens an Office Open XML Document, retrieves the paragraphs in a collection of XElement objects, the text of the paragraphs, and the style of the paragraphs.</span></span>|  
+|[<span data-ttu-id="67fb4-122">如何：修改 Office Open XML 文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-122">How to: Modify an Office Open XML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|<span data-ttu-id="67fb4-123">呈現會開啟、修改與儲存 Office Open XML 文件的程式碼。</span><span class="sxs-lookup"><span data-stu-id="67fb4-123">Presents code that opens, modifies, and saves an Office Open XML Document.</span></span>|  
+|[<span data-ttu-id="67fb4-124">如何：從檔案系統填入 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-124">How to: Populate an XML Tree from the File System (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|<span data-ttu-id="67fb4-125">呈現從檔案系統建立 XML 樹狀結構的程式碼。</span><span class="sxs-lookup"><span data-stu-id="67fb4-125">Presents code that creates an XML tree from the file system.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
-
+## <a name="see-also"></a><span data-ttu-id="67fb4-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="67fb4-126">See Also</span></span>  
+ [<span data-ttu-id="67fb4-127">查詢 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="67fb4-127">Querying XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

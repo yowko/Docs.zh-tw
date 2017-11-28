@@ -1,70 +1,68 @@
 ---
-title: "XslCompiledTransform 類別的輸出選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XslCompiledTransform 類別的輸出選項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 61f59c1be3376fb76c91994996840b915cd662ae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# XslCompiledTransform 類別的輸出選項
-本主題討論可用的 XSLT 輸出選項。  您可以指定樣式表中或 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上的輸出選項。  
+# <a name="output-options-on-the-xslcompiledtransform-class"></a><span data-ttu-id="d7941-102">XslCompiledTransform 類別的輸出選項</span><span class="sxs-lookup"><span data-stu-id="d7941-102">Output Options on the XslCompiledTransform Class</span></span>
+<span data-ttu-id="d7941-103">本主題討論可用的 XSLT 輸出選項。</span><span class="sxs-lookup"><span data-stu-id="d7941-103">This topic discusses the available XSLT output options.</span></span> <span data-ttu-id="d7941-104">您可以指定樣式表中或 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上的輸出選項。</span><span class="sxs-lookup"><span data-stu-id="d7941-104">You can specify output options in the style sheet, or on the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
   
-## xsl:output 項目  
- `xsl:output` 項目指定輸出的選項。  <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法指定的輸出型別決定 `xsl:output` 選項的行為。  
+## <a name="xsloutput-element"></a><span data-ttu-id="d7941-105">xsl:output 項目</span><span class="sxs-lookup"><span data-stu-id="d7941-105">xsl:output Element</span></span>  
+ <span data-ttu-id="d7941-106">`xsl:output` 項目指定輸出的選項。</span><span class="sxs-lookup"><span data-stu-id="d7941-106">The `xsl:output` element specifies options for the output.</span></span> <span data-ttu-id="d7941-107"><xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法指定的輸出型別決定 `xsl:output` 選項的行為。</span><span class="sxs-lookup"><span data-stu-id="d7941-107">The output type specified by the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method determines the behavior of the `xsl:output` options.</span></span>  
   
- 下表說明當輸出型別是一種資料流或 <xref:System.IO.TextWriter> 時，`xsl:output` 項目上可用之每個屬性的行為。  
+ <span data-ttu-id="d7941-108">下表說明當輸出型別是一種資料流或 `xsl:output` 時，<xref:System.IO.TextWriter> 項目上可用之每個屬性的行為。</span><span class="sxs-lookup"><span data-stu-id="d7941-108">The following table describes the behavior for each of the attributes available on the `xsl:output` element when the output type is a stream or a <xref:System.IO.TextWriter>.</span></span>  
   
-|屬性名稱|行為|  
-|----------|--------|  
-|方法|支援。|  
-|版本|忽略。  對於 XML 版本始終為 1.0，對於 HTML 則為 4.0。|  
-|編碼|輸出至 <xref:System.IO.TextWriter> 時忽略。  使用 <xref:System.IO.TextWriter.Encoding%2A?displayProperty=fullName> 屬性代替。|  
-|omit\-xml\-declaration|支援。|  
-|獨立|支援。|  
-|doctype\-public|支援。|  
-|doctype\-system|支援。|  
-|cdata\-section\-elements|支援。|  
-|indent|支援。|  
-|media\-type|支援。|  
+|<span data-ttu-id="d7941-109">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="d7941-109">Attribute name</span></span>|<span data-ttu-id="d7941-110">行為</span><span class="sxs-lookup"><span data-stu-id="d7941-110">Behavior</span></span>|  
+|--------------------|--------------|  
+|<span data-ttu-id="d7941-111">方法</span><span class="sxs-lookup"><span data-stu-id="d7941-111">method</span></span>|<span data-ttu-id="d7941-112">支援。</span><span class="sxs-lookup"><span data-stu-id="d7941-112">Supported.</span></span>|  
+|<span data-ttu-id="d7941-113">版本</span><span class="sxs-lookup"><span data-stu-id="d7941-113">version</span></span>|<span data-ttu-id="d7941-114">忽略。</span><span class="sxs-lookup"><span data-stu-id="d7941-114">Ignored.</span></span> <span data-ttu-id="d7941-115">對於 XML 版本始終為 1.0，對於 HTML 則為 4.0。</span><span class="sxs-lookup"><span data-stu-id="d7941-115">The version is always 1.0 for XML and 4.0 for HTML.</span></span>|  
+|<span data-ttu-id="d7941-116">編碼</span><span class="sxs-lookup"><span data-stu-id="d7941-116">encoding</span></span>|<span data-ttu-id="d7941-117">輸出至 <xref:System.IO.TextWriter> 時忽略。</span><span class="sxs-lookup"><span data-stu-id="d7941-117">Ignored when outputting to a <xref:System.IO.TextWriter>.</span></span> <span data-ttu-id="d7941-118">使用 <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> 屬性代替。</span><span class="sxs-lookup"><span data-stu-id="d7941-118">The <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> property is used instead.</span></span>|  
+|<span data-ttu-id="d7941-119">omit-xml-declaration</span><span class="sxs-lookup"><span data-stu-id="d7941-119">omit-xml-declaration</span></span>|<span data-ttu-id="d7941-120">支援。</span><span class="sxs-lookup"><span data-stu-id="d7941-120">Supported.</span></span>|  
+|<span data-ttu-id="d7941-121">獨立</span><span class="sxs-lookup"><span data-stu-id="d7941-121">standalone</span></span>|<span data-ttu-id="d7941-122">支援。</span><span class="sxs-lookup"><span data-stu-id="d7941-122">Supported.</span></span>|  
+|<span data-ttu-id="d7941-123">doctype-public</span><span class="sxs-lookup"><span data-stu-id="d7941-123">doctype-public</span></span>|<span data-ttu-id="d7941-124">支援。</span><span class="sxs-lookup"><span data-stu-id="d7941-124">Supported.</span></span>|  
+|<span data-ttu-id="d7941-125">doctype-system</span><span class="sxs-lookup"><span data-stu-id="d7941-125">doctype-system</span></span>|<span data-ttu-id="d7941-126">支援。</span><span class="sxs-lookup"><span data-stu-id="d7941-126">Supported.</span></span>|  
+|<span data-ttu-id="d7941-127">cdata-section-elements</span><span class="sxs-lookup"><span data-stu-id="d7941-127">cdata-section-elements</span></span>|<span data-ttu-id="d7941-128">支援。</span><span class="sxs-lookup"><span data-stu-id="d7941-128">Supported.</span></span>|  
+|<span data-ttu-id="d7941-129">indent</span><span class="sxs-lookup"><span data-stu-id="d7941-129">indent</span></span>|<span data-ttu-id="d7941-130">支援。</span><span class="sxs-lookup"><span data-stu-id="d7941-130">Supported.</span></span>|  
+|<span data-ttu-id="d7941-131">media-type</span><span class="sxs-lookup"><span data-stu-id="d7941-131">media-type</span></span>|<span data-ttu-id="d7941-132">支援。</span><span class="sxs-lookup"><span data-stu-id="d7941-132">Supported.</span></span>|  
   
-#### 傳送輸出至 XmlWriter  
- 如果樣式表使用 `xsl:output` 項目，且輸出型別為 <xref:System.Xml.XmlWriter> 物件，則在建立 <xref:System.Xml.XmlWriter> 物件時應使用 <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=fullName> 屬性。  <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=fullName> 屬性傳回 <xref:System.Xml.XmlWriterSettings> 物件，該物件包含衍生自已編譯樣式表之 `xsl:output` 項目的資訊。  可將此 <xref:System.Xml.XmlWriterSettings> 物件傳遞給 <xref:System.Xml.XmlWriter.Create%2A?displayProperty=fullName> 方法，以正確的設定建立 <xref:System.Xml.XmlWriter> 物件。  
+#### <a name="sending-output-to-an-xmlwriter"></a><span data-ttu-id="d7941-133">傳送輸出至 XmlWriter</span><span class="sxs-lookup"><span data-stu-id="d7941-133">Sending Output to an XmlWriter</span></span>  
+ <span data-ttu-id="d7941-134">如果樣式表使用 `xsl:output` 項目，且輸出型別為 <xref:System.Xml.XmlWriter> 物件，則在建立 <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> 物件時應使用 <xref:System.Xml.XmlWriter> 屬性。</span><span class="sxs-lookup"><span data-stu-id="d7941-134">If your style sheet uses the `xsl:output` element and the output type is an <xref:System.Xml.XmlWriter> object, you should use the <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> property when you create the <xref:System.Xml.XmlWriter> object.</span></span> <span data-ttu-id="d7941-135"><xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> 屬性傳回 <xref:System.Xml.XmlWriterSettings> 物件，該物件包含衍生自已編譯樣式表之 `xsl:output` 項目的資訊。</span><span class="sxs-lookup"><span data-stu-id="d7941-135">The <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> property returns an <xref:System.Xml.XmlWriterSettings> object that contains information derived from the `xsl:output` element of a compiled style sheet.</span></span> <span data-ttu-id="d7941-136">可將此 <xref:System.Xml.XmlWriterSettings> 物件傳遞給 <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> 方法，以正確的設定建立 <xref:System.Xml.XmlWriter> 物件。</span><span class="sxs-lookup"><span data-stu-id="d7941-136">This <xref:System.Xml.XmlWriterSettings> object can be passed to the <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> method to create an <xref:System.Xml.XmlWriter> object with the correct settings.</span></span>  
   
-## 輸出型別  
- 下列清單說明可用於 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 命令的輸出型別。  
+## <a name="output-types"></a><span data-ttu-id="d7941-137">輸出型別</span><span class="sxs-lookup"><span data-stu-id="d7941-137">Output Types</span></span>  
+ <span data-ttu-id="d7941-138">下列清單說明可用於 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 命令的輸出型別。</span><span class="sxs-lookup"><span data-stu-id="d7941-138">The following list describes the output types available on the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> command.</span></span>  
   
-#### XmlWriter  
- <xref:System.Xml.XmlWriter> 類別可寫出 XML 資料流或檔案。  您可以藉由使用 <xref:System.Xml.XmlWriterSettings> 類別，指定要在 <xref:System.Xml.XmlWriter> 物件上支援的功能 \(包含輸出選項\)。  <xref:System.Xml.XmlWriter> 類別是 <xref:System.Xml> 架構不可或缺的一部分。  使用此輸出型別，將輸出結果傳遞至其他 XML 處理序。  
+#### <a name="xmlwriter"></a><span data-ttu-id="d7941-139">XmlWriter</span><span class="sxs-lookup"><span data-stu-id="d7941-139">XmlWriter</span></span>  
+ <span data-ttu-id="d7941-140"><xref:System.Xml.XmlWriter> 類別可寫出 XML 資料流或檔案。</span><span class="sxs-lookup"><span data-stu-id="d7941-140">The <xref:System.Xml.XmlWriter> class writes out XML streams or files.</span></span> <span data-ttu-id="d7941-141">您可以藉由使用 <xref:System.Xml.XmlWriter> 類別，指定要在 <xref:System.Xml.XmlWriterSettings> 物件上支援的功能 (包含輸出選項)。</span><span class="sxs-lookup"><span data-stu-id="d7941-141">You can specify the features to support on the <xref:System.Xml.XmlWriter> object, including output options, by using the <xref:System.Xml.XmlWriterSettings> class.</span></span> <span data-ttu-id="d7941-142"><xref:System.Xml.XmlWriter> 類別是 <xref:System.Xml> 架構不可或缺的一部分。</span><span class="sxs-lookup"><span data-stu-id="d7941-142">The <xref:System.Xml.XmlWriter> class is an integral part of the <xref:System.Xml> framework.</span></span> <span data-ttu-id="d7941-143">使用此輸出型別，將輸出結果傳遞至其他 XML 處理序。</span><span class="sxs-lookup"><span data-stu-id="d7941-143">Use this output type to pipeline the output results into another XML process.</span></span>  
   
-#### String  
- 使用此輸出型別，指定輸出檔案的 URI。  
+#### <a name="string"></a><span data-ttu-id="d7941-144">String</span><span class="sxs-lookup"><span data-stu-id="d7941-144">String</span></span>  
+ <span data-ttu-id="d7941-145">使用此輸出型別，指定輸出檔案的 URI。</span><span class="sxs-lookup"><span data-stu-id="d7941-145">Use this output type to specify the URI of the output file.</span></span>  
   
-#### 資料流  
- 資料流是位元組序列的抽象，例如，檔案、輸入\/輸出裝置、處理序間的通訊管道或 TCP\/IP 通訊端。  <xref:System.IO.Stream> 類別及其衍生類別提供不同類型輸入及輸出的一般檢視，可讓程式設計人員看不到作業系統及基礎裝置的特定詳細資訊。  
+#### <a name="stream"></a><span data-ttu-id="d7941-146">資料流</span><span class="sxs-lookup"><span data-stu-id="d7941-146">Stream</span></span>  
+ <span data-ttu-id="d7941-147">資料流是位元組序列的抽象，例如，檔案、輸入/輸出裝置、處理序間的通訊管道或 TCP/IP 通訊端。</span><span class="sxs-lookup"><span data-stu-id="d7941-147">A stream is an abstraction of a sequence of bytes, such as a file, an input/output device, an inter-process communication pipe, or a TCP/IP socket.</span></span> <span data-ttu-id="d7941-148"><xref:System.IO.Stream> 類別及其衍生類別提供不同類型輸入及輸出的一般檢視，可讓程式設計人員看不到作業系統及基礎裝置的特定詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="d7941-148">The <xref:System.IO.Stream> class and its derived classes provide a generic view of these different types of input and output, isolating the programmer from the specific details of the operating system and the underlying devices.</span></span>  
   
- 使用此輸出型別傳送資料至 <xref:System.IO.FileStream>、<xref:System.IO.MemoryStream> 或輸出資料流 \(`Response.OutputStream`\)。  
+ <span data-ttu-id="d7941-149">使用此輸出型別傳送資料至 <xref:System.IO.FileStream>、<xref:System.IO.MemoryStream> 或輸出資料流 (`Response.OutputStream`)。</span><span class="sxs-lookup"><span data-stu-id="d7941-149">Use this output type to send data to a <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, or an output stream (`Response.OutputStream`).</span></span>  
   
-#### TextWriter  
- <xref:System.IO.TextWriter> 會寫入連續的字元。  它會在 <xref:System.IO.StringWriter> 及 <xref:System.IO.StreamWriter> 類別中實作，這些類別會將字元分別寫入到字串或資料流。  要輸出至字串時，請使用此輸出型別。  
+#### <a name="textwriter"></a><span data-ttu-id="d7941-150">TextWriter</span><span class="sxs-lookup"><span data-stu-id="d7941-150">TextWriter</span></span>  
+ <span data-ttu-id="d7941-151"><xref:System.IO.TextWriter> 會寫入連續的字元。</span><span class="sxs-lookup"><span data-stu-id="d7941-151">The <xref:System.IO.TextWriter> writes sequential characters.</span></span> <span data-ttu-id="d7941-152">它會在 <xref:System.IO.StringWriter> 及 <xref:System.IO.StreamWriter> 類別中實作，這些類別會將字元分別寫入到字串或資料流。</span><span class="sxs-lookup"><span data-stu-id="d7941-152">It is implemented in the <xref:System.IO.StringWriter> and <xref:System.IO.StreamWriter> classes, which write characters to strings or streams, respectively.</span></span> <span data-ttu-id="d7941-153">要輸出至字串時，請使用此輸出型別。</span><span class="sxs-lookup"><span data-stu-id="d7941-153">Use this output type when you want to output to a string.</span></span>  
   
-## 備註  
+## <a name="notes"></a><span data-ttu-id="d7941-154">備註</span><span class="sxs-lookup"><span data-stu-id="d7941-154">Notes</span></span>  
   
--   寫出空白標記時，請在項目名稱的最後一個字元與反斜線之間寫入一個空格，例如 `<myElement />`。  如此可讓舊版瀏覽器正確顯示所產生的 HTML 頁面。  
+-   <span data-ttu-id="d7941-155">寫出空白標記時，請在項目名稱的最後一個字元與反斜線之間寫入一個空格，例如 `<myElement />`。</span><span class="sxs-lookup"><span data-stu-id="d7941-155">When writing out empty tags, a space is written between the last character of the element name and the backslash, `<myElement />` for example.</span></span> <span data-ttu-id="d7941-156">如此可讓舊版瀏覽器正確顯示所產生的 HTML 頁面。</span><span class="sxs-lookup"><span data-stu-id="d7941-156">This lets older browsers display the generated HTML pages correctly.</span></span>  
   
-## 請參閱  
- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="d7941-157">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7941-157">See Also</span></span>  
+ [<span data-ttu-id="d7941-158">XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="d7941-158">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -1,53 +1,56 @@
 ---
-title: "保護連接資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "保護連接資訊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31196697a606b3edbc0b3aa00b01e5eacb66cb03
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 保護連接資訊
-保護應用程式時的最重要目標之一就是保護資料來源的存取。  連接字串如果沒有受到保護，就可能造成安全性漏洞。  以純文字儲存連接資訊，或在記憶體中保存連接資訊，都會危及整個系統的安全性。  內嵌於來源程式碼中的連接字串可使用 [Ildasm.exe \(IL Disassembler\)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 進行讀取，進而檢視編譯組件 \(Assembly\) 中的 Microsoft Intermediate Language \(MSIL\)。  
+# <a name="protecting-connection-information"></a><span data-ttu-id="754c3-102">保護連接資訊</span><span class="sxs-lookup"><span data-stu-id="754c3-102">Protecting Connection Information</span></span>
+<span data-ttu-id="754c3-103">保護應用程式時的最重要目標之一就是保護資料來源的存取。</span><span class="sxs-lookup"><span data-stu-id="754c3-103">Protecting access to your data source is one of the most important goals when securing an application.</span></span> <span data-ttu-id="754c3-104">連接字串如果沒有受到保護，就可能造成安全性漏洞。</span><span class="sxs-lookup"><span data-stu-id="754c3-104">A connection string presents a potential vulnerability if it is not secured.</span></span> <span data-ttu-id="754c3-105">以純文字儲存連接資訊，或在記憶體中保存連接資訊，都會危及整個系統的安全性。</span><span class="sxs-lookup"><span data-stu-id="754c3-105">Storing connection information in plain text or persisting it in memory risks compromising your entire system.</span></span> <span data-ttu-id="754c3-106">連接字串內嵌在您的程式碼可以使用讀取[Ildasm.exe （IL 解譯器）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)若要檢視已編譯的組件中的 Microsoft intermediate language (MSIL)。</span><span class="sxs-lookup"><span data-stu-id="754c3-106">Connection strings embedded in your source code can be read using the [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to view Microsoft intermediate language (MSIL) in a compiled assembly.</span></span>  
   
- 涉及連接字串的安全性漏洞，可能會根據使用的驗證類型、連接字串在記憶體及磁碟中的保存方式，以及在執行階段用來建構連接字串的技巧而引發。  
+ <span data-ttu-id="754c3-107">涉及連接字串的安全性漏洞，可能會根據使用的驗證類型、連接字串在記憶體及磁碟中的保存方式，以及在執行階段用來建構連接字串的技巧而引發。</span><span class="sxs-lookup"><span data-stu-id="754c3-107">Security vulnerabilities involving connection strings can arise based on the type of authentication used, how connection strings are persisted in memory and on disk, and the techniques used to construct them at run time.</span></span>  
   
-## 使用 Windows 驗證。  
- 為了限制他人存取您的資料來源，您必須保護連線資訊，例如使用者 ID、密碼和資料來源名稱。  為了避免公開使用者資訊，建議您盡可能使用「Windows 驗證」\(有時也稱為「*整合式安全性*」\)。  Windows 驗證是藉由 `Integrated Security` 或 `Trusted_Connection` 關鍵字指定於連接字串中，可免除使用使用者 ID 和密碼的需要。  在使用 Windows 驗證時，使用者會由 Windows 進行驗證，而對伺服器和資料庫資源的存取權則是藉由授權給 Windows 使用者和群組來決定。  
+## <a name="use-windows-authentication"></a><span data-ttu-id="754c3-108">使用 Windows 驗證。</span><span class="sxs-lookup"><span data-stu-id="754c3-108">Use Windows Authentication</span></span>  
+ <span data-ttu-id="754c3-109">為了限制他人存取您的資料來源，您必須保護連線資訊，例如使用者 ID、密碼和資料來源名稱。</span><span class="sxs-lookup"><span data-stu-id="754c3-109">To help limit access to your data source, you must secure connection information such as user ID, password, and data source name.</span></span> <span data-ttu-id="754c3-110">為了避免公開使用者資訊，我們建議使用 Windows 驗證 (有時稱為*整合式安全性*) 可能的情況下。</span><span class="sxs-lookup"><span data-stu-id="754c3-110">In order to avoid exposing user information, we recommend using Windows authentication (sometimes referred to as *integrated security*) wherever possible.</span></span> <span data-ttu-id="754c3-111">Windows 驗證是藉由 `Integrated Security` 或 `Trusted_Connection` 關鍵字指定於連接字串中，可免除使用使用者 ID 和密碼的需要。</span><span class="sxs-lookup"><span data-stu-id="754c3-111">Windows authentication is specified in a connection string by using the `Integrated Security` or `Trusted_Connection` keywords, eliminating the need to use a user ID and password.</span></span> <span data-ttu-id="754c3-112">在使用 Windows 驗證時，使用者會由 Windows 進行驗證，而對伺服器和資料庫資源的存取權則是藉由授權給 Windows 使用者和群組來決定。</span><span class="sxs-lookup"><span data-stu-id="754c3-112">When using Windows authentication, users are authenticated by Windows, and access to server and database resources is determined by granting permissions to Windows users and groups.</span></span>  
   
- 在無法使用 WIndows 驗證時必須特別小心，因為使用者認證會在連接字串中公開。  在 ASP.NET 應用程式中，可以將 Windows 帳戶設定為用於連接到資料庫和其他網路資源的固定識別 \(Identity\)。  您可以在 **web.config** 檔案中的 Identity 項目中啟用模擬，然後指定使用者名稱和密碼。  
+ <span data-ttu-id="754c3-113">在無法使用 WIndows 驗證時必須特別小心，因為使用者認證會在連接字串中公開。</span><span class="sxs-lookup"><span data-stu-id="754c3-113">For situations where it is not possible to use Windows authentication, you must use extra care because user credentials are exposed in the connection string.</span></span> <span data-ttu-id="754c3-114">在 ASP.NET 應用程式中，可以將 Windows 帳戶設定為用於連接到資料庫和其他網路資源的固定識別 (Identity)。</span><span class="sxs-lookup"><span data-stu-id="754c3-114">In an ASP.NET application, you can configure a Windows account as a fixed identity that is used to connect to databases and other network resources.</span></span> <span data-ttu-id="754c3-115">啟用中的身分識別元素的模擬**web.config**檔案，並指定使用者名稱和密碼。</span><span class="sxs-lookup"><span data-stu-id="754c3-115">You enable impersonation in the identity element in the **web.config** file and specify a user name and password.</span></span>  
   
-```  
+```xml  
 <identity impersonate="true"   
         userName="MyDomain\UserAccount"   
         password="*****" />  
 ```  
   
- 固定識別帳戶應該是低權限的帳戶，僅為其授與資料庫中的必要權限。  此外，您也應該將組態檔加密，讓使用者名稱和密碼不至於以純文字方式公開。  
+ <span data-ttu-id="754c3-116">固定識別帳戶應該是低權限的帳戶，僅為其授與資料庫中的必要權限。</span><span class="sxs-lookup"><span data-stu-id="754c3-116">The fixed identity account should be a low-privilege account that has been granted only necessary permissions in the database.</span></span> <span data-ttu-id="754c3-117">此外，您也應該將組態檔加密，讓使用者名稱和密碼不至於以純文字方式公開。</span><span class="sxs-lookup"><span data-stu-id="754c3-117">In addition, you should encrypt the configuration file so that the user name and password are not exposed in clear text.</span></span>  
   
-## 不使用通用資料連結 \(UDL\) 檔  
- 請避免將 <xref:System.Data.OleDb.OleDbConnection> 的連接字串儲存於「通用資料連結」\(UDL\) 檔案中。  UDL 會以純文字方式儲存且無法加密。  UDL 檔案是應用程式外部的檔案型資源，無法使用 .NET Framework 進行保護或加密。  
+## <a name="do-not-use-universal-data-link-udl-files"></a><span data-ttu-id="754c3-118">不使用通用資料連結 (UDL) 檔</span><span class="sxs-lookup"><span data-stu-id="754c3-118">Do Not Use Universal Data Link (UDL) files</span></span>  
+ <span data-ttu-id="754c3-119">請避免將 <xref:System.Data.OleDb.OleDbConnection> 的連接字串儲存於「通用資料連結」(UDL) 檔案中。</span><span class="sxs-lookup"><span data-stu-id="754c3-119">Avoid storing connection strings for an <xref:System.Data.OleDb.OleDbConnection> in a Universal Data Link (UDL) file.</span></span> <span data-ttu-id="754c3-120">UDL 會以純文字方式儲存且無法加密。</span><span class="sxs-lookup"><span data-stu-id="754c3-120">UDLs are stored in clear text and cannot be encrypted.</span></span> <span data-ttu-id="754c3-121">UDL 檔案是應用程式外部的檔案型資源，無法使用 .NET Framework 進行保護或加密。</span><span class="sxs-lookup"><span data-stu-id="754c3-121">A UDL file is an external file-based resource to your application, and it cannot be secured or encrypted using the .NET Framework.</span></span>  
   
-## 使用連接字串產生器來避免插入式攻擊  
- 當使用動態字串串連來根據使用者輸入建立連接字串時，就可能發生連接字串插入式攻擊。  如果使用者輸入未經驗證且未逸出惡意的文字或字元，攻擊者就可能得以存取伺服器上的機密資料或其他資源。  為了解決此問題，ADO.NET 2.0 導入了新的連接字串產生器 \(Builder\) 類別 \(Class\)，可用於驗證連接字串語法，並確保沒有導入其他的參數。  如需詳細資訊，請參閱[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+## <a name="avoid-injection-attacks-with-connection-string-builders"></a><span data-ttu-id="754c3-122">使用連接字串產生器來避免插入式攻擊</span><span class="sxs-lookup"><span data-stu-id="754c3-122">Avoid Injection Attacks with Connection String Builders</span></span>  
+ <span data-ttu-id="754c3-123">當使用動態字串串連來根據使用者輸入建立連接字串時，就可能發生連接字串插入式攻擊。</span><span class="sxs-lookup"><span data-stu-id="754c3-123">A connection string injection attack can occur when dynamic string concatenation is used to build connection strings based on user input.</span></span> <span data-ttu-id="754c3-124">如果使用者輸入未經驗證且未逸出惡意的文字或字元，攻擊者就可能得以存取伺服器上的機密資料或其他資源。</span><span class="sxs-lookup"><span data-stu-id="754c3-124">If the user input is not validated and malicious text or characters not escaped, an attacker can potentially access sensitive data or other resources on the server.</span></span> <span data-ttu-id="754c3-125">為了解決此問題，ADO.NET 2.0 導入了新的連接字串產生器 (Builder) 類別 (Class)，可用於驗證連接字串語法，並確保沒有導入其他的參數。</span><span class="sxs-lookup"><span data-stu-id="754c3-125">To address this problem, ADO.NET 2.0 introduced new connection string builder classes to validate connection string syntax and ensure that additional parameters are not introduced.</span></span> <span data-ttu-id="754c3-126">如需詳細資訊，請參閱[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)。</span><span class="sxs-lookup"><span data-stu-id="754c3-126">For more information, see [Connection String Builders](../../../../docs/framework/data/adonet/connection-string-builders.md).</span></span>  
   
-## 使用 Persist Security Info\=False  
- `Persist Security Info` 的預設值為 False；建議您在所有連接字串中都使用此預設值。  如果將 `Persist Security Info` 設定為 `true` 或 `yes`，則在開啟連接後，可透過連接取得安全機密資訊，包括使用者 ID 和密碼。  當 `Persist Security Info` 是設定為 `false` 或 `no` 時，安全性資訊會在用來開啟連接之後捨棄，以確保未受信任的來源無法存取安全機密資訊。  
+## <a name="use-persist-security-infofalse"></a><span data-ttu-id="754c3-127">使用 Persist Security Info=False</span><span class="sxs-lookup"><span data-stu-id="754c3-127">Use Persist Security Info=False</span></span>  
+ <span data-ttu-id="754c3-128">`Persist Security Info` 的預設值為 False；建議您在所有連接字串中都使用此預設值。</span><span class="sxs-lookup"><span data-stu-id="754c3-128">The default value for `Persist Security Info` is false; we recommend using this default in all connection strings.</span></span> <span data-ttu-id="754c3-129">如果將 `Persist Security Info` 設定為 `true` 或 `yes`，則在開啟連接後，可透過連接取得安全機密資訊，包括使用者 ID 和密碼。</span><span class="sxs-lookup"><span data-stu-id="754c3-129">Setting `Persist Security Info` to `true` or `yes` allows security-sensitive information, including the user ID and password, to be obtained from a connection after it has been opened.</span></span> <span data-ttu-id="754c3-130">當 `Persist Security Info` 是設定為 `false` 或 `no` 時，安全性資訊會在用來開啟連接之後捨棄，以確保未受信任的來源無法存取安全機密資訊。</span><span class="sxs-lookup"><span data-stu-id="754c3-130">When `Persist Security Info` is set to `false` or `no`, security information is discarded after it is used to open the connection, ensuring that an untrusted source does not have access to security-sensitive information.</span></span>  
   
-## 加密組態檔  
- 連接字串也可以儲存在組態檔案中，這麼做可免除將連接字串嵌入應用程式程式碼的需要。  組態檔是標準的 XML 檔案，.NET Framework 已為其定義了共用元素組。  組態檔中的連接字串通常會儲存在 **\<connectionStrings\>** 項目內，此項目位於 **app.config** 檔 \(適用於 Windows 應用程式\)，或 **web.config** 檔 \(適用於 ASP.NET 應用程式\)。  如需從組態檔儲存、擷取和加密連接字串之基本概念的詳細資訊，請參閱[連接字串和組態檔](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)。  
+## <a name="encrypt-configuration-files"></a><span data-ttu-id="754c3-131">加密組態檔</span><span class="sxs-lookup"><span data-stu-id="754c3-131">Encrypt Configuration Files</span></span>  
+ <span data-ttu-id="754c3-132">連接字串也可以儲存在組態檔案中，這麼做可免除將連接字串嵌入應用程式程式碼的需要。</span><span class="sxs-lookup"><span data-stu-id="754c3-132">You can also store connection strings in configuration files, which eliminates the need to embed them in your application's code.</span></span> <span data-ttu-id="754c3-133">組態檔是標準的 XML 檔案，.NET Framework 已為其定義了共用元素組。</span><span class="sxs-lookup"><span data-stu-id="754c3-133">Configuration files are standard XML files for which the .NET Framework has defined a common set of elements.</span></span> <span data-ttu-id="754c3-134">在組態檔中的連接字串通常會儲存在 **\<connectionStrings >**中的項目**app.config** Windows 應用程式，或**web.config** ASP.NET 應用程式檔案。</span><span class="sxs-lookup"><span data-stu-id="754c3-134">Connection strings in configuration files are typically stored inside the **\<connectionStrings>** element in the **app.config** for a Windows application, or the **web.config** file for an ASP.NET application.</span></span> <span data-ttu-id="754c3-135">如需的基本概念的儲存，擷取和加密的連接字串從組態檔，請參閱[連接字串和組態檔](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)。</span><span class="sxs-lookup"><span data-stu-id="754c3-135">For more information on the basics of storing, retrieving and encrypting connection strings from configuration files, see [Connection Strings and Configuration Files](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).</span></span>  
   
-## 請參閱  
- [保護 ADO.NET 應用程式](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Encrypting Configuration Information Using Protected Configuration](../Topic/Encrypting%20Configuration%20Information%20Using%20Protected%20Configuration.md)   
- [機器碼和 .NET Framework 程式碼中的安全性](http://msdn.microsoft.com/zh-tw/bd61be84-c143-409a-a75a-44253724f784)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="754c3-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="754c3-136">See Also</span></span>  
+ [<span data-ttu-id="754c3-137">設定 ADO.NET 應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="754c3-137">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="754c3-138">使用受保護的組態加密組態資訊</span><span class="sxs-lookup"><span data-stu-id="754c3-138">Encrypting Configuration Information Using Protected Configuration</span></span>](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
+ [<span data-ttu-id="754c3-139">PAVE 機器碼和 .NET Framework 程式碼中的安全性</span><span class="sxs-lookup"><span data-stu-id="754c3-139">PAVE Security in Native and .NET Framework Code</span></span>](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [<span data-ttu-id="754c3-140">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="754c3-140">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

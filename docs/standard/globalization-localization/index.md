@@ -17,68 +17,66 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63832eb1b7c750bb4ef86660304ab883a7c3695f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>全球化和當地語系化 .NET Framework 應用程式
-開發[世界通用的應用程式](http://msdn.microsoft.com/goglobal/bb978433.aspx)，包括可以當地語系化為一種或多種語言的應用程式，這項開發工作包含三個步驟：全球化、可當地語系化檢閱，以及當地語系化。  
+# <a name="globalizing-and-localizing-net-framework-applications"></a><span data-ttu-id="93431-102">全球化和當地語系化 .NET Framework 應用程式</span><span class="sxs-lookup"><span data-stu-id="93431-102">Globalizing and Localizing .NET Framework Applications</span></span>
+<span data-ttu-id="93431-103">開發[世界通用的應用程式](http://msdn.microsoft.com/goglobal/bb978433.aspx)，包括可以當地語系化為一種或多種語言的應用程式，這項開發工作包含三個步驟：全球化、可當地語系化檢閱，以及當地語系化。</span><span class="sxs-lookup"><span data-stu-id="93431-103">Developing a [world-ready application](http://msdn.microsoft.com/goglobal/bb978433.aspx), including an application that can be localized into one or more languages, involves three steps: globalization, localizability review, and localization.</span></span>  
   
- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
- 這個步驟包含設計和撰寫文化特性中性和語言中性的應用程式程式碼，且該應用程式支援當地語系化使用者介面和所有使用者的區域資料。 這個步驟包含不是根據文化特性假設做出的設計和開發決策。 即使全球化的應用程式並未當地語系化，但是它的設計和撰寫方式讓後續能夠相對方便地進行一種或多種語言的當地語系化。  
+ [<span data-ttu-id="93431-104">全球化</span><span class="sxs-lookup"><span data-stu-id="93431-104">Globalization</span></span>](../../../docs/standard/globalization-localization/globalization.md)  
+ <span data-ttu-id="93431-105">這個步驟包含設計和撰寫文化特性中性和語言中性的應用程式程式碼，且該應用程式支援當地語系化使用者介面和所有使用者的區域資料。</span><span class="sxs-lookup"><span data-stu-id="93431-105">This step involves designing and coding an application that is culture-neutral and language-neutral, and that supports localized user interfaces and regional data for all users.</span></span> <span data-ttu-id="93431-106">這個步驟包含不是根據文化特性假設做出的設計和開發決策。</span><span class="sxs-lookup"><span data-stu-id="93431-106">It involves making design and programming decisions that are not based on culture-specific assumptions.</span></span> <span data-ttu-id="93431-107">即使全球化的應用程式並未當地語系化，但是它的設計和撰寫方式讓後續能夠相對方便地進行一種或多種語言的當地語系化。</span><span class="sxs-lookup"><span data-stu-id="93431-107">While a globalized application is not localized, it nevertheless is designed and written so that it can be subsequently localized into one or more languages with relative ease.</span></span>  
   
- [可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)  
- 這個步驟包含檢閱應用程式的程式碼和設計，確保它可以輕鬆地當地語系化並識別當地語系化時可能發生的阻礙，以及確認應用程式的可執行碼與其資源分開。 如果全球化階段有效，則當地語系化能力檢閱將確認全球化期間所選擇的設計和編碼。 當地語系化能力階段也可能會找出任何其餘的問題，如此應用程式的原始程式碼就不需要在當地語系化階段進行修改。  
+ [<span data-ttu-id="93431-108">可當地語系化檢閱</span><span class="sxs-lookup"><span data-stu-id="93431-108">Localizability Review</span></span>](../../../docs/standard/globalization-localization/localizability-review.md)  
+ <span data-ttu-id="93431-109">這個步驟包含檢閱應用程式的程式碼和設計，確保它可以輕鬆地當地語系化並識別當地語系化時可能發生的阻礙，以及確認應用程式的可執行碼與其資源分開。</span><span class="sxs-lookup"><span data-stu-id="93431-109">This step involves reviewing an application's code and design to ensure that it can be localized easily and to identify potential roadblocks for localization, and verifying that the application's executable code is separated from its resources.</span></span> <span data-ttu-id="93431-110">如果全球化階段有效，則當地語系化能力檢閱將確認全球化期間所選擇的設計和編碼。</span><span class="sxs-lookup"><span data-stu-id="93431-110">If the globalization stage was effective, the localizability review will confirm the design and coding choices made during globalization.</span></span> <span data-ttu-id="93431-111">當地語系化能力階段也可能會找出任何其餘的問題，如此應用程式的原始程式碼就不需要在當地語系化階段進行修改。</span><span class="sxs-lookup"><span data-stu-id="93431-111">The localizability stage may also identify any remaining issues so that an application's source code doesn't have to be modified during the localization stage.</span></span>  
   
- [當地語系化](../../../docs/standard/globalization-localization/localization.md)  
- 這個步驟包含自訂特定文化特性或地區的應用程式。 如果已正確執行全球化和當地語系化能力的步驟，則當地語系化的主要工作就是轉譯使用者介面。  
+ [<span data-ttu-id="93431-112">當地語系化</span><span class="sxs-lookup"><span data-stu-id="93431-112">Localization</span></span>](../../../docs/standard/globalization-localization/localization.md)  
+ <span data-ttu-id="93431-113">這個步驟包含自訂特定文化特性或地區的應用程式。</span><span class="sxs-lookup"><span data-stu-id="93431-113">This step involves customizing an application for specific cultures or regions.</span></span> <span data-ttu-id="93431-114">如果已正確執行全球化和當地語系化能力的步驟，則當地語系化的主要工作就是轉譯使用者介面。</span><span class="sxs-lookup"><span data-stu-id="93431-114">If the globalization and localizability steps have been performed correctly, localization consists primarily of translating the user interface.</span></span>  
   
- 依照下列三個步驟執行可提供兩項優點：  
+ <span data-ttu-id="93431-115">依照下列三個步驟執行可提供兩項優點：</span><span class="sxs-lookup"><span data-stu-id="93431-115">Following these three steps provides two advantages:</span></span>  
   
--   您不需要重新設計用於支援單一文化特性 (例如英文 (美國)) 的應用程式，即可支援其他文化特性。  
+-   <span data-ttu-id="93431-116">您不需要重新設計用於支援單一文化特性 (例如英文 (美國)) 的應用程式，即可支援其他文化特性。</span><span class="sxs-lookup"><span data-stu-id="93431-116">It frees you from having to retrofit an application that is designed to support a single culture, such as U.S. English, to support additional cultures.</span></span>  
   
--   可產生更穩定且較少 Bug 的當地語系化應用程式。  
+-   <span data-ttu-id="93431-117">可產生更穩定且較少 Bug 的當地語系化應用程式。</span><span class="sxs-lookup"><span data-stu-id="93431-117">It results in localized applications that are more stable and have fewer bugs.</span></span>  
   
- .NET Framework 提供各種開發世界通用及當地語系化應用程式的支援。 特別是，.NET Framework 類別庫中的許多類型成員會傳回反映目前使用者文化特性或特定文化特性慣例的值，藉以協助全球化。 此外，.NET Framework 還支援附屬組件，可簡化當地語系化應用程式的程序。  
+ <span data-ttu-id="93431-118">.NET Framework 提供各種開發世界通用及當地語系化應用程式的支援。</span><span class="sxs-lookup"><span data-stu-id="93431-118">The .NET Framework provides extensive support for the development of world-ready and localized applications.</span></span> <span data-ttu-id="93431-119">特別是，.NET Framework 類別庫中的許多類型成員會傳回反映目前使用者文化特性或特定文化特性慣例的值，藉以協助全球化。</span><span class="sxs-lookup"><span data-stu-id="93431-119">In particular, many type members in the .NET Framework class library aid globalization by returning values that reflect the conventions of either the current user's culture or a specified culture.</span></span> <span data-ttu-id="93431-120">此外，.NET Framework 還支援附屬組件，可簡化當地語系化應用程式的程序。</span><span class="sxs-lookup"><span data-stu-id="93431-120">Also, the .NET Framework supports satellite assemblies, which facilitate the process of localizing an application.</span></span>  
   
- 如需詳細資訊，請參閱[全球化開發人員中心 (英文)](http://go.microsoft.com/fwlink/?LinkId=235015)。  
+ <span data-ttu-id="93431-121">如需詳細資訊，請參閱[全球化開發人員中心 (英文)](http://go.microsoft.com/fwlink/?LinkId=235015)。</span><span class="sxs-lookup"><span data-stu-id="93431-121">For additional information, see the [Go Global Developer Center](http://go.microsoft.com/fwlink/?LinkId=235015).</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
- 討論建立世界通用應用程式的第一個階段，包括設計和撰寫文化特性中性和語言中性之應用程式的程式碼。  
+## <a name="in-this-section"></a><span data-ttu-id="93431-122">本章節內容</span><span class="sxs-lookup"><span data-stu-id="93431-122">In This Section</span></span>  
+ [<span data-ttu-id="93431-123">全球化</span><span class="sxs-lookup"><span data-stu-id="93431-123">Globalization</span></span>](../../../docs/standard/globalization-localization/globalization.md)  
+ <span data-ttu-id="93431-124">討論建立世界通用應用程式的第一個階段，包括設計和撰寫文化特性中性和語言中性之應用程式的程式碼。</span><span class="sxs-lookup"><span data-stu-id="93431-124">Discusses the first stage of creating a world-ready application, which involves designing and coding an application that is culture-neutral and language-neutral.</span></span>  
   
- [可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)  
- 討論建立當地語系化應用程式的第二個階段，包括識別當地語系化過程中可能遭遇到的阻礙。  
+ [<span data-ttu-id="93431-125">可當地語系化檢閱</span><span class="sxs-lookup"><span data-stu-id="93431-125">Localizability Review</span></span>](../../../docs/standard/globalization-localization/localizability-review.md)  
+ <span data-ttu-id="93431-126">討論建立當地語系化應用程式的第二個階段，包括識別當地語系化過程中可能遭遇到的阻礙。</span><span class="sxs-lookup"><span data-stu-id="93431-126">Discusses the second stage of creating a localized application, which involves identifying potential roadblocks to localization.</span></span>  
   
- [當地語系化](../../../docs/standard/globalization-localization/localization.md)  
- 討論建立當地語系化應用程式的最後一個階段，包括自訂特定區域或文化特性的應用程式使用者介面。  
+ [<span data-ttu-id="93431-127">當地語系化</span><span class="sxs-lookup"><span data-stu-id="93431-127">Localization</span></span>](../../../docs/standard/globalization-localization/localization.md)  
+ <span data-ttu-id="93431-128">討論建立當地語系化應用程式的最後一個階段，包括自訂特定區域或文化特性的應用程式使用者介面。</span><span class="sxs-lookup"><span data-stu-id="93431-128">Discusses the final stage of creating a localized application, which involves customizing an application's user interface for specific regions or cultures.</span></span>  
   
- [不區分文化特性的字串之作業](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- 說明如何使用預設為區分文化特性的 .NET Framework 方法和類別來取得不區分文化特性的結果。  
+ [<span data-ttu-id="93431-129">不區分文化特性的字串之作業</span><span class="sxs-lookup"><span data-stu-id="93431-129">Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ <span data-ttu-id="93431-130">說明如何使用預設為區分文化特性的 .NET Framework 方法和類別來取得不區分文化特性的結果。</span><span class="sxs-lookup"><span data-stu-id="93431-130">Describes how to use .NET Framework methods and classes that are culture-sensitive by default to obtain culture-insensitive results.</span></span>  
   
- [開發世界性的應用程式的最佳做法](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
- 說明進行全球化、當地語系化和開發世界性的 ASP.NET 的最佳實施方針。  
+ [<span data-ttu-id="93431-131">開發世界性的應用程式的最佳做法</span><span class="sxs-lookup"><span data-stu-id="93431-131">Best Practices for Developing World-Ready Applications</span></span>](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
+ <span data-ttu-id="93431-132">說明進行全球化、當地語系化和開發世界性的 ASP.NET 的最佳實施方針。</span><span class="sxs-lookup"><span data-stu-id="93431-132">Describes the best practices to follow for globalization, localization, and developing world-ready ASP.NET applications.</span></span>  
   
-## <a name="reference"></a>參考資料  
- <xref:System.Globalization?displayProperty=fullName> 命名空間  
- 包含類別，定義與文化特性相關的資訊，包括語言、國家/地區、使用中的日曆、日期、貨幣和數字的格式模式，以及字串的排序順序。  
+## <a name="reference"></a><span data-ttu-id="93431-133">參考資料</span><span class="sxs-lookup"><span data-stu-id="93431-133">Reference</span></span>  
+ <span data-ttu-id="93431-134"><xref:System.Globalization?displayProperty=nameWithType> 命名空間</span><span class="sxs-lookup"><span data-stu-id="93431-134"><xref:System.Globalization?displayProperty=nameWithType> namespace</span></span>  
+ <span data-ttu-id="93431-135">包含類別，定義與文化特性相關的資訊，包括語言、國家/地區、使用中的日曆、日期、貨幣和數字的格式模式，以及字串的排序順序。</span><span class="sxs-lookup"><span data-stu-id="93431-135">Contains classes that define culture-related information, including the language, the country/region, the calendars in use, the format patterns for dates, currency, and numbers, and the sort order for strings.</span></span>  
   
- <xref:System.Resources> 命名空間  
- 提供建立、管理和使用資源的類別。  
+ <span data-ttu-id="93431-136"><xref:System.Resources> 命名空間</span><span class="sxs-lookup"><span data-stu-id="93431-136"><xref:System.Resources> namespace</span></span>  
+ <span data-ttu-id="93431-137">提供建立、管理和使用資源的類別。</span><span class="sxs-lookup"><span data-stu-id="93431-137">Provides classes for creating, manipulating, and using resources.</span></span>  
   
- <xref:System.Text> 命名空間  
- 包含表示 ASCII、ANSI、Unicode 和其他字元編碼方式的類別。  
+ <span data-ttu-id="93431-138"><xref:System.Text> 命名空間</span><span class="sxs-lookup"><span data-stu-id="93431-138"><xref:System.Text> namespace</span></span>  
+ <span data-ttu-id="93431-139">包含表示 ASCII、ANSI、Unicode 和其他字元編碼方式的類別。</span><span class="sxs-lookup"><span data-stu-id="93431-139">Contains classes representing ASCII, ANSI, Unicode, and other character encodings.</span></span>  
   
- [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- 描述如何使用 Resgen.exe 來轉換 .txt 檔案和 XML 資源格式 (.resx) 檔案到通用語言執行平台二進位資源檔。  
+ [<span data-ttu-id="93431-140">Resgen.exe (資源檔產生器)</span><span class="sxs-lookup"><span data-stu-id="93431-140">Resgen.exe (Resource File Generator)</span></span>](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
+ <span data-ttu-id="93431-141">描述如何使用 Resgen.exe 來轉換 .txt 檔案和 XML 資源格式 (.resx) 檔案到通用語言執行平台二進位資源檔。</span><span class="sxs-lookup"><span data-stu-id="93431-141">Describes how to use Resgen.exe to convert .txt files and XML-based resource format (.resx) files to common language runtime binary .resources files.</span></span>  
   
- [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
- 描述如何使用 Winres.exe 將 Windows Form 表單當地語系化。
-
+ [<span data-ttu-id="93431-142">Winres.exe (Windows Forms 資源編輯器)</span><span class="sxs-lookup"><span data-stu-id="93431-142">Winres.exe (Windows Forms Resource Editor)</span></span>](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
+ <span data-ttu-id="93431-143">描述如何使用 Winres.exe 將 Windows Form 表單當地語系化。</span><span class="sxs-lookup"><span data-stu-id="93431-143">Describes how to use Winres.exe to localize Windows Forms forms.</span></span>

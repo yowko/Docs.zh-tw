@@ -1,63 +1,66 @@
 ---
-title: "擴充性簡介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "擴充性 [WCF]"
-  - "WCF [WCF], 擴充性"
-  - "Windows Communication Foundation [WCF], 擴充性"
+title: "擴充性簡介"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], extensibility
+- Windows Communication Foundation [WCF], extensibility
+- extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0b53ec29f973760237133003c2f582e1a33a9f83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 擴充性簡介
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式模型是設計用來解決任何分散式應用程式大部分的通訊要求，  但是一定有預設應用程式模型和系統提供的實作所不支援的情況。  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 擴充性模型是用來讓您能修改每個層級的系統行為，甚至到取代整個系統模型，所以可以支援自訂的情況。  本主題會概述各種擴充區域，並指向每個擴充區域的詳細資訊。  
+# <a name="introduction-to-extensibility"></a><span data-ttu-id="3cf93-102">擴充性簡介</span><span class="sxs-lookup"><span data-stu-id="3cf93-102">Introduction to Extensibility</span></span>
+<span data-ttu-id="3cf93-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式模型是設計用來解決任何分散式應用程式大部分的通訊要求，</span><span class="sxs-lookup"><span data-stu-id="3cf93-103">The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application model is designed to solve the greater part of the communication requirements of any distributed application.</span></span> <span data-ttu-id="3cf93-104">但是一定有預設應用程式模型和系統提供的實作所不支援的情況。</span><span class="sxs-lookup"><span data-stu-id="3cf93-104">But there are always scenarios that the default application model and system-provided implementations do not support.</span></span> <span data-ttu-id="3cf93-105">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 擴充性模型是用來讓您能修改每個層級的系統行為，甚至到取代整個系統模型，所以可以支援自訂的情況。</span><span class="sxs-lookup"><span data-stu-id="3cf93-105">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] extensibility model is intended to support custom scenarios by enabling you to modify system behavior at every level, even to the point of replacing the entire application model.</span></span> <span data-ttu-id="3cf93-106">本主題會概述各種擴充區域，並指向每個擴充區域的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="3cf93-106">This topic outlines the various areas of extension and points to more information about each.</span></span>  
   
-## 要擴充的區域  
- 您可以擴充：  
+## <a name="areas-to-extend"></a><span data-ttu-id="3cf93-107">要擴充的區域</span><span class="sxs-lookup"><span data-stu-id="3cf93-107">Areas to Extend</span></span>  
+ <span data-ttu-id="3cf93-108">您可以擴充：</span><span class="sxs-lookup"><span data-stu-id="3cf93-108">You can extend:</span></span>  
   
--   應用程式執行階段，  這會擴充應用程式的訊息分派和處理功能。  這個區域也包含擴充安全性系統、中繼資料系統、序列化系統，以及連接應用程式與基礎通道系統的繫結和繫結項目。  
+-   <span data-ttu-id="3cf93-109">應用程式執行階段，</span><span class="sxs-lookup"><span data-stu-id="3cf93-109">The application runtime.</span></span> <span data-ttu-id="3cf93-110">這會擴充應用程式的訊息分派和處理功能。</span><span class="sxs-lookup"><span data-stu-id="3cf93-110">This extends the dispatching and the processing of messages for the application.</span></span> <span data-ttu-id="3cf93-111">這個區域也包含擴充安全性系統、中繼資料系統、序列化系統，以及連接應用程式與基礎通道系統的繫結和繫結項目。</span><span class="sxs-lookup"><span data-stu-id="3cf93-111">This area also includes extending the security system, the metadata system, the serialization system, and the bindings and binding elements that connect the application with the underlying channel system.</span></span>  
   
--   通道和通道執行階段，  這會擴充在訊息層級上運作的系統，提供通訊協定、傳輸和編碼支援。  
+-   <span data-ttu-id="3cf93-112">通道和通道執行階段，</span><span class="sxs-lookup"><span data-stu-id="3cf93-112">The channel and channel runtime.</span></span> <span data-ttu-id="3cf93-113">這會擴充在訊息層級上運作的系統，提供通訊協定、傳輸和編碼支援。</span><span class="sxs-lookup"><span data-stu-id="3cf93-113">This extends the system that functions at the message level, providing protocol, transport, and encoding support.</span></span>  
   
--   主機執行階段，  這會擴充裝載應用程式定義域與通道和應用程式執行階段之間的關係。  
+-   <span data-ttu-id="3cf93-114">主機執行階段，</span><span class="sxs-lookup"><span data-stu-id="3cf93-114">The host runtime.</span></span> <span data-ttu-id="3cf93-115">這會擴充裝載應用程式定義域與通道和應用程式執行階段之間的關係。</span><span class="sxs-lookup"><span data-stu-id="3cf93-115">This extends the relationship of the hosting application domain to the channel and application runtime.</span></span>  
   
-### 擴充應用程式執行階段  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中，用於對應通道的訊息和用於應用程式本身的訊息之間有不同之處。  通道訊息支援某些與通道相關的功能，例如建立安全對話或建立可靠的工作階段。  這些訊息不適用於應用程式執行階段，在使用應用程式層之前，就會先處理訊息。  
+### <a name="extending-the-application-runtime"></a><span data-ttu-id="3cf93-116">擴充應用程式執行階段</span><span class="sxs-lookup"><span data-stu-id="3cf93-116">Extending the Application Runtime</span></span>  
+ <span data-ttu-id="3cf93-117">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中，用於對應通道的訊息和用於應用程式本身的訊息之間有不同之處。</span><span class="sxs-lookup"><span data-stu-id="3cf93-117">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications, there is a distinction between messages that are destined for a corresponding channel and messages that are destined for the application itself.</span></span> <span data-ttu-id="3cf93-118">通道訊息支援某些與通道相關的功能，例如建立安全對話或建立可靠的工作階段。</span><span class="sxs-lookup"><span data-stu-id="3cf93-118">Channel messages support some channel-related functionality, such as establishing a secure conversation or establishing a reliable session.</span></span> <span data-ttu-id="3cf93-119">這些訊息不適用於應用程式執行階段，在使用應用程式層之前，就會先處理訊息。</span><span class="sxs-lookup"><span data-stu-id="3cf93-119">These messages are not available to the application runtime; they are processed before the application layer is involved.</span></span>  
   
- 應用程式訊息包含您或您的客戶所建立，並且用於用戶端或服務作業的資料。  視您的需要而定，這些訊息適用於形式為訊息或物件的應用程式層級擴充系統。  
+ <span data-ttu-id="3cf93-120">應用程式訊息包含您或您的客戶所建立，並且用於用戶端或服務作業的資料。</span><span class="sxs-lookup"><span data-stu-id="3cf93-120">Application messages contain data that is destined for a client or service operation that you or your customer has created.</span></span> <span data-ttu-id="3cf93-121">視您的需要而定，這些訊息適用於形式為訊息或物件的應用程式層級擴充系統。</span><span class="sxs-lookup"><span data-stu-id="3cf93-121">These messages are available to the application-level extension system in message or object form, depending upon your needs.</span></span>  
   
- 所有訊息都會通過通道系統，但是只有應用程式訊息會從通道系統傳遞至應用程式。  若要建立新的通道層級功能，您必須擴充通道系統。  若要建立新的應用程式層級功能，您必須擴充服務或用戶端執行階段 \(分別是發送器和通道處理站\)。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]擴充應用程式執行階段的詳細資訊，請參閱 [擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
+ <span data-ttu-id="3cf93-122">所有訊息都會通過通道系統，但是只有應用程式訊息會從通道系統傳遞至應用程式。</span><span class="sxs-lookup"><span data-stu-id="3cf93-122">All messages pass through the channel system; only application messages are passed from the channel system into the application.</span></span> <span data-ttu-id="3cf93-123">若要建立新的通道層級功能，您必須擴充通道系統。</span><span class="sxs-lookup"><span data-stu-id="3cf93-123">To create new channel-level functionality, you must extend the channel system.</span></span> <span data-ttu-id="3cf93-124">若要建立新的應用程式層級功能，您必須擴充服務或用戶端執行階段 (分別是發送器和通道處理站)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-124">To create new application-level functionality, you must extend the service or client runtime (dispatchers and channel factories, respectively).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="3cf93-125">擴充應用程式執行階段，請參閱[擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-125"> extending the application runtime, see [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span></span>  
   
-#### 擴充安全性  
- 若要建置自訂安全性機制，例如權杖和認證，您必須擴充安全性系統。  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充安全性](../../../docs/framework/wcf/extending/extending-security.md).  
+#### <a name="extending-security"></a><span data-ttu-id="3cf93-126">擴充安全性</span><span class="sxs-lookup"><span data-stu-id="3cf93-126">Extending Security</span></span>  
+ <span data-ttu-id="3cf93-127">若要建置自訂安全性機制，例如權杖和認證，您必須擴充安全性系統。</span><span class="sxs-lookup"><span data-stu-id="3cf93-127">To build custom security mechanisms such as tokens and credentials, you must extend the security system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="3cf93-128">[擴充安全性](../../../docs/framework/wcf/extending/extending-security.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-128"> [Extending Security](../../../docs/framework/wcf/extending/extending-security.md).</span></span>  
   
-#### 擴充中繼資料  
- 若要以不同於預設的方式公開中繼資料，您必須擴充中繼資料系統。  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充中繼資料系統](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+#### <a name="extending-metadata"></a><span data-ttu-id="3cf93-129">擴充中繼資料</span><span class="sxs-lookup"><span data-stu-id="3cf93-129">Extending Metadata</span></span>  
+ <span data-ttu-id="3cf93-130">若要以不同於預設的方式公開中繼資料，您必須擴充中繼資料系統。</span><span class="sxs-lookup"><span data-stu-id="3cf93-130">To expose your metadata in differently than the default, you must extend the metadata system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="3cf93-131">[擴充中繼資料系統](../../../docs/framework/wcf/extending/extending-the-metadata-system.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-131"> [Extending the Metadata System](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).</span></span>  
   
-#### 擴充序列化  
- 若要建置自訂編碼器、提供資料代理或其他涉及自訂傳輸資料的工作，您必須擴充序列化系統。  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充編碼器與序列化程式](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+#### <a name="extending-serialization"></a><span data-ttu-id="3cf93-132">擴充序列化</span><span class="sxs-lookup"><span data-stu-id="3cf93-132">Extending Serialization</span></span>  
+ <span data-ttu-id="3cf93-133">若要建置自訂編碼器、提供資料代理或其他涉及自訂傳輸資料的工作，您必須擴充序列化系統。</span><span class="sxs-lookup"><span data-stu-id="3cf93-133">To build custom encoders, provide data surrogates, or other work involving the customization of transferred data, you must extend the serialization system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="3cf93-134">[擴充編碼器與序列化程式](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-134"> [Extending Encoders and Serializers](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).</span></span>  
   
-#### 擴充繫結  
- 若要將傳輸或通訊協定通道與應用程式層產生關聯，您必須擴充繫結系統。  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充繫結](../../../docs/framework/wcf/extending/extending-bindings.md).  
+#### <a name="extending-bindings"></a><span data-ttu-id="3cf93-135">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="3cf93-135">Extending Bindings</span></span>  
+ <span data-ttu-id="3cf93-136">若要將傳輸或通訊協定通道與應用程式層產生關聯，您必須擴充繫結系統。</span><span class="sxs-lookup"><span data-stu-id="3cf93-136">To associate transport or protocol channels with the application layer, you must extend the binding system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="3cf93-137">[擴充繫結](../../../docs/framework/wcf/extending/extending-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-137"> [Extending Bindings](../../../docs/framework/wcf/extending/extending-bindings.md).</span></span>  
   
-### 擴充通道系統  
- 若要建立支援自訂傳輸或通訊協定功能的通道，請參閱[擴充通道層](../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
+### <a name="extending-the-channel-system"></a><span data-ttu-id="3cf93-138">擴充通道系統</span><span class="sxs-lookup"><span data-stu-id="3cf93-138">Extending the Channel System</span></span>  
+ <span data-ttu-id="3cf93-139">若要建立通道支援自訂傳輸或通訊協定功能，請參閱[擴充通道層](../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-139">To create channels that support custom transports or protocol functionality, see [Extending the Channel Layer](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).</span></span>  
   
-### 擴充服務裝載系統  
- 若要修改服務範圍的應用程式模型，您必須擴充 <xref:System.ServiceModel.ServiceHostBase?displayProperty=fullName> 類別。  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+### <a name="extending-the-service-hosting-system"></a><span data-ttu-id="3cf93-140">擴充服務裝載系統</span><span class="sxs-lookup"><span data-stu-id="3cf93-140">Extending the Service Hosting System</span></span>  
+ <span data-ttu-id="3cf93-141">若要修改服務範圍的應用程式模型，您必須擴充 <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> 類別。</span><span class="sxs-lookup"><span data-stu-id="3cf93-141">To modify the service-wide application model, you must extend <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> class.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="3cf93-142">[擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-142"> [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span></span>  
   
- 若要修改裝載應用程式定義域與服務主機之間的關係，您必須擴充 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=fullName> 類別。  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用 ServiceHostFactory 擴充裝載](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ <span data-ttu-id="3cf93-143">若要修改裝載應用程式定義域與服務主機之間的關係，您必須擴充 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 類別。</span><span class="sxs-lookup"><span data-stu-id="3cf93-143">To modify the relationship between the hosting application domain and the service host, you must extend the <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> class.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="3cf93-144">[使用 ServiceHostFactory 擴充裝載](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)。</span><span class="sxs-lookup"><span data-stu-id="3cf93-144"> [Extending Hosting Using ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).</span></span>  
   
-## 請參閱  
- [延伸 WCF](../../../docs/framework/wcf/extending/extending-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="3cf93-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3cf93-145">See Also</span></span>  
+ [<span data-ttu-id="3cf93-146">擴充 WCF</span><span class="sxs-lookup"><span data-stu-id="3cf93-146">Extending WCF</span></span>](../../../docs/framework/wcf/extending/extending-wcf.md)

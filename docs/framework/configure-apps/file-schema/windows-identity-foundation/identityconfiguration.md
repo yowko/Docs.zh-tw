@@ -1,100 +1,107 @@
 ---
-title: "&lt;identityConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;identityConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: b1cca286fc967631c60aa02a1318fe24120e05b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;identityConfiguration&gt;
-指定服務層級識別設定。  
+# <a name="ltidentityconfigurationgt"></a><span data-ttu-id="e2d52-102">&lt;identityConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="e2d52-102">&lt;identityConfiguration&gt;</span></span>
+<span data-ttu-id="e2d52-103">指定服務層級身分識別設定。</span><span class="sxs-lookup"><span data-stu-id="e2d52-103">Specifies service-level identity settings.</span></span>  
   
-## 語法  
+ <span data-ttu-id="e2d52-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="e2d52-104">\<system.identityModel></span></span>  
+<span data-ttu-id="e2d52-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="e2d52-105">\<identityConfiguration></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e2d52-106">語法</span><span class="sxs-lookup"><span data-stu-id="e2d52-106">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration  
-      name=xs:string  
-      saveBootstrapContext=xs:boolean>  
-      maximumClockSkew=TimeSpan >  
-  </identityConfiguration>  
+  <identityConfiguration  
+      name=xs:string  
+      saveBootstrapContext=xs:boolean>  
+      maximumClockSkew=TimeSpan >  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e2d52-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="e2d52-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="e2d52-108">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="e2d52-109">屬性</span><span class="sxs-lookup"><span data-stu-id="e2d52-109">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|name|識別組態區段的名稱。  您可以使用這個名稱來參考特定的組態區段。  如果沒有`name`屬性指定，則區段會定義預設的設定。  被動聯盟案例中，皆使用預設的設定。  如需詳細資訊，請參閱 [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 項目。|  
-|saveBootstrapContext|指定啟動程序載入的語彙基元是否應該包含在工作階段權杖。  可能也設定值對語彙基元的處理常式的集合物件藉由設定`saveBootstrapContext`在[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。  在語彙基元的處理常式集合上所設定的值會覆寫服務上所設定的值。|  
-|maximumClockSkew|A <xref:System.TimeSpan> ，指定允許的最大時鐘扭曲。  執行即時作業，例如驗證登入工作階段的到期時間時，控制允許的最大時鐘扭曲。  預設值是 5 分鐘，"00: 05: 00"。  如需有關如何指定<xref:System.TimeSpan>的值，請參閱[Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues)。  最大時鐘扭曲可能也設定對語彙基元的處理常式的集合物件藉由設定`maximumClockSkew`在[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。  在語彙基元的處理常式集合上所設定的值會覆寫服務上所設定的值。|  
+|<span data-ttu-id="e2d52-110">屬性</span><span class="sxs-lookup"><span data-stu-id="e2d52-110">Attribute</span></span>|<span data-ttu-id="e2d52-111">描述</span><span class="sxs-lookup"><span data-stu-id="e2d52-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="e2d52-112">name</span><span class="sxs-lookup"><span data-stu-id="e2d52-112">name</span></span>|<span data-ttu-id="e2d52-113">身分識別組態區段的名稱。</span><span class="sxs-lookup"><span data-stu-id="e2d52-113">The name of the identity configuration section.</span></span> <span data-ttu-id="e2d52-114">您可以使用此名稱來參考特定的組態區段。</span><span class="sxs-lookup"><span data-stu-id="e2d52-114">You can use this name to reference a specific configuration section.</span></span> <span data-ttu-id="e2d52-115">如果沒有`name`屬性指定，則 [] 區段中定義的預設組態。</span><span class="sxs-lookup"><span data-stu-id="e2d52-115">If no `name` attribute is specified, the section defines the default configuration.</span></span> <span data-ttu-id="e2d52-116">被動同盟案例的一律使用預設組態。</span><span class="sxs-lookup"><span data-stu-id="e2d52-116">The default configuration is always used for passive federation scenarios.</span></span> <span data-ttu-id="e2d52-117">如需詳細資訊，請參閱[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-117">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>|  
+|<span data-ttu-id="e2d52-118">saveBootstrapContext</span><span class="sxs-lookup"><span data-stu-id="e2d52-118">saveBootstrapContext</span></span>|<span data-ttu-id="e2d52-119">指定啟動程序的語彙基元是否應該包含在工作階段權杖。</span><span class="sxs-lookup"><span data-stu-id="e2d52-119">Specifies whether bootstrap tokens should be included in the session token.</span></span> <span data-ttu-id="e2d52-120">值可能也會設定權杖處理常式集合的設定`saveBootstrapContext`屬性[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-120">The value may also be set on a token handler collection by setting the `saveBootstrapContext` attribute on the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span> <span data-ttu-id="e2d52-121">權杖處理常式集合上設定的值會覆寫在服務上設定的值。</span><span class="sxs-lookup"><span data-stu-id="e2d52-121">A value set on the token handler collection overrides the value set on the service.</span></span>|  
+|<span data-ttu-id="e2d52-122">maximumClockSkew</span><span class="sxs-lookup"><span data-stu-id="e2d52-122">maximumClockSkew</span></span>|<span data-ttu-id="e2d52-123">A <xref:System.TimeSpan> ，指定最大允許的時鐘誤差。</span><span class="sxs-lookup"><span data-stu-id="e2d52-123">A <xref:System.TimeSpan> that specifies the maximum allowed clock skew.</span></span> <span data-ttu-id="e2d52-124">執行時間緊迫的作業，例如先驗證登入工作階段的到期時間時，控制允許的最大時鐘誤差。</span><span class="sxs-lookup"><span data-stu-id="e2d52-124">Controls the maximum allowed clock skew when performing time-sensitive operations, such as validating the expiration time of a sign-in session.</span></span> <span data-ttu-id="e2d52-125">預設值是 5 分鐘，"00: 05:00"。</span><span class="sxs-lookup"><span data-stu-id="e2d52-125">The default is 5 minutes, "00:05:00".</span></span> <span data-ttu-id="e2d52-126">如需有關如何指定<xref:System.TimeSpan>值，請參閱[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e2d52-126">For more information about how to specify <xref:System.TimeSpan> values, see [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="e2d52-127">最大時鐘誤差可能也會設定權杖處理常式集合的設定`maximumClockSkew`屬性[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-127">The maximum clock skew may also be set on a token handler collection by setting the `maximumClockSkew` attribute on the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span> <span data-ttu-id="e2d52-128">權杖處理常式集合上設定的值會覆寫在服務上設定的值。</span><span class="sxs-lookup"><span data-stu-id="e2d52-128">A value set on the token handler collection overrides the value set on the service.</span></span>|  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="e2d52-129">子元素</span><span class="sxs-lookup"><span data-stu-id="e2d52-129">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊快取使用的工作階段權杖和語彙基元重新執行偵測。  可以指定在服務層級，或在安全性語彙基元的處理常式集合。  選擇項。|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制的設定，用來驗證憑證的語彙基元的處理常式。  可以指定在服務層級，或在安全性語彙基元的處理常式集合。  選擇項。|  
-|[\<claimsAuthenticationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|註冊連入宣告宣告驗證管理的者。  選擇項。|  
-|[\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|註冊連入宣告的宣告授權管理員。  選擇項。|  
-|[\<claimTypeRequired\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|指定的連入安全性權杖的必要宣告集合。  選擇項。|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定安全性語彙基元的處理常式的集合。  您可以指定零個或更多的安全性語彙基元的處理常式的集合。  選擇項。|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|啟用語彙基元重新執行偵測，並指定語彙基元的到期時間。  可以指定在服務層級，或在安全性語彙基元的處理常式集合。  選擇項。|  
+|<span data-ttu-id="e2d52-130">項目</span><span class="sxs-lookup"><span data-stu-id="e2d52-130">Element</span></span>|<span data-ttu-id="e2d52-131">說明</span><span class="sxs-lookup"><span data-stu-id="e2d52-131">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e2d52-132">\<會快取 ></span><span class="sxs-lookup"><span data-stu-id="e2d52-132">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="e2d52-133">註冊用於工作階段權杖，權杖重新執行偵測的快取。</span><span class="sxs-lookup"><span data-stu-id="e2d52-133">Registers the caches used for session tokens and token replay detection.</span></span> <span data-ttu-id="e2d52-134">可以指定在服務層級，或在安全性權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="e2d52-134">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="e2d52-135">選擇項。</span><span class="sxs-lookup"><span data-stu-id="e2d52-135">Optional.</span></span>|  
+|[<span data-ttu-id="e2d52-136">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="e2d52-136">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="e2d52-137">控制權杖處理常式用來驗證憑證的設定。</span><span class="sxs-lookup"><span data-stu-id="e2d52-137">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="e2d52-138">可以指定在服務層級，或在安全性權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="e2d52-138">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="e2d52-139">選擇項。</span><span class="sxs-lookup"><span data-stu-id="e2d52-139">Optional.</span></span>|  
+|[<span data-ttu-id="e2d52-140">\<claimsAuthenticationManager ></span><span class="sxs-lookup"><span data-stu-id="e2d52-140">\<claimsAuthenticationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|<span data-ttu-id="e2d52-141">註冊的連入宣告的宣告驗證管理員。</span><span class="sxs-lookup"><span data-stu-id="e2d52-141">Registers a claims authentication manager for the incoming claims.</span></span> <span data-ttu-id="e2d52-142">選擇項。</span><span class="sxs-lookup"><span data-stu-id="e2d52-142">Optional.</span></span>|  
+|[<span data-ttu-id="e2d52-143">\<claimsAuthorizationManager ></span><span class="sxs-lookup"><span data-stu-id="e2d52-143">\<claimsAuthorizationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|<span data-ttu-id="e2d52-144">註冊的連入宣告的宣告授權管理員。</span><span class="sxs-lookup"><span data-stu-id="e2d52-144">Registers a claims authorization manager for the incoming claims.</span></span> <span data-ttu-id="e2d52-145">選擇項。</span><span class="sxs-lookup"><span data-stu-id="e2d52-145">Optional.</span></span>|  
+|[<span data-ttu-id="e2d52-146">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="e2d52-146">\<claimTypeRequired></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|<span data-ttu-id="e2d52-147">指定必要的宣告集的連入安全性權杖。</span><span class="sxs-lookup"><span data-stu-id="e2d52-147">Specifies the set of required claims for incoming security tokens.</span></span> <span data-ttu-id="e2d52-148">選擇項。</span><span class="sxs-lookup"><span data-stu-id="e2d52-148">Optional.</span></span>|  
+|[<span data-ttu-id="e2d52-149">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="e2d52-149">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="e2d52-150">指定安全性權杖處理常式的集合。</span><span class="sxs-lookup"><span data-stu-id="e2d52-150">Specifies a collection of security token handlers.</span></span> <span data-ttu-id="e2d52-151">您可以指定零或多個安全性權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="e2d52-151">Zero or more collections of security token handlers can be specified.</span></span> <span data-ttu-id="e2d52-152">選擇項。</span><span class="sxs-lookup"><span data-stu-id="e2d52-152">Optional.</span></span>|  
+|[<span data-ttu-id="e2d52-153">\<tokenReplayDetection ></span><span class="sxs-lookup"><span data-stu-id="e2d52-153">\<tokenReplayDetection></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|<span data-ttu-id="e2d52-154">啟用權杖重新執行偵測，並指定權杖的到期時間。</span><span class="sxs-lookup"><span data-stu-id="e2d52-154">Enables token replay detection and specifies the expiration time for tokens.</span></span> <span data-ttu-id="e2d52-155">可以指定在服務層級，或在安全性權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="e2d52-155">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="e2d52-156">選擇項。</span><span class="sxs-lookup"><span data-stu-id="e2d52-156">Optional.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="e2d52-157">父項目</span><span class="sxs-lookup"><span data-stu-id="e2d52-157">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|提供組態對於啟用應用程式中的 Windows 識別基礎 \(WIF\) 選項。|  
+|<span data-ttu-id="e2d52-158">項目</span><span class="sxs-lookup"><span data-stu-id="e2d52-158">Element</span></span>|<span data-ttu-id="e2d52-159">說明</span><span class="sxs-lookup"><span data-stu-id="e2d52-159">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e2d52-160">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="e2d52-160">\<system.identityModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|<span data-ttu-id="e2d52-161">提供用於啟用應用程式中的 Windows Identity Foundation (WIF) 選項的設定。</span><span class="sxs-lookup"><span data-stu-id="e2d52-161">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>|  
   
-## 備註  
- 您可以定義組態，每一個都有唯一的名稱，多個識別。  行為如下所示：  
+## <a name="remarks"></a><span data-ttu-id="e2d52-162">備註</span><span class="sxs-lookup"><span data-stu-id="e2d52-162">Remarks</span></span>  
+ <span data-ttu-id="e2d52-163">多個身分識別可能會定義組態，每個都有唯一的名稱。</span><span class="sxs-lookup"><span data-stu-id="e2d52-163">Multiple identity configurations may be defined, each with a unique name.</span></span> <span data-ttu-id="e2d52-164">的行為如下所示：</span><span class="sxs-lookup"><span data-stu-id="e2d52-164">The behavior is as follows:</span></span>  
   
-1.  如果沒有`<identityConfiguration>`在指定項目。  預設身分的設定，在執行階段建立並填入預設值。  
+1.  <span data-ttu-id="e2d52-165">如果沒有`<identityConfiguration>`指定項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-165">If no `<identityConfiguration>` element is specified.</span></span> <span data-ttu-id="e2d52-166">預設身分識別設定為在執行階段建立並填入預設值。</span><span class="sxs-lookup"><span data-stu-id="e2d52-166">A default identity configuration is created at runtime and populated with default values.</span></span>  
   
-2.  如果有一個`<identityConfiguration>`在指定項目。  它是預設身分的設定。  它並不重要無論它是具名或未命名的。  
+2.  <span data-ttu-id="e2d52-167">如果單一`<identityConfiguration>`指定項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-167">If a single `<identityConfiguration>` element is specified.</span></span> <span data-ttu-id="e2d52-168">它是預設身分識別組態。</span><span class="sxs-lookup"><span data-stu-id="e2d52-168">It is the default identity configuration.</span></span> <span data-ttu-id="e2d52-169">並不重要它是具名或未命名的。</span><span class="sxs-lookup"><span data-stu-id="e2d52-169">It does not matter whether it is named or unnamed.</span></span>  
   
-3.  如果多個`<identityConfiguration>`所指定的項目。  未命名的項目會指定預設身分的設定。  建議當您指定多個`<identityConfiguration>`元素，其中一人應該是未命名。  
+3.  <span data-ttu-id="e2d52-170">若為多個`<identityConfiguration>`元素來指定。</span><span class="sxs-lookup"><span data-stu-id="e2d52-170">If multiple `<identityConfiguration>` elements are specified.</span></span> <span data-ttu-id="e2d52-171">未命名的項目會指定預設身分識別組態。</span><span class="sxs-lookup"><span data-stu-id="e2d52-171">The unnamed element specifies the default identity configuration.</span></span> <span data-ttu-id="e2d52-172">建議當您指定多個`<identityConfiguration>`項目，其中一個應該是未命名。</span><span class="sxs-lookup"><span data-stu-id="e2d52-172">It is recommended that when you specify multiple `<identityConfiguration>` elements, one of them should be unnamed.</span></span>  
   
 > [!WARNING]
->  如果您指定多個`<identityConfiguration>`元素，其中一人應該是未命名。  未命名的項目將會預設身分的設定。  
+>  <span data-ttu-id="e2d52-173">如果您指定多個`<identityConfiguration>`項目，其中一個應該是未命名。</span><span class="sxs-lookup"><span data-stu-id="e2d52-173">If you specify multiple `<identityConfiguration>` elements, one of them should be unnamed.</span></span> <span data-ttu-id="e2d52-174">未命名的項目將會預設身分識別組態。</span><span class="sxs-lookup"><span data-stu-id="e2d52-174">The unnamed element will be the default identity configuration.</span></span>  
   
- 控制台中的一些`<identityConfiguration>`安全性語彙基元的處理常式集合上的設定，或是在個別的安全性語彙基元的處理常式的設定值，可以覆寫項目。  
-  
-> [!IMPORTANT]
->  當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別來提供您的程式碼所參考的識別身份組態中的宣告式存取控制`<federationConfiguration>`元素設定了宣告授權管理員和原則，用來製作授權決策。  都是如此，即使是在不是被動 Web 的案例，例如 \[Windows 通訊資格應用程式\] 或 \[不是以 Web 為基礎的應用程式的案例。  如果應用程式不是被動的 Web 應用程式中， [\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)項目 \(與其子原則項目，如果有的話\) 的參考的識別設定所套用的唯一設定。  會忽略所有其他設定。  如需詳細資訊，請參閱 [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 項目。  
-  
- `<identityConfiguration>`項目會以<xref:System.IdentityModel.Configuration.IdentityConfigurationElement>類別。  已識別的組態區段由<xref:System.IdentityModel.Configuration.IdentityConfiguration>類別。  
+ <span data-ttu-id="e2d52-175">某些設定中指定`<identityConfiguration>`由安全性權杖處理常式集合上的設定或個別的安全性權杖處理常式上的設定，可以覆寫項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-175">Some of the settings specified in the `<identityConfiguration>` element can be overridden by settings on a security token handler collection or by settings on individual security token handlers.</span></span>  
   
 > [!IMPORTANT]
->  指定下列項目作為子項目的`<identityConfiguration>`項目已過時，不過行為還是支援回溯相容性。  這些項目，相反地，需指定在[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。  
+>  <span data-ttu-id="e2d52-176">當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別，以提供您的程式碼所參考的身分識別組態中的宣告型存取控制`<federationConfiguration>`項目會設定用來建立原則與 claims authorization manager 授權授權決策。</span><span class="sxs-lookup"><span data-stu-id="e2d52-176">When using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control in your code, the identity configuration that is referenced by the `<federationConfiguration>` element configures the claims authorization manager and policy that is used to make authorization decisions.</span></span> <span data-ttu-id="e2d52-177">這是為 true，即使在不是被動 Web 案例，例如 Windows Communication Foundation (WCF) 應用程式或不是以 Web 為基礎的應用程式的案例。</span><span class="sxs-lookup"><span data-stu-id="e2d52-177">This is true, even in scenarios that are not passive Web scenarios, for example Windows Communication Foundation (WCF) applications or an application that is not Web-based.</span></span> <span data-ttu-id="e2d52-178">如果應用程式不是被動的 Web 應用程式， [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)元素 （和其子原則項目，如果有的話） 的參考的識別組態所套用的唯一設定。</span><span class="sxs-lookup"><span data-stu-id="e2d52-178">If the application is not a passive Web application, the [\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) element (and its child policy elements, if present) of the referenced identity configuration are the only settings applied.</span></span> <span data-ttu-id="e2d52-179">會忽略所有其他設定。</span><span class="sxs-lookup"><span data-stu-id="e2d52-179">All other settings are ignored.</span></span> <span data-ttu-id="e2d52-180">如需詳細資訊，請參閱[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-180">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>  
+  
+ <span data-ttu-id="e2d52-181">`<identityConfiguration>`項目由<xref:System.IdentityModel.Configuration.IdentityConfigurationElement>類別。</span><span class="sxs-lookup"><span data-stu-id="e2d52-181">The `<identityConfiguration>` element is represented by the <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> class.</span></span> <span data-ttu-id="e2d52-182">已識別的組態區段由<xref:System.IdentityModel.Configuration.IdentityConfiguration>類別。</span><span class="sxs-lookup"><span data-stu-id="e2d52-182">An identity configuration section is represented by the <xref:System.IdentityModel.Configuration.IdentityConfiguration> class.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="e2d52-183">指定下列項目為子項目的`<identityConfiguration>`，也已被取代的項目，雖然行為仍支援回溯相容性。</span><span class="sxs-lookup"><span data-stu-id="e2d52-183">Specifying the following elements as child elements of the `<identityConfiguration>` element has been deprecated, although the behavior is still supported for backward compatibility.</span></span> <span data-ttu-id="e2d52-184">相反地，應該下指定這些項目[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。</span><span class="sxs-lookup"><span data-stu-id="e2d52-184">These elements should, instead, be specified under the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span>  
 >   
->  -   [\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [<span data-ttu-id="e2d52-185">\<audienceUris ></span><span class="sxs-lookup"><span data-stu-id="e2d52-185">\<audienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [<span data-ttu-id="e2d52-186">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="e2d52-186">\<issuerNameRegistry></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [<span data-ttu-id="e2d52-187">\<issuerTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="e2d52-187">\<issuerTokenResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [<span data-ttu-id="e2d52-188">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="e2d52-188">\<serviceTokenResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
-## 範例  
- 下列範例會建立一個名為"alternateConfiguration"的身分設定。  識別組態會指定預設設定。  
+## <a name="example"></a><span data-ttu-id="e2d52-189">範例</span><span class="sxs-lookup"><span data-stu-id="e2d52-189">Example</span></span>  
+ <span data-ttu-id="e2d52-190">下列範例會建立名為"alternateConfiguration 「 身分識別組態。</span><span class="sxs-lookup"><span data-stu-id="e2d52-190">The following example creates an identity configuration named "alternateConfiguration".</span></span> <span data-ttu-id="e2d52-191">身分識別組態指定預設設定。</span><span class="sxs-lookup"><span data-stu-id="e2d52-191">The identity configuration specifies default settings.</span></span>  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration name="alternateConfiguration"/>  
 </system.identityModel>  
 ```  
   
-## 請參閱  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>   
+## <a name="see-also"></a><span data-ttu-id="e2d52-192">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e2d52-192">See Also</span></span>  
+ <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
  <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

@@ -1,50 +1,53 @@
 ---
-title: "SQL Server Express 安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Express 安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2052656a524eafd7b9a137ac7d5006aba53fc075
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# SQL Server Express 安全性
-Microsoft SQL Server Express Edition \(SQL Server Express\) 是以 Microsoft SQL Server 為基礎，可支援大部分資料庫引擎的功能。  其設計方式是在預設情況下關閉非必要的功能和網路連接。  這樣做可減少受到惡意使用者攻擊的表面區域。  
+# <a name="sql-server-express-security"></a><span data-ttu-id="08482-102">SQL Server Express 安全性</span><span class="sxs-lookup"><span data-stu-id="08482-102">SQL Server Express Security</span></span>
+<span data-ttu-id="08482-103">Microsoft SQL Server Express Edition (SQL Server Express) 是以 Microsoft SQL Server 為基礎，可支援大部分資料庫引擎的功能。</span><span class="sxs-lookup"><span data-stu-id="08482-103">Microsoft SQL Server Express Edition (SQL Server Express) is based on Microsoft SQL Server, and supports most of the features of the database engine.</span></span> <span data-ttu-id="08482-104">其設計方式是在預設情況下關閉非必要的功能和網路連接。</span><span class="sxs-lookup"><span data-stu-id="08482-104">It is designed so that nonessential features and network connectivity are off by default.</span></span> <span data-ttu-id="08482-105">這樣做可減少受到惡意使用者攻擊的表面區域。</span><span class="sxs-lookup"><span data-stu-id="08482-105">This reduces the surface area available for attack by a malicious user.</span></span>  
   
- SQL Server Express 通常會安裝成具名執行個體。  此執行個體的預設名稱為 `SQLExpress`。  具名執行個體是由電腦的網路名稱以及您在安裝期間指定的執行個體名稱所識別。  
+ <span data-ttu-id="08482-106">SQL Server Express 通常會安裝成具名執行個體。</span><span class="sxs-lookup"><span data-stu-id="08482-106">SQL Server Express is usually installed as a named instance.</span></span> <span data-ttu-id="08482-107">此執行個體的預設名稱為 `SQLExpress`。</span><span class="sxs-lookup"><span data-stu-id="08482-107">The default name of the instance is `SQLExpress`.</span></span> <span data-ttu-id="08482-108">具名執行個體是由電腦的網路名稱以及您在安裝期間指定的執行個體名稱所識別。</span><span class="sxs-lookup"><span data-stu-id="08482-108">A named instance is identified by the network name of the computer plus the instance name that you specify during installation.</span></span>  
   
-## 網路存取  
- 基於安全性考量，SQL Server Express 中的網路通訊協定預設是停用的。  這樣做可防止外部使用者的攻擊，避免危害裝載 SQL Server Express 執行個體的電腦。  您必須明確啟用網路連接並啟動 SQL Server Browser 服務，才能從另一部電腦連接至 SQL Server Express 執行個體。  
+## <a name="network-access"></a><span data-ttu-id="08482-109">網路存取</span><span class="sxs-lookup"><span data-stu-id="08482-109">Network Access</span></span>  
+ <span data-ttu-id="08482-110">基於安全性考量，SQL Server Express 中的網路通訊協定預設是停用的。</span><span class="sxs-lookup"><span data-stu-id="08482-110">For security reasons, networking protocols are disabled by default in SQL Server Express.</span></span> <span data-ttu-id="08482-111">這樣做可防止外部使用者的攻擊，避免危害裝載 SQL Server Express 執行個體的電腦。</span><span class="sxs-lookup"><span data-stu-id="08482-111">This prevents attacks from outside users that might compromise the computer that hosts the instance of SQL Server Express.</span></span> <span data-ttu-id="08482-112">您必須明確啟用網路連接並啟動 SQL Server Browser 服務，才能從另一部電腦連接至 SQL Server Express 執行個體。</span><span class="sxs-lookup"><span data-stu-id="08482-112">You must explicitly enable network connectivity and start the SQL Server Browser service to connect to a SQL Server Express instance from another computer.</span></span>  
   
- 一旦網路連接啟用之後，SQL Server Express 執行個體與其他 SQL Server 版本便具有相同的安全性需求。  
+ <span data-ttu-id="08482-113">一旦網路連接啟用之後，SQL Server Express 執行個體與其他 SQL Server 版本便具有相同的安全性需求。</span><span class="sxs-lookup"><span data-stu-id="08482-113">Once network connectivity is enabled, a SQL Server Express instance has the same security requirements as the other editions of SQL Server.</span></span>  
   
-## 使用者執行個體  
- 使用者執行個體是 SQL Server Express Database Engine 的獨立執行個體，由 SQL Server Express 父執行個體所產生。  使用者執行個體的主要目標是允許在最小權限使用者帳戶底下執行 Windows 的使用者，針對其本機電腦上的 SQL Server Express 執行個體擁有系統管理員 \(`sysadmin`\) 權限。  使用者執行個體不適用於在其電腦上具有系統管理員身分的使用者。  
+## <a name="user-instances"></a><span data-ttu-id="08482-114">使用者執行個體</span><span class="sxs-lookup"><span data-stu-id="08482-114">User Instances</span></span>  
+ <span data-ttu-id="08482-115">使用者執行個體是 SQL Server Express Database Engine 的獨立執行個體，由 SQL Server Express 父執行個體所產生。</span><span class="sxs-lookup"><span data-stu-id="08482-115">A user instance is a separate instance of the SQL Server Express database engine that is generated by a parent instance of SQL Server Express.</span></span> <span data-ttu-id="08482-116">使用者執行個體的主要目標是允許在最小權限使用者帳戶底下執行 Windows 的使用者，針對其本機電腦上的 SQL Server Express 執行個體擁有系統管理員 (`sysadmin`) 權限。</span><span class="sxs-lookup"><span data-stu-id="08482-116">The primary goal of a user instance is to allow users who are running Windows under a least-privilege user account to have system administrator (`sysadmin`) privileges on the SQL Server Express instance on their local computer.</span></span> <span data-ttu-id="08482-117">使用者執行個體不適用於在其電腦上具有系統管理員身分的使用者。</span><span class="sxs-lookup"><span data-stu-id="08482-117">User instances are not intended for users who are system administrators on their own computers.</span></span>  
   
- 使用者執行個體是從代表使用者的 SQL Server 或 SQL Server Express 主要執行個體產生。  它會在使用者的 Windows 安全性內容底下當做使用者處理序執行，而非當做服務執行。  此時，系統不允許 SQL Server 登入，僅支援 Windows 登入。  這樣做可防止使用者執行個體上執行的軟體進行該使用者無權執行的整個系統範圍變更。  此外，使用者執行個體也稱為子或用戶端執行個體，而且有時候會使用 RANU 縮寫 \(「以一般使用者的身分執行」\) 表示。  
+ <span data-ttu-id="08482-118">使用者執行個體是從代表使用者的 SQL Server 或 SQL Server Express 主要執行個體產生。</span><span class="sxs-lookup"><span data-stu-id="08482-118">A user instance is generated from a primary instance of SQL Server or SQL Server Express on behalf of a user.</span></span> <span data-ttu-id="08482-119">它會在使用者的 Windows 安全性內容底下當做使用者處理序執行，而非當做服務執行。</span><span class="sxs-lookup"><span data-stu-id="08482-119">It runs as a user process under the Windows security context of the user, not as a service.</span></span> <span data-ttu-id="08482-120">此時，系統不允許 SQL Server 登入，僅支援 Windows 登入。</span><span class="sxs-lookup"><span data-stu-id="08482-120">SQL Server logins are disallowed; only Windows logins are supported.</span></span> <span data-ttu-id="08482-121">這樣做可防止使用者執行個體上執行的軟體進行該使用者無權執行的整個系統範圍變更。</span><span class="sxs-lookup"><span data-stu-id="08482-121">This prevents software executing on a user instance from making system-wide changes that the user would not have permissions to make.</span></span> <span data-ttu-id="08482-122">此外，使用者執行個體也稱為子或用戶端執行個體，而且有時候會使用 RANU 縮寫 (「以一般使用者的身分執行」) 表示。</span><span class="sxs-lookup"><span data-stu-id="08482-122">A user instance is also known as a child or client instance, and is sometimes referred to by using the RANU acronym ("run as normal user").</span></span>  
   
- 每個使用者執行個體都與其父執行個體以及在相同電腦上執行的其他使用者執行個體隔離。  安裝在使用者執行個體上的資料庫只會以單一使用者模式開啟，因此多位使用者無法連接至這些資料庫。  使用者執行個體的複寫、分散式查詢和遠端連接都是停用的。  當使用者連接至使用者執行個體時，他們對於 SQL Server Express 父執行個體並沒有任何特殊權限。  
+ <span data-ttu-id="08482-123">每個使用者執行個體都與其父執行個體以及在相同電腦上執行的其他使用者執行個體隔離。</span><span class="sxs-lookup"><span data-stu-id="08482-123">Each user instance is isolated from its parent instance and from other user instances running on the same computer.</span></span> <span data-ttu-id="08482-124">安裝在使用者執行個體上的資料庫只會以單一使用者模式開啟，因此多位使用者無法連接至這些資料庫。</span><span class="sxs-lookup"><span data-stu-id="08482-124">Databases installed on user instances are opened in single-user mode only; multiple users cannot connect to them.</span></span> <span data-ttu-id="08482-125">使用者執行個體的複寫、分散式查詢和遠端連接都是停用的。</span><span class="sxs-lookup"><span data-stu-id="08482-125">Replication, distributed queries and remote connections are disabled for user instances.</span></span> <span data-ttu-id="08482-126">當使用者連接至使用者執行個體時，他們對於 SQL Server Express 父執行個體並沒有任何特殊權限。</span><span class="sxs-lookup"><span data-stu-id="08482-126">When connected to a user instance, users do not have any special privileges on the parent SQL Server Express instance.</span></span>  
   
-## 外部資源  
- 如需 SQL Server Express 的詳細資訊，請參閱下列資源。  
+## <a name="external-resources"></a><span data-ttu-id="08482-127">外部資源</span><span class="sxs-lookup"><span data-stu-id="08482-127">External Resources</span></span>  
+ <span data-ttu-id="08482-128">如需 SQL Server Express 的詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="08482-128">For more information about SQL Server Express, see the following resources.</span></span>  
   
 |||  
 |-|-|  
-|[SQL Server 線上叢書](http://msdn.microsoft.com/library/bb543165.aspx)|包含 SQL Server Express 的相關文件。|  
-|《SQL Server 線上叢書》的[連接 SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx)|說明如何在網路上使用 SQL Server Express Edition。|  
-|[Microsoft SQL Server 2005 Express Edition 線上叢書](http://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition 的完整文件。|  
-|《SQL Server 線上叢書》的[非管理員的使用者執行個體](http://msdn.microsoft.com/library/ms143684.aspx)|說明如何建立和部署使用者執行個體。|  
-|[SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|說明 ADO.NET 應用程式中的使用者執行個體功能。  提供有關如何啟用使用者執行個體、使用 <xref:System.Data.SqlClient.SqlConnection> 來連接至使用者執行個體、使用者執行個體存留期 \(Lifetime\) 和使用者執行個體案例的資訊。|  
+|[<span data-ttu-id="08482-129">SQL Server 線上叢書</span><span class="sxs-lookup"><span data-stu-id="08482-129">SQL Server Books Online</span></span>](http://msdn.microsoft.com/library/bb543165.aspx)|<span data-ttu-id="08482-130">包含 SQL Server Express 的相關文件。</span><span class="sxs-lookup"><span data-stu-id="08482-130">Contains documentation for SQL Server Express.</span></span>|  
+|<span data-ttu-id="08482-131">[連接到 SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx) SQL Server 線上叢書中</span><span class="sxs-lookup"><span data-stu-id="08482-131">[Connecting to SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="08482-132">說明如何在網路上使用 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="08482-132">Describes how to use SQL Server Express Edition on a network.</span></span>|  
+|[<span data-ttu-id="08482-133">Microsoft SQL Server 2005 Express Edition 線上叢書</span><span class="sxs-lookup"><span data-stu-id="08482-133">Microsoft SQL Server 2005 Express Edition Books Online</span></span>](http://msdn.microsoft.com/library/ms165706.aspx)|<span data-ttu-id="08482-134">SQL Server 2005 Express Edition 的完整文件。</span><span class="sxs-lookup"><span data-stu-id="08482-134">Complete documentation for SQL Server 2005 Express Edition.</span></span>|  
+|<span data-ttu-id="08482-135">[非系統管理員的使用者執行個體](http://msdn.microsoft.com/library/ms143684.aspx)SQL Server 線上叢書中</span><span class="sxs-lookup"><span data-stu-id="08482-135">[User Instances for Non-Administrators](http://msdn.microsoft.com/library/ms143684.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="08482-136">說明如何建立和部署使用者執行個體。</span><span class="sxs-lookup"><span data-stu-id="08482-136">Describes how to create and deploy user instances.</span></span>|  
+|[<span data-ttu-id="08482-137">SQL Server Express 使用者執行個體</span><span class="sxs-lookup"><span data-stu-id="08482-137">SQL Server Express User Instances</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|<span data-ttu-id="08482-138">說明 ADO.NET 應用程式中的使用者執行個體功能。</span><span class="sxs-lookup"><span data-stu-id="08482-138">Describes user instance capabilities in an ADO.NET application.</span></span> <span data-ttu-id="08482-139">提供有關如何啟用使用者執行個體、使用 <xref:System.Data.SqlClient.SqlConnection> 來連接至使用者執行個體、使用者執行個體存留期 (Lifetime) 和使用者執行個體案例的資訊。</span><span class="sxs-lookup"><span data-stu-id="08482-139">Provides information about how to enable a user instance, connect to a user instance using a <xref:System.Data.SqlClient.SqlConnection>, user instance lifetime, and user instance scenarios.</span></span>|  
   
-## 請參閱  
- [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)   
- [SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="08482-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="08482-140">See Also</span></span>  
+ [<span data-ttu-id="08482-141">SQL Server 安全性</span><span class="sxs-lookup"><span data-stu-id="08482-141">SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [<span data-ttu-id="08482-142">SQL Server Express 使用者執行個體</span><span class="sxs-lookup"><span data-stu-id="08482-142">SQL Server Express User Instances</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [<span data-ttu-id="08482-143">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="08482-143">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

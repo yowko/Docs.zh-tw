@@ -1,41 +1,42 @@
 ---
-title: "Splitter 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "多重檢視"
-  - "Splitter 控制項 [Windows Form]"
-  - "檢視, 多個個別框架"
+title: "Splitter 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple views
+- Splitter control [Windows Forms]
+- views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1b6a1438a48cd6cd21532a977dcf9cee69fd2cea
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Splitter 控制項 (Windows Form)
-Windows Form `Splitter` 控制項的用途在於執行階段重新調整停駐控制項的大小。  `Splitter` 控制項通常用於內含控制項的表單上，這些控制項會顯示各種長度的資料 \(如 Windows 檔案總管\)，其資料窗格在不同時間會顯示不同寬度的資訊。  
+# <a name="splitter-control-windows-forms"></a><span data-ttu-id="3bfb9-102">Splitter 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="3bfb9-102">Splitter Control (Windows Forms)</span></span>
+<span data-ttu-id="3bfb9-103">Windows Form`Splitter`控制項可用來在執行階段調整停駐的控制項的大小。</span><span class="sxs-lookup"><span data-stu-id="3bfb9-103">Windows Forms `Splitter` controls are used to resize docked controls at run time.</span></span> <span data-ttu-id="3bfb9-104">`Splitter`控制項通常用於與各種長度的資料來呈現，如 Windows 檔案總管，其資料窗格會包含在不同時間資訊的變動寬度的控制項的表單上。</span><span class="sxs-lookup"><span data-stu-id="3bfb9-104">The `Splitter` control is often used on forms with controls that have varying lengths of data to present, like Windows Explorer, whose data panes contain information of varying widths at different times.</span></span>  
   
 > [!NOTE]
->  雖然 <xref:System.Windows.Forms.SplitContainer> 會取代並且將功能加入至之前版本的 `Splitter` 控制項；不過，也可以選擇保留 `Splitter`，以提供回溯相容性 \(Backward Compatibility\) 以及供未來使用。  
+>  <span data-ttu-id="3bfb9-105">雖然<xref:System.Windows.Forms.SplitContainer>取代，並將功能加入`Splitter`的較舊的版本控制`Splitter`如果您選擇保留以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="3bfb9-105">Although <xref:System.Windows.Forms.SplitContainer> replaces and adds functionality to the `Splitter` control of previous versions, `Splitter` is retained for both backward compatibility and future use if you choose.</span></span>  
   
-## 在本節中  
- [Splitter 控制項概觀](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
- 解釋這個控制項是什麼，以及其主要功能和屬性。  
+## <a name="in-this-section"></a><span data-ttu-id="3bfb9-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="3bfb9-106">In This Section</span></span>  
+ [<span data-ttu-id="3bfb9-107">Splitter 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="3bfb9-107">Splitter Control Overview</span></span>](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
+ <span data-ttu-id="3bfb9-108">說明此控制項是什麼，並說明其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="3bfb9-108">Explains what this control is and its key features and properties.</span></span>  
   
-## 參考  
- <xref:System.Windows.Forms.Splitter> 類別  
- 描述這個類別並且連結到它所有的成員。  
+## <a name="reference"></a><span data-ttu-id="3bfb9-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="3bfb9-109">Reference</span></span>  
+ <span data-ttu-id="3bfb9-110"><xref:System.Windows.Forms.Splitter> 類別</span><span class="sxs-lookup"><span data-stu-id="3bfb9-110"><xref:System.Windows.Forms.Splitter> class</span></span>  
+ <span data-ttu-id="3bfb9-111">說明這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="3bfb9-111">Describes this class and has links to all its members.</span></span>  
   
-## 相關章節  
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。
+## <a name="related-sections"></a><span data-ttu-id="3bfb9-112">相關章節</span><span class="sxs-lookup"><span data-stu-id="3bfb9-112">Related Sections</span></span>  
+ [<span data-ttu-id="3bfb9-113">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="3bfb9-113">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="3bfb9-114">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="3bfb9-114">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

@@ -10,41 +10,38 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="what-is-managed-code"></a><span data-ttu-id="18a27-104">什麼是 Managed 程式碼？</span><span class="sxs-lookup"><span data-stu-id="18a27-104">What is "managed code"?</span></span>
 
-# <a name="what-is-managed-code"></a>什麼是 Managed 程式碼？
+<span data-ttu-id="18a27-105">使用 .NET Framework 時，您經常會遇到「Managed 程式碼」一詞。</span><span class="sxs-lookup"><span data-stu-id="18a27-105">When working with .NET Framework, you will often encounter the term "managed code".</span></span> <span data-ttu-id="18a27-106">本文件將說明此詞彙所代表的意義及其他相關資訊。</span><span class="sxs-lookup"><span data-stu-id="18a27-106">This document will explain what this term means and additional information around it.</span></span>
 
-使用 .NET Framework 時，您經常會遇到「Managed 程式碼」一詞。 本文件將說明此詞彙所代表的意義及其他相關資訊。
+<span data-ttu-id="18a27-107">簡單來說，Managed 程式碼就是其執行受到執行階段管理的程式碼。</span><span class="sxs-lookup"><span data-stu-id="18a27-107">To put it very simply, managed code is just that: code whose execution is managed by a runtime.</span></span> <span data-ttu-id="18a27-108">在此情況下，不論實作為何 ([Mono](http://www.mono-project.com/)、.NET Framework 或 .NET Core)，所提到的執行階段都稱為 **Common Language Runtime** 或 CLR。</span><span class="sxs-lookup"><span data-stu-id="18a27-108">In this case, the runtime in question is called the **Common Language Runtime** or CLR, regardless of the implementation ([Mono](http://www.mono-project.com/) or .NET Framework or .NET Core).</span></span> <span data-ttu-id="18a27-109">CLR 負責將 Managed 程式碼編譯成機器碼，再加以執行。</span><span class="sxs-lookup"><span data-stu-id="18a27-109">CLR is in charge of taking the managed code, compiling it into machine code and then executing it.</span></span> <span data-ttu-id="18a27-110">此外，執行階段提供幾項重要服務，例如自動記憶體管理、安全性界限、型別安全等。</span><span class="sxs-lookup"><span data-stu-id="18a27-110">On top of that, runtime provides several important services such as automatic memory management, security boundaries, type safety etc.</span></span>
 
-簡單來說，Managed 程式碼就是其執行受到執行階段管理的程式碼。 在此情況下，不論實作為何 ([Mono](http://www.mono-project.com/)、.NET Framework 或 .NET Core)，所提到的執行階段都稱為 **Common Language Runtime** 或 CLR。 CLR 負責將 Managed 程式碼編譯成機器碼，再加以執行。 此外，執行階段提供幾項重要服務，例如自動記憶體管理、安全性界限、型別安全等。
+<span data-ttu-id="18a27-111">與此相反的是您執行 C/C++ 程式的方式，又稱為「Unmanaged 程式碼」。</span><span class="sxs-lookup"><span data-stu-id="18a27-111">Contrast this to the way you would run a C/C++ program, also called "unmanaged code".</span></span> <span data-ttu-id="18a27-112">在 Unmanaged 世界中，程式設計人員會負責處理幾乎所有工作。</span><span class="sxs-lookup"><span data-stu-id="18a27-112">In the unmanaged world, the programmer is in charge of pretty much everything.</span></span> <span data-ttu-id="18a27-113">實際程式基本上是作業系統 (OS) 載入記憶體並啟動的二進位檔。</span><span class="sxs-lookup"><span data-stu-id="18a27-113">The actual program is, essentially, a binary that the operating system (OS) loads into memory and starts.</span></span> <span data-ttu-id="18a27-114">從記憶體管理到安全性考量等其他工作都是程式設計人員的責任。</span><span class="sxs-lookup"><span data-stu-id="18a27-114">Everything else, from memory management to security considerations are a burden of the programmer.</span></span>
 
-與此相反的是您執行 C/C++ 程式的方式，又稱為「Unmanaged 程式碼」。 在 Unmanaged 世界中，程式設計人員會負責處理幾乎所有工作。 實際程式基本上是作業系統 (OS) 載入記憶體並啟動的二進位檔。 從記憶體管理到安全性考量等其他工作都是程式設計人員的責任。
+<span data-ttu-id="18a27-115">Managed 程式碼是以其中一種高階語言撰寫而成 (例如 C#、Visual Basic、F# 等)，並可在 .NET 上執行。</span><span class="sxs-lookup"><span data-stu-id="18a27-115">Managed code is written in one of the high-level languages that can be run on top of .NET, such as C#, Visual Basic, F# and others.</span></span> <span data-ttu-id="18a27-116">當您使用這些語言各自的編譯器來編譯以這些語言撰寫的程式碼時，您不會取得機器碼。</span><span class="sxs-lookup"><span data-stu-id="18a27-116">When you compile code written in those languages with their respective compiler, you don’t get machine code.</span></span> <span data-ttu-id="18a27-117">您會取得稍後可供執行階段編譯及執行的**中繼語言**碼。</span><span class="sxs-lookup"><span data-stu-id="18a27-117">You get **Intermediate Language** code which the runtime then compiles and executes.</span></span> <span data-ttu-id="18a27-118">這項規則的唯一例外是 C++，因為它也會產生在 Windows 上執行的原生、Unmanaged 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="18a27-118">C++ is the one exception to this rule, as it can also produce native, unmanaged binaries that run on Windows.</span></span>
 
-Managed 程式碼是以其中一種高階語言撰寫而成 (例如 C#、Visual Basic、F# 等)，並可在 .NET 上執行。 當您使用這些語言各自的編譯器來編譯以這些語言撰寫的程式碼時，您不會取得機器碼。 您會取得稍後可供執行階段編譯及執行的**中繼語言**碼。 這項規則的唯一例外是 C++，因為它也會產生在 Windows 上執行的原生、Unmanaged 二進位檔。
+## <a name="intermediate-language--execution"></a><span data-ttu-id="18a27-119">中繼語言和執行</span><span class="sxs-lookup"><span data-stu-id="18a27-119">Intermediate Language & execution</span></span>
 
-## <a name="intermediate-language--execution"></a>中繼語言和執行
+<span data-ttu-id="18a27-120">什麼是「中繼語言」(簡稱 IL)？</span><span class="sxs-lookup"><span data-stu-id="18a27-120">What is "Intermediate Language" (or IL for short)?</span></span> <span data-ttu-id="18a27-121">它是以高階 .NET 語言撰寫之程式碼的編譯結果。</span><span class="sxs-lookup"><span data-stu-id="18a27-121">It is a product of compilation of code written in high-level .NET languages.</span></span> <span data-ttu-id="18a27-122">當您編譯以其中一種語言撰寫的程式碼之後，您會取得由 IL 所組成的二進位檔。</span><span class="sxs-lookup"><span data-stu-id="18a27-122">Once you compile your code written in one of these languages, you will get a binary that is made out of IL.</span></span> <span data-ttu-id="18a27-123">請務必注意，IL 與在執行階段上執行的任何特定語言都無關；它甚至有個別的規格，如果您想要，可以閱讀此規格。</span><span class="sxs-lookup"><span data-stu-id="18a27-123">It is important to note that the IL is independent from any specific language that runs on top of the runtime; there is even a separate specification for it that you can read if you’re so inclined.</span></span>
 
-什麼是「中繼語言」(簡稱 IL)？ 它是以高階 .NET 語言撰寫之程式碼的編譯結果。 當您編譯以其中一種語言撰寫的程式碼之後，您會取得由 IL 所組成的二進位檔。 請務必注意，IL 與在執行階段上執行的任何特定語言都無關；它甚至有個別的規格，如果您想要，可以閱讀此規格。
+<span data-ttu-id="18a27-124">當您從高階程式碼產生 IL 之後，您可能想要執行它。</span><span class="sxs-lookup"><span data-stu-id="18a27-124">Once you produce IL from your high-level code, you will most likely want to run it.</span></span> <span data-ttu-id="18a27-125">此時 CLR 會接管，並開始 **Just-In-Time** 編譯 (或 **JIT-ing**) 的程序，以將您的程式碼從 IL 編譯成可實際在 CPU 上執行的機器碼。</span><span class="sxs-lookup"><span data-stu-id="18a27-125">This is where the CLR takes over and starts the process of **Just-In-Time** compiling, or **JIT-ing** your code from IL to machine code that can actually be run on a CPU.</span></span> <span data-ttu-id="18a27-126">如此一來，CLR 就會知道您程式碼的實際功能，並可有效地進行「管理」。</span><span class="sxs-lookup"><span data-stu-id="18a27-126">In this way, the CLR knows exactly what your code is doing and can effectively _manage_ it.</span></span>
 
-當您從高階程式碼產生 IL 之後，您可能想要執行它。 此時 CLR 會接管，並開始 **Just-In-Time** 編譯 (或 **JIT-ing**) 的程序，以將您的程式碼從 IL 編譯成可實際在 CPU 上執行的機器碼。 如此一來，CLR 就會知道您程式碼的實際功能，並可有效地進行「管理」。
+<span data-ttu-id="18a27-127">中繼語言有時也稱為通用中間語言 (CIL) 或 Microsoft Intermediate Language (MSIL)。</span><span class="sxs-lookup"><span data-stu-id="18a27-127">Intermediate Language is sometimes also called Common Intermediate Language (CIL) or Microsoft Intermediate Language (MSIL).</span></span>
 
-中繼語言有時也稱為通用中間語言 (CIL) 或 Microsoft Intermediate Language (MSIL)。
+## <a name="unmanaged-code-interoperability"></a><span data-ttu-id="18a27-128">Unmanaged 程式碼互通性</span><span class="sxs-lookup"><span data-stu-id="18a27-128">Unmanaged code interoperability</span></span>
 
-## <a name="unmanaged-code-interoperability"></a>Unmanaged 程式碼互通性
+<span data-ttu-id="18a27-129">當然，CLR 允許超過 Managed 與 Unmanaged 世界之間的界限，而且有許多程式碼會這樣做，甚至是在[基底類別庫](framework-libraries.md)中。</span><span class="sxs-lookup"><span data-stu-id="18a27-129">Of course, the CLR allows passing the boundaries between managed and unmanaged world, and there is a lot of code that does that, even in the [Base Class Libraries](framework-libraries.md).</span></span> <span data-ttu-id="18a27-130">這稱為**互通性** 或簡稱 **Interop**。</span><span class="sxs-lookup"><span data-stu-id="18a27-130">This is called **interoperability** or just **interop** for short.</span></span> <span data-ttu-id="18a27-131">這些佈建可讓您包裝並呼叫 Unmanaged 程式庫。</span><span class="sxs-lookup"><span data-stu-id="18a27-131">These provisions would allow you to, for example, wrap up an unmanaged library and call into it.</span></span> <span data-ttu-id="18a27-132">不過，請務必請注意，一旦您這樣做，當程式碼超過執行階段的界限時，執行的實際管理會再次交由 Unmanaged 程式碼，因此會受到相同的限制。</span><span class="sxs-lookup"><span data-stu-id="18a27-132">However, it is important to note that once you do this, when the code passes the boundaries of the runtime, the actual management of the execution is again in the hand of unmanaged code, and thus falls under the same restrictions.</span></span>
 
-當然，CLR 允許超過 Managed 與 Unmanaged 世界之間的界限，而且有許多程式碼會這樣做，甚至是在[基底類別庫](framework-libraries.md)中。 這稱為**互通性** 或簡稱 **Interop**。 這些佈建可讓您包裝並呼叫 Unmanaged 程式庫。 不過，請務必請注意，一旦您這樣做，當程式碼超過執行階段的界限時，執行的實際管理會再次交由 Unmanaged 程式碼，因此會受到相同的限制。
+<span data-ttu-id="18a27-133">同樣地，C# 語言可讓您在程式碼中直接使用 Unmanaged 建構 (例如資料指標)，方法是利用所謂的 **unsafe 內容**，來指定程式碼片段的執行不受 CLR 管理。</span><span class="sxs-lookup"><span data-stu-id="18a27-133">Similar to this, C# is one language that allows you to use unmanaged constructs such as pointers directly in code by utilizing what is known as **unsafe context** which designates a piece of code for which the execution is not managed by the CLR.</span></span>
 
-同樣地，C# 語言可讓您在程式碼中直接使用 Unmanaged 建構 (例如資料指標)，方法是利用所謂的 **unsafe 內容**，來指定程式碼片段的執行不受 CLR 管理。
+## <a name="more-resources"></a><span data-ttu-id="18a27-134">更多資源</span><span class="sxs-lookup"><span data-stu-id="18a27-134">More resources</span></span>
 
-## <a name="more-resources"></a>更多資源
-
-*   [.NET Framework 的概觀](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [Unsafe 程式碼和指標](https://msdn.microsoft.com/library/t2yzs44b.aspx)
-*   [互通性 (C# 程式設計手冊)](https://msdn.microsoft.com/library/ms173184.aspx)
-
+*   [<span data-ttu-id="18a27-135">.NET Framework 的概觀</span><span class="sxs-lookup"><span data-stu-id="18a27-135">.NET Framework Conceptual Overview</span></span>](https://msdn.microsoft.com/library/zw4w595w.aspx)
+*   [<span data-ttu-id="18a27-136">Unsafe 程式碼和指標</span><span class="sxs-lookup"><span data-stu-id="18a27-136">Unsafe Code and Pointers</span></span>](https://msdn.microsoft.com/library/t2yzs44b.aspx)
+*   [<span data-ttu-id="18a27-137">互通性 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="18a27-137">Interoperability (C# Programming guide)</span></span>](https://msdn.microsoft.com/library/ms173184.aspx)

@@ -1,116 +1,97 @@
 ---
 title: "join 子句 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="join-clause-c-reference"></a>join 子句 (C# 參考)
-`join` 子句可用於將不同來源序列中的項目產生關聯，這些項目在物件模型中沒有直接關聯性。 唯一的需求是每個來源中的項目必須共用可比較是否相等的特定值。 例如，食品經銷商可能有一份特定產品的供應商清單，以及一份買家清單。 針對位於相同指定地區的所有供應商和買家，可使用 `join` 子句來建立該產品的供應商和買家清單。  
+# <a name="join-clause-c-reference"></a><span data-ttu-id="c0f6e-102">join 子句 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c0f6e-102">join clause (C# Reference)</span></span>
+<span data-ttu-id="c0f6e-103">`join` 子句可用於將不同來源序列中的項目產生關聯，這些項目在物件模型中沒有直接關聯性。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-103">The `join` clause is useful for associating elements from different source sequences that have no direct relationship in the object model.</span></span> <span data-ttu-id="c0f6e-104">唯一的需求是每個來源中的項目必須共用可比較是否相等的特定值。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-104">The only requirement is that the elements in each source share some value that can be compared for equality.</span></span> <span data-ttu-id="c0f6e-105">例如，食品經銷商可能有一份特定產品的供應商清單，以及一份買家清單。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-105">For example, a food distributor might have a list of suppliers of a certain product, and a list of buyers.</span></span> <span data-ttu-id="c0f6e-106">針對位於相同指定地區的所有供應商和買家，可使用 `join` 子句來建立該產品的供應商和買家清單。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-106">A `join` clause can be used, for example, to create a list of the suppliers and buyers of that product who are all in the same specified region.</span></span>  
   
- `join` 子句接受兩個來源序列作為輸入。 每個序列中的項目必須是可與另一個序列中的對應屬性進行比較的屬性，或包含這類屬性。 `join` 子句使用特殊的 `equals` 關鍵字，來比較指定的索引鍵是否相等。 `join` 子句執行的所有聯結都是等聯結。 `join` 子句輸出的組織結構取決於您要執行之聯結的特定類型。 以下是三種最常見的聯結類型：  
+ <span data-ttu-id="c0f6e-107">`join` 子句接受兩個來源序列作為輸入。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-107">A `join` clause takes two source sequences as input.</span></span> <span data-ttu-id="c0f6e-108">每個序列中的項目必須是可與另一個序列中的對應屬性進行比較的屬性，或包含這類屬性。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-108">The elements in each sequence must either be or contain a property that can be compared to a corresponding property in the other sequence.</span></span> <span data-ttu-id="c0f6e-109">`join` 子句使用特殊的 `equals` 關鍵字，來比較指定的索引鍵是否相等。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-109">The `join` clause compares the specified keys for equality by using the special `equals` keyword.</span></span> <span data-ttu-id="c0f6e-110">`join` 子句執行的所有聯結都是等聯結。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-110">All joins performed by the `join` clause are equijoins.</span></span> <span data-ttu-id="c0f6e-111">`join` 子句輸出的組織結構取決於您要執行之聯結的特定類型。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-111">The shape of the output of a `join` clause depends on the specific type of join you are performing.</span></span> <span data-ttu-id="c0f6e-112">以下是三種最常見的聯結類型：</span><span class="sxs-lookup"><span data-stu-id="c0f6e-112">The following are three most common join types:</span></span>  
   
--   內部聯結  
+-   <span data-ttu-id="c0f6e-113">內部聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-113">Inner join</span></span>  
   
--   群組聯結  
+-   <span data-ttu-id="c0f6e-114">群組聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-114">Group join</span></span>  
   
--   左方外部聯結  
+-   <span data-ttu-id="c0f6e-115">左方外部聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-115">Left outer join</span></span>  
   
-## <a name="inner-join"></a>內部聯結  
- 下列範例顯示一個簡單的內部等聯結。 此查詢會產生「產品名稱/分類」配對的一般序列。 相同的分類字串會出現在多個項目中。 如果 `categories` 中有某個項目具有不相符的 `products`，則該分類不會出現在結果中。  
+## <a name="inner-join"></a><span data-ttu-id="c0f6e-116">內部聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-116">Inner Join</span></span>  
+ <span data-ttu-id="c0f6e-117">下列範例顯示一個簡單的內部等聯結。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-117">The following example shows a simple inner equijoin.</span></span> <span data-ttu-id="c0f6e-118">此查詢會產生「產品名稱/分類」配對的一般序列。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-118">This query produces a flat sequence of "product name / category" pairs.</span></span> <span data-ttu-id="c0f6e-119">相同的分類字串會出現在多個項目中。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-119">The same category string will appear in multiple elements.</span></span> <span data-ttu-id="c0f6e-120">如果 `categories` 中有某個項目具有不相符的 `products`，則該分類不會出現在結果中。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-120">If an element from `categories` has no matching `products`, that category will not appear in the results.</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
- 如需詳細資訊，請參閱[如何：執行內部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)。  
+ <span data-ttu-id="c0f6e-121">如需詳細資訊，請參閱[如何：執行內部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-121">For more information, see [How to: Perform Inner Joins](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).</span></span>  
   
-## <a name="group-join"></a>群組聯結  
- 具有 `into` 運算式的 `join` 子句稱為群組聯結。  
+## <a name="group-join"></a><span data-ttu-id="c0f6e-122">群組聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-122">Group Join</span></span>  
+ <span data-ttu-id="c0f6e-123">具有 `into` 運算式的 `join` 子句稱為群組聯結。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-123">A `join` clause with an `into` expression is called a group join.</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
- 群組聯結會產生階層式結果序列，將左側來源序列中的項目與右側來源序列中的一或多個相符項目產生關聯。 群組聯結從關聯式觀點來看沒有對等項目，它基本上是物件陣列的序列。  
+ <span data-ttu-id="c0f6e-124">群組聯結會產生階層式結果序列，將左側來源序列中的項目與右側來源序列中的一或多個相符項目產生關聯。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-124">A group join produces a hierarchical result sequence, which associates elements in the left source sequence with one or more matching elements in the right side source sequence.</span></span> <span data-ttu-id="c0f6e-125">群組聯結從關聯式觀點來看沒有對等項目，它基本上是物件陣列的序列。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-125">A group join has no equivalent in relational terms; it is essentially a sequence of object arrays.</span></span>  
   
- 如果右側來源序列中找不到項目會符合左側來源的項目，`join` 子句會針對該項目產生空陣列。 因此，群組聯結基本上仍然是內部等聯結，不同之處在於結果序列會組織成群組。  
+ <span data-ttu-id="c0f6e-126">如果右側來源序列中找不到項目會符合左側來源的項目，`join` 子句會針對該項目產生空陣列。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-126">If no elements from the right source sequence are found to match an element in the left source, the `join` clause will produce an empty array for that item.</span></span> <span data-ttu-id="c0f6e-127">因此，群組聯結基本上仍然是內部等聯結，不同之處在於結果序列會組織成群組。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-127">Therefore, the group join is still basically an inner-equijoin except that the result sequence is organized into groups.</span></span>  
   
- 如果您只選取群組聯結的結果，便可以存取項目，但無法識別比對的索引鍵。 因此，選取群組聯結成同時具有索引鍵名稱之新類型的結果，通常會比較有用 (如上述範例所示)。  
+ <span data-ttu-id="c0f6e-128">如果您只選取群組聯結的結果，便可以存取項目，但無法識別比對的索引鍵。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-128">If you just select the results of a group join, you can access the items, but you cannot identify the key that they match on.</span></span> <span data-ttu-id="c0f6e-129">因此，選取群組聯結成同時具有索引鍵名稱之新類型的結果，通常會比較有用 (如上述範例所示)。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-129">Therefore, it is generally more useful to select the results of the group join into a new type that also has the key name, as shown in the previous example.</span></span>  
   
- 您當然也可以使用群組聯結的結果，作為另一個子查詢的產生器：  
+ <span data-ttu-id="c0f6e-130">您當然也可以使用群組聯結的結果，作為另一個子查詢的產生器：</span><span class="sxs-lookup"><span data-stu-id="c0f6e-130">You can also, of course, use the result of a group join as the generator of another subquery:</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
- 如需詳細資訊，請參閱[如何：執行群組聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)。  
+ <span data-ttu-id="c0f6e-131">如需詳細資訊，請參閱[如何：執行群組聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-131">For more information, see [How to: Perform Grouped Joins](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).</span></span>  
   
-## <a name="left-outer-join"></a>左外部聯結  
- 在左方外部聯結中，會傳回左側來源序列中的所有項目，即使在右側序列中沒有相符項目亦然。 若要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中執行左方外部聯結，請搭配群組聯結使用 `DefaultIfEmpty` 方法，以指定在左側項目沒有相符項目時所要產生的預設右側項目。 您可以使用 `null` 作為任何參考型別的預設值，也可以指定使用者定義的預設類型。 在下列範例中，會顯示使用者定義的預設類型：  
+## <a name="left-outer-join"></a><span data-ttu-id="c0f6e-132">左外部聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-132">Left Outer Join</span></span>  
+ <span data-ttu-id="c0f6e-133">在左方外部聯結中，會傳回左側來源序列中的所有項目，即使在右側序列中沒有相符項目亦然。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-133">In a left outer join, all the elements in the left source sequence are returned, even if no matching elements are in the right sequence.</span></span> <span data-ttu-id="c0f6e-134">若要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中執行左方外部聯結，請搭配群組聯結使用 `DefaultIfEmpty` 方法，以指定在左側項目沒有相符項目時所要產生的預設右側項目。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-134">To perform a left outer join in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], use the `DefaultIfEmpty` method in combination with a group join to specify a default right-side element to produce if a left-side element has no matches.</span></span> <span data-ttu-id="c0f6e-135">您可以使用 `null` 作為任何參考型別的預設值，也可以指定使用者定義的預設類型。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-135">You can use `null` as the default value for any reference type, or you can specify a user-defined default type.</span></span> <span data-ttu-id="c0f6e-136">在下列範例中，會顯示使用者定義的預設類型：</span><span class="sxs-lookup"><span data-stu-id="c0f6e-136">In the following example, a user-defined default type is shown:</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
- 如需詳細資訊，請參閱[如何：執行左方外部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)。  
+ <span data-ttu-id="c0f6e-137">如需詳細資訊，請參閱[如何：執行左方外部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-137">For more information, see [How to: Perform Left Outer Joins](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).</span></span>  
   
-## <a name="the-equals-operator"></a>等號運算子  
- `join` 子句會執行等聯結。 換句話說，您只能根據兩個索引鍵是否相等進行比對。 不支援其他比較類型，例如「大於」或「不等於」。 為了釐清所有聯結都是等聯結，`join` 子句使用 `equals` 關鍵字而非 `==` 運算子。 `equals` 關鍵字只能用於 `join` 子句，而且與 `==` 運算子有一個重要的差異。 使用 `equals` 時，左側索引鍵會取用外部來源序列，而右側索引鍵會取用內部來源。 外部來源只會在 `equals` 的左側範圍內，而內部來源序列只會在右側範圍內。  
+## <a name="the-equals-operator"></a><span data-ttu-id="c0f6e-138">等號運算子</span><span class="sxs-lookup"><span data-stu-id="c0f6e-138">The equals operator</span></span>  
+ <span data-ttu-id="c0f6e-139">`join` 子句會執行等聯結。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-139">A `join` clause performs an equijoin.</span></span> <span data-ttu-id="c0f6e-140">換句話說，您只能根據兩個索引鍵是否相等進行比對。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-140">In other words, you can only base matches on the equality of two keys.</span></span> <span data-ttu-id="c0f6e-141">不支援其他比較類型，例如「大於」或「不等於」。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-141">Other types of comparisons such as "greater than" or "not equals" are not supported.</span></span> <span data-ttu-id="c0f6e-142">為了釐清所有聯結都是等聯結，`join` 子句使用 `equals` 關鍵字而非 `==` 運算子。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-142">To make clear that all joins are equijoins, the `join` clause uses the `equals` keyword instead of the `==` operator.</span></span> <span data-ttu-id="c0f6e-143">`equals` 關鍵字只能用於 `join` 子句，而且與 `==` 運算子有一個重要的差異。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-143">The `equals` keyword can only be used in a `join` clause and it differs from the `==` operator in one important way.</span></span> <span data-ttu-id="c0f6e-144">使用 `equals` 時，左側索引鍵會取用外部來源序列，而右側索引鍵會取用內部來源。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-144">With `equals`, the left key consumes the outer source sequence, and the right key consumes the inner source.</span></span> <span data-ttu-id="c0f6e-145">外部來源只會在 `equals` 的左側範圍內，而內部來源序列只會在右側範圍內。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-145">The outer source is only in scope on the left side of `equals` and the inner source sequence is only in scope on the right side.</span></span>  
   
-## <a name="non-equijoins"></a>非等聯結  
- 您可以使用多個 `from` 子句單獨將新的序列引入查詢，以執行非等聯結、交叉聯結及其他自訂聯結作業。 如需詳細資訊，請參閱[如何：執行自訂聯結作業](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)。  
+## <a name="non-equijoins"></a><span data-ttu-id="c0f6e-146">非等聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-146">Non-Equijoins</span></span>  
+ <span data-ttu-id="c0f6e-147">您可以使用多個 `from` 子句單獨將新的序列引入查詢，以執行非等聯結、交叉聯結及其他自訂聯結作業。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-147">You can perform non-equijoins, cross joins, and other custom join operations by using multiple `from` clauses to introduce new sequences independently into a query.</span></span> <span data-ttu-id="c0f6e-148">如需詳細資訊，請參閱[如何：執行自訂聯結作業](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-148">For more information, see [How to: Perform Custom Join Operations](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).</span></span>  
   
-## <a name="joins-on-object-collections-vs-relational-tables"></a>物件集合上的聯結與關聯式資料表的比較  
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中，聯結作業是在物件集合上執行。 物件集合無法以與兩個關聯式資料表完全相同的方式進行「聯結」。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，只有在兩個來源序列未透過任何關聯性繫結時，才需要明確的 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 時，外部索引鍵資料表在物件模型中會表示為主要資料表的屬性。 例如，在 Northwind 資料庫中，Customer 資料表與 Orders 資料表有外部索引鍵關聯性。 當您將資料表對應至物件模型時，Customer 類別會有 Orders 屬性，其中包含與 Customer 相關聯之 Orders 的集合。 實際上已為您完成此聯結。  
+## <a name="joins-on-object-collections-vs-relational-tables"></a><span data-ttu-id="c0f6e-149">物件集合上的聯結與關聯式資料表的比較</span><span class="sxs-lookup"><span data-stu-id="c0f6e-149">Joins on object collections vs. relational tables</span></span>  
+ <span data-ttu-id="c0f6e-150">在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中，聯結作業是在物件集合上執行。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-150">In a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression, join operations are performed on object collections.</span></span> <span data-ttu-id="c0f6e-151">物件集合無法以與兩個關聯式資料表完全相同的方式進行「聯結」。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-151">Object collections cannot be "joined" in exactly the same way as two relational tables.</span></span> <span data-ttu-id="c0f6e-152">在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，只有在兩個來源序列未透過任何關聯性繫結時，才需要明確的 `join` 子句。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-152">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], explicit `join` clauses are only required when two source sequences are not tied by any relationship.</span></span> <span data-ttu-id="c0f6e-153">使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 時，外部索引鍵資料表在物件模型中會表示為主要資料表的屬性。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-153">When working with [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], foreign key tables are represented in the object model as properties of the primary table.</span></span> <span data-ttu-id="c0f6e-154">例如，在 Northwind 資料庫中，Customer 資料表與 Orders 資料表有外部索引鍵關聯性。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-154">For example, in the Northwind database, the Customer table has a foreign key relationship with the Orders table.</span></span> <span data-ttu-id="c0f6e-155">當您將資料表對應至物件模型時，Customer 類別會有 Orders 屬性，其中包含與 Customer 相關聯之 Orders 的集合。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-155">When you map the tables to the object model, the Customer class has an Orders property that contains the collection of Orders associated with that Customer.</span></span> <span data-ttu-id="c0f6e-156">實際上已為您完成此聯結。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-156">In effect, the join has already been done for you.</span></span>  
   
- 如需在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 內容中查詢所有關聯資料表的詳細資訊，請參閱[如何︰對應資料庫關聯性](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
+ <span data-ttu-id="c0f6e-157">如需在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 內容中查詢所有關聯資料表的詳細資訊，請參閱[如何︰對應資料庫關聯性](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-157">For more information about querying across related tables in the context of [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], see [How to: Map Database Relationships](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).</span></span>  
   
-## <a name="composite-keys"></a>複合索引鍵  
- 您可以使用複合索引鍵來測試多個值是否相等。 如需詳細資訊，請參閱[如何：使用複合索引鍵執行聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)。 複合索引鍵也可用於 `group` 子句。  
+## <a name="composite-keys"></a><span data-ttu-id="c0f6e-158">複合索引鍵</span><span class="sxs-lookup"><span data-stu-id="c0f6e-158">Composite Keys</span></span>  
+ <span data-ttu-id="c0f6e-159">您可以使用複合索引鍵來測試多個值是否相等。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-159">You can test for equality of multiple values by using a composite key.</span></span> <span data-ttu-id="c0f6e-160">如需詳細資訊，請參閱[如何：使用複合索引鍵執行聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-160">For more information, see [How to: Join by Using Composite Keys](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md).</span></span> <span data-ttu-id="c0f6e-161">複合索引鍵也可用於 `group` 子句。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-161">Composite keys can be also used in a `group` clause.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例使用相同的比對索引鍵，來比較相同資料來源中內部聯結、群組聯結和左方外部聯結的結果。 這些範例中新增了一些額外的程式碼，以釐清主控台顯示中的結果。  
+## <a name="example"></a><span data-ttu-id="c0f6e-162">範例</span><span class="sxs-lookup"><span data-stu-id="c0f6e-162">Example</span></span>  
+ <span data-ttu-id="c0f6e-163">下列範例使用相同的比對索引鍵，來比較相同資料來源中內部聯結、群組聯結和左方外部聯結的結果。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-163">The following example compares the results of an inner join, a group join, and a left outer join on the same data sources by using the same matching keys.</span></span> <span data-ttu-id="c0f6e-164">這些範例中新增了一些額外的程式碼，以釐清主控台顯示中的結果。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-164">Some extra code is added to these examples to clarify the results in the console display.</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
-## <a name="remarks"></a>備註  
- 後面沒有 `into` 的 `join` 子句會轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。 後面接著 `into` 的 `join` 子句會轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。  
+## <a name="remarks"></a><span data-ttu-id="c0f6e-165">備註</span><span class="sxs-lookup"><span data-stu-id="c0f6e-165">Remarks</span></span>  
+ <span data-ttu-id="c0f6e-166">如果 `join` 子句沒有後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-166">A `join` clause that is not followed by `into` is translated into a <xref:System.Linq.Enumerable.Join%2A> method call.</span></span> <span data-ttu-id="c0f6e-167">如果 `join` 子句後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="c0f6e-167">A `join` clause that is followed by `into` is translated to a <xref:System.Linq.Enumerable.GroupJoin%2A> method call.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Join Operations](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107) (聯結作業)   
- [group 子句](../../../csharp/language-reference/keywords/group-clause.md)   
- [如何：執行左方外部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [如何：執行內部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [如何：執行群組聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [如何：排序 Join 子句的結果](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [如何：使用複合索引鍵執行聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [如何：安裝範例資料庫](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
-
+## <a name="see-also"></a><span data-ttu-id="c0f6e-168">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0f6e-168">See Also</span></span>  
+ [<span data-ttu-id="c0f6e-169">查詢關鍵字 (LINQ)</span><span class="sxs-lookup"><span data-stu-id="c0f6e-169">Query Keywords (LINQ)</span></span>](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [<span data-ttu-id="c0f6e-170">LINQ 查詢運算式</span><span class="sxs-lookup"><span data-stu-id="c0f6e-170">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [<span data-ttu-id="c0f6e-171">聯結作業</span><span class="sxs-lookup"><span data-stu-id="c0f6e-171">Join Operations</span></span>](../../programming-guide/concepts/linq/join-operations.md)  
+ [<span data-ttu-id="c0f6e-172">group 子句</span><span class="sxs-lookup"><span data-stu-id="c0f6e-172">group clause</span></span>](../../../csharp/language-reference/keywords/group-clause.md)  
+ [<span data-ttu-id="c0f6e-173">如何：執行左方外部聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-173">How to: Perform Left Outer Joins</span></span>](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+ [<span data-ttu-id="c0f6e-174">如何：執行內部聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-174">How to: Perform Inner Joins</span></span>](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [<span data-ttu-id="c0f6e-175">如何：執行群組聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-175">How to: Perform Grouped Joins</span></span>](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [<span data-ttu-id="c0f6e-176">如何：排序 Join 子句的結果</span><span class="sxs-lookup"><span data-stu-id="c0f6e-176">How to: Order the Results of a Join Clause</span></span>](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [<span data-ttu-id="c0f6e-177">如何：使用複合索引鍵執行聯結</span><span class="sxs-lookup"><span data-stu-id="c0f6e-177">How to: Join by Using Composite Keys</span></span>](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [<span data-ttu-id="c0f6e-178">如何：安裝範例資料庫</span><span class="sxs-lookup"><span data-stu-id="c0f6e-178">How to: Install Sample Databases</span></span>](/visualstudio/data-tools/installing-database-systems-tools-and-samples)

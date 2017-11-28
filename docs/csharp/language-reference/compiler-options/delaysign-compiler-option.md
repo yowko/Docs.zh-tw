@@ -1,74 +1,54 @@
 ---
 title: "-delaysign (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /delaysign
-dev_langs:
-- CSharp
+f1_keywords: /delaysign
 helpviewer_keywords:
 - -delaysign compiler option [C#]
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 62f76747a29a90562706dff5fa742316c5b99b74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ce4c9fbb14081764985f3b02988dff9ee272c451
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# /delaysign (C# Compiler Options)
-這個選項會使得編譯器在輸出檔案中保留空間，以便稍後可以加入數位簽章。  
+# <a name="delaysign-c-compiler-options"></a><span data-ttu-id="d709a-102">/delaysign (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="d709a-102">/delaysign (C# Compiler Options)</span></span>
+<span data-ttu-id="d709a-103">這個選項可讓編譯器保留輸出檔案中的空間，以便稍後新增數位簽章。</span><span class="sxs-lookup"><span data-stu-id="d709a-103">This option causes the compiler to reserve space in the output file so that a digital signature can be added later.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="d709a-104">語法</span><span class="sxs-lookup"><span data-stu-id="d709a-104">Syntax</span></span>  
   
-```  
+```console  
 /delaysign[ + | - ]  
 ```  
   
-## 引數  
- `+` &#124; `-`  
- 如果要完整簽名的組件，請使用 **\/delaysign\-**。  如果您只要將公開金鑰放入組件內，請使用 **\/delaysign\+**。  預設值為 **\/delaysign\-**。  
+## <a name="arguments"></a><span data-ttu-id="d709a-105">引數</span><span class="sxs-lookup"><span data-stu-id="d709a-105">Arguments</span></span>  
+ <span data-ttu-id="d709a-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="d709a-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="d709a-107">如果需要完整簽署的組件，請使用 **/delaysign-**。</span><span class="sxs-lookup"><span data-stu-id="d709a-107">Use **/delaysign-** if you want a fully signed assembly.</span></span> <span data-ttu-id="d709a-108">如果只想在組件中放置公開金鑰，請使用 **/delaysign+**。</span><span class="sxs-lookup"><span data-stu-id="d709a-108">Use **/delaysign+** if you only want to place the public key in the assembly.</span></span> <span data-ttu-id="d709a-109">預設值為 **/delaysign-**。</span><span class="sxs-lookup"><span data-stu-id="d709a-109">The default is **/delaysign-**.</span></span>  
   
-## 備註  
- 除非 **\/delaysign** 選項是和 [\/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) 或 [\/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md) 一起使用，否則沒有任何效果。  
+## <a name="remarks"></a><span data-ttu-id="d709a-110">備註</span><span class="sxs-lookup"><span data-stu-id="d709a-110">Remarks</span></span>  
+ <span data-ttu-id="d709a-111">**/delaysign** 選項必須搭配 [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) 或 [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md) 才有作用。</span><span class="sxs-lookup"><span data-stu-id="d709a-111">The **/delaysign** option has no effect unless used with [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) or [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span></span>  
   
- 當您要求完整簽署的組件時，編譯器會雜湊包含資訊清單 \(組件中繼資料\) 的檔案，並且利用私密金鑰簽署該項雜湊。  所產生的數位簽章儲存在包含資訊清單的檔案中。  當延遲簽署組件時，編譯器不會去計算和儲存簽章，但會保留檔案中的空間，以便稍後再加入簽章。  
+ <span data-ttu-id="d709a-112">當您要求完整簽署的組件時，編譯器會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。</span><span class="sxs-lookup"><span data-stu-id="d709a-112">When you request a fully signed assembly, the compiler hashes the file that contains the manifest (assembly metadata) and signs that hash with the private key.</span></span> <span data-ttu-id="d709a-113">所產生的數位簽章會儲存在包含資訊清單的檔案中。</span><span class="sxs-lookup"><span data-stu-id="d709a-113">The resulting digital signature is stored in the file that contains the manifest.</span></span> <span data-ttu-id="d709a-114">當延遲簽署組件時，編譯器不會去計算和儲存簽章，但會保留檔案中的空間，以便稍後再加入簽章。</span><span class="sxs-lookup"><span data-stu-id="d709a-114">When an assembly is delay signed, the compiler does not compute and store the signature, but reserves space in the file so the signature can be added later.</span></span>  
   
- 例如，使用 **\/delaysign\+** 可讓測試器將組件置於全域快取區中。  測試過後，您就可以使用[組件連結器](../Topic/Al.exe%20\(Assembly%20Linker\).md)公用程式，將私密金鑰放在組件內，以完整地簽署組件。  
+ <span data-ttu-id="d709a-115">例如，使用 **/delaysign+** 時，可讓測試人員將組件放入全域快取中。</span><span class="sxs-lookup"><span data-stu-id="d709a-115">For example, using **/delaysign+** allows a tester to put the assembly in the global cache.</span></span> <span data-ttu-id="d709a-116">測試之後，您可以使用 [Assembly Linker](../../../framework/tools/al-exe-assembly-linker.md) 公用程式將私密金鑰放入組件中，以完整簽署組件。</span><span class="sxs-lookup"><span data-stu-id="d709a-116">After testing, you can fully sign the assembly by placing the private key in the assembly using the [Assembly Linker](../../../framework/tools/al-exe-assembly-linker.md) utility.</span></span>  
   
- 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md)以及[延遲簽署組件](../Topic/Delay%20Signing%20an%20Assembly.md)。  
+ <span data-ttu-id="d709a-117">如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)和[延遲簽署組件](../../../framework/app-domains/delay-sign-assembly.md)。</span><span class="sxs-lookup"><span data-stu-id="d709a-117">For more information, see [Creating and Using Strong-Named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) and [Delay Signing an Assembly](../../../framework/app-domains/delay-sign-assembly.md).</span></span>  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d709a-118">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="d709a-118">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  開啟專案的 \[**屬性**\] 頁面。  
+1.  <span data-ttu-id="d709a-119">開啟專案的 [屬性]  頁面。</span><span class="sxs-lookup"><span data-stu-id="d709a-119">Open the **Properties** page for the project.</span></span>  
   
-2.  修改 \[**僅延遲簽署**\] 屬性。  
+2.  <span data-ttu-id="d709a-120">修改 [僅延遲簽署] 屬性。</span><span class="sxs-lookup"><span data-stu-id="d709a-120">Modify the **Delay sign only** property.</span></span>  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。  
+ <span data-ttu-id="d709a-121">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。</span><span class="sxs-lookup"><span data-stu-id="d709a-121">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="d709a-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d709a-122">See Also</span></span>  
+ [<span data-ttu-id="d709a-123">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="d709a-123">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="d709a-124">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="d709a-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

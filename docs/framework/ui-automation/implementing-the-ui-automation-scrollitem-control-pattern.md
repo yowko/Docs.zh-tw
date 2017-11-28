@@ -1,60 +1,63 @@
 ---
-title: "實作 UI 自動化 ScrollItem 控制項模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制項模式，捲軸項目"
-  - "UI 自動化 Scroll Item 控制項模式"
-  - "Scroll Item 控制項模式"
+title: "實作 UI 自動化 ScrollItem 控制項模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, Scroll Item
+- UI Automation, Scroll Item control pattern
+- Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-caps.latest.revision: 16
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 92c3b4fad775dcd04299e18da126107d8fbb4471
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 實作 UI 自動化 ScrollItem 控制項模式
+# <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a><span data-ttu-id="4bde3-102">實作 UI 自動化 ScrollItem 控制項模式</span><span class="sxs-lookup"><span data-stu-id="4bde3-102">Implementing the UI Automation ScrollItem Control Pattern</span></span>
 > [!NOTE]
->  這份文件適用於.NET Framework 開發人員想要使用 managed[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中定義的類別<xref:System.Windows.Automation>命名空間。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API: UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="4bde3-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="4bde3-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="4bde3-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="4bde3-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題介紹的指導方針和慣例實作<xref:System.Windows.Automation.Provider.IScrollItemProvider>，包括屬性、 方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
+ <span data-ttu-id="4bde3-105">本主題將介紹實作的方針和慣例<xref:System.Windows.Automation.Provider.IScrollItemProvider>，包括屬性、 方法和事件的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="4bde3-105">This topic introduces guidelines and conventions for implementing the <xref:System.Windows.Automation.Provider.IScrollItemProvider>, including information about properties, methods, and events.</span></span> <span data-ttu-id="4bde3-106">其他參考的連結列於主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="4bde3-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- <xref:System.Windows.Automation.ScrollItemPattern>控制項模式用來支援個別的子控制項的容器實作<xref:System.Windows.Automation.Provider.IScrollProvider>。 此控制項模式會擔任子控制項及其容器之間的通訊通道，以確保容器可變更其顯示子控制項的檢視區內目前可見內容 (或區域)。 如需實作此控制項模式的控制項的範例，請參閱[控制項模式對應 UI 自動化用戶端的](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
+ <span data-ttu-id="4bde3-107"><xref:System.Windows.Automation.ScrollItemPattern>控制項模式用以支援實作容器的個別子控制項<xref:System.Windows.Automation.Provider.IScrollProvider>。</span><span class="sxs-lookup"><span data-stu-id="4bde3-107">The <xref:System.Windows.Automation.ScrollItemPattern> control pattern is used to support individual child controls of containers that implement <xref:System.Windows.Automation.Provider.IScrollProvider>.</span></span> <span data-ttu-id="4bde3-108">此控制項模式會擔任子控制項及其容器之間的通訊通道，以確保容器可變更其顯示子控制項的檢視區內目前可見內容 (或區域)。</span><span class="sxs-lookup"><span data-stu-id="4bde3-108">This control pattern acts as a communication channel between a child control and its container to ensure that the container can change the currently visible content (or region) within its viewport to display the child control.</span></span> <span data-ttu-id="4bde3-109">如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="4bde3-109">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
- 實作捲軸項目控制項模式時，請注意下列方針和慣例：  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="4bde3-110">實作方針和慣例</span><span class="sxs-lookup"><span data-stu-id="4bde3-110">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="4bde3-111">實作捲軸項目控制項模式時，請注意下列方針和慣例：</span><span class="sxs-lookup"><span data-stu-id="4bde3-111">When implementing the Scroll Item control pattern, note the following guidelines and conventions:</span></span>  
   
--   視窗或畫布控制項內含的項目不必實作 IScrollItemProvider 介面。 另外，不過，它們必須公開 （expose) 的有效位置<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>。 這可讓 UI 自動化用戶端應用程式使用<xref:System.Windows.Automation.ScrollPattern>控制模式以顯示子系項目容器上的方法。  
+-   <span data-ttu-id="4bde3-112">視窗或畫布控制項內含的項目不必實作 IScrollItemProvider 介面。</span><span class="sxs-lookup"><span data-stu-id="4bde3-112">Items contained within a Window or Canvas control are not required to implement the IScrollItemProvider interface.</span></span> <span data-ttu-id="4bde3-113">或者，不過，它們必須公開 （expose) 的有效位置<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>。</span><span class="sxs-lookup"><span data-stu-id="4bde3-113">As an alternative, however, they must expose a valid location for the <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.</span></span> <span data-ttu-id="4bde3-114">這可讓使用者介面自動化用戶端應用程式使用<xref:System.Windows.Automation.ScrollPattern>控制項模式方法用於顯示子項目的容器。</span><span class="sxs-lookup"><span data-stu-id="4bde3-114">This will allow a UI Automation client application to use the <xref:System.Windows.Automation.ScrollPattern> control pattern methods on the container to display the child item.</span></span>  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
-## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider 的必要成員  
- 實作 IScrollProvider 介面需要下列方法。  
+## <a name="required-members-for-iscrollitemprovider"></a><span data-ttu-id="4bde3-115">IScrollItemProvider 的必要成員</span><span class="sxs-lookup"><span data-stu-id="4bde3-115">Required Members for IScrollItemProvider</span></span>  
+ <span data-ttu-id="4bde3-116">實作 IScrollProvider 介面需要下列方法。</span><span class="sxs-lookup"><span data-stu-id="4bde3-116">The following method is required for implementing the IScrollProvider interface.</span></span>  
   
-|必要成員|成員類型|備註|  
+|<span data-ttu-id="4bde3-117">必要成員</span><span class="sxs-lookup"><span data-stu-id="4bde3-117">Required members</span></span>|<span data-ttu-id="4bde3-118">成員類型</span><span class="sxs-lookup"><span data-stu-id="4bde3-118">Member type</span></span>|<span data-ttu-id="4bde3-119">注意</span><span class="sxs-lookup"><span data-stu-id="4bde3-119">Notes</span></span>|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|<span data-ttu-id="4bde3-120">方法</span><span class="sxs-lookup"><span data-stu-id="4bde3-120">-   Method</span></span>|<span data-ttu-id="4bde3-121">無</span><span class="sxs-lookup"><span data-stu-id="4bde3-121">None</span></span>|  
   
- 此控制項模式沒有任何相關聯的屬性或事件。  
+ <span data-ttu-id="4bde3-122">此控制項模式沒有任何相關聯的屬性或事件。</span><span class="sxs-lookup"><span data-stu-id="4bde3-122">This control pattern has no associated properties or events.</span></span>  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>例外狀況  
- 提供者必須擲回下列例外狀況。  
+## <a name="exceptions"></a><span data-ttu-id="4bde3-123">例外狀況</span><span class="sxs-lookup"><span data-stu-id="4bde3-123">Exceptions</span></span>  
+ <span data-ttu-id="4bde3-124">提供者必須擲回下列例外狀況。</span><span class="sxs-lookup"><span data-stu-id="4bde3-124">Providers must throw the following exceptions.</span></span>  
   
-|例外狀況類型|條件|  
+|<span data-ttu-id="4bde3-125">例外狀況類型</span><span class="sxs-lookup"><span data-stu-id="4bde3-125">Exception Type</span></span>|<span data-ttu-id="4bde3-126">條件</span><span class="sxs-lookup"><span data-stu-id="4bde3-126">Condition</span></span>|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|如果無法將項目捲動到檢視中：<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
+|<xref:System.InvalidOperationException>|<span data-ttu-id="4bde3-127">如果無法將項目捲動到檢視中：</span><span class="sxs-lookup"><span data-stu-id="4bde3-127">If an item cannot be scrolled into view:</span></span><br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
   
-## <a name="see-also"></a>另請參閱  
- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="4bde3-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4bde3-128">See Also</span></span>  
+ [<span data-ttu-id="4bde3-129">UI 自動化控制項模式概觀</span><span class="sxs-lookup"><span data-stu-id="4bde3-129">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="4bde3-130">UI 自動化提供者不支援控制項模式</span><span class="sxs-lookup"><span data-stu-id="4bde3-130">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="4bde3-131">用戶端的 UI 自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="4bde3-131">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="4bde3-132">UI 自動化樹狀目錄概觀</span><span class="sxs-lookup"><span data-stu-id="4bde3-132">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="4bde3-133">使用 UI 自動化中的快取</span><span class="sxs-lookup"><span data-stu-id="4bde3-133">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

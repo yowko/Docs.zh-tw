@@ -1,12 +1,9 @@
 ---
 title: "繼承 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -15,70 +12,54 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01092b94c83f50b16604428780b2786496017732
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="inheritance-c-programming-guide"></a>繼承 (C# 程式設計手冊)
+# <a name="inheritance-c-programming-guide"></a><span data-ttu-id="b2179-102">繼承 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="b2179-102">Inheritance (C# Programming Guide)</span></span>
 
-繼承是物件導向程式設計的三個主要特性之一，另外兩個是封裝和多型。 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」**，而繼承這種成員的類別即稱為「衍生類別」**。 衍生類別只能有一個基底類別。 不過，繼承是可轉移的。 如果 ClassC 衍生自 ClassB，而 ClassB 衍生自 ClassA，則 ClassC 會繼承在 ClassB 和 ClassA 中宣告的所有成員。  
+<span data-ttu-id="b2179-103">繼承是物件導向程式設計的三個主要特性之一，另外兩個是封裝和多型。</span><span class="sxs-lookup"><span data-stu-id="b2179-103">Inheritance, together with encapsulation and polymorphism, is one of the three primary characteristics of object-oriented programming.</span></span> <span data-ttu-id="b2179-104">繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。</span><span class="sxs-lookup"><span data-stu-id="b2179-104">Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.</span></span> <span data-ttu-id="b2179-105">成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。</span><span class="sxs-lookup"><span data-stu-id="b2179-105">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="b2179-106">衍生類別只能有一個基底類別。</span><span class="sxs-lookup"><span data-stu-id="b2179-106">A derived class can have only one direct base class.</span></span> <span data-ttu-id="b2179-107">不過，繼承是可轉移的。</span><span class="sxs-lookup"><span data-stu-id="b2179-107">However, inheritance is transitive.</span></span> <span data-ttu-id="b2179-108">如果 ClassC 衍生自 ClassB，而 ClassB 衍生自 ClassA，則 ClassC 會繼承在 ClassB 和 ClassA 中宣告的所有成員。</span><span class="sxs-lookup"><span data-stu-id="b2179-108">If ClassC is derived from ClassB, and ClassB is derived from ClassA, ClassC inherits the members declared in ClassB and ClassA.</span></span>  
   
 > [!NOTE]
->  結構不支援繼承，但可以實作介面。 如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
+>  <span data-ttu-id="b2179-109">結構不支援繼承，但可以實作介面。</span><span class="sxs-lookup"><span data-stu-id="b2179-109">Structs do not support inheritance, but they can implement interfaces.</span></span> <span data-ttu-id="b2179-110">如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b2179-110">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
- 就概念而言，衍生類別是基底類別的特製化項目。 例如，如果您有一個基底類別 `Animal`，您可能會有一個名為 `Mammal` 的衍生類別，以及另一個名為 `Reptile` 的衍生類別。 `Mammal` 是 `Animal`，`Reptile` 也是 `Animal`，但這兩個衍生類別各代表不同的基底類別特製化項目。  
+ <span data-ttu-id="b2179-111">就概念而言，衍生類別是基底類別的特製化項目。</span><span class="sxs-lookup"><span data-stu-id="b2179-111">Conceptually, a derived class is a specialization of the base class.</span></span> <span data-ttu-id="b2179-112">例如，如果您有一個基底類別 `Animal`，您可能會有一個名為 `Mammal` 的衍生類別，以及另一個名為 `Reptile` 的衍生類別。</span><span class="sxs-lookup"><span data-stu-id="b2179-112">For example, if you have a base class `Animal`, you might have one derived class that is named `Mammal` and another derived class that is named `Reptile`.</span></span> <span data-ttu-id="b2179-113">`Mammal` 是 `Animal`，`Reptile` 也是 `Animal`，但這兩個衍生類別各代表不同的基底類別特製化項目。</span><span class="sxs-lookup"><span data-stu-id="b2179-113">A `Mammal` is an `Animal`, and a `Reptile` is an `Animal`, but each derived class represents different specializations of the base class.</span></span>  
   
- 當您定義一個類別以從另一個類別衍生時，衍生類別會隱含取得基底類別的所有成員，但建構函式和解構函式則除外。 因此，衍生類別可以重複使用基底類別中的程式碼，而不需要重新實作。 您可以在衍生類別中新增更多成員。 透過這種方式，衍生類別等於是擴充了基底類別的功能。  
+ <span data-ttu-id="b2179-114">當您將某個類別定義為要從另一個類別衍生時，衍生類別會隱含取得基底類別的所有成員，但建構函式和完成項則除外。</span><span class="sxs-lookup"><span data-stu-id="b2179-114">When you define a class to derive from another class, the derived class implicitly gains all the members of the base class, except for its constructors and finalizers.</span></span> <span data-ttu-id="b2179-115">因此，衍生類別可以重複使用基底類別中的程式碼，而不需要重新實作。</span><span class="sxs-lookup"><span data-stu-id="b2179-115">The derived class can thereby reuse the code in the base class without having to re-implement it.</span></span> <span data-ttu-id="b2179-116">您可以在衍生類別中新增更多成員。</span><span class="sxs-lookup"><span data-stu-id="b2179-116">In the derived class, you can add more members.</span></span> <span data-ttu-id="b2179-117">透過這種方式，衍生類別等於是擴充了基底類別的功能。</span><span class="sxs-lookup"><span data-stu-id="b2179-117">In this manner, the derived class extends the functionality of the base class.</span></span>  
   
- 下圖顯示 `WorkItem` 類別，代表某些商務程序中的工作項目。 如同所有類別，它會衍生自 <xref:System.Object?displayProperty=fullName> 並繼承其所有方法。 `WorkItem` 會新增自己的五個成員。 由於不會繼承建構函式，因此這些成員會包含一個建構函式。 `ChangeRequest` 類別繼承自 `WorkItem`，並代表特定類型的工作項目。 `ChangeRequest` 會在繼承自 `WorkItem` 和 <xref:System.Object> 的成員中，另外新增兩個成員。 它必須新增自己的建構函式，也會新增 `originalItemID`。 `originalItemID` 屬性可讓 `ChangeRequest` 執行個體與套用變更要求的原始 `WorkItem` 產生關聯。  
+ <span data-ttu-id="b2179-118">下圖顯示 `WorkItem` 類別，代表某些商務程序中的工作項目。</span><span class="sxs-lookup"><span data-stu-id="b2179-118">The following illustration shows a class `WorkItem` that represents an item of work in some business process.</span></span> <span data-ttu-id="b2179-119">它和所有類別一樣，會衍生自 <xref:System.Object?displayProperty=nameWithType> 並繼承其所有方法。</span><span class="sxs-lookup"><span data-stu-id="b2179-119">Like all classes, it derives from <xref:System.Object?displayProperty=nameWithType> and inherits all its methods.</span></span> <span data-ttu-id="b2179-120">`WorkItem` 會新增自己的五個成員。</span><span class="sxs-lookup"><span data-stu-id="b2179-120">`WorkItem` adds five members of its own.</span></span> <span data-ttu-id="b2179-121">由於不會繼承建構函式，因此這些成員會包含一個建構函式。</span><span class="sxs-lookup"><span data-stu-id="b2179-121">These include a constructor, because constructors are not inherited.</span></span> <span data-ttu-id="b2179-122">`ChangeRequest` 類別繼承自 `WorkItem`，並代表特定類型的工作項目。</span><span class="sxs-lookup"><span data-stu-id="b2179-122">Class `ChangeRequest` inherits from `WorkItem` and represents a particular kind of work item.</span></span> <span data-ttu-id="b2179-123">`ChangeRequest` 會在繼承自 `WorkItem` 和 <xref:System.Object> 的成員中，另外新增兩個成員。</span><span class="sxs-lookup"><span data-stu-id="b2179-123">`ChangeRequest` adds two more members to the members that it inherits from `WorkItem` and from <xref:System.Object>.</span></span> <span data-ttu-id="b2179-124">它必須新增自己的建構函式，也會新增 `originalItemID`。</span><span class="sxs-lookup"><span data-stu-id="b2179-124">It must add its own constructor, and it also adds `originalItemID`.</span></span> <span data-ttu-id="b2179-125">`originalItemID` 屬性可讓 `ChangeRequest` 執行個體與套用變更要求的原始 `WorkItem` 產生關聯。</span><span class="sxs-lookup"><span data-stu-id="b2179-125">Property `originalItemID` enables the `ChangeRequest` instance to be associated with the original `WorkItem` to which the change request applies.</span></span>  
   
- ![類別繼承](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-類別繼承  
+ <span data-ttu-id="b2179-126">![類別繼承](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")</span><span class="sxs-lookup"><span data-stu-id="b2179-126">![Class Inheritance](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")</span></span>  
+<span data-ttu-id="b2179-127">類別繼承</span><span class="sxs-lookup"><span data-stu-id="b2179-127">Class inheritance</span></span>  
   
- 下列範例示範如何以 C# 表示上圖所示範的類別關聯性。 此範例也會示範 `WorkItem` 如何覆寫虛擬方法 <xref:System.Object.ToString%2A?displayProperty=fullName>，以及 `ChangeRequest` 類別如何繼承方法的 `WorkItem` 實作。  
+ <span data-ttu-id="b2179-128">下列範例示範如何以 C# 表示上圖所示範的類別關聯性。</span><span class="sxs-lookup"><span data-stu-id="b2179-128">The following example shows how the class relationships demonstrated in the previous illustration are expressed in C#.</span></span> <span data-ttu-id="b2179-129">此範例也會示範 `WorkItem` 如何覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 虛擬方法，以及 `ChangeRequest` 類別如何繼承方法的 `WorkItem` 實作。</span><span class="sxs-lookup"><span data-stu-id="b2179-129">The example also shows how `WorkItem` overrides the virtual method <xref:System.Object.ToString%2A?displayProperty=nameWithType>, and how the `ChangeRequest` class inherits the `WorkItem` implementation of the method.</span></span>  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
-## <a name="abstract-and-virtual-methods"></a>抽象和虛擬方法  
- 當基底類別將方法宣告為[虛擬](../../../csharp/language-reference/keywords/virtual.md)時，衍生類別可以使用自己的實作來[覆寫](../../../csharp/language-reference/keywords/override.md)該方法。 如果基底類別將成員宣告為[抽象](../../../csharp/language-reference/keywords/abstract.md)，則在所有直接繼承自該類別的非抽象類別中，都必須覆寫該方法。 如果衍生類別本身就是抽象的，則會繼承抽象成員而不需要進行實作。 抽象和虛擬成員是多型的基礎，而多型是物件導向程式設計的第二個主要特性。 如需詳細資訊，請參閱[多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
+## <a name="abstract-and-virtual-methods"></a><span data-ttu-id="b2179-130">抽象和虛擬方法</span><span class="sxs-lookup"><span data-stu-id="b2179-130">Abstract and Virtual Methods</span></span>  
+ <span data-ttu-id="b2179-131">當基底類別將方法宣告為[虛擬](../../../csharp/language-reference/keywords/virtual.md)時，衍生類別可以使用自己的實作來[覆寫](../../../csharp/language-reference/keywords/override.md)該方法。</span><span class="sxs-lookup"><span data-stu-id="b2179-131">When a base class declares a method as [virtual](../../../csharp/language-reference/keywords/virtual.md), a derived class can [override](../../../csharp/language-reference/keywords/override.md) the method with its own implementation.</span></span> <span data-ttu-id="b2179-132">如果基底類別將成員宣告為[抽象](../../../csharp/language-reference/keywords/abstract.md)，則在所有直接繼承自該類別的非抽象類別中，都必須覆寫該方法。</span><span class="sxs-lookup"><span data-stu-id="b2179-132">If a base class declares a member as [abstract](../../../csharp/language-reference/keywords/abstract.md), that method must be overridden in any non-abstract class that directly inherits from that class.</span></span> <span data-ttu-id="b2179-133">如果衍生類別本身就是抽象的，則會繼承抽象成員而不需要進行實作。</span><span class="sxs-lookup"><span data-stu-id="b2179-133">If a derived class is itself abstract, it inherits abstract members without implementing them.</span></span> <span data-ttu-id="b2179-134">抽象和虛擬成員是多型的基礎，而多型是物件導向程式設計的第二個主要特性。</span><span class="sxs-lookup"><span data-stu-id="b2179-134">Abstract and virtual members are the basis for polymorphism, which is the second primary characteristic of object-oriented programming.</span></span> <span data-ttu-id="b2179-135">如需詳細資訊，請參閱[多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。</span><span class="sxs-lookup"><span data-stu-id="b2179-135">For more information, see [Polymorphism](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).</span></span>  
   
-## <a name="abstract-base-classes"></a>抽象基底類別  
- 如果您想要使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字來防止直接具現化，您可以將類別宣告為[抽象](../../../csharp/language-reference/keywords/abstract.md)。 如果這麼做，只有在新類別衍生自此類別時，才能使用此類別。 抽象類別可以包含一或多個本身宣告為抽象的方法簽章。 這些簽章可指定參數和傳回值，但沒有實作 (方法主體)。 抽象類別不需要包含抽象成員；但如果某個類別包含抽象成員，則該類別本身必須宣告為抽象。 本身不是抽象的衍生類別，必須為來自抽象基底類別的所有抽象方法提供實作。 如需詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+## <a name="abstract-base-classes"></a><span data-ttu-id="b2179-136">抽象基底類別</span><span class="sxs-lookup"><span data-stu-id="b2179-136">Abstract Base Classes</span></span>  
+ <span data-ttu-id="b2179-137">如果您想要使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字來防止直接具現化，您可以將類別宣告為[抽象](../../../csharp/language-reference/keywords/abstract.md)。</span><span class="sxs-lookup"><span data-stu-id="b2179-137">You can declare a class as [abstract](../../../csharp/language-reference/keywords/abstract.md) if you want to prevent direct instantiation by using the [new](../../../csharp/language-reference/keywords/new.md) keyword.</span></span> <span data-ttu-id="b2179-138">如果這麼做，只有在新類別衍生自此類別時，才能使用此類別。</span><span class="sxs-lookup"><span data-stu-id="b2179-138">If you do this, the class can be used only if a new class is derived from it.</span></span> <span data-ttu-id="b2179-139">抽象類別可以包含一或多個本身宣告為抽象的方法簽章。</span><span class="sxs-lookup"><span data-stu-id="b2179-139">An abstract class can contain one or more method signatures that themselves are declared as abstract.</span></span> <span data-ttu-id="b2179-140">這些簽章可指定參數和傳回值，但沒有實作 (方法主體)。</span><span class="sxs-lookup"><span data-stu-id="b2179-140">These signatures specify the parameters and return value but have no implementation (method body).</span></span> <span data-ttu-id="b2179-141">抽象類別不需要包含抽象成員；但如果某個類別包含抽象成員，則該類別本身必須宣告為抽象。</span><span class="sxs-lookup"><span data-stu-id="b2179-141">An abstract class does not have to contain abstract members; however, if a class does contain an abstract member, the class itself must be declared as abstract.</span></span> <span data-ttu-id="b2179-142">本身不是抽象的衍生類別，必須為來自抽象基底類別的所有抽象方法提供實作。</span><span class="sxs-lookup"><span data-stu-id="b2179-142">Derived classes that are not abstract themselves must provide the implementation for any abstract methods from an abstract base class.</span></span> <span data-ttu-id="b2179-143">如需詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="b2179-143">For more information, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
-## <a name="interfaces"></a>介面  
- 「介面」**是一種參考型別，某些方面與只包含抽象成員的抽象基底類別類似。 當類別實作介面時，必須為介面的所有成員提供實作。 一個類別可以實作多個介面，但只能衍生自單一直接基底類別。  
+## <a name="interfaces"></a><span data-ttu-id="b2179-144">介面</span><span class="sxs-lookup"><span data-stu-id="b2179-144">Interfaces</span></span>  
+ <span data-ttu-id="b2179-145">「介面」是一種參考型別，某些方面與只包含抽象成員的抽象基底類別類似。</span><span class="sxs-lookup"><span data-stu-id="b2179-145">An *interface* is a reference type that is somewhat similar to an abstract base class that consists of only abstract members.</span></span> <span data-ttu-id="b2179-146">當類別實作介面時，必須為介面的所有成員提供實作。</span><span class="sxs-lookup"><span data-stu-id="b2179-146">When a class implements an interface, it must provide an implementation for all the members of the interface.</span></span> <span data-ttu-id="b2179-147">一個類別可以實作多個介面，但只能衍生自單一直接基底類別。</span><span class="sxs-lookup"><span data-stu-id="b2179-147">A class can implement multiple interfaces even though it can derive from only a single direct base class.</span></span>  
   
- 介面可用來為不一定有「是」關聯性的類別，定義其特定功能。 例如，所有必須啟用用戶端程式碼的類別或結構，都可以實作 <xref:System.IEquatable%601?displayProperty=fullName> 介面來判斷屬於該類型的兩個物件是否對等 (不過其類型會定義等價)。 <xref:System.IEquatable%601> 不表示基底類別和衍生類別之間存在「是」這類的關聯性 (例如 `Mammal` 是 `Animal`)。 如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
+ <span data-ttu-id="b2179-148">介面可用來為不一定有「是」關聯性的類別，定義其特定功能。</span><span class="sxs-lookup"><span data-stu-id="b2179-148">Interfaces are used to define specific capabilities for classes that do not necessarily have an "is a" relationship.</span></span> <span data-ttu-id="b2179-149">例如，所有必須啟用用戶端程式碼的類別或結構，都可以實作 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面來判斷屬於該類型的兩個物件是否對等 (不過其類型會定義等價)。</span><span class="sxs-lookup"><span data-stu-id="b2179-149">For example, the <xref:System.IEquatable%601?displayProperty=nameWithType> interface can be implemented by any class or struct that has to enable client code to determine whether two objects of the type are equivalent (however the type defines equivalence).</span></span> <span data-ttu-id="b2179-150"><xref:System.IEquatable%601> 不表示基底類別和衍生類別之間存在「是」這類的關聯性 (例如 `Mammal` 是 `Animal`)。</span><span class="sxs-lookup"><span data-stu-id="b2179-150"><xref:System.IEquatable%601> does not imply the same kind of "is a" relationship that exists between a base class and a derived class (for example, a `Mammal` is an `Animal`).</span></span> <span data-ttu-id="b2179-151">如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b2179-151">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
-## <a name="preventing-further-derivation"></a>防止進一步衍生  
- 將類別本身或其成員宣告為[密封](../../../csharp/language-reference/keywords/sealed.md)，即可防止其他類別繼承該類別，或繼承其任何成員。 如需詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+## <a name="preventing-further-derivation"></a><span data-ttu-id="b2179-152">防止進一步衍生</span><span class="sxs-lookup"><span data-stu-id="b2179-152">Preventing Further Derivation</span></span>  
+ <span data-ttu-id="b2179-153">將類別本身或其成員宣告為[密封](../../../csharp/language-reference/keywords/sealed.md)，即可防止其他類別繼承該類別，或繼承其任何成員。</span><span class="sxs-lookup"><span data-stu-id="b2179-153">A class can prevent other classes from inheriting from it, or from any of its members, by declaring itself or the member as [sealed](../../../csharp/language-reference/keywords/sealed.md).</span></span> <span data-ttu-id="b2179-154">如需詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="b2179-154">For more information, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
-## <a name="derived-class-hiding-of-base-class-members"></a>衍生類別隱藏基底類別成員  
- 衍生類別可藉由以相同的名稱和簽章宣告基底類別成員，來隱藏這些成員。 您可以使用 [new](../../../csharp/language-reference/keywords/new.md) 修飾詞，明確指示成員不是用於基底成員的覆寫。 您不一定要使用 [new](../../../csharp/language-reference/keywords/new.md)，但如果未使用 [new](../../../csharp/language-reference/keywords/new.md)，則會產生編譯器警告。 如需詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
+## <a name="derived-class-hiding-of-base-class-members"></a><span data-ttu-id="b2179-155">衍生類別隱藏基底類別成員</span><span class="sxs-lookup"><span data-stu-id="b2179-155">Derived Class Hiding of Base Class Members</span></span>  
+ <span data-ttu-id="b2179-156">衍生類別可藉由以相同的名稱和簽章宣告基底類別成員，來隱藏這些成員。</span><span class="sxs-lookup"><span data-stu-id="b2179-156">A derived class can hide base class members by declaring members with the same name and signature.</span></span> <span data-ttu-id="b2179-157">您可以使用 [new](../../../csharp/language-reference/keywords/new.md) 修飾詞，明確指示成員不是用於基底成員的覆寫。</span><span class="sxs-lookup"><span data-stu-id="b2179-157">The [new](../../../csharp/language-reference/keywords/new.md) modifier can be used to explicitly indicate that the member is not intended to be an override of the base member.</span></span> <span data-ttu-id="b2179-158">您不一定要使用 [new](../../../csharp/language-reference/keywords/new.md)，但如果未使用 [new](../../../csharp/language-reference/keywords/new.md)，則會產生編譯器警告。</span><span class="sxs-lookup"><span data-stu-id="b2179-158">The use of [new](../../../csharp/language-reference/keywords/new.md) is not required, but a compiler warning will be generated if [new](../../../csharp/language-reference/keywords/new.md) is not used.</span></span> <span data-ttu-id="b2179-159">如需詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。</span><span class="sxs-lookup"><span data-stu-id="b2179-159">For more information, see [Versioning with the Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)
-
+## <a name="see-also"></a><span data-ttu-id="b2179-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b2179-160">See Also</span></span>  
+ [<span data-ttu-id="b2179-161">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="b2179-161">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b2179-162">類別和結構</span><span class="sxs-lookup"><span data-stu-id="b2179-162">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="b2179-163">class</span><span class="sxs-lookup"><span data-stu-id="b2179-163">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
+ [<span data-ttu-id="b2179-164">struct</span><span class="sxs-lookup"><span data-stu-id="b2179-164">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)

@@ -1,31 +1,27 @@
 ---
 title: "如何：篩選選擇性項目 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: dc1b5384add88db209a71ec56dc1c5edf4caecb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d0d849bb8c6174408810f2d2192faea6db6afd5b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>如何：篩選選擇性項目 (C#)
-有時候即使您不確定項目是否存在於 XML 文件中，您都會想要針對該項目進行篩選。 搜尋應該會執行，因此，如果特定的項目沒有子項目，您就不會篩選該項目來觸發 Null 參考例外狀況。 在下列範例中，`Child5` 項目沒有 `Type` 子項目，但查詢仍會正確執行。  
+# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="0480d-102">如何：篩選選擇性項目 (C#)</span><span class="sxs-lookup"><span data-stu-id="0480d-102">How to: Filter on an Optional Element (C#)</span></span>
+<span data-ttu-id="0480d-103">有時候即使您不確定項目是否存在於 XML 文件中，您都會想要針對該項目進行篩選。</span><span class="sxs-lookup"><span data-stu-id="0480d-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="0480d-104">搜尋應該會執行，因此，如果特定的項目沒有子項目，您就不會篩選該項目來觸發 Null 參考例外狀況。</span><span class="sxs-lookup"><span data-stu-id="0480d-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="0480d-105">在下列範例中，`Child5` 項目沒有 `Type` 子項目，但查詢仍會正確執行。</span><span class="sxs-lookup"><span data-stu-id="0480d-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
   
-## <a name="example"></a>範例  
- 此範例使用 <xref:System.Xml.Linq.Extensions.Elements%2A> 擴充方法。  
+## <a name="example"></a><span data-ttu-id="0480d-106">範例</span><span class="sxs-lookup"><span data-stu-id="0480d-106">Example</span></span>  
+ <span data-ttu-id="0480d-107">此範例使用 <xref:System.Xml.Linq.Extensions.Elements%2A> 擴充方法。</span><span class="sxs-lookup"><span data-stu-id="0480d-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -57,7 +53,7 @@ foreach(string str in cList)
     Console.WriteLine(str);  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="0480d-108">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0480d-108">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -65,8 +61,8 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="0480d-109">範例</span><span class="sxs-lookup"><span data-stu-id="0480d-109">Example</span></span>  
+ <span data-ttu-id="0480d-110">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="0480d-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="0480d-111">如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="0480d-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -99,7 +95,7 @@ foreach (string str in cList)
     Console.WriteLine(str);  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="0480d-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0480d-112">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -107,11 +103,10 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>   
- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
-
+## <a name="see-also"></a><span data-ttu-id="0480d-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0480d-113">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="0480d-114">基本查詢 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="0480d-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [<span data-ttu-id="0480d-115">標準查詢運算子概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="0480d-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="0480d-116">投影作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="0480d-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

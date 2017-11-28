@@ -1,56 +1,37 @@
 ---
 title: "如何：了解傳遞結構和傳遞類別參考給方法之間的差異 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b989c3cefe72c6c17d10dd91005dcecbfc84e389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a4508c8765ac678fd371180cb0c3ece3e1d9a44
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>如何：了解傳遞結構和傳遞類別參考給方法之間的差異 (C# 程式設計手冊)
-下例示範將 [struct](../../../csharp/language-reference/keywords/struct.md) 傳遞給方法，與將 [class](../../../csharp/language-reference/keywords/class.md) 執行個體傳遞給方法有何不同。 在此範例中，兩個引數 (struct 和 class 執行個體) 都是以傳值方式傳遞，而且兩種方法都會變更引數其中一個欄位的值。 不過，兩個方法的結果不相同，因為傳遞 struct 時所傳送內容，和傳遞 class 執行個體時所傳送的內容不同。  
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a><span data-ttu-id="bf4d1-102">如何：了解傳遞結構和傳遞類別參考給方法之間的差異 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="bf4d1-102">How to: Know the Difference Between Passing a Struct and Passing a Class Reference to a Method (C# Programming Guide)</span></span>
+<span data-ttu-id="bf4d1-103">下例示範將 [struct](../../../csharp/language-reference/keywords/struct.md) 傳遞給方法，與將 [class](../../../csharp/language-reference/keywords/class.md) 執行個體傳遞給方法有何不同。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-103">The following example demonstrates how passing a [struct](../../../csharp/language-reference/keywords/struct.md) to a method differs from passing a [class](../../../csharp/language-reference/keywords/class.md) instance to a method.</span></span> <span data-ttu-id="bf4d1-104">在此範例中，兩個引數 (struct 和 class 執行個體) 都是以傳值方式傳遞，而且兩種方法都會變更引數其中一個欄位的值。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-104">In the example, both of the arguments (struct and class instance) are passed by value, and both methods change the value of one field of the argument.</span></span> <span data-ttu-id="bf4d1-105">不過，兩個方法的結果不相同，因為傳遞 struct 時所傳送內容，和傳遞 class 執行個體時所傳送的內容不同。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-105">However, the results of the two methods are not the same because what is passed when you pass a struct differs from what is passed when you pass an instance of a class.</span></span>  
   
- 因為 struct 是[實值型別](../../../csharp/language-reference/keywords/value-types.md)，所以當您[以傳值方式傳遞 struct](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) 給方法時，方法會收到 struct 引數的複本並在其上運作。 方法無法存取呼叫方法中的原始 struct，因此無法以任何方式變更它。 方法只能變更複本。  
+ <span data-ttu-id="bf4d1-106">因為 struct 是[實值型別](../../../csharp/language-reference/keywords/value-types.md)，所以當您[以傳值方式傳遞 struct](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) 給方法時，方法會收到 struct 引數的複本並在其上運作。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-106">Because a struct is a [value type](../../../csharp/language-reference/keywords/value-types.md), when you [pass a struct by value](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) to a method, the method receives and operates on a copy of the struct argument.</span></span> <span data-ttu-id="bf4d1-107">方法無法存取呼叫方法中的原始 struct，因此無法以任何方式變更它。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-107">The method has no access to the original struct in the calling method and therefore can't change it in any way.</span></span> <span data-ttu-id="bf4d1-108">方法只能變更複本。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-108">The method can change only the copy.</span></span>  
   
- class 執行個體是[參考型別](../../../csharp/language-reference/keywords/reference-types.md)，不是實值型別。 當[以傳值方式傳遞參考型別](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)給方法時，方法會收到 class 執行個體的參考複本。 也就是說，方法會收到執行個體位址的複本，而不是執行個體本身的複本。 呼叫方法中的 class 執行個體有位址，被呼叫方法中的參數有位址複本，而且這兩個位址都指向相同的物件。 因為參數只包含位址的複本，所以被呼叫的方法無法變更呼叫方法中的 class 執行個體的位址。 不過，被呼叫方法可以使用位址來存取既是原始位址又是複本參考的類別成員。 如果被呼叫方法變更類別成員，則呼叫方法中的原始 class 執行個體也會變更。  
+ <span data-ttu-id="bf4d1-109">class 執行個體是[參考型別](../../../csharp/language-reference/keywords/reference-types.md)，不是實值型別。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-109">A class instance is a [reference type](../../../csharp/language-reference/keywords/reference-types.md), not a value type.</span></span> <span data-ttu-id="bf4d1-110">當[以傳值方式傳遞參考型別](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)給方法時，方法會收到 class 執行個體的參考複本。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-110">When [a reference type is passed by value](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) to a method, the method receives a copy of the reference to the class instance.</span></span> <span data-ttu-id="bf4d1-111">也就是說，方法會收到執行個體位址的複本，而不是執行個體本身的複本。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-111">That is, the method receives a copy of the address of the instance, not a copy of the instance itself.</span></span> <span data-ttu-id="bf4d1-112">呼叫方法中的 class 執行個體有位址，被呼叫方法中的參數有位址複本，而且這兩個位址都指向相同的物件。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-112">The class instance in the calling method has an address, the parameter in the called method has a copy of the address, and both addresses refer to the same object.</span></span> <span data-ttu-id="bf4d1-113">因為參數只包含位址的複本，所以被呼叫的方法無法變更呼叫方法中的 class 執行個體的位址。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-113">Because the parameter contains only a copy of the address, the called method cannot change the address of the class instance in the calling method.</span></span> <span data-ttu-id="bf4d1-114">不過，被呼叫方法可以使用位址來存取既是原始位址又是複本參考的類別成員。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-114">However, the called method can use the address to access the class members that both the original address and the copy reference.</span></span> <span data-ttu-id="bf4d1-115">如果被呼叫方法變更類別成員，則呼叫方法中的原始 class 執行個體也會變更。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-115">If the called method changes a class member, the original class instance in the calling method also changes.</span></span>  
   
- 下例的輸出會說明其間的差異。 因為方法使用參數中的位址尋找指定的 class 執行個體欄位，所以對方法 `ClassTaker` 的呼叫會變更 class 執行個體的 `willIChange` 欄位值。 因為引數值是 struct 本身的複本，不是其位址的複本，所以對方法 `StructTaker` 的呼叫不會變更呼叫方法中的 struct 的 `willIChange` 欄位。 `StructTaker` 變更複本，而複本在完成對 `StructTaker` 的呼叫時遺失。  
+ <span data-ttu-id="bf4d1-116">下例的輸出會說明其間的差異。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-116">The output of the following example illustrates the difference.</span></span> <span data-ttu-id="bf4d1-117">因為方法使用參數中的位址尋找指定的 class 執行個體欄位，所以對方法 `ClassTaker` 的呼叫會變更 class 執行個體的 `willIChange` 欄位值。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-117">The value of the `willIChange` field of the class instance is changed by the call to method `ClassTaker` because the method uses the address in the parameter to find the specified field of the class instance.</span></span> <span data-ttu-id="bf4d1-118">因為引數值是 struct 本身的複本，不是其位址的複本，所以對方法 `StructTaker` 的呼叫不會變更呼叫方法中的 struct 的 `willIChange` 欄位。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-118">The `willIChange` field of the struct in the calling method is not changed by the call to method `StructTaker` because the value of the argument is a copy of the struct itself, not a copy of its address.</span></span> <span data-ttu-id="bf4d1-119">`StructTaker` 變更複本，而複本在完成對 `StructTaker` 的呼叫時遺失。</span><span class="sxs-lookup"><span data-stu-id="bf4d1-119">`StructTaker` changes the copy, and the copy is lost when the call to `StructTaker` is completed.</span></span>  
   
-## <a name="example"></a>範例  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
+## <a name="example"></a><span data-ttu-id="bf4d1-120">範例</span><span class="sxs-lookup"><span data-stu-id="bf4d1-120">Example</span></span>  
+ [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)   
- [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
-
+## <a name="see-also"></a><span data-ttu-id="bf4d1-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf4d1-121">See Also</span></span>  
+ [<span data-ttu-id="bf4d1-122">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="bf4d1-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="bf4d1-123">類別</span><span class="sxs-lookup"><span data-stu-id="bf4d1-123">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [<span data-ttu-id="bf4d1-124">結構</span><span class="sxs-lookup"><span data-stu-id="bf4d1-124">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [<span data-ttu-id="bf4d1-125">傳遞參數</span><span class="sxs-lookup"><span data-stu-id="bf4d1-125">Passing Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - late binding, about late binding
 - early binding
@@ -16,21 +19,20 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3c3e2a8eac4383433888c324a3d36a6e62314462
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64abd2832ad14f09a8e3079818bddf78c32ee13d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 動態載入和使用類型
-反映 \(Reflection\) 提供語言編譯器 \(例如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript\) 用來實作隱含晚期繫結的基礎結構。  繫結是找出對應唯一指定型別的宣告 \(即實作\) 的過程。  當這個過程出現在執行階段而非編譯時期時，就稱為晚期繫結  [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 可以讓您在程式碼中使用隱含晚期繫結，Visual Basic 編譯器會呼叫使用反映取得物件型別的 Helper 方法。  傳遞至 Helper 方法的引數使得適當的方法在執行階段被叫用。  這些引數是用以叫用方法的執行個體 \(物件\)、叫用的方法的名稱 \(字串\)，和傳遞至叫用的方法的引數 \(物件陣列\)。  
+# <a name="dynamically-loading-and-using-types"></a><span data-ttu-id="51ea5-102">動態載入和使用類型</span><span class="sxs-lookup"><span data-stu-id="51ea5-102">Dynamically Loading and Using Types</span></span>
+<span data-ttu-id="51ea5-103">反映會提供語言編譯器所使用的基礎結構，例如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript，以實作隱含晚期繫結。</span><span class="sxs-lookup"><span data-stu-id="51ea5-103">Reflection provides infrastructure used by language compilers such as [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] and JScript to implement implicit late binding.</span></span> <span data-ttu-id="51ea5-104">繫結是尋找對應至唯一指定的類型宣告 (也就是實作) 的程序。</span><span class="sxs-lookup"><span data-stu-id="51ea5-104">Binding is the process of locating the declaration (that is, the implementation) that corresponds to a uniquely specified type.</span></span> <span data-ttu-id="51ea5-105">當此程序發生在執行階段，而不是在編譯時期時，它稱為晚期繫結。</span><span class="sxs-lookup"><span data-stu-id="51ea5-105">When this process occurs at run time rather than at compile time, it is called late binding.</span></span> [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]<span data-ttu-id="51ea5-106"> 可讓您在程式碼內使用隱含晚期繫結；Visual Basic 編譯器會呼叫 helper 方法，它會使用反映來取得物件類型。</span><span class="sxs-lookup"><span data-stu-id="51ea5-106"> allows you to use implicit late binding in your code; the Visual Basic compiler calls a helper method that uses reflection to obtain the object type.</span></span> <span data-ttu-id="51ea5-107">傳遞至 helper 方法的引數會導致在執行階段叫用適當的方法。</span><span class="sxs-lookup"><span data-stu-id="51ea5-107">The arguments passed to the helper method cause the appropriate method to be invoked at run time.</span></span> <span data-ttu-id="51ea5-108">這些引數是在其上叫用方法的執行個體 (物件)、被叫用方法的名稱 (字串)，以及傳遞給被叫用方法的引數 (物件陣列)。</span><span class="sxs-lookup"><span data-stu-id="51ea5-108">These arguments are the instance (an object) on which to invoke the method, the name of the invoked method (a string), and the arguments passed to the invoked method (an array of objects).</span></span>  
   
- 在下列程式碼範例中，Visual Basic  編譯器隱含地使用反映呼叫物件上的方法，其型別在編譯時間為未知。  **HelloWorld** 類別具有 **PrintHello** 方法，印出與傳遞至 **PrintHello** 方法的一些文字串連的 "Hello World"。  這個範例中呼叫的 **PrintHello** 方法實際上是 <xref:System.Type.InvokeMember%2A?displayProperty=fullName>；Visual Basic 程式碼允許叫用 **PrintHello** 方法，就好像物件 \(helloObj\) 的型別在編譯時間 \(早期繫結\) 已經知道，而非在執行階段 \(晚期繫結\)。  
+ <span data-ttu-id="51ea5-109">在下列範例中，Visual Basic 編譯器會隱含地使用反映，對一個在編譯階段不知道其類型的物件呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="51ea5-109">In the following example, the Visual Basic compiler uses reflection implicitly to call a method on an object whose type is not known at compile time.</span></span> <span data-ttu-id="51ea5-110">**HelloWorld** 類別具有 **PrintHello** 方法，它會列印出 "Hello World" 並串連傳遞給 **PrintHello** 方法的部分文字。</span><span class="sxs-lookup"><span data-stu-id="51ea5-110">A **HelloWorld** class has a **PrintHello** method that prints out "Hello World" concatenated with some text that is passed to the **PrintHello** method.</span></span> <span data-ttu-id="51ea5-111">在此範例中呼叫的 **PrintHello** 方法實際上是 <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>；Visual Basic 程式碼允許叫用 **PrintHello** 方法，就彷彿已在編譯階段知道物件 (helloObj) 的類型 (早期繫結)，而不是執行階段知道 (晚期繫結)。</span><span class="sxs-lookup"><span data-stu-id="51ea5-111">The **PrintHello** method called in this example is actually a <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; the Visual Basic code allows the **PrintHello** method to be invoked as if the type of the object (helloObj) were known at compile time (early binding) rather than at run time (late binding).</span></span>  
   
 ```  
 Imports System  
@@ -47,67 +49,66 @@ Module Hello
 End Module  
 ```  
   
-## 自訂繫結  
- 除了要被編譯器隱含地使用作晚期繫結之外，反映還可以在程式碼中明確地用來完成晚期繫結。  
+## <a name="custom-binding"></a><span data-ttu-id="51ea5-112">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="51ea5-112">Custom Binding</span></span>  
+ <span data-ttu-id="51ea5-113">除了編譯器隱含地用來進行晚期繫結，反映也可明確地用於程式碼，來完成晚期繫結。</span><span class="sxs-lookup"><span data-stu-id="51ea5-113">In addition to being used implicitly by compilers for late binding, reflection can be used explicitly in code to accomplish late binding.</span></span>  
   
- [Common Language Runtime](../../../docs/standard/clr.md) 支援多個程式設計語言，而這些語言的繫結規則各有不同。  在早期繫結的情況中，程式碼產生器可以完全控制這個繫結。  然而，在透過反映的晚期繫結中，繫結必須受自訂繫結的控制。  <xref:System.Reflection.Binder> 類別提供成員選取和引動過程的自訂控制項。  
+ <span data-ttu-id="51ea5-114">[Common Language Runtime](../../../docs/standard/clr.md) 支援多種程式設計語言，而這些語言的繫結規則不同。</span><span class="sxs-lookup"><span data-stu-id="51ea5-114">The [common language runtime](../../../docs/standard/clr.md) supports multiple programming languages, and the binding rules of these languages differ.</span></span> <span data-ttu-id="51ea5-115">在早期繫結案例中，程式碼產生器可以完全控制這個繫結。</span><span class="sxs-lookup"><span data-stu-id="51ea5-115">In the early-bound case, code generators can completely control this binding.</span></span> <span data-ttu-id="51ea5-116">不過，在透過反映的晚期繫結中，繫結必須受自訂繫結控制。</span><span class="sxs-lookup"><span data-stu-id="51ea5-116">However, in late binding through reflection, binding must be controlled by customized binding.</span></span> <span data-ttu-id="51ea5-117"><xref:System.Reflection.Binder> 類別會提供成員選取和叫用的自訂控制。</span><span class="sxs-lookup"><span data-stu-id="51ea5-117">The <xref:System.Reflection.Binder> class provides custom control of member selection and invocation.</span></span>  
   
- 使用自訂繫結，您可以在執行階段載入組件，取得該組件中型別的資訊，指定您想要的型別，並接著叫用方法，或存取該型別上的欄位或屬性。  這個技術很有用，如果您在編譯時間不知道物件的型別，例如當物件型別靠使用者輸入時。  
+ <span data-ttu-id="51ea5-118">您可以使用自訂繫結，在執行階段載入組件、取得該組件中的類型相關資訊、指定您要的類型，然後對該類型叫用方法或存取欄位或屬性。</span><span class="sxs-lookup"><span data-stu-id="51ea5-118">Using custom binding, you can load an assembly at run time, obtain information about types in that assembly, specify the type that you want, and then invoke methods or access fields or properties on that type.</span></span> <span data-ttu-id="51ea5-119">這個技術非常有用，如果您在編譯時期不知道物件的類型，例如當物件類型取決於使用者輸入之時。</span><span class="sxs-lookup"><span data-stu-id="51ea5-119">This technique is useful if you do not know an object's type at compile time, such as when the object type is dependent on user input.</span></span>  
   
- 以下範例示範不提供引數型別轉換的簡單自訂繫結器 \(Binder\)。  `Simple_Type.dll` 的程式碼位於主要範例之前。  在建置時間中，請務必建置 `Simple_Type.dll`，然後再將參考納入專案中。  
+ <span data-ttu-id="51ea5-120">下列範例將示範簡單的自訂繫結，它不提供任何引數類型轉換。</span><span class="sxs-lookup"><span data-stu-id="51ea5-120">The following example demonstrates a simple custom binder that provides no argument type conversion.</span></span> <span data-ttu-id="51ea5-121">`Simple_Type.dll` 的程式碼在主要範例之前。</span><span class="sxs-lookup"><span data-stu-id="51ea5-121">Code for `Simple_Type.dll` precedes the main example.</span></span> <span data-ttu-id="51ea5-122">請務必建置 `Simple_Type.dll`，然後在建置階段的專案中包含對它的參考。</span><span class="sxs-lookup"><span data-stu-id="51ea5-122">Be sure to build `Simple_Type.dll` and then include a reference to it in the project at build time.</span></span>  
   
  [!code-cpp[Conceptual.Types.Dynamic#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source1.cpp#1)]
  [!code-csharp[Conceptual.Types.Dynamic#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source1.cs#1)]
  [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
-### InvokeMember 和 CreateInstance  
- 使用 <xref:System.Type.InvokeMember%2A?displayProperty=fullName> 叫用型別成員。  各種類別的 **CreateInstance** 方法，例如 [System.Activator](frlrfSystemActivatorClassCreateInstanceTopic) 和 [System.Reflection.Assembly](frlrfSystemReflectionAssemblyClassCreateInstanceTopic)，都是 **InvokeMember** 的特殊形式，可以建立指定型別的新執行個體。  **Binder** 類別被使用於這些方法中的多載解析 \(Overload Resolution\) 和引數強制。  
+### <a name="invokemember-and-createinstance"></a><span data-ttu-id="51ea5-123">InvokeMember 和 CreateInstance</span><span class="sxs-lookup"><span data-stu-id="51ea5-123">InvokeMember and CreateInstance</span></span>  
+ <span data-ttu-id="51ea5-124">使用 <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> 來叫用類型的成員。</span><span class="sxs-lookup"><span data-stu-id="51ea5-124">Use <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> to invoke a member of a type.</span></span> <span data-ttu-id="51ea5-125">各種類別的 **CreateInstance** 方法，例如 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType>，是 **InvokeMember** 的特殊形式，會建立指定類型的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="51ea5-125">The **CreateInstance** methods of various classes, such as <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> and <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType>, are specialized forms of **InvokeMember** that create new instances of the specified type.</span></span> <span data-ttu-id="51ea5-126">**Binder** 類別用來在這些方法中進行多載解析和引數強制型轉。</span><span class="sxs-lookup"><span data-stu-id="51ea5-126">The **Binder** class is used for overload resolution and argument coercion in these methods.</span></span>  
   
- 下列程式碼範例說明引數強制型轉 \(型別轉換\) 和成員選取的三種可能組合。  案例 1，不需要引數強制或成員選取。  案例 2，只需要成員選取。  案例 3，只需要引數強制。  
+ <span data-ttu-id="51ea5-127">下列範例顯示引數強制型轉 (類型轉換) 和成員選取的三種可能組合。</span><span class="sxs-lookup"><span data-stu-id="51ea5-127">The following example shows the three possible combinations of argument coercion (type conversion) and member selection.</span></span> <span data-ttu-id="51ea5-128">案例 1 中不需要任何引數強制型轉或成員選取。</span><span class="sxs-lookup"><span data-stu-id="51ea5-128">In Case 1, no argument coercion or member selection is needed.</span></span> <span data-ttu-id="51ea5-129">案例 2 中只需要成員選取。</span><span class="sxs-lookup"><span data-stu-id="51ea5-129">In Case 2, only member selection is needed.</span></span> <span data-ttu-id="51ea5-130">案例 3 中只需要引數強制型轉。</span><span class="sxs-lookup"><span data-stu-id="51ea5-130">In Case 3, only argument coercion is needed.</span></span>  
   
  [!code-cpp[Conceptual.Types.Dynamic#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source2.cpp#2)]
  [!code-csharp[Conceptual.Types.Dynamic#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source2.cs#2)]
  [!code-vb[Conceptual.Types.Dynamic#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source2.vb#2)]  
   
- 當有多個具相同名稱的成員可供使用時，需要多載解析。  <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=fullName> 和 <xref:System.Reflection.Binder.BindToField%2A?displayProperty=fullName> 方法用來解析單一成員的繫結。  **Binder.BindToMethod** 也透過 **get** 和 **set** 屬性存取子提供屬性解析。  
+ <span data-ttu-id="51ea5-131">有多個相同名稱的成員可用時，需要多載解析。</span><span class="sxs-lookup"><span data-stu-id="51ea5-131">Overload resolution is needed when more than one member with the same name is available.</span></span> <span data-ttu-id="51ea5-132"><xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Binder.BindToField%2A?displayProperty=nameWithType> 方法用來解析對單一成員的繫結。</span><span class="sxs-lookup"><span data-stu-id="51ea5-132">The <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=nameWithType> and <xref:System.Reflection.Binder.BindToField%2A?displayProperty=nameWithType> methods are used to resolve binding to a single member.</span></span> <span data-ttu-id="51ea5-133">**Binder.BindToMethod** 也透過 **get** 和 **set** 屬性存取子提供屬性解析。</span><span class="sxs-lookup"><span data-stu-id="51ea5-133">**Binder.BindToMethod** also provides property resolution through the **get** and **set** property accessors.</span></span>  
   
- **BindToMethod** 會傳回要叫用的 <xref:System.Reflection.MethodBase>，如果無法叫用，則會傳回 null 參考 \(Visual Basic 中為 **Nothing**\)。  **MethodBase** 傳回值不一定要是那些包含於 *match*  參數的其中之一，雖然常是如此。  
+ <span data-ttu-id="51ea5-134">**BindToMethod** 會傳回要叫用的 <xref:System.Reflection.MethodBase>，如果不可能進行這種叫用則傳回 null 參考 (在 Visual Basic 中為 **Nothing**)。</span><span class="sxs-lookup"><span data-stu-id="51ea5-134">**BindToMethod** returns the <xref:System.Reflection.MethodBase> to invoke, or a null reference (**Nothing** in Visual Basic) if no such invocation is possible.</span></span> <span data-ttu-id="51ea5-135">**MethodBase** 傳回值不一定要是 *match* 參數中所包含的其中一者，雖然這是常見的情況。</span><span class="sxs-lookup"><span data-stu-id="51ea5-135">The **MethodBase** return value need not be one of those contained in the *match* parameter, although that is the usual case.</span></span>  
   
- 當 ByRef 引數出現時，呼叫端可能會想將它們取回。  因此，**Binder** 允許用戶端將引數陣列對應回到它的原來形式，如果 **BindToMethod** 已經操作引數陣列的話。  為了這樣做，呼叫端必須保證不變更引數的順序。  當引數按名稱傳遞時，繫結器 **Binder** 會重新排列引述陣列，而那就是呼叫端所看到的。  如需詳細資訊，請參閱 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=fullName>。  
+ <span data-ttu-id="51ea5-136">有 ByRef 引數存在時，呼叫端可能會想要取回它們。</span><span class="sxs-lookup"><span data-stu-id="51ea5-136">When ByRef arguments are present, the caller might want to get them back.</span></span> <span data-ttu-id="51ea5-137">因此，**Binder** 允許用戶端將引數的陣列對應回其原始形式，如果 **BindToMethod** 已操作引數陣列的話。</span><span class="sxs-lookup"><span data-stu-id="51ea5-137">Therefore, **Binder** allows a client to map the array of arguments back to its original form if **BindToMethod** has manipulated the argument array.</span></span> <span data-ttu-id="51ea5-138">若要這樣做，必須向呼叫端保證，引數的順序不變。</span><span class="sxs-lookup"><span data-stu-id="51ea5-138">In order to do this, the caller must be guaranteed that the order of the arguments is unchanged.</span></span> <span data-ttu-id="51ea5-139">依名稱傳遞引數時，**Binder** 會重新排列引數陣列，那也是呼叫端看到的情況。</span><span class="sxs-lookup"><span data-stu-id="51ea5-139">When arguments are passed by name, **Binder** reorders the argument array, and that is what the caller sees.</span></span> <span data-ttu-id="51ea5-140">如需詳細資訊，請參閱<xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="51ea5-140">For more information, see <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.</span></span>  
   
- 可用成員的集合為那些在型別或任何基底型別 \(Base Type\) 中定義的成員。  如果 [BindingFlags.NonPublic](frlrfSystemReflectionBindingFlagsClassTopic) 已指定，任何存取範圍的成員將在集合中傳回。  如果不指定 **BindingFlags.NonPublic**，繫結器必須強制使用存取範圍規則。  指定 **Public** 或 **NonPublic** 繫結旗標時，您也必須指定 **Instance** 或 **Static** 繫結旗標，否則將不會傳回成員。  
+ <span data-ttu-id="51ea5-141">可用成員的集合是在類型或任何基底類型中定義的成員。</span><span class="sxs-lookup"><span data-stu-id="51ea5-141">The set of available members are those members defined in the type or any base type.</span></span> <span data-ttu-id="51ea5-142">如果指定 <xref:System.Reflection.BindingFlags>，則會在集合中傳回任何存取範圍的成員。</span><span class="sxs-lookup"><span data-stu-id="51ea5-142">If <xref:System.Reflection.BindingFlags> is specified, members of any accessibility will be returned in the set.</span></span> <span data-ttu-id="51ea5-143">如果未指定 **BindingFlags.NonPublic**，繫結器必須強制執行存取範圍規則。</span><span class="sxs-lookup"><span data-stu-id="51ea5-143">If **BindingFlags.NonPublic** is not specified, the binder must enforce accessibility rules.</span></span> <span data-ttu-id="51ea5-144">指定 **Public** 或 **NonPublic** 繫結旗標時，您也必須指定 **Instance** 或 **Static** 繫結旗標，否則不會傳回任何成員。</span><span class="sxs-lookup"><span data-stu-id="51ea5-144">When specifying the **Public** or **NonPublic** binding flag, you must also specify the **Instance** or **Static** binding flag, or no members will be returned.</span></span>  
   
- 如果只有一個指定名稱的成員，則沒有回呼 \(Callback\) 的必要，而繫結即在那個方法上完成。  程式碼範例的案例 1 說明了這一點：只有一個 **PrintBob** 方法可用，因此不需要回呼。  
+ <span data-ttu-id="51ea5-145">如果指定名稱的成員只有一個，便不需要回呼，會對該方法進行任何繫結。</span><span class="sxs-lookup"><span data-stu-id="51ea5-145">If there is only one member of the given name, no callback is necessary, and binding is done on that method.</span></span> <span data-ttu-id="51ea5-146">程式碼範例的案例 1 將說明這一點：只有一個 **PrintBob** 方法可用，因此不需要回呼。</span><span class="sxs-lookup"><span data-stu-id="51ea5-146">Case 1 of the code example illustrates this point: Only one **PrintBob** method is available, and therefore no callback is needed.</span></span>  
   
- 如果有多個成員在可用集合中，這些方法會全部傳遞至 **BindToMethod**，以選取適當的方法並傳回它。  程式碼範例的案例 2 中，有兩個名為 **PrintValue** 的方法。  適當的方法經由呼叫 **BindToMethod** 來選取。  
+ <span data-ttu-id="51ea5-147">如果可用的集合中有多個成員，這些方法全都會傳遞至 **BindToMethod**，它會選取適當的方法，並傳回它。</span><span class="sxs-lookup"><span data-stu-id="51ea5-147">If there is more than one member in the available set, all these methods are passed to **BindToMethod**, which selects the appropriate method and returns it.</span></span> <span data-ttu-id="51ea5-148">在程式碼範例的案例 2 中，有兩個方法，名為 **PrintValue**。</span><span class="sxs-lookup"><span data-stu-id="51ea5-148">In Case 2 of the code example, there are two methods named **PrintValue**.</span></span> <span data-ttu-id="51ea5-149">呼叫 **BindToMethod** 會選取適當的方法。</span><span class="sxs-lookup"><span data-stu-id="51ea5-149">The appropriate method is selected by the call to **BindToMethod**.</span></span>  
   
- <xref:System.Reflection.Binder.ChangeType%2A> 執行引數強制 \(型別轉換\)，轉換實際引數至選取方法的型式引數 \(Formal Argument\) 型別。  即使型別完全相符，**ChangeType** 仍會被每個引數呼叫。  
+ <span data-ttu-id="51ea5-150"><xref:System.Reflection.Binder.ChangeType%2A> 會執行引數強制型轉 (類型轉換)，這會將實際引數轉換為所選方法的正式引數的類型。</span><span class="sxs-lookup"><span data-stu-id="51ea5-150"><xref:System.Reflection.Binder.ChangeType%2A> performs argument coercion (type conversion), which converts the actual arguments to the type of the formal arguments of the selected method.</span></span> <span data-ttu-id="51ea5-151">即使類型完全相符，也會為每個引數呼叫 **ChangeType**。</span><span class="sxs-lookup"><span data-stu-id="51ea5-151">**ChangeType** is called for every argument even if the types match exactly.</span></span>  
   
- 在程式碼範例的案例 3 中，**String** 型別的實際引數，會將其值 "5.5" 傳遞至具有 **Double** 型別的型式引數 \(Formal Argument\) 的方法。  為使引動過程成功，字串值 "5.5" 必須轉換為雙精度浮點數 \(Double\) 值。  **ChangeType** 會負責執行轉換。  
+ <span data-ttu-id="51ea5-152">程式碼範例的案例 3 中，類型 **String** 的實際引數以及值 "5.5" 會傳遞至具有類型 **Double** 的型式引數的方法。</span><span class="sxs-lookup"><span data-stu-id="51ea5-152">In Case 3 of the code example, an actual argument of type **String** with a value of "5.5" is passed to a method with a formal argument of type **Double**.</span></span> <span data-ttu-id="51ea5-153">叫用要成功，字串值 "5.5" 必須轉換為雙精度浮點數值。</span><span class="sxs-lookup"><span data-stu-id="51ea5-153">For the invocation to succeed, the string value "5.5" must be converted to a double value.</span></span> <span data-ttu-id="51ea5-154">**ChangeType** 會執行這項轉換。</span><span class="sxs-lookup"><span data-stu-id="51ea5-154">**ChangeType** performs this conversion.</span></span>  
   
- **ChangeType** 只會執行無遺漏或[擴展強制型轉 \(Coercion\)](../../../docs/standard/base-types/type-conversion.md)，如下表所示。  
+ <span data-ttu-id="51ea5-155">**ChangeType** 只能執行不失真或[擴展強制型轉](../../../docs/standard/base-types/type-conversion.md)，如下表所示。</span><span class="sxs-lookup"><span data-stu-id="51ea5-155">**ChangeType** performs only lossless or [widening coercions](../../../docs/standard/base-types/type-conversion.md), as shown in the following table.</span></span>  
   
-|來源型別|目標型別|  
-|----------|----------|  
-|任何型別|其基底型別|  
-|任何型別|它實作的介面|  
-|Char|UInt16、UInt32、Int32、UInt64、Int64、Single、Double|  
-|Byte|Char、UInt16、Int16、UInt32、Int32、UInt64、Int64、Single、Double|  
-|SByte|Int16、Int32、Int64、Single、Double|  
-|UInt16|UInt32、Int32、UInt64、Int64、Single、Double|  
-|Int16|Int32、Int64、Single、Double|  
-|UInt32|UInt64、Int64、Single、Double|  
-|Int32|Int64、Single、Double|  
-|UInt64|Single、Double|  
-|Int64|Single、Double|  
-|Single|Double|  
-|非參考型別|參考型別|  
+|<span data-ttu-id="51ea5-156">來源類型</span><span class="sxs-lookup"><span data-stu-id="51ea5-156">Source type</span></span>|<span data-ttu-id="51ea5-157">目標類型</span><span class="sxs-lookup"><span data-stu-id="51ea5-157">Target type</span></span>|  
+|-----------------|-----------------|  
+|<span data-ttu-id="51ea5-158">任何型別</span><span class="sxs-lookup"><span data-stu-id="51ea5-158">Any type</span></span>|<span data-ttu-id="51ea5-159">基底類型</span><span class="sxs-lookup"><span data-stu-id="51ea5-159">Its base type</span></span>|  
+|<span data-ttu-id="51ea5-160">任何型別</span><span class="sxs-lookup"><span data-stu-id="51ea5-160">Any type</span></span>|<span data-ttu-id="51ea5-161">實作的介面</span><span class="sxs-lookup"><span data-stu-id="51ea5-161">Interface it implements</span></span>|  
+|<span data-ttu-id="51ea5-162">Char</span><span class="sxs-lookup"><span data-stu-id="51ea5-162">Char</span></span>|<span data-ttu-id="51ea5-163">UInt16、UInt32、Int32、UInt64、Int64、Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-163">UInt16, UInt32, Int32, UInt64, Int64, Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-164">Byte</span><span class="sxs-lookup"><span data-stu-id="51ea5-164">Byte</span></span>|<span data-ttu-id="51ea5-165">Char、UInt16、Int16、UInt32、Int32、UInt64、Int64、Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-165">Char, UInt16, Int16, UInt32, Int32, UInt64, Int64, Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-166">SByte</span><span class="sxs-lookup"><span data-stu-id="51ea5-166">SByte</span></span>|<span data-ttu-id="51ea5-167">Int16、Int32、Int64、Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-167">Int16, Int32, Int64, Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-168">UInt16</span><span class="sxs-lookup"><span data-stu-id="51ea5-168">UInt16</span></span>|<span data-ttu-id="51ea5-169">UInt32、Int32、UInt64、Int64、Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-169">UInt32, Int32, UInt64, Int64, Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-170">Int16</span><span class="sxs-lookup"><span data-stu-id="51ea5-170">Int16</span></span>|<span data-ttu-id="51ea5-171">Int32、Int64、Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-171">Int32, Int64, Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-172">UInt32</span><span class="sxs-lookup"><span data-stu-id="51ea5-172">UInt32</span></span>|<span data-ttu-id="51ea5-173">UInt64、Int64、Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-173">UInt64, Int64, Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-174">Int32</span><span class="sxs-lookup"><span data-stu-id="51ea5-174">Int32</span></span>|<span data-ttu-id="51ea5-175">Int64、Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-175">Int64, Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-176">UInt64</span><span class="sxs-lookup"><span data-stu-id="51ea5-176">UInt64</span></span>|<span data-ttu-id="51ea5-177">Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-177">Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-178">Int64</span><span class="sxs-lookup"><span data-stu-id="51ea5-178">Int64</span></span>|<span data-ttu-id="51ea5-179">Single、Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-179">Single, Double</span></span>|  
+|<span data-ttu-id="51ea5-180">Single</span><span class="sxs-lookup"><span data-stu-id="51ea5-180">Single</span></span>|<span data-ttu-id="51ea5-181">Double</span><span class="sxs-lookup"><span data-stu-id="51ea5-181">Double</span></span>|  
+|<span data-ttu-id="51ea5-182">非參考類型</span><span class="sxs-lookup"><span data-stu-id="51ea5-182">Nonreference type</span></span>|<span data-ttu-id="51ea5-183">參考型別</span><span class="sxs-lookup"><span data-stu-id="51ea5-183">Reference type</span></span>|  
   
- <xref:System.Type> 類別具有 **Get** 方法，使用 **Binder** 型別的參數解析參考至特定的成員。  <xref:System.Type.GetConstructor%2A?displayProperty=fullName>、<xref:System.Type.GetMethod%2A?displayProperty=fullName> 和 <xref:System.Type.GetProperty%2A?displayProperty=fullName> 會藉由提供該成員的簽章資訊，搜尋目前型別的特殊成員。  會再次呼叫 <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=fullName> 和 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=fullName>，以選取適當方法的指定簽章資訊。  
+ <span data-ttu-id="51ea5-184"><xref:System.Type> 類別具有 **Get** 方法，使用類型 **Binder** 的參數來解析對特定成員的參考。</span><span class="sxs-lookup"><span data-stu-id="51ea5-184">The <xref:System.Type> class has **Get** methods that use parameters of type **Binder** to resolve references to a particular member.</span></span> <span data-ttu-id="51ea5-185"><xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>、<xref:System.Type.GetMethod%2A?displayProperty=nameWithType> 和 <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> 會搜尋目前類型的特定成員，方法是提供該成員的簽章資訊。</span><span class="sxs-lookup"><span data-stu-id="51ea5-185"><xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, and <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> search for a particular member of the current type by providing signature information for that member.</span></span> <span data-ttu-id="51ea5-186">接著回來呼叫 <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType>，選取適當方法的指定簽章資訊。</span><span class="sxs-lookup"><span data-stu-id="51ea5-186"><xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> and <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> are called back on to select the given signature information of the appropriate methods.</span></span>  
   
-## 請參閱  
- <xref:System.Type.InvokeMember%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
- [.NET Framework 中的型別轉換](../../../docs/standard/base-types/type-conversion.md)
-
+## <a name="see-also"></a><span data-ttu-id="51ea5-187">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51ea5-187">See Also</span></span>  
+ <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="51ea5-188">檢視類型資訊</span><span class="sxs-lookup"><span data-stu-id="51ea5-188">Viewing Type Information</span></span>](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [<span data-ttu-id="51ea5-189">.NET Framework 中的型別轉換</span><span class="sxs-lookup"><span data-stu-id="51ea5-189">Type Conversion in the .NET Framework</span></span>](../../../docs/standard/base-types/type-conversion.md)

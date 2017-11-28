@@ -1,85 +1,88 @@
 ---
-title: "UI Automation Support for the Hyperlink Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Hyperlink control type"
-  - "UI Automation, Hyperlink control type"
-  - "control types, Hyperlink"
+title: "Hyperlink 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Hyperlink control type
+- UI Automation, Hyperlink control type
+- control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
-caps.latest.revision: 22
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 0d468b173704f7e37fbb2c80168227405d6ce439
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Hyperlink Control Type
+# <a name="ui-automation-support-for-the-hyperlink-control-type"></a><span data-ttu-id="42135-102">Hyperlink 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="42135-102">UI Automation Support for the Hyperlink Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="42135-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="42135-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="42135-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="42135-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供超連結控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控制項類型是一組控制項必須符合才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性的條件。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定指導方針。  
+ <span data-ttu-id="42135-105">本主題提供超連結控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="42135-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Hyperlink control type.</span></span> <span data-ttu-id="42135-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項必須符合才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性的條件。</span><span class="sxs-lookup"><span data-stu-id="42135-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="42135-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定指導方針。</span><span class="sxs-lookup"><span data-stu-id="42135-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 超連結控制項可讓使用者在網頁內巡覽、從一網頁巡覽到另一網頁，以及開啟視窗。  
+ <span data-ttu-id="42135-108">超連結控制項可讓使用者在網頁內巡覽、從一網頁巡覽到另一網頁，以及開啟視窗。</span><span class="sxs-lookup"><span data-stu-id="42135-108">Hyperlink controls enable a user to navigate within a page, from one page to another page, and open windows.</span></span>  
   
- 下列章節會定義超連結控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用於所有超連結控制項。  
+ <span data-ttu-id="42135-109">下列章節會定義超連結控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="42135-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Hyperlink control type.</span></span> <span data-ttu-id="42135-110">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有超連結控制項。</span><span class="sxs-lookup"><span data-stu-id="42135-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all hyperlink controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述超連結控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="42135-111">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="42135-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="42135-112">下表描述超連結控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="42135-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to hyperlinks controls and describes what can be contained in each view.</span></span> <span data-ttu-id="42135-113">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="42135-113">For more information about the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|超連結|超連結|  
+|<span data-ttu-id="42135-114">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="42135-114">Control View</span></span>|<span data-ttu-id="42135-115">內容檢視</span><span class="sxs-lookup"><span data-stu-id="42135-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="42135-116">超連結</span><span class="sxs-lookup"><span data-stu-id="42135-116">Hyperlink</span></span>|<span data-ttu-id="42135-117">超連結</span><span class="sxs-lookup"><span data-stu-id="42135-117">Hyperlink</span></span>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與超連結控制項類型特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="42135-118">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="42135-118">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="42135-119">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與超連結控制項類型特別有關。</span><span class="sxs-lookup"><span data-stu-id="42135-119">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to the Hyperlink control type.</span></span> <span data-ttu-id="42135-120">如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="42135-120">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|超連結控制項的名稱是在畫面上加了底線的文字。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|超連結控制項可點選的點，必須是用滑鼠指標按一下即可以啟動超連結的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|請參閱備註。|如果有靜態文字標籤，那麼這個屬性必須公開該控制項的參考。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|超連結|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「超連結」|對應到超連結控制項類型的當地語系化字串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|此超連結控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此超連結控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="42135-121"> 屬性</span><span class="sxs-lookup"><span data-stu-id="42135-121"> Property</span></span>|<span data-ttu-id="42135-122">值</span><span class="sxs-lookup"><span data-stu-id="42135-122">Value</span></span>|<span data-ttu-id="42135-123">備註</span><span class="sxs-lookup"><span data-stu-id="42135-123">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="42135-124">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="42135-124">See notes.</span></span>|<span data-ttu-id="42135-125">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="42135-125">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="42135-126">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="42135-126">See notes.</span></span>|<span data-ttu-id="42135-127">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="42135-127">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="42135-128">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="42135-128">See notes.</span></span>|<span data-ttu-id="42135-129">如果有週框即受支援。</span><span class="sxs-lookup"><span data-stu-id="42135-129">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="42135-130">如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。</span><span class="sxs-lookup"><span data-stu-id="42135-130">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="42135-131">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="42135-131">See notes.</span></span>|<span data-ttu-id="42135-132">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="42135-132">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="42135-133">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="42135-133">See notes.</span></span>|<span data-ttu-id="42135-134">超連結控制項的名稱是在畫面上加了底線的文字。</span><span class="sxs-lookup"><span data-stu-id="42135-134">The hyperlink control’s name is the text that is displayed on the screen as underlined.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="42135-135">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="42135-135">See notes.</span></span>|<span data-ttu-id="42135-136">超連結控制項可點選的點，必須是用滑鼠指標按一下即可以啟動超連結的點。</span><span class="sxs-lookup"><span data-stu-id="42135-136">The hyperlink control’s clickable point must be a point that launches the hyperlink if clicked with a mouse pointer.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="42135-137">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="42135-137">See notes.</span></span>|<span data-ttu-id="42135-138">如果有靜態文字標籤，那麼這個屬性必須公開該控制項的參考。</span><span class="sxs-lookup"><span data-stu-id="42135-138">If there is a static text label then this property must expose a reference to that control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="42135-139">超連結</span><span class="sxs-lookup"><span data-stu-id="42135-139">Hyperlink</span></span>|<span data-ttu-id="42135-140">此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="42135-140">This value is the same for all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="42135-141">「超連結」</span><span class="sxs-lookup"><span data-stu-id="42135-141">"hyperlink"</span></span>|<span data-ttu-id="42135-142">對應到超連結控制項類型的當地語系化字串。</span><span class="sxs-lookup"><span data-stu-id="42135-142">Localized string corresponding to the Hyperlink control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="42135-143">True</span><span class="sxs-lookup"><span data-stu-id="42135-143">True</span></span>|<span data-ttu-id="42135-144">此超連結控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。</span><span class="sxs-lookup"><span data-stu-id="42135-144">The hyperlink control is always included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="42135-145">True</span><span class="sxs-lookup"><span data-stu-id="42135-145">True</span></span>|<span data-ttu-id="42135-146">此超連結控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。</span><span class="sxs-lookup"><span data-stu-id="42135-146">The hyperlink control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式和屬性  
- 下表列出所有超連結控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns-and-properties"></a><span data-ttu-id="42135-147">必要的使用者介面自動化控制項模式和屬性</span><span class="sxs-lookup"><span data-stu-id="42135-147">Required UI Automation Control Patterns and Properties</span></span>  
+ <span data-ttu-id="42135-148">下表列出所有超連結控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="42135-148">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by all hyperlink controls.</span></span> <span data-ttu-id="42135-149">如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="42135-149">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式\/模式屬性|支援\/值|備註|  
-|-----------------|-----------|--------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|是|所有超連結控制項必須支援叫用模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|當連結包含對使用者來說可以使用、且有意義的資訊時，超連結控制項應支援值控制項模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如 "http:\/\/www...."|例如，網際網路或內部網路位址的 URL 就是包含對使用者來說有意義之資訊的超連結。 不過，程式設計連結只對應用程式有意義，不建議用於 Value 屬性。|  
+|<span data-ttu-id="42135-150">控制項模式/模式屬性</span><span class="sxs-lookup"><span data-stu-id="42135-150">Control Pattern/Pattern Property</span></span>|<span data-ttu-id="42135-151">支援/值</span><span class="sxs-lookup"><span data-stu-id="42135-151">Support/Value</span></span>|<span data-ttu-id="42135-152">備註</span><span class="sxs-lookup"><span data-stu-id="42135-152">Notes</span></span>|  
+|---------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|<span data-ttu-id="42135-153">是</span><span class="sxs-lookup"><span data-stu-id="42135-153">Yes</span></span>|<span data-ttu-id="42135-154">所有超連結控制項必須支援叫用模式。</span><span class="sxs-lookup"><span data-stu-id="42135-154">All hyperlink controls must support the Invoke pattern.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|<span data-ttu-id="42135-155">視情況而定</span><span class="sxs-lookup"><span data-stu-id="42135-155">Depends</span></span>|<span data-ttu-id="42135-156">當連結包含對使用者來說可以使用、且有意義的資訊時，超連結控制項應支援值控制項模式。</span><span class="sxs-lookup"><span data-stu-id="42135-156">Hyperlink controls should support the Value control pattern when the link contains information that is usable and meaningful to the user.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|<span data-ttu-id="42135-157">例如 "http://www...."</span><span class="sxs-lookup"><span data-stu-id="42135-157">For example, "http://www...."</span></span>|<span data-ttu-id="42135-158">例如，網際網路或內部網路位址的 URL 就是包含對使用者來說有意義之資訊的超連結。</span><span class="sxs-lookup"><span data-stu-id="42135-158">A URL for an Internet or Intranet address is an example of a hyperlink that contains information that is meaningful to the user.</span></span> <span data-ttu-id="42135-159">不過，程式設計連結只對應用程式有意義，不建議用於 Value 屬性。</span><span class="sxs-lookup"><span data-stu-id="42135-159">A programmatic link, however, is meaningful only to an application and is not recommended for the Value property.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列出所有超連結控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱[UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="42135-160">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="42135-160">Required UI Automation Events</span></span>  
+ <span data-ttu-id="42135-161">下表列出所有超連結控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="42135-161">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all hyperlink controls.</span></span> <span data-ttu-id="42135-162">如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="42135-162">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="42135-163"> 事件</span><span class="sxs-lookup"><span data-stu-id="42135-163"> Event</span></span>|<span data-ttu-id="42135-164">支援</span><span class="sxs-lookup"><span data-stu-id="42135-164">Support</span></span>|<span data-ttu-id="42135-165">備註</span><span class="sxs-lookup"><span data-stu-id="42135-165">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|<span data-ttu-id="42135-166">必要項</span><span class="sxs-lookup"><span data-stu-id="42135-166">Required</span></span>|<span data-ttu-id="42135-167">無</span><span class="sxs-lookup"><span data-stu-id="42135-167">None</span></span>|  
+|<span data-ttu-id="42135-168"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="42135-168"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="42135-169">必要項</span><span class="sxs-lookup"><span data-stu-id="42135-169">Required</span></span>|<span data-ttu-id="42135-170">無</span><span class="sxs-lookup"><span data-stu-id="42135-170">None</span></span>|  
+|<span data-ttu-id="42135-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="42135-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="42135-172">必要項</span><span class="sxs-lookup"><span data-stu-id="42135-172">Required</span></span>|<span data-ttu-id="42135-173">無</span><span class="sxs-lookup"><span data-stu-id="42135-173">None</span></span>|  
+|<span data-ttu-id="42135-174"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="42135-174"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="42135-175">必要項</span><span class="sxs-lookup"><span data-stu-id="42135-175">Required</span></span>|<span data-ttu-id="42135-176">無</span><span class="sxs-lookup"><span data-stu-id="42135-176">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="42135-177">必要項</span><span class="sxs-lookup"><span data-stu-id="42135-177">Required</span></span>|<span data-ttu-id="42135-178">無</span><span class="sxs-lookup"><span data-stu-id="42135-178">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="42135-179">必要項</span><span class="sxs-lookup"><span data-stu-id="42135-179">Required</span></span>|<span data-ttu-id="42135-180">無</span><span class="sxs-lookup"><span data-stu-id="42135-180">None</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.Hyperlink>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="42135-181">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42135-181">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Hyperlink>  
+ [<span data-ttu-id="42135-182">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="42135-182">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="42135-183">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="42135-183">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

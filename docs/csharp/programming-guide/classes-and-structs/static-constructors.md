@@ -1,70 +1,51 @@
 ---
 title: "靜態建構函式 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ee5448095cf06c2473c94bae542c02557918271a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73df76c61f393bf5fe09af66935acfbac4b5663f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 靜態建構函式 (C# 程式設計手冊)
-靜態建構函式可以用來初始化任何[靜態](../../../csharp/language-reference/keywords/static.md)資料，或執行只需執行一次的特定動作。  在建立第一個執行個體或參考任何靜態成員之前，會自動呼叫靜態建構函式。  
+# <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="50a86-102">靜態建構函式 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="50a86-102">Static Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="50a86-103">靜態建構函式用來初始化任何 [static](../../../csharp/language-reference/keywords/static.md) 資料，或執行只需要執行一次的特定動作。</span><span class="sxs-lookup"><span data-stu-id="50a86-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="50a86-104">在建立第一個執行個體或參考任何靜態成員之前，會自動進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="50a86-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  
   
- [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
   
- 靜態建構函式有下列屬性：  
+ <span data-ttu-id="50a86-105">靜態建構函式具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="50a86-105">Static constructors have the following properties:</span></span>  
   
--   靜態建構函式並不使用存取修飾詞，也沒有參數。  
+-   <span data-ttu-id="50a86-106">靜態建構函式不會接受存取修飾詞，也不會包含參數。</span><span class="sxs-lookup"><span data-stu-id="50a86-106">A static constructor does not take access modifiers or have parameters.</span></span>  
   
--   在建立第一個執行個體或參考任何靜態成員之前，就會自動呼叫靜態建構函式以初始化[類別](../../../csharp/language-reference/keywords/class.md)。  
+-   <span data-ttu-id="50a86-107">系統會在建立第一個執行個體或參考任何靜態成員之前，自動呼叫靜態建構函式來初始化 [class](../../../csharp/language-reference/keywords/class.md)。</span><span class="sxs-lookup"><span data-stu-id="50a86-107">A static constructor is called automatically to initialize the [class](../../../csharp/language-reference/keywords/class.md) before the first instance is created or any static members are referenced.</span></span>  
   
--   不能直接呼叫靜態建構函式。  
+-   <span data-ttu-id="50a86-108">靜態建構函式不能直接呼叫。</span><span class="sxs-lookup"><span data-stu-id="50a86-108">A static constructor cannot be called directly.</span></span>  
   
--   使用者無法控制程式中靜態建構函式執行的時間。  
+-   <span data-ttu-id="50a86-109">使用者無法控制在程式中執行靜態建構函式的時間。</span><span class="sxs-lookup"><span data-stu-id="50a86-109">The user has no control on when the static constructor is executed in the program.</span></span>  
   
--   靜態建構函式通常用在當類別使用記錄檔，而建構函式被用來將項目寫入該檔案。  
+-   <span data-ttu-id="50a86-110">靜態建構函式的一般用法為：當類別正在使用記錄檔，且建構函式用來將項目寫入這個檔案時。</span><span class="sxs-lookup"><span data-stu-id="50a86-110">A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</span></span>  
   
--   當靜態建構函式可呼叫 `LoadLibrary` 方法時，也可以使用這種建構函式為 Unmanaged 程式碼建立包裝函式類別。  
+-   <span data-ttu-id="50a86-111">如果建構函式可以呼叫 `LoadLibrary` 方法，靜態建構函式在建立 unmanaged 程式碼的包裝函式類別時也很有用。</span><span class="sxs-lookup"><span data-stu-id="50a86-111">Static constructors are also useful when creating wrapper classes for unmanaged code, when the constructor can call the `LoadLibrary` method.</span></span>  
   
--   如果靜態建構函式擲回例外狀況，執行階段將不會再一次叫用它，且在您的程式執行的應用程式定義域存留期中，型別都將保持未初始化狀態。  
+-   <span data-ttu-id="50a86-112">如果靜態建構函式擲回例外狀況，執行階段不會叫用它第二次，而類型會在執行程式的應用程式定義域的存留期內保持未初始化。</span><span class="sxs-lookup"><span data-stu-id="50a86-112">If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.</span></span>  
   
-## 範例  
- 在這個範例中，類別 `Bus` 有一個靜態建構函式。  建立 `Bus` 的第一個執行個體 \(`bus1`\) 時，會呼叫此建構函式來初始化該類別。  這個範例輸出確認靜態建構函式只會執行一次，即使建立了兩個 `Bus` 的執行個體也是如此，並且確認該建構函式會在執行個體建構函式執行之前執行。  
+## <a name="example"></a><span data-ttu-id="50a86-113">範例</span><span class="sxs-lookup"><span data-stu-id="50a86-113">Example</span></span>  
+ <span data-ttu-id="50a86-114">在此範例中，`Bus` 類別具有靜態建構函式。</span><span class="sxs-lookup"><span data-stu-id="50a86-114">In this example, class `Bus` has a static constructor.</span></span> <span data-ttu-id="50a86-115">建立 `Bus` 的第一個執行個體 (`bus1`) 時，即會叫用靜態建構函式來初始化類別。</span><span class="sxs-lookup"><span data-stu-id="50a86-115">When the first instance of `Bus` is created (`bus1`), the static constructor is invoked to initialize the class.</span></span> <span data-ttu-id="50a86-116">範例輸出可確認即使建立了兩個 `Bus` 執行個體，靜態建構函式也只執行一次，而且它是在執行個體建構函式執行之前執行。</span><span class="sxs-lookup"><span data-stu-id="50a86-116">The sample output verifies that the static constructor runs only one time, even though two instances of `Bus` are created, and that it runs before the instance constructor runs.</span></span>  
   
- [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-
+## <a name="see-also"></a><span data-ttu-id="50a86-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="50a86-117">See Also</span></span>  
+ [<span data-ttu-id="50a86-118">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="50a86-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="50a86-119">類別和結構</span><span class="sxs-lookup"><span data-stu-id="50a86-119">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="50a86-120">建構函式</span><span class="sxs-lookup"><span data-stu-id="50a86-120">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="50a86-121">靜態類別和靜態類別成員</span><span class="sxs-lookup"><span data-stu-id="50a86-121">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+ [<span data-ttu-id="50a86-122">完成項</span><span class="sxs-lookup"><span data-stu-id="50a86-122">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)

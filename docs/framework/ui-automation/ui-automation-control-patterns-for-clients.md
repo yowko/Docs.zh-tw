@@ -1,62 +1,65 @@
 ---
-title: "UI Automation Control Patterns for Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, control patterns for clients"
-  - "control patterns, UI Automation clients"
+title: "用戶端的 UI 自動化控制項模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, control patterns for clients
+- control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-caps.latest.revision: 24
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 1d556b3da13b70a0a5e69eb72905e04a01dffa9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Control Patterns for Clients
+# <a name="ui-automation-control-patterns-for-clients"></a><span data-ttu-id="050e8-102">用戶端的 UI 自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="050e8-102">UI Automation Control Patterns for Clients</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="050e8-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="050e8-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="050e8-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="050e8-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本概觀介紹使用者介面自動化用戶端的控制項模式。 其中所包含的資訊，與使用者介面自動化用戶端使用控制項模式來存取 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 相關資訊之方式有關。  
+ <span data-ttu-id="050e8-105">本概觀介紹使用者介面自動化用戶端的控制項模式。</span><span class="sxs-lookup"><span data-stu-id="050e8-105">This overview introduces control patterns for UI Automation clients.</span></span> <span data-ttu-id="050e8-106">其中所包含的資訊，與使用者介面自動化用戶端使用控制項模式來存取 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]相關資訊之方式有關。</span><span class="sxs-lookup"><span data-stu-id="050e8-106">It includes information on how a UI Automation client can use control patterns to access information about the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].</span></span>  
   
- 控制項模式提供一種方式，分類及公開與控制項類型或控制項外觀無關的控制項功能。 使用者介面自動化用戶端可檢查 <xref:System.Windows.Automation.AutomationElement> 來判斷支援哪些控制項模式，及保證控制項的行為。  
+ <span data-ttu-id="050e8-107">控制項模式提供一種方式，分類及公開與控制項類型或控制項外觀無關的控制項功能。</span><span class="sxs-lookup"><span data-stu-id="050e8-107">Control patterns provide a way to categorize and expose a control's functionality independent of the control type or the appearance of the control.</span></span> <span data-ttu-id="050e8-108">使用者介面自動化用戶端可檢查 <xref:System.Windows.Automation.AutomationElement> 來判斷支援哪些控制項模式，及保證控制項的行為。</span><span class="sxs-lookup"><span data-stu-id="050e8-108">UI Automation clients can examine an <xref:System.Windows.Automation.AutomationElement> to determine which control patterns are supported and be assured of the behavior of the control.</span></span>  
   
- 如需控制項模式的完整清單，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+ <span data-ttu-id="050e8-109">如需控制項模式的完整清單，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="050e8-109">For a complete list of control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
 <a name="uiautomation_getting_control_patterns"></a>   
-## 取得控制項模式  
- 用戶端藉由呼叫 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=fullName> 或 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=fullName>，從 <xref:System.Windows.Automation.AutomationElement> 擷取控制項模式。  
+## <a name="getting-control-patterns"></a><span data-ttu-id="050e8-110">取得控制項模式</span><span class="sxs-lookup"><span data-stu-id="050e8-110">Getting Control Patterns</span></span>  
+ <span data-ttu-id="050e8-111">用戶端藉由呼叫 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> 或 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>，從 <xref:System.Windows.Automation.AutomationElement> 擷取控制項模式。</span><span class="sxs-lookup"><span data-stu-id="050e8-111">Clients retrieve a control pattern from an <xref:System.Windows.Automation.AutomationElement> by calling either <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> or <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.</span></span>  
   
- 用戶端可以使用 <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> 方法或個別的 `IsPatternAvailable` 屬性 \(例如，<xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>\) 來判斷 <xref:System.Windows.Automation.AutomationElement> 上是否支援模式或模式群組。 不過，嘗試取得控制項模式和針對 `null` 參考進行測試，比檢查支援的屬性並擷取控制項模式更有效率，因為它會造成較少的跨處理序呼叫。  
+ <span data-ttu-id="050e8-112">用戶端可以使用 <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> 方法或個別的 `IsPatternAvailable` 屬性 (例如， <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) 來判斷 <xref:System.Windows.Automation.AutomationElement>上是否支援模式或模式群組。</span><span class="sxs-lookup"><span data-stu-id="050e8-112">Clients can use the <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> method or an individual `IsPatternAvailable` property (for example, <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) to determine if a pattern or group of patterns is supported on the <xref:System.Windows.Automation.AutomationElement>.</span></span> <span data-ttu-id="050e8-113">不過，嘗試取得控制項模式和針對 `null` 參考進行測試，比檢查支援的屬性並擷取控制項模式更有效率，因為它會造成較少的跨處理序呼叫。</span><span class="sxs-lookup"><span data-stu-id="050e8-113">However, it is more efficient to attempt to get the control pattern and test for a `null` reference than to check the supported properties and retrieve the control pattern since it results in fewer cross-process calls.</span></span>  
   
- 下列範例示範如何從 <xref:System.Windows.Automation.AutomationElement> 取得 <xref:System.Windows.Automation.TextPattern> 控制項模式。  
+ <span data-ttu-id="050e8-114">下列範例示範如何從 <xref:System.Windows.Automation.TextPattern> 取得 <xref:System.Windows.Automation.AutomationElement>控制項模式。</span><span class="sxs-lookup"><span data-stu-id="050e8-114">The following example demonstrates how to get a <xref:System.Windows.Automation.TextPattern> control pattern from an <xref:System.Windows.Automation.AutomationElement>.</span></span>  
   
  [!code-csharp[UIATextPattern_snip#1037](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1037)]  
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
-## 在控制項模式上擷取屬性  
- 用戶端可藉由呼叫 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=fullName> 或 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=fullName>，並將物件轉型成傳回適當的類型，藉此在控制項模式上擷取屬性值。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="retrieving-properties-on-control-patterns"></a><span data-ttu-id="050e8-115">在控制項模式上擷取屬性</span><span class="sxs-lookup"><span data-stu-id="050e8-115">Retrieving Properties on Control Patterns</span></span>  
+ <span data-ttu-id="050e8-116">用戶端可藉由呼叫 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> 或 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>，並將物件轉型成傳回適當的類型，藉此在控制項模式上擷取屬性值。</span><span class="sxs-lookup"><span data-stu-id="050e8-116">Clients can retrieve the property values on control patterns by calling either <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> or <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> and casting the object returned to an appropriate type.</span></span> <span data-ttu-id="050e8-117">如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="050e8-117">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
- 除了 `GetPropertyValue` 方法，可以透過 [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 存取子來擷取屬性值，以存取模式上的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
+ <span data-ttu-id="050e8-118">除了 `GetPropertyValue` 方法，可以透過 [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 存取子來擷取屬性值，以存取模式上的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。</span><span class="sxs-lookup"><span data-stu-id="050e8-118">In addition to the `GetPropertyValue` methods, property values can be retrieved through the [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] accessors to access the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties on a pattern.</span></span>  
   
 <a name="uiautomation_with_variable_patterns"></a>   
-## 包含變數模式的控制項  
- 某些控制項類型支援不同的模式，視其狀態或使用控制項的方式而定。 可以具有變數模式的控制項範例有清單檢視 \(縮圖、圖格、圖示、清單、詳細資料\)、[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 圖表 \(圓形圖、折線圖、橫條圖、包含公式的資料格值\)、[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 的文件區域 \(一般、Web 版面配置、大綱、列印版面配置、預覽列印\) 和 [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] 面板。  
+## <a name="controls-with-variable-patterns"></a><span data-ttu-id="050e8-119">包含變數模式的控制項</span><span class="sxs-lookup"><span data-stu-id="050e8-119">Controls with Variable Patterns</span></span>  
+ <span data-ttu-id="050e8-120">某些控制項類型支援不同的模式，視其狀態或使用控制項的方式而定。</span><span class="sxs-lookup"><span data-stu-id="050e8-120">Some control types support different patterns depending on their state or the manner in which the control is being used.</span></span> <span data-ttu-id="050e8-121">可以具有變數模式的控制項範例有清單檢視 (縮圖、圖格、圖示、清單、詳細資料)、 [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 圖表 (圓形圖、折線圖、橫條圖、包含公式的資料格值)、 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]的文件區域 (一般、Web 版面配置、大綱、列印版面配置、預覽列印) 和 [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] 面板。</span><span class="sxs-lookup"><span data-stu-id="050e8-121">Examples of controls that can have variable patterns are list views (thumbnails, tiles, icons, list, details), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] Charts (Pie, Line, Bar, Cell Value with a formula), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]'s document area (Normal, Web Layout, Outline, Print Layout, Print Preview), and [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] skins.</span></span>  
   
- 實作自訂控制項類型的控制項可以有任何控制項模式組合，它們是代表其功能所需的組合。  
+ <span data-ttu-id="050e8-122">實作自訂控制項類型的控制項可以有任何控制項模式組合，它們是代表其功能所需的組合。</span><span class="sxs-lookup"><span data-stu-id="050e8-122">Controls implementing custom control types can have any set of control patterns that are needed to represent their functionality.</span></span>  
   
-## 請參閱  
- [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)   
- [UI Automation Text Pattern](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)   
- [Invoke a Control Using UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)   
- [Get the Toggle State of a Check Box Using UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)   
- [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)   
- [TextPattern Insert Text Sample](http://msdn.microsoft.com/zh-tw/67353f93-7ee2-42f2-ab76-5c078cf6ca16)   
- [TextPattern Search and Selection Sample](http://msdn.microsoft.com/zh-tw/0a3bca57-8b72-489d-a57c-da85b7a22c7f)   
- [InvokePattern and ExpandCollapsePattern Menu Item Sample](http://msdn.microsoft.com/zh-tw/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+## <a name="see-also"></a><span data-ttu-id="050e8-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="050e8-123">See Also</span></span>  
+ [<span data-ttu-id="050e8-124">使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="050e8-124">UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [<span data-ttu-id="050e8-125">使用者介面自動化文字模式</span><span class="sxs-lookup"><span data-stu-id="050e8-125">UI Automation Text Pattern</span></span>](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
+ [<span data-ttu-id="050e8-126">叫用控制項使用 UI 自動化</span><span class="sxs-lookup"><span data-stu-id="050e8-126">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="050e8-127">取得使用 UI 自動化的核取方塊的切換狀態</span><span class="sxs-lookup"><span data-stu-id="050e8-127">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="050e8-128">UI 自動化用戶端的控制項模式對應</span><span class="sxs-lookup"><span data-stu-id="050e8-128">Control Pattern Mapping for UI Automation Clients</span></span>](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [<span data-ttu-id="050e8-129">TextPattern 插入文字範例</span><span class="sxs-lookup"><span data-stu-id="050e8-129">TextPattern Insert Text Sample</span></span>](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [<span data-ttu-id="050e8-130">TextPattern 搜尋和選取範例</span><span class="sxs-lookup"><span data-stu-id="050e8-130">TextPattern Search and Selection Sample</span></span>](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
+ [<span data-ttu-id="050e8-131">InvokePattern 和 ExpandCollapsePattern 功能表項目範例</span><span class="sxs-lookup"><span data-stu-id="050e8-131">InvokePattern and ExpandCollapsePattern Menu Item Sample</span></span>](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

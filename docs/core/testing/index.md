@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 中的單元測試"
+title: ".NET Core 的單元測試"
 description: "單元測試從未如此輕鬆。 了解如何在 .NET Core 與 .NET Standard 專案中使用單元測試。"
 keywords: ".NET, .NET Core, .NET Standard, 單元測試"
 author: ardalis
@@ -9,47 +9,44 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 9f6a70598f3a0c0e3f479a25171e1deb6abffa33
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="0f9d4-105">.NET Core 與 .NET Standard 中的單元測試</span><span class="sxs-lookup"><span data-stu-id="0f9d4-105">Unit Testing in .NET Core and .NET Standard</span></span>
 
-# <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 與 .NET Standard 中的單元測試
+<span data-ttu-id="0f9d4-106">.NET Core 在設計時就已將可測試性納入考量，因此您可以更輕鬆地針對應用程式建立單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-106">.NET Core has been designed with testability in mind, so that creating unit tests for your applications is easier than ever before.</span></span> <span data-ttu-id="0f9d4-107">這篇文章簡短介紹單元測試，以及它們和其他種類測試之間的差異。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-107">This article briefly introduces unit tests (and how they differ from other kinds of tests).</span></span> <span data-ttu-id="0f9d4-108">連結的資源會示範如何將測試專案加到您的方案，然後使用命令列或 Visual Studio 來執行單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-108">Linked resources demonstrate how to add a test project to your solution and then run unit tests using either the command line or Visual Studio.</span></span>
 
-.NET Core 在設計時就已將可測試性納入考量，因此您可以更輕鬆地針對應用程式建立單元測試。 這篇文章簡短介紹單元測試，以及它們和其他種類測試之間的差異。 連結的資源會示範如何將測試專案加到您的方案，然後使用命令列或 Visual Studio 來執行單元測試。
+<span data-ttu-id="0f9d4-109">.NET Core 2.0 支援 [.NET Standard 2.0](../../standard/net-standard.md)。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-109">.NET Core 2.0 supports [.NET Standard 2.0](../../standard/net-standard.md).</span></span> <span data-ttu-id="0f9d4-110">本節中用來示範單元測試的程式庫仰賴 .NET Standard，而且也能在其他專案類型中運作。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-110">The libraries used to demonstrate unit testing in this section rely on .NET Standard and will work in other project types as well.</span></span>
 
-.NET Core 2.0 支援 [.NET Standard 2.0](../../standard/net-standard.md)。 本節中用來示範單元測試的程式庫仰賴 .NET Standard，而且也能在其他專案類型中運作。
+<span data-ttu-id="0f9d4-111">從 .NET Core 2.0 開始，我們就提供適用於 Visual Basic 以及 F# 和 C# 的單元測試範本。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-111">Beginning with .NET Core 2.0, there are unit test project templates for Visual Basic and F# as well as C#.</span></span>
 
-從 .NET Core 2.0 開始，我們就提供適用於 Visual Basic 以及 F# 和 C# 的單元測試範本。
+## <a name="getting-started-with-testing"></a><span data-ttu-id="0f9d4-112">開始測試</span><span class="sxs-lookup"><span data-stu-id="0f9d4-112">Getting Started with Testing</span></span>
 
-## <a name="getting-started-with-testing"></a>開始測試
-
-最理想的方法是使用自動化的測試套件，以確保軟體應用程式按照作者想要的結果執行。 軟體應用程式測試的種類繁多，包括整合測試、Web 測試、負載測試等等。 測試個別軟體元件或方法的單元測試是最底層的測試。 單元測試應該只測試開發人員控制項內的程式碼，而不應針對基礎結構考量進行測試，例如資料庫、檔案系統或網路資源。 單元測試可能會使用[測試導向開發 (TDD)](http://deviq.com/test-driven-development/) 來撰寫，或新增到現有的程式碼，以確認其正確性。 不論何種情況，單元測試應該是小型、妥善具名且可快速完成，因為在將變更推送到專案的共用程式碼存放庫之前，您可能需要先執行數百次的單元測試。
+<span data-ttu-id="0f9d4-113">最理想的方法是使用自動化的測試套件，以確保軟體應用程式按照作者想要的結果執行。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-113">Having a suite of automated tests is one of the best ways to ensure a software application does what its authors intended it to do.</span></span> <span data-ttu-id="0f9d4-114">軟體應用程式測試的種類繁多，包括整合測試、Web 測試、負載測試等等。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-114">There are different kinds of tests for software applications, including integration tests, web tests, load tests, and others.</span></span> <span data-ttu-id="0f9d4-115">測試個別軟體元件或方法的單元測試是最底層的測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-115">Unit tests that test individual software components or methods are the lowest level tests.</span></span> <span data-ttu-id="0f9d4-116">單元測試應該只測試開發人員控制項內的程式碼，而不應針對基礎結構考量進行測試，例如資料庫、檔案系統或網路資源。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-116">Unit tests should only test code within the developer’s control, and should not test infrastructure concerns, like databases, file systems, or network resources.</span></span> <span data-ttu-id="0f9d4-117">單元測試可能會使用[測試導向開發 (TDD)](http://deviq.com/test-driven-development/) 來進行寫入，或新增到現有的程式碼，以確認其正確性。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-117">Unit tests may be written using [Test Driven Development (TDD)](http://deviq.com/test-driven-development/), or they can be added to existing code to confirm its correctness.</span></span> <span data-ttu-id="0f9d4-118">不論何種情況，單元測試應該是小型、妥善具名且可快速完成，因為在將變更推送到專案的共用程式碼存放庫之前，您可能需要先執行數百次的單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-118">In either case, they should be small, well-named, and fast, since ideally you want to be able to run hundreds of them before pushing your changes into the project’s shared code repository.</span></span>
 
 > [!NOTE]
-> 開發人員經常必須絞盡腦汁才能想出適合其測試類別和方法的名稱。 因此，ASP.NET 產品團隊會遵循[這些慣例](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)以做為起點。
+> <span data-ttu-id="0f9d4-119">開發人員經常必須絞盡腦汁才能想出適合其測試類別和方法的名稱。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-119">Developers often struggle with coming up with good names for their test classes and methods.</span></span> <span data-ttu-id="0f9d4-120">因此，ASP.NET 產品團隊會遵循[這些慣例](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)以做為起點。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-120">As a starting point, the ASP.NET product team follows [these conventions](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).</span></span>
 
-在撰寫單元測試時，務必小心不要導入對基礎結構的相依性。 這些相依性通常會讓測試速度更慢，而且更不可靠，因此應該將其保留到整合測試時進行。 您可以遵循[明確相依性準則](http://deviq.com/explicit-dependencies-principle/) \(英文\) 的內容，在應用程式程式碼中避免這些隱藏的相依性，並使用 [相依性注入](/aspnet/core/fundamentals/dependency-injection) \(英文\) 來要求架構的相依性。 您也可以將單元測試保存在整合測試以外的個別專案中，並確保您的單元測試專案不會參考基礎結構套件，或不具有基礎結構套件的相依性。
+<span data-ttu-id="0f9d4-121">在撰寫單元測試時，務必小心不要在基礎結構中導入相依性。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-121">When writing unit tests, be careful you don’t accidentally introduce dependencies on infrastructure.</span></span> <span data-ttu-id="0f9d4-122">這些相依性通常會讓測試速度更慢，而且更不可靠，因此應該將其保留到整合測試時進行。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-122">These tend to make tests slower and more brittle, and thus should be reserved for integration tests.</span></span> <span data-ttu-id="0f9d4-123">您可以遵循 [Explicit Dependencies Principle](http://deviq.com/explicit-dependencies-principle/) (明確相依性準則) 的內容，在應用程式程式碼中避免這些隱藏的相依性，並使用 [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) (相依性注入) 來要求架構的相依性。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-123">You can avoid these hidden dependencies in your application code by following the [Explicit Dependencies Principle](http://deviq.com/explicit-dependencies-principle/) and using [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) to request your dependencies from the framework.</span></span> <span data-ttu-id="0f9d4-124">您也可以將單元測試保存在整合測試以外的個別專案中，並確保您的單元測試專案不會參考基礎結構套件，或不具有基礎結構套件的相依性。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-124">You can also keep your unit tests in a separate project from your integration tests, and ensure your unit test project doesn’t have references to or dependencies on infrastructure packages.</span></span>
 
-進一步了解 .NET Core 專案的單元測試：
+<span data-ttu-id="0f9d4-125">進一步了解 .NET Core 專案的單元測試：</span><span class="sxs-lookup"><span data-stu-id="0f9d4-125">Learn more about unit testing in .NET Core projects:</span></span>
 
-[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 與 [Visual Basic](../../visual-basic/index.md) 都支援適用於 .NET Core 的單元測試專案。 您也可以選擇 [xUnit](http://xunit.github.io) 或 [MSTest](https://github.com/Microsoft/vstest-docs)。
+<span data-ttu-id="0f9d4-126">[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 與 [Visual Basic](../../visual-basic/index.md) 都支援適用於 .NET Core 的單元測試專案。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-126">Unit Test projects for .NET Core are supported for [C#](../../csharp/index.md), [F#](../../fsharp/index.md) and [Visual Basic](../../visual-basic/index.md).</span></span> <span data-ttu-id="0f9d4-127">您也可以選擇 [xUnit](http://xunit.github.io) 或 [MSTest](https://github.com/Microsoft/vstest-docs)。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-127">You can also choose between [xUnit](http://xunit.github.io) and [MSTest](https://github.com/Microsoft/vstest-docs).</span></span>
 
-您可以在這些逐步解說中了解那些組合：
+<span data-ttu-id="0f9d4-128">您可以在這些逐步解說中了解那些組合：</span><span class="sxs-lookup"><span data-stu-id="0f9d4-128">You can read about those combinations in these walkthroughs:</span></span>
 
-* 使用 [*XUnit* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-dotnet-test.md) 來建立單元測試。
-* 使用 [*MSTest* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-mstest.md) 來建立單元測試。
-* 使用 [*XUnit* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md) 來建立單元測試。
-* 使用 [*MSTest* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-mstest.md) 來建立單元測試。
-* 使用 [*XUnit* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md) 來建立單元測試。
-* 使用 [*MSTest* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-mstest.md) 來建立單元測試。
+* <span data-ttu-id="0f9d4-129">使用 [*XUnit* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-dotnet-test.md) 來建立單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-129">Create unit tests using [*XUnit* and *C#* with the .NET Core CLI](unit-testing-with-dotnet-test.md).</span></span>
+* <span data-ttu-id="0f9d4-130">使用 [*MSTest* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-mstest.md) 來建立單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-130">Create unit tests using [*MSTest* and *C#* with the .NET Core CLI](unit-testing-with-mstest.md).</span></span>
+* <span data-ttu-id="0f9d4-131">使用 [*XUnit* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md) 來建立單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-131">Create unit tests using [*XUnit* and *F#* with the .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md).</span></span>
+* <span data-ttu-id="0f9d4-132">使用 [*MSTest* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-mstest.md) 來建立單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-132">Create unit tests using [*MSTest* and *F#* with the .NET Core CLI](unit-testing-fsharp-with-mstest.md).</span></span>
+* <span data-ttu-id="0f9d4-133">使用 [*XUnit* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md) 來建立單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-133">Create unit tests using [*XUnit* and *Visual Basic* with the .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md).</span></span>
+* <span data-ttu-id="0f9d4-134">使用 [*MSTest* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-mstest.md) 來建立單元測試。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-134">Create unit tests using [*MSTest* and *Visual Basic* with the .NET Core CLI](unit-testing-visual-basic-with-mstest.md).</span></span>
 
-您可以為您的類別庫與您的單元測試庫選擇不同的語言。 您可以透過混合並比對上面提及的逐步解說來了解如何進行。
+<span data-ttu-id="0f9d4-135">您可以為您的類別庫與您的單元測試庫選擇不同的語言。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-135">You can choose different languages for your class libraries and your unit test libraries.</span></span> <span data-ttu-id="0f9d4-136">您可以透過混合並比對上面提及的逐步解說來了解如何進行。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-136">You can learn how by mixing and matching the walkthroughs referenced above.</span></span>
 
-* 若使用 Visual Studio，只要參閱 [.NET Core 中的即時單元測試](/visualstudio/test/live-unit-testing)
-* 如需如何使用選擇性單元測試篩選的其他資訊與範例，請參閱[執行選擇性單元測試](selective-unit-tests.md)或[使用 Visual Studio 來包含及排除測試](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods)。
-* XUnit 小組已撰寫本教學課程以說明[如何在 .NET Core 和 Visual Studio 中搭配使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
-
+* <span data-ttu-id="0f9d4-137">若使用 Visual Studio，只要參閱 [.NET Core 中的即時單元測試](/visualstudio/test/live-unit-testing)</span><span class="sxs-lookup"><span data-stu-id="0f9d4-137">If you are using Visual Studio, just see [Live Unit Testing in .NET Core](/visualstudio/test/live-unit-testing)</span></span>
+* <span data-ttu-id="0f9d4-138">如需如何使用選擇性單元測試篩選的其他資訊與範例，請參閱[執行選擇性單元測試](selective-unit-tests.md)或[使用 Visual Studio 來包含及排除測試](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods)。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-138">For additional information and examples on how to use selective unit test filtering, see [Running selective unit tests](selective-unit-tests.md), or [including and excluding tests with Visual Studio](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods).</span></span>
+* <span data-ttu-id="0f9d4-139">XUnit 小組已撰寫本教學課程以說明[如何在 .NET Core 和 Visual Studio 中搭配使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-139">The XUnit team has written a tutorial that shows [how to use xUnit with .NET Core and Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).</span></span>

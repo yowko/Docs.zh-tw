@@ -1,58 +1,38 @@
 ---
 title: "如何：在查詢運算式中使用隱含類型區域變數和陣列 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- implicitly-typed local variables [C#], how to use
+helpviewer_keywords: implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 754698fc423fb2dfc9bf50ed15be610831cefeda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 60e22aacef05ae2fe1b5e7127396cc66f24661d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>如何：在查詢運算式中使用隱含類型區域變數和陣列 (C# 程式設計手冊)
-每次您希望編譯器判斷區域變數的類型時，可以使用隱含型別區域變數。 您必須使用隱含型別區域變數來儲存查詢運算式中常用的匿名型別。 下列範例說明在查詢中選擇性使用和必須使用隱含型別區域變數的情況。  
+# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a><span data-ttu-id="a3816-102">如何：在查詢運算式中使用隱含類型區域變數和陣列 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="a3816-102">How to: Use Implicitly Typed Local Variables and Arrays in a Query Expression (C# Programming Guide)</span></span>
+<span data-ttu-id="a3816-103">每次您希望編譯器判斷區域變數的類型時，可以使用隱含型別區域變數。</span><span class="sxs-lookup"><span data-stu-id="a3816-103">You can use implicitly typed local variables whenever you want the compiler to determine the type of a local variable.</span></span> <span data-ttu-id="a3816-104">您必須使用隱含型別區域變數來儲存查詢運算式中常用的匿名型別。</span><span class="sxs-lookup"><span data-stu-id="a3816-104">You must use implicitly typed local variables to store anonymous types, which are often used in query expressions.</span></span> <span data-ttu-id="a3816-105">下列範例說明在查詢中選擇性使用和必須使用隱含型別區域變數的情況。</span><span class="sxs-lookup"><span data-stu-id="a3816-105">The following examples illustrate both optional and required uses of implicitly typed local variables in queries.</span></span>  
   
- 隱含型別區域變數是透過 [var](../../../csharp/language-reference/keywords/var.md) 內容關鍵字宣告。 如需詳細資訊，請參閱[隱含型別區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)和[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
+ <span data-ttu-id="a3816-106">隱含型別區域變數是透過 [var](../../../csharp/language-reference/keywords/var.md) 內容關鍵字宣告。</span><span class="sxs-lookup"><span data-stu-id="a3816-106">Implicitly typed local variables are declared by using the [var](../../../csharp/language-reference/keywords/var.md) contextual keyword.</span></span> <span data-ttu-id="a3816-107">如需詳細資訊，請參閱[隱含型別區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)和[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。</span><span class="sxs-lookup"><span data-stu-id="a3816-107">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) and [Implicitly Typed Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例顯示需要 `var` 關鍵字的常見案例：產生一系列匿名型別的查詢運算式。 在此案例中，`foreach` 陳述式中的查詢變數和反覆運算變數都必須使用 `var` 來隱含輸入，因為您無法存取匿名型別的類型名稱。 如需匿名型別的詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
+## <a name="example"></a><span data-ttu-id="a3816-108">範例</span><span class="sxs-lookup"><span data-stu-id="a3816-108">Example</span></span>  
+ <span data-ttu-id="a3816-109">下列範例顯示需要 `var` 關鍵字的常見案例：產生一系列匿名型別的查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="a3816-109">The following example shows a common scenario in which the `var` keyword is required: a query expression that produces a sequence of anonymous types.</span></span> <span data-ttu-id="a3816-110">在此案例中，`foreach` 陳述式中的查詢變數和反覆運算變數都必須使用 `var` 來隱含輸入，因為您無法存取匿名型別的類型名稱。</span><span class="sxs-lookup"><span data-stu-id="a3816-110">In this scenario, both the query variable and the iteration variable in the `foreach` statement must be implicitly typed by using `var` because you do not have access to a type name for the anonymous type.</span></span> <span data-ttu-id="a3816-111">如需匿名型別的詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="a3816-111">For more information about anonymous types, see [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
- [!code-cs[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_1.cs)]  
   
-## <a name="example"></a>範例  
- 下列範例會在類似情況下使用 `var` 關鍵字，但可選擇是否使用 `var`。 因為 `student.LastName` 是字串，所以執行查詢會傳回一系列的字串。 因此，`queryID` 的類型會宣告為 `System.Collections.Generic.IEnumerable<string>`，而不是 `var`。 關鍵字 `var` 是為了方便起見。 在範例中，`foreach` 陳述式中的反覆運算變數明確輸入為字串，但它可以改為使用 `var` 來宣告。 因為反覆運算變數的類型不是匿名型別，所以使用 `var` 是選項而非需求。 請記住，`var` 本身不是類型，而是編譯器用來推斷和指派類型的指令。  
+## <a name="example"></a><span data-ttu-id="a3816-112">範例</span><span class="sxs-lookup"><span data-stu-id="a3816-112">Example</span></span>  
+ <span data-ttu-id="a3816-113">下列範例會在類似情況下使用 `var` 關鍵字，但可選擇是否使用 `var`。</span><span class="sxs-lookup"><span data-stu-id="a3816-113">The following example uses the `var` keyword in a situation that is similar, but in which the use of `var` is optional.</span></span> <span data-ttu-id="a3816-114">因為 `student.LastName` 是字串，所以執行查詢會傳回一系列的字串。</span><span class="sxs-lookup"><span data-stu-id="a3816-114">Because `student.LastName` is a string, execution of the query returns a sequence of strings.</span></span> <span data-ttu-id="a3816-115">因此，`queryID` 的類型會宣告為 `System.Collections.Generic.IEnumerable<string>`，而不是 `var`。</span><span class="sxs-lookup"><span data-stu-id="a3816-115">Therefore, the type of `queryID` could be declared as `System.Collections.Generic.IEnumerable<string>` instead of `var`.</span></span> <span data-ttu-id="a3816-116">關鍵字 `var` 是為了方便起見。</span><span class="sxs-lookup"><span data-stu-id="a3816-116">Keyword `var` is used for convenience.</span></span> <span data-ttu-id="a3816-117">在範例中，`foreach` 陳述式中的反覆運算變數明確輸入為字串，但它可以改為使用 `var` 來宣告。</span><span class="sxs-lookup"><span data-stu-id="a3816-117">In the example, the iteration variable in the `foreach` statement is explicitly typed as a string, but it could instead be declared by using `var`.</span></span> <span data-ttu-id="a3816-118">因為反覆運算變數的類型不是匿名型別，所以使用 `var` 是選項而非需求。</span><span class="sxs-lookup"><span data-stu-id="a3816-118">Because the type of the iteration variable is not an anonymous type, the use of `var` is an option, not a requirement.</span></span> <span data-ttu-id="a3816-119">請記住，`var` 本身不是類型，而是編譯器用來推斷和指派類型的指令。</span><span class="sxs-lookup"><span data-stu-id="a3816-119">Remember, `var` itself is not a type, but an instruction to the compiler to infer and assign the type.</span></span>  
   
- [!code-cs[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [var](../../../csharp/language-reference/keywords/var.md)   
- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="a3816-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a3816-120">See Also</span></span>  
+ [<span data-ttu-id="a3816-121">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="a3816-121">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="a3816-122">擴充方法</span><span class="sxs-lookup"><span data-stu-id="a3816-122">Extension Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [<span data-ttu-id="a3816-123">LINQ (Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="a3816-123">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [<span data-ttu-id="a3816-124">var</span><span class="sxs-lookup"><span data-stu-id="a3816-124">var</span></span>](../../../csharp/language-reference/keywords/var.md)  
+ [<span data-ttu-id="a3816-125">LINQ 查詢運算式</span><span class="sxs-lookup"><span data-stu-id="a3816-125">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)

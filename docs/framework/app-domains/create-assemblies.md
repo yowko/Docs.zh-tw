@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,51 +14,49 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f5aa4b8fa5422ae126a6027c5fe3358925873782
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 583c448bd939cd4d1d16bff372afff4172dcf985
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 建立組件
-您可以使用整合式開發環境 \(IDE\) \(例如 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]\) 或是 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 所提供的編譯器和工具來建立單一檔案或多檔案的組件。  最簡易的組件即為具有簡式名稱、且已載入單一應用程式定義域的單一檔案。  這個組件無法由應用程式目錄以外的其他組件存取，而且無法進行版本檢查。  如果要解除安裝由組件所組成的應用程式，您只要刪除該應用程式所在的目錄即可。  對許多開發人員而言，他們只需要具有這些功能的組件便可完成部署應用程式。  
+# <a name="creating-assemblies"></a><span data-ttu-id="9b41a-102">建立組件</span><span class="sxs-lookup"><span data-stu-id="9b41a-102">Creating Assemblies</span></span>
+<span data-ttu-id="9b41a-103">您可以使用 IDE (例如 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]) 或 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 所提供的編譯器和工具來建立單一檔案或多檔案組件。</span><span class="sxs-lookup"><span data-stu-id="9b41a-103">You can create single-file or multifile assemblies using an IDE, such as [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], or the compilers and tools provided by the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span></span> <span data-ttu-id="9b41a-104">最簡單的組件是單一檔案，其具有簡單名稱並載入到單一應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="9b41a-104">The simplest assembly is a single file that has a simple name and is loaded into a single application domain.</span></span> <span data-ttu-id="9b41a-105">這個組件無法供應用程式目錄外部的其他組件參考，而且不會進行版本檢查。</span><span class="sxs-lookup"><span data-stu-id="9b41a-105">This assembly cannot be referenced by other assemblies outside the application directory and does not undergo version checking.</span></span> <span data-ttu-id="9b41a-106">若要解除安裝構成組件的應用程式，您只需要刪除其所在的目錄。</span><span class="sxs-lookup"><span data-stu-id="9b41a-106">To uninstall the application made up of the assembly, you simply delete the directory where it resides.</span></span> <span data-ttu-id="9b41a-107">對許多開發人員而言，具有這些功能的組件就是部署應用程式所需的項目。</span><span class="sxs-lookup"><span data-stu-id="9b41a-107">For many developers, an assembly with these features is all that is needed to deploy an application.</span></span>  
   
- 您可以從數個程式碼模組和資訊檔建立多檔案組件。  您也可以建立可由多重應用程式共用的組件。  共用組件必須具有強式名稱，並可部署在全域組件快取中。  
+ <span data-ttu-id="9b41a-108">您可以從數個程式碼模組和資源檔建立多檔案組件。</span><span class="sxs-lookup"><span data-stu-id="9b41a-108">You can create a multifile assembly from several code modules and resource files.</span></span> <span data-ttu-id="9b41a-109">您也可以建立可供多個應用程式共用的組件。</span><span class="sxs-lookup"><span data-stu-id="9b41a-109">You can also create an assembly that can be shared by multiple applications.</span></span> <span data-ttu-id="9b41a-110">共用組件必須有強式名稱，而且可以部署在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="9b41a-110">A shared assembly must have a strong name and can be deployed in the global assembly cache.</span></span>  
   
- 當您將程式碼模組和資源分組成為組件時，您將根據下列因素可使用數個選項：  
+ <span data-ttu-id="9b41a-111">根據下列因素，將程式碼模組和資源群組成組件時，您會有數個選項：</span><span class="sxs-lookup"><span data-stu-id="9b41a-111">You have several options when grouping code modules and resources into assemblies, depending on the following factors:</span></span>  
   
--   版本控制  
+-   <span data-ttu-id="9b41a-112">版本控制</span><span class="sxs-lookup"><span data-stu-id="9b41a-112">Versioning</span></span>  
   
-     擁有相同版本資訊的群組模組。  
+     <span data-ttu-id="9b41a-113">應該具有相同版本資訊的群組模組。</span><span class="sxs-lookup"><span data-stu-id="9b41a-113">Group modules that should have the same version information.</span></span>  
   
--   部署  
+-   <span data-ttu-id="9b41a-114">部署</span><span class="sxs-lookup"><span data-stu-id="9b41a-114">Deployment</span></span>  
   
-     支援您部署模型的群組程式碼模組和資源。  
+     <span data-ttu-id="9b41a-115">支援您部署模型的群組程式碼模組和資源。</span><span class="sxs-lookup"><span data-stu-id="9b41a-115">Group code modules and resources that support your model of deployment.</span></span>  
   
--   重覆使用  
+-   <span data-ttu-id="9b41a-116">重複使用</span><span class="sxs-lookup"><span data-stu-id="9b41a-116">Reuse</span></span>  
   
-     群組模組，如果該群組模組因某些原因而同時邏輯式使用。  例如，由型別和類別組成、且不常用來進行程式維護的組件將可放入相同的組件中。  此外，您應將要用來與多重應用程式共用的型別分組成為組件，而該組件則應使用強式名稱簽名。  
+     <span data-ttu-id="9b41a-117">可透過邏輯方式一起用於某個目的的群組模組。</span><span class="sxs-lookup"><span data-stu-id="9b41a-117">Group modules if they can be logically used together for some purpose.</span></span> <span data-ttu-id="9b41a-118">例如，包含不常用於程式維護之類型和類別的組件可以放在相同的組件中。</span><span class="sxs-lookup"><span data-stu-id="9b41a-118">For example, an assembly consisting of types and classes used infrequently for program maintenance can be put in the same assembly.</span></span> <span data-ttu-id="9b41a-119">此外，您想要與多個應用程式共用的類型應該群組為組件，並且應該使用強式名稱來簽署組件。</span><span class="sxs-lookup"><span data-stu-id="9b41a-119">In addition, types that you intend to share with multiple applications should be grouped into an assembly and the assembly should be signed with a strong name.</span></span>  
   
--   安全性  
+-   <span data-ttu-id="9b41a-120">安全性</span><span class="sxs-lookup"><span data-stu-id="9b41a-120">Security</span></span>  
   
-     群組模組，需要相同的安全性使用權限且含有型別。  
+     <span data-ttu-id="9b41a-121">包含需要相同安全性權限之類型的群組模組。</span><span class="sxs-lookup"><span data-stu-id="9b41a-121">Group modules containing types that require the same security permissions.</span></span>  
   
--   範圍  
+-   <span data-ttu-id="9b41a-122">範圍設定</span><span class="sxs-lookup"><span data-stu-id="9b41a-122">Scoping</span></span>  
   
-     含有型別的群組模組，其可視性應限制為相同的組件。  
+     <span data-ttu-id="9b41a-123">包含其可視性應該限制為相同組件之類型的群組模組。</span><span class="sxs-lookup"><span data-stu-id="9b41a-123">Group modules containing types whose visibility should be restricted to the same assembly.</span></span>  
   
- 當您將 Common Language Runtime 組件變成 Unmanaged COM 應用程式時，您必須注意某些特殊考量。  如需使用 Unmanaged 程式碼的詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)。  
+ <span data-ttu-id="9b41a-124">讓 Unmanaged COM 應用程式使用 Common Language Runtime 組件時，必須進行特殊考量。</span><span class="sxs-lookup"><span data-stu-id="9b41a-124">Special considerations must be made when making common language runtime assemblies available to unmanaged COM applications.</span></span> <span data-ttu-id="9b41a-125">如需使用 Unmanaged 程式碼的詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)。</span><span class="sxs-lookup"><span data-stu-id="9b41a-125">For more information about working with unmanaged code, see [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).</span></span>  
   
-## 請參閱  
- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)   
- [如何：建置單一檔案組件](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   
- [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)
-
+## <a name="see-also"></a><span data-ttu-id="9b41a-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9b41a-126">See Also</span></span>  
+ [<span data-ttu-id="9b41a-127">使用組件設計程式</span><span class="sxs-lookup"><span data-stu-id="9b41a-127">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="9b41a-128">組件版本控制</span><span class="sxs-lookup"><span data-stu-id="9b41a-128">Assembly Versioning</span></span>](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [<span data-ttu-id="9b41a-129">操作說明：建置單一檔案組件</span><span class="sxs-lookup"><span data-stu-id="9b41a-129">How to: Build a Single-File Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+ [<span data-ttu-id="9b41a-130">操作說明：建置多檔案組件</span><span class="sxs-lookup"><span data-stu-id="9b41a-130">How to: Build a Multifile Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [<span data-ttu-id="9b41a-131">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="9b41a-131">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="9b41a-132">多檔案組件</span><span class="sxs-lookup"><span data-stu-id="9b41a-132">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)

@@ -1,36 +1,42 @@
 ---
-title: "Expose the Content of a Table Using UI Automation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tables, exposing content of"
-  - "UI Automation, exposing content of tables"
-  - "exposing content of tables using UI Automation"
+title: "利用 UI 自動化公開資料表的內容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- tables, exposing content of
+- UI Automation, exposing content of tables
+- exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-caps.latest.revision: 12
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 61e403025ad15b05f3658be7a924b28b18867688
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Expose the Content of a Table Using UI Automation
+# <a name="expose-the-content-of-a-table-using-ui-automation"></a><span data-ttu-id="bfc29-102">利用 UI 自動化公開資料表的內容</span><span class="sxs-lookup"><span data-stu-id="bfc29-102">Expose the Content of a Table Using UI Automation</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。  如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746) \(英文\)。  
+>  <span data-ttu-id="bfc29-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="bfc29-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="bfc29-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="bfc29-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題說明如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]，以公開表格式控制項內每一個儲存格的內容及內建屬性。  
+ <span data-ttu-id="bfc29-105">本主題說明如何[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]可以用來公開在表格式控制項內的每個資料格的內容和內建屬性。</span><span class="sxs-lookup"><span data-stu-id="bfc29-105">This topic shows how [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] can be used to expose the content and intrinsic properties of each cell within a tabular control.</span></span>  
   
-## 範例  
- 下列程式碼範例說明如何取得代表表格儲存格內容的 <xref:System.Windows.Automation.AutomationElement>，同時也會取得儲存格屬性，如資料列與資料行索引、資料列與資料行跨距，以及資料列與資料行行首資訊。  本範例使用焦點變更事件處理常式，以模擬實作 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的表格式控制項之鍵盤來回移動。  每一個表格項目的資訊都會公開在焦點變更事件上。  
+## <a name="example"></a><span data-ttu-id="bfc29-106">範例</span><span class="sxs-lookup"><span data-stu-id="bfc29-106">Example</span></span>  
+ <span data-ttu-id="bfc29-107">下列程式碼範例示範如何取得<xref:System.Windows.Automation.AutomationElement>表示表格儲存格的內容，則也會取得儲存格內容，例如資料列和資料行的索引、 資料列和資料範圍和資料列和資料行的標頭資訊。</span><span class="sxs-lookup"><span data-stu-id="bfc29-107">The following code example demonstrates how to obtain a <xref:System.Windows.Automation.AutomationElement> that represents the content of a table cell; cell properties such as row and column indices, row and column spans, and row and column header information are also obtained.</span></span> <span data-ttu-id="bfc29-108">此範例使用的焦點變更事件處理常式來模擬鍵盤周遊實作表格控制項[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bfc29-108">This example uses a focus change event handler to simulate keyboard traversal of a tabular control that implements [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].</span></span> <span data-ttu-id="bfc29-109">焦點變更事件上公開的每個資料表項目資訊。</span><span class="sxs-lookup"><span data-stu-id="bfc29-109">Information for each table item is exposed on a focus change event.</span></span>  
   
 > [!NOTE]
->  由於焦點變更是全域桌面事件，所以必須篩選表格以外的焦點變更事件。  如需相關的實作，請參閱 [TrackFocus Sample](http://msdn.microsoft.com/zh-tw/4a91c0af-6bb5-4d38-a743-cf136f268fc9)。  
+>  <span data-ttu-id="bfc29-110">由於焦點變更全域桌面的事件，應篩選至資料表外部的焦點變更事件。</span><span class="sxs-lookup"><span data-stu-id="bfc29-110">Since focus changes are global desktop events, focus change events outside the table should be filtered.</span></span> <span data-ttu-id="bfc29-111">請參閱[TrackFocus 範例](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9)相關的實作。</span><span class="sxs-lookup"><span data-stu-id="bfc29-111">See the [TrackFocus Sample](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9) for a related implementation.</span></span>  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  
@@ -45,10 +51,10 @@ caps.handback.revision: 12
 [!code-csharp[UIATableItemPattern_snip#103](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
 [!code-vb[UIATableItemPattern_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
   
-## 請參閱  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Implementing the UI Automation Table Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)   
- [Implementing the UI Automation TableItem Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)   
- [Implementing the UI Automation Grid Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)   
- [Implementing the UI Automation GridItem Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)
+## <a name="see-also"></a><span data-ttu-id="bfc29-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bfc29-112">See Also</span></span>  
+ [<span data-ttu-id="bfc29-113">UI 自動化控制項模式概觀</span><span class="sxs-lookup"><span data-stu-id="bfc29-113">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="bfc29-114">用戶端的 UI 自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="bfc29-114">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="bfc29-115">實作 UI 自動化 Table 控制項模式</span><span class="sxs-lookup"><span data-stu-id="bfc29-115">Implementing the UI Automation Table Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
+ [<span data-ttu-id="bfc29-116">實作 UI 自動化 TableItem 控制項模式</span><span class="sxs-lookup"><span data-stu-id="bfc29-116">Implementing the UI Automation TableItem Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [<span data-ttu-id="bfc29-117">實作 UI 自動化 Grid 控制項模式</span><span class="sxs-lookup"><span data-stu-id="bfc29-117">Implementing the UI Automation Grid Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
+ [<span data-ttu-id="bfc29-118">實作 UI 自動化 GridItem 控制項模式</span><span class="sxs-lookup"><span data-stu-id="bfc29-118">Implementing the UI Automation GridItem Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)

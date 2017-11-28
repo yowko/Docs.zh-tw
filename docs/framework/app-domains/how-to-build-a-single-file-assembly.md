@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
 - library assemblies
@@ -18,34 +20,33 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: dd4472587cabc0ebfb2cb64e0bdc15a8d4778507
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：建置單一檔案組件
-單一檔案組件為最簡單的組件型別，含有型別資訊和實作 \(Implementation\) 和[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。  您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 來建立單一檔案組件。  根據預設，編譯器會建立具有 .exe 副檔名的組件檔案。  
+# <a name="how-to-build-a-single-file-assembly"></a><span data-ttu-id="ef1ba-102">如何：建置單一檔案組件</span><span class="sxs-lookup"><span data-stu-id="ef1ba-102">How to: Build a Single-File Assembly</span></span>
+<span data-ttu-id="ef1ba-103">單一檔案組件，是最簡單的組件類型，包含類型資訊和實作，以及[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-103">A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md).</span></span> <span data-ttu-id="ef1ba-104">您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 來建立單一檔案組件。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-104">You can use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly.</span></span> <span data-ttu-id="ef1ba-105">編譯器預設會建立副檔名為 .exe 的組件檔案。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-105">By default, the compiler creates an assembly file with an .exe extension.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for C\# 和 Visual Basic 只能用來建立單一檔案組件。  如果您想建立多檔案的組件，必須使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C\+\+。  
+>  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]<span data-ttu-id="ef1ba-106"> for C# 和 Visual Basic 只能用於建立單一檔案組件。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-106"> for C# and Visual Basic can be used only to create single-file assemblies.</span></span> <span data-ttu-id="ef1ba-107">如想建立多檔案組件，您必須使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-107">If you want to create multifile assemblies, you must use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++.</span></span>  
   
- 下列程序將說明如何使用命令列編譯器來建立單一檔案組件。  
+ <span data-ttu-id="ef1ba-108">下列程序示範如何使用命令列編譯器建立單一檔案組件。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-108">The following procedures show how to create single-file assemblies using command-line compilers.</span></span>  
   
-### 若要建立具有 .exe 副檔名的組件  
+### <a name="to-create-an-assembly-with-an-exe-extension"></a><span data-ttu-id="ef1ba-109">建立副檔名為 .exe 的組件</span><span class="sxs-lookup"><span data-stu-id="ef1ba-109">To create an assembly with an .exe extension</span></span>  
   
-1.  在命令提示字元中輸入下列命令：  
+1.  <span data-ttu-id="ef1ba-110">在命令提示字元中輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="ef1ba-110">At the command prompt, type the following command:</span></span>  
   
-     \<*compiler command*\> \<*module name*\>  
+     <span data-ttu-id="ef1ba-111">\<*編譯器命令*> \<*模組名稱*></span><span class="sxs-lookup"><span data-stu-id="ef1ba-111">\<*compiler command*> \<*module name*></span></span>  
   
-     在這個命令中，*compiler command* 是您程式碼模組中使用的語言編譯器命令，而 *module name* 則是編譯到組件的程式碼模組名稱。  
+     <span data-ttu-id="ef1ba-112">在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令，而「模組名稱」則是編譯至組件的程式碼模組名稱。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-112">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span>  
   
- 下列範例會從名為 `myCode` 的程式碼模組，建立名為 `myCode.exe` 的組件。  
+ <span data-ttu-id="ef1ba-113">以下範例會從稱為 `myCode` 的程式碼模組建立名為 `myCode.exe` 的組件。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-113">The following example creates an assembly named `myCode.exe` from a code module called `myCode`.</span></span>  
   
 ```csharp  
 csc myCode.cs  
@@ -55,15 +56,15 @@ csc myCode.cs
 vbc myCode.vb  
 ```  
   
-#### 若要建立副檔名為 .exe 的組件並指定輸出檔名  
+#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a><span data-ttu-id="ef1ba-114">建立副檔名為 .exe 的組件並指定輸出檔名稱</span><span class="sxs-lookup"><span data-stu-id="ef1ba-114">To create an assembly with an .exe extension and specify the output file name</span></span>  
   
-1.  在命令提示字元中輸入下列命令：  
+1.  <span data-ttu-id="ef1ba-115">在命令提示字元中輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="ef1ba-115">At the command prompt, type the following command:</span></span>  
   
-     \<*compiler command*\> **\/out:**\<*file name*\> \<*module name*\>  
+     <span data-ttu-id="ef1ba-116">\<*編譯器命令*> **/out:**\<*檔案名稱*> \<*模組名稱*></span><span class="sxs-lookup"><span data-stu-id="ef1ba-116">\<*compiler command*> **/out:**\<*file name*> \<*module name*></span></span>  
   
-     在這個命令中，*compiler command* 是您程式碼模組中使用的語言編譯器命令、*file name* 是輸出檔名，而 *module name* 則是編譯到組件的程式碼模組名稱。  
+     <span data-ttu-id="ef1ba-117">在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令、「檔案名稱」是輸出檔名稱，而「模組名稱」則是編譯至組件的程式碼模組名稱。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-117">In this command, *compiler command* is the compiler command for the language used in your code module, *file name* is the output file name, and *module name* is the name of the code module to compile into the assembly.</span></span>  
   
- 下列範例會從名稱為 `myCode` 的程式碼模組，建立命名為 `myAssembly.exe` 組件。  
+ <span data-ttu-id="ef1ba-118">以下範例會從稱為 `myCode` 的程式碼模組建立名為 `myAssembly.exe` 的組件。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-118">The following example creates an assembly named `myAssembly.exe` from a code module called `myCode`.</span></span>  
   
 ```csharp  
 csc /out:myAssembly.exe myCode.cs  
@@ -73,18 +74,18 @@ csc /out:myAssembly.exe myCode.cs
 vbc /out:myAssembly.exe myCode.vb  
 ```  
   
-## 建立程式庫組件  
- 程式庫組件與類別庫相似。  它含有供其他組件參考的型別，但沒有可開始執行的進入點。  
+## <a name="creating-library-assemblies"></a><span data-ttu-id="ef1ba-119">建立程式庫組件</span><span class="sxs-lookup"><span data-stu-id="ef1ba-119">Creating Library Assemblies</span></span>  
+ <span data-ttu-id="ef1ba-120">程式庫組件類似類別庫。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-120">A library assembly is similar to a class library.</span></span> <span data-ttu-id="ef1ba-121">它包含其他組件會參考的類型，但沒有可開始執行的進入點。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-121">It contains types that will be referenced by other assemblies, but it has no entry point to begin execution.</span></span>  
   
-#### 若要建立程式庫組件  
+#### <a name="to-create-a-library-assembly"></a><span data-ttu-id="ef1ba-122">建立程式庫組件</span><span class="sxs-lookup"><span data-stu-id="ef1ba-122">To create a library assembly</span></span>  
   
-1.  在命令提示字元中輸入下列命令：  
+1.  <span data-ttu-id="ef1ba-123">在命令提示字元中輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="ef1ba-123">At the command prompt, type the following command:</span></span>  
   
-     \<*compiler command*\> **\/t:library** \<*module name*\>  
+     <span data-ttu-id="ef1ba-124">\<*編譯器命令*> **/t:library** \<*模組名稱*></span><span class="sxs-lookup"><span data-stu-id="ef1ba-124">\<*compiler command*> **/t:library** \<*module name*></span></span>  
   
-     在這個命令中，*compiler command* 是您程式碼模組中使用的語言編譯器命令，而 *module name* 則是編譯到組件的程式碼模組名稱。  您也可以使用其他的編譯器選項，例如 **\/out:** 選項。  
+     <span data-ttu-id="ef1ba-125">在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令，而「模組名稱」則是編譯至組件的程式碼模組名稱。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-125">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span> <span data-ttu-id="ef1ba-126">您也可以使用其他編譯器選項，例如 **/out:** 選項。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-126">You can also use other compiler options, such as the **/out:** option.</span></span>  
   
- 下列範例從 `myCode` 程式庫模組建立 `myCodeAssembly.dll` 程式庫組件。  
+ <span data-ttu-id="ef1ba-127">以下範例會從稱為 `myCode` 的程式碼模組建立名為 `myCodeAssembly.dll` 的程式庫組件。</span><span class="sxs-lookup"><span data-stu-id="ef1ba-127">The following example creates a library assembly named `myCodeAssembly.dll` from a code module called `myCode`.</span></span>  
   
 ```csharp  
 csc /out:myCodeLibrary.dll /t:library myCode.cs  
@@ -94,9 +95,8 @@ csc /out:myCodeLibrary.dll /t:library myCode.cs
 vbc /out:myCodeLibrary.dll /t:library myCode.vb  
 ```  
   
-## 請參閱  
- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
- [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)   
- [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
-
+## <a name="see-also"></a><span data-ttu-id="ef1ba-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ef1ba-128">See Also</span></span>  
+ [<span data-ttu-id="ef1ba-129">建立組件</span><span class="sxs-lookup"><span data-stu-id="ef1ba-129">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
+ [<span data-ttu-id="ef1ba-130">多檔案組件</span><span class="sxs-lookup"><span data-stu-id="ef1ba-130">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)  
+ [<span data-ttu-id="ef1ba-131">操作說明：建置多檔案組件</span><span class="sxs-lookup"><span data-stu-id="ef1ba-131">How to: Build a Multifile Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [<span data-ttu-id="ef1ba-132">使用組件設計程式</span><span class="sxs-lookup"><span data-stu-id="ef1ba-132">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)

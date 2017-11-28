@@ -1,74 +1,80 @@
 ---
-title: "&lt;serviceDiscovery&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;serviceDiscovery&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c371455767b912bd124c2207a1cc29b8ead71cb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;serviceDiscovery&gt;
-指定服務端點的探索能力。  
+# <a name="ltservicediscoverygt"></a><span data-ttu-id="c6135-102">&lt;serviceDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="c6135-102">&lt;serviceDiscovery&gt;</span></span>
+<span data-ttu-id="c6135-103">指定服務端點的探索能力。</span><span class="sxs-lookup"><span data-stu-id="c6135-103">Specifies the discoverability of service endpoints.</span></span>  
   
-## 語法  
+ <span data-ttu-id="c6135-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c6135-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c6135-105">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="c6135-105">\<behaviors></span></span>  
+<span data-ttu-id="c6135-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="c6135-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="c6135-107">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="c6135-107">\<behavior></span></span>  
+<span data-ttu-id="c6135-108">\<serviceDiscovery ></span><span class="sxs-lookup"><span data-stu-id="c6135-108">\<serviceDiscovery></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c6135-109">語法</span><span class="sxs-lookup"><span data-stu-id="c6135-109">Syntax</span></span>  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-      <serviceDiscovery>  
-        <announcementEndpoints>  
-              <endpoint name="String”  
-                        kind="Type" />  
-        </announcementEndpoints>  
-        <discoveryEndpoints>  
-              <endpoint name="String”  
-                        kind="Type" />  
-        </discoveryEndpoints>  
-      </serviceDiscovery>  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <serviceDiscovery>
+        <announcementEndpoints>
+          <endpoint name="String" 
+                    kind="Type" />
+        </announcementEndpoints>
+        <discoveryEndpoints>
+          <endpoint name="String" 
+                    kind="Type" />
+        </discoveryEndpoints>
+      </serviceDiscovery>
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c6135-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c6135-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c6135-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c6135-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="c6135-112">屬性</span><span class="sxs-lookup"><span data-stu-id="c6135-112">Attributes</span></span>  
+ <span data-ttu-id="c6135-113">無。</span><span class="sxs-lookup"><span data-stu-id="c6135-113">None.</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="c6135-114">子項目</span><span class="sxs-lookup"><span data-stu-id="c6135-114">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<announcementEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|公告端點的集合。  使用此區段指定用於傳送公告訊息的端點。|  
-|[\<discoveryEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|探索端點的集合。  使用此區段指定用於接聽探索訊息的端點。|  
+|<span data-ttu-id="c6135-115">項目</span><span class="sxs-lookup"><span data-stu-id="c6135-115">Element</span></span>|<span data-ttu-id="c6135-116">說明</span><span class="sxs-lookup"><span data-stu-id="c6135-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c6135-117">\<announcementEndpoint ></span><span class="sxs-lookup"><span data-stu-id="c6135-117">\<announcementEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|<span data-ttu-id="c6135-118">公告端點的集合。</span><span class="sxs-lookup"><span data-stu-id="c6135-118">A collection of announcement endpoints.</span></span> <span data-ttu-id="c6135-119">使用此區段指定用於傳送公告訊息的端點。</span><span class="sxs-lookup"><span data-stu-id="c6135-119">Use this section to specify the endpoints to use for sending announcement messages.</span></span>|  
+|[<span data-ttu-id="c6135-120">\<discoveryEndpoint ></span><span class="sxs-lookup"><span data-stu-id="c6135-120">\<discoveryEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|<span data-ttu-id="c6135-121">探索端點的集合。</span><span class="sxs-lookup"><span data-stu-id="c6135-121">A collection of discovery endpoints.</span></span> <span data-ttu-id="c6135-122">使用此區段指定用於接聽探索訊息的端點。</span><span class="sxs-lookup"><span data-stu-id="c6135-122">Use this section to specify the endpoints on which to listen for the discovery messages.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="c6135-123">父項目</span><span class="sxs-lookup"><span data-stu-id="c6135-123">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<行為\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|<span data-ttu-id="c6135-124">項目</span><span class="sxs-lookup"><span data-stu-id="c6135-124">Element</span></span>|<span data-ttu-id="c6135-125">說明</span><span class="sxs-lookup"><span data-stu-id="c6135-125">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c6135-126">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="c6135-126">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="c6135-127">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="c6135-127">Specifies a behavior element.</span></span>|  
   
-## 備註  
- 加入至服務的行為組態時，這個組態項目會將該服務的所有端點標示為可探索。  您可以使用 [\<discoveryEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)[\<announcementEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) 子項目，進一步設定此類端點的探索功能。  使用 [\<announcementEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) 區段，指定將用於傳送服務公告 \(線上\/Hello 與離線\/Bye\) 的端點組態，以設定公告。  使用 [\<discoveryEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) 區段手動指定用於接聽探索訊息的端點。  
+## <a name="remarks"></a><span data-ttu-id="c6135-128">備註</span><span class="sxs-lookup"><span data-stu-id="c6135-128">Remarks</span></span>  
+ <span data-ttu-id="c6135-129">加入至服務的行為組態時，這個組態項目會將該服務的所有端點標示為可探索。</span><span class="sxs-lookup"><span data-stu-id="c6135-129">When added to the service’s behavior configuration, this configuration element makes all of the endpoints of that service discoverable.</span></span> <span data-ttu-id="c6135-130">您可以使用，以進一步設定這類端點的探索功能[ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)或[ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)子項目。</span><span class="sxs-lookup"><span data-stu-id="c6135-130">You can further configure the discovery features of such endpoints by using the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) or [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) child elements.</span></span> <span data-ttu-id="c6135-131">使用[ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)區段，即可藉由指定用來傳送 （線上/Hello 和 Bye 離線/） 的服務公告端點組態設定的公告。</span><span class="sxs-lookup"><span data-stu-id="c6135-131">Use the [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) section to configure the announcements by specifying the endpoint configuration to be use to send service announcements (online/Hello and offline/Bye).</span></span> <span data-ttu-id="c6135-132">使用[ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)區段，以手動指定要接聽探索訊息的端點。</span><span class="sxs-lookup"><span data-stu-id="c6135-132">Use the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) section to manually specify the endpoint on which to listen for the discovery messages.</span></span>  
   
-## 範例  
- 下列組態範例將 CalculatorService 指定為可探索，並且選擇性地指定要使用的公告端點。  
+## <a name="example"></a><span data-ttu-id="c6135-133">範例</span><span class="sxs-lookup"><span data-stu-id="c6135-133">Example</span></span>  
+ <span data-ttu-id="c6135-134">下列組態範例將 CalculatorService 指定為可探索，並且選擇性地指定要使用的公告端點。</span><span class="sxs-lookup"><span data-stu-id="c6135-134">The following configuration example specifies that the CalculatorService to be discoverable, and optionally specifies the announcement endpoint to be used.</span></span>  
   
-```  
-  
+```xml  
 <services>  
   <service name="CalculatorService"  
            behaviorConfiguration="CalculatorServiceBehavior">  
@@ -88,8 +94,7 @@ caps.handback.revision: 4
     </behavior>  
   </serviceBehaviors>  
 </behaviors>  
-  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a><span data-ttu-id="c6135-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6135-135">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

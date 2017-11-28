@@ -1,38 +1,42 @@
 ---
-title: "1024 - CreateBookmarkScope | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1024 - CreateBookmarkScope
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1ed8fc2-2a31-4878-a851-5db8b869283a
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 11093216f33df87b31e7a1e76ceb938cadb4c640
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 1024 - CreateBookmarkScope
-## 屬性  
+# <a name="1024---createbookmarkscope"></a><span data-ttu-id="5f865-102">1024 - CreateBookmarkScope</span><span class="sxs-lookup"><span data-stu-id="5f865-102">1024 - CreateBookmarkScope</span></span>
+## <a name="properties"></a><span data-ttu-id="5f865-103">屬性</span><span class="sxs-lookup"><span data-stu-id="5f865-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1024|  
-|關鍵字|WFRuntime|  
-|層級|詳細資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="5f865-104">ID</span><span class="sxs-lookup"><span data-stu-id="5f865-104">ID</span></span>|<span data-ttu-id="5f865-105">1024</span><span class="sxs-lookup"><span data-stu-id="5f865-105">1024</span></span>|  
+|<span data-ttu-id="5f865-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="5f865-106">Keywords</span></span>|<span data-ttu-id="5f865-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="5f865-107">WFRuntime</span></span>|  
+|<span data-ttu-id="5f865-108">層級</span><span class="sxs-lookup"><span data-stu-id="5f865-108">Level</span></span>|<span data-ttu-id="5f865-109">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="5f865-109">Verbose</span></span>|  
+|<span data-ttu-id="5f865-110">通道</span><span class="sxs-lookup"><span data-stu-id="5f865-110">Channel</span></span>|<span data-ttu-id="5f865-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="5f865-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 表示已建立 BookmarkScope。  
+## <a name="description"></a><span data-ttu-id="5f865-112">描述</span><span class="sxs-lookup"><span data-stu-id="5f865-112">Description</span></span>  
+ <span data-ttu-id="5f865-113">表示已建立 BookmarkScope。</span><span class="sxs-lookup"><span data-stu-id="5f865-113">Indicates a BookmarkScope has been created.</span></span>  
   
-## 訊息  
- 已建立 BookmarkScope：%1。  
+## <a name="message"></a><span data-ttu-id="5f865-114">訊息</span><span class="sxs-lookup"><span data-stu-id="5f865-114">Message</span></span>  
+ <span data-ttu-id="5f865-115">已建立 BookmarkScope：%1。</span><span class="sxs-lookup"><span data-stu-id="5f865-115">A BookmarkScope has been created: %1.</span></span>  
   
-## 詳細資料  
+## <a name="details"></a><span data-ttu-id="5f865-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="5f865-116">Details</span></span>  
   
-|資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
-|BookmarkScope|xs:string|書籤的範圍。|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="5f865-117">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="5f865-117">Data Item Name</span></span>|<span data-ttu-id="5f865-118">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="5f865-118">Data Item Type</span></span>|<span data-ttu-id="5f865-119">描述</span><span class="sxs-lookup"><span data-stu-id="5f865-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="5f865-120">BookmarkScope</span><span class="sxs-lookup"><span data-stu-id="5f865-120">BookmarkScope</span></span>|<span data-ttu-id="5f865-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="5f865-121">xs:string</span></span>|<span data-ttu-id="5f865-122">書籤的範圍。</span><span class="sxs-lookup"><span data-stu-id="5f865-122">The scope of the bookmark.</span></span>|  
+|<span data-ttu-id="5f865-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="5f865-123">AppDomain</span></span>|<span data-ttu-id="5f865-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="5f865-124">xs:string</span></span>|<span data-ttu-id="5f865-125">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="5f865-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

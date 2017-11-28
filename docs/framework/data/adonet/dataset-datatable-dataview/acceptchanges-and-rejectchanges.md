@@ -1,27 +1,33 @@
 ---
-title: "AcceptChanges 和 RejectChanges | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "AcceptChanges 和 RejectChanges"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6ac64fee869ce58413e799f4217f009ef6ae91a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# AcceptChanges 和 RejectChanges
-驗證對 <xref:System.Data.DataTable> 中之資料所進行之變更的正確性之後，即可以使用 <xref:System.Data.DataRow>、<xref:System.Data.DataTable> 或 <xref:System.Data.DataSet> 的 <xref:System.Data.DataRow.AcceptChanges%2A> 方法接受變更，這樣會將 **Current** 資料列值設為 **Original** 值，並將 **RowState** 屬性設為 **Unchanged**。  接受或拒絕變更會清除任何 **RowError** 資訊，並且會將 **HasErrors** 屬性設為 **false**。  接受或拒絕變更也會影響資料來源中的資料更新。  如需詳細資訊，請參閱[以 DataAdapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。  
+# <a name="acceptchanges-and-rejectchanges"></a><span data-ttu-id="caef5-102">AcceptChanges 和 RejectChanges</span><span class="sxs-lookup"><span data-stu-id="caef5-102">AcceptChanges and RejectChanges</span></span>
+<span data-ttu-id="caef5-103">在驗證中的資料所做的變更的正確性之後<xref:System.Data.DataTable>，您可以接受變更<xref:System.Data.DataRow.AcceptChanges%2A>方法<xref:System.Data.DataRow>， <xref:System.Data.DataTable>，或<xref:System.Data.DataSet>，它會將設定**目前**資料列值為**原始**值，並將設定**RowState**屬性**Unchanged**。</span><span class="sxs-lookup"><span data-stu-id="caef5-103">After verifying the accuracy of changes made to data in a <xref:System.Data.DataTable>, you can accept the changes using the <xref:System.Data.DataRow.AcceptChanges%2A> method of the <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, or <xref:System.Data.DataSet>, which will set the **Current** row values to be the **Original** values and will set the **RowState** property to **Unchanged**.</span></span> <span data-ttu-id="caef5-104">接受或拒絕變更會清除任何**RowError**資訊，並且**HasErrors**屬性**false**。</span><span class="sxs-lookup"><span data-stu-id="caef5-104">Accepting or rejecting changes clears out any **RowError** information and sets the **HasErrors** property to **false**.</span></span> <span data-ttu-id="caef5-105">接受或拒絕變更也會影響資料來源中的資料更新。</span><span class="sxs-lookup"><span data-stu-id="caef5-105">Accepting or rejecting changes can also affect updating data in the data source.</span></span> <span data-ttu-id="caef5-106">如需詳細資訊，請參閱[以 Dataadapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。</span><span class="sxs-lookup"><span data-stu-id="caef5-106">For more information, see [Updating Data Sources with DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).</span></span>  
   
- 如果 **DataTable** 有外部索引鍵條件約束，則使用 **AcceptChanges** 和 **RejectChanges** 接受或拒絕的變更都會根據 **ForeignKeyConstraint.AcceptRejectRule** 傳播至 **DataRow** 的子資料列。  如需詳細資訊，請參閱[DataTable 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。  
+ <span data-ttu-id="caef5-107">如果 foreign key 條件約束上存在**DataTable**，變更接受或拒絕使用**AcceptChanges**和**RejectChanges**會傳播至子資料列的**DataRow**根據**Datarow**。</span><span class="sxs-lookup"><span data-stu-id="caef5-107">If foreign key constraints exist on the **DataTable**, changes accepted or rejected using **AcceptChanges** and **RejectChanges** are propagated to child rows of the **DataRow** according to the **ForeignKeyConstraint.AcceptRejectRule**.</span></span> <span data-ttu-id="caef5-108">如需詳細資訊，請參閱[DataTable 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。</span><span class="sxs-lookup"><span data-stu-id="caef5-108">For more information, see [DataTable Constraints](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span></span>  
   
- 下列範例會檢查發生錯誤的資料列、適當地解決錯誤，並且在無法解決錯誤時拒絕資料列。  請注意，對於已解決的錯誤，**RowError** 值將重設為空字串，進而讓 **HasErrors** 屬性設為 **false**。  當發生錯誤的所有資料列都已解決或拒絕後，將會呼叫 **AcceptChanges** 以接受整個 **DataTable** 中的所有變更。  
+ <span data-ttu-id="caef5-109">下列範例會檢查發生錯誤的資料列、適當地解決錯誤，並且在無法解決錯誤時拒絕資料列。</span><span class="sxs-lookup"><span data-stu-id="caef5-109">The following example checks for rows with errors, resolves the errors where applicable, and rejects the rows where the error cannot be resolved.</span></span> <span data-ttu-id="caef5-110">請注意，對於已解決錯誤， **RowError**值會重設為空字串，造成**HasErrors**屬性設定為**false**。</span><span class="sxs-lookup"><span data-stu-id="caef5-110">Note that, for resolved errors, the **RowError** value is reset to an empty string, causing the **HasErrors** property to be set to **false**.</span></span> <span data-ttu-id="caef5-111">當具有錯誤的所有資料列已解析或拒絕， **AcceptChanges**呼叫以接受所有的變更，對於整個**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="caef5-111">When all the rows with errors have been resolved or rejected, **AcceptChanges** is called to accept all changes for the entire **DataTable**.</span></span>  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -39,7 +45,6 @@ If workTable.HasErrors Then
 End If  
   
 workTable.AcceptChanges()  
-  
 ```  
   
 ```csharp  
@@ -61,9 +66,9 @@ if (workTable.HasErrors)
 workTable.AcceptChanges();  
 ```  
   
-## 請參閱  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- [管理 DataTable 中的資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="caef5-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="caef5-112">See Also</span></span>  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ [<span data-ttu-id="caef5-113">在 DataTable 中操作資料</span><span class="sxs-lookup"><span data-stu-id="caef5-113">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="caef5-114">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="caef5-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

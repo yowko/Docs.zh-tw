@@ -1,48 +1,29 @@
 ---
 title: "cref 屬性 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- cref [C#]
+helpviewer_keywords: cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0cffba9083b22813be3dd0379b244f4d078f8549
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7861d6696b7a40b8a665d489b92a3b196a7dd0ce
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cref-attribute-c-programming-guide"></a>cref 屬性 (C# 程式設計手冊)
-`cref` 屬性在 XML 文件標記中表示「程式碼參考」。 它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。 [Sandcastle](https://github.com/EWSoftware/SHFB) 等文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。  
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="cd6ae-102">cref 屬性 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="cd6ae-102">cref Attribute (C# Programming Guide)</span></span>
+<span data-ttu-id="cd6ae-103">`cref` 屬性在 XML 文件標記中表示「程式碼參考」。</span><span class="sxs-lookup"><span data-stu-id="cd6ae-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="cd6ae-104">它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。</span><span class="sxs-lookup"><span data-stu-id="cd6ae-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="cd6ae-105">[Sandcastle](https://github.com/EWSoftware/SHFB) 等文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。</span><span class="sxs-lookup"><span data-stu-id="cd6ae-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
   
-## 範例  
- 下列範例顯示使用於 [\<see\>](../../../csharp/programming-guide/xmldoc/see.md) 標記中的 `cref` 屬性。  
+## <a name="example"></a><span data-ttu-id="cd6ae-106">範例</span><span class="sxs-lookup"><span data-stu-id="cd6ae-106">Example</span></span>  
+ <span data-ttu-id="cd6ae-107">下例示範在 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 標記中使用的 `cref` 屬性。</span><span class="sxs-lookup"><span data-stu-id="cd6ae-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
   
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- 編譯之後，程式會產生下列 XML 檔案。  請注意，舉例來說，編譯器已將 `GetZero` 方法的`cref`屬性轉換為 `"M:TestNamespace.TestClass.GetZero"`。  "M:" 前置詞意指「方法」，而且是文件工具 \(例如，Sandcastle\) 所能辨識的慣例。  如需前置詞的完整清單，請參閱[處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
+ <span data-ttu-id="cd6ae-108">編譯時，此程式會產生下列 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="cd6ae-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="cd6ae-109">請注意，以 `GetZero` 方法的 `cref` 屬性為例，已被編譯器轉換成 `"M:TestNamespace.TestClass.GetZero"`。</span><span class="sxs-lookup"><span data-stu-id="cd6ae-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="cd6ae-110">"M:" 前置詞表示「方法」，而且是能為 Sandcastle 等文件工具識別的慣例。</span><span class="sxs-lookup"><span data-stu-id="cd6ae-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="cd6ae-111">如需前置詞的完整清單，請參閱[處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。</span><span class="sxs-lookup"><span data-stu-id="cd6ae-111">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -58,12 +39,12 @@ ms.lasthandoff: 07/28/2017
         </member>  
         <member name="M:TestNamespace.TestClass.#ctor">  
             <summary>  
-            This sample shows how to specify the <see cref="T:TestNamespace.TestClass"/> constructor as a cref attribute.   
+            This sample shows how to specify the <see cref="T:TestNamespace.TestClass"/> constructor as a cref attribute.   
             </summary>  
         </member>  
         <member name="M:TestNamespace.TestClass.#ctor(System.Int32)">  
             <summary>  
-            This sample shows how to specify the <see cref="M:TestNamespace.TestClass.#ctor(System.Int32)"/> constructor as a cref attribute.   
+            This sample shows how to specify the <see cref="M:TestNamespace.TestClass.#ctor(System.Int32)"/> constructor as a cref attribute.   
             </summary>  
         </member>  
         <member name="M:TestNamespace.TestClass.GetZero">  
@@ -141,6 +122,6 @@ ms.lasthandoff: 07/28/2017
 </doc>  
 ```  
   
-## 請參閱  
- [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="cd6ae-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd6ae-112">See Also</span></span>  
+ [<span data-ttu-id="cd6ae-113">XML 文件註解</span><span class="sxs-lookup"><span data-stu-id="cd6ae-113">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [<span data-ttu-id="cd6ae-114">建議使用的文件註解標籤</span><span class="sxs-lookup"><span data-stu-id="cd6ae-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

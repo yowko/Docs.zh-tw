@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -160,35 +159,28 @@ f1_keywords:
 - WME1015
 - WME1047
 - WME9
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Winmdexp.exe, error messages
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 83f7b1f91b70281b4cce57632977bfc4685a58fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3797621322fd88d57133602b1cb3c3173fedbe6e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Winmdexp.exe Error Messages
-當您在[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中使用 \[**[!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件**\] 範本，建置處理序會呼叫 [Winmdexp.exe \(Windows Runtime Metadata Export Tool\)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) ，因此， Winmdexp.exe 錯誤訊息會出現在 \[**錯誤清單**\] 中。  Winmdexp.exe會運作在與 `/target:winmdobj` 選項中編譯的模組上。  因為它需要編譯的模組做為輸入，除非編譯成功，否則其錯誤訊息不會出現。  
+# <a name="winmdexpexe-error-messages"></a><span data-ttu-id="5ea4f-102">Winmdexp.exe 錯誤訊息</span><span class="sxs-lookup"><span data-stu-id="5ea4f-102">Winmdexp.exe Error Messages</span></span>
+<span data-ttu-id="5ea4f-103">當您在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中使用 [[!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件] 範本時，建置流程會呼叫 [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此 Winmdexp.exe 錯誤訊息就會出現在 [錯誤清單] 中。</span><span class="sxs-lookup"><span data-stu-id="5ea4f-103">The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Component** template in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], so Winmdexp.exe error messages appear in the **Error List**.</span></span> <span data-ttu-id="5ea4f-104">Winmdexp.exe 會在使用 `/target:winmdobj` 選項編譯的模組上執行。</span><span class="sxs-lookup"><span data-stu-id="5ea4f-104">Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option.</span></span> <span data-ttu-id="5ea4f-105">由於它需要編譯的模組做為輸入，因此除非編譯成功，否則其錯誤訊息不會出現。</span><span class="sxs-lookup"><span data-stu-id="5ea4f-105">Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.</span></span>  
   
- 錯誤訊息會包含您需要處理的回報錯誤狀況之所有資訊。  不過，有些問題需要比符合訊息更多的資訊。  您可以在在 Windows 開發人員中心的 [診斷 Windows 執行階段組件錯誤條件。](http://go.microsoft.com/fwlink/p/?LinkId=251127) 找到其他資訊。  
+ <span data-ttu-id="5ea4f-106">錯誤訊息的設計是包含解決回報之錯誤狀況所需的一切資訊。不過，有些問題需要的資訊更多，而訊息中無法全部包含。</span><span class="sxs-lookup"><span data-stu-id="5ea4f-106">The error messages are designed to contain all the information you need to address the error conditions they report.However, some problems require more information than will fit in the message.</span></span> <span data-ttu-id="5ea4f-107">您可以在 Windows 開發人員中心的[診斷 Windows 執行階段元件錯誤條件](http://go.microsoft.com/fwlink/p/?LinkId=251127)中找到其他資訊。</span><span class="sxs-lookup"><span data-stu-id="5ea4f-107">You can find additional information in [Diagnosing Windows Runtime component error conditions](http://go.microsoft.com/fwlink/p/?LinkId=251127) in the Windows Dev Center.</span></span>  
   
- 如果本文件中沒有討論到您的錯誤，而您認為訊息未包含足夠的資訊來解決這個問題，請使用本文件中的回應連結並包含錯誤訊息。  或者，您可以在 [Microsoft Connect 網站](http://go.microsoft.com/fwlink/p/?LinkId=251130)提報 bug。  您也可以尋找有關的 [Microsoft 論壇](http://go.microsoft.com/fwlink/p/?LinkId=251129)詳細資訊。  
+ <span data-ttu-id="5ea4f-108">如果該文件中沒有討論到您遇到的錯誤，而您認為訊息中包含的資訊不足，無法解決這個問題，請使用該文件中的意見反應連結並納入錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="5ea4f-108">If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message.</span></span> <span data-ttu-id="5ea4f-109">或者，您也可以在 [Microsoft Connect 網站](http://go.microsoft.com/fwlink/p/?LinkId=251130)上提報 Bug。</span><span class="sxs-lookup"><span data-stu-id="5ea4f-109">Alternatively, you can file a bug at the [Microsoft Connect website](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span></span> <span data-ttu-id="5ea4f-110">您也可以在 [Microsoft 論壇](http://go.microsoft.com/fwlink/p/?LinkId=251129)上尋找詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="5ea4f-110">You can also look for more information on the [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)   
- [診斷 Windows 執行階段元件錯誤條件](http://go.microsoft.com/fwlink/p/?LinkId=251127)
-
+## <a name="see-also"></a><span data-ttu-id="5ea4f-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5ea4f-111">See Also</span></span>  
+ [<span data-ttu-id="5ea4f-112">Winmdexp.exe (Windows 執行階段中繼資料匯出工具)</span><span class="sxs-lookup"><span data-stu-id="5ea4f-112">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ [<span data-ttu-id="5ea4f-113">診斷 Windows 執行階段元件錯誤條件</span><span class="sxs-lookup"><span data-stu-id="5ea4f-113">Diagnosing Windows Runtime component error conditions</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251127)

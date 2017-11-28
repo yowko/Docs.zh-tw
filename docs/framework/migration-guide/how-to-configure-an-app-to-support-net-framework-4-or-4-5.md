@@ -1,12 +1,11 @@
 ---
-title: "如何：設定應用程式以支援 .NET Framework 4 或 4.5 | Microsoft Docs"
+title: "如何：設定應用程式以支援 .NET Framework 4 或 4.5"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,52 +13,51 @@ helpviewer_keywords:
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 86dce70e92c0e424b169b6fc58e87c5652ebcb69
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
-
+ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>如何：設定應用程式以支援 .NET Framework 4 或 4.5
-所有裝載通用語言執行平台 (CLR) 的應用程式都必須啟動或「啟用」CLR，才能執行 Managed 程式碼。 通常，.NET Framework 應用程式會在本身建置所在的 CLR 版本上執行，但是您可以使用應用程式組態檔 (有時稱為 app.config 檔案) 變更桌面應用程式的這個行為。 不過，您無法使用應用程式組態檔變更 Windows 市集應用程式或 Windows Phone 應用程式的預設啟用行為。 本文將說明如何讓您的桌面應用程式在另一個 .NET Framework 版本上執行，並且提供如何鎖定 4 或 4.5 版做為目標。  
+# <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a><span data-ttu-id="46b1d-102">如何：設定應用程式以支援 .NET Framework 4 或 4.5</span><span class="sxs-lookup"><span data-stu-id="46b1d-102">How to: Configure an App to Support .NET Framework 4 or 4.5</span></span>
+<span data-ttu-id="46b1d-103">所有裝載通用語言執行平台 (CLR) 的應用程式都必須啟動或「啟用」CLR，才能執行 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="46b1d-103">All apps that host the common language runtime (CLR) need to start, or *activate*, the CLR in order to run managed code.</span></span> <span data-ttu-id="46b1d-104">通常，.NET Framework 應用程式會在本身建置所在的 CLR 版本上執行，但是您可以使用應用程式組態檔 (有時稱為 app.config 檔案) 變更桌面應用程式的這個行為。</span><span class="sxs-lookup"><span data-stu-id="46b1d-104">Typically, a   .NET Framework app runs on the version of the CLR that it was built on, but you can change this behavior for desktop apps by using an application configuration file (sometimes referred to as an app.config file).</span></span> <span data-ttu-id="46b1d-105">不過，您無法使用應用程式組態檔變更 Windows 市集應用程式或 Windows Phone 應用程式的預設啟用行為。</span><span class="sxs-lookup"><span data-stu-id="46b1d-105">However, you cannot change the default activation behavior for Windows Store apps or Windows Phone apps by using an application configuration file.</span></span> <span data-ttu-id="46b1d-106">本文將說明如何讓您的桌面應用程式在另一個 .NET Framework 版本上執行，並且提供如何鎖定 4 或 4.5 版做為目標。</span><span class="sxs-lookup"><span data-stu-id="46b1d-106">This article explains how to enable your desktop app to run on another version of the .NET Framework and provides an example of how to target version 4 or 4.5.</span></span>  
   
- 執行應用程式所在的 .NET Framework 版本是依照下列順序決定：  
+ <span data-ttu-id="46b1d-107">執行應用程式所在的 .NET Framework 版本是依照下列順序決定：</span><span class="sxs-lookup"><span data-stu-id="46b1d-107">The version of the .NET Framework that an app runs on is determined in the following order:</span></span>  
   
--   組態檔。  
+-   <span data-ttu-id="46b1d-108">組態檔。</span><span class="sxs-lookup"><span data-stu-id="46b1d-108">Configuration file.</span></span>  
   
-     如果應用程式組態檔包含指定一個或多個 .NET Framework 版本的 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 項目，而且使用者的電腦上有其中一個版本，則應用程式會在該版本上執行。 組態檔會依 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 項目列出的順序讀取這些項目，並且使用使用者電腦上所列的第一個 .NET Framework 版本。 (針對 1.0 版使用 [\<requiredRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md))。  
+     <span data-ttu-id="46b1d-109">如果應用程式組態檔包含指定一個或多個 .NET Framework 版本的 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 項目，而且使用者的電腦上有其中一個版本，則應用程式會在該版本上執行。</span><span class="sxs-lookup"><span data-stu-id="46b1d-109">If the application configuration file includes [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) entries that specify one or more .NET Framework versions, and one of those versions is present on the user's computer, the app runs on that version.</span></span> <span data-ttu-id="46b1d-110">組態檔會依 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 項目列出的順序讀取這些項目，並且使用使用者電腦上所列的第一個 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="46b1d-110">The configuration file reads [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) entries in the order they are listed, and uses the first .NET Framework version listed that is present on the user's computer.</span></span> <span data-ttu-id="46b1d-111">(針對 1.0 版使用 [\<requiredRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md))。</span><span class="sxs-lookup"><span data-stu-id="46b1d-111">(Use the [\<requiredRuntime> element](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) for version 1.0.)</span></span>  
   
--   編譯的版本。  
+-   <span data-ttu-id="46b1d-112">編譯的版本。</span><span class="sxs-lookup"><span data-stu-id="46b1d-112">Compiled version.</span></span>  
   
-     如果沒有組態檔，但是使用者的電腦上有建置應用程式所在的 .NET Framework 版本，則應用程式會在該版本上執行。  
+     <span data-ttu-id="46b1d-113">如果沒有組態檔，但是使用者的電腦上有建置應用程式所在的 .NET Framework 版本，則應用程式會在該版本上執行。</span><span class="sxs-lookup"><span data-stu-id="46b1d-113">If there is no configuration file, but the version of the .NET Framework that the app was built on is present on the user's computer, the app runs on that version.</span></span>  
   
--   安裝的最新版本。  
+-   <span data-ttu-id="46b1d-114">安裝的最新版本。</span><span class="sxs-lookup"><span data-stu-id="46b1d-114">Latest version installed.</span></span>  
   
-     如果沒有建置應用程式所在的 .NET Framework 版本，而且組態檔並未在 [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)中指定版本，則應用程式會嘗試以使用者電腦中存在的最新 .NET Framework 版本執行。  
+     <span data-ttu-id="46b1d-115">如果沒有建置應用程式所在的 .NET Framework 版本，而且組態檔並未在 [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)中指定版本，則應用程式會嘗試以使用者電腦中存在的最新 .NET Framework 版本執行。</span><span class="sxs-lookup"><span data-stu-id="46b1d-115">If the version of the .NET Framework that the app was built on is not present and a configuration file does not specify a version in a [\<supportedRuntime> element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), the app tries to run on the latest version of the .NET Framework that is present on the user's computer.</span></span>  
   
-     不過，.NET Framework 1.0、1.1、2.0、3.0 和 3.5 應用程式不會自動在 .NET Framework 4 (含) 以後版本上執行，而且在某些情況下，使用者可能會收到錯誤以及安裝 .NET Framework 3.5 的提示。 因為不同版本的 Windows 系統包含不同版本的 .NET Framework，因此啟用行為也會取決於使用者的作業系統。 如果您的應用程式同時支援 .NET Framework 3.5 和 4 (含) 以後版本，建議您在組態檔中使用多個項目指出這種情況，避免發生 .NET Framework 初始化錯誤。 如需詳細資訊，請參閱[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)。  
+     <span data-ttu-id="46b1d-116">不過，.NET Framework 1.0、1.1、2.0、3.0 和 3.5 應用程式不會自動在 .NET Framework 4 (含) 以後版本上執行，而且在某些情況下，使用者可能會收到錯誤以及安裝 .NET Framework 3.5 的提示。</span><span class="sxs-lookup"><span data-stu-id="46b1d-116">However, .NET Framework 1.0, 1.1, 2.0, 3.0, and 3.5 apps do not automatically run on the .NET Framework 4 or later, and in some cases, the user may receive an error and may be prompted to install the .NET Framework 3.5.</span></span> <span data-ttu-id="46b1d-117">因為不同版本的 Windows 系統包含不同版本的 .NET Framework，因此啟用行為也會取決於使用者的作業系統。</span><span class="sxs-lookup"><span data-stu-id="46b1d-117">The activation behavior may also depend on the user’s operating system, because  different versions of Windows system include different versions of the .NET Framework.</span></span> <span data-ttu-id="46b1d-118">如果您的應用程式同時支援 .NET Framework 3.5 和 4 (含) 以後版本，建議您在組態檔中使用多個項目指出這種情況，避免發生 .NET Framework 初始化錯誤。</span><span class="sxs-lookup"><span data-stu-id="46b1d-118">If your app supports both the .NET Framework 3.5 and 4 or later, we recommend that you indicate this with multiple entries in the configuration file to avoid .NET Framework initialization errors.</span></span> <span data-ttu-id="46b1d-119">如需詳細資訊，請參閱[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)。</span><span class="sxs-lookup"><span data-stu-id="46b1d-119">For more information, see [Versions and Dependencies](../../../docs/framework/migration-guide/versions-and-dependencies.md).</span></span>  
   
- 即使電腦中安裝的是 .NET Framework 3.5，您也可以設定讓自己的 .NET Framework 3.5 應用程式在 .NET Frramework 4 或 4.5 上執行，以充分運用 .NET Framework 4 和 4.5 版的效能增強優勢。  
+ <span data-ttu-id="46b1d-120">即使電腦中安裝的是 .NET Framework 3.5，您也可以設定讓自己的 .NET Framework 3.5 應用程式在 .NET Frramework 4 或 4.5 上執行，以充分運用 .NET Framework 4 和 4.5 版的效能增強優勢。</span><span class="sxs-lookup"><span data-stu-id="46b1d-120">You might also want to configure your .NET Framework 3.5 apps to run on the .NET Framework 4 or 4.5, even on computers that have the .NET Framework 3.5 installed, to take advantage of the performance improvements in versions 4 and 4.5.</span></span>  
   
 > [!IMPORTANT]
->  建議您一律在支援的每一個 .NET Framework 版本上測試您的應用程式。 如需將應用程式升級為支援最新 .NET Framework 版本的詳細資訊，請參閱[版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)。  
+>  <span data-ttu-id="46b1d-121">建議您一律在支援的每一個 .NET Framework 版本上測試您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="46b1d-121">We recommend that you always test your app on every .NET Framework version that you support.</span></span> <span data-ttu-id="46b1d-122">如需將應用程式升級為支援最新 .NET Framework 版本的詳細資訊，請參閱[版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)。</span><span class="sxs-lookup"><span data-stu-id="46b1d-122">See [Version Compatibility](../../../docs/framework/migration-guide/version-compatibility.md) for information about upgrading your application to support later .NET Framework versions.</span></span>  
   
- 如需修改 .NET Framework 1.0 和 1.1 應用程式以支援 Windows 7 及 Windows 8 的詳細資訊，請參閱[從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)。  
+ <span data-ttu-id="46b1d-123">如需修改 .NET Framework 1.0 和 1.1 應用程式以支援 Windows 7 及 Windows 8 的詳細資訊，請參閱[從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)。</span><span class="sxs-lookup"><span data-stu-id="46b1d-123">For information about modifying your .NET Framework 1.0 and 1.1 apps to support Windows 7 and Windows 8, see [Migrating from the .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).</span></span>  
   
-### <a name="to-configure-your-app-to-run-on-the-net-framework-4-or-45"></a>若要設定讓您的應用程式在 .NET Framework 4 或 4.5 上執行  
+### <a name="to-configure-your-app-to-run-on-the-net-framework-4-or-45"></a><span data-ttu-id="46b1d-124">若要設定讓您的應用程式在 .NET Framework 4 或 4.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-124">To configure your app to run on the .NET Framework 4 or 4.5</span></span>  
   
-1.  加入或尋找 .NET Framework 專案的組態檔。 應用程式的組態檔與應用程式位於相同的目錄中且名稱相同，不過其副檔名為 .config。 例如，如果應用程式名為 MyExecutable.exe，則應用程式組態檔會命名為 MyExecutable.exe.config。  
+1.  <span data-ttu-id="46b1d-125">加入或尋找 .NET Framework 專案的組態檔。</span><span class="sxs-lookup"><span data-stu-id="46b1d-125">Add or locate the configuration file for the .NET Framework project.</span></span> <span data-ttu-id="46b1d-126">應用程式的組態檔與應用程式位於相同的目錄中且名稱相同，不過其副檔名為 .config。</span><span class="sxs-lookup"><span data-stu-id="46b1d-126">The configuration file for an app is in the same directory and has the same name as the app, but has a .config extension.</span></span> <span data-ttu-id="46b1d-127">例如，如果應用程式名為 MyExecutable.exe，則應用程式組態檔會命名為 MyExecutable.exe.config。</span><span class="sxs-lookup"><span data-stu-id="46b1d-127">For example, for an app named MyExecutable.exe, the application configuration file is named MyExecutable.exe.config.</span></span>  
   
-     若要加入組態檔，請在 Visual Studio 功能表列上選擇 [專案]、[加入新項目]。 從左窗格選擇 [一般]，然後選擇 [組態檔]。  將組態檔命名為*應用程式名稱*.exe.config。 這些功能表選項不適用於 Windows 市集應用程式或 Windows Phone 應用程式專案，因為您無法變更這些平台的啟用原則。  
+     <span data-ttu-id="46b1d-128">若要加入組態檔，請在 Visual Studio 功能表列上選擇 [專案]、[加入新項目]。</span><span class="sxs-lookup"><span data-stu-id="46b1d-128">To add a configuration file, on the Visual Studio menu bar, choose **Project**, **Add New Item**.</span></span> <span data-ttu-id="46b1d-129">從左窗格選擇 [一般]，然後選擇 [組態檔]。</span><span class="sxs-lookup"><span data-stu-id="46b1d-129">Choose **General** from the left pane, and then choose **Configuration File**.</span></span>  <span data-ttu-id="46b1d-130">將組態檔命名為*應用程式名稱*.exe.config。這些功能表選項不適用於 Windows 市集應用程式或 Windows Phone 應用程式專案，因為您無法變更這些平台的啟用原則。</span><span class="sxs-lookup"><span data-stu-id="46b1d-130">Name the configuration file *appName*.exe.config. These menu choices are not available for Windows Store app or Windows phone app projects, because you cannot change the activation policy on those platforms.</span></span>  
   
-2.  將 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素加入至應用程式組態檔，如下所示：  
+2.  <span data-ttu-id="46b1d-131">將 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素加入至應用程式組態檔，如下所示：</span><span class="sxs-lookup"><span data-stu-id="46b1d-131">Add the [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) element as follows to the application configuration file:</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  
@@ -67,31 +65,30 @@ ms.lasthandoff: 04/18/2017
     </configuration>  
     ```  
   
-     其中 *\<version>* 會指定與應用程式支援的 .NET Framework 版本對應的 CLR 版本。 使用下列字串：  
+     <span data-ttu-id="46b1d-132">其中 *\<version>* 會指定與應用程式支援的 .NET Framework 版本對應的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="46b1d-132">where *\<version>* specifies the CLR version that aligns with the .NET Framework version that your app supports.</span></span> <span data-ttu-id="46b1d-133">使用下列字串：</span><span class="sxs-lookup"><span data-stu-id="46b1d-133">Use the following strings:</span></span>  
   
-    -   .NET Framework 1.0："v1.0.3705"  
+    -   <span data-ttu-id="46b1d-134">.NET Framework 1.0："v1.0.3705"</span><span class="sxs-lookup"><span data-stu-id="46b1d-134">.NET Framework 1.0: "v1.0.3705"</span></span>  
   
-    -   .NET Framework 1.1："v1.1.4322"  
+    -   <span data-ttu-id="46b1d-135">.NET Framework 1.1："v1.1.4322"</span><span class="sxs-lookup"><span data-stu-id="46b1d-135">.NET Framework 1.1: "v1.1.4322"</span></span>  
   
-    -   .NET Framework 2.0、3.0 和 3.5："v2.0.50727"  
+    -   <span data-ttu-id="46b1d-136">.NET Framework 2.0、3.0 和 3.5："v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="46b1d-136">.NET Framework 2.0, 3.0, and 3.5: "v2.0.50727"</span></span>  
   
-    -   .NET Framework 4 和 4.5 (包括像是 4.5.1 這類點發行版本)："v4.0"  
+    -   <span data-ttu-id="46b1d-137">.NET Framework 4 和 4.5 (包括像是 4.5.1 這類點發行版本)："v4.0"</span><span class="sxs-lookup"><span data-stu-id="46b1d-137">.NET Framework 4 and 4.5 (including point releases such as 4.5.1): "v4.0"</span></span>  
   
-     您可以加入多個 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素並且依偏好列出，以便指定支援多種版本的 .NET Framework。  
+     <span data-ttu-id="46b1d-138">您可以加入多個 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素並且依偏好列出，以便指定支援多種版本的 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="46b1d-138">You can add multiple [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) elements, listed in order of preference, to specify support for multiple versions of the .NET Framework.</span></span>  
   
- 下表將示範電腦上安裝的應用程式組態檔設定和 .NET Framework 版本如何決定用來執行 .NET Framework 3.5 應用程式的版本。 這些範例為 .NET Framework 3.5 應用程式專屬，不過您可以使用類似的邏輯鎖定使用舊版 .NET Framework 建置的應用程式。 請注意，.NET Framework 2.0 版本號碼 (v2.0.50727) 是在應用程式組態檔中用來指定 .NET Framework 3.5。  
+ <span data-ttu-id="46b1d-139">下表將示範電腦上安裝的應用程式組態檔設定和 .NET Framework 版本如何決定用來執行 .NET Framework 3.5 應用程式的版本。</span><span class="sxs-lookup"><span data-stu-id="46b1d-139">The following table demonstrates how application configuration file settings and the .NET Framework versions installed on a computer determine the version that a .NET Framework 3.5 app runs on.</span></span> <span data-ttu-id="46b1d-140">這些範例為 .NET Framework 3.5 應用程式專屬，不過您可以使用類似的邏輯鎖定使用舊版 .NET Framework 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="46b1d-140">The examples are specific to a .NET Framework 3.5 application, but you can use similar logic to target applications built with earlier .NET Framework versions.</span></span> <span data-ttu-id="46b1d-141">請注意，.NET Framework 2.0 版本號碼 (v2.0.50727) 是在應用程式組態檔中用來指定 .NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="46b1d-141">Note that the .NET Framework 2.0 version number (v2.0.50727) is used to specify the .NET Framework 3.5 in the application configuration file.</span></span>  
   
-|App.config 檔案設定|在安裝 3.5 版的電腦上|在安裝 3.5 版和 4 或 4.5 版的電腦上|在安裝 4 或 4.5 版的電腦上|  
+|<span data-ttu-id="46b1d-142">App.config 檔案設定</span><span class="sxs-lookup"><span data-stu-id="46b1d-142">App.config file setting</span></span>|<span data-ttu-id="46b1d-143">在安裝 3.5 版的電腦上</span><span class="sxs-lookup"><span data-stu-id="46b1d-143">On computer with version 3.5 installed</span></span>|<span data-ttu-id="46b1d-144">在安裝 3.5 版和 4 或 4.5 版的電腦上</span><span class="sxs-lookup"><span data-stu-id="46b1d-144">On computer with versions 3.5 and 4 or 4.5 installed</span></span>|<span data-ttu-id="46b1d-145">在安裝 4 或 4.5 版的電腦上</span><span class="sxs-lookup"><span data-stu-id="46b1d-145">On computer with version 4 or 4.5 installed</span></span>|  
 |-|-|-|-|  
-|無|在 3.5 上執行|在 3.5 上執行|顯示錯誤訊息，提示使用者安裝正確的版本*|  
-|`<supportedRuntime version="v2.0.50727"/>`|在 3.5 上執行|在 3.5 上執行|顯示錯誤訊息，提示使用者安裝正確的版本*|  
-|`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|在 3.5 上執行|在 3.5 上執行|在 4 或 4.5 上執行|  
-|`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|在 3.5 上執行|在 4 或 4.5 上執行|在 4 或 4.5 上執行|  
-|`<supportedRuntime version="v4.0"/>`|顯示錯誤訊息，提示使用者安裝正確的版本*|在 4 或 4.5 上執行|在 4 或 4.5 上執行|  
+|<span data-ttu-id="46b1d-146">無</span><span class="sxs-lookup"><span data-stu-id="46b1d-146">None</span></span>|<span data-ttu-id="46b1d-147">在 3.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-147">Runs on 3.5</span></span>|<span data-ttu-id="46b1d-148">在 3.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-148">Runs on 3.5</span></span>|<span data-ttu-id="46b1d-149">顯示錯誤訊息，提示使用者安裝正確的版本*</span><span class="sxs-lookup"><span data-stu-id="46b1d-149">Displays error message that prompts user to install the correct version*</span></span>|  
+|`<supportedRuntime version="v2.0.50727"/>`|<span data-ttu-id="46b1d-150">在 3.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-150">Runs on 3.5</span></span>|<span data-ttu-id="46b1d-151">在 3.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-151">Runs on 3.5</span></span>|<span data-ttu-id="46b1d-152">顯示錯誤訊息，提示使用者安裝正確的版本*</span><span class="sxs-lookup"><span data-stu-id="46b1d-152">Displays error message that prompts user to install the correct version*</span></span>|  
+|`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|<span data-ttu-id="46b1d-153">在 3.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-153">Runs on 3.5</span></span>|<span data-ttu-id="46b1d-154">在 3.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-154">Runs on 3.5</span></span>|<span data-ttu-id="46b1d-155">在 4 或 4.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-155">Runs on 4 or 4.5</span></span>|  
+|`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|<span data-ttu-id="46b1d-156">在 3.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-156">Runs on 3.5</span></span>|<span data-ttu-id="46b1d-157">在 4 或 4.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-157">Runs on 4 or 4.5</span></span>|<span data-ttu-id="46b1d-158">在 4 或 4.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-158">Runs on 4 or 4.5</span></span>|  
+|`<supportedRuntime version="v4.0"/>`|<span data-ttu-id="46b1d-159">顯示錯誤訊息，提示使用者安裝正確的版本*</span><span class="sxs-lookup"><span data-stu-id="46b1d-159">Displays error message that prompts user to install the correct version*</span></span>|<span data-ttu-id="46b1d-160">在 4 或 4.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-160">Runs on 4 or 4.5</span></span>|<span data-ttu-id="46b1d-161">在 4 或 4.5 上執行</span><span class="sxs-lookup"><span data-stu-id="46b1d-161">Runs on 4 or 4.5</span></span>|  
   
- \*如需有關這個錯誤訊息及避免出現這個錯誤訊息的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者經驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)。  
+ <span data-ttu-id="46b1d-162">\*如需有關這個錯誤訊息及避免出現這個錯誤訊息的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者經驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)。</span><span class="sxs-lookup"><span data-stu-id="46b1d-162">\* For more information about this error message and ways to avoid it, see [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
- [移轉手冊](../../../docs/framework/migration-guide/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="46b1d-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="46b1d-163">See Also</span></span>  
+ [<span data-ttu-id="46b1d-164">從 .NET Framework 1.1 移轉</span><span class="sxs-lookup"><span data-stu-id="46b1d-164">Migrating from the .NET Framework 1.1</span></span>](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
+ [<span data-ttu-id="46b1d-165">移轉手冊</span><span class="sxs-lookup"><span data-stu-id="46b1d-165">Migration Guide</span></span>](../../../docs/framework/migration-guide/index.md)

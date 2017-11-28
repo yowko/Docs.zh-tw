@@ -1,74 +1,77 @@
 ---
-title: "SQL Server 中的授權和權限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 中的授權和權限"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0916ca83cae40d1deda2e1126fd7b7ebab46a23c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# SQL Server 中的授權和權限
-當您建立資料庫物件時，必須明確地授與權限，讓使用者能夠存取這些物件。  每個安全性實體物件都具有可利用權限陳述式來授與主體的權限。  
+# <a name="authorization-and-permissions-in-sql-server"></a><span data-ttu-id="755ab-102">SQL Server 中的授權和權限</span><span class="sxs-lookup"><span data-stu-id="755ab-102">Authorization and Permissions in SQL Server</span></span>
+<span data-ttu-id="755ab-103">當您建立資料庫物件時，必須明確地授與權限，讓使用者能夠存取這些物件。</span><span class="sxs-lookup"><span data-stu-id="755ab-103">When you create database objects, you must explicitly grant permissions to make them accessible to users.</span></span> <span data-ttu-id="755ab-104">每個安全性實體物件都具有可利用權限陳述式來授與主體的權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-104">Every securable object has permissions that can be granted to a principal using permission statements.</span></span>  
   
-## 最小權限的原則  
- 使用最小權限使用者帳戶 \(LUA\) 方法來開發應用程式是抵禦安全性威脅之深入防禦策略中很重要的一部分。  LUA 方法可確保使用者遵循最小權限的原則而且永遠以受限制的使用者帳戶進行登入。  管理工作是使用固定伺服器角色區分的，而且 `sysadmin` 固定伺服器角色的使用方式嚴格受限。  
+## <a name="the-principle-of-least-privilege"></a><span data-ttu-id="755ab-105">最小權限的原則</span><span class="sxs-lookup"><span data-stu-id="755ab-105">The Principle of Least Privilege</span></span>  
+ <span data-ttu-id="755ab-106">使用最小權限使用者帳戶 (LUA) 方法來開發應用程式是抵禦安全性威脅之深入防禦策略中很重要的一部分。</span><span class="sxs-lookup"><span data-stu-id="755ab-106">Developing an application using a least-privileged user account (LUA) approach is an important part of a defensive, in-depth strategy for countering security threats.</span></span> <span data-ttu-id="755ab-107">LUA 方法可確保使用者遵循最小權限的原則而且永遠以受限制的使用者帳戶進行登入。</span><span class="sxs-lookup"><span data-stu-id="755ab-107">The LUA approach ensures that users follow the principle of least privilege and always log on with limited user accounts.</span></span> <span data-ttu-id="755ab-108">管理工作是使用固定伺服器角色區分的，而且 `sysadmin` 固定伺服器角色的使用方式嚴格受限。</span><span class="sxs-lookup"><span data-stu-id="755ab-108">Administrative tasks are broken out using fixed server roles, and the use of the `sysadmin` fixed server role is severely restricted.</span></span>  
   
- 授與權限給資料庫使用者時，請務必遵守最小權限的原則。  請授與完成指定工作所需的最小權限給使用者或角色。  
+ <span data-ttu-id="755ab-109">授與權限給資料庫使用者時，請務必遵守最小權限的原則。</span><span class="sxs-lookup"><span data-stu-id="755ab-109">Always follow the principle of least privilege when granting permissions to database users.</span></span> <span data-ttu-id="755ab-110">請授與完成指定工作所需的最小權限給使用者或角色。</span><span class="sxs-lookup"><span data-stu-id="755ab-110">Grant the minimum permissions necessary to a user or role to accomplish a given task.</span></span>  
   
 > [!IMPORTANT]
->  使用 LUA 方法來開發和測試應用程式會對開發程序造成某種程度的困難。  就建立物件和撰寫程式碼而言，以系統管理員或資料庫擁有者的身分登入會比使用 LUA 帳戶更方便。  不過，當最小權限的使用者嘗試執行需要更高權限才能正常運作的應用程式時，使用高權限帳戶來開發應用程式可能會模糊化縮減功能的影響。  授與過高權限給使用者以便重新取得喪失的功能可能會讓應用程式容易遭受攻擊。  以 LUA 帳戶登入並設計、開發和測試應用程式會對安全性規劃強制執行規範的方法，進而排除不愉快的意外情況以及授與更高權限當做快速修正的誘惑。  即使您的應用程式必須使用 Windows 驗證進行部署，您還是可以使用 SQL Server 登入進行測試。  
+>  <span data-ttu-id="755ab-111">使用 LUA 方法來開發和測試應用程式會對開發程序造成某種程度的困難。</span><span class="sxs-lookup"><span data-stu-id="755ab-111">Developing and testing an application using the LUA approach adds a degree of difficulty to the development process.</span></span> <span data-ttu-id="755ab-112">就建立物件和撰寫程式碼而言，以系統管理員或資料庫擁有者的身分登入會比使用 LUA 帳戶更方便。</span><span class="sxs-lookup"><span data-stu-id="755ab-112">It is easier to create objects and write code while logged on as a system administrator or database owner than it is using a LUA account.</span></span> <span data-ttu-id="755ab-113">不過，當最小權限的使用者嘗試執行需要更高權限才能正常運作的應用程式時，使用高權限帳戶來開發應用程式可能會模糊化縮減功能的影響。</span><span class="sxs-lookup"><span data-stu-id="755ab-113">However, developing applications using a highly privileged account can obfuscate the impact of reduced functionality when least privileged users attempt to run an application that requires elevated permissions in order to function correctly.</span></span> <span data-ttu-id="755ab-114">授與過高權限給使用者以便重新取得喪失的功能可能會讓應用程式容易遭受攻擊。</span><span class="sxs-lookup"><span data-stu-id="755ab-114">Granting excessive permissions to users in order to reacquire lost functionality can leave your application vulnerable to attack.</span></span> <span data-ttu-id="755ab-115">以 LUA 帳戶登入並設計、開發和測試應用程式會對安全性規劃強制執行規範的方法，進而排除不愉快的意外情況以及授與更高權限當做快速修正的誘惑。</span><span class="sxs-lookup"><span data-stu-id="755ab-115">Designing, developing and testing your application logged on with a LUA account enforces a disciplined approach to security planning that eliminates unpleasant surprises and the temptation to grant elevated privileges as a quick fix.</span></span> <span data-ttu-id="755ab-116">即使您的應用程式必須使用 Windows 驗證進行部署，您還是可以使用 SQL Server 登入進行測試。</span><span class="sxs-lookup"><span data-stu-id="755ab-116">You can use a SQL Server login for testing even if your application is intended to deploy using Windows authentication.</span></span>  
   
-## 以角色為基礎的權限  
- 授與權限給角色而非使用者可簡化安全性管理作業。  指派給角色的權限集合會由該角色的所有成員繼承。  在某個角色中加入或移除使用者會比針對個別使用者重新建立不同的權限集合更容易。  雖然角色可以巢狀化，但是巢狀層級過多可能會降低效能。  此外，您也可以將使用者加入至固定資料庫角色，以便簡化指派權限的作業。  
+## <a name="role-based-permissions"></a><span data-ttu-id="755ab-117">以角色為基礎的權限</span><span class="sxs-lookup"><span data-stu-id="755ab-117">Role-Based Permissions</span></span>  
+ <span data-ttu-id="755ab-118">授與權限給角色而非使用者可簡化安全性管理作業。</span><span class="sxs-lookup"><span data-stu-id="755ab-118">Granting permissions to roles rather than to users simplifies security administration.</span></span> <span data-ttu-id="755ab-119">指派給角色的權限集合會由該角色的所有成員繼承。</span><span class="sxs-lookup"><span data-stu-id="755ab-119">Permission sets that are assigned to roles are inherited by all members of the role.</span></span> <span data-ttu-id="755ab-120">在某個角色中加入或移除使用者會比針對個別使用者重新建立不同的權限集合更容易。</span><span class="sxs-lookup"><span data-stu-id="755ab-120">It is easier to add or remove users from a role than it is to recreate separate permission sets for individual users.</span></span> <span data-ttu-id="755ab-121">雖然角色可以巢狀化，但是巢狀層級過多可能會降低效能。</span><span class="sxs-lookup"><span data-stu-id="755ab-121">Roles can be nested; however, too many levels of nesting can degrade performance.</span></span> <span data-ttu-id="755ab-122">此外，您也可以將使用者加入至固定資料庫角色，以便簡化指派權限的作業。</span><span class="sxs-lookup"><span data-stu-id="755ab-122">You can also add users to fixed database roles to simplify assigning permissions.</span></span>  
   
- 您可以在結構描述層級授與權限。  使用者會自動繼承在該結構描述中建立之所有新物件的權限。您不需要在建立新物件時授與權限。  
+ <span data-ttu-id="755ab-123">您可以在結構描述層級授與權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-123">You can grant permissions at the schema level.</span></span> <span data-ttu-id="755ab-124">使用者會自動繼承在該結構描述中建立之所有新物件的權限。您不需要在建立新物件時授與權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-124">Users automatically inherit permissions on all new objects created in the schema; you do not need to grant permissions as new objects are created.</span></span>  
   
-## 透過程序性程式碼授與權限  
- 透過預存程序 \(Stored Procedure\) 和使用者定義函式等模組來封裝資料存取會對應用程式提供額外的保護層。  您可以單獨授與預存程序或函式的權限而拒絕基礎物件 \(例如資料表\) 的權限，藉以防止使用者直接與資料庫物件進行互動。  SQL Server 可透過擁有權鏈結達到此目的。  
+## <a name="permissions-through-procedural-code"></a><span data-ttu-id="755ab-125">透過程序性程式碼授與權限</span><span class="sxs-lookup"><span data-stu-id="755ab-125">Permissions Through Procedural Code</span></span>  
+ <span data-ttu-id="755ab-126">透過預存程序 (Stored Procedure) 和使用者定義函式等模組來封裝資料存取會對應用程式提供額外的保護層。</span><span class="sxs-lookup"><span data-stu-id="755ab-126">Encapsulating data access through modules such as stored procedures and user-defined functions provides an additional layer of protection around your application.</span></span> <span data-ttu-id="755ab-127">您可以單獨授與預存程序或函式的權限而拒絕基礎物件 (例如資料表) 的權限，藉以防止使用者直接與資料庫物件進行互動。</span><span class="sxs-lookup"><span data-stu-id="755ab-127">You can prevent users from directly interacting with database objects by granting permissions only to stored procedures or functions while denying permissions to underlying objects such as tables.</span></span> <span data-ttu-id="755ab-128">SQL Server 可透過擁有權鏈結達到此目的。</span><span class="sxs-lookup"><span data-stu-id="755ab-128">SQL Server achieves this by ownership chaining.</span></span>  
   
-## 權限陳述式  
- 下表將描述三個 Transact\-SQL 權限陳述式。  
+## <a name="permission-statements"></a><span data-ttu-id="755ab-129">權限陳述式</span><span class="sxs-lookup"><span data-stu-id="755ab-129">Permission Statements</span></span>  
+ <span data-ttu-id="755ab-130">下表將描述三個 Transact-SQL 權限陳述式。</span><span class="sxs-lookup"><span data-stu-id="755ab-130">The three Transact-SQL permission statements are described in the following table.</span></span>  
   
-|權限陳述式|描述|  
-|-----------|--------|  
-|GRANT|授與權限。|  
-|REVOKE|撤銷權限。  這是新物件的預設狀態。  從某個使用者或角色中撤銷的權限仍然可以繼承自被指派主體的其他群組或角色。|  
-|DENY|DENY 會撤銷權限，讓它無法被繼承。  DENY 的優先順序高於所有權限，但是 DENY 無法套用至物件擁有者或 `sysadmin` 的成員。  如果您針對 `public` 角色拒絕 \(DENY\) 某個物件的權限，就會一併拒絕所有使用者和角色，但物件擁有者和 `sysadmin` 成員除外。|  
+|<span data-ttu-id="755ab-131">權限陳述式</span><span class="sxs-lookup"><span data-stu-id="755ab-131">Permission Statement</span></span>|<span data-ttu-id="755ab-132">描述</span><span class="sxs-lookup"><span data-stu-id="755ab-132">Description</span></span>|  
+|--------------------------|-----------------|  
+|<span data-ttu-id="755ab-133">GRANT</span><span class="sxs-lookup"><span data-stu-id="755ab-133">GRANT</span></span>|<span data-ttu-id="755ab-134">授與權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-134">Grants a permission.</span></span>|  
+|<span data-ttu-id="755ab-135">REVOKE</span><span class="sxs-lookup"><span data-stu-id="755ab-135">REVOKE</span></span>|<span data-ttu-id="755ab-136">撤銷權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-136">Revokes a permission.</span></span> <span data-ttu-id="755ab-137">這是新物件的預設狀態。</span><span class="sxs-lookup"><span data-stu-id="755ab-137">This is the default state of a new object.</span></span> <span data-ttu-id="755ab-138">從某個使用者或角色中撤銷的權限仍然可以繼承自被指派主體的其他群組或角色。</span><span class="sxs-lookup"><span data-stu-id="755ab-138">A permission revoked from a user or role can still be inherited from other groups or roles to which the principal is assigned.</span></span>|  
+|<span data-ttu-id="755ab-139">DENY</span><span class="sxs-lookup"><span data-stu-id="755ab-139">DENY</span></span>|<span data-ttu-id="755ab-140">DENY 會撤銷權限，讓它無法被繼承。</span><span class="sxs-lookup"><span data-stu-id="755ab-140">DENY revokes a permission so that it cannot be inherited.</span></span> <span data-ttu-id="755ab-141">DENY 的優先順序高於所有權限，但是 DENY 無法套用至物件擁有者或 `sysadmin` 的成員。</span><span class="sxs-lookup"><span data-stu-id="755ab-141">DENY takes precedence over all permissions, except DENY does not apply to object owners or members of `sysadmin`.</span></span> <span data-ttu-id="755ab-142">如果您針對 `public` 角色拒絕 (DENY) 某個物件的權限，就會一併拒絕所有使用者和角色，但物件擁有者和 `sysadmin` 成員除外。</span><span class="sxs-lookup"><span data-stu-id="755ab-142">If you DENY permissions on an object to the `public` role it is denied to all users and roles except for object owners and `sysadmin` members.</span></span>|  
   
--   GRANT 陳述式可以指派權限給某個群組或角色，而資料庫角色可以繼承這些權限。  不過，DENY 陳述式的優先順序高於所有其他權限陳述式。  因此，已經被拒絕某個權限的使用者無法從另一個角色繼承該權限。  
-  
-> [!NOTE]
->  `sysadmin` 固定伺服器角色的成員和物件擁有者無法被拒絕權限。  
-  
-## 擁有權鏈結  
- SQL Server 會確保只有已經被授與權限的主體才能存取物件。  當多個資料庫物件彼此存取時，這個序列 \(Sequence\) 便稱為鏈結。  當 SQL Server 周遊鏈結中的連結時，它評估權限的方式與個別存取每個項目時的處理方式不同。  透過鏈結存取物件時，SQL Server 會先比較物件的擁有者與呼叫物件的擁有者 \(鏈結中的上一個連結\)。  如果這兩個物件具有相同的擁有者，系統就不會檢查參考物件的權限。  只要某個物件存取具有不同擁有者的另一個物件，擁有權鏈結就會中斷而且 SQL Server 必須檢查呼叫端的安全性內容。  
-  
-## 程序性程式碼和擁有權鏈結  
- 假設某位使用者被授與從資料表中選取資料之預存程序的執行權限。  如果此預存程序與資料表具有相同的擁有者，使用者就不需要被授與資料表的任何權限，甚至可以被拒絕權限。  不過，如果此預存程序與資料表具有不同的擁有者，SQL Server 就必須檢查使用者對資料表擁有的權限，然後再允許存取資料。  
+-   <span data-ttu-id="755ab-143">GRANT 陳述式可以指派權限給某個群組或角色，而資料庫角色可以繼承這些權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-143">The GRANT statement can assign permissions to a group or role that can be inherited by database users.</span></span> <span data-ttu-id="755ab-144">不過，DENY 陳述式的優先順序高於所有其他權限陳述式。</span><span class="sxs-lookup"><span data-stu-id="755ab-144">However, the DENY statement takes precedence over all other permission statements.</span></span> <span data-ttu-id="755ab-145">因此，已經被拒絕某個權限的使用者無法從另一個角色繼承該權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-145">Therefore, a user who has been denied a permission cannot inherit it from another role.</span></span>  
   
 > [!NOTE]
->  在動態 SQL 陳述式的情況中，擁有權鏈結並不適用。  為了呼叫執行 SQL 陳述式的程序，呼叫端必須被授與基礎資料表的權限，因而讓應用程式容易遭受 SQL 插入式攻擊。  SQL Server 提供不需要授與基礎資料表之權限的全新機制，例如模擬以及使用憑證來簽署模組。  這些機制也可以搭配 CLR 預存程序使用。  
+>  <span data-ttu-id="755ab-146">`sysadmin` 固定伺服器角色的成員和物件擁有者無法被拒絕權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-146">Members of the `sysadmin` fixed server role and object owners cannot be denied permissions.</span></span>  
   
-## 外部資源  
- 如需詳細資訊，請參閱下列資源。  
+## <a name="ownership-chains"></a><span data-ttu-id="755ab-147">擁有權鏈結</span><span class="sxs-lookup"><span data-stu-id="755ab-147">Ownership Chains</span></span>  
+ <span data-ttu-id="755ab-148">SQL Server 會確保只有已經被授與權限的主體才能存取物件。</span><span class="sxs-lookup"><span data-stu-id="755ab-148">SQL Server ensures that only principals that have been granted permission can access objects.</span></span> <span data-ttu-id="755ab-149">當多個資料庫物件彼此存取時，這個序列 (Sequence) 便稱為鏈結。</span><span class="sxs-lookup"><span data-stu-id="755ab-149">When multiple database objects access each other, the sequence is known as a chain.</span></span> <span data-ttu-id="755ab-150">當 SQL Server 周遊鏈結中的連結時，它評估權限的方式與個別存取每個項目時的處理方式不同。</span><span class="sxs-lookup"><span data-stu-id="755ab-150">When SQL Server is traversing the links in the chain, it evaluates permissions differently than it would if it were accessing each item separately.</span></span> <span data-ttu-id="755ab-151">透過鏈結存取物件時，SQL Server 會先比較物件的擁有者與呼叫物件的擁有者 (鏈結中的上一個連結)。</span><span class="sxs-lookup"><span data-stu-id="755ab-151">When an object is accessed through a chain, SQL Server first compares the object's owner to the owner of the calling object (the previous link in the chain).</span></span> <span data-ttu-id="755ab-152">如果這兩個物件具有相同的擁有者，系統就不會檢查參考物件的權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-152">If both objects have the same owner, permissions on the referenced object are not checked.</span></span> <span data-ttu-id="755ab-153">只要某個物件存取具有不同擁有者的另一個物件，擁有權鏈結就會中斷而且 SQL Server 必須檢查呼叫端的安全性內容。</span><span class="sxs-lookup"><span data-stu-id="755ab-153">Whenever an object accesses another object that has a different owner, the ownership chain is broken and SQL Server must check the caller's security context.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|《SQL Server 線上叢書》的[權限](http://msdn.microsoft.com/library/ms191291.aspx)|包含說明權限階層、目錄檢視以及固定伺服器與資料庫角色之權限的主題。|  
+## <a name="procedural-code-and-ownership-chaining"></a><span data-ttu-id="755ab-154">程序性程式碼和擁有權鏈結</span><span class="sxs-lookup"><span data-stu-id="755ab-154">Procedural Code and Ownership Chaining</span></span>  
+ <span data-ttu-id="755ab-155">假設某位使用者被授與從資料表中選取資料之預存程序的執行權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-155">Suppose that a user is granted execute permissions on a stored procedure that selects data from a table.</span></span> <span data-ttu-id="755ab-156">如果此預存程序與資料表具有相同的擁有者，使用者就不需要被授與資料表的任何權限，甚至可以被拒絕權限。</span><span class="sxs-lookup"><span data-stu-id="755ab-156">If the stored procedure and the table have the same owner, the user doesn't need to be granted any permissions on the table and can even be denied permissions.</span></span> <span data-ttu-id="755ab-157">不過，如果此預存程序與資料表具有不同的擁有者，SQL Server 就必須檢查使用者對資料表擁有的權限，然後再允許存取資料。</span><span class="sxs-lookup"><span data-stu-id="755ab-157">However, if the stored procedure and the table have different owners, SQL Server must check the user's permissions on the table before allowing access to the data.</span></span>  
   
-## 請參閱  
- [保護 ADO.NET 應用程式](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [SQL Server 中的驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)   
- [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)   
- [SQL Server 中的擁有權和使用者結構描述分隔](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+> [!NOTE]
+>  <span data-ttu-id="755ab-158">在動態 SQL 陳述式的情況中，擁有權鏈結並不適用。</span><span class="sxs-lookup"><span data-stu-id="755ab-158">Ownership chaining does not apply in the case of dynamic SQL statements.</span></span> <span data-ttu-id="755ab-159">為了呼叫執行 SQL 陳述式的程序，呼叫端必須被授與基礎資料表的權限，因而讓應用程式容易遭受 SQL 插入式攻擊。</span><span class="sxs-lookup"><span data-stu-id="755ab-159">To call a procedure that executes an SQL statement, the caller must be granted permissions on the underlying tables, leaving your application vulnerable to SQL Injection attack.</span></span> <span data-ttu-id="755ab-160">SQL Server 提供不需要授與基礎資料表之權限的全新機制，例如模擬以及使用憑證來簽署模組。</span><span class="sxs-lookup"><span data-stu-id="755ab-160">SQL Server provides new mechanisms, such as impersonation and signing modules with certificates, that do not require granting permissions on the underlying tables.</span></span> <span data-ttu-id="755ab-161">這些機制也可以搭配 CLR 預存程序使用。</span><span class="sxs-lookup"><span data-stu-id="755ab-161">These can also be used with CLR stored procedures.</span></span>  
+  
+## <a name="external-resources"></a><span data-ttu-id="755ab-162">外部資源</span><span class="sxs-lookup"><span data-stu-id="755ab-162">External Resources</span></span>  
+ <span data-ttu-id="755ab-163">如需詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="755ab-163">For more information, see the following resources.</span></span>  
+  
+|<span data-ttu-id="755ab-164">資源</span><span class="sxs-lookup"><span data-stu-id="755ab-164">Resource</span></span>|<span data-ttu-id="755ab-165">說明</span><span class="sxs-lookup"><span data-stu-id="755ab-165">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="755ab-166">[權限](http://msdn.microsoft.com/library/ms191291.aspx)SQL Server 線上叢書中</span><span class="sxs-lookup"><span data-stu-id="755ab-166">[Permissions](http://msdn.microsoft.com/library/ms191291.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="755ab-167">包含說明權限階層、目錄檢視以及固定伺服器與資料庫角色之權限的主題。</span><span class="sxs-lookup"><span data-stu-id="755ab-167">Contains topics describing permissions hierarchy, catalog views, and permissions of fixed server and database roles.</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="755ab-168">另請參閱</span><span class="sxs-lookup"><span data-stu-id="755ab-168">See Also</span></span>  
+ [<span data-ttu-id="755ab-169">設定 ADO.NET 應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="755ab-169">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="755ab-170">SQL Server 中的應用程式安全性案例</span><span class="sxs-lookup"><span data-stu-id="755ab-170">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="755ab-171">在 SQL Server 驗證</span><span class="sxs-lookup"><span data-stu-id="755ab-171">Authentication in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [<span data-ttu-id="755ab-172">伺服器和 SQL Server 中的資料庫角色</span><span class="sxs-lookup"><span data-stu-id="755ab-172">Server and Database Roles in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [<span data-ttu-id="755ab-173">擁有權和 SQL Server 中的使用者結構描述分隔</span><span class="sxs-lookup"><span data-stu-id="755ab-173">Ownership and User-Schema Separation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [<span data-ttu-id="755ab-174">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="755ab-174">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

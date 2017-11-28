@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - Code Document Object Model, graphs
 - Code Document Object Model, creating classes
@@ -16,103 +18,102 @@ helpviewer_keywords:
 - CodeDOM, creating classes
 - CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: d92af3e2a04588e3942dd6c8c0625c607e08f123
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3876ed881d98b4ee0bdb66f43de3de939111d45d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 CodeDOM 建立類別
-下列程序說明如何建立及編譯會產生一個類別的 CodeDOM 圖形，此類別包含兩個欄位、三個屬性、一個方法、一個建構函式 \(Constructor\) 和一個進入點 \(Entry Point\)。  
+# <a name="how-to-create-a-class-using-codedom"></a><span data-ttu-id="995f8-102">如何：使用 CodeDOM 建立類別</span><span class="sxs-lookup"><span data-stu-id="995f8-102">How to: Create a Class Using CodeDOM</span></span>
+<span data-ttu-id="995f8-103">下列程序示範如何建立及編譯 CodeDOM 圖表，其可產生包含兩個欄位、三種屬性、一種方法、一個建構函式和一個進入點的類別。</span><span class="sxs-lookup"><span data-stu-id="995f8-103">The following procedures illustrate how to create and compile a CodeDOM graph that generates a class containing two fields, three properties, a method, a constructor, and an entry point.</span></span>  
   
-1.  建立將使用 CodeDOM 程式碼產生類別之原始程式碼的主控台應用程式 \(Console Application\)。  
+1.  <span data-ttu-id="995f8-104">建立主控台應用程式，使用 CodeDOM 程式碼產生類別的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="995f8-104">Create a console application that will use CodeDOM code to generate the source code for a class.</span></span>  
   
-     在此範例中，產生的類別名為 `Sample`，而且產生的程式碼是一個名為 `CodeDOMCreatedClass` 的類別，位於名為 SampleCode 的檔案中。  
+     <span data-ttu-id="995f8-105">在此範例中，則產生的類別命名為 `Sample`，而產生的程式碼類別名為 `CodeDOMCreatedClass`，其位於 SampleCode 檔案中。</span><span class="sxs-lookup"><span data-stu-id="995f8-105">In this example, the generating class is named `Sample`, and the generated code is a class named `CodeDOMCreatedClass` in a file named SampleCode.</span></span>  
   
-2.  在產生的類別中，初始化 CodeDOM 圖形及使用 CodeDOM 方法來定義產生之類別的成員、建構函式和進入點 \(`Main` 方法\)。  
+2.  <span data-ttu-id="995f8-106">在產生的類別中，初始化 CodeDOM 圖表並使用 CodeDOM 方法來定義所產生類別的成員、建構函式及進入點 (`Main` 方法)。</span><span class="sxs-lookup"><span data-stu-id="995f8-106">In the generating class, initialize the CodeDOM graph and use CodeDOM methods to define the members, constructor, and entry point (`Main` method) of the generated class.</span></span>  
   
-     在此範例中，產生的類別有兩個欄位、三個屬性、一個建構函式、一個方法和一個 `Main` 方法。  
+     <span data-ttu-id="995f8-107">在此範例中，產生的類別有兩個欄位、 三個屬性、 建構函式、 方法和 `Main` 方法。</span><span class="sxs-lookup"><span data-stu-id="995f8-107">In this example, the generated class has two fields, three properties, a constructor, a method, and a `Main` method.</span></span>  
   
-3.  在產生的類別中，建立特定語言的程式碼提供者，並呼叫其 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法，從圖形產生程式碼。  
+3.  <span data-ttu-id="995f8-108">在產生之類別中，建立特定語言的程式碼提供者並呼叫其 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 圖表產生程式碼的方法。</span><span class="sxs-lookup"><span data-stu-id="995f8-108">In the generating class, create a language-specific code provider and call its <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> method to generate the code from the graph.</span></span>  
   
-4.  編譯並執行應用程式來產生程式碼。  
+4.  <span data-ttu-id="995f8-109">編譯並執行應用程式產生的程式碼。</span><span class="sxs-lookup"><span data-stu-id="995f8-109">Compile and execute the application to generate the code.</span></span>  
   
-     在此範例中，產生的程式碼位於名為 SampleCode 的檔案中。  請編譯並執行該程式碼，以查看範例輸出。  
+     <span data-ttu-id="995f8-110">在此範例中，產生的程式碼是在名為 SampleCode 的檔案中。</span><span class="sxs-lookup"><span data-stu-id="995f8-110">In this example, the generated code is in a file named SampleCode.</span></span> <span data-ttu-id="995f8-111">編譯並執行此程式碼，請參閱範例輸出。</span><span class="sxs-lookup"><span data-stu-id="995f8-111">Compile and execute that code to see the sample output.</span></span>  
   
-### 若要建立將執行 CodeDOM 程式碼的應用程式。  
+### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a><span data-ttu-id="995f8-112">若要建立會執行 CodeDOM 程式碼的應用程式</span><span class="sxs-lookup"><span data-stu-id="995f8-112">To create the application that will execute the CodeDOM code</span></span>  
   
--   建立一個包含 CodeDOM 程式碼的主控台應用程式類別。  定義此類別中用於參考組件 \(<xref:System.CodeDom.CodeCompileUnit>\) 和類別 \(<xref:System.CodeDom.CodeTypeDeclaration>\) 的全域欄位、指定產生之原始程式檔 \(Source File\) 的名稱，並宣告 `Main` 方法。  
+-   <span data-ttu-id="995f8-113">建立主控台應用程式類別以包含 CodeDOM 程式碼。</span><span class="sxs-lookup"><span data-stu-id="995f8-113">Create a console application class to contain the CodeDOM code.</span></span> <span data-ttu-id="995f8-114">定義在類別中用以參考組件 (<xref:System.CodeDom.CodeCompileUnit>) 和類別 (<xref:System.CodeDom.CodeTypeDeclaration>) 的全域欄位，指定產生的來源檔案名稱，並宣告 `Main` 方法。</span><span class="sxs-lookup"><span data-stu-id="995f8-114">Define the global fields that are to be used in the class to reference the assembly (<xref:System.CodeDom.CodeCompileUnit>) and class (<xref:System.CodeDom.CodeTypeDeclaration>), specify the name of the generated source file, and declare the `Main` method.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)]
      [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
   
-### 若要初始化 CodeDOM 圖形  
+### <a name="to-initialize-the-codedom-graph"></a><span data-ttu-id="995f8-115">初始化 CodeDOM 圖表</span><span class="sxs-lookup"><span data-stu-id="995f8-115">To initialize the CodeDOM graph</span></span>  
   
--   在主控台應用程式類別的建構函式中，初始化組件和類別，並對 CodeDOM 圖形加入適當的宣告。  
+-   <span data-ttu-id="995f8-116">在主控台應用程式類別的建構函式中，初始化組件和類別，並將適當的宣告新增至 CodeDOM 圖表。</span><span class="sxs-lookup"><span data-stu-id="995f8-116">In the constructor for the console application class, initialize the assembly and class, and add the appropriate declarations to the CodeDOM graph.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#2)]
      [!code-vb[CodeDOM Class Sample#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#2)]  
   
-### 若要將成員加入至 CodeDOM 圖形中  
+### <a name="to-add-members-to-the-codedom-graph"></a><span data-ttu-id="995f8-117">將成員新增至 CodeDOM 圖表</span><span class="sxs-lookup"><span data-stu-id="995f8-117">To add members to the CodeDOM graph</span></span>  
   
--   將 <xref:System.CodeDom.CodeMemberField> 物件加入至此類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性中，藉此將欄位加入至 CodeDOM 圖形中。  
+-   <span data-ttu-id="995f8-118">將 <xref:System.CodeDom.CodeMemberField> 物件新增至類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性，以將欄位新增至 CodeDOM 圖表。</span><span class="sxs-lookup"><span data-stu-id="995f8-118">Add fields to the CodeDOM graph by adding <xref:System.CodeDom.CodeMemberField> objects to the <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> property of the class.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#3)]
      [!code-vb[CodeDOM Class Sample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#3)]  
   
--   將 <xref:System.CodeDom.CodeMemberProperty> 物件加入至此類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性中，藉此將屬性加入至 CodeDOM 圖形中。  
+-   <span data-ttu-id="995f8-119">將 <xref:System.CodeDom.CodeMemberProperty> 物件新增至類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性，以將屬性新增至 CodeDOM 圖表。</span><span class="sxs-lookup"><span data-stu-id="995f8-119">Add properties to the CodeDOM graph by adding <xref:System.CodeDom.CodeMemberProperty> objects to the <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> property of the class.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#4)]
      [!code-vb[CodeDOM Class Sample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#4)]  
   
--   將 <xref:System.CodeDom.CodeMemberMethod> 物件加入至此類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性中，藉此將方法加入至 CodeDOM 圖形中。  
+-   <span data-ttu-id="995f8-120">將 <xref:System.CodeDom.CodeMemberMethod> 物件新增至類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性，以將方法新增至 CodeDOM 圖表。</span><span class="sxs-lookup"><span data-stu-id="995f8-120">Add a method to the CodeDOM graph by adding a <xref:System.CodeDom.CodeMemberMethod> object to the <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> property of the class.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#5)]
      [!code-vb[CodeDOM Class Sample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#5)]  
   
--   將 <xref:System.CodeDom.CodeConstructor> 物件加入至此類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性中，藉此將建構函式加入至 CodeDOM 圖形中。  
+-   <span data-ttu-id="995f8-121">將 <xref:System.CodeDom.CodeConstructor> 物件新增至類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性，將以建構函式新增至 CodeDOM 圖表。</span><span class="sxs-lookup"><span data-stu-id="995f8-121">Add a constructor to the CodeDOM graph by adding a <xref:System.CodeDom.CodeConstructor> object to the <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> property of the class.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#6)]
      [!code-vb[CodeDOM Class Sample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#6)]  
   
--   將 <xref:System.CodeDom.CodeEntryPointMethod> 物件加入至此類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性中，藉此將進入點加入至 CodeDOM 圖形中。  
+-   <span data-ttu-id="995f8-122">將 <xref:System.CodeDom.CodeEntryPointMethod> 物件新增至類別的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 屬性，以將進入點新增至 CodeDOM 圖表。</span><span class="sxs-lookup"><span data-stu-id="995f8-122">Add an entry point to the CodeDOM graph by adding a <xref:System.CodeDom.CodeEntryPointMethod> object to the <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> property of the class.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#7)]
      [!code-vb[CodeDOM Class Sample#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#7)]  
   
-### 若要從 CodeDOM 圖形產生程式碼  
+### <a name="to-generate-the-code-from-the-codedom-graph"></a><span data-ttu-id="995f8-123">從 CodeDOM 圖表產生程式碼</span><span class="sxs-lookup"><span data-stu-id="995f8-123">To generate the code from the CodeDOM graph</span></span>  
   
--   藉由呼叫 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法來從 CodeDOM 圖形產生原始程式碼。  
+-   <span data-ttu-id="995f8-124">呼叫 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法，從 CodeDOM 圖表產生原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="995f8-124">Generate source code from the CodeDOM graph by calling the <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> method.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#8)]
      [!code-vb[CodeDOM Class Sample#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#8)]  
   
-### 若要建立圖形及產生程式碼  
+### <a name="to-create-the-graph-and-generate-the-code"></a><span data-ttu-id="995f8-125">建立圖形並產生程式碼</span><span class="sxs-lookup"><span data-stu-id="995f8-125">To create the graph and generate the code</span></span>  
   
-1.  將先前步驟中建立的方法加入至第一個步驟所定義的 `Main` 方法。  
+1.  <span data-ttu-id="995f8-126">將前面步驟建立的方法新增至步驟 1 定義的 `Main` 方法。</span><span class="sxs-lookup"><span data-stu-id="995f8-126">Add the methods created in the preceding steps to the `Main` method defined in the first step.</span></span>  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  編譯並執行產生的類別。  
+2.  <span data-ttu-id="995f8-127">編譯並執行產生的類別。</span><span class="sxs-lookup"><span data-stu-id="995f8-127">Compile and execute the generating class.</span></span>  
   
-## 範例  
- 下列程式碼範例顯示從先前步驟產生的程式碼。  
+## <a name="example"></a><span data-ttu-id="995f8-128">範例</span><span class="sxs-lookup"><span data-stu-id="995f8-128">Example</span></span>  
+ <span data-ttu-id="995f8-129">下列程式碼範例會顯示前幾個步驟的程式碼。</span><span class="sxs-lookup"><span data-stu-id="995f8-129">The following code example shows the code from the preceding steps.</span></span>  
   
  [!code-csharp[CodeDOM Class Sample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#1)]
  [!code-vb[CodeDOM Class Sample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#1)]  
   
- 當編譯並執行先前的範例後，會產生下列原始程式碼。  
+ <span data-ttu-id="995f8-130">前例編譯並執行後，即會產生下列原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="995f8-130">When the preceding example is compiled and executed, it produces the following source code.</span></span>  
   
  [!code-csharp[CodeDOM Class Sample#99](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/SampleCode.cs#99)]
  [!code-vb[CodeDOM Class Sample#99](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/SampleCode.vb#99)]  
   
- 產生的原始程式碼會在編譯及執行時，產生下列輸出。  
+ <span data-ttu-id="995f8-131">編譯並執行後，產生的原始程式碼會產生下列輸出。</span><span class="sxs-lookup"><span data-stu-id="995f8-131">The generated source code produces the following output when compiled and executed.</span></span>  
   
 ```  
 The object:  
@@ -121,11 +122,10 @@ The object:
  area = 36.57  
 ```  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a><span data-ttu-id="995f8-132">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="995f8-132">Compiling the Code</span></span>  
   
--   此程式碼範例需要有 `FullTrust` 權限集合，才能執行成功。  
+-   <span data-ttu-id="995f8-133">此程式碼範例需要設定 `FullTrust` 權限，才能順利執行。</span><span class="sxs-lookup"><span data-stu-id="995f8-133">This code example requires the `FullTrust` permission set to execute successfully.</span></span>  
   
-## 請參閱  
- [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)   
- [從 CodeDOM 圖表產生和編譯原始程式碼](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
-
+## <a name="see-also"></a><span data-ttu-id="995f8-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="995f8-134">See Also</span></span>  
+ [<span data-ttu-id="995f8-135">使用 CodeDOM</span><span class="sxs-lookup"><span data-stu-id="995f8-135">Using the CodeDOM</span></span>](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
+ [<span data-ttu-id="995f8-136">從 CodeDOM 圖表產生和編譯原始程式碼</span><span class="sxs-lookup"><span data-stu-id="995f8-136">Generating and Compiling Source Code from a CodeDOM Graph</span></span>](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

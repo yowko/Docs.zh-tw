@@ -1,16 +1,13 @@
 ---
 title: "Main() 和命令列引數 (C# 程式設計指南)"
-ms.date: 2017-08-02
+ms.date: 08/02/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS5001
 - main_CSharpKeyword
 - Main
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - Main method [C#]
 - C# language, command-line arguments
@@ -18,55 +15,42 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ab0b93a867ecf252bffd529d284ef9ddcc9163ba
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: d019d1c5757a961c03439d756e808ae13fd8a67b
-ms.openlocfilehash: 51408654abd0dcd2f7159438b507c44bd579bfd9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
+# <a name="main-and-command-line-arguments-c-programming-guide"></a><span data-ttu-id="14842-102">Main() 和命令列引數 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="14842-102">Main() and command-line arguments (C# Programming Guide)</span></span>
 
-`Main` 方法是 C# 應用程式的進入點。 (程式庫和服務不需要使用 `Main` 方法做為進入點)。啟動應用程式時，`Main` 方法是第一個叫用的方法。
+<span data-ttu-id="14842-103">`Main` 方法是 C# 應用程式的進入點。</span><span class="sxs-lookup"><span data-stu-id="14842-103">The `Main` method is the entry point of a C# application.</span></span> <span data-ttu-id="14842-104">(程式庫和服務不需要使用 `Main` 方法做為進入點)。啟動應用程式時，`Main` 方法是第一個叫用的方法。</span><span class="sxs-lookup"><span data-stu-id="14842-104">(Libraries and services do not require a `Main` method as an entry point.) When the application is started, the `Main` method is the first method that is invoked.</span></span>
 
- C# 程式中只能有一個進入點。 如果您具有多個含 `Main` 方法的類別，就必須使用 **/main** 編譯器選項來編譯您的程式，以指定要使用哪一個 `Main` 方法做為進入點。 如需詳細資訊，請參閱 [/main (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/main-compiler-option.md)。
+ <span data-ttu-id="14842-105">C# 程式中只能有一個進入點。</span><span class="sxs-lookup"><span data-stu-id="14842-105">There can only be one entry point in a C# program.</span></span> <span data-ttu-id="14842-106">如果您具有多個含 `Main` 方法的類別，就必須使用 **/main** 編譯器選項來編譯您的程式，以指定要使用哪一個 `Main` 方法做為進入點。</span><span class="sxs-lookup"><span data-stu-id="14842-106">If you have more than one class that has a `Main` method, you must compile your program with the **/main** compiler option to specify which `Main` method to use as the entry point.</span></span> <span data-ttu-id="14842-107">如需詳細資訊，請參閱 [/main (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/main-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="14842-107">For more information, see [/main (C# Compiler Options)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).</span></span>
 
- [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
+ [!code-csharp[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a><span data-ttu-id="14842-108">概觀</span><span class="sxs-lookup"><span data-stu-id="14842-108">Overview</span></span>
 
-- `Main` 方法是可執行程式的進入點；它是程式控制開始和結束的位置。
-- `Main` 會宣告於類別或結構內部。 `Main` 必須是 [static](../../../csharp/language-reference/keywords/static.md)，但不必是 [public](../../../csharp/language-reference/keywords/public.md)。 (在先前範例中，它會接收 [private](../../../csharp/language-reference/keywords/private.md) 的預設存取)。封入類別或結構不需要是 static。
-- `Main` 的傳回型別可以是 `void`、`int`，或是 `Task`、`Task<int>` (從 C# 7.1 開始)。
-- 只有當 `Main` 傳回 `Task` 或 `Task<int>` 時，`Main` 的宣告才可以包含 [`async`](../../language-reference/keywords/async.md) 修飾詞。 請注意，上列敘述排除了 `async void Main` 方法。
-- `Main` 方法不一定要使用包含命令列引數的 `string[]` 參數來宣告。 使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 來建立 Windows 應用程式時，您可以手動新增參數，或使用 <xref:System.Environment> 類別來取得命令列引數。 參數會讀入來做為以零為基礎的命令列引數。 不同於 C 和 C++，程式的名稱不會被視為第一個命令列引數。
+- <span data-ttu-id="14842-109">`Main` 方法是可執行程式的進入點；它是程式控制開始和結束的位置。</span><span class="sxs-lookup"><span data-stu-id="14842-109">The `Main` method is the entry point of an executable program; it is where the program control starts and ends.</span></span>
+- <span data-ttu-id="14842-110">`Main` 會宣告於類別或結構內部。</span><span class="sxs-lookup"><span data-stu-id="14842-110">`Main` is declared inside a class or struct.</span></span> <span data-ttu-id="14842-111">`Main` 必須是 [static](../../../csharp/language-reference/keywords/static.md)，但不必是 [public](../../../csharp/language-reference/keywords/public.md)。</span><span class="sxs-lookup"><span data-stu-id="14842-111">`Main` must be [static](../../../csharp/language-reference/keywords/static.md) and it need not be [public](../../../csharp/language-reference/keywords/public.md).</span></span> <span data-ttu-id="14842-112">(在先前範例中，它會接收 [private](../../../csharp/language-reference/keywords/private.md) 的預設存取)。封入類別或結構不需要是 static。</span><span class="sxs-lookup"><span data-stu-id="14842-112">(In the earlier example, it receives the default access of [private](../../../csharp/language-reference/keywords/private.md).) The enclosing class or struct is not required to be static.</span></span>
+- <span data-ttu-id="14842-113">`Main` 的傳回型別可以是 `void`、`int`，或是 `Task`、`Task<int>` (從 C# 7.1 開始)。</span><span class="sxs-lookup"><span data-stu-id="14842-113">`Main` can either have a `void`, `int`, or, starting with C# 7.1, `Task`, or `Task<int>` return type.</span></span>
+- <span data-ttu-id="14842-114">只有當 `Main` 傳回 `Task` 或 `Task<int>` 時，`Main` 的宣告才可以包含 [`async`](../../language-reference/keywords/async.md) 修飾詞。</span><span class="sxs-lookup"><span data-stu-id="14842-114">If and only if `Main` returns a `Task` or `Task<int>`, the declaration of `Main` may include the [`async`](../../language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="14842-115">請注意，上列敘述排除了 `async void Main` 方法。</span><span class="sxs-lookup"><span data-stu-id="14842-115">Note that this specifically excludes an `async void Main` method.</span></span>
+- <span data-ttu-id="14842-116">`Main` 方法不一定要使用包含命令列引數的 `string[]` 參數來宣告。</span><span class="sxs-lookup"><span data-stu-id="14842-116">The `Main` method can be declared with or without a `string[]` parameter that contains command-line arguments.</span></span> <span data-ttu-id="14842-117">使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 來建立 Windows 應用程式時，您可以手動新增參數，或使用 <xref:System.Environment> 類別來取得命令列引數。</span><span class="sxs-lookup"><span data-stu-id="14842-117">When using [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] to create Windows applications, you can add the parameter manually or else use the <xref:System.Environment> class to obtain the command-line arguments.</span></span> <span data-ttu-id="14842-118">參數會讀入來做為以零為基礎的命令列引數。</span><span class="sxs-lookup"><span data-stu-id="14842-118">Parameters are read as zero-indexed command-line arguments.</span></span> <span data-ttu-id="14842-119">不同於 C 和 C++，程式的名稱不會被視為第一個命令列引數。</span><span class="sxs-lookup"><span data-stu-id="14842-119">Unlike C and C++, the name of the program is not treated as the first command-line argument.</span></span>
 
-當主控台應用程式必須啟動且等待 `Main` 中的 `await` 非同步作業時，新增的 `async` 與 `Task`、`Task<int>` 傳回型別可簡化程式碼。
+<span data-ttu-id="14842-120">當主控台應用程式必須啟動且等待 `Main` 中的 `await` 非同步作業時，新增的 `async` 與 `Task`、`Task<int>` 傳回型別可簡化程式碼。</span><span class="sxs-lookup"><span data-stu-id="14842-120">The addition of `async` and `Task`, `Task<int>` return types simplifies program code when console applications need to start and `await` asynchronous operations in `Main`.</span></span>
 
-## <a name="c-language-specification"></a>C# 語言規格
+## <a name="c-language-specification"></a><span data-ttu-id="14842-121">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="14842-121">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
-[使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a><span data-ttu-id="14842-122">請參閱</span><span class="sxs-lookup"><span data-stu-id="14842-122">See also</span></span>
+<span data-ttu-id="14842-123">[使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
-[C# 程式深入解析](../../../csharp/programming-guide/inside-a-program/index.md)
-
+[C# 程式深入解析](../../../csharp/programming-guide/inside-a-program/index.md)</span><span class="sxs-lookup"><span data-stu-id="14842-123">[Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+[C# Programming Guide](../../../csharp/programming-guide/index.md)
+[Methods](../../../csharp/programming-guide/classes-and-structs/methods.md)
+[Inside a C# Program](../../../csharp/programming-guide/inside-a-program/index.md)</span></span>

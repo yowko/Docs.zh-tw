@@ -1,14 +1,10 @@
 ---
 title: "-reference (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /reference
-dev_langs:
-- CSharp
+f1_keywords: /reference
 helpviewer_keywords:
 - /r compiler option [C#]
 - reference compiler option [C#]
@@ -19,101 +15,85 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b3995cd22f50aa8a3a329b22a4fbe4e9b8ffa4ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f057da85202dc5b677af7b9106468b3bc1af6d3f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# /reference (C# Compiler Options)
-**\/reference** 選項會讓編譯器將指定之檔案中的 [public](../../../csharp/language-reference/keywords/public.md) 型別資訊匯入目前的專案，使您得以從指定的組件檔案中參考中繼資料 \(Metadata\)。  
+# <a name="reference-c-compiler-options"></a><span data-ttu-id="42e51-102">/reference (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="42e51-102">/reference (C# Compiler Options)</span></span>
+<span data-ttu-id="42e51-103">**/reference** 選項可讓編譯器將指定檔案的 [public](../../../csharp/language-reference/keywords/public.md) 類型資訊匯入目前的專案，以便您透過指定的組件檔案來參考中繼資料。</span><span class="sxs-lookup"><span data-stu-id="42e51-103">The **/reference** option causes the compiler to import [public](../../../csharp/language-reference/keywords/public.md) type information in the specified file into the current project, thus enabling you to reference metadata from the specified assembly files.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="42e51-104">語法</span><span class="sxs-lookup"><span data-stu-id="42e51-104">Syntax</span></span>  
   
-```  
+```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
   
-## 引數  
+## <a name="arguments"></a><span data-ttu-id="42e51-105">引數</span><span class="sxs-lookup"><span data-stu-id="42e51-105">Arguments</span></span>  
  `filename`  
- 含有組件資訊清單 \(Assembly Manifest\) 的檔案名稱。  若要匯入一個以上的檔案，請分別在每個檔案中加入 **\/reference** 選項。  
+ <span data-ttu-id="42e51-106">含有組件資訊清單 (Assembly Manifest) 的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="42e51-106">The name of a file that contains an assembly manifest.</span></span> <span data-ttu-id="42e51-107">若要匯入多個檔案，請為每個檔案納入個別的 **/reference** 選項。</span><span class="sxs-lookup"><span data-stu-id="42e51-107">To import more than one file, include a separate **/reference** option for each file.</span></span>  
   
  `alias`  
- 有效的 C\# 識別項代表根命名空間，其中會包含組件中的所有命名空間。  
+ <span data-ttu-id="42e51-108">有效的 C# 識別項，代表包含組件中所有命名空間的根命名空間。</span><span class="sxs-lookup"><span data-stu-id="42e51-108">A valid C# identifier that will represent a root namespace that will contain all namespaces in the assembly.</span></span>  
   
-## 備註  
- 若要從一個以上的檔案匯入，請在每個檔案都加入 **\/reference** 選項。  
+## <a name="remarks"></a><span data-ttu-id="42e51-109">備註</span><span class="sxs-lookup"><span data-stu-id="42e51-109">Remarks</span></span>  
+ <span data-ttu-id="42e51-110">若要從多個檔案進行匯入，請為每個檔案納入 **/reference** 選項。</span><span class="sxs-lookup"><span data-stu-id="42e51-110">To import from more than one file, include a **/reference** option for each file.</span></span>  
   
- 匯入的檔案必須包含資訊清單，輸出檔案必須使用 [\/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 以外的其中一個 [\/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 選項編譯。  
+ <span data-ttu-id="42e51-111">您匯入的檔案必須包含資訊清單，且輸出檔必須已使用其中一個 [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 選項進行編譯 ([/target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 除外)。</span><span class="sxs-lookup"><span data-stu-id="42e51-111">The files you import must contain a manifest; the output file must have been compiled with one of the [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) options other than [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span></span>  
   
- **\/r** 是 **\/reference** 的簡短形式。  
+ <span data-ttu-id="42e51-112">**/r** 是 **/reference** 的簡短形式。</span><span class="sxs-lookup"><span data-stu-id="42e51-112">**/r** is the short form of **/reference**.</span></span>  
   
- 使用 [\/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 從不包含組件資訊清單的輸出檔中匯入中繼資料 \(Metadata\)。  
+ <span data-ttu-id="42e51-113">如果輸出檔不包含組件資訊清單，請使用 [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 以從中匯入中繼資料。</span><span class="sxs-lookup"><span data-stu-id="42e51-113">Use [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) to import metadata from an output file that does not contain an assembly manifest.</span></span>  
   
- 如果您參考的組件 \(A 組件\) 本身也要參考其他組件 \(B 組件\) 的話，在下列情況下您必須參考 B 組件：  
+ <span data-ttu-id="42e51-114">如果您參考的組件 (組件 A) 有參考其他組件 (組件 B)，則在下列情況中，您也需要參考 B 組件：</span><span class="sxs-lookup"><span data-stu-id="42e51-114">If you reference an assembly (Assembly A) that references another assembly (Assembly B), you will need to reference Assembly B if:</span></span>  
   
--   您從 A 組件使用的型別繼承自某個型別，或是從 B 組件實作介面  
+-   <span data-ttu-id="42e51-115">您使用的類型是來自組件 A，但繼承自組件 B 的類型，或是實作組件 B 的介面。</span><span class="sxs-lookup"><span data-stu-id="42e51-115">A type you use from Assembly A inherits from a type or implements an interface from Assembly B.</span></span>  
   
--   您從 B 組件叫用具有傳回型別 \(Return Type\) 或參數型別的欄位、屬性 \(Property\)、事件或方法  
+-   <span data-ttu-id="42e51-116">您所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。</span><span class="sxs-lookup"><span data-stu-id="42e51-116">You invoke a field, property, event, or method that has a return type or parameter type from Assembly B.</span></span>  
   
- 請使用 [\/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) 指定一或多個組件參考所在的目錄。  **\/lib** 主題也提供了編譯器會在哪些目錄搜尋組件的相關討論。  
+ <span data-ttu-id="42e51-117">使用 [/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)，以指定一或多個組件參考所在的目錄。</span><span class="sxs-lookup"><span data-stu-id="42e51-117">Use [/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) to specify the directory in which one or more of your assembly references is located.</span></span> <span data-ttu-id="42e51-118">**/lib** 主題也會說明編譯器會在其中搜尋組件的目錄。</span><span class="sxs-lookup"><span data-stu-id="42e51-118">The **/lib** topic also discusses the directories in which the compiler searches for assemblies.</span></span>  
   
- 如果要讓編譯器辨認組件 \(而非模組\) 中的某個型別，則必須強制它解析這個型別，您可以藉由定義該型別的執行個體來進行這種強制解析。  為編譯器解決組件中的型別名稱還有其他方法可行，例如，如果您是從組件中的型別繼承，編譯器隨後即可辨認型別名稱。  
+ <span data-ttu-id="42e51-119">為了讓編譯器可以辨識位於組件中的類型 (而不是模組中)，您必須定義類型的執行個體，以強制讓編譯器解析類型。</span><span class="sxs-lookup"><span data-stu-id="42e51-119">In order for the compiler to recognize a type in an assembly, and not in a module, it needs to be forced to resolve the type, which you can do by defining an instance of the type.</span></span> <span data-ttu-id="42e51-120">您也可以使用其他方法，讓編譯器解析組件中的類型名稱：例如，您可以繼承組件的類型，編譯器即可辨識類型名稱。</span><span class="sxs-lookup"><span data-stu-id="42e51-120">There are other ways to resolve type names in an assembly for the compiler: for example, if you inherit from a type in an assembly, the type name will then be recognized by the compiler.</span></span>  
   
- 有時候，在單一組件內部參考同樣元件的兩種版本是必要的。  若要這麼做，請為每個檔案使用 **\/reference** 參數上的別名子選項，以分辨兩個檔案。  這個別名會用來當做元件名稱的限定詞，並會解析為其中一個檔案中的元件。  
+ <span data-ttu-id="42e51-121">有時候，您必須參考組件內相同元件的兩個不同版本。</span><span class="sxs-lookup"><span data-stu-id="42e51-121">Sometimes it is necessary to reference two different versions of the same component from within one assembly.</span></span> <span data-ttu-id="42e51-122">若要這樣做，請針對每個檔案，使用 **/reference** 參數上的別名子選項，以區別兩個不同的檔案。</span><span class="sxs-lookup"><span data-stu-id="42e51-122">To do this, use the alias suboption on the **/reference** switch for each file to distinguish between the two files.</span></span> <span data-ttu-id="42e51-123">系統會將此別名作為元件名稱的限定詞，並將元件解析為其中一個檔案。</span><span class="sxs-lookup"><span data-stu-id="42e51-123">This alias will be used as a qualifier for the component name, and will resolve to the component in one of the files.</span></span>  
   
- 根據預設，會使用參考 .NET Framework 常用組件的 csc.rsp 回應檔 \(Response File\)。  如果您不要讓編譯器使用 csc.rsp，請使用 [\/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
+ <span data-ttu-id="42e51-124">預設會使用 csc 回應檔 (.rsp)，以參考常用的 .NET Framework 組件。</span><span class="sxs-lookup"><span data-stu-id="42e51-124">The csc response (.rsp) file, which references commonly used .NET Framework assemblies, is used by default.</span></span> <span data-ttu-id="42e51-125">如果您不想讓編譯器使用 csc.rsp，可使用 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="42e51-125">Use [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) if you do not want the compiler to use csc.rsp.</span></span>  
   
 > [!NOTE]
-> 在 Visual Studio 中，使用 [新增參考] 對話方塊。 如需詳細資訊，請參閱[如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `/reference` 以及使用 [新增參考] 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型] 屬性設為 **False**。 這個屬性的預設值為 **True**。  
+> <span data-ttu-id="42e51-126">在 Visual Studio 中，使用 [新增參考] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="42e51-126">In Visual Studio, use the **Add Reference** dialog box.</span></span> <span data-ttu-id="42e51-127">如需詳細資訊，請參閱[如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。</span><span class="sxs-lookup"><span data-stu-id="42e51-127">For more information, see [How to: Add or Remove References By Using the Reference Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).</span></span> <span data-ttu-id="42e51-128">新增參考時，為了確保使用 `/reference` 以及使用 [新增參考] 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型] 屬性設為 **False**。</span><span class="sxs-lookup"><span data-stu-id="42e51-128">To ensure equivalent behavior between adding references by using `/reference` and adding references by using the **Add Reference** dialog box, set the **Embed Interop Types** property to **False** for the assembly that you're adding.</span></span> <span data-ttu-id="42e51-129">這個屬性的預設值為 **True**。</span><span class="sxs-lookup"><span data-stu-id="42e51-129">**True** is the default value for the property.</span></span>  
   
-## 範例  
- 這個範例示範如何使用[外部別名](../../../csharp/language-reference/keywords/extern-alias.md)功能。  
+## <a name="example"></a><span data-ttu-id="42e51-130">範例</span><span class="sxs-lookup"><span data-stu-id="42e51-130">Example</span></span>  
+ <span data-ttu-id="42e51-131">這個範例會示範如何使用[外部別名](../../../csharp/language-reference/keywords/extern-alias.md)功能。</span><span class="sxs-lookup"><span data-stu-id="42e51-131">This example shows how to use the [extern alias](../../../csharp/language-reference/keywords/extern-alias.md) feature.</span></span>  
   
- 您編譯原始程式檔，並從先前已編譯的 `grid.dll` 和 `grid20.dll` ``  匯入中繼資料。  兩個 DLL 包含相同元件的不同版本，而您使用兩個 **\/reference** 搭配別名選項，以編譯原始程式檔。  選項會如下所示：  
+ <span data-ttu-id="42e51-132">您可以編譯原始程式檔，並從之前已編譯過的 `grid.dll` 和 `grid20.dll` 匯入中繼資料。</span><span class="sxs-lookup"><span data-stu-id="42e51-132">You compile the source file and import metadata from `grid.dll` and `grid20.dll`,which have been compiled previously.</span></span> <span data-ttu-id="42e51-133">這兩個 DLL 包含相同元件的不同版本，因此您需要搭配使用兩個 **/reference** 與別名選項，來編譯原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="42e51-133">The two DLLs contain separate versions of the same component, and you use two **/reference** with alias options to compile the source file.</span></span> <span data-ttu-id="42e51-134">選項應該看起來像這樣︰</span><span class="sxs-lookup"><span data-stu-id="42e51-134">The options look like this:</span></span>  
   
- \/reference:GridV1\=grid.dll and \/reference:GridV2\=grid20.dll  
+ <span data-ttu-id="42e51-135">/reference:GridV1=grid.dll 與 /reference:GridV2=grid20.dll</span><span class="sxs-lookup"><span data-stu-id="42e51-135">/reference:GridV1=grid.dll and /reference:GridV2=grid20.dll</span></span>  
   
- 這會建立外部別名 "GridV1" 和 "GridV2"，而您可以在程式中以 extern 陳述式使用它們：  
+ <span data-ttu-id="42e51-136">這會設定 "GridV1" 和 "GridV2" 外部別名，您可透過 extern 陳述式以在程式中使用這些別名：</span><span class="sxs-lookup"><span data-stu-id="42e51-136">This sets up the external aliases "GridV1" and "GridV2," which you use in your program by means of an extern statement:</span></span>  
   
-```  
+```csharp  
 extern alias GridV1;  
 extern alias GridV2;  
 // Using statements go here.  
 ```  
   
- 完成後，您可以在控制名稱加上 GridV1 字首，並參考 grid.dll 中的方格控制項，方法如下：  
+ <span data-ttu-id="42e51-137">完成之後，您可以在 GridV1 前面加上控制項名稱，以參照 grid.dll 的方格控制項，如下所示：</span><span class="sxs-lookup"><span data-stu-id="42e51-137">Once this is done, you can refer to the grid control from grid.dll by prefixing the control name with GridV1, like this:</span></span>  
   
-```  
+```csharp  
 GridV1::Grid  
 ```  
   
- 此外，您可以在控制名稱加上 GridV2 字首，並參考 Grid20.dll 中的方格控制項，方法如下：  
+ <span data-ttu-id="42e51-138">此外，您可以在 GridV2 前面加上控制項名稱，以參照 grid20.dll 的方格控制項，如下所示：</span><span class="sxs-lookup"><span data-stu-id="42e51-138">In addition, you can refer to the grid control from grid20.dll by prefixing the control name with GridV2 like this:</span></span>  
   
-```  
+```csharp  
 GridV2::Grid   
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="42e51-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42e51-139">See Also</span></span>  
+ [<span data-ttu-id="42e51-140">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="42e51-140">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="42e51-141">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="42e51-141">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

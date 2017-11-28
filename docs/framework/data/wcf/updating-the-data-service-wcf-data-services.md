@@ -1,106 +1,112 @@
 ---
-title: "更新資料服務 (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF Data Services, 變更資料"
-  - "WCF Data Services, 用戶端程式庫"
+title: "更新資料服務 (WCF 資料服務)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, changing data
+- WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c86e755d35a57090941551de43aedd07c8f1f0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 更新資料服務 (WCF Data Services)
-當您使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫來取用 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要時，程式庫會將摘要中的項目轉譯為用戶端資料服務類別的執行個體。  您可以使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 所屬的 <xref:System.Data.Services.Client.DataServiceContext> 來追蹤這些資料服務類別。用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 之方法回報的實體變更。  這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。  當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。  
+# <a name="updating-the-data-service-wcf-data-services"></a><span data-ttu-id="1b32a-102">更新資料服務 (WCF 資料服務)</span><span class="sxs-lookup"><span data-stu-id="1b32a-102">Updating the Data Service (WCF Data Services)</span></span>
+<span data-ttu-id="1b32a-103">當您使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫來取用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]換行字元、 文件庫會轉譯成用戶端資料服務類別的執行個體摘要中的項目。</span><span class="sxs-lookup"><span data-stu-id="1b32a-103">When you use the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library to consume an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, the library translates the entries in the feed into instances of client data service classes.</span></span> <span data-ttu-id="1b32a-104">這些資料服務類別會使用 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 來追蹤。</span><span class="sxs-lookup"><span data-stu-id="1b32a-104">These data service classes are tracked by using the <xref:System.Data.Services.Client.DataServiceContext> to which the <xref:System.Data.Services.Client.DataServiceQuery%601> belongs.</span></span> <span data-ttu-id="1b32a-105">用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法所報告之實體的變更。</span><span class="sxs-lookup"><span data-stu-id="1b32a-105">The client tracks changes to entities that you report by using methods on <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="1b32a-106">這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。</span><span class="sxs-lookup"><span data-stu-id="1b32a-106">These methods enable the client to track added and deleted entities and also changes that you make to property values or to relationships between entity instances.</span></span> <span data-ttu-id="1b32a-107">當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。</span><span class="sxs-lookup"><span data-stu-id="1b32a-107">Those tracked changes are sent back to the data service as REST-based operations when you call the <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> method.</span></span>  
   
 > [!NOTE]
->  當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的執行個體將資料繫結至控制項時，對繫結控制項內的資料所做的變更會自動提報給 <xref:System.Data.Services.Client.DataServiceContext>。  如需詳細資訊，請參閱[將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  
+>  <span data-ttu-id="1b32a-108">當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的執行個體將資料繫結至控制項時，對繫結控制項內的資料所做的變更會自動提報給 <xref:System.Data.Services.Client.DataServiceContext>。</span><span class="sxs-lookup"><span data-stu-id="1b32a-108">When you use an instance of <xref:System.Data.Services.Client.DataServiceCollection%601> to bind data to controls, changes made to data in the bound control are automatically reported to the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="1b32a-109">如需詳細資訊，請參閱[資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="1b32a-109">For more information, see [Binding Data to Controls](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).</span></span>  
   
-## 加入、修改和變更實體  
- 當您使用 Visual Studio 中的 \[**加入服務參考**\] 對話方塊，加入 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要的參考時，產生的每一個用戶端資料服務類別都有靜態 *Create* 方法，該方法會針對每一個不可為 null 的實體屬性採用一個參數。  您可以使用這個方法建立實體類型類別的執行個體，如下列範例所示：  
+## <a name="adding-modifying-and-changing-entities"></a><span data-ttu-id="1b32a-110">加入、修改和變更實體</span><span class="sxs-lookup"><span data-stu-id="1b32a-110">Adding, Modifying, and Changing Entities</span></span>  
+ <span data-ttu-id="1b32a-111">當您使用**加入服務參考**將參考加入至 Visual Studio 中的對話方塊[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要時，產生用戶端資料服務類別都有靜態*建立*以採用一個方法每個非 null 的實體屬性的參數。</span><span class="sxs-lookup"><span data-stu-id="1b32a-111">When you use the **Add Service Reference** dialog in Visual Studio to add a reference to an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, the resulting client data service classes each have a static *Create* method that takes one parameter for each non-nullable entity property.</span></span> <span data-ttu-id="1b32a-112">您可以使用這個方法建立實體類型類別的執行個體，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="1b32a-112">You can use this method to create instances of entity type classes, as in the following example:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#createnewproduct)]  
   
- 若要加入實體執行個體，請在 \[**加入服務參考**\] 對話方塊產生的 <xref:System.Data.Services.Client.DataServiceContext> 類別上，呼叫適當的 *AddTo* 方法，如下列範例所示：  
+ <span data-ttu-id="1b32a-113">若要加入實體執行個體，呼叫適當*AddTo*方法<xref:System.Data.Services.Client.DataServiceContext>所產生類別**加入服務參考**對話方塊中的，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="1b32a-113">To add an entity instance, call the appropriate *AddTo* method on the <xref:System.Data.Services.Client.DataServiceContext> class generated by the **Add Service Reference** dialog box, as in the following example:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addproductspecific)]
  [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addproductspecific)]  
   
- 如此會將物件加入內容以及正確的實體集之中。  您也可以呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>，但是您必須提供實體集的名稱。  如果加入的實體與其他實體有一個以上的關聯性，可以使用 <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> 方法或是上述方法之一，同時也可以明確定義那些連結。  這些作業稍後將在本主題中說明。  
+ <span data-ttu-id="1b32a-114">如此會將物件加入內容以及正確的實體集之中。</span><span class="sxs-lookup"><span data-stu-id="1b32a-114">This adds the object to the context and into the correct entity set.</span></span> <span data-ttu-id="1b32a-115">您也可以呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>，但是您必須提供實體集的名稱。</span><span class="sxs-lookup"><span data-stu-id="1b32a-115">You can also call <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, but you must instead supply the entity set name.</span></span> <span data-ttu-id="1b32a-116">如果加入的實體與其他實體有一個以上的關聯性，可以使用 <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> 方法或是上述方法之一，同時也可以明確定義那些連結。</span><span class="sxs-lookup"><span data-stu-id="1b32a-116">If the added entity has one or more relationships to other entities, you can either use the <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> method or use one of the previous methods and also explicitly define those links.</span></span> <span data-ttu-id="1b32a-117">這些作業稍後將在本主題中說明。</span><span class="sxs-lookup"><span data-stu-id="1b32a-117">These operations are discussed later in this topic.</span></span>  
   
- 若要修改現有的實體執行個體，請先查詢該實體、針對其屬性進行所需的變更，然後呼叫 <xref:System.Data.Services.Client.DataServiceContext> 中的 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 方法，以便讓用戶端程式庫知道它需要傳送該物件的更新，如下列範例所示：  
+ <span data-ttu-id="1b32a-118">若要修改現有的實體執行個體，請先查詢該實體、針對其屬性進行所需的變更，然後呼叫 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 中的 <xref:System.Data.Services.Client.DataServiceContext> 方法，以便讓用戶端程式庫知道它需要傳送該物件的更新，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="1b32a-118">To modify an existing entity instance, first query for that entity, make the desired changes to its properties, and then call the <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> method on the <xref:System.Data.Services.Client.DataServiceContext> to indicate to the client library that it needs to send an update for that object, as shown in the following example:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#modifycustomerspecific)]
  [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#modifycustomerspecific)]  
   
- 若要刪除實體執行個體，請呼叫 <xref:System.Data.Services.Client.DataServiceContext> 中的 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 方法，如下列範例所示：  
+ <span data-ttu-id="1b32a-119">若要刪除實體執行個體，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 中的 <xref:System.Data.Services.Client.DataServiceContext> 方法，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="1b32a-119">To delete an entity instance, call the <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> method on the <xref:System.Data.Services.Client.DataServiceContext>, as shown in the following example:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#deleteproductspecific)]  
   
- 如需詳細資訊，請參閱[HOW TO：加入、修改和刪除實體](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)。  
+ <span data-ttu-id="1b32a-120">如需詳細資訊，請參閱[如何： 新增、 修改及刪除實體](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="1b32a-120">For more information, see [How to: Add, Modify, and Delete Entities](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md).</span></span>  
   
-## 附加實體  
- 用戶端程式庫可讓您不需事先執行查詢就可以儲存您對實體所做的更新，然後將實體載入 <xref:System.Data.Services.Client.DataServiceContext>。  使用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> 方法，將現有的物件附加至 <xref:System.Data.Services.Client.DataServiceContext> 中的特定實體集。  然後您就可以修改物件，並將變更儲存至資料服務。  在下列範例中，有一個已變更的自訂物件已附加至內容，然後在呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 之前，先呼叫 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>，將附加的物件標示為 <xref:System.Data.Services.Client.EntityStates>。  
+## <a name="attaching-entities"></a><span data-ttu-id="1b32a-121">附加實體</span><span class="sxs-lookup"><span data-stu-id="1b32a-121">Attaching Entities</span></span>  
+ <span data-ttu-id="1b32a-122">用戶端程式庫可讓您不需事先執行查詢就可以儲存您對實體所做的更新，然後將實體載入 <xref:System.Data.Services.Client.DataServiceContext>。</span><span class="sxs-lookup"><span data-stu-id="1b32a-122">The client library enables you to save updates that you made to an entity without first executing a query to load the entity into the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="1b32a-123">使用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> 方法，將現有的物件附加至 <xref:System.Data.Services.Client.DataServiceContext> 中的特定實體集。</span><span class="sxs-lookup"><span data-stu-id="1b32a-123">Use the <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> method to attach an existing object to a specific entity set in the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="1b32a-124">然後您就可以修改物件，並將變更儲存至資料服務。</span><span class="sxs-lookup"><span data-stu-id="1b32a-124">You can then modify the object and save the changes to the data service.</span></span> <span data-ttu-id="1b32a-125">在下列範例中，有一個已變更的自訂物件已附加至內容，然後在呼叫 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 之前，先呼叫 <xref:System.Data.Services.Client.EntityStates.Modified>，將附加的物件標示為 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>。</span><span class="sxs-lookup"><span data-stu-id="1b32a-125">In the following example, a customer object that has been changed is attached to the context and then <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> is called to mark the attached object as <xref:System.Data.Services.Client.EntityStates.Modified> before <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> is called:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#attachobjectspecific)]
  [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobjectspecific)]  
   
- 下列考量適用於附加物件時：  
+ <span data-ttu-id="1b32a-126">下列考量適用於附加物件時：</span><span class="sxs-lookup"><span data-stu-id="1b32a-126">The following considerations apply when attaching objects:</span></span>  
   
--   附加的物件處於 <xref:System.Data.Services.Client.EntityStates> 狀態。  
+-   <span data-ttu-id="1b32a-127">附加的物件處於 <xref:System.Data.Services.Client.EntityStates.Unchanged> 狀態。</span><span class="sxs-lookup"><span data-stu-id="1b32a-127">An object is attached in the <xref:System.Data.Services.Client.EntityStates.Unchanged> state.</span></span>  
   
--   附加物件時，不會一併附加與該附加物件相關的物件。  
+-   <span data-ttu-id="1b32a-128">附加物件時，不會一併附加與該附加物件相關的物件。</span><span class="sxs-lookup"><span data-stu-id="1b32a-128">When an object is attached, objects that are related to the attached object are not also attached.</span></span>  
   
--   如果實體已依內容進行追蹤，則無法附加物件。  
+-   <span data-ttu-id="1b32a-129">如果實體已依內容進行追蹤，則無法附加物件。</span><span class="sxs-lookup"><span data-stu-id="1b32a-129">An object cannot be attached if the entity is already being tracked by the context.</span></span>  
   
--   當您附加與 eTag 值一起收到的實體物件時，會使用已採用 `etag` 參數的 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 方法多載。  當儲存已附加之物件的變更時，這個 eTag 值可用來檢查並行存取。  
+-   <span data-ttu-id="1b32a-130">當您附加與 eTag 值一起收到的實體物件時，會使用已採用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 參數的 `etag` 方法多載。</span><span class="sxs-lookup"><span data-stu-id="1b32a-130">The <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> method overload that takes an `etag` parameter is used when you attach an entity object that was received along with an eTag value.</span></span> <span data-ttu-id="1b32a-131">當儲存已附加之物件的變更時，這個 eTag 值可用來檢查並行存取。</span><span class="sxs-lookup"><span data-stu-id="1b32a-131">This eTag value is then used to check for concurrency when changes to the attached object are saved.</span></span>  
   
- 如需詳細資訊，請參閱[HOW TO：將現有的實體附加至 DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)。  
+ <span data-ttu-id="1b32a-132">如需詳細資訊，請參閱[How to： 將現有實體附加至 DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)。</span><span class="sxs-lookup"><span data-stu-id="1b32a-132">For more information, see [How to: Attach an Existing Entity to the DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).</span></span>  
   
-## 建立和修改關聯性連結  
- 當您使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 方法，或是在 \[**加入服務參考**\] 對話方塊產生的 <xref:System.Data.Services.Client.DataServiceContext> 類別上，使用適當的 *AddTo* 方法加入新實體，新實體與相關實體之間的關聯性不會自動定義。  
+## <a name="creating-and-modifying-relationship-links"></a><span data-ttu-id="1b32a-133">建立和修改關聯性連結</span><span class="sxs-lookup"><span data-stu-id="1b32a-133">Creating and Modifying Relationship Links</span></span>  
+ <span data-ttu-id="1b32a-134">當您新增新的實體使用<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>方法或適當*AddTo*方法<xref:System.Data.Services.Client.DataServiceContext>類別**加入服務參考**對話方塊會產生的任何關聯性新實體與相關的實體之間不會自動定義。</span><span class="sxs-lookup"><span data-stu-id="1b32a-134">When you add a new entity by using either the <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> method or the appropriate *AddTo* method of the <xref:System.Data.Services.Client.DataServiceContext> class that the **Add Service Reference** dialog generates, any relationships between the new entity and related entities are not automatically defined.</span></span>  
   
- 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。  實體之間的關聯性會定義為模型中的關聯，而且 <xref:System.Data.Services.Client.DataServiceContext> 會追蹤每一個關聯性，如同內容中的連結物件。  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可在 <xref:System.Data.Services.Client.DataServiceContext> 類別上，提供下列方法建立、修改及刪除這些連結：  
+ <span data-ttu-id="1b32a-135">您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。</span><span class="sxs-lookup"><span data-stu-id="1b32a-135">You can create and change relationships between entity instances and have the client library reflect those changes in the data service.</span></span> <span data-ttu-id="1b32a-136">實體之間的關聯性會定義為模型中的關聯，而且 <xref:System.Data.Services.Client.DataServiceContext> 會追蹤每一個關聯性，如同內容中的連結物件。</span><span class="sxs-lookup"><span data-stu-id="1b32a-136">Relationships between entities are defined as associations in the model, and the <xref:System.Data.Services.Client.DataServiceContext> tracks each relationship as a link object in the context.</span></span> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="1b32a-137">提供下列方法<xref:System.Data.Services.Client.DataServiceContext>類別來建立、 修改和刪除這些連結：</span><span class="sxs-lookup"><span data-stu-id="1b32a-137"> provides the following methods on the <xref:System.Data.Services.Client.DataServiceContext> class to create, modify, and delete these links:</span></span>  
   
-|方法|描述|  
-|--------|--------|  
-|<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|在兩個相關的實體物件之間建立新連結。  呼叫這個方法相當於呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 和  <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 來建立新物件並定義與現有物件的關聯性。|  
-|<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|在兩個相關的實體物件之間建立新連結。|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|更新兩個相關實體物件之間的現有連結。  <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> 也用於刪除具有零或一對一 \(`0..1:1`\) 基數和一對一 \(`1:1`\) 基數的連結。  您可以將相關的物件設為 `null` 來達到這個目的。|  
-|<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，標示內容正在追蹤刪除的連結。  當您刪除相關的物件或是先刪除與現有物件間的連結，然後加入與新相關物件間的連結而變更關聯性時，請使用這個方法。|  
-|<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|告知兩個實體物件間之現有連結的內容。  當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，內容會假設這個關聯性已存在資料服務之中，而不會嘗試建立連結。  當您將物件附加至內容，而且也需要附加兩者間的連結時，請使用這個方法。  如果您要定義新關聯性，應改用 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>。|  
-|<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|停止追蹤內容中指定的連結。  此方法用來刪除一對多 \(`*:*`\) 關聯性。  對於基數為一的關聯性連結，您必須改用 <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>。|  
+|<span data-ttu-id="1b32a-138">方法</span><span class="sxs-lookup"><span data-stu-id="1b32a-138">Method</span></span>|<span data-ttu-id="1b32a-139">描述</span><span class="sxs-lookup"><span data-stu-id="1b32a-139">Description</span></span>|  
+|------------|-----------------|  
+|<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|<span data-ttu-id="1b32a-140">在兩個相關的實體物件之間建立新連結。</span><span class="sxs-lookup"><span data-stu-id="1b32a-140">Creates a new link between two related entity objects.</span></span> <span data-ttu-id="1b32a-141">呼叫這個方法相當於呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 和  <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 來建立新物件並定義與現有物件的關聯性。</span><span class="sxs-lookup"><span data-stu-id="1b32a-141">Calling this method is equivalent to calling <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> and <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> to both create the new object and define the relationship to an existing object.</span></span>|  
+|<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|<span data-ttu-id="1b32a-142">在兩個相關的實體物件之間建立新連結。</span><span class="sxs-lookup"><span data-stu-id="1b32a-142">Creates a new link between two related entity objects.</span></span>|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|<span data-ttu-id="1b32a-143">更新兩個相關實體物件之間的現有連結。</span><span class="sxs-lookup"><span data-stu-id="1b32a-143">Updates an existing link between two related entity objects.</span></span> <span data-ttu-id="1b32a-144"><xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> 也用於刪除具有零或一對一 (`0..1:1`) 基數和一對一 (`1:1`) 基數的連結。</span><span class="sxs-lookup"><span data-stu-id="1b32a-144"><xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> is also used to delete links with a cardinality of zero-or-one-to-one (`0..1:1`) and one-to-one (`1:1`).</span></span> <span data-ttu-id="1b32a-145">您可以將相關的物件設為 `null` 來達到這個目的。</span><span class="sxs-lookup"><span data-stu-id="1b32a-145">You can do this by setting the related object to `null`.</span></span>|  
+|<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|<span data-ttu-id="1b32a-146">呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，標示內容正在追蹤刪除的連結。</span><span class="sxs-lookup"><span data-stu-id="1b32a-146">Marks a link that the context is tracking for deletion when the <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> method is called.</span></span> <span data-ttu-id="1b32a-147">當您刪除相關的物件或是先刪除與現有物件間的連結，然後加入與新相關物件間的連結而變更關聯性時，請使用這個方法。</span><span class="sxs-lookup"><span data-stu-id="1b32a-147">Use this method when you delete a related object or change a relationship by first deleting the link to an existing object and then adding a link to the new related object.</span></span>|  
+|<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|<span data-ttu-id="1b32a-148">告知兩個實體物件間之現有連結的內容。</span><span class="sxs-lookup"><span data-stu-id="1b32a-148">Notifies the context of an existing link between two entity objects.</span></span> <span data-ttu-id="1b32a-149">當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，內容會假設這個關聯性已存在資料服務之中，而不會嘗試建立連結。</span><span class="sxs-lookup"><span data-stu-id="1b32a-149">The context assumes that this relationship already exists in the data service and does not try to create the link when you call the <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> method.</span></span> <span data-ttu-id="1b32a-150">當您將物件附加至內容，而且也需要附加兩者間的連結時，請使用這個方法。</span><span class="sxs-lookup"><span data-stu-id="1b32a-150">Use this method when you attach objects to a context and need to also attach the link between the two.</span></span> <span data-ttu-id="1b32a-151">如果您要定義新關聯性，應改用 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>。</span><span class="sxs-lookup"><span data-stu-id="1b32a-151">If you are defining a new relationship, you should instead use <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.</span></span>|  
+|<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|<span data-ttu-id="1b32a-152">停止追蹤內容中指定的連結。</span><span class="sxs-lookup"><span data-stu-id="1b32a-152">Stops tracking the specified link in the context.</span></span> <span data-ttu-id="1b32a-153">此方法用來刪除一對多 (`*:*`) 關聯性。</span><span class="sxs-lookup"><span data-stu-id="1b32a-153">This method is used to delete one-to-many (`*:*`) relationships.</span></span> <span data-ttu-id="1b32a-154">對於基數為一的關聯性連結，您必須改用 <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>。</span><span class="sxs-lookup"><span data-stu-id="1b32a-154">For relationship links with a cardinality of one, you must instead use <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.</span></span>|  
   
- 下列範例將示範如何使用 <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> 方法，加入與現有 `Orders` 實體相關的新 `Order_Detail`。  由於新的 `Order_Details` 物件現在是由 <xref:System.Data.Services.Client.DataServiceContext> 追蹤，因此，加入之 `Order_Details` 物件與現有 `Products` 實體間的關聯性是透過呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 方法來定義：  
+ <span data-ttu-id="1b32a-155">下列範例將示範如何使用 <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> 方法，加入與現有 `Order_Detail` 實體相關的新 `Orders`。</span><span class="sxs-lookup"><span data-stu-id="1b32a-155">The following example shows how to use the <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> method to add a new `Order_Detail` that is related to an existing `Orders` entity.</span></span> <span data-ttu-id="1b32a-156">由於新的 `Order_Details` 物件現在是由 <xref:System.Data.Services.Client.DataServiceContext> 追蹤，因此，加入之 `Order_Details` 物件與現有 `Products` 實體間的關聯性是透過呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 方法來定義：</span><span class="sxs-lookup"><span data-stu-id="1b32a-156">Because the new `Order_Details` object is now tracked by the <xref:System.Data.Services.Client.DataServiceContext>, the relationship of the added `Order_Details` object to the existing `Products` entity is defined by calling the <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> method:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderspecific)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderspecific)]  
   
- 當 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 方法定義的連結必須在資料服務中建立時，若要將這些連結反映在內容的物件之中，您也必須設定物件本身的導覽屬性。  在前面的範例中，您應設定的導覽屬性如下所示：  
+ <span data-ttu-id="1b32a-157">當 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 方法定義的連結必須在資料服務中建立時，若要將這些連結反映在內容的物件之中，您也必須設定物件本身的導覽屬性。</span><span class="sxs-lookup"><span data-stu-id="1b32a-157">While the <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> method defines links that must be created in the data service, to have these links reflected in the objects that are in the context, you must also set the navigation properties on the objects themselves.</span></span> <span data-ttu-id="1b32a-158">在前面的範例中，您應設定的導覽屬性如下所示：</span><span class="sxs-lookup"><span data-stu-id="1b32a-158">In the previous example, you should set the navigation properties as follows:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#setnavprops)]  
   
- 如需詳細資訊，請參閱[HOW TO：定義實體關聯性](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)。  
+ <span data-ttu-id="1b32a-159">如需詳細資訊，請參閱[如何： 定義實體關聯性](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="1b32a-159">For more information, see [How to: Define Entity Relationships](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md).</span></span>  
   
-## 儲存變更  
- 變更會在 <xref:System.Data.Services.Client.DataServiceContext> 執行個體中追蹤，但是不會立即傳送至伺服器。  在針對指定的活動完成所需的變更之後，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>，將所有變更提交至資料服務。  如需詳細資訊，請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。  您也可以透過 <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 方法，非同步地儲存變更。  如需詳細資訊，請參閱[非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
+## <a name="saving-changes"></a><span data-ttu-id="1b32a-160">儲存變更</span><span class="sxs-lookup"><span data-stu-id="1b32a-160">Saving Changes</span></span>  
+ <span data-ttu-id="1b32a-161">變更會在 <xref:System.Data.Services.Client.DataServiceContext> 執行個體中追蹤，但是不會立即傳送至伺服器。</span><span class="sxs-lookup"><span data-stu-id="1b32a-161">Changes are tracked in the <xref:System.Data.Services.Client.DataServiceContext> instance but not sent to the server immediately.</span></span> <span data-ttu-id="1b32a-162">在針對指定的活動完成所需的變更之後，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>，將所有變更提交至資料服務。</span><span class="sxs-lookup"><span data-stu-id="1b32a-162">After you are finished with the required changes for a specified activity, call <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> to submit all the changes to the data service.</span></span> <span data-ttu-id="1b32a-163">如需詳細資訊，請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="1b32a-163">For more information, see [Managing the Data Service Context](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).</span></span> <span data-ttu-id="1b32a-164">您也可以透過 <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 方法，非同步地儲存變更。</span><span class="sxs-lookup"><span data-stu-id="1b32a-164">You can also save changes asynchronously by using the <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> and <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> methods.</span></span> <span data-ttu-id="1b32a-165">如需詳細資訊，請參閱[非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="1b32a-165">For more information, see [Asynchronous Operations](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).</span></span>  
   
-## 請參閱  
- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)   
- [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)   
- [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)   
- [批次作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)   
- [物件 Materialization](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)   
- [管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="1b32a-166">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1b32a-166">See Also</span></span>  
+ [<span data-ttu-id="1b32a-167">WCF Data Services 用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="1b32a-167">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [<span data-ttu-id="1b32a-168">查詢資料服務</span><span class="sxs-lookup"><span data-stu-id="1b32a-168">Querying the Data Service</span></span>](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ [<span data-ttu-id="1b32a-169">非同步作業</span><span class="sxs-lookup"><span data-stu-id="1b32a-169">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
+ [<span data-ttu-id="1b32a-170">批次處理作業</span><span class="sxs-lookup"><span data-stu-id="1b32a-170">Batching Operations</span></span>](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
+ [<span data-ttu-id="1b32a-171">物件具體化</span><span class="sxs-lookup"><span data-stu-id="1b32a-171">Object Materialization</span></span>](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
+ [<span data-ttu-id="1b32a-172">管理資料服務內容</span><span class="sxs-lookup"><span data-stu-id="1b32a-172">Managing the Data Service Context</span></span>](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)

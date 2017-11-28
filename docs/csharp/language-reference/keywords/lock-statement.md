@@ -1,44 +1,25 @@
 ---
 title: "lock 陳述式 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - lock_CSharpKeyword
 - lock
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- lock keyword [C#]
+helpviewer_keywords: lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: eb48c2b1554ad2817406eaef42b4cb336ea46862
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00dcbb9feec11587265bf61667d91c2c1598065b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lock-statement-c-reference"></a>lock 陳述式 (C# 參考)
-`lock` 關鍵字可藉由取得指定物件的互斥鎖定、執行陳述式，然後釋放鎖定，以將陳述式區塊標示為關鍵區段。 下列範例包括 `lock` 陳述式。  
+# <a name="lock-statement-c-reference"></a><span data-ttu-id="e0e93-102">lock 陳述式 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="e0e93-102">lock Statement (C# Reference)</span></span>
+<span data-ttu-id="e0e93-103">`lock` 關鍵字可藉由取得指定物件的互斥鎖定、執行陳述式，然後釋放鎖定，以將陳述式區塊標示為關鍵區段。</span><span class="sxs-lookup"><span data-stu-id="e0e93-103">The `lock` keyword marks a statement block as a critical section by obtaining the mutual-exclusion lock for a given object, executing a statement, and then releasing the lock.</span></span> <span data-ttu-id="e0e93-104">下列範例包括 `lock` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="e0e93-104">The following example includes a `lock` statement.</span></span>  
   
 ```csharp  
 class Account  
@@ -58,52 +39,51 @@ class Account
         }  
     }  
 }  
-  
 ```  
   
- 如需詳細資訊，請參閱[執行緒同步處理](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)。  
+ <span data-ttu-id="e0e93-105">如需詳細資訊，請參閱[執行緒同步處理](../../programming-guide/concepts/threading/thread-synchronization.md)。</span><span class="sxs-lookup"><span data-stu-id="e0e93-105">For more information, see [Thread Synchronization](../../programming-guide/concepts/threading/thread-synchronization.md).</span></span>  
   
-## <a name="remarks"></a>備註  
- `lock` 關鍵字可確保當關鍵區段中已有執行緒時，另一個執行緒不會進入程式碼的關鍵區段。 如果另一個執行緒嘗試進入鎖定的程式碼，它將會等候、封鎖，直到釋放物件。  
+## <a name="remarks"></a><span data-ttu-id="e0e93-106">備註</span><span class="sxs-lookup"><span data-stu-id="e0e93-106">Remarks</span></span>  
+ <span data-ttu-id="e0e93-107">`lock` 關鍵字可確保當關鍵區段中已有執行緒時，另一個執行緒不會進入程式碼的關鍵區段。</span><span class="sxs-lookup"><span data-stu-id="e0e93-107">The `lock` keyword ensures that one thread does not enter a critical section of code while another thread is in the critical section.</span></span> <span data-ttu-id="e0e93-108">如果另一個執行緒嘗試進入鎖定的程式碼，它將會等候、封鎖，直到釋放物件。</span><span class="sxs-lookup"><span data-stu-id="e0e93-108">If another thread tries to enter a locked code, it will wait, block, until the object is released.</span></span>  
   
- [執行緒](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)一節說明執行緒的相關資訊。  
+ <span data-ttu-id="e0e93-109">[執行緒](../../programming-guide/concepts/threading/index.md)一節說明執行緒的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="e0e93-109">The section [Threading](../../programming-guide/concepts/threading/index.md) discusses threading.</span></span>  
   
- `lock` 關鍵字會在區塊開頭呼叫 <xref:System.Threading.Monitor.Enter%2A>，在區塊結尾呼叫 <xref:System.Threading.Monitor.Exit%2A>。 如果 <xref:System.Threading.Thread.Interrupt%2A> 插斷的執行緒正在等候進入 `lock` 陳述式，便會擲回 <xref:System.Threading.ThreadInterruptedException>。  
+ <span data-ttu-id="e0e93-110">`lock` 關鍵字會在區塊開頭呼叫 <xref:System.Threading.Monitor.Enter%2A>，在區塊結尾呼叫 <xref:System.Threading.Monitor.Exit%2A>。</span><span class="sxs-lookup"><span data-stu-id="e0e93-110">The `lock` keyword calls <xref:System.Threading.Monitor.Enter%2A> at the start of the block and <xref:System.Threading.Monitor.Exit%2A> at the end of the block.</span></span> <span data-ttu-id="e0e93-111">如果 <xref:System.Threading.Thread.Interrupt%2A> 插斷的執行緒正在等候進入 `lock` 陳述式，便會擲回 <xref:System.Threading.ThreadInterruptedException>。</span><span class="sxs-lookup"><span data-stu-id="e0e93-111">A <xref:System.Threading.ThreadInterruptedException> is thrown if <xref:System.Threading.Thread.Interrupt%2A> interrupts a thread that is waiting to enter a `lock` statement.</span></span>  
   
- 一般情況下，請避免鎖定 `public` 類型，或超出程式碼控制範圍的執行個體。 `lock (this)`、`lock (typeof (MyType))` 和 `lock ("myLock")` 等常見的建構函式則違反這項指導方針：  
+ <span data-ttu-id="e0e93-112">一般情況下，請避免鎖定 `public` 類型，或超出程式碼控制範圍的執行個體。</span><span class="sxs-lookup"><span data-stu-id="e0e93-112">In general, avoid locking on a `public` type, or instances beyond your code's control.</span></span> <span data-ttu-id="e0e93-113">`lock (this)`、`lock (typeof (MyType))` 和 `lock ("myLock")` 等常見的建構函式則違反這項指導方針：</span><span class="sxs-lookup"><span data-stu-id="e0e93-113">The common constructs `lock (this)`, `lock (typeof (MyType))`, and `lock ("myLock")` violate this guideline:</span></span>  
   
--   如果可以公開存取執行個體的話，`lock (this)` 會成為問題。  
+-   <span data-ttu-id="e0e93-114">如果可以公開存取執行個體的話，`lock (this)` 會成為問題。</span><span class="sxs-lookup"><span data-stu-id="e0e93-114">`lock (this)` is a problem if the instance can be accessed publicly.</span></span>  
   
--   如果可以公開存取 `MyType` 的話，`lock (typeof (MyType))` 會成為問題。  
+-   <span data-ttu-id="e0e93-115">如果可以公開存取 `MyType` 的話，`lock (typeof (MyType))` 會成為問題。</span><span class="sxs-lookup"><span data-stu-id="e0e93-115">`lock (typeof (MyType))` is a problem if `MyType` is publicly accessible.</span></span>  
   
--   由於處理序中使用相同字串的任何其他程式碼，將會共用相同的鎖定，因此 `lock("myLock")` 會成為問題。  
+-   <span data-ttu-id="e0e93-116">由於處理序中使用相同字串的任何其他程式碼，將會共用相同的鎖定，因此 `lock("myLock")` 會成為問題。</span><span class="sxs-lookup"><span data-stu-id="e0e93-116">`lock("myLock")` is a problem because any other code in the process using the same string, will share the same lock.</span></span>  
   
- 最佳做法是定義要鎖定的 `private` 物件或 `private static` 物件變數，以保護通用於所有執行個體的資料。  
+ <span data-ttu-id="e0e93-117">最佳做法是定義要鎖定的 `private` 物件或 `private static` 物件變數，以保護通用於所有執行個體的資料。</span><span class="sxs-lookup"><span data-stu-id="e0e93-117">Best practice is to define a `private` object to lock on, or a `private static` object variable to protect data common to all instances.</span></span>  
   
- 您不能在 `lock` 陳述式主體中使用 [await](../../../csharp/language-reference/keywords/await.md) 關鍵字。  
+ <span data-ttu-id="e0e93-118">您不能在 `lock` 陳述式主體中使用 [await](../../../csharp/language-reference/keywords/await.md) 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="e0e93-118">You can't use the [await](../../../csharp/language-reference/keywords/await.md) keyword in the body of a `lock` statement.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會示範執行緒的簡易使用方式，而不在 C# 中使用鎖定。  
+## <a name="example"></a><span data-ttu-id="e0e93-119">範例</span><span class="sxs-lookup"><span data-stu-id="e0e93-119">Example</span></span>  
+ <span data-ttu-id="e0e93-120">下列範例會示範執行緒的簡易使用方式，而不在 C# 中使用鎖定。</span><span class="sxs-lookup"><span data-stu-id="e0e93-120">The following sample shows a simple use of threads without locking in C#.</span></span>  
   
- [!code-cs[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
+ [!code-csharp[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
   
-## <a name="example"></a>範例  
- 下列範例會使用執行緒和 `lock`。 只要 `lock` 陳述式存在，則該陳述式區塊就是關鍵區段，且 `balance` 永遠不會是負數。  
+## <a name="example"></a><span data-ttu-id="e0e93-121">範例</span><span class="sxs-lookup"><span data-stu-id="e0e93-121">Example</span></span>  
+ <span data-ttu-id="e0e93-122">下列範例會使用執行緒和 `lock`。</span><span class="sxs-lookup"><span data-stu-id="e0e93-122">The following sample uses threads and `lock`.</span></span> <span data-ttu-id="e0e93-123">只要 `lock` 陳述式存在，則該陳述式區塊就是關鍵區段，且 `balance` 永遠不會是負數。</span><span class="sxs-lookup"><span data-stu-id="e0e93-123">As long as the `lock` statement is present, the statement block is a critical section and `balance` will never become a negative number.</span></span>  
   
- [!code-cs[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
+ [!code-csharp[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="e0e93-124">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="e0e93-124">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Reflection.MethodImplAttributes>   
- <xref:System.Threading.Mutex>   
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
- [執行緒](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [陳述式關鍵字](../../../csharp/language-reference/keywords/statement-keywords.md)   
- @System.Threading.Monitor   
- [Interlocked 作業](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
- [執行緒同步處理](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)
+## <a name="see-also"></a><span data-ttu-id="e0e93-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0e93-125">See Also</span></span>  
+ <xref:System.Reflection.MethodImplAttributes>  
+ <xref:System.Threading.Mutex>  
+ [<span data-ttu-id="e0e93-126">C# 參考</span><span class="sxs-lookup"><span data-stu-id="e0e93-126">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="e0e93-127">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="e0e93-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="e0e93-128">執行緒處理</span><span class="sxs-lookup"><span data-stu-id="e0e93-128">Threading</span></span>](../../programming-guide/concepts/threading/index.md)  
+ [<span data-ttu-id="e0e93-129">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="e0e93-129">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="e0e93-130">陳述式關鍵字</span><span class="sxs-lookup"><span data-stu-id="e0e93-130">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)  
+ <xref:System.Threading.Monitor>  
+ [<span data-ttu-id="e0e93-131">Interlocked 作業</span><span class="sxs-lookup"><span data-stu-id="e0e93-131">Interlocked Operations</span></span>](../../../standard/threading/interlocked-operations.md)  
+ [<span data-ttu-id="e0e93-132">AutoResetEvent</span><span class="sxs-lookup"><span data-stu-id="e0e93-132">AutoResetEvent</span></span>](../../../standard/threading/autoresetevent.md)  
+ [<span data-ttu-id="e0e93-133">執行緒同步處理</span><span class="sxs-lookup"><span data-stu-id="e0e93-133">Thread Synchronization</span></span>](../../programming-guide/concepts/threading/thread-synchronization.md)

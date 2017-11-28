@@ -1,109 +1,90 @@
 ---
 title: "使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: be51a5b3d3eecc58d43dcbbcb0802cce7fd16c45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 167262f7b2423fffec61b1e903f849d2ab387ed2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
-C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/language-reference/keywords/base.md)和衍生類別的版本控制能夠發展兼具回溯相容性。 例如，這表示 C# 完全支援在基底[類別](../../../csharp/language-reference/keywords/class.md)中引入與衍生類別成員同名的新成員，不會導致非預期的行為。 這也表示，類別必須明確指出方法是打算覆寫繼承的方法，還是方法是一種新方法，會隱藏名稱相似的繼承方法。  
+# <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a><span data-ttu-id="eede2-102">使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="eede2-102">Versioning with the Override and New Keywords (C# Programming Guide)</span></span>
+<span data-ttu-id="eede2-103">C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/language-reference/keywords/base.md)和衍生類別的版本控制能夠發展兼具回溯相容性。</span><span class="sxs-lookup"><span data-stu-id="eede2-103">The C# language is designed so that versioning between [base](../../../csharp/language-reference/keywords/base.md) and derived classes in different libraries can evolve and maintain backward compatibility.</span></span> <span data-ttu-id="eede2-104">例如，這表示 C# 完全支援在基底[類別](../../../csharp/language-reference/keywords/class.md)中引入與衍生類別成員同名的新成員，不會導致非預期的行為。</span><span class="sxs-lookup"><span data-stu-id="eede2-104">This means, for example, that the introduction of a new member in a base [class](../../../csharp/language-reference/keywords/class.md) with the same name as a member in a derived class is completely supported by C# and does not lead to unexpected behavior.</span></span> <span data-ttu-id="eede2-105">這也表示，類別必須明確指出方法是打算覆寫繼承的方法，還是方法是一種新方法，會隱藏名稱相似的繼承方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-105">It also means that a class must explicitly state whether a method is intended to override an inherited method, or whether a method is a new method that hides a similarly named inherited method.</span></span>  
   
- 在 C# 中，衍生類別可以包含與基底類別方法同名的方法。  
+ <span data-ttu-id="eede2-106">在 C# 中，衍生類別可以包含與基底類別方法同名的方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-106">In C#, derived classes can contain methods with the same name as base class methods.</span></span>  
   
--   基底類別方法必須定義為 [virtual](../../../csharp/language-reference/keywords/virtual.md)。  
+-   <span data-ttu-id="eede2-107">基底類別方法必須定義為 [virtual](../../../csharp/language-reference/keywords/virtual.md)。</span><span class="sxs-lookup"><span data-stu-id="eede2-107">The base class method must be defined [virtual](../../../csharp/language-reference/keywords/virtual.md).</span></span>  
   
--   如果衍生類別中的方法前未加上 [new](../../../csharp/language-reference/keywords/new.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字，編譯器就會發出警告，方法會表現為如同有 `new` 關鍵字。  
+-   <span data-ttu-id="eede2-108">如果衍生類別中的方法前未加上 [new](../../../csharp/language-reference/keywords/new.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字，編譯器就會發出警告，方法會表現為如同有 `new` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="eede2-108">If the method in the derived class is not preceded by [new](../../../csharp/language-reference/keywords/new.md) or [override](../../../csharp/language-reference/keywords/override.md) keywords, the compiler will issue a warning and the method will behave as if the `new` keyword were present.</span></span>  
   
--   如果衍生類別中的方法前面加上 `new` 關鍵字，方法會定義為不受基底類別中的方法影響。  
+-   <span data-ttu-id="eede2-109">如果衍生類別中的方法前面加上 `new` 關鍵字，方法會定義為不受基底類別中的方法影響。</span><span class="sxs-lookup"><span data-stu-id="eede2-109">If the method in the derived class is preceded with the `new` keyword, the method is defined as being independent of the method in the base class.</span></span>  
   
--   如果衍生類別中的方法前面加上 `override` 關鍵字，衍生類別的物件會呼叫該方法，不會呼叫基底類別方法。  
+-   <span data-ttu-id="eede2-110">如果衍生類別中的方法前面加上 `override` 關鍵字，衍生類別的物件會呼叫該方法，不會呼叫基底類別方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-110">If the method in the derived class is preceded with the `override` keyword, objects of the derived class will call that method instead of the base class method.</span></span>  
   
--   您可以使用 `base` 關鍵字從衍生類別中呼叫基底類別方法。  
+-   <span data-ttu-id="eede2-111">您可以使用 `base` 關鍵字從衍生類別中呼叫基底類別方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-111">The base class method can be called from within the derived class using the `base` keyword.</span></span>  
   
--   `override`、`virtual` 和 `new` 關鍵字也可以套用至屬性、索引子和事件。  
+-   <span data-ttu-id="eede2-112">`override`、`virtual` 和 `new` 關鍵字也可以套用至屬性、索引子和事件。</span><span class="sxs-lookup"><span data-stu-id="eede2-112">The `override`, `virtual`, and `new` keywords can also be applied to properties, indexers, and events.</span></span>  
   
- C# 方法預設不是虛擬的。 如果方法宣告為虛擬，則繼承該方法的任何類別都可以實作自己的版本。 若要使方法成為虛擬的，基底類別的方法宣告中會使用 `virtual` 修飾詞。 然後，衍生類別可以使用 `override` 關鍵字覆寫基底虛擬方法，或使用 `new` 關鍵字隱藏基底類別中的虛擬方法。 如果不指定 `override` 關鍵字，也不指定 `new` 關鍵字，則編譯器會發出警告，且衍生類別中的方法會隱藏基底類別中的方法。  
+ <span data-ttu-id="eede2-113">C# 方法預設不是虛擬的。</span><span class="sxs-lookup"><span data-stu-id="eede2-113">By default, C# methods are not virtual.</span></span> <span data-ttu-id="eede2-114">如果方法宣告為虛擬，則繼承該方法的任何類別都可以實作自己的版本。</span><span class="sxs-lookup"><span data-stu-id="eede2-114">If a method is declared as virtual, any class inheriting the method can implement its own version.</span></span> <span data-ttu-id="eede2-115">若要使方法成為虛擬的，基底類別的方法宣告中會使用 `virtual` 修飾詞。</span><span class="sxs-lookup"><span data-stu-id="eede2-115">To make a method virtual, the `virtual` modifier is used in the method declaration of the base class.</span></span> <span data-ttu-id="eede2-116">然後，衍生類別可以使用 `override` 關鍵字覆寫基底虛擬方法，或使用 `new` 關鍵字隱藏基底類別中的虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-116">The derived class can then override the base virtual method by using the `override` keyword or hide the virtual method in the base class by using the `new` keyword.</span></span> <span data-ttu-id="eede2-117">如果不指定 `override` 關鍵字，也不指定 `new` 關鍵字，則編譯器會發出警告，且衍生類別中的方法會隱藏基底類別中的方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-117">If neither the `override` keyword nor the `new` keyword is specified, the compiler will issue a warning and the method in the derived class will hide the method in the base class.</span></span>  
   
- 為在練習中示範此技巧，假設公司 A 建立了類別 `GraphicsClass`，為您的程式所用。 以下即為 `GraphicsClass`：  
+ <span data-ttu-id="eede2-118">為在練習中示範此技巧，假設公司 A 建立了類別 `GraphicsClass`，為您的程式所用。</span><span class="sxs-lookup"><span data-stu-id="eede2-118">To demonstrate this in practice, assume for a moment that Company A has created a class named `GraphicsClass`, which your program uses.</span></span> <span data-ttu-id="eede2-119">以下即為 `GraphicsClass`：</span><span class="sxs-lookup"><span data-stu-id="eede2-119">The following is `GraphicsClass`:</span></span>  
   
- [!code-cs[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
   
- 您的公司使用這個類別，而您用它衍生自己的類別，新增了新的方法︰  
+ <span data-ttu-id="eede2-120">您的公司使用這個類別，而您用它衍生自己的類別，新增了新的方法︰</span><span class="sxs-lookup"><span data-stu-id="eede2-120">Your company uses this class, and you use it to derive your own class, adding a new method:</span></span>  
   
- [!code-cs[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
   
- 您的應用程式一直使用正常，直到公司 A 發行新版的 `GraphicsClass`，類似下列程式碼︰  
+ <span data-ttu-id="eede2-121">您的應用程式一直使用正常，直到公司 A 發行新版的 `GraphicsClass`，類似下列程式碼︰</span><span class="sxs-lookup"><span data-stu-id="eede2-121">Your application is used without problems, until Company A releases a new version of `GraphicsClass`, which resembles the following code:</span></span>  
   
- [!code-cs[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
   
- 新版的 `GraphicsClass` 現在包含一個名為 `DrawRectangle` 的方法。 一開始，一切如常。 新版本與舊版仍為二進位相容。 您部署的所有軟體仍繼續運作，即使這些電腦系統上安裝了新類別。 目前對方法 `DrawRectangle` 的任何呼叫仍繼續參考您衍生類別中的版本。  
+ <span data-ttu-id="eede2-122">新版的 `GraphicsClass` 現在包含一個名為 `DrawRectangle` 的方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-122">The new version of `GraphicsClass` now contains a method named `DrawRectangle`.</span></span> <span data-ttu-id="eede2-123">一開始，一切如常。</span><span class="sxs-lookup"><span data-stu-id="eede2-123">Initially, nothing occurs.</span></span> <span data-ttu-id="eede2-124">新版本與舊版仍為二進位相容。</span><span class="sxs-lookup"><span data-stu-id="eede2-124">The new version is still binary compatible with the old version.</span></span> <span data-ttu-id="eede2-125">您部署的所有軟體仍繼續運作，即使這些電腦系統上安裝了新類別。</span><span class="sxs-lookup"><span data-stu-id="eede2-125">Any software that you have deployed will continue to work, even if the new class is installed on those computer systems.</span></span> <span data-ttu-id="eede2-126">目前對方法 `DrawRectangle` 的任何呼叫仍繼續參考您衍生類別中的版本。</span><span class="sxs-lookup"><span data-stu-id="eede2-126">Any existing calls to the method `DrawRectangle` will continue to reference your version, in your derived class.</span></span>  
   
- 不過，一旦使用新版的 `GraphicsClass` 重新編譯應用程式，就會立刻收到編譯器警告 CS0108。 這個警告會通知您，您必須考慮希望 `DrawRectangle` 方法在應用程式中如何表現。  
+ <span data-ttu-id="eede2-127">不過，一旦使用新版的 `GraphicsClass` 重新編譯應用程式，就會立刻收到編譯器警告 CS0108。</span><span class="sxs-lookup"><span data-stu-id="eede2-127">However, as soon as you recompile your application by using the new version of `GraphicsClass`, you will receive a warning from the compiler, CS0108.</span></span> <span data-ttu-id="eede2-128">這個警告會通知您，您必須考慮希望 `DrawRectangle` 方法在應用程式中如何表現。</span><span class="sxs-lookup"><span data-stu-id="eede2-128">This warning informs you that you have to consider how you want your `DrawRectangle` method to behave in your application.</span></span>  
   
- 如果您希望自己的方法覆寫新的基底類別方法，請使用 `override` 關鍵字︰  
+ <span data-ttu-id="eede2-129">如果您希望自己的方法覆寫新的基底類別方法，請使用 `override` 關鍵字︰</span><span class="sxs-lookup"><span data-stu-id="eede2-129">If you want your method to override the new base class method, use the `override` keyword:</span></span>  
   
- [!code-cs[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
   
- `override` 關鍵字可以確保衍生自 `YourDerivedGraphicsClass` 的所有物件都會使用 `DrawRectangle` 的衍生類別版本。 衍生自 `YourDerivedGraphicsClass` 的物件仍然可以使用 base 關鍵字存取 `DrawRectangle` 的基底類別版本︰  
+ <span data-ttu-id="eede2-130">`override` 關鍵字可以確保衍生自 `YourDerivedGraphicsClass` 的所有物件都會使用 `DrawRectangle` 的衍生類別版本。</span><span class="sxs-lookup"><span data-stu-id="eede2-130">The `override` keyword makes sure that any objects derived from `YourDerivedGraphicsClass` will use the derived class version of `DrawRectangle`.</span></span> <span data-ttu-id="eede2-131">衍生自 `YourDerivedGraphicsClass` 的物件仍然可以使用 base 關鍵字存取 `DrawRectangle` 的基底類別版本︰</span><span class="sxs-lookup"><span data-stu-id="eede2-131">Objects derived from `YourDerivedGraphicsClass` can still access the base class version of `DrawRectangle` by using the base keyword:</span></span>  
   
- [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
- 如果您不希望自己的方法覆寫新的基底類別方法，請採納下列考量。 為避免混淆兩個方法，您可以重新命名您的方法。 這很耗時間又容易發生錯誤，並且在某些情況下不實際。 不過，如果您的專案相對較小，您可以使用 Visual Studio 的重構選項來重新命名方法。 如需詳細資訊，請參閱[重構類別和型別 (類別設計工具)](/visualstudio/ide/refactoring-classes-and-types-class-designer)。  
+ <span data-ttu-id="eede2-132">如果您不希望自己的方法覆寫新的基底類別方法，請採納下列考量。</span><span class="sxs-lookup"><span data-stu-id="eede2-132">If you do not want your method to override the new base class method, the following considerations apply.</span></span> <span data-ttu-id="eede2-133">為避免混淆兩個方法，您可以重新命名您的方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-133">To avoid confusion between the two methods, you can rename your method.</span></span> <span data-ttu-id="eede2-134">這很耗時間又容易發生錯誤，並且在某些情況下不實際。</span><span class="sxs-lookup"><span data-stu-id="eede2-134">This can be time-consuming and error-prone, and just not practical in some cases.</span></span> <span data-ttu-id="eede2-135">不過，如果您的專案相對較小，您可以使用 Visual Studio 的重構選項來重新命名方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-135">However, if your project is relatively small, you can use Visual Studio's Refactoring options to rename the method.</span></span> <span data-ttu-id="eede2-136">如需詳細資訊，請參閱[重構類別和型別 (類別設計工具)](/visualstudio/ide/refactoring-classes-and-types-class-designer)。</span><span class="sxs-lookup"><span data-stu-id="eede2-136">For more information, see [Refactoring Classes and Types (Class Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer).</span></span>  
   
- 或者，您也可以在衍生類別定義中使用關鍵字 `new`，避免出現警告：  
+ <span data-ttu-id="eede2-137">或者，您也可以在衍生類別定義中使用關鍵字 `new`，避免出現警告：</span><span class="sxs-lookup"><span data-stu-id="eede2-137">Alternatively, you can prevent the warning by using the keyword `new` in your derived class definition:</span></span>  
   
- [!code-cs[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
   
- 使用 `new` 關鍵字會通知編譯器，您的定義要隱藏基底類別中包含的定義。 這是預設行為。  
+ <span data-ttu-id="eede2-138">使用 `new` 關鍵字會通知編譯器，您的定義要隱藏基底類別中包含的定義。</span><span class="sxs-lookup"><span data-stu-id="eede2-138">Using the `new` keyword tells the compiler that your definition hides the definition that is contained in the base class.</span></span> <span data-ttu-id="eede2-139">這是預設行為。</span><span class="sxs-lookup"><span data-stu-id="eede2-139">This is the default behavior.</span></span>  
   
-## <a name="override-and-method-selection"></a>覆寫和方法選擇  
- 在類別上命名方法時，如果有多個方法與呼叫相容，C# 編譯器會選取最好的方法呼叫，例如當有兩種方法同名時，並傳遞與參數相容的參數。 下列方法相容︰  
+## <a name="override-and-method-selection"></a><span data-ttu-id="eede2-140">覆寫和方法選擇</span><span class="sxs-lookup"><span data-stu-id="eede2-140">Override and Method Selection</span></span>  
+ <span data-ttu-id="eede2-141">在類別上命名方法時，如果有多個方法與呼叫相容，C# 編譯器會選取最好的方法呼叫，例如當有兩種方法同名時，並傳遞與參數相容的參數。</span><span class="sxs-lookup"><span data-stu-id="eede2-141">When a method is named on a class, the C# compiler selects the best method to call if more than one method is compatible with the call, such as when there are two methods with the same name, and parameters that are compatible with the parameter passed.</span></span> <span data-ttu-id="eede2-142">下列方法相容︰</span><span class="sxs-lookup"><span data-stu-id="eede2-142">The following methods would be compatible:</span></span>  
   
- [!code-cs[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
   
- 在 `Derived` 的執行個體上呼叫 `DoWork` 時，C# 編譯器會先嘗試進行與 `DoWork` 版本相容的呼叫，此版本原是在 `Derived` 上宣告。 覆寫方法不視為在類別中宣告，它們是基底類別中所宣告方法的新實作。 只有當 C# 編譯器無法比對方法呼叫和 `Derived` 中的原始方法時，才會嘗試比對具有相同名稱和相容參數的覆寫方法呼叫。 例如:   
+ <span data-ttu-id="eede2-143">在 `Derived` 的執行個體上呼叫 `DoWork` 時，C# 編譯器會先嘗試進行與 `DoWork` 版本相容的呼叫，此版本原是在 `Derived` 上宣告。</span><span class="sxs-lookup"><span data-stu-id="eede2-143">When `DoWork` is called on an instance of `Derived`, the C# compiler will first try to make the call compatible with the versions of `DoWork` declared originally on `Derived`.</span></span> <span data-ttu-id="eede2-144">覆寫方法不視為在類別中宣告，它們是基底類別中所宣告方法的新實作。</span><span class="sxs-lookup"><span data-stu-id="eede2-144">Override methods are not considered as declared on a class, they are new implementations of a method declared on a base class.</span></span> <span data-ttu-id="eede2-145">只有當 C# 編譯器無法比對方法呼叫和 `Derived` 中的原始方法時，才會嘗試比對具有相同名稱和相容參數的覆寫方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="eede2-145">Only if the C# compiler cannot match the method call to an original method on `Derived` will it try to match the call to an overridden method with the same name and compatible parameters.</span></span> <span data-ttu-id="eede2-146">例如: </span><span class="sxs-lookup"><span data-stu-id="eede2-146">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
   
- 因為變數 `val` 可以隱含方式轉換為 double，所以 C# 編譯器會呼叫 `DoWork(double)`，不是呼叫 `DoWork(int)`。 有兩種方式可避免這種情況。 首先，避免使用和虛擬方法相同的名稱宣告新方法。 第二，您可以將 `Derived` 執行個體轉換成 `Base`，讓 C# 編譯器搜尋基底類別方法清單，指示它呼叫虛擬方法。 因為方法是虛擬的，所以會在 `Derived` 呼叫 `DoWork(int)` 實作。 例如:   
+ <span data-ttu-id="eede2-147">因為變數 `val` 可以隱含方式轉換為 double，所以 C# 編譯器會呼叫 `DoWork(double)`，不是呼叫 `DoWork(int)`。</span><span class="sxs-lookup"><span data-stu-id="eede2-147">Because the variable `val` can be converted to a double implicitly, the C# compiler calls `DoWork(double)` instead of `DoWork(int)`.</span></span> <span data-ttu-id="eede2-148">有兩種方式可避免這種情況。</span><span class="sxs-lookup"><span data-stu-id="eede2-148">There are two ways to avoid this.</span></span> <span data-ttu-id="eede2-149">首先，避免使用和虛擬方法相同的名稱宣告新方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-149">First, avoid declaring new methods with the same name as virtual methods.</span></span> <span data-ttu-id="eede2-150">第二，您可以將 `Derived` 執行個體轉換成 `Base`，讓 C# 編譯器搜尋基底類別方法清單，指示它呼叫虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="eede2-150">Second, you can instruct the C# compiler to call the virtual method by making it search the base class method list by casting the instance of `Derived` to `Base`.</span></span> <span data-ttu-id="eede2-151">因為方法是虛擬的，所以會在 `Derived` 呼叫 `DoWork(int)` 實作。</span><span class="sxs-lookup"><span data-stu-id="eede2-151">Because the method is virtual, the implementation of `DoWork(int)` on `Derived` will be called.</span></span> <span data-ttu-id="eede2-152">例如: </span><span class="sxs-lookup"><span data-stu-id="eede2-152">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
   
- 如需更多的 `new` 和 `override` 範例，請參閱[了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
+ <span data-ttu-id="eede2-153">如需更多的 `new` 和 `override` 範例，請參閱[了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。</span><span class="sxs-lookup"><span data-stu-id="eede2-153">For more examples of `new` and `override`, see [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-
+## <a name="see-also"></a><span data-ttu-id="eede2-154">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eede2-154">See Also</span></span>  
+ [<span data-ttu-id="eede2-155">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="eede2-155">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="eede2-156">類別和結構</span><span class="sxs-lookup"><span data-stu-id="eede2-156">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="eede2-157">方法</span><span class="sxs-lookup"><span data-stu-id="eede2-157">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="eede2-158">繼承</span><span class="sxs-lookup"><span data-stu-id="eede2-158">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
