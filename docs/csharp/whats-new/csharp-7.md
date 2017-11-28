@@ -116,14 +116,19 @@ The fields are not validated, and you cannot define your own methods
 
 You can create a tuple by assigning each member to a value:
 
-[!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
+
+```csharp
+var letters = ("a", "b");
+```
 
 That assignment creates a tuple whose members are `Item1` and `Item2`,
 which you can use in the same way as <xref:System.Tuple>
 You can change the syntax to create a tuple that provides semantic
 names to each of the members of the tuple:
 
-[!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
+```csharp
+(string Alpha, string Beta) namedLetters = ("a", "b");
+```
 
 The `namedLetters` tuple contains fields referred to as `Alpha` and
 `Beta`. Those names exist only at compile time and are not preserved
@@ -132,12 +137,16 @@ for example when inspecting the tuple using reflection at runtime.
 In a tuple assignment, you can also specify the names of the fields
 on the right-hand side of the assignment:
 
-[!code-csharp[ImplicitNamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#06_ImplicitNamedTuple "Implicitly named tuple")]
+```csharp
+var alphabetStart = (Alpha: "a", Beta: "b");
+```
 
 You can specify names for the fields on both the
 left and right-hand side of the assignment:
 
-[!code-csharp[NamedTupleConflict](../../../samples/snippets/csharp/new-in-7/program.cs#07_NamedTupleConflict "Named tuple conflict")]
+```csharp
+(string First, string Second) firstLetters = (Alpha: "a", Beta: "b");
+```
 
 The line above generates a warning, `CS8123`, telling you that the names on the right
 side of the assignment, `Alpha` and `Beta` are ignored because they conflict
@@ -154,7 +163,19 @@ It is a simpler, lightweight syntax to define a data structure that carries
 more than one value. The example method below returns the minimum and maximum
 values found in a sequence of integers:
 
-[!code-csharp[TupleReturningMethod](../../../samples/snippets/csharp/new-in-7/program.cs#08_TupleReturningMethod "Tuple returning method")]
+```csharp
+private static (int Max, int Min) Range(IEnumerable<int> numbers)
+{
+    int min = int.MaxValue;
+    int max = int.MinValue;
+    foreach(var n in numbers)
+    {
+        min = (n < min) ? n : min;
+        max = (n > max) ? n : max;
+    }
+    return (max, min);
+}
+```
 
 Using tuples in this way offers several advantages:
 
@@ -166,16 +187,17 @@ The declaration for the method provides the names for the fields of the
 tuple that is returned. When you call the method, the return value is a 
 tuple whose fields are `Max` and `Min`:
 
-[!code-csharp[CallingTupleMethod](../../../samples/snippets/csharp/new-in-7/program.cs#09_CallingTupleMethod "Calling a tuple returning method")]
+```csharp
+var range = Range(numbers);
+```
 
 There may be times when you want to unpackage the members of a tuple that
 were returned from a method.  You can do that by declaring separate variables
 for each of the values in the tuple. This is called *deconstructing* the tuple:
 
-[!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
-
-<!-- Add wildcards here, if they are in C# 7
--->
+```csharp
+(int max, int min) = Range(numbers);
+```
 
 You can also provide a similar deconstruction for any type in .NET. This is
 done by writing a `Deconstruct` method as a member of the class. That
@@ -184,16 +206,39 @@ properties you want to extract. Consider
 this `Point` class that provides a deconstructor method that extracts
 the `X` and `Y` coordinates:
 
-[!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
- 
+```csharp
+public class Point
+{
+    public Point(double x, double y)
+    {
+        this.X = x;
+        this.Y = y;
+    }
+
+    public double X { get; }
+    public double Y { get; }
+
+    public void Deconstruct(out double x, out double y)
+    {
+        x = this.X;
+        y = this.Y;
+    }
+}
+```
+
 You can extract the individual fields by assigning a tuple to a `Point`:
 
-[!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
+```csharp
+var p = new Point(3.14, 2.71);
+(double X, double Y) = p;
+```
 
 You are not bound by the names defined in the `Deconstruct` method. You
-can rename the extract variables as part of the assignment:  
+can rename the extract variables as part of the assignment: 
 
-[!code-csharp[DeconstructNames](../../../samples/snippets/csharp/new-in-7/program.cs#13_DeconstructNames "Deconstruct with new names")]
+```csharp
+(double horizontalDistance, double verticalDistance) = p;
+```
 
 You can learn more in depth about tuples in the
 [tuples topic](../tuples.md).
