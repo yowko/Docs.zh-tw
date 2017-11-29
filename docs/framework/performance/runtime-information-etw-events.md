@@ -5,55 +5,52 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="runtime-information-etw-events"></a>執行階段資訊 ETW 事件
-執行階段的這些 ETW 事件記錄資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。 如果多個執行階段是在某個處理序內執行，則這些事件所提供的資訊 (ClrInstanceID) 有助於釐清執行階段。  
+# <a name="runtime-information-etw-events"></a><span data-ttu-id="2ffef-102">執行階段資訊 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="2ffef-102">Runtime Information ETW Events</span></span>
+<span data-ttu-id="2ffef-103">執行階段的這些 ETW 事件記錄資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。</span><span class="sxs-lookup"><span data-stu-id="2ffef-103">These ETW events log information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.</span></span> <span data-ttu-id="2ffef-104">如果多個執行階段是在某個處理序內執行，則這些事件所提供的資訊 (ClrInstanceID) 有助於釐清執行階段。</span><span class="sxs-lookup"><span data-stu-id="2ffef-104">If multiple runtimes are executing within a process, the information provided by these events (the ClrInstanceID) helps disambiguate the runtimes.</span></span>  
   
- 下表顯示兩個執行階段資訊事件。 事件可能會透過任何關鍵字或遮罩引發。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。  
+ <span data-ttu-id="2ffef-105">下表顯示兩個執行階段資訊事件。</span><span class="sxs-lookup"><span data-stu-id="2ffef-105">The following table shows the two runtime information events.</span></span> <span data-ttu-id="2ffef-106">事件可能會透過任何關鍵字或遮罩引發。</span><span class="sxs-lookup"><span data-stu-id="2ffef-106">The events can be raised under any keyword or mask.</span></span> <span data-ttu-id="2ffef-107">(如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。</span><span class="sxs-lookup"><span data-stu-id="2ffef-107">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|事件|事件 ID|提供者|說明|  
+|<span data-ttu-id="2ffef-108">事件</span><span class="sxs-lookup"><span data-stu-id="2ffef-108">Event</span></span>|<span data-ttu-id="2ffef-109">事件 ID</span><span class="sxs-lookup"><span data-stu-id="2ffef-109">Event ID</span></span>|<span data-ttu-id="2ffef-110">提供者</span><span class="sxs-lookup"><span data-stu-id="2ffef-110">Provider</span></span>|<span data-ttu-id="2ffef-111">說明</span><span class="sxs-lookup"><span data-stu-id="2ffef-111">Description</span></span>|  
 |-----------|--------------|--------------|-----------------|  
-|`RuntimeInformationEvent`|187|CLRRuntime|在載入執行階段時引發。|  
-|`RuntimeInformationDCStart`|187|CLRRundown|列舉已載入的執行階段。|  
+|`RuntimeInformationEvent`|<span data-ttu-id="2ffef-112">187</span><span class="sxs-lookup"><span data-stu-id="2ffef-112">187</span></span>|<span data-ttu-id="2ffef-113">CLRRuntime</span><span class="sxs-lookup"><span data-stu-id="2ffef-113">CLRRuntime</span></span>|<span data-ttu-id="2ffef-114">在載入執行階段時引發。</span><span class="sxs-lookup"><span data-stu-id="2ffef-114">Raised when a runtime is loaded.</span></span>|  
+|`RuntimeInformationDCStart`|<span data-ttu-id="2ffef-115">187</span><span class="sxs-lookup"><span data-stu-id="2ffef-115">187</span></span>|<span data-ttu-id="2ffef-116">CLRRundown</span><span class="sxs-lookup"><span data-stu-id="2ffef-116">CLRRundown</span></span>|<span data-ttu-id="2ffef-117">列舉已載入的執行階段。</span><span class="sxs-lookup"><span data-stu-id="2ffef-117">Enumerates the runtimes that are loaded.</span></span>|  
   
- 下表顯示事件資料。  
+ <span data-ttu-id="2ffef-118">下表顯示事件資料。</span><span class="sxs-lookup"><span data-stu-id="2ffef-118">The following table shows event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="2ffef-119">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="2ffef-119">Field name</span></span>|<span data-ttu-id="2ffef-120">資料類型</span><span class="sxs-lookup"><span data-stu-id="2ffef-120">Data type</span></span>|<span data-ttu-id="2ffef-121">描述</span><span class="sxs-lookup"><span data-stu-id="2ffef-121">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
-|Sku|win:UInt16|1 - 桌面 CLR。<br /><br /> 2 - CoreCLR。|  
-|BclVersion - 主要版本|win:UInt16|mscorlib.dll 的主要版本。|  
-|BclVersion - 次要版本|win:UInt16|mscorlib.dll 的次要版本號碼。|  
-|BclVersion - 組建編號|win:UInt16|mscorlib.dll. 的組建編號。|  
-|BclVersion - QFE|win:UInt16|mscorlib.dll 的 Hotfix 版本號碼。|  
-|VMVersion - 主要版本|win:UInt16|clr.dll 或 coreclr.dll 的版本 (視 SKU 而定)。|  
-|VMVersion - 次要版本|win:UInt16|clr.dll 或 coreclr.dll 的次要版本 (視 SKU 而定)。|  
-|VMVersion - 組建編號|win:UInt16|clr.dll 或 coreclr.dll 的組建編號。|  
-|VMVersion - QFE|win:UInt16|clr.dll 或 coreclr.dll 的 Hotfix 版本號碼。|  
-|StartupFlags|win:UInt32|啟動旗標定義於 mscoree.h 中。|  
-|StartupMode|win:UInt8|0x01 - Managed 可執行檔。<br /><br /> 0x02 - 託管 CLR。<br /><br /> 0x04 - C++ Managed Interop。<br /><br /> 0x08 - COM 已啟用。<br /><br /> 0x10 - 其他。|  
-|CommandLine|win:UnicodeString|只有在 StartupMode=0x01 時才為非 Null。|  
-|ComObjectGUID|win:GUID|只有在 StartupMode=0x08 時才為非 Null。|  
-|RuntimeDLLPath|win:UnicodeString|已載入處理序中之 CLR .dll 檔案的路徑。|  
+|<span data-ttu-id="2ffef-122">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2ffef-122">ClrInstanceID</span></span>|<span data-ttu-id="2ffef-123">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-123">win:UInt16</span></span>|<span data-ttu-id="2ffef-124">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="2ffef-124">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+|<span data-ttu-id="2ffef-125">Sku</span><span class="sxs-lookup"><span data-stu-id="2ffef-125">Sku</span></span>|<span data-ttu-id="2ffef-126">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-126">win:UInt16</span></span>|<span data-ttu-id="2ffef-127">1 - 桌面 CLR。</span><span class="sxs-lookup"><span data-stu-id="2ffef-127">1 – Desktop CLR.</span></span><br /><br /> <span data-ttu-id="2ffef-128">2 - CoreCLR。</span><span class="sxs-lookup"><span data-stu-id="2ffef-128">2 – CoreCLR.</span></span>|  
+|<span data-ttu-id="2ffef-129">BclVersion - 主要版本</span><span class="sxs-lookup"><span data-stu-id="2ffef-129">BclVersion – Major Version</span></span>|<span data-ttu-id="2ffef-130">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-130">win:UInt16</span></span>|<span data-ttu-id="2ffef-131">mscorlib.dll 的主要版本。</span><span class="sxs-lookup"><span data-stu-id="2ffef-131">Major version of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="2ffef-132">BclVersion - 次要版本</span><span class="sxs-lookup"><span data-stu-id="2ffef-132">BclVersion – Minor Version</span></span>|<span data-ttu-id="2ffef-133">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-133">win:UInt16</span></span>|<span data-ttu-id="2ffef-134">mscorlib.dll 的次要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="2ffef-134">Minor version number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="2ffef-135">BclVersion - 組建編號</span><span class="sxs-lookup"><span data-stu-id="2ffef-135">BclVersion – Build Number</span></span>|<span data-ttu-id="2ffef-136">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-136">win:UInt16</span></span>|<span data-ttu-id="2ffef-137">mscorlib.dll. 的組建編號。</span><span class="sxs-lookup"><span data-stu-id="2ffef-137">Build number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="2ffef-138">BclVersion - QFE</span><span class="sxs-lookup"><span data-stu-id="2ffef-138">BclVersion – QFE</span></span>|<span data-ttu-id="2ffef-139">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-139">win:UInt16</span></span>|<span data-ttu-id="2ffef-140">mscorlib.dll 的 Hotfix 版本號碼。</span><span class="sxs-lookup"><span data-stu-id="2ffef-140">Hotfix version number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="2ffef-141">VMVersion - 主要版本</span><span class="sxs-lookup"><span data-stu-id="2ffef-141">VMVersion – Major Version</span></span>|<span data-ttu-id="2ffef-142">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-142">win:UInt16</span></span>|<span data-ttu-id="2ffef-143">clr.dll 或 coreclr.dll 的版本 (視 SKU 而定)。</span><span class="sxs-lookup"><span data-stu-id="2ffef-143">Version of clr.dll or coreclr.dll, depending on SKU.</span></span>|  
+|<span data-ttu-id="2ffef-144">VMVersion - 次要版本</span><span class="sxs-lookup"><span data-stu-id="2ffef-144">VMVersion – Minor Version</span></span>|<span data-ttu-id="2ffef-145">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-145">win:UInt16</span></span>|<span data-ttu-id="2ffef-146">clr.dll 或 coreclr.dll 的次要版本 (視 SKU 而定)。</span><span class="sxs-lookup"><span data-stu-id="2ffef-146">Minor version of clr.dll or coreclr.dll, depending on SKU.</span></span>|  
+|<span data-ttu-id="2ffef-147">VMVersion - 組建編號</span><span class="sxs-lookup"><span data-stu-id="2ffef-147">VMVersion – Build Number</span></span>|<span data-ttu-id="2ffef-148">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-148">win:UInt16</span></span>|<span data-ttu-id="2ffef-149">clr.dll 或 coreclr.dll 的組建編號。</span><span class="sxs-lookup"><span data-stu-id="2ffef-149">Build number of clr.dll or coreclr.dll.</span></span>|  
+|<span data-ttu-id="2ffef-150">VMVersion - QFE</span><span class="sxs-lookup"><span data-stu-id="2ffef-150">VMVersion – QFE</span></span>|<span data-ttu-id="2ffef-151">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2ffef-151">win:UInt16</span></span>|<span data-ttu-id="2ffef-152">clr.dll 或 coreclr.dll 的 Hotfix 版本號碼。</span><span class="sxs-lookup"><span data-stu-id="2ffef-152">Hotfix version number of clr.dll or coreclr.dll.</span></span>|  
+|<span data-ttu-id="2ffef-153">StartupFlags</span><span class="sxs-lookup"><span data-stu-id="2ffef-153">StartupFlags</span></span>|<span data-ttu-id="2ffef-154">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2ffef-154">win:UInt32</span></span>|<span data-ttu-id="2ffef-155">啟動旗標定義於 mscoree.h 中。</span><span class="sxs-lookup"><span data-stu-id="2ffef-155">Startup flags defined in mscoree.h.</span></span>|  
+|<span data-ttu-id="2ffef-156">StartupMode</span><span class="sxs-lookup"><span data-stu-id="2ffef-156">StartupMode</span></span>|<span data-ttu-id="2ffef-157">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="2ffef-157">win:UInt8</span></span>|<span data-ttu-id="2ffef-158">0x01 - Managed 可執行檔。</span><span class="sxs-lookup"><span data-stu-id="2ffef-158">0x01 - Managed executable.</span></span><br /><br /> <span data-ttu-id="2ffef-159">0x02 - 託管 CLR。</span><span class="sxs-lookup"><span data-stu-id="2ffef-159">0x02 - Hosted CLR.</span></span><br /><br /> <span data-ttu-id="2ffef-160">0x04 - C++ Managed Interop。</span><span class="sxs-lookup"><span data-stu-id="2ffef-160">0x04 - C++ managed interop.</span></span><br /><br /> <span data-ttu-id="2ffef-161">0x08 - COM 已啟用。</span><span class="sxs-lookup"><span data-stu-id="2ffef-161">0x08 - COM-activated.</span></span><br /><br /> <span data-ttu-id="2ffef-162">0x10 - 其他。</span><span class="sxs-lookup"><span data-stu-id="2ffef-162">0x10 - Other.</span></span>|  
+|<span data-ttu-id="2ffef-163">CommandLine</span><span class="sxs-lookup"><span data-stu-id="2ffef-163">CommandLine</span></span>|<span data-ttu-id="2ffef-164">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2ffef-164">win:UnicodeString</span></span>|<span data-ttu-id="2ffef-165">只有在 StartupMode=0x01 時才為非 Null。</span><span class="sxs-lookup"><span data-stu-id="2ffef-165">Non-null only if StartupMode=0x01.</span></span>|  
+|<span data-ttu-id="2ffef-166">ComObjectGUID</span><span class="sxs-lookup"><span data-stu-id="2ffef-166">ComObjectGUID</span></span>|<span data-ttu-id="2ffef-167">win:GUID</span><span class="sxs-lookup"><span data-stu-id="2ffef-167">win:GUID</span></span>|<span data-ttu-id="2ffef-168">只有在 StartupMode=0x08 時才為非 Null。</span><span class="sxs-lookup"><span data-stu-id="2ffef-168">Non-null only if StartupMode=0x08.</span></span>|  
+|<span data-ttu-id="2ffef-169">RuntimeDLLPath</span><span class="sxs-lookup"><span data-stu-id="2ffef-169">RuntimeDLLPath</span></span>|<span data-ttu-id="2ffef-170">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2ffef-170">win:UnicodeString</span></span>|<span data-ttu-id="2ffef-171">已載入處理序中之 CLR .dll 檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="2ffef-171">Path to the CLR .dll file that was loaded into the process.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="2ffef-172">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2ffef-172">See Also</span></span>  
+ [<span data-ttu-id="2ffef-173">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="2ffef-173">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

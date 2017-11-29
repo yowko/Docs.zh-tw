@@ -1,15 +1,12 @@
 ---
-title: "Visual Basic 中的資料類型 | Microsoft Docs"
+title: "Visual Basic 中的資料類型"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data types [Visual Basic], declaring
 - typing
@@ -17,59 +14,43 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c86e1bfacbe06d10915bd476a5c6f528fcebe70d
-ms.openlocfilehash: 2642145e496469eb8bcb382408fda2147f48b0d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/30/2017
-
+ms.openlocfilehash: 20a24c8632e1f2193cfa86319a824dfcc038d9d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-types-in-visual-basic"></a>Visual Basic 中的資料類型
-程式設計元素的「資料類型」是指其可以保留何種資料，以及儲存該資料的方式。 資料類型會應用於所有能儲存在電腦記憶體中的值，或是所有參與運算式評估的值。 每個變數、常值、常數、列舉、屬性、程序參數、程序引數和程序傳回值都具有資料類型。  
+# <a name="data-types-in-visual-basic"></a><span data-ttu-id="51a4f-102">Visual Basic 中的資料類型</span><span class="sxs-lookup"><span data-stu-id="51a4f-102">Data Types in Visual Basic</span></span>
+<span data-ttu-id="51a4f-103">程式設計元素的「資料類型」是指其可以保留何種資料，以及儲存該資料的方式。</span><span class="sxs-lookup"><span data-stu-id="51a4f-103">The *data type* of a programming element refers to what kind of data it can hold and how it stores that data.</span></span> <span data-ttu-id="51a4f-104">資料類型會應用於所有能儲存在電腦記憶體中的值，或是所有參與運算式評估的值。</span><span class="sxs-lookup"><span data-stu-id="51a4f-104">Data types apply to all values that can be stored in computer memory or participate in the evaluation of an expression.</span></span> <span data-ttu-id="51a4f-105">每個變數、常值、常數、列舉、屬性、程序參數、程序引數和程序傳回值都具有資料類型。</span><span class="sxs-lookup"><span data-stu-id="51a4f-105">Every variable, literal, constant, enumeration, property, procedure parameter, procedure argument, and procedure return value has a data type.</span></span>  
   
-## <a name="declared-data-types"></a>已宣告的資料類型  
- 您可以使用宣告陳述式來定義程式設計元素，並以 `As` 子句來指定其資料類型。 下表顯示用來宣告各種元素的陳述式。  
+## <a name="declared-data-types"></a><span data-ttu-id="51a4f-106">已宣告的資料類型</span><span class="sxs-lookup"><span data-stu-id="51a4f-106">Declared Data Types</span></span>  
+ <span data-ttu-id="51a4f-107">您可以使用宣告陳述式來定義程式設計元素，並以 `As` 子句來指定其資料類型。</span><span class="sxs-lookup"><span data-stu-id="51a4f-107">You define a programming element with a declaration statement, and you specify its data type with the `As` clause.</span></span> <span data-ttu-id="51a4f-108">下表顯示用來宣告各種元素的陳述式。</span><span class="sxs-lookup"><span data-stu-id="51a4f-108">The following table shows the statements you use to declare various elements.</span></span>  
   
-|程式設計元素|資料類型宣告|  
+|<span data-ttu-id="51a4f-109">程式設計元素</span><span class="sxs-lookup"><span data-stu-id="51a4f-109">Programming element</span></span>|<span data-ttu-id="51a4f-110">資料類型宣告</span><span class="sxs-lookup"><span data-stu-id="51a4f-110">Data type declaration</span></span>|  
 |-------------------------|---------------------------|  
-|變數|在 [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)中<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
-|Literal|藉由常值類型字元；請參閱[類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)中的＜常值類型字元＞<br /><br /> `Dim searchChar As Char = "."`  `C`|  
-|常數|在 [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)中<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
-|列舉|在 [Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)中<br /><br /> `Public`   `Enum`   `colors`|  
-|屬性|在 [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)中<br /><br /> `Property`   `region() As String`|  
-|程序參數|在 [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)、[Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)或 [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)中<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
-|程序引數|在呼叫程式碼中；每個引數都是已宣告的程式設計元素，或是包含已宣告元素的運算式<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
-|程序傳回值|在 [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)或 [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)中<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
+|<span data-ttu-id="51a4f-111">變數</span><span class="sxs-lookup"><span data-stu-id="51a4f-111">Variable</span></span>|<span data-ttu-id="51a4f-112">在 [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)中</span><span class="sxs-lookup"><span data-stu-id="51a4f-112">In a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)</span></span><br /><br /> <span data-ttu-id="51a4f-113">`Dim`   `amount As Double`</span><span class="sxs-lookup"><span data-stu-id="51a4f-113">`Dim`   `amount As Double`</span></span><br /><br /> <span data-ttu-id="51a4f-114">`Static`   `yourName As String`</span><span class="sxs-lookup"><span data-stu-id="51a4f-114">`Static`   `yourName As String`</span></span><br /><br /> <span data-ttu-id="51a4f-115">`Public`   `billsPaid As Decimal = 0`</span><span class="sxs-lookup"><span data-stu-id="51a4f-115">`Public`   `billsPaid As Decimal = 0`</span></span>|  
+|<span data-ttu-id="51a4f-116">Literal</span><span class="sxs-lookup"><span data-stu-id="51a4f-116">Literal</span></span>|<span data-ttu-id="51a4f-117">藉由常值類型字元；請參閱[類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)中的＜常值類型字元＞</span><span class="sxs-lookup"><span data-stu-id="51a4f-117">With a literal type character; see "Literal Type Characters" in [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)</span></span><br /><br /> <span data-ttu-id="51a4f-118">`Dim searchChar As Char = "."`  `C`</span><span class="sxs-lookup"><span data-stu-id="51a4f-118">`Dim searchChar As Char = "."`  `C`</span></span>|  
+|<span data-ttu-id="51a4f-119">常數</span><span class="sxs-lookup"><span data-stu-id="51a4f-119">Constant</span></span>|<span data-ttu-id="51a4f-120">在 [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)中</span><span class="sxs-lookup"><span data-stu-id="51a4f-120">In a [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)</span></span><br /><br /> <span data-ttu-id="51a4f-121">`Const`   `modulus As Single = 4.17825F`</span><span class="sxs-lookup"><span data-stu-id="51a4f-121">`Const`   `modulus As Single = 4.17825F`</span></span>|  
+|<span data-ttu-id="51a4f-122">列舉</span><span class="sxs-lookup"><span data-stu-id="51a4f-122">Enumeration</span></span>|<span data-ttu-id="51a4f-123">在 [Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)中</span><span class="sxs-lookup"><span data-stu-id="51a4f-123">In an [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)</span></span><br /><br /> <span data-ttu-id="51a4f-124">`Public`   `Enum`   `colors`</span><span class="sxs-lookup"><span data-stu-id="51a4f-124">`Public`   `Enum`   `colors`</span></span>|  
+|<span data-ttu-id="51a4f-125">屬性</span><span class="sxs-lookup"><span data-stu-id="51a4f-125">Property</span></span>|<span data-ttu-id="51a4f-126">在 [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)中</span><span class="sxs-lookup"><span data-stu-id="51a4f-126">In a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)</span></span><br /><br /> <span data-ttu-id="51a4f-127">`Property`   `region() As String`</span><span class="sxs-lookup"><span data-stu-id="51a4f-127">`Property`   `region() As String`</span></span>|  
+|<span data-ttu-id="51a4f-128">程序參數</span><span class="sxs-lookup"><span data-stu-id="51a4f-128">Procedure parameter</span></span>|<span data-ttu-id="51a4f-129">在 [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)、[Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)或 [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)中</span><span class="sxs-lookup"><span data-stu-id="51a4f-129">In a [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md), [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md), or [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)</span></span><br /><br /> <span data-ttu-id="51a4f-130">`Sub addSale(ByVal`   `amount`   `As Double)`</span><span class="sxs-lookup"><span data-stu-id="51a4f-130">`Sub addSale(ByVal`   `amount`   `As Double)`</span></span>|  
+|<span data-ttu-id="51a4f-131">程序引數</span><span class="sxs-lookup"><span data-stu-id="51a4f-131">Procedure argument</span></span>|<span data-ttu-id="51a4f-132">在呼叫程式碼中；每個引數都是已宣告的程式設計元素，或是包含已宣告元素的運算式</span><span class="sxs-lookup"><span data-stu-id="51a4f-132">In the calling code; each argument is a programming element that has already been declared, or an expression containing declared elements</span></span><br /><br /> <span data-ttu-id="51a4f-133">`subString = Left(`  `inputString`  `,`   `5`  `)`</span><span class="sxs-lookup"><span data-stu-id="51a4f-133">`subString = Left(`  `inputString`  `,`   `5`  `)`</span></span>|  
+|<span data-ttu-id="51a4f-134">程序傳回值</span><span class="sxs-lookup"><span data-stu-id="51a4f-134">Procedure return value</span></span>|<span data-ttu-id="51a4f-135">在 [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)或 [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)中</span><span class="sxs-lookup"><span data-stu-id="51a4f-135">In a [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md) or [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)</span></span><br /><br /> <span data-ttu-id="51a4f-136">`Function convert(ByVal b As Byte)`   `As String`</span><span class="sxs-lookup"><span data-stu-id="51a4f-136">`Function convert(ByVal b As Byte)`   `As String`</span></span>|  
   
- 如需 Visual Basic 資料類型清單，請參閱[資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+ <span data-ttu-id="51a4f-137">如需 Visual Basic 資料類型清單，請參閱[資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。</span><span class="sxs-lookup"><span data-stu-id="51a4f-137">For a list of Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [元組](tuples.md)     
- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [有效率地使用資料類型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="51a4f-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51a4f-138">See Also</span></span>  
+ [<span data-ttu-id="51a4f-139">類型字元</span><span class="sxs-lookup"><span data-stu-id="51a4f-139">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="51a4f-140">基礎資料類型</span><span class="sxs-lookup"><span data-stu-id="51a4f-140">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="51a4f-141">複合資料類型</span><span class="sxs-lookup"><span data-stu-id="51a4f-141">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="51a4f-142">Visual Basic 中的泛型型別</span><span class="sxs-lookup"><span data-stu-id="51a4f-142">Generic Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="51a4f-143">值類型和參考類型</span><span class="sxs-lookup"><span data-stu-id="51a4f-143">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="51a4f-144">在 Visual Basic 中的型別轉換</span><span class="sxs-lookup"><span data-stu-id="51a4f-144">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="51a4f-145">結構</span><span class="sxs-lookup"><span data-stu-id="51a4f-145">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ <span data-ttu-id="51a4f-146">[元組](tuples.md)   </span><span class="sxs-lookup"><span data-stu-id="51a4f-146">[Tuples](tuples.md)   </span></span>  
+ [<span data-ttu-id="51a4f-147">資料類型的疑難排解</span><span class="sxs-lookup"><span data-stu-id="51a4f-147">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="51a4f-148">資料類型</span><span class="sxs-lookup"><span data-stu-id="51a4f-148">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="51a4f-149">有效率地使用資料類型</span><span class="sxs-lookup"><span data-stu-id="51a4f-149">Efficient Use of Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

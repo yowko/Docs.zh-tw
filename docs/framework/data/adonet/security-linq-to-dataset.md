@@ -1,33 +1,36 @@
 ---
-title: "安全性 (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安全性 (LINQ to DataSet)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c0c919bb5be12005850b81059fc641f6f25b06bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 安全性 (LINQ to DataSet)
-本主題討論 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中的安全性問題。  
+# <a name="security-linq-to-dataset"></a><span data-ttu-id="5a4f2-102">安全性 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="5a4f2-102">Security (LINQ to DataSet)</span></span>
+<span data-ttu-id="5a4f2-103">本主題討論 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中的安全性問題。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-103">This topic discusses security issues in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
   
-## 將查詢傳遞到不受信任的元件  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢可以在程式的一個位置編寫，並在另一個位置執行。  在編寫查詢的位置，查詢可以參考顯示在該位置的任何項目，例如，呼叫方法所屬類別的私用成員，或代表區域變數\/引數的符號。  在執行時間，即使呼叫程式碼沒有顯示出來，此查詢還是可以有效地存取查詢在編寫時參考的成員。  執行查詢的程式碼沒有任意增加的可見性，因為它無法選擇要存取的成員。  它將可以精確地存取查詢所存取的成員，而且僅透過查詢本身進行存取。  
+## <a name="passing-a-query-to-an-untrusted-component"></a><span data-ttu-id="5a4f2-104">將查詢傳遞到不受信任的元件</span><span class="sxs-lookup"><span data-stu-id="5a4f2-104">Passing a Query to an Untrusted Component</span></span>  
+ <span data-ttu-id="5a4f2-105">A[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢可以在程式的一個點位置編寫，並在另一個執行。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-105">A [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query can be formulated in one point of a program and executed in a different one.</span></span> <span data-ttu-id="5a4f2-106">在編寫查詢的位置，查詢可以參考顯示在該位置的任何項目，例如，呼叫方法所屬類別的私用成員，或代表區域變數/引數的符號。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-106">At the point where the query is formulated, the query can reference any element that is visible at that point, such as private members of the class that the calling method belongs to, or symbols representing local variables/arguments.</span></span> <span data-ttu-id="5a4f2-107">在執行時間，即使呼叫程式碼沒有顯示出來，此查詢還是可以有效地存取查詢在編寫時參考的成員。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-107">At execution time, the query will effectively be able to access those members that were referenced by the query at formulation, even if the calling code does not have visibility into them.</span></span> <span data-ttu-id="5a4f2-108">執行查詢的程式碼沒有任意增加的可見性，因為它無法選擇要存取的成員。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-108">The code that executes the query does not have arbitrary added visibility, in that it cannot choose what to access.</span></span> <span data-ttu-id="5a4f2-109">它將可以精確地存取查詢所存取的成員，而且僅透過查詢本身進行存取。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-109">It will be able to access strictly what the query accesses, and only through the query itself.</span></span>  
   
- 這暗示：藉由將查詢的參考傳遞到程式碼的其他片段，收到查詢的元件就會受到信任，可以存取該查詢所參考的所有公用和私用成員。  一般而言，除非已經仔細建構查詢，讓該查詢不會暴露應該保密的資訊，否則，不應將 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢傳遞到不受信任的元件。  
+ <span data-ttu-id="5a4f2-110">這暗示：藉由將查詢的參考傳遞到程式碼的其他片段，收到查詢的元件就會受到信任，可以存取該查詢所參考的所有公用和私用成員。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-110">This implies that by passing a reference to a query to another piece of code the component receiving the query is being trusted with access to all public and private members that the query refers to.</span></span> <span data-ttu-id="5a4f2-111">一般情況下，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢不會傳遞至不受信任的元件，除非查詢已經仔細建構，因此不會暴露應該保密的資訊。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-111">In general, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] queries should not be passed to untrusted components, unless the query has been carefully constructed so that it does not expose information that should be kept private.</span></span>  
   
-## 外部輸入  
- 應用程式通常採用外部輸入 \(從使用者或其他外部代理程式\)，並根據該輸入執行動作。  若是 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]，應用程式可能會根據外部輸入，或使用查詢中的外部輸入，以特定的方式建構查詢。[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢會接受所有接受常值之處的參數。  應用程式開發人員應該使用參數化的查詢，而非將常值從外部代理程式直接插入到查詢中。  
+## <a name="external-input"></a><span data-ttu-id="5a4f2-112">外部輸入</span><span class="sxs-lookup"><span data-stu-id="5a4f2-112">External Input</span></span>  
+ <span data-ttu-id="5a4f2-113">應用程式通常採用外部輸入 (從使用者或其他外部代理程式)，並根據該輸入執行動作。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-113">Applications often take external input (from a user or another external agent) and perform actions based on that input.</span></span>  <span data-ttu-id="5a4f2-114">如果是[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]，應用程式可能會建構以特定方式，根據外部輸入或使用外部查詢中輸入查詢。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-114">In the case of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], the application might construct a query in a certain way, based on external input or use external input in the query.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="5a4f2-115"> 查詢會在可接受常值 (Literal) 的任何位置接受參數。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-115"> queries accept parameters everywhere that literals are accepted.</span></span> <span data-ttu-id="5a4f2-116">應用程式開發人員應該使用參數化的查詢，而非將常值從外部代理程式直接插入到查詢中。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-116">Application developers should use parameterized queries, rather than injecting literals from an external agent directly into the query.</span></span>  
   
- 從使用者或外部代理程式直接或間接衍生的任何輸入都可能具備運用目標語言之語法的內容，藉以執行未經授權的動作。  這是所謂的 SQL 插入式攻擊，這是以目標語言為 Transact\-SQL 的攻擊模式來命名的。  直接插入到查詢的使用者輸入用於卸除資料庫資料表、造成阻絕服務，或變更要執行之作業的本質。  雖然查詢撰寫可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中進行，但是查詢會透過物件模型 API 執行。使用字串操作或串連不會建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢，因為這些查詢在 Transact\-SQL 中，而且在傳統意義上，不容易受到 SQL 插入式攻擊。  
+ <span data-ttu-id="5a4f2-117">從使用者或外部代理程式直接或間接衍生的任何輸入都可能具備運用目標語言之語法的內容，藉以執行未經授權的動作。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-117">Any input directly or indirectly derived from the user or an external agent might have content that leverages the syntax of the target language in order to perform unauthorized actions.</span></span> <span data-ttu-id="5a4f2-118">這是所謂的 SQL 插入式攻擊，這是以目標語言為 Transact-SQL 的攻擊模式來命名的。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-118">This is known as a SQL injection attack, named after an attack pattern where the target language is Transact-SQL.</span></span> <span data-ttu-id="5a4f2-119">直接插入到查詢的使用者輸入用於卸除資料庫資料表、造成阻絕服務，或變更要執行之作業的本質。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-119">User input injected directly into the query is used to drop a database table, cause a denial of service, or otherwise change the nature of the operation being performed.</span></span> <span data-ttu-id="5a4f2-120">雖然可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中撰寫查詢，不過這項作業實際上是透過物件模型 API 執行的。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-120">Although query composition is possible in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], it is performed through the object model API.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="5a4f2-121">查詢不是由在 TRANSACT-SQL 中並不容易受到 SQL 插入式攻擊，在傳統意義上，使用字串操作或串連組成。</span><span class="sxs-lookup"><span data-stu-id="5a4f2-121"> queries are not composed by using string manipulation or concatenation, as they are in Transact-SQL, and are not susceptible to SQL injection attacks in the traditional sense.</span></span>  
   
-## 請參閱  
- [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="5a4f2-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5a4f2-122">See Also</span></span>  
+ [<span data-ttu-id="5a4f2-123">程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="5a4f2-123">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

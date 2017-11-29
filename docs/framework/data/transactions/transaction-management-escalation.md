@@ -1,43 +1,47 @@
 ---
-title: "交易管理擴大規模案例  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "交易管理擴大規模"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0ac45390d78f4fbce15c8910fcdcc95713c5898a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 交易管理擴大規模案例 
-Windows 會裝載一組服務與模組，用以構成交易管理員。交易管理員擴大規模說明了將交易從某個交易管理員的元件移轉到另一個元件上的處理序。  
+# <a name="transaction-management-escalation"></a><span data-ttu-id="67c2e-102">交易管理擴大規模</span><span class="sxs-lookup"><span data-stu-id="67c2e-102">Transaction Management Escalation</span></span>
+<span data-ttu-id="67c2e-103">Windows 會裝載一組服務與模組，用以構成交易管理員。</span><span class="sxs-lookup"><span data-stu-id="67c2e-103">Windows hosts a set of services and modules that together constitute a transaction manager.</span></span> <span data-ttu-id="67c2e-104">交易管理員擴大規模說明了將交易從某個交易管理員的元件移轉到另一個元件上的處理序。</span><span class="sxs-lookup"><span data-stu-id="67c2e-104">Transaction management escalation describes the process of migrating a transaction from one of the transaction manager's components to another.</span></span>  
   
- <xref:System.Transactions> 包含一個交易管理員元件，用以協調涉入最深的交易、一個永久性資源，或是多個變動性資源。由於交易管理員只使用應用程式內部的網域呼叫，因此可得到最佳效能。開發人員不需要直接與交易管理員互動。反之，<xref:System.Transactions> 命名空間會提供用來定義介面、泛型行為，與 Helper 類別的泛型基礎結構。  
+ <span data-ttu-id="67c2e-105"><xref:System.Transactions> 包含一個交易管理員元件，用以協調涉入最深的交易、一個永久性資源，或是多個變動性資源。</span><span class="sxs-lookup"><span data-stu-id="67c2e-105"><xref:System.Transactions> includes a transaction manager component that coordinates a transaction involving at most, a single durable resource or multiple volatile resources.</span></span> <span data-ttu-id="67c2e-106">由於交易管理員只使用應用程式內部的網域呼叫，因此可得到最佳效能。</span><span class="sxs-lookup"><span data-stu-id="67c2e-106">Because the transaction manager uses only intra-application domain calls, it yields the best performance.</span></span> <span data-ttu-id="67c2e-107">開發人員不需要直接與交易管理員互動。</span><span class="sxs-lookup"><span data-stu-id="67c2e-107">Developers need not interact with the transaction manager directly.</span></span> <span data-ttu-id="67c2e-108">反之，<xref:System.Transactions> 命名空間會提供用來定義介面、泛型行為，與 Helper 類別的泛型基礎結構。</span><span class="sxs-lookup"><span data-stu-id="67c2e-108">Instead, a common infrastructure that defines interfaces, common behavior, and helper classes is provided by the <xref:System.Transactions> namespace.</span></span>  
   
- 當您想要將交易提供給位於同一部電腦上另一個應用程式定義域 \(包含跨處理序與電腦界限\) 中的另一個物件時，<xref:System.Transactions> 基礎結構會自動擴大由 Microsoft 分散式交易協調器 \(MSDTC\) 所管理的交易規模。如果您登記了另一項永久性資源管理員，也會發生擴大規模的情況。規模一旦擴大，交易在完成之前會一直維持在提升狀態下。  
+ <span data-ttu-id="67c2e-109">當您想要在相同的電腦上提供物件 （包括跨處理序與電腦界限） 的另一個應用程式定義域中的交易<xref:System.Transactions>基礎結構自動呈報由 Microsoft 管理交易分散式的交易協調器 (MSDTC)。</span><span class="sxs-lookup"><span data-stu-id="67c2e-109">When you want to provide the transaction to an object in another application domain (including across process and machine boundaries) on the same computer, the <xref:System.Transactions> infrastructure automatically escalates the transaction to be managed by the Microsoft Distributed Transaction Coordinator (MSDTC).</span></span> <span data-ttu-id="67c2e-110">如果您登記了另一項永久性資源管理員，也會發生擴大規模的情況。</span><span class="sxs-lookup"><span data-stu-id="67c2e-110">The escalation also occurs if you enlist another durable resource manager.</span></span> <span data-ttu-id="67c2e-111">規模一旦擴大，交易在完成之前會一直維持在提升狀態下。</span><span class="sxs-lookup"><span data-stu-id="67c2e-111">When escalated, the transaction remains managed in its elevated state until its completion.</span></span>  
   
- 在 <xref:System.Transactions> 交易與 MSDTC 交易之間，有一種透過可提升單一階段登記 \(PSPE\) 提供的中繼交易型別。PSPE 是 <xref:System.Transactions> 用來最佳化效能的另一種重要機制。它能允許位於不同應用程式定義域、處理序或電腦上的遠端永久性茲原參與 <xref:System.Transactions> 交易，而不會擴大到 MSDTC 交易規模。如需 PSPE 的詳細資訊，請參閱[將資源登記成為交易中的參與者 ](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)。  
+ <span data-ttu-id="67c2e-112">在 <xref:System.Transactions> 交易與 MSDTC 交易之間，有一種透過可提升單一階段登記 (PSPE) 提供的中繼交易型別。</span><span class="sxs-lookup"><span data-stu-id="67c2e-112">Between the <xref:System.Transactions> transaction and MSDTC transaction, there is an intermediary type of transaction that is made available through the Promotable Single Phase Enlistment (PSPE).</span></span> <span data-ttu-id="67c2e-113">PSPE 是 <xref:System.Transactions> 用來最佳化效能的另一種重要機制。</span><span class="sxs-lookup"><span data-stu-id="67c2e-113">PSPE is another important mechanism in <xref:System.Transactions> for performance optimization.</span></span> <span data-ttu-id="67c2e-114">它能允許位於不同應用程式定義域、處理序或電腦上的遠端永久性茲原參與 <xref:System.Transactions> 交易，而不會擴大到 MSDTC 交易規模。</span><span class="sxs-lookup"><span data-stu-id="67c2e-114">It allows a remote durable resource, located in a different application domain, process or computer, to participate in a <xref:System.Transactions> transaction without causing it to be escalated to an MSDTC transaction.</span></span> <span data-ttu-id="67c2e-115">如需 pspe 而的詳細資訊，請參閱[編列的資源，以在交易中的參與者身分](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)。</span><span class="sxs-lookup"><span data-stu-id="67c2e-115">For more information about PSPE, see [Enlisting Resources as Participants in a Transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md).</span></span>  
   
-## 擴大規模的啟始方式  
- 交易擴大規模會因為 MSDTC 駐留在不同的處理序中而降低效能，並在訊息於處理序之間傳遞時，將交易規模擴大到 MSDTC 結果。為了提升效能，您應該延後或避免擴大到 MSDTC 的規模；如此一來，您便需要了解擴大規則的啟始方式與時機。  
+## <a name="how-escalation-is-initiated"></a><span data-ttu-id="67c2e-116">擴大規模的啟始方式</span><span class="sxs-lookup"><span data-stu-id="67c2e-116">How Escalation is Initiated</span></span>  
+ <span data-ttu-id="67c2e-117">交易擴大規模會因為 MSDTC 駐留在不同的處理序中而降低效能，並在訊息於處理序之間傳遞時，將交易規模擴大到 MSDTC 結果。</span><span class="sxs-lookup"><span data-stu-id="67c2e-117">Transaction escalation reduces performance because the MSDTC resides in a separate process, and escalating a transaction to the MSDTC results in messages being sent across process.</span></span> <span data-ttu-id="67c2e-118">若要改善效能，您應該延遲或避免擴大至 MSDTC;因此，您需要知道如何及何時要起始擴大。</span><span class="sxs-lookup"><span data-stu-id="67c2e-118">To improve performance, you should delay or avoid escalation to MSDTC; thus, you need to know how and when the escalation is initiated.</span></span>  
   
- 只要 <xref:System.Transactions> 基礎結構持續處理變動性資源與最多一個永久性資源以支援單一階段告知，<xref:System.Transactions> 基礎結構就會持續保有交易。交易管理員只會提供自己駐留在相同應用程式定義域中，且不需要記錄 \(將交易結果寫入磁碟\) 的資源。在下列情況下，如果 <xref:System.Transactions> 基礎結構將交易的擁有權轉移給 MSDTC，將導致擴大規模：  
+ <span data-ttu-id="67c2e-119">只要 <xref:System.Transactions> 基礎結構持續處理變動性資源與最多一個永久性資源以支援單一階段告知，<xref:System.Transactions> 基礎結構就會持續保有交易。</span><span class="sxs-lookup"><span data-stu-id="67c2e-119">As long as the <xref:System.Transactions> infrastructure handles volatile resources and at most one durable resource that supports single-phase notifications, the transaction remains in the ownership of the <xref:System.Transactions> infrastructure.</span></span> <span data-ttu-id="67c2e-120">交易管理員只會提供自己駐留在相同應用程式定義域中，且不需要記錄 (將交易結果寫入磁碟) 的資源。</span><span class="sxs-lookup"><span data-stu-id="67c2e-120">The transaction manager avails itself only to those resources that live in the same application domain and for which logging (writing the transaction outcome to disk) is not required.</span></span> <span data-ttu-id="67c2e-121">在下列情況下，如果 <xref:System.Transactions> 基礎結構將交易的擁有權轉移給 MSDTC，將導致擴大規模：</span><span class="sxs-lookup"><span data-stu-id="67c2e-121">An escalation that results in the <xref:System.Transactions> infrastructure transferring the ownership of the transaction to MSDTC happens when:</span></span>  
   
--   交易中至少會登記一個不支援單一階段告知的永久性資源。  
+-   <span data-ttu-id="67c2e-122">交易中至少會登記一個不支援單一階段告知的永久性資源。</span><span class="sxs-lookup"><span data-stu-id="67c2e-122">At least one durable resource that does not support single-phase notifications is enlisted in the transaction.</span></span>  
   
--   交易中至少會登記兩個支援單一階段告知的永久性資源。例如，登記一個包含 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 的單一連線不會導致交易升級情況。然而，每當您開啟第二個 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 資料庫連線並導致資料庫登記，則 <xref:System.Transactions> 基礎結構會偵測到它是交易中的第二個永久性資源，並將其規模擴大到 MSDTC 交易。  
+-   <span data-ttu-id="67c2e-123">交易中至少會登記兩個支援單一階段告知的永久性資源。</span><span class="sxs-lookup"><span data-stu-id="67c2e-123">At least two durable resources that support single-phase notifications are enlisted in the transaction.</span></span> <span data-ttu-id="67c2e-124">例如，登記一個包含 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 的單一連線不會導致交易升級情況。</span><span class="sxs-lookup"><span data-stu-id="67c2e-124">For example, enlisting a single connection with [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] does not cause a transaction to be promoted.</span></span> <span data-ttu-id="67c2e-125">然而，每當您開啟第二個 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 資料庫連線並導致資料庫登記，則 <xref:System.Transactions> 基礎結構會偵測到它是交易中的第二個永久性資源，並將其規模擴大到 MSDTC 交易。</span><span class="sxs-lookup"><span data-stu-id="67c2e-125">However, whenever you open a second connection to a [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] database causing the database to enlist, the <xref:System.Transactions> infrastructure detects that it is the second durable resource in the transaction, and escalates it to an MSDTC transaction.</span></span>  
   
--   這時會叫用將交易「封送處理」到不同的應用程式定義域或不同的處理序的要求。例如，跨應用程式定義域界限的交易物件序列化。交易物件是由數值所封送處理，代表任何嘗試跨應用程式定義域界限將其傳送出去的動作 \(即使處於相同的處理序中\) 將導致交易物件的序列化。您可以在使用 <xref:System.Transactions.Transaction> 做為參數的遠端方法上進行呼叫，或是嘗試存取遠端交易服務型元件，來傳送交易物件。這項作業會序列化交易物件並導致規模擴大，如同當交易已經跨應用程式定義域序列化一樣。接著此物件會被分配出去，這時本機交易管理員就不會有足夠的物件。  
+-   <span data-ttu-id="67c2e-126">這時會叫用將交易「封送處理」到不同的應用程式定義域或不同的處理序的要求。</span><span class="sxs-lookup"><span data-stu-id="67c2e-126">A request to "marshal" the transaction to a different application domain or different process is invoked.</span></span> <span data-ttu-id="67c2e-127">例如，跨應用程式定義域界限的交易物件序列化。</span><span class="sxs-lookup"><span data-stu-id="67c2e-127">For example, the serialization of the transaction object across an application domain boundary.</span></span> <span data-ttu-id="67c2e-128">交易物件是由數值所封送處理，代表任何嘗試跨應用程式定義域界限將其傳送出去的動作 (即使處於相同的處理序中) 將導致交易物件的序列化。</span><span class="sxs-lookup"><span data-stu-id="67c2e-128">The transaction object is marshaled-by-value, meaning that any attempt to pass it across an application domain boundary (even in the same process) results in serialization of the transaction object.</span></span> <span data-ttu-id="67c2e-129">您可以在使用 <xref:System.Transactions.Transaction> 做為參數的遠端方法上進行呼叫，或是嘗試存取遠端交易服務型元件，來傳送交易物件。</span><span class="sxs-lookup"><span data-stu-id="67c2e-129">You can pass the transaction objects by making a call on a remote method that takes a <xref:System.Transactions.Transaction> as a parameter or you can try to access a remote transactional-serviced component.</span></span> <span data-ttu-id="67c2e-130">這項作業會序列化交易物件並導致規模擴大，如同當交易已經跨應用程式定義域序列化一樣。</span><span class="sxs-lookup"><span data-stu-id="67c2e-130">This serializes the transaction object and results in an escalation, as when a transaction is serialized across an application domain.</span></span> <span data-ttu-id="67c2e-131">接著此物件會被分配出去，這時本機交易管理員就不會有足夠的物件。</span><span class="sxs-lookup"><span data-stu-id="67c2e-131">It is being distributed and the local transaction manager is no longer adequate.</span></span>  
   
- 下表列出在擴大規模期間可擲回的所有可能例外狀況。  
+ <span data-ttu-id="67c2e-132">下表列出在擴大規模期間可擲回的所有可能例外狀況。</span><span class="sxs-lookup"><span data-stu-id="67c2e-132">The following table lists all the possible exceptions that can be thrown during escalation.</span></span>  
   
-|例外狀況類型|狀況|  
-|------------|--------|  
-|<xref:System.InvalidOperationException>|使用相當於 <xref:System.Transactions.IsolationLevel> 的隔離等級來擴大交易規模的嘗試。|  
-|<xref:System.Transactions.TransactionAbortedException>|交易管理員已關閉。|  
-|<xref:System.Transactions.TransactionException>|擴大規模會失敗並中止應用程式。|
+|<span data-ttu-id="67c2e-133">例外狀況類型</span><span class="sxs-lookup"><span data-stu-id="67c2e-133">Exception type</span></span>|<span data-ttu-id="67c2e-134">條件</span><span class="sxs-lookup"><span data-stu-id="67c2e-134">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<span data-ttu-id="67c2e-135">使用相當於 <xref:System.Transactions.IsolationLevel.Snapshot> 的隔離等級來擴大交易規模的嘗試。</span><span class="sxs-lookup"><span data-stu-id="67c2e-135">An attempt to escalate a transaction with isolation level equal to <xref:System.Transactions.IsolationLevel.Snapshot>.</span></span>|  
+|<xref:System.Transactions.TransactionAbortedException>|<span data-ttu-id="67c2e-136">交易管理員已關閉。</span><span class="sxs-lookup"><span data-stu-id="67c2e-136">The transaction manager is down.</span></span>|  
+|<xref:System.Transactions.TransactionException>|<span data-ttu-id="67c2e-137">擴大規模會失敗並中止應用程式。</span><span class="sxs-lookup"><span data-stu-id="67c2e-137">The escalation fails and the application is aborted.</span></span>|

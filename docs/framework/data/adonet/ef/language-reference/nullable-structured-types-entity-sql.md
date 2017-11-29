@@ -1,88 +1,87 @@
 ---
-title: "可為 Null 的結構類型 (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "可為 Null 的結構類型 (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ac7405aea459d51154ac25171bc76d637a94bf81
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 可為 Null 的結構類型 (Entity SQL)
-結構化型別的 `null` 執行個體是不存在的執行個體。  這與現有的執行個體 \(所有的屬性都有 `null` 值\) 不同。  
+# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="050e6-102">可為 Null 的結構類型 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="050e6-102">Nullable Structured Types (Entity SQL)</span></span>
+<span data-ttu-id="050e6-103">結構化型別的 `null` 執行個體是不存在的執行個體。</span><span class="sxs-lookup"><span data-stu-id="050e6-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="050e6-104">這與現有的執行個體 (所有的屬性都有 `null` 值) 不同。</span><span class="sxs-lookup"><span data-stu-id="050e6-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
   
- 本主題描述可為 Null 的結構化型別，其中包括哪些型別可為 Null，以及哪些程式碼模式會產生可為 Null 之結構化型別的 `null` 執行個體。  
+ <span data-ttu-id="050e6-105">本主題描述可為 Null 的結構化型別，其中包括哪些型別可為 Null，以及哪些程式碼模式會產生可為 Null 之結構化型別的 `null` 執行個體。</span><span class="sxs-lookup"><span data-stu-id="050e6-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
   
-## 可為 Null 的結構化型別種類  
- 可為 Null 的結構化型別有三種：  
+## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="050e6-106">可為 Null 的結構化型別種類</span><span class="sxs-lookup"><span data-stu-id="050e6-106">Kinds of Nullable Structured Types</span></span>  
+ <span data-ttu-id="050e6-107">可為 Null 的結構化型別有三種：</span><span class="sxs-lookup"><span data-stu-id="050e6-107">There are three kinds of nullable structure types:</span></span>  
   
--   資料列型別。  
+-   <span data-ttu-id="050e6-108">資料列型別。</span><span class="sxs-lookup"><span data-stu-id="050e6-108">Row types.</span></span>  
   
--   複雜類型。  
+-   <span data-ttu-id="050e6-109">複雜類型。</span><span class="sxs-lookup"><span data-stu-id="050e6-109">Complex types.</span></span>  
   
--   實體類型。  
+-   <span data-ttu-id="050e6-110">實體類型。</span><span class="sxs-lookup"><span data-stu-id="050e6-110">Entity types.</span></span>  
   
-## 產生結構化型別之 Null 執行個體的程式碼模式  
- 下列案例會產生 `null` 執行個體：  
+## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="050e6-111">產生結構化型別之 Null 執行個體的程式碼模式</span><span class="sxs-lookup"><span data-stu-id="050e6-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
+ <span data-ttu-id="050e6-112">下列案例會產生 `null` 執行個體：</span><span class="sxs-lookup"><span data-stu-id="050e6-112">The following scenarios produce `null` instances:</span></span>  
   
--   將 `null` 定形為結構化型別：  
+-   <span data-ttu-id="050e6-113">將 `null` 定形為結構化型別：</span><span class="sxs-lookup"><span data-stu-id="050e6-113">Shaping `null` as a structured type:</span></span>  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   將基底型別向上轉型成衍生型別：  
+-   <span data-ttu-id="050e6-114">將基底型別向上轉型成衍生型別：</span><span class="sxs-lookup"><span data-stu-id="050e6-114">Upcasting of a base type to a derived type:</span></span>  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   false 條件上的外部聯結 \(Outer Join\)：  
+-   <span data-ttu-id="050e6-115">false 條件上的外部聯結 (Outer Join)：</span><span class="sxs-lookup"><span data-stu-id="050e6-115">Outer join on false condition:</span></span>  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     \-\-或  
+     <span data-ttu-id="050e6-116">--或</span><span class="sxs-lookup"><span data-stu-id="050e6-116">--or</span></span>  
   
     ```  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     \-\-或  
+     <span data-ttu-id="050e6-117">--或</span><span class="sxs-lookup"><span data-stu-id="050e6-117">--or</span></span>  
   
     ```  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
--   為 `null` 參考取值：  
+-   <span data-ttu-id="050e6-118">為 `null` 參考取值：</span><span class="sxs-lookup"><span data-stu-id="050e6-118">Dereferencing a `null` reference:</span></span>  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   從空的集合中取得 ANYELEMENT：  
+-   <span data-ttu-id="050e6-119">從空的集合中取得 ANYELEMENT：</span><span class="sxs-lookup"><span data-stu-id="050e6-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   檢查是否有結構化型別的 `null` 執行個體：  
+-   <span data-ttu-id="050e6-120">檢查是否有結構化型別的 `null` 執行個體：</span><span class="sxs-lookup"><span data-stu-id="050e6-120">Checking for `null` instances of structured types:</span></span>  
   
     ```csharp  
     ...  
@@ -90,7 +89,7 @@ caps.handback.revision: 2
     {  
         if (reader.IsDBNull(i))  
         {  
-            Console.WriteLine(“[NULL]”);  
+            Console.WriteLine("[NULL]");  
         }  
         else  
         {  
@@ -99,5 +98,5 @@ caps.handback.revision: 2
     }  
     ```  
   
-## 請參閱  
- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="050e6-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="050e6-121">See Also</span></span>  
+ [<span data-ttu-id="050e6-122">Entity SQL 概觀</span><span class="sxs-lookup"><span data-stu-id="050e6-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

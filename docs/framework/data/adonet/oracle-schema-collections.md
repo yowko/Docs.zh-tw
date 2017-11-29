@@ -1,390 +1,393 @@
 ---
-title: "Oracle 結構描述集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle 結構描述集合"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 828e5ae0a9db2542debf8e09e5d8875fcea0ba23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Oracle 結構描述集合
-除通用結構描述集合之外，Microsoft .NET Framework Data Provider for Oracle 還支援下列特定的結構描述集合：  
+# <a name="oracle-schema-collections"></a><span data-ttu-id="f6d50-102">Oracle 結構描述集合</span><span class="sxs-lookup"><span data-stu-id="f6d50-102">Oracle Schema Collections</span></span>
+<span data-ttu-id="f6d50-103">除通用結構描述集合之外，Microsoft .NET Framework Data Provider for Oracle 還支援下列特定的結構描述集合：</span><span class="sxs-lookup"><span data-stu-id="f6d50-103">The Microsoft .NET Framework Data Provider for Oracle supports the following specific schema collections in addition to the common schema collections:</span></span>  
   
--   資料行  
+-   <span data-ttu-id="f6d50-104">資料行</span><span class="sxs-lookup"><span data-stu-id="f6d50-104">Columns</span></span>  
   
--   Indexes  
+-   <span data-ttu-id="f6d50-105">Indexes</span><span class="sxs-lookup"><span data-stu-id="f6d50-105">Indexes</span></span>  
   
--   IndexColumns  
+-   <span data-ttu-id="f6d50-106">IndexColumns</span><span class="sxs-lookup"><span data-stu-id="f6d50-106">IndexColumns</span></span>  
   
--   程序  
+-   <span data-ttu-id="f6d50-107">程序</span><span class="sxs-lookup"><span data-stu-id="f6d50-107">Procedures</span></span>  
   
--   序列  
+-   <span data-ttu-id="f6d50-108">序列</span><span class="sxs-lookup"><span data-stu-id="f6d50-108">Sequences</span></span>  
   
--   Synonyms  
+-   <span data-ttu-id="f6d50-109">Synonyms</span><span class="sxs-lookup"><span data-stu-id="f6d50-109">Synonyms</span></span>  
   
--   資料表  
+-   <span data-ttu-id="f6d50-110">資料表</span><span class="sxs-lookup"><span data-stu-id="f6d50-110">Tables</span></span>  
   
--   使用者  
+-   <span data-ttu-id="f6d50-111">使用者</span><span class="sxs-lookup"><span data-stu-id="f6d50-111">Users</span></span>  
   
--   檢視  
+-   <span data-ttu-id="f6d50-112">檢視</span><span class="sxs-lookup"><span data-stu-id="f6d50-112">Views</span></span>  
   
--   函式  
+-   <span data-ttu-id="f6d50-113">函式</span><span class="sxs-lookup"><span data-stu-id="f6d50-113">Functions</span></span>  
   
--   封裝  
+-   <span data-ttu-id="f6d50-114">封裝</span><span class="sxs-lookup"><span data-stu-id="f6d50-114">Packages</span></span>  
   
--   PackageBodies  
+-   <span data-ttu-id="f6d50-115">PackageBodies</span><span class="sxs-lookup"><span data-stu-id="f6d50-115">PackageBodies</span></span>  
   
--   引數  
+-   <span data-ttu-id="f6d50-116">引數</span><span class="sxs-lookup"><span data-stu-id="f6d50-116">Arguments</span></span>  
   
--   UniqueKeys  
+-   <span data-ttu-id="f6d50-117">UniqueKeys</span><span class="sxs-lookup"><span data-stu-id="f6d50-117">UniqueKeys</span></span>  
   
--   PrimaryKeys  
+-   <span data-ttu-id="f6d50-118">PrimaryKeys</span><span class="sxs-lookup"><span data-stu-id="f6d50-118">PrimaryKeys</span></span>  
   
--   ForeignKeys  
+-   <span data-ttu-id="f6d50-119">ForeignKeys</span><span class="sxs-lookup"><span data-stu-id="f6d50-119">ForeignKeys</span></span>  
   
--   ForeignKeyColumns  
+-   <span data-ttu-id="f6d50-120">ForeignKeyColumns</span><span class="sxs-lookup"><span data-stu-id="f6d50-120">ForeignKeyColumns</span></span>  
   
--   ProcedureParameters  
+-   <span data-ttu-id="f6d50-121">ProcedureParameters</span><span class="sxs-lookup"><span data-stu-id="f6d50-121">ProcedureParameters</span></span>  
   
-## 資料行  
+## <a name="columns"></a><span data-ttu-id="f6d50-122">資料行</span><span class="sxs-lookup"><span data-stu-id="f6d50-122">Columns</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|資料表、檢視表或叢集的擁有人。|  
-|TABLE\_NAME|String|資料表、檢視表或叢集名稱。|  
-|COLUMN\_NAME|String|資料行名稱。|  
-|ID|Decimal|所建立之資料行的序號。|  
-|資料型別|String|資料行的資料型別。|  
-|LENGTH|Decimal|資料行的長度 \(以位元組為單位\)。|  
-|PRECISION|Decimal|若為 NUMBER 資料型別，則是十進位精確度；若為 FLOAT 資料型別，則是二進位精確度；若為所有其他資料型別，則是 NULL。|  
-|SCALE|Decimal|數字中小數點右邊的位數。|  
-|NULLABLE|String|指定資料行是否允許 NULL。  若資料行沒有 NOT UNLL 條件約束，或者資料行是 PRIMARY KEY 的一部分，則此值為 N。|  
+|<span data-ttu-id="f6d50-123">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-123">ColumnName</span></span>|<span data-ttu-id="f6d50-124">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-124">DataType</span></span>|<span data-ttu-id="f6d50-125">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-125">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-126">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-126">OWNER</span></span>|<span data-ttu-id="f6d50-127">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-127">String</span></span>|<span data-ttu-id="f6d50-128">資料表、檢視表或叢集的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-128">Owner of the table, view or cluster.</span></span>|  
+|<span data-ttu-id="f6d50-129">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-129">TABLE_NAME</span></span>|<span data-ttu-id="f6d50-130">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-130">String</span></span>|<span data-ttu-id="f6d50-131">資料表、檢視表或叢集名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-131">Table, view, or cluster name.</span></span>|  
+|<span data-ttu-id="f6d50-132">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-132">COLUMN_NAME</span></span>|<span data-ttu-id="f6d50-133">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-133">String</span></span>|<span data-ttu-id="f6d50-134">資料行名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-134">Column name.</span></span>|  
+|<span data-ttu-id="f6d50-135">ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-135">ID</span></span>|<span data-ttu-id="f6d50-136">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-136">Decimal</span></span>|<span data-ttu-id="f6d50-137">所建立之資料行的序號。</span><span class="sxs-lookup"><span data-stu-id="f6d50-137">Sequence number of the column as created.</span></span>|  
+|<span data-ttu-id="f6d50-138">資料型別</span><span class="sxs-lookup"><span data-stu-id="f6d50-138">DATATYPE</span></span>|<span data-ttu-id="f6d50-139">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-139">String</span></span>|<span data-ttu-id="f6d50-140">資料行的資料型別。</span><span class="sxs-lookup"><span data-stu-id="f6d50-140">Datatype of the column.</span></span>|  
+|<span data-ttu-id="f6d50-141">LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-141">LENGTH</span></span>|<span data-ttu-id="f6d50-142">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-142">Decimal</span></span>|<span data-ttu-id="f6d50-143">資料行的長度 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-143">Length of the column in bytes.</span></span>|  
+|<span data-ttu-id="f6d50-144">PRECISION</span><span class="sxs-lookup"><span data-stu-id="f6d50-144">PRECISION</span></span>|<span data-ttu-id="f6d50-145">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-145">Decimal</span></span>|<span data-ttu-id="f6d50-146">若為 NUMBER 資料型別，則是十進位精確度；若為 FLOAT 資料型別，則是二進位精確度；若為所有其他資料型別，則是 NULL。</span><span class="sxs-lookup"><span data-stu-id="f6d50-146">Decimal precision for NUMBER datatype; binary precision for FLOAT datatype, null for all other datatypes.</span></span>|  
+|<span data-ttu-id="f6d50-147">SCALE</span><span class="sxs-lookup"><span data-stu-id="f6d50-147">SCALE</span></span>|<span data-ttu-id="f6d50-148">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-148">Decimal</span></span>|<span data-ttu-id="f6d50-149">數字中小數點右邊的位數。</span><span class="sxs-lookup"><span data-stu-id="f6d50-149">Digits to right of decimal point in a number.</span></span>|  
+|<span data-ttu-id="f6d50-150">NULLABLE</span><span class="sxs-lookup"><span data-stu-id="f6d50-150">NULLABLE</span></span>|<span data-ttu-id="f6d50-151">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-151">String</span></span>|<span data-ttu-id="f6d50-152">指定資料行是否允許 NULL。</span><span class="sxs-lookup"><span data-stu-id="f6d50-152">Specifies whether a column allows NULLs.</span></span> <span data-ttu-id="f6d50-153">若資料行沒有 NOT UNLL 條件約束，或者資料行是 PRIMARY KEY 的一部分，則此值為 N。</span><span class="sxs-lookup"><span data-stu-id="f6d50-153">Value is N if there is a NOT NULL constraint on the column or if the column is part of a PRIMARY KEY.</span></span>|  
   
-## Indexes  
+## <a name="indexes"></a><span data-ttu-id="f6d50-154">Indexes</span><span class="sxs-lookup"><span data-stu-id="f6d50-154">Indexes</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|索引的擁有人。|  
-|INDEX\_NAME|String|索引名稱。|  
-|INDEX\_TYPE|String|索引的型別 \(NORMAL、BITMAP、FUNCTION\-BASED NORMAL、FUNCTION\-BASED BITMAP 或 DOMAIN\)。|  
-|TABLE\_OWNER|String|索引物件的擁有人。|  
-|TABLE\_NAME|String|索引物件的名稱。|  
-|TABLE\_TYPE|String|索引物件的型別 \(例如，TABLE、CLUSTER\)。|  
-|UNIQUENESS|String|索引是 UNIQUE 還是 NONUNIQUE。|  
-|COMPRESSION|String|索引是 ENABLED 還是 DISABLED。|  
-|PREFIX\_LENGTH|Decimal|壓縮金鑰前置詞中的資料行數目。|  
-|TABLESPACE\_NAME|String|包含索引的表格區名稱。|  
-|INI\_TRANS|Decimal|交易的初始次數。|  
-|MAX\_TRANS|Decimal|交易的最大次數。|  
-|INITIAL\_EXTENT|Decimal|初始範圍的大小。|  
-|NEXT\_EXTENT|Decimal|次要範圍的大小。|  
-|MIN\_EXTENTS|Decimal|區段中允許的範圍最小數目。|  
-|MAX\_EXTENTS|Decimal|區段中允許的範圍最大數目。|  
-|PCT\_INCREASE|Decimal|範圍大小增加百分比。|  
-|PCT\_THRESHOLD|Decimal|每個索引項目所允許之區塊空間的臨界值百分比。|  
-|INCLUDE\_COLUMN|Decimal|要併入依索引進行組織之資料表主索引鍵 \(非溢位\) 索引的最後一個資料行的資料行 ID。  此資料行對應至 \*\_TAB\_COLUMNS 資料字典檢視表的 COLUMN\_ID 資料行。|  
-|FREELISTS|Decimal|配置給此區段的處理序可用清單數目。|  
-|FREELIST\_GROUPS|Decimal|配置給此區段的可用清單群組數目。|  
-|PCT\_FREE|Decimal|區塊中可用空間的最小百分比。|  
-|LOGGING|String|登入資訊。|  
-|BLEVEL|Decimal|B\*\-Tree 層級：從其根區塊至分葉區塊的索引深度。  深度為 0 表示根區塊與分葉區塊相同。|  
-|LEAF\_BLOCKS|Decimal|索引中分葉區塊的數目。|  
-|DISTINCT\_KEYS|Decimal|不同索引值的數目。  對於強制 UNIQUE 條件約束及 PRIMARY KEY 條件約束的索引，此值與資料表中資料列的數目 \(USER\_TABLES.NUM\_ROWS\) 相同。|  
-|AVG\_LEAF\_BLOCKS\_PER\_KEY|Decimal|分葉區塊的平均數目，在這些區塊中索引內每個不同的值都顯示為四捨五入成最接近的整數。  若為強制 UNIQUE 及 PRIMARY KEY 條件約束的索引，此值永遠為 1。|  
-|AVG\_DATA\_BLOCKS\_PER\_KEY|Decimal|資料表中資料區塊的平均數目，索引中四捨五入成最接近之整數的不同值指向這些區塊。  此統計資料是包含資料列 \(包含索引資料行的給定值\) 之資料區塊的平均數目。|  
-|CLUSTERING\_FACTOR|Decimal|根據索引值，指出資料表中資料列順序數。|  
-|狀態|String|非分割索引是 VALID 還是 UNUSABLE。|  
-|NUM\_ROWS|Decimal|索引中資料列的數目。|  
-|SAMPLE\_SIZE|Decimal|用於分析索引的範例大小。|  
-|LAST\_ANALYZED|DateTime|最近分析此索引的日期。|  
-|DEGREE|String|掃描索引之每個執行個體的執行緒數目。|  
-|INSTANCES|String|要在其上掃描索引的執行個體數目。|  
-|PARTITIONED|String|此索引是否已分割 \(YES &#124; NO\)。|  
-|TEMPORARY|String|索引是否在暫存資料表上。|  
-|GENERATED|String|索引的名稱是否是系統產生的 \(Y&#124;N\)。|  
-|SECONDARY|String|索引是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 \(Y&#124;N\)。|  
-|BUFFER\_POOL|String|要用於索引區塊之預設緩衝集區的名稱。|  
-|USER\_STATS|String|統計資料是否為使用者直接輸入的。|  
-|DURATION|String|表示暫存資料表的持續期間：1\) SYS$SESSION：在工作階段持續期間保留資料列，2\) SYS$TRANSACTION：COMMIT 後刪除資料列，3\) 若為永久資料表，則是 Null。|  
-|PCT\_DIRECT\_ACCESS|Decimal|若為依索引進行組織之資料表上的次要索引，此為以 VALID 猜測的資料列百分比|  
-|ITYP\_OWNER|String|若為網域索引，此為索引型別的擁有人。|  
-|ITYP\_NAME|String|若為網域索引，此為索引型別的名稱。|  
-|PARAMETERS|String|若為網域索引，此為參數字串。|  
-|GLOBAL\_STATS|String|若為分割的索引，表示統計資料是藉由整體分析索引收集的 \(YES\)，或者是藉由估計基礎索引分割區及子分割區而取得的 \(NO\)。|  
-|DOMIDX\_STATUS|String|反映網域索引的狀態。  NULL：指定的索引不是網域索引。  VALID：索引是有效的網域索引。  IDXTYP\_INVLD：此網域索引的索引型別無效。|  
-|DOMIDX\_OPSTATUS|String|反映網域索引上執行的作業狀態：NULL：指定的索引不是網域索引。  VALID：作業執行完畢，未發生錯誤。  FAILED：作業失敗，發生錯誤。|  
-|FUNCIDX\_STATUS|String|表示功能型索引的狀態：NULL：這不是功能型索引，ENABLED：啟用功能型索引，DISABLED：停用功能型索引。|  
-|JOIN\_INDEX|String|表示這是否為聯結索引。|  
+|<span data-ttu-id="f6d50-155">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-155">ColumnName</span></span>|<span data-ttu-id="f6d50-156">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-156">DataType</span></span>|<span data-ttu-id="f6d50-157">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-157">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-158">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-158">OWNER</span></span>|<span data-ttu-id="f6d50-159">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-159">String</span></span>|<span data-ttu-id="f6d50-160">索引的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-160">Owner of the index</span></span>|  
+|<span data-ttu-id="f6d50-161">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-161">INDEX_NAME</span></span>|<span data-ttu-id="f6d50-162">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-162">String</span></span>|<span data-ttu-id="f6d50-163">索引名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-163">Name of the index.</span></span>|  
+|<span data-ttu-id="f6d50-164">INDEX_TYPE</span><span class="sxs-lookup"><span data-stu-id="f6d50-164">INDEX_TYPE</span></span>|<span data-ttu-id="f6d50-165">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-165">String</span></span>|<span data-ttu-id="f6d50-166">索引的型別 (NORMAL、BITMAP、FUNCTION-BASED NORMAL、FUNCTION-BASED BITMAP 或 DOMAIN)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-166">Type of index (NORMAL, BITMAP, FUNCTION-BASED NORMAL, FUNCTION-BASED BITMAP, or DOMAIN).</span></span>|  
+|<span data-ttu-id="f6d50-167">TABLE_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-167">TABLE_OWNER</span></span>|<span data-ttu-id="f6d50-168">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-168">String</span></span>|<span data-ttu-id="f6d50-169">索引物件的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-169">Owner of the indexed object.</span></span>|  
+|<span data-ttu-id="f6d50-170">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-170">TABLE_NAME</span></span>|<span data-ttu-id="f6d50-171">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-171">String</span></span>|<span data-ttu-id="f6d50-172">索引物件的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-172">Name of the indexed object.</span></span>|  
+|<span data-ttu-id="f6d50-173">TABLE_TYPE</span><span class="sxs-lookup"><span data-stu-id="f6d50-173">TABLE_TYPE</span></span>|<span data-ttu-id="f6d50-174">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-174">String</span></span>|<span data-ttu-id="f6d50-175">索引物件的型別 (例如，TABLE、CLUSTER)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-175">Type of the indexed object (for example, TABLE, CLUSTER).</span></span>|  
+|<span data-ttu-id="f6d50-176">UNIQUENESS</span><span class="sxs-lookup"><span data-stu-id="f6d50-176">UNIQUENESS</span></span>|<span data-ttu-id="f6d50-177">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-177">String</span></span>|<span data-ttu-id="f6d50-178">索引是 UNIQUE 還是 NONUNIQUE。</span><span class="sxs-lookup"><span data-stu-id="f6d50-178">Whether the index is UNIQUE or NONUNIQUE.</span></span>|  
+|<span data-ttu-id="f6d50-179">COMPRESSION</span><span class="sxs-lookup"><span data-stu-id="f6d50-179">COMPRESSION</span></span>|<span data-ttu-id="f6d50-180">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-180">String</span></span>|<span data-ttu-id="f6d50-181">索引是 ENABLED 還是 DISABLED。</span><span class="sxs-lookup"><span data-stu-id="f6d50-181">Whether the index is ENABLED or DISABLED.</span></span>|  
+|<span data-ttu-id="f6d50-182">PREFIX_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-182">PREFIX_LENGTH</span></span>|<span data-ttu-id="f6d50-183">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-183">Decimal</span></span>|<span data-ttu-id="f6d50-184">壓縮金鑰前置詞中的資料行數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-184">Number of columns in the prefix of the compression key.</span></span>|  
+|<span data-ttu-id="f6d50-185">TABLESPACE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-185">TABLESPACE_NAME</span></span>|<span data-ttu-id="f6d50-186">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-186">String</span></span>|<span data-ttu-id="f6d50-187">包含索引的表格區名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-187">Name of the tablespace containing the index.</span></span>|  
+|<span data-ttu-id="f6d50-188">INI_TRANS</span><span class="sxs-lookup"><span data-stu-id="f6d50-188">INI_TRANS</span></span>|<span data-ttu-id="f6d50-189">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-189">Decimal</span></span>|<span data-ttu-id="f6d50-190">交易的初始次數。</span><span class="sxs-lookup"><span data-stu-id="f6d50-190">Initial number of transactions.</span></span>|  
+|<span data-ttu-id="f6d50-191">MAX_TRANS</span><span class="sxs-lookup"><span data-stu-id="f6d50-191">MAX_TRANS</span></span>|<span data-ttu-id="f6d50-192">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-192">Decimal</span></span>|<span data-ttu-id="f6d50-193">交易的最大次數。</span><span class="sxs-lookup"><span data-stu-id="f6d50-193">Maximum number of transactions.</span></span>|  
+|<span data-ttu-id="f6d50-194">INITIAL_EXTENT</span><span class="sxs-lookup"><span data-stu-id="f6d50-194">INITIAL_EXTENT</span></span>|<span data-ttu-id="f6d50-195">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-195">Decimal</span></span>|<span data-ttu-id="f6d50-196">初始範圍的大小。</span><span class="sxs-lookup"><span data-stu-id="f6d50-196">Size of the initial extent.</span></span>|  
+|<span data-ttu-id="f6d50-197">NEXT_EXTENT</span><span class="sxs-lookup"><span data-stu-id="f6d50-197">NEXT_EXTENT</span></span>|<span data-ttu-id="f6d50-198">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-198">Decimal</span></span>|<span data-ttu-id="f6d50-199">次要範圍的大小。</span><span class="sxs-lookup"><span data-stu-id="f6d50-199">Size of secondary extents.</span></span>|  
+|<span data-ttu-id="f6d50-200">MIN_EXTENTS</span><span class="sxs-lookup"><span data-stu-id="f6d50-200">MIN_EXTENTS</span></span>|<span data-ttu-id="f6d50-201">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-201">Decimal</span></span>|<span data-ttu-id="f6d50-202">區段中允許的範圍最小數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-202">Minimum number of extents allowed in the segment.</span></span>|  
+|<span data-ttu-id="f6d50-203">MAX_EXTENTS</span><span class="sxs-lookup"><span data-stu-id="f6d50-203">MAX_EXTENTS</span></span>|<span data-ttu-id="f6d50-204">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-204">Decimal</span></span>|<span data-ttu-id="f6d50-205">區段中允許的範圍最大數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-205">Maximum number of extents allowed in the segment.</span></span>|  
+|<span data-ttu-id="f6d50-206">PCT_INCREASE</span><span class="sxs-lookup"><span data-stu-id="f6d50-206">PCT_INCREASE</span></span>|<span data-ttu-id="f6d50-207">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-207">Decimal</span></span>|<span data-ttu-id="f6d50-208">範圍大小增加百分比。</span><span class="sxs-lookup"><span data-stu-id="f6d50-208">Percentage increase in extent size.</span></span>|  
+|<span data-ttu-id="f6d50-209">PCT_THRESHOLD</span><span class="sxs-lookup"><span data-stu-id="f6d50-209">PCT_THRESHOLD</span></span>|<span data-ttu-id="f6d50-210">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-210">Decimal</span></span>|<span data-ttu-id="f6d50-211">每個索引項目所允許之區塊空間的臨界值百分比。</span><span class="sxs-lookup"><span data-stu-id="f6d50-211">Threshold percentage of block space allowed per index entry.</span></span>|  
+|<span data-ttu-id="f6d50-212">INCLUDE_COLUMN</span><span class="sxs-lookup"><span data-stu-id="f6d50-212">INCLUDE_COLUMN</span></span>|<span data-ttu-id="f6d50-213">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-213">Decimal</span></span>|<span data-ttu-id="f6d50-214">要併入依索引進行組織之資料表主索引鍵 (非溢位) 索引的最後一個資料行的資料行 ID。</span><span class="sxs-lookup"><span data-stu-id="f6d50-214">Column ID of the last column to be included in index-organized table primary key (non-overflow) index.</span></span> <span data-ttu-id="f6d50-215">此資料行對應至 *_TAB_COLUMNS 資料字典檢視表的 COLUMN_ID 資料行。</span><span class="sxs-lookup"><span data-stu-id="f6d50-215">This column maps to the COLUMN_ID column of the *_TAB_COLUMNS data dictionary views.</span></span>|  
+|<span data-ttu-id="f6d50-216">FREELISTS</span><span class="sxs-lookup"><span data-stu-id="f6d50-216">FREELISTS</span></span>|<span data-ttu-id="f6d50-217">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-217">Decimal</span></span>|<span data-ttu-id="f6d50-218">配置給此區段的處理序可用清單數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-218">Number of process freelists allocated to this segment.</span></span>|  
+|<span data-ttu-id="f6d50-219">FREELIST_GROUPS</span><span class="sxs-lookup"><span data-stu-id="f6d50-219">FREELIST_GROUPS</span></span>|<span data-ttu-id="f6d50-220">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-220">Decimal</span></span>|<span data-ttu-id="f6d50-221">配置給此區段的可用清單群組數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-221">Number of freelist groups allocated to this segment.</span></span>|  
+|<span data-ttu-id="f6d50-222">PCT_FREE</span><span class="sxs-lookup"><span data-stu-id="f6d50-222">PCT_FREE</span></span>|<span data-ttu-id="f6d50-223">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-223">Decimal</span></span>|<span data-ttu-id="f6d50-224">區塊中可用空間的最小百分比。</span><span class="sxs-lookup"><span data-stu-id="f6d50-224">Minimum percentage of free space in a block.</span></span>|  
+|<span data-ttu-id="f6d50-225">LOGGING</span><span class="sxs-lookup"><span data-stu-id="f6d50-225">LOGGING</span></span>|<span data-ttu-id="f6d50-226">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-226">String</span></span>|<span data-ttu-id="f6d50-227">登入資訊。</span><span class="sxs-lookup"><span data-stu-id="f6d50-227">Logging information.</span></span>|  
+|<span data-ttu-id="f6d50-228">BLEVEL</span><span class="sxs-lookup"><span data-stu-id="f6d50-228">BLEVEL</span></span>|<span data-ttu-id="f6d50-229">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-229">Decimal</span></span>|<span data-ttu-id="f6d50-230">B*-Tree 層級：從其根區塊至分葉區塊的索引深度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-230">B*-Tree level: depth of the index from its root block to its leaf blocks.</span></span> <span data-ttu-id="f6d50-231">深度為 0 表示根區塊與分葉區塊相同。</span><span class="sxs-lookup"><span data-stu-id="f6d50-231">A depth of 0 indicates that the root block and leaf block are the same.</span></span>|  
+|<span data-ttu-id="f6d50-232">LEAF_BLOCKS</span><span class="sxs-lookup"><span data-stu-id="f6d50-232">LEAF_BLOCKS</span></span>|<span data-ttu-id="f6d50-233">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-233">Decimal</span></span>|<span data-ttu-id="f6d50-234">索引中分葉區塊的數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-234">Number of leaf blocks in the index</span></span>|  
+|<span data-ttu-id="f6d50-235">DISTINCT_KEYS</span><span class="sxs-lookup"><span data-stu-id="f6d50-235">DISTINCT_KEYS</span></span>|<span data-ttu-id="f6d50-236">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-236">Decimal</span></span>|<span data-ttu-id="f6d50-237">不同索引值的數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-237">Number of distinct indexed values.</span></span> <span data-ttu-id="f6d50-238">對於強制 UNIQUE 條件約束及 PRIMARY KEY 條件約束的索引，此值與資料表中資料列的數目 (USER_TABLES.NUM_ROWS) 相同。</span><span class="sxs-lookup"><span data-stu-id="f6d50-238">For indexes that enforce UNIQUE and PRIMARY KEY constraints, this value is the same as the number of rows in the table (USER_TABLES.NUM_ROWS).</span></span>|  
+|<span data-ttu-id="f6d50-239">AVG_LEAF_BLOCKS_PER_KEY</span><span class="sxs-lookup"><span data-stu-id="f6d50-239">AVG_LEAF_BLOCKS_PER_KEY</span></span>|<span data-ttu-id="f6d50-240">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-240">Decimal</span></span>|<span data-ttu-id="f6d50-241">分葉區塊的平均數目，在這些區塊中索引內每個不同的值都顯示為四捨五入成最接近的整數。</span><span class="sxs-lookup"><span data-stu-id="f6d50-241">Average number of leaf blocks in which each distinct value in the index appears rounded to the nearest integer.</span></span> <span data-ttu-id="f6d50-242">若為強制 UNIQUE 及 PRIMARY KEY 條件約束的索引，此值永遠為 1。</span><span class="sxs-lookup"><span data-stu-id="f6d50-242">For indexes that enforce UNIQUE and PRIMARY KEY constraints, this value is always 1.</span></span>|  
+|<span data-ttu-id="f6d50-243">AVG_DATA_BLOCKS_PER_KEY</span><span class="sxs-lookup"><span data-stu-id="f6d50-243">AVG_DATA_BLOCKS_PER_KEY</span></span>|<span data-ttu-id="f6d50-244">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-244">Decimal</span></span>|<span data-ttu-id="f6d50-245">資料表中資料區塊的平均數目，索引中四捨五入成最接近之整數的不同值指向這些區塊。</span><span class="sxs-lookup"><span data-stu-id="f6d50-245">Average number of data blocks in the table that are pointed to by a distinct value in the index rounded to the nearest integer.</span></span> <span data-ttu-id="f6d50-246">此統計資料是包含資料列 (包含索引資料行的給定值) 之資料區塊的平均數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-246">This statistic is the average number of data blocks that contain rows that contain a given value for the indexed columns.</span></span>|  
+|<span data-ttu-id="f6d50-247">CLUSTERING_FACTOR</span><span class="sxs-lookup"><span data-stu-id="f6d50-247">CLUSTERING_FACTOR</span></span>|<span data-ttu-id="f6d50-248">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-248">Decimal</span></span>|<span data-ttu-id="f6d50-249">根據索引值，指出資料表中資料列順序數。</span><span class="sxs-lookup"><span data-stu-id="f6d50-249">Indicates the amount of order of the rows in the table based on the values of the index.</span></span>|  
+|<span data-ttu-id="f6d50-250">狀態</span><span class="sxs-lookup"><span data-stu-id="f6d50-250">STATUS</span></span>|<span data-ttu-id="f6d50-251">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-251">String</span></span>|<span data-ttu-id="f6d50-252">非分割索引是 VALID 還是 UNUSABLE。</span><span class="sxs-lookup"><span data-stu-id="f6d50-252">Whether a nonpartitioned index is VALID or UNUSABLE.</span></span>|  
+|<span data-ttu-id="f6d50-253">NUM_ROWS</span><span class="sxs-lookup"><span data-stu-id="f6d50-253">NUM_ROWS</span></span>|<span data-ttu-id="f6d50-254">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-254">Decimal</span></span>|<span data-ttu-id="f6d50-255">索引中資料列的數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-255">Number of rows in the index.</span></span>|  
+|<span data-ttu-id="f6d50-256">SAMPLE_SIZE</span><span class="sxs-lookup"><span data-stu-id="f6d50-256">SAMPLE_SIZE</span></span>|<span data-ttu-id="f6d50-257">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-257">Decimal</span></span>|<span data-ttu-id="f6d50-258">用於分析索引的範例大小。</span><span class="sxs-lookup"><span data-stu-id="f6d50-258">Size of the sample used to analyze the index.</span></span>|  
+|<span data-ttu-id="f6d50-259">LAST_ANALYZED</span><span class="sxs-lookup"><span data-stu-id="f6d50-259">LAST_ANALYZED</span></span>|<span data-ttu-id="f6d50-260">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-260">DateTime</span></span>|<span data-ttu-id="f6d50-261">最近分析此索引的日期。</span><span class="sxs-lookup"><span data-stu-id="f6d50-261">Date on which this index was most recently analyzed.</span></span>|  
+|<span data-ttu-id="f6d50-262">DEGREE</span><span class="sxs-lookup"><span data-stu-id="f6d50-262">DEGREE</span></span>|<span data-ttu-id="f6d50-263">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-263">String</span></span>|<span data-ttu-id="f6d50-264">掃描索引之每個執行個體的執行緒數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-264">Number of threads per instance for scanning the index.</span></span>|  
+|<span data-ttu-id="f6d50-265">INSTANCES</span><span class="sxs-lookup"><span data-stu-id="f6d50-265">INSTANCES</span></span>|<span data-ttu-id="f6d50-266">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-266">String</span></span>|<span data-ttu-id="f6d50-267">要在其上掃描索引的執行個體數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-267">Number of instances across which the indexes to be scanned.</span></span>|  
+|<span data-ttu-id="f6d50-268">PARTITIONED</span><span class="sxs-lookup"><span data-stu-id="f6d50-268">PARTITIONED</span></span>|<span data-ttu-id="f6d50-269">字串</span><span class="sxs-lookup"><span data-stu-id="f6d50-269">String</span></span>|<span data-ttu-id="f6d50-270">此索引是否已分割 (是 &#124;[否]）。</span><span class="sxs-lookup"><span data-stu-id="f6d50-270">Whether this index is partitioned (YES &#124; NO).</span></span>|  
+|<span data-ttu-id="f6d50-271">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-271">TEMPORARY</span></span>|<span data-ttu-id="f6d50-272">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-272">String</span></span>|<span data-ttu-id="f6d50-273">索引是否在暫存資料表上。</span><span class="sxs-lookup"><span data-stu-id="f6d50-273">Whether the index is on a temporary table.</span></span>|  
+|<span data-ttu-id="f6d50-274">GENERATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-274">GENERATED</span></span>|<span data-ttu-id="f6d50-275">字串</span><span class="sxs-lookup"><span data-stu-id="f6d50-275">String</span></span>|<span data-ttu-id="f6d50-276">索引的名稱是否是系統產生的 (Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-276">Whether the name of the index is system generated (Y&#124;N).</span></span>|  
+|<span data-ttu-id="f6d50-277">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-277">SECONDARY</span></span>|<span data-ttu-id="f6d50-278">字串</span><span class="sxs-lookup"><span data-stu-id="f6d50-278">String</span></span>|<span data-ttu-id="f6d50-279">索引是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-279">Whether the index is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y&#124;N).</span></span>|  
+|<span data-ttu-id="f6d50-280">BUFFER_POOL</span><span class="sxs-lookup"><span data-stu-id="f6d50-280">BUFFER_POOL</span></span>|<span data-ttu-id="f6d50-281">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-281">String</span></span>|<span data-ttu-id="f6d50-282">要用於索引區塊之預設緩衝集區的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-282">Name of the default buffer pool to be used for the index blocks.</span></span>|  
+|<span data-ttu-id="f6d50-283">USER_STATS</span><span class="sxs-lookup"><span data-stu-id="f6d50-283">USER_STATS</span></span>|<span data-ttu-id="f6d50-284">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-284">String</span></span>|<span data-ttu-id="f6d50-285">統計資料是否為使用者直接輸入的。</span><span class="sxs-lookup"><span data-stu-id="f6d50-285">Whether the statistics were entered directly by the user.</span></span>|  
+|<span data-ttu-id="f6d50-286">DURATION</span><span class="sxs-lookup"><span data-stu-id="f6d50-286">DURATION</span></span>|<span data-ttu-id="f6d50-287">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-287">String</span></span>|<span data-ttu-id="f6d50-288">表示暫存資料表的持續期間：1) SYS$SESSION：在工作階段持續期間保留資料列，2) SYS$TRANSACTION：COMMIT 後刪除資料列，3) 若為永久資料表，則是 Null。</span><span class="sxs-lookup"><span data-stu-id="f6d50-288">Indicates the duration of a temporary table: 1)SYS$SESSION: the rows are preserved for the duration of the session, 2) SYS$TRANSACTION: the rows are deleted after COMMIT, 3) Null for permanent Table.</span></span>|  
+|<span data-ttu-id="f6d50-289">PCT_DIRECT_ACCESS</span><span class="sxs-lookup"><span data-stu-id="f6d50-289">PCT_DIRECT_ACCESS</span></span>|<span data-ttu-id="f6d50-290">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-290">Decimal</span></span>|<span data-ttu-id="f6d50-291">若為依索引進行組織之資料表上的次要索引，此為以 VALID 猜測的資料列百分比</span><span class="sxs-lookup"><span data-stu-id="f6d50-291">For a secondary index on an index-organized table, the percentage of rows with VALID guess</span></span>|  
+|<span data-ttu-id="f6d50-292">ITYP_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-292">ITYP_OWNER</span></span>|<span data-ttu-id="f6d50-293">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-293">String</span></span>|<span data-ttu-id="f6d50-294">若為網域索引，此為索引型別的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-294">For a domain index, the owner of the indextype.</span></span>|  
+|<span data-ttu-id="f6d50-295">ITYP_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-295">ITYP_NAME</span></span>|<span data-ttu-id="f6d50-296">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-296">String</span></span>|<span data-ttu-id="f6d50-297">若為網域索引，此為索引型別的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-297">For a domain index, the name of the indextype.</span></span>|  
+|<span data-ttu-id="f6d50-298">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="f6d50-298">PARAMETERS</span></span>|<span data-ttu-id="f6d50-299">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-299">String</span></span>|<span data-ttu-id="f6d50-300">若為網域索引，此為參數字串。</span><span class="sxs-lookup"><span data-stu-id="f6d50-300">For a domain index, the parameter string.</span></span>|  
+|<span data-ttu-id="f6d50-301">GLOBAL_STATS</span><span class="sxs-lookup"><span data-stu-id="f6d50-301">GLOBAL_STATS</span></span>|<span data-ttu-id="f6d50-302">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-302">String</span></span>|<span data-ttu-id="f6d50-303">若為分割的索引，表示統計資料是藉由整體分析索引收集的 (YES)，或者是藉由估計基礎索引分割區及子分割區而取得的 (NO)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-303">For partitioned indexes, indicates whether statistics were collected by analyzing index as a whole (YES) or were estimated from statistics on underlying index partitions and subpartitions (NO).</span></span>|  
+|<span data-ttu-id="f6d50-304">DOMIDX_STATUS</span><span class="sxs-lookup"><span data-stu-id="f6d50-304">DOMIDX_STATUS</span></span>|<span data-ttu-id="f6d50-305">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-305">String</span></span>|<span data-ttu-id="f6d50-306">反映網域索引的狀態。</span><span class="sxs-lookup"><span data-stu-id="f6d50-306">Reflects the status of the domain index.</span></span> <span data-ttu-id="f6d50-307">NULL：指定的索引不是網域索引。</span><span class="sxs-lookup"><span data-stu-id="f6d50-307">NULL: the specified index is not a domain index.</span></span> <span data-ttu-id="f6d50-308">VALID：索引是有效的網域索引。</span><span class="sxs-lookup"><span data-stu-id="f6d50-308">VALID: the index is a valid domain index.</span></span> <span data-ttu-id="f6d50-309">IDXTYP_INVLD：此網域索引的索引型別無效。</span><span class="sxs-lookup"><span data-stu-id="f6d50-309">IDXTYP_INVLD: the index type of this domain index is invalid.</span></span>|  
+|<span data-ttu-id="f6d50-310">DOMIDX_OPSTATUS</span><span class="sxs-lookup"><span data-stu-id="f6d50-310">DOMIDX_OPSTATUS</span></span>|<span data-ttu-id="f6d50-311">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-311">String</span></span>|<span data-ttu-id="f6d50-312">反映網域索引上執行的作業狀態：NULL：指定的索引不是網域索引。</span><span class="sxs-lookup"><span data-stu-id="f6d50-312">Reflects the status of an operation that was performed on a domain index: NULL: the specified index is not a domain index.</span></span> <span data-ttu-id="f6d50-313">VALID：作業執行完畢，未發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="f6d50-313">VALID: the operation performed without errors.</span></span> <span data-ttu-id="f6d50-314">FAILED：作業失敗，發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="f6d50-314">FAILED: the operation failed with an error.</span></span>|  
+|<span data-ttu-id="f6d50-315">FUNCIDX_STATUS</span><span class="sxs-lookup"><span data-stu-id="f6d50-315">FUNCIDX_STATUS</span></span>|<span data-ttu-id="f6d50-316">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-316">String</span></span>|<span data-ttu-id="f6d50-317">表示功能型索引的狀態：NULL：這不是功能型索引，ENABLED：啟用功能型索引，DISABLED：停用功能型索引。</span><span class="sxs-lookup"><span data-stu-id="f6d50-317">Indicates the status of a function-based index: NULL: this is not a function-based index, ENABLED: the function-based index is enabled, DISABLED: the function-based index is disabled.</span></span>|  
+|<span data-ttu-id="f6d50-318">JOIN_INDEX</span><span class="sxs-lookup"><span data-stu-id="f6d50-318">JOIN_INDEX</span></span>|<span data-ttu-id="f6d50-319">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-319">String</span></span>|<span data-ttu-id="f6d50-320">表示這是否為聯結索引。</span><span class="sxs-lookup"><span data-stu-id="f6d50-320">Indicates whether this is a join index or not.</span></span>|  
   
-## IndexColumns  
+## <a name="indexcolumns"></a><span data-ttu-id="f6d50-321">IndexColumns</span><span class="sxs-lookup"><span data-stu-id="f6d50-321">IndexColumns</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|INDEX\_OWNER|String|索引的擁有人。|  
-|INDEX\_NAME|String|索引名稱。|  
-|TABLE\_OWNER|String|資料表或叢集的擁有人。|  
-|TABLE\_NAME|String|資料表或叢集的名稱。|  
-|COLUMN\_NAME|String|物件型別資料行的資料行名稱或屬性。|  
-|COLUMN\_POSITION|Decimal|索引內資料行或屬性的位置。|  
-|COLUMN\_LENGTH|Decimal|資料行的索引長度。|  
-|CHAR\_LENGTH|Decimal|資料行的字碼指標長度上限。|  
-|DESCEND|String|資料行是否依遞減順序排序。|  
+|<span data-ttu-id="f6d50-322">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-322">ColumnName</span></span>|<span data-ttu-id="f6d50-323">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-323">DataType</span></span>|<span data-ttu-id="f6d50-324">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-324">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-325">INDEX_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-325">INDEX_OWNER</span></span>|<span data-ttu-id="f6d50-326">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-326">String</span></span>|<span data-ttu-id="f6d50-327">索引的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-327">Owner of the index.</span></span>|  
+|<span data-ttu-id="f6d50-328">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-328">INDEX_NAME</span></span>|<span data-ttu-id="f6d50-329">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-329">String</span></span>|<span data-ttu-id="f6d50-330">索引名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-330">Name of the index.</span></span>|  
+|<span data-ttu-id="f6d50-331">TABLE_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-331">TABLE_OWNER</span></span>|<span data-ttu-id="f6d50-332">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-332">String</span></span>|<span data-ttu-id="f6d50-333">資料表或叢集的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-333">Owner of the table or cluster.</span></span>|  
+|<span data-ttu-id="f6d50-334">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-334">TABLE_NAME</span></span>|<span data-ttu-id="f6d50-335">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-335">String</span></span>|<span data-ttu-id="f6d50-336">資料表或叢集的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-336">Name of the table or cluster.</span></span>|  
+|<span data-ttu-id="f6d50-337">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-337">COLUMN_NAME</span></span>|<span data-ttu-id="f6d50-338">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-338">String</span></span>|<span data-ttu-id="f6d50-339">物件型別資料行的資料行名稱或屬性。</span><span class="sxs-lookup"><span data-stu-id="f6d50-339">Column name or attribute of object type column.</span></span>|  
+|<span data-ttu-id="f6d50-340">COLUMN_POSITION</span><span class="sxs-lookup"><span data-stu-id="f6d50-340">COLUMN_POSITION</span></span>|<span data-ttu-id="f6d50-341">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-341">Decimal</span></span>|<span data-ttu-id="f6d50-342">索引內資料行或屬性的位置。</span><span class="sxs-lookup"><span data-stu-id="f6d50-342">Position of column or attribute within the index.</span></span>|  
+|<span data-ttu-id="f6d50-343">COLUMN_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-343">COLUMN_LENGTH</span></span>|<span data-ttu-id="f6d50-344">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-344">Decimal</span></span>|<span data-ttu-id="f6d50-345">資料行的索引長度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-345">Indexed length of the column.</span></span>|  
+|<span data-ttu-id="f6d50-346">CHAR_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-346">CHAR_LENGTH</span></span>|<span data-ttu-id="f6d50-347">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-347">Decimal</span></span>|<span data-ttu-id="f6d50-348">資料行的字碼指標長度上限。</span><span class="sxs-lookup"><span data-stu-id="f6d50-348">Maximum codepoint length of the column.</span></span>|  
+|<span data-ttu-id="f6d50-349">DESCEND</span><span class="sxs-lookup"><span data-stu-id="f6d50-349">DESCEND</span></span>|<span data-ttu-id="f6d50-350">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-350">String</span></span>|<span data-ttu-id="f6d50-351">資料行是否依遞減順序排序。</span><span class="sxs-lookup"><span data-stu-id="f6d50-351">Whether the column is sorted in descending order.</span></span>|  
   
-## 程序  
+## <a name="procedures"></a><span data-ttu-id="f6d50-352">程序</span><span class="sxs-lookup"><span data-stu-id="f6d50-352">Procedures</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|物件的擁有人。|  
-|OBJECT\_NAME|String|物件名稱。|  
-|SUBOBJECT\_NAME|String|子物件的名稱 \(例如，分割區\)。|  
-|OBJECT\_ID|Decimal|物件的字典物件號碼。|  
-|DATA\_OBJECT\_ID|Decimal|包含物件之區段的字典物件號碼。|  
-|LAST\_DDL\_TIME|DateTime|DDL 命令對物件進行最後一次修改的時間戳記 \(包括授權及撤銷\)。|  
-|TIMESTAMP|String|物件規格的時間戳記 \(字元資料\)。|  
-|狀態|String|物件的狀態 \(VALID、INVALID 或 N\/A\)。|  
-|TEMPORARY|String|物件是否為暫存的 \(目前的工作階段僅能看到置於此物件本身的資料\)。|  
-|GENERATED|String|是否已產生此物件系統的名稱？  \(Y &#124; N\)。|  
-|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 \(Y &#124; N\)。|  
-|CREATED|DateTime|建立物件的日期。|  
+|<span data-ttu-id="f6d50-353">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-353">ColumnName</span></span>|<span data-ttu-id="f6d50-354">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-354">DataType</span></span>|<span data-ttu-id="f6d50-355">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-355">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-356">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-356">OWNER</span></span>|<span data-ttu-id="f6d50-357">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-357">String</span></span>|<span data-ttu-id="f6d50-358">物件的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-358">Owner of the object.</span></span>|  
+|<span data-ttu-id="f6d50-359">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-359">OBJECT_NAME</span></span>|<span data-ttu-id="f6d50-360">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-360">String</span></span>|<span data-ttu-id="f6d50-361">物件名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-361">Name of the object.</span></span>|  
+|<span data-ttu-id="f6d50-362">SUBOBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-362">SUBOBJECT_NAME</span></span>|<span data-ttu-id="f6d50-363">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-363">String</span></span>|<span data-ttu-id="f6d50-364">子物件的名稱 (例如，分割區)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-364">Name of the subobject (for example, partition).</span></span>|  
+|<span data-ttu-id="f6d50-365">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-365">OBJECT_ID</span></span>|<span data-ttu-id="f6d50-366">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-366">Decimal</span></span>|<span data-ttu-id="f6d50-367">物件的字典物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-367">Dictionary object number of the object.</span></span>|  
+|<span data-ttu-id="f6d50-368">DATA_OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-368">DATA_OBJECT_ID</span></span>|<span data-ttu-id="f6d50-369">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-369">Decimal</span></span>|<span data-ttu-id="f6d50-370">包含物件之區段的字典物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-370">Dictionary object number of the segment that contains the object.</span></span>|  
+|<span data-ttu-id="f6d50-371">LAST_DDL_TIME</span><span class="sxs-lookup"><span data-stu-id="f6d50-371">LAST_DDL_TIME</span></span>|<span data-ttu-id="f6d50-372">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-372">DateTime</span></span>|<span data-ttu-id="f6d50-373">DDL 命令對物件進行最後一次修改的時間戳記 (包括授權及撤銷)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-373">Timestamp for the last modification of the object resulting from a DDL command (including grants and revokes).</span></span>|  
+|<span data-ttu-id="f6d50-374">TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="f6d50-374">TIMESTAMP</span></span>|<span data-ttu-id="f6d50-375">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-375">String</span></span>|<span data-ttu-id="f6d50-376">物件規格的時間戳記 (字元資料)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-376">Timestamp for the specification of the object (character data).</span></span>|  
+|<span data-ttu-id="f6d50-377">狀態</span><span class="sxs-lookup"><span data-stu-id="f6d50-377">STATUS</span></span>|<span data-ttu-id="f6d50-378">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-378">String</span></span>|<span data-ttu-id="f6d50-379">物件的狀態 (VALID、INVALID 或 N/A)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-379">Status of the object (VALID, INVALID, or N/A).</span></span>|  
+|<span data-ttu-id="f6d50-380">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-380">TEMPORARY</span></span>|<span data-ttu-id="f6d50-381">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-381">String</span></span>|<span data-ttu-id="f6d50-382">物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-382">Whether the object is temporary (the current session can see only data that it placed in this object itself).</span></span>|  
+|<span data-ttu-id="f6d50-383">GENERATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-383">GENERATED</span></span>|<span data-ttu-id="f6d50-384">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-384">String</span></span>|<span data-ttu-id="f6d50-385">是否已產生此物件系統的名稱？</span><span class="sxs-lookup"><span data-stu-id="f6d50-385">Was the name of this object system generated?</span></span> <span data-ttu-id="f6d50-386">(Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-386">(Y &#124; N).</span></span>|  
+|<span data-ttu-id="f6d50-387">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-387">SECONDARY</span></span>|<span data-ttu-id="f6d50-388">字串</span><span class="sxs-lookup"><span data-stu-id="f6d50-388">String</span></span>|<span data-ttu-id="f6d50-389">這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-389">Whether this is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y &#124; N).</span></span>|  
+|<span data-ttu-id="f6d50-390">CREATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-390">CREATED</span></span>|<span data-ttu-id="f6d50-391">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-391">DateTime</span></span>|<span data-ttu-id="f6d50-392">建立物件的日期。</span><span class="sxs-lookup"><span data-stu-id="f6d50-392">The date the object was created.</span></span>|  
   
-## 序列  
+## <a name="sequences"></a><span data-ttu-id="f6d50-393">序列</span><span class="sxs-lookup"><span data-stu-id="f6d50-393">Sequences</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|SEQUENCE\_OWNER|String|序列的擁有人名稱。|  
-|SEQUENCE\_NAME|String|序列名稱。|  
-|MIN\_VALUE|Decimal|序列的最小值。|  
-|MAX\_VALUE|Decimal|序列的最大值。|  
-|INCREMENT\_BY|Decimal|序列遞增的值。|  
-|CYCLE\_FLAG|String|序列在達到限制時是否換行。|  
-|ORDER\_FLAG|String|是否按順序產生序號。|  
-|CACHE\_SIZE|Decimal|要快取的序號數目。|  
-|LAST\_NUMBER|Decimal|寫入磁碟的最後序號。  若序列使用快取，則寫入磁碟的號碼是置於序列快取的最後號碼。  此號碼可能大於所使用的最後序號。|  
+|<span data-ttu-id="f6d50-394">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-394">ColumnName</span></span>|<span data-ttu-id="f6d50-395">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-395">DataType</span></span>|<span data-ttu-id="f6d50-396">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-396">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-397">SEQUENCE_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-397">SEQUENCE_OWNER</span></span>|<span data-ttu-id="f6d50-398">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-398">String</span></span>|<span data-ttu-id="f6d50-399">序列的擁有人名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-399">Name of the owner of the sequence.</span></span>|  
+|<span data-ttu-id="f6d50-400">SEQUENCE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-400">SEQUENCE_NAME</span></span>|<span data-ttu-id="f6d50-401">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-401">String</span></span>|<span data-ttu-id="f6d50-402">序列名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-402">Sequence name.</span></span>|  
+|<span data-ttu-id="f6d50-403">MIN_VALUE</span><span class="sxs-lookup"><span data-stu-id="f6d50-403">MIN_VALUE</span></span>|<span data-ttu-id="f6d50-404">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-404">Decimal</span></span>|<span data-ttu-id="f6d50-405">序列的最小值。</span><span class="sxs-lookup"><span data-stu-id="f6d50-405">Minimum value of the sequence.</span></span>|  
+|<span data-ttu-id="f6d50-406">MAX_VALUE</span><span class="sxs-lookup"><span data-stu-id="f6d50-406">MAX_VALUE</span></span>|<span data-ttu-id="f6d50-407">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-407">Decimal</span></span>|<span data-ttu-id="f6d50-408">序列的最大值。</span><span class="sxs-lookup"><span data-stu-id="f6d50-408">Maximum value of the sequence.</span></span>|  
+|<span data-ttu-id="f6d50-409">INCREMENT_BY</span><span class="sxs-lookup"><span data-stu-id="f6d50-409">INCREMENT_BY</span></span>|<span data-ttu-id="f6d50-410">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-410">Decimal</span></span>|<span data-ttu-id="f6d50-411">序列遞增的值。</span><span class="sxs-lookup"><span data-stu-id="f6d50-411">Value by which sequence is incremented.</span></span>|  
+|<span data-ttu-id="f6d50-412">CYCLE_FLAG</span><span class="sxs-lookup"><span data-stu-id="f6d50-412">CYCLE_FLAG</span></span>|<span data-ttu-id="f6d50-413">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-413">String</span></span>|<span data-ttu-id="f6d50-414">序列在達到限制時是否換行。</span><span class="sxs-lookup"><span data-stu-id="f6d50-414">Does sequence wrap around on reaching limit.</span></span>|  
+|<span data-ttu-id="f6d50-415">ORDER_FLAG</span><span class="sxs-lookup"><span data-stu-id="f6d50-415">ORDER_FLAG</span></span>|<span data-ttu-id="f6d50-416">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-416">String</span></span>|<span data-ttu-id="f6d50-417">是否按順序產生序號。</span><span class="sxs-lookup"><span data-stu-id="f6d50-417">Are sequence numbers generated in order.</span></span>|  
+|<span data-ttu-id="f6d50-418">CACHE_SIZE</span><span class="sxs-lookup"><span data-stu-id="f6d50-418">CACHE_SIZE</span></span>|<span data-ttu-id="f6d50-419">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-419">Decimal</span></span>|<span data-ttu-id="f6d50-420">要快取的序號數目。</span><span class="sxs-lookup"><span data-stu-id="f6d50-420">Number of sequence numbers to cache.</span></span>|  
+|<span data-ttu-id="f6d50-421">LAST_NUMBER</span><span class="sxs-lookup"><span data-stu-id="f6d50-421">LAST_NUMBER</span></span>|<span data-ttu-id="f6d50-422">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-422">Decimal</span></span>|<span data-ttu-id="f6d50-423">寫入磁碟的最後序號。</span><span class="sxs-lookup"><span data-stu-id="f6d50-423">Last sequence number written to disk.</span></span> <span data-ttu-id="f6d50-424">若序列使用快取，則寫入磁碟的號碼是置於序列快取的最後號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-424">If a sequence uses caching, the number written to disk is the last number placed in the sequence cache.</span></span> <span data-ttu-id="f6d50-425">此號碼可能大於所使用的最後序號。</span><span class="sxs-lookup"><span data-stu-id="f6d50-425">This number is likely to be greater than the last sequence number that was used.</span></span>|  
   
-## Synonyms  
+## <a name="synonyms"></a><span data-ttu-id="f6d50-426">Synonyms</span><span class="sxs-lookup"><span data-stu-id="f6d50-426">Synonyms</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|同義資料表的擁有人。|  
-|SYNONYM\_NAME|String|同義資料表名稱。|  
-|TABLE\_OWNER|String|同義資料表所參考的物件擁有人。|  
-|TABLE\_NAME|String|同義資料表所參考的物件名稱。|  
-|DB\_LINK|String|所參考的資料庫連結名稱 \(如果有的話\)。|  
+|<span data-ttu-id="f6d50-427">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-427">ColumnName</span></span>|<span data-ttu-id="f6d50-428">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-428">DataType</span></span>|<span data-ttu-id="f6d50-429">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-429">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-430">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-430">OWNER</span></span>|<span data-ttu-id="f6d50-431">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-431">String</span></span>|<span data-ttu-id="f6d50-432">同義資料表的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-432">Owner of the synonym.</span></span>|  
+|<span data-ttu-id="f6d50-433">SYNONYM_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-433">SYNONYM_NAME</span></span>|<span data-ttu-id="f6d50-434">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-434">String</span></span>|<span data-ttu-id="f6d50-435">同義資料表名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-435">Name of the synonym.</span></span>|  
+|<span data-ttu-id="f6d50-436">TABLE_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-436">TABLE_OWNER</span></span>|<span data-ttu-id="f6d50-437">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-437">String</span></span>|<span data-ttu-id="f6d50-438">同義資料表所參考的物件擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-438">Owner of the object referenced by the synonym.</span></span>|  
+|<span data-ttu-id="f6d50-439">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-439">TABLE_NAME</span></span>|<span data-ttu-id="f6d50-440">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-440">String</span></span>|<span data-ttu-id="f6d50-441">同義資料表所參考的物件名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-441">Name of the object referenced by the synonym.</span></span>|  
+|<span data-ttu-id="f6d50-442">DB_LINK</span><span class="sxs-lookup"><span data-stu-id="f6d50-442">DB_LINK</span></span>|<span data-ttu-id="f6d50-443">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-443">String</span></span>|<span data-ttu-id="f6d50-444">所參考的資料庫連結名稱 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-444">Name of the database link referenced, if any.</span></span>|  
   
-## 資料表  
+## <a name="tables"></a><span data-ttu-id="f6d50-445">資料表</span><span class="sxs-lookup"><span data-stu-id="f6d50-445">Tables</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|資料表的擁有人。|  
-|TABLE\_NAME|String|資料表名稱。|  
-|TYPE|String|資料表型別。|  
+|<span data-ttu-id="f6d50-446">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-446">ColumnName</span></span>|<span data-ttu-id="f6d50-447">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-447">DataType</span></span>|<span data-ttu-id="f6d50-448">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-448">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-449">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-449">OWNER</span></span>|<span data-ttu-id="f6d50-450">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-450">String</span></span>|<span data-ttu-id="f6d50-451">資料表的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-451">Owner of the table.</span></span>|  
+|<span data-ttu-id="f6d50-452">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-452">TABLE_NAME</span></span>|<span data-ttu-id="f6d50-453">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-453">String</span></span>|<span data-ttu-id="f6d50-454">資料表名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-454">Name of the table.</span></span>|  
+|<span data-ttu-id="f6d50-455">TYPE</span><span class="sxs-lookup"><span data-stu-id="f6d50-455">TYPE</span></span>|<span data-ttu-id="f6d50-456">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-456">String</span></span>|<span data-ttu-id="f6d50-457">資料表型別。</span><span class="sxs-lookup"><span data-stu-id="f6d50-457">Type of table.</span></span>|  
   
-## 使用者  
+## <a name="users"></a><span data-ttu-id="f6d50-458">使用者</span><span class="sxs-lookup"><span data-stu-id="f6d50-458">Users</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|NAME|String|使用者名稱。|  
-|ID|Decimal|使用者的識別碼。|  
-|CREATEDATE|DateTime|使用者建立日期。|  
+|<span data-ttu-id="f6d50-459">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-459">ColumnName</span></span>|<span data-ttu-id="f6d50-460">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-460">DataType</span></span>|<span data-ttu-id="f6d50-461">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-461">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-462">NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-462">NAME</span></span>|<span data-ttu-id="f6d50-463">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-463">String</span></span>|<span data-ttu-id="f6d50-464">使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-464">Name of the user.</span></span>|  
+|<span data-ttu-id="f6d50-465">ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-465">ID</span></span>|<span data-ttu-id="f6d50-466">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-466">Decimal</span></span>|<span data-ttu-id="f6d50-467">使用者的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-467">ID number of the user.</span></span>|  
+|<span data-ttu-id="f6d50-468">CREATEDATE</span><span class="sxs-lookup"><span data-stu-id="f6d50-468">CREATEDATE</span></span>|<span data-ttu-id="f6d50-469">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-469">DateTime</span></span>|<span data-ttu-id="f6d50-470">使用者建立日期。</span><span class="sxs-lookup"><span data-stu-id="f6d50-470">User creation date.</span></span>|  
   
-## 檢視  
+## <a name="views"></a><span data-ttu-id="f6d50-471">檢視</span><span class="sxs-lookup"><span data-stu-id="f6d50-471">Views</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|檢視表的擁有人。|  
-|VIEW\_NAME|String|檢視表名稱。|  
-|TEXT\_LENGTH|Decimal|檢視表文字的長度。|  
-|TEXT|String|檢視表文字。|  
-|TYPE\_TEXT\_LENGTH|Decimal|具型別檢視表之型別子句的長度。|  
-|TYPE\_TEXT|String|具型別檢視表的型別子句。|  
-|OID\_TEXT\_LENGTH|Decimal|具型別檢視表之 WITH OID 子句的長度。|  
-|OID\_TEXT|String|具型別檢視表的 WITH OID 子句。|  
-|VIEW\_TYPE\_OWNER|String|檢視表型別的擁有人 \(如果檢視表是具型別檢視表\)。|  
-|VIEW\_TYPE|String|檢視表的型別 \(如果檢視表是具型別檢視表\)。|  
-|SUPERVIEW\_NAME|String|超級檢視表的名稱。|  
+|<span data-ttu-id="f6d50-472">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-472">ColumnName</span></span>|<span data-ttu-id="f6d50-473">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-473">DataType</span></span>|<span data-ttu-id="f6d50-474">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-474">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-475">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-475">OWNER</span></span>|<span data-ttu-id="f6d50-476">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-476">String</span></span>|<span data-ttu-id="f6d50-477">檢視表的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-477">Owner of the view.</span></span>|  
+|<span data-ttu-id="f6d50-478">VIEW_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-478">VIEW_NAME</span></span>|<span data-ttu-id="f6d50-479">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-479">String</span></span>|<span data-ttu-id="f6d50-480">檢視表名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-480">Name of the view.</span></span>|  
+|<span data-ttu-id="f6d50-481">TEXT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-481">TEXT_LENGTH</span></span>|<span data-ttu-id="f6d50-482">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-482">Decimal</span></span>|<span data-ttu-id="f6d50-483">檢視表文字的長度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-483">Length of the view text.</span></span>|  
+|<span data-ttu-id="f6d50-484">TEXT</span><span class="sxs-lookup"><span data-stu-id="f6d50-484">TEXT</span></span>|<span data-ttu-id="f6d50-485">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-485">String</span></span>|<span data-ttu-id="f6d50-486">檢視表文字。</span><span class="sxs-lookup"><span data-stu-id="f6d50-486">View text.</span></span>|  
+|<span data-ttu-id="f6d50-487">TYPE_TEXT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-487">TYPE_TEXT_LENGTH</span></span>|<span data-ttu-id="f6d50-488">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-488">Decimal</span></span>|<span data-ttu-id="f6d50-489">具型別檢視表之型別子句的長度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-489">Length of the type clause of the typed view.</span></span>|  
+|<span data-ttu-id="f6d50-490">TYPE_TEXT</span><span class="sxs-lookup"><span data-stu-id="f6d50-490">TYPE_TEXT</span></span>|<span data-ttu-id="f6d50-491">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-491">String</span></span>|<span data-ttu-id="f6d50-492">具型別檢視表的型別子句。</span><span class="sxs-lookup"><span data-stu-id="f6d50-492">Type clause of the typed view.</span></span>|  
+|<span data-ttu-id="f6d50-493">OID_TEXT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-493">OID_TEXT_LENGTH</span></span>|<span data-ttu-id="f6d50-494">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-494">Decimal</span></span>|<span data-ttu-id="f6d50-495">具型別檢視表之 WITH OID 子句的長度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-495">Length of the WITH OID clause of the typed view.</span></span>|  
+|<span data-ttu-id="f6d50-496">OID_TEXT</span><span class="sxs-lookup"><span data-stu-id="f6d50-496">OID_TEXT</span></span>|<span data-ttu-id="f6d50-497">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-497">String</span></span>|<span data-ttu-id="f6d50-498">具型別檢視表的 WITH OID 子句。</span><span class="sxs-lookup"><span data-stu-id="f6d50-498">WITH OID clause of the typed view.</span></span>|  
+|<span data-ttu-id="f6d50-499">VIEW_TYPE_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-499">VIEW_TYPE_OWNER</span></span>|<span data-ttu-id="f6d50-500">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-500">String</span></span>|<span data-ttu-id="f6d50-501">檢視表型別的擁有人 (如果檢視表是具型別檢視表)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-501">Owner of the type of the view if the view is a typed view.</span></span>|  
+|<span data-ttu-id="f6d50-502">VIEW_TYPE</span><span class="sxs-lookup"><span data-stu-id="f6d50-502">VIEW_TYPE</span></span>|<span data-ttu-id="f6d50-503">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-503">String</span></span>|<span data-ttu-id="f6d50-504">檢視表的型別 (如果檢視表是具型別檢視表)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-504">Type of the view if the view is a typed view.</span></span>|  
+|<span data-ttu-id="f6d50-505">SUPERVIEW_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-505">SUPERVIEW_NAME</span></span>|<span data-ttu-id="f6d50-506">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-506">String</span></span>|<span data-ttu-id="f6d50-507">超級檢視表的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-507">Name of the superview.</span></span>|  
   
-## 函式  
+## <a name="functions"></a><span data-ttu-id="f6d50-508">函式</span><span class="sxs-lookup"><span data-stu-id="f6d50-508">Functions</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|物件的擁有人。|  
-|OBJECT\_NAME|String|物件名稱。|  
-|SUBOBJECT\_NAME|String|子物件的名稱 \(例如，分割區\)。|  
-|OBJECT\_ID|Decimal|物件的字典物件號碼。|  
-|DATA\_OBJECT\_ID|Decimal|包含物件之區段的字典物件號碼。|  
-|OBJECT\_TYPE|String|物件的型別。|  
-|CREATED|DateTime|建立物件的日期。|  
-|LAST\_DDL\_TIME|DateTime|DDL 命令對物件進行最後一次修改的時間戳記 \(包括授權及撤銷\)。|  
-|TIMESTAMP|String|物件規格的時間戳記 \(字元資料\)|  
-|狀態|String|物件的狀態 \(VALID、INVALID 或 N\/A\)。|  
-|TEMPORARY|String|物件是否為暫存的 \(目前的工作階段僅能看到置於此物件本身的資料\)。|  
-|GENERATED|String|是否已產生此物件系統的名稱？  \(Y &#124; N\)。|  
-|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 \(Y &#124; N\)。|  
+|<span data-ttu-id="f6d50-509">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-509">ColumnName</span></span>|<span data-ttu-id="f6d50-510">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-510">DataType</span></span>|<span data-ttu-id="f6d50-511">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-511">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-512">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-512">OWNER</span></span>|<span data-ttu-id="f6d50-513">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-513">String</span></span>|<span data-ttu-id="f6d50-514">物件的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-514">Owner of the object.</span></span>|  
+|<span data-ttu-id="f6d50-515">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-515">OBJECT_NAME</span></span>|<span data-ttu-id="f6d50-516">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-516">String</span></span>|<span data-ttu-id="f6d50-517">物件名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-517">Name of the object.</span></span>|  
+|<span data-ttu-id="f6d50-518">SUBOBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-518">SUBOBJECT_NAME</span></span>|<span data-ttu-id="f6d50-519">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-519">String</span></span>|<span data-ttu-id="f6d50-520">子物件的名稱 (例如，分割區)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-520">Name of the subobject (for example, partition).</span></span>|  
+|<span data-ttu-id="f6d50-521">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-521">OBJECT_ID</span></span>|<span data-ttu-id="f6d50-522">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-522">Decimal</span></span>|<span data-ttu-id="f6d50-523">物件的字典物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-523">Dictionary object number of the object.</span></span>|  
+|<span data-ttu-id="f6d50-524">DATA_OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-524">DATA_OBJECT_ID</span></span>|<span data-ttu-id="f6d50-525">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-525">Decimal</span></span>|<span data-ttu-id="f6d50-526">包含物件之區段的字典物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-526">Dictionary object number of the segment that contains the object.</span></span>|  
+|<span data-ttu-id="f6d50-527">OBJECT_TYPE</span><span class="sxs-lookup"><span data-stu-id="f6d50-527">OBJECT_TYPE</span></span>|<span data-ttu-id="f6d50-528">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-528">String</span></span>|<span data-ttu-id="f6d50-529">物件的型別。</span><span class="sxs-lookup"><span data-stu-id="f6d50-529">Type of the object.</span></span>|  
+|<span data-ttu-id="f6d50-530">CREATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-530">CREATED</span></span>|<span data-ttu-id="f6d50-531">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-531">DateTime</span></span>|<span data-ttu-id="f6d50-532">建立物件的日期。</span><span class="sxs-lookup"><span data-stu-id="f6d50-532">The date the object was created.</span></span>|  
+|<span data-ttu-id="f6d50-533">LAST_DDL_TIME</span><span class="sxs-lookup"><span data-stu-id="f6d50-533">LAST_DDL_TIME</span></span>|<span data-ttu-id="f6d50-534">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-534">DateTime</span></span>|<span data-ttu-id="f6d50-535">DDL 命令對物件進行最後一次修改的時間戳記 (包括授權及撤銷)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-535">Timestamp for the last modification of the object resulting from a DDL command (including grants and revokes).</span></span>|  
+|<span data-ttu-id="f6d50-536">TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="f6d50-536">TIMESTAMP</span></span>|<span data-ttu-id="f6d50-537">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-537">String</span></span>|<span data-ttu-id="f6d50-538">物件規格的時間戳記 (字元資料)</span><span class="sxs-lookup"><span data-stu-id="f6d50-538">Timestamp for the specification of the object (character data)</span></span>|  
+|<span data-ttu-id="f6d50-539">狀態</span><span class="sxs-lookup"><span data-stu-id="f6d50-539">STATUS</span></span>|<span data-ttu-id="f6d50-540">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-540">String</span></span>|<span data-ttu-id="f6d50-541">物件的狀態 (VALID、INVALID 或 N/A)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-541">Status of the object (VALID, INVALID, or N/A).</span></span>|  
+|<span data-ttu-id="f6d50-542">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-542">TEMPORARY</span></span>|<span data-ttu-id="f6d50-543">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-543">String</span></span>|<span data-ttu-id="f6d50-544">物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-544">Whether the object is temporary (the current session can see only data that it placed in this object itself).</span></span>|  
+|<span data-ttu-id="f6d50-545">GENERATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-545">GENERATED</span></span>|<span data-ttu-id="f6d50-546">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-546">String</span></span>|<span data-ttu-id="f6d50-547">是否已產生此物件系統的名稱？</span><span class="sxs-lookup"><span data-stu-id="f6d50-547">Was the name of this object system generated?</span></span> <span data-ttu-id="f6d50-548">(Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-548">(Y &#124; N).</span></span>|  
+|<span data-ttu-id="f6d50-549">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-549">SECONDARY</span></span>|<span data-ttu-id="f6d50-550">字串</span><span class="sxs-lookup"><span data-stu-id="f6d50-550">String</span></span>|<span data-ttu-id="f6d50-551">這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-551">Whether this is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y &#124; N).</span></span>|  
   
-## 封裝  
+## <a name="packages"></a><span data-ttu-id="f6d50-552">封裝</span><span class="sxs-lookup"><span data-stu-id="f6d50-552">Packages</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|物件的擁有人。|  
-|OBJECT\_NAME|String|物件名稱。|  
-|SUBOBJECT\_NAME|String|子物件的名稱 \(例如，分割區\)。|  
-|OBJECT\_ID|Decimal|物件的字典物件號碼。|  
-|DATA\_OBJECT\_ID|Decimal|包含物件之區段的字典物件號碼。|  
-|LAST\_DDL\_TIME|DateTime|DDL 命令對物件進行最後一次修改的時間戳記 \(包括授權及撤銷\)。|  
-|TIMESTAMP|String|物件規格的時間戳記 \(字元資料\)。|  
-|狀態|String|物件的狀態 \(VALID、INVALID 或 N\/A\)。|  
-|TEMPORARY|String|物件是否為暫存的 \(目前的工作階段僅能看到置於此物件本身的資料\)。|  
-|GENERATED|String|是否已產生此物件系統的名稱？  \(Y &#124; N\)。|  
-|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 \(Y &#124; N\)。|  
-|CREATED|DateTime|建立物件的日期。|  
+|<span data-ttu-id="f6d50-553">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-553">ColumnName</span></span>|<span data-ttu-id="f6d50-554">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-554">DataType</span></span>|<span data-ttu-id="f6d50-555">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-555">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-556">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-556">OWNER</span></span>|<span data-ttu-id="f6d50-557">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-557">String</span></span>|<span data-ttu-id="f6d50-558">物件的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-558">Owner of the object.</span></span>|  
+|<span data-ttu-id="f6d50-559">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-559">OBJECT_NAME</span></span>|<span data-ttu-id="f6d50-560">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-560">String</span></span>|<span data-ttu-id="f6d50-561">物件名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-561">Name of the object.</span></span>|  
+|<span data-ttu-id="f6d50-562">SUBOBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-562">SUBOBJECT_NAME</span></span>|<span data-ttu-id="f6d50-563">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-563">String</span></span>|<span data-ttu-id="f6d50-564">子物件的名稱 (例如，分割區)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-564">Name of the subobject (for example, partition).</span></span>|  
+|<span data-ttu-id="f6d50-565">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-565">OBJECT_ID</span></span>|<span data-ttu-id="f6d50-566">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-566">Decimal</span></span>|<span data-ttu-id="f6d50-567">物件的字典物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-567">Dictionary object number of the object.</span></span>|  
+|<span data-ttu-id="f6d50-568">DATA_OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-568">DATA_OBJECT_ID</span></span>|<span data-ttu-id="f6d50-569">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-569">Decimal</span></span>|<span data-ttu-id="f6d50-570">包含物件之區段的字典物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-570">Dictionary object number of the segment that contains the object.</span></span>|  
+|<span data-ttu-id="f6d50-571">LAST_DDL_TIME</span><span class="sxs-lookup"><span data-stu-id="f6d50-571">LAST_DDL_TIME</span></span>|<span data-ttu-id="f6d50-572">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-572">DateTime</span></span>|<span data-ttu-id="f6d50-573">DDL 命令對物件進行最後一次修改的時間戳記 (包括授權及撤銷)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-573">Timestamp for the last modification of the object resulting from a DDL command (including grants and revokes).</span></span>|  
+|<span data-ttu-id="f6d50-574">TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="f6d50-574">TIMESTAMP</span></span>|<span data-ttu-id="f6d50-575">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-575">String</span></span>|<span data-ttu-id="f6d50-576">物件規格的時間戳記 (字元資料)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-576">Timestamp for the specification of the object (character data).</span></span>|  
+|<span data-ttu-id="f6d50-577">狀態</span><span class="sxs-lookup"><span data-stu-id="f6d50-577">STATUS</span></span>|<span data-ttu-id="f6d50-578">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-578">String</span></span>|<span data-ttu-id="f6d50-579">物件的狀態 (VALID、INVALID 或 N/A)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-579">Status of the object (VALID, INVALID, or N/A).</span></span>|  
+|<span data-ttu-id="f6d50-580">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-580">TEMPORARY</span></span>|<span data-ttu-id="f6d50-581">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-581">String</span></span>|<span data-ttu-id="f6d50-582">物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-582">Whether the object is temporary (the current session can see only data that it placed in this object itself).</span></span>|  
+|<span data-ttu-id="f6d50-583">GENERATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-583">GENERATED</span></span>|<span data-ttu-id="f6d50-584">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-584">String</span></span>|<span data-ttu-id="f6d50-585">是否已產生此物件系統的名稱？</span><span class="sxs-lookup"><span data-stu-id="f6d50-585">Was the name of this object system generated?</span></span> <span data-ttu-id="f6d50-586">(Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-586">(Y &#124; N).</span></span>|  
+|<span data-ttu-id="f6d50-587">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-587">SECONDARY</span></span>|<span data-ttu-id="f6d50-588">字串</span><span class="sxs-lookup"><span data-stu-id="f6d50-588">String</span></span>|<span data-ttu-id="f6d50-589">這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-589">Whether this is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y &#124; N).</span></span>|  
+|<span data-ttu-id="f6d50-590">CREATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-590">CREATED</span></span>|<span data-ttu-id="f6d50-591">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-591">DateTime</span></span>|<span data-ttu-id="f6d50-592">建立物件的日期。</span><span class="sxs-lookup"><span data-stu-id="f6d50-592">The date the object was created.</span></span>|  
   
-## PackageBodies  
+## <a name="packagebodies"></a><span data-ttu-id="f6d50-593">PackageBodies</span><span class="sxs-lookup"><span data-stu-id="f6d50-593">PackageBodies</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|物件的擁有人。|  
-|OBJECT\_NAME|String|物件名稱。|  
-|SUBOBJECT\_NAME|String|子物件的名稱 \(例如，分割區\)。|  
-|OBJECT\_ID|Decimal|物件的字典物件號碼。|  
-|DATA\_OBJECT\_ID|Decimal|包含物件之區段的字典物件號碼。|  
-|LAST\_DDL\_TIME|DateTime|DDL 命令對物件進行最後一次修改的時間戳記 \(包括授權及撤銷\)。|  
-|TIMESTAMP|String|物件規格的時間戳記 \(字元資料\)。|  
-|狀態|String|物件的狀態 \(VALID、INVALID 或 N\/A\)。|  
-|TEMPORARY|String|物件是否為暫存的 \(目前的工作階段僅能看到置於此物件本身的資料\)。|  
-|GENERATED|String|是否已產生此物件系統的名稱？  \(Y &#124; N\)。|  
-|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 \(Y &#124; N\)。|  
-|CREATED|DateTime|建立物件的日期。|  
+|<span data-ttu-id="f6d50-594">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-594">ColumnName</span></span>|<span data-ttu-id="f6d50-595">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-595">DataType</span></span>|<span data-ttu-id="f6d50-596">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-596">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-597">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-597">OWNER</span></span>|<span data-ttu-id="f6d50-598">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-598">String</span></span>|<span data-ttu-id="f6d50-599">物件的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-599">Owner of the object.</span></span>|  
+|<span data-ttu-id="f6d50-600">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-600">OBJECT_NAME</span></span>|<span data-ttu-id="f6d50-601">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-601">String</span></span>|<span data-ttu-id="f6d50-602">物件名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-602">Name of the object.</span></span>|  
+|<span data-ttu-id="f6d50-603">SUBOBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-603">SUBOBJECT_NAME</span></span>|<span data-ttu-id="f6d50-604">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-604">String</span></span>|<span data-ttu-id="f6d50-605">子物件的名稱 (例如，分割區)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-605">Name of the subobject (for example, partition).</span></span>|  
+|<span data-ttu-id="f6d50-606">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-606">OBJECT_ID</span></span>|<span data-ttu-id="f6d50-607">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-607">Decimal</span></span>|<span data-ttu-id="f6d50-608">物件的字典物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-608">Dictionary object number of the object.</span></span>|  
+|<span data-ttu-id="f6d50-609">DATA_OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-609">DATA_OBJECT_ID</span></span>|<span data-ttu-id="f6d50-610">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-610">Decimal</span></span>|<span data-ttu-id="f6d50-611">包含物件之區段的字典物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-611">Dictionary object number of the segment that contains the object.</span></span>|  
+|<span data-ttu-id="f6d50-612">LAST_DDL_TIME</span><span class="sxs-lookup"><span data-stu-id="f6d50-612">LAST_DDL_TIME</span></span>|<span data-ttu-id="f6d50-613">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-613">DateTime</span></span>|<span data-ttu-id="f6d50-614">DDL 命令對物件進行最後一次修改的時間戳記 (包括授權及撤銷)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-614">Timestamp for the last modification of the object resulting from a DDL command (including grants and revokes).</span></span>|  
+|<span data-ttu-id="f6d50-615">TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="f6d50-615">TIMESTAMP</span></span>|<span data-ttu-id="f6d50-616">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-616">String</span></span>|<span data-ttu-id="f6d50-617">物件規格的時間戳記 (字元資料)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-617">Timestamp for the specification of the object (character data).</span></span>|  
+|<span data-ttu-id="f6d50-618">狀態</span><span class="sxs-lookup"><span data-stu-id="f6d50-618">STATUS</span></span>|<span data-ttu-id="f6d50-619">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-619">String</span></span>|<span data-ttu-id="f6d50-620">物件的狀態 (VALID、INVALID 或 N/A)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-620">Status of the object (VALID, INVALID, or N/A).</span></span>|  
+|<span data-ttu-id="f6d50-621">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-621">TEMPORARY</span></span>|<span data-ttu-id="f6d50-622">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-622">String</span></span>|<span data-ttu-id="f6d50-623">物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-623">Whether the object is temporary (the current session can see only data that it placed in this object itself).</span></span>|  
+|<span data-ttu-id="f6d50-624">GENERATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-624">GENERATED</span></span>|<span data-ttu-id="f6d50-625">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-625">String</span></span>|<span data-ttu-id="f6d50-626">是否已產生此物件系統的名稱？</span><span class="sxs-lookup"><span data-stu-id="f6d50-626">Was the name of this object system generated?</span></span> <span data-ttu-id="f6d50-627">(Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-627">(Y &#124; N).</span></span>|  
+|<span data-ttu-id="f6d50-628">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="f6d50-628">SECONDARY</span></span>|<span data-ttu-id="f6d50-629">字串</span><span class="sxs-lookup"><span data-stu-id="f6d50-629">String</span></span>|<span data-ttu-id="f6d50-630">這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-630">Whether this is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y &#124; N).</span></span>|  
+|<span data-ttu-id="f6d50-631">CREATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-631">CREATED</span></span>|<span data-ttu-id="f6d50-632">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-632">DateTime</span></span>|<span data-ttu-id="f6d50-633">建立物件的日期。</span><span class="sxs-lookup"><span data-stu-id="f6d50-633">The date the object was created.</span></span>|  
   
-## 引數  
+## <a name="arguments"></a><span data-ttu-id="f6d50-634">引數</span><span class="sxs-lookup"><span data-stu-id="f6d50-634">Arguments</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|物件的擁有人名稱。|  
-|PACKAGE\_NAME|String|封裝名稱。|  
-|OBJECT\_NAME|String|程序或函式的名稱。|  
-|ARGUMENT\_NAME|String|引數的名稱。|  
-|POSITION|Decimal|在引數清單中的位置，若為函式傳回值，則為 NULL。|  
-|SEQUENCE|Decimal|引數序列，包括所有的巢狀層次。|  
-|DEFAULT\_VALUE|String|引數的預設值。|  
-|DEFAULT\_LENGTH|Decimal|引數預設值的長度。|  
-|IN\_OUT|String|引數方向 \(IN、OUT 或 IN\/OUT\)。|  
-|DATA\_LENGTH|Decimal|資料行的長度 \(以位元組為單位\)。|  
-|DATA\_PRECISION|Decimal|十進位數字 \(NUMBER\) 或二進位數字 \(FLOAT\) 的長度。|  
-|DATA\_SCALE|Decimal|數字中小數點右邊的位數。|  
-|DATA\_TYPE|String|引數的資料型別。|  
+|<span data-ttu-id="f6d50-635">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-635">ColumnName</span></span>|<span data-ttu-id="f6d50-636">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-636">DataType</span></span>|<span data-ttu-id="f6d50-637">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-637">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-638">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-638">OWNER</span></span>|<span data-ttu-id="f6d50-639">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-639">String</span></span>|<span data-ttu-id="f6d50-640">物件的擁有人名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-640">Name of the owner of the object.</span></span>|  
+|<span data-ttu-id="f6d50-641">PACKAGE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-641">PACKAGE_NAME</span></span>|<span data-ttu-id="f6d50-642">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-642">String</span></span>|<span data-ttu-id="f6d50-643">封裝名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-643">Package name.</span></span>|  
+|<span data-ttu-id="f6d50-644">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-644">OBJECT_NAME</span></span>|<span data-ttu-id="f6d50-645">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-645">String</span></span>|<span data-ttu-id="f6d50-646">程序或函式的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-646">Name of the procedure or function.</span></span>|  
+|<span data-ttu-id="f6d50-647">ARGUMENT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-647">ARGUMENT_NAME</span></span>|<span data-ttu-id="f6d50-648">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-648">String</span></span>|<span data-ttu-id="f6d50-649">引數的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-649">Name of the argument.</span></span>|  
+|<span data-ttu-id="f6d50-650">POSITION</span><span class="sxs-lookup"><span data-stu-id="f6d50-650">POSITION</span></span>|<span data-ttu-id="f6d50-651">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-651">Decimal</span></span>|<span data-ttu-id="f6d50-652">在引數清單中的位置，若為函式傳回值，則為 NULL。</span><span class="sxs-lookup"><span data-stu-id="f6d50-652">Position in argument list, or NULL for function return value.</span></span>|  
+|<span data-ttu-id="f6d50-653">SEQUENCE</span><span class="sxs-lookup"><span data-stu-id="f6d50-653">SEQUENCE</span></span>|<span data-ttu-id="f6d50-654">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-654">Decimal</span></span>|<span data-ttu-id="f6d50-655">引數序列，包括所有的巢狀層次。</span><span class="sxs-lookup"><span data-stu-id="f6d50-655">Argument sequence, including all nesting levels.</span></span>|  
+|<span data-ttu-id="f6d50-656">DEFAULT_VALUE</span><span class="sxs-lookup"><span data-stu-id="f6d50-656">DEFAULT_VALUE</span></span>|<span data-ttu-id="f6d50-657">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-657">String</span></span>|<span data-ttu-id="f6d50-658">引數的預設值。</span><span class="sxs-lookup"><span data-stu-id="f6d50-658">Default value for the argument.</span></span>|  
+|<span data-ttu-id="f6d50-659">DEFAULT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-659">DEFAULT_LENGTH</span></span>|<span data-ttu-id="f6d50-660">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-660">Decimal</span></span>|<span data-ttu-id="f6d50-661">引數預設值的長度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-661">Length of default value for the argument.</span></span>|  
+|<span data-ttu-id="f6d50-662">IN_OUT</span><span class="sxs-lookup"><span data-stu-id="f6d50-662">IN_OUT</span></span>|<span data-ttu-id="f6d50-663">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-663">String</span></span>|<span data-ttu-id="f6d50-664">引數方向 (IN、OUT 或 IN/OUT)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-664">Argument direction (IN, OUT, or IN/OUT).</span></span>|  
+|<span data-ttu-id="f6d50-665">DATA_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-665">DATA_LENGTH</span></span>|<span data-ttu-id="f6d50-666">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-666">Decimal</span></span>|<span data-ttu-id="f6d50-667">資料行的長度 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-667">Length of the column in bytes.</span></span>|  
+|<span data-ttu-id="f6d50-668">DATA_PRECISION</span><span class="sxs-lookup"><span data-stu-id="f6d50-668">DATA_PRECISION</span></span>|<span data-ttu-id="f6d50-669">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-669">Decimal</span></span>|<span data-ttu-id="f6d50-670">十進位數字 (NUMBER) 或二進位數字 (FLOAT) 的長度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-670">Length in decimal digits (NUMBER) or binary digits (FLOAT).</span></span>|  
+|<span data-ttu-id="f6d50-671">DATA_SCALE</span><span class="sxs-lookup"><span data-stu-id="f6d50-671">DATA_SCALE</span></span>|<span data-ttu-id="f6d50-672">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-672">Decimal</span></span>|<span data-ttu-id="f6d50-673">數字中小數點右邊的位數。</span><span class="sxs-lookup"><span data-stu-id="f6d50-673">Digits to right of decimal point in a number.</span></span>|  
+|<span data-ttu-id="f6d50-674">DATA_TYPE</span><span class="sxs-lookup"><span data-stu-id="f6d50-674">DATA_TYPE</span></span>|<span data-ttu-id="f6d50-675">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-675">String</span></span>|<span data-ttu-id="f6d50-676">引數的資料型別。</span><span class="sxs-lookup"><span data-stu-id="f6d50-676">Data type of the argument.</span></span>|  
   
-## UniqueKeys  
+## <a name="uniquekeys"></a><span data-ttu-id="f6d50-677">UniqueKeys</span><span class="sxs-lookup"><span data-stu-id="f6d50-677">UniqueKeys</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|條件約束定義的擁有人。|  
-|CONSTRAINT\_NAME|String|條件約束定義的名稱。|  
-|TABLE\_NAME|String|與具有條件約束定義之資料表 \(或檢視表\) 相關的名稱。|  
-|SEARCH\_CONDITION|String|檢查條件約束之搜尋條件的文字。|  
-|R\_OWNER|String|參考條件約束中的參考資料表擁有人。|  
-|R\_CONSTRAINT\_NAME|String|參考資料表之唯一的條件約束定義的名稱。|  
-|DELETE\_RULE|String|參考條件約束的刪除規則 \(CASCADE 或 NO ACTION\)。|  
-|狀態|String|條件約束的強制狀態 \(ENABLED 或 DISABLED\)。|  
-|DEFERRABLE|String|條件約束是否可以延遲。|  
-|VALIDATED|String|是否所有資料均遵循條件約束 \(VALIDATED 或 NOT VALIDATED\)。|  
-|GENERATED|String|條件約束的名稱是使用者產生的還是系統產生的。|  
-|BAD|String|YES 值表示此條件約束以模稜兩可的方式指定世紀。  為避免因模稜兩可而導致錯誤，請使用四位數年份的 TO\_DATE 函式重寫條件約束。|  
-|RELY|String|是否已強制執行啟用的條件約束。|  
-|LAST\_CHANGE|DateTime|上次啟用或停用條件約束的時間|  
-|INDEX\_OWNER|String|擁有索引的使用者名稱|  
-|INDEX\_NAME|String|索引名稱|  
+|<span data-ttu-id="f6d50-678">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-678">ColumnName</span></span>|<span data-ttu-id="f6d50-679">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-679">DataType</span></span>|<span data-ttu-id="f6d50-680">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-680">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-681">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-681">OWNER</span></span>|<span data-ttu-id="f6d50-682">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-682">String</span></span>|<span data-ttu-id="f6d50-683">條件約束定義的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-683">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-684">CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-684">CONSTRAINT_NAME</span></span>|<span data-ttu-id="f6d50-685">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-685">String</span></span>|<span data-ttu-id="f6d50-686">條件約束定義的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-686">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-687">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-687">TABLE_NAME</span></span>|<span data-ttu-id="f6d50-688">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-688">String</span></span>|<span data-ttu-id="f6d50-689">與具有條件約束定義之資料表 (或檢視表) 相關的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-689">Name associated with the table (or view) with constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-690">SEARCH_CONDITION</span><span class="sxs-lookup"><span data-stu-id="f6d50-690">SEARCH_CONDITION</span></span>|<span data-ttu-id="f6d50-691">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-691">String</span></span>|<span data-ttu-id="f6d50-692">檢查條件約束之搜尋條件的文字。</span><span class="sxs-lookup"><span data-stu-id="f6d50-692">Text of search condition for a check constraint.</span></span>|  
+|<span data-ttu-id="f6d50-693">R_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-693">R_OWNER</span></span>|<span data-ttu-id="f6d50-694">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-694">String</span></span>|<span data-ttu-id="f6d50-695">參考條件約束中的參考資料表擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-695">Owner of table referred to in a referential constraint.</span></span>|  
+|<span data-ttu-id="f6d50-696">R_CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-696">R_CONSTRAINT_NAME</span></span>|<span data-ttu-id="f6d50-697">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-697">String</span></span>|<span data-ttu-id="f6d50-698">參考資料表之唯一的條件約束定義的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-698">Name of the unique constraint definition for referenced table.</span></span>|  
+|<span data-ttu-id="f6d50-699">DELETE_RULE</span><span class="sxs-lookup"><span data-stu-id="f6d50-699">DELETE_RULE</span></span>|<span data-ttu-id="f6d50-700">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-700">String</span></span>|<span data-ttu-id="f6d50-701">參考條件約束的刪除規則 (CASCADE 或 NO ACTION)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-701">Delete rule for a referential constraint (CASCADE or NO ACTION).</span></span>|  
+|<span data-ttu-id="f6d50-702">狀態</span><span class="sxs-lookup"><span data-stu-id="f6d50-702">STATUS</span></span>|<span data-ttu-id="f6d50-703">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-703">String</span></span>|<span data-ttu-id="f6d50-704">條件約束的強制狀態 (ENABLED 或 DISABLED)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-704">Enforcement status of constraint (ENABLED or DISABLED).</span></span>|  
+|<span data-ttu-id="f6d50-705">DEFERRABLE</span><span class="sxs-lookup"><span data-stu-id="f6d50-705">DEFERRABLE</span></span>|<span data-ttu-id="f6d50-706">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-706">String</span></span>|<span data-ttu-id="f6d50-707">條件約束是否可以延遲。</span><span class="sxs-lookup"><span data-stu-id="f6d50-707">Whether the constraint is deferrable.</span></span>|  
+|<span data-ttu-id="f6d50-708">VALIDATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-708">VALIDATED</span></span>|<span data-ttu-id="f6d50-709">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-709">String</span></span>|<span data-ttu-id="f6d50-710">是否所有資料均遵循條件約束 (VALIDATED 或 NOT VALIDATED)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-710">Whether all data obeys the constraint (VALIDATED or NOT VALIDATED).</span></span>|  
+|<span data-ttu-id="f6d50-711">GENERATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-711">GENERATED</span></span>|<span data-ttu-id="f6d50-712">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-712">String</span></span>|<span data-ttu-id="f6d50-713">條件約束的名稱是使用者產生的還是系統產生的。</span><span class="sxs-lookup"><span data-stu-id="f6d50-713">Whether the name of the constraint is user or system generated.</span></span>|  
+|<span data-ttu-id="f6d50-714">BAD</span><span class="sxs-lookup"><span data-stu-id="f6d50-714">BAD</span></span>|<span data-ttu-id="f6d50-715">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-715">String</span></span>|<span data-ttu-id="f6d50-716">YES 值表示此條件約束以模稜兩可的方式指定世紀。</span><span class="sxs-lookup"><span data-stu-id="f6d50-716">A YES value indicates that this constraint specifies a century in an ambiguous manner.</span></span> <span data-ttu-id="f6d50-717">為避免因模稜兩可而導致錯誤，請使用四位數年份的 TO_DATE 函式重寫條件約束。</span><span class="sxs-lookup"><span data-stu-id="f6d50-717">To avoid errors resulting from this ambiguity, rewrite the constraint using the TO_DATE function with a four-digit year.</span></span>|  
+|<span data-ttu-id="f6d50-718">RELY</span><span class="sxs-lookup"><span data-stu-id="f6d50-718">RELY</span></span>|<span data-ttu-id="f6d50-719">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-719">String</span></span>|<span data-ttu-id="f6d50-720">是否已強制執行啟用的條件約束。</span><span class="sxs-lookup"><span data-stu-id="f6d50-720">Whether an enabled constraint is enforced or unenforced.</span></span>|  
+|<span data-ttu-id="f6d50-721">LAST_CHANGE</span><span class="sxs-lookup"><span data-stu-id="f6d50-721">LAST_CHANGE</span></span>|<span data-ttu-id="f6d50-722">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-722">DateTime</span></span>|<span data-ttu-id="f6d50-723">上次啟用或停用條件約束的時間</span><span class="sxs-lookup"><span data-stu-id="f6d50-723">When the constraint was last enabled or disabled</span></span>|  
+|<span data-ttu-id="f6d50-724">INDEX_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-724">INDEX_OWNER</span></span>|<span data-ttu-id="f6d50-725">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-725">String</span></span>|<span data-ttu-id="f6d50-726">擁有索引的使用者名稱</span><span class="sxs-lookup"><span data-stu-id="f6d50-726">Name of the user owning the index</span></span>|  
+|<span data-ttu-id="f6d50-727">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-727">INDEX_NAME</span></span>|<span data-ttu-id="f6d50-728">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-728">String</span></span>|<span data-ttu-id="f6d50-729">索引名稱</span><span class="sxs-lookup"><span data-stu-id="f6d50-729">Name of the index</span></span>|  
   
-## PrimaryKeys  
+## <a name="primarykeys"></a><span data-ttu-id="f6d50-730">PrimaryKeys</span><span class="sxs-lookup"><span data-stu-id="f6d50-730">PrimaryKeys</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|條件約束定義的擁有人。|  
-|CONSTRAINT\_NAME|String|條件約束定義的名稱。|  
-|TABLE\_NAME|String|與具有條件約束定義之資料表 \(或檢視表\) 相關的名稱。|  
-|SEARCH\_CONDITION|String|檢查條件約束之搜尋條件的文字。|  
-|R\_OWNER|String|參考條件約束中的參考資料表擁有人。|  
-|R\_CONSTRAINT\_NAME|String|參考資料表之唯一的條件約束定義的名稱。|  
-|DELETE\_RULE|String|參考條件約束的刪除規則 \(CASCADE 或 NO ACTION\)。|  
-|狀態|String|條件約束的強制狀態 \(ENABLED 或 DISABLED\)。|  
-|DEFERRABLE|String|條件約束是否可以延遲。|  
-|VALIDATED|String|是否所有資料均遵循條件約束 \(VALIDATED 或 NOT VALIDATED\)。|  
-|GENERATED|String|條件約束的名稱是使用者產生的還是系統產生的。|  
-|BAD|String|YES 值表示此條件約束以模稜兩可的方式指定世紀。  為避免因模稜兩可而導致錯誤，請使用四位數年份的 TO\_DATE 函式重寫條件約束。|  
-|RELY|String|是否已強制執行啟用的條件約束。|  
-|LAST\_CHANGE|DateTime|上次啟用或停用條件約束的時間。|  
-|INDEX\_OWNER|String|擁有索引的使用者名稱。|  
-|INDEX\_NAME|String|索引名稱。|  
+|<span data-ttu-id="f6d50-731">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-731">ColumnName</span></span>|<span data-ttu-id="f6d50-732">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-732">DataType</span></span>|<span data-ttu-id="f6d50-733">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-733">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-734">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-734">OWNER</span></span>|<span data-ttu-id="f6d50-735">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-735">String</span></span>|<span data-ttu-id="f6d50-736">條件約束定義的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-736">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-737">CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-737">CONSTRAINT_NAME</span></span>|<span data-ttu-id="f6d50-738">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-738">String</span></span>|<span data-ttu-id="f6d50-739">條件約束定義的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-739">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-740">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-740">TABLE_NAME</span></span>|<span data-ttu-id="f6d50-741">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-741">String</span></span>|<span data-ttu-id="f6d50-742">與具有條件約束定義之資料表 (或檢視表) 相關的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-742">Name associated with the table (or view) with constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-743">SEARCH_CONDITION</span><span class="sxs-lookup"><span data-stu-id="f6d50-743">SEARCH_CONDITION</span></span>|<span data-ttu-id="f6d50-744">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-744">String</span></span>|<span data-ttu-id="f6d50-745">檢查條件約束之搜尋條件的文字。</span><span class="sxs-lookup"><span data-stu-id="f6d50-745">Text of search condition for a check constraint.</span></span>|  
+|<span data-ttu-id="f6d50-746">R_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-746">R_OWNER</span></span>|<span data-ttu-id="f6d50-747">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-747">String</span></span>|<span data-ttu-id="f6d50-748">參考條件約束中的參考資料表擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-748">Owner of table referred to in a referential constraint.</span></span>|  
+|<span data-ttu-id="f6d50-749">R_CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-749">R_CONSTRAINT_NAME</span></span>|<span data-ttu-id="f6d50-750">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-750">String</span></span>|<span data-ttu-id="f6d50-751">參考資料表之唯一的條件約束定義的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-751">Name of the unique constraint definition for referenced table.</span></span>|  
+|<span data-ttu-id="f6d50-752">DELETE_RULE</span><span class="sxs-lookup"><span data-stu-id="f6d50-752">DELETE_RULE</span></span>|<span data-ttu-id="f6d50-753">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-753">String</span></span>|<span data-ttu-id="f6d50-754">參考條件約束的刪除規則 (CASCADE 或 NO ACTION)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-754">Delete rule for a referential constraint (CASCADE or NO ACTION).</span></span>|  
+|<span data-ttu-id="f6d50-755">狀態</span><span class="sxs-lookup"><span data-stu-id="f6d50-755">STATUS</span></span>|<span data-ttu-id="f6d50-756">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-756">String</span></span>|<span data-ttu-id="f6d50-757">條件約束的強制狀態 (ENABLED 或 DISABLED)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-757">Enforcement status of constraint (ENABLED or DISABLED).</span></span>|  
+|<span data-ttu-id="f6d50-758">DEFERRABLE</span><span class="sxs-lookup"><span data-stu-id="f6d50-758">DEFERRABLE</span></span>|<span data-ttu-id="f6d50-759">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-759">String</span></span>|<span data-ttu-id="f6d50-760">條件約束是否可以延遲。</span><span class="sxs-lookup"><span data-stu-id="f6d50-760">Whether the constraint is deferrable.</span></span>|  
+|<span data-ttu-id="f6d50-761">VALIDATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-761">VALIDATED</span></span>|<span data-ttu-id="f6d50-762">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-762">String</span></span>|<span data-ttu-id="f6d50-763">是否所有資料均遵循條件約束 (VALIDATED 或 NOT VALIDATED)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-763">Whether all data obeys the constraint (VALIDATED or NOT VALIDATED).</span></span>|  
+|<span data-ttu-id="f6d50-764">GENERATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-764">GENERATED</span></span>|<span data-ttu-id="f6d50-765">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-765">String</span></span>|<span data-ttu-id="f6d50-766">條件約束的名稱是使用者產生的還是系統產生的。</span><span class="sxs-lookup"><span data-stu-id="f6d50-766">Whether the name of the constraint is user or system generated.</span></span>|  
+|<span data-ttu-id="f6d50-767">BAD</span><span class="sxs-lookup"><span data-stu-id="f6d50-767">BAD</span></span>|<span data-ttu-id="f6d50-768">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-768">String</span></span>|<span data-ttu-id="f6d50-769">YES 值表示此條件約束以模稜兩可的方式指定世紀。</span><span class="sxs-lookup"><span data-stu-id="f6d50-769">A YES value indicates that this constraint specifies a century in an ambiguous manner.</span></span> <span data-ttu-id="f6d50-770">為避免因模稜兩可而導致錯誤，請使用四位數年份的 TO_DATE 函式重寫條件約束。</span><span class="sxs-lookup"><span data-stu-id="f6d50-770">To avoid errors resulting from this ambiguity, rewrite the constraint using the TO_DATE function with a four-digit year.</span></span>|  
+|<span data-ttu-id="f6d50-771">RELY</span><span class="sxs-lookup"><span data-stu-id="f6d50-771">RELY</span></span>|<span data-ttu-id="f6d50-772">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-772">String</span></span>|<span data-ttu-id="f6d50-773">是否已強制執行啟用的條件約束。</span><span class="sxs-lookup"><span data-stu-id="f6d50-773">Whether an enabled constraint is enforced or unenforced.</span></span>|  
+|<span data-ttu-id="f6d50-774">LAST_CHANGE</span><span class="sxs-lookup"><span data-stu-id="f6d50-774">LAST_CHANGE</span></span>|<span data-ttu-id="f6d50-775">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-775">DateTime</span></span>|<span data-ttu-id="f6d50-776">上次啟用或停用條件約束的時間。</span><span class="sxs-lookup"><span data-stu-id="f6d50-776">When the constraint was last enabled or disabled.</span></span>|  
+|<span data-ttu-id="f6d50-777">INDEX_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-777">INDEX_OWNER</span></span>|<span data-ttu-id="f6d50-778">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-778">String</span></span>|<span data-ttu-id="f6d50-779">擁有索引的使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-779">Name of the user owning the index.</span></span>|  
+|<span data-ttu-id="f6d50-780">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-780">INDEX_NAME</span></span>|<span data-ttu-id="f6d50-781">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-781">String</span></span>|<span data-ttu-id="f6d50-782">索引名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-782">Name of the index.</span></span>|  
   
-## ForeignKeys  
+## <a name="foreignkeys"></a><span data-ttu-id="f6d50-783">ForeignKeys</span><span class="sxs-lookup"><span data-stu-id="f6d50-783">ForeignKeys</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|PRIMARY\_KEY\_CONSTRAINT\_NAME|String|條件約束定義的名稱。|  
-|PRIMARY\_KEY\_OWNER|String|條件約束定義的擁有人。|  
-|PRIMARY\_KEY\_TABLE\_NAME|String|與具有條件約束定義之資料表 \(或檢視表\) 相關的名稱|  
-|FOREIGN\_KEY\_OWNER|String|條件約束定義的擁有人。|  
-|FOREIGN\_KEY\_CONSTRIANT\_NAME|String|條件約束定義的名稱。|  
-|FOREIGN\_KEY\_TABLE\_NAME|String|與具有條件約束定義之資料表 \(或檢視表\) 相關的名稱。|  
-|SEARCH\_CONDITION|String|檢查條件約束之搜尋條件的文字|  
-|R\_OWNER|String|參考條件約束中的參考資料表擁有人。|  
-|R\_CONSTRAINT\_NAME|String|參考資料表之唯一的條件約束定義的名稱。|  
-|DELETE\_RULE|String|參考條件約束的刪除規則 \(CASCADE 或 NO ACTION\)。|  
-|狀態|String|條件約束的強制狀態 \(ENABLED 或 DISABLED\)。|  
-|VALIDATED|String|是否所有資料均遵循條件約束 \(VALIDATED 或 NOT VALIDATED\)。|  
-|GENERATED|String|條件約束的名稱是使用者產生的還是系統產生的。|  
-|RELY|String|是否已強制執行啟用的條件約束。|  
-|LAST\_CHANGE|DateTime|上次啟用或停用條件約束的時間。|  
-|INDEX\_OWNER|String|擁有索引的使用者名稱。|  
-|INDEX\_NAME|String|索引名稱。|  
+|<span data-ttu-id="f6d50-784">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-784">ColumnName</span></span>|<span data-ttu-id="f6d50-785">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-785">DataType</span></span>|<span data-ttu-id="f6d50-786">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-786">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-787">PRIMARY_KEY_CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-787">PRIMARY_KEY_CONSTRAINT_NAME</span></span>|<span data-ttu-id="f6d50-788">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-788">String</span></span>|<span data-ttu-id="f6d50-789">條件約束定義的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-789">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-790">PRIMARY_KEY_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-790">PRIMARY_KEY_OWNER</span></span>|<span data-ttu-id="f6d50-791">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-791">String</span></span>|<span data-ttu-id="f6d50-792">條件約束定義的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-792">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-793">PRIMARY_KEY_TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-793">PRIMARY_KEY_TABLE_NAME</span></span>|<span data-ttu-id="f6d50-794">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-794">String</span></span>|<span data-ttu-id="f6d50-795">與具有條件約束定義之資料表 (或檢視表) 相關的名稱</span><span class="sxs-lookup"><span data-stu-id="f6d50-795">Name associated with the table (or view) with constraint definition</span></span>|  
+|<span data-ttu-id="f6d50-796">FOREIGN_KEY_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-796">FOREIGN_KEY_OWNER</span></span>|<span data-ttu-id="f6d50-797">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-797">String</span></span>|<span data-ttu-id="f6d50-798">條件約束定義的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-798">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-799">FOREIGN_KEY_CONSTRIANT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-799">FOREIGN_KEY_CONSTRIANT_NAME</span></span>|<span data-ttu-id="f6d50-800">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-800">String</span></span>|<span data-ttu-id="f6d50-801">條件約束定義的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-801">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-802">FOREIGN_KEY_TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-802">FOREIGN_KEY_TABLE_NAME</span></span>|<span data-ttu-id="f6d50-803">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-803">String</span></span>|<span data-ttu-id="f6d50-804">與具有條件約束定義之資料表 (或檢視表) 相關的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-804">Name associated with the table (or view) with constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-805">SEARCH_CONDITION</span><span class="sxs-lookup"><span data-stu-id="f6d50-805">SEARCH_CONDITION</span></span>|<span data-ttu-id="f6d50-806">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-806">String</span></span>|<span data-ttu-id="f6d50-807">檢查條件約束之搜尋條件的文字</span><span class="sxs-lookup"><span data-stu-id="f6d50-807">Text of search condition for a check constraint</span></span>|  
+|<span data-ttu-id="f6d50-808">R_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-808">R_OWNER</span></span>|<span data-ttu-id="f6d50-809">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-809">String</span></span>|<span data-ttu-id="f6d50-810">參考條件約束中的參考資料表擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-810">Owner of table referred to in a referential constraint.</span></span>|  
+|<span data-ttu-id="f6d50-811">R_CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-811">R_CONSTRAINT_NAME</span></span>|<span data-ttu-id="f6d50-812">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-812">String</span></span>|<span data-ttu-id="f6d50-813">參考資料表之唯一的條件約束定義的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-813">Name of the unique constraint definition for referenced table.</span></span>|  
+|<span data-ttu-id="f6d50-814">DELETE_RULE</span><span class="sxs-lookup"><span data-stu-id="f6d50-814">DELETE_RULE</span></span>|<span data-ttu-id="f6d50-815">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-815">String</span></span>|<span data-ttu-id="f6d50-816">參考條件約束的刪除規則 (CASCADE 或 NO ACTION)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-816">Delete rule for a referential constraint (CASCADE or NO ACTION).</span></span>|  
+|<span data-ttu-id="f6d50-817">狀態</span><span class="sxs-lookup"><span data-stu-id="f6d50-817">STATUS</span></span>|<span data-ttu-id="f6d50-818">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-818">String</span></span>|<span data-ttu-id="f6d50-819">條件約束的強制狀態 (ENABLED 或 DISABLED)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-819">Enforcement status of constraint (ENABLED or DISABLED).</span></span>|  
+|<span data-ttu-id="f6d50-820">VALIDATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-820">VALIDATED</span></span>|<span data-ttu-id="f6d50-821">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-821">String</span></span>|<span data-ttu-id="f6d50-822">是否所有資料均遵循條件約束 (VALIDATED 或 NOT VALIDATED)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-822">Whether all data obeys the constraint (VALIDATED or NOT VALIDATED).</span></span>|  
+|<span data-ttu-id="f6d50-823">GENERATED</span><span class="sxs-lookup"><span data-stu-id="f6d50-823">GENERATED</span></span>|<span data-ttu-id="f6d50-824">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-824">String</span></span>|<span data-ttu-id="f6d50-825">條件約束的名稱是使用者產生的還是系統產生的。</span><span class="sxs-lookup"><span data-stu-id="f6d50-825">Whether the name of the constraint is user or system generated.</span></span>|  
+|<span data-ttu-id="f6d50-826">RELY</span><span class="sxs-lookup"><span data-stu-id="f6d50-826">RELY</span></span>|<span data-ttu-id="f6d50-827">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-827">String</span></span>|<span data-ttu-id="f6d50-828">是否已強制執行啟用的條件約束。</span><span class="sxs-lookup"><span data-stu-id="f6d50-828">Whether an enabled constraint is enforced or unenforced.</span></span>|  
+|<span data-ttu-id="f6d50-829">LAST_CHANGE</span><span class="sxs-lookup"><span data-stu-id="f6d50-829">LAST_CHANGE</span></span>|<span data-ttu-id="f6d50-830">DateTime</span><span class="sxs-lookup"><span data-stu-id="f6d50-830">DateTime</span></span>|<span data-ttu-id="f6d50-831">上次啟用或停用條件約束的時間。</span><span class="sxs-lookup"><span data-stu-id="f6d50-831">When the constraint was last enabled or disabled.</span></span>|  
+|<span data-ttu-id="f6d50-832">INDEX_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-832">INDEX_OWNER</span></span>|<span data-ttu-id="f6d50-833">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-833">String</span></span>|<span data-ttu-id="f6d50-834">擁有索引的使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-834">Name of the user owning the index.</span></span>|  
+|<span data-ttu-id="f6d50-835">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-835">INDEX_NAME</span></span>|<span data-ttu-id="f6d50-836">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-836">String</span></span>|<span data-ttu-id="f6d50-837">索引名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-837">Name of the index.</span></span>|  
   
-## ForeignKeyColumns  
+## <a name="foreignkeycolumns"></a><span data-ttu-id="f6d50-838">ForeignKeyColumns</span><span class="sxs-lookup"><span data-stu-id="f6d50-838">ForeignKeyColumns</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|條件約束定義的擁有人。|  
-|CONSTRAINT\_NAME|String|條件約束定義的名稱。|  
-|TABLE\_NAME|String|具有條件約束定義的資料表名稱。|  
-|COLUMN\_NAME|String|條件約束定義中指定之物件型別資料行的資料行或屬性名稱。|  
-|POSITION|Decimal|物件定義中資料行或屬性的原始位置。|  
+|<span data-ttu-id="f6d50-839">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-839">ColumnName</span></span>|<span data-ttu-id="f6d50-840">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-840">DataType</span></span>|<span data-ttu-id="f6d50-841">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-841">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-842">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-842">OWNER</span></span>|<span data-ttu-id="f6d50-843">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-843">String</span></span>|<span data-ttu-id="f6d50-844">條件約束定義的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-844">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-845">CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-845">CONSTRAINT_NAME</span></span>|<span data-ttu-id="f6d50-846">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-846">String</span></span>|<span data-ttu-id="f6d50-847">條件約束定義的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-847">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-848">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-848">TABLE_NAME</span></span>|<span data-ttu-id="f6d50-849">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-849">String</span></span>|<span data-ttu-id="f6d50-850">具有條件約束定義的資料表名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-850">Name of the table with constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-851">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-851">COLUMN_NAME</span></span>|<span data-ttu-id="f6d50-852">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-852">String</span></span>|<span data-ttu-id="f6d50-853">條件約束定義中指定之物件型別資料行的資料行或屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-853">Name of the column or attribute of the object type column specified in the constraint definition.</span></span>|  
+|<span data-ttu-id="f6d50-854">POSITION</span><span class="sxs-lookup"><span data-stu-id="f6d50-854">POSITION</span></span>|<span data-ttu-id="f6d50-855">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-855">Decimal</span></span>|<span data-ttu-id="f6d50-856">物件定義中資料行或屬性的原始位置。</span><span class="sxs-lookup"><span data-stu-id="f6d50-856">Original position of column or attribute in the definition of the object.</span></span>|  
   
-## ProcedureParameters  
+## <a name="procedureparameters"></a><span data-ttu-id="f6d50-857">ProcedureParameters</span><span class="sxs-lookup"><span data-stu-id="f6d50-857">ProcedureParameters</span></span>  
   
-|ColumnName|DataType|描述|  
-|----------------|--------------|--------|  
-|OWNER|String|物件的擁有人。|  
-|OBJECT\_NAME|String|程序或函式的名稱。|  
-|PACKAGE\_NAME|String|程序或函式的名稱。|  
-|OBJECT\_ID|Decimal|物件的物件號碼。|  
-|OVERLOAD|String|多載唯一識別項。|  
-|ARGUMENT\_NAME|String|引數的名稱。|  
-|POSITION|Decimal|在引數清單中的位置，若為函式傳回值，則為 NULL。|  
-|SEQUENCE|Decimal|引數序列，包括所有的巢狀層次。|  
-|DATA\_LEVEL|Decimal|綜合型別之引數的巢狀深度。|  
-|DATA\_TYPE|String|引數的資料型別。|  
-|DEFAULT\_VALUE|String|引數的預設值。|  
-|DEFAULT\_LENGTH|Decimal|引數預設值的長度。|  
-|IN\_OUT|String|引數方向 \(IN、OUT 或 IN\/OUT\)。|  
-|DATA\_LENGTH|Decimal|資料行的長度 \(以位元組為單位\)。|  
-|DATA\_PRECISION|Decimal|十進位數字 \(NUMBER\) 或二進位數字 \(FLOAT\) 的長度。|  
-|DATA\_SCALE|Decimal|數字中小數點右邊的位數。|  
-|RADIX|Decimal|數字的引數基數。|  
-|CHARACTER\_SET\_NAME|String|引數的字元集名稱。|  
-|TYPE\_OWNER|String|引數型別的擁有人。|  
-|TYPE\_NAME|String|引數型別的名稱。  若型別是封裝本機型別 \(即在封裝規格中宣告\)，則此資料行會顯示封裝的名稱。|  
-|TYPE\_SUBNAME|String|僅與封裝本機型別相關。  顯示 TYPE\_NAME 資料行中識別之封裝中宣告的型別名稱。|  
-|TYPE\_LINK|String|TYPE\_NAME 資料行中識別的封裝是遠端封裝時，僅與封裝本機型別相關。  此資料行顯示用於參考遠端封裝的資料庫連結。|  
-|PLS\_TYPE|String|若為數字引數，此為引數的 PL\/SQL 型別名稱。  否則，為 Null。|  
-|CHAR\_LENGTH|Decimal|字串資料型別的字元限制。|  
-|CHAR\_USED|String|指出位元組限制 \(B\) 或字元限制 \(C\) 是否為字串的正式限制。|  
+|<span data-ttu-id="f6d50-858">ColumnName</span><span class="sxs-lookup"><span data-stu-id="f6d50-858">ColumnName</span></span>|<span data-ttu-id="f6d50-859">DataType</span><span class="sxs-lookup"><span data-stu-id="f6d50-859">DataType</span></span>|<span data-ttu-id="f6d50-860">描述</span><span class="sxs-lookup"><span data-stu-id="f6d50-860">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="f6d50-861">OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-861">OWNER</span></span>|<span data-ttu-id="f6d50-862">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-862">String</span></span>|<span data-ttu-id="f6d50-863">物件的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-863">Owner of the object.</span></span>|  
+|<span data-ttu-id="f6d50-864">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-864">OBJECT_NAME</span></span>|<span data-ttu-id="f6d50-865">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-865">String</span></span>|<span data-ttu-id="f6d50-866">程序或函式的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-866">Name of the procedure or function.</span></span>|  
+|<span data-ttu-id="f6d50-867">PACKAGE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-867">PACKAGE_NAME</span></span>|<span data-ttu-id="f6d50-868">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-868">String</span></span>|<span data-ttu-id="f6d50-869">程序或函式的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-869">Name of the procedure or function.</span></span>|  
+|<span data-ttu-id="f6d50-870">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="f6d50-870">OBJECT_ID</span></span>|<span data-ttu-id="f6d50-871">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-871">Decimal</span></span>|<span data-ttu-id="f6d50-872">物件的物件號碼。</span><span class="sxs-lookup"><span data-stu-id="f6d50-872">Object number of the object.</span></span>|  
+|<span data-ttu-id="f6d50-873">OVERLOAD</span><span class="sxs-lookup"><span data-stu-id="f6d50-873">OVERLOAD</span></span>|<span data-ttu-id="f6d50-874">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-874">String</span></span>|<span data-ttu-id="f6d50-875">多載唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="f6d50-875">Overload unique identifier.</span></span>|  
+|<span data-ttu-id="f6d50-876">ARGUMENT_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-876">ARGUMENT_NAME</span></span>|<span data-ttu-id="f6d50-877">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-877">String</span></span>|<span data-ttu-id="f6d50-878">引數的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-878">Name of the argument.</span></span>|  
+|<span data-ttu-id="f6d50-879">POSITION</span><span class="sxs-lookup"><span data-stu-id="f6d50-879">POSITION</span></span>|<span data-ttu-id="f6d50-880">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-880">Decimal</span></span>|<span data-ttu-id="f6d50-881">在引數清單中的位置，若為函式傳回值，則為 NULL。</span><span class="sxs-lookup"><span data-stu-id="f6d50-881">Position in the argument list, or null for a function return value.</span></span>|  
+|<span data-ttu-id="f6d50-882">SEQUENCE</span><span class="sxs-lookup"><span data-stu-id="f6d50-882">SEQUENCE</span></span>|<span data-ttu-id="f6d50-883">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-883">Decimal</span></span>|<span data-ttu-id="f6d50-884">引數序列，包括所有的巢狀層次。</span><span class="sxs-lookup"><span data-stu-id="f6d50-884">Argument sequence, including all nesting levels.</span></span>|  
+|<span data-ttu-id="f6d50-885">DATA_LEVEL</span><span class="sxs-lookup"><span data-stu-id="f6d50-885">DATA_LEVEL</span></span>|<span data-ttu-id="f6d50-886">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-886">Decimal</span></span>|<span data-ttu-id="f6d50-887">綜合型別之引數的巢狀深度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-887">Nesting depth of the argument for composite types.</span></span>|  
+|<span data-ttu-id="f6d50-888">DATA_TYPE</span><span class="sxs-lookup"><span data-stu-id="f6d50-888">DATA_TYPE</span></span>|<span data-ttu-id="f6d50-889">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-889">String</span></span>|<span data-ttu-id="f6d50-890">引數的資料型別。</span><span class="sxs-lookup"><span data-stu-id="f6d50-890">Data type of the argument.</span></span>|  
+|<span data-ttu-id="f6d50-891">DEFAULT_VALUE</span><span class="sxs-lookup"><span data-stu-id="f6d50-891">DEFAULT_VALUE</span></span>|<span data-ttu-id="f6d50-892">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-892">String</span></span>|<span data-ttu-id="f6d50-893">引數的預設值。</span><span class="sxs-lookup"><span data-stu-id="f6d50-893">Default value for the argument.</span></span>|  
+|<span data-ttu-id="f6d50-894">DEFAULT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-894">DEFAULT_LENGTH</span></span>|<span data-ttu-id="f6d50-895">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-895">Decimal</span></span>|<span data-ttu-id="f6d50-896">引數預設值的長度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-896">Length of the default value for the argument.</span></span>|  
+|<span data-ttu-id="f6d50-897">IN_OUT</span><span class="sxs-lookup"><span data-stu-id="f6d50-897">IN_OUT</span></span>|<span data-ttu-id="f6d50-898">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-898">String</span></span>|<span data-ttu-id="f6d50-899">引數方向 (IN、OUT 或 IN/OUT)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-899">Argument Direction (IN, OUT, or IN/OUT).</span></span>|  
+|<span data-ttu-id="f6d50-900">DATA_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-900">DATA_LENGTH</span></span>|<span data-ttu-id="f6d50-901">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-901">Decimal</span></span>|<span data-ttu-id="f6d50-902">資料行的長度 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="f6d50-902">Length of the column (in bytes).</span></span>|  
+|<span data-ttu-id="f6d50-903">DATA_PRECISION</span><span class="sxs-lookup"><span data-stu-id="f6d50-903">DATA_PRECISION</span></span>|<span data-ttu-id="f6d50-904">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-904">Decimal</span></span>|<span data-ttu-id="f6d50-905">十進位數字 (NUMBER) 或二進位數字 (FLOAT) 的長度。</span><span class="sxs-lookup"><span data-stu-id="f6d50-905">Length in decimal digits (NUMBER) or binary digits (FLOAT).</span></span>|  
+|<span data-ttu-id="f6d50-906">DATA_SCALE</span><span class="sxs-lookup"><span data-stu-id="f6d50-906">DATA_SCALE</span></span>|<span data-ttu-id="f6d50-907">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-907">Decimal</span></span>|<span data-ttu-id="f6d50-908">數字中小數點右邊的位數。</span><span class="sxs-lookup"><span data-stu-id="f6d50-908">Digits to the right of the decimal point in a number.</span></span>|  
+|<span data-ttu-id="f6d50-909">RADIX</span><span class="sxs-lookup"><span data-stu-id="f6d50-909">RADIX</span></span>|<span data-ttu-id="f6d50-910">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-910">Decimal</span></span>|<span data-ttu-id="f6d50-911">數字的引數基數。</span><span class="sxs-lookup"><span data-stu-id="f6d50-911">Argument radix for a number.</span></span>|  
+|<span data-ttu-id="f6d50-912">CHARACTER_SET_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-912">CHARACTER_SET_NAME</span></span>|<span data-ttu-id="f6d50-913">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-913">String</span></span>|<span data-ttu-id="f6d50-914">引數的字元集名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-914">Character set name for the argument.</span></span>|  
+|<span data-ttu-id="f6d50-915">TYPE_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6d50-915">TYPE_OWNER</span></span>|<span data-ttu-id="f6d50-916">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-916">String</span></span>|<span data-ttu-id="f6d50-917">引數型別的擁有人。</span><span class="sxs-lookup"><span data-stu-id="f6d50-917">Owner of the type of the argument.</span></span>|  
+|<span data-ttu-id="f6d50-918">TYPE_NAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-918">TYPE_NAME</span></span>|<span data-ttu-id="f6d50-919">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-919">String</span></span>|<span data-ttu-id="f6d50-920">引數型別的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-920">Name of the type of the argument.</span></span> <span data-ttu-id="f6d50-921">若型別是封裝本機型別 (即在封裝規格中宣告)，則此資料行會顯示封裝的名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-921">If the type is a package local type (that is, it is declared in a package specification), then this column displays the name of the package.</span></span>|  
+|<span data-ttu-id="f6d50-922">TYPE_SUBNAME</span><span class="sxs-lookup"><span data-stu-id="f6d50-922">TYPE_SUBNAME</span></span>|<span data-ttu-id="f6d50-923">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-923">String</span></span>|<span data-ttu-id="f6d50-924">僅與封裝本機型別相關。</span><span class="sxs-lookup"><span data-stu-id="f6d50-924">Relevant only for package local types.</span></span> <span data-ttu-id="f6d50-925">顯示 TYPE_NAME 資料行中識別之封裝中宣告的型別名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-925">Displays the name of the type declared in the package identified in the TYPE_NAME column.</span></span>|  
+|<span data-ttu-id="f6d50-926">TYPE_LINK</span><span class="sxs-lookup"><span data-stu-id="f6d50-926">TYPE_LINK</span></span>|<span data-ttu-id="f6d50-927">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-927">String</span></span>|<span data-ttu-id="f6d50-928">TYPE_NAME 資料行中識別的封裝是遠端封裝時，僅與封裝本機型別相關。</span><span class="sxs-lookup"><span data-stu-id="f6d50-928">Relevant only for package local types when the package identified in the TYPE_NAME column is a remote package.</span></span> <span data-ttu-id="f6d50-929">此資料行顯示用於參考遠端封裝的資料庫連結。</span><span class="sxs-lookup"><span data-stu-id="f6d50-929">This column displays the database link used to refer to the remote package.</span></span>|  
+|<span data-ttu-id="f6d50-930">PLS_TYPE</span><span class="sxs-lookup"><span data-stu-id="f6d50-930">PLS_TYPE</span></span>|<span data-ttu-id="f6d50-931">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-931">String</span></span>|<span data-ttu-id="f6d50-932">若為數字引數，此為引數的 PL/SQL 型別名稱。</span><span class="sxs-lookup"><span data-stu-id="f6d50-932">For numeric arguments, the name of the PL/SQL type of the argument.</span></span> <span data-ttu-id="f6d50-933">否則，為 Null。</span><span class="sxs-lookup"><span data-stu-id="f6d50-933">Null otherwise.</span></span>|  
+|<span data-ttu-id="f6d50-934">CHAR_LENGTH</span><span class="sxs-lookup"><span data-stu-id="f6d50-934">CHAR_LENGTH</span></span>|<span data-ttu-id="f6d50-935">Decimal</span><span class="sxs-lookup"><span data-stu-id="f6d50-935">Decimal</span></span>|<span data-ttu-id="f6d50-936">字串資料型別的字元限制。</span><span class="sxs-lookup"><span data-stu-id="f6d50-936">Character limit for string data types.</span></span>|  
+|<span data-ttu-id="f6d50-937">CHAR_USED</span><span class="sxs-lookup"><span data-stu-id="f6d50-937">CHAR_USED</span></span>|<span data-ttu-id="f6d50-938">String</span><span class="sxs-lookup"><span data-stu-id="f6d50-938">String</span></span>|<span data-ttu-id="f6d50-939">指出位元組限制 (B) 或字元限制 (C) 是否為字串的正式限制。</span><span class="sxs-lookup"><span data-stu-id="f6d50-939">Indicates whether the byte limit (B) or char limit (C) is official for the string.</span></span>|  
   
-## 請參閱  
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f6d50-940">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f6d50-940">See Also</span></span>  
+ [<span data-ttu-id="f6d50-941">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="f6d50-941">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

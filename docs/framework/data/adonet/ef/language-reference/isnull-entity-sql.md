@@ -1,47 +1,45 @@
 ---
-title: "ISNULL (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: ISNULL (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31e0b77e397bd4f190119a01719da185211f7715
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# ISNULL (Entity SQL)
-判斷查詢運算式是否為 null。  
+# <a name="isnull-entity-sql"></a><span data-ttu-id="eb510-102">ISNULL (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="eb510-102">ISNULL (Entity SQL)</span></span>
+<span data-ttu-id="eb510-103">判斷查詢運算式是否為 null。</span><span class="sxs-lookup"><span data-stu-id="eb510-103">Determines if a query expression is null.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="eb510-104">語法</span><span class="sxs-lookup"><span data-stu-id="eb510-104">Syntax</span></span>  
   
 ```  
-  
 expression IS [ NOT ] NULL  
 ```  
   
-## 引數  
+## <a name="arguments"></a><span data-ttu-id="eb510-105">引數</span><span class="sxs-lookup"><span data-stu-id="eb510-105">Arguments</span></span>  
  `expression`  
- 任何有效的查詢運算式。 不可為集合、不可有集合成員，也不可為集合型別屬性的記錄型別。  
+ <span data-ttu-id="eb510-106">任何有效的查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="eb510-106">Any valid query expression.</span></span> <span data-ttu-id="eb510-107">不可為集合、不可有集合成員，也不可為集合型別屬性的記錄型別。</span><span class="sxs-lookup"><span data-stu-id="eb510-107">Cannot be a collection, have collection members, or a record type with collection type properties.</span></span>  
   
- NOT  
- 否定 IS NULL 的 EDM.Boolean 結果。  
+ <span data-ttu-id="eb510-108">NOT</span><span class="sxs-lookup"><span data-stu-id="eb510-108">NOT</span></span>  
+ <span data-ttu-id="eb510-109">否定 IS NULL 的 EDM.Boolean 結果。</span><span class="sxs-lookup"><span data-stu-id="eb510-109">Negates the EDM.Boolean result of IS NULL.</span></span>  
   
-## 傳回值  
- 如果 `true` 傳回 null 則為 `expression`；否則為 `false`。  
+## <a name="return-value"></a><span data-ttu-id="eb510-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="eb510-110">Return Value</span></span>  
+ <span data-ttu-id="eb510-111">如果 `true` 傳回 null 則為 `expression`；否則為 `false`。</span><span class="sxs-lookup"><span data-stu-id="eb510-111">`true` if `expression` returns null; otherwise, `false`.</span></span>  
   
-## 備註  
- 使用 `IS NULL` 判斷外部連結的項目是否為 null：  
+## <a name="remarks"></a><span data-ttu-id="eb510-112">備註</span><span class="sxs-lookup"><span data-stu-id="eb510-112">Remarks</span></span>  
+ <span data-ttu-id="eb510-113">使用 `IS NULL` 判斷外部連結的項目是否為 null：</span><span class="sxs-lookup"><span data-stu-id="eb510-113">Use `IS NULL` to determine if the element of an outer join is null:</span></span>  
   
 ```  
 select c   
@@ -50,32 +48,32 @@ select c
       where o is not null and o.OrderQuantity = @x  
 ```  
   
- 使用 `IS NULL` 判斷成員是否有實際值：  
+ <span data-ttu-id="eb510-114">使用 `IS NULL` 判斷成員是否有實際值：</span><span class="sxs-lookup"><span data-stu-id="eb510-114">Use `IS NULL` to determine if a member has an actual value:</span></span>  
   
 ```  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
- 下表所示為 `IS NULL` 在某些模式上的行為。 所有例外狀況都是在叫用提供者之前從用戶端擲回：  
+ <span data-ttu-id="eb510-115">下表所示為 `IS NULL` 在某些模式上的行為。</span><span class="sxs-lookup"><span data-stu-id="eb510-115">The following table shows the behavior of `IS NULL` over some patterns.</span></span> <span data-ttu-id="eb510-116">所有例外狀況都是在叫用提供者之前從用戶端擲回：</span><span class="sxs-lookup"><span data-stu-id="eb510-116">All exceptions are thrown from the client side before the provider gets invoked:</span></span>  
   
-|模式|行為|  
-|--------|--------|  
-|null IS NULL|傳回 `true`。|  
-|TREAT \(null AS EntityType\) IS NULL|傳回 `true`。|  
-|TREAT \(null AS ComplexType\) IS NULL|擲回錯誤。|  
-|TREAT \(null AS RowType\) IS NULL|擲回錯誤。|  
-|EntityType IS NULL|傳回 `true` 或 `false`。|  
-|ComplexType IS NULL|擲回錯誤。|  
-|RowType IS NULL|擲回錯誤。|  
+|<span data-ttu-id="eb510-117">模式</span><span class="sxs-lookup"><span data-stu-id="eb510-117">Pattern</span></span>|<span data-ttu-id="eb510-118">行為</span><span class="sxs-lookup"><span data-stu-id="eb510-118">Behavior</span></span>|  
+|-------------|--------------|  
+|<span data-ttu-id="eb510-119">null IS NULL</span><span class="sxs-lookup"><span data-stu-id="eb510-119">null IS NULL</span></span>|<span data-ttu-id="eb510-120">傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="eb510-120">Returns `true`.</span></span>|  
+|<span data-ttu-id="eb510-121">TREAT (null AS EntityType) IS NULL</span><span class="sxs-lookup"><span data-stu-id="eb510-121">TREAT (null AS EntityType) IS NULL</span></span>|<span data-ttu-id="eb510-122">傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="eb510-122">Returns `true`.</span></span>|  
+|<span data-ttu-id="eb510-123">TREAT (null AS ComplexType) IS NULL</span><span class="sxs-lookup"><span data-stu-id="eb510-123">TREAT (null AS ComplexType) IS NULL</span></span>|<span data-ttu-id="eb510-124">擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="eb510-124">Throws an error.</span></span>|  
+|<span data-ttu-id="eb510-125">TREAT (null AS RowType) IS NULL</span><span class="sxs-lookup"><span data-stu-id="eb510-125">TREAT (null AS RowType) IS NULL</span></span>|<span data-ttu-id="eb510-126">擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="eb510-126">Throws an error.</span></span>|  
+|<span data-ttu-id="eb510-127">EntityType IS NULL</span><span class="sxs-lookup"><span data-stu-id="eb510-127">EntityType IS NULL</span></span>|<span data-ttu-id="eb510-128">傳回 `true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="eb510-128">Returns `true` or `false`.</span></span>|  
+|<span data-ttu-id="eb510-129">ComplexType IS NULL</span><span class="sxs-lookup"><span data-stu-id="eb510-129">ComplexType IS NULL</span></span>|<span data-ttu-id="eb510-130">擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="eb510-130">Throws an error.</span></span>|  
+|<span data-ttu-id="eb510-131">RowType IS NULL</span><span class="sxs-lookup"><span data-stu-id="eb510-131">RowType IS NULL</span></span>|<span data-ttu-id="eb510-132">擲回錯誤。</span><span class="sxs-lookup"><span data-stu-id="eb510-132">Throws an error.</span></span>|  
   
-## 範例  
- 以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 IS NOT NULL 運算子來判斷查詢運算式是否不為 null。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
+## <a name="example"></a><span data-ttu-id="eb510-133">範例</span><span class="sxs-lookup"><span data-stu-id="eb510-133">Example</span></span>  
+ <span data-ttu-id="eb510-134">下列[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢使用 IS NOT NULL 運算子來判斷是否查詢運算式不是 null。</span><span class="sxs-lookup"><span data-stu-id="eb510-134">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the IS NOT NULL operator to determine if a query expression is not null.</span></span> <span data-ttu-id="eb510-135">此查詢是根據 AdventureWorks Sales Model。</span><span class="sxs-lookup"><span data-stu-id="eb510-135">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="eb510-136">若要編譯及執行此查詢，請遵循以下步驟：</span><span class="sxs-lookup"><span data-stu-id="eb510-136">To compile and run this query, follow these steps:</span></span>  
   
-1.  遵循 [HOW TO：執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md) 中的程序進行。  
+1.  <span data-ttu-id="eb510-137">遵循 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。</span><span class="sxs-lookup"><span data-stu-id="eb510-137">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
+2.  <span data-ttu-id="eb510-138">將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="eb510-138">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
-## 請參閱  
- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="eb510-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eb510-139">See Also</span></span>  
+ [<span data-ttu-id="eb510-140">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="eb510-140">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
