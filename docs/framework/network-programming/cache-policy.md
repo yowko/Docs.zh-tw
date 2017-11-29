@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - time-based cache policies
 - location-based cache policies
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7323c93ef89e340595f6b62947ea45867e651425
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 375c3b44f505a9bf36ce721c5ccde9b888114309
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cache-policy"></a>快取原則
 快取原則所定義的規則用來判斷是否可以使用所要求資源的快取複本來滿足要求。 應用程式指定有效期限的用戶端快取需求，但有效的快取原則是由用戶端快取需求、伺服器內容到期需求和伺服器重新驗證需求所決定。 用戶端快取原則與伺服器需求的互動一律會導致最保守的快取原則，協助確保將最新內容傳回給用戶端應用程式。  
@@ -54,8 +48,7 @@ ms.lasthandoff: 08/21/2017
  如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-

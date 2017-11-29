@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- netPeerBinding element
+helpviewer_keywords: netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: db7fcfcd4d86bd3ed2bfc7aff033684a0ea14d74
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: bf978034e25d0d644803eed98fc73a60952d817b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
 為對等通道特定的 TCP 訊息定義繫結。  
@@ -114,12 +111,11 @@ ms.lasthandoff: 09/25/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.NetPeerTcpBinding>   
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)   
- [Net TCP 對等](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)   
+ <xref:System.ServiceModel.NetPeerTcpBinding>  
+ <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
+ [Net TCP 對等](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)  
  [對等網路功能](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-

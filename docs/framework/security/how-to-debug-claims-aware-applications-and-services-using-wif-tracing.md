@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 36cb961345cb724597d8e48ec3be6cbb84df4632
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>操作說明：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯
 ## <a name="applies-to"></a>適用於  
@@ -98,7 +96,7 @@ ms.lasthandoff: 08/21/2017
   
 2.  執行追蹤檢視器工具 (SvcTraceViewer.exe)。 它通常會在安裝路徑的 **Bin** 資料夾中。  
   
-3.  在功能表中選取 **[檔案]**、**[開啟...]** 選項，或使用 **Ctrl+O** 快速鍵，以開啟 WIF 追蹤記錄檔 (例如 WIFTrace.e2e)。 追蹤記錄檔會在追蹤檢視器工具中開啟。  
+3.  開啟 WIF 追蹤記錄檔，例如，藉由選取 WIFTrace.e2e**檔案**，**開啟...** 在功能表選項，或使用**Ctrl + O**捷徑。 追蹤記錄檔會在追蹤檢視器工具中開啟。  
   
 4.  檢閱 [活動] 索引標籤中的項目。每個項目都應該會包含活動號碼、所記錄的追蹤數目、活動的持續時間，以及其開始和結束時間戳記。  
   
@@ -120,4 +118,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="related-items"></a>相關項目  
   
 -   [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](http://msdn.microsoft.com/library/aa751795.aspx)
-

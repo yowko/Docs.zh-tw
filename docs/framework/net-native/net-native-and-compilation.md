@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 39c1d68962ab1108f1a7c0aa976cb62558609d29
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5a15ac314590b9b7e240e759b9482eafb7071cd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-native-and-compilation"></a>.NET 原生和編譯
 以 .NET Framework 為目標的 Windows 8.1 應用程式及 Windows 桌面應用程式，會以特定的程式設計語言撰寫，並會編譯成中繼語言 (IL)。 在執行階段，Just-In-Time (JIT) 編譯器在第一次執行方法之前，才會負責編譯 IL 為本機電腦的原生程式碼。 相較之下，.NET 原生工具鏈會在編譯時期轉換原始碼為原生程式碼。 本主題比較 .NET 原生與其他適用於 .NET Framework 應用程式的編譯技術，並提供 .NET 原生如何產生原生程式碼的實用概觀，可協助您了解為什麼在以 .NET 原生編譯的程式碼中發生的例外狀況不會發生在 JIT 編譯程式碼中。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/21/2017
   
  在應用程式從 IL 轉換成原生程式碼的過程中，.NET 原生工具鏈會執行如下所示的作業：  
   
--   對於某些程式碼路徑，它會取代依賴反映和中繼資料的程式碼為靜態機器碼。 例如，如果實值類型不覆寫 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 方法，則測試是否相等的預設測試會使用反映來擷取 <xref:System.Reflection.FieldInfo> 物件，此物件表示值類型的欄位，然後會比較兩個執行個體的欄位值。 當編譯為機器碼時，.NET 原生工具鏈會取代反映程式碼和中繼資料為欄位值的靜態比較。  
+-   對於某些程式碼路徑，它會取代依賴反映和中繼資料的程式碼為靜態機器碼。 例如，如果實值類型不覆寫 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 方法，則測試是否相等的預設測試會使用反映來擷取 <xref:System.Reflection.FieldInfo> 物件，此物件表示值類型的欄位，然後會比較兩個執行個體的欄位值。 當編譯為機器碼時，.NET 原生工具鏈會取代反映程式碼和中繼資料為欄位值的靜態比較。  
   
 -   如果可行的話，它會嘗試排除所有中繼資料。  
   
@@ -111,8 +109,7 @@ ms.lasthandoff: 08/21/2017
 -   NGEN 映像通常易於損壞。 例如，修補檔案或相依性的變更通常要求使用它的組件也是由原生映像所產生的。 特別在 .NET Framework 類別庫中的系統組件更是如此。 相反地，.NET 原生允許獨立地服務彼此的應用程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [中繼資料和自我描述元件](../../../docs/standard/metadata-and-self-describing-components.md)   
- [Inside .NET Native (Channel 9 Video)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  (.NET Native 內部 (Channel 9 影片))  
- [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
+ [中繼資料和自我描述元件](../../../docs/standard/metadata-and-self-describing-components.md)  
+ [在.NET 原生 （Channel 9 影片）](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET Native 一般疑難排解](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
-

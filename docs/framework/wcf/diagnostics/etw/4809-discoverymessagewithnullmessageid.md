@@ -1,35 +1,38 @@
 ---
-title: "4809 - DiscoveryMessageWithNullMessageId | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4809 - DiscoveryMessageWithNullMessageId
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8947028-ae7e-45a2-a438-43162894519e
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: abf8195f84a53a59c8c5405e299c710b64326e3f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 4809 - DiscoveryMessageWithNullMessageId
-## 屬性  
+# <a name="4809---discoverymessagewithnullmessageid"></a>4809 - DiscoveryMessageWithNullMessageId
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|4809|  
 |關鍵字|探索|  
 |層級|警告|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|通道|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## 描述  
+## <a name="description"></a>描述  
  當探索訊息因為訊息標頭未包含必要的 MessageId 屬性而遭丟棄時，會發出此事件。  
   
-## 訊息  
+## <a name="message"></a>訊息  
  %1 訊息已遭丟棄，因為訊息標頭未包含必要的 MessageId 屬性。  
   
-## 詳細資料
+## <a name="details"></a>詳細資料

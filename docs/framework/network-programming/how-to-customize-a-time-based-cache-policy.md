@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - time-based cache policies
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24319898cba225a86fcdee3a0aaedc73d4c6220c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 58fa5c71bc459b65d35f9a59bdddccab9a0f5e56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>如何：自訂以時間為基礎的快取原則
 在建立以時間為基礎的快取原則時，您可以藉由指定最長使用期限、最短有效期限、最長過時或快取同步處理日期的值來自訂快取行為。 <xref:System.Net.Cache.HttpRequestCachePolicy> 物件所提供的建構函式可讓您指定這些值的有效組合。  
@@ -127,9 +124,8 @@ Level:Default MaxAge:36000 MinFresh:18000
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [快取原則](../../../docs/framework/network-programming/cache-policy.md)   
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
+ [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

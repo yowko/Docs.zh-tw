@@ -1,26 +1,29 @@
 ---
-title: "ODBC 結構描述集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ODBC 結構描述集合"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 889e84db39af1257d709ef049e18d4397ea700d0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# ODBC 結構描述集合
+# <a name="odbc-schema-collections"></a>ODBC 結構描述集合
 本節將討論 Microsoft SQL Server、Oracle 和 Microsoft Jet 之 ODBC 驅動程式的結構描述集合支援。  
   
-## Microsoft SQL Server ODBC 驅動程式  
- 除了通用結構描述集合之外，Microsoft SQL Server ODBC 驅動程式還支援下列特定的結構描述集合：  
+## <a name="microsoft-sql-server-odbc-driver"></a>Microsoft SQL Server ODBC 驅動程式  
+ Microsoft SQL Server ODBC 驅動程式還支援下列特定的結構描述集合除了通用結構描述集合：  
   
 -   資料表  
   
@@ -36,131 +39,131 @@ caps.handback.revision: 3
   
 -   檢視  
   
-### Tables 與 Views  
+### <a name="tables-and-views"></a>Tables 與 Views  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CAT|String|  
-|TABLE\_SCHEM|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
+|TABLE_CAT|String|  
+|TABLE_SCHEM|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
 |REMARKS|String|  
   
-### Indexes  
+### <a name="indexes"></a>Indexes  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CAT|String|  
-|TABLE\_SCHEM|String|  
-|TABLE\_NAME|String|  
-|NON\_UNIQUE|Int16|  
-|INDEX\_QUALIFIER|String|  
-|INDEX\_NAME|String|  
+|TABLE_CAT|String|  
+|TABLE_SCHEM|String|  
+|TABLE_NAME|String|  
+|NON_UNIQUE|Int16|  
+|INDEX_QUALIFIER|String|  
+|INDEX_NAME|String|  
 |TYPE|Int16|  
-|ORDINAL\_POSITION|Int16|  
-|COLUMN\_NAME|String|  
-|ASC\_OR\_DESC|String|  
+|ORDINAL_POSITION|Int16|  
+|COLUMN_NAME|String|  
+|ASC_OR_DESC|String|  
 |CARDINATLITY|Int32|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|String|  
-|SS\_TYPE\_SCHEMA|String|  
-|SS\_DATA\_TYPE|Byte|  
+|FILTER_CONDITION|String|  
+|SS_TYPE_SCHEMA|String|  
+|SS_DATA_TYPE|Byte|  
   
-### 資料行  
+### <a name="columns"></a>資料行  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CAT|String|  
-|TABLE\_SCHEM|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|TABLE_CAT|String|  
+|TABLE_SCHEM|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|COLUMN\_DEF|String|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|String|  
-|SS\_TYPE\_CATALOG|String|  
-|SS\_TYPE\_SCHEMA|String|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|String|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|String|  
+|SS_TYPE_CATALOG|String|  
+|SS_TYPE_SCHEMA|String|  
+|SS_DATA_TYPE|Byte|  
   
-### 程序  
+### <a name="procedures"></a>程序  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CAT|String|  
-|PROCEDURE\_SCHEM|String|  
-|PROCEDURE\_NAME|String|  
-|NUM\_INPUT\_PARAMS|Int32|  
-|NUM\_OUTPUT\_PARAMS|Int32|  
-|NUM\_RESULT\_SETS|Int32|  
+|PROCEDURE_CAT|String|  
+|PROCEDURE_SCHEM|String|  
+|PROCEDURE_NAME|String|  
+|NUM_INPUT_PARAMS|Int32|  
+|NUM_OUTPUT_PARAMS|Int32|  
+|NUM_RESULT_SETS|Int32|  
 |REMARKS|String|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CAT|String|  
-|PROCEDURE\_SCHEM|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|PROCEDURE_CAT|String|  
+|PROCEDURE_SCHEM|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|COLUMN\_DEF|String|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|String|  
-|SS\_TYPE\_CATALOG|String|  
-|SS\_TYPE\_SCHEMA|String|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|String|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|String|  
+|SS_TYPE_CATALOG|String|  
+|SS_TYPE_SCHEMA|String|  
+|SS_DATA_TYPE|Byte|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CAT|String|  
-|PROCEDURE\_SCHEM|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|PROCEDURE_CAT|String|  
+|PROCEDURE_SCHEM|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|COLUMN\_DEF|String|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|String|  
-|SS\_TYPE\_CATALOG|String|  
-|SS\_TYPE\_SCHEMA|String|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|String|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|String|  
+|SS_TYPE_CATALOG|String|  
+|SS_TYPE_SCHEMA|String|  
+|SS_DATA_TYPE|Byte|  
   
-## Microsoft Oracle ODBC 驅動程式  
- 除了通用結構描述集合之外，Microsoft SQL Server Oracle ODBC 驅動程式還支援下列特定結構描述集合：  
+## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC 驅動程式  
+ Microsoft SQL Server Oracle ODBC 驅動程式還支援下列特定的結構描述集合除了通用結構描述集合：  
   
 -   資料表  
   
@@ -176,58 +179,58 @@ caps.handback.revision: 3
   
 -   Indexes  
   
-### Tables 與 Views  
+### <a name="tables-and-views"></a>Tables 與 Views  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_QUALIFIER|String|  
-|TABLE\_OWNER|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
+|TABLE_QUALIFIER|String|  
+|TABLE_OWNER|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
 |REMARKS|String|  
   
-### 資料行  
+### <a name="columns"></a>資料行  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_QUALIFIER|String|  
-|TABLE\_OWNER|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
+|TABLE_QUALIFIER|String|  
+|TABLE_OWNER|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
 |RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### 程序  
+### <a name="procedures"></a>程序  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_QUALIFIER|String|  
-|PROCEDURE\_OWNER|String|  
-|PROCEDURE\_NAME|String|  
-|NUM\_INPUT\_PARAMS|Int16|  
-|NUM\_OUTPUT\_PARAMS|Int16|  
-|NUM\_RESULT\_SETS|Int16|  
+|PROCEDURE_QUALIFIER|String|  
+|PROCEDURE_OWNER|String|  
+|PROCEDURE_NAME|String|  
+|NUM_INPUT_PARAMS|Int16|  
+|NUM_OUTPUT_PARAMS|Int16|  
+|NUM_RESULT_SETS|Int16|  
 |REMARKS|String|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_QUALIFIER|String|  
-|PROCEDURE\_OWNER|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
+|PROCEDURE_QUALIFIER|String|  
+|PROCEDURE_OWNER|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
@@ -235,9 +238,9 @@ caps.handback.revision: 3
 |NULLABLE|Int16|  
 |REMARKS|String|  
 |OVERLOAD|Int32|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-## Microsoft Jet ODBC 驅動程式  
+## <a name="microsoft-jet-odbc-driver"></a>Microsoft Jet ODBC 驅動程式  
  除了通用結構描述集合之外，Microsoft Jet ODBC 驅動程式還支援下列特定的結構描述集合：  
   
 -   資料表  
@@ -254,58 +257,58 @@ caps.handback.revision: 3
   
 -   檢視  
   
-### Tables 與 Views  
+### <a name="tables-and-views"></a>Tables 與 Views  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_QUALIFIER|String|  
-|TABLE\_OWNER|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
+|TABLE_QUALIFIER|String|  
+|TABLE_OWNER|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
 |REMARKS|String|  
   
-### 資料行  
+### <a name="columns"></a>資料行  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_QUALIFIER|String|  
-|TABLE\_OWNER|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
+|TABLE_QUALIFIER|String|  
+|TABLE_OWNER|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
 |RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### 程序  
+### <a name="procedures"></a>程序  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_QUALIFIER|String|  
-|PROCEDURE\_OWNER|String|  
-|PROCEDURE\_NAME|String|  
-|NUM\_INPUT\_PARAMS|Int16|  
-|NUM\_OUTPUT\_PARAMS|Int16|  
-|NUM\_RESULT\_SETS|Int16|  
+|PROCEDURE_QUALIFIER|String|  
+|PROCEDURE_OWNER|String|  
+|PROCEDURE_NAME|String|  
+|NUM_INPUT_PARAMS|Int16|  
+|NUM_OUTPUT_PARAMS|Int16|  
+|NUM_RESULT_SETS|Int16|  
 |REMARKS|String|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_QUALIFIER|String|  
-|PROCEDURE\_OWNER|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
+|PROCEDURE_QUALIFIER|String|  
+|PROCEDURE_OWNER|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
@@ -313,31 +316,31 @@ caps.handback.revision: 3
 |NULLABLE|Int16|  
 |REMARKS|String|  
 |OVERLOAD|Int32|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CAT|String|  
-|PROCEDURE\_SCHEM|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|PROCEDURE_CAT|String|  
+|PROCEDURE_SCHEM|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|COLUMN\_DEF|String|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|String|  
+|COLUMN_DEF|String|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|字串|  
   
-## 請參閱  
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,39 +1,43 @@
 ---
-title: "1030 - StartFaultWorkItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1030 - StartFaultWorkItem
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1601fb9-0bc6-4dbe-816f-f24914063d34
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b25dbd5ced96b8e9ca3ef51e4de841a6238d2cbc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 1030 - StartFaultWorkItem
-## 屬性  
+# <a name="1030---startfaultworkitem"></a>1030 - StartFaultWorkItem
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|1030|  
 |關鍵字|WFRuntime|  
 |層級|詳細資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|通道|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## 描述  
+## <a name="description"></a>描述  
  表示 FaultWorkItem 開始執行。  
   
-## 訊息  
- 開始執行活動 '%1'、DisplayName：'%2'、InstanceId：'%3' 的 FaultWorkItem。例外狀況傳播源自活動 '%4'、DisplayName：'%5'、InstanceId：'%6' 傳回例外狀況。  
+## <a name="message"></a>訊息  
+ 開始執行的 faultworkitem 活動 '%1'、 DisplayName: '%2'、 InstanceId: '%3'。  活動 '%4'、DisplayName：'%5'、InstanceId：'%6' 傳回例外狀況。  
   
-## 詳細資料  
+## <a name="details"></a>詳細資料  
   
 |資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
+|--------------------|--------------------|-----------------|  
 |FaultActivity|xs:string|錯誤活動的型別名稱。|  
 |FaultActivityDisplayName|xs:string|錯誤活動的顯示名稱。|  
 |FaultActivityInstanceId|xs:string|錯誤活動的執行個體 ID。|  

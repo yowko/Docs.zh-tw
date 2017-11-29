@@ -1,45 +1,48 @@
 ---
-title: "推斷項目文字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "推斷項目文字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 66dcc6a98d365f20da6c7f4c075c2fdd8ab936e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 推斷項目文字
-如果項目包含文字且沒有推斷為資料表的項目子系 \(例如具有屬性的項目或重複的項目\)，名為 **TableName\_Text** 的新資料行便會被加入為項目推斷的資料表。  項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。  新資料行的 **ColumnMapping** 屬性會被設定為 **MappingType.SimpleContent**。  
+# <a name="inferring-element-text"></a>推斷項目文字
+如果項目包含文字，而且沒有任何子項目，來推斷為資料表 （具有屬性的項目） 或重複的項目，例如新的資料行名稱**TableName_Text**將加入至項目推斷的資料表。 項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。 **ColumnMapping**新資料行的屬性會設定為**MappingType.SimpleContent**。  
   
  例如，請考量下列 XML。  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1">Text1</Element1>  
 </DocumentElement>  
 ```  
   
- 推斷程序將產生名為 **Element1** 的資料表，其中有兩個資料行：**attr1** 和 **Element1\_Text**。  **attr1** 資料行的 **ColumnMapping** 屬性會設定為 **MappingType.Attribute**。  **Element1\_Text** 資料行的 **ColumnMapping** 屬性會設定為 **MappingType.SimpleContent**。  
+ 推斷程序將會產生名為的資料表**Element1**與兩個資料行： **attr1**和**Element1_Text**。 **ColumnMapping**屬性**attr1**資料行設定**MappingType.Attribute**。 **ColumnMapping**屬性**Element1_Text**資料行設定**MappingType.SimpleContent**。  
   
- **DataSet：**DocumentElement  
+ **資料集：** DocumentElement  
   
- **資料表：**Element1  
+ **Table:** Element1  
   
-|attr1|Element1\_Text|  
+|attr1|Element1_Text|  
 |-----------|--------------------|  
 |value1|Text1|  
   
- 如果項目包含文字，但是它的項目子系也包含文字，則不會有資料行加入資料表來儲存項目中包含的文字。  包含在項目中的文字會被忽略，而項目子系中的文字會被包含在資料表的資料列內。  例如，請考量下列 XML。  
+ 如果項目包含文字，但是它的項目子系也包含文字，則不會有資料行加入資料表來儲存項目中包含的文字。 包含在項目中的文字會被忽略，而項目子系中的文字會被包含在資料表的資料列內。 例如，請考量下列 XML。  
   
-```  
+```xml  
 <Element1>  
   Text1  
   <ChildElement1>Text2</ChildElement1>  
@@ -47,20 +50,20 @@ caps.handback.revision: 4
 </Element1>  
 ```  
   
- 推斷程序會產生名為 **Element1** 的資料表，並具有一個名為 **ChildElement1** 的資料行。  **ChildElement1** 項目的文字會被包含在資料表的資料列內。  其他文字則被忽略。  **ChildElement1** 資料行的 **ColumnMapping** 屬性會設定為 **MappingType.Element**。  
+ 推斷程序將會產生名為的資料表**Element1**包含一個資料行名為**ChildElement1**。 文字**ChildElement1**項目將會包含在資料表中的資料列。 其他文字則被忽略。 **ColumnMapping**屬性**ChildElement1**資料行設定**MappingType.Element**。  
   
- **DataSet：**DocumentElement  
+ **資料集：** DocumentElement  
   
- **資料表：**Element1  
+ **Table:** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text2|  
   
-## 請參閱  
- [從 XML 推斷 DataSet 關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [從 XML 載入 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [從 XML 載入 DataSet 結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSet、DataTable 及 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [從 XML 推斷資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [從 XML 載入資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [從 XML 載入資料集結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

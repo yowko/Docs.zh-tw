@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a8a01e89977ea4fb9487520f2baa35028720e9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6c0665a379f02a74bd0f3631aa26b41dd6ece5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows 市集應用程式的網路隔離
 <xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空間中的類別可以用來開發 Windows 市集應用程式或傳統型應用程式。 在 Windows 市集應用程式中使用時，這些命名空間中的類別受到網路隔離的影響，而網路隔離是 [!INCLUDE[win8](../../../includes/win8-md.md)] 所使用應用程式安全性模型的一部分。 必須在 Windows 市集應用程式的應用程式資訊清單中啟用適當的網路功能，讓系統允許網路存取。  
@@ -41,10 +35,9 @@ ms.lasthandoff: 08/21/2017
  如需如何設定用於針對網路隔離進行疑難排解之網路功能和隔離工具的詳細資訊，請參閱 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 開發人員文件中的[如何設定網路隔離功能](http://go.microsoft.com/fwlink/?LinkID=228265)。  
   
 ## <a name="see-also"></a>另請參閱  
- [連線至 Web 服務](http://go.microsoft.com/fwlink/?LinkID=245696)   
- [網路隔離的方針和檢查清單](http://go.microsoft.com/fwlink/?LinkID=228265)   
- [快速入門：使用 HttpClient 進行連線](http://go.microsoft.com/fwlink/?LinkId=245697)   
- [如何使用 HttpClient 處理常式](http://go.microsoft.com/fwlink/?LinkId=245699)   
- [如何保護 HttpClient 連線](http://go.microsoft.com/fwlink/?LinkId=245698)   
+ [連接到 web 服務](http://go.microsoft.com/fwlink/?LinkID=245696)  
+ [方針和網路隔離的檢查清單](http://go.microsoft.com/fwlink/?LinkID=228265)  
+ [快速入門： 使用 HttpClient 來連接](http://go.microsoft.com/fwlink/?LinkId=245697)  
+ [如何使用 HttpClient 處理常式](http://go.microsoft.com/fwlink/?LinkId=245699)  
+ [如何保護 HttpClient 連線](http://go.microsoft.com/fwlink/?LinkId=245698)  
  [HttpClient 範例](http://go.microsoft.com/fwlink/?LinkId=242550)
-

@@ -1,35 +1,38 @@
 ---
-title: "4817 - InnerChannelCreationFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4817 - InnerChannelCreationFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1a20619-beda-49b9-bb64-76b6a009c32b
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c414b2bb2e3d36ac4ae8f9fd64645faa16d8e3c6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 4817 - InnerChannelCreationFailed
-## 屬性  
+# <a name="4817---innerchannelcreationfailed"></a>4817 - InnerChannelCreationFailed
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|4817|  
 |關鍵字|探索|  
 |層級|警告|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|通道|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## 描述  
- 當 DiscoveryClientChannel 無法以探索結果端點建立通道時，就會發出此事件。  DiscoveryClientChannel 現在將嘗試使用下一個可用的探索結果端點。  
+## <a name="description"></a>描述  
+ 當 DiscoveryClientChannel 無法以探索結果端點建立通道時，就會發出此事件。 DiscoveryClientChannel 現在將嘗試使用下一個可用的探索結果端點。  
   
-## 訊息  
- DiscoveryClientChannel 無法以 EndpointAddress\='%1' 且 Via\='%2' 的探索結果端點建立通道。  DiscoveryClientChannel 現在將嘗試使用下一個可用的探索結果端點。  
+## <a name="message"></a>訊息  
+ DiscoveryClientChannel 無法以 EndpointAddress='%1' 且 Via='%2' 的探索結果端點建立通道。 DiscoveryClientChannel 現在將嘗試使用下一個可用的探索結果端點。  
   
-## 詳細資料
+## <a name="details"></a>詳細資料

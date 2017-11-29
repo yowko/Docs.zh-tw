@@ -1,35 +1,38 @@
 ---
-title: "OracleType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: OracleType
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e0fa5a76c304246d1518ad7491cfc5b8b741f913
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# OracleType
-Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資料型別的結構。  這些結構包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。  
+# <a name="oracletypes"></a>OracleType
+Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資料型別的結構。 這些結構包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。  
   
 > [!NOTE]
 >  如需這些結構的完整清單，請參閱 <xref:System.Data.OracleClient>。  
   
- 下列 C\# 範例：  
+ 下列 C# 範例：  
   
 -   建立 Oracle 資料表並為其載入資料。  
   
 -   使用 <xref:System.Data.OracleClient.OracleDataReader> 存取資料，並使用數個 <xref:System.Data.OracleClient.OracleType> 結構顯示資料。  
   
-## 建立 Oracle 資料表  
- 此範例建立 Oracle 資料表並為其載入資料。  您必須先執行此範例，才能執行下一個範例。  
+## <a name="creating-an-oracle-table"></a>建立 Oracle 資料表  
+ 此範例建立 Oracle 資料表並為其載入資料。 您必須先執行此範例，才能執行下一個範例。  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -58,8 +61,8 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## 從 Oracle 資料表擷取資料  
- 此範例使用 **OracleDataReader** 存取資料，並使用數個 **OracleType** 結構顯示資料。  
+## <a name="retrieving-data-from-the-oracle-table"></a>從 Oracle 資料表擷取資料  
+ 這個範例會使用**OracleDataReader**存取資料，並使用數個**OracleType**結構顯示資料。  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -122,6 +125,6 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## 請參閱  
- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

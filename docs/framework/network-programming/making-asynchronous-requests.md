@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, asynchronous access
 - Networking
@@ -19,22 +17,21 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d0ed1eea11049a1e6f026c71a2eb41134f87fd8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="making-asynchronous-requests"></a>進行非同步要求
 <xref:System.Net> 類別會使用 .NET Framework 的標準非同步程式設計模型，非同步存取網際網路資源。 <xref:System.Net.WebRequest> 類別的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法會啟動和完成網際網路資源的非同步要求。  
   
 > [!NOTE]
->  在非同步回呼方法中使用同步呼叫可能會導致嚴重效能降低。 使用 **WebRequest** 和其子系所進行的內部要求，必須使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> 來讀取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName> 方法所傳回的資料流。  
+>  在非同步回呼方法中使用同步呼叫可能會導致嚴重效能降低。 使用 **WebRequest** 和其子系所進行的內部要求，必須使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> 來讀取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法所傳回的資料流。  
   
  下列範例程式碼示範如何搭配使用非同步呼叫與 **WebRequest** 類別。 此範例是一種主控台程式，可從命令列接受 URI，並要求 URI 上的資源，然後將從網際網路收到的資料列印至主控台。  
   
@@ -348,4 +345,3 @@ End Class
   
 ## <a name="see-also"></a>另請參閱  
  [要求資料](../../../docs/framework/network-programming/requesting-data.md)
-

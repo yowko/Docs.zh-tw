@@ -1,29 +1,32 @@
 ---
-title: "System.DateTime 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "System.DateTime 方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e4923be2b9e083129c58d042b1ad3e21897c0346
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# System.DateTime 方法
-下列 LINQ to SQL 支援的方法、運算子和屬性都可用於 LINQ to SQL 查詢中。  不支援某種方法、運算子或屬性時，就表示 LINQ to SQL 無法轉譯該成員，以便在 SQL Server 上執行。  雖然您可以在程式碼中使用這些成員，但是必須在查詢轉譯成 Transact\-SQL 之前或從資料庫中擷取結果之後，評估這些成員。  
+# <a name="systemdatetime-methods"></a>System.DateTime 方法
+下列 LINQ to SQL 支援的方法、運算子和屬性都可用於 LINQ to SQL 查詢中。 不支援某種方法、運算子或屬性時，就表示 LINQ to SQL 無法轉譯該成員，以便在 SQL Server 上執行。 雖然您可以在程式碼中使用這些成員，但是必須在查詢轉譯成 Transact-SQL 之前或從資料庫中擷取結果之後，評估這些成員。  
   
-## 支援的 System.DateTime 成員  
- 一旦在物件模型 \(Object Model\) 或外部對應檔案中對應之後，LINQ to SQL 就可讓您在 LINQ to SQL 查詢內部呼叫下列 <xref:System.DateTime?displayProperty=fullName> 成員。  
+## <a name="supported-systemdatetime-members"></a>支援的 System.DateTime 成員  
+ 一旦在物件模型 (Object Model) 或外部對應檔案中對應之後，LINQ to SQL 就可讓您在 LINQ to SQL 查詢內部呼叫下列 <xref:System.DateTime?displayProperty=nameWithType> 成員。  
   
 |支援的 <xref:System.DateTime> 方法|支援的 <xref:System.DateTime> 運算子|支援的 <xref:System.DateTime> 屬性|  
-|-------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|  
+|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Add%2A>|<xref:System.DateTime.op_Addition%2A>|<xref:System.DateTime.Date%2A>|  
 |<xref:System.DateTime.AddDays%2A>|<xref:System.DateTime.op_Equality%2A>|<xref:System.DateTime.Day%2A>|  
 |<xref:System.DateTime.AddHours%2A>|<xref:System.DateTime.op_GreaterThan%2A>|<xref:System.DateTime.DayOfWeek%2A>|  
@@ -38,7 +41,7 @@ caps.handback.revision: 2
 |<xref:System.DateTime.Equals%28System.DateTime%29>||<xref:System.DateTime.Today%2A>|  
 |||<xref:System.DateTime.Year%2A>|  
   
-## LINQ to SQL 不支援的成員  
+## <a name="members-not-supported-by-linq-to-sql"></a>LINQ to SQL 不支援的成員  
  不支援在 LINQ to SQL 查詢內部使用下列成員。  
   
 |||  
@@ -53,8 +56,8 @@ caps.handback.revision: 2
 |<xref:System.DateTime.FromFileTime%2A>|<xref:System.DateTime.FromFileTimeUtc%2A>|  
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
-## 方法轉譯範例  
- 所有 LINQ to SQL 支援的方法都會先轉譯成 Transact\-SQL，然後再傳送至 SQL Server。  例如，以下列模式為例。  
+## <a name="method-translation-example"></a>方法轉譯範例  
+ 所有 LINQ to SQL 支援的方法都會先轉譯成 Transact-SQL，然後再傳送至 SQL Server。 例如，以下列模式為例。  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
   
@@ -62,8 +65,8 @@ caps.handback.revision: 2
   
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
-## SQLMethods 日期和時間方法  
- 除了 <xref:System.DateTime> 結構所提供的方法以外，LINQ to SQL 還從 <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=fullName> 類別 \(Class\) 中提供了下表所列的方法，以便使用日期和時間。  
+## <a name="sqlmethods-date-and-time-methods"></a>SQLMethods 日期和時間方法  
+ 除了 <xref:System.DateTime> 結構所提供的方法以外，LINQ to SQL 還從 <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> 類別 (Class) 中提供了下表所列的方法，以便使用日期和時間。  
   
 ||||  
 |-|-|-|  
@@ -71,8 +74,8 @@ caps.handback.revision: 2
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## 請參閱  
- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)   
- [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)   
- [SQL\-CLR 型別對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)   
+## <a name="see-also"></a>另請參閱  
+ [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [SQL CLR 型別對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [資料型別和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
