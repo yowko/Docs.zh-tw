@@ -1,222 +1,226 @@
 ---
-title: "逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI 表單"
-  - "MDI 表單, 建立"
-  - "MDI 表單, 逐步解說"
-  - "MDI, 建立表單"
-  - "多文件介面表單"
-  - "工具列 [Windows Form]"
-  - "ToolStrip 控制項 [Windows Forms]"
-  - "ToolStripPanel 控制項 [Windows Form]"
+title: "逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- toolbars [Windows Forms]
+- ToolStripPanel control [Windows Forms]
+- MDI [Windows Forms], creating forms
+- multiple document interface forms
+- MDI forms
+- ToolStrip control [Windows Forms]
+- MDI forms [Windows Forms], creating
+- MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bca5439f247951496d82c03b57ec1fa0e21a8271
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單
-<xref:System.Windows.Forms?displayProperty=fullName> 命名空間支援多重文件介面 \(MDI\) 應用程式，而 <xref:System.Windows.Forms.MenuStrip> 控制項則支援功能表合併。  MDI 表單也可以使用 <xref:System.Windows.Forms.ToolStrip> 控制項建立。  
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單
+<xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間支援多重文件介面 (MDI) 應用程式，而 <xref:System.Windows.Forms.MenuStrip> 控制項則支援功能表合併。 MDI 表單也可以由 <xref:System.Windows.Forms.ToolStrip> 控制項建立。  
   
- 此逐步解說會示範如何將 <xref:System.Windows.Forms.ToolStripPanel> 控制項與 MDI 表單搭配使用。  這個表單也支援與子功能表的功能表合併。  下列工作會在逐步解說中說明：  
+ 本逐步解說示範如何使用<xref:System.Windows.Forms.ToolStripPanel>在 MDI 表單的控制項。 這個表單也支援子功能表的功能表合併。 在本逐步解說說明下列工作：  
   
--   建立 Windows Form 專案  
+-   建立 Windows Form 專案。  
   
--   建立表單的主功能表  \(功能表的實際名稱將會不同\)  
+-   建立主功能表為您的表單。 [] 功能表中的實際名稱而異。  
   
--   將 <xref:System.Windows.Forms.ToolStripPanel> 控制項加入至 \[**工具箱**\]  
+-   加入<xref:System.Windows.Forms.ToolStripPanel>控制權傳輸至**工具箱**。  
   
--   建立子表單  
+-   建立子表單。  
   
--   依照疊置順序 \(Z\-order\) 排列 <xref:System.Windows.Forms.ToolStripPanel> 控制項  
+-   排列<xref:System.Windows.Forms.ToolStripPanel>依 z 軸順序的控制項。  
   
- 完成這些工作之後，您就會擁有支援功能表合併與可移動式 <xref:System.Windows.Forms.ToolStrip> 控制項的 MDI 表單。  
+ 當您完成時，您必須支援功能表合併和可移動的 MDI 表單<xref:System.Windows.Forms.ToolStrip>控制項。  
   
- 若要將此主題中的程式碼複製為一份清單，請參閱 [如何：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
+ 若要為單一列出本主題中複製的程式碼，請參閱[How to： 使用功能表合併和 ToolStrip 控制項建立 MDI 表單](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-## 必要條件  
- 若要完成這個逐步解說，您必須要有：  
+## <a name="prerequisites"></a>必要條件  
+ 若要完成這個逐步解說，您將需要：  
   
--   具有足夠的權限，以便能夠在安裝了 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 的電腦上建立及執行 Windows Form 應用程式專案  
+-   若要能夠建立和執行 Windows Form 應用程式專案的電腦上有足夠的權限所在[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]安裝。  
   
-## 建立專案  
+## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
-#### 若要建立專案  
+#### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立名為 MdiForm 的 Windows 應用程式專案。  
+1.  建立 Windows 應用程式專案，稱為**MdiForm**。  
   
-     如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+     如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
-2.  在 Windows Form 設計工具中選取表單。  
+2.  在 Windows Form 設計工具中，選取的表單。  
   
-3.  在 \[屬性\] 視窗中，將 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 的值設定為 `true`。  
+3.  在 [屬性] 視窗中設定的值<xref:System.Windows.Forms.Form.IsMdiContainer%2A>至`true`。  
   
-## 建立主功能表  
- MDI 父表單包含了主功能表。  主功能表中有一個名為 \[**視窗**\] 的功能表項目。  您可以用 \[**視窗**\] 功能表項目來建立子表單。  子表單中的功能表項目會合併到主功能表。  
+## <a name="creating-the-main-menu"></a>建立主功能表  
+ MDI 父表單包含主功能表。 主功能表中有一個功能表項目名稱為**視窗**。 與**視窗**功能表項目，您可以建立子表單。 從子表單的功能表項目會合併到主功能表。  
   
-#### 若要建立主功能表  
+#### <a name="to-create-the-main-menu"></a>若要建立主功能表  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.MenuStrip> 控制項拖曳到表單上。  
+1.  從**工具箱**，拖曳<xref:System.Windows.Forms.MenuStrip>控制項拖曳至表單。  
   
-2.  將 <xref:System.Windows.Forms.ToolStripMenuItem> 加入至 <xref:System.Windows.Forms.MenuStrip> 控制項並命名為 \[視窗\]。  
+2.  新增<xref:System.Windows.Forms.ToolStripMenuItem>至<xref:System.Windows.Forms.MenuStrip>控制項並將其命名**視窗**。  
   
 3.  選取 <xref:System.Windows.Forms.MenuStrip> 控制項。  
   
-4.  在 \[屬性\] 視窗中，將 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 屬性的值設定為 `ToolStripMenuItem1`。  
+4.  在 [屬性] 視窗中設定的值<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性`ToolStripMenuItem1`。  
   
-5.  在 \[**視窗**\] 功能表項目中加入一個子項目，然後將子項目命名為 \[新增\]。  
+5.  加入至一個子項目**視窗**功能表項目，然後名稱子項目的**新增**。  
   
-6.  在 \[屬性\] 視窗中，按一下 \[**事件**\]。  
+6.  在 [屬性] 視窗中，按一下**事件**。  
   
-7.  按兩下 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+7.  按兩下<xref:System.Windows.Forms.ToolStripItem.Click>事件。  
   
-     Windows Form 設計工具會為 <xref:System.Windows.Forms.ToolStripItem.Click> 事件產生一個事件處理常式。  
+     Windows Form 設計工具產生的事件處理常式<xref:System.Windows.Forms.ToolStripItem.Click>事件。  
   
-8.  將下列程式碼插入至事件處理常式。  
+8.  此事件處理常式中插入下列程式碼。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]  
   
-## 將 ToolStripPanel 控制項加入至工具箱  
- 當您在 MDI 表單中使用 <xref:System.Windows.Forms.MenuStrip> 控制項時，必須要有 <xref:System.Windows.Forms.ToolStripPanel> 控制項。  您必須將 <xref:System.Windows.Forms.ToolStripPanel> 控制項加入至 \[**工具箱**\]，才能在 Windows Form 設計工具中建置 MDI 表單。  
+## <a name="adding-the-toolstrippanel-control-to-the-toolbox"></a>ToolStripPanel 控制項新增至工具箱  
+ 當您使用<xref:System.Windows.Forms.MenuStrip>控制項，您必須擁有在 MDI 表單<xref:System.Windows.Forms.ToolStripPanel>控制項。 您必須新增<xref:System.Windows.Forms.ToolStripPanel>控制權傳輸至**工具箱**來建置您在 Windows Form 設計工具中的 MDI 表單。  
   
-#### 若要將 ToolStripPanel 控制項加入至工具箱  
+#### <a name="to-add-the-toolstrippanel-control-to-the-toolbox"></a>ToolStripPanel 控制項加入 [工具箱]  
   
-1.  開啟 \[**工具箱**\]，然後按一下 \[**所有 Windows Form**\] 索引標籤，以顯示可用的 Windows Form 控制項。  
+1.  開啟**工具箱**，然後按一下 **所有 Windows Form**索引標籤，以顯示可用的 Windows Form 控制項。  
   
-2.  以滑鼠右鍵按一下，開啟捷徑功能表並選取 \[**選擇項目**\]。  
+2.  若要開啟快顯功能表中，以滑鼠右鍵按一下並選取**選擇項目**。  
   
-3.  在 \[**選擇工具箱項目**\] 對話方塊中，向下捲動 \[**名稱**\] 欄直到找到 \[**ToolStripPanel**\] 為止。  
+3.  在**選擇工具箱項目**對話方塊中，向下捲動**名稱**資料行，直到您找到**ToolStripPanel**。  
   
-4.  選取 \[**ToolStripPanel**\] 旁邊的核取方塊，然後按一下 \[**確定**\]。  
+4.  選取核取方塊，由**ToolStripPanel**，然後按一下 **確定**。  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 控制項會出現在 \[**工具箱**\] 中。  
+     <xref:System.Windows.Forms.ToolStripPanel>控制項出現在**工具箱**。  
   
-## 建立子表單  
- 在這個程序中，您將會定義不同的子表單類別，這個類別有自己的 <xref:System.Windows.Forms.MenuStrip> 控制項。  這個表單的功能表項目會與父表單的功能表項目合併。  
+## <a name="creating-a-child-form"></a>建立子表單  
+ 在此程序，您會定義不同的子表單類別，都有它自己<xref:System.Windows.Forms.MenuStrip>控制項。 此表單的功能表項目會與父表單的合併。  
   
-#### 若要定義子表單  
+#### <a name="to-define-a-child-form"></a>若要定義子表單  
   
-1.  加入一個名為 `ChildForm` 的新表單至專案。  
+1.  加入名為的新表單`ChildForm`至專案。  
   
-     如需詳細資訊，請參閱 [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/zh-tw/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+     如需詳細資訊，請參閱[How to： 將 Windows Form 加入至專案](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
   
-2.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.MenuStrip> 控制項拖曳到子表單上。  
+2.  從**工具箱**，拖曳<xref:System.Windows.Forms.MenuStrip>控制項拖曳至子表單。  
   
-3.  按一下 <xref:System.Windows.Forms.MenuStrip> 控制項的智慧標籤圖像 \(![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)，然後選取 \[**編輯項目**\]。  
+3.  按一下<xref:System.Windows.Forms.MenuStrip>控制項的智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然後選取**編輯項目**。  
   
-4.  在 \[**項目集合編輯器**\] 對話方塊中，將新的 <xref:System.Windows.Forms.ToolStripMenuItem> \(命名為 ChildMenuItem\) 加入至子功能表。  
+4.  在**項目集合編輯器**對話方塊方塊中，加入新<xref:System.Windows.Forms.ToolStripMenuItem>名為**ChildMenuItem**子功能表。  
   
-     如需詳細資訊，請參閱 [ToolStrip Items Collection Editor](http://msdn.microsoft.com/zh-tw/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)。  
+     如需詳細資訊，請參閱[ToolStrip 項目集合編輯器](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)。  
   
-## 測試表單  
+## <a name="testing-the-form"></a>測試表單  
   
-#### 若要測試您的表單  
+#### <a name="to-test-your-form"></a>若要測試您的表單  
   
-1.  按 F5 編譯並執行表單。  
+1.  按 F5 編譯和執行您的表單。  
   
-2.  按一下 \[**視窗**\] 功能表項目以開啟功能表，然後按一下 \[**新增**\]。  
+2.  按一下**視窗**功能表項目，以開啟功能表，然後按一下**新增**。  
   
-     在表單的 MDI 工作區 \(Client Area\) 會建立一個新的子表單。  子表單的功能表會與主功能表合併。  
+     表單的 MDI 工作區中建立新的子表單。 子表單的功能表和功能表合併主功能表。  
   
 3.  關閉子表單。  
   
      子表單的功能表會從主功能表中移除。  
   
-4.  按 \[**新增**\] 數次。  
+4.  按一下**新增**數次。  
   
-     因為 <xref:System.Windows.Forms.MenuStrip> 控制項的 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 屬性已經指定，新增的子表單會自動列出在 \[**視窗**\] 功能表項目底下。  
+     子表單自動列在 W**視窗**功能表項目，因為<xref:System.Windows.Forms.MenuStrip>控制項的<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性指派。  
   
-## 加入 ToolStrip 支援  
- 在這個程序中，您會將四個 <xref:System.Windows.Forms.ToolStrip> 控制項加入至 MDI 父表單。  每個 <xref:System.Windows.Forms.ToolStrip> 控制項都是加在停駐於表單邊緣的 <xref:System.Windows.Forms.ToolStripPanel> 控制項內。  
+## <a name="adding-toolstrip-support"></a>加入 ToolStrip 支援  
+ 在此程序，您會將四個<xref:System.Windows.Forms.ToolStrip>MDI 父表單的控制項。 每個<xref:System.Windows.Forms.ToolStrip>內加入控制項<xref:System.Windows.Forms.ToolStripPanel>控制項停駐在表單的邊緣。  
   
-#### 若要將 ToolStrip 控制項加入至 MDI 父表單  
+#### <a name="to-add-toolstrip-controls-to-the-mdi-parent-form"></a>MDI 父表單中加入 ToolStrip 控制項  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.ToolStripPanel> 控制項拖曳到表單上。  
+1.  從**工具箱**，拖曳<xref:System.Windows.Forms.ToolStripPanel>控制項拖曳至表單。  
   
-2.  在 <xref:System.Windows.Forms.ToolStripPanel> 控制項已選取的情況下，按兩下 \[**工具箱**\] 中的 <xref:System.Windows.Forms.ToolStrip> 控制項。  
+2.  與<xref:System.Windows.Forms.ToolStripPanel>選取控制項中，按兩下<xref:System.Windows.Forms.ToolStrip>控制**工具箱**。  
   
-     <xref:System.Windows.Forms.ToolStrip> 控制項會建立在 <xref:System.Windows.Forms.ToolStripPanel> 控制項中。  
+     A<xref:System.Windows.Forms.ToolStrip>中建立控制項<xref:System.Windows.Forms.ToolStripPanel>控制項。  
   
 3.  選取 <xref:System.Windows.Forms.ToolStripPanel> 控制項。  
   
-4.  在 \[屬性\] 視窗中，將控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性值變更為 <xref:System.Windows.Forms.DockStyle>。  
+4.  在 [屬性] 視窗中，變更控制項的值<xref:System.Windows.Forms.Control.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.Left>。  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 控制項便會停駐在表單的左邊，主功能表的下方。  MDI 工作區會配合 <xref:System.Windows.Forms.ToolStripPanel> 控制項調整大小。  
+     <xref:System.Windows.Forms.ToolStripPanel>控制停駐在主功能表下的表單的左邊。 在 MDI 工作區調整大小以配合<xref:System.Windows.Forms.ToolStripPanel>控制項。  
   
 5.  重複步驟 1 到 4。  
   
-     將新的 <xref:System.Windows.Forms.ToolStripPanel> 控制項停駐在表單的上方。  
+     新的停駐<xref:System.Windows.Forms.ToolStripPanel>表單頂端的控制項。  
   
-     這個 <xref:System.Windows.Forms.ToolStripPanel> 控制項會停駐在主功能表的下方，但是在第一個 <xref:System.Windows.Forms.ToolStripPanel> 控制項的右邊。  這個步驟說明了疊置順序在正確定位的 <xref:System.Windows.Forms.ToolStripPanel> 控制項中的重要性。  
+     <xref:System.Windows.Forms.ToolStripPanel>控制項下方主功能表中，但右邊的第一個停駐<xref:System.Windows.Forms.ToolStripPanel>控制項。 此步驟中說明在正確位置中的疊置順序的重要性<xref:System.Windows.Forms.ToolStripPanel>控制項。  
   
-6.  重複步驟 1 到 4 兩次，加入兩個 <xref:System.Windows.Forms.ToolStripPanel> 控制項。  
+6.  重複步驟 1 到 4 的另外兩個<xref:System.Windows.Forms.ToolStripPanel>控制項。  
   
-     將新的 <xref:System.Windows.Forms.ToolStripPanel> 控制項分別停駐在表單的右側和下方。  
+     新的停駐<xref:System.Windows.Forms.ToolStripPanel>的權限和表單底部的控制項。  
   
-## 依照疊置順序排列 ToolStripPanel 控制項  
- <xref:System.Windows.Forms.ToolStripPanel> 控制項在 MDI 表單上的停駐位置，是根據該控制項在疊置順序中的位置來決定。  您可以在 \[文件大綱\] 視窗中輕鬆地排列控制項的疊置順序。  
+## <a name="arranging-toolstrippanel-controls-by-z-order"></a>排列依 z 軸順序 ToolStripPanel 控制項  
+ 停駐的位置<xref:System.Windows.Forms.ToolStripPanel>MDI 表單上的控制項由控制項的疊置順序的位置。 您可以輕易地排列您在文件大綱 視窗中的控制項疊置順序。  
   
-#### 若要依照疊置順序排列 ToolStripPanel 控制項  
+#### <a name="to-arrange-toolstrippanel-controls-by-z-order"></a>若要排列依 z 軸順序 ToolStripPanel 控制項  
   
-1.  在 \[**檢視**\] 功能表上，按一下 \[**其他視窗**\]，然後再按 \[**文件大綱**\]。  
+1.  在**檢視**功能表上，按一下 **其他視窗**，然後按一下 **文件大綱**。  
   
-     您在上一個程序中所做的 <xref:System.Windows.Forms.ToolStripPanel> 控制項排列是不標準的，  這是因為疊置順序不正確。  請使用 \[文件大綱\] 視窗變更控制項的疊置順序。  
+     排列方式您<xref:System.Windows.Forms.ToolStripPanel>控制項，從上一個程序並非標準用法。 這是因為疊置順序不正確。 您可以使用 [文件大綱] 視窗來變更控制項疊置順序。  
   
-2.  在 \[文件大綱\] 視窗中，選取 \[**ToolStripPanel4**\]。  
+2.  在 [文件大綱] 視窗中，選取**ToolStripPanel4**。  
   
-3.  重複按向下箭頭按鈕，直到 \[**ToolStripPanel4**\] 位於清單的底部。  
+3.  按一下向下箭頭按鈕重複，直到**ToolStripPanel4**位於清單的底部。  
   
-     \[**ToolStripPanel4**\] 控制項會停駐在表單的底部，其他控制項的下方。  
+     **ToolStripPanel4**控制項停駐於底部下其他控制項的表單。  
   
-4.  選取 \[**ToolStripPanel2**\]。  
+4.  選取**ToolStripPanel2**。  
   
-5.  按一次向下箭頭按鈕，將這個控制項放在清單中的第三個位置。  
+5.  按一下一次向下箭號按鈕在清單中的第三個放置控制項。  
   
-     \[**ToolStripPanel2**\] 控制項會停駐在表單的最上方，主功能表的下方，以及其他控制項的上方。  
+     **ToolStripPanel2**控制項停駐在表單下方主功能表和其他控制項上方的頂端。  
   
-6.  在 \[**文件大綱**\] 視窗中選取不同的控制項，並將它們移至疊置順序中的不同位置。  請留意疊置順序對控制項停駐位置的影響。  若要復原變更，請使用 CTRL\-Z 或 \[**編輯**\] 功能表上的 \[**復原**\]。  
+6.  選取不同的控制項中**文件大綱**視窗，並將它們移到疊置順序的不同位置。 請注意對於停駐控制項的位置之疊置順序的影響。 使用 CTRL-Z 或**復原**上**編輯**功能表來復原您的變更。  
   
-## 檢查點  
+## <a name="checkpoint"></a>檢查點  
   
-#### 若要測試您的表單  
+#### <a name="to-test-your-form"></a>若要測試您的表單  
   
-1.  按 F5 編譯並執行表單。  
+1.  按 F5 編譯和執行您的表單。  
   
-2.  按一下 <xref:System.Windows.Forms.ToolStrip> 控制項的底框，並將控制項拖曳至表單上的其他位置。  
+2.  按一下的底框<xref:System.Windows.Forms.ToolStrip>控制，並在表單上將控制項拖曳到不同的位置。  
   
-     您可以將 <xref:System.Windows.Forms.ToolStrip> 控制項從一個 <xref:System.Windows.Forms.ToolStripPanel> 控制項拖曳至另一個。  
+     您可以拖曳<xref:System.Windows.Forms.ToolStrip>控制項從某個<xref:System.Windows.Forms.ToolStripPanel>到另一個控制項。  
   
-## 後續步驟  
- 在這個逐步解說中，您建立了一個使用 <xref:System.Windows.Forms.ToolStrip> 控制項和功能表合併的 MDI 父表單。  您可以將 <xref:System.Windows.Forms.ToolStrip> 系列的控制項使用在許多其他用途上：  
+## <a name="next-steps"></a>後續步驟  
+ 在本逐步解說，您已經建立 MDI 父表單與<xref:System.Windows.Forms.ToolStrip>控制項和功能表合併。 您可以使用<xref:System.Windows.Forms.ToolStrip>系列用於許多其他用途的控制項：  
   
--   使用 <xref:System.Windows.Forms.ContextMenuStrip> 來為您的控制項建立捷徑功能表。  如需詳細資訊，請參閱 [ContextMenu 控制項概觀](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)。  
+-   建立您的控制項使用的快顯功能表<xref:System.Windows.Forms.ContextMenuStrip>。 如需詳細資訊，請參閱[ContextMenu 元件概觀](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)。  
   
--   使用自動填入的標準功能表來建立表單。  如需詳細資訊，請參閱 [逐步解說：對表單提供標準功能表項目](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
+-   使用自動填入的標準功能表中建立的表單。 如需詳細資訊，請參閱[逐步解說： 提供標準功能表項目表單](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
   
--   賦予您的 <xref:System.Windows.Forms.ToolStrip> 控制項專業的外觀。  如需詳細資訊，請參閱 [如何：設定應用程式的 ToolStrip 產生器](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md)。  
+-   提供您<xref:System.Windows.Forms.ToolStrip>控制項專業外觀。 如需詳細資訊，請參閱[How to： 設定應用程式的 ToolStrip 產生器](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md)。  
   
-## 請參閱  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- [如何：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [如何：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [如何：將 MenuStrip 插入至 MDI 下拉式功能表](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [操作說明：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [操作說明：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [操作說明：將 MenuStrip 插入至 MDI 下拉式功能表](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
  [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

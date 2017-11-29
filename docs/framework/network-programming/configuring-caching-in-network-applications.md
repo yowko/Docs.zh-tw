@@ -7,24 +7,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- cache [.NET Framework], configuring
+helpviewer_keywords: cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ea36db46b79c890b0b26cfc39e2aab5bc0e88e03
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3c06c05f2d5102d1822aa11c81f2814090e10ff6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="configuring-caching-in-network-applications"></a>設定網路應用程式的快取功能
 若要設定快取，您必須指定應用程式或 <xref:System.Net.WebRequest> 層級的快取原則。 下列主題所提供的程式碼範例示範如何設定應用程式和要求來使用快取。  
@@ -40,8 +33,7 @@ ms.lasthandoff: 08/21/2017
  您也可以設定使用應用程式或電腦組態檔的快取原則。 如需詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [快取原則](../../../docs/framework/network-programming/cache-policy.md)   
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
+ [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
  [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)
-

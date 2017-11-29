@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c9618213569766a6ae355a936a4b1f71a5046ef6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: eeda0c58e9b5e9f8b48e335849ce12f7e8d94a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 使用者入門
 不論是為了 Windows 10 撰寫新的 Windows 應用程式，或是移轉現有的 Windows 市集應用程式，都可遵循一組相同的程序進行。 若要建立 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式，請遵循下列步驟：  
@@ -69,11 +67,11 @@ ms.lasthandoff: 08/21/2017
  **依賴反映的方法**  
  在某些情況下，很難察覺程式碼中是否有使用反映。 某些常見的 API 或程式設計模式不是反映 API 的一部分，但依賴反映才能順利執行。 其中包括下列類型具現化和方法建構方法：  
   
--   <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> 方法  
+-   <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 方法  
   
--   <xref:System.Array.CreateInstance%2A?displayProperty=fullName> 和 <xref:System.Type.MakeArrayType%2A?displayProperty=fullName> 方法  
+-   <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 方法  
   
--   <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName> 方法  
+-   <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法  
   
  如需詳細資訊，請參閱 [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。  
   
@@ -123,11 +121,10 @@ ms.lasthandoff: 08/21/2017
 -   [.NET Native 應用程式中的執行階段例外狀況](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [NIB：.NET Native 設定和組態](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)   
- [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)   
- [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
- [依賴反映的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)   
- [序列化和中繼資料](../../../docs/framework/net-native/serialization-and-metadata.md)   
+ [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [NIB:.NET Native 安裝與設定](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)  
+ [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
+ [依賴反映的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+ [序列化和中繼資料](../../../docs/framework/net-native/serialization-and-metadata.md)  
  [將您的 Windows 市集應用程式移轉至 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
-

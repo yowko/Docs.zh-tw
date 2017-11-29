@@ -1,64 +1,69 @@
 ---
-title: "如何：將控制項加入至 Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 加入"
-  - "Windows Form 控制項, 加入至表單"
+title: "如何：將控制項加入至 Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms controls, adding to form
+- controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d1f5f739afa914a69017dbba2a9a4afb990f6e43
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將控制項加入至 Windows Form
-大部分表單都設計成將控制項加入表單的表面，以便定義使用者介面 \(UI\)。  「*控制項*」是表單上的元件，用來顯示資訊或接受使用者輸入。  如需控制項的詳細資訊，請參閱 [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)。  
+# <a name="how-to-add-controls-to-windows-forms"></a>如何：將控制項加入至 Windows Form
+大部分表單都設計成將控制項加入至表單的表面，以定義使用者介面 (UI)。 A*控制項*是用來顯示資訊或可接受使用者輸入表單上的元件。 如需將控制項的詳細資訊，請參閱[Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 若要在表單上繪製控制項  
+### <a name="to-draw-a-control-on-a-form"></a>若要繪製控制項在表單上  
   
-1.  開啟表單。  如需詳細資訊，請參閱 [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/zh-tw/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  開啟表單。 如需詳細資訊，請參閱[如何： 顯示 Windows Form 設計工具中](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
   
-2.  在 \[**工具箱**\] 中，按一下要加入至表單的控制項。  
+2.  在**工具箱**，按一下您想要新增至表單的控制項。  
   
-3.  在表單上，在您希望成為控制項左上角的位置按一下，然後拖曳到希望成為控制項右下角的位置。  
+3.  在表單中，按一下想要找出，控制項的左上角的位置並拖曳至想要找出控制項的右下角。  
   
-     控制項依指定的位置和大小加入至表單。  
-  
-    > [!NOTE]
-    >  每個控制項皆已定義預設大小。  您可以將控制項從 \[**工具箱**\] 拖曳到表單中，以便將預設大小的控制項加入表單。  
-  
-### 若要將控制項拖曳到表單中  
-  
-1.  開啟表單。  如需詳細資訊，請參閱 [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/zh-tw/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
-  
-2.  在 \[**工具箱**\] 中，按一下要加入的控制項並拖曳到表單。  
-  
-     控制項在指定的位置，以其預設大小加入至表單。  
+     控制項會加入至表單，以指定的位置和大小。  
   
     > [!NOTE]
-    >  您可以按兩下 \[**工具箱**\] 中的控制項，以便將預設大小的控制項加入至表單的左上角。  
+    >  每個控制項具有定義的預設大小。 您可以將控制項加入至您的表單控制項的預設大小中將它從**工具箱**至表單。  
   
-     您也可以在執行階段時動態將控制項加入表單。  在下列程式碼範例中，當按一下 <xref:System.Windows.Forms.Button> 控制項時，會將 <xref:System.Windows.Forms.TextBox> 控制項加入表單。  
+### <a name="to-drag-a-control-to-a-form"></a>若要將控制項拖曳至表單  
+  
+1.  開啟表單。 如需詳細資訊，請參閱[如何： 顯示 Windows Form 設計工具中](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+  
+2.  在**工具箱**，按一下您想要並將它拖曳至表單的控制項。  
+  
+     控制項會加入至表單，以預設大小的指定位置。  
   
     > [!NOTE]
-    >  執行下列程序前必須已具有表單，而且表單中已放置名為 `Button1` 的 **Button** 控制項。  
+    >  您可以按兩下中的控制項**工具箱**將它加入至表單的預設大小的左上角。  
   
-### 若要以程式設計方式將控制項加入表單中  
+     您也可以加入控制項動態表單在執行階段。 在下列程式碼範例中，<xref:System.Windows.Forms.TextBox>將控制項加入表單時<xref:System.Windows.Forms.Button>按一下控制項時。  
   
-1.  在表單的類別中，於處理按鈕之 `Click` 事件的方法中，插入類似以下程式碼，以便將參考加入控制項變數、設定控制項的 `Location` 並且加入控制項。  
+    > [!NOTE]
+    >  下列程序需要具有的表單有**按鈕**控制項， `Button1`、 已放置在其上。  
+  
+### <a name="to-add-a-control-to-a-form-programmatically"></a>若要以程式設計方式將控制項加入表單  
+  
+1.  在方法中處理按鈕的`Click`事件表單的類別，如下所示將參考加入至您的控制項變數的插入程式碼內設定控制項的`Location`，並加入控制項。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -66,7 +71,6 @@ caps.handback.revision: 15
        MyText.Location = New Point(25, 25)  
        Me.Controls.Add(MyText)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -76,7 +80,6 @@ caps.handback.revision: 15
        myText.Location = new Point(25,25);  
        this.Controls.Add (myText);  
     }  
-  
     ```  
   
     ```cpp  
@@ -91,14 +94,14 @@ caps.handback.revision: 15
     ```  
   
     > [!NOTE]
-    >  也可以加入程式碼來初始化控制項的其他屬性。  
+    >  您也可以加入程式碼以初始化控制項的其他屬性。  
   
     > [!IMPORTANT]
-    >  參考惡意的 `UserControl`，可能會讓本機電腦透過網路暴露在安全性風險下。  這只會在使用者惡意建立破壞性的自訂控制項，且稍後您不小心將它加入專案的情況下，才會是要考慮的問題。  
+    >  您可能會藉由參考惡意公開本機電腦透過網路的安全性風險`UserControl`。 這只會考量使用者惡意破壞性的自訂控制項，且您不小心將其加入您專案的建立。  
   
-## 請參閱  
- [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)   
- [排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [如何：重新調整 Windows Form 上控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)   
- [如何：設定由 Windows Form 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱  
+ [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
+ [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [操作說明：重新調整 Windows Forms 上控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
+ [操作說明：設定由 Windows Forms 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

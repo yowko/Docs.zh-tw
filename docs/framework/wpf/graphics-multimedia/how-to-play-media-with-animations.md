@@ -1,43 +1,46 @@
 ---
-title: "如何：以動畫播放媒體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "多媒體、 以動畫播放"
-  - "媒體，以動畫播放"
-  - "動畫播放媒體"
-  - "以動畫播放媒體"
+title: "操作說明：以動畫播放媒體"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multimedia [WPF], playback with animations
+- playback of media [WPF], with animations
+- animation [WPF], media playback with
+- media [WPF], playback with animations
 ms.assetid: 8982b7b7-1c6c-4b24-8801-b328862975f5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb5fd3575a0caa692e4a4013452e3069210c9a4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：以動畫播放媒體
-此範例示範如何同時播放媒體和動畫，使用<xref:System.Windows.Media.MediaTimeline>和<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>在同一個類別<xref:System.Windows.Media.Animation.Storyboard>。  
+# <a name="how-to-play-media-with-animations"></a>操作說明：以動畫播放媒體
+這個範例示範如何同時播放媒體和動畫，使用<xref:System.Windows.Media.MediaTimeline>和<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>中相同的類別<xref:System.Windows.Media.Animation.Storyboard>。  
   
 ## <a name="example"></a>範例  
- 您可以使用一或多個<xref:System.Windows.Media.MediaTimeline>物件<xref:System.Windows.Media.Animation.Storyboard>連同其他<xref:System.Windows.Media.Animation.Timeline>物件，例如動畫。  
+ 您可以使用一或多個<xref:System.Windows.Media.MediaTimeline>中的物件<xref:System.Windows.Media.Animation.Storyboard>連同其他<xref:System.Windows.Media.Animation.Timeline>物件，例如動畫。  
   
- 下列範例會設定<xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>屬性<xref:System.Windows.Media.Animation.Storyboard>為`Slip`，以指定動畫並不會不進行直到媒體 （在此範例中影片） 進行。 如果播放媒體因為載入時間延遲，可能會需要這項功能。  
+ 下列範例會設定<xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>屬性<xref:System.Windows.Media.Animation.Storyboard>為`Slip`，指定動畫不進度直到媒體 （在此範例中視訊） 進行。 如果因為載入時間而延遲媒體撥放，則可能需要此功能。  
   
- [!code-xml[MediaGallery_snippet#MediaTimelinePlusAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/MediaTimelinePlusAnimationExample.xaml#mediatimelineplusanimationexamplewholepage)]  
+ [!code-xaml[MediaGallery_snippet#MediaTimelinePlusAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/MediaTimelinePlusAnimationExample.xaml#mediatimelineplusanimationexamplewholepage)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Windows.Media.MediaTimeline>   
- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>   
- <xref:System.Windows.Media.Animation.Storyboard>   
- <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>   
- [How to 主題](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)   
- [腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)   
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
+ <xref:System.Windows.Media.MediaTimeline>  
+ <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
+ <xref:System.Windows.Media.Animation.Storyboard>  
+ <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>  
+ [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
+ [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)

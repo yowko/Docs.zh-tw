@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - CCW
 - COM interop, COM wrappers
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cbf466fb52af94d51babb30fdee85f4a056298c6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 874550511ed04427003f6fd54fdd97b3001356fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 當 COM 用戶端呼叫 .NET 物件時，Common Language Runtime 會建立 Managed 物件和物件的 COM 可呼叫包裝函式 (CCW)。 無法直接參考 .NET 物件，因此 COM 用戶端使用 CCW 做為 Managed 物件的 Proxy。  
@@ -189,11 +185,10 @@ public class LoanApp : IAnother {
  自動產生的雙重介面可能適合於少數情況，不過，通常它會造成與版本相關的複雜性。 例如，使用衍生類別之類別介面的 COM 用戶端，可能會因為對基底類別的變更而輕易地中斷。 當協力廠商提供基底類別時，類別介面的配置會超出您的控制。 此外，不同於僅分派介面，雙重介面 (**ClassInterface.AutoDual**) 在匯出的型別程式庫中提供類別介面的描述。 這類描述鼓勵晚期繫結的用戶端在執行階段快取 DispId。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>   
- [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)   
- [COM 包裝函式](../../../docs/framework/interop/com-wrappers.md)   
- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [模擬 COM 介面](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)   
- [限定交互操作的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
+ [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [COM 包裝函式](../../../docs/framework/interop/com-wrappers.md)  
+ [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [模擬 COM 介面](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [限定互通的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)
-

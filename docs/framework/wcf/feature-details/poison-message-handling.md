@@ -1,22 +1,25 @@
 ---
-title: "有害訊息處理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "有害訊息處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 719210e91fc98c7ceb0f6c51252cfcdfe2f1339c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 有害訊息處理
+# <a name="poison-message-handling"></a>有害訊息處理
 A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的交易，則會讓訊息留在佇列中，而訊息將會在新的交易中重試。 如果造成交易中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
   
  訊息變成有害訊息的原因有許多種。 最常見的原因是在應用程式中所發生的特定原因。 例如，如果應用程式從佇列讀取訊息，並且執行某些資料庫處理，應用程式可能因為無法在該資料庫上取得鎖定，而造成中止交易。 由於資料庫交易中止，訊息會留在佇列中，造成應用程式再次讀取該訊息，並重新嘗試取得資料庫鎖定。 如果訊息包含無效的資訊，則也可能變成有害的。 例如，採購單可能包含無效的客戶編號。 在這些情況下，應用程式可能自動中止交易，而迫使訊息成為有害訊息。  
@@ -40,7 +43,7 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
   
 -   Reject： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會指示 Message Queuing (MSMQ) 將負值通知傳回傳送的佇列管理員，說明應用程式無法接收訊息。 訊息會放在傳送的佇列管理員寄不出的信件佇列中。  
   
--   Move： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會將有害訊息移到有害訊息佇列，以便之後讓有害訊息處理應用程式進行處理。 有害訊息佇列是應用程式佇列的子佇列。 有害訊息處理應用程式可以是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，可從有害佇列中讀取訊息。 有害佇列是應用程式佇列的子佇列，並可以定址為 net.msmq://*機器名稱*>/*applicationQueue*; poison，其中*機器名稱*是佇列所在的電腦名稱和*applicationQueue*是應用程式專屬佇列的名稱。  
+-   Move： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會將有害訊息移到有害訊息佇列，以便之後讓有害訊息處理應用程式進行處理。 有害訊息佇列是應用程式佇列的子佇列。 有害訊息處理應用程式可以是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，可從有害佇列中讀取訊息。 有害佇列是應用程式佇列的子佇列，並可以定址為 net.msmq://\<*機器名稱*>/*applicationQueue*; poison，其中*電腦名稱*是佇列所在的電腦名稱和*applicationQueue*是應用程式專屬佇列的名稱。  
   
  以下為訊息的嘗試傳遞次數上限：  
   
@@ -67,11 +70,11 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
 >  您可以根據 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的需求，在這兩個繫結中修改這些屬性。 對於接收應用程式而言，整個有害訊息處理機制是在本機上進行的。 傳送應用程式看不到這個程序，除非接收應用程式最後停止並且將負值通知傳回至傳送者。 在這種情況下，訊息會移到傳送者寄不出的信件佇列中。  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>最佳做法：處理 MsmqPoisonMessageException  
- 當服務判定訊息是有害時，佇列的傳輸會擲回<xref:System.ServiceModel.MsmqPoisonMessageException> ，其中包含`LookupId`有害訊息。  
+ 當服務判定訊息是有害時，佇列的傳輸便會擲回 <xref:System.ServiceModel.MsmqPoisonMessageException>，其中包含有害訊息的 `LookupId`。  
   
- 接收應用程式可以實作<xref:System.ServiceModel.Dispatcher.IErrorHandler>介面，以處理應用程式所需的任何錯誤。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][延伸對錯誤處理和報告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)。  
+ 接收應用程式可實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面，以處理應用程式所需的任何錯誤。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][擴充對錯誤處理和報告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)。  
   
- 應用程式可能需要以某種自動處理的方式將有害訊息移至有害訊息序列，讓服務能夠存取佇列中其餘的訊息。 使用錯誤處理常式機制接聽有害訊息例外狀況的唯一案例是當<xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A>設定設為<xref:System.ServiceModel.ReceiveErrorHandling>。 Message Queuing 3.0 的有害訊息範例會示範這種行為。 以下將說明處理有害訊息時所採取的步驟，包括最佳做法：  
+ 應用程式可能需要以某種自動處理的方式將有害訊息移至有害訊息序列，讓服務能夠存取佇列中其餘的訊息。 唯一會使用錯誤處理常式機制接聽有害訊息例外狀況的情況，是在 <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 設定設為 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 的時候。 Message Queuing 3.0 的有害訊息範例會示範這種行為。 以下將說明處理有害訊息時所採取的步驟，包括最佳做法：  
   
 1.  請確認您的有害設定能反映您應用程式的需求。 處理設定時，務必確實了解 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上訊息佇列功能之間的差異。  
   
@@ -87,18 +90,18 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
   
   
   
- 此外，如果 `ReceiveErrorHandling` 設為 `Fault`，則 `ServiceHost` 會在遇到有害訊息時發生錯誤。 您可以連結到發生錯誤的事件並關閉服務、採取矯正措施，然後重新啟動。 例如，`LookupId`中<xref:System.ServiceModel.MsmqPoisonMessageException>傳播至`IErrorHandler`可以標註，當服務主機發生錯誤時，您可以使用`System.Messaging`API，以接收的訊息佇列使用`LookupId`從佇列移除訊息，並將訊息儲存在某些外部存放區或另一個佇列。 然後您可以重新啟動 `ServiceHost` 並繼續進行正常處理。 [MSMQ 4.0 中的有害訊息處理](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)示範這個行為。  
+ 此外，如果 `ReceiveErrorHandling` 設為 `Fault`，則 `ServiceHost` 會在遇到有害訊息時發生錯誤。 您可以連結到發生錯誤的事件並關閉服務、採取更正的動作，然後重新啟動。 例如，可以標註傳播至 `LookupId` 的 <xref:System.ServiceModel.MsmqPoisonMessageException> 中的 `IErrorHandler`，當服務主機發生錯誤時，您就可以使用 `System.Messaging` API 接收來自佇列的訊息 (使用 `LookupId` 移除佇列中的訊息)，以及將訊息保存在某些外部儲存區或另一個佇列中。 然後您可以重新啟動 `ServiceHost` 並繼續進行正常處理。 [有害訊息處理 MSMQ 4.0 中](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)示範此行為。  
   
 ## <a name="transaction-time-out-and-poison-messages"></a>異動逾時及有害訊息  
- 佇列傳輸通道和使用者程式碼之間可能會發生一種類別的錯誤。 這些錯誤可能會在中間的各層中偵測到，例如訊息安全層或服務分派邏輯。 例如，在 SOAP 安全層中偵測到遺失了 X.509 憑證，以及遺失的動作就是訊息會被分派至應用程式的情況。 發生這類情況時，服務模型會捨棄訊息。 由於訊息是在交易中讀取，而且不會提供交易的結果，因此交易最後會逾時、中止，而訊息則會放回佇列中。 換言之，針對特定類別的錯誤，異動不會立即中止，而是會等待直到異動逾時。 您可以修改服務使用的交易逾時<xref:System.ServiceModel.ServiceBehaviorAttribute>。  
+ 佇列傳輸通道和使用者程式碼之間可能會發生一種類別的錯誤。 這些錯誤可能會在中間的各層中偵測到，例如訊息安全層或服務分派邏輯。 例如，在 SOAP 安全層中偵測到遺失了 X.509 憑證，以及遺失的動作就是訊息會被分派至應用程式的情況。 發生這類情況時，服務模型會捨棄訊息。 由於訊息是在交易中讀取，而且不會提供交易的結果，因此交易最後會逾時、中止，而訊息則會放回佇列中。 換言之，針對特定類別的錯誤，交易不會立即中止，而是會等待直到交易逾時。您可以使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 修改服務的交易逾時。  
   
- 若要能在電腦上通用的原則下變更異動逾時，請修改 machine.config 檔案，並且設定適當的異動逾時。 要注意的是，交易最後會根據所設定的逾時而中止，並回到佇列中，並且會遞增其中止計數。 最後，訊息會變成有害，並且根據使用者的設定進行正確的處置。  
+ 若要能在電腦上通用的原則下變更交易逾時，請修改 machine.config 檔案，並且設定適當的交易逾時。要注意的是，交易最後會根據所設定的逾時而中止，並回到佇列中，並且會遞增其中止計數。 最後，訊息會變成有害，並且根據使用者的設定進行正確的處置。  
   
 ## <a name="sessions-and-poison-messages"></a>工作階段及有害訊息  
  工作階段如同單一訊息一樣，會進行相同的重試和有害訊息處理程序。 先前所列出的有害訊息屬性會套用到整個工作階段。 這表示會重試整個工作階段，而且如果訊息遭拒絕，將移至最後的有害訊息佇列或傳送者寄不出的信件佇列。  
   
 ## <a name="batching-and-poison-messages"></a>批次處理及有害訊息  
- 如果訊息變成有害訊息，而且是批次的一部分，那麼整個批次都會復原，而通道會回到一次讀取一個訊息的狀態。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]批次處理，請參閱[批次處理交易中的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ 如果訊息變成有害訊息，而且是批次的一部分，那麼整個批次都會復原，而通道會回到一次讀取一個訊息的狀態。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]批次處理，請參閱[異動中批次處理的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>有害佇列中之訊息的有害訊息處理  
  當訊息放入有害訊息佇列時，有害訊息處理就不會結束。 有害訊息佇列中的訊息必須繼續讀取和處理。 您可以在最終有害子佇列中讀取訊息時，使用有害訊息處理設定的子集。 適當的設定為 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以將 `ReceiveErrorHandling` 設定為 Drop、Reject 或 Fault。 如果 `MaxRetryCycles` 設為 Move，則會忽略 `ReceiveErrorHandling` 並且擲回例外狀況。  
@@ -113,6 +116,6 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援能夠保留嘗試傳遞訊息之計數的訊息屬性 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 由於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在記憶體中保留中止計數，因此當伺服陣列中超過一個以上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務讀取相同的訊息時，這個屬性可能就無法包含精確的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [在 Windows Vista、 Windows Server 2003 和 Windows XP 中的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)   
- [指定與處理合約和服務中的錯誤](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+ [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [在 Windows Vista、 Windows Server 2003 和 Windows XP 中的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [指定及處理合約與服務中的錯誤](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

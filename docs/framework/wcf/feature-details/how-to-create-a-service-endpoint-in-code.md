@@ -1,29 +1,35 @@
 ---
-title: "HOW TO：在程式碼中建立服務端點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：在程式碼中建立服務端點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ae688c0f6de534db3e0cdc707bc56301ddb94c8a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：在程式碼中建立服務端點
+# <a name="how-to-create-a-service-endpoint-in-code"></a>HOW TO：在程式碼中建立服務端點
 在此範例中，已為計算機服務定義了 `ICalculator` 合約、在 `CalculatorService` 類別中實作了服務，並於程式碼中定義其端點，同時指定服務必須使用 <xref:System.ServiceModel.BasicHttpBinding> 類別。  
   
- 通常最佳作法是在組態中以宣告方式指定繫結和位址資訊，而不是在程式碼中強制指定。在程式碼中定義端點通常不是實際的作法，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。更普遍做法是將繫結和定址資訊留在程式碼外面，如此一來，不需要重新編譯或重新部署應用程式，就可以變更繫結和定址資訊。  
+ 通常最佳作法是在組態中以宣告方式指定繫結和位址資訊，而不是在程式碼中強制指定。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 比較一般性的作法是將繫結和位址資訊留在程式碼外面，如此一來，不需要重新編譯或重新部署應用程式，就可以變更繫結和位址資訊。  
   
-#### 若要在程式碼中建立服務端點  
+#### <a name="to-create-a-service-endpoint-in-code"></a>若要在程式碼中建立服務端點  
   
-1.  建立用以定義服務合約的介面。  
+1.  建立可定義服務合約的介面。  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[c_HowTo_CodeServiceBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
@@ -48,7 +54,7 @@ caps.handback.revision: 14
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]預設端點的詳細資訊，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]預設端點，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
-## 請參閱  
- [HOW TO：在程式碼中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+## <a name="see-also"></a>另請參閱  
+ [如何：在程式碼中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

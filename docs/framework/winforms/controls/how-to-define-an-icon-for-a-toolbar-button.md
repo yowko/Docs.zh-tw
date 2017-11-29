@@ -1,47 +1,52 @@
 ---
-title: "如何：定義工具列按鈕的圖示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "按鈕 [Windows Form], 圖示"
-  - "範例 [Windows Form], 工具列"
-  - "圖示 [Windows Form], 工具列按鈕"
-  - "影像 [Windows Form], 工具列按鈕"
-  - "ToolBar 控制項 [Windows Form], 將圖示加入至按鈕"
-  - "工具列 [Windows Form], 將圖示加入至按鈕"
+title: "如何：定義工具列按鈕的圖示"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- toolbars [Windows Forms], adding icons to buttons
+- buttons [Windows Forms], icons
+- examples [Windows Forms], toolbars
+- images [Windows Forms], toolbar buttons
+- icons [Windows Forms], toolbar buttons
+- ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d9f1dc73e6a74d8d69fedf6650102b77bd4f96a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：定義工具列按鈕的圖示
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>如何：定義工具列按鈕的圖示
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
   
- <xref:System.Windows.Forms.ToolBar> 按鈕可以在按鈕中顯示圖示，方便使用者識別。  這項功能是經由將影像加入至 [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 元件，然後讓 <xref:System.Windows.Forms.ImageList> 元件與 <xref:System.Windows.Forms.ToolBar> 控制項產生關聯而達成的。  
+ <xref:System.Windows.Forms.ToolBar>按鈕就能夠顯示圖示在其中為了易於識別的使用者。 這透過將影像加入至達成[ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)元件，然後將相關聯<xref:System.Windows.Forms.ImageList>元件<xref:System.Windows.Forms.ToolBar>控制項。  
   
-### 若要以程式設計方式設定工具列按鈕的圖示  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>以程式設計方式設定工具列按鈕的圖示  
   
-1.  在程序中，產生 <xref:System.Windows.Forms.ImageList> 元件和 <xref:System.Windows.Forms.ToolBar> 控制項。  
+1.  在程序，具現化<xref:System.Windows.Forms.ImageList>元件和<xref:System.Windows.Forms.ToolBar>控制項。  
   
-2.  在同樣的程序中，將影像指派給 <xref:System.Windows.Forms.ImageList> 元件。  
+2.  在相同的程序，將指派到映像<xref:System.Windows.Forms.ImageList>元件。  
   
-3.  在同樣的程序中，將 <xref:System.Windows.Forms.ImageList> 控制項指派給 <xref:System.Windows.Forms.ToolBar> 控制項，並指派個別工具列按鈕的 <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> 屬性。  
+3.  在相同的程序中，指派<xref:System.Windows.Forms.ImageList>控制權傳輸至<xref:System.Windows.Forms.ToolBar>控制，並指派<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>個別工具列按鈕的屬性。  
   
-     在下列程式碼範例中，影像的位置路徑設定為 \[**我的文件**\] 資料夾。  這是可以做到的，因為您可假設大部分執行 Windows 作業系統的電腦都會包含這個目錄。  這也可讓使用者以最基本的系統存取層級，便可安全執行應用程式。  下列範例假設已將 <xref:System.Windows.Forms.PictureBox> 控制項加入表單。  
+     在下列程式碼範例中，設定路徑的映像的位置是**我的文件**資料夾。 這麼做，因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此目錄。 也可讓具備最小系統存取層級的使用者安全地執行應用程式。 以下範例假設的表單具有<xref:System.Windows.Forms.PictureBox>已經加入的控制項。  
   
-     依照上述步驟，您的程式碼應像下面這樣。  
+     依照上述步驟中，您應該撰寫類似下面顯示的程式碼。  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -66,7 +71,6 @@ caps.handback.revision: 14
     ' Assign the ImageIndex property of the ToolBarButton.  
        ToolBarButton1.ImageIndex = 0  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -93,7 +97,6 @@ caps.handback.revision: 14
        // Assign ImageIndex property of the ToolBarButton.  
        toolBarButton1.ImageIndex = 0;  
     }  
-  
     ```  
   
     ```cpp  
@@ -122,8 +125,8 @@ caps.handback.revision: 14
        }  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.ToolBar>   
- [如何：觸發工具列按鈕的功能表事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)   
- [ToolBar 控制項](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.ToolBar>  
+ [操作說明：觸發工具列按鈕的功能表事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [ToolBar 控制項](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
  [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

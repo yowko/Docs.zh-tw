@@ -1,35 +1,36 @@
 ---
-title: "如何：從 Windows Form LinkLabel 控制項顯示 Web 網頁 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LinkLabel1_LinkClicked"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "範例 [Windows Form], LinkLabel 控制項"
-  - "連結, 從表單到 Web 網頁"
-  - "LinkLabel 控制項 [Windows Form], 範例"
-  - "Web 網頁, 顯示"
-  - "Windows Form, 連結至 Web 網頁"
+title: "如何：從 Windows Form LinkLabel 控制項顯示 Web 網頁 (Visual Basic)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: LinkLabel1_LinkClicked
+helpviewer_keywords:
+- examples [Windows Forms], LinkLabel control
+- Web pages [Windows Forms], displaying
+- linking [Windows Forms], to Web pages from forms
+- Windows Forms, linking to Web pages
+- LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38ef165dc655fedbf682a21220d6a76532b18f6a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：從 Windows Form LinkLabel 控制項顯示 Web 網頁 (Visual Basic)
-這個範例會在使用者按一下 Windows Form <xref:System.Windows.Forms.LinkLabel> 控制項時，於預設瀏覽器中顯示網頁。  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>如何：從 Windows Form LinkLabel 控制項顯示 Web 網頁 (Visual Basic)
+這個範例會顯示在預設瀏覽器網頁當使用者按一下 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -44,18 +45,18 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `Form1` 的 Windows Form。  
+-   名為 Windows Form `Form1`。  
   
 -   名為 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控制項。  
   
--   作用中網際網路連接。  
+-   使用中的網際網路連線。  
   
-## .NET Framework 安全性  
- 呼叫 <xref:System.Diagnostics.Process.Start%2A> 方法時需要完全信任。  如需詳細資訊，請參閱 <xref:System.Security.SecurityException>。  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
+ 若要呼叫<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。 如需詳細資訊，請參閱<xref:System.Security.SecurityException>。  
   
-## 請參閱  
- <xref:System.Windows.Forms.LinkLabel>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.LinkLabel>  
  [LinkLabel 控制項](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

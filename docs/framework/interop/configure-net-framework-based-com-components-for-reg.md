@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - components [.NET Framework], manifest
 - application manifests [.NET Framework]
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb323bfdff40aafa65c050d4d42f66047d63f650
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
@@ -52,7 +45,7 @@ ms.lasthandoff: 08/21/2017
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     如需資訊清單項目和其屬性的資訊，請搜尋 MSDN Library 中的＜應用程式資訊清單參考＞。  
+     資訊清單的項目和其屬性的相關資訊，請參閱[應用程式資訊清單](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx)。  
   
 3.  識別資訊清單的擁有者。 在下列範例中，`myComApp` 第 1 版擁有資訊清單檔。  
   
@@ -92,7 +85,7 @@ ms.lasthandoff: 08/21/2017
   
 5.  儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
   
- 您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需其他資訊，請搜尋 MSDN Library 中的＜並存組件＞。  
+ 您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，如需詳細資訊，請參閱[-並存組件的相關](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx)。  
   
 #### <a name="to-create-a-component-manifest"></a>建立元件資訊清單  
   
@@ -188,8 +181,7 @@ ms.lasthandoff: 08/21/2017
      同樣地，`myresource.res` 是包含內嵌資源之資源檔的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [免註冊 COM Interop](../../../docs/framework/interop/registration-free-com-interop.md)   
- [免註冊 COM Interop 的需求](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)   
- [設定免註冊啟用的 COM 元件](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)   
+ [免註冊的 COM Interop](../../../docs/framework/interop/registration-free-com-interop.md)  
+ [免註冊 COM Interop 的需求](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [設定 COM 元件，免註冊啟動](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
  [免註冊啟用 .NET 元件：逐步解說](http://go.microsoft.com/fwlink/?LinkId=158812)
-

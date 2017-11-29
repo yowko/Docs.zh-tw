@@ -1,124 +1,125 @@
 ---
-title: "Windows Form DataGridView 控制項中的預設鍵盤和滑鼠處理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料格, 滑鼠處理"
-  - "DataGridView 控制項 [Windows Form], 鍵盤處理"
-  - "DataGridView 控制項 [Windows Form], 滑鼠處理"
-  - "DataGridView 控制項 [Windows Form], 巡覽鍵"
-  - "鍵盤, DataGridView 控制項中的預設處理"
-  - "滑鼠, DataGridView 控制項中的預設處理"
-  - "巡覽鍵, DataGridView 控制項"
+title: "Windows Form DataGridView 控制項中的預設鍵盤和滑鼠處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], mouse handling
+- DataGridView control [Windows Forms], navigation keys
+- keyboards [Windows Forms], default handling in DataGridView control
+- DataGridView control [Windows Forms], keyboard handling
+- mouse [Windows Forms], default handling in DataGridView control
+- DataGridView control [Windows Forms], mouse handling
+- navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d0f1ec3f1fe0b078da92c93cbb928075d7d462c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form DataGridView 控制項中的預設鍵盤和滑鼠處理
-下表描述使用者如何透過鍵盤和滑鼠與 <xref:System.Windows.Forms.DataGridView> 控制項互動。  
+# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的預設鍵盤和滑鼠處理
+下表描述使用者可以互動<xref:System.Windows.Forms.DataGridView>透過鍵盤和滑鼠控制。  
   
 > [!NOTE]
->  若要自訂鍵盤行為，您可以處理標準鍵盤事件 \(例如：<xref:System.Windows.Forms.Control.KeyDown>\)。  但是，在編輯模式中，裝載的編輯控制項會接收鍵盤輸入，而且 <xref:System.Windows.Forms.DataGridView> 控制項不會發生鍵盤事件。  若要處理編輯控制項事件，請將您的處理常式附加至 <xref:System.Windows.Forms.DataGridView.EditingControlShowing> 事件處理常式中的編輯控制項。  或者，您可以透過覆寫 <xref:System.Windows.Forms.DataGridView.ProcessDialogKey%2A> 和 <xref:System.Windows.Forms.DataGridView.ProcessDataGridViewKey%2A> 方法，以自訂 <xref:System.Windows.Forms.DataGridView> 子類別中的鍵盤行為。  
+>  若要自訂鍵盤行為，可以處理標準鍵盤事件這類<xref:System.Windows.Forms.Control.KeyDown>。 在編輯模式，不過，裝載的編輯控制項接收鍵盤輸入和鍵盤事件不會對<xref:System.Windows.Forms.DataGridView>控制項。 若要處理編輯的控制項事件，將您的處理常式附加至編輯控制項中<xref:System.Windows.Forms.DataGridView.EditingControlShowing>事件處理常式。 或者，您可以自訂鍵盤行為<xref:System.Windows.Forms.DataGridView>藉由覆寫子類別<xref:System.Windows.Forms.DataGridView.ProcessDialogKey%2A>和<xref:System.Windows.Forms.DataGridView.ProcessDataGridViewKey%2A>方法。  
   
-## 預設鍵盤處理  
+## <a name="default-keyboard-handling"></a>預設鍵盤處理  
   
-### 基本的巡覽按鍵和輸入按鍵  
+### <a name="basic-navigation-and-entry-keys"></a>基本瀏覽和項目索引鍵  
   
-|按鍵或組合鍵|描述|  
-|------------|--------|  
-|向下鍵|移動焦點至緊接在目前儲存格下方的儲存格。  如果焦點已在最後一筆資料列，將不會有任何作用。|  
-|向左鍵|移動焦點至資料列中的前一個儲存格。  如果焦點已在資料列中的第一個儲存格，將不會有任何作用。|  
-|向右鍵|移動焦點至資料列中的下一個儲存格。  如果焦點已在資料列中的最後一個儲存格，將不會有任何作用。|  
-|向上鍵|移動焦點至緊接在目前儲存格上方的儲存格。  如果焦點已在第一筆資料列，將不會有任何作用。|  
-|HOME|移動焦點至目前資料列中的第一個儲存格。|  
-|END|移動焦點至目前資料列中的最後一個儲存格。|  
-|PAGE DOWN|以目前完整顯示的資料列數目為一個單位，將控制項向下捲動。  移動焦點至最後一個完整顯示的資料列，且不會變更資料行。|  
-|PAGE UP|以目前完整顯示的資料列數目為一個單位，將控制項向上捲動。   移動焦點至第一個顯示的資料列，且不會變更資料行。|  
-|TAB|如果 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值為 `false`，TAB 鍵會將焦點移動到目前資料列中的下一個儲存格。  如果焦點已在資料列中的最後一個儲存格，則會將焦點移動至下一筆資料列的第一個儲存格。  如果焦點已在控制項中的最後一個儲存格，則依照父容器的定位順序，將焦點移動到下一個控制項。<br /><br /> 如果 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值為 `true`，則那麼會以父容器的定位順序，將焦點移動到下一個控制項。|  
-|SHIFT\+TAB|如果 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值為 `false`，則移動焦點至目前資料列中的前一個儲存格。  如果焦點已在資料列中的第一個儲存格，則移動焦點至前一個資料列的最後一個儲存格。  如果焦點已在控制項中的第一個儲存格，則依照父容器的定位順序，將焦點移動至前一個控制項。<br /><br /> 如果 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值為 `true`，則依照父容器的定位順序移動焦點至前一個控制項。|  
-|CTRL\+TAB|如果 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值為 `false`，則那麼會以父容器的定位順序，將焦點移動到下一個控制項。<br /><br /> 如果 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值為 `true`，TAB 鍵會將焦點移動到目前資料列中的下一個儲存格。  如果焦點已在資料列中的最後一個儲存格，則會將焦點移動至下一筆資料列的第一個儲存格。  如果焦點已在控制項中的最後一個儲存格，則依照父容器的定位順序，將焦點移動到下一個控制項。|  
-|CTRL\+SHIFT\+TAB|如果 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值為 `false`，則依照父容器的定位順序移動焦點至前一個控制項。<br /><br /> 如果 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值為 `true`，則移動焦點至目前資料列中的前一個儲存格。  如果焦點已在資料列中的第一個儲存格，則移動焦點至前一個資料列的最後一個儲存格。  如果焦點已在控制項中的第一個儲存格，則依照父容器的定位順序，將焦點移動至前一個控制項。|  
-|CTRL\+ARROW|依箭號方向移動焦點至最遠的儲存格。|  
-|CTRL\+HOME|移動焦點至控制項中的第一個儲存格。|  
-|CTRL\+END|移動焦點至控制項中的最後一個儲存格。|  
-|CTRL\+PAGE DOWN\/UP|與 PAGE DOWN 或 PAGE UP 的作用相同。|  
-|F2|如果 <xref:System.Windows.Forms.DataGridView.EditMode%2A> 屬性值為 <xref:System.Windows.Forms.DataGridViewEditMode> 或 <xref:System.Windows.Forms.DataGridViewEditMode>，可以讓目前儲存格進入儲存格編輯模式。|  
-|F4|如果目前儲存格是 <xref:System.Windows.Forms.DataGridViewComboBoxCell>，可以讓目前儲存格進入儲存格編輯模式並且顯示下拉式清單。|  
-|ALT\+ 向上\/向下鍵|如果目前儲存格是 <xref:System.Windows.Forms.DataGridViewComboBoxCell>，可以讓目前儲存格進入儲存格編輯模式並且顯示下拉式清單。|  
-|空格鍵|如果目前儲存格是 <xref:System.Windows.Forms.DataGridViewButtonCell>、<xref:System.Windows.Forms.DataGridViewLinkCell> 或 <xref:System.Windows.Forms.DataGridViewCheckBoxCell>，將會引發 <xref:System.Windows.Forms.DataGridView.CellClick> 和 <xref:System.Windows.Forms.DataGridView.CellContentClick> 事件。  如果目前儲存格是 <xref:System.Windows.Forms.DataGridViewButtonCell>，將同時也會按下按鈕。  如果目前儲存格是 <xref:System.Windows.Forms.DataGridViewCheckBoxCell>，將同時也會變更核取狀態。|  
-|ENTER|認可目前儲存格和資料列的變更，並且移動焦點至緊接在目前儲存格下方的儲存格。  如果焦點已在最後一個資料列，將會認可所有變更，但不移動焦點。|  
-|ESC|如果控制項處於編輯模式，將會取消編輯。  如果控制項不在編輯模式中，則若控制項已繫結至支援編輯的資料來源，或者虛擬模式已使用資料列層級的認可範圍進行實作的話，請還原已對目前資料列進行的任何變更。|  
-|退格鍵|會於編輯儲存格時，刪除插入點前的字元。|  
-|DELETE|在編輯儲存格時，刪除插入點後的字元。|  
-|CTRL\+ENTER|認可目前儲存格的所有變更，但不移動焦點。  如果控制項已繫結至支援編輯的資料來源，或者虛擬模式已使用資料列層級的認可範圍，請同時認可對目前資料列的任何變更。|  
-|CTRL\+0|如果可以編輯目前的儲存格，會在儲存格內輸入 <xref:System.DBNull.Value?displayProperty=fullName> 值。  根據預設，<xref:System.DBNull> 儲存格值的顯示值，其實就是目前儲存格之 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 屬性值。|  
+|按鍵或按鍵組合|描述|  
+|----------------------------|-----------------|  
+|向下鍵|將焦點移至目前的資料格正下方的儲存格。 如果焦點是在最後一個資料列中，沒有任何作用。|  
+|向左鍵|將焦點移至先前的資料格的資料列中。 如果焦點是資料列中第一個資料格中，沒有任何作用。|  
+|向右鍵|將焦點移至下一個儲存格的資料列中。 如果焦點是在資料列中最後一個資料格中，沒有任何作用。|  
+|向上鍵|將焦點移至上方的目前儲存格。 如果焦點是在第一個資料列中，沒有任何作用。|  
+|首頁|將焦點移至目前的資料列中的第一個儲存格。|  
+|END|將焦點移至目前的資料列中的最後一個儲存格。|  
+|PAGE DOWN|將控制項向下捲動充分顯示之資料列數目。 將焦點移至最後一個完整顯示的資料列中，而不需要變更資料行。|  
+|PAGE UP|向上捲動控制項的充分顯示之資料列數。 將焦點移到第一個顯示的資料列，而不需要變更資料行。|  
+|TAB|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>屬性值是`false`，將焦點移至目前資料列中的下一個儲存格。 如果焦點位於資料列的最後一個資料格，將焦點移到下一個資料列的第一個儲存格。 如果焦點在控制項中的最後一個資料格，將焦點移至定位順序的父容器中的下一個控制項。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>屬性值是`true`，將焦點移至定位順序的父容器中的下一個控制項。|  
+|SHIFT+TAB|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>屬性值是`false`，將焦點移到目前資料列的上一個儲存格。 如果焦點位於資料列的第一個資料格，將焦點移至前一個資料列中的最後一個儲存格。 如果焦點在控制項中第一個資料格中，將焦點移至上一個控制項的父容器的定位順序。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>屬性值是`true`，將焦點移至定位順序的父容器中的上一個控制項。|  
+|CTRL+TAB|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>屬性值是`false`，將焦點移至定位順序的父容器中的下一個控制項。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>屬性值是`true`，將焦點移至目前資料列中的下一個儲存格。 如果焦點位於資料列的最後一個資料格，將焦點移到下一個資料列的第一個儲存格。 如果焦點在控制項中的最後一個資料格，將焦點移至定位順序的父容器中的下一個控制項。|  
+|CTRL+SHIFT+TAB|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>屬性值是`false`，將焦點移至定位順序的父容器中的上一個控制項。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>屬性值是`true`，將焦點移到目前資料列的上一個儲存格。 如果焦點位於資料列的第一個資料格，將焦點移至前一個資料列中的最後一個儲存格。 如果焦點在控制項中第一個資料格中，將焦點移至上一個控制項的父容器的定位順序。|  
+|CTRL + 方向鍵|將焦點移至箭頭的方向遠的儲存格。|  
+|CTRL + HOME|將焦點移至控制項中的第一個資料格。|  
+|CTRL + END|將焦點移至控制項中的最後一個資料格。|  
+|CTRL + PAGE DOWN/總|與 PAGE down 鍵或 PAGE UP 鍵相同。|  
+|F2|如果目前儲存格進入儲存格的編輯模式<xref:System.Windows.Forms.DataGridView.EditMode%2A>屬性值是<xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2>或<xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>。|  
+|F4|如果目前儲存格是<xref:System.Windows.Forms.DataGridViewComboBoxCell>，將儲存格進入編輯模式，並顯示下拉式清單。|  
+|ALT + 向上/向下鍵|如果目前儲存格是<xref:System.Windows.Forms.DataGridViewComboBoxCell>，將儲存格進入編輯模式，並顯示下拉式清單。|  
+|空格鍵|如果目前儲存格是<xref:System.Windows.Forms.DataGridViewButtonCell>， <xref:System.Windows.Forms.DataGridViewLinkCell>，或<xref:System.Windows.Forms.DataGridViewCheckBoxCell>，引發<xref:System.Windows.Forms.DataGridView.CellClick>和<xref:System.Windows.Forms.DataGridView.CellContentClick>事件。 如果目前儲存格是<xref:System.Windows.Forms.DataGridViewButtonCell>，也按下按鈕。 如果目前儲存格是<xref:System.Windows.Forms.DataGridViewCheckBoxCell>，也會變更選取狀態。|  
+|ENTER|認可目前儲存格和資料列的任何變更，並將焦點移至目前的資料格正下方的儲存格。 如果焦點是在最後一個資料列中，認可所有變更，而不移動焦點。|  
+|ESC|如果控制項處於編輯模式，取消編輯。 如果控制項不是處於編輯模式下，還原此控制項是繫結至支援編輯資料來源，目前的資料列所做的任何變更，或已實作虛擬模式與資料列層級的認可範圍。|  
+|退格鍵|編輯儲存格時，會刪除之前插入點的字元。|  
+|DELETE|編輯儲存格時，請在插入點後刪除的字元。|  
+|CTRL+ENTER|認可目前儲存格的任何變更，而不移動焦點。 也與已實作此控制項是繫結至資料來源支援編輯或虛擬模式在目前資料列的任何變更的認可資料列層級的認可範圍。|  
+|CTRL+0|進入<xref:System.DBNull.Value?displayProperty=nameWithType>值到目前的儲存格，如果可以編輯儲存格。 根據預設，顯示值<xref:System.DBNull>資料格的值是值<xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>屬性<xref:System.Windows.Forms.DataGridViewCellStyle>作用中的目前儲存格。|  
   
-### 選取鍵  
- 如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 屬性設為 `false` 且 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 屬性設為 <xref:System.Windows.Forms.DataGridViewSelectionMode>，則使用巡覽鍵變更目前儲存格時，選取範圍會同時變更為新儲存格。  SHIFT、CTRL 和 ALT 鍵將無法影響此一行為。  
+### <a name="selection-keys"></a>選取按鍵  
+ 如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>屬性設定為`false`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>屬性設定為<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>，使用瀏覽鍵來變更目前的儲存格變更為新的儲存格的選取項目。 SHIFT、 CTRL 和 ALT 鍵並不會影響這個行為。  
   
- 如果 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 設為 <xref:System.Windows.Forms.DataGridViewSelectionMode> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode>，則會發生以上相同的行為，但是會附帶下列項目。  
+ 如果<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>，就會發生相同問題但具有下列功能。  
   
-|按鍵或組合鍵|描述|  
-|------------|--------|  
-|SHIFT\+ 空格鍵|選取整個資料列或資料行 \(等同於按一下資料列行首或資料行行首\)。|  
-|巡覽鍵 \(方向鍵、PAGE UP\/DOWN、HOME、END\)|如果整個資料列或資料行已選取，則變更目前儲存格為新資料列或新資料行時，選取範圍會同時變更為整個新資料列或新資料行 \(須視選取模式而定\)。|  
+|按鍵或按鍵組合|描述|  
+|----------------------------|-----------------|  
+|SHIFT + 空格鍵|選取整個資料列或資料行 （不同於按一下資料列或資料行的標頭）。|  
+|瀏覽金鑰 （箭號，PAGE up/down，首頁，結束）|如果選取整個資料列或資料行，將目前的儲存格變更為新的資料列或資料行選擇移至全新的資料列或資料行 （取決於選取的模式）。|  
   
- 如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 設為 `false` 且 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 設為 <xref:System.Windows.Forms.DataGridViewSelectionMode> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode>，則使用鍵盤將目前儲存格變更為新資料列或新資料行時，選取範圍會同時變更為整個新資料列或新資料行。  SHIFT、CTRL 和 ALT 鍵將無法影響此一行為。  
+ 如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>設`false`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>，變更為新的資料列或資料行的目前儲存格，使用鍵盤將選取範圍移至全新的資料列或資料行。 SHIFT、 CTRL 和 ALT 鍵並不會影響這個行為。  
   
- 如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 設為 `true`，巡覽行為將維持不變，但是當按下 SHIFT 鍵 \(包括 CTRL\+SHIFT 鍵\) 時使用鍵盤巡覽，將會修改多重儲存格的選取範圍。  在開始巡覽之前，控制項會將目前儲存格標示為錨定 \(Anchor\) 儲存格。  在按下 SHIFT 鍵時同時巡覽，選取範圍會包含所有在錨定儲存格和目前儲存格之間的儲存格。  控制項中之前已選取的其餘儲存格將會維持已選取狀態，但是如果鍵盤巡覽將這些儲存格暫時置於錨定儲存格和目前儲存格之間，則它們可能會改為未選取狀態。  
+ 如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>設`true`、 導覽行為不會變更，但以鍵盤巡覽時按住 shift 鍵 （包括 CTRL + SHIFT） 會修改多個儲存格選取範圍。 導覽開始前，控制會標記為錨定儲存格的目前儲存格。 當您巡覽時按住 shift 鍵時，則選取範圍包含錨定儲存格和目前的儲存格之間的所有資料格。 如果它們尚未選取，但它們可能會變成未選取的鍵盤巡覽方式暫時便會將這些錨定儲存格之間的目前儲存格，如果在控制項中的其他資料格將會維持選取狀態。  
   
- 如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 設為 `true` 且 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 設為 <xref:System.Windows.Forms.DataGridViewSelectionMode> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode>，錨定儲存格和目前儲存格兩者的行為相同，這時只有整個資料列或整個資料行會改為已選取或未選取。  
+ 如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>設`true`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>、 錨定儲存格和目前的儲存格的行為相同，但是只有完整的資料列或資料行變成選取或取消選取。  
   
-## 預設滑鼠處理  
+## <a name="default-mouse-handling"></a>預設滑鼠處理  
   
-### 基本的滑鼠處理  
+### <a name="basic-mouse-handling"></a>基本的滑鼠處理  
   
 > [!NOTE]
->  以滑鼠左鍵按一下儲存格時，一律會變更目前的儲存格。  以滑鼠右鍵按一下儲存格時，會開啟捷徑功能表 \(如果有的話\)。  
+>  一律滑鼠左的按鈕儲存格上按一下變更目前的儲存格。 其中一個可用時，滑鼠右按鈕儲存格上按一下開啟快顯功能表。  
   
 |滑鼠動作|描述|  
-|----------|--------|  
-|按下滑鼠左鍵|使按下的儲存格成為目前的儲存格，並且引發 <xref:System.Windows.Forms.DataGridView.CellMouseDown?displayProperty=fullName> 事件。|  
-|鬆開滑鼠左鍵|引發 <xref:System.Windows.Forms.DataGridView.CellMouseUp?displayProperty=fullName> 事件。|  
-|按一下滑鼠左鍵|引發 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=fullName> 和 <xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=fullName> 事件|  
-|在資料行標題儲存格上按下滑鼠左鍵並拖曳|如果 <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=fullName> 屬性為 `true`，可以移動資料行以置入新位置。|  
+|------------------|-----------------|  
+|向左鍵|按下儲存格的目前儲存格，並引發<xref:System.Windows.Forms.DataGridView.CellMouseDown?displayProperty=nameWithType>事件。|  
+|左邊的滑鼠向上按鈕|引發 <xref:System.Windows.Forms.DataGridView.CellMouseUp?displayProperty=nameWithType> 事件。|  
+|按一下滑鼠左鍵|引發<xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>和<xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType>事件|  
+|向下滑鼠左的按鈕並拖曳資料行的標頭資料格|如果<xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>屬性是`true`，將資料行移，讓它可以放入新的位置。|  
   
-### 滑鼠選取  
- 滑鼠中間鍵或滑鼠滾輪都無法進行選取的動作。  
+### <a name="mouse-selection"></a>滑鼠選取範圍  
+ 沒有選取範圍的行為都與滑鼠中間鍵或滑鼠滾輪。  
   
- 如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 屬性設為 `false` 且 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 屬性設為 <xref:System.Windows.Forms.DataGridViewSelectionMode>，則會發生以下行為：  
+ 如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>屬性設定為`false`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>屬性設定為<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>，會發生下列行為。  
   
 |滑鼠動作|描述|  
-|----------|--------|  
-|按一下滑鼠左鍵|使用者按一下儲存格，只會選取目前的儲存格。  如果是按一下資料列行首或資料行行首，則不會有選取行為。|  
-|按一下滑鼠右鍵|顯示捷徑功能表 \(如果有的話\)。|  
+|------------------|-----------------|  
+|按一下滑鼠左鍵|如果使用者按一下資料格，請選取目前儲存格。 如果使用者按一下資料列或資料行的標頭沒有選取行為。|  
+|按一下滑鼠右鍵|如果有的話，會顯示快顯功能表。|  
   
- 當 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 設為 <xref:System.Windows.Forms.DataGridViewSelectionMode> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode> 時也會產生相同的行為，但不同的是會根據當時的選取模式，於按一下資料列行首或資料行行首時選取整個資料列或資料行，並且將目前儲存格設為資料列或資料行的第一個儲存格。  
+ 相同的行為發生時<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>，不過，根據選取模式中，按一下資料列或資料行的標頭會選取整個資料列或資料行，設定中的資料列或資料行的第一個儲存格的目前儲存格。  
   
- 如果 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 設為 <xref:System.Windows.Forms.DataGridViewSelectionMode> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode>，只要按一下資料列或資料行中的任何儲存格即可選取整個資料列或資料行。  
+ 如果<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>，按一下任何資料列或資料行中的儲存格將會選取整個資料列或資料行。  
   
- 如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 設為 `true`，在按住 CTRL 或 SHIFT 鍵時同時按一下儲存格，將會修改多重儲存格的選取範圍。  
+ 如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>設`true`，按一下儲存格時按住 CTRL 或 shift 鍵，將會修改多個儲存格選取範圍。  
   
- 如果在按住 CTRL 鍵時按一下儲存格，該儲存格的選取狀態將會變更，而其他所有儲存格則是保留原來的選取狀態。  
+ 當您按一下儲存格時按住 ctrl 鍵時，資料格會變更選取狀態，而所有其他資料格保留其目前的選取狀態。  
   
- 如果在按住 SHIFT 鍵時同時按一下某個儲存格或連續好幾個儲存格，選取範圍會包括所有介於目前儲存格和錨定儲存格 \(位於第一次點選之前的目前儲存格位置\) 之間的儲存格。  當您按一下儲存格並拖曳指標橫跨多個儲存格時，錨定儲存格則是拖曳作業開始時所點選的儲存格。  接著按住 SHIFT 鍵且同時再按一下儲存格，則變更的是目前的儲存格，而非錨定儲存格。  控制項中之前已選取的其餘儲存格將會維持已選取狀態，但是如果滑鼠巡覽將這些儲存格暫時置於錨定儲存格和目前儲存格之間，則它們有可能改為未選取狀態。  
+ 當您按一下儲存格或一系列的資料格時按住 shift 鍵時，則選取範圍包含目前資料格位於第一次之前的目前儲存格位置錨定儲存格之間的所有資料格。 當您按一下並拖曳滑鼠指標，跨多個資料格時，錨定儲存格是在拖曳作業開始所點選的資料格。 後續的點選，按住 shift 鍵同時變更目前的儲存格，但不是錨定儲存格。 如果它們尚未選取，但它們可能會變成未選取如果滑鼠巡覽暫時便會將這些錨定儲存格之間的目前儲存格控制項中的其他資料格將會維持選取狀態。  
   
- 如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 設為 `true` 且 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 設為 <xref:System.Windows.Forms.DataGridViewSelectionMode> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode>，按住 SHIFT 鍵再按一下資料列行首或資料行行首 \(視選取模式而定\)，將會修改目前整個資料列或資料行的選取範圍 \(如果有該選取範圍\)。  否則，它會清除選取範圍而且新的選取範圍將以整個資料列或資料行為基本單位。  不過，在按住 CTRL 鍵時同時按一下資料列行首或資料行行首，則將會從目前的選取範圍加入或移除所按的資料列或資料行，而不是修改目前的選取範圍。  
+ 如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>設`true`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>，按住 shift 鍵同時按一下資料列或資料行標頭 （取決於選取的模式） 會修改現有的完整資料列或資料行的選取範圍，如果這類選取項目存在。 否則，它將會清除選取項目，新的完整資料列或資料行的選取範圍。 按一下資料列或資料行的標頭時按住 ctrl 鍵，不過，會加入或移除的按下後的資料列或資料行從目前的選取項目而不是修改目前的選取範圍。  
   
- 如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 設為 `true` 且 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 設為 <xref:System.Windows.Forms.DataGridViewSelectionMode> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode>，在按住 SHIFT 或 CTRL 鍵時同時按一下儲存格，將會產生相同的行為，其中唯一的不同之處是其影響的對象為整個資料列以及整個資料行。  
+ 如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>設`true`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>、 在按下 SHIFT 或 ctrl 鍵同時按一下儲存格的行為相同的方式，除非該只有完整的資料列和資料行會受到影響。  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

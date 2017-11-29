@@ -1,25 +1,28 @@
 ---
-title: "端點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "端點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef4e27f6e7a45fe705aa09827702a64c960b6a16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 端點
+# <a name="endpoint"></a>端點
 端點  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class Endpoint  
@@ -39,102 +42,102 @@ class Endpoint
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  Endpoint 類別定義下列方法。  
   
-|方法|描述|  
-|--------|--------|  
+|方法|說明|  
+|------------|-----------------|  
 |[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|擷取作業效能計數器執行個體名稱|  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  Endpoint 類別具有下列屬性：  
   
-### 地址  
+### <a name="address"></a>地址  
  資料型別：字串  
   
  存取類型：唯讀  
   
  包含端點位址的 URI。  
   
-### AddressHeaders  
+### <a name="addressheaders"></a>AddressHeaders  
  資料型別：字串陣列  
   
  存取類型：唯讀  
   
  附加到此端點之位址標頭的集合。  
   
-### AddressIdentity  
+### <a name="addressidentity"></a>AddressIdentity  
  資料型別：字串  
   
  存取類型：唯讀  
   
  端點的身分識別。  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  資料型別：sint32  
   
  存取類型：唯讀  
   
  裝載端點之 appdomain 的 appdomain 識別碼。  
   
-### 行為  
+### <a name="behaviors"></a>行為  
  資料型別：行為陣列  
   
  存取類型：唯讀  
   
  此端點實作之行為的集合。  
   
-### 繫結  
+### <a name="binding"></a>繫結  
  資料型別：繫結  
   
  存取類型：唯讀  
   
  此端點所使用的繫結。  
   
-### ContractName  
+### <a name="contractname"></a>ContractName  
  資料型別：字串  
   
  存取類型：唯讀  
   
  指定公開此端點之合約的字串。  
   
-### CounterInstanceName  
+### <a name="counterinstancename"></a>CounterInstanceName  
  資料型別：字串  
   
  存取類型：唯讀  
   
  端點之效能計數器執行個體的名稱。  
   
-### ListenUri  
+### <a name="listenuri"></a>ListenUri  
  資料型別：字串  
   
  存取類型：唯讀  
   
  端點接聽的 Uri。  
   
-### 名稱  
+### <a name="name"></a>名稱  
  資料型別：字串  
   
  存取類型：唯讀  
   
  此端點的唯一名稱。  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  資料型別：sint32  
   
  存取類型：唯讀  
   
  裝載端點之處理序的處理序識別碼。  
   
-### ref  
+### <a name="ref"></a>ref  
  資料型別：合約  
   
  存取類型：唯讀  
   
  此端點公開的合約。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|
+|---------|-----------------------------------|  
+|命名空間|於 root\ServiceModel 中定義|

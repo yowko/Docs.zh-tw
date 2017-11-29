@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aea6051a5cfd436b879bc3c8c6ce9b5f656c0ecb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 18f2d06d3a6974b913af663a38a6155b38422232
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>範例：處理繫結資料時所發生的例外狀況
 > [!NOTE]
@@ -49,7 +47,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>應用程式做了什麼？  
- 在堆疊的基底，[Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) 命名空間中的框架會指出 XAML 轉譯引擎正在執行。   使用 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=fullName> 方法會指出，在已移除中繼資料的類型上，以反映方式查閱屬性的值。  
+ 在堆疊的基底，[Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) 命名空間中的框架會指出 XAML 轉譯引擎正在執行。   使用 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 方法會指出，在已移除中繼資料的類型上，以反映方式查閱屬性的值。  
   
  提供中繼資料指示詞的第一個步驟，就是為該類型加入 `serialize` 中繼資料，讓它的所有屬性皆可供存取：  
   
@@ -70,6 +68,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
  不過，有一些方法可以將 `ViewModel` 指定至 XAML 頁面，讓工具鏈可以在編譯時將屬性繫結與正確的類型建立關聯，並且在不使用執行階段指示詞的情況下保留中繼資料。  例如，您可以在屬性 (property) 上套用 [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) 屬性 (attribute)。 這會導致 XAML 編譯器產生必要的查閱資訊，並避免 Default.rd.xml 檔案中需要執行階段指示詞。  
   
 ## <a name="see-also"></a>另請參閱  
- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [範例：針對動態程式設計進行疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
-

@@ -1,37 +1,40 @@
 ---
-title: "自訂 WSDL 發行物 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自訂 WSDL 發行物"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e390bf728cde703a967fcea954583f6e5f84002
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 自訂 WSDL 發行物
+# <a name="custom-wsdl-publication"></a>自訂 WSDL 發行物
 這個範例會示範如何：  
   
--   實作自訂 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> 屬性 \(Attribute\) 上的 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=fullName>，以便將屬性 \(Attribute\) 的屬性 \(Property\) 匯出為 WSDL 附註。  
+-   實作自訂 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 屬性 (Attribute) 上的 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，以便將屬性 (Attribute) 的屬性 (Property) 匯出為 WSDL 附註。  
   
--   實作 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=fullName> 以匯入自訂 WSDL 附註。  
+-   實作 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 以匯入自訂 WSDL 附註。  
   
--   在自訂合約行為和自訂作業行為上分別實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=fullName> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=fullName>，將匯入的附註寫入為 CodeDOM 中的註解，以用於匯入的合約和作業。  
+-   在自訂合約行為和自訂作業行為上分別實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，將匯入的附註寫入為 CodeDOM 中的註解，以用於匯入的合約和作業。  
   
--   使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> 下載 WSDL、使用 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName> 匯入使用自訂 WSDL 匯入工具的 WSDL，以及使用 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=fullName> 產生具有 WSDL 附註的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端程式碼做為 C\# 和 Visual Basic 中的 \/\/\/ 和 ''' 註解。  
+-   使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 下載 WSDL、使用 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 匯入使用自訂 WSDL 匯入工具的 WSDL，以及使用 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> 產生具有 WSDL 附註的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端程式碼做為 C# 和 Visual Basic 中的 /// 和 ''' 註解。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
-## 服務  
- 在這個範例中，會使用兩個自訂屬性來標示服務。第一個是 `WsdlDocumentationAttribute`，它會在建構函式中接受字串，您可以套用此屬性來為合約介面或作業提供描述其使用方式的字串。第二個是 `WsdlParamOrReturnDocumentationAttribute`，您可以將它套用至傳回值或參數，在作業中描述這些值。下列範例示範使用這些屬性所描述的服務合約 `ICalculator`。  
+## <a name="service"></a>服務  
+ 在這個範例中，會使用兩個自訂屬性來標示服務。 第一個是 `WsdlDocumentationAttribute`，它會在建構函式中接受字串，您可以套用此屬性來為合約介面或作業提供描述其使用方式的字串。 第二個是 `WsdlParamOrReturnDocumentationAttribute`，您可以將它套用至傳回值或參數，在作業中描述這些值。 下列範例示範使用這些屬性所描述的服務合約 `ICalculator`。  
   
 ```  
 // Define a service contract.      
@@ -72,12 +75,11 @@ public interface ICalculator
       [WsdlParamOrReturnDocumentation("The denominator.")]double n2  
     );  
 }  
-  
 ```  
   
- `WsdlDocumentationAttribute` 會實作 <xref:System.ServiceModel.Description.IContractBehavior> 和 <xref:System.ServiceModel.Description.IOperationBehavior>，以便在開啟服務時將屬性執行個體新增至對應的 <xref:System.ServiceModel.Description.ContractDescription> 或 <xref:System.ServiceModel.Description.OperationDescription>。這個屬性還會實作 <xref:System.ServiceModel.Description.IWsdlExportExtension>。呼叫 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 時，會傳入用來匯出中繼資料的 <xref:System.ServiceModel.Description.WsdlExporter> 和含有服務描述物件的 <xref:System.ServiceModel.Description.WsdlContractConversionContext> 做為參數，以啟用匯出之中繼資料的修改作業。  
+ `WsdlDocumentationAttribute` 會實作 <xref:System.ServiceModel.Description.IContractBehavior> 和 <xref:System.ServiceModel.Description.IOperationBehavior>，以便在開啟服務時將屬性執行個體新增至對應的 <xref:System.ServiceModel.Description.ContractDescription> 或 <xref:System.ServiceModel.Description.OperationDescription>。 這個屬性還會實作 <xref:System.ServiceModel.Description.IWsdlExportExtension>。 呼叫 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 時，會傳入用來匯出中繼資料的 <xref:System.ServiceModel.Description.WsdlExporter> 和含有服務描述物件的 <xref:System.ServiceModel.Description.WsdlContractConversionContext> 做為參數，以啟用匯出之中繼資料的修改作業。  
   
- 在這個範例中，會依據匯出的內容物件是否含有 <xref:System.ServiceModel.Description.ContractDescription> 或 <xref:System.ServiceModel.Description.OperationDescription> 而定，從使用文字屬性 \(Property\) 的屬性 \(Attribute\) 擷取註解，並將它新增至 WSDL 附註項目，如下列程式碼所示。  
+ 在這個範例中，會依據匯出的內容物件是否含有 <xref:System.ServiceModel.Description.ContractDescription> 或 <xref:System.ServiceModel.Description.OperationDescription> 而定，從使用文字屬性 (Property) 的屬性 (Attribute) 擷取註解，並將它新增至 WSDL 附註項目，如下列程式碼所示。  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -113,7 +115,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
             operation.DocumentationElement.AppendChild(newSummaryElement);  
 ```  
   
- 如果是要匯出某項作業，這個範例會使用反映 \(Reflection\) 來為參數和傳回值取得任何 `WsdlParamOrReturnDocumentationAttribute` 值，並將它們新增至該作業的 WSDL 附註項目，如下所示。  
+ 如果是要匯出某項作業，這個範例會使用反映 (Reflection) 來為參數和傳回值取得任何 `WsdlParamOrReturnDocumentationAttribute` 值，並將它們新增至該作業的 WSDL 附註項目，如下所示。  
   
 ```  
 // Get returns information  
@@ -143,12 +145,11 @@ for (int i = 0; i < args.Length; i++)
         operation.DocumentationElement.AppendChild(newParamElement);  
     }  
 }  
-  
 ```  
   
  這個範例會接著使用下列組態檔，以標準方式發行中繼資料。  
   
-```  
+```xml  
 <services>  
   <service   
       name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -173,14 +174,13 @@ for (int i = 0; i < args.Length; i++)
     </behavior>  
   </serviceBehaviors>  
 </behaviors>  
-  
 ```  
   
-## Svcutil 用戶端  
- 這個範例不使用 Svcutil.exe。這個範例會在 generatedClient.cs 檔案中提供合約，以便在示範自訂 WSDL 匯入作業與程式碼產生作業之後叫用服務。若要在這個範例中使用下列自訂 WSDL 匯入工具，您可以執行 Svcutil.exe，並指定 `/svcutilConfig` 選項，來提供此範例 \(其參考 `WsdlDocumentation.dll` 程式庫\) 中所使用之用戶端組態檔的路徑。不過，若要載入 `WsdlDocumentationImporter`，Svuctil.exe 就必須能夠找到並載入 `WsdlDocumentation.dll` 程式庫，這表示應先在全域組件快取中、路徑中或是在包含 Svcutil.exe 的同一個目錄中註冊此程式庫。對於像這樣的基本範例，最簡單的方式就是將 Svcutil.exe 和用戶端組態檔複製到 `WsdlDocumentation.dll` 所在的相同目錄中，再從那裡加以執行。  
+## <a name="svcutil-client"></a>Svcutil 用戶端  
+ 這個範例不使用 Svcutil.exe。 這個範例會在 generatedClient.cs 檔案中提供合約，以便在示範自訂 WSDL 匯入作業與程式碼產生作業之後叫用服務。 若要在這個範例中使用下列自訂 WSDL 匯入工具，您可以執行 Svcutil.exe，並指定 `/svcutilConfig` 選項，來提供此範例 (其參考 `WsdlDocumentation.dll` 程式庫) 中所使用之用戶端組態檔的路徑。 不過，若要載入 `WsdlDocumentationImporter`，Svuctil.exe 就必須能夠找到並載入 `WsdlDocumentation.dll` 程式庫，這表示應先在全域組件快取中、路徑中或是在包含 Svcutil.exe 的同一個目錄中註冊此程式庫。 對於像這樣的基本範例，最簡單的方式就是將 Svcutil.exe 和用戶端組態檔複製到 `WsdlDocumentation.dll` 所在的相同目錄中，再從那裡加以執行。  
   
-## 自訂 WSDL 匯入工具  
- 自訂的 <xref:System.ServiceModel.Description.IWsdlImportExtension> 物件 `WsdlDocumentationImporter` 也會實作 <xref:System.ServiceModel.Description.IContractBehavior> 和 <xref:System.ServiceModel.Description.IOperationBehavior> \(要新增至匯入的 ServiceEndpoints\)，以及 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> \(會在建立合約或作業程式碼時被叫用來修改程式碼產生\)。  
+## <a name="the-custom-wsdl-importer"></a>自訂 WSDL 匯入工具  
+ 自訂的 <xref:System.ServiceModel.Description.IWsdlImportExtension> 物件 `WsdlDocumentationImporter` 也會實作 <xref:System.ServiceModel.Description.IContractBehavior> 和 <xref:System.ServiceModel.Description.IOperationBehavior> (要新增至匯入的 ServiceEndpoints)，以及 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> (會在建立合約或作業程式碼時被叫用來修改程式碼產生)。  
   
  在 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法中，這個範例首先會判斷 WSDL 附註是在合約層級還是在作業層級，然後在適當的範圍內將本身新增為行為，並傳遞匯入的附註文字至其建構函式。  
   
@@ -207,10 +207,9 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
         }  
     }  
 }  
-  
 ```  
   
- 接下來，系統會在產生程式碼時叫用 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> 方法，並傳遞適當的內容資訊。這個範例會格式化自訂 WSDL 附註，再將它們當做註解插入 CodeDom 中。  
+ 接下來，系統會在產生程式碼時叫用 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> 方法，並傳遞適當的內容資訊。 這個範例會格式化自訂 WSDL 附註，再將它們當做註解插入 CodeDom 中。  
   
 ```  
 public void GenerateContract(ServiceContractGenerationContext context)  
@@ -224,13 +223,12 @@ public void GenerateOperation(OperationContractGenerationContext context)
     context.SyncMethod.Comments.AddRange(FormatComments(text));  
     Debug.WriteLine("In generate operation.");  
 }  
-  
 ```  
   
-## 用戶端應用程式  
+## <a name="the-client-application"></a>用戶端應用程式  
  用戶端應用程式會在應用程式組態檔中指定自訂 WSDL 匯入工具來加以載入。  
   
-```  
+```xml  
 <client>  
   <endpoint address="http://localhost/servicemodelsamples/service.svc"   
   binding="wsHttpBinding"   
@@ -241,10 +239,9 @@ public void GenerateOperation(OperationContractGenerationContext context)
     </wsdlImporters>  
   </metadata>  
 </client>  
-  
 ```  
   
- 指定自訂匯入工具之後，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中繼資料系統就會將自訂匯入工具載入至任何為此目的而建立的 <xref:System.ServiceModel.Description.WsdlImporter>。這個範例會使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 來下載中繼資料、使用已正確設定的 <xref:System.ServiceModel.Description.WsdlImporter> 以使用範例所建立之自訂匯入工具來匯入中繼資料，以及使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 將修改的合約資訊編譯成 Visual Basic 和 C\# 用戶端程式碼，此程式碼可以用於 Visual Studio 以支援 Intellisense，也可以編譯為 XML 文件。  
+ 指定自訂匯入工具之後，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中繼資料系統就會將自訂匯入工具載入至任何為此目的而建立的 <xref:System.ServiceModel.Description.WsdlImporter>。 這個範例會使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 來下載中繼資料、使用已正確設定的 <xref:System.ServiceModel.Description.WsdlImporter> 以使用範例所建立之自訂匯入工具來匯入中繼資料，以及使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 將修改的合約資訊編譯成 Visual Basic 和 C# 用戶端程式碼，此程式碼可以用於 Visual Studio 以支援 Intellisense，也可以編譯為 XML 文件。  
   
 ```  
 /// From WSDL Documentation:  
@@ -300,21 +297,21 @@ public interface ICalculator
 }  
 ```  
   
-#### 若要設定、建置及執行範例  
+#### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C\# 或 Visual Basic .NET 版本，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨機器的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示進行。  
+3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱
