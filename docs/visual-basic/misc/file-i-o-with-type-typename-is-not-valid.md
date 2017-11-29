@@ -1,25 +1,27 @@
 ---
-title: "具有類型 &#39;&lt;類型名稱&gt;&#39; 的檔案 I/O 是無效的 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrArgument_UnsupportedIOType1"
+title: "類型 &#39; 具有檔案 I/O&lt;typename&gt;&#39; 不正確"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrArgument_UnsupportedIOType1
 ms.assetid: b6c527e3-b75a-4c1a-b6f1-ee9f7460b5f0
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e562105eff748859f3b240dfce6a3bd5cd675d17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 具有類型 &#39;&lt;類型名稱&gt;&#39; 的檔案 I/O 是無效的
-您正在嘗試將不支援的類型寫入檔案。  
+# <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="990eb-102">類型 &#39; 具有檔案 I/O&lt;typename&gt;&#39; 不正確</span><span class="sxs-lookup"><span data-stu-id="990eb-102">File I/O with type &#39;&lt;typename&gt;&#39; is not valid</span></span>
+<span data-ttu-id="990eb-103">您正在嘗試將不支援的類型寫入檔案。</span><span class="sxs-lookup"><span data-stu-id="990eb-103">You are attempting to write an unsupported type to a file.</span></span>  
   
-### 更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="990eb-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="990eb-104">To correct this error</span></span>  
   
--   請檢查結構以決定不受支援類型的發生位置，然後將它變更為有效的類型。  
+-   <span data-ttu-id="990eb-105">請檢查結構以決定不受支援類型的發生位置，然後將它變更為有效的類型。</span><span class="sxs-lookup"><span data-stu-id="990eb-105">Check the structure to determine where the unsupported type occurs, and then change it to a valid type.</span></span>  
   
-## 請參閱  
- [My.Computer.FileSystem Object](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)   
- [My.Computer.FileSystem.WriteAllBytes 方法](http://msdn.microsoft.com/zh-tw/b1a24dc1-eac8-4e22-8ffa-cc3bacbaf826)
+## <a name="see-also"></a><span data-ttu-id="990eb-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="990eb-106">See Also</span></span>  
+ [<span data-ttu-id="990eb-107">My.Computer.FileSystem 物件</span><span class="sxs-lookup"><span data-stu-id="990eb-107">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+ [<span data-ttu-id="990eb-108">My.Computer.FileSystem.WriteAllBytes 方法</span><span class="sxs-lookup"><span data-stu-id="990eb-108">My.Computer.FileSystem.WriteAllBytes Method</span></span>](http://msdn.microsoft.com/en-us/b1a24dc1-eac8-4e22-8ffa-cc3bacbaf826)

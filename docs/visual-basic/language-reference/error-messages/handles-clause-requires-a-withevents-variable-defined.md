@@ -1,35 +1,33 @@
 ---
-title: "Handles clause requires a WithEvents variable defined in the containing type or one of its base types | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30506"
-  - "bc30506"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30506"
+title: "Handles 子句需要 WithEvents 變數，該變數定義於包含類型或它的一種基底類型中"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30506
+- bc30506
+helpviewer_keywords: BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e007b371886ab721df6f099e289ea860474c915b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Handles clause requires a WithEvents variable defined in the containing type or one of its base types
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-您未在 `Handles` 子句中提供 `WithEvents` 變數。  在程序宣告結尾的 `Handles` 關鍵字，會讓它處理使用 `WithEvents` 關鍵字宣告的物件變數引發的事件。  
+# <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a><span data-ttu-id="ccc2f-102">Handles 子句需要 WithEvents 變數，該變數定義於包含類型或它的一種基底類型中</span><span class="sxs-lookup"><span data-stu-id="ccc2f-102">Handles clause requires a WithEvents variable defined in the containing type or one of its base types</span></span>
+<span data-ttu-id="ccc2f-103">您並未提供`WithEvents`變數中您`Handles`子句。</span><span class="sxs-lookup"><span data-stu-id="ccc2f-103">You did not supply a `WithEvents` variable in your `Handles` clause.</span></span> <span data-ttu-id="ccc2f-104">`Handles`程序宣告結尾處的關鍵字會導致它處理由使用所宣告物件變數引發的事件`WithEvents`關鍵字。</span><span class="sxs-lookup"><span data-stu-id="ccc2f-104">The `Handles` keyword at the end of a procedure declaration causes it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span>  
   
- **錯誤 ID**︰BC30506  
+ <span data-ttu-id="ccc2f-105">**錯誤 ID:** BC30506</span><span class="sxs-lookup"><span data-stu-id="ccc2f-105">**Error ID:** BC30506</span></span>  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ccc2f-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="ccc2f-106">To correct this error</span></span>  
   
--   提供需要的 `WithEvents` 變數。  
+-   <span data-ttu-id="ccc2f-107">提供必要`WithEvents`變數。</span><span class="sxs-lookup"><span data-stu-id="ccc2f-107">Supply the necessary `WithEvents` variable.</span></span>  
   
-## 請參閱  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a><span data-ttu-id="ccc2f-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ccc2f-108">See Also</span></span>  
+ [<span data-ttu-id="ccc2f-109">Handles</span><span class="sxs-lookup"><span data-stu-id="ccc2f-109">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)

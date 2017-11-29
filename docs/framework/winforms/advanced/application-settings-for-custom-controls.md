@@ -1,48 +1,49 @@
 ---
-title: "自訂控制項的應用程式設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式設定 [Windows Form], 自訂控制項"
-  - "自訂控制項 [Windows Form], 應用程式設定"
+title: "自訂控制項的應用程式設定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], application settings
+- application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3f8292ac459a2943376229ef62466b0a772430dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 自訂控制項的應用程式設定
-當自訂控制項要裝載於協力廠商的應用程式中時，您必須先完成某些特定的工作，該控制項才能夠保存應用程式設定。  
+# <a name="application-settings-for-custom-controls"></a><span data-ttu-id="62a75-102">自訂控制項的應用程式設定</span><span class="sxs-lookup"><span data-stu-id="62a75-102">Application Settings for Custom Controls</span></span>
+<span data-ttu-id="62a75-103">您必須完成特定工作，讓您的自訂控制項能夠保存應用程式設定，在第三方應用程式中裝載控制項時。</span><span class="sxs-lookup"><span data-stu-id="62a75-103">You must complete certain tasks to give your custom controls the ability to persist application settings when the controls are hosted in third-party applications.</span></span>  
   
- 大多數關於應用程式設定功能的文件都是假設您要建立獨立應用程式 \(Standalone Application\)。  不過，如果您要建立的是其他開發人員將在他們的應用程式中裝載的控制項，則必須另外採取其他步驟，才能讓控制項正確保存它的設定。  
+ <span data-ttu-id="62a75-104">大部分的應用程式設定功能的相關文件會假設您要建立的獨立應用程式寫入。</span><span class="sxs-lookup"><span data-stu-id="62a75-104">Most of the documentation about the Application Settings feature is written under the assumption that you are creating a standalone application.</span></span> <span data-ttu-id="62a75-105">不過，如果您要建立其他開發人員將裝載的控制項在其應用程式，您需要採取一些額外的步驟，才能讓控制項保存它的設定正確。</span><span class="sxs-lookup"><span data-stu-id="62a75-105">However, if you are creating a control that other developers will host in their applications, you need to take a few additional steps for your control to persist its settings properly.</span></span>  
   
-## 應用程式設定和自訂控制項  
- 若要讓您的控制項能夠正確地保存它的設定，則必須建立該控制項專屬的衍生自 <xref:System.Configuration.ApplicationSettingsBase> 之應用程式設定包裝函式類別 \(Wrapper Class\)，藉此將程序封裝起來。  另外，主控制項類別必須實作 <xref:System.Configuration.IPersistComponentSettings>。  這個介面包含數個屬性以及兩個方法，即 <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> 和 <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>。  如果您是使用 Visual Studio 中的 \[**Windows Form 設計工具**\] 將控制項加入至表單，當控制項在初始化時 Windows Form 將會自動呼叫 <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A>；您必須在控制項的  `Dispose`  方法中自行呼叫 <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>。  
+## <a name="application-settings-and-custom-controls"></a><span data-ttu-id="62a75-106">應用程式設定和自訂控制項</span><span class="sxs-lookup"><span data-stu-id="62a75-106">Application Settings and Custom Controls</span></span>  
+ <span data-ttu-id="62a75-107">您要讓控制項正確保存它的設定，它必須封裝程序，藉由建立它自己專用的應用程式設定包裝函式類別，衍生自<xref:System.Configuration.ApplicationSettingsBase>。</span><span class="sxs-lookup"><span data-stu-id="62a75-107">For your control to properly persist its settings, it must encapsulate the process by creating its own dedicated applications settings wrapper class, derived from <xref:System.Configuration.ApplicationSettingsBase>.</span></span> <span data-ttu-id="62a75-108">此外，主控制項類別必須實作<xref:System.Configuration.IPersistComponentSettings>。</span><span class="sxs-lookup"><span data-stu-id="62a75-108">Additionally, the main control class must implement the <xref:System.Configuration.IPersistComponentSettings>.</span></span> <span data-ttu-id="62a75-109">介面包含數個屬性，以及兩個方法：<xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A>和<xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>。</span><span class="sxs-lookup"><span data-stu-id="62a75-109">The interface contains several properties as well as two methods, <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> and <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>.</span></span> <span data-ttu-id="62a75-110">如果您將控制項加入表單使用**Windows Form 設計工具**在 Visual Studio 中，會呼叫 Windows Form<xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A>自動初始化控制項時，您必須呼叫<xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>自行在`Dispose`控制項的方法。</span><span class="sxs-lookup"><span data-stu-id="62a75-110">If you add your control to a form using the **Windows Forms Designer** in Visual Studio, Windows Forms will call <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> automatically when the control is initialized; you must call <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> yourself in the `Dispose` method of your control.</span></span>  
   
- 此外，您應該實作下列項目，以便讓自訂控制項的應用程式設定能在如 Visual Studio 的設計階段環境中適當運作。  
+ <span data-ttu-id="62a75-111">此外，您應該實作下列自訂控制項，例如 Visual Studio 設計階段環境中正常運作的應用程式設定的順序：</span><span class="sxs-lookup"><span data-stu-id="62a75-111">In addition, you should implement the following in order for application settings for custom controls to work properly in design-time environments such as Visual Studio:</span></span>  
   
-1.  自訂的應用程式設定類別，其建構函式接受 <xref:System.ComponentModel.IComponent> 做為單一的參數。  請使用這個類別來儲存和載入所有的應用程式設定。  當您建立此類別的新執行個體時，請使用這個建構函式來傳遞您的自訂控制項。  
+1.  <span data-ttu-id="62a75-112">自訂應用程式設定類別的建構函式與<xref:System.ComponentModel.IComponent>做為單一參數。</span><span class="sxs-lookup"><span data-stu-id="62a75-112">A custom application settings class with a constructor that takes an <xref:System.ComponentModel.IComponent> as a single parameter.</span></span> <span data-ttu-id="62a75-113">使用這個類別來儲存及載入的所有應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="62a75-113">Use this class to save and load all of your application settings.</span></span> <span data-ttu-id="62a75-114">當您建立這個類別的新執行個體時，傳遞您的自訂控制項的建構函式。</span><span class="sxs-lookup"><span data-stu-id="62a75-114">When you create a new instance of this class, pass your custom control using the constructor.</span></span>  
   
-2.  在建立控制項並將其放置在表單上之後，建立這個自訂設定類別 \(例如在表單的 <xref:System.Windows.Forms.Form.Load> 事件處理常式中\)。  
+2.  <span data-ttu-id="62a75-115">已建立並放置在表單中，例如在表單的控制項之後，建立此自訂設定類別<xref:System.Windows.Forms.Form.Load>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="62a75-115">Create this custom settings class after the control has been created and placed on a form, such as in the form's <xref:System.Windows.Forms.Form.Load> event handler.</span></span>  
   
- 如需建立自訂設定類別的指示，請參閱 [如何：建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ <span data-ttu-id="62a75-116">如需建立自訂的設定類別的指示，請參閱[How to： 建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="62a75-116">For instructions on creating a custom settings class, see [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).</span></span>  
   
-## 設定索引鍵和共用設定  
- 某些控制項可以在同一表單中多次使用。  通常，您會希望這些控制項能夠保存各自的個別設定。  利用 <xref:System.Configuration.IPersistComponentSettings> 上的 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> 屬性，您可以提供唯一的字串用以明示表單上某控制項的版本。  
+## <a name="settings-keys-and-shared-settings"></a><span data-ttu-id="62a75-117">設定索引鍵和共用的設定</span><span class="sxs-lookup"><span data-stu-id="62a75-117">Settings Keys and Shared Settings</span></span>  
+ <span data-ttu-id="62a75-118">有些控制項可用於多次相同的格式。</span><span class="sxs-lookup"><span data-stu-id="62a75-118">Some controls can be used multiple times within the same form.</span></span> <span data-ttu-id="62a75-119">大部分的情況下，您會想要保存其自己的個別設定這些控制項。</span><span class="sxs-lookup"><span data-stu-id="62a75-119">Most of the time, you will want these controls to persist their own individual settings.</span></span> <span data-ttu-id="62a75-120">與<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>屬性<xref:System.Configuration.IPersistComponentSettings>，您可以提供用來釐清多個版本的表單上控制項的唯一字串。</span><span class="sxs-lookup"><span data-stu-id="62a75-120">With the <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> property on <xref:System.Configuration.IPersistComponentSettings>, you can supply a unique string that acts to disambiguate multiple versions of a control on a form.</span></span>  
   
- 實作 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> 的最簡單方法是使用控制項的 <xref:System.Windows.Forms.Control.Name%2A> 屬性做為 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>。  載入或儲存控制項的設定時，您會將 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> 值傳遞給 <xref:System.Configuration.ApplicationSettingsBase> 類別的 <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> 屬性。  應用程式設定使用這個唯一鍵將使用者設定保存為 XML。  下列程式碼範例會示範  `<userSettings>`  區段可以如何尋找一個名為  `CustomControl1`  的自訂控制項執行個體，此控制項是儲存其  `Text`  屬性的設定。  
+ <span data-ttu-id="62a75-121">最簡單的方式實作<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>是使用<xref:System.Windows.Forms.Control.Name%2A>的控制項屬性<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>。</span><span class="sxs-lookup"><span data-stu-id="62a75-121">The simplest way to implement <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> is to use the <xref:System.Windows.Forms.Control.Name%2A> property of the control for the <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>.</span></span> <span data-ttu-id="62a75-122">當您載入或儲存控制項的設定時，您將值傳遞<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>入<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>屬性<xref:System.Configuration.ApplicationSettingsBase>類別。</span><span class="sxs-lookup"><span data-stu-id="62a75-122">When you load or save the control's settings, you pass the value of <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> on to the <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> property of the <xref:System.Configuration.ApplicationSettingsBase> class.</span></span> <span data-ttu-id="62a75-123">它會保存為 XML 的使用者的設定時，應用程式設定就會使用這個唯一索引鍵。</span><span class="sxs-lookup"><span data-stu-id="62a75-123">Application Settings uses this unique key when it persists the user's settings to XML.</span></span> <span data-ttu-id="62a75-124">下列程式碼範例示範如何`<userSettings>`區段可能會尋找名為自訂控制項的執行個體`CustomControl1`，將儲存的設定及其`Text`屬性。</span><span class="sxs-lookup"><span data-stu-id="62a75-124">The following code example shows how a `<userSettings>` section may look for an instance of a custom control named `CustomControl1` that saves a setting for its `Text` property.</span></span>  
   
-```  
+```xml  
 <userSettings>  
     <CustomControl1>  
         <setting name="Text" serializedAs="string">  
@@ -52,9 +53,9 @@ caps.handback.revision: 13
 </userSettings>  
 ```  
   
- 不會把值提供給 <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> 的任何控制項執行個體將會共用相同的設定。  
+ <span data-ttu-id="62a75-125">未提供的值之控制項的任何執行個體<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>會共用相同的設定。</span><span class="sxs-lookup"><span data-stu-id="62a75-125">Any instances of a control that do not supply a value for <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> will share the same settings.</span></span>  
   
-## 請參閱  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.IPersistComponentSettings>   
- [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+## <a name="see-also"></a><span data-ttu-id="62a75-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62a75-126">See Also</span></span>  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.IPersistComponentSettings>  
+ [<span data-ttu-id="62a75-127">應用程式設定架構</span><span class="sxs-lookup"><span data-stu-id="62a75-127">Application Settings Architecture</span></span>](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)

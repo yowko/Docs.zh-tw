@@ -1,57 +1,62 @@
 ---
-title: "如何：以程式碼模擬滑鼠和鍵盤事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "鍵盤, 事件模擬"
-  - "使用者輸入, 模擬"
-  - "SendKeys, 使用"
-  - "按一下滑鼠, 模擬"
-  - "滑鼠, 事件模擬"
+title: "如何：以程式碼模擬滑鼠和鍵盤事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- keyboards [Windows Forms], event simulation
+- user input [Windows Forms], simulating
+- SendKeys [Windows Forms], using
+- mouse clicks [Windows Forms], simulating
+- mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b764533b845ddf1585c9b3de9eb6283ec5ec6ea
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：以程式碼模擬滑鼠和鍵盤事件
-Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選項。 本主題提供這些選項的概觀。  
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a><span data-ttu-id="f1623-102">如何：以程式碼模擬滑鼠和鍵盤事件</span><span class="sxs-lookup"><span data-stu-id="f1623-102">How to: Simulate Mouse and Keyboard Events in Code</span></span>
+<span data-ttu-id="f1623-103">Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選項。</span><span class="sxs-lookup"><span data-stu-id="f1623-103">Windows Forms provides several options for programmatically simulating mouse and keyboard input.</span></span> <span data-ttu-id="f1623-104">本主題提供這些選項的概觀。</span><span class="sxs-lookup"><span data-stu-id="f1623-104">This topic provides an overview of these options.</span></span>  
   
-## 模擬滑鼠輸入  
- 模擬滑鼠事件的最佳方式是呼叫 `On`*EventName* 方法，這個方法會引發您要模擬的滑鼠事件。 通常只有在自訂控制項和表單內才能使用這個選項，因為引發事件的方法會受到保護，而且無法在控制項或表單外進行存取。 例如，下列步驟說明如何以程式碼模擬按一下滑鼠右鍵的動作。  
+## <a name="simulating-mouse-input"></a><span data-ttu-id="f1623-105">模擬滑鼠輸入</span><span class="sxs-lookup"><span data-stu-id="f1623-105">Simulating Mouse Input</span></span>  
+ <span data-ttu-id="f1623-106">模擬滑鼠事件的最佳方式是呼叫 `On`*EventName* 方法，這個方法會引發您要模擬的滑鼠事件。</span><span class="sxs-lookup"><span data-stu-id="f1623-106">The best way to simulate mouse events is to call the `On`*EventName* method that raises the mouse event you want to simulate.</span></span> <span data-ttu-id="f1623-107">通常只有在自訂控制項和表單內才能使用這個選項，因為引發事件的方法會受到保護，而且無法在控制項或表單外進行存取。</span><span class="sxs-lookup"><span data-stu-id="f1623-107">This option is usually possible only within custom controls and forms, because the methods that raise events are protected and cannot be accessed outside the control or form.</span></span> <span data-ttu-id="f1623-108">例如，下列步驟說明如何以程式碼模擬按一下滑鼠右鍵的動作。</span><span class="sxs-lookup"><span data-stu-id="f1623-108">For example, the following steps illustrate how to simulate clicking the right mouse button in code.</span></span>  
   
-#### 以程式設計方式按一下滑鼠右鍵  
+#### <a name="to-programmatically-click-the-right-mouse-button"></a><span data-ttu-id="f1623-109">以程式設計方式按一下滑鼠右鍵</span><span class="sxs-lookup"><span data-stu-id="f1623-109">To programmatically click the right mouse button</span></span>  
   
-1.  建立 <xref:System.Windows.Forms.MouseEventArgs>，並將其 <xref:System.Windows.Forms.MouseEventArgs.Button%2A> 屬性設定為 <xref:System.Windows.Forms.MouseButtons?displayProperty=fullName> 值。  
+1.  <span data-ttu-id="f1623-110">建立 <xref:System.Windows.Forms.MouseEventArgs>，並將其 <xref:System.Windows.Forms.MouseEventArgs.Button%2A> 屬性設定為 <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 值。</span><span class="sxs-lookup"><span data-stu-id="f1623-110">Create a <xref:System.Windows.Forms.MouseEventArgs> whose <xref:System.Windows.Forms.MouseEventArgs.Button%2A> property is set to the <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> value.</span></span>  
   
-2.  呼叫 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 方法，並以這個 <xref:System.Windows.Forms.MouseEventArgs> 做為引數。  
+2.  <span data-ttu-id="f1623-111">呼叫 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 方法，並以這個 <xref:System.Windows.Forms.MouseEventArgs> 做為引數。</span><span class="sxs-lookup"><span data-stu-id="f1623-111">Call the <xref:System.Windows.Forms.Control.OnMouseClick%2A> method with this <xref:System.Windows.Forms.MouseEventArgs> as the argument.</span></span>  
   
- 如需自訂控制項的詳細資訊，請參閱 [在設計階段開發 Windows Form 控制項](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。  
+ <span data-ttu-id="f1623-112">如需自訂控制項的詳細資訊，請參閱[在設計階段開發 Windows Form 控制項](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="f1623-112">For more information on custom controls, see [Developing Windows Forms Controls at Design Time](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span>  
   
- 還有其他方式可以模擬滑鼠輸入。 例如，您可以透過程式設計方式設定代表狀態的控制項屬性，這個狀態通常是透過滑鼠輸入來設定 \(例如 <xref:System.Windows.Forms.CheckBox> 控制項的 <xref:System.Windows.Forms.CheckBox.Checked%2A> 屬性\)，您也可以直接呼叫附加至所要模擬之事件的委派。  
+ <span data-ttu-id="f1623-113">還有其他方式可以模擬滑鼠輸入。</span><span class="sxs-lookup"><span data-stu-id="f1623-113">There are other ways to simulate mouse input.</span></span> <span data-ttu-id="f1623-114">例如，您可以透過程式設計方式設定代表狀態的控制項屬性，這個狀態通常是透過滑鼠輸入來設定 (例如 <xref:System.Windows.Forms.CheckBox.Checked%2A> 控制項的 <xref:System.Windows.Forms.CheckBox> 屬性)，您也可以直接呼叫附加至所要模擬之事件的委派。</span><span class="sxs-lookup"><span data-stu-id="f1623-114">For example, you can programmatically set a control property that represents a state that is typically set through mouse input (such as the <xref:System.Windows.Forms.CheckBox.Checked%2A> property of the <xref:System.Windows.Forms.CheckBox> control), or you can directly call the delegate that is attached to the event you want to simulate.</span></span>  
   
-## 模擬鍵盤輸入  
- 除了可以使用上述用於滑鼠輸入的策略來模擬鍵盤輸入之外，Windows Form 還提供 <xref:System.Windows.Forms.SendKeys> 類別，以便將按鍵動作傳送至作用中應用程式。  
+## <a name="simulating-keyboard-input"></a><span data-ttu-id="f1623-115">模擬鍵盤輸入</span><span class="sxs-lookup"><span data-stu-id="f1623-115">Simulating Keyboard Input</span></span>  
+ <span data-ttu-id="f1623-116">除了可以使用上述用於滑鼠輸入的策略來模擬鍵盤輸入之外，Windows Form 還提供 <xref:System.Windows.Forms.SendKeys> 類別，以便將按鍵動作傳送至作用中應用程式。</span><span class="sxs-lookup"><span data-stu-id="f1623-116">Although you can simulate keyboard input by using the strategies discussed above for mouse input, Windows Forms also provides the <xref:System.Windows.Forms.SendKeys> class for sending keystrokes to the active application.</span></span>  
   
 > [!CAUTION]
->  如果您的應用程式是設計成可搭配國際上現有的各種鍵盤來使用，則使用 <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=fullName> 可能會產生無法預期的結果，應該予以避免。  
+>  <span data-ttu-id="f1623-117">如果您的應用程式是設計成可搭配國際上現有的各種鍵盤來使用，則使用 <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=nameWithType> 可能會產生無法預期的結果，應該予以避免。</span><span class="sxs-lookup"><span data-stu-id="f1623-117">If your application is intended for international use with a variety of keyboards, the use of <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=nameWithType> could yield unpredictable results and should be avoided.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SendKeys> 類別已針對 .NET Framework 3.0 進行更新，以便能夠在 Windows Vista 上執行的應用程式中使用。 Windows Vista 的增強式安全性 \(稱為使用者帳戶控制或 UAC\) 會讓之前的實作無法如預期般運作。  
+>  <span data-ttu-id="f1623-118"><xref:System.Windows.Forms.SendKeys> 類別已針對 .NET Framework 3.0 進行更新，以便能夠在 Windows Vista 上執行的應用程式中使用。</span><span class="sxs-lookup"><span data-stu-id="f1623-118">The <xref:System.Windows.Forms.SendKeys> class has been updated for the .NET Framework 3.0 to enable its use in applications that run on Windows Vista.</span></span> <span data-ttu-id="f1623-119">Windows Vista 的增強式安全性 (稱為使用者帳戶控制或 UAC) 會讓之前的實作無法如預期般運作。</span><span class="sxs-lookup"><span data-stu-id="f1623-119">The enhanced security of Windows Vista (known as User Account Control or UAC) prevents the previous implementation from working as expected.</span></span>  
 >   
->  <xref:System.Windows.Forms.SendKeys> 類別容易受到時間問題的影響，某些開發人員必須解決這些問題。 更新的實作仍然容易受到時間問題的影響，但是速度會稍微快一些，而且可能需要對解決方法進行變更。<xref:System.Windows.Forms.SendKeys> 類別會先嘗試使用之前的實作；如果失敗，則使用新的實作。 因此，<xref:System.Windows.Forms.SendKeys> 類別在不同的作業系統上可能會有不同的運作方式。 此外，當 <xref:System.Windows.Forms.SendKeys> 類別使用新的實作時，<xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法不會在將訊息傳送至另一個處理序時，等候處理這些訊息。  
+>  <span data-ttu-id="f1623-120"><xref:System.Windows.Forms.SendKeys> 類別容易受到時間問題的影響，某些開發人員必須解決這些問題。</span><span class="sxs-lookup"><span data-stu-id="f1623-120">The <xref:System.Windows.Forms.SendKeys> class is susceptible to timing issues, which some developers have had to work around.</span></span> <span data-ttu-id="f1623-121">更新的實作仍然容易受到時間問題的影響，但是速度會稍微快一些，而且可能需要對解決方法進行變更。</span><span class="sxs-lookup"><span data-stu-id="f1623-121">The updated implementation is still susceptible to timing issues, but is slightly faster and may require changes to the workarounds.</span></span> <span data-ttu-id="f1623-122"><xref:System.Windows.Forms.SendKeys> 類別會先嘗試使用之前的實作；如果失敗，則使用新的實作。</span><span class="sxs-lookup"><span data-stu-id="f1623-122">The <xref:System.Windows.Forms.SendKeys> class tries to use the previous implementation first, and if that fails, uses the new implementation.</span></span> <span data-ttu-id="f1623-123">因此， <xref:System.Windows.Forms.SendKeys> 類別在不同的作業系統上可能會有不同的運作方式。</span><span class="sxs-lookup"><span data-stu-id="f1623-123">As a result, the <xref:System.Windows.Forms.SendKeys> class may behave differently on different operating systems.</span></span> <span data-ttu-id="f1623-124">此外，當 <xref:System.Windows.Forms.SendKeys> 類別使用新的實作時， <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法不會在將訊息傳送至另一個處理序時，等候處理這些訊息。</span><span class="sxs-lookup"><span data-stu-id="f1623-124">Additionally, when the <xref:System.Windows.Forms.SendKeys> class uses the new implementation, the <xref:System.Windows.Forms.SendKeys.SendWait%2A> method will not wait for messages to be processed when they are sent to another process.</span></span>  
 >   
->  如果不論作業系統為何，應用程式都需要一致的行為，您可以強制 <xref:System.Windows.Forms.SendKeys> 類別使用新的實作，方式是將下列應用程式設定加入 app.config 檔中。  
+>  <span data-ttu-id="f1623-125">如果不論作業系統為何，應用程式都需要一致的行為，您可以強制 <xref:System.Windows.Forms.SendKeys> 類別使用新的實作，方式是將下列應用程式設定加入 app.config 檔中。</span><span class="sxs-lookup"><span data-stu-id="f1623-125">If your application relies on consistent behavior regardless of the operating system, you can force the <xref:System.Windows.Forms.SendKeys> class to use the new implementation by adding the following application setting to your app.config file.</span></span>  
 >   
 >  `<appSettings>`  
 >   
@@ -59,40 +64,40 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
 >   
 >  `</appSettings>`  
 >   
->  若要強制 <xref:System.Windows.Forms.SendKeys> 類別使用之前的實作，請改用 `"JournalHook"` 值。  
+>  <span data-ttu-id="f1623-126">若要強制 <xref:System.Windows.Forms.SendKeys> 類別使用之前的實作，請改用 `"JournalHook"` 值。</span><span class="sxs-lookup"><span data-stu-id="f1623-126">To force the <xref:System.Windows.Forms.SendKeys> class to use the previous implementation, use the value `"JournalHook"` instead.</span></span>  
   
-#### 將按鍵動作傳送至相同的應用程式  
+#### <a name="to-send-a-keystroke-to-the-same-application"></a><span data-ttu-id="f1623-127">將按鍵動作傳送至相同的應用程式</span><span class="sxs-lookup"><span data-stu-id="f1623-127">To send a keystroke to the same application</span></span>  
   
-1.  請呼叫 <xref:System.Windows.Forms.SendKeys> 類別的 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 應用程式的作用控制項會接收指定的按鍵動作。 下列程式碼範例使用 <xref:System.Windows.Forms.SendKeys.Send%2A> 來模擬當使用者按兩下表單介面時，按下 ENTER 鍵的動作。 這個範例假設 <xref:System.Windows.Forms.Form> 含有一個定位點索引為 0 的 <xref:System.Windows.Forms.Button> 控制項。  
+1.  <span data-ttu-id="f1623-128">請呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 類別的 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 或 <xref:System.Windows.Forms.SendKeys> 方法。</span><span class="sxs-lookup"><span data-stu-id="f1623-128">Call the <xref:System.Windows.Forms.SendKeys.Send%2A> or <xref:System.Windows.Forms.SendKeys.SendWait%2A> method of the <xref:System.Windows.Forms.SendKeys> class.</span></span> <span data-ttu-id="f1623-129">應用程式的作用控制項會接收指定的按鍵動作。</span><span class="sxs-lookup"><span data-stu-id="f1623-129">The specified keystrokes will be received by the active control of the application.</span></span> <span data-ttu-id="f1623-130">下列程式碼範例使用 <xref:System.Windows.Forms.SendKeys.Send%2A> 來模擬當使用者按兩下表單介面時，按下 ENTER 鍵的動作。</span><span class="sxs-lookup"><span data-stu-id="f1623-130">The following code example uses <xref:System.Windows.Forms.SendKeys.Send%2A> to simulate pressing the ENTER key when the user double-clicks the surface of the form.</span></span> <span data-ttu-id="f1623-131">這個範例假設 <xref:System.Windows.Forms.Form> 含有一個定位點索引為 0 的 <xref:System.Windows.Forms.Button> 控制項。</span><span class="sxs-lookup"><span data-stu-id="f1623-131">This example assumes a <xref:System.Windows.Forms.Form> with a single <xref:System.Windows.Forms.Button> control that has a tab index of 0.</span></span>  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
      [!code-vb[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
   
-#### 將按鍵動作傳送至不同的應用程式  
+#### <a name="to-send-a-keystroke-to-a-different-application"></a><span data-ttu-id="f1623-132">將按鍵動作傳送至不同的應用程式</span><span class="sxs-lookup"><span data-stu-id="f1623-132">To send a keystroke to a different application</span></span>  
   
-1.  啟動會接收按鍵動作的應用程式視窗，然後呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由於沒有可啟動另一個應用程式的 Managed 方法，因此您必須使用原生 Windows 方法強制將焦點放在其他應用程式上。 下列程式碼範例使用平台叫用呼叫 `FindWindow` 和 `SetForegroundWindow` 方法，以啟動 \[小算盤\] 應用程式視窗，然後再呼叫 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 對 \[小算盤\] 應用程式發出一連串計算。  
+1.  <span data-ttu-id="f1623-133">啟動會接收按鍵動作的應用程式視窗，然後呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f1623-133">Activate the application window that will receive the keystrokes, and then call the <xref:System.Windows.Forms.SendKeys.Send%2A> or <xref:System.Windows.Forms.SendKeys.SendWait%2A> method.</span></span> <span data-ttu-id="f1623-134">由於沒有可啟動另一個應用程式的 Managed 方法，因此您必須使用原生 Windows 方法強制將焦點放在其他應用程式上。</span><span class="sxs-lookup"><span data-stu-id="f1623-134">Because there is no managed method to activate another application, you must use native Windows methods to force focus on other applications.</span></span> <span data-ttu-id="f1623-135">下列程式碼範例使用平台叫用呼叫 `FindWindow` 和 `SetForegroundWindow` 方法，以啟動 [小算盤] 應用程式視窗，然後再呼叫 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 對 [小算盤] 應用程式發出一連串計算。</span><span class="sxs-lookup"><span data-stu-id="f1623-135">The following code example uses platform invoke to call the `FindWindow` and `SetForegroundWindow` methods to activate the Calculator application window, and then calls <xref:System.Windows.Forms.SendKeys.SendWait%2A> to issue a series of calculations to the Calculator application.</span></span>  
   
     > [!NOTE]
-    >  用於尋找 \[小算盤\] 應用程式之 `FindWindow` 呼叫的正確參數會隨您的 Windows 版本而異。  下列程式碼會尋找 [!INCLUDE[win7](../../../includes/win7-md.md)] 上的 \[小算盤\] 應用程式。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] 上，將第一個參數變更為 "SciCalc"。 您可以使用 Visual Studio 隨附的 Spy\+\+ 工具來判斷正確的參數。  
+    >  <span data-ttu-id="f1623-136">用於尋找 [小算盤] 應用程式之 `FindWindow` 呼叫的正確參數會隨您的 Windows 版本而異。</span><span class="sxs-lookup"><span data-stu-id="f1623-136">The correct parameters of the `FindWindow` call that locates the Calculator application vary based on your version of Windows.</span></span>  <span data-ttu-id="f1623-137">下列程式碼會尋找 [!INCLUDE[win7](../../../includes/win7-md.md)]上的 [小算盤] 應用程式。</span><span class="sxs-lookup"><span data-stu-id="f1623-137">The following code finds the Calculator application on [!INCLUDE[win7](../../../includes/win7-md.md)].</span></span> <span data-ttu-id="f1623-138">在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，將第一個參數變更為 "SciCalc"。</span><span class="sxs-lookup"><span data-stu-id="f1623-138">On [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], change the first parameter to "SciCalc".</span></span> <span data-ttu-id="f1623-139">您可以使用 Visual Studio 隨附的 Spy++ 工具來判斷正確的參數。</span><span class="sxs-lookup"><span data-stu-id="f1623-139">You can use the Spy++ tool, included with Visual Studio, to determine the correct parameters.</span></span>  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
-## 範例  
- 下列程式碼範例是先前程式碼範例的完整應用。  
+## <a name="example"></a><span data-ttu-id="f1623-140">範例</span><span class="sxs-lookup"><span data-stu-id="f1623-140">Example</span></span>  
+ <span data-ttu-id="f1623-141">下列程式碼範例是先前程式碼範例的完整應用。</span><span class="sxs-lookup"><span data-stu-id="f1623-141">The following code example is the complete application for the previous code examples.</span></span>  
   
  [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
  [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
   
-## 編譯程式碼  
- 這個範例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="f1623-142">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="f1623-142">Compiling the Code</span></span>  
+ <span data-ttu-id="f1623-143">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="f1623-143">This example requires:</span></span>  
   
--   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
+-   <span data-ttu-id="f1623-144">System、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="f1623-144">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- 如需從 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 命令列建置這個範例的相關資訊，請參閱[從命令列建置](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md)或[使用 csc.exe 建置命令列](../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中建置這個範例。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ <span data-ttu-id="f1623-145">如需從 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 的命令列建置這個範例的資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="f1623-145">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="f1623-146">您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中建置這個範例。</span><span class="sxs-lookup"><span data-stu-id="f1623-146">You can also build this example in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="f1623-147">另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="f1623-147">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## 請參閱  
- [Windows Form 中的使用者輸入](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f1623-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1623-148">See Also</span></span>  
+ [<span data-ttu-id="f1623-149">Windows Forms 中的使用者輸入</span><span class="sxs-lookup"><span data-stu-id="f1623-149">User Input in Windows Forms</span></span>](../../../docs/framework/winforms/user-input-in-windows-forms.md)

@@ -1,78 +1,84 @@
 ---
-title: "如何：在混合應用程式中啟用視覺化樣式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "混合應用程式 [WPF 互通性]"
-  - "視覺化樣式 [Windows Form]"
+title: "如何：在混合應用程式中啟用視覺化樣式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hybrid applications [WPF interoperability]
+- visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e628835f0e5fb315f15b9e9946c48f7017092bae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在混合應用程式中啟用視覺化樣式
-本主題顯示如何在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構應用程式中所裝載 \(Host\) 的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項上啟用 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式。  
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a><span data-ttu-id="a9ba6-102">如何：在混合應用程式中啟用視覺化樣式</span><span class="sxs-lookup"><span data-stu-id="a9ba6-102">How to: Enable Visual Styles in a Hybrid Application</span></span>
+<span data-ttu-id="a9ba6-103">本主題說明如何啟用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]上的視覺樣式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-103">This topic shows how to enable [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual styles on a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control hosted in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
   
- 如果應用程式呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法，而且應用程式是在 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 中執行時，大部分的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項都會自動使用視覺化樣式。  如需詳細資訊，請參閱 [使用視覺化樣式呈現控制項](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)。  
+ <span data-ttu-id="a9ba6-104">如果您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法中，大部分的程式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上執行您的應用程式時，控制項將會自動使用視覺化樣式[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-104">If your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method, most of your [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls will automatically use visual styles when your application is run on [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span></span> <span data-ttu-id="a9ba6-105">如需詳細資訊，請參閱[視覺化樣式呈現控制項](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-105">For more information, see [Rendering Controls with Visual Styles](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).</span></span>  
   
- 如需本主題中所說明之工作的完整程式碼清單，請參閱[在混合式應用程式中啟用視覺化樣式範例](http://go.microsoft.com/fwlink/?LinkID=159986) \(英文\)。  
+ <span data-ttu-id="a9ba6-106">如本主題中所述的工作的完整程式碼清單，請參閱[啟用混合式應用程式範例中的視覺化樣式](http://go.microsoft.com/fwlink/?LinkID=159986)。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-106">For a complete code listing of the tasks illustrated in this topic, see [Enabling Visual Styles in a Hybrid Application Sample](http://go.microsoft.com/fwlink/?LinkID=159986).</span></span>  
   
-## 啟用 Windows Form 視覺化樣式  
+## <a name="enabling-windows-forms-visual-styles"></a><span data-ttu-id="a9ba6-107">啟用 Windows Forms 視覺化樣式</span><span class="sxs-lookup"><span data-stu-id="a9ba6-107">Enabling Windows Forms Visual Styles</span></span>  
   
-#### 若要啟用 Windows Form 視覺化樣式  
+#### <a name="to-enable-windows-forms-visual-styles"></a><span data-ttu-id="a9ba6-108">啟用 Windows Forms 視覺化樣式</span><span class="sxs-lookup"><span data-stu-id="a9ba6-108">To enable Windows Forms visual styles</span></span>  
   
-1.  建立名為 `HostingWfWithVisualStyles` 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式專案。  
+1.  <span data-ttu-id="a9ba6-109">建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式專案，名為`HostingWfWithVisualStyles`。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-109">Create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Application project named `HostingWfWithVisualStyles`.</span></span>  
   
-2.  在 \[方案總管\] 中加入下列組件的參考。  
+2.  <span data-ttu-id="a9ba6-110">在 [方案總管] 中，加入下列組件的參考。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-110">In Solution Explorer, add references to the following assemblies.</span></span>  
   
-    -   WindowsFormsIntegration  
+    -   <span data-ttu-id="a9ba6-111">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="a9ba6-111">WindowsFormsIntegration</span></span>  
   
-    -   System.Windows.Forms  
+    -   <span data-ttu-id="a9ba6-112">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="a9ba6-112">System.Windows.Forms</span></span>  
   
-3.  按兩下 \[工具箱\] 中的 <xref:System.Windows.Controls.Grid> 圖示，將 <xref:System.Windows.Controls.Grid> 項目放在設計介面上。  
+3.  <span data-ttu-id="a9ba6-113">在 [工具箱] 中按兩下<xref:System.Windows.Controls.Grid>圖示，以放置<xref:System.Windows.Controls.Grid>設計介面上的項目。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-113">In the Toolbox, double-click the <xref:System.Windows.Controls.Grid> icon to place a <xref:System.Windows.Controls.Grid> element on the design surface.</span></span>  
   
-4.  在 \[屬性\] 視窗中，將 <xref:System.Windows.FrameworkElement.Height%2A> 和 <xref:System.Windows.FrameworkElement.Width%2A> 屬性的值設定為 \[**Auto**\]。  
+4.  <span data-ttu-id="a9ba6-114">在 [屬性] 視窗中設定的值<xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>屬性**自動**。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-114">In the Properties window, set the values of the <xref:System.Windows.FrameworkElement.Height%2A> and <xref:System.Windows.FrameworkElement.Width%2A> properties to **Auto**.</span></span>  
   
-5.  在 \[設計\] 檢視或 \[XAML\] 檢視中，選取 <xref:System.Windows.Window>。  
+5.  <span data-ttu-id="a9ba6-115">在 [設計] 檢視或 [XAML] 檢視中，選取<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-115">In Design view or XAML view, select the <xref:System.Windows.Window>.</span></span>  
   
-6.  按一下 \[屬性\] 視窗中的 \[**事件**\] 索引標籤。  
+6.  <span data-ttu-id="a9ba6-116">在 屬性 視窗中，按一下**事件** 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-116">In the Properties window, click the **Events** tab.</span></span>  
   
-7.  按兩下 <xref:System.Windows.FrameworkElement.Loaded> 事件。  
+7.  <span data-ttu-id="a9ba6-117">按兩下<xref:System.Windows.FrameworkElement.Loaded>事件。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-117">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
   
-8.  在 MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，插入下列程式碼以處理 <xref:System.Windows.FrameworkElement.Loaded> 事件。  
+8.  <span data-ttu-id="a9ba6-118">在 MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，插入下列程式碼來處理<xref:System.Windows.FrameworkElement.Loaded>事件。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-118">In MainWindow.xaml.vb or MainWindow.xaml.cs, insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
   
      [!code-csharp[HostingWfWithVisualStyles#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
   
-9. 按 F5 建置並執行應用程式。  
+9. <span data-ttu-id="a9ba6-119">按 F5 鍵建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-119">Press F5 to build and run the application.</span></span>  
   
-     會使用視覺化樣式繪製 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。  
+     <span data-ttu-id="a9ba6-120">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用視覺化樣式繪製控制項。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-120">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with visual styles.</span></span>  
   
-## 停用 Windows Form 視覺化樣式  
- 若要停用視覺化樣式，只需移除對 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法的呼叫即可。  
+## <a name="disabling-windows-forms-visual-styles"></a><span data-ttu-id="a9ba6-121">停用 Windows Forms 視覺化樣式</span><span class="sxs-lookup"><span data-stu-id="a9ba6-121">Disabling Windows Forms Visual Styles</span></span>  
+ <span data-ttu-id="a9ba6-122">若要停用視覺化樣式，只要移除呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-122">To disable visual styles, simply remove the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
   
-#### 若要停用 Windows Form 視覺化樣式  
+#### <a name="to-disable-windows-forms-visual-styles"></a><span data-ttu-id="a9ba6-123">停用 Windows Forms 視覺化樣式</span><span class="sxs-lookup"><span data-stu-id="a9ba6-123">To disable Windows Forms visual styles</span></span>  
   
-1.  在程式碼編輯器中開啟 MainWindow.xaml.vb 或 MainWindow.xaml.cs。  
+1.  <span data-ttu-id="a9ba6-124">在程式碼編輯器中，開啟 MainWindow.xaml.vb 或 MainWindow.xaml.cs。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-124">Open MainWindow.xaml.vb or MainWindow.xaml.cs in the Code Editor.</span></span>  
   
-2.  將對 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法的呼叫標記為註解。  
+2.  <span data-ttu-id="a9ba6-125">註解的呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-125">Comment out the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
   
-3.  按 F5 建置並執行應用程式。  
+3.  <span data-ttu-id="a9ba6-126">按 F5 鍵建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-126">Press F5 to build and run the application.</span></span>  
   
-     會使用預設系統樣式繪製 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。  
+     <span data-ttu-id="a9ba6-127">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]與預設系統樣式繪製控制項。</span><span class="sxs-lookup"><span data-stu-id="a9ba6-127">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with the default system style.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>   
- <xref:System.Windows.Forms.VisualStyles>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [使用視覺化樣式呈現控制項](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)   
- [逐步解說：在 WPF 中裝載 Windows Form 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="a9ba6-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9ba6-128">See Also</span></span>  
+ <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>  
+ <xref:System.Windows.Forms.VisualStyles>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="a9ba6-129">使用視覺化樣式呈現控制項</span><span class="sxs-lookup"><span data-stu-id="a9ba6-129">Rendering Controls with Visual Styles</span></span>](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
+ [<span data-ttu-id="a9ba6-130">逐步解說：在 WPF 中裝載 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="a9ba6-130">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)

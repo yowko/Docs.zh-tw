@@ -1,79 +1,77 @@
 ---
-title: "擲回例外狀況 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "例外狀況，擲回"
-  - "明確擲回例外狀況"
-  - "擲回例外狀況，設計方針"
+title: "擲回例外狀況"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exceptions, throwing
+- explicitly throwing exceptions
+- throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b1aa0eaccc26e1bd7cc6b78953dc0a782b2f952e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 擲回例外狀況
-擲回例外狀況這一節中所述的指導方針需要良好定義的執行失敗的意義。 每當成員不是什麼，就會發生執行失敗設計 （其成員名稱一樣）。 例如，如果 `OpenFile` 方法無法傳回給呼叫端的開啟的檔案控制代碼，則會視為執行失敗。  
+# <a name="exception-throwing"></a><span data-ttu-id="590a8-102">擲回例外狀況</span><span class="sxs-lookup"><span data-stu-id="590a8-102">Exception Throwing</span></span>
+<span data-ttu-id="590a8-103">擲回例外狀況這一節所述的指導方針需要良好定義的執行失敗的意義。</span><span class="sxs-lookup"><span data-stu-id="590a8-103">Exception-throwing guidelines described in this section require a good definition of the meaning of execution failure.</span></span> <span data-ttu-id="590a8-104">每當成員無法執行的動作前，就會發生執行失敗執行 （其成員名稱一樣）。</span><span class="sxs-lookup"><span data-stu-id="590a8-104">Execution failure occurs whenever a member cannot do what it was designed to do (what the member name implies).</span></span> <span data-ttu-id="590a8-105">例如，如果`OpenFile`方法不能將開啟的檔案控制代碼傳回給呼叫者，它會被視為新的執行失敗。</span><span class="sxs-lookup"><span data-stu-id="590a8-105">For example, if the `OpenFile` method cannot return an opened file handle to the caller, it would be considered an execution failure.</span></span>  
   
- 大部分的開發人員已熟悉使用例如部門的使用方式錯誤由零或 null 參考例外狀況。 在架構中，例外狀況會用於所有的錯誤狀況，包括執行錯誤。  
+ <span data-ttu-id="590a8-106">大部分的開發人員已成為想要使用使用量錯誤，例如除法的例外狀況，由零或 null 參考。</span><span class="sxs-lookup"><span data-stu-id="590a8-106">Most developers have become comfortable with using exceptions for usage errors such as division by zero or null references.</span></span> <span data-ttu-id="590a8-107">在架構中，例外狀況會用於所有的錯誤狀況，包括執行錯誤。</span><span class="sxs-lookup"><span data-stu-id="590a8-107">In the Framework, exceptions are used for all error conditions, including execution errors.</span></span>  
   
- **X 不** 傳回錯誤碼。  
+ <span data-ttu-id="590a8-108">**X 不**傳回的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="590a8-108">**X DO NOT** return error codes.</span></span>  
   
- 例外狀況是報告錯誤的架構中的主要方法。  
+ <span data-ttu-id="590a8-109">例外狀況是報告錯誤架構中的主要方法。</span><span class="sxs-lookup"><span data-stu-id="590a8-109">Exceptions are the primary means of reporting errors in frameworks.</span></span>  
   
- **✓ 執行** 報表執行失敗，所擲回例外狀況。  
+ <span data-ttu-id="590a8-110">**✓ 不要**報表執行失敗數目，所擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="590a8-110">**✓ DO** report execution failures by throwing exceptions.</span></span>  
   
- **✓ 考慮** 藉由呼叫終止處理序 `System.Environment.FailFast` （.NET Framework 2.0 的功能） 而非擲回例外狀況，如果您遇到的情況下是不安全的進一步執行。  
+ <span data-ttu-id="590a8-111">**✓ 考慮**藉由呼叫終止處理序`System.Environment.FailFast`（.NET Framework 2.0 功能） 而不是擲回例外狀況，如果您的程式碼遇到的情況下，它是不安全的進一步執行。</span><span class="sxs-lookup"><span data-stu-id="590a8-111">**✓ CONSIDER** terminating the process by calling `System.Environment.FailFast` (.NET Framework 2.0 feature) instead of throwing an exception if your code encounters a situation where it is unsafe for further execution.</span></span>  
   
- **X 不** 盡可能使用一般流程控制、 例外狀況。  
+ <span data-ttu-id="590a8-112">**X 不**盡可能使用控制項的正常流程例外狀況。</span><span class="sxs-lookup"><span data-stu-id="590a8-112">**X DO NOT** use exceptions for the normal flow of control, if possible.</span></span>  
   
- 除了系統故障和作業可能發生競爭情形，架構設計人員應該設計 Api，讓使用者可以撰寫程式碼不會擲回例外狀況。 例如，您可以提供檢查先決條件之前呼叫成員，因此使用者可以撰寫程式碼不會擲回例外狀況的方法。  
+ <span data-ttu-id="590a8-113">除了系統失敗和作業可能的競爭情形，架構設計人員應該設計應用程式開發介面，讓使用者都可以寫入不擲回例外狀況的程式碼。</span><span class="sxs-lookup"><span data-stu-id="590a8-113">Except for system failures and operations with potential race conditions, framework designers should design APIs so users can write code that does not throw exceptions.</span></span> <span data-ttu-id="590a8-114">例如，您可以提供檢查先決條件之前呼叫成員，因此使用者可以撰寫程式碼不會擲回例外狀況的方法。</span><span class="sxs-lookup"><span data-stu-id="590a8-114">For example, you can provide a way to check preconditions before calling a member so users can write code that does not throw exceptions.</span></span>  
   
- 用來檢查先決條件的另一個成員的成員通常稱為軟體測試人員，並呼叫 doer 實際運作的成員。  
+ <span data-ttu-id="590a8-115">用來檢查先決條件的另一個成員的成員通常稱為測試人員，並呼叫 doer 實際運作成員。</span><span class="sxs-lookup"><span data-stu-id="590a8-115">The member used to check preconditions of another member is often referred to as a tester, and the member that actually does the work is called a doer.</span></span>  
   
- Tester\-doer 模式可能無法接受的效能負荷一些情況。 在這種情況下，您應考慮所謂試剖析模式 \(請參閱 [例外狀況和效能](../../../docs/standard/design-guidelines/exceptions-and-performance.md) 如需詳細資訊\)。  
+ <span data-ttu-id="590a8-116">有些情況是當 Tester-doer 模式可能是無法接受的效能負擔。</span><span class="sxs-lookup"><span data-stu-id="590a8-116">There are cases when the Tester-Doer Pattern can have an unacceptable performance overhead.</span></span> <span data-ttu-id="590a8-117">在這種情況下，應該考量所謂再試一次剖析模式 (請參閱[例外狀況和效能](../../../docs/standard/design-guidelines/exceptions-and-performance.md)如需詳細資訊)。</span><span class="sxs-lookup"><span data-stu-id="590a8-117">In such cases, the so-called Try-Parse Pattern should be considered (see [Exceptions and Performance](../../../docs/standard/design-guidelines/exceptions-and-performance.md) for more information).</span></span>  
   
- **✓ 考慮** 擲回例外狀況的效能含意。 每秒 100 以上擲回率是有可能會明顯影響大部分的應用程式的效能。  
+ <span data-ttu-id="590a8-118">**✓ 考慮**擲回例外狀況的效能含意。</span><span class="sxs-lookup"><span data-stu-id="590a8-118">**✓ CONSIDER** the performance implications of throwing exceptions.</span></span> <span data-ttu-id="590a8-119">每秒 100 以上的擲回率是有可能會大幅影響大部分的應用程式的效能。</span><span class="sxs-lookup"><span data-stu-id="590a8-119">Throw rates above 100 per second are likely to noticeably impact the performance of most applications.</span></span>  
   
- **✓ 執行** 擲回的公開呼叫成員，因為發生違規之成員的所有例外狀況 （而非系統失敗） 合約，並將其視為您的合約的一部分的文件。  
+ <span data-ttu-id="590a8-120">**✓ 不要**文件，因為成員的違規的緣故，公開呼叫成員所擲回的所有例外狀況合約 （而不是系統失敗），並視為程式合約的一部分。</span><span class="sxs-lookup"><span data-stu-id="590a8-120">**✓ DO** document all exceptions thrown by publicly callable members because of a violation of the member contract (rather than a system failure) and treat them as part of your contract.</span></span>  
   
- 例外狀況合約的一部分，不應該變更從一個版本到下一個 （亦即，不應該變更例外狀況類型，和不應該加入新的例外狀況）。  
+ <span data-ttu-id="590a8-121">例外狀況合約的一部分，不應該從一個版本變更至下一個 （亦即，不應該變更例外狀況類型，和不應該加入新的例外狀況）。</span><span class="sxs-lookup"><span data-stu-id="590a8-121">Exceptions that are a part of the contract should not change from one version to the next (i.e., exception type should not change, and new exceptions should not be added).</span></span>  
   
- **X 不** 或不可以是擲回的公用成員取決於一些選項。  
+ <span data-ttu-id="590a8-122">**X 不**或不可以是擲回的公用成員取決於一些選項。</span><span class="sxs-lookup"><span data-stu-id="590a8-122">**X DO NOT** have public members that can either throw or not based on some option.</span></span>  
   
- **X 不** 擁有 public 成員例外狀況傳回為傳回值或 `out` 參數。  
+ <span data-ttu-id="590a8-123">**X 不**擁有傳回例外狀況當做傳回值的公用成員或`out`參數。</span><span class="sxs-lookup"><span data-stu-id="590a8-123">**X DO NOT** have public members that return exceptions as the return value or an `out` parameter.</span></span>  
   
- 傳回從公開的 Api，而不是擲回的例外狀況就失去了許多優點例外狀況的錯誤報告。  
+ <span data-ttu-id="590a8-124">傳回從公用 Api，而不是擲回的例外狀況，就失去了許多例外狀況架構錯誤報告的優點。</span><span class="sxs-lookup"><span data-stu-id="590a8-124">Returning exceptions from public APIs instead of throwing them defeats many of the benefits of exception-based error reporting.</span></span>  
   
- **✓ 考慮** 使用例外狀況產生器方法。  
+ <span data-ttu-id="590a8-125">**✓ 考慮**使用例外狀況產生器方法。</span><span class="sxs-lookup"><span data-stu-id="590a8-125">**✓ CONSIDER** using exception builder methods.</span></span>  
   
- 通常會從不同的地方擲回相同的例外狀況。 若要避免程式碼，請使用 helper 方法，建立例外狀況，並初始化其屬性。  
+ <span data-ttu-id="590a8-126">通常會從不同的地方擲回相同的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="590a8-126">It is common to throw the same exception from different places.</span></span> <span data-ttu-id="590a8-127">若要避免程式碼，請使用 helper 方法，建立例外狀況，並初始化其屬性。</span><span class="sxs-lookup"><span data-stu-id="590a8-127">To avoid code bloat, use helper methods that create exceptions and initialize their properties.</span></span>  
   
- 此外，成員擲回例外狀況不會進行內嵌。 移動產生器將 throw 陳述式可能會允許內嵌的成員。  
+ <span data-ttu-id="590a8-128">此外，擲回例外狀況的成員不會進行內嵌。</span><span class="sxs-lookup"><span data-stu-id="590a8-128">Also, members that throw exceptions are not getting inlined.</span></span> <span data-ttu-id="590a8-129">移動產生器將 throw 陳述式可能會允許內嵌的成員。</span><span class="sxs-lookup"><span data-stu-id="590a8-129">Moving the throw statement inside the builder might allow the member to be inlined.</span></span>  
   
- **X 不** 擲回例外狀況的例外狀況篩選條件區塊。  
+ <span data-ttu-id="590a8-130">**X 不**擲回例外狀況的例外狀況篩選條件區塊。</span><span class="sxs-lookup"><span data-stu-id="590a8-130">**X DO NOT** throw exceptions from exception filter blocks.</span></span>  
   
- 當例外狀況篩選條件會引發例外狀況時，clr，攔截例外狀況，而且篩選條件會傳回 false。 這種行為是區別篩選執行及明確傳回 false，因此很難進行偵錯。  
+ <span data-ttu-id="590a8-131">當例外狀況篩選條件會引發例外狀況時，由 CLR 攔截例外狀況和篩選條件傳回 false。</span><span class="sxs-lookup"><span data-stu-id="590a8-131">When an exception filter raises an exception, the exception is caught by the CLR, and the filter returns false.</span></span> <span data-ttu-id="590a8-132">此行為是區別執行篩選條件並明確傳回 false，因此很難偵錯。</span><span class="sxs-lookup"><span data-stu-id="590a8-132">This behavior is indistinguishable from the filter executing and returning false explicitly and is therefore very difficult to debug.</span></span>  
   
- **X 避免** 明確擲回例外狀況的 finally 區塊。 隱含擲回的例外狀況呼叫擲回的方法產生的可接受的。  
+ <span data-ttu-id="590a8-133">**請避免 x**明確擲回例外狀況的 finally 區塊。</span><span class="sxs-lookup"><span data-stu-id="590a8-133">**X AVOID** explicitly throwing exceptions from finally blocks.</span></span> <span data-ttu-id="590a8-134">可接受的隱含擲回造成呼叫方法會擲回的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="590a8-134">Implicitly thrown exceptions resulting from calling methods that throw are acceptable.</span></span>  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 著作權所有，並保留一切權利。*  
+ <span data-ttu-id="590a8-135">*部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="590a8-135">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *皮耳森教育，從 Inc.的權限所印製 [Framework 設計方針︰ 慣例、 慣用句和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 並 Brad Abrams，2008 年 10 月 22 日由 Addison\-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ <span data-ttu-id="590a8-136">*皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="590a8-136">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## 請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)   
- [例外狀況的設計指導方針](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a><span data-ttu-id="590a8-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="590a8-137">See Also</span></span>  
+ [<span data-ttu-id="590a8-138">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="590a8-138">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="590a8-139">例外狀況的設計指導方針</span><span class="sxs-lookup"><span data-stu-id="590a8-139">Design Guidelines for Exceptions</span></span>](../../../docs/standard/design-guidelines/exceptions.md)

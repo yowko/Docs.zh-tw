@@ -1,38 +1,41 @@
 ---
-title: "路由合約 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "路由合約"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: daebd84c9cef5e64ea7ed55c27b671ba01d14df0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 路由合約
-路由合約會定義路由服務可以處理的訊息模式。每一個合約都是無型別合約，可讓服務在不知道訊息結構描述或動作的情況下接收訊息。如此可讓路由服務以一般方式路由傳送訊息，而不需要額外設定所路由傳送之基礎訊息的細節。  
+# <a name="routing-contracts"></a><span data-ttu-id="a757e-102">路由合約</span><span class="sxs-lookup"><span data-stu-id="a757e-102">Routing Contracts</span></span>
+<span data-ttu-id="a757e-103">路由合約會定義路由服務可以處理的訊息模式。</span><span class="sxs-lookup"><span data-stu-id="a757e-103">Routing contracts define the message patterns that the Routing Service can process.</span></span>  <span data-ttu-id="a757e-104">每一個合約都是無型別合約，可讓服務在不知道訊息結構描述或動作的情況下接收訊息。</span><span class="sxs-lookup"><span data-stu-id="a757e-104">Each contract is typeless and allows the service to receive a message without knowledge of the message schema or action.</span></span> <span data-ttu-id="a757e-105">如此可讓路由服務以一般方式路由傳送訊息，而不需要額外設定所路由傳送之基礎訊息的細節。</span><span class="sxs-lookup"><span data-stu-id="a757e-105">This allows the Routing Service to generically route messages without additional configuration for the specifics of the underlying messages being routed.</span></span>  
   
-## 路由合約  
- 由於路由服務接受泛型 WCF 訊息物件，因此選取合約時最重要的考量會是通道的組織結構，此通道將在與用戶端和服務進行通訊時使用。處理訊息時，路由服務會使用對稱的訊息幫浦，因此一般來說，傳入合約的組織結構必須符合傳出合約的組織結構。不過，在某些情況下服務模型的發送器可以修改組織結構，例如，當發送器傳送雙工通道至要求\-回覆通道時，或是在不需要且未使用工作階段支援時從通道中移除 \(也就是當 **SessionMode.Allowed** 時，將 **IInputSessionChannel** 轉換為 **IInputChannel**\)。  
+## <a name="routing-contracts"></a><span data-ttu-id="a757e-106">路由合約</span><span class="sxs-lookup"><span data-stu-id="a757e-106">Routing Contracts</span></span>  
+ <span data-ttu-id="a757e-107">由於路由服務接受泛型 WCF 訊息物件，因此選取合約時最重要的考量會是通道的組織結構，此通道將在與用戶端和服務進行通訊時使用。</span><span class="sxs-lookup"><span data-stu-id="a757e-107">Because the Routing Service accepts a generic WCF Message object, the most important consideration when selecting a contract is the shape of the channel that will be used when communicating with the clients and services.</span></span> <span data-ttu-id="a757e-108">處理訊息時，路由服務會使用對稱的訊息幫浦，因此一般來說，傳入合約的組織結構必須符合傳出合約的組織結構。</span><span class="sxs-lookup"><span data-stu-id="a757e-108">When processing messages, the Routing Service uses symmetrical message pumps, so generally the shape of the inbound contract must match the shape of the outbound contract.</span></span> <span data-ttu-id="a757e-109">不過，有一些情況下，服務模型的發送器可以修改圖形，例如當發送器將雙工通道轉換成要求-回覆通道，或移除從通道的工作階段支援時不需要未被使用 （亦即當**SessionMode.Allowed**、 轉換**IInputSessionChannel**到**IInputChannel**)。</span><span class="sxs-lookup"><span data-stu-id="a757e-109">However, there are cases where the Service Model’s dispatcher can modify the shapes, such as when the dispatcher converts a duplex channel into a request-reply channel, or removes the session support from a channel when it is not required and is not being used (that is, when **SessionMode.Allowed**, converting an **IInputSessionChannel** into an **IInputChannel**).</span></span>  
   
- 為了支援這些訊息幫浦，路由服務會在 <xref:System.ServiceModel.Routing> 命名空間中提供合約，這些合約必須在定義路由服務使用的服務端點時使用。這些都是無型別合約，允許接收任何訊息型別或動作，並且可讓路由服務在不知道特定訊息結構描述的情況下處理訊息。如需路由服務所使用合約的詳細資訊，請參閱[Routing Contracts](../../../../docs/framework/wcf/feature-details/routing-contracts.md)。  
+ <span data-ttu-id="a757e-110">為了支援這些訊息幫浦，路由服務會在 <xref:System.ServiceModel.Routing> 命名空間中提供合約，這些合約必須在定義路由服務使用的服務端點時使用。</span><span class="sxs-lookup"><span data-stu-id="a757e-110">To support these message pumps, the Routing Service provides contracts in the <xref:System.ServiceModel.Routing> namespace, which must be used when defining the service endpoints used by the Routing Service.</span></span> <span data-ttu-id="a757e-111">這些都是無型別合約，允許接收任何訊息型別或動作，並且可讓路由服務在不知道特定訊息結構描述的情況下處理訊息。</span><span class="sxs-lookup"><span data-stu-id="a757e-111">These contracts are typeless, which allows the receipt of any message type or action, and allows the Routing Service to handle messages without knowledge of the specific message schema.</span></span> <span data-ttu-id="a757e-112">如需使用路由服務合約的詳細資訊，請參閱[路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)。</span><span class="sxs-lookup"><span data-stu-id="a757e-112">For more information about the contracts used by the Routing Service, see [Routing Contracts](../../../../docs/framework/wcf/feature-details/routing-contracts.md).</span></span>  
   
- 路由服務提供的合約位於 <xref:System.ServiceModel.Routing> 命名空間中，並且將於下表中說明。  
+ <span data-ttu-id="a757e-113">路由服務提供的合約位於 <xref:System.ServiceModel.Routing> 命名空間中，並且將於下表中說明。</span><span class="sxs-lookup"><span data-stu-id="a757e-113">The contracts provided by the Routing Service are located in the <xref:System.ServiceModel.Routing> namespace, and are described in the following table.</span></span>  
   
-|合約|形狀|通道類型|  
-|--------|--------|----------|  
-|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode \= SessionMode.Allowed<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true|IInputChannel \-\> IOutputChannel|  
-|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode \= SessionMode.Required<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true|IInputSessionChannel \-\> IOutputSessionChannel|  
-|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode \= SessionMode.Allowed<br /><br /> AsyncPattern \= true|IReplyChannel \-\> IRequestChannel|  
-|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode\=SessionMode.Required<br /><br /> CallbackContract\=typeof\(ISimplexSession\)<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true<br /><br /> TransactionFlow\(TransactionFlowOption.Allowed\)|IDuplexSessionChannel \-\> IDuplexSessionChannel|  
+|<span data-ttu-id="a757e-114">合約</span><span class="sxs-lookup"><span data-stu-id="a757e-114">Contract</span></span>|<span data-ttu-id="a757e-115">圖形</span><span class="sxs-lookup"><span data-stu-id="a757e-115">Shape</span></span>|<span data-ttu-id="a757e-116">通道類型</span><span class="sxs-lookup"><span data-stu-id="a757e-116">Channel Shape</span></span>|  
+|--------------|-----------|-------------------|  
+|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|<span data-ttu-id="a757e-117">SessionMode = SessionMode.Allowed</span><span class="sxs-lookup"><span data-stu-id="a757e-117">SessionMode = SessionMode.Allowed</span></span><br /><br /> <span data-ttu-id="a757e-118">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="a757e-118">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="a757e-119">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="a757e-119">IsOneWay = true</span></span>|<span data-ttu-id="a757e-120">IInputChannel -> IOutputChannel</span><span class="sxs-lookup"><span data-stu-id="a757e-120">IInputChannel -> IOutputChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|<span data-ttu-id="a757e-121">SessionMode = SessionMode.Required</span><span class="sxs-lookup"><span data-stu-id="a757e-121">SessionMode = SessionMode.Required</span></span><br /><br /> <span data-ttu-id="a757e-122">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="a757e-122">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="a757e-123">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="a757e-123">IsOneWay = true</span></span>|<span data-ttu-id="a757e-124">IInputSessionChannel -> IOutputSessionChannel</span><span class="sxs-lookup"><span data-stu-id="a757e-124">IInputSessionChannel -> IOutputSessionChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|<span data-ttu-id="a757e-125">SessionMode = SessionMode.Allowed</span><span class="sxs-lookup"><span data-stu-id="a757e-125">SessionMode = SessionMode.Allowed</span></span><br /><br /> <span data-ttu-id="a757e-126">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="a757e-126">AsyncPattern = true</span></span>|<span data-ttu-id="a757e-127">IReplyChannel -> IRequestChannel</span><span class="sxs-lookup"><span data-stu-id="a757e-127">IReplyChannel -> IRequestChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|<span data-ttu-id="a757e-128">SessionMode=SessionMode.Required</span><span class="sxs-lookup"><span data-stu-id="a757e-128">SessionMode=SessionMode.Required</span></span><br /><br /> <span data-ttu-id="a757e-129">CallbackContract=typeof(ISimplexSession)</span><span class="sxs-lookup"><span data-stu-id="a757e-129">CallbackContract=typeof(ISimplexSession)</span></span><br /><br /> <span data-ttu-id="a757e-130">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="a757e-130">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="a757e-131">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="a757e-131">IsOneWay = true</span></span><br /><br /> <span data-ttu-id="a757e-132">TransactionFlow(TransactionFlowOption.Allowed)</span><span class="sxs-lookup"><span data-stu-id="a757e-132">TransactionFlow(TransactionFlowOption.Allowed)</span></span>|<span data-ttu-id="a757e-133">IDuplexSessionChannel -> IDuplexSessionChannel</span><span class="sxs-lookup"><span data-stu-id="a757e-133">IDuplexSessionChannel -> IDuplexSessionChannel</span></span>|  
   
-## 請參閱  
- [Routing Service](http://msdn.microsoft.com/zh-tw/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)   
- [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a><span data-ttu-id="a757e-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a757e-134">See Also</span></span>  
+ [<span data-ttu-id="a757e-135">路由服務</span><span class="sxs-lookup"><span data-stu-id="a757e-135">Routing Service</span></span>](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [<span data-ttu-id="a757e-136">路由簡介</span><span class="sxs-lookup"><span data-stu-id="a757e-136">Routing Introduction</span></span>](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

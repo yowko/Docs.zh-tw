@@ -5,26 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1df3d7368597abdb991facc399bcedf7412d4fdb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d41e05c39f8483cc668962c53534bb531a8007ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltpropertygt-element-net-native"></a>&lt;Property&gt; 項目 (.NET Native)
-將執行階段反映原則套用至屬性。  
+# <a name="ltpropertygt-element-net-native"></a><span data-ttu-id="5cde7-102">&lt;Property&gt; 項目 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="5cde7-102">&lt;Property&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="5cde7-103">將執行階段反映原則套用至屬性。</span><span class="sxs-lookup"><span data-stu-id="5cde7-103">Applies runtime reflection policy to a property.</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="5cde7-104">語法</span><span class="sxs-lookup"><span data-stu-id="5cde7-104">Syntax</span></span>  
   
 ```xml  
 <Property Name="property_name"  
@@ -33,45 +31,45 @@ ms.lasthandoff: 08/21/2017
           Serialize="policy_type" />  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5cde7-105">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="5cde7-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="5cde7-106">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="5cde7-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>屬性  
+### <a name="attributes"></a><span data-ttu-id="5cde7-107">屬性</span><span class="sxs-lookup"><span data-stu-id="5cde7-107">Attributes</span></span>  
   
-|屬性|屬性類型|說明|  
+|<span data-ttu-id="5cde7-108">屬性</span><span class="sxs-lookup"><span data-stu-id="5cde7-108">Attribute</span></span>|<span data-ttu-id="5cde7-109">屬性類型</span><span class="sxs-lookup"><span data-stu-id="5cde7-109">Attribute type</span></span>|<span data-ttu-id="5cde7-110">說明</span><span class="sxs-lookup"><span data-stu-id="5cde7-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|一般|必要屬性。 指定屬性名稱。|  
-|`Browse`|反射|選擇性屬性。 控制對屬性相關資訊的查詢，或控制屬性的列舉，但不會在執行階段啟用任何動態存取。|  
-|`Dynamic`|反射|選擇性屬性。 控制對屬性的執行階段存取權，以啟用動態程式設計。 此原則可確保能夠在執行階段動態設定或擷取屬性。|  
-|`Serialize`|序列化|選擇性屬性。 控制對屬性的執行階段存取權，使類型執行個體能夠由 Newtonsoft JSON 序列化程式之類的程式庫來序列化，或是用於資料繫結。|  
+|`Name`|<span data-ttu-id="5cde7-111">一般</span><span class="sxs-lookup"><span data-stu-id="5cde7-111">General</span></span>|<span data-ttu-id="5cde7-112">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="5cde7-112">Required attribute.</span></span> <span data-ttu-id="5cde7-113">指定屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="5cde7-113">Specifies the property name.</span></span>|  
+|`Browse`|<span data-ttu-id="5cde7-114">反射</span><span class="sxs-lookup"><span data-stu-id="5cde7-114">Reflection</span></span>|<span data-ttu-id="5cde7-115">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="5cde7-115">Optional attribute.</span></span> <span data-ttu-id="5cde7-116">控制對屬性相關資訊的查詢，或控制屬性的列舉，但不會在執行階段啟用任何動態存取。</span><span class="sxs-lookup"><span data-stu-id="5cde7-116">Controls querying for information about or enumerating the property but does not enable any dynamic access at run time.</span></span>|  
+|`Dynamic`|<span data-ttu-id="5cde7-117">反射</span><span class="sxs-lookup"><span data-stu-id="5cde7-117">Reflection</span></span>|<span data-ttu-id="5cde7-118">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="5cde7-118">Optional attribute.</span></span> <span data-ttu-id="5cde7-119">控制對屬性的執行階段存取權，以啟用動態程式設計。</span><span class="sxs-lookup"><span data-stu-id="5cde7-119">Controls runtime access to the property to enable dynamic programming.</span></span> <span data-ttu-id="5cde7-120">此原則可確保能夠在執行階段動態設定或擷取屬性。</span><span class="sxs-lookup"><span data-stu-id="5cde7-120">This policy ensures that a property can be set or retrieved dynamically at run time.</span></span>|  
+|`Serialize`|<span data-ttu-id="5cde7-121">序列化</span><span class="sxs-lookup"><span data-stu-id="5cde7-121">Serialization</span></span>|<span data-ttu-id="5cde7-122">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="5cde7-122">Optional attribute.</span></span> <span data-ttu-id="5cde7-123">控制對屬性的執行階段存取權，使類型執行個體能夠由 Newtonsoft JSON 序列化程式之類的程式庫來序列化，或是用於資料繫結。</span><span class="sxs-lookup"><span data-stu-id="5cde7-123">Controls runtime access to a property to enable type instances to be serialized by libraries such as the Newtonsoft JSON serializer or to be used for data binding.</span></span>|  
   
-## <a name="name-attribute"></a>Name 屬性  
+## <a name="name-attribute"></a><span data-ttu-id="5cde7-124">Name 屬性</span><span class="sxs-lookup"><span data-stu-id="5cde7-124">Name attribute</span></span>  
   
-|值|說明|  
+|<span data-ttu-id="5cde7-125">值</span><span class="sxs-lookup"><span data-stu-id="5cde7-125">Value</span></span>|<span data-ttu-id="5cde7-126">說明</span><span class="sxs-lookup"><span data-stu-id="5cde7-126">Description</span></span>|  
 |-----------|-----------------|  
-|*method_name*|屬性名稱。 屬性的類型是由父 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目所定義。|  
+|<span data-ttu-id="5cde7-127">*method_name*</span><span class="sxs-lookup"><span data-stu-id="5cde7-127">*method_name*</span></span>|<span data-ttu-id="5cde7-128">屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="5cde7-128">The property name.</span></span> <span data-ttu-id="5cde7-129">屬性的類型是由父 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目所定義。</span><span class="sxs-lookup"><span data-stu-id="5cde7-129">The type of the property is defined by the parent [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) or [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element.</span></span>|  
   
-## <a name="all-other-attributes"></a>所有其他屬性  
+## <a name="all-other-attributes"></a><span data-ttu-id="5cde7-130">所有其他屬性</span><span class="sxs-lookup"><span data-stu-id="5cde7-130">All other attributes</span></span>  
   
-|值|說明|  
+|<span data-ttu-id="5cde7-131">值</span><span class="sxs-lookup"><span data-stu-id="5cde7-131">Value</span></span>|<span data-ttu-id="5cde7-132">說明</span><span class="sxs-lookup"><span data-stu-id="5cde7-132">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|要為屬性套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|<span data-ttu-id="5cde7-133">*policy_setting*</span><span class="sxs-lookup"><span data-stu-id="5cde7-133">*policy_setting*</span></span>|<span data-ttu-id="5cde7-134">要為屬性套用此原則類型的設定。</span><span class="sxs-lookup"><span data-stu-id="5cde7-134">The setting to apply to this policy type for the property.</span></span> <span data-ttu-id="5cde7-135">可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。</span><span class="sxs-lookup"><span data-stu-id="5cde7-135">Possible values are `Auto`, `Excluded`, `Included`, and `Required`.</span></span> <span data-ttu-id="5cde7-136">如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="5cde7-136">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>子元素  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="5cde7-137">子元素</span><span class="sxs-lookup"><span data-stu-id="5cde7-137">Child Elements</span></span>  
+ <span data-ttu-id="5cde7-138">無。</span><span class="sxs-lookup"><span data-stu-id="5cde7-138">None.</span></span>  
   
-### <a name="parent-elements"></a>父項目  
+### <a name="parent-elements"></a><span data-ttu-id="5cde7-139">父項目</span><span class="sxs-lookup"><span data-stu-id="5cde7-139">Parent Elements</span></span>  
   
-|項目|說明|  
+|<span data-ttu-id="5cde7-140">項目</span><span class="sxs-lookup"><span data-stu-id="5cde7-140">Element</span></span>|<span data-ttu-id="5cde7-141">說明</span><span class="sxs-lookup"><span data-stu-id="5cde7-141">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型及其所有成員。|  
+|[<span data-ttu-id="5cde7-142">\<Type></span><span class="sxs-lookup"><span data-stu-id="5cde7-142">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="5cde7-143">將反映原則套用至類型及其所有成員。</span><span class="sxs-lookup"><span data-stu-id="5cde7-143">Applies reflection policy to a type and all its members.</span></span>|  
+|[<span data-ttu-id="5cde7-144">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="5cde7-144">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="5cde7-145">將反映原則套用至建構的泛型類型及其所有成員。</span><span class="sxs-lookup"><span data-stu-id="5cde7-145">Applies reflection policy to a constructed generic type and all its members.</span></span>|  
   
-## <a name="remarks"></a>備註  
- 如果未明確定義屬性的原則，則會繼承其父元素的執行階段原則。  
+## <a name="remarks"></a><span data-ttu-id="5cde7-146">備註</span><span class="sxs-lookup"><span data-stu-id="5cde7-146">Remarks</span></span>  
+ <span data-ttu-id="5cde7-147">如果未明確定義屬性的原則，則會繼承其父元素的執行階段原則。</span><span class="sxs-lookup"><span data-stu-id="5cde7-147">If a property's policy is not explicitly defined, it inherits the runtime policy of its parent element.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會使用反映來具現化 `Book` 物件，並顯示其屬性值。 專案的原始 default.rd.xml 檔案會像下面這樣：  
+## <a name="example"></a><span data-ttu-id="5cde7-148">範例</span><span class="sxs-lookup"><span data-stu-id="5cde7-148">Example</span></span>  
+ <span data-ttu-id="5cde7-149">下列範例會使用反映來具現化 `Book` 物件，並顯示其屬性值。</span><span class="sxs-lookup"><span data-stu-id="5cde7-149">The following example uses reflection to instantiate a `Book` object and display its property values.</span></span> <span data-ttu-id="5cde7-150">專案的原始 default.rd.xml 檔案會像下面這樣：</span><span class="sxs-lookup"><span data-stu-id="5cde7-150">The original default.rd.xml file for the project appears as follows:</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -83,17 +81,17 @@ ms.lasthandoff: 08/21/2017
 </Directives>  
 ```  
   
- 檔案會針對 `All` 類別，將 `Activate` 值套用至 `Book` 原則，如此可允許透過反映來存取類別建構函式。 `Browse` 類別的 `Book` 原則繼承自其父命名空間。 其設定為 `Required Public`，讓中繼資料在執行階段可供使用。  
+ <span data-ttu-id="5cde7-151">檔案會針對 `All` 類別，將 `Activate` 值套用至 `Book` 原則，如此可允許透過反映來存取類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="5cde7-151">The file applies the `All` value to the `Activate` policy for the `Book` class, which allows access to class constructors through reflection.</span></span> <span data-ttu-id="5cde7-152">`Browse` 類別的 `Book` 原則繼承自其父命名空間。</span><span class="sxs-lookup"><span data-stu-id="5cde7-152">The `Browse` policy for the `Book` class is inherited from its parent namespace.</span></span> <span data-ttu-id="5cde7-153">其設定為 `Required Public`，讓中繼資料在執行階段可供使用。</span><span class="sxs-lookup"><span data-stu-id="5cde7-153">This is set to `Required Public`, which makes metadata available at runtime.</span></span>  
   
- 以下是範例的原始程式碼。 `outputBlock` 變數代表 [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) 控制項。  
+ <span data-ttu-id="5cde7-154">以下是範例的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="5cde7-154">The following is the source code for the example.</span></span> <span data-ttu-id="5cde7-155">`outputBlock` 變數代表 [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) 控制項。</span><span class="sxs-lookup"><span data-stu-id="5cde7-155">The `outputBlock` variable represents a [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) control.</span></span>  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
- 不過，編譯和執行此範例會擲回 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 例外狀況。 雖然我們已經讓 `Book` 類型的中繼資料可供使用，但我們無法讓屬性 getter 的實作供動態使用。 我們可以用下列兩種方法之一來更正這個錯誤：  
+ <span data-ttu-id="5cde7-156">不過，編譯和執行此範例會擲回 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="5cde7-156">However, compiling and executing this example throws a [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) exception.</span></span> <span data-ttu-id="5cde7-157">雖然我們已經讓 `Book` 類型的中繼資料可供使用，但我們無法讓屬性 getter 的實作供動態使用。</span><span class="sxs-lookup"><span data-stu-id="5cde7-157">Although we've made metadata for the `Book` type available, we've failed to make the implementations of the property getters available dynamically.</span></span> <span data-ttu-id="5cde7-158">我們可以用下列兩種方法之一來更正這個錯誤：</span><span class="sxs-lookup"><span data-stu-id="5cde7-158">We can correct this error by either in one of two ways:</span></span>  
   
--   在 `Book` 類型的 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 項目中定義其 `Dynamic` 原則。  
+-   <span data-ttu-id="5cde7-159">在 `Book` 類型的 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 項目中定義其 `Dynamic` 原則。</span><span class="sxs-lookup"><span data-stu-id="5cde7-159">by defining the `Dynamic` policy for the `Book` type in its [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) element.</span></span>  
   
--   針對我們要叫用其 getter 的每個屬性，新增巢狀 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 項目，如下列 default.rd.xml 檔案所示。  
+-   <span data-ttu-id="5cde7-160">針對我們要叫用其 getter 的每個屬性，新增巢狀 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 項目，如下列 default.rd.xml 檔案所示。</span><span class="sxs-lookup"><span data-stu-id="5cde7-160">By adding a nested [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) element for each property whose getter we'd like to invoke, as the following default.rd.xml file does.</span></span>  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -109,8 +107,7 @@ ms.lasthandoff: 08/21/2017
     </Directives>  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="5cde7-161">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5cde7-161">See Also</span></span>  
+ [<span data-ttu-id="5cde7-162">執行階段指示詞 (rd.xml) 組態檔參考</span><span class="sxs-lookup"><span data-stu-id="5cde7-162">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="5cde7-163">執行階段指示詞項目</span><span class="sxs-lookup"><span data-stu-id="5cde7-163">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [<span data-ttu-id="5cde7-164">執行階段指示詞原則設定</span><span class="sxs-lookup"><span data-stu-id="5cde7-164">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

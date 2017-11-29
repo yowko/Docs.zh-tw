@@ -1,73 +1,76 @@
 ---
-title: "最佳化效能：運用硬體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "圖形轉譯層"
-  - "圖形, 效能"
-  - "圖形, 轉譯層"
-  - "硬體轉譯管線"
-  - "轉譯層"
-  - "軟體轉譯管線"
+title: "最佳化效能：運用硬體"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], performance
+- hardware rendering pipeline [WPF]
+- rendering tiers [WPF]
+- graphics rendering tiers [WPF]
+- graphics [WPF], rendering tiers
+- software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8828ff0f263943c6094af0073ec4cad6068c6e1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 最佳化效能：運用硬體
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的內部架構有兩條轉譯管線，即硬體和軟體。  本主題提供這些轉譯管線的相關資訊，幫助您做出與您應用程式的效能最佳化相關的決定。  
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a><span data-ttu-id="6a5f6-102">最佳化效能：運用硬體</span><span class="sxs-lookup"><span data-stu-id="6a5f6-102">Optimizing Performance: Taking Advantage of Hardware</span></span>
+<span data-ttu-id="6a5f6-103">內部架構[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有兩個呈現管線、 硬體和軟體。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-103">The internal architecture of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] has two rendering pipelines, hardware and software.</span></span> <span data-ttu-id="6a5f6-104">本主題提供可協助您做出有關您的應用程式的效能最佳化這些轉譯管線的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-104">This topic provides information about these rendering pipelines to help you make decisions about performance optimizations of your applications.</span></span>  
   
-## 硬體轉譯管線  
- 決定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 效能最重要的因素之一就是轉譯範圍：要轉譯的像素愈多，效能就愈差。  但是，卸載給[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)] 的轉譯作業愈多，就會得到愈好的效能。  在至少支援 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 7.0 版的硬體上，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的硬體轉譯管線能夠完全發揮 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 功能的優點。  在支援 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 7.0 版和 PixelShader 2.0\+ 版功能的硬體上，還能獲得更好的最佳化效能。  
+## <a name="hardware-rendering-pipeline"></a><span data-ttu-id="6a5f6-105">硬體呈現管線</span><span class="sxs-lookup"><span data-stu-id="6a5f6-105">Hardware Rendering Pipeline</span></span>  
+ <span data-ttu-id="6a5f6-106">其中一個最重要的因素，判斷[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]效能就是轉譯繫結，您必須轉譯，愈效能成本的多個像素。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-106">One of the most important factors in determining [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] performance is that it is render bound—the more pixels you have to render, the greater the performance cost.</span></span> <span data-ttu-id="6a5f6-107">不過，可以呈現多卸載到[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]，您可以取得更多的效能優勢。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-107">However, the more rendering that can be offloaded to the [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], the more performance benefits you can gain.</span></span> <span data-ttu-id="6a5f6-108">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的硬體呈現管線可充分利用[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]功能支援最少的硬體上[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]7.0 版。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-108">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application hardware rendering pipeline takes full advantage of [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] features on hardware that supports a minimum of [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] version 7.0.</span></span> <span data-ttu-id="6a5f6-109">進一步最佳化後，可以支援的硬體[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]7.0 版和 PixelShader 2.0 + 功能。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-109">Further optimizations can be gained by hardware that supports [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] version 7.0 and PixelShader 2.0+ features.</span></span>  
   
-## 軟體轉譯管線  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 軟體轉譯管線完全以 CPU 為範圍。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 運用 CPU 中的 SSE 和 SSE2 指令集實作最佳化、全功能的軟體光柵處理器。  只要應用程式的功能無法用硬體管線轉譯，就會立即經由軟體轉譯。  
+## <a name="software-rendering-pipeline"></a><span data-ttu-id="6a5f6-110">軟體呈現管線</span><span class="sxs-lookup"><span data-stu-id="6a5f6-110">Software Rendering Pipeline</span></span>  
+ <span data-ttu-id="6a5f6-111">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]軟體呈現管線完全是 CPU 繫結。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-111">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] software rendering pipeline is entirely CPU bound.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="6a5f6-112">運用在 SSE 及 SSE2 指令的設定在 CPU 中實作最佳化、 全功能軟體模擬轉譯器。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-112"> takes advantage of the SSE and SSE2 instruction sets in the CPU to implement an optimized, fully-featured software rasterizer.</span></span> <span data-ttu-id="6a5f6-113">軟體後援可以無縫，應用程式的功能無法使用硬體呈現管線轉譯任何時間。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-113">Fallback to software is seamless any time application functionality cannot be rendered using the hardware rendering pipeline.</span></span>  
   
- 以軟體模式轉譯時會遭遇的最大效能問題，與填入速率 \(Fill Rate\) 有關；填入速率定義為您正在轉譯的像素數。  如果您在意軟體轉譯模式下的效能問題，請盡量將重繪像素的次數減到最少。  例如，如果您的應用程式有藍色的背景，然後又要在背景上轉譯一個稍微透明的影像，應用程式中的所有像素就要轉譯兩次。  因此，當應用程式有影像時就得花掉只有背景時的兩倍時間來轉譯。  
+ <span data-ttu-id="6a5f6-114">最大的效能問題就會發生時軟體模式中的呈現與填滿速率，定義為您要轉譯的像素數目。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-114">The biggest performance issue you will encounter when rendering in software mode is related to fill rate, which is defined as the number of pixels that you are rendering.</span></span> <span data-ttu-id="6a5f6-115">如果您擔心軟體呈現模式中的效能，請嘗試的像素會重繪的次數降到最低。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-115">If you are concerned about performance in software rendering mode, try to minimize the number of times a pixel is redrawn.</span></span> <span data-ttu-id="6a5f6-116">例如，如果您的應用程式，以藍色背景，然後轉譯稍微透明的影像上方時，會呈現所有兩次的應用程式中的像素。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-116">For example, if you have an application with a blue background, which then renders a slightly transparent image over it, you will render all of the pixels in the application twice.</span></span> <span data-ttu-id="6a5f6-117">如此一來，它會花兩次來呈現應用程式具有比您只有藍色背景的影像。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-117">As a result, it will take twice as long to render the application with the image than if you had only the blue background.</span></span>  
   
-### 圖形轉譯層  
- 想要預測將用以執行您應用程式的硬體組態不太可能。  但是，您可以考慮將應用程式設計為在不同硬體上執行時立即切換功能，這樣一來就可以完全發揮每種不同硬體組態的優點。  
+### <a name="graphics-rendering-tiers"></a><span data-ttu-id="6a5f6-118">圖形轉譯層</span><span class="sxs-lookup"><span data-stu-id="6a5f6-118">Graphics Rendering Tiers</span></span>  
+ <span data-ttu-id="6a5f6-119">它可能很難預測的硬體組態，將在上執行您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-119">It may be very difficult to predict the hardware configuration that your application will be running on.</span></span> <span data-ttu-id="6a5f6-120">不過，您可能要考慮的設計，可讓您順暢地切換功能在不同的硬體上執行時，讓它可以利用完整的每個不同的硬體組態的應用程式。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-120">However, you might want to consider a design that allows your application to seamlessly switch features when running on different hardware, so that it can take full advantage of each different hardware configuration.</span></span>  
   
- 為達到這個目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了可在執行階段判斷系統之圖形能力的功能。  圖形能力的判斷，是經由將視訊卡歸類至三個轉譯功能層 \(Rendering Capability Tier\) 之一的方式達成。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公開的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 可以讓應用程式查詢轉譯功能層。  然後，應用程式可以根據硬體支援的轉譯層，在執行階段採用不同的程式碼路徑。  
+ <span data-ttu-id="6a5f6-121">若要達到這個目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供來判斷圖形系統的功能在執行階段的功能。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-121">To achieve this, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides functionality to determine the graphics capability of a system at runtime.</span></span> <span data-ttu-id="6a5f6-122">圖形功能取決於分類做為其中一個三個轉譯功能層的視訊卡。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-122">Graphics capability is determined by categorizing the video card as one of three rendering capability tiers.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="6a5f6-123">公開[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，可讓應用程式來查詢轉譯功能層。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-123"> exposes an [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] that allows an application to query the rendering capability tier.</span></span> <span data-ttu-id="6a5f6-124">您的應用程式可以在執行階段根據硬體支援的轉譯層採取不同的程式碼路徑。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-124">Your application can then take different code paths at run time depending on the rendering tier supported by the hardware.</span></span>  
   
- 在圖形硬體中，對轉譯層等級影響最大的功能如下：  
+ <span data-ttu-id="6a5f6-125">對轉譯層級的影響最大的圖形硬體功能如下︰</span><span class="sxs-lookup"><span data-stu-id="6a5f6-125">The features of the graphics hardware that most impact the rendering tier levels are:</span></span>  
   
--   **視訊 RAM**：圖形硬體上的視訊記憶體數量決定可用於複合圖形的緩衝區大小和數目。  
+-   <span data-ttu-id="6a5f6-126">**視訊 RAM**：圖形硬體上的視訊記憶體數量決定可用於組合圖形的緩衝區大小和數目。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-126">**Video RAM** The amount of video memory on the graphics hardware determines the size and number of buffers that can be used for compositing graphics.</span></span>  
   
--   **像素著色引擎**：像素著色引擎 \(Pixel Shader\) 是以每像素為單位計算效果的圖形處理功能。  根據所顯示圖形的解析度而定，每個顯示框架 \(Frame\) 可能需要處理達數百萬個像素。  
+-   <span data-ttu-id="6a5f6-127">**像素著色器**：像素著色器是根據像素來計算效果的圖形處理函式。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-127">**Pixel Shader** A pixel shader is a graphics processing function that calculates effects on a per-pixel basis.</span></span> <span data-ttu-id="6a5f6-128">根據所顯示圖形的解析度，每個顯示框架都可能需要處理數百萬個像素。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-128">Depending on the resolution of the displayed graphics, there could be several million pixels that need to be processed for each display frame.</span></span>  
   
--   **頂點著色引擎**：頂點著色引擎 \(Vertex Shader\) 是會對物件之頂點資料執行數學運算的圖形處理功能。  
+-   <span data-ttu-id="6a5f6-129">**頂點著色器**：頂點著色器是在物件頂點資料上執行數學運算的圖形處理函式。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-129">**Vertex Shader** A vertex shader is a graphics processing function that performs mathematical operations on the vertex data of the object.</span></span>  
   
--   **多重紋理支援**：多重紋理 \(Multitexture\) 支援是指能夠在 3D 圖形物件的混色階段，套用兩個以上不同紋理的能力。  多重紋理的程度取決於圖形硬體上的多重紋理單元數目。  
+-   <span data-ttu-id="6a5f6-130">**多紋理支援**：多紋理支援指的是可以在混色作業期間於 3D 圖形物件上套用兩個以上的不同紋理。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-130">**Multitexture Support** Multitexture support refers to the ability to apply two or more distinct textures during a blending operation on a 3D graphics object.</span></span> <span data-ttu-id="6a5f6-131">多紋理支援的程度取決於圖形硬體上的多紋理單位數目。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-131">The degree of multitexture support is determined by the number of multitexture units on the graphics hardware.</span></span>  
   
- 像素著色引擎、頂點著色引擎和多重紋理功能用於定義特定 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本等級，而這些版本等級則會用來定義 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的不同轉譯層。  
+ <span data-ttu-id="6a5f6-132">像素著色器、 頂點著色器和多重紋理功能用來定義特定[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本層級，接著，用來定義中的不同轉譯層[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-132">The pixel shader, vertex shader, and multitexture features are used to define specific [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version levels, which, in turn, are used to define the different rendering tiers in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
- 圖形硬體的功能決定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的轉譯功能。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 系統定義三個轉譯層：  
+ <span data-ttu-id="6a5f6-133">圖形硬體的功能決定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的轉譯功能。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-133">The features of the graphics hardware determine the rendering capability of a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="6a5f6-134">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 系統定義三個轉譯層︰</span><span class="sxs-lookup"><span data-stu-id="6a5f6-134">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system defines three rendering tiers:</span></span>  
   
--   **轉譯層 0**：沒有圖形硬體加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本等級小於 7.0 版。  
+-   <span data-ttu-id="6a5f6-135">**轉譯層 0**：沒有圖形硬體加速。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-135">**Rendering Tier 0** No graphics hardware acceleration.</span></span> <span data-ttu-id="6a5f6-136">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本層級低於 7.0 版。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-136">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is less than version 7.0.</span></span>  
   
--   **轉譯層 1**：局部圖形硬體加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本等級大於或等於 7.0 版，並「小於」9.0 版。  
+-   <span data-ttu-id="6a5f6-137">**轉譯第 1 層**部分的圖形硬體加速。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-137">**Rendering Tier 1** Partial graphics hardware acceleration.</span></span> <span data-ttu-id="6a5f6-138">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本層級是大於或等於 7.0 版中，和**較小者**比 9.0 版。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-138">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is greater than or equal to version 7.0, and **lesser** than version 9.0.</span></span>  
   
--   **轉譯層 2**：大部分圖形功能會使用圖形硬體加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本等級大於或等於 9.0 版。  
+-   <span data-ttu-id="6a5f6-139">**轉譯層 2**：大部分圖形功能都使用圖形硬體加速。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-139">**Rendering Tier 2** Most graphics features use graphics hardware acceleration.</span></span> <span data-ttu-id="6a5f6-140">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本層級大於或等於 9.0 版。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-140">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is greater than or equal to version 9.0.</span></span>  
   
- 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 轉譯層的詳細資訊，請參閱[圖形轉譯層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
+ <span data-ttu-id="6a5f6-141">如需有關[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯層，請參閱[圖形呈現層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。</span><span class="sxs-lookup"><span data-stu-id="6a5f6-141">For more information on [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering tiers, see [Graphics Rendering Tiers](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).</span></span>  
   
-## 請參閱  
- [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [配置與設計](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [2D 圖形和影像](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [物件行為](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [文字](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="6a5f6-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a5f6-142">See Also</span></span>  
+ [<span data-ttu-id="6a5f6-143">最佳化 WPF 應用程式效能</span><span class="sxs-lookup"><span data-stu-id="6a5f6-143">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="6a5f6-144">應用程式效能規劃</span><span class="sxs-lookup"><span data-stu-id="6a5f6-144">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="6a5f6-145">版面配置與設計</span><span class="sxs-lookup"><span data-stu-id="6a5f6-145">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="6a5f6-146">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="6a5f6-146">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="6a5f6-147">物件行為</span><span class="sxs-lookup"><span data-stu-id="6a5f6-147">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="6a5f6-148">應用程式資源</span><span class="sxs-lookup"><span data-stu-id="6a5f6-148">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="6a5f6-149">文字</span><span class="sxs-lookup"><span data-stu-id="6a5f6-149">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="6a5f6-150">資料繫結</span><span class="sxs-lookup"><span data-stu-id="6a5f6-150">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="6a5f6-151">其他效能建議</span><span class="sxs-lookup"><span data-stu-id="6a5f6-151">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

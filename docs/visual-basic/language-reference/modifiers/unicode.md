@@ -1,46 +1,44 @@
 ---
-title: "Unicode (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Unicode"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Unicode, external references"
-  - "Declare statement, marshaling strings"
-  - "Unicode keyword"
-  - "Unicode, marshaling strings"
+title: Unicode (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Unicode
+helpviewer_keywords:
+- Unicode, external references
+- Declare statement [Visual Basic], marshaling strings
+- Unicode keyword [Visual Basic]
+- Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 042908b8427de2de0de96bbb32df7be018bb915c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Unicode (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-不管所宣告的外部程序名稱為何，指定 Visual Basic 都應該將所有字串封送處理 \(Marshal\) 為 Unicode 值。  
+# <a name="unicode-visual-basic"></a><span data-ttu-id="16d03-102">Unicode (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16d03-102">Unicode (Visual Basic)</span></span>
+<span data-ttu-id="16d03-103">指定 Visual Basic 應封送處理為 Unicode 值，不論所宣告外部程序名稱的所有字串。</span><span class="sxs-lookup"><span data-stu-id="16d03-103">Specifies that Visual Basic should marshal all strings to Unicode values regardless of the name of the external procedure being declared.</span></span>  
   
- 呼叫在專案以外定義的程序時，Visual Basic 編譯器並未擁有所需資訊的存取權限，無法正確呼叫該程序。  本資訊包含程序所在位置、如何識別此程序、其呼叫順序 \(Calling Sequence\) 和傳回型別，以及所使用的字串字元集。  [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)會建立外部程序的參考，並提供這項必要資訊。  
+ <span data-ttu-id="16d03-104">當您呼叫在專案外部定義的程序時，Visual Basic 編譯器並沒有存取它必須有它才能正確地呼叫程序的資訊。</span><span class="sxs-lookup"><span data-stu-id="16d03-104">When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have in order to call the procedure correctly.</span></span> <span data-ttu-id="16d03-105">此資訊包括程序所在的位置、 如何識別、 它的呼叫順序和傳回型別，以及字串字元設定它使用。</span><span class="sxs-lookup"><span data-stu-id="16d03-105">This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses.</span></span> <span data-ttu-id="16d03-106">[Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)會建立外部程序的參考，並提供此必要資訊。</span><span class="sxs-lookup"><span data-stu-id="16d03-106">The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.</span></span>  
   
- 呼叫外部程序時，`Declare` 陳述式中的 `charsetmodifier` 部分會提供封送處理字串的字元集資訊。  它也會影響 Visual Basic 搜尋外部檔案，找出外部程序名稱的方式。  `Unicode` 修飾詞 \(Modifier\) 會指定 Visual Basic 應將所有字串封送處理為 Unicode 值，且應查閱程序而不需在搜尋期間修改其名稱。  
+ <span data-ttu-id="16d03-107">`charsetmodifier`的一部分`Declare`陳述式提供的外部程序呼叫期間封送處理字串的字元組資訊。</span><span class="sxs-lookup"><span data-stu-id="16d03-107">The `charsetmodifier` part in the `Declare` statement supplies the character set information to marshal strings during a call to the external procedure.</span></span> <span data-ttu-id="16d03-108">它也會影響 Visual Basic 會將外部檔案的外部程序名稱的搜尋。</span><span class="sxs-lookup"><span data-stu-id="16d03-108">It also affects how Visual Basic searches the external file for the external procedure name.</span></span> <span data-ttu-id="16d03-109">`Unicode`修飾詞會指定 Visual Basic 應封送處理為 Unicode 值的所有字串和應查詢程序而不需在搜尋期間修改其名稱。</span><span class="sxs-lookup"><span data-stu-id="16d03-109">The `Unicode` modifier specifies that Visual Basic should marshal all strings to Unicode values and should look up the procedure without modifying its name during the search.</span></span>  
   
- 如果未指定字元集 \(Character Set\) 修飾詞，則 `Ansi` 為預設值。  
+ <span data-ttu-id="16d03-110">如果未不指定任何字元 set 修飾詞，則`Ansi`是預設值。</span><span class="sxs-lookup"><span data-stu-id="16d03-110">If no character set modifier is specified, `Ansi` is the default.</span></span>  
   
-## 備註  
- `Unicode` 修飾詞可用於以下內容中：  
+## <a name="remarks"></a><span data-ttu-id="16d03-111">備註</span><span class="sxs-lookup"><span data-stu-id="16d03-111">Remarks</span></span>  
+ <span data-ttu-id="16d03-112">`Unicode`修飾詞可用於此內容：</span><span class="sxs-lookup"><span data-stu-id="16d03-112">The `Unicode` modifier can be used in this context:</span></span>  
   
- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="16d03-113">Declare 陳述式</span><span class="sxs-lookup"><span data-stu-id="16d03-113">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## 智慧型裝置開發人員注意事項  
- 不支援這個關鍵字。  
+## <a name="smart-device-developer-notes"></a><span data-ttu-id="16d03-114">智慧型裝置開發人員注意事項</span><span class="sxs-lookup"><span data-stu-id="16d03-114">Smart Device Developer Notes</span></span>  
+ <span data-ttu-id="16d03-115">不支援此關鍵字。</span><span class="sxs-lookup"><span data-stu-id="16d03-115">This keyword is not supported.</span></span>  
   
-## 請參閱  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)   
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)   
- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="16d03-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="16d03-116">See Also</span></span>  
+ [<span data-ttu-id="16d03-117">Ansi</span><span class="sxs-lookup"><span data-stu-id="16d03-117">Ansi</span></span>](../../../visual-basic/language-reference/modifiers/ansi.md)  
+ [<span data-ttu-id="16d03-118">Auto</span><span class="sxs-lookup"><span data-stu-id="16d03-118">Auto</span></span>](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [<span data-ttu-id="16d03-119">關鍵字</span><span class="sxs-lookup"><span data-stu-id="16d03-119">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

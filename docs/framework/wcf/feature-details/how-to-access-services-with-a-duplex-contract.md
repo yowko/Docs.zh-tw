@@ -1,42 +1,44 @@
 ---
-title: "HOW TO：使用雙工合約存取服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "雙工合約 [WCF]"
+title: "HOW TO：使用雙工合約存取服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e4c273e674fb7cb0f2801d9858d598baab5973a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用雙工合約存取服務
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 其中一項功能，就是建立使用雙工訊息模式的服務。這個模式可讓服務透過回呼與用戶端通訊。本主題將說明在會實作回呼介面的用戶端類別中，建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的步驟。  
+# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="2918b-102">HOW TO：使用雙工合約存取服務</span><span class="sxs-lookup"><span data-stu-id="2918b-102">How to: Access Services with a Duplex Contract</span></span>
+<span data-ttu-id="2918b-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 其中一項功能，就是建立使用雙工訊息模式的服務。</span><span class="sxs-lookup"><span data-stu-id="2918b-103">One feature of [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="2918b-104">這個模式可讓服務透過回呼與用戶端通訊。</span><span class="sxs-lookup"><span data-stu-id="2918b-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="2918b-105">本主題將說明在會實作回呼介面的用戶端類別中，建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的步驟。</span><span class="sxs-lookup"><span data-stu-id="2918b-105">This topic shows the steps to create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client in a client class that implements the callback interface.</span></span>  
   
- 雙重繫結會向服務公開用戶端的 IP 位址。用戶端應該利用安全性來確保它只與信任的服務連接。  
+ <span data-ttu-id="2918b-106">雙重繫結會向服務公開用戶端的 IP 位址，</span><span class="sxs-lookup"><span data-stu-id="2918b-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="2918b-107">用戶端應該利用安全性來確保它只與信任的服務連接。</span><span class="sxs-lookup"><span data-stu-id="2918b-107">The client should use security to ensure that it connects only to services it trusts.</span></span>  
   
- 如需建立基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務和用戶端的教學課程，請參閱 [快速入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。  
+ <span data-ttu-id="2918b-108">如需建立基本的教學課程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務與用戶端，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="2918b-108">For a tutorial on creating a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  
   
-### 若要存取雙工服務  
+### <a name="to-access-a-duplex-service"></a><span data-ttu-id="2918b-109">若要存取雙工服務</span><span class="sxs-lookup"><span data-stu-id="2918b-109">To access a duplex service</span></span>  
   
-1.  建立包含兩個介面的服務。第一個介面主要供服務使用，而第二個則是供回呼使用。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立雙工服務的詳細資訊，請參閱 [HOW TO：建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
+1.  <span data-ttu-id="2918b-110">建立包含兩個介面的服務。</span><span class="sxs-lookup"><span data-stu-id="2918b-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="2918b-111">第一個介面主要供服務使用，第二個則是供回呼使用。</span><span class="sxs-lookup"><span data-stu-id="2918b-111">The first interface is for the service, the second is for the callback.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="2918b-112">建立雙工服務，請參閱[How to： 建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="2918b-112"> creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>  
   
-2.  執行服務。  
+2.  <span data-ttu-id="2918b-113">執行服務。</span><span class="sxs-lookup"><span data-stu-id="2918b-113">Run the service.</span></span>  
   
-3.  請使用 [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 為用戶端產生合約 \(介面\)。如需這項做法的詳細資訊，請參閱 [HOW TO：建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+3.  <span data-ttu-id="2918b-114">使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端合約 （介面）。</span><span class="sxs-lookup"><span data-stu-id="2918b-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="2918b-115">如需如何執行這項操作資訊，請參閱[How to： 建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。</span><span class="sxs-lookup"><span data-stu-id="2918b-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>  
   
-4.  依下列範例所示，在用戶端類別中實作回呼介面。  
+4.  <span data-ttu-id="2918b-116">依下列範例所示，在用戶端類別中實作回呼介面。</span><span class="sxs-lookup"><span data-stu-id="2918b-116">Implement the callback interface in the client class, as shown in the following example.</span></span>  
   
     ```csharp  
     public class CallbackHandler : ICalculatorDuplexCallback  
@@ -62,10 +64,9 @@ caps.handback.revision: 18
             Console.Writeline("Equation({0})", equation)  
         End Sub  
     End Class  
-  
     ```  
   
-5.  建立 <xref:System.ServiceModel.InstanceContext> 類別的執行個體。建構函式需要用戶端類別的執行個體。  
+5.  <span data-ttu-id="2918b-117">建立 <xref:System.ServiceModel.InstanceContext> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="2918b-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="2918b-118">建構函式需要用戶端類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="2918b-118">The constructor requires an instance of the client class.</span></span>  
   
     ```csharp  
     InstanceContext site = new InstanceContext(new CallbackHandler());  
@@ -75,7 +76,7 @@ caps.handback.revision: 18
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  使用需要 <xref:System.ServiceModel.InstanceContext> 物件的建構函式來建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的執行個體。建構函式的第二個參數就是組態檔中找到的端點名稱。  
+6.  <span data-ttu-id="2918b-119">使用需要 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 物件的建構函式來建立 <xref:System.ServiceModel.InstanceContext> 用戶端的執行個體。</span><span class="sxs-lookup"><span data-stu-id="2918b-119">Create an instance of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="2918b-120">建構函式的第二個參數就是組態檔中找到的端點名稱。</span><span class="sxs-lookup"><span data-stu-id="2918b-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -86,19 +87,19 @@ caps.handback.revision: 18
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  視需要呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的方法。  
+7.  <span data-ttu-id="2918b-121">視需要呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的方法。</span><span class="sxs-lookup"><span data-stu-id="2918b-121">Call the methods of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client as required.</span></span>  
   
-## 範例  
- 下列程式碼範例會示範如何建立會存取雙工合約的用戶端類別。  
+## <a name="example"></a><span data-ttu-id="2918b-122">範例</span><span class="sxs-lookup"><span data-stu-id="2918b-122">Example</span></span>  
+ <span data-ttu-id="2918b-123">下列程式碼範例會示範如何建立會存取雙工合約的用戶端類別。</span><span class="sxs-lookup"><span data-stu-id="2918b-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>  
   
  [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
  [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]  
   
-## .NET Framework 安全性  
+## <a name="net-framework-security"></a><span data-ttu-id="2918b-124">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="2918b-124">.NET Framework Security</span></span>  
   
-## 請參閱  
- [快速入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)   
- [HOW TO：建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)   
- [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [HOW TO：建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [HOW TO：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a><span data-ttu-id="2918b-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2918b-125">See Also</span></span>  
+ [<span data-ttu-id="2918b-126">快速入門教學課程</span><span class="sxs-lookup"><span data-stu-id="2918b-126">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="2918b-127">如何： 建立雙工合約</span><span class="sxs-lookup"><span data-stu-id="2918b-127">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [<span data-ttu-id="2918b-128">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="2918b-128">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="2918b-129">如何：建立用戶端</span><span class="sxs-lookup"><span data-stu-id="2918b-129">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="2918b-130">如何： 使用 ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="2918b-130">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

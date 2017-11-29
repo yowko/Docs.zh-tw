@@ -1,39 +1,43 @@
 ---
-title: "如何：使用純色填滿形狀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "色彩, 加入到圖案"
-  - "圖案, 填滿"
+title: "如何：使用純色填滿形狀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- colors [Windows Forms], adding to shapes
+- shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb3e160392a903083386d9942f8e2cfe31ee89a4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用純色填滿形狀
-若要使用純色填滿形狀，請建立 <xref:System.Drawing.SolidBrush> 物件，然後將這個 <xref:System.Drawing.SolidBrush> 物件當成引數傳遞至 <xref:System.Drawing.Graphics> 類別的其中一個填色方法。  下列範例顯示如何使用紅色填滿橢圓形。  
+# <a name="how-to-fill-a-shape-with-a-solid-color"></a><span data-ttu-id="b7367-102">如何：使用純色填滿形狀</span><span class="sxs-lookup"><span data-stu-id="b7367-102">How to: Fill a Shape with a Solid Color</span></span>
+<span data-ttu-id="b7367-103">若要利用純色填滿圖形時，建立<xref:System.Drawing.SolidBrush>物件，並再將其傳遞<xref:System.Drawing.SolidBrush>物件做為其中一個填滿方法的引數為<xref:System.Drawing.Graphics>類別。</span><span class="sxs-lookup"><span data-stu-id="b7367-103">To fill a shape with a solid color, create a <xref:System.Drawing.SolidBrush> object, and then pass that <xref:System.Drawing.SolidBrush> object as an argument to one of the fill methods of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="b7367-104">下列範例會示範如何使用紅色的色彩填滿橢圓形。</span><span class="sxs-lookup"><span data-stu-id="b7367-104">The following example shows how to fill an ellipse with the color red.</span></span>  
   
-## 範例  
- 在下列程式碼中，<xref:System.Drawing.SolidBrush.%23ctor%2A> 建構函式使用 <xref:System.Drawing.Color> 物件當做其唯一引數。  <xref:System.Drawing.Color.FromArgb%2A> 方法所使用的值代表色彩的 Alpha、紅色、綠色和藍色元素。  每一個值的範圍都必須介於 0 到 255 之間。  第一個 255 表示該色彩完全不透明，第二個 255 表示紅色元素的濃度達最高。  兩個零代表綠色和藍色兩個元素的濃度都是 0。  
+## <a name="example"></a><span data-ttu-id="b7367-105">範例</span><span class="sxs-lookup"><span data-stu-id="b7367-105">Example</span></span>  
+ <span data-ttu-id="b7367-106">下列程式碼，<xref:System.Drawing.SolidBrush.%23ctor%2A>建構函式接受<xref:System.Drawing.Color>物件做為其唯一的引數。</span><span class="sxs-lookup"><span data-stu-id="b7367-106">In the following code, the <xref:System.Drawing.SolidBrush.%23ctor%2A> constructor takes a <xref:System.Drawing.Color> object as its only argument.</span></span> <span data-ttu-id="b7367-107">使用的值<xref:System.Drawing.Color.FromArgb%2A>方法來表示色彩的 alpha、 紅色、 綠色和藍色元件。</span><span class="sxs-lookup"><span data-stu-id="b7367-107">The values used by the <xref:System.Drawing.Color.FromArgb%2A> method represent the alpha, red, green, and blue components of the color.</span></span> <span data-ttu-id="b7367-108">每個這些值必須是 0 到 255 範圍內。</span><span class="sxs-lookup"><span data-stu-id="b7367-108">Each of these values must be in the range 0 through 255.</span></span> <span data-ttu-id="b7367-109">第一個 255 表示的色彩就是完全不透明，而第二個 255 表示紅色元件的濃度。</span><span class="sxs-lookup"><span data-stu-id="b7367-109">The first 255 indicates that the color is fully opaque, and the second 255 indicates that the red component is at full intensity.</span></span> <span data-ttu-id="b7367-110">兩個零表示綠色和藍色元件同時具有 0 的濃度。</span><span class="sxs-lookup"><span data-stu-id="b7367-110">The two zeros indicate that the green and blue components both have an intensity of 0.</span></span>  
   
- 傳遞至 <xref:System.Drawing.Graphics.FillEllipse%2A> 方法的四個數字 \(0, 0, 100, 60\) 分別指定橢圓形的位置和其週框 \(Bounding Rectangle\) 大小。  矩形的左上角位於 \(0, 0\)，寬度為 100，高度為 60。  
+ <span data-ttu-id="b7367-111">四個數字 （0，0，100，60） 傳遞至<xref:System.Drawing.Graphics.FillEllipse%2A>方法指定的位置和大小的橢圓形之周框。</span><span class="sxs-lookup"><span data-stu-id="b7367-111">The four numbers (0, 0, 100, 60) passed to the <xref:System.Drawing.Graphics.FillEllipse%2A> method specify the location and size of the bounding rectangle for the ellipse.</span></span> <span data-ttu-id="b7367-112">矩形的左上角 （0，0） 為 100，寬度和高度為 60。</span><span class="sxs-lookup"><span data-stu-id="b7367-112">The rectangle has an upper-left corner of (0, 0), a width of 100, and a height of 60.</span></span>  
   
  [!code-csharp[System.Drawing.UsingABrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.UsingABrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
-## 編譯程式碼  
- 上述範例是專為與 Windows Form 搭配使用而設計的，而且它需要 <xref:System.Windows.Forms.PaintEventArgs> `e` \(即 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數\)。  
+## <a name="compiling-the-code"></a><span data-ttu-id="b7367-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="b7367-113">Compiling the Code</span></span>  
+ <span data-ttu-id="b7367-114">上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。</span><span class="sxs-lookup"><span data-stu-id="b7367-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 請參閱  
- [使用筆刷填滿形狀](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="b7367-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7367-115">See Also</span></span>  
+ [<span data-ttu-id="b7367-116">使用筆刷填滿形狀</span><span class="sxs-lookup"><span data-stu-id="b7367-116">Using a Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

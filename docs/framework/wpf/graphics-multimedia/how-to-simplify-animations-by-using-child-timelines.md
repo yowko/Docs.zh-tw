@@ -1,37 +1,40 @@
 ---
-title: "如何：使用子時刻表簡化動畫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 使用子時刻表簡化"
-  - "子時刻表"
-  - "使用子時刻表簡化動畫"
+title: "操作說明：使用子時間軸簡化動畫"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- simplifying animations by child timelines [WPF]
+- animation [WPF], simplifying by child timelines
+- child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: daa4caac0046293e8b86a773bfffd46cf30e835b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用子時刻表簡化動畫
-本範例會顯示如何使用子 <xref:System.Windows.Media.Animation.ParallelTimeline> 物件來簡化動畫。  <xref:System.Windows.Media.Animation.Storyboard> 是一種 <xref:System.Windows.Media.Animation.Timeline>，可以提供特定時限所包含的目標資訊。  使用 <xref:System.Windows.Media.Animation.Storyboard> 以提供時間表目標資訊，包含物件和屬性資訊。  
+# <a name="how-to-simplify-animations-by-using-child-timelines"></a><span data-ttu-id="0b61e-102">操作說明：使用子時間軸簡化動畫</span><span class="sxs-lookup"><span data-stu-id="0b61e-102">How to: Simplify Animations by Using Child Timelines</span></span>
+<span data-ttu-id="0b61e-103">這個範例示範如何使用子簡化動畫<xref:System.Windows.Media.Animation.ParallelTimeline>物件。</span><span class="sxs-lookup"><span data-stu-id="0b61e-103">This example shows how to simplify animations by using child <xref:System.Windows.Media.Animation.ParallelTimeline> objects.</span></span> <span data-ttu-id="0b61e-104">A<xref:System.Windows.Media.Animation.Storyboard>是一種<xref:System.Windows.Media.Animation.Timeline>提供它所包含的時間軸的目標資訊。</span><span class="sxs-lookup"><span data-stu-id="0b61e-104">A <xref:System.Windows.Media.Animation.Storyboard> is a type of <xref:System.Windows.Media.Animation.Timeline> that provides targeting information for the timelines it contains.</span></span> <span data-ttu-id="0b61e-105">使用<xref:System.Windows.Media.Animation.Storyboard>提供目標的資訊，包括物件和屬性資訊的時間軸。</span><span class="sxs-lookup"><span data-stu-id="0b61e-105">Use a <xref:System.Windows.Media.Animation.Storyboard> to provide timeline targeting information, including object and property information.</span></span>  
   
- 若要開始動畫，請先使用一或多個 <xref:System.Windows.Media.Animation.ParallelTimeline> 物件，做為 <xref:System.Windows.Media.Animation.Storyboard> 的巢狀子項目。  這些 <xref:System.Windows.Media.Animation.ParallelTimeline> 物件可包含其他動畫，因此，可以較佳方法將時間序列封裝在複雜動畫中。  例如，如果您在相同 <xref:System.Windows.Media.Animation.Storyboard> 中設計 <xref:System.Windows.Controls.TextBlock> 的動畫和數個圖案，您可以將 <xref:System.Windows.Controls.TextBlock> 的動畫和圖案、將每個項目放入個別的 <xref:System.Windows.Media.Animation.ParallelTimeline>。  因為每個 <xref:System.Windows.Media.Animation.ParallelTimeline> 都有專屬的 <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>，且 <xref:System.Windows.Media.Animation.ParallelTimeline> 的所有子項目會與 <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> 產生關聯，即可以較佳方式封裝時間。  
+ <span data-ttu-id="0b61e-106">若要開始動畫，請使用一或多個<xref:System.Windows.Media.Animation.ParallelTimeline>物件做為巢狀的子項目的<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="0b61e-106">To begin an animation, use one or more <xref:System.Windows.Media.Animation.ParallelTimeline> objects as nested child elements of a <xref:System.Windows.Media.Animation.Storyboard>.</span></span> <span data-ttu-id="0b61e-107">這些<xref:System.Windows.Media.Animation.ParallelTimeline>物件可以包含其他動畫和因此，更可封裝複雜的動畫時間序列。</span><span class="sxs-lookup"><span data-stu-id="0b61e-107">These <xref:System.Windows.Media.Animation.ParallelTimeline> objects can contain other animations and therefore, can better encapsulate the timing sequences in complex animations.</span></span> <span data-ttu-id="0b61e-108">比方說，如果您建立動畫<xref:System.Windows.Controls.TextBlock>和數個圖形的相同<xref:System.Windows.Media.Animation.Storyboard>，您可以區隔的動畫<xref:System.Windows.Controls.TextBlock>與圖形，放到不同的每個<xref:System.Windows.Media.Animation.ParallelTimeline>。</span><span class="sxs-lookup"><span data-stu-id="0b61e-108">For example, if you are animating a <xref:System.Windows.Controls.TextBlock> and several shapes in the same <xref:System.Windows.Media.Animation.Storyboard>, you can separate the animations for the <xref:System.Windows.Controls.TextBlock> and the shapes, putting each into a separate <xref:System.Windows.Media.Animation.ParallelTimeline>.</span></span> <span data-ttu-id="0b61e-109">因為每個<xref:System.Windows.Media.Animation.ParallelTimeline>都有它自己<xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>和所有子項目<xref:System.Windows.Media.Animation.ParallelTimeline>開始相對於此<xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>，時間會更好封裝。</span><span class="sxs-lookup"><span data-stu-id="0b61e-109">Because each <xref:System.Windows.Media.Animation.ParallelTimeline> has its own <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> and all child elements of the <xref:System.Windows.Media.Animation.ParallelTimeline> begin relative to this <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>, timing is better encapsulated.</span></span>  
   
- 下列範例會從相同 <xref:System.Windows.Media.Animation.Storyboard> 加入兩段文字 \(<xref:System.Windows.Controls.TextBlock> 物件\) 的動畫。  <xref:System.Windows.Media.Animation.ParallelTimeline> 封裝其中一個 <xref:System.Windows.Controls.TextBlock> 物件的動畫。  
+ <span data-ttu-id="0b61e-110">下列範例以動畫方式顯示兩個文字片段 (<xref:System.Windows.Controls.TextBlock>物件) 從在相同<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="0b61e-110">The following example animates two pieces of text (<xref:System.Windows.Controls.TextBlock> objects) from within the same <xref:System.Windows.Media.Animation.Storyboard>.</span></span> <span data-ttu-id="0b61e-111">A<xref:System.Windows.Media.Animation.ParallelTimeline>封裝的其中一個動畫<xref:System.Windows.Controls.TextBlock>物件。</span><span class="sxs-lookup"><span data-stu-id="0b61e-111">A <xref:System.Windows.Media.Animation.ParallelTimeline> encapsulates the animations of one of the <xref:System.Windows.Controls.TextBlock> objects.</span></span>  
   
- **效能提示：** 雖然您可以彼此之間的巢狀化 <xref:System.Windows.Media.Animation.Storyboard> 時間表，<xref:System.Windows.Media.Animation.ParallelTimeline> 會更適用於進行巢狀化，因為他們需要的負荷較少   \(<xref:System.Windows.Media.Animation.Storyboard> 類別繼承自 <xref:System.Windows.Media.Animation.ParallelTimeline> 類別\)。  
+ <span data-ttu-id="0b61e-112">**效能提示：**雖然您可以巢狀<xref:System.Windows.Media.Animation.Storyboard>時間表內彼此<xref:System.Windows.Media.Animation.ParallelTimeline>是比較適合巢狀結構，因為它們需要較少負荷。</span><span class="sxs-lookup"><span data-stu-id="0b61e-112">**Performance Note:** Although you can nest <xref:System.Windows.Media.Animation.Storyboard> timelines inside each other, <xref:System.Windows.Media.Animation.ParallelTimeline>s are more suitable for nesting because they require less overhead.</span></span> <span data-ttu-id="0b61e-113">(<xref:System.Windows.Media.Animation.Storyboard>類別繼承自<xref:System.Windows.Media.Animation.ParallelTimeline>類別。)</span><span class="sxs-lookup"><span data-stu-id="0b61e-113">(The <xref:System.Windows.Media.Animation.Storyboard> class inherits from the <xref:System.Windows.Media.Animation.ParallelTimeline> class.)</span></span>  
   
-## 範例  
- [!code-xml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
+## <a name="example"></a><span data-ttu-id="0b61e-114">範例</span><span class="sxs-lookup"><span data-stu-id="0b61e-114">Example</span></span>  
+ [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
-## 請參閱  
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [指定腳本動畫之間的傳遞行為](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)
+## <a name="see-also"></a><span data-ttu-id="0b61e-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b61e-115">See Also</span></span>  
+ [<span data-ttu-id="0b61e-116">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="0b61e-116">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="0b61e-117">指定分鏡腳本動畫之間的 HandoffBehavior</span><span class="sxs-lookup"><span data-stu-id="0b61e-117">Specify HandoffBehavior Between Storyboard Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)

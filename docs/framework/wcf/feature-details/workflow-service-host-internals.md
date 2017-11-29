@@ -1,66 +1,69 @@
 ---
-title: "工作流程服務主機內部 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "工作流程服務主機內部"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9d41ff3e83b6517194c34dec5f7f768299f612bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 工作流程服務主機內部
-<xref:System.ServiceModel.WorkflowServiceHost> 會提供工作流程服務的主機。它會負責接聽傳入訊息並將訊息路由傳送至適當的工作流程服務執行個體、控制閒置工作流程的卸載和保存作業，以及其他作業。本主題描述 WorkflowServiceHost 如何處理傳入訊息。  
+# <a name="workflow-service-host-internals"></a><span data-ttu-id="ea3b6-102">工作流程服務主機內部</span><span class="sxs-lookup"><span data-stu-id="ea3b6-102">Workflow Service Host Internals</span></span>
+<span data-ttu-id="ea3b6-103"><xref:System.ServiceModel.WorkflowServiceHost> 會提供工作流程服務的主機。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-103"><xref:System.ServiceModel.WorkflowServiceHost> provides a host for workflow services.</span></span> <span data-ttu-id="ea3b6-104">它會負責接聽傳入訊息並將訊息路由傳送至適當的工作流程服務執行個體、控制閒置工作流程的卸載和保存作業，以及其他作業。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-104">It is responsible for listening for incoming messages and routing them to the appropriate workflow service instance, it controls unloading and persisting of idle workflows, and more.</span></span> <span data-ttu-id="ea3b6-105">本主題描述 WorkflowServiceHost 如何處理傳入訊息。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-105">This topic describes how WorkflowServiceHost processes incoming messages.</span></span>  
   
-## WorkflowServiceHost 概觀  
- <xref:System.ServiceModel.WorkflowServiceHost> 類別是用來裝載工作流程服務。它會接聽傳入訊息並將訊息路由傳送至適當的服務執行個體，並視需要建立新的執行個體或從永久性儲存裝置載入現有的執行個體。下圖概略說明 <xref:System.ServiceModel.WorkflowServiceHost> 的運作方式。  
+## <a name="workflowservicehost-overview"></a><span data-ttu-id="ea3b6-106">WorkflowServiceHost 概觀</span><span class="sxs-lookup"><span data-stu-id="ea3b6-106">WorkflowServiceHost Overview</span></span>  
+ <span data-ttu-id="ea3b6-107"><xref:System.ServiceModel.WorkflowServiceHost> 類別是用來裝載工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-107">The <xref:System.ServiceModel.WorkflowServiceHost> class is used to host workflow services.</span></span> <span data-ttu-id="ea3b6-108">它會接聽傳入訊息並將訊息路由傳送至適當的服務執行個體，並視需要建立新的執行個體或從永久性儲存裝置載入現有的執行個體。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-108">It listens for incoming messages and routes them to the appropriate service instance, creating new instances or loading existing instances from durable storage as needed.</span></span>  <span data-ttu-id="ea3b6-109">下圖概略說明 <xref:System.ServiceModel.WorkflowServiceHost> 的運作方式。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-109">The following diagram illustrates on a high level how <xref:System.ServiceModel.WorkflowServiceHost> works.</span></span>  
   
- ![WorkflowServiceHost 概觀](../../../../docs/framework/wcf/feature-details/media/wfshhighlevel.gif "WFSHHighLevel")  
+ <span data-ttu-id="ea3b6-110">![WorkflowServiceHost 概觀](../../../../docs/framework/wcf/feature-details/media/wfshhighlevel.gif "WFSHHighLevel")</span><span class="sxs-lookup"><span data-stu-id="ea3b6-110">![WorkflowServiceHost Overview](../../../../docs/framework/wcf/feature-details/media/wfshhighlevel.gif "WFSHHighLevel")</span></span>  
   
- 這張圖表顯示 <xref:System.ServiceModel.WorkflowServiceHost> 會從 .xamlx 檔案載入工作流程服務定義，並且從組態檔載入組態資訊。它也會從追蹤設定檔載入追蹤組態。<xref:System.ServiceModel.WorkflowServiceHost> 會公開工作流程控制端點，可讓您將控制作業傳送至工作流程執行個體。如需詳細資訊，請參閱[工作流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)和[工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)。  
+ <span data-ttu-id="ea3b6-111">這張圖表顯示 <xref:System.ServiceModel.WorkflowServiceHost> 會從 .xamlx 檔案載入工作流程服務定義，並且從組態檔載入組態資訊。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-111">This diagram shows that <xref:System.ServiceModel.WorkflowServiceHost> loads workflow service definitions from .xamlx files and loads configuration information from a configuration file.</span></span> <span data-ttu-id="ea3b6-112">它也會從追蹤設定檔載入追蹤組態。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-112">It also loads tracking configuration from the tracking profile.</span></span> <span data-ttu-id="ea3b6-113"><xref:System.ServiceModel.WorkflowServiceHost> 會公開工作流程控制端點，可讓您將控制作業傳送至工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-113"><xref:System.ServiceModel.WorkflowServiceHost> exposes a workflow control endpoint which allows you to send control operations to workflow instances.</span></span>  <span data-ttu-id="ea3b6-114">如需詳細資訊，請參閱[流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)和[工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-114">For more information see [Workflow Control Endpoint](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) and [Workflow Management Endpoint Sample](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md).</span></span>  
   
- <xref:System.ServiceModel.WorkflowServiceHost> 也會公開應用程式端點，以便接聽傳入的應用程式訊息。當傳入訊息送達時，它就會傳送至適當的工作流程服務執行個體 \(如果目前已載入的話\)。必要時，它也會建立新的工作流程執行個體。或者，如果現有的執行個體已經保存，就會從持續性存放區載入此執行個體。  
+ <span data-ttu-id="ea3b6-115"><xref:System.ServiceModel.WorkflowServiceHost> 也會公開應用程式端點，以便接聽傳入的應用程式訊息。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-115"><xref:System.ServiceModel.WorkflowServiceHost> also exposes application endpoints that listen for incoming application messages.</span></span> <span data-ttu-id="ea3b6-116">當傳入訊息送達時，它就會傳送至適當的工作流程服務執行個體 (如果目前已載入的話)。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-116">When an incoming message arrives it is sent to the appropriate workflow service instance (if it is currently loaded).</span></span> <span data-ttu-id="ea3b6-117">必要時，它也會建立新的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-117">If needed a new workflow instance is created.</span></span> <span data-ttu-id="ea3b6-118">或者，如果現有的執行個體已經保存，就會從持續性存放區載入此執行個體。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-118">Or if an existing instance has been persisted it is loaded from the persistence store.</span></span>  
   
-## WorkflowServiceHost 詳細資料  
- 下圖稍微詳細說明 <xref:System.ServiceModel.WorkflowServiceHost> 如何處理訊息。  
+## <a name="workflowservicehost-details"></a><span data-ttu-id="ea3b6-119">WorkflowServiceHost 詳細資料</span><span class="sxs-lookup"><span data-stu-id="ea3b6-119">WorkflowServiceHost Details</span></span>  
+ <span data-ttu-id="ea3b6-120">下圖稍微詳細說明 <xref:System.ServiceModel.WorkflowServiceHost> 如何處理訊息。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-120">The following diagram shows how <xref:System.ServiceModel.WorkflowServiceHost> handles messages in a bit more detail.</span></span>  
   
- ![工作流程服務主控台訊息流程](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
+ <span data-ttu-id="ea3b6-121">![工作流程服務主機訊息流程](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")</span><span class="sxs-lookup"><span data-stu-id="ea3b6-121">![Workflow Service Host Message Flow](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")</span></span>  
   
- 這張圖表顯示三個不同的端點：應用程式端點、工作流程控制端點和工作流程裝載端點。應用程式端點會接收要傳送至特定工作流程執行個體的訊息。工作流程控制端點會接聽控制作業。工作流程裝載端點會接聽讓 <xref:System.ServiceModel.WorkflowServiceHost> 載入並執行非服務工作流程的訊息。如圖表所示，所有訊息都會透過 WCF 執行階段處理。工作流程執行個體節流是使用 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 屬性來達成。這個屬性會限制並行工作流程服務執行個體的數目。超過此節流時，系統就會將新工作流程服務執行個體的任何其他要求或啟動已保存之工作流程執行個體的要求排入佇列。已佇列的要求會按照 FIFO 順序來處理，不論它們是新執行個體或執行中之已保存執行個體的要求都一樣。然後，系統會載入主機原則資訊，以便判斷如何處理未處理的例外狀況，以及如何卸載並保存閒置的工作流程服務。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]這些主題的詳細資訊，請參閱 [HOW TO：以 WorkflowServiceHost 設定工作流程服務的未處理例外狀況行為](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)和 [HOW TO：以 WorkflowServiceHost 設定閒置行為](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)。工作流程執行個體是根據主機原則來保存，並在必要時重新載入。如需工作流程持續性的詳細資訊，請參閱：[HOW TO：以 WorkflowServiceHost 設定持續性](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)、[建立長期執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)和[工作流程持續性](../../../../docs/framework/windows-workflow-foundation//workflow-persistence.md)。  
+ <span data-ttu-id="ea3b6-122">這張圖表顯示三個不同的端點：應用程式端點、工作流程控制端點和工作流程裝載端點。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-122">This diagram shows three different endpoints, an application endpoint, a workflow control endpoint, and a workflow hosting endpoint.</span></span> <span data-ttu-id="ea3b6-123">應用程式端點會接收要傳送至特定工作流程執行個體的訊息。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-123">The application endpoint receives messages that are bound for a specific workflow instance.</span></span> <span data-ttu-id="ea3b6-124">工作流程控制端點會接聽控制作業。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-124">The workflow control endpoint listens for control operations.</span></span> <span data-ttu-id="ea3b6-125">工作流程裝載端點會接聽讓 <xref:System.ServiceModel.WorkflowServiceHost> 載入並執行非服務工作流程的訊息。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-125">The workflow hosting endpoint listens for messages that cause <xref:System.ServiceModel.WorkflowServiceHost> to load and execute non-service workflows.</span></span> <span data-ttu-id="ea3b6-126">如圖表所示，所有訊息都會透過 WCF 執行階段處理。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-126">As shown in the diagram all messages are processed through the WCF runtime.</span></span>  <span data-ttu-id="ea3b6-127">工作流程執行個體節流是使用 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 屬性來達成。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-127">Workflow service instance throttling is achieved by using the <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> property.</span></span> <span data-ttu-id="ea3b6-128">這個屬性會限制並行工作流程服務執行個體的數目。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-128">This property will limit the number of concurrent workflow service instances.</span></span> <span data-ttu-id="ea3b6-129">超過此節流時，系統就會將新工作流程服務執行個體的任何其他要求或啟動已保存之工作流程執行個體的要求排入佇列。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-129">When this throttle is exceeded any additional requests for new workflow service instances or requests to activate persisted workflow instances will be queued.</span></span> <span data-ttu-id="ea3b6-130">已佇列的要求會按照 FIFO 順序來處理，不論它們是新執行個體或執行中之已保存執行個體的要求都一樣。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-130">The queued requests are processed in FIFO order regardless of whether they are requests for a new instance or a running, persisted instance.</span></span> <span data-ttu-id="ea3b6-131">系統會載入主機原則資訊，以便判斷如何處理未處理的例外狀況，以及如何卸載並保存閒置的工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-131">Host policy information is loaded that determines how unhandled exceptions are dealt with, and how idle workflow services are unloaded and persisted.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="ea3b6-132">請參閱這些主題[How to： 設定工作流程未處理例外狀況行為以 WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)和[How to： 以 WorkflowServiceHost 設定 「 閒置行為](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-132"> these topics see [How to: Configure Workflow Unhandled Exception Behavior with WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) and [How to: Configure Idle Behavior with WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md).</span></span> <span data-ttu-id="ea3b6-133">工作流程執行個體是根據主機原則來保存，並在必要時重新載入。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-133">Workflow instances are persisted according to host policies and are reloaded when needed.</span></span> <span data-ttu-id="ea3b6-134">如需工作流程持續性詳細資訊，請參閱： [How to： 以 WorkflowServiceHost 設定的持續性](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)，[建立長時間執行工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)，和[工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).</span><span class="sxs-lookup"><span data-stu-id="ea3b6-134">For more information about workflow persistence see: [How to: Configure Persistence with WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [Creating a Long-running Workflow Service](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), and [Workflow Persistence](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).</span></span>  
   
- 下圖顯示所呼叫的 WorkflowServiceHost.Open 項目。  
+ <span data-ttu-id="ea3b6-135">下圖顯示所呼叫的 WorkflowServiceHost.Open 項目。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-135">The following illustration shows what the WorkflowServiceHost.Open is called.</span></span>  
   
- ![當呼叫 WorkflowServiceHost.Open 時](../../../../docs/framework/wcf/feature-details/media/wfhostopen.gif "WFHostOpen")  
+ <span data-ttu-id="ea3b6-136">![呼叫 WorkflowServiceHost.Open 時](../../../../docs/framework/wcf/feature-details/media/wfhostopen.gif "WFHostOpen")</span><span class="sxs-lookup"><span data-stu-id="ea3b6-136">![When WorkflowServiceHost.Open is called](../../../../docs/framework/wcf/feature-details/media/wfhostopen.gif "WFHostOpen")</span></span>  
   
- 系統會從 XAML 載入工作流程，並且建立活動樹狀結構。<xref:System.ServiceModel.WorkflowServiceHost> 會瀏覽活動樹狀結構並建立服務描述。然後，組態會套用至主機。最後，主機會開始接聽傳入訊息。  
+ <span data-ttu-id="ea3b6-137">系統會從 XAML 載入工作流程，並且建立活動樹狀。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-137">The workflow is loaded from XAML and the activity tree is created.</span></span> <span data-ttu-id="ea3b6-138"><xref:System.ServiceModel.WorkflowServiceHost> 會瀏覽活動樹狀結構並建立服務說明。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-138"><xref:System.ServiceModel.WorkflowServiceHost> walks the activity tree and creates the service description.</span></span> <span data-ttu-id="ea3b6-139">然後，組態會套用至主機。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-139">Configuration is applied to the host.</span></span> <span data-ttu-id="ea3b6-140">最後，主機會開始接聽傳入訊息。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-140">Finally the host begins to listen for incoming messages.</span></span>  
   
- 下圖顯示當 <xref:System.ServiceModel.WorkflowServiceHost> 接收要傳送至 CanCreateInstance 設定為 `true` 之 Receive 活動的訊息時，它所進行的作業。  
+ <span data-ttu-id="ea3b6-141">下圖顯示當 <xref:System.ServiceModel.WorkflowServiceHost> 接收要傳送至 CanCreateInstance 設定為 `true` 之 Receive 活動的訊息時，它所進行的作業。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-141">The following illustration shows what the <xref:System.ServiceModel.WorkflowServiceHost> does when it receives a message bound for a Receive activity that has CanCreateInstance set to `true`.</span></span>  
   
- ![工作流程服務主控台收到訊息](../../../../docs/framework/wcf/feature-details/media/wfhreceivemessagecci.gif "WFHReceiveMessageCCI")  
+ <span data-ttu-id="ea3b6-142">![工作流程服務主機收到訊息](../../../../docs/framework/wcf/feature-details/media/wfhreceivemessagecci.gif "WFHReceiveMessageCCI")</span><span class="sxs-lookup"><span data-stu-id="ea3b6-142">![Workflow Service Host Receives a message](../../../../docs/framework/wcf/feature-details/media/wfhreceivemessagecci.gif "WFHReceiveMessageCCI")</span></span>  
   
- 當訊息送達時，就會由 WCF 通道堆疊處理。然後，系統會檢查節流並執行相互關聯查詢。如果此訊息要傳送至現有的執行個體，就會傳遞此訊息。如果需要建立新的執行個體，則會檢查 Receive 活動的 CanCreateInstance 屬性。如果此屬性設定為 true，就會建立新的執行個體並傳遞此訊息。  
+ <span data-ttu-id="ea3b6-143">當訊息送達時，就會由 WCF 通道堆疊處理。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-143">The message arrives and is processed by the WCF channel stack.</span></span> <span data-ttu-id="ea3b6-144">然後，系統會檢查節流並執行相互關聯查詢。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-144">Throttles are checked and correlation queries are executed.</span></span> <span data-ttu-id="ea3b6-145">如果此訊息要傳送至現有的執行個體，就會傳遞此訊息。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-145">If the message is bound for an existing instance the message is delivered.</span></span> <span data-ttu-id="ea3b6-146">如果需要建立新的執行個體，則會檢查 Receive 活動的 CanCreateInstance 屬性。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-146">If a new instance needs to be created, the Receive activity’s CanCreateInstance property is checked.</span></span> <span data-ttu-id="ea3b6-147">如果此屬性設定為 true，就會建立新的執行個體並傳遞此訊息。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-147">If it is set to true, a new instance is created and the message is delivered.</span></span>  
   
- 下圖顯示當 <xref:System.ServiceModel.WorkflowServiceHost> 接收要傳送至 CanCreateInstance 設定為 false 之 Receive 活動的訊息時，它所進行的作業。  
+ <span data-ttu-id="ea3b6-148">下圖顯示當 <xref:System.ServiceModel.WorkflowServiceHost> 接收要傳送至 CanCreateInstance 設定為 false 之 Receive 活動的訊息時，它所進行的作業。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-148">The following illustration shows what the <xref:System.ServiceModel.WorkflowServiceHost> does when it receives a message bound for a Receive activity that has CanCreateInstance set to false.</span></span>  
   
- ![WorkflowServiceHost 收到訊息](../../../../docs/framework/wcf/feature-details/media/wfshreceivemessage.gif "WFSHReceiveMessage")  
+ <span data-ttu-id="ea3b6-149">![WorkflowServiceHost 收到訊息](../../../../docs/framework/wcf/feature-details/media/wfshreceivemessage.gif "WFSHReceiveMessage")</span><span class="sxs-lookup"><span data-stu-id="ea3b6-149">![WorkflowServiceHost receives a message](../../../../docs/framework/wcf/feature-details/media/wfshreceivemessage.gif "WFSHReceiveMessage")</span></span>  
   
- 當訊息送達時，就會由 WCF 通道堆疊處理。然後，系統會檢查節流並執行相互關聯查詢。此訊息要傳送至現有的執行個體 \(因為 CanCreateInstance 為 false\)，所以系統會從持續性存放區載入執行個體、繼續使用書籤，然後工作流程便執行。  
+ <span data-ttu-id="ea3b6-150">當訊息送達時，就會由 WCF 通道堆疊處理。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-150">The message arrives and is processed by the WCF channel stack.</span></span> <span data-ttu-id="ea3b6-151">然後，系統會檢查節流並執行相互關聯查詢。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-151">Throttles are checked and correlation queries are executed.</span></span> <span data-ttu-id="ea3b6-152">此訊息要傳送至現有的執行個體 (因為 CanCreateInstance 為 false)，所以系統會從持續性存放區載入執行個體、繼續使用書籤，然後工作流程便執行。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-152">The message is bound for an existing instance (because CanCreateInstance is false) so the instance is loaded from persistence store, the bookmark is resumed and the workflow executes.</span></span>  
   
 > [!WARNING]
->  如果 SQL Server 設定為只在 NamedPipe 通訊協定上接聽，工作流程服務主機將無法開啟。  
+>  <span data-ttu-id="ea3b6-153">如果 SQL Server 設定為只在 NamedPipe 通訊協定上接聽，工作流程服務主機將無法開啟。</span><span class="sxs-lookup"><span data-stu-id="ea3b6-153">Workflow Service Host will fail to open if SQL Server is configured to listen on NamedPipe protocol only.</span></span>  
   
-## 請參閱  
- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [裝載工作流程服務](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)   
- [工作流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)   
- [工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)   
- [HOW TO：以 WorkflowServiceHost 設定工作流程服務的未處理例外狀況行為](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)   
- [建立長期執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)   
- [工作流程持續性](../../../../docs/framework/windows-workflow-foundation//workflow-persistence.md)
+## <a name="see-also"></a><span data-ttu-id="ea3b6-154">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea3b6-154">See Also</span></span>  
+ [<span data-ttu-id="ea3b6-155">工作流程服務</span><span class="sxs-lookup"><span data-stu-id="ea3b6-155">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="ea3b6-156">裝載工作流程服務</span><span class="sxs-lookup"><span data-stu-id="ea3b6-156">Hosting Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
+ [<span data-ttu-id="ea3b6-157">工作流程控制端點</span><span class="sxs-lookup"><span data-stu-id="ea3b6-157">Workflow Control Endpoint</span></span>](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
+ [<span data-ttu-id="ea3b6-158">工作流程管理端點範例</span><span class="sxs-lookup"><span data-stu-id="ea3b6-158">Workflow Management Endpoint Sample</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
+ [<span data-ttu-id="ea3b6-159">如何： 設定工作流程未處理的例外狀況行為以 WorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="ea3b6-159">How to: Configure Workflow Unhandled Exception Behavior with WorkflowServiceHost</span></span>](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [<span data-ttu-id="ea3b6-160">建立長時間執行工作流程服務</span><span class="sxs-lookup"><span data-stu-id="ea3b6-160">Creating a Long-running Workflow Service</span></span>](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+ [<span data-ttu-id="ea3b6-161">工作流程持續性</span><span class="sxs-lookup"><span data-stu-id="ea3b6-161">Workflow Persistence</span></span>](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

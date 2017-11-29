@@ -1,37 +1,21 @@
 ---
-title: "Visual Basic 編譯器訊息 |Microsoft 文件"
-ms.date: 2015-07-20
+title: "Visual Basic 編譯器訊息"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - compiler errors
 - errors [Visual Basic], compiler
 ms.assetid: d50addfb-0683-45e5-8c3c-69a2eb510a19
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1624c3a68bd721003aad8790f4cf86766f5c95fb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2a394f651cbafd1f9487ba208ed01627eb546ee3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="visual-basic-compiler-messages"></a>Visual Basic 編譯器訊息
-本章節包含[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]錯誤訊息發生的編譯時間。
+# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="511c2-102">Visual Basic 編譯器訊息</span><span class="sxs-lookup"><span data-stu-id="511c2-102">Visual Basic Compiler Messages</span></span>
+<span data-ttu-id="511c2-103">本節包含編譯時間發生的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="511c2-103">This section contains the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] error messages that occur at compile time.</span></span>

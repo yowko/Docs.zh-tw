@@ -1,43 +1,47 @@
 ---
-title: "Deprecated types in Windows Workflow Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Windows Workflow Foundation 中被取代的類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 085b0590d08843477c4dff4754791c93110b1fb7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
-# Deprecated types in Windows Workflow Foundation
-在 .NET 4 中，工作流程小組在 <xref:System.Activities> 命名空間中發行了全新的工作流程引擎。  在 .NET 4.5 搶鮮版 \(Beta\) 中，我們將 "WF 3" <xref:System.Workflow.Activities>、<xref:System.Workflow.ComponentModel> 和 <xref:System.Workflow.Runtime> 命名空間中的大部分型別標示為已過時。  
+# <a name="deprecated-types-in-windows-workflow-foundation"></a><span data-ttu-id="be467-102">Windows Workflow Foundation 中被取代的類型</span><span class="sxs-lookup"><span data-stu-id="be467-102">Deprecated types in Windows Workflow Foundation</span></span>
+<span data-ttu-id="be467-103">在 .NET 4 中，工作流程小組在 <xref:System.Activities> 命名空間中發行了全新的工作流程引擎。</span><span class="sxs-lookup"><span data-stu-id="be467-103">In .NET 4 the Workflow Team released an all new Workflow engine in the <xref:System.Activities> namespace.</span></span> <span data-ttu-id="be467-104">.NET 4.5 Beta 版本中，我們要標記的大部分"WF 3"中類型<xref:System.Workflow.Activities>， <xref:System.Workflow.ComponentModel>，和<xref:System.Workflow.Runtime>命名空間為已過時。</span><span class="sxs-lookup"><span data-stu-id="be467-104">With the release of .NET 4.5 Beta we are marking most of the types in the "WF 3" <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, and  <xref:System.Workflow.Runtime> namespaces as obsolete.</span></span>  
   
-## 過時的命名空間和工具  
- 下列組件含有一個或多個將會被取代的公用型別：  
+## <a name="obsolete-namespaces-and-tools"></a><span data-ttu-id="be467-105">過時的命名空間和工具</span><span class="sxs-lookup"><span data-stu-id="be467-105">Obsolete namespaces and tools</span></span>  
+ <span data-ttu-id="be467-106">下列組件含有一個或多個將會被取代的公用型別：</span><span class="sxs-lookup"><span data-stu-id="be467-106">The following assemblies have one or more public types that will be deprecated:</span></span>  
   
--   System.Workflow.Activities.dll  
+-   <span data-ttu-id="be467-107">System.Workflow.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="be467-107">System.Workflow.Activities.dll</span></span>  
   
--   System.Workflow.ComponentModel.dll  
+-   <span data-ttu-id="be467-108">System.Workflow.ComponentModel.dll</span><span class="sxs-lookup"><span data-stu-id="be467-108">System.Workflow.ComponentModel.dll</span></span>  
   
--   System.Workflow.Runtime.dll  
+-   <span data-ttu-id="be467-109">System.Workflow.Runtime.dll</span><span class="sxs-lookup"><span data-stu-id="be467-109">System.Workflow.Runtime.dll</span></span>  
   
--   System.WorkflowServices.dll  
+-   <span data-ttu-id="be467-110">System.WorkflowServices.dll</span><span class="sxs-lookup"><span data-stu-id="be467-110">System.WorkflowServices.dll</span></span>  
   
--   Microsoft.Workflow.DebugController.dll  
+-   <span data-ttu-id="be467-111">Microsoft.Workflow.DebugController.dll</span><span class="sxs-lookup"><span data-stu-id="be467-111">Microsoft.Workflow.DebugController.dll</span></span>  
   
--   Microsoft.Workflow.Compiler.exe  
+-   <span data-ttu-id="be467-112">Microsoft.Workflow.Compiler.exe</span><span class="sxs-lookup"><span data-stu-id="be467-112">Microsoft.Workflow.Compiler.exe</span></span>  
   
--   Wfc.exe  
+-   <span data-ttu-id="be467-113">Wfc.exe</span><span class="sxs-lookup"><span data-stu-id="be467-113">Wfc.exe</span></span>  
   
- 因此，使用已被取代之 WF 3 應用程式開發介面的客戶，將會遇到類似下列訊息的建置警告：  
+ <span data-ttu-id="be467-114">因此，使用已被取代之 WF 3 應用程式開發介面的客戶，將會遇到類似下列訊息的建置警告：</span><span class="sxs-lookup"><span data-stu-id="be467-114">As a result, customers who are using the deprecated WF 3 APIs will encounter build warnings with a message similar to the following:</span></span>  
   
-  **警告 BC40000：X 已過時：WF 3 型別已被取代。  請改用 WF 4。**  在未來的發行版本中，我們會將這些型別從 .NET Framework 移除，但我們尚未決定時間範圍 \(不是在 4.5\)。  目前這個步驟可讓我們向客戶傳達我們的方向，讓他們有大量的時間可以移至新的 WF4 模型。  當然，我們將會依據 [Microsoft 支援週期原則](http://aka.ms/MicrosoftSupportLifecycle)，繼續支援這些 WF 3 型別。  現有的 WF3 應用程式將會在 .NET 4.5 上執行，而不會有問題，而且 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 會支援最新和現有的 WF3 方案。  
+ <span data-ttu-id="be467-115">**警告 BC40000: X 已過時： WF 3 型別已被取代。請改用 WF 4。**</span><span class="sxs-lookup"><span data-stu-id="be467-115">**Warning BC40000: X is obsolete: WF 3 types are deprecated. Please use WF 4 instead.**</span></span> <span data-ttu-id="be467-116">在未來的發行版本中，我們會將這些型別從 .NET Framework 移除，但我們尚未決定時間範圍 (不是在 4.5)。</span><span class="sxs-lookup"><span data-stu-id="be467-116">We will remove the types from the .NET Framework in a future release, but we have not yet determined that timeframe (not in 4.5).</span></span> <span data-ttu-id="be467-117">目前這個步驟可讓我們向客戶傳達我們的方向，讓他們有大量的時間可以移至新的 WF4 模型。</span><span class="sxs-lookup"><span data-stu-id="be467-117">This current step allows us to communicate our direction to our customers and allow them plenty of time to move to the new WF4 model.</span></span> <span data-ttu-id="be467-118">我們將當然，繼續支援這些 WF 3 型別[Microsoft 支援週期原則](http://aka.ms/MicrosoftSupportLifecycle)。</span><span class="sxs-lookup"><span data-stu-id="be467-118">We will, of course, continue to support these WF 3 types under the [Microsoft Support Lifecycle Policy](http://aka.ms/MicrosoftSupportLifecycle).</span></span> <span data-ttu-id="be467-119">現有的 WF3 應用程式將會在 .NET 4.5 上執行，而不會有問題，而且 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 會支援最新和現有的 WF3 方案。</span><span class="sxs-lookup"><span data-stu-id="be467-119">Existing WF3 applications will run without issue on .NET 4.5, and [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] will support new and existing WF3-based solutions.</span></span>  
   
- <xref:System.Workflow.Activities.Rules> 命名空間中與規則相關的型別在 WF 4.5 中並沒有替代項目，所以尚未被取代。  
+ <span data-ttu-id="be467-120"><xref:System.Workflow.Activities.Rules> 命名空間中與規則相關的型別在 WF 4.5 中並沒有替代項目，所以尚未被取代。</span><span class="sxs-lookup"><span data-stu-id="be467-120">Rules related types in the <xref:System.Workflow.Activities.Rules> namespace, which do not have a replacement in WF 4.5, have not been deprecated.</span></span>  
   
- 想要將應用程式移轉到 WF 4 的客戶，可以在 MSDN 上的[工作流程 4 移轉指引](http://aka.ms/WF4MigrationGuidance)文件以及 [WF Codeplex](http://aka.ms/WFCodeplex) 網站上的 [WF 4 移轉套件](http://aka.ms/WF4MigrationKit)中找到說明。
+ <span data-ttu-id="be467-121">客戶想要移轉到 WF 4 其應用程式會尋找說明[工作流程 4 移轉指引](migration-guidance.md)。</span><span class="sxs-lookup"><span data-stu-id="be467-121">Customers who want to migrate their applications to WF 4 will find help in the [Workflow 4 Migration Guidance](migration-guidance.md).</span></span>

@@ -1,75 +1,78 @@
 ---
-title: "如何：回應 Windows Form 應用程式中的字型配置變更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Form, 字型配置變更"
+title: "如何：回應 Windows Forms 應用程式中的字型配置變更"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b2e53df114c491e99e13940ae47a4119bd8da46
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：回應 Windows Form 應用程式中的字型配置變更
-在 Windows 作業系統中，使用者可以變更整個系統的字型設定，讓預設字型看起來大一點或小一點。  對於視障使用者或者需要大型字才能閱讀螢幕上文字的使用者而言，變更這些字型設定是一件很重要的事。  每當字型配置變更時，您可以增加或減小表單和所有內含文字的大小，藉此調整 Windows Form 應用程式，以反應這些變更。  如果您想要讓表單以動態方式反應字型大小的變更，可以在表單中加入程式碼。  
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a><span data-ttu-id="38e9f-102">如何：回應 Windows Forms 應用程式中的字型配置變更</span><span class="sxs-lookup"><span data-stu-id="38e9f-102">How to: Respond to Font Scheme Changes in a Windows Forms Application</span></span>
+<span data-ttu-id="38e9f-103">在 Windows 作業系統中，使用者可以變更全系統字型設定，讓預設字型看起來更大或變小。</span><span class="sxs-lookup"><span data-stu-id="38e9f-103">In the Windows operating systems, a user can change the system-wide font settings to make the default font appear larger or smaller.</span></span> <span data-ttu-id="38e9f-104">變更這些字型設定是重要的是視覺障礙者，並且需要讀取他們的螢幕上文字的較大類型的使用者。</span><span class="sxs-lookup"><span data-stu-id="38e9f-104">Changing these font settings is critical for users who are visually impaired and require larger type to read the text on their screens.</span></span> <span data-ttu-id="38e9f-105">您可以調整 Windows Form 應用程式由增加或減少大小的表單和內含之所有文字的字型配置變更時回應這些變更。</span><span class="sxs-lookup"><span data-stu-id="38e9f-105">You can adjust your Windows Forms application to react to these changes by increasing or decreasing the size of the form and all contained text whenever the font scheme changes.</span></span> <span data-ttu-id="38e9f-106">如果您想要以動態方式容納變更字型大小表單時，您可以將程式碼加入至表單。</span><span class="sxs-lookup"><span data-stu-id="38e9f-106">If you want your form to accommodate changes in font sizes dynamically, you can add code to your form.</span></span>  
   
- 一般而言，Windows Form 使用的預設字型是由 `GetStockObject(DEFAULT_GUI_FONT)` 的 <xref:Microsoft.Win32> 命名空間呼叫所傳回的字型。  只有當螢幕解析度變更時，這個呼叫所傳回的字型才會變更。  如下列程序所示，程式碼必須將預設字型變更為 <xref:System.Drawing.SystemFonts.IconTitleFont%2A> 以回應字型大小的變更。  
+ <span data-ttu-id="38e9f-107">一般而言，Windows Forms 所使用的預設字型是所傳回的字型<xref:Microsoft.Win32>命名空間呼叫`GetStockObject(DEFAULT_GUI_FONT)`。</span><span class="sxs-lookup"><span data-stu-id="38e9f-107">Typically, the default font used by Windows Forms is the font returned by the <xref:Microsoft.Win32> namespace call to `GetStockObject(DEFAULT_GUI_FONT)`.</span></span> <span data-ttu-id="38e9f-108">這個呼叫所傳回的字型僅會變更螢幕解析度變更時。</span><span class="sxs-lookup"><span data-stu-id="38e9f-108">The font returned by this call only changes when the screen resolution changes.</span></span> <span data-ttu-id="38e9f-109">下列程序所示，您的程式碼必須變更預設字型<xref:System.Drawing.SystemFonts.IconTitleFont%2A>來回應以字型大小的變更。</span><span class="sxs-lookup"><span data-stu-id="38e9f-109">As shown in the following procedure, your code must change the default font to <xref:System.Drawing.SystemFonts.IconTitleFont%2A> to respond to changes in font size.</span></span>  
   
-### 若要使用桌面字型並回應字型配置變更  
+### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a><span data-ttu-id="38e9f-110">使用桌面的字型和回應的字型配置變更</span><span class="sxs-lookup"><span data-stu-id="38e9f-110">To use the desktop font and respond to font scheme changes</span></span>  
   
-1.  建立表單，然後將您要的控制項加入至表單。  如需詳細資訊，請參閱 [如何：從命令列建立 Windows Form 應用程式](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)和 [在 Windows Form 上使用的控制項](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)。  
+1.  <span data-ttu-id="38e9f-111">建立您的表單，並加入您想要的控制項。</span><span class="sxs-lookup"><span data-stu-id="38e9f-111">Create your form, and add the controls you want to it.</span></span> <span data-ttu-id="38e9f-112">如需詳細資訊，請參閱[How to： 從命令列建立 Windows Forms 應用程式](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)和[Windows Form 上使用的控制項](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="38e9f-112">For more information, see [How to: Create a Windows Forms Application from the Command Line](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md) and [Controls to Use on Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md).</span></span>  
   
-2.  在程式碼中加入 <xref:Microsoft.Win32> 命名空間的參考。  
+2.  <span data-ttu-id="38e9f-113">將參考加入<xref:Microsoft.Win32>您的程式碼的命名空間。</span><span class="sxs-lookup"><span data-stu-id="38e9f-113">Add a reference to the <xref:Microsoft.Win32> namespace to your code.</span></span>  
   
      [!code-csharp[WinFormsAutoScaling#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
      [!code-vb[WinFormsAutoScaling#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
-3.  將下列程式碼加入至表單的建構函式中，以連結所需的事件處理常式，並變更表單所用的預設字型。  
+3.  <span data-ttu-id="38e9f-114">將下列程式碼加入至表單連結所需的事件處理常式，並變更表單的使用中的預設字型的建構函式。</span><span class="sxs-lookup"><span data-stu-id="38e9f-114">Add the following code to the constructor of your form to hook up required event handlers, and to change the default font in use for the form.</span></span>  
   
      [!code-csharp[WinFormsAutoScaling#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
      [!code-vb[WinFormsAutoScaling#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
-4.  實作 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件的處理常式，這會讓表單在 <xref:Microsoft.Win32.UserPreferenceCategory> 分類變更時自動調整大小。  
+4.  <span data-ttu-id="38e9f-115">實作的處理常式<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>事件，讓自動縮放表單時<xref:Microsoft.Win32.UserPreferenceCategory.Window>類別目錄的變更。</span><span class="sxs-lookup"><span data-stu-id="38e9f-115">Implement a handler for the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event that causes the form to scale automatically when the <xref:Microsoft.Win32.UserPreferenceCategory.Window> category changes.</span></span>  
   
      [!code-csharp[WinFormsAutoScaling#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
      [!code-vb[WinFormsAutoScaling#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
-5.  最後，請實作 <xref:System.Windows.Forms.Form.FormClosing> 事件的處理常式，這會中斷 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件處理常式的連結。  
+5.  <span data-ttu-id="38e9f-116">最後，實作的處理常式<xref:System.Windows.Forms.Form.FormClosing>中斷連結的事件<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="38e9f-116">Finally, implement a handler for the <xref:System.Windows.Forms.Form.FormClosing> event that detaches the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event handler.</span></span>  
   
 > [!IMPORTANT]
->  若沒有加入這個程式碼，應用程式會發生記憶體遺漏現象。  
+>  <span data-ttu-id="38e9f-117">包括此程式碼的失敗會導致您的應用程式會造成記憶體流失。</span><span class="sxs-lookup"><span data-stu-id="38e9f-117">Failure to include this code will cause your application to leak memory.</span></span>  
   
  [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
  [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  編譯並執行程式碼。  
+1.  <span data-ttu-id="38e9f-118">編譯並執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="38e9f-118">Compile and run the code.</span></span>  
   
-### 若要手動變更 Windows XP 的字型配置  
+### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a><span data-ttu-id="38e9f-119">若要手動變更在 Windows XP 中的字型配置</span><span class="sxs-lookup"><span data-stu-id="38e9f-119">To manually change the font scheme in Windows XP</span></span>  
   
-1.  當 Windows Form 應用程式正在執行的時候，在 Windows 桌面上按一下滑鼠右鍵，然後從捷徑功能表中選取 \[**內容**\]。  
+1.  <span data-ttu-id="38e9f-120">當 Windows Forms 應用程式正在執行時，以滑鼠右鍵按一下 Windows 桌面上，然後選擇 **屬性**從捷徑功能表。</span><span class="sxs-lookup"><span data-stu-id="38e9f-120">While your Windows Forms application is running, right-click the Windows desktop and choose **Properties** from the shortcut menu.</span></span>  
   
-2.  在 \[**顯示內容**\] 對話方塊中，按一下 \[**外觀**\] 索引標籤。  
+2.  <span data-ttu-id="38e9f-121">在**顯示屬性**對話方塊中，按一下 [**外觀**] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="38e9f-121">In the **Display Properties** dialog box, click the **Appearance** tab.</span></span>  
   
-3.  從 \[**字型大小**\] 下拉式清單方塊中，選取另一個字型大小。  
+3.  <span data-ttu-id="38e9f-122">從**字型大小**下拉式清單方塊中，選取新字型的大小。</span><span class="sxs-lookup"><span data-stu-id="38e9f-122">From the **Font Size** drop-down list box, select a new font size.</span></span>  
   
-     您會注意到現在表單會反應桌面上字型配置在執行階段的變更。  當使用者在 \[**標準**\]、\[**大型字**\] 和 \[**超大型字**\] 之間變換設定時，表單會變更字型並正確地進行縮放。  
+     <span data-ttu-id="38e9f-123">您會發現表單回應執行階段變更桌面的字型配置中。</span><span class="sxs-lookup"><span data-stu-id="38e9f-123">You will notice that the form now reacts to run time changes in the desktop font scheme.</span></span> <span data-ttu-id="38e9f-124">當使用者變更之間**一般**，**大字型**，和**超大型字**，變更字型的表單，並正確地進行縮放。</span><span class="sxs-lookup"><span data-stu-id="38e9f-124">When the user changes between **Normal**, **Large Fonts**, and **Extra Large Fonts**, the form changes font and scales correctly.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="38e9f-125">範例</span><span class="sxs-lookup"><span data-stu-id="38e9f-125">Example</span></span>  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- 這個程式碼範例中的建構函式包含了對 `InitializeComponent` 的呼叫，這是在 Visual Studio 中建立新的 Windows Form 專案時所定義的。  如果您是在命令列中建置應用程式，請移除這一行程式碼。  
+ <span data-ttu-id="38e9f-126">在此程式碼範例 constructer 包含呼叫`InitializeComponent`，也就是當您在 Visual Studio 中建立新的 Windows Form 專案時定義。</span><span class="sxs-lookup"><span data-stu-id="38e9f-126">The constructer in this code example contains a call to `InitializeComponent`, which is defined when you create a new Windows Forms project in Visual Studio.</span></span> <span data-ttu-id="38e9f-127">如果您要建置命令列上的應用程式，請移除這行程式碼。</span><span class="sxs-lookup"><span data-stu-id="38e9f-127">Remove this line of code if you are building your application on the command line.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>   
- [Windows Form 中的自動縮放比例](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="38e9f-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="38e9f-128">See Also</span></span>  
+ <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  
+ [<span data-ttu-id="38e9f-129">Windows Forms 中的自動縮放比例</span><span class="sxs-lookup"><span data-stu-id="38e9f-129">Automatic Scaling in Windows Forms</span></span>](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)

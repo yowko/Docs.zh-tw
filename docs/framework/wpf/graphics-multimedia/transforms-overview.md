@@ -1,164 +1,166 @@
 ---
-title: "轉換概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "2D 轉換類別"
-  - "類別, 2D 轉換"
-  - "FrameworkElement 物件, 旋轉"
-  - "FrameworkElement 物件, 縮放比例"
-  - "FrameworkElement 物件, 扭曲"
-  - "FrameworkElement 物件, 轉譯"
-  - "轉換類別, 2D"
-  - "轉換, 關於轉換"
-  - "轉換, 關於轉換"
+title: "轉換概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations [WPF], about transformations
+- classes [WPF], 2-D transform
+- transform classes [WPF], 2-D
+- 2-D transform classes
+- FrameworkElement objects [WPF], rotating
+- FrameworkElement objects [WPF], skewing
+- FrameworkElement objects [WPF], translating
+- Transforms [WPF], about Transforms
+- FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fd4e0f65d404e70f441cf2918fd6c50e08ebec79
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 轉換概觀
-本主題說明如何使用 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 類別旋轉、縮放、移動 \(轉換\) 和傾斜 <xref:System.Windows.FrameworkElement> 物件。  
+# <a name="transforms-overview"></a><span data-ttu-id="baf7a-102">轉換概觀</span><span class="sxs-lookup"><span data-stu-id="baf7a-102">Transforms Overview</span></span>
+<span data-ttu-id="baf7a-103">本主題描述如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>旋轉、 縮放、 移動類別 （轉換） 和傾斜<xref:System.Windows.FrameworkElement>物件。</span><span class="sxs-lookup"><span data-stu-id="baf7a-103">This topic describes how to use the [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes to rotate, scale, move (translate), and skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-   
   
 <a name="whatIsATransformSection"></a>   
-## 什麼是轉換  
- <xref:System.Windows.Media.Transform> 會定義如何將某個座標空間的點對應或轉換到另一個座標空間。  此對應關係會由轉換 <xref:System.Windows.Media.Matrix> 描述，這是一個由三個資料列和三個資料行的 <xref:System.Double> 值組成的集合。  
+## <a name="what-is-a-transform"></a><span data-ttu-id="baf7a-104">什麼是轉換？</span><span class="sxs-lookup"><span data-stu-id="baf7a-104">What Is a Transform?</span></span>  
+ <span data-ttu-id="baf7a-105">A<xref:System.Windows.Media.Transform>定義如何對應，或轉換，指向另一個座標空間從一個座標空間。</span><span class="sxs-lookup"><span data-stu-id="baf7a-105">A <xref:System.Windows.Media.Transform> defines how to map, or transform, points from one coordinate space to another coordinate space.</span></span> <span data-ttu-id="baf7a-106">此對應所轉換描述<xref:System.Windows.Media.Matrix>，這是三個資料列集合的三個資料行具有<xref:System.Double>值。</span><span class="sxs-lookup"><span data-stu-id="baf7a-106">This mapping is described by a transformation <xref:System.Windows.Media.Matrix>, which is a collection of three rows with three columns of <xref:System.Double> values.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 使用以資料列為主的矩陣。  向量會以資料列向量表示，而非資料行向量。  
+>  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="baf7a-107"> 使用以資料列為主的矩陣。</span><span class="sxs-lookup"><span data-stu-id="baf7a-107"> uses row-major matrices.</span></span> <span data-ttu-id="baf7a-108">向量會以資料列向量表示，而非資料行向量。</span><span class="sxs-lookup"><span data-stu-id="baf7a-108">Vectors are expressed as row-vectors, not column vectors.</span></span>  
   
- 下表顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 矩陣的結構。  
+ <span data-ttu-id="baf7a-109">下表顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 矩陣的結構。</span><span class="sxs-lookup"><span data-stu-id="baf7a-109">The following table shows the structure of a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] matrix.</span></span>  
   
-### 二維轉換矩陣  
+### <a name="a-2-d-transformation-matrix"></a><span data-ttu-id="baf7a-110">2D 轉換矩陣</span><span class="sxs-lookup"><span data-stu-id="baf7a-110">A 2-D transformation matrix</span></span>  
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> 預設：1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> 預設：0.0|0.0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> 預設：0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> 預設：1.0|0.0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> 預設：0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> 預設：0.0|1.0|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> <span data-ttu-id="baf7a-111">預設：1.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-111">Default: 1.0</span></span>|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> <span data-ttu-id="baf7a-112">預設：0.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-112">Default: 0.0</span></span>|<span data-ttu-id="baf7a-113">0.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-113">0.0</span></span>|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> <span data-ttu-id="baf7a-114">預設：0.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-114">Default: 0.0</span></span>|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> <span data-ttu-id="baf7a-115">預設：1.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-115">Default: 1.0</span></span>|<span data-ttu-id="baf7a-116">0.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-116">0.0</span></span>|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> <span data-ttu-id="baf7a-117">預設：0.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-117">Default: 0.0</span></span>|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> <span data-ttu-id="baf7a-118">預設：0.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-118">Default: 0.0</span></span>|<span data-ttu-id="baf7a-119">1.0</span><span class="sxs-lookup"><span data-stu-id="baf7a-119">1.0</span></span>|  
   
- 藉由操作矩陣值，您可以旋轉、縮放、傾斜和移動 \(轉換\) 物件。  例如，如果您將第三列第一行的值 \(<xref:System.Windows.Media.Matrix.OffsetX%2A> 值\) 改成 100，就可以將物件沿著 X 軸移動 100 個單位。  如果將第二列的第二行的值變更為 3，可以將物件放大成目前高度的三倍。  如果您變更這兩個值，就會將物件沿著 X 軸移動 100 個單位，且高度延伸 3 倍。  由於 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 僅支援仿射轉換，因此右欄中的值一律為 0, 0, 1。  
+ <span data-ttu-id="baf7a-120">透過操作矩陣值，您可以旋轉、縮放、扭曲及移動 (平移) 物件。</span><span class="sxs-lookup"><span data-stu-id="baf7a-120">By manipulating matrix values, you can rotate, scale, skew, and move (translate) an object.</span></span> <span data-ttu-id="baf7a-121">例如，如果您變更了第三個資料列的第一個資料行中的值 (<xref:System.Windows.Media.Matrix.OffsetX%2A>值) 為 100，您可以使用它移動物件 100 單位沿著 x 軸。</span><span class="sxs-lookup"><span data-stu-id="baf7a-121">For example, if you change the value in the first column of the third row (the <xref:System.Windows.Media.Matrix.OffsetX%2A> value) to 100, you can use it to move an object 100 units along the x-axis.</span></span> <span data-ttu-id="baf7a-122">如果您將第二個資料列的第二個資料行中的值變更為 3，則您可以使用它將物件伸展至其目前高度的三倍。</span><span class="sxs-lookup"><span data-stu-id="baf7a-122">If you change the value in the second column of the second row to 3, you can use it to stretch an object to three times its current height.</span></span> <span data-ttu-id="baf7a-123">如果您同時變更這兩個值，您可以將物件沿著 x 軸移動 100 單位並將其高度伸展為 3 倍。</span><span class="sxs-lookup"><span data-stu-id="baf7a-123">If you change both values, you move the object 100 units along the x-axis and stretch its height by a factor of 3.</span></span> <span data-ttu-id="baf7a-124">因為 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 只支援仿射轉換，右側資料行中的值一律是 0、0、1。</span><span class="sxs-lookup"><span data-stu-id="baf7a-124">Because [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] only supports affine transforms, the values in the right column are always 0, 0, 1.</span></span>  
   
- 雖然 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 可讓您直接操作矩陣值，但它也提供多個 <xref:System.Windows.Media.Transform> 類別，無須知道基礎矩陣結構的設定方式，就可以轉換物件。  例如，<xref:System.Windows.Media.ScaleTransform> 類別可讓您設定其 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 和 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 屬性來縮放物件，而無須操作轉換矩陣。  同樣地，只要設定 <xref:System.Windows.Media.RotateTransform> 類別的 <xref:System.Windows.Media.RotateTransform.Angle%2A> 屬性，就可以旋轉物件。  
+ <span data-ttu-id="baf7a-125">雖然[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]可讓您直接管理矩陣的值，它也提供數個<xref:System.Windows.Media.Transform>類別，可讓您不需要知道基礎矩陣結構的設定方式轉換物件。</span><span class="sxs-lookup"><span data-stu-id="baf7a-125">Although [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] enables you to directly manipulate matrix values, it also provides several <xref:System.Windows.Media.Transform> classes that enable you to transform an object without knowing how the underlying matrix structure is configured.</span></span> <span data-ttu-id="baf7a-126">例如，<xref:System.Windows.Media.ScaleTransform>類別可讓您藉由設定縮放物件及其<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>屬性，而不是管理的轉換矩陣。</span><span class="sxs-lookup"><span data-stu-id="baf7a-126">For example, the <xref:System.Windows.Media.ScaleTransform> class enables you to scale an object by setting its <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> properties, instead of manipulating a transformation matrix.</span></span> <span data-ttu-id="baf7a-127">同樣地，<xref:System.Windows.Media.RotateTransform>類別可讓您旋轉物件直接設定其<xref:System.Windows.Media.RotateTransform.Angle%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="baf7a-127">Likewise, the <xref:System.Windows.Media.RotateTransform> class enables you to rotate an object by just setting its <xref:System.Windows.Media.RotateTransform.Angle%2A> property.</span></span>  
   
 <a name="transformClassesSection"></a>   
-## 轉換類別  
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 針對常見的轉換操作，提供下列 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 類別：  
+## <a name="transform-classes"></a><span data-ttu-id="baf7a-128">轉換類別</span><span class="sxs-lookup"><span data-stu-id="baf7a-128">Transform Classes</span></span>  
+ [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="baf7a-129">提供下列[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>一般轉換作業的類別：</span><span class="sxs-lookup"><span data-stu-id="baf7a-129"> provides the following [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes for common transformation operations:</span></span>  
   
-|類別|描述|範例|示意圖|  
-|--------|--------|--------|---------|  
-|<xref:System.Windows.Media.RotateTransform>|以指定的 <xref:System.Windows.Media.RotateTransform.Angle%2A> 旋轉項目。|[旋轉物件](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)||  
-|<xref:System.Windows.Media.ScaleTransform>|以指定的 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 和 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 大小縮放項目。|[縮放項目](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)||  
-|<xref:System.Windows.Media.SkewTransform>|以指定的 <xref:System.Windows.Media.SkewTransform.AngleX%2A> 和 <xref:System.Windows.Media.SkewTransform.AngleY%2A> 角度傾斜項目。|[傾斜項目](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)||  
-|<xref:System.Windows.Media.TranslateTransform>|以指定的 <xref:System.Windows.Media.TranslateTransform.X%2A> 和 <xref:System.Windows.Media.TranslateTransform.Y%2A> 單位移動 \(轉換\) 項目。|[轉譯項目](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)||  
+|<span data-ttu-id="baf7a-130">類別</span><span class="sxs-lookup"><span data-stu-id="baf7a-130">Class</span></span>|<span data-ttu-id="baf7a-131">描述</span><span class="sxs-lookup"><span data-stu-id="baf7a-131">Description</span></span>|<span data-ttu-id="baf7a-132">範例</span><span class="sxs-lookup"><span data-stu-id="baf7a-132">Example</span></span>|<span data-ttu-id="baf7a-133">圖例</span><span class="sxs-lookup"><span data-stu-id="baf7a-133">Illustration</span></span>|  
+|-----------|-----------------|-------------|------------------|  
+|<xref:System.Windows.Media.RotateTransform>|<span data-ttu-id="baf7a-134">項目以指定方向旋轉<xref:System.Windows.Media.RotateTransform.Angle%2A>。</span><span class="sxs-lookup"><span data-stu-id="baf7a-134">Rotates an element by the specified <xref:System.Windows.Media.RotateTransform.Angle%2A>.</span></span>|[<span data-ttu-id="baf7a-135">旋轉物件</span><span class="sxs-lookup"><span data-stu-id="baf7a-135">Rotate an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|<span data-ttu-id="baf7a-136">![旋轉圖例](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")</span><span class="sxs-lookup"><span data-stu-id="baf7a-136">![Rotate illustration](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")</span></span>|  
+|<xref:System.Windows.Media.ScaleTransform>|<span data-ttu-id="baf7a-137">調整項目指定<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>金額。</span><span class="sxs-lookup"><span data-stu-id="baf7a-137">Scales an element by the specified <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> amounts.</span></span>|[<span data-ttu-id="baf7a-138">縮放元素</span><span class="sxs-lookup"><span data-stu-id="baf7a-138">Scale an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|<span data-ttu-id="baf7a-139">![縮放圖例](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")</span><span class="sxs-lookup"><span data-stu-id="baf7a-139">![Scale illustration](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")</span></span>|  
+|<xref:System.Windows.Media.SkewTransform>|<span data-ttu-id="baf7a-140">扭曲項目指定<xref:System.Windows.Media.SkewTransform.AngleX%2A>和<xref:System.Windows.Media.SkewTransform.AngleY%2A>金額。</span><span class="sxs-lookup"><span data-stu-id="baf7a-140">Skews an element by the specified <xref:System.Windows.Media.SkewTransform.AngleX%2A> and <xref:System.Windows.Media.SkewTransform.AngleY%2A> amounts.</span></span>|[<span data-ttu-id="baf7a-141">扭曲元素</span><span class="sxs-lookup"><span data-stu-id="baf7a-141">Skew an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|<span data-ttu-id="baf7a-142">![扭曲圖例](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")</span><span class="sxs-lookup"><span data-stu-id="baf7a-142">![Skew illustration](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")</span></span>|  
+|<xref:System.Windows.Media.TranslateTransform>|<span data-ttu-id="baf7a-143">移動 （轉譯） 所指定的項目<xref:System.Windows.Media.TranslateTransform.X%2A>和<xref:System.Windows.Media.TranslateTransform.Y%2A>金額。</span><span class="sxs-lookup"><span data-stu-id="baf7a-143">Moves (translates) an element by the specified <xref:System.Windows.Media.TranslateTransform.X%2A> and <xref:System.Windows.Media.TranslateTransform.Y%2A> amounts.</span></span>|[<span data-ttu-id="baf7a-144">平移元素</span><span class="sxs-lookup"><span data-stu-id="baf7a-144">Translate an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|<span data-ttu-id="baf7a-145">![平移圖例](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")</span><span class="sxs-lookup"><span data-stu-id="baf7a-145">![Translate illustration](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")</span></span>|  
   
- 如需建立更複雜的轉換，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 則提供了下列兩個類別：  
+ <span data-ttu-id="baf7a-146">若要建立更複雜的轉換，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 提供下列兩個類別：</span><span class="sxs-lookup"><span data-stu-id="baf7a-146">For creating more complex transformations, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] provides the following two classes:</span></span>  
   
-|類別|描述|範例|  
-|--------|--------|--------|  
-|<xref:System.Windows.Media.TransformGroup>|將多個 <xref:System.Windows.Media.TransformGroup> 物件組成單一 <xref:System.Windows.Media.Transform>，然後再套用轉換屬性。|[套用多重轉換至物件](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|建立其他 <xref:System.Windows.Media.Transform> 類別沒有提供的自訂轉換。  當您使用 <xref:System.Windows.Media.MatrixTransform> 時，是直接操作矩陣。|[使用 MatrixTransform 建立自訂轉換](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<span data-ttu-id="baf7a-147">類別</span><span class="sxs-lookup"><span data-stu-id="baf7a-147">Class</span></span>|<span data-ttu-id="baf7a-148">描述</span><span class="sxs-lookup"><span data-stu-id="baf7a-148">Description</span></span>|<span data-ttu-id="baf7a-149">範例</span><span class="sxs-lookup"><span data-stu-id="baf7a-149">Example</span></span>|  
+|-----------|-----------------|-------------|  
+|<xref:System.Windows.Media.TransformGroup>|<span data-ttu-id="baf7a-150">群組多個<xref:System.Windows.Media.TransformGroup>物件到單一<xref:System.Windows.Media.Transform>您可以再套用轉換屬性。</span><span class="sxs-lookup"><span data-stu-id="baf7a-150">Groups multiple <xref:System.Windows.Media.TransformGroup> objects into a single <xref:System.Windows.Media.Transform> that you can then apply to transform properties.</span></span>|[<span data-ttu-id="baf7a-151">將多個轉換套用至物件</span><span class="sxs-lookup"><span data-stu-id="baf7a-151">Apply Multiple Transforms to an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|<span data-ttu-id="baf7a-152">建立自訂的轉換不提供其他<xref:System.Windows.Media.Transform>類別。</span><span class="sxs-lookup"><span data-stu-id="baf7a-152">Creates custom transformations that are not provided by the other <xref:System.Windows.Media.Transform> classes.</span></span> <span data-ttu-id="baf7a-153">當您使用<xref:System.Windows.Media.MatrixTransform>，直接操作矩陣。</span><span class="sxs-lookup"><span data-stu-id="baf7a-153">When you use a <xref:System.Windows.Media.MatrixTransform>, you manipulate a Matrix directly.</span></span>|[<span data-ttu-id="baf7a-154">使用 MatrixTransform 建立自訂轉換</span><span class="sxs-lookup"><span data-stu-id="baf7a-154">Use a MatrixTransform to Create Custom Transforms</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 也提供[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]轉換。  如需詳細資訊，請參閱 <xref:System.Windows.Media.Media3D.Transform3D> 類別。  
+ [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="baf7a-155"> 也提供 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 轉換。</span><span class="sxs-lookup"><span data-stu-id="baf7a-155"> also provides [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] transformations.</span></span> <span data-ttu-id="baf7a-156">如需詳細資訊，請參閱 <xref:System.Windows.Media.Media3D.Transform3D> 類別。</span><span class="sxs-lookup"><span data-stu-id="baf7a-156">For more information, see the <xref:System.Windows.Media.Media3D.Transform3D> class.</span></span>  
   
 <a name="transformationproperties"></a>   
-## 常見轉換屬性  
- 轉換物件的一個方法就是宣告適當的 <xref:System.Windows.Media.Transform> 型別，然後將它套用到物件的轉換屬性。  物件的型別不同，轉換屬性也不同。  下表列出幾個常用的 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 型別及其轉換屬性。  
+## <a name="common-transformation-properties"></a><span data-ttu-id="baf7a-157">常見轉換屬性</span><span class="sxs-lookup"><span data-stu-id="baf7a-157">Common Transformation Properties</span></span>  
+ <span data-ttu-id="baf7a-158">轉換物件的其中一種方式是宣告適當<xref:System.Windows.Media.Transform>輸入，並將它套用至轉換物件的屬性。</span><span class="sxs-lookup"><span data-stu-id="baf7a-158">One way to transform an object is to declare the appropriate <xref:System.Windows.Media.Transform> type and apply it to the transformation property of the object.</span></span> <span data-ttu-id="baf7a-159">不同類型的物件擁有不同類型的轉換屬性。</span><span class="sxs-lookup"><span data-stu-id="baf7a-159">Different types of objects have different types of transformation properties.</span></span> <span data-ttu-id="baf7a-160">下表列出數個常用的 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 類型和其轉換屬性。</span><span class="sxs-lookup"><span data-stu-id="baf7a-160">The following table lists several commonly used [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] types and their transformation properties.</span></span>  
   
-|型別|轉換屬性|  
-|--------|----------|  
-|<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>, <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
+|<span data-ttu-id="baf7a-161">類型</span><span class="sxs-lookup"><span data-stu-id="baf7a-161">Type</span></span>|<span data-ttu-id="baf7a-162">轉換屬性</span><span class="sxs-lookup"><span data-stu-id="baf7a-162">Transformation properties</span></span>|  
+|----------|-------------------------------|  
+|<xref:System.Windows.Media.Brush>|<span data-ttu-id="baf7a-163"><xref:System.Windows.Media.Brush.Transform%2A>, <xref:System.Windows.Media.Brush.RelativeTransform%2A></span><span class="sxs-lookup"><span data-stu-id="baf7a-163"><xref:System.Windows.Media.Brush.Transform%2A>, <xref:System.Windows.Media.Brush.RelativeTransform%2A></span></span>|  
 |<xref:System.Windows.Media.ContainerVisual>|<xref:System.Windows.Media.ContainerVisual.Transform%2A>|  
 |<xref:System.Windows.Media.DrawingGroup>|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|  
-|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.UIElement.RenderTransform%2A>, <xref:System.Windows.FrameworkElement.LayoutTransform%2A>|  
+|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="baf7a-164"><xref:System.Windows.UIElement.RenderTransform%2A>, <xref:System.Windows.FrameworkElement.LayoutTransform%2A></span><span class="sxs-lookup"><span data-stu-id="baf7a-164"><xref:System.Windows.UIElement.RenderTransform%2A>, <xref:System.Windows.FrameworkElement.LayoutTransform%2A></span></span>|  
 |<xref:System.Windows.Media.Geometry>|<xref:System.Windows.Media.Geometry.Transform%2A>|  
 |<xref:System.Windows.Media.TextEffect>|<xref:System.Windows.Media.TextEffect.Transform%2A>|  
 |<xref:System.Windows.UIElement>|<xref:System.Windows.UIElement.RenderTransform%2A>|  
   
 <a name="transformcenter"></a>   
-## 轉換和座標系統  
- 當您轉換物件時，不只轉換物件本身，同時也轉換了物件所在的座標空間。  根據預設，轉換會置於目標物件座標系統原點的中央：\(0,0\)。  唯一的例外是 <xref:System.Windows.Media.TranslateTransform>，<xref:System.Windows.Media.TranslateTransform> 沒有置中屬性可設定，因為不論位於何處的中央，轉換效果都相同。  
+## <a name="transformations-and-coordinate-systems"></a><span data-ttu-id="baf7a-165">轉換和座標系統</span><span class="sxs-lookup"><span data-stu-id="baf7a-165">Transformations and Coordinate Systems</span></span>  
+ <span data-ttu-id="baf7a-166">當您轉換物件時，您不只是轉換物件，也同時轉換該物件所在的座標空間。</span><span class="sxs-lookup"><span data-stu-id="baf7a-166">When you transform an object, you do not just transform the object, you transform coordinate space in which that object exists.</span></span> <span data-ttu-id="baf7a-167">根據預設，轉換會以目標物件之座標系統的原點為中心：(0,0)。</span><span class="sxs-lookup"><span data-stu-id="baf7a-167">By default, a transform is centered at the origin of the target object's coordinate system: (0,0).</span></span> <span data-ttu-id="baf7a-168">唯一的例外是<xref:System.Windows.Media.TranslateTransform>;<xref:System.Windows.Media.TranslateTransform>沒有設定，因為轉譯效果是，它會置中相同的中心屬性。</span><span class="sxs-lookup"><span data-stu-id="baf7a-168">The only exception is <xref:System.Windows.Media.TranslateTransform>; a <xref:System.Windows.Media.TranslateTransform> has no center properties to set because the translation effect is the same regardless of where it is centered.</span></span>  
   
- 下列範例使用 <xref:System.Windows.Media.RotateTransform>，以預設中心 \(0, 0\) 為準，旋轉 <xref:System.Windows.Shapes.Rectangle> 項目 \(<xref:System.Windows.FrameworkElement> 的一種\) 45 度角。  下圖顯示旋轉的效果。  
+ <span data-ttu-id="baf7a-169">下列範例會使用<xref:System.Windows.Media.RotateTransform>旋轉<xref:System.Windows.Shapes.Rectangle>元素中，一種<xref:System.Windows.FrameworkElement>，旋轉 45 度預設中心，（0，0）。</span><span class="sxs-lookup"><span data-stu-id="baf7a-169">The following example uses a <xref:System.Windows.Media.RotateTransform> to rotate a <xref:System.Windows.Shapes.Rectangle> element, a type of <xref:System.Windows.FrameworkElement>, by 45 degrees about its default center, (0, 0).</span></span> <span data-ttu-id="baf7a-170">下圖顯示旋轉的效果。</span><span class="sxs-lookup"><span data-stu-id="baf7a-170">The following illustration shows the effect of the rotation.</span></span>  
   
- ![對 &#40;0,0&#41; 旋轉 45 度的 FrameworkElement](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm\_FE\_rotated\_about\_upperleft\_corner")  
-矩形項目以點 \(0,0\) 為準旋轉 45 度角  
+ <span data-ttu-id="baf7a-171">![旋轉 45 度的 FrameworkElement &#40; 0，0 &#41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")</span><span class="sxs-lookup"><span data-stu-id="baf7a-171">![A FrameworkElement rotated 45 degrees about &#40;0,0&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")</span></span>  
+<span data-ttu-id="baf7a-172">以點 (0,0) 為中心旋轉 45 度的矩形元素</span><span class="sxs-lookup"><span data-stu-id="baf7a-172">A Rectangle element rotated 45 degrees about the point (0,0)</span></span>  
   
- [!code-xml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
   
- 根據預設，項目會以左上角 \(0, 0\) 為中心來旋轉。  <xref:System.Windows.Media.RotateTransform>、<xref:System.Windows.Media.ScaleTransform> 和 <xref:System.Windows.Media.SkewTransform> 類別提供 CenterX 和 CenterY 屬性，可讓您設定套用轉換的點。  
+ <span data-ttu-id="baf7a-173">根據預設，元素會以其左上角 (0, 0) 為中心旋轉。</span><span class="sxs-lookup"><span data-stu-id="baf7a-173">By default, the element rotates about its upper-left corner, (0, 0).</span></span> <span data-ttu-id="baf7a-174"><xref:System.Windows.Media.RotateTransform>， <xref:System.Windows.Media.ScaleTransform>，和<xref:System.Windows.Media.SkewTransform>類別提供 CenterX 和 CenterY 屬性，可讓您指定套用轉換的點。</span><span class="sxs-lookup"><span data-stu-id="baf7a-174">The <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform>, and <xref:System.Windows.Media.SkewTransform> classes provide CenterX and CenterY properties that enable you to specify the point at which the transform is applied.</span></span>  
   
- 下面的範例也使用 <xref:System.Windows.Media.RotateTransform> 旋轉 <xref:System.Windows.Shapes.Rectangle> 項目 45 度角，不過，這次會設定 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 和 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 屬性，讓 <xref:System.Windows.Media.RotateTransform> 的中心成為 \(25, 25\)。  下圖顯示旋轉的效果。  
+ <span data-ttu-id="baf7a-175">下一個範例也會使用<xref:System.Windows.Media.RotateTransform>旋轉<xref:System.Windows.Shapes.Rectangle>旋轉 45 度; 的項目不過，這次<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>屬性會設定讓<xref:System.Windows.Media.RotateTransform>具有的中心 （25，25）。</span><span class="sxs-lookup"><span data-stu-id="baf7a-175">The next example also uses a <xref:System.Windows.Media.RotateTransform> to rotate a <xref:System.Windows.Shapes.Rectangle> element by 45 degrees; however, this time the <xref:System.Windows.Media.RotateTransform.CenterX%2A> and <xref:System.Windows.Media.RotateTransform.CenterY%2A> properties are set so that the <xref:System.Windows.Media.RotateTransform> has a center of (25, 25).</span></span> <span data-ttu-id="baf7a-176">下圖顯示旋轉的效果。</span><span class="sxs-lookup"><span data-stu-id="baf7a-176">The following illustration shows the effect of the rotation.</span></span>  
   
- ![以 &#40;25, 25&#41; 為中心旋轉 45 度的幾何圖形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm\_FE\_rotated\_about\_center")  
-矩形項目以點 \(25, 25\) 為準旋轉 45 度角  
+ <span data-ttu-id="baf7a-177">![旋轉 45 度 &#40; 的幾何 25，25 &#41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")</span><span class="sxs-lookup"><span data-stu-id="baf7a-177">![A Geometry rotated 45 degrees about &#40;25, 25&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")</span></span>  
+<span data-ttu-id="baf7a-178">以點 (25, 25) 為中心旋轉 45 度的矩形元素</span><span class="sxs-lookup"><span data-stu-id="baf7a-178">A Rectangle element rotated 45 degrees about the point (25, 25)</span></span>  
   
- [!code-xml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
   
 <a name="layoutTransformsAndRenderTransformsSection"></a>   
-## 轉換 FrameworkElement  
- 若要將轉換套用到 <xref:System.Windows.FrameworkElement>，請建立 <xref:System.Windows.Media.Transform> 並將它套用到 <xref:System.Windows.FrameworkElement> 類別提供的兩個屬性的其中一個：  
+## <a name="transforming-a-frameworkelement"></a><span data-ttu-id="baf7a-179">轉換 FrameworkElement</span><span class="sxs-lookup"><span data-stu-id="baf7a-179">Transforming a FrameworkElement</span></span>  
+ <span data-ttu-id="baf7a-180">若要套用的轉換， <xref:System.Windows.FrameworkElement>，建立<xref:System.Windows.Media.Transform>並將它套用到兩個屬性的其中一個，<xref:System.Windows.FrameworkElement>類別提供：</span><span class="sxs-lookup"><span data-stu-id="baf7a-180">To apply transformations to a <xref:System.Windows.FrameworkElement>, create a <xref:System.Windows.Media.Transform> and apply it to one of the two properties that the <xref:System.Windows.FrameworkElement> class provides:</span></span>  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A>：在配置傳遞前套用的轉換。  套用轉換之後，版面配置系統會處理項目的轉換後大小和位置。  
+-   <span data-ttu-id="baf7a-181"><xref:System.Windows.FrameworkElement.LayoutTransform%2A>– 套用之前在配置階段轉換。</span><span class="sxs-lookup"><span data-stu-id="baf7a-181"><xref:System.Windows.FrameworkElement.LayoutTransform%2A> – A transform that is applied before the layout pass.</span></span> <span data-ttu-id="baf7a-182">套用轉換之後，版面配置系統會處理已轉換的元素大小和位置。</span><span class="sxs-lookup"><span data-stu-id="baf7a-182">After the transform is applied, the layout system processes the transformed size and position of the element.</span></span>  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A>：修改項目外觀的轉換，但會在版面配置傳遞完成後套用。  使用 <xref:System.Windows.UIElement.RenderTransform%2A> 屬性代替 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 屬性有助於改善效能。  
+-   <span data-ttu-id="baf7a-183"><xref:System.Windows.UIElement.RenderTransform%2A>– 修改項目的外觀，但是配置傳遞之後，會套用的轉換已完成。</span><span class="sxs-lookup"><span data-stu-id="baf7a-183"><xref:System.Windows.UIElement.RenderTransform%2A> – A transform that modifies the appearance of the element but is applied after the layout pass is complete.</span></span> <span data-ttu-id="baf7a-184">使用<xref:System.Windows.UIElement.RenderTransform%2A>屬性而非<xref:System.Windows.FrameworkElement.LayoutTransform%2A>屬性，您可以取得效能優勢。</span><span class="sxs-lookup"><span data-stu-id="baf7a-184">By using the <xref:System.Windows.UIElement.RenderTransform%2A> property instead of the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property, you can obtain performance benefits.</span></span>  
   
- 那麼應該使用哪個屬性？  由於具備效能優點，請盡量使用 <xref:System.Windows.UIElement.RenderTransform%2A> 屬性，特別是使用動畫 <xref:System.Windows.Media.Transform> 物件時。  但若在縮放、旋轉或傾斜項目時，需要項目的父項調整成項目轉換後的大小，請使用 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 屬性。  請注意，與 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 屬性一起使用時，<xref:System.Windows.Media.TranslateTransform> 物件看起來似乎對項目沒有作用。  這是因為版面配置系統在處理時，會將轉換後的項目傳回原始位置。  
+ <span data-ttu-id="baf7a-185">您應該使用哪個屬性？</span><span class="sxs-lookup"><span data-stu-id="baf7a-185">Which property should you use?</span></span> <span data-ttu-id="baf7a-186">因為它會提供效能優勢，使用<xref:System.Windows.UIElement.RenderTransform%2A>屬性只要可能，特別是當您使用動畫顯示<xref:System.Windows.Media.Transform>物件。</span><span class="sxs-lookup"><span data-stu-id="baf7a-186">Because of the performance benefits that it provides, use the <xref:System.Windows.UIElement.RenderTransform%2A> property whenever possible, especially when you use animated <xref:System.Windows.Media.Transform> objects.</span></span> <span data-ttu-id="baf7a-187">使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>縮放、 旋轉，或扭曲時的屬性，且需要項目的父項目的轉換後的大小調整。</span><span class="sxs-lookup"><span data-stu-id="baf7a-187">Use the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property when scaling, rotating, or skewing and you need the  parent of the element to adjust to the transformed size of the element.</span></span> <span data-ttu-id="baf7a-188">請注意，搭配使用時<xref:System.Windows.FrameworkElement.LayoutTransform%2A>屬性，<xref:System.Windows.Media.TranslateTransform>物件會出現在項目上沒有作用。</span><span class="sxs-lookup"><span data-stu-id="baf7a-188">Note that, when they are used with the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property, <xref:System.Windows.Media.TranslateTransform> objects appear to have no effect on elements.</span></span> <span data-ttu-id="baf7a-189">這是因為版面配置系統會在其處理期間將已平移元素移回到其原始位置。</span><span class="sxs-lookup"><span data-stu-id="baf7a-189">That is because the layout system returns the translated element to its original position as part of its processing.</span></span>  
   
- 如需 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 版面配置的詳細資訊，請參閱[配置](../../../../docs/framework/wpf/advanced/layout.md)概觀。  
+ <span data-ttu-id="baf7a-190">如需有關 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中版面配置的詳細資訊，請參閱[版面配置](../../../../docs/framework/wpf/advanced/layout.md)概觀。</span><span class="sxs-lookup"><span data-stu-id="baf7a-190">For additional information about layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], see [Layout](../../../../docs/framework/wpf/advanced/layout.md) overview.</span></span>  
   
 <a name="exampleRotateAnElement45degSection"></a>   
-## 範例：旋轉 FrameworkElement 45 度角  
- 下列範例會使用 <xref:System.Windows.Media.RotateTransform> 順時針旋轉按鈕 45 度。  此按鈕包含在還有其他兩個按鈕的 <xref:System.Windows.Controls.StackPanel> 中。  
+## <a name="example-rotate-a-frameworkelement-45-degrees"></a><span data-ttu-id="baf7a-191">範例︰將 FrameworkElement 旋轉 45 度</span><span class="sxs-lookup"><span data-stu-id="baf7a-191">Example: Rotate a FrameworkElement 45 Degrees</span></span>  
+ <span data-ttu-id="baf7a-192">下列範例會使用<xref:System.Windows.Media.RotateTransform>順時針方向按鈕旋轉 45 度。</span><span class="sxs-lookup"><span data-stu-id="baf7a-192">The following example uses a <xref:System.Windows.Media.RotateTransform> to rotate a button clockwise by 45 degrees.</span></span> <span data-ttu-id="baf7a-193">中包含按鈕<xref:System.Windows.Controls.StackPanel>，有兩個其他按鈕。</span><span class="sxs-lookup"><span data-stu-id="baf7a-193">The button is contained in a <xref:System.Windows.Controls.StackPanel> that has two other buttons.</span></span>  
   
- 根據預設，<xref:System.Windows.Media.RotateTransform> 會以點 \(0, 0\) 為中心旋轉。  由於範例沒有指定中心值，按鈕會以點 \(0, 0\)，也就是左上角為中心旋轉。  <xref:System.Windows.Media.RotateTransform> 會套用到 <xref:System.Windows.UIElement.RenderTransform%2A> 屬性。  下圖顯示轉換的結果。  
+ <span data-ttu-id="baf7a-194">根據預設，<xref:System.Windows.Media.RotateTransform>旋轉的點 （0，0）。</span><span class="sxs-lookup"><span data-stu-id="baf7a-194">By default, a <xref:System.Windows.Media.RotateTransform> rotates about the point (0, 0).</span></span> <span data-ttu-id="baf7a-195">因為範例沒有指定中心值，所以按鈕會以點 (0, 0) (也就是左上角) 為中心旋轉。</span><span class="sxs-lookup"><span data-stu-id="baf7a-195">Because the example does not specify a center value, the button rotates about the point (0, 0), which is its upper-left corner.</span></span> <span data-ttu-id="baf7a-196"><xref:System.Windows.Media.RotateTransform>套用至<xref:System.Windows.UIElement.RenderTransform%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="baf7a-196">The <xref:System.Windows.Media.RotateTransform> is applied to the <xref:System.Windows.UIElement.RenderTransform%2A> property.</span></span> <span data-ttu-id="baf7a-197">下圖顯示轉換的結果。</span><span class="sxs-lookup"><span data-stu-id="baf7a-197">The following illustration shows the result of the transformation.</span></span>  
   
- ![使用 RenderTransform 經過轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm\_RenderTransformWithDefaultCenter")  
-從左上角順時針旋轉 45 度  
+ <span data-ttu-id="baf7a-198">![使用 rendertransform 經過轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")</span><span class="sxs-lookup"><span data-stu-id="baf7a-198">![A button transformed using RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")</span></span>  
+<span data-ttu-id="baf7a-199">以左上角為中心順時針旋轉 45 度</span><span class="sxs-lookup"><span data-stu-id="baf7a-199">Clockwise rotation 45 degrees from upper-left corner</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
- 下面範例也使用 <xref:System.Windows.Media.RotateTransform> 旋轉順時針旋轉按鈕 45 度，但同時也將按鈕的 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 設為 \(0.5, 0.5\)。  <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 屬性的值是與按鈕的大小相對的。  因此，旋轉會套用到按鈕的中心，而非左上角。  下圖顯示轉換的結果。  
+ <span data-ttu-id="baf7a-200">下一個範例也會使用<xref:System.Windows.Media.RotateTransform>旋轉 45 度順時鐘方向的按鈕，但它也設定<xref:System.Windows.UIElement.RenderTransformOrigin%2A>按鈕的 （0.5，0.5）。</span><span class="sxs-lookup"><span data-stu-id="baf7a-200">The next example also uses a <xref:System.Windows.Media.RotateTransform> to rotate a button 45 degrees clockwise, but it also sets the <xref:System.Windows.UIElement.RenderTransformOrigin%2A> of the button to (0.5, 0.5).</span></span> <span data-ttu-id="baf7a-201">值<xref:System.Windows.UIElement.RenderTransformOrigin%2A>屬性是相對於按鈕的大小。</span><span class="sxs-lookup"><span data-stu-id="baf7a-201">The value of the <xref:System.Windows.UIElement.RenderTransformOrigin%2A> property is relative to the size of the button.</span></span> <span data-ttu-id="baf7a-202">因此，旋轉會套用到按鈕的中心，而非其左上角。</span><span class="sxs-lookup"><span data-stu-id="baf7a-202">As a result, the rotation is applied to the center of the button, instead of its upper-left corner.</span></span> <span data-ttu-id="baf7a-203">下圖顯示轉換的結果。</span><span class="sxs-lookup"><span data-stu-id="baf7a-203">The following illustration shows the result of the transformation.</span></span>  
   
- ![對其中心轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm\_RenderTransformRelativeCenter")  
-以中心為準順時針旋轉 45 度  
+ <span data-ttu-id="baf7a-204">![對其中心轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")</span><span class="sxs-lookup"><span data-stu-id="baf7a-204">![A button transformed about its center](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")</span></span>  
+<span data-ttu-id="baf7a-205">圍繞中心順時針旋轉 45 度</span><span class="sxs-lookup"><span data-stu-id="baf7a-205">Clockwise rotation 45 degrees around center</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- 下列範例會使用 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 屬性 \(而非 <xref:System.Windows.UIElement.RenderTransform%2A> 屬性\) 旋轉按鈕。  這會使轉換影響按鈕的版面配置，觸發版面配置系統完全傳遞。  因此，按鈕會旋轉再重新調整位置，因為其大小已經變更。  下圖顯示轉換的結果。  
+ <span data-ttu-id="baf7a-206">下列範例會使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>屬性而非<xref:System.Windows.UIElement.RenderTransform%2A>旋轉按鈕的屬性。</span><span class="sxs-lookup"><span data-stu-id="baf7a-206">The following example uses the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property instead of the <xref:System.Windows.UIElement.RenderTransform%2A> property to rotate the button.</span></span>  <span data-ttu-id="baf7a-207">這會使轉換影響按鈕的版面配置，這會觸發版面配置系統的完整作業。</span><span class="sxs-lookup"><span data-stu-id="baf7a-207">This causes the transformation to affect the layout of the button, which triggers a full pass by the layout system.</span></span> <span data-ttu-id="baf7a-208">因此，按鈕會旋轉並重新調整位置，因為它的大小已變更。</span><span class="sxs-lookup"><span data-stu-id="baf7a-208">As a result, the button is rotated and then repositioned because its size has changed.</span></span> <span data-ttu-id="baf7a-209">下圖顯示轉換的結果。</span><span class="sxs-lookup"><span data-stu-id="baf7a-209">The following illustration shows the result of the transformation.</span></span>  
   
- ![使用 LayoutTransform 經過轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "graphicsmm\_LayoutTransform")  
-用來旋轉按鈕的 LayoutTransform  
+ <span data-ttu-id="baf7a-210">![使用 layouttransform 經過轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")</span><span class="sxs-lookup"><span data-stu-id="baf7a-210">![A button transformed using LayoutTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")</span></span>  
+<span data-ttu-id="baf7a-211">用來旋轉按鈕的 LayoutTransform</span><span class="sxs-lookup"><span data-stu-id="baf7a-211">LayoutTransform used to rotate the button</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
   
 <a name="animate_transforms"></a>   
-## 將轉換顯示為動畫  
- <xref:System.Windows.Media.Transform> 類別繼承自 <xref:System.Windows.Media.Animation.Animatable> 類別，因此可以顯示為動畫。  若要將 <xref:System.Windows.Media.Transform> 顯示為動畫，請將相容型別的動畫套用到要顯示為動畫的屬性。  
+## <a name="animating-transformations"></a><span data-ttu-id="baf7a-212">建立轉換的動畫</span><span class="sxs-lookup"><span data-stu-id="baf7a-212">Animating Transformations</span></span>  
+ <span data-ttu-id="baf7a-213">因為它們是繼承自<xref:System.Windows.Media.Animation.Animatable>類別<xref:System.Windows.Media.Transform>類別可以動畫顯示。</span><span class="sxs-lookup"><span data-stu-id="baf7a-213">Because they inherit from the <xref:System.Windows.Media.Animation.Animatable> class, the <xref:System.Windows.Media.Transform> classes can be animated.</span></span> <span data-ttu-id="baf7a-214">若要建立動畫<xref:System.Windows.Media.Transform>，套用至您想要製作動畫的屬性的動畫相容的型別。</span><span class="sxs-lookup"><span data-stu-id="baf7a-214">To animate a <xref:System.Windows.Media.Transform>, apply an animation of a compatible type to the property you want to animate.</span></span>  
   
- 下列範例將 <xref:System.Windows.Media.Animation.Storyboard> 和 <xref:System.Windows.Media.Animation.DoubleAnimation> 與 <xref:System.Windows.Media.RotateTransform> 一起使用，讓 <xref:System.Windows.Controls.Button> 在按一下時就地旋轉。  
+ <span data-ttu-id="baf7a-215">下列範例會使用<xref:System.Windows.Media.Animation.Storyboard>和<xref:System.Windows.Media.Animation.DoubleAnimation>與<xref:System.Windows.Media.RotateTransform>進行<xref:System.Windows.Controls.Button>微調在按一下時其位置。</span><span class="sxs-lookup"><span data-stu-id="baf7a-215">The following example uses a <xref:System.Windows.Media.Animation.Storyboard> and a <xref:System.Windows.Media.Animation.DoubleAnimation> with a <xref:System.Windows.Media.RotateTransform> to make a <xref:System.Windows.Controls.Button> spin in place when it is clicked.</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
+ [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- 如需完整範例，請參閱 [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252) \(英文\)。  如需動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ <span data-ttu-id="baf7a-216">如需完整範例，請參閱 [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252)。</span><span class="sxs-lookup"><span data-stu-id="baf7a-216">For the complete sample, see [2-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).</span></span> <span data-ttu-id="baf7a-217">如需動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="baf7a-217">For more information about animations, see the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
 <a name="freezable_features"></a>   
-## Freezable 功能  
- <xref:System.Windows.Media.Transform> 類別繼承自 <xref:System.Windows.Freezable> 類別，因此可以提供數項特殊功能：<xref:System.Windows.Media.Transform> 物件可以宣告為[資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、供多個物件共用、設成唯讀以提升效能、複製以及設成安全執行緒 \(Thread\-Safe\)。  如需 <xref:System.Windows.Freezable> 物件所提供不同功能的詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+## <a name="freezable-features"></a><span data-ttu-id="baf7a-218">Freezable 功能</span><span class="sxs-lookup"><span data-stu-id="baf7a-218">Freezable Features</span></span>  
+ <span data-ttu-id="baf7a-219">因為它繼承自<xref:System.Windows.Freezable>類別<xref:System.Windows.Media.Transform>類別提供數個特殊功能：<xref:System.Windows.Media.Transform>物件可以宣告為[資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 變成唯讀，以改善的多個物件之間共用效能考量，複製，而且進行安全執行緒。</span><span class="sxs-lookup"><span data-stu-id="baf7a-219">Because it inherits from the <xref:System.Windows.Freezable> class, the <xref:System.Windows.Media.Transform> class  provide several special features: <xref:System.Windows.Media.Transform> objects can be declared as [resources](../../../../docs/framework/wpf/advanced/xaml-resources.md), shared among multiple objects, made read-only to improve performance, cloned, and made thread-safe.</span></span> <span data-ttu-id="baf7a-220">如需有關各項功能所提供的<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="baf7a-220">For more information about the different features that are provided by <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.Matrix>   
- [HOW TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)   
- [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a><span data-ttu-id="baf7a-221">另請參閱</span><span class="sxs-lookup"><span data-stu-id="baf7a-221">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.Matrix>  
+ [<span data-ttu-id="baf7a-222">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="baf7a-222">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [<span data-ttu-id="baf7a-223">2D 轉換範例</span><span class="sxs-lookup"><span data-stu-id="baf7a-223">2-D Transforms Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=158252)

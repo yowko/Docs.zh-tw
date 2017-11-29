@@ -1,52 +1,32 @@
 ---
 title: "如何：將字串轉換為 DateTime (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- strings [C#], converting to DateTIme
+helpviewer_keywords: strings [C#], converting to DateTIme
 ms.assetid: 88abef11-3a06-4b49-8dd2-61ed0e876fc3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b459f245f0090fff16918bceb12a0082f6944331
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>如何：將字串轉換為 DateTime (C# 程式設計手冊)
-程式常讓使用者將日期輸入為字串值。 若要將字串型的日期轉換成 <xref:System.DateTime?displayProperty=fullName> 物件，您可以使用 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> 方法或 <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> 靜態方法，如下例所示。  
+# <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a><span data-ttu-id="9c999-102">如何：將字串轉換為 DateTime (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="9c999-102">How to: Convert a String to a DateTime (C# Programming Guide)</span></span>
+<span data-ttu-id="9c999-103">程式常讓使用者將日期輸入為字串值。</span><span class="sxs-lookup"><span data-stu-id="9c999-103">It is common for programs to enable users to enter dates as string values.</span></span> <span data-ttu-id="9c999-104">若要將字串型的日期轉換成 <xref:System.DateTime?displayProperty=nameWithType> 物件，您可以使用 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType> 方法或 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 靜態方法，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="9c999-104">To convert a string-based date to a <xref:System.DateTime?displayProperty=nameWithType> object, you can use the <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType> method or the <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> static method, as shown in the following example.</span></span>  
   
- **文化特性**。  世界各地的不同文化，有不同的日期字串撰寫方式。  例如，01/20/2008 在美國是 January 20th, 2008。  在法國，這會擲回 InvalidFormatException。 這是因為法國讀取的日期時間為日/月/年，而在美國是月/日/年。  
+ <span data-ttu-id="9c999-105">**文化特性**。</span><span class="sxs-lookup"><span data-stu-id="9c999-105">**Culture**.</span></span>  <span data-ttu-id="9c999-106">世界各地的不同文化，有不同的日期字串撰寫方式。</span><span class="sxs-lookup"><span data-stu-id="9c999-106">Different cultures in the world write date strings in different ways.</span></span>  <span data-ttu-id="9c999-107">例如，01/20/2008 在美國是 January 20th, 2008。</span><span class="sxs-lookup"><span data-stu-id="9c999-107">For example, in the US 01/20/2008 is January 20th, 2008.</span></span>  <span data-ttu-id="9c999-108">在法國，這會擲回 InvalidFormatException。</span><span class="sxs-lookup"><span data-stu-id="9c999-108">In France this will throw an InvalidFormatException.</span></span> <span data-ttu-id="9c999-109">這是因為法國讀取的日期時間為日/月/年，而在美國是月/日/年。</span><span class="sxs-lookup"><span data-stu-id="9c999-109">This is because France reads date-times as Day/Month/Year, and in the US it is Month/Day/Year.</span></span>  
   
- 因此，像 20/01/2008 這樣的字串在法國會剖析成 1 月 20 日 2008 年 ，但在美國會擲回 InvalidFormatException。  
+ <span data-ttu-id="9c999-110">因此，像 20/01/2008 這樣的字串在法國會剖析成 1 月 20 日 2008 年 ，但在美國會擲回 InvalidFormatException。</span><span class="sxs-lookup"><span data-stu-id="9c999-110">Consequently, a string like 20/01/2008 will parse to January 20th, 2008 in France, and then throw an InvalidFormatException in the US.</span></span>  
   
- 若要判斷目前的文化特性設定，您可以使用 System.Globalization.CultureInfo.CurrentCulture。  
+ <span data-ttu-id="9c999-111">若要判斷目前的文化特性設定，您可以使用 System.Globalization.CultureInfo.CurrentCulture。</span><span class="sxs-lookup"><span data-stu-id="9c999-111">To determine your current culture settings, you can use System.Globalization.CultureInfo.CurrentCulture.</span></span>  
   
- 如需將字串轉換成 dateTime 的簡單範例，請參閱下例。  
+ <span data-ttu-id="9c999-112">如需將字串轉換成 dateTime 的簡單範例，請參閱下例。</span><span class="sxs-lookup"><span data-stu-id="9c999-112">See the example below for a simple example of converting a string to dateTime.</span></span>  
   
- 如需更多的日期字串範例，請參閱 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>。  
+ <span data-ttu-id="9c999-113">如需更多的日期字串範例，請參閱 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="9c999-113">For more examples of date strings, see <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType>.</span></span>  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -69,9 +49,8 @@ Press any key to continue . . .
  */  
 ```  
   
-## <a name="example"></a>範例  
- [!code-cs[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
+## <a name="example"></a><span data-ttu-id="9c999-114">範例</span><span class="sxs-lookup"><span data-stu-id="9c999-114">Example</span></span>  
+ [!code-csharp[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
   
-## <a name="see-also"></a>另請參閱  
- [字串](../../../csharp/programming-guide/strings/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="9c999-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9c999-115">See Also</span></span>  
+ [<span data-ttu-id="9c999-116">字串</span><span class="sxs-lookup"><span data-stu-id="9c999-116">Strings</span></span>](../../../csharp/programming-guide/strings/index.md)

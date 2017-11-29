@@ -13,34 +13,32 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4e0bc3f14a3d21776506f0a269a1a8c9f970cac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bba3cde0d4e1c15ea764322b8ab0ef1501e53739
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="building-console-applications-in-the-net-framework"></a>在 .NET Framework 中建置主控台應用程式
-.NET Framework 中的應用程式可以使用 <xref:System.Console?displayProperty=fullName> 類別從主控台讀取字元，以及將字元寫入主控台。 來自主控台的資料會從標準輸入資料流讀取，要傳送到主控台的資料會寫入至標準輸出資料流，而傳送給主控台的錯誤資料則會寫入至標準錯誤輸出資料流。 在應用程式啟動時，這些資料流會自動與主控台產生關聯，並且分別表示為 <xref:System.Console.In%2A>、<xref:System.Console.Out%2A> 和 <xref:System.Console.Error%2A> 屬性。  
+# <a name="building-console-applications-in-the-net-framework"></a><span data-ttu-id="09a32-102">在 .NET Framework 中建置主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="09a32-102">Building Console Applications in the .NET Framework</span></span>
+<span data-ttu-id="09a32-103">.NET Framework 中的應用程式可以使用 <xref:System.Console?displayProperty=nameWithType> 類別從主控台讀取字元，以及將字元寫入主控台。</span><span class="sxs-lookup"><span data-stu-id="09a32-103">Applications in the .NET Framework can use the <xref:System.Console?displayProperty=nameWithType> class to read characters from and write characters to the console.</span></span> <span data-ttu-id="09a32-104">來自主控台的資料會從標準輸入資料流讀取，要傳送到主控台的資料會寫入至標準輸出資料流，而傳送給主控台的錯誤資料則會寫入至標準錯誤輸出資料流。</span><span class="sxs-lookup"><span data-stu-id="09a32-104">Data from the console is read from the standard input stream, data to the console is written to the standard output stream, and error data to the console is written to the standard error output stream.</span></span> <span data-ttu-id="09a32-105">在應用程式啟動時，這些資料流會自動與主控台產生關聯，並且分別表示為 <xref:System.Console.In%2A>、<xref:System.Console.Out%2A> 和 <xref:System.Console.Error%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="09a32-105">These streams are automatically associated with the console when the application starts and are presented as the <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>, and <xref:System.Console.Error%2A> properties, respectively.</span></span>  
   
- <xref:System.Console.In%2A?displayProperty=fullName> 屬性的值是一個 <xref:System.IO.TextReader?displayProperty=fullName> 物件，而 <xref:System.Console.Out%2A?displayProperty=fullName> 和 <xref:System.Console.Error%2A?displayProperty=fullName> 屬性的值則為 <xref:System.IO.TextWriter?displayProperty=fullName> 物件。 您可以使這些屬性與不代表主控台的資料流產生關聯，讓您能夠替輸入或輸出將資料流指向不同位置。 例如，您可以將 <xref:System.Console.Out%2A?displayProperty=fullName> 屬性設定為 <xref:System.IO.StreamWriter?displayProperty=fullName>，這樣會透過 <xref:System.Console.SetOut%2A?displayProperty=fullName> 方法封裝 <xref:System.IO.FileStream?displayProperty=fullName>，藉此將輸出重新導向至檔案。 <xref:System.Console.In%2A?displayProperty=fullName> 和 <xref:System.Console.Out%2A?displayProperty=fullName> 屬性不需要參考相同資料流。  
+ <span data-ttu-id="09a32-106"><xref:System.Console.In%2A?displayProperty=nameWithType> 屬性的值是一個 <xref:System.IO.TextReader?displayProperty=nameWithType> 物件，而 <xref:System.Console.Out%2A?displayProperty=nameWithType> 和 <xref:System.Console.Error%2A?displayProperty=nameWithType> 屬性的值則為 <xref:System.IO.TextWriter?displayProperty=nameWithType> 物件。</span><span class="sxs-lookup"><span data-stu-id="09a32-106">The value of the <xref:System.Console.In%2A?displayProperty=nameWithType> property is a <xref:System.IO.TextReader?displayProperty=nameWithType> object, whereas the values of the <xref:System.Console.Out%2A?displayProperty=nameWithType> and <xref:System.Console.Error%2A?displayProperty=nameWithType> properties are <xref:System.IO.TextWriter?displayProperty=nameWithType> objects.</span></span> <span data-ttu-id="09a32-107">您可以使這些屬性與不代表主控台的資料流產生關聯，讓您能夠替輸入或輸出將資料流指向不同位置。</span><span class="sxs-lookup"><span data-stu-id="09a32-107">You can associate these properties with streams that do not represent the console, making it possible for you to point the stream to a different location for input or output.</span></span> <span data-ttu-id="09a32-108">例如，您可以將 <xref:System.Console.Out%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.IO.StreamWriter?displayProperty=nameWithType>，這樣會透過 <xref:System.Console.SetOut%2A?displayProperty=nameWithType> 方法封裝 <xref:System.IO.FileStream?displayProperty=nameWithType>，藉此將輸出重新導向至檔案。</span><span class="sxs-lookup"><span data-stu-id="09a32-108">For example, you can redirect the output to a file by setting the <xref:System.Console.Out%2A?displayProperty=nameWithType> property to a <xref:System.IO.StreamWriter?displayProperty=nameWithType>, which encapsulates a <xref:System.IO.FileStream?displayProperty=nameWithType> by means of the <xref:System.Console.SetOut%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="09a32-109"><xref:System.Console.In%2A?displayProperty=nameWithType> 和 <xref:System.Console.Out%2A?displayProperty=nameWithType> 屬性不需要參考相同資料流。</span><span class="sxs-lookup"><span data-stu-id="09a32-109">The <xref:System.Console.In%2A?displayProperty=nameWithType> and <xref:System.Console.Out%2A?displayProperty=nameWithType> properties do not need to refer to the same stream.</span></span>  
   
 > [!NOTE]
->  如需建置主控台應用程式的詳細資訊 (含 C#、Visual Basic 及 C++ 的範例)，請參閱 <xref:System.Console> 類別的文件。  
+>  <span data-ttu-id="09a32-110">如需建置主控台應用程式的詳細資訊 (含 C#、Visual Basic 及 C++ 的範例)，請參閱 <xref:System.Console> 類別的文件。</span><span class="sxs-lookup"><span data-stu-id="09a32-110">For more information about building console applications, including examples in C#, Visual Basic, and C++, see the documentation for the <xref:System.Console> class.</span></span>  
   
- 因為沒有可以將資訊寫入的主控台，所以如果主控台不存在 (例如在 Windows 架構應用程式中) 的話，將看不到寫入標準輸出資料流的輸出。 將資訊寫入不可存取的主控台不會導致引發例外狀況。  
+ <span data-ttu-id="09a32-111">因為沒有可以將資訊寫入的主控台，所以如果主控台不存在 (例如在 Windows 架構應用程式中) 的話，將看不到寫入標準輸出資料流的輸出。</span><span class="sxs-lookup"><span data-stu-id="09a32-111">If the console does not exist, as in a Windows-based application, output written to the standard output stream will not be visible, because there is no console to write the information to.</span></span> <span data-ttu-id="09a32-112">將資訊寫入不可存取的主控台不會導致引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="09a32-112">Writing information to an inaccessible console does not cause an exception to be raised.</span></span>  
   
- 此外，若要在使用 Visual Studio 開發的 Windows 架構應用程式內啟用主控台來讀取和寫入，請開啟專案的 [屬性] 對話方塊，按一下 [應用程式] 索引標籤，然後將 [應用程式類型] 設定為 [主控台應用程式]。  
+ <span data-ttu-id="09a32-113">此外，若要在使用 Visual Studio 開發的 Windows 架構應用程式內啟用主控台來讀取和寫入，請開啟專案的 [屬性] 對話方塊，按一下 [應用程式] 索引標籤，然後將 [應用程式類型] 設定為 [主控台應用程式]。</span><span class="sxs-lookup"><span data-stu-id="09a32-113">Alternately, to enable the console for reading and writing within a Windows-based application that is developed using Visual Studio, open the project's **Properties** dialog box, click the **Application** tab, and set the **Application type** to **Console Application**.</span></span>  
   
- 主控台應用程式缺乏預設會啟動的訊息幫浦 (Message Pump)。 因此，對 Microsoft Win32 計時器的主控台呼叫可能會失敗。  
+ <span data-ttu-id="09a32-114">主控台應用程式缺乏預設會啟動的訊息幫浦 (Message Pump)。</span><span class="sxs-lookup"><span data-stu-id="09a32-114">Console applications lack a message pump that starts by default.</span></span> <span data-ttu-id="09a32-115">因此，對 Microsoft Win32 計時器的主控台呼叫可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="09a32-115">Therefore, console calls to Microsoft Win32 timers might fail.</span></span>  
   
- **System.Console** 類別具有可以從主控台讀取個別字元或整行的方法。 其他方法會轉換資料和格式字串，並接著將格式化的字串寫到主控台。 如需格式化字串的詳細資訊，請參閱[格式化類型](../../docs/standard/base-types/formatting-types.md)。  
+ <span data-ttu-id="09a32-116">**System.Console** 類別具有可以從主控台讀取個別字元或整行的方法。</span><span class="sxs-lookup"><span data-stu-id="09a32-116">The **System.Console** class has methods that can read individual characters or entire lines from the console.</span></span> <span data-ttu-id="09a32-117">其他方法會轉換資料和格式字串，並接著將格式化的字串寫到主控台。</span><span class="sxs-lookup"><span data-stu-id="09a32-117">Other methods convert data and format strings, and then write the formatted strings to the console.</span></span> <span data-ttu-id="09a32-118">如需格式化字串的詳細資訊，請參閱[格式化類型](../../docs/standard/base-types/formatting-types.md)。</span><span class="sxs-lookup"><span data-stu-id="09a32-118">For more information on formatting strings, see [Formatting Types](../../docs/standard/base-types/formatting-types.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Console?displayProperty=fullName>   
- [格式化類型](../../docs/standard/base-types/formatting-types.md)
-
+## <a name="see-also"></a><span data-ttu-id="09a32-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="09a32-119">See Also</span></span>  
+ <xref:System.Console?displayProperty=nameWithType>  
+ [<span data-ttu-id="09a32-120">格式化類型</span><span class="sxs-lookup"><span data-stu-id="09a32-120">Formatting Types</span></span>](../../docs/standard/base-types/formatting-types.md)

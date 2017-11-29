@@ -1,56 +1,59 @@
 ---
-title: "唯讀相依性屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "相依性屬性, 唯讀"
-  - "唯讀相依性屬性"
+title: "唯讀相依性屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dependency properties [WPF], read-only
+- read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9cb4477fe388c294bbd6b87589d5a3108a90d27f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 唯讀相依性屬性
-本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及建立自訂唯讀相依性屬性的案例和技巧。  
+# <a name="read-only-dependency-properties"></a><span data-ttu-id="a9150-102">唯讀相依性屬性</span><span class="sxs-lookup"><span data-stu-id="a9150-102">Read-Only Dependency Properties</span></span>
+<span data-ttu-id="a9150-103">本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及用於建立自訂唯讀相依性屬性的案例和技術。</span><span class="sxs-lookup"><span data-stu-id="a9150-103">This topic describes read-only dependency properties, including existing read-only dependency properties and the scenarios and techniques for creating a custom read-only dependency property.</span></span>  
   
-   
+
   
 <a name="prerequisites"></a>   
-## 必要條件  
- 本主題假設您已了解實作相依性屬性的基本案例，以及中繼資料 \(Metadata\) 套用至自訂相依性屬性的方式。  如需相關內容，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="a9150-104">必要條件</span><span class="sxs-lookup"><span data-stu-id="a9150-104">Prerequisites</span></span>  
+ <span data-ttu-id="a9150-105">本主題假設您已了解實作相依性屬性的基本案例，以及如何將中繼資料套用到自訂相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="a9150-105">This topic assumes that you understand the basic scenarios of implementing a dependency property, and how metadata is applied to a custom dependency property.</span></span> <span data-ttu-id="a9150-106">如需相關內容，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。</span><span class="sxs-lookup"><span data-stu-id="a9150-106">See [Custom Dependency Properties](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) and [Dependency Property Metadata](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) for context.</span></span>  
   
 <a name="existing"></a>   
-## 現有的唯讀相依性屬性  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中定義的某些相依性屬性是唯讀屬性。  指定唯讀相依性屬性的原因通常是因為它們是判斷狀態時應該使用的屬性，但是該狀態受到許多因素影響，而就使用者介面設定的觀點而言，只將屬性設定為該狀態並不恰當。  例如，<xref:System.Windows.UIElement.IsMouseOver%2A> 屬性實際上只是從滑鼠輸入來判斷的表面狀態。  嘗試透過規避實際的滑鼠輸入，改以程式設計方式設定這個值，都會產生無法預測且不一致的結果。  
+## <a name="existing-read-only-dependency-properties"></a><span data-ttu-id="a9150-107">現有的唯讀相依性屬性</span><span class="sxs-lookup"><span data-stu-id="a9150-107">Existing Read-Only Dependency Properties</span></span>  
+ <span data-ttu-id="a9150-108">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中定義的一些相依性屬性為唯讀狀態。</span><span class="sxs-lookup"><span data-stu-id="a9150-108">Some of the dependency properties defined in the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework are read-only.</span></span> <span data-ttu-id="a9150-109">指定唯讀相依性屬性的一般原因是，這些屬性應該用來判斷狀態，然而該狀態會受到許多因素影響，但從使用者介面設計觀點來看，只將屬性設為該狀態並不恰當。</span><span class="sxs-lookup"><span data-stu-id="a9150-109">The typical reason for specifying a read-only dependency property is that these are properties that should be used for state determination, but where that state is influenced by a multitude of factors, but just setting the property to that state isn't desirable from a user interface design perspective.</span></span> <span data-ttu-id="a9150-110">例如，屬性<xref:System.Windows.UIElement.IsMouseOver%2A>其實就呈現狀態所決定的滑鼠輸入。</span><span class="sxs-lookup"><span data-stu-id="a9150-110">For example, the property <xref:System.Windows.UIElement.IsMouseOver%2A> is really just surfacing state as determined from the mouse input.</span></span> <span data-ttu-id="a9150-111">藉由規避實際的滑鼠輸入，以程式設計方式設定此值的任何嘗試，都是無法預測且會導致不一致的情況。</span><span class="sxs-lookup"><span data-stu-id="a9150-111">Any attempt to set this value programmatically by circumventing the true mouse input would be unpredictable and would cause inconsistency.</span></span>  
   
- 由於具有無法設定的特性，唯讀相依性屬性並不適用於相依性屬性通常可提供解決方案的許多案例 \(也就是資料繫結 \(Data Binding\)、可直接設定樣式的值、驗證、動畫、繼承 \(Inheritance\)\)。  雖然無法設定，但是唯讀相依性屬性仍然具有屬性系統中相依性屬性所支援的某些額外功能。  其保留的最重要一項功能就是唯讀相依性屬性還是可以當做樣式中的屬性觸發程序 \(Trigger\)。  您不能使用一般的 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性來啟用觸發程序；此屬性必須是相依性屬性。  前面提到的 <xref:System.Windows.UIElement.IsMouseOver%2A> 屬性是最佳的案例範例；如果使用者將滑鼠放在控制項定義的某個區域時，控制項內複合項目的某些可見屬性 \(例如背景、前景或類似屬性\) 就會變更，這個屬性就可能相當適合用來定義這種控制項的樣式。  唯讀相依性屬性中的變更也可以由屬性系統固有的失效處理序 \(Process\) 加以偵測及回報，而實際上這項功能也提供屬性觸發程序功能的內部支援。  
+ <span data-ttu-id="a9150-112">由於是不可設定的，因此，唯讀相依性屬性不適合許多相依性屬性通常可提供解決方案 (也就是：資料繫結、可直接設定的樣式值、驗證、動畫、繼承) 的案例。</span><span class="sxs-lookup"><span data-stu-id="a9150-112">By virtue of not being settable, read-only dependency properties aren't appropriate for many of the scenarios for which dependency properties normally offer a solution (namely: data binding, directly stylable to a value, validation, animation, inheritance).</span></span> <span data-ttu-id="a9150-113">儘管不可設定，唯讀相依性屬性仍然具有一些屬性系統中相依性屬性所支援的其他功能。</span><span class="sxs-lookup"><span data-stu-id="a9150-113">Despite not being settable, read-only dependency properties still have some of the additional capabilities supported by dependency properties in the property system.</span></span> <span data-ttu-id="a9150-114">其餘最重要的功能是，唯讀相依性屬性仍可用來做為樣式中的屬性觸發程序。</span><span class="sxs-lookup"><span data-stu-id="a9150-114">The most important remaining capability is that the read-only dependency property can still be used as a property trigger in a style.</span></span> <span data-ttu-id="a9150-115">您無法透過一般 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性啟用觸發程序；它必須是相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="a9150-115">You can't enable triggers with a normal [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property; it needs to be a dependency property.</span></span> <span data-ttu-id="a9150-116">上述<xref:System.Windows.UIElement.IsMouseOver%2A>屬性是完美的範例的案例，其中可能會非常有用，其中部分定義的樣式控制項，例如背景、 foreground 或類似的屬性，將複合項目內的 visible 屬性當使用者將滑鼠置於控制項的部分定義區域，將會變更控制項。</span><span class="sxs-lookup"><span data-stu-id="a9150-116">The aforementioned <xref:System.Windows.UIElement.IsMouseOver%2A> property is a perfect example of a scenario where it might be quite useful to define a style for a control, where some visible property such as a background, foreground, or similar properties of composited elements within the control will change when the user places a mouse over some defined region of your control.</span></span> <span data-ttu-id="a9150-117">屬性系統固有的失效處理序也可以偵測到並回報唯讀相依性屬性中的變更，這實際上可在內部支援屬性觸發程序功能。</span><span class="sxs-lookup"><span data-stu-id="a9150-117">Changes in a read-only dependency property can also be detected and reported by the property system's inherent invalidation processes, and this in fact supports the property trigger functionality internally.</span></span>  
   
 <a name="new"></a>   
-## 建立自訂唯讀相依性屬性  
- 請務必詳讀前一節，了解唯讀相依性不適用於許多一般相依性屬性案例的原因。  不過，若有適當的案例，您還是可以建立自己的唯讀相依性屬性。  
+## <a name="creating-custom-read-only-dependency-properties"></a><span data-ttu-id="a9150-118">建立自訂唯讀相依性屬性</span><span class="sxs-lookup"><span data-stu-id="a9150-118">Creating Custom Read-Only Dependency Properties</span></span>  
+ <span data-ttu-id="a9150-119">請務必閱讀前一節，以了解為什麼唯讀相依性屬性不適用許多一般的相依性屬性案例。</span><span class="sxs-lookup"><span data-stu-id="a9150-119">Make sure to read the section above regarding why read-only dependency properties won't work for many typical dependency-property scenarios.</span></span> <span data-ttu-id="a9150-120">但是，如果您有適當的案例，您可能想要建立自己的唯讀相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="a9150-120">But if you have an appropriate scenario, you may wish to create your own read-only dependency property.</span></span>  
   
- 建立唯讀相依性屬性的程序大部分與[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和 [實作相依性屬性](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)等主題說明的程序相同。  主要的差異有三個：  
+ <span data-ttu-id="a9150-121">在建立唯讀相依性屬性的處理序中，許多部分與[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[實作相依性屬性](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)主題中所述的相同。</span><span class="sxs-lookup"><span data-stu-id="a9150-121">Much of the process of creating a read-only dependency property is the same as is described in the [Custom Dependency Properties](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) and [Implement a Dependency Property](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md) topics.</span></span> <span data-ttu-id="a9150-122">有三個重大差異：</span><span class="sxs-lookup"><span data-stu-id="a9150-122">There are three important differences:</span></span>  
   
--   註冊屬性時，請呼叫 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> 方法，而非屬性註冊的一般 <xref:System.Windows.DependencyProperty.Register%2A> 方法。  
+-   <span data-ttu-id="a9150-123">註冊您的屬性，當呼叫<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法而不是一般<xref:System.Windows.DependencyProperty.Register%2A>屬性註冊方法。</span><span class="sxs-lookup"><span data-stu-id="a9150-123">When registering your property, call the <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> method instead of the normal <xref:System.Windows.DependencyProperty.Register%2A> method for property registration.</span></span>  
   
--   實作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]「包裝函式」屬性時，請確定包裝函式也沒有 set 實作，如此您所公開的公用 \(Public\) 包裝函式才不會產生不一致的唯讀狀態。  
+-   <span data-ttu-id="a9150-124">實作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]「包裝函式」屬性，請確定包裝函式還沒有 set 實作，如此一來，就不會在您所公開之公用包裝函式的唯讀狀態中產生不一致的情況。</span><span class="sxs-lookup"><span data-stu-id="a9150-124">When implementing the [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "wrapper" property, make sure that the wrapper too doesn't have a set implementation, so that there is no inconsistency in read-only state for the public wrapper you expose.</span></span>  
   
--   唯讀註冊所傳回的屬性是 <xref:System.Windows.DependencyPropertyKey>，而不是 <xref:System.Windows.DependencyProperty>。  您還是應該將這個欄位儲存為成員，但是通常不會將它設定該型別的公用成員。  
+-   <span data-ttu-id="a9150-125">唯讀註冊所傳回的物件是<xref:System.Windows.DependencyPropertyKey>而不是<xref:System.Windows.DependencyProperty>。</span><span class="sxs-lookup"><span data-stu-id="a9150-125">The object returned by the read-only registration is <xref:System.Windows.DependencyPropertyKey> rather than <xref:System.Windows.DependencyProperty>.</span></span> <span data-ttu-id="a9150-126">您仍應將此欄位儲存為成員，但通常不需讓它成為類型的公用成員。</span><span class="sxs-lookup"><span data-stu-id="a9150-126">You should still store this field as a member but typically you would not make it a public member of the type.</span></span>  
   
- 您用來支援唯讀相依性屬性的任何私用 \(Private\) 欄位或值當然都可以使用您所決定的任何邏輯來撰寫。  不過，設定屬性 \(不論是初次設定或做為執行階段邏輯一部分\) 最直接的方法是使用屬性系統的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是避開屬性系統，直接設定私用支援欄位。  特別是有一個 <xref:System.Windows.DependencyObject.SetValue%2A> 的簽章 \(Signature\) 可以接受型別 <xref:System.Windows.DependencyPropertyKey> 的參數。  您在應用程式邏輯內以程式設計方式設定這個值的方法和位置，將會影響您希望如何設定第一次註冊相依性屬性時所建立之 <xref:System.Windows.DependencyPropertyKey> 的存取權。  如果您完全在類別內處理這個邏輯，可以將它設定為私用；如果需要從組件的其他部分設定，則可將它設定為內部。  其中一種方法是在通知類別執行個體必須變更儲存屬性之相關事件的類別事件處理常式 \(Event Handler\) 內呼叫 <xref:System.Windows.DependencyObject.SetValue%2A>。  另一種方法則是在註冊過程中，使用成對的 <xref:System.Windows.PropertyChangedCallback> 和 <xref:System.Windows.CoerceValueCallback> 回呼 \(Callback\) 做為相依性屬性的中繼資料一部分，將這些屬性結合在一起。  
+ <span data-ttu-id="a9150-127">不論您必須支援的私用欄位或值為何，當然都能使用您決定的任何邏輯完整寫入您的唯讀相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="a9150-127">Whatever private field or value you have backing your read-only dependency property can of course be fully writable using whatever logic you decide.</span></span> <span data-ttu-id="a9150-128">不過，設定屬性 (不論是一開始就設定或設為執行階段邏輯一部分) 的最簡單方式是使用屬性系統的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是規避屬性系統來直接設定私用支援欄位。</span><span class="sxs-lookup"><span data-stu-id="a9150-128">However, the most straightforward way to set the property either initially or as part of runtime logic is to use the property system's [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], rather than circumventing the property system and setting the private backing field directly.</span></span> <span data-ttu-id="a9150-129">特別是，沒有簽章<xref:System.Windows.DependencyObject.SetValue%2A>可接受類型的參數<xref:System.Windows.DependencyPropertyKey>。</span><span class="sxs-lookup"><span data-stu-id="a9150-129">In particular, there is a signature of <xref:System.Windows.DependencyObject.SetValue%2A> that accepts a parameter of type <xref:System.Windows.DependencyPropertyKey>.</span></span> <span data-ttu-id="a9150-130">如何及在何處您設定此值以程式設計方式在應用程式邏輯中您可能想要如何在上設定存取將會影響<xref:System.Windows.DependencyPropertyKey>建立，當您第一次登錄相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="a9150-130">How and where you set this value programmatically within your application logic will affect how you may wish to set access on the <xref:System.Windows.DependencyPropertyKey> created when you first registered the dependency property.</span></span> <span data-ttu-id="a9150-131">如果您全都在類別內處理此邏輯，您可能會讓它成為私用，或者如果您需要從組件的其他部分設定它，則可能會將它設為內部。</span><span class="sxs-lookup"><span data-stu-id="a9150-131">If you handle this logic all within the class you could make it private, or if you require it to be set from other portions of the assembly you might set it internal.</span></span> <span data-ttu-id="a9150-132">其中一個方法是呼叫<xref:System.Windows.DependencyObject.SetValue%2A>內類別的事件處理常式相關的事件，通知必須變更預存的屬性值的類別執行個體。</span><span class="sxs-lookup"><span data-stu-id="a9150-132">One approach is to call <xref:System.Windows.DependencyObject.SetValue%2A> within a class event handler of a relevant event that informs a class instance that the stored property value needs to be changed.</span></span> <span data-ttu-id="a9150-133">另一個方法是利用配對緊密相依性屬性<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回呼，註冊期間的這些屬性的中繼資料的一部分。</span><span class="sxs-lookup"><span data-stu-id="a9150-133">Another approach is to tie dependency properties together by using paired <xref:System.Windows.PropertyChangedCallback> and <xref:System.Windows.CoerceValueCallback> callbacks as part of those properties' metadata during registration.</span></span>  
   
- 因為 <xref:System.Windows.DependencyPropertyKey> 是私用的，而且不會由屬性系統傳送到程式碼外部，所以相較於可讀寫的相依性屬性，唯讀相依性屬性的安全性設定確實較為完善。  對於可讀寫的相依性屬性，識別欄位是明確或隱含公用的欄位，因此屬性可做廣泛的設定。  如需詳細資訊，請參閱[相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。  
+ <span data-ttu-id="a9150-134">因為<xref:System.Windows.DependencyPropertyKey>是私人的而且不會傳播屬性系統，您的程式碼之外，唯讀相依性屬性沒有進一步設定安全性比讀寫相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="a9150-134">Because the <xref:System.Windows.DependencyPropertyKey> is private, and is not propagated by the property system outside of your code, a read-only dependency property does have better setting security than a read-write dependency property.</span></span> <span data-ttu-id="a9150-135">針對讀寫相依性屬性，識別欄位是明確或隱含公開的，因此該屬性是可廣泛設定的。</span><span class="sxs-lookup"><span data-stu-id="a9150-135">For a read-write dependency property, the identifying field is explicitly or implicitly public and thus the property is widely settable.</span></span> <span data-ttu-id="a9150-136">如需詳細資訊，請參閱[相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。</span><span class="sxs-lookup"><span data-stu-id="a9150-136">For more specifics, see [Dependency Property Security](../../../../docs/framework/wpf/advanced/dependency-property-security.md).</span></span>  
   
-## 請參閱  
- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="a9150-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9150-137">See Also</span></span>  
+ [<span data-ttu-id="a9150-138">相依性屬性概觀</span><span class="sxs-lookup"><span data-stu-id="a9150-138">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="a9150-139">自訂相依性屬性</span><span class="sxs-lookup"><span data-stu-id="a9150-139">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="a9150-140">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="a9150-140">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

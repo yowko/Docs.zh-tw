@@ -1,66 +1,70 @@
 ---
-title: "如何：使用 Windows Form BindingSource 元件排序和篩選 ADO.NET 資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ADO.NET [Windows Form]"
-  - "BindingSource 元件 [Windows Form], 排序及篩選資料"
-  - "資料 [Windows Form], 篩選"
-  - "資料 [Windows Form], 排序"
-  - "資料排序, ADO.NET"
-  - "篩選 [Windows Form], ADO.NET"
-  - "排序資料"
+title: "如何：使用 Windows Form BindingSource 元件排序和篩選 ADO.NET 資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- sorting data
+- data sorting [Windows Forms], ADO.NET
+- data [Windows Forms], filtering
+- BindingSource component [Windows Forms], sorting and filtering data
+- filtering [Windows Forms], ADO.NET
+- data [Windows Forms], sorting
+- ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 46947e314394d56b5ef0439f33910bb493012db3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows Form BindingSource 元件排序和篩選 ADO.NET 資料
-您可以透過 <xref:System.Windows.Forms.BindingSource.Sort%2A> 和 <xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性，公開 \(Expose\) <xref:System.Windows.Forms.BindingSource> 控制項的排序和篩選功能。  當基礎資料來源是 <xref:System.ComponentModel.IBindingList> 時可套用簡單排序，當基礎資料來源是 <xref:System.ComponentModel.IBindingListView> 時則可套用篩選和進階排序。  <xref:System.Windows.Forms.BindingSource.Sort%2A> 屬性需要使用標準 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 語法，也就是在代表資料來源中資料行名稱的字串之後跟隨著 `ASC` 或 `DESC`，以便指出清單應該依遞增或遞減順序來排序。  可以利用逗號來分隔每個資料行，藉此設定進階排序或多重資料行排序。  <xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性可接受字串運算式。  
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a><span data-ttu-id="17b94-102">如何：使用 Windows Form BindingSource 元件排序和篩選 ADO.NET 資料</span><span class="sxs-lookup"><span data-stu-id="17b94-102">How to: Sort and Filter ADO.NET Data with the Windows Forms BindingSource Component</span></span>
+<span data-ttu-id="17b94-103">您可以排序和篩選功能來公開<xref:System.Windows.Forms.BindingSource>透過控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="17b94-103">You can expose the sorting and filtering capability of <xref:System.Windows.Forms.BindingSource> control through the <xref:System.Windows.Forms.BindingSource.Sort%2A> and <xref:System.Windows.Forms.BindingSource.Filter%2A> properties.</span></span> <span data-ttu-id="17b94-104">您可以套用簡單排序基礎資料來源時<xref:System.ComponentModel.IBindingList>，您可以套用篩選和進階資料來源時排序<xref:System.ComponentModel.IBindingListView>。</span><span class="sxs-lookup"><span data-stu-id="17b94-104">You can apply simple sorting when the underlying data source is an <xref:System.ComponentModel.IBindingList>, and you can apply filtering and advanced sorting when the data source is an <xref:System.ComponentModel.IBindingListView>.</span></span> <span data-ttu-id="17b94-105"><xref:System.Windows.Forms.BindingSource.Sort%2A>屬性需要標準[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]語法： 字串，表示資料來源中的資料行的名稱後面加上`ASC`或`DESC`，表示是否應該以遞增或遞減順序排序清單。</span><span class="sxs-lookup"><span data-stu-id="17b94-105">The <xref:System.Windows.Forms.BindingSource.Sort%2A> property requires standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] syntax: a string representing the name of a column of data in the data source followed by `ASC` or `DESC` to indicate whether the list should be sorted in ascending or descending order.</span></span> <span data-ttu-id="17b94-106">您可以設定進階排序，或多個資料行排序逗號分隔符號以區隔每個資料行。</span><span class="sxs-lookup"><span data-stu-id="17b94-106">You can set advanced sorting or multiple-column sorting by separating each column with a comma separator.</span></span> <span data-ttu-id="17b94-107"><xref:System.Windows.Forms.BindingSource.Filter%2A>屬性會接受字串運算式。</span><span class="sxs-lookup"><span data-stu-id="17b94-107">The <xref:System.Windows.Forms.BindingSource.Filter%2A> property takes a string expression.</span></span>  
   
 > [!NOTE]
->  在連接字串內儲存機密資訊 \(例如密碼\) 會影響應用程式的安全性。  使用 Windows 驗證 \(也稱為整合式安全性\) 是控制資料庫存取的更安全方式。  如需詳細資訊，請參閱[保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
+>  <span data-ttu-id="17b94-108">在連接字串內儲存機密資訊 (例如密碼) 會影響應用程式的安全性。</span><span class="sxs-lookup"><span data-stu-id="17b94-108">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="17b94-109">使用 Windows 驗證 (也稱為整合式安全性) 是控制資料庫存取的更安全方式。</span><span class="sxs-lookup"><span data-stu-id="17b94-109">Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database.</span></span> <span data-ttu-id="17b94-110">如需詳細資訊，請參閱[保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)。</span><span class="sxs-lookup"><span data-stu-id="17b94-110">For more information, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
-### 若要使用 BindingSource 來篩選資料  
+### <a name="to-filter-data-with-the-bindingsource"></a><span data-ttu-id="17b94-111">若要篩選使用 BindingSource 的資料</span><span class="sxs-lookup"><span data-stu-id="17b94-111">To filter data with the BindingSource</span></span>  
   
--   將 <xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性設定為您要的運算式。  
+-   <span data-ttu-id="17b94-112">設定<xref:System.Windows.Forms.BindingSource.Filter%2A>屬性，以您想要的運算式。</span><span class="sxs-lookup"><span data-stu-id="17b94-112">Set the <xref:System.Windows.Forms.BindingSource.Filter%2A> property to expression that you want.</span></span>  
   
-     在下列程式碼範例中，運算式為資料行名稱之後跟隨著您要的資料行值。  
+     <span data-ttu-id="17b94-113">在下列程式碼範例中，運算式會是資料行名稱，後面接著您要的資料行的值。</span><span class="sxs-lookup"><span data-stu-id="17b94-113">In the following code example, the expression is a column name followed by value that you want for the column.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#11)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#11)]  
   
-### 若要使用 BindingSource 來排序資料  
+### <a name="to-sort-data-with-the-bindingsource"></a><span data-ttu-id="17b94-114">與 BindingSource 的資料進行排序</span><span class="sxs-lookup"><span data-stu-id="17b94-114">To sort data with the BindingSource</span></span>  
   
-1.  將 <xref:System.Windows.Forms.BindingSource.Sort%2A> 屬性設定為您要的資料行名稱，之後跟隨著 `ASC` 或 `DESC`，以便指出是遞增順序或遞減順序。  
+1.  <span data-ttu-id="17b94-115">設定<xref:System.Windows.Forms.BindingSource.Sort%2A>屬性資料行後面的名稱，您想要`ASC`或`DESC`表示遞增或遞減順序。</span><span class="sxs-lookup"><span data-stu-id="17b94-115">Set the <xref:System.Windows.Forms.BindingSource.Sort%2A> property to the column name that you want followed by `ASC` or `DESC` to indicate the ascending or descending order.</span></span>  
   
-2.  以逗號分隔多重資料行。  
+2.  <span data-ttu-id="17b94-116">請以逗號分隔多個資料行。</span><span class="sxs-lookup"><span data-stu-id="17b94-116">Separate multiple columns with a comma.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
-## 範例  
- 下列程式碼範例會將 Northwind 範例資料庫的 Customers 資料表中的資料載入 <xref:System.Windows.Forms.DataGridView> 控制項，然後再篩選並排序所顯示的資料。  
+## <a name="example"></a><span data-ttu-id="17b94-117">範例</span><span class="sxs-lookup"><span data-stu-id="17b94-117">Example</span></span>  
+ <span data-ttu-id="17b94-118">下列程式碼範例會將資料載入至 Northwind 範例資料庫的 Customers 資料表中<xref:System.Windows.Forms.DataGridView>控制，以及篩選與排序顯示的資料。</span><span class="sxs-lookup"><span data-stu-id="17b94-118">The following code example loads data from the Customers table of the Northwind sample database into a <xref:System.Windows.Forms.DataGridView> control, and filters and sorts the displayed data.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#1)]  
   
-## 編譯程式碼  
- 若要執行這個範例，請將程式碼貼至表單，且該表單包含名為 `BindingSource1` 的 <xref:System.Windows.Forms.BindingSource> 以及名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView>。  處理表單的 <xref:System.Windows.Forms.Form.Load> 事件，並且在載入事件處理常式方法中呼叫 `InitializeSortedFilteredBindingSource`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="17b94-119">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="17b94-119">Compiling the Code</span></span>  
+ <span data-ttu-id="17b94-120">若要執行此範例中，貼上程式碼包含表單的<xref:System.Windows.Forms.BindingSource>名為`BindingSource1`和<xref:System.Windows.Forms.DataGridView>名為`dataGridView1`。</span><span class="sxs-lookup"><span data-stu-id="17b94-120">To run this example, paste the code into a form that contains a <xref:System.Windows.Forms.BindingSource> named `BindingSource1` and a <xref:System.Windows.Forms.DataGridView> named `dataGridView1`.</span></span> <span data-ttu-id="17b94-121">處理<xref:System.Windows.Forms.Form.Load>事件表單，並呼叫`InitializeSortedFilteredBindingSource`load 事件處理常式方法中。</span><span class="sxs-lookup"><span data-stu-id="17b94-121">Handle the <xref:System.Windows.Forms.Form.Load> event for the form and call `InitializeSortedFilteredBindingSource` in the load event handler method.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.BindingSource.Sort%2A>   
- <xref:System.Windows.Forms.BindingSource.Filter%2A>   
- [如何：安裝範例資料庫](../Topic/How%20to:%20Install%20Sample%20Databases.md)   
- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a><span data-ttu-id="17b94-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="17b94-122">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingSource.Sort%2A>  
+ <xref:System.Windows.Forms.BindingSource.Filter%2A>  
+ [<span data-ttu-id="17b94-123">如何：安裝範例資料庫</span><span class="sxs-lookup"><span data-stu-id="17b94-123">How to: Install Sample Databases</span></span>](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
+ [<span data-ttu-id="17b94-124">BindingSource 元件</span><span class="sxs-lookup"><span data-stu-id="17b94-124">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)

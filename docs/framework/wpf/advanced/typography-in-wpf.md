@@ -1,185 +1,187 @@
 ---
-title: "WPF 中的印刷樣式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "印刷樣式, 關於印刷樣式"
+title: "WPF 中的印刷樣式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-caps.latest.revision: 27
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28c51c6208bfdfe068b9fb3ed2cdc58dd0350fdb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WPF 中的印刷樣式
-本主題介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。  這些功能包含改善的文字呈現品質和效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、增強型國際文字、增強型字型支援和全新的文字應用程式開發介面 \(API\)。  
+# <a name="typography-in-wpf"></a><span data-ttu-id="f1ee1-102">WPF 中的印刷樣式</span><span class="sxs-lookup"><span data-stu-id="f1ee1-102">Typography in WPF</span></span>
+<span data-ttu-id="f1ee1-103">本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-103">This topic introduces the major typographic features of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="f1ee1-104">這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-104">These features include improved quality and performance of text rendering, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typography support, enhanced international text, enhanced font support, and new text application programming interfaces (APIs).</span></span>  
   
-   
+
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
-## 改善的文字品質和效能  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字是使用 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 呈現的，會增強文字的清晰度和可讀性。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 開發的軟體技術，能夠改善現有 LCD \(液晶顯示，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器\) 文字的可讀性。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 使用子像素呈現，會藉由對齊像素小數部分的字元，以更大的真實圖案逼真度來顯示文字。  極高解析度會增加文字顯示中微小細節的清晰度，讓長時間閱讀方便得多。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改善是 Y 方向消除鋸齒，就是讓文字字元淺曲線的上下端更加平滑。  如需 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 功能的詳細資訊，請參閱 [ClearType 概觀](../../../../docs/framework/wpf/advanced/cleartype-overview.md)。  
+## <a name="improved-quality-and-performance-of-text"></a><span data-ttu-id="f1ee1-105">提升文字的品質與效能</span><span class="sxs-lookup"><span data-stu-id="f1ee1-105">Improved Quality and Performance of Text</span></span>  
+ <span data-ttu-id="f1ee1-106">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字是使用 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 來轉譯，可增強文字的清晰度與可讀性。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-106">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="f1ee1-107"> 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，此技術改善了現有 LCD (液晶顯示器) 上的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-107"> is a software technology developed by [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] that improves the readability of text on existing LCDs (Liquid Crystal Displays), such as laptop screens, Pocket PC screens and flat panel monitors.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="f1ee1-108"> 使用子像素轉譯，讓文字可利用像素的小數部分來對齊字元，使用更高畫質來顯示它的真正樣貌。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-108"> uses sub-pixel rendering which allows text to be displayed with a greater fidelity to its true shape by aligning characters on a fractional part of a pixel.</span></span> <span data-ttu-id="f1ee1-109">額外的解析度可提高文字顯示細節的解析度，即使經過長時間也很容易閱讀。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-109">The extra resolution increases the sharpness of the tiny details in text display, making it much easier to read over long durations.</span></span> <span data-ttu-id="f1ee1-110">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改進是以 y 方向消除鋸齒，這會使文字字元中平滑曲線頂端和底部更平滑。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-110">Another improvement of [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is y-direction anti-aliasing, which smoothes the tops and bottoms of shallow curves in text characters.</span></span> <span data-ttu-id="f1ee1-111">如需 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 功能的詳細資訊，請參閱 [ClearType 概觀](../../../../docs/framework/wpf/advanced/cleartype-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-111">For more details on [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] features, see [ClearType Overview](../../../../docs/framework/wpf/advanced/cleartype-overview.md).</span></span>  
   
- ![套用 ClearType Y 方向消除鋸齒功能的文字](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.png "TypographyInWPF02")  
-使用 ClearType Y 方向消除鋸齒的文字  
+ <span data-ttu-id="f1ee1-112">![使用 ClearType y &#45; 反方向 &#45;文字; 別名](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-112">![Text with ClearType y&#45;direction anti&#45;aliasing](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")</span></span>  
+<span data-ttu-id="f1ee1-113">以 ClearType Y 方向消除鋸齒功能顯示的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-113">Text with ClearType y-direction antialiasing</span></span>  
   
- 只要您的電腦符合所需硬體的最低層級需求，就可以透過硬體加快 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中用於呈現文字的整個流程。  無法使用硬體執行的呈現會切換回軟體呈現。  硬體加速會影響文字呈現流程的所有階段，包括儲存個別圖像、將圖像組合至圖像執行、套用效果，以及將 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 混合演算法套用至最終顯示輸出。  如需硬體加速的詳細資訊，請參閱[圖形轉譯層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
+ <span data-ttu-id="f1ee1-114">整個文字轉譯管線可在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 上啟用硬體加速，但前提是您的機器符合所需硬體的最低層級。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-114">The entire text rendering pipeline can be hardware-accelerated in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provided your machine meets the minimum level of hardware required.</span></span> <span data-ttu-id="f1ee1-115">無法使用硬體執行的轉譯會回復為軟體轉譯。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-115">Rendering that cannot be performed using hardware falls back to software rendering.</span></span> <span data-ttu-id="f1ee1-116">硬體加速會影響文字轉譯管線的所有階段；範圍從儲存個別字符、將字符組合至字符執行、套用效果，到將 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 混色演算法套用至最終顯示的輸出。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-116">Hardware-acceleration affects all phases of the text rendering pipeline—from storing individual glyphs, compositing glyphs into glyph runs, applying effects, to applying the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] blending algorithm to the final displayed output.</span></span> <span data-ttu-id="f1ee1-117">如需硬體加速的詳細資訊，請參閱[圖形轉譯層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-117">For more information on hardware acceleration, see [Graphics Rendering Tiers](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).</span></span>  
   
- ![文字轉譯管線的圖表](../../../../docs/framework/wpf/advanced/media/typographyinwpf01.png "TypographyInWPF01")  
-文字呈現流程圖  
+ <span data-ttu-id="f1ee1-118">![文字轉譯管線的圖表](../../../../docs/framework/wpf/advanced/media/typographyinwpf01.png "TypographyInWPF01")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-118">![Diagram of the text rendering pipeline](../../../../docs/framework/wpf/advanced/media/typographyinwpf01.png "TypographyInWPF01")</span></span>  
+<span data-ttu-id="f1ee1-119">文字轉譯管線的圖表</span><span class="sxs-lookup"><span data-stu-id="f1ee1-119">Diagram of the text rendering pipeline</span></span>  
   
- 此外，無論是字元或圖像的動畫文字，都會充分運用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所賦予的圖形硬體功能。  得到的結果就會是平滑的文字動畫。  
+ <span data-ttu-id="f1ee1-120">此外，具動畫效果的文字 (無論是字元或字符) 都可充分利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所啟用的圖形硬體功能。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-120">In addition, animated text, whether by character or glyph, takes full advantage of the graphics hardware capability enabled by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="f1ee1-121">這樣可產生平滑的文字動畫。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-121">This results in smooth text animation.</span></span>  
   
 <a name="Rich_Typography"></a>   
-## 豐富的印刷樣式  
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型格式是 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 字型格式的延伸。  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型格式是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 和 Adobe 共同開發，可以提供豐富的進階印刷樣式功能。  <xref:System.Windows.Documents.Typography> 物件會公開 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型的許多進階功能，例如文體替代字和花飾字。  [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 提供了一組具備眾多功能的 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 範例字型，例如 Pericles 和 Pescadero 字型。  如需詳細資訊，請參閱[範例 OpenType 字型套件](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)。  
+## <a name="rich-typography"></a><span data-ttu-id="f1ee1-122">豐富的印刷樣式</span><span class="sxs-lookup"><span data-stu-id="f1ee1-122">Rich Typography</span></span>  
+ <span data-ttu-id="f1ee1-123">[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型格式是 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 字型格式的延伸。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-123">The [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] font format is an extension of the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] font format.</span></span> <span data-ttu-id="f1ee1-124">[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型格式是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 和 Adobe 共同開發，並提供各式各樣豐富的進階印刷樣式功能。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-124">The [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] font format was developed jointly by [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] and Adobe, and provides a rich assortment of advanced typographic features.</span></span> <span data-ttu-id="f1ee1-125"><xref:System.Windows.Documents.Typography>物件會公開的許多進階功能[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]文體替代字等勾耳的字型。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-125">The <xref:System.Windows.Documents.Typography> object exposes many of the advanced features of [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] fonts, such as stylistic alternates and swashes.</span></span> <span data-ttu-id="f1ee1-126">[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 提供一組範例 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型，這組字型的設計具有豐富的特色，例如 Pericles 和 Pescadero 字型。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-126">The [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] provides a set of sample [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] fonts that are designed with rich features, such as the Pericles and Pescadero fonts.</span></span> <span data-ttu-id="f1ee1-127">如需詳細資訊，請參閱[範例 OpenType 字型套件](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-127">For more information, see [Sample OpenType Font Pack](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).</span></span>  
   
- Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型包含額外的圖像，這些圖像可以提供標準圖像集的文體替代字。  下列文字顯示文體替代字圖像。  
+ <span data-ttu-id="f1ee1-128">Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型包含其他字符，可為標準的字符組提供文體替代字。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-128">The Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] font contains additional glyphs that provide stylistic alternates to the standard set of glyphs.</span></span> <span data-ttu-id="f1ee1-129">下列文字顯示文體替代字符。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-129">The following text displays stylistic alternate glyphs.</span></span>  
   
- ![使用 OpenType 文體替代圖像的文字](../../../../docs/framework/wpf/advanced/media/opentypefont02.png "opentypefont02")  
-使用 OpenType 文體替代字圖像的文字  
+ <span data-ttu-id="f1ee1-130">![使用 OpenType 文體替代圖像的文字](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-130">![Text using OpenType stylistic alternate glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")</span></span>  
+<span data-ttu-id="f1ee1-131">使用 OpenType 文體替代圖像的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-131">Text using OpenType stylistic alternate glyphs</span></span>  
   
- 花飾字一般是與書法相關的精緻裝飾性圖像。  下列文字顯示 Pescadero 字型的標準和花飾字圖像。  
+ <span data-ttu-id="f1ee1-132">花飾字是裝飾性字符，會使用精心設計且通常與書寫體相關聯的裝飾。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-132">Swashes are decorative glyphs that use elaborate ornamentation often associated with calligraphy.</span></span> <span data-ttu-id="f1ee1-133">下列文字顯示 Pescadero 字型的標準和花飾字字符。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-133">The following text displays standard and swash glyphs for the Pescadero font.</span></span>  
   
- ![使用 OpenType 標準和勾耳圖像的文字](../../../../docs/framework/wpf/advanced/media/opentypefont08.png "opentypefont08")  
-使用 OpenType 標準和花飾字圖像的文字  
+ <span data-ttu-id="f1ee1-134">![使用 OpenType 標準和勾耳圖像的文字](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-134">![Text using OpenType standard and swash glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")</span></span>  
+<span data-ttu-id="f1ee1-135">使用 OpenType 標準和勾耳圖像的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-135">Text using OpenType standard and swash glyphs</span></span>  
   
- 如需 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 功能的詳細資訊，請參閱 [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)。  
+ <span data-ttu-id="f1ee1-136">如需 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 功能的詳細資訊，請參閱 [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-136">For more details on [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] features, see [OpenType Font Features](../../../../docs/framework/wpf/advanced/opentype-font-features.md).</span></span>  
   
 <a name="Enhanced_International_Text_Support"></a>   
-## 增強型國際文字支援  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 具備下列功能，提供了增強型國際文字支援：  
+## <a name="enhanced-international-text-support"></a><span data-ttu-id="f1ee1-137">已增強的國際文字支援</span><span class="sxs-lookup"><span data-stu-id="f1ee1-137">Enhanced International Text Support</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="f1ee1-138"> 藉由提供下列功能來提供已增強的國際文字支援：</span><span class="sxs-lookup"><span data-stu-id="f1ee1-138"> provides enhanced international text support by providing the following features:</span></span>  
   
--   使用適應性度量，自動調整所有書寫系統中的行距。  
+-   <span data-ttu-id="f1ee1-139">在所有書寫系統中，使用自動調整度量功能來自動調整行間距。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-139">Automatic line-spacing in all writing systems, using adaptive measurement.</span></span>  
   
--   廣泛的國際文字支援。  如需詳細資訊，請參閱 [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)。  
+-   <span data-ttu-id="f1ee1-140">對於國際文字的廣泛支援。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-140">Broad support for international text.</span></span> <span data-ttu-id="f1ee1-141">如需詳細資訊，請參閱 [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-141">For more information, see [Globalization for WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md).</span></span>  
   
--   語言指引的分行、斷字和對齊。  
+-   <span data-ttu-id="f1ee1-142">語言導向的分行、斷字及對齊。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-142">Language-guided line breaking, hyphenation, and justification.</span></span>  
   
 <a name="Enhanced_Font_Support"></a>   
-## 增強型字型支援  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 具備下列功能，提供了增強型字型支援：  
+## <a name="enhanced-font-support"></a><span data-ttu-id="f1ee1-143">已增強的字型支援</span><span class="sxs-lookup"><span data-stu-id="f1ee1-143">Enhanced Font Support</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="f1ee1-144"> 藉由提供下列功能來提供已增強的字型支援：</span><span class="sxs-lookup"><span data-stu-id="f1ee1-144"> provides enhanced font support by providing the following features:</span></span>  
   
--   所有文字都使用 Unicode。  字型行為和選取不再需要字元集或字碼頁。  
+-   <span data-ttu-id="f1ee1-145">適用於所有文字的 Unicode。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-145">Unicode for all text.</span></span> <span data-ttu-id="f1ee1-146">字型行為和選取不再需要字元集或字碼頁。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-146">Font behavior and selection no longer require charset or codepage.</span></span>  
   
--   字型行為與全域設定 \(例如系統地區設定\) 無關。  
+-   <span data-ttu-id="f1ee1-147">字型行為與全域設定 (例如系統地區設定) 無關。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-147">Font behavior independent of global settings, such as system locale.</span></span>  
   
--   不同的 <xref:System.Windows.FontWeight>、<xref:System.Windows.FontStretch> 和 <xref:System.Windows.FontStyle> 型別是用於定義 <xref:System.Windows.Media.FontFamily>。  相較於使用斜體和粗體布林組合來定義字型系列的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式設計，這提供更大的彈性。  
+-   <span data-ttu-id="f1ee1-148">個別<xref:System.Windows.FontWeight>， <xref:System.Windows.FontStretch>，和<xref:System.Windows.FontStyle>定義的型別<xref:System.Windows.Media.FontFamily>。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-148">Separate <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, and <xref:System.Windows.FontStyle> types for defining a <xref:System.Windows.Media.FontFamily>.</span></span> <span data-ttu-id="f1ee1-149">這提供的彈性比使用 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式設計還要大，其中的斜體與粗體布林值組合是用來定義字型家族。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-149">This provides greater flexibility than in [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] programming, in which Boolean combinations of italic and bold are used to define a font family.</span></span>  
   
--   書寫方向 \(水平和垂直\) 處理與字型名稱無關。  
+-   <span data-ttu-id="f1ee1-150">書寫方向 (水平和垂直) 會與字型名稱分開處理。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-150">Writing direction (horizontal versus vertical) handled independent of font name.</span></span>  
   
--   可攜式 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 檔案中的字型連結和字型後援 \(使用複合字型技術\)。  複合字型允許建構各項多語字型。  複合字型也提供了可以避免顯示遺失圖像的機制。  如需詳細資訊，請參閱 <xref:System.Windows.Media.FontFamily> 類別中的備註。  
+-   <span data-ttu-id="f1ee1-151">可攜式 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 檔案中的字型連結和字型遞補，使用的是複合字型技術。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-151">Font linking and font fallback in a portable [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] file, using composite font technology.</span></span> <span data-ttu-id="f1ee1-152">複合字型，能夠建構全系列的多語系字型。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-152">Composite fonts allow for the construction of full range multilingual fonts.</span></span> <span data-ttu-id="f1ee1-153">複合字型也提供一種機制來避免顯示遺漏的字符。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-153">Composite fonts also provide a mechanism that avoids displaying missing glyphs.</span></span> <span data-ttu-id="f1ee1-154">如需詳細資訊，請參閱 「 備註 」 中的<xref:System.Windows.Media.FontFamily>類別。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-154">For more information, see the remarks in the <xref:System.Windows.Media.FontFamily> class.</span></span>  
   
--   使用一組單一語言字型，從複合字型建立國際字型。  在開發多個語言的字型時，這可以節省資源成本。  
+-   <span data-ttu-id="f1ee1-155">從複合字型，使用單一語言字型群組建置的國際字型。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-155">International fonts built from composite fonts, using a group of single-language fonts.</span></span> <span data-ttu-id="f1ee1-156">這可在開發多國語言的字型時節省資源成本。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-156">This saves on resource costs when developing fonts for multiple languages.</span></span>  
   
--   複合字型會內嵌在文件中，因此可以提供文件可攜性。  如需詳細資訊，請參閱 <xref:System.Windows.Media.FontFamily> 類別中的備註。  
+-   <span data-ttu-id="f1ee1-157">內嵌於文件中的複合字型，藉此提供文件的可攜性。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-157">Composite fonts embedded in a document, thereby providing document portability.</span></span> <span data-ttu-id="f1ee1-158">如需詳細資訊，請參閱 「 備註 」 中的<xref:System.Windows.Media.FontFamily>類別。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-158">For more information, see the remarks in the <xref:System.Windows.Media.FontFamily> class.</span></span>  
   
 <a name="New_Text_APIs"></a>   
-## 全新的文字應用程式開發介面 \(API\)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了數個文字 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，可供開發人員在應用程式中包含文字時使用。  這些 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 分為三類：  
+## <a name="new-text-application-programming-interfaces-apis"></a><span data-ttu-id="f1ee1-159">新的文字應用程式開發介面 (API)</span><span class="sxs-lookup"><span data-stu-id="f1ee1-159">New Text Application Programming Interfaces (APIs)</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="f1ee1-160"> 提供數個文字 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，讓開發人員能夠在他們的應用程式中包含文字時使用。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-160"> provides several text [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] for developers to use when including text in their applications.</span></span> <span data-ttu-id="f1ee1-161">這些 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 可分為三個類別：</span><span class="sxs-lookup"><span data-stu-id="f1ee1-161">These [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are grouped into three categories:</span></span>  
   
--   **配置和使用者介面**：  [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 的通用文字控制項。  
+-   <span data-ttu-id="f1ee1-162">**版面配置和使用者介面**。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-162">**Layout and user interface**.</span></span> <span data-ttu-id="f1ee1-163">[!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 的一般文字控制項。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-163">The common text controls for the [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].</span></span>  
   
--   **輕量型文字繪製**：  讓您直接在物件上繪製文字。  
+-   <span data-ttu-id="f1ee1-164">**輕量型文字繪製**。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-164">**Lightweight text drawing**.</span></span> <span data-ttu-id="f1ee1-165">可讓您直接對物件繪製文字。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-165">Allows you to draw text directly to objects.</span></span>  
   
--   **進階文字格式**：  讓您實作自訂文字引擎。  
+-   <span data-ttu-id="f1ee1-166">**進階文字格式化**。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-166">**Advanced text formatting**.</span></span> <span data-ttu-id="f1ee1-167">可讓您實作自訂的文字引擎。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-167">Allows you to implement a custom text engine.</span></span>  
   
-### 配置和使用者介面  
- 以最高層級的功能角度來說，文字 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 會提供通用[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 控制項，例如 <xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.TextBlock> 和 <xref:System.Windows.Controls.TextBox>。  這些控制項會在應用程式中提供基本的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目，並提供簡單的方式來呈現文字以及與文字互動。  <xref:System.Windows.Controls.RichTextBox> 和 <xref:System.Windows.Controls.PasswordBox> 之類的控制項會啟用更進階或特定的文字處理。  而 <xref:System.Windows.Documents.TextRange>、<xref:System.Windows.Documents.TextSelection> 和 <xref:System.Windows.Documents.TextPointer> 之類的類別則會啟用有用的文字管理。  這些 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控制項提供了屬性，例如 <xref:System.Windows.Controls.Control.FontFamily%2A>、<xref:System.Windows.Controls.Control.FontSize%2A> 和 <xref:System.Windows.Controls.Control.FontStyle%2A>，可讓您控制用於呈現文字的字型。  
+### <a name="layout-and-user-interface"></a><span data-ttu-id="f1ee1-168">版面配置和使用者介面</span><span class="sxs-lookup"><span data-stu-id="f1ee1-168">Layout and User Interface</span></span>  
+ <span data-ttu-id="f1ee1-169">在最高層級的功能，文字[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供常見[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]控制項例如<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBlock>，和<xref:System.Windows.Controls.TextBox>。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-169">At the highest level of functionality, the text [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] provide common [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controls such as <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, and <xref:System.Windows.Controls.TextBox>.</span></span> <span data-ttu-id="f1ee1-170">這些控制項提供應用程式內基本的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，以及提供一種簡單方式來呈現文字並與之互動。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-170">These controls provide the basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elements within an application, and offer an easy way to present and interact with text.</span></span> <span data-ttu-id="f1ee1-171">例如，控制<xref:System.Windows.Controls.RichTextBox>和<xref:System.Windows.Controls.PasswordBox>啟用更進階或特殊的文字處理。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-171">Controls such as <xref:System.Windows.Controls.RichTextBox> and <xref:System.Windows.Controls.PasswordBox> enable more advanced or specialized text-handling.</span></span> <span data-ttu-id="f1ee1-172">之類的類別和<xref:System.Windows.Documents.TextRange>， <xref:System.Windows.Documents.TextSelection>，和<xref:System.Windows.Documents.TextPointer>啟用有用的文字操作。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-172">And classes such as <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, and <xref:System.Windows.Documents.TextPointer> enable useful text manipulation.</span></span> <span data-ttu-id="f1ee1-173">這些[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]控制項提供屬性，例如<xref:System.Windows.Controls.Control.FontFamily%2A>， <xref:System.Windows.Controls.Control.FontSize%2A>，和<xref:System.Windows.Controls.Control.FontStyle%2A>，可讓您控制用來呈現文字的字型。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-173">These [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] controls provide properties such as <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, and <xref:System.Windows.Controls.Control.FontStyle%2A>, which enable you to control the font that is used to render the text.</span></span>  
   
-#### 使用點陣圖效果、轉換和文字效果  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您使用功能 \(例如點陣圖效果、轉換和文字效果\) 來建立具有有趣外觀的文字。  下列範例顯示套用至文字的一般下拉式陰影效果類型。  
+#### <a name="using-bitmap-effects-transforms-and-text-effects"></a><span data-ttu-id="f1ee1-174">使用點陣圖效果、轉換和文字效果</span><span class="sxs-lookup"><span data-stu-id="f1ee1-174">Using Bitmap Effects, Transforms, and Text Effects</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="f1ee1-175"> 可讓您藉由使用點陣圖效果、轉換和文字效果等功能，對文字建立具視覺效果的趣味用法。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-175"> allows you to create visually interesting uses of text by uses features such as bitmap effects, transforms, and text effects.</span></span> <span data-ttu-id="f1ee1-176">下列範例示範套用至文字之延伸陰影效果的典型類型。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-176">The following example shows a typical type of a drop shadow effect applied to text.</span></span>  
   
- ![Softness &#61; 0.25 的文字陰影](../../../../docs/framework/wpf/advanced/media/shadowtext01.png "ShadowText01")  
-具有下拉式陰影的文字  
+ <span data-ttu-id="f1ee1-177">![文字陰影濃淡 &#61;0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-177">![Text shadow with Softness &#61; 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")</span></span>  
+<span data-ttu-id="f1ee1-178">具有延伸陰影的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-178">Text with a drop shadow</span></span>  
   
- 下列範例顯示套用至文字的下拉式陰影效果和雜訊。  
+ <span data-ttu-id="f1ee1-179">下列範例示範套用至文字的延伸陰影效果與雜點。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-179">The following example shows a drop shadow effect and noise applied to text.</span></span>  
   
- ![具有雜點的文字陰影](../../../../docs/framework/wpf/advanced/media/shadowtext04.png "ShadowText04")  
-具有下拉式陰影和雜訊的文字  
+ <span data-ttu-id="f1ee1-180">![具有雜點的文字陰影](../../../../docs/framework/wpf/advanced/media/shadowtext04.jpg "ShadowText04")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-180">![Text shadow with noise](../../../../docs/framework/wpf/advanced/media/shadowtext04.jpg "ShadowText04")</span></span>  
+<span data-ttu-id="f1ee1-181">具有延伸陰影與雜點的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-181">Text with a drop shadow and noise</span></span>  
   
- 下列範例顯示套用至文字的外部光暈效果。  
+ <span data-ttu-id="f1ee1-182">下列範例示範套用至文字的外光暈效果。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-182">The following example shows an outer glow effect applied to text.</span></span>  
   
- ![使用 OuterGlowBitmapEffect 的文字陰影](../../../../docs/framework/wpf/advanced/media/shadowtext05.png "ShadowText05")  
-具有外部光暈效果的文字  
+ <span data-ttu-id="f1ee1-183">![使用 OuterGlowBitmapEffect 的文字陰影](../../../../docs/framework/wpf/advanced/media/shadowtext05.jpg "ShadowText05")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-183">![Text shadow using an OuterGlowBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext05.jpg "ShadowText05")</span></span>  
+<span data-ttu-id="f1ee1-184">具有外光暈效果的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-184">Text with an outer glow effect</span></span>  
   
- 下列範例顯示套用至文字的模糊效果。  
+ <span data-ttu-id="f1ee1-185">下列範例示範套用至文字的模糊效果。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-185">The following example shows a blur effect applied to text.</span></span>  
   
- ![使用 BlurBitmapEffect 的文字陰影](../../../../docs/framework/wpf/advanced/media/shadowtext06.png "ShadowText06")  
-具有模糊效果的文字  
+ <span data-ttu-id="f1ee1-186">![使用 BlurBitmapEffect 的文字陰影](../../../../docs/framework/wpf/advanced/media/shadowtext06.jpg "ShadowText06")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-186">![Text shadow using a BlurBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext06.jpg "ShadowText06")</span></span>  
+<span data-ttu-id="f1ee1-187">具有模糊效果的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-187">Text with a blur effect</span></span>  
   
- 下列範例顯示第二行文字沿著 X 軸調整 150%，第三行文字沿著 Y 軸調整 150%。  
+ <span data-ttu-id="f1ee1-188">下列範例示範沿著 X 軸縮放 150% 的第二行文字，以及沿著 Y 軸縮放 150% 的第三行文字。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-188">The following example shows the second line of text scaled by 150% along the x-axis, and the third line of text scaled by 150% along the y-axis.</span></span>  
   
- ![使用 ScaleTransform 縮放的文字](../../../../docs/framework/wpf/advanced/media/transformedtext02.png "TransformedText02")  
-使用 ScaleTransform 的文字  
+ <span data-ttu-id="f1ee1-189">![使用 scaletransform 縮放的文字](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-189">![Text scaled using a ScaleTransform](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")</span></span>  
+<span data-ttu-id="f1ee1-190">使用 ScaleTransform 的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-190">Text using a ScaleTransform</span></span>  
   
- 下列範例顯示文字沿著 X 軸傾斜。  
+ <span data-ttu-id="f1ee1-191">下列範例示範沿著 X 軸傾斜的文字。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-191">The following example shows text skewed along the x-axis.</span></span>  
   
- ![使用 SkewTransform 傾斜的文字](../../../../docs/framework/wpf/advanced/media/transformedtext03.png "TransformedText03")  
-使用 SkewTransform 的文字  
+ <span data-ttu-id="f1ee1-192">![使用 skewtransform 傾斜的文字](../../../../docs/framework/wpf/advanced/media/transformedtext03.jpg "TransformedText03")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-192">![Text skewed using a SkewTransform](../../../../docs/framework/wpf/advanced/media/transformedtext03.jpg "TransformedText03")</span></span>  
+<span data-ttu-id="f1ee1-193">使用 SkewTransform 的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-193">Text using a SkewTransform</span></span>  
   
- <xref:System.Windows.Media.TextEffect> 物件是可以允許您將文字視為文字字串中之一或多組字元的 Helper 物件。  下列範例會顯示個別旋轉的字元。  每個字元是以 1 秒間隔獨立旋轉。  
+ <span data-ttu-id="f1ee1-194">A<xref:System.Windows.Media.TextEffect>物件是協助程式物件，可讓您將文字視為一或多個群組中的文字字串的字元。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-194">A <xref:System.Windows.Media.TextEffect> object is a helper object that allows you to treat text as one or more groups of characters in a text string.</span></span> <span data-ttu-id="f1ee1-195">下列範例示範旋轉個別字元。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-195">The following example shows an individual character being rotated.</span></span> <span data-ttu-id="f1ee1-196">每一個字元會以 1 秒的間隔獨立旋轉。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-196">Each character is rotated independently at 1-second intervals.</span></span>  
   
- ![旋轉文字的文字效果螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/texteffect01.png "TextEffect01")  
-旋轉文字效果動畫的範例  
+ <span data-ttu-id="f1ee1-197">![文字效果旋轉文字的螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/texteffect01.jpg "TextEffect01")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-197">![Screenshot of text effect rotating text](../../../../docs/framework/wpf/advanced/media/texteffect01.jpg "TextEffect01")</span></span>  
+<span data-ttu-id="f1ee1-198">旋轉文字效果動畫的範例</span><span class="sxs-lookup"><span data-stu-id="f1ee1-198">Example of a rotating text effect animation</span></span>  
   
-#### 使用流程文件  
- 除了通用 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控制項之外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還提供用於進行文字展示的配置控制項，即 <xref:System.Windows.Documents.FlowDocument> 項目。  當 <xref:System.Windows.Documents.FlowDocument> 項目與 <xref:System.Windows.Controls.DocumentViewer> 項目搭配使用時，可以為具有各種配置需求的大量文字提供控制。  配置控制項會透過 <xref:System.Windows.Documents.Typography> 物件和其他 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控制項的字型相關屬性，提供進階印刷樣式存取。  
+#### <a name="using-flow-documents"></a><span data-ttu-id="f1ee1-199">使用非固定格式文件</span><span class="sxs-lookup"><span data-stu-id="f1ee1-199">Using Flow Documents</span></span>  
+ <span data-ttu-id="f1ee1-200">除了一般[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供文字的呈現的版面配置控制項 —<xref:System.Windows.Documents.FlowDocument>項目。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-200">In addition to the common [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] controls, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offers a layout control for text presentation—the <xref:System.Windows.Documents.FlowDocument> element.</span></span> <span data-ttu-id="f1ee1-201"><xref:System.Windows.Documents.FlowDocument>項目，搭配<xref:System.Windows.Controls.DocumentViewer>項目，提供大量搭配不同的版面配置需求文字的控制項。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-201">The <xref:System.Windows.Documents.FlowDocument> element, in conjunction with the <xref:System.Windows.Controls.DocumentViewer> element, provides a control for large amounts of text with varying layout requirements.</span></span> <span data-ttu-id="f1ee1-202">版面配置控制項提供存取透過的進階印刷樣式<xref:System.Windows.Documents.Typography>物件和其他的字型相關屬性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]控制項。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-202">Layout controls provide access to advanced typography through the <xref:System.Windows.Documents.Typography> object and font-related properties of other [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] controls.</span></span>  
   
- 下列範例顯示 <xref:System.Windows.Controls.FlowDocumentReader> 中裝載的文字內容，會提供搜尋、巡覽、分頁和內容縮放比例支援。  
+ <span data-ttu-id="f1ee1-203">下列範例顯示文字內容，裝載於<xref:System.Windows.Controls.FlowDocumentReader>，這樣會提供搜尋、 瀏覽、 分頁和縮放支援的內容。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-203">The following example shows text content hosted in a <xref:System.Windows.Controls.FlowDocumentReader>, which provides search, navigation, pagination, and content scaling support.</span></span>  
   
- ![使用 OpenType 字型範例螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/typographyinwpf-03.png "TypographyInWPF\_03")  
-FlowDocumentReader 中裝載的文字  
+ <span data-ttu-id="f1ee1-204">![使用 OpenType 字型範例螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/typographyinwpf-03.png "TypographyInWPF_03")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-204">![Using OpenType fonts sample screen shot](../../../../docs/framework/wpf/advanced/media/typographyinwpf-03.png "TypographyInWPF_03")</span></span>  
+<span data-ttu-id="f1ee1-205">裝載於 FlowDocumentReader 的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-205">Text hosted in a FlowDocumentReader</span></span>  
   
- 如需詳細資訊，請參閱 [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
+ <span data-ttu-id="f1ee1-206">如需詳細資訊，請參閱 [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-206">For more information, see [Documents in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).</span></span>  
   
-### 輕量型文字繪製  
- 您可以使用 <xref:System.Windows.Media.DrawingContext> 物件的 <xref:System.Windows.Media.DrawingContext.DrawText%2A> 方法，直接在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件上繪製文字。  若要使用這個方法，您必須建立 <xref:System.Windows.Media.FormattedText> 物件。  這個物件可讓您繪製多行文字，而文字中的每個字元都可以個別格式化。  <xref:System.Windows.Media.FormattedText> 物件的功能包含 Win32 API 中 DrawText 旗標的許多功能。  此外，<xref:System.Windows.Media.FormattedText> 物件還包含其他功能，例如省略符號支援，即文字超出範圍時顯示省略符號。  下列範例顯示套用多種格式的文字，包括第二和第三個字上的線形漸層。  
+### <a name="lightweight-text-drawing"></a><span data-ttu-id="f1ee1-207">輕量型文字繪製</span><span class="sxs-lookup"><span data-stu-id="f1ee1-207">Lightweight Text Drawing</span></span>  
+ <span data-ttu-id="f1ee1-208">您可以直接繪製文字[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]物件使用<xref:System.Windows.Media.DrawingContext.DrawText%2A>方法<xref:System.Windows.Media.DrawingContext>物件。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-208">You can draw text directly to [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objects by using the <xref:System.Windows.Media.DrawingContext.DrawText%2A> method of the <xref:System.Windows.Media.DrawingContext> object.</span></span> <span data-ttu-id="f1ee1-209">若要使用此方法，您建立<xref:System.Windows.Media.FormattedText>物件。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-209">To use this method, you create a <xref:System.Windows.Media.FormattedText> object.</span></span> <span data-ttu-id="f1ee1-210">這個物件可讓您繪製多行文字，且可個別格式化文字中的每個字元。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-210">This object allows you to draw multi-line text, in which each character in the text can be individually formatted.</span></span> <span data-ttu-id="f1ee1-211">功能<xref:System.Windows.Media.FormattedText>物件包含許多 DrawText 旗標，Win32 API 中的功能。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-211">The functionality of the <xref:System.Windows.Media.FormattedText> object contains much of the functionality of the DrawText flags in the Win32 API.</span></span> <span data-ttu-id="f1ee1-212">此外，<xref:System.Windows.Media.FormattedText>物件包含的功能，例如省略符號的支援，當文字超過其範圍時，會顯示省略符號。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-212">In addition, the <xref:System.Windows.Media.FormattedText> object contains functionality such as ellipsis support, in which an ellipsis is displayed when text exceeds its bounds.</span></span> <span data-ttu-id="f1ee1-213">下列範例示範的文字具有數種已套用的格式，包括第二個和第三個字的線性漸層。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-213">The following example shows text that has several formats applied to it, including a linear gradient on the second and third words.</span></span>  
   
- ![使用 FormattedText 物件顯示的文字](../../../../docs/framework/wpf/advanced/media/formattedtext01.png "FormattedText01")  
-使用 FormattedText 物件的顯示文字  
+ <span data-ttu-id="f1ee1-214">![使用 FormattedText 物件顯示的文字](../../../../docs/framework/wpf/advanced/media/formattedtext01.jpg "FormattedText01")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-214">![Text displayed using FormattedText object](../../../../docs/framework/wpf/advanced/media/formattedtext01.jpg "FormattedText01")</span></span>  
+<span data-ttu-id="f1ee1-215">使用 FormattedText 物件顯示的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-215">Displayed text using FormattedText object</span></span>  
   
- 您可以將格式化文字轉換為 <xref:System.Windows.Media.Geometry> 物件，以便建立具有有趣外觀的其他文字類型。  例如，您可以根據文字字串的外框來建立 <xref:System.Windows.Media.Geometry> 物件。  
+ <span data-ttu-id="f1ee1-216">您可以將格式化的文字放到轉換<xref:System.Windows.Media.Geometry>物件，可讓您建立其他類型的這類饒文字。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-216">You can convert formatted text into <xref:System.Windows.Media.Geometry> objects, allowing you to create other types of visually interesting text.</span></span> <span data-ttu-id="f1ee1-217">例如，您可以建立<xref:System.Windows.Media.Geometry>物件根據外框的文字字串。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-217">For example, you could create a <xref:System.Windows.Media.Geometry> object based on the outline of a text string.</span></span>  
   
- ![以線性漸層筆刷繪製外框的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext02.png "OutlinedText02")  
-使用線形漸層筆刷的文字外框  
+ <span data-ttu-id="f1ee1-218">![使用線性漸層筆刷文字外框](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-218">![Text outline using a linear gradient brush](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")</span></span>  
+<span data-ttu-id="f1ee1-219">以線性漸層筆刷繪製外框的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-219">Text outline using a linear gradient brush</span></span>  
   
- 下列範例說明藉由修改轉換文字的筆劃、填滿和反白顯示，建立有趣視覺效果的多個方法。  
+ <span data-ttu-id="f1ee1-220">下列範例示範數種方式，可透過修改筆劃、填滿和反白顯示轉換的文字，來建立有趣的視覺效果。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-220">The following examples illustrate several ways of creating interesting visual effects by modifying the stroke, fill, and highlight of converted text.</span></span>  
   
- ![使用不同填色和筆觸色彩的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext03.png "OutlinedText03")  
-將筆劃和填滿設定為不同色彩的範例  
+ <span data-ttu-id="f1ee1-221">![使用不同填色和筆觸色彩的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-221">![Text with different colors for fill and stroke](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")</span></span>  
+<span data-ttu-id="f1ee1-222">設定筆劃並填滿不同色彩的範例</span><span class="sxs-lookup"><span data-stu-id="f1ee1-222">Example of setting stroke and fill to different colors</span></span>  
   
- ![影像筆刷套用至筆觸的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext04.png "OutlinedText04")  
-在筆劃上套用影像筆刷的範例  
+ <span data-ttu-id="f1ee1-223">![影像筆刷套用至筆觸的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-223">![Text with image brush applied to stroke](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")</span></span>  
+<span data-ttu-id="f1ee1-224">影像筆刷套用至筆劃的範例</span><span class="sxs-lookup"><span data-stu-id="f1ee1-224">Example of an image brush applied to the stroke</span></span>  
   
- ![影像筆刷套用至筆觸的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext05.png "OutlinedText05")  
-在筆劃和反白顯示上套用影像筆刷的範例  
+ <span data-ttu-id="f1ee1-225">![影像筆刷套用至筆觸的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-225">![Text with image brush applied to stroke](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")</span></span>  
+<span data-ttu-id="f1ee1-226">影像筆刷套用至筆劃並反白顯示的範例</span><span class="sxs-lookup"><span data-stu-id="f1ee1-226">Example of an image brush applied to the stroke and highlight</span></span>  
   
- 如需 <xref:System.Windows.Media.FormattedText> 物件的詳細資訊，請參閱[繪製格式化的文字](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)。  
+ <span data-ttu-id="f1ee1-227">如需有關<xref:System.Windows.Media.FormattedText>物件，請參閱[繪圖格式化文字](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-227">For more information on the <xref:System.Windows.Media.FormattedText> object, see [Drawing Formatted Text](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md).</span></span>  
   
-### 進階文字格式化  
- 以文字 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 的最進階層級角度來說，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 會藉由使用 <xref:System.Windows.Media.TextFormatting.TextFormatter> 物件和 <xref:System.Windows.Media.TextFormatting> 命名空間中其他的型別來為您提供建立自訂文字配置的能力。  <xref:System.Windows.Media.TextFormatting.TextFormatter> 和相關類別可讓您實作自訂文字配置，以支援您自己的國際文字字元格式、段落樣式、分行規則和其他配置功能的定義。  您幾乎不需要覆寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文字配置支援的預設實作。  但是當您建立文字編輯控制項或應用程式時，您可能會需要預設 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作之外的不同實作。  
+### <a name="advanced-text-formatting"></a><span data-ttu-id="f1ee1-228">進階文字格式化</span><span class="sxs-lookup"><span data-stu-id="f1ee1-228">Advanced Text Formatting</span></span>  
+ <span data-ttu-id="f1ee1-229">在最文字的進階級[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可讓您藉由建立自訂文字配置<xref:System.Windows.Media.TextFormatting.TextFormatter>物件和中的其他類型<xref:System.Windows.Media.TextFormatting>命名空間。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-229">At the most advanced level of the text [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offers you the ability to create custom text layout by using the <xref:System.Windows.Media.TextFormatting.TextFormatter> object and other types in the <xref:System.Windows.Media.TextFormatting> namespace.</span></span> <span data-ttu-id="f1ee1-230"><xref:System.Windows.Media.TextFormatting.TextFormatter>和相關聯的類別可讓您實作支援的字元格式，段落樣式定義的自訂文字版面配置列中斷規則和其他版面配置功能的國際文字。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-230">The <xref:System.Windows.Media.TextFormatting.TextFormatter> and associated classes allow you to implement custom text layout that supports your own definition of character formats, paragraph styles, line breaking rules, and other layout features for international text.</span></span> <span data-ttu-id="f1ee1-231">在非常少數的情況下，您會想要覆寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文字配置支援的預設實作。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-231">There are very few cases in which you would want to override the default implementation of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] text layout support.</span></span> <span data-ttu-id="f1ee1-232">不過，如果您要建立文字編輯控制項或應用程式，您可能需要不同於預設 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的實作。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-232">However, if you were creating a text editing control or application, you might require a different implementation than the default [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementation.</span></span>  
   
- 與傳統文字 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 不同的是，<xref:System.Windows.Media.TextFormatting.TextFormatter> 會透過一組回呼方法，與文字配置用戶端互動。  它會要求要用戶端在 <xref:System.Windows.Media.TextFormatting.TextSource> 類別實作中提供這些方法。  下列圖表說明用戶端應用程式和 <xref:System.Windows.Media.TextFormatting.TextFormatter> 之間的文字配置互動。  
+ <span data-ttu-id="f1ee1-233">不同於傳統文字[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]、<xref:System.Windows.Media.TextFormatting.TextFormatter>與透過回呼方法的一組文字配置用戶端互動。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-233">Unlike a traditional text [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], the <xref:System.Windows.Media.TextFormatting.TextFormatter> interacts with a text layout client through a set of callback methods.</span></span> <span data-ttu-id="f1ee1-234">它需要用戶端提供這些方法的實作中<xref:System.Windows.Media.TextFormatting.TextSource>類別。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-234">It requires the client to provide these methods in an implementation of the <xref:System.Windows.Media.TextFormatting.TextSource> class.</span></span> <span data-ttu-id="f1ee1-235">下圖說明文字版面配置之間互動的用戶端應用程式和<xref:System.Windows.Media.TextFormatting.TextFormatter>。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-235">The following diagram illustrates the text layout interaction between the client application and <xref:System.Windows.Media.TextFormatting.TextFormatter>.</span></span>  
   
- ![文字配置用戶端和 TextFormatter 的圖表](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
-應用程式和 TextFormatter 之間的互動  
+ <span data-ttu-id="f1ee1-236">![文字配置用戶端和 TextFormatter 的圖表](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")</span><span class="sxs-lookup"><span data-stu-id="f1ee1-236">![Diagram of text layout client and TextFormatter](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")</span></span>  
+<span data-ttu-id="f1ee1-237">應用程式和 TextFormatter 之間的互動</span><span class="sxs-lookup"><span data-stu-id="f1ee1-237">Interaction between application and TextFormatter</span></span>  
   
- 如需建立自訂文字配置的詳細資訊，請參閱[進階文字格式化](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)。  
+ <span data-ttu-id="f1ee1-238">如需如何建立自訂文字版面配置的詳細資訊，請參閱[進階文字格式化](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)。</span><span class="sxs-lookup"><span data-stu-id="f1ee1-238">For more details on creating custom text layout, see [Advanced Text Formatting](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.FormattedText>   
- <xref:System.Windows.Media.TextFormatting.TextFormatter>   
- [ClearType 概觀](../../../../docs/framework/wpf/advanced/cleartype-overview.md)   
- [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)   
- [繪製格式化的文字](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)   
- [進階文字格式化](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)   
- [文字](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Microsoft 印刷樣式](http://www.microsoft.com/typography/default.mspx)
+## <a name="see-also"></a><span data-ttu-id="f1ee1-239">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1ee1-239">See Also</span></span>  
+ <xref:System.Windows.Media.FormattedText>  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter>  
+ [<span data-ttu-id="f1ee1-240">ClearType 概觀</span><span class="sxs-lookup"><span data-stu-id="f1ee1-240">ClearType Overview</span></span>](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
+ [<span data-ttu-id="f1ee1-241">OpenType 字型功能</span><span class="sxs-lookup"><span data-stu-id="f1ee1-241">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="f1ee1-242">繪製格式化的文字</span><span class="sxs-lookup"><span data-stu-id="f1ee1-242">Drawing Formatted Text</span></span>](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
+ [<span data-ttu-id="f1ee1-243">進階文字格式化</span><span class="sxs-lookup"><span data-stu-id="f1ee1-243">Advanced Text Formatting</span></span>](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
+ [<span data-ttu-id="f1ee1-244">Text</span><span class="sxs-lookup"><span data-stu-id="f1ee1-244">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="f1ee1-245">Microsoft 印刷樣式</span><span class="sxs-lookup"><span data-stu-id="f1ee1-245">Microsoft Typography</span></span>](http://www.microsoft.com/typography/default.mspx)

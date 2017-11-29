@@ -1,29 +1,33 @@
 ---
-title: "安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a17b77293d9a12fd3720fc54cb6c17a28a8c6ed0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 安全性
-SQL 工作流程執行個體存放區會使用下列資料庫安全性角色，安全地存取持續性資料庫中的執行個體狀態資訊。  
+# <a name="security"></a><span data-ttu-id="d8dbe-102">安全性</span><span class="sxs-lookup"><span data-stu-id="d8dbe-102">Security</span></span>
+<span data-ttu-id="d8dbe-103">SQL 工作流程執行個體存放區會使用下列資料庫安全性角色，安全地存取持續性資料庫中的執行個體狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-103">The SQL Workflow Instance Store uses the following database security roles to secure access to instance state information in the persistence database.</span></span>  
   
--   **System.Activities.DurableInstancing.InstanceStoreUsers**：這個角色具有公用檢視表的讀取與寫入權限，以及執行個體建立、載入及儲存相關之預存程序的執行權限。  
+-   <span data-ttu-id="d8dbe-104">**System.Activities.DurableInstancing.InstanceStoreUsers**。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-104">**System.Activities.DurableInstancing.InstanceStoreUsers**.</span></span> <span data-ttu-id="d8dbe-105">這個角色具有公用檢視表的讀取與寫入權限，以及執行個體建立、載入及儲存相關之預存程序的執行權限。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-105">This role has read and write access to public views and execution rights to stored procedures that are involved in creating, loading and saving instances.</span></span>  
   
--   **System.Activities.DurableInstancing.InstanceStoreObservers**：這個角色具有公用檢視表的唯讀存取權。  
+-   <span data-ttu-id="d8dbe-106">**System.Activities.DurableInstancing.InstanceStoreObservers**。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-106">**System.Activities.DurableInstancing.InstanceStoreObservers**.</span></span> <span data-ttu-id="d8dbe-107">這個角色具有公用檢視表的唯讀存取權。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-107">This role has read-only access to public views.</span></span>  
   
--   **System.Activities.DurableInstancing.WorkflowActivationUsers**：這個角色具有與執行個體啟動程序相關之預存程序的執行權限。如需有關執行個體啟動的詳細資訊，請參閱[執行個體啟用](../../../docs/framework/windows-workflow-foundation//instance-activation.md)。請將用於執行泛型主機 \(例如 [!INCLUDE[dublin](../../../includes/dublin-md.md)] 的工作流程管理服務\) 的使用者帳戶加入至這個資料庫角色。  
+-   <span data-ttu-id="d8dbe-108">**System.Activities.DurableInstancing.WorkflowActivationUsers**。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-108">**System.Activities.DurableInstancing.WorkflowActivationUsers**.</span></span> <span data-ttu-id="d8dbe-109">這個角色具有與執行個體啟動程序相關之預存程序的執行權限。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-109">This role has execution rights to stored procedures that are involved in the instance activation process.</span></span> <span data-ttu-id="d8dbe-110">如需有關執行個體啟用的詳細資訊，請參閱[執行個體啟用](../../../docs/framework/windows-workflow-foundation/instance-activation.md)。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-110">For more information about instance activation, see [Instance Activation](../../../docs/framework/windows-workflow-foundation/instance-activation.md).</span></span> <span data-ttu-id="d8dbe-111">請將用於執行泛型主機 (例如 [!INCLUDE[dublin](../../../includes/dublin-md.md)] 的工作流程管理服務) 的使用者帳戶加入至這個資料庫角色。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-111">The user account under which a generic host (such as the Workflow Management Service of [!INCLUDE[dublin](../../../includes/dublin-md.md)]) runs should be added to this database role.</span></span>  
   
- Windows Server App Fabric 持續性存放區的 [!INCLUDE[crabout](../../../includes/crabout-md.md)]安全性，請參閱 [App Fabric 中持續性存放區的安全性組態](http://go.microsoft.com/fwlink/?LinkId=201208)  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="d8dbe-112">請參閱 Windows Server App Fabric，持續性存放區的安全性[App Fabric 中持續性存放區的安全性組態](http://go.microsoft.com/fwlink/?LinkId=201208)</span><span class="sxs-lookup"><span data-stu-id="d8dbe-112"> security for persistence stores with Windows Server App Fabric, see [Security Configuration for Persistence Stores in App Fabric](http://go.microsoft.com/fwlink/?LinkId=201208)</span></span>  
   
 > [!CAUTION]
->  用戶端若可在執行個體存放區中存取其本身的執行個體資料，即可存取同一個執行個體存放區中的其他所有執行個體。執行個體存放區不支援指定執行個體層級的安全性權限。您應建立單獨的執行個體存放區，並對應不同的群組\/使用者，使其擁有不同的存放區存取權限。
+>  <span data-ttu-id="d8dbe-113">用戶端若可在執行個體存放區中存取其本身的執行個體資料，即可存取同一個執行個體存放區中的其他所有執行個體。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-113">A client that has access to its own instance data in the instance store has access to all other instances in the same instance store.</span></span> <span data-ttu-id="d8dbe-114">執行個體存放區不支援指定執行個體層級的安全性權限。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-114">The instance store does not support specifying security permissions at the instance level.</span></span> <span data-ttu-id="d8dbe-115">您應建立單獨的執行個體存放區，並對應不同的群組/使用者，使其擁有不同的存放區存取權限。</span><span class="sxs-lookup"><span data-stu-id="d8dbe-115">You should create separate instance stores and map different groups/users to have access to different stores.</span></span>

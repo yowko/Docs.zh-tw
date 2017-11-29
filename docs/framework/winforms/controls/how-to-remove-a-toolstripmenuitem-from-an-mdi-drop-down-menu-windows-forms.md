@@ -1,62 +1,66 @@
 ---
-title: "如何：從 MDI 下拉式功能表移除 ToolStripMenuItem (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI, 合併功能表項目"
-  - "功能表項目, 從 MDI 下拉式功能表中移除"
-  - "MenuStrip 控制項 [Windows Form], 合併"
-  - "MenuStrip 控制項 [Windows Form], 移除"
+title: "如何：從 MDI 下拉式功能表移除 ToolStripMenuItem (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], removing from MDI drop-down menus
+- MenuStrip control [Windows Forms], merging
+- MenuStrip control [Windows Forms], removing
+- MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b265544b45ad0614985fdc1d8dbf6f9c0b909ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：從 MDI 下拉式功能表移除 ToolStripMenuItem (Windows Form)
-在某些應用程式中，多重文件介面 \(MDI\) 子視窗的類型可能會與 MDI 父視窗不同。  例如，MDI 父視窗可能是試算表，而 MDI 子視窗則可能是圖表。  在此情形下，您要以 MDI 子視窗功能表的內容更新 MDI 父視窗功能表的內容，因為已啟動各種不同的 MDI 子視窗。  
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a><span data-ttu-id="ce672-102">如何：從 MDI 下拉式功能表移除 ToolStripMenuItem (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="ce672-102">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu (Windows Forms)</span></span>
+<span data-ttu-id="ce672-103">在某些應用程式中，多重文件介面 (MDI) 子視窗的類型可能與 MDI 父視窗不同。</span><span class="sxs-lookup"><span data-stu-id="ce672-103">In some applications, the kind of a multiple-document interface (MDI) child window can be different from the MDI parent window.</span></span> <span data-ttu-id="ce672-104">例如，MDI 父視窗可能是試算表，而 MDI 子視窗可能是圖表。</span><span class="sxs-lookup"><span data-stu-id="ce672-104">For example, the MDI parent might be a spreadsheet, and the MDI child might be a chart.</span></span> <span data-ttu-id="ce672-105">在這種情況下，由於已啟動各種不同類型的 MDI 子視窗，因此您需要以 MDI 子視窗功能表的內容更新 MDI 父視窗功能表的內容。</span><span class="sxs-lookup"><span data-stu-id="ce672-105">In that case, you want to update the contents of the MDI parent's menu with the contents of the MDI child's menu as MDI child windows of different kinds are activated.</span></span>  
   
- 下列程序使用 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>、<xref:System.Windows.Forms.MergeAction> 和 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 屬性，將功能表項目從 MDI 父功能表的下拉式組件中移除。  關閉 MDI 子視窗，會將移除的功能表項目復原至 MDI 父功能表中。  
+ <span data-ttu-id="ce672-106">下列程序使用<xref:System.Windows.Forms.Form.IsMdiContainer%2A>， <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>， <xref:System.Windows.Forms.MergeAction>，和<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>屬性從 MDI 父功能表的下拉式部分中移除功能表項目。</span><span class="sxs-lookup"><span data-stu-id="ce672-106">The following procedure uses the <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, and <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span> <span data-ttu-id="ce672-107">關閉 MDI 子視窗會移除的功能表項目還原至 MDI 父功能表。</span><span class="sxs-lookup"><span data-stu-id="ce672-107">Closing the MDI child window restores the removed menu items to the MDI parent menu.</span></span>  
   
-### 若要將 MenuStrip 從 MDI 下拉式功能表中移除  
+### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a><span data-ttu-id="ce672-108">若要從 MDI 下拉式功能表移除 MenuStrip</span><span class="sxs-lookup"><span data-stu-id="ce672-108">To remove a MenuStrip from an MDI drop-down menu</span></span>  
   
-1.  建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
+1.  <span data-ttu-id="ce672-109">建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="ce672-109">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
   
-2.  加入 <xref:System.Windows.Forms.MenuStrip> 至 `Form1`，並將 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
+2.  <span data-ttu-id="ce672-110">將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="ce672-110">Add a <xref:System.Windows.Forms.MenuStrip> to `Form1` and set the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property of the <xref:System.Windows.Forms.MenuStrip> to `true`.</span></span>  
   
-3.  新增最上層的功能表項目`Form1`<xref:System.Windows.Forms.MenuStrip> ，並設定其<xref:System.Windows.Forms.Control.Text%2A>屬性，以`&File`。  
+3.  <span data-ttu-id="ce672-111">將最上層功能表項目加入 `Form1`<xref:System.Windows.Forms.MenuStrip>，並將其 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為 `&File`。</span><span class="sxs-lookup"><span data-stu-id="ce672-111">Add a top-level menu item to the `Form1`<xref:System.Windows.Forms.MenuStrip> and set its <xref:System.Windows.Forms.Control.Text%2A> property to `&File`.</span></span>  
   
-4.  將三個子功能表項目加入至 `&File` 功能表項目，並將其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為 `&Open`、`&Import from` 和 `E&xit`。  
+4.  <span data-ttu-id="ce672-112">將三個 子功能表項目加入`&File`功能表項目和設定其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性`&Open`， `&Import from`，和`E&xit`。</span><span class="sxs-lookup"><span data-stu-id="ce672-112">Add three submenu items to the `&File` menu item and set their <xref:System.Windows.Forms.ToolStripItem.Text%2A> properties to `&Open`, `&Import from`, and `E&xit`.</span></span>  
   
-5.  將兩個子功能表項目加入至 `&Import from` 子功能表項目，並將其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為 `&Word` 和 `&Excel`。  
+5.  <span data-ttu-id="ce672-113">將兩個子功能表項目加入`&Import from`子功能表項目和設定其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性`&Word`和`&Excel`。</span><span class="sxs-lookup"><span data-stu-id="ce672-113">Add two submenu items to the `&Import from` submenu item and set their <xref:System.Windows.Forms.ToolStripItem.Text%2A> properties to `&Word` and `&Excel`.</span></span>  
   
-6.  將表單加入至專案、 新增<xref:System.Windows.Forms.MenuStrip>至表單及 「 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>屬性的`Form2`<xref:System.Windows.Forms.MenuStrip>到`true`。  
+6.  <span data-ttu-id="ce672-114">將表單加入專案，將 <xref:System.Windows.Forms.MenuStrip> 加入表單，並將 `Form2`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="ce672-114">Add a form to the project, add a <xref:System.Windows.Forms.MenuStrip> to the form, and set the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property of the `Form2`<xref:System.Windows.Forms.MenuStrip> to `true`.</span></span>  
   
-7.  新增最上層的功能表項目`Form2`<xref:System.Windows.Forms.MenuStrip> ，並設定其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性，以`&File`。  
+7.  <span data-ttu-id="ce672-115">將最上層功能表項目加入 `Form2`<xref:System.Windows.Forms.MenuStrip>，並將其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設定為 `&File`。</span><span class="sxs-lookup"><span data-stu-id="ce672-115">Add a top-level menu item to the `Form2`<xref:System.Windows.Forms.MenuStrip> and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&File`.</span></span>  
   
-8.  將 `&Import from` 子功能表項目加入至 `Form2` 的 `&File` 功能表並且將 `&Word` 子功能表項目加入至 `&File` 功能表。  
+8.  <span data-ttu-id="ce672-116">新增`&Import from`子功能表項目`&File`功能表`Form2`，並加入`&Word`子功能表項目至`&File`功能表。</span><span class="sxs-lookup"><span data-stu-id="ce672-116">Add an `&Import from` submenu item to the `&File` menu of `Form2`, and add an `&Word` submenu item to the `&File` menu.</span></span>  
   
-9. 請按照下表所示來設定 `Form2` 功能表項目的 <xref:System.Windows.Forms.MergeAction> 和 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 屬性。  
+9. <span data-ttu-id="ce672-117">設定<xref:System.Windows.Forms.MergeAction>和<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>屬性`Form2`功能表項目下, 表所示。</span><span class="sxs-lookup"><span data-stu-id="ce672-117">Set the <xref:System.Windows.Forms.MergeAction> and <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> properties of the `Form2` menu items as shown in the following table.</span></span>  
   
-    |Form2 功能表項目|MergeAction 值|MergeIndex 值|  
-    |-----------------|-------------------|------------------|  
-    |檔案|MatchOnly|\-1|  
-    |Import from|MatchOnly|\-1|  
-    |Word|移除|\-1|  
+    |<span data-ttu-id="ce672-118">Form2 功能表項目</span><span class="sxs-lookup"><span data-stu-id="ce672-118">Form2 menu item</span></span>|<span data-ttu-id="ce672-119">MergeAction 值</span><span class="sxs-lookup"><span data-stu-id="ce672-119">MergeAction value</span></span>|<span data-ttu-id="ce672-120">MergeIndex 值</span><span class="sxs-lookup"><span data-stu-id="ce672-120">MergeIndex value</span></span>|  
+    |---------------------|-----------------------|----------------------|  
+    |<span data-ttu-id="ce672-121">檔案</span><span class="sxs-lookup"><span data-stu-id="ce672-121">File</span></span>|<span data-ttu-id="ce672-122">MatchOnly</span><span class="sxs-lookup"><span data-stu-id="ce672-122">MatchOnly</span></span>|<span data-ttu-id="ce672-123">-1</span><span class="sxs-lookup"><span data-stu-id="ce672-123">-1</span></span>|  
+    |<span data-ttu-id="ce672-124">從匯入</span><span class="sxs-lookup"><span data-stu-id="ce672-124">Import from</span></span>|<span data-ttu-id="ce672-125">MatchOnly</span><span class="sxs-lookup"><span data-stu-id="ce672-125">MatchOnly</span></span>|<span data-ttu-id="ce672-126">-1</span><span class="sxs-lookup"><span data-stu-id="ce672-126">-1</span></span>|  
+    |<span data-ttu-id="ce672-127">字組</span><span class="sxs-lookup"><span data-stu-id="ce672-127">Word</span></span>|<span data-ttu-id="ce672-128">移除</span><span class="sxs-lookup"><span data-stu-id="ce672-128">Remove</span></span>|<span data-ttu-id="ce672-129">-1</span><span class="sxs-lookup"><span data-stu-id="ce672-129">-1</span></span>|  
   
-10. 在`Form1`，建立事件處理常式的<xref:System.Windows.Forms.Control.Click>事件`&Open`<xref:System.Windows.Forms.ToolStripMenuItem>。  
+10. <span data-ttu-id="ce672-130">在`Form1`，建立事件處理常式<xref:System.Windows.Forms.Control.Click>事件`&Open` <xref:System.Windows.Forms.ToolStripMenuItem>。</span><span class="sxs-lookup"><span data-stu-id="ce672-130">In `Form1`, create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-11. 在事件處理常式中，插入類似下列程式碼範例的程式碼，以建立和顯示 `Form2` 的新執行個體，如同 `Form1` 的 MDI 子系：  
+11. <span data-ttu-id="ce672-131">在事件處理常式中，插入類似下列的程式碼範例，以建立和顯示的新執行個體的程式碼`Form2`的 MDI 子系`Form1`:</span><span class="sxs-lookup"><span data-stu-id="ce672-131">Within the event handler, insert code similar to the following code example to create and display new instances of `Form2` as MDI children of `Form1`:</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -66,12 +70,9 @@ caps.handback.revision: 12
         'Display the new form.  
             NewMDIChild.Show()  
     End Sub  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void openToolStripMenuItem_Click(object sender, EventArgs e)  
     {  
         Form2 newMDIChild = new Form2();  
@@ -80,33 +81,30 @@ caps.handback.revision: 12
         // Display the new form.  
             newMDIChild.Show();  
     }  
-  
     ```  
   
-12. 將程式碼類似下列的程式碼範例，在`&Open`<xref:System.Windows.Forms.ToolStripMenuItem>註冊事件處理常式。  
+12. <span data-ttu-id="ce672-132">將類似下列程式碼範例的程式碼放入 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 之中，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="ce672-132">Place code similar to the following code example in the `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
     EventArgs) Handles openToolStripMenuItem.Click  
-  
     ```  
   
     ```csharp  
     this.openToolStripMenuItem.Click += new _  
     System.EventHandler(this.openToolStripMenuItem_Click);  
-  
     ```  
   
-## 編譯程式碼  
- 這個範例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="ce672-133">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="ce672-133">Compiling the Code</span></span>  
+ <span data-ttu-id="ce672-134">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="ce672-134">This example requires:</span></span>  
   
--   命名為 `Form1` 和 `Form2` 的兩個 <xref:System.Windows.Forms.Form> 控制項。  
+-   <span data-ttu-id="ce672-135">名為 `Form1` 和 `Form2` 的兩個 <xref:System.Windows.Forms.Form> 控制項。</span><span class="sxs-lookup"><span data-stu-id="ce672-135">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
   
--   `Form1` 上名為 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控制項，以及 `Form2` 上名為 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控制項。  
+-   <span data-ttu-id="ce672-136">`Form1` 上名為 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控制項，以及 `Form2` 上名為 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控制項。</span><span class="sxs-lookup"><span data-stu-id="ce672-136">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
   
--   <xref:System?displayProperty=fullName> 和 <xref:System.Windows.Forms?displayProperty=fullName> 組件的參考。  
+-   <span data-ttu-id="ce672-137"><xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="ce672-137">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## 請參閱  
- [如何：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [如何：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ce672-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce672-138">See Also</span></span>  
+ [<span data-ttu-id="ce672-139">操作說明：建立 MDI 父表單</span><span class="sxs-lookup"><span data-stu-id="ce672-139">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [<span data-ttu-id="ce672-140">操作說明：建立 MDI 子表單</span><span class="sxs-lookup"><span data-stu-id="ce672-140">How to: Create MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [<span data-ttu-id="ce672-141">MenuStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="ce672-141">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

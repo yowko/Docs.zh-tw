@@ -1,49 +1,55 @@
 ---
-title: "UI Automation Properties for Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "properties, UI Automation clients"
-  - "UI Automation, client properties"
+title: "用戶端的 UI 自動化屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties, UI Automation clients
+- UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-caps.latest.revision: 17
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 0c9a007d88189172e6331c6876f2a18f341cd5cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Properties for Clients
+# <a name="ui-automation-properties-for-clients"></a><span data-ttu-id="0e121-102">用戶端的 UI 自動化屬性</span><span class="sxs-lookup"><span data-stu-id="0e121-102">UI Automation Properties for Clients</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="0e121-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="0e121-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="0e121-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="0e121-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本概觀向您介紹公開至使用者介面自動化用戶端應用程式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
+ <span data-ttu-id="0e121-105">本概觀向您介紹公開至使用者介面自動化用戶端應用程式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。</span><span class="sxs-lookup"><span data-stu-id="0e121-105">This overview introduces you to [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties as they are exposed to UI Automation client applications.</span></span>  
   
- <xref:System.Windows.Automation.AutomationElement> 物件的屬性包含 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 項目的相關資訊，通常是控制項。<xref:System.Windows.Automation.AutomationElement> 的屬性是泛型；也就是不專屬於某個控制項類型。 這些屬性有許多公開於 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation> 結構。  
+ <span data-ttu-id="0e121-106"><xref:System.Windows.Automation.AutomationElement> 物件的屬性包含 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 項目的相關資訊，通常是控制項。</span><span class="sxs-lookup"><span data-stu-id="0e121-106">Properties on <xref:System.Windows.Automation.AutomationElement> objects contain information about [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements, usually controls.</span></span> <span data-ttu-id="0e121-107"><xref:System.Windows.Automation.AutomationElement> 的屬性是泛型；也就是不專屬於某個控制項類型。</span><span class="sxs-lookup"><span data-stu-id="0e121-107">The properties of an <xref:System.Windows.Automation.AutomationElement> are generic; that is, not specific to a control type.</span></span> <span data-ttu-id="0e121-108">這些屬性有許多公開於 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation> 結構。</span><span class="sxs-lookup"><span data-stu-id="0e121-108">Many of these properties are exposed in the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation> structure.</span></span>  
   
- 控制項模式也有屬性。 控制項模式的屬性專屬於此模式。 例如，<xref:System.Windows.Automation.ScrollPattern> 的屬性可以讓用戶端運用程式來探索視窗是可以垂直或水平捲動，以及目前檢視大小和捲動位置。 控制項模式透過結構公開其所有屬性；例如，<xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>。  
+ <span data-ttu-id="0e121-109">控制項模式也有屬性。</span><span class="sxs-lookup"><span data-stu-id="0e121-109">Control patterns also have properties.</span></span> <span data-ttu-id="0e121-110">控制項模式的屬性專屬於此模式。</span><span class="sxs-lookup"><span data-stu-id="0e121-110">The properties of control patterns are specific to the pattern.</span></span> <span data-ttu-id="0e121-111">例如， <xref:System.Windows.Automation.ScrollPattern> 的屬性可以讓用戶端運用程式來探索視窗是可以垂直或水平捲動，以及目前檢視大小和捲動位置。</span><span class="sxs-lookup"><span data-stu-id="0e121-111">For example, <xref:System.Windows.Automation.ScrollPattern> has properties that enable a client application to discover whether a window is vertically or horizontally scrollable, and what the current view sizes and scroll positions are.</span></span> <span data-ttu-id="0e121-112">控制項模式透過結構公開其所有屬性；例如， <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>。</span><span class="sxs-lookup"><span data-stu-id="0e121-112">Control patterns expose all their properties through a structure; for example, <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.</span></span>  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性是唯讀的。 若要設定控制項的屬性，您必須使用適當控制項模式的方法。 例如，使用 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> 來變更捲動中視窗的位置值。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="0e121-113"> 屬性是唯讀的。</span><span class="sxs-lookup"><span data-stu-id="0e121-113"> properties are read-only.</span></span> <span data-ttu-id="0e121-114">若要設定控制項的屬性，您必須使用適當控制項模式的方法。</span><span class="sxs-lookup"><span data-stu-id="0e121-114">To set properties of a control, you must use the methods of the appropriate control pattern.</span></span> <span data-ttu-id="0e121-115">例如，使用 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> 來變更捲動中視窗的位置值。</span><span class="sxs-lookup"><span data-stu-id="0e121-115">For example, use <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> to change the position values of a scrolling window.</span></span>  
   
- 若要改善效能，擷取 <xref:System.Windows.Automation.AutomationElement> 物件時，可以快取控制項和控制項模式的屬性值。 如需詳細資訊，請參閱[Caching in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)。  
+ <span data-ttu-id="0e121-116">若要改善效能，擷取 <xref:System.Windows.Automation.AutomationElement> 物件時，可以快取控制項和控制項模式的屬性值。</span><span class="sxs-lookup"><span data-stu-id="0e121-116">To improve performance, property values of controls and control patterns can be cached when <xref:System.Windows.Automation.AutomationElement> objects are retrieved.</span></span> <span data-ttu-id="0e121-117">如需詳細資訊，請參閱[UI 自動化用戶端中的快取](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="0e121-117">For more information, see [Caching in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).</span></span>  
   
 <a name="Property_IDs"></a>   
-## 屬性識別碼  
- 屬性 [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] 是封裝在 <xref:System.Windows.Automation.AutomationProperty> 物件之唯一的常數值。 使用者介面自動化用戶端應用程式從 <xref:System.Windows.Automation.AutomationElement> 類別取得這些 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]，或是從適當的控制項模式類別取得，例如 <xref:System.Windows.Automation.ScrollPattern>。 使用者介面自動化提供者從 <xref:System.Windows.Automation.AutomationElementIdentifiers> 取得這些，或是從控制項模式識別項類別的其中一項取得，例如 <xref:System.Windows.Automation.ScrollPatternIdentifiers>。  
+## <a name="property-ids"></a><span data-ttu-id="0e121-118">屬性識別碼</span><span class="sxs-lookup"><span data-stu-id="0e121-118">Property IDs</span></span>  
+ <span data-ttu-id="0e121-119">屬性 [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] 是封裝在 <xref:System.Windows.Automation.AutomationProperty> 物件之唯一的常數值。</span><span class="sxs-lookup"><span data-stu-id="0e121-119">Property [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] are unique, constant values that are encapsulated in <xref:System.Windows.Automation.AutomationProperty> objects.</span></span> <span data-ttu-id="0e121-120">使用者介面自動化用戶端應用程式從 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 類別取得這些 <xref:System.Windows.Automation.AutomationElement> ，或是從適當的控制項模式類別取得，例如 <xref:System.Windows.Automation.ScrollPattern>。</span><span class="sxs-lookup"><span data-stu-id="0e121-120">UI Automation client applications get these [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] from the <xref:System.Windows.Automation.AutomationElement> class or from the appropriate control pattern class, such as <xref:System.Windows.Automation.ScrollPattern>.</span></span> <span data-ttu-id="0e121-121">使用者介面自動化提供者從 <xref:System.Windows.Automation.AutomationElementIdentifiers> 取得這些，或是從控制項模式識別項類別的其中一項取得，例如 <xref:System.Windows.Automation.ScrollPatternIdentifiers>。</span><span class="sxs-lookup"><span data-stu-id="0e121-121">UI Automation providers get them from <xref:System.Windows.Automation.AutomationElementIdentifiers> or from one of the control pattern identifiers classes, such as <xref:System.Windows.Automation.ScrollPatternIdentifiers>.</span></span>  
   
- 提供者使用 <xref:System.Windows.Automation.AutomationProperty> 的 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 數值來識別在 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=fullName> 方法中要查詢的屬性。 一般而言，用戶端應用程式不需要檢查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。<xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 僅供偵錯和診斷之用。  
+ <span data-ttu-id="0e121-122">數值<xref:System.Windows.Automation.AutomationIdentifier.Id%2A>的<xref:System.Windows.Automation.AutomationProperty>用來識別要在查詢的屬性提供者<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="0e121-122">The numeric <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> of an <xref:System.Windows.Automation.AutomationProperty> is used by providers to identify properties that are being queried for in the <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="0e121-123">一般而言，用戶端應用程式不需要檢查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。</span><span class="sxs-lookup"><span data-stu-id="0e121-123">In general, client applications do not need to examine the <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>.</span></span> <span data-ttu-id="0e121-124"><xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 僅供偵錯和診斷之用。</span><span class="sxs-lookup"><span data-stu-id="0e121-124">The <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> is used only for debugging and diagnostic purposes.</span></span>  
   
 <a name="Property_Conditions"></a>   
-## 屬性條件  
- 在建構用來尋找 <xref:System.Windows.Automation.AutomationElement> 物件的 <xref:System.Windows.Automation.PropertyCondition> 物件時，使用屬性 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]。 例如，您要尋找有特定名稱的 <xref:System.Windows.Automation.AutomationElement> 或是所有已啟用的控制項。 每個 <xref:System.Windows.Automation.PropertyCondition> 都會指定一項 <xref:System.Windows.Automation.AutomationProperty> 識別項和必須與屬性相符的值。  
+## <a name="property-conditions"></a><span data-ttu-id="0e121-125">屬性條件</span><span class="sxs-lookup"><span data-stu-id="0e121-125">Property Conditions</span></span>  
+ <span data-ttu-id="0e121-126">在建構用來尋找 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 物件的 <xref:System.Windows.Automation.PropertyCondition> 物件時，使用屬性 <xref:System.Windows.Automation.AutomationElement> 。</span><span class="sxs-lookup"><span data-stu-id="0e121-126">The property [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] are used in constructing <xref:System.Windows.Automation.PropertyCondition> objects used to find <xref:System.Windows.Automation.AutomationElement> objects.</span></span> <span data-ttu-id="0e121-127">例如，您要尋找有特定名稱的 <xref:System.Windows.Automation.AutomationElement> 或是所有已啟用的控制項。</span><span class="sxs-lookup"><span data-stu-id="0e121-127">For example, you might wish to find an <xref:System.Windows.Automation.AutomationElement> that has a certain name, or all controls that are enabled.</span></span> <span data-ttu-id="0e121-128">每個 <xref:System.Windows.Automation.PropertyCondition> 都會指定一項 <xref:System.Windows.Automation.AutomationProperty> 識別項和必須與屬性相符的值。</span><span class="sxs-lookup"><span data-stu-id="0e121-128">Each <xref:System.Windows.Automation.PropertyCondition> specifies an <xref:System.Windows.Automation.AutomationProperty> identifier and the value that the property must match.</span></span>  
   
- 如需詳細資訊，請參閱下列主題：  
+ <span data-ttu-id="0e121-129">如需詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="0e121-129">For more information, see the following reference topics:</span></span>  
   
 -   <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
   
@@ -52,62 +58,62 @@ caps.handback.revision: 17
 -   <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
 <a name="Retrieving_Properties"></a>   
-## 擷取屬性  
- <xref:System.Windows.Automation.AutomationElement> 的某些屬性和控制項模式類別的所有屬性公開為 `Current` 的巢狀屬性或 <xref:System.Windows.Automation.AutomationElement> 或控制項模式物件的 `Cached` 屬性。  
+## <a name="retrieving-properties"></a><span data-ttu-id="0e121-130">擷取屬性</span><span class="sxs-lookup"><span data-stu-id="0e121-130">Retrieving Properties</span></span>  
+ <span data-ttu-id="0e121-131"><xref:System.Windows.Automation.AutomationElement> 的某些屬性和控制項模式類別的所有屬性公開為 `Current` 的巢狀屬性或 `Cached` 或控制項模式物件的 <xref:System.Windows.Automation.AutomationElement> 屬性。</span><span class="sxs-lookup"><span data-stu-id="0e121-131">Some properties of <xref:System.Windows.Automation.AutomationElement> and all properties of a control pattern class are exposed as nested properties of the `Current` or `Cached` property of the <xref:System.Windows.Automation.AutomationElement> or control pattern object.</span></span>  
   
- 此外，任何 <xref:System.Windows.Automation.AutomationElement> 或控制項模式屬性，包括在 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 或 <xref:System.Windows.Automation.AutomationElement.Current%2A> 結構中無法使用的屬性，可以使用下列其中一種方法來擷取。  
+ <span data-ttu-id="0e121-132">此外，任何 <xref:System.Windows.Automation.AutomationElement> 或控制項模式屬性，包括在 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 或 <xref:System.Windows.Automation.AutomationElement.Current%2A> 結構中無法使用的屬性，可以使用下列其中一種方法來擷取。</span><span class="sxs-lookup"><span data-stu-id="0e121-132">In addition, any <xref:System.Windows.Automation.AutomationElement> or control pattern property, including a property that is not available in the <xref:System.Windows.Automation.AutomationElement.Cached%2A> or <xref:System.Windows.Automation.AutomationElement.Current%2A> structure, can be retrieved by using one of the following methods:</span></span>  
   
 -   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
 -   <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
   
- 這些方法提供稍微較佳的效能，也能存取屬性的完整範圍。  
+ <span data-ttu-id="0e121-133">這些方法提供稍微較佳的效能，也能存取屬性的完整範圍。</span><span class="sxs-lookup"><span data-stu-id="0e121-133">These methods offer slightly better performance as well as access to the full range of properties.</span></span>  
   
- 下列程式碼範例顯示兩種在 <xref:System.Windows.Automation.AutomationElement> 上擷取屬性的方式。  
+ <span data-ttu-id="0e121-134">下列程式碼範例顯示兩種在 <xref:System.Windows.Automation.AutomationElement>上擷取屬性的方式。</span><span class="sxs-lookup"><span data-stu-id="0e121-134">The following code example shows the two ways of retrieving a property on an <xref:System.Windows.Automation.AutomationElement>.</span></span>  
   
  [!code-csharp[UIAClient_snip#121](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#121)]
  [!code-vb[UIAClient_snip#121](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#121)]  
   
- 若要擷取受 <xref:System.Windows.Automation.AutomationElement> 支援的控制項模式的屬性，您不需要擷取控制項模式的物件。 只需傳遞其中一個模式屬性識別項至該方法即可。  
+ <span data-ttu-id="0e121-135">若要擷取受 <xref:System.Windows.Automation.AutomationElement>支援的控制項模式的屬性，您不需要擷取控制項模式的物件。</span><span class="sxs-lookup"><span data-stu-id="0e121-135">To retrieve properties of control patterns supported by the <xref:System.Windows.Automation.AutomationElement>, you do not need to retrieve the control pattern object.</span></span> <span data-ttu-id="0e121-136">只需傳遞其中一個模式屬性識別項至該方法即可。</span><span class="sxs-lookup"><span data-stu-id="0e121-136">Simply pass one of the pattern property identifiers to the method.</span></span>  
   
- 下列程式碼範例顯示兩種在控制項模式上擷取屬性的方式。  
+ <span data-ttu-id="0e121-137">下列程式碼範例顯示兩種在控制項模式上擷取屬性的方式。</span><span class="sxs-lookup"><span data-stu-id="0e121-137">The following code example shows the two ways of retrieving a property on a control pattern.</span></span>  
   
  [!code-csharp[UIAClient_snip#122](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#122)]
  [!code-vb[UIAClient_snip#122](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#122)]  
   
- `Get` 方法會傳回 <xref:System.Object>。 應用程式必須在使用值之前將傳回的物件轉換成適當的類型。  
+ <span data-ttu-id="0e121-138">`Get` 方法會傳回 <xref:System.Object>。</span><span class="sxs-lookup"><span data-stu-id="0e121-138">The `Get` methods return an <xref:System.Object>.</span></span> <span data-ttu-id="0e121-139">應用程式必須在使用值之前將傳回的物件轉換成適當的類型。</span><span class="sxs-lookup"><span data-stu-id="0e121-139">The application must cast the returned object to the proper type before using the value.</span></span>  
   
 <a name="_Default_Property_Values"></a>   
-## 預設屬性值  
- 如果使用者介面自動化提供者並未實作屬性，則 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系統便能提供預設值。 例如，如果控制項的提供者不支援 <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> 所識別之屬性，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 就會傳回空字串。 同樣地，如果提供者不支援 <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty> 所識別之屬性，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 就會傳回 `false`。  
+## <a name="default-property-values"></a><span data-ttu-id="0e121-140">預設屬性值</span><span class="sxs-lookup"><span data-stu-id="0e121-140">Default Property Values</span></span>  
+ <span data-ttu-id="0e121-141">如果使用者介面自動化提供者並未實作屬性，則 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系統便能提供預設值。</span><span class="sxs-lookup"><span data-stu-id="0e121-141">If a UI Automation provider does not implement a property, the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] system is able to supply a default value.</span></span> <span data-ttu-id="0e121-142">例如，如果控制項的提供者不支援 <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>所識別之屬性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 就會傳回空字串。</span><span class="sxs-lookup"><span data-stu-id="0e121-142">For example, if the provider for a control does not support the property identified by <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] returns an empty string.</span></span> <span data-ttu-id="0e121-143">同樣地，如果提供者不支援 <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>所識別之屬性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 就會傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="0e121-143">Similarly, if the provider does not support the property identified by <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] returns `false`.</span></span>  
   
- 您可以使用 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=fullName> 和 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=fullName> 方法多載變更此行為。 當您指定 `true` 做為第二個參數時，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不會傳回預設值，但相反地會傳回特殊值 <xref:System.Windows.Automation.AutomationElement.NotSupported>。  
+ <span data-ttu-id="0e121-144">您可以使用來變更此行為<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>和<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>方法多載。</span><span class="sxs-lookup"><span data-stu-id="0e121-144">You can change this behavior by using the <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> and <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> method overloads.</span></span> <span data-ttu-id="0e121-145">當您指定 `true` 做為第二個參數時， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不會傳回預設值，但相反地會傳回特殊值 <xref:System.Windows.Automation.AutomationElement.NotSupported>。</span><span class="sxs-lookup"><span data-stu-id="0e121-145">When you specify `true` as the second parameter, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] does not return a default value, but instead returns the special value <xref:System.Windows.Automation.AutomationElement.NotSupported>.</span></span>  
   
- 下列範例程式碼會嘗試從項目擷取屬性，如果不支援該屬性，則改用應用程式定義的值。  
+ <span data-ttu-id="0e121-146">下列範例程式碼會嘗試從項目擷取屬性，如果不支援該屬性，則改用應用程式定義的值。</span><span class="sxs-lookup"><span data-stu-id="0e121-146">The following example code attempts to retrieve a property from an element, and if the property is not supported, an application-defined value is used instead.</span></span>  
   
  [!code-csharp[UIAClient_snip#123](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#123)]
  [!code-vb[UIAClient_snip#123](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#123)]  
   
- 若要找出項目支援哪些屬性，請使用 <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>。 這會傳回 <xref:System.Windows.Automation.AutomationProperty> 識別項的陣列。  
+ <span data-ttu-id="0e121-147">若要找出項目支援哪些屬性，請使用 <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>。</span><span class="sxs-lookup"><span data-stu-id="0e121-147">To discover what properties are supported by an element, use <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>.</span></span> <span data-ttu-id="0e121-148">這會傳回 <xref:System.Windows.Automation.AutomationProperty> 識別項的陣列。</span><span class="sxs-lookup"><span data-stu-id="0e121-148">This returns an array of <xref:System.Windows.Automation.AutomationProperty> identifiers.</span></span>  
   
 <a name="Property_changed_Events"></a>   
-## 屬性變更事件  
- 當 <xref:System.Windows.Automation.AutomationElement> 或控制項模式的屬性值變更，便會引發事件。 應用程式可以訂閱這類事件，方法是呼叫 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>、提供 <xref:System.Windows.Automation.AutomationProperty> 識別碼的陣列做為最後一個參數來指定想要的屬性。  
+## <a name="property-changed-events"></a><span data-ttu-id="0e121-149">屬性變更事件</span><span class="sxs-lookup"><span data-stu-id="0e121-149">Property-changed Events</span></span>  
+ <span data-ttu-id="0e121-150">當 <xref:System.Windows.Automation.AutomationElement> 或控制項模式的屬性值變更，便會引發事件。</span><span class="sxs-lookup"><span data-stu-id="0e121-150">When a property value on an <xref:System.Windows.Automation.AutomationElement> or control pattern changes, an event is raised.</span></span> <span data-ttu-id="0e121-151">應用程式可以訂閱這類事件，方法是呼叫 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>、提供 <xref:System.Windows.Automation.AutomationProperty> 識別碼的陣列做為最後一個參數來指定想要的屬性。</span><span class="sxs-lookup"><span data-stu-id="0e121-151">An application can subscribe to such events by calling <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>, supplying an array of <xref:System.Windows.Automation.AutomationProperty> identifiers as the last parameter in order to specify the properties of interest.</span></span>  
   
- 在 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>，您可以檢查事件引數的 <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> 成員，辨識已變更的屬性。 引數也包含已變更的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性之舊值與新值。 這些值的類型都是 <xref:System.Object>，而且必須在使用之前轉型成正確的類型。  
+ <span data-ttu-id="0e121-152">在 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>，您可以檢查事件引數的 <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> 成員，辨識已變更的屬性。</span><span class="sxs-lookup"><span data-stu-id="0e121-152">In the <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>, you can identify the property that has changed by checking the <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> member of the event arguments.</span></span> <span data-ttu-id="0e121-153">引數也包含已變更的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性之舊值與新值。</span><span class="sxs-lookup"><span data-stu-id="0e121-153">The arguments also contain the old and new values of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property that has changed.</span></span> <span data-ttu-id="0e121-154">這些值的類型都是 <xref:System.Object> ，而且必須在使用之前轉型成正確的類型。</span><span class="sxs-lookup"><span data-stu-id="0e121-154">These values are of type <xref:System.Object> and must be cast to the correct type before being used.</span></span>  
   
 <a name="Additional_AutomationElement_Properties"></a>   
-## 其他 AutomationElement 屬性  
- 除了 <xref:System.Windows.Automation.AutomationElement.Current%2A> 和 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 屬性結構，<xref:System.Windows.Automation.AutomationElement> 具有下列屬性，這會透過簡單的屬性存取子擷取。  
+## <a name="additional-automationelement-properties"></a><span data-ttu-id="0e121-155">其他 AutomationElement 屬性</span><span class="sxs-lookup"><span data-stu-id="0e121-155">Additional AutomationElement Properties</span></span>  
+ <span data-ttu-id="0e121-156">除了 <xref:System.Windows.Automation.AutomationElement.Current%2A> 和 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 屬性結構， <xref:System.Windows.Automation.AutomationElement> 具有下列屬性，這會透過簡單的屬性存取子擷取。</span><span class="sxs-lookup"><span data-stu-id="0e121-156">In addition to the <xref:System.Windows.Automation.AutomationElement.Current%2A> and <xref:System.Windows.Automation.AutomationElement.Cached%2A> property structures, <xref:System.Windows.Automation.AutomationElement> has the following properties, which are retrieved through simple property accessors.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|快取中的子 <xref:System.Windows.Automation.AutomationElement> 物件集合。|  
-|<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|快取中的 <xref:System.Windows.Automation.AutomationElement> 父物件。|  
-|<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|\(靜態屬性\) 具有輸入焦點的 <xref:System.Windows.Automation.AutomationElement>。|  
-|<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|\(靜態屬性\) 根 <xref:System.Windows.Automation.AutomationElement>。|  
+|<span data-ttu-id="0e121-157">屬性</span><span class="sxs-lookup"><span data-stu-id="0e121-157">Property</span></span>|<span data-ttu-id="0e121-158">描述</span><span class="sxs-lookup"><span data-stu-id="0e121-158">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|<span data-ttu-id="0e121-159">快取中的子 <xref:System.Windows.Automation.AutomationElement> 物件集合。</span><span class="sxs-lookup"><span data-stu-id="0e121-159">A collection of child <xref:System.Windows.Automation.AutomationElement> objects that are in the cache.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|<span data-ttu-id="0e121-160">快取中的 <xref:System.Windows.Automation.AutomationElement> 父物件。</span><span class="sxs-lookup"><span data-stu-id="0e121-160">An <xref:System.Windows.Automation.AutomationElement> parent object that is in the cache.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|<span data-ttu-id="0e121-161">(靜態屬性) 具有輸入焦點的 <xref:System.Windows.Automation.AutomationElement> 。</span><span class="sxs-lookup"><span data-stu-id="0e121-161">(Static property) The <xref:System.Windows.Automation.AutomationElement> that has the input focus.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|<span data-ttu-id="0e121-162">(靜態屬性) 根 <xref:System.Windows.Automation.AutomationElement>。</span><span class="sxs-lookup"><span data-stu-id="0e121-162">(Static property) The root <xref:System.Windows.Automation.AutomationElement>.</span></span>|  
   
-## 請參閱  
- [Caching in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)   
- [Server\-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)   
- [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a><span data-ttu-id="0e121-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0e121-163">See Also</span></span>  
+ [<span data-ttu-id="0e121-164">UI 自動化用戶端中的快取</span><span class="sxs-lookup"><span data-stu-id="0e121-164">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
+ [<span data-ttu-id="0e121-165">伺服器端 UI 自動化提供者實作</span><span class="sxs-lookup"><span data-stu-id="0e121-165">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="0e121-166">訂閱 UI 自動化事件</span><span class="sxs-lookup"><span data-stu-id="0e121-166">Subscribe to UI Automation Events</span></span>](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

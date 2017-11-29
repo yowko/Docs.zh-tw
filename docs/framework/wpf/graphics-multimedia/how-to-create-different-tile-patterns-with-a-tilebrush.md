@@ -1,42 +1,48 @@
 ---
-title: "如何：使用 TileBrush 建立不同的並排顯示模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "建立, 使用 TileBrush 的並排顯示模式"
-  - "並排顯示模式, 建立"
-  - "TileBrush, 建立並排顯示模式"
+title: "如何：使用 TileBrush 建立不同的並排顯示模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF], creating tile patterns
+- tile patterns [WPF], creating
+- creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6247f6a16cd8ab7be683d0d4d33aac021f3a2b32
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 TileBrush 建立不同的並排顯示模式
-本範例說明如何使用 <xref:System.Windows.Media.TileBrush> 的 <xref:System.Windows.Media.TileBrush.TileMode%2A> 屬性建立模式。  
+# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a><span data-ttu-id="356df-102">如何：使用 TileBrush 建立不同的並排顯示模式</span><span class="sxs-lookup"><span data-stu-id="356df-102">How to: Create Different Tile Patterns with a TileBrush</span></span>
+<span data-ttu-id="356df-103">這個範例示範如何使用<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性<xref:System.Windows.Media.TileBrush>建立模式。</span><span class="sxs-lookup"><span data-stu-id="356df-103">This example shows how to use the <xref:System.Windows.Media.TileBrush.TileMode%2A> property of a <xref:System.Windows.Media.TileBrush> to create a pattern.</span></span>  
   
- <xref:System.Windows.Media.TileBrush.TileMode%2A> 屬性可讓您指定 <xref:System.Windows.Media.TileBrush> 的內容如何重複顯示，也就是並排填滿輸出區域。  若要建立模式，請將 <xref:System.Windows.Media.TileBrush.TileMode%2A> 設為 <xref:System.Windows.Media.TileMode>、<xref:System.Windows.Media.TileMode>、<xref:System.Windows.Media.TileMode> 或 <xref:System.Windows.Media.TileMode>。  您也必須設定 <xref:System.Windows.Media.TileBrush> 的 <xref:System.Windows.Media.TileBrush.Viewport%2A>，讓它小於正在繪製的區域，否則的話，就只會產生單一並排顯示，不論使用的 <xref:System.Windows.Media.TileBrush.TileMode%2A> 設定為何。  
+ <span data-ttu-id="356df-104"><xref:System.Windows.Media.TileBrush.TileMode%2A>屬性可讓您指定如何內容的<xref:System.Windows.Media.TileBrush>重複，也就是，並排顯示，以填滿輸出區域。</span><span class="sxs-lookup"><span data-stu-id="356df-104">The <xref:System.Windows.Media.TileBrush.TileMode%2A> property enables you to specify how the content of a <xref:System.Windows.Media.TileBrush> is repeated, that is, tiled to fill an output area.</span></span> <span data-ttu-id="356df-105">若要建立的模式，您將設定<xref:System.Windows.Media.TileBrush.TileMode%2A>至<xref:System.Windows.Media.TileMode.Tile>， <xref:System.Windows.Media.TileMode.FlipX>， <xref:System.Windows.Media.TileMode.FlipY>，或<xref:System.Windows.Media.TileMode.FlipXY>。</span><span class="sxs-lookup"><span data-stu-id="356df-105">To create a pattern, you set the <xref:System.Windows.Media.TileBrush.TileMode%2A> to <xref:System.Windows.Media.TileMode.Tile>, <xref:System.Windows.Media.TileMode.FlipX>, <xref:System.Windows.Media.TileMode.FlipY>, or <xref:System.Windows.Media.TileMode.FlipXY>.</span></span> <span data-ttu-id="356df-106">您也必須設定<xref:System.Windows.Media.TileBrush.Viewport%2A>的<xref:System.Windows.Media.TileBrush>使其小於您所繪製; 區域否則單一磚就是產生，而不論其<xref:System.Windows.Media.TileBrush.TileMode%2A>您使用的設定。</span><span class="sxs-lookup"><span data-stu-id="356df-106">You must also set the <xref:System.Windows.Media.TileBrush.Viewport%2A> of the <xref:System.Windows.Media.TileBrush> so that it is smaller than the area that you are painting; otherwise, only a single tile is produced, regardless which <xref:System.Windows.Media.TileBrush.TileMode%2A> setting you use.</span></span>  
   
-## 範例  
- 下列範例會建立五個 <xref:System.Windows.Media.DrawingBrush> 物件，每個都有不同的 <xref:System.Windows.Media.TileBrush.TileMode%2A> 設定，然後使用這些物件繪製五個矩形。  雖然本範例使用了 <xref:System.Windows.Media.DrawingBrush> 類別示範 <xref:System.Windows.Media.TileBrush.TileMode%2A> 行為，但 <xref:System.Windows.Media.TileBrush.TileMode%2A> 屬性對所有 <xref:System.Windows.Media.TileBrush> 物件 \(即 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.VisualBrush> 和 <xref:System.Windows.Media.DrawingBrush>\) 的作用完全相同。  
+## <a name="example"></a><span data-ttu-id="356df-107">範例</span><span class="sxs-lookup"><span data-stu-id="356df-107">Example</span></span>  
+ <span data-ttu-id="356df-108">下列範例會建立五個<xref:System.Windows.Media.DrawingBrush>物件資訊，請提供每個不同<xref:System.Windows.Media.TileBrush.TileMode%2A>設定，然後使用它們來繪製五個矩形。</span><span class="sxs-lookup"><span data-stu-id="356df-108">The following example creates five <xref:System.Windows.Media.DrawingBrush> objects, gives them each a different <xref:System.Windows.Media.TileBrush.TileMode%2A> setting, and uses them to paint five rectangles.</span></span> <span data-ttu-id="356df-109">雖然這個範例會使用<xref:System.Windows.Media.DrawingBrush>類別來示範<xref:System.Windows.Media.TileBrush.TileMode%2A>行為，<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性即會相同適用於所有<xref:System.Windows.Media.TileBrush>物件，也就是針對<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.VisualBrush>，和<xref:System.Windows.Media.DrawingBrush>。</span><span class="sxs-lookup"><span data-stu-id="356df-109">Although this example uses the <xref:System.Windows.Media.DrawingBrush> class to demonstrate <xref:System.Windows.Media.TileBrush.TileMode%2A> behavior, the <xref:System.Windows.Media.TileBrush.TileMode%2A> property works identically for all the <xref:System.Windows.Media.TileBrush> objects, that is, for <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.VisualBrush>, and <xref:System.Windows.Media.DrawingBrush>.</span></span>  
   
- 下圖顯示的是這個範例產生的輸出。  
+ <span data-ttu-id="356df-110">下圖顯示的是這個範例產生的輸出。</span><span class="sxs-lookup"><span data-stu-id="356df-110">The following illustration shows the output that this example produces.</span></span>  
   
- ![TileBrush 並排顯示範例輸出](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm\_DrawingBrushTileModeExample")  
-使用 TileMode 屬性建立的並排顯示模式  
+ <span data-ttu-id="356df-111">![TileBrush 並排顯示範例輸出](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm_DrawingBrushTileModeExample")</span><span class="sxs-lookup"><span data-stu-id="356df-111">![TileBrush tiling example output](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm_DrawingBrushTileModeExample")</span></span>  
+<span data-ttu-id="356df-112">利用 TileMode 屬性建立的並排顯示模式</span><span class="sxs-lookup"><span data-stu-id="356df-112">Tile patterns created with the TileMode property</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/TileModeExample.cs#graphicsmmdrawingbrushtilemodeexample)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/tilemodeexample.vb#graphicsmmdrawingbrushtilemodeexample)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
-## 請參閱  
- [設定 TileBrush 的並排顯示大小](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)   
- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="356df-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="356df-113">See Also</span></span>  
+ [<span data-ttu-id="356df-114">設定 TileBrush 的並排顯示大小</span><span class="sxs-lookup"><span data-stu-id="356df-114">Set the Tile Size for a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [<span data-ttu-id="356df-115">使用影像、繪圖和視覺效果繪製</span><span class="sxs-lookup"><span data-stu-id="356df-115">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

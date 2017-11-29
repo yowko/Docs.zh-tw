@@ -1,39 +1,42 @@
 ---
-title: "HOW TO：使用 ASP.NET 角色提供者搭配服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：使用 ASP.NET 角色提供者搭配服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bdddbd39a528e6abd6a0268db310b6173849f19b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用 ASP.NET 角色提供者搭配服務
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者 \(以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者\) 這項功能可讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 開發人員建立網站，以允許使用者在網站中建立帳戶，並允許對使用者指派角色做為授權用途。任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。相反的，任何使用者只要提供認證 \(使用者名稱\/密碼組合\) 就可以使用該網站與其服務。  
+# <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a><span data-ttu-id="319c7-102">HOW TO：使用 ASP.NET 角色提供者搭配服務</span><span class="sxs-lookup"><span data-stu-id="319c7-102">How to: Use the ASP.NET Role Provider with a Service</span></span>
+<span data-ttu-id="319c7-103">[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者 (以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者) 這項功能可讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 開發人員建立網站，以允許使用者在網站中建立帳戶，並允許對使用者指派角色做為授權用途。</span><span class="sxs-lookup"><span data-stu-id="319c7-103">The [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] role provider (in conjunction with the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership provider) is a feature that enables [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] developers to create Web sites that allow users to create an account with a site and to be assigned roles for authorization purposes.</span></span> <span data-ttu-id="319c7-104">任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。</span><span class="sxs-lookup"><span data-stu-id="319c7-104">With this feature, any user can establish an account with the site, and log in for exclusive access to the site and its services.</span></span> <span data-ttu-id="319c7-105">這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。</span><span class="sxs-lookup"><span data-stu-id="319c7-105">This is in contrast to Windows security, which requires users to have accounts in a Windows domain.</span></span> <span data-ttu-id="319c7-106">相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 就可以使用該網站與其服務。</span><span class="sxs-lookup"><span data-stu-id="319c7-106">Instead, any user who supplies his or her credentials (the user name/password combination) can use the site and its services.</span></span>  
   
- 如需範例應用程式，請參閱[成員資格和角色提供者](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者功能的詳細資訊，請參閱 [HOW TO：使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
+ <span data-ttu-id="319c7-107">範例應用程式，請參閱[成員資格和角色提供者](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。</span><span class="sxs-lookup"><span data-stu-id="319c7-107">For a sample application, see [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="319c7-108">[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成員資格提供者功能，請參閱[How to： 使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。</span><span class="sxs-lookup"><span data-stu-id="319c7-108"> the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership provider feature, see [How to: Use the ASP.NET Membership Provider](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).</span></span>  
   
- 角色提供者功能會使用 SQL Server 資料庫儲存使用者資訊。[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 程式開發人員可以針對安全性目的利用這些功能。當整合至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式時，使用者必須將使用者名稱\/密碼組合提供給 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端應用程式。若要啟用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 來使用資料庫，您必須建立 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 類別的執行個體，並將其 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 屬性設為 <xref:System.ServiceModel.Description.PrincipalPermissionMode>，然後將行為集合的執行個體新增至裝載服務的 <xref:System.ServiceModel.ServiceHost>。  
+ <span data-ttu-id="319c7-109">角色提供者功能會使用 SQL Server 資料庫儲存使用者資訊。</span><span class="sxs-lookup"><span data-stu-id="319c7-109">The role provider feature uses a SQL Server database to store user information.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="319c7-110"> 程式開發人員可以針對安全性目的利用這些功能。</span><span class="sxs-lookup"><span data-stu-id="319c7-110"> developers can take advantage of these features for security purposes.</span></span> <span data-ttu-id="319c7-111">當整合至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式時，使用者必須將使用者名稱/密碼組合提供給 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="319c7-111">When integrated into a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, users must supply a user name/password combination to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application.</span></span> <span data-ttu-id="319c7-112">若要啟用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 來使用資料庫，您必須建立 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 類別的執行個體，並將其 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 屬性設為 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，然後將行為集合的執行個體新增至裝載服務的 <xref:System.ServiceModel.ServiceHost>。</span><span class="sxs-lookup"><span data-stu-id="319c7-112">To enable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to use the database, you must create an instance of the <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> class, set its <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> property to <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>, and add the instance to the collection of behaviors to the <xref:System.ServiceModel.ServiceHost> that is hosting the service.</span></span>  
   
-### 若要設定角色提供者  
+### <a name="to-configure-the-role-provider"></a><span data-ttu-id="319c7-113">若要設定角色提供者</span><span class="sxs-lookup"><span data-stu-id="319c7-113">To configure the role provider</span></span>  
   
-1.  在 Web.config 檔的 \<`system.web`\> 項目底下，新增 \<`roleManager`\> 項目並將其 `enabled` 屬性設為 `true`。  
+1.  <span data-ttu-id="319c7-114">在 Web.config 檔案中，在 <`system.web`> 項目，加入 <`roleManager`> 項目並設定其`enabled`屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="319c7-114">In the Web.config file, under the <`system.web`> element, add a <`roleManager`> element and set its `enabled` attribute to `true`.</span></span>  
   
-2.  將 `defaultProvider` 屬性設定為 `SqlRoleProvider`。  
+2.  <span data-ttu-id="319c7-115">將 `defaultProvider` 屬性設定為 `SqlRoleProvider`。</span><span class="sxs-lookup"><span data-stu-id="319c7-115">Set the `defaultProvider` attribute to `SqlRoleProvider`.</span></span>  
   
-3.  新增 \<`providers`\> 項目做為 \<`roleManager`\> 項目的子系。  
+3.  <span data-ttu-id="319c7-116">做為子項 <`roleManager`> 項目，加入 <`providers`> 項目。</span><span class="sxs-lookup"><span data-stu-id="319c7-116">As a child to the <`roleManager`> element, add a <`providers`> element.</span></span>  
   
-4.  新增 \<`add`\> 項目 \(其中並將 `name`、`type`、`connectionStringName`，和 `applicationName` 屬性設為適當值，如下列範例所示\)，做為 \<`providers`\> 項目的子系。  
+4.  <span data-ttu-id="319c7-117">做為子項 <`providers`> 項目，加入 <`add`> 具有下列屬性項目設定為適當值： `name`， `type`， `connectionStringName`，和`applicationName`，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="319c7-117">As a child to the <`providers`> element, add an <`add`> element with the following attributes set to appropriate values: `name`, `type`, `connectionStringName`, and `applicationName`, as shown in the following example.</span></span>  
   
-    ```  
+    ```xml  
     <!-- Configure the Sql Role Provider. -->  
     <roleManager enabled ="true"   
      defaultProvider ="SqlRoleProvider" >  
@@ -46,23 +49,23 @@ caps.handback.revision: 8
     </roleManager>  
     ```  
   
-### 若要設定服務使用角色提供者  
+### <a name="to-configure-the-service-to-use-the-role-provider"></a><span data-ttu-id="319c7-118">若要設定服務使用角色提供者</span><span class="sxs-lookup"><span data-stu-id="319c7-118">To configure the service to use the role provider</span></span>  
   
-1.  在 Web.config 檔案中，新增 [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 項目。  
+1.  <span data-ttu-id="319c7-119">在 Web.config 檔案中，加入[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目。</span><span class="sxs-lookup"><span data-stu-id="319c7-119">In the Web.config file, add a [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element.</span></span>  
   
-2.  將 [\<行為\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 項目加入至 \<`system.ServiceModel`\> 項目。  
+2.  <span data-ttu-id="319c7-120">新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)元素 <`system.ServiceModel`> 項目。</span><span class="sxs-lookup"><span data-stu-id="319c7-120">Add a [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) element to the <`system.ServiceModel`> element.</span></span>  
   
-3.  將 [\<serviceBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 新增至 \<`behaviors`\> 項目。  
+3.  <span data-ttu-id="319c7-121">新增[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)至 <`behaviors`> 項目。</span><span class="sxs-lookup"><span data-stu-id="319c7-121">Add a [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) to the <`behaviors`> element.</span></span>  
   
-4.  新增 [\<行為\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 項目，並將 `name` 屬性設為適當值。  
+4.  <span data-ttu-id="319c7-122">新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)項目並設定`name`屬性設為適當值。</span><span class="sxs-lookup"><span data-stu-id="319c7-122">Add a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) element and set the `name` attribute to an appropriate value.</span></span>  
   
-5.  將 [\<serviceAuthorization\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)加入至 \<`behavior`\> 項目。  
+5.  <span data-ttu-id="319c7-123">新增[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)至 <`behavior`> 項目。</span><span class="sxs-lookup"><span data-stu-id="319c7-123">Add a [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) to the <`behavior`> element.</span></span>  
   
-6.  將 `principalPermissionMode` 屬性設定為 `UseAspNetRoles`。  
+6.  <span data-ttu-id="319c7-124">將 `principalPermissionMode` 屬性設定為 `UseAspNetRoles`。</span><span class="sxs-lookup"><span data-stu-id="319c7-124">Set the `principalPermissionMode` attribute to `UseAspNetRoles`.</span></span>  
   
-7.  將 `roleProviderName` 屬性設定為 `SqlRoleProvider`。下列範例將說明組態片段。  
+7.  <span data-ttu-id="319c7-125">將 `roleProviderName` 屬性設定為 `SqlRoleProvider`。</span><span class="sxs-lookup"><span data-stu-id="319c7-125">Set the `roleProviderName` attribute to `SqlRoleProvider`.</span></span> <span data-ttu-id="319c7-126">下列範例將說明組態片段。</span><span class="sxs-lookup"><span data-stu-id="319c7-126">The following example shows a fragment of the configuration.</span></span>  
   
-    ```  
+    ```xml  
     <behaviors>  
      <serviceBehaviors>  
       <behavior name="CalculatorServiceBehavior">  
@@ -73,6 +76,6 @@ caps.handback.revision: 8
     </behaviors>  
     ```  
   
-## 請參閱  
- [成員資格和角色提供者](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)   
- [HOW TO：使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+## <a name="see-also"></a><span data-ttu-id="319c7-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="319c7-127">See Also</span></span>  
+ [<span data-ttu-id="319c7-128">成員資格和角色提供者</span><span class="sxs-lookup"><span data-stu-id="319c7-128">Membership and Role Provider</span></span>](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
+ [<span data-ttu-id="319c7-129">如何： 使用 ASP.NET 成員資格提供者</span><span class="sxs-lookup"><span data-stu-id="319c7-129">How to: Use the ASP.NET Membership Provider</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)

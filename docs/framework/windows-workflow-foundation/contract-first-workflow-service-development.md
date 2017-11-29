@@ -1,138 +1,142 @@
 ---
-title: "合約優先工作流程服務開發 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "合約優先工作流程服務開發"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0bb95fa473cdad05a4ecb9d1ee596ecf6639874c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 合約優先工作流程服務開發
-從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，[!INCLUDE[wf](../../../includes/wf-md.md)] 即採用合約優先工作流程開發形式，在 Web 服務與工作流程之間提供更好的整合。合約優先工作流程開發工具可讓您在 Code First 中設計合約。此工具會自動在合約中的作業工具箱內產生活動範本。本主題提供工作流程服務概觀，說明如何將工作流程服務中的活動和屬性 \(property\) 對應至服務合約的屬性 \(attribute\)。如需建立合約優先工作流程服務的逐步範例，請參閱 [HOW TO：建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+# <a name="contract-first-workflow-service-development"></a><span data-ttu-id="c491f-102">合約優先工作流程服務開發</span><span class="sxs-lookup"><span data-stu-id="c491f-102">Contract First Workflow Service Development</span></span>
+<span data-ttu-id="c491f-103">從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，[!INCLUDE[wf](../../../includes/wf-md.md)] 即採用合約優先工作流程開發形式，在 Web 服務與工作流程之間提供更好的整合。</span><span class="sxs-lookup"><span data-stu-id="c491f-103">Starting with [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf](../../../includes/wf-md.md)] features better integration between web services and workflows in the form of contract-first workflow development.</span></span> <span data-ttu-id="c491f-104">合約優先工作流程開發工具可讓您在 Code First 中設計合約。</span><span class="sxs-lookup"><span data-stu-id="c491f-104">The contract-first workflow development tool allows you to design the contract in code first.</span></span> <span data-ttu-id="c491f-105">此工具會自動在合約中的作業工具箱內產生活動範本。</span><span class="sxs-lookup"><span data-stu-id="c491f-105">The tool then automatically generates an activity template in the toolbox for the operations in the contract.</span></span> <span data-ttu-id="c491f-106">本主題提供工作流程服務概觀，說明如何將工作流程服務中的活動和屬性 (property) 對應至服務合約的屬性 (attribute)。</span><span class="sxs-lookup"><span data-stu-id="c491f-106">This topic provides an overview of how the activities and properties in a workflow service map to the attributes of a service contract.</span></span> <span data-ttu-id="c491f-107">建立合約優先工作流程服務的逐步範例，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="c491f-107">For a step-by-step example of creating a contract-first workflow service, see [How to: Create a workflow service that consumes an existing service contract](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).</span></span>  
   
-## 本主題內容  
+## <a name="in-this-topic"></a><span data-ttu-id="c491f-108">本主題內容</span><span class="sxs-lookup"><span data-stu-id="c491f-108">In this topic</span></span>  
   
--   [將服務合約屬性對應至工作流程屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#MappingAttributes)  
+-   [<span data-ttu-id="c491f-109">將服務合約屬性對應至工作流程屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-109">Mapping service contract attributes to workflow attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [服務合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#ServiceContract)  
+    -   [<span data-ttu-id="c491f-110">服務合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-110">Service Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [作業合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#OperationContract)  
+    -   [<span data-ttu-id="c491f-111">作業合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-111">Operation Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [訊息合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#MessageContract)  
+    -   [<span data-ttu-id="c491f-112">訊息合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-112">Message Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [資料合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#DataContract)  
+    -   [<span data-ttu-id="c491f-113">資料合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-113">Data Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
   
-    -   [錯誤合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#FaultContract)  
+    -   [<span data-ttu-id="c491f-114">錯誤合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-114">Fault Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
--   [其他支援和實作資訊](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [<span data-ttu-id="c491f-115">其他支援和實作資訊</span><span class="sxs-lookup"><span data-stu-id="c491f-115">Additional Support and Implementation Information</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [不支援的服務合約功能](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [<span data-ttu-id="c491f-116">不支援的服務合約功能</span><span class="sxs-lookup"><span data-stu-id="c491f-116">Unsupported service contract features</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [所設定之傳訊活動的產生](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [<span data-ttu-id="c491f-117">產生的設定之傳訊活動</span><span class="sxs-lookup"><span data-stu-id="c491f-117">Generation of configured messaging activities</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a> 將服務合約屬性對應至工作流程屬性  
- 下列各節中的表格會指定不同的 WCF 屬性 \(attribute\) 和屬性 \(property\)，以及其如何對應至合約優先工作流程中的傳訊活動和屬性 \(property\)。  
+##  <span data-ttu-id="c491f-118"><a name="MappingAttributes"></a>將服務合約屬性對應至工作流程屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-118"><a name="MappingAttributes"></a> Mapping service contract attributes to workflow attributes</span></span>  
+ <span data-ttu-id="c491f-119">下列各節中的表格會指定不同的 WCF 屬性 (attribute) 和屬性 (property)，以及其如何對應至合約優先工作流程中的傳訊活動和屬性 (property)。</span><span class="sxs-lookup"><span data-stu-id="c491f-119">The tables in the following sections specify the different WCF attributes and properties and how they are mapped to the messaging activities and properties in a contract-first workflow.</span></span>  
   
--   [服務合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#ServiceContract)  
+-   [<span data-ttu-id="c491f-120">服務合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-120">Service Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
   
--   [作業合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#OperationContract)  
+-   [<span data-ttu-id="c491f-121">作業合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-121">Operation Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
   
--   [訊息合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#MessageContract)  
+-   [<span data-ttu-id="c491f-122">訊息合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-122">Message Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
   
--   [資料合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#DataContract)  
+-   [<span data-ttu-id="c491f-123">資料合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-123">Data Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
   
--   [錯誤合約屬性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#FaultContract)  
+-   [<span data-ttu-id="c491f-124">錯誤合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-124">Fault Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a> 服務合約屬性  
+###  <span data-ttu-id="c491f-125"><a name="ServiceContract"></a>服務合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-125"><a name="ServiceContract"></a> Service Contract Attributes</span></span>  
   
-|屬性名稱|支援|描述|WF 驗證|  
-|----------|--------|--------|-----------|  
-|CallbackContract|否|當合約是雙工合約時，取得或設定回呼合約的型別。|\(N\/A\)|  
-|ConfigurationName|否|取得或設定用來在應用程式組態檔中尋找服務的名稱。|\(N\/A\)|  
-|HasProtectionLevel|是|取得指出成員是否已指派保護層級的值。|Receive.ProtectionLevel 不應為 null。|  
-|名稱|是|取得或設定 Web 服務描述語言 \(WSDL\) 中 \<portType\> 項目的名稱。|Receive.ServiceContractName.LocalName 應相符。|  
-|命名空間|是|取得或設定 Web 服務描述語言 \(WSDL\) 中 \<portType\> 項目的命名空間。|Receive.ServiceContractName.NameSpace 應相符|  
-|ProtectionLevel|是|指定合約的繫結是否必須支援 ProtectionLevel 屬性的值。|Receive.ProtectionLevel 應相符。|  
-|SessionMode|否|取得或設定是否允許工作階段、不允許工作階段，或需要工作階段。|\(N\/A\)|  
-|TypeId|否|實作在衍生的類別中時，會取得此屬性的唯一識別項。\(繼承自屬性。\)|\(N\/A\)|  
+|<span data-ttu-id="c491f-126">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-126">Property Name</span></span>|<span data-ttu-id="c491f-127">支援</span><span class="sxs-lookup"><span data-stu-id="c491f-127">Supported</span></span>|<span data-ttu-id="c491f-128">描述</span><span class="sxs-lookup"><span data-stu-id="c491f-128">Description</span></span>|<span data-ttu-id="c491f-129">WF 驗證</span><span class="sxs-lookup"><span data-stu-id="c491f-129">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="c491f-130">CallbackContract</span><span class="sxs-lookup"><span data-stu-id="c491f-130">CallbackContract</span></span>|<span data-ttu-id="c491f-131">否</span><span class="sxs-lookup"><span data-stu-id="c491f-131">No</span></span>|<span data-ttu-id="c491f-132">當合約是雙工合約時，取得或設定回呼合約的型別。</span><span class="sxs-lookup"><span data-stu-id="c491f-132">Gets or sets the type of callback contract when the contract is a duplex contract.</span></span>|<span data-ttu-id="c491f-133">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-133">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-134">ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="c491f-134">ConfigurationName</span></span>|<span data-ttu-id="c491f-135">否</span><span class="sxs-lookup"><span data-stu-id="c491f-135">No</span></span>|<span data-ttu-id="c491f-136">取得或設定用來在應用程式組態檔中尋找服務的名稱。</span><span class="sxs-lookup"><span data-stu-id="c491f-136">Gets or sets the name used to locate the service in an application configuration file.</span></span>|<span data-ttu-id="c491f-137">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-137">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-138">HasProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c491f-138">HasProtectionLevel</span></span>|<span data-ttu-id="c491f-139">是</span><span class="sxs-lookup"><span data-stu-id="c491f-139">Yes</span></span>|<span data-ttu-id="c491f-140">取得指出成員是否已指派保護層級的值。</span><span class="sxs-lookup"><span data-stu-id="c491f-140">Gets a value that indicates whether the member has a protection level assigned.</span></span>|<span data-ttu-id="c491f-141">Receive.ProtectionLevel 不應為 null。</span><span class="sxs-lookup"><span data-stu-id="c491f-141">Receive.ProtectionLevel should not be null.</span></span>|  
+|<span data-ttu-id="c491f-142">名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-142">Name</span></span>|<span data-ttu-id="c491f-143">是</span><span class="sxs-lookup"><span data-stu-id="c491f-143">Yes</span></span>|<span data-ttu-id="c491f-144">取得或設定的名稱\<連接埠類型 > 項目中 Web 服務描述語言 (WSDL)。</span><span class="sxs-lookup"><span data-stu-id="c491f-144">Gets or sets the name for the \<portType> element in Web Services Description Language (WSDL).</span></span>|<span data-ttu-id="c491f-145">Receive.ServiceContractName.LocalName 應相符。</span><span class="sxs-lookup"><span data-stu-id="c491f-145">Receive.ServiceContractName.LocalName should match.</span></span>|  
+|<span data-ttu-id="c491f-146">命名空間</span><span class="sxs-lookup"><span data-stu-id="c491f-146">Namespace</span></span>|<span data-ttu-id="c491f-147">是</span><span class="sxs-lookup"><span data-stu-id="c491f-147">Yes</span></span>|<span data-ttu-id="c491f-148">取得或設定的命名空間\<連接埠類型 > 項目中 Web 服務描述語言 (WSDL)。</span><span class="sxs-lookup"><span data-stu-id="c491f-148">Gets or sets the namespace of the \<portType> element in Web Services Description Language (WSDL).</span></span>|<span data-ttu-id="c491f-149">Receive.ServiceContractName.NameSpace 應相符</span><span class="sxs-lookup"><span data-stu-id="c491f-149">Receive.ServiceContractName.NameSpace should match</span></span>|  
+|<span data-ttu-id="c491f-150">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c491f-150">ProtectionLevel</span></span>|<span data-ttu-id="c491f-151">是</span><span class="sxs-lookup"><span data-stu-id="c491f-151">Yes</span></span>|<span data-ttu-id="c491f-152">指定合約的繫結是否必須支援 ProtectionLevel 屬性的值。</span><span class="sxs-lookup"><span data-stu-id="c491f-152">Specifies whether the binding for the contract must support the value of the ProtectionLevel property.</span></span>|<span data-ttu-id="c491f-153">Receive.ProtectionLevel 應相符。</span><span class="sxs-lookup"><span data-stu-id="c491f-153">Receive.ProtectionLevel should match.</span></span>|  
+|<span data-ttu-id="c491f-154">SessionMode</span><span class="sxs-lookup"><span data-stu-id="c491f-154">SessionMode</span></span>|<span data-ttu-id="c491f-155">否</span><span class="sxs-lookup"><span data-stu-id="c491f-155">No</span></span>|<span data-ttu-id="c491f-156">取得或設定是否允許工作階段、不允許工作階段，或需要工作階段。</span><span class="sxs-lookup"><span data-stu-id="c491f-156">Gets or sets whether sessions are allowed, not allowed or required.</span></span>|<span data-ttu-id="c491f-157">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-157">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-158">TypeId</span><span class="sxs-lookup"><span data-stu-id="c491f-158">TypeId</span></span>|<span data-ttu-id="c491f-159">否</span><span class="sxs-lookup"><span data-stu-id="c491f-159">No</span></span>|<span data-ttu-id="c491f-160">實作在衍生的類別中時，會取得此屬性的唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="c491f-160">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="c491f-161">(繼承自屬性。)</span><span class="sxs-lookup"><span data-stu-id="c491f-161">(Inherited from Attribute.)</span></span>|<span data-ttu-id="c491f-162">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-162">(N/A)</span></span>|  
   
- 在此插入小節主體。  
+ <span data-ttu-id="c491f-163">在此插入小節主體。</span><span class="sxs-lookup"><span data-stu-id="c491f-163">Insert subsection body here.</span></span>  
   
-###  <a name="OperationContract"></a> 作業合約屬性  
+###  <span data-ttu-id="c491f-164"><a name="OperationContract"></a>作業合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-164"><a name="OperationContract"></a> Operation Contract Attributes</span></span>  
   
-|屬性名稱|支援|描述|WF 驗證|  
-|----------|--------|--------|-----------|  
-|動作|是|取得或設定要求訊息的 WS\-Addressing 動作。|Receive.Action 應相符。|  
-|AsyncPattern|否|指出已在服務合約中使用 Begin\<methodName\> 與 End\<methodName\> 方法配對，以非同步方式實作作業。|\(N\/A\)|  
-|HasProtectionLevel|是|取得指出此作業的訊息是否必須加密及\/或簽署的值。|Receive.ProtectionLevel 不應為 null。|  
-|IsInitiating|否|取得或設定值，以指出該方法是否實作可以在伺服器上初始化工作階段的作業 \(若這樣的工作階段存在的話\)。|\(N\/A\)|  
-|IsOneWay|是|取得或設定值，這個值會指出作業是否傳回回覆訊息。|\(沒有此 Receive 的 SendReply，或者沒有此 Send 的 ReceiveReply\)。|  
-|IsTerminating|否|取得或設定值，這個值表示服務作業在傳送回覆訊息 \(如果有的話\) 之後，是否導致伺服器關閉該工作階段。|\(N\/A\)|  
-|名稱|是|取得或設定作業的名稱。|Receive.OperationName 應相符。|  
-|ProtectionLevel|是|取得或設定值，此值指定某個作業的訊息是否須加密、簽署，或兩者都進行。|Receive.ProtectionLevel 應相符。|  
-|ReplyAction|是|取得或設定作業之回覆訊息的 SOAP 動作值。|SendReply.Action 應相符。|  
-|TypeId|否|實作在衍生的類別中時，會取得此屬性的唯一識別項。\(繼承自屬性。\)|\(N\/A\)|  
+|<span data-ttu-id="c491f-165">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-165">Property Name</span></span>|<span data-ttu-id="c491f-166">支援</span><span class="sxs-lookup"><span data-stu-id="c491f-166">Supported</span></span>|<span data-ttu-id="c491f-167">描述</span><span class="sxs-lookup"><span data-stu-id="c491f-167">Description</span></span>|<span data-ttu-id="c491f-168">WF 驗證</span><span class="sxs-lookup"><span data-stu-id="c491f-168">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="c491f-169">動作</span><span class="sxs-lookup"><span data-stu-id="c491f-169">Action</span></span>|<span data-ttu-id="c491f-170">是</span><span class="sxs-lookup"><span data-stu-id="c491f-170">Yes</span></span>|<span data-ttu-id="c491f-171">取得或設定要求訊息的 WS-Addressing 動作。</span><span class="sxs-lookup"><span data-stu-id="c491f-171">Gets or sets the WS-Addressing action of the request message.</span></span>|<span data-ttu-id="c491f-172">Receive.Action 應相符。</span><span class="sxs-lookup"><span data-stu-id="c491f-172">Receive.Action should match.</span></span>|  
+|<span data-ttu-id="c491f-173">AsyncPattern</span><span class="sxs-lookup"><span data-stu-id="c491f-173">AsyncPattern</span></span>|<span data-ttu-id="c491f-174">否</span><span class="sxs-lookup"><span data-stu-id="c491f-174">No</span></span>|<span data-ttu-id="c491f-175">表示使用開始以非同步方式實作作業\<方法名稱 > 和結束\<方法名稱 > 的服務合約中的方法組。</span><span class="sxs-lookup"><span data-stu-id="c491f-175">Indicates that an operation is implemented asynchronously using a Begin\<methodName> and End\<methodName> method pair in a service contract.</span></span>|<span data-ttu-id="c491f-176">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-176">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-177">HasProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c491f-177">HasProtectionLevel</span></span>|<span data-ttu-id="c491f-178">是</span><span class="sxs-lookup"><span data-stu-id="c491f-178">Yes</span></span>|<span data-ttu-id="c491f-179">取得指出此作業的訊息是否必須加密及/或簽署的值。</span><span class="sxs-lookup"><span data-stu-id="c491f-179">Gets a value that indicates whether the messages for this operation must be encrypted, signed, or both.</span></span>|<span data-ttu-id="c491f-180">Receive.ProtectionLevel 不應為 null。</span><span class="sxs-lookup"><span data-stu-id="c491f-180">Receive.ProtectionLevel should not be null.</span></span>|  
+|<span data-ttu-id="c491f-181">IsInitiating</span><span class="sxs-lookup"><span data-stu-id="c491f-181">IsInitiating</span></span>|<span data-ttu-id="c491f-182">否</span><span class="sxs-lookup"><span data-stu-id="c491f-182">No</span></span>|<span data-ttu-id="c491f-183">取得或設定值，以指出該方法是否實作可以在伺服器上初始化工作階段的作業 (若這樣的工作階段存在的話)。</span><span class="sxs-lookup"><span data-stu-id="c491f-183">Gets or sets a value that indicates whether the method implements an operation that can initiate a session on the server(if such a session exists).</span></span>|<span data-ttu-id="c491f-184">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-184">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-185">IsOneWay</span><span class="sxs-lookup"><span data-stu-id="c491f-185">IsOneWay</span></span>|<span data-ttu-id="c491f-186">是</span><span class="sxs-lookup"><span data-stu-id="c491f-186">Yes</span></span>|<span data-ttu-id="c491f-187">取得或設定值，這個值會指出作業是否傳回回覆訊息。</span><span class="sxs-lookup"><span data-stu-id="c491f-187">Gets or sets a value that indicates whether an operation returns a reply message.</span></span>|<span data-ttu-id="c491f-188">(沒有此 Receive 的 SendReply，或者沒有此 Send 的 ReceiveReply)。</span><span class="sxs-lookup"><span data-stu-id="c491f-188">(No SendReply for this Receive OR no ReceiveReply for this Send).</span></span>|  
+|<span data-ttu-id="c491f-189">IsTerminating</span><span class="sxs-lookup"><span data-stu-id="c491f-189">IsTerminating</span></span>|<span data-ttu-id="c491f-190">否</span><span class="sxs-lookup"><span data-stu-id="c491f-190">No</span></span>|<span data-ttu-id="c491f-191">取得或設定值，這個值表示服務作業在傳送回覆訊息 (如果有的話) 之後，是否導致伺服器關閉該工作階段。</span><span class="sxs-lookup"><span data-stu-id="c491f-191">Gets or sets a value that indicates whether the service operation causes the server to close the session after the reply message, if any, is sent.</span></span>|<span data-ttu-id="c491f-192">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-192">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-193">名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-193">Name</span></span>|<span data-ttu-id="c491f-194">是</span><span class="sxs-lookup"><span data-stu-id="c491f-194">Yes</span></span>|<span data-ttu-id="c491f-195">取得或設定作業的名稱。</span><span class="sxs-lookup"><span data-stu-id="c491f-195">Gets or sets the name of the operation.</span></span>|<span data-ttu-id="c491f-196">Receive.OperationName 應相符。</span><span class="sxs-lookup"><span data-stu-id="c491f-196">Receive.OperationName should match.</span></span>|  
+|<span data-ttu-id="c491f-197">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c491f-197">ProtectionLevel</span></span>|<span data-ttu-id="c491f-198">是</span><span class="sxs-lookup"><span data-stu-id="c491f-198">Yes</span></span>|<span data-ttu-id="c491f-199">取得或設定值，此值指定某個作業的訊息是否須加密、簽署，或兩者都進行。</span><span class="sxs-lookup"><span data-stu-id="c491f-199">Gets or sets a value that specifies whether the messages of an operation must be encrypted, signed, or both.</span></span>|<span data-ttu-id="c491f-200">Receive.ProtectionLevel 應相符。</span><span class="sxs-lookup"><span data-stu-id="c491f-200">Receive.ProtectionLevel should match.</span></span>|  
+|<span data-ttu-id="c491f-201">ReplyAction</span><span class="sxs-lookup"><span data-stu-id="c491f-201">ReplyAction</span></span>|<span data-ttu-id="c491f-202">是</span><span class="sxs-lookup"><span data-stu-id="c491f-202">Yes</span></span>|<span data-ttu-id="c491f-203">取得或設定作業之回覆訊息的 SOAP 動作值。</span><span class="sxs-lookup"><span data-stu-id="c491f-203">Gets or sets the value of the SOAP action for the reply message of the operation.</span></span>|<span data-ttu-id="c491f-204">SendReply.Action 應相符。</span><span class="sxs-lookup"><span data-stu-id="c491f-204">SendReply.Action should match.</span></span>|  
+|<span data-ttu-id="c491f-205">TypeId</span><span class="sxs-lookup"><span data-stu-id="c491f-205">TypeId</span></span>|<span data-ttu-id="c491f-206">否</span><span class="sxs-lookup"><span data-stu-id="c491f-206">No</span></span>|<span data-ttu-id="c491f-207">實作在衍生的類別中時，會取得此屬性的唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="c491f-207">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="c491f-208">(繼承自屬性。)</span><span class="sxs-lookup"><span data-stu-id="c491f-208">(Inherited from Attribute.)</span></span>|<span data-ttu-id="c491f-209">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-209">(N/A)</span></span>|  
   
-###  <a name="MessageContract"></a> 訊息合約屬性  
+###  <span data-ttu-id="c491f-210"><a name="MessageContract"></a>訊息合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-210"><a name="MessageContract"></a> Message Contract Attributes</span></span>  
   
-|屬性名稱|支援|描述|WF 驗證|  
-|----------|--------|--------|-----------|  
-|HasProtectionLevel|是|取得值，這個值表示訊息是否擁有保護層級。|無驗證 \(Receive.Content 和 SendReply.Content 必須符合訊息合約類型\)。|  
-|IsWrapped|是|取得或設定值，這個值會指定訊息本文是否有包裝函式項目。|無驗證 \(Receive.Content 和 SendReply.Content 必須符合訊息合約類型\)。|  
-|ProtectionLevel|否|取得或設定值，這個值已指定訊息是否須經過加密、簽署，或兩者都進行。|\(N\/A\)|  
-|TypeId|是|實作在衍生的類別中時，會取得此屬性的唯一識別項。\(繼承自屬性。\)|無驗證 \(Receive.Content 和 SendReply.Content 必須符合訊息合約類型\)。|  
-|WrapperName|是|取得或設定訊息本文中包裝函式項目的名稱。|無驗證 \(Receive.Content 和 SendReply.Content 必須符合訊息合約類型\)。|  
-|WrapperNamespace|否|取得或設定訊息本文包裝函式項目的命名空間。|\(N\/A\)|  
+|<span data-ttu-id="c491f-211">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-211">Property Name</span></span>|<span data-ttu-id="c491f-212">支援</span><span class="sxs-lookup"><span data-stu-id="c491f-212">Supported</span></span>|<span data-ttu-id="c491f-213">描述</span><span class="sxs-lookup"><span data-stu-id="c491f-213">Description</span></span>|<span data-ttu-id="c491f-214">WF 驗證</span><span class="sxs-lookup"><span data-stu-id="c491f-214">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="c491f-215">HasProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c491f-215">HasProtectionLevel</span></span>|<span data-ttu-id="c491f-216">是</span><span class="sxs-lookup"><span data-stu-id="c491f-216">Yes</span></span>|<span data-ttu-id="c491f-217">取得值，這個值表示訊息是否擁有保護層級。</span><span class="sxs-lookup"><span data-stu-id="c491f-217">Gets a value that indicates whether the message has a protection level.</span></span>|<span data-ttu-id="c491f-218">無驗證 (Receive.Content 和 SendReply.Content 必須符合訊息合約類型)。</span><span class="sxs-lookup"><span data-stu-id="c491f-218">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="c491f-219">IsWrapped</span><span class="sxs-lookup"><span data-stu-id="c491f-219">IsWrapped</span></span>|<span data-ttu-id="c491f-220">是</span><span class="sxs-lookup"><span data-stu-id="c491f-220">Yes</span></span>|<span data-ttu-id="c491f-221">取得或設定值，這個值會指定訊息本文是否有包裝函式項目。</span><span class="sxs-lookup"><span data-stu-id="c491f-221">Gets or sets a value that specifies whether the message body has a wrapper element.</span></span>|<span data-ttu-id="c491f-222">無驗證 (Receive.Content 和 SendReply.Content 必須符合訊息合約類型)。</span><span class="sxs-lookup"><span data-stu-id="c491f-222">No validation (Receive.Content and Sendreply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="c491f-223">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c491f-223">ProtectionLevel</span></span>|<span data-ttu-id="c491f-224">否</span><span class="sxs-lookup"><span data-stu-id="c491f-224">No</span></span>|<span data-ttu-id="c491f-225">取得或設定值，這個值已指定訊息是否須經過加密、簽署，或兩者都進行。</span><span class="sxs-lookup"><span data-stu-id="c491f-225">Gets or sets a value that specified whether the message must be encrypted, signed, or both.</span></span>|<span data-ttu-id="c491f-226">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-226">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-227">TypeId</span><span class="sxs-lookup"><span data-stu-id="c491f-227">TypeId</span></span>|<span data-ttu-id="c491f-228">是</span><span class="sxs-lookup"><span data-stu-id="c491f-228">Yes</span></span>|<span data-ttu-id="c491f-229">實作在衍生的類別中時，會取得此屬性的唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="c491f-229">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="c491f-230">(繼承自屬性。)</span><span class="sxs-lookup"><span data-stu-id="c491f-230">(Inherited from Attribute.)</span></span>|<span data-ttu-id="c491f-231">無驗證 (Receive.Content 和 SendReply.Content 必須符合訊息合約類型)。</span><span class="sxs-lookup"><span data-stu-id="c491f-231">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="c491f-232">WrapperName</span><span class="sxs-lookup"><span data-stu-id="c491f-232">WrapperName</span></span>|<span data-ttu-id="c491f-233">是</span><span class="sxs-lookup"><span data-stu-id="c491f-233">Yes</span></span>|<span data-ttu-id="c491f-234">取得或設定訊息本文中包裝函式項目的名稱。</span><span class="sxs-lookup"><span data-stu-id="c491f-234">Gets or sets the name of the wrapper element of the message body.</span></span>|<span data-ttu-id="c491f-235">無驗證 (Receive.Content 和 SendReply.Content 必須符合訊息合約類型)。</span><span class="sxs-lookup"><span data-stu-id="c491f-235">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="c491f-236">WrapperNamespace</span><span class="sxs-lookup"><span data-stu-id="c491f-236">WrapperNamespace</span></span>|<span data-ttu-id="c491f-237">否</span><span class="sxs-lookup"><span data-stu-id="c491f-237">No</span></span>|<span data-ttu-id="c491f-238">取得或設定訊息本文包裝函式項目的命名空間。</span><span class="sxs-lookup"><span data-stu-id="c491f-238">Gets or sets the namespace of the message body wrapper element.</span></span>|<span data-ttu-id="c491f-239">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-239">(N/A)</span></span>|  
   
-###  <a name="DataContract"></a> 資料合約屬性  
+###  <span data-ttu-id="c491f-240"><a name="DataContract"></a>資料合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-240"><a name="DataContract"></a> Data Contract Attributes</span></span>  
   
-|屬性名稱|支援|描述|WF 驗證|  
-|----------|--------|--------|-----------|  
-|IsReference|否|取得或設定值，這個值表示是否要保留物件參考資料。|\(N\/A\)|  
-|名稱|是|取得或設定型別的資料合約名稱。|無驗證 \(Receive.Content 和 SendReply.Content 必須符合訊息合約類型\)。|  
-|命名空間|是|取得或設定型別之資料合約的命名空間。|無驗證 \(Receive.Content 和 SendReply.Content 必須符合訊息合約類型\)。|  
-|TypeId|否|實作在衍生的類別中時，會取得此屬性的唯一識別項。\(繼承自屬性。\)|\(N\/A\)|  
+|<span data-ttu-id="c491f-241">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-241">Property Name</span></span>|<span data-ttu-id="c491f-242">支援</span><span class="sxs-lookup"><span data-stu-id="c491f-242">Supported</span></span>|<span data-ttu-id="c491f-243">描述</span><span class="sxs-lookup"><span data-stu-id="c491f-243">Description</span></span>|<span data-ttu-id="c491f-244">WF 驗證</span><span class="sxs-lookup"><span data-stu-id="c491f-244">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="c491f-245">IsReference</span><span class="sxs-lookup"><span data-stu-id="c491f-245">IsReference</span></span>|<span data-ttu-id="c491f-246">否</span><span class="sxs-lookup"><span data-stu-id="c491f-246">No</span></span>|<span data-ttu-id="c491f-247">取得或設定值，這個值表示是否要保留物件參考資料。</span><span class="sxs-lookup"><span data-stu-id="c491f-247">Gets or sets a value that indicates whether to preserve object reference data.</span></span>|<span data-ttu-id="c491f-248">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-248">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-249">名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-249">Name</span></span>|<span data-ttu-id="c491f-250">是</span><span class="sxs-lookup"><span data-stu-id="c491f-250">Yes</span></span>|<span data-ttu-id="c491f-251">取得或設定型別的資料合約名稱。</span><span class="sxs-lookup"><span data-stu-id="c491f-251">Gets or sets the name of the data contract for the type.</span></span>|<span data-ttu-id="c491f-252">無驗證 (Receive.Content 和 SendReply.Content 必須符合訊息合約類型)。</span><span class="sxs-lookup"><span data-stu-id="c491f-252">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="c491f-253">命名空間</span><span class="sxs-lookup"><span data-stu-id="c491f-253">Namespace</span></span>|<span data-ttu-id="c491f-254">是</span><span class="sxs-lookup"><span data-stu-id="c491f-254">Yes</span></span>|<span data-ttu-id="c491f-255">取得或設定型別之資料合約的命名空間。</span><span class="sxs-lookup"><span data-stu-id="c491f-255">Gets or sets the namespace for the data contract for the type.</span></span>|<span data-ttu-id="c491f-256">無驗證 (Receive.Content 和 SendReply.Content 必須符合訊息合約類型)。</span><span class="sxs-lookup"><span data-stu-id="c491f-256">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="c491f-257">TypeId</span><span class="sxs-lookup"><span data-stu-id="c491f-257">TypeId</span></span>|<span data-ttu-id="c491f-258">否</span><span class="sxs-lookup"><span data-stu-id="c491f-258">No</span></span>|<span data-ttu-id="c491f-259">實作在衍生的類別中時，會取得此屬性的唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="c491f-259">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="c491f-260">(繼承自屬性。)</span><span class="sxs-lookup"><span data-stu-id="c491f-260">(Inherited from Attribute.)</span></span>|<span data-ttu-id="c491f-261">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-261">(N/A)</span></span>|  
   
-###  <a name="FaultContract"></a> 錯誤合約屬性  
+###  <span data-ttu-id="c491f-262"><a name="FaultContract"></a>錯誤合約屬性</span><span class="sxs-lookup"><span data-stu-id="c491f-262"><a name="FaultContract"></a> Fault Contract Attributes</span></span>  
   
-|屬性名稱|支援|描述|WF 驗證|  
-|----------|--------|--------|-----------|  
-|動作|是|取得或設定 SOAP 錯誤訊息的動作，此訊息指定為作業合約的一部分。|SendReply.Action 應相符。|  
-|DetailType|是|取得包含錯誤資訊的可序列化物件型別。|SendReply.Content 應符合該類型|  
-|HasProtectionLevel|否|取得指出 SOAP 錯誤訊息是否已指派保護層級的值。|\(N\/A\)|  
-|名稱|否|取得或設定 Web 服務描述語言 \(WSDL\) 中的錯誤訊息名稱。|\(N\/A\)|  
-|命名空間|否|取得或設定 SOAP 錯誤的命名空間。|\(N\/A\)|  
-|ProtectionLevel|否|指定 SOAP 錯誤從繫結要求的保護層級。|\(N\/A\)|  
-|TypeId|否|實作在衍生的類別中時，會取得此屬性的唯一識別項。\(繼承自屬性。\)|\(N\/A\)|  
+|<span data-ttu-id="c491f-263">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-263">Property Name</span></span>|<span data-ttu-id="c491f-264">支援</span><span class="sxs-lookup"><span data-stu-id="c491f-264">Supported</span></span>|<span data-ttu-id="c491f-265">描述</span><span class="sxs-lookup"><span data-stu-id="c491f-265">Description</span></span>|<span data-ttu-id="c491f-266">WF 驗證</span><span class="sxs-lookup"><span data-stu-id="c491f-266">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="c491f-267">動作</span><span class="sxs-lookup"><span data-stu-id="c491f-267">Action</span></span>|<span data-ttu-id="c491f-268">是</span><span class="sxs-lookup"><span data-stu-id="c491f-268">Yes</span></span>|<span data-ttu-id="c491f-269">取得或設定 SOAP 錯誤訊息的動作，此訊息指定為作業合約的一部分。</span><span class="sxs-lookup"><span data-stu-id="c491f-269">Gets or sets the action of the SOAP fault message that is specified as part of the operation contract.</span></span>|<span data-ttu-id="c491f-270">SendReply.Action 應相符。</span><span class="sxs-lookup"><span data-stu-id="c491f-270">SendReply.Action should match.</span></span>|  
+|<span data-ttu-id="c491f-271">DetailType</span><span class="sxs-lookup"><span data-stu-id="c491f-271">DetailType</span></span>|<span data-ttu-id="c491f-272">是</span><span class="sxs-lookup"><span data-stu-id="c491f-272">Yes</span></span>|<span data-ttu-id="c491f-273">取得包含錯誤資訊的可序列化物件型別。</span><span class="sxs-lookup"><span data-stu-id="c491f-273">Gets the type of a serializable object that contains error information.</span></span>|<span data-ttu-id="c491f-274">SendReply.Content 應符合該類型</span><span class="sxs-lookup"><span data-stu-id="c491f-274">SendReply.Content should match the type</span></span>|  
+|<span data-ttu-id="c491f-275">HasProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c491f-275">HasProtectionLevel</span></span>|<span data-ttu-id="c491f-276">否</span><span class="sxs-lookup"><span data-stu-id="c491f-276">No</span></span>|<span data-ttu-id="c491f-277">取得指出 SOAP 錯誤訊息是否已指派保護層級的值。</span><span class="sxs-lookup"><span data-stu-id="c491f-277">Gets a value that indicates whether the SOAP fault message has a protection level assigned.</span></span>|<span data-ttu-id="c491f-278">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-278">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-279">名稱</span><span class="sxs-lookup"><span data-stu-id="c491f-279">Name</span></span>|<span data-ttu-id="c491f-280">否</span><span class="sxs-lookup"><span data-stu-id="c491f-280">No</span></span>|<span data-ttu-id="c491f-281">取得或設定 Web 服務描述語言 (WSDL) 中的錯誤訊息名稱。</span><span class="sxs-lookup"><span data-stu-id="c491f-281">Gets or sets the name of the fault message in Web Services Description Language (WSDL).</span></span>|<span data-ttu-id="c491f-282">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-282">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-283">命名空間</span><span class="sxs-lookup"><span data-stu-id="c491f-283">Namespace</span></span>|<span data-ttu-id="c491f-284">否</span><span class="sxs-lookup"><span data-stu-id="c491f-284">No</span></span>|<span data-ttu-id="c491f-285">取得或設定 SOAP 錯誤的命名空間。</span><span class="sxs-lookup"><span data-stu-id="c491f-285">Gets or sets the namespace of the SOAP fault.</span></span>|<span data-ttu-id="c491f-286">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-286">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-287">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c491f-287">ProtectionLevel</span></span>|<span data-ttu-id="c491f-288">否</span><span class="sxs-lookup"><span data-stu-id="c491f-288">No</span></span>|<span data-ttu-id="c491f-289">指定 SOAP 錯誤從繫結要求的保護層級。</span><span class="sxs-lookup"><span data-stu-id="c491f-289">Specifies the level of protection the SOAP fault requires from the binding.</span></span>|<span data-ttu-id="c491f-290">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-290">(N/A)</span></span>|  
+|<span data-ttu-id="c491f-291">TypeId</span><span class="sxs-lookup"><span data-stu-id="c491f-291">TypeId</span></span>|<span data-ttu-id="c491f-292">否</span><span class="sxs-lookup"><span data-stu-id="c491f-292">No</span></span>|<span data-ttu-id="c491f-293">實作在衍生的類別中時，會取得此屬性的唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="c491f-293">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="c491f-294">(繼承自屬性。)</span><span class="sxs-lookup"><span data-stu-id="c491f-294">(Inherited from Attribute.)</span></span>|<span data-ttu-id="c491f-295">(N/A)</span><span class="sxs-lookup"><span data-stu-id="c491f-295">(N/A)</span></span>|  
   
-##  <a name="AdditionalSupport"></a> 其他支援和實作資訊  
+##  <span data-ttu-id="c491f-296"><a name="AdditionalSupport"></a>其他支援和實作資訊</span><span class="sxs-lookup"><span data-stu-id="c491f-296"><a name="AdditionalSupport"></a> Additional Support and Implementation Information</span></span>  
   
--   [不支援的服務合約功能](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [<span data-ttu-id="c491f-297">不支援的服務合約功能</span><span class="sxs-lookup"><span data-stu-id="c491f-297">Unsupported service contract features</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [所設定之傳訊活動的產生](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [<span data-ttu-id="c491f-298">產生的設定之傳訊活動</span><span class="sxs-lookup"><span data-stu-id="c491f-298">Generation of configured messaging activities</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a> 不支援的服務合約功能  
+###  <span data-ttu-id="c491f-299"><a name="UnsupportedFeatures"></a>不支援的服務合約功能</span><span class="sxs-lookup"><span data-stu-id="c491f-299"><a name="UnsupportedFeatures"></a> Unsupported service contract features</span></span>  
   
--   在合約中不支援使用 TPL \(工作平行程式庫\) 工作。  
+-   <span data-ttu-id="c491f-300">在合約中不支援使用 TPL (工作平行程式庫) 工作。</span><span class="sxs-lookup"><span data-stu-id="c491f-300">Use of TPL (Task Parallel Library) Tasks in contracts is not supported.</span></span>  
   
--   在服務合約中不支援繼承。  
+-   <span data-ttu-id="c491f-301">在服務合約中不支援繼承。</span><span class="sxs-lookup"><span data-stu-id="c491f-301">Inheritance in Service Contracts is not supported.</span></span>  
   
-###  <a name="ActivityGeneration"></a> 所設定之傳訊活動的產生  
- 已將兩個公用靜態方法加入至 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活動，以支援在使用合約優先工作流程服務時，產生預先設定的訊息活動。  
+###  <span data-ttu-id="c491f-302"><a name="ActivityGeneration"></a>產生的設定之傳訊活動</span><span class="sxs-lookup"><span data-stu-id="c491f-302"><a name="ActivityGeneration"></a> Generation of configured messaging activities</span></span>  
+ <span data-ttu-id="c491f-303">已將兩個公用靜態方法加入至 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活動，以支援在使用合約優先工作流程服務時，產生預先設定的訊息活動。</span><span class="sxs-lookup"><span data-stu-id="c491f-303">Two public static methods are added to the <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> activities to support the generation of pre-configured message activities when using contract-first workflow services.</span></span>  
   
--   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
- 這些方法所產生的活動應該會通過合約驗證，因此這些方法會在內部使用，以做為 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 驗證邏輯的一部分。<xref:System.ServiceModel.Activities.Receive.OperationName%2A>、<xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>、<xref:System.ServiceModel.Activities.Receive.Action%2A>、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>、<xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> 和 <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> 全都已預先設定，以符合匯入的合約。在工作流程設計工具的活動內容屬性頁面中，\[**訊息**\] 或 \[**參數**\] 區段也已預先設定，以符合合約。  
+ <span data-ttu-id="c491f-304">這些方法所產生的活動應該會通過合約驗證，因此這些方法會在內部使用，以做為 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 驗證邏輯的一部分。</span><span class="sxs-lookup"><span data-stu-id="c491f-304">The activity generated by these methods should pass contract validation, and therefore these methods are used internally as part of the validation logic for <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply>.</span></span> <span data-ttu-id="c491f-305"><xref:System.ServiceModel.Activities.Receive.OperationName%2A>、<xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>、<xref:System.ServiceModel.Activities.Receive.Action%2A>、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>、<xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> 和 <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> 全都已預先設定，以符合匯入的合約。</span><span class="sxs-lookup"><span data-stu-id="c491f-305">The <xref:System.ServiceModel.Activities.Receive.OperationName%2A>,  <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>,  <xref:System.ServiceModel.Activities.Receive.Action%2A>,  <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>,  <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A>, and <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> are all pre-configured to match the imported contract.</span></span> <span data-ttu-id="c491f-306">在工作流程設計工具中的活動的內容屬性頁中**訊息**或**參數**區段也已預先設定以符合合約。</span><span class="sxs-lookup"><span data-stu-id="c491f-306">In the content properties page for the activities in the workflow designer, the **Message** or **Parameters** sections are also pre-configured to match the contract.</span></span>  
   
- 另外，也針對出現在 <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection> 中的每個錯誤，各傳回一組已設定的 <xref:System.ServiceModel.Activities.SendReply> 活動，以處理 WCF 錯誤合約。  
+ <span data-ttu-id="c491f-307">WCF 錯誤合約也由傳回一組個別的設定<xref:System.ServiceModel.Activities.SendReply>顯示在錯誤的每個活動<xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>。</span><span class="sxs-lookup"><span data-stu-id="c491f-307">WCF fault contracts are also handled by returning a separate set of configured <xref:System.ServiceModel.Activities.SendReply> activities for each of the faults that show up in the <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.</span></span>  
   
- 針對 WF 服務現在已不支援的其他部分 <xref:System.ServiceModel.Description.OperationDescription> \(例如，WebGet\/WebInvoke 行為，或自訂作業行為\)，API 會在產生和設定的過程中，忽略這些值。不會擲回任何例外狀況。
+ <span data-ttu-id="c491f-308">其他組件的<xref:System.ServiceModel.Description.OperationDescription>，不支援的 WF 服務現在 （例如 WebGet/WebInvoke 行為或自訂作業行為），API 將會忽略這些值的產生和組態的一部分。</span><span class="sxs-lookup"><span data-stu-id="c491f-308">For other parts of <xref:System.ServiceModel.Description.OperationDescription> that are unsupported by WF services today (e.g. WebGet/WebInvoke behaviors, or custom operation behaviors), the API will ignore those values as part of the generation and configuration.</span></span> <span data-ttu-id="c491f-309">不會擲回任何例外狀況。</span><span class="sxs-lookup"><span data-stu-id="c491f-309">No exceptions will be thrown.</span></span>

@@ -1,75 +1,56 @@
 ---
 title: "-moduleassemblyname (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /moduleassemblyname
-dev_langs:
-- CSharp
+f1_keywords: /moduleassemblyname
 helpviewer_keywords:
 - moduleassemblyname compiler option [C#]
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (C# 編譯器選項)
-指定 .netmodule 可以存取其非公用類型的組件。  
+# <a name="moduleassemblyname-c-compiler-option"></a><span data-ttu-id="5b287-102">/moduleassemblyname (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="5b287-102">/moduleassemblyname (C# Compiler Option)</span></span>
+<span data-ttu-id="5b287-103">指定 .netmodule 可以存取其非公用類型的組件。</span><span class="sxs-lookup"><span data-stu-id="5b287-103">Specifies an assembly whose non-public types a .netmodule can access.</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="5b287-104">語法</span><span class="sxs-lookup"><span data-stu-id="5b287-104">Syntax</span></span>  
   
 ```console  
 /moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a><span data-ttu-id="5b287-105">引數</span><span class="sxs-lookup"><span data-stu-id="5b287-105">Arguments</span></span>  
  `assembly_name`  
- .netmodule 可以存取其非公用類型之組件的名稱。  
+ <span data-ttu-id="5b287-106">.netmodule 可以存取其非公用類型之組件的名稱。</span><span class="sxs-lookup"><span data-stu-id="5b287-106">The name of the assembly whose non-public types the .netmodule can access.</span></span>  
   
-## <a name="remarks"></a>備註  
- **/moduleassemblyname** 應該在建置 .netmodule 時，以及符合下列條件時使用：  
+## <a name="remarks"></a><span data-ttu-id="5b287-107">備註</span><span class="sxs-lookup"><span data-stu-id="5b287-107">Remarks</span></span>  
+ <span data-ttu-id="5b287-108">**/moduleassemblyname** 應該在建置 .netmodule 時，以及符合下列條件時使用：</span><span class="sxs-lookup"><span data-stu-id="5b287-108">**/moduleassemblyname** should be used when building a .netmodule, and where the following conditions are true:</span></span>  
   
--   .netmodule 需要存取現有組件中的非公用類型。  
+-   <span data-ttu-id="5b287-109">.netmodule 需要存取現有組件中的非公用類型。</span><span class="sxs-lookup"><span data-stu-id="5b287-109">The .netmodule needs access to non-public types in an existing assembly.</span></span>  
   
--   您知道將在其中建置 .netmodule 之組件的名稱。  
+-   <span data-ttu-id="5b287-110">您知道將在其中建置 .netmodule 之組件的名稱。</span><span class="sxs-lookup"><span data-stu-id="5b287-110">You know the name of the assembly into which the .netmodule will be built.</span></span>  
   
--   現存組件已對將在其中建置 .netmodule 的組件授與 friend 組件的存取權。  
+-   <span data-ttu-id="5b287-111">現存組件已對將在其中建置 .netmodule 的組件授與 friend 組件的存取權。</span><span class="sxs-lookup"><span data-stu-id="5b287-111">The existing assembly has granted friend assembly access to the assembly into which the .netmodule will be built.</span></span>  
   
- 如需建置 .netmodule 的詳細資訊，請參閱 [/target:module (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
+ <span data-ttu-id="5b287-112">如需建置 .netmodule 的詳細資訊，請參閱 [/target:module (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="5b287-112">For more information on building a .netmodule, see [/target:module (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span></span>  
   
- 如需 Friend 組件的詳細資訊，請參閱 [Friend 組件](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)。  
+ <span data-ttu-id="5b287-113">如需 Friend 組件的詳細資訊，請參閱 [Friend 組件](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="5b287-113">For more information on friend assemblies, see [Friend Assemblies](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).</span></span>  
   
- 這個選項不適用於開發環境；只有在從命令列編譯時才可用。  
+ <span data-ttu-id="5b287-114">這個選項不適用於開發環境；只有在從命令列編譯時才可用。</span><span class="sxs-lookup"><span data-stu-id="5b287-114">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
   
- Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
+ <span data-ttu-id="5b287-115">Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。</span><span class="sxs-lookup"><span data-stu-id="5b287-115">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="example"></a>範例  
- 此範例會建置具有私用類型的組件，並提供 Friend 組件存取權給稱為 csman_an_assembly 的組件。  
+## <a name="example"></a><span data-ttu-id="5b287-116">範例</span><span class="sxs-lookup"><span data-stu-id="5b287-116">Example</span></span>  
+ <span data-ttu-id="5b287-117">此範例會建置具有私用類型的組件，並提供 Friend 組件存取權給稱為 csman_an_assembly 的組件。</span><span class="sxs-lookup"><span data-stu-id="5b287-117">This sample builds an assembly with a private type, and that gives friend assembly access to an assembly called csman_an_assembly.</span></span>  
   
 ```csharp  
 // moduleassemblyname_1.cs  
@@ -88,8 +69,8 @@ class An_Internal_Class
 }  
 ```  
   
-## <a name="example"></a>範例  
- 此範例將建置的 .netmodule 會存取 moduleassemblyname_1.dll 組件中的非公用類型。 藉由得知此 .netmodule 將建置在稱為 csman_an_assembly 的組件中，因此可以指定 **/moduleassemblyname**，讓 .netmodule 在授與 Friend 組件存取權給 csman_an_assembly 的組件中存取非公用類型。  
+## <a name="example"></a><span data-ttu-id="5b287-118">範例</span><span class="sxs-lookup"><span data-stu-id="5b287-118">Example</span></span>  
+ <span data-ttu-id="5b287-119">此範例將建置的 .netmodule 會存取 moduleassemblyname_1.dll 組件中的非公用類型。</span><span class="sxs-lookup"><span data-stu-id="5b287-119">This sample builds a .netmodule that accesses a non-public type in the assembly moduleassemblyname_1.dll.</span></span> <span data-ttu-id="5b287-120">藉由得知此 .netmodule 將建置在稱為 csman_an_assembly 的組件中，因此可以指定 **/moduleassemblyname**，讓 .netmodule 在授與 Friend 組件存取權給 csman_an_assembly 的組件中存取非公用類型。</span><span class="sxs-lookup"><span data-stu-id="5b287-120">By knowing that this .netmodule will be built into an assembly called csman_an_assembly, we can specify **/moduleassemblyname**, allowing the .netmodule to access non-public types in an assembly that has granted friend assembly access to csman_an_assembly.</span></span>  
   
 ```csharp  
 // moduleassemblyname_2.cs  
@@ -102,8 +83,8 @@ class B {
 }  
 ```  
   
-## <a name="example"></a>範例  
- 此程式碼範例將會建置 csman_an_assembly 組件，並參考之前建置的組件及 .netmodule。  
+## <a name="example"></a><span data-ttu-id="5b287-121">範例</span><span class="sxs-lookup"><span data-stu-id="5b287-121">Example</span></span>  
+ <span data-ttu-id="5b287-122">此程式碼範例將會建置 csman_an_assembly 組件，並參考之前建置的組件及 .netmodule。</span><span class="sxs-lookup"><span data-stu-id="5b287-122">This code sample builds the assembly csman_an_assembly, referencing the previously-built assembly and .netmodule.</span></span>  
   
 ```csharp  
 // csman_an_assembly.cs  
@@ -116,8 +97,7 @@ class A {
 }  
 ```  
   
- **已呼叫 An_Internal_Class.Test**   
-## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-
+ <span data-ttu-id="5b287-123">**已呼叫 An_Internal_Class.Test**</span><span class="sxs-lookup"><span data-stu-id="5b287-123">**An_Internal_Class.Test called**</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5b287-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5b287-124">See Also</span></span>  
+ [<span data-ttu-id="5b287-125">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="5b287-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="5b287-126">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="5b287-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

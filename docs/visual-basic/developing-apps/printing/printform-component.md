@@ -1,86 +1,67 @@
 ---
-title: "PrintForm 元件 (Visual Basic) |Microsoft 文件"
-ms.date: 2015-07-20
+title: "PrintForm 元件 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- PrintForm component [Visual Basic]
+helpviewer_keywords: PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f0c51ef0131c874ed33af7a19f9145a790d14ade
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 890d5a3a3f9c3a737a59e17fef0d4ac0407e9924
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="printform-component-visual-basic"></a>PrintForm 元件 (Visual Basic)
-<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]可讓您在執行階段列印 Windows Form 的影像。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 其行為取代了舊版 Visual Basic 中 `PrintForm` 方法的行為。  
+# <a name="printform-component-visual-basic"></a><span data-ttu-id="67ab1-102">PrintForm 元件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67ab1-102">PrintForm Component (Visual Basic)</span></span>
+<span data-ttu-id="67ab1-103"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 元件可讓您在執行階段列印 Windows Form 的影像。</span><span class="sxs-lookup"><span data-stu-id="67ab1-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component for [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] enables you to print an image of a Windows Form at run time.</span></span> <span data-ttu-id="67ab1-104">其行為取代了舊版 Visual Basic 中 `PrintForm` 方法的行為。</span><span class="sxs-lookup"><span data-stu-id="67ab1-104">Its behavior replaces that of the `PrintForm` method in earlier versions of Visual Basic.</span></span>  
   
- Visual Studio 中已不再包含 PowerPack 控制項，但您可以從 [下載中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下載這些控制項。  
+ <span data-ttu-id="67ab1-105">Visual Studio 中已不再包含 PowerPack 控制項，但您可以從 [下載中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下載這些控制項。</span><span class="sxs-lookup"><span data-stu-id="67ab1-105">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
   
-## <a name="printform-component-overview"></a>PrintForm 元件概觀  
- Windows Form 的常見案例是建立一個表單，其格式類似紙本表單或報表，然後再列印表單的影像。 雖然您可以使用<xref:System.Drawing.Printing.PrintDocument>元件，若要這樣做，這需要大量程式碼。</xref:System.Drawing.Printing.PrintDocument> <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件可讓您列印到印表機、 預覽列印視窗或檔案格式的映像而不需使用<xref:System.Drawing.Printing.PrintDocument>元件。</xref:System.Drawing.Printing.PrintDocument> </xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>  
+## <a name="printform-component-overview"></a><span data-ttu-id="67ab1-106">PrintForm 元件概觀</span><span class="sxs-lookup"><span data-stu-id="67ab1-106">PrintForm Component Overview</span></span>  
+ <span data-ttu-id="67ab1-107">Windows Form 的常見案例是建立一個表單，其格式類似紙本表單或報表，然後再列印表單的影像。</span><span class="sxs-lookup"><span data-stu-id="67ab1-107">A common scenario for Windows Forms is to create a form that is formatted to resemble a paper form or a report, and then to print an image of the form.</span></span> <span data-ttu-id="67ab1-108">雖然您可以使用 <xref:System.Drawing.Printing.PrintDocument> 元件來執行這項作業，但這樣做需要撰寫許多程式碼。</span><span class="sxs-lookup"><span data-stu-id="67ab1-108">Although you can use a <xref:System.Drawing.Printing.PrintDocument> component to do this, it would require a lot of code.</span></span> <span data-ttu-id="67ab1-109"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件可讓您將表單的影像列印至印表機、[預覽列印] 視窗或檔案，而不需要使用 <xref:System.Drawing.Printing.PrintDocument> 元件。</span><span class="sxs-lookup"><span data-stu-id="67ab1-109">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to print an image of a form to a printer, to a print preview window, or to a file without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件位於**Visual Basic PowerPacks**  索引標籤的**工具箱**。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 當元件拖曳至表單時會顯示在元件匣中，也就是表單下框線下方的小型區域。 您可以在選取元件時，設定 [屬性] **** 視窗中的屬性來定義元件的行為。 這些屬性也都可以在程式碼中設定。 您也可以建立的執行個體<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件的程式碼，而不需要在設計階段加入元件。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>  
+ <span data-ttu-id="67ab1-110"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件位於 [工具箱]  的 [Visual Basic PowerPacks] 索引標籤中。</span><span class="sxs-lookup"><span data-stu-id="67ab1-110">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component is located on the **Visual Basic PowerPacks** tab of the **Toolbox**.</span></span> <span data-ttu-id="67ab1-111">當元件拖曳至表單時會顯示在元件匣中，也就是表單下框線下方的小型區域。</span><span class="sxs-lookup"><span data-stu-id="67ab1-111">When it is dragged onto a form it appears in the component tray, the small area under the bottom border of the form.</span></span> <span data-ttu-id="67ab1-112">您可以在選取元件時，設定 [屬性]  視窗中的屬性來定義元件的行為。</span><span class="sxs-lookup"><span data-stu-id="67ab1-112">When the component is selected, properties that define its behavior can be set in the **Properties** window.</span></span> <span data-ttu-id="67ab1-113">這些屬性也都可以在程式碼中設定。</span><span class="sxs-lookup"><span data-stu-id="67ab1-113">All of these properties can also be set in code.</span></span> <span data-ttu-id="67ab1-114">您也可以在程式碼中建立 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件的執行個體，而不需要在設計階段加入該元件。</span><span class="sxs-lookup"><span data-stu-id="67ab1-114">You can also create an instance of the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component in code without adding the component at design time.</span></span>  
   
- 當您列印表單時，會列印表單工作區中的所有內容。 這包括所有控制項，以及由 Graphics 方法在表單上繪製的任何文字或圖形。 預設不會列印表單的標題列、捲軸和框線。 根據預設，也<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件列印表單的可見部分。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 例如，如果使用者在執行階段調整表單的大小，則只會列印目前可見的控制項和圖形。  
+ <span data-ttu-id="67ab1-115">當您列印表單時，會列印表單工作區中的所有內容。</span><span class="sxs-lookup"><span data-stu-id="67ab1-115">When you print a form, everything in the client area of the form is printed.</span></span> <span data-ttu-id="67ab1-116">這包括所有控制項，以及由 Graphics 方法在表單上繪製的任何文字或圖形。</span><span class="sxs-lookup"><span data-stu-id="67ab1-116">This includes all controls and any text or graphics drawn on the form by graphics methods.</span></span> <span data-ttu-id="67ab1-117">預設不會列印表單的標題列、捲軸和框線。</span><span class="sxs-lookup"><span data-stu-id="67ab1-117">By default, the form's title bar, scroll bars, and border are not printed.</span></span> <span data-ttu-id="67ab1-118">此外， <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件預設只會列印表單的可見部分。</span><span class="sxs-lookup"><span data-stu-id="67ab1-118">Also by default, the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component prints only the visible part of the form.</span></span> <span data-ttu-id="67ab1-119">例如，如果使用者在執行階段調整表單的大小，則只會列印目前可見的控制項和圖形。</span><span class="sxs-lookup"><span data-stu-id="67ab1-119">For example, if the user resizes the form at run time, only the controls and graphics that are currently visible are printed.</span></span>  
   
- 所使用的預設印表機<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件由作業系統的控制台中設定決定。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>  
+ <span data-ttu-id="67ab1-120"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件所使用的預設印表機，是由作業系統的 [控制台] 設定所決定。</span><span class="sxs-lookup"><span data-stu-id="67ab1-120">The default printer used by the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component is determined by the operating system's Control Panel settings.</span></span>  
   
- 在起始列印之後，標準<xref:System.Drawing.Printing.PrintDocument>列印對話方塊隨即出現。</xref:System.Drawing.Printing.PrintDocument> 這個對話方塊可讓使用者取消列印工作。  
+ <span data-ttu-id="67ab1-121">啟始列印之後，即會顯示標準的 <xref:System.Drawing.Printing.PrintDocument> 列印對話方塊。</span><span class="sxs-lookup"><span data-stu-id="67ab1-121">After printing is initiated, a standard <xref:System.Drawing.Printing.PrintDocument> printing dialog box is displayed.</span></span> <span data-ttu-id="67ab1-122">這個對話方塊可讓使用者取消列印工作。</span><span class="sxs-lookup"><span data-stu-id="67ab1-122">This dialog box enables users to cancel the print job.</span></span>  
   
-### <a name="key-methods-properties-and-events"></a>主要方法、屬性和事件  
- 金鑰的方法<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件是<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>方法，它會列印到印表機、 預覽列印視窗或檔案格式的影像。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> </xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 有兩個版本的<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>方法︰</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
+### <a name="key-methods-properties-and-events"></a><span data-ttu-id="67ab1-123">主要方法、屬性和事件</span><span class="sxs-lookup"><span data-stu-id="67ab1-123">Key Methods, Properties, and Events</span></span>  
+ <span data-ttu-id="67ab1-124"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件的主要方法是 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> 方法，這個方法會將表單的影像列印至印表機、[預覽列印] 視窗或檔案。</span><span class="sxs-lookup"><span data-stu-id="67ab1-124">The key method of the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component is the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> method, which prints an image of the form to a printer, print preview window, or file.</span></span> <span data-ttu-id="67ab1-125"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> 方法有兩種版本：</span><span class="sxs-lookup"><span data-stu-id="67ab1-125">There are two versions of the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> method:</span></span>  
   
--   不含參數的基本版本︰`Print()`  
+-   <span data-ttu-id="67ab1-126">不含參數的基本版本： `Print()`</span><span class="sxs-lookup"><span data-stu-id="67ab1-126">A basic version without parameters: `Print()`</span></span>  
   
--   指定列印行為的參數多載的版本︰`Print(printForm As Form, printFormOption As PrintOption)`  
+-   <span data-ttu-id="67ab1-127">指定列印行為之具有參數的多載版本： `Print(printForm As Form, printFormOption As PrintOption)`</span><span class="sxs-lookup"><span data-stu-id="67ab1-127">An overloaded version with parameters that specify printing behavior: `Print(printForm As Form, printFormOption As PrintOption)`</span></span>  
   
-     多載方法的 `PrintOption` 參數可決定用來列印表單的基礎實作；是否列印表單的標題列、捲軸和框線；以及是否列印表單可捲動的部分。  
+     <span data-ttu-id="67ab1-128">多載方法的 `PrintOption` 參數可決定用來列印表單的基礎實作；是否列印表單的標題列、捲軸和框線；以及是否列印表單可捲動的部分。</span><span class="sxs-lookup"><span data-stu-id="67ab1-128">The `PrintOption` parameter of the overloaded method determines the underlying implementation used to print the form, whether the form's title bar, scroll bars, and border are printed, and whether scrollable parts of the form are printed.</span></span>  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>屬性是索引鍵屬性的<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> </xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> 這個屬性可決定要將輸出傳送至印表機、顯示在 [預覽列印] 視窗中，還是儲存為封裝式 PostScript 檔案。 如果<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>屬性設定為<xref:System.Drawing.Printing.PrintAction>、<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A>屬性指定的路徑和檔案名稱。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A> </xref:System.Drawing.Printing.PrintAction> </xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
+ <span data-ttu-id="67ab1-129"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> 屬性是 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件的主要屬性。</span><span class="sxs-lookup"><span data-stu-id="67ab1-129">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> property is a key property of the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component.</span></span> <span data-ttu-id="67ab1-130">這個屬性可決定要將輸出傳送至印表機、顯示在 [預覽列印] 視窗中，還是儲存為封裝式 PostScript 檔案。</span><span class="sxs-lookup"><span data-stu-id="67ab1-130">This property determines whether the output is sent to a printer, displayed in a print preview window, or saved as an Encapsulated PostScript file.</span></span> <span data-ttu-id="67ab1-131">如果將 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> 屬性設定為 <xref:System.Drawing.Printing.PrintAction.PrintToFile>，則 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A> 屬性會指定路徑和檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="67ab1-131">If the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> property is set to <xref:System.Drawing.Printing.PrintAction.PrintToFile>, the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A> property specifies the path and file name.</span></span>  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrinterSettings%2A>屬性會提供基礎<xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A>物件，可讓您指定要使用的印表機和列印的份數等設定</xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A>的存取權</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrinterSettings%2A> 您也可以查詢印表機的功能，例如彩色或雙面列印支援。 這個屬性不會顯示在 [屬性] **** 視窗中，只能透過程式碼存取。  
+ <span data-ttu-id="67ab1-132"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrinterSettings%2A> 屬性可存取基礎 <xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A> 物件，這個物件可讓您指定要使用的印表機及要列印的份數等設定。</span><span class="sxs-lookup"><span data-stu-id="67ab1-132">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrinterSettings%2A> property provides access to an underlying <xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A> object that enables you to specify such settings as the printer to use and the number of copies to print.</span></span> <span data-ttu-id="67ab1-133">您也可以查詢印表機的功能，例如彩色或雙面列印支援。</span><span class="sxs-lookup"><span data-stu-id="67ab1-133">You can also query the printer's capabilities, such as color or duplex support.</span></span> <span data-ttu-id="67ab1-134">這個屬性不會顯示在 [屬性]  視窗中，只能透過程式碼存取。</span><span class="sxs-lookup"><span data-stu-id="67ab1-134">This property does not appear in the **Properties** window; it can be accessed only from code.</span></span>  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Form%2A>屬性用來指定當您叫用來列印表單<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件以程式設計的方式。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> </xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Form%2A> 如果該元件在設計階段已加入表單中，則該表單會是預設值。  
+ <span data-ttu-id="67ab1-135"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Form%2A> 屬性可在您以程式設計方式叫用 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件時，用來指定要列印的表單。</span><span class="sxs-lookup"><span data-stu-id="67ab1-135">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Form%2A> property is used to specify the form to print when you invoke the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component programmatically.</span></span> <span data-ttu-id="67ab1-136">如果該元件在設計階段已加入表單中，則該表單會是預設值。</span><span class="sxs-lookup"><span data-stu-id="67ab1-136">If the component is added to a form at design time, that form is the default.</span></span>  
   
- 索引鍵的事件<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件包括下列︰</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>  
+ <span data-ttu-id="67ab1-137"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件的主要事件包括：</span><span class="sxs-lookup"><span data-stu-id="67ab1-137">Key events for the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component include the following:</span></span>  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint>事件。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint> 發生於當<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>方法稱為 「 文件列印的第一頁之前。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
+-   <span data-ttu-id="67ab1-138"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint> 事件。</span><span class="sxs-lookup"><span data-stu-id="67ab1-138"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint> event.</span></span> <span data-ttu-id="67ab1-139">發生於呼叫 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> 方法時 (在文件的第一頁列印之前)。</span><span class="sxs-lookup"><span data-stu-id="67ab1-139">Occurs when the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> method is called and before the first page of the document prints.</span></span>  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint>事件。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint> 發生於列印最後一頁時。  
+-   <span data-ttu-id="67ab1-140"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint> 事件。</span><span class="sxs-lookup"><span data-stu-id="67ab1-140"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint> event.</span></span> <span data-ttu-id="67ab1-141">發生於列印最後一頁時。</span><span class="sxs-lookup"><span data-stu-id="67ab1-141">Occurs after the last page is printed.</span></span>  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings>事件。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings> 在每頁即將列印前發生。  
+-   <span data-ttu-id="67ab1-142"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings> 事件。</span><span class="sxs-lookup"><span data-stu-id="67ab1-142"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings> event.</span></span> <span data-ttu-id="67ab1-143">在每頁即將列印前發生。</span><span class="sxs-lookup"><span data-stu-id="67ab1-143">Occurs immediately before each page is printed.</span></span>  
   
-### <a name="remarks"></a>備註  
- 如果表單包含文字或圖形來繪製<xref:System.Drawing.Graphics>方法時，使用基本<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>(`Print()`) 方法，以列印它</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A></xref:System.Drawing.Graphics> 圖形可能不會在某些作業系統上呈現時的多載<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>方法可用。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
+### <a name="remarks"></a><span data-ttu-id="67ab1-144">備註</span><span class="sxs-lookup"><span data-stu-id="67ab1-144">Remarks</span></span>  
+ <span data-ttu-id="67ab1-145">如果表單包含由 <xref:System.Drawing.Graphics> 方法所繪製的文字或圖形，請使用基本的 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> (`Print()`) 方法列印。</span><span class="sxs-lookup"><span data-stu-id="67ab1-145">If a form contains text or graphics drawn by <xref:System.Drawing.Graphics> methods, use the basic <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> (`Print()`) method to print it.</span></span> <span data-ttu-id="67ab1-146">使用多載 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> 方法時，在某些作業系統上可能無法呈現圖形。</span><span class="sxs-lookup"><span data-stu-id="67ab1-146">Graphics may not render on some operating systems when the overloaded <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> method is used.</span></span>  
   
- 如果表單的寬度超過印表機中紙張的寬度，則表單的右側可能會被截斷。 設計列印用的表單時，請確定表單符合標準大小的紙張。  
+ <span data-ttu-id="67ab1-147">如果表單的寬度超過印表機中紙張的寬度，則表單的右側可能會被截斷。</span><span class="sxs-lookup"><span data-stu-id="67ab1-147">If the width of a form is wider than the width of the paper in the printer, the right side of the form might be cut off.</span></span> <span data-ttu-id="67ab1-148">設計列印用的表單時，請確定表單符合標準大小的紙張。</span><span class="sxs-lookup"><span data-stu-id="67ab1-148">When you design forms for printing, make sure that the form fits on standard-sized paper.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例將示範一種常見用法<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>元件。</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>  
+## <a name="example"></a><span data-ttu-id="67ab1-149">範例</span><span class="sxs-lookup"><span data-stu-id="67ab1-149">Example</span></span>  
+ <span data-ttu-id="67ab1-150">下列範例會示範 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件的常見用法。</span><span class="sxs-lookup"><span data-stu-id="67ab1-150">The following example shows a common use of the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component.</span></span>  
   
 ```  
 ' Visual Basic.  
@@ -90,10 +71,10 @@ pf.PrintAction = PrintToPrinter
 pf.Print()  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A></xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A></xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>   
- [如何︰ 使用 PrintForm 元件列印表單](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)   
- [如何︰ 列印表單的工作區](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)   
- [如何︰ 列印用戶端和非工作區的表單](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)   
- [如何：列印可捲動的表單](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+## <a name="see-also"></a><span data-ttu-id="67ab1-151">另請參閱</span><span class="sxs-lookup"><span data-stu-id="67ab1-151">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
+ [<span data-ttu-id="67ab1-152">操作說明：使用 PrintForm 元件列印表單</span><span class="sxs-lookup"><span data-stu-id="67ab1-152">How to: Print a Form by Using the PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
+ [<span data-ttu-id="67ab1-153">操作說明：列印表單的工作區</span><span class="sxs-lookup"><span data-stu-id="67ab1-153">How to: Print the Client Area of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
+ [<span data-ttu-id="67ab1-154">操作說明：列印表單的工作區和非工作區</span><span class="sxs-lookup"><span data-stu-id="67ab1-154">How to: Print Client and Non-Client Areas of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
+ [<span data-ttu-id="67ab1-155">操作說明：列印可捲動的表單</span><span class="sxs-lookup"><span data-stu-id="67ab1-155">How to: Print a Scrollable Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

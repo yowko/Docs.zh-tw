@@ -1,63 +1,62 @@
 ---
-title: "New Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.new"
-  - "vb.NewConstraint"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "constraints, Visual Basic generic types"
-  - "generics [Visual Basic], constraints"
-  - "constraints, New keyword"
-  - "New constraint"
-  - "New keyword"
+title: "New 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.new
+- vb.NewConstraint
+helpviewer_keywords:
+- constraints, Visual Basic generic types
+- generics [Visual Basic], constraints
+- constraints, New keyword [Visual Basic]
+- New constraint
+- New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 74f0352379e861ad135ea23d31ea07d638f9e6c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# New Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-引進 `New` 子句，以建立新的物件執行個體、指定型別參數上的建構函式條件約束，或識別做為類別建構函式的 `Sub` 程序。  
+# <a name="new-operator-visual-basic"></a><span data-ttu-id="19cbe-102">New 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="19cbe-102">New Operator (Visual Basic)</span></span>
+<span data-ttu-id="19cbe-103">導入了`New`子句來建立新的物件執行個體，指定型別參數的建構函式條件約束，或識別`Sub`與類別建構函式的程序。</span><span class="sxs-lookup"><span data-stu-id="19cbe-103">Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.</span></span>  
   
-## 備註  
- 在宣告或指派陳述式中，`New` 子句必須指定可建立執行個體的定義類別。  這表示類別必須公開一個或多個建構函式，以供呼叫程式碼存取。  
+## <a name="remarks"></a><span data-ttu-id="19cbe-104">備註</span><span class="sxs-lookup"><span data-stu-id="19cbe-104">Remarks</span></span>  
+ <span data-ttu-id="19cbe-105">在宣告或指派陳述式，`New`子句必須指定已定義的類別，可以從中建立執行個體。</span><span class="sxs-lookup"><span data-stu-id="19cbe-105">In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created.</span></span> <span data-ttu-id="19cbe-106">這表示類別必須公開一個或多個建構函式呼叫的程式碼可以存取。</span><span class="sxs-lookup"><span data-stu-id="19cbe-106">This means that the class must expose one or more constructors that the calling code can access.</span></span>  
   
- 您可以在宣告陳述式 \(Declaration Statement\) 或指派陳述式中使用 `New` 子句。  當陳述式執行時，會呼叫指定類別的適當建構函式，並傳遞任何您所提供的引數。  下列範例會建立 `Customer` 類別的執行個體，其具有兩個建構函式，一個不採用參數，另一個採用字串參數，用以說明。  
+ <span data-ttu-id="19cbe-107">您可以使用`New`宣告陳述式或指派陳述式中的子句。</span><span class="sxs-lookup"><span data-stu-id="19cbe-107">You can use a `New` clause in a declaration statement or an assignment statement.</span></span> <span data-ttu-id="19cbe-108">陳述式執行時，它會呼叫適當的建構函式指定類別，並傳遞您提供任何引數。</span><span class="sxs-lookup"><span data-stu-id="19cbe-108">When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied.</span></span> <span data-ttu-id="19cbe-109">下列範例會示範這藉由建立的執行個體`Customer`類別具有兩個建構函式不接受參數，一個可接受字串參數。</span><span class="sxs-lookup"><span data-stu-id="19cbe-109">The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter.</span></span>  
   
  [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
- 由於陣列是類別，因此 `New` 可建立新的陣列執行個體，如以下範例所示。  
+ <span data-ttu-id="19cbe-110">由於陣列是類別，`New`可以建立新的陣列執行個體，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="19cbe-110">Since arrays are classes, `New` can create a new array instance, as shown in the following examples.</span></span>  
   
  [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
- 若記憶體不足，無法產生新的執行個體時，Common Language Runtime \(CLR\) 會擲回 <xref:System.OutOfMemoryException> 錯誤。  
+ <span data-ttu-id="19cbe-111">Common language runtime (CLR) 擲回<xref:System.OutOfMemoryException>如果記憶體不足，無法建立新的執行個體的錯誤。</span><span class="sxs-lookup"><span data-stu-id="19cbe-111">The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.</span></span>  
   
 > [!NOTE]
->  `New` 關鍵字也可用在型別參數清單中，指定提供的型別必須公開可存取的無參數建構函式。  如需型別參數和條件約束的詳細資訊，請參閱[Type List](../../../visual-basic/language-reference/statements/type-list.md)。  
+>  <span data-ttu-id="19cbe-112">`New`關鍵字也用在型別參數清單來指定提供的型別必須公開存取的無參數建構函式。</span><span class="sxs-lookup"><span data-stu-id="19cbe-112">The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor.</span></span> <span data-ttu-id="19cbe-113">如需型別參數和條件約束的詳細資訊，請參閱[型別清單](../../../visual-basic/language-reference/statements/type-list.md)。</span><span class="sxs-lookup"><span data-stu-id="19cbe-113">For more information about type parameters and constraints, see [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>  
   
- 若要建立類別的建構函式程序，請將 `Sub` 程序的名稱設定為 `New`關鍵字。  如需詳細資訊，請參閱 [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
+ <span data-ttu-id="19cbe-114">若要建立之類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。</span><span class="sxs-lookup"><span data-stu-id="19cbe-114">To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword.</span></span> <span data-ttu-id="19cbe-115">如需詳細資訊，請參閱[物件存留期： 物件的建立和終結](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。</span><span class="sxs-lookup"><span data-stu-id="19cbe-115">For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>  
   
- `New` 關鍵字可用於以下內容中：  
+ <span data-ttu-id="19cbe-116">`New` 關鍵字可用於以下內容：</span><span class="sxs-lookup"><span data-stu-id="19cbe-116">The `New` keyword can be used in these contexts:</span></span>  
   
- [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="19cbe-117">Dim 陳述式</span><span class="sxs-lookup"><span data-stu-id="19cbe-117">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="19cbe-118">Of</span><span class="sxs-lookup"><span data-stu-id="19cbe-118">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="19cbe-119">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="19cbe-119">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 請參閱  
- <xref:System.OutOfMemoryException>   
- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)   
- [Type List](../../../visual-basic/language-reference/statements/type-list.md)   
- [Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a><span data-ttu-id="19cbe-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19cbe-120">See Also</span></span>  
+ <xref:System.OutOfMemoryException>  
+ [<span data-ttu-id="19cbe-121">關鍵字</span><span class="sxs-lookup"><span data-stu-id="19cbe-121">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="19cbe-122">類型清單</span><span class="sxs-lookup"><span data-stu-id="19cbe-122">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)  
+ [<span data-ttu-id="19cbe-123">Visual Basic 中的泛型型別</span><span class="sxs-lookup"><span data-stu-id="19cbe-123">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="19cbe-124">物件存留期：物件的建立和終結</span><span class="sxs-lookup"><span data-stu-id="19cbe-124">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

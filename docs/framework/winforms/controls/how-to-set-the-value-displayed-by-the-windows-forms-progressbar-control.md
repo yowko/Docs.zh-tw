@@ -1,54 +1,54 @@
 ---
-title: "如何：設定 Windows Form ProgressBar 控制項顯示的值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Increment 方法"
-  - "PerformStep 方法"
-  - "進度控制項, 設定顯示的值"
-  - "ProgressBar 控制項 [Windows Form], 設定顯示的值"
-  - "Step 屬性"
-  - "Value 屬性"
+title: "如何：設定 Windows Form ProgressBar 控制項顯示的值"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ProgressBar control [Windows Forms], setting value displayed
+- progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d3fd66e10515e5135545f6fcfa64546141346519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：設定 Windows Form ProgressBar 控制項顯示的值
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a><span data-ttu-id="d1d27-102">如何：設定 Windows Form ProgressBar 控制項顯示的值</span><span class="sxs-lookup"><span data-stu-id="d1d27-102">How to: Set the Value Displayed by the Windows Forms ProgressBar Control</span></span>
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> 控制項會取代 <xref:System.Windows.Forms.ProgressBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ProgressBar> 控制項，以提供回溯相容性及未來使用。  
+>  <span data-ttu-id="d1d27-103"><xref:System.Windows.Forms.ToolStripProgressBar> 控制項會取代 <xref:System.Windows.Forms.ProgressBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ProgressBar> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="d1d27-103">The <xref:System.Windows.Forms.ToolStripProgressBar> control replaces and adds functionality to the <xref:System.Windows.Forms.ProgressBar> control; however, the <xref:System.Windows.Forms.ProgressBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 對於在 <xref:System.Windows.Forms.ProgressBar> 控制項內部顯示特定值方面，提供數種不同的方式。  您所選擇的方法，端視手邊的工作或正在解決的問題而定。  下表顯示了您可選擇的形式：  
+ <span data-ttu-id="d1d27-104">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供數個不同的方式來顯示給定的值內<xref:System.Windows.Forms.ProgressBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="d1d27-104">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gives you several different ways to display a given value within the <xref:System.Windows.Forms.ProgressBar> control.</span></span> <span data-ttu-id="d1d27-105">您選擇哪種方法將取決於手邊的工作或已解決的問題。</span><span class="sxs-lookup"><span data-stu-id="d1d27-105">Which approach you choose will depend on the task at hand or the problem you are solving.</span></span> <span data-ttu-id="d1d27-106">下表顯示方法，您可以選擇。</span><span class="sxs-lookup"><span data-stu-id="d1d27-106">The following table shows the approaches you can choose.</span></span>  
   
-|處理方式|描述|  
-|----------|--------|  
-|直接設定 <xref:System.Windows.Forms.ProgressBar> 控制項的值。|對於已知道所含測量項目總數的工作，例如從資料來源讀取記錄而言，這個方法就很實用。  此外，如果只需要設定值一次或兩次，這個方法也很容易。  最後，如果需要降低進度列所顯示的值，也請使用這個處理序。|  
-|以固定值增加 <xref:System.Windows.Forms.ProgressBar> 顯示。|在最小和最大之間顯示簡單計數時，例如已耗用時間或已知總數中已處理的檔案數，這個方法就很實用。|  
-|以變化值增加 <xref:System.Windows.Forms.ProgressBar> 顯示。|需要數次以不同數量變更顯示值時，這個方法就很有用。  稍後會提供範例，說明將一系列檔案寫入磁碟時所耗用的硬碟空間量。|  
+|<span data-ttu-id="d1d27-107">方法</span><span class="sxs-lookup"><span data-stu-id="d1d27-107">Approach</span></span>|<span data-ttu-id="d1d27-108">描述</span><span class="sxs-lookup"><span data-stu-id="d1d27-108">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="d1d27-109">值設定<xref:System.Windows.Forms.ProgressBar>直接控制。</span><span class="sxs-lookup"><span data-stu-id="d1d27-109">Set the value of the <xref:System.Windows.Forms.ProgressBar> control directly.</span></span>|<span data-ttu-id="d1d27-110">這種方法可用於工作就會涉及，例如從資料來源中讀取記錄的測量項目總計。</span><span class="sxs-lookup"><span data-stu-id="d1d27-110">This approach is useful for tasks where you know the total of the item measured that will be involved, such as reading records from a data source.</span></span> <span data-ttu-id="d1d27-111">此外，如果您只需要將值設定為一或兩次，這是簡單的方法。</span><span class="sxs-lookup"><span data-stu-id="d1d27-111">Additionally, if you only need to set the value once or twice, this is an easy way to do it.</span></span> <span data-ttu-id="d1d27-112">最後，如果您需要減少進度列所顯示的值時，才能使用這個程序。</span><span class="sxs-lookup"><span data-stu-id="d1d27-112">Finally, use this process if you need to decrease the value displayed by the progress bar.</span></span>|  
+|<span data-ttu-id="d1d27-113">增加<xref:System.Windows.Forms.ProgressBar>顯示由固定值。</span><span class="sxs-lookup"><span data-stu-id="d1d27-113">Increase the <xref:System.Windows.Forms.ProgressBar> display by a fixed value.</span></span>|<span data-ttu-id="d1d27-114">顯示簡單計數之間的最小值和最大值，例如已耗用時間或在已知的總計已處理的檔案數目時，這個方法很有用。</span><span class="sxs-lookup"><span data-stu-id="d1d27-114">This approach is useful when you are displaying a simple count between the minimum and maximum, such as elapsed time or the number of files that have been processed out of a known total.</span></span>|  
+|<span data-ttu-id="d1d27-115">增加<xref:System.Windows.Forms.ProgressBar>顯示的值，而有所不同。</span><span class="sxs-lookup"><span data-stu-id="d1d27-115">Increase the <xref:System.Windows.Forms.ProgressBar> display by a value that varies.</span></span>|<span data-ttu-id="d1d27-116">當您需要變更顯示的值不同的金額重試次數時，這個方法很有用。</span><span class="sxs-lookup"><span data-stu-id="d1d27-116">This approach is useful when you need to change the displayed value a number of times in different amounts.</span></span> <span data-ttu-id="d1d27-117">範例會顯示一系列的檔案寫入磁碟時所耗用的硬碟空間量。</span><span class="sxs-lookup"><span data-stu-id="d1d27-117">An example would be showing the amount of hard-disk space being consumed while writing a series of files to the disk.</span></span>|  
   
- 由進度列顯示該值最直接的方法就是設定 <xref:System.Windows.Forms.ProgressBar.Value%2A> 屬性。  您可以在設計階段或執行階段執行此作業。  
+ <span data-ttu-id="d1d27-118">若要設定進度列所顯示的值最直接的方式是藉由設定<xref:System.Windows.Forms.ProgressBar.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d1d27-118">The most direct way to set the value displayed by a progress bar is by setting the <xref:System.Windows.Forms.ProgressBar.Value%2A> property.</span></span> <span data-ttu-id="d1d27-119">作法是在設計階段或執行階段。</span><span class="sxs-lookup"><span data-stu-id="d1d27-119">This can be done either at design time or at run time.</span></span>  
   
-### 若要直接設定 ProgressBar 值  
+### <a name="to-set-the-progressbar-value-directly"></a><span data-ttu-id="d1d27-120">若要直接設定 ProgressBar 的值</span><span class="sxs-lookup"><span data-stu-id="d1d27-120">To set the ProgressBar value directly</span></span>  
   
-1.  設定 <xref:System.Windows.Forms.ProgressBar> 控制項的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 的值。  
+1.  <span data-ttu-id="d1d27-121">設定<xref:System.Windows.Forms.ProgressBar>控制項的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。</span><span class="sxs-lookup"><span data-stu-id="d1d27-121">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2.  在程式碼中，將控制項的 <xref:System.Windows.Forms.ProgressBar.Value%2A> 屬性設定為介於已建立的最小和最大值之間的整數值。  
+2.  <span data-ttu-id="d1d27-122">程式碼中，將控制項的<xref:System.Windows.Forms.ProgressBar.Value%2A>已建立的最小和最大值之間的整數值的屬性。</span><span class="sxs-lookup"><span data-stu-id="d1d27-122">In code, set the control's <xref:System.Windows.Forms.ProgressBar.Value%2A> property to an integer value between the minimum and maximum values you have established.</span></span>  
   
     > [!NOTE]
-    >  如果您在由 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 屬性建立的界限之外，設定 <xref:System.Windows.Forms.ProgressBar.Value%2A> 屬性，此控制項會擲回 <xref:System.ArgumentException> 例外狀況。  
+    >  <span data-ttu-id="d1d27-123">如果您設定<xref:System.Windows.Forms.ProgressBar.Value%2A>屬性所建立的界限之外<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>屬性、 控制項就會擲回<xref:System.ArgumentException>例外狀況。</span><span class="sxs-lookup"><span data-stu-id="d1d27-123">If you set the <xref:System.Windows.Forms.ProgressBar.Value%2A> property outside the boundaries established by the <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> properties, the control throws an <xref:System.ArgumentException> exception.</span></span>  
   
-     下列程式碼範例說明如何直接設定 <xref:System.Windows.Forms.ProgressBar> 值。  程式碼會從資料來源讀取記錄，然後在每次讀取資料記錄時更新進度列和標籤。  這個範例需要您的表單具有 <xref:System.Windows.Forms.Label> 控制項、<xref:System.Windows.Forms.ProgressBar> 控制項，以及具有稱為 `CustomerRow`  的資料列 \(其中包含 `FirstName`  和 `Last Name`  欄位\) 的資料表。  
+     <span data-ttu-id="d1d27-124">下列程式碼範例說明如何設定<xref:System.Windows.Forms.ProgressBar>直接值。</span><span class="sxs-lookup"><span data-stu-id="d1d27-124">The following code example illustrates how to set the <xref:System.Windows.Forms.ProgressBar> value directly.</span></span> <span data-ttu-id="d1d27-125">程式碼會從資料來源中讀取記錄，並每次讀取資料記錄會更新進度列和標籤。</span><span class="sxs-lookup"><span data-stu-id="d1d27-125">The code reads records from a data source and updates the progress bar and label every time a data record is read.</span></span> <span data-ttu-id="d1d27-126">這個範例需要您的表單具有<xref:System.Windows.Forms.Label>控制項，<xref:System.Windows.Forms.ProgressBar>控制項，以及資料表資料列呼叫`CustomerRow`與`FirstName`和`LastName`欄位。</span><span class="sxs-lookup"><span data-stu-id="d1d27-126">This example requires that your form has a <xref:System.Windows.Forms.Label> control, a <xref:System.Windows.Forms.ProgressBar> control, and a data table with a row called `CustomerRow` with `FirstName` and `LastName` fields.</span></span>  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -69,7 +69,6 @@ caps.handback.revision: 14
        ' Updates the label to show that a record was read.  
        Label1.Text = "Records Read = " & ProgressBar1.Value.ToString()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -94,19 +93,19 @@ caps.handback.revision: 14
     }  
     ```  
   
-     如果顯示的進度是以固定間隔進行，則可設定該值，然後呼叫方法，以該間隔增加 <xref:System.Windows.Forms.ProgressBar> 控制項的值。  對於計時器和未以整體百分比測量進度的其他案例而言，這個方法很有用。  
+     如果您要顯示固定的間隔來進行的進度，您可以設定值，並接著呼叫的方法，會增加<xref:System.Windows.Forms.ProgressBar>該間隔的控制項的值。 <span data-ttu-id="d1d27-128">這是適用於計時器和其他案例，您不以整體的百分比測量進度的位置。</span><span class="sxs-lookup"><span data-stu-id="d1d27-128">This is useful for timers and other scenarios where you are not measuring progress as a percentage of the whole.</span></span>  
   
-### 若要以固定值增加進度列  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a><span data-ttu-id="d1d27-129">若要固定值增加進度列</span><span class="sxs-lookup"><span data-stu-id="d1d27-129">To increase the progress bar by a fixed value</span></span>  
   
-1.  設定 <xref:System.Windows.Forms.ProgressBar> 控制項的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 的值。  
+1.  <span data-ttu-id="d1d27-130">設定<xref:System.Windows.Forms.ProgressBar>控制項的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。</span><span class="sxs-lookup"><span data-stu-id="d1d27-130">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2.  將控制項的 <xref:System.Windows.Forms.ProgressBar.Step%2A> 屬性設定為整數，表示增加進度列顯示值的數量。  
+2.  <span data-ttu-id="d1d27-131">將控制項的<xref:System.Windows.Forms.ProgressBar.Step%2A>屬性為整數，代表量增加進度列顯示值。</span><span class="sxs-lookup"><span data-stu-id="d1d27-131">Set the control's <xref:System.Windows.Forms.ProgressBar.Step%2A> property to an integer representing the amount to increase the progress bar's displayed value.</span></span>  
   
-3.  呼叫 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 方法，依在 <xref:System.Windows.Forms.ProgressBar.Step%2A> 屬性中設定的數量變更顯示值。  
+3.  <span data-ttu-id="d1d27-132">呼叫<xref:System.Windows.Forms.ProgressBar.PerformStep%2A>方法，以變更顯示設定的值<xref:System.Windows.Forms.ProgressBar.Step%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d1d27-132">Call the <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> method to change the value displayed by the amount set in the <xref:System.Windows.Forms.ProgressBar.Step%2A> property.</span></span>  
   
-     下列程式碼範例說明進度列如何在複製作業中維持檔案計數。  
+     <span data-ttu-id="d1d27-133">下列程式碼範例說明如何將進度列可以維護的複製作業中的檔案計數。</span><span class="sxs-lookup"><span data-stu-id="d1d27-133">The following code example illustrates how a progress bar can maintain a count of the files in a copy operation.</span></span>  
   
-     在下列範例中，當每個檔案讀取至記憶體時，系統會更新進度列和標籤，以反映讀取的檔案總數。  在這個範例中，您的表單必須有 <xref:System.Windows.Forms.Label> 控制項和 <xref:System.Windows.Forms.ProgressBar> 控制項。  
+     <span data-ttu-id="d1d27-134">在下列範例中，每個檔案讀入記憶體中，進度列和標籤會更新以反映讀取的檔案總數。</span><span class="sxs-lookup"><span data-stu-id="d1d27-134">In the following example, as each file is read into memory, the progress bar and label are updated to reflect the total files read.</span></span> <span data-ttu-id="d1d27-135">這個範例需要您的表單具有<xref:System.Windows.Forms.Label>控制項和<xref:System.Windows.Forms.ProgressBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="d1d27-135">This example requires that your form has a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -132,7 +131,6 @@ caps.handback.revision: 14
           Label1.Text = "# of Files Read = " & ProgressBar1.Value.ToString  
        Next i  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -161,17 +159,17 @@ caps.handback.revision: 14
     }  
     ```  
   
-     最後，您可以增加進度列的顯示值，如此一來每次增加的數量都是唯一的。  在追蹤一系列唯一作業時，例如將不同大小的檔案寫入磁碟，或是以整體百分比測量進度時，這個方法就很有用。  
+     最後，您可以增加顯示進度列，因此每次增加數量都是唯一的值。 <span data-ttu-id="d1d27-137">當您為追蹤的一系列的唯一作業，例如不同大小的檔案寫入硬碟，或以整體的百分比測量進度，這非常有用。</span><span class="sxs-lookup"><span data-stu-id="d1d27-137">This is useful when you are keeping track of a series of unique operations, such as writing files of different sizes to a hard disk, or measuring progress as a percentage of the whole.</span></span>  
   
-### 若要以動態值增加進度列  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a><span data-ttu-id="d1d27-138">若要動態值增加進度列</span><span class="sxs-lookup"><span data-stu-id="d1d27-138">To increase the progress bar by a dynamic value</span></span>  
   
-1.  設定 <xref:System.Windows.Forms.ProgressBar> 控制項的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 的值。  
+1.  <span data-ttu-id="d1d27-139">設定<xref:System.Windows.Forms.ProgressBar>控制項的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。</span><span class="sxs-lookup"><span data-stu-id="d1d27-139">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2.  呼叫 <xref:System.Windows.Forms.ProgressBar.Increment%2A> 方法，依您指定的整數變更顯示值。  
+2.  <span data-ttu-id="d1d27-140">呼叫<xref:System.Windows.Forms.ProgressBar.Increment%2A>方法，以變更顯示您指定的整數的值。</span><span class="sxs-lookup"><span data-stu-id="d1d27-140">Call the <xref:System.Windows.Forms.ProgressBar.Increment%2A> method to change the value displayed by an integer you specify.</span></span>  
   
-     下列程式碼範例說明進度列如何計算複製作業期間，已經使用的磁碟空間有多少。  
+     <span data-ttu-id="d1d27-141">下列程式碼範例說明如何複製作業期間已使用多少磁碟空間計算進度列。</span><span class="sxs-lookup"><span data-stu-id="d1d27-141">The following code example illustrates how a progress bar can calculate how much disk space has been used during a copy operation.</span></span>  
   
-     在下列範例中，當每個檔案寫入硬碟時，進度列和標籤會進行更新，以反映可用的硬碟空間量。  在這個範例中，您的表單必須有 <xref:System.Windows.Forms.Label> 控制項和 <xref:System.Windows.Forms.ProgressBar> 控制項。  
+     <span data-ttu-id="d1d27-142">在下列範例中，在每個檔案寫入硬碟，進度列和標籤會更新以反映的可用硬碟空間量。</span><span class="sxs-lookup"><span data-stu-id="d1d27-142">In the following example, as each file is written to the hard disk, the progress bar and label are updated to reflect the amount of hard-disk space available.</span></span> <span data-ttu-id="d1d27-143">這個範例需要您的表單具有<xref:System.Windows.Forms.Label>控制項和<xref:System.Windows.Forms.ProgressBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="d1d27-143">This example requires that your form has a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
   
     ```vb  
     Public Sub ReadFiles()  
@@ -203,7 +201,6 @@ caps.handback.revision: 14
           ProgressBar1.Value.ToString()  
        Next i  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -237,8 +234,8 @@ caps.handback.revision: 14
     }  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.ProgressBar>   
- <xref:System.Windows.Forms.ToolStripProgressBar>   
- [ProgressBar 控制項概觀](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)   
- [ProgressBar 控制項](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="d1d27-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d1d27-144">See Also</span></span>  
+ <xref:System.Windows.Forms.ProgressBar>  
+ <xref:System.Windows.Forms.ToolStripProgressBar>  
+ [<span data-ttu-id="d1d27-145">ProgressBar 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="d1d27-145">ProgressBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
+ [<span data-ttu-id="d1d27-146">ProgressBar 控制項</span><span class="sxs-lookup"><span data-stu-id="d1d27-146">ProgressBar Control</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)

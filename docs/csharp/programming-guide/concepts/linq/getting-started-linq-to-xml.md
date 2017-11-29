@@ -1,43 +1,33 @@
 ---
 title: "使用者入門 (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: a6c65e53-4e5f-443d-aef2-9c46ad0a3bf0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 71c38b5e59bb098f0ee08e99c43977fd2e9cfdcf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c98f279fe1ef04a70f48e1a6f3dcdb5cb56544ce
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="getting-started-linq-to-xml"></a>使用者入門 (LINQ to XML)
-下列主題將介紹 LINQ to XML。  
+# <a name="getting-started-linq-to-xml"></a><span data-ttu-id="1cc10-102">使用者入門 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1cc10-102">Getting Started (LINQ to XML)</span></span>
+<span data-ttu-id="1cc10-103">下列主題將介紹 LINQ to XML。</span><span class="sxs-lookup"><span data-stu-id="1cc10-103">The following topics introduce LINQ to XML.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="1cc10-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="1cc10-104">In This Section</span></span>  
   
-|主題|說明|  
+|<span data-ttu-id="1cc10-105">主題</span><span class="sxs-lookup"><span data-stu-id="1cc10-105">Topic</span></span>|<span data-ttu-id="1cc10-106">說明</span><span class="sxs-lookup"><span data-stu-id="1cc10-106">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ to XML 概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)|提供 LINQ to XML 技術的概觀。|  
-|[LINQ to XML 與DOM 的比較 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|比較 LINQ to XML 與文件物件模型 (DOM)。|  
-|[LINQ to XML 與其他 XML 技術的比較](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|比較 LINQ to XML 與其他 XML 剖析和操作技術：XmlReader、XSLT、MSXML 和 XmlLite。|  
+|[<span data-ttu-id="1cc10-107">LINQ to XML 概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="1cc10-107">LINQ to XML Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)|<span data-ttu-id="1cc10-108">提供 LINQ to XML 技術的概觀。</span><span class="sxs-lookup"><span data-stu-id="1cc10-108">Provides an overview of the LINQ to XML technology.</span></span>|  
+|[<span data-ttu-id="1cc10-109">LINQ to XML 與DOM 的比較 (C#)</span><span class="sxs-lookup"><span data-stu-id="1cc10-109">LINQ to XML vs. DOM (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|<span data-ttu-id="1cc10-110">比較 LINQ to XML 與文件物件模型 (DOM)。</span><span class="sxs-lookup"><span data-stu-id="1cc10-110">Compares LINQ to XML to the Document Object Model (DOM).</span></span>|  
+|[<span data-ttu-id="1cc10-111">LINQ to XML 與其他 XML 技術的比較</span><span class="sxs-lookup"><span data-stu-id="1cc10-111">LINQ to XML vs. Other XML Technologies</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|<span data-ttu-id="1cc10-112">比較 LINQ to XML 與其他 XML 剖析和操作技術：XmlReader、XSLT、MSXML 和 XmlLite。</span><span class="sxs-lookup"><span data-stu-id="1cc10-112">Compares LINQ to XML to other XML parsing and manipulation technologies: XmlReader, XSLT, MSXML, and XmlLite.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [參考 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="1cc10-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1cc10-113">See Also</span></span>  
+ [<span data-ttu-id="1cc10-114">參考 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1cc10-114">Reference (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)  
+ [<span data-ttu-id="1cc10-115">LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="1cc10-115">LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

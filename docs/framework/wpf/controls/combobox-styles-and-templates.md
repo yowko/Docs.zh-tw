@@ -1,96 +1,96 @@
 ---
-title: "ComboBox 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ComboBox [WPF], 樣式和範本"
-  - "ControlTemplate [WPF], ComboBox"
-  - "組件 [WPF], ComboBox"
-  - "狀態 [WPF], ComboBox"
-  - "樣式 [WPF], ComboBox"
-  - "範本 [WPF], ComboBox"
+title: "ComboBox 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ComboBox [WPF], styles and templates
+- states [WPF], ComboBox
+- ControlTemplate [WPF], ComboBox
+- styles [WPF], ComboBox
+- templates [WPF], ComboBox
+- parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd89d2150b2623a749614ab01aa767997dc4bdf3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ComboBox 樣式和範本
-本主題說明 <xref:System.Windows.Controls.ComboBox> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="combobox-styles-and-templates"></a><span data-ttu-id="3169a-102">ComboBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="3169a-102">ComboBox Styles and Templates</span></span>
+<span data-ttu-id="3169a-103">本主題描述樣式和範本<xref:System.Windows.Controls.ComboBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.ComboBox> control.</span></span> <span data-ttu-id="3169a-104">您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="3169a-105">如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。</span><span class="sxs-lookup"><span data-stu-id="3169a-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## ComboBox 組件  
- 下表列出 <xref:System.Windows.Controls.ComboBox> 控制項的具名組件。  
+## <a name="combobox-parts"></a><span data-ttu-id="3169a-106">下拉式方塊部分</span><span class="sxs-lookup"><span data-stu-id="3169a-106">ComboBox Parts</span></span>  
+ <span data-ttu-id="3169a-107">下表列出的具名組件<xref:System.Windows.Controls.ComboBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-107">The following table lists the named parts for the <xref:System.Windows.Controls.ComboBox> control.</span></span>  
   
-||||  
+|<span data-ttu-id="3169a-108">組件</span><span class="sxs-lookup"><span data-stu-id="3169a-108">Part</span></span>|<span data-ttu-id="3169a-109">類型</span><span class="sxs-lookup"><span data-stu-id="3169a-109">Type</span></span>|<span data-ttu-id="3169a-110">說明</span><span class="sxs-lookup"><span data-stu-id="3169a-110">Description</span></span>|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_EditableTextBox|<xref:System.Windows.Controls.TextBox>|包含 <xref:System.Windows.Controls.ComboBox> 的文字。|  
-|PART\_Popup|<xref:System.Windows.Controls.Primitives.Popup>|包含下拉式方塊中項目的下拉式清單。|  
+|<span data-ttu-id="3169a-111">PART_EditableTextBox</span><span class="sxs-lookup"><span data-stu-id="3169a-111">PART_EditableTextBox</span></span>|<xref:System.Windows.Controls.TextBox>|<span data-ttu-id="3169a-112">包含文字的<xref:System.Windows.Controls.ComboBox>。</span><span class="sxs-lookup"><span data-stu-id="3169a-112">Contains the text of the <xref:System.Windows.Controls.ComboBox>.</span></span>|  
+|<span data-ttu-id="3169a-113">PART_Popup</span><span class="sxs-lookup"><span data-stu-id="3169a-113">PART_Popup</span></span>|<xref:System.Windows.Controls.Primitives.Popup>|<span data-ttu-id="3169a-114">在下拉式清單，其中包含下拉式方塊中的項目。</span><span class="sxs-lookup"><span data-stu-id="3169a-114">The drop-down that contains the items in the combo box.</span></span>|  
   
- 當您建立 <xref:System.Windows.Controls.ComboBox> 的 <xref:System.Windows.Controls.ControlTemplate> 時，您的範本可能在 <xref:System.Windows.Controls.ScrollViewer> 內包含 <xref:System.Windows.Controls.ItemsPresenter> \(<xref:System.Windows.Controls.ItemsPresenter> 會顯示 <xref:System.Windows.Controls.ComboBox> 中的每一個項目，而 <xref:System.Windows.Controls.ScrollViewer> 會啟用控制項內的捲動功能\)。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer> 的直接子系，您必須將 <xref:System.Windows.Controls.ItemsPresenter> 命名為 `ItemsPresenter`。  
+ <span data-ttu-id="3169a-115">當您建立<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.ComboBox>，可能會包含您的範本<xref:System.Windows.Controls.ItemsPresenter>內<xref:System.Windows.Controls.ScrollViewer>。</span><span class="sxs-lookup"><span data-stu-id="3169a-115">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.ComboBox>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="3169a-116">(<xref:System.Windows.Controls.ItemsPresenter>會顯示每個項目<xref:System.Windows.Controls.ComboBox>;<xref:System.Windows.Controls.ScrollViewer>可捲動控制項內)。</span><span class="sxs-lookup"><span data-stu-id="3169a-116">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.ComboBox>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="3169a-117">如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子系<xref:System.Windows.Controls.ScrollViewer>，您必須提供<xref:System.Windows.Controls.ItemsPresenter>名稱`ItemsPresenter`。</span><span class="sxs-lookup"><span data-stu-id="3169a-117">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## ComboBox 狀態  
- 下表列出 <xref:System.Windows.Controls.ComboBox> 控制項的狀態。  
+## <a name="combobox-states"></a><span data-ttu-id="3169a-118">下拉式方塊的狀態</span><span class="sxs-lookup"><span data-stu-id="3169a-118">ComboBox States</span></span>  
+ <span data-ttu-id="3169a-119">下表列出的狀態<xref:System.Windows.Controls.ComboBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-119">The following table lists the states for the <xref:System.Windows.Controls.ComboBox> control.</span></span>  
   
-||||  
+|<span data-ttu-id="3169a-120">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="3169a-120">VisualState Name</span></span>|<span data-ttu-id="3169a-121">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="3169a-121">VisualStateGroup Name</span></span>|<span data-ttu-id="3169a-122">描述</span><span class="sxs-lookup"><span data-stu-id="3169a-122">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|Disabled|CommonStates|控制項已停用。|  
-|MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.ComboBox> 控制項上方。|  
-|Focused|FocusStates|控制項擁有焦點。|  
-|Unfocused|FocusStates|控制項沒有焦點。|  
-|FocusedDropDown|FocusStates|<xref:System.Windows.Controls.ComboBox> 的下拉式清單擁有焦點。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
-|Editable|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 屬性為 `true`。|  
-|Uneditable|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> 屬性為 `false`。|  
+|<span data-ttu-id="3169a-123">一般</span><span class="sxs-lookup"><span data-stu-id="3169a-123">Normal</span></span>|<span data-ttu-id="3169a-124">CommonStates</span><span class="sxs-lookup"><span data-stu-id="3169a-124">CommonStates</span></span>|<span data-ttu-id="3169a-125">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="3169a-125">The default state.</span></span>|  
+|<span data-ttu-id="3169a-126">已停用</span><span class="sxs-lookup"><span data-stu-id="3169a-126">Disabled</span></span>|<span data-ttu-id="3169a-127">CommonStates</span><span class="sxs-lookup"><span data-stu-id="3169a-127">CommonStates</span></span>|<span data-ttu-id="3169a-128">已停用控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-128">The control is disabled.</span></span>|  
+|<span data-ttu-id="3169a-129">MouseOver</span><span class="sxs-lookup"><span data-stu-id="3169a-129">MouseOver</span></span>|<span data-ttu-id="3169a-130">CommonStates</span><span class="sxs-lookup"><span data-stu-id="3169a-130">CommonStates</span></span>|<span data-ttu-id="3169a-131">滑鼠指標位於<xref:System.Windows.Controls.ComboBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-131">The mouse pointer is over the <xref:System.Windows.Controls.ComboBox> control.</span></span>|  
+|<span data-ttu-id="3169a-132">已取得焦點</span><span class="sxs-lookup"><span data-stu-id="3169a-132">Focused</span></span>|<span data-ttu-id="3169a-133">FocusStates</span><span class="sxs-lookup"><span data-stu-id="3169a-133">FocusStates</span></span>|<span data-ttu-id="3169a-134">控制項已取得焦點。</span><span class="sxs-lookup"><span data-stu-id="3169a-134">The control has focus.</span></span>|  
+|<span data-ttu-id="3169a-135">未取得焦點</span><span class="sxs-lookup"><span data-stu-id="3169a-135">Unfocused</span></span>|<span data-ttu-id="3169a-136">FocusStates</span><span class="sxs-lookup"><span data-stu-id="3169a-136">FocusStates</span></span>|<span data-ttu-id="3169a-137">控制項未取得焦點。</span><span class="sxs-lookup"><span data-stu-id="3169a-137">The control does not have focus.</span></span>|  
+|<span data-ttu-id="3169a-138">FocusedDropDown</span><span class="sxs-lookup"><span data-stu-id="3169a-138">FocusedDropDown</span></span>|<span data-ttu-id="3169a-139">FocusStates</span><span class="sxs-lookup"><span data-stu-id="3169a-139">FocusStates</span></span>|<span data-ttu-id="3169a-140">針對下拉式<xref:System.Windows.Controls.ComboBox>具有焦點。</span><span class="sxs-lookup"><span data-stu-id="3169a-140">The drop-down for the <xref:System.Windows.Controls.ComboBox> has focus.</span></span>|  
+|<span data-ttu-id="3169a-141">驗證</span><span class="sxs-lookup"><span data-stu-id="3169a-141">Valid</span></span>|<span data-ttu-id="3169a-142">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="3169a-142">ValidationStates</span></span>|<span data-ttu-id="3169a-143">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="3169a-143">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="3169a-144">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="3169a-144">InvalidFocused</span></span>|<span data-ttu-id="3169a-145">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="3169a-145">ValidationStates</span></span>|<span data-ttu-id="3169a-146"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-146">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="3169a-147">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="3169a-147">InvalidUnfocused</span></span>|<span data-ttu-id="3169a-148">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="3169a-148">ValidationStates</span></span>|<span data-ttu-id="3169a-149"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="3169a-149">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
+|<span data-ttu-id="3169a-150">可編輯</span><span class="sxs-lookup"><span data-stu-id="3169a-150">Editable</span></span>|<span data-ttu-id="3169a-151">EditStates</span><span class="sxs-lookup"><span data-stu-id="3169a-151">EditStates</span></span>|<span data-ttu-id="3169a-152"><xref:System.Windows.Controls.ComboBox.IsEditable%2A> 屬性為 `true`。</span><span class="sxs-lookup"><span data-stu-id="3169a-152">The <xref:System.Windows.Controls.ComboBox.IsEditable%2A> property is `true`.</span></span>|  
+|<span data-ttu-id="3169a-153">無法編輯</span><span class="sxs-lookup"><span data-stu-id="3169a-153">Uneditable</span></span>|<span data-ttu-id="3169a-154">EditStates</span><span class="sxs-lookup"><span data-stu-id="3169a-154">EditStates</span></span>|<span data-ttu-id="3169a-155"><xref:System.Windows.Controls.ComboBox.IsEditable%2A> 屬性為 `false`。</span><span class="sxs-lookup"><span data-stu-id="3169a-155">The <xref:System.Windows.Controls.ComboBox.IsEditable%2A> property is `false`.</span></span>|  
   
-## ComboBoxItem 組件  
- <xref:System.Windows.Controls.ComboBoxItem> 控制項沒有任何具名組件。  
+## <a name="comboboxitem-parts"></a><span data-ttu-id="3169a-156">ComboBoxItem 組件</span><span class="sxs-lookup"><span data-stu-id="3169a-156">ComboBoxItem Parts</span></span>  
+ <span data-ttu-id="3169a-157"><xref:System.Windows.Controls.ComboBoxItem>控制項沒有任何已命名的組件。</span><span class="sxs-lookup"><span data-stu-id="3169a-157">The <xref:System.Windows.Controls.ComboBoxItem> control does not have any named parts.</span></span>  
   
-## ComboBoxItem 狀態  
- 下表列出 <xref:System.Windows.Controls.ComboBoxItem> 控制項的狀態。  
+## <a name="comboboxitem-states"></a><span data-ttu-id="3169a-158">ComboBoxItem 狀態</span><span class="sxs-lookup"><span data-stu-id="3169a-158">ComboBoxItem States</span></span>  
+ <span data-ttu-id="3169a-159">下表列出的狀態<xref:System.Windows.Controls.ComboBoxItem>控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-159">The following table lists the states for the <xref:System.Windows.Controls.ComboBoxItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="3169a-160">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="3169a-160">VisualState Name</span></span>|<span data-ttu-id="3169a-161">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="3169a-161">VisualStateGroup Name</span></span>|<span data-ttu-id="3169a-162">描述</span><span class="sxs-lookup"><span data-stu-id="3169a-162">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|Disabled|CommonStates|控制項已停用。|  
-|MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.ComboBox> 控制項上方。|  
-|Focused|FocusStates|控制項擁有焦點。|  
-|Unfocused|FocusStates|控制項沒有焦點。|  
-|Selected|SelectionStates|這個項目目前已選取。|  
-|Unselected|SelectionStates|這個項目未選取。|  
-|SelectedUnfocused|SelectionStates|這個項目已選取，但沒有焦點。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="3169a-163">一般</span><span class="sxs-lookup"><span data-stu-id="3169a-163">Normal</span></span>|<span data-ttu-id="3169a-164">CommonStates</span><span class="sxs-lookup"><span data-stu-id="3169a-164">CommonStates</span></span>|<span data-ttu-id="3169a-165">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="3169a-165">The default state.</span></span>|  
+|<span data-ttu-id="3169a-166">已停用</span><span class="sxs-lookup"><span data-stu-id="3169a-166">Disabled</span></span>|<span data-ttu-id="3169a-167">CommonStates</span><span class="sxs-lookup"><span data-stu-id="3169a-167">CommonStates</span></span>|<span data-ttu-id="3169a-168">已停用控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-168">The control is disabled.</span></span>|  
+|<span data-ttu-id="3169a-169">MouseOver</span><span class="sxs-lookup"><span data-stu-id="3169a-169">MouseOver</span></span>|<span data-ttu-id="3169a-170">CommonStates</span><span class="sxs-lookup"><span data-stu-id="3169a-170">CommonStates</span></span>|<span data-ttu-id="3169a-171">滑鼠指標位於<xref:System.Windows.Controls.ComboBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-171">The mouse pointer is over the <xref:System.Windows.Controls.ComboBox> control.</span></span>|  
+|<span data-ttu-id="3169a-172">已取得焦點</span><span class="sxs-lookup"><span data-stu-id="3169a-172">Focused</span></span>|<span data-ttu-id="3169a-173">FocusStates</span><span class="sxs-lookup"><span data-stu-id="3169a-173">FocusStates</span></span>|<span data-ttu-id="3169a-174">控制項已取得焦點。</span><span class="sxs-lookup"><span data-stu-id="3169a-174">The control has focus.</span></span>|  
+|<span data-ttu-id="3169a-175">未取得焦點</span><span class="sxs-lookup"><span data-stu-id="3169a-175">Unfocused</span></span>|<span data-ttu-id="3169a-176">FocusStates</span><span class="sxs-lookup"><span data-stu-id="3169a-176">FocusStates</span></span>|<span data-ttu-id="3169a-177">控制項未取得焦點。</span><span class="sxs-lookup"><span data-stu-id="3169a-177">The control does not have focus.</span></span>|  
+|<span data-ttu-id="3169a-178">已選取</span><span class="sxs-lookup"><span data-stu-id="3169a-178">Selected</span></span>|<span data-ttu-id="3169a-179">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="3169a-179">SelectionStates</span></span>|<span data-ttu-id="3169a-180">目前選取項目。</span><span class="sxs-lookup"><span data-stu-id="3169a-180">The item is currently selected.</span></span>|  
+|<span data-ttu-id="3169a-181">未選取</span><span class="sxs-lookup"><span data-stu-id="3169a-181">Unselected</span></span>|<span data-ttu-id="3169a-182">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="3169a-182">SelectionStates</span></span>|<span data-ttu-id="3169a-183">項目未獲選取。</span><span class="sxs-lookup"><span data-stu-id="3169a-183">The item is not selected.</span></span>|  
+|<span data-ttu-id="3169a-184">SelectedUnfocused</span><span class="sxs-lookup"><span data-stu-id="3169a-184">SelectedUnfocused</span></span>|<span data-ttu-id="3169a-185">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="3169a-185">SelectionStates</span></span>|<span data-ttu-id="3169a-186">項目已獲選取，但未取得焦點。</span><span class="sxs-lookup"><span data-stu-id="3169a-186">The item is selected, but does not have focus.</span></span>|  
+|<span data-ttu-id="3169a-187">驗證</span><span class="sxs-lookup"><span data-stu-id="3169a-187">Valid</span></span>|<span data-ttu-id="3169a-188">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="3169a-188">ValidationStates</span></span>|<span data-ttu-id="3169a-189">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="3169a-189">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="3169a-190">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="3169a-190">InvalidFocused</span></span>|<span data-ttu-id="3169a-191">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="3169a-191">ValidationStates</span></span>|<span data-ttu-id="3169a-192"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="3169a-192">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="3169a-193">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="3169a-193">InvalidUnfocused</span></span>|<span data-ttu-id="3169a-194">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="3169a-194">ValidationStates</span></span>|<span data-ttu-id="3169a-195"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="3169a-195">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## ComboBox ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.ComboBox> 控制項的 <xref:System.Windows.Controls.ControlTemplate> 以及關聯的型別。  
+## <a name="combobox-controltemplate-example"></a><span data-ttu-id="3169a-196">下拉式方塊 ControlTemplate 範例</span><span class="sxs-lookup"><span data-stu-id="3169a-196">ComboBox ControlTemplate Example</span></span>  
+ <span data-ttu-id="3169a-197">下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.ComboBox>控制項和相關聯的類型。</span><span class="sxs-lookup"><span data-stu-id="3169a-197">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.ComboBox> control and associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#ComboBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
+ [!code-xaml[ControlTemplateExamples#ComboBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
   
- 前述範例使用了下列一或多項資源。  
+ <span data-ttu-id="3169a-198">上述範例使用下列一或多項資源。</span><span class="sxs-lookup"><span data-stu-id="3169a-198">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱          [使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="3169a-199">如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。</span><span class="sxs-lookup"><span data-stu-id="3169a-199">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="3169a-200">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3169a-200">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="3169a-201">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="3169a-201">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="3169a-202">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="3169a-202">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="3169a-203">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="3169a-203">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="3169a-204">透過建立 ControlTemplate 自訂現有控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="3169a-204">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

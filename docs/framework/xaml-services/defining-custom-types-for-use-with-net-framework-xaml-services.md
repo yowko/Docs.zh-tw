@@ -1,126 +1,128 @@
 ---
-title: "Defining Custom Types for Use with .NET Framework XAML Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "defining custom types [XAML Services]"
+title: "定義可搭配 .NET Framework XAML 服務使用的自訂類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 11
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 0b35c35be7351fdf45157153ce6ca55fc763c3ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Defining Custom Types for Use with .NET Framework XAML Services
-如果您定義的自訂型別是商務物件或是對特定架構不具相依性的型別，則您在使用 XAML 時，可以遵循特定的最佳作法。  如果您遵循這些作法，.NET Framework XAML 服務及其 XAML 讀取器與 XAML 寫入器將可探索型別的 XAML 特性，並透過 XAML 型別系統讓您的型別在 XAML 節點資料流中能有正確的顯示。  本主題將說明型別定義、成員定義、以及型別或成員的 CLR 屬性設定。  
+# <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a><span data-ttu-id="be677-102">定義可搭配 .NET Framework XAML 服務使用的自訂類型</span><span class="sxs-lookup"><span data-stu-id="be677-102">Defining Custom Types for Use with .NET Framework XAML Services</span></span>
+<span data-ttu-id="be677-103">當您定義了商務物件的自訂型別，或在特定架構上沒有相依性的類型時，但有特定的 XAML，您可以遵循的最佳作法。</span><span class="sxs-lookup"><span data-stu-id="be677-103">When you define custom types that are business objects or are types that do not have a dependency on specific frameworks, there are certain best practices for XAML you can follow.</span></span> <span data-ttu-id="be677-104">如果您依照這些作法，可以發現 XAML 特性，您的型別.NET Framework XAML 服務和 XAML 讀取器和 XAML 寫入器，並提供適當的表示，使用 XAML 類型系統的 XAML 節點資料流。</span><span class="sxs-lookup"><span data-stu-id="be677-104">If you follow these practices, .NET Framework XAML Services and its XAML readers and XAML writers can discover the XAML characteristics of your type and give it appropriate representation in a XAML node stream using the XAML type system.</span></span> <span data-ttu-id="be677-105">本主題說明類型定義、 成員定義和 CLR 設定其屬性的型別或成員的最佳作法。</span><span class="sxs-lookup"><span data-stu-id="be677-105">This topic describes best practices for type definitions, member definitions, and CLR attributing of types or members.</span></span>  
   
-## XAML 的建構函式模式與型別定義  
- 自訂類別必須符合下列需求，才能具現化為 XAML 中的物件項目：  
+## <a name="constructor-patterns-and-type-definitions-for-xaml"></a><span data-ttu-id="be677-106">建構函式模式和 xaml 的類型定義</span><span class="sxs-lookup"><span data-stu-id="be677-106">Constructor Patterns and Type Definitions for XAML</span></span>  
+ <span data-ttu-id="be677-107">若要為物件項目在 XAML 中具現化，自訂的類別必須符合下列需求：</span><span class="sxs-lookup"><span data-stu-id="be677-107">To be instantiated as an object element in XAML, a custom class must meet the following requirements:</span></span>  
   
--   自訂類別必須是公用的，且必須公開預設的 \(無參數\) 公用建構函式   \(如需有關結構的注意事項，請參閱下一節\)。  
+-   <span data-ttu-id="be677-108">自訂的類別必須是公用的而且必須公開預設 （無參數） 公用建構函式。</span><span class="sxs-lookup"><span data-stu-id="be677-108">The custom class must be public and must expose a default (parameterless) public constructor.</span></span> <span data-ttu-id="be677-109">(如需結構相關附註，請參閱下節)。</span><span class="sxs-lookup"><span data-stu-id="be677-109">(See following section for notes regarding structures.)</span></span>  
   
--   自訂類別不可以是巢狀類別。  完整名稱路徑中多餘的「點號」會使「類別\-命名空間」區分模糊不清，並且妨礙其他 XAML 功能，如附加屬性。  
+-   <span data-ttu-id="be677-110">自訂類別不能巢狀的類別。</span><span class="sxs-lookup"><span data-stu-id="be677-110">The custom class must not be a nested class.</span></span> <span data-ttu-id="be677-111">「 點 」 的完整名稱的路徑中的額外類別命名空間除法模稜兩可，並干擾到其他的 XAML 功能，例如附加屬性。</span><span class="sxs-lookup"><span data-stu-id="be677-111">The extra "dot" in the full-name path makes the class-namespace division ambiguous, and interferes with other XAML features such as attached properties.</span></span>  
   
- 如果某物件可具現化為物件項目，則建立的物件將可填入任何以該物件做為其基礎型別之屬性的屬性項目格式。  
+ <span data-ttu-id="be677-112">如果物件可以具現化為物件項目，建立的物件可以填滿屬性項目表單的任何屬性，取得其基礎類型為物件。</span><span class="sxs-lookup"><span data-stu-id="be677-112">If an object can be instantiated as an object element, the created object can fill the property element form of any properties that take the object as their underlying type.</span></span>  
   
- 如果您啟用值轉換子，則仍可為不符合這些準則的型別提供物件值。  如需詳細資訊，請參閱 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。  
+ <span data-ttu-id="be677-113">您仍然可以提供物件值的類型不符合這些條件，如果您啟用的值轉換器。</span><span class="sxs-lookup"><span data-stu-id="be677-113">You can still provide object values for types that do not meet these criteria, if you enable a value converter.</span></span> <span data-ttu-id="be677-114">如需詳細資訊，請參閱[類型轉換器和 XAML 的標記延伸](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="be677-114">For more information, see [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).</span></span>  
   
-### 結構  
- 結構一律可依 CLR 定義在 XAML 中建構。  這是因為 CLR 編譯器會隱含地建立結構的預設建構函式。  此建構函式會將所有屬性值初始化為其預設值。  
+### <a name="structures"></a><span data-ttu-id="be677-115">結構</span><span class="sxs-lookup"><span data-stu-id="be677-115">Structures</span></span>  
+ <span data-ttu-id="be677-116">結構都可以在 XAML 中，由 CLR 定義。</span><span class="sxs-lookup"><span data-stu-id="be677-116">Structures are always able to be constructed in XAML, by CLR definition.</span></span> <span data-ttu-id="be677-117">這是因為 CLR 編譯器隱含地建立結構的預設建構函式。</span><span class="sxs-lookup"><span data-stu-id="be677-117">This is because a CLR compiler implicitly creates a default constructor for a structure.</span></span> <span data-ttu-id="be677-118">這個建構函式會初始化為其預設值的所有屬性值。</span><span class="sxs-lookup"><span data-stu-id="be677-118">This constructor initializes all property values to their defaults.</span></span>  
   
- 在某些情況下，預設建構行為並不適用於結構。  這可能是因為結構預定應以等位的概念填入值與函式。  採用等位方式時，包含的值可能有互斥解譯，因此其中沒有可設定的屬性。  WPF 詞彙中的 <xref:System.Windows.GridLength>，即屬此類結構。  此類結構應該實作型別轉換子，以使用為結構的值建立不同解譯或模式的字串慣例，讓值能夠以屬性形式表示。  而結構也應該透過非預設的建構函式，公開程式碼建構的類似行為。  
+ <span data-ttu-id="be677-119">在某些情況下，您可能不想要建構的預設行為的結構。</span><span class="sxs-lookup"><span data-stu-id="be677-119">In some cases, the default construction behavior for a structure is not desirable.</span></span> <span data-ttu-id="be677-120">這可能是因為結構用來填滿值和函式在概念上，於聯集。</span><span class="sxs-lookup"><span data-stu-id="be677-120">This might be because the structure is intended to fill values and function conceptually as a union.</span></span> <span data-ttu-id="be677-121">為等位，包含的值可能會有互為獨佔模式的解譯，並因此，其屬性都可設定。</span><span class="sxs-lookup"><span data-stu-id="be677-121">As a union, the contained values might have mutually exclusive interpretations, and therefore, none of its properties are settable.</span></span> <span data-ttu-id="be677-122">舉例來說，這種結構中的 WPF 詞彙是<xref:System.Windows.GridLength>。</span><span class="sxs-lookup"><span data-stu-id="be677-122">An example of such a structure in the WPF vocabulary is <xref:System.Windows.GridLength>.</span></span> <span data-ttu-id="be677-123">這類結構應該實作類型轉換器，可以藉由建立不同的解譯或結構值的模式字串慣例以屬性形式表示值。</span><span class="sxs-lookup"><span data-stu-id="be677-123">Such structures should implement a type converter so that the values can be expressed in attribute form, by using string conventions that create the different interpretations or modes of the structure values.</span></span> <span data-ttu-id="be677-124">此結構也應該透過非預設建構函式進行程式碼建構來公開類似行為。</span><span class="sxs-lookup"><span data-stu-id="be677-124">The structure should also expose similar behavior for code construction through a non-default constructor.</span></span>  
   
-### 介面  
- 介面可以做為成員的基礎型別。  XAML 型別系統會檢查可指派的清單，並預期以值形式提供的物件可指派給介面。  只要相關的可指派型別支援 XAML 建構需求，介面就無須以特定的方式表示為 XAML 型別。  
+### <a name="interfaces"></a><span data-ttu-id="be677-125">介面</span><span class="sxs-lookup"><span data-stu-id="be677-125">Interfaces</span></span>  
+ <span data-ttu-id="be677-126">介面可用來當做基礎類型的成員。</span><span class="sxs-lookup"><span data-stu-id="be677-126">Interfaces can be used as underlying types of members.</span></span> <span data-ttu-id="be677-127">XAML 類型系統會檢查可指派的清單，並預期提供做為值的物件，可以指派給介面。</span><span class="sxs-lookup"><span data-stu-id="be677-127">The XAML type system checks the assignable list and expects that the object that is provided as the value can be assigned to the interface.</span></span> <span data-ttu-id="be677-128">沒有介面如何必須呈現為 XAML 型別，只要相關指派的型別支援 XAML 建構需求的概念。</span><span class="sxs-lookup"><span data-stu-id="be677-128">There is no concept of how the interface must be presented as a XAML type as long as a relevant assignable type supports the XAML construction requirements.</span></span>  
   
-### Factory 方法  
- Factory 方法為 XAML 2009 功能。  這類方法可修改物件必須具有預設建構函式的 XAML 準則。  Factory 方法不在本主題的討論之列。  請參閱 [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md)。  
+### <a name="factory-methods"></a><span data-ttu-id="be677-129">Factory 方法</span><span class="sxs-lookup"><span data-stu-id="be677-129">Factory Methods</span></span>  
+ <span data-ttu-id="be677-130">Factory 方法，是 XAML 2009 功能。</span><span class="sxs-lookup"><span data-stu-id="be677-130">Factory methods are a XAML 2009 feature.</span></span> <span data-ttu-id="be677-131">它們修改 XAML 的主體物件必須具有預設建構函式。</span><span class="sxs-lookup"><span data-stu-id="be677-131">They modify the XAML principle that objects must have default constructors.</span></span> <span data-ttu-id="be677-132">本主題中未記載 factory 方法。</span><span class="sxs-lookup"><span data-stu-id="be677-132">Factory methods are not documented in this topic.</span></span> <span data-ttu-id="be677-133">請參閱[X:factorymethod 指示詞](../../../docs/framework/xaml-services/x-factorymethod-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="be677-133">See [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md).</span></span>  
   
-## 列舉  
- 列舉具有 XAML 原生型別轉換行為。  XAML 中所指定的列舉常數名稱會根據基礎列舉型別進行解析，並將列舉值傳回給 XAML 物件寫入器。  
+## <a name="enumerations"></a><span data-ttu-id="be677-134">列舉</span><span class="sxs-lookup"><span data-stu-id="be677-134">Enumerations</span></span>  
+ <span data-ttu-id="be677-135">列舉有 XAML 原生類型轉換行為。</span><span class="sxs-lookup"><span data-stu-id="be677-135">Enumerations have XAML native type conversion behavior.</span></span> <span data-ttu-id="be677-136">列舉常數的名稱，在 XAML 中指定對基礎的列舉類型，判斷已解決，然後返回 XAML 物件寫入器的列舉值。</span><span class="sxs-lookup"><span data-stu-id="be677-136">Enumeration constant names specified in XAML are resolved against the underlying enumeration type, and return the enumeration value to a XAML object writer.</span></span>  
   
- XAML 支援在套用 <xref:System.FlagsAttribute> 的情況下，對列舉使用旗標樣式。  如需詳細資訊，請參閱 [XAML 語法詳細資料](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  \([XAML 語法詳細資料](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md) 是針對 WPF 使用者而撰寫的，但該主題中的資訊大多是有關於並非專屬於特定實作架構的 XAML。\)  
+ <span data-ttu-id="be677-137">XAML 支援的旗標樣式的使用方式的列舉型別與<xref:System.FlagsAttribute>套用。</span><span class="sxs-lookup"><span data-stu-id="be677-137">XAML supports a flags-style usage for enumerations with <xref:System.FlagsAttribute> applied.</span></span> <span data-ttu-id="be677-138">如需詳細資訊，請參閱[XAML 語法的詳細資料](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。</span><span class="sxs-lookup"><span data-stu-id="be677-138">For more information, see [XAML Syntax In Detail](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).</span></span> <span data-ttu-id="be677-139">([XAML 語法的詳細資料](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)寫入的 WPF 對象，但該主題中的資訊很並非專門針對特定的實作架構的 xaml 相關。)</span><span class="sxs-lookup"><span data-stu-id="be677-139">([XAML Syntax In Detail](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md) is written for the WPF audience, but most of the information in that topic is relevant for XAML that is not specific to a particular implementing framework.)</span></span>  
   
-## 成員定義  
- 型別可以定義 XAML 用法的成員。  即使型別本身不適用於 XAML，該型別仍可定義適用於 XAML 的成員。  可以這麼做是因為 CLR 繼承。  只要有部分繼承成員的型別支援以 XAML 用法做為型別，且該成員支援以 XAML 用法做為其基礎型別，或具有可用的原生 XAML 語法，則該成員適用於 XAML。  
+## <a name="member-definitions"></a><span data-ttu-id="be677-140">成員的定義</span><span class="sxs-lookup"><span data-stu-id="be677-140">Member Definitions</span></span>  
+ <span data-ttu-id="be677-141">類型可以定義 XAML 用法的成員。</span><span class="sxs-lookup"><span data-stu-id="be677-141">Types can define members for XAML usage.</span></span> <span data-ttu-id="be677-142">很可能是 XAML 使用，即使該特定的類型不是可使用 XAML 的成員定義的類型。</span><span class="sxs-lookup"><span data-stu-id="be677-142">It is possible for types that define members that are XAML-usable even if that specific type is not XAML-usable.</span></span> <span data-ttu-id="be677-143">這可能是因為 CLR 繼承。</span><span class="sxs-lookup"><span data-stu-id="be677-143">This is possible because of CLR inheritance.</span></span> <span data-ttu-id="be677-144">只要繼承成員的型別支援 XAML 用法為型別，而且該成員支援其基礎類型的 XAML 用法或具有原生可用的 XAML 語法，該成員是 XAML 可用。</span><span class="sxs-lookup"><span data-stu-id="be677-144">So long as some type that inherits the member supports XAML usage as a type, and the member supports XAML usage for its underlying type or has a native XAML syntax available, that member is XAML-usable.</span></span>  
   
-### 屬性  
- 如果您使用典型的 CLR `get` 和 `set` 存取子模式和適當語言關鍵字，將屬性定義為公用 CLR 屬性，則 XAML 型別系統可使用為 <xref:System.Xaml.XamlMember> 屬性所提供的適當資訊 \(如 <xref:System.Xaml.XamlMember.IsReadPublic%2A> 和 <xref:System.Xaml.XamlMember.IsWritePublic%2A>\)，將屬性報告為成員。  
+### <a name="properties"></a><span data-ttu-id="be677-145">屬性</span><span class="sxs-lookup"><span data-stu-id="be677-145">Properties</span></span>  
+ <span data-ttu-id="be677-146">如果您定義為公用的 CLR 屬性，使用一般的 CLR 屬性`get`和`set`存取子模式和適當語言 keywording，XAML 類型系統可以報告提供適當的資訊與成員屬性<xref:System.Xaml.XamlMember>屬性，例如<xref:System.Xaml.XamlMember.IsReadPublic%2A>和<xref:System.Xaml.XamlMember.IsWritePublic%2A>。</span><span class="sxs-lookup"><span data-stu-id="be677-146">If you define properties as a public CLR property using the typical CLR `get` and `set` accessor patterns and language-appropriate keywording, the XAML type system can report the property as a member with appropriate information provided for <xref:System.Xaml.XamlMember> properties, such as <xref:System.Xaml.XamlMember.IsReadPublic%2A> and <xref:System.Xaml.XamlMember.IsWritePublic%2A>.</span></span>  
   
- 特定屬性可在套用 <xref:System.ComponentModel.TypeConverterAttribute> 後啟用文字語法。  如需詳細資訊，請參閱 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。  
+ <span data-ttu-id="be677-147">特定的屬性可以藉由套用可讓文字語法<xref:System.ComponentModel.TypeConverterAttribute>。</span><span class="sxs-lookup"><span data-stu-id="be677-147">Specific properties can enable a text syntax by applying <xref:System.ComponentModel.TypeConverterAttribute>.</span></span> <span data-ttu-id="be677-148">如需詳細資訊，請參閱[類型轉換器和 XAML 的標記延伸](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="be677-148">For more information, see [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).</span></span>  
   
- 如果缺少文字語法或原生 XAML 轉換，並且缺少進一步的間接取值 \(如標記延伸用法\)，則屬性的型別 \(在 XAML 型別系統中為 <xref:System.Xaml.XamlMember.TargetType%2A>\) 必須能夠將目標型別視為 CLR 型別，以將執行個體傳回至 XAML 物件寫入器。  
+ <span data-ttu-id="be677-149">在文字語法或原生 XAML 的轉換不存在，進一步間接取值，例如標記延伸使用方式，屬性類型不存在 (<xref:System.Xaml.XamlMember.TargetType%2A> xaml 類型系統) 必須能夠藉由將 t 返回 XAML 物件寫入器的執行個體目標類型為 CLR 型別。</span><span class="sxs-lookup"><span data-stu-id="be677-149">In the absence of a text syntax or native XAML conversion and in the absence of further indirection, such as a markup extension usage, the type of a property (<xref:System.Xaml.XamlMember.TargetType%2A> in the XAML type system) must be able to return an instance to a XAML object writer by treating the target type as a CLR type.</span></span>  
   
- 在使用 XAML 2009 時，如果不符合前述考量事項，仍可使用 [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md) 來提供值，但這已偏向於用法問題，而非型別定義問題。  
+ <span data-ttu-id="be677-150">如果使用 XAML 2009 [X:reference 標記延伸](../../../docs/framework/xaml-services/x-reference-markup-extension.md)可以用來提供值，如果不符合先前的考量; 不過，這是多個類型定義問題比使用問題。</span><span class="sxs-lookup"><span data-stu-id="be677-150">If using XAML 2009, [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md) can be used to provide values if the previous considerations are not met; however, that is more of a usage issue than a type definition issue.</span></span>  
   
-### 事件  
- 如果您將事件定義為公用 CLR 事件，則 XAML 型別系統可將 <xref:System.Xaml.XamlMember.IsEvent%2A> 設為 `true`，以將事件報告為成員。  連接事件處理常式不在 .NET Framework XAML 服務的功能範疇內；這些功能由特定的架構與實作負責提供。  
+### <a name="events"></a><span data-ttu-id="be677-151">事件</span><span class="sxs-lookup"><span data-stu-id="be677-151">Events</span></span>  
+ <span data-ttu-id="be677-152">如果您定義為公用的 CLR 事件的事件，XAML 類型系統可以報告事件的成員為<xref:System.Xaml.XamlMember.IsEvent%2A>為`true`。</span><span class="sxs-lookup"><span data-stu-id="be677-152">If you define events as a public CLR event, the XAML type system can report the event as a member with <xref:System.Xaml.XamlMember.IsEvent%2A> as `true`.</span></span> <span data-ttu-id="be677-153">傳入的事件處理常式不是.NET Framework XAML 服務的功能; 範圍內這會保留給特定架構和實作。</span><span class="sxs-lookup"><span data-stu-id="be677-153">Wiring the event handlers is not within the scope of .NET Framework XAML Services capabilities; this is left to specific frameworks and implementations.</span></span>  
   
-### 方法  
- 方法的內嵌程式碼不是預設 XAML 功能。  在大部分的情況下，您並不會直接從 XAML 參考方法成員，方法在 XAML 中的角色僅只是為特定的 XAML 模式提供支援。  [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md) 則屬例外。  
+### <a name="methods"></a><span data-ttu-id="be677-154">方法</span><span class="sxs-lookup"><span data-stu-id="be677-154">Methods</span></span>  
+ <span data-ttu-id="be677-155">方法的內嵌程式碼不是預設的 XAML 功能。</span><span class="sxs-lookup"><span data-stu-id="be677-155">Inline code for methods is not a default XAML capability.</span></span> <span data-ttu-id="be677-156">在大部分情況下您不要直接參照方法成員從 XAML，和方法，在 XAML 中的角色只是為了提供支援的特定 XAML 模式。</span><span class="sxs-lookup"><span data-stu-id="be677-156">In most cases you do not directly reference method members from XAML, and the role of methods in XAML is only to provide support for specific XAML patterns.</span></span> <span data-ttu-id="be677-157">[X:factorymethod 指示詞](../../../docs/framework/xaml-services/x-factorymethod-directive.md)是例外狀況。</span><span class="sxs-lookup"><span data-stu-id="be677-157">[x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md) is an exception.</span></span>  
   
-### 欄位  
- CLR 設計方針不建議使用非靜態欄位。  對於靜態欄位，您只能透過 [x:Static Markup Extension](../../../docs/framework/xaml-services/x-static-markup-extension.md) 存取靜態欄位值；在此情況下，您將無法在 CLR 定義中執行任何特殊作業，以公開 [x:Static](../../../docs/framework/xaml-services/x-static-markup-extension.md) 用法的欄位。  
+### <a name="fields"></a><span data-ttu-id="be677-158">欄位</span><span class="sxs-lookup"><span data-stu-id="be677-158">Fields</span></span>  
+ <span data-ttu-id="be677-159">CLR 設計指導方針不鼓勵非靜態欄位。</span><span class="sxs-lookup"><span data-stu-id="be677-159">CLR design guidelines discourage nonstatic fields.</span></span> <span data-ttu-id="be677-160">靜態欄位，您可以存取靜態欄位值只能透過[X:static 標記延伸](../../../docs/framework/xaml-services/x-static-markup-extension.md); 在此情況下您不會進行任何特殊作業中要公開 （expose） 的欄位的 CLR 定義[X:static](../../../docs/framework/xaml-services/x-static-markup-extension.md)使用方式。</span><span class="sxs-lookup"><span data-stu-id="be677-160">For static fields, you can access static field values only through [x:Static Markup Extension](../../../docs/framework/xaml-services/x-static-markup-extension.md); in this case you are not doing anything special in the CLR definition to expose a field for [x:Static](../../../docs/framework/xaml-services/x-static-markup-extension.md) usages.</span></span>  
   
-## 可附加的成員  
- 可附加成員可透過定義型別上的存取子方法模式公開給 XAML。  定義型別本身不一定必須適用於 XAML，才可做為物件。  事實上，常見模式是宣告服務類別，該服務類別的角色是要擁有可附加成員以及實作相關的行為，但不提供任何其他功能 \(如 UI 表示\)。  在以下幾節中，預留位置 *PropertyName* 代表可附加成員的名稱。  該名稱在 [XamlName 文法](../../../docs/framework/xaml-services/xamlname-grammar.md) 中必須是有效的。  
+## <a name="attachable-members"></a><span data-ttu-id="be677-161">可附加成員</span><span class="sxs-lookup"><span data-stu-id="be677-161">Attachable Members</span></span>  
+ <span data-ttu-id="be677-162">可附加成員是為 XAML 透過模式可公開存取子方法上定義的類型。</span><span class="sxs-lookup"><span data-stu-id="be677-162">Attachable members are exposed to XAML through an accessor method pattern on a defining type.</span></span> <span data-ttu-id="be677-163">定義類型本身不必能夠 XAML-當做物件。</span><span class="sxs-lookup"><span data-stu-id="be677-163">The defining type itself does not need to be XAML-usable as an object.</span></span> <span data-ttu-id="be677-164">事實上，常見的模式是來宣告其角色是在服務類別來擁有可附加成員和實作相關的行為，但是不做任何其他功能，例如 UI 表示法。</span><span class="sxs-lookup"><span data-stu-id="be677-164">In fact, a common pattern is to declare a service class whose role is to own the attachable member and implement the related behaviors, but serve no other function such as a UI representation.</span></span> <span data-ttu-id="be677-165">下列章節將預留位置的*PropertyName*代表您可附加成員的名稱。</span><span class="sxs-lookup"><span data-stu-id="be677-165">For the following sections, the placeholder *PropertyName* represents the name of your attachable member.</span></span> <span data-ttu-id="be677-166">該名稱必須是有效的[XamlName 文法](../../../docs/framework/xaml-services/xamlname-grammar.md)。</span><span class="sxs-lookup"><span data-stu-id="be677-166">That name must be valid in the [XamlName Grammar](../../../docs/framework/xaml-services/xamlname-grammar.md).</span></span>  
   
- 請留意這些模式與型別的其他方法是否會有名稱衝突。  如果有符合其中一個模式的成員存在，該成員可能會被 XAML 處理器解譯成可附加成員用法路徑，即便這不是您的本意。  
+ <span data-ttu-id="be677-167">留意這些模式和其他方法的類型之間發生名稱衝突。</span><span class="sxs-lookup"><span data-stu-id="be677-167">Be cautious of name collisions between these patterns and other methods of a type.</span></span> <span data-ttu-id="be677-168">如果有符合模式的其中一個成員，它可以解譯為可附加成員使用量路徑在 XAML 處理器即使這不是您的意圖。</span><span class="sxs-lookup"><span data-stu-id="be677-168">If a member exists that matches one of the patterns, it can be interpreted as an attachable member usage pathway by a XAML processor even if that was not your intention.</span></span>  
   
-#### GetPropertyName 存取子  
- `Get` *PropertyName* 存取子的簽章必須是：  
+#### <a name="the-getpropertyname-accessor"></a><span data-ttu-id="be677-169">GetPropertyName 存取子</span><span class="sxs-lookup"><span data-stu-id="be677-169">The GetPropertyName Accessor</span></span>  
+ <span data-ttu-id="be677-170">`Get`<屬性名稱> 存取子的簽章必須是︰</span><span class="sxs-lookup"><span data-stu-id="be677-170">The signature for the `Get`*PropertyName* accessor must be:</span></span>  
   
- `public static object Get` *PropertyName* `(object`  `target` `)`  
+ <span data-ttu-id="be677-171">`public static object Get` <屬性名稱> `(object`  `target` `)`</span><span class="sxs-lookup"><span data-stu-id="be677-171">`public static object Get` *PropertyName* `(object`  `target` `)`</span></span>  
   
--   `target` 物件可在您的實作中指定為更特定的型別。  您可以使用此項目為可附加成員設定用法範圍；超出您預定範圍的用法，將會擲回後續會由 XAML 剖析錯誤揭露的無效轉型例外狀況。  參數名稱 `target` 並非必要項目，但在大部分的實作中會依慣例命名為 `target`。  
+-   <span data-ttu-id="be677-172">`target` 物件可以指定為實作中的更特定類型。</span><span class="sxs-lookup"><span data-stu-id="be677-172">The `target` object can be specified as a more specific type in your implementation.</span></span> <span data-ttu-id="be677-173">您可以使用這個限定範圍的可附加的成員; 使用方式您想要的範圍之外的使用方式，將會擲回，然後由 XAML 剖析錯誤顯示無效的轉型例外狀況。</span><span class="sxs-lookup"><span data-stu-id="be677-173">You can use this to scope the usage of your attachable member; usages outside your intended scope will throw invalid cast exceptions that are then surfaced by a XAML parse error.</span></span> <span data-ttu-id="be677-174">參數名稱`target`，就不需要，但是名為`target`依照慣例，在大部分的實作。</span><span class="sxs-lookup"><span data-stu-id="be677-174">The parameter name `target` is not a requirement, but is named `target` by convention in most implementations.</span></span>  
   
--   傳回值可指定為實作中的特定型別。  
+-   <span data-ttu-id="be677-175">傳回值可以指定為實作中的更特定類型。</span><span class="sxs-lookup"><span data-stu-id="be677-175">The return value can be specified as a more specific type in your implementation.</span></span>  
   
- 若要讓具有 <xref:System.ComponentModel.TypeConverter> 功能的文字語法用於可附加成員的屬性中，請將 <xref:System.ComponentModel.TypeConverterAttribute> 套用至 `Get`*PropertyName* 存取子。  套用至 `get` 而非 `set`，可能顯得不夠直接，但此慣例可支援讓唯讀的可附加成員進行序列化的概念，這在使用設計工具時有其效用。  
+ <span data-ttu-id="be677-176">若要支援<xref:System.ComponentModel.TypeConverter>對於屬性使用方式的可附加的成員，已啟用的文字語法套用<xref:System.ComponentModel.TypeConverterAttribute>至`Get` *PropertyName*存取子。</span><span class="sxs-lookup"><span data-stu-id="be677-176">To support a <xref:System.ComponentModel.TypeConverter> enabled text syntax for attribute usage of the attachable member, apply <xref:System.ComponentModel.TypeConverterAttribute> to the `Get`*PropertyName* accessor.</span></span> <span data-ttu-id="be677-177">將套用至`get`而不是`set`似乎直覺性; 不過，這個慣例可以支援概念的唯讀可附加成員都是可序列化，這是在設計工具的情況下很有用。</span><span class="sxs-lookup"><span data-stu-id="be677-177">Applying to the `get` instead of the `set` may seem nonintuitive; however, this convention can support the concept of read-only attachable members that are serializable, which is useful in designer scenarios.</span></span>  
   
-#### SetPropertyName 存取子  
- Set\<*屬性名稱*\> 存取子的簽章必須是：  
+#### <a name="the-setpropertyname-accessor"></a><span data-ttu-id="be677-178">SetPropertyName 存取子</span><span class="sxs-lookup"><span data-stu-id="be677-178">The SetPropertyName Accessor</span></span>  
+ <span data-ttu-id="be677-179">集合的簽章*PropertyName*存取子必須是：</span><span class="sxs-lookup"><span data-stu-id="be677-179">The signature for the Set*PropertyName* accessor must be:</span></span>  
   
- `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
+ <span data-ttu-id="be677-180">`public static void Set` <屬性名稱> `(object`  `target` `, object`  `value` `)`</span><span class="sxs-lookup"><span data-stu-id="be677-180">`public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`</span></span>  
   
--   `target` 物件可透過上一節所說明的相同邏輯與結論，在您的實作中指定為更特定的型別。  
+-   <span data-ttu-id="be677-181">`target`物件可以指定為更特定的類型，在您實作中，與相同邏輯後果，如上一節中所述。</span><span class="sxs-lookup"><span data-stu-id="be677-181">The `target` object can be specified as a more specific type in your implementation, with same logic and consequences as described in the previous section.</span></span>  
   
--   `value` 物件可在您的實作中指定為更特定的型別。  
+-   <span data-ttu-id="be677-182">`value` 物件可以指定為實作中的更特定類型。</span><span class="sxs-lookup"><span data-stu-id="be677-182">The `value` object can be specified as a more specific type in your implementation.</span></span>  
   
- 請記住，此方法的值是來自 XAML 用法的輸入 \(通常採屬性形式\)。  採用屬性形式時，必須有值轉換子可支援文字語法，且您必須設定 `Get`*PropertyName* 存取子的屬性。  
+ <span data-ttu-id="be677-183">請記住，此方法的值是來自 XAML 用法，通常是以屬性形式的輸入。</span><span class="sxs-lookup"><span data-stu-id="be677-183">Remember that the value for this method is the input coming from the XAML usage, typically in attribute form.</span></span> <span data-ttu-id="be677-184">從屬性格式必須是值轉換器支援文字語法中，而且您屬性`Get` *PropertyName*存取子。</span><span class="sxs-lookup"><span data-stu-id="be677-184">From attribute form there must be value converter support for a text syntax, and you attribute on the `Get`*PropertyName* accessor.</span></span>  
   
-### 可附加的成員存放區  
- 光是使用存取子方法通常無法將可附加的成員值放入物件圖形中，或從物件圖形中擷取值並正確地予以序列化。  若要提供這個功能，先前存取子簽章中的 `target` 物件必須能夠儲存值。  此儲存機制應與可附加成員準則一致，即成員可附加至該可附加成員不在其成員清單中的目標。  .NET Framework XAML 服務透過 API <xref:System.Xaml.IAttachedPropertyStore> 和 <xref:System.Xaml.AttachablePropertyServices>，提供實作可附加成員存放區的技巧。  <xref:System.Xaml.IAttachedPropertyStore> 會由 XAML 寫入器用來發現存放區實作，而且應實作於存取子的 `target` 設為的型別上。  靜態 <xref:System.Xaml.AttachablePropertyServices> API 是放在存取子的主體內使用，而且是以 <xref:System.Xaml.AttachableMemberIdentifier> 參考可附加的成員。  
+### <a name="attachable-member-stores"></a><span data-ttu-id="be677-185">可附加成員存放區</span><span class="sxs-lookup"><span data-stu-id="be677-185">Attachable Member Stores</span></span>  
+ <span data-ttu-id="be677-186">存取子方法不通常不足以提供的方法將可附加成員值放置物件圖形，或擷取值，超出物件圖形，並將其正確序列化。</span><span class="sxs-lookup"><span data-stu-id="be677-186">The accessor methods are typically not enough to provide a means to place attachable member values into an object graph, or to retrieve values out of the object graph and serialize them properly.</span></span> <span data-ttu-id="be677-187">若要提供這項功能，`target`的上一個存取子的簽章中的物件必須能夠儲存的值。</span><span class="sxs-lookup"><span data-stu-id="be677-187">To provide this functionality, the `target` objects in the previous accessor signatures must be capable of storing values.</span></span> <span data-ttu-id="be677-188">儲存機制應該和成員是可附加至目標的可附加成員不在成員清單中的可附加成員原則一致。</span><span class="sxs-lookup"><span data-stu-id="be677-188">The storage mechanism should be consistent with the attachable member principle that the member is attachable to targets where the attachable member is not in the members list.</span></span> <span data-ttu-id="be677-189">.NET framework XAML 服務提供的實作方法，對於可附加成員會儲存應用程式開發介面透過<xref:System.Xaml.IAttachedPropertyStore>和<xref:System.Xaml.AttachablePropertyServices>。</span><span class="sxs-lookup"><span data-stu-id="be677-189">.NET Framework XAML Services provides an implementation technique for attachable member stores through the APIs <xref:System.Xaml.IAttachedPropertyStore> and <xref:System.Xaml.AttachablePropertyServices>.</span></span> <span data-ttu-id="be677-190"><xref:System.Xaml.IAttachedPropertyStore>可由 XAML 寫入器來探索的存放區實作，並應該是型別上實作`target`存取子。</span><span class="sxs-lookup"><span data-stu-id="be677-190"><xref:System.Xaml.IAttachedPropertyStore> is used by the XAML writers to discover the store implementation, and should be implemented on the type that is the `target` of the accessors.</span></span> <span data-ttu-id="be677-191">靜態<xref:System.Xaml.AttachablePropertyServices>Api 的存取子中，主體內使用，而且參考的可附加成員及其<xref:System.Xaml.AttachableMemberIdentifier>。</span><span class="sxs-lookup"><span data-stu-id="be677-191">The static <xref:System.Xaml.AttachablePropertyServices> APIs are used within the body of the accessors, and refer to the attachable member by its <xref:System.Xaml.AttachableMemberIdentifier>.</span></span>  
   
-## XAML 相關 CLR 屬性  
- 若要將 XAML 型別系統資訊報告至 .NET Framework XAML 服務，正確設定型別、成員與組件的屬性是很重要的。  無論您預定將型別用於直接以 .NET Framework XAML 服務的 XAML 讀取器與 XAML 寫入器為基礎的 XAML 系統，還是定義或使用採用 XAML、並且以這些 XAML 讀取器與 XAML 寫入器為基礎的架構，都必須正確完成前述設定。  
+## <a name="xaml-related-clr-attributes"></a><span data-ttu-id="be677-192">XAML 相關 CLR 屬性</span><span class="sxs-lookup"><span data-stu-id="be677-192">XAML-Related CLR Attributes</span></span>  
+ <span data-ttu-id="be677-193">正確地設定其屬性，您的類型、 成員和組件是很重要的報表以.NET Framework XAML 服務 XAML 類型系統資訊的順序。</span><span class="sxs-lookup"><span data-stu-id="be677-193">Correctly attributing your types, members, and assemblies is important in order to report XAML type system information to .NET Framework XAML Services.</span></span> <span data-ttu-id="be677-194">這是相關，如果您想要的 XAML 系統，直接根據.NET Framework XAML 服務 XAML 讀取器和 XAML 寫入器，用於您的型別，或如果您定義，或使用 XAML 使用的架構為基礎的 XAML 讀取器和 XAML 寫入器。</span><span class="sxs-lookup"><span data-stu-id="be677-194">This is relevant if you intend your types for use with XAML systems that are directly based on .NET Framework XAML Services XAML readers and XAML writers, or if you define or use a XAML-utilizing framework that is based on those XAML readers and XAML writers.</span></span>  
   
- 對於自訂型別的 XAML 支援，如需每個 XAML 相關屬性的清單，請參閱 [XAML\-Related CLR Attributes for Custom Types and Libraries](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
+ <span data-ttu-id="be677-195">如需每個 XAML 相關屬性的 XAML 支援，您的自訂型別相關的清單，請參閱[XAML-Related CLR 屬性之自訂類型和程式庫](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。</span><span class="sxs-lookup"><span data-stu-id="be677-195">For a listing of each XAML-related attribute that is relevant for XAML support of your custom types, see [XAML-Related CLR Attributes for Custom Types and Libraries](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).</span></span>  
   
-## 使用方式  
- 若要使用自訂型別，標記作者必須為包含自訂型別的組件與 CLR 命名空間對應前置詞。  此程序不在本主題的討論之列。  
+## <a name="usage"></a><span data-ttu-id="be677-196">使用方式</span><span class="sxs-lookup"><span data-stu-id="be677-196">Usage</span></span>  
+ <span data-ttu-id="be677-197">使用自訂類型需要標記作者必須對應包含自訂類型的組件和 CLR 命名空間的前置詞。</span><span class="sxs-lookup"><span data-stu-id="be677-197">Usage of custom types requires that the markup author must map a prefix for the assembly and CLR namespace that contain the custom type.</span></span> <span data-ttu-id="be677-198">此程序不會記載於本主題中。</span><span class="sxs-lookup"><span data-stu-id="be677-198">This procedure is not documented in this topic.</span></span>  
   
-## 存取層級  
- XAML 提供了一種方法來載入和具現化具有 `internal` 存取層級的型別。  提供此功能後，使用者程式碼便可以定義自己的型別，然後具現化來自也是屬於相同使用者程式碼範圍的標記中的類別。  
+## <a name="access-level"></a><span data-ttu-id="be677-199">存取層級</span><span class="sxs-lookup"><span data-stu-id="be677-199">Access Level</span></span>  
+ <span data-ttu-id="be677-200">XAML 可提供方法來載入和執行個體化類型具有`internal`存取層級。</span><span class="sxs-lookup"><span data-stu-id="be677-200">XAML provides a means to load and instantiate types that have an `internal` access level.</span></span> <span data-ttu-id="be677-201">這項功能被提供讓使用者程式碼可以定義自己的型別，再執行個體化這些類別，從標記，也是相同的使用者程式碼領域的一部分。</span><span class="sxs-lookup"><span data-stu-id="be677-201">This capability is provided so that user code can define its own types, and then instantiate those classes from markup that is also part of the same user code scope.</span></span>  
   
- WPF 中的一個範例是，每當使用者程式碼定義的 <xref:System.Windows.Controls.UserControl> 要預定做為重構 UI 行為的方法，但不要做為任何可能的延伸機制 \(可能透過以 `public` 存取層級宣告支援類別來暗示\) 的一部分。  如果支援程式碼是編譯到將它當成 XAML 型別來參考的相同組件中，即可以 `internal` 存取來宣告此種 <xref:System.Windows.Controls.UserControl>。  
+ <span data-ttu-id="be677-202">WPF 的範例是當使用者程式碼會定義<xref:System.Windows.Controls.UserControl>，用來重構 UI 行為，但不是可能會隱含宣告的支援類別，以任何可能的延伸模組機制的一部分`public`存取層級。</span><span class="sxs-lookup"><span data-stu-id="be677-202">An example from WPF is whenever user code defines a <xref:System.Windows.Controls.UserControl> that is intended as a way to refactor a UI behavior, but not as part of any possible extension mechanism that might be implied by declaring the supporting class with `public` access level.</span></span> <span data-ttu-id="be677-203">這類<xref:System.Windows.Controls.UserControl>可以使用宣告`internal`存取支援程式碼會編譯從中它為 XAML 型別參考相同組件。</span><span class="sxs-lookup"><span data-stu-id="be677-203">Such a <xref:System.Windows.Controls.UserControl> can be declared with `internal` access if the backing code is compiled into the same assembly from which it is referenced as a XAML type.</span></span>  
   
- 對於在完全信任下載入 XAML 且使用 <xref:System.Xaml.XamlObjectWriter> 的應用程式，永遠會啟用以 `internal` 存取層級載入類別。  
+ <span data-ttu-id="be677-204">應用程式會在完全信任下載入的 XAML，並使用<xref:System.Xaml.XamlObjectWriter>，載入具有類別`internal`存取層級一定會啟用。</span><span class="sxs-lookup"><span data-stu-id="be677-204">For an application that loads XAML under full trust and uses <xref:System.Xaml.XamlObjectWriter>, loading classes with `internal` access level is always enabled.</span></span>  
   
- 對於在部分信任下載入 XAML 的應用程式，您可以使用 <xref:System.Xaml.Permissions.XamlAccessLevel> API 控制存取層級特性。  另外，延遲機制 \(如 WPF 範本系統\) 必須能夠傳播任何存取層級權限，並保存這些權限到進行最終執行階段評估；這是透過傳遞 <xref:System.Xaml.Permissions.XamlAccessLevel> 資訊在內部處理。  
+ <span data-ttu-id="be677-205">在部分信任下載入 XAML 的應用程式，您可以使用控制存取層級特性<xref:System.Xaml.Permissions.XamlAccessLevel>應用程式開發介面。</span><span class="sxs-lookup"><span data-stu-id="be677-205">For an application that loads XAML under partial trust, you can control the access level characteristics by using the <xref:System.Xaml.Permissions.XamlAccessLevel> API.</span></span> <span data-ttu-id="be677-206">此外，延遲機制 （例如 WPF 範本系統） 必須能夠傳播存取層級權限，並保留供最終的執行的階段評估;這藉由傳遞內部處理<xref:System.Xaml.Permissions.XamlAccessLevel>資訊。</span><span class="sxs-lookup"><span data-stu-id="be677-206">Also, deferral mechanisms (such as the WPF template system) must be able to propagate any access level permissions and preserve them for the eventual run time evaluations; this is handled internally by passing the <xref:System.Xaml.Permissions.XamlAccessLevel> information.</span></span>  
   
-### WPF 實作  
- WPF XAML 使用部分信任存取模型，若是在部分信任下載入 BAML，則對於 BAML 來源組件的存取僅限於 <xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A>。  在延遲情況下，WPF 使用 <xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=fullName> 做為用於傳遞存取層級資訊的機制。  
+### <a name="wpf-implementation"></a><span data-ttu-id="be677-207">WPF 實作</span><span class="sxs-lookup"><span data-stu-id="be677-207">WPF Implementation</span></span>  
+ <span data-ttu-id="be677-208">WPF XAML 使用部分信任存取模型，如果 BAML 載入在部分信任下，存取限於<xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A>BAML 來源組件。</span><span class="sxs-lookup"><span data-stu-id="be677-208">WPF XAML uses a partial-trust access model where if BAML is loaded under partial trust, access is restricted to <xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A> for the assembly that is the BAML source.</span></span> <span data-ttu-id="be677-209">對於延遲，WPF 會使用<xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=nameWithType>做為傳遞的存取層級資訊的機制。</span><span class="sxs-lookup"><span data-stu-id="be677-209">For deferral, WPF uses <xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=nameWithType> as a mechanism for passing the access level information.</span></span>  
   
- 在 WPF XAML 術語中，「*內部型別*」\(Internal Type\) 是由參考 XAML 所在的同一個組件所定義的型別。  此種型別可以透過 XAML 命名空間來對應，而該 XAML 命名空間刻意省略了對應的 assembly\= 部分，例如，`xmlns:local="clr-namespace:WPFApplication1"`。  如果 BAML 參考內部型別且該型別具有 `internal` 存取層級，這就會為組件產生 `GeneratedInternalTypeHelper` 類別。  如果想要避免 `GeneratedInternalTypeHelper`，您就必須使用 `public` 存取層級，或必須將相關類別併入個別組件中並使該組件變成相依組件。  
+ <span data-ttu-id="be677-210">在 WPF XAML 術語*內部型別*是由相同組件也包含參考的 XAML 定義的類型。</span><span class="sxs-lookup"><span data-stu-id="be677-210">In WPF XAML terminology, an *internal type* is a type that is defined by the same assembly that also includes the referencing XAML.</span></span> <span data-ttu-id="be677-211">這種型別可以對應透過故意省略組件的 XAML 命名空間 = 部分的對應，例如`xmlns:local="clr-namespace:WPFApplication1"`。</span><span class="sxs-lookup"><span data-stu-id="be677-211">Such a type can be mapped through a XAML namespace that deliberately omits the assembly= portion of a mapping, for example, `xmlns:local="clr-namespace:WPFApplication1"`.</span></span>  <span data-ttu-id="be677-212">如果 BAML 參考內部的型別和型別具有`internal`存取層級，這會產生`GeneratedInternalTypeHelper`組件的類別。</span><span class="sxs-lookup"><span data-stu-id="be677-212">If BAML references an internal type and that type has `internal` access level, this generates a `GeneratedInternalTypeHelper` class for the assembly.</span></span> <span data-ttu-id="be677-213">如果您想要避免`GeneratedInternalTypeHelper`，您可能必須使用`public`存取層級，或必須相關的類別，分解到不同的組件並讓這個組件相依。</span><span class="sxs-lookup"><span data-stu-id="be677-213">If you want to avoid `GeneratedInternalTypeHelper`, you either must use `public` access level, or must factor the relevant class into a separate assembly and make that assembly dependent.</span></span>  
   
-## 請參閱  
- [XAML\-Related CLR Attributes for Custom Types and Libraries](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)   
- [XAML Services](../../../docs/framework/xaml-services/index.md)
+## <a name="see-also"></a><span data-ttu-id="be677-214">另請參閱</span><span class="sxs-lookup"><span data-stu-id="be677-214">See Also</span></span>  
+ [<span data-ttu-id="be677-215">自訂類型和程式庫的 XAML 相關 CLR 屬性</span><span class="sxs-lookup"><span data-stu-id="be677-215">XAML-Related CLR Attributes for Custom Types and Libraries</span></span>](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)  
+ [<span data-ttu-id="be677-216">XAML Services</span><span class="sxs-lookup"><span data-stu-id="be677-216">XAML Services</span></span>](../../../docs/framework/xaml-services/index.md)

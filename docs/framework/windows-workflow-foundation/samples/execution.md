@@ -1,37 +1,41 @@
 ---
-title: "執行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "執行"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 46c52eba539c9a5970d4569016120eeab0c4ce36
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 執行
-本節中的範例示範如何執行 [!INCLUDE[wf](../../../../includes/wf-md.md)] 工作流程。  
+# <a name="execution"></a><span data-ttu-id="9da82-102">執行</span><span class="sxs-lookup"><span data-stu-id="9da82-102">Execution</span></span>
+<span data-ttu-id="9da82-103">本節中的範例示範如何執行 [!INCLUDE[wf](../../../../includes/wf-md.md)] 工作流程。</span><span class="sxs-lookup"><span data-stu-id="9da82-103">This section contains samples that demonstrate executing workflows in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span></span>  
   
-## 在本節中  
- [工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- 示範如何使用工作流程控制端點，在本機和遠端建立及執行工作流程。  
+## <a name="in-this-section"></a><span data-ttu-id="9da82-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="9da82-104">In This Section</span></span>  
+ [<span data-ttu-id="9da82-105">工作流程管理端點範例</span><span class="sxs-lookup"><span data-stu-id="9da82-105">Workflow Management Endpoint Sample</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
+ <span data-ttu-id="9da82-106">示範如何使用工作流程控制端點，在本機和遠端建立及執行工作流程。</span><span class="sxs-lookup"><span data-stu-id="9da82-106">Demonstrates how a workflow control endpoint can be used to create and run workflows both locally and remotely.</span></span>  
   
- [使用 WorkflowInvoker 類別](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
- 示範如何使用 <xref:System.Activities.WorkflowInvoker> 類別如同方法一般叫用活動。  
+ [<span data-ttu-id="9da82-107">使用 WorkflowInvoker 類別</span><span class="sxs-lookup"><span data-stu-id="9da82-107">Using the WorkflowInvoker Class</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
+ <span data-ttu-id="9da82-108">示範如何使用 <xref:System.Activities.WorkflowInvoker> 類別如同方法一般叫用活動。</span><span class="sxs-lookup"><span data-stu-id="9da82-108">Demonstrates how to use the <xref:System.Activities.WorkflowInvoker> class to invoke an activity as if it were a method.</span></span>  
   
- [WorkflowApplication ReadLine 主機](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
- 示範如何建立泛型 ReadLine 主機。  
+ [<span data-ttu-id="9da82-109">WorkflowApplication ReadLine 主機</span><span class="sxs-lookup"><span data-stu-id="9da82-109">WorkflowApplication ReadLine Host</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
+ <span data-ttu-id="9da82-110">示範如何建立泛型 ReadLine 主機。</span><span class="sxs-lookup"><span data-stu-id="9da82-110">Demonstrates how to create a generic ReadLine host.</span></span>  
   
- [建立與執行工作流程執行個體](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
- 示範如何執行工作流程執行個體。範例中會示範如何以同步和非同步方式執行。  
+ [<span data-ttu-id="9da82-111">建立和執行工作流程執行個體</span><span class="sxs-lookup"><span data-stu-id="9da82-111">Creating and Running a Workflow Instance</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
+ <span data-ttu-id="9da82-112">示範如何執行工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="9da82-112">Demonstrates how to run a workflow instance.</span></span> <span data-ttu-id="9da82-113">範例中會示範如何以同步和非同步方式執行。</span><span class="sxs-lookup"><span data-stu-id="9da82-113">It shows how to execute it synchronously and asynchronously.</span></span>  
   
- [WorkflowHostingEndpoint 繼續書籤](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
- 示範 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 如何與 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 搭配使用以建立工作流程執行個體。  
+ [<span data-ttu-id="9da82-114">WorkflowHostingEndpoint 繼續書籤</span><span class="sxs-lookup"><span data-stu-id="9da82-114">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ <span data-ttu-id="9da82-115">示範 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 如何與 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 搭配使用以建立工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="9da82-115">Demonstrates how the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> can be used with <xref:System.ServiceModel.Activities.WorkflowServiceHost> to create workflow instances.</span></span>  
   
- [WorkflowHostingEndpoint 的書籤解析程式](../../../../docs/framework/windows-workflow-foundation/samples/bookmark-resolver-for-workflowhostingendpoint.md)  
- 示範 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 如何與 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 搭配使用以恢復工作流程執行個體上的自訂書籤。
+ [<span data-ttu-id="9da82-116">WorkflowHostingEndpoint 的書籤解析程式</span><span class="sxs-lookup"><span data-stu-id="9da82-116">Bookmark Resolver for WorkflowHostingEndpoint</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/bookmark-resolver-for-workflowhostingendpoint.md)  
+ <span data-ttu-id="9da82-117">示範 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 如何與 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 搭配，以繼續工作流程執行個體上的自訂書籤。</span><span class="sxs-lookup"><span data-stu-id="9da82-117">Demonstrates how the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> can be used with <xref:System.ServiceModel.Activities.WorkflowServiceHost> to resume custom bookmarks on workflow instances.</span></span>

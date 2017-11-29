@@ -1,144 +1,145 @@
 ---
-title: "自訂動畫概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 自訂類別"
-  - "自訂動畫類別"
-  - "自訂類別, 動畫"
-  - "自訂主要畫面格"
-  - "主要畫面格, 自訂"
+title: "自訂動畫概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom classes [WPF], animation
+- key frames [WPF], custom
+- custom key frames [WPF]
+- animation [WPF], custom classes
+- custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a206e0234f4e6365e76f73977beda1688c036a79
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 自訂動畫概觀
-本主題描述如何及何時藉由建立自訂主要畫面格、動畫類別，或使用單格回呼 \(Callback\) 予以略過，進而擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統。  
+# <a name="custom-animations-overview"></a><span data-ttu-id="e3280-102">自訂動畫概觀</span><span class="sxs-lookup"><span data-stu-id="e3280-102">Custom Animations Overview</span></span>
+<span data-ttu-id="e3280-103">本主題說明如何以及何時建立自訂主要畫面格、動畫類別來擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統，或使用每一畫面的回呼來略過它。</span><span class="sxs-lookup"><span data-stu-id="e3280-103">This topic describes how and when to extend the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system by creating custom key frames, animation classes, or by using per-frame callback to bypass it.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## 必要條件  
- 若要了解本主題，您應該熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的不同動畫型別。  如需詳細資訊，請參閱 [From\/To\/By 動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)、[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)和[路徑動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="e3280-104">必要條件</span><span class="sxs-lookup"><span data-stu-id="e3280-104">Prerequisites</span></span>  
+ <span data-ttu-id="e3280-105">若要了解本主題，您應該熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的不同動畫類型。</span><span class="sxs-lookup"><span data-stu-id="e3280-105">To understand this topic, you should be familiar with the different types of animations provided by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="e3280-106">如需詳細資訊，請參閱＜From/To/By 動畫概觀＞、[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)以及[路徑動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e3280-106">For more information, see the From/To/By Animations Overview, the [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), and the [Path Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).</span></span>  
   
- 由於動畫類別繼承自 <xref:System.Windows.Freezable> 類別，所以您應該熟悉 <xref:System.Windows.Freezable> 物件以及如何從 <xref:System.Windows.Freezable> 繼承。  如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="e3280-107">因為動畫類別是繼承自<xref:System.Windows.Freezable>類別，您應該熟悉<xref:System.Windows.Freezable>物件，以及如何在繼承自<xref:System.Windows.Freezable>。</span><span class="sxs-lookup"><span data-stu-id="e3280-107">Because the animation classes inherit from the <xref:System.Windows.Freezable> class, you should be familiar with <xref:System.Windows.Freezable> objects and how to inherit from <xref:System.Windows.Freezable>.</span></span> <span data-ttu-id="e3280-108">如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e3280-108">For more information, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
 <a name="extendingtheanimationsystem"></a>   
-## 擴充動畫系統  
- 根據您要使用的內建功能層級而定，擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統的方法有很多種。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎中有三個主要擴充點：  
+## <a name="extending-the-animation-system"></a><span data-ttu-id="e3280-109">擴充動畫系統</span><span class="sxs-lookup"><span data-stu-id="e3280-109">Extending the Animation System</span></span>  
+ <span data-ttu-id="e3280-110">有數種方式可以擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統，根據您想要使用的內建功能層級而定。</span><span class="sxs-lookup"><span data-stu-id="e3280-110">There are a number of ways to extend the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system, depending on the level of built-in functionality you want to use.</span></span>  <span data-ttu-id="e3280-111">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎中有三個主要擴充點︰</span><span class="sxs-lookup"><span data-stu-id="e3280-111">There are three primary extensibility points in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation engine:</span></span>  
   
--   藉由從其中一個 *\<Type\>*KeyFrame 類別 \(例如 <xref:System.Windows.Media.Animation.DoubleKeyFrame>\) 繼承，建立自訂主要畫面格物件。  此方法會使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎的大部分內建功能。  
+-   <span data-ttu-id="e3280-112">其中一個繼承來建立自訂的主要畫面格物件*\<類型 >*主要畫面格類別，例如<xref:System.Windows.Media.Animation.DoubleKeyFrame>。</span><span class="sxs-lookup"><span data-stu-id="e3280-112">Create a custom key frame object by inheriting from one of the *\<Type>*KeyFrame classes, such as <xref:System.Windows.Media.Animation.DoubleKeyFrame>.</span></span> <span data-ttu-id="e3280-113">這個方法可使用大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎內建功能。</span><span class="sxs-lookup"><span data-stu-id="e3280-113">This approach uses most of the built-in functionality of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation engine.</span></span>  
   
--   藉由從 <xref:System.Windows.Media.Animation.AnimationTimeline> 或其中一個 *\<Type\>*AnimationBase 類別繼承，建立自己的動畫類別。  
+-   <span data-ttu-id="e3280-114">建立您自己的動畫類別繼承自<xref:System.Windows.Media.Animation.AnimationTimeline>或其中一個*\<類型 >*AnimationBase 類別。</span><span class="sxs-lookup"><span data-stu-id="e3280-114">Create your own animation class by inheriting from <xref:System.Windows.Media.Animation.AnimationTimeline> or one of the *\<Type>*AnimationBase classes.</span></span>  
   
--   使用單格回呼，以單格方式產生動畫。  此方法會完全略過動畫和計時系統。  
+-   <span data-ttu-id="e3280-115">您可以針對每一畫面格使用每一畫面的回呼來產生動畫。</span><span class="sxs-lookup"><span data-stu-id="e3280-115">Use per-frame callback to generate animations on a per-frame basis.</span></span> <span data-ttu-id="e3280-116">這個方法完全略過動畫與計時系統。</span><span class="sxs-lookup"><span data-stu-id="e3280-116">This approach completely bypasses the animation and timing system.</span></span>  
   
- 下表說明一些擴充動畫系統的案例。  
+ <span data-ttu-id="e3280-117">下表說明一些擴充動畫系統的案例。</span><span class="sxs-lookup"><span data-stu-id="e3280-117">The following table describes some the scenarios for extending the animation system.</span></span>  
   
-|當您要...|使用這個方法|  
-|------------|------------|  
-|在具有對應 *\<Type\>*AnimationUsingKeyFrames 之型別的值之間自訂插補|建立自訂主要畫面格。  如需詳細資訊，請參閱[建立自訂主要畫面格](#createacustomkeyframe)一節。|  
-|在具有對應 *\<Type\>*Animation 之型別的值之間，自訂插補以外的功能|建立繼承自 *\<Type\>*AnimationBase 類別 \(此類別對應於您要以動畫顯示的型別\) 的自訂動畫類別。  如需詳細資訊，請參閱[建立自訂動畫類別](#createcustomanimationtype)一節。|  
-|以動畫顯示沒有對應 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫的型別|使用 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 或建立繼承自 <xref:System.Windows.Media.Animation.AnimationTimeline> 的類別。  如需詳細資訊，請參閱[建立自訂動畫類別](#createcustomanimationtype)一節。|  
-|使用每個畫面格都會計算而且以最後一組物件互動為基礎的值，以動畫顯示多個物件|使用單格回呼。  如需詳細資訊，請參閱[建立使用單格回呼](#useperframecallback)一節。|  
+|<span data-ttu-id="e3280-118">當您要...</span><span class="sxs-lookup"><span data-stu-id="e3280-118">When you want to...</span></span>|<span data-ttu-id="e3280-119">使用這個方法</span><span class="sxs-lookup"><span data-stu-id="e3280-119">Use this approach</span></span>|  
+|-------------------------|-----------------------|  
+|<span data-ttu-id="e3280-120">在有對應 *\<Type>*AnimationUsingKeyFrames 的類型值之間自訂內插補點</span><span class="sxs-lookup"><span data-stu-id="e3280-120">Customize the interpolation between values of a type that has a corresponding *\<Type>*AnimationUsingKeyFrames</span></span>|<span data-ttu-id="e3280-121">建立自訂主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="e3280-121">Create a custom key frame.</span></span> <span data-ttu-id="e3280-122">如需詳細資訊，請參閱[建立自訂主要畫面格](#createacustomkeyframe)一節。</span><span class="sxs-lookup"><span data-stu-id="e3280-122">For more information, see the [Create a Custom Key Frame](#createacustomkeyframe) section.</span></span>|  
+|<span data-ttu-id="e3280-123">不只是在有對應 *\<Type>*Animation 的類型值之間自訂內插補點。</span><span class="sxs-lookup"><span data-stu-id="e3280-123">Customize more than just the interpolation between values of a type that has a corresponding *\<Type>*Animation.</span></span>|<span data-ttu-id="e3280-124">建立自訂動畫類別，其繼承自和您想要以動畫顯示的類型對應的 *\<Type>*AnimationBase 類別。</span><span class="sxs-lookup"><span data-stu-id="e3280-124">Create a custom animation class that inherits from the *\<Type>*AnimationBase class that corresponds to the type you want to animate.</span></span> <span data-ttu-id="e3280-125">如需詳細資訊，請參閱[建立自訂動畫類別](#createacustomanimationtype)一節。</span><span class="sxs-lookup"><span data-stu-id="e3280-125">For more information, see the [Create a Custom Animation Class](#createacustomanimationtype) section.</span></span>|  
+|<span data-ttu-id="e3280-126">以動畫顯示沒有對應 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類型的動畫</span><span class="sxs-lookup"><span data-stu-id="e3280-126">Animate a type that has no corresponding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation</span></span>|<span data-ttu-id="e3280-127">使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>或建立繼承自一個類別<xref:System.Windows.Media.Animation.AnimationTimeline>。</span><span class="sxs-lookup"><span data-stu-id="e3280-127">Use an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> or create a class that inherits from <xref:System.Windows.Media.Animation.AnimationTimeline>.</span></span> <span data-ttu-id="e3280-128">如需詳細資訊，請參閱[建立自訂動畫類別](#createacustomanimationtype)一節。</span><span class="sxs-lookup"><span data-stu-id="e3280-128">For more information, see the [Create a Custom Animation Class](#createacustomanimationtype) section.</span></span>|  
+|<span data-ttu-id="e3280-129">利用每個畫面格都會計算的值，並根據最後一組物件互動的值，以動畫顯示多個物件</span><span class="sxs-lookup"><span data-stu-id="e3280-129">Animate multiple objects with values that are computed each frame and are based on the last set of object interactions</span></span>|<span data-ttu-id="e3280-130">使用每一畫面的回呼。</span><span class="sxs-lookup"><span data-stu-id="e3280-130">Use per-frame callback.</span></span> <span data-ttu-id="e3280-131">如需詳細資訊，請參閱[使用每一畫面的回呼](#useperframecallback)一節。</span><span class="sxs-lookup"><span data-stu-id="e3280-131">For more information, see the [Create a Use Per-Frame Callback](#useperframecallback) section.</span></span>|  
   
 <a name="createacustomkeyframe"></a>   
-## 建立自訂主要畫面格  
- 建立自訂主要畫面格類別，是擴充動畫系統的最簡單方式。  當您要對主要畫面格動畫使用不同的插補方法時，請使用此方法。  如[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)所述，主要畫面格動畫使用主要畫面格物件來產生其輸出值。  每個主要畫面格物件可執行三項功能：  
+## <a name="create-a-custom-key-frame"></a><span data-ttu-id="e3280-132">建立自訂主要畫面格</span><span class="sxs-lookup"><span data-stu-id="e3280-132">Create a Custom Key Frame</span></span>  
+ <span data-ttu-id="e3280-133">建立自訂主要畫面格類別是擴充動畫系統最簡單的方式。</span><span class="sxs-lookup"><span data-stu-id="e3280-133">Creating a custom key frame class is the simplest way to extend the animation system.</span></span> <span data-ttu-id="e3280-134">當您想要不同的主要畫面格動畫內插補點方法時，請使用這個方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-134">Use this approach when you want to a different interpolation method for a key-frame animation.</span></span>  <span data-ttu-id="e3280-135">如[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)中所述，主要畫面格動畫使用主要畫面格物件來產生其輸出值。</span><span class="sxs-lookup"><span data-stu-id="e3280-135">As described in the [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), a key-frame animation uses key frame objects to generate its output values.</span></span> <span data-ttu-id="e3280-136">每個主要畫面格物件都會執行三個函式︰</span><span class="sxs-lookup"><span data-stu-id="e3280-136">Each key frame object performs three functions:</span></span>  
   
--   使用其 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 屬性，指定目標值。  
+-   <span data-ttu-id="e3280-137">指定目標值，使用其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="e3280-137">Specifies a target value using its <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> property.</span></span>  
   
--   使用其 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 屬性，指定應達到該值的時間。  
+-   <span data-ttu-id="e3280-138">指定的值應該到達的時間使用其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="e3280-138">Specifies the time at which that value should be reached using its <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> property.</span></span>  
   
--   實作 InterpolateValueCore 方法，在前一個主要畫面格的值與它自己的值之間進行插補。  
+-   <span data-ttu-id="e3280-139">藉由實作 InterpolateValueCore 方法，在前一個主要畫面格與其自身的值之間插入。</span><span class="sxs-lookup"><span data-stu-id="e3280-139">Interpolates between the value of the previous key frame and its own value by implementing the InterpolateValueCore method.</span></span>  
   
- **實作指示**  
+ <span data-ttu-id="e3280-140">**實作指示**</span><span class="sxs-lookup"><span data-stu-id="e3280-140">**Implementation Instructions**</span></span>  
   
- 從 *\<Type\>*KeyFrame 抽象類別 \(Abstract Class\) 衍生，並實作 InterpolateValueCore 方法。  InterpolateValueCore 方法會傳回主要畫面格目前的值。  它會採用兩個參數：前一個主要畫面格的值和範圍從 0 到 1 的進度值。  進度為 0 表示主要畫面格才剛開始，而值為 1 則表示主要畫面格剛結束，而且應傳回其 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 屬性所指定的值。  
+ <span data-ttu-id="e3280-141">衍生自 *\<Type>*KeyFrame 抽象類別並實作 InterpolateValueCore 方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-141">Derive from the *\<Type>*KeyFrame abstract class and implement the InterpolateValueCore method.</span></span> <span data-ttu-id="e3280-142">InterpolateValueCore 方法會傳回主要畫面格目前的值。</span><span class="sxs-lookup"><span data-stu-id="e3280-142">The InterpolateValueCore method returns the current value of the key frame.</span></span> <span data-ttu-id="e3280-143">它接受兩個參數︰前一個主要畫面格的值和範圍從 0 到 1 的進度值。</span><span class="sxs-lookup"><span data-stu-id="e3280-143">It takes two parameters: the value of the previous key frame and a progress value that ranges from 0 to 1.</span></span> <span data-ttu-id="e3280-144">進度的 0 表示剛開始主要畫面格，而且值為 1 表示主要畫面格剛剛完成，並應傳回所指定的值及其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="e3280-144">A progress of 0 indicates the key frame has just started, and a value of 1 indicates that the key frame has just completed and should return the value specified by its <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> property.</span></span>  
   
- 因為 *\<Type\>*KeyFrame 類別繼承自 <xref:System.Windows.Freezable> 類別，所以您也必須覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 核心，以便傳回新的類別執行個體。  如果此類別不使用[相依性屬性](GTMT)來儲存其資料，或者在建立之後需要額外進行初始化，您就必須覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="e3280-145">因為*\<類型 >*主要畫面格類別繼承自<xref:System.Windows.Freezable>類別，您也必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>傳回類別的新執行個體的核心。</span><span class="sxs-lookup"><span data-stu-id="e3280-145">Because the *\<Type>*KeyFrame classes inherit from the <xref:System.Windows.Freezable> class, you must also override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core to return a new instance of your class.</span></span> <span data-ttu-id="e3280-146">如果類別不使用相依性屬性來儲存其資料或需要在建立之後額外進行初始化，您可能需要覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e3280-146">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 在您建立自訂 *\<Type\>*KeyFrame 動畫之後，您可以將它與該型別的 *\<Type\>*AnimationUsingKeyFrames 一起使用。  
+ <span data-ttu-id="e3280-147">在您建立自訂 *\<Type>*KeyFrame 動畫後，您可以將它和該類型的 *\<Type>*AnimationUsingKeyFrames 搭配使用。</span><span class="sxs-lookup"><span data-stu-id="e3280-147">After you've created your custom *\<Type>*KeyFrame animation, you can use it with the *\<Type>*AnimationUsingKeyFrames for that type.</span></span>  
   
 <a name="createacustomanimationtype"></a>   
-## 建立自訂動畫類別  
- 建立您自己的動畫型別，讓您更能夠控制以動畫顯示物件的方式。  建立自己的動畫型別有兩種建議方法：您可以從 <xref:System.Windows.Media.Animation.AnimationTimeline> 類別或 *\<Type\>*AnimationBase 類別衍生。  但不建議從 *\<Type\>*Animation 或 *\<Type\>*AnimationUsingKeyFrames 類別衍生。  
+## <a name="create-a-custom-animation-class"></a><span data-ttu-id="e3280-148">建立自訂動畫類別</span><span class="sxs-lookup"><span data-stu-id="e3280-148">Create a Custom Animation Class</span></span>  
+ <span data-ttu-id="e3280-149">建立您自己的動畫類型可讓您更充分掌控物件的動畫效果。</span><span class="sxs-lookup"><span data-stu-id="e3280-149">Creating your own animation type gives you more control over how an object in animated.</span></span> <span data-ttu-id="e3280-150">有兩種建立您自己的動畫類型的建議的方法： 您可以從衍生<xref:System.Windows.Media.Animation.AnimationTimeline>類別或*\<類型 >*AnimationBase 類別。</span><span class="sxs-lookup"><span data-stu-id="e3280-150">There are two recommended ways to create your own animation type: you can derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class or the *\<Type>*AnimationBase class.</span></span> <span data-ttu-id="e3280-151">不建議衍生自 *\<Type>*Animation 或 *\<Type>*AnimationUsingKeyFrames 類型。</span><span class="sxs-lookup"><span data-stu-id="e3280-151">Deriving from the *\<Type>*Animation or *\<Type>*AnimationUsingKeyFrames classes is not recommended.</span></span>  
   
-### 從 \<Type\>AnimationBase 衍生  
- 從 *\<Type\>*AnimationBase 類別衍生，是建立新動畫型別的最簡單方式。  當您要針對已經有對應 *\<Type\>*AnimationBase 類別的型別建立新動畫時，請使用此方法。  
+### <a name="derive-from-typeanimationbase"></a><span data-ttu-id="e3280-152">衍生自 \<Type>AnimationBase</span><span class="sxs-lookup"><span data-stu-id="e3280-152">Derive from \<Type>AnimationBase</span></span>  
+ <span data-ttu-id="e3280-153">衍生自 *\<Type>*AnimationBase 類別是建立新動畫類型最簡單的方式。</span><span class="sxs-lookup"><span data-stu-id="e3280-153">Deriving from a *\<Type>*AnimationBase class is the simplest way to create a new animation type.</span></span> <span data-ttu-id="e3280-154">當您想要對已有對應 *\<Type>*AnimationBase 類別的類型建立新動畫時，使用這個方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-154">Use this approach when you want to create a new animation for type that already has a corresponding *\<Type>*AnimationBase class.</span></span>  
   
- **實作指示**  
+ <span data-ttu-id="e3280-155">**實作指示**</span><span class="sxs-lookup"><span data-stu-id="e3280-155">**Implementation Instructions**</span></span>  
   
- 從 *\<Type\>*Animation 類別衍生，並實作 GetCurrentValueCore 方法。  GetCurrentValueCore 方法會傳回動畫目前的值。  它會採用三個參數：建議的開始值、建議的結束值，以及用於判斷動畫進度的 <xref:System.Windows.Media.Animation.AnimationClock>。  
+ <span data-ttu-id="e3280-156">衍生自 *\<Type>*Animation 類別並實作 GetCurrentValueCore 方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-156">Derive from a *\<Type>*Animation class and implement the GetCurrentValueCore method.</span></span> <span data-ttu-id="e3280-157">GetCurrentValueCore 方法會傳回動畫目前的值。</span><span class="sxs-lookup"><span data-stu-id="e3280-157">The GetCurrentValueCore method returns the current value of the animation.</span></span> <span data-ttu-id="e3280-158">它會採用三個參數： 建議的起始值、 建議的結束值和<xref:System.Windows.Media.Animation.AnimationClock>，用來判斷的動畫進度。</span><span class="sxs-lookup"><span data-stu-id="e3280-158">It takes three parameters: a suggested starting value, a suggested ending value, and an <xref:System.Windows.Media.Animation.AnimationClock>, which you use to determine the progress of the animation.</span></span>  
   
- 因為 *\<Type\>*AnimationBase 類別繼承自 <xref:System.Windows.Freezable> 類別，所以您也必須覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 核心，以便傳回新的類別執行個體。  如果此類別不使用[相依性屬性](GTMT)來儲存其資料，或者在建立之後需要額外進行初始化，您就必須覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="e3280-159">因為*\<類型 >*AnimationBase 類別繼承自<xref:System.Windows.Freezable>類別，您也必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>傳回類別的新執行個體的核心。</span><span class="sxs-lookup"><span data-stu-id="e3280-159">Because the *\<Type>*AnimationBase classes inherit from the <xref:System.Windows.Freezable> class, you must also override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core to return a new instance of your class.</span></span> <span data-ttu-id="e3280-160">如果類別不使用相依性屬性來儲存其資料或需要在建立之後額外進行初始化，您可能需要覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e3280-160">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 如需詳細資訊，請參閱 GetCurrentValueCore 方法文件中您要建立動畫之型別的 *\<Type\>*AnimationBase 類別。  如需範例，請參閱[自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981) \(英文\)  
+ <span data-ttu-id="e3280-161">如需詳細資訊，請參閱想要以動畫顯示之類型的*\<Type>*AnimationBase 類別適用的 GetCurrentValueCore 方法文件。</span><span class="sxs-lookup"><span data-stu-id="e3280-161">For more information, see the GetCurrentValueCore method documentation for the *\<Type>*AnimationBase class for the type that you want to animate.</span></span> <span data-ttu-id="e3280-162">如需範例，請參閱[自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981)</span><span class="sxs-lookup"><span data-stu-id="e3280-162">For an example, see the [Custom Animation Sample](http://go.microsoft.com/fwlink/?LinkID=159981)</span></span>  
   
- **替代方法**  
+ <span data-ttu-id="e3280-163">**替代方法**</span><span class="sxs-lookup"><span data-stu-id="e3280-163">**Alternative Approaches**</span></span>  
   
- 如果您只想變更動畫值的插補方式，請考慮從其中一個 *\<Type\>*KeyFrame 類別衍生。  您所建立的主要畫面格可以搭配 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的對應 *\<Type\>*AnimationUsingKeyFrames 使用。  
+ <span data-ttu-id="e3280-164">如果您只想要變更插入動畫值的方式，可考慮衍生自 *\<Type>*KeyFrame 類別之一。</span><span class="sxs-lookup"><span data-stu-id="e3280-164">If you simply want to change how animation values are interpolated, considering deriving from one of the *\<Type>*KeyFrame classes.</span></span> <span data-ttu-id="e3280-165">您建立的主要畫面格可以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的對應 *\<Type>*AnimationUsingKeyFrames 一起使用。</span><span class="sxs-lookup"><span data-stu-id="e3280-165">The key frame you create can be used with the corresponding *\<Type>*AnimationUsingKeyFrames provided by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
-### 從 AnimationTimeline 衍生  
- 當您要針對尚未有對應 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫的型別建立動畫，或要建立不是強型別 \(Strongly Typed\) 的動畫時，請從 <xref:System.Windows.Media.Animation.AnimationTimeline> 類別衍生。  
+### <a name="derive-from-animationtimeline"></a><span data-ttu-id="e3280-166">衍生自 AnimationTimeline</span><span class="sxs-lookup"><span data-stu-id="e3280-166">Derive from AnimationTimeline</span></span>  
+ <span data-ttu-id="e3280-167">衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>類別時，您想要建立動畫針對還沒有相符的型別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]動畫，或您想要建立的動畫，並不強型別。</span><span class="sxs-lookup"><span data-stu-id="e3280-167">Derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class when you want to create an animation for a type that doesn't already have a matching [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation, or you want to create an animation that is not strongly typed.</span></span>  
   
- **實作指示**  
+ <span data-ttu-id="e3280-168">**實作指示**</span><span class="sxs-lookup"><span data-stu-id="e3280-168">**Implementation Instructions**</span></span>  
   
- 從 <xref:System.Windows.Media.Animation.AnimationTimeline> 類別衍生並覆寫下列成員：  
+ <span data-ttu-id="e3280-169">衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>類別並覆寫下列成員：</span><span class="sxs-lookup"><span data-stu-id="e3280-169">Derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class and override the following members:</span></span>  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – 如果您的新類別是具象類別，則必須覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A>，以傳回類別的新執行個體。  
+-   <span data-ttu-id="e3280-170"><xref:System.Windows.Freezable.CreateInstanceCore%2A>– 如果您的新類別為固定，您必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>傳回類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="e3280-170"><xref:System.Windows.Freezable.CreateInstanceCore%2A> – If your new class is concrete, you must override <xref:System.Windows.Freezable.CreateInstanceCore%2A> to return a new instance of your class.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – 覆寫這個方法以傳回動畫的目前值。  它採用三個參數：預設起始值、預設目的值和 <xref:System.Windows.Media.Animation.AnimationClock>。  使用 <xref:System.Windows.Media.Animation.AnimationClock> 來取得動畫的目前時間或進度。  您可以選擇是否使用預設起始值和目的值。  
+-   <span data-ttu-id="e3280-171"><xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>-覆寫此方法以傳回目前的動畫值。</span><span class="sxs-lookup"><span data-stu-id="e3280-171"><xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Override this method to return the current value of your animation.</span></span> <span data-ttu-id="e3280-172">它會採用三個參數： 預設的原始值、 預設目的地值和<xref:System.Windows.Media.Animation.AnimationClock>。</span><span class="sxs-lookup"><span data-stu-id="e3280-172">It takes three parameters: a default origin value, a default destination value, and an <xref:System.Windows.Media.Animation.AnimationClock>.</span></span> <span data-ttu-id="e3280-173">使用<xref:System.Windows.Media.Animation.AnimationClock>以取得目前的時間或動畫進度。</span><span class="sxs-lookup"><span data-stu-id="e3280-173">Use the <xref:System.Windows.Media.Animation.AnimationClock> to obtain the current time or progress for the animation.</span></span> <span data-ttu-id="e3280-174">您可以選擇是否要使用預設的來源和目的值。</span><span class="sxs-lookup"><span data-stu-id="e3280-174">You can choose whether to use the default origin and destination values.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – 覆寫這個屬性，以指出您的動畫是否使用由 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> 方法指定的預設目的值。  
+-   <span data-ttu-id="e3280-175"><xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>-覆寫這個屬性，指出動畫是否使用所指定的預設目的地值<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-175"><xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Override this property to indicate whether your animation uses the default destination value specified by the <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> method.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – 覆寫這個屬性，以指出您的動畫所產生之輸出的 <xref:System.Type>。  
+-   <span data-ttu-id="e3280-176"><xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>-覆寫這個屬性，指出<xref:System.Type>動畫所產生的輸出。</span><span class="sxs-lookup"><span data-stu-id="e3280-176"><xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Override this property to indicate the <xref:System.Type> of output your animation produces.</span></span>  
   
- 如果此類別不使用[相依性屬性](GTMT)來儲存其資料，或者在建立之後需要額外進行初始化，您就必須覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="e3280-177">如果類別不使用相依性屬性來儲存其資料或需要在建立之後額外進行初始化，您可能需要覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e3280-177">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 建議的開發架構 \(Paradigm\) \(由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫採用\) 就是使用兩個繼承 \(Inheritance\) 層級：  
+ <span data-ttu-id="e3280-178">建議的範例 (由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫使用) 是使用兩個繼承層級︰</span><span class="sxs-lookup"><span data-stu-id="e3280-178">The recommended paradigm (used by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animations) is to use two inheritance levels:</span></span>  
   
-1.  建立衍生自 <xref:System.Windows.Media.Animation.AnimationTimeline> 的抽象 *\<Type\>*AnimationBase 類別。  這個類別應該覆寫 <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> 方法。  它也應該會引入新的抽象方法 GetCurrentValueCore 並覆寫 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便驗證預設起始值和預設目的值參數的型別，然後再呼叫 GetCurrentValueCore。  
+1.  <span data-ttu-id="e3280-179">建立一種抽象*\<類型 >*AnimationBase 類別衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>。</span><span class="sxs-lookup"><span data-stu-id="e3280-179">Create an abstract *\<Type>*AnimationBase class that derives from <xref:System.Windows.Media.Animation.AnimationTimeline>.</span></span> <span data-ttu-id="e3280-180">這個類別應該覆寫<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-180">This class should override the <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> method.</span></span> <span data-ttu-id="e3280-181">應該還會引進新的抽象方法，GetCurrentValueCore，並覆寫<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>驗證預設的原始值和預設目的地值參數的類型，然後呼叫 GetCurrentValueCore。</span><span class="sxs-lookup"><span data-stu-id="e3280-181">It should also introduce a new abstract method, GetCurrentValueCore, and override <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> so that it validates the types of the default origin value and default destination value parameters, then calls GetCurrentValueCore.</span></span>  
   
-2.  建立另一個會繼承自新 *\<Type\>*AnimationBase 類別的類別，並覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 方法、您引入的 GetCurrentValueCore 方法和 <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> 屬性。  
+2.  <span data-ttu-id="e3280-182">建立另一個類別繼承從您的新*\<類型 >*AnimationBase 類別並覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法，則您導入，此 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="e3280-182">Create another class that inherits from your new *\<Type>*AnimationBase class and overrides the <xref:System.Windows.Freezable.CreateInstanceCore%2A> method, the GetCurrentValueCore method that you introduced, and the <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> property.</span></span>  
   
- **替代方法**  
+ <span data-ttu-id="e3280-183">**替代方法**</span><span class="sxs-lookup"><span data-stu-id="e3280-183">**Alternative Approaches**</span></span>  
   
- 如果您要以動畫顯示沒有對應 From\/To\/By 動畫或主要畫面格動畫的型別，請考慮使用 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>。  因為它是弱型別，所以 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 可以以動畫顯示任何型別的值。  這個方法的缺點為 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 只支援[離散插補](GTMT)。  
+ <span data-ttu-id="e3280-184">如果您想要製作動畫沒有對應 From/To/By 動畫或主要畫面格動畫的類型，請考慮使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>。</span><span class="sxs-lookup"><span data-stu-id="e3280-184">If you want to animate a type that has no corresponding From/To/By animation or key-frame animation, consider using an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>.</span></span> <span data-ttu-id="e3280-185">這是弱式型別，因為<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>可以動畫顯示任何類型的值。</span><span class="sxs-lookup"><span data-stu-id="e3280-185">Because it is weakly typed, an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> can animate any type of value.</span></span> <span data-ttu-id="e3280-186">這個方法的缺點在於<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>僅支援離散插補。</span><span class="sxs-lookup"><span data-stu-id="e3280-186">The drawback to this approach is that <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> only supports discrete interpolation.</span></span>  
   
 <a name="useperframecallback"></a>   
-## 使用單格回呼  
- 當您需要完全略過 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統時，請使用此方法。  此方法的其中一個案例就是物理動畫，其中的每個動畫步驟都需要根據最後一組物件互動而重新計算動畫物件的新方向或位置。  
+## <a name="use-per-frame-callback"></a><span data-ttu-id="e3280-187">使用每一畫面的回呼</span><span class="sxs-lookup"><span data-stu-id="e3280-187">Use Per-Frame Callback</span></span>  
+ <span data-ttu-id="e3280-188">當您需要完全略過 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統時，使用此方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-188">Use this approach when you need to completely bypass the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system.</span></span> <span data-ttu-id="e3280-189">此方法的一個案例為物理動畫，其中的每個動畫步驟都需要根據最後一組物件互動來重新計算動畫物件的新方向或位置。</span><span class="sxs-lookup"><span data-stu-id="e3280-189">One scenario for this approach is physics animations, where at each animation step a new direction or position of animated objects needs to be recomputed based on the  last set of object interactions.</span></span>  
   
- **實作指示**  
+ <span data-ttu-id="e3280-190">**實作指示**</span><span class="sxs-lookup"><span data-stu-id="e3280-190">**Implementation Instructions**</span></span>  
   
- 與本概觀所描述的其他方法不同，若要使用單格回呼，您不必建立自訂動畫或主要畫面格類別。  
+ <span data-ttu-id="e3280-191">和本概觀中所述的其他方法不同，若要使用每一畫面的回呼，您不需要建立自訂動畫或主要畫面格類別。</span><span class="sxs-lookup"><span data-stu-id="e3280-191">Unlike the other approaches described in this overview, to use per-frame callback you don't need to create a custom animation or key frame class.</span></span>  
   
- 您應改為註冊物件的 <xref:System.Windows.Media.CompositionTarget.Rendering> 事件，其中包含您要以動畫顯示的物件。  每個畫面格都會呼叫此事件處理常式方法一次。  每次 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 將[視覺化樹狀結構](GTMT)中保留的呈現資料封送處理至複合樹狀結構，就會呼叫事件處理常式方法。  
+ <span data-ttu-id="e3280-192">相反地，您註冊<xref:System.Windows.Media.CompositionTarget.Rendering>事件包含您想要建立動畫之的物件的物件。</span><span class="sxs-lookup"><span data-stu-id="e3280-192">Instead, you register for the <xref:System.Windows.Media.CompositionTarget.Rendering> event of the object that contains the objects you want to animate.</span></span> <span data-ttu-id="e3280-193">系統會針對每個畫面呼叫一次此事件處理常式方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-193">This event handler method gets called once per frame.</span></span> <span data-ttu-id="e3280-194">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 每次封送處理視覺化樹狀結構中已保存的轉譯資料，跨越到組合樹狀結構時，就會呼叫您的事件處理常式方法。</span><span class="sxs-lookup"><span data-stu-id="e3280-194">Each time that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] marshals the persisted rendering data in the visual tree across to the composition tree, your event handler method is called.</span></span>  
   
- 在事件處理常式中，執行動畫效果所需的所有計算，並設定您要用這些值來動畫顯示之物件的屬性。  
+ <span data-ttu-id="e3280-195">在事件處理常式中，執行動畫效果所需的任何計算，並使用這些值設定您想要建立動畫的物件屬性。</span><span class="sxs-lookup"><span data-stu-id="e3280-195">In your event handler, perform your whatever calculations necessary for your animation effect and set the properties of the objects you want to animate with these values.</span></span>  
   
- 若要取得目前畫面格的展示時間，可以將與此事件相關聯的 <xref:System.EventArgs> 轉型為 <xref:System.Windows.Media.RenderingEventArgs>，以提供您可用來取得目前畫面格呈現時間的 <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> 屬性。  
+ <span data-ttu-id="e3280-196">若要取得目前的框架，簡報時<xref:System.EventArgs>與此相關聯事件可以轉換成<xref:System.Windows.Media.RenderingEventArgs>，這兩個提供<xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A>屬性，可用來取得目前的畫面格的轉譯時間。</span><span class="sxs-lookup"><span data-stu-id="e3280-196">To obtain the presentation time of the current frame, the <xref:System.EventArgs> associated with this event can be cast as <xref:System.Windows.Media.RenderingEventArgs>, which provide a <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> property that you can use to obtain the current frame's rendering time.</span></span>  
   
- 如需詳細資訊，請參閱 <xref:System.Windows.Media.CompositionTarget.Rendering> 頁面。  
+ <span data-ttu-id="e3280-197">如需詳細資訊，請參閱<xref:System.Windows.Media.CompositionTarget.Rendering>頁面。</span><span class="sxs-lookup"><span data-stu-id="e3280-197">For more information, see the <xref:System.Windows.Media.CompositionTarget.Rendering> page.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.Animation.AnimationTimeline>   
- <xref:System.Windows.Media.Animation.IKeyFrame>   
- [建立屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [From\/To\/By 動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)   
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [路徑動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)   
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)   
- [自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981)
+## <a name="see-also"></a><span data-ttu-id="e3280-198">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e3280-198">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.AnimationTimeline>  
+ <xref:System.Windows.Media.Animation.IKeyFrame>  
+ [<span data-ttu-id="e3280-199">屬性動畫技術概觀</span><span class="sxs-lookup"><span data-stu-id="e3280-199">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
+ [<span data-ttu-id="e3280-200">Freezable 物件概觀</span><span class="sxs-lookup"><span data-stu-id="e3280-200">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="e3280-201">主要畫面格動畫概觀</span><span class="sxs-lookup"><span data-stu-id="e3280-201">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="e3280-202">路徑動畫概觀</span><span class="sxs-lookup"><span data-stu-id="e3280-202">Path Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
+ [<span data-ttu-id="e3280-203">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="e3280-203">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="e3280-204">動畫和計時系統概觀</span><span class="sxs-lookup"><span data-stu-id="e3280-204">Animation and Timing System Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [<span data-ttu-id="e3280-205">自訂動畫範例</span><span class="sxs-lookup"><span data-stu-id="e3280-205">Custom Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159981)

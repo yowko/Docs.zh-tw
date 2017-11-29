@@ -1,40 +1,45 @@
 ---
-title: "HOW TO：使用 SecurityBindingElement 建立自訂繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全性 [WCF]，建立自訂繫結"
+title: "HOW TO：使用 SecurityBindingElement 建立自訂繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用 SecurityBindingElement 建立自訂繫結
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括數個系統提供之繫結，您可以對這些繫結進行設定，但是自訂這些繫結並不具有設定所有安全性選項時 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的完整彈性。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立自訂繫結，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a><span data-ttu-id="cb3d4-102">HOW TO：使用 SecurityBindingElement 建立自訂繫結</span><span class="sxs-lookup"><span data-stu-id="cb3d4-102">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="cb3d4-103"> 包括數個系統提供之繫結，您可以對這些繫結進行設定，但是自訂這些繫結並不具有設定所有安全性選項時 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的完整彈性。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-103"> includes several system-provided bindings that can be configured but do not provide full flexibility when configuring all the security options that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports.</span></span> <span data-ttu-id="cb3d4-104">本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-104">This topic demonstrates how to create a custom binding directly from individual binding elements and highlights some of the security settings that can be specified when creating such a binding.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cb3d4-105">建立自訂繫結，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-105"> creating custom bindings, see [Extending Bindings](../../../../docs/framework/wcf/extending/extending-bindings.md).</span></span>  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement>不支援<xref:System.ServiceModel.Channels.IDuplexSessionChannel>通道圖案，也就是使用的預設通道圖案 tcp 傳輸時<xref:System.ServiceModel.TransferMode>設為<xref:System.ServiceModel.TransferMode.Buffered>。 您必須設定<xref:System.ServiceModel.TransferMode>至<xref:System.ServiceModel.TransferMode.Streamed>才能使用<xref:System.ServiceModel.Channels.SecurityBindingElement>在此案例中。  
+>  <span data-ttu-id="cb3d4-106"><xref:System.ServiceModel.Channels.SecurityBindingElement> 不支援 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道圖案，當 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Buffered> 時，這是 TCP 傳輸使用的預設通道圖案。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-106"><xref:System.ServiceModel.Channels.SecurityBindingElement> does not support the <xref:System.ServiceModel.Channels.IDuplexSessionChannel> channel shape, which is the default channel shape use by the TCP transport when <xref:System.ServiceModel.TransferMode> is set to <xref:System.ServiceModel.TransferMode.Buffered>.</span></span> <span data-ttu-id="cb3d4-107">您必須將 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Streamed>，才能在這個情況中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-107">You must set <xref:System.ServiceModel.TransferMode> to <xref:System.ServiceModel.TransferMode.Streamed> in order to use <xref:System.ServiceModel.Channels.SecurityBindingElement> in this scenario.</span></span>  
   
-## <a name="creating-a-custom-binding"></a>建立自訂繫結  
- 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]所有繫結所組成*繫結項目*。 每個繫結項目衍生自<xref:System.ServiceModel.Channels.BindingElement>類別。 如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。  
+## <a name="creating-a-custom-binding"></a><span data-ttu-id="cb3d4-108">建立自訂繫結</span><span class="sxs-lookup"><span data-stu-id="cb3d4-108">Creating a Custom Binding</span></span>  
+ <span data-ttu-id="cb3d4-109">在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]所有繫結所組成*繫結項目*。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-109">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] all bindings are made up of *binding elements*.</span></span> <span data-ttu-id="cb3d4-110">每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-110">Each binding element derives from the <xref:System.ServiceModel.Channels.BindingElement> class.</span></span> <span data-ttu-id="cb3d4-111">如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-111">For the standard system-provided bindings, the binding elements are created and configured for you, although you can customize some of the property settings.</span></span>  
   
- 相反地，若要建立自訂繫結，繫結項目所建立及設定和<xref:System.ServiceModel.Channels.CustomBinding>建立從繫結項目。  
+ <span data-ttu-id="cb3d4-112">相反的，若要建立自訂繫結，會建立並且設定繫結項目，並且從自訂項目建立一個<xref:System.ServiceModel.Channels.CustomBinding>。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-112">In contrast, to create a custom binding, binding elements are created and configured and a <xref:System.ServiceModel.Channels.CustomBinding> is created from the binding elements.</span></span>  
   
- 若要這樣做，個別的繫結項目加入集合的執行個體所代表<xref:System.ServiceModel.Channels.BindingElementCollection>類別，然後再設定`Elements`屬性`CustomBinding`等同於該物件。 必須按照下列順序加入繫結項目：Transaction Flow、Reliable Session、Security、Composite Duplex、One-way、Stream Security、Message Encoding 然後是 Transport。 請注意，並非每個繫結都需要所列的所有繫結項目。  
+ <span data-ttu-id="cb3d4-113">若要進行這個步驟，您可以將個別的繫結項目加入到由 <xref:System.ServiceModel.Channels.BindingElementCollection>`Elements`類別之執行個體所表示的集合，然後，將 `CustomBinding`的 屬性設定為等同於該物件的項目。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-113">To do this, you add the individual binding elements to a collection represented by an instance of the <xref:System.ServiceModel.Channels.BindingElementCollection> class, and then set the `Elements` property of the `CustomBinding` equal to that object.</span></span> <span data-ttu-id="cb3d4-114">必須按照下列順序加入繫結項目：Transaction Flow、Reliable Session、Security、Composite Duplex、One-way、Stream Security、Message Encoding 然後是 Transport。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-114">You must add the binding elements in the following order: Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding, and Transport.</span></span> <span data-ttu-id="cb3d4-115">請注意，並非每個繫結都需要所列的所有繫結項目。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-115">Note that not all the binding elements listed are required in every binding.</span></span>  
   
-## <a name="securitybindingelement"></a>SecurityBindingElement  
- 三個繫結項目與訊息層級安全性，其中都衍生自<xref:System.ServiceModel.Channels.SecurityBindingElement>類別。 三種<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>， <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>，和<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>用於提供混合的模式安全性。 當訊息層提供安全性時，則使用另外兩個項目。  
+## <a name="securitybindingelement"></a><span data-ttu-id="cb3d4-116">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-116">SecurityBindingElement</span></span>  
+ <span data-ttu-id="cb3d4-117">有三個繫結項目與訊息層級安全性相關，這些項目全都衍生自 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-117">Three binding elements relate to message level security, all of which derive from the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span> <span data-ttu-id="cb3d4-118">這三個項目分別是 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-118">The three are <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, and <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>.</span></span> <span data-ttu-id="cb3d4-119"><xref:System.ServiceModel.Channels.TransportSecurityBindingElement> 用於提供混合模式安全性。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-119">The <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> is used to provide Mixed mode security.</span></span> <span data-ttu-id="cb3d4-120">當訊息層提供安全性時，則使用另外兩個項目。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-120">The other two elements are used when the message layer provides security.</span></span>  
   
- 當傳輸層提供安全性時，會使用其他的類別：  
+ <span data-ttu-id="cb3d4-121">當傳輸層提供安全性時，會使用其他的類別：</span><span class="sxs-lookup"><span data-stu-id="cb3d4-121">Additional classes are used when transport level security is provided:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
@@ -42,78 +47,78 @@ caps.handback.revision: 19
   
 -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-## <a name="required-binding-elements"></a>必要的繫結項目  
- 有很多可能的繫結項目可以與任一繫結進行結合。 但是並非所有的組合都有效。 本節會說明安全性繫結中必須要有的項目。  
+## <a name="required-binding-elements"></a><span data-ttu-id="cb3d4-122">必要的繫結項目</span><span class="sxs-lookup"><span data-stu-id="cb3d4-122">Required Binding Elements</span></span>  
+ <span data-ttu-id="cb3d4-123">有很多可能的繫結項目可以與任一繫結進行結合。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-123">There are a large number of possible binding elements that can be combined into a binding.</span></span> <span data-ttu-id="cb3d4-124">但是並非所有的組合都有效。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-124">Not all of these combinations are valid.</span></span> <span data-ttu-id="cb3d4-125">本節會說明安全性繫結中必須要有的項目。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-125">This section describes the required elements that must be present in a security binding.</span></span>  
   
- 有效的安全性繫結會因為許多因素而異，包括：  
+ <span data-ttu-id="cb3d4-126">有效的安全性繫結會因為許多因素而異，包括：</span><span class="sxs-lookup"><span data-stu-id="cb3d4-126">Valid security bindings depend on many factors, including the following:</span></span>  
   
--   安全性模式。  
+-   <span data-ttu-id="cb3d4-127">安全性模式。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-127">Security mode.</span></span>  
   
--   傳輸通訊協定。  
+-   <span data-ttu-id="cb3d4-128">傳輸通訊協定。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-128">Transport protocol.</span></span>  
   
--   合約中指定的訊息交換模式 (MEP)。  
+-   <span data-ttu-id="cb3d4-129">合約中指定的訊息交換模式 (MEP)。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-129">The message exchange pattern (MEP) specified in the contract.</span></span>  
   
- 下表針對前述的因素，列出每一個組合的有效繫結項目堆疊組態。 請注意，這些都是基本需求。 您可以將其他繫結項目加入繫結中，如訊息編碼繫結項目、交易繫結項目以及其他繫結項目。  
+ <span data-ttu-id="cb3d4-130">下表針對前述的因素，列出每一個組合的有效繫結項目堆疊組態。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-130">The following table shows the valid binding element stack configurations for each combination of the preceding factors.</span></span> <span data-ttu-id="cb3d4-131">請注意，這些都是基本需求。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-131">Note that these are minimal requirements.</span></span> <span data-ttu-id="cb3d4-132">您可以將其他繫結項目加入繫結中，如訊息編碼繫結項目、交易繫結項目以及其他繫結項目。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-132">You can add additional binding elements to the binding, such as message encoding binding elements, transaction binding elements, and other binding elements.</span></span>  
   
-|安全性模式|Transport|合約訊息交換模式|合約訊息交換模式|合約訊息交換模式|  
+|<span data-ttu-id="cb3d4-133">安全性模式</span><span class="sxs-lookup"><span data-stu-id="cb3d4-133">Security Mode</span></span>|<span data-ttu-id="cb3d4-134">Transport</span><span class="sxs-lookup"><span data-stu-id="cb3d4-134">Transport</span></span>|<span data-ttu-id="cb3d4-135">合約訊息交換模式</span><span class="sxs-lookup"><span data-stu-id="cb3d4-135">Contract Message Exchange Pattern</span></span>|<span data-ttu-id="cb3d4-136">合約訊息交換模式</span><span class="sxs-lookup"><span data-stu-id="cb3d4-136">Contract Message Exchange Pattern</span></span>|<span data-ttu-id="cb3d4-137">合約訊息交換模式</span><span class="sxs-lookup"><span data-stu-id="cb3d4-137">Contract Message Exchange Pattern</span></span>|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
 |||`Datagram`|`Request Reply`|`Duplex`|  
-|Transport|Https||||  
-|||OneWayBindingElement|||  
-|||HttpsTransportBindingElement|HttpsTransportBindingElement||  
-||TCP||||  
-|||OneWayBindingElement|||  
-|||SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|訊息|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (驗證模式 = SecureConversation)|  
-|||||CompositeDuplexBindingElement|  
-|||OneWayBindingElement||OneWayBindingElement|  
-|||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
-||Tcp|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (驗證模式 = SecureConversation)|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|混合式 (使用訊息認證的傳輸)|Https|TransportSecurityBindingElement|TransportSecurityBindingElement||  
-|||OneWayBindingElement|||  
-|||HttpsTransportBindingElement|HttpsTransportBindingElement||  
-||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (驗證模式 = SecureConversation)|SymmetricSecurityBindingElement (驗證模式 = SecureConversation)|  
-|||OneWayBindingElement|||  
-|||SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
+|<span data-ttu-id="cb3d4-138">Transport</span><span class="sxs-lookup"><span data-stu-id="cb3d4-138">Transport</span></span>|<span data-ttu-id="cb3d4-139">Https</span><span class="sxs-lookup"><span data-stu-id="cb3d4-139">Https</span></span>||||  
+|||<span data-ttu-id="cb3d4-140">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-140">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="cb3d4-141">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-141">HttpsTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-142">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-142">HttpsTransportBindingElement</span></span>||  
+||<span data-ttu-id="cb3d4-143">TCP</span><span class="sxs-lookup"><span data-stu-id="cb3d4-143">TCP</span></span>||||  
+|||<span data-ttu-id="cb3d4-144">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-144">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="cb3d4-145">SSL 或 Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-145">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-146">SSL 或 Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-146">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-147">SSL 或 Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-147">SSL or Windows StreamSecurityBindingElement</span></span>|  
+|||<span data-ttu-id="cb3d4-148">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-148">TcpTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-149">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-149">TcpTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-150">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-150">TcpTransportBindingElement</span></span>|  
+|<span data-ttu-id="cb3d4-151">訊息</span><span class="sxs-lookup"><span data-stu-id="cb3d4-151">Message</span></span>|<span data-ttu-id="cb3d4-152">Http</span><span class="sxs-lookup"><span data-stu-id="cb3d4-152">Http</span></span>|<span data-ttu-id="cb3d4-153">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-153">SymmetricSecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-154">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-154">SymmetricSecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-155">SymmetricSecurityBindingElement (驗證模式 = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="cb3d4-155">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||||<span data-ttu-id="cb3d4-156">CompositeDuplexBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-156">CompositeDuplexBindingElement</span></span>|  
+|||<span data-ttu-id="cb3d4-157">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-157">OneWayBindingElement</span></span>||<span data-ttu-id="cb3d4-158">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-158">OneWayBindingElement</span></span>|  
+|||<span data-ttu-id="cb3d4-159">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-159">HttpTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-160">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-160">HttpTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-161">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-161">HttpTransportBindingElement</span></span>|  
+||<span data-ttu-id="cb3d4-162">Tcp</span><span class="sxs-lookup"><span data-stu-id="cb3d4-162">Tcp</span></span>|<span data-ttu-id="cb3d4-163">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-163">SecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-164">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-164">SecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-165">SymmetricSecurityBindingElement (驗證模式 = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="cb3d4-165">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||<span data-ttu-id="cb3d4-166">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-166">TcpTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-167">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-167">TcpTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-168">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-168">TcpTransportBindingElement</span></span>|  
+|<span data-ttu-id="cb3d4-169">混合式 (使用訊息認證的傳輸)</span><span class="sxs-lookup"><span data-stu-id="cb3d4-169">Mixed (transport with message credentials)</span></span>|<span data-ttu-id="cb3d4-170">Https</span><span class="sxs-lookup"><span data-stu-id="cb3d4-170">Https</span></span>|<span data-ttu-id="cb3d4-171">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-171">TransportSecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-172">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-172">TransportSecurityBindingElement</span></span>||  
+|||<span data-ttu-id="cb3d4-173">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-173">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="cb3d4-174">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-174">HttpsTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-175">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-175">HttpsTransportBindingElement</span></span>||  
+||<span data-ttu-id="cb3d4-176">TCP</span><span class="sxs-lookup"><span data-stu-id="cb3d4-176">TCP</span></span>|<span data-ttu-id="cb3d4-177">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-177">TransportSecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-178">SymmetricSecurityBindingElement (驗證模式 = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="cb3d4-178">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|<span data-ttu-id="cb3d4-179">SymmetricSecurityBindingElement (驗證模式 = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="cb3d4-179">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||<span data-ttu-id="cb3d4-180">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-180">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="cb3d4-181">SSL 或 Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-181">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-182">SSL 或 Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-182">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="cb3d4-183">SSL 或 Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-183">SSL or Windows StreamSecurityBindingElement</span></span>|  
+|||<span data-ttu-id="cb3d4-184">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-184">TcpTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-185">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-185">TcpTransportBindingElement</span></span>|<span data-ttu-id="cb3d4-186">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb3d4-186">TcpTransportBindingElement</span></span>|  
   
- 請注意，SecurityBindingElements 有許多可以設定的項目。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
+ <span data-ttu-id="cb3d4-187">請注意，SecurityBindingElements 有許多可以設定的項目。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-187">Note that there are many configurable settings on the SecurityBindingElements.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="cb3d4-188">[SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-188"> [SecurityBindingElement Authentication Modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="cb3d4-189">[安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-189"> [Secure Conversations and Secure Sessions](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).</span></span>  
   
-## <a name="procedures"></a>程序  
+## <a name="procedures"></a><span data-ttu-id="cb3d4-190">程序</span><span class="sxs-lookup"><span data-stu-id="cb3d4-190">Procedures</span></span>  
   
-#### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>若要建立使用 SymmetricSecurityBindingElement 的自訂繫結  
+#### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a><span data-ttu-id="cb3d4-191">若要建立使用 SymmetricSecurityBindingElement 的自訂繫結</span><span class="sxs-lookup"><span data-stu-id="cb3d4-191">To create a custom binding that uses a SymmetricSecurityBindingElement</span></span>  
   
-1.  建立的執行個體<xref:System.ServiceModel.Channels.BindingElementCollection>類別名稱`outputBec`。  
+1.  <span data-ttu-id="cb3d4-192">建立名稱為 <xref:System.ServiceModel.Channels.BindingElementCollection> 之 `outputBec` 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-192">Create an instance of the <xref:System.ServiceModel.Channels.BindingElementCollection> class with the name `outputBec`.</span></span>  
   
-2.  呼叫靜態方法`M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`，它會傳回的執行個體<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>類別。  
+2.  <span data-ttu-id="cb3d4-193">呼叫靜態方法 `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`，此方法會傳回 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>類別。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-193">Call the static method `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, which returns an instance of the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> class.</span></span>  
   
-3.  新增<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>集合 (`outputBec`) 藉由呼叫`Add`方法<xref:System.Collections.ObjectModel.Collection%601>的<xref:System.ServiceModel.Channels.BindingElement>類別。  
+3.  <span data-ttu-id="cb3d4-194">將 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 新增至集合 (`outputBec`)，方法是呼叫 `Add` 類別其 <xref:System.Collections.ObjectModel.Collection%601> 的 <xref:System.ServiceModel.Channels.BindingElement> 方法。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-194">Add the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> to the collection (`outputBec`) by calling the `Add` method of the <xref:System.Collections.ObjectModel.Collection%601> of <xref:System.ServiceModel.Channels.BindingElement> class.</span></span>  
   
-4.  建立的執行個體<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>類別，並將它加入至集合 (`outputBec`)。 這會指定繫結使用的編碼方式。  
+4.  <span data-ttu-id="cb3d4-195">建立 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 類別的執行個體，並將它新增至集合 (`outputBec`)。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-195">Create an instance of the <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> class and add it to the collection (`outputBec`).</span></span> <span data-ttu-id="cb3d4-196">這會指定繫結使用的編碼方式。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-196">This specifies the encoding used by the binding.</span></span>  
   
-5.  建立<xref:System.ServiceModel.Channels.HttpTransportBindingElement>並將它加入至集合 (`outputBec`)。 這會指定繫結要使用 HTTP 傳輸。  
+5.  <span data-ttu-id="cb3d4-197">建立 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，並將它新增至集合 (`outputBec`)。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-197">Create a <xref:System.ServiceModel.Channels.HttpTransportBindingElement> and add it to the collection (`outputBec`).</span></span> <span data-ttu-id="cb3d4-198">這會指定繫結要使用 HTTP 傳輸。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-198">This specifies that the binding uses the HTTP transport.</span></span>  
   
-6.  建立新的自訂繫結所建立的執行個體<xref:System.ServiceModel.Channels.CustomBinding>類別，且傳遞集合`outputBec`建構函式。  
+6.  <span data-ttu-id="cb3d4-199">建立新自訂繫結，方式是建立 <xref:System.ServiceModel.Channels.CustomBinding> 類別的執行個體，並將 `outputBec` 集合傳遞至建構函式。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-199">Create a new custom binding by creating an instance of the <xref:System.ServiceModel.Channels.CustomBinding> class and passing the collection `outputBec` to the constructor.</span></span>  
   
-7.  產生的自訂繫結共用許多相同的特性標準<xref:System.ServiceModel.WSHttpBinding>。 它會指定訊息層級安全性和 Windows 認證，但停用安全工作階段，並要求指定超出範圍的認證，且不會加密簽章。 最後一個可以控制只是藉由設定<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>步驟 4 中所示的屬性。 其他兩項可透過使用標準繫結上的設定來控制。  
+7.  <span data-ttu-id="cb3d4-200">產生的自訂繫結會有許多與標準 <xref:System.ServiceModel.WSHttpBinding> 相同的特性。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-200">The resulting custom binding shares many of the same characteristics as the standard <xref:System.ServiceModel.WSHttpBinding>.</span></span> <span data-ttu-id="cb3d4-201">它會指定訊息層級安全性和 Windows 認證，但停用安全工作階段，並要求指定超出範圍的認證，且不會加密簽章。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-201">It specifies message-level security and Windows credentials but disables secure sessions, requires that the service credential be specified out-of-band, and does not encrypt signatures.</span></span> <span data-ttu-id="cb3d4-202">最後一項只能透過依照步驟 4 的方式設定 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 屬性來控制，其他兩項可透過使用標準繫結上的設定來控制。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-202">The last can be controlled only by setting the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> property as shown in step 4.</span></span> <span data-ttu-id="cb3d4-203">其他兩項可透過使用標準繫結上的設定來控制。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-203">The other two can be controlled using settings on the standard binding.</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="cb3d4-204">範例</span><span class="sxs-lookup"><span data-stu-id="cb3d4-204">Example</span></span>  
   
-### <a name="description"></a>說明  
- 下列範例提供完整的函式來建立使用自訂繫結<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
+### <a name="description"></a><span data-ttu-id="cb3d4-205">描述</span><span class="sxs-lookup"><span data-stu-id="cb3d4-205">Description</span></span>  
+ <span data-ttu-id="cb3d4-206">下列範例提供完整的函式，可建立使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 的自訂繫結。</span><span class="sxs-lookup"><span data-stu-id="cb3d4-206">The following example provides a complete function to create a custom binding that uses a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span></span>  
   
-### <a name="code"></a>程式碼  
+### <a name="code"></a><span data-ttu-id="cb3d4-207">程式碼</span><span class="sxs-lookup"><span data-stu-id="cb3d4-207">Code</span></span>  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>   
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [系統提供繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="cb3d4-208">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cb3d4-208">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="cb3d4-209">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="cb3d4-209">Extending Bindings</span></span>](../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="cb3d4-210">系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="cb3d4-210">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)

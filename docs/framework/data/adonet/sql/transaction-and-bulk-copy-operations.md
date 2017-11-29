@@ -1,68 +1,74 @@
 ---
-title: "交易和大量複製作業 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "異動和大量複製作業"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5cf7422fe1c007077e88b9171c4071168ec68fb5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 交易和大量複製作業
-大量複製作業可做為隔離作業或多步驟交易的其中一個執行步驟。  第二種選項可讓您在同一交易內執行多個大量複製作業，並執行其他資料庫作業 \(例如插入、更新及刪除\)，同時仍然能夠認可或回復整個交易。  
+# <a name="transaction-and-bulk-copy-operations"></a><span data-ttu-id="36461-102">異動和大量複製作業</span><span class="sxs-lookup"><span data-stu-id="36461-102">Transaction and Bulk Copy Operations</span></span>
+<span data-ttu-id="36461-103">大量複製作業可做為隔離作業或多步驟異動的其中一個執行步驟。</span><span class="sxs-lookup"><span data-stu-id="36461-103">Bulk copy operations can be performed as isolated operations or as part of a multiple step transaction.</span></span> <span data-ttu-id="36461-104">第二種選項可讓您在同一交易內執行多個大量複製作業，並執行其他資料庫作業 (例如插入、更新及刪除)，同時仍然能夠認可或回復整個交易。</span><span class="sxs-lookup"><span data-stu-id="36461-104">This latter option enables you to perform more than one bulk copy operation within the same transaction, as well as perform other database operations (such as inserts, updates, and deletes) while still being able to commit or roll back the entire transaction.</span></span>  
   
- 根據預設，大量複製作業會做為隔離作業執行。  大量複製作業會以非交易性方式進行，而且無法回復。  如果需要在發生錯誤時，復原全部或部分大量複製，您可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 管理的交易，在現有交易內執行大量複製作業，或在 **System.Transactions** <xref:System.Transactions.Transaction> 中登記。  
+ <span data-ttu-id="36461-105">根據預設，大量複製作業會做為隔離作業執行。</span><span class="sxs-lookup"><span data-stu-id="36461-105">By default, a bulk copy operation is performed as an isolated operation.</span></span> <span data-ttu-id="36461-106">大量複製作業會以非異動性方式進行，而且無法回復。</span><span class="sxs-lookup"><span data-stu-id="36461-106">The bulk copy operation occurs in a non-transacted way, with no opportunity for rolling it back.</span></span> <span data-ttu-id="36461-107">如果您需要復原全部或部分大量複製中發生錯誤時，您可以使用<xref:System.Data.SqlClient.SqlBulkCopy>-管理交易，在執行大量複製作業，在現有的交易中或已登錄在**System.Transactions** <xref:System.Transactions.Transaction>.</span><span class="sxs-lookup"><span data-stu-id="36461-107">If you need to roll back all or part of the bulk copy when an error occurs, you can use a <xref:System.Data.SqlClient.SqlBulkCopy>-managed transaction, perform the bulk copy operation within an existing transaction, or be enlisted in a **System.Transactions**<xref:System.Transactions.Transaction>.</span></span>  
   
-## 執行非交易大量複製作業  
- 下列主控台應用程式 \(Console Application\) 會顯示非交易大量複製作業在作業過程中發生錯誤時的狀況。  
+## <a name="performing-a-non-transacted-bulk-copy-operation"></a><span data-ttu-id="36461-108">執行非交易大量複製作業</span><span class="sxs-lookup"><span data-stu-id="36461-108">Performing a Non-transacted Bulk Copy Operation</span></span>  
+ <span data-ttu-id="36461-109">下列主控台應用程式 (Console Application) 會顯示非交易大量複製作業在作業過程中發生錯誤時的狀況。</span><span class="sxs-lookup"><span data-stu-id="36461-109">The following Console application shows what happens when a non-transacted bulk copy operation encounters an error partway through the operation.</span></span>  
   
- 在範例中，來源資料表及目標資料表都包含名為 **ProductID** 的 `Identity` 資料行。  首先，程式碼會透過刪除所有資料列然後插入其 **ProductID** 已存在於來源資料表中的單一資料列，來準備目標資料表。  依預設會在目標資料表中，為每個加入之資料列的 `Identity` 資料行產生新的值。  在此範例中，開啟連接時會設定選項，以強制大量載入處理序使用來源資料表中的 `Identity` 值。  
+ <span data-ttu-id="36461-110">在此範例中，來源資料表和目的地資料表每個包含`Identity`名為資料行**ProductID**。</span><span class="sxs-lookup"><span data-stu-id="36461-110">In the example, the source table and destination table each include an `Identity` column named **ProductID**.</span></span> <span data-ttu-id="36461-111">程式碼會先準備目的地資料表刪除所有資料列，然後插入單一資料列**ProductID**已存在於來源資料表中。</span><span class="sxs-lookup"><span data-stu-id="36461-111">The code first prepares the destination table by deleting all rows and then inserting a single row whose **ProductID** is known to exist in the source table.</span></span> <span data-ttu-id="36461-112">依預設會在目標資料表中，為每個加入之資料列的 `Identity` 資料行產生新的值。</span><span class="sxs-lookup"><span data-stu-id="36461-112">By default, a new value for the `Identity` column is generated in the destination table for each row added.</span></span> <span data-ttu-id="36461-113">在此範例中，開啟連接時會設定選項，以強制大量載入處理序使用來源資料表中的 `Identity` 值。</span><span class="sxs-lookup"><span data-stu-id="36461-113">In this example, an option is set when the connection is opened that forces the bulk load process to use the `Identity` values from the source table instead.</span></span>  
   
- 執行大量複製作業時，其 <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> 屬性會設定為 10。  當作業遇到無效的資料列時，系統會擲回例外狀況 \(Exception\)。  在第一個範例中，大量複製作業是非交易的。  發生錯誤前複製的所有批次作業都會得到認可；處理任何其他批次作業之前，會復原包含重複索引鍵的批次作業，並中止大量複製作業。  
+ <span data-ttu-id="36461-114">執行大量複製作業時，其 <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> 屬性會設定為 10。</span><span class="sxs-lookup"><span data-stu-id="36461-114">The bulk copy operation is executed with the <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> property set to 10.</span></span> <span data-ttu-id="36461-115">當作業遇到無效的資料列時，系統會擲回例外狀況 (Exception)。</span><span class="sxs-lookup"><span data-stu-id="36461-115">When the operation encounters the invalid row, an exception is thrown.</span></span> <span data-ttu-id="36461-116">在第一個範例中，大量複製作業是非交易的。</span><span class="sxs-lookup"><span data-stu-id="36461-116">In this first example, the bulk copy operation is non-transacted.</span></span> <span data-ttu-id="36461-117">發生錯誤前複製的所有批次作業都會得到認可；處理任何其他批次作業之前，會復原包含重複索引鍵的批次作業，並中止大量複製作業。</span><span class="sxs-lookup"><span data-stu-id="36461-117">All batches copied up to the point of the error are committed; the batch containing the duplicate key is rolled back, and the bulk copy operation is halted before processing any other batches.</span></span>  
   
 > [!NOTE]
->  除非您已依照[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)所述來建立工作資料表，否則此範例將無法執行。  這個程式碼僅是為了示範使用 **SqlBulkCopy** 的語法而提供。  如果來源及目的地資料表位於相同的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 執行個體中，則使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
+>  <span data-ttu-id="36461-118">此範例不會執行，除非您已建立工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。</span><span class="sxs-lookup"><span data-stu-id="36461-118">This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md).</span></span> <span data-ttu-id="36461-119">此程式碼可示範如何使用的語法**SqlBulkCopy**只。</span><span class="sxs-lookup"><span data-stu-id="36461-119">This code is provided to demonstrate the syntax for using **SqlBulkCopy** only.</span></span> <span data-ttu-id="36461-120">如果來源及目的地資料表位於相同的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 執行個體中，則使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` 陳述式來複製資料會更方便且快速。</span><span class="sxs-lookup"><span data-stu-id="36461-120">If the source and destination tables are located in the same [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instance, it is easier and faster to use a [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` statement to copy the data.</span></span>  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
   
-## 在交易中執行專用大量複製作業  
- 根據預設，大量複製作業是自己的交易。  當您要執行專用大量複製作業時，請建立具有連接字串的新 <xref:System.Data.SqlClient.SqlBulkCopy> 執行個體，或使用不含作用中交易的現有 <xref:System.Data.SqlClient.SqlConnection> 物件。  在每個案例中，會先建立大量複製作業，然後認可或復原交易。  
+## <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a><span data-ttu-id="36461-121">在異動中執行專用大量複製作業</span><span class="sxs-lookup"><span data-stu-id="36461-121">Performing a Dedicated Bulk Copy Operation in a Transaction</span></span>  
+ <span data-ttu-id="36461-122">根據預設，大量複製作業是自己的交易。</span><span class="sxs-lookup"><span data-stu-id="36461-122">By default, a bulk copy operation is its own transaction.</span></span> <span data-ttu-id="36461-123">當您要執行專用大量複製作業時，請建立具有連接字串的新 <xref:System.Data.SqlClient.SqlBulkCopy> 執行個體，或使用不含作用中交易的現有 <xref:System.Data.SqlClient.SqlConnection> 物件。</span><span class="sxs-lookup"><span data-stu-id="36461-123">When you want to perform a dedicated bulk copy operation, create a new instance of <xref:System.Data.SqlClient.SqlBulkCopy> with a connection string, or use an existing <xref:System.Data.SqlClient.SqlConnection> object without an active transaction.</span></span> <span data-ttu-id="36461-124">在每個案例中，會先建立大量複製作業，然後認可或復原交易。</span><span class="sxs-lookup"><span data-stu-id="36461-124">In each scenario, the bulk copy operation creates, and then commits or rolls back the transaction.</span></span>  
   
- 您可以在 <xref:System.Data.SqlClient.SqlBulkCopy> 類別建構函式 \(Constructor\) 中明確指定 <xref:System.Data.SqlClient.SqlBulkCopyOptions> 選項，以便明確地讓大量複製作業在自己的交易中執行，進而讓每個大量複製作業的批次在個別的交易內執行。  
+ <span data-ttu-id="36461-125">您可以在 <xref:System.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> 類別建構函式 (Constructor) 中明確指定 <xref:System.Data.SqlClient.SqlBulkCopy> 選項，以便明確地讓大量複製作業在自己的交易中執行，進而讓每個大量複製作業的批次在個別的交易內執行。</span><span class="sxs-lookup"><span data-stu-id="36461-125">You can explicitly specify the <xref:System.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> option in the <xref:System.Data.SqlClient.SqlBulkCopy> class constructor to explicitly cause a bulk copy operation to execute in its own transaction, causing each batch of the bulk copy operation to execute within a separate transaction.</span></span>  
   
 > [!NOTE]
->  由於是在不同的交易中執行不同的批次作業，因此如果在大量複製作業期間發生錯誤，則將復原目前批次作業中的所有資料列，但是先前批次作業的資料列將保留在資料庫中。  
+>  <span data-ttu-id="36461-126">由於是在不同的交易中執行不同的批次作業，因此如果在大量複製作業期間發生錯誤，則將復原目前批次作業中的所有資料列，但是先前批次作業的資料列將保留在資料庫中。</span><span class="sxs-lookup"><span data-stu-id="36461-126">Since different batches are executed in different transactions, if an error occurs during the bulk copy operation, all the rows in the current batch will be rolled back, but rows from previous batches will remain in the database.</span></span>  
   
- 下列主控台應用程式類似於先前的範例，但有一個例外狀況：在此範例中，大量複製作業會管理其本身的交易。  發生錯誤前複製的所有批次作業都會得到認可；處理任何其他批次作業之前，會復原包含重複索引鍵的批次作業，並中止大量複製作業。  
+ <span data-ttu-id="36461-127">下列主控台應用程式類似於先前的範例，但有一個例外狀況：在此範例中，大量複製作業會管理其本身的交易。</span><span class="sxs-lookup"><span data-stu-id="36461-127">The following console application is similar to the previous example, with one exception: In this example, the bulk copy operation manages its own transactions.</span></span> <span data-ttu-id="36461-128">發生錯誤前複製的所有批次作業都會得到認可；處理任何其他批次作業之前，會復原包含重複索引鍵的批次作業，並中止大量複製作業。</span><span class="sxs-lookup"><span data-stu-id="36461-128">All batches copied up to the point of the error are committed; the batch containing the duplicate key is rolled back, and the bulk copy operation is halted before processing any other batches.</span></span>  
   
 > [!IMPORTANT]
->  除非您已依照[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)所述來建立工作資料表，否則此範例將無法執行。  這個程式碼僅是為了示範使用 **SqlBulkCopy** 的語法而提供。  如果來源及目的地資料表位於相同的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 執行個體中，則使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
+>  <span data-ttu-id="36461-129">此範例不會執行，除非您已建立工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。</span><span class="sxs-lookup"><span data-stu-id="36461-129">This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md).</span></span> <span data-ttu-id="36461-130">此程式碼可示範如何使用的語法**SqlBulkCopy**只。</span><span class="sxs-lookup"><span data-stu-id="36461-130">This code is provided to demonstrate the syntax for using **SqlBulkCopy** only.</span></span> <span data-ttu-id="36461-131">如果來源及目的地資料表位於相同的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 執行個體中，則使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` 陳述式來複製資料會更方便且快速。</span><span class="sxs-lookup"><span data-stu-id="36461-131">If the source and destination tables are located in the same [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instance, it is easier and faster to use a [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` statement to copy the data.</span></span>  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
   
-## 使用現有交易  
- 您可指定現有 <xref:System.Data.SqlClient.SqlTransaction> 物件做為 <xref:System.Data.SqlClient.SqlBulkCopy> 建構函式中的參數。  在此情況下，系統會在現有交易中執行大量複製作業，而且不會變更交易狀態 \(亦即，它尚未認可或中止\)。  這可讓應用程式使用其他資料庫作業來將大量複製作業併入交易中。  不過，如果您不指定 <xref:System.Data.SqlClient.SqlTransaction> 物件及傳遞 Null 參考，而且連接具有作用中的交易，則會擲回例外狀況。  
+## <a name="using-existing-transactions"></a><span data-ttu-id="36461-132">使用現有異動</span><span class="sxs-lookup"><span data-stu-id="36461-132">Using Existing Transactions</span></span>  
+ <span data-ttu-id="36461-133">您可指定現有 <xref:System.Data.SqlClient.SqlTransaction> 物件做為 <xref:System.Data.SqlClient.SqlBulkCopy> 建構函式中的參數。</span><span class="sxs-lookup"><span data-stu-id="36461-133">You can specify an existing <xref:System.Data.SqlClient.SqlTransaction> object as a parameter in a <xref:System.Data.SqlClient.SqlBulkCopy> constructor.</span></span> <span data-ttu-id="36461-134">在此情況下，系統會在現有交易中執行大量複製作業，而且不會變更交易狀態 (亦即，它尚未認可或中止)。</span><span class="sxs-lookup"><span data-stu-id="36461-134">In this situation, the bulk copy operation is performed in an existing transaction, and no change is made to the transaction state (that is, it is neither committed nor aborted).</span></span> <span data-ttu-id="36461-135">這可讓應用程式使用其他資料庫作業來將大量複製作業併入交易中。</span><span class="sxs-lookup"><span data-stu-id="36461-135">This allows an application to include the bulk copy operation in a transaction with other database operations.</span></span> <span data-ttu-id="36461-136">不過，如果您不指定 <xref:System.Data.SqlClient.SqlTransaction> 物件及傳遞 Null 參考，而且連接具有作用中的交易，則會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="36461-136">However, if you do not specify a <xref:System.Data.SqlClient.SqlTransaction> object and pass a null reference, and the connection has an active transaction, an exception is thrown.</span></span>  
   
- 如果因為發生錯誤而需要回復整個大量複製作業，或者大量複製作業應做為可回復之較大處理序的一部分執行，則可提供 <xref:System.Data.SqlClient.SqlTransaction> 物件給 <xref:System.Data.SqlClient.SqlBulkCopy> 建構函式。  
+ <span data-ttu-id="36461-137">如果因為發生錯誤而需要回復整個大量複製作業，或者大量複製作業應做為可回復之較大處理序的一部分執行，則可提供 <xref:System.Data.SqlClient.SqlTransaction> 物件給 <xref:System.Data.SqlClient.SqlBulkCopy> 建構函式。</span><span class="sxs-lookup"><span data-stu-id="36461-137">If you need to roll back the entire bulk copy operation because an error occurs, or if the bulk copy should execute as part of a larger process that can be rolled back, you can provide a <xref:System.Data.SqlClient.SqlTransaction> object to the <xref:System.Data.SqlClient.SqlBulkCopy> constructor.</span></span>  
   
- 下列主控台應用程式類似於第一個 \(非交易\) 範例，但有一個例外狀況：在此範例中，大量複製作業包含在較大的外部交易中。  當發生主索引鍵違規錯誤時，會復原整個交易，並且不會將任何資料列加入目標資料表中。  
+ <span data-ttu-id="36461-138">下列主控台應用程式類似於第一個 (非交易) 範例，但有一個例外狀況：在此範例中，大量複製作業包含在較大的外部交易中。</span><span class="sxs-lookup"><span data-stu-id="36461-138">The following console application is similar to the first (non-transacted) example, with one exception: in this example, the bulk copy operation is included in a larger, external transaction.</span></span> <span data-ttu-id="36461-139">當發生主索引鍵違規錯誤時，會復原整個異動，並且不會將任何資料列加入目標資料表中。</span><span class="sxs-lookup"><span data-stu-id="36461-139">When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.</span></span>  
   
 > [!IMPORTANT]
->  除非您已依照[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)所述來建立工作資料表，否則此範例將無法執行。  這個程式碼僅是為了示範使用 **SqlBulkCopy** 的語法而提供。  如果來源及目的地資料表位於相同的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 執行個體中，則使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
+>  <span data-ttu-id="36461-140">此範例不會執行，除非您已建立工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。</span><span class="sxs-lookup"><span data-stu-id="36461-140">This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md).</span></span> <span data-ttu-id="36461-141">此程式碼可示範如何使用的語法**SqlBulkCopy**只。</span><span class="sxs-lookup"><span data-stu-id="36461-141">This code is provided to demonstrate the syntax for using **SqlBulkCopy** only.</span></span> <span data-ttu-id="36461-142">如果來源及目的地資料表位於相同的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 執行個體中，則使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` 陳述式來複製資料會更方便且快速。</span><span class="sxs-lookup"><span data-stu-id="36461-142">If the source and destination tables are located in the same [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instance, it is easier and faster to use a [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` statement to copy the data.</span></span>  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
-## 請參閱  
- [SQL Server 中的大量複製作業](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="36461-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36461-143">See Also</span></span>  
+ [<span data-ttu-id="36461-144">SQL Server 中的大量複製作業</span><span class="sxs-lookup"><span data-stu-id="36461-144">Bulk Copy Operations in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
+ [<span data-ttu-id="36461-145">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="36461-145">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

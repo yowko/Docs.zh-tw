@@ -1,90 +1,92 @@
 ---
-title: "逐步解說：使用 Visual Basic 撰寫複合控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "複合控制項, 建立"
-  - "控制項 [Windows Form], 複合控制項"
-  - "自訂控制項 [Visual Basic]"
-  - "自訂控制項 [Windows Form], 建立"
-  - "使用者控制項 [Visual Basic]"
-  - "使用者控制項 [Windows Form], 使用 Visual Basic 建立"
-  - "UserControl 類別, 逐步解說"
+title: "逐步解說：使用 Visual Basic 撰寫複合控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Visual Basic]
+- user controls [Visual Basic]
+- UserControl class [Windows Forms], walkthroughs
+- user controls [Windows Forms], creating with Visual Basic
+- controls [Windows Forms], composite controls
+- composite controls [Windows Forms], creating
+- custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c86a3d420b85c1287597cda738c6d72f0433d0f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：使用 Visual Basic 撰寫複合控制項
-複合控制項 \(Composite Control\) 提供了建立及重複使用自訂圖形介面的方法。  複合控制項基本上是具有視覺化表示的元件。  使用者控制項本身可包含一或多個 Windows Form 控制項、元件，或者可擴充功能的程式碼區塊，其擴充的方式為驗證使用者的輸入、修改顯示屬性或執行作者需要的其他工作。  與其他控制項的處理方式一樣，複合控制項可以放置在 Windows Form 上。  在這個逐步解說的第一個部分，您會建立名為 `ctlClock` 的簡單複合控制項。  在逐步解說的第二個部分中，您會透過繼承 \(Inheritance\) 來擴充 `ctlClock` 的功能。  
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a><span data-ttu-id="af98b-102">逐步解說：使用 Visual Basic 撰寫複合控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-102">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>
+<span data-ttu-id="af98b-103">複合控制項提供可以建立及重複使用自訂圖形介面的方法。</span><span class="sxs-lookup"><span data-stu-id="af98b-103">Composite controls provide a means by which custom graphical interfaces can be created and reused.</span></span> <span data-ttu-id="af98b-104">複合控制項基本上是具有視覺表示的元件。</span><span class="sxs-lookup"><span data-stu-id="af98b-104">A composite control is essentially a component with a visual representation.</span></span> <span data-ttu-id="af98b-105">因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-105">As such, it might consist of one or more Windows Forms controls, components, or blocks of code that can extend functionality by validating user input, modifying display properties, or performing other tasks required by the author.</span></span> <span data-ttu-id="af98b-106">複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。</span><span class="sxs-lookup"><span data-stu-id="af98b-106">Composite controls can be placed on Windows Forms in the same manner as other controls.</span></span> <span data-ttu-id="af98b-107">在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。</span><span class="sxs-lookup"><span data-stu-id="af98b-107">In the first part of this walkthrough, you create a simple composite control called `ctlClock`.</span></span> <span data-ttu-id="af98b-108">在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-108">In the second part of the walkthrough, you extend the functionality of `ctlClock` through inheritance.</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="af98b-109">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="af98b-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="af98b-110">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="af98b-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="af98b-111">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="af98b-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## 建立專案  
- 建立新的專案時，您指定專案名稱以設定預設命名空間、組件名稱及專案名稱，並確定預設元件將會在正確的命名空間中。  
+## <a name="creating-the-project"></a><span data-ttu-id="af98b-112">建立專案</span><span class="sxs-lookup"><span data-stu-id="af98b-112">Creating the Project</span></span>  
+ <span data-ttu-id="af98b-113">當您建立新的專案時，您會指定其名稱以設定根命名空間、組件名稱和專案名稱，並且確定預設元件將會在正確的命名空間中。</span><span class="sxs-lookup"><span data-stu-id="af98b-113">When you create a new project, you specify its name to set the root namespace, assembly name, and project name, and ensure that the default component will be in the correct namespace.</span></span>  
   
-#### 若要建立 ctlClockLib 控制項程式庫和 ctlClock 控制項  
+#### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a><span data-ttu-id="af98b-114">建立 ctlClockLib 控制項程式庫和 ctlClock 控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-114">To create the ctlClockLib control library and the ctlClock control</span></span>  
   
-1.  在 \[**檔案**\] 功能表上，指向 \[**新增**\]，然後按一下 \[**專案**\]，開啟 \[**新增專案**\] 對話方塊。  
+1.  <span data-ttu-id="af98b-115">在 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]，開啟 [新增專案] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="af98b-115">On the **File** menu, point to **New**, and then click **Project** to open the **New Project** dialog box.</span></span>  
   
-2.  從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 專案的清單中，選取 \[**Windows 控制項程式庫**\] 專案範本，在 \[**名稱**\] 方塊中輸入 `ctlClockLib`，然後按一下 \[**確定**\]。  
+2.  <span data-ttu-id="af98b-116">從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 專案的清單中，選取 **Windows 控制項程式庫**專案範本，在 [名稱] 方塊中輸入 `ctlClockLib`，然後再按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="af98b-116">From the list of [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] projects, select the **Windows Control Library** project template, type `ctlClockLib` in the **Name** box, and then click **OK**.</span></span>  
   
-     依照預設，專案名稱 `ctlClockLib` 也會指派到根命名空間。  預設命名空間是用來限定組件中的元件名稱。  例如，假設有兩個組件提供了名為 `ctlClock` 的元件，您就可以使用 `ctlClockLib.ctlClock.`  指定 `ctlClock` 元件。  
+     <span data-ttu-id="af98b-117">專案名稱，`ctlClockLib`，預設也會指派給根命名空間。</span><span class="sxs-lookup"><span data-stu-id="af98b-117">The project name, `ctlClockLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="af98b-118">根命名空間是用來限定組件中的元件名稱。</span><span class="sxs-lookup"><span data-stu-id="af98b-118">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="af98b-119">例如，如果兩個組件提供元件，名為 `ctlClock`，您可以使用 `ctlClockLib.ctlClock.` 指定您的 `ctlClock` 元件</span><span class="sxs-lookup"><span data-stu-id="af98b-119">For example, if two assemblies provide components named `ctlClock`, you can specify your `ctlClock` component using `ctlClockLib.ctlClock.`</span></span>  
   
-3.  在 \[方案總管\] 中，以滑鼠右鍵按一下 \[**UserControl1.vb**\]，再按一下 \[**重新命名**\]。  將檔案名稱變更為 `ctlClock.vb`。  當詢問您是否要重新命名程式碼項目 "UserControl1" 的所有參考時，請按一下 \[**是**\]。  
+3.  <span data-ttu-id="af98b-120">以滑鼠右鍵按一下 [方案總管] 中的 [UserControl1.vb]，然後按一下 [重新命名]。</span><span class="sxs-lookup"><span data-stu-id="af98b-120">In Solution Explorer, right-click **UserControl1.vb**, and then click **Rename**.</span></span> <span data-ttu-id="af98b-121">將檔案名稱變更為 `ctlClock.vb`。</span><span class="sxs-lookup"><span data-stu-id="af98b-121">Change the file name to `ctlClock.vb`.</span></span> <span data-ttu-id="af98b-122">當系統詢問您是否要重新命名程式碼元素 "UserControl1" 的所有參考時，按一下 [是]按鈕。</span><span class="sxs-lookup"><span data-stu-id="af98b-122">Click the **Yes** button when you are asked if you want to rename all references to the code element "UserControl1".</span></span>  
   
     > [!NOTE]
-    >  根據預設，複合控制項繼承自系統提供的 <xref:System.Windows.Forms.UserControl> 類別。  <xref:System.Windows.Forms.UserControl> 類別提供所有複合控制項需要的功能，並實作標準方法與屬性。  
+    >  <span data-ttu-id="af98b-123">根據預設，複合控制項繼承自<xref:System.Windows.Forms.UserControl>系統所提供的類別。</span><span class="sxs-lookup"><span data-stu-id="af98b-123">By default, a composite control inherits from the <xref:System.Windows.Forms.UserControl> class provided by the system.</span></span> <span data-ttu-id="af98b-124"><xref:System.Windows.Forms.UserControl>類別提供的功能所需的所有複合控制項，並會實作標準的方法和屬性。</span><span class="sxs-lookup"><span data-stu-id="af98b-124">The <xref:System.Windows.Forms.UserControl> class provides functionality required by all composite controls, and implements standard methods and properties.</span></span>  
   
-4.  在 \[**檔案**\] 功能表上，按一下 \[**全部儲存**\] 儲存專案。  
+4.  <span data-ttu-id="af98b-125">在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。</span><span class="sxs-lookup"><span data-stu-id="af98b-125">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## 將 Windows 控制項和元件加入至複合控制項  
- 視覺化介面是複合控制項的基本部分。  視覺介面的實作方法，是將一或多個 Windows 控制項加入至設計工具介面。  在下面的示範中，您會將 Windows 控制項合併至複合控制項，並撰寫程式碼以實作功能。  
+## <a name="adding-windows-controls-and-components-to-the-composite-control"></a><span data-ttu-id="af98b-126">將 Windows 控制項和元件新增至複合控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-126">Adding Windows Controls and Components to the Composite Control</span></span>  
+ <span data-ttu-id="af98b-127">視覺化介面是複合控制項不可或缺的一部分。</span><span class="sxs-lookup"><span data-stu-id="af98b-127">A visual interface is an essential part of your composite control.</span></span> <span data-ttu-id="af98b-128">這個視覺化介面是藉由將一或多個 Windows 控制項新增至設計工具介面來實作。</span><span class="sxs-lookup"><span data-stu-id="af98b-128">This visual interface is implemented by the addition of one or more Windows controls to the designer surface.</span></span> <span data-ttu-id="af98b-129">在下列示範中，您將 Windows 控制項合併到您的複合控制項，並且撰寫程式碼來實作功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-129">In the following demonstration, you will incorporate Windows controls into your composite control and write code to implement functionality.</span></span>  
   
-#### 若要將標籤和計時器加入至複合控制項  
+#### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a><span data-ttu-id="af98b-130">將標籤和計時器新增至複合控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-130">To add a Label and a Timer to your composite control</span></span>  
   
-1.  在 \[方案總管\] 中以滑鼠右鍵按一下 \[**ctlClock.vb**\]，然後按一下 \[**設計工具檢視**\]。  
+1.  <span data-ttu-id="af98b-131">在 [方案總管] 中，以滑鼠右鍵按一下 [ctlClock.vb]，然後按一下 [檢視表設計工具]。</span><span class="sxs-lookup"><span data-stu-id="af98b-131">In Solution Explorer, right-click **ctlClock.vb**, and then click **View Designer**.</span></span>  
   
-2.  在 \[工具箱\] 中展開 \[**通用控制項**\] 節點，然後按兩下 \[**Label**\]。  
+2.  <span data-ttu-id="af98b-132">在 [工具箱] 中展開 [通用控制項] 節點，然後再按兩下 [標籤]。</span><span class="sxs-lookup"><span data-stu-id="af98b-132">In the Toolbox, expand the **Common Controls** node, and then double-click **Label**.</span></span>  
   
-     名為 `Label1` 的 <xref:System.Windows.Forms.Label> 控制項會加入至設計工具介面上的控制項。  
+     <span data-ttu-id="af98b-133">A<xref:System.Windows.Forms.Label>控制項，名為`Label1`加入至您的控制項設計工具介面上。</span><span class="sxs-lookup"><span data-stu-id="af98b-133">A <xref:System.Windows.Forms.Label> control named `Label1` is added to your control on the designer surface.</span></span>  
   
-3.  在設計工具中，按一下 \[**Label1**\]。  在 \[屬性\] 視窗中設定下列屬性。  
+3.  <span data-ttu-id="af98b-134">在設計工具中，按一下 [Label1]。</span><span class="sxs-lookup"><span data-stu-id="af98b-134">In the designer, click **Label1**.</span></span> <span data-ttu-id="af98b-135">在 [屬性] 視窗中設定下列屬性。</span><span class="sxs-lookup"><span data-stu-id="af98b-135">In the Properties window, set the following properties.</span></span>  
   
-    |屬性|變更為|  
-    |--------|---------|  
-    |**名稱**|`lblDisplay`|  
-    |**文字**|`(空白)`|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Font.Size**|`14`|  
+    |<span data-ttu-id="af98b-136">屬性</span><span class="sxs-lookup"><span data-stu-id="af98b-136">Property</span></span>|<span data-ttu-id="af98b-137">變更為</span><span class="sxs-lookup"><span data-stu-id="af98b-137">Change to</span></span>|  
+    |--------------|---------------|  
+    |<span data-ttu-id="af98b-138">**Name**</span><span class="sxs-lookup"><span data-stu-id="af98b-138">**Name**</span></span>|`lblDisplay`|  
+    |<span data-ttu-id="af98b-139">**文字**</span><span class="sxs-lookup"><span data-stu-id="af98b-139">**Text**</span></span>|`(blank space)`|  
+    |<span data-ttu-id="af98b-140">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="af98b-140">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="af98b-141">**Font.Size**</span><span class="sxs-lookup"><span data-stu-id="af98b-141">**Font.Size**</span></span>|`14`|  
   
-4.  在 \[**工具箱**\] 中展開 \[**元件**\] 節點，然後按兩下 \[**計時器**\]。  
+4.  <span data-ttu-id="af98b-142">在 [工具箱] 中展開 [元件] 節點，然後再按兩下 [計時器]。</span><span class="sxs-lookup"><span data-stu-id="af98b-142">In the **Toolbox**, expand the **Components** node, and then double-click **Timer**.</span></span>  
   
-     由於 <xref:System.Windows.Forms.Timer> 是一個元件，所以在執行階段時沒有視覺化表示。  因此，它不會和控制項一起出現在設計工具介面，而是顯示在 \[元件設計工具\] 中 \(設計工具介面底部的區塊\)。  
+     <span data-ttu-id="af98b-143">因為<xref:System.Windows.Forms.Timer>是元件，它已在執行階段沒有視覺表示。</span><span class="sxs-lookup"><span data-stu-id="af98b-143">Because a <xref:System.Windows.Forms.Timer> is a component, it has no visual representation at run time.</span></span> <span data-ttu-id="af98b-144">因此，它不會與控制項一起出現在設計工具介面上，而是會出現在元件設計工具中 (位於設計工具介面底部的系統匣)。</span><span class="sxs-lookup"><span data-stu-id="af98b-144">Therefore, it does not appear with the controls on the designer surface, but rather in the Component Designer (a tray at the bottom of the designer surface).</span></span>  
   
-5.  在 \[元件設計工具\] 中，按一下 \[**Timer1**\]，然後將 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性設定為 `1000`，並將 <xref:System.Windows.Forms.Timer.Enabled%2A> 屬性設定為 `True`。  
+5.  <span data-ttu-id="af98b-145">在元件設計工具中，按一下**Timer1**，然後設定<xref:System.Windows.Forms.Timer.Interval%2A>屬性`1000`和<xref:System.Windows.Forms.Timer.Enabled%2A>屬性`True`。</span><span class="sxs-lookup"><span data-stu-id="af98b-145">In the Component Designer, click **Timer1**, and then set the <xref:System.Windows.Forms.Timer.Interval%2A> property to `1000` and the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `True`.</span></span>  
   
-     <xref:System.Windows.Forms.Timer.Interval%2A> 屬性會控制計時器元件的刻度頻率。  `Timer1_Tick` 每移動一個刻度，便會執行 `Timer1` 事件中的程式碼。  這個間隔代表刻度之間的毫秒數。  
+     <span data-ttu-id="af98b-146"><xref:System.Windows.Forms.Timer.Interval%2A>屬性控制與刻度 timer 元件的頻率。</span><span class="sxs-lookup"><span data-stu-id="af98b-146">The <xref:System.Windows.Forms.Timer.Interval%2A> property controls the frequency with which the timer component ticks.</span></span> <span data-ttu-id="af98b-147">每次 `Timer1` 走動時，它會執行 `Timer1_Tick` 事件中的程式碼。</span><span class="sxs-lookup"><span data-stu-id="af98b-147">Each time `Timer1` ticks, it runs the code in the `Timer1_Tick` event.</span></span> <span data-ttu-id="af98b-148">間隔代表刻度之間的毫秒數。</span><span class="sxs-lookup"><span data-stu-id="af98b-148">The interval represents the number of milliseconds between ticks.</span></span>  
   
-6.  在 \[元件設計工具\] 中按兩下 \[**Timer1**\]，移至 `ctlClock` 的 `Timer1_Tick` 事件。  
+6.  <span data-ttu-id="af98b-149">在元件設計工具中，按兩下 [Timer1] 以前往 `ctlClock` 的 `Timer1_Tick` 事件。</span><span class="sxs-lookup"><span data-stu-id="af98b-149">In the Component Designer, double-click **Timer1** to go to the `Timer1_Tick` event for `ctlClock`.</span></span>  
   
-7.  修改程式碼，使其與以下的程式碼範例類似。  務必要將存取修飾詞從 `Private` 變更成 `Protected`。  
+7.  <span data-ttu-id="af98b-150">修改程式碼，使它類似下列程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="af98b-150">Modify the code so that it resembles the following code sample.</span></span> <span data-ttu-id="af98b-151">請確定將存取修飾詞從 `Private` 變更為 `Protected`。</span><span class="sxs-lookup"><span data-stu-id="af98b-151">Be sure to change the access modifier from `Private` to `Protected`.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Sub Timer1_Tick(ByVal sender As Object, ByVal e As _  
         System.EventArgs) Handles Timer1.Tick  
         ' Causes the label to display the current time.    
@@ -92,44 +94,38 @@ caps.handback.revision: 21
     End Sub  
     ```  
   
-     此程式碼會讓目前的時間顯示在 `lblDisplay` 中。  由於 `Timer1` 的間隔是設為 `1000`，每一千毫秒就會引發一次這個事件，因此會每秒更新目前的時間。  
+     <span data-ttu-id="af98b-152">此程式碼會造成目前時間在 `lblDisplay` 中顯示。</span><span class="sxs-lookup"><span data-stu-id="af98b-152">This code will cause the current time to be shown in `lblDisplay`.</span></span> <span data-ttu-id="af98b-153">因為 `Timer1` 的間隔設為 `1000`，每一千毫秒便會發生此事件，因此每秒會更新目前時間。</span><span class="sxs-lookup"><span data-stu-id="af98b-153">Because the interval of `Timer1` was set to `1000`, this event will occur every thousand milliseconds, thus updating the current time every second.</span></span>  
   
-8.  將方法修改為可覆寫。  如需詳細資訊，請參閱下列的＜繼承自使用者控制項＞章節。  
+8.  <span data-ttu-id="af98b-154">修改方法為可覆寫。</span><span class="sxs-lookup"><span data-stu-id="af98b-154">Modify the method to be overridable.</span></span> <span data-ttu-id="af98b-155">如需詳細資訊，請參閱以下的「從使用者控制項繼承」一節。</span><span class="sxs-lookup"><span data-stu-id="af98b-155">For more information, see the "Inheriting from a User Control" section below.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Overridable Sub Timer1_Tick(ByVal sender As Object, ByVal _  
         e As System.EventArgs) Handles Timer1.Tick  
     ```  
   
-9. 在 \[**檔案**\] 功能表上，按一下 \[**全部儲存**\] 儲存專案。  
+9. <span data-ttu-id="af98b-156">在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。</span><span class="sxs-lookup"><span data-stu-id="af98b-156">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## 將屬性加入至複合控制項  
- 您的時鐘控制項現在封裝有一個 <xref:System.Windows.Forms.Label> 控制項和一個 <xref:System.Windows.Forms.Timer> 元件，每個都有自己的繼承屬性集。  雖然控制項的後續使用者無法存取這些控制項的個別屬性，但是您可以建立及公開自訂屬性，方法是撰寫適當的程式碼區塊。  在下列程序中，您會將屬性加入至控制項，這些屬性讓使用者能夠變更背景色彩及文字。  
+## <a name="adding-properties-to-the-composite-control"></a><span data-ttu-id="af98b-157">將屬性新增至複合控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-157">Adding Properties to the Composite Control</span></span>  
+ <span data-ttu-id="af98b-158">您的時鐘控制項現在會封裝<xref:System.Windows.Forms.Label>控制項和<xref:System.Windows.Forms.Timer>元件，各有其各自的繼承屬性集。</span><span class="sxs-lookup"><span data-stu-id="af98b-158">Your clock control now encapsulates a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.Timer> component, each with its own set of inherent properties.</span></span> <span data-ttu-id="af98b-159">雖然這些控制項的個別屬性無法供控制項的後續使用者存取，但是您可以建立並公開自訂屬性，方法是撰寫適當的程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="af98b-159">While the individual properties of these controls will not be accessible to subsequent users of your control, you can create and expose custom properties by writing the appropriate blocks of code.</span></span> <span data-ttu-id="af98b-160">在下列程序中，您會將屬性新增至控制項，讓使用者變更背景與文字的色彩。</span><span class="sxs-lookup"><span data-stu-id="af98b-160">In the following procedure, you will add properties to your control that enable the user to change the color of the background and text.</span></span>  
   
-#### 若要將屬性加入至複合控制項  
+#### <a name="to-add-a-property-to-your-composite-control"></a><span data-ttu-id="af98b-161">若要將屬性新增至複合控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-161">To add a property to your composite control</span></span>  
   
-1.  在 \[方案總管\] 中以滑鼠右鍵按一下 \[**ctlClock.vb**\]，然後按一下 \[**檢視程式碼**\]。  
+1.  <span data-ttu-id="af98b-162">在 [方案總管] 中，以滑鼠右鍵按一下 [ctlClock.vb]，然後按一下 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="af98b-162">In Solution Explorer, right-click **ctlClock.vb**, and then click **View Code**.</span></span>  
   
-     您控制項的 \[程式碼編輯器\] 將會開啟。  
+     <span data-ttu-id="af98b-163">控制項的程式碼編輯器隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="af98b-163">The Code Editor for your control opens.</span></span>  
   
-2.  找出 `Public Class ctlClock` 陳述式。  在下方輸入下列程式碼。  
+2.  <span data-ttu-id="af98b-164">尋找 `Public Class ctlClock` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="af98b-164">Locate the `Public Class ctlClock` statement.</span></span> <span data-ttu-id="af98b-165">在其下輸入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="af98b-165">Beneath it, type the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private colFColor as Color  
     Private colBColor as Color  
     ```  
   
-     這些陳述式會建立私用變數，可用來儲存您即將建立的屬性的值。  
+     <span data-ttu-id="af98b-166">這些陳述式會建立私用變數，您將用來儲存您即將建立之屬性的值。</span><span class="sxs-lookup"><span data-stu-id="af98b-166">These statements create the private variables that you will use to store the values for the properties you are about to create.</span></span>  
   
-3.  在步驟 2 的變數宣告下方插入下列程式碼。  
+3.  <span data-ttu-id="af98b-167">在 步驟 2 的變數宣告底下插入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="af98b-167">Insert the following code beneath the variable declarations from step 2.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     ' Declares the name and type of the property.  
     Property ClockBackColor() as Color  
         ' Retrieves the value of the private variable colBColor.  
@@ -156,65 +152,63 @@ caps.handback.revision: 21
     End Property  
     ```  
   
-     上述程式碼會建立 `ClockForeColor` 和 `ClockBackColor` 兩個自訂屬性，以供此控制項的後續使用者透過叫用 `Property` 來使用。  `Get` 和 `Set` 陳述式提供屬性值的儲存與擷取，以及實作適合該屬性之功能的程式碼。  
+     <span data-ttu-id="af98b-168">上述程式碼會製作兩個自訂屬性，`ClockForeColor` 和 `ClockBackColor`，藉由叫用 `Property` 陳述式，以供此控制項的後續使用者使用。</span><span class="sxs-lookup"><span data-stu-id="af98b-168">The preceding code makes two custom properties, `ClockForeColor` and `ClockBackColor`, available to subsequent users of this control by invoking the `Property` statement.</span></span> <span data-ttu-id="af98b-169">`Get` 和 `Set` 陳述式提供屬性值的儲存和擷取，以及用來實作適合該屬性之功能的程式碼。</span><span class="sxs-lookup"><span data-stu-id="af98b-169">The `Get` and `Set` statements provide for storage and retrieval of the property value, as well as code to implement functionality appropriate to the property.</span></span>  
   
-4.  在 \[**檔案**\] 功能表上，按一下 \[**全部儲存**\] 儲存專案。  
+4.  <span data-ttu-id="af98b-170">在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。</span><span class="sxs-lookup"><span data-stu-id="af98b-170">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## 測試控制項  
- 控制項不是獨立的專案，必須裝載在容器中。  測試控制項的執行階段行為，並使用 \[**使用者控制項測試容器**\] 執行該控制項的屬性。  如需詳細資訊，請參閱 [如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+## <a name="testing-the-control"></a><span data-ttu-id="af98b-171">測試控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-171">Testing the Control</span></span>  
+ <span data-ttu-id="af98b-172">控制項不是獨立專案；它們必須裝載在容器中。</span><span class="sxs-lookup"><span data-stu-id="af98b-172">Controls are not stand-alone projects; they must be hosted in a container.</span></span> <span data-ttu-id="af98b-173">測試控制項的執行階段行為，並且使用 **UserControl 測試容器**執行其屬性。</span><span class="sxs-lookup"><span data-stu-id="af98b-173">Test your control's run-time behavior and exercise its properties with the **UserControl Test Container**.</span></span> <span data-ttu-id="af98b-174">如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="af98b-174">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-#### 若要測試您的控制項  
+#### <a name="to-test-your-control"></a><span data-ttu-id="af98b-175">若要測試控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-175">To test your control</span></span>  
   
-1.  按下 F5 鍵以建置專案，並在 \[**使用者控制項測試容器**\] 中執行控制項。  
+1.  <span data-ttu-id="af98b-176">按下 F5 鍵以建置專案，並且在 **UserControl 測試容器**中執行您的控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-176">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span>  
   
-2.  在測試容器的屬性方格中，選取 \[`ClockBackColor`\] 屬性，然後按一下下拉箭號以顯示色板。  
+2.  <span data-ttu-id="af98b-177">在測試容器的屬性方格中，選取 `ClockBackColor` 屬性，然後按一下下拉箭號以顯示色彩調色盤。</span><span class="sxs-lookup"><span data-stu-id="af98b-177">In the test container's property grid, select the `ClockBackColor` property, and then click the drop-down arrow to display the color palette.</span></span>  
   
-3.  按一下想要選擇的色彩。  
+3.  <span data-ttu-id="af98b-178">按一下它以選擇色彩。</span><span class="sxs-lookup"><span data-stu-id="af98b-178">Choose a color by clicking it.</span></span>  
   
-     控制項的背景色彩會變更為選取的色彩。  
+     <span data-ttu-id="af98b-179">控制項的背景色彩會變更為您所選取的色彩。</span><span class="sxs-lookup"><span data-stu-id="af98b-179">The background color of your control changes to the color you selected.</span></span>  
   
-4.  使用類似的事件序列來驗證 `ClockForeColor` 屬性是否如預期般的運作。  
+4.  <span data-ttu-id="af98b-180">使用類似的一連串事件，確認 `ClockForeColor` 屬性是否如預期運作。</span><span class="sxs-lookup"><span data-stu-id="af98b-180">Use a similar sequence of events to verify that the `ClockForeColor` property is functioning as expected.</span></span>  
   
-5.  按一下 \[**關閉**\] 關閉 \[**使用者控制項測試容器**\]。  
+5.  <span data-ttu-id="af98b-181">按一下 [關閉] 以關閉 **UserControl 測試容器**。</span><span class="sxs-lookup"><span data-stu-id="af98b-181">Click **Close** to close the **UserControl Test Container**.</span></span>  
   
-     在本章節和先前的章節中，您已經知道如何將元件和 Windows 控制項與程式碼組合，並進行封裝以複合控制項的形式來提供自訂功能。  您已經學會如何在複合控制項公開 \(Expose\) 屬性，以及如何在控制項完成後加以測試。  在接下來的章節中，則將學習如何使用 `ctlClock` 做為基底 \(Base\) 來建構繼承的複合控制項。  
+     <span data-ttu-id="af98b-182">在本節和先前的章節中，您已經知道元件和 Windows 控制項如何與程式碼合併並且封裝，以複合控制項的形式提供自訂功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-182">In this section and the preceding sections, you have seen how components and Windows controls can be combined with code and packaging to provide custom functionality in the form of a composite control.</span></span> <span data-ttu-id="af98b-183">您已經了解如何在您的複合控制項中公開屬性，以及如何在完成之後測試您的控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-183">You have learned to expose properties in your composite control, and how to test your control after it is complete.</span></span> <span data-ttu-id="af98b-184">在下一節中，您將學習如何使用 `ctlClock` 做為基底，建構繼承的複合控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-184">In the next section you will learn how to construct an inherited composite control using `ctlClock` as a base.</span></span>  
   
-## 繼承自複合控制項  
- 在前一個章節中，學到如何將 Windows 控制項、元件以及程式碼組合成可重複使用的複合控制項。  您的複合控制項現在可以做為建置其他控制項的基礎。  從基底類別衍生類別的程序稱為「*繼承*」\(Inheritance\)。  在本章節中，您將會建立稱為 `ctlAlarmClock` 的複合控制項。  這個控制項將衍生自父控制項 `ctlClock`。  您將學習如何藉由覆寫父代方法和加入新方法與屬性來擴充 `ctlClock` 的功能。  
+## <a name="inheriting-from-a-composite-control"></a><span data-ttu-id="af98b-185">繼承自複合控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-185">Inheriting from a Composite Control</span></span>  
+ <span data-ttu-id="af98b-186">在先前章節中，您了解如何將 Windows 控制項、元件和程式碼合併成可重複使用的複合控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-186">In the previous sections, you learned how to combine Windows controls, components, and code into reusable composite controls.</span></span> <span data-ttu-id="af98b-187">複合控制項現在可以做為建置其他控制項的基底。</span><span class="sxs-lookup"><span data-stu-id="af98b-187">Your composite control can now be used as a base upon which other controls can be built.</span></span> <span data-ttu-id="af98b-188">從基底類別衍生類別的處理序稱為「繼承」。</span><span class="sxs-lookup"><span data-stu-id="af98b-188">The process of deriving a class from a base class is called *inheritance*.</span></span> <span data-ttu-id="af98b-189">在本節中，您將建立稱為 `ctlAlarmClock` 的複合控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-189">In this section, you will create a composite control called `ctlAlarmClock`.</span></span> <span data-ttu-id="af98b-190">這個控制項將會從其父控制項 (`ctlClock`) 衍生。</span><span class="sxs-lookup"><span data-stu-id="af98b-190">This control will be derived from its parent control, `ctlClock`.</span></span> <span data-ttu-id="af98b-191">您將學習藉由覆寫父方法並且新增新方法和屬性，來擴充 `ctlClock` 的功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-191">You will learn to extend the functionality of `ctlClock` by overriding parent methods and adding new methods and properties.</span></span>  
   
- 建立繼承控制項的第一步，就是從父控制項衍生出該控制項。  這個動作會建立具備父控制項中所有屬性、方法和圖形特性的新控制項，但是也可以做為加入新功能及修改功能的基礎。  
+ <span data-ttu-id="af98b-192">建立繼承的控制項的第一個步驟是從其父代衍生。</span><span class="sxs-lookup"><span data-stu-id="af98b-192">The first step in creating an inherited control is to derive it from its parent.</span></span> <span data-ttu-id="af98b-193">這個動作會建立新的控制項，其中具有父控制項的所有屬性、方法和圖形特性，但是也可以做為基底，以新增新的或修改功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-193">This action creates a new control that has all of the properties, methods, and graphical characteristics of the parent control, but can also act as a base for the addition of new or modified functionality.</span></span>  
   
-#### 若要建立繼承的控制項  
+#### <a name="to-create-the-inherited-control"></a><span data-ttu-id="af98b-194">若要建立繼承的控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-194">To create the inherited control</span></span>  
   
-1.  在 \[方案總管\] 中，以滑鼠右鍵按一下 \[**ctlClockLib**\]，指向 \[**加入**\]，然後按一下 \[**使用者控制項**\]。  
+1.  <span data-ttu-id="af98b-195">在 [方案總管] 中，以滑鼠右鍵按一下 [ctlClockLib]，指向 [新增]，然後按一下 [使用者控制項]。</span><span class="sxs-lookup"><span data-stu-id="af98b-195">In Solution Explorer, right-click **ctlClockLib**, point to **Add**, and then click **User Control**.</span></span>  
   
-     \[**加入新項目**\] 對話方塊隨即開啟。  
+     <span data-ttu-id="af98b-196">[新增項目] 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="af98b-196">The **Add New Item** dialog box opens.</span></span>  
   
-2.  選取 \[**繼承的使用者控制項**\] 範本。  
+2.  <span data-ttu-id="af98b-197">選取**繼承的使用者控制項**範本。</span><span class="sxs-lookup"><span data-stu-id="af98b-197">Select the **Inherited User Control** template.</span></span>  
   
-3.  在 \[**名稱**\] 方塊中輸入 `ctlAlarmClock.vb`，然後按一下 \[**加入**\]。  
+3.  <span data-ttu-id="af98b-198">在 [名稱] 方塊中，輸入 `ctlAlarmClock.vb` 然後按一下 [新增]。</span><span class="sxs-lookup"><span data-stu-id="af98b-198">In the **Name** box, type `ctlAlarmClock.vb`, and then click **Add**.</span></span>  
   
-     \[**繼承選取器**\] 對話方塊隨即出現。  
+     <span data-ttu-id="af98b-199">[繼承選取器] 對話方塊隨即出現。</span><span class="sxs-lookup"><span data-stu-id="af98b-199">The **Inheritance Picker** dialog box appears.</span></span>  
   
-4.  在 \[**元件名稱**\] 下面，按兩下 \[**ctlClock**\]。  
+4.  <span data-ttu-id="af98b-200">在 [元件名稱] 底下，按兩下 [ctlClock]。</span><span class="sxs-lookup"><span data-stu-id="af98b-200">Under **Component Name**, double-click **ctlClock**.</span></span>  
   
-5.  在 \[方案總管\] 中瀏覽目前的專案。  
+5.  <span data-ttu-id="af98b-201">在 [方案總管] 中，瀏覽目前的專案。</span><span class="sxs-lookup"><span data-stu-id="af98b-201">In Solution Explorer, browse through the current projects.</span></span>  
   
     > [!NOTE]
-    >  稱為 \[**ctlAlarmClock.vb**\] 的檔案已經加入至目前的專案。  
+    >  <span data-ttu-id="af98b-202">名為 **ctlAlarmClock.vb** 的檔案已新增至目前的專案。</span><span class="sxs-lookup"><span data-stu-id="af98b-202">A file called **ctlAlarmClock.vb** has been added to the current project.</span></span>  
   
-### 加入警示屬性  
- 屬性加入至繼承控制項的方法與加入至複合控制項的方法相同。  現在，您將使用屬性宣告語法，將下列兩個屬性加入至控制項中：`AlarmTime` 和 `AlarmSet`；前者會儲存警示響起的日期和時間值，後者則指出是否已設定警示。  
+### <a name="adding-the-alarm-properties"></a><span data-ttu-id="af98b-203">新增警示屬性</span><span class="sxs-lookup"><span data-stu-id="af98b-203">Adding the Alarm Properties</span></span>  
+ <span data-ttu-id="af98b-204">屬性會以新增至複合控制項的相同方式，新增至繼承的控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-204">Properties are added to an inherited control in the same way they are added to a composite control.</span></span> <span data-ttu-id="af98b-205">您現在會使用屬性宣告語法將兩個屬性新增至您的控制項︰`AlarmTime`，它將會儲存警示停止之日期和時間的值，以及 `AlarmSet`，它將會指示是否已設定警示。</span><span class="sxs-lookup"><span data-stu-id="af98b-205">You will now use the property declaration syntax to add two properties to your control: `AlarmTime`, which will store the value of the date and time the alarm is to go off, and `AlarmSet`, which will indicate whether the alarm is set.</span></span>  
   
-##### 若要將屬性加入至複合控制項  
+##### <a name="to-add-properties-to-your-composite-control"></a><span data-ttu-id="af98b-206">若要將屬性新增至複合控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-206">To add properties to your composite control</span></span>  
   
-1.  在 \[方案總管\] 中，以滑鼠右鍵按一下 \[**ctlAlarmClock**\]，然後按一下 \[**檢視程式碼**\]。  
+1.  <span data-ttu-id="af98b-207">在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock]，然後按一下 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="af98b-207">In Solution Explorer, right-click **ctlAlarmClock**, and then click **View Code**.</span></span>  
   
-2.  找出 ctlAlarmClock 控制項的類別宣告，出現的方式為 `Public Class ctlAlarmClock`。  在類別宣告中插入下列程式碼。  
+2.  <span data-ttu-id="af98b-208">尋找 ctlAlarmClock 控制項的類別宣告，它會顯示為 `Public Class ctlAlarmClock`。</span><span class="sxs-lookup"><span data-stu-id="af98b-208">Locate the class declaration for the ctlAlarmClock control, which appears as `Public Class ctlAlarmClock`.</span></span>  <span data-ttu-id="af98b-209">在類別宣告中插入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="af98b-209">In the class declaration, insert the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private dteAlarmTime As Date  
     Private blnAlarmSet As Boolean  
     ' These properties will be declared as Public to allow future   
@@ -237,54 +231,50 @@ caps.handback.revision: 21
     End Property  
     ```  
   
-### 加入至控制項的圖形介面  
- 繼承控制項的視覺介面與它的父控制項的視覺介面相同。  它擁有與父控制項相同的組成控制項，但是組成控制項的屬性除非特別公開，否則無法使用。  加入到繼承複合控制項圖形介面的方法與加入到任何複合控制項的方法相同。  若要繼續加入到警示時鐘的視覺介面，您將會加入當警示響起時會閃爍的標籤控制項。  
+### <a name="adding-to-the-graphical-interface-of-the-control"></a><span data-ttu-id="af98b-210">新增至控制項的圖形化介面</span><span class="sxs-lookup"><span data-stu-id="af98b-210">Adding to the Graphical Interface of the Control</span></span>  
+ <span data-ttu-id="af98b-211">繼承的控制項具有視覺化介面，與它所繼承的控制項相同。</span><span class="sxs-lookup"><span data-stu-id="af98b-211">Your inherited control has a visual interface that is identical to the control it inherits from.</span></span> <span data-ttu-id="af98b-212">它擁有與其父控制項相同的組成控制項，但是無法使用組成控制項的屬性，除非特別公開。</span><span class="sxs-lookup"><span data-stu-id="af98b-212">It possesses the same constituent controls as its parent control, but the properties of the constituent controls will not be available unless they were specifically exposed.</span></span> <span data-ttu-id="af98b-213">您可以使用新增至任何複合控制項的相同方式，新增至繼承的複合控制項的圖形化介面。</span><span class="sxs-lookup"><span data-stu-id="af98b-213">You may add to the graphical interface of an inherited composite control in the same manner as you would add to any composite control.</span></span> <span data-ttu-id="af98b-214">若要繼續新增至警示時鐘的視覺化介面，您要新增標籤控制項，該控制項會在警示響起時閃爍。</span><span class="sxs-lookup"><span data-stu-id="af98b-214">To continue adding to your alarm clock's visual interface, you will add a label control that will flash when the alarm is sounding.</span></span>  
   
-##### 若要加入標籤控制項  
+##### <a name="to-add-the-label-control"></a><span data-ttu-id="af98b-215">若要新增標籤控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-215">To add the label control</span></span>  
   
-1.  在 \[方案總管\] 中，以滑鼠右鍵按一下 \[**ctlAlarmClock**\]，然後按一下 \[**設計工具檢視**\]。  
+1.  <span data-ttu-id="af98b-216">在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock]，然後按一下 [檢視表設計工具]。</span><span class="sxs-lookup"><span data-stu-id="af98b-216">In Solution Explorer, right-click **ctlAlarmClock**, and click **View Designer**.</span></span>  
   
-     `ctlAlarmClock` 的設計工具會在主視窗中開啟。  
+     <span data-ttu-id="af98b-217">`ctlAlarmClock` 的設計工具隨即在主視窗中開啟。</span><span class="sxs-lookup"><span data-stu-id="af98b-217">The designer for `ctlAlarmClock` opens in the main window.</span></span>  
   
-2.  按一下 \[`lblDisplay`\] \(控制項的顯示部分\)，然後檢視 \[屬性\] 視窗。  
-  
-    > [!NOTE]
-    >  請注意，雖然會顯示出所有屬性，但它們是暗灰色的 \(Dimmed\)。  這表示這些屬性對 `lblDisplay` 是原生的，在 \[屬性\] 視窗中不能修改或存取。  根據預設，包含在複合控制項的控制項是 `Private`，其屬性無法使用任何方法存取。  
+2.  <span data-ttu-id="af98b-218">按一下 `lblDisplay` (控制項的顯示部分)，並檢視 [屬性] 視窗。</span><span class="sxs-lookup"><span data-stu-id="af98b-218">Click `lblDisplay` (the display portion of the control), and view the Properties window.</span></span>  
   
     > [!NOTE]
-    >  如果希望控制項的後續使用者可以存取它的內部控制項，請將這些內部控制項宣告為 `Public` 或 `Protected`。  這麼做將可讓您使用適當的程式碼設定及修改包含在複合控制項中的控制項屬性。  
+    >  <span data-ttu-id="af98b-219">所有屬性顯示時，它們會以灰色顯示。</span><span class="sxs-lookup"><span data-stu-id="af98b-219">While all the properties are displayed, they are dimmed.</span></span> <span data-ttu-id="af98b-220">這表示這些屬性是 `lblDisplay` 的原生屬性，而且無法修改或在 [屬性] 視窗中存取。</span><span class="sxs-lookup"><span data-stu-id="af98b-220">This indicates that these properties are native to `lblDisplay` and cannot be modified or accessed in the Properties window.</span></span> <span data-ttu-id="af98b-221">根據預設，包含在複合控制項中的控制項是 `Private`，而且其屬性無法使用任何方法存取。</span><span class="sxs-lookup"><span data-stu-id="af98b-221">By default, controls contained in a composite control are `Private`, and their properties are not accessible by any means.</span></span>  
   
-3.  在複合控制項中加入 <xref:System.Windows.Forms.Label> 控制項。  
+    > [!NOTE]
+    >  <span data-ttu-id="af98b-222">如果您想要讓複合控制項的後續使用者可以存取其內部控制項，請將它們宣告為 `Public` 或 `Protected`。</span><span class="sxs-lookup"><span data-stu-id="af98b-222">If you want subsequent users of your composite control to have access to its internal controls, declare them as `Public` or `Protected`.</span></span> <span data-ttu-id="af98b-223">這可讓您使用適當的程式碼，設定及修改包含在複合控制項中的控制項屬性。</span><span class="sxs-lookup"><span data-stu-id="af98b-223">This will allow you to set and modify properties of controls contained within your composite control by using the appropriate code.</span></span>  
   
-4.  使用滑鼠，將 <xref:System.Windows.Forms.Label> 控制項拖曳至緊接在顯示方塊的下方。  在 \[屬性\] 視窗中設定下列屬性。  
+3.  <span data-ttu-id="af98b-224">新增<xref:System.Windows.Forms.Label>複合控制項的控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-224">Add a <xref:System.Windows.Forms.Label> control to your composite control.</span></span>  
   
-    |屬性|設定|  
-    |--------|--------|  
-    |**名稱**|`lblAlarm`|  
-    |**文字**|Alarm\!|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`False`|  
+4.  <span data-ttu-id="af98b-225">使用滑鼠拖曳<xref:System.Windows.Forms.Label>緊接位於顯示方塊的控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-225">Using the mouse, drag the <xref:System.Windows.Forms.Label> control immediately beneath the display box.</span></span> <span data-ttu-id="af98b-226">在 [屬性] 視窗中設定下列屬性。</span><span class="sxs-lookup"><span data-stu-id="af98b-226">In the Properties window, set the following properties.</span></span>  
   
-### 加入警示功能  
- 在之前的程序中，您加入了可啟用複合控制項之警示功能的屬性及控制項。  本程序中，您將加入程式碼來比較目前時間與警示時間，以及警示的響音與閃燈是否相同。  藉由覆寫 `ctlClock` 的 `Timer1_Tick` 方法，並在其中加入其他程式碼，您將擴充 `ctlAlarmClock` 的功能，且同時保留 `ctlClock` 的所有繼承功能。  
+    |<span data-ttu-id="af98b-227">屬性</span><span class="sxs-lookup"><span data-stu-id="af98b-227">Property</span></span>|<span data-ttu-id="af98b-228">設定</span><span class="sxs-lookup"><span data-stu-id="af98b-228">Setting</span></span>|  
+    |--------------|-------------|  
+    |<span data-ttu-id="af98b-229">**Name**</span><span class="sxs-lookup"><span data-stu-id="af98b-229">**Name**</span></span>|`lblAlarm`|  
+    |<span data-ttu-id="af98b-230">**文字**</span><span class="sxs-lookup"><span data-stu-id="af98b-230">**Text**</span></span>|<span data-ttu-id="af98b-231">**Alarm!**</span><span class="sxs-lookup"><span data-stu-id="af98b-231">**Alarm!**</span></span>|  
+    |<span data-ttu-id="af98b-232">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="af98b-232">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="af98b-233">**可見**</span><span class="sxs-lookup"><span data-stu-id="af98b-233">**Visible**</span></span>|`False`|  
   
-##### 若要覆寫 ctlClock 的 Timer1\_Tick 方法  
+### <a name="adding-the-alarm-functionality"></a><span data-ttu-id="af98b-234">新增警示功能</span><span class="sxs-lookup"><span data-stu-id="af98b-234">Adding the Alarm Functionality</span></span>  
+ <span data-ttu-id="af98b-235">在先前的程序中，您新增屬性和控制項，在您的複合控制項中啟用警示功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-235">In the previous procedures, you added properties and a control that will enable alarm functionality in your composite control.</span></span> <span data-ttu-id="af98b-236">在此程序中，您將會新增程式碼以比較目前時間與警示時間，如果它們相同，則讓警示發出聲響與閃爍。</span><span class="sxs-lookup"><span data-stu-id="af98b-236">In this procedure, you will add code to compare the current time to the alarm time and, if they are the same, to sound and flash an alarm.</span></span> <span data-ttu-id="af98b-237">藉由覆寫 `ctlClock` 的 `Timer1_Tick` 方法，並且將額外程式碼新增至其中，您就可以擴充 `ctlAlarmClock` 的功能，同時保留 `ctlClock` 的所有固有功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-237">By overriding the `Timer1_Tick` method of `ctlClock` and adding additional code to it, you will extend the capability of `ctlAlarmClock` while retaining all of the inherent functionality of `ctlClock`.</span></span>  
   
-1.  在 \[方案總管\] 中以滑鼠右鍵按一下 \[**ctlAlarmClock.vb**\]，然後按一下 \[**檢視程式碼**\]。  
+##### <a name="to-override-the-timer1tick-method-of-ctlclock"></a><span data-ttu-id="af98b-238">若要覆寫 ctlClock 的 Timer1_Tick 方法</span><span class="sxs-lookup"><span data-stu-id="af98b-238">To override the Timer1_Tick method of ctlClock</span></span>  
   
-2.  找出 `Private blnAlarmSet As Boolean` 陳述式。  緊接著在它的下方，加入下列陳述式。  
+1.  <span data-ttu-id="af98b-239">在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock.vb]，然後按一下 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="af98b-239">In Solution Explorer, right-click **ctlAlarmClock.vb**, and then click **View Code**.</span></span>  
   
-     \[Visual Basic\]  
+2.  <span data-ttu-id="af98b-240">尋找 `Private blnAlarmSet As Boolean` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="af98b-240">Locate the `Private blnAlarmSet As Boolean` statement.</span></span> <span data-ttu-id="af98b-241">緊接著在其下新增下列陳述式。</span><span class="sxs-lookup"><span data-stu-id="af98b-241">Immediately beneath it, add the following statement.</span></span>  
   
-    ```  
+    ```vb  
     Dim blnColorTicker as Boolean  
     ```  
   
-3.  在頁面底部找出 `End Class` 陳述式。  緊接在 `End Class` 陳述式之前，加入下列程式碼。  
+3.  <span data-ttu-id="af98b-242">在頁面底部尋找 `End Class` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="af98b-242">Locate the `End Class` statement at the bottom of the page.</span></span> <span data-ttu-id="af98b-243">緊接在 `End Class` 陳述式之前，新增下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="af98b-243">Just before the `End Class` statement, add the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Overrides Sub Timer1_Tick(ByVal sender As Object, ByVal e _  
         As System.EventArgs)  
         ' Calls the Timer1_Tick method of ctlClock.  
@@ -318,24 +308,22 @@ caps.handback.revision: 21
     End Sub  
     ```  
   
-     加入這個程式碼即完成了數項工作。  `Overrides` 陳述式會引導控制項使用此方法，而不使用繼承自基底控制項的方法。  當此方法被呼叫時，會叫用 `MyBase.Timer1_Tick` 陳述式呼叫它覆寫的方法，確保所有包含在原始控制項中的功能會重新在此控制項中產生。  接著，它會執行其他程式碼併入警示功能。  當警示發生時，將會出現閃爍的標籤控制項，並會聽見嗶聲。  
+     <span data-ttu-id="af98b-244">新增這個程式碼會完成幾項工作。</span><span class="sxs-lookup"><span data-stu-id="af98b-244">The addition of this code accomplishes several tasks.</span></span> <span data-ttu-id="af98b-245">`Overrides` 陳述式會指示控制項使用這個方法來取代繼承自基底控制項的方法。</span><span class="sxs-lookup"><span data-stu-id="af98b-245">The `Overrides` statement directs the control to use this method in place of the method that was inherited from the base control.</span></span> <span data-ttu-id="af98b-246">呼叫這個方法時，它會呼叫它藉由叫用 `MyBase.Timer1_Tick` 陳述式覆寫的方法，確保併入原始控制項的所有功能在此控制項中重現。</span><span class="sxs-lookup"><span data-stu-id="af98b-246">When this method is called, it calls the method it overrides by invoking the `MyBase.Timer1_Tick` statement, ensuring that all of the functionality incorporated in the original control is reproduced in this control.</span></span> <span data-ttu-id="af98b-247">接著，它會執行其他程式碼以併入警示功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-247">It then runs additional code to incorporate the alarm functionality.</span></span> <span data-ttu-id="af98b-248">發生警示時，閃爍標籤控制項就會出現，而且會聽到嗶聲。</span><span class="sxs-lookup"><span data-stu-id="af98b-248">A flashing label control will appear when the alarm occurs, and an audible beep will be heard.</span></span>  
   
     > [!NOTE]
-    >  由於您所要覆寫的是繼承的事件處理常式，所以並不需要使用 `Handles` 關鍵字指定事件。  因為原本就已經連接至事件，  而您的覆寫動作只是將處理常式實作而已。  
+    >  <span data-ttu-id="af98b-249">因為您正在覆寫繼承的事件處理常式，您不需要指定事件與 `Handles` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="af98b-249">Because you are overriding an inherited event handler, you do not have to specify the event with the `Handles` keyword.</span></span> <span data-ttu-id="af98b-250">事件已傳入。</span><span class="sxs-lookup"><span data-stu-id="af98b-250">The event is already hooked up.</span></span> <span data-ttu-id="af98b-251">您覆寫的所有項目是處理常式的實作。</span><span class="sxs-lookup"><span data-stu-id="af98b-251">All you are overriding is the implementation of the handler.</span></span>  
   
-     您的警示時鐘控制項已接近完成。  最後剩下的是實作將它關閉的方法。  要這麼做，您要加入程式碼至 `lblAlarm_Click` 方法。  
+     <span data-ttu-id="af98b-252">警示時鐘控制項已接近完成。</span><span class="sxs-lookup"><span data-stu-id="af98b-252">Your alarm clock control is almost complete.</span></span> <span data-ttu-id="af98b-253">唯一剩餘的事項是實作將它關閉的方式。</span><span class="sxs-lookup"><span data-stu-id="af98b-253">The only thing that remains is to implement a way to turn it off.</span></span> <span data-ttu-id="af98b-254">若要這樣做，您要將程式碼新增至 `lblAlarm_Click` 方法。</span><span class="sxs-lookup"><span data-stu-id="af98b-254">To do this, you will add code to the `lblAlarm_Click` method.</span></span>  
   
-##### 若要實作關閉方法  
+##### <a name="to-implement-the-shutoff-method"></a><span data-ttu-id="af98b-255">若要實作關閉方法</span><span class="sxs-lookup"><span data-stu-id="af98b-255">To implement the shutoff method</span></span>  
   
-1.  在 \[方案總管\] 中以滑鼠右鍵按一下 \[**ctlAlarmClock.vb**\]，然後按一下 \[**設計工具檢視**\]。  
+1.  <span data-ttu-id="af98b-256">在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock.vb]，然後按一下 [檢視表設計工具]。</span><span class="sxs-lookup"><span data-stu-id="af98b-256">In Solution Explorer, right-click **ctlAlarmClock.vb**, and then click **View Designer**.</span></span>  
   
-2.  在設計工具中按兩下 \[**lblAlarm**\]。  \[**程式碼編輯器**\] 會開啟至 `Private Sub lblAlarm_Click` 行。  
+2.  <span data-ttu-id="af98b-257">在設計工具中，按兩下 [lblAlarm]。</span><span class="sxs-lookup"><span data-stu-id="af98b-257">In the designer, double-click **lblAlarm**.</span></span> <span data-ttu-id="af98b-258">[程式碼編輯器] 隨即開啟至 `Private Sub lblAlarm_Click` 行。</span><span class="sxs-lookup"><span data-stu-id="af98b-258">The **Code Editor** opens to the `Private Sub lblAlarm_Click` line.</span></span>  
   
-3.  修改此方法，使它類似下列程式碼。  
+3.  <span data-ttu-id="af98b-259">修改此方法，使它類似下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="af98b-259">Modify this method so that it resembles the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub lblAlarm_Click(ByVal sender As Object, ByVal e As _  
      System.EventArgs) Handles lblAlarm.Click  
         ' Turns off the alarm.  
@@ -345,55 +333,53 @@ caps.handback.revision: 21
     End Sub  
     ```  
   
-4.  在 \[**檔案**\] 功能表上，按一下 \[**全部儲存**\] 儲存專案。  
+4.  <span data-ttu-id="af98b-260">在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。</span><span class="sxs-lookup"><span data-stu-id="af98b-260">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-### 在表單上使用繼承控制項  
- 您可以使用測試基底類別控制項 `ctlClock` 的相同方法來測試繼承控制項：按下 F5 以建置專案，並在 \[**使用者控制項測試容器**\] 中執行控制項。  如需詳細資訊，請參閱 [如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+### <a name="using-the-inherited-control-on-a-form"></a><span data-ttu-id="af98b-261">在表單上使用繼承的控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-261">Using the Inherited Control on a Form</span></span>  
+ <span data-ttu-id="af98b-262">您可以使用測試基底類別控制項的相同方式，測試繼承的控制項，`ctlClock`︰按下 F5 鍵以建置專案，然後在 **UserControl 測試容器**中執行控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-262">You can test your inherited control the same way you tested the base class control, `ctlClock`: Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span> <span data-ttu-id="af98b-263">如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="af98b-263">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
- 若要讓控制項能夠使用，您需要將它裝載在表單上。  和標準複合控制項一樣，繼承的複合控制項無法獨立存在，必須裝載在表單中或其他容器中。  由於 `ctlAlarmClock` 具有較具深度的功能，所以需要其他程式碼來加以測試。  在本程序中，您將撰寫簡單的程式來測試 `ctlAlarmClock` 的功能。  您將撰寫程式碼來設定及顯示 `ctlAlarmClock` 的 `AlarmTime` 屬性，並且測試其繼承功能。  
+ <span data-ttu-id="af98b-264">若要使用控制項，您必須將它裝載在表單上。</span><span class="sxs-lookup"><span data-stu-id="af98b-264">To put your control to use, you will need to host it on a form.</span></span> <span data-ttu-id="af98b-265">如同標準複合控制項，繼承的複合控制項無法獨立存在，而且必須裝載在表單或其他容器。</span><span class="sxs-lookup"><span data-stu-id="af98b-265">As with a standard composite control, an inherited composite control cannot stand alone and must be hosted in a form or other container.</span></span> <span data-ttu-id="af98b-266">由於 `ctlAlarmClock` 有更深入的功能，需要額外的程式碼來進行測試。</span><span class="sxs-lookup"><span data-stu-id="af98b-266">Since `ctlAlarmClock` has a greater depth of functionality, additional code is required to test it.</span></span> <span data-ttu-id="af98b-267">在此程序中，您將撰寫一個簡單的程式來測試 `ctlAlarmClock` 的功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-267">In this procedure, you will write a simple program to test the functionality of `ctlAlarmClock`.</span></span> <span data-ttu-id="af98b-268">您將撰寫程式碼以設定及顯示 `ctlAlarmClock` 的 `AlarmTime` 屬性，然後測試其固有功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-268">You will write code to set and display the `AlarmTime` property of `ctlAlarmClock`, and will test its inherent functions.</span></span>  
   
-##### 若要建置控制項並將它加入至測試表單  
+##### <a name="to-build-and-add-your-control-to-a-test-form"></a><span data-ttu-id="af98b-269">若要建置控制項並且新增至測試表單</span><span class="sxs-lookup"><span data-stu-id="af98b-269">To build and add your control to a test form</span></span>  
   
-1.  在 \[方案總管\] 中，以滑鼠右鍵按一下 \[**ctlClockLib**\]，然後按一下 \[**建置**\]。  
+1.  <span data-ttu-id="af98b-270">在 [方案總管] 中，以滑鼠右鍵按一下 [ctlClockLib]，然後按一下 [建置]。</span><span class="sxs-lookup"><span data-stu-id="af98b-270">In Solution Explorer, right-click **ctlClockLib**, and then click **Build**.</span></span>  
   
-2.  在 \[**檔案**\] 功能表上指向 \[**加入**\]，然後按一下 \[**新增專案**\]。  
+2.  <span data-ttu-id="af98b-271">在 [檔案]  功能表上，指向 [加入] ，然後按一下 [新增專案] 。</span><span class="sxs-lookup"><span data-stu-id="af98b-271">On the **File** menu, point to **Add**, and then click **New Project**.</span></span>  
   
-3.  將新的 \[**Windows 應用程式**\] 專案加入至方案，並命名為 `Test`。  
+3.  <span data-ttu-id="af98b-272">將新的 **Windows 應用程式**專案新增至解決方案，並且將它命名為 `Test`。</span><span class="sxs-lookup"><span data-stu-id="af98b-272">Add a new **Windows Application** project to the solution, and name it `Test`.</span></span>  
   
-     **Test** 專案會加入至 \[方案總管\] 中。  
+     <span data-ttu-id="af98b-273">[測試] 專案隨即新增至 [方案總管]。</span><span class="sxs-lookup"><span data-stu-id="af98b-273">The **Test** project is added to Solution Explorer.</span></span>  
   
-4.  在 \[方案總管\] 中，以滑鼠右鍵按一下 `Test` 專案節點，然後按一下 \[**加入參考**\] 以顯示 \[**加入參考**\] 對話方塊。  
+4.  <span data-ttu-id="af98b-274">在 [方案總管] 中，以滑鼠右鍵按一下 `Test` 專案節點，然後按一下 [加入參考]以顯示 [加入參考] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="af98b-274">In Solution Explorer, right-click the `Test` project node, and then click **Add Reference** to display the **Add Reference** dialog box.</span></span>  
   
-5.  按一下標示為 \[**專案**\] 的索引標籤。  \[**ctlClockLib**\] 專案將列在 \[**專案名稱**\] 下。  按兩下 \[**ctlClockLib**\]，將參考加入至測試專案。  
+5.  <span data-ttu-id="af98b-275">按一下標籤為 [專案] 的索引標籤。</span><span class="sxs-lookup"><span data-stu-id="af98b-275">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="af98b-276">專案 **ctlClockLib** 會列在 [專案名稱] 底下。</span><span class="sxs-lookup"><span data-stu-id="af98b-276">The project **ctlClockLib** will be listed under **Project Name**.</span></span> <span data-ttu-id="af98b-277">按兩下 [ctlClockLib] 以將參考新增至測試專案。</span><span class="sxs-lookup"><span data-stu-id="af98b-277">Double-click **ctlClockLib** to add the reference to the test project.</span></span>  
   
-6.  在 \[方案總管\] 中，以滑鼠右鍵按一下 \[**測試**\]，然後按一下 \[**建置**\]。  
+6.  <span data-ttu-id="af98b-278">在 [方案總管] 中，以滑鼠右鍵按一下 [測試]，然後按一下 [建置]。</span><span class="sxs-lookup"><span data-stu-id="af98b-278">In Solution Explorer, right-click **Test**, and then click **Build**.</span></span>  
   
-7.  在 \[**工具箱**\] 中展開 \[**ctlClockLib 元件**\] 節點。  
+7.  <span data-ttu-id="af98b-279">在 [工具箱] 中，展開 [ctlClockLib 元件] 節點。</span><span class="sxs-lookup"><span data-stu-id="af98b-279">In the **Toolbox**, expand the **ctlClockLib Components** node.</span></span>  
   
-8.  按兩下 \[**ctlAlarmClock**\]，將 \[`ctlAlarmClock`\] 執行個體加入至表單中。  
+8.  <span data-ttu-id="af98b-280">按兩下 [ctlAlarmClock] 以將 `ctlAlarmClock` 的執行個體新增至表單。</span><span class="sxs-lookup"><span data-stu-id="af98b-280">Double-click **ctlAlarmClock** to add an instance of `ctlAlarmClock` to your form.</span></span>  
   
-9. 在 \[**工具箱**\] 中，找出 \[**DateTimePicker**\] 並按兩下，以便將 <xref:System.Windows.Forms.DateTimePicker> 控制項加入至表單，然後再按兩下 \[**標籤**\]，藉此加入 <xref:System.Windows.Forms.Label> 控制項。  
+9. <span data-ttu-id="af98b-281">在**工具箱**，找出並按兩下**DateTimePicker**新增<xref:System.Windows.Forms.DateTimePicker>控制項加入至表單，然後再加入<xref:System.Windows.Forms.Label>按兩下控制項**標籤**.</span><span class="sxs-lookup"><span data-stu-id="af98b-281">In the **Toolbox**, locate and double-click **DateTimePicker** to add a <xref:System.Windows.Forms.DateTimePicker> control to your form, and then add a <xref:System.Windows.Forms.Label> control by double-clicking **Label**.</span></span>  
   
-10. 使用滑鼠將控制項放置在表單上方便的地方。  
+10. <span data-ttu-id="af98b-282">使用滑鼠將控制項放置在表單上方便的位置。</span><span class="sxs-lookup"><span data-stu-id="af98b-282">Use the mouse to position the controls in a convenient place on the form.</span></span>  
   
-11. 以下列方法設定這些控制項的屬性。  
+11. <span data-ttu-id="af98b-283">以下列方式設定這些控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="af98b-283">Set the properties of these controls in the following manner.</span></span>  
   
-    |控制項|屬性|值|  
-    |---------|--------|-------|  
-    |`label1`|**文字**|`(空白)`|  
-    ||**名稱**|`lblTest`|  
-    |`dateTimePicker1`|**名稱**|`dtpTest`|  
-    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat>|  
+    |<span data-ttu-id="af98b-284">控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-284">Control</span></span>|<span data-ttu-id="af98b-285">屬性</span><span class="sxs-lookup"><span data-stu-id="af98b-285">Property</span></span>|<span data-ttu-id="af98b-286">值</span><span class="sxs-lookup"><span data-stu-id="af98b-286">Value</span></span>|  
+    |-------------|--------------|-----------|  
+    |`label1`|<span data-ttu-id="af98b-287">**文字**</span><span class="sxs-lookup"><span data-stu-id="af98b-287">**Text**</span></span>|`(blank space)`|  
+    ||<span data-ttu-id="af98b-288">**Name**</span><span class="sxs-lookup"><span data-stu-id="af98b-288">**Name**</span></span>|`lblTest`|  
+    |`dateTimePicker1`|<span data-ttu-id="af98b-289">**Name**</span><span class="sxs-lookup"><span data-stu-id="af98b-289">**Name**</span></span>|`dtpTest`|  
+    ||<span data-ttu-id="af98b-290">**格式**</span><span class="sxs-lookup"><span data-stu-id="af98b-290">**Format**</span></span>|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
-12. 在設計工具中，按兩下 \[**dtpTest**\]。  
+12. <span data-ttu-id="af98b-291">在設計工具中，按兩下 [dtpTest]。</span><span class="sxs-lookup"><span data-stu-id="af98b-291">In the designer, double-click **dtpTest**.</span></span>  
   
-     \[**程式碼編輯器**\] 會開啟至 `Private Sub dtpTest_ValueChanged`。  
+     <span data-ttu-id="af98b-292">[程式碼編輯器] 隨即開啟至 `Private Sub dtpTest_ValueChanged`。</span><span class="sxs-lookup"><span data-stu-id="af98b-292">The **Code Editor** opens to `Private Sub dtpTest_ValueChanged`.</span></span>  
   
-13. 修改程式碼，使它類似下列程式碼。  
+13. <span data-ttu-id="af98b-293">修改此程式碼，使它類似下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="af98b-293">Modify the code so that it resembles the following.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub dtpTest_ValueChanged(ByVal sender As Object, ByVal e As _  
         System.EventArgs) Handles dtpTest.ValueChanged  
         ctlAlarmClock1.AlarmTime = dtpTest.Value  
@@ -403,24 +389,24 @@ caps.handback.revision: 21
     End Sub  
     ```  
   
-14. 在 \[方案總管\] 中，以滑鼠右鍵按一下 \[**測試**\]，然後按一下 \[**設定為啟始專案**\]。  
+14. <span data-ttu-id="af98b-294">在 [方案總管] 中，以滑鼠右鍵按一下 [測試]，然後按一下 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="af98b-294">In Solution Explorer, right-click **Test**, and then click **Set as StartUp Project**.</span></span>  
   
-15. 按一下 \[**偵錯**\] 功能表上的 \[**開始偵錯**\]。  
+15. <span data-ttu-id="af98b-295">按一下 [偵錯] 功能表上的 [開始偵錯]。</span><span class="sxs-lookup"><span data-stu-id="af98b-295">On the **Debug** menu, click **Start Debugging**.</span></span>  
   
-     測試程式啟動。  請注意，`ctlAlarmClock` 控制項中的目前時間會更新，而且啟動時間會顯示在 <xref:System.Windows.Forms.DateTimePicker> 控制項中。  
+     <span data-ttu-id="af98b-296">測試程式隨即啟動。</span><span class="sxs-lookup"><span data-stu-id="af98b-296">The test program starts.</span></span> <span data-ttu-id="af98b-297">請注意，目前的時間在更新`ctlAlarmClock`控制項，以及所示的開始時間<xref:System.Windows.Forms.DateTimePicker>控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-297">Note that the current time is updated in the `ctlAlarmClock` control, and that the starting time is shown in the <xref:System.Windows.Forms.DateTimePicker> control.</span></span>  
   
-16. 按一下會顯示小時之分鐘數的 <xref:System.Windows.Forms.DateTimePicker>。  
+16. <span data-ttu-id="af98b-298">按一下<xref:System.Windows.Forms.DateTimePicker>顯示分鐘數的位置。</span><span class="sxs-lookup"><span data-stu-id="af98b-298">Click the <xref:System.Windows.Forms.DateTimePicker> where the minutes of the hour are displayed.</span></span>  
   
-17. 使用鍵盤，將分鐘值設定成比 `ctlAlarmClock` 顯示的目前時間快一分鐘。  
+17. <span data-ttu-id="af98b-299">使用鍵盤，將分鐘值設定為大於 `ctlAlarmClock` 顯示的目前時間一分鐘。</span><span class="sxs-lookup"><span data-stu-id="af98b-299">Using the keyboard, set a value for minutes that is one minute greater than the current time shown by `ctlAlarmClock`.</span></span>  
   
-     `lblTest` 內會顯示警示設定的時間。  等候顯示的時間達到警示設定時間。  當顯示的時間到達警示設定的時間時，嗶聲將響起而 `lblAlarm` 會閃爍。  
+     <span data-ttu-id="af98b-300">警示設定的時間會在 `lblTest` 中顯示。</span><span class="sxs-lookup"><span data-stu-id="af98b-300">The time for the alarm setting is shown in `lblTest`.</span></span> <span data-ttu-id="af98b-301">等候顯示的時間達到警示設定時間。</span><span class="sxs-lookup"><span data-stu-id="af98b-301">Wait for the displayed time to reach the alarm setting time.</span></span> <span data-ttu-id="af98b-302">當顯示的時間達到警示設定時間，則會響起嗶聲且 `lblAlarm` 會閃爍。</span><span class="sxs-lookup"><span data-stu-id="af98b-302">When the displayed time reaches the time to which the alarm is set, the beep will sound and `lblAlarm` will flash.</span></span>  
   
-18. 按一下 `lblAlarm` 以關閉警示。  您現在可以重新設定警示。  
+18. <span data-ttu-id="af98b-303">按一下 `lblAlarm` 來關閉警示。</span><span class="sxs-lookup"><span data-stu-id="af98b-303">Turn off the alarm by clicking `lblAlarm`.</span></span> <span data-ttu-id="af98b-304">您現在可以重設警示。</span><span class="sxs-lookup"><span data-stu-id="af98b-304">You may now reset the alarm.</span></span>  
   
-     這個逐步解說涵蓋了數個重要概念。  您已經學會如何結合控制項及元件到複合控制項容器中，以建立複合控制項。  也學習到如何加入屬性至控制項，以及如何撰寫程式碼以實作自訂功能。  在上述章節中，則學會了透過繼承方式來擴充指定使用者控制項的功能，以及藉由覆寫方法來變更主方法的功能。  
+     <span data-ttu-id="af98b-305">本逐步解說涵蓋了數個重要概念。</span><span class="sxs-lookup"><span data-stu-id="af98b-305">This walkthrough has covered a number of key concepts.</span></span> <span data-ttu-id="af98b-306">您已經了解藉由將控制項和元件合併成複合控制項容器，來建立複合控制項。</span><span class="sxs-lookup"><span data-stu-id="af98b-306">You have learned to create a composite control by combining controls and components into a composite control container.</span></span> <span data-ttu-id="af98b-307">您已經了解將屬性新增至您的控制項，以及撰寫程式碼來實作自訂功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-307">You have learned to add properties to your control, and to write code to implement custom functionality.</span></span> <span data-ttu-id="af98b-308">在最後一節中，您會了解透過繼承擴充指定複合控制項的功能，並且藉由覆寫這些方法來變更主方法的功能。</span><span class="sxs-lookup"><span data-stu-id="af98b-308">In the last section, you learned to extend the functionality of a given composite control through inheritance, and to alter the functionality of host methods by overriding those methods.</span></span>  
   
-## 請參閱  
- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [如何：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)   
- [如何：在選擇工具箱項目對話方塊中顯示控制項](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)   
- [Component Authoring Walkthroughs](../Topic/Component%20Authoring%20Walkthroughs.md)
+## <a name="see-also"></a><span data-ttu-id="af98b-309">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af98b-309">See Also</span></span>  
+ [<span data-ttu-id="af98b-310">各種自訂控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-310">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [<span data-ttu-id="af98b-311">操作說明：撰寫複合控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-311">How to: Author Composite Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
+ [<span data-ttu-id="af98b-312">操作說明：在選擇工具箱項目對話方塊中顯示控制項</span><span class="sxs-lookup"><span data-stu-id="af98b-312">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [<span data-ttu-id="af98b-313">元件撰寫逐步解說</span><span class="sxs-lookup"><span data-stu-id="af98b-313">Component Authoring Walkthroughs</span></span>](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

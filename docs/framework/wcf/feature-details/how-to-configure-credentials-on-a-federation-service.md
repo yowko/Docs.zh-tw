@@ -1,86 +1,92 @@
 ---
-title: "HOW TO：設定聯合服務的認證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聯合"
-  - "WCF, 聯合"
+title: "HOW TO：設定聯合服務的認證"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, federation
+- federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6a15f5b0b68252ada1587e66ea601d1f55e8a06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：設定聯合服務的認證
-在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，建立聯合服務認證的過程包含了下列主要程序：  
+# <a name="how-to-configure-credentials-on-a-federation-service"></a><span data-ttu-id="5cb50-102">HOW TO：設定聯合服務的認證</span><span class="sxs-lookup"><span data-stu-id="5cb50-102">How to: Configure Credentials on a Federation Service</span></span>
+<span data-ttu-id="5cb50-103">在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，建立聯合服務認證的過程包含了下列主要程序：</span><span class="sxs-lookup"><span data-stu-id="5cb50-103">In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creating a federated service consists of the following main procedures:</span></span>  
   
-1.  設定 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立適當繫結的詳細資訊，請參閱 [HOW TO：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
+1.  <span data-ttu-id="5cb50-104">設定 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結。</span><span class="sxs-lookup"><span data-stu-id="5cb50-104">Configuring a <xref:System.ServiceModel.WSFederationHttpBinding> or similar custom binding.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5cb50-105">建立適當的繫結，請參閱[How to： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="5cb50-105"> creating an appropriate binding, see [How to: Create a WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).</span></span>  
   
-2.  設定 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>，此認證可控制如何驗證提供給服務的已發行權杖。  
+2.  <span data-ttu-id="5cb50-106">設定 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>，此認證可控制如何驗證提供給服務的已發行權杖。</span><span class="sxs-lookup"><span data-stu-id="5cb50-106">Configuring the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> that controls how issued tokens presented to the service are authenticated.</span></span>  
   
- 本主題會提供第二個步驟的詳細資料。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]聯合服務運作方式的詳細資訊，請參閱[聯合](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ <span data-ttu-id="5cb50-107">本主題會提供第二個步驟的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="5cb50-107">This topic provides details about the second step.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5cb50-108">如何聯合的服務的運作方式，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。</span><span class="sxs-lookup"><span data-stu-id="5cb50-108"> how a federated service works, see [Federation](../../../../docs/framework/wcf/feature-details/federation.md).</span></span>  
   
-### 使用程式碼來設定 IssuedTokenServiceCredential 的屬性  
+### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a><span data-ttu-id="5cb50-109">使用程式碼來設定 IssuedTokenServiceCredential 的屬性</span><span class="sxs-lookup"><span data-stu-id="5cb50-109">To set the properties of IssuedTokenServiceCredential in code</span></span>  
   
-1.  使用 <xref:System.ServiceModel.Description.ServiceCredentials> 類別的 <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 屬性，傳回 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 執行個體 \(Instance\) 的參照。此屬性可從 <xref:System.ServiceModel.ServiceHostBase> 類別的 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 屬性存取。  
+1.  <span data-ttu-id="5cb50-110">使用 <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 類別的 <xref:System.ServiceModel.Description.ServiceCredentials> 屬性，傳回 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 執行個體 (Instance) 的參照。</span><span class="sxs-lookup"><span data-stu-id="5cb50-110">Use the <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> property of the <xref:System.ServiceModel.Description.ServiceCredentials> class to return a reference to an <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> instance.</span></span> <span data-ttu-id="5cb50-111">此屬性可從 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 類別的 <xref:System.ServiceModel.ServiceHostBase> 屬性存取。</span><span class="sxs-lookup"><span data-stu-id="5cb50-111">The property is accessed from the <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> property of the <xref:System.ServiceModel.ServiceHostBase> class.</span></span>  
   
-2.  如果是要驗證類似 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 卡的自行發行權杖，則將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 屬性設定為 `true`。預設為 `false`。  
+2.  <span data-ttu-id="5cb50-112">如果是要驗證類似 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 卡的自行發行權杖，則將 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5cb50-112">Set the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> property to `true` if self-issued tokens such as [!INCLUDE[infocard](../../../../includes/infocard-md.md)] cards are to be authenticated.</span></span> <span data-ttu-id="5cb50-113">預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="5cb50-113">The default is `false`.</span></span>  
   
-3.  將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性所傳回的集合填入 \(Populate\) <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別的執行個體。每個執行個體都代表服務將會從該處驗證權杖的簽發者。  
+3.  <span data-ttu-id="5cb50-114">將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性所傳回的集合填入 (Populate) <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="5cb50-114">Populate the collection returned by the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> property with instances of the <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> class.</span></span> <span data-ttu-id="5cb50-115">每個執行個體都代表服務將會從該處驗證權杖的簽發者。</span><span class="sxs-lookup"><span data-stu-id="5cb50-115">Each instance represents an issuer from which the service will authenticate tokens.</span></span>  
   
     > [!NOTE]
-    >  不同於 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 屬性所傳回的用戶端集合，已知憑證集合並不是有索引鍵的集合。無論傳送包含已發行權杖之訊息的用戶端位址為何，服務都會接受已指定憑證所發行的權杖 \(仍有其他條件限制，將於本主題稍後內容中說明\)。  
+    >  <span data-ttu-id="5cb50-116">不同於 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 屬性所傳回的用戶端集合，已知憑證集合並不是有索引鍵的集合。</span><span class="sxs-lookup"><span data-stu-id="5cb50-116">Unlike the client-side collection returned by the <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> property, the known certificates collection is not a keyed collection.</span></span> <span data-ttu-id="5cb50-117">無論傳送包含已發行權杖之訊息的用戶端位址為何，服務都會接受已指定憑證所發行的權杖 (仍有其他條件限制，將於本主題稍後內容中說明)。</span><span class="sxs-lookup"><span data-stu-id="5cb50-117">The service accepts the tokens that the specified certificates issue regardless of the address of the client that sent the message containing the issued token (subject to the further constraints, which are described later in this topic).</span></span>  
   
-4.  將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性設定為其中一個 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 列舉值。只有透過程式碼才能做到這點。預設值為 <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>。  
+4.  <span data-ttu-id="5cb50-118">將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性設定為其中一個 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 列舉值。</span><span class="sxs-lookup"><span data-stu-id="5cb50-118">Set the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> property to one of the <xref:System.ServiceModel.Security.X509CertificateValidationMode> enumeration values.</span></span> <span data-ttu-id="5cb50-119">只有透過程式碼才能做到這點。</span><span class="sxs-lookup"><span data-stu-id="5cb50-119">This can be done only in code.</span></span> <span data-ttu-id="5cb50-120">預設為 <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>。</span><span class="sxs-lookup"><span data-stu-id="5cb50-120">The default is <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.</span></span>  
   
-5.  如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性是設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode>，則會將自訂 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 屬性。  
+5.  <span data-ttu-id="5cb50-121">如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性是設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>，則會將自訂 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5cb50-121">If the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> property is set to <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, then assign an instance of the custom <xref:System.IdentityModel.Selectors.X509CertificateValidator> class to the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> property.</span></span>  
   
-6.  如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 是設定為 `ChainTrust` 或 `PeerOrChainTrust`，則會將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> 屬性設定為 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 列舉中的適當值。請注意，在 `PeerTrust` 或 `Custom` 驗證模式中沒有使用撤銷模式。  
+6.  <span data-ttu-id="5cb50-122">如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 是設定為 `ChainTrust` 或 `PeerOrChainTrust`，則會將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> 屬性設定為 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 列舉中的適當值。</span><span class="sxs-lookup"><span data-stu-id="5cb50-122">If the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> is set to `ChainTrust` or `PeerOrChainTrust`, set the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> property to an appropriate value from the <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> enumeration.</span></span> <span data-ttu-id="5cb50-123">請注意，在 `PeerTrust` 或 `Custom` 驗證模式中沒有使用撤銷模式。</span><span class="sxs-lookup"><span data-stu-id="5cb50-123">Note that the revocation mode is not used in `PeerTrust` or `Custom` validation modes.</span></span>  
   
-7.  如有需要，將自訂 <xref:System.IdentityModel.Tokens.SamlSerializer> 類別的執行個體指派給 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> 屬性。例如，需要使用自訂的安全性判斷提示標記語言 \(Security Assertions Markup Language，SAML\) 序列化程式來剖析自訂 SAML 時。  
+7.  <span data-ttu-id="5cb50-124">如有需要，將自訂 <xref:System.IdentityModel.Tokens.SamlSerializer> 類別的執行個體指派給 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5cb50-124">If needed, assign an instance of a custom <xref:System.IdentityModel.Tokens.SamlSerializer> class to the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> property.</span></span> <span data-ttu-id="5cb50-125">例如，需要使用自訂的安全性判斷提示標記語言 (Security Assertions Markup Language，SAML) 序列化程式來剖析自訂 SAML 時。</span><span class="sxs-lookup"><span data-stu-id="5cb50-125">A custom Security Assertions Markup Language (SAML) serializer is needed, for example, for parsing custom SAML assertions.</span></span>  
   
-### 使用組態來設定 IssuedTokenServiceCredential 的屬性  
+### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a><span data-ttu-id="5cb50-126">使用組態來設定 IssuedTokenServiceCredential 的屬性</span><span class="sxs-lookup"><span data-stu-id="5cb50-126">To set the properties of IssuedTokenServiceCredential in configuration</span></span>  
   
-1.  建立 `<issuedTokenAuthentication>` 項目來做為 \<`serviceCredentials`\> 項目的子項目。  
+1.  <span data-ttu-id="5cb50-127">建立`<issuedTokenAuthentication>`做為子元素 <`serviceCredentials`> 項目。</span><span class="sxs-lookup"><span data-stu-id="5cb50-127">Create an `<issuedTokenAuthentication>` element as a child of a <`serviceCredentials`> element.</span></span>  
   
-2.  如果是要驗證類似 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 卡的自行發行權杖，則將 `<issuedTokenAuthentication>` 項目的 `allowUntrustedRsaIssuers` 屬性設定為 `true`。  
+2.  <span data-ttu-id="5cb50-128">如果是要驗證類似 `allowUntrustedRsaIssuers` 卡的自行發行權杖，則將 `<issuedTokenAuthentication>` 項目的 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5cb50-128">Set the `allowUntrustedRsaIssuers` attribute of the `<issuedTokenAuthentication>` element to `true` if authenticating a self-issued token, such as an [!INCLUDE[infocard](../../../../includes/infocard-md.md)] card.</span></span>  
   
-3.  建立 `<knownCertificates>` 項目做為 `<issuedTokenAuthentication>` 項目的子項。  
+3.  <span data-ttu-id="5cb50-129">建立 `<knownCertificates>` 項目做為 `<issuedTokenAuthentication>` 項目的子項。</span><span class="sxs-lookup"><span data-stu-id="5cb50-129">Create a `<knownCertificates>` element as a child of the `<issuedTokenAuthentication>` element.</span></span>  
   
-4.  建立零個或多個 `<add>` 項目做為 `<knownCertificates>` 項目的子項目，並使用 `storeLocation`, `storeName`、`x509FindType` 及 `findValue` 屬性來指定如何找到該憑證。  
+4.  <span data-ttu-id="5cb50-130">建立零個或多個 `<add>` 項目做為 `<knownCertificates>` 項目的子項目，並使用 `storeLocation`, `storeName`、`x509FindType` 及 `findValue` 屬性來指定如何找到該憑證。</span><span class="sxs-lookup"><span data-stu-id="5cb50-130">Create zero or more `<add>` elements as children of the `<knownCertificates>` element, and specify how to locate the certificate using the `storeLocation`, `storeName`, `x509FindType`, and `findValue` attributes.</span></span>  
   
-5.  如有需要，將 \<`issuedTokenAuthentication`\> 項目的 `samlSerializer` 屬性設定為自訂 <xref:System.IdentityModel.Tokens.SamlSerializer> 類別的型別名稱。  
+5.  <span data-ttu-id="5cb50-131">如有必要，設定`samlSerializer`屬性 <`issuedTokenAuthentication`> 項目類型名稱的自訂<xref:System.IdentityModel.Tokens.SamlSerializer>類別。</span><span class="sxs-lookup"><span data-stu-id="5cb50-131">If necessary, set the `samlSerializer` attribute of the <`issuedTokenAuthentication`> element to the type name of the custom <xref:System.IdentityModel.Tokens.SamlSerializer> class.</span></span>  
   
-## 範例  
- 下列範例會示範使用程式碼來設定 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 的屬性。  
+## <a name="example"></a><span data-ttu-id="5cb50-132">範例</span><span class="sxs-lookup"><span data-stu-id="5cb50-132">Example</span></span>  
+ <span data-ttu-id="5cb50-133">下列範例會示範使用程式碼來設定 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 的屬性。</span><span class="sxs-lookup"><span data-stu-id="5cb50-133">The following example sets the properties of an <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> in code.</span></span>  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]
  [!code-vb[C_FederatedService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedservice/vb/source.vb#2)]  
   
- 為了讓聯合服務驗證用戶端，下列有關已發行權杖的各項條件必須成立：  
+ <span data-ttu-id="5cb50-134">為了讓聯合服務驗證用戶端，下列有關已發行權杖的各項條件必須成立：</span><span class="sxs-lookup"><span data-stu-id="5cb50-134">In order for a federated service to authenticate a client, the following must be true about the issued token:</span></span>  
   
--   當已發行權杖的數位簽章使用 RSA 安全性金鑰識別碼時，<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 屬性必須是 `true`。  
+-   <span data-ttu-id="5cb50-135">當已發行權杖的數位簽章使用 RSA 安全性金鑰識別碼時，<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 屬性必須是 `true`。</span><span class="sxs-lookup"><span data-stu-id="5cb50-135">When the issued token’s digital signature uses an RSA security key identifier, the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> property must be `true`.</span></span>  
   
--   當已發行權杖的簽章使用 X.509 簽發者序號、X.509 主體金鑰識別碼或 X.509 指紋安全性識別碼時，已發行權杖必須由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 類別之 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性所傳回集合中的憑證完成簽署。  
+-   <span data-ttu-id="5cb50-136">當已發行權杖的簽章使用 X.509 簽發者序號、X.509 主體金鑰識別碼或 X.509 指紋安全性識別碼時，已發行權杖必須由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 類別之 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 屬性所傳回集合中的憑證完成簽署。</span><span class="sxs-lookup"><span data-stu-id="5cb50-136">When the issued token’s signature uses an X.509 issuer serial number, X.509 subject key identifier, or X.509 thumbprint security identifier, the issued token must be signed by a certificate in the collection returned by the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> property of the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> class.</span></span>  
   
--   當已發行權杖使用 X.509 憑證完成簽署時，該憑證都必須根據 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 屬性值所指定的語意進行驗證，無論該憑證是否當做 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 傳送到信賴憑證者或者是從 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性取得。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 憑證驗證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+-   <span data-ttu-id="5cb50-137">當已發行權杖使用 X.509 憑證完成簽署時，該憑證都必須根據 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 屬性值所指定的語意進行驗證，無論該憑證是否當做 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 傳送到信賴憑證者或者是從 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性取得。</span><span class="sxs-lookup"><span data-stu-id="5cb50-137">When the issued token is signed using an X.509 certificate, the certificate must validate per the semantics specified by the value of the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> property, regardless of whether the certificate was sent to the relying party as a <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> or was obtained from the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> property.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5cb50-138">X.509 憑證驗證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。</span><span class="sxs-lookup"><span data-stu-id="5cb50-138"> X.509 certificate validation, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>  
   
- 例如，將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode>，便會對任何簽署憑證是位於 `TrustedPeople` 憑證存放區中的憑證進行驗證。在此情況下，請將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 屬性設定為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation> 或 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。您可以選擇包括 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 的其他模式。若是選擇 `Custom`，您就必須將 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 屬性。自訂驗證器可以使用其所偏好的任何準則來驗證憑證。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HOW TO：建立使用自訂憑證驗證程式的服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ <span data-ttu-id="5cb50-139">例如，將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>，便會對任何簽署憑證是位於 `TrustedPeople` 憑證存放區中的憑證進行驗證。</span><span class="sxs-lookup"><span data-stu-id="5cb50-139">For example, setting the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> to <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> would authenticate any issued token whose signing certificate is in the `TrustedPeople` certificate store.</span></span> <span data-ttu-id="5cb50-140">在此情況下，請將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 屬性設定為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 或 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>。</span><span class="sxs-lookup"><span data-stu-id="5cb50-140">In that case, set the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> property to either <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> or <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>.</span></span> <span data-ttu-id="5cb50-141">您可以選擇包括 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 的其他模式。</span><span class="sxs-lookup"><span data-stu-id="5cb50-141">You can select other modes, including <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.</span></span> <span data-ttu-id="5cb50-142">若是選擇 `Custom`，您就必須將 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5cb50-142">When `Custom` is selected, you must assign an instance of the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class to the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> property.</span></span> <span data-ttu-id="5cb50-143">自訂驗證器可以使用其所偏好的任何準則來驗證憑證。</span><span class="sxs-lookup"><span data-stu-id="5cb50-143">The custom validator can validate certificates using any criteria it likes.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="5cb50-144">[How to： 建立採用自訂憑證驗證程式服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。</span><span class="sxs-lookup"><span data-stu-id="5cb50-144"> [How to: Create a Service that Employs a Custom Certificate Validator](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).</span></span>  
   
-## 請參閱  
- [聯合](../../../../docs/framework/wcf/feature-details/federation.md)   
- [聯合與信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)   
- [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)   
- [HOW TO：在 WSFederationHttpBinding 上停用安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)   
- [HOW TO：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)   
- [HOW TO：建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
+## <a name="see-also"></a><span data-ttu-id="5cb50-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5cb50-145">See Also</span></span>  
+ [<span data-ttu-id="5cb50-146">同盟</span><span class="sxs-lookup"><span data-stu-id="5cb50-146">Federation</span></span>](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [<span data-ttu-id="5cb50-147">聯合與信任</span><span class="sxs-lookup"><span data-stu-id="5cb50-147">Federation and Trust</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
+ [<span data-ttu-id="5cb50-148">聯合範例</span><span class="sxs-lookup"><span data-stu-id="5cb50-148">Federation Sample</span></span>](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [<span data-ttu-id="5cb50-149">如何： 停用安全工作階段在 WSFederationHttpBinding 上</span><span class="sxs-lookup"><span data-stu-id="5cb50-149">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="5cb50-150">如何： 建立 WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="5cb50-150">How to: Create a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="5cb50-151">如何： 建立聯合用戶端</span><span class="sxs-lookup"><span data-stu-id="5cb50-151">How to: Create a Federated Client</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [<span data-ttu-id="5cb50-152">使用憑證</span><span class="sxs-lookup"><span data-stu-id="5cb50-152">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="5cb50-153">SecurityBindingElement 驗證模式</span><span class="sxs-lookup"><span data-stu-id="5cb50-153">SecurityBindingElement Authentication Modes</span></span>](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

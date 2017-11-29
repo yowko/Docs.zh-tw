@@ -1,53 +1,54 @@
 ---
-title: "應用程式設定屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式設定 [Windows Form], 屬性"
-  - "屬性 [Windows Form], 應用程式設定"
-  - "包裝函式類別, 應用程式設定"
+title: "應用程式設定屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application settings [Windows Forms], attributes
+- attributes [Windows Forms], application settings
+- wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1879ac6704619092c4c0d9cd6fab0356ea07a13d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 應用程式設定屬性
-應用程式設定架構提供了許多屬性 \(Attribute\)，可套用至應用程式設定包裝函式類別 \(Wrapper Class\) 或其個別屬性 \(Property\)。  應用程式設定基礎結構 \(尤其經常是設定提供者\) 會在執行階段檢查這些屬性 \(Attribute\)，將屬性 \(Attribute\) 的運作修改為符合自訂包裝函式所敍述的需求。  
+# <a name="application-settings-attributes"></a><span data-ttu-id="2e11f-102">應用程式設定屬性</span><span class="sxs-lookup"><span data-stu-id="2e11f-102">Application Settings Attributes</span></span>
+<span data-ttu-id="2e11f-103">應用程式設定架構提供許多可套用至應用程式設定包裝函式類別或其個別屬性的屬性。</span><span class="sxs-lookup"><span data-stu-id="2e11f-103">The Application Settings architecture provides many attributes that can be applied either to the applications settings wrapper class or its individual properties.</span></span> <span data-ttu-id="2e11f-104">這些屬性會檢查在執行階段應用程式設定基礎結構，通常會特別設定提供者，才能調整其運作所述需求的自訂包裝函式。</span><span class="sxs-lookup"><span data-stu-id="2e11f-104">These attributes are examined at run time by the application settings infrastructure, often specifically the settings provider, in order to tailor its functioning to the stated needs of the custom wrapper.</span></span>  
   
- 下表列出了可套用至應用程式設定包裝函式類別、該類別之個別屬性 \(Property\) 或這兩者的屬性 \(Attribute\)。  根據定義，唯有單一範圍屬性 \(Attribute\)，**UserScopedSettingAttribute** 或 **ApplicationScopedSettingAttribute**，才必須一一套用至所有設定屬性 \(Property\)。  
+ <span data-ttu-id="2e11f-105">下表列出可以套用到應用程式設定包裝函式類別，這個類別的個別屬性，或兩者的屬性。</span><span class="sxs-lookup"><span data-stu-id="2e11f-105">The following table lists the attributes that can be applied to the application settings wrapper class, this class's individual properties, or both.</span></span> <span data-ttu-id="2e11f-106">根據定義，只是單一領域屬性 —**UserScopedSettingAttribute**或**ApplicationScopedSettingAttribute**— 必須套用至每個設定的屬性。</span><span class="sxs-lookup"><span data-stu-id="2e11f-106">By definition, only a single scope attribute—**UserScopedSettingAttribute** or **ApplicationScopedSettingAttribute**—must be applied to each and every settings property.</span></span>  
   
 > [!NOTE]
->  只有在識別 **ApplicationScopedSettingAttribute**、**UserScopedSettingAttribute** 和 **DefaultSettingValueAttribute** 這三個屬性 \(Attribute\) 的時候才需要衍生自 <xref:System.Configuration.SettingsProvider> 類別的自訂設定提供者。  
+>  <span data-ttu-id="2e11f-107">自訂設定提供者會衍生自<xref:System.Configuration.SettingsProvider>類別，只需辨識下列三個屬性： **ApplicationScopedSettingAttribute**， **UserScopedSettingAttribute**，和**DefaultSettingValueAttribute**。</span><span class="sxs-lookup"><span data-stu-id="2e11f-107">A custom settings provider, derived from the <xref:System.Configuration.SettingsProvider> class, is only required to recognize the following three attributes: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, and **DefaultSettingValueAttribute**.</span></span>  
   
-|屬性|目標|描述|  
-|--------|--------|--------|  
-|<xref:System.Configuration.SettingsProviderAttribute>|Both|指定保存時所使用的設定提供者之簡短名稱。<br /><br /> 如果未提供這個屬性 \(Attribute\)，則會假設為預設提供者 <xref:System.Configuration.LocalFileSettingsProvider>。|  
-|<xref:System.Configuration.UserScopedSettingAttribute>|Both|將屬性 \(Property\) 定義為使用者範圍的應用程式設定。|  
-|<xref:System.Configuration.ApplicationScopedSettingAttribute>|Both|將屬性 \(Property\) 定義為應用程式範圍的應用程式設定。|  
-|<xref:System.Configuration.DefaultSettingValueAttribute>|屬性|指定字串，此字串可由提供者還原序列化，而直接編寫成這個屬性 \(Property\) 的預設值。<br /><br /> <xref:System.Configuration.LocalFileSettingsProvider> 並不需要這個屬性 \(Attribute\)，而且如果已有保存的數值那麼它將覆寫此屬性所提供的任何值。|  
-|<xref:System.Configuration.SettingsDescriptionAttribute>|屬性|提供個別設定的描述性測試，主要供執行階段工具和設計階段工具使用。|  
-|<xref:System.Configuration.SettingsGroupNameAttribute>|類別|提供設定群組的明確名稱。  如果找不到這個屬性 \(Attribute\)，則 <xref:System.Configuration.ApplicationSettingsBase> 使用包裝函式類別名稱。|  
-|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|類別|提供設定群組的描述性測試，主要供執行階段工具和設計階段工具使用。|  
-|<xref:System.Configuration.SettingsManageabilityAttribute>|Both|指定零或多個管理性服務，此服務應提供給設定群組或設定屬性 \(Property\)。  可用的服務是由 <xref:System.Configuration.SettingsManageability> 列舉型別描述。|  
-|<xref:System.Configuration.SpecialSettingAttribute>|屬性|指定設定屬於某一特殊預先定義的分類，例如連接字串 \(Connection String\)，該分類建議由設定提供者進行特別處理。  這個屬性 \(Attribute\) 的預先定義分類是由 <xref:System.Configuration.SpecialSetting> 列舉型別定義。|  
-|<xref:System.Configuration.SettingsSerializeAsAttribute>|Both|指定設定群組或設定屬性 \(Property\) 的慣用序列化 \(Serialization\) 機制。  可用的序列化機制是由 <xref:System.Configuration.SettingsSerializeAs> 列舉型別定義。|  
-|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|屬性|指定設定提供者應該停用已標記屬性 \(Property\) 的所有應用程式升級功能。|  
+|<span data-ttu-id="2e11f-108">屬性</span><span class="sxs-lookup"><span data-stu-id="2e11f-108">Attribute</span></span>|<span data-ttu-id="2e11f-109">目標</span><span class="sxs-lookup"><span data-stu-id="2e11f-109">Target</span></span>|<span data-ttu-id="2e11f-110">說明</span><span class="sxs-lookup"><span data-stu-id="2e11f-110">Description</span></span>|  
+|---------------|------------|-----------------|  
+|<xref:System.Configuration.SettingsProviderAttribute>|<span data-ttu-id="2e11f-111">兩種模式</span><span class="sxs-lookup"><span data-stu-id="2e11f-111">Both</span></span>|<span data-ttu-id="2e11f-112">指定要用於持續性的設定提供者的簡短名稱。</span><span class="sxs-lookup"><span data-stu-id="2e11f-112">Specifies the short name of the settings provider to use for persistence.</span></span><br /><br /> <span data-ttu-id="2e11f-113">如果未提供這個屬性，預設的提供者， <xref:System.Configuration.LocalFileSettingsProvider>，會假設。</span><span class="sxs-lookup"><span data-stu-id="2e11f-113">If this attribute is not supplied, the default provider, <xref:System.Configuration.LocalFileSettingsProvider>, is assumed.</span></span>|  
+|<xref:System.Configuration.UserScopedSettingAttribute>|<span data-ttu-id="2e11f-114">兩種模式</span><span class="sxs-lookup"><span data-stu-id="2e11f-114">Both</span></span>|<span data-ttu-id="2e11f-115">做為使用者範圍的應用程式設定中定義的屬性。</span><span class="sxs-lookup"><span data-stu-id="2e11f-115">Defines a property as a user-scoped application setting.</span></span>|  
+|<xref:System.Configuration.ApplicationScopedSettingAttribute>|<span data-ttu-id="2e11f-116">兩種模式</span><span class="sxs-lookup"><span data-stu-id="2e11f-116">Both</span></span>|<span data-ttu-id="2e11f-117">為應用程式範圍的應用程式設定中定義的屬性。</span><span class="sxs-lookup"><span data-stu-id="2e11f-117">Defines a property as an application-scoped application setting.</span></span>|  
+|<xref:System.Configuration.DefaultSettingValueAttribute>|<span data-ttu-id="2e11f-118">屬性</span><span class="sxs-lookup"><span data-stu-id="2e11f-118">Property</span></span>|<span data-ttu-id="2e11f-119">指定可以還原序列化提供者為此屬性的硬式編碼預設值的字串。</span><span class="sxs-lookup"><span data-stu-id="2e11f-119">Specifies a string that can be deserialized by the provider into the hard-coded default value for this property.</span></span><br /><br /> <span data-ttu-id="2e11f-120"><xref:System.Configuration.LocalFileSettingsProvider>不需要此屬性，而且將覆寫任何值，提供這個屬性如果沒有已經保存值。</span><span class="sxs-lookup"><span data-stu-id="2e11f-120">The <xref:System.Configuration.LocalFileSettingsProvider> does not require this attribute, and will override any value provided by this attribute if there is a value already persisted.</span></span>|  
+|<xref:System.Configuration.SettingsDescriptionAttribute>|<span data-ttu-id="2e11f-121">屬性</span><span class="sxs-lookup"><span data-stu-id="2e11f-121">Property</span></span>|<span data-ttu-id="2e11f-122">提供個別的設定，主要是由執行階段和設計階段工具使用描述性的測試。</span><span class="sxs-lookup"><span data-stu-id="2e11f-122">Provides the descriptive test for an individual setting, used primarily by run-time and design-time tools.</span></span>|  
+|<xref:System.Configuration.SettingsGroupNameAttribute>|<span data-ttu-id="2e11f-123">類別</span><span class="sxs-lookup"><span data-stu-id="2e11f-123">Class</span></span>|<span data-ttu-id="2e11f-124">提供明確的設定群組名稱。</span><span class="sxs-lookup"><span data-stu-id="2e11f-124">Provides an explicit name for a settings group.</span></span> <span data-ttu-id="2e11f-125">如果這個屬性已遺失，<xref:System.Configuration.ApplicationSettingsBase>使用包裝函式類別名稱。</span><span class="sxs-lookup"><span data-stu-id="2e11f-125">If this attribute is missing, <xref:System.Configuration.ApplicationSettingsBase> uses the wrapper class name.</span></span>|  
+|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|<span data-ttu-id="2e11f-126">類別</span><span class="sxs-lookup"><span data-stu-id="2e11f-126">Class</span></span>|<span data-ttu-id="2e11f-127">提供描述性的測試設定群組，主要是供執行階段和設計階段工具。</span><span class="sxs-lookup"><span data-stu-id="2e11f-127">Provides the descriptive test for a settings group, used primarily by run-time and design-time tools.</span></span>|  
+|<xref:System.Configuration.SettingsManageabilityAttribute>|<span data-ttu-id="2e11f-128">兩種模式</span><span class="sxs-lookup"><span data-stu-id="2e11f-128">Both</span></span>|<span data-ttu-id="2e11f-129">指定應提供給屬性的設定群組的零或多個管理服務。</span><span class="sxs-lookup"><span data-stu-id="2e11f-129">Specifies zero or more manageability services that should be provided to the settings group or property.</span></span> <span data-ttu-id="2e11f-130">可用的服務會描述<xref:System.Configuration.SettingsManageability>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="2e11f-130">The available services are described by the <xref:System.Configuration.SettingsManageability> enumeration.</span></span>|  
+|<xref:System.Configuration.SpecialSettingAttribute>|<span data-ttu-id="2e11f-131">屬性</span><span class="sxs-lookup"><span data-stu-id="2e11f-131">Property</span></span>|<span data-ttu-id="2e11f-132">表示設定屬於特殊的預先定義的類別，例如連接字串，所建議的設定提供者的特殊處理。</span><span class="sxs-lookup"><span data-stu-id="2e11f-132">Indicates that a setting belongs to a special, predefined category, such as a connection string, that suggests special processing by the settings provider.</span></span> <span data-ttu-id="2e11f-133">預先定義的類別，這個屬性會由<xref:System.Configuration.SpecialSetting>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="2e11f-133">The predefined categories for this attribute are defined by the <xref:System.Configuration.SpecialSetting> enumeration.</span></span>|  
+|<xref:System.Configuration.SettingsSerializeAsAttribute>|<span data-ttu-id="2e11f-134">兩種模式</span><span class="sxs-lookup"><span data-stu-id="2e11f-134">Both</span></span>|<span data-ttu-id="2e11f-135">指定的設定群組或內容的慣用的序列化機制。</span><span class="sxs-lookup"><span data-stu-id="2e11f-135">Specifies a preferred serialization mechanism for a settings group or property.</span></span> <span data-ttu-id="2e11f-136">可用的序列化機制會由<xref:System.Configuration.SettingsSerializeAs>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="2e11f-136">The available serialization mechanisms are defined by the <xref:System.Configuration.SettingsSerializeAs> enumeration.</span></span>|  
+|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|<span data-ttu-id="2e11f-137">屬性</span><span class="sxs-lookup"><span data-stu-id="2e11f-137">Property</span></span>|<span data-ttu-id="2e11f-138">指定的設定提供者應該停用所有應用程式升級功能 [標記] 屬性。</span><span class="sxs-lookup"><span data-stu-id="2e11f-138">Specifies that a settings provider should disable all application upgrade functionality for the marked property.</span></span>|  
   
- *類別*表示該屬性 \(Attribute\) 只能套用至應用程式設定包裝函式類別。  「*屬性*」\(Property\) 表示該屬性 \(Attribute\) 只能套用至設定屬性 \(Property\)。  「*兩者*」\(Both\) 表示該屬性 \(Attribute\) 可以套用至兩者之中任一層級。  
+ <span data-ttu-id="2e11f-139">*類別*表示屬性可以套用至應用程式設定包裝函式類別只。</span><span class="sxs-lookup"><span data-stu-id="2e11f-139">*Class* indicates that the attribute can be applied only to an application settings wrapper class.</span></span> <span data-ttu-id="2e11f-140">*屬性*指出屬性可以套用的設定內容。</span><span class="sxs-lookup"><span data-stu-id="2e11f-140">*Property* indicates that the attribute can be applied only settings properties.</span></span> <span data-ttu-id="2e11f-141">*同時*表示可以在其中一個層級套用屬性。</span><span class="sxs-lookup"><span data-stu-id="2e11f-141">*Both* indicates that the attribute can be applied at either level.</span></span>  
   
-## 請參閱  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.SettingsProvider>   
- [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
- [How to: Create Application Settings](http://msdn.microsoft.com/zh-tw/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a><span data-ttu-id="2e11f-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e11f-142">See Also</span></span>  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.SettingsProvider>  
+ [<span data-ttu-id="2e11f-143">應用程式設定架構</span><span class="sxs-lookup"><span data-stu-id="2e11f-143">Application Settings Architecture</span></span>](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [<span data-ttu-id="2e11f-144">如何：建立應用程式設定</span><span class="sxs-lookup"><span data-stu-id="2e11f-144">How to: Create Application Settings</span></span>](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)

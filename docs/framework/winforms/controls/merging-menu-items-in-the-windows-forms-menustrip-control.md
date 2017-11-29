@@ -1,70 +1,71 @@
 ---
-title: "合併 Windows Form MenuStrip 控制項中的功能表項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MenuStrip, 合併"
-  - "合併, 一般概念"
+title: "合併 Windows Form MenuStrip 控制項中的功能表項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip [Windows Forms], merging
+- merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8e042b3f7b0a2a2e40b8fba33fca6c147086df6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 合併 Windows Form MenuStrip 控制項中的功能表項目
-如果您有多重文件介面 \(MDI\) 應用程式，您可以從子表單將功能表項目或整個功能表合併至父表單的功能表。  
+# <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a><span data-ttu-id="d69e9-102">合併 Windows Form MenuStrip 控制項中的功能表項目</span><span class="sxs-lookup"><span data-stu-id="d69e9-102">Merging Menu Items in the Windows Forms MenuStrip Control</span></span>
+<span data-ttu-id="d69e9-103">如果您有多個文件介面 (MDI) 應用程式，您可以合併到父表單的功能表的功能表項目或從子表單的整個功能表。</span><span class="sxs-lookup"><span data-stu-id="d69e9-103">If you have a multiple-document interface (MDI) application, you can merge menu items or whole menus from the child form into the menus of the parent form.</span></span>  
   
- 這個主題將說明在 MDI 應用程式中合併功能表項目的相關基本概念。  
+ <span data-ttu-id="d69e9-104">本主題說明與合併的 MDI 應用程式中的功能表項目相關聯的基本概念。</span><span class="sxs-lookup"><span data-stu-id="d69e9-104">This topic describes the basic concepts associated with merging menu items in an MDI application.</span></span>  
   
-## 一般概念  
- 合併程序會牽涉目標控制項和來源控制項：  
+## <a name="general-concepts"></a><span data-ttu-id="d69e9-105">一般概念</span><span class="sxs-lookup"><span data-stu-id="d69e9-105">General Concepts</span></span>  
+ <span data-ttu-id="d69e9-106">合併程序牽涉到的目標，而且原始檔控制：</span><span class="sxs-lookup"><span data-stu-id="d69e9-106">Merging procedures involve both a target and a source control:</span></span>  
   
--   目標控制項是在您要在其中合併功能表項目之主表單或 MDI 父表單上的 <xref:System.Windows.Forms.MenuStrip> 控制項。  
+-   <span data-ttu-id="d69e9-107">目標是<xref:System.Windows.Forms.MenuStrip>main 或 MDI 父表單的項目，其中您要合併的功能表項目控制項。</span><span class="sxs-lookup"><span data-stu-id="d69e9-107">The target is the <xref:System.Windows.Forms.MenuStrip> control on the main or MDI parent form into which you are merging menu items.</span></span>  
   
--   來源控制項是在包含要合併至目標功能表的功能表項目之 MDI 子表單上的 <xref:System.Windows.Forms.MenuStrip> 控制項。  
+-   <span data-ttu-id="d69e9-108">來源是<xref:System.Windows.Forms.MenuStrip>MDI 子表單，其中包含您想要合併到目標 功能表的功能表項目上的控制項。</span><span class="sxs-lookup"><span data-stu-id="d69e9-108">The source is the <xref:System.Windows.Forms.MenuStrip> control on the MDI child form that contains the menu items you want to merge into the target menu.</span></span>  
   
- <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 屬性可識別功能表項目，而您可以使用目前 MDI 父表單之 MDI 子表單的標題填入其下拉式清單。  例如，您通常會列出目前在 \[**視窗**\] 功能表上開啟的 MDI 子表單。  
+ <span data-ttu-id="d69e9-109"><xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性會識別將會填入目前的 MDI 標題的下拉式清單中父表單的 MDI 子視窗的功能表項目。</span><span class="sxs-lookup"><span data-stu-id="d69e9-109">The <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property identifies the menu item whose drop-down list you will populate with the titles of the current MDI parent form's MDI children.</span></span> <span data-ttu-id="d69e9-110">比方說，您通常會列出在目前開啟的 MDI 子系**視窗**功能表。</span><span class="sxs-lookup"><span data-stu-id="d69e9-110">For example, you typically list MDI children that are currently open on the **Window** menu.</span></span>  
   
- <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> 屬性可識別哪些功能表項目來自 MDI 子表單上的 <xref:System.Windows.Forms.MenuStrip>。  
+ <span data-ttu-id="d69e9-111"><xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A>屬性會識別功能表項目來自<xref:System.Windows.Forms.MenuStrip>的 MDI 子表單上。</span><span class="sxs-lookup"><span data-stu-id="d69e9-111">The <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> property identifies which menu items come from a <xref:System.Windows.Forms.MenuStrip> on an MDI child form.</span></span>  
   
- 您可以手動或自動合併功能表項目。  針對這兩種方法，功能表項目都會以相同的方式進行合併，但啟動合併的方式不同，請參閱本主題稍後之＜手動合併＞和＜自動合併＞章節中的討論。  在手動合併和自動合併中，每一個合併動作都會影響下一個合併動作。  
+ <span data-ttu-id="d69e9-112">您可以在手動或自動合併功能表項目。</span><span class="sxs-lookup"><span data-stu-id="d69e9-112">You can merge menu items manually or automatically.</span></span> <span data-ttu-id="d69e9-113">這兩種方法中，相同的方式合併的功能表項目，但會以不同的方式，本主題稍後的 「 手動合併 」 和 「 自動合併 」 章節所討論啟動合併。</span><span class="sxs-lookup"><span data-stu-id="d69e9-113">The menu items merge in the same way for both methods, but the merge is activated differently, as discussed in the "Manual Merging" and "Automatic Merging" sections later in this topic.</span></span> <span data-ttu-id="d69e9-114">在手動和自動合併，每個合併動作會影響下一步合併動作。</span><span class="sxs-lookup"><span data-stu-id="d69e9-114">In both manual and automatic merging, each merge action affects the next merge action.</span></span>  
   
- 和使用 <xref:System.Windows.Forms.MainMenu> 的情況一樣，<xref:System.Windows.Forms.MenuStrip> 合併會將功能表項目從一個 <xref:System.Windows.Forms.ToolStrip> 移至另一個，而非進行複製。  
+ <span data-ttu-id="d69e9-115"><xref:System.Windows.Forms.MenuStrip>合併移動功能表項目從某個<xref:System.Windows.Forms.ToolStrip>之間而非複製，因為已使用的情況下<xref:System.Windows.Forms.MainMenu>。</span><span class="sxs-lookup"><span data-stu-id="d69e9-115"><xref:System.Windows.Forms.MenuStrip> merging moves menu items from one <xref:System.Windows.Forms.ToolStrip> to another rather than cloning them, as was the case with <xref:System.Windows.Forms.MainMenu>.</span></span>  
   
-## MergeAction 值  
- 您可以使用 <xref:System.Windows.Forms.MergeAction> 屬性來設定在來源 <xref:System.Windows.Forms.MenuStrip> 中之功能表項目上的合併動作。  
+## <a name="mergeaction-values"></a><span data-ttu-id="d69e9-116">MergeAction 值</span><span class="sxs-lookup"><span data-stu-id="d69e9-116">MergeAction Values</span></span>  
+ <span data-ttu-id="d69e9-117">您在來源中的功能表項目上設定合併動作<xref:System.Windows.Forms.MenuStrip>使用<xref:System.Windows.Forms.MergeAction>屬性。</span><span class="sxs-lookup"><span data-stu-id="d69e9-117">You set the merge action on menu items in the source <xref:System.Windows.Forms.MenuStrip> using the <xref:System.Windows.Forms.MergeAction> property.</span></span>  
   
- 下表說明可用之合併動作的意義和一般的使用方式。  
+ <span data-ttu-id="d69e9-118">下表描述的意義和一般使用可用的合併動作。</span><span class="sxs-lookup"><span data-stu-id="d69e9-118">The following table describes the meaning and typical use of the available merge actions.</span></span>  
   
-|MergeAction 值|描述|一般用法|  
-|-------------------|--------|----------|  
-|<xref:System.Windows.Forms.MergeAction>|\(預設值\) 將來源項目加入至目標項目集合的結尾處。|當啟動某部分程式時，將功能表項目加入至功能表的結尾處。|  
-|<xref:System.Windows.Forms.MergeAction>|根據在來源項目上設定之 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 屬性所指定的位置，將來源項目加入至目標項目的集合中。|當啟動某部分程式時，將功能表項目加入至功能表的中間或開頭。<br /><br /> 如果兩個功能表項目的 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 值相同，則會以相反的順序加入。  請適當設定 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>，以保留原始的順序。|  
-|<xref:System.Windows.Forms.MergeAction>|尋找相符的文字，或者在找不到相符的文字時使用 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 值，然後以來源功能表項目取代相符的目標功能表項目。|使用名稱相同，但用途不同的來源功能表項目取代目標功能表項目。|  
-|<xref:System.Windows.Forms.MergeAction>|尋找相符的文字，或者在找不到相符的文字時使用 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 值，然後將來源的所有下拉式項目加入至目標。|建置功能表結構，將功能表項目插入或加入至子功能表，或從子功能表中移除功能表項目。  例如，您可以將功能表項目從 MDI 子表單加入至主 <xref:System.Windows.Forms.MenuStrip> 的 \[**另存新檔**\] 功能表。<br /><br /> <xref:System.Windows.Forms.MergeAction> 可以讓您透過功能表結構進行巡覽，而不需要執行任何動作。  它提供了評估後續項目的方法。|  
-|<xref:System.Windows.Forms.MergeAction>|尋找相符的文字，或者在找不到相符的文字時使用 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 值，然後將該項目從目標中移除。|將功能表項目從目標 <xref:System.Windows.Forms.MenuStrip> 中移除。|  
+|<span data-ttu-id="d69e9-119">MergeAction 值</span><span class="sxs-lookup"><span data-stu-id="d69e9-119">MergeAction Value</span></span>|<span data-ttu-id="d69e9-120">描述</span><span class="sxs-lookup"><span data-stu-id="d69e9-120">Description</span></span>|<span data-ttu-id="d69e9-121">一般用法</span><span class="sxs-lookup"><span data-stu-id="d69e9-121">Typical Use</span></span>|  
+|-----------------------|-----------------|-----------------|  
+|<xref:System.Windows.Forms.MergeAction.Append>|<span data-ttu-id="d69e9-122">（預設值）將來源項目加入至目標項目集合的結尾。</span><span class="sxs-lookup"><span data-stu-id="d69e9-122">(Default) Adds the source item to the end of the target item's collection.</span></span>|<span data-ttu-id="d69e9-123">功能表項目加入功能表的結束時啟動程式的某些部分。</span><span class="sxs-lookup"><span data-stu-id="d69e9-123">Adding menu items to the end of the menu when some part of the program is activated.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Insert>|<span data-ttu-id="d69e9-124">將來源項目加入至目標項目的集合，在所指定的位置<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>來源項目上設定的屬性。</span><span class="sxs-lookup"><span data-stu-id="d69e9-124">Adds the source item to the target item's collection, in the location specified by the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> property set on the source item.</span></span>|<span data-ttu-id="d69e9-125">啟動程式的某些部分時，請至中間或功能表的開頭加入功能表項目。</span><span class="sxs-lookup"><span data-stu-id="d69e9-125">Adding menu items to the middle or the beginning of the menu when some part of the program is activated.</span></span><br /><br /> <span data-ttu-id="d69e9-126">如果值<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>相同的兩個功能表項目，就會加入以反向順序。</span><span class="sxs-lookup"><span data-stu-id="d69e9-126">If the value of <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> is the same for both menu items, they are added in reverse order.</span></span> <span data-ttu-id="d69e9-127">設定<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>適當地保留原始的順序。</span><span class="sxs-lookup"><span data-stu-id="d69e9-127">Set <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> appropriately to preserve the original order.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Replace>|<span data-ttu-id="d69e9-128">尋找文字的相符項目，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>值，如果沒有文字相符項目發現，然後將相符的目標功能表項目取代來源功能表項目。</span><span class="sxs-lookup"><span data-stu-id="d69e9-128">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then replaces the matching target menu item with the source menu item.</span></span>|<span data-ttu-id="d69e9-129">取代來源功能表項目沒有其他同名的目標功能表項目。</span><span class="sxs-lookup"><span data-stu-id="d69e9-129">Replacing a target menu item with a source menu item of the same name that does something different.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|<span data-ttu-id="d69e9-130">尋找文字的相符項目，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>如果沒有文字相符項目找到，並將所有下拉式項目從來源到目標值。</span><span class="sxs-lookup"><span data-stu-id="d69e9-130">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then adds all the drop-down items from the source to the target.</span></span>|<span data-ttu-id="d69e9-131">建立功能表結構插入或將功能表項目新增到子功能表，或移除子功能表的功能表項目。</span><span class="sxs-lookup"><span data-stu-id="d69e9-131">Building a menu structure that inserts or adds menu items into a submenu, or removes menu items from a submenu.</span></span> <span data-ttu-id="d69e9-132">例如，您可以加入功能表項目從 MDI 子系主要<xref:System.Windows.Forms.MenuStrip>**存**功能表。</span><span class="sxs-lookup"><span data-stu-id="d69e9-132">For example, you can add a menu item from an MDI child to a main <xref:System.Windows.Forms.MenuStrip>**Save As** menu.</span></span><br /><br /> <span data-ttu-id="d69e9-133"><xref:System.Windows.Forms.MergeAction.MatchOnly>可讓您瀏覽功能表結構而不採取任何動作。</span><span class="sxs-lookup"><span data-stu-id="d69e9-133"><xref:System.Windows.Forms.MergeAction.MatchOnly> allows you to navigate through the menu structure without taking any action.</span></span> <span data-ttu-id="d69e9-134">它提供方法來評估後續項目。</span><span class="sxs-lookup"><span data-stu-id="d69e9-134">It provides a way to evaluate the subsequent items.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Remove>|<span data-ttu-id="d69e9-135">尋找文字的相符項目，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>值，如果沒有文字相符項目發現，然後在目標中移除的項目。</span><span class="sxs-lookup"><span data-stu-id="d69e9-135">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then removes the item from the target.</span></span>|<span data-ttu-id="d69e9-136">從目標中移除功能表項目<xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="d69e9-136">Removing a menu item from the target <xref:System.Windows.Forms.MenuStrip>.</span></span>|  
   
-## 手動合併  
- 只有 <xref:System.Windows.Forms.MenuStrip> 控制項會加入自動合併。  若要組合其他控制項 \(例如：<xref:System.Windows.Forms.ToolStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控制項\) 的項目，您必須視需要在程式碼中呼叫 <xref:System.Windows.Forms.ToolStripManager.Merge%2A> 和 <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> 方法，手動合併這些項目。  
+## <a name="manual-merging"></a><span data-ttu-id="d69e9-137">手動合併</span><span class="sxs-lookup"><span data-stu-id="d69e9-137">Manual Merging</span></span>  
+ <span data-ttu-id="d69e9-138">只有<xref:System.Windows.Forms.MenuStrip>控制項參與自動合併。</span><span class="sxs-lookup"><span data-stu-id="d69e9-138">Only <xref:System.Windows.Forms.MenuStrip> controls participate in automatic merging.</span></span> <span data-ttu-id="d69e9-139">若要結合的其他控制項項目，例如<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.StatusStrip>控制項，您必須將其合併以手動方式，藉由呼叫<xref:System.Windows.Forms.ToolStripManager.Merge%2A>和<xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A>您所需的程式碼中的方法。</span><span class="sxs-lookup"><span data-stu-id="d69e9-139">To combine the items of other controls, such as <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.StatusStrip> controls, you must merge them manually, by calling the <xref:System.Windows.Forms.ToolStripManager.Merge%2A> and <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> methods in your code as required.</span></span>  
   
-## 自動合併  
- 您可以透過啟動來源表單來使用 MDI 應用程式的自動合併功能。  若要在 MDI 應用程式中使用 <xref:System.Windows.Forms.MenuStrip>，請將 <xref:System.Windows.Forms.Form.MainMenuStrip%2A> 屬性設定為目標 <xref:System.Windows.Forms.MenuStrip>，讓在來源 <xref:System.Windows.Forms.MenuStrip> 上執行的合併動作可以反映在目標 <xref:System.Windows.Forms.MenuStrip> 中。  
+## <a name="automatic-merging"></a><span data-ttu-id="d69e9-140">自動合併</span><span class="sxs-lookup"><span data-stu-id="d69e9-140">Automatic Merging</span></span>  
+ <span data-ttu-id="d69e9-141">您可以使用藉由啟用來源表單為 MDI 應用程式自動合併。</span><span class="sxs-lookup"><span data-stu-id="d69e9-141">You can use automatic merging for MDI applications by activating the source form.</span></span> <span data-ttu-id="d69e9-142">若要使用<xref:System.Windows.Forms.MenuStrip>MDI 應用程式中，設定<xref:System.Windows.Forms.Form.MainMenuStrip%2A>屬性目標<xref:System.Windows.Forms.MenuStrip>使來源上執行的合併動作<xref:System.Windows.Forms.MenuStrip>會反映在目標<xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="d69e9-142">To use a <xref:System.Windows.Forms.MenuStrip> in an MDI application, set the <xref:System.Windows.Forms.Form.MainMenuStrip%2A> property to the target <xref:System.Windows.Forms.MenuStrip> so that merging actions performed on the source <xref:System.Windows.Forms.MenuStrip> are reflected in the target <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
- 您可以透過啟動 MDI 來源上的 <xref:System.Windows.Forms.MenuStrip> 來觸發自動合併。  在啟動之後，來源 <xref:System.Windows.Forms.MenuStrip> 便會立即合併至 MDI 目標。  當新的表單變成使用中時，便會在上一個表單中還原合併，然後在新的表單上觸發合併。  您可以視需要設定每一個 <xref:System.Windows.Forms.ToolStripItem> 上的 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 屬性，以及設定每一個 <xref:System.Windows.Forms.MenuStrip> 上的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性，以控制這個行為。  
+ <span data-ttu-id="d69e9-143">您可以觸發自動合併藉由啟用<xref:System.Windows.Forms.MenuStrip>MDI 來源。</span><span class="sxs-lookup"><span data-stu-id="d69e9-143">You can trigger automatic merging by activating the <xref:System.Windows.Forms.MenuStrip> on the MDI source.</span></span> <span data-ttu-id="d69e9-144">在啟動過程中，來源<xref:System.Windows.Forms.MenuStrip>合併到 MDI 目標。</span><span class="sxs-lookup"><span data-stu-id="d69e9-144">Upon activation, the source <xref:System.Windows.Forms.MenuStrip> is merged into the MDI target.</span></span> <span data-ttu-id="d69e9-145">當新的表單變成作用中時，合併會還原上一個表單，而且觸發新的表單上。</span><span class="sxs-lookup"><span data-stu-id="d69e9-145">When a new form becomes active, the merge is reverted on the last form and triggered on the new form.</span></span> <span data-ttu-id="d69e9-146">您可以設定來控制此行為<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>屬性視需要在每個<xref:System.Windows.Forms.ToolStripItem>，以及設定<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>上每個屬性<xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="d69e9-146">You can control this behavior by setting the <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> property as needed on each <xref:System.Windows.Forms.ToolStripItem>, and by setting the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property on each <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.ToolStripManager>   
- <xref:System.Windows.Forms.MenuStrip>   
- [MenuStrip 控制項](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)   
- [如何：使用 MenuStrip 建立 MDI 視窗清單](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)   
- [如何：設定 MDI 應用程式的自動功能表合併功能](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+## <a name="see-also"></a><span data-ttu-id="d69e9-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d69e9-147">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStripManager>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ [<span data-ttu-id="d69e9-148">MenuStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="d69e9-148">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [<span data-ttu-id="d69e9-149">操作說明：使用 MenuStrip 建立 MDI 視窗清單</span><span class="sxs-lookup"><span data-stu-id="d69e9-149">How to: Create an MDI Window List with MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ [<span data-ttu-id="d69e9-150">操作說明：設定 MDI 應用程式的自動功能表合併功能</span><span class="sxs-lookup"><span data-stu-id="d69e9-150">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

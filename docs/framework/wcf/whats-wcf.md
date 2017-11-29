@@ -1,113 +1,113 @@
 ---
-title: "何謂 Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Windows Communication Foundation [WCF], 技術概觀"
-  - "技術概觀 [WCF]"
-  - "WCF [WCF], 技術概觀"
+title: "何謂 Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation [WCF], technology overview
+- technology overview [WCF]
+- WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: 51
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 49
+caps.latest.revision: "51"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 81e149292757b320d4c29975de1abb69eb1f8b9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 何謂 Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建置服務導向應用程式的架構。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：  
+# <a name="what-is-windows-communication-foundation"></a><span data-ttu-id="ca6b6-102">何謂 Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ca6b6-102">What Is Windows Communication Foundation</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="ca6b6-103"> 是用於建置服務導向應用程式的架構。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-103"> is a framework for building service-oriented applications.</span></span> <span data-ttu-id="ca6b6-104">使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-104">Using [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], you can send data as asynchronous messages from one service endpoint to another.</span></span> <span data-ttu-id="ca6b6-105">服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-105">A service endpoint can be part of a continuously available service hosted by IIS, or it can be a service hosted in an application.</span></span> <span data-ttu-id="ca6b6-106">端點則大致是某項服務的用戶端，會向該服務端點要求資料。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-106">An endpoint can be a client of a service that requests data from a service endpoint.</span></span> <span data-ttu-id="ca6b6-107">訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-107">The messages can be as simple as a single character or word sent as XML, or as complex as a stream of binary data.</span></span> <span data-ttu-id="ca6b6-108">其中幾個範例案例包括：</span><span class="sxs-lookup"><span data-stu-id="ca6b6-108">A few sample scenarios include:</span></span>  
   
--   處理商務交易的安全服務。  
+-   <span data-ttu-id="ca6b6-109">處理商務交易的安全服務。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-109">A secure service to process business transactions.</span></span>  
   
--   提供當前資料給其他使用者的服務，例如流量報表或其他監控服務。  
+-   <span data-ttu-id="ca6b6-110">提供當前資料給其他使用者的服務，例如流量報表或其他監控服務。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-110">A service that supplies current data to others, such as a traffic report or other monitoring service.</span></span>  
   
--   讓兩人可相互即時通訊或交換資料的聊天交談服務。  
+-   <span data-ttu-id="ca6b6-111">讓兩人可相互即時通訊或交換資料的聊天交談服務。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-111">A chat service that allows two people to communicate or exchange data in real time.</span></span>  
   
--   輪詢一項或多項服務以取得資料，再按邏輯呈現簡報資料的儀表板應用程式。  
+-   <span data-ttu-id="ca6b6-112">輪詢一項或多項服務以取得資料，再按邏輯呈現簡報資料的儀表板應用程式。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-112">A dashboard application that polls one or more services for data and presents it in a logical presentation.</span></span>  
   
--   使用 Windows Workflow Foundation 實作且公開為 WCF 服務的工作流程。  
+-   <span data-ttu-id="ca6b6-113">使用 Windows Workflow Foundation 實作且公開為 WCF 服務的工作流程。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-113">Exposing a workflow implemented using Windows Workflow Foundation as a WCF service.</span></span>  
   
--   輪詢服務以取得最新資料摘要的 Silverlight 應用程式。  
+-   <span data-ttu-id="ca6b6-114">輪詢服務以取得最新資料摘要的 Silverlight 應用程式。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-114">A Silverlight application to poll a service for the latest data feeds.</span></span>  
   
- 儘管在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 面市之前，原本就能建立這幾類應用程式，但 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使得端點開發比以往更為容易。 簡言之，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的設計提供了便於管理的方式以讓您建立 Web 服務與 Web 服務用戶端。  
+ <span data-ttu-id="ca6b6-115">儘管在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]面市之前，原本就能建立這幾類應用程式，但 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使得端點開發比以往更為容易。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-115">While creating such applications was possible prior to the existence of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] makes the development of endpoints easier than ever.</span></span> <span data-ttu-id="ca6b6-116">簡言之， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的設計提供了便於管理的方式以讓您建立 Web 服務與 Web 服務用戶端。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-116">In summary, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] is designed to offer a manageable approach to creating Web services and Web service clients.</span></span>  
   
-## WCF 的功能  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括下列功能集。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md).  
+## <a name="features-of-wcf"></a><span data-ttu-id="ca6b6-117">WCF 的功能</span><span class="sxs-lookup"><span data-stu-id="ca6b6-117">Features of WCF</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ca6b6-118"> 包括下列功能集。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-118"> includes the following set of features.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ca6b6-119"> [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).</span><span class="sxs-lookup"><span data-stu-id="ca6b6-119"> [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).</span></span>  
   
--   **服務導向**  
+-   <span data-ttu-id="ca6b6-120">**服務導向**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-120">**Service Orientation**</span></span>  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 採用 WS 標準的結果，代表您可以建立「*服務導向*」\(Service Oriented\) 應用程式。 服務導向架構 \(SOA\) 是 Web 服務賴以傳送和接收資料的基礎。 服務具備鬆散耦合的普遍優點，而非隨應用程式而異的硬式編碼。 鬆散耦合的關係意味著在任何平台建立的任何用戶端，只要遵守基本合約便能連線至任何服務。  
+     <span data-ttu-id="ca6b6-121">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 採用 WS 標準的結果，代表您可以建立「 *服務導向* 」(Service Oriented) 應用程式。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-121">One consequence of using WS standards is that [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enables you to create *service oriented* applications.</span></span> <span data-ttu-id="ca6b6-122">服務導向架構 (SOA) 是 Web 服務賴以傳送和接收資料的基礎。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-122">Service-oriented architecture (SOA) is the reliance on Web services to send and receive data.</span></span> <span data-ttu-id="ca6b6-123">服務具備鬆散耦合的普遍優點，而非隨應用程式而異的硬式編碼。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-123">The services have the general advantage of being loosely-coupled instead of hard-coded from one application to another.</span></span> <span data-ttu-id="ca6b6-124">鬆散耦合的關係意味著在任何平台建立的任何用戶端，只要遵守基本合約便能連線至任何服務。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-124">A loosely-coupled relationship implies that any client created on any platform can connect to any service as long as the essential contracts are met.</span></span>  
   
--   **互通性**  
+-   <span data-ttu-id="ca6b6-125">**互通性**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-125">**Interoperability**</span></span>  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 實作了 Web 服務互通性的最新業界標準。[!INCLUDE[crabout](../../../includes/crabout-md.md)]受支援標準的詳細資訊，請參閱[互通性與整合](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ca6b6-126"> 實作了 Web 服務互通性的最新業界標準。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-126"> implements modern industry standards for Web service interoperability.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ca6b6-127"> 受支援標準的詳細資訊，請參閱 [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).</span><span class="sxs-lookup"><span data-stu-id="ca6b6-127"> the supported standards, see [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).</span></span>  
   
--   **多種訊息模式**  
+-   <span data-ttu-id="ca6b6-128">**多種訊息模式**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-128">**Multiple Message Patterns**</span></span>  
   
-     訊息將以數種模式的其中一種進行交換。 最常見的模式為要求\/回覆模式，即某端點向另一端點要求資料， 然後由該另一端點予以回覆。 其他模式還包括單向訊息，則是僅由單一端點傳送訊息，但從不期待會收到回覆。 更複雜的模式為雙工交換模式，其中會由兩個端點建立連線，並相互往返傳送資料，類似立即訊息程式。[!INCLUDE[crabout](../../../includes/crabout-md.md)]如何使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 來實作各種訊息交換模式的詳細資訊，請參閱 [合約](../../../docs/framework/wcf/feature-details/contracts.md)。  
+     <span data-ttu-id="ca6b6-129">訊息將以數種模式的其中一種進行交換。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-129">Messages are exchanged in one of several patterns.</span></span> <span data-ttu-id="ca6b6-130">最常見的模式為要求/回覆模式，即某端點向另一端點要求資料，</span><span class="sxs-lookup"><span data-stu-id="ca6b6-130">The most common pattern is the request/reply pattern, where one endpoint requests data from a second endpoint.</span></span> <span data-ttu-id="ca6b6-131">然後由該另一端點予以回覆。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-131">The second endpoint replies.</span></span> <span data-ttu-id="ca6b6-132">其他模式還包括單向訊息，則是僅由單一端點傳送訊息，但從不期待會收到回覆。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-132">There are other patterns such as a one-way message in which a single endpoint sends a message without any expectation of a reply.</span></span> <span data-ttu-id="ca6b6-133">更複雜的模式為雙工交換模式，其中會由兩個端點建立連線，並相互往返傳送資料，類似立即訊息程式。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-133">A more complex pattern is the duplex exchange pattern where two endpoints establish a connection and send data back and forth, similar to an instant messaging program.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ca6b6-134"> 如何使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 來實作各種訊息交換模式的詳細資訊，請參閱 [Contracts](../../../docs/framework/wcf/feature-details/contracts.md).</span><span class="sxs-lookup"><span data-stu-id="ca6b6-134"> how to implement different message exchange patterns using [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] see [Contracts](../../../docs/framework/wcf/feature-details/contracts.md).</span></span>  
   
--   **服務中繼資料**  
+-   <span data-ttu-id="ca6b6-135">**服務中繼資料**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-135">**Service Metadata**</span></span>  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支援採用業界標準 \(如 WSDL、XML 結構描述及 WS\-Policy\) 指定的格式來發行服務中繼資料。 這份中繼資料可用於自動產生和設定將要存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的用戶端。 您可以透過 HTTP 及 HTTPS，或者使用 Web 服務中繼資料交換標準來發行中繼資料。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [中繼資料](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ca6b6-136"> 支援採用業界標準 (如 WSDL、XML 結構描述及 WS-Policy) 指定的格式來發行服務中繼資料。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-136"> supports publishing service metadata using formats specified in industry standards such as WSDL, XML Schema and WS-Policy.</span></span> <span data-ttu-id="ca6b6-137">這份中繼資料可用於自動產生和設定將要存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的用戶端。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-137">This metadata can be used to automatically generate and configure clients for accessing [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="ca6b6-138">您可以透過 HTTP 及 HTTPS，或者使用 Web 服務中繼資料交換標準來發行中繼資料。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-138">Metadata can be published over HTTP and HTTPS or using the Web Service Metadata Exchange standard.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ca6b6-139"> [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).</span><span class="sxs-lookup"><span data-stu-id="ca6b6-139"> [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).</span></span>  
   
--   **資料合約**  
+-   <span data-ttu-id="ca6b6-140">**資料合約**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-140">**Data Contracts**</span></span>  
   
-     由於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 所建置，其亦包含了便利的程式碼方法，以讓您提供希望強制履行的合約。 其中一種通用的合約類型就是資料合約。 基本上，當您使用 Visual C\# 或 Visual Basic 撰寫服務程式碼時，處理資料最簡單的做法，就是建立類別，以屬於資料實體的屬性來表示資料實體。[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含完善的系統，能以如此簡便的方式來處理資料。 一旦表示資料的類別已建立，您的服務便會自動產生中繼資料，而讓用戶端能夠遵照您所設計的資料型別。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     <span data-ttu-id="ca6b6-141">由於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]所建置，其亦包含了便利的程式碼方法，以讓您提供希望強制履行的合約。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-141">Because [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] is built using the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], it also includes code-friendly methods of supplying the contracts you want to enforce.</span></span> <span data-ttu-id="ca6b6-142">其中一種通用的合約類型就是資料合約。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-142">One of the universal types of contracts is the data contract.</span></span> <span data-ttu-id="ca6b6-143">基本上，當您使用 Visual C# 或 Visual Basic 撰寫服務程式碼時，處理資料最簡單的做法，就是建立類別，以屬於資料實體的屬性來表示資料實體。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-143">In essence, as you code your service using Visual C# or Visual Basic, the easiest way to handle data is by creating classes that represent a data entity with properties that belong to the data entity.</span></span> [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ca6b6-144"> 包含完善的系統，能以如此簡便的方式來處理資料。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-144"> includes a comprehensive system for working with data in this easy manner.</span></span> <span data-ttu-id="ca6b6-145">一旦表示資料的類別已建立，您的服務便會自動產生中繼資料，而讓用戶端能夠遵照您所設計的資料型別。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-145">Once you have created the classes that represent data, your service automatically generates the metadata that allows clients to comply with the data types you have designed.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ca6b6-146"> [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)</span><span class="sxs-lookup"><span data-stu-id="ca6b6-146"> [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)</span></span>  
   
--   **安全性**  
+-   <span data-ttu-id="ca6b6-147">**安全性**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-147">**Security**</span></span>  
   
-     訊息經過加密後可以保護隱私權，而您也可以要求使用者必須先驗證才能接收訊息。 使用諸如 SSL 或 WS\-SecureConversation 等公認的標準即可實作安全性。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [安全性](../../../docs/framework/wcf/feature-details/security.md).  
+     <span data-ttu-id="ca6b6-148">訊息經過加密後可以保護隱私權，而您也可以要求使用者必須先驗證才能接收訊息。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-148">Messages can be encrypted to protect privacy and you can require users to authenticate themselves before being allowed to receive messages.</span></span> <span data-ttu-id="ca6b6-149">使用諸如 SSL 或 WS-SecureConversation 等公認的標準即可實作安全性。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-149">Security can be implemented using well-known standards such as SSL or WS-SecureConversation.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ca6b6-150"> [安全性](../../../docs/framework/wcf/feature-details/security.md).</span><span class="sxs-lookup"><span data-stu-id="ca6b6-150"> [Security](../../../docs/framework/wcf/feature-details/security.md).</span></span>  
   
--   **多重傳輸與編碼**  
+-   <span data-ttu-id="ca6b6-151">**多重傳輸與編碼**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-151">**Multiple Transports and Encodings**</span></span>  
   
-     訊息可以透過數種內建傳輸通訊協定與編碼的任何方式進行傳送。 最常用的通訊協定與編碼方式為傳送文字編碼的 SOAP 訊息，其所使用的是全球資訊網泛用的超文字傳輸通訊協定 \(HTTP\)。 或者，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也能讓您透過 TCP、具名管道或 MSMQ 傳送訊息。 這些訊息可編碼為文字，或採用最佳化的二進位格式。  使用 MTOM 標準將能有效傳送二進位資料。 如果所提供的傳輸或編碼都無法滿足您的需求，您還可以建立自己的自訂傳輸或編碼。[!INCLUDE[crabout](../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支援的傳輸與編碼的詳細資訊，請參閱 [傳輸](../../../docs/framework/wcf/feature-details/transports.md)。  
+     <span data-ttu-id="ca6b6-152">訊息可以透過數種內建傳輸通訊協定與編碼的任何方式進行傳送。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-152">Messages can be sent on any of several built-in transport protocols and encodings.</span></span> <span data-ttu-id="ca6b6-153">最常用的通訊協定與編碼方式為傳送文字編碼的 SOAP 訊息，其所使用的是全球資訊網泛用的超文字傳輸通訊協定 (HTTP)。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-153">The most common protocol and encoding is to send text encoded SOAP messages using is the HyperText Transfer Protocol (HTTP) for use on the World Wide Web.</span></span> <span data-ttu-id="ca6b6-154">或者， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也能讓您透過 TCP、具名管道或 MSMQ 傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-154">Alternatively, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] allows you to send messages over TCP, named pipes, or MSMQ.</span></span> <span data-ttu-id="ca6b6-155">這些訊息可編碼為文字，或採用最佳化的二進位格式。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-155">These messages can be encoded as text or using an optimized binary format.</span></span>  <span data-ttu-id="ca6b6-156">使用 MTOM 標準將能有效傳送二進位資料。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-156">Binary data can be sent efficiently using the MTOM standard.</span></span> <span data-ttu-id="ca6b6-157">如果所提供的傳輸或編碼都無法滿足您的需求，您還可以建立自己的自訂傳輸或編碼。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-157">If none of the provided transports or encodings suit your needs you can create your own custom transport or encoding.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ca6b6-158">支援的傳輸與編碼[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-158"> transports and encodings supported by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] see [Transports](../../../docs/framework/wcf/feature-details/transports.md).</span></span>  
   
--   **可靠的佇列訊息**  
+-   <span data-ttu-id="ca6b6-159">**可靠的佇列訊息**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-159">**Reliable and Queued Messages**</span></span>  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用透過 WS\-Reliable 傳訊來實作的可靠工作階段以及 MSMQ，來支援可靠的訊息交換。[!INCLUDE[crabout](../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中可靠及佇列訊息支援的詳細資訊，請參閱 [佇列和可靠的工作階段](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ca6b6-160"> 使用透過 WS-Reliable 傳訊來實作的可靠工作階段以及 MSMQ，來支援可靠的訊息交換。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-160"> supports reliable message exchange using reliable sessions implemented over WS-Reliable Messaging and using MSMQ.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ca6b6-161">中的可靠及佇列訊息支援[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[佇列和可靠工作階段](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-161"> reliable and queued messaging support in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] see [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).</span></span>  
   
--   **永久性的訊息**  
+-   <span data-ttu-id="ca6b6-162">**永久性的訊息**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-162">**Durable Messages**</span></span>  
   
-     永久性的訊息是指不會因為通訊中斷而遺失的訊息。 處於永久性訊息模式的訊息一律儲存至資料庫。 萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。 您也能夠使用 [!INCLUDE[wf](../../../includes/wf-md.md)] 建立永久性的訊息。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     <span data-ttu-id="ca6b6-163">永久性的訊息是指不會因為通訊中斷而遺失的訊息。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-163">A durable message is one that is never lost due to a disruption in the communication.</span></span> <span data-ttu-id="ca6b6-164">處於永久性訊息模式的訊息一律儲存至資料庫。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-164">The messages in a durable message pattern are always saved to a database.</span></span> <span data-ttu-id="ca6b6-165">萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-165">If a disruption occurs, the database allows you to resume the message exchange when the connection is restored.</span></span> <span data-ttu-id="ca6b6-166">您也能夠使用 [!INCLUDE[wf](../../../includes/wf-md.md)]建立永久性的訊息。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-166">You can also create a durable message using the [!INCLUDE[wf](../../../includes/wf-md.md)].</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ca6b6-167"> [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).</span><span class="sxs-lookup"><span data-stu-id="ca6b6-167"> [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).</span></span>  
   
--   **異動**  
+-   <span data-ttu-id="ca6b6-168">**異動**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-168">**Transactions**</span></span>  
   
-     WCF 還支援使用三種交易模型中的任一種進行交易：WS\-AtomicTtransaction、<xref:System.Transactions> 命名空間中的應用程式開發介面，以及 Microsoft 分散式交易協調器。[!INCLUDE[crabout](../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中支援交易的詳細資訊，請參閱 [異動](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。  
+     <span data-ttu-id="ca6b6-169">WCF 還支援使用三種交易模型中的任一種進行交易：WS-AtomicTtransaction、 <xref:System.Transactions> 命名空間中的應用程式開發介面，以及 Microsoft 分散式交易協調器。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-169">WCF also supports transactions using one of three transaction models: WS-AtomicTtransactions, the APIs in the <xref:System.Transactions> namespace, and Microsoft Distributed Transaction Coordinator.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ca6b6-170">中的交易支援[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[交易](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-170"> transaction support in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] see [Transactions](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).</span></span>  
   
--   **AJAX 與 REST 支援**  
+-   <span data-ttu-id="ca6b6-171">**AJAX 與 REST 支援**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-171">**AJAX and REST Support**</span></span>  
   
-     REST 是 Web 2.0 技術演進的一個範例。[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 可設定成用來處理未包裝在 SOAP Envelope 中的「純」XML 資料。[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也可以擴充，以支援特定的 XML 格式，例如 ATOM \(常用的 RSS 標準\)，甚至是非 XML 格式，例如 JavaScript Object Notation \(JSON\)。  
+     <span data-ttu-id="ca6b6-172">REST 是 Web 2.0 技術演進的一個範例。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-172">REST is an example of an evolving Web 2.0 technology.</span></span> [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ca6b6-173"> 可設定成用來處理未包裝在 SOAP Envelope 中的「純」XML 資料。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-173"> can be configured to process "plain" XML data that is not wrapped in a SOAP envelope.</span></span> [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ca6b6-174"> 也可以擴充，以支援特定的 XML 格式，例如 ATOM (常用的 RSS 標準)，甚至是非 XML 格式，例如 JavaScript Object Notation (JSON)。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-174"> can also be extended to support specific XML formats, such as ATOM (a popular RSS standard), and even non-XML formats, such as JavaScript Object Notation (JSON).</span></span>  
   
--   **擴充性**  
+-   <span data-ttu-id="ca6b6-175">**擴充性**</span><span class="sxs-lookup"><span data-stu-id="ca6b6-175">**Extensibility**</span></span>  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 架構具有若干擴充點。 如果需要額外的功能，有數個進入點可讓您自訂服務的行為。[!INCLUDE[crabout](../../../includes/crabout-md.md)]可用擴充點的詳細資訊，請參閱 [延伸 WCF](../../../docs/framework/wcf/extending/extending-wcf.md)。  
+     <span data-ttu-id="ca6b6-176">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 架構具有若干擴充點。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-176">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] architecture has a number of extensibility points.</span></span> <span data-ttu-id="ca6b6-177">如果需要額外的功能，有數個進入點可讓您自訂服務的行為。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-177">If extra capability is required, there are a number of entry points that allow you to customize the behavior of a service.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ca6b6-178"> 可用擴充點的詳細資訊，請參閱 [Extending WCF](../../../docs/framework/wcf/extending/extending-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="ca6b6-178"> available extensibility points see [Extending WCF](../../../docs/framework/wcf/extending/extending-wcf.md).</span></span>  
   
-## WCF 與其他 Microsoft 技術的整合  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是具有靈活彈性的平台。 由於提供了極大彈性，許多其他 Microsoft 產品也使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的基本概念後，您在使用任何這些產品時就能立即掌握優勢。  
+## <a name="wcf-integration-with-other-microsoft-technologies"></a><span data-ttu-id="ca6b6-179">WCF 與其他 Microsoft 技術的整合</span><span class="sxs-lookup"><span data-stu-id="ca6b6-179">WCF Integration with Other Microsoft Technologies</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ca6b6-180"> 是具有靈活彈性的平台。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-180"> is a flexible platform.</span></span> <span data-ttu-id="ca6b6-181">由於提供了極大彈性，許多其他 Microsoft 產品也使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-181">Because of this extreme flexibility, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] is also used in several other Microsoft products.</span></span> <span data-ttu-id="ca6b6-182">了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的基本概念後，您在使用任何這些產品時就能立即掌握優勢。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-182">By understanding the basics of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], you have an immediate advantage if you also use any of these products.</span></span>  
   
- 第一項與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 搭檔的技術為 Windows Workflow Foundation \(WF\)。 工作流程會將其步驟封裝在工作流程中成為活動，藉以簡化應用程式開發。 若是使用第一版的 [!INCLUDE[wf2](../../../includes/wf2-md.md)]，開發人員則必須為工作流程建立主應用程式。 下一版的 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 已與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 相整合。 如此可讓任何工作流程輕鬆地裝載在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中，您只要自動選擇 WF\/WCF \([!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中的專案類型\) 即可。  
+ <span data-ttu-id="ca6b6-183">第一項與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 搭檔的技術為 Windows Workflow Foundation (WF)。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-183">The first technology to pair with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] was the Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="ca6b6-184">工作流程，以簡化應用程式開發步驟封裝在工作流程中為 「 活動 」。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-184">Workflows simplify application development by encapsulating steps in the workflow as "activities."</span></span> <span data-ttu-id="ca6b6-185">若是使用第一版的 [!INCLUDE[wf2](../../../includes/wf2-md.md)]，開發人員則必須為工作流程建立主應用程式。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-185">In the first version of [!INCLUDE[wf2](../../../includes/wf2-md.md)], a developer had to create a host for the workflow.</span></span> <span data-ttu-id="ca6b6-186">下一版的 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 已與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]相整合。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-186">The next version of [!INCLUDE[wf2](../../../includes/wf2-md.md)] was integrated with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="ca6b6-187">如此可讓任何工作流程輕鬆地裝載在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中，您只要自動選擇 WF/WCF ( [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]中的專案類型) 即可。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-187">That allowed any workflow to be easily hosted in a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service; you can do this by automatically choosing the WF/WCF a project type in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
- Microsoft BizTalk Server R2 同樣使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 做為通訊技術。 BizTalk 是設計用來接收標準化格式的資料以及轉換成其他格式。 訊息必須傳遞至中央訊息槽，以在該處使用嚴格對應或利用 BizTalk 功能 \(例如工作流程引擎\) 才可轉換訊息。 BizTalk 如今已可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 企業營運 \(LOB\) 配接器將訊息傳遞至訊息槽。  
+ <span data-ttu-id="ca6b6-188">Microsoft BizTalk Server R2 同樣使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 做為通訊技術。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-188">Microsoft BizTalk Server R2 also utilizes [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] as a communication technology.</span></span> <span data-ttu-id="ca6b6-189">BizTalk 是設計用來接收標準化格式的資料以及轉換成其他格式。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-189">BizTalk is designed to receive and transform data from one standardized format to another.</span></span> <span data-ttu-id="ca6b6-190">訊息必須傳遞至中央訊息槽，以在該處使用嚴格對應或利用 BizTalk 功能 (例如工作流程引擎) 才可轉換訊息。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-190">Messages must be delivered to its central message box where the message can be transformed using either a strict mapping or by using one of the BizTalk features such as its workflow engine.</span></span> <span data-ttu-id="ca6b6-191">BizTalk 如今已可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 企業營運 (LOB) 配接器將訊息傳遞至訊息槽。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-191">BizTalk can now use the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Line of Business (LOB) adapter to deliver messages to the message box.</span></span>  
   
- Microsoft Silverlight 為可供建立高互通性多樣化 Web 應用程式的平台，能讓開發人員建立媒體播放 \(例如串流視訊\) 頻繁的網站。 Silverlight 從 2 版起已納入 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 做為通訊技術，將 Silverlight 應用程式連接至 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 端點。  
+ <span data-ttu-id="ca6b6-192">Microsoft Silverlight 為可供建立高互通性多樣化 Web 應用程式的平台，能讓開發人員建立媒體播放 (例如串流視訊) 頻繁的網站。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-192">Microsoft Silverlight is a platform for creating interoperable, rich Web applications that allow developers to create media-intensive Web sites (such as streaming video).</span></span> <span data-ttu-id="ca6b6-193">Silverlight 從 2 版起已納入 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 做為通訊技術，將 Silverlight 應用程式連接至 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 端點。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-193">Beginning with version 2, Silverlight has incorporated [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] as a communication technology to connect Silverlight applications to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoints.</span></span>  
   
- [!INCLUDE[dublin](../../../includes/dublin-md.md)] 應用程式伺服器是用於部署與管理使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 進行通訊的應用程式而特別建立的。[!INCLUDE[dublin2](../../../includes/dublin2-md.md)] 包含了專為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 已啟用的應用程式而設計之豐富的工具及組態選項。  
+ <span data-ttu-id="ca6b6-194">[!INCLUDE[dublin](../../../includes/dublin-md.md)] 應用程式伺服器是用於部署與管理使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 進行通訊的應用程式而特別建立的。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-194">The [!INCLUDE[dublin](../../../includes/dublin-md.md)] application server is specifically built for deploying and managing applications that use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] for communication.</span></span> <span data-ttu-id="ca6b6-195">[!INCLUDE[dublin2](../../../includes/dublin2-md.md)] 包含了專為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]已啟用的應用程式而設計之豐富的工具及組態選項。</span><span class="sxs-lookup"><span data-stu-id="ca6b6-195">The [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] includes rich tooling and configuration options specifically designed for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-enabled applications.</span></span>  
   
-## 請參閱  
- <xref:System.ServiceModel>   
- [Windows Communication Foundation 的主要概念](../../../docs/framework/wcf/fundamental-concepts.md)   
- [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)   
- [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)   
- [快速入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)   
- [文件指南](../../../docs/framework/wcf/guide-to-the-documentation.md)   
- [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)   
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/zh-tw/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+## <a name="see-also"></a><span data-ttu-id="ca6b6-196">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca6b6-196">See Also</span></span>  
+ <xref:System.ServiceModel>  
+ [<span data-ttu-id="ca6b6-197">Windows Communication Foundation 的基本概念</span><span class="sxs-lookup"><span data-stu-id="ca6b6-197">Fundamental Windows Communication Foundation Concepts</span></span>](../../../docs/framework/wcf/fundamental-concepts.md)  
+ [<span data-ttu-id="ca6b6-198">Windows Communication Foundation 架構</span><span class="sxs-lookup"><span data-stu-id="ca6b6-198">Windows Communication Foundation Architecture</span></span>](../../../docs/framework/wcf/architecture.md)  
+ [<span data-ttu-id="ca6b6-199">方針及最佳做法</span><span class="sxs-lookup"><span data-stu-id="ca6b6-199">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [<span data-ttu-id="ca6b6-200">快速入門教學課程</span><span class="sxs-lookup"><span data-stu-id="ca6b6-200">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="ca6b6-201">文件指南</span><span class="sxs-lookup"><span data-stu-id="ca6b6-201">Guide to the Documentation</span></span>](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ [<span data-ttu-id="ca6b6-202">基本 WCF 程式設計</span><span class="sxs-lookup"><span data-stu-id="ca6b6-202">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="ca6b6-203">Windows Communication Foundation 範例</span><span class="sxs-lookup"><span data-stu-id="ca6b6-203">Windows Communication Foundation Samples</span></span>](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

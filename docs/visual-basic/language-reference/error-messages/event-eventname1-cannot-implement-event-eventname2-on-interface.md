@@ -1,57 +1,39 @@
 ---
-title: "事件 &quot;&lt;eventname1&gt;&quot;無法實作事件&quot;&lt;eventname2&gt;&quot;在介面&quot;&lt;介面&gt;&quot; 因為其委派型別&lt;delegate1&gt;&quot;和&quot;&lt;delegate2&gt;&quot; 不符 |Microsoft 文件"
-ms.date: 2015-07-20
+title: "事件 &#39;&lt;eventname1&gt;&#39; 無法實作事件 &#39;&lt;事件名稱 2>&gt;&#39; 介面 &#39;&lt;介面&gt;&#39; 因為它們的委派類型 &#39;&lt;delegate1&gt;&#39; 和 &#39;&lt;delegate2&gt;&#39; 不相符"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31423
 - bc31423
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC31423
+helpviewer_keywords: BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6253b3e9ad07c3715c55a8cfd0891792b45a452
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b0fcbbf8a6e23270e4dcbf9d813c773e1522a92a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="event-39lteventname1gt39-cannot-implement-event-39lteventname2gt39-on-interface-39ltinterfacegt39-because-their-delegate-types-39ltdelegate1gt39-and-39ltdelegate2gt39-do-not-match"></a>事件 '&lt;eventname1&gt;'無法實作事件'&lt;eventname2&gt;'在介面'&lt;介面&gt;' 因為其委派型別&lt;delegate1&gt;'和'&lt;delegate2&gt;' 不相符
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]無法實作事件，因為事件之委派型別和介面中的事件之委派型別不相符。 如果您在介面中定義多個事件，然後嘗試將它們與相同的事件一起實作，則會發生這個錯誤。 只有在使用 `As` 語法宣告所有實作的事件並指定相同的委派類型時，事件才能實作兩個以上的事件。  
+# <a name="event-39lteventname1gt39-cannot-implement-event-39lteventname2gt39-on-interface-39ltinterfacegt39-because-their-delegate-types-39ltdelegate1gt39-and-39ltdelegate2gt39-do-not-match"></a><span data-ttu-id="741f3-102">事件 &#39;&lt;eventname1&gt;&#39; 無法實作事件 &#39;&lt;事件名稱 2>&gt;&#39; 介面 &#39;&lt;介面&gt;&#39; 因為它們的委派類型 &#39;&lt;delegate1&gt;&#39; 和 &#39;&lt;delegate2&gt;&#39; 不相符</span><span class="sxs-lookup"><span data-stu-id="741f3-102">Event &#39;&lt;eventname1&gt;&#39; cannot implement event &#39;&lt;eventname2&gt;&#39; on interface &#39;&lt;interface&gt;&#39; because their delegate types &#39;&lt;delegate1&gt;&#39; and &#39;&lt;delegate2&gt;&#39; do not match</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="741f3-103">無法實作事件，因為事件的委派類型的介面中的事件委派類型不相符。</span><span class="sxs-lookup"><span data-stu-id="741f3-103"> cannot implement an event because the delegate type of the event does not match the delegate type of the event in the interface.</span></span> <span data-ttu-id="741f3-104">如果您在介面中定義多個事件，然後嘗試將它們與相同的事件一起實作，則會發生這個錯誤。</span><span class="sxs-lookup"><span data-stu-id="741f3-104">This error can occur when you define multiple events in an interface and then attempt to implement them together with the same event.</span></span> <span data-ttu-id="741f3-105">只有在使用 `As` 語法宣告所有實作的事件並指定相同的委派類型時，事件才能實作兩個以上的事件。</span><span class="sxs-lookup"><span data-stu-id="741f3-105">An event can implement two or more events only if all implemented events are declared using the `As` syntax and specify the same delegate type.</span></span>  
   
- **錯誤識別碼︰** BC31423  
+ <span data-ttu-id="741f3-106">**錯誤 ID:** BC31423</span><span class="sxs-lookup"><span data-stu-id="741f3-106">**Error ID:** BC31423</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="741f3-107">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="741f3-107">To correct this error</span></span>  
   
--   請分別實作這些事件。  
+-   <span data-ttu-id="741f3-108">請分別實作這些事件。</span><span class="sxs-lookup"><span data-stu-id="741f3-108">Implement the events separately.</span></span>  
   
-     -或-  
+     <span data-ttu-id="741f3-109">-或-</span><span class="sxs-lookup"><span data-stu-id="741f3-109">—or—</span></span>  
   
--   使用的介面中定義之事件`As`語法，並指定相同的委派型別。  
+-   <span data-ttu-id="741f3-110">在介面中使用定義的事件`As`語法，並指定相同的委派類型。</span><span class="sxs-lookup"><span data-stu-id="741f3-110">Define the events in the interface using the `As` syntax and specify the same delegate type.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)   
- [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="741f3-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="741f3-111">See Also</span></span>  
+ [<span data-ttu-id="741f3-112">Event 陳述式</span><span class="sxs-lookup"><span data-stu-id="741f3-112">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="741f3-113">Delegate 陳述式</span><span class="sxs-lookup"><span data-stu-id="741f3-113">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="741f3-114">事件</span><span class="sxs-lookup"><span data-stu-id="741f3-114">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

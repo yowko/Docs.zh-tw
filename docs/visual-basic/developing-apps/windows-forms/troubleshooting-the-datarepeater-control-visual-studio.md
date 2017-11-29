@@ -1,74 +1,75 @@
 ---
-title: "Troubleshooting the DataRepeater Control (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, troubleshooting"
+title: "疑難排解 DataRepeater 控制項 (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: DataRepeater, troubleshooting
 ms.assetid: c0ab9469-eced-4f52-aa18-4bd8dd4f1a9a
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d630dbf8601eeddd5ce3ea02696891a1087f71f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Troubleshooting the DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-本主題列出使用 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項時可能發生的常見問題。  
+# <a name="troubleshooting-the-datarepeater-control-visual-studio"></a><span data-ttu-id="e656e-102">疑難排解 DataRepeater 控制項 (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="e656e-102">Troubleshooting the DataRepeater Control (Visual Studio)</span></span>
+<span data-ttu-id="e656e-103">本主題列出常見的問題，當您正在使用時，可能會發生<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</span><span class="sxs-lookup"><span data-stu-id="e656e-103">This topic lists common issues that may occur when you are working with the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  
   
-## 不會引發 DataRepeater 鍵盤和滑鼠事件  
- 未引發某些 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項事件 \(例如鍵盤和滑鼠事件\)。  這是設計上的預期行為。  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項本身是 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 物件的容器，無法在執行階段進行存取。  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 在設計階段不會公開 \(Expose\) 事件，  因此當項目獲得焦點 \(Focus\) 時，按下項目或按鍵盤按鍵並不會引發事件。  
+## <a name="datarepeater-keyboard-and-mouse-events-are-not-raised"></a><span data-ttu-id="e656e-104">不引發 DataRepeater 鍵盤和滑鼠事件</span><span class="sxs-lookup"><span data-stu-id="e656e-104">DataRepeater Keyboard and Mouse Events Are Not Raised</span></span>  
+ <span data-ttu-id="e656e-105">某些<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項事件，例如鍵盤和滑鼠事件，則不會引發。</span><span class="sxs-lookup"><span data-stu-id="e656e-105">Some <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control events, such as keyboard and mouse events, are not raised.</span></span> <span data-ttu-id="e656e-106">這是依設計的結果。</span><span class="sxs-lookup"><span data-stu-id="e656e-106">This is by design.</span></span> <span data-ttu-id="e656e-107"><xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項本身是容器<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>物件，並在執行階段無法存取。</span><span class="sxs-lookup"><span data-stu-id="e656e-107">The <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control itself is a container for <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> objects and cannot be accessed at run time.</span></span> <span data-ttu-id="e656e-108"><xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>不會在設計階段中公開事件。</span><span class="sxs-lookup"><span data-stu-id="e656e-108">The <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> does not expose events at design time.</span></span> <span data-ttu-id="e656e-109">因此，按一下項目或項目有焦點時按下按鍵不會引發事件。</span><span class="sxs-lookup"><span data-stu-id="e656e-109">Therefore, clicking an item or pressing a key when the item has focus does not raise an event.</span></span>  
   
- 不過，如果為 <xref:System.Windows.Forms.Control.Padding%2A> 屬性設定之值的大小足以公開 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項的邊緣，則為上述之例外狀況。  在這種狀況下，按下公開的邊界將引發滑鼠事件。  
+ <span data-ttu-id="e656e-110">這個例外狀況時，<xref:System.Windows.Forms.Control.Padding%2A>屬性會設定為大一點的值，以公開邊緣<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</span><span class="sxs-lookup"><span data-stu-id="e656e-110">The exception to this is when the <xref:System.Windows.Forms.Control.Padding%2A> property is set to a large enough value to expose the edges of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span> <span data-ttu-id="e656e-111">在此情況下，按一下公開的邊界會引發滑鼠事件。</span><span class="sxs-lookup"><span data-stu-id="e656e-111">In this case, clicking in the exposed margin will raise mouse events.</span></span>  
   
- 若要解決這個問題，請將 <xref:System.Windows.Forms.Panel> 控制項加入至 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項的 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> 區段，再將其他的控制項加入至 <xref:System.Windows.Forms.Panel>。  然後，您就可以將程式碼加入至 <xref:System.Windows.Forms.Panel> 控制項的事件處理常式，處理鍵盤和滑鼠事件。  
+ <span data-ttu-id="e656e-112">若要解決此問題，請加入<xref:System.Windows.Forms.Panel>控制權傳輸至<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>區段<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項，然後再加入剩餘的控制項加入<xref:System.Windows.Forms.Panel>。</span><span class="sxs-lookup"><span data-stu-id="e656e-112">To resolve this issue, add a <xref:System.Windows.Forms.Panel> control to the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> section of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control, and then add the rest of the controls to the <xref:System.Windows.Forms.Panel>.</span></span> <span data-ttu-id="e656e-113">然後，您可以加入程式碼以<xref:System.Windows.Forms.Panel>控制項的鍵盤和滑鼠事件的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="e656e-113">You can then add code to the <xref:System.Windows.Forms.Panel> control's event handlers for keyboard and mouse events.</span></span>  
   
-## DataRepeater 部分隱藏在繫結導覽後面  
- 當您先將 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項加入至表單，然後再從 \[**資料來源**\] 視窗加入資料繫結控制項時，<xref:System.Windows.Forms.BindingNavigator> 控制項可能會顯示在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項的最上層。  此為 \[**資料來源**\] 視窗已知的限制，而且它與其他控制項 \(例如 <xref:System.Windows.Forms.DataGridView> 控制項\) 的行為一致。  
+## <a name="the-datarepeater-is-partially-hidden-behind-the-binding-navigator"></a><span data-ttu-id="e656e-114">DataRepeater 部分藏繫結導覽</span><span class="sxs-lookup"><span data-stu-id="e656e-114">The DataRepeater Is Partially Hidden Behind the Binding Navigator</span></span>  
+ <span data-ttu-id="e656e-115">當您第一次加入<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項加入表單，並將資料繫結控制項，從**資料來源**視窗中，<xref:System.Windows.Forms.BindingNavigator>控制項可能會出現在最上層的<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</span><span class="sxs-lookup"><span data-stu-id="e656e-115">When you first add a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control to a form and then add data-bound controls from the **Data Sources** window, the <xref:System.Windows.Forms.BindingNavigator> control may appear on top of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span> <span data-ttu-id="e656e-116">這是已知的限制**資料來源**視窗，與保持一致的行為的其他控制項，例如<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="e656e-116">This is a known limitation of the **Data Sources** window and is consistent with the behavior of other controls, such as the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- 您可以在設計階段將 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 移到 <xref:System.Windows.Forms.BindingNavigator> 控制項的下層，或是在 `Load` 事件處理常式中加入與下列類似的程式碼。  
+ <span data-ttu-id="e656e-117">您可以移動任一<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>低於<xref:System.Windows.Forms.BindingNavigator>控制在設計階段，或加入程式碼中的下列類似一個框住`Load`事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="e656e-117">You can either move the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> lower than the <xref:System.Windows.Forms.BindingNavigator> control at design time, or add code resembling the following in the `Load` event handler.</span></span>  
   
-```vb#  
+```vb  
 DataRepeater1.Top = ProductsBindingNavigator.Height  
 ```  
   
-```c#  
+```csharp  
 dataRepeater1.Top = productsBindingNavigator.Height;  
 ```  
   
-## 控制項在執行階段沒有正確顯示  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中的某些控制項在執行階段可能無法如預期顯示。  從 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> 將控制項複製 \(Clone\) 至 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 時所使用的程序不一定每次都能判斷所有控制項的所有屬性。  例如，如果您在設計階段將未繫結 <xref:System.Windows.Forms.ListBox> 控制項加入至 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項，並以字串清單填入 \(Populate\) 其 <xref:System.Windows.Forms.ListBox.Items%2A> 集合，則 <xref:System.Windows.Forms.ListBox> 在執行階段會是空的。  這是因為複製程序無法將 <xref:System.Windows.Forms.ListBox.Items%2A> 屬性納入考量。  
+## <a name="controls-are-not-displayed-correctly-at-run-time"></a><span data-ttu-id="e656e-118">控制項無法正確顯示在執行階段</span><span class="sxs-lookup"><span data-stu-id="e656e-118">Controls Are Not Displayed Correctly at Run Time</span></span>  
+ <span data-ttu-id="e656e-119">在某些控制項<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項可能不在執行階段如預期般顯示。</span><span class="sxs-lookup"><span data-stu-id="e656e-119">Some controls in a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control may not be displayed as expected at run time.</span></span> <span data-ttu-id="e656e-120">處理序用來複製控制項從<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>至<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>永遠無法判斷所有控制項的所有屬性。</span><span class="sxs-lookup"><span data-stu-id="e656e-120">The process used to clone controls from the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> to the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> cannot always determine all the properties of all controls.</span></span> <span data-ttu-id="e656e-121">比方說，如果您加入未繫結<xref:System.Windows.Forms.ListBox>控制權傳輸至<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制在設計階段，並擴展其<xref:System.Windows.Forms.ListBox.Items%2A>清單的字串集合，<xref:System.Windows.Forms.ListBox>空白，在將執行階段。</span><span class="sxs-lookup"><span data-stu-id="e656e-121">For example, if you add an unbound <xref:System.Windows.Forms.ListBox> control to a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control at design time and populate its <xref:System.Windows.Forms.ListBox.Items%2A> collection with a list of strings, the <xref:System.Windows.Forms.ListBox> will be empty at run time.</span></span> <span data-ttu-id="e656e-122">這是因為在複製程序無法納入考量<xref:System.Windows.Forms.ListBox.Items%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="e656e-122">This is because the cloning process cannot take into account the <xref:System.Windows.Forms.ListBox.Items%2A> property.</span></span>  
   
- 您可以還原 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> 事件 \(會在預設複製完成後發生\) 中遺失的屬性，藉以修正這類的問題。  下列範例示範如何在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> 事件處理常式中修復 <xref:System.Windows.Forms.ListBox> 控制項的 <xref:System.Windows.Forms.ListBox.Items%2A> 集合。  
+ <span data-ttu-id="e656e-123">您可以還原中遺漏的屬性，以修正問題，例如這<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>預設複製完成之後，就會發生的事件。</span><span class="sxs-lookup"><span data-stu-id="e656e-123">You can fix problems such as this by restoring the missing properties in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> event, which occurs after the default cloning is completed.</span></span> <span data-ttu-id="e656e-124">下列範例示範如何修復<xref:System.Windows.Forms.ListBox.Items%2A>集合<xref:System.Windows.Forms.ListBox>控制<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="e656e-124">The following example demonstrates how to repair the <xref:System.Windows.Forms.ListBox.Items%2A> collection of a <xref:System.Windows.Forms.ListBox> control in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> event handler.</span></span>  
   
- [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
+ [!code-csharp[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
  [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/troubleshooting-the-datarepeater-control-visual-studio_1.vb)]  
   
-## 遺失項目標題的選取符號  
- 在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中變更項目標題的 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> 屬性時，某些色彩選擇可能會使選取符號消失。  此外，變更 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> 屬性也可能會造成選取符號消失。  
+## <a name="the-selection-symbol-on-the-item-header-is-missing"></a><span data-ttu-id="e656e-125">遺漏項目標題的選取項目符號</span><span class="sxs-lookup"><span data-stu-id="e656e-125">The Selection Symbol on the Item Header Is Missing</span></span>  
+ <span data-ttu-id="e656e-126">當您變更<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>屬性中的項目標頭<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項，某些色彩選項可能會造成選取項目符號會消失。</span><span class="sxs-lookup"><span data-stu-id="e656e-126">When you change the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> property of the item header in a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control, some color choices may cause the selection symbol to disappear.</span></span> <span data-ttu-id="e656e-127">變更<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>屬性可能也會造成選取項目符號會消失。</span><span class="sxs-lookup"><span data-stu-id="e656e-127">Changing the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> property may also cause the selection symbol to disappear.</span></span>  
   
- 選取符號的色彩及大小是無法變更的。  
+ <span data-ttu-id="e656e-128">無法變更的色彩和大小的選取項目符號。</span><span class="sxs-lookup"><span data-stu-id="e656e-128">The color and size of the selection symbol cannot be changed.</span></span>  
   
--   如果將 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> 設定為 <xref:System.Drawing.Color.White%2A>，則項目第一次被選取時並不會顯示選取符號。  
+-   <span data-ttu-id="e656e-129">如果您設定<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>至<xref:System.Drawing.Color.White%2A>，選取項目符號將不會顯示第一次選取項目。</span><span class="sxs-lookup"><span data-stu-id="e656e-129">If you set the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> to <xref:System.Drawing.Color.White%2A>, the selection symbol will not be visible when an item is first selected.</span></span>  
   
--   如果將 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> 設定為 <xref:System.Drawing.Color.Black%2A>，則選取控制項時並不會顯示選取符號，而且控制項處於編輯模式時也不會顯示鉛筆符號。  
+-   <span data-ttu-id="e656e-130">如果您設定<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>至<xref:System.Drawing.Color.Black%2A>，選取項目符號選取控制項時，和鉛筆符號將不會顯示當控制項處於編輯模式時，將無法看到。</span><span class="sxs-lookup"><span data-stu-id="e656e-130">If you set the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> to <xref:System.Drawing.Color.Black%2A>, the selection symbol will not be visible when a control is selected, and the pencil symbol will not be visible when a control is in edit mode.</span></span>  
   
--   如果 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> 屬性值是設定為小於 11，則在項目標題中不會顯示指示器符號。  
+-   <span data-ttu-id="e656e-131">如果<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>屬性設為小於 11 的值，將不會顯示項目標頭中的標記符號。</span><span class="sxs-lookup"><span data-stu-id="e656e-131">If the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> property is set to a value that is less than 11, the indicator symbols in the item header will not be displayed.</span></span>  
   
- 藉由使用 <xref:System.Windows.Forms.PictureBox> 控制項，並在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項的 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 事件中監視 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 的 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>，您可以自行提供項目標題和選取符號。  如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>。  
+ <span data-ttu-id="e656e-132">您可以使用，以提供您自己的項目標頭和選取項目符號<xref:System.Windows.Forms.PictureBox>控制和監視<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>屬性<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>中<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>事件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</span><span class="sxs-lookup"><span data-stu-id="e656e-132">You can provide your own item header and selection symbol by using a <xref:System.Windows.Forms.PictureBox> control and monitoring the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> property of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span> <span data-ttu-id="e656e-133">如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>。</span><span class="sxs-lookup"><span data-stu-id="e656e-133">For more information, see <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.</span></span>  
   
-## 請參閱  
- [Introduction to the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [How to: Display Bound Data in a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [How to: Display Unbound Controls in a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)   
- [How to: Change the Layout of a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)   
- [How to: Change the Appearance of a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [How to: Display Item Headers in a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)   
- [How to: Disable Adding and Deleting DataRepeater Items](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)   
- [How to: Search Data in a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)   
- [How to: Create a Master\/Detail Form by Using Two DataRepeater Controls](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
+## <a name="see-also"></a><span data-ttu-id="e656e-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e656e-134">See Also</span></span>  
+ [<span data-ttu-id="e656e-135">DataRepeater 控制項簡介</span><span class="sxs-lookup"><span data-stu-id="e656e-135">Introduction to the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e656e-136">操作說明：在 DataRepeater 控制項中顯示繫結資料</span><span class="sxs-lookup"><span data-stu-id="e656e-136">How to: Display Bound Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e656e-137">操作說明：在 DataRepeater 控制項中顯示未繫結的控制項</span><span class="sxs-lookup"><span data-stu-id="e656e-137">How to: Display Unbound Controls in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e656e-138">操作說明：變更 DataRepeater 控制項的配置</span><span class="sxs-lookup"><span data-stu-id="e656e-138">How to: Change the Layout of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e656e-139">操作說明：變更 DataRepeater 控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="e656e-139">How to: Change the Appearance of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e656e-140">操作說明：在 DataRepeater 控制項中顯示項目標題</span><span class="sxs-lookup"><span data-stu-id="e656e-140">How to: Display Item Headers in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e656e-141">操作說明：停用加入和刪除 DataRepeater 項目</span><span class="sxs-lookup"><span data-stu-id="e656e-141">How to: Disable Adding and Deleting DataRepeater Items</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
+ [<span data-ttu-id="e656e-142">操作說明：搜尋 DataRepeater 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="e656e-142">How to: Search Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e656e-143">如何： 利用兩個 DataRepeater 控制項 (Visual Studio) 來建立主從式表單</span><span class="sxs-lookup"><span data-stu-id="e656e-143">How to: Create a Master/Detail Form by Using Two DataRepeater Controls (Visual Studio)</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)

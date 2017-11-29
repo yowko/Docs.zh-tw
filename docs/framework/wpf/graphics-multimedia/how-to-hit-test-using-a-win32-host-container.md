@@ -1,44 +1,50 @@
 ---
-title: "如何：使用 Win32 裝載容器進行點擊測試 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "點擊測試, 使用 Win32 裝載容器"
-  - "視覺物件, 點擊測試"
-  - "Win32 裝載容器, 點擊測試使用"
+title: "操作說明：使用 Win32 裝載容器進行點擊測試"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hit tests [WPF], using Win32 host containers
+- visual objects [WPF], hit tests on
+- Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9a5cb77a53cbb106593b70d618bab67ef816e901
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Win32 裝載容器進行點擊測試
-您可以透過提供視覺物件的裝載視窗容器，在 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 視窗內建立視覺物件。  若要為包含的視覺物件提供事件處理功能，請處理傳遞至裝載視窗容器之訊息篩選迴圈 \(Loop\) 的訊息。  如需如何在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中裝載視覺物件的詳細資訊，請參閱[教學課程：在 Win32 應用程式中裝載視覺物件](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)。  
+# <a name="how-to-hit-test-using-a-win32-host-container"></a><span data-ttu-id="ea526-102">操作說明：使用 Win32 裝載容器進行點擊測試</span><span class="sxs-lookup"><span data-stu-id="ea526-102">How to: Hit Test Using a Win32 Host Container</span></span>
+<span data-ttu-id="ea526-103">您可以建立視覺物件內[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]藉由提供視覺物件主機視窗容器的視窗。</span><span class="sxs-lookup"><span data-stu-id="ea526-103">You can create visual objects within a [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] window by providing a host window container for the visual objects.</span></span> <span data-ttu-id="ea526-104">若要針對包含的視覺物件提供事件處理，您必須處理傳遞至裝載視窗容器之訊息篩選迴圈的訊息。</span><span class="sxs-lookup"><span data-stu-id="ea526-104">To provide event handling for the contained visual objects you process the messages passed to the host window container’s message filter loop.</span></span> <span data-ttu-id="ea526-105">是指[教學課程： 在 Win32 應用程式中裝載 Visual 物件](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)如需有關如何在裝載中的視覺物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。</span><span class="sxs-lookup"><span data-stu-id="ea526-105">Refer to [Tutorial: Hosting Visual Objects in a Win32 Application](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md) for more information on how to host visual objects in a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window.</span></span>  
   
-## 範例  
- 下列程式碼示範如何設定滑鼠事件處理常式，以處理做為視覺物件裝載容器的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗。  
+## <a name="example"></a><span data-ttu-id="ea526-106">範例</span><span class="sxs-lookup"><span data-stu-id="ea526-106">Example</span></span>  
+ <span data-ttu-id="ea526-107">下列程式碼示範如何設定滑鼠事件處理常式，如[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]作為視覺物件裝載容器的視窗。</span><span class="sxs-lookup"><span data-stu-id="ea526-107">The following code shows how to set up mouse event handlers for a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window that is used as a host container for visual objects.</span></span>  
   
  [!code-csharp[VisualsHitTesting#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#103)]
  [!code-vb[VisualsHitTesting#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#103)]  
   
- 下列範例示範如何設定[點擊測試](GTMT) \(Hit Test\)，以回應截獲特定滑鼠事件。  
+ <span data-ttu-id="ea526-108">下列範例會示範如何設定以回應特定的滑鼠事件的設陷的點擊測試。</span><span class="sxs-lookup"><span data-stu-id="ea526-108">The following example shows how to set up a hit test in response to trapping specific mouse events.</span></span>  
   
  [!code-csharp[VisualsHitTesting#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
  [!code-vb[VisualsHitTesting#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
   
- <xref:System.Windows.Interop.HwndSource> 物件代表 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 視窗內的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 內容。<xref:System.Windows.Interop.HwndSource> 物件的 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 屬性值代表[視覺化樹狀結構](GTMT)階層中最上面的節點。  
+ <span data-ttu-id="ea526-109"><xref:System.Windows.Interop.HwndSource>物件代表[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]內容內[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]視窗。</span><span class="sxs-lookup"><span data-stu-id="ea526-109">The <xref:System.Windows.Interop.HwndSource> object presents [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] content within a [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] window.</span></span> <span data-ttu-id="ea526-110">值<xref:System.Windows.Interop.HwndSource.RootVisual%2A>屬性<xref:System.Windows.Interop.HwndSource>物件代表的視覺化樹狀結構階層架構中的最上層節點。</span><span class="sxs-lookup"><span data-stu-id="ea526-110">The value of the <xref:System.Windows.Interop.HwndSource.RootVisual%2A> property of the <xref:System.Windows.Interop.HwndSource> object represents the top-most node in the visual tree hierarchy.</span></span>  
   
- 如需使用 Win32 裝載容器之點擊測試物件的完整範例，請參閱[使用 Win32 互通性進行點擊測試範例](http://go.microsoft.com/fwlink/?LinkID=159995) \(英文\)。  
+ <span data-ttu-id="ea526-111">物件上的點擊測試的完整範例，使用 Win32 裝載容器，請參閱[點擊測試的互通性的 Win32 範例](http://go.microsoft.com/fwlink/?LinkID=159995)。</span><span class="sxs-lookup"><span data-stu-id="ea526-111">For the complete sample on hit testing objects using a Win32 host container, see [Hit Test with Win32 Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=159995).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Interop.HwndSource>   
- [視覺分層中的點擊測試](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)   
- [教學課程：在 Win32 應用程式中裝載視覺物件](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+## <a name="see-also"></a><span data-ttu-id="ea526-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea526-112">See Also</span></span>  
+ <xref:System.Windows.Interop.HwndSource>  
+ [<span data-ttu-id="ea526-113">視覺分層中的點擊測試</span><span class="sxs-lookup"><span data-stu-id="ea526-113">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="ea526-114">教學課程：在 Win32 應用程式中裝載視覺物件</span><span class="sxs-lookup"><span data-stu-id="ea526-114">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)

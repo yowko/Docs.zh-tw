@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 20e65df6-4539-428d-bf61-92e05c405bef
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bbd4482f93b25c351c3311b5d74ddb40e208af8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed
-System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed  
+# <a name="systemservicemodelchannelsnamedpipechannelmessagereceivefailed"></a><span data-ttu-id="9d9e7-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed</span><span class="sxs-lookup"><span data-stu-id="9d9e7-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed</span></span>
+<span data-ttu-id="9d9e7-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed</span><span class="sxs-lookup"><span data-stu-id="9d9e7-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed</span></span>  
   
-## 描述  
- 無法查閱通道以接收傳入訊息。找不到端點或 SOAP 動作。  
+## <a name="description"></a><span data-ttu-id="9d9e7-104">描述</span><span class="sxs-lookup"><span data-stu-id="9d9e7-104">Description</span></span>  
+ <span data-ttu-id="9d9e7-105">無法查閱通道以接收傳入訊息。</span><span class="sxs-lookup"><span data-stu-id="9d9e7-105">Failed to lookup a channel to receive an incoming message.</span></span> <span data-ttu-id="9d9e7-106">找不到端點或 SOAP 動作。</span><span class="sxs-lookup"><span data-stu-id="9d9e7-106">Either the endpoint or the SOAP action was not found.</span></span>  
   
-## 請參閱  
- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9d9e7-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9d9e7-107">See Also</span></span>  
+ [<span data-ttu-id="9d9e7-108">追蹤</span><span class="sxs-lookup"><span data-stu-id="9d9e7-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9d9e7-109">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="9d9e7-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9d9e7-110">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="9d9e7-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

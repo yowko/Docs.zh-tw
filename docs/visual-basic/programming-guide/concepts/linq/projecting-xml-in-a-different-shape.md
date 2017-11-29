@@ -1,38 +1,34 @@
 ---
-title: "投影 XML 不同形式 (Visual Basic) |Microsoft 文件"
+title: "不同的組織結構 (Visual Basic) 的組織結構規劃 XML"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b05fbff86bcac06a3ce375c162c70dc308f4913
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 2cf5f963b8675f22c9cab0297d8f48eb68f5aefb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>組織結構規劃 XML 不同形式 (Visual Basic)
-本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="13f19-102">不同的組織結構 (Visual Basic) 的組織結構規劃 XML</span><span class="sxs-lookup"><span data-stu-id="13f19-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
+<span data-ttu-id="13f19-103">本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。</span><span class="sxs-lookup"><span data-stu-id="13f19-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- 許多典型的 XML 轉換都包含鏈結的查詢，如此範例中所示。 常見的狀況是，從特定格式的 XML 開始，將中繼結果規劃為匿名型別或具名型別的集合，最後再將結果規劃回完全不同於來源 XML 之組織結構的 XML。  
+ <span data-ttu-id="13f19-104">許多典型的 XML 轉換都包含鏈結的查詢，如此範例中所示。</span><span class="sxs-lookup"><span data-stu-id="13f19-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="13f19-105">常見的狀況是，從特定格式的 XML 開始，將中繼結果規劃為匿名型別或具名型別的集合，最後再將結果規劃回完全不同於來源 XML 之組織結構的 XML。</span><span class="sxs-lookup"><span data-stu-id="13f19-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a>範例  
- 此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。 它也可以識別每個段落的樣式和文字。 最後，此範例會使用不同的組織結構規劃 XML。 此範例在這個教學課程中，會在先前的範例上建置。 進行規劃的新陳述式會在以下程式碼的註解中叫出。  
+## <a name="example"></a><span data-ttu-id="13f19-106">範例</span><span class="sxs-lookup"><span data-stu-id="13f19-106">Example</span></span>  
+ <span data-ttu-id="13f19-107">此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。</span><span class="sxs-lookup"><span data-stu-id="13f19-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="13f19-108">它也可以識別每個段落的樣式和文字。</span><span class="sxs-lookup"><span data-stu-id="13f19-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="13f19-109">最後，此範例會使用不同的組織結構規劃 XML。</span><span class="sxs-lookup"><span data-stu-id="13f19-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="13f19-110">此範例在這個教學課程中，會在先前的範例上建置。</span><span class="sxs-lookup"><span data-stu-id="13f19-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="13f19-111">進行規劃的新陳述式會在以下程式碼的註解中叫出。</span><span class="sxs-lookup"><span data-stu-id="13f19-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- 如需建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ <span data-ttu-id="13f19-112">建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="13f19-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用中的型別<xref:System.IO.Packaging?displayProperty=fullName>命名空間。</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="13f19-113">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="13f19-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="13f19-114">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="13f19-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -173,7 +169,7 @@ Module Module1
 End Module  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="13f19-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="13f19-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -240,10 +236,10 @@ End Module
 </Root>  
 ```  
   
-## <a name="next-steps"></a>後續步驟  
- 在下一個範例中，您將查詢以尋找 Word 文件中的所有文字︰  
+## <a name="next-steps"></a><span data-ttu-id="13f19-116">後續步驟</span><span class="sxs-lookup"><span data-stu-id="13f19-116">Next Steps</span></span>  
+ <span data-ttu-id="13f19-117">在下一個範例中，您將在 Word 文件中進行查詢以尋找所有文字：</span><span class="sxs-lookup"><span data-stu-id="13f19-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [Word 文件 (Visual Basic) 中尋找文字](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [<span data-ttu-id="13f19-118">在 Word 文件 (Visual Basic) 中尋找文字</span><span class="sxs-lookup"><span data-stu-id="13f19-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>另請參閱  
- [教學課程︰ 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="13f19-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13f19-119">See Also</span></span>  
+ [<span data-ttu-id="13f19-120">教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容</span><span class="sxs-lookup"><span data-stu-id="13f19-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -1,124 +1,127 @@
 ---
-title: "不支援的案例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "不支援的案例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: 43
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 39
+caps.latest.revision: "43"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a518f1bc6019aea0667f6be018e06bbcf36e6e9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 不支援的案例
-由於各種因素使然，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 並不支援某些特定的安全性案例。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援在該平台上使用 Windows 驗證來執行服務。 當您在 Windows XP Home Edition 下執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，則支援如使用者名稱\/密碼與 HTTP\/HTTPS 整合式驗證之類的其他驗證機制。  
+# <a name="unsupported-scenarios"></a><span data-ttu-id="649a3-102">不支援的案例</span><span class="sxs-lookup"><span data-stu-id="649a3-102">Unsupported Scenarios</span></span>
+<span data-ttu-id="649a3-103">由於各種因素使然，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 並不支援某些特定的安全性案例。</span><span class="sxs-lookup"><span data-stu-id="649a3-103">For various reasons, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] does not support some specific security scenarios.</span></span> <span data-ttu-id="649a3-104">例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援在該平台上使用 Windows 驗證來執行服務。</span><span class="sxs-lookup"><span data-stu-id="649a3-104">For example, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition does not implement the SSPI or Kerberos authentication protocols, and therefore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not support running a service with Windows authentication on that platform.</span></span> <span data-ttu-id="649a3-105">當您在 Windows XP Home Edition 下執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，則支援如使用者名稱/密碼與 HTTP/HTTPS 整合式驗證之類的其他驗證機制。</span><span class="sxs-lookup"><span data-stu-id="649a3-105">Other authentication mechanisms, such as username/password and HTTP/HTTPS integrated authentication are supported when running [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] under Windows XP Home Edition.</span></span>  
   
-## 模擬案例  
+## <a name="impersonation-scenarios"></a><span data-ttu-id="649a3-106">模擬案例</span><span class="sxs-lookup"><span data-stu-id="649a3-106">Impersonation Scenarios</span></span>  
   
-### 當用戶端進行非同步呼叫時，模擬的識別可能不會流動  
- 當 WCF 用戶端在模擬下使用 Windows 驗證對 WCF 服務進行非同步呼叫時，可能會驗證用戶端處理序的識別，而非模擬的識別。  
+### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a><span data-ttu-id="649a3-107">當用戶端進行非同步呼叫時，模擬的識別可能不會流動</span><span class="sxs-lookup"><span data-stu-id="649a3-107">Impersonated Identity Might Not Flow When Clients Make Asynchronous Calls</span></span>  
+ <span data-ttu-id="649a3-108">當 WCF 用戶端在模擬下使用 Windows 驗證對 WCF 服務進行非同步呼叫時，可能會驗證用戶端處理序的識別，而非模擬的識別。</span><span class="sxs-lookup"><span data-stu-id="649a3-108">When a WCF client makes asynchronous calls to a WCF service using Windows authentication under impersonation, authentication might occur with the identity of the client process instead of the impersonated identity.</span></span>  
   
-### 啟用 Windows XP 與安全性內容權杖 Cookie  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援模擬，而且當下列條件存在時，會擲回 <xref:System.InvalidOperationException>：  
+### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a><span data-ttu-id="649a3-109">啟用 Windows XP 與安全性內容權杖 Cookie</span><span class="sxs-lookup"><span data-stu-id="649a3-109">Windows XP and Secure Context Token Cookie Enabled</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="649a3-110"> 不支援模擬，而且當下列條件存在時，會擲回 <xref:System.InvalidOperationException>：</span><span class="sxs-lookup"><span data-stu-id="649a3-110"> does not support impersonation and an <xref:System.InvalidOperationException> is thrown when the following conditions exist:</span></span>  
   
--   作業系統是 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+-   <span data-ttu-id="649a3-111">作業系統是 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="649a3-111">The operating system is [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  
   
--   驗證模式變成 Windows 識別。  
+-   <span data-ttu-id="649a3-112">驗證模式變成 Windows 識別。</span><span class="sxs-lookup"><span data-stu-id="649a3-112">The authentication mode results in a Windows identity.</span></span>  
   
--   <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 的 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性會設定為 <xref:System.ServiceModel.ImpersonationOption>。  
+-   <span data-ttu-id="649a3-113"><xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 的 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性會設定為 <xref:System.ServiceModel.ImpersonationOption.Required>。</span><span class="sxs-lookup"><span data-stu-id="649a3-113">The <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> property of the <xref:System.ServiceModel.OperationBehaviorAttribute> is set to <xref:System.ServiceModel.ImpersonationOption.Required>.</span></span>  
   
--   建立以狀態為基礎的安全性內容權杖 \(SCT\) \(根據預設會停用建立作業\)。  
+-   <span data-ttu-id="649a3-114">建立以狀態為基礎的安全性內容權杖 (SCT) (根據預設會停用建立作業)。</span><span class="sxs-lookup"><span data-stu-id="649a3-114">A state-based security context token (SCT) is created (by default, creation is disabled).</span></span>  
   
- 您只能透過自訂繫結來建立以狀態為基礎的 SCT \([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [HOW TO：為安全工作階段建立安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。\) 在程式碼中，您可以使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 方法來建立安全性繫結項目 \(可能是 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=fullName> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=fullName>\)，並將 `requireCancellation` 參數設為 `false`，藉此啟用權杖。 此參數會參考 SCT 的快取。 將值設為 `false` 會啟用以狀態為基礎的 SCT 功能。  
+ <span data-ttu-id="649a3-115">您只能透過自訂繫結來建立以狀態為基礎的 SCT (</span><span class="sxs-lookup"><span data-stu-id="649a3-115">The state-based SCT can only be created using a custom binding.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="649a3-116">[How to： 建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在程式碼中，您可以使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 方法來建立安全性繫結項目 (可能是 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)，並將 `requireCancellation` 參數設為 `false`，藉此啟用權杖。</span><span class="sxs-lookup"><span data-stu-id="649a3-116"> [How to: Create a Security Context Token for a Secure Session](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) In code, the token is enabled by creating a security binding element (either <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> or <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) using the <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> or the <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> method and setting the `requireCancellation` parameter to `false`.</span></span> <span data-ttu-id="649a3-117">此參數會參考 SCT 的快取。</span><span class="sxs-lookup"><span data-stu-id="649a3-117">The parameter refers to the caching of the SCT.</span></span> <span data-ttu-id="649a3-118">將值設為 `false` 會啟用以狀態為基礎的 SCT 功能。</span><span class="sxs-lookup"><span data-stu-id="649a3-118">Setting the value to `false` enables the state-based SCT feature.</span></span>  
   
- 另外，您可以在組態中建立 \<`customBinding`\> 並新增 \<`security`\> 項目，然後將 `authenticationMode` 屬性設為 SecureConversation 並將 `requireSecurityContextCancellation` 屬性設為 `true`，藉此啟用權杖。  
-  
-> [!NOTE]
->  執行作業之前有一些特定需求： 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 將建立會變成 Windows 識別的繫結項目，但是不會建立 SCT。 因此，您可以將其與 `Required` 上的 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 選項搭配使用。  
-  
-### 可能產生的 ASP.NET 衝突  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 都可以啟用或停用模擬。 當 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 組態設定之間可能會有衝突。 一旦發生衝突，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 設定將取得優先權，除非 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 屬性已設為 <xref:System.ServiceModel.ImpersonationOption> 的情況下，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬設定才會取得優先權。  
-  
-### 組件載入可能會在模擬狀態下失敗  
- 如果模擬的內容沒有載入組件的存取權，而且同時也是 Common Language Runtime \(CLR\) 第一次嘗試載入該 AppDomain 的組件，則 <xref:System.AppDomain> 會快取失敗結果。 即使還原模擬後，後續的組件載入嘗試一樣會失敗，而且即使還原後的內容具有載入組件的存取權也一樣。 這是因為 CLR 並未在使用者內容變更之後重新嘗試載入。 您必須重新啟動應用程式定義域，從失敗中進行還原。  
+ <span data-ttu-id="649a3-119">或者，在組態中，藉此啟用權杖建立 <`customBinding`>，然後再新增 <`security`> 項目，並設定`authenticationMode`屬性設為 SecureConversation 和`requireSecurityContextCancellation`屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="649a3-119">Alternatively, in configuration, the token is enabled by creating a <`customBinding`>, then adding a <`security`> element, and setting the `authenticationMode` attribute to SecureConversation and the `requireSecurityContextCancellation` attribute to `true`.</span></span>  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Security.WindowsClientCredential> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>屬性預設值為 <xref:System.Security.Principal.TokenImpersonationLevel>。 在大多數情況下，識別層級的模擬內容沒有載入任何其他組件的權限。 這是預設值，因此您應該要瞭解這個常見的情況。 當模擬的處理序沒有 `SeImpersonate` 權限時，一樣會發生識別層級的模擬情況。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+>  <span data-ttu-id="649a3-120">執行作業之前有一些特定需求：</span><span class="sxs-lookup"><span data-stu-id="649a3-120">The preceding requirements are specific.</span></span> <span data-ttu-id="649a3-121">例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 將建立會變成 Windows 識別的繫結項目，但是不會建立 SCT。</span><span class="sxs-lookup"><span data-stu-id="649a3-121">For example, the <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> creates a binding element that results in a Windows identity, but does not establish an SCT.</span></span> <span data-ttu-id="649a3-122">因此，您可以將其與 `Required` 上的 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 選項搭配使用。</span><span class="sxs-lookup"><span data-stu-id="649a3-122">Therefore, you can use it with the `Required` option on [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  
   
-### 委派需要認證交涉  
- 若要將 Kerberos 驗證通訊協定與委派搭配使用，您必須實作具有認證交涉的 Kerberos 通訊協定 \(有時也稱做「多線」\(Multi\-leg\) 或「多步驟」\(Multi\-step\) Kerberos\)。 如果您實作不具有認證交涉的 Kerberos 驗證 \(有時也稱做「單次」\(One\-shot\) 或「單支線」\(Single\-leg\) Kerberos\)，則會擲回例外狀況。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何實作認證交涉的詳細資訊，請參閱[偵錯 Windows 驗證錯誤](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。  
+### <a name="possible-aspnet-conflict"></a><span data-ttu-id="649a3-123">可能產生的 ASP.NET 衝突</span><span class="sxs-lookup"><span data-stu-id="649a3-123">Possible ASP.NET Conflict</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="649a3-124"> 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 都可以啟用或停用模擬。</span><span class="sxs-lookup"><span data-stu-id="649a3-124"> and [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] can both enable or disable impersonation.</span></span> <span data-ttu-id="649a3-125">當 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 組態設定之間可能會有衝突。</span><span class="sxs-lookup"><span data-stu-id="649a3-125">When [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hosts an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, a conflict may exist between the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] configuration settings.</span></span> <span data-ttu-id="649a3-126">一旦發生衝突，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 設定將取得優先權，除非 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 屬性已設為 <xref:System.ServiceModel.ImpersonationOption.NotAllowed> 的情況下，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬設定才會取得優先權。</span><span class="sxs-lookup"><span data-stu-id="649a3-126">In case of conflict, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] setting takes precedence, unless the <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> property is set to <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, in which case the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] impersonation setting takes precedence.</span></span>  
   
-## 加密  
+### <a name="assembly-loads-may-fail-under-impersonation"></a><span data-ttu-id="649a3-127">組件載入可能會在模擬狀態下失敗</span><span class="sxs-lookup"><span data-stu-id="649a3-127">Assembly Loads May Fail Under Impersonation</span></span>  
+ <span data-ttu-id="649a3-128">如果模擬的內容沒有載入組件的存取權，而且同時也是 Common Language Runtime (CLR) 第一次嘗試載入該 AppDomain 的組件，則 <xref:System.AppDomain> 會快取失敗結果。</span><span class="sxs-lookup"><span data-stu-id="649a3-128">If the impersonated context does not have access rights to load an assembly and if it is the first time the common language runtime (CLR) is attempting to load the assembly for that AppDomain, the <xref:System.AppDomain> caches the failure.</span></span> <span data-ttu-id="649a3-129">即使還原模擬後，後續的組件載入嘗試一樣會失敗，而且即使還原後的內容具有載入組件的存取權也一樣。</span><span class="sxs-lookup"><span data-stu-id="649a3-129">Subsequent attempts to load that assembly (or assemblies) fail, even after reverting the impersonation, and even if the reverted context has access rights to load the assembly.</span></span> <span data-ttu-id="649a3-130">這是因為 CLR 並未在使用者內容變更之後重新嘗試載入。</span><span class="sxs-lookup"><span data-stu-id="649a3-130">This is because the CLR does not re-attempt the load after the user context is changed.</span></span> <span data-ttu-id="649a3-131">您必須重新啟動應用程式定義域，從失敗中進行還原。</span><span class="sxs-lookup"><span data-stu-id="649a3-131">You must restart the application domain to recover from the failure.</span></span>  
   
-### SHA\-256 僅支援對應金鑰用途  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援各種不同的加密與簽章摘要建立演算法 \(您可以透過系統提供之繫結中的演算法套件來指定此演算法\)。 為了提升安全性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援使用安全雜湊演算法 \(SHA\) 2 的演算法 \(尤其是 SHA\-256\) 來建立簽章摘要雜湊。 此版本僅針對對稱金鑰用途 \(例如 Kerberos 金鑰\) 支援使用 SHA\-256，而且並未使用 X.509 憑證來簽署訊息。 由於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 目前尚無法支援 RSA\-SHA256，所以 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 無法使用 SHA\-256 雜湊來支援 RSA 簽章 \(用於 X.509 憑證\)。  
+> [!NOTE]
+>  <span data-ttu-id="649a3-132"><xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential><xref:System.Security.Principal.TokenImpersonationLevel.Identification>屬性預設值為 。</span><span class="sxs-lookup"><span data-stu-id="649a3-132">The default value for the <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> property of the <xref:System.ServiceModel.Security.WindowsClientCredential> class is <xref:System.Security.Principal.TokenImpersonationLevel.Identification>.</span></span> <span data-ttu-id="649a3-133">在大多數情況下，識別層級的模擬內容沒有載入任何其他組件的權限。</span><span class="sxs-lookup"><span data-stu-id="649a3-133">In most cases, an identification-level impersonation context has no rights to load any additional assemblies.</span></span> <span data-ttu-id="649a3-134">這是預設值，因此您應該要瞭解這個常見的情況。</span><span class="sxs-lookup"><span data-stu-id="649a3-134">This is the default value, so this is a very common condition to be aware of.</span></span> <span data-ttu-id="649a3-135">當模擬的處理序沒有 `SeImpersonate` 權限時，一樣會發生識別層級的模擬情況。</span><span class="sxs-lookup"><span data-stu-id="649a3-135">Identification-level impersonation also occurs when the impersonating process does not have the `SeImpersonate` privilege.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="649a3-136">[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="649a3-136"> [Delegation and Impersonation](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span></span>  
   
-### 不支援與 FIPS 相容的 SHA\-256 雜湊  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援符合 SHA\-256 FIPS 標準的雜湊，因此在需要用到符合 FIPS 之標準演算法的系統上，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援使用 SHA\-256 的演算法套件。  
+### <a name="delegation-requires-credential-negotiation"></a><span data-ttu-id="649a3-137">委派需要認證交涉</span><span class="sxs-lookup"><span data-stu-id="649a3-137">Delegation Requires Credential Negotiation</span></span>  
+ <span data-ttu-id="649a3-138">若要將 Kerberos 驗證通訊協定與委派搭配使用，您必須實作具有認證交涉的 Kerberos 通訊協定 (有時也稱做「多線」(Multi-leg) 或「多步驟」(Multi-step) Kerberos)。</span><span class="sxs-lookup"><span data-stu-id="649a3-138">To use the Kerberos authentication protocol with delegation, you must implement the Kerberos protocol with credential negotiation (sometimes called multi-leg or multi-step Kerberos).</span></span> <span data-ttu-id="649a3-139">如果您實作不具有認證交涉的 Kerberos 驗證 (有時也稱做「單次」(One-shot) 或「單支線」(Single-leg) Kerberos)，則會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="649a3-139">If you implement Kerberos authentication without credential negotiation (sometimes called one-shot or single-leg Kerberos), an exception is thrown.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="649a3-140">瞭解如何實作認證交涉，請參閱[偵錯 Windows 驗證錯誤](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。</span><span class="sxs-lookup"><span data-stu-id="649a3-140"> how to implement credential negotiation, see [Debugging Windows Authentication Errors](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).</span></span>  
   
-### 如果編輯登錄的話，與 FIPS 相容的演算法可能會失敗  
- 您可以透過 \[本機安全性設定\] 之 Microsoft Management Console \(MMC\) 嵌入式管理單元，啟用與停用與聯邦資訊處理標準 \(FIPS\) 相容的演算法。 您也可以存取登錄中的設定。 然而，請注意 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援使用登錄來重設設定。 如果將值設為 1 或 0 以外的任意值，則 CLR 與作業系統之間就會產生不一致的結果。  
+## <a name="cryptography"></a><span data-ttu-id="649a3-141">密碼編譯</span><span class="sxs-lookup"><span data-stu-id="649a3-141">Cryptography</span></span>  
   
-### 與 FIPS 相容的 AES 加密限制  
- 與 FIPS 相容的 AES 加密在識別層級模擬底下的雙工回呼中無法發揮作用。  
+### <a name="sha-256-supported-only-for-symmetric-key-usages"></a><span data-ttu-id="649a3-142">SHA-256 僅支援對應金鑰用途</span><span class="sxs-lookup"><span data-stu-id="649a3-142">SHA-256 Supported Only for Symmetric Key Usages</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="649a3-143"> 支援各種不同的加密與簽章摘要建立演算法 (您可以透過系統提供之繫結中的演算法套件來指定此演算法)。</span><span class="sxs-lookup"><span data-stu-id="649a3-143"> supports a variety of encryption and signature digest creation algorithms that you can specify using the algorithm suite in the system-provided bindings.</span></span> <span data-ttu-id="649a3-144">為了提升安全性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援使用安全雜湊演算法 (SHA) 2 的演算法 (尤其是 SHA-256) 來建立簽章摘要雜湊。</span><span class="sxs-lookup"><span data-stu-id="649a3-144">For improved security, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports Secure Hash Algorithm (SHA) 2 algorithms, specifically SHA-256, for creating signature digest hashes.</span></span> <span data-ttu-id="649a3-145">此版本僅針對對稱金鑰用途 (例如 Kerberos 金鑰) 支援使用 SHA-256，而且並未使用 X.509 憑證來簽署訊息。</span><span class="sxs-lookup"><span data-stu-id="649a3-145">This release supports SHA-256 only for symmetric key usages, such as Kerberos keys, and where an X.509 certificate is not used to sign the message.</span></span> <span data-ttu-id="649a3-146">由於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 目前尚無法支援 RSA-SHA256，所以 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 無法使用 SHA-256 雜湊來支援 RSA 簽章 (用於 X.509 憑證)。</span><span class="sxs-lookup"><span data-stu-id="649a3-146">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not support RSA signatures (used in X.509 certificates) using SHA-256 hash due to the current lack of support for RSA-SHA256 in the [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].</span></span>  
   
-### Windows Server 2008 上的 CNG\/KSP 憑證  
- *Cryptography API: Next Generation \(CNG\)* 會長期取代 CryptoAPI。 此 API 可用於 [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 Unmanaged 程式碼。  
+### <a name="fips-compliant-sha-256-hashes-not-supported"></a><span data-ttu-id="649a3-147">不支援與 FIPS 相容的 SHA-256 雜湊</span><span class="sxs-lookup"><span data-stu-id="649a3-147">FIPS-Compliant SHA-256 Hashes not Supported</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="649a3-148"> 不支援符合 SHA-256 FIPS 標準的雜湊，因此在需要用到符合 FIPS 之標準演算法的系統上，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援使用 SHA-256 的演算法套件。</span><span class="sxs-lookup"><span data-stu-id="649a3-148"> does not support SHA-256 FIPS-compliant hashes, so algorithm suites that use SHA-256 are not supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] on systems where use of FIPS compliant algorithms is required.</span></span>  
   
- 在舊版平台 \([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]\) 上，.NET Framework 2.0 無法辨識這個通訊協定，反而會使用舊版 *CryptoApi* 來處理 CNG\/KSP 憑證。 在 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，.NET Framework 3.5 不支援這些憑證，使用時會造成例外狀況。  
+### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a><span data-ttu-id="649a3-149">如果編輯登錄的話，與 FIPS 相容的演算法可能會失敗</span><span class="sxs-lookup"><span data-stu-id="649a3-149">FIPS-Compliant Algorithms May Fail if Registry Is Edited</span></span>  
+ <span data-ttu-id="649a3-150">您可以透過 [本機安全性設定] 之 Microsoft Management Console (MMC) 嵌入式管理單元，啟用與停用與聯邦資訊處理標準 (FIPS) 相容的演算法。</span><span class="sxs-lookup"><span data-stu-id="649a3-150">You can enable and disable Federal Information Processing Standards (FIPS)-compliant algorithms by using the Local Security Settings Microsoft Management Console (MMC) snap-in.</span></span> <span data-ttu-id="649a3-151">您也可以存取登錄中的設定。</span><span class="sxs-lookup"><span data-stu-id="649a3-151">You can also access the setting in the registry.</span></span> <span data-ttu-id="649a3-152">然而，請注意 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援使用登錄來重設設定。</span><span class="sxs-lookup"><span data-stu-id="649a3-152">Note, however, that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not support using the registry to reset the setting.</span></span> <span data-ttu-id="649a3-153">如果將值設為 1 或 0 以外的任意值，則 CLR 與作業系統之間就會產生不一致的結果。</span><span class="sxs-lookup"><span data-stu-id="649a3-153">If the value is set to anything other than 1 or 0, inconsistent results can occur between the CLR and the operating system.</span></span>  
   
- 有兩種可能的方式可以判斷憑證是否使用 KSP：  
+### <a name="fips-compliant-aes-encryption-limitation"></a><span data-ttu-id="649a3-154">與 FIPS 相容的 AES 加密限制</span><span class="sxs-lookup"><span data-stu-id="649a3-154">FIPS-Compliant AES Encryption Limitation</span></span>  
+ <span data-ttu-id="649a3-155">與 FIPS 相容的 AES 加密在識別層級模擬底下的雙工回呼中無法發揮作用。</span><span class="sxs-lookup"><span data-stu-id="649a3-155">FIPS compliant AES encryption does not work in duplex callbacks under identification level impersonation.</span></span>  
   
--   對 `p/invoke` 執行 `CertGetCertificateContextProperty` 後，檢查所傳回 `dwProvType` 的 `CertGetCertificateContextProperty`。  
+### <a name="cngksp-certificates"></a><span data-ttu-id="649a3-156">CNG/KSP 憑證</span><span class="sxs-lookup"><span data-stu-id="649a3-156">CNG/KSP Certificates</span></span>  
+ <span data-ttu-id="649a3-157">*密碼編譯 API: Next Generation (CNG)*會長期取代 cryptoapi。</span><span class="sxs-lookup"><span data-stu-id="649a3-157">*Cryptography API: Next Generation (CNG)* is the long-term replacement for the CryptoAPI.</span></span> <span data-ttu-id="649a3-158">這個 API 已可在 unmanaged 程式碼上[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更新版本的 Windows 版本。</span><span class="sxs-lookup"><span data-stu-id="649a3-158">This API is available in unmanaged code on [!INCLUDE[wv](../../../../includes/wv-md.md)],  [!INCLUDE[lserver](../../../../includes/lserver-md.md)] and later Windows versions.</span></span>  
   
--   從命令列使用 `certutil` 命令來查詢憑證。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [疑難排解憑證的 Certutil 工作](http://go.microsoft.com/fwlink/?LinkId=120056)。  
+ <span data-ttu-id="649a3-159">.NET framework 4.6.1 和更早版本不支援這些憑證因為它們使用舊版的 CryptoAPI 來處理 CNG/KSP 憑證。</span><span class="sxs-lookup"><span data-stu-id="649a3-159">.NET Framework 4.6.1 and earlier versions do not support these certificates because they use the legacy CryptoAPI to handle CNG/KSP certificates.</span></span> <span data-ttu-id="649a3-160">使用這些憑證與.NET Framework 4.6.1 和更早版本會造成例外狀況。</span><span class="sxs-lookup"><span data-stu-id="649a3-160">The use of these certificates with   .NET Framework 4.6.1 and earlier versions will cause an exception.</span></span>  
   
-## 如果需要使用 ASP.NET 模擬與 ASP.NET 相容性的話，訊息安全性就會失敗  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援系列設定組合，因為這些組合可能會讓用戶端驗證無法進行：  
+ <span data-ttu-id="649a3-161">有兩種可能的方式可以判斷憑證是否使用 KSP：</span><span class="sxs-lookup"><span data-stu-id="649a3-161">There are two possible ways to tell if a certificate uses KSP:</span></span>  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬已啟用。 在 Web.config 檔案中將 \<`identity`\> 項目的 `impersonate` 屬性設為 `true`，即可完成此作業。  
+-   <span data-ttu-id="649a3-162">對 `p/invoke` 執行 `CertGetCertificateContextProperty` 後，檢查所傳回 `dwProvType` 的 `CertGetCertificateContextProperty`。</span><span class="sxs-lookup"><span data-stu-id="649a3-162">Do a `p/invoke` of `CertGetCertificateContextProperty`, and inspect `dwProvType` on the returned `CertGetCertificateContextProperty`.</span></span>  
   
--   將 [\<serviceHostingEnvironment\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 的 `aspNetCompatibilityEnabled` 屬性設為 `true`，便會啟用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式。  
+-   <span data-ttu-id="649a3-163">使用`certutil`命令從命令列來查詢憑證。</span><span class="sxs-lookup"><span data-stu-id="649a3-163">Use the  `certutil` command from the command line for querying certificates.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="649a3-164">[疑難排解憑證的 Certutil 工作](http://go.microsoft.com/fwlink/?LinkId=120056)。</span><span class="sxs-lookup"><span data-stu-id="649a3-164"> [Certutil tasks for troubleshooting certificates](http://go.microsoft.com/fwlink/?LinkId=120056).</span></span>  
   
--   已使用訊息模式安全性。  
+## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a><span data-ttu-id="649a3-165">如果需要使用 ASP.NET 模擬與 ASP.NET 相容性的話，訊息安全性就會失敗</span><span class="sxs-lookup"><span data-stu-id="649a3-165">Message Security Fails if Using ASP.NET Impersonation and ASP.NET Compatibility Is Required</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="649a3-166"> 並不支援系列設定組合，因為這些組合可能會讓用戶端驗證無法進行：</span><span class="sxs-lookup"><span data-stu-id="649a3-166"> does not support the following combination of settings because they can prevent client authentication from occurring:</span></span>  
   
- 解決辦法就是關閉 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式。 或者，如果還需要 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式，則停用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬功能並改用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的模擬功能。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]<span data-ttu-id="649a3-167"> 模擬已啟用。</span><span class="sxs-lookup"><span data-stu-id="649a3-167"> Impersonation is enabled.</span></span> <span data-ttu-id="649a3-168">這是 Web.config 檔案中設定`impersonate`屬性 <`identity`> 項目`true`。</span><span class="sxs-lookup"><span data-stu-id="649a3-168">This is done in the Web.config file by setting the `impersonate` attribute of the <`identity`> element to `true`.</span></span>  
   
-## IPv6 常值位址失敗  
- 安全性要求會失敗的情況為：當用戶端與服務位於同一部電腦，以及服務使用 IPv6 常值位址時。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]<span data-ttu-id="649a3-169">藉由設定啟用相容性模式`aspNetCompatibilityEnabled`屬性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)至`true`。</span><span class="sxs-lookup"><span data-stu-id="649a3-169"> compatibility mode is enabled by setting the `aspNetCompatibilityEnabled` attribute of the [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) to `true`.</span></span>  
   
- 如果服務與用戶端位於不同的電腦上，則 IPv6 常值位址就能正常運作。  
+-   <span data-ttu-id="649a3-170">已使用訊息模式安全性。</span><span class="sxs-lookup"><span data-stu-id="649a3-170">Message mode security is used.</span></span>  
   
-## WSDL 擷取聯合信任時失敗  
- 針對聯合信任鏈結中的每個節點，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 都只需要一份 WSDL 文件。 指定端點時，請小心不要設定迴圈。 一個可能發生迴圈的方式是，使用 WSDL 來下載同一份 WSDL 文件中有兩個以上連結的聯合信任鏈結。 會產生這個問題的常見案例是，Security Token Server 和聯合服務包含在相同的 ServiceHost 中。  
+ <span data-ttu-id="649a3-171">解決辦法就是關閉 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式。</span><span class="sxs-lookup"><span data-stu-id="649a3-171">The work-around is to turn off the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] compatibility mode.</span></span> <span data-ttu-id="649a3-172">或者，如果還需要 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式，則停用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬功能並改用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的模擬功能。</span><span class="sxs-lookup"><span data-stu-id="649a3-172">Or, if the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] compatibility mode is required, disable the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] impersonation feature and use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-provided impersonation instead.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="649a3-173">[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="649a3-173"> [Delegation and Impersonation](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span></span>  
   
- 舉例來說，當服務具有下列三個端點位址時，就會發生這種狀況：  
+## <a name="ipv6-literal-address-failure"></a><span data-ttu-id="649a3-174">IPv6 常值位址失敗</span><span class="sxs-lookup"><span data-stu-id="649a3-174">IPv6 Literal Address Failure</span></span>  
+ <span data-ttu-id="649a3-175">安全性要求會失敗的情況為：當用戶端與服務位於同一部電腦，以及服務使用 IPv6 常值位址時。</span><span class="sxs-lookup"><span data-stu-id="649a3-175">Security requests fail when the client and service are on the same machine, and IPv6 literal addresses are used for the service.</span></span>  
   
--   http:\/\/localhost\/CalculatorService\/service \(服務\)  
+ <span data-ttu-id="649a3-176">如果服務與用戶端位於不同的電腦上，則 IPv6 常值位址就能正常運作。</span><span class="sxs-lookup"><span data-stu-id="649a3-176">Literal IPv6 addresses work if the service and client are on different machines.</span></span>  
   
--   http:\/\/localhost\/CalculatorService\/issue\_ticket \(STS\)  
+## <a name="wsdl-retrieval-failures-with-federated-trust"></a><span data-ttu-id="649a3-177">WSDL 擷取聯合信任時失敗</span><span class="sxs-lookup"><span data-stu-id="649a3-177">WSDL Retrieval Failures with Federated Trust</span></span>  
+ <span data-ttu-id="649a3-178">針對聯合信任鏈結中的每個節點，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 都只需要一份 WSDL 文件。</span><span class="sxs-lookup"><span data-stu-id="649a3-178">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requires exactly one WSDL document for each node in the federated trust chain.</span></span> <span data-ttu-id="649a3-179">指定端點時，請小心不要設定迴圈。</span><span class="sxs-lookup"><span data-stu-id="649a3-179">Be careful not to set up a loop when specifying endpoints.</span></span> <span data-ttu-id="649a3-180">一個可能發生迴圈的方式是，使用 WSDL 來下載同一份 WSDL 文件中有兩個以上連結的聯合信任鏈結。</span><span class="sxs-lookup"><span data-stu-id="649a3-180">One way in which loops can arise is using a WSDL download of federated trust chains with two or more links in the same WSDL document.</span></span> <span data-ttu-id="649a3-181">會產生這個問題的常見案例是，Security Token Server 和聯合服務包含在相同的 ServiceHost 中。</span><span class="sxs-lookup"><span data-stu-id="649a3-181">A common scenario that can produce this problem is a federated service where the Security Token Server and the service are contained inside the same ServiceHost.</span></span>  
   
--   http:\/\/localhost\/CalculatorService\/mex \(中繼資料端點\)  
+ <span data-ttu-id="649a3-182">舉例來說，當服務具有下列三個端點位址時，就會發生這種狀況：</span><span class="sxs-lookup"><span data-stu-id="649a3-182">An example of this situation is a service with the following three endpoint addresses:</span></span>  
   
- 這會擲回例外狀況。  
+-   <span data-ttu-id="649a3-183">http://localhost/CalculatorService/service (服務)</span><span class="sxs-lookup"><span data-stu-id="649a3-183">http://localhost/CalculatorService/service (the service)</span></span>  
   
- 您可以藉由將 `issue_ticket` 端點放在其他位置，來解決這個狀況。  
+-   <span data-ttu-id="649a3-184">http://localhost/CalculatorService/issue_ticket (STS)</span><span class="sxs-lookup"><span data-stu-id="649a3-184">http://localhost/CalculatorService/issue_ticket (the STS)</span></span>  
   
-## WSDL Import 屬性可能會遺失  
- WCF 在執行 WSDL 匯入時，會遺失 `<wst:Claims>` 範本中 `RST` 項目的屬性。 如果您是在 `<Claims>` 或 `WSFederationHttpBinding.Security.Message.TokenRequestParameters` 中直接指定 `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters`，而不是直接使用宣告類型集合，在 WSDL 匯入期間就會發生這個狀況。  因為匯入作業會遺失屬性，繫結無法透過 WSDL 適當往返，也因此繫結在用戶端是不正確的。  
+-   <span data-ttu-id="649a3-185">http://localhost/CalculatorService/mex (中繼資料端點)</span><span class="sxs-lookup"><span data-stu-id="649a3-185">http://localhost/CalculatorService/mex (the metadata endpoint)</span></span>  
   
- 解決方式是匯入之後直接在用戶端修改繫結。  
+ <span data-ttu-id="649a3-186">這會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="649a3-186">This throws an exception.</span></span>  
   
-## 請參閱  
- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)   
- [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)   
- [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)   
- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)   
- [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)   
- [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ <span data-ttu-id="649a3-187">您可以藉由將 `issue_ticket` 端點放在其他位置，來解決這個狀況。</span><span class="sxs-lookup"><span data-stu-id="649a3-187">You can make this scenario work by putting the `issue_ticket` endpoint elsewhere.</span></span>  
+  
+## <a name="wsdl-import-attributes-can-be-lost"></a><span data-ttu-id="649a3-188">WSDL Import 屬性可能會遺失</span><span class="sxs-lookup"><span data-stu-id="649a3-188">WSDL Import Attributes can be Lost</span></span>  
+ <span data-ttu-id="649a3-189">WCF 在執行 WSDL 匯入時，會遺失 `<wst:Claims>` 範本中 `RST` 項目的屬性。</span><span class="sxs-lookup"><span data-stu-id="649a3-189">WCF loses track of the attributes on a `<wst:Claims>` element in an `RST` template when doing a WSDL import.</span></span> <span data-ttu-id="649a3-190">如果您是在 `<Claims>` 或 `WSFederationHttpBinding.Security.Message.TokenRequestParameters` 中直接指定 `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters`，而不是直接使用宣告類型集合，在 WSDL 匯入期間就會發生這個狀況。</span><span class="sxs-lookup"><span data-stu-id="649a3-190">This happens during a WSDL import if you specify `<Claims>` directly in `WSFederationHttpBinding.Security.Message.TokenRequestParameters` or `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` instead of using the claim type collections directly.</span></span>  <span data-ttu-id="649a3-191">因為匯入作業會遺失屬性，繫結無法透過 WSDL 適當往返，也因此繫結在用戶端是不正確的。</span><span class="sxs-lookup"><span data-stu-id="649a3-191">Since the import loses the attributes, the binding does not round trip properly through WSDL and hence is incorrect on the client side.</span></span>  
+  
+ <span data-ttu-id="649a3-192">解決方式是匯入之後直接在用戶端修改繫結。</span><span class="sxs-lookup"><span data-stu-id="649a3-192">The fix is to modify the binding directly on the client after doing the import.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="649a3-193">另請參閱</span><span class="sxs-lookup"><span data-stu-id="649a3-193">See Also</span></span>  
+ [<span data-ttu-id="649a3-194">安全性考量</span><span class="sxs-lookup"><span data-stu-id="649a3-194">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [<span data-ttu-id="649a3-195">資訊洩漏</span><span class="sxs-lookup"><span data-stu-id="649a3-195">Information Disclosure</span></span>](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [<span data-ttu-id="649a3-196">提高權限</span><span class="sxs-lookup"><span data-stu-id="649a3-196">Elevation of Privilege</span></span>](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [<span data-ttu-id="649a3-197">阻斷服務</span><span class="sxs-lookup"><span data-stu-id="649a3-197">Denial of Service</span></span>](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [<span data-ttu-id="649a3-198">遭到竄改</span><span class="sxs-lookup"><span data-stu-id="649a3-198">Tampering</span></span>](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [<span data-ttu-id="649a3-199">重新執行攻擊</span><span class="sxs-lookup"><span data-stu-id="649a3-199">Replay Attacks</span></span>](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

@@ -1,40 +1,46 @@
 ---
-title: "傳輸安全性概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "傳輸安全性概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: 23
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 8e35634f60ff68a07c199cf6f3893e741b631a08
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 傳輸安全性概觀
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性機制主要取決於所使用的繫結和傳輸。 例如，當使用<xref:System.ServiceModel.WSHttpBinding>類別中，傳輸為 HTTP，而保護此傳輸的主要機制為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系統提供繫結中所使用的主要傳輸安全性機制。  
+# <a name="transport-security-overview"></a><span data-ttu-id="cfcce-102">傳輸安全性概觀</span><span class="sxs-lookup"><span data-stu-id="cfcce-102">Transport Security Overview</span></span>
+<span data-ttu-id="cfcce-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性機制主要取決於所使用的繫結和傳輸。</span><span class="sxs-lookup"><span data-stu-id="cfcce-103">Transport security mechanisms in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] depend on the binding and transport being used.</span></span> <span data-ttu-id="cfcce-104">例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="cfcce-104">For example, when using the <xref:System.ServiceModel.WSHttpBinding> class, the transport is HTTP, and the primary mechanism for securing the transport is Secure Sockets Layer (SSL) over HTTP, commonly called HTTPS.</span></span> <span data-ttu-id="cfcce-105">本主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系統提供繫結中所使用的主要傳輸安全性機制。</span><span class="sxs-lookup"><span data-stu-id="cfcce-105">This topic discusses the major transport security mechanisms used in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] system-provided bindings.</span></span>  
   
 > [!NOTE]
->  SSL 安全性與 .NET Framework 3.5 (含) 以後版本搭配使用時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端會使用其憑證存放區中的中繼憑證以及在 SSL 交涉期間收到的中繼憑證，在服務的憑證上執行憑證鏈結驗證。 .NET Framework 3.0 只會使用安裝在本機憑證存放區中的中繼憑證。  
+>  <span data-ttu-id="cfcce-106">SSL 安全性與 .NET Framework 3.5 (含) 以後版本搭配使用時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端會使用其憑證存放區中的中繼憑證以及在 SSL 交涉期間收到的中繼憑證，在服務的憑證上執行憑證鏈結驗證。</span><span class="sxs-lookup"><span data-stu-id="cfcce-106">When SSL security is used with .NET Framework 3.5 and later an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client uses both the intermediate certificates in its certificate store and the intermediate certificates received during SSL negotiation to perform certificate chain validation on the service's certificate.</span></span> <span data-ttu-id="cfcce-107">.NET Framework 3.0 只會使用安裝在本機憑證存放區中的中繼憑證。</span><span class="sxs-lookup"><span data-stu-id="cfcce-107">.NET Framework 3.0 only uses the intermediate certificates installed in the local certificate store.</span></span>  
   
 > [!WARNING]
->  使用傳輸安全性時， <xref:System.Treading.Thread.CurrentPrincipal%2A>屬性可能會被覆寫。 若要防止發生組這<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A>為 None。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>是可以在服務描述設定的服務行為。  
+>  <span data-ttu-id="cfcce-108">使用傳輸安全性時， <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal`屬性可能會被覆寫。</span><span class="sxs-lookup"><span data-stu-id="cfcce-108">When transport security is used, the <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` property may be overwritten.</span></span> <span data-ttu-id="cfcce-109">若要避免這種情況組<!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> -->`PrincipalPermission`為 None。</span><span class="sxs-lookup"><span data-stu-id="cfcce-109">To prevent this from happening set the <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` to None.</span></span> <span data-ttu-id="cfcce-110"><xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可在服務描述上設定的服務行為。</span><span class="sxs-lookup"><span data-stu-id="cfcce-110"><xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> is a service behavior that can be set on the service description.</span></span>  
   
-## <a name="basichttpbinding"></a>BasicHttpBinding  
- 根據預設， <xref:System.ServiceModel.BasicHttpBinding>類別不提供安全性。 這個繫結是設計用來與未實作安全性的 Web 服務提供者互通。 不過，您可以切換的安全性設定<xref:System.ServiceModel.BasicHttpSecurity.Mode%2A>以外的任何值的屬性<xref:System.ServiceModel.BasicHttpSecurityMode>。 若要啟用傳輸安全性，請將屬性設定為<xref:System.ServiceModel.BasicHttpSecurityMode>。  
+## <a name="basichttpbinding"></a><span data-ttu-id="cfcce-111">BasicHttpBinding</span><span class="sxs-lookup"><span data-stu-id="cfcce-111">BasicHttpBinding</span></span>  
+ <span data-ttu-id="cfcce-112">根據預設，<xref:System.ServiceModel.BasicHttpBinding> 類別不會提供安全性。</span><span class="sxs-lookup"><span data-stu-id="cfcce-112">By default, the <xref:System.ServiceModel.BasicHttpBinding> class does not provide security.</span></span> <span data-ttu-id="cfcce-113">這個繫結是設計用來與未實作安全性的 Web 服務提供者互通。</span><span class="sxs-lookup"><span data-stu-id="cfcce-113">This binding is designed for interoperability with Web service providers that do not implement security.</span></span> <span data-ttu-id="cfcce-114">不過，您可以透過將 <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> 屬性設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外的任何值來啟動安全性。</span><span class="sxs-lookup"><span data-stu-id="cfcce-114">However, you can switch on security by setting the <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> property to any value except <xref:System.ServiceModel.BasicHttpSecurityMode.None>.</span></span> <span data-ttu-id="cfcce-115">若要啟用傳輸安全性，請將此屬性設為 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。</span><span class="sxs-lookup"><span data-stu-id="cfcce-115">To enable transport security, set the property to <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span></span>  
   
-### <a name="interoperation-with-iis"></a>與 IIS 互通  
- <xref:System.ServiceModel.BasicHttpBinding>類別主要是用來與現有的 Web 服務互通，且這些服務有許多裝載網際網路資訊服務 (IIS)。 因此，這個繫結的傳輸安全性是設計成可用來與 IIS 站台進行流暢的互通。 這是藉由將安全性模式設定為<xref:System.ServiceModel.BasicHttpSecurityMode>並接著設定用戶端認證類型。 認證類型值會對應至 IIS 目錄安全性機制。 下列程式碼會示範所設定的模式以及設定為 Windows 的認證類型。 您可以在用戶端和伺服器都位於相同的 Windows 網域時使用這個組態。  
+### <a name="interoperation-with-iis"></a><span data-ttu-id="cfcce-116">與 IIS 互通</span><span class="sxs-lookup"><span data-stu-id="cfcce-116">Interoperation with IIS</span></span>  
+ <span data-ttu-id="cfcce-117"><xref:System.ServiceModel.BasicHttpBinding> 類別主要用於與現有的 Web 服務互通，而這些服務當中有多數是由網際網路資訊服務 (IIS) 所裝載。</span><span class="sxs-lookup"><span data-stu-id="cfcce-117">The <xref:System.ServiceModel.BasicHttpBinding> class is primarily used to interoperate with existing Web services, and many of those services are hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="cfcce-118">因此，這個繫結的傳輸安全性是設計成可用來與 IIS 站台進行流暢的互通。</span><span class="sxs-lookup"><span data-stu-id="cfcce-118">Consequently, the transport security for this binding is designed for seamless interoperation with IIS sites.</span></span> <span data-ttu-id="cfcce-119">將安全性模式設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>，並接著設定用戶端認證類型，便可進行流暢的互通。</span><span class="sxs-lookup"><span data-stu-id="cfcce-119">This is done by setting the security mode to <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> and then setting the client credential type.</span></span> <span data-ttu-id="cfcce-120">認證類型值會對應至 IIS 目錄安全性機制。</span><span class="sxs-lookup"><span data-stu-id="cfcce-120">The credential type values correspond to IIS directory security mechanisms.</span></span> <span data-ttu-id="cfcce-121">下列程式碼會示範所設定的模式以及設定為 Windows 的認證類型。</span><span class="sxs-lookup"><span data-stu-id="cfcce-121">The following code shows the mode being set and the credential type set to Windows.</span></span> <span data-ttu-id="cfcce-122">您可以在用戶端和伺服器都位於相同的 Windows 網域時使用這個組態。</span><span class="sxs-lookup"><span data-stu-id="cfcce-122">You can use this configuration when both client and server are on the same Windows domain.</span></span>  
   
- [!code-csharp[c_ProgrammingSecurity#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#10)]
- <!-- TODO: review snippet reference [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  -->  
+ [!code-csharp[c_ProgrammingSecurity#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#10)] 
+ [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  
   
- 或者，使用下列組態：  
+ <span data-ttu-id="cfcce-123">或者，使用下列組態：</span><span class="sxs-lookup"><span data-stu-id="cfcce-123">Or, in configuration:</span></span>  
   
 ```xml  
 <bindings>  
@@ -48,56 +54,56 @@ caps.handback.revision: 23
 </bindings>  
 ```  
   
- 下列小節將討論其他的用戶端認證類型。  
+ <span data-ttu-id="cfcce-124">下列小節將討論其他的用戶端認證類型。</span><span class="sxs-lookup"><span data-stu-id="cfcce-124">The following sections discuss other client credential types.</span></span>  
   
-#### <a name="basic"></a>基本  
- 這種類型會對應至 IIS 中的基本驗證方法。 在使用此模式時，IIS 伺服器必須透過 Windows 使用者帳戶和適當的 NTFS 檔案系統權限進行設定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)]請參閱[啟用基本驗證及設定領域名稱](http://go.microsoft.com/fwlink/?LinkId=88592)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)]請參閱[IIS 7.0 Beta︰ 設定基本驗證](http://go.microsoft.com/fwlink/?LinkId=88593)。  
+#### <a name="basic"></a><span data-ttu-id="cfcce-125">基本</span><span class="sxs-lookup"><span data-stu-id="cfcce-125">Basic</span></span>  
+ <span data-ttu-id="cfcce-126">這種類型會對應至 IIS 中的基本驗證方法。</span><span class="sxs-lookup"><span data-stu-id="cfcce-126">This corresponds to the Basic authentication method in IIS.</span></span> <span data-ttu-id="cfcce-127">在使用此模式時，IIS 伺服器必須透過 Windows 使用者帳戶和適當的 NTFS 檔案系統權限進行設定。</span><span class="sxs-lookup"><span data-stu-id="cfcce-127">When using this mode, the IIS server must be configured with Windows user accounts and appropriate NTFS file system permissions.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-128">[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[啟用基本驗證及設定領域名稱](http://go.microsoft.com/fwlink/?LinkId=88592)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-128"> [!INCLUDE[iis601](../../../../includes/iis601-md.md)], see [Enabling Basic Authentication and Configuring the Realm Name](http://go.microsoft.com/fwlink/?LinkId=88592).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-129">[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta： 設定基本驗證](http://go.microsoft.com/fwlink/?LinkId=88593)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-129"> [!INCLUDE[iisver](../../../../includes/iisver-md.md)], see [IIS 7.0 Beta: Configure Basic Authentication](http://go.microsoft.com/fwlink/?LinkId=88593).</span></span>  
   
-#### <a name="certificate"></a>憑證  
- IIS 有一個會要求用戶端使用憑證登入的選項。 該功能也能讓 IIS 將用戶端憑證對應至 Windows 帳戶。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)]請參閱[啟用 IIS 6.0 中的用戶端憑證](http://go.microsoft.com/fwlink/?LinkId=88594)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)]請參閱[IIS 7.0 Beta: IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkId=88595)。  
+#### <a name="certificate"></a><span data-ttu-id="cfcce-130">憑證</span><span class="sxs-lookup"><span data-stu-id="cfcce-130">Certificate</span></span>  
+ <span data-ttu-id="cfcce-131">IIS 有一個會要求用戶端使用憑證登入的選項。</span><span class="sxs-lookup"><span data-stu-id="cfcce-131">IIS has an option to require clients to log on with a certificate.</span></span> <span data-ttu-id="cfcce-132">該功能也能讓 IIS 將用戶端憑證對應至 Windows 帳戶。</span><span class="sxs-lookup"><span data-stu-id="cfcce-132">The feature also enables IIS to map a client certificate to a Windows account.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-133">[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[IIS 6.0 中啟用用戶端憑證](http://go.microsoft.com/fwlink/?LinkId=88594)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-133"> [!INCLUDE[iis601](../../../../includes/iis601-md.md)], see [Enabling Client Certificates in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88594).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-134">[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta： 在 IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkId=88595)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-134"> [!INCLUDE[iisver](../../../../includes/iisver-md.md)], see [IIS 7.0 Beta: Configuring Server Certificates in IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).</span></span>  
   
-#### <a name="digest"></a>摘要  
- 摘要式驗證類似於基本驗證，但是它具備以雜湊而非純文字形式來傳送認證的優點。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)]請參閱[IIS 6.0 中的摘要式驗證](http://go.microsoft.com/fwlink/?LinkID=88443)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)]請參閱[IIS 7.0 Beta︰ 設定摘要式驗證](http://go.microsoft.com/fwlink/?LinkId=88596)。  
+#### <a name="digest"></a><span data-ttu-id="cfcce-135">摘要</span><span class="sxs-lookup"><span data-stu-id="cfcce-135">Digest</span></span>  
+ <span data-ttu-id="cfcce-136">摘要式驗證類似於基本驗證，但是它具備以雜湊而非純文字形式來傳送認證的優點。</span><span class="sxs-lookup"><span data-stu-id="cfcce-136">Digest authentication is similar to Basic authentication, but offers the advantage of sending the credentials as a hash, instead of in clear text.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-137">[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[IIS 6.0 中的摘要式驗證](http://go.microsoft.com/fwlink/?LinkID=88443)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-137"> [!INCLUDE[iis601](../../../../includes/iis601-md.md)], see [Digest Authentication in IIS 6.0](http://go.microsoft.com/fwlink/?LinkID=88443).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-138">[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta： 設定摘要式驗證](http://go.microsoft.com/fwlink/?LinkId=88596)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-138"> [!INCLUDE[iisver](../../../../includes/iisver-md.md)], see [IIS 7.0 Beta: Configure Digest Authentication](http://go.microsoft.com/fwlink/?LinkId=88596).</span></span>  
   
-#### <a name="windows"></a>Windows  
- 這個類型會對應至 IIS 中的整合式 Windows 驗證。 當設定為這個值時，該伺服器必須出現在以 Kerberos 通訊協定做為網域控制站的 Windows 網域上。 如果伺服器未存在以 Kerberos 為基礎的網域中，或是如果 Kerberos 系統失敗，您可以使用下一節所介紹的 NT LAN Manager (NTLM) 值。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)]請參閱[IIS 6.0 中的整合式 Windows 驗證](http://go.microsoft.com/fwlink/?LinkId=88597)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)]請參閱[IIS 7.0 Beta: IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkId=88595)。  
+#### <a name="windows"></a><span data-ttu-id="cfcce-139">Windows</span><span class="sxs-lookup"><span data-stu-id="cfcce-139">Windows</span></span>  
+ <span data-ttu-id="cfcce-140">這個類型會對應至 IIS 中的整合式 Windows 驗證。</span><span class="sxs-lookup"><span data-stu-id="cfcce-140">This corresponds to integrated Windows authentication in IIS.</span></span> <span data-ttu-id="cfcce-141">當設定為這個值時，該伺服器必須出現在以 Kerberos 通訊協定做為網域控制站的 Windows 網域上。</span><span class="sxs-lookup"><span data-stu-id="cfcce-141">When set to this value, the server is also expected to exist on a Windows domain that uses the Kerberos protocol as its domain controller.</span></span> <span data-ttu-id="cfcce-142">如果伺服器未存在以 Kerberos 為基礎的網域中，或是如果 Kerberos 系統失敗，您可以使用下一節所介紹的 NT LAN Manager (NTLM) 值。</span><span class="sxs-lookup"><span data-stu-id="cfcce-142">If the server is not on a Kerberos-backed domain, or if the Kerberos system fails, you can use the NT LAN Manager (NTLM) value described in the next section.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-143">[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[IIS 6.0 中的整合式 Windows 驗證](http://go.microsoft.com/fwlink/?LinkId=88597)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-143"> [!INCLUDE[iis601](../../../../includes/iis601-md.md)], see [Integrated Windows Authentication in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-144">[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta： 在 IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkId=88595)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-144"> [!INCLUDE[iisver](../../../../includes/iisver-md.md)], see [IIS 7.0 Beta: Configuring Server Certificates in IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).</span></span>  
   
-#### <a name="ntlm"></a>NTLM  
- 這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定 IIS 中的[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[強制 NTLM 驗證](http://go.microsoft.com/fwlink/?LinkId=88598)。 若是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 驗證會包含 NTLM 驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][IIS 7.0 Beta: IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkID=88595)。  
+#### <a name="ntlm"></a><span data-ttu-id="cfcce-145">NTLM</span><span class="sxs-lookup"><span data-stu-id="cfcce-145">NTLM</span></span>  
+ <span data-ttu-id="cfcce-146">這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。</span><span class="sxs-lookup"><span data-stu-id="cfcce-146">This enables the server to use NTLM for authentication if the Kerberos protocol fails.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-147">設定 IIS 中的[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[強制 NTLM 驗證](http://go.microsoft.com/fwlink/?LinkId=88598)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-147"> configuring IIS in [!INCLUDE[iis601](../../../../includes/iis601-md.md)], see [Forcing NTLM Authentication](http://go.microsoft.com/fwlink/?LinkId=88598).</span></span> <span data-ttu-id="cfcce-148">若是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 驗證會包含 NTLM 驗證。</span><span class="sxs-lookup"><span data-stu-id="cfcce-148">For [!INCLUDE[iisver](../../../../includes/iisver-md.md)], the Windows authentication includes NTLM authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="cfcce-149">[IIS 7.0 Beta： 在 IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkID=88595)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-149"> [IIS 7.0 Beta: Configuring Server Certificates in IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).</span></span>  
   
-## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding>類別主要用來進行交互操作的服務實作 WS-* 規格。 此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。 若要建立使用 SSL 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，請使用 IIS 裝載應用程式。 或者，如果您要建立自我裝載的應用程式，請使用 HttpCfg.exe 工具將 X.509 憑證繫結至電腦上的特定連接埠。 連接埠號碼會指定做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中的端點位址。 當使用傳輸模式時，端點位址必須包含 HTTPS 通訊協定，否則會在執行階段擲回例外狀況。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+## <a name="wshttpbinding"></a><span data-ttu-id="cfcce-150">WsHttpBinding</span><span class="sxs-lookup"><span data-stu-id="cfcce-150">WsHttpBinding</span></span>  
+ <span data-ttu-id="cfcce-151"><xref:System.ServiceModel.WSHttpBinding> 類別主要是用來與實作 WS-* 規格的服務進行交互操作。</span><span class="sxs-lookup"><span data-stu-id="cfcce-151">The <xref:System.ServiceModel.WSHttpBinding> class is designed for interoperation with services that implement WS-* specifications.</span></span> <span data-ttu-id="cfcce-152">此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-152">The transport security for this binding is Secure Sockets Layer (SSL) over HTTP, or HTTPS.</span></span> <span data-ttu-id="cfcce-153">若要建立使用 SSL 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，請使用 IIS 裝載應用程式。</span><span class="sxs-lookup"><span data-stu-id="cfcce-153">To create an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application that uses SSL, use IIS to host the application.</span></span> <span data-ttu-id="cfcce-154">或者，如果您要建立自我裝載的應用程式，請使用 HttpCfg.exe 工具將 X.509 憑證繫結至電腦上的特定連接埠。</span><span class="sxs-lookup"><span data-stu-id="cfcce-154">Alternatively, if you are creating a self-hosted application, use the HttpCfg.exe tool to bind an X.509 certificate to a specific port on a computer.</span></span> <span data-ttu-id="cfcce-155">連接埠號碼會指定做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中的端點位址。</span><span class="sxs-lookup"><span data-stu-id="cfcce-155">The port number is specified as part of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application as an endpoint address.</span></span> <span data-ttu-id="cfcce-156">當使用傳輸模式時，端點位址必須包含 HTTPS 通訊協定，否則會在執行階段擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="cfcce-156">When using transport mode, the endpoint address must include the HTTPS protocol or an exception will be thrown at run time.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="cfcce-157">[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-157"> [HTTP Transport Security](../../../../docs/framework/wcf/feature-details/http-transport-security.md).</span></span>  
   
- 用戶端驗證設定<xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>屬性<xref:System.ServiceModel.HttpTransportSecurity>類別的其中一個<xref:System.ServiceModel.HttpClientCredentialType>列舉值。 列舉值完全相同的用戶端認證類型為<xref:System.ServiceModel.BasicHttpBinding>而且設計成與 IIS 服務進行裝載。  
+ <span data-ttu-id="cfcce-158">若是用戶端驗證，請將 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 類別的 <xref:System.ServiceModel.HttpTransportSecurity> 屬性設定為其中一個 <xref:System.ServiceModel.HttpClientCredentialType> 列舉值。</span><span class="sxs-lookup"><span data-stu-id="cfcce-158">For client authentication, set the <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> property of the <xref:System.ServiceModel.HttpTransportSecurity> class to one of the <xref:System.ServiceModel.HttpClientCredentialType> enumeration values.</span></span> <span data-ttu-id="cfcce-159">這些列舉值會與 <xref:System.ServiceModel.BasicHttpBinding> 的用戶端認證類型完全相同，而且是設計成與 IIS 服務進行裝載。</span><span class="sxs-lookup"><span data-stu-id="cfcce-159">The enumeration values are identical to the client credential types for <xref:System.ServiceModel.BasicHttpBinding> and are designed to be hosted with IIS services.</span></span>  
   
- 下列範例會示範要搭配 Windows 用戶端認證類型使用的繫結。  
+ <span data-ttu-id="cfcce-160">下列範例會示範要搭配 Windows 用戶端認證類型使用的繫結。</span><span class="sxs-lookup"><span data-stu-id="cfcce-160">The following example shows the binding being used with a client credential type of Windows.</span></span>  
   
  [!code-csharp[c_ProgrammingSecurity#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#11)]
  [!code-vb[c_ProgrammingSecurity#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#11)]  
   
-## <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
- 這個繫結只會提供訊息層級安全性，而不提供傳輸層級安全性。  
+## <a name="wsdualhttpbinding"></a><span data-ttu-id="cfcce-161">WSDualHttpBinding</span><span class="sxs-lookup"><span data-stu-id="cfcce-161">WSDualHttpBinding</span></span>  
+ <span data-ttu-id="cfcce-162">這個繫結只會提供訊息層級安全性，而不提供傳輸層級安全性。</span><span class="sxs-lookup"><span data-stu-id="cfcce-162">This binding provides only message-level security, not transport-level security.</span></span>  
   
-## <a name="nettcpbinding"></a>NetTcpBinding  
- <xref:System.ServiceModel.NetTcpBinding>類別會使用 TCP 進行訊息傳輸。 傳輸模式的安全性是由實作透過 TCP 的傳輸層安全性 (TLS) 所提供。 而 TLS 實作則是由作業系統提供。  
+## <a name="nettcpbinding"></a><span data-ttu-id="cfcce-163">NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="cfcce-163">NetTcpBinding</span></span>  
+ <span data-ttu-id="cfcce-164"><xref:System.ServiceModel.NetTcpBinding> 類別會使用 TCP 來進行訊息傳輸。</span><span class="sxs-lookup"><span data-stu-id="cfcce-164">The <xref:System.ServiceModel.NetTcpBinding> class uses TCP for message transport.</span></span> <span data-ttu-id="cfcce-165">傳輸模式的安全性是由實作透過 TCP 的傳輸層安全性 (TLS) 所提供。</span><span class="sxs-lookup"><span data-stu-id="cfcce-165">Security for the transport mode is provided by implementing Transport Layer Security (TLS) over TCP.</span></span> <span data-ttu-id="cfcce-166">而 TLS 實作則是由作業系統提供。</span><span class="sxs-lookup"><span data-stu-id="cfcce-166">The TLS implementation is provided by the operating system.</span></span>  
   
- 您也可以指定用戶端認證類型，藉由設定<xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A>屬性<xref:System.ServiceModel.TcpTransportSecurity>類別的其中一個<xref:System.ServiceModel.TcpClientCredentialType>值，如下列程式碼所示。  
+ <span data-ttu-id="cfcce-167">如下列程式碼所示，您也可以藉由將 <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> 類別的 <xref:System.ServiceModel.TcpTransportSecurity> 屬性設定為其中一個 <xref:System.ServiceModel.TcpClientCredentialType> 值，來指定用戶端的認證類型。</span><span class="sxs-lookup"><span data-stu-id="cfcce-167">You can also specify the client's credential type by setting the <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> property of the <xref:System.ServiceModel.TcpTransportSecurity> class to one of the <xref:System.ServiceModel.TcpClientCredentialType> values, as shown in the following code.</span></span>  
   
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>用戶端  
- 在用戶端，您必須指定憑證使用<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>方法<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>類別。  
+#### <a name="client"></a><span data-ttu-id="cfcce-168">用戶端</span><span class="sxs-lookup"><span data-stu-id="cfcce-168">Client</span></span>  
+ <span data-ttu-id="cfcce-169">若是使用用戶端類型，您必須指定使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 類別之 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法的憑證。</span><span class="sxs-lookup"><span data-stu-id="cfcce-169">On the client, you must specify a certificate using the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method of the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> class.</span></span>  
   
 > [!NOTE]
->  如果是使用 Windows 安全性，就不需要提供憑證。  
+>  <span data-ttu-id="cfcce-170">如果是使用 Windows 安全性，就不需要提供憑證。</span><span class="sxs-lookup"><span data-stu-id="cfcce-170">If you are using Windows security, a certificate is not required.</span></span>  
   
- 下列程式碼範例使用可以提供唯一識別該憑證的憑證指紋。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]憑證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ <span data-ttu-id="cfcce-171">下列程式碼範例使用可以提供唯一識別該憑證的憑證指紋。</span><span class="sxs-lookup"><span data-stu-id="cfcce-171">The following code uses the thumbprint of the certificate, which uniquely identifies it.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-172">憑證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-172"> certificates, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>  
   
  [!code-csharp[c_ProgrammingSecurity#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#13)]
  [!code-vb[c_ProgrammingSecurity#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#13)]  
   
- 或者，在用戶端的組態中指定的憑證使用[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)行為區段中的項目。  
+ <span data-ttu-id="cfcce-173">或者，用戶端組態中指定的憑證使用[ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)行為區段中的項目。</span><span class="sxs-lookup"><span data-stu-id="cfcce-173">Alternatively, specify the certificate in the client's configuration using a [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) element in the behaviors section.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -112,17 +118,17 @@ caps.handback.revision: 23
 </behaviors>    
 ```  
   
-## <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
- <xref:System.ServiceModel.NetNamedPipeBinding>類別已設計成有效的電腦內部通訊; 也就是處理程序執行的相同電腦上，雖然具名管道通道可以建立在相同網路上的兩部電腦之間。 這個繫結只能提供傳輸層級安全性。 當建立使用這個繫結的應用程式時，其端點位址必須包含 "net.pipe" 做為端點位址的通訊協定。  
+## <a name="netnamedpipebinding"></a><span data-ttu-id="cfcce-174">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="cfcce-174">NetNamedPipeBinding</span></span>  
+ <span data-ttu-id="cfcce-175"><xref:System.ServiceModel.NetNamedPipeBinding> 類別已設計成可進行有效率的電腦內部通訊，也就是說，它可以用在執行於同一電腦的處理序，雖然您也可以在同一網路中的兩台電腦之間建立具名管道通道。</span><span class="sxs-lookup"><span data-stu-id="cfcce-175">The <xref:System.ServiceModel.NetNamedPipeBinding> class is designed for efficient intra-machine communication; that is, for processes running on the same computer, although named pipe channels can be created between two computers on the same network.</span></span> <span data-ttu-id="cfcce-176">這個繫結只能提供傳輸層級安全性。</span><span class="sxs-lookup"><span data-stu-id="cfcce-176">This binding provides only transport-level security.</span></span> <span data-ttu-id="cfcce-177">當建立使用這個繫結的應用程式時，其端點位址必須包含 "net.pipe" 做為端點位址的通訊協定。</span><span class="sxs-lookup"><span data-stu-id="cfcce-177">When creating applications using this binding, the endpoint addresses must include "net.pipe" as the protocol of the endpoint address.</span></span>  
   
-## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- 使用傳輸安全性時，此繫結會使用 SSL over HTTP，所謂的 HTTPS 和發行的權杖 (<xref:System.ServiceModel.WSFederationHttpSecurityMode>)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]同盟應用程式，請參閱[聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
+## <a name="wsfederationhttpbinding"></a><span data-ttu-id="cfcce-178">WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="cfcce-178">WSFederationHttpBinding</span></span>  
+ <span data-ttu-id="cfcce-179">使用傳輸安全性時，這個繫結會使用透過 HTTP 的 SSL (即所謂的 HTTPS) 和已發行的權杖 (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-179">When using transport security, this binding uses SSL over HTTP, known as HTTPS with an issued token (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-180">同盟應用程式，請參閱[同盟和發出的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-180"> federation applications, see [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>  
   
-## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- <xref:System.ServiceModel.NetPeerTcpBinding>類別是設計有效使用對等網路功能的通訊的安全傳輸。 從類別和繫結名稱可看出，TCP 是一種通訊協定。 當安全性模式設定為傳輸時，繫結會透過 TCP 實作 TLS。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]「 對等功能，請參閱[對等網路](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
+## <a name="netpeertcpbinding"></a><span data-ttu-id="cfcce-181">NetPeerTcpBinding</span><span class="sxs-lookup"><span data-stu-id="cfcce-181">NetPeerTcpBinding</span></span>  
+ <span data-ttu-id="cfcce-182"><xref:System.ServiceModel.NetPeerTcpBinding> 類別是設計成可使用對等網路功能來進行有效通訊的安全傳輸。</span><span class="sxs-lookup"><span data-stu-id="cfcce-182">The <xref:System.ServiceModel.NetPeerTcpBinding> class is a secure transport that is designed for efficient communication using the peer-to-peer networking feature.</span></span> <span data-ttu-id="cfcce-183">從類別和繫結名稱可看出，TCP 是一種通訊協定。</span><span class="sxs-lookup"><span data-stu-id="cfcce-183">As indicated by the name of the class and binding, TCP is the protocol.</span></span> <span data-ttu-id="cfcce-184">當安全性模式設定為傳輸時，繫結會透過 TCP 實作 TLS。</span><span class="sxs-lookup"><span data-stu-id="cfcce-184">When the security mode is set to Transport, the binding implements TLS over TCP.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cfcce-185">「 對等功能，請參閱[對等網路](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-185"> the peer-to-peer feature, see [Peer-to-Peer Networking](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span></span>  
   
-## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 和 NetMsmqBinding  
- 如需完整討論的傳輸安全性與訊息佇列 （先前稱為 MSMQ），請參閱[安全性來確保訊息使用傳輸安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
+## <a name="msmqintegrationbinding-and-netmsmqbinding"></a><span data-ttu-id="cfcce-186">MsmqIntegrationBinding 和 NetMsmqBinding</span><span class="sxs-lookup"><span data-stu-id="cfcce-186">MsmqIntegrationBinding and NetMsmqBinding</span></span>  
+ <span data-ttu-id="cfcce-187">如需完整討論傳輸的安全性與訊息佇列 （先前稱為 MSMQ），請參閱[保護訊息使用傳輸安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。</span><span class="sxs-lookup"><span data-stu-id="cfcce-187">For a complete discussion of transport security with Message Queuing (previously called MSMQ), see [Securing Messages Using Transport Security](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a><span data-ttu-id="cfcce-188">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cfcce-188">See Also</span></span>  
+ [<span data-ttu-id="cfcce-189">WCF 安全性程式設計</span><span class="sxs-lookup"><span data-stu-id="cfcce-189">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

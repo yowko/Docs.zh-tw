@@ -1,38 +1,42 @@
 ---
-title: "3550 - BufferOutOfOrderMessageNoInstance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3550 - BufferOutOfOrderMessageNoInstance
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1299d294-99b8-430e-98b1-55f5f17002f3
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce8b2cd52523d8a2efc94214479ca3c41d2dec4b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 3550 - BufferOutOfOrderMessageNoInstance
-## 屬性  
+# <a name="3550---bufferoutofordermessagenoinstance"></a><span data-ttu-id="5afd6-102">3550 - BufferOutOfOrderMessageNoInstance</span><span class="sxs-lookup"><span data-stu-id="5afd6-102">3550 - BufferOutOfOrderMessageNoInstance</span></span>
+## <a name="properties"></a><span data-ttu-id="5afd6-103">屬性</span><span class="sxs-lookup"><span data-stu-id="5afd6-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3550|  
-|關鍵字|WFServices|  
-|層級|資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="5afd6-104">ID</span><span class="sxs-lookup"><span data-stu-id="5afd6-104">ID</span></span>|<span data-ttu-id="5afd6-105">3550</span><span class="sxs-lookup"><span data-stu-id="5afd6-105">3550</span></span>|  
+|<span data-ttu-id="5afd6-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="5afd6-106">Keywords</span></span>|<span data-ttu-id="5afd6-107">WFServices</span><span class="sxs-lookup"><span data-stu-id="5afd6-107">WFServices</span></span>|  
+|<span data-ttu-id="5afd6-108">層級</span><span class="sxs-lookup"><span data-stu-id="5afd6-108">Level</span></span>|<span data-ttu-id="5afd6-109">資訊</span><span class="sxs-lookup"><span data-stu-id="5afd6-109">Information</span></span>|  
+|<span data-ttu-id="5afd6-110">通道</span><span class="sxs-lookup"><span data-stu-id="5afd6-110">Channel</span></span>|<span data-ttu-id="5afd6-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="5afd6-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 描述  
- 表示緩衝接收已失敗。  當服務執行個體準備好處理這個特定作業時，就會再次嘗試此作業。  
+## <a name="description"></a><span data-ttu-id="5afd6-112">描述</span><span class="sxs-lookup"><span data-stu-id="5afd6-112">Description</span></span>  
+ <span data-ttu-id="5afd6-113">表示緩衝接收已失敗。</span><span class="sxs-lookup"><span data-stu-id="5afd6-113">Indicates a buffered receive has failed.</span></span> <span data-ttu-id="5afd6-114">當服務執行個體準備好處理這個特定作業時，就會再次嘗試此作業。</span><span class="sxs-lookup"><span data-stu-id="5afd6-114">The operation will be attempted again when the service instance is ready to process this particular operation.</span></span>  
   
-## 訊息  
- 目前無法執行作業 '%1'。  將在服務執行個體準備就緒可以處理這個特定作業時，再次嘗試。  
+## <a name="message"></a><span data-ttu-id="5afd6-115">訊息</span><span class="sxs-lookup"><span data-stu-id="5afd6-115">Message</span></span>  
+ <span data-ttu-id="5afd6-116">目前無法執行作業 '%1'。</span><span class="sxs-lookup"><span data-stu-id="5afd6-116">Operation '%1' cannot be performed at this time.</span></span> <span data-ttu-id="5afd6-117">將在服務執行個體準備就緒可以處理這個特定作業時，再次嘗試。</span><span class="sxs-lookup"><span data-stu-id="5afd6-117">Another attempt will be made when the service instance is ready to process this particular operation.</span></span>  
   
-## 詳細資料  
+## <a name="details"></a><span data-ttu-id="5afd6-118">詳細資料</span><span class="sxs-lookup"><span data-stu-id="5afd6-118">Details</span></span>  
   
-|資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
-|OperationName|xs:string|作業的名稱。|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="5afd6-119">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="5afd6-119">Data Item Name</span></span>|<span data-ttu-id="5afd6-120">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="5afd6-120">Data Item Type</span></span>|<span data-ttu-id="5afd6-121">描述</span><span class="sxs-lookup"><span data-stu-id="5afd6-121">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="5afd6-122">OperationName</span><span class="sxs-lookup"><span data-stu-id="5afd6-122">OperationName</span></span>|<span data-ttu-id="5afd6-123">xs:string</span><span class="sxs-lookup"><span data-stu-id="5afd6-123">xs:string</span></span>|<span data-ttu-id="5afd6-124">作業的名稱。</span><span class="sxs-lookup"><span data-stu-id="5afd6-124">The name of the operation.</span></span>|  
+|<span data-ttu-id="5afd6-125">AppDomain</span><span class="sxs-lookup"><span data-stu-id="5afd6-125">AppDomain</span></span>|<span data-ttu-id="5afd6-126">xs:string</span><span class="sxs-lookup"><span data-stu-id="5afd6-126">xs:string</span></span>|<span data-ttu-id="5afd6-127">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="5afd6-127">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

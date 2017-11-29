@@ -1,46 +1,52 @@
 ---
-title: "如何：使用 AnimationClock 建立屬性的動畫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 屬性, 使用 AnimationClocks"
-  - "AnimationClocks"
+title: "操作說明：使用 AnimationClock 建立屬性的動畫"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- animation [WPF], properties [WPF], with AnimationClocks
+- AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47df7aaad45000bc8c761a9bb9022d37e0f0828c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 AnimationClock 建立屬性的動畫
-本範例顯示如何使用 <xref:System.Windows.Media.Animation.Clock> 物件建立屬性的動畫。  
+# <a name="how-to-animate-a-property-by-using-an-animationclock"></a><span data-ttu-id="e21ad-102">操作說明：使用 AnimationClock 建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="e21ad-102">How to: Animate a Property by Using an AnimationClock</span></span>
+<span data-ttu-id="e21ad-103">這個範例示範如何使用<xref:System.Windows.Media.Animation.Clock>以動畫方式顯示屬性的物件。</span><span class="sxs-lookup"><span data-stu-id="e21ad-103">This example shows how to use <xref:System.Windows.Media.Animation.Clock> objects to animate a property.</span></span>  
   
- 有三種方式可以建立[相依性屬性](GTMT)的動畫：  
+ <span data-ttu-id="e21ad-104">有三種方式可以動畫顯示相依性屬性︰</span><span class="sxs-lookup"><span data-stu-id="e21ad-104">There are three ways to animate a dependency property:</span></span>  
   
--   建立 <xref:System.Windows.Media.Animation.AnimationTimeline>，並使用 <xref:System.Windows.Media.Animation.Storyboard> 讓其與該屬性建立關聯。  
+-   <span data-ttu-id="e21ad-105">建立<xref:System.Windows.Media.Animation.AnimationTimeline>和其關聯屬性使用<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="e21ad-105">Create an <xref:System.Windows.Media.Animation.AnimationTimeline> and associate it with that property by using a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
--   使用物件的 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 方法以套用單一 <xref:System.Windows.Media.Animation.AnimationTimeline> 至目標屬性。  
+-   <span data-ttu-id="e21ad-106">使用物件的<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法，以套用單一<xref:System.Windows.Media.Animation.AnimationTimeline>至目標屬性。</span><span class="sxs-lookup"><span data-stu-id="e21ad-106">Use the object's <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method to apply a single <xref:System.Windows.Media.Animation.AnimationTimeline> to a target property.</span></span>  
   
--   從 <xref:System.Windows.Media.Animation.AnimationTimeline> 建立 <xref:System.Windows.Media.Animation.AnimationClock>，並套用至屬性。  
+-   <span data-ttu-id="e21ad-107">建立<xref:System.Windows.Media.Animation.AnimationClock>從<xref:System.Windows.Media.Animation.AnimationTimeline>並將它套用至屬性。</span><span class="sxs-lookup"><span data-stu-id="e21ad-107">Create an <xref:System.Windows.Media.Animation.AnimationClock> from an <xref:System.Windows.Media.Animation.AnimationTimeline> and apply it to a property.</span></span>  
   
- <xref:System.Windows.Media.Animation.Storyboard> 物件和 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 方法可以讓您建立屬性的動畫，不需直接建立和散發時鐘 \(如需範例，請參閱 [使用腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)和 [不使用腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)\)。時鐘會自動建立和散發。  
+ <span data-ttu-id="e21ad-108"><xref:System.Windows.Media.Animation.Storyboard>物件和<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法可讓您建立屬性動畫沒有直接建立與散發時鐘 (如需範例，請參閱[使用分鏡腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)和[屬性而不建立動畫使用分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md));建立和自動為您散發的時鐘。</span><span class="sxs-lookup"><span data-stu-id="e21ad-108"><xref:System.Windows.Media.Animation.Storyboard> objects and the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method enable you to animate properties without directly creating and distributing clocks (for examples, see [Animate a Property by Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) and [Animate a Property Without Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)); clocks are created and distributed for you automatically.</span></span>  
   
-## 範例  
- 下列範例顯示如何建立 <xref:System.Windows.Media.Animation.AnimationClock> 並將其套用至兩個類似的屬性。  
+## <a name="example"></a><span data-ttu-id="e21ad-109">範例</span><span class="sxs-lookup"><span data-stu-id="e21ad-109">Example</span></span>  
+ <span data-ttu-id="e21ad-110">下列範例示範如何建立<xref:System.Windows.Media.Animation.AnimationClock>並將它套用到兩個類似的屬性。</span><span class="sxs-lookup"><span data-stu-id="e21ad-110">The following example shows how to create an <xref:System.Windows.Media.Animation.AnimationClock> and apply it to two similar properties.</span></span>  
   
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
  [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
- 如需顯示如何在啟動 <xref:System.Windows.Media.Animation.Clock> 後以互動方式控制時鐘的範例，請參閱 [以互動方式控制時鐘](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)。  
+ <span data-ttu-id="e21ad-111">如需範例示範如何以互動方式控制<xref:System.Windows.Media.Animation.Clock>啟動之後，請參閱[以互動方式控制時鐘](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)。</span><span class="sxs-lookup"><span data-stu-id="e21ad-111">For an example showing how to interactively control a <xref:System.Windows.Media.Animation.Clock> after it starts, see [Interactively Control a Clock](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md).</span></span>  
   
-## 請參閱  
- [使用腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)   
- [不使用腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)   
- [建立屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e21ad-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e21ad-112">See Also</span></span>  
+ [<span data-ttu-id="e21ad-113">使用分鏡腳本建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="e21ad-113">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="e21ad-114">不使用分鏡腳本而建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="e21ad-114">Animate a Property Without Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="e21ad-115">屬性動畫技術概觀</span><span class="sxs-lookup"><span data-stu-id="e21ad-115">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

@@ -1,68 +1,71 @@
 ---
-title: "使用模擬搭配傳輸安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用模擬搭配傳輸安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: 12
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用模擬搭配傳輸安全性
-「*模擬*」\(Impersonation\) 是伺服應用程式識別用戶端的能力。對服務而言，驗證存取資源時使用模擬是很常見的。伺服器應用程式使用服務帳戶執行，但是伺服器在接受用戶端連線會模擬用戶端，藉此使用用戶端的認證執行存取檢查。傳輸安全性是一種用於傳遞認證與使用該認證保護通訊安全性的機制。本主題說明如何搭配模擬功能使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用訊息安全性模擬的詳細資訊，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+# <a name="using-impersonation-with-transport-security"></a><span data-ttu-id="abd2a-102">使用模擬搭配傳輸安全性</span><span class="sxs-lookup"><span data-stu-id="abd2a-102">Using Impersonation with Transport Security</span></span>
+<span data-ttu-id="abd2a-103">*模擬*是上的用戶端識別讓伺服器應用程式的能力。</span><span class="sxs-lookup"><span data-stu-id="abd2a-103">*Impersonation* is the ability of a server application to take on the identity of the client.</span></span> <span data-ttu-id="abd2a-104">對服務而言，驗證存取資源時使用模擬是很常見的。</span><span class="sxs-lookup"><span data-stu-id="abd2a-104">It is common for services to use impersonation when validating access to resources.</span></span> <span data-ttu-id="abd2a-105">伺服器應用程式使用服務帳戶執行，但是伺服器在接受用戶端連線會模擬用戶端，藉此使用用戶端的認證執行存取檢查。</span><span class="sxs-lookup"><span data-stu-id="abd2a-105">The server application runs using a service account, but when the server accepts a client connection, it impersonates the client so that access checks are performed using the client's credentials.</span></span> <span data-ttu-id="abd2a-106">傳輸安全性是一種用於傳遞認證與使用該認證保護通訊安全性的機制。</span><span class="sxs-lookup"><span data-stu-id="abd2a-106">Transport security is a mechanism both for passing credentials and securing communication using those credentials.</span></span> <span data-ttu-id="abd2a-107">本主題說明如何搭配模擬功能來使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="abd2a-107">This topic describes using transport security in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] with the impersonation feature.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="abd2a-108">模擬使用訊息安全性，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="abd2a-108"> impersonation using message security, see [Delegation and Impersonation](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span></span>  
   
-## 五個模擬等級  
- 傳輸安全性運用如下表所述的五種模擬等級。  
+## <a name="five-impersonation-levels"></a><span data-ttu-id="abd2a-109">五個模擬等級</span><span class="sxs-lookup"><span data-stu-id="abd2a-109">Five Impersonation Levels</span></span>  
+ <span data-ttu-id="abd2a-110">傳輸安全性運用如下表所述的五種模擬等級。</span><span class="sxs-lookup"><span data-stu-id="abd2a-110">Transport security makes use of five levels of impersonation, as described in the following table.</span></span>  
   
-|模擬等級|描述|  
-|----------|--------|  
-|無|伺服器不嘗試模擬用戶端。|  
-|匿名|伺服器應用程式可以根據用戶端的認證執行存取檢查，但不會接收任何有關用戶端身分識別的資訊。模擬等級只對電腦上的通訊有意義，例如具名管道。使用 `Anonymous` 搭配遠端連線將模擬等級提升至識別。|  
-|識別|伺服器應用程式知道用戶端的身分，而且可以根據用戶端的認證執行存取驗證，但無法模擬用戶端。若權杖提供者未提供不同的模擬等級，則識別是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中搭配 SSPI 認證使用的預設模擬等級。|  
-|模擬|除了執行存取檢查外，伺服器應用程式可以存取做為用戶端的伺服器電腦上的資源。伺服器應用程式無法使用用戶端識別存取遠端電腦上的資源，因為模擬的權杖沒有網路認證。|  
-|委派|除了擁有與 `Impersonate` 相同的功能外，「委派」模擬等級也可以使用用戶端識別讓伺服器應用程式存取遠端電腦上的資訊，並且將識別傳遞到其他應用程式。<br /><br /> **重要**：伺服器網域帳戶必須標示為受信任，以便讓網域控制站上的委派使用這些額外的功能。這個模擬等級無法搭配標示為敏感的用戶端網域帳戶使用。|  
+|<span data-ttu-id="abd2a-111">模擬等級</span><span class="sxs-lookup"><span data-stu-id="abd2a-111">Impersonation level</span></span>|<span data-ttu-id="abd2a-112">描述</span><span class="sxs-lookup"><span data-stu-id="abd2a-112">Description</span></span>|  
+|-------------------------|-----------------|  
+|<span data-ttu-id="abd2a-113">無</span><span class="sxs-lookup"><span data-stu-id="abd2a-113">None</span></span>|<span data-ttu-id="abd2a-114">伺服器不嘗試模擬用戶端。</span><span class="sxs-lookup"><span data-stu-id="abd2a-114">The server application does not attempt to impersonate the client.</span></span>|  
+|<span data-ttu-id="abd2a-115">匿名</span><span class="sxs-lookup"><span data-stu-id="abd2a-115">Anonymous</span></span>|<span data-ttu-id="abd2a-116">伺服器應用程式可以根據用戶端的認證執行存取檢查，但不會接收任何有關用戶端身分識別的資訊。</span><span class="sxs-lookup"><span data-stu-id="abd2a-116">The server application can perform access checks against the client's credentials, but does not receive any information about the client's identity.</span></span> <span data-ttu-id="abd2a-117">模擬等級只對電腦上的通訊有意義，例如具名管道。</span><span class="sxs-lookup"><span data-stu-id="abd2a-117">This impersonation level is meaningful only for on-machine communication, such as named pipes.</span></span> <span data-ttu-id="abd2a-118">使用 `Anonymous` 搭配遠端連線將模擬等級提升至識別。</span><span class="sxs-lookup"><span data-stu-id="abd2a-118">Using `Anonymous` with a remote connection promotes the impersonation level to Identify.</span></span>|  
+|<span data-ttu-id="abd2a-119">識別</span><span class="sxs-lookup"><span data-stu-id="abd2a-119">Identify</span></span>|<span data-ttu-id="abd2a-120">伺服器應用程式知道用戶端的身分，而且可以根據用戶端的認證執行存取驗證，但無法模擬用戶端。</span><span class="sxs-lookup"><span data-stu-id="abd2a-120">The server application knows the client's identity and can perform access validation against the client's credentials, but cannot impersonate the client.</span></span> <span data-ttu-id="abd2a-121">若權杖提供者未提供不同的模擬等級，則識別是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中搭配 SSPI 認證使用的預設模擬等級。</span><span class="sxs-lookup"><span data-stu-id="abd2a-121">Identify is the default impersonation level used with SSPI credentials in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unless the token provider provides a different impersonation level.</span></span>|  
+|<span data-ttu-id="abd2a-122">Impersonate</span><span class="sxs-lookup"><span data-stu-id="abd2a-122">Impersonate</span></span>|<span data-ttu-id="abd2a-123">除了執行存取檢查外，伺服器應用程式可以存取做為用戶端的伺服器電腦上的資源。</span><span class="sxs-lookup"><span data-stu-id="abd2a-123">The server application can access resources on the server machine as the client in addition to performing access checks.</span></span> <span data-ttu-id="abd2a-124">伺服器應用程式無法使用用戶端識別存取遠端電腦上的資源，因為模擬的權杖沒有網路認證。</span><span class="sxs-lookup"><span data-stu-id="abd2a-124">The server application cannot access resources on remote machines using the client's identity because the impersonated token does not have network credentials</span></span>|  
+|<span data-ttu-id="abd2a-125">委派</span><span class="sxs-lookup"><span data-stu-id="abd2a-125">Delegate</span></span>|<span data-ttu-id="abd2a-126">除了擁有與 `Impersonate` 相同的功能外，「委派」模擬等級也可以使用用戶端識別讓伺服器應用程式存取遠端電腦上的資訊，並且將識別傳遞到其他應用程式。</span><span class="sxs-lookup"><span data-stu-id="abd2a-126">In addition to having the same capabilities as `Impersonate`, the Delegate impersonation level also enables the server application to access resources on remote machines using the client's identity and to pass the identity to other applications.</span></span><br /><br /> <span data-ttu-id="abd2a-127">**重要**伺服器網域帳戶必須標示為受信任可以委派的網域控制站，才能使用這些額外的功能。</span><span class="sxs-lookup"><span data-stu-id="abd2a-127">**Important** The server domain account must be marked as trusted for delegation on the domain controller to use these additional features.</span></span> <span data-ttu-id="abd2a-128">這個模擬等級無法搭配標示為敏感的用戶端網域帳戶使用。</span><span class="sxs-lookup"><span data-stu-id="abd2a-128">This level of impersonation cannot be used with client domain accounts marked as sensitive.</span></span>|  
   
- 最常搭配傳輸安全性使用的等級是 `Identify` 和 `Impersonate`。不建議將 `None` 和 `Anonymous` 等級使用於一般用途，而且很多傳輸不支援使用這些等級進行驗證。請小心使用 `Delegate` 等級的強大功能，僅將委派憑證的使用權限提供給受信任的伺服器應用程式。  
+ <span data-ttu-id="abd2a-129">最常搭配傳輸安全性層級為`Identify`和`Impersonate`。</span><span class="sxs-lookup"><span data-stu-id="abd2a-129">The levels most commonly used with transport security are `Identify` and `Impersonate`.</span></span> <span data-ttu-id="abd2a-130">不建議將 `None` 和 `Anonymous` 等級使用於一般用途，而且很多傳輸不支援使用這些等級進行驗證。</span><span class="sxs-lookup"><span data-stu-id="abd2a-130">The levels `None` and `Anonymous` are not recommended for typical use, and many transports do not support using those levels with authentication.</span></span> <span data-ttu-id="abd2a-131">請小心使用 `Delegate` 等級的強大功能，</span><span class="sxs-lookup"><span data-stu-id="abd2a-131">The `Delegate` level is a powerful feature that should be used with care.</span></span> <span data-ttu-id="abd2a-132">僅將委派憑證的使用權限提供給受信任的伺服器應用程式。</span><span class="sxs-lookup"><span data-stu-id="abd2a-132">Only trusted server applications should be given the permission to delegate credentials.</span></span>  
   
- 伺服器應用程式需要有 `SeImpersonatePrivilege` 權限，才能在 `Impersonate` 或 `Delegate` 等級使用模擬。如果應用程式在管理員群組或有服務 SID \(網路服務、本機服務或本機系統\) 的帳戶上執行，該應用程式預設為擁有此權限。伺服器不需要用戶端和伺服器的相互驗證。有些支援模擬的驗證配置 \(例如 NTLM\) 無法搭配相互驗證使用。  
+ <span data-ttu-id="abd2a-133">伺服器應用程式需要有 `Impersonate` 權限，才能在 `Delegate` 或 `SeImpersonatePrivilege` 等級使用模擬。</span><span class="sxs-lookup"><span data-stu-id="abd2a-133">Using impersonation at the `Impersonate` or `Delegate` levels requires the server application to have the `SeImpersonatePrivilege` privilege.</span></span> <span data-ttu-id="abd2a-134">如果應用程式在管理員群組或有服務 SID (網路服務、本機服務或本機系統) 的帳戶上執行，該應用程式預設為擁有此權限。</span><span class="sxs-lookup"><span data-stu-id="abd2a-134">An application has this privilege by default if it is running on an account in the Administrators group or on an account with a Service SID (Network Service, Local Service, or Local System).</span></span> <span data-ttu-id="abd2a-135">伺服器不需要用戶端和伺服器的相互驗證。</span><span class="sxs-lookup"><span data-stu-id="abd2a-135">Impersonation does not require mutual authentication of the client and server.</span></span> <span data-ttu-id="abd2a-136">有些支援模擬的驗證配置 (例如 NTLM) 無法搭配相互驗證使用。</span><span class="sxs-lookup"><span data-stu-id="abd2a-136">Some authentication schemes that support impersonation, such as NTLM, cannot be used with mutual authentication.</span></span>  
   
-## 模擬的特定傳輸問題  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的傳輸選擇會影響模擬的可能選擇。本節描述影響 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中標準 HTTP 與具名管道的問題。自訂傳輸在支援模擬上有其限制。  
+## <a name="transport-specific-issues-with-impersonation"></a><span data-ttu-id="abd2a-137">模擬的特定傳輸問題</span><span class="sxs-lookup"><span data-stu-id="abd2a-137">Transport-Specific Issues with Impersonation</span></span>  
+ <span data-ttu-id="abd2a-138">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的傳輸選擇會影響模擬的可能選擇。</span><span class="sxs-lookup"><span data-stu-id="abd2a-138">The choice of a transport in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] affects the possible choices for impersonation.</span></span> <span data-ttu-id="abd2a-139">本節描述影響 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中標準 HTTP 與具名管道的問題。</span><span class="sxs-lookup"><span data-stu-id="abd2a-139">This section describes issues affecting the standard HTTP and named pipe transports in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="abd2a-140">自訂傳輸在支援模擬上有其限制。</span><span class="sxs-lookup"><span data-stu-id="abd2a-140">Custom transports have their own restrictions on support for impersonation.</span></span>  
   
-### 具名管道傳輸  
- 下列項目會與具名管道傳輸一併使用：  
+### <a name="named-pipe-transport"></a><span data-ttu-id="abd2a-141">具名管道傳輸</span><span class="sxs-lookup"><span data-stu-id="abd2a-141">Named Pipe Transport</span></span>  
+ <span data-ttu-id="abd2a-142">下列項目會與具名管道傳輸一併使用：</span><span class="sxs-lookup"><span data-stu-id="abd2a-142">The following items are used with the named pipe transport:</span></span>  
   
--   命名管道傳輸僅供在本機電腦上使用。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的具名管道明確不允許跨電腦連接。  
+-   <span data-ttu-id="abd2a-143">命名管道傳輸僅供在本機電腦上使用。</span><span class="sxs-lookup"><span data-stu-id="abd2a-143">The named pipe transport is intended for use only on the local machine.</span></span> <span data-ttu-id="abd2a-144">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的具名管道明確不允許跨電腦連接。</span><span class="sxs-lookup"><span data-stu-id="abd2a-144">The named pipe transport in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] explicitly disallows cross-machine connections.</span></span>  
   
--   具名管道無法搭配 `Impersonate` 或 `Delegate` 模擬等級使用。具名管道無法在這些模擬等級強制執行電腦保證。  
+-   <span data-ttu-id="abd2a-145">具名管道無法搭配 `Impersonate` 或 `Delegate` 模擬等級使用。</span><span class="sxs-lookup"><span data-stu-id="abd2a-145">Named pipes cannot be used with the `Impersonate` or `Delegate` impersonation level.</span></span> <span data-ttu-id="abd2a-146">具名管道無法在這些模擬等級強制執行電腦保證。</span><span class="sxs-lookup"><span data-stu-id="abd2a-146">The named pipe cannot enforce the on-machine guarantee at these impersonation levels.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]具名管道的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="abd2a-147">具名管道，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。</span><span class="sxs-lookup"><span data-stu-id="abd2a-147"> named pipes, see [Choosing a Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).</span></span>  
   
-### HTTP 傳輸  
- 如[了解 HTTP 驗證](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)中所述，使用 HTTP 傳輸 \(<xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.BasicHttpBinding>\) 的繫結支援數個驗證配置。支援的模擬等級視驗證配置而定。下列項目會與 HTTP 傳輸一併使用：  
+### <a name="http-transport"></a><span data-ttu-id="abd2a-148">HTTP 傳輸</span><span class="sxs-lookup"><span data-stu-id="abd2a-148">HTTP Transport</span></span>  
+ <span data-ttu-id="abd2a-149">使用 HTTP 傳輸的繫結 (<xref:System.ServiceModel.WSHttpBinding>和<xref:System.ServiceModel.BasicHttpBinding>) 中所述，支援數種驗證配置，[了解 HTTP 驗證](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="abd2a-149">The bindings that use the HTTP transport (<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.BasicHttpBinding>) support several authentication schemes, as explained in [Understanding HTTP Authentication](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md).</span></span> <span data-ttu-id="abd2a-150">支援的模擬等級視驗證配置而定。</span><span class="sxs-lookup"><span data-stu-id="abd2a-150">The impersonation level supported depends on the authentication scheme.</span></span> <span data-ttu-id="abd2a-151">下列項目會與 HTTP 傳輸一併使用：</span><span class="sxs-lookup"><span data-stu-id="abd2a-151">The following items are used with the HTTP transport:</span></span>  
   
--   `Anonymous` 驗證配置會忽略模擬。  
+-   <span data-ttu-id="abd2a-152">`Anonymous` 驗證配置會忽略模擬。</span><span class="sxs-lookup"><span data-stu-id="abd2a-152">The `Anonymous` authentication scheme ignores impersonation.</span></span>  
   
--   `Basic` 驗證配置僅支援 `Delegate` 等級。所有較低的模擬等級都會進行升級。  
+-   <span data-ttu-id="abd2a-153">`Basic`驗證配置僅支援`Delegate`層級。</span><span class="sxs-lookup"><span data-stu-id="abd2a-153">The `Basic` authentication scheme supports only the `Delegate` level.</span></span> <span data-ttu-id="abd2a-154">所有較低的模擬等級都會進行升級。</span><span class="sxs-lookup"><span data-stu-id="abd2a-154">All lower impersonation levels are upgraded.</span></span>  
   
--   `Digest` 驗證配置僅支援 `Impersonate` 和 `Delegate` 等級。  
+-   <span data-ttu-id="abd2a-155">`Digest` 驗證配置僅支援 `Impersonate` 和 `Delegate` 等級。</span><span class="sxs-lookup"><span data-stu-id="abd2a-155">The `Digest` authentication scheme supports only the `Impersonate` and `Delegate` levels.</span></span>  
   
--   可直接選擇或透過交涉選擇的 `NTLM` 驗證配置僅支援本機電腦上的 `Delegate` 等級。  
+-   <span data-ttu-id="abd2a-156">可直接選擇或透過交涉選擇的 `NTLM` 驗證配置僅支援本機電腦上的 `Delegate` 等級。</span><span class="sxs-lookup"><span data-stu-id="abd2a-156">The `NTLM` authentication scheme, selectable either directly or through negotiation, supports only the `Delegate` level on the local machine.</span></span>  
   
--   只能夠透過交涉選擇的 Kerberos 驗證配置可以搭配任何支援的模擬等級使用。  
+-   <span data-ttu-id="abd2a-157">只能夠透過交涉選擇的 Kerberos 驗證配置可以搭配任何支援的模擬等級使用。</span><span class="sxs-lookup"><span data-stu-id="abd2a-157">The Kerberos authentication scheme, which can only be selected through negotiation, can be used with any supported impersonation level.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] HTTP 傳輸的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="abd2a-158">HTTP 傳輸，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。</span><span class="sxs-lookup"><span data-stu-id="abd2a-158"> the HTTP transport, see [Choosing a Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).</span></span>  
   
-## 請參閱  
- [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)   
- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)   
- [HOW TO：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)   
- [了解 HTTP 驗證](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="abd2a-159">另請參閱</span><span class="sxs-lookup"><span data-stu-id="abd2a-159">See Also</span></span>  
+ [<span data-ttu-id="abd2a-160">委派和模擬</span><span class="sxs-lookup"><span data-stu-id="abd2a-160">Delegation and Impersonation</span></span>](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
+ [<span data-ttu-id="abd2a-161">授權</span><span class="sxs-lookup"><span data-stu-id="abd2a-161">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [<span data-ttu-id="abd2a-162">如何：在服務上模擬用戶端</span><span class="sxs-lookup"><span data-stu-id="abd2a-162">How to: Impersonate a Client on a Service</span></span>](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [<span data-ttu-id="abd2a-163">了解 HTTP 驗證</span><span class="sxs-lookup"><span data-stu-id="abd2a-163">Understanding HTTP Authentication</span></span>](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

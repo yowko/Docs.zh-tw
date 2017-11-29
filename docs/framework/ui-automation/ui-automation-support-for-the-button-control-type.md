@@ -1,88 +1,91 @@
 ---
-title: "UI Automation Support for the Button Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Button"
-  - "UI Automation, Button control type"
-  - "Button control type"
+title: "Button 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Button
+- UI Automation, Button control type
+- Button control type
 ms.assetid: 057c983a-da83-4c50-86c7-26fe381076a6
-caps.latest.revision: 34
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 54d00506a252c40bf3c8a67d5a228eae72e6464e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Button Control Type
+# <a name="ui-automation-support-for-the-button-control-type"></a><span data-ttu-id="67853-102">Button 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="67853-102">UI Automation Support for the Button Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱[Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="67853-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="67853-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="67853-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="67853-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供按鈕控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值、控制項模式和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的特定指導方針。  
+ <span data-ttu-id="67853-105">本主題提供按鈕控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="67853-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Button control type.</span></span> <span data-ttu-id="67853-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。</span><span class="sxs-lookup"><span data-stu-id="67853-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="67853-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值、控制項模式和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的特定指導方針。</span><span class="sxs-lookup"><span data-stu-id="67853-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values, control patterns, and [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events.</span></span>  
   
- 按鈕是可供使用者互動的物件，能在對話方塊執行如 \[確定\] 和 \[取消\] 按鈕等動作。 按鈕控制項的公開方式很簡單，因為它對應的是使用者想要完成的單一命令。  
+ <span data-ttu-id="67853-108">按鈕是可供使用者互動的物件，能在對話方塊執行如 [確定]  和 [取消]  按鈕等動作。</span><span class="sxs-lookup"><span data-stu-id="67853-108">A button is an object that a user interacts with to perform an action such as the **OK** and **Cancel** buttons on a dialog box.</span></span> <span data-ttu-id="67853-109">按鈕控制項的公開方式很簡單，因為它對應的是使用者想要完成的單一命令。</span><span class="sxs-lookup"><span data-stu-id="67853-109">The button control is a simple control to expose because it maps to a single command that the user wishes to complete.</span></span>  
   
- 下列章節會定義按鈕控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用於所有按鈕控制項。  
+ <span data-ttu-id="67853-110">下列章節會定義按鈕控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="67853-110">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Button control type.</span></span> <span data-ttu-id="67853-111">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有按鈕控制項。</span><span class="sxs-lookup"><span data-stu-id="67853-111">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all button controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述按鈕控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="67853-112">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="67853-112">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="67853-113">下表描述按鈕控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="67853-113">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to button controls and describes what can be contained in each view.</span></span> <span data-ttu-id="67853-114">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="67853-114">For more information about the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|按鈕<br /><br /> -   影像 \(0 個以上\)<br />-   文字 \(0 個以上\)|按鈕|  
+|<span data-ttu-id="67853-115">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="67853-115">Control View</span></span>|<span data-ttu-id="67853-116">內容檢視</span><span class="sxs-lookup"><span data-stu-id="67853-116">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="67853-117">按鈕</span><span class="sxs-lookup"><span data-stu-id="67853-117">Button</span></span><br /><br /> <span data-ttu-id="67853-118">影像 （0 個以上）</span><span class="sxs-lookup"><span data-stu-id="67853-118">-   Image (0 or more)</span></span><br /><span data-ttu-id="67853-119">文字 （0 個以上）</span><span class="sxs-lookup"><span data-stu-id="67853-119">-   Text (0 or more)</span></span>|<span data-ttu-id="67853-120">按鈕</span><span class="sxs-lookup"><span data-stu-id="67853-120">Button</span></span>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列出的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與實作按鈕控制項類型的控制項 \(例如按鈕控制項\) 特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="67853-121">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="67853-121">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="67853-122">下表列出的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與實作按鈕控制項類型的控制項 (例如按鈕控制項) 特別有關。</span><span class="sxs-lookup"><span data-stu-id="67853-122">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to the controls that implement the Button control type (such as button controls).</span></span> <span data-ttu-id="67853-123">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="67853-123">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|請參閱備註。|按鈕控制項一般必須支援快速鍵，讓使用者可以從鍵盤快速執行它所代表的動作。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|按鈕|此值與所有使用者介面架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|請參閱備註。|此說明文字可指出啟動按鈕的結果為何。 通常會是透過工具提示表示的相同類型資訊。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|按鈕控制項必須一律為內容。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|按鈕控制項必須一律為控制項。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|按鈕控制項會自行將其內容設為標籤。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「按鈕」|對應到按鈕控制項類型的當地語系化字串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|按鈕控制項的名稱是用來設定其標籤的文字。 若使用影像設定按鈕的標籤，則必須為按鈕的 Name 屬性提供替代文字。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="67853-124"> 屬性</span><span class="sxs-lookup"><span data-stu-id="67853-124"> Property</span></span>|<span data-ttu-id="67853-125">值</span><span class="sxs-lookup"><span data-stu-id="67853-125">Value</span></span>|<span data-ttu-id="67853-126">備註</span><span class="sxs-lookup"><span data-stu-id="67853-126">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|<span data-ttu-id="67853-127">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-127">See notes.</span></span>|<span data-ttu-id="67853-128">按鈕控制項一般必須支援快速鍵，讓使用者可以從鍵盤快速執行它所代表的動作。</span><span class="sxs-lookup"><span data-stu-id="67853-128">The Button control typically must support an accelerator key to enable an end user to perform the action it represents quickly from the keyboard.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="67853-129">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-129">See notes.</span></span>|<span data-ttu-id="67853-130">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="67853-130">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="67853-131">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-131">See notes.</span></span>|<span data-ttu-id="67853-132">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="67853-132">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="67853-133">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-133">See notes.</span></span>|<span data-ttu-id="67853-134">如果有週框即受支援。</span><span class="sxs-lookup"><span data-stu-id="67853-134">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="67853-135">如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。</span><span class="sxs-lookup"><span data-stu-id="67853-135">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="67853-136">按鈕</span><span class="sxs-lookup"><span data-stu-id="67853-136">Button</span></span>|<span data-ttu-id="67853-137">此值與所有使用者介面架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="67853-137">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|<span data-ttu-id="67853-138">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-138">See notes.</span></span>|<span data-ttu-id="67853-139">此說明文字可指出啟動按鈕的結果為何。</span><span class="sxs-lookup"><span data-stu-id="67853-139">The Help Text can indicate what the end result of activating the button will be.</span></span> <span data-ttu-id="67853-140">通常會是透過工具提示表示的相同類型資訊。</span><span class="sxs-lookup"><span data-stu-id="67853-140">This is typically the same type of information presented through a ToolTip.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="67853-141">True</span><span class="sxs-lookup"><span data-stu-id="67853-141">True</span></span>|<span data-ttu-id="67853-142">按鈕控制項必須一律為內容。</span><span class="sxs-lookup"><span data-stu-id="67853-142">The Button control must always be content.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="67853-143">True</span><span class="sxs-lookup"><span data-stu-id="67853-143">True</span></span>|<span data-ttu-id="67853-144">按鈕控制項必須一律為控制項。</span><span class="sxs-lookup"><span data-stu-id="67853-144">The Button control must always be a control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="67853-145">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-145">See notes.</span></span>|<span data-ttu-id="67853-146">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="67853-146">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="67853-147">按鈕控制項會自行將其內容設為標籤。</span><span class="sxs-lookup"><span data-stu-id="67853-147">Button controls are self-labeled by their contents.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="67853-148">「按鈕」</span><span class="sxs-lookup"><span data-stu-id="67853-148">"button"</span></span>|<span data-ttu-id="67853-149">對應到按鈕控制項類型的當地語系化字串。</span><span class="sxs-lookup"><span data-stu-id="67853-149">Localized string corresponding to the Button control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="67853-150">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-150">See notes.</span></span>|<span data-ttu-id="67853-151">按鈕控制項的名稱是用來設定其標籤的文字。</span><span class="sxs-lookup"><span data-stu-id="67853-151">The name of the button control is the text that is used to label it.</span></span> <span data-ttu-id="67853-152">若使用影像設定按鈕的標籤，則必須為按鈕的 Name 屬性提供替代文字。</span><span class="sxs-lookup"><span data-stu-id="67853-152">Whenever an image is used to label a button, alternate text must be supplied for the button's Name property.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式  
- 下表列出所有按鈕控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="67853-153">必要的使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="67853-153">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="67853-154">下表列出所有按鈕控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="67853-154">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by all button controls.</span></span> <span data-ttu-id="67853-155">如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="67853-155">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式|支援|備註|  
-|-----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|請參閱備註。|所有按鈕都應該支援叫用控制項模式或切換控制項模式。 當按鈕執行使用者要求的命令時，便會支援叫用。 此命令對應於如「剪下」、「複製」、「貼上」或「刪除」等單一作業。|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|請參閱備註。|所有按鈕都應該支援叫用控制項模式或切換控制項模式。 若按鈕可以循環多達三種狀態時，則會支援切換。 這通常是指特定功能的開關切換。|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|請參閱備註。|當按鈕裝載為分割按鈕的子系時，子按鈕可能支援 ExpandCollapse 模式，而不是叫用或切換模式。 ExpandCollapse 模式可用來開啟或關閉功能表，或是與按鈕項目相關聯的其他子結構。|  
+|<span data-ttu-id="67853-156">控制項模式</span><span class="sxs-lookup"><span data-stu-id="67853-156">Control Pattern</span></span>|<span data-ttu-id="67853-157">支援</span><span class="sxs-lookup"><span data-stu-id="67853-157">Support</span></span>|<span data-ttu-id="67853-158">備註</span><span class="sxs-lookup"><span data-stu-id="67853-158">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|<span data-ttu-id="67853-159">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-159">See notes.</span></span>|<span data-ttu-id="67853-160">所有按鈕都應該支援叫用控制項模式或切換控制項模式。</span><span class="sxs-lookup"><span data-stu-id="67853-160">All buttons should support the Invoke control pattern or the Toggle control pattern.</span></span> <span data-ttu-id="67853-161">當按鈕執行使用者要求的命令時，便會支援叫用。</span><span class="sxs-lookup"><span data-stu-id="67853-161">Invoke is supported when the button performs a command at the request of the user.</span></span> <span data-ttu-id="67853-162">此命令對應於如「剪下」、「複製」、「貼上」或「刪除」等單一作業。</span><span class="sxs-lookup"><span data-stu-id="67853-162">This command maps to a single operation such as Cut, Copy, Paste, or Delete.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|<span data-ttu-id="67853-163">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-163">See notes.</span></span>|<span data-ttu-id="67853-164">所有按鈕都應該支援叫用控制項模式或切換控制項模式。</span><span class="sxs-lookup"><span data-stu-id="67853-164">All buttons should support the Invoke control pattern or the Toggle control pattern.</span></span> <span data-ttu-id="67853-165">若按鈕可以循環多達三種狀態時，則會支援切換。</span><span class="sxs-lookup"><span data-stu-id="67853-165">Toggle is supported if the button can be cycled through a series of up to three states.</span></span> <span data-ttu-id="67853-166">這通常是指特定功能的開關切換。</span><span class="sxs-lookup"><span data-stu-id="67853-166">Typically this is seen as an on/off switch for specific features.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|<span data-ttu-id="67853-167">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="67853-167">See notes.</span></span>|<span data-ttu-id="67853-168">當按鈕裝載為分割按鈕的子系時，子按鈕可能支援 ExpandCollapse 模式，而不是叫用或切換模式。</span><span class="sxs-lookup"><span data-stu-id="67853-168">When a button is hosted as a child of a split button, the child button can support the ExpandCollapse pattern instead of the Invoke or Toggle pattern.</span></span> <span data-ttu-id="67853-169">ExpandCollapse 模式可用來開啟或關閉功能表，或是與按鈕項目相關聯的其他子結構。</span><span class="sxs-lookup"><span data-stu-id="67853-169">The ExpandCollapse pattern can be used for opening or closing a menu or other sub-structure associated with the button element.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列出所有按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱[UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="67853-170">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="67853-170">Required UI Automation Events</span></span>  
+ <span data-ttu-id="67853-171">下表列出所有按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="67853-171">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all button controls.</span></span> <span data-ttu-id="67853-172">如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="67853-172">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|視情況而定|如果此控制項支援叫用控制項模式，就必須支援這個事件。|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。|視情況而定|如果此控制項支援切換控制項模式，就必須支援這個事件。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="67853-173"> 事件</span><span class="sxs-lookup"><span data-stu-id="67853-173"> Event</span></span>|<span data-ttu-id="67853-174">支援</span><span class="sxs-lookup"><span data-stu-id="67853-174">Support</span></span>|<span data-ttu-id="67853-175">備註</span><span class="sxs-lookup"><span data-stu-id="67853-175">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="67853-176">必要項</span><span class="sxs-lookup"><span data-stu-id="67853-176">Required</span></span>|<span data-ttu-id="67853-177">無</span><span class="sxs-lookup"><span data-stu-id="67853-177">None</span></span>|  
+|<span data-ttu-id="67853-178"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="67853-178"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="67853-179">必要項</span><span class="sxs-lookup"><span data-stu-id="67853-179">Required</span></span>|<span data-ttu-id="67853-180">無</span><span class="sxs-lookup"><span data-stu-id="67853-180">None</span></span>|  
+|<span data-ttu-id="67853-181"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="67853-181"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="67853-182">必要項</span><span class="sxs-lookup"><span data-stu-id="67853-182">Required</span></span>|<span data-ttu-id="67853-183">無</span><span class="sxs-lookup"><span data-stu-id="67853-183">None</span></span>|  
+|<span data-ttu-id="67853-184"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="67853-184"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="67853-185">必要項</span><span class="sxs-lookup"><span data-stu-id="67853-185">Required</span></span>|<span data-ttu-id="67853-186">無</span><span class="sxs-lookup"><span data-stu-id="67853-186">None</span></span>|  
+|<span data-ttu-id="67853-187"><xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="67853-187"><xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> property-changed event.</span></span>|<span data-ttu-id="67853-188">必要項</span><span class="sxs-lookup"><span data-stu-id="67853-188">Required</span></span>|<span data-ttu-id="67853-189">無</span><span class="sxs-lookup"><span data-stu-id="67853-189">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="67853-190">必要項</span><span class="sxs-lookup"><span data-stu-id="67853-190">Required</span></span>|<span data-ttu-id="67853-191">無</span><span class="sxs-lookup"><span data-stu-id="67853-191">None</span></span>|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|<span data-ttu-id="67853-192">視情況而定</span><span class="sxs-lookup"><span data-stu-id="67853-192">Depends</span></span>|<span data-ttu-id="67853-193">如果此控制項支援叫用控制項模式，就必須支援這個事件。</span><span class="sxs-lookup"><span data-stu-id="67853-193">If the control supports the Invoke control pattern, it must support this event.</span></span>|  
+|<span data-ttu-id="67853-194"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="67853-194"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> property-changed event.</span></span>|<span data-ttu-id="67853-195">視情況而定</span><span class="sxs-lookup"><span data-stu-id="67853-195">Depends</span></span>|<span data-ttu-id="67853-196">如果此控制項支援切換控制項模式，就必須支援這個事件。</span><span class="sxs-lookup"><span data-stu-id="67853-196">If the control supports the Toggle control pattern, it must support this event.</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.Button>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="67853-197">另請參閱</span><span class="sxs-lookup"><span data-stu-id="67853-197">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Button>  
+ [<span data-ttu-id="67853-198">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="67853-198">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="67853-199">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="67853-199">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

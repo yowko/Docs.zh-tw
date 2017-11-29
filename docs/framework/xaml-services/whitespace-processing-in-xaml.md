@@ -1,87 +1,90 @@
 ---
-title: "Whitespace Processing in XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "East Asian characters [XAML Services]"
-  - "XAML [XAML Services], whitespace processing"
-  - "whitespace processing in XAML [XAML Services]"
-  - "characters [XAML Services], East Asian"
+title: "XAML 中的泛空白字元處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- East Asian characters [XAML Services]
+- XAML [XAML Services], whitespace processing
+- whitespace processing in XAML [XAML Services]
+- characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-caps.latest.revision: 20
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "20"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 80b75897f54136849aa4b356c414145510d9cd3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Whitespace Processing in XAML
-XAML 的語言規則表示 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器實作必須處理必要的空白字元。 本主題說明這些 XAML 語言規則， 並同時說明 XAML 處理器和 XAML 寫入器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 實作針對序列化所定義的額外空白字元處理方式。  
+# <a name="whitespace-processing-in-xaml"></a><span data-ttu-id="249ad-102">XAML 中的泛空白字元處理</span><span class="sxs-lookup"><span data-stu-id="249ad-102">Whitespace Processing in XAML</span></span>
+<span data-ttu-id="249ad-103">XAML 的語言規則表示 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器實作必須處理必要的空白字元。</span><span class="sxs-lookup"><span data-stu-id="249ad-103">The language rules for XAML state that significant whitespace must be processed by a [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processor implementation.</span></span> <span data-ttu-id="249ad-104">本主題說明這些 XAML 語言規則，</span><span class="sxs-lookup"><span data-stu-id="249ad-104">This topic documents these XAML language rules.</span></span> <span data-ttu-id="249ad-105">並同時說明 XAML 處理器和 XAML 寫入器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 實作針對序列化所定義的額外空白字元處理方式。</span><span class="sxs-lookup"><span data-stu-id="249ad-105">It also documents additional whitespace handling that is defined by the [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementation of the XAML processor and the XAML writer for serialization.</span></span>  
   
 <a name="whitespace_definition"></a>   
-## 空白字元定義  
- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 中的空白字元與 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)] 一致，都是指空格、換行字元和定位字元。 這些字元分別對應到 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 值 0020、000A 和 0009。  
+## <a name="whitespace-definition"></a><span data-ttu-id="249ad-106">空白字元定義</span><span class="sxs-lookup"><span data-stu-id="249ad-106">Whitespace Definition</span></span>  
+ <span data-ttu-id="249ad-107">[!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]中的空白字元與 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 一致，都是指空格、換行字元和定位字元。這些字元分別對應到 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 值 0020、000A 和 0009。</span><span class="sxs-lookup"><span data-stu-id="249ad-107">Consistent with [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], whitespace characters in [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] are space, linefeed, and tab. These correspond to the [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] values 0020, 000A, and 0009 respectively.</span></span>  
   
 <a name="whitespace_normalization"></a>   
-## 空白字元正規化  
- 根據預設，當 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器處理 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案時，會發生下列空白字元正規化：  
+## <a name="whitespace-normalization"></a><span data-ttu-id="249ad-108">空白字元正規化</span><span class="sxs-lookup"><span data-stu-id="249ad-108">Whitespace Normalization</span></span>  
+ <span data-ttu-id="249ad-109">根據預設，當 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器處理 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案時，會發生下列空白字元正規化：</span><span class="sxs-lookup"><span data-stu-id="249ad-109">By default the following whitespace normalization occurs when a [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processor processes a [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] file:</span></span>  
   
-1.  東亞字元間的換行字元會遭到移除。 如需這個詞彙的定義，請參閱本主題稍後的＜東亞字元＞一節。  
+1.  <span data-ttu-id="249ad-110">東亞字元間的換行字元會遭到移除。</span><span class="sxs-lookup"><span data-stu-id="249ad-110">Linefeed characters between East Asian characters are removed.</span></span> <span data-ttu-id="249ad-111">如需這個詞彙的定義，請參閱本主題稍後的＜東亞字元＞一節。</span><span class="sxs-lookup"><span data-stu-id="249ad-111">See the "East Asian Characters" section later in this topic for a definition of this term.</span></span>  
   
-2.  所有空白字元 \(空格、換行字元、定位字元\) 都會轉換成空格。  
+2.  <span data-ttu-id="249ad-112">所有空白字元 (空格、換行字元、定位字元) 都會轉換成空格。</span><span class="sxs-lookup"><span data-stu-id="249ad-112">All whitespace characters (space, linefeed, tab) are converted into spaces.</span></span>  
   
-3.  所有連續的空格會被刪除並取代為一個空格。  
+3.  <span data-ttu-id="249ad-113">所有連續的空格會被刪除並取代為一個空格。</span><span class="sxs-lookup"><span data-stu-id="249ad-113">All consecutive spaces are deleted and replaced by one space.</span></span>  
   
-4.  緊接在開始標記之後的空格會遭到刪除。  
+4.  <span data-ttu-id="249ad-114">緊接在開始標記之後的空格會遭到刪除。</span><span class="sxs-lookup"><span data-stu-id="249ad-114">A space immediately following the start tag is deleted.</span></span>  
   
-5.  緊接在結束標記之前的空格會遭到刪除。  
+5.  <span data-ttu-id="249ad-115">緊接在結束標記之前的空格會遭到刪除。</span><span class="sxs-lookup"><span data-stu-id="249ad-115">A space immediately before the end tag is deleted.</span></span>  
   
- 「預設」會對應到 [xml:space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) 屬性的預設值所表示的狀態。  
+ <span data-ttu-id="249ad-116">「預設」會對應到 [xml:space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) 屬性的預設值所表示的狀態。</span><span class="sxs-lookup"><span data-stu-id="249ad-116">"Default" corresponds to the state denoted by the default value of the [xml:space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) attribute.</span></span>  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
-## 內部文字中的空白字元及字串基本類型  
- 上述正規化規則適用於 XAML 項目中的內部文字。 正規化後，XAML 處理器會依據下列情況將任何內部文字轉換成適當的類型：  
+## <a name="whitespace-in-inner-text-and-string-primitives"></a><span data-ttu-id="249ad-117">內部文字中的空白字元及字串基本類型</span><span class="sxs-lookup"><span data-stu-id="249ad-117">Whitespace in Inner Text, and String Primitives</span></span>  
+ <span data-ttu-id="249ad-118">上述正規化規則適用於 XAML 項目中的內部文字。</span><span class="sxs-lookup"><span data-stu-id="249ad-118">The previous normalization rules apply to inner text that is found within XAML  elements.</span></span> <span data-ttu-id="249ad-119">正規化後，XAML 處理器會依據下列情況將任何內部文字轉換成適當的類型：</span><span class="sxs-lookup"><span data-stu-id="249ad-119">After normalization, a XAML  processor converts any inner text into an appropriate type as follows:</span></span>  
   
--   如果屬性的類型不是集合，但不是直接的 <xref:System.Object> 類型，XAML 處理器會嘗試使用該類型的類型轉換器，轉換成該類型。 在這裡轉換失敗會導致編譯時期錯誤。  
+-   <span data-ttu-id="249ad-120">如果屬性的類型不是集合，但不是直接的 <xref:System.Object> 類型，XAML 處理器會嘗試使用該類型的類型轉換器，轉換成該類型。</span><span class="sxs-lookup"><span data-stu-id="249ad-120">If the type of the property is not a collection but is not directly an <xref:System.Object> type, the XAML  processor attempts to convert to that type by using its type converter.</span></span> <span data-ttu-id="249ad-121">在這裡轉換失敗會導致編譯時期錯誤。</span><span class="sxs-lookup"><span data-stu-id="249ad-121">A failed conversion here causes a compile-time error.</span></span>  
   
--   如果屬性的類型是集合，而且內部文字是連續的 \(未插入項目標記\)，內部文字會剖析為單一 <xref:System.String>。 如果集合類型無法接受 <xref:System.String>，這也會導致編譯時期錯誤。  
+-   <span data-ttu-id="249ad-122">如果屬性的類型是集合，而且內部文字是連續的 (未插入項目標記)，內部文字會剖析為單一 <xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="249ad-122">If the type of the property is a collection and the inner text is contiguous (no intervening element tags), the inner text is parsed as a single <xref:System.String>.</span></span> <span data-ttu-id="249ad-123">如果集合類型無法接受 <xref:System.String>，這也會導致編譯時期錯誤。</span><span class="sxs-lookup"><span data-stu-id="249ad-123">If the collection type cannot accept <xref:System.String>, this also causes a compile-time error.</span></span>  
   
--   如果屬性的類型是 <xref:System.Object>，內部文字會剖析為單一 <xref:System.String>。 如果在其中插入項目標記，由於 <xref:System.Object> 類型即表示單一物件 \(否則會是 <xref:System.String>\)，因此會導致編譯時期錯誤。  
+-   <span data-ttu-id="249ad-124">如果屬性的類型是 <xref:System.Object>，內部文字會剖析為單一 <xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="249ad-124">If the type of the property is <xref:System.Object>, the inner text is parsed as a single <xref:System.String>.</span></span> <span data-ttu-id="249ad-125">如果在其中插入項目標記，由於 <xref:System.Object> 類型即表示單一物件 (否則會是<xref:System.String> )，因此會導致編譯時期錯誤。</span><span class="sxs-lookup"><span data-stu-id="249ad-125">If there are intervening element tags, this causes a compile-time error because the <xref:System.Object> type implies a single object (<xref:System.String> or otherwise).</span></span>  
   
--   如果屬性的類型是集合，而且內部文字不是連續的，第一個子字串會轉換成 <xref:System.String> 並加入做為集合項目，插入的項目也會加入做為集合項目，而最後的結尾子字串 \(如果有的話\) 會加入做為集合的第三個 <xref:System.String> 項目。  
+-   <span data-ttu-id="249ad-126">如果屬性的類型是集合，而且內部文字不是連續的，第一個子字串會轉換成 <xref:System.String> 並加入做為集合項目，插入的項目也會加入做為集合項目，而最後的結尾子字串 (如果有的話) 會加入做為集合的第三個 <xref:System.String> 項目。</span><span class="sxs-lookup"><span data-stu-id="249ad-126">If the type of the property is a collection, and the inner text is not contiguous, the first substring is converted into a <xref:System.String> and added as a collection item, the intervening element is added as a collection item, and finally the trailing substring (if any) is added to the collection as a third <xref:System.String> item.</span></span>  
   
 <a name="preserving_whitespace"></a>   
-## 保留空白字元  
- 有幾種方法可用來保留來源 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 中最後要呈現的空白字元，使其不受 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器空白字元正規化的影響。  
+## <a name="preserving-whitespace"></a><span data-ttu-id="249ad-127">保留空白字元</span><span class="sxs-lookup"><span data-stu-id="249ad-127">Preserving Whitespace</span></span>  
+ <span data-ttu-id="249ad-128">有幾種方法可用來保留來源 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 中最後要呈現的空白字元，使其不受 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器空白字元正規化的影響。</span><span class="sxs-lookup"><span data-stu-id="249ad-128">There are several techniques for preserving whitespace in the source [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] for eventual presentation that are not affected by [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processor whitespace normalization.</span></span>  
   
- **xml:space\="preserve"**：在項目層級想要保留空白字元的地方指定這個屬性。 這樣做會保留所有空白字元，其中包括程式碼編輯應用程式為了以視覺上直覺的巢狀結構來「美化」對齊項目可能加入的空格。 不過，這些空格的呈現與否是由包含項目的內容模型所決定。 避免在根層級指定 `xml:space="preserve"`，因為不論您如何設定屬性，大部分的物件模型都不會將空白字元視為必要。 全域設定 `xml:space` 可能會對某些實作中的 XAML 處理 \(特別是序列化\) 帶來效能影響。 比較好的做法是，只有當項目會呈現字串內的空白字元或本身是需要空白字元的集合時，才在項目層級特別設定這個屬性。  
+ <span data-ttu-id="249ad-129">**xml:space="preserve"**：在項目層級想要保留空白字元的地方指定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="249ad-129">**xml:space="preserve"**: Specify this attribute at the level of the element where whitespace preservation is desired.</span></span> <span data-ttu-id="249ad-130">這樣做會保留所有空白字元，其中包括程式碼編輯應用程式為了以視覺上直覺的巢狀結構來「美化」對齊項目可能加入的空格。</span><span class="sxs-lookup"><span data-stu-id="249ad-130">This preserves all white space, which includes the spaces that might be added by code-editing applications to "pretty-print" align elements as a visually intuitive nesting.</span></span> <span data-ttu-id="249ad-131">不過，這些空格的呈現與否是由包含項目的內容模型所決定。</span><span class="sxs-lookup"><span data-stu-id="249ad-131">However, whether those spaces render is determined by the content model for the containing element.</span></span> <span data-ttu-id="249ad-132">避免在根層級指定 `xml:space="preserve"` ，因為不論您如何設定屬性，大部分的物件模型都不會將空白字元視為必要。</span><span class="sxs-lookup"><span data-stu-id="249ad-132">Avoid specifying `xml:space="preserve"` at the root level because most object models do not consider whitespace as significant regardless of how you set the attribute.</span></span> <span data-ttu-id="249ad-133">全域設定 `xml:space` 可能會對某些實作中的 XAML 處理 (特別是序列化) 帶來效能影響。</span><span class="sxs-lookup"><span data-stu-id="249ad-133">Setting `xml:space` globally may have performance consequences on XAML processing (particularly serialization) in some implementations.</span></span> <span data-ttu-id="249ad-134">比較好的做法是，只有當項目會呈現字串內的空白字元或本身是需要空白字元的集合時，才在項目層級特別設定這個屬性。</span><span class="sxs-lookup"><span data-stu-id="249ad-134">It is a better practice to only set the attribute specifically at the level of elements that render whitespace within strings, or are whitespace significant collections.</span></span>  
   
- **實體和不分行空格**：[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 支援將任何 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 實體放置在文字物件模型內。 您可以使用專用實體，例如不分行空格 \(UTF\-8 編碼中的 &\#160;\)。 您也可以使用支援不分行空格字元的 RTF 文字控制項。 如果您使用實體來模擬縮排等版面配置特性，應該要特別小心，因為相較於在一般版面配置系統中產生縮排結果的功能 \(例如適當使用面板和邊界\)，實體的執行階段輸出會隨更多因素而改變。 例如，實體會回應使用者選取的字型，對應至相關字型並可能變更大小。  
+ <span data-ttu-id="249ad-135">**實體和不分行空格**： [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 支援將任何 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 實體放置在文字物件模型內。</span><span class="sxs-lookup"><span data-stu-id="249ad-135">**Entities and non breaking spaces**: [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] supports placing any [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] entity within a text object model.</span></span> <span data-ttu-id="249ad-136">您可以使用專用的實體，例如不分行空格 (&\#160; 在 utf-8 編碼)。</span><span class="sxs-lookup"><span data-stu-id="249ad-136">You can use dedicated entities such as nonbreaking space (&\#160; in UTF-8 encoding).</span></span> <span data-ttu-id="249ad-137">您也可以使用支援不分行空格字元的 RTF 文字控制項。</span><span class="sxs-lookup"><span data-stu-id="249ad-137">You can also use rich text controls that support nonbreaking space characters.</span></span> <span data-ttu-id="249ad-138">如果您使用實體來模擬縮排等版面配置特性，應該要特別小心，因為相較於在一般版面配置系統中產生縮排結果的功能 (例如適當使用面板和邊界)，實體的執行階段輸出會隨更多因素而改變。</span><span class="sxs-lookup"><span data-stu-id="249ad-138">You should be cautious if you are using entities to simulate layout characteristics such as indention, because the run-time output of the entities will vary based on a greater number of factors than would the capabilities for producing indention results in a typical layout system, such as proper use of panels and margins.</span></span> <span data-ttu-id="249ad-139">例如，實體會回應使用者選取的字型，對應至相關字型並可能變更大小。</span><span class="sxs-lookup"><span data-stu-id="249ad-139">For instance, entities are mapped to fonts and can change size in response to user font selection.</span></span>  
   
 <a name="east_asian_characters"></a>   
-## 東亞字元  
- 「東亞字元」是以 [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] 字元集所定義，範圍從 U\+20000 到 U\+2FFFD，以及從 U\+30000 到 U\+3FFFD。 這個子集有時也稱為「CJK 表意字元」。 如需詳細資訊，請參閱 [http:\/\/www.unicode.org](http://www.unicode.org/)。  
+## <a name="east-asian-characters"></a><span data-ttu-id="249ad-140">東亞字元</span><span class="sxs-lookup"><span data-stu-id="249ad-140">East Asian Characters</span></span>  
+ <span data-ttu-id="249ad-141">「東亞字元」是以 [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] 字元集所定義，範圍從 U+20000 到 U+2FFFD，以及從 U+30000 到 U+3FFFD。</span><span class="sxs-lookup"><span data-stu-id="249ad-141">"East Asian characters" is defined as a set of [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] character ranges U+20000 to U+2FFFD and U+30000 to U+3FFFD.</span></span> <span data-ttu-id="249ad-142">這個子集有時也稱為「CJK 表意字元」。</span><span class="sxs-lookup"><span data-stu-id="249ad-142">This subset is also sometimes referred to as "CJK ideographs".</span></span> <span data-ttu-id="249ad-143">如需詳細資訊，請參閱 [http://www.unicode.org](http://www.unicode.org/)。</span><span class="sxs-lookup"><span data-stu-id="249ad-143">For more information, see [http://www.unicode.org](http://www.unicode.org/).</span></span>  
   
 <a name="whitespace_and_text_content_models"></a>   
-## 空白字元和文字內容模型  
- 實際上，保留空白字元只是考量所有可能的內容模型子集。 組成該子集的內容模型可以接受某種形式的單一 <xref:System.String> 類型、專用 <xref:System.String> 集合，或者 <xref:System.String> 和 <xref:System.Collections.IList> 或 <xref:System.Collections.Generic.ICollection%601> 集合中其他類型的混合。  
+## <a name="whitespace-and-text-content-models"></a><span data-ttu-id="249ad-144">空白字元和文字內容模型</span><span class="sxs-lookup"><span data-stu-id="249ad-144">Whitespace and Text Content Models</span></span>  
+ <span data-ttu-id="249ad-145">實際上，保留空白字元只是考量所有可能的內容模型子集。</span><span class="sxs-lookup"><span data-stu-id="249ad-145">In practice, preserving whitespace is only of concern for a subset of all possible content models.</span></span> <span data-ttu-id="249ad-146">組成該子集的內容模型可以接受某種形式的單一 <xref:System.String> 類型、專用 <xref:System.String> 集合，或者 <xref:System.String> 和 <xref:System.Collections.IList> 或 <xref:System.Collections.Generic.ICollection%601> 集合中其他類型的混合。</span><span class="sxs-lookup"><span data-stu-id="249ad-146">That subset is composed of content models that can take a singleton <xref:System.String> type in some form, a dedicated <xref:System.String> collection, or a mixture of <xref:System.String> and other types in an <xref:System.Collections.IList> or <xref:System.Collections.Generic.ICollection%601> collection.</span></span>  
   
-### WPF 中的空白字元和文字內容模型  
- 為了方便說明，本節的其餘部分將參考 WPF 所定義的特定類型。 本主題中所述的空白字元處理功能，通常與 .NET Framework XAML 服務和 WPF 相關。 若要查看執行中的行為，您可以使用某個 WPF XAML 標記進行實驗，並在物件圖形中檢視結果，然後再重新序列化為標記。  
+### <a name="whitespace-and-text-content-models-in-wpf"></a><span data-ttu-id="249ad-147">WPF 中的空白字元和文字內容模型</span><span class="sxs-lookup"><span data-stu-id="249ad-147">Whitespace and Text Content Models in WPF</span></span>  
+ <span data-ttu-id="249ad-148">為了方便說明，本節的其餘部分將參考 WPF 所定義的特定類型。</span><span class="sxs-lookup"><span data-stu-id="249ad-148">For illustration purposes, the remainder of this section references particular types that are defined by WPF.</span></span> <span data-ttu-id="249ad-149">本主題中所述的空白字元處理功能，通常與 .NET Framework XAML 服務和 WPF 相關。</span><span class="sxs-lookup"><span data-stu-id="249ad-149">The whitespace handling features that are described in this topic are generally pertinent to both .NET Framework XAML Services and WPF.</span></span> <span data-ttu-id="249ad-150">若要查看執行中的行為，您可以使用某個 WPF XAML 標記進行實驗，並在物件圖形中檢視結果，然後再重新序列化為標記。</span><span class="sxs-lookup"><span data-stu-id="249ad-150">To see this behavior in action, you might experiment with some WPF XAML markup, view the results in an object graph, and then serialize back to markup again.</span></span>  
   
- 即使是可接受字串的內容模型，這些內容模型中的預設行為也都是不會將任何保留的空白字元視為必要。 例如，<xref:System.Windows.Controls.ListBox> 接受 <xref:System.Collections.IList>，但不會保留和呈現空白字元 \(像是每個 <xref:System.Windows.Controls.ListBoxItem> 間的換行字元\)。 如果您嘗試使用換行字元做為 <xref:System.Windows.Controls.ListBoxItem> 項目之字串間的分隔符號，則完全無法運作；以換行字元分隔的字串會視為一個字串和一個項目。  
+ <span data-ttu-id="249ad-151">即使是可接受字串的內容模型，這些內容模型中的預設行為也都是不會將任何保留的空白字元視為必要。</span><span class="sxs-lookup"><span data-stu-id="249ad-151">Even for content models that can take strings, the default behavior within these content models is that any whitespace that remains is not treated as significant.</span></span> <span data-ttu-id="249ad-152">例如， <xref:System.Windows.Controls.ListBox> 接受 <xref:System.Collections.IList>，但不會保留和呈現空白字元 (像是每個 <xref:System.Windows.Controls.ListBoxItem>間的換行字元)。</span><span class="sxs-lookup"><span data-stu-id="249ad-152">For example, <xref:System.Windows.Controls.ListBox> takes an <xref:System.Collections.IList>, but the whitespace (such as linefeeds between each <xref:System.Windows.Controls.ListBoxItem>) is not preserved and not rendered.</span></span> <span data-ttu-id="249ad-153">如果您嘗試使用換行字元做為 <xref:System.Windows.Controls.ListBoxItem> 項目之字串間的分隔符號，則完全無法運作；以換行字元分隔的字串會視為一個字串和一個項目。</span><span class="sxs-lookup"><span data-stu-id="249ad-153">If you attempt to use linefeeds as separators between strings for <xref:System.Windows.Controls.ListBoxItem> items, it does not work at all; the strings that are separated by the linefeeds are treated as one string and one item.</span></span>  
   
- 將空白字元視為必要的集合通常是非固定格式文件模型的一部分。 支援空白字元保留行為的主要集合是 <xref:System.Windows.Documents.InlineCollection>。 這個集合類別是使用 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 宣告的；當發現這個屬性時，[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器會將集合內的空白字元視為必要。`xml:space="preserve"` 搭配以 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 表示之集合內的空白字元的結果，會保留並呈現所有空白字元。`xml:space="default"` 搭配 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 集合內的空白字元的結果，會引發稍早所述的初始空白字元正規化，也就是在特定位置留下一個空格，再保留並呈現這些空格。 您可以自行決定要使用哪一種行為，而且您應該選擇性地使用 `xml:space` 來允許您想要的行為。  
+ <span data-ttu-id="249ad-154">將空白字元視為必要的集合通常是非固定格式文件模型的一部分。</span><span class="sxs-lookup"><span data-stu-id="249ad-154">Those collections that do treat whitespace as significant are typically part of the flow document model.</span></span> <span data-ttu-id="249ad-155">支援空白字元保留行為的主要集合是 <xref:System.Windows.Documents.InlineCollection>。</span><span class="sxs-lookup"><span data-stu-id="249ad-155">The primary collection that supports whitespace preservation behavior is <xref:System.Windows.Documents.InlineCollection>.</span></span> <span data-ttu-id="249ad-156">這個集合類別是使用 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>宣告的；當發現這個屬性時， [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器會將集合內的空白字元視為必要。</span><span class="sxs-lookup"><span data-stu-id="249ad-156">This collection class is declared with the <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>; when this attribute is found, the [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processor will treat whitespace within the collection as significant.</span></span> <span data-ttu-id="249ad-157">`xml:space="preserve"` 搭配以 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 表示之集合內的空白字元的結果，會保留並呈現所有空白字元。</span><span class="sxs-lookup"><span data-stu-id="249ad-157">The combination of `xml:space="preserve"` and whitespace within a <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> denoted collection is that all white space is preserved and rendered.</span></span> <span data-ttu-id="249ad-158">`xml:space="default"` 搭配 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 集合內的空白字元的結果，會引發稍早所述的初始空白字元正規化，也就是在特定位置留下一個空格，再保留並呈現這些空格。</span><span class="sxs-lookup"><span data-stu-id="249ad-158">The combination of `xml:space="default"` and whitespace within a <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> causes the initial whitespace normalization described earlier, which leaves one space in certain positions, and those spaces are preserved and rendered.</span></span> <span data-ttu-id="249ad-159">您可以自行決定要使用哪一種行為，而且您應該選擇性地使用 `xml:space` 來允許您想要的行為。</span><span class="sxs-lookup"><span data-stu-id="249ad-159">Which behavior is desirable is up to you, and you should use `xml:space` selectively to enable the behavior that you want.</span></span>  
   
- 此外，非固定格式文件模型中某些代表分行符號的內嵌項目，即使在需要空白字元的集合中，也應該刻意不引入額外的空格。 例如，<xref:System.Windows.Documents.LineBreak> 項目與 [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)] 中的 \<BR\/\> 標記具有相同目的，而且為方便在標記中閱讀，<xref:System.Windows.Documents.LineBreak> 通常會以撰寫的換行字元與任何後續文字區隔。 該換行字元不應該正規化為下一行的前置空格。 為了允許該行為，<xref:System.Windows.Documents.LineBreak> 項目的類別定義會套用 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，然後由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器解譯為一律修剪 <xref:System.Windows.Documents.LineBreak> 周圍的空白字元。  
+ <span data-ttu-id="249ad-160">此外，非固定格式文件模型中某些代表分行符號的內嵌項目，即使在需要空白字元的集合中，也應該刻意不引入額外的空格。</span><span class="sxs-lookup"><span data-stu-id="249ad-160">Also, certain inline elements that connote a linebreak in a flow document model should deliberately not introduce an extra space even in a whitespace significant collection.</span></span> <span data-ttu-id="249ad-161">例如，<xref:System.Windows.Documents.LineBreak>項目具有相同目的\<b R / > 標記中[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]，而且為方便在標記中，閱讀通常<xref:System.Windows.Documents.LineBreak>任何後續文字以撰寫的換行字元分隔。</span><span class="sxs-lookup"><span data-stu-id="249ad-161">For example, the <xref:System.Windows.Documents.LineBreak> element has the same purpose as the \<BR/> tag in [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)], and for readability in markup, typically a <xref:System.Windows.Documents.LineBreak> is separated from any subsequent text by an authored linefeed.</span></span> <span data-ttu-id="249ad-162">該換行字元不應該正規化為下一行的前置空格。</span><span class="sxs-lookup"><span data-stu-id="249ad-162">That linefeed should not be normalized to become a leading space in the subsequent line.</span></span> <span data-ttu-id="249ad-163">為了允許該行為， <xref:System.Windows.Documents.LineBreak> 項目的類別定義會套用 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，然後由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器解譯為一律修剪 <xref:System.Windows.Documents.LineBreak> 周圍的空白字元。</span><span class="sxs-lookup"><span data-stu-id="249ad-163">To enable that behavior, the class definition for the <xref:System.Windows.Documents.LineBreak> element applies the <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, which is then interpreted by the [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processor to mean that whitespace surrounding <xref:System.Windows.Documents.LineBreak> is always trimmed.</span></span>  
   
-## 請參閱  
- [XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [XML Character Entities and XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)   
- [xml:space Handling in XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="249ad-164">另請參閱</span><span class="sxs-lookup"><span data-stu-id="249ad-164">See Also</span></span>  
+ [<span data-ttu-id="249ad-165">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="249ad-165">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="249ad-166">XML 字元實體和 XAML</span><span class="sxs-lookup"><span data-stu-id="249ad-166">XML Character Entities and XAML</span></span>](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
+ [<span data-ttu-id="249ad-167">XAML 中的 xml:space 處理</span><span class="sxs-lookup"><span data-stu-id="249ad-167">xml:space Handling in XAML</span></span>](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

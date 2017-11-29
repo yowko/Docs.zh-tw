@@ -1,46 +1,47 @@
 ---
-title: "如何：以 Windows Form GroupBox 控制項來群組控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 群組"
-  - "GroupBox 控制項 [Windows Form], 群組控制項"
-  - "Windows Form 控制項, 群組"
+title: "如何：以 Windows Form GroupBox 控制項來群組控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], grouping
+- GroupBox control [Windows Forms], grouping controls
+- Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 50d29de04b4e221105bb02e58de01344f13af69f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：以 Windows Form GroupBox 控制項來群組控制項
-Windows Form <xref:System.Windows.Forms.GroupBox> 控制項可用來將其他控制項設為群組。  將控制項群組起來的三個目的：  
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a><span data-ttu-id="ab8a5-102">如何：以 Windows Form GroupBox 控制項來群組控制項</span><span class="sxs-lookup"><span data-stu-id="ab8a5-102">How to: Group Controls with the Windows Forms GroupBox Control</span></span>
+<span data-ttu-id="ab8a5-103">Windows Form<xref:System.Windows.Forms.GroupBox>控制項可用來將其他控制項組成群組。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-103">Windows Forms <xref:System.Windows.Forms.GroupBox> controls are used to group other controls.</span></span> <span data-ttu-id="ab8a5-104">群組控制項的三個原因有：</span><span class="sxs-lookup"><span data-stu-id="ab8a5-104">There are three reasons to group controls:</span></span>  
   
--   將表單內相關元素群組起來，可以達到較清晰的使用者介面視覺效果。  
+-   <span data-ttu-id="ab8a5-105">若要建立的清楚的使用者介面的相關的表單項目的視覺化群組。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-105">To create a visual grouping of related form elements for a clear user interface.</span></span>  
   
--   依程式設計方式組成群組 \(例如選項按鈕\)。  
+-   <span data-ttu-id="ab8a5-106">若要建立以程式設計方式 （選項按鈕群組，例如）。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-106">To create programmatic grouping (of radio buttons, for example).</span></span>  
   
--   在設計階段，可一次移動群組內所有的控制項。  
+-   <span data-ttu-id="ab8a5-107">在設計階段，做為一個單位移動控制項。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-107">For moving the controls as a unit at design time.</span></span>  
   
-### 若要建立控制項群組  
+### <a name="to-create-a-group-of-controls"></a><span data-ttu-id="ab8a5-108">若要建立的控制項群組</span><span class="sxs-lookup"><span data-stu-id="ab8a5-108">To create a group of controls</span></span>  
   
-1.  在表單上繪製 <xref:System.Windows.Forms.GroupBox> 控制項。  
+1.  <span data-ttu-id="ab8a5-109">繪製<xref:System.Windows.Forms.GroupBox>控制項在表單上的。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-109">Draw a <xref:System.Windows.Forms.GroupBox> control on a form.</span></span>  
   
-2.  將其他控制項加入群組方塊，並在群組方塊中繪製各個控制項。  
+2.  <span data-ttu-id="ab8a5-110">將其他控制項加入群組方塊中，每個群組的方塊內繪製。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-110">Add other controls to the group box, drawing each inside the group box.</span></span>  
   
-     如果您已經具有您想要置於某個群組方塊中的現有控制項，您可以選取所有控制項，然後剪下並置入剪貼簿，選取 <xref:System.Windows.Forms.GroupBox> 控制項，然後將它們貼到這個群組方塊內即可。  您也可以將它們拖曳至群組方塊。  
+     <span data-ttu-id="ab8a5-111">如果您有想要住在群組中的現有控制項，您可以選取所有控制項，剪下到剪貼簿中，都選取並<xref:System.Windows.Forms.GroupBox>控制項，然後再將它們貼至 [群組] 方塊。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-111">If you have existing controls that you want to enclose in a group box, you can select all the controls, cut them to the Clipboard, select the <xref:System.Windows.Forms.GroupBox> control, and then paste them into the group box.</span></span> <span data-ttu-id="ab8a5-112">您也可以將它們拖曳至 [群組] 方塊。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-112">You can also drag them into the group box.</span></span>  
   
-3.  將群組方塊的 <xref:System.Windows.Forms.GroupBox.Text%2A> 屬性設為適當的標題。  
+3.  <span data-ttu-id="ab8a5-113">設定<xref:System.Windows.Forms.GroupBox.Text%2A>屬性群組方塊，以適當的標題。</span><span class="sxs-lookup"><span data-stu-id="ab8a5-113">Set the <xref:System.Windows.Forms.GroupBox.Text%2A> property of the group box to an appropriate caption.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.GroupBox>   
- [GroupBox 控制項](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ab8a5-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ab8a5-114">See Also</span></span>  
+ <xref:System.Windows.Forms.GroupBox>  
+ [<span data-ttu-id="ab8a5-115">GroupBox 控制項</span><span class="sxs-lookup"><span data-stu-id="ab8a5-115">GroupBox Control</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

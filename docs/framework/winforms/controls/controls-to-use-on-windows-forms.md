@@ -1,246 +1,247 @@
 ---
-title: "在 Windows Form 上使用的控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form]"
-  - "Windows Form 控制項的清單"
+title: "在 Windows Form 上使用的控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms]
+- Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 在 Windows Form 上使用的控制項
-以下是依字母順序列出的控制項和元件可以在 Windows Form 上使用。 除了本章節涵蓋的 Windows Form 控制項，您可以將 ActiveX 和自訂控制項加入 Windows Form。 如果您沒有看到這裡列出您需要的控制項，您也可以建立您自己。 如需詳細資訊，請參閱[在設計階段開發 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。 如需有關選擇您需要請參閱[函式的 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  
+# <a name="controls-to-use-on-windows-forms"></a><span data-ttu-id="c81ff-102">在 Windows Form 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-102">Controls to Use on Windows Forms</span></span>
+<span data-ttu-id="c81ff-103">以下是可在 Windows Forms 上使用的控制項和元件清單，依字母順序列出。</span><span class="sxs-lookup"><span data-stu-id="c81ff-103">The following is an alphabetic list of controls and components that can be used on Windows Forms.</span></span> <span data-ttu-id="c81ff-104">除了本節涵蓋的 Windows Forms 控制項之外，您還可以將 ActiveX 和自訂控制項新增至 Windows Forms。</span><span class="sxs-lookup"><span data-stu-id="c81ff-104">In addition to the Windows Forms controls covered in this section, you can add ActiveX and custom controls to Windows Forms.</span></span> <span data-ttu-id="c81ff-105">如果您在這裡列出的控制項中找不到所需的控制項，則也可以建立自己的控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-105">If you do not find the control you need listed here, you can also create your own.</span></span> <span data-ttu-id="c81ff-106">如需詳細資訊，請參閱[在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="c81ff-106">For details, see [Developing Windows Forms Controls at Design Time](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span> <span data-ttu-id="c81ff-107">如需選擇所需控制項的詳細資訊，請參閱[依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。</span><span class="sxs-lookup"><span data-stu-id="c81ff-107">For more information about choosing the control you need, see [Windows Forms Controls by Function](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]控制項根據所提供的類別[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]。  
+>  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]<span data-ttu-id="c81ff-108"> 控制項是根據 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 所提供的類別。</span><span class="sxs-lookup"><span data-stu-id="c81ff-108"> controls are based on classes provided by the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
- [Windows Form 控制項，由函式](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- 列出並描述為基礎的 Windows Form 控制項[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]。  
+## <a name="in-this-section"></a><span data-ttu-id="c81ff-109">本章節內容</span><span class="sxs-lookup"><span data-stu-id="c81ff-109">In This Section</span></span>  
+ [<span data-ttu-id="c81ff-110">依功能區分 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-110">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ <span data-ttu-id="c81ff-111">根據 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，列出和描述 Windows Forms 控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-111">Lists and describes Windows Forms controls based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
- [使用內建主控描繪支援的控制項](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- 描述如何變更的控制項的外觀，未提供的屬性。  
+ [<span data-ttu-id="c81ff-112">使用內建主控描繪支援的控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-112">Controls with Built-In Owner-Drawing Support</span></span>](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ <span data-ttu-id="c81ff-113">描述如何更改無法透過屬性提供之控制項外觀的層面。</span><span class="sxs-lookup"><span data-stu-id="c81ff-113">Describes how to alter aspects of a control's appearance that are not available through properties.</span></span>  
   
- [BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)  
- 可讓表單或控制項，以非同步方式執行作業。  
+ [<span data-ttu-id="c81ff-114">BackgroundWorker 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-114">BackgroundWorker Component</span></span>](../../../../docs/framework/winforms/controls/backgroundworker-component.md)  
+ <span data-ttu-id="c81ff-115">可讓表單或控制項非同步執行作業。</span><span class="sxs-lookup"><span data-stu-id="c81ff-115">Enables a form or control to run an operation asynchronously.</span></span>  
   
- [BindingNavigator 控制項](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- 巡覽及管理使用者介面 (UI) 提供繫結至資料的控制項。  
+ [<span data-ttu-id="c81ff-116">BindingNavigator 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-116">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-117">提供繫結至資料之控制項的瀏覽和操作使用者介面 (UI)。</span><span class="sxs-lookup"><span data-stu-id="c81ff-117">Provides the navigation and manipulation user interface (UI) for controls that are bound to data.</span></span>  
   
- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- 封裝繫結至控制項的資料來源。  
+ [<span data-ttu-id="c81ff-118">BindingSource 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-118">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ <span data-ttu-id="c81ff-119">封裝資料來源以繫結至控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-119">Encapsulates a data source for binding to controls.</span></span>  
   
- [按鈕控制項](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)  
- 顯示使用者可以按一下來執行動作的標準按鈕。  
+ [<span data-ttu-id="c81ff-120">Button 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-120">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-121">顯示使用者可以按一下來執行動作的標準按鈕。</span><span class="sxs-lookup"><span data-stu-id="c81ff-121">Presents a standard button that the user can click to perform actions.</span></span>  
   
- [核取方塊控制項](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)  
- 表示條件是開啟或關閉。  
+ [<span data-ttu-id="c81ff-122">CheckBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-122">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-123">表示開啟還是關閉條件。</span><span class="sxs-lookup"><span data-stu-id="c81ff-123">Indicates whether a condition is on or off.</span></span>  
   
- [CheckedListBox 控制項](../../../../docs/framework/winforms/controls/checkedlistbox-control-windows-forms.md)  
- 顯示每個項目旁的核取方塊的項目清單。  
+ [<span data-ttu-id="c81ff-124">CheckedListBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-124">CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-125">顯示項目清單，並於每個項目旁邊顯示核取方塊。</span><span class="sxs-lookup"><span data-stu-id="c81ff-125">Displays a list of items with a check box next to each item.</span></span>  
   
- [ColorDialog 元件](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- 可讓使用者從預先設定的對話方塊中的調色盤選取色彩，並將自訂色彩加入該調色盤。  
+ [<span data-ttu-id="c81ff-126">ColorDialog 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-126">ColorDialog Component</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-127">可讓使用者從預先設定之對話方塊中的調色盤選取色彩，並將自訂色彩新增至該調色盤。</span><span class="sxs-lookup"><span data-stu-id="c81ff-127">Allows the user to select a color from a palette in a pre-configured dialog box and to add custom colors to that palette.</span></span>  
   
- [ComboBox 控制項](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- 在下拉式清單方塊中顯示資料。  
+ [<span data-ttu-id="c81ff-128">ComboBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-128">ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-129">在下拉式方塊中顯示資料。</span><span class="sxs-lookup"><span data-stu-id="c81ff-129">Displays data in a drop-down combo box.</span></span>  
   
- [ContextMenu 元件](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- 使用者提供方便的功能表與選取的物件相關聯的常用命令。 雖然<xref:System.Windows.Forms.ContextMenuStrip>會取代，並將功能加入至<xref:System.Windows.Forms.ContextMenu>以前的版本控制<xref:System.Windows.Forms.ContextMenu>如果您想要保留以提供回溯相容性及未來使用。  
+ [<span data-ttu-id="c81ff-130">ContextMenu 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-130">ContextMenu Component</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-131">將與所選取物件建立關聯之常用命令的易存取功能表提供給使用者。</span><span class="sxs-lookup"><span data-stu-id="c81ff-131">Provides users with an easily accessible menu of frequently used commands that are associated with the selected object.</span></span> <span data-ttu-id="c81ff-132">雖然<xref:System.Windows.Forms.ContextMenuStrip>取代，並將功能加入<xref:System.Windows.Forms.ContextMenu>的較舊的版本控制<xref:System.Windows.Forms.ContextMenu>如果您想要保留以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="c81ff-132">Although <xref:System.Windows.Forms.ContextMenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control of previous versions, <xref:System.Windows.Forms.ContextMenu> is retained for both backward compatibility and future use if so desired.</span></span>  
   
- [ContextMenuStrip 控制項](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
- 代表捷徑功能表。 雖然<xref:System.Windows.Forms.ContextMenuStrip>會取代，並將功能加入至<xref:System.Windows.Forms.ContextMenu>以前的版本控制<xref:System.Windows.Forms.ContextMenu>如果您想要保留以提供回溯相容性及未來使用。  
+ [<span data-ttu-id="c81ff-133">ContextMenuStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-133">ContextMenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
+ <span data-ttu-id="c81ff-134">代表捷徑功能表。</span><span class="sxs-lookup"><span data-stu-id="c81ff-134">Represents a shortcut menu.</span></span> <span data-ttu-id="c81ff-135">雖然<xref:System.Windows.Forms.ContextMenuStrip>取代，並將功能加入<xref:System.Windows.Forms.ContextMenu>的較舊的版本控制<xref:System.Windows.Forms.ContextMenu>如果您想要保留以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="c81ff-135">Although <xref:System.Windows.Forms.ContextMenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control of previous versions, <xref:System.Windows.Forms.ContextMenu> is retained for both backward compatibility and future use if so desired.</span></span>  
   
- [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- 顯示表格式資料集中的資料，讓更新資料來源。  
+ [<span data-ttu-id="c81ff-136">DataGrid 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-136">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-137">顯示資料集中的表格式資料，並允許更新資料來源。</span><span class="sxs-lookup"><span data-stu-id="c81ff-137">Displays tabular data from a dataset and allows for updates to the data source.</span></span>  
   
- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- 顯示與編輯表格式資料提供彈性、 可延伸的系統。  
+ [<span data-ttu-id="c81ff-138">DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-138">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-139">提供彈性且可延伸的系統來顯示和編輯表格式資料。</span><span class="sxs-lookup"><span data-stu-id="c81ff-139">Provides a flexible, extensible system for displaying and editing tabular data.</span></span>  
   
- [DateTimePicker 控制項](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- 可讓使用者選取單一項目清單中的日期或時間。  
+ [<span data-ttu-id="c81ff-140">DateTimePicker 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-140">DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-141">允許使用者從日期或時間清單中選取單一項目。</span><span class="sxs-lookup"><span data-stu-id="c81ff-141">Allows the user to select a single item from a list of dates or times.</span></span>  
   
- [對話方塊控制項和元件](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- 描述一組可讓使用者與應用程式或系統進行標準互動的控制項。  
+ [<span data-ttu-id="c81ff-142">對話方塊控制項和元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-142">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="c81ff-143">描述可讓使用者與應用程式或系統執行標準互動的一組控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-143">Describes a set of controls that allow users to perform standard interactions with the application or system.</span></span>  
   
- [DomainUpDown 控制項](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- 顯示使用者可以瀏覽和選取的文字字串。  
+ [<span data-ttu-id="c81ff-144">DomainUpDown 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-144">DomainUpDown Control</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-145">顯示使用者可以瀏覽和選取的文字字串。</span><span class="sxs-lookup"><span data-stu-id="c81ff-145">Displays text strings that a user can browse through and select from.</span></span>  
   
- [ErrorProvider 元件](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
- 以非干擾式的方式，向使用者顯示資訊時發生錯誤。  
+ [<span data-ttu-id="c81ff-146">ErrorProvider 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-146">ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-147">以非干擾方式，向使用者顯示錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="c81ff-147">Displays error information to the user in a non-intrusive way.</span></span>  
   
- 「 FileDialog 類別 」  
- 提供檔案對話方塊的基底類別的功能。  
+ <span data-ttu-id="c81ff-148">"FileDialog 類別"</span><span class="sxs-lookup"><span data-stu-id="c81ff-148">"FileDialog Class"</span></span>  
+ <span data-ttu-id="c81ff-149">提供檔案對話方塊的基底類別功能。</span><span class="sxs-lookup"><span data-stu-id="c81ff-149">Provides base-class functionality for file dialog boxes.</span></span>  
   
- [FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
- 表示水平或垂直方式動態配置其內容的面板。  
+ [<span data-ttu-id="c81ff-150">FlowLayoutPanel 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-150">FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-151">代表透過水平或垂直方式動態配置其內容的面板。</span><span class="sxs-lookup"><span data-stu-id="c81ff-151">Represents a panel that dynamically lays out its contents horizontally or vertically.</span></span>  
   
- [FolderBrowserDialog 元件](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)  
- 顯示與使用者可以瀏覽和選取的目錄或建立一個新的介面。  
+ [<span data-ttu-id="c81ff-152">FolderBrowserDialog 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-152">FolderBrowserDialog Component</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-153">顯示使用者可用來瀏覽以及選取目錄或建立新目錄的介面。</span><span class="sxs-lookup"><span data-stu-id="c81ff-153">Displays an interface with which users can browse and select a directory or create a new one.</span></span>  
   
- [FontDialog 元件](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)  
- 公開目前安裝在系統上的字型。  
+ [<span data-ttu-id="c81ff-154">FontDialog 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-154">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-155">公開目前安裝在系統上的字型。</span><span class="sxs-lookup"><span data-stu-id="c81ff-155">Exposes the fonts that are currently installed on the system.</span></span>  
   
- [GroupBox 控制項](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
- 提供可識別的群組為其他控制項。  
+ [<span data-ttu-id="c81ff-156">GroupBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-156">GroupBox Control</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-157">提供其他控制項的可識別分組。</span><span class="sxs-lookup"><span data-stu-id="c81ff-157">Provides an identifiable grouping for other controls.</span></span>  
   
- [HelpProvider 元件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- 將 HTML 說明檔與 Windows 架構應用程式產生關聯。  
+ [<span data-ttu-id="c81ff-158">HelpProvider 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-158">HelpProvider Component</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-159">建立 HTML 說明檔與 Windows 應用程式的關聯。</span><span class="sxs-lookup"><span data-stu-id="c81ff-159">Associates an HTML Help file with a Windows-based application.</span></span>  
   
- [HScrollBar 和 VScrollBar 控制項](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-windows-forms.md)  
- 捲動的水平或垂直方式在應用程式或控制項內提供瀏覽清單的項目或大量的資訊。  
+ [<span data-ttu-id="c81ff-160">HScrollBar 和 VScrollBar 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-160">HScrollBar and VScrollBar Controls</span></span>](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-windows-forms.md)  
+ <span data-ttu-id="c81ff-161">在應用程式或控制項內以水平或垂直方式捲動，以瀏覽項目清單或大量資訊。</span><span class="sxs-lookup"><span data-stu-id="c81ff-161">Provide navigation through a list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span>  
   
- [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- 其他控制項中顯示映像。  
+ [<span data-ttu-id="c81ff-162">ImageList 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-162">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-163">在其他控制項上顯示影像。</span><span class="sxs-lookup"><span data-stu-id="c81ff-163">Displays images on other controls.</span></span>  
   
- [Label 控制項](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)  
- 顯示使用者無法編輯的文字。  
+ [<span data-ttu-id="c81ff-164">Label 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-164">Label Control</span></span>](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-165">顯示使用者無法編輯的文字。</span><span class="sxs-lookup"><span data-stu-id="c81ff-165">Displays text that cannot be edited by the user.</span></span>  
   
- [LinkLabel 控制項](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)  
- 可讓您將 Web 樣式連結加入至 Windows Form 應用程式。  
+ [<span data-ttu-id="c81ff-166">LinkLabel 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-166">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-167">可讓您將 Web 樣式連結新增至 Windows Forms 應用程式。</span><span class="sxs-lookup"><span data-stu-id="c81ff-167">Allows you to add Web-style links to Windows Forms applications.</span></span>  
   
- [ListBox 控制項](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
- 可讓使用者從預先定義的清單選取一或多個項目。  
+ [<span data-ttu-id="c81ff-168">ListBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-168">ListBox Control</span></span>](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-169">允許使用者從預先定義的清單中選取一或多個項目。</span><span class="sxs-lookup"><span data-stu-id="c81ff-169">Allows the user to select one or more items from a predefined list.</span></span>  
   
- [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- Windows 檔案總管 的方式顯示具有圖示的項目清單。  
+ [<span data-ttu-id="c81ff-170">ListView 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-170">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-171">透過 Windows 檔案總管顯示具有圖示的項目清單。</span><span class="sxs-lookup"><span data-stu-id="c81ff-171">Displays a list of items with icons, in the manner of Windows Explorer.</span></span>  
   
- [MainMenu 元件](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
- 在執行階段顯示的功能表。 雖然<xref:System.Windows.Forms.MenuStrip>會取代，並將功能加入至<xref:System.Windows.Forms.MainMenu>以前的版本控制<xref:System.Windows.Forms.MainMenu>如果您選擇保留以提供回溯相容性及未來使用。  
+ [<span data-ttu-id="c81ff-172">MainMenu 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-172">MainMenu Component</span></span>](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-173">在執行階段顯示功能表。</span><span class="sxs-lookup"><span data-stu-id="c81ff-173">Displays a menu at run time.</span></span> <span data-ttu-id="c81ff-174">雖然<xref:System.Windows.Forms.MenuStrip>取代，並將功能加入<xref:System.Windows.Forms.MainMenu>的較舊的版本控制<xref:System.Windows.Forms.MainMenu>如果您選擇保留以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="c81ff-174">Although <xref:System.Windows.Forms.MenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.MainMenu> control of previous versions, <xref:System.Windows.Forms.MainMenu> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
- 限制使用者在表單中輸入的格式。  
+ [<span data-ttu-id="c81ff-175">MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-175">MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-176">限制表單中使用者輸入的格式。</span><span class="sxs-lookup"><span data-stu-id="c81ff-176">Constrains the format of user input in a form.</span></span>  
   
- [MenuStrip 控制項](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- 提供功能表系統給表單。 雖然<xref:System.Windows.Forms.MenuStrip>會取代，並將功能加入至<xref:System.Windows.Forms.MainMenu>以前的版本控制<xref:System.Windows.Forms.MainMenu>如果您選擇保留以提供回溯相容性及未來使用。  
+ [<span data-ttu-id="c81ff-177">MenuStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-177">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-178">提供功能表系統給表單。</span><span class="sxs-lookup"><span data-stu-id="c81ff-178">Provides a menu system for a form.</span></span> <span data-ttu-id="c81ff-179">雖然<xref:System.Windows.Forms.MenuStrip>取代，並將功能加入<xref:System.Windows.Forms.MainMenu>的較舊的版本控制<xref:System.Windows.Forms.MainMenu>如果您選擇保留以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="c81ff-179">Although <xref:System.Windows.Forms.MenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.MainMenu> control of previous versions, <xref:System.Windows.Forms.MainMenu> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [MonthCalendar 控制項](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- 提供直覺式的圖形介面，以便讓使用者檢視並設定日期資訊。  
+ [<span data-ttu-id="c81ff-180">MonthCalendar 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-180">MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-181">提供直覺式圖形介面，以讓使用者檢視和設定日期資訊。</span><span class="sxs-lookup"><span data-stu-id="c81ff-181">Presents an intuitive graphical interface for users to view and set date information.</span></span>  
   
- [NotifyIcon 元件](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- 在背景中執行，否則不會有使用者介面的處理程序圖示。  
+ [<span data-ttu-id="c81ff-182">NotifyIcon 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-182">NotifyIcon Component</span></span>](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-183">顯示在背景執行且不會有使用者介面之程序的圖示。</span><span class="sxs-lookup"><span data-stu-id="c81ff-183">Displays icons for processes that run in the background and would not otherwise have user interfaces.</span></span>  
   
- [數值上下按鈕控制項](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- 顯示使用者可以瀏覽和選取的數字。  
+ [<span data-ttu-id="c81ff-184">NumericUpDown 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-184">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-185">顯示使用者可以瀏覽和選取的數字。</span><span class="sxs-lookup"><span data-stu-id="c81ff-185">Displays numerals that a user can browse through and select from.</span></span>  
   
- [OpenFileDialog 元件](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
- 可讓使用者使用預先設定的對話方塊開啟檔案。  
+ [<span data-ttu-id="c81ff-186">OpenFileDialog 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-186">OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-187">讓使用者使用預先設定的對話方塊來開啟檔案。</span><span class="sxs-lookup"><span data-stu-id="c81ff-187">Allows users to open files by using a pre-configured dialog box.</span></span>  
   
- [PageSetupDialog 元件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
- 設定頁面透過預先設定的對話方塊列印的詳細資料。  
+ [<span data-ttu-id="c81ff-188">PageSetupDialog 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-188">PageSetupDialog Component</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-189">設定要透過預先設定之對話方塊進行列印的頁面詳細資料。</span><span class="sxs-lookup"><span data-stu-id="c81ff-189">Sets page details for printing through a pre-configured dialog box.</span></span>  
   
- [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- 提供其他可識別的群組控制項，並可捲動。  
+ [<span data-ttu-id="c81ff-190">Panel 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-190">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-191">提供其他控制項的可識別分組，並允許捲動。</span><span class="sxs-lookup"><span data-stu-id="c81ff-191">Provide an identifiable grouping for other controls, and allows for scrolling.</span></span>  
   
- [PictureBox 控制項](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)  
- 圖形顯示點陣圖、 GIF、 JPEG、 中繼檔或圖示格式。  
+ [<span data-ttu-id="c81ff-192">PictureBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-192">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-193">顯示點陣圖、GIF、JPEG、中繼檔或圖示格式的圖形。</span><span class="sxs-lookup"><span data-stu-id="c81ff-193">Displays graphics in bitmap, GIF, JPEG, metafile, or icon format.</span></span>  
   
- [PrintDialog 元件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
- 選取印表機、選擇要列印的頁面，以及決定其他與列印相關的設定。  
+ [<span data-ttu-id="c81ff-194">PrintDialog 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-194">PrintDialog Component</span></span>](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-195">選取印表機、選擇要列印的頁面，以及決定其他與列印相關的設定。</span><span class="sxs-lookup"><span data-stu-id="c81ff-195">Selects a printer, chooses the pages to print, and determines other print-related settings.</span></span>  
   
- [PrintDocument 元件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- 設定屬性，描述要列印，列印在 Windows 應用程式中的文件。  
+ [<span data-ttu-id="c81ff-196">PrintDocument 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-196">PrintDocument Component</span></span>](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-197">設定可描述列印項目的屬性，並在 Windows 應用程式中列印文件。</span><span class="sxs-lookup"><span data-stu-id="c81ff-197">Sets the properties that describe what to print, and prints the document in Windows-based applications.</span></span>  
   
- [PrintPreviewControl 控制項](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
- 可讓您建立您自己`PrintPreview`元件或對話方塊中，而不是使用預先設定的版本。  
+ [<span data-ttu-id="c81ff-198">PrintPreviewControl 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-198">PrintPreviewControl Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-199">可讓您建立自己的 `PrintPreview` 元件或對話方塊，而不是使用預先設定的版本。</span><span class="sxs-lookup"><span data-stu-id="c81ff-199">Allows you to create your own `PrintPreview` component or dialog box instead of using the pre-configured version.</span></span>  
   
- [PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- 將文件以列印格式顯示。  
+ [<span data-ttu-id="c81ff-200">PrintPreviewDialog 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-200">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-201">將文件以列印格式顯示。</span><span class="sxs-lookup"><span data-stu-id="c81ff-201">Displays a document as it will appear when it is printed.</span></span>  
   
- [ProgressBar 控制項](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)  
- 以圖形方式表示完成動作的進度。  
+ [<span data-ttu-id="c81ff-202">ProgressBar 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-202">ProgressBar Control</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-203">以圖形方式表示完成動作的進度。</span><span class="sxs-lookup"><span data-stu-id="c81ff-203">Graphically indicates the progress of an action towards completion.</span></span>  
   
- [選項按鈕控制項](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)  
- 對使用者顯示一組兩個或多個互斥的選項。  
+ [<span data-ttu-id="c81ff-204">RadioButton 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-204">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-205">對使用者顯示一組兩個或多個互斥選項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-205">Presents a set of two or more mutually exclusive options to the user.</span></span>  
   
- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- 可讓使用者輸入、 顯示和操作且已格式化的文字。  
+ [<span data-ttu-id="c81ff-206">RichTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-206">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-207">可讓使用者輸入、顯示和操作具有格式的文字。</span><span class="sxs-lookup"><span data-stu-id="c81ff-207">Allows users to enter, display, and manipulate text with formatting.</span></span>  
   
- [SaveFileDialog 元件](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
- 選取要儲存的檔案和儲存位置。  
+ [<span data-ttu-id="c81ff-208">SaveFileDialog 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-208">SaveFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-209">選取要儲存的檔案和儲存位置。</span><span class="sxs-lookup"><span data-stu-id="c81ff-209">Selects files to save and where to save them.</span></span>  
   
- 「 SoundPlayer 類別 」  
- 可讓您輕鬆地在應用程式中包含音效。  
+ <span data-ttu-id="c81ff-210">"SoundPlayer 類別"</span><span class="sxs-lookup"><span data-stu-id="c81ff-210">"SoundPlayer Class"</span></span>  
+ <span data-ttu-id="c81ff-211">可讓您輕鬆地在應用程式中包含音效。</span><span class="sxs-lookup"><span data-stu-id="c81ff-211">Enables you to easily include sounds in your applications.</span></span>  
   
- [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- 允許使用者調整停駐的控制項的大小。  
+ [<span data-ttu-id="c81ff-212">SplitContainer 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-212">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-213">允許使用者調整停駐的控制項大小。</span><span class="sxs-lookup"><span data-stu-id="c81ff-213">Allows the user to resize a docked control.</span></span>  
   
- [分隔器控制項](../../../../docs/framework/winforms/controls/splitter-control-windows-forms.md)  
- 允許使用者調整停駐的控制項 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]版本 1.x)。  
+ [<span data-ttu-id="c81ff-214">Splitter 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-214">Splitter Control</span></span>](../../../../docs/framework/winforms/controls/splitter-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-215">允許使用者調整停駐的控制項大小 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.x 版)。</span><span class="sxs-lookup"><span data-stu-id="c81ff-215">Allows the user to resize a docked control ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.x).</span></span>  
   
- [StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)  
- 顯示狀態資訊相關的控制項具有焦點。 雖然<xref:System.Windows.Forms.StatusStrip>會取代及擴充<xref:System.Windows.Forms.StatusBar>以前的版本控制<xref:System.Windows.Forms.StatusBar>如果您選擇保留以提供回溯相容性及未來使用。  
+ [<span data-ttu-id="c81ff-216">StatusBar 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-216">StatusBar Control</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-217">顯示具有焦點之控制項的相關狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="c81ff-217">Displays status information related to the control that has focus.</span></span> <span data-ttu-id="c81ff-218">雖然 <xref:System.Windows.Forms.StatusStrip> 會取代及擴充舊版的 <xref:System.Windows.Forms.StatusBar> 控制項，但是您也可以選擇保留 <xref:System.Windows.Forms.StatusBar>，以提供回溯相容性及供未來使用。</span><span class="sxs-lookup"><span data-stu-id="c81ff-218">Although <xref:System.Windows.Forms.StatusStrip> replaces and extends the <xref:System.Windows.Forms.StatusBar> control of previous versions, <xref:System.Windows.Forms.StatusBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [StatusStrip 控制項](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
- 代表一個 Windows 狀態列控制項。 雖然<xref:System.Windows.Forms.StatusStrip>會取代及擴充<xref:System.Windows.Forms.StatusBar>以前的版本控制<xref:System.Windows.Forms.StatusBar>如果您選擇保留以提供回溯相容性及未來使用。  
+ [<span data-ttu-id="c81ff-219">StatusStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-219">StatusStrip Control</span></span>](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
+ <span data-ttu-id="c81ff-220">代表一個 Windows 狀態列控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-220">Represents a Windows status bar control.</span></span> <span data-ttu-id="c81ff-221">雖然 <xref:System.Windows.Forms.StatusStrip> 會取代及擴充舊版的 <xref:System.Windows.Forms.StatusBar> 控制項，但是您也可以選擇保留 <xref:System.Windows.Forms.StatusBar>，以提供回溯相容性及供未來使用。</span><span class="sxs-lookup"><span data-stu-id="c81ff-221">Although <xref:System.Windows.Forms.StatusStrip> replaces and extends the <xref:System.Windows.Forms.StatusBar> control of previous versions, <xref:System.Windows.Forms.StatusBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [TabControl 控制項](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
- 顯示圖片或其他控制項可以包含多個索引標籤。  
+ [<span data-ttu-id="c81ff-222">TabControl 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-222">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-223">顯示多個可包含圖片或其他控制項的索引標籤。</span><span class="sxs-lookup"><span data-stu-id="c81ff-223">Displays multiple tabs that can contain pictures or other controls.</span></span>  
   
- [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)  
- 代表會在資料列和資料行所組成的方格中動態配置其內容的面板。  
+ [<span data-ttu-id="c81ff-224">TableLayoutPanel 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-224">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-225">代表會在資料列和資料行所組成的方格中動態配置其內容的面板。</span><span class="sxs-lookup"><span data-stu-id="c81ff-225">Represents a panel that dynamically lays out its contents in a grid composed of rows and columns.</span></span>  
   
- [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
- 可讓使用者可以編輯、 多行輸入。  
+ [<span data-ttu-id="c81ff-226">TextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-226">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-227">可讓使用者編輯多行輸入。</span><span class="sxs-lookup"><span data-stu-id="c81ff-227">Allows editable, multiline input from the user.</span></span>  
   
- [Timer 元件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- 在定期間隔引發事件。  
+ [<span data-ttu-id="c81ff-228">Timer 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-228">Timer Component</span></span>](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-229">會定期引發事件。</span><span class="sxs-lookup"><span data-stu-id="c81ff-229">Raises an event at regular intervals.</span></span>  
   
- [工具列控制項](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- 顯示功能表和啟動命令的點陣圖按鈕。 您可以擴充控制項的功能，並修改其外觀和行為。 雖然<xref:System.Windows.Forms.ToolStrip>會取代，並將功能加入至<xref:System.Windows.Forms.ToolBar>以前的版本控制<xref:System.Windows.Forms.ToolBar>如果您選擇保留以提供回溯相容性及未來使用。  
+ [<span data-ttu-id="c81ff-230">ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-230">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-231">顯示可啟動命令的功能表和點陣圖按鈕。</span><span class="sxs-lookup"><span data-stu-id="c81ff-231">Displays menus and bitmapped buttons that activate commands.</span></span> <span data-ttu-id="c81ff-232">您可以擴充控制項的功能，並修改其外觀和行為。</span><span class="sxs-lookup"><span data-stu-id="c81ff-232">You can extend the functionality of the control and modify its appearance and behavior.</span></span> <span data-ttu-id="c81ff-233">雖然<xref:System.Windows.Forms.ToolStrip>取代，並將功能加入<xref:System.Windows.Forms.ToolBar>的較舊的版本控制<xref:System.Windows.Forms.ToolBar>如果您選擇保留以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="c81ff-233">Although <xref:System.Windows.Forms.ToolStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control of previous versions, <xref:System.Windows.Forms.ToolBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- 在 Windows Form 應用程式中建立自訂工具列和功能表。 雖然<xref:System.Windows.Forms.ToolStrip>會取代，並將功能加入至<xref:System.Windows.Forms.ToolBar>以前的版本控制<xref:System.Windows.Forms.ToolBar>如果您選擇保留以提供回溯相容性及未來使用。  
+ [<span data-ttu-id="c81ff-234">ToolStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-234">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-235">在 Windows Forms 應用程式中建立自訂工具列和功能表。</span><span class="sxs-lookup"><span data-stu-id="c81ff-235">Creates custom toolbars and menus in your Windows Forms applications.</span></span> <span data-ttu-id="c81ff-236">雖然<xref:System.Windows.Forms.ToolStrip>取代，並將功能加入<xref:System.Windows.Forms.ToolBar>的較舊的版本控制<xref:System.Windows.Forms.ToolBar>如果您選擇保留以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="c81ff-236">Although <xref:System.Windows.Forms.ToolStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control of previous versions, <xref:System.Windows.Forms.ToolBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [ToolStripContainer 控制項](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
- 提供表單每一邊的面板的停駐、 浮動定位，以及排列<xref:System.Windows.Forms.ToolStrip>控制項和中央<xref:System.Windows.Forms.ToolStripContentPanel>傳統控制項。  
+ [<span data-ttu-id="c81ff-237">ToolStripContainer 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-237">ToolStripContainer Control</span></span>](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
+ <span data-ttu-id="c81ff-238">提供表單每一邊的面板停駐、 浮動定位，以及排列<xref:System.Windows.Forms.ToolStrip>控制項和中央<xref:System.Windows.Forms.ToolStripContentPanel>傳統控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-238">Provides panels on each side of a form for docking, rafting, and arranging <xref:System.Windows.Forms.ToolStrip> controls, and a central <xref:System.Windows.Forms.ToolStripContentPanel> for traditional controls.</span></span>  
   
- [ToolStripPanel 控制項](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
- 提供一個面板停駐、 浮動定位和排列<xref:System.Windows.Forms.ToolStrip>控制項。  
+ [<span data-ttu-id="c81ff-239">ToolStripPanel 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-239">ToolStripPanel Control</span></span>](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
+ <span data-ttu-id="c81ff-240">提供一個面板停駐、 浮動定位及排列<xref:System.Windows.Forms.ToolStrip>控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-240">Provides one panel for docking, rafting and arranging <xref:System.Windows.Forms.ToolStrip> controls.</span></span>  
   
- [ToolStripProgressBar 控制項概觀](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
- 以圖形方式表示完成動作的進度。 <xref:System.Windows.Forms.ToolStripProgressBar>通常會包含在<xref:System.Windows.Forms.StatusStrip>。  
+ [<span data-ttu-id="c81ff-241">ToolStripProgressBar 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="c81ff-241">ToolStripProgressBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
+ <span data-ttu-id="c81ff-242">以圖形方式表示完成動作的進度。</span><span class="sxs-lookup"><span data-stu-id="c81ff-242">Graphically indicates the progress of an action towards completion.</span></span> <span data-ttu-id="c81ff-243"><xref:System.Windows.Forms.ToolStripProgressBar>通常包含在<xref:System.Windows.Forms.StatusStrip>。</span><span class="sxs-lookup"><span data-stu-id="c81ff-243">The <xref:System.Windows.Forms.ToolStripProgressBar> is typically contained in a <xref:System.Windows.Forms.StatusStrip>.</span></span>  
   
- [ToolStripStatusLabel 控制項](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control.md)  
- 表示在面板<xref:System.Windows.Forms.StatusStrip>控制項。  
+ [<span data-ttu-id="c81ff-244">ToolStripStatusLabel 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-244">ToolStripStatusLabel Control</span></span>](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control.md)  
+ <span data-ttu-id="c81ff-245">代表 <xref:System.Windows.Forms.StatusStrip> 控制項中的面板。</span><span class="sxs-lookup"><span data-stu-id="c81ff-245">Represents a panel in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
- [ToolTip 元件](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- 當使用者指向其他控制項時，會顯示文字。  
+ [<span data-ttu-id="c81ff-246">ToolTip 元件</span><span class="sxs-lookup"><span data-stu-id="c81ff-246">ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ <span data-ttu-id="c81ff-247">在使用者指向其他控制項時顯示文字。</span><span class="sxs-lookup"><span data-stu-id="c81ff-247">Displays text when the user points at other controls.</span></span>  
   
- [TrackBar 控制項](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)  
- 可讓瀏覽大量的資訊，或以視覺方式調整數字設定。  
+ [<span data-ttu-id="c81ff-248">TrackBar 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-248">TrackBar Control</span></span>](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-249">允許瀏覽大量資訊，或以視覺方式調整數字設定。</span><span class="sxs-lookup"><span data-stu-id="c81ff-249">Allows navigation through a large amount of information or visually adjusting a numeric setting.</span></span>  
   
- [TreeView 控制項](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- 顯示的節點可以展開或摺疊的階層。  
+ [<span data-ttu-id="c81ff-250">TreeView 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-250">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-251">顯示可展開或摺疊的節點的階層。</span><span class="sxs-lookup"><span data-stu-id="c81ff-251">Displays a hierarchy of nodes that can be expanded or collapsed.</span></span>  
   
- [WebBrowser 控制項](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
- 主控網頁，並提供網際網路網頁瀏覽至您的應用程式的功能。  
+ [<span data-ttu-id="c81ff-252">WebBrowser 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-252">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
+ <span data-ttu-id="c81ff-253">裝載網頁，並提供您應用程式的網際網路網頁瀏覽功能。</span><span class="sxs-lookup"><span data-stu-id="c81ff-253">Hosts Web pages and provides Internet Web browsing capabilities to your application.</span></span>  
   
- [Windows Form 控制項用來列出選項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- 描述一組控制項用來為使用者提供一份可從中選擇的選項。  
+ [<span data-ttu-id="c81ff-254">用來列出選項的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-254">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="c81ff-255">描述一組控制項，用來向使用者提供一份可從中選擇的選項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-255">Describes a set of controls used to provide users with a list of options to choose from.</span></span>  
   
-## <a name="related-sections"></a>相關章節  
- [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)  
- 說明如何使用 Windows Form 控制項，並說明使用它們的重要概念。  
+## <a name="related-sections"></a><span data-ttu-id="c81ff-256">相關章節</span><span class="sxs-lookup"><span data-stu-id="c81ff-256">Related Sections</span></span>  
+ [<span data-ttu-id="c81ff-257">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-257">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="c81ff-258">說明如何使用 Windows Forms 控制項，以及描述其重要使用概念。</span><span class="sxs-lookup"><span data-stu-id="c81ff-258">Explains the use of Windows Forms controls, and describes important concepts for working with them.</span></span>  
   
- [在設計階段開發 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- 提供逐步解說主題，建議的哪一種控制項來建立，並建立您自己的控制項的其他資訊的連結。  
+ [<span data-ttu-id="c81ff-259">在設計階段開發 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="c81ff-259">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ <span data-ttu-id="c81ff-260">提供下列項目的連結：逐步執行主題、要建立之控制項類型的建議，以及建立您自己的控制項的其他資訊。</span><span class="sxs-lookup"><span data-stu-id="c81ff-260">Provides links to step-by-step topics, recommendations for which kind of control to create, and other information about creating your own control.</span></span>  
   
- [控制項和比較各種語言和程式庫中的可程式化物件](http://msdn.microsoft.com/zh-tw/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
- 提供 Visual Basic 6.0 中的控制項對應至對應的控制項中的資料表[!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]。 請注意，控制項現在會在類別[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]。  
+ [<span data-ttu-id="c81ff-261">比較各種語言和程式庫的控制項與可以透過程式設計的物件</span><span class="sxs-lookup"><span data-stu-id="c81ff-261">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ <span data-ttu-id="c81ff-262">提供資料表，以將 Visual Basic 6.0 中的控制項對應至 [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] 中的對應控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-262">Provides a table that maps controls in Visual Basic 6.0 to the corresponding control in [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)].</span></span> <span data-ttu-id="c81ff-263">請注意，控制項現在是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的類別。</span><span class="sxs-lookup"><span data-stu-id="c81ff-263">Note that controls are now classes in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
- [如何︰ 將 ActiveX 控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- 描述如何使用 Windows Form 上的 ActiveX 控制項。
+ [<span data-ttu-id="c81ff-264">如何：將 ActiveX 控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c81ff-264">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ <span data-ttu-id="c81ff-265">描述如何在 Windows Forms 上使用 ActiveX 控制項。</span><span class="sxs-lookup"><span data-stu-id="c81ff-265">Describes how to use ActiveX controls on Windows Forms.</span></span>

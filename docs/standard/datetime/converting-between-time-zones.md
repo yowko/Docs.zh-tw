@@ -1,123 +1,137 @@
 ---
-title: "在各時區間轉換時間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "轉換時間"
-  - "本地時間轉換"
-  - "時區 [.NET Framework], 轉換"
-  - "時間 [.NET Framework], 轉換"
-  - "UTC 時間, 轉換"
+title: "在各時區間轉換時間"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- times [.NET Framework], converting
+- time zones [.NET Framework], conversions
+- UTC times, converting
+- converting times
+- local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ace592f973c4730bd8b6e21006c8e54aef4c695a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 在各時區間轉換時間
-對於任何具有日期與時間功能的應用程式而言，處理不同時區的功能變得越來越重要。  應用程式已不能再假設，所有時間都可以顯示成 <xref:System.DateTime> 結構所提供的當地時間。  例如，網頁如果顯示美國的東部時間，對東亞地區的客戶而言就不具有公信力。  本主題說明如何將時間從一個時區轉換成另一個時區，以及如何轉換有限制時區感知的 <xref:System.DateTimeOffset> 值。  
-  
-## 轉換成 Coordinated Universal Time  
- Coordinated Universal Time \(UTC\) 是高度精確的原子時間標準。  全世界的時區都是以 UTC 的正\/負位移所表示的。  因此 UTC 是一種無時區，或中立時區的時間。  如果不同電腦中的日期與時間的可攜性十分重要，建議使用 UTC \(如需使用日期與時間的詳細資訊及最佳作法，請參閱[使用 .NET Framework 中的 DateTime 的編碼最佳作法](http://go.microsoft.com/fwlink/?LinkId=92342)\)。將個別時區轉換成 UTC，可以使時間的比較變得更簡單。  
-  
+# <a name="converting-times-between-time-zones"></a><span data-ttu-id="fecac-102">在各時區間轉換時間</span><span class="sxs-lookup"><span data-stu-id="fecac-102">Converting times between time zones</span></span>
+
+<span data-ttu-id="fecac-103">對於使用日期和時間來處理時區差異的任何應用程式，它會變得越來越重要。</span><span class="sxs-lookup"><span data-stu-id="fecac-103">It is becoming increasingly important for any application that works with dates and times to handle differences between time zones.</span></span> <span data-ttu-id="fecac-104">應用程式不會再假設，隨時可以表示的當地時間，這是從可用的時間<xref:System.DateTime>結構。</span><span class="sxs-lookup"><span data-stu-id="fecac-104">An application can no longer assume that all times can be expressed in the local time, which is the time available from the <xref:System.DateTime> structure.</span></span> <span data-ttu-id="fecac-105">例如，顯示美國東部目前時間的網頁對東亞地區的客戶不具公信力。</span><span class="sxs-lookup"><span data-stu-id="fecac-105">For example, a Web page that displays the current time in the eastern part of the United States will lack credibility to a customer in eastern Asia.</span></span> <span data-ttu-id="fecac-106">本主題說明如何將時間從一個時區轉換成另一個，以及如何將轉換<xref:System.DateTimeOffset>具有有限的時區感知的值。</span><span class="sxs-lookup"><span data-stu-id="fecac-106">This topic explains how to convert times from one time zone to another, as well as how to convert <xref:System.DateTimeOffset> values that have limited time zone awareness.</span></span>
+
+## <a name="converting-to-coordinated-universal-time"></a><span data-ttu-id="fecac-107">轉換為國際標準時間</span><span class="sxs-lookup"><span data-stu-id="fecac-107">Converting to Coordinated Universal Time</span></span>
+
+<span data-ttu-id="fecac-108">國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。</span><span class="sxs-lookup"><span data-stu-id="fecac-108">Coordinated Universal Time (UTC) is a high-precision, atomic time standard.</span></span> <span data-ttu-id="fecac-109">全世界的時區都會表示為與 UTC 的正或負位移。</span><span class="sxs-lookup"><span data-stu-id="fecac-109">The world’s time zones are expressed as positive or negative offsets from UTC.</span></span> <span data-ttu-id="fecac-110">因此，UTC 提供一種無時區或時區中性時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-110">Thus, UTC provides a kind of time-zone free or time-zone neutral time.</span></span> <span data-ttu-id="fecac-111">跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-111">The use of UTC time is recommended when a date and time's portability across computers is important.</span></span> <span data-ttu-id="fecac-112">(如詳細資訊和其他使用日期和時間的最佳作法，請參閱[撰寫程式碼使用.NET Framework 中的日期時間的最佳作法](http://go.microsoft.com/fwlink/?LinkId=92342)。)將個別時區轉換為 UTC 可輕鬆地比較時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-112">(For details and other best practices using dates and times, see [Coding best practices using DateTime in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=92342).) Converting individual time zones to UTC makes time comparisons easy.</span></span>
+
 > [!NOTE]
->  您也可以將 <xref:System.DateTimeOffset> 結構序列化，以明確的表示單一時間點。  因為 <xref:System.DateTimeOffset> 物件會將日期與時間值及其 UTC 的位移值一起儲存，所以永遠都是表示相對於 UTC 的特定時間點。  
-  
- 將時間轉換成 UTC 最簡單的方式，就是呼叫 `static` \(Visual Basic 中為 `Shared`\) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=fullName> 方法。  這個方法實際執行的轉換，會視 `dateTime` 參數的 <xref:System.DateTime.Kind%2A> 屬性值而定，如下表的說明。  
-  
-|DateTime.Kind 屬性|轉換|  
-|----------------------|--------|  
-|<xref:System.DateTimeKind?displayProperty=fullName>|將當地時間轉換成 UTC。|  
-|<xref:System.DateTimeKind?displayProperty=fullName>|假設 `dateTime` 參數為當地時間，並將當地時間轉換成 UTC。|  
-|<xref:System.DateTimeKind?displayProperty=fullName>|傳回未變更的 `dateTime` 參數。|  
-  
- 下列程式碼會將當地時間轉換成 UTC，並將結果顯示在主控台。  
-  
- [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
- [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]  
-  
+> <span data-ttu-id="fecac-113">您也可以序列化<xref:System.DateTimeOffset>結構，以明確地代表單一點的時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-113">You can also serialize a <xref:System.DateTimeOffset> structure to unambiguously represent a single point in time.</span></span> <span data-ttu-id="fecac-114">因為<xref:System.DateTimeOffset>物件儲存以及其與 UTC 相差的日期和時間值，但是它們總是代表特定點的關聯性中的時間為 UTC。</span><span class="sxs-lookup"><span data-stu-id="fecac-114">Because <xref:System.DateTimeOffset> objects store a date and time value along with its offset from UTC, they always represent a particular point in time in relationship to UTC.</span></span>
+
+<span data-ttu-id="fecac-115">將時間轉換成 UTC 的最簡單方式是呼叫`static`(`Shared`在 Visual Basic 中)<xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="fecac-115">The easiest way to convert a time to UTC is to call the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="fecac-116">確切方法所執行的轉換取決於值`dateTime`參數的<xref:System.DateTime.Kind%2A>屬性，如下表所示。</span><span class="sxs-lookup"><span data-stu-id="fecac-116">The exact conversion performed by the method depends on the value of the `dateTime` parameter's <xref:System.DateTime.Kind%2A> property, as the following table shows.</span></span>
+
+| `DateTime.Kind`            | <span data-ttu-id="fecac-117">轉換</span><span class="sxs-lookup"><span data-stu-id="fecac-117">Conversion</span></span>                                                                     |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| `DateTimeKind.Local`       | <span data-ttu-id="fecac-118">將當地時間轉換為 UTC。</span><span class="sxs-lookup"><span data-stu-id="fecac-118">Converts local time to UTC.</span></span>                                                    |
+| `DateTimeKind.Unspecified` | <span data-ttu-id="fecac-119">假設 `dateTime` 參數是當地時間，並將當地時間轉換為 UTC。</span><span class="sxs-lookup"><span data-stu-id="fecac-119">Assumes the `dateTime` parameter is local time and converts local time to UTC.</span></span> |
+| `DateTimeKind.Utc`         | <span data-ttu-id="fecac-120">傳回未變更的 `dateTime` 參數。</span><span class="sxs-lookup"><span data-stu-id="fecac-120">Returns the `dateTime` parameter unchanged.</span></span>                                    |
+
+<span data-ttu-id="fecac-121">下列程式碼會將目前當地時間轉換為 UTC，並將結果顯示到主控台。</span><span class="sxs-lookup"><span data-stu-id="fecac-121">The following code converts the current local time to UTC and displays the result to the console.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
+[!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
+
 > [!NOTE]
->  <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=fullName> 方法所產生的結果不一定會與 <xref:System.TimeZone.ToUniversalTime%2A?displayProperty=fullName> 和 <xref:System.DateTime.ToUniversalTime%2A?displayProperty=fullName> 方法相同。  如果主機系統的本地時區包含多個調整規則，<xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=fullName> 就會將適當的規則套用到特定的日期和時間。  另外兩個方法則一律套用最新的調整規則。  
-  
- 如果日期與時間值無法表示當地時間或 UTC，則 <xref:System.DateTime.ToUniversalTime%2A> 方法可能會傳回錯誤的結果。  但是，您可以使用 <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=fullName> 方法，轉換指定的時區之日期與時間 \(如需擷取代表目的地時區的 <xref:System.TimeZoneInfo> 物件的詳細資訊，請參閱[尋找定義於本機系統的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)\)。下列程式碼使用 <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=fullName> 方法，將「東部標準時間」轉換成 UTC。  
-  
- [!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
- [!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]  
-  
- 請注意如果 <xref:System.DateTime> 物件的 <xref:System.DateTime.Kind%2A> 屬性和時區不相符，這個方法會擲出 <xref:System.ArgumentException>。  如果 <xref:System.DateTime.Kind%2A> 屬性為 <xref:System.DateTimeKind?displayProperty=fullName> 但 <xref:System.TimeZoneInfo> 物件卻不代表當地時區，或如果 <xref:System.DateTime.Kind%2A> 屬性為 <xref:System.DateTimeKind?displayProperty=fullName> 但 <xref:System.TimeZoneInfo> 物件並不等於 <xref:System.DateTimeKind?displayProperty=fullName> 時，就會發生不相符的情形。  
-  
- 這些方法全部都使用 <xref:System.DateTime> 值為參數，並傳回一個 <xref:System.DateTime> 值。  如果是 <xref:System.DateTimeOffset> 值，<xref:System.DateTimeOffset> 結構有一個 <xref:System.DateTimeOffset.ToUniversalTime%2A> 執行個體方法，會將目前執行個體的日期與時間轉換成 UTC。下列範例會呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A> 方法，將當地時間及幾個其他時間轉換成 Coordinated Universal Time \(UTC\)。  
-  
- [!code-csharp[System.DateTimeOffset.Methods#16](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/cs/Methods.cs#16)]
- [!code-vb[System.DateTimeOffset.Methods#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/vb/Methods.vb#16)]  
-  
-## 將 UTC 轉換成指定的時區  
- 如果要將 UTC 轉換成當地時間，請參閱下一節的「將 UTC 轉換成當地時間」。  如果要將 UTC 轉換成您所指定的任何時區，請呼叫 <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> 方法。  這個方法會使用兩個參數：  
-  
--   要轉換的 UTC。  必須是 <xref:System.DateTime> 值，且它的 <xref:System.DateTime.Kind%2A> 屬性設定為 <xref:System.DateTimeKind?displayProperty=fullName> 或 <xref:System.DateTimeKind?displayProperty=fullName>。  
-  
--   要轉換 UTC 的目標時區。  
-  
- 下列程式碼會將 UTC 轉換成「中央標準時間」。  
-  
- [!code-csharp[System.TimeZone2.Concepts#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#8)]
- [!code-vb[System.TimeZone2.Concepts#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#8)]  
-  
-## 將 UTC 轉換成當地時間  
- 如果要將 UTC 轉換成當地時間，請呼叫您要轉換時間之 <xref:System.DateTime> 物件的 <xref:System.DateTime.ToLocalTime%2A> 方法。  方法的實際行為，會視物件的 <xref:System.DateTime.Kind%2A> 屬性值而定，如下表的說明。  
-  
-|`DateTime.Kind` 屬性|轉換|  
-|------------------------|--------|  
-|`DateTimeKind.Local`|傳回未變更的 <xref:System.DateTime> 值。|  
-|`DateTimeKind.Unspecified`|假設 <xref:System.DateTime> 值是 UTC，並將 UTC 轉換為當地時間。|  
-|`DateTimeKind.Utc`|將 <xref:System.DateTime> 值轉換成當地時間。|  
-  
- **注意**：<xref:System.TimeZone.ToLocalTime%2A?displayProperty=fullName> 方法的行為和 `DateTime.ToLocalTime` 方法完全相同。這個方法會使用一個參數，也就是要轉換的日期與時間。  
-  
- 您也可以使用 `static` \(在 Visual Basic 中為 `Shared`\) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=fullName> 方法，將任何指定的時區時間轉換成當地時間。  使用的方法在下一節中將詳細說明。  
-  
-## 在任兩個時區之間轉換  
- 您可以使用 <xref:System.TimeZoneInfo> 類別的下列兩個 `static` \(在 Visual Basic 中為 `Shared`\) 方法中的任何一個，在任兩個時區之間轉換。  
-  
--   <xref:System.TimeZoneInfo.ConvertTime%2A>  
-  
-     這個方法的參數分別是要轉換的日期與時間值、`TimeZoneInfo` 物件代表日期與時間值的時區，以及 `TimeZoneInfo` 物件代表日期與時間值的轉換目標時區。  
-  
--   <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>  
-  
-     這個方法的參數是要轉換的日期與時間值、日期與時間值的時區之識別項，以及日期與時間值的轉換目標時區之識別項。  
-  
- 這兩個方法都需要待轉換的日期與時間值的 <xref:System.DateTime.Kind%2A> 屬性，以及 <xref:System.TimeZoneInfo> 物件或代表彼此對應的時區識別項。  否則會擲回 <xref:System.ArgumentException>。  例如，如果日期與時間值的 `Kind` 屬性是 `DateTimeKind.Local`，而當做參數傳送給方法的 `TimeZoneInfo` 物件不等於 `TimeZoneInfo.Local` 時，就會擲回例外狀況。  如果當做參數傳送給方法的識別項不等於 `TimeZoneInfo.Local.Id`，也會擲回例外狀況。  
-  
- 下列範例使用 <xref:System.TimeZoneInfo.ConvertTime%2A> 方法，將夏威夷標準時間轉換為當地時間。  
-  
- [!code-csharp[System.TimeZone2.Concepts#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#9)]
- [!code-vb[System.TimeZone2.Concepts#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#9)]  
-  
-## 轉換 DateTimeOffset 值  
- <xref:System.DateTimeOffset> 物件所代表的日期與時間值並不完全是時區感知的，因為在個體化時物件和所在的時區失去關聯。  但是，很多情況下，應用程式只需要根據兩個不同的 UTC 位移，而不需要特定的時區時間，就能夠轉換日期與時間。  如果要執行這項轉換，可以呼叫目前執行個體的 <xref:System.DateTimeOffset.ToOffset%2A> 方法。  這個方法的參數，就是方法將傳回之新日期與時間值的位移。  
-  
- 例如，如果已知使用者要求的網頁之日期與時間，且已序列化成 MM\/dd\/yyyy hh:mm:ss zzzz 格式的字串，則下列 `ReturnTimeOnServer` 方法會將這個日期與時間值轉換成網頁伺服器上的日期與時間。  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
- [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)]  
-  
- 如果該方法傳送字串 "9\/1\/2007 5:32:07 \-05:00"，代表比 UTC 早五個小時的時區之US時間，就會傳回 9\/1\/2007 3:32:07 AM \-07:00，代表位於美國。  
-  
- <xref:System.TimeZoneInfo> 類別也包含 <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=fullName> 方法的多載，以 <xref:System.DateTimeOffset> 值執行時區轉換。  這個方法的參數是一個 <xref:System.DateTimeOffset> 值，以及一個待轉換時區的參考。  這個方法呼叫會傳回 <xref:System.DateTimeOffset> 值。  可以將上一個範例中的 `ReturnTimeOnServer` 方法重新撰寫如下以呼叫 <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29> 方法。  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
- [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]  
-  
-## 請參閱  
- <xref:System.TimeZoneInfo>   
- [日期、時間和時區](../../../docs/standard/datetime/index.md)   
- [尋找定義於本機系統的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+> <span data-ttu-id="fecac-122"><xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType>方法不一定會產生相同的結果<xref:System.TimeZone.ToUniversalTime%2A?displayProperty=nameWithType>和<xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="fecac-122">The <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> method does not necessarily produce results that are identical to the <xref:System.TimeZone.ToUniversalTime%2A?displayProperty=nameWithType> and <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="fecac-123">如果主機系統的本機時間區域包含多項調整規則，<xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType>適當的規則適用於特定日期和時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-123">If the host system's local time zone includes multiple adjustment rules, <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> applies the appropriate rule to a particular date and time.</span></span> <span data-ttu-id="fecac-124">另兩種方法一律會套用最新的調整規則。</span><span class="sxs-lookup"><span data-stu-id="fecac-124">The other two methods always apply the latest adjustment rule.</span></span>
+
+<span data-ttu-id="fecac-125">如果日期和時間值不代表當地時間或 UTC，<xref:System.DateTime.ToUniversalTime%2A>方法可能會傳回錯誤的結果。</span><span class="sxs-lookup"><span data-stu-id="fecac-125">If the date and time value does not represent either the local time or UTC, the <xref:System.DateTime.ToUniversalTime%2A> method will likely return an erroneous result.</span></span> <span data-ttu-id="fecac-126">不過，您可以使用<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType>方法，從指定的時區將轉換的日期和時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-126">However, you can use the <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> method to convert the date and time from a specified time zone.</span></span> <span data-ttu-id="fecac-127">(如需詳細資訊，擷取<xref:System.TimeZoneInfo>物件，表示目的地時區中，請參閱[尋找本機系統上所定義的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)。)下列程式碼會使用<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType>方法，將美加東部標準時間轉換為 UTC。</span><span class="sxs-lookup"><span data-stu-id="fecac-127">(For details on retrieving a <xref:System.TimeZoneInfo> object that represents the destination time zone, see [Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) The following code uses the <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> method to convert Eastern Standard Time to UTC.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
+[!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]
+
+<span data-ttu-id="fecac-128">請注意，這個方法會擲回<xref:System.ArgumentException>如果<xref:System.DateTime>物件的<xref:System.DateTime.Kind%2A>屬性與時區不相符。</span><span class="sxs-lookup"><span data-stu-id="fecac-128">Note that this method throws an <xref:System.ArgumentException> if the <xref:System.DateTime> object's <xref:System.DateTime.Kind%2A> property and the time zone are mismatched.</span></span> <span data-ttu-id="fecac-129">如果發生不符的情形<xref:System.DateTime.Kind%2A>屬性是<xref:System.DateTimeKind?displayProperty=nameWithType>但<xref:System.TimeZoneInfo>物件不代表本地時區，或者如果<xref:System.DateTime.Kind%2A>屬性是<xref:System.DateTimeKind?displayProperty=nameWithType>但<xref:System.TimeZoneInfo>物件不等於<xref:System.DateTimeKind?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="fecac-129">A mismatch occurs if the <xref:System.DateTime.Kind%2A> property is <xref:System.DateTimeKind?displayProperty=nameWithType> but the <xref:System.TimeZoneInfo> object does not represent the local time zone, or if the <xref:System.DateTime.Kind%2A> property is <xref:System.DateTimeKind?displayProperty=nameWithType> but the <xref:System.TimeZoneInfo> object does not equal <xref:System.DateTimeKind?displayProperty=nameWithType>.</span></span>
+
+<span data-ttu-id="fecac-130">所有這些方法需要<xref:System.DateTime>值做為參數和傳回<xref:System.DateTime>值。</span><span class="sxs-lookup"><span data-stu-id="fecac-130">All of these methods take <xref:System.DateTime> values as parameters and return a <xref:System.DateTime> value.</span></span> <span data-ttu-id="fecac-131">如<xref:System.DateTimeOffset>值<xref:System.DateTimeOffset>結構有<xref:System.DateTimeOffset.ToUniversalTime%2A>執行個體方法，將日期和時間的目前執行個體轉換成 UTC。</span><span class="sxs-lookup"><span data-stu-id="fecac-131">For <xref:System.DateTimeOffset> values, the <xref:System.DateTimeOffset> structure has a <xref:System.DateTimeOffset.ToUniversalTime%2A> instance method that converts the date and time of the current instance to UTC.</span></span> <span data-ttu-id="fecac-132">下列範例會呼叫<xref:System.DateTimeOffset.ToUniversalTime%2A>方法，將本地時間和數個其他的時間轉換為國際標準時間 (UTC)。</span><span class="sxs-lookup"><span data-stu-id="fecac-132">The following example calls the <xref:System.DateTimeOffset.ToUniversalTime%2A> method to convert a local time and several other times to Coordinated Universal Time (UTC).</span></span>
+
+[!code-csharp[System.DateTimeOffset.Methods#16](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/cs/Methods.cs#16)]
+[!code-vb[System.DateTimeOffset.Methods#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/vb/Methods.vb#16)]
+
+## <a name="converting-utc-to-a-designated-time-zone"></a><span data-ttu-id="fecac-133">將 UTC 轉換為指定的時區</span><span class="sxs-lookup"><span data-stu-id="fecac-133">Converting UTC to a designated time zone</span></span>
+
+<span data-ttu-id="fecac-134">若要轉換 UTC 到本地時間，請參閱 「 轉換 UTC 到本地時間 」 一節。</span><span class="sxs-lookup"><span data-stu-id="fecac-134">To convert UTC to local time, see the "Converting UTC to Local Time" section that follows.</span></span> <span data-ttu-id="fecac-135">若要轉換的時間，以您指定任何時區 UTC，呼叫<xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="fecac-135">To convert UTC to the time in any time zone that you designate, call the <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> method.</span></span> <span data-ttu-id="fecac-136">這個方法採用兩個參數：</span><span class="sxs-lookup"><span data-stu-id="fecac-136">The method takes two parameters:</span></span>
+
+* <span data-ttu-id="fecac-137">要轉換的 UTC。</span><span class="sxs-lookup"><span data-stu-id="fecac-137">The UTC to convert.</span></span> <span data-ttu-id="fecac-138">這必須是<xref:System.DateTime>值其<xref:System.DateTime.Kind%2A>屬性設定為<xref:System.DateTimeKind?displayProperty=nameWithType>或<xref:System.DateTimeKind?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="fecac-138">This must be a <xref:System.DateTime> value whose <xref:System.DateTime.Kind%2A> property is set to <xref:System.DateTimeKind?displayProperty=nameWithType> or <xref:System.DateTimeKind?displayProperty=nameWithType>.</span></span>
+
+* <span data-ttu-id="fecac-139">要將 UTC 轉換為的時區。</span><span class="sxs-lookup"><span data-stu-id="fecac-139">The time zone to convert the UTC to.</span></span>
+
+<span data-ttu-id="fecac-140">下列程式碼會將 UTC 轉換為美加中部標準時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-140">The following code converts UTC to Central Standard Time.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#8)]
+[!code-vb[System.TimeZone2.Concepts#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#8)]
+
+## <a name="converting-utc-to-local-time"></a><span data-ttu-id="fecac-141">將 UTC 轉換為當地時間</span><span class="sxs-lookup"><span data-stu-id="fecac-141">Converting UTC to local time</span></span>
+
+<span data-ttu-id="fecac-142">若要轉換為本地時間的 UTC，呼叫<xref:System.DateTime.ToLocalTime%2A>方法<xref:System.DateTime>物件您想要轉換的時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-142">To convert UTC to local time, call the <xref:System.DateTime.ToLocalTime%2A> method of the <xref:System.DateTime> object whose time you want to convert.</span></span> <span data-ttu-id="fecac-143">方法的確切行為取決於物件的值<xref:System.DateTime.Kind%2A>屬性，如下表所示。</span><span class="sxs-lookup"><span data-stu-id="fecac-143">The exact behavior of the method depends on the value of the object’s <xref:System.DateTime.Kind%2A> property, as the following table shows.</span></span>
+
+| `DateTime.Kind`            | <span data-ttu-id="fecac-144">轉換</span><span class="sxs-lookup"><span data-stu-id="fecac-144">Conversion</span></span>                                                                               |
+| -------------------------- | ---------------------------------------------------------------------------------------- |
+| `DateTimeKind.Local`       | <span data-ttu-id="fecac-145">傳回<xref:System.DateTime>值保持不變。</span><span class="sxs-lookup"><span data-stu-id="fecac-145">Returns the <xref:System.DateTime> value unchanged.</span></span>                                      |
+| `DateTimeKind.Unspecified` | <span data-ttu-id="fecac-146">假設<xref:System.DateTime>值為 UTC，並將轉換為本地時間的 UTC。</span><span class="sxs-lookup"><span data-stu-id="fecac-146">Assumes that the <xref:System.DateTime> value is UTC and converts the UTC to local time.</span></span> |
+| `DateTimeKind.Utc`         | <span data-ttu-id="fecac-147">將轉換<xref:System.DateTime>值以本地時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-147">Converts the <xref:System.DateTime> value to local time.</span></span>                                 |
+
+> [!NOTE]
+> <span data-ttu-id="fecac-148"><xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType>方法的行為即會相同與`DateTime.ToLocalTime`方法。</span><span class="sxs-lookup"><span data-stu-id="fecac-148">The <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType> method behaves identically to the `DateTime.ToLocalTime` method.</span></span> <span data-ttu-id="fecac-149">它會採用單一參數，這是要轉換的日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="fecac-149">It takes a single parameter, which is the date and time value to convert.</span></span>
+
+<span data-ttu-id="fecac-150">您也可以轉換為本地時間中任何指定的時區的時間，使用`static`(`Shared`在 Visual Basic 中)<xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="fecac-150">You can also convert the time in any designated time zone to local time by using the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="fecac-151">這項技術會在下一節中討論。</span><span class="sxs-lookup"><span data-stu-id="fecac-151">This technique is discussed in the next section.</span></span>
+
+## <a name="converting-between-any-two-time-zones"></a><span data-ttu-id="fecac-152">在兩個時區之間轉換</span><span class="sxs-lookup"><span data-stu-id="fecac-152">Converting between any two time zones</span></span>
+
+<span data-ttu-id="fecac-153">您可以使用下列兩個其中任兩個時區之間進行轉換`static`(`Shared`在 Visual Basic 中) 的方法<xref:System.TimeZoneInfo>類別：</span><span class="sxs-lookup"><span data-stu-id="fecac-153">You can convert between any two time zones by using either of the following two `static` (`Shared` in Visual Basic) methods of the <xref:System.TimeZoneInfo> class:</span></span>
+
+* <xref:System.TimeZoneInfo.ConvertTime%2A>
+
+  <span data-ttu-id="fecac-154">這個方法的參數是要轉換的日期和時間值`TimeZoneInfo`物件，表示日期和時間值的時區和`TimeZoneInfo`物件，表示要轉換的日期和時間值的時區。</span><span class="sxs-lookup"><span data-stu-id="fecac-154">This method's parameters are the date and time value to convert, a `TimeZoneInfo` object that represents the time zone of the date and time value, and a `TimeZoneInfo` object that represents the time zone to convert the date and time value to.</span></span>
+
+* <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
+
+  <span data-ttu-id="fecac-155">這個方法的參數是要轉換的日期和時間值的日期和時間值轉換、 日期和時間值的時區的識別項和時區的識別項。</span><span class="sxs-lookup"><span data-stu-id="fecac-155">This method's parameters are the date and time value to convert, the identifier of the date and time value's time zone, and the identifier of the time zone to convert the date and time value to.</span></span>
+
+<span data-ttu-id="fecac-156">這兩種方法需要<xref:System.DateTime.Kind%2A>要轉換的日期和時間值的屬性和<xref:System.TimeZoneInfo>代表時區的物件或時區的識別項對應至另一個。</span><span class="sxs-lookup"><span data-stu-id="fecac-156">Both methods require that the <xref:System.DateTime.Kind%2A> property of the date and time value to convert and the <xref:System.TimeZoneInfo> object or time zone identifier that represents its time zone correspond to one another.</span></span> <span data-ttu-id="fecac-157">否則，<xref:System.ArgumentException>就會擲回。</span><span class="sxs-lookup"><span data-stu-id="fecac-157">Otherwise, an <xref:System.ArgumentException> is thrown.</span></span> <span data-ttu-id="fecac-158">例如，如果`Kind`的日期和時間值的屬性是`DateTimeKind.Local`，如果將會擲回例外狀況`TimeZoneInfo`做為參數傳遞給方法的物件是否不等於`TimeZoneInfo.Local`。</span><span class="sxs-lookup"><span data-stu-id="fecac-158">For example, if the `Kind` property of the date and time value is `DateTimeKind.Local`, an exception is thrown if the `TimeZoneInfo` object passed as a parameter to the method is not equal to `TimeZoneInfo.Local`.</span></span> <span data-ttu-id="fecac-159">擲回例外狀況也做為參數傳遞給方法的識別項是否不等於`TimeZoneInfo.Local.Id`。</span><span class="sxs-lookup"><span data-stu-id="fecac-159">An exception is also thrown if the identifier passed as a parameter to the method is not equal to `TimeZoneInfo.Local.Id`.</span></span>
+
+<span data-ttu-id="fecac-160">下列範例會使用<xref:System.TimeZoneInfo.ConvertTime%2A>方法，將從夏威夷標準時間轉換為本地時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-160">The following example uses the <xref:System.TimeZoneInfo.ConvertTime%2A> method to convert from Hawaiian Standard Time to local time.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#9)]
+[!code-vb[System.TimeZone2.Concepts#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#9)]
+
+## <a name="converting-datetimeoffset-values"></a><span data-ttu-id="fecac-161">轉換 DateTimeOffset 值</span><span class="sxs-lookup"><span data-stu-id="fecac-161">Converting DateTimeOffset values</span></span>
+
+<span data-ttu-id="fecac-162">所表示的日期和時間值<xref:System.DateTimeOffset>物件並不完全時區感知，因為該物件會與其時區解除關聯時具現化。</span><span class="sxs-lookup"><span data-stu-id="fecac-162">Date and time values represented by <xref:System.DateTimeOffset> objects are not fully time-zone aware because the object is disassociated from its time zone at the time it is instantiated.</span></span> <span data-ttu-id="fecac-163">不過，在許多情況下，應用程式只需要根據與 UTC 的兩個不同位移來轉換日期和時間，而不是根據特定時區的時間。</span><span class="sxs-lookup"><span data-stu-id="fecac-163">However, in many cases an application simply needs to convert a date and time based on two different offsets from UTC rather than on the time in particular time zones.</span></span> <span data-ttu-id="fecac-164">若要執行這項轉換，您可以呼叫目前的執行個體<xref:System.DateTimeOffset.ToOffset%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="fecac-164">To perform this conversion, you can call the current instance's <xref:System.DateTimeOffset.ToOffset%2A> method.</span></span> <span data-ttu-id="fecac-165">方法的參數，就是新的日期和時間值，這個方法會傳回值的位移。</span><span class="sxs-lookup"><span data-stu-id="fecac-165">The method's single parameter is the offset of the new date and time value that the method is to return.</span></span>
+
+<span data-ttu-id="fecac-166">例如，如果網頁使用者要求的日期和時間已知且序列化為字串 (格式為 MM/dd/yyyy hh:mm:ss zzzz)，則下列 `ReturnTimeOnServer` 方法會將這個日期和時間值轉換為 Web 伺服器上的時間和日期。</span><span class="sxs-lookup"><span data-stu-id="fecac-166">For example, if the date and time of a user request for a Web page is known and is serialized as a string in the format MM/dd/yyyy hh:mm:ss zzzz, the following `ReturnTimeOnServer` method converts this date and time value to the date and time on the Web server.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
+
+<span data-ttu-id="fecac-167">如果將字串 "9/1/2007 5:32:07 -05:00" 傳遞給這個方法，代表時區中的日期和時間比 UTC 早五個小時，就會傳回 9/1/2007 3:32:07 AM -07:00，代表伺服器位於美國太平洋標準時區。</span><span class="sxs-lookup"><span data-stu-id="fecac-167">If the method is passed the string "9/1/2007 5:32:07 -05:00", which represents the date and time in a time zone five hours earlier than UTC, it returns 9/1/2007 3:32:07 AM -07:00 for a server located in the U.S. Pacific Standard Time zone.</span></span>
+
+<span data-ttu-id="fecac-168"><xref:System.TimeZoneInfo>類別也包含的多載<xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType>方法，執行具有時區轉換<xref:System.DateTimeOffset.ToOffset(System.TimeSpan)>值。</span><span class="sxs-lookup"><span data-stu-id="fecac-168">The <xref:System.TimeZoneInfo> class also includes an overload of the <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> method that performs time zone conversions with <xref:System.DateTimeOffset.ToOffset(System.TimeSpan)> values.</span></span> <span data-ttu-id="fecac-169">方法的參數是<xref:System.DateTimeOffset>值以及所要轉換的時間的時區的參考。</span><span class="sxs-lookup"><span data-stu-id="fecac-169">The method's parameters are a <xref:System.DateTimeOffset> value and a reference to the time zone to which the time is to be converted.</span></span> <span data-ttu-id="fecac-170">方法呼叫傳回<xref:System.DateTimeOffset>值。</span><span class="sxs-lookup"><span data-stu-id="fecac-170">The method call returns a <xref:System.DateTimeOffset> value.</span></span> <span data-ttu-id="fecac-171">例如，`ReturnTimeOnServer`前一個範例中的方法可以改寫，如下所示呼叫<xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29>方法。</span><span class="sxs-lookup"><span data-stu-id="fecac-171">For example, the `ReturnTimeOnServer` method in the previous example could be rewritten as follows to call the <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29> method.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
+
+## <a name="see-also"></a><span data-ttu-id="fecac-172">請參閱</span><span class="sxs-lookup"><span data-stu-id="fecac-172">See also</span></span>
+
+<span data-ttu-id="fecac-173"><xref:System.TimeZoneInfo>[日期、 時間和時區](../../../docs/standard/datetime/index.md)
+[尋找本機系統上所定義的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)</span><span class="sxs-lookup"><span data-stu-id="fecac-173"><xref:System.TimeZoneInfo> [Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)</span></span>

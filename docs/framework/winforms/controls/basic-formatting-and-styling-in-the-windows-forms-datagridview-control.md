@@ -1,70 +1,71 @@
 ---
-title: "Windows Form DataGridView 控制項中的基本格式化和樣式設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料格, 格式化"
-  - "DataGridView 控制項 [Windows Form], 格式化及樣式設定"
+title: "Windows Form DataGridView 控制項中的基本格式化和樣式設定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], formatting and styling
+- data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Form DataGridView 控制項中的基本格式化和樣式設定
-`DataGridView` 控制項讓您可以輕易地定義儲存格的基本外觀，以及儲存格值的顯示格式。  不論是個別的儲存格、特定資料行和資料列中的儲存格，或是控制項中的所有儲存格，您都可以設定藉由 `DataGridView` 控制項存取的 `DataGridViewCellStyle` 物件之屬性，以定義其外觀和格式化樣式。  此外，您也可以藉由處理 `CellFormatting` 事件，根據儲存格值等因數，以動態方式修改這些樣式。  
+# <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="b7c25-102">Windows Form DataGridView 控制項中的基本格式化和樣式設定</span><span class="sxs-lookup"><span data-stu-id="b7c25-102">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="b7c25-103">`DataGridView`控制項讓您輕鬆地定義儲存格的基本外觀和儲存格的值顯示格式。</span><span class="sxs-lookup"><span data-stu-id="b7c25-103">The `DataGridView` control makes it easy to define the basic appearance of cells and the display formatting of cell values.</span></span> <span data-ttu-id="b7c25-104">您可以定義外觀和格式樣式的個別資料格、 特定資料行和資料列中的資料格或控制項中的所有資料格所設定的屬性`DataGridViewCellStyle`存取透過各種物件`DataGridView`控制屬性。</span><span class="sxs-lookup"><span data-stu-id="b7c25-104">You can define appearance and formatting styles for individual cells, for cells in specific columns and rows, or for all cells in the control by setting the properties of the `DataGridViewCellStyle` objects accessed through various `DataGridView` control properties.</span></span> <span data-ttu-id="b7c25-105">此外，您可以修改這些樣式以動態方式會根據所處理的因素，例如儲存格的值`CellFormatting`事件。</span><span class="sxs-lookup"><span data-stu-id="b7c25-105">Additionally, you can modify these styles dynamically based on factors such as the cell value by handling the `CellFormatting` event.</span></span>  
   
-## 在本節中  
- [如何：變更 Windows Form DataGridView 控制項中的框線和格線樣式](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
- 描述如何設定可定義控制項框線和儲存格邊線外觀的 `DataGridView` 屬性。  
+## <a name="in-this-section"></a><span data-ttu-id="b7c25-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="b7c25-106">In This Section</span></span>  
+ [<span data-ttu-id="b7c25-107">操作說明：變更 Windows Forms DataGridView 控制項中的框線和格線樣式</span><span class="sxs-lookup"><span data-stu-id="b7c25-107">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
+ <span data-ttu-id="b7c25-108">描述如何設定`DataGridView`定義控制項框線和界限之間的線條的儲存格的外觀屬性。</span><span class="sxs-lookup"><span data-stu-id="b7c25-108">Describes how to set `DataGridView` properties that define the appearance of the control border and the boundary lines between cells.</span></span>  
   
- [Windows Form DataGridView 控制項中的儲存格樣式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- 描述 `DataGridViewCellStyle` 類別，以及該型別的屬性是透過何種互動來定義控制項中儲存格的顯示方式。  
+ [<span data-ttu-id="b7c25-109">Windows Forms DataGridView 控制項中的儲存格樣式</span><span class="sxs-lookup"><span data-stu-id="b7c25-109">Cell Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="b7c25-110">描述`DataGridViewCellStyle`類別，以及該類型的屬性來定義如何將資料格顯示在控制項中的互動方式。</span><span class="sxs-lookup"><span data-stu-id="b7c25-110">Describes the `DataGridViewCellStyle` class and how properties of that type interact to define how cells are displayed in the control.</span></span>  
   
- [如何：設定 Windows Form DataGridView 控制項的預設儲存格樣式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- 描述如何使用 `DataGridViewCellStyle` 屬性來定義在特定資料列和資料行的儲存格，以及在整個控制項中的儲存格的預設外觀。  
+ [<span data-ttu-id="b7c25-111">操作說明：設定 Windows Forms DataGridView 控制項的預設儲存格樣式</span><span class="sxs-lookup"><span data-stu-id="b7c25-111">How to: Set Default Cell Styles for the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="b7c25-112">描述如何使用`DataGridViewCellStyle`屬性，以定義特定資料列和資料行中，並在整個控制項的儲存格的預設外觀。</span><span class="sxs-lookup"><span data-stu-id="b7c25-112">Describes how to use `DataGridViewCellStyle` properties to define the default appearance of cells in specific rows and columns and in the entire control.</span></span>  
   
- [如何：格式化 Windows Form DataGridView 控制項中的資料](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
- 描述如何使用 `DataGridViewCellStyle` 屬性來格式化儲存格的顯示值。  
+ [<span data-ttu-id="b7c25-113">操作說明：格式化 Windows Forms DataGridView 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="b7c25-113">How to: Format Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="b7c25-114">描述如何格式化儲存格顯示的值使用`DataGridViewCellStyle`屬性。</span><span class="sxs-lookup"><span data-stu-id="b7c25-114">Describes how to format cell display values using `DataGridViewCellStyle` properties.</span></span>  
   
- [如何：設定 Windows Form DataGridView 控制項的字型和色彩樣式](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
- 描述如何使用 `DefaultCellStyle` 屬性為控制項中的所有儲存格設定基本顯示字元。  
+ [<span data-ttu-id="b7c25-115">操作說明：設定 Windows Forms DataGridView 控制項的字型和色彩樣式</span><span class="sxs-lookup"><span data-stu-id="b7c25-115">How to: Set Font and Color Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="b7c25-116">描述如何使用`DefaultCellStyle`屬性來設定基本控制項中顯示所有儲存格的特性。</span><span class="sxs-lookup"><span data-stu-id="b7c25-116">Describes how to use the `DefaultCellStyle` property to set basic display characteristics for all cells in the control.</span></span>  
   
- [如何：設定 Windows Form DataGridView 控制項的替代資料列樣式](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
- 描述如何使用以不同方式顯示的替代資料列來建立類似 Ledger 的效果。  
+ [<span data-ttu-id="b7c25-117">操作說明：設定 Windows Forms DataGridView 控制項的替代資料列樣式</span><span class="sxs-lookup"><span data-stu-id="b7c25-117">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="b7c25-118">描述如何使用替代的資料列會顯示不同的控制項中建立類似 ledger 的效果。</span><span class="sxs-lookup"><span data-stu-id="b7c25-118">Describes how to create a ledger-like effect in the control using alternating rows that are displayed differently.</span></span>  
   
- [如何：在 Windows Form DataGridView 控制項中使用資料列範本自訂資料列](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
- 描述如何使用 `RowTemplate` 屬性來設定使用於控制項中所有資料列的資料列屬性。  
+ [<span data-ttu-id="b7c25-119">操作說明：在 Windows Forms DataGridView 控制項中使用資料列範本自訂資料列</span><span class="sxs-lookup"><span data-stu-id="b7c25-119">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+ <span data-ttu-id="b7c25-120">描述如何使用`RowTemplate`屬性來設定用於控制項中的所有資料列的資料列內容。</span><span class="sxs-lookup"><span data-stu-id="b7c25-120">Describes how to use the `RowTemplate` property to set row properties that will be used for all rows in the control.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="b7c25-121">參考資料</span><span class="sxs-lookup"><span data-stu-id="b7c25-121">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- 提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
+ <span data-ttu-id="b7c25-122">提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。</span><span class="sxs-lookup"><span data-stu-id="b7c25-122">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
- 提供 <xref:System.Windows.Forms.DataGridViewCellStyle> 類別的參考文件。  
+ <span data-ttu-id="b7c25-123">提供參考文件<xref:System.Windows.Forms.DataGridViewCellStyle>類別。</span><span class="sxs-lookup"><span data-stu-id="b7c25-123">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewCellStyle> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridView.CellFormatting>  
- 提供 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件的參考文件。  
+ <span data-ttu-id="b7c25-124">提供參考文件<xref:System.Windows.Forms.DataGridView.CellFormatting>事件。</span><span class="sxs-lookup"><span data-stu-id="b7c25-124">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.CellFormatting> event.</span></span>  
   
  <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>  
- 提供 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 屬性的參考文件。  
+ <span data-ttu-id="b7c25-125">提供參考文件<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="b7c25-125">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> property.</span></span>  
   
-## 相關章節  
- [自訂 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- 提供說明自訂繪製 <xref:System.Windows.Forms.DataGridView> 儲存格和資料列，以及建立衍生之儲存格、資料行及資料列型別的主題。  
+## <a name="related-sections"></a><span data-ttu-id="b7c25-126">相關章節</span><span class="sxs-lookup"><span data-stu-id="b7c25-126">Related Sections</span></span>  
+ [<span data-ttu-id="b7c25-127">自訂 Windows Forms DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="b7c25-127">Customizing the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="b7c25-128">提供主題描述自訂繪製 <xref:System.Windows.Forms.DataGridView> 儲存格和資料列，並建立衍生儲存格、資料行和資料列類型。</span><span class="sxs-lookup"><span data-stu-id="b7c25-128">Provides topics that describe custom painting <xref:System.Windows.Forms.DataGridView> cells and rows, and creating derived cell, column, and row types.</span></span>  
   
- [Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- 提供描述常用的儲存格、資料列和資料行屬性的主題。  
+ [<span data-ttu-id="b7c25-129">Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能</span><span class="sxs-lookup"><span data-stu-id="b7c25-129">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ <span data-ttu-id="b7c25-130">提供主題描述常用的資料格、 列和資料行的屬性。</span><span class="sxs-lookup"><span data-stu-id="b7c25-130">Provides topics that describe commonly used cell, row, and column properties.</span></span>  
   
-## 請參閱  
- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b7c25-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7c25-131">See Also</span></span>  
+ [<span data-ttu-id="b7c25-132">DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="b7c25-132">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

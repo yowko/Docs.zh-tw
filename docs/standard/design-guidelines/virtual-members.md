@@ -1,53 +1,51 @@
 ---
-title: "虛擬成員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "可覆寫成員"
-  - "虛擬成員"
-  - "成員 [.NET Framework] 虛擬"
+title: "虛擬成員"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- overridable members
+- virtual members
+- members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 56838fc4c1c1e7cb8723beee3f0e6b23515d43f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 虛擬成員
-虛擬成員可以覆寫，因此變更子類別的行為。 他們是相當類似的回呼，以擴充性提供，但執行效能和記憶體耗用量方面更好。 此外，虛擬成員在需要建立一種特殊種類的現有型別 （特製化） 的情況下更自然習慣。  
+# <a name="virtual-members"></a><span data-ttu-id="91fd5-102">虛擬成員</span><span class="sxs-lookup"><span data-stu-id="91fd5-102">Virtual Members</span></span>
+<span data-ttu-id="91fd5-103">虛擬成員會覆寫，因此變更子類別的行為。</span><span class="sxs-lookup"><span data-stu-id="91fd5-103">Virtual members can be overridden, thus changing the behavior of the subclass.</span></span> <span data-ttu-id="91fd5-104">它們是回呼提供，擴充性方面相當類似，但是可以執行效能和記憶體耗用量方面更好。</span><span class="sxs-lookup"><span data-stu-id="91fd5-104">They are quite similar to callbacks in terms of the extensibility they provide, but they are better in terms of execution performance and memory consumption.</span></span> <span data-ttu-id="91fd5-105">此外，虛擬成員感覺更自然的案例中，需要建立一個特殊種類的現有類型 （特製化）。</span><span class="sxs-lookup"><span data-stu-id="91fd5-105">Also, virtual members feel more natural in scenarios that require creating a special kind of an existing type (specialization).</span></span>  
   
- 虛擬成員會優於回呼和事件，但不是執行效能優於非虛擬方法。  
+ <span data-ttu-id="91fd5-106">虛擬成員的執行效能優於回撥和事件，但不是執行效能優於非虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="91fd5-106">Virtual members perform better than callbacks and events, but do not perform better than non-virtual methods.</span></span>  
   
- 虛擬成員的主要缺點是虛擬成員的行為只修改在編譯時間。 回呼的行為可以在執行階段修改。  
+ <span data-ttu-id="91fd5-107">虛擬成員的主要缺點是虛擬成員的行為只發生在編譯階段中變更。</span><span class="sxs-lookup"><span data-stu-id="91fd5-107">The main disadvantage of virtual members is that the behavior of a virtual member can only be modified at the time of compilation.</span></span> <span data-ttu-id="91fd5-108">回呼的行為可以在執行階段修改。</span><span class="sxs-lookup"><span data-stu-id="91fd5-108">The behavior of a callback can be modified at runtime.</span></span>  
   
- 虛擬成員，例如回呼 （和可能有多個回呼），會使設計、 測試和維護，因為虛擬成員的任何呼叫非預期的方式可以覆寫，而且可以執行任意程式碼。 此外，清楚地定義合約的虛擬成員，因此設計和撰寫它們的成本較高者為通常需要更多的心力。  
+ <span data-ttu-id="91fd5-109">虛擬成員，例如回呼，可能有多個回呼成本很高設計、 測試和維護，因為任何呼叫虛擬成員會覆寫非預期的方式，而且可以執行任意程式碼。</span><span class="sxs-lookup"><span data-stu-id="91fd5-109">Virtual members, like callbacks (and maybe more than callbacks), are costly to design, test, and maintain because any call to a virtual member can be overridden in unpredictable ways and can execute arbitrary code.</span></span> <span data-ttu-id="91fd5-110">此外，還要更多的投入時間通常才能清楚地定義合約的虛擬成員，讓設計和撰寫它們的成本較高者為。</span><span class="sxs-lookup"><span data-stu-id="91fd5-110">Also, much more effort is usually required to clearly define the contract of virtual members, so the cost of designing and documenting them is higher.</span></span>  
   
- **X 不** 讓成員虛擬，除非您有正當的理由，若要這樣做，而且您了解所有設計、 測試和維護虛擬成員與相關的成本。  
+ <span data-ttu-id="91fd5-111">**X 不**讓成員虛擬，除非您有很好的理由，若要這樣做，而且您了解所有設計、 測試及維護虛擬成員與相關的成本。</span><span class="sxs-lookup"><span data-stu-id="91fd5-111">**X DO NOT** make members virtual unless you have a good reason to do so and you are aware of all the costs related to designing, testing, and maintaining virtual members.</span></span>  
   
- 虛擬成員會較少能夠容許方面可以對它們而不會中斷相容性的變更。 此外，它們是低於非虛擬成員，主要是因為不是內嵌的虛擬成員的呼叫。  
+ <span data-ttu-id="91fd5-112">虛擬成員都是較少能夠容許方面可能會對它們而不會中斷相容性的變更。</span><span class="sxs-lookup"><span data-stu-id="91fd5-112">Virtual members are less forgiving in terms of changes that can be made to them without breaking compatibility.</span></span> <span data-ttu-id="91fd5-113">此外，它們不低於非虛擬的成員，主要是因為不是內嵌的虛擬成員的呼叫。</span><span class="sxs-lookup"><span data-stu-id="91fd5-113">Also, they are slower than non-virtual members, mostly because calls to virtual members are not inlined.</span></span>  
   
- **✓ 考慮** 限制只在絕對必要的擴充性。  
+ <span data-ttu-id="91fd5-114">**✓ 考慮**限制只是絕對必要的擴充性。</span><span class="sxs-lookup"><span data-stu-id="91fd5-114">**✓ CONSIDER** limiting extensibility to only what is absolutely necessary.</span></span>  
   
- **✓ 執行** 偏好公用存取範圍之虛擬成員受保護的存取範圍。 公用成員應該提供擴充性 （如有必要） 藉由呼叫受保護的虛擬成員。  
+ <span data-ttu-id="91fd5-115">**✓ 不要**不用公用存取範圍中的受保護的存取範圍，在虛擬成員。</span><span class="sxs-lookup"><span data-stu-id="91fd5-115">**✓ DO** prefer protected accessibility over public accessibility for virtual members.</span></span> <span data-ttu-id="91fd5-116">Public 成員應該提供擴充性 （如有必要） 藉由呼叫受保護的虛擬成員。</span><span class="sxs-lookup"><span data-stu-id="91fd5-116">Public members should provide extensibility (if required) by calling into a protected virtual member.</span></span>  
   
- 類別的 public 成員應該提供正確的功能集，該類別的直接取用者。 虛擬成員專為在類別中覆寫，而且受保護的存取範圍領域可以要使用的所有虛擬擴充功能的好方法。  
+ <span data-ttu-id="91fd5-117">類別的 public 成員應該提供正確的功能集，該類別的直接取用者。</span><span class="sxs-lookup"><span data-stu-id="91fd5-117">The public members of a class should provide the right set of functionality for direct consumers of that class.</span></span> <span data-ttu-id="91fd5-118">虛擬成員設計用來覆寫中的子類別，以及受保護的存取範圍是領域可以要使用的所有虛擬擴充性點的好方法。</span><span class="sxs-lookup"><span data-stu-id="91fd5-118">Virtual members are designed to be overridden in subclasses, and protected accessibility is a great way to scope all virtual extensibility points to where they can be used.</span></span>  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 著作權所有，並保留一切權利。*  
+ <span data-ttu-id="91fd5-119">*部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="91fd5-119">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *皮耳森教育，從 Inc.的權限所印製 [Framework 設計方針︰ 慣例、 慣用句和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 並 Brad Abrams，2008 年 10 月 22 日由 Addison\-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ <span data-ttu-id="91fd5-120">*皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="91fd5-120">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## 請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)   
- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a><span data-ttu-id="91fd5-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="91fd5-121">See Also</span></span>  
+ [<span data-ttu-id="91fd5-122">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="91fd5-122">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="91fd5-123">擴充性設計</span><span class="sxs-lookup"><span data-stu-id="91fd5-123">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

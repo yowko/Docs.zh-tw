@@ -1,31 +1,34 @@
 ---
-title: "PiiLoggingNotAllowed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: PiiLoggingNotAllowed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fc34a0b6-fee7-4da4-b146-b0c1c8b7519a
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0c96da5fe16c468e6ba4dedcdf377c23ba437f47
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# PiiLoggingNotAllowed
-識別碼：108  
+# <a name="piiloggingnotallowed"></a><span data-ttu-id="af13b-102">PiiLoggingNotAllowed</span><span class="sxs-lookup"><span data-stu-id="af13b-102">PiiLoggingNotAllowed</span></span>
+<span data-ttu-id="af13b-103">識別碼：108</span><span class="sxs-lookup"><span data-stu-id="af13b-103">Id: 108</span></span>  
   
- 嚴重性：錯誤  
+ <span data-ttu-id="af13b-104">嚴重性：錯誤</span><span class="sxs-lookup"><span data-stu-id="af13b-104">Severity: Error</span></span>  
   
- 分類：追蹤  
+ <span data-ttu-id="af13b-105">分類：追蹤</span><span class="sxs-lookup"><span data-stu-id="af13b-105">Category: Tracing</span></span>  
   
-## 描述  
- 這個事件表示沒有在記錄任何已知的 PII。  記錄已知的 PII 是不允許的。  若要允許記錄已知的 PII，請將 Machine.config 中的 "enableLoggingKnownPii" 設定為 `true`。  此事件會列出處理序名稱和處理序識別碼。  
+## <a name="description"></a><span data-ttu-id="af13b-106">描述</span><span class="sxs-lookup"><span data-stu-id="af13b-106">Description</span></span>  
+ <span data-ttu-id="af13b-107">這個事件表示沒有在記錄任何已知的 PII。</span><span class="sxs-lookup"><span data-stu-id="af13b-107">This event indicates that no known PII is being logged.</span></span> <span data-ttu-id="af13b-108">記錄已知的 PII 是不允許的。</span><span class="sxs-lookup"><span data-stu-id="af13b-108">Logging of known PII is not allowed.</span></span> <span data-ttu-id="af13b-109">若要允許記錄已知的 PII，請將 Machine.config 中的 "enableLoggingKnownPii" 設定為 `true`。此事件會列出處理序名稱和處理序識別碼。</span><span class="sxs-lookup"><span data-stu-id="af13b-109">To allow logging of known PII, set "enableLoggingKnownPii" to `true` in Machine.config. The event lists the process name and process ID.</span></span>  
   
-## 請參閱  
- [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)   
- [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="af13b-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af13b-110">See Also</span></span>  
+ [<span data-ttu-id="af13b-111">事件記錄</span><span class="sxs-lookup"><span data-stu-id="af13b-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="af13b-112">事件一般參考</span><span class="sxs-lookup"><span data-stu-id="af13b-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

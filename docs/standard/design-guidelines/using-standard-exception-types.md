@@ -1,78 +1,76 @@
 ---
-title: "使用標準的例外狀況類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "擲回例外狀況，標準類型"
-  - "攔截例外狀況"
-  - "例外狀況攔截"
-  - "例外狀況，擲回"
+title: "使用標準例外狀況類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- throwing exceptions, standard types
+- catching exceptions
+- exceptions, catching
+- exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 91cd9a03ad1acf61681ecfad0edb061802c4362c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用標準的例外狀況類型
-本章節描述架構和其使用方式的詳細資料所提供的標準例外狀況。 清單是不是完整清單。 請參閱.NET Framework 參考文件的使用方式的其他 Framework 例外狀況型別。  
+# <a name="using-standard-exception-types"></a><span data-ttu-id="fe435-102">使用標準例外狀況類型</span><span class="sxs-lookup"><span data-stu-id="fe435-102">Using Standard Exception Types</span></span>
+<span data-ttu-id="fe435-103">本章節描述架構和其使用方式的詳細資料所提供的標準例外狀況。</span><span class="sxs-lookup"><span data-stu-id="fe435-103">This section describes the standard exceptions provided by the Framework and the details of their usage.</span></span> <span data-ttu-id="fe435-104">清單是不是完整詳盡。</span><span class="sxs-lookup"><span data-stu-id="fe435-104">The list is by no means exhaustive.</span></span> <span data-ttu-id="fe435-105">請參閱.NET Framework 參考文件的使用方式的其他架構例外狀況類型。</span><span class="sxs-lookup"><span data-stu-id="fe435-105">Please refer to the .NET Framework reference documentation for usage of other Framework exception types.</span></span>  
   
-## 例外狀況和 SystemException  
- **X 不** 擲回 <xref:System.Exception?displayProperty=fullName> 或 <xref:System.SystemException?displayProperty=fullName>。  
+## <a name="exception-and-systemexception"></a><span data-ttu-id="fe435-106">例外狀況和 SystemException</span><span class="sxs-lookup"><span data-stu-id="fe435-106">Exception and SystemException</span></span>  
+ <span data-ttu-id="fe435-107">**X 不**擲回<xref:System.Exception?displayProperty=nameWithType>或<xref:System.SystemException?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="fe435-107">**X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> or <xref:System.SystemException?displayProperty=nameWithType>.</span></span>  
   
- **X 不** 攔截 `System.Exception` 或 `System.SystemException` framework 程式碼中，除非您想要重新擲回。  
+ <span data-ttu-id="fe435-108">**X 不**攔截`System.Exception`或`System.SystemException`framework 程式碼中，除非您想要重新擲回。</span><span class="sxs-lookup"><span data-stu-id="fe435-108">**X DO NOT** catch `System.Exception` or `System.SystemException` in framework code, unless you intend to rethrow.</span></span>  
   
- **X 避免** 攔截 `System.Exception` 或 `System.SystemException`, ，除非在最上層例外狀況處理常式。  
+ <span data-ttu-id="fe435-109">**請避免 x**攔截`System.Exception`或`System.SystemException`，除非在最上層例外狀況處理常式。</span><span class="sxs-lookup"><span data-stu-id="fe435-109">**X AVOID** catching `System.Exception` or `System.SystemException`, except in top-level exception handlers.</span></span>  
   
-## ApplicationException  
- **X 不** 擲回或衍生自 <xref:System.ApplicationException>。  
+## <a name="applicationexception"></a><span data-ttu-id="fe435-110">ApplicationException</span><span class="sxs-lookup"><span data-stu-id="fe435-110">ApplicationException</span></span>  
+ <span data-ttu-id="fe435-111">**X 不**擲回或衍生自<xref:System.ApplicationException>。</span><span class="sxs-lookup"><span data-stu-id="fe435-111">**X DO NOT** throw or derive from <xref:System.ApplicationException>.</span></span>  
   
-## InvalidOperationException  
- **✓ 執行** 擲回 <xref:System.InvalidOperationException> 的物件是否處於不適當的狀態。  
+## <a name="invalidoperationexception"></a><span data-ttu-id="fe435-112">InvalidOperationException</span><span class="sxs-lookup"><span data-stu-id="fe435-112">InvalidOperationException</span></span>  
+ <span data-ttu-id="fe435-113">**✓ 不要**擲回<xref:System.InvalidOperationException>的物件是否不適當的狀態。</span><span class="sxs-lookup"><span data-stu-id="fe435-113">**✓ DO** throw an <xref:System.InvalidOperationException> if the object is in an inappropriate state.</span></span>  
   
-## ArgumentException、 ArgumentNullException 和 ArgumentOutOfRangeException  
- **✓ 執行** 擲回 <xref:System.ArgumentException> 或如果不正確的引數傳遞至成員及其子型別之一。 適用於想最具衍生性的例外狀況類型。  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a><span data-ttu-id="fe435-114">ArgumentException、 ArgumentNullException 和 ArgumentOutOfRangeException</span><span class="sxs-lookup"><span data-stu-id="fe435-114">ArgumentException, ArgumentNullException, and ArgumentOutOfRangeException</span></span>  
+ <span data-ttu-id="fe435-115">**✓ 不要**擲回<xref:System.ArgumentException>或如果不正確的引數會傳遞給成員及其子型別之一。</span><span class="sxs-lookup"><span data-stu-id="fe435-115">**✓ DO** throw <xref:System.ArgumentException> or one of its subtypes if bad arguments are passed to a member.</span></span> <span data-ttu-id="fe435-116">如果適用，偏好最常衍生的例外狀況類型。</span><span class="sxs-lookup"><span data-stu-id="fe435-116">Prefer the most derived exception type, if applicable.</span></span>  
   
- **✓ 執行** 設定 `ParamName` 屬性時擲回的子類別的其中一個 `ArgumentException`。  
+ <span data-ttu-id="fe435-117">**✓ 不要**設定`ParamName`屬性時擲回的子類別的其中一個`ArgumentException`。</span><span class="sxs-lookup"><span data-stu-id="fe435-117">**✓ DO** set the `ParamName` property when throwing one of the subclasses of `ArgumentException`.</span></span>  
   
- 這個屬性代表造成例外狀況的參數名稱。 請注意，這個屬性可以設定使用其中一個建構函式多載。  
+ <span data-ttu-id="fe435-118">這個屬性表示造成擲回的例外狀況的參數名稱。</span><span class="sxs-lookup"><span data-stu-id="fe435-118">This property represents the name of the parameter that caused the exception to be thrown.</span></span> <span data-ttu-id="fe435-119">請注意，這個屬性可以使用其中一個建構函式多載設定。</span><span class="sxs-lookup"><span data-stu-id="fe435-119">Note that the property can be set using one of the constructor overloads.</span></span>  
   
- **✓ 執行** 使用 `value` 屬性 setter 的隱含值參數的名稱。  
+ <span data-ttu-id="fe435-120">**✓ 不要**使用`value`屬性 setter 的隱含值參數的名稱。</span><span class="sxs-lookup"><span data-stu-id="fe435-120">**✓ DO** use `value` for the name of the implicit value parameter of property setters.</span></span>  
   
-## NullReferenceException、 IndexOutOfRangeException 和 AccessViolationException  
- **X 不** 允許公開呼叫的 Api 以明確或隱含擲回 <xref:System.NullReferenceException>, ，<xref:System.AccessViolationException>, ，或 <xref:System.IndexOutOfRangeException>。 這些例外狀況會保留並擲回的執行引擎在大部分情況下表示 bug。  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a><span data-ttu-id="fe435-121">NullReferenceException、 IndexOutOfRangeException 和了 AccessViolationException</span><span class="sxs-lookup"><span data-stu-id="fe435-121">NullReferenceException, IndexOutOfRangeException, and AccessViolationException</span></span>  
+ <span data-ttu-id="fe435-122">**X 不**允許公開呼叫 Api，明確或隱含地擲回<xref:System.NullReferenceException>， <xref:System.AccessViolationException>，或<xref:System.IndexOutOfRangeException>。</span><span class="sxs-lookup"><span data-stu-id="fe435-122">**X DO NOT** allow publicly callable APIs to explicitly or implicitly throw <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, or <xref:System.IndexOutOfRangeException>.</span></span> <span data-ttu-id="fe435-123">這些例外狀況會保留並擲回的執行引擎在大部分情況下表示 bug。</span><span class="sxs-lookup"><span data-stu-id="fe435-123">These exceptions are reserved and thrown by the execution engine and in most cases indicate a bug.</span></span>  
   
- 執行檢查，以避免擲回這些例外狀況的引數。 擲回這些例外狀況會公開您可能會隨著時間變更的方法的實作詳細資料。  
+ <span data-ttu-id="fe435-124">執行檢查，以避免擲回這些例外狀況的引數。</span><span class="sxs-lookup"><span data-stu-id="fe435-124">Do argument checking to avoid throwing these exceptions.</span></span> <span data-ttu-id="fe435-125">擲回這些例外狀況會公開實作詳細資料，您可能會隨著時間變更的方法。</span><span class="sxs-lookup"><span data-stu-id="fe435-125">Throwing these exceptions exposes implementation details of your method that might change over time.</span></span>  
   
-## StackOverflowException  
- **X 不** 明確擲回 <xref:System.StackOverflowException>。 應該在只能由 CLR 明確擲回例外狀況。  
+## <a name="stackoverflowexception"></a><span data-ttu-id="fe435-126">StackOverflowException</span><span class="sxs-lookup"><span data-stu-id="fe435-126">StackOverflowException</span></span>  
+ <span data-ttu-id="fe435-127">**X 不**明確擲回<xref:System.StackOverflowException>。</span><span class="sxs-lookup"><span data-stu-id="fe435-127">**X DO NOT** explicitly throw <xref:System.StackOverflowException>.</span></span> <span data-ttu-id="fe435-128">應該在只能由 CLR 明確擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="fe435-128">The exception should be explicitly thrown only by the CLR.</span></span>  
   
- **X 不** 攔截 `StackOverflowException`。  
+ <span data-ttu-id="fe435-129">**X 不**攔截`StackOverflowException`。</span><span class="sxs-lookup"><span data-stu-id="fe435-129">**X DO NOT** catch `StackOverflowException`.</span></span>  
   
- 就幾乎不可能撰寫 managed 程式碼都保持一致任意堆疊溢位時。 Unmanaged 的 CLR 組件會使用探查移動堆疊溢位定義完善的地方而非從任意堆疊溢位退出保持一致。  
+ <span data-ttu-id="fe435-130">它是幾乎不可能撰寫仍然維持一致且任意堆疊溢位的 managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="fe435-130">It is almost impossible to write managed code that remains consistent in the presence of arbitrary stack overflows.</span></span> <span data-ttu-id="fe435-131">使用探查移動堆疊溢位到妥善定義的位置而非從任意的堆疊溢位退出，unmanaged 的 CLR 組件保持一致。</span><span class="sxs-lookup"><span data-stu-id="fe435-131">The unmanaged parts of the CLR remain consistent by using probes to move stack overflows to well-defined places rather than by backing out from arbitrary stack overflows.</span></span>  
   
-## OutOfMemoryException  
- **X 不** 明確擲回 <xref:System.OutOfMemoryException>。 是僅由 CLR 基礎結構會擲回這個例外狀況。  
+## <a name="outofmemoryexception"></a><span data-ttu-id="fe435-132">OutOfMemoryException</span><span class="sxs-lookup"><span data-stu-id="fe435-132">OutOfMemoryException</span></span>  
+ <span data-ttu-id="fe435-133">**X 不**明確擲回<xref:System.OutOfMemoryException>。</span><span class="sxs-lookup"><span data-stu-id="fe435-133">**X DO NOT** explicitly throw <xref:System.OutOfMemoryException>.</span></span> <span data-ttu-id="fe435-134">是僅供 CLR 基礎結構會擲回這個例外狀況。</span><span class="sxs-lookup"><span data-stu-id="fe435-134">This exception is to be thrown only by the CLR infrastructure.</span></span>  
   
-## ComException、 SEHException 和 ExecutionEngineException  
- **X 不** 明確擲回 <xref:System.Runtime.InteropServices.COMException>,  ，<xref:System.ExecutionEngineException>, ，和 <xref:System.Runtime.InteropServices.SEHException>。 這些例外狀況是由 CLR 基礎結構只擲回。  
+## <a name="comexception-sehexception-and-executionengineexception"></a><span data-ttu-id="fe435-135">ComException、 SEHException 和 ExecutionEngineException</span><span class="sxs-lookup"><span data-stu-id="fe435-135">ComException, SEHException, and ExecutionEngineException</span></span>  
+ <span data-ttu-id="fe435-136">**X 不**明確擲回<xref:System.Runtime.InteropServices.COMException>， <xref:System.ExecutionEngineException>，和<xref:System.Runtime.InteropServices.SEHException>。</span><span class="sxs-lookup"><span data-stu-id="fe435-136">**X DO NOT** explicitly throw <xref:System.Runtime.InteropServices.COMException>,  <xref:System.ExecutionEngineException>, and <xref:System.Runtime.InteropServices.SEHException>.</span></span> <span data-ttu-id="fe435-137">這些例外狀況會擲回僅供 CLR 基礎結構。</span><span class="sxs-lookup"><span data-stu-id="fe435-137">These exceptions are to be thrown only by the CLR infrastructure.</span></span>  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 著作權所有，並保留一切權利。*  
+ <span data-ttu-id="fe435-138">*部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="fe435-138">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *皮耳森教育，從 Inc.的權限所印製 [Framework 設計方針︰ 慣例、 慣用句和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 並 Brad Abrams，2008 年 10 月 22 日由 Addison\-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ <span data-ttu-id="fe435-139">*皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="fe435-139">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## 請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)   
- [例外狀況的設計指導方針](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a><span data-ttu-id="fe435-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fe435-140">See Also</span></span>  
+ [<span data-ttu-id="fe435-141">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="fe435-141">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="fe435-142">例外狀況的設計指導方針</span><span class="sxs-lookup"><span data-stu-id="fe435-142">Design Guidelines for Exceptions</span></span>](../../../docs/standard/design-guidelines/exceptions.md)

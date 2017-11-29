@@ -1,57 +1,57 @@
 ---
-title: "Windows Form 控制項中的配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "版面配置 [Windows Form]"
-  - "LayoutEngine 類別"
-  - "Margin 屬性 [Windows Form]"
-  - "Padding 屬性 [Windows Form]"
-  - "調整大小, 自動 [Windows Form]"
+title: "Windows Form 控制項中的配置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- layout [Windows Forms]
+- sizing [Windows Forms], automatic [Windows Forms]
+- Margin property [Windows Forms]
+- Padding property [Windws Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6244b21c2729df3bfe5899a4f4970f4b48030057
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form 控制項中的配置
-表單控制項的精確置放對許多應用程式而言非常重要。  <xref:System.Windows.Forms?displayProperty=fullName> 命名空間會提供您許多配置工具以完成此動作。  
+# <a name="layout-in-windows-forms-controls"></a><span data-ttu-id="f0697-102">Windows Form 控制項中的配置</span><span class="sxs-lookup"><span data-stu-id="f0697-102">Layout in Windows Forms Controls</span></span>
+<span data-ttu-id="f0697-103">對許多應用程式而言，控制項在表單上的精確位置是高優先順序。</span><span class="sxs-lookup"><span data-stu-id="f0697-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="f0697-104"><xref:System.Windows.Forms?displayProperty=nameWithType>命名空間提供您許多版面配置工具，可完成這項作業。</span><span class="sxs-lookup"><span data-stu-id="f0697-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout tools to accomplish this.</span></span>  
   
-## 在本節中  
- [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
- 描述 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性及其在配置中所扮演的角色。  
+## <a name="in-this-section"></a><span data-ttu-id="f0697-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="f0697-105">In This Section</span></span>  
+ [<span data-ttu-id="f0697-106">AutoSize 屬性概觀</span><span class="sxs-lookup"><span data-stu-id="f0697-106">AutoSize Property Overview</span></span>](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ <span data-ttu-id="f0697-107">描述<xref:System.Windows.Forms.Control.AutoSize%2A>屬性和其配置中的角色。</span><span class="sxs-lookup"><span data-stu-id="f0697-107">Describes the <xref:System.Windows.Forms.Control.AutoSize%2A> property and its role in layout.</span></span>  
   
- [Windows Form 控制項的邊界和邊框距離](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)  
- 描述 <xref:System.Windows.Forms.Control.Margin%2A> 和 <xref:System.Windows.Forms.Control.Padding%2A> 屬性及其在配置中所扮演的角色。  
+ [<span data-ttu-id="f0697-108">Windows Forms 控制項的邊界和邊框距離</span><span class="sxs-lookup"><span data-stu-id="f0697-108">Margin and Padding in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)  
+ <span data-ttu-id="f0697-109">描述<xref:System.Windows.Forms.Control.Margin%2A>和<xref:System.Windows.Forms.Control.Padding%2A>屬性和其版面配置中的角色。</span><span class="sxs-lookup"><span data-stu-id="f0697-109">Describes the <xref:System.Windows.Forms.Control.Margin%2A> and <xref:System.Windows.Forms.Control.Padding%2A> properties and their roles in layout.</span></span>  
   
- [如何：將控制項和表單邊緣對齊](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)  
- 示範如何使用 <xref:System.Windows.Forms.Control.Dock%2A> 屬性將您的控制項對齊它所佔用的表單邊緣。  
+ [<span data-ttu-id="f0697-110">操作說明：將控制項和表單邊緣對齊</span><span class="sxs-lookup"><span data-stu-id="f0697-110">How to: Align a Control to the Edges of Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)  
+ <span data-ttu-id="f0697-111">示範如何使用<xref:System.Windows.Forms.Control.Dock%2A>屬性，以您的控制項，會佔用的表單的邊緣對齊。</span><span class="sxs-lookup"><span data-stu-id="f0697-111">Demonstrates how to use the <xref:System.Windows.Forms.Control.Dock%2A> property to align your control to the edge of the form it occupies.</span></span>  
   
- [如何：使用邊框距離在 Windows Form 控制項周圍建立框線](../../../../docs/framework/winforms/controls/how-to-create-a-border-around-a-windows-forms-control-using-padding.md)  
- 示範如何使用 <xref:System.Windows.Forms.Control.Padding%2A> 屬性來繪製控制項的外框。  
+ [<span data-ttu-id="f0697-112">操作說明：使用邊框距離在 Windows Forms 控制項周圍建立框線</span><span class="sxs-lookup"><span data-stu-id="f0697-112">How to: Create a Border Around a Windows Forms Control Using Padding</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-border-around-a-windows-forms-control-using-padding.md)  
+ <span data-ttu-id="f0697-113">示範如何使用<xref:System.Windows.Forms.Control.Padding%2A>概述控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="f0697-113">Demonstrates how to use the <xref:System.Windows.Forms.Control.Padding%2A> property to outline a control.</span></span>  
   
- [如何：實作自訂配置引擎](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-layout-engine.md)  
- 示範如何實作 <xref:System.Windows.Forms.Layout.LayoutEngine> 以排列 Windows Form 控制項。  
+ [<span data-ttu-id="f0697-114">操作說明：實作自訂配置引擎</span><span class="sxs-lookup"><span data-stu-id="f0697-114">How to: Implement a Custom Layout Engine</span></span>](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-layout-engine.md)  
+ <span data-ttu-id="f0697-115">示範如何實作<xref:System.Windows.Forms.Layout.LayoutEngine>排列 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="f0697-115">Demonstrates how to implement a <xref:System.Windows.Forms.Layout.LayoutEngine> for arranging Windows Forms controls.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="f0697-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="f0697-116">Reference</span></span>  
  <xref:System.Windows.Forms.TableLayoutPanel>  
- 提供 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的參考文件。  
+ <span data-ttu-id="f0697-117">提供 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的參考文件。</span><span class="sxs-lookup"><span data-stu-id="f0697-117">Provides reference documentation for the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
  <xref:System.Windows.Forms.FlowLayoutPanel>  
- 提供 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的參考文件。  
+ <span data-ttu-id="f0697-118">提供 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的參考文件。</span><span class="sxs-lookup"><span data-stu-id="f0697-118">Provides reference documentation for the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-## 請參閱  
- [如何：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)   
- [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)   
- [如何：設計可適當回應當地語系化的 Windows Form 配置](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)   
- [AutoSize 在 TableLayoutPanel 控制項中的行為](../../../../docs/framework/winforms/controls/autosize-behavior-in-the-tablelayoutpanel-control.md)
+## <a name="see-also"></a><span data-ttu-id="f0697-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f0697-119">See Also</span></span>  
+ [<span data-ttu-id="f0697-120">操作說明：錨定和停駐 FlowLayoutPanel 控制項中的子控制項</span><span class="sxs-lookup"><span data-stu-id="f0697-120">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ [<span data-ttu-id="f0697-121">操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項</span><span class="sxs-lookup"><span data-stu-id="f0697-121">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [<span data-ttu-id="f0697-122">操作說明：設計可適當回應當地語系化的 Windows Forms 配置</span><span class="sxs-lookup"><span data-stu-id="f0697-122">How to: Design a Windows Forms Layout that Responds Well to Localization</span></span>](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [<span data-ttu-id="f0697-123">AutoSize 在 TableLayoutPanel 控制項中的行為</span><span class="sxs-lookup"><span data-stu-id="f0697-123">AutoSize Behavior in the TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/autosize-behavior-in-the-tablelayoutpanel-control.md)

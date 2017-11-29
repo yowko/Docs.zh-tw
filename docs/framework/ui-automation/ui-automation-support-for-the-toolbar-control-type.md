@@ -1,84 +1,87 @@
 ---
-title: "UI Automation Support for the ToolBar Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Toolbar"
-  - "UI Automation, Toolbar control type"
-  - "ToolBar control type"
+title: "ToolBar 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Toolbar
+- UI Automation, Toolbar control type
+- ToolBar control type
 ms.assetid: 85152efd-f4c5-430c-8878-3371cc598616
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 5c90436d62d98769b374137f027e283916b82086
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the ToolBar Control Type
+# <a name="ui-automation-support-for-the-toolbar-control-type"></a><span data-ttu-id="e93f6-102">ToolBar 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="e93f6-102">UI Automation Support for the ToolBar Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="e93f6-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="e93f6-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="e93f6-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="e93f6-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供工具列控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。 工具列控制項可讓使用者啟動應用程式內所含的命令與工具。  
+ <span data-ttu-id="e93f6-105">本主題提供工具列控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="e93f6-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the ToolBar control type.</span></span> <span data-ttu-id="e93f6-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。</span><span class="sxs-lookup"><span data-stu-id="e93f6-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="e93f6-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。</span><span class="sxs-lookup"><span data-stu-id="e93f6-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span> <span data-ttu-id="e93f6-108">工具列控制項可讓使用者啟動應用程式內所含的命令與工具。</span><span class="sxs-lookup"><span data-stu-id="e93f6-108">Tool bar controls enable end users to activate commands and tools contained within a application.</span></span>  
   
- 下列章節會定義工具列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用於所有工具列控制項。  
+ <span data-ttu-id="e93f6-109">下列章節會定義工具列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="e93f6-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the ToolBar control type.</span></span> <span data-ttu-id="e93f6-110">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有工具列控制項。</span><span class="sxs-lookup"><span data-stu-id="e93f6-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all tool bar controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述工具列控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="e93f6-111">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="e93f6-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="e93f6-112">下表描述工具列控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="e93f6-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to tool bar controls and describes what can be contained in each view.</span></span> <span data-ttu-id="e93f6-113">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e93f6-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|ToolBar<br /><br /> -   不同控制項 \(0 個以上\)|ToolBar<br /><br /> -   不同控制項 \(0 個以上\)|  
+|<span data-ttu-id="e93f6-114">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="e93f6-114">Control View</span></span>|<span data-ttu-id="e93f6-115">內容檢視</span><span class="sxs-lookup"><span data-stu-id="e93f6-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="e93f6-116">ToolBar</span><span class="sxs-lookup"><span data-stu-id="e93f6-116">ToolBar</span></span><br /><br /> <span data-ttu-id="e93f6-117">-不同控制項 （0 個以上）</span><span class="sxs-lookup"><span data-stu-id="e93f6-117">-   Various controls (0 or more)</span></span>|<span data-ttu-id="e93f6-118">ToolBar</span><span class="sxs-lookup"><span data-stu-id="e93f6-118">ToolBar</span></span><br /><br /> <span data-ttu-id="e93f6-119">-不同控制項 （0 個以上）</span><span class="sxs-lookup"><span data-stu-id="e93f6-119">-   Various controls (0 or more)</span></span>|  
   
- 工具列控制項的樹狀子結構內可以包含任何類型的控制項， 通常包含按鈕、下拉式方塊與分割按鈕。  
+ <span data-ttu-id="e93f6-120">工具列控制項的樹狀子結構內可以包含任何類型的控制項，</span><span class="sxs-lookup"><span data-stu-id="e93f6-120">A tool bar control can contain any type of control within its subtree.</span></span> <span data-ttu-id="e93f6-121">通常包含按鈕、下拉式方塊與分割按鈕。</span><span class="sxs-lookup"><span data-stu-id="e93f6-121">They most often contain buttons, combo boxes, and split buttons.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與工具列控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="e93f6-122">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="e93f6-122">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="e93f6-123">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與工具列控制項特別有關。</span><span class="sxs-lookup"><span data-stu-id="e93f6-123">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to tool bar controls.</span></span> <span data-ttu-id="e93f6-124">如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="e93f6-124">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|視情況而定|除非應用程式使用一個以上的工具列，否則工具列不需要名稱。 如果有多個工具列存在，則每個工具列都必須有可識別的名稱 \(如「格式」或「大綱」\)。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|工具列控制項一律沒有標籤。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ToolBar|此值與所有使用者介面架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「工具列」|對應到工具列控制項類型的當地語系化字串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|工具列控制項一律是內容。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此工具列控制項必須一律為控制項。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="e93f6-125"> 屬性</span><span class="sxs-lookup"><span data-stu-id="e93f6-125"> Property</span></span>|<span data-ttu-id="e93f6-126">值</span><span class="sxs-lookup"><span data-stu-id="e93f6-126">Value</span></span>|<span data-ttu-id="e93f6-127">備註</span><span class="sxs-lookup"><span data-stu-id="e93f6-127">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="e93f6-128">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="e93f6-128">See notes.</span></span>|<span data-ttu-id="e93f6-129">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="e93f6-129">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="e93f6-130">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="e93f6-130">See notes.</span></span>|<span data-ttu-id="e93f6-131">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="e93f6-131">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="e93f6-132">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="e93f6-132">See notes.</span></span>|<span data-ttu-id="e93f6-133">如果有週框即受支援。</span><span class="sxs-lookup"><span data-stu-id="e93f6-133">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="e93f6-134">如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。</span><span class="sxs-lookup"><span data-stu-id="e93f6-134">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="e93f6-135">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="e93f6-135">See notes.</span></span>|<span data-ttu-id="e93f6-136">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="e93f6-136">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="e93f6-137">視情況而定</span><span class="sxs-lookup"><span data-stu-id="e93f6-137">Depends</span></span>|<span data-ttu-id="e93f6-138">除非應用程式使用一個以上的工具列，否則工具列不需要名稱。</span><span class="sxs-lookup"><span data-stu-id="e93f6-138">The tool bar control does not need a name unless more than one is used within an application.</span></span> <span data-ttu-id="e93f6-139">如果有多個工具列存在，則每個工具列都必須有可識別的名稱 (如「格式」或「大綱」)。</span><span class="sxs-lookup"><span data-stu-id="e93f6-139">If more than one is present, each must have a distinguishing name (for example, Formatting or Outlining).</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="e93f6-140">工具列控制項一律沒有標籤。</span><span class="sxs-lookup"><span data-stu-id="e93f6-140">Tool bar controls never have a label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="e93f6-141">ToolBar</span><span class="sxs-lookup"><span data-stu-id="e93f6-141">ToolBar</span></span>|<span data-ttu-id="e93f6-142">此值與所有使用者介面架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="e93f6-142">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="e93f6-143">「工具列」</span><span class="sxs-lookup"><span data-stu-id="e93f6-143">"tool bar"</span></span>|<span data-ttu-id="e93f6-144">對應到工具列控制項類型的當地語系化字串。</span><span class="sxs-lookup"><span data-stu-id="e93f6-144">Localized string corresponding to the ToolBar control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="e93f6-145">True</span><span class="sxs-lookup"><span data-stu-id="e93f6-145">True</span></span>|<span data-ttu-id="e93f6-146">工具列控制項一律是內容。</span><span class="sxs-lookup"><span data-stu-id="e93f6-146">The tool bar control is always content.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="e93f6-147">True</span><span class="sxs-lookup"><span data-stu-id="e93f6-147">True</span></span>|<span data-ttu-id="e93f6-148">此工具列控制項必須一律為控制項。</span><span class="sxs-lookup"><span data-stu-id="e93f6-148">The tool bar control must always be a control.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式  
- 下表列示工具列控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="e93f6-149">必要的使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="e93f6-149">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="e93f6-150">下表列示工具列控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="e93f6-150">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by tool bar controls.</span></span> <span data-ttu-id="e93f6-151">如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e93f6-151">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式|支援|備註|  
-|-----------|--------|--------|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern>|視情況而定|工具列若可展開及摺疊以顯示更多項目，就必須支援這個模式。|  
-|<xref:System.Windows.Automation.DockPattern>|視情況而定|工具列若可停駐於螢幕的不同部分，就必須支援這個模式。|  
-|<xref:System.Windows.Automation.TransformPattern>|視情況而定|工具列若可調整大小、旋轉或移動，就必須支援這個模式。|  
+|<span data-ttu-id="e93f6-152">控制項模式</span><span class="sxs-lookup"><span data-stu-id="e93f6-152">Control Pattern</span></span>|<span data-ttu-id="e93f6-153">支援</span><span class="sxs-lookup"><span data-stu-id="e93f6-153">Support</span></span>|<span data-ttu-id="e93f6-154">備註</span><span class="sxs-lookup"><span data-stu-id="e93f6-154">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern>|<span data-ttu-id="e93f6-155">視情況而定</span><span class="sxs-lookup"><span data-stu-id="e93f6-155">Depends</span></span>|<span data-ttu-id="e93f6-156">工具列若可展開及摺疊以顯示更多項目，就必須支援這個模式。</span><span class="sxs-lookup"><span data-stu-id="e93f6-156">If the tool bar can be expanded and collapsed to show more items, then it must support this pattern.</span></span>|  
+|<xref:System.Windows.Automation.DockPattern>|<span data-ttu-id="e93f6-157">視情況而定</span><span class="sxs-lookup"><span data-stu-id="e93f6-157">Depends</span></span>|<span data-ttu-id="e93f6-158">工具列若可停駐於螢幕的不同部分，就必須支援這個模式。</span><span class="sxs-lookup"><span data-stu-id="e93f6-158">If the tool bar can be docked to different parts of the screen, then it must support this pattern.</span></span>|  
+|<xref:System.Windows.Automation.TransformPattern>|<span data-ttu-id="e93f6-159">視情況而定</span><span class="sxs-lookup"><span data-stu-id="e93f6-159">Depends</span></span>|<span data-ttu-id="e93f6-160">工具列若可調整大小、旋轉或移動，就必須支援這個模式。</span><span class="sxs-lookup"><span data-stu-id="e93f6-160">If the tool bar can be resized, rotated, or moved, it must support this pattern.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列示所有工具列控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱[UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="e93f6-161">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="e93f6-161">Required UI Automation Events</span></span>  
+ <span data-ttu-id="e93f6-162">下表列示所有工具列控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="e93f6-162">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all tool bar controls.</span></span> <span data-ttu-id="e93f6-163">如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e93f6-163">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 屬性變更事件。|視情況而定|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="e93f6-164"> 事件</span><span class="sxs-lookup"><span data-stu-id="e93f6-164"> Event</span></span>|<span data-ttu-id="e93f6-165">支援</span><span class="sxs-lookup"><span data-stu-id="e93f6-165">Support</span></span>|<span data-ttu-id="e93f6-166">備註</span><span class="sxs-lookup"><span data-stu-id="e93f6-166">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<span data-ttu-id="e93f6-167"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="e93f6-167"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="e93f6-168">必要項</span><span class="sxs-lookup"><span data-stu-id="e93f6-168">Required</span></span>|<span data-ttu-id="e93f6-169">無</span><span class="sxs-lookup"><span data-stu-id="e93f6-169">None</span></span>|  
+|<span data-ttu-id="e93f6-170"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="e93f6-170"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="e93f6-171">必要項</span><span class="sxs-lookup"><span data-stu-id="e93f6-171">Required</span></span>|<span data-ttu-id="e93f6-172">無</span><span class="sxs-lookup"><span data-stu-id="e93f6-172">None</span></span>|  
+|<span data-ttu-id="e93f6-173"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="e93f6-173"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="e93f6-174">必要項</span><span class="sxs-lookup"><span data-stu-id="e93f6-174">Required</span></span>|<span data-ttu-id="e93f6-175">無</span><span class="sxs-lookup"><span data-stu-id="e93f6-175">None</span></span>|  
+|<span data-ttu-id="e93f6-176"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="e93f6-176"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> property-changed event.</span></span>|<span data-ttu-id="e93f6-177">視情況而定</span><span class="sxs-lookup"><span data-stu-id="e93f6-177">Depends</span></span>|<span data-ttu-id="e93f6-178">無</span><span class="sxs-lookup"><span data-stu-id="e93f6-178">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="e93f6-179">必要項</span><span class="sxs-lookup"><span data-stu-id="e93f6-179">Required</span></span>|<span data-ttu-id="e93f6-180">無</span><span class="sxs-lookup"><span data-stu-id="e93f6-180">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="e93f6-181">必要項</span><span class="sxs-lookup"><span data-stu-id="e93f6-181">Required</span></span>|<span data-ttu-id="e93f6-182">無</span><span class="sxs-lookup"><span data-stu-id="e93f6-182">None</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.ToolBar>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e93f6-183">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e93f6-183">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.ToolBar>  
+ [<span data-ttu-id="e93f6-184">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="e93f6-184">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="e93f6-185">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="e93f6-185">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

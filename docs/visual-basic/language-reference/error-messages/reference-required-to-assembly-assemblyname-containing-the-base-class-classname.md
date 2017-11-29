@@ -1,56 +1,37 @@
 ---
-title: "需要組件參考 &quot;&lt;assemblyname&gt;&quot;包含基底類別&quot;&lt;classname&gt;&quot; |Microsoft 文件"
-ms.date: 2015-07-20
+title: "需要組件 &#39; 的參考&lt;assemblyname&gt;&#39; 包含基底類別 &#39;&lt;classname&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30007
 - vbc30007
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30007
+helpviewer_keywords: BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2692478864007c787eb19367109e6ce01882ffb1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f7413c82a9c61d13e7ca6fa18f27a4769a0937f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a>需要組件參考 '&lt;assemblyname&gt;'包含基底類別'&lt;classname&gt;'
-需要組件參考 '\<assemblyname >' 包含基底類別\<classname >'。 請在專案中加入一個參考。  
+# <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a><span data-ttu-id="c6de9-102">需要組件 &#39; 的參考&lt;assemblyname&gt;&#39; 包含基底類別 &#39;&lt;classname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="c6de9-102">Reference required to assembly &#39;&lt;assemblyname&gt;&#39; containing the base class &#39;&lt;classname&gt;&#39;</span></span>
+<span data-ttu-id="c6de9-103">需要組件參考 '\<assemblyname >' 包含基底類別\<類別名稱 >'。</span><span class="sxs-lookup"><span data-stu-id="c6de9-103">Reference required to assembly '\<assemblyname>' containing the base class '\<classname>'.</span></span> <span data-ttu-id="c6de9-104">請在專案中加入一個參考。</span><span class="sxs-lookup"><span data-stu-id="c6de9-104">Add one to your project.</span></span>  
   
- 此類別是在專案中未直接參考的動態連結程式庫 (DLL) 或組件中所定義。 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]編譯器需要參考，以避免模稜兩可在多個 DLL 或組件中定義類別。  
+ <span data-ttu-id="c6de9-105">此類別是在專案中未直接參考的動態連結程式庫 (DLL) 或組件中所定義。</span><span class="sxs-lookup"><span data-stu-id="c6de9-105">The class is defined in a dynamic-link library (DLL) or assembly that is not directly referenced in your project.</span></span> <span data-ttu-id="c6de9-106">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 編譯器需要參考，以避免當類別在多個 DLL 或組件中定義時所發生的模稜兩可情況。</span><span class="sxs-lookup"><span data-stu-id="c6de9-106">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler requires a reference to avoid ambiguity in case the class is defined in more than one DLL or assembly.</span></span>  
   
- **錯誤 ID︰** BC30007  
+ <span data-ttu-id="c6de9-107">**錯誤 ID︰** BC30007</span><span class="sxs-lookup"><span data-stu-id="c6de9-107">**Error ID:** BC30007</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c6de9-108">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="c6de9-108">To correct this error</span></span>  
   
--   在您的專案參考中包含未參考之 DLL 或組件的名稱。  
+-   <span data-ttu-id="c6de9-109">在您的專案參考中包含未參考之 DLL 或組件的名稱。</span><span class="sxs-lookup"><span data-stu-id="c6de9-109">Include the name of the unreferenced DLL or assembly in your project references.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [NIB 如何：使用加入參考對話方塊加入或移除參考](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [管理專案中的參考](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
- [針對中斷參考進行疑難排解](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)
+## <a name="see-also"></a><span data-ttu-id="c6de9-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6de9-110">See Also</span></span>  
+ [<span data-ttu-id="c6de9-111">NIB 如何：使用加入參考對話方塊以加入或移除參考</span><span class="sxs-lookup"><span data-stu-id="c6de9-111">NIB How to: Add or Remove References By Using the Add Reference Dialog Box</span></span>](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+ [<span data-ttu-id="c6de9-112">管理專案中的參考</span><span class="sxs-lookup"><span data-stu-id="c6de9-112">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)  
+ [<span data-ttu-id="c6de9-113">針對中斷參考進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="c6de9-113">Troubleshooting Broken References</span></span>](/visualstudio/ide/troubleshooting-broken-references)

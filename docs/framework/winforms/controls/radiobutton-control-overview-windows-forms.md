@@ -1,44 +1,44 @@
 ---
-title: "RadioButton 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RadioButton"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "選項按鈕, 關於選項按鈕"
-  - "選項按鈕, 判斷狀態"
-  - "RadioButton 控制項 [Windows Form], 關於 RadioButton 控制項"
-  - "RadioButton 控制項 [Windows Form], 判斷狀態"
+title: "RadioButton 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RadioButton
+helpviewer_keywords:
+- RadioButton control [Windows Forms], about RadioButton control
+- RadioButton control [Windows Forms], determining state
+- radio buttons [Windows Forms], determining state
+- radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ac0a04c506919ef807a3f8c5ed5aa75ee998f64a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# RadioButton 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.RadioButton> 控制項提供使用者一組兩個或多個互斥 \(Mutually Exclusive\) 選項。  選項按鈕和核取方塊的功能雖然類似，但有一個很重要的差異：當使用者選取一個選項按鈕時，便無法選取相同群組中的其他選項按鈕。  相反地，使用者可以選取任何數目的核取方塊。  定義選項按鈕群組就是告訴使用者：「這裡是一組選擇，您只能選擇一個。」  
+# <a name="radiobutton-control-overview-windows-forms"></a><span data-ttu-id="26fbf-102">RadioButton 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="26fbf-102">RadioButton Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="26fbf-103">Windows Form<xref:System.Windows.Forms.RadioButton>控制項向使用者顯示一組兩個或多個互斥。</span><span class="sxs-lookup"><span data-stu-id="26fbf-103">Windows Forms <xref:System.Windows.Forms.RadioButton> controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="26fbf-104">選項按鈕和核取方塊看起來可能類似函式，而是一項重要差異： 無法選取以及當使用者選取選項按鈕，在相同群組中的其他選項按鈕。</span><span class="sxs-lookup"><span data-stu-id="26fbf-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span> <span data-ttu-id="26fbf-105">相反地，您可以選取任意數目的核取方塊。</span><span class="sxs-lookup"><span data-stu-id="26fbf-105">In contrast, any number of check boxes can be selected.</span></span> <span data-ttu-id="26fbf-106">定義選項按鈕群組會告知使用者，"以下是選擇其中之一，您可以選擇一組 」。</span><span class="sxs-lookup"><span data-stu-id="26fbf-106">Defining a radio button group tells the user, "Here is a set of choices from which you can choose one and only one."</span></span>  
   
-## 使用控制項  
- 當按一下 <xref:System.Windows.Forms.RadioButton> 控制項時，就會將它的 <xref:System.Windows.Forms.RadioButton.Checked%2A> 屬性設定為 `true`，同時會呼叫 <xref:System.Windows.Forms.Control.Click> 事件處理常式。  當 <xref:System.Windows.Forms.RadioButton.Checked%2A> 屬性值變更時，則會引發 <xref:System.Windows.Forms.RadioButton.CheckedChanged> 事件。  如果將 <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> 屬性設定為 `true` \(預設值\)，則當選取選項按鈕時，就會自動清除群組中其他所有選項按鈕。  通常只有在使用驗證程式碼來確定選取的選項按鈕是否為允許的選項時，才會將此屬性設定為 `false`。  控制項內顯示的文字是以 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定，其中可包含便捷鍵 \(Access Key\) 捷徑。  便捷鍵可讓使用者藉由按下 ALT 鍵及便捷鍵來「按一下」其他控制項。  如需詳細資訊，請參閱 [如何：建立 Windows Form 控制項的便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)和 [如何：設定由 Windows Form 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)。  
+## <a name="using-the-control"></a><span data-ttu-id="26fbf-107">使用控制項</span><span class="sxs-lookup"><span data-stu-id="26fbf-107">Using the Control</span></span>  
+ <span data-ttu-id="26fbf-108">當<xref:System.Windows.Forms.RadioButton>按一下控制項時，其<xref:System.Windows.Forms.RadioButton.Checked%2A>屬性設定為`true`和<xref:System.Windows.Forms.Control.Click>會呼叫事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="26fbf-108">When a <xref:System.Windows.Forms.RadioButton> control is clicked, its <xref:System.Windows.Forms.RadioButton.Checked%2A> property is set to `true` and the <xref:System.Windows.Forms.Control.Click> event handler is called.</span></span> <span data-ttu-id="26fbf-109"><xref:System.Windows.Forms.RadioButton.CheckedChanged>就會引發事件時的值<xref:System.Windows.Forms.RadioButton.Checked%2A>屬性變更。</span><span class="sxs-lookup"><span data-stu-id="26fbf-109">The <xref:System.Windows.Forms.RadioButton.CheckedChanged> event is raised when the value of the <xref:System.Windows.Forms.RadioButton.Checked%2A> property changes.</span></span> <span data-ttu-id="26fbf-110">如果<xref:System.Windows.Forms.RadioButton.AutoCheck%2A>屬性設定為`true`（預設值），當選取選項按鈕，所有其他群組中會自動清除。</span><span class="sxs-lookup"><span data-stu-id="26fbf-110">If the <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> property is set to `true` (the default), when the radio button is selected all others in the group are automatically cleared.</span></span> <span data-ttu-id="26fbf-111">這個屬性通常是只將設定為`false`時驗證程式碼用來確定已選取的選項按鈕是允許的選項。</span><span class="sxs-lookup"><span data-stu-id="26fbf-111">This property is usually only set to `false` when validation code is used to make sure the radio button selected is an allowable option.</span></span> <span data-ttu-id="26fbf-112">設定在控制項中顯示的文字<xref:System.Windows.Forms.Control.Text%2A>屬性，可包含存取金鑰的捷徑。</span><span class="sxs-lookup"><span data-stu-id="26fbf-112">The text displayed within the control is set with the <xref:System.Windows.Forms.Control.Text%2A> property, which can contain access key shortcuts.</span></span> <span data-ttu-id="26fbf-113">便捷鍵可讓使用者控制 「 按一下 」 藉由按下 ALT 鍵及存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="26fbf-113">An access key enables a user to "click" the control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="26fbf-114">如需詳細資訊，請參閱[How to： 建立存取金鑰的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)和[How to： 設定 Windows Form 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)。</span><span class="sxs-lookup"><span data-stu-id="26fbf-114">For more information, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) and [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span>  
   
- <xref:System.Windows.Forms.RadioButton> 控制項可能出現為命令按鈕，如果已經選取該按鈕，或如果 <xref:System.Windows.Forms.RadioButton.Appearance%2A> 屬性是設定為 <xref:System.Windows.Forms.Appearance>，則按鈕會顯示為已被按下的狀態。  選項按鈕也可以使用 <xref:System.Windows.Forms.ButtonBase.Image%2A> 和 <xref:System.Windows.Forms.ButtonBase.ImageList%2A> 屬性來顯示影像。  如需詳細資訊，請參閱 [如何：設定由 Windows Form 控制項所顯示的影像](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
+ <span data-ttu-id="26fbf-115"><xref:System.Windows.Forms.RadioButton>控制項可以看起來像是命令按鈕，如果已經選取，如果壓下<xref:System.Windows.Forms.RadioButton.Appearance%2A>屬性設定為<xref:System.Windows.Forms.Appearance.Button>。</span><span class="sxs-lookup"><span data-stu-id="26fbf-115">The <xref:System.Windows.Forms.RadioButton> control can appear like a command button, which appears to have been depressed if selected, if the <xref:System.Windows.Forms.RadioButton.Appearance%2A> property is set to <xref:System.Windows.Forms.Appearance.Button>.</span></span> <span data-ttu-id="26fbf-116">選項按鈕也可以顯示使用的影像<xref:System.Windows.Forms.ButtonBase.Image%2A>和<xref:System.Windows.Forms.ButtonBase.ImageList%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="26fbf-116">Radio buttons can also display images using the <xref:System.Windows.Forms.ButtonBase.Image%2A> and <xref:System.Windows.Forms.ButtonBase.ImageList%2A> properties.</span></span> <span data-ttu-id="26fbf-117">如需詳細資訊，請參閱[How to： 設定 Windows Form 控制項所顯示的影像](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)。</span><span class="sxs-lookup"><span data-stu-id="26fbf-117">For more information, see [How to: Set the Image Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.RadioButton>   
- [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [GroupBox 控制項概觀](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)   
- [CheckBox 控制項概觀](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [如何：建立 Windows Form 控制項的便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)   
- [如何：設定由 Windows Form 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [如何：將 Windows Form RadioButton 控制項群組成集合使用](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)   
- [RadioButton 控制項](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="26fbf-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="26fbf-118">See Also</span></span>  
+ <xref:System.Windows.Forms.RadioButton>  
+ [<span data-ttu-id="26fbf-119">Panel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="26fbf-119">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="26fbf-120">GroupBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="26fbf-120">GroupBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="26fbf-121">CheckBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="26fbf-121">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="26fbf-122">操作說明：建立 Windows Forms 控制項的便捷鍵</span><span class="sxs-lookup"><span data-stu-id="26fbf-122">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [<span data-ttu-id="26fbf-123">操作說明：設定由 Windows Forms 控制項所顯示的文字</span><span class="sxs-lookup"><span data-stu-id="26fbf-123">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="26fbf-124">操作說明：將 Windows Forms RadioButton 控制項群組成集合使用</span><span class="sxs-lookup"><span data-stu-id="26fbf-124">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [<span data-ttu-id="26fbf-125">RadioButton 控制項</span><span class="sxs-lookup"><span data-stu-id="26fbf-125">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

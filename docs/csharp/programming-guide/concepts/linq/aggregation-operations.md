@@ -1,56 +1,46 @@
 ---
 title: "彙總作業 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f3bb029d2b7f9115d1c68db2844127329d34fe2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6c453bdccdb3af026fe4f4fb79c6e33e44e7a8f0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="aggregation-operations-c"></a>彙總作業 (C#)
-彙總運算會計算值集合中的單一值。 彙總運算的一個範例是，當您使用一個月中每天的溫度值來計算每天平均溫度時。  
+# <a name="aggregation-operations-c"></a><span data-ttu-id="7e980-102">彙總作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="7e980-102">Aggregation Operations (C#)</span></span>
+<span data-ttu-id="7e980-103">彙總運算會計算值集合中的單一值。</span><span class="sxs-lookup"><span data-stu-id="7e980-103">An aggregation operation computes a single value from a collection of values.</span></span> <span data-ttu-id="7e980-104">彙總運算的一個範例是，當您使用一個月中每天的溫度值來計算每天平均溫度時。</span><span class="sxs-lookup"><span data-stu-id="7e980-104">An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.</span></span>  
   
- 下圖顯示一系列數字之三個不同彙總作業的結果。 第一項作業會加總這些數字。 第二個作業會傳回序列中的最大值。  
+ <span data-ttu-id="7e980-105">下圖顯示一系列數字之三個不同彙總作業的結果。</span><span class="sxs-lookup"><span data-stu-id="7e980-105">The following illustration shows the results of two different aggregation operations on a sequence of numbers.</span></span> <span data-ttu-id="7e980-106">第一項作業會加總這些數字。</span><span class="sxs-lookup"><span data-stu-id="7e980-106">The first operation sums the numbers.</span></span> <span data-ttu-id="7e980-107">第二個作業會傳回序列中的最大值。</span><span class="sxs-lookup"><span data-stu-id="7e980-107">The second operation returns the maximum value in the sequence.</span></span>  
   
- ![LINQ 彙總作業](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")  
+ <span data-ttu-id="7e980-108">![LINQ 彙總作業](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")</span><span class="sxs-lookup"><span data-stu-id="7e980-108">![LINQ Aggregation Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")</span></span>  
   
- 下節列出執行彙總作業的標準查詢運算子方法。  
+ <span data-ttu-id="7e980-109">下節列出執行彙總作業的標準查詢運算子方法。</span><span class="sxs-lookup"><span data-stu-id="7e980-109">The standard query operator methods that perform aggregation operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>方法  
+## <a name="methods"></a><span data-ttu-id="7e980-110">方法</span><span class="sxs-lookup"><span data-stu-id="7e980-110">Methods</span></span>  
   
-|方法名稱|描述|C# 查詢運算式語法|更多資訊|  
+|<span data-ttu-id="7e980-111">方法名稱</span><span class="sxs-lookup"><span data-stu-id="7e980-111">Method Name</span></span>|<span data-ttu-id="7e980-112">描述</span><span class="sxs-lookup"><span data-stu-id="7e980-112">Description</span></span>|<span data-ttu-id="7e980-113">C# 查詢運算式語法</span><span class="sxs-lookup"><span data-stu-id="7e980-113">C# Query Expression Syntax</span></span>|<span data-ttu-id="7e980-114">更多資訊</span><span class="sxs-lookup"><span data-stu-id="7e980-114">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|彙總|對集合的值執行自訂彙總運算。|不適用。|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
-|平均|計算值集合的平均值。|不適用。|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
-|計數|計算集合中的項目，選擇性僅計算滿足述詞函式的項目。|不適用。|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
-|LongCount|計算大型集合中的項目，選擇性僅計算滿足述詞函式的項目。|不適用。|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
-|最大|決定集合中的最大值。|不適用。|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
-|最小|決定集合中的最小值。|不適用。|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  
-|Sum|計算集合中值的總和。|不適用。|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="7e980-115">彙總</span><span class="sxs-lookup"><span data-stu-id="7e980-115">Aggregate</span></span>|<span data-ttu-id="7e980-116">對集合的值執行自訂彙總運算。</span><span class="sxs-lookup"><span data-stu-id="7e980-116">Performs a custom aggregation operation on the values of a collection.</span></span>|<span data-ttu-id="7e980-117">不適用。</span><span class="sxs-lookup"><span data-stu-id="7e980-117">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="7e980-118">平均</span><span class="sxs-lookup"><span data-stu-id="7e980-118">Average</span></span>|<span data-ttu-id="7e980-119">計算值集合的平均值。</span><span class="sxs-lookup"><span data-stu-id="7e980-119">Calculates the average value of a collection of values.</span></span>|<span data-ttu-id="7e980-120">不適用。</span><span class="sxs-lookup"><span data-stu-id="7e980-120">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="7e980-121">計數</span><span class="sxs-lookup"><span data-stu-id="7e980-121">Count</span></span>|<span data-ttu-id="7e980-122">計算集合中的項目，選擇性僅計算滿足述詞函式的項目。</span><span class="sxs-lookup"><span data-stu-id="7e980-122">Counts the elements in a collection, optionally only those elements that satisfy a predicate function.</span></span>|<span data-ttu-id="7e980-123">不適用。</span><span class="sxs-lookup"><span data-stu-id="7e980-123">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="7e980-124">LongCount</span><span class="sxs-lookup"><span data-stu-id="7e980-124">LongCount</span></span>|<span data-ttu-id="7e980-125">計算大型集合中的項目，選擇性僅計算滿足述詞函式的項目。</span><span class="sxs-lookup"><span data-stu-id="7e980-125">Counts the elements in a large collection, optionally only those elements that satisfy a predicate function.</span></span>|<span data-ttu-id="7e980-126">不適用。</span><span class="sxs-lookup"><span data-stu-id="7e980-126">Not applicable.</span></span>|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="7e980-127">最大</span><span class="sxs-lookup"><span data-stu-id="7e980-127">Max</span></span>|<span data-ttu-id="7e980-128">決定集合中的最大值。</span><span class="sxs-lookup"><span data-stu-id="7e980-128">Determines the maximum value in a collection.</span></span>|<span data-ttu-id="7e980-129">不適用。</span><span class="sxs-lookup"><span data-stu-id="7e980-129">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="7e980-130">最小</span><span class="sxs-lookup"><span data-stu-id="7e980-130">Min</span></span>|<span data-ttu-id="7e980-131">決定集合中的最小值。</span><span class="sxs-lookup"><span data-stu-id="7e980-131">Determines the minimum value in a collection.</span></span>|<span data-ttu-id="7e980-132">不適用。</span><span class="sxs-lookup"><span data-stu-id="7e980-132">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="7e980-133">Sum</span><span class="sxs-lookup"><span data-stu-id="7e980-133">Sum</span></span>|<span data-ttu-id="7e980-134">計算集合中值的總和。</span><span class="sxs-lookup"><span data-stu-id="7e980-134">Calculates the sum of the values in a collection.</span></span>|<span data-ttu-id="7e980-135">不適用。</span><span class="sxs-lookup"><span data-stu-id="7e980-135">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq>   
- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [如何：計算 CSV 文字檔案中的資料行值 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)   
- [如何：查詢樹狀目錄中的最大檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)   
- [如何：查詢一組資料夾中的位元組總數 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="7e980-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e980-136">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="7e980-137">標準查詢運算子概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="7e980-137">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="7e980-138">如何：計算 CSV 文字檔案中的資料行值 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="7e980-138">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
+ [<span data-ttu-id="7e980-139">如何：查詢目錄樹狀中的最大檔案 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="7e980-139">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ [<span data-ttu-id="7e980-140">如何：查詢一組資料夾中的位元組總數 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="7e980-140">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

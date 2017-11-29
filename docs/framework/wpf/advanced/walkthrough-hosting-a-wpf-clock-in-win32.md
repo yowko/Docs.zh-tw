@@ -1,83 +1,86 @@
 ---
-title: "逐步解說：在 Win32 中裝載 WPF 時鐘 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "互通性 [WPF], 教學課程"
-  - "互通性 [WPF], Win32"
-  - "Win32 程式碼, WPF 互通"
+title: "逐步解說：在 Win32 中裝載 WPF 時鐘"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interoperability [WPF], tutorials
+- Win32 code [WPF], WPF interoperation
+- interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55e5aa633e3d788ac8acaa09684c92b8608e7cfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：在 Win32 中裝載 WPF 時鐘
-若要將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 放入 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 應用程式內，請使用 <xref:System.Windows.Interop.HwndSource>，它會提供包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的 HWND。  首先請建立 <xref:System.Windows.Interop.HwndSource>，並為其指定類似 CreateWindow 的參數。  接著告知 <xref:System.Windows.Interop.HwndSource> 要包含的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容。  最後，請從 <xref:System.Windows.Interop.HwndSource> 取得 HWND。  此逐步解說在說明如何在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 應用程式內建立混合的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，以實作作業系統的 \[**日期和時間內容**\] 對話方塊。  
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a><span data-ttu-id="444e5-102">逐步解說：在 Win32 中裝載 WPF 時鐘</span><span class="sxs-lookup"><span data-stu-id="444e5-102">Walkthrough: Hosting a WPF Clock in Win32</span></span>
+<span data-ttu-id="444e5-103">要放置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式會使用<xref:System.Windows.Interop.HwndSource>，這樣會提供包含 HWND 您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。</span><span class="sxs-lookup"><span data-stu-id="444e5-103">To put [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inside [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] applications, use <xref:System.Windows.Interop.HwndSource>, which provides the HWND that contains your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content.</span></span> <span data-ttu-id="444e5-104">第一次建立<xref:System.Windows.Interop.HwndSource>，讓它類似於 CreateWindow 參數。</span><span class="sxs-lookup"><span data-stu-id="444e5-104">First you create the <xref:System.Windows.Interop.HwndSource>, giving it parameters similar to CreateWindow.</span></span>  <span data-ttu-id="444e5-105">接著您告訴<xref:System.Windows.Interop.HwndSource>有關[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容您想要在其中。</span><span class="sxs-lookup"><span data-stu-id="444e5-105">Then you tell the <xref:System.Windows.Interop.HwndSource> about the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content you want inside it.</span></span>  <span data-ttu-id="444e5-106">最後，您取得的 HWND 出<xref:System.Windows.Interop.HwndSource>。</span><span class="sxs-lookup"><span data-stu-id="444e5-106">Finally, you get the HWND out of the <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="444e5-107">這個逐步解說將說明如何建立了混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]reimplements 作業系統的應用程式**日期和時間內容**對話方塊。</span><span class="sxs-lookup"><span data-stu-id="444e5-107">This walkthrough illustrates how to create a mixed [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inside [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] application that reimplements the operating system **Date and Time Properties** dialog.</span></span>  
   
-## 必要條件  
- 請參閱 [WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="444e5-108">必要條件</span><span class="sxs-lookup"><span data-stu-id="444e5-108">Prerequisites</span></span>  
+ <span data-ttu-id="444e5-109">請參閱[WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。</span><span class="sxs-lookup"><span data-stu-id="444e5-109">See [WPF and Win32 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).</span></span>  
   
-## 如何使用本教學課程  
- 本教學課程的重點為產生互通性應用程式的重要步驟。  教學課程中以 [Win32 時鐘互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051) \(英文\) 做為教學輔助，不過這個範例反映的是最終成果。  本教學課程記載步驟的方式就像您以自己現有的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 專案 \(可能是預先存在的專案\) 開始作業，並將裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 加入您的應用程式中。  您可以將您的最終成果與 [Win32 時鐘互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051)做比較。  
+## <a name="how-to-use-this-tutorial"></a><span data-ttu-id="444e5-110">如何使用本教學課程</span><span class="sxs-lookup"><span data-stu-id="444e5-110">How to Use This Tutorial</span></span>  
+ <span data-ttu-id="444e5-111">本教學課程著重在產生交互操作應用程式的重要步驟。</span><span class="sxs-lookup"><span data-stu-id="444e5-111">This tutorial concentrates on the important steps of producing an interoperation application.</span></span> <span data-ttu-id="444e5-112">本教學課程所需範例，支援[Win32 時鐘的互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051)，但該範例會在最終產品的反射。</span><span class="sxs-lookup"><span data-stu-id="444e5-112">The tutorial is backed by a sample, [Win32 Clock Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=160051), but that sample is reflective of the end product.</span></span> <span data-ttu-id="444e5-113">本教學課程中說明的步驟，您已啟動與現有[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]您自己的專案，可能是既有的專案，並且已加入裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="444e5-113">This tutorial documents the steps as if you were starting with an existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project of your own, perhaps a pre-existing project, and you were adding a hosted [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to your application.</span></span> <span data-ttu-id="444e5-114">您可以比較與最終產品[Win32 時鐘的互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051)。</span><span class="sxs-lookup"><span data-stu-id="444e5-114">You can compare your end product with [Win32 Clock Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=160051).</span></span>  
   
-## Win32 內的 Windows Presentation Framework 逐步解說 \(HwndSource\)  
- 下圖顯示本教學課程預定產生的最終成果：  
+## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a><span data-ttu-id="444e5-115">Win32 內 Windows Presentation Framework 的逐步解說 (HwndSource)</span><span class="sxs-lookup"><span data-stu-id="444e5-115">A Walkthrough of Windows Presentation Framework Inside Win32 (HwndSource)</span></span>  
+ <span data-ttu-id="444e5-116">下圖顯示本教學課程的預期最終產品︰</span><span class="sxs-lookup"><span data-stu-id="444e5-116">The following graphic shows the intended end product of this tutorial:</span></span>  
   
- ![日期和時間內容對話方塊](../../../../docs/framework/wpf/advanced/media/interoparch06.png "InteropArch06")  
+ <span data-ttu-id="444e5-117">![日期和時間內容對話方塊](../../../../docs/framework/wpf/advanced/media/interoparch06.PNG "InteropArch06")</span><span class="sxs-lookup"><span data-stu-id="444e5-117">![Date and Time Properties dialog box](../../../../docs/framework/wpf/advanced/media/interoparch06.PNG "InteropArch06")</span></span>  
   
- 您可以在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中建立 C\+\+ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 專案，並使用對話方塊編輯器建立下列項目，以便重新建立這個對話方塊：  
+ <span data-ttu-id="444e5-118">您可以藉由建立 c + + 重新建立這個對話方塊[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]專案中[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，並且使用對話方塊編輯器建立下列：</span><span class="sxs-lookup"><span data-stu-id="444e5-118">You can recreate this dialog by creating C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], and using the dialog editor to create the following:</span></span>  
   
- ![日期和時間內容對話方塊](../../../../docs/framework/wpf/advanced/media/interoparch07.png "InteropArch07")  
+ <span data-ttu-id="444e5-119">![日期和時間內容對話方塊](../../../../docs/framework/wpf/advanced/media/interoparch07.PNG "InteropArch07")</span><span class="sxs-lookup"><span data-stu-id="444e5-119">![Date and Time Properties dialog box](../../../../docs/framework/wpf/advanced/media/interoparch07.PNG "InteropArch07")</span></span>  
   
- \(您不需要使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 來使用 <xref:System.Windows.Interop.HwndSource>，也不需要使用 C\+\+ 來撰寫 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式，但這是執行這項工作相當典型的方式，而且可為其本身提供逐步的教學說明\)。  
+ <span data-ttu-id="444e5-120">(您不需要使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]使用<xref:System.Windows.Interop.HwndSource>，而且您不需要使用 c + + 撰寫[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式，但這是相當一般的做法，並能侷限於逐步教學課程說明)。</span><span class="sxs-lookup"><span data-stu-id="444e5-120">(You do not need to use [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] to use <xref:System.Windows.Interop.HwndSource>, and you do not need to use C++ to write [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programs, but this is a fairly typical way to do it, and lends itself well to a stepwise tutorial explanation).</span></span>  
   
- 您必須完成五個特殊的子步驟，才能將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 時鐘放入對話方塊中。  
+ <span data-ttu-id="444e5-121">您需要完成五個特定的子步驟，才能將[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時鐘對話方塊：</span><span class="sxs-lookup"><span data-stu-id="444e5-121">You need to accomplish five particular substeps in order to put a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock into the dialog:</span></span>  
   
-1.  在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中變更專案設定，讓您的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 專案能夠呼叫 Managed 程式碼 \(**\/clr**\)。  
+1.  <span data-ttu-id="444e5-122">啟用您[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]專案，以呼叫 managed 程式碼 (**/clr**) 中的專案設定變更[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="444e5-122">Enable your [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project to call managed code (**/clr**) by changing project settings in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].</span></span>  
   
-2.  在另一個 DLL 中建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>。  
+2.  <span data-ttu-id="444e5-123">建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>在個別的 DLL。</span><span class="sxs-lookup"><span data-stu-id="444e5-123">Create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page> in a separate DLL.</span></span>  
   
-3.  將該 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> 放入 <xref:System.Windows.Interop.HwndSource> 內。  
+3.  <span data-ttu-id="444e5-124">將它放[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>內<xref:System.Windows.Interop.HwndSource>。</span><span class="sxs-lookup"><span data-stu-id="444e5-124">Put that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page> inside an <xref:System.Windows.Interop.HwndSource>.</span></span>  
   
-4.  使用 <xref:System.Windows.Interop.HwndSource.Handle%2A> 屬性取得該 <xref:System.Windows.Controls.Page> 的 HWND。  
+4.  <span data-ttu-id="444e5-125">取得 HWND<xref:System.Windows.Controls.Page>使用<xref:System.Windows.Interop.HwndSource.Handle%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="444e5-125">Get an HWND for that <xref:System.Windows.Controls.Page> using the <xref:System.Windows.Interop.HwndSource.Handle%2A> property.</span></span>  
   
-5.  使用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 決定在完整的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 應用程式內放置 HWND 的位置。  
+5.  <span data-ttu-id="444e5-126">使用[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]決定放置在較大的 HWND[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式</span><span class="sxs-lookup"><span data-stu-id="444e5-126">Use [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] to decide where to place the HWND within the larger [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] application</span></span>  
   
-## \/clr  
- 第一個步驟是要將這個 Unmanaged [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 專案變成可以呼叫 Managed 程式碼的專案。  使用 \/clr 編譯器選項連結到您想使用的必要 DLL，並調整 Main 方法以搭配 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用。  
+## <a name="clr"></a><span data-ttu-id="444e5-127">/clr</span><span class="sxs-lookup"><span data-stu-id="444e5-127">/clr</span></span>  
+ <span data-ttu-id="444e5-128">第一個步驟是將此 unmanaged[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]專案合而為一可以呼叫 managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="444e5-128">The first step is to turn this unmanaged [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project into one that can call managed code.</span></span>  <span data-ttu-id="444e5-129">使用 /clr 編譯器選項，將會連結至您想要使用，並調整與搭配使用的 Main 方法所需 Dll [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="444e5-129">You use the /clr compiler option, which will link to the necessary DLLs you want to use, and adjust the Main method for use with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
- 若要啟用在 C\+\+ 專案中使用 Managed 程式碼的功能，請以滑鼠右鍵按一下 win32clock 專案，然後選取 \[**屬性**\]。  接著在 \[**一般**\] 屬性頁 \(預設值\) 上，將 Common Language Runtime 支援變更為 `/clr`。  
+ <span data-ttu-id="444e5-130">若要啟用 c + + 專案內的 managed 程式碼： win32clock 專案上按一下滑鼠右鍵，然後選取**屬性**。</span><span class="sxs-lookup"><span data-stu-id="444e5-130">To enable the use of managed code inside the C++ project: Right-click on win32clock project and select **Properties**.</span></span>  <span data-ttu-id="444e5-131">在**一般**屬性頁 （預設值），變更至 Common Language Runtime 支援`/clr`。</span><span class="sxs-lookup"><span data-stu-id="444e5-131">On the **General** property page (the default), change Common Language Runtime support to `/clr`.</span></span>  
   
- 接下來，加入 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所需 DLL 的參考：PresentationCore.dll、PresentationFramework.dll、System.dll、WindowsBase.dll、UIAutomationProvider.dll 和 UIAutomationTypes.dll   \(下列指示假設作業系統安裝在 C: 磁碟機上\)。  
+ <span data-ttu-id="444e5-132">接下來，加入所需的 Dll 的參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll、 PresentationFramework.dll、 System.dll、 WindowsBase.dll、 UIAutomationProvider.dll 和 UIAutomationTypes.dll。</span><span class="sxs-lookup"><span data-stu-id="444e5-132">Next, add references to DLLs necessary for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll, PresentationFramework.dll, System.dll, WindowsBase.dll, UIAutomationProvider.dll, and UIAutomationTypes.dll.</span></span> <span data-ttu-id="444e5-133">(下列指示假設作業系統安裝在 C: 磁碟機上)。</span><span class="sxs-lookup"><span data-stu-id="444e5-133">(Following instructions assume the operating system is installed on C: drive.)</span></span>  
   
-1.  以滑鼠右鍵按一下 win32clock 專案，並選取 \[**參考**\]，然後在該對話方塊內：  
+1.  <span data-ttu-id="444e5-134">Win32clock 專案上按一下滑鼠右鍵，然後選取**參考...**，並在該對話方塊內：</span><span class="sxs-lookup"><span data-stu-id="444e5-134">Right-click win32clock project and select **References...**, and inside that dialog:</span></span>  
   
-2.  以滑鼠右鍵按一下 win32clock，並選取 \[**參考**\]。  
+2.  <span data-ttu-id="444e5-135">Win32clock 專案上按一下滑鼠右鍵，然後選取**參考...**.</span><span class="sxs-lookup"><span data-stu-id="444e5-135">Right-click win32clock project and select **References...**.</span></span>  
   
-3.  按一下 \[**加入新參考**\]，再按一下 \[瀏覽\] 索引標籤，輸入 C:\\Program Files\\Reference Assemblies\\Microsoft\\Framework\\v3.0\\PresentationCore.dll，然後按 \[確定\]。  
+3.  <span data-ttu-id="444e5-136">按一下**加入新參考**，按一下 [瀏覽] 索引標籤，輸入 C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="444e5-136">Click **Add New Reference**, click Browse tab, enter C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll, and click OK.</span></span>  
   
-4.  對 PresentationFramework.dll 重複相同的動作：C:\\Program Files\\Reference Assemblies\\Microsoft\\Framework\\v3.0\\PresentationFramework.dll。  
+4.  <span data-ttu-id="444e5-137">針對 PresentationFramework.dll 重複執行：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll。</span><span class="sxs-lookup"><span data-stu-id="444e5-137">Repeat for PresentationFramework.dll: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll.</span></span>  
   
-5.  對 WindowsBase.dll 重複相同的動作：C:\\Program Files\\Reference Assemblies\\Microsoft\\Framework\\v3.0\\WindowsBase.dll。  
+5.  <span data-ttu-id="444e5-138">針對 WindowsBase.dll 重複執行：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll。</span><span class="sxs-lookup"><span data-stu-id="444e5-138">Repeat for WindowsBase.dll: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll.</span></span>  
   
-6.  對 UIAutomationTypes.dll 重複相同的動作：C:\\Program Files\\Reference Assemblies\\Microsoft\\Framework\\v3.0\\UIAutomationTypes.dll。  
+6.  <span data-ttu-id="444e5-139">針對 UIAutomationTypes.dll 重複執行：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll。</span><span class="sxs-lookup"><span data-stu-id="444e5-139">Repeat for UIAutomationTypes.dll: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll.</span></span>  
   
-7.  對 UIAutomationProvider.dll 重複相同的動作：C:\\Program Files\\Reference Assemblies\\Microsoft\\Framework\\v3.0\\UIAutomationProvider.dll。  
+7.  <span data-ttu-id="444e5-140">針對 UIAutomationProvider.dll 重複執行：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll。</span><span class="sxs-lookup"><span data-stu-id="444e5-140">Repeat for UIAutomationProvider.dll: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll.</span></span>  
   
-8.  按一下 \[**加入新參考**\]，選取 System.dll，然後按一下 \[**確定**\]。  
+8.  <span data-ttu-id="444e5-141">按一下**加入新參考**選取 System.dll，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="444e5-141">Click **Add New Reference**, select System.dll, and click **OK**.</span></span>  
   
-9. 按一下 \[**確定**\]，結束用來加入參考的 \[win32clock 屬性頁\]。  
+9. <span data-ttu-id="444e5-142">按一下**確定**結束 win32clock 屬性頁，以加入參考。</span><span class="sxs-lookup"><span data-stu-id="444e5-142">Click **OK** to exit the win32clock Property Pages for adding references.</span></span>  
   
- 最後，將 `STAThreadAttribute` 加入至 `_tWinMain` 方法以搭配 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用：  
+ <span data-ttu-id="444e5-143">最後，會加入`STAThreadAttribute`至`_tWinMain`方法搭配使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="444e5-143">Finally, add the `STAThreadAttribute` to the `_tWinMain` method for use with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span></span>  
   
 ```  
 [System::STAThreadAttribute]  
@@ -87,25 +90,25 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)  
 ```  
   
- 這個屬性會告知 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，當它初始化 [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] 時，應該使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] \(和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\) 所需的單一執行緒 Apartment 模型 \(STA\)。  
+ <span data-ttu-id="444e5-144">這個屬性會告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，它會初始化時[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，應該使用單一執行緒的 apartment 模型 (STA)，這是所需的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)](和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。</span><span class="sxs-lookup"><span data-stu-id="444e5-144">This attribute tells the [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] that when it initializes [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], it should use a single threaded apartment model (STA), which is necessary for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]).</span></span>  
   
-## 建立 Windows Presentation Framework 頁面  
- 接著建立定義 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> 的 DLL。  最簡單的方法通常是建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> 做為獨立的應用程式，然後再以這種方式撰寫並偵錯 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的部分。  完成之後，可以使用滑鼠右鍵按一下該專案，再按一下 \[**屬性**\]，移到 \[應用程式\]，然後將 \[輸出類型\] 改成 \[Windows 類別庫\]，將專案轉換成 DLL。  
+## <a name="create-a-windows-presentation-framework-page"></a><span data-ttu-id="444e5-145">建立 Windows Presentation Framework 頁面</span><span class="sxs-lookup"><span data-stu-id="444e5-145">Create a Windows Presentation Framework Page</span></span>  
+ <span data-ttu-id="444e5-146">接下來，您可以建立定義 DLL [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>。</span><span class="sxs-lookup"><span data-stu-id="444e5-146">Next, you create a DLL that defines a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>.</span></span> <span data-ttu-id="444e5-147">通常是最簡單的方式建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>做為獨立應用程式，以及寫入和偵錯[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]部分的方式。</span><span class="sxs-lookup"><span data-stu-id="444e5-147">It’s often easiest to create the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page> as a standalone application, and write and debug the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] portion that way.</span></span>  <span data-ttu-id="444e5-148">一旦完成，該專案可以開啟 dll 中以滑鼠右鍵按一下專案，按一下**屬性**、 移至應用程式，以及輸出類型變更為 Windows 類別庫。</span><span class="sxs-lookup"><span data-stu-id="444e5-148">Once done, that project can be turned into a DLL by right-clicking the project, clicking on **Properties**, going to the Application, and changing Output type to Windows Class Library.</span></span>  
   
- 接著 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll 專案可以和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 專案合併 \(一個方案包含兩個專案\) \- 以滑鼠右鍵按一下方案，並選取 \[**加入現有專案**\]。  
+ <span data-ttu-id="444e5-149">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dll 專案可以再結合[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]專案 （一個方案包含兩個專案） – 以滑鼠右鍵按一下方案，並選取**Add\Existing 專案**。</span><span class="sxs-lookup"><span data-stu-id="444e5-149">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll project can then be combined with the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project (one solution that contains two projects) – right-click on the solution, select **Add\Existing Project**.</span></span>  
   
- 若要使用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 專案中的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll，則需要加入參考：  
+ <span data-ttu-id="444e5-150">若要使用的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]dll[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]專案中，您必須加入參考：</span><span class="sxs-lookup"><span data-stu-id="444e5-150">To use that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dll from the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] project, you need to add a reference:</span></span>  
   
-1.  以滑鼠右鍵按一下 win32clock，並選取 \[**參考**\]。  
+1.  <span data-ttu-id="444e5-151">Win32clock 專案上按一下滑鼠右鍵，然後選取**參考...**.</span><span class="sxs-lookup"><span data-stu-id="444e5-151">Right-click win32clock project and select **References...**.</span></span>  
   
-2.  按一下 \[**加入新參考**\]。  
+2.  <span data-ttu-id="444e5-152">按一下**加入新參考**。</span><span class="sxs-lookup"><span data-stu-id="444e5-152">Click **Add New Reference**.</span></span>  
   
-3.  按一下 \[**專案**\] 索引標籤。  選取 WPFClock，再按一下 \[確定\]。  
+3.  <span data-ttu-id="444e5-153">按一下 [專案] 索引標籤。選取 WPFClock，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="444e5-153">Click the **Projects** tab.  Select WPFClock, click OK.</span></span>  
   
-4.  按一下 \[**確定**\]，結束用來加入參考的 \[win32clock 屬性頁\]。  
+4.  <span data-ttu-id="444e5-154">按一下**確定**結束 win32clock 屬性頁，以加入參考。</span><span class="sxs-lookup"><span data-stu-id="444e5-154">Click **OK** to exit the win32clock Property Pages for adding references.</span></span>  
   
-## HwndSource  
- 接著使用 <xref:System.Windows.Interop.HwndSource>，讓 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> 看起來像 HWND。  請將下列程式碼區塊加入至 C\+\+ 檔案：  
+## <a name="hwndsource"></a><span data-ttu-id="444e5-155">HwndSource</span><span class="sxs-lookup"><span data-stu-id="444e5-155">HwndSource</span></span>  
+ <span data-ttu-id="444e5-156">接下來，您使用<xref:System.Windows.Interop.HwndSource>進行[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> HWND 看起來。</span><span class="sxs-lookup"><span data-stu-id="444e5-156">Next, you use <xref:System.Windows.Interop.HwndSource> to make the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page> look like an HWND.</span></span>  <span data-ttu-id="444e5-157">您可以將此程式碼區塊新增至 C++ 檔案：</span><span class="sxs-lookup"><span data-stu-id="444e5-157">You add this block of code to a C++ file:</span></span>  
   
 ```  
 namespace ManagedCode  
@@ -133,7 +136,7 @@ namespace ManagedCode
 }  
 ```  
   
- 這段程式碼較長，可以使用部分說明。  第一個部分是各種不同的子句，因此您不需要完整限定所有的呼叫：  
+ <span data-ttu-id="444e5-158">這是可使用一些說明的長程式碼。</span><span class="sxs-lookup"><span data-stu-id="444e5-158">This is a long piece of code that could use some explanation.</span></span>  <span data-ttu-id="444e5-159">第一個部分是各種子句，讓您不需要完整限定所有呼叫︰</span><span class="sxs-lookup"><span data-stu-id="444e5-159">The first part is various clauses so that you do not need to fully qualify all the calls:</span></span>  
   
 ```  
 namespace ManagedCode  
@@ -144,13 +147,13 @@ namespace ManagedCode
     using namespace System::Windows::Media;  
 ```  
   
- 接著定義建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容、在其周圍放置 <xref:System.Windows.Interop.HwndSource> 並傳回 HWND 的函式：  
+ <span data-ttu-id="444e5-160">然後定義來建立函式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容，將<xref:System.Windows.Interop.HwndSource>周圍，並傳回 HWND:</span><span class="sxs-lookup"><span data-stu-id="444e5-160">Then you define a function that creates the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content, puts an <xref:System.Windows.Interop.HwndSource> around it, and returns the HWND:</span></span>  
   
 ```  
 HWND GetHwnd(HWND parent, int x, int y, int width, int height) {  
 ```  
   
- 首先請建立 <xref:System.Windows.Interop.HwndSource>，其參數與 CreateWindow 類似：  
+ <span data-ttu-id="444e5-161">第一次建立<xref:System.Windows.Interop.HwndSource>，CreateWindow 的參數如下：</span><span class="sxs-lookup"><span data-stu-id="444e5-161">First you create an <xref:System.Windows.Interop.HwndSource>, whose parameters are similar to CreateWindow:</span></span>  
   
 ```  
 HwndSource^ source = gcnew HwndSource(  
@@ -163,36 +166,36 @@ HwndSource^ source = gcnew HwndSource(
     );  
 ```  
   
- 接著透過呼叫其建構函式的方式，建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容類別：  
+ <span data-ttu-id="444e5-162">然後建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容類別，藉由呼叫其建構函式：</span><span class="sxs-lookup"><span data-stu-id="444e5-162">Then you create the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content class by calling its constructor:</span></span>  
   
 ```  
 UIElement^ page = gcnew WPFClock::Clock();  
 ```  
   
- 接著將頁面連接到 <xref:System.Windows.Interop.HwndSource>：  
+ <span data-ttu-id="444e5-163">您接著連接頁面，即可<xref:System.Windows.Interop.HwndSource>:</span><span class="sxs-lookup"><span data-stu-id="444e5-163">You then connect the page to the <xref:System.Windows.Interop.HwndSource>:</span></span>  
   
 ```  
 source->RootVisual = page;  
 ```  
   
- 在最後一行，傳回 <xref:System.Windows.Interop.HwndSource> 的 HWND：  
+ <span data-ttu-id="444e5-164">並在最後一行中，傳回的 HWND <xref:System.Windows.Interop.HwndSource>:</span><span class="sxs-lookup"><span data-stu-id="444e5-164">And in the final line, return the HWND for the <xref:System.Windows.Interop.HwndSource>:</span></span>  
   
 ```  
 return (HWND) source->Handle.ToPointer();  
 ```  
   
-## 定位 Hwnd  
- 現在您已經有一個包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 時鐘的 HWND，接下來必須將該 HWND 放入 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 對話方塊中。  如果您知道放置 HWND 的正確位置，可直接將大小和位置傳遞至您稍早定義的 `GetHwnd` 函式。  但是您是使用資源檔來定義對話方塊，所以無法確定任何 HWND 的正確位置。  您可以使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 對話方塊編輯器，將 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] STATIC 控制項放在要顯示時鐘的位置 \(「在此插入時鐘」\)，並使用該控制項來定位 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 時鐘。  
+## <a name="positioning-the-hwnd"></a><span data-ttu-id="444e5-165">定位 Hwnd</span><span class="sxs-lookup"><span data-stu-id="444e5-165">Positioning the Hwnd</span></span>  
+ <span data-ttu-id="444e5-166">您已經有包含 HWND[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時鐘，您需要將該 HWND 內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]對話方塊。</span><span class="sxs-lookup"><span data-stu-id="444e5-166">Now that you have an HWND that contains the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock, you need to put that HWND inside the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] dialog.</span></span>  <span data-ttu-id="444e5-167">如果您知道要放置 HWND 到何處，您可以只傳遞該大小和位置來`GetHwnd`先前定義的函式。</span><span class="sxs-lookup"><span data-stu-id="444e5-167">If you knew just where to put the HWND, you would just pass that size and location to the `GetHwnd` function you defined earlier.</span></span>  <span data-ttu-id="444e5-168">但是，您已使用資源檔來定義對話方塊，因此，您未完全確定放置任何 HWND 的位置。</span><span class="sxs-lookup"><span data-stu-id="444e5-168">But you used a resource file to define the dialog, so you are not exactly sure where any of the HWNDs are positioned.</span></span>  <span data-ttu-id="444e5-169">您可以使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]對話方塊編輯器將[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]靜態控制您想要前往的時鐘 （「 插入時鐘這裡"），然後使用它來定位[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時鐘。</span><span class="sxs-lookup"><span data-stu-id="444e5-169">You can use the [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] dialog editor to put a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] STATIC control where you want the clock to go ("Insert clock here"), and use that to position the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock.</span></span>  
   
- 處理 WM\_INITDIALOG 時，您會使用 `GetDlgItem` 來擷取預留位置 STATIC 的 HWND：  
+ <span data-ttu-id="444e5-170">在您處理 WM_INITDIALOG，使用`GetDlgItem`HWND 擷取靜態的預留位置：</span><span class="sxs-lookup"><span data-stu-id="444e5-170">Where you handle WM_INITDIALOG, you use `GetDlgItem` to retrieve the HWND for the placeholder STATIC:</span></span>  
   
 ```  
 HWND placeholder = GetDlgItem(hDlg, IDC_CLOCK);  
 ```  
   
- 接著再計算預留位置 STATIC 的大小和位置，使您可以將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 時鐘放在該位置：  
+ <span data-ttu-id="444e5-171">您再計算的大小和位置的預留位置靜態，因此您可以將放[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時鐘於該位置：</span><span class="sxs-lookup"><span data-stu-id="444e5-171">You then calculate the size and position of that placeholder STATIC, so you can put the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock in that place:</span></span>  
   
- RECT rectangle;  
+ <span data-ttu-id="444e5-172">RECT 矩形；</span><span class="sxs-lookup"><span data-stu-id="444e5-172">RECT rectangle;</span></span>  
   
 ```  
 GetWindowRect(placeholder, &rectangle);  
@@ -204,35 +207,35 @@ point.y = rectangle.top;
 result = MapWindowPoints(NULL, hDlg, &point, 1);  
 ```  
   
- 接著您會隱藏預留位置 STATIC：  
+ <span data-ttu-id="444e5-173">然後，您可以隱藏預留位置 STATIC︰</span><span class="sxs-lookup"><span data-stu-id="444e5-173">Then you hide the placeholder STATIC:</span></span>  
   
 ```  
 ShowWindow(placeholder, SW_HIDE);  
 ```  
   
- 然後在該位置建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 時鐘 HWND：  
+ <span data-ttu-id="444e5-174">建立和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時鐘在該位置的 HWND:</span><span class="sxs-lookup"><span data-stu-id="444e5-174">And create the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock HWND in that location:</span></span>  
   
 ```  
 HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);  
 ```  
   
- 為了讓教學課程更為有趣並且產生真實的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 時鐘，此時您必須建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 時鐘控制項。  您大多可以在標記中執行這項作業，而程式碼後置 \(Code\-Behind\) 中只需包含幾個事件處理常式 \(Event Handler\)。  由於這個教學課程是關於互通性，而不是關於控制項設計，因此這裡提供了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 時鐘的完整程式碼做為程式碼區塊，而沒有建置該段程式碼的指示以及各部分所代表意思。  請依需要使用此程式碼自行學習如何變更控制項的外觀、操作及功能。  
+ <span data-ttu-id="444e5-175">若要讓教學課程的有趣，並以產生真實[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時鐘，您必須建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此時時鐘控制項。</span><span class="sxs-lookup"><span data-stu-id="444e5-175">To make the tutorial interesting, and to produce a real [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock, you will need to create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock control at this point.</span></span> <span data-ttu-id="444e5-176">您大部分都可以透過標記完成，而且只需要程式碼後置中的一些事件處理常式即可。</span><span class="sxs-lookup"><span data-stu-id="444e5-176">You can do so mostly in markup, with just a few event handlers in code-behind.</span></span> <span data-ttu-id="444e5-177">由於本教學課程有關的互通性，以及不控制項的設計，完整程式碼[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時鐘會提供為程式碼區塊，而不指示建置它，或每個部分所代表的意義。</span><span class="sxs-lookup"><span data-stu-id="444e5-177">Since this tutorial is about interoperation and not about control design, complete code for the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock is provided here as a code block, without discrete instructions for building it up or what each part means.</span></span> <span data-ttu-id="444e5-178">請自由實驗此程式碼，來變更控制項功能的外觀或操作。</span><span class="sxs-lookup"><span data-stu-id="444e5-178">Feel free to experiment with this code to change the look and feel or functionality of the control.</span></span>  
   
- 標記如下：  
+ <span data-ttu-id="444e5-179">標記如下：</span><span class="sxs-lookup"><span data-stu-id="444e5-179">Here is the markup:</span></span>  
   
- [!code-xml[Win32Clock#AllClockXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
+ [!code-xaml[Win32Clock#AllClockXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
   
- 隨附的程式碼後置則如下：  
+ <span data-ttu-id="444e5-180">這裡是隨附的程式碼後置︰</span><span class="sxs-lookup"><span data-stu-id="444e5-180">And here is the accompanying code-behind:</span></span>  
   
  [!code-csharp[Win32Clock#AllClockCS](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
   
- 最終成果的外觀如下：  
+ <span data-ttu-id="444e5-181">最終結果如下：</span><span class="sxs-lookup"><span data-stu-id="444e5-181">The final result looks like:</span></span>  
   
- ![日期和時間內容對話方塊](../../../../docs/framework/wpf/advanced/media/interoparch08.png "InteropArch08")  
+ <span data-ttu-id="444e5-182">![日期和時間內容對話方塊](../../../../docs/framework/wpf/advanced/media/interoparch08.PNG "InteropArch08")</span><span class="sxs-lookup"><span data-stu-id="444e5-182">![Date and Time Properties dialog box](../../../../docs/framework/wpf/advanced/media/interoparch08.PNG "InteropArch08")</span></span>  
   
- 若要將您的最終結果與產生此螢幕擷取畫面的程式碼做比較，請參閱 [Win32 時鐘互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051) \(英文\)。  
+ <span data-ttu-id="444e5-183">若要比較您產生這個螢幕擷取畫面的程式碼的最後結果，請參閱[Win32 時鐘的互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051)。</span><span class="sxs-lookup"><span data-stu-id="444e5-183">To compare your end result to the code that produced this screenshot, see [Win32 Clock Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=160051).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Interop.HwndSource>   
- [WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)   
- [Win32 時鐘互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051)
+## <a name="see-also"></a><span data-ttu-id="444e5-184">另請參閱</span><span class="sxs-lookup"><span data-stu-id="444e5-184">See Also</span></span>  
+ <xref:System.Windows.Interop.HwndSource>  
+ [<span data-ttu-id="444e5-185">WPF 和 Win32 交互操作</span><span class="sxs-lookup"><span data-stu-id="444e5-185">WPF and Win32 Interoperation</span></span>](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [<span data-ttu-id="444e5-186">Win32 時鐘交互操作範例</span><span class="sxs-lookup"><span data-stu-id="444e5-186">Win32 Clock Interoperation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160051)

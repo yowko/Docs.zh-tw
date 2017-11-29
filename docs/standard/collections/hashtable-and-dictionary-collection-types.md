@@ -1,5 +1,5 @@
 ---
-title: "Hashtable 和 Dictionary 集合類型 | Microsoft Docs"
+title: "Hashtable 和 Dictionary 集合類型"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,39 +16,38 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 和 Dictionary 集合類型
-<xref:System.Collections.Hashtable?displayProperty=fullName> 類別以及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> 泛型類別會實作 <xref:System.Collections.IDictionary?displayProperty=fullName> 介面。 <xref:System.Collections.Generic.Dictionary%602> 泛型類別還會實作 <xref:System.Collections.Generic.IDictionary%602> 泛型介面。 因此，這些集合中的每個項目是索引鍵-值組。  
+# <a name="hashtable-and-dictionary-collection-types"></a><span data-ttu-id="c6575-102">Hashtable 和 Dictionary 集合類型</span><span class="sxs-lookup"><span data-stu-id="c6575-102">Hashtable and Dictionary Collection Types</span></span>
+<span data-ttu-id="c6575-103"><xref:System.Collections.Hashtable?displayProperty=nameWithType> 類別以及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 泛型類別會實作 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 介面。</span><span class="sxs-lookup"><span data-stu-id="c6575-103">The <xref:System.Collections.Hashtable?displayProperty=nameWithType> class, and the <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> and <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> generic classes, implement the <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="c6575-104"><xref:System.Collections.Generic.Dictionary%602> 泛型類別還會實作 <xref:System.Collections.Generic.IDictionary%602> 泛型介面。</span><span class="sxs-lookup"><span data-stu-id="c6575-104">The <xref:System.Collections.Generic.Dictionary%602> generic class also implements the <xref:System.Collections.Generic.IDictionary%602> generic interface.</span></span> <span data-ttu-id="c6575-105">因此，這些集合中的每個項目是索引鍵-值組。</span><span class="sxs-lookup"><span data-stu-id="c6575-105">Therefore, each element in these collections is a key-and-value pair.</span></span>  
   
- <xref:System.Collections.Hashtable> 物件是由包含集合項目的值區所組成。 值區是 <xref:System.Collections.Hashtable> 中項目的虛擬子群組，比大多數集合的搜尋和擷取更容易且更快速。 每個值區會與一個雜湊碼相關聯，這個雜湊碼是使用雜湊函式並根據項目的索引鍵所產生。  
+ <span data-ttu-id="c6575-106"><xref:System.Collections.Hashtable> 物件是由包含集合項目的值區所組成。</span><span class="sxs-lookup"><span data-stu-id="c6575-106">A <xref:System.Collections.Hashtable> object consists of buckets that contain the elements of the collection.</span></span> <span data-ttu-id="c6575-107">值區是 <xref:System.Collections.Hashtable> 中項目的虛擬子群組，比大多數集合的搜尋和擷取更容易且更快速。</span><span class="sxs-lookup"><span data-stu-id="c6575-107">A bucket is a virtual subgroup of elements within the <xref:System.Collections.Hashtable>, which makes searching and retrieving easier and faster than in most collections.</span></span> <span data-ttu-id="c6575-108">每個值區會與一個雜湊碼相關聯，這個雜湊碼是使用雜湊函式並根據項目的索引鍵所產生。</span><span class="sxs-lookup"><span data-stu-id="c6575-108">Each bucket is associated with a hash code, which is generated using a hash function and is based on the key of the element.</span></span>  
   
- 泛型 <xref:System.Collections.Generic.HashSet%601> 類別是包含唯一項目的未排序集合。  
+ <span data-ttu-id="c6575-109">泛型 <xref:System.Collections.Generic.HashSet%601> 類別是包含唯一項目的未排序集合。</span><span class="sxs-lookup"><span data-stu-id="c6575-109">The generic <xref:System.Collections.Generic.HashSet%601> class is an unordered collection for containing unique elements.</span></span>  
   
- 雜湊函式是根據索引鍵傳回數值雜湊碼的演算法。 索引鍵是所儲存之物件的特定屬性值。 雜湊函式一律必須針對同一個索引鍵傳回相同的雜湊碼。 雜湊函式可以為兩個不同的索引鍵產生相同的雜湊碼，但是當雜湊函式為每個唯一的索引鍵產生唯一的雜湊碼時，可以提升從雜湊資料表擷取項目的效能。  
+ <span data-ttu-id="c6575-110">雜湊函式是根據索引鍵傳回數值雜湊碼的演算法。</span><span class="sxs-lookup"><span data-stu-id="c6575-110">A hash function is an algorithm that returns a numeric hash code based on a key.</span></span> <span data-ttu-id="c6575-111">索引鍵是所儲存之物件的特定屬性值。</span><span class="sxs-lookup"><span data-stu-id="c6575-111">The key is the value of some property of the object being stored.</span></span> <span data-ttu-id="c6575-112">雜湊函式一律必須針對同一個索引鍵傳回相同的雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="c6575-112">A hash function must always return the same hash code for the same key.</span></span> <span data-ttu-id="c6575-113">雜湊函式可以為兩個不同的索引鍵產生相同的雜湊碼，但是當雜湊函式為每個唯一的索引鍵產生唯一的雜湊碼時，可以提升從雜湊資料表擷取項目的效能。</span><span class="sxs-lookup"><span data-stu-id="c6575-113">It is possible for a hash function to generate the same hash code for two different keys, but a hash function that generates a unique hash code for each unique key results in better performance when retrieving elements from the hash table.</span></span>  
   
- 當做 <xref:System.Collections.Hashtable> 中項目使用的每個物件必須能夠使用 <xref:System.Object.GetHashCode%2A> 方法的實作，為自己產生雜湊碼。 不過，您也可以使用接受 <xref:System.Collections.IHashCodeProvider> 實作做為其中一個參數的 <xref:System.Collections.Hashtable> 建構函式，為 <xref:System.Collections.Hashtable> 中的所有項目指定雜湊函式。  
+ <span data-ttu-id="c6575-114">當做 <xref:System.Collections.Hashtable> 中項目使用的每個物件必須能夠使用 <xref:System.Object.GetHashCode%2A> 方法的實作，為自己產生雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="c6575-114">Each object that is used as an element in a <xref:System.Collections.Hashtable> must be able to generate a hash code for itself by using an implementation of the <xref:System.Object.GetHashCode%2A> method.</span></span> <span data-ttu-id="c6575-115">不過，您也可以使用接受 <xref:System.Collections.IHashCodeProvider> 實作做為其中一個參數的 <xref:System.Collections.Hashtable> 建構函式，為 <xref:System.Collections.Hashtable> 中的所有項目指定雜湊函式。</span><span class="sxs-lookup"><span data-stu-id="c6575-115">However, you can also specify a hash function for all elements in a <xref:System.Collections.Hashtable> by using a <xref:System.Collections.Hashtable> constructor that accepts an <xref:System.Collections.IHashCodeProvider> implementation as one of its parameters.</span></span>  
   
- 將物件加入 <xref:System.Collections.Hashtable> 之後，該物件會儲存在與符合物件雜湊碼的雜湊碼關聯的值區中。 當搜尋 <xref:System.Collections.Hashtable> 中的值時，系統會針對該值產生雜湊碼，並搜尋與該雜湊碼關聯的值區。  
+ <span data-ttu-id="c6575-116">將物件加入 <xref:System.Collections.Hashtable> 之後，該物件會儲存在與符合物件雜湊碼的雜湊碼關聯的值區中。</span><span class="sxs-lookup"><span data-stu-id="c6575-116">When an object is added to a <xref:System.Collections.Hashtable>, it is stored in the bucket that is associated with the hash code that matches the object's hash code.</span></span> <span data-ttu-id="c6575-117">當搜尋 <xref:System.Collections.Hashtable> 中的值時，系統會針對該值產生雜湊碼，並搜尋與該雜湊碼關聯的值區。</span><span class="sxs-lookup"><span data-stu-id="c6575-117">When a value is being searched for in the <xref:System.Collections.Hashtable>, the hash code is generated for that value, and the bucket associated with that hash code is searched.</span></span>  
   
- 例如，字串的雜湊函式可能會接受字串中每個字元的 ASCII 碼，並全部加入以產生雜湊碼。 字串 "picnic" 的雜湊碼與字串 "basket" 的雜湊碼不同；因此，字串 "picnic" 和 "basket" 會在不同的值區。 相反地，"stressed" 和 "desserts" 有相同的雜湊碼，因此會在相同的值區。  
+ <span data-ttu-id="c6575-118">例如，字串的雜湊函式可能會接受字串中每個字元的 ASCII 碼，並全部加入以產生雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="c6575-118">For example, a hash function for a string might take the ASCII codes of each character in the string and add them together to generate a hash code.</span></span> <span data-ttu-id="c6575-119">字串 "picnic" 的雜湊碼與字串 "basket" 的雜湊碼不同；因此，字串 "picnic" 和 "basket" 會在不同的值區。</span><span class="sxs-lookup"><span data-stu-id="c6575-119">The string "picnic" would have a hash code that is different from the hash code for the string "basket"; therefore, the strings "picnic" and "basket" would be in different buckets.</span></span> <span data-ttu-id="c6575-120">相反地，"stressed" 和 "desserts" 有相同的雜湊碼，因此會在相同的值區。</span><span class="sxs-lookup"><span data-stu-id="c6575-120">In contrast, "stressed" and "desserts" would have the same hash code and would be in the same bucket.</span></span>  
   
- <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別的功能與 <xref:System.Collections.Hashtable> 類別相同。 特定類型 (<xref:System.Object> 以外的類型) 的 <xref:System.Collections.Generic.Dictionary%602> 提供比實值類型的 <xref:System.Collections.Hashtable> 更佳的效能。 這是因為 <xref:System.Collections.Hashtable> 的項目屬於 <xref:System.Object> 類型；因此，當您儲存或擷取實值類型時，通常會發生 Boxing 和 Unboxing。 當多個執行緒可能同時存取集合時，應該使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別。  
+ <span data-ttu-id="c6575-121"><xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別的功能與 <xref:System.Collections.Hashtable> 類別相同。</span><span class="sxs-lookup"><span data-stu-id="c6575-121">The <xref:System.Collections.Generic.Dictionary%602> and <xref:System.Collections.Concurrent.ConcurrentDictionary%602> classes have the same functionality as the <xref:System.Collections.Hashtable> class.</span></span> <span data-ttu-id="c6575-122">特定類型 (<xref:System.Object> 以外的類型) 的 <xref:System.Collections.Generic.Dictionary%602> 提供比實值類型的 <xref:System.Collections.Hashtable> 更佳的效能。</span><span class="sxs-lookup"><span data-stu-id="c6575-122">A <xref:System.Collections.Generic.Dictionary%602> of a specific type (other than <xref:System.Object>) provides better performance than a <xref:System.Collections.Hashtable> for value types.</span></span> <span data-ttu-id="c6575-123">這是因為 <xref:System.Collections.Hashtable> 的項目屬於 <xref:System.Object> 類型；因此，當您儲存或擷取實值類型時，通常會發生 Boxing 和 Unboxing。</span><span class="sxs-lookup"><span data-stu-id="c6575-123">This is because the elements of <xref:System.Collections.Hashtable> are of type <xref:System.Object>; therefore, boxing and unboxing typically occur when you store or retrieve a value type.</span></span> <span data-ttu-id="c6575-124">當多個執行緒可能同時存取集合時，應該使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別。</span><span class="sxs-lookup"><span data-stu-id="c6575-124">The <xref:System.Collections.Concurrent.ConcurrentDictionary%602> class should be used when multiple threads might be accessing the collection simultaneously.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.Hashtable>   
- <xref:System.Collections.IDictionary>   
- <xref:System.Collections.IHashCodeProvider>   
- <xref:System.Collections.Generic.Dictionary%602>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
- [常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a><span data-ttu-id="c6575-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6575-125">See Also</span></span>  
+ <xref:System.Collections.Hashtable>  
+ <xref:System.Collections.IDictionary>  
+ <xref:System.Collections.IHashCodeProvider>  
+ <xref:System.Collections.Generic.Dictionary%602>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
+ [<span data-ttu-id="c6575-126">常用的集合類型</span><span class="sxs-lookup"><span data-stu-id="c6575-126">Commonly Used Collection Types</span></span>](../../../docs/standard/collections/commonly-used-collection-types.md)

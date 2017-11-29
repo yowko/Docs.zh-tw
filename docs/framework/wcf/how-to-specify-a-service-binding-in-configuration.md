@@ -1,48 +1,54 @@
 ---
-title: "HOW TO：指定組態中的服務繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：指定組態中的服務繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 204ea09a7a6c14188b85f23829fc3a9446aaadd9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：指定組態中的服務繫結
-在此範例中會定義基本計算機服務的 `ICalculator` 合約，該服務會在 `CalculatorService` 類別中實作，然後會在 Web.config 檔案中設定其端點，其中會指定服務使用 <xref:System.ServiceModel.BasicHttpBinding>。如需如何使用程式碼 \(而非組態\) 設定此服務的說明，請參閱 [HOW TO：在程式碼中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)。  
+# <a name="how-to-specify-a-service-binding-in-configuration"></a><span data-ttu-id="7c6c6-102">HOW TO：指定組態中的服務繫結</span><span class="sxs-lookup"><span data-stu-id="7c6c6-102">How to: Specify a Service Binding in Configuration</span></span>
+<span data-ttu-id="7c6c6-103">在此範例中會定義基本計算機服務的 `ICalculator` 合約，該服務會在 `CalculatorService` 類別中實作，然後會在 Web.config 檔案中設定其端點，其中會指定服務使用 <xref:System.ServiceModel.BasicHttpBinding>。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-103">In this example, an `ICalculator` contract is defined for a basic calculator service, the service is implemented in the `CalculatorService` class, and then its endpoint is configured in the Web.config file, where it is specified that the service uses the <xref:System.ServiceModel.BasicHttpBinding>.</span></span> <span data-ttu-id="7c6c6-104">如需如何設定此服務，使用程式碼，而不組態的說明，請參閱[How to： 指定程式碼中的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-104">For a description of how to configure this service using code instead of a configuration, see [How to: Specify a Service Binding in Code](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).</span></span>  
   
- 通常最佳作法是在組態中以宣告方式指定繫結和位址資訊，而不是在程式碼中強制指定。在程式碼中定義端點通常不是實際的作法，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。比較一般性的作法是將繫結和位址資訊留在程式碼外面，如此一來，不需要重新編譯或重新部署應用程式，就可以變更繫結和位址資訊。  
+ <span data-ttu-id="7c6c6-105">通常最佳作法是在組態中以宣告方式指定繫結和位址資訊，而不是在程式碼中強制指定。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-105">It is usually the best practice to specify the binding and address information declaratively in configuration rather than imperatively in code.</span></span> <span data-ttu-id="7c6c6-106">在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-106">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="7c6c6-107">比較一般性的作法是將繫結和位址資訊留在程式碼外面，如此一來，不需要重新編譯或重新部署應用程式，就可以變更繫結和位址資訊。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-107">More generally, keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
   
- 以下所有組態步驟都可以使用[組態編輯器工具 \(SvcConfigEditor.exe\)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 進行。  
+ <span data-ttu-id="7c6c6-108">所有的下列設定步驟可以進行使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-108">All of the following configuration steps can be undertaken using the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).</span></span>  
   
- 如需這個範例的原始檔複本，請參閱[BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md)。  
+ <span data-ttu-id="7c6c6-109">此範例的來源副本，請參閱[BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-109">For the source copy of this example, see [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md).</span></span>  
   
-### 指定用來設定服務的 BasicHttpBinding  
+### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a><span data-ttu-id="7c6c6-110">指定用來設定服務的 BasicHttpBinding</span><span class="sxs-lookup"><span data-stu-id="7c6c6-110">To specify the BasicHttpBinding to use to configure the service</span></span>  
   
-1.  定義服務類型的服務合約。  
+1.  <span data-ttu-id="7c6c6-111">定義服務類型的服務合約。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-111">Define a service contract for the type of service.</span></span>  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
   
-2.  在服務類別中實作服務合約。  
+2.  <span data-ttu-id="7c6c6-112">在服務類別中實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-112">Implement the service contract in a service class.</span></span>  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
   
     > [!NOTE]
-    >  此服務的實作中不會指定位址或繫結資訊。同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。  
+    >  <span data-ttu-id="7c6c6-113">此服務的實作中不會指定位址或繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-113">Address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="7c6c6-114">同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-114">Also, code does not have to be written to fetch that information from the configuration file.</span></span>  
   
-3.  請建立 Web.config 檔，為使用 <xref:System.ServiceModel.WSHttpBinding> 的 `CalculatorService` 設定端點。  
+3.  <span data-ttu-id="7c6c6-115">請建立 Web.config 檔，為使用 `CalculatorService` 的 <xref:System.ServiceModel.WSHttpBinding> 設定端點。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-115">Create a Web.config file to configure an endpoint for the `CalculatorService` that uses the <xref:System.ServiceModel.WSHttpBinding>.</span></span>  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.serviceModel>  
@@ -75,20 +81,19 @@ caps.handback.revision: 17
        </bindings>  
       </system.serviceModel>  
     </configuration>  
-  
     ```  
   
-4.  請建立 Service.svc 檔，其中包含下列這行文字，並且將它放入 Internet Information Services \(IIS\) 虛擬目錄中。  
+4.  <span data-ttu-id="7c6c6-116">請建立 Service.svc 檔，其中包含下列這行文字，並且將它放入 Internet Information Services (IIS) 虛擬目錄中。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-116">Create a Service.svc file that contains the following line and place it in your Internet Information Services (IIS) virtual directory.</span></span>  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-### 若要修改繫結屬性的預設值  
+### <a name="to-modify-the-default-values-of-the-binding-properties"></a><span data-ttu-id="7c6c6-117">若要修改繫結屬性的預設值</span><span class="sxs-lookup"><span data-stu-id="7c6c6-117">To modify the default values of the binding properties</span></span>  
   
-1.  若要修改 <xref:System.ServiceModel.WSHttpBinding> 的其中一個預設屬性 \(Property\) 值，請在 [\<wsHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 項目內建立新的繫結組態名稱 `<binding name="Binding1">`，並且在此繫結項目中設定新的繫結屬性 \(Attribute\) 值。例如，若要將預設的開啟和關閉逾時值從 1 分鐘變更為 2 分鐘，請將下列文字加入至組態檔。  
+1.  <span data-ttu-id="7c6c6-118">若要修改預設屬性值的其中一項<xref:System.ServiceModel.WSHttpBinding>，建立新的繫結組態名稱- `<binding name="Binding1">` -內[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目和設定的屬性的新值此繫結項目中的繫結。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-118">To modify one of the default property values of the <xref:System.ServiceModel.WSHttpBinding>, create a new binding configuration name - `<binding name="Binding1">` - within the [\<wsHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element and set the new values for the attributes of the binding in this binding element.</span></span> <span data-ttu-id="7c6c6-119">例如，若要將預設的開啟和關閉逾時值從 1 分鐘變更為 2 分鐘，請將下列文字加入至組態檔。</span><span class="sxs-lookup"><span data-stu-id="7c6c6-119">For example, to change the default open and close timeout values of 1 minute to 2 minutes, add the following to the configuration file.</span></span>  
   
-    ```  
+    ```xml  
     <wsHttpBinding>  
       <binding name="Binding1"  
                closeTimeout="00:02:00"  
@@ -97,6 +102,6 @@ caps.handback.revision: 17
     </wsHttpBinding>  
     ```  
   
-## 請參閱  
- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
- [指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+## <a name="see-also"></a><span data-ttu-id="7c6c6-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c6c6-120">See Also</span></span>  
+ [<span data-ttu-id="7c6c6-121">使用繫結設定服務與用戶端</span><span class="sxs-lookup"><span data-stu-id="7c6c6-121">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="7c6c6-122">指定端點位址</span><span class="sxs-lookup"><span data-stu-id="7c6c6-122">Specifying an Endpoint Address</span></span>](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

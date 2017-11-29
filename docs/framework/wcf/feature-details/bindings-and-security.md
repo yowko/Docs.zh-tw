@@ -1,239 +1,242 @@
 ---
-title: "繫結和安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "繫結 [WCF]"
-  - "繫結 [WCF], 安全性"
-  - "WCF 安全性"
-  - "Windows Communication Foundation, 安全性"
+title: "繫結和安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bindings [WCF], security
+- WCF security
+- Windows Communication Foundation, security
+- bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 繫結和安全性
-包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 內之系統提供的繫結，提供了一種快速設計 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的方法。除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。本主題將根據您的安全性需求，協助您選取正確的繫結。  
+# <a name="bindings-and-security"></a><span data-ttu-id="8213a-102">繫結和安全性</span><span class="sxs-lookup"><span data-stu-id="8213a-102">Bindings and Security</span></span>
+<span data-ttu-id="8213a-103">包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 內之系統提供的繫結，提供了一種快速設計 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的方法。</span><span class="sxs-lookup"><span data-stu-id="8213a-103">The system-provided bindings included with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offer a quick way to program [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span> <span data-ttu-id="8213a-104">除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。</span><span class="sxs-lookup"><span data-stu-id="8213a-104">With one exception, all the bindings have a default security scheme enabled.</span></span> <span data-ttu-id="8213a-105">本主題將根據您的安全性需求，協助您選取正確的繫結。</span><span class="sxs-lookup"><span data-stu-id="8213a-105">This topic helps you select the right binding for your security needs.</span></span>  
   
- 如需 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性的概觀，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用繫結進行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程式設計的詳細資訊，請參閱 [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ <span data-ttu-id="8213a-106">如需[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-106">For an overview of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security, see [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8213a-107">程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用繫結，請參閱[程式設計 WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-107"> programming [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] using bindings, see [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).</span></span>  
   
- 如果已選取繫結，則可以找到更多與 [安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)內之安全性相關的執行階段行為。  
+ <span data-ttu-id="8213a-108">如果您已經選取繫結，您可以進一步了解與中安全性相關聯的執行階段行為[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-108">If you have already selected a binding, you can find out more about the run-time behaviors that are associated with security in [Security Behaviors](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).</span></span>  
   
- 某些安全性功能無法使用系統提供的繫結進行程式設計。如需使用自訂繫結進行控制的詳細資訊，請參閱[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
+ <span data-ttu-id="8213a-109">某些安全性功能無法使用系統提供的繫結進行程式設計。</span><span class="sxs-lookup"><span data-stu-id="8213a-109">Some security functions are not programmable using the system-provided bindings.</span></span> <span data-ttu-id="8213a-110">如需使用自訂繫結的控制項，請參閱[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-110">For more control using a custom binding, see [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span></span>  
   
-## 繫結的安全性功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一些系統提供的繫結，可滿足大部分的需求。如果特定繫結不敷使用，您也可以建立自訂繫結。如需系統提供之繫結的清單，請參閱[系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+## <a name="security-functions-of-bindings"></a><span data-ttu-id="8213a-111">繫結的安全性功能</span><span class="sxs-lookup"><span data-stu-id="8213a-111">Security Functions of Bindings</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="8213a-112"> 包含一些系統提供的繫結，可滿足大部分的需求。</span><span class="sxs-lookup"><span data-stu-id="8213a-112"> includes a number of system-provided bindings that meet most needs.</span></span> <span data-ttu-id="8213a-113">如果特定繫結不敷使用，您也可以建立自訂繫結。</span><span class="sxs-lookup"><span data-stu-id="8213a-113">If a particular binding does not suffice, you can also create a custom binding.</span></span> <span data-ttu-id="8213a-114">如需系統提供繫結的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-114">For a list of system-provided bindings, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8213a-115">自訂繫結，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-115"> custom bindings, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內的每一個繫結都有兩種型式：在組態檔內當做 API 使用，以及當做 XML 項目使用。例如，`WSHttpBinding` \(API\) 在 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)內有一個對應項目。  
+ <span data-ttu-id="8213a-116">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內的每一個繫結都有兩種型式：在組態檔內當做 API 使用，以及當做 XML 項目使用。</span><span class="sxs-lookup"><span data-stu-id="8213a-116">Every binding in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] has two forms: as an API and as an XML element used in a configuration file.</span></span> <span data-ttu-id="8213a-117">例如， `WSHttpBinding` (API) 中有對應的[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-117">For example, the `WSHttpBinding` (API) has a counterpart in the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- 下列章節將列出每個繫結的兩種型式，並摘要說明其安全功能。  
+ <span data-ttu-id="8213a-118">下列章節將列出每個繫結的兩種型式，並摘要說明其安全功能。</span><span class="sxs-lookup"><span data-stu-id="8213a-118">The following section lists both forms for each binding and summarizes the security features.</span></span>  
   
-### BasicHttp  
- 在程式碼內使用 <xref:System.ServiceModel.BasicHttpBinding> 類別，在組態中使用 [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
+### <a name="basichttp"></a><span data-ttu-id="8213a-119">BasicHttp</span><span class="sxs-lookup"><span data-stu-id="8213a-119">BasicHttp</span></span>  
+ <span data-ttu-id="8213a-120">在程式碼，使用<xref:System.ServiceModel.BasicHttpBinding>類別; 在組態中，使用[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-120">In code, use the <xref:System.ServiceModel.BasicHttpBinding> class; in configuration, use the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>  
   
- 這個繫結是設計用來與一系列現有技術搭配使用的，包括下列各項：  
+ <span data-ttu-id="8213a-121">這個繫結是設計用來與一系列現有技術搭配使用的，包括下列各項：</span><span class="sxs-lookup"><span data-stu-id="8213a-121">This binding is designed for use with a range of existing technologies, including the following:</span></span>  
   
--   ASP.NET Web 服務 \(ASMX\) 第 1 版。  
+-   <span data-ttu-id="8213a-122">ASP.NET Web 服務 (ASMX) 第 1 版。</span><span class="sxs-lookup"><span data-stu-id="8213a-122">ASP.NET Web services (ASMX), version 1.</span></span>  
   
--   Web Service Enhancements \(WSE\) 應用程式。  
+-   <span data-ttu-id="8213a-123">Web Service Enhancements (WSE) 應用程式。</span><span class="sxs-lookup"><span data-stu-id="8213a-123">Web Service Enhancements (WSE) applications.</span></span>  
   
--   Basic Profile，如 Web 服務互通性 \(WS\-I\) 規格中所定義 \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=38955](http://go.microsoft.com/fwlink/?LinkId=38955)，本頁面可能為英文\)。  
+-   <span data-ttu-id="8213a-124">Web 服務互通性中所定義的基本設定檔 (WS-I) 規格 ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955))。</span><span class="sxs-lookup"><span data-stu-id="8213a-124">Basic Profile as defined in the Web Services Interoperability (WS-I) specification ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).</span></span>  
   
--   如 WS\-I 中定義的 Basic Security Profile。  
+-   <span data-ttu-id="8213a-125">如 WS-I 中定義的 Basic Security Profile。</span><span class="sxs-lookup"><span data-stu-id="8213a-125">Basic security profile as defined in WS-I.</span></span>  
   
- 根據預設，這個繫結是不安全的。它是針對與 ASMX 服務相互操作所設計的。啟用安全性時，繫結是設計成可用來與 Internet Information Services \(IIS\) 安全性機制進行順暢互通的，例如：基本的驗證、摘要和整合式 Windows 安全性。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).這個繫結支援下列各項：  
+ <span data-ttu-id="8213a-126">根據預設，這個繫結是不安全的。</span><span class="sxs-lookup"><span data-stu-id="8213a-126">By default, this binding is not secure.</span></span> <span data-ttu-id="8213a-127">它是針對與 ASMX 服務相互操作所設計的。</span><span class="sxs-lookup"><span data-stu-id="8213a-127">It is designed to interoperate with ASMX services.</span></span> <span data-ttu-id="8213a-128">啟用安全性時，繫結是設計成可用來與 Internet Information Services (IIS) 安全性機制進行順暢互通的，例如：基本的驗證、摘要和整合式 Windows 安全性。</span><span class="sxs-lookup"><span data-stu-id="8213a-128">When security is enabled, the binding is designed for seamless interoperation with Internet Information Services (IIS) security mechanisms, such as basic authentication, digest, and integrated Windows security.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-129">[傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-129"> [Transport Security Overview](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span></span> <span data-ttu-id="8213a-130">這個繫結支援下列各項：</span><span class="sxs-lookup"><span data-stu-id="8213a-130">This binding supports the following:</span></span>  
   
--   HTTPS 傳輸安全性。  
+-   <span data-ttu-id="8213a-131">HTTPS 傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="8213a-131">HTTPS transport security.</span></span>  
   
--   HTTP 基本驗證。  
+-   <span data-ttu-id="8213a-132">HTTP 基本驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-132">HTTP basic authentication.</span></span>  
   
--   WS\-Security。  
+-   <span data-ttu-id="8213a-133">WS-Security。</span><span class="sxs-lookup"><span data-stu-id="8213a-133">WS-Security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>、<xref:System.ServiceModel.BasicHttpMessageSecurity>、<xref:System.ServiceModel.BasicHttpMessageCredentialType> 和 <xref:System.ServiceModel.BasicHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-134"> <xref:System.ServiceModel.BasicHttpSecurity>、<xref:System.ServiceModel.BasicHttpMessageSecurity>、<xref:System.ServiceModel.BasicHttpMessageCredentialType> 和 <xref:System.ServiceModel.BasicHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="8213a-134"> <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, and <xref:System.ServiceModel.BasicHttpSecurityMode>.</span></span>  
   
-### WSHttpBinding  
- 在程式碼內使用 <xref:System.ServiceModel.WSHttpBinding> 類別，在組態中使用 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
+### <a name="wshttpbinding"></a><span data-ttu-id="8213a-135">WSHttpBinding</span><span class="sxs-lookup"><span data-stu-id="8213a-135">WSHttpBinding</span></span>  
+ <span data-ttu-id="8213a-136">在程式碼，使用<xref:System.ServiceModel.WSHttpBinding>類別; 在組態中，使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-136">In code, use the <xref:System.ServiceModel.WSHttpBinding> class; in configuration, use the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- 根據預設，這個繫結會實作 WS\-Security 規格，並提供與實作 WS\-\* 規格之服務的互通性。它支援下列各項：  
+ <span data-ttu-id="8213a-137">根據預設，這個繫結會實作 WS-Security 規格，並提供與實作 WS-* 規格之服務的互通性。</span><span class="sxs-lookup"><span data-stu-id="8213a-137">By default, this binding implements the WS-Security specification and provides interoperability with services that implement the WS-* specifications.</span></span> <span data-ttu-id="8213a-138">它支援下列各項：</span><span class="sxs-lookup"><span data-stu-id="8213a-138">It supports the following:</span></span>  
   
--   HTTPS 傳輸安全性。  
+-   <span data-ttu-id="8213a-139">HTTPS 傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="8213a-139">HTTPS transport security.</span></span>  
   
--   WS\-Security。  
+-   <span data-ttu-id="8213a-140">WS-Security。</span><span class="sxs-lookup"><span data-stu-id="8213a-140">WS-Security.</span></span>  
   
--   用於驗證呼叫者的 HTTPS 傳輸保護 \(具 SOAP 訊息認證安全性\)。  
+-   <span data-ttu-id="8213a-141">用於驗證呼叫者的 HTTPS 傳輸保護 (具 SOAP 訊息認證安全性)。</span><span class="sxs-lookup"><span data-stu-id="8213a-141">HTTPS transport protection with SOAP message credential security for authenticating the caller.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>、<xref:System.ServiceModel.MessageSecurityOverHttp>、<xref:System.ServiceModel.MessageCredentialType>、<xref:System.ServiceModel.SecurityMode>、<xref:System.ServiceModel.HttpTransportSecurity>、<xref:System.ServiceModel.HttpClientCredentialType> 和 <xref:System.ServiceModel.HttpProxyCredentialType>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-142"> <xref:System.ServiceModel.WSHttpSecurity>、<xref:System.ServiceModel.MessageSecurityOverHttp>、<xref:System.ServiceModel.MessageCredentialType>、<xref:System.ServiceModel.SecurityMode>、<xref:System.ServiceModel.HttpTransportSecurity>、<xref:System.ServiceModel.HttpClientCredentialType> 和 <xref:System.ServiceModel.HttpProxyCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="8213a-142"> <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, and <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>  
   
-### WSDualHttpBinding  
- 在程式碼內使用 <xref:System.ServiceModel.WSDualHttpBinding> 類別，在組態中使用 [\<wsDualHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。  
+### <a name="wsdualhttpbinding"></a><span data-ttu-id="8213a-143">WSDualHttpBinding</span><span class="sxs-lookup"><span data-stu-id="8213a-143">WSDualHttpBinding</span></span>  
+ <span data-ttu-id="8213a-144">在程式碼，使用<xref:System.ServiceModel.WSDualHttpBinding>類別; 在組態中，使用[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-144">In code, use the <xref:System.ServiceModel.WSDualHttpBinding> class; in configuration, use the [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
- 這個繫結設計的目的，是為了要提供雙工服務應用程式。這個繫結實作了 WS\-Security 規格，以提供訊息傳輸安全性。傳輸安全性在此無法使用。根據預設，這個繫結提供了下列功能：  
+ <span data-ttu-id="8213a-145">這個繫結設計的目的，是為了要提供雙工服務應用程式。</span><span class="sxs-lookup"><span data-stu-id="8213a-145">This binding is designed to enable duplex service applications.</span></span> <span data-ttu-id="8213a-146">這個繫結實作了 WS-Security 規格，以提供訊息傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="8213a-146">This binding implements the WS-Security specification for message-based transfer security.</span></span> <span data-ttu-id="8213a-147">傳輸安全性在此無法使用。</span><span class="sxs-lookup"><span data-stu-id="8213a-147">Transport security is not available.</span></span> <span data-ttu-id="8213a-148">根據預設，這個繫結提供了下列功能：</span><span class="sxs-lookup"><span data-stu-id="8213a-148">By default, it provides the following features:</span></span>  
   
--   實作 WS\-Reliable 訊息以提供可靠性。  
+-   <span data-ttu-id="8213a-149">實作 WS-Reliable 訊息以提供可靠性。</span><span class="sxs-lookup"><span data-stu-id="8213a-149">Implements WS-Reliable Messaging for reliability.</span></span>  
   
--   實作 WS\-Security 以提供傳輸安全性和驗證。  
+-   <span data-ttu-id="8213a-150">實作 WS-Security 以提供傳輸安全性和驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-150">Implements WS-Security for transfer security and authentication.</span></span>  
   
--   使用 HTTP 傳遞訊息。  
+-   <span data-ttu-id="8213a-151">使用 HTTP 傳遞訊息。</span><span class="sxs-lookup"><span data-stu-id="8213a-151">Uses HTTP for message delivery.</span></span>  
   
--   使用 text\/XML 訊息編碼。  
+-   <span data-ttu-id="8213a-152">使用 text/XML 訊息編碼。</span><span class="sxs-lookup"><span data-stu-id="8213a-152">Uses text/XML message encoding.</span></span>  
   
- 使用 WS\-Security \(訊息層安全性\) 時，繫結可讓您設定下列參數：  
+ <span data-ttu-id="8213a-153">使用 WS-Security (訊息層安全性) 時，繫結可讓您設定下列參數：</span><span class="sxs-lookup"><span data-stu-id="8213a-153">Using WS-Security (message-layer security), the binding allows you to configure the following parameters:</span></span>  
   
--   安全性演算法組合，用於判斷密碼編譯演算法。  
+-   <span data-ttu-id="8213a-154">安全性演算法組合，用於判斷密碼編譯演算法。</span><span class="sxs-lookup"><span data-stu-id="8213a-154">The security algorithm suite to determine the cryptographic algorithm.</span></span>  
   
--   可供下列項目運用的繫結選項：  
+-   <span data-ttu-id="8213a-155">可供下列項目運用的繫結選項：</span><span class="sxs-lookup"><span data-stu-id="8213a-155">Binding options for the following:</span></span>  
   
-    -   經由超出範圍的方式，提供可在用戶端使用的服務認證。  
+    -   <span data-ttu-id="8213a-156">經由超出範圍的方式，提供可在用戶端使用的服務認證。</span><span class="sxs-lookup"><span data-stu-id="8213a-156">Providing service credentials available out-of-band at the client.</span></span>  
   
-    -   提供通道設定期間之服務交涉的服務認證。  
+    -   <span data-ttu-id="8213a-157">提供通道設定期間之服務交涉的服務認證。</span><span class="sxs-lookup"><span data-stu-id="8213a-157">Providing service credentials negotiated from the service as part of channel setup.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> 和 <xref:System.ServiceModel.WSDualHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-158"><xref:System.ServiceModel.WSDualHttpSecurity>和<xref:System.ServiceModel.WSDualHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="8213a-158"> <xref:System.ServiceModel.WSDualHttpSecurity> and <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>  
   
-### NetTcpBinding  
- 在程式碼內使用 <xref:System.ServiceModel.NetTcpBinding> 類別，在組態中使用 [\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
+### <a name="nettcpbinding"></a><span data-ttu-id="8213a-159">NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="8213a-159">NetTcpBinding</span></span>  
+ <span data-ttu-id="8213a-160">在程式碼，使用<xref:System.ServiceModel.NetTcpBinding>類別; 在組態中，使用[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-160">In code, use the <xref:System.ServiceModel.NetTcpBinding> class; in configuration, use the [\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>  
   
- 這個繫結已針對跨電腦通訊進行最佳化。根據預設，這個繫結具有下列特性：  
+ <span data-ttu-id="8213a-161">這個繫結已針對跨電腦通訊進行最佳化。</span><span class="sxs-lookup"><span data-stu-id="8213a-161">This binding is optimized for cross-machine communication.</span></span> <span data-ttu-id="8213a-162">根據預設，這個繫結具有下列特性：</span><span class="sxs-lookup"><span data-stu-id="8213a-162">By default, it has the following characteristics:</span></span>  
   
--   實作傳輸層安全性。  
+-   <span data-ttu-id="8213a-163">實作傳輸層安全性。</span><span class="sxs-lookup"><span data-stu-id="8213a-163">Implements transport-layer security.</span></span>  
   
--   以 Windows 安全性提供傳輸安全性和驗證。  
+-   <span data-ttu-id="8213a-164">以 Windows 安全性提供傳輸安全性和驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-164">Leverages Windows security for transfer security and authentication.</span></span>  
   
--   使用 TCP 進行傳輸。  
+-   <span data-ttu-id="8213a-165">使用 TCP 進行傳輸。</span><span class="sxs-lookup"><span data-stu-id="8213a-165">Uses TCP for transport.</span></span>  
   
--   實作二進位訊息編碼。  
+-   <span data-ttu-id="8213a-166">實作二進位訊息編碼。</span><span class="sxs-lookup"><span data-stu-id="8213a-166">Implements binary message encoding.</span></span>  
   
--   實作 WS\-Reliable 訊息。  
+-   <span data-ttu-id="8213a-167">實作 WS-Reliable 訊息。</span><span class="sxs-lookup"><span data-stu-id="8213a-167">Implements WS-Reliable Messaging.</span></span>  
   
- 包括下列選項：  
+ <span data-ttu-id="8213a-168">包括下列選項：</span><span class="sxs-lookup"><span data-stu-id="8213a-168">Options include the following:</span></span>  
   
--   訊息層安全性 \(使用 WS\-Security\)。  
+-   <span data-ttu-id="8213a-169">訊息層安全性 (使用 WS-Security)。</span><span class="sxs-lookup"><span data-stu-id="8213a-169">Message-layer security (using WS-Security).</span></span>  
   
--   使用訊息認證的傳輸安全性，其機密性和完整性是由透過 TCP 之上的傳輸層安全性 \(TLS\) 所提供，而授權的認證則是由 WS\-Security 提供。  
+-   <span data-ttu-id="8213a-170">使用訊息認證的傳輸安全性，其機密性和完整性是由透過 TCP 之上的傳輸層安全性 (TLS) 所提供，而授權的認證則是由 WS-Security 提供。</span><span class="sxs-lookup"><span data-stu-id="8213a-170">Transport security with message credential—confidentiality and integrity provided by Transport Layer Security (TLS) over TCP, and credentials for authorization provided by WS-Security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>、<xref:System.ServiceModel.TcpTransportSecurity>、<xref:System.ServiceModel.TcpClientCredentialType>、<xref:System.ServiceModel.MessageSecurityOverTcp> 和 <xref:System.ServiceModel.MessageCredentialType>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-171"> <xref:System.ServiceModel.NetTcpSecurity>、<xref:System.ServiceModel.TcpTransportSecurity>、<xref:System.ServiceModel.TcpClientCredentialType>、<xref:System.ServiceModel.MessageSecurityOverTcp> 和 <xref:System.ServiceModel.MessageCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="8213a-171"> <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, and <xref:System.ServiceModel.MessageCredentialType>.</span></span>  
   
-### NetNamedPipeBinding  
- 在程式碼內使用 <xref:System.ServiceModel.NetNamedPipeBinding> 類別，在組態中使用 [\<netNamedPipeBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)。  
+### <a name="netnamedpipebinding"></a><span data-ttu-id="8213a-172">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="8213a-172">NetNamedPipeBinding</span></span>  
+ <span data-ttu-id="8213a-173">在程式碼，使用<xref:System.ServiceModel.NetNamedPipeBinding>類別; 在組態中，使用[ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-173">In code, use the <xref:System.ServiceModel.NetNamedPipeBinding> class; in configuration, use the [\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>  
   
- 這個繫結已針對跨處理序通訊進行最佳化 \(通常是在同一部電腦上\)。根據預設，這個繫結具有下列特性：  
+ <span data-ttu-id="8213a-174">這個繫結已針對跨處理序通訊進行最佳化 (通常是在同一部電腦上)。</span><span class="sxs-lookup"><span data-stu-id="8213a-174">This binding is optimized for cross-process communication (usually on the same machine).</span></span> <span data-ttu-id="8213a-175">根據預設，這個繫結具有下列特性：</span><span class="sxs-lookup"><span data-stu-id="8213a-175">By default, this binding has the following characteristics:</span></span>  
   
--   使用傳輸安全性進行訊息傳輸和驗證。  
+-   <span data-ttu-id="8213a-176">使用傳輸安全性進行訊息傳輸和驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-176">Uses transport security for message transfer and authentication.</span></span>  
   
--   使用具名管道 \(Named Pipe\) 傳遞訊息。  
+-   <span data-ttu-id="8213a-177">使用具名管道 (Named Pipe) 傳遞訊息。</span><span class="sxs-lookup"><span data-stu-id="8213a-177">Uses named pipes for message delivery.</span></span>  
   
--   實作二進位訊息編碼。  
+-   <span data-ttu-id="8213a-178">實作二進位訊息編碼。</span><span class="sxs-lookup"><span data-stu-id="8213a-178">Implements binary message encoding.</span></span>  
   
--   加密和訊息簽署。  
+-   <span data-ttu-id="8213a-179">加密和訊息簽署。</span><span class="sxs-lookup"><span data-stu-id="8213a-179">Encryption and message signing.</span></span>  
   
- 包括下列選項：  
+ <span data-ttu-id="8213a-180">包括下列選項：</span><span class="sxs-lookup"><span data-stu-id="8213a-180">Options include the following:</span></span>  
   
--   使用 Windows 安全性進行驗證。  
+-   <span data-ttu-id="8213a-181">使用 Windows 安全性進行驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-181">Authentication using Windows security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetNamedPipeSecurity>、<xref:System.ServiceModel.NetNamedPipeSecurityMode> 和 <xref:System.ServiceModel.NamedPipeTransportSecurity>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-182"> <xref:System.ServiceModel.NetNamedPipeSecurity>、<xref:System.ServiceModel.NetNamedPipeSecurityMode>和<xref:System.ServiceModel.NamedPipeTransportSecurity>。</span><span class="sxs-lookup"><span data-stu-id="8213a-182"> <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, and <xref:System.ServiceModel.NamedPipeTransportSecurity>.</span></span>  
   
-### MsmqIntegrationBinding  
- 在程式碼內使用 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 類別，在組態中使用 [\<msmqIntegrationBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。  
+### <a name="msmqintegrationbinding"></a><span data-ttu-id="8213a-183">MsmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="8213a-183">MsmqIntegrationBinding</span></span>  
+ <span data-ttu-id="8213a-184">在程式碼，使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>類別; 在組態中，使用[ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-184">In code, use the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> class; in configuration, use the [\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>  
   
- 這個繫結已針對建立與非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing \(MSMQ\) 端點相互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務進行最佳化。  
+ <span data-ttu-id="8213a-185">這個繫結已針對建立與非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ) 端點相互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務進行最佳化。</span><span class="sxs-lookup"><span data-stu-id="8213a-185">This binding is optimized for creating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients and services that interoperate with non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ) endpoints.</span></span>  
   
- 根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：  
+ <span data-ttu-id="8213a-186">根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：</span><span class="sxs-lookup"><span data-stu-id="8213a-186">By default, this binding uses transport security and provides the following security characteristics:</span></span>  
   
--   可以停用安全性 \(無\)。  
+-   <span data-ttu-id="8213a-187">可以停用安全性 (無)。</span><span class="sxs-lookup"><span data-stu-id="8213a-187">Security can be disabled (None).</span></span>  
   
--   MSMQ 傳輸安全性 \(傳輸\)。  
+-   <span data-ttu-id="8213a-188">MSMQ 傳輸安全性 (傳輸)。</span><span class="sxs-lookup"><span data-stu-id="8213a-188">MSMQ transport security (Transport).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> 和 <xref:System.ServiceModel.NetMsmqSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-189"><xref:System.ServiceModel.NetMsmqSecurity>和<xref:System.ServiceModel.NetMsmqSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="8213a-189"> <xref:System.ServiceModel.NetMsmqSecurity> and <xref:System.ServiceModel.NetMsmqSecurityMode>.</span></span>  
   
-### NetMsmqBinding  
- 在程式碼內使用 <xref:System.ServiceModel.NetMsmqBinding> 類別，在組態中使用 [\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。  
+### <a name="netmsmqbinding"></a><span data-ttu-id="8213a-190">NetMsmqBinding</span><span class="sxs-lookup"><span data-stu-id="8213a-190">NetMsmqBinding</span></span>  
+ <span data-ttu-id="8213a-191">在程式碼，使用<xref:System.ServiceModel.NetMsmqBinding>類別; 在組態中，使用[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-191">In code, use the <xref:System.ServiceModel.NetMsmqBinding> class; in configuration, use the [\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).</span></span>  
   
- 在建立需要支援 MSMQ 佇列訊息的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，會使用這個繫結。  
+ <span data-ttu-id="8213a-192">在建立需要支援 MSMQ 佇列訊息的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，會使用這個繫結。</span><span class="sxs-lookup"><span data-stu-id="8213a-192">This binding is intended for use when creating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that require MSMQ queued message support.</span></span>  
   
- 根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：  
+ <span data-ttu-id="8213a-193">根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：</span><span class="sxs-lookup"><span data-stu-id="8213a-193">By default, this binding uses transport security and provides the following security characteristics:</span></span>  
   
--   可以停用安全性 \(無\)。  
+-   <span data-ttu-id="8213a-194">可以停用安全性 (無)。</span><span class="sxs-lookup"><span data-stu-id="8213a-194">Security can be disabled (None).</span></span>  
   
--   MSMQ 傳輸安全性 \(傳輸\)。  
+-   <span data-ttu-id="8213a-195">MSMQ 傳輸安全性 (傳輸)。</span><span class="sxs-lookup"><span data-stu-id="8213a-195">MSMQ transport security (Transport).</span></span>  
   
--   SOAP 訊息安全性 \(訊息\)。  
+-   <span data-ttu-id="8213a-196">SOAP 訊息安全性 (訊息)。</span><span class="sxs-lookup"><span data-stu-id="8213a-196">SOAP-based message security (Message).</span></span>  
   
--   同時具有傳輸和訊息安全性 \(兩者並存\)。  
+-   <span data-ttu-id="8213a-197">同時具有傳輸和訊息安全性 (兩者並存)。</span><span class="sxs-lookup"><span data-stu-id="8213a-197">Simultaneous Transport and Message security (Both).</span></span>  
   
--   支援的用戶端認證類型：無、Windows、UserName、憑證、IssuedToken。  
+-   <span data-ttu-id="8213a-198">支援的用戶端認證類型：無、Windows、UserName、憑證、IssuedToken。</span><span class="sxs-lookup"><span data-stu-id="8213a-198">Client Credential Types supported: None, Windows, UserName, Certificate, IssuedToken.</span></span>  
   
- 只有在將安全性模式設定為 <xref:System.ServiceModel.NetMsmqSecurityMode> 或 <xref:System.ServiceModel.NetMsmqSecurityMode> 時，才會支援 <xref:System.ServiceModel.MessageCredentialType> 認證。  
+ <span data-ttu-id="8213a-199">只有在將安全性模式設定為 <xref:System.ServiceModel.MessageCredentialType.Certificate> 或 <xref:System.ServiceModel.NetMsmqSecurityMode.Both> 時，才會支援 <xref:System.ServiceModel.NetMsmqSecurityMode.Message> 認證。</span><span class="sxs-lookup"><span data-stu-id="8213a-199">The <xref:System.ServiceModel.MessageCredentialType.Certificate> credential is supported only when the security mode is set to either <xref:System.ServiceModel.NetMsmqSecurityMode.Both> or <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> 和 <xref:System.ServiceModel.MsmqTransportSecurity>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-200"><xref:System.ServiceModel.MessageSecurityOverMsmq>和<xref:System.ServiceModel.MsmqTransportSecurity>。</span><span class="sxs-lookup"><span data-stu-id="8213a-200"> <xref:System.ServiceModel.MessageSecurityOverMsmq> and <xref:System.ServiceModel.MsmqTransportSecurity>.</span></span>  
   
-### WSFederationHttpBinding  
- 在程式碼內使用 <xref:System.ServiceModel.WSFederationHttpBinding> 類別，在組態中使用 [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+### <a name="wsfederationhttpbinding"></a><span data-ttu-id="8213a-201">WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="8213a-201">WSFederationHttpBinding</span></span>  
+ <span data-ttu-id="8213a-202">在程式碼，使用<xref:System.ServiceModel.WSFederationHttpBinding>類別; 在組態中，使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-202">In code, use the <xref:System.ServiceModel.WSFederationHttpBinding> class; in configuration, use the [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span></span>  
   
- 根據預設，這個繫結會使用 WS\-Security \(訊息層安全性\)。  
+ <span data-ttu-id="8213a-203">根據預設，這個繫結會使用 WS-Security (訊息層安全性)。</span><span class="sxs-lookup"><span data-stu-id="8213a-203">By default, this binding uses WS-Security (message-layer security).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [聯合](../../../../docs/framework/wcf/feature-details/federation.md)、<xref:System.ServiceModel.WSFederationHttpSecurity> 和 <xref:System.ServiceModel.WSFederationHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-204">[同盟](../../../../docs/framework/wcf/feature-details/federation.md)， <xref:System.ServiceModel.WSFederationHttpSecurity>，和<xref:System.ServiceModel.WSFederationHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="8213a-204"> [Federation](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, and <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span></span>  
   
-## 自訂繫結  
- 如果系統提供的繫結都不符合您的需求，您可以以自訂的安全性繫結項目建立自訂繫結。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+## <a name="custom-bindings"></a><span data-ttu-id="8213a-205">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="8213a-205">Custom Bindings</span></span>  
+ <span data-ttu-id="8213a-206">如果系統提供的繫結程序都不符合您的需求，您可以以自訂的安全性繫結程序項目建立自訂繫結程序。</span><span class="sxs-lookup"><span data-stu-id="8213a-206">If none of the system-provided bindings meets you requirements, you can create a custom binding with a custom security binding element.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-207">[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-207"> [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span></span>  
   
-## 繫結選擇  
- 下表摘要說明了安全性模式設定中提供的功能，也就是說，列出了當安全性模式設定為 `Transport`、`Message` 或 `TransportWithMessageCredential` 時可以使用的功能。此表可協助您找出應用程式所需的安全性功能。  
+## <a name="binding-choices"></a><span data-ttu-id="8213a-208">繫結選擇</span><span class="sxs-lookup"><span data-stu-id="8213a-208">Binding Choices</span></span>  
+ <span data-ttu-id="8213a-209">下表摘要說明了安全性模式設定中提供的功能，也就是說，列出了當安全性模式設定為 `Transport`、`Message` 或 `TransportWithMessageCredential` 時可以使用的功能。</span><span class="sxs-lookup"><span data-stu-id="8213a-209">The following table summarizes the features offered in the security mode setting, that is, it lists the features available when the security mode is set to `Transport`, `Message`, or `TransportWithMessageCredential`.</span></span> <span data-ttu-id="8213a-210">此表可協助您找出應用程式所需的安全性功能。</span><span class="sxs-lookup"><span data-stu-id="8213a-210">Use this table to help you find the security features your application requires.</span></span>  
   
-|設定|功能|  
-|--------|--------|  
-|傳輸|伺服器驗證<br /><br /> 用戶端驗證<br /><br /> 點對點安全性<br /><br /> 互通性<br /><br /> 硬體加速<br /><br /> 高輸送量<br /><br /> 安全的防火牆<br /><br /> 高延遲的應用程式<br /><br /> 多個躍點間重新加密|  
-|訊息|伺服器驗證<br /><br /> 用戶端驗證<br /><br /> 端對端安全性<br /><br /> 互通性<br /><br /> 豐富的宣告<br /><br /> 聯合<br /><br /> 多重要素驗證<br /><br /> 自訂權杖<br /><br /> 公證\/時間戳記服務<br /><br /> 高延遲的應用程式<br /><br /> 訊息簽章的持續性|  
-|TransportWithMessageCredential|伺服器驗證<br /><br /> 用戶端驗證<br /><br /> 點對點安全性<br /><br /> 互通性<br /><br /> 硬體加速<br /><br /> 高輸送量<br /><br /> 豐富的用戶端宣告<br /><br /> 聯合<br /><br /> 多重要素驗證<br /><br /> 自訂權杖<br /><br /> 安全的防火牆<br /><br /> 高延遲的應用程式<br /><br /> 多個躍點間重新加密|  
+|<span data-ttu-id="8213a-211">設定</span><span class="sxs-lookup"><span data-stu-id="8213a-211">Setting</span></span>|<span data-ttu-id="8213a-212">功能</span><span class="sxs-lookup"><span data-stu-id="8213a-212">Features</span></span>|  
+|-------------|--------------|  
+|<span data-ttu-id="8213a-213">Transport</span><span class="sxs-lookup"><span data-stu-id="8213a-213">Transport</span></span>|<span data-ttu-id="8213a-214">伺服器驗證</span><span class="sxs-lookup"><span data-stu-id="8213a-214">Server authentication</span></span><br /><br /> <span data-ttu-id="8213a-215">用戶端驗證</span><span class="sxs-lookup"><span data-stu-id="8213a-215">Client authentication</span></span><br /><br /> <span data-ttu-id="8213a-216">點對點安全性</span><span class="sxs-lookup"><span data-stu-id="8213a-216">Point-to-point security</span></span><br /><br /> <span data-ttu-id="8213a-217">互通性</span><span class="sxs-lookup"><span data-stu-id="8213a-217">Interoperability</span></span><br /><br /> <span data-ttu-id="8213a-218">硬體加速</span><span class="sxs-lookup"><span data-stu-id="8213a-218">Hardware acceleration</span></span><br /><br /> <span data-ttu-id="8213a-219">高輸送量</span><span class="sxs-lookup"><span data-stu-id="8213a-219">High throughput</span></span><br /><br /> <span data-ttu-id="8213a-220">安全的防火牆</span><span class="sxs-lookup"><span data-stu-id="8213a-220">Secure firewall</span></span><br /><br /> <span data-ttu-id="8213a-221">高延遲的應用程式</span><span class="sxs-lookup"><span data-stu-id="8213a-221">High-latency applications</span></span><br /><br /> <span data-ttu-id="8213a-222">多個躍點間重新加密</span><span class="sxs-lookup"><span data-stu-id="8213a-222">Re-encryption across multiple hops</span></span>|  
+|<span data-ttu-id="8213a-223">訊息</span><span class="sxs-lookup"><span data-stu-id="8213a-223">Message</span></span>|<span data-ttu-id="8213a-224">伺服器驗證</span><span class="sxs-lookup"><span data-stu-id="8213a-224">Server authentication</span></span><br /><br /> <span data-ttu-id="8213a-225">用戶端驗證</span><span class="sxs-lookup"><span data-stu-id="8213a-225">Client authentication</span></span><br /><br /> <span data-ttu-id="8213a-226">端對端安全性</span><span class="sxs-lookup"><span data-stu-id="8213a-226">End-to-end security</span></span><br /><br /> <span data-ttu-id="8213a-227">互通性</span><span class="sxs-lookup"><span data-stu-id="8213a-227">Interoperability</span></span><br /><br /> <span data-ttu-id="8213a-228">豐富的宣告</span><span class="sxs-lookup"><span data-stu-id="8213a-228">Rich claims</span></span><br /><br /> <span data-ttu-id="8213a-229">同盟</span><span class="sxs-lookup"><span data-stu-id="8213a-229">Federation</span></span><br /><br /> <span data-ttu-id="8213a-230">多重要素驗證</span><span class="sxs-lookup"><span data-stu-id="8213a-230">Multifactor authentication</span></span><br /><br /> <span data-ttu-id="8213a-231">自訂權杖</span><span class="sxs-lookup"><span data-stu-id="8213a-231">Custom tokens</span></span><br /><br /> <span data-ttu-id="8213a-232">公證/時間戳記服務</span><span class="sxs-lookup"><span data-stu-id="8213a-232">Notary/timestamp service</span></span><br /><br /> <span data-ttu-id="8213a-233">高延遲的應用程式</span><span class="sxs-lookup"><span data-stu-id="8213a-233">High-latency applications</span></span><br /><br /> <span data-ttu-id="8213a-234">訊息簽章的持續性</span><span class="sxs-lookup"><span data-stu-id="8213a-234">Persistence of message signatures</span></span>|  
+|<span data-ttu-id="8213a-235">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="8213a-235">TransportWithMessageCredential</span></span>|<span data-ttu-id="8213a-236">伺服器驗證</span><span class="sxs-lookup"><span data-stu-id="8213a-236">Server authentication</span></span><br /><br /> <span data-ttu-id="8213a-237">用戶端驗證</span><span class="sxs-lookup"><span data-stu-id="8213a-237">Client authentication</span></span><br /><br /> <span data-ttu-id="8213a-238">點對點安全性</span><span class="sxs-lookup"><span data-stu-id="8213a-238">Point-to-point security</span></span><br /><br /> <span data-ttu-id="8213a-239">互通性</span><span class="sxs-lookup"><span data-stu-id="8213a-239">Interoperability</span></span><br /><br /> <span data-ttu-id="8213a-240">硬體加速</span><span class="sxs-lookup"><span data-stu-id="8213a-240">Hardware acceleration</span></span><br /><br /> <span data-ttu-id="8213a-241">高輸送量</span><span class="sxs-lookup"><span data-stu-id="8213a-241">High throughput</span></span><br /><br /> <span data-ttu-id="8213a-242">豐富的用戶端宣告</span><span class="sxs-lookup"><span data-stu-id="8213a-242">Rich client claims</span></span><br /><br /> <span data-ttu-id="8213a-243">同盟</span><span class="sxs-lookup"><span data-stu-id="8213a-243">Federation</span></span><br /><br /> <span data-ttu-id="8213a-244">多重要素驗證</span><span class="sxs-lookup"><span data-stu-id="8213a-244">Multifactor authentication</span></span><br /><br /> <span data-ttu-id="8213a-245">自訂權杖</span><span class="sxs-lookup"><span data-stu-id="8213a-245">Custom tokens</span></span><br /><br /> <span data-ttu-id="8213a-246">安全的防火牆</span><span class="sxs-lookup"><span data-stu-id="8213a-246">Secure firewall</span></span><br /><br /> <span data-ttu-id="8213a-247">高延遲的應用程式</span><span class="sxs-lookup"><span data-stu-id="8213a-247">High-latency applications</span></span><br /><br /> <span data-ttu-id="8213a-248">多個躍點間重新加密</span><span class="sxs-lookup"><span data-stu-id="8213a-248">Re-encryption across multiple hops</span></span>|  
   
- 下表列出支援各種模式設定的繫結。您可以從表格中選取一種繫結，以便用來建立您的服務端點。  
+ <span data-ttu-id="8213a-249">下表列出支援各種模式設定的繫結。</span><span class="sxs-lookup"><span data-stu-id="8213a-249">The following table lists the bindings that support the various mode settings.</span></span> <span data-ttu-id="8213a-250">您可以從表格中選取一種繫結，以便用來建立您的服務端點。</span><span class="sxs-lookup"><span data-stu-id="8213a-250">Select a binding from the table to use to create your service endpoint.</span></span>  
   
-|繫結|傳輸模式支援|訊息模式支援|TransportWithMessageCredential 支援|  
-|--------|------------|------------|---------------------------------------|  
-|`BasicHttpBinding`|是|是|是|  
-|`WSHttpBinding`|是|有|有|  
-|`WSDualHttpBinding`|否|是|否|  
-|`NetTcpBinding`|是|是|是|  
-|`NetNamedPipeBinding`|是|否|否|  
-|`NetMsmqBinding`|是|是|否|  
-|`MsmqIntegrationBinding`|是|否|否|  
-|`wsFederationHttpBinding`|否|是|是|  
+|<span data-ttu-id="8213a-251">繫結</span><span class="sxs-lookup"><span data-stu-id="8213a-251">Binding</span></span>|<span data-ttu-id="8213a-252">傳輸模式支援</span><span class="sxs-lookup"><span data-stu-id="8213a-252">Transport mode support</span></span>|<span data-ttu-id="8213a-253">訊息模式支援</span><span class="sxs-lookup"><span data-stu-id="8213a-253">Message mode support</span></span>|<span data-ttu-id="8213a-254">TransportWithMessageCredential 支援</span><span class="sxs-lookup"><span data-stu-id="8213a-254">TransportWithMessageCredential support</span></span>|  
+|-------------|----------------------------|--------------------------|--------------------------------------------|  
+|`BasicHttpBinding`|<span data-ttu-id="8213a-255">是</span><span class="sxs-lookup"><span data-stu-id="8213a-255">Yes</span></span>|<span data-ttu-id="8213a-256">是</span><span class="sxs-lookup"><span data-stu-id="8213a-256">Yes</span></span>|<span data-ttu-id="8213a-257">是</span><span class="sxs-lookup"><span data-stu-id="8213a-257">Yes</span></span>|  
+|`WSHttpBinding`|<span data-ttu-id="8213a-258">是</span><span class="sxs-lookup"><span data-stu-id="8213a-258">Yes</span></span>|<span data-ttu-id="8213a-259">是</span><span class="sxs-lookup"><span data-stu-id="8213a-259">Yes</span></span>|<span data-ttu-id="8213a-260">是</span><span class="sxs-lookup"><span data-stu-id="8213a-260">Yes</span></span>|  
+|`WSDualHttpBinding`|<span data-ttu-id="8213a-261">否</span><span class="sxs-lookup"><span data-stu-id="8213a-261">No</span></span>|<span data-ttu-id="8213a-262">是</span><span class="sxs-lookup"><span data-stu-id="8213a-262">Yes</span></span>|<span data-ttu-id="8213a-263">否</span><span class="sxs-lookup"><span data-stu-id="8213a-263">No</span></span>|  
+|`NetTcpBinding`|<span data-ttu-id="8213a-264">是</span><span class="sxs-lookup"><span data-stu-id="8213a-264">Yes</span></span>|<span data-ttu-id="8213a-265">是</span><span class="sxs-lookup"><span data-stu-id="8213a-265">Yes</span></span>|<span data-ttu-id="8213a-266">是</span><span class="sxs-lookup"><span data-stu-id="8213a-266">Yes</span></span>|  
+|`NetNamedPipeBinding`|<span data-ttu-id="8213a-267">是</span><span class="sxs-lookup"><span data-stu-id="8213a-267">Yes</span></span>|<span data-ttu-id="8213a-268">否</span><span class="sxs-lookup"><span data-stu-id="8213a-268">No</span></span>|<span data-ttu-id="8213a-269">否</span><span class="sxs-lookup"><span data-stu-id="8213a-269">No</span></span>|  
+|`NetMsmqBinding`|<span data-ttu-id="8213a-270">是</span><span class="sxs-lookup"><span data-stu-id="8213a-270">Yes</span></span>|<span data-ttu-id="8213a-271">是</span><span class="sxs-lookup"><span data-stu-id="8213a-271">Yes</span></span>|<span data-ttu-id="8213a-272">否</span><span class="sxs-lookup"><span data-stu-id="8213a-272">No</span></span>|  
+|`MsmqIntegrationBinding`|<span data-ttu-id="8213a-273">是</span><span class="sxs-lookup"><span data-stu-id="8213a-273">Yes</span></span>|<span data-ttu-id="8213a-274">否</span><span class="sxs-lookup"><span data-stu-id="8213a-274">No</span></span>|<span data-ttu-id="8213a-275">否</span><span class="sxs-lookup"><span data-stu-id="8213a-275">No</span></span>|  
+|`wsFederationHttpBinding`|<span data-ttu-id="8213a-276">否</span><span class="sxs-lookup"><span data-stu-id="8213a-276">No</span></span>|<span data-ttu-id="8213a-277">是</span><span class="sxs-lookup"><span data-stu-id="8213a-277">Yes</span></span>|<span data-ttu-id="8213a-278">是</span><span class="sxs-lookup"><span data-stu-id="8213a-278">Yes</span></span>|  
   
-## 繫結中的傳輸認證  
- 下表列出在傳輸安全性模式中使用 `BasicHttpBinding` 或 `WSHttpBinding` 時，可以使用的用戶端認證類型。  
+## <a name="transport-credentials-in-bindings"></a><span data-ttu-id="8213a-279">繫結中的傳輸認證</span><span class="sxs-lookup"><span data-stu-id="8213a-279">Transport Credentials in Bindings</span></span>  
+ <span data-ttu-id="8213a-280">下表列出在傳輸安全性模式中使用 `BasicHttpBinding` 或 `WSHttpBinding` 時，可以使用的用戶端認證類型。</span><span class="sxs-lookup"><span data-stu-id="8213a-280">The following table lists the client credential types available when using either `BasicHttpBinding` or `WSHttpBinding` in transport security mode.</span></span>  
   
-|類型|描述|  
-|--------|--------|  
-|無|指定用戶端不需要提出任何認證。這會轉譯成匿名用戶端。|  
-|基本|基本驗證。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP 驗證：基本與摘要式驗證的詳細資訊，網址如下：[http:\/\/go.microsoft.com\/fwlink\/?LinkId\=84023](http://go.microsoft.com/fwlink/?LinkId=84023) \(英文\)。|  
-|摘要式|摘要式驗證。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP 驗證：基本與摘要式驗證的詳細資訊，網址如下：[http:\/\/go.microsoft.com\/fwlink\/?LinkId\=84023](http://go.microsoft.com/fwlink/?LinkId=84023) \(本頁面可能為英文\)。|  
-|NTLM|NT LAN Manager \(NTLM\) 驗證。|  
-|Windows|Windows 驗證。|  
-|憑證|使用憑證執行的驗證。|  
-|IssuedToken|允許服務要求用戶端必須以安全性權杖服務或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所發出的權杖進行驗證。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][聯合與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|<span data-ttu-id="8213a-281">類型</span><span class="sxs-lookup"><span data-stu-id="8213a-281">Type</span></span>|<span data-ttu-id="8213a-282">描述</span><span class="sxs-lookup"><span data-stu-id="8213a-282">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="8213a-283">無</span><span class="sxs-lookup"><span data-stu-id="8213a-283">None</span></span>|<span data-ttu-id="8213a-284">指定用戶端不需要提出任何認證。</span><span class="sxs-lookup"><span data-stu-id="8213a-284">Specifies that the client does not need to present any credential.</span></span> <span data-ttu-id="8213a-285">這會轉譯成匿名用戶端。</span><span class="sxs-lookup"><span data-stu-id="8213a-285">This translates to an anonymous client.</span></span>|  
+|<span data-ttu-id="8213a-286">基本</span><span class="sxs-lookup"><span data-stu-id="8213a-286">Basic</span></span>|<span data-ttu-id="8213a-287">基本驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-287">Basic authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-288">RFC 2617 – HTTP Authentication: Basic and Digest Authentication，可以在[http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023)。</span><span class="sxs-lookup"><span data-stu-id="8213a-288"> RFC 2617 – HTTP Authentication: Basic and Digest Authentication, available at [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span></span>|  
+|<span data-ttu-id="8213a-289">摘要</span><span class="sxs-lookup"><span data-stu-id="8213a-289">Digest</span></span>|<span data-ttu-id="8213a-290">摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-290">Digest authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-291">RFC 2617 – HTTP Authentication: Basic and Digest Authentication，可以在[http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023)。</span><span class="sxs-lookup"><span data-stu-id="8213a-291"> RFC 2617 – HTTP Authentication: Basic and Digest Authentication, available at [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span></span>|  
+|<span data-ttu-id="8213a-292">NTLM</span><span class="sxs-lookup"><span data-stu-id="8213a-292">NTLM</span></span>|<span data-ttu-id="8213a-293">NT LAN Manager (NTLM) 驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-293">NT LAN Manager (NTLM) authentication.</span></span>|  
+|<span data-ttu-id="8213a-294">Windows</span><span class="sxs-lookup"><span data-stu-id="8213a-294">Windows</span></span>|<span data-ttu-id="8213a-295">Windows 驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-295">Windows authentication.</span></span>|  
+|<span data-ttu-id="8213a-296">憑證</span><span class="sxs-lookup"><span data-stu-id="8213a-296">Certificate</span></span>|<span data-ttu-id="8213a-297">使用憑證執行的驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-297">Authentication performed using a certificate.</span></span>|  
+|<span data-ttu-id="8213a-298">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="8213a-298">IssuedToken</span></span>|<span data-ttu-id="8213a-299">允許服務要求用戶端必須以安全性權杖服務或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所發出的權杖進行驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-299">Allows the service to require that the client be authenticated using a token issued by a security token service or by [!INCLUDE[infocard](../../../../includes/infocard-md.md)].</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8213a-300">[同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。</span><span class="sxs-lookup"><span data-stu-id="8213a-300"> [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>|  
   
-### 繫結中的訊息用戶端認證  
- 下表列出在訊息安全性模式中使用繫結時，可以使用的用戶端認證類型。  
+### <a name="message-client-credentials-in-bindings"></a><span data-ttu-id="8213a-301">繫結中的訊息用戶端認證</span><span class="sxs-lookup"><span data-stu-id="8213a-301">Message Client Credentials in Bindings</span></span>  
+ <span data-ttu-id="8213a-302">下表列出在訊息安全性模式中使用繫結時，可以使用的用戶端認證類型。</span><span class="sxs-lookup"><span data-stu-id="8213a-302">The following table lists the client credential types available when using a binding in Message security mode.</span></span>  
   
-|型別|描述|  
-|--------|--------|  
-|無|允許服務與匿名用戶端互動。|  
-|Windows|允許在 Windows 認證的已驗證內容中進行 SOAP 訊息交換。|  
-|UserName|允許服務要求用戶端必須以使用者名稱認證進行驗證。請注意，當安全性模式設定為 `TransportWithMessageCredential` 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援傳送密碼摘要或使用密碼衍生金鑰，甚至針對訊息模式安全性使用該金鑰。基於這個理由，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在利用使用者名稱認證時，強制保護傳輸安全。|  
-|憑證|允許服務要求用戶端使用憑證進行驗證。|  
-|IssuedToken|允許服務使用安全性權杖服務提供自訂權杖。|  
+|<span data-ttu-id="8213a-303">類型</span><span class="sxs-lookup"><span data-stu-id="8213a-303">Type</span></span>|<span data-ttu-id="8213a-304">描述</span><span class="sxs-lookup"><span data-stu-id="8213a-304">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="8213a-305">無</span><span class="sxs-lookup"><span data-stu-id="8213a-305">None</span></span>|<span data-ttu-id="8213a-306">允許服務與匿名用戶端互動。</span><span class="sxs-lookup"><span data-stu-id="8213a-306">Allows the service to interact with anonymous clients.</span></span>|  
+|<span data-ttu-id="8213a-307">Windows</span><span class="sxs-lookup"><span data-stu-id="8213a-307">Windows</span></span>|<span data-ttu-id="8213a-308">允許在 Windows 認證的已驗證內容中進行 SOAP 訊息交換。</span><span class="sxs-lookup"><span data-stu-id="8213a-308">Allows SOAP message exchanges to be made under the authenticated context of a Windows credential.</span></span>|  
+|<span data-ttu-id="8213a-309">UserName</span><span class="sxs-lookup"><span data-stu-id="8213a-309">UserName</span></span>|<span data-ttu-id="8213a-310">允許服務要求用戶端必須以使用者名稱認證進行驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-310">Allows the service to require that the client be authenticated using a user name credential.</span></span> <span data-ttu-id="8213a-311">請注意，當安全性模式設定為 `TransportWithMessageCredential` 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援傳送密碼摘要或使用密碼衍生金鑰，甚至針對訊息模式安全性使用該金鑰。</span><span class="sxs-lookup"><span data-stu-id="8213a-311">Note that when the security mode is set to `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not support sending a password digest or deriving keys using password and using such keys for Message mode security.</span></span> <span data-ttu-id="8213a-312">基於這個理由，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在利用使用者名稱認證時，強制保護傳輸安全。</span><span class="sxs-lookup"><span data-stu-id="8213a-312">As such, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enforces that the transport is secured when using user name credentials.</span></span>|  
+|<span data-ttu-id="8213a-313">憑證</span><span class="sxs-lookup"><span data-stu-id="8213a-313">Certificate</span></span>|<span data-ttu-id="8213a-314">允許服務要求用戶端使用憑證進行驗證。</span><span class="sxs-lookup"><span data-stu-id="8213a-314">Allows the service to require that the client be authenticated using a certificate.</span></span>|  
+|<span data-ttu-id="8213a-315">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="8213a-315">IssuedToken</span></span>|<span data-ttu-id="8213a-316">允許服務使用安全性權杖服務提供自訂權杖。</span><span class="sxs-lookup"><span data-stu-id="8213a-316">Allows the service to use a security token service to supply a custom token.</span></span>|  
   
-## 請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)   
- [安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Windows Server AppFabric 的資訊安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="8213a-317">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8213a-317">See Also</span></span>  
+ [<span data-ttu-id="8213a-318">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="8213a-318">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="8213a-319">保護服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="8213a-319">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="8213a-320">選取認證類型</span><span class="sxs-lookup"><span data-stu-id="8213a-320">Selecting a Credential Type</span></span>](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="8213a-321">自訂繫結的安全性功能</span><span class="sxs-lookup"><span data-stu-id="8213a-321">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="8213a-322">安全性行為</span><span class="sxs-lookup"><span data-stu-id="8213a-322">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="8213a-323">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="8213a-323">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

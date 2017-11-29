@@ -1,31 +1,34 @@
 ---
-title: "ComPlusInstanceCreationError | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ComPlusInstanceCreationError
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f54078e6-7de0-4d0e-bda7-a420da110311
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef131b075008577a00730d09100df89d079af684
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ComPlusInstanceCreationError
-識別碼：134  
+# <a name="complusinstancecreationerror"></a><span data-ttu-id="7b414-102">ComPlusInstanceCreationError</span><span class="sxs-lookup"><span data-stu-id="7b414-102">ComPlusInstanceCreationError</span></span>
+<span data-ttu-id="7b414-103">識別碼：134</span><span class="sxs-lookup"><span data-stu-id="7b414-103">Id: 134</span></span>  
   
- 嚴重性：錯誤  
+ <span data-ttu-id="7b414-104">嚴重性：錯誤</span><span class="sxs-lookup"><span data-stu-id="7b414-104">Severity: Error</span></span>  
   
- 分類：ServiceModel  
+ <span data-ttu-id="7b414-105">分類：ServiceModel</span><span class="sxs-lookup"><span data-stu-id="7b414-105">Category: ServiceModel</span></span>  
   
-## 描述  
- COM\+：建立 COM 執行個體時發生錯誤。  
+## <a name="description"></a><span data-ttu-id="7b414-106">描述</span><span class="sxs-lookup"><span data-stu-id="7b414-106">Description</span></span>  
+ <span data-ttu-id="7b414-107">COM+：建立 COM 執行個體時發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="7b414-107">COM+: An error occurred while creating a COM instance.</span></span>  
   
-## 請參閱  
- [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)   
- [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="7b414-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b414-108">See Also</span></span>  
+ [<span data-ttu-id="7b414-109">事件記錄</span><span class="sxs-lookup"><span data-stu-id="7b414-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="7b414-110">事件一般參考</span><span class="sxs-lookup"><span data-stu-id="7b414-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

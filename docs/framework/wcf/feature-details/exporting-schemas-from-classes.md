@@ -1,73 +1,76 @@
 ---
-title: "從類別匯出結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, 結構描述匯入和匯出"
-  - "結構描述 [WCF], 從類別匯出"
-  - "結構描述 [WCF]"
-  - "XsdDataContractExporter 類別"
-  - "XsdDataContractImporter 類別"
+title: "從類別匯出結構描述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF, schema import and export
+- schemas [WCF], exporting from classes
+- schemas [WCF]
+- XsdDataContractExporter class
+- XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: afaec582673b93575f170ff474254c90841a2354
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 從類別匯出結構描述
-如果要從用於資料合約模型中的類別產生 XML 結構描述定義語言 \(XSD\)，請使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 類別。 這個主題將說明建立結構描述的程序。  
+# <a name="exporting-schemas-from-classes"></a><span data-ttu-id="7c4b3-102">從類別匯出結構描述</span><span class="sxs-lookup"><span data-stu-id="7c4b3-102">Exporting Schemas from Classes</span></span>
+<span data-ttu-id="7c4b3-103">如果要從用於資料合約模型中的類別產生 XML 結構描述定義語言 (XSD)，請使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 類別。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-103">To generate XML Schema definition language (XSD) schemas from classes that are used in the data contract model, use the <xref:System.Runtime.Serialization.XsdDataContractExporter> class.</span></span> <span data-ttu-id="7c4b3-104">這個主題將說明建立結構描述的程序。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-104">This topic describes the process for creating schemas.</span></span>  
   
-## 匯出程序  
- 結構描述匯出程序是以一個或多個類型開始，然後產生描述這些類型的 XML 規劃的 <xref:System.Xml.Schema.XmlSchemaSet>。  
+## <a name="the-export-process"></a><span data-ttu-id="7c4b3-105">匯出程序</span><span class="sxs-lookup"><span data-stu-id="7c4b3-105">The Export Process</span></span>  
+ <span data-ttu-id="7c4b3-106">結構描述匯出程序是以一個或多個類型開始，然後產生描述這些類型的 XML 規劃的 <xref:System.Xml.Schema.XmlSchemaSet> 。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-106">The schema export process starts with one or more types and produces an <xref:System.Xml.Schema.XmlSchemaSet> that describes the XML projection of these types.</span></span>  
   
- `XmlSchemaSet` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的結構描述物件模型 \(SOM\) 的一部分，代表一組 XSD 結構描述文件。 如果要從 `XmlSchemaSet` 建立 XSD 文件，請使用來自 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 類別之 `XmlSchemaSet` 屬性的結構描述集合。 然後使用 <xref:System.Xml.Schema.XmlSchema> 序列化各個 <xref:System.Xml.Serialization.XmlSerializer> 物件。  
+ <span data-ttu-id="7c4b3-107">`XmlSchemaSet` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的結構描述物件模型 (SOM) 的一部分，代表一組 XSD 結構描述文件。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-107">The `XmlSchemaSet` is part of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]’s Schema Object Model (SOM) that represents a set of XSD Schema documents.</span></span> <span data-ttu-id="7c4b3-108">如果要從 `XmlSchemaSet`建立 XSD 文件，請使用來自 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 類別之 `XmlSchemaSet` 屬性的結構描述集合。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-108">To create XSD documents from an `XmlSchemaSet`, use the collection of schemas from the <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> property of the `XmlSchemaSet` class.</span></span> <span data-ttu-id="7c4b3-109">然後使用 <xref:System.Xml.Schema.XmlSchema> 序列化各個 <xref:System.Xml.Serialization.XmlSerializer>物件。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-109">Then serialize each <xref:System.Xml.Schema.XmlSchema> object using the <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-#### 匯出結構描述  
+#### <a name="to-export-schemas"></a><span data-ttu-id="7c4b3-110">匯出結構描述</span><span class="sxs-lookup"><span data-stu-id="7c4b3-110">To export schemas</span></span>  
   
-1.  建立 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的執行個體。  
+1.  <span data-ttu-id="7c4b3-111">建立 <xref:System.Runtime.Serialization.XsdDataContractExporter>的執行個體。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-111">Create an instance of the <xref:System.Runtime.Serialization.XsdDataContractExporter>.</span></span>  
   
-2.  選擇項。 在建構函式中傳遞 <xref:System.Xml.Schema.XmlSchemaSet>。 在這種情況下，在結構描述匯出期間產生的結構描述會新增至這個 <xref:System.Xml.Schema.XmlSchemaSet> 執行個體，而不是從空白的 <xref:System.Xml.Schema.XmlSchemaSet> 開始。  
+2.  <span data-ttu-id="7c4b3-112">選擇項。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-112">Optional.</span></span> <span data-ttu-id="7c4b3-113">在建構函式中傳遞 <xref:System.Xml.Schema.XmlSchemaSet> 。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-113">Pass an <xref:System.Xml.Schema.XmlSchemaSet> in the constructor.</span></span> <span data-ttu-id="7c4b3-114">在這種情況下，在結構描述匯出期間產生的結構描述會新增至這個 <xref:System.Xml.Schema.XmlSchemaSet> 執行個體，而不是從空白的 <xref:System.Xml.Schema.XmlSchemaSet>開始。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-114">In this case, the schema generated during the schema export is added to this <xref:System.Xml.Schema.XmlSchemaSet> instance instead of starting with a blank <xref:System.Xml.Schema.XmlSchemaSet>.</span></span>  
   
-3.  選擇項。 呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> 方法。 此方法會判斷是否可以匯出指定的類型。 此方法的多載和下一個步驟中的 `Export` 方法相同。  
+3.  <span data-ttu-id="7c4b3-115">選擇項。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-115">Optional.</span></span> <span data-ttu-id="7c4b3-116">呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-116">Call one of the <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> methods.</span></span> <span data-ttu-id="7c4b3-117">此方法會判斷是否可以匯出指定的類型。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-117">The method determines whether the specified type can be exported.</span></span> <span data-ttu-id="7c4b3-118">此方法的多載和下一個步驟中的 `Export` 方法相同。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-118">The method has the same overloads as the `Export` method in the next step.</span></span>  
   
-4.  呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法。 有三種多載採用 <xref:System.Type>、<xref:System.Collections.Generic.List%601> 物件的 `Type` 或 <xref:System.Collections.Generic.List%601> 物件的 <xref:System.Reflection.Assembly>。 在最後一種情況中，會匯出所有指定組件中的所有類型。  
+4.  <span data-ttu-id="7c4b3-119">呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-119">Call one of the <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> methods.</span></span> <span data-ttu-id="7c4b3-120">有三種多載採用 <xref:System.Type>、 <xref:System.Collections.Generic.List%601> 物件的 `Type` 或 <xref:System.Collections.Generic.List%601> 物件的 <xref:System.Reflection.Assembly> 。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-120">There are three overloads taking a <xref:System.Type>, a <xref:System.Collections.Generic.List%601> of `Type` objects, or a <xref:System.Collections.Generic.List%601> of <xref:System.Reflection.Assembly> objects.</span></span> <span data-ttu-id="7c4b3-121">在最後一種情況中，會匯出所有指定組件中的所有類型。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-121">In the last case, all types in all the given assemblies are exported.</span></span>  
   
-     `Export` 方法的多個呼叫會造成將多個項目新增至相同的 `XmlSchemaSet`。 如果型別已經存在，便不會產生至 `XmlSchemaSet` 中。 因此，如果要建立 `Export`  類別的多個執行個體，會偏好在相同的 `XsdDataContractExporter` 上呼叫多次 `XsdDataContractExporter`。 如此可避免產生重複的結構描述型別。  
+     <span data-ttu-id="7c4b3-122">`Export` 方法的多個呼叫會造成將多個項目新增至相同的 `XmlSchemaSet`。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-122">Multiple calls to the `Export` method results in multiple items being added to the same `XmlSchemaSet`.</span></span> <span data-ttu-id="7c4b3-123">如果型別已經存在，便不會產生至 `XmlSchemaSet` 中。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-123">A type is not generated into the `XmlSchemaSet` if it already exists there.</span></span> <span data-ttu-id="7c4b3-124">因此，如果要建立 `Export` 類別的多個執行個體，會偏好在相同的 `XsdDataContractExporter` 上呼叫多次 `XsdDataContractExporter` 。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-124">Therefore, calling `Export` multiple times on the same `XsdDataContractExporter` is preferable to creating multiple instances of the `XsdDataContractExporter` class.</span></span> <span data-ttu-id="7c4b3-125">如此可避免產生重複的結構描述型別。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-125">This avoids duplicate schema types from being generated.</span></span>  
   
     > [!NOTE]
-    >  如果在匯出期間有失敗，`XmlSchemaSet` 將會處於不能預測的狀態。  
+    >  <span data-ttu-id="7c4b3-126">如果在匯出期間有失敗， `XmlSchemaSet` 將會處於不能預測的狀態。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-126">If there is a failure during export, the `XmlSchemaSet` will be in an unpredictable state.</span></span>  
   
-5.  請透過 <xref:System.Xml.Schema.XmlSchemaSet> 屬性存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A>。  
+5.  <span data-ttu-id="7c4b3-127">請透過 <xref:System.Xml.Schema.XmlSchemaSet> 屬性存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-127">Access the <xref:System.Xml.Schema.XmlSchemaSet> through the <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> property.</span></span>  
   
-## 匯出選項  
- 您可以將 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 之 <xref:System.Runtime.Serialization.XsdDataContractExporter> 屬性設定為 <xref:System.Runtime.Serialization.ExportOptions> 類別的執行個體，以控制匯出處理程序的各方面。 特別是，您可以設定下列選項：  
+## <a name="export-options"></a><span data-ttu-id="7c4b3-128">匯出選項</span><span class="sxs-lookup"><span data-stu-id="7c4b3-128">Export Options</span></span>  
+ <span data-ttu-id="7c4b3-129">您可以將 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 之 <xref:System.Runtime.Serialization.XsdDataContractExporter> 屬性設定為 <xref:System.Runtime.Serialization.ExportOptions> 類別的執行個體，以控制匯出處理程序的各方面。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-129">You can set the <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> property of the <xref:System.Runtime.Serialization.XsdDataContractExporter> to an instance of the <xref:System.Runtime.Serialization.ExportOptions> class to control various aspects of the export process.</span></span> <span data-ttu-id="7c4b3-130">特別是，您可以設定下列選項：</span><span class="sxs-lookup"><span data-stu-id="7c4b3-130">Specifically, you can set the following options:</span></span>  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>.`Type` 的這個集合代表正在匯出之型別的已知型別  \([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).\) 除了傳遞至 `Export` 方法的型別之外，每次呼叫 `Export` 也會匯出這些已知型別。  
+-   <span data-ttu-id="7c4b3-131"><xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>.</span><span class="sxs-lookup"><span data-stu-id="7c4b3-131"><xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>.</span></span> <span data-ttu-id="7c4b3-132">`Type` 的這個集合代表正在匯出之型別的已知型別</span><span class="sxs-lookup"><span data-stu-id="7c4b3-132">This collection of `Type` represents the known types for the types being exported.</span></span> <span data-ttu-id="7c4b3-133">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)除了傳遞至 `Export` 方法的型別之外，每次呼叫 `Export` 也會匯出這些已知型別。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-133">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) These known types are exported on every `Export` call in addition to the types passed to the `Export` method.</span></span>  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>.<xref:System.Runtime.Serialization.IDataContractSurrogate> 可以透過將會自訂匯出程序的這個屬性來提供。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). 根據預設，不會使用 Surrogate。  
+-   <span data-ttu-id="7c4b3-134"><xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>.</span><span class="sxs-lookup"><span data-stu-id="7c4b3-134"><xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>.</span></span> <span data-ttu-id="7c4b3-135"><xref:System.Runtime.Serialization.IDataContractSurrogate> 可以透過將會自訂匯出程序的這個屬性來提供。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-135">An <xref:System.Runtime.Serialization.IDataContractSurrogate> can be supplied through this property that will customize the export process.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="7c4b3-136">[資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-136"> [Data Contract Surrogates](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).</span></span> <span data-ttu-id="7c4b3-137">根據預設，不會使用 Surrogate。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-137">By default, no surrogate is used.</span></span>  
   
-## Helper 方法  
- 除了匯出結構描述的主要角色之外，`XsdDataContractExporter` 還提供數種有用的 Helper 方法，提供有關型別的資訊。 這些活動包括：  
+## <a name="helper-methods"></a><span data-ttu-id="7c4b3-138">Helper 方法</span><span class="sxs-lookup"><span data-stu-id="7c4b3-138">Helper Methods</span></span>  
+ <span data-ttu-id="7c4b3-139">除了匯出結構描述的主要角色之外， `XsdDataContractExporter` 還提供數種有用的 Helper 方法，提供有關型別的資訊。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-139">In addition to its primary role of exporting schema, the `XsdDataContractExporter` provides several useful helper methods that provide information about types.</span></span> <span data-ttu-id="7c4b3-140">這些活動包括：</span><span class="sxs-lookup"><span data-stu-id="7c4b3-140">These include:</span></span>  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 方法。 這個方法會採用 `Type` 並傳回 <xref:System.Xml.XmlQualifiedName>，代表如果將這個型別序列化為根物件，會使用的根項目名稱和命名空間。  
+-   <span data-ttu-id="7c4b3-141"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-141"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> method.</span></span> <span data-ttu-id="7c4b3-142">這個方法會採用 `Type` 並傳回 <xref:System.Xml.XmlQualifiedName> ，代表如果將這個型別序列化為根物件，會使用的根項目名稱和命名空間。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-142">This method takes a `Type` and returns an <xref:System.Xml.XmlQualifiedName> that represents the root element name and namespace that would be used if this type were serialized as the root object.</span></span>  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 方法。 這個方法會採用 `Type` 並傳回 <xref:System.Xml.XmlQualifiedName>，代表如果將這個型別匯出至結構描述，會使用的 XSD 結構描述型別的名稱。 對於在結構描述中表示為匿名型別的 <xref:System.Xml.Serialization.IXmlSerializable> 型別，這個方法會傳回 `null`。  
+-   <span data-ttu-id="7c4b3-143"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-143"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> method.</span></span> <span data-ttu-id="7c4b3-144">這個方法會採用 `Type` 並傳回 <xref:System.Xml.XmlQualifiedName> ，代表如果將這個型別匯出至結構描述，會使用的 XSD 結構描述型別的名稱。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-144">This method takes a `Type` and returns an <xref:System.Xml.XmlQualifiedName> that represents the name of the XSD schema type that would be used if this type were exported to the schema.</span></span> <span data-ttu-id="7c4b3-145">對於在結構描述中表示為匿名型別的 <xref:System.Xml.Serialization.IXmlSerializable> 型別，這個方法會傳回 `null`。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-145">For <xref:System.Xml.Serialization.IXmlSerializable> types represented as anonymous types in the schema, this method returns `null`.</span></span>  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 方法。 這個方法只能使用在結構描述中表示為匿名型別的 <xref:System.Xml.Serialization.IXmlSerializable> 型別，並為所有其他的型別傳回 `null`。 對於匿名型別，這個方法會傳回代表指定 <xref:System.Xml.Schema.XmlSchemaType> 的 `Type`。  
+-   <span data-ttu-id="7c4b3-146"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-146"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> method.</span></span> <span data-ttu-id="7c4b3-147">這個方法只能使用在結構描述中表示為匿名型別的 <xref:System.Xml.Serialization.IXmlSerializable> 型別，並為所有其他的型別傳回 `null` 。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-147">This method works only with <xref:System.Xml.Serialization.IXmlSerializable> types that are represented as anonymous types in the schema, and returns `null` for all other types.</span></span> <span data-ttu-id="7c4b3-148">對於匿名型別，這個方法會傳回代表指定 <xref:System.Xml.Schema.XmlSchemaType> 的 `Type`。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-148">For anonymous types, this method returns an <xref:System.Xml.Schema.XmlSchemaType> that represents a given `Type`.</span></span>  
   
- 匯出選項會影響所有這些方法。  
+ <span data-ttu-id="7c4b3-149">匯出選項會影響所有這些方法。</span><span class="sxs-lookup"><span data-stu-id="7c4b3-149">Export options affect all of these methods.</span></span>  
   
-## 請參閱  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.Runtime.Serialization.XsdDataContractImporter>   
- <xref:System.Runtime.Serialization.XsdDataContractExporter>   
- [結構描述匯入和匯出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)   
- [匯入結構描述以產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+## <a name="see-also"></a><span data-ttu-id="7c4b3-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c4b3-150">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.Runtime.Serialization.XsdDataContractImporter>  
+ <xref:System.Runtime.Serialization.XsdDataContractExporter>  
+ [<span data-ttu-id="7c4b3-151">結構描述匯入和匯出</span><span class="sxs-lookup"><span data-stu-id="7c4b3-151">Schema Import and Export</span></span>](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ [<span data-ttu-id="7c4b3-152">匯入結構描述產生類別</span><span class="sxs-lookup"><span data-stu-id="7c4b3-152">Importing Schema to Generate Classes</span></span>](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

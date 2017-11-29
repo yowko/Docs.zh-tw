@@ -1,34 +1,37 @@
 ---
-title: "使用活動延伸模組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用活動延伸模組"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7ff4f441df437dc5785b6df77c16923a1a1c9906
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用活動延伸模組
-活動可以與工作流程應用程式延伸模組互動，好讓主機提供未明確在工作流程中模組化的其他功能。本主題將說明如何建立及使用延伸模組來計算此活動所執行的次數。  
+# <a name="using-activity-extensions"></a><span data-ttu-id="a5461-102">使用活動延伸模組</span><span class="sxs-lookup"><span data-stu-id="a5461-102">Using Activity Extensions</span></span>
+<span data-ttu-id="a5461-103">活動可以與工作流程應用程式延伸模組互動，好讓主機提供未明確在工作流程中模組化的其他功能。</span><span class="sxs-lookup"><span data-stu-id="a5461-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="a5461-104">本主題將說明如何建立及使用延伸模組來計算此活動所執行的次數。</span><span class="sxs-lookup"><span data-stu-id="a5461-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>  
   
-### 若要使用活動延伸模組來計算執行次數  
+### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="a5461-105">若要使用活動延伸模組來計算執行次數</span><span class="sxs-lookup"><span data-stu-id="a5461-105">To use an activity extension to count executions</span></span>  
   
-1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。選取 \[**新增**\]、\[**專案**\]。選取 \[**Visual C\#**\] 節點底下的 \[**工作流程**\]。從範本清單中選取 \[**工作流程主控台應用程式**\]。將專案命名為 `Extensions`。按一下 \[**確定**\]，建立專案。  
+1.  <span data-ttu-id="a5461-106">開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a5461-106">Open [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span> <span data-ttu-id="a5461-107">選取**新**，**專案**。</span><span class="sxs-lookup"><span data-stu-id="a5461-107">Select **New**, **Project**.</span></span> <span data-ttu-id="a5461-108">在下**Visual C#**節點中，選取**工作流程**。</span><span class="sxs-lookup"><span data-stu-id="a5461-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="a5461-109">選取**工作流程主控台應用程式**從範本清單。</span><span class="sxs-lookup"><span data-stu-id="a5461-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="a5461-110">將專案命名為 `Extensions`。</span><span class="sxs-lookup"><span data-stu-id="a5461-110">Name the project `Extensions`.</span></span> <span data-ttu-id="a5461-111">按一下**確定**建立專案。</span><span class="sxs-lookup"><span data-stu-id="a5461-111">Click **OK** to create the project.</span></span>  
   
-2.  在 Program.cs 檔案中為 **System.Collections.Generic** 命名空間加入 `using` 陳述式。  
+2.  <span data-ttu-id="a5461-112">新增`using`Program.cs 檔案中的陳述式**System.Collections.Generic**命名空間。</span><span class="sxs-lookup"><span data-stu-id="a5461-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>  
   
     ```  
     using System.Collections.Generic;  
-  
     ```  
   
-3.  在 Program.cs 檔案中，建立名為 **ExecutionCountExtension** 的新類別。下列程式碼會建立一個工作流程延伸模組，此延伸模組會在呼叫其 **Register** 方法時追蹤執行個體識別碼。  
+3.  <span data-ttu-id="a5461-113">在 Program.cs 檔案中，建立新的類別，名為**ExecutionCountExtension**。</span><span class="sxs-lookup"><span data-stu-id="a5461-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="a5461-114">下列程式碼會建立追蹤執行個體識別碼的工作流程延伸模組時其**註冊**方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="a5461-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>  
   
     ```  
     // This extension collects a list of workflow Ids  
@@ -60,10 +63,9 @@ caps.handback.revision: 5
             }  
         }  
     }  
-  
     ```  
   
-4.  建立一個活動來取用 **ExecutionCountExtension**。下列程式碼會定義一個活動，此活動會從執行階段擷取 **ExecutionCountExtension** 物件，並在執行活動時呼叫其 **Register** 方法。  
+4.  <span data-ttu-id="a5461-115">建立一個活動來取用**ExecutionCountExtension**。</span><span class="sxs-lookup"><span data-stu-id="a5461-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="a5461-116">下列程式碼會定義一個活動，擷取**ExecutionCountExtension**物件的執行階段和呼叫其**註冊**活動執行時的方法。</span><span class="sxs-lookup"><span data-stu-id="a5461-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>  
   
     ```  
     // Activity that consumes an extension provided by the host. If the extension is available  
@@ -80,10 +82,9 @@ caps.handback.revision: 5
   
         }  
     }  
-  
     ```  
   
-5.  在 program.cs 檔案的 **Main** 方法中實作此活動。下列程式碼包含的方法可產生兩個不同的工作流程、執行每一個工作流程數次，並顯示延伸模組中所包含的結果資料。  
+5.  <span data-ttu-id="a5461-117">實作中的活動**Main** program.cs 檔案的方法。</span><span class="sxs-lookup"><span data-stu-id="a5461-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="a5461-118">下列程式碼包含的方法可產生兩個不同的工作流程、執行每一個工作流程數次，並顯示延伸模組中所包含的結果資料。</span><span class="sxs-lookup"><span data-stu-id="a5461-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>  
   
     ```  
     class Program  

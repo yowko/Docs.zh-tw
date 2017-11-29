@@ -1,109 +1,112 @@
 ---
-title: "HOW TO：在 Managed 應用程式中裝載 WCF 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "HOW TO：在 Managed 應用程式中裝載 WCF 服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-caps.latest.revision: 42
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ca834c097f7e8cea14337fece651b2b3059d06b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：在 Managed 應用程式中裝載 WCF 服務
-若要將服務裝載於 Managed 應用程式中，請將服務的程式碼嵌入 Managed 應用程式的程式碼，再以命令式程式碼或透過組態以宣告方式定義服務的端點 \(亦可使用預設端點\)，然後建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。  
+# <a name="how-to-host-a-wcf-service-in-a-managed-application"></a><span data-ttu-id="a156f-102">HOW TO：在 Managed 應用程式中裝載 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="a156f-102">How to: Host a WCF Service in a Managed Application</span></span>
+<span data-ttu-id="a156f-103">若要將服務裝載於 Managed 應用程式中，請將服務的程式碼嵌入 Managed 應用程式的程式碼，再以命令式程式碼或透過組態以宣告方式定義服務的端點 (亦可使用預設端點)，然後建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="a156f-103">To host a service inside a managed application, embed the code for the service inside the managed application code, define an endpoint for the service either imperatively in code, declaratively through configuration, or using default endpoints, and then create an instance of <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
- 若要開始接收訊息，請呼叫 <xref:System.ServiceModel.ServiceHost> 上的 <xref:System.ServiceModel.ICommunicationObject.Open%2A>。這樣會建立並開啟服務的接聽項。用這種方式來裝載服務一般稱為「自我裝載」，因為 Managed 應用程式會自行執行裝載工作。若要關閉服務，請呼叫 <xref:System.ServiceModel.ServiceHost> 上的 <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=fullName>。  
+ <span data-ttu-id="a156f-104">若要開始接收訊息，請呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 上的 <xref:System.ServiceModel.ServiceHost>。</span><span class="sxs-lookup"><span data-stu-id="a156f-104">To start receiving messages, call <xref:System.ServiceModel.ICommunicationObject.Open%2A> on <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="a156f-105">這樣會建立並開啟服務的接聽項。</span><span class="sxs-lookup"><span data-stu-id="a156f-105">This creates and opens the listener for the service.</span></span> <span data-ttu-id="a156f-106">用這種方式來裝載服務一般稱為「自我裝載」，因為 Managed 應用程式會自行執行裝載工作。</span><span class="sxs-lookup"><span data-stu-id="a156f-106">Hosting a service in this way is often referred to as "self-hosting" because the managed application is doing the hosting work itself.</span></span> <span data-ttu-id="a156f-107">若要關閉服務，請呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> 上的 <xref:System.ServiceModel.ServiceHost>。</span><span class="sxs-lookup"><span data-stu-id="a156f-107">To close the service, call <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> on <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
- 您也可以透過 Managed Windows 服務、網際網路資訊服務 \(IIS\)，或是 Windows Process Activation Service \(WAS\) 來裝載服務。[!INCLUDE[crabout](../../../includes/crabout-md.md)]服務的裝載選項的詳細資訊，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
+ <span data-ttu-id="a156f-108">服務也可以裝載在 Managed Windows 服務、Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 中。</span><span class="sxs-lookup"><span data-stu-id="a156f-108">A service can also be hosted in a managed Windows service, in Internet Information Services (IIS), or in Windows Process Activation Service (WAS).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="a156f-109">裝載服務的選項，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。</span><span class="sxs-lookup"><span data-stu-id="a156f-109"> hosting options for a service, see [Hosting Services](../../../docs/framework/wcf/hosting-services.md).</span></span>  
   
- 將服務裝載在 Managed 應用程式中是最有彈性的選項，因為這麼做只需要部署最基本基礎結構。[!INCLUDE[crabout](../../../includes/crabout-md.md)]將服務裝載在 Managed 應用程式的詳細資訊，請參閱[在 Managed 應用程式中裝載](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)。  
+ <span data-ttu-id="a156f-110">將服務裝載在 Managed 應用程式中是最有彈性的選項，因為這麼做只需要部署最基本基礎結構。</span><span class="sxs-lookup"><span data-stu-id="a156f-110">Hosting a service in a managed application is the most flexible option because it requires the least infrastructure to deploy.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="a156f-111">裝載在 managed 應用程式的服務，請參閱[受管理的應用程式中裝載](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)。</span><span class="sxs-lookup"><span data-stu-id="a156f-111"> hosting services in managed applications, see [Hosting in a Managed Application](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).</span></span>  
   
- 下列程序示範如何在主控台應用程式中實作自我裝載的服務。  
+ <span data-ttu-id="a156f-112">下列程序示範如何在主控台應用程式中實作自我裝載的服務。</span><span class="sxs-lookup"><span data-stu-id="a156f-112">The following procedure demonstrates how to implement a self-hosted service in a console application.</span></span>  
   
-### 建立自我裝載服務  
+### <a name="to-create-a-self-hosted-service"></a><span data-ttu-id="a156f-113">若要建立自我裝載服務</span><span class="sxs-lookup"><span data-stu-id="a156f-113">To create a self-hosted service</span></span>  
   
-1.  開啟 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]，再依序選取 \[**檔案**\] 功能表上的 \[**新增**\] 和 \[**專案**\]。  
+1.  <span data-ttu-id="a156f-114">開啟[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]選取**新增**，**專案...**從**檔案**功能表。</span><span class="sxs-lookup"><span data-stu-id="a156f-114">Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and select **New**, **Project...** from the **File** menu.</span></span>  
   
-2.  依序選取 \[**已安裝的範本**\] 清單中的 \[**Visual C\#**\] 和 \[**Windows**\] 或是 \[**Visual Basic**\] 和 \[**Windows**\]。視您如何設定 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]，這些項目其一或兩者在 \[**已安裝的範本**\] 清單中可能位於 \[**其他語言**\] 節點底下。  
+2.  <span data-ttu-id="a156f-115">在**已安裝的範本**清單中，選取**Visual C#**， **Windows**或**Visual Basic**， **Windows**.</span><span class="sxs-lookup"><span data-stu-id="a156f-115">In the **Installed Templates** list, select **Visual C#**, **Windows** or **Visual Basic**, **Windows**.</span></span> <span data-ttu-id="a156f-116">取決於您[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]設定、 一個或這兩種可能會顯示在**其他語言**節點**已安裝的範本**清單。</span><span class="sxs-lookup"><span data-stu-id="a156f-116">Depending on your [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] settings, one or both of these may be under the **Other Languages** node in the **Installed Templates** list.</span></span>  
   
-3.  選取 \[**Windows**\] 清單中的 \[**主控台應用程式**\]。在 \[**名稱**\] 方塊中輸入 `SelfHost`，然後按一下 \[**確定**\]。  
+3.  <span data-ttu-id="a156f-117">選取**主控台應用程式**從**Windows**清單。</span><span class="sxs-lookup"><span data-stu-id="a156f-117">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="a156f-118">型別`SelfHost`中**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="a156f-118">Type `SelfHost` in the **Name** box and click **OK**.</span></span>  
   
-4.  以滑鼠右鍵按一下 \[**方案總管**\] 中的 \[**SelfHost**\]，然後選取 \[**加入參考**\]。選取 \[**.NET**\] 索引標籤上的 \[**System.ServiceModel**\]，然後按一下 \[**確定**\]。  
+4.  <span data-ttu-id="a156f-119">以滑鼠右鍵按一下**SelfHost**中**方案總管] 中**選取**加入參考...**.選取**System.ServiceModel**從**.NET**索引標籤上，按一下 [**確定**。</span><span class="sxs-lookup"><span data-stu-id="a156f-119">Right-click **SelfHost** in **Solution Explorer** and select **Add Reference...**. Select **System.ServiceModel** from the **.NET** tab and click **OK**.</span></span>  
   
     > [!TIP]
-    >  如果看不到 \[**方案總管**\] 視窗，請選取 \[**檢視**\] 功能表上的 \[**方案總管**\]。  
+    >  <span data-ttu-id="a156f-120">如果**方案總管 中**視窗未顯示，請選取**方案總管 中**從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="a156f-120">If the **Solution Explorer** window is not visible, select **Solution Explorer** from the **View** menu.</span></span>  
   
-5.  按兩下 \[**方案總管**\] 中的 \[**Program.cs**\] 或 \[**Module1.vb**\]，開啟檔案的程式碼視窗 \(如果尚未開啟\)。在檔案最上方加入下列陳述式。  
+5.  <span data-ttu-id="a156f-121">按兩下**Program.cs**或**Module1.vb**中**方案總管 中**開啟程式碼視窗中，如果它尚未開啟。</span><span class="sxs-lookup"><span data-stu-id="a156f-121">Double-click **Program.cs** or **Module1.vb** in **Solution Explorer** to open it in the code window if it is not already open.</span></span> <span data-ttu-id="a156f-122">在檔案最上方加入下列陳述式。</span><span class="sxs-lookup"><span data-stu-id="a156f-122">Add the following statements at the top of the file.</span></span>  
   
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]  
   
-6.  定義與實作服務合約。本範例會定義 `HelloWorldService` 以根據輸入服務的資料傳回訊息。  
+6.  <span data-ttu-id="a156f-123">定義與實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="a156f-123">Define and implement a service contract.</span></span> <span data-ttu-id="a156f-124">本範例會定義 `HelloWorldService` 以根據輸入服務的資料傳回訊息。</span><span class="sxs-lookup"><span data-stu-id="a156f-124">This example defines a `HelloWorldService` that returns a message based on the input to the service.</span></span>  
   
      [!code-csharp[CFX_SelfHost4#2](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#2)]
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]  
   
     > [!NOTE]
-    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何定義與實作服務介面的詳細資訊，請參閱 [HOW TO：定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)及 [HOW TO：實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。  
+    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="a156f-125">如何定義和實作服務介面，請參閱[如何： 定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)和[How to： 實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="a156f-125"> how to define and implement a service interface, see [How to: Define a Service Contract](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) and [How to: Implement a Service Contract](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).</span></span>  
   
-7.  在 `Main` 方法頂端使用服務的基底位址，建立 <xref:System.Uri> 類別的執行個體。  
+7.  <span data-ttu-id="a156f-126">在 `Main` 方法頂端使用服務的基底位址，建立 <xref:System.Uri> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="a156f-126">At the top of the `Main` method, create an instance of the <xref:System.Uri> class with the base address for the service.</span></span>  
   
      [!code-csharp[CFX_SelfHost4#3](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#3)]
      [!code-vb[CFX_SelfHost4#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#3)]  
   
-8.  建立 <xref:System.ServiceModel.ServiceHost> 類別的執行個體，並將代表服務類型與基底位址統一資源識別元 \(URI\) 的 <xref:System.Type> 傳入 [ServiceHost\(Type, Uri\<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>。啟用中繼資料發行，然後呼叫 <xref:System.ServiceModel.ServiceHost> 的 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 方法初始化服務並準備接收訊息。  
+8.  <span data-ttu-id="a156f-127">建立 <xref:System.ServiceModel.ServiceHost> 類別的執行個體，並將代表服務型別與基底位址統一資源識別元 (URI) 的 <xref:System.Type> 傳入 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>。</span><span class="sxs-lookup"><span data-stu-id="a156f-127">Create an instance of the <xref:System.ServiceModel.ServiceHost> class, passing a <xref:System.Type> that represents the service type and the base address Uniform Resource Identifier (URI) to the <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>.</span></span> <span data-ttu-id="a156f-128">啟用中繼資料發行，然後呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 的 <xref:System.ServiceModel.ServiceHost> 方法初始化服務並準備接收訊息。</span><span class="sxs-lookup"><span data-stu-id="a156f-128">Enable metadata publishing, and then call the <xref:System.ServiceModel.ICommunicationObject.Open%2A> method on the <xref:System.ServiceModel.ServiceHost> to initialize the service and prepare it to receive messages.</span></span>  
   
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
-     <!-- TODO: review snippet reference [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  -->  
+     [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]       
   
     > [!NOTE]
-    >  本範例將使用預設端點，所以這項服務不需要組態檔。如果沒有設定端點，執行階段就會針對服務所實作的每份服務合約，為每個基底位址各建立一個端點。[!INCLUDE[crabout](../../../includes/crabout-md.md)]預設端點的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+    >  <span data-ttu-id="a156f-129">本範例將使用預設端點，所以這項服務不需要組態檔。</span><span class="sxs-lookup"><span data-stu-id="a156f-129">This example uses default endpoints, and no configuration file is required for this service.</span></span> <span data-ttu-id="a156f-130">如果沒有設定端點，執行階段就會針對服務所實作的每份服務合約，為每個基底位址各建立一個端點。</span><span class="sxs-lookup"><span data-stu-id="a156f-130">If no endpoints are configured, then the runtime creates one endpoint for each base address for each service contract implemented by the service.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="a156f-131">預設端點，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="a156f-131"> default endpoints, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-9. 按 CTRL\+SHIFT\+B 建置方案。  
+9. <span data-ttu-id="a156f-132">按下 CTRL+SHIFT+B 以建置方案。</span><span class="sxs-lookup"><span data-stu-id="a156f-132">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-### 若要測試服務  
+### <a name="to-test-the-service"></a><span data-ttu-id="a156f-133">若要測試服務</span><span class="sxs-lookup"><span data-stu-id="a156f-133">To test the service</span></span>  
   
-1.  按 Ctrl \+ F5 執行服務。  
+1.  <span data-ttu-id="a156f-134">按 Ctrl + F5 執行服務。</span><span class="sxs-lookup"><span data-stu-id="a156f-134">Press Ctrl + F5 to run the service.</span></span>  
   
-2.  開啟 **WCF 測試用戶端**。  
-  
-    > [!TIP]
-    >  若要開啟 \[**WCF 測試用戶端**\]，請開啟 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 命令提示字元並執行 **WcfTestClient.exe**。  
-  
-3.  選取 \[**檔案**\] 功能表上的 \[**新增服務**\]。  
-  
-4.  在位址方塊中輸入 `http://localhost:8080/hello`，然後按一下 \[**確定**\]。  
+2.  <span data-ttu-id="a156f-135">開啟**WCF 測試用戶端**。</span><span class="sxs-lookup"><span data-stu-id="a156f-135">Open **WCF Test Client**.</span></span>  
   
     > [!TIP]
-    >  請確認服務正在執行中，否則這個步驟會失敗。若您已從程式碼變更了基底位址，即應在此步驟中使用修改後的基底位址。  
+    >  <span data-ttu-id="a156f-136">若要開啟**WCF 測試用戶端**，開啟[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]命令提示字元並執行**WcfTestClient.exe**。</span><span class="sxs-lookup"><span data-stu-id="a156f-136">To open **WCF Test Client**, open a [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] command prompt and execute **WcfTestClient.exe**.</span></span>  
   
-5.  按兩下 \[**我的服務專案**\] 節點底下的 \[**SayHello**\]。在 \[**要求**\] 清單中的 \[**值**\] 欄內輸入您的名稱，然後按一下 \[**叫用**\]。回覆訊息隨即出現在 \[**回應**\] 清單中。  
+3.  <span data-ttu-id="a156f-137">選取**新增服務...**從**檔案**功能表。</span><span class="sxs-lookup"><span data-stu-id="a156f-137">Select **Add Service...** from the **File** menu.</span></span>  
   
-## 範例  
- 下列範例會建立 <xref:System.ServiceModel.ServiceHost> 物件來裝載型別為 `HelloWorldService` 的服務，然後呼叫 <xref:System.ServiceModel.ServiceHost> 的 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 方法。基底位址由程式碼提供、中繼資料發行已啟用，而且將使用預設端點。  
+4.  <span data-ttu-id="a156f-138">型別`http://localhost:8080/hello`輸入地址 方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="a156f-138">Type `http://localhost:8080/hello` into the address box and click **OK**.</span></span>  
+  
+    > [!TIP]
+    >  <span data-ttu-id="a156f-139">請確認服務正在執行中，否則這個步驟會失敗。</span><span class="sxs-lookup"><span data-stu-id="a156f-139">Make sure the service is running or else this step fails.</span></span> <span data-ttu-id="a156f-140">若您已從程式碼變更了基底位址，即應在此步驟中使用修改後的基底位址。</span><span class="sxs-lookup"><span data-stu-id="a156f-140">If you have changed the base address in the code, then use the modified base address in this step.</span></span>  
+  
+5.  <span data-ttu-id="a156f-141">按兩下**SayHello**下**我的服務專案**節點。</span><span class="sxs-lookup"><span data-stu-id="a156f-141">Double-click **SayHello** under the **My Service Projects** node.</span></span> <span data-ttu-id="a156f-142">輸入您的名稱到**值**中的資料行**要求**清單，然後按**Invoke**。</span><span class="sxs-lookup"><span data-stu-id="a156f-142">Type your name into the **Value** column in the **Request** list, and click **Invoke**.</span></span> <span data-ttu-id="a156f-143">回覆訊息會出現在**回應**清單。</span><span class="sxs-lookup"><span data-stu-id="a156f-143">A reply message appears in the **Response** list.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="a156f-144">範例</span><span class="sxs-lookup"><span data-stu-id="a156f-144">Example</span></span>  
+ <span data-ttu-id="a156f-145">下列範例會建立 <xref:System.ServiceModel.ServiceHost> 物件來裝載型別為 `HelloWorldService` 的服務，然後呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 上的 <xref:System.ServiceModel.ServiceHost> 方法。</span><span class="sxs-lookup"><span data-stu-id="a156f-145">The following example creates a <xref:System.ServiceModel.ServiceHost> object to host a service of type `HelloWorldService`, and then calls the <xref:System.ServiceModel.ICommunicationObject.Open%2A> method on <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="a156f-146">基底位址由程式碼提供、中繼資料發行已啟用，而且將使用預設端點。</span><span class="sxs-lookup"><span data-stu-id="a156f-146">A base address is provided in code, metadata publishing is enabled, and default endpoints are used.</span></span>  
   
  [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
  [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]  
   
-## 請參閱  
- <xref:System.Uri>   
- <xref:System.Configuration.ConfigurationManager.AppSettings%2A>   
- <xref:System.Configuration.ConfigurationManager>   
- [HOW TO：在 IIS 中裝載 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)   
- [自我裝載](../../../docs/framework/wcf/samples/self-host.md)   
- [裝載服務](../../../docs/framework/wcf/hosting-services.md)   
- [HOW TO：定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)   
- [HOW TO：實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)   
- [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
- [系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="a156f-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a156f-147">See Also</span></span>  
+ <xref:System.Uri>  
+ <xref:System.Configuration.ConfigurationManager.AppSettings%2A>  
+ <xref:System.Configuration.ConfigurationManager>  
+ [<span data-ttu-id="a156f-148">如何：在 IIS 中裝載 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="a156f-148">How to: Host a WCF Service in IIS</span></span>](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ [<span data-ttu-id="a156f-149">自我裝載</span><span class="sxs-lookup"><span data-stu-id="a156f-149">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)  
+ [<span data-ttu-id="a156f-150">裝載服務</span><span class="sxs-lookup"><span data-stu-id="a156f-150">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
+ [<span data-ttu-id="a156f-151">如何：定義服務合約</span><span class="sxs-lookup"><span data-stu-id="a156f-151">How to: Define a Service Contract</span></span>](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [<span data-ttu-id="a156f-152">如何：履行服務合約</span><span class="sxs-lookup"><span data-stu-id="a156f-152">How to: Implement a Service Contract</span></span>](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ [<span data-ttu-id="a156f-153">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="a156f-153">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="a156f-154">使用繫結設定服務與用戶端</span><span class="sxs-lookup"><span data-stu-id="a156f-154">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="a156f-155">系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="a156f-155">System-Provided Bindings</span></span>](../../../docs/framework/wcf/system-provided-bindings.md)

@@ -1,25 +1,28 @@
 ---
-title: "MtomMessageEncodingBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MtomMessageEncodingBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c5fd2858688634ee48a67b930755fc3ceebbebf8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# MtomMessageEncodingBindingElement
-MtomMessageEncodingBindingElement  
+# <a name="mtommessageencodingbindingelement"></a><span data-ttu-id="c0ffb-102">MtomMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="c0ffb-102">MtomMessageEncodingBindingElement</span></span>
+<span data-ttu-id="c0ffb-103">MtomMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="c0ffb-103">MtomMessageEncodingBindingElement</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="c0ffb-104">語法</span><span class="sxs-lookup"><span data-stu-id="c0ffb-104">Syntax</span></span>  
   
 ```  
 class MtomMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -31,45 +34,45 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 };  
 ```  
   
-## 方法  
- MtomMessageEncodingBindingElement 類別並未定義任何方法。  
+## <a name="methods"></a><span data-ttu-id="c0ffb-105">方法</span><span class="sxs-lookup"><span data-stu-id="c0ffb-105">Methods</span></span>  
+ <span data-ttu-id="c0ffb-106">MtomMessageEncodingBindingElement 類別並未定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="c0ffb-106">The MtomMessageEncodingBindingElement class does not define any methods.</span></span>  
   
-## 屬性  
- MtomMessageEncodingBindingElement 類別具有下列屬性：  
+## <a name="properties"></a><span data-ttu-id="c0ffb-107">屬性</span><span class="sxs-lookup"><span data-stu-id="c0ffb-107">Properties</span></span>  
+ <span data-ttu-id="c0ffb-108">MtomMessageEncodingBindingElement 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="c0ffb-108">The MtomMessageEncodingBindingElement class has the following properties:</span></span>  
   
-### Encoding  
- 資料型別：字串  
+### <a name="encoding"></a><span data-ttu-id="c0ffb-109">編碼</span><span class="sxs-lookup"><span data-stu-id="c0ffb-109">Encoding</span></span>  
+ <span data-ttu-id="c0ffb-110">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c0ffb-110">Data type: string</span></span>  
   
- 存取類型：唯讀  
+ <span data-ttu-id="c0ffb-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c0ffb-111">Access type: Read-only</span></span>  
   
- 要在繫結上發出訊息時使用的字元集編碼方式。  
+ <span data-ttu-id="c0ffb-112">要在繫結上發出訊息時使用的字元集編碼方式。</span><span class="sxs-lookup"><span data-stu-id="c0ffb-112">The character set encoding to be used for emitting messages on the binding.</span></span>  
   
-### MaxReadPoolSize  
- 資料型別：sint32  
+### <a name="maxreadpoolsize"></a><span data-ttu-id="c0ffb-113">MaxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="c0ffb-113">MaxReadPoolSize</span></span>  
+ <span data-ttu-id="c0ffb-114">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="c0ffb-114">Data type: sint32</span></span>  
   
- 存取類型：唯讀  
+ <span data-ttu-id="c0ffb-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c0ffb-115">Access type: Read-only</span></span>  
   
- 定義可同時讀取之訊息數目 \(在不配置新讀取器的情況下\) 的整數。  
+ <span data-ttu-id="c0ffb-116">定義可同時讀取之訊息數目 (在不配置新讀取器的情況下) 的整數。</span><span class="sxs-lookup"><span data-stu-id="c0ffb-116">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span>  
   
-### MaxWritePoolSize  
- 資料型別：sint32  
+### <a name="maxwritepoolsize"></a><span data-ttu-id="c0ffb-117">MaxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="c0ffb-117">MaxWritePoolSize</span></span>  
+ <span data-ttu-id="c0ffb-118">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="c0ffb-118">Data type: sint32</span></span>  
   
- 存取類型：唯讀  
+ <span data-ttu-id="c0ffb-119">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c0ffb-119">Access type: Read-only</span></span>  
   
- 定義可同時傳送之訊息數目 \(在不配置新寫入器的情況下\) 的整數。  
+ <span data-ttu-id="c0ffb-120">定義可同時傳送之訊息數目 (在不配置新寫入器的情況下) 的整數。</span><span class="sxs-lookup"><span data-stu-id="c0ffb-120">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span>  
   
-### ReaderQuotas  
- 資料型別：XmlDictionaryReaderQuotas  
+### <a name="readerquotas"></a><span data-ttu-id="c0ffb-121">ReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="c0ffb-121">ReaderQuotas</span></span>  
+ <span data-ttu-id="c0ffb-122">資料型別：XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="c0ffb-122">Data type: XmlDictionaryReaderQuotas</span></span>  
   
- 存取類型：唯讀  
+ <span data-ttu-id="c0ffb-123">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c0ffb-123">Access type: Read-only</span></span>  
   
- 讀取器的配額。  
+ <span data-ttu-id="c0ffb-124">讀取器的配額。</span><span class="sxs-lookup"><span data-stu-id="c0ffb-124">The quotas of the readers.</span></span>  
   
-## 需求  
+## <a name="requirements"></a><span data-ttu-id="c0ffb-125">需求</span><span class="sxs-lookup"><span data-stu-id="c0ffb-125">Requirements</span></span>  
   
-|MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|  
+|<span data-ttu-id="c0ffb-126">MOF</span><span class="sxs-lookup"><span data-stu-id="c0ffb-126">MOF</span></span>|<span data-ttu-id="c0ffb-127">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="c0ffb-127">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="c0ffb-128">命名空間</span><span class="sxs-lookup"><span data-stu-id="c0ffb-128">Namespace</span></span>|<span data-ttu-id="c0ffb-129">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="c0ffb-129">Defined in root\ServiceModel</span></span>|  
   
-## 請參閱  
+## <a name="see-also"></a><span data-ttu-id="c0ffb-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0ffb-130">See Also</span></span>  
  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

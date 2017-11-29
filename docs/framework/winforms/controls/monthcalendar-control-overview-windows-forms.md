@@ -1,39 +1,39 @@
 ---
-title: "MonthCalendar 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MonthCalendar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Calendar 控制項, Windows Form"
-  - "行事曆, Windows Form 控制項"
-  - "MonthCalendar 控制項 [Windows Form], 設定一週的第一天"
+title: "MonthCalendar 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MonthCalendar
+helpviewer_keywords:
+- calendars [Windows Forms], Windows Forms controls
+- calendar controls [Windows Forms], Windows Forms
+- MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dba245df31ad14150e57188c95ab3a980ae8d3db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# MonthCalendar 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.MonthCalendar> 控制項為使用者提供直覺式圖形介面，以檢視和設定日期資訊。  這個控制項會顯示月曆：方格中包含月份中的編號日期，分別排列在星期的天數之下並反白顯示選取的日期範圍。  您可以按一下月份標題兩側的箭頭按鈕來選取不同的月份。  與相似的 <xref:System.Windows.Forms.DateTimePicker> 控制項不同的是，可以使用這個控制項選取一個以上日期。  如需 <xref:System.Windows.Forms.DateTimePicker> 控制項的詳細資訊，請參閱 [DateTimePicker 控制項](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)。  
+# <a name="monthcalendar-control-overview-windows-forms"></a><span data-ttu-id="1ea8e-102">MonthCalendar 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="1ea8e-102">MonthCalendar Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="1ea8e-103">Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項提供直覺式的圖形化介面，以便讓使用者檢視並設定日期資訊。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-103">The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control presents an intuitive graphical interface for users to view and set date information.</span></span> <span data-ttu-id="1ea8e-104">控制項會顯示行事曆： 包含編號的日期的月份，在底下的反白顯示的日期選取範圍的每週天數的資料行中排列方格。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-104">The control displays a calendar: a grid containing the numbered days of the month, arranged in columns underneath the days of the week, with the selected range of dates highlighted.</span></span> <span data-ttu-id="1ea8e-105">您可以透過按一下月份標題的任一邊的箭號按鈕選取不同的月份。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-105">You can select a different month by clicking the arrow buttons on either side of the month caption.</span></span> <span data-ttu-id="1ea8e-106">不同於類似<xref:System.Windows.Forms.DateTimePicker>控制項，您可以選取多個與這個控制項的日期。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-106">Unlike the similar <xref:System.Windows.Forms.DateTimePicker> control, you can select more than one date with this control.</span></span> <span data-ttu-id="1ea8e-107">如需有關<xref:System.Windows.Forms.DateTimePicker>控制，請參閱[DateTimePicker 控制項](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-107">For more information about the <xref:System.Windows.Forms.DateTimePicker> control, see [DateTimePicker Control](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md).</span></span>  
   
-## 設定 MonthCalendar 控制項  
- <xref:System.Windows.Forms.MonthCalendar> 控制項的外觀可隨意設定。  依預設會將今天的日期以圓形圈出，並且將其附註在方格的下方。  只要將 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 和 <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> 屬性設為 `false`，即可變更這項功能。  也可以將 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 屬性設為 `true`，即可在月曆中加入週數。  設定 <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> 屬性即能以水平方式和垂直方式顯示多個月份。  根據預設，星期日是每週的第一天，但是使用 <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> 屬性就可以將任一天指定為第一天。  
+## <a name="configuring-the-monthcalendar-control"></a><span data-ttu-id="1ea8e-108">設定的 MonthCalendar 控制項</span><span class="sxs-lookup"><span data-stu-id="1ea8e-108">Configuring the MonthCalendar Control</span></span>  
+ <span data-ttu-id="1ea8e-109"><xref:System.Windows.Forms.MonthCalendar>控制項的外觀會高度設定的基礎。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-109">The <xref:System.Windows.Forms.MonthCalendar> control's appearance is highly configurable.</span></span> <span data-ttu-id="1ea8e-110">根據預設，今天的日期會顯示為圈選起來，而且也會註明在方格的底部。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-110">By default, today's date is displayed as circled, and is also noted at the bottom of the grid.</span></span> <span data-ttu-id="1ea8e-111">您可以變更這項功能，藉由設定<xref:System.Windows.Forms.MonthCalendar.ShowToday%2A>和<xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A>屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-111">You can change this feature by setting the <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> and <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> properties to `false`.</span></span> <span data-ttu-id="1ea8e-112">您也可以加入至行事曆週數，方法是設定<xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-112">You can also add week numbers to the calendar by setting the <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> property to `true`.</span></span> <span data-ttu-id="1ea8e-113">藉由設定<xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>屬性，您可以有多個顯示月份的水平或垂直。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-113">By setting the <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> property, you can have multiple months displayed horizontally and vertically.</span></span> <span data-ttu-id="1ea8e-114">根據預設，星期日會顯示為每週的第一天，但您可使用指定任何一天<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-114">By default, Sunday is shown as the first day of the week, but any day can be designated using the <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> property.</span></span>  
   
- 也可以藉由將 <xref:System.DateTime> 物件加入至 <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>、<xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> 和 <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> 屬性，將特定日期設定為單次、每年或每月以粗體字顯示。  如需詳細資訊，請參閱 [如何：使用 Windows Form MonthCalendar 控制項以粗體顯示特定日期](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)。  
+ <span data-ttu-id="1ea8e-115">您也可以設定顯示在特定日期一次，每年，或每月粗體加<xref:System.DateTime>物件加入至<xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>， <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>，和<xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-115">You can also set certain dates to be displayed in bold on a one-time basis, annually, or monthly, by adding <xref:System.DateTime> objects to the <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, and <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> properties.</span></span> <span data-ttu-id="1ea8e-116">如需詳細資訊，請參閱[How to： 在 Windows Form MonthCalendar 控制項以粗體顯示特定日期](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-116">For more information, see [How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md).</span></span>  
   
- <xref:System.Windows.Forms.MonthCalendar> 控制項的主要屬性是 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>，表示在此控制項中已選取的日期範圍。  <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 值不能超過 <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> 屬性中所設定的可選取最多天數。  <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> 和 <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> 屬性決定使用者可選取的最早和最晚日期。  
+ <span data-ttu-id="1ea8e-117">索引鍵內容<xref:System.Windows.Forms.MonthCalendar>控制項是<xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>，控制項中選取日期範圍。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-117">The key property of the <xref:System.Windows.Forms.MonthCalendar> control is <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, the range of dates selected in the control.</span></span> <span data-ttu-id="1ea8e-118"><xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>值不能超過可選取、 在 設定最大天數<xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-118">The <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> value cannot exceed the maximum number of days that can be selected, set in the <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> property.</span></span> <span data-ttu-id="1ea8e-119">使用者可以選取的最早和最新日期由<xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>和<xref:System.Windows.Forms.MonthCalendar.MinDate%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="1ea8e-119">The earliest and latest dates the user can select are determined by the <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> and <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> properties.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.MonthCalendar>   
- [MonthCalendar 控制項](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="1ea8e-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1ea8e-120">See Also</span></span>  
+ <xref:System.Windows.Forms.MonthCalendar>  
+ [<span data-ttu-id="1ea8e-121">MonthCalendar 控制項</span><span class="sxs-lookup"><span data-stu-id="1ea8e-121">MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)

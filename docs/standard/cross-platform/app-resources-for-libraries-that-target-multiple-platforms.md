@@ -1,114 +1,115 @@
 ---
-title: "以多平台為目標之函式庫的應用程式資源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - ".NET Framework, 以多重平台為目標時的資源"
-  - "多重平台, 資源"
-  - "資源 [.NET Framework]"
-  - "資源, 適用於多重平台"
-  - "以多重平台為目標, 資源"
+title: "以多平台為目標之函式庫的應用程式資源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- multiple platforms, resources for
+- resources [.NET Framework]
+- .NET Framework, resources when targeting multiple platforms
+- resources, for multiple platforms
+- targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 74cd3df645c2490bcf98533ca8846ddfb742f67f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 以多平台為目標之函式庫的應用程式資源
-您可以使用 .NET Framework [可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型確保您類別庫中的資源可從多個平台來存取。  這個專案類型會在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中提供，並且以 .NET Framework 類別庫的可攜式子集為目標。  使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。  
+# <a name="app-resources-for-libraries-that-target-multiple-platforms"></a><span data-ttu-id="2438b-102">以多平台為目標之函式庫的應用程式資源</span><span class="sxs-lookup"><span data-stu-id="2438b-102">App Resources for Libraries That Target Multiple Platforms</span></span>
+<span data-ttu-id="2438b-103">您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型確保您的類別庫中的資源，可從多個平台。</span><span class="sxs-lookup"><span data-stu-id="2438b-103">You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) project type to ensure that resources in your class libraries can be accessed from multiple platforms.</span></span> <span data-ttu-id="2438b-104">這個專案類型會在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中提供，並且以 .NET Framework 類別庫的可攜式子集為目標。</span><span class="sxs-lookup"><span data-stu-id="2438b-104">This project type is available in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] and targets the portable subset of the .NET Framework class library.</span></span> <span data-ttu-id="2438b-105">使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。</span><span class="sxs-lookup"><span data-stu-id="2438b-105">Using  a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] ensures that your library can be accessed from desktop apps, Silverlight apps, Windows Phone apps, and [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span>  
   
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案只會將 <xref:System.Resources> 命名空間中非常有限的類型子集提供給您的應用程式，但確實可讓您使用 <xref:System.Resources.ResourceManager> 類別擷取資源。  不過，如果您要使用 Visual Studio 建立應用程式，則應該使用 Visual Studio 所建立的強類型包裝函式，而不要直接使用 <xref:System.Resources.ResourceManager> 類別。  
+ <span data-ttu-id="2438b-106">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案只會將 <xref:System.Resources> 命名空間中非常有限的類型子集提供給您的應用程式，但確實可讓您使用 <xref:System.Resources.ResourceManager> 類別擷取資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-106">The [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project makes only a very limited subset of the types in the <xref:System.Resources> namespace available to your application, but it does allow you to use the <xref:System.Resources.ResourceManager> class to retrieve resources.</span></span> <span data-ttu-id="2438b-107">不過，如果您要使用 Visual Studio 建立應用程式，則應該使用 Visual Studio 所建立的強類型包裝函式，而不要直接使用 <xref:System.Resources.ResourceManager> 類別。</span><span class="sxs-lookup"><span data-stu-id="2438b-107">However, if you are creating an app by using Visual Studio, you should use the strongly typed wrapper created by Visual Studio instead of using the <xref:System.Resources.ResourceManager> class directly.</span></span>  
   
- 若要在 Visual Studio 中建立強類型包裝函式，請在 Visual Studio 資源設計工具中將主要資源檔的 \[**存取修飾詞**\] 設定為 \[**公用**\]。  這樣會建立包含強類型 ResourceManager 包裝函式的 \[resourceFileName\].designer.cs 或 \[resourceFileName\].designer.vb 檔。  如需使用強類型資源包裝函式的詳細資訊，請參閱 [Resgen.exe \(Resource File Generator\)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 主題中的＜產生強類型資源類別＞一節。  
+ <span data-ttu-id="2438b-108">若要在 Visual Studio 中建立的強類型包裝函式，設定主要資源檔的**存取修飾詞**Visual Studio 資源設計工具中**公用**。</span><span class="sxs-lookup"><span data-stu-id="2438b-108">To create a strongly typed wrapper in Visual Studio, set the main resource file's **Access Modifier** in the Visual Studio Resource Designer to **Public**.</span></span> <span data-ttu-id="2438b-109">這樣會建立包含強類型 ResourceManager 包裝函式的 [resourceFileName].designer.cs 或 [resourceFileName].designer.vb 檔。</span><span class="sxs-lookup"><span data-stu-id="2438b-109">This creates a [resourceFileName].designer.cs or [resourceFileName].designer.vb file that contains the strongly typed ResourceManager wrapper.</span></span> <span data-ttu-id="2438b-110">如需使用強類型的資源包裝函式的詳細資訊，請參閱中的 < 產生強類型資源類別 > 一節[Resgen.exe （資源檔產生器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)主題。</span><span class="sxs-lookup"><span data-stu-id="2438b-110">For more information about using a strongly typed resource wrapper, see the "Generating a Strongly Typed Resource Class" section in the [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) topic.</span></span>  
   
-## [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]的資源管理員  
- 在[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案中，所有對資源的存取都是透過 <xref:System.Resources.ResourceManager> 類別處理。  由於無法從<xref:System.Resources>專案存取像是 <xref:System.Resources.ResourceReader> 和 <xref:System.Resources.ResourceSet> 這類 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 命名空間中的類型，因此這些類型無法用來存取資源。  
+## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a><span data-ttu-id="2438b-111">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]的資源管理員</span><span class="sxs-lookup"><span data-stu-id="2438b-111">Resource Manager in the [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span></span>  
+ <span data-ttu-id="2438b-112">在[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案中，所有對資源的存取都是透過 <xref:System.Resources.ResourceManager> 類別處理。</span><span class="sxs-lookup"><span data-stu-id="2438b-112">In a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, all access to resources is handled by the <xref:System.Resources.ResourceManager> class.</span></span> <span data-ttu-id="2438b-113">由於無法從<xref:System.Resources>專案存取像是 <xref:System.Resources.ResourceReader> 和 <xref:System.Resources.ResourceSet> 這類 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 命名空間中的類型，因此這些類型無法用來存取資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-113">Because types in the <xref:System.Resources> namespace, such as <xref:System.Resources.ResourceReader> and <xref:System.Resources.ResourceSet>, are not accessible from a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, they cannot be used to access resources.</span></span>  
   
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案包含下表列出的四個 <xref:System.Resources.ResourceManager> 成員。  這些建構函式和方法可讓您具現化 <xref:System.Resources.ResourceManager> 物件並擷取字串資源。  
+ <span data-ttu-id="2438b-114">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案包含下表列出的四個 <xref:System.Resources.ResourceManager> 成員。</span><span class="sxs-lookup"><span data-stu-id="2438b-114">The [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project includes the four <xref:System.Resources.ResourceManager> members listed in the following table.</span></span> <span data-ttu-id="2438b-115">這些建構函式和方法可讓您具現化 <xref:System.Resources.ResourceManager> 物件並擷取字串資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-115">These constructors and methods enable you to instantiate a <xref:System.Resources.ResourceManager> object and retrieve string resources.</span></span>  
   
-|`ResourceManager` 成員|描述|  
-|--------------------------|--------|  
-|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|建立 <xref:System.Resources.ResourceManager> 執行個體以存取所指定組件中的具名資源檔。|  
-|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|建立對應所指定類型的 <xref:System.Resources.ResourceManager> 執行個體。|  
-|<xref:System.Resources.ResourceManager.GetString%28System.String%29>|擷取目前文化特性的具名資源。|  
-|<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|擷取屬於所指定文化特性的具名資源。|  
+|<span data-ttu-id="2438b-116">`ResourceManager` 成員</span><span class="sxs-lookup"><span data-stu-id="2438b-116">`ResourceManager` member</span></span>|<span data-ttu-id="2438b-117">說明</span><span class="sxs-lookup"><span data-stu-id="2438b-117">Description</span></span>|  
+|------------------------------|-----------------|  
+|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|<span data-ttu-id="2438b-118">建立 <xref:System.Resources.ResourceManager> 執行個體以存取所指定組件中的具名資源檔。</span><span class="sxs-lookup"><span data-stu-id="2438b-118">Creates a <xref:System.Resources.ResourceManager> instance to access the named resource file found in the specified assembly.</span></span>|  
+|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|<span data-ttu-id="2438b-119">建立對應所指定類型的 <xref:System.Resources.ResourceManager> 執行個體。</span><span class="sxs-lookup"><span data-stu-id="2438b-119">Creates a <xref:System.Resources.ResourceManager> instance that corresponds to the specified type.</span></span>|  
+|<xref:System.Resources.ResourceManager.GetString%28System.String%29>|<span data-ttu-id="2438b-120">擷取目前文化特性的具名資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-120">Retrieves a named resource for the current culture.</span></span>|  
+|<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|<span data-ttu-id="2438b-121">擷取屬於所指定文化特性的具名資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-121">Retrieves a named resource belonging to the specified culture.</span></span>|  
   
- 將其他 <xref:System.Resources.ResourceManager> 成員從[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]中排除，表示無法從資源檔擷取序列化物件、非字串資料和影像。  若要使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]的資源，您應該以字串形式儲存所有物件資料。  例如，您可以將數值轉換成字串以便儲存到資源檔中，並且可以擷取這些字串，然後使用數值資料類型的 `Parse` 或 `TryParse` 方法將它們轉換回數字。  您可以藉由呼叫 <xref:System.Convert.ToBase64String%2A?displayProperty=fullName> 方法將影像或其他二進位資料轉換成字串表示，並且藉由呼叫 <xref:System.Convert.FromBase64String%2A?displayProperty=fullName> 方法將它們還原為位元組陣列。  
+ <span data-ttu-id="2438b-122">將其他 <xref:System.Resources.ResourceManager> 成員從[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]中排除，表示無法從資源檔擷取序列化物件、非字串資料和影像。</span><span class="sxs-lookup"><span data-stu-id="2438b-122">The exclusion of other <xref:System.Resources.ResourceManager> members from the [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] means that serialized objects, non-string data, and images cannot be retrieved from a resource file.</span></span> <span data-ttu-id="2438b-123">若要使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]的資源，您應該以字串形式儲存所有物件資料。</span><span class="sxs-lookup"><span data-stu-id="2438b-123">To use resources from a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], you should store all  object data in string form.</span></span> <span data-ttu-id="2438b-124">例如，您可以將數值轉換成字串以便儲存到資源檔中，並且可以擷取這些字串，然後使用數值資料類型的 `Parse` 或 `TryParse` 方法將它們轉換回數字。</span><span class="sxs-lookup"><span data-stu-id="2438b-124">For example, you can store numeric values in a resource file by converting them to strings, and you can retrieve them and then convert them back to numbers by using the numeric data type's `Parse` or `TryParse` method.</span></span> <span data-ttu-id="2438b-125">您可以藉由呼叫 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法將影像或其他二進位資料轉換成字串表示，並且藉由呼叫 <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> 方法將它們還原為位元組陣列。</span><span class="sxs-lookup"><span data-stu-id="2438b-125">You can convert images or other binary data to a string representation by calling the <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> method, and restore them to a byte array by calling the <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> method.</span></span>  
   
-## [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]和 Windows 市集應用程式  
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案會將資源儲存在 .resx 檔中，這些資源接著會編譯為 .resources 檔，並且在編譯時期內嵌於主要組件或附屬組件中。  另一方面，[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式則需要將資源儲存到 .resw 檔中，這些檔案接著會編譯成單一封裝資源索引 \(PRI\) 檔。  不過，儘管這兩種檔案格式不相容，[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]仍能在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中運作。  
+## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a><span data-ttu-id="2438b-126">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]和 Windows 市集應用程式</span><span class="sxs-lookup"><span data-stu-id="2438b-126">The [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] and Windows Store Apps</span></span>  
+ [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]<span data-ttu-id="2438b-127">專案會將資源儲存在 .resx 檔中，這些資源接著會編譯為 .resources 檔，並且在編譯時期內嵌於主要組件或附屬組件中。</span><span class="sxs-lookup"><span data-stu-id="2438b-127"> projects store resources in .resx files, which are then compiled into .resources files and embedded in the main assembly or in satellite assemblies at compile time.</span></span> <span data-ttu-id="2438b-128">另一方面，[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式則需要將資源儲存到 .resw 檔中，這些檔案接著會編譯成單一封裝資源索引 (PRI) 檔。</span><span class="sxs-lookup"><span data-stu-id="2438b-128">[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps, on the other hand, require resources to be stored in .resw files, which are then compiled into a single package resource index (PRI) file.</span></span> <span data-ttu-id="2438b-129">不過，儘管這兩種檔案格式不相容，[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]仍能在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中運作。</span><span class="sxs-lookup"><span data-stu-id="2438b-129">However, despite the incompatible file formats, your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] will work in a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app.</span></span>  
   
- 若要從 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用您的類別庫，請在 Windows 市集應用程式專案中加入其參考。  Visual Studio 會明確將您組件中的資源擷取至 .resw 檔中，並用它來產生 PRI 檔，讓 [!INCLUDE[wrt](../../../includes/wrt-md.md)]能夠從該檔案中擷取資源。  在執行階段，[!INCLUDE[wrt](../../../includes/wrt-md.md)]會執行您[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]中的程式碼，不過它會從 PRI 檔擷取您的可攜式類別庫資源。  
+ <span data-ttu-id="2438b-130">若要從 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用您的類別庫，請在 Windows 市集應用程式專案中加入其參考。</span><span class="sxs-lookup"><span data-stu-id="2438b-130">To consume your class library from a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app, add a reference to it in your Windows Store app project.</span></span> <span data-ttu-id="2438b-131">Visual Studio 會明確將您組件中的資源擷取至 .resw 檔中，並用它來產生 PRI 檔，讓 [!INCLUDE[wrt](../../../includes/wrt-md.md)]能夠從該檔案中擷取資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-131">Visual Studio will transparently extract the resources from your assembly into a .resw file and use it to generate a PRI file from which the [!INCLUDE[wrt](../../../includes/wrt-md.md)] can extract resources.</span></span> <span data-ttu-id="2438b-132">在執行階段，[!INCLUDE[wrt](../../../includes/wrt-md.md)]會執行您[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]中的程式碼，不過它會從 PRI 檔擷取您的可攜式類別庫資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-132">At run time, the [!INCLUDE[wrt](../../../includes/wrt-md.md)] executes the code in your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], but it retrieves your Portable Class Library's resources from the PRI file.</span></span>  
   
- 如果您的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案包含當地語系化資源，則可以使用中樞和支點模型來部署這些資源，就像在桌面應用程式中部署程式庫一樣。  若要使用 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中的主要資源檔和任何當地語系化資源檔，可以加入主要組件的參考。  在編譯時期，Visual Studio 會將您的主要資源檔和所有當地語系化資源檔中的資源擷取至不同的 .resw 檔。  然後會將 .resw 檔編譯成單一 PRI 檔案，供 [!INCLUDE[wrt](../../../includes/wrt-md.md)]在執行階段時存取。  
+ <span data-ttu-id="2438b-133">如果您的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案包含當地語系化資源，則可以使用中樞和支點模型來部署這些資源，就像在桌面應用程式中部署程式庫一樣。</span><span class="sxs-lookup"><span data-stu-id="2438b-133">If your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project includes localized resources, you use the hub-and-spoke model to deploy them just as you would for a library in a desktop app.</span></span> <span data-ttu-id="2438b-134">若要使用 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中的主要資源檔和任何當地語系化資源檔，可以加入主要組件的參考。</span><span class="sxs-lookup"><span data-stu-id="2438b-134">To consume your main resource file and any localized resource files in your [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app, you add a reference to the main assembly.</span></span> <span data-ttu-id="2438b-135">在編譯時期，Visual Studio 會將您的主要資源檔和所有當地語系化資源檔中的資源擷取至不同的 .resw 檔。</span><span class="sxs-lookup"><span data-stu-id="2438b-135">At compile time, Visual Studio extracts the resources from your main resource file and any localized resource files into separate .resw files.</span></span> <span data-ttu-id="2438b-136">然後會將 .resw 檔編譯成單一 PRI 檔案，供 [!INCLUDE[wrt](../../../includes/wrt-md.md)]在執行階段時存取。</span><span class="sxs-lookup"><span data-stu-id="2438b-136">It then compiles the .resw files into a single PRI file that the [!INCLUDE[wrt](../../../includes/wrt-md.md)] accesses at run time.</span></span>  
   
 <a name="NonLoc"></a>   
-## 範例：非當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- 以下簡單的非當地語系化[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]範例會使用資源來儲存資料行的名稱，並判斷要為表格式資料保留的字元數。  這個範例會使用名為 LibResources.resx 的檔案儲存下表中列出的字串資源。  
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a><span data-ttu-id="2438b-137">範例：非當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2438b-137">Example: Non-Localized [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span></span>  
+ <span data-ttu-id="2438b-138">以下簡單的非當地語系化[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]範例會使用資源來儲存資料行的名稱，並判斷要為表格式資料保留的字元數。</span><span class="sxs-lookup"><span data-stu-id="2438b-138">The following simple, non-localized [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] example uses resources to store the names of columns and to determine the number of characters to reserve for tabular data.</span></span> <span data-ttu-id="2438b-139">這個範例會使用名為 LibResources.resx 的檔案儲存下表中列出的字串資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-139">The example uses a file named LibResources.resx to store the string resources listed in the following table.</span></span>  
   
-|資源名稱|資源值|  
-|----------|---------|  
-|Born|生日|  
-|BornLength|12|  
-|Hired|雇用日期|  
-|HiredLength|12|  
-|ID|ID|  
-|ID.Length|12|  
-|名稱|名稱|  
-|NameLength|25|  
-|標題|員工資料庫|  
+|<span data-ttu-id="2438b-140">資源名稱</span><span class="sxs-lookup"><span data-stu-id="2438b-140">Resource name</span></span>|<span data-ttu-id="2438b-141">資源值</span><span class="sxs-lookup"><span data-stu-id="2438b-141">Resource value</span></span>|  
+|-------------------|--------------------|  
+|<span data-ttu-id="2438b-142">Born</span><span class="sxs-lookup"><span data-stu-id="2438b-142">Born</span></span>|<span data-ttu-id="2438b-143">生日</span><span class="sxs-lookup"><span data-stu-id="2438b-143">Birthdate</span></span>|  
+|<span data-ttu-id="2438b-144">BornLength</span><span class="sxs-lookup"><span data-stu-id="2438b-144">BornLength</span></span>|<span data-ttu-id="2438b-145">12</span><span class="sxs-lookup"><span data-stu-id="2438b-145">12</span></span>|  
+|<span data-ttu-id="2438b-146">Hired</span><span class="sxs-lookup"><span data-stu-id="2438b-146">Hired</span></span>|<span data-ttu-id="2438b-147">雇用日期</span><span class="sxs-lookup"><span data-stu-id="2438b-147">Hire Date</span></span>|  
+|<span data-ttu-id="2438b-148">HiredLength</span><span class="sxs-lookup"><span data-stu-id="2438b-148">HiredLength</span></span>|<span data-ttu-id="2438b-149">12</span><span class="sxs-lookup"><span data-stu-id="2438b-149">12</span></span>|  
+|<span data-ttu-id="2438b-150">ID</span><span class="sxs-lookup"><span data-stu-id="2438b-150">ID</span></span>|<span data-ttu-id="2438b-151">ID</span><span class="sxs-lookup"><span data-stu-id="2438b-151">ID</span></span>|  
+|<span data-ttu-id="2438b-152">ID.Length</span><span class="sxs-lookup"><span data-stu-id="2438b-152">ID.Length</span></span>|<span data-ttu-id="2438b-153">12</span><span class="sxs-lookup"><span data-stu-id="2438b-153">12</span></span>|  
+|<span data-ttu-id="2438b-154">名稱</span><span class="sxs-lookup"><span data-stu-id="2438b-154">Name</span></span>|<span data-ttu-id="2438b-155">名稱</span><span class="sxs-lookup"><span data-stu-id="2438b-155">Name</span></span>|  
+|<span data-ttu-id="2438b-156">NameLength</span><span class="sxs-lookup"><span data-stu-id="2438b-156">NameLength</span></span>|<span data-ttu-id="2438b-157">25</span><span class="sxs-lookup"><span data-stu-id="2438b-157">25</span></span>|  
+|<span data-ttu-id="2438b-158">標題</span><span class="sxs-lookup"><span data-stu-id="2438b-158">Title</span></span>|<span data-ttu-id="2438b-159">員工資料庫</span><span class="sxs-lookup"><span data-stu-id="2438b-159">Employee Database</span></span>|  
   
- 下列程式碼將定義 `UILibrary` 類別，該類別會使用 Visual Studio 在檔案的 \[存取修飾詞\] 變更為 \[公用\] 時所產生名為 `resources` 的資源管理員包裝函式。  UILibrary 類別會在必要時剖析字串資料。  .  請注意，該類別位於 `MyCompany.Employees` 命名空間中。  
+ <span data-ttu-id="2438b-160">下列程式碼定義`UILibrary`使用名為資源管理員包裝函式類別`resources`由 Visual Studio 產生時**存取修飾詞**檔案變更為**公用**.</span><span class="sxs-lookup"><span data-stu-id="2438b-160">The following code defines a `UILibrary` class that uses the Resource Manager wrapper named `resources` generated by Visual Studio when the **Access Modifier** for the file is changed to **Public**.</span></span> <span data-ttu-id="2438b-161">UILibrary 類別會在必要時剖析字串資料。</span><span class="sxs-lookup"><span data-stu-id="2438b-161">The UILibrary class parses the string data as necessary.</span></span> <span data-ttu-id="2438b-162">.</span><span class="sxs-lookup"><span data-stu-id="2438b-162">.</span></span> <span data-ttu-id="2438b-163">請注意，該類別位於 `MyCompany.Employees` 命名空間中。</span><span class="sxs-lookup"><span data-stu-id="2438b-163">Note that the class is in the `MyCompany.Employees` namespace.</span></span>  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
   
- 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。  它需要將 UILIbrary.dll 的參考加入主控台應用程式專案中。  
+ <span data-ttu-id="2438b-164">下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-164">The following code illustrates how the `UILibrary` class and its resources can be accessed from a console-mode app.</span></span> <span data-ttu-id="2438b-165">它需要將 UILIbrary.dll 的參考加入主控台應用程式專案中。</span><span class="sxs-lookup"><span data-stu-id="2438b-165">It requires a reference to UILIbrary.dll to be added to the console app project.</span></span>  
   
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]  
   
- 下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。  它需要將 UILIbrary.dll 的參考加入 Windows 市集應用程式專案中。  
+ <span data-ttu-id="2438b-166">下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-166">The following code illustrates how the `UILibrary` class and its resources can be accessed from a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app.</span></span> <span data-ttu-id="2438b-167">它需要將 UILIbrary.dll 的參考加入 Windows 市集應用程式專案中。</span><span class="sxs-lookup"><span data-stu-id="2438b-167">It requires a reference to UILIbrary.dll to be added to the Windows Store app project.</span></span>  
   
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
-## 範例：當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- 下列當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]範例包含法文 \(法國\) 和英文 \(美國\) 文化特性的資源。  英文 \(美國\) 文化特性為應用程式的預設文化特性，其資源於[前一節](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)的表格中顯示。  法文 \(法國\) 文化特性的資源檔命名為 LibResources.fr\-FR.resx，並且包含下表所列的字串資源。  `UILibrary` 類別的原始程式碼與前一節中所顯示的內容相同。  
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a><span data-ttu-id="2438b-168">範例：當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2438b-168">Example: Localized [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span></span>  
+ <span data-ttu-id="2438b-169">下列當地語系化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]範例包含法文 (法國) 和英文 (美國) 文化特性的資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-169">The following localized [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] example includes resources for the French (France) and English (United States) cultures.</span></span> <span data-ttu-id="2438b-170">英文 （美國） 文化特性是應用程式的預設文化特性。它的資源會顯示在資料表中[上一節](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)。</span><span class="sxs-lookup"><span data-stu-id="2438b-170">The English (United States) culture is the app's default culture; its resources are shown in the table in the [previous section](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc).</span></span> <span data-ttu-id="2438b-171">法文 (法國) 文化特性的資源檔命名為 LibResources.fr-FR.resx，並且包含下表所列的字串資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-171">The resources file for the French (France) culture is named LibResources.fr-FR.resx and consists of the string resources listed in the following table.</span></span> <span data-ttu-id="2438b-172">`UILibrary` 類別的原始程式碼與前一節中所顯示的內容相同。</span><span class="sxs-lookup"><span data-stu-id="2438b-172">The source code for the `UILibrary` class is the same as that shown in the previous section.</span></span>  
   
-|資源名稱|資源值|  
-|----------|---------|  
-|Born|Date de naissance|  
-|BornLength|20|  
-|Hired|Date embauché|  
-|HiredLength|16|  
-|ID|ID|  
-|名稱|Nom|  
-|標題|Base de données des employés|  
+|<span data-ttu-id="2438b-173">資源名稱</span><span class="sxs-lookup"><span data-stu-id="2438b-173">Resource name</span></span>|<span data-ttu-id="2438b-174">資源值</span><span class="sxs-lookup"><span data-stu-id="2438b-174">Resource value</span></span>|  
+|-------------------|--------------------|  
+|<span data-ttu-id="2438b-175">Born</span><span class="sxs-lookup"><span data-stu-id="2438b-175">Born</span></span>|<span data-ttu-id="2438b-176">Date de naissance</span><span class="sxs-lookup"><span data-stu-id="2438b-176">Date de naissance</span></span>|  
+|<span data-ttu-id="2438b-177">BornLength</span><span class="sxs-lookup"><span data-stu-id="2438b-177">BornLength</span></span>|<span data-ttu-id="2438b-178">20</span><span class="sxs-lookup"><span data-stu-id="2438b-178">20</span></span>|  
+|<span data-ttu-id="2438b-179">Hired</span><span class="sxs-lookup"><span data-stu-id="2438b-179">Hired</span></span>|<span data-ttu-id="2438b-180">Date embauché</span><span class="sxs-lookup"><span data-stu-id="2438b-180">Date embauché</span></span>|  
+|<span data-ttu-id="2438b-181">HiredLength</span><span class="sxs-lookup"><span data-stu-id="2438b-181">HiredLength</span></span>|<span data-ttu-id="2438b-182">16</span><span class="sxs-lookup"><span data-stu-id="2438b-182">16</span></span>|  
+|<span data-ttu-id="2438b-183">ID</span><span class="sxs-lookup"><span data-stu-id="2438b-183">ID</span></span>|<span data-ttu-id="2438b-184">ID</span><span class="sxs-lookup"><span data-stu-id="2438b-184">ID</span></span>|  
+|<span data-ttu-id="2438b-185">名稱</span><span class="sxs-lookup"><span data-stu-id="2438b-185">Name</span></span>|<span data-ttu-id="2438b-186">Nom</span><span class="sxs-lookup"><span data-stu-id="2438b-186">Nom</span></span>|  
+|<span data-ttu-id="2438b-187">標題</span><span class="sxs-lookup"><span data-stu-id="2438b-187">Title</span></span>|<span data-ttu-id="2438b-188">Base de données des employés</span><span class="sxs-lookup"><span data-stu-id="2438b-188">Base de données des employés</span></span>|  
   
- 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。  它需要將 UILIbrary.dll 的參考加入主控台應用程式專案中。  
+ <span data-ttu-id="2438b-189">下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-189">The following code illustrates how the `UILibrary` class and its resources can be accessed from a console-mode app.</span></span> <span data-ttu-id="2438b-190">它需要將 UILIbrary.dll 的參考加入主控台應用程式專案中。</span><span class="sxs-lookup"><span data-stu-id="2438b-190">It requires a reference to UILIbrary.dll to be added to the console app project.</span></span>  
   
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]  
   
- 下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。  它需要將 UILIbrary.dll 的參考加入 Windows 市集應用程式專案中。  它會使用靜態 `ApplicationLanguages.PrimaryLanguageOverride` 屬性將應用程式的慣用語言設定為法文。  
+ <span data-ttu-id="2438b-191">下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。</span><span class="sxs-lookup"><span data-stu-id="2438b-191">The following code illustrates how the `UILibrary` class and its resources can be accessed from a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app.</span></span> <span data-ttu-id="2438b-192">它需要將 UILIbrary.dll 的參考加入 Windows 市集應用程式專案中。</span><span class="sxs-lookup"><span data-stu-id="2438b-192">It requires a reference to UILIbrary.dll to be added to the Windows Store app project.</span></span> <span data-ttu-id="2438b-193">它會使用靜態 `ApplicationLanguages.PrimaryLanguageOverride` 屬性將應用程式的慣用語言設定為法文。</span><span class="sxs-lookup"><span data-stu-id="2438b-193">It uses the static `ApplicationLanguages.PrimaryLanguageOverride` property to set the app's preferred language to French.</span></span>  
   
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## 請參閱  
- <xref:System.Resources.ResourceManager>   
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)   
- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a><span data-ttu-id="2438b-194">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2438b-194">See Also</span></span>  
+ <xref:System.Resources.ResourceManager>  
+ [<span data-ttu-id="2438b-195">桌面應用程式中的資源</span><span class="sxs-lookup"><span data-stu-id="2438b-195">Resources in Desktop Apps</span></span>](../../../docs/framework/resources/index.md)  
+ [<span data-ttu-id="2438b-196">封裝和部署資源</span><span class="sxs-lookup"><span data-stu-id="2438b-196">Packaging and Deploying Resources</span></span>](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

@@ -1,64 +1,82 @@
 ---
-title: "Long Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Long"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "identifier type characters, &"
-  - "numbers, whole"
-  - "whole numbers"
-  - "integral data types"
-  - "& identifier type character"
-  - "integer numbers"
-  - "literal type characters, L"
-  - "numbers, integer"
-  - "integers, data types"
-  - "L literal type character"
-  - "integers, types"
-  - "Long keyword"
-  - "data types [Visual Basic], integral"
-  - "data types [Visual Basic], assigning"
-  - "Long data type"
+title: "Long 資料類型 (Visual Basic)"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Long
+helpviewer_keywords:
+- identifier type characters [Visual Basic], &
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- '& identifier type character'
+- integer numbers
+- literal type characters [Visual Basic], L
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- L literal type character [Visual Basic]
+- integers [Visual Basic], types
+- Long keyword [Visual Basic]
+- data types [Visual Basic], integral
+- data types [Visual Basic], assigning
+- Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 1e21ed43ddc6efb018df0581faed1ebf270ab3ca
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Long Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="long-data-type-visual-basic"></a><span data-ttu-id="26e4d-102">Long 資料類型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26e4d-102">Long data type (Visual Basic)</span></span>
 
-存放帶正負號的 64 位元 \(8 位元組\) 整數，範圍從 \-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 \(9.2...E\+18\)。  
+<span data-ttu-id="26e4d-103">保存帶正負號的 64 位元 （8 個位元組） 整數值範圍從-9223372036854775808 到 9,223,372,036,854,775,807 (9.2 … E + 18)。</span><span class="sxs-lookup"><span data-stu-id="26e4d-103">Holds signed 64-bit (8-byte) integers ranging in value from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18).</span></span>  
   
-## 備註  
- 使用 `Long` 資料型別，來包含因過大而無法符合 `Integer` 資料型別的整數。  
+## <a name="remarks"></a><span data-ttu-id="26e4d-104">備註</span><span class="sxs-lookup"><span data-stu-id="26e4d-104">Remarks</span></span>
+
+ <span data-ttu-id="26e4d-105">使用`Long`資料類型可包含整數的數字太大，無法納入`Integer`資料型別。</span><span class="sxs-lookup"><span data-stu-id="26e4d-105">Use the `Long` data type to contain integer numbers that are too large to fit in the `Integer` data type.</span></span>  
   
- `Long` 的預設值為 0。  
+ <span data-ttu-id="26e4d-106">`Long` 的預設值為 0。</span><span class="sxs-lookup"><span data-stu-id="26e4d-106">The default value of `Long` is 0.</span></span>
+
+## <a name="literal-assignments"></a><span data-ttu-id="26e4d-107">常值的指派</span><span class="sxs-lookup"><span data-stu-id="26e4d-107">Literal assignments</span></span> 
+
+<span data-ttu-id="26e4d-108">您可以宣告和初始化`Long`變數將其指派十進位常值、 十六進位常值、 八進位常值，或是 （從開始使用 Visual Basic 2017） 二進位常值。</span><span class="sxs-lookup"><span data-stu-id="26e4d-108">You can declare and initialize a `Long` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.</span></span> <span data-ttu-id="26e4d-109">如果整數常值超出 `Long` 的範圍 (亦即，如果小於 <xref:System.Int64.MinValue?displayProperty=nameWithType> 或大於 <xref:System.Int64.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。</span><span class="sxs-lookup"><span data-stu-id="26e4d-109">If the integer literal is outside the range of `Long` (that is, if it is less than <xref:System.Int64.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int64.MaxValue?displayProperty=nameWithType>, a compilation error occurs.</span></span>
+
+<span data-ttu-id="26e4d-110">在下列範例中，如果整數等於 4,294,967,296，即表示 `Long` 值指派了十進位、十六進位和二進位常值。</span><span class="sxs-lookup"><span data-stu-id="26e4d-110">In the following example, integers equal to 4,294,967,296 that are represented as decimal, hexadecimal, and binary literals are assigned to `Long` values.</span></span>
   
-## 程式設計提示  
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]  
+
+> [!NOTE]
+> <span data-ttu-id="26e4d-111">使用前置詞`&h`或`&H`來表示十六進位常值前置詞`&b`或`&B`代表二進位常值，以及前置詞`&o`或`&O`代表八進位常值。</span><span class="sxs-lookup"><span data-stu-id="26e4d-111">You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal.</span></span> <span data-ttu-id="26e4d-112">十進位常值沒有前置詞。</span><span class="sxs-lookup"><span data-stu-id="26e4d-112">Decimal literals have no prefix.</span></span>
+
+<span data-ttu-id="26e4d-113">從 Visual Basic 2017 開始，您也可以使用底線字元， `_`，當做數字分隔符號，以提升可讀性，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="26e4d-113">Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.</span></span>
+
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
+
+<span data-ttu-id="26e4d-114">數值常值也可以包含`L`[類型字元](../../programming-guide\language-features\data-types/type-characters.md)代表`Long`資料類型，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="26e4d-114">Numeric literals can also include the `L` [type character](../../programming-guide\language-features\data-types/type-characters.md) to denote the `Long` data type, as the following example shows.</span></span>
+
+```vb
+Dim number = &H0FAC0326L
+```
+
+## <a name="programming-tips"></a><span data-ttu-id="26e4d-115">程式設計提示</span><span class="sxs-lookup"><span data-stu-id="26e4d-115">Programming tips</span></span>
+
+-   <span data-ttu-id="26e4d-116">**Interop 考量。**</span><span class="sxs-lookup"><span data-stu-id="26e4d-116">**Interop Considerations.**</span></span> <span data-ttu-id="26e4d-117">如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，`Long`在其他環境中都有不同的資料寬度 （32 位元）。</span><span class="sxs-lookup"><span data-stu-id="26e4d-117">If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that `Long` has a different data width (32 bits) in other environments.</span></span> <span data-ttu-id="26e4d-118">如果您要將 32 位元引數至這類元件，將它宣告為`Integer`而不是`Long`新的 Visual Basic 程式碼。</span><span class="sxs-lookup"><span data-stu-id="26e4d-118">If you are passing a 32-bit argument to such a component, declare it as `Integer` instead of `Long` in your new Visual Basic code.</span></span>  
   
--   **Interop 考量：** 如果您正在使用的元件不是針對 .NET Framework 所撰寫 \(例如 Automation 或 COM 物件\)，請記住，`Long` 在其他環境中會有不同的資料寬度 \(32 位元\)。  如果正在傳遞 32 位元引數到這類元件，則需將其宣告為 `Integer` 而不是新 Visual Basic 程式碼中的 `Long`。  
+-   <span data-ttu-id="26e4d-119">**擴展。**</span><span class="sxs-lookup"><span data-stu-id="26e4d-119">**Widening.**</span></span> <span data-ttu-id="26e4d-120">`Long`資料類型可擴展成`Decimal`， `Single`，或`Double`。</span><span class="sxs-lookup"><span data-stu-id="26e4d-120">The `Long` data type widens to `Decimal`, `Single`, or `Double`.</span></span> <span data-ttu-id="26e4d-121">這表示，您可以將 `Long` 轉換成這些類型的任何一種，而不會發生 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。</span><span class="sxs-lookup"><span data-stu-id="26e4d-121">This means you can convert `Long` to any one of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>  
   
-     此外，自動化不在 Windows 95、Windows 98、Windows ME，或 Windows 2000 支援 64 位元整數。  您不能在這些作業系統上，將 Visual Basic `Long` 引數傳遞到自動化元件。  
+-   <span data-ttu-id="26e4d-122">**類型字元。**</span><span class="sxs-lookup"><span data-stu-id="26e4d-122">**Type Characters.**</span></span> <span data-ttu-id="26e4d-123">將常值類型字元 `L` 附加到常值，會強制其成為 `Long` 資料類型。</span><span class="sxs-lookup"><span data-stu-id="26e4d-123">Appending the literal type character `L` to a literal forces it to the `Long` data type.</span></span> <span data-ttu-id="26e4d-124">將識別項類型字元 `&` 附加到任何識別項，會強制其成為 `Long`。</span><span class="sxs-lookup"><span data-stu-id="26e4d-124">Appending the identifier type character `&` to any identifier forces it to `Long`.</span></span>  
   
--   **擴展：** `Long` 資料型別會擴展至 `Decimal`、`Single` 或 `Double`。  這表示您可以將 `Long` 轉換成這些類型的任何一項，而不會發生 <xref:System.OverflowException?displayProperty=fullName> 錯誤。  
-  
--   **型別字元。** 將常值型別字元 `L` 附加到常值會強制其成為 `Long` 資料型別。  將識別項型別字元 `&` 附加到任何識別項，會強制其成為 `Long`。  
-  
--   **架構型別。** 在 .NET Framework 中對應的型別為 <xref:System.Int64?displayProperty=fullName> 結構。  
-  
-## 請參閱  
- <xref:System.Int64>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   <span data-ttu-id="26e4d-125">**架構類型。**</span><span class="sxs-lookup"><span data-stu-id="26e4d-125">**Framework Type.**</span></span> <span data-ttu-id="26e4d-126">在 .NET Framework 中對應的類型為 <xref:System.Int64?displayProperty=nameWithType> 結構。</span><span class="sxs-lookup"><span data-stu-id="26e4d-126">The corresponding type in the .NET Framework is the <xref:System.Int64?displayProperty=nameWithType> structure.</span></span>  
+
+## <a name="see-also"></a><span data-ttu-id="26e4d-127">請參閱</span><span class="sxs-lookup"><span data-stu-id="26e4d-127">See also</span></span>
+
+<span data-ttu-id="26e4d-128"><xref:System.Int64>[資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md) </span><span class="sxs-lookup"><span data-stu-id="26e4d-128"><xref:System.Int64> [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md) </span></span>  
+<span data-ttu-id="26e4d-129">[整數資料類型](../../../visual-basic/language-reference/data-types/integer-data-type.md) </span><span class="sxs-lookup"><span data-stu-id="26e4d-129">[Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md) </span></span>  
+<span data-ttu-id="26e4d-130">[Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md) </span><span class="sxs-lookup"><span data-stu-id="26e4d-130">[Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md) </span></span>  
+<span data-ttu-id="26e4d-131">[類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="26e4d-131">[Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
+<span data-ttu-id="26e4d-132">[轉換的摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md) </span><span class="sxs-lookup"><span data-stu-id="26e4d-132">[Conversion Summary](../../../visual-basic/language-reference/keywords/conversion-summary.md) </span></span>  
+[<span data-ttu-id="26e4d-133">有效率地使用資料類型</span><span class="sxs-lookup"><span data-stu-id="26e4d-133">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

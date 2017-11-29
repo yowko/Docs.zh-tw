@@ -1,44 +1,50 @@
 ---
-title: "如何：使用腳本建立屬性的動畫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 分鏡腳本"
-  - "分鏡腳本, 動畫"
+title: "操作說明：使用分鏡腳本建立屬性的動畫"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- animation [WPF], Storyboards
+- Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2129ea06e8c92b3912d2abdd3d1a63e651ac59e1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用腳本建立屬性的動畫
-本範例說明如何使用 <xref:System.Windows.Media.Animation.Storyboard>，將屬性顯示為動畫。  若要使用 <xref:System.Windows.Media.Animation.Storyboard> 將屬性顯示為動畫，請針對要顯示為動畫的每個屬性建立動畫，另外再建立 <xref:System.Windows.Media.Animation.Storyboard> 來包含動畫。  
+# <a name="how-to-animate-a-property-by-using-a-storyboard"></a><span data-ttu-id="e21cd-102">操作說明：使用分鏡腳本建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="e21cd-102">How to: Animate a Property by Using a Storyboard</span></span>
+<span data-ttu-id="e21cd-103">這個範例示範如何使用<xref:System.Windows.Media.Animation.Storyboard>以動畫方式顯示屬性。</span><span class="sxs-lookup"><span data-stu-id="e21cd-103">This example shows how to use a <xref:System.Windows.Media.Animation.Storyboard> to animate properties.</span></span> <span data-ttu-id="e21cd-104">若要建立屬性的動畫使用<xref:System.Windows.Media.Animation.Storyboard>，建立您想要建立動畫，並建立每一個屬性的動畫<xref:System.Windows.Media.Animation.Storyboard>包含動畫。</span><span class="sxs-lookup"><span data-stu-id="e21cd-104">To animate a property by using a <xref:System.Windows.Media.Animation.Storyboard>, create an animation for each property that you want to animate and also create a <xref:System.Windows.Media.Animation.Storyboard> to contain the animations.</span></span>  
   
- 屬性的型別會決定要使用的動畫型別。  例如，若要將接受 <xref:System.Double> 值的屬性顯示為動畫，請使用 <xref:System.Windows.Media.Animation.DoubleAnimation>。  <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 和 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> [附加屬性](GTMT)會指定要套用動畫的物件和屬性。  
+ <span data-ttu-id="e21cd-105">屬性類型會決定要使用的動畫類型。</span><span class="sxs-lookup"><span data-stu-id="e21cd-105">The type of property determines the type of animation to use.</span></span> <span data-ttu-id="e21cd-106">例如，若要建立採用屬性的動畫<xref:System.Double>值，會使用<xref:System.Windows.Media.Animation.DoubleAnimation>。</span><span class="sxs-lookup"><span data-stu-id="e21cd-106">For example, to animate a property that takes <xref:System.Double> values, use a <xref:System.Windows.Media.Animation.DoubleAnimation>.</span></span> <span data-ttu-id="e21cd-107"><xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>附加的屬性指定的物件和動畫已套用的屬性。</span><span class="sxs-lookup"><span data-stu-id="e21cd-107">The <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> and <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> attached properties specify the object and property to which the animation is applied.</span></span>  
   
- 若要在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中啟動腳本，請使用 <xref:System.Windows.Media.Animation.BeginStoryboard> 動作和 <xref:System.Windows.EventTrigger>。  當 <xref:System.Windows.EventTrigger.RoutedEvent%2A> 屬性指定的事件發生時，<xref:System.Windows.EventTrigger> 會開始進行 <xref:System.Windows.Media.Animation.BeginStoryboard> 動作。  <xref:System.Windows.Media.Animation.BeginStoryboard> 動作即會啟動 <xref:System.Windows.Media.Animation.Storyboard>。  
+ <span data-ttu-id="e21cd-108">若要以啟動分鏡腳本[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>動作和<xref:System.Windows.EventTrigger>。</span><span class="sxs-lookup"><span data-stu-id="e21cd-108">To start a storyboard in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], use a <xref:System.Windows.Media.Animation.BeginStoryboard> action and an <xref:System.Windows.EventTrigger>.</span></span> <span data-ttu-id="e21cd-109"><xref:System.Windows.EventTrigger>開始<xref:System.Windows.Media.Animation.BeginStoryboard>動作時，事件是由其<xref:System.Windows.EventTrigger.RoutedEvent%2A>屬性，就會發生。</span><span class="sxs-lookup"><span data-stu-id="e21cd-109">The <xref:System.Windows.EventTrigger> begins the <xref:System.Windows.Media.Animation.BeginStoryboard> action when the event that is specified by its <xref:System.Windows.EventTrigger.RoutedEvent%2A> property occurs.</span></span> <span data-ttu-id="e21cd-110"><xref:System.Windows.Media.Animation.BeginStoryboard>動作啟動<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="e21cd-110">The <xref:System.Windows.Media.Animation.BeginStoryboard> action starts the <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
- 下列範例會使用 <xref:System.Windows.Media.Animation.Storyboard> 物件，將兩個 <xref:System.Windows.Controls.Button> 控制項顯示為動畫。  為了讓第一個按鈕變更大小，會將其 <xref:System.Windows.FrameworkElement.Width%2A> 顯示為動畫。  為了讓第二個按鈕變更色彩，會使用 <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 屬性，設定顯示為動畫之按鈕的 <xref:System.Windows.Controls.Control.Background%2A>。  
+ <span data-ttu-id="e21cd-111">下列範例會使用<xref:System.Windows.Media.Animation.Storyboard>以動畫方式顯示兩個物件<xref:System.Windows.Controls.Button>控制項。</span><span class="sxs-lookup"><span data-stu-id="e21cd-111">The following example uses <xref:System.Windows.Media.Animation.Storyboard> objects to animate two <xref:System.Windows.Controls.Button> controls.</span></span> <span data-ttu-id="e21cd-112">若要讓第一個按鈕大小，變更其<xref:System.Windows.FrameworkElement.Width%2A>的動畫。</span><span class="sxs-lookup"><span data-stu-id="e21cd-112">To make the first button change in size, its <xref:System.Windows.FrameworkElement.Width%2A> is animated.</span></span> <span data-ttu-id="e21cd-113">若要讓變更色彩，第二個按鈕<xref:System.Windows.Media.SolidColorBrush.Color%2A>屬性<xref:System.Windows.Media.SolidColorBrush>用來設定<xref:System.Windows.Controls.Control.Background%2A>展示動畫的按鈕。</span><span class="sxs-lookup"><span data-stu-id="e21cd-113">To make the second button change color, the <xref:System.Windows.Media.SolidColorBrush.Color%2A> property of the <xref:System.Windows.Media.SolidColorBrush> is used to set the <xref:System.Windows.Controls.Control.Background%2A> of the button that is animated.</span></span>  
   
-## 範例  
- [!code-xml[AnimatePropertyStoryboards#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/StoryboardExample.xaml#1)]  
+## <a name="example"></a><span data-ttu-id="e21cd-114">範例</span><span class="sxs-lookup"><span data-stu-id="e21cd-114">Example</span></span>  
+ [!code-xaml[AnimatePropertyStoryboards#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/StoryboardExample.xaml#1)]  
   
 > [!NOTE]
->  雖然動畫可以同時將 <xref:System.Windows.FrameworkElement> 物件 \(<xref:System.Windows.Controls.Control> 或 <xref:System.Windows.Controls.Panel>\) 以及 <xref:System.Windows.Freezable> 物件 \(<xref:System.Windows.Media.Brush> 或 <xref:System.Windows.Media.Transform>\) 設為目標，但只有架構項目會有 <xref:System.Windows.FrameworkElement.Name%2A> 屬性。  若要將名稱指派給 Freezable，使其成為動畫的目標，請使用 [x:Name 指示詞](../../../../docs/framework/xaml-services/x-name-directive.md)，如前述範例所示。  
+>  <span data-ttu-id="e21cd-115">雖然動畫可鎖定目標兩者<xref:System.Windows.FrameworkElement>物件，例如<xref:System.Windows.Controls.Control>或<xref:System.Windows.Controls.Panel>，和<xref:System.Windows.Freezable>物件，例如<xref:System.Windows.Media.Brush>或<xref:System.Windows.Media.Transform>，只有架構項目的<xref:System.Windows.FrameworkElement.Name%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="e21cd-115">Although animations can target both a <xref:System.Windows.FrameworkElement> object, such as a <xref:System.Windows.Controls.Control> or <xref:System.Windows.Controls.Panel>, and a <xref:System.Windows.Freezable> object, such as a <xref:System.Windows.Media.Brush> or <xref:System.Windows.Media.Transform>, only framework elements have a <xref:System.Windows.FrameworkElement.Name%2A> property.</span></span> <span data-ttu-id="e21cd-116">若要將名稱指派給 Freezable，讓它可以成為動畫目標，請使用 [X:name 指示詞](../../../../docs/framework/xaml-services/x-name-directive.md)，如先前範例所示。</span><span class="sxs-lookup"><span data-stu-id="e21cd-116">To assign a name to a freezable so that it can be targeted by an animation, use the [x:Name Directive](../../../../docs/framework/xaml-services/x-name-directive.md), as the previous example shows.</span></span>  
   
- 如果您使用程式碼，則必須為 <xref:System.Windows.FrameworkElement> 建立 <xref:System.Windows.NameScope>，並將要顯示為動畫之物件的名稱向該 <xref:System.Windows.FrameworkElement> 註冊。  若要在程式碼中啟動動畫，請使用 <xref:System.Windows.Media.Animation.BeginStoryboard> 動作和 <xref:System.Windows.EventTrigger>。  或者，您也可以使用事件處理常式和 <xref:System.Windows.Media.Animation.Storyboard> 的 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法。  下列範例示範如何使用 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法。  
+ <span data-ttu-id="e21cd-117">如果您使用程式碼，您必須建立<xref:System.Windows.NameScope>如<xref:System.Windows.FrameworkElement>並註冊以動畫方式顯示與該物件的名稱<xref:System.Windows.FrameworkElement>。</span><span class="sxs-lookup"><span data-stu-id="e21cd-117">If you use code, you must create a <xref:System.Windows.NameScope> for a <xref:System.Windows.FrameworkElement> and register the names of the objects to animate with that <xref:System.Windows.FrameworkElement>.</span></span> <span data-ttu-id="e21cd-118">若要在程式碼中啟動動畫，請使用<xref:System.Windows.Media.Animation.BeginStoryboard>動作<xref:System.Windows.EventTrigger>。</span><span class="sxs-lookup"><span data-stu-id="e21cd-118">To start the animations in code, use a <xref:System.Windows.Media.Animation.BeginStoryboard> action with an <xref:System.Windows.EventTrigger>.</span></span> <span data-ttu-id="e21cd-119">（選擇性） 您可以使用事件處理常式和<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="e21cd-119">Optionally, you can use an event handler and the <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method of <xref:System.Windows.Media.Animation.Storyboard>.</span></span> <span data-ttu-id="e21cd-120">下列範例會示範如何使用 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="e21cd-120">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method.</span></span>  
   
  [!code-csharp[AnimatePropertyStoryboards#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatePropertyStoryboards/CSharp/StoryboardExample.cs#11)]
  [!code-vb[AnimatePropertyStoryboards#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AnimatePropertyStoryboards/VisualBasic/StoryboardExample.vb#11)]  
   
- 如需動畫和腳本的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ <span data-ttu-id="e21cd-121">如需動畫和分鏡腳本的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e21cd-121">For more information about animation and storyboards, see [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
- 如果您使用程式碼，則要將屬性顯示為動畫的方式，並不限於使用 <xref:System.Windows.Media.Animation.Storyboard> 物件。  如需詳細資訊與範例，請參閱 [不使用腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)與 [使用 AnimationClock 建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)。
+ <span data-ttu-id="e21cd-122">如果您使用程式碼，您不一定要使用<xref:System.Windows.Media.Animation.Storyboard>以動畫顯示屬性的物件。</span><span class="sxs-lookup"><span data-stu-id="e21cd-122">If you use code, you are not limited to using <xref:System.Windows.Media.Animation.Storyboard> objects in order to animate properties.</span></span> <span data-ttu-id="e21cd-123">如需詳細資訊和範例，請參閱[不使用分鏡腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)和[使用 AnimationClock 建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)。</span><span class="sxs-lookup"><span data-stu-id="e21cd-123">For more information and examples, see [Animate a Property Without Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md) and [Animate a Property by Using an AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).</span></span>

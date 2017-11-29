@@ -1,43 +1,46 @@
 ---
-title: "永久性執行個體內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "永久性執行個體內容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 540f6b6fe7795eb958afd84695865fd2e4271175
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 永久性執行個體內容
-這個範例會示範如何自訂 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 執行階段以啟用永久性執行個體內容。它會使用 SQL Server 2005 做為備份存放區 \(在此例中為 SQL Server 2005 Express\)。不過，也會提供存取自訂儲存機制的方法。  
+# <a name="durable-instance-context"></a><span data-ttu-id="1355a-102">永久性執行個體內容</span><span class="sxs-lookup"><span data-stu-id="1355a-102">Durable Instance Context</span></span>
+<span data-ttu-id="1355a-103">這個範例會示範如何自訂 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 執行階段以啟用永久性執行個體內容。</span><span class="sxs-lookup"><span data-stu-id="1355a-103">This sample demonstrates how to customize the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] runtime to enable durable instance contexts.</span></span> <span data-ttu-id="1355a-104">它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。</span><span class="sxs-lookup"><span data-stu-id="1355a-104">It uses SQL Server 2005 as its backing store (SQL Server 2005 Express in this case).</span></span> <span data-ttu-id="1355a-105">不過，也會提供存取自訂儲存機制的方法。</span><span class="sxs-lookup"><span data-stu-id="1355a-105">However, it also provides a way to access custom storage mechanisms.</span></span>  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+>  <span data-ttu-id="1355a-106">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="1355a-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- 這個範例牽涉到擴充 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的通道層和服務模型層。因此，在進入實作的詳細資訊之前，您必須先了解一些基礎概念。  
+ <span data-ttu-id="1355a-107">這個範例牽涉到擴充 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的通道層和服務模型層。</span><span class="sxs-lookup"><span data-stu-id="1355a-107">This sample involves extending both the channel layer and the service model layer of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="1355a-108">因此，在進入實作的詳細資訊之前，您必須先了解一些基礎概念。</span><span class="sxs-lookup"><span data-stu-id="1355a-108">Therefore it is necessary to understand the underlying concepts before going into the implementation details.</span></span>  
   
- 在現實生活中，您經常可以發現永久性執行個體內容的例子。例如，購物車應用程式可以在購物到一半時先暫停，改天再繼續購物。因此當我們隔天造訪購物車時，已還原原始的內容。請特別注意，當您中斷連線時，購物車應用程式 \(在伺服器上\) 不會維護購物車執行個體。而是將其狀態保存至永久性儲存媒體，並在您對還原的內容建構新執行個體時使用該狀態。因此，提供相同內容的服務執行個體與之前的執行個體不同 \(因為它們沒有相同的記憶體位址\)。  
+ <span data-ttu-id="1355a-109">在現實生活中，您經常可以發現永久性執行個體內容的例子。</span><span class="sxs-lookup"><span data-stu-id="1355a-109">Durable instance contexts can be found in the real world scenarios quite often.</span></span> <span data-ttu-id="1355a-110">例如，購物車應用程式可以在購物到一半時先暫停，改天再繼續購物。</span><span class="sxs-lookup"><span data-stu-id="1355a-110">A shopping cart application for example, has the ability to pause shopping halfway through and continue it on another day.</span></span> <span data-ttu-id="1355a-111">因此當我們隔天造訪購物車時，已還原原始的內容。</span><span class="sxs-lookup"><span data-stu-id="1355a-111">So that when we visit the shopping cart the next day, our original context is restored.</span></span> <span data-ttu-id="1355a-112">請特別注意，當您中斷連線時，購物車應用程式 (在伺服器上) 不會維護購物車執行個體。</span><span class="sxs-lookup"><span data-stu-id="1355a-112">It is important to note that the shopping cart application (on the server) does not maintain the shopping cart instance while we are disconnected.</span></span> <span data-ttu-id="1355a-113">而是將其狀態保存至永久性儲存媒體，並在您對還原的內容建構新執行個體時使用該狀態。</span><span class="sxs-lookup"><span data-stu-id="1355a-113">Instead, it persists its state into a durable storage media and uses it when constructing a new instance for the restored context.</span></span> <span data-ttu-id="1355a-114">因此，提供相同內容的服務執行個體與之前的執行個體不同 (因為它們沒有相同的記憶體位址)。</span><span class="sxs-lookup"><span data-stu-id="1355a-114">Therefore the service instance that may service for the same context is not the same as the previous instance (that is, it does not have the same memory address).</span></span>  
   
- 永久性執行個體內容可能是由小型通訊協定所產生，而這個小型通訊協定會在用戶端和服務之間交換內容識別碼。您會在用戶端上建立此內容識別碼，並傳輸至服務。建立服務執行個體時，服務執行階段會嘗試從持續性儲存體 \(Persistent Storage\) \(預設為 SQL Server 2005 資料庫\) 載入對應至此內容識別碼的持續狀態。如果沒有可用的狀態，新執行個體就會使用本身的預設狀態。服務實作會使用自訂屬性，以標示會變更服務實作狀態的作業，讓執行階段可以在呼叫作業之後儲存服務執行個體。  
+ <span data-ttu-id="1355a-115">永久性執行個體內容可能是由小型通訊協定所產生，而這個小型通訊協定會在用戶端和服務之間交換內容識別碼。</span><span class="sxs-lookup"><span data-stu-id="1355a-115">Durable instance context is made possible by a small protocol that exchanges a context ID between the client and service.</span></span> <span data-ttu-id="1355a-116">您會在用戶端上建立此內容識別碼，並傳輸至服務。</span><span class="sxs-lookup"><span data-stu-id="1355a-116">This context ID is created on the client and transmitted to the service.</span></span> <span data-ttu-id="1355a-117">建立服務執行個體時，服務執行階段會嘗試從持續性儲存體 (Persistent Storage) (預設為 SQL Server 2005 資料庫) 載入對應至此內容識別碼的持續狀態。</span><span class="sxs-lookup"><span data-stu-id="1355a-117">When the service instance is created, the service runtime tries to load the persisted state that corresponds to this context ID from a persistent storage (by default it is a SQL Server 2005 database).</span></span> <span data-ttu-id="1355a-118">如果沒有可用的狀態，新執行個體就會使用本身的預設狀態。</span><span class="sxs-lookup"><span data-stu-id="1355a-118">If no state is available the new instance has its default state.</span></span> <span data-ttu-id="1355a-119">服務實作會使用自訂屬性，以標示會變更服務實作狀態的作業，讓執行階段可以在呼叫作業之後儲存服務執行個體。</span><span class="sxs-lookup"><span data-stu-id="1355a-119">The service implementation uses a custom attribute to mark operations that change the state of the service implementation so that the runtime can save the service instance after invoking them.</span></span>  
   
- 在前面的描述中，有兩個易辨的步驟可達到目標：  
+ <span data-ttu-id="1355a-120">在前面的描述中，有兩個易辨的步驟可達到目標：</span><span class="sxs-lookup"><span data-stu-id="1355a-120">By the previous description, two steps can easily be distinguished to achieve the goal:</span></span>  
   
-1.  變更在網路上傳送的訊息，以使用內容識別碼。  
+1.  <span data-ttu-id="1355a-121">變更在網路上傳送的訊息，以使用內容識別碼。</span><span class="sxs-lookup"><span data-stu-id="1355a-121">Change the message that goes on the wire to carry the context ID.</span></span>  
   
-2.  變更服務本機行為，以實作自訂執行個體邏輯。  
+2.  <span data-ttu-id="1355a-122">變更服務本機行為，以實作自訂執行個體邏輯。</span><span class="sxs-lookup"><span data-stu-id="1355a-122">Change the service local behavior to implement custom instancing logic.</span></span>  
   
- 由於清單中的第一項會影響網路上的訊息，因此不應該將該項時做為自訂通道，並應該連結至通道層。後一項只會影響服務本機行為，因此可藉由延伸數個服務擴充點來進行實作。在接下來的章節中，將會討論這些延伸項目。  
+ <span data-ttu-id="1355a-123">由於清單中的第一項會影響網路上的訊息，因此不應該將該項時做為自訂通道，並應該連結至通道層。</span><span class="sxs-lookup"><span data-stu-id="1355a-123">Because the first one in the list affects the messages on the wire it should be implemented as a custom channel and be hooked up to the channel layer.</span></span> <span data-ttu-id="1355a-124">後一項只會影響服務本機行為，因此可藉由延伸數個服務擴充點來進行實作。</span><span class="sxs-lookup"><span data-stu-id="1355a-124">The latter only affects the service local behavior and therefore can be implemented by extending several service extensibility points.</span></span> <span data-ttu-id="1355a-125">在接下來的章節中，將會討論這些延伸項目。</span><span class="sxs-lookup"><span data-stu-id="1355a-125">In the next few sections, each of these extensions are discussed.</span></span>  
   
-## 永久性 InstanceContext 通道  
- 您應該查看的第一項為通道層延伸項目。撰寫自訂通道的第一個步驟為決定通道的通訊結構。引入新的網路通訊協定時，通道應該可以和通道堆疊中絕大多數的其他通道搭配使用。因此，該通道支援所有訊息交換模式。但是不管其通訊結構為何，通道的核心功能都是一樣的。更具體來說，從用戶端的角度，應該將內容識別碼寫出至訊息；而從服務的角度來看，應該從訊息讀取此內容識別碼，並傳遞至較上層。因此，將會針對所有永久性執行個體內容通道實作，建立充當為抽象基底類別的 `DurableInstanceContextChannelBase` 類別。這個類別包含一般狀態電腦管理函式以及兩個受保護的成員，可在訊息之間套用及讀取內容資訊。  
+## <a name="durable-instancecontext-channel"></a><span data-ttu-id="1355a-126">永久性 InstanceContext 通道</span><span class="sxs-lookup"><span data-stu-id="1355a-126">Durable InstanceContext Channel</span></span>  
+ <span data-ttu-id="1355a-127">您應該查看的第一項為通道層延伸項目。</span><span class="sxs-lookup"><span data-stu-id="1355a-127">The first thing to look at is a channel layer extension.</span></span> <span data-ttu-id="1355a-128">撰寫自訂通道的第一個步驟為決定通道的通訊結構。</span><span class="sxs-lookup"><span data-stu-id="1355a-128">The first step in writing a custom channel is to decide the communication structure of the channel.</span></span> <span data-ttu-id="1355a-129">引入新的網路通訊協定時，通道應該可以和通道堆疊中絕大多數的其他通道搭配使用。</span><span class="sxs-lookup"><span data-stu-id="1355a-129">As a new wire protocol is being introduced the channel should work with almost any other channel in the channel stack.</span></span> <span data-ttu-id="1355a-130">因此，該通道支援所有訊息交換模式。</span><span class="sxs-lookup"><span data-stu-id="1355a-130">Therefore it should support all the message exchange patterns.</span></span> <span data-ttu-id="1355a-131">但是不管其通訊結構為何，通道的核心功能都是一樣的。</span><span class="sxs-lookup"><span data-stu-id="1355a-131">However, the core functionality of the channel is the same regardless of its communication structure.</span></span> <span data-ttu-id="1355a-132">更具體來說，從用戶端的角度，應該將內容識別碼寫出至訊息；而從服務的角度來看，應該從訊息讀取此內容識別碼，並傳遞至較上層。</span><span class="sxs-lookup"><span data-stu-id="1355a-132">More specifically, from the client it should write the context ID to the messages and from the service it should read this context ID from the messages and pass it to the upper levels.</span></span> <span data-ttu-id="1355a-133">因此，將會針對所有永久性執行個體內容通道實作，建立充當為抽象基底類別的 `DurableInstanceContextChannelBase` 類別。</span><span class="sxs-lookup"><span data-stu-id="1355a-133">Because of that, a `DurableInstanceContextChannelBase` class is created that acts as the abstract base class for all durable instance context channel implementations.</span></span> <span data-ttu-id="1355a-134">這個類別包含一般狀態電腦管理函式以及兩個受保護的成員，可在訊息之間套用及讀取內容資訊。</span><span class="sxs-lookup"><span data-stu-id="1355a-134">This class contains the common state machine management functions and two protected members to apply and read the context information to and from messages.</span></span>  
   
 ```  
 class DurableInstanceContextChannelBase  
@@ -54,13 +57,13 @@ class DurableInstanceContextChannelBase
 }  
 ```  
   
- 這兩個方法會使用 `IContextManager` 實作，以在訊息之間寫入和讀取內容識別碼 \(`IContextManager` 是一種自訂介面，可用來定義所有內容管理員的合約\)。通道可以在自訂 SOAP 標頭或 HTTP Cookie 標頭中加入內容識別碼。每個內容管理員實作都繼承自 `ContextManagerBase` 類別，而這個類別則包含用於所有內容管理員的一般功能。您可以使用此類別中的 `GetContextId` 方法，從用戶端產生內容識別碼。第一次產生內容識別碼時，方法會將此內容識別碼儲存至文字檔，而這個文字檔的名稱則是由遠端端點位址 \(將使用 @ 字元取代典型 URI 中無效的檔案名稱字元\) 所建構。  
+ <span data-ttu-id="1355a-135">這兩個方法會使用 `IContextManager` 實作，以在訊息之間寫入和讀取內容識別碼 </span><span class="sxs-lookup"><span data-stu-id="1355a-135">These two methods make use of `IContextManager` implementations to write and read the context ID to or from the message.</span></span> <span data-ttu-id="1355a-136">(`IContextManager` 是一種自訂介面，可用來定義所有內容管理員的合約)。通道可以在自訂 SOAP 標頭或 HTTP Cookie 標頭中加入內容識別碼。</span><span class="sxs-lookup"><span data-stu-id="1355a-136">(`IContextManager` is a custom interface used to define the contract for all context managers.) The channel can either include the context ID in a custom SOAP header or in a HTTP cookie header.</span></span> <span data-ttu-id="1355a-137">每個內容管理員實作都繼承自 `ContextManagerBase` 類別，而這個類別則包含用於所有內容管理員的一般功能。</span><span class="sxs-lookup"><span data-stu-id="1355a-137">Each context manager implementation inherits from the `ContextManagerBase` class that contains the common functionality for all context managers.</span></span> <span data-ttu-id="1355a-138">您可以使用此類別中的 `GetContextId` 方法，從用戶端產生內容識別碼。</span><span class="sxs-lookup"><span data-stu-id="1355a-138">The `GetContextId` method in this class is used to originate the context ID from the client.</span></span> <span data-ttu-id="1355a-139">第一次產生內容識別碼時，方法會將此內容識別碼儲存至文字檔，而這個文字檔的名稱則是由遠端端點位址 (將使用 @ 字元取代典型 URI 中無效的檔案名稱字元) 所建構。</span><span class="sxs-lookup"><span data-stu-id="1355a-139">When a context ID is originated for the first time, this method saves it into a text file whose name is constructed by the remote endpoint address (the invalid file name characters in the typical URIs are replaced with @ characters).</span></span>  
   
- 之後相同的遠端端點需要此內容識別碼時，就會檢查是否有適當的檔案。如果有，就會讀取內容識別碼並傳回。否則會傳回新產生的內容識別碼，並儲存至檔案。使用預設組態時，這些檔案會放置在 ContextStore 目錄中，而這個目錄則是在目前使用者的暫存目錄中。不過，您可以使用繫結項目來設定這個位置。  
+ <span data-ttu-id="1355a-140">之後相同的遠端端點需要此內容識別碼時，就會檢查是否有適當的檔案。</span><span class="sxs-lookup"><span data-stu-id="1355a-140">Later when the context ID is required for the same remote endpoint, it checks whether an appropriate file exists.</span></span> <span data-ttu-id="1355a-141">如果有，就會讀取內容識別碼並傳回。</span><span class="sxs-lookup"><span data-stu-id="1355a-141">If it does, it reads the context ID and returns.</span></span> <span data-ttu-id="1355a-142">否則會傳回新產生的內容識別碼，並儲存至檔案。</span><span class="sxs-lookup"><span data-stu-id="1355a-142">Otherwise it returns a newly generated context ID and saves it to a file.</span></span> <span data-ttu-id="1355a-143">使用預設組態時，這些檔案會放置在 ContextStore 目錄中，而這個目錄則是在目前使用者的暫存目錄中。</span><span class="sxs-lookup"><span data-stu-id="1355a-143">With the default configuration, these files are placed in a directory called ContextStore, which resides in the current user’s temp directory.</span></span> <span data-ttu-id="1355a-144">不過，您可以使用繫結項目來設定這個位置。</span><span class="sxs-lookup"><span data-stu-id="1355a-144">However this location is configurable using the binding element.</span></span>  
   
- 您可以設定傳輸內容識別碼的機制。這個內容識別碼可以寫入 HTTP Cookie 標頭或自訂 SOAP 標頭。自訂 SOAP 標頭方法可讓您使用此通訊協定搭配非 HTTP 通訊協定 \(例如，TCP 或具名管道\)。有兩個可實作這兩個選項的類別，`MessageHeaderContextManager` 和 `HttpCookieContextManager`。  
+ <span data-ttu-id="1355a-145">您可以設定傳輸內容識別碼的機制。</span><span class="sxs-lookup"><span data-stu-id="1355a-145">The mechanism used to transport the context ID is configurable.</span></span> <span data-ttu-id="1355a-146">這個內容識別碼可以寫入 HTTP Cookie 標頭或自訂 SOAP 標頭。</span><span class="sxs-lookup"><span data-stu-id="1355a-146">It could be either written to the HTTP cookie header or to a custom SOAP header.</span></span> <span data-ttu-id="1355a-147">自訂 SOAP 標頭方法可讓您使用此通訊協定搭配非 HTTP 通訊協定 (例如，TCP 或具名管道)。</span><span class="sxs-lookup"><span data-stu-id="1355a-147">The custom SOAP header approach makes it possible to use this protocol with non-HTTP protocols (for example, TCP or Named Pipes).</span></span> <span data-ttu-id="1355a-148">有兩個可實作這兩個選項的類別，`MessageHeaderContextManager` 和 `HttpCookieContextManager`。</span><span class="sxs-lookup"><span data-stu-id="1355a-148">There are two classes, namely `MessageHeaderContextManager` and `HttpCookieContextManager`, which implement these two options.</span></span>  
   
- 這兩個類別會將內容識別碼適當地寫入訊息。例如，`MessageHeaderContextManager` 類別會將內容識別碼寫入 `WriteContext` 方法的 SOAP 標頭。  
+ <span data-ttu-id="1355a-149">這兩個類別會將內容識別碼適當地寫入訊息。</span><span class="sxs-lookup"><span data-stu-id="1355a-149">Both of them write the context ID to the message appropriately.</span></span> <span data-ttu-id="1355a-150">例如，`MessageHeaderContextManager` 類別會將內容識別碼寫入 `WriteContext` 方法的 SOAP 標頭。</span><span class="sxs-lookup"><span data-stu-id="1355a-150">For example, the `MessageHeaderContextManager` class writes it to a SOAP header in the `WriteContext` method.</span></span>  
   
 ```  
 public override void WriteContext(Message message)  
@@ -77,7 +80,7 @@ public override void WriteContext(Message message)
 }   
 ```  
   
- `DurableInstanceContextChannelBase` 類別中的 `ApplyContext` 和 `ReadContextId` 方法，可以分別叫用 `IContextManager.ReadContext` 和 `IContextManager.WriteContext`。不過，不是由 `DurableInstanceContextChannelBase` 類別直接建立這些內容管理員。而是會使用 `ContextManagerFactory` 類別來建立。  
+ <span data-ttu-id="1355a-151">`ApplyContext` 類別中的 `ReadContextId` 和 `DurableInstanceContextChannelBase` 方法，可以分別叫用 `IContextManager.ReadContext` 和 `IContextManager.WriteContext`。</span><span class="sxs-lookup"><span data-stu-id="1355a-151">Both the `ApplyContext` and `ReadContextId` methods in the `DurableInstanceContextChannelBase` class invoke the `IContextManager.ReadContext` and `IContextManager.WriteContext`, respectively.</span></span> <span data-ttu-id="1355a-152">不過，不是由 `DurableInstanceContextChannelBase` 類別直接建立這些內容管理員。</span><span class="sxs-lookup"><span data-stu-id="1355a-152">However, these context managers are not directly created by the `DurableInstanceContextChannelBase` class.</span></span> <span data-ttu-id="1355a-153">而是會使用 `ContextManagerFactory` 類別來建立。</span><span class="sxs-lookup"><span data-stu-id="1355a-153">Instead it uses the `ContextManagerFactory` class to do that job.</span></span>  
   
 ```  
 IContextManager contextManager =  
@@ -86,15 +89,15 @@ IContextManager contextManager =
                 this.endpointAddress);  
 ```  
   
- 傳送通道時即可叫用 `ApplyContext` 方法。然後將內容識別碼插入傳出訊息。接收通道便會叫用 `ReadContextId` 方法。這個方法會確定可在傳入訊息中使用內容識別碼，並將該內容識別碼新增至 `Message` 類別的 `Properties` 集合中。也會在無法讀取內容識別碼時擲回 `CommunicationException`，因而導致中止通道。  
+ <span data-ttu-id="1355a-154">傳送通道時即可叫用 `ApplyContext` 方法。</span><span class="sxs-lookup"><span data-stu-id="1355a-154">The `ApplyContext` method is invoked by the sending channels.</span></span> <span data-ttu-id="1355a-155">然後將內容識別碼插入傳出訊息。</span><span class="sxs-lookup"><span data-stu-id="1355a-155">It injects the context ID to the outgoing messages.</span></span> <span data-ttu-id="1355a-156">接收通道便會叫用 `ReadContextId` 方法。</span><span class="sxs-lookup"><span data-stu-id="1355a-156">The `ReadContextId` method is invoked by the receiving channels.</span></span> <span data-ttu-id="1355a-157">這個方法會確定可在傳入訊息中使用內容識別碼，並將該內容識別碼新增至 `Properties` 類別的 `Message` 集合中。</span><span class="sxs-lookup"><span data-stu-id="1355a-157">This method ensures that the context ID is available in the incoming messages and adds it to the `Properties` collection of the `Message` class.</span></span> <span data-ttu-id="1355a-158">也會在無法讀取內容識別碼時擲回 `CommunicationException`，因而導致中止通道。</span><span class="sxs-lookup"><span data-stu-id="1355a-158">It also throws a `CommunicationException` in case of a failure to read the context ID and thus causes the channel to be aborted.</span></span>  
   
 ```  
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);  
 ```  
   
- 在繼續處理之前，您需要已了解如何使用 `Message` 類別中的 `Properties` 集合。一般來說，在通道層中將資料從較低層傳遞至較高層時，就會使用此 `Properties` 集合。如此一來，就可以使用一致的方法對較高層提供需要的資料，而不用在意通訊協定詳細資料。換句話說，通道層可以將內容識別碼當做 SOAP 標頭或 HTTP Cookie 標頭而傳送和接收。但這些較高層不需要知道這些細節，因為通道層會在 `Properties` 擊盒中提供此資訊。  
+ <span data-ttu-id="1355a-159">在繼續處理之前，您需要已了解如何使用 `Properties` 類別中的 `Message` 集合。</span><span class="sxs-lookup"><span data-stu-id="1355a-159">Before proceeding, it is important to understand the usage of the `Properties` collection in the `Message` class.</span></span> <span data-ttu-id="1355a-160">一般來說，在通道層中將資料從較低層傳遞至較高層時，就會使用此 `Properties` 集合。</span><span class="sxs-lookup"><span data-stu-id="1355a-160">Typically, this `Properties` collection is used when passing data from lower to the upper levels from the channel layer.</span></span> <span data-ttu-id="1355a-161">如此一來，就可以使用一致的方法對較高層提供需要的資料，而不用在意通訊協定詳細資料。</span><span class="sxs-lookup"><span data-stu-id="1355a-161">This way the desired data can be provided to the upper levels in a consistent manner regardless of the protocol details.</span></span> <span data-ttu-id="1355a-162">換句話說，通道層可以將內容識別碼當做 SOAP 標頭或 HTTP Cookie 標頭而傳送和接收。</span><span class="sxs-lookup"><span data-stu-id="1355a-162">In other words, the channel layer can send and receive the context ID either as a SOAP header or a HTTP cookie header.</span></span> <span data-ttu-id="1355a-163">但這些較高層不需要知道這些細節，因為通道層會在 `Properties` 擊盒中提供此資訊。</span><span class="sxs-lookup"><span data-stu-id="1355a-163">But it is not necessary for the upper levels to know about these details because the channel layer makes this information available in the `Properties` collection.</span></span>  
   
- 現在使用 `DurableInstanceContextChannelBase` 類別時，就必須實作將這十個必要的介面放置在適當的位置 \(IOutputChannel、IInputChannel、IOutputSessionChannel、IInputSessionChannel、IRequestChannel、IReplyChannel、IRequestSessionChannel、IReplySessionChannel、IDuplexChannel、IDuplexSessionChannel\)。這些介面類似於每個可用的訊息交換模式 \(資料包、單工、雙工與其工作階段變數\)。這些實作都會繼承先前所述的基底類別，並會適當地呼叫 `ApplyContext` 和 `ReadContexId`。例如實作 IOutputChannel 介面的 `DurableInstanceContextOutputChannel`，它會從傳送訊息的每個方法中呼叫 `ApplyContext` 方法。  
+ <span data-ttu-id="1355a-164">現在使用 `DurableInstanceContextChannelBase` 類別時，就必須實作將這十個必要的介面放置在適當的位置 (IOutputChannel、IInputChannel、IOutputSessionChannel、IInputSessionChannel、IRequestChannel、IReplyChannel、IRequestSessionChannel、IReplySessionChannel、IDuplexChannel、IDuplexSessionChannel)。</span><span class="sxs-lookup"><span data-stu-id="1355a-164">Now with the `DurableInstanceContextChannelBase` class in place all ten of the necessary interfaces (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) must be implemented.</span></span> <span data-ttu-id="1355a-165">這些介面類似於每個可用的訊息交換模式 (資料包、單工、雙工與其工作階段變數)。</span><span class="sxs-lookup"><span data-stu-id="1355a-165">They resemble every available message exchange pattern (datagram, simplex, duplex and their sessionful variants).</span></span> <span data-ttu-id="1355a-166">這些實作都會繼承先前所述的基底類別，並會適當地呼叫 `ApplyContext` 和 `ReadContexId`。</span><span class="sxs-lookup"><span data-stu-id="1355a-166">Each of these implementations inherit the base class previously described and calls `ApplyContext` and `ReadContexId` appropriately.</span></span> <span data-ttu-id="1355a-167">例如實作 IOutputChannel 介面的 `DurableInstanceContextOutputChannel`，它會從傳送訊息的每個方法中呼叫 `ApplyContext` 方法。</span><span class="sxs-lookup"><span data-stu-id="1355a-167">For example, `DurableInstanceContextOutputChannel` - which implements the IOutputChannel interface - calls the `ApplyContext` method from each method that sends the messages.</span></span>  
   
 ```  
 public void Send(Message message, TimeSpan timeout)  
@@ -105,7 +108,7 @@ public void Send(Message message, TimeSpan timeout)
 }   
 ```  
   
- 另一方面，`DurableInstanceContextInputChannel`，它會實作 `IInputChannel` 介面，並在接收訊息的每個方法中呼叫 `ReadContextId` 方法。  
+ <span data-ttu-id="1355a-168">另一方面，`DurableInstanceContextInputChannel`，它會實作 `IInputChannel` 介面，並在接收訊息的每個方法中呼叫 `ReadContextId` 方法。</span><span class="sxs-lookup"><span data-stu-id="1355a-168">On the other hand, `DurableInstanceContextInputChannel` - which implements the `IInputChannel` interface - calls the `ReadContextId` method in each method which receives the messages.</span></span>  
   
 ```  
 public Message Receive(TimeSpan timeout)  
@@ -116,7 +119,7 @@ public Message Receive(TimeSpan timeout)
 }  
 ```  
   
- 此外，這些通道實作會將方法叫用委派給通道堆疊中位置更低的通道。不過，工作階段變數會有一些基本邏輯，確定針對導致建立工作階段的第一個訊息而言，會傳送內容識別碼而且此內容識別碼為唯讀。  
+ <span data-ttu-id="1355a-169">此外，這些通道實作會將方法叫用委派給通道堆疊中位置更低的通道。</span><span class="sxs-lookup"><span data-stu-id="1355a-169">Apart from this, these channel implementations delegate the method invocations to the channel below them in the channel stack.</span></span> <span data-ttu-id="1355a-170">不過，工作階段變數會有一些基本邏輯，確定針對導致建立工作階段的第一個訊息而言，會傳送內容識別碼而且此內容識別碼為唯讀。</span><span class="sxs-lookup"><span data-stu-id="1355a-170">However, sessionful variants have a basic logic to make sure that the context ID is sent and is read only for the first message that causes the session to be created.</span></span>  
   
 ```  
 if (isFirstMessage)  
@@ -127,10 +130,10 @@ if (isFirstMessage)
 }  
 ```  
   
- `DurableInstanceContextBindingElement` 類別和 `DurableInstanceContextBindingElementSection` 類別，接著會將這些通道實作適當地加入 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道執行階段。如需繫結項目和繫結項目區段的詳細資訊，請參閱 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) 通道範例文件。  
+ <span data-ttu-id="1355a-171">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 類別和 `DurableInstanceContextBindingElement` 類別，接著會將這些通道實作適當地加入 `DurableInstanceContextBindingElementSection` 通道執行階段。</span><span class="sxs-lookup"><span data-stu-id="1355a-171">These channel implementations are then added to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel runtime by the `DurableInstanceContextBindingElement` class and `DurableInstanceContextBindingElementSection` class appropriately.</span></span> <span data-ttu-id="1355a-172">請參閱[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道繫結項目和繫結項目區段的更多詳細的範例文件。</span><span class="sxs-lookup"><span data-stu-id="1355a-172">See the [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel sample documentation for more details about binding elements and binding element sections.</span></span>  
   
-## 服務模型層延伸項目  
- 現在內容識別碼已周遊至各個通道層，您就可以實作服務行為以自訂執行個體化 \(Instantiation\)。在此範例中，可以使用存放管理員，在持續存放區中載入及儲存狀態。如先前所述，這個範例提供使用 SQL Server 2005 做為其備份存放區的存放管理員。不過，您也可以將自訂存放機制新增至此延伸項目。若要這樣做，將會宣告公用介面，而所有存放管理員都必須實作此公用介面。  
+## <a name="service-model-layer-extensions"></a><span data-ttu-id="1355a-173">服務模型層延伸項目</span><span class="sxs-lookup"><span data-stu-id="1355a-173">Service Model Layer Extensions</span></span>  
+ <span data-ttu-id="1355a-174">現在內容識別碼已周遊至各個通道層，您就可以實作服務行為以自訂執行個體化 (Instantiation)。</span><span class="sxs-lookup"><span data-stu-id="1355a-174">Now that the context ID has traveled through the channel layer, the service behavior can be implemented to customize the instantiation.</span></span> <span data-ttu-id="1355a-175">在此範例中，可以使用存放管理員，在持續存放區中載入及儲存狀態。</span><span class="sxs-lookup"><span data-stu-id="1355a-175">In this sample, a storage manager is used to load and save state from or to the persistent store.</span></span> <span data-ttu-id="1355a-176">如先前所述，這個範例提供使用 SQL Server 2005 做為其備份存放區的存放管理員。</span><span class="sxs-lookup"><span data-stu-id="1355a-176">As explained previously, this sample provides a storage manager that uses SQL Server 2005 as its backing store.</span></span> <span data-ttu-id="1355a-177">不過，您也可以將自訂存放機制新增至此延伸項目。</span><span class="sxs-lookup"><span data-stu-id="1355a-177">However, it is also possible to add custom storage mechanisms to this extension.</span></span> <span data-ttu-id="1355a-178">若要這樣做，將會宣告公用介面，而所有存放管理員都必須實作此公用介面。</span><span class="sxs-lookup"><span data-stu-id="1355a-178">To do that a public interface is declared, which must be implemented by all storage managers.</span></span>  
   
 ```  
 public interface IStorageManager  
@@ -140,7 +143,7 @@ public interface IStorageManager
 }  
 ```  
   
- `SqlServerStorageManager` 類別包含預設 `IStorageManager` 實作。在其 `SaveInstance` 方法中，將會使用 XmlSerializer 序列化提供的物件，並且將此物件儲存至 SQL Server 資料庫。  
+ <span data-ttu-id="1355a-179">`SqlServerStorageManager` 類別包含預設 `IStorageManager` 實作。</span><span class="sxs-lookup"><span data-stu-id="1355a-179">The `SqlServerStorageManager` class contains the default `IStorageManager` implementation.</span></span> <span data-ttu-id="1355a-180">在其 `SaveInstance` 方法中，將會使用 XmlSerializer 序列化提供的物件，並且將此物件儲存至 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="1355a-180">In its `SaveInstance` method the given object is serialized using the XmlSerializer and is saved to the SQL Server database.</span></span>  
   
 ```  
 XmlSerializer serializer = new XmlSerializer(state.GetType());  
@@ -175,7 +178,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }  
 ```  
   
- 在 `GetInstance` 方法中，將會針對提供的內容識別碼讀取序列化的資料，而從中建構的物件則會傳回呼叫者。  
+ <span data-ttu-id="1355a-181">在 `GetInstance` 方法中，將會針對提供的內容識別碼讀取序列化的資料，而從中建構的物件則會傳回呼叫者。</span><span class="sxs-lookup"><span data-stu-id="1355a-181">In the `GetInstance` method the serialized data is read for a given context ID and the object constructed from it is returned to the caller.</span></span>  
   
 ```  
 object data;  
@@ -202,7 +205,7 @@ if (data != null)
 }  
 ```  
   
- 存放管理員的使用者不應該直接執行個體化這些存放管理員。使用者會使用擷取自存放管理員建立詳細資料的 `StorageManagerFactory` 類別。這個類別包含 `GetStorageManager` 這個靜態成員，此成員會建立提供之存放管理員型別的執行個體。如果型別參數為 `null`，這個方法就會建立預設 `SqlServerStorageManager` 類別的執行個體，並傳回之。也會驗證提供的型別，以確定會實作 `IStorageManager` 介面。  
+ <span data-ttu-id="1355a-182">存放管理員的使用者不應該直接執行個體化這些存放管理員。</span><span class="sxs-lookup"><span data-stu-id="1355a-182">Users of these storage managers are not supposed to instantiate them directly.</span></span> <span data-ttu-id="1355a-183">使用者會使用擷取自存放管理員建立詳細資料的 `StorageManagerFactory` 類別。</span><span class="sxs-lookup"><span data-stu-id="1355a-183">They use the `StorageManagerFactory` class, which abstracts from the storage manager creation details.</span></span> <span data-ttu-id="1355a-184">這個類別包含 `GetStorageManager` 這個靜態成員，此成員會建立提供之存放管理員型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="1355a-184">This class has one static member, `GetStorageManager`, which creates an instance of a given storage manager type.</span></span> <span data-ttu-id="1355a-185">如果型別參數為 `null`，這個方法就會建立預設 `SqlServerStorageManager` 類別的執行個體，並傳回之。</span><span class="sxs-lookup"><span data-stu-id="1355a-185">If the type parameter is `null`, this method creates an instance of the default `SqlServerStorageManager` class and returns it.</span></span> <span data-ttu-id="1355a-186">也會驗證提供的型別，以確定會實作 `IStorageManager` 介面。</span><span class="sxs-lookup"><span data-stu-id="1355a-186">It also validates the given type to make sure that it implements the `IStorageManager` interface.</span></span>  
   
 ```  
 public static IStorageManager GetStorageManager(Type storageManagerType)  
@@ -234,19 +237,19 @@ else
 }   
 ```  
   
- 現在已實作從持續性儲存體 \(Persistent Storage\) 中讀取及寫入執行個體的必要基礎結構。接著便需要採取變更服務行為的必要步驟。  
+ <span data-ttu-id="1355a-187">現在已實作從持續性儲存體 (Persistent Storage) 中讀取及寫入執行個體的必要基礎結構。</span><span class="sxs-lookup"><span data-stu-id="1355a-187">The necessary infrastructure to read and write instances from the persistent storage is implemented.</span></span> <span data-ttu-id="1355a-188">接著便需要採取變更服務行為的必要步驟。</span><span class="sxs-lookup"><span data-stu-id="1355a-188">Now the necessary steps to change the service behavior have to be taken.</span></span>  
   
- 此處理序的第一個步驟為儲存內容識別碼，而這個內容識別碼會從通道層周遊至目前的 InstanceContext。InstanceContext 是一種執行階段元件，並充當為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 發送器和服務執行個體之間的連結。可以用於對服務執行個體提供額外的狀態和行為。而這是很重要的一點，因為在工作階段通訊中，只有第一個訊息會一起傳送內容識別碼。  
+ <span data-ttu-id="1355a-189">此處理序的第一個步驟為儲存內容識別碼，而這個內容識別碼會從通道層周遊至目前的 InstanceContext。</span><span class="sxs-lookup"><span data-stu-id="1355a-189">As the first step of this process we have to save the context ID, which came through the channel layer to the current InstanceContext.</span></span> <span data-ttu-id="1355a-190">InstanceContext 是一種執行階段元件，並充當為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 發送器和服務執行個體之間的連結。</span><span class="sxs-lookup"><span data-stu-id="1355a-190">InstanceContext is a runtime component that acts as the link between the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dispatcher and the service instance.</span></span> <span data-ttu-id="1355a-191">可以用於對服務執行個體提供額外的狀態和行為。</span><span class="sxs-lookup"><span data-stu-id="1355a-191">It can be used to provide additional state and behavior to the service instance.</span></span> <span data-ttu-id="1355a-192">而這是很重要的一點，因為在工作階段通訊中，只有第一個訊息會一起傳送內容識別碼。</span><span class="sxs-lookup"><span data-stu-id="1355a-192">This is essential because in sessionful communication the context ID is sent only with the first message.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可讓您使用其可擴充物件模式來新增新狀態和行為，進而擴充 InstanceContext 執行階段元件。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用可擴充物件模式，可以搭配新功能來擴充現有執行階段類別，或新增狀態功能到物件。可擴充物件模式中有三個介面：IExtensibleObject\<T\>、IExtension\<T\> 和 IExtensionCollection\<T\>。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="1355a-193"> 可讓您使用其可擴充物件模式來新增新狀態和行為，進而擴充 InstanceContext 執行階段元件。</span><span class="sxs-lookup"><span data-stu-id="1355a-193"> allows extending its InstanceContext runtime component by adding a new state and behavior using its extensible object pattern.</span></span> <span data-ttu-id="1355a-194">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用可擴充物件模式，可以搭配新功能來擴充現有執行階段類別，或新增狀態功能到物件。</span><span class="sxs-lookup"><span data-stu-id="1355a-194">The extensible object pattern is used in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to either extend existing runtime classes with new functionality or to add new state features to an object.</span></span> <span data-ttu-id="1355a-195">IExtensibleObject 可擴充物件模式中有三種介面\<T >，IExtension\<T >，和 Iextensioncollection<t>。\<T >:</span><span class="sxs-lookup"><span data-stu-id="1355a-195">There are three interfaces in the extensible object pattern - IExtensibleObject\<T>, IExtension\<T>, and IExtensionCollection\<T>:</span></span>  
   
--   IExtensibleObject\<T\> 介面是由物件實作，而這個物件允許使用自訂其功能的延伸項目。  
+-   <span data-ttu-id="1355a-196">IExtensibleObject\<T > 介面由允許自訂其功能的延伸模組的物件實作。</span><span class="sxs-lookup"><span data-stu-id="1355a-196">The IExtensibleObject\<T> interface is implemented by objects that allow extensions that customize their functionality.</span></span>  
   
--   IExtension\<T\> 介面是由本身為型別 T 的類別延伸項目的物件所實作。  
+-   <span data-ttu-id="1355a-197">IExtension\<T > 介面由物件實作的擴充功能的類別為類型 t。</span><span class="sxs-lookup"><span data-stu-id="1355a-197">The IExtension\<T> interface is implemented by objects that are extensions of classes of type T.</span></span>  
   
--   IExtensionCollection\<T\> 介面則是 IExtensions 集合，可允許依型別擷取 IExtensions。  
+-   <span data-ttu-id="1355a-198">Iextensioncollection<t>\<T > 介面是 IExtensions 集合，可允許擷取 IExtensions 依其型別。</span><span class="sxs-lookup"><span data-stu-id="1355a-198">The IExtensionCollection\<T> interface is a collection of IExtensions that allows for retrieving IExtensions by their type.</span></span>  
   
- 因此，您應該建立 InstanceContextExtension 類別，並實作 IExtension 介面及定義必要的狀態以儲存內容識別碼。這個類別也會提供一種狀態，保留正在使用的存放管理員。一旦儲存新狀態，就無法進行修改。所以您應該在建構執行個體時提供狀態，並將該狀態儲存至執行個體，並只能透過唯讀屬性來進行存取。  
+ <span data-ttu-id="1355a-199">因此，您應該建立 InstanceContextExtension 類別，並實作 IExtension 介面及定義必要的狀態以儲存內容識別碼。</span><span class="sxs-lookup"><span data-stu-id="1355a-199">Therefore an InstanceContextExtension class should be created that implements the IExtension interface and defines the required state to save the context ID.</span></span> <span data-ttu-id="1355a-200">這個類別也會提供一種狀態，保留正在使用的存放管理員。</span><span class="sxs-lookup"><span data-stu-id="1355a-200">This class also provides the state to hold the storage manager being used.</span></span> <span data-ttu-id="1355a-201">一旦儲存新狀態，就無法進行修改。</span><span class="sxs-lookup"><span data-stu-id="1355a-201">Once the new state is saved, it should not be possible to modify it.</span></span> <span data-ttu-id="1355a-202">所以您應該在建構執行個體時提供狀態，並將該狀態儲存至執行個體，並只能透過唯讀屬性來進行存取。</span><span class="sxs-lookup"><span data-stu-id="1355a-202">Therefore the state is provided and saved to the instance at the time it is being constructed and then only accessible using read-only properties.</span></span>  
   
 ```  
 // Constructor  
@@ -269,7 +272,7 @@ public IStorageManager StorageManager
 }   
 ```  
   
- InstanceContextInitializer 類別會實作 IInstanceContextInitializer 介面，並將執行個體內容延伸項目新增至已建構之 InstanceContext 的 Extensions 集合中。  
+ <span data-ttu-id="1355a-203">InstanceContextInitializer 類別會實作 IInstanceContextInitializer 介面，並將執行個體內容延伸項目新增至已建構之 InstanceContext 的 Extensions 集合中。</span><span class="sxs-lookup"><span data-stu-id="1355a-203">The InstanceContextInitializer class implements the IInstanceContextInitializer interface and adds the instance context extension to the Extensions collection of the InstanceContext being constructed.</span></span>  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  
@@ -284,9 +287,9 @@ public void Initialize(InstanceContext instanceContext, Message message)
 }  
 ```  
   
- 如先前所述，您會從 `Message` 類別的 `Properties` 集合中讀取內容識別碼，並將它傳遞至延伸類別的建構函式。這樣便可示範如何使用一致的方法，在各層之間交換資訊。  
+ <span data-ttu-id="1355a-204">如先前所述，您會從 `Properties` 類別的 `Message` 集合中讀取內容識別碼，並將它傳遞至延伸類別的建構函式。</span><span class="sxs-lookup"><span data-stu-id="1355a-204">As described earlier the context ID is read from the `Properties` collection of the `Message` class and passed to the constructor of the extension class.</span></span> <span data-ttu-id="1355a-205">這樣便可示範如何使用一致的方法，在各層之間交換資訊。</span><span class="sxs-lookup"><span data-stu-id="1355a-205">This demonstrates how information can be exchanged between the layers in a consistent manner.</span></span>  
   
- 下一個重要的步驟為覆寫服務執行個體的建立處理序。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允許實作自訂的執行個體化行為，並使用 IInstanceProvider 介面將這些行為連結至執行階段。將實作新 `InstanceProvider` 類別以執行該工作。在建構函式中，將會接受預期來自執行個體提供者的服務類型。稍後將使用此服務類型來建立新的執行個體。在 `GetInstance` 實作中，將會建立用來尋找持續性執行個體的存放管理員執行個體。如果傳回 `null`，則會執行個體化服務類型的新執行個體，並傳回呼叫者。  
+ <span data-ttu-id="1355a-206">下一個重要的步驟為覆寫服務執行個體的建立處理序。</span><span class="sxs-lookup"><span data-stu-id="1355a-206">The next important step is overriding the service instance creation process.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="1355a-207"> 允許實作自訂的執行個體化行為，並使用 IInstanceProvider 介面將這些行為連結至執行階段。</span><span class="sxs-lookup"><span data-stu-id="1355a-207"> allows implementing custom instantiation behaviors and hooking them up to the runtime using the IInstanceProvider interface.</span></span> <span data-ttu-id="1355a-208">將實作新 `InstanceProvider` 類別以執行該工作。</span><span class="sxs-lookup"><span data-stu-id="1355a-208">The new `InstanceProvider` class is implemented to do that job.</span></span> <span data-ttu-id="1355a-209">在建構函式中，將會接受預期來自執行個體提供者的服務類型。</span><span class="sxs-lookup"><span data-stu-id="1355a-209">In the constructor the service type expected from the instance provider is accepted.</span></span> <span data-ttu-id="1355a-210">稍後將使用此服務類型來建立新的執行個體。</span><span class="sxs-lookup"><span data-stu-id="1355a-210">Later this is used to create new instances.</span></span> <span data-ttu-id="1355a-211">在 `GetInstance` 實作中，將會建立用來尋找持續性執行個體的存放管理員執行個體。</span><span class="sxs-lookup"><span data-stu-id="1355a-211">In the `GetInstance` implementation an instance of a storage manager is created looking for a persisted instance.</span></span> <span data-ttu-id="1355a-212">如果傳回 `null`，則會執行個體化服務類型的新執行個體，並傳回呼叫者。</span><span class="sxs-lookup"><span data-stu-id="1355a-212">If it returns `null` then a new instance of the service type is instantiated and returned to the caller.</span></span>  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -310,11 +313,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }  
 ```  
   
- 下一個重要的步驟為將 `InstanceContextExtension`、`InstanceContextInitializer` 和 `InstanceProvider` 類別安裝至服務模型執行階段。您可以使用自訂屬性以標示服務實作類別，便可安裝行為。`DurableInstanceContextAttribute` 中包含這個屬性的實作，並且會實作 `IServiceBehavior` 介面以擴充整個服務執行階段。  
+ <span data-ttu-id="1355a-213">下一個重要的步驟為將 `InstanceContextExtension`、`InstanceContextInitializer` 和 `InstanceProvider` 類別安裝至服務模型執行階段。</span><span class="sxs-lookup"><span data-stu-id="1355a-213">The next important step is to install the `InstanceContextExtension`, `InstanceContextInitializer` and `InstanceProvider` classes into the service model runtime.</span></span> <span data-ttu-id="1355a-214">您可以使用自訂屬性以標示服務實作類別，便可安裝行為。</span><span class="sxs-lookup"><span data-stu-id="1355a-214">A custom attribute could be used to mark the service implementation classes to install the behavior.</span></span> <span data-ttu-id="1355a-215">`DurableInstanceContextAttribute` 中包含這個屬性的實作，並且會實作 `IServiceBehavior` 介面以擴充整個服務執行階段。</span><span class="sxs-lookup"><span data-stu-id="1355a-215">The `DurableInstanceContextAttribute` contains the implementation for this attribute and it implements the `IServiceBehavior` interface to extend the entire service runtime.</span></span>  
   
- 這個類別所擁有的屬性，可以接受要使用的存放管理員類型。透過這種方法的實作，使用者便可指定自己的 `IStorageManager` 實作做為這個屬性的參數。  
+ <span data-ttu-id="1355a-216">這個類別所擁有的屬性，可以接受要使用的存放管理員類型。</span><span class="sxs-lookup"><span data-stu-id="1355a-216">This class has a property that accepts the type of the storage manager to be used.</span></span> <span data-ttu-id="1355a-217">透過這種方法的實作，使用者便可指定自己的 `IStorageManager` 實作做為這個屬性的參數。</span><span class="sxs-lookup"><span data-stu-id="1355a-217">In this way the implementation enables the users to specify their own `IStorageManager` implementation as parameter of this attribute.</span></span>  
   
- 在 `ApplyDispatchBehavior` 實作中，將會驗證現行 `ServiceBehavior` 屬性的 `InstanceContextMode`。如果這個屬性設定為 Singleton，就無法啟用永久性執行個體，並且會擲回 `InvalidOperationException` 以通知主機。  
+ <span data-ttu-id="1355a-218">在 `ApplyDispatchBehavior` 實作中，將會驗證現行 `InstanceContextMode` 屬性的 `ServiceBehavior`。</span><span class="sxs-lookup"><span data-stu-id="1355a-218">In the `ApplyDispatchBehavior` implementation the `InstanceContextMode` of the current `ServiceBehavior` attribute is being verified.</span></span> <span data-ttu-id="1355a-219">如果這個屬性設定為 Singleton，就無法啟用永久性執行個體，並且會擲回 `InvalidOperationException` 以通知主機。</span><span class="sxs-lookup"><span data-stu-id="1355a-219">If this property is set to Singleton, enabling durable instancing is not possible and an `InvalidOperationException` is thrown to notify the host.</span></span>  
   
 ```  
 ServiceBehaviorAttribute serviceBehavior =  
@@ -328,7 +331,7 @@ if (serviceBehavior != null &&
 }  
 ```  
   
- 之後，便會在針對每個端點所建立的 `DispatchRuntime` 中，建立並安裝存放管理員執行個體、執行個體內容初始設定式和執行個體提供者。  
+ <span data-ttu-id="1355a-220">之後，便會在針對每個端點所建立的 `DispatchRuntime` 中，建立並安裝存放管理員執行個體、執行個體內容初始設定式和執行個體提供者。</span><span class="sxs-lookup"><span data-stu-id="1355a-220">After this the instances of the storage manager, instance context initializer, and the instance provider are created and installed in the `DispatchRuntime` created for every endpoint.</span></span>  
   
 ```  
 IStorageManager storageManager =   
@@ -355,17 +358,17 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 }  
 ```  
   
- 到目前為止，這個範例產生的通道可對自訂內容識別碼交換啟用自訂網路通訊協定，也會覆寫預設執行個體行為以從持續性儲存體載入執行個體。  
+ <span data-ttu-id="1355a-221">到目前為止，這個範例產生的通道可對自訂內容識別碼交換啟用自訂網路通訊協定，也會覆寫預設執行個體行為以從持續性儲存體載入執行個體。</span><span class="sxs-lookup"><span data-stu-id="1355a-221">In summary so far, this sample has produced a channel that enabled the custom wire protocol for custom context ID exchange and it also overwrites the default instancing behavior to load the instances from the persistent storage.</span></span>  
   
- 不會變得是將服務執行個體儲存至持續性儲存體。如前所述，已提供必要的功能讓您在 `IStorageManager` 實作中儲存狀態。現在則必須將此項與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段整合。也需要適用於服務實作類別方法的其他屬性。而這個屬性應該會套用至變更服務執行個體狀態的方法。  
+ <span data-ttu-id="1355a-222">不會變得是將服務執行個體儲存至持續性儲存體。</span><span class="sxs-lookup"><span data-stu-id="1355a-222">What is left is a way to save the service instance to the persistent storage.</span></span> <span data-ttu-id="1355a-223">如前所述，已提供必要的功能讓您在 `IStorageManager` 實作中儲存狀態。</span><span class="sxs-lookup"><span data-stu-id="1355a-223">As discussed previously, there is already the required functionality to save the state in an `IStorageManager` implementation.</span></span> <span data-ttu-id="1355a-224">現在則必須將此項與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段整合。</span><span class="sxs-lookup"><span data-stu-id="1355a-224">We now must integrate this with the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] runtime.</span></span> <span data-ttu-id="1355a-225">也需要適用於服務實作類別方法的其他屬性。</span><span class="sxs-lookup"><span data-stu-id="1355a-225">Another attribute is required that is applicable to the methods in the service implementation class.</span></span> <span data-ttu-id="1355a-226">而這個屬性應該會套用至變更服務執行個體狀態的方法。</span><span class="sxs-lookup"><span data-stu-id="1355a-226">This attribute is supposed to be applied to the methods that change the state of the service instance.</span></span>  
   
- `SaveStateAttribute` 類別會實作此功能。也會實作 `IOperationBehavior` 類別以修改每個作業的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段。當您使用這個屬性標示方法時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段會叫用 `ApplyBehavior` 方法，同時間則會建構適當的 `DispatchOperation`。在這個方法實作中，程式碼只需要一行：  
+ <span data-ttu-id="1355a-227">`SaveStateAttribute` 類別會實作此功能。</span><span class="sxs-lookup"><span data-stu-id="1355a-227">The `SaveStateAttribute` class implements this functionality.</span></span> <span data-ttu-id="1355a-228">也會實作 `IOperationBehavior` 類別以修改每個作業的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段。</span><span class="sxs-lookup"><span data-stu-id="1355a-228">It also implements `IOperationBehavior` class to modify the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] runtime for each operation.</span></span> <span data-ttu-id="1355a-229">當您使用這個屬性標示方法時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段會叫用 `ApplyBehavior` 方法，同時間則會建構適當的 `DispatchOperation`。</span><span class="sxs-lookup"><span data-stu-id="1355a-229">When a method is marked with this attribute, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] runtime invokes the `ApplyBehavior` method while the appropriate `DispatchOperation` is being constructed.</span></span> <span data-ttu-id="1355a-230">在這個方法實作中，程式碼只需要一行：</span><span class="sxs-lookup"><span data-stu-id="1355a-230">In this method implementation there is single line of code:</span></span>  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
 ```  
   
- 這個指示會建立 `OperationInvoker` 型別的執行個體，並將它指派至已建構之 `DispatchOperation` 的 `Invoker` 屬性。`OperationInvoker` 類別則是對 `DispatchOperation` 所建立之預設作業啟動程式的包裝函式。這個類別會實作 `IOperationInvoker` 介面。在 `Invoke` 方法實作中，實際的方法叫用會委派至內部作業啟動程式。但是在傳回結果之前，可以使用 `InstanceContext` 中的存放管理員來儲存服務執行個體。  
+ <span data-ttu-id="1355a-231">這個指示會建立 `OperationInvoker` 型別的執行個體，並將它指派至已建構之 `Invoker` 的 `DispatchOperation` 屬性。</span><span class="sxs-lookup"><span data-stu-id="1355a-231">This instruction creates an instance of `OperationInvoker` type and assigns it to the `Invoker` property of the `DispatchOperation` being constructed.</span></span> <span data-ttu-id="1355a-232">`OperationInvoker` 類別則是對 `DispatchOperation` 所建立之預設作業啟動程式的包裝函式。</span><span class="sxs-lookup"><span data-stu-id="1355a-232">The `OperationInvoker` class is a wrapper for the default operation invoker created for the `DispatchOperation`.</span></span> <span data-ttu-id="1355a-233">這個類別會實作 `IOperationInvoker` 介面。</span><span class="sxs-lookup"><span data-stu-id="1355a-233">This class implements the `IOperationInvoker` interface.</span></span> <span data-ttu-id="1355a-234">在 `Invoke` 方法實作中，實際的方法叫用會委派至內部作業啟動程式。</span><span class="sxs-lookup"><span data-stu-id="1355a-234">In the `Invoke` method implementation the actual method invocation is delegated to the inner operation invoker.</span></span> <span data-ttu-id="1355a-235">但是在傳回結果之前，可以使用 `InstanceContext` 中的存放管理員來儲存服務執行個體。</span><span class="sxs-lookup"><span data-stu-id="1355a-235">However, before returning the results the storage manager in the `InstanceContext` is used to save the service instance.</span></span>  
   
 ```  
 object result = innerOperationInvoker.Invoke(instance,  
@@ -380,8 +383,8 @@ extension.StorageManager.SaveInstance(extension.ContextId, instance);
 return result;  
 ```  
   
-## 使用延伸項目  
- 將會完成通道層和服務模型層延伸項目，而且現在都可在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用。服務必須使用自訂繫結將通道新增至通道堆疊，然後以適當的屬性標示服務實作類別。  
+## <a name="using-the-extension"></a><span data-ttu-id="1355a-236">使用延伸項目</span><span class="sxs-lookup"><span data-stu-id="1355a-236">Using the Extension</span></span>  
+ <span data-ttu-id="1355a-237">將會完成通道層和服務模型層延伸項目，而且現在都可在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用。</span><span class="sxs-lookup"><span data-stu-id="1355a-237">Both the channel layer and service model layer extensions are done and they can now be used in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span> <span data-ttu-id="1355a-238">服務必須使用自訂繫結將通道新增至通道堆疊，然後以適當的屬性標示服務實作類別。</span><span class="sxs-lookup"><span data-stu-id="1355a-238">Services have to add the channel into the channel stack using a custom binding and then mark the service implementation classes with the appropriate attributes.</span></span>  
   
 ```  
 [DurableInstanceContext]  
@@ -398,9 +401,9 @@ public class ShoppingCart : IShoppingCart
  }  
 ```  
   
- 用戶端應用程式必須使用自訂繫結，將 DurableInstanceContextChannel 新增至通道堆疊。若要以宣告方式在組態檔中設定通道，則必須將繫結項目區段新增至繫結項目延伸集合中。  
+ <span data-ttu-id="1355a-239">用戶端應用程式必須使用自訂繫結，將 DurableInstanceContextChannel 新增至通道堆疊。</span><span class="sxs-lookup"><span data-stu-id="1355a-239">Client applications must add the DurableInstanceContextChannel into the channel stack using a custom binding.</span></span> <span data-ttu-id="1355a-240">若要以宣告方式在組態檔中設定通道，則必須將繫結項目區段新增至繫結項目延伸集合中。</span><span class="sxs-lookup"><span data-stu-id="1355a-240">To configure the channel declaratively in the configuration file, the binding element section has to be added to the binding element extensions collection.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
  <extensions>  
    <bindingElementExtensions>  
@@ -410,9 +413,9 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
  </extensions>  
 ```  
   
- 現在繫結項目就和其他標準繫結項目一樣，都可以搭配使用自訂繫結：  
+ <span data-ttu-id="1355a-241">現在繫結項目就和其他標準繫結項目一樣，都可以搭配使用自訂繫結：</span><span class="sxs-lookup"><span data-stu-id="1355a-241">Now the binding element can be used with a custom binding just like other standard binding elements:</span></span>  
   
-```  
+```xml  
 <bindings>  
  <customBinding>  
    <binding name="TextOverHttp">  
@@ -425,14 +428,14 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
 </bindings>  
 ```  
   
-## 結尾  
- 這個範例會顯示如何建立自訂通訊協定通道，以及如何自訂服務行為進而啟用它。  
+## <a name="conclusion"></a><span data-ttu-id="1355a-242">結論</span><span class="sxs-lookup"><span data-stu-id="1355a-242">Conclusion</span></span>  
+ <span data-ttu-id="1355a-243">這個範例會顯示如何建立自訂通訊協定通道，以及如何自訂服務行為進而啟用它。</span><span class="sxs-lookup"><span data-stu-id="1355a-243">This sample showed how to create a custom protocol channel and how to customize the service behavior to enable it.</span></span>  
   
- 讓使用者使用組態區段指定 `IStorageManager` 實作，將可進一步增進延伸項目的功能。這樣做便可修改備份存放區，而不需要重新編譯服務程式碼。  
+ <span data-ttu-id="1355a-244">讓使用者使用組態區段指定 `IStorageManager` 實作，將可進一步增進延伸項目的功能。</span><span class="sxs-lookup"><span data-stu-id="1355a-244">The extension can be further improved by letting users specify the `IStorageManager` implementation using a configuration section.</span></span> <span data-ttu-id="1355a-245">這樣做便可修改備份存放區，而不需要重新編譯服務程式碼。</span><span class="sxs-lookup"><span data-stu-id="1355a-245">This makes it possible to modify the backing store without recompiling the service code.</span></span>  
   
- 您甚至可以嘗試實作類別 \(例如，`StateBag`\)，而這個類別會封裝執行個體的狀態。該類別也負責在變更狀態時保存狀態。透過這個方法，您就可以避免使用 `SaveState` 屬性並更精確地執行保存工作 \(例如，可以在實際上變更狀態時保存狀態，而不是每次呼叫具有 `SaveState` 屬性的方法時就儲存狀態\)。  
+ <span data-ttu-id="1355a-246">您甚至可以嘗試實作類別 (例如，`StateBag`)，而這個類別會封裝執行個體的狀態。</span><span class="sxs-lookup"><span data-stu-id="1355a-246">Furthermore you could try to implement a class (for example, `StateBag`), which encapsulates the state of the instance.</span></span> <span data-ttu-id="1355a-247">該類別也負責在變更狀態時保存狀態。</span><span class="sxs-lookup"><span data-stu-id="1355a-247">That class is responsible for persisting the state whenever it changes.</span></span> <span data-ttu-id="1355a-248">透過這個方法，您就可以避免使用 `SaveState` 屬性並更精確地執行保存工作 (例如，可以在實際上變更狀態時保存狀態，而不是每次呼叫具有 `SaveState` 屬性的方法時就儲存狀態)。</span><span class="sxs-lookup"><span data-stu-id="1355a-248">This way you can avoid using the `SaveState` attribute and perform the persisting work more accurately (for example, you could persist the state when the state is actually changed rather than saving it each time when a method with the `SaveState` attribute is called).</span></span>  
   
- 當您執行範例時，會顯示如下的輸出。用戶端會將兩個項目新增至購物車，然後從服務中取得其購物車的項目清單。在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
+ <span data-ttu-id="1355a-249">當您執行範例時，會顯示如下的輸出。</span><span class="sxs-lookup"><span data-stu-id="1355a-249">When you run the sample, the following output is displayed.</span></span> <span data-ttu-id="1355a-250">用戶端會將兩個項目新增至購物車，然後從服務中取得其購物車的項目清單。</span><span class="sxs-lookup"><span data-stu-id="1355a-250">The client adds two items to its shopping cart and then gets the list of items in its shopping cart from the service.</span></span> <span data-ttu-id="1355a-251">在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。</span><span class="sxs-lookup"><span data-stu-id="1355a-251">Press ENTER in each console window to shut down the service and client.</span></span>  
   
 ```  
 Enter the name of the product: apples  
@@ -445,26 +448,26 @@ Press ENTER to shut down client
 ```  
   
 > [!NOTE]
->  重建服務則會覆寫資料庫檔案。若要觀察每次執行範例時所保留的狀態，請在各個執行動作之間務必不要重建範例。  
+>  <span data-ttu-id="1355a-252">重建服務則會覆寫資料庫檔案。</span><span class="sxs-lookup"><span data-stu-id="1355a-252">Rebuilding the service overwrites the database file.</span></span> <span data-ttu-id="1355a-253">若要觀察每次執行範例時所保留的狀態，請在各個執行動作之間務必不要重建範例。</span><span class="sxs-lookup"><span data-stu-id="1355a-253">To observe state preserved across multiple runs of the sample, be sure not to rebuild the sample between runs.</span></span>  
   
-#### 若要設定、建置及執行範例  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="1355a-254">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="1355a-254">To set up, build, and run the sample</span></span>  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="1355a-255">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="1355a-255">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要建置方案，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2.  <span data-ttu-id="1355a-256">若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="1355a-256">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要在單一或跨電腦的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3.  <span data-ttu-id="1355a-257">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="1355a-257">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!NOTE]
->  您必須執行 SQL Server 2005 或 SQL Express 2005，才能執行此範例。如果正在執行 SQL Server 2005，則必須修改服務之連線字串的組態。在多台電腦中執行時，只有伺服器電腦上需要 SQL Server。  
+>  <span data-ttu-id="1355a-258">您必須執行 SQL Server 2005 或 SQL Express 2005，才能執行此範例。</span><span class="sxs-lookup"><span data-stu-id="1355a-258">You must be running SQL Server 2005 or SQL Express 2005 to run this sample.</span></span> <span data-ttu-id="1355a-259">如果正在執行 SQL Server 2005，則必須修改服務之連線字串的組態。</span><span class="sxs-lookup"><span data-stu-id="1355a-259">If you are running SQL Server 2005, you must modify the configuration of the service's connection string.</span></span> <span data-ttu-id="1355a-260">在多台電腦中執行時，只有伺服器電腦上需要 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="1355a-260">When running cross-machine, SQL Server is only required on the server machine.</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="1355a-261">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="1355a-261">The samples may already be installed on your machine.</span></span> <span data-ttu-id="1355a-262">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="1355a-262">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="1355a-263">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="1355a-263">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="1355a-264">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="1355a-264">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="1355a-265">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1355a-265">See Also</span></span>

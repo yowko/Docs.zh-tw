@@ -1,86 +1,90 @@
 ---
-title: "在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料 [Windows Form], 管理大型資料集"
-  - "DataGridView 控制項 [Windows Form], 大型資料集"
-  - "DataGridView 控制項 [Windows Form], 虛擬模式"
-  - "範例 [Windows Form], Just-in-Time 資料載入"
-  - "Just-in-Time 資料載入"
-  - "虛擬模式, Just-in-Time 資料載入"
+title: "在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- examples [Windows Forms], just-in-time data loading
+- data [Windows Forms], managing large data sets
+- DataGridView control [Windows Forms], virtual mode
+- just-in-time data loading
+- DataGridView control [Windows Forms], large data sets
+- virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0bddac01a0d85ae985b54587619bcac6de5f966f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
-在 <xref:System.Windows.Forms.DataGridView> 控制項中實作虛擬模式的理由，就是只在需要時才擷取資料。  這稱為「*Just\-In\-Time 資料載入*」。  
+# <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="e765c-102">在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="e765c-102">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="e765c-103">若要實作中的虛擬模式的其中一個原因<xref:System.Windows.Forms.DataGridView>控制項是只有在需要時才擷取資料。</span><span class="sxs-lookup"><span data-stu-id="e765c-103">One reason to implement virtual mode in the <xref:System.Windows.Forms.DataGridView> control is to retrieve data only as it is needed.</span></span> <span data-ttu-id="e765c-104">這稱為*以 just-in-time 資料載入*。</span><span class="sxs-lookup"><span data-stu-id="e765c-104">This is called *just-in-time data loading*.</span></span>  
   
- 例如，如果您使用的是位於遠端資料庫中非常大型的資料表，則可能會想藉由只擷取顯示所需的資料，以及只在使用者將新資料列捲動至檢視時才擷取其他資料等方法，防止啟動延遲。  如果執行應用程式的用戶端電腦可用來儲存資料的記憶體有限，您可能也會想在從資料庫擷取新的值時捨棄未使用的資料。  
+ <span data-ttu-id="e765c-105">如果您正在使用遠端資料庫中的極大型資料表，比方說，您可以擷取顯示所需的資料並擷取其他資料，只有當使用者將新的資料列捲動至檢視時，防止啟動延遲。</span><span class="sxs-lookup"><span data-stu-id="e765c-105">If you are working with a very large table in a remote database, for example, you might want to avoid startup delays by retrieving only the data that is necessary for display and retrieving additional data only when the user scrolls new rows into view.</span></span> <span data-ttu-id="e765c-106">如果執行您的應用程式的用戶端電腦具有有限的記憶體可用來儲存資料，您也可以從資料庫擷取新的值時，請捨棄未使用的資料。</span><span class="sxs-lookup"><span data-stu-id="e765c-106">If the client computers running your application have a limited amount of memory available for storing data, you might also want to discard unused data when retrieving new values from the database.</span></span>  
   
- 下列章節描述如何以「Just\-In\-Time」快取來使用 <xref:System.Windows.Forms.DataGridView> 控制項。  
+ <span data-ttu-id="e765c-107">下列章節說明如何使用<xref:System.Windows.Forms.DataGridView>中 just-in-time 快取的控制項。</span><span class="sxs-lookup"><span data-stu-id="e765c-107">The following sections describe how to use a <xref:System.Windows.Forms.DataGridView> control with a just-in-time cache.</span></span>  
   
- 若要將此主題中的程式碼複製為一份清單，請參閱 [如何：在 Windows Form DataGridView 控制項中以 Just\-In\-Time 資料載入方式實作虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。  
+ <span data-ttu-id="e765c-108">若要為單一列出本主題中複製的程式碼，請參閱[How to： 以 Just-In-Time 資料載入 Windows Form DataGridView 控制項中實作虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="e765c-108">To copy the code in this topic as a single listing, see [How to: Implement Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).</span></span>  
   
-## 表單  
- 下列程式碼範例會定義包含唯讀 <xref:System.Windows.Forms.DataGridView> 控制項的表單，此控制項會透過 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 事件處理常式與 `Cache` 物件互動。  `Cache` 物件會管理存放在本機上的值，並使用 `DataRetriever` 物件從範例 Northwind 資料庫的 Orders 資料表中擷取值。  `DataRetriever` 物件會實作 `Cache` 類別需要的 `IDataPageRetriever` 介面，同時也用來初始化 <xref:System.Windows.Forms.DataGridView> 控制項資料列和資料行。  
+## <a name="the-form"></a><span data-ttu-id="e765c-109">表單</span><span class="sxs-lookup"><span data-stu-id="e765c-109">The Form</span></span>  
+ <span data-ttu-id="e765c-110">下列程式碼範例定義包含一個唯讀表單<xref:System.Windows.Forms.DataGridView>互動的控制項`Cache`物件透過<xref:System.Windows.Forms.DataGridView.CellValueNeeded>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="e765c-110">The following code example defines a form containing a read-only <xref:System.Windows.Forms.DataGridView> control that interacts with a `Cache` object through a <xref:System.Windows.Forms.DataGridView.CellValueNeeded> event handler.</span></span> <span data-ttu-id="e765c-111">`Cache`物件管理的本機儲存的值，並使用`DataRetriever`從 Northwind 範例資料庫的 「 訂單 」 資料表擷取值的物件。</span><span class="sxs-lookup"><span data-stu-id="e765c-111">The `Cache` object manages the locally stored values and uses a `DataRetriever` object to retrieve values from the Orders table of the sample Northwind database.</span></span> <span data-ttu-id="e765c-112">`DataRetriever`物件，它會實作`IDataPageRetriever`所需的介面`Cache`類別，也會用來初始化<xref:System.Windows.Forms.DataGridView>控制資料列和資料行。</span><span class="sxs-lookup"><span data-stu-id="e765c-112">The `DataRetriever` object, which implements the `IDataPageRetriever` interface required by the `Cache` class, is also used to initialize the <xref:System.Windows.Forms.DataGridView> control rows and columns.</span></span>  
   
- 稍後將在此主題中說明 `IDataPageRetriever`、`DataRetriever` 和 `Cache` 型別。  
+ <span data-ttu-id="e765c-113">`IDataPageRetriever`， `DataRetriever`，和`Cache`類型在本主題稍後描述。</span><span class="sxs-lookup"><span data-stu-id="e765c-113">The `IDataPageRetriever`, `DataRetriever`, and `Cache` types are described later in this topic.</span></span>  
   
 > [!NOTE]
->  在連接字串內儲存機密資訊 \(例如密碼\) 會影響應用程式的安全性。  使用 Windows 驗證 \(也稱為整合式安全性\) 是控制資料庫存取的更安全方式。  如需詳細資訊，請參閱[保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
+>  <span data-ttu-id="e765c-114">在連接字串內儲存機密資訊 (例如密碼) 會影響應用程式的安全性。</span><span class="sxs-lookup"><span data-stu-id="e765c-114">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="e765c-115">使用 Windows 驗證 (也稱為整合式安全性) 是控制資料庫存取的更安全方式。</span><span class="sxs-lookup"><span data-stu-id="e765c-115">Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database.</span></span> <span data-ttu-id="e765c-116">如需詳細資訊，請參閱[保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)。</span><span class="sxs-lookup"><span data-stu-id="e765c-116">For more information, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
-## IDataPageRetriever 介面  
- 下列程式碼範例會定義由 `DataRetriever` 類別實作的 `IDataPageRetriever` 介面。  在這個介面中唯一宣告的方法是 `SupplyPageOfData` 方法，此方法需要初始資料列索引和在單一資料頁面中的資料列計數。  這些值是由實作器用來擷取資料來源的資料子集。  
+## <a name="the-idatapageretriever-interface"></a><span data-ttu-id="e765c-117">IDataPageRetriever 介面</span><span class="sxs-lookup"><span data-stu-id="e765c-117">The IDataPageRetriever Interface</span></span>  
+ <span data-ttu-id="e765c-118">下列程式碼範例會定義`IDataPageRetriever`介面實作的`DataRetriever`類別。</span><span class="sxs-lookup"><span data-stu-id="e765c-118">The following code example defines the `IDataPageRetriever` interface, which is implemented by the `DataRetriever` class.</span></span> <span data-ttu-id="e765c-119">在此介面中宣告的唯一方法是`SupplyPageOfData`方法，需要初始資料列索引，以及在單一頁面中的資料列數。</span><span class="sxs-lookup"><span data-stu-id="e765c-119">The only method declared in this interface is the `SupplyPageOfData` method, which requires an initial row index and a count of the number of rows in a single page of data.</span></span> <span data-ttu-id="e765c-120">實作器會使用這些值來從資料來源擷取資料的子集。</span><span class="sxs-lookup"><span data-stu-id="e765c-120">These values are used by the implementer to retrieve a subset of data from a data source.</span></span>  
   
- `Cache` 物件會在建構時使用這個介面的實作，以載入資料的兩個初始頁面。  每當需要未快取的值時，快取會捨棄這些頁面中的其中一頁，並要求包含 `IDataPageRetriever` 值的新頁面。  
+ <span data-ttu-id="e765c-121">A`Cache`物件會使用此介面的實作，在建構期間載入的資料的兩個初始頁面。</span><span class="sxs-lookup"><span data-stu-id="e765c-121">A `Cache` object uses an implementation of this interface during construction to load two initial pages of data.</span></span> <span data-ttu-id="e765c-122">每次需要未快取的值時，快取會捨棄這些網頁的其中一個，並要求新的頁面包含的值從`IDataPageRetriever`。</span><span class="sxs-lookup"><span data-stu-id="e765c-122">Whenever an uncached value is needed, the cache discards one of these pages and requests a new page containing the value from the `IDataPageRetriever`.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
-## DataRetriever 類別  
- 下列程式碼範例會定義 `DataRetriever` 類別，此類別會實作 `IDataPageRetriever` 介面，從伺服器擷取資料頁面。  `DataRetriever` 類別也提供 `Columns` 和 `RowCount` 屬性，<xref:System.Windows.Forms.DataGridView> 控制項使用這些屬性來建立必要的資料行，並加入適當數目的空白資料列至 <xref:System.Windows.Forms.DataGridView.Rows%2A> 集合。  加入空白資料列是必須的，如此控制項才能以彷彿包含資料表中所有資料的方式進行運作。  這表示在捲軸中的捲動方塊將會有適當的大小，而使用者也能夠存取資料表中的任何資料列。  資料列只有在捲動入檢視時，才會由 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 事件處理常式填滿。  
+## <a name="the-dataretriever-class"></a><span data-ttu-id="e765c-123">DataRetriever 類別</span><span class="sxs-lookup"><span data-stu-id="e765c-123">The DataRetriever Class</span></span>  
+ <span data-ttu-id="e765c-124">下列程式碼範例會定義`DataRetriever`類別，它會實作`IDataPageRetriever`介面，以從伺服器擷取資料的頁面。</span><span class="sxs-lookup"><span data-stu-id="e765c-124">The following code example defines the `DataRetriever` class, which implements the `IDataPageRetriever` interface to retrieve pages of data from a server.</span></span> <span data-ttu-id="e765c-125">`DataRetriever`類別也提供`Columns`和`RowCount`屬性，其中<xref:System.Windows.Forms.DataGridView>控制項使用建立必要的資料行，以及加入空的資料列的適當數目<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="e765c-125">The `DataRetriever` class also provides `Columns` and `RowCount` properties, which the <xref:System.Windows.Forms.DataGridView> control uses to create the necessary columns and to add the appropriate number of empty rows to the <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.</span></span> <span data-ttu-id="e765c-126">使控制項的行為模式，就好像它包含資料表中的所有資料，加入空白資料列是必要的。</span><span class="sxs-lookup"><span data-stu-id="e765c-126">Adding the empty rows is necessary so that the control will behave as though it contains all the data in the table.</span></span> <span data-ttu-id="e765c-127">這表示在捲軸的捲動方塊會有適當的大小，而且使用者將能夠存取資料表中的任何資料列。</span><span class="sxs-lookup"><span data-stu-id="e765c-127">This means that the scroll box in the scroll bar will have the appropriate size, and the user will be able to access any row in the table.</span></span> <span data-ttu-id="e765c-128">資料列，以填滿<xref:System.Windows.Forms.DataGridView.CellValueNeeded>它們捲動檢視時，才的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="e765c-128">The rows are filled by the <xref:System.Windows.Forms.DataGridView.CellValueNeeded> event handler only when they are scrolled into view.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
-## Cache 類別  
- 下列程式碼範例會定義 `Cache` 類別，此類別管理透過 `IDataPageRetriever` 實作所填入的兩個資料頁面。  `Cache` 類別會定義內部 `DataPage` 結構，這個結構包含 <xref:System.Data.DataTable> 會將值儲存於單一的快取頁面，並會計算代表頁面上方與下方界限的資料列索引。  
+## <a name="the-cache-class"></a><span data-ttu-id="e765c-129">快取類別</span><span class="sxs-lookup"><span data-stu-id="e765c-129">The Cache Class</span></span>  
+ <span data-ttu-id="e765c-130">下列程式碼範例會定義`Cache`類別，可管理的資料填入透過兩個頁面`IDataPageRetriever`實作。</span><span class="sxs-lookup"><span data-stu-id="e765c-130">The following code example defines the `Cache` class, which manages two pages of data populated through an `IDataPageRetriever` implementation.</span></span> <span data-ttu-id="e765c-131">`Cache`類別定義內部`DataPage`結構，其中包含<xref:System.Data.DataTable>將值儲存在單一快取中頁面的計算資料列索引代表頁面的上下邊界。</span><span class="sxs-lookup"><span data-stu-id="e765c-131">The `Cache` class defines an inner `DataPage` structure, which contains a <xref:System.Data.DataTable> to store the values in a single cache page and which calculates the row indexes that represent the upper and lower boundaries of the page.</span></span>  
   
- `Cache` 類別會在建構階段載入兩個資料頁面。  每當 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 事件需要值時，`Cache` 物件就會決定值是否可以使用於兩個頁面的其中一個，如果是的話，就會傳回該值。  如果在本機上無法使用該值，`Cache` 物件便會決定兩個頁面中的哪個頁面離目前顯示的資料列最遠，然後使用包含要求值的新頁面加以取代，之後就會傳回該值。  
+ <span data-ttu-id="e765c-132">`Cache`類別會在建構階段中載入資料的兩個頁面。</span><span class="sxs-lookup"><span data-stu-id="e765c-132">The `Cache` class loads two pages of data at construction time.</span></span> <span data-ttu-id="e765c-133">每當<xref:System.Windows.Forms.DataGridView.CellValueNeeded>事件要求值，`Cache`物件判斷的值是用於其兩個的其中一個頁面，如果是的話，就會傳回物件。</span><span class="sxs-lookup"><span data-stu-id="e765c-133">Whenever the <xref:System.Windows.Forms.DataGridView.CellValueNeeded> event requests a value, the `Cache` object determines if the value is available in one of its two pages and, if so, returns it.</span></span> <span data-ttu-id="e765c-134">如果值不在本機上，`Cache`物件可以決定其兩個頁面的距離目前顯示的資料列的最遠以及取代包含要求的值，然後傳回新的頁面。</span><span class="sxs-lookup"><span data-stu-id="e765c-134">If the value is not available locally, the `Cache` object determines which of its two pages is farthest from the currently displayed rows and replaces the page with a new one containing the requested value, which it then returns.</span></span>  
   
- 這個模型假設資料頁面中的資料列數目與可以一次顯示於螢幕的資料列數目相同，可以讓使用者對資料表進行分頁，以便有效率地返回最新檢視過的頁面。  
+ <span data-ttu-id="e765c-135">假設資料頁面中的資料列數目是可以同時顯示在畫面的資料列數目相同，此模型可讓使用者透過資料表分頁有效率地返回最近檢視過的頁面。</span><span class="sxs-lookup"><span data-stu-id="e765c-135">Assuming that the number of rows in a data page is the same as the number of rows that can be displayed on screen at once, this model allows users paging through the table to efficiently return to the most recently viewed page.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
-## 其他考量  
- 上一個程式碼範例是提供做為「Just\-In\-Time」資料載入的示範。  您需要根據個人需求修改程式碼，以達到最大的效率。  您至少要為快取中每一個資料頁面的資料列數目選擇適當的值。  這個值會傳遞至 `Cache` 建構函式。  每一頁的資料列數目不應該少於可同時顯示於 <xref:System.Windows.Forms.DataGridView> 控制項的資料列數目。  
+## <a name="additional-considerations"></a><span data-ttu-id="e765c-136">其他考量</span><span class="sxs-lookup"><span data-stu-id="e765c-136">Additional Considerations</span></span>  
+ <span data-ttu-id="e765c-137">先前的程式碼範例會提供以 just-in-time 資料載入的示範。</span><span class="sxs-lookup"><span data-stu-id="e765c-137">The previous code examples are provided as a demonstration of just-in-time data loading.</span></span> <span data-ttu-id="e765c-138">您必須修改您自己的需求，以達到最大效率的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e765c-138">You will need to modify the code for your own needs to achieve maximum efficiency.</span></span> <span data-ttu-id="e765c-139">最小值，您必須選擇快取中的每個分頁的資料列數目為適當值。</span><span class="sxs-lookup"><span data-stu-id="e765c-139">At minimum, you will need to choose an appropriate value for the number of rows per page of data in the cache.</span></span> <span data-ttu-id="e765c-140">這個值會傳遞至`Cache`建構函式。</span><span class="sxs-lookup"><span data-stu-id="e765c-140">This value is passed into the `Cache` constructor.</span></span> <span data-ttu-id="e765c-141">每個分頁的資料列數目應該是不小於可以同時在顯示的資料列數目您<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="e765c-141">The number of rows per page should be no less than the number of rows that can be displayed simultaneously in your <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- 要得到最佳結果，您需要執行效能測試和可用性測試，以決定系統和使用者的需求。  您需要考慮的幾個因素包括：執行應用程式的用戶端機器上的記憶體容量，使用的網路連接的可用頻寬，以及使用的伺服器的延遲。  頻寬和延遲應該以尖峰用量為準。  
+ <span data-ttu-id="e765c-142">為獲得最佳結果，您必須執行效能測試和可用性測試，以判斷您的系統和使用者的需求。</span><span class="sxs-lookup"><span data-stu-id="e765c-142">For best results, you will need to conduct performance testing and usability testing to determine the requirements of your system and your users.</span></span> <span data-ttu-id="e765c-143">必須納入考量的幾個因素會併入執行您的應用程式、 使用的網路連線可用的頻寬和延遲使用之伺服器的用戶端機器中的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="e765c-143">Several factors that you will need to take into consideration include the amount of memory in the client machines running your application, the available bandwidth of the network connection used, and the latency of the server used.</span></span> <span data-ttu-id="e765c-144">頻寬和延遲應該決定有時候的尖峰使用量。</span><span class="sxs-lookup"><span data-stu-id="e765c-144">The bandwidth and latency should be determined at times of peak usage.</span></span>  
   
- 若要改進應用程式的捲動效能，您可以增加在本機上存放的資料量。  不過，若要加快啟動時間，就必須避免一開始時載入太多的資料。  您可能會想修改 `Cache` 類別以增加可以儲存的資料頁面數量。  使用更多資料頁面可以改善捲動效率，但是您會需要依據可用的頻寬和伺服器延遲，來決定資料頁面中理想的資料列數目。  使用較小的頁面，將會增加存取伺服器的次數，但傳回所要求的資料時花費的時間較少。  若延遲的問題比頻寬嚴重，您可能會想使用較大的資料頁面。  
+ <span data-ttu-id="e765c-145">若要改善您的應用程式的捲動效能，您可以增加在本機儲存的資料量。</span><span class="sxs-lookup"><span data-stu-id="e765c-145">To improve the scrolling performance of your application, you can increase the amount of data stored locally.</span></span> <span data-ttu-id="e765c-146">若要改善啟動時間，不過，您必須避免一開始載入太多資料。</span><span class="sxs-lookup"><span data-stu-id="e765c-146">To improve startup time, however, you must avoid loading too much data initially.</span></span> <span data-ttu-id="e765c-147">您可能想要修改`Cache`類別以增加它可以儲存的資料頁數。</span><span class="sxs-lookup"><span data-stu-id="e765c-147">You may want to modify the `Cache` class to increase the number of data pages it can store.</span></span> <span data-ttu-id="e765c-148">使用更多資料頁面，可以改善捲動效率，但是您必須判斷理想數目，視可用頻寬和伺服器延遲而定，資料頁中的資料列。</span><span class="sxs-lookup"><span data-stu-id="e765c-148">Using more data pages can improve scrolling efficiency, but you will need to determine the ideal number of rows in a data page, depending on the available bandwidth and the server latency.</span></span> <span data-ttu-id="e765c-149">與較小的頁面，將更頻繁地存取伺服器，但需要較少的時間才能傳回要求的資料。</span><span class="sxs-lookup"><span data-stu-id="e765c-149">With smaller pages, the server will be accessed more frequently, but will take less time to return the requested data.</span></span> <span data-ttu-id="e765c-150">如果延遲過高的問題比頻寬，您可能想要使用較大的資料頁。</span><span class="sxs-lookup"><span data-stu-id="e765c-150">If latency is more of an issue than bandwidth, you may want to use larger data pages.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>   
- [Windows Form DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [縮放 Windows Form DataGridView 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)   
- [Windows Form DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)   
- [逐步解說：在 Windows Form DataGridView 控制項中實作虛擬模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)   
- [如何：在 Windows Form DataGridView 控制項中以 Just\-In\-Time 資料載入方式實作虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+## <a name="see-also"></a><span data-ttu-id="e765c-151">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e765c-151">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
+ [<span data-ttu-id="e765c-152">Windows Forms DataGridView 控制項中的效能微調</span><span class="sxs-lookup"><span data-stu-id="e765c-152">Performance Tuning in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="e765c-153">縮放 Windows Forms DataGridView 控制項的最佳作法</span><span class="sxs-lookup"><span data-stu-id="e765c-153">Best Practices for Scaling the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="e765c-154">Windows Forms DataGridView 控制項中的虛擬模式</span><span class="sxs-lookup"><span data-stu-id="e765c-154">Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="e765c-155">逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="e765c-155">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [<span data-ttu-id="e765c-156">操作說明：在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="e765c-156">How to: Implement Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

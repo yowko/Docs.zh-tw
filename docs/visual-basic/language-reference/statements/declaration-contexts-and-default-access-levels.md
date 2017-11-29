@@ -1,65 +1,64 @@
 ---
-title: "Declaration Contexts and Default Access Levels (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "module level, defined"
-  - "declaration contexts, Visual Basic"
-  - "procedure level, defined"
-  - "namespace level, defined"
-  - "access levels, Visual Basic"
-  - "access levels, default levels"
+title: "宣告內容和預設存取層級 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- module level, defined
+- declaration contexts, Visual Basic
+- procedure level, defined
+- namespace level, defined
+- access levels, Visual Basic
+- access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Declaration Contexts and Default Access Levels (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-這個主題會說明可與其他型別一起宣告的 Visual Basic 型別，若未指定，則說明其存取層級預設值為何。  
+# <a name="declaration-contexts-and-default-access-levels-visual-basic"></a><span data-ttu-id="c45f7-102">宣告內容和預設存取層級 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c45f7-102">Declaration Contexts and Default Access Levels (Visual Basic)</span></span>
+<span data-ttu-id="c45f7-103">本主題說明 Visual Basic 類型可以宣告內的其他類型，以及什麼其存取層級預設為，如果未指定。</span><span class="sxs-lookup"><span data-stu-id="c45f7-103">This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.</span></span>  
   
-## 宣告內容層級  
- 程式設計項目的「*宣告內容*」\(Declaration Context\) 是它被宣告的程式碼區域。  這通常是另一個程式設計項目，之後稱為「*含有項目*」。  
+## <a name="declaration-context-levels"></a><span data-ttu-id="c45f7-104">宣告內容層級</span><span class="sxs-lookup"><span data-stu-id="c45f7-104">Declaration Context Levels</span></span>  
+ <span data-ttu-id="c45f7-105">*宣告內容*程式設計項目是程式碼會宣告的區域。</span><span class="sxs-lookup"><span data-stu-id="c45f7-105">The *declaration context* of a programming element is the region of code in which it is declared.</span></span> <span data-ttu-id="c45f7-106">這通常是其他程式設計項目，然後呼叫*包含項目的*。</span><span class="sxs-lookup"><span data-stu-id="c45f7-106">This is often another programming element, which is then called the *containing element*.</span></span>  
   
- 以下是宣告內容的層級：  
+ <span data-ttu-id="c45f7-107">宣告內容的層級如下所示：</span><span class="sxs-lookup"><span data-stu-id="c45f7-107">The levels for declaration contexts are the following:</span></span>  
   
--   *命名空間層級*：位於原始程式檔或命名空間，但不在類別、結構、模組或介面中  
+-   <span data-ttu-id="c45f7-108">*命名空間層級*— 原始程式檔或命名空間內，但不是在類別、 結構、 模組或介面</span><span class="sxs-lookup"><span data-stu-id="c45f7-108">*Namespace level* — within a source file or namespace but not within a class, structure, module, or interface</span></span>  
   
--   *模組層級*：位於類別、結構、模組或介面，但不在程序或區塊中  
+-   <span data-ttu-id="c45f7-109">*模組層級*— 類別、 結構、 模組或介面內，但不是在程序或區塊</span><span class="sxs-lookup"><span data-stu-id="c45f7-109">*Module level* — within a class, structure, module, or interface but not within a procedure or block</span></span>  
   
--   *程序層級*：位於程序或區塊中 \(例如 `If` 或 `For`\)  
+-   <span data-ttu-id="c45f7-110">*程序層級*— 程序或區塊內 (例如`If`或`For`)</span><span class="sxs-lookup"><span data-stu-id="c45f7-110">*Procedure level* — within a procedure or block (such as `If` or `For`)</span></span>  
   
- 下表會針對各種宣告的程式設計項目，根據其宣告內容來顯示其預設存取層級。  
+ <span data-ttu-id="c45f7-111">下表顯示各種宣告的程式設計元素，根據其宣告內容的預設存取層級。</span><span class="sxs-lookup"><span data-stu-id="c45f7-111">The following table shows the default access levels for various declared programming elements, depending on their declaration contexts.</span></span>  
   
-|宣告項目|命名空間層級|模組層級|程序層級|  
-|----------|------------|----------|----------|  
-|變數 \([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)\)|不允許。|`Private` \(`Public` 在 `Structure` 中，不能在 `Interface` 中\)|`Public`|  
-|常數 \([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md)\)|不允許。|`Private` \(`Public` 在 `Structure` 中，不能在 `Interface` 中\)|`Public`|  
-|列舉型別 \([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)\)|`Friend`|`Public`|不允許。|  
-|類別 \([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)\)|`Friend`|`Public`|不允許。|  
-|結構 \([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)\)|`Friend`|`Public`|不允許。|  
-|模組 \([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)\)|`Friend`|不允許。|不允許。|  
-|介面 \([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)\)|`Friend`|`Public`|不允許。|  
-|程序 \([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)、[Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)\)|不允許。|`Public`|不允許。|  
-|外部參照 \([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)\)|不允許。|`Public` \(`Interface` 中不允許\)|不允許。|  
-|運算子 \([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)\)|不允許。|`Public` \(不能在 `Interface` 或 `Module` 中\)|不允許。|  
-|屬性 \([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)\)|不允許。|`Public`|不允許。|  
-|預設屬性 \([Default](../../../visual-basic/language-reference/modifiers/default.md)\)|不允許。|`Public` \(`Module` 中不允許\)|不允許。|  
-|事件 \([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)\)|不允許。|`Public`|不允許。|  
-|委派 \([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md)\)|`Friend`|`Public`|不允許。|  
+|<span data-ttu-id="c45f7-112">宣告項目</span><span class="sxs-lookup"><span data-stu-id="c45f7-112">Declared element</span></span>|<span data-ttu-id="c45f7-113">命名空間層級</span><span class="sxs-lookup"><span data-stu-id="c45f7-113">Namespace level</span></span>|<span data-ttu-id="c45f7-114">模組層級</span><span class="sxs-lookup"><span data-stu-id="c45f7-114">Module level</span></span>|<span data-ttu-id="c45f7-115">程序層級</span><span class="sxs-lookup"><span data-stu-id="c45f7-115">Procedure level</span></span>|  
+|----------------------|---------------------|------------------|---------------------|  
+|<span data-ttu-id="c45f7-116">變數 ([Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-116">Variable ([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md))</span></span>|<span data-ttu-id="c45f7-117">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-117">Not allowed</span></span>|<span data-ttu-id="c45f7-118">`Private`(`Public`中`Structure`、 不允許在`Interface`)</span><span class="sxs-lookup"><span data-stu-id="c45f7-118">`Private` (`Public` in `Structure`, not allowed in `Interface`)</span></span>|`Public`|  
+|<span data-ttu-id="c45f7-119">常數 ([Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-119">Constant ([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md))</span></span>|<span data-ttu-id="c45f7-120">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-120">Not allowed</span></span>|<span data-ttu-id="c45f7-121">`Private`(`Public`中`Structure`、 不允許在`Interface`)</span><span class="sxs-lookup"><span data-stu-id="c45f7-121">`Private` (`Public` in `Structure`, not allowed in `Interface`)</span></span>|`Public`|  
+|<span data-ttu-id="c45f7-122">列舉型別 ([Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-122">Enumeration ([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="c45f7-123">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-123">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-124">類別 ([Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-124">Class ([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="c45f7-125">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-125">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-126">結構 ([結構陳述式](../../../visual-basic/language-reference/statements/structure-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-126">Structure ([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="c45f7-127">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-127">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-128">模組 ([Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-128">Module ([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md))</span></span>|`Friend`|<span data-ttu-id="c45f7-129">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-129">Not allowed</span></span>|<span data-ttu-id="c45f7-130">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-130">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-131">介面 ([Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-131">Interface ([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="c45f7-132">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-132">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-133">程序 ([函式陳述式](../../../visual-basic/language-reference/statements/function-statement.md)， [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-133">Procedure ([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md))</span></span>|<span data-ttu-id="c45f7-134">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-134">Not allowed</span></span>|`Public`|<span data-ttu-id="c45f7-135">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-135">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-136">外部參考 ([Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-136">External reference ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))</span></span>|<span data-ttu-id="c45f7-137">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-137">Not allowed</span></span>|<span data-ttu-id="c45f7-138">`Public`(不允許在`Interface`)</span><span class="sxs-lookup"><span data-stu-id="c45f7-138">`Public` (not allowed in `Interface`)</span></span>|<span data-ttu-id="c45f7-139">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-139">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-140">運算子 ([Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-140">Operator ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))</span></span>|<span data-ttu-id="c45f7-141">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-141">Not allowed</span></span>|<span data-ttu-id="c45f7-142">`Public`(不允許在`Interface`或`Module`)</span><span class="sxs-lookup"><span data-stu-id="c45f7-142">`Public` (not allowed in `Interface` or `Module`)</span></span>|<span data-ttu-id="c45f7-143">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-143">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-144">屬性 ([Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-144">Property ([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md))</span></span>|<span data-ttu-id="c45f7-145">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-145">Not allowed</span></span>|`Public`|<span data-ttu-id="c45f7-146">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-146">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-147">預設屬性 ([預設](../../../visual-basic/language-reference/modifiers/default.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-147">Default property ([Default](../../../visual-basic/language-reference/modifiers/default.md))</span></span>|<span data-ttu-id="c45f7-148">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-148">Not allowed</span></span>|<span data-ttu-id="c45f7-149">`Public`(不允許在`Module`)</span><span class="sxs-lookup"><span data-stu-id="c45f7-149">`Public` (not allowed in `Module`)</span></span>|<span data-ttu-id="c45f7-150">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-150">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-151">事件 ([Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-151">Event ([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md))</span></span>|<span data-ttu-id="c45f7-152">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-152">Not allowed</span></span>|`Public`|<span data-ttu-id="c45f7-153">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-153">Not allowed</span></span>|  
+|<span data-ttu-id="c45f7-154">委派 ([Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md))</span><span class="sxs-lookup"><span data-stu-id="c45f7-154">Delegate ([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="c45f7-155">不允許</span><span class="sxs-lookup"><span data-stu-id="c45f7-155">Not allowed</span></span>|  
   
- 如需詳細資訊，請參閱 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ <span data-ttu-id="c45f7-156">如需詳細資訊，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="c45f7-156">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## 請參閱  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a><span data-ttu-id="c45f7-157">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c45f7-157">See Also</span></span>  
+ [<span data-ttu-id="c45f7-158">Friend</span><span class="sxs-lookup"><span data-stu-id="c45f7-158">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="c45f7-159">Private</span><span class="sxs-lookup"><span data-stu-id="c45f7-159">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="c45f7-160">Public</span><span class="sxs-lookup"><span data-stu-id="c45f7-160">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)

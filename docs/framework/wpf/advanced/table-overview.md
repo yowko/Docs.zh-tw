@@ -1,58 +1,64 @@
 ---
-title: "資料表概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文件, 資料表"
-  - "非固定格式內容項目 [WPF], 資料表"
-  - "資料表"
+title: "資料表概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flow content elements [WPF], Table
+- documents [WPF], tables
+- tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bb9edf0439c985af015d6badd11c026449a82f57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 資料表概觀
-<xref:System.Windows.Documents.Table> 是一個支援以方格顯示非固定格式文件內容的區塊層級項目。  此項目的彈性增加了它的實用性，但也使其更難以了解及正確使用。  
+# <a name="table-overview"></a><span data-ttu-id="64210-102">資料表概觀</span><span class="sxs-lookup"><span data-stu-id="64210-102">Table Overview</span></span>
+<span data-ttu-id="64210-103"><xref:System.Windows.Documents.Table>是支援的非固定格式文件內容的方格呈現的區塊層級項目。</span><span class="sxs-lookup"><span data-stu-id="64210-103"><xref:System.Windows.Documents.Table> is a block level element that supports grid-based presentation of Flow document content.</span></span> <span data-ttu-id="64210-104">此元素的彈性讓它更為實用，但也讓您更難了解並正確使用。</span><span class="sxs-lookup"><span data-stu-id="64210-104">The flexibility of this element makes it very useful, but also makes it more complicated to understand and use correctly.</span></span>  
   
- 本主題包含下列章節。  
+ <span data-ttu-id="64210-105">此主題包括下列各節。</span><span class="sxs-lookup"><span data-stu-id="64210-105">This topic contains the following sections.</span></span>  
   
--   [資料表的基本概念](#table_basics)  
+-   [<span data-ttu-id="64210-106">表格的基本概念</span><span class="sxs-lookup"><span data-stu-id="64210-106">Table Basics</span></span>](#table_basics)  
   
--   [資料表與方格有何不同](#table_vs_Grid)  
+-   [<span data-ttu-id="64210-107">表格與方格之間的差異</span><span class="sxs-lookup"><span data-stu-id="64210-107">How is Table Different then Grid?</span></span>](#table_vs_Grid)  
   
--   [基本資料表結構](#basic_table_structure)  
+-   [<span data-ttu-id="64210-108">基本的表格結構</span><span class="sxs-lookup"><span data-stu-id="64210-108">Basic Table Structure</span></span>](#basic_table_structure)  
   
--   [資料表內含項目](#table_containment)  
+-   [<span data-ttu-id="64210-109">表格內含項目</span><span class="sxs-lookup"><span data-stu-id="64210-109">Table Containment</span></span>](#table_containment)  
   
--   [資料列群組](#row_groupings)  
+-   [<span data-ttu-id="64210-110">資料列群組</span><span class="sxs-lookup"><span data-stu-id="64210-110">Row Groupings</span></span>](#row_groupings)  
   
--   [背景呈現優先順序](#rednering_precedence)  
+-   [<span data-ttu-id="64210-111">背景轉譯優先順序</span><span class="sxs-lookup"><span data-stu-id="64210-111">Background Rendering Precedence</span></span>](#rendering_precedence)  
   
--   [擴展資料列或資料行](#spanning_rows_or_columns)  
+-   [<span data-ttu-id="64210-112">跨越資料列和資料行</span><span class="sxs-lookup"><span data-stu-id="64210-112">Spanning Rows or Columns</span></span>](#spanning_rows_or_columns)  
   
--   [使用程式碼建置資料表](#building_a_table_with_code)  
+-   [<span data-ttu-id="64210-113">使用程式碼建置表格</span><span class="sxs-lookup"><span data-stu-id="64210-113">Building a Table With Code</span></span>](#building_a_table_with_code)  
   
--   [相關主題](#see_also)  
+-   <span data-ttu-id="64210-114">[相關主題]</span><span class="sxs-lookup"><span data-stu-id="64210-114">[Related Topics]</span></span> 
   
 <a name="table_basics"></a>   
-## 資料表的基本概念  
+## <a name="table-basics"></a><span data-ttu-id="64210-115">表格的基本概念</span><span class="sxs-lookup"><span data-stu-id="64210-115">Table Basics</span></span>  
   
 <a name="table_vs_Grid"></a>   
-### 資料表與方格有何不同  
- <xref:System.Windows.Documents.Table> 與 <xref:System.Windows.Controls.Grid> 會共用某些通用功能，但兩者分別適用於不同的情況。  <xref:System.Windows.Documents.Table> 的設計適合在非固定格式內容中使用 \(如需非固定格式內容的詳細資訊，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)\)。  方格則適用於表單內 \(基本上，只要是非固定格式內容都適用\)。  在 <xref:System.Windows.Documents.FlowDocument> 內，<xref:System.Windows.Documents.Table> 支援分頁、資料行重新排列與內容選取等非固定格式內容行為，而 <xref:System.Windows.Controls.Grid> 則否。  另一方面，<xref:System.Windows.Controls.Grid> 適用於 <xref:System.Windows.Documents.FlowDocument> 以外的地方，其原因眾多，包括 <xref:System.Windows.Controls.Grid> 會根據資料列與資料行索引加入項目，<xref:System.Windows.Documents.Table> 則否。  <xref:System.Windows.Controls.Grid> 項目可允許將子內容分層，所以單一「儲存格」中可以有多個項目。<xref:System.Windows.Documents.Table> 不支援分層。  <xref:System.Windows.Controls.Grid> 的子項目可放在相對於其「儲存格」界限區域的絕對位置。  但 <xref:System.Windows.Documents.Table> 不支援此功能。  最後，<xref:System.Windows.Controls.Grid> 所需的資源比 <xref:System.Windows.Documents.Table> 少，因此請考慮使用 <xref:System.Windows.Controls.Grid> 提升效能。  
+### <a name="how-is-table-different-then-grid"></a><span data-ttu-id="64210-116">表格與方格之間的差異</span><span class="sxs-lookup"><span data-stu-id="64210-116">How is Table Different then Grid?</span></span>  
+ <span data-ttu-id="64210-117"><xref:System.Windows.Documents.Table>和<xref:System.Windows.Controls.Grid>共用某些常見的功能，但每個最適合用於不同的案例。</span><span class="sxs-lookup"><span data-stu-id="64210-117"><xref:System.Windows.Documents.Table> and <xref:System.Windows.Controls.Grid> share some common functionality, but each is best suited for different scenarios.</span></span> <span data-ttu-id="64210-118">A<xref:System.Windows.Documents.Table>適用於非固定格式內容中 (請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)如需有關非固定格式內容)。</span><span class="sxs-lookup"><span data-stu-id="64210-118">A <xref:System.Windows.Documents.Table> is designed for use within flow content (see [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md) for more information on flow content).</span></span> <span data-ttu-id="64210-119">方格最適合在表單內部使用 (基本上，是在非固定格式內容以外的任何地方)。</span><span class="sxs-lookup"><span data-stu-id="64210-119">Grids are best used inside of forms (basically anywhere outside of flow content).</span></span> <span data-ttu-id="64210-120">內<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支援非固定格式內容的行為，例如分頁、 資料行重新排列，以及內容的選取範圍時<xref:System.Windows.Controls.Grid>則否。</span><span class="sxs-lookup"><span data-stu-id="64210-120">Within a <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> supports flow content behaviors like pagination, column reflow, and content selection while a <xref:System.Windows.Controls.Grid> does not.</span></span> <span data-ttu-id="64210-121">A<xref:System.Windows.Controls.Grid>另一方面最適合用外部<xref:System.Windows.Documents.FlowDocument>有許多原因包括<xref:System.Windows.Controls.Grid>將根據資料列和資料行的索引，項目加入<xref:System.Windows.Documents.Table>則否。</span><span class="sxs-lookup"><span data-stu-id="64210-121">A <xref:System.Windows.Controls.Grid> on the other hand is best used outside of a <xref:System.Windows.Documents.FlowDocument> for many reasons including <xref:System.Windows.Controls.Grid> adds elements based on a row and column index, <xref:System.Windows.Documents.Table> does not.</span></span> <span data-ttu-id="64210-122"><xref:System.Windows.Controls.Grid>項目可以讓圖層的子內容，讓一個以上的項目存在於單一 「 資料格 」。</span><span class="sxs-lookup"><span data-stu-id="64210-122">The <xref:System.Windows.Controls.Grid> element allows layering of child content, allowing more than one element to exist within a single "cell."</span></span> <span data-ttu-id="64210-123"><xref:System.Windows.Documents.Table>不支援的圖層。</span><span class="sxs-lookup"><span data-stu-id="64210-123"><xref:System.Windows.Documents.Table> does not support layering.</span></span> <span data-ttu-id="64210-124">子項目的<xref:System.Windows.Controls.Grid>可以相對於其 「 資料格 」 界限的區域絕對定位。</span><span class="sxs-lookup"><span data-stu-id="64210-124">Child elements of a <xref:System.Windows.Controls.Grid> can be absolutely positioned relative to the area of their "cell" boundaries.</span></span> <span data-ttu-id="64210-125"><xref:System.Windows.Documents.Table>不支援這項功能。</span><span class="sxs-lookup"><span data-stu-id="64210-125"><xref:System.Windows.Documents.Table> does not support this feature.</span></span> <span data-ttu-id="64210-126">最後，<xref:System.Windows.Controls.Grid>需要較少的資源則<xref:System.Windows.Documents.Table>因此請考慮使用<xref:System.Windows.Controls.Grid>來改善效能。</span><span class="sxs-lookup"><span data-stu-id="64210-126">Finally, a <xref:System.Windows.Controls.Grid> requires less resources then a <xref:System.Windows.Documents.Table> so consider using a <xref:System.Windows.Controls.Grid> to improve performance.</span></span>  
   
 <a name="basic_table_structure"></a>   
-### 基本資料表結構  
- <xref:System.Windows.Documents.Table> 可提供由資料行 \(以 <xref:System.Windows.Documents.TableColumn> 項目代表\) 與資料列 \(以 <xref:System.Windows.Documents.TableRow> 項目代表\) 組成的方格式顯示。  <xref:System.Windows.Documents.TableColumn> 項目不會裝載內容；只會定義資料行和資料行的特性。  <xref:System.Windows.Documents.TableRow> 項目必須裝載於 <xref:System.Windows.Documents.TableRowGroup> 項目中，而該項目會定義資料表的資料列群組。  <xref:System.Windows.Documents.TableCell> 項目包含要以資料表代表的實際內容，且必須裝載於 <xref:System.Windows.Documents.TableRow> 項目中。  <xref:System.Windows.Documents.TableCell> 只能包含衍生自 <xref:System.Windows.Documents.Block> 的項目。  也包括 <xref:System.Windows.Documents.TableCell> 的有效子項目。  
+### <a name="basic-table-structure"></a><span data-ttu-id="64210-127">基本的表格結構</span><span class="sxs-lookup"><span data-stu-id="64210-127">Basic Table Structure</span></span>  
+ <span data-ttu-id="64210-128"><xref:System.Windows.Documents.Table>提供格線為基礎的簡報，資料行所組成 (由<xref:System.Windows.Documents.TableColumn>項目) 和資料列 (由<xref:System.Windows.Documents.TableRow>項目)。</span><span class="sxs-lookup"><span data-stu-id="64210-128"><xref:System.Windows.Documents.Table> provides a grid-based presentation consisting of columns (represented by <xref:System.Windows.Documents.TableColumn> elements) and rows (represented by <xref:System.Windows.Documents.TableRow> elements).</span></span> <span data-ttu-id="64210-129"><xref:System.Windows.Documents.TableColumn>項目未裝載的內容。此外，它們只會定義資料行和資料行的特性。</span><span class="sxs-lookup"><span data-stu-id="64210-129"><xref:System.Windows.Documents.TableColumn> elements do not host content; they simply define columns and characteristics of columns.</span></span> <span data-ttu-id="64210-130"><xref:System.Windows.Documents.TableRow>項目必須裝載在<xref:System.Windows.Documents.TableRowGroup>元素，其定義的資料表資料列群組。</span><span class="sxs-lookup"><span data-stu-id="64210-130"><xref:System.Windows.Documents.TableRow> elements must be hosted in a <xref:System.Windows.Documents.TableRowGroup> element, which defines a grouping of rows for the table.</span></span> <span data-ttu-id="64210-131"><xref:System.Windows.Documents.TableCell>項目，其中包含資料表所呈現的實際內容，必須裝載在<xref:System.Windows.Documents.TableRow>項目。</span><span class="sxs-lookup"><span data-stu-id="64210-131"><xref:System.Windows.Documents.TableCell> elements, which contain the actual content to be presented by the table, must be hosted in a <xref:System.Windows.Documents.TableRow> element.</span></span> <span data-ttu-id="64210-132"><xref:System.Windows.Documents.TableCell>只能包含元素衍生自<xref:System.Windows.Documents.Block>。</span><span class="sxs-lookup"><span data-stu-id="64210-132"><xref:System.Windows.Documents.TableCell> may only contain elements that derive from <xref:System.Windows.Documents.Block>.</span></span>  <span data-ttu-id="64210-133">有效的子項目<xref:System.Windows.Documents.TableCell>包含。</span><span class="sxs-lookup"><span data-stu-id="64210-133">Valid child elements for a <xref:System.Windows.Documents.TableCell> include.</span></span>  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -65,22 +71,22 @@ caps.handback.revision: 15
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell> 項目不可直接裝載文字內容。  若需 <xref:System.Windows.Documents.TableCell> 等非固定格式內容項目之內含項目規則的詳細資訊，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+>  <span data-ttu-id="64210-134"><xref:System.Windows.Documents.TableCell>項目可能不會直接裝載文字內容。</span><span class="sxs-lookup"><span data-stu-id="64210-134"><xref:System.Windows.Documents.TableCell> elements may not directly host text content.</span></span> <span data-ttu-id="64210-135">如需有關資料流程的內含項目規則內容項目要<xref:System.Windows.Documents.TableCell>，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="64210-135">For more information about the containment rules for flow content elements like <xref:System.Windows.Documents.TableCell>, see [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md).</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table> 類似於 <xref:System.Windows.Controls.Grid> 項目，但其功能較多，因此需要更多資源負荷。  
+>  <span data-ttu-id="64210-136"><xref:System.Windows.Documents.Table>類似於<xref:System.Windows.Controls.Grid>項目但了更多的功能，因此，您需要更高的資源負擔。</span><span class="sxs-lookup"><span data-stu-id="64210-136"><xref:System.Windows.Documents.Table> is similar to the <xref:System.Windows.Controls.Grid> element but has more capabilities and, therefore, requires greater resource overhead.</span></span>  
   
- 下列範例使用 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 定義簡單的 2 x 3 資料表。  
+ <span data-ttu-id="64210-137">下列範例會定義簡單的 2 x 3 資料表與[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="64210-137">The following example defines a simple 2 x 3 table with [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span></span>  
   
- [!code-xml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
+ [!code-xaml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
   
- 下圖顯示這個範例呈現的效果。  
+ <span data-ttu-id="64210-138">下圖顯示此範例的轉譯方式。</span><span class="sxs-lookup"><span data-stu-id="64210-138">The following figure shows how this example renders.</span></span>  
   
- ![螢幕擷取畫面：呈現基本資料表](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")  
+ <span data-ttu-id="64210-139">![螢幕擷取畫面：轉譯基本表格](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")</span><span class="sxs-lookup"><span data-stu-id="64210-139">![Screenshot: Render a basic table](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")</span></span>  
   
 <a name="table_containment"></a>   
-### 資料表內含項目  
- <xref:System.Windows.Documents.Table> 衍生自 <xref:System.Windows.Documents.Block> 項目，且必須遵循 <xref:System.Windows.Documents.Block> 層級項目的一般規則。  <xref:System.Windows.Documents.Table> 項目可包含在下列任何項目中：  
+### <a name="table-containment"></a><span data-ttu-id="64210-140">表格內含項目</span><span class="sxs-lookup"><span data-stu-id="64210-140">Table Containment</span></span>  
+ <span data-ttu-id="64210-141"><xref:System.Windows.Documents.Table>衍生自<xref:System.Windows.Documents.Block>項目，並遵循的一般規則<xref:System.Windows.Documents.Block>層級項目。</span><span class="sxs-lookup"><span data-stu-id="64210-141"><xref:System.Windows.Documents.Table> derives from the <xref:System.Windows.Documents.Block> element, and adheres to the common rules for <xref:System.Windows.Documents.Block> level elements.</span></span>  <span data-ttu-id="64210-142">A<xref:System.Windows.Documents.Table>項目可能包含任何下列項目：</span><span class="sxs-lookup"><span data-stu-id="64210-142">A <xref:System.Windows.Documents.Table> element may be contained by any of the following elements:</span></span>  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   
@@ -97,20 +103,20 @@ caps.handback.revision: 15
 -   <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
-### 資料列群組  
- <xref:System.Windows.Documents.TableRowGroup> 項目提供一種方法，可以任意將資料表內的資料列放在一起形成群組；資料表中的每一資料列都必須屬於一個資料列群組。  資料列群組內的資料列通常會有相同的目的，而且可將樣式設計成同一個群組。  資料列群組的常見使用方式，是從資料表內含的主要內容區隔出特殊用途的資料列，如標題、頁首與頁尾 \(Footer\) 資料列。  
+### <a name="row-groupings"></a><span data-ttu-id="64210-143">資料列群組</span><span class="sxs-lookup"><span data-stu-id="64210-143">Row Groupings</span></span>  
+ <span data-ttu-id="64210-144"><xref:System.Windows.Documents.TableRowGroup>項目會提供用來在任意資料表內的群組資料列; 資料表中的每個資料列必須屬於資料列群組。</span><span class="sxs-lookup"><span data-stu-id="64210-144">The <xref:System.Windows.Documents.TableRowGroup> element provides a way to arbitrarily group rows within a table; every row in a table must belong to a row grouping.</span></span>  <span data-ttu-id="64210-145">資料列群組內的資料列通常會共用相同的意圖，也可能會設計成一個群組。</span><span class="sxs-lookup"><span data-stu-id="64210-145">Rows within a row group often share a common intent, and may be styled as a group.</span></span>  <span data-ttu-id="64210-146">資料列群組的常見用法是從表格所包含的主要內容中將特殊用途的資料列分隔開來，例如，標題、頁首和頁尾資料列。</span><span class="sxs-lookup"><span data-stu-id="64210-146">A common use for row groupings is to separate special-purpose rows, such as a title, header, and footer rows, from the primary content contained by the table.</span></span>  
   
- 下列範例使用 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 定義資料表，並設定其中頁首與頁尾資料列的樣式。  
+ <span data-ttu-id="64210-147">下列範例會使用[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]定義具有已設定樣式的頁首及頁尾資料列的資料表。</span><span class="sxs-lookup"><span data-stu-id="64210-147">The following example uses [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] to define a table with styled header and footer rows.</span></span>  
   
- [!code-xml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
+ [!code-xaml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
   
- 下圖顯示這個範例呈現的效果。  
+ <span data-ttu-id="64210-148">下圖顯示此範例的轉譯方式。</span><span class="sxs-lookup"><span data-stu-id="64210-148">The following figure shows how this example renders.</span></span>  
   
- ![螢幕擷取畫面：資料表資料列群組](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table\_RowGroups")  
+ <span data-ttu-id="64210-149">![螢幕擷取畫面：表格資料列群組](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table_RowGroups")</span><span class="sxs-lookup"><span data-stu-id="64210-149">![Screenshot: Table row groups](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table_RowGroups")</span></span>  
   
-<a name="renderning_precedence"></a>   
-### 背景呈現優先順序  
- 資料表項目會以下列順序呈現 \(由低至高的[疊置順序](GTMT)\)。  此順序不可變更。  例如，這些項目並沒有「疊置順序」屬性以用來覆寫已建立之順序。  
+<a name="rendering_precedence"></a>   
+### <a name="background-rendering-precedence"></a><span data-ttu-id="64210-150">背景轉譯優先順序</span><span class="sxs-lookup"><span data-stu-id="64210-150">Background Rendering Precedence</span></span>  
+ <span data-ttu-id="64210-151">表格元素會依下列順序 (從最低到最高的疊置順序) 來轉譯。</span><span class="sxs-lookup"><span data-stu-id="64210-151">Table elements render in the following order (z-order from lowest to highest).</span></span> <span data-ttu-id="64210-152">此順序無法改變。</span><span class="sxs-lookup"><span data-stu-id="64210-152">This order cannot be changed.</span></span> <span data-ttu-id="64210-153">例如，您可以用來覆寫這個已建立之順序的這些元素不具任何「疊置順序」屬性。</span><span class="sxs-lookup"><span data-stu-id="64210-153">For example, there is no "Z-order" property for these elements that you can use to override this established order.</span></span>  
   
 1.  <xref:System.Windows.Documents.Table>  
   
@@ -122,65 +128,65 @@ caps.handback.revision: 15
   
 5.  <xref:System.Windows.Documents.TableCell>  
   
- 請考量下列範例，此範例會定義資料表中前述每個項目的背景色彩。  
+ <span data-ttu-id="64210-154">請考慮下列範例，其會針對表格內這其中每一個元素定義背景色彩。</span><span class="sxs-lookup"><span data-stu-id="64210-154">Consider the following example, which defines background colors for each of these elements within a table.</span></span>  
   
- [!code-xml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
+ [!code-xaml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
   
- 下圖顯示此範例所呈現的內容 \(僅顯示背景色彩\)。  
+ <span data-ttu-id="64210-155">下圖顯示此範例的轉譯方式 (僅顯示背景色彩)。</span><span class="sxs-lookup"><span data-stu-id="64210-155">The following figure shows how this example renders (showing background colors only).</span></span>  
   
- ![螢幕擷取畫面：資料表疊置順序](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table\_ZOrder")  
+ <span data-ttu-id="64210-156">![螢幕擷取畫面︰表格疊置順序](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")</span><span class="sxs-lookup"><span data-stu-id="64210-156">![Screenshot: Table z&#45;order](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")</span></span>  
   
 <a name="spanning_rows_or_columns"></a>   
-### 擴展資料列或資料行  
- 資料表儲存格可分別使用 <xref:System.Windows.Documents.TableCell.RowSpan%2A> 或 <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> 屬性進行設定，以擴展多個資料列或資料行。  
+### <a name="spanning-rows-or-columns"></a><span data-ttu-id="64210-157">跨越資料列和資料行</span><span class="sxs-lookup"><span data-stu-id="64210-157">Spanning Rows or Columns</span></span>  
+ <span data-ttu-id="64210-158">表格儲存格可能設定成跨越多個資料列或資料行使用<xref:System.Windows.Documents.TableCell.RowSpan%2A>或<xref:System.Windows.Documents.TableCell.ColumnSpan%2A>分別屬性。</span><span class="sxs-lookup"><span data-stu-id="64210-158">Table cells may be configured to span multiple rows or columns by using the <xref:System.Windows.Documents.TableCell.RowSpan%2A> or <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> attributes, respectively.</span></span>  
   
- 請考量下列範例，其中的儲存格擴展至三個資料行。  
+ <span data-ttu-id="64210-159">請考慮下列範例，其中有一個儲存格會跨越三個資料行。</span><span class="sxs-lookup"><span data-stu-id="64210-159">Consider the following example, in which a cell spans three columns.</span></span>  
   
- [!code-xml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
+ [!code-xaml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
   
- 下圖顯示這個範例呈現的效果。  
+ <span data-ttu-id="64210-160">下圖顯示此範例的轉譯方式。</span><span class="sxs-lookup"><span data-stu-id="64210-160">The following figure shows how this example renders.</span></span>  
   
- ![螢幕擷取畫面：儲存格合併三欄](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table\_ColumnSpan")  
+ <span data-ttu-id="64210-161">![螢幕擷取畫面：儲存格跨越三個資料行](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table_ColumnSpan")</span><span class="sxs-lookup"><span data-stu-id="64210-161">![Screenshot: Cell spanning all three columns](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table_ColumnSpan")</span></span>  
   
 <a name="building_a_table_with_code"></a>   
-## 使用程式碼建置資料表  
- 下列範例顯示如何以程式設計的方式建立 <xref:System.Windows.Documents.Table> 並為其填入內容。  資料表的內容會分配到五個資料列 \(以 <xref:System.Windows.Documents.Table.RowGroups%2A> 物件中所含的 <xref:System.Windows.Documents.TableRow> 物件表示\) 及六個資料行 \(以 <xref:System.Windows.Documents.TableColumn> 物件表示\) 中。  這些資料列分別用於不同的顯示用途，包括為整個資料表下標的標題資料列、用以說明資料表中各資料行的頁首資料列，以及具有摘要資訊的頁尾資料列。  請注意，「標題」、「頁首」與「頁尾」等資料列的概念並非資料表原本所固有，它們只是具有不同特性的資料列。  資料表儲存格含有實際的內容，其中可包含文字、影像或其他幾乎所有的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 項目。  
+## <a name="building-a-table-with-code"></a><span data-ttu-id="64210-162">使用程式碼建置表格</span><span class="sxs-lookup"><span data-stu-id="64210-162">Building a Table With Code</span></span>  
+ <span data-ttu-id="64210-163">下列範例顯示如何以程式設計方式建立<xref:System.Windows.Documents.Table>並填入內容。</span><span class="sxs-lookup"><span data-stu-id="64210-163">The following examples show how to programmatically create a <xref:System.Windows.Documents.Table> and populate it with content.</span></span> <span data-ttu-id="64210-164">資料表的內容分配到五個資料列 (由<xref:System.Windows.Documents.TableRow>所包含的物件<xref:System.Windows.Documents.Table.RowGroups%2A>物件) 和六個資料行 (由<xref:System.Windows.Documents.TableColumn>物件)。</span><span class="sxs-lookup"><span data-stu-id="64210-164">The contents of the table are apportioned into five rows (represented by <xref:System.Windows.Documents.TableRow> objects contained in a <xref:System.Windows.Documents.Table.RowGroups%2A> object) and six columns (represented by <xref:System.Windows.Documents.TableColumn> objects).</span></span> <span data-ttu-id="64210-165">資料列可用於不同的顯示用途，包括用來為整個表格加上標題的標題資料列、用來說明表格中資料之資料行的標頭資料列，以及含有摘要資訊的頁尾資料列。</span><span class="sxs-lookup"><span data-stu-id="64210-165">The rows are used for different presentation purposes, including a title row intended to title the entire table, a header row to describe the columns of data in the table, and a footer row with summary information.</span></span>  <span data-ttu-id="64210-166">請注意，「標題」、「標頭」和「頁尾」資料列的概念不是表格固有的；這些只是具有不同特性的資料列。</span><span class="sxs-lookup"><span data-stu-id="64210-166">Note that the notion of "title", "header", and "footer" rows are not inherent to the table; these are simply rows with different characteristics.</span></span> <span data-ttu-id="64210-167">資料表資料格包含實際的內容，其中可包含的文字、 影像或幾乎任何其他[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]項目。</span><span class="sxs-lookup"><span data-stu-id="64210-167">Table cells contain the actual content, which can be comprised of text, images, or nearly any other [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] element.</span></span>  
   
- 首先，建立 <xref:System.Windows.Documents.FlowDocument> 以裝載 <xref:System.Windows.Documents.Table>，然後建立新的 <xref:System.Windows.Documents.Table> 並將其加入至 <xref:System.Windows.Documents.FlowDocument> 的內容中。  
+ <span data-ttu-id="64210-168">首先，<xref:System.Windows.Documents.FlowDocument>建立主機<xref:System.Windows.Documents.Table>，和新<xref:System.Windows.Documents.Table>已建立並加入至內容<xref:System.Windows.Documents.FlowDocument>。</span><span class="sxs-lookup"><span data-stu-id="64210-168">First, a <xref:System.Windows.Documents.FlowDocument> is created to host the <xref:System.Windows.Documents.Table>, and a new <xref:System.Windows.Documents.Table> is created and added to the contents of the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
- 接著，建立六個 <xref:System.Windows.Documents.TableColumn> 物件，並將其加入至資料表的 <xref:System.Windows.Documents.Table.Columns%2A> 集合中，並為其套用某格式。  
+ <span data-ttu-id="64210-169">接下來的六個<xref:System.Windows.Documents.TableColumn>物件會建立並加入至資料表的<xref:System.Windows.Documents.Table.Columns%2A>集合中具有某些所套用的格式。</span><span class="sxs-lookup"><span data-stu-id="64210-169">Next, six <xref:System.Windows.Documents.TableColumn> objects are created and added to the table's <xref:System.Windows.Documents.Table.Columns%2A> collection, with some formatting applied.</span></span>  
   
 > [!NOTE]
->  請注意，資料表的 <xref:System.Windows.Documents.Table.Columns%2A> 集合使用以零起始的標準索引。  
+>  <span data-ttu-id="64210-170">請注意，資料表的<xref:System.Windows.Documents.Table.Columns%2A>集合會使用標準的以零為起始索引。</span><span class="sxs-lookup"><span data-stu-id="64210-170">Note that the table's <xref:System.Windows.Documents.Table.Columns%2A> collection uses standard zero-based indexing.</span></span>  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
- 接下來建立標題資料列，並將其加入至資料表中並套用某格式。  標題資料列包含單一儲存格，但擴展至資料表中全部六個資料行。  
+ <span data-ttu-id="64210-171">接下來，建立標題資料列並新增至已套用某些格式的表格。</span><span class="sxs-lookup"><span data-stu-id="64210-171">Next, a title row is created and added to the table with some formatting applied.</span></span>  <span data-ttu-id="64210-172">標題資料列會在資料表中包含跨越所有六個資料行的單一儲存格。</span><span class="sxs-lookup"><span data-stu-id="64210-172">The title row happens to contain a single cell that spans all six columns in the table.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
  [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
- 接著建立頁首資料列，並將其加入至資料表中，頁首資料列中會建立儲存格，並填入內容。  
+ <span data-ttu-id="64210-173">接著，建立標頭資料列並新增至表格，然後在標頭資料列中建立儲存格並填入內容。</span><span class="sxs-lookup"><span data-stu-id="64210-173">Next, a header row is created and added to the table, and the cells in the header row are created and populated with content.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
  [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
- 接著建立資料的資料列，並將其加入至資料表中，此資料列中會建立儲存格，並填入內容。  建置此資料列與建置頁首資料列相似，差別在於套用的格式略有不同。  
+ <span data-ttu-id="64210-174">接下來，建立資料的資料列並新增至表格，然後在此資料列中建立儲存格並填入內容。</span><span class="sxs-lookup"><span data-stu-id="64210-174">Next, a row for data is created and added to the table, and the cells in this row are created and populated with content.</span></span>  <span data-ttu-id="64210-175">建置此資料列類似於建置標頭資料列，但套用的格式稍有不同。</span><span class="sxs-lookup"><span data-stu-id="64210-175">Building this row is similar to building the header row, with slightly different formatting applied.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
  [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
- 最後建立頁尾資料列，並將其加入與格式化。  與標題資料列相同，頁尾也包含單一儲存格但擴展至資料表中全部六個資料行。  
+ <span data-ttu-id="64210-176">最後，建立並新增頁尾資料列，然後設定格式。</span><span class="sxs-lookup"><span data-stu-id="64210-176">Finally, a footer row is created, added, and formatted.</span></span>  <span data-ttu-id="64210-177">如同標題資料列，頁尾資料列會在資料表中包含跨越所有六個資料行的單一儲存格。</span><span class="sxs-lookup"><span data-stu-id="64210-177">Like the title row, the footer contains a single cell that spans all six columns in the table.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## 請參閱  
- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [使用 XAML 定義資料表](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)   
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [使用非固定格式項目](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)
+## <a name="see-also"></a><span data-ttu-id="64210-178">另請參閱</span><span class="sxs-lookup"><span data-stu-id="64210-178">See Also</span></span>  
+ [<span data-ttu-id="64210-179">非固定格式文件概觀</span><span class="sxs-lookup"><span data-stu-id="64210-179">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="64210-180">使用 XAML 定義表格</span><span class="sxs-lookup"><span data-stu-id="64210-180">Define a Table with XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [<span data-ttu-id="64210-181">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="64210-181">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="64210-182">使用非固定格式元素</span><span class="sxs-lookup"><span data-stu-id="64210-182">Use Flow Content Elements</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)

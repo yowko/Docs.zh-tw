@@ -1,57 +1,60 @@
 ---
-title: "Windows Communication Foundation 架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "架構 [WCF]"
-  - "WCF [WCF], 架構"
-  - "Windows Communication Foundation [WCF], 架構"
+title: "Windows Communication Foundation 架構"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation [WCF], architecture
+- WCF [WCF], architecture
+- architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fb706706869507a7cce35022525cf0efa34c15fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Communication Foundation 架構
-下圖說明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 架構的各主要層。  
+# <a name="windows-communication-foundation-architecture"></a><span data-ttu-id="ac8a5-102">Windows Communication Foundation 架構</span><span class="sxs-lookup"><span data-stu-id="ac8a5-102">Windows Communication Foundation Architecture</span></span>
+<span data-ttu-id="ac8a5-103">下圖說明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 架構的各主要層。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-103">The following graphic illustrates the major layers of the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] architecture.</span></span>  
   
-## WCF 架構  
- ![WCF 架構](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF\_Architecture")  
+## <a name="wcf-architecture"></a><span data-ttu-id="ac8a5-104">WCF 架構</span><span class="sxs-lookup"><span data-stu-id="ac8a5-104">WCF Architecture</span></span>  
+ <span data-ttu-id="ac8a5-105">![WCF 架構](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")</span><span class="sxs-lookup"><span data-stu-id="ac8a5-105">![The WCF Architecture](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")</span></span>  
   
-### 合約和描述  
- 合約會定義訊息系統的各方面。資料合約會描述服務所能建立或使用之每個訊息在構成時所使用的每個參數。這些訊息參數是由 XML 結構描述定義語言 \(XSD\) 文件所定義，因此可使任何瞭解 XML 的系統都能處理這些文件。訊息合約會使用 SOAP 通訊協定來定義特定訊息部分，並允許在互通性 \(Interoperability\) 要求時對訊息的部分進行更精細的控制。服務合約會指定服務的實際方法簽章，而且會透過一種支援的程式語言 \(例如 Visual Basic 或 Visual C\#\) 來散發為介面。  
+### <a name="contracts-and-descriptions"></a><span data-ttu-id="ac8a5-106">合約和描述</span><span class="sxs-lookup"><span data-stu-id="ac8a5-106">Contracts and Descriptions</span></span>  
+ <span data-ttu-id="ac8a5-107">合約會定義訊息系統的各方面。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-107">Contracts define various aspects of the message system.</span></span> <span data-ttu-id="ac8a5-108">資料合約會描述服務所能建立或使用之每個訊息在構成時所使用的每個參數。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-108">The data contract describes every parameter that makes up every message that a service can create or consume.</span></span> <span data-ttu-id="ac8a5-109">這些訊息參數是由 XML 結構描述定義語言 (XSD) 文件所定義，因此可使任何瞭解 XML 的系統都能處理這些文件。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-109">The message parameters are defined by XML Schema definition language (XSD) documents, enabling any system that understands XML to process the documents.</span></span> <span data-ttu-id="ac8a5-110">訊息合約會使用 SOAP 通訊協定來定義特定訊息部分，並允許在互通性 (Interoperability) 要求時對訊息的部分進行更精細的控制。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-110">The message contract defines specific message parts using SOAP protocols, and allows finer-grained control over parts of the message, when interoperability demands such precision.</span></span> <span data-ttu-id="ac8a5-111">服務合約會指定服務的實際方法簽章，而且會透過一種支援的程式語言 (例如 Visual Basic 或 Visual C#) 來散發為介面。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-111">The service contract specifies the actual method signatures of the service, and is distributed as an interface in one of the supported programming languages, such as Visual Basic or Visual C#.</span></span>  
   
- 原則和繫結會規定與服務進行通訊時的必要條件。例如，繫結必須 \(至少需要\) 指定使用的傳輸 \(例如，HTTP 或 TCP\)，以及編碼方式。原則包含在與服務通訊時必須符合的安全性需求和其他條件。  
+ <span data-ttu-id="ac8a5-112">原則和繫結會規定與服務進行通訊時的必要條件。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-112">Policies and bindings stipulate the conditions required to communicate with a service.</span></span>  <span data-ttu-id="ac8a5-113">例如，繫結必須 (至少需要) 指定使用的傳輸 (例如，HTTP 或 TCP)，以及編碼方式。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-113">For example, the binding must (at a minimum) specify the transport used (for example, HTTP or TCP), and an encoding.</span></span> <span data-ttu-id="ac8a5-114">原則包含在與服務通訊時必須符合的安全性需求和其他條件。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-114">Policies include security requirements and other conditions that must be met to communicate with a service.</span></span>  
   
-### 服務執行階段  
- 服務執行階段層包含只會在服務之實際作業期間發生的行為，也就是服務的執行階段行為。節流設定會控制要處理多少訊息，而隨著對服務的要求擴大到預設限制，這個數量可能會有所不同。錯誤行為會指定在服務發生內部錯誤時所要發生的動作，例如，控制有哪些資訊要傳送到用戶端 \(有太多資料會讓惡意使用者有機會發動攻擊\)。中繼資料行為會管理採用什麼方式以及是否將中繼資料提供給外界。執行個體 \(Instance\) 行為會指定可以執行服務之執行個體的數目 \(例如，「單一」就是指定僅能使用一個執行個體來處理所有訊息\)。交易行為可使交易的作業在發生失敗時進行復原。分派行為會控制 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基礎結構處理訊息的方式。  
+### <a name="service-runtime"></a><span data-ttu-id="ac8a5-115">服務執行階段</span><span class="sxs-lookup"><span data-stu-id="ac8a5-115">Service Runtime</span></span>  
+ <span data-ttu-id="ac8a5-116">服務執行階段層包含只會在服務之實際作業期間發生的行為，也就是服務的執行階段行為。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-116">The service runtime layer contains the behaviors that occur only during the actual operation of the service, that is, the runtime behaviors of the service.</span></span> <span data-ttu-id="ac8a5-117">節流設定會控制要處理多少訊息，而隨著對服務的要求擴大到預設限制，這個數量可能會有所不同。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-117">Throttling controls how many messages are processed, which can be varied if the demand for the service grows to a preset limit.</span></span> <span data-ttu-id="ac8a5-118">錯誤行為會指定在服務發生內部錯誤時所要發生的動作，例如，控制有哪些資訊要傳送到用戶端 </span><span class="sxs-lookup"><span data-stu-id="ac8a5-118">An error behavior specifies what occurs when an internal error occurs on the service, for example, by controlling what information is communicated to the client.</span></span> <span data-ttu-id="ac8a5-119">(有太多資料會讓惡意使用者有機會發動攻擊)。中繼資料行為會管理採用什麼方式以及是否將中繼資料提供給外界。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-119">(Too much information can give a malicious user an advantage in mounting an attack.) Metadata behavior governs how and whether metadata is made available to the outside world.</span></span> <span data-ttu-id="ac8a5-120">執行個體 (Instance) 行為會指定可以執行服務之執行個體的數目 (例如，「單一」就是指定僅能使用一個執行個體來處理所有訊息)。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-120">Instance behavior specifies how many instances of the service can be run (for example, a singleton specifies only one instance to process all messages).</span></span> <span data-ttu-id="ac8a5-121">交易行為可使交易的作業在發生失敗時進行復原。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-121">Transaction behavior enables the rollback of transacted operations if a failure occurs.</span></span> <span data-ttu-id="ac8a5-122">分派行為會控制 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基礎結構處理訊息的方式。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-122">Dispatch behavior is the control of how a message is processed by the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infrastructure.</span></span>  
   
- 擴充性可使執行階段處理序進行自訂。例如，訊息檢查是檢查訊息之部分的功能，而啟用參數篩選功能時，便會根據作用於訊息標頭的篩選來發生預設動作。  
+ <span data-ttu-id="ac8a5-123">擴充性可使執行階段處理序進行自訂。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-123">Extensibility enables customization of runtime processes.</span></span> <span data-ttu-id="ac8a5-124">例如，訊息檢查是檢查訊息之部分的功能，而啟用參數篩選功能時，便會根據作用於訊息標頭的篩選來發生預設動作。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-124">For example, message inspection is the facility to inspect parts of a message, and parameter filtering enables preset actions to occur based on filters acting on message headers.</span></span>  
   
-### 訊息  
- 訊息層是由「*通道*」\(Channel\) 所組成。通道是指能以某種方式 \(例如，藉由驗證訊息\) 處理訊息的元件。一組通道又稱為「*通道堆疊*」\(Channel Stack\)。通道會在訊息和訊息標頭上運作。這點不同於服務執行階段層，其主要著重於關於處理訊息本文的執行。  
+### <a name="messaging"></a><span data-ttu-id="ac8a5-125">訊息</span><span class="sxs-lookup"><span data-stu-id="ac8a5-125">Messaging</span></span>  
+ <span data-ttu-id="ac8a5-126">在訊息層組成*通道*。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-126">The messaging layer is composed of *channels*.</span></span> <span data-ttu-id="ac8a5-127">通道是指能以某種方式 (例如，藉由驗證訊息) 處理訊息的元件。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-127">A channel is a component that processes a message in some way, for example, by authenticating a message.</span></span> <span data-ttu-id="ac8a5-128">一組通道就是所謂*通道堆疊*。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-128">A set of channels is also known as a *channel stack*.</span></span> <span data-ttu-id="ac8a5-129">通道會在訊息和訊息標頭上運作。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-129">Channels operate on messages and message headers.</span></span> <span data-ttu-id="ac8a5-130">這點不同於服務執行階段層，其主要著重於關於處理訊息本文的執行。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-130">This is different from the service runtime layer, which is primarily concerned about processing the contents of message bodies.</span></span>  
   
- 通道類型有兩種：傳輸通道和通訊協定通道。  
+ <span data-ttu-id="ac8a5-131">通道類型有兩種：傳輸通道和通訊協定通道。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-131">There are two types of channels: transport channels and protocol channels.</span></span>  
   
- 傳輸通道會從網路讀取和寫入訊息 \(或是與外界連接的一些其他通訊點\)。有些傳輸會使用編碼器在訊息 \(表示為 XML Infoset\) 和網路所使用的位元組資料流表示之間來回轉換。這類傳輸的範例包括 HTTP、具名管道 \(Named Pipe\)、TCP 及 MSMQ。這類編碼的範例包括 XML 和最佳化的二進位編碼。  
+ <span data-ttu-id="ac8a5-132">傳輸通道會從網路讀取和寫入訊息 (或是與外界連接的一些其他通訊點)。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-132">Transport channels read and write messages from the network (or some other communication point with the outside world).</span></span> <span data-ttu-id="ac8a5-133">有些傳輸會使用編碼器在訊息 (表示為 XML Infoset) 和網路所使用的位元組資料流表示之間來回轉換。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-133">Some transports use an encoder to convert messages (which are represented as XML Infosets) to and from the byte stream representation used by the network.</span></span> <span data-ttu-id="ac8a5-134">這類傳輸的範例包括 HTTP、具名管道 (Named Pipe)、TCP 及 MSMQ。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-134">Examples of transports are HTTP, named pipes, TCP, and MSMQ.</span></span> <span data-ttu-id="ac8a5-135">這類編碼的範例包括 XML 和最佳化的二進位編碼。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-135">Examples of encodings are XML and optimized binary.</span></span>  
   
- 通訊協定通道會實作訊息處理通訊協定，而此通常是藉由讀取或寫入訊息的額外標頭來完成。這類通訊協定的範例包括 WS\-Security 和 WS\-Reliability。  
+ <span data-ttu-id="ac8a5-136">通訊協定通道會實作訊息處理通訊協定，而此通常是藉由讀取或寫入訊息的額外標頭來完成。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-136">Protocol channels implement message processing protocols, often by reading or writing additional headers to the message.</span></span> <span data-ttu-id="ac8a5-137">這類通訊協定的範例包括 WS-Security 和 WS-Reliability。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-137">Examples of such protocols include WS-Security and WS-Reliability.</span></span>  
   
- 訊息層說明資料的可能格式與交換模式。WS\-Security 是 WS\-Security 規格的實作 \(Implementation\)，此規格會啟用訊息層的安全性。WS\-Reliable 訊息通道可保證訊息的傳遞。編碼器會提供可以用來滿足訊息需要的各種編碼方式。HTTP 通道會指定對訊息傳遞使用超文字傳輸協定 \(Hypertext Transfer Protocol，HTTP\)。同樣地，TCP 通道會指定 TCP 通訊協定。交易流程通道會管理交易的訊息模式。具名管道通道會啟用處理序間通訊。MSMQ 通道會啟用與 MSMQ 應用程式的互通。  
+ <span data-ttu-id="ac8a5-138">訊息層說明資料的可能格式與交換模式。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-138">The messaging layer illustrates the possible formats and exchange patterns of the data.</span></span> <span data-ttu-id="ac8a5-139">WS-Security 是 WS-Security 規格的實作 (Implementation)，此規格會啟用訊息層的安全性。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-139">WS-Security is an implementation of the WS-Security specification enabling security at the message layer.</span></span> <span data-ttu-id="ac8a5-140">WS-Reliable 訊息通道可保證訊息的傳遞。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-140">The WS-Reliable Messaging channel enables the guarantee of message delivery.</span></span> <span data-ttu-id="ac8a5-141">編碼器會提供可以用來滿足訊息需要的各種編碼方式。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-141">The encoders present a variety of encodings that can be used to suit the needs of the message.</span></span> <span data-ttu-id="ac8a5-142">HTTP 通道會指定對訊息傳遞使用超文字傳輸協定 (Hypertext Transfer Protocol，HTTP)。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-142">The HTTP channel specifies that the HyperText Transport Protocol is used for message delivery.</span></span> <span data-ttu-id="ac8a5-143">同樣地，TCP 通道會指定 TCP 通訊協定。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-143">The TCP channel similarly specifies the TCP protocol.</span></span> <span data-ttu-id="ac8a5-144">交易流程通道會管理交易的訊息模式。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-144">The Transaction Flow channel governs transacted message patterns.</span></span> <span data-ttu-id="ac8a5-145">具名管道通道會啟用處理序間通訊。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-145">The Named Pipe channel enables interprocess communication.</span></span> <span data-ttu-id="ac8a5-146">MSMQ 通道會啟用與 MSMQ 應用程式的互通。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-146">The MSMQ channel enables interoperation with MSMQ applications.</span></span>  
   
-### 裝載和啟動  
- 服務的最終形式就是程式。就像其他的程式，服務必須在可執行檔中執行。因此稱為「*自我裝載*」\(Self\-Hosted\) 服務。  
+### <a name="hosting-and-activation"></a><span data-ttu-id="ac8a5-147">裝載和啟動</span><span class="sxs-lookup"><span data-stu-id="ac8a5-147">Hosting and Activation</span></span>  
+ <span data-ttu-id="ac8a5-148">服務的最終形式就是程式。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-148">In its final form, a service is a program.</span></span> <span data-ttu-id="ac8a5-149">就像其他的程式，服務必須在可執行檔中執行。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-149">Like other programs, a service must be run in an executable.</span></span> <span data-ttu-id="ac8a5-150">這稱為*自我裝載*服務。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-150">This is known as a *self-hosted* service.</span></span>  
   
- 服務也可以在像是 IIS 或 Windows Activation Service \(WAS\) 等外部代理程式所管理的可執行檔中進行「*裝載*」\(Host\) 或執行。WAS 讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式能在部署到執行 WAS 的電腦上時自動啟動。服務也可以透過手動方式來當做可執行檔 \(.exe 檔\) 執行。服務也可以自動當做 Windows 服務執行。COM\+ 元件也可以裝載為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。  
+ <span data-ttu-id="ac8a5-151">服務也可以是*裝載*，或是執行受外部代理程式，例如 IIS 或 Windows Activation Service (WAS) 的可執行檔中。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-151">Services can also be *hosted*, or run in an executable managed by an external agent, such as IIS or Windows Activation Service (WAS).</span></span> <span data-ttu-id="ac8a5-152">WAS 讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式能在部署到執行 WAS 的電腦上時自動啟動。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-152">WAS enables [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications to be activated automatically when deployed on a computer running WAS.</span></span> <span data-ttu-id="ac8a5-153">服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-153">Services can also be manually run as executables (.exe files).</span></span> <span data-ttu-id="ac8a5-154">服務也可以自動當做 Windows 服務執行。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-154">A service can also be run automatically as a Windows service.</span></span> <span data-ttu-id="ac8a5-155">COM+ 元件也可以裝載為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。</span><span class="sxs-lookup"><span data-stu-id="ac8a5-155">COM+ components can also be hosted as [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services.</span></span>  
   
-## 請參閱  
- [何謂 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)   
- [Windows Communication Foundation 的主要概念](../../../docs/framework/wcf/fundamental-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="ac8a5-156">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ac8a5-156">See Also</span></span>  
+ [<span data-ttu-id="ac8a5-157">什麼是 Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ac8a5-157">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
+ [<span data-ttu-id="ac8a5-158">Windows Communication Foundation 的基本概念</span><span class="sxs-lookup"><span data-stu-id="ac8a5-158">Fundamental Windows Communication Foundation Concepts</span></span>](../../../docs/framework/wcf/fundamental-concepts.md)

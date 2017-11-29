@@ -1,33 +1,32 @@
 ---
-title: "SyncLock Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.SyncLock"
-  - "SyncLock"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "threading [Visual Basic], locks"
-  - "SyncLock statement"
-  - "locks, threads"
+title: "SyncLock 陳述式"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.SyncLock
+- SyncLock
+helpviewer_keywords:
+- threading [Visual Basic], locks
+- SyncLock statement [Visual Basic]
+- locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c0c826e1ba592dfc4f2899a26102466d2e7df54f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# SyncLock Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-在執行陳述式區塊之前，取得此區塊的獨佔鎖定。  
+# <a name="synclock-statement"></a><span data-ttu-id="58a06-102">SyncLock 陳述式</span><span class="sxs-lookup"><span data-stu-id="58a06-102">SyncLock Statement</span></span>
+<span data-ttu-id="58a06-103">取得陳述式區塊的獨佔鎖定之前執行的區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-103">Acquires an exclusive lock for a statement block before executing the block.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="58a06-104">語法</span><span class="sxs-lookup"><span data-stu-id="58a06-104">Syntax</span></span>  
   
 ```  
 SyncLock lockobject  
@@ -35,72 +34,72 @@ SyncLock lockobject
 End SyncLock  
 ```  
   
-## 組件  
+## <a name="parts"></a><span data-ttu-id="58a06-105">組件</span><span class="sxs-lookup"><span data-stu-id="58a06-105">Parts</span></span>  
  `lockobject`  
- 必要項。  判定為物件參考的運算式。  
+ <span data-ttu-id="58a06-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="58a06-106">Required.</span></span> <span data-ttu-id="58a06-107">評估為物件參考的運算式。</span><span class="sxs-lookup"><span data-stu-id="58a06-107">Expression that evaluates to an object reference.</span></span>  
   
  `block`  
- 選擇項。  要在取得鎖定時執行的陳述式區塊。  
+ <span data-ttu-id="58a06-108">選擇項。</span><span class="sxs-lookup"><span data-stu-id="58a06-108">Optional.</span></span> <span data-ttu-id="58a06-109">屬於已取得鎖定時要執行的陳述式區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-109">Block of statements that are to execute when the lock is acquired.</span></span>  
   
  `End SyncLock`  
- 結束 `SyncLock` 區塊。  
+ <span data-ttu-id="58a06-110">終止`SyncLock`區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-110">Terminates a `SyncLock` block.</span></span>  
   
-## 備註  
- `SyncLock` 陳述式可確保多個執行緒不會同時執行陳述式區塊。  `SyncLock` 可防止每個執行緒進入區塊，直到沒有其他執行緒在執行該區塊為止。  
+## <a name="remarks"></a><span data-ttu-id="58a06-111">備註</span><span class="sxs-lookup"><span data-stu-id="58a06-111">Remarks</span></span>  
+ <span data-ttu-id="58a06-112">`SyncLock`陳述式可確保多個執行緒不會在同時執行的陳述式區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-112">The `SyncLock` statement ensures that multiple threads do not execute the statement block at the same time.</span></span> <span data-ttu-id="58a06-113">`SyncLock`每個執行緒可防止輸入區塊，直到沒有其他執行緒正在執行它。</span><span class="sxs-lookup"><span data-stu-id="58a06-113">`SyncLock` prevents each thread from entering the block until no other thread is executing it.</span></span>  
   
- `SyncLock` 的最常見用法就是保護資料，使其不會讓多個執行緒同時更新。  如果操作資料的陳述式必須在不受干擾的情況下完成，請將它們放在 `SyncLock` 區塊內。  
+ <span data-ttu-id="58a06-114">最常見的用法`SyncLock`是為了防止資料由多個執行緒同時更新。</span><span class="sxs-lookup"><span data-stu-id="58a06-114">The most common use of `SyncLock` is to protect data from being updated by more than one thread simultaneously.</span></span> <span data-ttu-id="58a06-115">如果操作資料的陳述式必須移至不受干擾完成，請將它們放在`SyncLock`區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-115">If the statements that manipulate the data must go to completion without interruption, put them inside a `SyncLock` block.</span></span>  
   
- 獨佔鎖定所保護的陳述式區塊有時稱為「*關鍵區段*」\(Critical Section\)。  
+ <span data-ttu-id="58a06-116">有時稱為陳述式區塊的獨佔鎖定所保護*關鍵區段*。</span><span class="sxs-lookup"><span data-stu-id="58a06-116">A statement block protected by an exclusive lock is sometimes called a *critical section*.</span></span>  
   
-## 規則  
+## <a name="rules"></a><span data-ttu-id="58a06-117">規則</span><span class="sxs-lookup"><span data-stu-id="58a06-117">Rules</span></span>  
   
--   分支。  您無法從區塊外部分支進入 `SyncLock` 區塊。  
+-   <span data-ttu-id="58a06-118">分支。</span><span class="sxs-lookup"><span data-stu-id="58a06-118">Branching.</span></span> <span data-ttu-id="58a06-119">您無法分支到`SyncLock`封鎖到區塊之外。</span><span class="sxs-lookup"><span data-stu-id="58a06-119">You cannot branch into a `SyncLock` block from outside the block.</span></span>  
   
--   鎖定物件值。  `lockobject` 的值不能是 `Nothing`。  您必須先建立鎖定物件，然後才能在 `SyncLock` 陳述式中使用它。  
+-   <span data-ttu-id="58a06-120">鎖定物件的值。</span><span class="sxs-lookup"><span data-stu-id="58a06-120">Lock Object Value.</span></span> <span data-ttu-id="58a06-121">值`lockobject`不可`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="58a06-121">The value of `lockobject` cannot be `Nothing`.</span></span> <span data-ttu-id="58a06-122">您必須建立之鎖定物件，再使用它在`SyncLock`陳述式。</span><span class="sxs-lookup"><span data-stu-id="58a06-122">You must create the lock object before you use it in a `SyncLock` statement.</span></span>  
   
-     執行 `SyncLock` 區塊時，您無法變更 `lockobject` 的值。  這個機制需要鎖定物件保持不變。  
+     <span data-ttu-id="58a06-123">您無法變更的值`lockobject`執行時`SyncLock`區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-123">You cannot change the value of `lockobject` while executing a `SyncLock` block.</span></span> <span data-ttu-id="58a06-124">這個機制需要之鎖定物件維持不變。</span><span class="sxs-lookup"><span data-stu-id="58a06-124">The mechanism requires that the lock object remain unchanged.</span></span>  
   
--   您可以在 `SyncLock` 區塊無法使用 [等候](../../../visual-basic/language-reference/operators/await-operator.md) 運算子。  
+-   <span data-ttu-id="58a06-125">您無法使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)中的運算子`SyncLock`區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-125">You can't use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in a `SyncLock` block.</span></span>  
   
-## 行為  
+## <a name="behavior"></a><span data-ttu-id="58a06-126">行為</span><span class="sxs-lookup"><span data-stu-id="58a06-126">Behavior</span></span>  
   
--   機制。  當執行緒到達 `SyncLock` 陳述式時，它會評估 `lockobject` 運算式並暫止執行，直到它對運算式所傳回的物件取得獨佔鎖定為止。  當其他執行緒到達 `SyncLock` 陳述式時，它不會取得鎖定，直到第一個執行緒執行 `End SyncLock` 陳述式為止。  
+-   <span data-ttu-id="58a06-127">機制。</span><span class="sxs-lookup"><span data-stu-id="58a06-127">Mechanism.</span></span> <span data-ttu-id="58a06-128">當執行緒到達`SyncLock`陳述式，它會評估`lockobject`運算式並暫止執行，直到它取得運算式所傳回的物件上的獨佔鎖定。</span><span class="sxs-lookup"><span data-stu-id="58a06-128">When a thread reaches the `SyncLock` statement, it evaluates the `lockobject` expression and suspends execution until it acquires an exclusive lock on the object returned by the expression.</span></span> <span data-ttu-id="58a06-129">當另一個執行緒到達`SyncLock`陳述式，它不會取得鎖定的第一個執行緒執行直到`End SyncLock`陳述式。</span><span class="sxs-lookup"><span data-stu-id="58a06-129">When another thread reaches the `SyncLock` statement, it does not acquire a lock until the first thread executes the `End SyncLock` statement.</span></span>  
   
--   保護資料。  如果 `lockobject` 是 `Shared` 變數，則獨佔鎖定會防止類別中任何執行個體的執行緒，在當其他執行緒執行 `SyncLock` 區塊時執行這個區塊。  這可保護共用於所有執行個體之間的資料。  
+-   <span data-ttu-id="58a06-130">受保護的資料。</span><span class="sxs-lookup"><span data-stu-id="58a06-130">Protected Data.</span></span> <span data-ttu-id="58a06-131">如果`lockobject`是`Shared`變數的獨佔鎖定可防止任何類別執行個體中的執行緒執行`SyncLock`封鎖其他任何執行緒執行它時。</span><span class="sxs-lookup"><span data-stu-id="58a06-131">If `lockobject` is a `Shared` variable, the exclusive lock prevents a thread in any instance of the class from executing the `SyncLock` block while any other thread is executing it.</span></span> <span data-ttu-id="58a06-132">如此可保護的所有執行個體之間共用的資料。</span><span class="sxs-lookup"><span data-stu-id="58a06-132">This protects data that is shared among all the instances.</span></span>  
   
-     如果 `lockobject` 是執行個體變數 \(Instance Variable\) \(不是 `Shared`\)，則鎖定會防止在目前執行個體中執行之執行緒會與相同執行個體中的其他執行緒同時執行 `SyncLock` 區塊。  這可保護個別執行個體所維護的資料。  
+     <span data-ttu-id="58a06-133">如果`lockobject`是執行個體變數 (不`Shared`)，鎖定可預防執行目前的執行個體中執行的執行緒`SyncLock`封鎖在相同的執行個體中的另一個執行緒在同時間。</span><span class="sxs-lookup"><span data-stu-id="58a06-133">If `lockobject` is an instance variable (not `Shared`), the lock prevents a thread running in the current instance from executing the `SyncLock` block at the same time as another thread in the same instance.</span></span> <span data-ttu-id="58a06-134">如此可保護的個別執行個體所保留的資料。</span><span class="sxs-lookup"><span data-stu-id="58a06-134">This protects data maintained by the individual instance.</span></span>  
   
--   取得和釋放。  `SyncLock` 區塊的行為如同 `Try...Finally` 語法結構一般，其中 `Try` 區塊會對 `lockobject` 取得獨佔鎖定，而 `Finally` 區塊則會釋放它。  因為如此，所以不管您如何結束區塊，`SyncLock` 區塊都保證會釋放鎖定。  即使在未處理例外狀況的情況下也是一樣。  
+-   <span data-ttu-id="58a06-135">取得和釋放。</span><span class="sxs-lookup"><span data-stu-id="58a06-135">Acquisition and Release.</span></span> <span data-ttu-id="58a06-136">A`SyncLock`區塊的行為類似`Try...Finally`所在建構`Try`區塊上取得的獨佔鎖定`lockobject`和`Finally`區塊釋放它。</span><span class="sxs-lookup"><span data-stu-id="58a06-136">A `SyncLock` block behaves like a `Try...Finally` construction in which the `Try` block acquires an exclusive lock on `lockobject` and the `Finally` block releases it.</span></span> <span data-ttu-id="58a06-137">因為這個緣故，`SyncLock`區塊保證會釋放鎖定，不論您如何結束區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-137">Because of this, the `SyncLock` block guarantees release of the lock, no matter how you exit the block.</span></span> <span data-ttu-id="58a06-138">這是即使有未處理的例外狀況，則為 true。</span><span class="sxs-lookup"><span data-stu-id="58a06-138">This is true even in the case of an unhandled exception.</span></span>  
   
--   Framework 呼叫。  `SyncLock` 會呼叫 <xref:System.Threading> 命名空間中 `Monitor` 類別的 `Enter` 和 `Exit` 方法，藉以取得和釋放獨佔鎖定。  
+-   <span data-ttu-id="58a06-139">架構會呼叫。</span><span class="sxs-lookup"><span data-stu-id="58a06-139">Framework Calls.</span></span> <span data-ttu-id="58a06-140">`SyncLock`區塊會取得和釋放獨佔鎖定，藉由呼叫`Enter`和`Exit`方法`Monitor`類別<xref:System.Threading>命名空間。</span><span class="sxs-lookup"><span data-stu-id="58a06-140">The `SyncLock` block acquires and releases the exclusive lock by calling the `Enter` and `Exit` methods of the `Monitor` class in the <xref:System.Threading> namespace.</span></span>  
   
-## 程式設計作法  
- `lockobject` 運算式應該一律會判定為專屬於您類別的物件。  您應該宣告 `Private` 物件變數，以保護屬於目前執行個體的資料，或宣告 `Private Shared` 物件變數，以保護所有執行個體通用的資料。  
+## <a name="programming-practices"></a><span data-ttu-id="58a06-141">程式設計做法</span><span class="sxs-lookup"><span data-stu-id="58a06-141">Programming Practices</span></span>  
+ <span data-ttu-id="58a06-142">`lockobject`運算式應該一律等於專屬於您的類別的物件。</span><span class="sxs-lookup"><span data-stu-id="58a06-142">The `lockobject` expression should always evaluate to an object that belongs exclusively to your class.</span></span> <span data-ttu-id="58a06-143">您應該宣告`Private`物件變數，以保護資料屬於目前的執行個體，或`Private Shared`物件變數，以保護資料通用於所有執行個體。</span><span class="sxs-lookup"><span data-stu-id="58a06-143">You should declare a `Private` object variable to protect data belonging to the current instance, or a `Private Shared` object variable to protect data common to all instances.</span></span>  
   
- 您不該使用 `Me` 關鍵字，提供執行個體資料的鎖定物件。  如果類別之外的程式碼具有類別執行個體的參考，則它可以使用該參考做為 `SyncLock` 區塊 \(完全不同於您的區塊\) 的鎖定物件，保護不同的資料。  如此一來，您的類別和其他類別可以阻止彼此執行其不相關的 `SyncLock` 區塊。  同樣地，字串鎖定可能會有問題，因為使用相同字串的處理序中的任何其他程式碼將會共用相同的鎖定。  
+ <span data-ttu-id="58a06-144">您不應該使用`Me`關鍵字來提供鎖定物件執行個體資料。</span><span class="sxs-lookup"><span data-stu-id="58a06-144">You should not use the `Me` keyword to provide a lock object for instance data.</span></span> <span data-ttu-id="58a06-145">如果您的類別之外的程式碼類別的執行個體的參考，它可以使用該參考的鎖定物件為`SyncLock`區塊完全不同於您，保護不同的資料。</span><span class="sxs-lookup"><span data-stu-id="58a06-145">If code external to your class has a reference to an instance of your class, it could use that reference as a lock object for a `SyncLock` block completely different from yours, protecting different data.</span></span> <span data-ttu-id="58a06-146">如此一來，您的類別和其他類別可能會彼此封鎖無法執行其相關`SyncLock`區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-146">In this way, your class and the other class could block each other from executing their unrelated `SyncLock` blocks.</span></span> <span data-ttu-id="58a06-147">同樣地，字串鎖定可能會有問題，因為處理序使用相同的字串中的任何其他程式碼會共用相同的鎖定。</span><span class="sxs-lookup"><span data-stu-id="58a06-147">Similarly locking on a string can be problematic since any other code in the process using the same string will share the same lock.</span></span>  
   
- 您也不該使用 `Me.GetType` 方法，提供共用資料的鎖定物件。  這是因為 `GetType` 一律會針對指定的類別名稱傳回相同的 `Type` 物件。  外部程式碼可以在您的類別上呼叫 `GetType`，並取得所用的相同鎖定物件。  這將導致兩個類別阻止彼此執行其 `SyncLock` 區塊。  
+ <span data-ttu-id="58a06-148">您也不應該使用`Me.GetType`方法以提供所需的鎖定物件的共用資料。</span><span class="sxs-lookup"><span data-stu-id="58a06-148">You should also not use the `Me.GetType` method to provide a lock object for shared data.</span></span> <span data-ttu-id="58a06-149">這是因為`GetType`一律傳回相同`Type`指定的類別名稱的物件。</span><span class="sxs-lookup"><span data-stu-id="58a06-149">This is because `GetType` always returns the same `Type` object for a given class name.</span></span> <span data-ttu-id="58a06-150">外部程式碼可以呼叫`GetType`針對您的類別，並取得您正在使用相同的鎖定物件。</span><span class="sxs-lookup"><span data-stu-id="58a06-150">External code could call `GetType` on your class and obtain the same lock object you are using.</span></span> <span data-ttu-id="58a06-151">這會導致封鎖彼此從兩個類別其`SyncLock`區塊。</span><span class="sxs-lookup"><span data-stu-id="58a06-151">This would result in the two classes blocking each other from their `SyncLock` blocks.</span></span>  
   
-## 範例  
+## <a name="examples"></a><span data-ttu-id="58a06-152">範例</span><span class="sxs-lookup"><span data-stu-id="58a06-152">Examples</span></span>  
   
-### 描述  
- 下列範例會顯示維護簡單訊息清單的類別。  它將訊息保存在陣列中，並將該陣列的最後使用項目保存在變數中。  `addAnotherMessage` 程序會增加最後一個項目並儲存新的訊息。  這兩個作業會受到 `SyncLock` 和 `End SyncLock` 陳述式的保護，因為一旦增加了最後一個項目，就必須先儲存新訊息，然後任何其他執行緒才能再增加最後一個項目。  
+### <a name="description"></a><span data-ttu-id="58a06-153">描述</span><span class="sxs-lookup"><span data-stu-id="58a06-153">Description</span></span>  
+ <span data-ttu-id="58a06-154">下列範例會維護訊息的簡單清單的類別。</span><span class="sxs-lookup"><span data-stu-id="58a06-154">The following example shows a class that maintains a simple list of messages.</span></span> <span data-ttu-id="58a06-155">陣列中保留訊息和最後一個變數中使用該陣列的項目。</span><span class="sxs-lookup"><span data-stu-id="58a06-155">It holds the messages in an array and the last used element of that array in a variable.</span></span> <span data-ttu-id="58a06-156">`addAnotherMessage`程序遞增的最後一個元素，並將新的訊息。</span><span class="sxs-lookup"><span data-stu-id="58a06-156">The `addAnotherMessage` procedure increments the last element and stores the new message.</span></span> <span data-ttu-id="58a06-157">這兩項作業會受到`SyncLock`和`End SyncLock`陳述式，因為其他任何執行緒可以一次遞增的最後一個元素之前，一旦已遞增的最後一個元素，必須儲存新的訊息。</span><span class="sxs-lookup"><span data-stu-id="58a06-157">Those two operations are protected by the `SyncLock` and `End SyncLock` statements, because once the last element has been incremented, the new message must be stored before any other thread can increment the last element again.</span></span>  
   
- 如果 `simpleMessageList` 類別在其所有執行個體間共用了一份訊息清單，則變數 `messagesList` 和 `messagesLast` 將宣告為 `Shared`。  在這種情況下，變數 `messagesLock` 也應該是 `Shared`，使得每個執行個體使用單一鎖定物件。  
+ <span data-ttu-id="58a06-158">如果`simpleMessageList`類別共用所有的執行個體，變數之間的訊息傳遞一份清單`messagesList`和`messagesLast`會宣告為`Shared`。</span><span class="sxs-lookup"><span data-stu-id="58a06-158">If the `simpleMessageList` class shared one list of messages among all its instances, the variables `messagesList` and `messagesLast` would be declared as `Shared`.</span></span> <span data-ttu-id="58a06-159">在此情況下，變數`messagesLock`也應該`Shared`，因此會有每個執行個體所使用的單一鎖定物件。</span><span class="sxs-lookup"><span data-stu-id="58a06-159">In this case, the variable `messagesLock` should also be `Shared`, so that there would be a single lock object used by every instance.</span></span>  
   
-### 程式碼  
+### <a name="code"></a><span data-ttu-id="58a06-160">程式碼</span><span class="sxs-lookup"><span data-stu-id="58a06-160">Code</span></span>  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
-### 描述  
- 下列的範例會使用執行緒與 `SyncLock`。  只要 `SyncLock` 陳述式存在，此陳述式區塊就是關鍵區段，而且 `balance` 永遠不會成為負數。  您可以取消 `SyncLock` 和 `End SyncLock` 陳述式的註解，以查看省略 `SyncLock` 關鍵字的效果。  
+### <a name="description"></a><span data-ttu-id="58a06-161">說明</span><span class="sxs-lookup"><span data-stu-id="58a06-161">Description</span></span>  
+ <span data-ttu-id="58a06-162">下列範例會使用執行緒和`SyncLock`。</span><span class="sxs-lookup"><span data-stu-id="58a06-162">The following example uses threads and `SyncLock`.</span></span> <span data-ttu-id="58a06-163">只要`SyncLock`陳述式存在，陳述式區塊是關鍵區段和`balance`絕對不會是負數值。</span><span class="sxs-lookup"><span data-stu-id="58a06-163">As long as the `SyncLock` statement is present, the statement block is a critical section and `balance` never becomes a negative number.</span></span> <span data-ttu-id="58a06-164">您可以註解`SyncLock`和`End SyncLock`陳述式，以查看留下的效果`SyncLock`關鍵字。</span><span class="sxs-lookup"><span data-stu-id="58a06-164">You can comment out the `SyncLock` and `End SyncLock` statements to see the effect of leaving out the `SyncLock` keyword.</span></span>  
   
-### 程式碼  
+### <a name="code"></a><span data-ttu-id="58a06-165">程式碼</span><span class="sxs-lookup"><span data-stu-id="58a06-165">Code</span></span>  
  [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
-### 註解  
+### <a name="comments"></a><span data-ttu-id="58a06-166">註解</span><span class="sxs-lookup"><span data-stu-id="58a06-166">Comments</span></span>  
   
-## 請參閱  
- <xref:System.Threading>   
- <xref:System.Threading.Monitor>   
- [執行緒同步處理](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md)   
- [執行緒](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a><span data-ttu-id="58a06-167">另請參閱</span><span class="sxs-lookup"><span data-stu-id="58a06-167">See Also</span></span>  
+ <xref:System.Threading>  
+ <xref:System.Threading.Monitor>  
+ [<span data-ttu-id="58a06-168">執行緒同步處理</span><span class="sxs-lookup"><span data-stu-id="58a06-168">Thread Synchronization</span></span>](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)  
+ [<span data-ttu-id="58a06-169">執行緒處理</span><span class="sxs-lookup"><span data-stu-id="58a06-169">Threading</span></span>](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)

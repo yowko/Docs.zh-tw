@@ -1,87 +1,90 @@
 ---
-title: "UI Automation Support for the Slider Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Slider"
-  - "UI Automation, Slider control type"
-  - "Slider control type"
+title: "Slider 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Slider
+- UI Automation, Slider control type
+- Slider control type
 ms.assetid: 045ea62f-7b50-46cf-a5a9-8eb97704355f
-caps.latest.revision: 18
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 292a6a51d7b9079f0904786e237afd150649b0a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Slider Control Type
+# <a name="ui-automation-support-for-the-slider-control-type"></a><span data-ttu-id="a93f5-102">Slider 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="a93f5-102">UI Automation Support for the Slider Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="a93f5-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="a93f5-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a93f5-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="a93f5-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供滑桿控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項類型的特定指導方針。  
+ <span data-ttu-id="a93f5-105">本主題提供滑桿控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="a93f5-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Slider control type.</span></span> <span data-ttu-id="a93f5-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。</span><span class="sxs-lookup"><span data-stu-id="a93f5-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="a93f5-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項類型的特定指導方針。</span><span class="sxs-lookup"><span data-stu-id="a93f5-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control types.</span></span>  
   
- 滑桿控制項是複合控制項，其中包含按鈕，可讓使用者用滑鼠設定數值範圍或從一組項目選取項目。  
+ <span data-ttu-id="a93f5-108">滑桿控制項是複合控制項，其中包含按鈕，可讓使用者用滑鼠設定數值範圍或從一組項目選取項目。</span><span class="sxs-lookup"><span data-stu-id="a93f5-108">The Slider control is a composite control with buttons that enable a user with a mouse to set a numerical range or select from a set of items.</span></span>  
   
- 下列章節會定義滑桿控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用於所有滑桿控制項。  
+ <span data-ttu-id="a93f5-109">下列章節會定義滑桿控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="a93f5-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Slider control type.</span></span> <span data-ttu-id="a93f5-110">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有滑桿控制項。</span><span class="sxs-lookup"><span data-stu-id="a93f5-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all slider controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述滑桿控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="a93f5-111">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="a93f5-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="a93f5-112">下表描述滑桿控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="a93f5-112">The following table depicts the Control View and the Content View of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to slider controls and describes what can be contained in each view.</span></span> <span data-ttu-id="a93f5-113">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a93f5-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|滑桿<br /><br /> -   按鈕 \(2 或 4\)<br />-   捲動方塊 \(只有 1 個\)<br />-   清單項目 \(0 個以上\)|滑桿<br /><br /> -   清單項目 \(0 個以上\)|  
+|<span data-ttu-id="a93f5-114">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="a93f5-114">Control View</span></span>|<span data-ttu-id="a93f5-115">內容檢視</span><span class="sxs-lookup"><span data-stu-id="a93f5-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="a93f5-116">滑桿</span><span class="sxs-lookup"><span data-stu-id="a93f5-116">Slider</span></span><br /><br /> <span data-ttu-id="a93f5-117">按鈕 （2 或 4）</span><span class="sxs-lookup"><span data-stu-id="a93f5-117">-   Button (2 or 4)</span></span><br /><span data-ttu-id="a93f5-118">-Thumb (只有 1 個)</span><span class="sxs-lookup"><span data-stu-id="a93f5-118">-   Thumb (only 1)</span></span><br /><span data-ttu-id="a93f5-119">清單項目 （0 個以上）</span><span class="sxs-lookup"><span data-stu-id="a93f5-119">-   List Item (0 or more)</span></span>|<span data-ttu-id="a93f5-120">滑桿</span><span class="sxs-lookup"><span data-stu-id="a93f5-120">Slider</span></span><br /><br /> <span data-ttu-id="a93f5-121">清單項目 （0 個以上）</span><span class="sxs-lookup"><span data-stu-id="a93f5-121">-   List Item (0 or more)</span></span>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與滑桿控制項類型特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="a93f5-122">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="a93f5-122">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="a93f5-123">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與滑桿控制項類型特別有關。</span><span class="sxs-lookup"><span data-stu-id="a93f5-123">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to the Slider control type.</span></span> <span data-ttu-id="a93f5-124">如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="a93f5-124">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註|因為滑桿控制項的整個週框是由子控制項所佔滿，所以大多數的滑桿控制項都必須引發 <xref:System.Windows.Automation.NoClickablePointException>。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|編輯控制項的名稱通常是從靜態文字標籤產生的。 如果沒有靜態文字標籤，則必須由應用程式開發人員指定 `Name` 的屬性值。`Name` 屬性不應該包含編輯控制項的文字內容。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|請參閱備註。|如果控制項有關聯的靜態文字標籤，那麼這個屬性必須公開該控制項的參考。 如果文字控制項是其他控制項的子元件，則將不會設定 `LabeledBy` 屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|滑桿|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「滑桿」|對應到編輯控制項類型的當地語系化字串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|此編輯控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此編輯控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="a93f5-125"> 屬性</span><span class="sxs-lookup"><span data-stu-id="a93f5-125"> Property</span></span>|<span data-ttu-id="a93f5-126">值</span><span class="sxs-lookup"><span data-stu-id="a93f5-126">Value</span></span>|<span data-ttu-id="a93f5-127">備註</span><span class="sxs-lookup"><span data-stu-id="a93f5-127">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="a93f5-128">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="a93f5-128">See notes.</span></span>|<span data-ttu-id="a93f5-129">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="a93f5-129">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="a93f5-130">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="a93f5-130">See notes.</span></span>|<span data-ttu-id="a93f5-131">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="a93f5-131">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="a93f5-132">請參閱備註</span><span class="sxs-lookup"><span data-stu-id="a93f5-132">See notes</span></span>|<span data-ttu-id="a93f5-133">因為滑桿控制項的整個週框是由子控制項所佔滿，所以大多數的滑桿控制項都必須引發 <xref:System.Windows.Automation.NoClickablePointException> 。</span><span class="sxs-lookup"><span data-stu-id="a93f5-133">The majority of slider controls must raise the <xref:System.Windows.Automation.NoClickablePointException> because the entire bounding rectangle of the slider control is occupied by child controls.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="a93f5-134">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="a93f5-134">See notes.</span></span>|<span data-ttu-id="a93f5-135">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="a93f5-135">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="a93f5-136">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="a93f5-136">See notes.</span></span>|<span data-ttu-id="a93f5-137">編輯控制項的名稱通常是從靜態文字標籤產生的。</span><span class="sxs-lookup"><span data-stu-id="a93f5-137">The name of the edit control is typically generated from a static text label.</span></span> <span data-ttu-id="a93f5-138">如果沒有靜態文字標籤，則必須由應用程式開發人員指定 `Name` 的屬性值。</span><span class="sxs-lookup"><span data-stu-id="a93f5-138">If there is not a static text label, a property value for `Name` must be assigned by the application developer.</span></span> <span data-ttu-id="a93f5-139">`Name` 屬性不應該包含編輯控制項的文字內容。</span><span class="sxs-lookup"><span data-stu-id="a93f5-139">The `Name` property should never contain the textual contents of the edit control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="a93f5-140">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="a93f5-140">See notes.</span></span>|<span data-ttu-id="a93f5-141">如果控制項有關聯的靜態文字標籤，則這個屬性必須公開該控制項的參考。</span><span class="sxs-lookup"><span data-stu-id="a93f5-141">If there is a static text label associated with the control, then this property must expose a reference to that control.</span></span> <span data-ttu-id="a93f5-142">如果文字控制項是其他控制項的子元件，則將不會設定 `LabeledBy` 屬性。</span><span class="sxs-lookup"><span data-stu-id="a93f5-142">If the text control is a subcomponent of another control, it will not have a `LabeledBy` property set.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="a93f5-143">滑桿</span><span class="sxs-lookup"><span data-stu-id="a93f5-143">Slider</span></span>|<span data-ttu-id="a93f5-144">此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="a93f5-144">This value is the same for all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="a93f5-145">「滑桿」</span><span class="sxs-lookup"><span data-stu-id="a93f5-145">"slider"</span></span>|<span data-ttu-id="a93f5-146">對應到編輯控制項類型的當地語系化字串。</span><span class="sxs-lookup"><span data-stu-id="a93f5-146">Localized string corresponding to the Edit Control Type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="a93f5-147">True</span><span class="sxs-lookup"><span data-stu-id="a93f5-147">True</span></span>|<span data-ttu-id="a93f5-148">此編輯控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。</span><span class="sxs-lookup"><span data-stu-id="a93f5-148">The edit control is always included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="a93f5-149">True</span><span class="sxs-lookup"><span data-stu-id="a93f5-149">True</span></span>|<span data-ttu-id="a93f5-150">此編輯控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。</span><span class="sxs-lookup"><span data-stu-id="a93f5-150">The edit control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式  
- 下表列出所有滑桿控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="a93f5-151">必要的使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="a93f5-151">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="a93f5-152">下表列出所有滑桿控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="a93f5-152">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by all slider controls.</span></span> <span data-ttu-id="a93f5-153">如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a93f5-153">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式|支援|備註|  
-|-----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|視情況而定|如果內容代表一組個別選項中的某一個值，則滑桿應支援選取控制項模式。 支援選取控制項模式時，對應的選項必須公開為滑桿的一個或多個子清單項目。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|視情況而定|如果內容可以設為數值範圍內的某一個值，則滑桿應支援 RangeValue 控制項模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|如果內容代表一組個別選項中的某一個值，則滑桿應支援值控制項模式。|  
+|<span data-ttu-id="a93f5-154">控制項模式</span><span class="sxs-lookup"><span data-stu-id="a93f5-154">Control Pattern</span></span>|<span data-ttu-id="a93f5-155">支援</span><span class="sxs-lookup"><span data-stu-id="a93f5-155">Support</span></span>|<span data-ttu-id="a93f5-156">備註</span><span class="sxs-lookup"><span data-stu-id="a93f5-156">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|<span data-ttu-id="a93f5-157">視情況而定</span><span class="sxs-lookup"><span data-stu-id="a93f5-157">Depends</span></span>|<span data-ttu-id="a93f5-158">如果內容代表一組個別選項中的某一個值，則滑桿應支援選取控制項模式。</span><span class="sxs-lookup"><span data-stu-id="a93f5-158">A slider should support the Selection control pattern if the content represents one value among a discrete set of options.</span></span> <span data-ttu-id="a93f5-159">支援選取控制項模式時，對應的選項必須公開為滑桿的一個或多個子清單項目。</span><span class="sxs-lookup"><span data-stu-id="a93f5-159">When the Selection control pattern is supported, the corresponding selection must be exposed as one or more child list items of the slider.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|<span data-ttu-id="a93f5-160">視情況而定</span><span class="sxs-lookup"><span data-stu-id="a93f5-160">Depends</span></span>|<span data-ttu-id="a93f5-161">如果內容可以設為數值範圍內的某一個值，則滑桿應支援 RangeValue 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="a93f5-161">A slider should support the RangeValue control pattern if the content can be set to a value within a numerical range.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|<span data-ttu-id="a93f5-162">視情況而定</span><span class="sxs-lookup"><span data-stu-id="a93f5-162">Depends</span></span>|<span data-ttu-id="a93f5-163">如果內容代表一組個別選項中的某一個值，則滑桿應支援值控制項模式。</span><span class="sxs-lookup"><span data-stu-id="a93f5-163">A slider should support the Value control pattern if the content represents one value among a discrete set of options.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列出所有滑桿控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="a93f5-164">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="a93f5-164">Required UI Automation Events</span></span>  
+ <span data-ttu-id="a93f5-165">下表列出所有滑桿控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="a93f5-165">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all slider controls.</span></span>  
   
- 如需事件的詳細資訊，請參閱[UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+ <span data-ttu-id="a93f5-166">如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a93f5-166">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|視情況而定|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件|必要項|無|  
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 屬性變更事件|視情況而定|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="a93f5-167"> 事件</span><span class="sxs-lookup"><span data-stu-id="a93f5-167"> Event</span></span>|<span data-ttu-id="a93f5-168">支援</span><span class="sxs-lookup"><span data-stu-id="a93f5-168">Support</span></span>|<span data-ttu-id="a93f5-169">備註</span><span class="sxs-lookup"><span data-stu-id="a93f5-169">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|<span data-ttu-id="a93f5-170">視情況而定</span><span class="sxs-lookup"><span data-stu-id="a93f5-170">Depends</span></span>|<span data-ttu-id="a93f5-171">無</span><span class="sxs-lookup"><span data-stu-id="a93f5-171">None</span></span>|  
+|<span data-ttu-id="a93f5-172"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件</span><span class="sxs-lookup"><span data-stu-id="a93f5-172"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event</span></span>|<span data-ttu-id="a93f5-173">必要項</span><span class="sxs-lookup"><span data-stu-id="a93f5-173">Required</span></span>|<span data-ttu-id="a93f5-174">無</span><span class="sxs-lookup"><span data-stu-id="a93f5-174">None</span></span>|  
+|<span data-ttu-id="a93f5-175"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件</span><span class="sxs-lookup"><span data-stu-id="a93f5-175"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event</span></span>|<span data-ttu-id="a93f5-176">必要項</span><span class="sxs-lookup"><span data-stu-id="a93f5-176">Required</span></span>|<span data-ttu-id="a93f5-177">無</span><span class="sxs-lookup"><span data-stu-id="a93f5-177">None</span></span>|  
+|<span data-ttu-id="a93f5-178"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件</span><span class="sxs-lookup"><span data-stu-id="a93f5-178"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event</span></span>|<span data-ttu-id="a93f5-179">必要項</span><span class="sxs-lookup"><span data-stu-id="a93f5-179">Required</span></span>|<span data-ttu-id="a93f5-180">無</span><span class="sxs-lookup"><span data-stu-id="a93f5-180">None</span></span>|  
+|<span data-ttu-id="a93f5-181"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 屬性變更事件</span><span class="sxs-lookup"><span data-stu-id="a93f5-181"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> property-changed event</span></span>|<span data-ttu-id="a93f5-182">視情況而定</span><span class="sxs-lookup"><span data-stu-id="a93f5-182">Depends</span></span>|<span data-ttu-id="a93f5-183">無</span><span class="sxs-lookup"><span data-stu-id="a93f5-183">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="a93f5-184">必要項</span><span class="sxs-lookup"><span data-stu-id="a93f5-184">Required</span></span>|<span data-ttu-id="a93f5-185">無</span><span class="sxs-lookup"><span data-stu-id="a93f5-185">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="a93f5-186">必要項</span><span class="sxs-lookup"><span data-stu-id="a93f5-186">Required</span></span>|<span data-ttu-id="a93f5-187">無</span><span class="sxs-lookup"><span data-stu-id="a93f5-187">None</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.Slider>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a93f5-188">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a93f5-188">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Slider>  
+ [<span data-ttu-id="a93f5-189">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="a93f5-189">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="a93f5-190">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="a93f5-190">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

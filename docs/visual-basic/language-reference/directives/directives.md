@@ -1,38 +1,37 @@
 ---
-title: "Directives (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "directives, Visual Basic compiler"
-  - "Visual Basic code, directives"
-  - "directives"
+title: "指示詞 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- directives, Visual Basic compiler
+- Visual Basic code, directives
+- directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8219f17f1b8093b4d02b370c7b008101923b1873
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Directives (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-本節中的主題記錄 Visual Basic 原始程式碼編譯器指示詞。  
+# <a name="directives-visual-basic"></a><span data-ttu-id="fb3dd-102">指示詞 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb3dd-102">Directives (Visual Basic)</span></span>
+<span data-ttu-id="fb3dd-103">本節中的主題記錄 Visual Basic 原始程式碼編譯器指示詞。</span><span class="sxs-lookup"><span data-stu-id="fb3dd-103">The topics in this section document the Visual Basic source code compiler directives.</span></span>  
   
-## 在本節中  
- [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) \-\- 定義編譯器常數  
+## <a name="in-this-section"></a><span data-ttu-id="fb3dd-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="fb3dd-104">In This Section</span></span>  
+ <span data-ttu-id="fb3dd-105">[#Const 指示詞](../../../visual-basic/language-reference/directives/const-directive.md)-定義編譯器常數</span><span class="sxs-lookup"><span data-stu-id="fb3dd-105">[#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant</span></span>  
   
- [\#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) \-\- 指出原始程式行和來源外部文字之間的對應  
+ <span data-ttu-id="fb3dd-106">[#ExternalSource 指示詞](../../../visual-basic/language-reference/directives/externalsource-directive.md)-指出原始程式行和來源外部文字之間的對應</span><span class="sxs-lookup"><span data-stu-id="fb3dd-106">[#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source</span></span>  
   
- [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) \-\- 編譯選取的程式碼區塊  
+ <span data-ttu-id="fb3dd-107">[#If......#Else 指示詞](../../../visual-basic/language-reference/directives/if-then-else-directives.md)-編譯選取的程式碼區塊</span><span class="sxs-lookup"><span data-stu-id="fb3dd-107">[#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code</span></span>  
   
- [\#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) \-\- 在 Visual Studio 編輯器中摺疊和隱藏程式碼區段  
+ <span data-ttu-id="fb3dd-108">[#Region 指示詞](../../../visual-basic/language-reference/directives/region-directive.md)--摺疊和隱藏在 Visual Studio 編輯器中的程式碼區段</span><span class="sxs-lookup"><span data-stu-id="fb3dd-108">[#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor</span></span>  
   
- **\#Disable, \#Enable** \-\- 停用和啟用程式碼區域的特定警告。  
+ <span data-ttu-id="fb3dd-109">**#Disable、 #Enable** --停用和啟用程式碼區域的特定警告。</span><span class="sxs-lookup"><span data-stu-id="fb3dd-109">**#Disable, #Enable** -- Disable and enable specific warnings for regions of code.</span></span>  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  
@@ -40,12 +39,11 @@ caps.handback.revision: 9
         Console.WriteLine("testing")  
     End Function  
 #Enable Warning BC42356  
-  
 ```  
   
- 您也可以停用和啟用警告程式碼的逗號分隔清單。  
+ <span data-ttu-id="fb3dd-110">您也可以停用和啟用警告程式碼的逗號分隔清單。</span><span class="sxs-lookup"><span data-stu-id="fb3dd-110">You can disable and enable a comma-separated list of warning codes too.</span></span>  
   
-## 相關章節  
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="fb3dd-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="fb3dd-111">Related Sections</span></span>  
+ [<span data-ttu-id="fb3dd-112">Visual Basic 語言參考</span><span class="sxs-lookup"><span data-stu-id="fb3dd-112">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)
+ [<span data-ttu-id="fb3dd-113">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fb3dd-113">Visual Basic</span></span>](../../../visual-basic/index.md)

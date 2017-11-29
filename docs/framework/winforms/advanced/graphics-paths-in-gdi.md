@@ -1,80 +1,84 @@
 ---
-title: "GDI+ 中的圖形路徑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "繪製, 路徑"
-  - "GDI+, 描繪路徑"
-  - "圖形, 路徑"
-  - "路徑, 繪製"
+title: "GDI+ 中的圖形路徑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], paths
+- GDI+, drawing paths
+- paths [Windows Forms], drawing
+- drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e027228ea1cc047f213c28ac3a4984c2f0227c5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# GDI+ 中的圖形路徑
-路徑是由組合的線條、矩形和簡單曲線形成。  回顧[向量圖形概觀](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)一節的說明，下列基本的建置區塊已被證明為最有效的繪製圖片方法：  
+# <a name="graphics-paths-in-gdi"></a><span data-ttu-id="eb31d-102">GDI+ 中的圖形路徑</span><span class="sxs-lookup"><span data-stu-id="eb31d-102">Graphics Paths in GDI+</span></span>
+<span data-ttu-id="eb31d-103">路徑格式結合線條、 矩形和簡單的曲線。</span><span class="sxs-lookup"><span data-stu-id="eb31d-103">Paths are formed by combining lines, rectangles, and simple curves.</span></span> <span data-ttu-id="eb31d-104">回想一下[向量圖形概觀](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)下列的基本建置組塊經證實繪製圖片時最有用：</span><span class="sxs-lookup"><span data-stu-id="eb31d-104">Recall from the [Vector Graphics Overview](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) that the following basic building blocks have proven to be the most useful for drawing pictures:</span></span>  
   
--   程式行  
+-   <span data-ttu-id="eb31d-105">線條</span><span class="sxs-lookup"><span data-stu-id="eb31d-105">Lines</span></span>  
   
--   矩形  
+-   <span data-ttu-id="eb31d-106">矩形</span><span class="sxs-lookup"><span data-stu-id="eb31d-106">Rectangles</span></span>  
   
--   橢圓形  
+-   <span data-ttu-id="eb31d-107">省略符號</span><span class="sxs-lookup"><span data-stu-id="eb31d-107">Ellipses</span></span>  
   
--   弧形  
+-   <span data-ttu-id="eb31d-108">弧線</span><span class="sxs-lookup"><span data-stu-id="eb31d-108">Arcs</span></span>  
   
--   多邊形  
+-   <span data-ttu-id="eb31d-109">多邊形</span><span class="sxs-lookup"><span data-stu-id="eb31d-109">Polygons</span></span>  
   
--   基本曲線  
+-   <span data-ttu-id="eb31d-110">基本曲線</span><span class="sxs-lookup"><span data-stu-id="eb31d-110">Cardinal splines</span></span>  
   
--   貝茲曲線  
+-   <span data-ttu-id="eb31d-111">貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="eb31d-111">Bézier splines</span></span>  
   
- 在 GDI\+ 中，<xref:System.Drawing.Drawing2D.GraphicsPath> 物件可將這些建置區塊序列收集成為一個單位。  您只需呼叫一次 <xref:System.Drawing.Graphics> 類別的 <xref:System.Drawing.Graphics.DrawPath%2A> 方法，便可繪製線條、矩形、多邊形和曲線之完整序列。  下列圖例顯示組合線條、弧形、貝茲曲線和基本曲線而建立的路徑。  
+ <span data-ttu-id="eb31d-112">在 GDI + 中，<xref:System.Drawing.Drawing2D.GraphicsPath>物件可讓您收集成一個單位的一系列的建置組塊。</span><span class="sxs-lookup"><span data-stu-id="eb31d-112">In GDI+, the <xref:System.Drawing.Drawing2D.GraphicsPath> object allows you to collect a sequence of these building blocks into a single unit.</span></span> <span data-ttu-id="eb31d-113">然後可以呼叫以繪製整個序列線條、 矩形、 多邊形和曲線的<xref:System.Drawing.Graphics.DrawPath%2A>方法<xref:System.Drawing.Graphics>類別。</span><span class="sxs-lookup"><span data-stu-id="eb31d-113">The entire sequence of lines, rectangles, polygons, and curves can then be drawn with one call to the <xref:System.Drawing.Graphics.DrawPath%2A> method of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="eb31d-114">下圖顯示一條線、 弧線、 貝茲曲線和基本曲線相結合所產生的路徑。</span><span class="sxs-lookup"><span data-stu-id="eb31d-114">The following illustration shows a path created by combining a line, an arc, a Bézier spline, and a cardinal spline.</span></span>  
   
- ![路徑](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.png "Aboutgdip02\_art14")  
+ <span data-ttu-id="eb31d-115">![路徑](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.gif "Aboutgdip02_art14")</span><span class="sxs-lookup"><span data-stu-id="eb31d-115">![Path](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.gif "Aboutgdip02_art14")</span></span>  
   
-## 使用路徑  
- <xref:System.Drawing.Drawing2D.GraphicsPath> 類別提供下列方法，可用來建立一連串要繪製的項目：<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>、<xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>、<xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>、<xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>、<xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>、<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> \(用於基本曲線\) 和 <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>。  這些方法都為多載；也就是說，所有方法都支援數個不同的參數清單。  例如，<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> 方法的其中一個變異可接收四個整數，而 <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> 方法的另一個變異則可接收兩個 <xref:System.Drawing.Point> 物件。  
+## <a name="using-a-path"></a><span data-ttu-id="eb31d-116">使用路徑</span><span class="sxs-lookup"><span data-stu-id="eb31d-116">Using a Path</span></span>  
+ <span data-ttu-id="eb31d-117"><xref:System.Drawing.Drawing2D.GraphicsPath>類別會提供下列方法來建立一連串的項目要繪製： <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>， <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>， <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>， <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>， <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>， <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> （適用於曲線），和<xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>。</span><span class="sxs-lookup"><span data-stu-id="eb31d-117">The <xref:System.Drawing.Drawing2D.GraphicsPath> class provides the following methods for creating a sequence of items to be drawn: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> (for cardinal splines), and <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>.</span></span> <span data-ttu-id="eb31d-118">每一種方法多載。也就是說，每個方法都支援數個不同的參數清單。</span><span class="sxs-lookup"><span data-stu-id="eb31d-118">Each of these methods is overloaded; that is, each method supports several different parameter lists.</span></span> <span data-ttu-id="eb31d-119">例如，一個變化<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>方法收到四個整數，與另一種變形<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>方法會接收兩個<xref:System.Drawing.Point>物件。</span><span class="sxs-lookup"><span data-stu-id="eb31d-119">For example, one variation of the <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> method receives four integers, and another variation of the <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> method receives two <xref:System.Drawing.Point> objects.</span></span>  
   
- 將線條、矩形和貝茲曲線加入至路徑的方法，包含許多可在單一呼叫中將數個項目加入至路徑的搭配方法：<xref:System.Drawing.Drawing2D.GraphicsPath.AddLines%2A>、<xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangles%2A> 和 <xref:System.Drawing.Drawing2D.GraphicsPath.AddBeziers%2A>。  此外，<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> 和 <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A> 方法具有 <xref:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve%2A> 以及 <xref:System.Drawing.Drawing2D.GraphicsPath.AddPie%2A> 兩個搭配方法，它們可將封閉曲線或派形圖加入至路徑。  
+ <span data-ttu-id="eb31d-120">加入路徑中的線條、 矩形和貝茲曲線的方法有複數附屬方法，將數個項目加入至單一呼叫中的路徑： <xref:System.Drawing.Drawing2D.GraphicsPath.AddLines%2A>， <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangles%2A>，和<xref:System.Drawing.Drawing2D.GraphicsPath.AddBeziers%2A>。</span><span class="sxs-lookup"><span data-stu-id="eb31d-120">The methods for adding lines, rectangles, and Bézier splines to a path have plural companion methods that add several items to the path in a single call: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLines%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangles%2A>, and <xref:System.Drawing.Drawing2D.GraphicsPath.AddBeziers%2A>.</span></span> <span data-ttu-id="eb31d-121">此外，<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>和<xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>方法有附屬方法<xref:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve%2A>和<xref:System.Drawing.Drawing2D.GraphicsPath.AddPie%2A>，一個封閉的曲線或圓形圖加入路徑。</span><span class="sxs-lookup"><span data-stu-id="eb31d-121">Also, the <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> and <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A> methods have companion methods, <xref:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve%2A> and <xref:System.Drawing.Drawing2D.GraphicsPath.AddPie%2A>, that add a closed curve or pie to the path.</span></span>  
   
- 若要繪製路徑，您需要 <xref:System.Drawing.Graphics> 物件、<xref:System.Drawing.Pen> 物件和 <xref:System.Drawing.Drawing2D.GraphicsPath> 物件。  <xref:System.Drawing.Graphics> 物件提供 <xref:System.Drawing.Graphics.DrawPath%2A> 方法，而 <xref:System.Drawing.Pen> 物件則是儲存用來產生路徑的線條屬性，例如寬度和色彩。  <xref:System.Drawing.Drawing2D.GraphicsPath> 物件可儲存組成路徑的線條和曲線序列。  <xref:System.Drawing.Pen> 物件和 <xref:System.Drawing.Drawing2D.GraphicsPath> 物件會當成引數傳遞至 <xref:System.Drawing.Graphics.DrawPath%2A> 方法。  下列範例繪製由線條、橢圓形和貝茲曲線組成的路徑：  
+ <span data-ttu-id="eb31d-122">若要繪製的路徑，您需要<xref:System.Drawing.Graphics>物件<xref:System.Drawing.Pen>物件，和<xref:System.Drawing.Drawing2D.GraphicsPath>物件。</span><span class="sxs-lookup"><span data-stu-id="eb31d-122">To draw a path, you need a <xref:System.Drawing.Graphics> object, a <xref:System.Drawing.Pen> object, and a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="eb31d-123"><xref:System.Drawing.Graphics>物件提供<xref:System.Drawing.Graphics.DrawPath%2A>方法，而<xref:System.Drawing.Pen>物件會儲存屬性，例如 寬度 和 用來呈現路徑線條色彩。</span><span class="sxs-lookup"><span data-stu-id="eb31d-123">The <xref:System.Drawing.Graphics> object provides the <xref:System.Drawing.Graphics.DrawPath%2A> method, and the <xref:System.Drawing.Pen> object stores attributes, such as width and color, of the line used to render the path.</span></span> <span data-ttu-id="eb31d-124"><xref:System.Drawing.Drawing2D.GraphicsPath>物件儲存的直線和曲線的路徑順序。</span><span class="sxs-lookup"><span data-stu-id="eb31d-124">The <xref:System.Drawing.Drawing2D.GraphicsPath> object stores the sequence of lines and curves that make up the path.</span></span> <span data-ttu-id="eb31d-125"><xref:System.Drawing.Pen>物件和<xref:System.Drawing.Drawing2D.GraphicsPath>物件會傳遞做為引數<xref:System.Drawing.Graphics.DrawPath%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="eb31d-125">The <xref:System.Drawing.Pen> object and the <xref:System.Drawing.Drawing2D.GraphicsPath> object are passed as arguments to the <xref:System.Drawing.Graphics.DrawPath%2A> method.</span></span> <span data-ttu-id="eb31d-126">下列範例會繪製一條線、 橢圓形及貝茲曲線組成的路徑：</span><span class="sxs-lookup"><span data-stu-id="eb31d-126">The following example draws a path that consists of a line, an ellipse, and a Bézier spline:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#101](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#101)]
  [!code-vb[LinesCurvesAndShapes#101](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#101)]  
   
- 下圖將顯示該路徑。  
+ <span data-ttu-id="eb31d-127">下圖顯示的路徑。</span><span class="sxs-lookup"><span data-stu-id="eb31d-127">The following illustration shows the path.</span></span>  
   
- ![路徑](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art15.png "Aboutgdip02\_art15")  
+ <span data-ttu-id="eb31d-128">![路徑](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art15.gif "Aboutgdip02_art15")</span><span class="sxs-lookup"><span data-stu-id="eb31d-128">![Path](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art15.gif "Aboutgdip02_art15")</span></span>  
   
- 除了將線條、矩形和曲線加入到路徑，您也可以將其他路徑新增到路徑中。  您可以將現有的路徑結合成為大型的複雜路徑。  
+ <span data-ttu-id="eb31d-129">除了新增至路徑的線條、 矩形和曲線，您可以新增至路徑的路徑。</span><span class="sxs-lookup"><span data-stu-id="eb31d-129">In addition to adding lines, rectangles, and curves to a path, you can add paths to a path.</span></span> <span data-ttu-id="eb31d-130">這可讓您結合以形成大型、 複雜的路徑的現有路徑。</span><span class="sxs-lookup"><span data-stu-id="eb31d-130">This allows you to combine existing paths to form large, complex paths.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#102](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#102)]
  [!code-vb[LinesCurvesAndShapes#102](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#102)]  
   
- 另外還有兩個項目可加入至路徑中：字串和派形圖。  扇形圖是指橢圓形的內景部分。  下列範例從弧形、基本曲線、字串和圓形圖建立路徑：  
+ <span data-ttu-id="eb31d-131">有兩個您可以將路徑加入其他項目： 字串和派形。</span><span class="sxs-lookup"><span data-stu-id="eb31d-131">There are two other items you can add to a path: strings and pies.</span></span> <span data-ttu-id="eb31d-132">圓形圖是橢圓形的一部分內部。</span><span class="sxs-lookup"><span data-stu-id="eb31d-132">A pie is a portion of the interior of an ellipse.</span></span> <span data-ttu-id="eb31d-133">下列範例會建立從弧線、 曲線、 字串和圓形圖路徑：</span><span class="sxs-lookup"><span data-stu-id="eb31d-133">The following example creates a path from an arc, a cardinal spline, a string, and a pie:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#103](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#103)]
  [!code-vb[LinesCurvesAndShapes#103](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#103)]  
   
- 下圖將顯示該路徑。  請注意，路徑並不一定要連接起來；弧形、基本曲線、字串和圓形圖是個別分開的。  
+ <span data-ttu-id="eb31d-134">下圖顯示的路徑。</span><span class="sxs-lookup"><span data-stu-id="eb31d-134">The following illustration shows the path.</span></span> <span data-ttu-id="eb31d-135">請注意，路徑可能沒有連接。弧線、 曲線、 字串和圓形圖會分隔。</span><span class="sxs-lookup"><span data-stu-id="eb31d-135">Note that a path does not have to be connected; the arc, cardinal spline, string, and pie are separated.</span></span>  
   
- ![路徑](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.png "Aboutgdip02\_Art16")  
+ <span data-ttu-id="eb31d-136">![路徑](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.gif "Aboutgdip02_Art16")</span><span class="sxs-lookup"><span data-stu-id="eb31d-136">![Paths](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.gif "Aboutgdip02_Art16")</span></span>  
   
-## 請參閱  
- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=fullName>   
- <xref:System.Drawing.Point?displayProperty=fullName>   
- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [如何：建立繪製的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [建構和繪製路徑](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+## <a name="see-also"></a><span data-ttu-id="eb31d-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eb31d-137">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
+ <xref:System.Drawing.Point?displayProperty=nameWithType>  
+ [<span data-ttu-id="eb31d-138">線條、曲線和形狀</span><span class="sxs-lookup"><span data-stu-id="eb31d-138">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="eb31d-139">操作說明：建立繪圖的圖形物件</span><span class="sxs-lookup"><span data-stu-id="eb31d-139">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [<span data-ttu-id="eb31d-140">建構和繪製路徑</span><span class="sxs-lookup"><span data-stu-id="eb31d-140">Constructing and Drawing Paths</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

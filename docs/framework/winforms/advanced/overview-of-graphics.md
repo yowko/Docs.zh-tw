@@ -1,31 +1,32 @@
 ---
-title: "圖形概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "圖形, 關於圖形"
-  - "圖形, 使用 Managed 介面"
+title: "圖形概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], using managed interface
+- graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b0a3286cbcaa0eebf59500582a749804b5e1b8ba
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 圖形概觀
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是構成 Microsoft Windows 作業系統之子系統的應用程式開發介面 \(API\)。[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 會負責顯示螢幕和印表機上的資訊。  正如其名， [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 的後置項，該繪圖裝置介面包含在舊版 Windows 中。  
+# <a name="overview-of-graphics"></a><span data-ttu-id="e6632-102">圖形概觀</span><span class="sxs-lookup"><span data-stu-id="e6632-102">Overview of Graphics</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="e6632-103">為應用程式開發介面 (API) 構成 Microsoft Windows 作業系統的子系統。</span><span class="sxs-lookup"><span data-stu-id="e6632-103"> is an application programming interface (API) that forms the subsystem of the Microsoft Windows operating system.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="e6632-104">會負責顯示螢幕和印表機上的資訊。</span><span class="sxs-lookup"><span data-stu-id="e6632-104"> is responsible for displaying information on screens and printers.</span></span> <span data-ttu-id="e6632-105">正如其名， [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 的後置項，該繪圖裝置介面包含在舊版 Windows 中。</span><span class="sxs-lookup"><span data-stu-id="e6632-105">As its name suggests, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is the successor to [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], the Graphics Device Interface included with earlier versions of Windows.</span></span>  
   
-## Managed 類別介面  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 應用程式開發介面透過一組部署為 Managed 程式碼的類別公開。  這組類別稱為 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 的  *Managed 類別介面*。  下列命名空間組成 Managed 類別介面：  
+## <a name="managed-class-interface"></a><span data-ttu-id="e6632-106">Managed 類別介面</span><span class="sxs-lookup"><span data-stu-id="e6632-106">Managed Class Interface</span></span>  
+ <span data-ttu-id="e6632-107">[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API 會公開一組部署為 managed 程式碼的類別。</span><span class="sxs-lookup"><span data-stu-id="e6632-107">The [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API is exposed through a set of classes deployed as managed code.</span></span> <span data-ttu-id="e6632-108">這組類別稱為*managed 的類別介面*至[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e6632-108">This set of classes is called the *managed class interface* to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span> <span data-ttu-id="e6632-109">下列命名空間組成 Managed 類別介面：</span><span class="sxs-lookup"><span data-stu-id="e6632-109">The following namespaces make up the managed class interface:</span></span>  
   
 -   <xref:System.Drawing>  
   
@@ -37,7 +38,7 @@ caps.handback.revision: 17
   
 -   <xref:System.Drawing.Printing>  
   
- 圖形裝置介面，例如 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以在螢幕或印表機上顯示資訊，而不須關心特定顯示裝置的詳細資料。  程式設計師會呼叫 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 類別所提供的方法。這些方法接著會適當地呼叫特定裝置驅動程式。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 會從圖形硬體隔離應用程式。隔離會讓程式設計人員能夠建立與裝置無關的應用程式。  
+ <span data-ttu-id="e6632-110">圖形裝置介面，例如[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以在螢幕或印表機上顯示資訊，而不須關心特定顯示裝置的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="e6632-110">With a Graphics Device Interface, such as [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you can display information on a screen or printer without having to be concerned about the details of a particular display device.</span></span> <span data-ttu-id="e6632-111">程式設計師會呼叫 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 類別所提供的方法。</span><span class="sxs-lookup"><span data-stu-id="e6632-111">The programmer makes calls to methods provided by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] classes.</span></span> <span data-ttu-id="e6632-112">這些方法接著會適當地呼叫特定裝置驅動程式。</span><span class="sxs-lookup"><span data-stu-id="e6632-112">Those methods, in turn, make the appropriate calls to specific device drivers.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="e6632-113"> 會從圖形硬體隔離應用程式。</span><span class="sxs-lookup"><span data-stu-id="e6632-113"> insulates the application from the graphics hardware.</span></span> <span data-ttu-id="e6632-114">它是隔離會讓程式設計人員能夠建立與裝置無關的應用程式。</span><span class="sxs-lookup"><span data-stu-id="e6632-114">It is this insulation that enables a programmer to create device-independent applications.</span></span>  
   
-## 請參閱  
- [圖形概觀](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="e6632-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e6632-115">See Also</span></span>  
+ [<span data-ttu-id="e6632-116">圖形概觀</span><span class="sxs-lookup"><span data-stu-id="e6632-116">Graphics Overview</span></span>](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)

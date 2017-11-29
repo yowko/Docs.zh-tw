@@ -1,288 +1,291 @@
 ---
-title: "安全性 (WPF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式安全性 [WPF]"
-  - "瀏覽器裝載應用程式安全性 [WPF]"
-  - "功能控制項 [WPF], 安全性"
-  - "Internet Explorer 安全性設定 [WPF]"
-  - "鬆散的 XAML 檔案 [WPF], 沙箱行為"
-  - "巡覽安全性 [WPF]"
-  - "WebBrowser 控制項 [WPF], 安全性"
-  - "WPF 安全性"
-  - "XAML 檔案 [WPF], 沙箱行為"
-  - "XBAP 安全性 [WPF]"
+title: "安全性 (WPF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML files [WPF], sandbox behavior
+- browser-hosted application security [WPF]
+- application security [WPF]
+- navigation security [WPF]
+- loose XAML files [WPF], sandbox behavior
+- WPF security [WPF]
+- WebBrowser control [WPF], security
+- feature controls [WPF], security
+- XBAP security [WPF]
+- Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: 38
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "38"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 安全性 (WPF)
-<a name="introduction"></a> 開發 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 獨立應用程式與瀏覽器裝載的應用程式時，您必須考慮安全性模型。[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式會以不受限的權限 \([!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 權限集合\) 執行，不論部署方法是使用 Windows Installer \(.msi\)、XCopy 或 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。  不支援以 ClickOnce 部署部分信任的獨立 WPF 應用程式。  不過，完全信任的應用程式可以使用 .NET Framework 增益集模型，建立部分信任的 <xref:System.AppDomain>。  如需詳細資訊，請參閱 [WPF 增益集概觀](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+# <a name="security-wpf"></a><span data-ttu-id="52ca7-102">安全性 (WPF)</span><span class="sxs-lookup"><span data-stu-id="52ca7-102">Security (WPF)</span></span>
+<span data-ttu-id="52ca7-103"><a name="introduction"></a>當開發[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]獨立和瀏覽器裝載的應用程式，您必須考量的安全性模型。</span><span class="sxs-lookup"><span data-stu-id="52ca7-103"><a name="introduction"></a> When developing [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] standalone and browser-hosted applications, you must consider the security model.</span></span> [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="52ca7-104">獨立應用程式都執行不受限制的權限 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**權限集合)、 是否使用 Windows Installer (.msi)、 XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="52ca7-104"> standalone applications execute with unrestricted permissions ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**FullTrust** permission set), whether deployed using Windows Installer (.msi), XCopy, or [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].</span></span> <span data-ttu-id="52ca7-105">不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。</span><span class="sxs-lookup"><span data-stu-id="52ca7-105">Deploying partial-trust, standalone WPF applications with ClickOnce is unsupported.</span></span> <span data-ttu-id="52ca7-106">不過，完全信任主應用程式可以建立部分信任<xref:System.AppDomain>使用.NET Framework 增益集模型。</span><span class="sxs-lookup"><span data-stu-id="52ca7-106">However, a full-trust host application can create a partial-trust <xref:System.AppDomain> using the .NET Framework Add-in model.</span></span> <span data-ttu-id="52ca7-107">如需詳細資訊，請參閱[WPF 增益集概觀](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-107">For more information, see [WPF Add-Ins Overview](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式是由 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 或 Firefox 裝載，而且可以是 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 或鬆散的[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 文件。如需詳細資訊，請參閱 [WPF XAML 瀏覽器應用程式概觀](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="52ca7-108">瀏覽器裝載的應用程式所裝載的[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]或 Firefox，而且可以是[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]或鬆散[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]文件，如需詳細資訊，請參閱[WPF XAML 瀏覽器應用程式概觀](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-108"> browser-hosted applications are hosted by [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] or Firefox, and can be either [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] or loose [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] documents For more information, see [WPF XAML Browser Applications Overview](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).</span></span>  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式會在部分信任安全性沙箱內執行，根據預設，會限制為預設 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** 區域權限集合。  這樣會將 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式有效地與用戶端電腦隔離，方法就像隔離平常的 Web 應用程式一樣。  XBAP 可以提高使用權限，最高可提高至完全信任，視部署 URL 的安全性區域以及用戶端的安全性組態而定。  如需詳細資訊，請參閱 [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="52ca7-109">瀏覽器裝載的應用程式執行在部分信任安全性沙箱，依預設，僅限於預設[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**網際網路**區域的權限集。</span><span class="sxs-lookup"><span data-stu-id="52ca7-109"> browser-hosted applications execute within a partial trust security sandbox, by default, which is limited to the default [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**Internet** zone permission set.</span></span> <span data-ttu-id="52ca7-110">這實際上會隔離[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]瀏覽器裝載的應用程式從用戶端電腦，您會預期一般 Web 應用程式隔離的方式相同。</span><span class="sxs-lookup"><span data-stu-id="52ca7-110">This effectively isolates [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] browser-hosted applications from the client computer in the same way that you would expect typical Web applications to be isolated.</span></span> <span data-ttu-id="52ca7-111">XBAP 可以根據部署 URL 的安全性區域以及用戶端的安全性組態來提高權限，而最高為「完全信任」。</span><span class="sxs-lookup"><span data-stu-id="52ca7-111">An XBAP can elevate privileges, up to Full Trust, depending on the security zone of the deployment URL and the client's security configuration.</span></span> <span data-ttu-id="52ca7-112">如需詳細資訊，請參閱 [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-112">For more information, see [WPF Partial Trust Security](../../../docs/framework/wpf/wpf-partial-trust-security.md).</span></span>  
   
- 本主題會討論 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 獨立和瀏覽器裝載的應用程式的安全性模型。  
+ <span data-ttu-id="52ca7-113">本主題討論的安全性模型[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]獨立和瀏覽器裝載應用程式。</span><span class="sxs-lookup"><span data-stu-id="52ca7-113">This topic discusses the security model for [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] standalone and browser-hosted applications.</span></span>  
   
- 此主題包括下列章節：  
+ <span data-ttu-id="52ca7-114">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="52ca7-114">This topic contains the following sections:</span></span>  
   
--   [安全巡覽](#SafeTopLevelNavigation)  
+-   [<span data-ttu-id="52ca7-115">安全巡覽</span><span class="sxs-lookup"><span data-stu-id="52ca7-115">Safe Navigation</span></span>](#SafeTopLevelNavigation)  
   
--   [Web 瀏覽軟體安全性設定](#InternetExplorerSecuritySettings)  
+-   [<span data-ttu-id="52ca7-116">Web 瀏覽軟體安全性設定</span><span class="sxs-lookup"><span data-stu-id="52ca7-116">Web Browsing Software Security Settings</span></span>](#InternetExplorerSecuritySettings)  
   
--   [WebBrowser 控制項和功能控制項](#webbrowser_control_and_feature_controls)  
+-   [<span data-ttu-id="52ca7-117">WebBrowser 控制項和功能控制項</span><span class="sxs-lookup"><span data-stu-id="52ca7-117">WebBrowser Control and Feature Controls</span></span>](#webbrowser_control_and_feature_controls)  
   
--   [針對部分信任的用戶端應用程式停用 APTCA 組件](#APTCA)  
+-   [<span data-ttu-id="52ca7-118">停用部分信任用戶端應用程式的 APTCA 組件</span><span class="sxs-lookup"><span data-stu-id="52ca7-118">Disabling APTCA Assemblies for Partially Trusted Client Applications</span></span>](#APTCA)  
   
--   [鬆散 XAML 檔案的沙箱行為](#LooseContentSandboxing)  
+-   [<span data-ttu-id="52ca7-119">鬆散 XAML 檔案的沙箱行為</span><span class="sxs-lookup"><span data-stu-id="52ca7-119">Sandbox Behavior for Loose XAML Files</span></span>](#LooseContentSandboxing)  
   
--   [開發具更佳安全性之 WPF 應用程式的相關資源](#BestPractices)  
+-   [<span data-ttu-id="52ca7-120">用於開發可提高安全性的 WPF 應用程式的資源</span><span class="sxs-lookup"><span data-stu-id="52ca7-120">Resources for Developing WPF Applications that Promote Security</span></span>](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
-## 安全巡覽  
- 對於 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 會區分兩種類型的巡覽：應用程式和瀏覽器。  
+## <a name="safe-navigation"></a><span data-ttu-id="52ca7-121">安全巡覽</span><span class="sxs-lookup"><span data-stu-id="52ca7-121">Safe Navigation</span></span>  
+ <span data-ttu-id="52ca7-122">如[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]區分兩種類型的瀏覽： 應用程式和瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="52ca7-122">For [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] distinguishes two types of navigation: application and browser.</span></span>  
   
- 「*應用程式巡覽*」是指在瀏覽器所裝載之應用程式中的內容項目之間進行的巡覽。  「*瀏覽器巡覽*」是指會變更瀏覽器本身之內容和位置 URL 的巡覽。  下圖顯示應用程式巡覽 \(通常為 XAML\) 和瀏覽器巡覽 \(通常為 HTML\) 之間的關係：  
+ <span data-ttu-id="52ca7-123">「應用程式巡覽」是瀏覽器所裝載之應用程式的內容項目間的巡覽。</span><span class="sxs-lookup"><span data-stu-id="52ca7-123">*Application navigation* is navigation between items of content within an application that is hosted by a browser.</span></span> <span data-ttu-id="52ca7-124">「瀏覽器巡覽」是變更瀏覽器本身的內容和位置 URL 的巡覽。</span><span class="sxs-lookup"><span data-stu-id="52ca7-124">*Browser navigation* is navigation that changes the content and location URL of a browser itself.</span></span> <span data-ttu-id="52ca7-125">在下圖顯示瀏覽器瀏覽 (通常為 HTML) 應用程式瀏覽 (通常是 XAML) 之間的關聯性：</span><span class="sxs-lookup"><span data-stu-id="52ca7-125">The relationship between application navigation (typically XAML) and browser navigation (typically HTML) is shown in the following illustration:</span></span>
   
- ![巡覽圖表](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ <span data-ttu-id="52ca7-126">![巡覽圖表](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")</span><span class="sxs-lookup"><span data-stu-id="52ca7-126">![Navigation diagram](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")</span></span>  
   
- [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 可以安全巡覽的內容類型，主要取決於使用的是應用程式巡覽還是瀏覽器巡覽。  
+ <span data-ttu-id="52ca7-127">被視為安全的內容類型[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]瀏覽至主要取決於是否使用應用程式導覽或瀏覽器瀏覽。</span><span class="sxs-lookup"><span data-stu-id="52ca7-127">The type of content that is considered safe for an [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] to navigate to is primarily determined by whether application navigation or browser navigation is used.</span></span>  
   
 <a name="Application_Navigation_Security"></a>   
-### 應用程式巡覽安全性  
- 應用程式巡覽如果可以用封包 [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)] 來識別，即視為安全的，可以支援四種類型的內容：  
+### <a name="application-navigation-security"></a><span data-ttu-id="52ca7-128">應用程式巡覽安全性</span><span class="sxs-lookup"><span data-stu-id="52ca7-128">Application Navigation Security</span></span>  
+ <span data-ttu-id="52ca7-129">應用程式瀏覽安全無虞的如果可以使用組件識別[!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)]，可支援四種類型的內容：</span><span class="sxs-lookup"><span data-stu-id="52ca7-129">Application navigation is considered safe if it can be identified with a pack [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)], which supports four types of content:</span></span>  
   
-|內容類型|描述|URI 範例|  
-|----------|--------|------------|  
-|資源|以組建類型 \[**資源**\] 加入至專案的檔案。|`pack://application:,,,/MyResourceFile.xaml`|  
-|內容|以組建類型 \[**內容**\] 加入至專案的檔案。|`pack://application:,,,/MyContentFile.xaml`|  
-|來源網站|以組建類型 \[**無**\] 加入至專案的檔案。|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|應用程式程式碼|具有已編譯之後置程式碼的 XAML 資源。<br /><br /> \-或\-<br /><br /> 以組建類型 \[**頁面**\] 加入至專案的 XAML 檔案。|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|<span data-ttu-id="52ca7-130">內容類型</span><span class="sxs-lookup"><span data-stu-id="52ca7-130">Content Type</span></span>|<span data-ttu-id="52ca7-131">說明</span><span class="sxs-lookup"><span data-stu-id="52ca7-131">Description</span></span>|<span data-ttu-id="52ca7-132">URI 範例</span><span class="sxs-lookup"><span data-stu-id="52ca7-132">URI Example</span></span>|  
+|------------------|-----------------|-----------------|  
+|<span data-ttu-id="52ca7-133">資源</span><span class="sxs-lookup"><span data-stu-id="52ca7-133">Resource</span></span>|<span data-ttu-id="52ca7-134">加入至組建類型為專案的檔案**資源**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-134">Files that are added to a project with a build type of **Resource**.</span></span>|`pack://application:,,,/MyResourceFile.xaml`|  
+|<span data-ttu-id="52ca7-135">內容</span><span class="sxs-lookup"><span data-stu-id="52ca7-135">Content</span></span>|<span data-ttu-id="52ca7-136">加入至組建類型為專案的檔案**內容**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-136">Files that are added to a project with a build type of **Content**.</span></span>|`pack://application:,,,/MyContentFile.xaml`|  
+|<span data-ttu-id="52ca7-137">Site of origin</span><span class="sxs-lookup"><span data-stu-id="52ca7-137">Site of origin</span></span>|<span data-ttu-id="52ca7-138">加入至組建類型為專案的檔案**無**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-138">Files that are added to a project with a build type of **None**.</span></span>|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
+|<span data-ttu-id="52ca7-139">應用程式程式碼</span><span class="sxs-lookup"><span data-stu-id="52ca7-139">Application code</span></span>|<span data-ttu-id="52ca7-140">具有已編譯程式碼後置的 XAML 資源。</span><span class="sxs-lookup"><span data-stu-id="52ca7-140">XAML resources that have a compiled code-behind.</span></span><br /><br /> <span data-ttu-id="52ca7-141">-或-</span><span class="sxs-lookup"><span data-stu-id="52ca7-141">-or-</span></span><br /><br /> <span data-ttu-id="52ca7-142">加入至組建類型為專案的 XAML 檔案**頁面**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-142">XAML files that are added to a project with a build type of **Page**.</span></span>|<span data-ttu-id="52ca7-143">`pack://application:,,,/MyResourceFile` `.xaml`</span><span class="sxs-lookup"><span data-stu-id="52ca7-143">`pack://application:,,,/MyResourceFile` `.xaml`</span></span>|  
   
 > [!NOTE]
->  如需應用程式資料檔案和封包 [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)] 的詳細資訊，請參閱 [WPF 應用程式資源、內容和資料檔案](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  
+>  <span data-ttu-id="52ca7-144">如需有關應用程式資料檔案和組件[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]，請參閱[WPF 應用程式資源、 內容和資料檔案](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-144">For more information about application data files and pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], see [WPF Application Resource, Content, and Data Files](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).</span></span>  
   
- 這些內容類型的檔案可以由使用者巡覽或以程式設計的方式來巡覽：  
+ <span data-ttu-id="52ca7-145">使用者或透過程式設計方式可以巡覽到這些內容類型的檔案︰</span><span class="sxs-lookup"><span data-stu-id="52ca7-145">Files of these content types can be navigated to by either the user or programmatically:</span></span>  
   
--   **使用者巡覽**：  使用者藉由按一下 <xref:System.Windows.Documents.Hyperlink> 項目進行巡覽。  
+-   <span data-ttu-id="52ca7-146">**使用者巡覽**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-146">**User Navigation**.</span></span> <span data-ttu-id="52ca7-147">使用者按一下導覽<xref:System.Windows.Documents.Hyperlink>項目。</span><span class="sxs-lookup"><span data-stu-id="52ca7-147">The user navigates by clicking a <xref:System.Windows.Documents.Hyperlink> element.</span></span>  
   
--   **程式設計巡覽**：  與使用者無關的應用程式巡覽，例如藉由設定 <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=fullName> 屬性。  
+-   <span data-ttu-id="52ca7-148">**程式設計巡覽**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-148">**Programmatic Navigation**.</span></span> <span data-ttu-id="52ca7-149">不需要使用者，例如，藉由設定的應用程式瀏覽<xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="52ca7-149">The application navigates without involving the user, for example, by setting the <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> property.</span></span>  
   
 <a name="Browser_Navigation_Security"></a>   
-### 瀏覽器巡覽安全性  
- 只有在下列情況下，瀏覽器巡覽才會視為安全的：  
+### <a name="browser-navigation-security"></a><span data-ttu-id="52ca7-150">瀏覽器巡覽安全性</span><span class="sxs-lookup"><span data-stu-id="52ca7-150">Browser Navigation Security</span></span>  
+ <span data-ttu-id="52ca7-151">只有在下列情況下，才會將瀏覽器巡覽視為安全：</span><span class="sxs-lookup"><span data-stu-id="52ca7-151">Browser navigation is considered safe only under the following conditions:</span></span>  
   
--   **使用者巡覽**：  使用者藉由按一下主要 <xref:System.Windows.Navigation.NavigationWindow> 內 \(而不是巢狀 <xref:System.Windows.Controls.Frame> 中\) 的 <xref:System.Windows.Documents.Hyperlink> 項目進行巡覽。  
+-   <span data-ttu-id="52ca7-152">**使用者巡覽**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-152">**User Navigation**.</span></span> <span data-ttu-id="52ca7-153">使用者按一下導覽<xref:System.Windows.Documents.Hyperlink>內主要項目， <xref:System.Windows.Navigation.NavigationWindow>，不在巢狀<xref:System.Windows.Controls.Frame>。</span><span class="sxs-lookup"><span data-stu-id="52ca7-153">The user navigates by clicking a <xref:System.Windows.Documents.Hyperlink> element that is within the main <xref:System.Windows.Navigation.NavigationWindow>, not in a nested <xref:System.Windows.Controls.Frame>.</span></span>  
   
--   **區域**：  要巡覽的內容位於網際網路或近端內部網路。  
+-   <span data-ttu-id="52ca7-154">**區域**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-154">**Zone**.</span></span> <span data-ttu-id="52ca7-155">所要巡覽的內容位在網際網路或近端內部網路。</span><span class="sxs-lookup"><span data-stu-id="52ca7-155">The content being navigated to is located on the Internet or the local intranet.</span></span>  
   
--   **通訊協定**：  使用的通訊協定是 **http**、**https**、**file** 或 **mailto**。  
+-   <span data-ttu-id="52ca7-156">**通訊協定**.</span><span class="sxs-lookup"><span data-stu-id="52ca7-156">**Protocol**.</span></span> <span data-ttu-id="52ca7-157">正在使用的通訊協定是**http**， **https**，**檔案**，或**mailto**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-157">The protocol being used is either **http**, **https**, **file**, or **mailto**.</span></span>  
   
- 如果 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 以不符合上述情況的方式來巡覽內容，就會擲回 <xref:System.Security.SecurityException>。  
+ <span data-ttu-id="52ca7-158">如果[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]嘗試瀏覽內容的方式不符合這些條件，<xref:System.Security.SecurityException>就會擲回。</span><span class="sxs-lookup"><span data-stu-id="52ca7-158">If an [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] attempts to navigate to content in a manner that does not comply with these conditions, a <xref:System.Security.SecurityException> is thrown.</span></span>  
   
 <a name="InternetExplorerSecuritySettings"></a>   
-## Web 瀏覽軟體安全性設定  
- 您電腦上的安全性設定會決定所有 Web 瀏覽軟體具有的存取權。  Web 瀏覽軟體包含任何使用 [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) 或 [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) API 的應用程式或元件 \(包括 Internet Explorer 和 PresentationHost.exe 在內\)。  
+## <a name="web-browsing-software-security-settings"></a><span data-ttu-id="52ca7-159">Web 瀏覽軟體安全性設定</span><span class="sxs-lookup"><span data-stu-id="52ca7-159">Web Browsing Software Security Settings</span></span>  
+ <span data-ttu-id="52ca7-160">電腦上的安全性設定決定授與任何 Web 瀏覽軟體的存取權。</span><span class="sxs-lookup"><span data-stu-id="52ca7-160">The security settings on your computer determine the access that any Web browsing software is granted.</span></span> <span data-ttu-id="52ca7-161">網頁瀏覽軟體包含任何應用程式或元件，它使用[WinINet](http://go.microsoft.com/fwlink/?LinkId=179379)或[UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383)應用程式開發介面，包括 Internet Explorer 和 PresentationHost.exe。</span><span class="sxs-lookup"><span data-stu-id="52ca7-161">Web browsing software includes any application or component that uses the [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) or [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) APIs, including Internet Explorer and PresentationHost.exe.</span></span>  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 提供一個機制，可供您設定 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 可以執行的功能，包括：  
+ [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]<span data-ttu-id="52ca7-162">提供一個機制，您可以設定的功能，可以藉由或從執行[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]，包括下列：</span><span class="sxs-lookup"><span data-stu-id="52ca7-162"> provides a mechanism by which you can configure the functionality that is allowed to be executed by or from [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], including the following:</span></span>  
   
--   依賴 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 的元件  
+-   [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]<span data-ttu-id="52ca7-163"> 相關元件</span><span class="sxs-lookup"><span data-stu-id="52ca7-163">-reliant components</span></span>  
   
--   ActiveX 控制項和外掛程式  
+-   <span data-ttu-id="52ca7-164">ActiveX 控制項和外掛程式</span><span class="sxs-lookup"><span data-stu-id="52ca7-164">ActiveX controls and plug-ins</span></span>  
   
--   下載  
+-   <span data-ttu-id="52ca7-165">下載</span><span class="sxs-lookup"><span data-stu-id="52ca7-165">Downloads</span></span>  
   
--   指令碼  
+-   <span data-ttu-id="52ca7-166">正在處理指令碼</span><span class="sxs-lookup"><span data-stu-id="52ca7-166">Scripting</span></span>  
   
--   使用者驗證  
+-   <span data-ttu-id="52ca7-167">使用者驗證</span><span class="sxs-lookup"><span data-stu-id="52ca7-167">User Authentication</span></span>  
   
- 可以用這樣的方式保護的功能集合是以個別區域 \(例如 \[**網際網路**\]、\[**內部網路**\]、\[**信任的網站**\] 及 \[**限制的網站**\] 區域\) 為單位來設定。  下列步驟將說明如何設定您的安全性設定：  
+ <span data-ttu-id="52ca7-168">每個區域為基礎的設定功能的集合，您可以在這種方式來保護**網際網路**，**內部網路**，**信任的網站**，和**限制的網站**區域。</span><span class="sxs-lookup"><span data-stu-id="52ca7-168">The collection of functionality that can be secured in this way is configured on a per-zone basis for the **Internet**, **Intranet**, **Trusted Sites**, and **Restricted Sites** zones.</span></span> <span data-ttu-id="52ca7-169">下列步驟描述如何設定安全性設定：</span><span class="sxs-lookup"><span data-stu-id="52ca7-169">The following steps describe how to configure your security settings:</span></span>  
   
-1.  開啟 \[**控制台**\]。  
+1.  <span data-ttu-id="52ca7-170">開啟**控制台**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-170">Open **Control Panel**.</span></span>  
   
-2.  按一下 \[**網路和網際網路**\]，再按一下 \[**網際網路選項**\]。  
+2.  <span data-ttu-id="52ca7-171">按一下**網路和網際網路**，然後按一下 **網際網路選項**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-171">Click **Network and Internet** and then click **Internet Options**.</span></span>  
   
-     \[網際網路選項\] 對話方塊隨即出現。  
+     <span data-ttu-id="52ca7-172">[網際網路選項] 對話方塊隨即出現。</span><span class="sxs-lookup"><span data-stu-id="52ca7-172">The Internet Options dialog box appears.</span></span>  
   
-3.  在 \[**安全性**\] 索引標籤上，選取要設定安全性設定的區域。  
+3.  <span data-ttu-id="52ca7-173">在**安全性**索引標籤上，選取要設定的安全性設定區域。</span><span class="sxs-lookup"><span data-stu-id="52ca7-173">On the **Security** tab, select the zone to configure the security settings for.</span></span>  
   
-4.  按一下 \[**自訂層級**\] 按鈕。  
+4.  <span data-ttu-id="52ca7-174">按一下**自訂層級** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="52ca7-174">Click the **Custom Level** button.</span></span>  
   
-     \[**安全性設定**\] 對話方塊隨即出現，您可以設定選取之區域的安全性設定。  
+     <span data-ttu-id="52ca7-175">**安全性設定** 對話方塊隨即出現，您可以設定所選區域的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="52ca7-175">The **Security Settings** dialog box appears and you can configure the security settings for the selected zone.</span></span>  
   
-     ![安全性設定對話方塊](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     <span data-ttu-id="52ca7-176">![安全性設定對話方塊](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")</span><span class="sxs-lookup"><span data-stu-id="52ca7-176">![Security Settings dialog box](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")</span></span>  
   
 > [!NOTE]
->  您也可以從 Internet Explorer 開啟 \[網際網路選項\] 對話方塊。  按一下 \[**工具**\]，再按一下 \[**網際網路選項**\]。  
+>  <span data-ttu-id="52ca7-177">您也可以從 Internet Explorer 到達 [網際網路選項] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="52ca7-177">You can also get to the Internet Options dialog box from Internet Explorer.</span></span> <span data-ttu-id="52ca7-178">按一下**工具**，然後按一下 **網際網路選項**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-178">Click **Tools** and then click **Internet Options**.</span></span>  
   
- 從 [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)] 開始，會包含下列特別針對 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 的安全性設定：  
+ <span data-ttu-id="52ca7-179">從開始[!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]，特別針對下列的安全性設定[!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]會包含：</span><span class="sxs-lookup"><span data-stu-id="52ca7-179">Starting with [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], the following security settings specifically for [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] are included:</span></span>  
   
--   **鬆散的 XAML**：  控制 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 是否可以巡覽至鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案並且加以使用   \(\[啟用\]、\[停用\] 和 \[提示\] 選項\)。  
+-   <span data-ttu-id="52ca7-180">**鬆散 XAML**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-180">**Loose XAML**.</span></span> <span data-ttu-id="52ca7-181">控制項是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以瀏覽至並釋放[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案。</span><span class="sxs-lookup"><span data-stu-id="52ca7-181">Controls whether [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] can navigate to and loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files.</span></span> <span data-ttu-id="52ca7-182">([啟用]、[停用] 和 [提示] 選項)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-182">(Enable, Disable, and Prompt options).</span></span>  
   
--   **XAML 瀏覽器應用程式**：  控制 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 是否可以巡覽至 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] 檔案並且執行   \(\[啟用\]、\[停用\] 和 \[提示\] 選項\)。  
+-   <span data-ttu-id="52ca7-183">**XAML 瀏覽器應用程式**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-183">**XAML browser applications**.</span></span> <span data-ttu-id="52ca7-184">控制項是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以瀏覽至並執行[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="52ca7-184">Controls whether [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] can navigate to and run [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span> <span data-ttu-id="52ca7-185">([啟用]、[停用] 和 [提示] 選項)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-185">(Enable, Disable, and Prompt options).</span></span>  
   
- 根據預設，這些設定在 \[**網際網路**\]、\[**近端區域網路**\] 及 \[**信任的網站**\] 區域中都是啟用的，在 \[**限制的網站**\] 區域中則是停用的。  
+ <span data-ttu-id="52ca7-186">依預設，這些設定會啟用所有的**網際網路**，**近端內部網路**，和**信任的網站**區域，並停用**限制的網站**區域。</span><span class="sxs-lookup"><span data-stu-id="52ca7-186">By default, these settings are all enabled for the **Internet**, **Local intranet**, and **Trusted sites** zones, and disabled for the **Restricted sites** zone.</span></span>  
   
 <a name="Security_Settings_for_IE6_and_Below"></a>   
-### 安全性相關 WPF 登錄設定  
- 除了可透過 \[網際網路選項\] 設定的安全性設定以外，下列登錄值可用於選擇性封鎖一些可能有安全疑慮的 WPF 功能。  這些值會定義於下列機碼之下：  
+### <a name="security-related-wpf-registry-settings"></a><span data-ttu-id="52ca7-187">安全性相關 WPF 登錄設定</span><span class="sxs-lookup"><span data-stu-id="52ca7-187">Security-related WPF Registry Settings</span></span>  
+ <span data-ttu-id="52ca7-188">除了透過 [網際網路選項] 取得的安全性設定之外，還提供下列登錄值可選擇性地封鎖許多有安全性顧慮的 WPF 功能。</span><span class="sxs-lookup"><span data-stu-id="52ca7-188">In addition to the security settings available through the Internet Options, the following registry values are available for selectively blocking a number of security-sensitive WPF features.</span></span> <span data-ttu-id="52ca7-189">值會定義在下列機碼下方︰</span><span class="sxs-lookup"><span data-stu-id="52ca7-189">The values are defined under the following key:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\Windows Presentation Foundation\Features`  
   
- 下表列出可以設定的值。  
+ <span data-ttu-id="52ca7-190">下表列出可設定的值。</span><span class="sxs-lookup"><span data-stu-id="52ca7-190">The following table lists the values that can be set.</span></span>  
   
-|數值名稱|實值型別|數值資料|  
-|----------|----------|----------|  
-|XBAPDisallow|REG\_DWORD|1 表示不允許，0 表示允許。|  
-|LooseXamlDisallow|REG\_DWORD|1 表示不允許，0 表示允許。|  
-|WebBrowserDisallow|REG\_DWORD|1 表示不允許，0 表示允許。|  
-|MediaAudioDisallow|REG\_DWORD|1 表示不允許，0 表示允許。|  
-|MediaImageDisallow|REG\_DWORD|1 表示不允許，0 表示允許。|  
-|MediaVideoDisallow|REG\_DWORD|1 表示不允許，0 表示允許。|  
-|ScriptInteropDisallow|REG\_DWORD|1 表示不允許，0 表示允許。|  
+|<span data-ttu-id="52ca7-191">數值名稱</span><span class="sxs-lookup"><span data-stu-id="52ca7-191">Value Name</span></span>|<span data-ttu-id="52ca7-192">實值類型</span><span class="sxs-lookup"><span data-stu-id="52ca7-192">Value Type</span></span>|<span data-ttu-id="52ca7-193">數值資料</span><span class="sxs-lookup"><span data-stu-id="52ca7-193">Value Data</span></span>|  
+|----------------|----------------|----------------|  
+|<span data-ttu-id="52ca7-194">XBAPDisallow</span><span class="sxs-lookup"><span data-stu-id="52ca7-194">XBAPDisallow</span></span>|<span data-ttu-id="52ca7-195">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="52ca7-195">REG_DWORD</span></span>|<span data-ttu-id="52ca7-196">1 表示不允許；0 表示允許。</span><span class="sxs-lookup"><span data-stu-id="52ca7-196">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="52ca7-197">LooseXamlDisallow</span><span class="sxs-lookup"><span data-stu-id="52ca7-197">LooseXamlDisallow</span></span>|<span data-ttu-id="52ca7-198">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="52ca7-198">REG_DWORD</span></span>|<span data-ttu-id="52ca7-199">1 表示不允許；0 表示允許。</span><span class="sxs-lookup"><span data-stu-id="52ca7-199">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="52ca7-200">WebBrowserDisallow</span><span class="sxs-lookup"><span data-stu-id="52ca7-200">WebBrowserDisallow</span></span>|<span data-ttu-id="52ca7-201">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="52ca7-201">REG_DWORD</span></span>|<span data-ttu-id="52ca7-202">1 表示不允許；0 表示允許。</span><span class="sxs-lookup"><span data-stu-id="52ca7-202">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="52ca7-203">MediaAudioDisallow</span><span class="sxs-lookup"><span data-stu-id="52ca7-203">MediaAudioDisallow</span></span>|<span data-ttu-id="52ca7-204">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="52ca7-204">REG_DWORD</span></span>|<span data-ttu-id="52ca7-205">1 表示不允許；0 表示允許。</span><span class="sxs-lookup"><span data-stu-id="52ca7-205">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="52ca7-206">MediaImageDisallow</span><span class="sxs-lookup"><span data-stu-id="52ca7-206">MediaImageDisallow</span></span>|<span data-ttu-id="52ca7-207">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="52ca7-207">REG_DWORD</span></span>|<span data-ttu-id="52ca7-208">1 表示不允許；0 表示允許。</span><span class="sxs-lookup"><span data-stu-id="52ca7-208">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="52ca7-209">MediaVideoDisallow</span><span class="sxs-lookup"><span data-stu-id="52ca7-209">MediaVideoDisallow</span></span>|<span data-ttu-id="52ca7-210">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="52ca7-210">REG_DWORD</span></span>|<span data-ttu-id="52ca7-211">1 表示不允許；0 表示允許。</span><span class="sxs-lookup"><span data-stu-id="52ca7-211">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="52ca7-212">ScriptInteropDisallow</span><span class="sxs-lookup"><span data-stu-id="52ca7-212">ScriptInteropDisallow</span></span>|<span data-ttu-id="52ca7-213">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="52ca7-213">REG_DWORD</span></span>|<span data-ttu-id="52ca7-214">1 表示不允許；0 表示允許。</span><span class="sxs-lookup"><span data-stu-id="52ca7-214">1 to disallow; 0 to allow.</span></span>|  
   
 <a name="webbrowser_control_and_feature_controls"></a>   
-## WebBrowser 控制項和功能控制項  
- WPF <xref:System.Windows.Controls.WebBrowser> 控制項可用於裝載 Web 內容。  WPF <xref:System.Windows.Controls.WebBrowser> 控制項會包裝基礎的 WebBrowser ActiveX 控制項。  當您使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項來裝載未受信任的 Web 內容時，WPF 會提供一些有助於保護應用程式安全的支援。  不過，有些安全性功能必須由應用程式使用 <xref:System.Windows.Controls.WebBrowser> 控制項直接套用。  如需 WebBrowser ActiveX 控制項的詳細資訊，請參閱 [WebBrowser 控制項概觀和教學課程](http://go.microsoft.com/fwlink/?LinkId=179388) \(英文\)。  
+## <a name="webbrowser-control-and-feature-controls"></a><span data-ttu-id="52ca7-215">WebBrowser 控制項和功能控制項</span><span class="sxs-lookup"><span data-stu-id="52ca7-215">WebBrowser Control and Feature Controls</span></span>  
+ <span data-ttu-id="52ca7-216">WPF<xref:System.Windows.Controls.WebBrowser>控制項可以用來裝載 Web 內容。</span><span class="sxs-lookup"><span data-stu-id="52ca7-216">The WPF <xref:System.Windows.Controls.WebBrowser> control can be used to host Web content.</span></span> <span data-ttu-id="52ca7-217">WPF<xref:System.Windows.Controls.WebBrowser>控制項包裝基礎 WebBrowser ActiveX 控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-217">The WPF <xref:System.Windows.Controls.WebBrowser> control wraps the underlying WebBrowser ActiveX control.</span></span> <span data-ttu-id="52ca7-218">WPF 提供某些支援來保護您的應用程式，當您使用 WPF<xref:System.Windows.Controls.WebBrowser>主機的控制不受信任的網站內容。</span><span class="sxs-lookup"><span data-stu-id="52ca7-218">WPF provides some support for securing your application when you use the WPF <xref:System.Windows.Controls.WebBrowser> control to host untrusted Web content.</span></span> <span data-ttu-id="52ca7-219">不過，某些安全性功能必須直接使用的應用程式套用<xref:System.Windows.Controls.WebBrowser>控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-219">However, some security features must be applied directly by the applications using the <xref:System.Windows.Controls.WebBrowser> control.</span></span> <span data-ttu-id="52ca7-220">如需 WebBrowser ActiveX 控制項的詳細資訊，請參閱[WebBrowser 控制項概觀與教學課程](http://go.microsoft.com/fwlink/?LinkId=179388)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-220">For more information about the WebBrowser ActiveX control, see [WebBrowser Control Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=179388).</span></span>  
   
 > [!NOTE]
->  本節也適用於 <xref:System.Windows.Controls.Frame> 控制項，因為該控制項使用 <xref:System.Windows.Controls.WebBrowser> 來巡覽 HTML 內容。  
+>  <span data-ttu-id="52ca7-221">本章節也適用於<xref:System.Windows.Controls.Frame>控制，因為它會使用<xref:System.Windows.Controls.WebBrowser>瀏覽至 HTML 內容。</span><span class="sxs-lookup"><span data-stu-id="52ca7-221">This section also applies to the <xref:System.Windows.Controls.Frame> control since it uses the <xref:System.Windows.Controls.WebBrowser> to navigate to HTML content.</span></span>  
   
- 如果會使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項來裝載未受信任的 Web 內容，則您的應用程式應該使用部分信任的 <xref:System.AppDomain> 來協助將您的應用程式程式碼與潛在的惡意 HTML 指令碼隔離。  如果應用程式會使用 <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> 方法和 <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> 屬性來與裝載的指令碼互動，就更需要這麼做。  如需詳細資訊，請參閱 [WPF 增益集概觀](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+ <span data-ttu-id="52ca7-222">如果 WPF<xref:System.Windows.Controls.WebBrowser>控制項用來裝載未受信任的 Web 內容，您的應用程式應該使用部分信任<xref:System.AppDomain>協助隔離您的應用程式程式碼從可能是惡意的 HTML 指令碼。</span><span class="sxs-lookup"><span data-stu-id="52ca7-222">If the WPF <xref:System.Windows.Controls.WebBrowser> control is used to host untrusted Web content, your application should use a partial-trust <xref:System.AppDomain> to help insulate your application code from potentially malicious HTML script code.</span></span> <span data-ttu-id="52ca7-223">特別是如果您的應用程式使用在互動裝載指令碼<xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>方法和<xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="52ca7-223">This is especially true if your application is interacting with the hosted script by using the <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> method and the <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> property.</span></span> <span data-ttu-id="52ca7-224">如需詳細資訊，請參閱[WPF 增益集概觀](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-224">For more information, see [WPF Add-Ins Overview](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
   
- 如果應用程式會使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項，另一個可提高安全性並緩和攻擊影響的方法，就是啟用 Internet Explorer 功能控制項。  功能控制項是 Internet Explorer 的附加項目，可供系統管理員與開發人員設定 Internet Explorer 以及裝載 WebBrowser ActiveX 控制項 \(由 WPF <xref:System.Windows.Controls.WebBrowser> 控制項所包裝\) 之應用程式的功能。  設定功能控制項的方式有使用 [CoInternetSetFeatureEnabled](http://go.microsoft.com/fwlink/?LinkId=179394) 函式或是變更登錄中的值。  如需功能控制項的詳細資訊，請參閱[功能控制項簡介](http://go.microsoft.com/fwlink/?LinkId=179390) \(英文\) 和[網際網路功能控制項](http://go.microsoft.com/fwlink/?LinkId=179392) \(英文\)。  
+ <span data-ttu-id="52ca7-225">如果您的應用程式會使用 WPF<xref:System.Windows.Controls.WebBrowser>控制項，為了提高安全性並減少攻擊的另一個方法是，若要啟用 Internet Explorer 功能的控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-225">If your application uses the WPF <xref:System.Windows.Controls.WebBrowser> control, another way to increase security and mitigate attacks is to enable Internet Explorer feature controls.</span></span> <span data-ttu-id="52ca7-226">功能的控制項是附加的 Internet Explorer 可讓系統管理員和開發人員設定 Internet Explorer 和 WebBrowser ActiveX 控制項中，裝載的應用程式的功能的 WPF<xref:System.Windows.Controls.WebBrowser>控制換行。</span><span class="sxs-lookup"><span data-stu-id="52ca7-226">Feature controls are additions to Internet Explorer that allow administrators and developers to configure features of Internet Explorer and applications that host the WebBrowser ActiveX control, which the WPF <xref:System.Windows.Controls.WebBrowser> control wraps.</span></span> <span data-ttu-id="52ca7-227">可以使用設定功能控制項[CoInternetSetFeatureEnabled](http://go.microsoft.com/fwlink/?LinkId=179394)函式，或變更登錄中的值。</span><span class="sxs-lookup"><span data-stu-id="52ca7-227">Feature controls can be configured by using the [CoInternetSetFeatureEnabled](http://go.microsoft.com/fwlink/?LinkId=179394) function or by changing values in the registry.</span></span> <span data-ttu-id="52ca7-228">如需功能的控制項的詳細資訊，請參閱[功能控制項簡介](http://go.microsoft.com/fwlink/?LinkId=179390)和[網際網路功能控制項](http://go.microsoft.com/fwlink/?LinkId=179392)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-228">For more information about feature controls, see [Introduction to Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179390) and [Internet Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179392).</span></span>  
   
- 如果您所開發的獨立 WPF 應用程式會使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項，則 WPF 會替您的應用程式自動啟用下列功能控制項。  
+ <span data-ttu-id="52ca7-229">如果您正在開發的獨立 WPF 應用程式會使用 WPF<xref:System.Windows.Controls.WebBrowser>控制項，WPF 會自動啟用您的應用程式的下列功能控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-229">If you are developing a standalone WPF application that uses the WPF <xref:System.Windows.Controls.WebBrowser> control, WPF automatically enables the following feature controls for your application.</span></span>  
   
-|功能控制項|  
-|-----------|  
-|FEATURE\_MIME\_HANDLING|  
-|FEATURE\_MIME\_SNIFFING|  
-|FEATURE\_OBJECT\_CACHING|  
-|FEATURE\_SAFE\_BINDTOOBJECT|  
-|FEATURE\_WINDOW\_RESTRICTIONS|  
-|FEATURE\_ZONE\_ELEVATION|  
-|FEATURE\_RESTRICT\_FILEDOWNLOAD|  
-|FEATURE\_RESTRICT\_ACTIVEXINSTALL|  
-|FEATURE\_ADDON\_MANAGEMENT|  
-|FEATURE\_HTTP\_USERNAME\_PASSWORD\_DISABLE|  
-|FEATURE\_SECURITYBAND|  
-|FEATURE\_UNC\_SAVEDFILECHECK|  
-|FEATURE\_VALIDATE\_NAVIGATE\_URL|  
-|FEATURE\_DISABLE\_TELNET\_PROTOCOL|  
-|FEATURE\_WEBOC\_POPUPMANAGEMENT|  
-|FEATURE\_DISABLE\_LEGACY\_COMPRESSION|  
-|FEATURE\_SSLUX|  
+|<span data-ttu-id="52ca7-230">功能控制項</span><span class="sxs-lookup"><span data-stu-id="52ca7-230">Feature Control</span></span>|  
+|---------------------|  
+|<span data-ttu-id="52ca7-231">FEATURE_MIME_HANDLING</span><span class="sxs-lookup"><span data-stu-id="52ca7-231">FEATURE_MIME_HANDLING</span></span>|  
+|<span data-ttu-id="52ca7-232">FEATURE_MIME_SNIFFING</span><span class="sxs-lookup"><span data-stu-id="52ca7-232">FEATURE_MIME_SNIFFING</span></span>|  
+|<span data-ttu-id="52ca7-233">FEATURE_OBJECT_CACHING</span><span class="sxs-lookup"><span data-stu-id="52ca7-233">FEATURE_OBJECT_CACHING</span></span>|  
+|<span data-ttu-id="52ca7-234">FEATURE_SAFE_BINDTOOBJECT</span><span class="sxs-lookup"><span data-stu-id="52ca7-234">FEATURE_SAFE_BINDTOOBJECT</span></span>|  
+|<span data-ttu-id="52ca7-235">FEATURE_WINDOW_RESTRICTIONS</span><span class="sxs-lookup"><span data-stu-id="52ca7-235">FEATURE_WINDOW_RESTRICTIONS</span></span>|  
+|<span data-ttu-id="52ca7-236">FEATURE_ZONE_ELEVATION</span><span class="sxs-lookup"><span data-stu-id="52ca7-236">FEATURE_ZONE_ELEVATION</span></span>|  
+|<span data-ttu-id="52ca7-237">FEATURE_RESTRICT_FILEDOWNLOAD</span><span class="sxs-lookup"><span data-stu-id="52ca7-237">FEATURE_RESTRICT_FILEDOWNLOAD</span></span>|  
+|<span data-ttu-id="52ca7-238">FEATURE_RESTRICT_ACTIVEXINSTALL</span><span class="sxs-lookup"><span data-stu-id="52ca7-238">FEATURE_RESTRICT_ACTIVEXINSTALL</span></span>|  
+|<span data-ttu-id="52ca7-239">FEATURE_ADDON_MANAGEMENT</span><span class="sxs-lookup"><span data-stu-id="52ca7-239">FEATURE_ADDON_MANAGEMENT</span></span>|  
+|<span data-ttu-id="52ca7-240">FEATURE_HTTP_USERNAME_PASSWORD_DISABLE</span><span class="sxs-lookup"><span data-stu-id="52ca7-240">FEATURE_HTTP_USERNAME_PASSWORD_DISABLE</span></span>|  
+|<span data-ttu-id="52ca7-241">FEATURE_SECURITYBAND</span><span class="sxs-lookup"><span data-stu-id="52ca7-241">FEATURE_SECURITYBAND</span></span>|  
+|<span data-ttu-id="52ca7-242">FEATURE_UNC_SAVEDFILECHECK</span><span class="sxs-lookup"><span data-stu-id="52ca7-242">FEATURE_UNC_SAVEDFILECHECK</span></span>|  
+|<span data-ttu-id="52ca7-243">FEATURE_VALIDATE_NAVIGATE_URL</span><span class="sxs-lookup"><span data-stu-id="52ca7-243">FEATURE_VALIDATE_NAVIGATE_URL</span></span>|  
+|<span data-ttu-id="52ca7-244">FEATURE_DISABLE_TELNET_PROTOCOL</span><span class="sxs-lookup"><span data-stu-id="52ca7-244">FEATURE_DISABLE_TELNET_PROTOCOL</span></span>|  
+|<span data-ttu-id="52ca7-245">FEATURE_WEBOC_POPUPMANAGEMENT</span><span class="sxs-lookup"><span data-stu-id="52ca7-245">FEATURE_WEBOC_POPUPMANAGEMENT</span></span>|  
+|<span data-ttu-id="52ca7-246">FEATURE_DISABLE_LEGACY_COMPRESSION</span><span class="sxs-lookup"><span data-stu-id="52ca7-246">FEATURE_DISABLE_LEGACY_COMPRESSION</span></span>|  
+|<span data-ttu-id="52ca7-247">FEATURE_SSLUX</span><span class="sxs-lookup"><span data-stu-id="52ca7-247">FEATURE_SSLUX</span></span>|  
   
- 因為這些功能控制項會無條件啟用，所以完全信任的應用程式可能會因此受到損害。  在這種情況下，如果停用對應的功能控制項對於該特定應用程式和其裝載的內容並不會有安全性風險，則可放心停用。  
+ <span data-ttu-id="52ca7-248">因為會無條件地啟用這些功能控制項，所以它們可能會損害完全信任應用程式。</span><span class="sxs-lookup"><span data-stu-id="52ca7-248">Since these feature controls are enabled unconditionally, a full-trust application might be impaired by them.</span></span> <span data-ttu-id="52ca7-249">在此情況下，如果特定應用程式和其所裝載的內容沒有安全性風險，則可以停用對應的功能控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-249">In this case, if there is no security risk for the specific application and the content it is hosting, the corresponding feature control can be disabled.</span></span>  
   
- 功能控制項是在執行個體化 WebBrowser ActiveX 物件的過程中受到套用。  因此，如果您要建立可以巡覽未受信任內容的獨立應用程式，則應該認真考慮啟用其他功能控制項。  
-  
-> [!NOTE]
->  這項建議是以針對 MSHTML 和 SHDOCVW 主機安全性的一般建議事項為根據。  如需詳細資訊，請參閱 [MSHTML 主機安全性常見問題集：上篇](http://go.microsoft.com/fwlink/?LinkId=179396) \(英文\) 和 [MSHTML 主機安全性常見問題集：下篇](http://go.microsoft.com/fwlink/?LinkId=179415) \(英文\)。  
-  
- 對於您的可執行檔，請考慮將下列功能控制項的登錄值設為 1 加以啟用。  
-  
-|功能控制項|  
-|-----------|  
-|FEATURE\_ACTIVEX\_REPURPOSEDETECTION|  
-|FEATURE\_BLOCK\_LMZ\_IMG|  
-|FEATURE\_BLOCK\_LMZ\_OBJECT|  
-|FEATURE\_BLOCK\_LMZ\_SCRIPT|  
-|FEATURE\_RESTRICT\_RES\_TO\_LMZ|  
-|FEATURE\_RESTRICT\_ABOUT\_PROTOCOL\_IE7|  
-|FEATURE\_SHOW\_APP\_PROTOCOL\_WARN\_DIALOG|  
-|FEATURE\_LOCALMACHINE\_LOCKDOWN|  
-|FEATURE\_FORCE\_ADDR\_AND\_STATUS|  
-|FEATURE\_RESTRICTED\_ZONE\_WHEN\_FILE\_NOT\_FOUND|  
-  
- 對於您的可執行檔，請考慮將下列功能控制項的登錄值設為 0 加以停用。  
-  
-|功能控制項|  
-|-----------|  
-|FEATURE\_ENABLE\_SCRIPT\_PASTE\_URLACTION\_IF\_PROMPT|  
-  
- 如果您執行的部分信任 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] 會在 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 中加上 WPF <xref:System.Windows.Controls.WebBrowser> 控制項，則 WPF 會在 Internet Explorer 處理序的位址空間中裝載 WebBrowser ActiveX 控制項。  因為 WebBrowser ActiveX 控制項是裝載於 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 處理序中，所以 Internet Explorer 的所有功能控制項也都會對 WebBrowser ActiveX 控制項啟用。  
-  
- 相較於一般獨立應用程式，在 Internet Explorer 中執行的 XBAP 可獲得額外一層安全性。  其之所以能夠有此額外的安全性，是因為在 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)] 上，預設會以受保護模式執行 Internet Explorer \(因此及於 WebBrowser ActiveX 控制項\)。  如需受保護模式的詳細資訊，請參閱[了解及在受保護模式 Internet Explorer 中作業](http://go.microsoft.com/fwlink/?LinkId=179393) \(英文\)。  
+ <span data-ttu-id="52ca7-250">根據 WebBrowser ActiveX 物件具現化的程序會套用的控制項功能。</span><span class="sxs-lookup"><span data-stu-id="52ca7-250">Feature controls are applied by the process instantiating the WebBrowser ActiveX object.</span></span> <span data-ttu-id="52ca7-251">因此，如果您要建立的獨立應用程式會巡覽到不受信任的內容，則應該認真考慮啟用其他功能控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-251">Therefore, if you are creating a stand-alone application that can navigate to untrusted content, you should seriously consider enabling additional feature controls.</span></span>  
   
 > [!NOTE]
->  如果您嘗試執行的 XBAP 會在 Firefox 中加上 WPF <xref:System.Windows.Controls.WebBrowser> 控制項，則在位於 \[網際網路\] 區域時會擲回 <xref:System.Security.SecurityException>。  這是由於 WPF 安全性原則的緣故。  
+>  <span data-ttu-id="52ca7-252">這項建議根據 MSHTML 和 SHDOCVW 主機安全性的一般建議。</span><span class="sxs-lookup"><span data-stu-id="52ca7-252">This recommendation is based on general recommendations for MSHTML and SHDOCVW host security.</span></span> <span data-ttu-id="52ca7-253">如需詳細資訊，請參閱[MSHTML 主機安全性常見問題集： 第 I 部分的第二篇](http://go.microsoft.com/fwlink/?LinkId=179396)和[MSHTML 主機安全性常見問題集： II 的 II](http://go.microsoft.com/fwlink/?LinkId=179415)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-253">For more information, see [The MSHTML Host Security FAQ: Part I of II](http://go.microsoft.com/fwlink/?LinkId=179396) and [The MSHTML Host Security FAQ: Part II of II](http://go.microsoft.com/fwlink/?LinkId=179415).</span></span>  
+  
+ <span data-ttu-id="52ca7-254">針對可執行檔，請考慮將登錄值設定為 1 來啟用下列功能控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-254">For your executable, consider enabling the following feature controls by setting the registry value to 1.</span></span>  
+  
+|<span data-ttu-id="52ca7-255">功能控制項</span><span class="sxs-lookup"><span data-stu-id="52ca7-255">Feature Control</span></span>|  
+|---------------------|  
+|<span data-ttu-id="52ca7-256">FEATURE_ACTIVEX_REPURPOSEDETECTION</span><span class="sxs-lookup"><span data-stu-id="52ca7-256">FEATURE_ACTIVEX_REPURPOSEDETECTION</span></span>|  
+|<span data-ttu-id="52ca7-257">FEATURE_BLOCK_LMZ_IMG</span><span class="sxs-lookup"><span data-stu-id="52ca7-257">FEATURE_BLOCK_LMZ_IMG</span></span>|  
+|<span data-ttu-id="52ca7-258">FEATURE_BLOCK_LMZ_OBJECT</span><span class="sxs-lookup"><span data-stu-id="52ca7-258">FEATURE_BLOCK_LMZ_OBJECT</span></span>|  
+|<span data-ttu-id="52ca7-259">FEATURE_BLOCK_LMZ_SCRIPT</span><span class="sxs-lookup"><span data-stu-id="52ca7-259">FEATURE_BLOCK_LMZ_SCRIPT</span></span>|  
+|<span data-ttu-id="52ca7-260">FEATURE_RESTRICT_RES_TO_LMZ</span><span class="sxs-lookup"><span data-stu-id="52ca7-260">FEATURE_RESTRICT_RES_TO_LMZ</span></span>|  
+|<span data-ttu-id="52ca7-261">FEATURE_RESTRICT_ABOUT_PROTOCOL_IE7</span><span class="sxs-lookup"><span data-stu-id="52ca7-261">FEATURE_RESTRICT_ABOUT_PROTOCOL_IE7</span></span>|  
+|<span data-ttu-id="52ca7-262">FEATURE_SHOW_APP_PROTOCOL_WARN_DIALOG</span><span class="sxs-lookup"><span data-stu-id="52ca7-262">FEATURE_SHOW_APP_PROTOCOL_WARN_DIALOG</span></span>|  
+|<span data-ttu-id="52ca7-263">FEATURE_LOCALMACHINE_LOCKDOWN</span><span class="sxs-lookup"><span data-stu-id="52ca7-263">FEATURE_LOCALMACHINE_LOCKDOWN</span></span>|  
+|<span data-ttu-id="52ca7-264">FEATURE_FORCE_ADDR_AND_STATUS</span><span class="sxs-lookup"><span data-stu-id="52ca7-264">FEATURE_FORCE_ADDR_AND_STATUS</span></span>|  
+|<span data-ttu-id="52ca7-265">FEATURE_RESTRICTED_ZONE_WHEN_FILE_NOT_FOUND</span><span class="sxs-lookup"><span data-stu-id="52ca7-265">FEATURE_RESTRICTED_ZONE_WHEN_FILE_NOT_FOUND</span></span>|  
+  
+ <span data-ttu-id="52ca7-266">針對可執行檔，請考慮將登錄值設定為 0 來停用下列功能控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-266">For your executable, consider disabling the following feature control by setting the registry value to 0.</span></span>  
+  
+|<span data-ttu-id="52ca7-267">功能控制項</span><span class="sxs-lookup"><span data-stu-id="52ca7-267">Feature Control</span></span>|  
+|---------------------|  
+|<span data-ttu-id="52ca7-268">FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT</span><span class="sxs-lookup"><span data-stu-id="52ca7-268">FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT</span></span>|  
+  
+ <span data-ttu-id="52ca7-269">如果您執行部分信任[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]包含 WPF<xref:System.Windows.Controls.WebBrowser>控制[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]，WPF 裝載在 Internet Explorer 處理序的位址空間中的 WebBrowser ActiveX 控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-269">If you run a partial-trust [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] that includes a WPF <xref:System.Windows.Controls.WebBrowser> control in [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)], WPF hosts the WebBrowser ActiveX control in the address space of the Internet Explorer process.</span></span> <span data-ttu-id="52ca7-270">因為 WebBrowser ActiveX 控制項裝載於[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]處理序中，所有功能的控制項，Internet explorer 也會啟用 WebBrowser ActiveX 控制項。</span><span class="sxs-lookup"><span data-stu-id="52ca7-270">Since the WebBrowser ActiveX control is hosted in the [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] process, all of the feature controls for Internet Explorer are also enabled for the WebBrowser ActiveX control.</span></span>  
+  
+ <span data-ttu-id="52ca7-271">與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。</span><span class="sxs-lookup"><span data-stu-id="52ca7-271">XBAPs running in Internet Explorer also get an additional level of security compared to normal standalone applications.</span></span> <span data-ttu-id="52ca7-272">此額外的安全性是因為 Internet Explorer 中，因此 WebBrowser ActiveX 控制項，會執行受保護模式的預設[!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]和[!INCLUDE[win7](../../../includes/win7-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="52ca7-272">This additional security is because Internet Explorer, and therefore the WebBrowser ActiveX control, runs in protected mode by default on [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] and [!INCLUDE[win7](../../../includes/win7-md.md)].</span></span> <span data-ttu-id="52ca7-273">如需有關受保護模式的詳細資訊，請參閱[瞭解和使用受保護模式 Internet Explorer 中](http://go.microsoft.com/fwlink/?LinkId=179393)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-273">For more information about protected mode, see [Understanding and Working in Protected Mode Internet Explorer](http://go.microsoft.com/fwlink/?LinkId=179393).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="52ca7-274">如果您嘗試執行包含 WPF XBAP <xref:System.Windows.Controls.WebBrowser> Firefox，在 [網際網路] 區域中的控制項<xref:System.Security.SecurityException>就會擲回。</span><span class="sxs-lookup"><span data-stu-id="52ca7-274">If you try to run an XBAP that includes a WPF <xref:System.Windows.Controls.WebBrowser> control in Firefox, while in the Internet zone, a <xref:System.Security.SecurityException> will be thrown.</span></span> <span data-ttu-id="52ca7-275">這是因為 WPF 安全性原則。</span><span class="sxs-lookup"><span data-stu-id="52ca7-275">This is due to WPF security policy.</span></span>  
   
 <a name="APTCA"></a>   
-## 針對部分信任的用戶端應用程式停用 APTCA 組件  
- 當 Managed 組件安裝至[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)] 時，會變成完全受信任的，因為使用者必須明確提供安裝它們的權限。  因為它們是完全受信任的，所以只有完全受信任的 Managed 用戶端應用程式可以使用它們。  若要讓部分信任的應用程式可以使用它們，它們必須有 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> \(APTCA\) 標示。  但是只有在部分信任中經過測試可以安全執行的組件，才應標示這個屬性 \(Attribute\)。  
+## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a><span data-ttu-id="52ca7-276">停用部分信任用戶端應用程式的 APTCA 組件</span><span class="sxs-lookup"><span data-stu-id="52ca7-276">Disabling APTCA Assemblies for Partially Trusted Client Applications</span></span>  
+ <span data-ttu-id="52ca7-277">Managed 組件會安裝到[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]，它們變成完全信任，因為使用者必須提供明確的權限，才能進行安裝。</span><span class="sxs-lookup"><span data-stu-id="52ca7-277">When managed assemblies are installed into the [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)], they become fully trusted because the user must provide explicit permission to install them.</span></span> <span data-ttu-id="52ca7-278">因為它們完全受信任，所以只有完全受信任的受管理用戶端應用程式才能使用它們。</span><span class="sxs-lookup"><span data-stu-id="52ca7-278">Because they are fully trusted, only fully trusted managed client applications can use them.</span></span> <span data-ttu-id="52ca7-279">若要允許部分信任的應用程式使用它們，它們必須標記為<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA)。</span><span class="sxs-lookup"><span data-stu-id="52ca7-279">To allow partially trusted applications to use them, they must be marked with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA).</span></span> <span data-ttu-id="52ca7-280">只有經過測試可在部分信任中安全執行的組件才應該標記這個屬性。</span><span class="sxs-lookup"><span data-stu-id="52ca7-280">Only assemblies that have been tested to be safe for execution in partial trust should be marked with this attribute.</span></span>  
   
- 不過，APTCA 組件可能會在安裝至 [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)] 之後才呈現出安全性缺陷。  一旦發現安全性缺陷，組件發行者可以產生安全性更新以修正現有安裝上的問題，並且在發現問題後防範可能造成缺陷的安裝。  更新的解決方法之一是解除安裝組件，不過這樣可能會使得使用該組件的其他完全受信任的用戶端應用程式中斷。  
+ <span data-ttu-id="52ca7-281">不過，它可能是 APTCA 組件之後安裝至展現安全性缺陷[!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="52ca7-281">However, it is possible for an APTCA assembly to exhibit a security flaw after being installed into the [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)].</span></span> <span data-ttu-id="52ca7-282">發現安全性缺陷之後，組件發行者可以產生安全性更新來修正現有安裝上的問題，以及防止在發現問題之後可能進行的安裝。</span><span class="sxs-lookup"><span data-stu-id="52ca7-282">Once a security flaw is discovered, assembly publishers can produce a security update to fix the problem on existing installations, and to protect against installations that may occur after the problem is discovered.</span></span> <span data-ttu-id="52ca7-283">雖然解除安裝組件可能會中斷其他使用組件的完全信任用戶端應用程式，但是更新的其中一個選項是解除安裝組件。</span><span class="sxs-lookup"><span data-stu-id="52ca7-283">One option for the update is to uninstall the assembly, although that may break other fully trusted client applications that use the assembly.</span></span>  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供一個機制，可針對部分信任的 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] 停用 APTCA 組件，而不需解除安裝 APTCA 組件。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="52ca7-284">提供一個機制，藉以 APTCA 組件可以停用對於部分信任[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]卻不用解除安裝 APTCA 組件。</span><span class="sxs-lookup"><span data-stu-id="52ca7-284"> provides a mechanism by which an APTCA assembly can be disabled for partially trusted [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] without uninstalling the APTCA assembly.</span></span>  
   
- 若要停用 APTCA 組件，您必須建立特殊的登錄機碼：  
+ <span data-ttu-id="52ca7-285">若要停用 APTCA 組件，您必須建立特殊登錄機碼︰</span><span class="sxs-lookup"><span data-stu-id="52ca7-285">To disable an APTCA assembly, you have to create a special registry key:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\policy\APTCA\<AssemblyFullName>, FileVersion=<AssemblyFileVersion>`  
   
- 以下顯示範例：  
+ <span data-ttu-id="52ca7-286">下列示範範例：</span><span class="sxs-lookup"><span data-stu-id="52ca7-286">The following shows an example:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\policy\APTCA\aptcagac, Version=1.0.0.0, Culture=neutral, PublicKeyToken=215e3ac809a0fea7, FileVersion=1.0.0.0`  
   
- 這個機碼會建立 APTCA 組件的項目。  您還必須在這個機碼中建立啟用或停用該組件的值。  以下是此值的詳細資料：  
+ <span data-ttu-id="52ca7-287">此機碼會為 APTCA 組件建立一個項目。</span><span class="sxs-lookup"><span data-stu-id="52ca7-287">This key establishes an entry for the APTCA assembly.</span></span> <span data-ttu-id="52ca7-288">您也必須在這個機碼中建立啟用或停用組件的數值。</span><span class="sxs-lookup"><span data-stu-id="52ca7-288">You also have to create a value in this key that enables or disables the assembly.</span></span> <span data-ttu-id="52ca7-289">數值的詳細資料如下︰</span><span class="sxs-lookup"><span data-stu-id="52ca7-289">The following are the details of the value:</span></span>  
   
--   數值名稱：**APTCA\_FLAG**。  
+-   <span data-ttu-id="52ca7-290">值名稱： **APTCA_FLAG**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-290">Value Name: **APTCA_FLAG**.</span></span>  
   
--   數值型別：**REG\_DWORD**。  
+-   <span data-ttu-id="52ca7-291">實值型別： **REG_DWORD**。</span><span class="sxs-lookup"><span data-stu-id="52ca7-291">Value Type: **REG_DWORD**.</span></span>  
   
--   數值資料：**1** 表示停用，**0** 表示啟用。  
+-   <span data-ttu-id="52ca7-292">值資料： **1**停用;**0**啟用。</span><span class="sxs-lookup"><span data-stu-id="52ca7-292">Value Data: **1** to disable; **0** to enable.</span></span>  
   
- 如果需要針對部分信任的用戶端應用程式停用某個組件，您可以撰寫更新來建立登錄機碼和值。  
+ <span data-ttu-id="52ca7-293">如果必須停用部分信任用戶端應用程式的組件，您可以撰寫可建立登錄機碼和值的更新。</span><span class="sxs-lookup"><span data-stu-id="52ca7-293">If an assembly has to be disabled for partially trusted client applications, you can write an update that creates the registry key and value.</span></span>  
   
 > [!NOTE]
->  核心 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 組件不受這種停用方式的影響，因為它們是 Managed 應用程式執行所需的項目。  這項停用 APTCA 組件的支援，主要是以協力廠商應用程式為目標。  
+>  <span data-ttu-id="52ca7-294">核心[!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]組件不會受到停用它們以這種方式因為所需要的受管理的應用程式執行。</span><span class="sxs-lookup"><span data-stu-id="52ca7-294">Core [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] assemblies are not affected by disabling them in this way because they are required for managed applications to run.</span></span> <span data-ttu-id="52ca7-295">停用 APTCA 組件的支援主要是針對協力廠商應用程式。</span><span class="sxs-lookup"><span data-stu-id="52ca7-295">Support for disabling APTCA assemblies is primarily targeted to third-party applications.</span></span>  
   
 <a name="LooseContentSandboxing"></a>   
-## 鬆散 XAML 檔案的沙箱行為  
- 鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案是全標記的 XAML 檔案，這些檔案並不相依於任何後置程式碼、事件處理常式或應用程式專用組件。  直接從瀏覽器巡覽至鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案時，這些檔案會根據預設的 \[網際網路\] 區域權限集合載入至安全性沙箱中。  
+## <a name="sandbox-behavior-for-loose-xaml-files"></a><span data-ttu-id="52ca7-296">鬆散 XAML 檔案的沙箱行為</span><span class="sxs-lookup"><span data-stu-id="52ca7-296">Sandbox Behavior for Loose XAML Files</span></span>  
+ <span data-ttu-id="52ca7-297">鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案是不相依於任何程式碼後置、 事件處理常式或特定應用程式組件的僅標記的 XAML 檔案。</span><span class="sxs-lookup"><span data-stu-id="52ca7-297">Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files are markup-only XAML files that do not depend on any code-behind, event handler, or application-specific assembly.</span></span> <span data-ttu-id="52ca7-298">當釋放[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案直接從瀏覽器巡覽至，它們會在預設網際網路區域權限集合為基礎的安全性沙箱中載入。</span><span class="sxs-lookup"><span data-stu-id="52ca7-298">When loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files are navigated to directly from the browser, they are loaded in a security sandbox based on the default Internet zone permission set.</span></span>  
   
- 不過，當從獨立應用程式中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 直接巡覽至鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案時，展現的安全性行為則會不同。  
+ <span data-ttu-id="52ca7-299">不過，安全性的行為不相同時鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案從巡覽至<xref:System.Windows.Navigation.NavigationWindow>或<xref:System.Windows.Controls.Frame>的獨立應用程式中。</span><span class="sxs-lookup"><span data-stu-id="52ca7-299">However, the security behavior is different when loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files are navigated to from either a <xref:System.Windows.Navigation.NavigationWindow> or <xref:System.Windows.Controls.Frame> in a standalone application.</span></span>  
   
- 在這兩種情況下，巡覽到的鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案會繼承其主應用程式的權限。  但是，從安全性角度來看這可能不是好現象，特別是當鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案是由不信任或未知的實體產生時。  這種內容稱為「外部內容」，<xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow> 都可以設為在巡覽至這種內容時加以隔離。  隔離可以藉由將 **SandboxExternalContent** 屬性 \(Property\) 設為 true 來達成，如同下列 <xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow> 的範例所示：  
+ <span data-ttu-id="52ca7-300">在這兩種情況下，鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]瀏覽至的檔案會繼承其主應用程式的權限。</span><span class="sxs-lookup"><span data-stu-id="52ca7-300">In both cases, the loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] file that is navigated to inherits the permissions of its host application.</span></span> <span data-ttu-id="52ca7-301">不過，這種行為可能會讓人困擾安全性的觀點而言，尤其是鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案由不受信任或未知的實體。</span><span class="sxs-lookup"><span data-stu-id="52ca7-301">However, this behavior may be undesirable from a security perspective, particularly if a loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] file was produced by an entity that is either not trusted or unknown.</span></span> <span data-ttu-id="52ca7-302">這種類型的內容稱為*外部內容*，，兩者均<xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationWindow>可以設定為找出它巡覽時。</span><span class="sxs-lookup"><span data-stu-id="52ca7-302">This type of content is known as *external content*, and both <xref:System.Windows.Controls.Frame> and <xref:System.Windows.Navigation.NavigationWindow> can be configured to isolate it when navigated to.</span></span> <span data-ttu-id="52ca7-303">隔離的方式設定**SandboxExternalContent**屬性設定為 true，如下列範例所示<xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationWindow>:</span><span class="sxs-lookup"><span data-stu-id="52ca7-303">Isolation is achieved by setting the **SandboxExternalContent** property to true, as shown in the following examples for <xref:System.Windows.Controls.Frame> and <xref:System.Windows.Navigation.NavigationWindow>:</span></span>  
   
- [!code-xml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
- [!code-xml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
   
- 使用這項設定，外部內容載入至的處理序，會與裝載應用程式的處理序不同。  這個處理序只能使用預設的 \[網際網路\] 區域權限集合，而能有效地與主應用程式和用戶端電腦隔離。  
+ <span data-ttu-id="52ca7-304">使用此設定，會將外部內容載入與裝載應用程式的程序不同的程序。</span><span class="sxs-lookup"><span data-stu-id="52ca7-304">With this setting, external content will be loaded into a process that is separate from the process that is hosting the application.</span></span> <span data-ttu-id="52ca7-305">此程序僅限於預設網際網路區域權限集，可有效地隔離它與裝載應用程式和用戶端電腦。</span><span class="sxs-lookup"><span data-stu-id="52ca7-305">This process is restricted to the default Internet zone permission set, effectively isolating it from the hosting application and the client computer.</span></span>  
   
 > [!NOTE]
->  雖然在獨立應用程式中從 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 巡覽至鬆散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案的功能，是以 WPF 瀏覽器裝載基礎結構 \(牽涉到 PresentationHost 處理序\) 為基礎來實作，但是其安全性層級還是會比直接在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)] 的 Internet Explorer 中載入內容 \(仍會透過 PresentationHost\) 稍弱一些。這是因為使用 Web 瀏覽器的獨立 WPF 應用程式並不提供 Internet Explorer 所額外提供的 \[受保護模式\] 安全性功能。  
+>  <span data-ttu-id="52ca7-306">即使巡覽至鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案從<xref:System.Windows.Navigation.NavigationWindow>或<xref:System.Windows.Controls.Frame>在獨立實作應用程式裝載基礎結構，涉及 PresentationHost 程序中，WPF 瀏覽器為基礎的安全性層級是稍微小於當內容直接在 Internet Explorer 中上載入[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]和[!INCLUDE[win7](../../../includes/win7-md.md)]（這就仍然可以透過 PresentationHost）。</span><span class="sxs-lookup"><span data-stu-id="52ca7-306">Even though navigation to loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files from either a <xref:System.Windows.Navigation.NavigationWindow> or <xref:System.Windows.Controls.Frame> in a standalone application is implemented based on the WPF browser hosting infrastructure, involving the PresentationHost process, the security level is slightly less than when the content is loaded directly in Internet Explorer on [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] and [!INCLUDE[win7](../../../includes/win7-md.md)] (which would still be through PresentationHost).</span></span> <span data-ttu-id="52ca7-307">這是因為使用 Web 瀏覽器的獨立 WPF 應用程式不會提供 Internet Explorer 的額外受保護模式安全性功能。</span><span class="sxs-lookup"><span data-stu-id="52ca7-307">This is because a standalone WPF application using a Web browser does not provide the additional Protected Mode security feature of Internet Explorer.</span></span>  
   
 <a name="BestPractices"></a>   
-## 開發具更佳安全性之 WPF 應用程式的相關資源  
- 以下是一些有助於開發具更佳安全性之 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式的其他資源：  
+## <a name="resources-for-developing-wpf-applications-that-promote-security"></a><span data-ttu-id="52ca7-308">用於開發可提高安全性的 WPF 應用程式的資源</span><span class="sxs-lookup"><span data-stu-id="52ca7-308">Resources for Developing WPF Applications that Promote Security</span></span>  
+ <span data-ttu-id="52ca7-309">以下是一些額外的資源可協助開發[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]應用程式，以提升安全性：</span><span class="sxs-lookup"><span data-stu-id="52ca7-309">The following are some additional resources to help develop [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applications that promote security:</span></span>  
   
-|區域|資源|  
-|--------|--------|  
-|Managed 程式碼|[應用程式的模式和做法安全性指引](http://go.microsoft.com/fwlink/?LinkId=117426)|  
-|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)|  
-|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 安全性和部署](../Topic/ClickOnce%20Security%20and%20Deployment.md)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
+|<span data-ttu-id="52ca7-310">區域圖</span><span class="sxs-lookup"><span data-stu-id="52ca7-310">Area</span></span>|<span data-ttu-id="52ca7-311">資源</span><span class="sxs-lookup"><span data-stu-id="52ca7-311">Resource</span></span>|  
+|----------|--------------|  
+|<span data-ttu-id="52ca7-312">Managed 程式碼</span><span class="sxs-lookup"><span data-stu-id="52ca7-312">Managed code</span></span>|<span data-ttu-id="52ca7-313">[Patterns and Practices Security Guidance for Applications](http://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)</span><span class="sxs-lookup"><span data-stu-id="52ca7-313">[Patterns and Practices Security Guidance for Applications](http://go.microsoft.com/fwlink/?LinkId=117426)</span></span>|  
+|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[<span data-ttu-id="52ca7-314">程式碼存取安全性</span><span class="sxs-lookup"><span data-stu-id="52ca7-314">Code Access Security</span></span>](../../../docs/framework/misc/code-access-security.md)|  
+|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[<span data-ttu-id="52ca7-315">ClickOnce 安全性和部署</span><span class="sxs-lookup"><span data-stu-id="52ca7-315">ClickOnce Security and Deployment</span></span>](/visualstudio/deployment/clickonce-security-and-deployment)|  
+|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[<span data-ttu-id="52ca7-316">WPF 部分信任安全性</span><span class="sxs-lookup"><span data-stu-id="52ca7-316">WPF Partial Trust Security</span></span>](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## 請參閱  
- [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)   
- [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)   
- [WPF 安全性策略 – 安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)   
- [應用程式的模式和做法安全性指引](http://go.microsoft.com/fwlink/?LinkId=117426)   
- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)   
- [ClickOnce 安全性和部署](../Topic/ClickOnce%20Security%20and%20Deployment.md)   
- [XAML 概觀 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="52ca7-317">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52ca7-317">See Also</span></span>  
+ [<span data-ttu-id="52ca7-318">WPF 部分信任安全性</span><span class="sxs-lookup"><span data-stu-id="52ca7-318">WPF Partial Trust Security</span></span>](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
+ [<span data-ttu-id="52ca7-319">WPF 安全性策略 – 平台安全性</span><span class="sxs-lookup"><span data-stu-id="52ca7-319">WPF Security Strategy - Platform Security</span></span>](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [<span data-ttu-id="52ca7-320">WPF 安全性策略 – 安全性工程</span><span class="sxs-lookup"><span data-stu-id="52ca7-320">WPF Security Strategy - Security Engineering</span></span>](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
+ <span data-ttu-id="52ca7-321">[Patterns and Practices Security Guidance for Applications](http://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)</span><span class="sxs-lookup"><span data-stu-id="52ca7-321">[Patterns and Practices Security Guidance for Applications](http://go.microsoft.com/fwlink/?LinkId=117426)</span></span>  
+ [<span data-ttu-id="52ca7-322">程式碼存取安全性</span><span class="sxs-lookup"><span data-stu-id="52ca7-322">Code Access Security</span></span>](../../../docs/framework/misc/code-access-security.md)  
+ [<span data-ttu-id="52ca7-323">ClickOnce 安全性和部署</span><span class="sxs-lookup"><span data-stu-id="52ca7-323">ClickOnce Security and Deployment</span></span>](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [<span data-ttu-id="52ca7-324">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="52ca7-324">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

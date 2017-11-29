@@ -1,57 +1,60 @@
 ---
-title: "資料流訊息傳輸 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "資料流訊息傳輸"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ff9cedb589b9df79e17efcedc783938cc3c6647e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 資料流訊息傳輸
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 傳輸支援兩種傳輸訊息的模式：  
+# <a name="streaming-message-transfer"></a><span data-ttu-id="5f3bb-102">資料流訊息傳輸</span><span class="sxs-lookup"><span data-stu-id="5f3bb-102">Streaming Message Transfer</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="5f3bb-103"> 傳輸支援兩種傳輸訊息的模式：</span><span class="sxs-lookup"><span data-stu-id="5f3bb-103"> transports support two modes for transferring messages:</span></span>  
   
--   緩衝處理的傳輸會將整個訊息保留在記憶體緩衝區中，直到完成傳輸作業為止。必須等到緩衝處理的訊息完全傳送出去後，接收者才能開始讀取。  
+-   <span data-ttu-id="5f3bb-104">緩衝處理的傳輸會將整個訊息保留在記憶體緩衝區中，直到完成傳輸作業為止。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-104">Buffered transfers hold the entire message in a memory buffer until the transfer is complete.</span></span> <span data-ttu-id="5f3bb-105">必須等到緩衝處理的訊息完全傳送出去後，接收者才能開始讀取。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-105">A buffered message must be completely delivered before a receiver can read it.</span></span>  
   
--   資料流處理的傳輸會將訊息公開為資料流。在訊息完全傳送出去之前，接收者就可開始處理訊息。  
+-   <span data-ttu-id="5f3bb-106">資料流處理的傳輸會將訊息公開為資料流。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-106">Streamed transfers expose the message as a stream.</span></span> <span data-ttu-id="5f3bb-107">在訊息完全傳送出去之前，接收者就可開始處理訊息。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-107">The receiver starts processing the message before it is completely delivered.</span></span>  
   
--   資料流處理的傳輸可以藉由消除大量記憶體緩衝區的需求來改善服務的延展性 \(Scalability\)。變更傳輸模式是否能夠改善延展性，需視所傳輸的訊息大小而定。大型訊息適合使用資料流處理傳輸方式來傳輸。  
+-   <span data-ttu-id="5f3bb-108">資料流處理的傳輸可以藉由消除大量記憶體緩衝區的需求來改善服務的延展性 (Scalability)。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-108">Streamed transfers can improve the scalability of a service by eliminating the requirement for large memory buffers.</span></span> <span data-ttu-id="5f3bb-109">變更傳輸模式是否能夠改善延展性，需視所傳輸的訊息大小而定。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-109">Whether changing the transfer mode improves scalability depends on the size of the messages being transferred.</span></span> <span data-ttu-id="5f3bb-110">大型訊息適合使用資料流處理傳輸方式來傳輸。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-110">Large message sizes favor using streamed transfers.</span></span>  
   
- 根據預設，HTTP、TCP\/IP 和具名管道等傳輸都使用緩衝處理的傳輸方式。本文件將說明如何從緩衝處理的傳輸模式切換到資料流處理的傳輸模式，以及這麼做將有何影響。  
+ <span data-ttu-id="5f3bb-111">根據預設，HTTP、TCP/IP 和具名管道等傳輸都使用緩衝處理的傳輸方式。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-111">By default, the HTTP, TCP/IP, and named pipe transports use buffered transfers.</span></span> <span data-ttu-id="5f3bb-112">本文件將說明如何從緩衝處理的傳輸模式切換到資料流處理的傳輸模式，以及這麼做將有何影響。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-112">This document describes how to switch these transports from a buffered to streamed transfer mode and the consequences of doing so.</span></span>  
   
-## 啟用資料流處理的傳輸  
- 在設定傳輸的繫結項目時，便已完成選取使用緩衝處理的傳輸模式還是資料流處理的傳輸模式。繫結項目包含可設為 `Buffered`、`Streamed`、`StreamedRequest` 或 `StreamedResponse` 的 <xref:System.ServiceModel.TransferMode> 屬性。將傳輸模式設為 `Streamed` 可啟用雙向資料流通訊。將傳輸模式設為 `StreamedRequest` 或 `StreamedResponse` 只能啟用指定方向的資料流通訊。  
+## <a name="enabling-streamed-transfers"></a><span data-ttu-id="5f3bb-113">啟用資料流處理的傳輸</span><span class="sxs-lookup"><span data-stu-id="5f3bb-113">Enabling Streamed Transfers</span></span>  
+ <span data-ttu-id="5f3bb-114">在設定傳輸的繫結項目時，便已完成選取使用緩衝處理的傳輸模式還是資料流處理的傳輸模式。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-114">Selecting between buffered and streamed transfer modes is done on the binding element of the transport.</span></span> <span data-ttu-id="5f3bb-115">繫結項目包含可設為 <xref:System.ServiceModel.TransferMode>、`Buffered`、`Streamed` 或 `StreamedRequest` 的 `StreamedResponse` 屬性。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-115">The binding element has a <xref:System.ServiceModel.TransferMode> property that can be set to `Buffered`, `Streamed`, `StreamedRequest`, or `StreamedResponse`.</span></span> <span data-ttu-id="5f3bb-116">將傳輸模式設為 `Streamed` 可啟用雙向資料流通訊。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-116">Setting the transfer mode to `Streamed` enables streaming communication in both directions.</span></span> <span data-ttu-id="5f3bb-117">將傳輸模式設為 `StreamedRequest` 或 `StreamedResponse` 只能啟用指定方向的資料流通訊。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-117">Setting the transfer mode to `StreamedRequest` or `StreamedResponse` enables streaming communication in the indicated direction only.</span></span>  
   
- <xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 繫結會公開 <xref:System.ServiceModel.TransferMode> 屬性。如果是其他傳輸模式，您必須建立自訂繫結才能設定傳輸模式。  
+ <span data-ttu-id="5f3bb-118"><xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 繫結會公開 <xref:System.ServiceModel.TransferMode> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-118">The <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.NetTcpBinding>, and <xref:System.ServiceModel.NetNamedPipeBinding> bindings expose the <xref:System.ServiceModel.TransferMode> property.</span></span> <span data-ttu-id="5f3bb-119">如果是其他傳輸模式，您必須建立自訂繫結才能設定傳輸模式。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-119">For other transports, you must create a custom binding to set the transfer mode.</span></span>  
   
- 使用緩衝或資料流傳輸是由端點處決定。如果是 HTTP 傳輸模式，則傳輸模式不會在連線之間，或是在伺服器與其他媒介之間進行傳播。設定傳輸模式不會反映在服務介面的描述中。在產生服務的用戶端類別之後，您必須為搭配資料流傳輸使用的服務編輯其組態檔，以設定模式。如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  
+ <span data-ttu-id="5f3bb-120">使用緩衝或資料流傳輸是由端點處決定。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-120">The decision to use either buffered or streamed transfers is a local decision of the endpoint.</span></span> <span data-ttu-id="5f3bb-121">如果是 HTTP 傳輸模式，則傳輸模式不會在連線之間，或是在伺服器與其他媒介之間進行傳播。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-121">For HTTP transports, the transfer mode does not propagate across a connection, or to servers and other intermediaries.</span></span> <span data-ttu-id="5f3bb-122">設定傳輸模式不會反映在服務介面的描述中。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-122">Setting the transfer mode is not reflected in the description of the service interface.</span></span> <span data-ttu-id="5f3bb-123">在產生服務的用戶端類別之後，您必須為搭配資料流傳輸使用的服務編輯其組態檔，以設定模式。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-123">After generating a client class for a service, you must edit the configuration file for services intended to be used with streamed transfers to set the mode.</span></span> <span data-ttu-id="5f3bb-124">如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-124">For TCP and named pipe transports, the transfer mode is propagated as a policy assertion.</span></span>  
   
- 如需程式碼範例，請參閱 [HOW TO：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)。  
+ <span data-ttu-id="5f3bb-125">如需程式碼範例，請參閱[How to： 啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-125">For code samples, see [How to: Enable Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).</span></span>  
   
-## 啟用非同步資料流處理  
- 若要啟用非同步資料流，請將<xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 端點行為加入至服務主機，並將其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 屬性設定為 `true`。  
+## <a name="enabling-asynchronous-streaming"></a><span data-ttu-id="5f3bb-126">啟用非同步資料流處理</span><span class="sxs-lookup"><span data-stu-id="5f3bb-126">Enabling Asynchronous Streaming</span></span>  
+ <span data-ttu-id="5f3bb-127">若要啟用非同步資料流，請將 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 端點行為加入至服務主機，並將其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 屬性設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-127">To enable asynchronous streaming, add the  <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> endpoint behavior to the service host and set its <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> property to `true`.</span></span>  
   
- 這個版本的 WCF 還加入了在傳送端進行真實非同步資料流處理的功能。在將訊息串流至多個用戶端，但部分用戶端可能因為網路擁塞或完全不讀取而造成讀取速度緩慢的情節中，這項功能可以提升服務的延展性 。在這些情節中，WCF 不再針對用戶端封鎖服務上的個別執行緒。這確保服務可以處理更多的用戶端，從而提升服務的延展性。  
+ <span data-ttu-id="5f3bb-128">這個版本的 WCF 還加入了在傳送端進行真實非同步資料流處理的功能。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-128">This version of WCF also adde the capability of true asynchronous streaming on the send side.</span></span> <span data-ttu-id="5f3bb-129">在將訊息串流至多個用戶端，但部分用戶端可能因為網路擁塞或完全不讀取而造成讀取速度緩慢的案例中，這項功能可以提升服務的延展性。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-129">This improves scalability of the service in scenarios where it is streaming messages to multiple clients some of which are slow in reading; possibly due to network congestion or are not reading at all.</span></span> <span data-ttu-id="5f3bb-130">在這些案例中，WCF 不再針對用戶端封鎖服務上的個別執行緒。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-130">In these scenarios WCF no longer blocks individual threads on the service per client.</span></span> <span data-ttu-id="5f3bb-131">這樣可確保服務可以處理更多的用戶端，從而提升服務的延展性。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-131">This ensures that the service is able to process many more clients thereby improving the scalability of the service.</span></span>  
   
-## 資料流處理的傳輸限制  
- 使用資料流處理的傳輸模式會導致執行階段強制執行其他限制。  
+## <a name="restrictions-on-streamed-transfers"></a><span data-ttu-id="5f3bb-132">資料流處理的傳輸限制</span><span class="sxs-lookup"><span data-stu-id="5f3bb-132">Restrictions on Streamed Transfers</span></span>  
+ <span data-ttu-id="5f3bb-133">使用資料流處理的傳輸模式會導致執行階段強制執行其他限制。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-133">Using the streamed transfer mode causes the run time to enforce additional restrictions.</span></span>  
   
- 在資料流處理的傳輸中發生的作業，會與最多一個輸入或輸出參數簽訂合約。此參數會對應至整個訊息本文，而且必須是一個 <xref:System.ServiceModel.Channels.Message>、<xref:System.IO.Stream> 的衍生型別，或是 <xref:System.Xml.Serialization.IXmlSerializable> 實作。擁有作業的傳回值，相當於擁有輸出參數。  
+ <span data-ttu-id="5f3bb-134">在資料流處理的傳輸中發生的作業，會與最多一個輸入或輸出參數簽訂合約。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-134">Operations that occur across a streamed transport can have a contract with at most one input or output parameter.</span></span> <span data-ttu-id="5f3bb-135">此參數會對應至整個訊息本文，而且必須是一個 <xref:System.ServiceModel.Channels.Message>、<xref:System.IO.Stream> 的衍生型別，或是 <xref:System.Xml.Serialization.IXmlSerializable> 實作。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-135">That parameter corresponds to the entire body of the message and must be a <xref:System.ServiceModel.Channels.Message>, a derived type of <xref:System.IO.Stream>, or an <xref:System.Xml.Serialization.IXmlSerializable> implementation.</span></span> <span data-ttu-id="5f3bb-136">擁有作業的傳回值，相當於擁有輸出參數。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-136">Having a return value for an operation is equivalent to having an output parameter.</span></span>  
   
- 某些 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能，例如可靠的訊息傳送、交易，與 SOAP 訊息層級安全性，都需仰賴緩衝處理的訊息來進行傳輸。使用這些功能可能減少或消除使用資料流處理模式而獲得的效能優勢。若要保護資料流處理傳輸的安全，請單純使用傳輸層級安全性，或是使用傳輸層級安全性加上僅限於驗證的訊息安全性。  
+ <span data-ttu-id="5f3bb-137">某些 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能，例如可靠的訊息傳送、交易，與 SOAP 訊息層級安全性，都需仰賴緩衝處理的訊息來進行傳輸。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-137">Some [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] features, such as reliable messaging, transactions, and SOAP message-level security, rely on buffering messages for transmissions.</span></span> <span data-ttu-id="5f3bb-138">使用這些功能可能減少或消除使用資料流處理模式而獲得的效能優勢。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-138">Using these features may reduce or eliminate the performance benefits gained by using streaming.</span></span> <span data-ttu-id="5f3bb-139">若要保護資料流處理傳輸的安全，請單純使用傳輸層級安全性，或是使用傳輸層級安全性加上僅限於驗證的訊息安全性。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-139">To secure a streamed transport, use transport-level security only or use transport-level security plus authentication-only message security.</span></span>  
   
- SOAP 標頭一律經過緩衝處理，就算將傳輸模式設為資料流處理也是一樣。訊息的標頭不得超出 `MaxBufferSize` 傳輸配額的大小。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]這個設定的詳細資訊，請參閱[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
+ <span data-ttu-id="5f3bb-140">SOAP 標頭一律經過緩衝處理，就算將傳輸模式設為資料流處理也是一樣。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-140">SOAP headers are always buffered, even when the transfer mode is set to streamed.</span></span> <span data-ttu-id="5f3bb-141">訊息的標頭不得超出 `MaxBufferSize` 傳輸配額的大小。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-141">The headers for a message must not exceed the size of the `MaxBufferSize` transport quota.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5f3bb-142">此設定，請參閱[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-142"> this setting, see [Transport Quotas](../../../../docs/framework/wcf/feature-details/transport-quotas.md).</span></span>  
   
-## 緩衝處理的傳輸與資料流處理的傳輸之間的差異  
- 將傳輸模式由緩衝處理變更為資料流處理，會同時變更 TCP 與具名管道傳輸的原生通道類型。對於緩衝處理的傳輸來說，原生的通道類型為 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>。對於資料流處理的傳輸來說，原生通道為 <xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>。在直接使用這些傳輸 \(亦即，並未透過服務合約\) 的現有應用程式中變更傳輸模式，需要變更通道處理站與接聽項的預期通道類型。  
+## <a name="differences-between-buffered-and-streamed-transfers"></a><span data-ttu-id="5f3bb-143">緩衝處理的傳輸與資料流處理的傳輸之間的差異</span><span class="sxs-lookup"><span data-stu-id="5f3bb-143">Differences Between Buffered and Streamed Transfers</span></span>  
+ <span data-ttu-id="5f3bb-144">將傳輸模式由緩衝處理變更為資料流處理，會同時變更 TCP 與具名管道傳輸的原生通道類型。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-144">Changing the transfer mode from buffered to streamed also changes the native channel shape of the TCP and named pipe transports.</span></span> <span data-ttu-id="5f3bb-145">對於緩衝處理的傳輸來說，原生的通道類型為 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-145">For buffered transfers, the native channel shape is <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.</span></span> <span data-ttu-id="5f3bb-146">對於資料流處理的傳輸來說，原生通道為 <xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-146">For streamed transfers, the native channels are <xref:System.ServiceModel.Channels.IRequestChannel> and <xref:System.ServiceModel.Channels.IReplyChannel>.</span></span> <span data-ttu-id="5f3bb-147">在直接使用這些傳輸 (亦即，並未透過服務合約) 的現有應用程式中變更傳輸模式，需要變更通道處理站與接聽項的預期通道類型。</span><span class="sxs-lookup"><span data-stu-id="5f3bb-147">Changing the transfer mode in an existing application that uses these transports directly (that is, not through a service contract) requires changing the expected channel shape for channel factories and listeners.</span></span>  
   
-## 請參閱  
- [HOW TO：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a><span data-ttu-id="5f3bb-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5f3bb-148">See Also</span></span>  
+ [<span data-ttu-id="5f3bb-149">如何： 啟用資料流</span><span class="sxs-lookup"><span data-stu-id="5f3bb-149">How to: Enable Streaming</span></span>](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

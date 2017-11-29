@@ -1,154 +1,159 @@
 ---
-title: "使用影像、繪圖和視覺效果繪製 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筆刷, 以繪圖繪製"
-  - "筆刷, 以影像繪製"
-  - "筆刷, 使用視覺效果繪製"
-  - "使用視覺效果繪製"
-  - "繪圖, 使用繪圖"
-  - "繪圖, 使用影像"
+title: "使用影像、繪圖和視覺效果繪製"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [WPF], painting with drawings
+- painting [WPF], with drawings
+- painting [WPF], with images
+- painting with visuals [WPF]
+- brushes [WPF], painting with images
+- brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 16c3184c329fa83ddf091326c97d6faf2e2c88f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用影像、繪圖和視覺效果繪製
-本主題說明如何使用 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 與 <xref:System.Windows.Media.VisualBrush> 物件，以影像 <xref:System.Windows.Media.Drawing> 或 <xref:System.Windows.Media.Visual> 繪製區域。  
-  
-   
+# <a name="painting-with-images-drawings-and-visuals"></a><span data-ttu-id="248cc-102">使用影像、繪圖和視覺效果繪製</span><span class="sxs-lookup"><span data-stu-id="248cc-102">Painting with Images, Drawings, and Visuals</span></span>
+<span data-ttu-id="248cc-103">本主題描述如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>物件以使用影像繪製區域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="248cc-103">This topic describes how to use <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, and <xref:System.Windows.Media.VisualBrush> objects to paint an area with an image, a <xref:System.Windows.Media.Drawing>, or a <xref:System.Windows.Media.Visual>.</span></span>  
+    
   
 <a name="prereqs"></a>   
-## 必要條件  
- 若要了解本主題，您應該熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的不同筆刷類型及其基本功能。  如需簡介，請參閱 [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="248cc-104">必要條件</span><span class="sxs-lookup"><span data-stu-id="248cc-104">Prerequisites</span></span>  
+ <span data-ttu-id="248cc-105">若要了解本主題，您應該熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的不同筆刷類型及其基本功能。</span><span class="sxs-lookup"><span data-stu-id="248cc-105">To understand this topic, you should be familiar with the different types of brushes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides and their basic features.</span></span> <span data-ttu-id="248cc-106">如需簡介，請參閱 [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="248cc-106">For an introduction, see the [WPF Brushes Overview](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md).</span></span>  
   
 <a name="image"></a>   
-## 使用影像繪製區域  
- <xref:System.Windows.Media.ImageBrush> 可以使用 <xref:System.Windows.Media.ImageSource> 來繪製區域。  最常搭配 <xref:System.Windows.Media.ImageBrush> 使用的 <xref:System.Windows.Media.ImageSource> 類型是 <xref:System.Windows.Media.Imaging.BitmapImage>，它可以描述點陣圖形。  使用 <xref:System.Windows.Media.DrawingImage> 可讓您以 <xref:System.Windows.Media.Drawing> 物件進行繪製，但使用 <xref:System.Windows.Media.DrawingBrush> 比較簡單。  如需 <xref:System.Windows.Media.ImageSource> 物件的詳細資訊，請參閱[影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)。  
+## <a name="paint-an-area-with-an-image"></a><span data-ttu-id="248cc-107">使用影像繪製區域</span><span class="sxs-lookup"><span data-stu-id="248cc-107">Paint an Area with an Image</span></span>  
+ <span data-ttu-id="248cc-108"><xref:System.Windows.Media.ImageBrush>使用繪製區域<xref:System.Windows.Media.ImageSource>。</span><span class="sxs-lookup"><span data-stu-id="248cc-108">An <xref:System.Windows.Media.ImageBrush> paints an area with an <xref:System.Windows.Media.ImageSource>.</span></span> <span data-ttu-id="248cc-109">最常見的類型<xref:System.Windows.Media.ImageSource>搭配<xref:System.Windows.Media.ImageBrush>是<xref:System.Windows.Media.Imaging.BitmapImage>，用來描述點陣圖形。</span><span class="sxs-lookup"><span data-stu-id="248cc-109">The most common type of <xref:System.Windows.Media.ImageSource> to use with an <xref:System.Windows.Media.ImageBrush> is a <xref:System.Windows.Media.Imaging.BitmapImage>, which describes a bitmap graphic.</span></span> <span data-ttu-id="248cc-110">您可以使用<xref:System.Windows.Media.DrawingImage>來繪製使用<xref:System.Windows.Media.Drawing>物件，但它比較容易使用<xref:System.Windows.Media.DrawingBrush>改為。</span><span class="sxs-lookup"><span data-stu-id="248cc-110">You can use a <xref:System.Windows.Media.DrawingImage> to paint using a <xref:System.Windows.Media.Drawing> object, but it is simpler to use a <xref:System.Windows.Media.DrawingBrush> instead.</span></span> <span data-ttu-id="248cc-111">如需有關<xref:System.Windows.Media.ImageSource>物件，請參閱[影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="248cc-111">For more information about <xref:System.Windows.Media.ImageSource> objects, see the [Imaging Overview](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).</span></span>  
   
- 若要使用 <xref:System.Windows.Media.ImageBrush> 進行繪製，請建立 <xref:System.Windows.Media.Imaging.BitmapImage> 並用它載入點陣圖內容。  接著，請使用 <xref:System.Windows.Media.Imaging.BitmapImage> 來設定 <xref:System.Windows.Media.ImageBrush> 的 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 屬性。  最後，將 <xref:System.Windows.Media.ImageBrush> 套用至您要繪製的物件。  在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，您也可以使用要載入之影像的路徑，設定 <xref:System.Windows.Media.ImageBrush> 的 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 屬性。  
+ <span data-ttu-id="248cc-112">要用以繪製<xref:System.Windows.Media.ImageBrush>，建立<xref:System.Windows.Media.Imaging.BitmapImage>並使用它來載入點陣圖內容。</span><span class="sxs-lookup"><span data-stu-id="248cc-112">To paint with an <xref:System.Windows.Media.ImageBrush>, create a <xref:System.Windows.Media.Imaging.BitmapImage> and use it to load the bitmap content.</span></span> <span data-ttu-id="248cc-113">然後，使用<xref:System.Windows.Media.Imaging.BitmapImage>設定<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性<xref:System.Windows.Media.ImageBrush>。</span><span class="sxs-lookup"><span data-stu-id="248cc-113">Then, use the <xref:System.Windows.Media.Imaging.BitmapImage> to set the <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property of the <xref:System.Windows.Media.ImageBrush>.</span></span> <span data-ttu-id="248cc-114">最後，套用<xref:System.Windows.Media.ImageBrush>您想要繪製的物件。</span><span class="sxs-lookup"><span data-stu-id="248cc-114">Finally, apply the <xref:System.Windows.Media.ImageBrush> to the object you want to paint.</span></span>  <span data-ttu-id="248cc-115">在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，您也可以設定<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性<xref:System.Windows.Media.ImageBrush>来載入的映像的路徑。</span><span class="sxs-lookup"><span data-stu-id="248cc-115">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can also just set the <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property of the <xref:System.Windows.Media.ImageBrush> with the path of the image to load.</span></span>  
   
- 就像所有 <xref:System.Windows.Media.Brush> 物件，<xref:System.Windows.Media.ImageBrush> 可以用於繪製圖案、面板、控制項與文字等物件。  下圖顯示可以使用 <xref:System.Windows.Media.ImageBrush> 達成的部分效果。  
+ <span data-ttu-id="248cc-116">如同所有<xref:System.Windows.Media.Brush>物件<xref:System.Windows.Media.ImageBrush>可以用來繪製圖形、 面板、 控制項和文字方塊等物件。</span><span class="sxs-lookup"><span data-stu-id="248cc-116">Like all <xref:System.Windows.Media.Brush> objects, an <xref:System.Windows.Media.ImageBrush> can be used to paint objects such as shapes, panels, controls, and text.</span></span> <span data-ttu-id="248cc-117">下圖顯示一些可達到的效果<xref:System.Windows.Media.ImageBrush>。</span><span class="sxs-lookup"><span data-stu-id="248cc-117">The following illustration shows some effects that can be achieved with an <xref:System.Windows.Media.ImageBrush>.</span></span>  
   
- ![ImageBrush 輸出範例](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.png "wcpsdk\_mmgraphics\_imagebrushexamples")  
-ImageBrush 所繪製的物件  
+ <span data-ttu-id="248cc-118">![ImageBrush 輸出範例](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")</span><span class="sxs-lookup"><span data-stu-id="248cc-118">![ImageBrush output examples](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")</span></span>  
+<span data-ttu-id="248cc-119">ImageBrush 所繪製的物件</span><span class="sxs-lookup"><span data-stu-id="248cc-119">Objects painted by an ImageBrush</span></span>  
   
- 根據預設，<xref:System.Windows.Media.ImageBrush> 會自動縮放其影像的大小以完全填滿繪製的區域，此時如果繪製的區域與影像所使用的外觀比例不相同，影像可能會變形。  您可以將 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性的預設值 <xref:System.Windows.Media.Stretch> 變更為 <xref:System.Windows.Media.Stretch>、<xref:System.Windows.Media.Stretch> 或 <xref:System.Windows.Media.Stretch>，以改變這個行為。  由於 <xref:System.Windows.Media.ImageBrush> 是一種 <xref:System.Windows.Media.TileBrush>，因此您可以確切指定影像筆刷填滿輸出區域的方式，甚至建立圖樣。  如需進階 <xref:System.Windows.Media.TileBrush> 功能的詳細資訊，請參閱 [TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。  
+ <span data-ttu-id="248cc-120">根據預設，<xref:System.Windows.Media.ImageBrush>兩端之間自動縮放它的映像完全填滿區域正在繪製，可能會使影像扭曲繪製的區域有不同的外觀比例比的映像。</span><span class="sxs-lookup"><span data-stu-id="248cc-120">By default, an <xref:System.Windows.Media.ImageBrush> stretches its image to completely fill the area being painted, possibly distorting the image if the painted area has a different aspect ratio than the image.</span></span> <span data-ttu-id="248cc-121">您可以變更此行為變更<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性的預設值從<xref:System.Windows.Media.Stretch.Fill>至<xref:System.Windows.Media.Stretch.None>， <xref:System.Windows.Media.Stretch.Uniform>，或<xref:System.Windows.Media.Stretch.UniformToFill>。</span><span class="sxs-lookup"><span data-stu-id="248cc-121">You can change this behavior by changing the <xref:System.Windows.Media.TileBrush.Stretch%2A> property from its default value of <xref:System.Windows.Media.Stretch.Fill> to <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, or <xref:System.Windows.Media.Stretch.UniformToFill>.</span></span> <span data-ttu-id="248cc-122">因為<xref:System.Windows.Media.ImageBrush>是一種<xref:System.Windows.Media.TileBrush>，您可以指定完全如何影像筆刷填滿輸出區域，甚至建立模式。</span><span class="sxs-lookup"><span data-stu-id="248cc-122">Because <xref:System.Windows.Media.ImageBrush> is a type of <xref:System.Windows.Media.TileBrush>, you can specify exactly how an image brush fills the output area and even create patterns.</span></span> <span data-ttu-id="248cc-123">如需有關進階<xref:System.Windows.Media.TileBrush>功能，請參閱[TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="248cc-123">For more information about advanced <xref:System.Windows.Media.TileBrush> features, see the [TileBrush Overview](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).</span></span>  
   
 <a name="fillingpanelwithimage"></a>   
-## 範例：使用點陣圖影像繪製物件  
- 下列範例是使用 <xref:System.Windows.Media.ImageBrush> 來繪製 <xref:System.Windows.Controls.Canvas> 的 <xref:System.Windows.Controls.Panel.Background%2A>。  
+## <a name="example-paint-an-object-with-a-bitmap-image"></a><span data-ttu-id="248cc-124">範例：使用點陣圖影像繪製物件</span><span class="sxs-lookup"><span data-stu-id="248cc-124">Example: Paint an Object with a Bitmap Image</span></span>  
+ <span data-ttu-id="248cc-125">下列範例會使用<xref:System.Windows.Media.ImageBrush>來繪製<xref:System.Windows.Controls.Panel.Background%2A>的<xref:System.Windows.Controls.Canvas>。</span><span class="sxs-lookup"><span data-stu-id="248cc-125">The following example uses an <xref:System.Windows.Media.ImageBrush> to paint the <xref:System.Windows.Controls.Panel.Background%2A> of a <xref:System.Windows.Controls.Canvas>.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/ImageBrushExample.cs#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/imagebrushexample.vb#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
   
 <a name="drawingbrushintro"></a>   
-## 使用繪圖繪製區域  
- <xref:System.Windows.Media.DrawingBrush> 可讓您使用圖案、文字、影像與視訊來繪製區域。  繪圖筆刷內的圖案本身就可以用純色、漸層、影像或其他 <xref:System.Windows.Media.DrawingBrush> 來繪製。  下圖示範 <xref:System.Windows.Media.DrawingBrush> 的一些用法。  
+## <a name="paint-an-area-with-a-drawing"></a><span data-ttu-id="248cc-126">使用繪圖繪製區域</span><span class="sxs-lookup"><span data-stu-id="248cc-126">Paint an Area with a Drawing</span></span>  
+ <span data-ttu-id="248cc-127">A<xref:System.Windows.Media.DrawingBrush>可讓您使用圖形、 文字、 影像和視訊繪製區域。</span><span class="sxs-lookup"><span data-stu-id="248cc-127">A <xref:System.Windows.Media.DrawingBrush> enables you to paint an area with shapes, text, images, and video.</span></span> <span data-ttu-id="248cc-128">圖形內部繪圖筆刷可能本身繪製實心色彩、 漸層、 映像，或甚至是另一個<xref:System.Windows.Media.DrawingBrush>。</span><span class="sxs-lookup"><span data-stu-id="248cc-128">Shapes inside a drawing brush may themselves be painted with a solid color, gradient, image, or even another <xref:System.Windows.Media.DrawingBrush>.</span></span> <span data-ttu-id="248cc-129">下圖示範的一些用法<xref:System.Windows.Media.DrawingBrush>。</span><span class="sxs-lookup"><span data-stu-id="248cc-129">The following illustration demonstrates some uses of a <xref:System.Windows.Media.DrawingBrush>.</span></span>  
   
- ![DrawingBrush 輸出範例](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk\_mmgraphics\_drawingbrushexamples")  
-DrawingBrush 所繪製的物件  
+ <span data-ttu-id="248cc-130">![DrawingBrush 輸出範例](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")</span><span class="sxs-lookup"><span data-stu-id="248cc-130">![DrawingBrush output examples](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")</span></span>  
+<span data-ttu-id="248cc-131">DrawingBrush 所繪製的物件</span><span class="sxs-lookup"><span data-stu-id="248cc-131">Objects painted by a DrawingBrush</span></span>  
   
- <xref:System.Windows.Media.DrawingBrush> 可以使用 <xref:System.Windows.Media.Drawing> 物件繪製區域。  <xref:System.Windows.Media.Drawing> 物件可描繪可見內容，例如圖案、點陣圖、視訊或文字行。  不同類型的繪圖可描繪不同類型的內容。  以下列出不同類型的繪圖物件。  
+ <span data-ttu-id="248cc-132">A<xref:System.Windows.Media.DrawingBrush>使用繪製區域<xref:System.Windows.Media.Drawing>物件。</span><span class="sxs-lookup"><span data-stu-id="248cc-132">A <xref:System.Windows.Media.DrawingBrush> paints an area with a <xref:System.Windows.Media.Drawing> object.</span></span> <span data-ttu-id="248cc-133">A<xref:System.Windows.Media.Drawing>物件描述可見的內容，例如圖形、 點陣圖、 視訊或一行文字。</span><span class="sxs-lookup"><span data-stu-id="248cc-133">A <xref:System.Windows.Media.Drawing> object describes visible content, such as a shape, bitmap, video, or a line of text.</span></span> <span data-ttu-id="248cc-134">不同類型的繪圖可描繪不同類型的內容。</span><span class="sxs-lookup"><span data-stu-id="248cc-134">Different types of drawings describe different types of content.</span></span> <span data-ttu-id="248cc-135">以下列出不同類型的繪圖物件。</span><span class="sxs-lookup"><span data-stu-id="248cc-135">The following is a list of the different types of drawing objects.</span></span>  
   
--   <xref:System.Windows.Media.GeometryDrawing> – 繪製圖案。  
+-   <span data-ttu-id="248cc-136"><xref:System.Windows.Media.GeometryDrawing>– 繪製圖形。</span><span class="sxs-lookup"><span data-stu-id="248cc-136"><xref:System.Windows.Media.GeometryDrawing> – Draws a shape.</span></span>  
   
--   <xref:System.Windows.Media.ImageDrawing> – 繪製影像。  
+-   <span data-ttu-id="248cc-137"><xref:System.Windows.Media.ImageDrawing>– 繪製影像。</span><span class="sxs-lookup"><span data-stu-id="248cc-137"><xref:System.Windows.Media.ImageDrawing> – Draws an image.</span></span>  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – 繪製文字。  
+-   <span data-ttu-id="248cc-138"><xref:System.Windows.Media.GlyphRunDrawing>– 繪製文字。</span><span class="sxs-lookup"><span data-stu-id="248cc-138"><xref:System.Windows.Media.GlyphRunDrawing> – Draws text.</span></span>  
   
--   <xref:System.Windows.Media.VideoDrawing> – 播放音訊檔或視訊檔。  
+-   <span data-ttu-id="248cc-139"><xref:System.Windows.Media.VideoDrawing>– 播放音訊或視訊檔案。</span><span class="sxs-lookup"><span data-stu-id="248cc-139"><xref:System.Windows.Media.VideoDrawing> – Plays an audio or video file.</span></span>  
   
--   <xref:System.Windows.Media.DrawingGroup> – 繪製其他繪圖。  您可以使用繪圖群組，將其他繪圖結合為單一複合繪圖。  
+-   <span data-ttu-id="248cc-140"><xref:System.Windows.Media.DrawingGroup>– 繪製其他繪圖。</span><span class="sxs-lookup"><span data-stu-id="248cc-140"><xref:System.Windows.Media.DrawingGroup> – Draws other drawings.</span></span> <span data-ttu-id="248cc-141">您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。</span><span class="sxs-lookup"><span data-stu-id="248cc-141">Use a drawing group to combine other drawings into a single composite drawing.</span></span>  
   
- 如需 <xref:System.Windows.Media.Drawing> 物件的詳細資訊，請參閱[繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
+ <span data-ttu-id="248cc-142">如需有關<xref:System.Windows.Media.Drawing>物件，請參閱[繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="248cc-142">For more information about <xref:System.Windows.Media.Drawing> objects, see the [Drawing Objects Overview](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).</span></span>  
   
- 就像 <xref:System.Windows.Media.ImageBrush> 一樣，<xref:System.Windows.Media.DrawingBrush> 會自動縮放其 <xref:System.Windows.Media.DrawingBrush.Drawing%2A> 以填滿其輸出區域。  您可以變更 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性的預設設定 <xref:System.Windows.Media.Stretch>，以覆寫這個行為。  如需詳細資訊，請參閱 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性 \(Property\)。  
+ <span data-ttu-id="248cc-143">像<xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush>延伸其<xref:System.Windows.Media.DrawingBrush.Drawing%2A>來填滿其輸出區域。</span><span class="sxs-lookup"><span data-stu-id="248cc-143">Like an <xref:System.Windows.Media.ImageBrush>, a <xref:System.Windows.Media.DrawingBrush> stretches its <xref:System.Windows.Media.DrawingBrush.Drawing%2A> to fill its output area.</span></span> <span data-ttu-id="248cc-144">您可以藉由變更覆寫這個行為<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性從其預設值為<xref:System.Windows.Media.Stretch.Fill>。</span><span class="sxs-lookup"><span data-stu-id="248cc-144">You can override this behavior by changing the <xref:System.Windows.Media.TileBrush.Stretch%2A> property from its default setting of <xref:System.Windows.Media.Stretch.Fill>.</span></span> <span data-ttu-id="248cc-145">如需詳細資訊，請參閱 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="248cc-145">For more information, see the <xref:System.Windows.Media.TileBrush.Stretch%2A> property.</span></span>  
   
 <a name="fillingareawithdrawingbrushexample"></a>   
-## 範例：使用繪圖繪製物件  
- 下列範例顯示如何使用含有三個橢圓形的繪圖來繪製物件。  <xref:System.Windows.Media.GeometryDrawing> 是用以描述橢圓形。  
+## <a name="example-paint-an-object-with-a-drawing"></a><span data-ttu-id="248cc-146">範例：使用繪圖繪製物件</span><span class="sxs-lookup"><span data-stu-id="248cc-146">Example: Paint an Object with a Drawing</span></span>  
+ <span data-ttu-id="248cc-147">下列範例顯示如何使用含有三個橢圓形的繪圖來繪製物件。</span><span class="sxs-lookup"><span data-stu-id="248cc-147">The following example shows how to paint an object with a drawing of three ellipses.</span></span> <span data-ttu-id="248cc-148">A<xref:System.Windows.Media.GeometryDrawing>用來描述省略符號。</span><span class="sxs-lookup"><span data-stu-id="248cc-148">A <xref:System.Windows.Media.GeometryDrawing> is used to describe the ellipses.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/DrawingBrushExample.cs#graphicsmmdrawingbrushasbuttonbackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/drawingbrushexample.vb#graphicsmmdrawingbrushasbuttonbackgroundexample1)]  
   
 <a name="visualbrushsection"></a>   
-## 使用視覺效果繪製區域  
- <xref:System.Windows.Media.VisualBrush> 是所有筆刷中功能最多樣化而強大的一種，可以使用 <xref:System.Windows.Media.Visual> 繪製區域。  <xref:System.Windows.Media.Visual> 是一種低階的圖形類型，可做為多種實用圖形元件的祖系。  例如，<xref:System.Windows.Window>、<xref:System.Windows.FrameworkElement> 與 <xref:System.Windows.Controls.Control> 類別都是一種 <xref:System.Windows.Media.Visual> 物件。  透過 <xref:System.Windows.Media.VisualBrush>，您可以使用絕大多數的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 圖形物件繪製區域。  
+## <a name="paint-an-area-with-a-visual"></a><span data-ttu-id="248cc-149">使用 Visual 繪製區域</span><span class="sxs-lookup"><span data-stu-id="248cc-149">Paint an Area with a Visual</span></span>  
+ <span data-ttu-id="248cc-150">最具彈性且功能強大的筆刷，<xref:System.Windows.Media.VisualBrush>使用繪製區域<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="248cc-150">The most versatile and powerful of all the  brushes, the <xref:System.Windows.Media.VisualBrush> paints an area with a <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="248cc-151">A<xref:System.Windows.Media.Visual>是低階的圖形化型別做為許多實用的圖形化元件的上階。</span><span class="sxs-lookup"><span data-stu-id="248cc-151">A <xref:System.Windows.Media.Visual> is a low-level graphical type that serves as the ancestor of many useful graphical components.</span></span> <span data-ttu-id="248cc-152">例如， <xref:System.Windows.Window>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.Controls.Control>類別是所有類型的<xref:System.Windows.Media.Visual>物件。</span><span class="sxs-lookup"><span data-stu-id="248cc-152">For example, the <xref:System.Windows.Window>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.Controls.Control> classes are all types of <xref:System.Windows.Media.Visual> objects.</span></span> <span data-ttu-id="248cc-153">使用<xref:System.Windows.Media.VisualBrush>，您可以繪製區域與幾乎任何[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]圖形化的物件。</span><span class="sxs-lookup"><span data-stu-id="248cc-153">Using a <xref:System.Windows.Media.VisualBrush>, you can paint areas with almost any [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] graphical object.</span></span>  
   
 > [!NOTE]
->  雖然 <xref:System.Windows.Media.VisualBrush> 是一種 <xref:System.Windows.Freezable> 物件，但它在其 <xref:System.Windows.Media.VisualBrush.Visual%2A> 屬性是設為 `null` 以外的值時，將無法凍結 \(設為唯讀\)。  
+>  <span data-ttu-id="248cc-154">雖然<xref:System.Windows.Media.VisualBrush>是一種<xref:System.Windows.Freezable>物件，它無法凍結 （對唯讀） 當其<xref:System.Windows.Media.VisualBrush.Visual%2A>以外屬性設定為值`null`。</span><span class="sxs-lookup"><span data-stu-id="248cc-154">Although <xref:System.Windows.Media.VisualBrush> is a type of <xref:System.Windows.Freezable> object, it cannot be frozen (made read-only) when its <xref:System.Windows.Media.VisualBrush.Visual%2A> property is set to a value other than `null`.</span></span>  
   
- 有兩種方式可以指定 <xref:System.Windows.Media.VisualBrush> 的 <xref:System.Windows.Media.VisualBrush.Visual%2A> 內容。  
+ <span data-ttu-id="248cc-155">有兩種方式來指定<xref:System.Windows.Media.VisualBrush.Visual%2A>內容的<xref:System.Windows.Media.VisualBrush>。</span><span class="sxs-lookup"><span data-stu-id="248cc-155">There are two ways to specify the <xref:System.Windows.Media.VisualBrush.Visual%2A> content of a <xref:System.Windows.Media.VisualBrush>.</span></span>  
   
--   建立新的 <xref:System.Windows.Media.Visual>，並用它來設定 <xref:System.Windows.Media.VisualBrush> 的 <xref:System.Windows.Media.VisualBrush.Visual%2A> 屬性。  例如，請參閱稍後的[範例：使用視覺效果繪製物件](#examplevisualbrush1)一節。  
+-   <span data-ttu-id="248cc-156">建立新<xref:System.Windows.Media.Visual>並用它來設定<xref:System.Windows.Media.VisualBrush.Visual%2A>屬性<xref:System.Windows.Media.VisualBrush>。</span><span class="sxs-lookup"><span data-stu-id="248cc-156">Create a new <xref:System.Windows.Media.Visual> and use it to set the <xref:System.Windows.Media.VisualBrush.Visual%2A> property of the <xref:System.Windows.Media.VisualBrush>.</span></span> <span data-ttu-id="248cc-157">如需範例，請參閱稍後的[範例：使用視覺效果繪製物件](#examplevisualbrush1)一節。</span><span class="sxs-lookup"><span data-stu-id="248cc-157">For an example, see the [Example: Paint an Object with a Visual](#examplevisualbrush1) section that follows.</span></span>  
   
--   使用現有的 <xref:System.Windows.Media.Visual>，它會建立目標 <xref:System.Windows.Media.Visual> 的重複影像。  然後您就可以使用 <xref:System.Windows.Media.VisualBrush> 建立有趣的效果，例如反映與放大。  如需範例，請參閱[範例：建立反映](#examplevisualbrush2)一節。  
+-   <span data-ttu-id="248cc-158">使用現有<xref:System.Windows.Media.Visual>，它會建立重複的映像的目標<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="248cc-158">Use an existing <xref:System.Windows.Media.Visual>, which creates a duplicate image of the target <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="248cc-159">然後您可以使用<xref:System.Windows.Media.VisualBrush>以建立交錯效果，例如反映和縮放比例。</span><span class="sxs-lookup"><span data-stu-id="248cc-159">You can then use the <xref:System.Windows.Media.VisualBrush> to create interesting effects, such as reflection and magnification.</span></span> <span data-ttu-id="248cc-160">如需範例，請參閱[範例：建立反映](#examplevisualbrush2)一節。</span><span class="sxs-lookup"><span data-stu-id="248cc-160">For an example, see the [Example: Create a Reflection](#examplevisualbrush2) section.</span></span>  
   
- 當您為 <xref:System.Windows.Media.VisualBrush> 定義新的 <xref:System.Windows.Media.VisualBrush.Visual%2A>，且 <xref:System.Windows.Media.Visual> 為 <xref:System.Windows.UIElement> \(如面板或控制項\) 時，如果 <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> 屬性設為 `true`，配置系統即會在 <xref:System.Windows.UIElement> 及其子項目上執行。  但是根 <xref:System.Windows.UIElement> 會獨立於系統的其他部分之外：樣式與外部配置無發法穿透此界限。  因此，您應該明確指定根 <xref:System.Windows.UIElement> 的大小，因為它唯一的父系為 <xref:System.Windows.Media.VisualBrush>，所以它無法根據繪製的區域自動調整本身的大小。  如需 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中之配置的詳細資訊，請參閱[配置](../../../../docs/framework/wpf/advanced/layout.md)。  
+ <span data-ttu-id="248cc-161">當您定義新<xref:System.Windows.Media.VisualBrush.Visual%2A>如<xref:System.Windows.Media.VisualBrush>而且<xref:System.Windows.Media.Visual>是<xref:System.Windows.UIElement>上執行 （例如面板或控制項），這個版面配置系統<xref:System.Windows.UIElement>及其子項目時<xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A>屬性設定為`true`。</span><span class="sxs-lookup"><span data-stu-id="248cc-161">When you define a new <xref:System.Windows.Media.VisualBrush.Visual%2A> for a <xref:System.Windows.Media.VisualBrush> and that <xref:System.Windows.Media.Visual> is a <xref:System.Windows.UIElement> (such as a panel or control), the layout system runs on the <xref:System.Windows.UIElement> and its child elements when the <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> property is set to `true`.</span></span> <span data-ttu-id="248cc-162">不過，根<xref:System.Windows.UIElement>基本上與系統的其餘部分隔離： 樣式和外部配置無法普及到此界限。</span><span class="sxs-lookup"><span data-stu-id="248cc-162">However, the root <xref:System.Windows.UIElement> is essentially isolated from the rest of the system: styles, and external layout can't permeate this boundary.</span></span> <span data-ttu-id="248cc-163">因此，您應該明確指定根大小<xref:System.Windows.UIElement>，因為其唯一的父代是<xref:System.Windows.Media.VisualBrush>，因此它無法自動調整本身所繪製的區域。</span><span class="sxs-lookup"><span data-stu-id="248cc-163">Therefore, you should explicitly specify the size of the root <xref:System.Windows.UIElement>, because its only parent is the <xref:System.Windows.Media.VisualBrush> and therefore it cannot automatically size itself to the area being painted.</span></span> <span data-ttu-id="248cc-164">如需 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中配置的詳細資訊，請參閱[配置](../../../../docs/framework/wpf/advanced/layout.md)。</span><span class="sxs-lookup"><span data-stu-id="248cc-164">For more information about layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], see the [Layout](../../../../docs/framework/wpf/advanced/layout.md).</span></span>  
   
- 就像 <xref:System.Windows.Media.ImageBrush> 與 <xref:System.Windows.Media.DrawingBrush> 一樣，<xref:System.Windows.Media.VisualBrush> 也會自動縮放其內容以填滿其輸出區域。  您可以變更 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性的預設設定 <xref:System.Windows.Media.Stretch>，以覆寫這個行為。  如需詳細資訊，請參閱 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性 \(Property\)。  
+ <span data-ttu-id="248cc-165">像<xref:System.Windows.Media.ImageBrush>和<xref:System.Windows.Media.DrawingBrush>、<xref:System.Windows.Media.VisualBrush>自動縮放以填滿其輸出區域其內容。</span><span class="sxs-lookup"><span data-stu-id="248cc-165">Like <xref:System.Windows.Media.ImageBrush> and  <xref:System.Windows.Media.DrawingBrush>, a <xref:System.Windows.Media.VisualBrush> stretches its content to fill its output area.</span></span> <span data-ttu-id="248cc-166">您可以藉由變更覆寫這個行為<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性從其預設值為<xref:System.Windows.Media.Stretch.Fill>。</span><span class="sxs-lookup"><span data-stu-id="248cc-166">You can override this behavior by changing the <xref:System.Windows.Media.TileBrush.Stretch%2A> property from its default setting of <xref:System.Windows.Media.Stretch.Fill>.</span></span> <span data-ttu-id="248cc-167">如需詳細資訊，請參閱 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="248cc-167">For more information, see the <xref:System.Windows.Media.TileBrush.Stretch%2A> property.</span></span>  
   
 <a name="examplevisualbrush1"></a>   
-## 範例：使用視覺效果繪製物件  
- 下列範例會使用多個控制項與一個面板來繪製矩形。  
+## <a name="example-paint-an-object-with-a-visual"></a><span data-ttu-id="248cc-168">範例：使用視覺效果繪製物件</span><span class="sxs-lookup"><span data-stu-id="248cc-168">Example: Paint an Object with a Visual</span></span>  
+ <span data-ttu-id="248cc-169">下列範例會使用多個控制項與一個面板來繪製矩形。</span><span class="sxs-lookup"><span data-stu-id="248cc-169">In the following example, several controls and a panel are used to paint a rectangle.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
 <a name="examplevisualbrush2"></a>   
-## 範例：建立反映  
- 前述範例顯示了如何建立要做為背景 \(Background\) 的新 <xref:System.Windows.Media.Visual>。  您也可以使用 <xref:System.Windows.Media.VisualBrush> 來顯示現有的視覺效果；這項功能可讓您產生有趣的視覺效果，例如反映與放大。  下列範例會使用 <xref:System.Windows.Media.VisualBrush> 來建立包含幾個項目之 <xref:System.Windows.Controls.Border> 的反映。  下圖顯示的是這個範例產生的輸出。  
+## <a name="example-create-a-reflection"></a><span data-ttu-id="248cc-170">範例：建立反映</span><span class="sxs-lookup"><span data-stu-id="248cc-170">Example: Create a Reflection</span></span>  
+ <span data-ttu-id="248cc-171">上述範例示範如何建立新<xref:System.Windows.Media.Visual>用來做為背景。</span><span class="sxs-lookup"><span data-stu-id="248cc-171">The preceding example showed how to create a new <xref:System.Windows.Media.Visual> for use as a background.</span></span> <span data-ttu-id="248cc-172">您也可以使用<xref:System.Windows.Media.VisualBrush>顯示現有的 visual; 這項功能可讓您產生有趣的視覺效果，例如反射和縮放比例。</span><span class="sxs-lookup"><span data-stu-id="248cc-172">You can also use a <xref:System.Windows.Media.VisualBrush> to display an existing visual; this capability enables you to produce interesting visual effects, such as reflections and magnification.</span></span> <span data-ttu-id="248cc-173">下列範例會使用<xref:System.Windows.Media.VisualBrush>來建立反映的<xref:System.Windows.Controls.Border>，其中包含數個項目。</span><span class="sxs-lookup"><span data-stu-id="248cc-173">The following example uses a <xref:System.Windows.Media.VisualBrush> to create a reflection of a <xref:System.Windows.Controls.Border> that contains several elements.</span></span> <span data-ttu-id="248cc-174">下圖顯示的是這個範例產生的輸出。</span><span class="sxs-lookup"><span data-stu-id="248cc-174">The following illustration shows the output that this example produces.</span></span>  
   
- ![反映後的 Visual 物件](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.png "graphicsmm\_visualbrush\_reflection\_small")  
-反映的 Visual 物件  
+ <span data-ttu-id="248cc-175">![A 反映視覺物件](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")</span><span class="sxs-lookup"><span data-stu-id="248cc-175">![A reflected Visual object](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")</span></span>  
+<span data-ttu-id="248cc-176">反映後的 Visual 物件</span><span class="sxs-lookup"><span data-stu-id="248cc-176">A reflected Visual object</span></span>  
   
  [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-vb[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/reflectionexample.vb#graphicsmmvisualbrushreflectionexamplewholepage)]
- [!code-xml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
+ [!code-xaml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
   
- 如需示範如何放大部分螢幕以及如何建立反映的其他範例，請參閱 [VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049) \(英文\)。  
+ <span data-ttu-id="248cc-177">如需示範如何放大部分螢幕以及如何建立反映的其他範例，請參閱 [VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049)。</span><span class="sxs-lookup"><span data-stu-id="248cc-177">For additional examples that show how to magnify portions of the screen and how to create reflections, see the [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049).</span></span>  
   
 <a name="tilebrush"></a>   
-## TileBrush 功能  
- <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 和 <xref:System.Windows.Media.VisualBrush> 為 <xref:System.Windows.Media.TileBrush> 物件的型別。  <xref:System.Windows.Media.TileBrush> 物件可讓您更充分掌控使用影像、繪圖或視覺資料繪製區域的方式。  例如，您可以用構成圖樣的一系列影像並排顯示來繪製區域，而不是只以單一自動縮放的影像來繪製區域。  
+## <a name="tilebrush-features"></a><span data-ttu-id="248cc-178">TileBrush 功能</span><span class="sxs-lookup"><span data-stu-id="248cc-178">TileBrush Features</span></span>  
+ <span data-ttu-id="248cc-179"><xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>種<xref:System.Windows.Media.TileBrush>物件。</span><span class="sxs-lookup"><span data-stu-id="248cc-179"><xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, and <xref:System.Windows.Media.VisualBrush> are types of <xref:System.Windows.Media.TileBrush> objects.</span></span> <span data-ttu-id="248cc-180"><xref:System.Windows.Media.TileBrush>物件會提供您有大量的控制能力如何繪製區域的映像、 繪圖或視覺效果。</span><span class="sxs-lookup"><span data-stu-id="248cc-180"><xref:System.Windows.Media.TileBrush> objects provide you with a great deal of control over how an area is painted with an image, drawing, or visual.</span></span> <span data-ttu-id="248cc-181">例如，您可以用構成圖樣的一系列影像並排顯示來繪製區域，而不是只以單一自動縮放的影像來繪製區域。</span><span class="sxs-lookup"><span data-stu-id="248cc-181">For example, instead of just painting an area with a single stretched image, you can paint an area with a series of image tiles that create a pattern.</span></span>  
   
- <xref:System.Windows.Media.TileBrush> 有三個主要的元件：內容、並排顯示與輸出區域。  
+ <span data-ttu-id="248cc-182">A<xref:System.Windows.Media.TileBrush>有三個主要元件： 內容、 圖格和輸出區域。</span><span class="sxs-lookup"><span data-stu-id="248cc-182">A <xref:System.Windows.Media.TileBrush> has three primary components: content, tiles, and the output area.</span></span>  
   
- ![TileBrush 元件](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk\_mmgraphics\_defaultcontentprojection2")  
-具有單一並排顯示之 TileBrush 的元件  
+ <span data-ttu-id="248cc-183">![TileBrush 元件](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")</span><span class="sxs-lookup"><span data-stu-id="248cc-183">![TileBrush components](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")</span></span>  
+<span data-ttu-id="248cc-184">具有單一並排顯示之 TileBrush 的元件</span><span class="sxs-lookup"><span data-stu-id="248cc-184">Components of a TileBrush with a single tile</span></span>  
   
- ![並排顯示之 TileBrush 的元件](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm\_tiledprojection")  
-具有多個並排顯示之 TileBrush 的元件  
+ <span data-ttu-id="248cc-185">![元件的並排顯示 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")</span><span class="sxs-lookup"><span data-stu-id="248cc-185">![Components of a tiled TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")</span></span>  
+<span data-ttu-id="248cc-186">具有多個並排顯示之 TileBrush 的元件</span><span class="sxs-lookup"><span data-stu-id="248cc-186">Components of a TileBrush with multiple tiles</span></span>  
   
- 如需 <xref:System.Windows.Media.TileBrush> 物件之並排顯示功能的詳細資訊，請參閱 [TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。  
+ <span data-ttu-id="248cc-187">如需有關的並排顯示功能<xref:System.Windows.Media.TileBrush>物件，請參閱[TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="248cc-187">For more information about the tiling features of <xref:System.Windows.Media.TileBrush> objects, see the [TileBrush Overview](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.ImageBrush>   
- <xref:System.Windows.Media.DrawingBrush>   
- <xref:System.Windows.Media.VisualBrush>   
- <xref:System.Windows.Media.TileBrush>   
- [TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)   
- [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)   
- [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)   
- [繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
- [不透明遮罩概觀](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)   
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)   
- [ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005)   
- [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a><span data-ttu-id="248cc-188">另請參閱</span><span class="sxs-lookup"><span data-stu-id="248cc-188">See Also</span></span>  
+ <xref:System.Windows.Media.ImageBrush>  
+ <xref:System.Windows.Media.DrawingBrush>  
+ <xref:System.Windows.Media.VisualBrush>  
+ <xref:System.Windows.Media.TileBrush>  
+ [<span data-ttu-id="248cc-189">TileBrush 概觀</span><span class="sxs-lookup"><span data-stu-id="248cc-189">TileBrush Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [<span data-ttu-id="248cc-190">WPF 筆刷概觀</span><span class="sxs-lookup"><span data-stu-id="248cc-190">WPF Brushes Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
+ [<span data-ttu-id="248cc-191">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="248cc-191">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="248cc-192">繪圖物件概觀</span><span class="sxs-lookup"><span data-stu-id="248cc-192">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="248cc-193">不透明度遮罩概觀</span><span class="sxs-lookup"><span data-stu-id="248cc-193">Opacity Masks Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
+ [<span data-ttu-id="248cc-194">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="248cc-194">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="248cc-195">ImageBrush 範例</span><span class="sxs-lookup"><span data-stu-id="248cc-195">ImageBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160005)  
+ [<span data-ttu-id="248cc-196">VisualBrush 範例</span><span class="sxs-lookup"><span data-stu-id="248cc-196">VisualBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160049)

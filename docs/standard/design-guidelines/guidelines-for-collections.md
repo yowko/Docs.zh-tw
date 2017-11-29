@@ -1,143 +1,141 @@
 ---
-title: "集合方針 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "集合方針"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 9eea60dafef508748df53e23c211f5778250e7f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 集合方針
-任何類型，專門設計來管理群組的物件都有某些共同特性可視為集合。 這幾乎都適合這種型別實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>, ，因此本節中，我們只考慮實作一個或兩個介面的型別是集合。  
+# <a name="guidelines-for-collections"></a><span data-ttu-id="16084-102">集合方針</span><span class="sxs-lookup"><span data-stu-id="16084-102">Guidelines for Collections</span></span>
+<span data-ttu-id="16084-103">可以被視為特別設計用來管理群組物件都有某些共同特性的任何類型的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-103">Any type designed specifically to manipulate a group of objects having some common characteristic can be considered a collection.</span></span> <span data-ttu-id="16084-104">這幾乎都適合實作這類類型<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，因此本節中，我們只考慮實作一或兩個介面的型別是集合。</span><span class="sxs-lookup"><span data-stu-id="16084-104">It is almost always appropriate for such types to implement <xref:System.Collections.IEnumerable> or <xref:System.Collections.Generic.IEnumerable%601>, so in this section we only consider types implementing one or both of those interfaces to be collections.</span></span>  
   
- **X 不** 公用 Api 中使用弱式型別的集合。  
+ <span data-ttu-id="16084-105">**X 不**在公用 Api 中使用弱式型別的的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-105">**X DO NOT** use weakly typed collections in public APIs.</span></span>  
   
- 所有傳回值和參數，表示集合項目類型應該是正確的項目類型，不是任何基底類型 （這只適用於集合的公用成員）。  
+ <span data-ttu-id="16084-106">所有傳回值以及參數代表集合項目類型應該是正確的項目類型，不其任何基底類型 （這只適用於集合中的公用成員）。</span><span class="sxs-lookup"><span data-stu-id="16084-106">The type of all return values and parameters representing collection items should be the exact item type, not any of its base types (this applies only to public members of the collection).</span></span>  
   
- **X 不** 使用 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601> 公用 Api 中。  
+ <span data-ttu-id="16084-107">**X 不**使用<xref:System.Collections.ArrayList>或<xref:System.Collections.Generic.List%601>在公用 Api。</span><span class="sxs-lookup"><span data-stu-id="16084-107">**X DO NOT** use <xref:System.Collections.ArrayList> or <xref:System.Collections.Generic.List%601> in public APIs.</span></span>  
   
- 這些型別是設計用於在內部實作中，不在公用 Api 中的資料結構。`List<T>` 已針對效能與 cleanness Api 和彈性的情況下的電源最佳化。 例如，如果您傳回 `List<T>`, ，您將以往無法接收通知，當用戶端程式碼修改集合。 此外， `List<T>` 會公開許多成員，例如 <xref:System.Collections.Generic.List%601.BinarySearch%2A>, ，不實用，甚至在許多情況下適用。 下列兩個區段描述類型 （抽象） 特別為公用 Api 中使用而設計。  
+ <span data-ttu-id="16084-108">這些類型是設計為可在內部實作中，不能在公用 Api 的資料結構。</span><span class="sxs-lookup"><span data-stu-id="16084-108">These types are data structures designed to be used in internal implementation, not in public APIs.</span></span> <span data-ttu-id="16084-109">`List<T>`已針對效能，但要付出的應用程式開發介面與彈性 cleanness 電源最佳化。</span><span class="sxs-lookup"><span data-stu-id="16084-109">`List<T>` is optimized for performance and power at the cost of cleanness of the APIs and flexibility.</span></span> <span data-ttu-id="16084-110">例如，如果您傳回`List<T>`，您將永遠無法接收通知，當用戶端程式碼會修改集合。</span><span class="sxs-lookup"><span data-stu-id="16084-110">For example, if you return `List<T>`, you will not ever be able to receive notifications when client code modifies the collection.</span></span> <span data-ttu-id="16084-111">此外，`List<T>`公開許多成員，例如<xref:System.Collections.Generic.List%601.BinarySearch%2A>，不實用或適用於許多案例。</span><span class="sxs-lookup"><span data-stu-id="16084-111">Also, `List<T>` exposes many members, such as <xref:System.Collections.Generic.List%601.BinarySearch%2A>, that are not useful or applicable in many scenarios.</span></span> <span data-ttu-id="16084-112">下列兩節則描述專為使用公用 Api 中設計的類型 （抽象）。</span><span class="sxs-lookup"><span data-stu-id="16084-112">The following two sections describe types (abstractions) designed specifically for use in public APIs.</span></span>  
   
- **X 不** 使用 `Hashtable` 或 `Dictionary<TKey,TValue>` 公用 Api 中。  
+ <span data-ttu-id="16084-113">**X 不**使用`Hashtable`或`Dictionary<TKey,TValue>`在公用 Api。</span><span class="sxs-lookup"><span data-stu-id="16084-113">**X DO NOT** use `Hashtable` or `Dictionary<TKey,TValue>` in public APIs.</span></span>  
   
- 這些型別是設計用於在內部實作的資料結構。 應該使用公用 Api <xref:System.Collections.IDictionary>, ，`IDictionary <TKey, TValue>`, ，或實作一或兩個介面的自訂型別。  
+ <span data-ttu-id="16084-114">這些類型是設計為可在內部實作的資料結構。</span><span class="sxs-lookup"><span data-stu-id="16084-114">These types are data structures designed to be used in internal implementation.</span></span> <span data-ttu-id="16084-115">應該使用公用 Api <xref:System.Collections.IDictionary>， `IDictionary <TKey, TValue>`，或實作一或兩個介面的自訂型別。</span><span class="sxs-lookup"><span data-stu-id="16084-115">Public APIs should use <xref:System.Collections.IDictionary>, `IDictionary <TKey, TValue>`, or a custom type implementing one or both of the interfaces.</span></span>  
   
- **X 不** 使用 <xref:System.Collections.Generic.IEnumerator%601>, ，<xref:System.Collections.IEnumerator>, ，或實作介面，其中的傳回型別為以外的其他任何類型 `GetEnumerator` 方法。  
+ <span data-ttu-id="16084-116">**X 不**使用<xref:System.Collections.Generic.IEnumerator%601>， <xref:System.Collections.IEnumerator>，或實作介面，其中除了為傳回類型的任何其他型別`GetEnumerator`方法。</span><span class="sxs-lookup"><span data-stu-id="16084-116">**X DO NOT** use <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Collections.IEnumerator>, or any other type that implements either of these interfaces, except as the return type of a `GetEnumerator` method.</span></span>  
   
- 除了從方法傳回列舉值的型別 `GetEnumerator` 無法搭配 `foreach` 陳述式。  
+ <span data-ttu-id="16084-117">除了從方法傳回列舉值的型別`GetEnumerator`不能與`foreach`陳述式。</span><span class="sxs-lookup"><span data-stu-id="16084-117">Types returning enumerators from methods other than `GetEnumerator` cannot be used with the `foreach` statement.</span></span>  
   
- **X 不** 同時實作 `IEnumerator<T>` 和 `IEnumerable<T>` 上相同的型別。 同樣也適用於非泛型介面 `IEnumerator` 和 `IEnumerable`。  
+ <span data-ttu-id="16084-118">**X 不**同時實作`IEnumerator<T>`和`IEnumerable<T>`上相同的型別。</span><span class="sxs-lookup"><span data-stu-id="16084-118">**X DO NOT** implement both `IEnumerator<T>` and `IEnumerable<T>` on the same type.</span></span> <span data-ttu-id="16084-119">同樣適用於非泛型介面`IEnumerator`和`IEnumerable`。</span><span class="sxs-lookup"><span data-stu-id="16084-119">The same applies to the nongeneric interfaces `IEnumerator` and `IEnumerable`.</span></span>  
   
-## Parameters 集合  
- **✓ 執行** 可能的最低特製化的型別做為參數型別。 取得集合，為參數使用的大部分成員 `IEnumerable<T>` 介面。  
+## <a name="collection-parameters"></a><span data-ttu-id="16084-120">集合參數</span><span class="sxs-lookup"><span data-stu-id="16084-120">Collection Parameters</span></span>  
+ <span data-ttu-id="16084-121">**✓ 不要**使用可能的最低特製化類型做為參數類型。</span><span class="sxs-lookup"><span data-stu-id="16084-121">**✓ DO** use the least-specialized type possible as a parameter type.</span></span> <span data-ttu-id="16084-122">取得集合，作為參數使用的大部分成員`IEnumerable<T>`介面。</span><span class="sxs-lookup"><span data-stu-id="16084-122">Most members taking collections as parameters use the `IEnumerable<T>` interface.</span></span>  
   
- **X 避免** 使用 <xref:System.Collections.Generic.ICollection%601> 或 <xref:System.Collections.ICollection> 做為參數，只是為了存取 `Count` 屬性。  
+ <span data-ttu-id="16084-123">**請避免 x**使用<xref:System.Collections.Generic.ICollection%601>或<xref:System.Collections.ICollection>做為參數，只是為了存取`Count`屬性。</span><span class="sxs-lookup"><span data-stu-id="16084-123">**X AVOID** using <xref:System.Collections.Generic.ICollection%601> or <xref:System.Collections.ICollection> as a parameter just to access the `Count` property.</span></span>  
   
- 相反地，請考慮使用 `IEnumerable<T>` 或 `IEnumerable` 和動態檢查物件是否實作 `ICollection<T>` 或 `ICollection`。  
+ <span data-ttu-id="16084-124">相反地，請考慮使用`IEnumerable<T>`或`IEnumerable`和動態檢查物件是否實作`ICollection<T>`或`ICollection`。</span><span class="sxs-lookup"><span data-stu-id="16084-124">Instead, consider using `IEnumerable<T>` or `IEnumerable` and dynamically checking whether the object implements `ICollection<T>` or `ICollection`.</span></span>  
   
-## 集合屬性和傳回值  
- **X 不** 提供可設定的集合屬性。  
+## <a name="collection-properties-and-return-values"></a><span data-ttu-id="16084-125">集合屬性和傳回值</span><span class="sxs-lookup"><span data-stu-id="16084-125">Collection Properties and Return Values</span></span>  
+ <span data-ttu-id="16084-126">**X 不**提供可設定的集合屬性。</span><span class="sxs-lookup"><span data-stu-id="16084-126">**X DO NOT** provide settable collection properties.</span></span>  
   
- 使用者可以先清除集合，然後再新增新的內容取代集合的內容。 如果取代整個集合是常見的案例，請考慮提供 `AddRange` 集合上的方法。  
+ <span data-ttu-id="16084-127">使用者可以先清除集合，然後將加入新的內容取代集合的內容。</span><span class="sxs-lookup"><span data-stu-id="16084-127">Users can replace the contents of the collection by clearing the collection first and then adding the new contents.</span></span> <span data-ttu-id="16084-128">如果取代整個集合是常見的案例，請考慮提供`AddRange`集合上的方法。</span><span class="sxs-lookup"><span data-stu-id="16084-128">If replacing the whole collection is a common scenario, consider providing the `AddRange` method on the collection.</span></span>  
   
- **✓ 執行** 使用 `Collection<T>` 或子類別的 `Collection<T>` 屬性或傳回值表示的讀取\/寫入集合。  
+ <span data-ttu-id="16084-129">**✓ 不要**使用`Collection<T>`或的子類別`Collection<T>`針對屬性或傳回值表示讀取/寫入集合。</span><span class="sxs-lookup"><span data-stu-id="16084-129">**✓ DO** use `Collection<T>` or a subclass of `Collection<T>` for properties or return values representing read/write collections.</span></span>  
   
- 如果 `Collection<T>` 不符合某些需求 \(例如，集合必須不實作 <xref:System.Collections.IList>\)，使用自訂的集合，藉由實作 `IEnumerable<T>`, ，`ICollection<T>`, ，或 <xref:System.Collections.Generic.IList%601>。  
+ <span data-ttu-id="16084-130">如果`Collection<T>`不符合某些需求 (例如，集合必須不會實作<xref:System.Collections.IList>)，使用自訂的集合，藉由實作`IEnumerable<T>`， `ICollection<T>`，或<xref:System.Collections.Generic.IList%601>。</span><span class="sxs-lookup"><span data-stu-id="16084-130">If `Collection<T>` does not meet some requirement (e.g., the collection must not implement <xref:System.Collections.IList>), use a custom collection by implementing `IEnumerable<T>`, `ICollection<T>`, or <xref:System.Collections.Generic.IList%601>.</span></span>  
   
- **✓ 執行** 使用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, ，子類別的 `ReadOnlyCollection<T>`, ，或在極少數的情況下 `IEnumerable<T>` 屬性或傳回的值代表的唯讀集合。  
+ <span data-ttu-id="16084-131">**✓ 不要**使用<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>的子類別`ReadOnlyCollection<T>`，或在極少數的情況下`IEnumerable<T>`針對屬性或傳回值表示唯讀的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-131">**✓ DO** use <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, a subclass of `ReadOnlyCollection<T>`, or in rare cases `IEnumerable<T>` for properties or return values representing read-only collections.</span></span>  
   
- 一般來說，偏好 `ReadOnlyCollection<T>`。 如果不符合某些需求 \(例如，集合必須不實作 `IList`\)，使用自訂的集合，藉由實作 `IEnumerable<T>`, ，`ICollection<T>`, ，或 `IList<T>`。 如果您實作自訂的唯讀集合，實作 `ICollection<T>.ReadOnly` 傳回 false。  
+ <span data-ttu-id="16084-132">通常，最好`ReadOnlyCollection<T>`。</span><span class="sxs-lookup"><span data-stu-id="16084-132">In general, prefer `ReadOnlyCollection<T>`.</span></span> <span data-ttu-id="16084-133">如果不符合某些需求 (例如，集合必須不會實作`IList`)，使用自訂的集合，藉由實作`IEnumerable<T>`， `ICollection<T>`，或`IList<T>`。</span><span class="sxs-lookup"><span data-stu-id="16084-133">If it does not meet some requirement (e.g., the collection must not implement `IList`), use a custom collection by implementing `IEnumerable<T>`, `ICollection<T>`, or `IList<T>`.</span></span> <span data-ttu-id="16084-134">如果您實作自訂的唯讀集合，實作`ICollection<T>.ReadOnly`傳回 false。</span><span class="sxs-lookup"><span data-stu-id="16084-134">If you do implement a custom read-only collection, implement `ICollection<T>.ReadOnly` to return false.</span></span>  
   
- 在要確定只有您會想要支援的案例是順向的反覆項目的情況下，您可以直接使用 `IEnumerable<T>`。  
+ <span data-ttu-id="16084-135">在要確定只有您想要支援的案例是順向的反覆項目的情況下，您可以直接使用`IEnumerable<T>`。</span><span class="sxs-lookup"><span data-stu-id="16084-135">In cases where you are sure that the only scenario you will ever want to support is forward-only iteration, you can simply use `IEnumerable<T>`.</span></span>  
   
- **✓ 考慮** 使用泛型基底集合的子類別，而不直接使用集合。  
+ <span data-ttu-id="16084-136">**✓ 考慮**使用泛型基底集合的子類別，而不直接使用集合。</span><span class="sxs-lookup"><span data-stu-id="16084-136">**✓ CONSIDER** using subclasses of generic base collections instead of using the collections directly.</span></span>  
   
- 這可讓更佳的名稱以及加入未出現在基底集合型別上的協助程式成員。 這特別適用於高階 Api。  
+ <span data-ttu-id="16084-137">如此可更佳的名稱，以及加入未出現在基底集合類型上的協助程式成員。</span><span class="sxs-lookup"><span data-stu-id="16084-137">This allows for a better name and for adding helper members that are not present on the base collection types.</span></span> <span data-ttu-id="16084-138">這是特別適用於高階應用程式開發介面。</span><span class="sxs-lookup"><span data-stu-id="16084-138">This is especially applicable to high-level APIs.</span></span>  
   
- **✓ 考慮** 傳回的子類別 `Collection<T>` 或 `ReadOnlyCollection<T>` 從相當常用的方法和屬性。  
+ <span data-ttu-id="16084-139">**✓ 考慮**傳回的子類別`Collection<T>`或`ReadOnlyCollection<T>`從相當常用的方法和屬性。</span><span class="sxs-lookup"><span data-stu-id="16084-139">**✓ CONSIDER** returning a subclass of `Collection<T>` or `ReadOnlyCollection<T>` from very commonly used methods and properties.</span></span>  
   
- 這會讓您加入 helper 方法，或變更在未來的集合實作。  
+ <span data-ttu-id="16084-140">這會讓您可新增 helper 方法，或變更在未來的集合實作。</span><span class="sxs-lookup"><span data-stu-id="16084-140">This will make it possible for you to add helper methods or change the collection implementation in the future.</span></span>  
   
- **✓ 考慮** 使用索引鍵的集合，如果儲存在集合中的項目都有唯一索引鍵 （名稱、 識別碼等。）。 索引的集合的集合，可以編製索引的整數和金鑰，且通常由繼承自 `KeyedCollection<TKey,TItem>`。  
+ <span data-ttu-id="16084-141">**✓ 考慮**使用索引鍵的集合，如果儲存在集合中的項目具有唯一索引鍵 （名稱、 識別碼、 等等。）。</span><span class="sxs-lookup"><span data-stu-id="16084-141">**✓ CONSIDER** using a keyed collection if the items stored in the collection have unique keys (names, IDs, etc.).</span></span> <span data-ttu-id="16084-142">索引鍵的集合是以一個整數和索引鍵編製的索引，且通常由繼承自集合`KeyedCollection<TKey,TItem>`。</span><span class="sxs-lookup"><span data-stu-id="16084-142">Keyed collections are collections that can be indexed by both an integer and a key and are usually implemented by inheriting from `KeyedCollection<TKey,TItem>`.</span></span>  
   
- 索引的集合通常足跡較大的記憶體，而且不應該使用的記憶體負荷超過型索引鍵的好處在於如果。  
+ <span data-ttu-id="16084-143">索引的集合通常較大的記憶體使用量，而不是記憶體負擔會超過優點必須要有金鑰。</span><span class="sxs-lookup"><span data-stu-id="16084-143">Keyed collections usually have larger memory footprints and should not be used if the memory overhead outweighs the benefits of having the keys.</span></span>  
   
- **X 不** 集合屬性中，或從傳回集合的方法會傳回 null 值。 而是傳回空集合或空陣列。  
+ <span data-ttu-id="16084-144">**X 不**集合屬性中或從方法傳回集合，傳回 null 值。</span><span class="sxs-lookup"><span data-stu-id="16084-144">**X DO NOT** return null values from collection properties or from methods returning collections.</span></span> <span data-ttu-id="16084-145">而是傳回空集合或空陣列。</span><span class="sxs-lookup"><span data-stu-id="16084-145">Return an empty collection or an empty array instead.</span></span>  
   
- 一般規則是應該是 null 和空白 （0 個項目） 的集合或陣列視為相同。  
+ <span data-ttu-id="16084-146">一般規則是應該是 null 和空白 （0 的項目） 的集合或陣列視為相同。</span><span class="sxs-lookup"><span data-stu-id="16084-146">The general rule is that null and empty (0 item) collections or arrays should be treated the same.</span></span>  
   
-### 與即時集合快照集  
- 集合代表在某個時間點的狀態表示的時間稱為快照集的集合。 例如，集合，其中包含從資料庫查詢傳回的資料列會是快照集。 一律代表對目前狀態的集合稱為即時的集合。 例如，集合的 `ComboBox` 項目是即時的集合。  
+### <a name="snapshots-versus-live-collections"></a><span data-ttu-id="16084-147">快照集與即時的集合</span><span class="sxs-lookup"><span data-stu-id="16084-147">Snapshots Versus Live Collections</span></span>  
+ <span data-ttu-id="16084-148">集合表示在某個時間點的狀態的時間稱為快照集的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-148">Collections representing a state at some point in time are called snapshot collections.</span></span> <span data-ttu-id="16084-149">例如，集合，其中包含從資料庫查詢傳回資料列將快照集。</span><span class="sxs-lookup"><span data-stu-id="16084-149">For example, a collection containing rows returned from a database query would be a snapshot.</span></span> <span data-ttu-id="16084-150">一律代表對目前狀態的集合稱為即時的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-150">Collections that always represent the current state are called live collections.</span></span> <span data-ttu-id="16084-151">例如，集合`ComboBox`項目是即時的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-151">For example, a collection of `ComboBox` items is a live collection.</span></span>  
   
- **X 不** 屬性從傳回快照集的集合。 屬性應該會傳回實際的集合。  
+ <span data-ttu-id="16084-152">**X 不**屬性從傳回快照集的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-152">**X DO NOT** return snapshot collections from properties.</span></span> <span data-ttu-id="16084-153">屬性應該會傳回實際的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-153">Properties should return live collections.</span></span>  
   
- 屬性 getter 應該非常輕量級的作業。 傳回快照集時，需要在 o （n） 作業中建立一份內部集合。  
+ <span data-ttu-id="16084-154">屬性 getter 應該非常輕量級的作業。</span><span class="sxs-lookup"><span data-stu-id="16084-154">Property getters should be very lightweight operations.</span></span> <span data-ttu-id="16084-155">傳回快照集也需要 o （n） 作業中建立的內部集合的複本。</span><span class="sxs-lookup"><span data-stu-id="16084-155">Returning a snapshot requires creating a copy of an internal collection in an O(n) operation.</span></span>  
   
- **✓ 執行** 使用快照集集合或即時 `IEnumerable<T>` （或它的子類型） 來表示為變動性的集合 （亦即，可以變更而不需明確地修改集合）。  
+ <span data-ttu-id="16084-156">**✓ 不要**使用快照集收集或即時`IEnumerable<T>`（或它的子類型） 來表示為變動性的集合 （亦即，可以變更而不需明確修改集合）。</span><span class="sxs-lookup"><span data-stu-id="16084-156">**✓ DO** use either a snapshot collection or a live `IEnumerable<T>` (or its subtype) to represent collections that are volatile (i.e., that can change without explicitly modifying the collection).</span></span>  
   
- 一般情況下，表示共用的資源 （例如，在目錄中的檔案） 的所有集合都是動態的。 這類集合是很難或無法即時集合的形式實作，除非實作就只是順向的列舉值。  
+ <span data-ttu-id="16084-157">一般情況下，表示共用的資源 （例如，在目錄中的檔案） 的所有集合都是動態的。</span><span class="sxs-lookup"><span data-stu-id="16084-157">In general, all collections representing a shared resource (e.g., files in a directory) are volatile.</span></span> <span data-ttu-id="16084-158">這類集合是很難或難以實作做為即時的集合，除非實作就只是順向的列舉值。</span><span class="sxs-lookup"><span data-stu-id="16084-158">Such collections are very difficult or impossible to implement as live collections unless the implementation is simply a forward-only enumerator.</span></span>  
   
-## 陣列和集合之間選擇  
- **✓ 執行** 偏好陣列集合。  
+## <a name="choosing-between-arrays-and-collections"></a><span data-ttu-id="16084-159">陣列和集合之間選擇</span><span class="sxs-lookup"><span data-stu-id="16084-159">Choosing Between Arrays and Collections</span></span>  
+ <span data-ttu-id="16084-160">**✓ 不要**集合，而不用陣列。</span><span class="sxs-lookup"><span data-stu-id="16084-160">**✓ DO** prefer collections over arrays.</span></span>  
   
- 集合提供更充分掌控內容可以隨著時間演進，則更實用。 此外，因為複製陣列成本高昂，建議使用陣列的唯讀案例。 可用性研究顯示，有些開發人員習慣使用以集合為基礎的 Api。  
+ <span data-ttu-id="16084-161">集合提供更充分掌控內容、 可以隨著時間，而且更有用。</span><span class="sxs-lookup"><span data-stu-id="16084-161">Collections provide more control over contents, can evolve over time, and are more usable.</span></span> <span data-ttu-id="16084-162">此外，因為複製陣列的成本為代價，建議使用陣列的唯讀案例。</span><span class="sxs-lookup"><span data-stu-id="16084-162">In addition, using arrays for read-only scenarios is discouraged because the cost of cloning the array is prohibitive.</span></span> <span data-ttu-id="16084-163">顯示可用性研究的部分開發人員認為更方便使用以集合為基礎的 Api。</span><span class="sxs-lookup"><span data-stu-id="16084-163">Usability studies have shown that some developers feel more comfortable using collection-based APIs.</span></span>  
   
- 不過，如果您正在開發的低階 Api，可能比較好讀寫案例中使用陣列。 需要較小的記憶體耗用量，有助於降低工作集，其中的陣列，陣列中項目的存取速度，因為它由執行階段最佳化。  
+ <span data-ttu-id="16084-164">不過，如果您正在開發低階 Api，可能最好使用讀寫案例的陣列。</span><span class="sxs-lookup"><span data-stu-id="16084-164">However, if you are developing low-level APIs, it might be better to use arrays for read-write scenarios.</span></span> <span data-ttu-id="16084-165">陣列有較小的記憶體耗用量，如此有助於減少工作集，以及陣列中項目的存取速度，因為它已由執行階段最佳化。</span><span class="sxs-lookup"><span data-stu-id="16084-165">Arrays have a smaller memory footprint, which helps reduce the working set, and access to elements in an array is faster because it is optimized by the runtime.</span></span>  
   
- **✓ 考慮** 低階 Api 中使用陣列來減少記憶體耗用量並提高效能。  
+ <span data-ttu-id="16084-166">**✓ 考慮**低階 Api 中使用陣列記憶體耗用量降到最低，並將效能最大化。</span><span class="sxs-lookup"><span data-stu-id="16084-166">**✓ CONSIDER** using arrays in low-level APIs to minimize memory consumption and maximize performance.</span></span>  
   
- **✓ 執行** 使用位元組陣列，而不是位元組的集合。  
+ <span data-ttu-id="16084-167">**✓ 不要**使用位元組陣列，而不是位元組的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-167">**✓ DO** use byte arrays instead of collections of bytes.</span></span>  
   
- **X 不** 使用屬性的陣列，如果此屬性必須傳回每次呼叫屬性 getter 時 （例如，內部陣列的複本） 的新陣列。  
+ <span data-ttu-id="16084-168">**X 不**使用屬性的陣列，如果屬性必須在呼叫屬性 getter 的每次會傳回新的陣列 （例如，內部陣列的複本）。</span><span class="sxs-lookup"><span data-stu-id="16084-168">**X DO NOT** use arrays for properties if the property would have to return a new array (e.g., a copy of an internal array) every time the property getter is called.</span></span>  
   
-## 實作自訂集合  
- **✓ 考慮** 繼承自 `Collection<T>`, ，`ReadOnlyCollection<T>`, ，或 `KeyedCollection<TKey,TItem>` 設計新的集合時。  
+## <a name="implementing-custom-collections"></a><span data-ttu-id="16084-169">實作自訂集合</span><span class="sxs-lookup"><span data-stu-id="16084-169">Implementing Custom Collections</span></span>  
+ <span data-ttu-id="16084-170">**✓ 考慮**繼承自`Collection<T>`， `ReadOnlyCollection<T>`，或`KeyedCollection<TKey,TItem>`設計新的集合時。</span><span class="sxs-lookup"><span data-stu-id="16084-170">**✓ CONSIDER** inheriting from `Collection<T>`, `ReadOnlyCollection<T>`, or `KeyedCollection<TKey,TItem>` when designing new collections.</span></span>  
   
- **✓ 執行** 實作 `IEnumerable<T>` 設計新的集合時。 請考慮實作 `ICollection<T>` ，甚至 `IList<T>` 派得上用場。  
+ <span data-ttu-id="16084-171">**✓ 不要**實作`IEnumerable<T>`設計新的集合時。</span><span class="sxs-lookup"><span data-stu-id="16084-171">**✓ DO** implement `IEnumerable<T>` when designing new collections.</span></span> <span data-ttu-id="16084-172">請考慮實作`ICollection<T>`或甚至`IList<T>`很合理。</span><span class="sxs-lookup"><span data-stu-id="16084-172">Consider implementing `ICollection<T>` or even `IList<T>` where it makes sense.</span></span>  
   
- 在實作這類自訂集合時，請遵循 「 API 」 模式所建立的 `Collection<T>` 和 `ReadOnlyCollection<T>` 十分接近。 也就是說，明確地實作相同的成員，為參數命名像這兩個集合的名稱，以及等等。  
+ <span data-ttu-id="16084-173">當實作這類自訂集合時，請依照下列所建立的應用程式開發介面模式`Collection<T>`和`ReadOnlyCollection<T>`十分接近。</span><span class="sxs-lookup"><span data-stu-id="16084-173">When implementing such custom collection, follow the API pattern established by `Collection<T>` and `ReadOnlyCollection<T>` as closely as possible.</span></span> <span data-ttu-id="16084-174">也就是明確地實作相同的成員、 name 參數，這兩個集合的名稱，以及等等一樣。</span><span class="sxs-lookup"><span data-stu-id="16084-174">That is, implement the same members explicitly, name the parameters like these two collections name them, and so on.</span></span>  
   
- **✓ 考慮** 實作非泛型集合介面 \(`IList` 和 `ICollection`\) 如果集合將通常會傳遞至 Api 採取這些介面做為輸入。  
+ <span data-ttu-id="16084-175">**✓ 考慮**實作非泛型集合介面 (`IList`和`ICollection`) 如果集合將通常會傳遞至應用程式開發介面採用這些介面做為輸入。</span><span class="sxs-lookup"><span data-stu-id="16084-175">**✓ CONSIDER** implementing nongeneric collection interfaces (`IList` and `ICollection`) if the collection will often be passed to APIs taking these interfaces as input.</span></span>  
   
- **X 避免** 與複雜的 Api 不相關的概念的集合型別上實作集合介面。  
+ <span data-ttu-id="16084-176">**請避免 x**型別上實作的集合介面具有複雜的應用程式開發介面不相關的概念的集合。</span><span class="sxs-lookup"><span data-stu-id="16084-176">**X AVOID** implementing collection interfaces on types with complex APIs unrelated to the concept of a collection.</span></span>  
   
- **X 不** 例如繼承自非泛型基底集合 `CollectionBase`。 使用 `Collection<T>`, ，`ReadOnlyCollection<T>`, ，和 `KeyedCollection<TKey,TItem>` 改。  
+ <span data-ttu-id="16084-177">**X 不**例如繼承自非泛型基底集合`CollectionBase`。</span><span class="sxs-lookup"><span data-stu-id="16084-177">**X DO NOT** inherit from nongeneric base collections such as `CollectionBase`.</span></span> <span data-ttu-id="16084-178">使用`Collection<T>`， `ReadOnlyCollection<T>`，和`KeyedCollection<TKey,TItem>`改為。</span><span class="sxs-lookup"><span data-stu-id="16084-178">Use `Collection<T>`, `ReadOnlyCollection<T>`, and `KeyedCollection<TKey,TItem>` instead.</span></span>  
   
-### 命名自訂集合  
- 集合 \(型別都會實作 `IEnumerable`\) 會建立主要的原因有二: （1） 若要建立新的資料結構與結構特定作業通常比現有的資料結構的不同效能特性 \(例如  <xref:System.Collections.Generic.List%601>, ，<xref:System.Collections.Generic.LinkedList%601>, ，<xref:System.Collections.Generic.Stack%601>\)，以及 （2） 建立特製化的集合來存放一組特定的項目 \(例如  <xref:System.Collections.Specialized.StringCollection>\)。 資料結構最常用在應用程式和程式庫的內部實作。 特定的集合是主要是為了在 （做為屬性和參數型別） 的 Api 中公開。  
+### <a name="naming-custom-collections"></a><span data-ttu-id="16084-179">命名自訂集合</span><span class="sxs-lookup"><span data-stu-id="16084-179">Naming Custom Collections</span></span>  
+ <span data-ttu-id="16084-180">集合 (型別都會實作`IEnumerable`) 會建立主要是針對兩個原因: (1) 若要建立新的資料結構的特定結構的作業和通常比現有的資料結構的不同效能特性 (例如<xref:System.Collections.Generic.List%601>，<xref:System.Collections.Generic.LinkedList%601>， <xref:System.Collections.Generic.Stack%601>)，以及 (2) 若要建立特製化的集合，用以保存一組特定的項目 (例如<xref:System.Collections.Specialized.StringCollection>)。</span><span class="sxs-lookup"><span data-stu-id="16084-180">Collections (types that implement `IEnumerable`) are created mainly for two reasons: (1) to create a new data structure with structure-specific operations and often different performance characteristics than existing data structures (e.g.,  <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>), and (2) to create a specialized collection for holding a specific set of items (e.g.,  <xref:System.Collections.Specialized.StringCollection>).</span></span> <span data-ttu-id="16084-181">在內部實作中的應用程式和程式庫最常使用的資料結構。</span><span class="sxs-lookup"><span data-stu-id="16084-181">Data structures are most often used in the internal implementation of applications and libraries.</span></span> <span data-ttu-id="16084-182">特製化的集合是主要是要公開 Api 中 （屬性和參數的型別）。</span><span class="sxs-lookup"><span data-stu-id="16084-182">Specialized collections are mainly to be exposed in APIs (as property and parameter types).</span></span>  
   
- **✓ 執行** 實作的抽象名稱中使用 「 字典 」 尾碼 `IDictionary` 或 `IDictionary<TKey,TValue>`。  
+ <span data-ttu-id="16084-183">**✓ 不要**抽象層實作名稱中使用 「 字典 」 尾碼`IDictionary`或`IDictionary<TKey,TValue>`。</span><span class="sxs-lookup"><span data-stu-id="16084-183">**✓ DO** use the "Dictionary" suffix in names of abstractions implementing `IDictionary` or `IDictionary<TKey,TValue>`.</span></span>  
   
- **✓ 執行** 實作的型別名稱中使用 「 集合 」 尾碼 `IEnumerable` （或其任何子代） 和表示項目清單。  
+ <span data-ttu-id="16084-184">**✓ 不要**實作的型別名稱中使用"Collection"後置詞`IEnumerable`（或其任何子代） 及表示項目清單。</span><span class="sxs-lookup"><span data-stu-id="16084-184">**✓ DO** use the "Collection" suffix in names of types implementing `IEnumerable` (or any of its descendants) and representing a list of items.</span></span>  
   
- **✓ 執行** 使用自訂資料結構的適當的資料結構名稱。  
+ <span data-ttu-id="16084-185">**✓ 不要**使用適當的資料結構名稱的自訂資料結構。</span><span class="sxs-lookup"><span data-stu-id="16084-185">**✓ DO** use the appropriate data structure name for custom data structures.</span></span>  
   
- **X 避免** 名稱集合的抽象概念中使用特定的實作，例如 「 LinkedList 」 或 「 雜湊表 」，其中隱含的後置字元。  
+ <span data-ttu-id="16084-186">**請避免 x**集合的抽象概念的名稱中使用隱含的特定實作，例如"LinkedList 」 或 「 雜湊表，「 任何尾碼。</span><span class="sxs-lookup"><span data-stu-id="16084-186">**X AVOID** using any suffixes implying particular implementation, such as "LinkedList" or "Hashtable," in names of collection abstractions.</span></span>  
   
- **✓ 考慮** 前置詞的項目類型名稱的集合名稱。 例如，儲存類型的項目集合 `Address` \(實作 `IEnumerable<Address>`\) 的名稱應該是 `AddressCollection`。 如果項目類型是介面，"I"前置詞的項目類型，則可以省略。 因此，一堆 <xref:System.IDisposable> 項目可以稱為 `DisposableCollection`。  
+ <span data-ttu-id="16084-187">**✓ 考慮**前面加上的項目類型名稱的集合名稱。</span><span class="sxs-lookup"><span data-stu-id="16084-187">**✓ CONSIDER** prefixing collection names with the name of the item type.</span></span> <span data-ttu-id="16084-188">例如，儲存類型的項目集合`Address`(實作`IEnumerable<Address>`) 應命名為`AddressCollection`。</span><span class="sxs-lookup"><span data-stu-id="16084-188">For example, a collection storing items of type `Address` (implementing `IEnumerable<Address>`) should be named `AddressCollection`.</span></span> <span data-ttu-id="16084-189">如果項目類型是介面，"I"前置詞的項目類型，則可以省略。</span><span class="sxs-lookup"><span data-stu-id="16084-189">If the item type is an interface, the "I" prefix of the item type can be omitted.</span></span> <span data-ttu-id="16084-190">因此，集合<xref:System.IDisposable>可以呼叫項目`DisposableCollection`。</span><span class="sxs-lookup"><span data-stu-id="16084-190">Thus, a collection of <xref:System.IDisposable> items can be called `DisposableCollection`.</span></span>  
   
- **✓ 考慮** 的唯讀集合的名稱中使用"ReadOnly"前置詞，如果對應的可寫入集合可能加入或已存在於架構。  
+ <span data-ttu-id="16084-191">**✓ 考慮**的唯讀集合的名稱中使用"ReadOnly"前置詞，如果對應的可寫入集合可能會加入或已存在於架構。</span><span class="sxs-lookup"><span data-stu-id="16084-191">**✓ CONSIDER** using the "ReadOnly" prefix in names of read-only collections if a corresponding writeable collection might be added or already exists in the framework.</span></span>  
   
- 例如，字串的唯讀集合應該呼叫 `ReadOnlyStringCollection`。  
+ <span data-ttu-id="16084-192">例如，應該呼叫字串的唯讀集合`ReadOnlyStringCollection`。</span><span class="sxs-lookup"><span data-stu-id="16084-192">For example, a read-only collection of strings should be called `ReadOnlyStringCollection`.</span></span>  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 著作權所有，並保留一切權利。*  
+ <span data-ttu-id="16084-193">*部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="16084-193">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *皮耳森教育，從 Inc.的權限所印製 [Framework 設計方針︰ 慣例、 慣用句和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 並 Brad Abrams，2008 年 10 月 22 日由 Addison\-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ <span data-ttu-id="16084-194">*皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="16084-194">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## 請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)   
- [用法方針](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="16084-195">另請參閱</span><span class="sxs-lookup"><span data-stu-id="16084-195">See Also</span></span>  
+ [<span data-ttu-id="16084-196">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="16084-196">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="16084-197">使用指導方針</span><span class="sxs-lookup"><span data-stu-id="16084-197">Usage Guidelines</span></span>](../../../docs/standard/design-guidelines/usage-guidelines.md)
