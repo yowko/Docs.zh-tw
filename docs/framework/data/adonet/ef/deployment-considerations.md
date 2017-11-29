@@ -1,44 +1,43 @@
 ---
-title: "部署考量因素 (Entity Framework) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "部署考量 (Entity Framework)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 部署考量因素 (Entity Framework)
-本主題提供的資訊是有關部署使用 ADO.NET Entity Framework 進行資料存取的應用程式。  如需 Entity Framework 的詳細資訊，請參閱[使用者入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)。  
+# <a name="deployment-considerations-entity-framework"></a><span data-ttu-id="1c0c3-102">部署考量 (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="1c0c3-102">Deployment Considerations (Entity Framework)</span></span>
+<span data-ttu-id="1c0c3-103">本主題提供的資訊是有關部署使用 ADO.NET Entity Framework 進行資料存取的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-103">This topic provides information about deploying applications that use the ADO.NET Entity Framework for data access.</span></span> <span data-ttu-id="1c0c3-104">如需有關 Entity Framework 的詳細資訊，請參閱[入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-104">For more information about the Entity Framework, see [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span></span>  
   
- Entity Framework 提供一組整合的工具，可讓您更輕鬆在 Visual Studio 中進行開發。  如需詳細資訊，請參閱[ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/zh-tw/91076853-0881-421b-837a-f582f36be527)。  本主題未描述如何使用特定技術來部署 Entity Framework 架構應用程式。  
+ <span data-ttu-id="1c0c3-105">Entity Framework 提供一組整合的工具，可讓您更輕鬆在 Visual Studio 中進行開發。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-105">The Entity Framework provides a set of tools that integrate with and make it easier to develop in Visual Studio.</span></span> <span data-ttu-id="1c0c3-106">如需詳細資訊，請參閱[ADO.NET 實體資料模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-106">For more information, see [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span></span> <span data-ttu-id="1c0c3-107">本主題未描述如何使用特定技術來部署 Entity Framework 架構應用程式。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-107">This topic does not describe how to use specific technologies to deploy an Entity Framework–based application.</span></span>  
   
- Visual Studio 提供了散發及部署應用程式的機能，例如 ClickOnce 部署。  如需詳細資訊，請參閱 Visual Studio 文件中的[部署應用程式和元件](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md)。  
+ <span data-ttu-id="1c0c3-108">Visual Studio 提供了散發及部署應用程式的機能，例如 ClickOnce 部署。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-108">Visual Studio provides facilities for distributing and deploying applications, such as ClickOnce deployment.</span></span> <span data-ttu-id="1c0c3-109">如需詳細資訊，請參閱[部署應用程式和元件](https://msdn.microsoft.com/library/wtzawcsz)Visual Studio 文件中。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-109">For more information, see [Deploying Applications and Components](https://msdn.microsoft.com/library/wtzawcsz) in the Visual Studio documentation.</span></span>  
   
- 以下考量適用於當您部署使用 Entity Framework 的應用程式時：  
+ <span data-ttu-id="1c0c3-110">以下考量適用於當您部署使用 Entity Framework 的應用程式時：</span><span class="sxs-lookup"><span data-stu-id="1c0c3-110">The following considerations apply when you deploy an application that uses the Entity Framework:</span></span>  
   
--   從 .NET Framework 3.5 Service Pack 1 \(SP1\) 開始，Entity Framework 就是 .NET Framework 的元件。  當您部署 Entity Framework 架構應用程式時，您必須確定 .NET Framework 3.5 SP1 或更新的版本已安裝。  
+-   <span data-ttu-id="1c0c3-111">從 .NET Framework 3.5 Service Pack 1 (SP1) 開始，Entity Framework 就是 .NET Framework 的元件。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-111">The Entity Framework is a component of the .NET Framework starting with the .NET Framework 3.5 Service Pack 1 (SP1).</span></span> <span data-ttu-id="1c0c3-112">當您部署 Entity Framework 架構應用程式時，您必須確定 .NET Framework 3.5 SP1 或更新的版本已安裝。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-112">You must ensure that the .NET Framework 3.5 SP1 or a later version is installed when deploying an Entity Framework–based application.</span></span>  
   
--   實體資料模型精靈產生概念模型之後，就會在應用程式組態檔中建立連接字串。  模型和對應檔可內嵌為應用程式資源，或是複製到輸出目錄。  根據預設，模型和對應檔會部署為內嵌應用程式資源。  使用 Entity Designer 檔案的 `Metadata Artifact Processing` 屬性，選取其中一個選項。  如需詳細資訊，請參閱[How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/zh-tw/e2c9820f-1705-457e-9fdb-8b289f3179b4)。  
+-   <span data-ttu-id="1c0c3-113">實體資料模型精靈產生概念模型之後，就會在應用程式組態檔中建立連接字串。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-113">When a conceptual model is generated by the Entity Data Model Wizard, a connection string is created in the application configuration file.</span></span> <span data-ttu-id="1c0c3-114">模型和對應檔可內嵌為應用程式資源，或是複製到輸出目錄。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-114">Model and mapping files can be embedded as application resources or they can be copied to the output directory.</span></span> <span data-ttu-id="1c0c3-115">根據預設，模型和對應檔會部署為內嵌應用程式資源。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-115">By default, they are deployed as embedded application resources.</span></span> <span data-ttu-id="1c0c3-116">使用 Entity Designer 檔案的 `Metadata Artifact Processing` 屬性，選取其中一個選項。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-116">Use the `Metadata Artifact Processing` property of the Entity Designer file to select one of these options.</span></span> <span data-ttu-id="1c0c3-117">如需詳細資訊，請參閱[How to： 將模型和對應檔案到輸出目錄](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4)。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-117">For more information, see [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span></span>  
   
--   請確認模型和對應檔資訊 \(於概念結構定義語言 \(CSDL\)、存放結構定義語言 \(SSDL\) 和對應規格語言 \(MSL\) 中表示\) 已與應用程式一起部署在連接字串所指定的位置  如需詳細資訊，請參閱[連接字串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。  
+-   <span data-ttu-id="1c0c3-118">請確認模型和對應檔資訊 (於概念結構定義語言 (CSDL)、存放結構定義語言 (SSDL) 和對應規格語言 (MSL) 中表示) 已與應用程式一起部署在連接字串所指定的位置</span><span class="sxs-lookup"><span data-stu-id="1c0c3-118">Ensure that the model and mapping information (expressed in conceptual schema definition language (CSDL), store schema definition language (SSDL), and mapping specification language (MSL)) is deployed together with the application and in the location specified by the connection string.</span></span> <span data-ttu-id="1c0c3-119">如需詳細資訊，請參閱[連接字串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-119">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span>  
   
--   如果將內嵌模型和對應資訊內嵌為應用程式資源，每當概念模型更新時，就必須重新編譯和重新部署應用程式。  
+-   <span data-ttu-id="1c0c3-120">如果將內嵌模型和對應資訊內嵌為應用程式資源，每當概念模型更新時，就必須重新編譯和重新部署應用程式。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-120">When you embed model and mapping information as application resources, you must recompile and redeploy the application every time the conceptual model is updated.</span></span>  
   
--   因為 Entity Framework 是 .NET Framework 的元件，所以可以將它與應用程式一起轉散發，這是 .NET Framework 授權合約所允許的。  
+-   <span data-ttu-id="1c0c3-121">因為 Entity Framework 是 .NET Framework 的元件，所以可以將它與應用程式一起轉散發，這是 .NET Framework 授權合約所允許的。</span><span class="sxs-lookup"><span data-stu-id="1c0c3-121">Because the Entity Framework is a component of the .NET Framework, it can be redistributed with your application as permitted by the .NET Framework license agreement.</span></span>  
   
-## 請參閱  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)   
- [開發及部署考量因素](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a><span data-ttu-id="1c0c3-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1c0c3-122">See Also</span></span>  
+ [<span data-ttu-id="1c0c3-123">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="1c0c3-123">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="1c0c3-124">開發和部署考量</span><span class="sxs-lookup"><span data-stu-id="1c0c3-124">Development and Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

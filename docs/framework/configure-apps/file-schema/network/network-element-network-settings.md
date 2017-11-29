@@ -1,104 +1,107 @@
 ---
-title: "&lt;network&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#network"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp/network"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<network> 項目"
-  - "network 項目"
+title: "&lt;網路&gt;項目 （網路設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#network
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp/network
+helpviewer_keywords:
+- <network> element
+- network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 679351fd2d6f0727d40bd57c9ef2016738462eb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;network&gt; 項目 (網路設定)
-針對外部 Simple Mail Transport Protocol \(SMTP\) 伺服器設定網路選項。  
+# <a name="ltnetworkgt-element-network-settings"></a><span data-ttu-id="ea7ce-102">&lt;網路&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="ea7ce-102">&lt;network&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="ea7ce-103">設定外部簡易郵件傳輸通訊協定 (SMTP) 伺服器的網路選項。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-103">Configures the network options for an external Simple Mail Transport Protocol (SMTP) server.</span></span>  
   
-## 語法  
+ <span data-ttu-id="ea7ce-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ea7ce-104">\<configuration></span></span>  
+<span data-ttu-id="ea7ce-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="ea7ce-105">\<system.net></span></span>  
+<span data-ttu-id="ea7ce-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="ea7ce-106">\<mailSettings></span></span>  
+<span data-ttu-id="ea7ce-107">\<smtp ></span><span class="sxs-lookup"><span data-stu-id="ea7ce-107">\<smtp></span></span>  
+<span data-ttu-id="ea7ce-108">\<網路 ></span><span class="sxs-lookup"><span data-stu-id="ea7ce-108">\<network></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ea7ce-109">語法</span><span class="sxs-lookup"><span data-stu-id="ea7ce-109">Syntax</span></span>  
   
-      <network  
-  clientDomain="string"   
+```xml  
+<network  
+  clientDomain="string"   
   defaultCredentials="true|false"  
   enableSsl="true|false"  
-  host="string"   
+  host="string"   
   password="string"  
-  port="integer"   
+  port="integer"   
   targetName="string"  
   userName="string"  
 />  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ea7ce-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="ea7ce-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="ea7ce-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="ea7ce-112">屬性</span><span class="sxs-lookup"><span data-stu-id="ea7ce-112">Attributes</span></span>  
   
-|屬性|說明|  
-|--------|--------|  
-|`clientDomain`|指定用戶端網域名稱，以便在連接至 SMTP 郵件伺服器的初始 SMTP 通訊協定要求中使用。  預設值是傳送要求之本機電腦的 localhost 名稱。|  
-|`defaultCredentials`|指定預設使用者認證是否應該用來存取 SMTP 郵件伺服器以進行 SMTP 交易。  預設值是 `false`。|  
-|`enableSsl`|指定是否使用 SSL 存取 SMTP 郵件伺服器。  預設值是 `false`。|  
-|`host`|指定要用於 SMTP 交易之 SMTP 郵件伺服器的主機名稱。  這個屬性沒有預設值。|  
-|`password`|指定要用於 SMTP 郵件伺服器之驗證的密碼。  這個屬性沒有預設值。|  
-|`port`|指定要用來連接至 SMTP 郵件伺服器的連接埠號碼。  預設值為 25。|  
-|`targetName`|指定在使用 SMTP 交易的延伸保護時，要用於驗證的服務提供者名稱 \(SPN\)。  這個屬性沒有預設值。|  
-|`userName`|指定要用於 SMTP 郵件伺服器之驗證的使用者名稱。  這個屬性沒有預設值。|  
+|<span data-ttu-id="ea7ce-113">屬性</span><span class="sxs-lookup"><span data-stu-id="ea7ce-113">Attribute</span></span>|<span data-ttu-id="ea7ce-114">說明</span><span class="sxs-lookup"><span data-stu-id="ea7ce-114">Description</span></span>|  
+|---------------|-----------------|  
+|`clientDomain`|<span data-ttu-id="ea7ce-115">指定要用於初始 SMTP 通訊協定的要求連接到 SMTP 郵件伺服器的用戶端網域名稱。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-115">Specifies the client domain name to use in the initial SMTP protocol request to connect to the SMTP mail server.</span></span> <span data-ttu-id="ea7ce-116">預設值是本機電腦傳送要求的本機主機名稱。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-116">The default value is the localhost name of the local computer sending the request.</span></span>|  
+|`defaultCredentials`|<span data-ttu-id="ea7ce-117">指定是否可用於存取 SMTP 交易的 SMTP 郵件伺服器的預設使用者認證。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-117">Specifies whether the default user credentials should be used to access the SMTP mail server for SMTP transactions.</span></span> <span data-ttu-id="ea7ce-118">預設值是 `false`。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-118">The default value is `false`.</span></span>|  
+|`enableSsl`|<span data-ttu-id="ea7ce-119">指定存取 SMTP 郵件伺服器是否使用 SSL。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-119">Specifies whether SSL is used to access an SMTP mail server.</span></span> <span data-ttu-id="ea7ce-120">預設值是 `false`。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-120">The default value is `false`.</span></span>|  
+|`host`|<span data-ttu-id="ea7ce-121">指定要用於 SMTP 交易的 SMTP 郵件伺服器的主機名稱。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-121">Specifies the hostname of the SMTP mail server to use for SMTP transactions.</span></span> <span data-ttu-id="ea7ce-122">這個屬性沒有預設值。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-122">This attribute has no default value.</span></span>|  
+|`password`|<span data-ttu-id="ea7ce-123">指定要用於驗證的 SMTP 郵件伺服器的密碼。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-123">Specifies the password to use for authentication to the SMTP mail server.</span></span> <span data-ttu-id="ea7ce-124">這個屬性沒有預設值。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-124">This attribute has no default value.</span></span>|  
+|`port`|<span data-ttu-id="ea7ce-125">指定要用於連接到 SMTP 郵件伺服器的連接埠號碼。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-125">Specifies the port number to use to connect to the SMTP mail server.</span></span> <span data-ttu-id="ea7ce-126">預設值為 25。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-126">The default value is 25.</span></span>|  
+|`targetName`|<span data-ttu-id="ea7ce-127">指定要用於 SMTP 交易的擴充的保護時，用於驗證服務提供者名稱 (SPN)。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-127">Specifies the Service Provider Name (SPN) to use for authentication when using extended protection for SMTP transactions.</span></span> <span data-ttu-id="ea7ce-128">這個屬性沒有預設值。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-128">This attribute has no default value.</span></span>|  
+|`userName`|<span data-ttu-id="ea7ce-129">指定要用來驗證的 SMTP 郵件伺服器的使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-129">Specifies the user name to use for authentication to the SMTP mail server.</span></span> <span data-ttu-id="ea7ce-130">這個屬性沒有預設值。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-130">This attribute has no default value.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="ea7ce-131">子元素</span><span class="sxs-lookup"><span data-stu-id="ea7ce-131">Child Elements</span></span>  
+ <span data-ttu-id="ea7ce-132">無。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-132">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="ea7ce-133">父項目</span><span class="sxs-lookup"><span data-stu-id="ea7ce-133">Parent Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|[\<smtp\> 項目 \(網路設定\)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|設定 Simple Mail Transport Protocol \(SMTP\) 郵件傳送選項。|  
+|<span data-ttu-id="ea7ce-134">項目</span><span class="sxs-lookup"><span data-stu-id="ea7ce-134">Element</span></span>|<span data-ttu-id="ea7ce-135">說明</span><span class="sxs-lookup"><span data-stu-id="ea7ce-135">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ea7ce-136">\<smtp > 項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="ea7ce-136">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="ea7ce-137">設定簡易郵件傳輸通訊協定 (SMTP) 郵件傳送選項。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-137">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
   
-## 備註  
- 某些 SMTP 伺服器會要求您先自我驗證才能使用伺服器。  如果您要使用主機上的預設網路認證來進行自我驗證，請將 `defaultCredentials` 屬性設定為 `true`。  <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=fullName> 屬性可用來從適用的組態檔中取得 `defaultCredentials` 屬性的目前值。  
+## <a name="remarks"></a><span data-ttu-id="ea7ce-138">備註</span><span class="sxs-lookup"><span data-stu-id="ea7ce-138">Remarks</span></span>  
+ <span data-ttu-id="ea7ce-139">某些 SMTP 伺服器需要您進行自我驗證至伺服器，才能使用。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-139">Some SMTP servers require that you authenticate yourself to the server before use.</span></span> <span data-ttu-id="ea7ce-140">如果您想要驗證您的身份使用預設網路認證在主機上，設定`defaultCredentials`屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-140">If you want to authenticate yourself using the default network credentials on your host, set the `defaultCredentials` attribute to `true`.</span></span> <span data-ttu-id="ea7ce-141"><xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>屬性可以用來取得目前的值`defaultCredentials`適用的組態檔中的屬性。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-141">The <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType> property can be used to get the current value of the `defaultCredentials` attribute from applicable configuration files.</span></span>  
   
- 您也可以使用基本驗證 \(使用者名稱和密碼\)，向 SMTP 伺服器自我驗證。  若要使用此選項，您必須針對指定的 SMTP 伺服器指定有效的使用者名稱和密碼。  
+ <span data-ttu-id="ea7ce-142">您也可以使用基本驗證 （使用者名稱和密碼） 來驗證您自己的 SMTP 伺服器。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-142">You can also use basic authentication (a user name and password) to authenticate yourself to the SMTP server.</span></span> <span data-ttu-id="ea7ce-143">若要使用此選項，您必須指定有效的使用者名稱和指定的 SMTP 伺服器的密碼。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-143">To use this option, you must specify a valid user name and password for the specified SMTP server.</span></span>  
   
 > [!NOTE]
->  基本驗證會將未加密的 `userName` 和 `password` 值傳送至伺服器。  監視網路流量的任何人，都可以檢視這些認證並使用它們來連接到伺服器。  您必須考慮使用更安全的驗證機制，例如 Kerberos 或 NT LAN Manager \(NTLM\)。如果 `defaultCredentials` 是 `true`，而且伺服器支援 Kerberos 或 NTLM，則會採用這兩種機制。  
+>  <span data-ttu-id="ea7ce-144">基本驗證會傳送`userName`和`password`伺服器未加密的值。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-144">Basic authentication sends the `userName` and `password` values to the server unencrypted.</span></span> <span data-ttu-id="ea7ce-145">監視網路流量的任何人都可以檢視您的認證，並使用它們來連接到伺服器。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-145">Anyone monitoring network traffic can view your credentials and use them to connect to the server.</span></span> <span data-ttu-id="ea7ce-146">您應該考慮使用更安全的驗證機制，例如 Kerberos 或 NT LAN Manager (NTLM)。如果`defaultCredentials`是`true`，將會使用 Kerberos 或 NTLM，如果伺服器支援這些通訊協定。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-146">You should consider using a more secure authentication mechanism, such as Kerberos or NT LAN Manager (NTLM.) If `defaultCredentials` is `true`, Kerberos or NTLM will be used if the server supports these protocols.</span></span>  
   
- 基本驗證和預設網路認證選項會互斥 \(Mutually Exclusive\)，因此，如果您將 `defaultCredentials` 設定為 `true`，並且指定了使用者名稱和密碼，則會採用預設網路認證，而忽略基本驗證資料。  
+ <span data-ttu-id="ea7ce-147">基本驗證和預設網路認證選項互斥。如果您設定`defaultCredentials`至`true`使用者名稱和密碼，會使用預設網路認證，並指定基本驗證資料會被忽略。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-147">The basic authentication and default network credentials options are mutually exclusive; if you set `defaultCredentials` to `true` and specify a user name and password, the default network credential is used, and the basic authentication data is ignored.</span></span>  
   
- 對於基本驗證，如果您指定 `userName`，也應該要指定 `password`，以便對郵件伺服器驗證自己。  
+ <span data-ttu-id="ea7ce-148">基本驗證，如果您指定`userName`，您也應該指定`password`驗證您自己的郵件伺服器。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-148">For basic authentication if you specify a `userName`, you should also specify a `password` to authentication yourself to the mail server.</span></span>  
   
- <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=fullName> 屬性可用來從適用的組態檔中取得 `userName` 屬性的目前值。  <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=fullName> 屬性可用來從適用的組態檔中取得 `password` 屬性的目前值。  `password` 屬性會因為安全性原因而無法正常輸入組態檔。  
+ <span data-ttu-id="ea7ce-149"><xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType>屬性可以用來取得目前的值`userName`適用的組態檔中的屬性。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-149">The <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType> property can be used to get the current value of the `userName` attribute from applicable configuration files.</span></span> <span data-ttu-id="ea7ce-150"><xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType>屬性可以用來取得目前的值`password`適用的組態檔中的屬性。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-150">The <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType> property can be used to get the current value of the `password` attribute from applicable configuration files.</span></span> <span data-ttu-id="ea7ce-151">A`password`屬性不通常會輸入基於安全性的組態檔中。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-151">A `password` attribute would not normally be entered in configuration files for security reasons.</span></span>  
   
- `clientDomain` 屬性會變更用戶端網域名稱，該名稱是在針對 SMTP 伺服器的初始 SMTP 通訊協定要求中使用。  `clientDomain` 屬性可以設定為本機電腦的完整網域名稱，而不是根據預設使用的本機主機名稱。  這可提供更高的 SMTP 通訊協定標準符合性。  預設值是傳送要求之本機電腦的 localhost 名稱。  <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=fullName> 屬性可用來從適用的組態檔中取得 `clientDomain` 屬性的目前值。  
+ <span data-ttu-id="ea7ce-152">`clientDomain`屬性變更為 SMTP 伺服器的起始 SMTP 通訊協定要求中使用的用戶端網域名稱。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-152">The `clientDomain` attribute changes the client domain name used in the initial SMTP protocol request to an SMTP server.</span></span> <span data-ttu-id="ea7ce-153">`clientDomain`屬性可以設為本機電腦的完整網域名稱，而不是預設會使用 localhost 名稱。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-153">The `clientDomain` attribute can be set to the fully-qualified domain name of the local machine, rather than the localhost name that is used by default.</span></span> <span data-ttu-id="ea7ce-154">這會提供更高的相容性與 SMTP 通訊協定標準。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-154">This provides greater compliance with the SMTP protocol standards.</span></span> <span data-ttu-id="ea7ce-155">預設值是本機電腦傳送要求的本機主機名稱。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-155">The default value is the localhost name of the local computer sending the request.</span></span> <span data-ttu-id="ea7ce-156"><xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType>屬性可以用來取得目前的值`clientDomain`適用的組態檔中的屬性。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-156">The <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType> property can be used to get the current value of the `clientDomain` attribute from applicable configuration files.</span></span>  
   
- `targetName` 屬性會在使用延伸保護時用於進行驗證。  預設值的形式為 "SMTPSVC\/\<host\>"，其中 \<host\> 是 SMTP 郵件伺服器的主機名稱。  <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=fullName> 屬性可用來從適用的組態檔中取得 `targetName` 屬性的目前值。  
+ <span data-ttu-id="ea7ce-157">`targetName`屬性用於驗證擴充的保護時。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-157">The `targetName` attribute is used for authentication when using extended protection.</span></span> <span data-ttu-id="ea7ce-158">預設值是表單的"SMTPSVC /\<主機 >"其中\<主機 > 是 SMTP 郵件伺服器主機名稱。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-158">The default value is of the form "SMTPSVC/\<host>" where \<host> is the hostname of the SMTP mail server.</span></span> <span data-ttu-id="ea7ce-159"><xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType>屬性可以用來取得目前的值`targetName`適用的組態檔中的屬性。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-159">The <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType> property can be used to get the current value of the `targetName` attribute from applicable configuration files.</span></span>  
   
- `enableSsl`  屬性會指定是否使用 SSL 來存取 SMTP 郵件伺服器。  <xref:System.Net.Mail.SmtpClient?displayProperty=fullName> 類別只透過如 RFC 3207 中定義的傳輸層安全性，來支援 SMTP Service Extension for Secure SMTP。  在這個模式中，SMTP 工作階段會在未加密的通道上開始，然後用戶端會向伺服器發出 STARTTLS 命令，以切換至使用 SSL 的安全通訊。  如需詳細資訊，請參閱由「網際網路工程任務推動小組」\(IETF\) 發行的 RFC 3207。  
+ <span data-ttu-id="ea7ce-160">`enableSsl`屬性會指定存取 SMTP 郵件伺服器是否使用 SSL。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-160">The `enableSsl` attribute specifies whether SSL is used to access an SMTP mail server.</span></span> <span data-ttu-id="ea7ce-161"><xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>類別只支援 SMTP 服務延伸模組安全 smtp 透過傳輸層安全性 RFC 3207 中所定義。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-161">The <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType> class only supports the SMTP Service Extension for Secure SMTP over Transport Layer Security as defined in RFC 3207.</span></span> <span data-ttu-id="ea7ce-162">在此模式中，在 SMTP 工作階段開始在未加密的通道，然後 STARTTLS 命令發給用戶端切換至使用 SSL 的安全通訊的伺服器。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-162">In this mode, the SMTP session begins on an unencrypted channel, then a STARTTLS command is issued by the client to the server to switch to secure communication using SSL.</span></span> <span data-ttu-id="ea7ce-163">請參閱 RFC 3207 發佈根據網際網路工程任務推動小組 (IETF) 如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-163">See RFC 3207 published by the Internet Engineering Task Force (IETF) for more information.</span></span>  
   
- 替代的連線方法是在傳送任何通訊協定命令之前，首先建立 SSL 工作階段。  這種連線方法有時稱為 SMTPS，並會依預設使用連接埠 465。  目前不支援使用 SSL 的這種替代連線方法。  
+ <span data-ttu-id="ea7ce-164">連接的替代方法是 SSL 工作階段最前面位置建立之前命令會傳送任何通訊協定。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-164">An alternate connection method is where an SSL session is established up front before any protocol commands are sent.</span></span> <span data-ttu-id="ea7ce-165">這種連線方法有時稱為 SMTPS，而且根據預設會使用連接埠 465。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-165">This connection method is sometimes called SMTPS and by default uses port 465.</span></span> <span data-ttu-id="ea7ce-166">目前不支援這種替代的連線方法，使用 SSL。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-166">This alternate connection method using SSL is not currently supported.</span></span>  
   
- <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=fullName> 屬性可用來從適用的組態檔中取得 `enableSsl` 屬性的目前值。  
+ <span data-ttu-id="ea7ce-167"><xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType>屬性可以用來取得目前的值`enableSsl`適用的組態檔中的屬性。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-167">The <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType> property can be used to get the current value of the `enableSsl` attribute from applicable configuration files.</span></span>  
   
-## 範例  
- 下列範例中，程式碼會指定適當的 SMTP 參數，使用預設的網路認證傳送電子郵件。  
+## <a name="example"></a><span data-ttu-id="ea7ce-168">範例</span><span class="sxs-lookup"><span data-stu-id="ea7ce-168">Example</span></span>  
+ <span data-ttu-id="ea7ce-169">下列範例會指定適當的 SMTP 參數使用預設網路認證傳送電子郵件。</span><span class="sxs-lookup"><span data-stu-id="ea7ce-169">The following example specifies the appropriate SMTP parameters to send e-mail using the default network credentials.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
@@ -116,8 +119,8 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=fullName>   
- <xref:System.Net.Configuration.SmtpSection?displayProperty=fullName>   
- <xref:System.Net.Mail.SmtpClient?displayProperty=fullName>   
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="ea7ce-170">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea7ce-170">See Also</span></span>  
+ <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
+ <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
+ <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
+ [<span data-ttu-id="ea7ce-171">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="ea7ce-171">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

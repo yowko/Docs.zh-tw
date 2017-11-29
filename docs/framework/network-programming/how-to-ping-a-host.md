@@ -7,29 +7,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Ping
+helpviewer_keywords: Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 28c55a9e51b43fcc882ef98f6bad907d5d5c5301
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-ping-a-host"></a>如何：Ping 主機
-這個範例示範如何 Ping 遠端主機。  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="497a5-102">如何：Ping 主機</span><span class="sxs-lookup"><span data-stu-id="497a5-102">How to: Ping a Host</span></span>
+<span data-ttu-id="497a5-103">這個範例示範如何 Ping 遠端主機。</span><span class="sxs-lookup"><span data-stu-id="497a5-103">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="497a5-104">範例</span><span class="sxs-lookup"><span data-stu-id="497a5-104">Example</span></span>  
   
 ```  
 using System;  
@@ -135,8 +128,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 這個範例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="497a5-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="497a5-105">Compiling the Code</span></span>  
+ <span data-ttu-id="497a5-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="497a5-106">This example requires:</span></span>  
   
--   對 **System.Net** 命名空間的參考。
-
+-   <span data-ttu-id="497a5-107">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="497a5-107">References to the **System.Net** namespace.</span></span>

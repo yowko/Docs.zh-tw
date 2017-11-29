@@ -1,28 +1,37 @@
 ---
-title: "&lt;clientCredentials&gt; 的 &lt;clientCertificate&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;clientCredentials&gt; 的 &lt;clientCertificate&gt; 項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 961e745f15b4c7b7ae489a8b2b3128c1a64c6eab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;clientCredentials&gt; 的 &lt;clientCertificate&gt; 項目
-定義對服務驗證用戶端時使用的 X.509 憑證。  
+# <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="39203-102">&lt;clientCredentials&gt; 的 &lt;clientCertificate&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="39203-102">&lt;clientCertificate&gt; of &lt;clientCredentials&gt; Element</span></span>
+<span data-ttu-id="39203-103">定義用於向服務驗證的 X.509 憑證。</span><span class="sxs-lookup"><span data-stu-id="39203-103">Defines an X.509 certificate used to authenticate a client to a service.</span></span>  
   
-## 語法  
+ <span data-ttu-id="39203-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="39203-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="39203-105">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="39203-105">\<behaviors></span></span>  
+<span data-ttu-id="39203-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="39203-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="39203-107">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="39203-107">\<behavior></span></span>  
+<span data-ttu-id="39203-108">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="39203-108">\<clientCredentials></span></span>  
+<span data-ttu-id="39203-109">\<clientCertificate ></span><span class="sxs-lookup"><span data-stu-id="39203-109">\<clientCertificate></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="39203-110">語法</span><span class="sxs-lookup"><span data-stu-id="39203-110">Syntax</span></span>  
   
+```xml  
 <clientCertificate findValue="String"   
     storeLocation="LocalMachine/CurrentUser"  
     storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
@@ -30,39 +39,39 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 />  
 ```  
   
-## 屬性和項目  
- 下列各節說明屬性、子元素和父元素  
+## <a name="attributes-and-elements"></a><span data-ttu-id="39203-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="39203-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="39203-112">下列各節說明屬性、子元素和父元素</span><span class="sxs-lookup"><span data-stu-id="39203-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="39203-113">屬性</span><span class="sxs-lookup"><span data-stu-id="39203-113">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|`findValue`|字串，其中包含要在 X.509 憑證存放區內搜尋的值。  這個屬性所包含的型別必須滿足 `X509FindType` 屬性值的需求。  預設為空字串。|  
-|`storeLocation`|指定 X.509 憑證的位置，用戶端會使用該憑證來進行對服務的自我驗證。  有效值包括以下的值：<br /><br /> -   LocalMachine：指派給本機電腦的憑證存放區。<br />-   CurrentUser：指派給目前使用者的憑證存放區。<br /><br /> 預設為 LocalMachine。  此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。|  
-|`storeName`|指定要搜尋之 X.509 憑證存放區的名稱。  有效值包括以下的值：<br /><br /> -   AddressBook：其他使用者的憑證存放區。<br />-   AuthRoot：協力廠商憑證授權單位 \(CA\) 的憑證存放區。<br />-   CertificateAuthority：中繼憑證授權單位 \(CA\) 的憑證存放區。<br />-   Disallowed：已撤銷之憑證的憑證存放區。<br />-   My：個人憑證的憑證存放區。<br />-   Root：信任之根憑證授權單位 \(CA\) 的憑證存放區。<br />-   TrustedPeople：直接信任之人員和資源的憑證存放區。<br />-   TrustedPublisher：直接信任之發行者的憑證存放區。<br /><br /> 預設為 My。  此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreName>。|  
-|X509FindType|定義要執行之 X.509 搜尋的類型。  `findValue` 屬性中所包含的型別必須滿足此屬性的需求。  有效值包括以下的值：<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> 預設值為 FindBySubjectDistinguishedName。  此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.X509FindType>。|  
+|<span data-ttu-id="39203-114">屬性</span><span class="sxs-lookup"><span data-stu-id="39203-114">Attribute</span></span>|<span data-ttu-id="39203-115">描述</span><span class="sxs-lookup"><span data-stu-id="39203-115">Description</span></span>|  
+|---------------|-----------------|  
+|`findValue`|<span data-ttu-id="39203-116">字串，其中包含要在 X.509 憑證存放區內搜尋的值。</span><span class="sxs-lookup"><span data-stu-id="39203-116">A string that contains the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="39203-117">這個屬性所包含的型別必須滿足 `X509FindType` 屬性值的需求。</span><span class="sxs-lookup"><span data-stu-id="39203-117">The type contained in the attribute must satisfy the requirements of the `X509FindType` attribute value.</span></span> <span data-ttu-id="39203-118">預設為空字串。</span><span class="sxs-lookup"><span data-stu-id="39203-118">The default is an empty string.</span></span>|  
+|`storeLocation`|<span data-ttu-id="39203-119">指定 X.509 憑證的位置，用戶端會使用該憑證來進行對服務的自我驗證。</span><span class="sxs-lookup"><span data-stu-id="39203-119">Specifies the location of the X.509 certificate that the client uses to authenticate itself to the service.</span></span> <span data-ttu-id="39203-120">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="39203-120">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="39203-121">-LocalMachine: 指派憑證存放區至本機電腦。</span><span class="sxs-lookup"><span data-stu-id="39203-121">-   LocalMachine: the certificate store assigned to the local machine.</span></span><br /><span data-ttu-id="39203-122">-CurrentUser: 指派憑證存放區目前的使用者。</span><span class="sxs-lookup"><span data-stu-id="39203-122">-   CurrentUser: the certificate store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="39203-123">預設為 LocalMachine。</span><span class="sxs-lookup"><span data-stu-id="39203-123">The default is LocalMachine.</span></span> <span data-ttu-id="39203-124">此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。</span><span class="sxs-lookup"><span data-stu-id="39203-124">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span></span>|  
+|`storeName`|<span data-ttu-id="39203-125">指定要搜尋之 X.509 憑證存放區的名稱。</span><span class="sxs-lookup"><span data-stu-id="39203-125">Specifies the name of the X.509 certificate store to search.</span></span> <span data-ttu-id="39203-126">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="39203-126">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="39203-127">-AddressBook： 其他使用者的憑證存放區。</span><span class="sxs-lookup"><span data-stu-id="39203-127">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="39203-128">-AuthRoot： 協力廠商憑證授權單位 (Ca) 的存放區的憑證。</span><span class="sxs-lookup"><span data-stu-id="39203-128">-   AuthRoot: Certificate store for third-party certificate authorities (CAs).</span></span><br /><span data-ttu-id="39203-129">-CertificateAuthority： 中繼憑證授權單位 (Ca) 憑證存放區。</span><span class="sxs-lookup"><span data-stu-id="39203-129">-   CertificateAuthority: Certificate store for intermediate certificate authorities (CAs).</span></span><br /><span data-ttu-id="39203-130">-不允許： 憑證已撤銷之憑證存放區。</span><span class="sxs-lookup"><span data-stu-id="39203-130">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="39203-131">-My： 憑證個人憑證存放區。</span><span class="sxs-lookup"><span data-stu-id="39203-131">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="39203-132">-Root： 信任的根憑證授權單位 (Ca) 憑證存放區。</span><span class="sxs-lookup"><span data-stu-id="39203-132">-   Root: Certificate store for trusted root certificate authorities (CAs).</span></span><br /><span data-ttu-id="39203-133">-TrustedPeople： 直接信任之人員和資源的憑證存放區。</span><span class="sxs-lookup"><span data-stu-id="39203-133">-   TrustedPeople: Certificate store for directly trusted people and resources.</span></span><br /><span data-ttu-id="39203-134">-TrustedPublisher： 直接信任之發行者的憑證存放區。</span><span class="sxs-lookup"><span data-stu-id="39203-134">-   TrustedPublisher: Certificate store for directly trusted publishers.</span></span><br /><br /> <span data-ttu-id="39203-135">預設為 My。</span><span class="sxs-lookup"><span data-stu-id="39203-135">The default is My.</span></span> <span data-ttu-id="39203-136">此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreName>。</span><span class="sxs-lookup"><span data-stu-id="39203-136">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span></span>|  
+|<span data-ttu-id="39203-137">X509FindType</span><span class="sxs-lookup"><span data-stu-id="39203-137">X509FindType</span></span>|<span data-ttu-id="39203-138">定義要執行之 X.509 搜尋的類型。</span><span class="sxs-lookup"><span data-stu-id="39203-138">Defines the type of X.509 search to be executed.</span></span> <span data-ttu-id="39203-139">`findValue` 屬性中所包含的型別必須滿足此屬性的需求。</span><span class="sxs-lookup"><span data-stu-id="39203-139">The type contained in the `findValue` attribute must satisfy the requirements of this attribute.</span></span> <span data-ttu-id="39203-140">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="39203-140">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="39203-141">-FindByThumbPrint</span><span class="sxs-lookup"><span data-stu-id="39203-141">-   FindByThumbPrint</span></span><br /><span data-ttu-id="39203-142">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="39203-142">-   FindBySubjectName</span></span><br /><span data-ttu-id="39203-143">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="39203-143">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="39203-144">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="39203-144">-   FindByIssuerName</span></span><br /><span data-ttu-id="39203-145">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="39203-145">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="39203-146">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="39203-146">-   FindBySerialNumber</span></span><br /><span data-ttu-id="39203-147">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="39203-147">-   FindByTimeValid</span></span><br /><span data-ttu-id="39203-148">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="39203-148">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="39203-149">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="39203-149">-   FindByTemplateName</span></span><br /><span data-ttu-id="39203-150">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="39203-150">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="39203-151">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="39203-151">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="39203-152">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="39203-152">-   FindByExtension</span></span><br /><span data-ttu-id="39203-153">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="39203-153">-   FindByKeyUsage</span></span><br /><span data-ttu-id="39203-154">-FindBySubjectKeyIdentifier</span><span class="sxs-lookup"><span data-stu-id="39203-154">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="39203-155">預設值為 FindBySubjectDistinguishedName。</span><span class="sxs-lookup"><span data-stu-id="39203-155">The default value is FindBySubjectDistinguishedName.</span></span> <span data-ttu-id="39203-156">此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.X509FindType>。</span><span class="sxs-lookup"><span data-stu-id="39203-156">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="39203-157">子元素</span><span class="sxs-lookup"><span data-stu-id="39203-157">Child Elements</span></span>  
+ <span data-ttu-id="39203-158">無。</span><span class="sxs-lookup"><span data-stu-id="39203-158">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="39203-159">父項目</span><span class="sxs-lookup"><span data-stu-id="39203-159">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
+|<span data-ttu-id="39203-160">項目</span><span class="sxs-lookup"><span data-stu-id="39203-160">Element</span></span>|<span data-ttu-id="39203-161">說明</span><span class="sxs-lookup"><span data-stu-id="39203-161">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="39203-162">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="39203-162">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="39203-163">指定用來對服務驗證用戶端的認證。</span><span class="sxs-lookup"><span data-stu-id="39203-163">Specifies the credentials used to authenticate the client to a service.</span></span>|  
   
-## 備註  
- 這個組態項目會指定憑證，此憑證會用來驗證具有這個項目的用戶端。  [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [HOW TO：指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+## <a name="remarks"></a><span data-ttu-id="39203-164">備註</span><span class="sxs-lookup"><span data-stu-id="39203-164">Remarks</span></span>  
+ <span data-ttu-id="39203-165">這個組態項目會指定憑證，此憑證會用來驗證具有這個項目的用戶端。</span><span class="sxs-lookup"><span data-stu-id="39203-165">This configuration element specifies the certificate used to authenticate the client with this element.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="39203-166">[How to： 指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。</span><span class="sxs-lookup"><span data-stu-id="39203-166"> [How to: Specify Client Credential Values](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).</span></span>  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>   
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>   
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>   
- [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [HOW TO：指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)   
- [確保用戶端的安全](../../../../../docs/framework/wcf/securing-clients.md)   
- [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="39203-167">另請參閱</span><span class="sxs-lookup"><span data-stu-id="39203-167">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>  
+ <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
+ <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>  
+ [<span data-ttu-id="39203-168">安全性行為</span><span class="sxs-lookup"><span data-stu-id="39203-168">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="39203-169">如何：指定用戶端認證值</span><span class="sxs-lookup"><span data-stu-id="39203-169">How to: Specify Client Credential Values</span></span>](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
+ [<span data-ttu-id="39203-170">保護用戶端安全</span><span class="sxs-lookup"><span data-stu-id="39203-170">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="39203-171">使用憑證</span><span class="sxs-lookup"><span data-stu-id="39203-171">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="39203-172">保護服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="39203-172">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

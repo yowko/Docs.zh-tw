@@ -1,35 +1,38 @@
 ---
-title: "3805 - RoutingServiceDisplayConfig | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3805 - RoutingServiceDisplayConfig
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae58c16e-25e1-4a64-8e8c-3d0006cff0f8
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4664ac9a967c175132f979a3b27c35ebf183814c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 3805 - RoutingServiceDisplayConfig
-## 屬性  
+# <a name="3805---routingservicedisplayconfig"></a><span data-ttu-id="6d3ad-102">3805 - RoutingServiceDisplayConfig</span><span class="sxs-lookup"><span data-stu-id="6d3ad-102">3805 - RoutingServiceDisplayConfig</span></span>
+## <a name="properties"></a><span data-ttu-id="6d3ad-103">屬性</span><span class="sxs-lookup"><span data-stu-id="6d3ad-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3805|  
-|關鍵字|RoutingServices|  
-|層級|詳細資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="6d3ad-104">ID</span><span class="sxs-lookup"><span data-stu-id="6d3ad-104">ID</span></span>|<span data-ttu-id="6d3ad-105">3805</span><span class="sxs-lookup"><span data-stu-id="6d3ad-105">3805</span></span>|  
+|<span data-ttu-id="6d3ad-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="6d3ad-106">Keywords</span></span>|<span data-ttu-id="6d3ad-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="6d3ad-107">RoutingServices</span></span>|  
+|<span data-ttu-id="6d3ad-108">層級</span><span class="sxs-lookup"><span data-stu-id="6d3ad-108">Level</span></span>|<span data-ttu-id="6d3ad-109">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="6d3ad-109">Verbose</span></span>|  
+|<span data-ttu-id="6d3ad-110">通道</span><span class="sxs-lookup"><span data-stu-id="6d3ad-110">Channel</span></span>|<span data-ttu-id="6d3ad-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="6d3ad-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 路由服務以 RouteOnHeadersOnly 進行設定時，就會發出此事件。  
+## <a name="description"></a><span data-ttu-id="6d3ad-112">描述</span><span class="sxs-lookup"><span data-stu-id="6d3ad-112">Description</span></span>  
+ <span data-ttu-id="6d3ad-113">路由服務以 RouteOnHeadersOnly 進行設定時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="6d3ad-113">This event is emitted when the Routing Service is configured with RouteOnHeadersOnly.</span></span>  
   
-## 訊息  
- 路由服務已設定 RouteOnHeadersOnly：%1，SoapProcessingEnabled：%2，EnsureOrderedDispatch：%3。  
+## <a name="message"></a><span data-ttu-id="6d3ad-114">訊息</span><span class="sxs-lookup"><span data-stu-id="6d3ad-114">Message</span></span>  
+ <span data-ttu-id="6d3ad-115">路由服務已設定 RouteOnHeadersOnly：%1，SoapProcessingEnabled：%2，EnsureOrderedDispatch：%3。</span><span class="sxs-lookup"><span data-stu-id="6d3ad-115">The Routing Service is configured with RouteOnHeadersOnly: %1, SoapProcessingEnabled: %2, EnsureOrderedDispatch: %3.</span></span>  
   
-## 詳細資料
+## <a name="details"></a><span data-ttu-id="6d3ad-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="6d3ad-116">Details</span></span>

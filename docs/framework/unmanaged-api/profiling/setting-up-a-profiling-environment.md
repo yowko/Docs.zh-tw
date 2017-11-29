@@ -1,0 +1,107 @@
+---
+title: "設定程式碼剖析環境"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- environment variables, profiling API
+- profiling API [.NET Framework], setting up environment
+- COR_PROFILER environment variable
+- Windows Service applications, profiling
+- profiling API [.NET Framework], Windows Service applications
+- COR_ENABLE_PROFILING environment variable
+- profiling API [.NET Framework], enabling
+ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
+caps.latest.revision: "29"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 7ff2c57be82166ecf5eb8a012491044eb2cb79d4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
+---
+# <a name="setting-up-a-profiling-environment"></a><span data-ttu-id="82288-102">設定程式碼剖析環境</span><span class="sxs-lookup"><span data-stu-id="82288-102">Setting Up a Profiling Environment</span></span>
+> [!NOTE]
+>  <span data-ttu-id="82288-103">在 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 內的程式碼剖析已有大幅的變更。</span><span class="sxs-lookup"><span data-stu-id="82288-103">There have been substantial changes to profiling in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+  
+ <span data-ttu-id="82288-104">當 Managed 處理序 (應用程式或服務) 啟動時，會載入 Common Language Runtime (CLR)。</span><span class="sxs-lookup"><span data-stu-id="82288-104">When a managed process (application or service) starts, it loads the common language runtime (CLR).</span></span> <span data-ttu-id="82288-105">初始化 CLR 時，會評估下列兩個環境變數來決定程序是否應該連接至程式碼剖析工具：</span><span class="sxs-lookup"><span data-stu-id="82288-105">When the CLR is initialized, it evaluates the following two environmental variables to decide whether the process should connect to a profiler:</span></span>  
+  
+-   <span data-ttu-id="82288-106">COR_ENABLE_PROFILING：只有在此環境變數存在，而且設為 1 時，CLR 才會連接到程式碼剖析工具。</span><span class="sxs-lookup"><span data-stu-id="82288-106">COR_ENABLE_PROFILING: The CLR connects to a profiler only if this environment variable exists and is set to 1.</span></span>  
+  
+-   <span data-ttu-id="82288-107">COR_PROFILER：若 COR_ENABLE_PROFILING 檢查都通過，則 CLR 會連接到具有此 CLSID 或 ProgID 的程式碼剖析工具，該工具必須先前已儲存在登錄中。</span><span class="sxs-lookup"><span data-stu-id="82288-107">COR_PROFILER: If the COR_ENABLE_PROFILING check passes, the CLR connects to the profiler that has this CLSID or ProgID, which must have been stored previously in the registry.</span></span> <span data-ttu-id="82288-108">將 COR_PROFILER 環境變數定義為字串，如下列兩個範例所示。</span><span class="sxs-lookup"><span data-stu-id="82288-108">The COR_PROFILER environment variable is defined as a string, as shown in the following two examples.</span></span>  
+  
+    ```  
+    set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
+    set COR_PROFILER="MyProfiler"  
+    ```  
+  
+ <span data-ttu-id="82288-109">若要分析 CLR 應用程式，您必須先設定 COR_ENABLE_PROFILING 和 COR_PROFILER 環境變數，才能執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="82288-109">To profile a CLR application, you must set the COR_ENABLE_PROFILING and COR_PROFILER environment variables before you run the application.</span></span> <span data-ttu-id="82288-110">您也必須確認已註冊程式碼剖析工具 DLL。</span><span class="sxs-lookup"><span data-stu-id="82288-110">You must also make sure that the profiler DLL is registered.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="82288-111">從 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 開始，不需要註冊程式碼剖析工具。</span><span class="sxs-lookup"><span data-stu-id="82288-111">Starting with the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], profilers do not have to be registered.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="82288-112">若要使用.NET Framework 2.0、 3.0 和 3.5 版程式碼剖析工具中的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]和更新版本中，您必須設定 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 環境變數。</span><span class="sxs-lookup"><span data-stu-id="82288-112">To use .NET Framework versions 2.0, 3.0, and 3.5 profilers in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] and later versions, you must set the COMPLUS_ProfAPI_ProfilerCompatibilitySetting environment variable.</span></span>  
+  
+## <a name="environment-variable-scope"></a><span data-ttu-id="82288-113">環境變數範圍</span><span class="sxs-lookup"><span data-stu-id="82288-113">Environment Variable Scope</span></span>  
+ <span data-ttu-id="82288-114">您設定 COR_ENABLE_PROFILING 和 COR_PROFILER 環境變數的方式將會決定其影響範圍。</span><span class="sxs-lookup"><span data-stu-id="82288-114">How you set the COR_ENABLE_PROFILING and COR_PROFILER environment variables will determine their scope of influence.</span></span> <span data-ttu-id="82288-115">您可以使用下列其中一種方式來設定這些變數：</span><span class="sxs-lookup"><span data-stu-id="82288-115">You can set these variables in one of the following ways:</span></span>  
+  
+-   <span data-ttu-id="82288-116">如果您設定變數[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)呼叫時，它們只會套用到您當時執行的應用程式。</span><span class="sxs-lookup"><span data-stu-id="82288-116">If you set the variables in an [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) call, they will apply only to the application that you are running at the time.</span></span> <span data-ttu-id="82288-117">(它們也會套用到繼承此環境之應用程式所啟動的其他應用程式。)</span><span class="sxs-lookup"><span data-stu-id="82288-117">(They will also apply to other applications started by that application that inherit the environment.)</span></span>  
+  
+-   <span data-ttu-id="82288-118">如果您在 [命令提示字元] 視窗中設定變數，則變數會套用到從該視窗啟動的所有應用程式。</span><span class="sxs-lookup"><span data-stu-id="82288-118">If you set the variables in a Command Prompt window, they will apply to all applications that are started from that window.</span></span>  
+  
+-   <span data-ttu-id="82288-119">如果您在使用者層次上設定變數，它們會套用至您使用 [檔案總管] 啟動的所有應用程式。</span><span class="sxs-lookup"><span data-stu-id="82288-119">If you set the variables at the user level, they will apply to all applications that you start with File Explorer.</span></span> <span data-ttu-id="82288-120">您在設定變數之後所開啟的 [命令提示字元] 視窗中會有這些環境設定，您從該視窗所啟動的任何應用程式也是。</span><span class="sxs-lookup"><span data-stu-id="82288-120">A Command Prompt window that you open after you set the variables will have these environment settings, and so will any application that you start from that window.</span></span> <span data-ttu-id="82288-121">若要在使用者層級設定環境變數，以滑鼠右鍵按一下**我的電腦**，按一下 **屬性**，按一下 **進階**索引標籤上，按一下 **環境變數**，並將變數加入**使用者變數**清單。</span><span class="sxs-lookup"><span data-stu-id="82288-121">To set environment variables at the user level, right-click **My Computer**, click **Properties**, click the **Advanced** tab, click **Environment Variables**, and add the variables to the **User variables** list.</span></span>  
+  
+-   <span data-ttu-id="82288-122">如果您在電腦層級設定變數，變數會套用到該電腦啟動的所有應用程式。</span><span class="sxs-lookup"><span data-stu-id="82288-122">If you set the variables at the computer level, they will apply to all applications that are started on that computer.</span></span> <span data-ttu-id="82288-123">您在該電腦開啟的 [命令提示字元] 視窗會有這些環境設定，從該視窗啟動的任何應用程式也是。</span><span class="sxs-lookup"><span data-stu-id="82288-123">A Command Prompt window that you open on that computer will have these environment settings, and so will any application that you start from that window.</span></span> <span data-ttu-id="82288-124">這表示在該電腦上的每個 Managed 處理序將以您的程式碼剖析工具做為起始。</span><span class="sxs-lookup"><span data-stu-id="82288-124">This means that every managed process on that computer will start with your profiler.</span></span> <span data-ttu-id="82288-125">若要在電腦層級設定環境變數，以滑鼠右鍵按一下**我的電腦**，按一下 **屬性**，按一下 **進階**索引標籤上，按一下 **環境變數**，將變數加入**系統變數**清單，然後再重新啟動您的電腦。</span><span class="sxs-lookup"><span data-stu-id="82288-125">To set environment variables at the computer level, right-click **My Computer**, click **Properties**, click the **Advanced** tab, click **Environment Variables**, add the variables to the **System variables** list, and then restart your computer.</span></span> <span data-ttu-id="82288-126">重新啟動後，變數就可供系統範圍使用。</span><span class="sxs-lookup"><span data-stu-id="82288-126">After restarting, the variables will be available system-wide.</span></span>  
+  
+ <span data-ttu-id="82288-127">如果您正在程式碼剖析 Windows 服務，您必須在設定環境變數及註冊程式碼剖析工具 DLL 之後重新啟動電腦。</span><span class="sxs-lookup"><span data-stu-id="82288-127">If you are profiling a Windows Service, you must restart your computer after you set the environment variables and register the profiler DLL.</span></span> <span data-ttu-id="82288-128">如需有關這些考量的詳細資訊，請參閱[程式碼剖析 Windows 服務](#windows_service)。</span><span class="sxs-lookup"><span data-stu-id="82288-128">For more information about these considerations, see the section [Profiling a Windows Service](#windows_service).</span></span>  
+  
+## <a name="additional-considerations"></a><span data-ttu-id="82288-129">其他考量</span><span class="sxs-lookup"><span data-stu-id="82288-129">Additional Considerations</span></span>  
+  
+-   <span data-ttu-id="82288-130">該程式碼剖析工具類別會實作[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)和[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="82288-130">The profiler class implements the [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) and [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfaces.</span></span> <span data-ttu-id="82288-131">在 .NET Framework 2.0 版中，程式碼剖析工具必須實作 `ICorProfilerCallback2`。</span><span class="sxs-lookup"><span data-stu-id="82288-131">In the .NET Framework version 2.0, a profiler must implement `ICorProfilerCallback2`.</span></span> <span data-ttu-id="82288-132">如果沒有實作，就不會載入 `ICorProfilerCallback2`。</span><span class="sxs-lookup"><span data-stu-id="82288-132">If it does not, `ICorProfilerCallback2` will not be loaded.</span></span>  
+  
+-   <span data-ttu-id="82288-133">在指定環境中一次只能使用一個程式碼剖析工具來分析處理序。</span><span class="sxs-lookup"><span data-stu-id="82288-133">Only one profiler can profile a process at one time in a given environment.</span></span> <span data-ttu-id="82288-134">您可以在不同環境中註冊兩個不同的程式碼剖析工具，但這兩個工具必須分析不同的處理序。</span><span class="sxs-lookup"><span data-stu-id="82288-134">You can register two different profilers in different environments, but each must profile separate processes.</span></span> <span data-ttu-id="82288-135">程式碼剖析工具必須實作為同處理序 COM 伺服器 DLL (其與剖析中之處理序的相同位址空間對應)。</span><span class="sxs-lookup"><span data-stu-id="82288-135">The profiler must be implemented as an in-process COM server DLL, which is mapped into the same address space as the process that is being profiled.</span></span> <span data-ttu-id="82288-136">這表示程式碼剖析工具執行同處理序。</span><span class="sxs-lookup"><span data-stu-id="82288-136">This means that the profiler runs in-process.</span></span> <span data-ttu-id="82288-137">.NET Framework 不支援任何其他類型的 COM 伺服器。</span><span class="sxs-lookup"><span data-stu-id="82288-137">The .NET Framework does not support any other type of COM server.</span></span> <span data-ttu-id="82288-138">例如，如果程式碼剖析工具想要從遠端電腦監視應用程式，就必須在每一部電腦上實作收集器代理程式。</span><span class="sxs-lookup"><span data-stu-id="82288-138">For example, if a profiler wants to monitor applications from a remote computer, it must implement collector agents on each computer.</span></span> <span data-ttu-id="82288-139">這些代理程式將會批次結果，並讓結果與中央資料收集電腦通訊。</span><span class="sxs-lookup"><span data-stu-id="82288-139">These agents will batch results and communicate them to the central data collection computer.</span></span>  
+  
+-   <span data-ttu-id="82288-140">由於程式碼剖析工具是可具現化同處理序的 COM 物件，所以每個經剖析的應用程式會有自己的程式碼剖析工具複本。</span><span class="sxs-lookup"><span data-stu-id="82288-140">Because the profiler is a COM object that is instantiated in-process, each profiled application will have its own copy of the profiler.</span></span> <span data-ttu-id="82288-141">因此，單一程式碼剖析工具執行個體不須處理來自多個應用程式的資料。</span><span class="sxs-lookup"><span data-stu-id="82288-141">Therefore, a single profiler instance does not have to handle data from multiple applications.</span></span> <span data-ttu-id="82288-142">不過，您必須將邏輯加入程式碼剖析工具的記錄程式碼，以防止記錄檔從其他經剖析的應用程式覆寫。</span><span class="sxs-lookup"><span data-stu-id="82288-142">However, you will have to add logic to the profiler's logging code to prevent log file overwrites from other profiled applications.</span></span>  
+  
+## <a name="initializing-the-profiler"></a><span data-ttu-id="82288-143">初始化程式碼剖析工具</span><span class="sxs-lookup"><span data-stu-id="82288-143">Initializing the Profiler</span></span>  
+ <span data-ttu-id="82288-144">當這兩個環境變數都檢查通過時，CLR 會以與 COM `CoCreateInstance` 函式類似的方式建立程式碼剖析工具的執行個體。</span><span class="sxs-lookup"><span data-stu-id="82288-144">When both environment variable checks pass, the CLR creates an instance of the profiler in a similar manner to the COM `CoCreateInstance` function.</span></span> <span data-ttu-id="82288-145">程式碼剖析工具不會透過直接呼叫載入至 `CoCreateInstance`。</span><span class="sxs-lookup"><span data-stu-id="82288-145">The profiler is not loaded through a direct call to `CoCreateInstance`.</span></span> <span data-ttu-id="82288-146">因此會避免呼叫必須設定執行緒模型的 `CoInitialize`。</span><span class="sxs-lookup"><span data-stu-id="82288-146">Therefore, a call to `CoInitialize`, which requires setting the threading model, is avoided.</span></span> <span data-ttu-id="82288-147">CLR 接著會呼叫[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)分析工具中的方法。</span><span class="sxs-lookup"><span data-stu-id="82288-147">The CLR then calls the [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) method in the profiler.</span></span> <span data-ttu-id="82288-148">這個方法的簽章如下所示。</span><span class="sxs-lookup"><span data-stu-id="82288-148">The signature of this method is as follows.</span></span>  
+  
+```  
+HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
+```  
+  
+ <span data-ttu-id="82288-149">分析工具必須查詢`pICorProfilerInfoUnk`如[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)或[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)介面指標，並將它儲存，讓它可以要求程式碼剖析期間更新版本的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="82288-149">The profiler must query `pICorProfilerInfoUnk` for an [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interface pointer and save it so that it can request more information later during profiling.</span></span>  
+  
+## <a name="setting-event-notifications"></a><span data-ttu-id="82288-150">設定事件通知</span><span class="sxs-lookup"><span data-stu-id="82288-150">Setting Event Notifications</span></span>  
+ <span data-ttu-id="82288-151">程式碼剖析工具接著會呼叫[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法，以指定它所需要的通知分類。</span><span class="sxs-lookup"><span data-stu-id="82288-151">The profiler then calls the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to specify which categories of notifications it is interested in.</span></span> <span data-ttu-id="82288-152">例如，如果程式碼剖析工具只對函式進入及離開通知和記憶體回收通知感興趣，會指定下列項目。</span><span class="sxs-lookup"><span data-stu-id="82288-152">For example, if the profiler is interested only in function enter and leave notifications and garbage collection notifications, it specifies the following.</span></span>  
+  
+```  
+ICorProfilerInfo* pInfo;  
+pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
+pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  
+```  
+  
+ <span data-ttu-id="82288-153">藉由以這種方式設定通知遮罩，程式碼剖析工具可以限制所接收的通知。</span><span class="sxs-lookup"><span data-stu-id="82288-153">By setting the notifications mask in this manner, the profiler can limit which notifications it receives.</span></span> <span data-ttu-id="82288-154">這種方法可協助使用者建置簡單或特殊用途的程式碼剖析工具。</span><span class="sxs-lookup"><span data-stu-id="82288-154">This approach helps the user build a simple or special-purpose profiler.</span></span> <span data-ttu-id="82288-155">它也會減少浪費在程式碼剖析工具會略過之傳送通知的 CPU 時間。</span><span class="sxs-lookup"><span data-stu-id="82288-155">It also reduces CPU time that would be wasted sending notifications that the profiler would just ignore.</span></span>  
+  
+ <span data-ttu-id="82288-156">某些程式碼剖析工具事件為不可變。</span><span class="sxs-lookup"><span data-stu-id="82288-156">Certain profiler events are immutable.</span></span> <span data-ttu-id="82288-157">這表示，只要這些事件是在 `ICorProfilerCallback::Initialize` 回呼中設定，就無法關閉這些事件，也無法開啟新的事件。</span><span class="sxs-lookup"><span data-stu-id="82288-157">This means that as soon as these events are set in the `ICorProfilerCallback::Initialize` callback, they cannot be turned off and new events cannot be turned on.</span></span> <span data-ttu-id="82288-158">嘗試變更不可變的事件將會導致 `ICorProfilerInfo::SetEventMask` 傳回失敗的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="82288-158">Attempts to change an immutable event will result in `ICorProfilerInfo::SetEventMask` returning a failed HRESULT.</span></span>  
+  
+<a name="windows_service"></a>   
+## <a name="profiling-a-windows-service"></a><span data-ttu-id="82288-159">程式碼剖析 Windows 服務</span><span class="sxs-lookup"><span data-stu-id="82288-159">Profiling a Windows Service</span></span>  
+ <span data-ttu-id="82288-160">程式碼剖析 Windows 服務就像是在程式碼剖析通用語言執行階段應用程式。</span><span class="sxs-lookup"><span data-stu-id="82288-160">Profiling a Windows Service is like profiling a common language runtime application.</span></span> <span data-ttu-id="82288-161">這兩種程式碼剖析作業皆會透過環境變數啟用。</span><span class="sxs-lookup"><span data-stu-id="82288-161">Both profiling operations are enabled through environment variables.</span></span> <span data-ttu-id="82288-162">因為作業系統啟動時會啟動 Windows 服務，所以本主題先前所討論的環境變數在系統啟動前必須存在並設為所需的值。</span><span class="sxs-lookup"><span data-stu-id="82288-162">Because a Windows Service is started when the operating system starts, the environment variables discussed previously in this topic must already be present and set to the required values before the system starts.</span></span> <span data-ttu-id="82288-163">此外，程式碼剖析的 DLL 必須已登錄在系統上。</span><span class="sxs-lookup"><span data-stu-id="82288-163">In addition, the profiling DLL must already be registered on the system.</span></span>  
+  
+ <span data-ttu-id="82288-164">設定完 COR_ENABLE_PROFILING 和 COR_PROFILER 環境變數，並註冊分析工具 DLL 之後，應該重新啟動目標電腦，使 Windows 服務偵測到這些變更。</span><span class="sxs-lookup"><span data-stu-id="82288-164">After you set the COR_ENABLE_PROFILING and COR_PROFILER environment variables and register the profiler DLL, you should restart the target computer so that the Windows Service can detect those changes.</span></span>  
+  
+ <span data-ttu-id="82288-165">請注意這些變更將會啟用以系統範圍為基礎的程式碼剖析。</span><span class="sxs-lookup"><span data-stu-id="82288-165">Note that these changes will enable profiling on a system-wide basis.</span></span> <span data-ttu-id="82288-166">若要防止進行後續執行之所有 Managed 應用程式的程式碼剖析，您應該在重新啟動目標電腦之後刪除系統環境變數。</span><span class="sxs-lookup"><span data-stu-id="82288-166">To prevent every managed application that subsequently runs from being profiled, you should delete the system environment variables after you restart the target computer.</span></span>  
+  
+ <span data-ttu-id="82288-167">這項技術也會使每個 CLR 程序進行程式碼剖析。</span><span class="sxs-lookup"><span data-stu-id="82288-167">This technique also leads to every CLR process getting profiled.</span></span> <span data-ttu-id="82288-168">程式碼剖析工具應將邏輯加入其[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回呼以偵測目前的處理序是否為感興趣。</span><span class="sxs-lookup"><span data-stu-id="82288-168">The profiler should add logic to its [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback to detect whether the current process is of interest.</span></span> <span data-ttu-id="82288-169">如果不是，程式碼剖析工具可以使回呼失敗，而不需執行初始化。</span><span class="sxs-lookup"><span data-stu-id="82288-169">If it is not, the profiler can fail the callback without performing the initialization.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="82288-170">另請參閱</span><span class="sxs-lookup"><span data-stu-id="82288-170">See Also</span></span>  
+ [<span data-ttu-id="82288-171">程式碼剖析概觀</span><span class="sxs-lookup"><span data-stu-id="82288-171">Profiling Overview</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

@@ -1,79 +1,82 @@
 ---
-title: "UI Automation Support for the Menu Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Menu"
-  - "UI Automation, Menu control type"
-  - "Menu control type"
+title: "Menu 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Menu
+- UI Automation, Menu control type
+- Menu control type
 ms.assetid: 016323cb-f800-4938-b77b-2eb25d646090
-caps.latest.revision: 24
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: f6cf9384bbabe5bd97a58404a1ce67b80cfc9217
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Menu Control Type
+# <a name="ui-automation-support-for-the-menu-control-type"></a><span data-ttu-id="148f0-102">Menu 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="148f0-102">UI Automation Support for the Menu Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 命名空間中定義之 Managed <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 類別的 .NET Framework 開發人員。 如需 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 的最新資訊，請參閱 Windows Automation API：使用者介面自動化[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)][!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)][UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+>  <span data-ttu-id="148f0-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="148f0-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="148f0-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="148f0-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供功能表控制項類型的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 支援相關資訊。 其中說明控制項的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 樹狀結構，並提供特定控制項案例的屬性和控制項模式。  
+ <span data-ttu-id="148f0-105">本主題提供功能表控制項類型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="148f0-105">This topic provides information about [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] support for the Menu control type.</span></span> <span data-ttu-id="148f0-106">其中說明控制項的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 樹狀結構，並提供特定控制項案例的屬性和控制項模式。</span><span class="sxs-lookup"><span data-stu-id="148f0-106">It describes the control's [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tree structure and provides the properties and control patterns for specific control scenarios.</span></span>  
   
- 功能表控制項可將命令和事件處理常式的關聯項目以階層方式組織。 在典型的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 應用程式中，功能表列會包含數個功能表按鈕 \(例如 \[檔案\][UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)、\[編輯\][!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 和 \[視窗\][!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]\)，而每個功能表按鈕又會顯示功能表。 功能表又包含一組功能表項目 \(例如 \[開新檔案\]<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>、\[開啟舊檔\][UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 和 \[關閉檔案\][!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]\)，這些項目可展開顯示更多的功能表項目，或在按一下時可執行特定的動作。  
+ <span data-ttu-id="148f0-107">功能表控制項可將命令和事件處理常式的關聯項目以階層方式組織。</span><span class="sxs-lookup"><span data-stu-id="148f0-107">A menu control allows hierarchal organization of elements associated with commands and event handlers.</span></span> <span data-ttu-id="148f0-108">在典型的 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 應用程式中，功能表列會包含數個功能表按鈕 (例如 [檔案] **UI Automation Properties Overview**、[編輯] **TLA#tla_win32**和 [視窗] **TLA#tla_winforms**)，而每個功能表按鈕又會顯示功能表。</span><span class="sxs-lookup"><span data-stu-id="148f0-108">In a typical [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] application, a menu bar contains several menu buttons (such as **File**, **Edit**, and **Window**), and each menu button displays a menu.</span></span> <span data-ttu-id="148f0-109">功能表又包含一組功能表項目 (例如 [開新檔案] **F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty**、[開啟舊檔] **UI Automation Properties Overview**和 [關閉檔案] **TLA#tla_win32**)，這些項目可展開顯示更多的功能表項目，或在按一下時可執行特定的動作。</span><span class="sxs-lookup"><span data-stu-id="148f0-109">A menu contains a collection of menu items (such as **New**, **Open**, and **Close**), which can be expanded to display additional menu items or to perform a specific action when clicked.</span></span>  
   
- 下列章節會定義功能表控制項類型所需的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 樹狀結構、屬性、控制項模式和事件。 無論是 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 需求都適用於所有清單控制項。  
+ <span data-ttu-id="148f0-110">下列章節會定義功能表控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="148f0-110">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Menu control type.</span></span> <span data-ttu-id="148f0-111">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有清單控制項。</span><span class="sxs-lookup"><span data-stu-id="148f0-111">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all list controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述功能表控制項之 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 樹狀結構的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="148f0-112">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="148f0-112">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="148f0-113">下表描述功能表控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="148f0-113">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to menu controls and describes what can be contained in each view.</span></span> <span data-ttu-id="148f0-114">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)需求都適用於所有清單控制項。</span><span class="sxs-lookup"><span data-stu-id="148f0-114">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|功能表<br /><br /> -   MenuItem \(1 或多個\)|不適用 \(除非功能表控制項為非功能表項目之物件父系的內容功能表\)<br /><br /> -   MenuItem \(1 或多個\)|  
+|<span data-ttu-id="148f0-115">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="148f0-115">Control View</span></span>|<span data-ttu-id="148f0-116">內容檢視</span><span class="sxs-lookup"><span data-stu-id="148f0-116">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="148f0-117">功能表</span><span class="sxs-lookup"><span data-stu-id="148f0-117">Menu</span></span><br /><br /> <span data-ttu-id="148f0-118">-MenuItem （1 或多個）</span><span class="sxs-lookup"><span data-stu-id="148f0-118">-   MenuItem (1 or many)</span></span>|<span data-ttu-id="148f0-119">不適用 (除非功能表控制項為非功能表項目之物件父系的內容功能表)</span><span class="sxs-lookup"><span data-stu-id="148f0-119">Not applicable (unless the menu control is a context menu that is a parent of an object that is not a menu item)</span></span><br /><br /> <span data-ttu-id="148f0-120">-MenuItem （1 或多個）</span><span class="sxs-lookup"><span data-stu-id="148f0-120">-   MenuItem (1 or many)</span></span>|  
   
- 功能表控制項一律會出現在 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 樹狀結構的控制項檢視和內容檢視。 功能表控制項類別應該顯示於其資訊所參考的控制項下方。 使用者介面自動化用戶端必須接聽 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>，以確保它們持續取得功能表控制項所傳達的資訊。 內容功能表控制項是特殊案例。 它們會顯示為桌面的子系。  
+ <span data-ttu-id="148f0-121">功能表控制項一律會出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視。</span><span class="sxs-lookup"><span data-stu-id="148f0-121">Menu controls always appear in the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span> <span data-ttu-id="148f0-122">功能表控制項類別應該顯示於其資訊所參考的控制項下方。</span><span class="sxs-lookup"><span data-stu-id="148f0-122">Menu control types should appear under the control that their information is referring to.</span></span> <span data-ttu-id="148f0-123">使用者介面自動化用戶端必須接聽 `MenuOpenedEvent` ，以確保它們持續取得功能表控制項所傳達的資訊。</span><span class="sxs-lookup"><span data-stu-id="148f0-123">UI Automation clients must listen for `MenuOpenedEvent` to ensure that they consistently obtain information conveyed by menu controls.</span></span> <span data-ttu-id="148f0-124">內容功能表控制項是特殊案例。</span><span class="sxs-lookup"><span data-stu-id="148f0-124">Context menu controls are a special case.</span></span> <span data-ttu-id="148f0-125">它們會顯示為桌面的子系。</span><span class="sxs-lookup"><span data-stu-id="148f0-125">They appear as children of the Desktop.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列出 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性，其值或定義與功能表控制項類型特別有關。 如需 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="148f0-126">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="148f0-126">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="148f0-127">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與功能表控制項類型特別有關。</span><span class="sxs-lookup"><span data-stu-id="148f0-127">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to the Menu control type.</span></span> <span data-ttu-id="148f0-128">如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="148f0-128">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性|值|備註|  
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|不支援|功能表控制項不需要設定 Name 屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|典型的功能表控制項不預期有標籤。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|功能表|此值與所有使用者介面架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|此功能表控制項不會包含在 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 樹狀結構的內容檢視中。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此功能表控制項一律包含在 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 樹狀結構的控制項檢視中。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="148f0-129"> 屬性</span><span class="sxs-lookup"><span data-stu-id="148f0-129"> Property</span></span>|<span data-ttu-id="148f0-130">值</span><span class="sxs-lookup"><span data-stu-id="148f0-130">Value</span></span>|<span data-ttu-id="148f0-131">備註</span><span class="sxs-lookup"><span data-stu-id="148f0-131">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="148f0-132">不支援</span><span class="sxs-lookup"><span data-stu-id="148f0-132">Not Supported</span></span>|<span data-ttu-id="148f0-133">功能表控制項不需要設定 Name 屬性。</span><span class="sxs-lookup"><span data-stu-id="148f0-133">The menu control does not require a Name property to be set.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="148f0-134">典型的功能表控制項不預期有標籤。</span><span class="sxs-lookup"><span data-stu-id="148f0-134">No label is anticipated with a typical menu control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="148f0-135">功能表</span><span class="sxs-lookup"><span data-stu-id="148f0-135">Menu</span></span>|<span data-ttu-id="148f0-136">此值與所有使用者介面架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="148f0-136">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="148f0-137">False</span><span class="sxs-lookup"><span data-stu-id="148f0-137">False</span></span>|<span data-ttu-id="148f0-138">此功能表控制項不會包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中。</span><span class="sxs-lookup"><span data-stu-id="148f0-138">The menu control is not included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="148f0-139">True</span><span class="sxs-lookup"><span data-stu-id="148f0-139">True</span></span>|<span data-ttu-id="148f0-140">此功能表控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中。</span><span class="sxs-lookup"><span data-stu-id="148f0-140">The menu control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式  
- 功能表控制項類型沒有必要的控制項模式。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="148f0-141">必要的使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="148f0-141">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="148f0-142">功能表控制項類型沒有必要的控制項模式。</span><span class="sxs-lookup"><span data-stu-id="148f0-142">There are no required control patterns for the Menu control type.</span></span>  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 當功能表控制項出現在畫面時，必須引發 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>。<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 將包含控制項的文字。 當功能表從畫面消失時，必須引發 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="148f0-143">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="148f0-143">Required UI Automation Events</span></span>  
+ <span data-ttu-id="148f0-144">當功能表控制項出現在畫面時，必須引發 `MenuOpenedEvent` 。</span><span class="sxs-lookup"><span data-stu-id="148f0-144">Menu controls must raise `MenuOpenedEvent` when they appear on the screen.</span></span> <span data-ttu-id="148f0-145">`MenuOpenedEvent` 將包含控制項的文字。</span><span class="sxs-lookup"><span data-stu-id="148f0-145">The `MenuOpenedEvent` will include the text of the control.</span></span> <span data-ttu-id="148f0-146">當功能表從畫面消失時，必須引發 `MenuClosedEvent` 。</span><span class="sxs-lookup"><span data-stu-id="148f0-146">The `MenuClosedEvent` must be raised when a menu disappears from the screen.</span></span>  
   
- 下表列出所有功能表控制項都必須支援的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 事件。 如需事件的詳細資訊，請參閱 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>。  
+ <span data-ttu-id="148f0-147">下表列出所有功能表控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="148f0-147">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all menu controls.</span></span> <span data-ttu-id="148f0-148">如需事件的詳細資訊，請參閱 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="148f0-148">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 事件|支援\/值|備註|  
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.MenuOpenedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.MenuClosedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="148f0-149"> 事件</span><span class="sxs-lookup"><span data-stu-id="148f0-149"> Event</span></span>|<span data-ttu-id="148f0-150">支援/值</span><span class="sxs-lookup"><span data-stu-id="148f0-150">Support/Value</span></span>|<span data-ttu-id="148f0-151">備註</span><span class="sxs-lookup"><span data-stu-id="148f0-151">Notes</span></span>|  
+|---------------------------------------------------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.MenuOpenedEvent>|<span data-ttu-id="148f0-152">必要項</span><span class="sxs-lookup"><span data-stu-id="148f0-152">Required</span></span>|<span data-ttu-id="148f0-153">無</span><span class="sxs-lookup"><span data-stu-id="148f0-153">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.MenuClosedEvent>|<span data-ttu-id="148f0-154">必要項</span><span class="sxs-lookup"><span data-stu-id="148f0-154">Required</span></span>|<span data-ttu-id="148f0-155">無</span><span class="sxs-lookup"><span data-stu-id="148f0-155">None</span></span>|  
+|<span data-ttu-id="148f0-156"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="148f0-156"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="148f0-157">必要項</span><span class="sxs-lookup"><span data-stu-id="148f0-157">Required</span></span>|<span data-ttu-id="148f0-158">無</span><span class="sxs-lookup"><span data-stu-id="148f0-158">None</span></span>|  
+|<span data-ttu-id="148f0-159"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="148f0-159"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="148f0-160">必要項</span><span class="sxs-lookup"><span data-stu-id="148f0-160">Required</span></span>|<span data-ttu-id="148f0-161">無</span><span class="sxs-lookup"><span data-stu-id="148f0-161">None</span></span>|  
+|<span data-ttu-id="148f0-162"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="148f0-162"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="148f0-163">必要項</span><span class="sxs-lookup"><span data-stu-id="148f0-163">Required</span></span>|<span data-ttu-id="148f0-164">無</span><span class="sxs-lookup"><span data-stu-id="148f0-164">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="148f0-165">必要項</span><span class="sxs-lookup"><span data-stu-id="148f0-165">Required</span></span>|<span data-ttu-id="148f0-166">無</span><span class="sxs-lookup"><span data-stu-id="148f0-166">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="148f0-167">必要項</span><span class="sxs-lookup"><span data-stu-id="148f0-167">Required</span></span>|<span data-ttu-id="148f0-168">無</span><span class="sxs-lookup"><span data-stu-id="148f0-168">None</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.Menu>   
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="148f0-169">另請參閱</span><span class="sxs-lookup"><span data-stu-id="148f0-169">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Menu>  
+ [<span data-ttu-id="148f0-170">UI 自動化控制項模式概觀</span><span class="sxs-lookup"><span data-stu-id="148f0-170">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="148f0-171">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="148f0-171">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="148f0-172">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="148f0-172">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

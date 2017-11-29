@@ -1,28 +1,39 @@
 ---
-title: "&lt;scopedCertificates&gt; 的 &lt;add&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;scopedCertificates&gt; 的 &lt;add&gt; 項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e720e69b9c7ee6e6777a69403ff6cee43e532cd1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;scopedCertificates&gt; 的 &lt;add&gt; 項目
-將 X.509 憑證加入至範圍憑證的集合。  
+# <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a><span data-ttu-id="22bde-102">&lt;scopedCertificates&gt; 的 &lt;add&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="22bde-102">&lt;add&gt; of &lt;scopedCertificates&gt; Element</span></span>
+<span data-ttu-id="22bde-103">將 X.509 憑證加入至範圍憑證的集合。</span><span class="sxs-lookup"><span data-stu-id="22bde-103">Adds an X.509 certificate to the collection of scoped certificates.</span></span>  
   
-## 語法  
+ <span data-ttu-id="22bde-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="22bde-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="22bde-105">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="22bde-105">\<behaviors></span></span>  
+<span data-ttu-id="22bde-106">endpointBehaviors 區段</span><span class="sxs-lookup"><span data-stu-id="22bde-106">endpointBehaviors section</span></span>  
+<span data-ttu-id="22bde-107">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="22bde-107">\<behavior></span></span>  
+<span data-ttu-id="22bde-108">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="22bde-108">\<clientCredentials></span></span>  
+<span data-ttu-id="22bde-109">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="22bde-109">\<serviceCertificate></span></span>  
+<span data-ttu-id="22bde-110">\<但是在 scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="22bde-110">\<scopedCertificates></span></span>  
+<span data-ttu-id="22bde-111">\<新增 > 項目\<scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="22bde-111">\<add> element for \<scopedCertificates></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="22bde-112">語法</span><span class="sxs-lookup"><span data-stu-id="22bde-112">Syntax</span></span>  
   
+```xml  
 <add findValue="String"  
           storeLocation="CurrentUser/LocalMachine"  
           storeName=" CurrentUser/LocalMachine"  
@@ -31,63 +42,63 @@ caps.handback.revision: 8
 />   
 ```  
   
-## 屬性和項目  
- 下列各節說明屬性、子元素和父元素  
+## <a name="attributes-and-elements"></a><span data-ttu-id="22bde-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="22bde-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="22bde-114">下列各節說明屬性、子元素和父元素</span><span class="sxs-lookup"><span data-stu-id="22bde-114">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="22bde-115">屬性</span><span class="sxs-lookup"><span data-stu-id="22bde-115">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|targetUri|字串。  指定與憑證相關聯的服務之 URI。|  
-|findValue|字串。  要搜尋的值。|  
-|x509FindType|列舉。  要搜尋的其中一個憑證欄位。|  
-|storeLocation|列舉。  搜尋兩個存放位置中的一個。|  
-|storeName|列舉。  搜尋的其中一個系統存放區。|  
+|<span data-ttu-id="22bde-116">屬性</span><span class="sxs-lookup"><span data-stu-id="22bde-116">Attribute</span></span>|<span data-ttu-id="22bde-117">描述</span><span class="sxs-lookup"><span data-stu-id="22bde-117">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="22bde-118">targetUri</span><span class="sxs-lookup"><span data-stu-id="22bde-118">targetUri</span></span>|<span data-ttu-id="22bde-119">字串。</span><span class="sxs-lookup"><span data-stu-id="22bde-119">String.</span></span> <span data-ttu-id="22bde-120">指定與憑證相關聯的服務之 URI。</span><span class="sxs-lookup"><span data-stu-id="22bde-120">Specifies the URI of the service associated with the certificate.</span></span>|  
+|<span data-ttu-id="22bde-121">findValue</span><span class="sxs-lookup"><span data-stu-id="22bde-121">findValue</span></span>|<span data-ttu-id="22bde-122">字串。</span><span class="sxs-lookup"><span data-stu-id="22bde-122">String.</span></span> <span data-ttu-id="22bde-123">要搜尋的值。</span><span class="sxs-lookup"><span data-stu-id="22bde-123">The value to search for.</span></span>|  
+|<span data-ttu-id="22bde-124">x509FindType</span><span class="sxs-lookup"><span data-stu-id="22bde-124">x509FindType</span></span>|<span data-ttu-id="22bde-125">列舉。</span><span class="sxs-lookup"><span data-stu-id="22bde-125">Enumeration.</span></span> <span data-ttu-id="22bde-126">要搜尋的其中一個憑證欄位。</span><span class="sxs-lookup"><span data-stu-id="22bde-126">One of the certificate fields to search.</span></span>|  
+|<span data-ttu-id="22bde-127">storeLocation</span><span class="sxs-lookup"><span data-stu-id="22bde-127">storeLocation</span></span>|<span data-ttu-id="22bde-128">列舉。</span><span class="sxs-lookup"><span data-stu-id="22bde-128">Enumeration.</span></span> <span data-ttu-id="22bde-129">搜尋兩個存放位置中的一個。</span><span class="sxs-lookup"><span data-stu-id="22bde-129">One of the two store locations to search.</span></span>|  
+|<span data-ttu-id="22bde-130">storeName</span><span class="sxs-lookup"><span data-stu-id="22bde-130">storeName</span></span>|<span data-ttu-id="22bde-131">列舉。</span><span class="sxs-lookup"><span data-stu-id="22bde-131">Enumeration.</span></span> <span data-ttu-id="22bde-132">搜尋的其中一個系統存放區。</span><span class="sxs-lookup"><span data-stu-id="22bde-132">One of the system stores to search.</span></span>|  
   
-## findValue 屬性  
+## <a name="findvalue-attribute"></a><span data-ttu-id="22bde-133">findValue 屬性</span><span class="sxs-lookup"><span data-stu-id="22bde-133">findValue Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|String|這個值取決於要搜尋的欄位 \(由 X509FindType 屬性指定\)。  例如，如果搜尋指紋，則此值必須是十六進位數字字串。|  
+|<span data-ttu-id="22bde-134">值</span><span class="sxs-lookup"><span data-stu-id="22bde-134">Value</span></span>|<span data-ttu-id="22bde-135">描述</span><span class="sxs-lookup"><span data-stu-id="22bde-135">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="22bde-136">String</span><span class="sxs-lookup"><span data-stu-id="22bde-136">String</span></span>|<span data-ttu-id="22bde-137">這個值取決於要搜尋的欄位 (由 X509FindType 屬性指定)。</span><span class="sxs-lookup"><span data-stu-id="22bde-137">The value depends on the field (specified by the X509FindType attribute) being searched.</span></span> <span data-ttu-id="22bde-138">例如，如果搜尋指紋，則此值必須是十六進位數字字串。</span><span class="sxs-lookup"><span data-stu-id="22bde-138">For example, if searching for a thumbprint, the value must be a string of hexadecimal numbers.</span></span>|  
   
-## x509FindType 屬性  
+## <a name="x509findtype-attribute"></a><span data-ttu-id="22bde-139">x509FindType 屬性</span><span class="sxs-lookup"><span data-stu-id="22bde-139">x509FindType Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|列舉|值包括：FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage、FindBySubjectKeyIdentifier。|  
+|<span data-ttu-id="22bde-140">值</span><span class="sxs-lookup"><span data-stu-id="22bde-140">Value</span></span>|<span data-ttu-id="22bde-141">描述</span><span class="sxs-lookup"><span data-stu-id="22bde-141">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="22bde-142">列舉</span><span class="sxs-lookup"><span data-stu-id="22bde-142">Enumeration</span></span>|<span data-ttu-id="22bde-143">值包括：FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage、FindBySubjectKeyIdentifier。</span><span class="sxs-lookup"><span data-stu-id="22bde-143">Values include: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span></span>|  
   
-## storeLocation 屬性  
+## <a name="storelocation-attribute"></a><span data-ttu-id="22bde-144">storeLocation 屬性</span><span class="sxs-lookup"><span data-stu-id="22bde-144">storeLocation Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|列舉|CurrentUser 或 LocalMachine。|  
+|<span data-ttu-id="22bde-145">值</span><span class="sxs-lookup"><span data-stu-id="22bde-145">Value</span></span>|<span data-ttu-id="22bde-146">描述</span><span class="sxs-lookup"><span data-stu-id="22bde-146">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="22bde-147">列舉</span><span class="sxs-lookup"><span data-stu-id="22bde-147">Enumeration</span></span>|<span data-ttu-id="22bde-148">CurrentUser 或 LocalMachine。</span><span class="sxs-lookup"><span data-stu-id="22bde-148">CurrentUser or LocalMachine.</span></span>|  
   
-## storeName 屬性  
+## <a name="storename-attribute"></a><span data-ttu-id="22bde-149">storeName 屬性</span><span class="sxs-lookup"><span data-stu-id="22bde-149">storeName Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|列舉|值包括：AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople 和 TrustedPublisher。|  
+|<span data-ttu-id="22bde-150">值</span><span class="sxs-lookup"><span data-stu-id="22bde-150">Value</span></span>|<span data-ttu-id="22bde-151">描述</span><span class="sxs-lookup"><span data-stu-id="22bde-151">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="22bde-152">列舉</span><span class="sxs-lookup"><span data-stu-id="22bde-152">Enumeration</span></span>|<span data-ttu-id="22bde-153">值包括：AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople 和 TrustedPublisher。</span><span class="sxs-lookup"><span data-stu-id="22bde-153">Values include: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, and TrustedPublisher.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="22bde-154">子元素</span><span class="sxs-lookup"><span data-stu-id="22bde-154">Child Elements</span></span>  
+ <span data-ttu-id="22bde-155">無。</span><span class="sxs-lookup"><span data-stu-id="22bde-155">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="22bde-156">父項目</span><span class="sxs-lookup"><span data-stu-id="22bde-156">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<scopedCertificates\>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|表示特定服務 \(範圍服務\) 為驗證所提供之 X.509 憑證的集合。|  
+|<span data-ttu-id="22bde-157">項目</span><span class="sxs-lookup"><span data-stu-id="22bde-157">Element</span></span>|<span data-ttu-id="22bde-158">說明</span><span class="sxs-lookup"><span data-stu-id="22bde-158">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="22bde-159">\<但是在 scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="22bde-159">\<scopedCertificates></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|<span data-ttu-id="22bde-160">表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。</span><span class="sxs-lookup"><span data-stu-id="22bde-160">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span>|  
   
-## 備註  
- 這個項目可讓用戶端根據與其進行通訊之服務的 URL 設定要使用的服務憑證。  在用戶端可以與多重服務 \(終端服務以及中繼安全性權杖服務\) 進行通訊的已核發權杖情況中，這個屬性特別有用。  對於使用以憑證為基礎之訊息安全性的繫結，這個憑證會用來加密傳送給服務的訊息，而且預期會被服務用來簽署對用戶端的回覆。  
+## <a name="remarks"></a><span data-ttu-id="22bde-161">備註</span><span class="sxs-lookup"><span data-stu-id="22bde-161">Remarks</span></span>  
+ <span data-ttu-id="22bde-162">這個項目可讓用戶端根據與其進行通訊之服務的 URL 設定要使用的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="22bde-162">This element enables the client to configure a service certificate to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="22bde-163">在用戶端可以與多重服務 (終端服務以及中繼安全性權杖服務) 進行通訊的已核發權杖情況中，這個屬性特別有用。</span><span class="sxs-lookup"><span data-stu-id="22bde-163">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="22bde-164">對於使用以憑證為基礎之訊息安全性的繫結，這個憑證會用來加密傳送給服務的訊息，而且預期會被服務用來簽署對用戶端的回覆。</span><span class="sxs-lookup"><span data-stu-id="22bde-164">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
   
- 如果繫結需要服務的憑證，但是在 ScopedCertificates 中找不到服務 URL 的專屬憑證，則會使用預設的憑證。  
+ <span data-ttu-id="22bde-165">如果繫結需要服務的憑證，但是在 ScopedCertificates 中找不到服務 URL 的專屬憑證，則會使用預設的憑證。</span><span class="sxs-lookup"><span data-stu-id="22bde-165">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
   
- 如需詳細資訊，請參閱 [HOW TO：建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)的＜範圍憑證＞一節。  
+ <span data-ttu-id="22bde-166">如需詳細資訊，請參閱 「 範圍的憑證 」 一節[How to： 建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。</span><span class="sxs-lookup"><span data-stu-id="22bde-166">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
   
-## 範例  
- 下列範例會將 X.509 憑證新增至集合。  
+## <a name="example"></a><span data-ttu-id="22bde-167">範例</span><span class="sxs-lookup"><span data-stu-id="22bde-167">Example</span></span>  
+ <span data-ttu-id="22bde-168">下列範例會將 X.509 憑證新增至集合。</span><span class="sxs-lookup"><span data-stu-id="22bde-168">The following example adds an X.509 certificate the collection.</span></span>  
   
-```  
+```xml  
 <behaviors>  
  <endpointBehaviors>  
   <behavior name="MyEndpointBehavior">  
@@ -107,13 +118,13 @@ caps.handback.revision: 8
 </behaviors>  
 ```  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>   
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>   
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>   
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>   
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>   
- [HOW TO：建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [確保用戶端的安全](../../../../../docs/framework/wcf/securing-clients.md)   
- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="22bde-169">另請參閱</span><span class="sxs-lookup"><span data-stu-id="22bde-169">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
+ <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
+ <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
+ <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
+ <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
+ [<span data-ttu-id="22bde-170">如何： 建立聯合用戶端</span><span class="sxs-lookup"><span data-stu-id="22bde-170">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [<span data-ttu-id="22bde-171">使用憑證</span><span class="sxs-lookup"><span data-stu-id="22bde-171">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="22bde-172">保護用戶端安全</span><span class="sxs-lookup"><span data-stu-id="22bde-172">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="22bde-173">保護服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="22bde-173">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

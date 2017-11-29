@@ -7,49 +7,42 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b468a8cfd050943513cbe858c3ba985ee922b23f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 919a789b1ae3e5900fe8bd79f5c8b127d81bb2e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="pnrp-caches"></a>PNRP 快取
-對等名稱解析通訊協定 (PNRP) 快取是以演算法方式選取對等上所維護之對等端點的本機集合。  
+# <a name="pnrp-caches"></a><span data-ttu-id="973ef-102">PNRP 快取</span><span class="sxs-lookup"><span data-stu-id="973ef-102">PNRP Caches</span></span>
+<span data-ttu-id="973ef-103">對等名稱解析通訊協定 (PNRP) 快取是以演算法方式選取對等上所維護之對等端點的本機集合。</span><span class="sxs-lookup"><span data-stu-id="973ef-103">Peer Name Resolution Protocol (PNRP) caches are local collections of algorithmically selected peer endpoints maintained on the peer.</span></span>  
   
-## <a name="pnrp-cache-initialization"></a>PNRP 快取初始化  
- 若要在對等節點啟動時初始化 PNRP 快取或對等名稱記錄集合，節點可以使用下列方法：  
+## <a name="pnrp-cache-initialization"></a><span data-ttu-id="973ef-104">PNRP 快取初始化</span><span class="sxs-lookup"><span data-stu-id="973ef-104">PNRP Cache Initialization</span></span>  
+ <span data-ttu-id="973ef-105">若要在對等節點啟動時初始化 PNRP 快取或對等名稱記錄集合，節點可以使用下列方法：</span><span class="sxs-lookup"><span data-stu-id="973ef-105">To initialize the PNRP cache, or Peer Name Record Collection, when a peer node starts up, a node can use the following methods:</span></span>  
   
--   節點關閉時存在的持續快取項目是從硬碟儲存體載入。  
+-   <span data-ttu-id="973ef-106">節點關閉時存在的持續快取項目是從硬碟儲存體載入。</span><span class="sxs-lookup"><span data-stu-id="973ef-106">Persistent cache entries that were present when the node was shut down are loaded from hard disk storage.</span></span>  
   
--   如果應用程式使用 P2P 共同作業基礎結構，則可以在該節點的連絡人管理員中取得共同作業資訊。  
+-   <span data-ttu-id="973ef-107">如果應用程式使用 P2P 共同作業基礎結構，則可以在該節點的連絡人管理員中取得共同作業資訊。</span><span class="sxs-lookup"><span data-stu-id="973ef-107">If an application uses the P2P collaboration infrastructure, collaboration information is available in the Contact Manager for that node.</span></span>  
   
-## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>使用多層快取調整對等名稱解析  
- 為了盡量縮小 PNRP 快取的大小，對等節點會使用多層快取，而每一層都包含最大項目數。 快取中的每一層都代表 PNRP 識別碼空間的十分之一 (2<sup>256</sup>)。 快取中的最下面一層包含在本機上註冊的 PNRP 識別碼，以及其他數字接近的 PNRP 識別碼。 一層快取填滿最多 20 個項目之後，就會建立新的較低一層。 快取中的最大層數是按照 log10 的順序而定 (雲端中 PNRP 識別碼的總數)。 例如，對於含有 1 億個 PNRP 識別碼的全域雲端來說，快取中不會超過 8 (=log10(100,000,000)) 層，這與解析名稱時用來解析 PNRP 識別碼的躍點數目相似。 此機制允許使用可針對其解析任意 PNRP 識別碼的分散式雜湊表，方法是將 PNRP 要求訊息轉送至下一個最接近的對等，直到找到包含對應 CPA 的對等為止。  
+## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a><span data-ttu-id="973ef-108">使用多層快取調整對等名稱解析</span><span class="sxs-lookup"><span data-stu-id="973ef-108">Scaling Peer Name Resolution with a Multi-Level Cache</span></span>  
+ <span data-ttu-id="973ef-109">為了盡量縮小 PNRP 快取的大小，對等節點會使用多層快取，而每一層都包含最大項目數。</span><span class="sxs-lookup"><span data-stu-id="973ef-109">To keep the sizes of the PNRP caches small, peer nodes use a multi-level cache, in which each level contains a maximum number of entries.</span></span> <span data-ttu-id="973ef-110">快取中的每一層都代表 PNRP 識別碼空間的十分之一 (2<sup>256</sup>)。</span><span class="sxs-lookup"><span data-stu-id="973ef-110">Each level in the cache represents a one tenth smaller portion of the PNRP ID number space (2<sup>256</sup>).</span></span> <span data-ttu-id="973ef-111">快取中的最下面一層包含在本機上註冊的 PNRP 識別碼，以及其他數字接近的 PNRP 識別碼。</span><span class="sxs-lookup"><span data-stu-id="973ef-111">The lowest level in the cache contains a locally registered PNRP ID and other PNRP IDs that are numerically close to it.</span></span> <span data-ttu-id="973ef-112">一層快取填滿最多 20 個項目之後，就會建立新的較低一層。</span><span class="sxs-lookup"><span data-stu-id="973ef-112">As a level of the cache is filled with a maximum of 20 entries, a new lower level is created.</span></span> <span data-ttu-id="973ef-113">快取中的最大層數是按照 log10 的順序而定 (雲端中 PNRP 識別碼的總數)。</span><span class="sxs-lookup"><span data-stu-id="973ef-113">The maximum number of levels in the cache is on the order of log10(Total number of PNRP IDs in the cloud).</span></span> <span data-ttu-id="973ef-114">例如，對於含有 1 億個 PNRP 識別碼的全域雲端來說，快取中不會超過 8 (=log10(100,000,000)) 層，這與解析名稱時用來解析 PNRP 識別碼的躍點數目相似。</span><span class="sxs-lookup"><span data-stu-id="973ef-114">For example, for a global cloud with 100 million PNRP IDs, there are no more than 8 (=log10(100,000,000)) levels in the cache and a similar number of hops to resolve a PNRP ID during name resolution.</span></span> <span data-ttu-id="973ef-115">此機制允許使用可針對其解析任意 PNRP 識別碼的分散式雜湊表，方法是將 PNRP 要求訊息轉送至下一個最接近的對等，直到找到包含對應 CPA 的對等為止。</span><span class="sxs-lookup"><span data-stu-id="973ef-115">This mechanism allows for a distributed hash table for which an arbitrary PNRP ID can be resolved by forwarding PNRP Request messages to the next-closest peer until the peer with the corresponding CPA is found.</span></span>  
   
- 為確保解析能夠完成，每次節點將項目新增至其快取的最下層時，都會將該項目的複本傳送到快取最後一層內的所有節點。  
+ <span data-ttu-id="973ef-116">為確保解析能夠完成，每次節點將項目新增至其快取的最下層時，都會將該項目的複本傳送到快取最後一層內的所有節點。</span><span class="sxs-lookup"><span data-stu-id="973ef-116">To ensure that resolution can complete, each time a node adds an entry to the lowest level of its cache, it floods a copy of the entry to all the nodes within the last level of the cache.</span></span>  
   
- 快取項目會隨著時間進行重新整理。 過時的快取項目則會從快取中移除。 因此 PNRP 識別碼的分散式雜湊表會以作用中的端點為主，而不像 DNS 中，位址記錄和 DNS 通訊協定無法保證與位址建立關聯的節點在網路上也是作用中的。  
+ <span data-ttu-id="973ef-117">快取項目會隨著時間進行重新整理。</span><span class="sxs-lookup"><span data-stu-id="973ef-117">The cache entries are refreshed over time.</span></span> <span data-ttu-id="973ef-118">過時的快取項目則會從快取中移除。</span><span class="sxs-lookup"><span data-stu-id="973ef-118">Cache entries that are stale are removed from the cache.</span></span> <span data-ttu-id="973ef-119">因此 PNRP 識別碼的分散式雜湊表會以作用中的端點為主，而不像 DNS 中，位址記錄和 DNS 通訊協定無法保證與位址建立關聯的節點在網路上也是作用中的。</span><span class="sxs-lookup"><span data-stu-id="973ef-119">The result is that the distributed hash table of PNRP IDs is based on active endpoints, unlike DNS in which address records and the DNS protocol provide no guarantee that the node associated with the address is actively on the network.</span></span>  
   
-## <a name="other-pnrp-caches"></a>其他 PNRP 快取  
- 另一個持續性資料存放區是本機快取。  除了 PNRP 活動所需的其他物件之外，它還可以包含與 PNRP 雲端或共同作業工作階段建立關聯的記錄，而 PNRP 雲端或共同作業工作階段已在雲端的所有成員之間安全地進行發行和同步處理。 這個複寫的存放區代表群組資料的檢視，而且應該適用於所有群組成員。 技術上來說，這些物件本身不是記錄，而是以本機快取為目的的應用程式、目前狀態和物件資料。 使用 PNRP 雲端，可確保將物件傳播到共同作業工作階段或 PNRP 雲端中的所有節點。  雲端成員之間的記錄複寫會使用 SSL 來提供加密和資料完整性。  
+## <a name="other-pnrp-caches"></a><span data-ttu-id="973ef-120">其他 PNRP 快取</span><span class="sxs-lookup"><span data-stu-id="973ef-120">Other PNRP Caches</span></span>  
+ <span data-ttu-id="973ef-121">另一個持續性資料存放區是本機快取。</span><span class="sxs-lookup"><span data-stu-id="973ef-121">Another persistent data store is the local cache.</span></span>  <span data-ttu-id="973ef-122">除了 PNRP 活動所需的其他物件之外，它還可以包含與 PNRP 雲端或共同作業工作階段建立關聯的記錄，而 PNRP 雲端或共同作業工作階段已在雲端的所有成員之間安全地進行發行和同步處理。</span><span class="sxs-lookup"><span data-stu-id="973ef-122">In addition to the other objects needed for PNRP activity, it may include the records associated with a PNRP cloud or collaboration session that is securely published and synchronized between all the members of the cloud.</span></span> <span data-ttu-id="973ef-123">這個複寫的存放區代表群組資料的檢視，而且應該適用於所有群組成員。</span><span class="sxs-lookup"><span data-stu-id="973ef-123">This replicated store represents the view of the group data, which should be the same for all group members.</span></span> <span data-ttu-id="973ef-124">技術上來說，這些物件本身不是記錄，而是以本機快取為目的的應用程式、目前狀態和物件資料。</span><span class="sxs-lookup"><span data-stu-id="973ef-124">Technically, these objects are not records per se, but rather application, presence, and object data destined for a local cache.</span></span> <span data-ttu-id="973ef-125">使用 PNRP 雲端，可確保將物件傳播到共同作業工作階段或 PNRP 雲端中的所有節點。</span><span class="sxs-lookup"><span data-stu-id="973ef-125">Use of the PNRP cloud ensures that objects are propagated to all nodes in the collaboration session or PNRP cloud.</span></span>  <span data-ttu-id="973ef-126">雲端成員之間的記錄複寫會使用 SSL 來提供加密和資料完整性。</span><span class="sxs-lookup"><span data-stu-id="973ef-126">Record replication between cloud members uses SSL to provide encryption and data integrity.</span></span>  
   
- 對等加入雲端時，不會自動收到來自所連結之主對等的本機快取資料；它們必須訂閱主對等，才能收到應用程式、目前狀態和物件資料的更新。 初始同步處理之後，對等會定期重新同步處理其複寫的存放區，確保所有群組成員都一致具有相同的檢視。  共同作業工作階段或是共同作業工作階段內的應用程式可能也會執行相同的函式。  
+ <span data-ttu-id="973ef-127">對等加入雲端時，不會自動收到來自所連結之主對等的本機快取資料；它們必須訂閱主對等，才能收到應用程式、目前狀態和物件資料的更新。</span><span class="sxs-lookup"><span data-stu-id="973ef-127">When a peer joins a cloud, they do not automatically receive local cache data from the host peer to which they attach; they have to subscribe to the host peer to receive updates in application, presence, and object data.</span></span> <span data-ttu-id="973ef-128">初始同步處理之後，對等會定期重新同步處理其複寫的存放區，確保所有群組成員都一致具有相同的檢視。</span><span class="sxs-lookup"><span data-stu-id="973ef-128">After the initial synchronization, peers periodically resynchronize their replicated stores to ensure that all group members consistently have the same view.</span></span>  <span data-ttu-id="973ef-129">共同作業工作階段或是共同作業工作階段內的應用程式可能也會執行相同的函式。</span><span class="sxs-lookup"><span data-stu-id="973ef-129">The collaboration session or applications within the collaboration session may also perform the same function.</span></span>  
   
- 開始雲端的共同作業工作階段之後，應用程式可以註冊對等，並開始使用雲端範圍所定義的安全性來發行其資訊。 對等加入雲端時，會將雲端的安全性機制套用至對等，以指定它所參與的範圍。  接著可以在雲端範圍內安全地發行其記錄。 請注意，雲端範圍可能與共同作業應用程式範圍不同。  
+ <span data-ttu-id="973ef-130">開始雲端的共同作業工作階段之後，應用程式可以註冊對等，並開始使用雲端範圍所定義的安全性來發行其資訊。</span><span class="sxs-lookup"><span data-stu-id="973ef-130">After a collaboration session has begun for a cloud, applications can register peers and begin publishing their information using the security defined by the cloud scope.</span></span> <span data-ttu-id="973ef-131">對等加入雲端時，會將雲端的安全性機制套用至對等，以指定它所參與的範圍。</span><span class="sxs-lookup"><span data-stu-id="973ef-131">When a peer joins a cloud, the security mechanisms for the cloud are applied to the peer, giving it a scope in which to participate.</span></span>  <span data-ttu-id="973ef-132">接著可以在雲端範圍內安全地發行其記錄。</span><span class="sxs-lookup"><span data-stu-id="973ef-132">Its records can then be published securely within the scope of the cloud.</span></span> <span data-ttu-id="973ef-133">請注意，雲端範圍可能與共同作業應用程式範圍不同。</span><span class="sxs-lookup"><span data-stu-id="973ef-133">Note that cloud scope may not be the same as collaboration application scope.</span></span>  
   
- 對等可以註冊要接收來自其他對等的物件。 更新物件時，會通知共同作業應用程式，並將新的物件傳遞給應用程式的所有訂閱者。 例如，群組聊天應用程式中的對等可以註冊要接收應用程式資訊，這樣會將所有交談記錄當成應用程式資料傳送給它。  這可讓它監視雲端內的聊天活動。  
+ <span data-ttu-id="973ef-134">對等可以註冊要接收來自其他對等的物件。</span><span class="sxs-lookup"><span data-stu-id="973ef-134">Peers can register interest in receiving objects from other peers.</span></span> <span data-ttu-id="973ef-135">更新物件時，會通知共同作業應用程式，並將新的物件傳遞給應用程式的所有訂閱者。</span><span class="sxs-lookup"><span data-stu-id="973ef-135">When an object is updated, the collaboration application is notified and the new object is passed to all subscribers of the application.</span></span> <span data-ttu-id="973ef-136">例如，群組聊天應用程式中的對等可以註冊要接收應用程式資訊，這樣會將所有交談記錄當成應用程式資料傳送給它。</span><span class="sxs-lookup"><span data-stu-id="973ef-136">For example, a peer in a group chat application can register interest in receiving application information, which will send it all chat records as application data.</span></span>  <span data-ttu-id="973ef-137">這可讓它監視雲端內的聊天活動。</span><span class="sxs-lookup"><span data-stu-id="973ef-137">This allows it to monitor chat activity within the cloud.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a><span data-ttu-id="973ef-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="973ef-138">See Also</span></span>  
  <xref:System.Net.PeerToPeer>
-

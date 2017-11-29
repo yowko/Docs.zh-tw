@@ -1,25 +1,31 @@
 ---
-title: "DataAdapter 參數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataAdapter 的參數"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3e2670132bc6af1c914efa17cfbb98fd6577bd1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DataAdapter 參數
-<xref:System.Data.Common.DbDataAdapter> 具有四個屬性，可用來擷取資料來源的資料，以及將資料更新至資料來源：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 屬性可傳回資料來源的資料，而 <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 屬性可用來管理在資料來源的變更。  在您呼叫 `DataAdapter` 的 `Fill` 方法前，必須先設定 `SelectCommand` 屬性。  您必須先設定 `InsertCommand`、`UpdateCommand` 或 `DeleteCommand` 屬性，然後再呼叫 `DataAdapter` 的 `Update` 方法，端視針對 <xref:System.Data.DataTable> 中的資料進行哪些變更而定。  例如，如果已經加入資料列，則必須先設定 `InsertCommand`，才能呼叫 `Update`。  `Update` 正在處理已插入、已更新或已刪除的資料列時，`DataAdapter` 會使用個別的 `Command` 屬性來處理這項動作。  已修改資料列的目前資訊會透過 `Parameters` 集合傳遞給 `Command` 物件。  
+# <a name="dataadapter-parameters"></a><span data-ttu-id="13fa8-102">DataAdapter 的參數</span><span class="sxs-lookup"><span data-stu-id="13fa8-102">DataAdapter Parameters</span></span>
+<span data-ttu-id="13fa8-103"><xref:System.Data.Common.DbDataAdapter> 具有四個屬性，可用來擷取資料來源的資料，以及將資料更新至資料來源：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 屬性可傳回資料來源的資料，而 <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 屬性可用來管理在資料來源的變更。</span><span class="sxs-lookup"><span data-stu-id="13fa8-103">The <xref:System.Data.Common.DbDataAdapter> has four properties that are used to retrieve data from and update data to the data source: the <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> property returns data from the data source; and the <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, and <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> properties are used to manage changes at the data source.</span></span> <span data-ttu-id="13fa8-104">在您呼叫 `SelectCommand` 的 `Fill` 方法前，必須先設定 `DataAdapter` 屬性。</span><span class="sxs-lookup"><span data-stu-id="13fa8-104">The `SelectCommand` property must be set before you call the `Fill` method of the `DataAdapter`.</span></span> <span data-ttu-id="13fa8-105">您必須先設定 `InsertCommand`、`UpdateCommand` 或 `DeleteCommand` 屬性，然後再呼叫 `Update` 的 `DataAdapter` 方法，端視針對 <xref:System.Data.DataTable> 中的資料進行哪些變更而定。</span><span class="sxs-lookup"><span data-stu-id="13fa8-105">The `InsertCommand`, `UpdateCommand`, or `DeleteCommand` properties must be set before the `Update` method of the `DataAdapter` is called, depending on what changes were made to the data in the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="13fa8-106">例如，如果已經加入資料列，則必須先設定 `InsertCommand`，才能呼叫 `Update`。</span><span class="sxs-lookup"><span data-stu-id="13fa8-106">For example, if rows have been added, the `InsertCommand` must be set before you call `Update`.</span></span> <span data-ttu-id="13fa8-107">`Update` 正在處理已插入、已更新或已刪除的資料列時，`DataAdapter` 會使用個別的 `Command` 屬性來處理這項動作。</span><span class="sxs-lookup"><span data-stu-id="13fa8-107">When `Update` is processing an inserted, updated, or deleted row, the `DataAdapter` uses the respective `Command` property to process the action.</span></span> <span data-ttu-id="13fa8-108">已修改資料列的目前資訊會透過 `Command` 集合傳遞給 `Parameters` 物件。</span><span class="sxs-lookup"><span data-stu-id="13fa8-108">Current information about the modified row is passed to the `Command` object through the `Parameters` collection.</span></span>  
   
- 更新資料來源的資料列時，您呼叫的 UPDATE 陳述式會使用唯一的識別項來識別資料表中需要更新的資料列。  唯一的識別項一般是主索引鍵欄位的值。  UPDATE 陳述式所使用的參數包含唯一的識別項，以及要更新的資料行和值，如下列 Transact\-SQL 陳述式所示。  
+ <span data-ttu-id="13fa8-109">更新資料來源的資料列時，您呼叫的 UPDATE 陳述式會使用唯一的識別項來識別資料表中需要更新的資料列。</span><span class="sxs-lookup"><span data-stu-id="13fa8-109">When you update a row at the data source, you call the UPDATE statement, which uses a unique identifier to identify the row in the table be updated.</span></span> <span data-ttu-id="13fa8-110">唯一的識別項一般是主索引鍵欄位的值。</span><span class="sxs-lookup"><span data-stu-id="13fa8-110">The unique identifier is typically the value of a primary key field.</span></span> <span data-ttu-id="13fa8-111">UPDATE 陳述式所使用的參數包含唯一的識別項，以及要更新的資料行和值，如下列 Transact-SQL 陳述式所示。</span><span class="sxs-lookup"><span data-stu-id="13fa8-111">The UPDATE statement uses parameters that contain both the unique identifier and the columns and values to be updated, as shown in the following Transact-SQL statement.</span></span>  
   
 ```  
 UPDATE Customers SET CompanyName = @CompanyName   
@@ -27,9 +33,9 @@ UPDATE Customers SET CompanyName = @CompanyName
 ```  
   
 > [!NOTE]
->  參數預留位置的語法會隨資料來源而有所不同。  此範例將說明 SQL Server 資料來源的保留字元。  若為 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> 參數，請使用問號 \(?\) 保留字元。  
+>  <span data-ttu-id="13fa8-112">參數預留位置的語法會隨資料來源而有所不同。</span><span class="sxs-lookup"><span data-stu-id="13fa8-112">The syntax for parameter placeholders depends on the data source.</span></span> <span data-ttu-id="13fa8-113">此範例將說明 SQL Server 資料來源的保留字元。</span><span class="sxs-lookup"><span data-stu-id="13fa8-113">This example shows placeholders for a SQL Server data source.</span></span> <span data-ttu-id="13fa8-114">若為 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> 參數，請使用問號 (?) 保留字元。</span><span class="sxs-lookup"><span data-stu-id="13fa8-114">Use question mark (?) placeholders for <xref:System.Data.OleDb> and <xref:System.Data.Odbc> parameters.</span></span>  
   
- 在此 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 範例中，會針對 `CustomerID` 等於 `@CustomerID```參數值的資料列，以 `@CompanyName` 參數的值來更新 `CompanyName` 欄位。  這些參數會使用 <xref:System.Data.SqlClient.SqlParameter> 物件的 <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> 屬性，從已修改的資料列擷取資訊。  下列是前述範例 UPDATE 陳述式的參數。  程式碼會假設變數 `adapter` 表示有效的 <xref:System.Data.SqlClient.SqlDataAdapter> 物件。  
+ <span data-ttu-id="13fa8-115">在這個[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]範例中，`CompanyName`欄位會更新其值為`@CompanyName`參數資料列位置`CustomerID`等於值`@CustomerID`參數。</span><span class="sxs-lookup"><span data-stu-id="13fa8-115">In this [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] example, the `CompanyName` field is updated with the value of the `@CompanyName` parameter for the row where `CustomerID` equals the value of the `@CustomerID` parameter.</span></span> <span data-ttu-id="13fa8-116">參數擷取的資訊已修改的資料列使用<xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A>屬性<xref:System.Data.SqlClient.SqlParameter>物件。</span><span class="sxs-lookup"><span data-stu-id="13fa8-116">The parameters retrieve information from the modified row using the <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> property of the <xref:System.Data.SqlClient.SqlParameter> object.</span></span> <span data-ttu-id="13fa8-117">下列是前述範例 UPDATE 陳述式的參數。</span><span class="sxs-lookup"><span data-stu-id="13fa8-117">The following are the parameters for the previous sample UPDATE statement.</span></span> <span data-ttu-id="13fa8-118">程式碼會假設變數 `adapter` 表示有效的 <xref:System.Data.SqlClient.SqlDataAdapter> 物件。</span><span class="sxs-lookup"><span data-stu-id="13fa8-118">The code assumes that the variable `adapter` represents a valid <xref:System.Data.SqlClient.SqlDataAdapter> object.</span></span>  
   
 ```  
 adapter.Parameters.Add( _  
@@ -40,33 +46,33 @@ Dim parameter As SqlParameter = _
 parameter.SourceVersion = DataRowVersion.Original  
 ```  
   
- `Parameters` 集合的 `Add` 方法會擷取參數的名稱、資料型別、大小 \(如果此型別有大小\)，以及來自 `DataTable` 的 <xref:System.Data.Common.DbParameter.SourceColumn%2A> 名稱。  請注意，`@CustomerID` 參數的 <xref:System.Data.Common.DbParameter.SourceVersion%2A> 會設定為 `Original`。  如此一來，如果已修改的 <xref:System.Data.DataRow> 內識別欄位的值有所變更，便可確保資料來源內的現有資料列也已經更新。  在這種情況下，`Original` 資料列值會與資料來源中的目前值相符，而 `Current` 資料列值會包含已更新的值。  `@CompanyName` 參數的 `SourceVersion` 並未設定，因此會使用預設的 `Current` 資料列值。  
+ <span data-ttu-id="13fa8-119">`Add` 集合的 `Parameters` 方法會擷取參數的名稱、資料型別、大小 (如果此型別有大小)，以及來自 <xref:System.Data.Common.DbParameter.SourceColumn%2A> 的 `DataTable` 名稱。</span><span class="sxs-lookup"><span data-stu-id="13fa8-119">The `Add` method of the `Parameters` collection takes the name of the parameter, the data type, the size (if applicable to the type), and the name of the <xref:System.Data.Common.DbParameter.SourceColumn%2A> from the `DataTable`.</span></span> <span data-ttu-id="13fa8-120">請注意，<xref:System.Data.Common.DbParameter.SourceVersion%2A> 參數的 `@CustomerID` 會設定為 `Original`。</span><span class="sxs-lookup"><span data-stu-id="13fa8-120">Notice that the <xref:System.Data.Common.DbParameter.SourceVersion%2A> of the `@CustomerID` parameter is set to `Original`.</span></span> <span data-ttu-id="13fa8-121">如此一來，如果已修改的 <xref:System.Data.DataRow> 內識別欄位的值有所變更，便可確保資料來源內的現有資料列也已經更新。</span><span class="sxs-lookup"><span data-stu-id="13fa8-121">This guarantees that the existing row in the data source is updated if the value of the identifying column or columns has been changed in the modified <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="13fa8-122">在這種情況下，`Original` 資料列值會與資料來源中的目前值相符，而 `Current` 資料列值會包含已更新的值。</span><span class="sxs-lookup"><span data-stu-id="13fa8-122">In that case, the `Original` row value would match the current value at the data source, and the `Current` row value would contain the updated value.</span></span> <span data-ttu-id="13fa8-123">`SourceVersion` 參數的 `@CompanyName` 並未設定，因此會使用預設的 `Current` 資料列值。</span><span class="sxs-lookup"><span data-stu-id="13fa8-123">The `SourceVersion` for the `@CompanyName` parameter is not set and uses the default, `Current` row value.</span></span>  
   
 > [!NOTE]
->  `DataAdapter` 的 `Fill` 作業與 `DataReader` 的 `Get` 方法都是以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者傳回的型別來推斷 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別。  Microsoft SQL Server、OLE DB 和 ODBC 之資料型別的推斷 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別和存取子方法詳述於[ADO.NET 中的資料型別對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。  
+>  <span data-ttu-id="13fa8-124">`Fill` 的 `DataAdapter` 作業與 `Get` 的 `DataReader` 方法都是以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者傳回的型別來推斷 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別。</span><span class="sxs-lookup"><span data-stu-id="13fa8-124">For both the `Fill` operations of the `DataAdapter` and the `Get` methods of the `DataReader`, the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type is inferred from the type returned from the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] data provider.</span></span> <span data-ttu-id="13fa8-125">推斷[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]型別和 Microsoft SQL Server、 OLE DB 和 ODBC 資料類型的存取子方法詳述於[在 ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。</span><span class="sxs-lookup"><span data-stu-id="13fa8-125">The inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] types and accessor methods for Microsoft SQL Server, OLE DB, and ODBC data types are described in [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).</span></span>  
   
-## Parameter.SourceColumn、Parameter.SourceVersion  
- `SourceColumn` 和 `SourceVersion` 可當做參數傳遞給 `Parameter` 建構函式 \(Constructor\)，或設定為現有 `Parameter` 的屬性。  `SourceColumn` 是將在其中擷取 `Parameter` 值之 <xref:System.Data.DataRow> 的 <xref:System.Data.DataColumn> 名稱。  `SourceVersion` 會指定 `DataAdapter` 用來擷取值的 `DataRow` 版本。  
+## <a name="parametersourcecolumn-parametersourceversion"></a><span data-ttu-id="13fa8-126">Parameter.SourceColumn、Parameter.SourceVersion</span><span class="sxs-lookup"><span data-stu-id="13fa8-126">Parameter.SourceColumn, Parameter.SourceVersion</span></span>  
+ <span data-ttu-id="13fa8-127">`SourceColumn` 和 `SourceVersion` 可當做參數傳遞給 `Parameter` 建構函式 (Constructor)，或設定為現有 `Parameter` 的屬性。</span><span class="sxs-lookup"><span data-stu-id="13fa8-127">The `SourceColumn` and `SourceVersion` may be passed as arguments to the `Parameter` constructor, or set as properties of an existing `Parameter`.</span></span> <span data-ttu-id="13fa8-128">`SourceColumn` 是將在其中擷取 <xref:System.Data.DataColumn> 值之 <xref:System.Data.DataRow> 的 `Parameter` 名稱。</span><span class="sxs-lookup"><span data-stu-id="13fa8-128">The `SourceColumn` is the name of the <xref:System.Data.DataColumn> from the <xref:System.Data.DataRow> where the value of the `Parameter` will be retrieved.</span></span> <span data-ttu-id="13fa8-129">`SourceVersion` 會指定 `DataRow` 用來擷取值的 `DataAdapter` 版本。</span><span class="sxs-lookup"><span data-stu-id="13fa8-129">The `SourceVersion` specifies the `DataRow` version that the `DataAdapter` uses to retrieve the value.</span></span>  
   
- 下表顯示可與 `SourceVersion` 搭配使用的 <xref:System.Data.DataRowVersion> 列舉值。  
+ <span data-ttu-id="13fa8-130">下表顯示可與 <xref:System.Data.DataRowVersion> 搭配使用的 `SourceVersion` 列舉值。</span><span class="sxs-lookup"><span data-stu-id="13fa8-130">The following table shows the <xref:System.Data.DataRowVersion> enumeration values available for use with `SourceVersion`.</span></span>  
   
-|DataRowVersion 列舉型別|描述|  
-|-------------------------|--------|  
-|`Current`|這個參數會使用資料行目前的值。  這是預設值。|  
-|`Default`|此參數會使用資料行的 `DefaultValue`。|  
-|`Original`|這個參數會使用資料行的原始值。|  
-|`Proposed`|這個會參數使用建議值。|  
+|<span data-ttu-id="13fa8-131">DataRowVersion 列舉型別</span><span class="sxs-lookup"><span data-stu-id="13fa8-131">DataRowVersion Enumeration</span></span>|<span data-ttu-id="13fa8-132">描述</span><span class="sxs-lookup"><span data-stu-id="13fa8-132">Description</span></span>|  
+|--------------------------------|-----------------|  
+|`Current`|<span data-ttu-id="13fa8-133">這個參數會使用資料行目前的值。</span><span class="sxs-lookup"><span data-stu-id="13fa8-133">The parameter uses the current value of the column.</span></span> <span data-ttu-id="13fa8-134">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="13fa8-134">This is the default.</span></span>|  
+|`Default`|<span data-ttu-id="13fa8-135">此參數會使用資料行的 `DefaultValue`。</span><span class="sxs-lookup"><span data-stu-id="13fa8-135">The parameter uses the `DefaultValue` of the column.</span></span>|  
+|`Original`|<span data-ttu-id="13fa8-136">這個參數會使用資料行的原始值。</span><span class="sxs-lookup"><span data-stu-id="13fa8-136">The parameter uses the original value of the column.</span></span>|  
+|`Proposed`|<span data-ttu-id="13fa8-137">這個會參數使用建議值。</span><span class="sxs-lookup"><span data-stu-id="13fa8-137">The parameter uses a proposed value.</span></span>|  
   
- 下一區段中的 `SqlClient` 程式碼範例會定義 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 的參數，其中 `CustomerID` 資料行將做為兩個參數的 `SourceColumn` 使用：`@CustomerID` \(`SET CustomerID = @CustomerID`\) 和 `@OldCustomerID` \(`WHERE CustomerID = @OldCustomerID`\)。  `@CustomerID` 參數會用來將 **CustomerID** 資料行更新為 `DataRow` 中目前的值。  因此會使用包含 `Current` 之 `SourceVersion` 的 `CustomerID` `SourceColumn`。  *@OldCustomerID* 參數是用來識別資料來源中的目前資料列。  因為在資料列的 `Original` 版本中找到相符的資料行值，所以會使用 `SourceVersion` 為 `Original` 的同一個 `SourceColumn` \(`CustomerID`\)。  
+ <span data-ttu-id="13fa8-138">下一區段中的 `SqlClient` 程式碼範例會定義 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 的參數，其中 `CustomerID` 資料行將做為兩個參數的 `SourceColumn` 使用：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。</span><span class="sxs-lookup"><span data-stu-id="13fa8-138">The `SqlClient` code example in the next section defines a parameter for an <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> in which the `CustomerID` column is used as a `SourceColumn` for two parameters: `@CustomerID` (`SET CustomerID = @CustomerID`), and `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`).</span></span> <span data-ttu-id="13fa8-139">`@CustomerID`參數用來更新**CustomerID**資料行中的目前值`DataRow`。</span><span class="sxs-lookup"><span data-stu-id="13fa8-139">The `@CustomerID` parameter is used to update the **CustomerID** column to the current value in the `DataRow`.</span></span> <span data-ttu-id="13fa8-140">如此一來， `CustomerID` `SourceColumn`與`SourceVersion`的`Current`用。</span><span class="sxs-lookup"><span data-stu-id="13fa8-140">As a result, the `CustomerID` `SourceColumn` with a `SourceVersion` of `Current` is used.</span></span> <span data-ttu-id="13fa8-141">*@OldCustomerID* 參數用來識別資料來源中的目前資料列。</span><span class="sxs-lookup"><span data-stu-id="13fa8-141">The *@OldCustomerID* parameter is used to identify the current row in the data source.</span></span> <span data-ttu-id="13fa8-142">因為在資料列的 `Original` 版本中找到相符的資料行值，所以會使用 `SourceColumn` 為 `CustomerID` 的同一個 `SourceVersion` (`Original`)。</span><span class="sxs-lookup"><span data-stu-id="13fa8-142">Because the matching column value is found in the `Original` version of the row, the same `SourceColumn` (`CustomerID`) with a `SourceVersion` of `Original` is used.</span></span>  
   
-## 使用 SqlClient 參數  
- 下列範例將示範如何建立 <xref:System.Data.SqlClient.SqlDataAdapter> 並將 <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> 設定為 <xref:System.Data.MissingSchemaAction>，以便從資料庫中擷取其他結構描述資訊。  <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 屬性已設定而且其對應的 <xref:System.Data.SqlClient.SqlParameter> 物件已加入至 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合。  此方法會傳回 `SqlDataAdapter` 物件。  
+## <a name="working-with-sqlclient-parameters"></a><span data-ttu-id="13fa8-143">使用 SqlClient 參數</span><span class="sxs-lookup"><span data-stu-id="13fa8-143">Working with SqlClient Parameters</span></span>  
+ <span data-ttu-id="13fa8-144">下列範例將示範如何建立 <xref:System.Data.SqlClient.SqlDataAdapter> 並將 <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> 設定為 <xref:System.Data.MissingSchemaAction.AddWithKey>，以便從資料庫中擷取其他結構描述資訊。</span><span class="sxs-lookup"><span data-stu-id="13fa8-144">The following example demonstrates how to create a <xref:System.Data.SqlClient.SqlDataAdapter> and set the <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> to <xref:System.Data.MissingSchemaAction.AddWithKey> in order to retrieve additional schema information from the database.</span></span> <span data-ttu-id="13fa8-145"><xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 屬性已設定而且其對應的 <xref:System.Data.SqlClient.SqlParameter> 物件已加入至 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合。</span><span class="sxs-lookup"><span data-stu-id="13fa8-145">The <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, and <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> properties set and their corresponding <xref:System.Data.SqlClient.SqlParameter> objects added to the <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> collection.</span></span> <span data-ttu-id="13fa8-146">此方法會傳回 `SqlDataAdapter` 物件。</span><span class="sxs-lookup"><span data-stu-id="13fa8-146">The method returns a `SqlDataAdapter` object.</span></span>  
   
  [!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/CS/source.cs#1)]
  [!code-vb[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/VB/source.vb#1)]  
   
-## OleDb 參數預留位置  
- 若為 <xref:System.Data.OleDb.OleDbDataAdapter> 和 <xref:System.Data.Odbc.OdbcDataAdapter> 物件，則必須使用問號 \(?\) 保留字元來識別參數。  
+## <a name="oledb-parameter-placeholders"></a><span data-ttu-id="13fa8-147">OleDb 參數預留位置</span><span class="sxs-lookup"><span data-stu-id="13fa8-147">OleDb Parameter Placeholders</span></span>  
+ <span data-ttu-id="13fa8-148">若為 <xref:System.Data.OleDb.OleDbDataAdapter> 和 <xref:System.Data.Odbc.OdbcDataAdapter> 物件，則必須使用問號 (?) 保留字元來識別參數。</span><span class="sxs-lookup"><span data-stu-id="13fa8-148">For the <xref:System.Data.OleDb.OleDbDataAdapter> and <xref:System.Data.Odbc.OdbcDataAdapter> objects, you must use question mark (?) placeholders to identify the parameters.</span></span>  
   
 ```vb  
 Dim selectSQL As String = _  
@@ -93,11 +99,11 @@ string updateSQL =
 string deleteSQL = "DELETE FROM Customers WHERE CustomerID = ?";  
 ```  
   
- 參數化的查詢陳述式可定義必須建立的輸入和輸出參數。  若要建立參數，請使用 `Parameters.Add` 方法或 `Parameter` 建構函式來指定資料行名稱、資料型別和大小。  如果資料型別為內建 \(如 `Integer`\)，則沒有必要包含大小，或者您也可以指定預設大小。  
+ <span data-ttu-id="13fa8-149">參數化的查詢陳述式可定義必須建立的輸入和輸出參數。</span><span class="sxs-lookup"><span data-stu-id="13fa8-149">The parameterized query statements define which input and output parameters must be created.</span></span> <span data-ttu-id="13fa8-150">若要建立參數，請使用 `Parameters.Add` 方法或 `Parameter` 建構函式來指定資料行名稱、資料型別和大小。</span><span class="sxs-lookup"><span data-stu-id="13fa8-150">To create a parameter, use the `Parameters.Add` method or the `Parameter` constructor to specify the column name, data type, and size.</span></span> <span data-ttu-id="13fa8-151">如果資料型別為內建 (如 `Integer`)，則沒有必要包含大小，或者您也可以指定預設大小。</span><span class="sxs-lookup"><span data-stu-id="13fa8-151">For intrinsic data types, such as `Integer`, you do not have to include the size, or you can specify the default size.</span></span>  
   
- 下列程式碼範例會建立 SQL 陳述式的參數，然後填入 `DataSet`。  
+ <span data-ttu-id="13fa8-152">下列程式碼範例會建立 SQL 陳述式的參數，然後填入 `DataSet`。</span><span class="sxs-lookup"><span data-stu-id="13fa8-152">The following code example creates the parameters for a SQL statement and then fills a `DataSet`.</span></span>  
   
-## OleDb 範例  
+## <a name="oledb-example"></a><span data-ttu-id="13fa8-153">OleDb 範例</span><span class="sxs-lookup"><span data-stu-id="13fa8-153">OleDb Example</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid OleDbConnection object.  
@@ -114,7 +120,6 @@ selectCMD.Parameters.Add( _
   
 Dim customers As DataSet = New DataSet  
 adapter.Fill(customers, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -134,7 +139,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");  
 ```  
   
-## Odbc 參數  
+## <a name="odbc-parameters"></a><span data-ttu-id="13fa8-154">Odbc 參數</span><span class="sxs-lookup"><span data-stu-id="13fa8-154">Odbc Parameters</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid OdbcConnection object.  
@@ -149,7 +154,6 @@ selectCMD.Parameters.Add("@City", OdbcType.VarChar, 15).Value = "London"
   
 Dim customers As DataSet = New DataSet  
 adapter.Fill(customers, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -168,12 +172,12 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  若未提供參數名稱給參數，則系統會為參數指定 Parameter*N* 的累加預設名稱，並且是從 "Parameter1" 開始。  當您提供參數名稱時，建議您避免使用 Parameter*N* 命名慣例，因為您所提供的名稱可能會與 `ParameterCollection` 中現有的預設參數名稱衝突。  如果提供的名稱已經存在，便會發生例外狀況。  
+>  <span data-ttu-id="13fa8-155">如果參數名稱未提供參數，指定參數，參數的累加預設名稱*N* *，*從"Parameter1"開始。</span><span class="sxs-lookup"><span data-stu-id="13fa8-155">If a parameter name is not supplied for a parameter, the parameter is given an incremental default name of Parameter*N* *,* starting with "Parameter1".</span></span> <span data-ttu-id="13fa8-156">我們建議您避免使用 Parameter*N*命名慣例，當您提供參數名稱，因為您提供的名稱，可能會與現有的預設參數名稱中的衝突`ParameterCollection`。</span><span class="sxs-lookup"><span data-stu-id="13fa8-156">We recommend that you avoid the Parameter*N* naming convention when you supply a parameter name, because the name that you supply might conflict with an existing default parameter name in the `ParameterCollection`.</span></span> <span data-ttu-id="13fa8-157">如果提供的名稱已經存在，便會發生例外狀況。</span><span class="sxs-lookup"><span data-stu-id="13fa8-157">If the supplied name already exists, an exception is thrown.</span></span>  
   
-## 請參閱  
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [以 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [使用預存程序修改資料](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)   
- [ADO.NET 中的資料型別對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="13fa8-158">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13fa8-158">See Also</span></span>  
+ [<span data-ttu-id="13fa8-159">Dataadapter 和 Datareader</span><span class="sxs-lookup"><span data-stu-id="13fa8-159">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="13fa8-160">命令和參數</span><span class="sxs-lookup"><span data-stu-id="13fa8-160">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="13fa8-161">使用 DataAdapter 更新資料來源</span><span class="sxs-lookup"><span data-stu-id="13fa8-161">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [<span data-ttu-id="13fa8-162">使用預存程序修改資料</span><span class="sxs-lookup"><span data-stu-id="13fa8-162">Modifying Data with Stored Procedures</span></span>](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [<span data-ttu-id="13fa8-163">ADO.NET 中的資料類型對應</span><span class="sxs-lookup"><span data-stu-id="13fa8-163">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [<span data-ttu-id="13fa8-164">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="13fa8-164">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

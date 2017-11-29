@@ -5,223 +5,220 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1643e5d645ec6c3ae35b2e57b8cb4f4bcb048379
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="loader-etw-events"></a>載入器 ETW 事件
-<a name="top"></a> 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
+# <a name="loader-etw-events"></a><span data-ttu-id="d5b35-102">載入器 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-102">Loader ETW Events</span></span>
+<span data-ttu-id="d5b35-103"><a name="top"></a> 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="d5b35-103"><a name="top"></a> These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  
   
- 所有的載入器事件都會在 `LoaderKeyword` (0x8) 關鍵字底下引發。 `DCStart` 和 `DCEnd` 事件會在啟用 `StartRundown`/`EndRundown` 時，於 `LoaderRundownKeyword` (0x8) 底下引發。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。  
+ <span data-ttu-id="d5b35-104">所有的載入器事件都會在 `LoaderKeyword` (0x8) 關鍵字底下引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-104">All loader events are raised under the `LoaderKeyword` (0x8) keyword.</span></span> <span data-ttu-id="d5b35-105">`DCStart` 和 `DCEnd` 事件會在啟用 `StartRundown`/`EndRundown` 時，於 `LoaderRundownKeyword` (0x8) 底下引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-105">The `DCStart` and the `DCEnd` events are raised under `LoaderRundownKeyword` (0x8) with `StartRundown`/`EndRundown` enabled.</span></span> <span data-ttu-id="d5b35-106">(如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。</span><span class="sxs-lookup"><span data-stu-id="d5b35-106">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
- 載入器事件可細分為下列事件：  
+ <span data-ttu-id="d5b35-107">載入器事件可細分為下列事件：</span><span class="sxs-lookup"><span data-stu-id="d5b35-107">Loader events are subdivided into the following:</span></span>  
   
--   [應用程式定義域事件](#application_domain_events)  
+-   [<span data-ttu-id="d5b35-108">應用程式定義域事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-108">Application Domain Events</span></span>](#application_domain_events)  
   
--   [CLR 載入器組件事件](#clr_loader_assembly_events)  
+-   [<span data-ttu-id="d5b35-109">CLR 載入器組件事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-109">CLR Loader Assembly Events</span></span>](#clr_loader_assembly_events)  
   
--   [模組事件](#module_events)  
+-   [<span data-ttu-id="d5b35-110">模組事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-110">Module Events</span></span>](#module_events)  
   
--   [CLR 定義域模組事件](#clr_domain_module_events)  
+-   [<span data-ttu-id="d5b35-111">CLR 定義域模組事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-111">CLR Domain Module Events</span></span>](#clr_domain_module_events)  
   
--   [模組範圍事件](#module_range_events)  
+-   [<span data-ttu-id="d5b35-112">模組範圍事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-112">Module Range Events</span></span>](#module_range_events)  
   
 <a name="application_domain_events"></a>   
-## <a name="application-domain-events"></a>應用程式定義域事件  
- 下表說明關鍵字和層級。  
+## <a name="application-domain-events"></a><span data-ttu-id="d5b35-113">應用程式定義域事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-113">Application Domain Events</span></span>  
+ <span data-ttu-id="d5b35-114">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="d5b35-114">The following table shows the keyword and level.</span></span>  
   
-|引發事件的關鍵字|事件|層級|  
+|<span data-ttu-id="d5b35-115">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="d5b35-115">Keyword for raising the event</span></span>|<span data-ttu-id="d5b35-116">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-116">Event</span></span>|<span data-ttu-id="d5b35-117">層級</span><span class="sxs-lookup"><span data-stu-id="d5b35-117">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`|告知性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|告知性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|告知性 (4)|  
+|<span data-ttu-id="d5b35-118">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="d5b35-118">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="d5b35-119">`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`</span><span class="sxs-lookup"><span data-stu-id="d5b35-119">`AppDomainLoad_V1` and `AppDomainUnLoad_V1`</span></span>|<span data-ttu-id="d5b35-120">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-120">Informational (4)</span></span>|  
+|<span data-ttu-id="d5b35-121">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="d5b35-121">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|<span data-ttu-id="d5b35-122">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-122">Informational (4)</span></span>|  
+|<span data-ttu-id="d5b35-123">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="d5b35-123">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|<span data-ttu-id="d5b35-124">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-124">Informational (4)</span></span>|  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="d5b35-125">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="d5b35-125">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|描述|  
+|<span data-ttu-id="d5b35-126">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-126">Event</span></span>|<span data-ttu-id="d5b35-127">事件 ID</span><span class="sxs-lookup"><span data-stu-id="d5b35-127">Event ID</span></span>|<span data-ttu-id="d5b35-128">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-128">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (針對所有應用程式定義域記錄)|156|每當在處理序的存留期間建立應用程式定義域時引發。|  
-|`AppDomainUnLoad_V1`|157|每當在處理序的存留期間終結應用程式定義域時引發。|  
-|`AppDomainDCStart_V1`|157|在開始取消期間列舉應用程式定義域。|  
-|`AppDomainDCEnd_V1`|158|在結束取消期間列舉應用程式定義域。|  
+|<span data-ttu-id="d5b35-129">`AppDomainLoad_V1` (針對所有應用程式定義域記錄)</span><span class="sxs-lookup"><span data-stu-id="d5b35-129">`AppDomainLoad_V1` (logged for all application domains)</span></span>|<span data-ttu-id="d5b35-130">156</span><span class="sxs-lookup"><span data-stu-id="d5b35-130">156</span></span>|<span data-ttu-id="d5b35-131">每當在處理序的存留期間建立應用程式定義域時引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-131">Raised whenever an application domain is created during the lifetime of a process.</span></span>|  
+|`AppDomainUnLoad_V1`|<span data-ttu-id="d5b35-132">157</span><span class="sxs-lookup"><span data-stu-id="d5b35-132">157</span></span>|<span data-ttu-id="d5b35-133">每當在處理序的存留期間終結應用程式定義域時引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-133">Raised whenever an application domain is destroyed during the lifetime of a process.</span></span>|  
+|`AppDomainDCStart_V1`|<span data-ttu-id="d5b35-134">157</span><span class="sxs-lookup"><span data-stu-id="d5b35-134">157</span></span>|<span data-ttu-id="d5b35-135">在開始取消期間列舉應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="d5b35-135">Enumerates the application domains during a start rundown.</span></span>|  
+|`AppDomainDCEnd_V1`|<span data-ttu-id="d5b35-136">158</span><span class="sxs-lookup"><span data-stu-id="d5b35-136">158</span></span>|<span data-ttu-id="d5b35-137">在結束取消期間列舉應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="d5b35-137">Enumerates the application domains during an end rundown.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="d5b35-138">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="d5b35-138">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="d5b35-139">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="d5b35-139">Field name</span></span>|<span data-ttu-id="d5b35-140">資料類型</span><span class="sxs-lookup"><span data-stu-id="d5b35-140">Data type</span></span>|<span data-ttu-id="d5b35-141">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-141">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AppDomainID|win:UInt64|應用程式定義域的唯一識別項。|  
-|AppDomainFlags|win:UInt32|0x1：預設定義域。<br /><br /> 0x2：可執行檔。<br /><br /> 0x4：應用程式定義域，位元 28-31：這個定義域的共用原則。<br /><br /> 0：共用的定義域。|  
-|AppDomainName|win:UnicodeString|易記的應用程式定義域名稱。 在處理序的存留期間可能會變更。|  
-|AppDomainIndex|win:UInt32|這個應用程式定義域的索引。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
+|<span data-ttu-id="d5b35-142">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="d5b35-142">AppDomainID</span></span>|<span data-ttu-id="d5b35-143">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-143">win:UInt64</span></span>|<span data-ttu-id="d5b35-144">應用程式定義域的唯一識別項。</span><span class="sxs-lookup"><span data-stu-id="d5b35-144">The unique identifier for an application domain.</span></span>|  
+|<span data-ttu-id="d5b35-145">AppDomainFlags</span><span class="sxs-lookup"><span data-stu-id="d5b35-145">AppDomainFlags</span></span>|<span data-ttu-id="d5b35-146">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-146">win:UInt32</span></span>|<span data-ttu-id="d5b35-147">0x1：預設定義域。</span><span class="sxs-lookup"><span data-stu-id="d5b35-147">0x1: Default domain.</span></span><br /><br /> <span data-ttu-id="d5b35-148">0x2：可執行檔。</span><span class="sxs-lookup"><span data-stu-id="d5b35-148">0x2: Executable.</span></span><br /><br /> <span data-ttu-id="d5b35-149">0x4：應用程式定義域，位元 28-31：這個定義域的共用原則。</span><span class="sxs-lookup"><span data-stu-id="d5b35-149">0x4: Application domain, bit 28-31: Sharing policy of this domain.</span></span><br /><br /> <span data-ttu-id="d5b35-150">0：共用的定義域。</span><span class="sxs-lookup"><span data-stu-id="d5b35-150">0: A shared domain.</span></span>|  
+|<span data-ttu-id="d5b35-151">AppDomainName</span><span class="sxs-lookup"><span data-stu-id="d5b35-151">AppDomainName</span></span>|<span data-ttu-id="d5b35-152">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-152">win:UnicodeString</span></span>|<span data-ttu-id="d5b35-153">易記的應用程式定義域名稱。</span><span class="sxs-lookup"><span data-stu-id="d5b35-153">Friendly application domain name.</span></span> <span data-ttu-id="d5b35-154">在處理序的存留期間可能會變更。</span><span class="sxs-lookup"><span data-stu-id="d5b35-154">Might change during the lifetime of the process.</span></span>|  
+|<span data-ttu-id="d5b35-155">AppDomainIndex</span><span class="sxs-lookup"><span data-stu-id="d5b35-155">AppDomainIndex</span></span>|<span data-ttu-id="d5b35-156">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-156">Win:UInt32</span></span>|<span data-ttu-id="d5b35-157">這個應用程式定義域的索引。</span><span class="sxs-lookup"><span data-stu-id="d5b35-157">The index of this application domain.</span></span>|  
+|<span data-ttu-id="d5b35-158">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="d5b35-158">ClrInstanceID</span></span>|<span data-ttu-id="d5b35-159">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d5b35-159">win:UInt16</span></span>|<span data-ttu-id="d5b35-160">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-160">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="d5b35-161">回到頁首</span><span class="sxs-lookup"><span data-stu-id="d5b35-161">Back to top</span></span>](#top)  
   
 <a name="clr_loader_assembly_events"></a>   
-## <a name="clr-loader-assembly-events"></a>CLR 載入器組件事件  
- 下表說明關鍵字和層級。  
+## <a name="clr-loader-assembly-events"></a><span data-ttu-id="d5b35-162">CLR 載入器組件事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-162">CLR Loader Assembly Events</span></span>  
+ <span data-ttu-id="d5b35-163">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="d5b35-163">The following table shows the keyword and level.</span></span>  
   
-|引發事件的關鍵字|事件|層級|  
+|<span data-ttu-id="d5b35-164">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="d5b35-164">Keyword for raising the event</span></span>|<span data-ttu-id="d5b35-165">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-165">Event</span></span>|<span data-ttu-id="d5b35-166">層級</span><span class="sxs-lookup"><span data-stu-id="d5b35-166">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` 和 `AssemblyUnload`|告知性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|告知性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|告知性 (4)|  
+|<span data-ttu-id="d5b35-167">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="d5b35-167">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="d5b35-168">`AssemblyLoad` 和 `AssemblyUnload`</span><span class="sxs-lookup"><span data-stu-id="d5b35-168">`AssemblyLoad` and `AssemblyUnload`</span></span>|<span data-ttu-id="d5b35-169">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-169">Informational (4)</span></span>|  
+|<span data-ttu-id="d5b35-170">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="d5b35-170">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|<span data-ttu-id="d5b35-171">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-171">Informational (4)</span></span>|  
+|<span data-ttu-id="d5b35-172">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="d5b35-172">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|<span data-ttu-id="d5b35-173">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-173">Informational (4)</span></span>|  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="d5b35-174">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="d5b35-174">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|描述|  
+|<span data-ttu-id="d5b35-175">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-175">Event</span></span>|<span data-ttu-id="d5b35-176">事件 ID</span><span class="sxs-lookup"><span data-stu-id="d5b35-176">Event ID</span></span>|<span data-ttu-id="d5b35-177">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-177">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`AssemblyLoad_V1`|154|載入組件時引發。|  
-|`AssemblyUnload_V1`|155|卸載組件時引發。|  
-|`AssemblyDCStart_V1`|155|在開始取消期間列舉組件。|  
-|`AssemblyDCEnd_V1`|156|在結束取消期間列舉組件。|  
+|`AssemblyLoad_V1`|<span data-ttu-id="d5b35-178">154</span><span class="sxs-lookup"><span data-stu-id="d5b35-178">154</span></span>|<span data-ttu-id="d5b35-179">載入組件時引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-179">Raised when an assembly is loaded.</span></span>|  
+|`AssemblyUnload_V1`|<span data-ttu-id="d5b35-180">155</span><span class="sxs-lookup"><span data-stu-id="d5b35-180">155</span></span>|<span data-ttu-id="d5b35-181">卸載組件時引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-181">Raised when an assembly is unloaded.</span></span>|  
+|`AssemblyDCStart_V1`|<span data-ttu-id="d5b35-182">155</span><span class="sxs-lookup"><span data-stu-id="d5b35-182">155</span></span>|<span data-ttu-id="d5b35-183">在開始取消期間列舉組件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-183">Enumerates assemblies during a start rundown.</span></span>|  
+|`AssemblyDCEnd_V1`|<span data-ttu-id="d5b35-184">156</span><span class="sxs-lookup"><span data-stu-id="d5b35-184">156</span></span>|<span data-ttu-id="d5b35-185">在結束取消期間列舉組件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-185">Enumerates assemblies during an end rundown.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="d5b35-186">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="d5b35-186">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="d5b35-187">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="d5b35-187">Field name</span></span>|<span data-ttu-id="d5b35-188">資料類型</span><span class="sxs-lookup"><span data-stu-id="d5b35-188">Data type</span></span>|<span data-ttu-id="d5b35-189">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-189">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AssemblyID|win:UInt64|組件的唯一 ID。|  
-|AppDomainID|win:UInt64|這個組件之定義域的 ID。|  
-|BindingID|win:UInt64|可唯一識別組件繫結的 ID。|  
-|AssemblyFlags|win:UInt32|0x1：定義域中性組件。<br /><br /> 0x2：動態組件。<br /><br /> 0x4：組件具有原生映像。<br /><br /> 0x8：可回收組件。|  
-|AssemblyName|win:UnicodeString|完整的組件名稱。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
+|<span data-ttu-id="d5b35-190">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="d5b35-190">AssemblyID</span></span>|<span data-ttu-id="d5b35-191">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-191">win:UInt64</span></span>|<span data-ttu-id="d5b35-192">組件的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-192">Unique ID for the assembly.</span></span>|  
+|<span data-ttu-id="d5b35-193">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="d5b35-193">AppDomainID</span></span>|<span data-ttu-id="d5b35-194">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-194">win:UInt64</span></span>|<span data-ttu-id="d5b35-195">這個組件之定義域的 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-195">ID of the domain of this assembly.</span></span>|  
+|<span data-ttu-id="d5b35-196">BindingID</span><span class="sxs-lookup"><span data-stu-id="d5b35-196">BindingID</span></span>|<span data-ttu-id="d5b35-197">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-197">win:UInt64</span></span>|<span data-ttu-id="d5b35-198">可唯一識別組件繫結的 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-198">ID that uniquely identifies the assembly binding.</span></span>|  
+|<span data-ttu-id="d5b35-199">AssemblyFlags</span><span class="sxs-lookup"><span data-stu-id="d5b35-199">AssemblyFlags</span></span>|<span data-ttu-id="d5b35-200">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-200">win:UInt32</span></span>|<span data-ttu-id="d5b35-201">0x1：定義域中性組件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-201">0x1: Domain neutral assembly.</span></span><br /><br /> <span data-ttu-id="d5b35-202">0x2：動態組件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-202">0x2: Dynamic assembly.</span></span><br /><br /> <span data-ttu-id="d5b35-203">0x4：組件具有原生映像。</span><span class="sxs-lookup"><span data-stu-id="d5b35-203">0x4: Assembly has a native image.</span></span><br /><br /> <span data-ttu-id="d5b35-204">0x8：可回收組件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-204">0x8: Collectible assembly.</span></span>|  
+|<span data-ttu-id="d5b35-205">AssemblyName</span><span class="sxs-lookup"><span data-stu-id="d5b35-205">AssemblyName</span></span>|<span data-ttu-id="d5b35-206">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-206">win:UnicodeString</span></span>|<span data-ttu-id="d5b35-207">完整的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="d5b35-207">Fully qualified assembly name.</span></span>|  
+|<span data-ttu-id="d5b35-208">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="d5b35-208">ClrInstanceID</span></span>|<span data-ttu-id="d5b35-209">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d5b35-209">win:UInt16</span></span>|<span data-ttu-id="d5b35-210">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-210">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="d5b35-211">回到頁首</span><span class="sxs-lookup"><span data-stu-id="d5b35-211">Back to top</span></span>](#top)  
   
 <a name="module_events"></a>   
-## <a name="module-events"></a>模組事件  
- 下表說明關鍵字和層級。  
+## <a name="module-events"></a><span data-ttu-id="d5b35-212">模組事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-212">Module Events</span></span>  
+ <span data-ttu-id="d5b35-213">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="d5b35-213">The following table shows the keyword and level.</span></span>  
   
-|引發事件的關鍵字|事件|層級|  
+|<span data-ttu-id="d5b35-214">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="d5b35-214">Keyword for raising the event</span></span>|<span data-ttu-id="d5b35-215">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-215">Event</span></span>|<span data-ttu-id="d5b35-216">層級</span><span class="sxs-lookup"><span data-stu-id="d5b35-216">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` 和 `ModuleUnload_V2`|告知性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|告知性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|告知性 (4)|  
+|<span data-ttu-id="d5b35-217">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="d5b35-217">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="d5b35-218">`ModuleLoad_V2` 和 `ModuleUnload_V2`</span><span class="sxs-lookup"><span data-stu-id="d5b35-218">`ModuleLoad_V2` and `ModuleUnload_V2`</span></span>|<span data-ttu-id="d5b35-219">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-219">Informational (4)</span></span>|  
+|<span data-ttu-id="d5b35-220">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="d5b35-220">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|<span data-ttu-id="d5b35-221">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-221">Informational (4)</span></span>|  
+|<span data-ttu-id="d5b35-222">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="d5b35-222">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|<span data-ttu-id="d5b35-223">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-223">Informational (4)</span></span>|  
 ||||  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="d5b35-224">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="d5b35-224">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|描述|  
+|<span data-ttu-id="d5b35-225">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-225">Event</span></span>|<span data-ttu-id="d5b35-226">事件 ID</span><span class="sxs-lookup"><span data-stu-id="d5b35-226">Event ID</span></span>|<span data-ttu-id="d5b35-227">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-227">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ModuleLoad_V2`|152|在處理序的存留期間載入模組時引發。|  
-|`ModuleUnload_V2`|153|在處理序的存留期間卸載模組時引發。|  
-|`ModuleDCStart_V2`|153|在開始取消期間列舉模組。|  
-|`ModuleDCEnd_V2`|154|在結束取消期間列舉模組。|  
+|`ModuleLoad_V2`|<span data-ttu-id="d5b35-228">152</span><span class="sxs-lookup"><span data-stu-id="d5b35-228">152</span></span>|<span data-ttu-id="d5b35-229">在處理序的存留期間載入模組時引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-229">Raised when a module is loaded during the lifetime of a process.</span></span>|  
+|`ModuleUnload_V2`|<span data-ttu-id="d5b35-230">153</span><span class="sxs-lookup"><span data-stu-id="d5b35-230">153</span></span>|<span data-ttu-id="d5b35-231">在處理序的存留期間卸載模組時引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-231">Raised when a module is unloaded during the lifetime of a process.</span></span>|  
+|`ModuleDCStart_V2`|<span data-ttu-id="d5b35-232">153</span><span class="sxs-lookup"><span data-stu-id="d5b35-232">153</span></span>|<span data-ttu-id="d5b35-233">在開始取消期間列舉模組。</span><span class="sxs-lookup"><span data-stu-id="d5b35-233">Enumerates modules during a start rundown.</span></span>|  
+|`ModuleDCEnd_V2`|<span data-ttu-id="d5b35-234">154</span><span class="sxs-lookup"><span data-stu-id="d5b35-234">154</span></span>|<span data-ttu-id="d5b35-235">在結束取消期間列舉模組。</span><span class="sxs-lookup"><span data-stu-id="d5b35-235">Enumerates modules during an end rundown.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="d5b35-236">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="d5b35-236">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="d5b35-237">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="d5b35-237">Field name</span></span>|<span data-ttu-id="d5b35-238">資料類型</span><span class="sxs-lookup"><span data-stu-id="d5b35-238">Data type</span></span>|<span data-ttu-id="d5b35-239">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-239">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|模組的唯一 ID。|  
-|AssemblyID|win:UInt64|這個模組所在之組件的 ID。|  
-|ModuleFlags|win:UInt32|0x1：定義域中性模組。<br /><br /> 0x2：模組具有原生映像。<br /><br /> 0x4：動態模組。<br /><br /> 0x8：資訊清單模組。|  
-|Reserved1|win:UInt32|保留的欄位。|  
-|ModuleILPath|win:UnicodeString|模組之 Microsoft Intermediate Language (MSIL) 映像的路徑，或動態模組名稱 (如果它是動態組件 (以 Null 終止) 的話)。|  
-|ModuleNativePath|win:UnicodeString|模組原生映像的路徑 (如果存在的話 (以 Null 終止))。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
-|ManagedPdbSignature|win:GUID|符合此模組的受管理程式資料庫 (PDB) 的 GUID 簽章。 (請參閱＜備註＞)。|  
-|ManagedPdbAge|win:UInt32|寫入至受管理 PDB 並符合此模組的保留時間數值。 (請參閱＜備註＞)。|  
-|ManagedPdbBuildPath|win:UnicodeString|符合此模組之受管理 PDB 建立位置的目標路徑。 在某些情況下，這可能只是檔案名稱。 (請參閱＜備註＞)。|  
-|NativePdbSignature|win:GUID|符合此模組之原生映像產生器 (NGen) PDB 的 GUID 簽章 (如果有的話)。 (請參閱＜備註＞)。|  
-|NativePdbAge|win:UInt32|寫入符合本模組之 NGen PDB 的的保留時間數值 (如果有的話)。 (請參閱＜備註＞)。|  
-|NativePdbBuildPath|win:UnicodeString|符合此模組之 NGen PDB 建立位置的目標路徑。 在某些情況下，這可能只是檔案名稱。 (請參閱＜備註＞)。|  
+|<span data-ttu-id="d5b35-240">ModuleID</span><span class="sxs-lookup"><span data-stu-id="d5b35-240">ModuleID</span></span>|<span data-ttu-id="d5b35-241">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-241">win:UInt64</span></span>|<span data-ttu-id="d5b35-242">模組的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-242">Unique ID for the module.</span></span>|  
+|<span data-ttu-id="d5b35-243">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="d5b35-243">AssemblyID</span></span>|<span data-ttu-id="d5b35-244">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-244">win:UInt64</span></span>|<span data-ttu-id="d5b35-245">這個模組所在之組件的 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-245">ID of the assembly in which this module resides.</span></span>|  
+|<span data-ttu-id="d5b35-246">ModuleFlags</span><span class="sxs-lookup"><span data-stu-id="d5b35-246">ModuleFlags</span></span>|<span data-ttu-id="d5b35-247">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-247">win:UInt32</span></span>|<span data-ttu-id="d5b35-248">0x1：定義域中性模組。</span><span class="sxs-lookup"><span data-stu-id="d5b35-248">0x1: Domain neutral module.</span></span><br /><br /> <span data-ttu-id="d5b35-249">0x2：模組具有原生映像。</span><span class="sxs-lookup"><span data-stu-id="d5b35-249">0x2: Module has a native image.</span></span><br /><br /> <span data-ttu-id="d5b35-250">0x4：動態模組。</span><span class="sxs-lookup"><span data-stu-id="d5b35-250">0x4: Dynamic module.</span></span><br /><br /> <span data-ttu-id="d5b35-251">0x8：資訊清單模組。</span><span class="sxs-lookup"><span data-stu-id="d5b35-251">0x8: Manifest module.</span></span>|  
+|<span data-ttu-id="d5b35-252">Reserved1</span><span class="sxs-lookup"><span data-stu-id="d5b35-252">Reserved1</span></span>|<span data-ttu-id="d5b35-253">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-253">win:UInt32</span></span>|<span data-ttu-id="d5b35-254">保留的欄位。</span><span class="sxs-lookup"><span data-stu-id="d5b35-254">Reserved field.</span></span>|  
+|<span data-ttu-id="d5b35-255">ModuleILPath</span><span class="sxs-lookup"><span data-stu-id="d5b35-255">ModuleILPath</span></span>|<span data-ttu-id="d5b35-256">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-256">win:UnicodeString</span></span>|<span data-ttu-id="d5b35-257">模組之 Microsoft Intermediate Language (MSIL) 映像的路徑，或動態模組名稱 (如果它是動態組件 (以 Null 終止) 的話)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-257">Path of the Microsoft intermediate language (MSIL) image for the module, or dynamic module name if it is a dynamic assembly (null-terminated).</span></span>|  
+|<span data-ttu-id="d5b35-258">ModuleNativePath</span><span class="sxs-lookup"><span data-stu-id="d5b35-258">ModuleNativePath</span></span>|<span data-ttu-id="d5b35-259">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-259">win:UnicodeString</span></span>|<span data-ttu-id="d5b35-260">模組原生映像的路徑 (如果存在的話 (以 Null 終止))。</span><span class="sxs-lookup"><span data-stu-id="d5b35-260">Path of the module native image, if present (null-terminated).</span></span>|  
+|<span data-ttu-id="d5b35-261">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="d5b35-261">ClrInstanceID</span></span>|<span data-ttu-id="d5b35-262">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d5b35-262">win:UInt16</span></span>|<span data-ttu-id="d5b35-263">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-263">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+|<span data-ttu-id="d5b35-264">ManagedPdbSignature</span><span class="sxs-lookup"><span data-stu-id="d5b35-264">ManagedPdbSignature</span></span>|<span data-ttu-id="d5b35-265">win:GUID</span><span class="sxs-lookup"><span data-stu-id="d5b35-265">win:GUID</span></span>|<span data-ttu-id="d5b35-266">符合此模組的受管理程式資料庫 (PDB) 的 GUID 簽章。</span><span class="sxs-lookup"><span data-stu-id="d5b35-266">GUID signature of the managed program database (PDB) that matches this module.</span></span> <span data-ttu-id="d5b35-267">(請參閱＜備註＞)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-267">(See Remarks.)</span></span>|  
+|<span data-ttu-id="d5b35-268">ManagedPdbAge</span><span class="sxs-lookup"><span data-stu-id="d5b35-268">ManagedPdbAge</span></span>|<span data-ttu-id="d5b35-269">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-269">win:UInt32</span></span>|<span data-ttu-id="d5b35-270">寫入至受管理 PDB 並符合此模組的保留時間數值。</span><span class="sxs-lookup"><span data-stu-id="d5b35-270">Age number written to the managed PDB that matches this module.</span></span> <span data-ttu-id="d5b35-271">(請參閱＜備註＞)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-271">(See Remarks.)</span></span>|  
+|<span data-ttu-id="d5b35-272">ManagedPdbBuildPath</span><span class="sxs-lookup"><span data-stu-id="d5b35-272">ManagedPdbBuildPath</span></span>|<span data-ttu-id="d5b35-273">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-273">win:UnicodeString</span></span>|<span data-ttu-id="d5b35-274">符合此模組之受管理 PDB 建立位置的目標路徑。</span><span class="sxs-lookup"><span data-stu-id="d5b35-274">Path to the location where the managed PDB that matches this module was built.</span></span> <span data-ttu-id="d5b35-275">在某些情況下，這可能只是檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="d5b35-275">In some cases, this may just be a file name.</span></span> <span data-ttu-id="d5b35-276">(請參閱＜備註＞)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-276">(See Remarks.)</span></span>|  
+|<span data-ttu-id="d5b35-277">NativePdbSignature</span><span class="sxs-lookup"><span data-stu-id="d5b35-277">NativePdbSignature</span></span>|<span data-ttu-id="d5b35-278">win:GUID</span><span class="sxs-lookup"><span data-stu-id="d5b35-278">win:GUID</span></span>|<span data-ttu-id="d5b35-279">符合此模組之原生映像產生器 (NGen) PDB 的 GUID 簽章 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-279">GUID signature of the Native Image Generator (NGen) PDB that matches this module, if applicable.</span></span> <span data-ttu-id="d5b35-280">(請參閱＜備註＞)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-280">(See Remarks.)</span></span>|  
+|<span data-ttu-id="d5b35-281">NativePdbAge</span><span class="sxs-lookup"><span data-stu-id="d5b35-281">NativePdbAge</span></span>|<span data-ttu-id="d5b35-282">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-282">win:UInt32</span></span>|<span data-ttu-id="d5b35-283">寫入符合本模組之 NGen PDB 的的保留時間數值 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-283">Age number written to the NGen PDB that matches this module, if applicable.</span></span> <span data-ttu-id="d5b35-284">(請參閱＜備註＞)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-284">(See Remarks.)</span></span>|  
+|<span data-ttu-id="d5b35-285">NativePdbBuildPath</span><span class="sxs-lookup"><span data-stu-id="d5b35-285">NativePdbBuildPath</span></span>|<span data-ttu-id="d5b35-286">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-286">win:UnicodeString</span></span>|<span data-ttu-id="d5b35-287">符合此模組之 NGen PDB 建立位置的目標路徑。</span><span class="sxs-lookup"><span data-stu-id="d5b35-287">Path to the location where the NGen PDB that matches this module was built, if applicable.</span></span> <span data-ttu-id="d5b35-288">在某些情況下，這可能只是檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="d5b35-288">In some cases, this may just be a file name.</span></span> <span data-ttu-id="d5b35-289">(請參閱＜備註＞)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-289">(See Remarks.)</span></span>|  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a><span data-ttu-id="d5b35-290">備註</span><span class="sxs-lookup"><span data-stu-id="d5b35-290">Remarks</span></span>  
   
--   名稱中擁有 "Pdb" 的欄位可供程式碼剖析工具使用，以找出與剖析工作階段時載入之模組相符的 PDB。 這些欄位的值對應於寫入模組中 IMAGE_DIRECTORY_ENTRY_DEBUG 區段的資料，且通常用於偵錯工具以協助尋找符合已載入模組的 PDB。  
+-   <span data-ttu-id="d5b35-291">名稱中擁有 "Pdb" 的欄位可供程式碼剖析工具使用，以找出與剖析工作階段時載入之模組相符的 PDB。</span><span class="sxs-lookup"><span data-stu-id="d5b35-291">The fields that have "Pdb" in their names can be used by profiling tools to locate PDBs that match the modules that were loaded during the profiling session.</span></span> <span data-ttu-id="d5b35-292">這些欄位的值對應於寫入模組中 IMAGE_DIRECTORY_ENTRY_DEBUG 區段的資料，且通常用於偵錯工具以協助尋找符合已載入模組的 PDB。</span><span class="sxs-lookup"><span data-stu-id="d5b35-292">The values of these fields correspond to the data written into the IMAGE_DIRECTORY_ENTRY_DEBUG sections of the module normally used by debuggers to help locate PDBs that match the loaded modules.</span></span>  
   
--   以 "ManagedPdb" 開頭的欄位名稱表示受管理的 PDB 所對應的 MSIL 模組，其是由受管理的編譯器 (例如 C# 或 Visual Basic 的編譯器) 所產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 MSIL 模組的 MSIL 項目。  
+-   <span data-ttu-id="d5b35-293">以 "ManagedPdb" 開頭的欄位名稱表示受管理的 PDB 所對應的 MSIL 模組，其是由受管理的編譯器 (例如 C# 或 Visual Basic 的編譯器) 所產生。</span><span class="sxs-lookup"><span data-stu-id="d5b35-293">The field names that begin with "ManagedPdb" refer to the managed PDB corresponding to the MSIL module that was generated by the managed compiler (such as the C# or Visual Basic compiler).</span></span> <span data-ttu-id="d5b35-294">這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 MSIL 模組的 MSIL 項目。</span><span class="sxs-lookup"><span data-stu-id="d5b35-294">This PDB uses the managed PDB format, and describes how elements from the original managed source code, such as files, line numbers, and symbol names, map to MSIL elements that are compiled into the MSIL module.</span></span>  
   
--   以 "NativePdb" 開頭的欄位名稱表示該 NGen PDB 是透過呼叫 `NGEN createPDB`而產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 NGen 模組的原生項目。  
+-   <span data-ttu-id="d5b35-295">以 "NativePdb" 開頭的欄位名稱表示該 NGen PDB 是透過呼叫 `NGEN createPDB`而產生。</span><span class="sxs-lookup"><span data-stu-id="d5b35-295">The field names that begin with "NativePdb" refer to the NGen PDB generated by calling `NGEN createPDB`.</span></span> <span data-ttu-id="d5b35-296">這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 NGen 模組的原生項目。</span><span class="sxs-lookup"><span data-stu-id="d5b35-296">This PDB uses the native PDB format, and describes how elements from the original managed source code, such as files, line numbers, and symbol names, map to native elements that are compiled into the NGen module.</span></span>  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="d5b35-297">回到頁首</span><span class="sxs-lookup"><span data-stu-id="d5b35-297">Back to top</span></span>](#top)  
   
 <a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>CLR 定義域模組事件  
- 下表說明關鍵字和層級。  
+## <a name="clr-domain-module-events"></a><span data-ttu-id="d5b35-298">CLR 定義域模組事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-298">CLR Domain Module Events</span></span>  
+ <span data-ttu-id="d5b35-299">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="d5b35-299">The following table shows the keyword and level.</span></span>  
   
-|引發事件的關鍵字|事件|層級|  
+|<span data-ttu-id="d5b35-300">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="d5b35-300">Keyword for raising the event</span></span>|<span data-ttu-id="d5b35-301">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-301">Event</span></span>|<span data-ttu-id="d5b35-302">層級</span><span class="sxs-lookup"><span data-stu-id="d5b35-302">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|告知性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|告知性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|告知性 (4)|  
+|<span data-ttu-id="d5b35-303">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="d5b35-303">`LoaderKeyword` (0x8)</span></span>|`DomainModuleLoad_V1`|<span data-ttu-id="d5b35-304">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-304">Informational (4)</span></span>|  
+|<span data-ttu-id="d5b35-305">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="d5b35-305">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|<span data-ttu-id="d5b35-306">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-306">Informational (4)</span></span>|  
+|<span data-ttu-id="d5b35-307">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="d5b35-307">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|<span data-ttu-id="d5b35-308">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-308">Informational (4)</span></span>|  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="d5b35-309">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="d5b35-309">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|描述|  
+|<span data-ttu-id="d5b35-310">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-310">Event</span></span>|<span data-ttu-id="d5b35-311">事件 ID</span><span class="sxs-lookup"><span data-stu-id="d5b35-311">Event ID</span></span>|<span data-ttu-id="d5b35-312">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-312">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`DomainModuleLoad_V1`|151|針對應用程式定義域載入模組時引發。|  
-|`DomainModuleDCStart_V1`|151|在開始取消期間列舉針對應用程式定義域所載入的模組，並且針對所有應用程式定義域記錄。|  
-|`DomainModuleDCEnd_V1`|152|在結束取消期間列舉針對應用程式定義域所載入的模組，並且針對所有應用程式定義域記錄。|  
+|`DomainModuleLoad_V1`|<span data-ttu-id="d5b35-313">151</span><span class="sxs-lookup"><span data-stu-id="d5b35-313">151</span></span>|<span data-ttu-id="d5b35-314">針對應用程式定義域載入模組時引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-314">Raised when a module is loaded for an application domain.</span></span>|  
+|`DomainModuleDCStart_V1`|<span data-ttu-id="d5b35-315">151</span><span class="sxs-lookup"><span data-stu-id="d5b35-315">151</span></span>|<span data-ttu-id="d5b35-316">在開始取消期間列舉針對應用程式定義域所載入的模組，並且針對所有應用程式定義域記錄。</span><span class="sxs-lookup"><span data-stu-id="d5b35-316">Enumerates modules loaded for an application domain during a start rundown, and is logged for all application domains.</span></span>|  
+|`DomainModuleDCEnd_V1`|<span data-ttu-id="d5b35-317">152</span><span class="sxs-lookup"><span data-stu-id="d5b35-317">152</span></span>|<span data-ttu-id="d5b35-318">在結束取消期間列舉針對應用程式定義域所載入的模組，並且針對所有應用程式定義域記錄。</span><span class="sxs-lookup"><span data-stu-id="d5b35-318">Enumerates modules loaded for an application domain during an end rundown, and is logged for all application domains.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="d5b35-319">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="d5b35-319">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="d5b35-320">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="d5b35-320">Field name</span></span>|<span data-ttu-id="d5b35-321">資料類型</span><span class="sxs-lookup"><span data-stu-id="d5b35-321">Data type</span></span>|<span data-ttu-id="d5b35-322">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-322">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|識別這個模組所屬的組件。|  
-|AssemblyID|win:UInt64|這個模組所在之組件的 ID。|  
-|AppDomainID|win:UInt64|使用這個模組之應用程式定義域的 ID。|  
-|ModuleFlags|win:UInt32|0x1：定義域中性模組。<br /><br /> 0x2：模組具有原生映像。<br /><br /> 0x4：動態模組。<br /><br /> 0x8：資訊清單模組。|  
-|Reserved1|win:UInt32|保留的欄位。|  
-|ModuleILPath|win:UnicodeString|模組之 MSIL 映像的路徑，或動態模組名稱 (如果它是動態組件 (以 Null 終止) 的話)。|  
-|ModuleNativePath|win:UnicodeString|模組原生映像的路徑 (如果存在的話 (以 Null 終止))。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
+|<span data-ttu-id="d5b35-323">ModuleID</span><span class="sxs-lookup"><span data-stu-id="d5b35-323">ModuleID</span></span>|<span data-ttu-id="d5b35-324">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-324">win:UInt64</span></span>|<span data-ttu-id="d5b35-325">識別這個模組所屬的組件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-325">Identifies the assembly to which this module belongs.</span></span>|  
+|<span data-ttu-id="d5b35-326">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="d5b35-326">AssemblyID</span></span>|<span data-ttu-id="d5b35-327">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-327">win:UInt64</span></span>|<span data-ttu-id="d5b35-328">這個模組所在之組件的 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-328">ID of the assembly in which this module resides.</span></span>|  
+|<span data-ttu-id="d5b35-329">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="d5b35-329">AppDomainID</span></span>|<span data-ttu-id="d5b35-330">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-330">win:UInt64</span></span>|<span data-ttu-id="d5b35-331">使用這個模組之應用程式定義域的 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-331">ID of the application domain in which this module is used.</span></span>|  
+|<span data-ttu-id="d5b35-332">ModuleFlags</span><span class="sxs-lookup"><span data-stu-id="d5b35-332">ModuleFlags</span></span>|<span data-ttu-id="d5b35-333">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-333">win:UInt32</span></span>|<span data-ttu-id="d5b35-334">0x1：定義域中性模組。</span><span class="sxs-lookup"><span data-stu-id="d5b35-334">0x1: Domain neutral module.</span></span><br /><br /> <span data-ttu-id="d5b35-335">0x2：模組具有原生映像。</span><span class="sxs-lookup"><span data-stu-id="d5b35-335">0x2: Module has a native image.</span></span><br /><br /> <span data-ttu-id="d5b35-336">0x4：動態模組。</span><span class="sxs-lookup"><span data-stu-id="d5b35-336">0x4: Dynamic module.</span></span><br /><br /> <span data-ttu-id="d5b35-337">0x8：資訊清單模組。</span><span class="sxs-lookup"><span data-stu-id="d5b35-337">0x8: Manifest module.</span></span>|  
+|<span data-ttu-id="d5b35-338">Reserved1</span><span class="sxs-lookup"><span data-stu-id="d5b35-338">Reserved1</span></span>|<span data-ttu-id="d5b35-339">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-339">win:UInt32</span></span>|<span data-ttu-id="d5b35-340">保留的欄位。</span><span class="sxs-lookup"><span data-stu-id="d5b35-340">Reserved field.</span></span>|  
+|<span data-ttu-id="d5b35-341">ModuleILPath</span><span class="sxs-lookup"><span data-stu-id="d5b35-341">ModuleILPath</span></span>|<span data-ttu-id="d5b35-342">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-342">win:UnicodeString</span></span>|<span data-ttu-id="d5b35-343">模組之 MSIL 映像的路徑，或動態模組名稱 (如果它是動態組件 (以 Null 終止) 的話)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-343">Path of the MSIL image for the module, or dynamic module name if it is a dynamic assembly (null-terminated).</span></span>|  
+|<span data-ttu-id="d5b35-344">ModuleNativePath</span><span class="sxs-lookup"><span data-stu-id="d5b35-344">ModuleNativePath</span></span>|<span data-ttu-id="d5b35-345">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-345">win:UnicodeString</span></span>|<span data-ttu-id="d5b35-346">模組原生映像的路徑 (如果存在的話 (以 Null 終止))。</span><span class="sxs-lookup"><span data-stu-id="d5b35-346">Path of the module native image, if present (null-terminated).</span></span>|  
+|<span data-ttu-id="d5b35-347">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="d5b35-347">ClrInstanceID</span></span>|<span data-ttu-id="d5b35-348">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d5b35-348">win:UInt16</span></span>|<span data-ttu-id="d5b35-349">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="d5b35-349">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="d5b35-350">回到頁首</span><span class="sxs-lookup"><span data-stu-id="d5b35-350">Back to top</span></span>](#top)  
   
 <a name="module_range_events"></a>   
-## <a name="module-range-events"></a>模組範圍事件  
- 下表說明關鍵字和層級。  
+## <a name="module-range-events"></a><span data-ttu-id="d5b35-351">模組範圍事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-351">Module Range Events</span></span>  
+ <span data-ttu-id="d5b35-352">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="d5b35-352">The following table shows the keyword and level.</span></span>  
   
-|引發事件的關鍵字|事件|層級|  
+|<span data-ttu-id="d5b35-353">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="d5b35-353">Keyword for raising the event</span></span>|<span data-ttu-id="d5b35-354">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-354">Event</span></span>|<span data-ttu-id="d5b35-355">層級</span><span class="sxs-lookup"><span data-stu-id="d5b35-355">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`PerfTrackKeyWord`)|`ModuleRange`|告知性 (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCStart`|告知性 (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|告知性 (4)|  
+|<span data-ttu-id="d5b35-356">`PerfTrackKeyWord`)</span><span class="sxs-lookup"><span data-stu-id="d5b35-356">`PerfTrackKeyWord`)</span></span>|`ModuleRange`|<span data-ttu-id="d5b35-357">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-357">Informational (4)</span></span>|  
+|`PerfTrackKeyWord`|`ModuleRangeDCStart`|<span data-ttu-id="d5b35-358">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-358">Informational (4)</span></span>|  
+|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|<span data-ttu-id="d5b35-359">告知性 (4)</span><span class="sxs-lookup"><span data-stu-id="d5b35-359">Informational (4)</span></span>|  
   
- 下表說明事件資訊。  
+ <span data-ttu-id="d5b35-360">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="d5b35-360">The following table shows the event information.</span></span>  
   
-|事件|事件 ID|描述|  
+|<span data-ttu-id="d5b35-361">事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-361">Event</span></span>|<span data-ttu-id="d5b35-362">事件 ID</span><span class="sxs-lookup"><span data-stu-id="d5b35-362">Event ID</span></span>|<span data-ttu-id="d5b35-363">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-363">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ModuleRange`|158|如果已載入的原生映像產生器 (NGen) 已使用 IBC 最佳化，就會出現這個事件，其中包含有關 NGen 映像作用範圍的資訊。|  
-|`ModuleRangeDCStart`|160|在開始取消期間引發的 `ModuleRange` 事件。|  
-|`ModuleRangeDCEnd`|161|在結束取消期間引發的 `ModuleRange` 事件。|  
+|`ModuleRange`|<span data-ttu-id="d5b35-364">158</span><span class="sxs-lookup"><span data-stu-id="d5b35-364">158</span></span>|<span data-ttu-id="d5b35-365">如果已載入的原生映像產生器 (NGen) 已使用 IBC 最佳化，就會出現這個事件，其中包含有關 NGen 映像作用範圍的資訊。</span><span class="sxs-lookup"><span data-stu-id="d5b35-365">This event is present if a loaded Native Image Generator (NGen) image has been optimized with IBC and contains information about the hot sections of the NGen image.</span></span>|  
+|`ModuleRangeDCStart`|<span data-ttu-id="d5b35-366">160</span><span class="sxs-lookup"><span data-stu-id="d5b35-366">160</span></span>|<span data-ttu-id="d5b35-367">在開始取消期間引發的 `ModuleRange` 事件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-367">A `ModuleRange` event fired at the start of a rundown.</span></span>|  
+|`ModuleRangeDCEnd`|<span data-ttu-id="d5b35-368">161</span><span class="sxs-lookup"><span data-stu-id="d5b35-368">161</span></span>|<span data-ttu-id="d5b35-369">在結束取消期間引發的 `ModuleRange` 事件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-369">A `ModuleRange` event fired at the end of a rundown.</span></span>|  
   
- 下表說明事件資料。  
+ <span data-ttu-id="d5b35-370">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="d5b35-370">The following table shows the event data.</span></span>  
   
-|欄位名稱|資料類型|描述|  
+|<span data-ttu-id="d5b35-371">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="d5b35-371">Field name</span></span>|<span data-ttu-id="d5b35-372">資料類型</span><span class="sxs-lookup"><span data-stu-id="d5b35-372">Data type</span></span>|<span data-ttu-id="d5b35-373">描述</span><span class="sxs-lookup"><span data-stu-id="d5b35-373">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|載入 CLR 的多個執行個體時，可在處理序中唯一識別 CLR 的特定執行個體。|  
-|ModuleID|win:UInt64|識別這個模組所屬的組件。|  
-|RangeBegin|win:UInt32|模組中的位移，表示指定範圍類別的起始範圍。|  
-|RangeSize|win:UInt32|指定範圍的大小 (以位元組為單位)。|  
-|RangeType|win:UInt32|單一值 0x4，用來代表非作用 IBC 範圍。 此欄位在未來可以代表更多值。|  
-|RangeSize1|win:UInt32|0 表示不正確的資料。|  
-|RangeBegin2|win:UnicodeString||  
+|<span data-ttu-id="d5b35-374">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="d5b35-374">ClrInstanceID</span></span>|<span data-ttu-id="d5b35-375">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d5b35-375">win:UInt16</span></span>|<span data-ttu-id="d5b35-376">載入 CLR 的多個執行個體時，可在處理序中唯一識別 CLR 的特定執行個體。</span><span class="sxs-lookup"><span data-stu-id="d5b35-376">Uniquely identifies a specific instance of the CLR in a process if multiple instances of the CLR are loaded.</span></span>|  
+|<span data-ttu-id="d5b35-377">ModuleID</span><span class="sxs-lookup"><span data-stu-id="d5b35-377">ModuleID</span></span>|<span data-ttu-id="d5b35-378">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="d5b35-378">win:UInt64</span></span>|<span data-ttu-id="d5b35-379">識別這個模組所屬的組件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-379">Identifies the assembly to which this module belongs.</span></span>|  
+|<span data-ttu-id="d5b35-380">RangeBegin</span><span class="sxs-lookup"><span data-stu-id="d5b35-380">RangeBegin</span></span>|<span data-ttu-id="d5b35-381">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-381">win:UInt32</span></span>|<span data-ttu-id="d5b35-382">模組中的位移，表示指定範圍類別的起始範圍。</span><span class="sxs-lookup"><span data-stu-id="d5b35-382">The offset in the module that represents the start of the range for the specified range type.</span></span>|  
+|<span data-ttu-id="d5b35-383">RangeSize</span><span class="sxs-lookup"><span data-stu-id="d5b35-383">RangeSize</span></span>|<span data-ttu-id="d5b35-384">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-384">win:UInt32</span></span>|<span data-ttu-id="d5b35-385">指定範圍的大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="d5b35-385">The size of the specified range in bytes.</span></span>|  
+|<span data-ttu-id="d5b35-386">RangeType</span><span class="sxs-lookup"><span data-stu-id="d5b35-386">RangeType</span></span>|<span data-ttu-id="d5b35-387">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-387">win:UInt32</span></span>|<span data-ttu-id="d5b35-388">單一值 0x4，用來代表非作用 IBC 範圍。</span><span class="sxs-lookup"><span data-stu-id="d5b35-388">A single value, 0x4, to represent Cold IBC ranges.</span></span> <span data-ttu-id="d5b35-389">此欄位在未來可以代表更多值。</span><span class="sxs-lookup"><span data-stu-id="d5b35-389">This field can represent more values in the future.</span></span>|  
+|<span data-ttu-id="d5b35-390">RangeSize1</span><span class="sxs-lookup"><span data-stu-id="d5b35-390">RangeSize1</span></span>|<span data-ttu-id="d5b35-391">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d5b35-391">win:UInt32</span></span>|<span data-ttu-id="d5b35-392">0 表示不正確的資料。</span><span class="sxs-lookup"><span data-stu-id="d5b35-392">0 indicates bad data.</span></span>|  
+|<span data-ttu-id="d5b35-393">RangeBegin2</span><span class="sxs-lookup"><span data-stu-id="d5b35-393">RangeBegin2</span></span>|<span data-ttu-id="d5b35-394">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d5b35-394">win:UnicodeString</span></span>||  
   
-### <a name="remarks"></a>備註  
- 如果 .NET Framework 處理序中載入的 NGen 影像已使用 IBC 最佳化，則包含 NGen 影像中作用範圍的 `ModuleRange` 事件會與其 `moduleID` 和 `ClrInstanceID`一起記錄。  如果 NGen 影像未經過 IBC 最佳化，則不會記錄這個事件。 若要判斷模組名稱，這個事件必須以模組載入 ETW 事件定序。  
+### <a name="remarks"></a><span data-ttu-id="d5b35-395">備註</span><span class="sxs-lookup"><span data-stu-id="d5b35-395">Remarks</span></span>  
+ <span data-ttu-id="d5b35-396">如果 .NET Framework 處理序中載入的 NGen 影像已使用 IBC 最佳化，則包含 NGen 影像中作用範圍的 `ModuleRange` 事件會與其 `moduleID` 和 `ClrInstanceID`一起記錄。</span><span class="sxs-lookup"><span data-stu-id="d5b35-396">If a loaded NGen image in a .NET Framework process has been optimized with IBC, the `ModuleRange` event that contains the hot ranges in the NGen image is logged along with its `moduleID` and `ClrInstanceID`.</span></span>  <span data-ttu-id="d5b35-397">如果 NGen 影像未經過 IBC 最佳化，則不會記錄這個事件。</span><span class="sxs-lookup"><span data-stu-id="d5b35-397">If the NGen image is not optimized with IBC, this event isn't logged.</span></span> <span data-ttu-id="d5b35-398">若要判斷模組名稱，這個事件必須以模組載入 ETW 事件定序。</span><span class="sxs-lookup"><span data-stu-id="d5b35-398">To determine the module name, this event must be collated with the module load ETW events.</span></span>  
   
- 這個事件的承載大小是可變的， `Count` 欄位會指出事件中包含的範圍位移數。  這個事件必須以 Windows `IStart` 事件定序，以便判斷實際範圍。 每當載入影像時，就會記錄 Windows 影像載入事件，並且包含所載入影像的虛擬位址。  
+ <span data-ttu-id="d5b35-399">這個事件的承載大小是可變的， `Count` 欄位會指出事件中包含的範圍位移數。</span><span class="sxs-lookup"><span data-stu-id="d5b35-399">The payload size for this event is variable; the `Count` field indicates the number of range offsets contained in the event.</span></span>  <span data-ttu-id="d5b35-400">這個事件必須以 Windows `IStart` 事件定序，以便判斷實際範圍。</span><span class="sxs-lookup"><span data-stu-id="d5b35-400">This event has to be collated with the Windows `IStart` event to determine the actual ranges.</span></span> <span data-ttu-id="d5b35-401">每當載入影像時，就會記錄 Windows 影像載入事件，並且包含所載入影像的虛擬位址。</span><span class="sxs-lookup"><span data-stu-id="d5b35-401">The Windows Image Load event is logged whenever an image is loaded, and contains the virtual address of the loaded image.</span></span>  
   
- 模組範圍事件會在任何 ETW 層級大於或等於 4 且分類為告知性事件時引發。  
+ <span data-ttu-id="d5b35-402">模組範圍事件會在任何 ETW 層級大於或等於 4 且分類為告知性事件時引發。</span><span class="sxs-lookup"><span data-stu-id="d5b35-402">Module range events are fired under any ETW level greater than or equal to 4 and are classified as informational events.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="d5b35-403">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d5b35-403">See Also</span></span>  
+ [<span data-ttu-id="d5b35-404">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="d5b35-404">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

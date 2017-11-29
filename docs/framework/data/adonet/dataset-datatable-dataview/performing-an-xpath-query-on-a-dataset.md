@@ -1,25 +1,31 @@
 ---
-title: "在 DataSet 上執行 XPath 查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "對資料集執行 XPath 查詢"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在 DataSet 上執行 XPath 查詢
-可利用同步處理之 <xref:System.Data.DataSet> 與 <xref:System.Xml.XmlDataDocument> 間的關聯性來使用 XML 服務 \(例如 XML 路徑語言 \(XPath\) 查詢\)，而這些服務可讓您存取 **XmlDataDocument**，且執行某些功能會比直接存取 **DataSet** 更方便。  例如，不需使用 <xref:System.Data.DataTable> 的 **Select** 方法，在 **DataSet** 內巡覽與其他資料表的關聯性，而可以在與 **DataSet** 同步處理的 **XmlDataDocument** 上執行 XPath 查詢，以取得 <xref:System.Xml.XmlNodeList> 格式的 XML 項目清單。  **XmlNodeList** 中的節點在轉換為 <xref:System.Xml.XmlElement> 節點後，可以接著傳遞給 **XmlDataDocument** 的 **GetRowFromElement** 方法，以將相符的 <xref:System.Data.DataRow> 參考傳回給已同步處理之 **DataSet** 內的資料表資料列。  
+# <a name="performing-an-xpath-query-on-a-dataset"></a><span data-ttu-id="1105e-102">對資料集執行 XPath 查詢</span><span class="sxs-lookup"><span data-stu-id="1105e-102">Performing an XPath Query on a DataSet</span></span>
+<span data-ttu-id="1105e-103">同步處理之間的關聯性<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>可讓您使用 XML 服務，例如 XML 路徑語言 (XPath) 查詢，存取**XmlDataDocument**且執行某些功能更方便比存取**資料集**直接。</span><span class="sxs-lookup"><span data-stu-id="1105e-103">The relationship between a synchronized <xref:System.Data.DataSet> and <xref:System.Xml.XmlDataDocument> allows you to make use of XML services, such as the XML Path Language (XPath) query, that access the **XmlDataDocument** and can perform certain functionality more conveniently than accessing the **DataSet** directly.</span></span> <span data-ttu-id="1105e-104">例如，而不是使用**選取**方法<xref:System.Data.DataTable>巡覽關聯性中的其他資料表到**資料集**，您可以針對執行 XPath 查詢**XmlDataDocument**同步處理與**資料集**，若要取得的 XML 項目清單的形式<xref:System.Xml.XmlNodeList>。</span><span class="sxs-lookup"><span data-stu-id="1105e-104">For example, rather than using the **Select** method of a <xref:System.Data.DataTable> to navigate relationships to other tables in a **DataSet**, you can perform an XPath query on an **XmlDataDocument** that is synchronized with the **DataSet**, to get a list of XML elements in the form of an <xref:System.Xml.XmlNodeList>.</span></span> <span data-ttu-id="1105e-105">中的節點**XmlNodeList**轉換為<xref:System.Xml.XmlElement>節點，然後傳遞至**Xmldatadocument**方法**XmlDataDocument**，表示傳回比對<xref:System.Data.DataRow>處於同步處理資料表的資料列的參考**資料集**。</span><span class="sxs-lookup"><span data-stu-id="1105e-105">The nodes in the **XmlNodeList**, cast as <xref:System.Xml.XmlElement> nodes, can then be passed to the **GetRowFromElement** method of the **XmlDataDocument**, to return matching <xref:System.Data.DataRow> references to the rows of the table in the synchronized **DataSet**.</span></span>  
   
- 例如，下列程式碼範例執行「孫代」XPath 查詢。  會在 \<legacyBold\>DataSet\<\/legacyBold\> 內填入三個資料表：**Customers**、**Orders** 和 **OrderDetails**。  範例中，先在 **Customers** 和 **Orders** 資料表間建立父子關係，然後在 **Orders** 和 **OrderDetails** 資料表間建立父子關係。  接著執行 XPath 查詢以傳回 **Customers** 節點的 **XmlNodeList**，其中身為下下層的 **OrderDetails** 節點具有值為 43 的 **ProductID** 節點。  就本質上而言，此範例使用 XPath 查詢來判斷哪些客戶訂購 **ProductID** 為 43 的產品。  
+ <span data-ttu-id="1105e-106">例如，下列程式碼範例執行「孫代」XPath 查詢。</span><span class="sxs-lookup"><span data-stu-id="1105e-106">For example, the following code sample performs a "grandchild" XPath query.</span></span> <span data-ttu-id="1105e-107">**資料集**會填入三個資料表：**客戶**，**訂單**，和**OrderDetails**。</span><span class="sxs-lookup"><span data-stu-id="1105e-107">The **DataSet** is filled with three tables: **Customers**, **Orders**, and **OrderDetails**.</span></span> <span data-ttu-id="1105e-108">在範例中，父子式關聯性第一次建立之間**客戶**和**訂單**資料表，以及**訂單**和**OrderDetails**資料表。</span><span class="sxs-lookup"><span data-stu-id="1105e-108">In the sample, a parent-child relation is first created between the **Customers** and **Orders** tables, and between the **Orders** and **OrderDetails** tables.</span></span> <span data-ttu-id="1105e-109">接著執行 XPath 查詢以傳回**XmlNodeList**的**客戶**節點的孫系**OrderDetails**節點有**ProductID**節點具有值為 43。</span><span class="sxs-lookup"><span data-stu-id="1105e-109">An XPath query is then performed to return an **XmlNodeList** of **Customers** nodes where a grandchild **OrderDetails** node has a **ProductID** node with the value of 43.</span></span> <span data-ttu-id="1105e-110">基本上，範例會使用 XPath 查詢來判斷哪些客戶訂購的產品**ProductID**為 43。</span><span class="sxs-lookup"><span data-stu-id="1105e-110">In essence, the sample is using the XPath query to determine which customers have ordered the product that has the **ProductID** of 43.</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -105,6 +111,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## 請參閱  
- [DataSet 和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1105e-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1105e-111">See Also</span></span>  
+ [<span data-ttu-id="1105e-112">資料集和 XmlDataDocument 同步處理</span><span class="sxs-lookup"><span data-stu-id="1105e-112">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="1105e-113">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="1105e-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

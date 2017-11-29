@@ -1,30 +1,32 @@
 ---
-title: "&lt;system.runtime.serialization&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;system.runtime.serialization&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5a47417ded6e0917fadf2134eed5997d9d3b3d74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;system.runtime.serialization&gt;
-代表 <xref:System.Runtime.Serialization> 命名空間區段的根項目，而且包含用來設定 <xref:System.Runtime.Serialization.DataContractSerializer> 選項的項目。  
+# <a name="ltsystemruntimeserializationgt"></a><span data-ttu-id="ba1cd-102">&lt;system.runtime.serialization&gt;</span><span class="sxs-lookup"><span data-stu-id="ba1cd-102">&lt;system.runtime.serialization&gt;</span></span>
+<span data-ttu-id="ba1cd-103">代表 <xref:System.Runtime.Serialization> 命名空間區段的根項目，而且包含用來設定 <xref:System.Runtime.Serialization.DataContractSerializer> 選項的項目。</span><span class="sxs-lookup"><span data-stu-id="ba1cd-103">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
- system.runtime.serialization  
+ <span data-ttu-id="ba1cd-104">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="ba1cd-104">system.runtime.serialization</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="ba1cd-105">語法</span><span class="sxs-lookup"><span data-stu-id="ba1cd-105">Syntax</span></span>  
   
-```  
-  
+```xml  
 <configuration>  
   <system.runtime.serialization>  
     <dataContractSerializer ignoreExtensionDataObject="Boolean"  
@@ -41,25 +43,25 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## 屬性和項目  
- 下列各節說明屬性、子元素和父元素  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ba1cd-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="ba1cd-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="ba1cd-107">下列各節說明屬性、子元素和父元素</span><span class="sxs-lookup"><span data-stu-id="ba1cd-107">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="ba1cd-108">屬性</span><span class="sxs-lookup"><span data-stu-id="ba1cd-108">Attributes</span></span>  
+ <span data-ttu-id="ba1cd-109">無。</span><span class="sxs-lookup"><span data-stu-id="ba1cd-109">None.</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="ba1cd-110">子項目</span><span class="sxs-lookup"><span data-stu-id="ba1cd-110">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|能夠在還原序列化時，加入要使用的已知型別。|  
+|<span data-ttu-id="ba1cd-111">項目</span><span class="sxs-lookup"><span data-stu-id="ba1cd-111">Element</span></span>|<span data-ttu-id="ba1cd-112">說明</span><span class="sxs-lookup"><span data-stu-id="ba1cd-112">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ba1cd-113">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="ba1cd-113">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="ba1cd-114">能夠在還原序列化時，加入要使用的已知型別。</span><span class="sxs-lookup"><span data-stu-id="ba1cd-114">Enables addition of known types to be used when deserialization.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="ba1cd-115">父項目</span><span class="sxs-lookup"><span data-stu-id="ba1cd-115">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<configuration\> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|組態的最上層項目。|  
+|<span data-ttu-id="ba1cd-116">項目</span><span class="sxs-lookup"><span data-stu-id="ba1cd-116">Element</span></span>|<span data-ttu-id="ba1cd-117">說明</span><span class="sxs-lookup"><span data-stu-id="ba1cd-117">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ba1cd-118">\<configuration> 項目</span><span class="sxs-lookup"><span data-stu-id="ba1cd-118">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="ba1cd-119">組態的最上層項目。</span><span class="sxs-lookup"><span data-stu-id="ba1cd-119">The top level element for configuration.</span></span>|  
   
-## 請參閱  
- <xref:System.Runtime.Serialization>   
- [使用資料合約](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a><span data-ttu-id="ba1cd-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ba1cd-120">See Also</span></span>  
+ <xref:System.Runtime.Serialization>  
+ [<span data-ttu-id="ba1cd-121">使用資料合約</span><span class="sxs-lookup"><span data-stu-id="ba1cd-121">Using Data Contracts</span></span>](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [<span data-ttu-id="ba1cd-122">資料合約已知型別</span><span class="sxs-lookup"><span data-stu-id="ba1cd-122">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

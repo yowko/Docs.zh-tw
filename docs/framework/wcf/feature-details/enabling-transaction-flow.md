@@ -1,85 +1,87 @@
 ---
-title: "啟用交易流程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "交易 [WCF], 啟用流程"
+title: "啟用異動流程"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ef6880502a4d25f74d3c1cd72664c1ab818424b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 啟用交易流程
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供靈活自如的選項，可控制交易流程。服務的交易流程設定可以使用屬性和組態的組合來表示。  
+# <a name="enabling-transaction-flow"></a><span data-ttu-id="c18a3-102">啟用異動流程</span><span class="sxs-lookup"><span data-stu-id="c18a3-102">Enabling Transaction Flow</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="c18a3-103"> 提供靈活自如的選項，可控制交易流程。</span><span class="sxs-lookup"><span data-stu-id="c18a3-103"> provides highly flexible options for controlling transaction flow.</span></span> <span data-ttu-id="c18a3-104">服務的交易流程設定可以使用屬性和組態的組合來表示。</span><span class="sxs-lookup"><span data-stu-id="c18a3-104">A service's transaction flow settings can be expressed using a combination of attributes and configuration.</span></span>  
   
-## 交易流程設定  
- 交易流程設定是針對服務端點所產生的設定，而且是下列三個值交集的結果：  
+## <a name="transaction-flow-settings"></a><span data-ttu-id="c18a3-105">交易流程設定</span><span class="sxs-lookup"><span data-stu-id="c18a3-105">Transaction Flow Settings</span></span>  
+ <span data-ttu-id="c18a3-106">交易流程設定是針對服務端點所產生的設定，而且是下列三個值交集的結果：</span><span class="sxs-lookup"><span data-stu-id="c18a3-106">Transaction flow settings are generated for a service endpoint as a result of the intersection of the following three values:</span></span>  
   
--   針對服務合約中每個方法所指定的 <xref:System.ServiceModel.TransactionFlowAttribute> 屬性。  
+-   <span data-ttu-id="c18a3-107">針對服務合約中每個方法所指定的 <xref:System.ServiceModel.TransactionFlowAttribute> 屬性。</span><span class="sxs-lookup"><span data-stu-id="c18a3-107">The <xref:System.ServiceModel.TransactionFlowAttribute> attribute specified for each method in the service contract.</span></span>  
   
--   特定繫結中的 `TransactionFlow` 繫結屬性。  
+-   <span data-ttu-id="c18a3-108">特定繫結中的 `TransactionFlow` 繫結屬性。</span><span class="sxs-lookup"><span data-stu-id="c18a3-108">The `TransactionFlow` binding property in the specific binding.</span></span>  
   
--   特定繫結中的 `TransactionFlowProtocol` 繫結屬性。`TransactionFlowProtocol` 繫結屬性可讓您選擇使用兩種可用來流動交易的不同交易通訊協定，下列章節會簡要說明其中的每一種。  
+-   <span data-ttu-id="c18a3-109">特定繫結中的 `TransactionFlowProtocol` 繫結屬性。</span><span class="sxs-lookup"><span data-stu-id="c18a3-109">The `TransactionFlowProtocol` binding property in the specific binding.</span></span> <span data-ttu-id="c18a3-110">`TransactionFlowProtocol` 繫結屬性可讓您選擇使用兩種可用來流動交易的不同交易通訊協定，</span><span class="sxs-lookup"><span data-stu-id="c18a3-110">The `TransactionFlowProtocol` binding property enables you to choose among two different transaction protocols that you can use to flow a transaction.</span></span> <span data-ttu-id="c18a3-111">下列章節會簡要說明其中的每一種。</span><span class="sxs-lookup"><span data-stu-id="c18a3-111">The following sections briefly describe each of them.</span></span>  
   
-### WS\-AtomicTransaction 通訊協定  
- WS\-AtomicTransaction \(WS\-AT\) 通訊協定在需要可與協力廠商堆疊互通的案例中很有用。  
+### <a name="ws-atomictransaction-protocol"></a><span data-ttu-id="c18a3-112">WS-AtomicTransaction 通訊協定</span><span class="sxs-lookup"><span data-stu-id="c18a3-112">WS-AtomicTransaction Protocol</span></span>  
+ <span data-ttu-id="c18a3-113">WS-AtomicTransaction (WS-AT) 通訊協定在需要可與協力廠商堆疊互通的案例中很有用。</span><span class="sxs-lookup"><span data-stu-id="c18a3-113">The WS-AtomicTransaction (WS-AT) protocol is useful for scenarios when interoperability with third-party protocol stacks is required.</span></span>  
   
-### OleTransactions 通訊協定  
- 在不需要可與協力廠商通訊協定堆疊互通，服務的部署者事先知道 WS\-AT 通訊協定已於本機上停用，或是現有的網路拓撲不利於使用 WS\-AT 等案例中，OleTransactions 通訊協定都會非常有用。  
+### <a name="oletransactions-protocol"></a><span data-ttu-id="c18a3-114">OleTransactions 通訊協定</span><span class="sxs-lookup"><span data-stu-id="c18a3-114">OleTransactions Protocol</span></span>  
+ <span data-ttu-id="c18a3-115">在不需要可與協力廠商通訊協定堆疊互通，服務的部署者事先知道 WS-AT 通訊協定已於本機上停用，或是現有的網路拓撲不利於使用 WS-AT 等案例中，OleTransactions 通訊協定都會非常有用。</span><span class="sxs-lookup"><span data-stu-id="c18a3-115">The OleTransactions protocol is useful for scenarios when interoperability with third-party protocol stacks is not required, and the deployer of a service knows in advance that the WS-AT protocol service is disabled locally or the existing network topology does not favor the usage of WS-AT.</span></span>  
   
- 下表顯示可以使用這些不同組合產生的不同交易流程類型。  
+ <span data-ttu-id="c18a3-116">下表顯示可以使用這些不同組合產生的不同交易流程類型。</span><span class="sxs-lookup"><span data-stu-id="c18a3-116">The following table shows the different types of transaction flows that can be generated using these various combinations.</span></span>  
   
-|TransactionFlow<br /><br /> 繫結|TransactionFlow 繫結屬性|TransactionFlowProtocol 繫結通訊協定|交易流程的類型|  
-|----------------------------|--------------------------|------------------------------------|-------------|  
-|Mandatory|true|WS\-AT|交易必須以可互通的 WS\-AT 格式來流動。|  
-|Mandatory|true|OleTransactions|交易必須以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式來流動。|  
-|Mandatory|false|不適用|由於不是有效的組態而不適用。|  
-|Allowed|true|WS\-AT|交易可以用可互通的 WS\-AT 格式來流動。|  
-|Allowed|true|OleTransactions|交易可以用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式來流動。|  
-|Allowed|false|任何值|未流動交易。|  
-|NotAllowed|任何值|任何值|未流動交易。|  
+|<span data-ttu-id="c18a3-117">TransactionFlow</span><span class="sxs-lookup"><span data-stu-id="c18a3-117">TransactionFlow</span></span><br /><br /> <span data-ttu-id="c18a3-118">繫結</span><span class="sxs-lookup"><span data-stu-id="c18a3-118">binding</span></span>|<span data-ttu-id="c18a3-119">TransactionFlow 繫結屬性</span><span class="sxs-lookup"><span data-stu-id="c18a3-119">TransactionFlow binding property</span></span>|<span data-ttu-id="c18a3-120">TransactionFlowProtocol 繫結通訊協定</span><span class="sxs-lookup"><span data-stu-id="c18a3-120">TransactionFlowProtocol binding protocol</span></span>|<span data-ttu-id="c18a3-121">交易流程的類型</span><span class="sxs-lookup"><span data-stu-id="c18a3-121">Type of transaction flow</span></span>|  
+|---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
+|<span data-ttu-id="c18a3-122">強制性</span><span class="sxs-lookup"><span data-stu-id="c18a3-122">Mandatory</span></span>|<span data-ttu-id="c18a3-123">true</span><span class="sxs-lookup"><span data-stu-id="c18a3-123">true</span></span>|<span data-ttu-id="c18a3-124">WS-AT</span><span class="sxs-lookup"><span data-stu-id="c18a3-124">WS-AT</span></span>|<span data-ttu-id="c18a3-125">交易必須以可互通的 WS-AT 格式來流動。</span><span class="sxs-lookup"><span data-stu-id="c18a3-125">Transaction must be flowed in the interoperable WS-AT format.</span></span>|  
+|<span data-ttu-id="c18a3-126">強制性</span><span class="sxs-lookup"><span data-stu-id="c18a3-126">Mandatory</span></span>|<span data-ttu-id="c18a3-127">true</span><span class="sxs-lookup"><span data-stu-id="c18a3-127">true</span></span>|<span data-ttu-id="c18a3-128">OleTransactions</span><span class="sxs-lookup"><span data-stu-id="c18a3-128">OleTransactions</span></span>|<span data-ttu-id="c18a3-129">交易必須以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式來流動。</span><span class="sxs-lookup"><span data-stu-id="c18a3-129">Transaction must be flowed in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions format.</span></span>|  
+|<span data-ttu-id="c18a3-130">強制性</span><span class="sxs-lookup"><span data-stu-id="c18a3-130">Mandatory</span></span>|<span data-ttu-id="c18a3-131">false</span><span class="sxs-lookup"><span data-stu-id="c18a3-131">false</span></span>|<span data-ttu-id="c18a3-132">不適用</span><span class="sxs-lookup"><span data-stu-id="c18a3-132">Not applicable</span></span>|<span data-ttu-id="c18a3-133">由於不是有效的組態而不適用。</span><span class="sxs-lookup"><span data-stu-id="c18a3-133">Not applicable because this is an invalid configuration.</span></span>|  
+|<span data-ttu-id="c18a3-134">Allowed</span><span class="sxs-lookup"><span data-stu-id="c18a3-134">Allowed</span></span>|<span data-ttu-id="c18a3-135">true</span><span class="sxs-lookup"><span data-stu-id="c18a3-135">true</span></span>|<span data-ttu-id="c18a3-136">WS-AT</span><span class="sxs-lookup"><span data-stu-id="c18a3-136">WS-AT</span></span>|<span data-ttu-id="c18a3-137">交易可以用可互通的 WS-AT 格式來流動。</span><span class="sxs-lookup"><span data-stu-id="c18a3-137">Transaction may be flowed in the interoperable WS-AT format.</span></span>|  
+|<span data-ttu-id="c18a3-138">Allowed</span><span class="sxs-lookup"><span data-stu-id="c18a3-138">Allowed</span></span>|<span data-ttu-id="c18a3-139">true</span><span class="sxs-lookup"><span data-stu-id="c18a3-139">true</span></span>|<span data-ttu-id="c18a3-140">OleTransactions</span><span class="sxs-lookup"><span data-stu-id="c18a3-140">OleTransactions</span></span>|<span data-ttu-id="c18a3-141">交易可以用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式來流動。</span><span class="sxs-lookup"><span data-stu-id="c18a3-141">Transaction may be flowed in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions format.</span></span>|  
+|<span data-ttu-id="c18a3-142">Allowed</span><span class="sxs-lookup"><span data-stu-id="c18a3-142">Allowed</span></span>|<span data-ttu-id="c18a3-143">false</span><span class="sxs-lookup"><span data-stu-id="c18a3-143">false</span></span>|<span data-ttu-id="c18a3-144">任何值</span><span class="sxs-lookup"><span data-stu-id="c18a3-144">Any value</span></span>|<span data-ttu-id="c18a3-145">未流動交易。</span><span class="sxs-lookup"><span data-stu-id="c18a3-145">A transaction is not flowed.</span></span>|  
+|<span data-ttu-id="c18a3-146">NotAllowed</span><span class="sxs-lookup"><span data-stu-id="c18a3-146">NotAllowed</span></span>|<span data-ttu-id="c18a3-147">任何值</span><span class="sxs-lookup"><span data-stu-id="c18a3-147">Any value</span></span>|<span data-ttu-id="c18a3-148">任何值</span><span class="sxs-lookup"><span data-stu-id="c18a3-148">Any value</span></span>|<span data-ttu-id="c18a3-149">未流動交易。</span><span class="sxs-lookup"><span data-stu-id="c18a3-149">A transaction is not flowed.</span></span>|  
   
- 下表摘要說明訊息處理的結果。  
+ <span data-ttu-id="c18a3-150">下表摘要說明訊息處理的結果。</span><span class="sxs-lookup"><span data-stu-id="c18a3-150">The following table summarizes the message processing result.</span></span>  
   
-|傳入訊息|交易流程設定|交易標頭|訊息處理結果|  
-|----------|------------|----------|------------|  
-|交易符合預期的通訊協定格式|Allowed 或 Mandatory|`MustUnderstand` 等於 `true`。|處理序|  
-|交易不符合預期的通訊協定格式|Mandatory|`MustUnderstand` 等於 `false`。|由於需要交易而被拒絕|  
-|交易不符合預期的通訊協定格式|Allowed|`MustUnderstand` 等於 `false`。|由於不瞭解標頭而被拒絕|  
-|使用任何通訊協定格式的交易|NotAllowed|`MustUnderstand` 等於 `false`。|由於不瞭解標頭而被拒絕|  
-|無交易|Mandatory|N\/A|由於需要交易而被拒絕|  
-|無交易|Allowed|N\/A|處理序|  
-|無交易|NotAllowed|N\/A|處理序|  
+|<span data-ttu-id="c18a3-151">傳入訊息</span><span class="sxs-lookup"><span data-stu-id="c18a3-151">Incoming message</span></span>|<span data-ttu-id="c18a3-152">交易流程設定</span><span class="sxs-lookup"><span data-stu-id="c18a3-152">TransactionFlow setting</span></span>|<span data-ttu-id="c18a3-153">交易標頭</span><span class="sxs-lookup"><span data-stu-id="c18a3-153">Transaction header</span></span>|<span data-ttu-id="c18a3-154">訊息處理結果</span><span class="sxs-lookup"><span data-stu-id="c18a3-154">Message processing result</span></span>|  
+|----------------------|-----------------------------|------------------------|-------------------------------|  
+|<span data-ttu-id="c18a3-155">交易符合預期的通訊協定格式</span><span class="sxs-lookup"><span data-stu-id="c18a3-155">Transaction matches expected protocol format</span></span>|<span data-ttu-id="c18a3-156">Allowed 或 Mandatory</span><span class="sxs-lookup"><span data-stu-id="c18a3-156">Allowed or Mandatory</span></span>|<span data-ttu-id="c18a3-157">`MustUnderstand`等於 `true`。</span><span class="sxs-lookup"><span data-stu-id="c18a3-157">`MustUnderstand` equals `true`.</span></span>|<span data-ttu-id="c18a3-158">處理序</span><span class="sxs-lookup"><span data-stu-id="c18a3-158">Process</span></span>|  
+|<span data-ttu-id="c18a3-159">交易不符合預期的通訊協定格式</span><span class="sxs-lookup"><span data-stu-id="c18a3-159">Transaction does not match expected protocol format</span></span>|<span data-ttu-id="c18a3-160">強制</span><span class="sxs-lookup"><span data-stu-id="c18a3-160">Mandatory</span></span>|<span data-ttu-id="c18a3-161">`MustUnderstand`等於 `false`。</span><span class="sxs-lookup"><span data-stu-id="c18a3-161">`MustUnderstand` equals `false`.</span></span>|<span data-ttu-id="c18a3-162">由於需要異動而被拒絕</span><span class="sxs-lookup"><span data-stu-id="c18a3-162">Rejected because a transaction is required</span></span>|  
+|<span data-ttu-id="c18a3-163">交易不符合預期的通訊協定格式</span><span class="sxs-lookup"><span data-stu-id="c18a3-163">Transaction does not match expected protocol format</span></span>|<span data-ttu-id="c18a3-164">Allowed</span><span class="sxs-lookup"><span data-stu-id="c18a3-164">Allowed</span></span>|<span data-ttu-id="c18a3-165">`MustUnderstand`等於 `false`。</span><span class="sxs-lookup"><span data-stu-id="c18a3-165">`MustUnderstand` equals `false`.</span></span>|<span data-ttu-id="c18a3-166">由於不瞭解標頭而被拒絕</span><span class="sxs-lookup"><span data-stu-id="c18a3-166">Rejected because the header is not understood</span></span>|  
+|<span data-ttu-id="c18a3-167">使用任何通訊協定格式的交易</span><span class="sxs-lookup"><span data-stu-id="c18a3-167">Transaction using any protocol format</span></span>|<span data-ttu-id="c18a3-168">NotAllowed</span><span class="sxs-lookup"><span data-stu-id="c18a3-168">NotAllowed</span></span>|<span data-ttu-id="c18a3-169">`MustUnderstand`等於 `false`。</span><span class="sxs-lookup"><span data-stu-id="c18a3-169">`MustUnderstand` equals `false`.</span></span>|<span data-ttu-id="c18a3-170">由於不瞭解標頭而被拒絕</span><span class="sxs-lookup"><span data-stu-id="c18a3-170">Rejected because the header is not understood</span></span>|  
+|<span data-ttu-id="c18a3-171">無交易</span><span class="sxs-lookup"><span data-stu-id="c18a3-171">No transaction</span></span>|<span data-ttu-id="c18a3-172">強制性</span><span class="sxs-lookup"><span data-stu-id="c18a3-172">Mandatory</span></span>|<span data-ttu-id="c18a3-173">N/A</span><span class="sxs-lookup"><span data-stu-id="c18a3-173">N/A</span></span>|<span data-ttu-id="c18a3-174">由於需要交易而被拒絕</span><span class="sxs-lookup"><span data-stu-id="c18a3-174">Rejected because a transaction is required</span></span>|  
+|<span data-ttu-id="c18a3-175">無交易</span><span class="sxs-lookup"><span data-stu-id="c18a3-175">No transaction</span></span>|<span data-ttu-id="c18a3-176">Allowed</span><span class="sxs-lookup"><span data-stu-id="c18a3-176">Allowed</span></span>|<span data-ttu-id="c18a3-177">N/A</span><span class="sxs-lookup"><span data-stu-id="c18a3-177">N/A</span></span>|<span data-ttu-id="c18a3-178">處理序</span><span class="sxs-lookup"><span data-stu-id="c18a3-178">Process</span></span>|  
+|<span data-ttu-id="c18a3-179">無交易</span><span class="sxs-lookup"><span data-stu-id="c18a3-179">No transaction</span></span>|<span data-ttu-id="c18a3-180">NotAllowed</span><span class="sxs-lookup"><span data-stu-id="c18a3-180">NotAllowed</span></span>|<span data-ttu-id="c18a3-181">N/A</span><span class="sxs-lookup"><span data-stu-id="c18a3-181">N/A</span></span>|<span data-ttu-id="c18a3-182">處理序</span><span class="sxs-lookup"><span data-stu-id="c18a3-182">Process</span></span>|  
   
- 雖然合約中的每個方法可能都有不同的交易流程需求，但是交易流程通訊協定設定的範圍是位於繫結層級。這表示端點相同 \(繫結因而相同\) 的所有方法也有相同的原則允許或要求交易流程，而且這些方法在可行的情況下擁有相同的交易通訊協定。  
+ <span data-ttu-id="c18a3-183">雖然合約中的每個方法可能都有不同的交易流程需求，但是交易流程通訊協定設定的範圍是位於繫結層級。</span><span class="sxs-lookup"><span data-stu-id="c18a3-183">While each method on a contract can have different transaction flow requirements, the transaction flow protocol setting is scoped at the level of the binding.</span></span> <span data-ttu-id="c18a3-184">這表示端點相同 (繫結因而相同) 的所有方法也有相同的原則允許或要求交易流程，而且這些方法在可行的情況下擁有相同的交易通訊協定。</span><span class="sxs-lookup"><span data-stu-id="c18a3-184">This means that all methods that share the same endpoint (and therefore the same binding) also share the same policy allowing or requiring transaction flow, as well as the same transaction protocol if applicable.</span></span>  
   
-## 啟用方法層級上的交易流程  
- 在服務合約中的所有方法不一定有相同的交易流程需求。因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會提供屬性架構機制，以便呈現每一種方法的交易流程偏好設定。指定服務作業接受交易標頭時所位於之層級的 <xref:System.ServiceModel.TransactionFlowAttribute> 會完成這項動作。若要啟用交易流程，您應該要使用這個屬性來標記您的服務合約方法。這個屬性會接受其中一個 <xref:System.ServiceModel.TransactionFlowOption> 列舉值，其預設值為 <xref:System.ServiceModel.TransactionFlowOption>。如果已指定 <xref:System.ServiceModel.TransactionFlowOption> 以外的任何值，即表示此方法一定不能是單向方法。開發人員可以使用這個屬性來指定方法層級的交易流程需求，或是設計階段的條件約束。  
+## <a name="enabling-transaction-flow-at-the-method-level"></a><span data-ttu-id="c18a3-185">啟用方法層級上的交易流程</span><span class="sxs-lookup"><span data-stu-id="c18a3-185">Enabling Transaction Flow at the Method Level</span></span>  
+ <span data-ttu-id="c18a3-186">在服務合約中的所有方法不一定有相同的交易流程需求。</span><span class="sxs-lookup"><span data-stu-id="c18a3-186">Transaction flow requirements are not always the same for all methods in a service contract.</span></span> <span data-ttu-id="c18a3-187">因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會提供屬性架構機制，以便呈現每一種方法的交易流程偏好設定。</span><span class="sxs-lookup"><span data-stu-id="c18a3-187">Therefore, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] also provides an attribute-based mechanism to allow each method's transaction flow preferences to be expressed.</span></span> <span data-ttu-id="c18a3-188">指定服務作業接受交易標頭時所位於之層級的 <xref:System.ServiceModel.TransactionFlowAttribute> 會完成這項動作。</span><span class="sxs-lookup"><span data-stu-id="c18a3-188">This is achieved by the <xref:System.ServiceModel.TransactionFlowAttribute> that specifies the level in which a service operation accepts a transaction header.</span></span> <span data-ttu-id="c18a3-189">若要啟用交易流程，您應該要使用這個屬性來標記您的服務合約方法。</span><span class="sxs-lookup"><span data-stu-id="c18a3-189">You should mark your service contract methods with this attribute if you want to enable transaction flow.</span></span> <span data-ttu-id="c18a3-190">這個屬性會接受其中一個 <xref:System.ServiceModel.TransactionFlowOption> 列舉值，其預設值為 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>。</span><span class="sxs-lookup"><span data-stu-id="c18a3-190">This attribute takes one of the values of the <xref:System.ServiceModel.TransactionFlowOption> enumeration, in which the default value is <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>.</span></span> <span data-ttu-id="c18a3-191">如果已指定 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> 以外的任何值，即表示此方法一定不能是單向方法。</span><span class="sxs-lookup"><span data-stu-id="c18a3-191">If any value except <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> is specified, the method is required to not be one-way.</span></span> <span data-ttu-id="c18a3-192">開發人員可以使用這個屬性來指定方法層級的交易流程需求，或是設計階段的條件約束。</span><span class="sxs-lookup"><span data-stu-id="c18a3-192">A developer can use this attribute to specify method-level transaction flow requirements or constraints at design time.</span></span>  
   
-## 啟用端點層級上的交易流程  
- 除了 <xref:System.ServiceModel.TransactionFlowAttribute> 屬性所提供的方法層級交易流程設定，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 還會提供交易流程的端點設定，可讓系統管理員控制更高層級的交易流程。  
+## <a name="enabling-transaction-flow-at-the-endpoint-level"></a><span data-ttu-id="c18a3-193">啟用端點層級上的交易流程</span><span class="sxs-lookup"><span data-stu-id="c18a3-193">Enabling Transaction Flow at the Endpoint Level</span></span>  
+ <span data-ttu-id="c18a3-194">除了 <xref:System.ServiceModel.TransactionFlowAttribute> 屬性所提供的方法層級交易流程設定，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 還會提供交易流程的端點設定，可讓系統管理員控制更高層級的交易流程。</span><span class="sxs-lookup"><span data-stu-id="c18a3-194">In addition to the method-level transaction flow setting  the <xref:System.ServiceModel.TransactionFlowAttribute> attribute provides, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides an endpoint-wide setting for transaction flow to allow administrators to control transaction flow at a higher level.</span></span>  
   
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 會完成這個動作，它可讓您在端點的繫結設定中啟用或停用傳入交易流程，並且指定傳入交易的所需交易通訊協定格式。  
+ <span data-ttu-id="c18a3-195"><xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 會完成這個動作，它可讓您在端點的繫結設定中啟用或停用傳入交易流程，並且指定傳入交易的所需交易通訊協定格式。</span><span class="sxs-lookup"><span data-stu-id="c18a3-195">This is achieved by the <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, which enables you to enable or disable incoming transaction flow in an endpoint’s binding settings, as well as to specify the desired transaction protocol format for incoming transactions.</span></span>  
   
- 如果該繫結已停用交易流程，但是服務合約上的其中一個作業需要傳入交易，則會在服務啟動時擲回驗證例外狀況。  
+ <span data-ttu-id="c18a3-196">如果該繫結已停用交易流程，但是服務合約上的其中一個作業需要傳入交易，則會在服務啟動時擲回驗證例外狀況。</span><span class="sxs-lookup"><span data-stu-id="c18a3-196">If the binding has disabled transaction flow, but one of the operations on a service contract requires an incoming transaction, then a validation exception is thrown at service startup.</span></span>  
   
- 大多數由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的標準繫結都會包含 `transactionFlow` 和 `transactionProtocol` 屬性，可讓您將特定的繫結設定為接受傳入交易。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定組態項目的詳細資訊，請參閱 [\<繫結\>](../../../../docs/framework/misc/binding.md)。  
+ <span data-ttu-id="c18a3-197">大多數由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的標準繫結都會包含 `transactionFlow` 和 `transactionProtocol` 屬性，可讓您將特定的繫結設定為接受傳入交易。</span><span class="sxs-lookup"><span data-stu-id="c18a3-197">Most of the standing bindings [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides contain the `transactionFlow` and `transactionProtocol` attributes to enable you to configure the specific binding to accept incoming transactions.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c18a3-198">設定組態項目，請參閱[\<繫結 >](../../../../docs/framework/misc/binding.md)。</span><span class="sxs-lookup"><span data-stu-id="c18a3-198"> setting the configuration elements, see [\<binding>](../../../../docs/framework/misc/binding.md).</span></span>  
   
- 系統管理員或部署者都可以透過組態檔，在部署時使用端點層級交易流程來設定交易流程需求或條件約束。  
+ <span data-ttu-id="c18a3-199">系統管理員或部署者都可以透過組態檔，在部署時使用端點層級異動流程來設定異動流程需求或條件約束。</span><span class="sxs-lookup"><span data-stu-id="c18a3-199">An administrator or deployer can use endpoint-level transaction flow to configure transaction flow requirements or constraints at deployment time using the configuration file.</span></span>  
   
-## 安全性  
- 為了確保系統的安全性和完整性，將交易在應用程式之間流動時，必須要保護訊息交換的安全。您不應該將交易細節流動或公開到沒有資格參與相同交易的任何應用程式。  
+## <a name="security"></a><span data-ttu-id="c18a3-200">安全性</span><span class="sxs-lookup"><span data-stu-id="c18a3-200">Security</span></span>  
+ <span data-ttu-id="c18a3-201">為了確保系統的安全性和完整性，將交易在應用程式之間流動時，必須要保護訊息交換的安全。</span><span class="sxs-lookup"><span data-stu-id="c18a3-201">To ensure system security and integrity, you must secure message exchanges when flowing transactions between applications.</span></span> <span data-ttu-id="c18a3-202">您不應該將交易細節流動或公開到沒有資格參與相同交易的任何應用程式。</span><span class="sxs-lookup"><span data-stu-id="c18a3-202">You should not flow or disclose transaction details to any application that is not entitled to participate in the same transaction.</span></span>  
   
- 當透過使用中繼資料交換，在未知或未受信任的 Web 服務上產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端時，對於這些 Web 服務作業的呼叫應該要盡可能地隱藏目前的交易。下列範例示範如何進行這項操作。  
+ <span data-ttu-id="c18a3-203">當透過使用中繼資料交換，在未知或未受信任的 Web 服務上產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端時，對於這些 Web 服務作業的呼叫應該要盡可能地隱藏目前的交易。</span><span class="sxs-lookup"><span data-stu-id="c18a3-203">When generating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients to unknown or untrusted Web services through the use of metadata exchange, calls to operations on these Web services should suppress the current transaction if possible.</span></span> <span data-ttu-id="c18a3-204">下列範例示範如何進行這項操作。</span><span class="sxs-lookup"><span data-stu-id="c18a3-204">The following example demonstrates how to do this.</span></span>  
   
 ```  
 //client code which has an ambient transaction  
@@ -92,11 +94,11 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Supp
 //remainder of client code  
 ```  
   
- 此外，服務應該設定為只接受其已驗證和授權之用戶端的傳入交易。只有在傳入交易來自受到高度信任的用戶端時，才應該接受這些交易。  
+ <span data-ttu-id="c18a3-205">此外，服務應該設定為只接受其已驗證和授權之用戶端的傳入交易。</span><span class="sxs-lookup"><span data-stu-id="c18a3-205">In addition, services should be configured to accept incoming transactions only from clients that they have authenticated and authorized.</span></span> <span data-ttu-id="c18a3-206">只有在傳入交易來自受到高度信任的用戶端時，才應該接受這些交易。</span><span class="sxs-lookup"><span data-stu-id="c18a3-206">Incoming transactions should only be accepted if they come from highly trusted clients.</span></span>  
   
-## 原則判斷提示  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用原則判斷提示來控制交易流程。原則判斷提示可以在服務的原則文件中找到，該文件是由合約、組態及屬性彙總而成。用戶端可以使用 HTTP GET 或 WS\-MetadataExchange 要求\-回覆來取得服務的原則文件。用戶端可以接著處理該原則文件，判斷在服務合約中的哪些作業可支援或需要交易流程。  
+## <a name="policy-assertions"></a><span data-ttu-id="c18a3-207">原則判斷提示</span><span class="sxs-lookup"><span data-stu-id="c18a3-207">Policy Assertions</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="c18a3-208"> 會使用原則判斷提示來控制交易流程。</span><span class="sxs-lookup"><span data-stu-id="c18a3-208"> uses policy assertions to control transaction flow.</span></span> <span data-ttu-id="c18a3-209">原則判斷提示可以在服務的原則文件中找到，該文件是由合約、組態及屬性彙總而成。</span><span class="sxs-lookup"><span data-stu-id="c18a3-209">Policy assertions can be found in a service’s policy document, which is generated by aggregating contracts, configuration, and attributes.</span></span> <span data-ttu-id="c18a3-210">用戶端可以使用 HTTP GET 或 WS-MetadataExchange 要求-回覆來取得服務的原則文件。</span><span class="sxs-lookup"><span data-stu-id="c18a3-210">The client can obtain the service’s policy document using an HTTP GET or a WS-MetadataExchange request-reply.</span></span> <span data-ttu-id="c18a3-211">用戶端可以接著處理該原則文件，判斷在服務合約中的哪些作業可支援或需要交易流程。</span><span class="sxs-lookup"><span data-stu-id="c18a3-211">Clients can then process the policy document to determine which operations on a service contract may support or require transaction flow.</span></span>  
   
- 交易流程原則判斷提示會指定用戶端應該傳送到服務以代表交易的 SOAP 標頭，藉此變動交易流程。所有交易標頭都必須標記為 `MustUnderstand` 等於 `true`。任何不是這樣標記的訊息都會被拒絕，並且產生 SOAP 錯誤。  
+ <span data-ttu-id="c18a3-212">交易流程原則判斷提示會指定用戶端應該傳送到服務以代表交易的 SOAP 標頭，藉此變動交易流程。</span><span class="sxs-lookup"><span data-stu-id="c18a3-212">Transaction flow policy assertions affect transaction flow by specifying the SOAP headers that a client should send to a service to represent a transaction.</span></span> <span data-ttu-id="c18a3-213">所有交易標頭都必須標記為 `MustUnderstand` 等於 `true`。</span><span class="sxs-lookup"><span data-stu-id="c18a3-213">All transaction headers must be marked with `MustUnderstand` equal to `true`.</span></span> <span data-ttu-id="c18a3-214">任何不是這樣標記的訊息都會被拒絕，並且產生 SOAP 錯誤。</span><span class="sxs-lookup"><span data-stu-id="c18a3-214">Any message with a header marked otherwise is rejected with a SOAP fault.</span></span>  
   
- 單一作業中只能存在一個與交易相關的原則判斷提示。作業若是包含一個以上的交易判斷提示，該原則文件就會被視為無效，而且會被 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 拒絕。此外，每個連接埠類型內部只能存在單一交易通訊協定。作業如果參考單一連接埠類型內一個以上的交易通訊協定，該原則文件就會被視為無效，而且會被 [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)拒絕。輸出訊息或是單向輸入訊息如果存在交易判斷提示，該原則文件就會被視為無效。
+ <span data-ttu-id="c18a3-215">單一作業中只能存在一個與交易相關的原則判斷提示。</span><span class="sxs-lookup"><span data-stu-id="c18a3-215">Only one transaction-related policy assertion can be present on a single operation.</span></span> <span data-ttu-id="c18a3-216">作業若是包含一個以上的交易判斷提示，該原則文件就會被視為無效，而且會被 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 拒絕。</span><span class="sxs-lookup"><span data-stu-id="c18a3-216">Policy documents with more than one transaction assertion on an operation are considered invalid and are rejected by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="c18a3-217">此外，每個連接埠類型內部只能存在單一異動通訊協定。</span><span class="sxs-lookup"><span data-stu-id="c18a3-217">In addition, only a single transaction protocol can be present inside each port type.</span></span> <span data-ttu-id="c18a3-218">與作業-參考一個以上的交易通訊協定的單一連接埠類型內部的原則文件會被視為無效，而且將會拒絕的[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="c18a3-218">Policy documents with operations referencing more than one transaction protocol inside a single port type are considered invalid, and are rejected by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="c18a3-219">輸出訊息或是單向輸入訊息如果存在異動判斷提示，該原則文件就會被視為無效。</span><span class="sxs-lookup"><span data-stu-id="c18a3-219">Policy documents with transaction assertions present on output messages or one-way input messages are also considered invalid.</span></span>

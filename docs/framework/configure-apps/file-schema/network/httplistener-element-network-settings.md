@@ -1,130 +1,132 @@
 ---
-title: "&lt;httpListener&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;httpListener&gt;項目 （網路設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 14a758f1d69da4db8ed58809de20d3522ea7e4e9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;httpListener&gt; 項目 (網路設定)
-自訂 <xref:System.Net.HttpListener> 類別所使用的參數。  
+# <a name="lthttplistenergt-element-network-settings"></a><span data-ttu-id="9c612-102">&lt;httpListener&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="9c612-102">&lt;httpListener&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="9c612-103">自訂所用參數<xref:System.Net.HttpListener>類別。</span><span class="sxs-lookup"><span data-stu-id="9c612-103">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>  
   
-## 語法  
+ <span data-ttu-id="9c612-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9c612-104">\<configuration></span></span>  
+<span data-ttu-id="9c612-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="9c612-105">\<system.net></span></span>  
+<span data-ttu-id="9c612-106">\<設定 ></span><span class="sxs-lookup"><span data-stu-id="9c612-106">\<settings></span></span>  
+<span data-ttu-id="9c612-107">\<httpListener ></span><span class="sxs-lookup"><span data-stu-id="9c612-107">\<httpListener></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="9c612-108">語法</span><span class="sxs-lookup"><span data-stu-id="9c612-108">Syntax</span></span>  
   
-      <httpListener  
-  unescapeRequestUrl ="true|false"  
+```xml  
+<httpListener  
+  unescapeRequestUrl="true|false"  
 />  
 ```  
   
-## 類型  
+## <a name="type"></a><span data-ttu-id="9c612-109">類型</span><span class="sxs-lookup"><span data-stu-id="9c612-109">Type</span></span>  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9c612-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="9c612-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="9c612-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="9c612-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="9c612-112">屬性</span><span class="sxs-lookup"><span data-stu-id="9c612-112">Attributes</span></span>  
   
-|屬性|說明|  
-|--------|--------|  
-|unescapeRequestUrl|布林值，指出 <xref:System.Net.HttpListener> 是否使用未經處理非逸出 URI 取代轉換的 URI。|  
+|<span data-ttu-id="9c612-113">屬性</span><span class="sxs-lookup"><span data-stu-id="9c612-113">Attribute</span></span>|<span data-ttu-id="9c612-114">描述</span><span class="sxs-lookup"><span data-stu-id="9c612-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="9c612-115">unescapeRequestUrl</span><span class="sxs-lookup"><span data-stu-id="9c612-115">unescapeRequestUrl</span></span>|<span data-ttu-id="9c612-116">布林值，指出如果<xref:System.Net.HttpListener>執行個體會使用原始的未逸出的 URI，而不是轉換後的 URI。</span><span class="sxs-lookup"><span data-stu-id="9c612-116">A Boolean value that indicates if a <xref:System.Net.HttpListener> instance uses the raw unescaped URI instead of the converted URI.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="9c612-117">子元素</span><span class="sxs-lookup"><span data-stu-id="9c612-117">Child Elements</span></span>  
+ <span data-ttu-id="9c612-118">無。</span><span class="sxs-lookup"><span data-stu-id="9c612-118">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="9c612-119">父項目</span><span class="sxs-lookup"><span data-stu-id="9c612-119">Parent Elements</span></span>  
   
-|**元素**|**說明**|  
-|------------|------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|<span data-ttu-id="9c612-120">**目**</span><span class="sxs-lookup"><span data-stu-id="9c612-120">**Element**</span></span>|<span data-ttu-id="9c612-121">**說明**</span><span class="sxs-lookup"><span data-stu-id="9c612-121">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="9c612-122">設定</span><span class="sxs-lookup"><span data-stu-id="9c612-122">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="9c612-123">為 <xref:System.Net> 命名空間設定基本的網路選項。</span><span class="sxs-lookup"><span data-stu-id="9c612-123">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## 備註  
- **unescapeRequestUrl** 屬性指出 <xref:System.Net.HttpListener> 是否會使用未經處理的未逸出的 URI，而不是已轉換的 URI，其中會轉換任何百分比編碼的值，並且採用其他正規化的步驟。  
+## <a name="remarks"></a><span data-ttu-id="9c612-124">備註</span><span class="sxs-lookup"><span data-stu-id="9c612-124">Remarks</span></span>  
+ <span data-ttu-id="9c612-125">**UnescapeRequestUrl**屬性會指出如果<xref:System.Net.HttpListener>而不是轉換後的 URI 轉換百分比編碼的任何值，會採取其他的正規化步驟會使用原始的未逸出的 URI。</span><span class="sxs-lookup"><span data-stu-id="9c612-125">The **unescapeRequestUrl** attribute indicates if <xref:System.Net.HttpListener> uses the raw unescaped URI instead of the converted URI where any percent-encoded values are converted and other normalization steps are taken.</span></span>  
   
- 當 <xref:System.Net.HttpListener> 執行個體透過 `http.sys` 服務收到要求時，會建立 `http.sys` 所提供的 URI 字串的執行個體，並將它公開為 <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=fullName> 屬性。  
+ <span data-ttu-id="9c612-126">當<xref:System.Net.HttpListener>執行個體收到要求時透過`http.sys`服務，它會建立所提供的 URI 字串的執行個體`http.sys`，並公開其為<xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="9c612-126">When a <xref:System.Net.HttpListener> instance receives a request through the `http.sys` service, it creates an instance of the URI string provided by `http.sys`, and exposes it as the <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> property.</span></span>  
   
- `http.sys` 服務會公開兩個要求 URI 字串：  
+ <span data-ttu-id="9c612-127">`http.sys`服務會公開兩個要求 URI 字串：</span><span class="sxs-lookup"><span data-stu-id="9c612-127">The `http.sys` service exposes two request URI strings:</span></span>  
   
--   未經處理的 URI  
+-   <span data-ttu-id="9c612-128">未經處理的 URI</span><span class="sxs-lookup"><span data-stu-id="9c612-128">Raw URI</span></span>  
   
--   已轉換的 URI  
+-   <span data-ttu-id="9c612-129">已轉換的 URI</span><span class="sxs-lookup"><span data-stu-id="9c612-129">Converted URI</span></span>  
   
- 未經處理的 URI 是 HTTP 要求的要求行中提供的 <xref:System.Uri?displayProperty=fullName>：  
+ <span data-ttu-id="9c612-130">未經處理的 URI 是<xref:System.Uri?displayProperty=nameWithType>提供 HTTP 要求的要求行中：</span><span class="sxs-lookup"><span data-stu-id="9c612-130">The raw URI is the <xref:System.Uri?displayProperty=nameWithType> provided in the request line of a HTTP request:</span></span>  
   
  `GET /path/`  
   
  `Host: www.contoso.com`  
   
- 上述要求之 `http.sys` 所提供的未經處理 URI 是 "\/path\/"。  這表示當 HTTP 動詞已透過網路傳送時其之後的字串。  
+ <span data-ttu-id="9c612-131">所提供的原始 URI`http.sys`上面所提的要求是"/ 路徑 /"。</span><span class="sxs-lookup"><span data-stu-id="9c612-131">The raw URI provided by `http.sys` for the request mentioned above, is "/path/".</span></span> <span data-ttu-id="9c612-132">這表示它已透過網路傳送接下來的 HTTP 動詞命令的字串。</span><span class="sxs-lookup"><span data-stu-id="9c612-132">This represents the string following the HTTP verb as it was sent over the network.</span></span>  
   
- `http.sys` 服務會從要求中提供的資訊建立轉換後的 URI \(藉由使用 HTTP 要求行中提供的 URI\)，並使用 Host 標頭來判斷要求轉送的原始伺服器。  這可藉由比對要求的資訊與一組已註冊的 URI 前置詞來完成。  HTTP 伺服器 SDK 文件是指轉換為 HTTP\_COOKED\_URL 結構的 URI。  
+ <span data-ttu-id="9c612-133">`http.sys`服務會使用 HTTP 要求行中所提供的 URI，在要求中所提供的資訊來建立已轉換的 URI 和主機標頭，以判斷原始伺服器的要求應該會轉送到。</span><span class="sxs-lookup"><span data-stu-id="9c612-133">The `http.sys` service creates a converted URI from the information provided in the request by using the URI provided in the HTTP request line and the Host header to determine the origin server the request should be forwarded to.</span></span> <span data-ttu-id="9c612-134">這是藉由比較一組已註冊的 URI 前置詞的要求中的資訊。</span><span class="sxs-lookup"><span data-stu-id="9c612-134">This is done by comparing the information from the request with a set of registered URI prefixes.</span></span> <span data-ttu-id="9c612-135">HTTP 伺服器 SDK 文件指 HTTP_COOKED_URL 結構為此轉換的 URI。</span><span class="sxs-lookup"><span data-stu-id="9c612-135">The HTTP Server SDK documentation refers to this converted URI as the HTTP_COOKED_URL structure.</span></span>  
   
- 若要能夠用已註冊的 URI 前置詞來比較要求，需要進行一些要求的正規化。  上述轉換 URI 的範例如下所示：  
+ <span data-ttu-id="9c612-136">為了要比較的要求已註冊的 URI 前置詞，需要執行某些要求的正規化。</span><span class="sxs-lookup"><span data-stu-id="9c612-136">In order to be able to compare the request with registered URI prefixes, some normalization to the request needs to be done.</span></span> <span data-ttu-id="9c612-137">轉換 URI 上述範例應如下：</span><span class="sxs-lookup"><span data-stu-id="9c612-137">For the sample above the converted URI would be as follows:</span></span>  
   
  `http://www.contoso.com/path/`  
   
- `http.sys` 服務結合了 <xref:System.Uri.Host%2A?displayProperty=fullName> 屬性值及要求行中的字串來建立轉換後的 URI 字串。  此外，`http.sys` 和 <xref:System.Uri?displayProperty=fullName> 類別也可執行下列作業：  
+ <span data-ttu-id="9c612-138">`http.sys`服務結合<xref:System.Uri.Host%2A?displayProperty=nameWithType>屬性值，並要求條線建立轉換的 URI 中的字串。</span><span class="sxs-lookup"><span data-stu-id="9c612-138">The `http.sys` service combines the <xref:System.Uri.Host%2A?displayProperty=nameWithType> property value and the string in the request line to create a converted URI.</span></span> <span data-ttu-id="9c612-139">此外，`http.sys`和<xref:System.Uri?displayProperty=nameWithType>類別也會進行下列作業：</span><span class="sxs-lookup"><span data-stu-id="9c612-139">In addition, `http.sys` and the <xref:System.Uri?displayProperty=nameWithType> class also does the following:</span></span>  
   
--   取消逸出所有百分比編碼值。  
+-   <span data-ttu-id="9c612-140">取消-逸出所有百分比編碼值。</span><span class="sxs-lookup"><span data-stu-id="9c612-140">Un-escapes all percent encoded values.</span></span>  
   
--   將百分比編碼的非 ASCII 字元轉換為 UTF\-16 字元表示。  請注意，對於 UTF\-8 和 ANSI\/DBCS 字元都有支援，Unicode 字元 \(Unicode 編碼方式使用 %uXXXX 格式\) 也不例外。  
+-   <span data-ttu-id="9c612-141">轉換百分比編碼為 utf-16 字元表示法的非 ASCII 字元。</span><span class="sxs-lookup"><span data-stu-id="9c612-141">Converts percent-encoded non-ASCII characters into a UTF-16 character representation.</span></span> <span data-ttu-id="9c612-142">請注意，utf-8 與 ANSI/DBCS 字元支援以及 Unicode 字元 （Unicode 編碼使用 %uxxxx 格式）。</span><span class="sxs-lookup"><span data-stu-id="9c612-142">Note that UTF-8 and ANSI/DBCS characters are supported as well as Unicode characters (Unicode encoding using the %uXXXX format).</span></span>  
   
--   執行其他正規化步驟，例如路徑壓縮。  
+-   <span data-ttu-id="9c612-143">執行其他的正規化步驟，例如路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="9c612-143">Executes other normalization steps, like path compression.</span></span>  
   
- 由於要求不包含百分比編碼值使用之編碼方式的任何相關資訊，有可能無法藉由剖析百分比編碼值來決定正確的編碼方式。  
+ <span data-ttu-id="9c612-144">要求不包含任何百分比編碼值使用的編碼方式相關資訊，因為它可能無法判斷正確的編碼方式只是藉由剖析的百分比編碼值。</span><span class="sxs-lookup"><span data-stu-id="9c612-144">Since the request doesn't contain any information about the encoding used for percent-encoded values, it may not be possible to determine the correct encoding just by parsing the percent-encoded values.</span></span>  
   
- 因此 `http.sys` 提供兩個用於修改處理序的登錄機碼：  
+ <span data-ttu-id="9c612-145">因此`http.sys`提供修改程序的兩個登錄機碼：</span><span class="sxs-lookup"><span data-stu-id="9c612-145">Therefore `http.sys` provides two registry keys for modifying the process:</span></span>  
   
-|登錄機碼|預設值|說明|  
-|----------|---------|--------|  
-|EnableNonUTF8|1|如果零，`http.sys` 只接受 UTF\-8 編碼的 URL。<br /><br /> 如果非零，`http.sys` 也會接受要求中的 ANSI 編碼或 DBCS 編碼 URL。|  
-|FavorUTF8|1|如果非零，`http.sys` 必定會先嘗試將 URL 解碼為 UTF\-8。如果該轉換失敗，而且 EnableNonUTF8 非零，Http.sys 接著便會嘗試將其解碼為 ANSI 或 DBCS。<br /><br /> 如果為零 \(而且 EnableNonUTF8 不是零\)，`http.sys` 會嘗試將它解碼為 ANSI 或 DBCS，如果不成功，則會嘗試 UTF\-8 轉換。|  
+|<span data-ttu-id="9c612-146">登錄機碼</span><span class="sxs-lookup"><span data-stu-id="9c612-146">Registry Key</span></span>|<span data-ttu-id="9c612-147">預設值</span><span class="sxs-lookup"><span data-stu-id="9c612-147">Default Value</span></span>|<span data-ttu-id="9c612-148">描述</span><span class="sxs-lookup"><span data-stu-id="9c612-148">Description</span></span>|  
+|------------------|-------------------|-----------------|  
+|<span data-ttu-id="9c612-149">EnableNonUTF8</span><span class="sxs-lookup"><span data-stu-id="9c612-149">EnableNonUTF8</span></span>|<span data-ttu-id="9c612-150">1</span><span class="sxs-lookup"><span data-stu-id="9c612-150">1</span></span>|<span data-ttu-id="9c612-151">如果是零，`http.sys`接受只有 UTF 8 編碼的 Url。</span><span class="sxs-lookup"><span data-stu-id="9c612-151">If zero, `http.sys` accepts only UTF-8-encoded URLs.</span></span><br /><br /> <span data-ttu-id="9c612-152">如果不是零，`http.sys`也接受 ANSI 編碼或 DBCS 編碼在要求中的 Url。</span><span class="sxs-lookup"><span data-stu-id="9c612-152">If non-zero, `http.sys` also accepts ANSI-encoded or DBCS-encoded URLs in requests.</span></span>|  
+|<span data-ttu-id="9c612-153">FavorUTF8</span><span class="sxs-lookup"><span data-stu-id="9c612-153">FavorUTF8</span></span>|<span data-ttu-id="9c612-154">1</span><span class="sxs-lookup"><span data-stu-id="9c612-154">1</span></span>|<span data-ttu-id="9c612-155">如果不是零，`http.sys`一律會嘗試解碼 URL 為 utf-8 第一次。 如果該轉換失敗，而且 EnableNonUTF8 為非零，Http.sys，然後嘗試將它解碼為 ANSI 或依 DBCS。</span><span class="sxs-lookup"><span data-stu-id="9c612-155">If non-zero, `http.sys` always tries to decode a URL as UTF-8 first; if that conversion fails and EnableNonUTF8 is non-zero, Http.sys then tries to decode it as ANSI or DBCS.</span></span><br /><br /> <span data-ttu-id="9c612-156">如果是零 （和 EnableNonUTF8 為非零），`http.sys`嘗試將它解碼為 ANSI 或依 DBCS; 如果不成功，它會嘗試 utf-8 轉換。</span><span class="sxs-lookup"><span data-stu-id="9c612-156">If zero (and EnableNonUTF8 is non-zero), `http.sys` tries to decode it as ANSI or DBCS; if that is not successful, it tries a UTF-8 conversion.</span></span>|  
   
- <xref:System.Net.HttpListener> 收到要求時，會使用從 `http.sys` 轉換的 URI 做為 <xref:System.Net.HttpListenerRequest.Url%2A> 屬性的輸入。  
+ <span data-ttu-id="9c612-157">當<xref:System.Net.HttpListener>收到要求時，它會使用轉換的 URI 從`http.sys`來作為輸入<xref:System.Net.HttpListenerRequest.Url%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="9c612-157">When <xref:System.Net.HttpListener> receives a request, it uses the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url%2A> property.</span></span>  
   
- 除了 URI 中的字元和數字外，不需支援字元。  下列 URI 為範例之一，該 URI 用於擷取客戶編號 "1\/3812" 的客戶資訊：  
+ <span data-ttu-id="9c612-158">沒有需要支援在 Uri 中的字元和數字以外的字元。</span><span class="sxs-lookup"><span data-stu-id="9c612-158">There is a need for supporting characters besides characters and numbers in URIs.</span></span> <span data-ttu-id="9c612-159">範例是下列的 URI 用來擷取客戶的客戶資訊數字"1/3812":</span><span class="sxs-lookup"><span data-stu-id="9c612-159">An example is the following URI, which is used to retrieve customer information for customer number "1/3812":</span></span>  
   
  `http://www.contoso.com/Customer('1%2F3812')/`  
   
- 請注意 URI \(%2F\) 中的百分比編碼斜線。  這是必要的，因為在這種情況下，斜線字元代表資料而非路徑分隔符號。  
+ <span data-ttu-id="9c612-160">請注意百分比編碼中的斜線的 Uri (%2f)。</span><span class="sxs-lookup"><span data-stu-id="9c612-160">Note the percent-encoded slash in the Uri (%2F).</span></span> <span data-ttu-id="9c612-161">必須這樣做，因為在此情況下的斜線字元表示的資料，不是路徑分隔符號。</span><span class="sxs-lookup"><span data-stu-id="9c612-161">This is necessary, since in this case the slash character represents data and not a path delimiter.</span></span>  
   
- 將字串傳遞至 URI 建構函式會引導至下列 URI：  
+ <span data-ttu-id="9c612-162">將字串傳遞至 Uri 建構函式會導致下列 URI:</span><span class="sxs-lookup"><span data-stu-id="9c612-162">Passing the string to Uri constructor will lead to the following URI:</span></span>  
   
  `http://www.contoso.com/Customer('1/3812')/`  
   
- 將路徑分割為其區段會產生下列項目：  
+ <span data-ttu-id="9c612-163">分割為其區段路徑會產生下列項目：</span><span class="sxs-lookup"><span data-stu-id="9c612-163">Splitting the path into its segments would result in the following elements:</span></span>  
   
  `Customer('1`  
   
  `3812')`  
   
- 這不是要求寄件人的目的。  
+ <span data-ttu-id="9c612-164">這不是寄件者要求的意圖。</span><span class="sxs-lookup"><span data-stu-id="9c612-164">This is not the intent of the sender of the request.</span></span>  
   
- 如果 **unescapeRequestUrl** 屬性設定為 **false**，則當 <xref:System.Net.HttpListener> 收到要求時，會使用未經處理的 URI，而不使用從 `http.sys` 轉換的 URI 做為輸入 <xref:System.Net.HttpListenerRequest.Url%2A> 屬性。  
+ <span data-ttu-id="9c612-165">如果**unescapeRequestUrl**屬性設為**false**，則當<xref:System.Net.HttpListener>收到要求時，它會使用原始 URI，而不是從轉換過的 URI`http.sys`做為輸入<xref:System.Net.HttpListenerRequest.Url%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="9c612-165">If the **unescapeRequestUrl** attribute is set to **false**, then when the <xref:System.Net.HttpListener> receives a request, it uses the raw URI instead of the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url%2A> property.</span></span>  
   
- **unescapeRequestUrl** 屬性的預設值為 **true**。  
+ <span data-ttu-id="9c612-166">預設值為**unescapeRequestUrl**屬性是**true**。</span><span class="sxs-lookup"><span data-stu-id="9c612-166">The default value for the **unescapeRequestUrl** attribute is **true**.</span></span>  
   
- <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> 屬性可用來從適用的組態檔中取得 **unescapeRequestUrl** 屬性的目前值。  
+ <span data-ttu-id="9c612-167"><xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>屬性可以用來取得目前的值**unescapeRequestUrl**適用的組態檔中的屬性。</span><span class="sxs-lookup"><span data-stu-id="9c612-167">The <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> property can be used to get the current value of the **unescapeRequestUrl** attribute from applicable configuration files.</span></span>  
   
-## 範例  
- 下列程式碼範例示範當 <xref:System.Net.HttpListener> 類別收到要求使用未經處理的 URI 取代從 <xref:System.Net.HttpListenerRequest.Url%2A> 屬性之 `http.sys` 輸入轉換的 URI 時，應如何設定此類別。  
+## <a name="example"></a><span data-ttu-id="9c612-168">範例</span><span class="sxs-lookup"><span data-stu-id="9c612-168">Example</span></span>  
+ <span data-ttu-id="9c612-169">下列範例示範如何設定<xref:System.Net.HttpListener>類別當它收到要求時使用原始 URI，而不是從轉換過的 URI`http.sys`來作為輸入<xref:System.Net.HttpListenerRequest.Url%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="9c612-169">The following example shows how to configure the <xref:System.Net.HttpListener> class when it receives a request to use the raw URI instead of the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url%2A> property.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -136,17 +138,17 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## 項目資訊  
+## <a name="element-information"></a><span data-ttu-id="9c612-170">項目資訊</span><span class="sxs-lookup"><span data-stu-id="9c612-170">Element Information</span></span>  
   
-|||  
+|||
 |-|-|  
-|命名空間|System.Net|  
-|結構描述名稱||  
-|驗證檔||  
-|可以是空白||  
+|<span data-ttu-id="9c612-171">命名空間</span><span class="sxs-lookup"><span data-stu-id="9c612-171">Namespace</span></span>|<span data-ttu-id="9c612-172">System.Net</span><span class="sxs-lookup"><span data-stu-id="9c612-172">System.Net</span></span>|  
+|<span data-ttu-id="9c612-173">結構描述名稱</span><span class="sxs-lookup"><span data-stu-id="9c612-173">Schema Name</span></span>||  
+|<span data-ttu-id="9c612-174">驗證檔</span><span class="sxs-lookup"><span data-stu-id="9c612-174">Validation File</span></span>||  
+|<span data-ttu-id="9c612-175">可以是空白</span><span class="sxs-lookup"><span data-stu-id="9c612-175">Can be Empty</span></span>||  
   
-## 請參閱  
- <xref:System.Net.Configuration.HttpListenerElement>   
- <xref:System.Net.HttpListener>   
- <xref:System.Net.HttpListenerRequest.Url%2A>   
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="9c612-176">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9c612-176">See Also</span></span>  
+ <xref:System.Net.Configuration.HttpListenerElement>  
+ <xref:System.Net.HttpListener>  
+ <xref:System.Net.HttpListenerRequest.Url%2A>  
+ [<span data-ttu-id="9c612-177">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="9c612-177">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

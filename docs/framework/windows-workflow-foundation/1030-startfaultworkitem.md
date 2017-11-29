@@ -1,44 +1,48 @@
 ---
-title: "1030 - StartFaultWorkItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1030 - StartFaultWorkItem
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1601fb9-0bc6-4dbe-816f-f24914063d34
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b25dbd5ced96b8e9ca3ef51e4de841a6238d2cbc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 1030 - StartFaultWorkItem
-## 屬性  
+# <a name="1030---startfaultworkitem"></a><span data-ttu-id="17e68-102">1030 - StartFaultWorkItem</span><span class="sxs-lookup"><span data-stu-id="17e68-102">1030 - StartFaultWorkItem</span></span>
+## <a name="properties"></a><span data-ttu-id="17e68-103">屬性</span><span class="sxs-lookup"><span data-stu-id="17e68-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1030|  
-|關鍵字|WFRuntime|  
-|層級|詳細資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="17e68-104">ID</span><span class="sxs-lookup"><span data-stu-id="17e68-104">ID</span></span>|<span data-ttu-id="17e68-105">1030</span><span class="sxs-lookup"><span data-stu-id="17e68-105">1030</span></span>|  
+|<span data-ttu-id="17e68-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="17e68-106">Keywords</span></span>|<span data-ttu-id="17e68-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="17e68-107">WFRuntime</span></span>|  
+|<span data-ttu-id="17e68-108">層級</span><span class="sxs-lookup"><span data-stu-id="17e68-108">Level</span></span>|<span data-ttu-id="17e68-109">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="17e68-109">Verbose</span></span>|  
+|<span data-ttu-id="17e68-110">通道</span><span class="sxs-lookup"><span data-stu-id="17e68-110">Channel</span></span>|<span data-ttu-id="17e68-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="17e68-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 表示 FaultWorkItem 開始執行。  
+## <a name="description"></a><span data-ttu-id="17e68-112">描述</span><span class="sxs-lookup"><span data-stu-id="17e68-112">Description</span></span>  
+ <span data-ttu-id="17e68-113">表示 FaultWorkItem 開始執行。</span><span class="sxs-lookup"><span data-stu-id="17e68-113">Indicates a FaultWorkItem is starting execution.</span></span>  
   
-## 訊息  
- 開始執行活動 '%1'、DisplayName：'%2'、InstanceId：'%3' 的 FaultWorkItem。例外狀況傳播源自活動 '%4'、DisplayName：'%5'、InstanceId：'%6' 傳回例外狀況。  
+## <a name="message"></a><span data-ttu-id="17e68-114">訊息</span><span class="sxs-lookup"><span data-stu-id="17e68-114">Message</span></span>  
+ <span data-ttu-id="17e68-115">開始執行的 faultworkitem 活動 '%1'、 DisplayName: '%2'、 InstanceId: '%3'。</span><span class="sxs-lookup"><span data-stu-id="17e68-115">Starting execution of a FaultWorkItem for Activity '%1', DisplayName: '%2', InstanceId: '%3'.</span></span>  <span data-ttu-id="17e68-116">活動 '%4'、DisplayName：'%5'、InstanceId：'%6' 傳回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="17e68-116">The exception was propagated from Activity '%4', DisplayName: '%5', InstanceId: '%6'.</span></span>  
   
-## 詳細資料  
+## <a name="details"></a><span data-ttu-id="17e68-117">詳細資料</span><span class="sxs-lookup"><span data-stu-id="17e68-117">Details</span></span>  
   
-|資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
-|FaultActivity|xs:string|錯誤活動的型別名稱。|  
-|FaultActivityDisplayName|xs:string|錯誤活動的顯示名稱。|  
-|FaultActivityInstanceId|xs:string|錯誤活動的執行個體 ID。|  
-|ExceptionActivity|xs:string|擲回例外狀況之活動的型別名稱。|  
-|ExceptionActivityDisplayName|xs:string|擲回例外狀況之活動的顯示名稱。|  
-|ExceptionActivityInstanceId|xs:string|擲回例外狀況之活動的執行個體 ID。|  
-|例外狀況|xs:string|例外狀況的例外狀況詳細資料|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="17e68-118">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="17e68-118">Data Item Name</span></span>|<span data-ttu-id="17e68-119">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="17e68-119">Data Item Type</span></span>|<span data-ttu-id="17e68-120">描述</span><span class="sxs-lookup"><span data-stu-id="17e68-120">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="17e68-121">FaultActivity</span><span class="sxs-lookup"><span data-stu-id="17e68-121">FaultActivity</span></span>|<span data-ttu-id="17e68-122">xs:string</span><span class="sxs-lookup"><span data-stu-id="17e68-122">xs:string</span></span>|<span data-ttu-id="17e68-123">錯誤活動的型別名稱。</span><span class="sxs-lookup"><span data-stu-id="17e68-123">The type name of the fault activity.</span></span>|  
+|<span data-ttu-id="17e68-124">FaultActivityDisplayName</span><span class="sxs-lookup"><span data-stu-id="17e68-124">FaultActivityDisplayName</span></span>|<span data-ttu-id="17e68-125">xs:string</span><span class="sxs-lookup"><span data-stu-id="17e68-125">xs:string</span></span>|<span data-ttu-id="17e68-126">錯誤活動的顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="17e68-126">The display name of the fault activity.</span></span>|  
+|<span data-ttu-id="17e68-127">FaultActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="17e68-127">FaultActivityInstanceId</span></span>|<span data-ttu-id="17e68-128">xs:string</span><span class="sxs-lookup"><span data-stu-id="17e68-128">xs:string</span></span>|<span data-ttu-id="17e68-129">錯誤活動的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="17e68-129">The instance id of the fault activity.</span></span>|  
+|<span data-ttu-id="17e68-130">ExceptionActivity</span><span class="sxs-lookup"><span data-stu-id="17e68-130">ExceptionActivity</span></span>|<span data-ttu-id="17e68-131">xs:string</span><span class="sxs-lookup"><span data-stu-id="17e68-131">xs:string</span></span>|<span data-ttu-id="17e68-132">擲回例外狀況之活動的型別名稱。</span><span class="sxs-lookup"><span data-stu-id="17e68-132">The type name of the activity that threw the exception.</span></span>|  
+|<span data-ttu-id="17e68-133">ExceptionActivityDisplayName</span><span class="sxs-lookup"><span data-stu-id="17e68-133">ExceptionActivityDisplayName</span></span>|<span data-ttu-id="17e68-134">xs:string</span><span class="sxs-lookup"><span data-stu-id="17e68-134">xs:string</span></span>|<span data-ttu-id="17e68-135">擲回例外狀況之活動的顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="17e68-135">The display name of the activity that threw the exception.</span></span>|  
+|<span data-ttu-id="17e68-136">ExceptionActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="17e68-136">ExceptionActivityInstanceId</span></span>|<span data-ttu-id="17e68-137">xs:string</span><span class="sxs-lookup"><span data-stu-id="17e68-137">xs:string</span></span>|<span data-ttu-id="17e68-138">擲回例外狀況之活動的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="17e68-138">The instance id of the activity that threw the exception.</span></span>|  
+|<span data-ttu-id="17e68-139">例外狀況</span><span class="sxs-lookup"><span data-stu-id="17e68-139">Exception</span></span>|<span data-ttu-id="17e68-140">xs:string</span><span class="sxs-lookup"><span data-stu-id="17e68-140">xs:string</span></span>|<span data-ttu-id="17e68-141">例外狀況的例外狀況詳細資料</span><span class="sxs-lookup"><span data-stu-id="17e68-141">The exception details for the exception</span></span>|  
+|<span data-ttu-id="17e68-142">AppDomain</span><span class="sxs-lookup"><span data-stu-id="17e68-142">AppDomain</span></span>|<span data-ttu-id="17e68-143">xs:string</span><span class="sxs-lookup"><span data-stu-id="17e68-143">xs:string</span></span>|<span data-ttu-id="17e68-144">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="17e68-144">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

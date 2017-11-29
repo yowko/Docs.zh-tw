@@ -1,37 +1,39 @@
 ---
-title: "&lt;trace&gt; 的 &lt;listeners&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<listeners> 項目"
-  - "listeners 項目"
+title: "&lt;接聽程式&gt;元素&lt;追蹤&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
+helpviewer_keywords:
+- <listeners> element
+- listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 97d6673fddb20e99454bf97c87254049b82f0000
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;trace&gt; 的 &lt;listeners&gt; 項目
-指定收集、存放及傳送訊息的接聽程式。  接聽程式將追蹤輸出導向至適當的目標。  
+# <a name="ltlistenersgt-element-for-lttracegt"></a><span data-ttu-id="f16b4-102">&lt;接聽程式&gt;元素&lt;追蹤&gt;</span><span class="sxs-lookup"><span data-stu-id="f16b4-102">&lt;listeners&gt; Element for &lt;trace&gt;</span></span>
+<span data-ttu-id="f16b4-103">指定的接聽程式會收集，存放區，並將訊息路由。</span><span class="sxs-lookup"><span data-stu-id="f16b4-103">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="f16b4-104">接聽程式將追蹤輸出導向至適當的目標。</span><span class="sxs-lookup"><span data-stu-id="f16b4-104">Listeners direct the tracing output to an appropriate target.</span></span>  
   
-## 語法  
+ <span data-ttu-id="f16b4-105">\<設定 > 項目</span><span class="sxs-lookup"><span data-stu-id="f16b4-105">\<configuration> Element</span></span>  
+<span data-ttu-id="f16b4-106">\<system.diagnostics > 項目</span><span class="sxs-lookup"><span data-stu-id="f16b4-106">\<system.diagnostics> Element</span></span>  
+<span data-ttu-id="f16b4-107">\<追蹤 > 項目</span><span class="sxs-lookup"><span data-stu-id="f16b4-107">\<trace> Element</span></span>  
+<span data-ttu-id="f16b4-108">\<接聽程式 > 項目\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="f16b4-108">\<listeners> Element for \<trace></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="f16b4-109">語法</span><span class="sxs-lookup"><span data-stu-id="f16b4-109">Syntax</span></span>  
+  
+```xml  
 <listeners>   
   <add>...</add>  
   <clear/>  
@@ -39,38 +41,38 @@ caps.handback.revision: 17
 </listeners>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f16b4-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f16b4-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f16b4-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f16b4-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="f16b4-112">屬性</span><span class="sxs-lookup"><span data-stu-id="f16b4-112">Attributes</span></span>  
+ <span data-ttu-id="f16b4-113">無。</span><span class="sxs-lookup"><span data-stu-id="f16b4-113">None.</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="f16b4-114">子項目</span><span class="sxs-lookup"><span data-stu-id="f16b4-114">Child Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|將接聽程式加入至 `Listeners` 集合。|  
-|[\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|清除用於追蹤的 `Listeners` 集合。|  
-|[\<remove\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|從 `Listeners` 集合移除接聽程式。|  
+|<span data-ttu-id="f16b4-115">項目</span><span class="sxs-lookup"><span data-stu-id="f16b4-115">Element</span></span>|<span data-ttu-id="f16b4-116">描述</span><span class="sxs-lookup"><span data-stu-id="f16b4-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="f16b4-117">\<add></span><span class="sxs-lookup"><span data-stu-id="f16b4-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="f16b4-118">將接聽項新增至 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="f16b4-118">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="f16b4-119">\<clear></span><span class="sxs-lookup"><span data-stu-id="f16b4-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="f16b4-120">清除追蹤的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="f16b4-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="f16b4-121">\<remove></span><span class="sxs-lookup"><span data-stu-id="f16b4-121">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="f16b4-122">移除的接聽程式從`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="f16b4-122">Removes a listener from the `Listeners` collection.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="f16b4-123">父項目</span><span class="sxs-lookup"><span data-stu-id="f16b4-123">Parent Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`system.diagnostics`|指定 ASP.NET 組態區段的根項目。|  
-|`trace`|包含收集、存放和傳送追蹤訊息的接聽程式。|  
+|<span data-ttu-id="f16b4-124">項目</span><span class="sxs-lookup"><span data-stu-id="f16b4-124">Element</span></span>|<span data-ttu-id="f16b4-125">描述</span><span class="sxs-lookup"><span data-stu-id="f16b4-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="f16b4-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="f16b4-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="f16b4-127">指定 ASP.NET 組態區段的根項目。</span><span class="sxs-lookup"><span data-stu-id="f16b4-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`trace`|<span data-ttu-id="f16b4-128">包含用於收集、儲存及路由傳送追蹤訊息的接聽項。</span><span class="sxs-lookup"><span data-stu-id="f16b4-128">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## 備註  
- <xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.Trace> 類別共用一個 **Listeners** 集合。  如果您將接聽程式物件加入至其中一個類別的集合，另一個類別會使用相同的接聽程式。  .NET Framework 隨附的接聽程式類別是衍生自 <xref:System.Diagnostics.TraceListener> 類別。  
+## <a name="remarks"></a><span data-ttu-id="f16b4-129">備註</span><span class="sxs-lookup"><span data-stu-id="f16b4-129">Remarks</span></span>  
+ <span data-ttu-id="f16b4-130"><xref:System.Diagnostics.Debug>和<xref:System.Diagnostics.Trace>類別共用相同**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="f16b4-130">The <xref:System.Diagnostics.Debug> and <xref:System.Diagnostics.Trace> classes share the same **Listeners** collection.</span></span> <span data-ttu-id="f16b4-131">如果您將接聽程式物件加入至集合中的其中一個這些類別，另一個類別會使用相同的接聽程式。</span><span class="sxs-lookup"><span data-stu-id="f16b4-131">If you add a listener object to the collection in one of these classes, the other class uses the same listener.</span></span> <span data-ttu-id="f16b4-132">.NET Framework 所隨附的接聽程式類別衍生自<xref:System.Diagnostics.TraceListener>類別。</span><span class="sxs-lookup"><span data-stu-id="f16b4-132">The listener classes shipped with the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
-## 組態檔  
- 這個項目可以用於電腦組態檔 \(Machine.config\) 和應用程式組態檔。  
+## <a name="configuration-file"></a><span data-ttu-id="f16b4-133">組態檔</span><span class="sxs-lookup"><span data-stu-id="f16b4-133">Configuration File</span></span>  
+ <span data-ttu-id="f16b4-134">此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="f16b4-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## 範例  
- 下列範例示範如何使用 **\<listeners \>** 項目，將接聽程式 `MyListener`和 `MyEventListener`加入至 **Listeners** 集合。  `MyListener` 會建立一個名為 `MyListener.log` 的檔案，並將輸出寫入至該檔案中。  `MyEventListener` 會在事件記錄檔中建立項目。  
+## <a name="example"></a><span data-ttu-id="f16b4-135">範例</span><span class="sxs-lookup"><span data-stu-id="f16b4-135">Example</span></span>  
+ <span data-ttu-id="f16b4-136">下列範例示範如何使用**\<接聽程式 >**項目將接聽項`MyListener`和`MyEventListener`至**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="f16b4-136">The following example shows how to use the **\<listeners>** element to add the listeners `MyListener` and `MyEventListener` to the **Listeners** collection.</span></span> <span data-ttu-id="f16b4-137">`MyListener`建立名為的檔案`MyListener.log`並將輸出寫入檔案。</span><span class="sxs-lookup"><span data-stu-id="f16b4-137">`MyListener` creates a file called `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="f16b4-138">`MyEventListener`事件記錄檔中建立項目。</span><span class="sxs-lookup"><span data-stu-id="f16b4-138">`MyEventListener` creates an entry in the event log.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <trace autoflush="true" indentsize="0">  
@@ -91,6 +93,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Diagnostics.TraceListener>   
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="f16b4-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f16b4-139">See Also</span></span>  
+ <xref:System.Diagnostics.TraceListener>  
+ [<span data-ttu-id="f16b4-140">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="f16b4-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -1,153 +1,156 @@
 ---
-title: "以屬性為基礎的對應 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "屬性架構對應"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a8397c106ec45d9e6e1e9ec513536142d3048bd7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 以屬性為基礎的對應
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會藉由套用屬性 \(Attribute\) 或使用外部對應檔，將 SQL Server 資料庫對應至 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型。  本主題概述以屬性 \(Attribute\) 為基礎的方法。  
+# <a name="attribute-based-mapping"></a><span data-ttu-id="b702d-102">屬性架構對應</span><span class="sxs-lookup"><span data-stu-id="b702d-102">Attribute-Based Mapping</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b702d-103">對應至 SQL Server 資料庫[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]任一個套用的屬性或使用外部對應檔案的物件模型。</span><span class="sxs-lookup"><span data-stu-id="b702d-103"> maps a SQL Server database to a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model by either applying attributes or by using an external mapping file.</span></span> <span data-ttu-id="b702d-104">本主題概述以屬性 (Attribute) 為基礎的方法。</span><span class="sxs-lookup"><span data-stu-id="b702d-104">This topic outlines the attribute-based approach.</span></span>  
   
- 以最基本形式存在的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將資料庫對應至 <xref:System.Data.Linq.DataContext>、將資料表對應至類別，並且將資料行和關聯性 \(Relationship\) 對應至這些類別中的屬性 \(Property\)。  您也可以使用屬性 \(Attribute\) 來對應物件模型中的繼承階層架構 \(Inheritance Hierarchy\)。  如需詳細資訊，請參閱[HOW TO：在 Visual Basic 或 C\# 中產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ <span data-ttu-id="b702d-105">以最基本形式存在的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將資料庫對應至 <xref:System.Data.Linq.DataContext>、將資料表對應至類別，並且將資料行和關聯性 (Relationship) 對應至這些類別中的屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-105">In its most elementary form, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] maps a database to a <xref:System.Data.Linq.DataContext>, a table to a class, and columns and relationships to properties on those classes.</span></span> <span data-ttu-id="b702d-106">您也可以使用屬性 (Attribute) 來對應物件模型中的繼承階層架構 (Inheritance Hierarchy)。</span><span class="sxs-lookup"><span data-stu-id="b702d-106">You can also use attributes to map an inheritance hierarchy in your object model.</span></span> <span data-ttu-id="b702d-107">如需詳細資訊，請參閱[How to： 在 Visual Basic 或 C# 中產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。</span><span class="sxs-lookup"><span data-stu-id="b702d-107">For more information, see [How to: Generate the Object Model in Visual Basic or C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).</span></span>  
   
- 使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的開發人員通常會使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來執行以屬性為基礎的對應。您也可以使用 SQLMetal 命令列工具，或者自行撰寫屬性的程式碼。  如需詳細資訊，請參閱[HOW TO：在 Visual Basic 或 C\# 中產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
-  
-> [!NOTE]
->  您也可以使用外部 XML 檔進行對應。  如需詳細資訊，請參閱[外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
-  
- 下列各節會詳細說明以屬性 \(Attribute\) 為基礎的對應。  如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping>。  
-  
-## DatabaseAttribute 屬性  
- 當連接未提供資料庫名稱時，請使用這個屬性 \(Attribute\) 指定資料庫的預設名稱。  這個屬性 \(Attribute\) 為選擇性屬性，但如果您加以使用，就必須套用 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 \(Property\)，如下表中的說明。  
-  
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|搭配其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 \(Property\) 使用，可以指定資料庫的名稱。|  
-  
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
-  
-## TableAttribute 屬性  
- 使用這個屬性可以指定某個類別，做為與資料庫資料表或檢視相關聯的實體類別。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將具有這個屬性的類別視為持續性類別。  下表說明 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性 \(Property\)。  
-  
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|String|與類別名稱相同的字串|指定某個類別，做為與資料庫資料表相關聯的實體類別。|  
-  
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.TableAttribute>。  
-  
-## ColumnAttribute 屬性  
- 使用這個屬性 \(Attribute\) 可以指定實體類別的成員，以代表資料庫資料表中的資料行。  您可以將這個屬性 \(Attribute\) 套用至任何欄位或屬性 \(Property\)。  
-  
- 當 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將變更儲存至資料庫時，只會擷取和保存經您識別為資料行的成員。  不具此屬性 \(Attribute\) 的成員會被認為是非持續性的成員，而不會送出以進行插入或更新。  
-  
- 下表說明這個屬性 \(Attribute\) 的屬性 \(Property\)。  
-  
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|永不|指示 Common Language Runtime \(CLR\) 在插入或更新作業之後擷取值。<br /><br /> 選項：永遠、永不、OnUpdate、OnInsert。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|表示資料行可以包含 Null 值。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|推斷的資料庫資料行型別|使用資料庫型別和修飾詞 \(Modifier\) 來指定資料庫資料行的型別。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|Empty|定義資料庫中的計算資料行。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|表示資料行含有資料庫自動產生的值。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|表示資料行含有 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 繼承階層架構 \(Inheritance Hierarchy\) 所需的鑑別子值。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|表示這個類別成員是資料表的主索引鍵 \(可能是唯一一個也可能是多個主索引鍵之一\)。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|以資料庫時間戳記或版本號碼識別成員的資料行型別。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`，除非成員的 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 為 `true`|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何進行開放式並行存取衝突的偵測。|  
-  
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
+ <span data-ttu-id="b702d-108">使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的開發人員通常會使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來執行以屬性為基礎的對應。</span><span class="sxs-lookup"><span data-stu-id="b702d-108">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] typically perform attribute-based mapping by using the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span></span> <span data-ttu-id="b702d-109">您也可以使用 SQLMetal 命令列工具，或者自行撰寫屬性的程式碼。</span><span class="sxs-lookup"><span data-stu-id="b702d-109">You can also use the SQLMetal command-line tool, or you can hand-code the attributes yourself.</span></span> <span data-ttu-id="b702d-110">如需詳細資訊，請參閱[How to： 在 Visual Basic 或 C# 中產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。</span><span class="sxs-lookup"><span data-stu-id="b702d-110">For more information, see [How to: Generate the Object Model in Visual Basic or C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).</span></span>  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。  例如，請確定用於 AssociationAttribute.Storage 屬性 \(Property\) 之屬性 \(Attribute\) 中的值與用於程式碼中其他位置之對應屬性 \(Property\) 名稱的大小寫相符。  這適用於所有 .NET 程式語言，甚至是通常不區分大小寫的程式語言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。  如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=fullName>。  
+>  <span data-ttu-id="b702d-111">您也可以使用外部 XML 檔進行對應。</span><span class="sxs-lookup"><span data-stu-id="b702d-111">You can also map by using an external XML file.</span></span> <span data-ttu-id="b702d-112">如需詳細資訊，請參閱[外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="b702d-112">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
   
-## AssociationAttribute 屬性  
- 使用這個屬性 \(Attribute\) 可以指定屬性 \(Property\)，以代表資料庫中的關聯，例如外部索引鍵對主索引鍵的關聯性。  如需關聯性的詳細資訊，請參閱[HOW TO：對應資料庫關聯性](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
+ <span data-ttu-id="b702d-113">下列各節會詳細說明以屬性 (Attribute) 為基礎的對應。</span><span class="sxs-lookup"><span data-stu-id="b702d-113">The following sections describe attribute-based mapping in more detail.</span></span> <span data-ttu-id="b702d-114">如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping>。</span><span class="sxs-lookup"><span data-stu-id="b702d-114">For more information, see the <xref:System.Data.Linq.Mapping> namespace.</span></span>  
   
- 下表說明這個屬性 \(Attribute\) 的屬性 \(Property\)。  
+## <a name="databaseattribute-attribute"></a><span data-ttu-id="b702d-115">DatabaseAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-115">DatabaseAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-116">當連接未提供資料庫名稱時，請使用這個屬性 (Attribute) 指定資料庫的預設名稱。</span><span class="sxs-lookup"><span data-stu-id="b702d-116">Use this attribute to specify the default name of the database when a name is not supplied by the connection.</span></span> <span data-ttu-id="b702d-117">這個屬性 (Attribute) 為選擇性屬性，但如果您加以使用，就必須套用 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property)，如下表中的說明。</span><span class="sxs-lookup"><span data-stu-id="b702d-117">This attribute is optional, but if you use it, you must apply the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property, as described in the following table.</span></span>  
   
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|如果位於外部索引鍵成員都不可為 null 的關聯上，則會在關聯設為 null 時刪除物件。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|無|將刪除行為加入至關聯。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|若為 true，則指定這個成員做為代表資料庫關聯性之關聯中的外部索引鍵。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|若為 true，則表示外部索引鍵有唯一性條件約束。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|String|相關類別的 ID|指定目標實體類別的一個或多個成員，做為關聯另一端的索引值。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|String|包含類別的 ID|指定這個實體類別的成員代表關聯這一端的索引值。|  
+|<span data-ttu-id="b702d-118">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-118">Property</span></span>|<span data-ttu-id="b702d-119">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-119">Type</span></span>|<span data-ttu-id="b702d-120">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-120">Default</span></span>|<span data-ttu-id="b702d-121">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-121">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|<span data-ttu-id="b702d-122">String</span><span class="sxs-lookup"><span data-stu-id="b702d-122">String</span></span>|<span data-ttu-id="b702d-123">請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A></span><span class="sxs-lookup"><span data-stu-id="b702d-123">See <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A></span></span>|<span data-ttu-id="b702d-124">搭配其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 使用，可以指定資料庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="b702d-124">Used with its <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property, specifies the name of the database.</span></span>|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.AssociationAttribute>。  
+ <span data-ttu-id="b702d-125">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-125">For more information, see <xref:System.Data.Linq.Mapping.DatabaseAttribute>.</span></span>  
+  
+## <a name="tableattribute-attribute"></a><span data-ttu-id="b702d-126">TableAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-126">TableAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-127">使用這個屬性可以指定某個類別，做為與資料庫資料表或檢視相關聯的實體類別。</span><span class="sxs-lookup"><span data-stu-id="b702d-127">Use this attribute to designate a class as an entity class that is associated with a database table or view.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b702d-128"> 會將具有這個屬性的類別視為持續性類別。</span><span class="sxs-lookup"><span data-stu-id="b702d-128"> treats classes that have this attribute as persistent classes.</span></span> <span data-ttu-id="b702d-129">下表說明 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-129">The following table describes the <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> property.</span></span>  
+  
+|<span data-ttu-id="b702d-130">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-130">Property</span></span>|<span data-ttu-id="b702d-131">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-131">Type</span></span>|<span data-ttu-id="b702d-132">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-132">Default</span></span>|<span data-ttu-id="b702d-133">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-133">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|<span data-ttu-id="b702d-134">String</span><span class="sxs-lookup"><span data-stu-id="b702d-134">String</span></span>|<span data-ttu-id="b702d-135">與類別名稱相同的字串</span><span class="sxs-lookup"><span data-stu-id="b702d-135">Same string as class name</span></span>|<span data-ttu-id="b702d-136">指定某個類別，做為與資料庫資料表相關聯的實體類別。</span><span class="sxs-lookup"><span data-stu-id="b702d-136">Designates a class as an entity class associated with a database table.</span></span>|  
+  
+ <span data-ttu-id="b702d-137">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.TableAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-137">For more information, see <xref:System.Data.Linq.Mapping.TableAttribute>.</span></span>  
+  
+## <a name="columnattribute-attribute"></a><span data-ttu-id="b702d-138">ColumnAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-138">ColumnAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-139">使用這個屬性 (Attribute) 可以指定實體類別的成員，以代表資料庫資料表中的資料行。</span><span class="sxs-lookup"><span data-stu-id="b702d-139">Use this attribute to designate a member of an entity class to represent a column in a database table.</span></span> <span data-ttu-id="b702d-140">您可以將這個屬性 (Attribute) 套用至任何欄位或屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-140">You can apply this attribute to any field or property.</span></span>  
+  
+ <span data-ttu-id="b702d-141">當 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將變更儲存至資料庫時，只會擷取和保存經您識別為資料行的成員。</span><span class="sxs-lookup"><span data-stu-id="b702d-141">Only those members you identify as columns are retrieved and persisted when [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saves changes to the database.</span></span> <span data-ttu-id="b702d-142">不具此屬性 (Attribute) 的成員會被認為是非持續性的成員，而不會送出以進行插入或更新。</span><span class="sxs-lookup"><span data-stu-id="b702d-142">Members without this attribute are assumed to be non-persistent and are not submitted for inserts or updates.</span></span>  
+  
+ <span data-ttu-id="b702d-143">下表說明這個屬性 (Attribute) 的屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-143">The following table describes properties of this attribute.</span></span>  
+  
+|<span data-ttu-id="b702d-144">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-144">Property</span></span>|<span data-ttu-id="b702d-145">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-145">Type</span></span>|<span data-ttu-id="b702d-146">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-146">Default</span></span>|<span data-ttu-id="b702d-147">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-147">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|<span data-ttu-id="b702d-148">AutoSync</span><span class="sxs-lookup"><span data-stu-id="b702d-148">AutoSync</span></span>|<span data-ttu-id="b702d-149">永不</span><span class="sxs-lookup"><span data-stu-id="b702d-149">Never</span></span>|<span data-ttu-id="b702d-150">指示 Common Language Runtime (CLR) 在插入或更新作業之後擷取值。</span><span class="sxs-lookup"><span data-stu-id="b702d-150">Instructs the common language runtime (CLR) to retrieve the value after an insert or update operation.</span></span><br /><br /> <span data-ttu-id="b702d-151">選項：永遠、永不、OnUpdate、OnInsert。</span><span class="sxs-lookup"><span data-stu-id="b702d-151">Options: Always, Never, OnUpdate, OnInsert.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|<span data-ttu-id="b702d-152">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-152">Boolean</span></span>|`true`|<span data-ttu-id="b702d-153">表示資料行可以包含 Null 值。</span><span class="sxs-lookup"><span data-stu-id="b702d-153">Indicates that a column can contain null values.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|<span data-ttu-id="b702d-154">String</span><span class="sxs-lookup"><span data-stu-id="b702d-154">String</span></span>|<span data-ttu-id="b702d-155">推斷的資料庫資料行型別</span><span class="sxs-lookup"><span data-stu-id="b702d-155">Inferred database column type</span></span>|<span data-ttu-id="b702d-156">使用資料庫型別和修飾詞 (Modifier) 來指定資料庫資料行的型別。</span><span class="sxs-lookup"><span data-stu-id="b702d-156">Uses database types and modifiers to specify the type of the database column.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|<span data-ttu-id="b702d-157">String</span><span class="sxs-lookup"><span data-stu-id="b702d-157">String</span></span>|<span data-ttu-id="b702d-158">Empty</span><span class="sxs-lookup"><span data-stu-id="b702d-158">Empty</span></span>|<span data-ttu-id="b702d-159">定義資料庫中的計算資料行。</span><span class="sxs-lookup"><span data-stu-id="b702d-159">Defines a computed column in a database.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|<span data-ttu-id="b702d-160">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-160">Boolean</span></span>|`false`|<span data-ttu-id="b702d-161">表示資料行含有資料庫自動產生的值。</span><span class="sxs-lookup"><span data-stu-id="b702d-161">Indicates that a column contains values that the database auto-generates.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|<span data-ttu-id="b702d-162">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-162">Boolean</span></span>|`false`|<span data-ttu-id="b702d-163">表示資料行含有 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 繼承階層架構 (Inheritance Hierarchy) 所需的鑑別子值。</span><span class="sxs-lookup"><span data-stu-id="b702d-163">Indicates that the column contains a discriminator value for a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] inheritance hierarchy.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|<span data-ttu-id="b702d-164">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-164">Boolean</span></span>|`false`|<span data-ttu-id="b702d-165">表示這個類別成員是資料表的主索引鍵 (可能是唯一一個也可能是多個主索引鍵之一)。</span><span class="sxs-lookup"><span data-stu-id="b702d-165">Specifies that this class member represents a column that is or is part of the primary keys of the table.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|<span data-ttu-id="b702d-166">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-166">Boolean</span></span>|`false`|<span data-ttu-id="b702d-167">以資料庫時間戳記或版本號碼識別成員的資料行型別。</span><span class="sxs-lookup"><span data-stu-id="b702d-167">Identifies the column type of the member as a database timestamp or version number.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|<span data-ttu-id="b702d-168">UpdateCheck</span><span class="sxs-lookup"><span data-stu-id="b702d-168">UpdateCheck</span></span>|<span data-ttu-id="b702d-169">`Always`，除非成員的 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 為 `true`</span><span class="sxs-lookup"><span data-stu-id="b702d-169">`Always`, unless <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> is `true` for a member</span></span>|<span data-ttu-id="b702d-170">指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何進行開放式並行存取衝突的偵測。</span><span class="sxs-lookup"><span data-stu-id="b702d-170">Specifies how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] approaches the detection of optimistic concurrency conflicts.</span></span>|  
+  
+ <span data-ttu-id="b702d-171">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ColumnAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-171">For more information, see <xref:System.Data.Linq.Mapping.ColumnAttribute>.</span></span>  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。  例如，請確定用於 AssociationAttribute.Storage 屬性 \(Property\) 之屬性 \(Attribute\) 中的值與用於程式碼中其他位置之對應屬性 \(Property\) 名稱的大小寫相符。  這適用於所有 .NET 程式語言，甚至是通常不區分大小寫的程式語言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。  如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=fullName>。  
+>  <span data-ttu-id="b702d-172">AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="b702d-172">AssociationAttribute and ColumnAttribute Storage property values are case sensitive.</span></span> <span data-ttu-id="b702d-173">例如，請確定用於 AssociationAttribute.Storage 屬性 (Property) 之屬性 (Attribute) 中的值與用於程式碼中其他位置之對應屬性 (Property) 名稱的大小寫相符。</span><span class="sxs-lookup"><span data-stu-id="b702d-173">For example, ensure that values used in the attribute for the AssociationAttribute.Storage property match the case for the corresponding property names used elsewhere in the code.</span></span> <span data-ttu-id="b702d-174">這適用於所有 .NET 程式語言，甚至是通常不區分大小寫的程式語言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="b702d-174">This applies to all .NET programming languages, even those which are not typically case sensitive, including [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].</span></span> <span data-ttu-id="b702d-175">如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="b702d-175">For more information about the Storage property, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.</span></span>  
   
-## InheritanceMappingAttribute 屬性  
- 使用這個屬性可以對應繼承階層架構。  
+## <a name="associationattribute-attribute"></a><span data-ttu-id="b702d-176">AssociationAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-176">AssociationAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-177">使用這個屬性 (Attribute) 可以指定屬性 (Property)，以代表資料庫中的關聯，例如外部索引鍵對主索引鍵的關聯性。</span><span class="sxs-lookup"><span data-stu-id="b702d-177">Use this attribute to designate a property to represent an association in the database, such as a foreign key to primary key relationship.</span></span> <span data-ttu-id="b702d-178">如需關聯性的詳細資訊，請參閱[如何： 對應資料庫關聯性](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。</span><span class="sxs-lookup"><span data-stu-id="b702d-178">For more information about relationships, see [How to: Map Database Relationships](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).</span></span>  
   
- 下表說明這個屬性 \(Attribute\) 的屬性 \(Property\)。  
+ <span data-ttu-id="b702d-179">下表說明這個屬性 (Attribute) 的屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-179">The following table describes properties of this attribute.</span></span>  
   
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|無。  必須提供值。|指定鑑別子的程式碼值。|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|若為 true，則在存放區中沒有鑑別子值符合所指定的任何一個值時，具現化這個型別的物件。|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|類型|無。  必須提供值。|指定階層架構中這個類別的型別。|  
+|<span data-ttu-id="b702d-180">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-180">Property</span></span>|<span data-ttu-id="b702d-181">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-181">Type</span></span>|<span data-ttu-id="b702d-182">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-182">Default</span></span>|<span data-ttu-id="b702d-183">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-183">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|<span data-ttu-id="b702d-184">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-184">Boolean</span></span>|`false`|<span data-ttu-id="b702d-185">如果位於外部索引鍵成員都不可為 null 的關聯上，則會在關聯設為 null 時刪除物件。</span><span class="sxs-lookup"><span data-stu-id="b702d-185">When placed on an association whose foreign key members are all non-nullable, deletes the object when the association is set to null.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|<span data-ttu-id="b702d-186">String</span><span class="sxs-lookup"><span data-stu-id="b702d-186">String</span></span>|<span data-ttu-id="b702d-187">無</span><span class="sxs-lookup"><span data-stu-id="b702d-187">None</span></span>|<span data-ttu-id="b702d-188">將刪除行為加入至關聯。</span><span class="sxs-lookup"><span data-stu-id="b702d-188">Adds delete behavior to an association.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|<span data-ttu-id="b702d-189">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-189">Boolean</span></span>|`false`|<span data-ttu-id="b702d-190">若為 true，則指定這個成員做為代表資料庫關聯性之關聯中的外部索引鍵。</span><span class="sxs-lookup"><span data-stu-id="b702d-190">If true, designates the member as the foreign key in an association representing a database relationship.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|<span data-ttu-id="b702d-191">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-191">Boolean</span></span>|`false`|<span data-ttu-id="b702d-192">若為 true，則表示外部索引鍵有唯一性條件約束。</span><span class="sxs-lookup"><span data-stu-id="b702d-192">If true, indicates a uniqueness constraint on the foreign key.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|<span data-ttu-id="b702d-193">String</span><span class="sxs-lookup"><span data-stu-id="b702d-193">String</span></span>|<span data-ttu-id="b702d-194">相關類別的 ID</span><span class="sxs-lookup"><span data-stu-id="b702d-194">ID of the related class</span></span>|<span data-ttu-id="b702d-195">指定目標實體類別的一個或多個成員，做為關聯另一端的索引值。</span><span class="sxs-lookup"><span data-stu-id="b702d-195">Designates one or more members of the target entity class as key values on the other side of the association.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|<span data-ttu-id="b702d-196">String</span><span class="sxs-lookup"><span data-stu-id="b702d-196">String</span></span>|<span data-ttu-id="b702d-197">包含類別的 ID</span><span class="sxs-lookup"><span data-stu-id="b702d-197">ID of the containing class</span></span>|<span data-ttu-id="b702d-198">指定這個實體類別的成員代表關聯這一端的索引值。</span><span class="sxs-lookup"><span data-stu-id="b702d-198">Designates members of this entity class to represent the key values on this side of the association.</span></span>|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>。  
+ <span data-ttu-id="b702d-199">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.AssociationAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-199">For more information, see <xref:System.Data.Linq.Mapping.AssociationAttribute>.</span></span>  
   
-## FunctionAttribute 屬性  
- 使用這個屬性可以指定方法，以代表資料庫中的預存程序或使用者定義的函式。  
+> [!NOTE]
+>  <span data-ttu-id="b702d-200">AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="b702d-200">AssociationAttribute and ColumnAttribute Storage property values are case sensitive.</span></span> <span data-ttu-id="b702d-201">例如，請確定用於 AssociationAttribute.Storage 屬性 (Property) 之屬性 (Attribute) 中的值與用於程式碼中其他位置之對應屬性 (Property) 名稱的大小寫相符。</span><span class="sxs-lookup"><span data-stu-id="b702d-201">For example, ensure that values used in the attribute for the AssociationAttribute.Storage property match the case for the corresponding property names used elsewhere in the code.</span></span> <span data-ttu-id="b702d-202">這適用於所有 .NET 程式語言，甚至是通常不區分大小寫的程式語言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="b702d-202">This applies to all .NET programming languages, even those which are not typically case sensitive, including [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].</span></span> <span data-ttu-id="b702d-203">如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="b702d-203">For more information about the Storage property, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.</span></span>  
   
- 下表說明這個屬性 \(Attribute\) 的屬性 \(Property\)。  
+## <a name="inheritancemappingattribute-attribute"></a><span data-ttu-id="b702d-204">InheritanceMappingAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-204">InheritanceMappingAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-205">使用這個屬性可以對應繼承階層架構。</span><span class="sxs-lookup"><span data-stu-id="b702d-205">Use this attribute to map an inheritance hierarchy.</span></span>  
   
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|若為 false，則表示對應至預存程序。  若為 true，則表示對應至使用者定義函式。|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|與資料庫中的名稱相同的字串|指定預存程序或使用者定義函式的名稱。|  
+ <span data-ttu-id="b702d-206">下表說明這個屬性 (Attribute) 的屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-206">The following table describes properties of this attribute.</span></span>  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.FunctionAttribute>。  
+|<span data-ttu-id="b702d-207">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-207">Property</span></span>|<span data-ttu-id="b702d-208">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-208">Type</span></span>|<span data-ttu-id="b702d-209">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-209">Default</span></span>|<span data-ttu-id="b702d-210">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-210">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|<span data-ttu-id="b702d-211">String</span><span class="sxs-lookup"><span data-stu-id="b702d-211">String</span></span>|<span data-ttu-id="b702d-212">無。</span><span class="sxs-lookup"><span data-stu-id="b702d-212">None.</span></span> <span data-ttu-id="b702d-213">必須提供值。</span><span class="sxs-lookup"><span data-stu-id="b702d-213">Value must be supplied.</span></span>|<span data-ttu-id="b702d-214">指定鑑別子的程式碼值。</span><span class="sxs-lookup"><span data-stu-id="b702d-214">Specifies the code value of the discriminator.</span></span>|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|<span data-ttu-id="b702d-215">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-215">Boolean</span></span>|`false`|<span data-ttu-id="b702d-216">若為 true，則在存放區中沒有鑑別子值符合所指定的任何一個值時，具現化這個型別的物件。</span><span class="sxs-lookup"><span data-stu-id="b702d-216">If true, instantiates an object of this type when no discriminator value in the store matches any one of the specified values.</span></span>|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|<span data-ttu-id="b702d-217">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-217">Type</span></span>|<span data-ttu-id="b702d-218">無。</span><span class="sxs-lookup"><span data-stu-id="b702d-218">None.</span></span> <span data-ttu-id="b702d-219">必須提供值。</span><span class="sxs-lookup"><span data-stu-id="b702d-219">Value must be supplied.</span></span>|<span data-ttu-id="b702d-220">指定階層架構中這個類別的型別。</span><span class="sxs-lookup"><span data-stu-id="b702d-220">Specifies the type of the class in the hierarchy.</span></span>|  
   
-## ParameterAttribute 屬性  
- 使用這個屬性可以對應預存程序方法的輸入參數。  
+ <span data-ttu-id="b702d-221">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-221">For more information, see <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>.</span></span>  
   
- 下表說明這個屬性 \(Attribute\) 的屬性 \(Property\)。  
+## <a name="functionattribute-attribute"></a><span data-ttu-id="b702d-222">FunctionAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-222">FunctionAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-223">使用這個屬性可以指定方法，以代表資料庫中的預存程序或使用者定義的函式。</span><span class="sxs-lookup"><span data-stu-id="b702d-223">Use this attribute to designate a method as representing a stored procedure or user-defined function in the database.</span></span>  
   
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|無|指定資料庫型別。|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|String|與資料庫中的參數名稱相同的字串|指定參數的名稱。‏|  
+ <span data-ttu-id="b702d-224">下表說明這個屬性 (Attribute) 的屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-224">The following table describes the properties of this attribute.</span></span>  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ParameterAttribute>。  
+|<span data-ttu-id="b702d-225">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-225">Property</span></span>|<span data-ttu-id="b702d-226">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-226">Type</span></span>|<span data-ttu-id="b702d-227">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-227">Default</span></span>|<span data-ttu-id="b702d-228">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-228">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|<span data-ttu-id="b702d-229">Boolean</span><span class="sxs-lookup"><span data-stu-id="b702d-229">Boolean</span></span>|`false`|<span data-ttu-id="b702d-230">若為 false，則表示對應至預存程序。</span><span class="sxs-lookup"><span data-stu-id="b702d-230">If false, indicates mapping to a stored procedure.</span></span> <span data-ttu-id="b702d-231">若為 true，則表示對應至使用者定義函式。</span><span class="sxs-lookup"><span data-stu-id="b702d-231">If true, indicates mapping to a user-defined function.</span></span>|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|<span data-ttu-id="b702d-232">String</span><span class="sxs-lookup"><span data-stu-id="b702d-232">String</span></span>|<span data-ttu-id="b702d-233">與資料庫中的名稱相同的字串</span><span class="sxs-lookup"><span data-stu-id="b702d-233">Same string as name in the database</span></span>|<span data-ttu-id="b702d-234">指定預存程序或使用者定義函式的名稱。</span><span class="sxs-lookup"><span data-stu-id="b702d-234">Specifies the name of the stored procedure or user-defined function.</span></span>|  
   
-## ResultTypeAttribute 屬性  
- 使用這個屬性可以指定結果型別。  
+ <span data-ttu-id="b702d-235">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.FunctionAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-235">For more information, see <xref:System.Data.Linq.Mapping.FunctionAttribute>.</span></span>  
   
- 下表說明這個屬性 \(Attribute\) 的屬性 \(Property\)。  
+## <a name="parameterattribute-attribute"></a><span data-ttu-id="b702d-236">ParameterAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-236">ParameterAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-237">使用這個屬性可以對應預存程序方法的輸入參數。</span><span class="sxs-lookup"><span data-stu-id="b702d-237">Use this attribute to map input parameters on stored procedure methods.</span></span>  
   
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|類型|\(無\)|用在對應至會傳回 <xref:System.Data.Linq.IMultipleResults> 之預存程序的方法中。  宣告預存程序的有效或應有的型別對應。|  
+ <span data-ttu-id="b702d-238">下表說明這個屬性 (Attribute) 的屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-238">The following table describes properties of this attribute.</span></span>  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ResultTypeAttribute>。  
+|<span data-ttu-id="b702d-239">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-239">Property</span></span>|<span data-ttu-id="b702d-240">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-240">Type</span></span>|<span data-ttu-id="b702d-241">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-241">Default</span></span>|<span data-ttu-id="b702d-242">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-242">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|<span data-ttu-id="b702d-243">String</span><span class="sxs-lookup"><span data-stu-id="b702d-243">String</span></span>|<span data-ttu-id="b702d-244">無</span><span class="sxs-lookup"><span data-stu-id="b702d-244">None</span></span>|<span data-ttu-id="b702d-245">指定資料庫型別。</span><span class="sxs-lookup"><span data-stu-id="b702d-245">Specifies database type.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|<span data-ttu-id="b702d-246">String</span><span class="sxs-lookup"><span data-stu-id="b702d-246">String</span></span>|<span data-ttu-id="b702d-247">與資料庫中的參數名稱相同的字串</span><span class="sxs-lookup"><span data-stu-id="b702d-247">Same string as parameter name in database</span></span>|<span data-ttu-id="b702d-248">指定參數的名稱。‏</span><span class="sxs-lookup"><span data-stu-id="b702d-248">Specifies a name for the parameter.</span></span>|  
   
-## DataAttribute 屬性  
- 使用這個屬性可以指定名稱和私用儲存欄位。  
+ <span data-ttu-id="b702d-249">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ParameterAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-249">For more information, see <xref:System.Data.Linq.Mapping.ParameterAttribute>.</span></span>  
   
- 下表說明這個屬性 \(Attribute\) 的屬性 \(Property\)。  
+## <a name="resulttypeattribute-attribute"></a><span data-ttu-id="b702d-250">ResultTypeAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-250">ResultTypeAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-251">使用這個屬性可以指定結果型別。</span><span class="sxs-lookup"><span data-stu-id="b702d-251">Use this attribute to specify a result type.</span></span>  
   
-|屬性|類型|預設|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|String|與資料庫中的名稱相同|指定資料表、資料行等的名稱。|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|String|公用存取子|指定基礎儲存欄位的名稱。|  
+ <span data-ttu-id="b702d-252">下表說明這個屬性 (Attribute) 的屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-252">The following table describes properties of this attribute.</span></span>  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DataAttribute>。  
+|<span data-ttu-id="b702d-253">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-253">Property</span></span>|<span data-ttu-id="b702d-254">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-254">Type</span></span>|<span data-ttu-id="b702d-255">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-255">Default</span></span>|<span data-ttu-id="b702d-256">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-256">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|<span data-ttu-id="b702d-257">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-257">Type</span></span>|<span data-ttu-id="b702d-258">(無)</span><span class="sxs-lookup"><span data-stu-id="b702d-258">(None)</span></span>|<span data-ttu-id="b702d-259">用在對應至會傳回 <xref:System.Data.Linq.IMultipleResults> 之預存程序的方法中。</span><span class="sxs-lookup"><span data-stu-id="b702d-259">Used on methods mapped to stored procedures that return <xref:System.Data.Linq.IMultipleResults>.</span></span> <span data-ttu-id="b702d-260">宣告預存程序的有效或應有的型別對應。</span><span class="sxs-lookup"><span data-stu-id="b702d-260">Declares the valid or expected type mappings for the stored procedure.</span></span>|  
   
-## 請參閱  
- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+ <span data-ttu-id="b702d-261">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ResultTypeAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-261">For more information, see <xref:System.Data.Linq.Mapping.ResultTypeAttribute>.</span></span>  
+  
+## <a name="dataattribute-attribute"></a><span data-ttu-id="b702d-262">DataAttribute 屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-262">DataAttribute Attribute</span></span>  
+ <span data-ttu-id="b702d-263">使用這個屬性可以指定名稱和私用儲存欄位。</span><span class="sxs-lookup"><span data-stu-id="b702d-263">Use this attribute to specify names and private storage fields.</span></span>  
+  
+ <span data-ttu-id="b702d-264">下表說明這個屬性 (Attribute) 的屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="b702d-264">The following table describes properties of this attribute.</span></span>  
+  
+|<span data-ttu-id="b702d-265">屬性</span><span class="sxs-lookup"><span data-stu-id="b702d-265">Property</span></span>|<span data-ttu-id="b702d-266">類型</span><span class="sxs-lookup"><span data-stu-id="b702d-266">Type</span></span>|<span data-ttu-id="b702d-267">預設</span><span class="sxs-lookup"><span data-stu-id="b702d-267">Default</span></span>|<span data-ttu-id="b702d-268">描述</span><span class="sxs-lookup"><span data-stu-id="b702d-268">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|<span data-ttu-id="b702d-269">String</span><span class="sxs-lookup"><span data-stu-id="b702d-269">String</span></span>|<span data-ttu-id="b702d-270">與資料庫中的名稱相同</span><span class="sxs-lookup"><span data-stu-id="b702d-270">Same as name in database</span></span>|<span data-ttu-id="b702d-271">指定資料表、資料行等的名稱。</span><span class="sxs-lookup"><span data-stu-id="b702d-271">Specifies the name of the table, column, and so on.</span></span>|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|<span data-ttu-id="b702d-272">String</span><span class="sxs-lookup"><span data-stu-id="b702d-272">String</span></span>|<span data-ttu-id="b702d-273">公用存取子</span><span class="sxs-lookup"><span data-stu-id="b702d-273">Public accessors</span></span>|<span data-ttu-id="b702d-274">指定基礎儲存欄位的名稱。</span><span class="sxs-lookup"><span data-stu-id="b702d-274">Specifies the name of the underlying storage field.</span></span>|  
+  
+ <span data-ttu-id="b702d-275">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DataAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b702d-275">For more information, see <xref:System.Data.Linq.Mapping.DataAttribute>.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b702d-276">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b702d-276">See Also</span></span>  
+ [<span data-ttu-id="b702d-277">參考</span><span class="sxs-lookup"><span data-stu-id="b702d-277">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -1,51 +1,55 @@
 ---
-title: "104 - ActivityScheduledRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 104 - ActivityScheduledRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae202178-8fb1-4646-a3aa-18beeda8ff93
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49c7a295c4025da2c7fdcb7d4a220e26a4971f1b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 104 - ActivityScheduledRecord
-## 屬性  
+# <a name="104---activityscheduledrecord"></a><span data-ttu-id="9cfb6-102">104 - ActivityScheduledRecord</span><span class="sxs-lookup"><span data-stu-id="9cfb6-102">104 - ActivityScheduledRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="9cfb6-103">屬性</span><span class="sxs-lookup"><span data-stu-id="9cfb6-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|104|  
-|關鍵字|EndToEndMonitoring，Troubleshooting，HealthMonitoring，WFTracking|  
-|層級|Information|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="9cfb6-104">ID</span><span class="sxs-lookup"><span data-stu-id="9cfb6-104">Id</span></span>|<span data-ttu-id="9cfb6-105">104</span><span class="sxs-lookup"><span data-stu-id="9cfb6-105">104</span></span>|  
+|<span data-ttu-id="9cfb6-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="9cfb6-106">Keywords</span></span>|<span data-ttu-id="9cfb6-107">EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking</span><span class="sxs-lookup"><span data-stu-id="9cfb6-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="9cfb6-108">層級</span><span class="sxs-lookup"><span data-stu-id="9cfb6-108">Level</span></span>|<span data-ttu-id="9cfb6-109">資訊</span><span class="sxs-lookup"><span data-stu-id="9cfb6-109">Information</span></span>|  
+|<span data-ttu-id="9cfb6-110">通道</span><span class="sxs-lookup"><span data-stu-id="9cfb6-110">Channel</span></span>|<span data-ttu-id="9cfb6-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="9cfb6-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 說明  
- 此事件是當工作流程執行個體內的活動發出 ActivityScheduledRecord 時，由 ETW 追蹤參與者發出。  
+## <a name="description"></a><span data-ttu-id="9cfb6-112">描述</span><span class="sxs-lookup"><span data-stu-id="9cfb6-112">Description</span></span>  
+ <span data-ttu-id="9cfb6-113">此事件是當工作流程執行個體內的活動發出 ActivityScheduledRecord 時，由 ETW 追蹤參與者發出。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-113">This event is emitted by the ETW tracking participant when an activity within a workflow instance emits ActivityScheduledRecord</span></span>  
   
-## 訊息  
- TrackRecord \= ActivityScheduledRecord, InstanceID \= %1,  RecordNumber \= %2, EventTime \= %3, Name \= %4, ActivityId \= %5, ActivityInstanceId \= %6, ActivityTypeName \= %7, ChildActivityName \= %8, ChildActivityId \= %9, ChildActivityInstanceId \= %10, ChildActivityTypeName \=%11, Annotations\=%12, ProfileName \= %13  
+## <a name="message"></a><span data-ttu-id="9cfb6-114">訊息</span><span class="sxs-lookup"><span data-stu-id="9cfb6-114">Message</span></span>  
+ <span data-ttu-id="9cfb6-115">TrackRecord = ActivityScheduledRecord、InstanceID = %1、RecordNumber = %2、EventTime = %3、Name = %4、ActivityId = %5、ActivityInstanceId = %6、ActivityTypeName = %7、ChildActivityName = %8、ChildActivityId = %9、ChildActivityInstanceId = %10、ChildActivityTypeName =%11、Annotations=%12、ProfileName = %13</span><span class="sxs-lookup"><span data-stu-id="9cfb6-115">TrackRecord = ActivityScheduledRecord, InstanceID = %1,  RecordNumber = %2, EventTime = %3, Name = %4, ActivityId = %5, ActivityInstanceId = %6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13</span></span>  
   
-## 詳細資料  
+## <a name="details"></a><span data-ttu-id="9cfb6-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="9cfb6-116">Details</span></span>  
   
-|資料項目名稱|資料項目型別|說明|  
-|------------|------------|--------|  
-|InstanceId|xs:GUID|工作流程的執行個體 ID。|  
-|RecordNumber|xs:long|發出之記錄的序號。|  
-|EventTime|xs:dateTime|發出事件時的 UTC 時間。|  
-|Name|xs:string|排程子活動之活動的名稱。|  
-|ActivityId|xs:string|排程子活動之活動的 ID。|  
-|ActivityInstanceId|xs:string|排程子活動之活動的執行個體 ID。|  
-|ActivityTypeName|xs:string|要求取消作業的活動型別。|  
-|ChildActivityName|xs:string|已排程活動的名稱。|  
-|ChildActivityId|xs:string|已排程活動的 ID。|  
-|ChildActivityInstanceId|xs:string|已排程活動的執行個體 ID。|  
-|ChildActivityTypeName|xs:string|已排程活動的型別。|  
-|Annotations|xs:string|加入至此事件中的附註。這些值會以下列格式儲存在 XML 項目中：\<items\>\<\> item  name \= "annotationName" type\="System.String"\<annotationValue\>\<\/item\>\/items。如果沒有指定的附註，則字串會包含 \<items\/\>。ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。如果事件大小超過 ETW 限制，則會捨棄附註並以 \<items\>...\<\/items\> 取代附註值來截斷事件。|  
-|ProfileName|xs:string|造成發送這個事件的名稱或追蹤設定檔。|  
-|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。範例：'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="9cfb6-117">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="9cfb6-117">Data Item Name</span></span>|<span data-ttu-id="9cfb6-118">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="9cfb6-118">Data Item Type</span></span>|<span data-ttu-id="9cfb6-119">描述</span><span class="sxs-lookup"><span data-stu-id="9cfb6-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="9cfb6-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="9cfb6-120">InstanceId</span></span>|<span data-ttu-id="9cfb6-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="9cfb6-121">xs:GUID</span></span>|<span data-ttu-id="9cfb6-122">工作流程的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="9cfb6-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="9cfb6-123">RecordNumber</span></span>|<span data-ttu-id="9cfb6-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="9cfb6-124">xs:long</span></span>|<span data-ttu-id="9cfb6-125">發出之記錄的序號。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="9cfb6-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="9cfb6-126">EventTime</span></span>|<span data-ttu-id="9cfb6-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="9cfb6-127">xs:dateTime</span></span>|<span data-ttu-id="9cfb6-128">發出事件時的 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="9cfb6-129">名稱</span><span class="sxs-lookup"><span data-stu-id="9cfb6-129">Name</span></span>|<span data-ttu-id="9cfb6-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-130">xs:string</span></span>|<span data-ttu-id="9cfb6-131">排程子活動之活動的名稱。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-131">The name of the activity that scheduled the child activity</span></span>|  
+|<span data-ttu-id="9cfb6-132">ActivityId</span><span class="sxs-lookup"><span data-stu-id="9cfb6-132">ActivityId</span></span>|<span data-ttu-id="9cfb6-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-133">xs:string</span></span>|<span data-ttu-id="9cfb6-134">排程子活動之活動的 ID。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-134">The id of the activity that scheduled the child activity</span></span>|  
+|<span data-ttu-id="9cfb6-135">ActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="9cfb6-135">ActivityInstanceId</span></span>|<span data-ttu-id="9cfb6-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-136">xs:string</span></span>|<span data-ttu-id="9cfb6-137">排程子活動之活動的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-137">The instance id of the activity that scheduled the child activity</span></span>|  
+|<span data-ttu-id="9cfb6-138">ActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="9cfb6-138">ActivityTypeName</span></span>|<span data-ttu-id="9cfb6-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-139">xs:string</span></span>|<span data-ttu-id="9cfb6-140">要求取消作業的活動型別。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-140">The type of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="9cfb6-141">ChildActivityName</span><span class="sxs-lookup"><span data-stu-id="9cfb6-141">ChildActivityName</span></span>|<span data-ttu-id="9cfb6-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-142">xs:string</span></span>|<span data-ttu-id="9cfb6-143">已排程活動的名稱。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-143">The name of the scheduled activity</span></span>|  
+|<span data-ttu-id="9cfb6-144">ChildActivityId</span><span class="sxs-lookup"><span data-stu-id="9cfb6-144">ChildActivityId</span></span>|<span data-ttu-id="9cfb6-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-145">xs:string</span></span>|<span data-ttu-id="9cfb6-146">已排程活動的 ID。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-146">The id of the scheduled activity</span></span>|  
+|<span data-ttu-id="9cfb6-147">ChildActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="9cfb6-147">ChildActivityInstanceId</span></span>|<span data-ttu-id="9cfb6-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-148">xs:string</span></span>|<span data-ttu-id="9cfb6-149">已排程活動的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-149">The instance id of the scheduled activity</span></span>|  
+|<span data-ttu-id="9cfb6-150">ChildActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="9cfb6-150">ChildActivityTypeName</span></span>|<span data-ttu-id="9cfb6-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-151">xs:string</span></span>|<span data-ttu-id="9cfb6-152">已排程活動的型別。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-152">The type of the scheduled activity</span></span>|  
+|<span data-ttu-id="9cfb6-153">標註</span><span class="sxs-lookup"><span data-stu-id="9cfb6-153">Annotations</span></span>|<span data-ttu-id="9cfb6-154">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-154">xs:string</span></span>|<span data-ttu-id="9cfb6-155">加入至此事件中的附註。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-155">The annotations that were added to this event.</span></span>  <span data-ttu-id="9cfb6-156">值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"type ="> annotationValue\</項目 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-156">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="9cfb6-157">如果沒有指定的註釋的字串，包含\<項目 / >。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-157">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="9cfb6-158">ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-158">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="9cfb6-159">如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代具有註釋值截斷\<項目 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-159">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="9cfb6-160">ProfileName</span><span class="sxs-lookup"><span data-stu-id="9cfb6-160">ProfileName</span></span>|<span data-ttu-id="9cfb6-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-161">xs:string</span></span>|<span data-ttu-id="9cfb6-162">造成發送這個事件的名稱或追蹤設定檔。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-162">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="9cfb6-163">HostReference</span><span class="sxs-lookup"><span data-stu-id="9cfb6-163">HostReference</span></span>|<span data-ttu-id="9cfb6-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-164">xs:string</span></span>|<span data-ttu-id="9cfb6-165">若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-165">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="9cfb6-166">其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName' 範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="9cfb6-166">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="9cfb6-167">AppDomain</span><span class="sxs-lookup"><span data-stu-id="9cfb6-167">AppDomain</span></span>|<span data-ttu-id="9cfb6-168">xs:string</span><span class="sxs-lookup"><span data-stu-id="9cfb6-168">xs:string</span></span>|<span data-ttu-id="9cfb6-169">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="9cfb6-169">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

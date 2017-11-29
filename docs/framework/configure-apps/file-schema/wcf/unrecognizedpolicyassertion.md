@@ -1,52 +1,60 @@
 ---
-title: "&lt;unrecognizedPolicyAssertion&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;unrecognizedPolicyAssertion&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2bc4bf17884f3668f5538d03e3aabe9a7aa6df5f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;unrecognizedPolicyAssertion&gt;
-表示指定原則判斷提示的繫結項目。  這個項目沒有屬性，並呈現為空白 switch。  
+# <a name="ltunrecognizedpolicyassertiongt"></a><span data-ttu-id="f9f57-102">&lt;unrecognizedPolicyAssertion&gt;</span><span class="sxs-lookup"><span data-stu-id="f9f57-102">&lt;unrecognizedPolicyAssertion&gt;</span></span>
+<span data-ttu-id="f9f57-103">表示指定原則判斷提示的繫結項目。</span><span class="sxs-lookup"><span data-stu-id="f9f57-103">Represents a binding element that specifies policy assertion.</span></span> <span data-ttu-id="f9f57-104">這個項目沒有屬性，並呈現為空白 switch。</span><span class="sxs-lookup"><span data-stu-id="f9f57-104">This element has no attribute and is present as an empty switch.</span></span>  
   
-## 語法  
+ <span data-ttu-id="f9f57-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="f9f57-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="f9f57-106">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="f9f57-106">\<bindings></span></span>  
+<span data-ttu-id="f9f57-107">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="f9f57-107">\<customBinding></span></span>  
+<span data-ttu-id="f9f57-108">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="f9f57-108">\<binding></span></span>  
+<span data-ttu-id="f9f57-109">\<unrecognizedPolicyAssertion ></span><span class="sxs-lookup"><span data-stu-id="f9f57-109">\<unrecognizedPolicyAssertion></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="f9f57-110">語法</span><span class="sxs-lookup"><span data-stu-id="f9f57-110">Syntax</span></span>  
   
+```xml  
 <unrecognizedPolicyAssertion/>  
 ```  
   
-## 類型  
+## <a name="type"></a><span data-ttu-id="f9f57-111">類型</span><span class="sxs-lookup"><span data-stu-id="f9f57-111">Type</span></span>  
  `Type`  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f9f57-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f9f57-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="f9f57-113">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f9f57-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="f9f57-114">屬性</span><span class="sxs-lookup"><span data-stu-id="f9f57-114">Attributes</span></span>  
+ <span data-ttu-id="f9f57-115">無。</span><span class="sxs-lookup"><span data-stu-id="f9f57-115">None.</span></span>  
   
-### 子項目  
- 無  
+### <a name="child-elements"></a><span data-ttu-id="f9f57-116">子元素</span><span class="sxs-lookup"><span data-stu-id="f9f57-116">Child Elements</span></span>  
+ <span data-ttu-id="f9f57-117">無</span><span class="sxs-lookup"><span data-stu-id="f9f57-117">None</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="f9f57-118">父項目</span><span class="sxs-lookup"><span data-stu-id="f9f57-118">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<繫結\>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|<span data-ttu-id="f9f57-119">項目</span><span class="sxs-lookup"><span data-stu-id="f9f57-119">Element</span></span>|<span data-ttu-id="f9f57-120">說明</span><span class="sxs-lookup"><span data-stu-id="f9f57-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="f9f57-121">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="f9f57-121">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="f9f57-122">定義自訂繫結的所有繫結功能。</span><span class="sxs-lookup"><span data-stu-id="f9f57-122">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## 請參閱  
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="f9f57-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f9f57-123">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="f9f57-124">繫結</span><span class="sxs-lookup"><span data-stu-id="f9f57-124">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="f9f57-125">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="f9f57-125">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="f9f57-126">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="f9f57-126">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="f9f57-127">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="f9f57-127">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

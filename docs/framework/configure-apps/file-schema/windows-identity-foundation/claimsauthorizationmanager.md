@@ -1,65 +1,73 @@
 ---
-title: "&lt;claimsAuthorizationManager&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;claimsAuthorizationManager&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 4b4d86204d5f7225f167be125ce017488c851e98
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;claimsAuthorizationManager&gt;
-註冊連入宣告的宣告授權管理員。  
+# <a name="ltclaimsauthorizationmanagergt"></a><span data-ttu-id="9a430-102">&lt;claimsAuthorizationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="9a430-102">&lt;claimsAuthorizationManager&gt;</span></span>
+<span data-ttu-id="9a430-103">註冊的連入宣告的宣告授權管理員。</span><span class="sxs-lookup"><span data-stu-id="9a430-103">Registers a claims authorization manager for the incoming claims.</span></span>  
   
-## 語法  
+ <span data-ttu-id="9a430-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="9a430-104">\<system.identityModel></span></span>  
+<span data-ttu-id="9a430-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="9a430-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="9a430-106">\<claimsAuthorizationManager ></span><span class="sxs-lookup"><span data-stu-id="9a430-106">\<claimsAuthorizationManager></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="9a430-107">語法</span><span class="sxs-lookup"><span data-stu-id="9a430-107">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <claimsAuthorizationManager type = xs:string>  
-      <optionalConfigurationElements />  
-    </claimsAuthorizationManager>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type = xs:string>  
+      <optionalConfigurationElements />  
+    </claimsAuthorizationManager>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9a430-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="9a430-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="9a430-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="9a430-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="9a430-110">屬性</span><span class="sxs-lookup"><span data-stu-id="9a430-110">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|type|自訂型別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>類別。  如需有關如何指定`type`屬性，請參閱[Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences)。|  
+|<span data-ttu-id="9a430-111">屬性</span><span class="sxs-lookup"><span data-stu-id="9a430-111">Attribute</span></span>|<span data-ttu-id="9a430-112">描述</span><span class="sxs-lookup"><span data-stu-id="9a430-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="9a430-113">類型</span><span class="sxs-lookup"><span data-stu-id="9a430-113">type</span></span>|<span data-ttu-id="9a430-114">自訂型別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>類別。</span><span class="sxs-lookup"><span data-stu-id="9a430-114">A custom type that derives from the <xref:System.Security.Claims.ClaimsAuthorizationManager> class.</span></span> <span data-ttu-id="9a430-115">如需有關如何指定`type`屬性，請參閱[自訂型別參考](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9a430-115">For more information about how to specify the `type` attribute, see [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span>|  
   
-### 子項目  
- 如果沒有任何`type`屬性，或是否`type`屬性參考<xref:System.Security.Claims.ClaimsAuthenticationManager>類別， `<claimsAuthorizationManager>`不致於項目的子項目。 然而，類別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>可以定義組態項目子系。  
+### <a name="child-elements"></a><span data-ttu-id="9a430-116">子元素</span><span class="sxs-lookup"><span data-stu-id="9a430-116">Child Elements</span></span>  
+ <span data-ttu-id="9a430-117">如果沒有任何`type`屬性，或如果`type`屬性參考<xref:System.Security.Claims.ClaimsAuthenticationManager>類別`<claimsAuthorizationManager>`項目不接受子項目; 不過，類別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>可以定義子組態項目。</span><span class="sxs-lookup"><span data-stu-id="9a430-117">If there is no `type` attribute, or if the `type` attribute references the <xref:System.Security.Claims.ClaimsAuthenticationManager> class, the `<claimsAuthorizationManager>` element does not take child elements; however, classes derived from <xref:System.Security.Claims.ClaimsAuthorizationManager> can define child configuration elements.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="9a430-118">父項目</span><span class="sxs-lookup"><span data-stu-id="9a430-118">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級識別設定。|  
+|<span data-ttu-id="9a430-119">項目</span><span class="sxs-lookup"><span data-stu-id="9a430-119">Element</span></span>|<span data-ttu-id="9a430-120">說明</span><span class="sxs-lookup"><span data-stu-id="9a430-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="9a430-121">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="9a430-121">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="9a430-122">指定服務層級身分識別設定。</span><span class="sxs-lookup"><span data-stu-id="9a430-122">Specifies service-level identity settings.</span></span>|  
   
-## 備註  
- 透過提供的預設行為<xref:System.Security.Claims.ClaimsAuthorizationManager>類別永遠會授與連入宣告。  如果沒有`type`指定屬性或 if `type`屬性會指定<xref:System.Security.Claims.ClaimsAuthorizationManager>類別， `<claimsAuthorizationManager>`項目並不產生任何子項目。  您可以指定`type`屬性，以註冊的型別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>類別來實作自訂行為。  在衍生的類別可支援透過子項目的`<claimsAuthorizationManager>`項目，藉由覆寫<xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>方法來處理這些項目。  子項目所定義的結構描述是由類別的設計工具。  
+## <a name="remarks"></a><span data-ttu-id="9a430-123">備註</span><span class="sxs-lookup"><span data-stu-id="9a430-123">Remarks</span></span>  
+ <span data-ttu-id="9a430-124">透過所提供的預設行為<xref:System.Security.Claims.ClaimsAuthorizationManager>類別一律會授與的連入宣告。</span><span class="sxs-lookup"><span data-stu-id="9a430-124">The default behavior provided through the <xref:System.Security.Claims.ClaimsAuthorizationManager> class always authorizes the incoming claims.</span></span> <span data-ttu-id="9a430-125">如果沒有`type`指定屬性或`type`屬性會指定<xref:System.Security.Claims.ClaimsAuthorizationManager>類別，`<claimsAuthorizationManager>`項目不接受子項目。</span><span class="sxs-lookup"><span data-stu-id="9a430-125">If no `type` attribute is specified or if the `type` attribute specifies the <xref:System.Security.Claims.ClaimsAuthorizationManager> class, the `<claimsAuthorizationManager>` element does not take child elements.</span></span> <span data-ttu-id="9a430-126">您可以指定`type`屬性註冊型別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>類別來實作自訂行為。</span><span class="sxs-lookup"><span data-stu-id="9a430-126">You can specify the `type` attribute to register a type derived from the <xref:System.Security.Claims.ClaimsAuthorizationManager> class to implement custom behavior.</span></span> <span data-ttu-id="9a430-127">在衍生的類別可以支援透過子項目的組態`<claimsAuthorizationManager>`藉由覆寫的項目<xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>方法來處理這些項目。</span><span class="sxs-lookup"><span data-stu-id="9a430-127">Derived classes can support configuration through child elements of the `<claimsAuthorizationManager>` element by overriding the <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> method to handle these elements.</span></span> <span data-ttu-id="9a430-128">子項目定義的結構描述是由類別的設計工具。</span><span class="sxs-lookup"><span data-stu-id="9a430-128">The schema defined for the child elements is up to the designer of the class.</span></span>  
   
 > [!IMPORTANT]
->  當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別來提供您的程式碼所參考的識別身份組態中的宣告式存取控制`<federationConfiguration>`元素設定了宣告授權管理員和原則，用來製作授權決策。  都是如此，即使是在不是被動 Web 的案例，例如 \[Windows 通訊資格應用程式\] 或 \[不是以 Web 為基礎的應用程式的案例。  如果應用程式不是被動的 Web 應用程式中， `<claimsAuthorizationManager>`項目 \(與其子原則項目，如果有的話\) 的參考的識別設定所套用的唯一設定。  會忽略所有其他設定。  如需詳細資訊，請參閱 [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 項目。  
+>  <span data-ttu-id="9a430-129">當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別，以提供您的程式碼所參考的身分識別組態中的宣告型存取控制`<federationConfiguration>`項目會設定用來建立原則與 claims authorization manager 授權授權決策。</span><span class="sxs-lookup"><span data-stu-id="9a430-129">When using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control in your code, the identity configuration that is referenced by the `<federationConfiguration>` element configures the claims authorization manager and policy that is used to make authorization decisions.</span></span> <span data-ttu-id="9a430-130">這是為 true，即使在不是被動 Web 案例，例如 Windows Communication Foundation (WCF) 應用程式或不是以 Web 為基礎的應用程式的案例。</span><span class="sxs-lookup"><span data-stu-id="9a430-130">This is true, even in scenarios that are not passive Web scenarios, for example Windows Communication Foundation (WCF) applications or an application that is not Web-based.</span></span> <span data-ttu-id="9a430-131">如果應用程式不是被動的 Web 應用程式，`<claimsAuthorizationManager>`元素 （和其子原則項目，如果有的話） 的參考的識別組態所套用的唯一設定。</span><span class="sxs-lookup"><span data-stu-id="9a430-131">If the application is not a passive Web application, the `<claimsAuthorizationManager>` element (and its child policy elements, if present) of the referenced identity configuration are the only settings applied.</span></span> <span data-ttu-id="9a430-132">會忽略所有其他設定。</span><span class="sxs-lookup"><span data-stu-id="9a430-132">All other settings are ignored.</span></span> <span data-ttu-id="9a430-133">如需詳細資訊，請參閱[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。</span><span class="sxs-lookup"><span data-stu-id="9a430-133">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>  
   
- 這個項目設定<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=fullName>屬性。  
+ <span data-ttu-id="9a430-134">這個項目設定<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="9a430-134">This element sets the <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> property.</span></span>  
   
-## 範例  
- 下列 XML 程式碼會顯示宣告的授權的組態管理員，它會實作的原則組成資源動作 」 配對的每一種指定之宣告的要求者必須擁有在資源上執行的動作，則為 true 的組合。  實作宣告授權管理員能夠使用這項原則的程式碼位於`ClaimsBasedAuthorization`範例。  
+## <a name="example"></a><span data-ttu-id="9a430-135">範例</span><span class="sxs-lookup"><span data-stu-id="9a430-135">Example</span></span>  
+ <span data-ttu-id="9a430-136">下列 XML 顯示宣告授權的組態管理員會實作的原則資源動作配對所組成的每個皆指定布林值的組合，要求者必須擁有在資源上執行動作的宣告。</span><span class="sxs-lookup"><span data-stu-id="9a430-136">The following XML shows the configuration for a claims authorization manager that implements policy composed of resource-action pairs each of which specifies boolean combinations of the claims that a requestor must possess to perform the action on the resource.</span></span> <span data-ttu-id="9a430-137">實作宣告授權管理員能夠使用此原則的程式碼位於`ClaimsBasedAuthorization`範例。</span><span class="sxs-lookup"><span data-stu-id="9a430-137">The code that implements the claims authorization manager capable of using this policy can be found in the `ClaimsBasedAuthorization` sample.</span></span>  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration>  
       <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  

@@ -1,28 +1,37 @@
 ---
-title: "&lt;commonParameters&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;一般參數&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 59d278ee00064c3b6b31150a2dea9f68dc47743f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;commonParameters&gt;
-代表參數集合，這些參數可跨多項服務全域使用。  這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  
+# <a name="ltcommonparametersgt"></a><span data-ttu-id="8e3e9-102">&lt;一般參數&gt;</span><span class="sxs-lookup"><span data-stu-id="8e3e9-102">&lt;commonParameters&gt;</span></span>
+<span data-ttu-id="8e3e9-103">代表參數集合，這些參數可跨多項服務全域使用。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="8e3e9-104">這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  
   
-## 語法  
+ <span data-ttu-id="8e3e9-105">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="8e3e9-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="8e3e9-106">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="8e3e9-106">\<behaviors></span></span>  
+<span data-ttu-id="8e3e9-107">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="8e3e9-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="8e3e9-108">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="8e3e9-108">\<behavior></span></span>  
+<span data-ttu-id="8e3e9-109">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="8e3e9-109">\<workflowRuntime></span></span>  
+<span data-ttu-id="8e3e9-110">\<一般參數 ></span><span class="sxs-lookup"><span data-stu-id="8e3e9-110">\<commonParameters></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="8e3e9-111">語法</span><span class="sxs-lookup"><span data-stu-id="8e3e9-111">Syntax</span></span>  
   
+```xml  
 <workflowRuntime>  
    <commonParameters>  
       <add name="String" value="String" />  
@@ -30,29 +39,29 @@ caps.handback.revision: 6
 </workflowRuntime>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8e3e9-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="8e3e9-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="8e3e9-113">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="8e3e9-114">屬性</span><span class="sxs-lookup"><span data-stu-id="8e3e9-114">Attributes</span></span>  
+ <span data-ttu-id="8e3e9-115">無。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-115">None.</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="8e3e9-116">子項目</span><span class="sxs-lookup"><span data-stu-id="8e3e9-116">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|將服務所使用的一般名稱\/值組參數加入至集合。|  
+|<span data-ttu-id="8e3e9-117">項目</span><span class="sxs-lookup"><span data-stu-id="8e3e9-117">Element</span></span>|<span data-ttu-id="8e3e9-118">描述</span><span class="sxs-lookup"><span data-stu-id="8e3e9-118">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="8e3e9-119">\<add></span><span class="sxs-lookup"><span data-stu-id="8e3e9-119">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|<span data-ttu-id="8e3e9-120">將服務所使用的一般名稱/值組參數加入至集合。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-120">Adds a name-value pair of common parameters used by services to the collection.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="8e3e9-121">父項目</span><span class="sxs-lookup"><span data-stu-id="8e3e9-121">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<workflowRuntime\>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|指定 <xref:System.Workflow.Runtime.WorkflowRuntime> 之執行個體的設定，以裝載工作流程架構的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務。|  
+|<span data-ttu-id="8e3e9-122">項目</span><span class="sxs-lookup"><span data-stu-id="8e3e9-122">Element</span></span>|<span data-ttu-id="8e3e9-123">說明</span><span class="sxs-lookup"><span data-stu-id="8e3e9-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="8e3e9-124">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="8e3e9-124">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="8e3e9-125">指定 <xref:System.Workflow.Runtime.WorkflowRuntime> 之執行個體的設定，以裝載工作流程架構的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-125">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services.</span></span>|  
   
-## 備註  
- `<commonParameters>` 項目定義全球多種服務間使用的所有參數，例如在使用 <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> 時的 `ConnectionString`。  
+## <a name="remarks"></a><span data-ttu-id="8e3e9-126">備註</span><span class="sxs-lookup"><span data-stu-id="8e3e9-126">Remarks</span></span>  
+ <span data-ttu-id="8e3e9-127">`<commonParameters>` 項目定義全球多種服務間使用的所有參數，例如在使用 `ConnectionString` 時的 <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-127">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
   
 > [!NOTE]
->  如果 `<commonParameters>` 區段中指定了 SQL 追蹤服務，則此 SQL 追蹤服務就不會統一使用 `ConnectionString` 值。  這項服務的某些作業 \(例如擷取 `StateMachineWorkflowInstance.StateHistory` 屬性 \(Property\)\) 可能會失敗。  若要解決這個問題，請在組態區段中指定追蹤提供者的 `ConnectionString` 屬性 \(Attribute\)，如下列範例所示。  
+>  <span data-ttu-id="8e3e9-128">如果 `ConnectionString` 區段中指定了 SQL 追蹤服務，則此 SQL 追蹤服務就不會統一使用 `<commonParameters>` 值。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-128">SQL Tracking service does not consistently use the `ConnectionString` value if it is specified in the `<commonParameters>` section.</span></span> <span data-ttu-id="8e3e9-129">這項服務的某些作業 (例如擷取 `StateMachineWorkflowInstance.StateHistory` 屬性 (Property)) 可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-129">Some of its operations such as retrieving the `StateMachineWorkflowInstance.StateHistory` property may fail.</span></span> <span data-ttu-id="8e3e9-130">若要解決這個問題，請在組態區段中指定追蹤提供者的 `ConnectionString` 屬性 (Attribute)，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-130">To workaround this, specify the `ConnectionString` attribute in the configuration section for tracking provider, as indicated in the following example.</span></span>  
   
  `<add`  
   
@@ -60,9 +69,9 @@ caps.handback.revision: 6
   
  `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
   
- 針對認可工作批次持續儲存的服務 \(例如 <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> 及 <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>\)，您可以使用 `EnableRetries` 參數允許它們重試交易，如下列範例所示：  
+ <span data-ttu-id="8e3e9-131">針對認可工作批次持續儲存的服務 (例如 <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> 及 <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>)，您可以使用 `EnableRetries` 參數允許它們重試交易，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="8e3e9-131">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
   
-```  
+```xml  
 <WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
     <commonParameters>  
         <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />  
@@ -74,9 +83,9 @@ caps.handback.revision: 6
 </WorkflowRuntime>  
 ```  
   
- 請注意，您可以在全域層級設定 `EnableRetries` 參數 \(如 *CommonParameters* 區段所示\)，或針對支援 `EnableRetries` 的個別服務加以設定 \(如 *Services* 區段所示\)。  
+ <span data-ttu-id="8e3e9-132">請注意，`EnableRetries`參數可以設定在全域層級 (如中所示*CommonParameters* > 一節) 或個別服務支援的`EnableRetries`(如中所示*服務*> 一節)。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-132">Notice that the `EnableRetries` parameter can be set either at a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
   
- 下列範例程式碼會示範如何以程式設計方式變更常見的參數。  
+ <span data-ttu-id="8e3e9-133">下列範例程式碼會示範如何以程式設計方式變更常見的參數。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-133">The following sample code shows how to change the common parameters programmatically.</span></span>  
   
 ```  
 Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
@@ -86,22 +95,22 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- 如需使用組態檔控制 Windows Workflow Foundation 主應用程式之 <xref:System.Workflow.Runtime.WorkflowRuntime> 物件行為的詳細資訊，請參閱[Workflow Configuration Files](http://msdn.microsoft.com/zh-tw/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)。  
+ <span data-ttu-id="8e3e9-134">如需有關使用組態檔來控制行為的<xref:System.Workflow.Runtime.WorkflowRuntime>物件的 Windows Workflow Foundation 主應用程式，請參閱[工作流程組態檔](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)。</span><span class="sxs-lookup"><span data-stu-id="8e3e9-134">For more information about using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="8e3e9-135">範例</span><span class="sxs-lookup"><span data-stu-id="8e3e9-135">Example</span></span>  
   
-```  
+```xml  
 <commonParameters>  
    <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;"/>  
    <add name="EnableRetries" value="true"/>  
 </commonParameters>  
 ```  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>   
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>   
- <xref:System.Workflow.Runtime.WorkflowRuntime>   
- <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>   
- <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>   
- [Workflow Configuration Files](http://msdn.microsoft.com/zh-tw/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)   
- [\<add\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+## <a name="see-also"></a><span data-ttu-id="8e3e9-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8e3e9-136">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
+ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
+ <xref:System.Workflow.Runtime.WorkflowRuntime>  
+ <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
+ <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
+ [<span data-ttu-id="8e3e9-137">工作流程組態檔</span><span class="sxs-lookup"><span data-stu-id="8e3e9-137">Workflow Configuration Files</span></span>](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
+ [<span data-ttu-id="8e3e9-138">\<add></span><span class="sxs-lookup"><span data-stu-id="8e3e9-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

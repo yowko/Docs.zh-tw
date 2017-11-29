@@ -1,80 +1,83 @@
 ---
-title: "安全用戶端應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "保護用戶端應用程式的安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b42c06b9507894568a4299f23b62010e44076194
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 安全用戶端應用程式
-應用程式通常含有許多部分，而這所有的部分都必須受到保護，以免產生漏洞而造成資料遺失，或因其他原因而危及系統。  建立安全的使用者介面可以避免許多問題，因為可以在攻擊者存取資料或系統資源之前就加以防堵。  
+# <a name="secure-client-applications"></a><span data-ttu-id="3204f-102">保護用戶端應用程式的安全</span><span class="sxs-lookup"><span data-stu-id="3204f-102">Secure Client Applications</span></span>
+<span data-ttu-id="3204f-103">應用程式通常含有許多部分，而這所有的部分都必須受到保護，以免產生漏洞而造成資料遺失，或因其他原因而危及系統。</span><span class="sxs-lookup"><span data-stu-id="3204f-103">Applications typically consist of many parts that must all be protected from vulnerabilities that could result in data loss or otherwise compromise the system.</span></span> <span data-ttu-id="3204f-104">建立安全的使用者介面可以避免許多問題，因為可以在攻擊者存取資料或系統資源之前就加以防堵。</span><span class="sxs-lookup"><span data-stu-id="3204f-104">Creating secure user interfaces can prevent many problems by blocking attackers before they can access data or system resources.</span></span>  
   
-## 驗證使用者輸入  
- 建構存取資料的應用程式時，在證明使用者輸入沒有惡意前，應該假設他們都不懷好意，  否則應用程式可能容易遭到攻擊。  .NET Framework 所包含的類別 \(Class\) 可協助您強制執行輸入控制項的值領域，例如限制可輸入的字元數。  事件攔截程序則可用於撰寫程序以檢查值是否有效。  使用者輸入資料可進行驗證並使用強式型別，以限制應用程式暴露於指令碼和 SQL 插入式攻擊的機會。  
+## <a name="validate-user-input"></a><span data-ttu-id="3204f-105">驗證使用者輸入</span><span class="sxs-lookup"><span data-stu-id="3204f-105">Validate User Input</span></span>  
+ <span data-ttu-id="3204f-106">建構存取資料的應用程式時，在證明使用者輸入沒有惡意前，應該假設他們都不懷好意，</span><span class="sxs-lookup"><span data-stu-id="3204f-106">When constructing an application that accesses data, you should assume that all user input is malicious until proven otherwise.</span></span> <span data-ttu-id="3204f-107">否則應用程式可能容易遭到攻擊。</span><span class="sxs-lookup"><span data-stu-id="3204f-107">Failure to do so can leave your application vulnerable to attack.</span></span> <span data-ttu-id="3204f-108">.NET Framework 所包含的類別 (Class) 可協助您強制執行輸入控制項的值領域，例如限制可輸入的字元數。</span><span class="sxs-lookup"><span data-stu-id="3204f-108">The .NET Framework contains classes to help you enforce a domain of values for input controls, such as limiting the number of characters that can be entered.</span></span> <span data-ttu-id="3204f-109">事件攔截程序則可用於撰寫程序以檢查值是否有效。</span><span class="sxs-lookup"><span data-stu-id="3204f-109">Event hooks allow you to write procedures to check the validity of values.</span></span> <span data-ttu-id="3204f-110">使用者輸入資料可進行驗證並使用強式型別，以限制應用程式暴露於指令碼和 SQL 插入式攻擊的機會。</span><span class="sxs-lookup"><span data-stu-id="3204f-110">User input data can be validated and strongly typed, limiting an application's exposure to script and SQL injection exploits.</span></span>  
   
 > [!IMPORTANT]
->  除了在用戶端應用程式中驗證使用者輸入外，您也必須在資料來源驗證使用者輸入。  攻擊者可能會選擇避開您的應用程式而直接攻擊資料來源。  
+>  <span data-ttu-id="3204f-111">除了在用戶端應用程式中驗證使用者輸入外，您也必須在資料來源驗證使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="3204f-111">You must also validate user input at the data source as well as in the client application.</span></span> <span data-ttu-id="3204f-112">攻擊者可能會選擇避開您的應用程式而直接攻擊資料來源。</span><span class="sxs-lookup"><span data-stu-id="3204f-112">An attacker may choose to circumvent your application and attack the data source directly.</span></span>  
   
- [Security and User Input](../../../../docs/standard/security/security-and-user-input.md)  
- 說明如何處理涉及使用者輸入而可能具有危險性的細微錯誤。  
+ [<span data-ttu-id="3204f-113">安全性和使用者輸入</span><span class="sxs-lookup"><span data-stu-id="3204f-113">Security and User Input</span></span>](../../../../docs/standard/security/security-and-user-input.md)  
+ <span data-ttu-id="3204f-114">說明如何處理涉及使用者輸入而可能具有危險性的細微錯誤。</span><span class="sxs-lookup"><span data-stu-id="3204f-114">Describes how to handle subtle and potentially dangerous bugs involving user input.</span></span>  
   
- [Validating User Input in ASP.NET Web Pages](../Topic/Validating%20User%20Input%20in%20ASP.NET%20Web%20Pages.md)  
- 使用 ASP.NET 驗證控制項來驗證使用者輸入的概觀。  
+ [<span data-ttu-id="3204f-115">ASP.NET Web Pages 中驗證使用者輸入</span><span class="sxs-lookup"><span data-stu-id="3204f-115">Validating User Input in ASP.NET Web Pages</span></span>](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
+ <span data-ttu-id="3204f-116">使用 ASP.NET 驗證控制項來驗證使用者輸入的概觀。</span><span class="sxs-lookup"><span data-stu-id="3204f-116">Overview of validating user input using ASP.NET validation controls.</span></span>  
   
- [Windows Form 中的使用者輸入](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
- 針對在 Windows Form 應用程式中驗證滑鼠及鍵盤輸入而提供連結及資訊。  
+ [<span data-ttu-id="3204f-117">Windows Forms 中的使用者輸入</span><span class="sxs-lookup"><span data-stu-id="3204f-117">User Input in Windows Forms</span></span>](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ <span data-ttu-id="3204f-118">針對在 Windows Forms 應用程式中驗證滑鼠及鍵盤輸入而提供連結及資訊。</span><span class="sxs-lookup"><span data-stu-id="3204f-118">Provides links and information for validating mouse and keyboard input in a Windows Forms application.</span></span>  
   
- [.NET Framework 規則運算式](../../../../docs/standard/base-types/regular-expressions.md)  
- 說明如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來檢查使用者輸入的驗證。  
+ [<span data-ttu-id="3204f-119">.NET Framework 規則運算式</span><span class="sxs-lookup"><span data-stu-id="3204f-119">.NET Framework Regular Expressions</span></span>](../../../../docs/standard/base-types/regular-expressions.md)  
+ <span data-ttu-id="3204f-120">說明如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來檢查使用者輸入的驗證。</span><span class="sxs-lookup"><span data-stu-id="3204f-120">Describes how to use the <xref:System.Text.RegularExpressions.Regex> class to check the validity of user input.</span></span>  
   
-## Windows 應用程式  
- 以往通常會以完整的使用權限來執行 Windows 應用程式。  .NET Framework 提供的基礎結構可藉由程式碼存取安全性 \(CAS\)，限制在 Windows 應用程式中執行的程式碼。  不過，單靠 CAS 並不足以保護應用程式。  
+## <a name="windows-applications"></a><span data-ttu-id="3204f-121">Windows 應用程式</span><span class="sxs-lookup"><span data-stu-id="3204f-121">Windows Applications</span></span>  
+ <span data-ttu-id="3204f-122">以往通常會以完整的使用權限來執行 Windows 應用程式。</span><span class="sxs-lookup"><span data-stu-id="3204f-122">In the past, Windows applications generally ran with full permissions.</span></span> <span data-ttu-id="3204f-123">.NET Framework 提供的基礎結構可藉由程式碼存取安全性 (CAS)，限制在 Windows 應用程式中執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="3204f-123">The .NET Framework provides the infrastructure to restrict code executing in a Windows application by using code access security (CAS).</span></span> <span data-ttu-id="3204f-124">不過，單靠 CAS 並不足以保護應用程式。</span><span class="sxs-lookup"><span data-stu-id="3204f-124">However, CAS alone is not enough to protect your application.</span></span>  
   
- [Windows Form 安全性](../../../../docs/framework/winforms/windows-forms-security.md)  
- 討論如何保護 Windows Form 應用程式並提供相關主題的連結。  
+ [<span data-ttu-id="3204f-125">Windows Forms 安全性</span><span class="sxs-lookup"><span data-stu-id="3204f-125">Windows Forms Security</span></span>](../../../../docs/framework/winforms/windows-forms-security.md)  
+ <span data-ttu-id="3204f-126">討論如何保護 Windows Forms 應用程式並提供相關主題的連結。</span><span class="sxs-lookup"><span data-stu-id="3204f-126">Discusses how to secure Windows Forms applications and provides links to related topics.</span></span>  
   
- [Windows Form 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
- 說明如何在 Windows Form 應用程式中與 Unmanaged 應用程式互動。  
+ [<span data-ttu-id="3204f-127">Windows Forms 和 Unmanaged 應用程式</span><span class="sxs-lookup"><span data-stu-id="3204f-127">Windows Forms and Unmanaged Applications</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ <span data-ttu-id="3204f-128">說明如何在 Windows Forms 應用程式中與 Unmanaged 應用程式互動。</span><span class="sxs-lookup"><span data-stu-id="3204f-128">Describes how to interact with unmanaged applications in a Windows Forms application.</span></span>  
   
- [ClickOnce Deployment for Windows Forms Applications](http://msdn.microsoft.com/zh-tw/34d8c770-48f2-460c-8d67-4ea5684511df)  
- 說明如何在 Windows Form 應用程式中使用 `ClickOnce` 部署，並討論安全性含意。  
+ [<span data-ttu-id="3204f-129">ClickOnce 部署適用於 Windows Forms 應用程式</span><span class="sxs-lookup"><span data-stu-id="3204f-129">ClickOnce Deployment for Windows Forms Applications</span></span>](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ <span data-ttu-id="3204f-130">說明如何在 Windows Form 應用程式中使用 `ClickOnce` 部署，並討論安全性含意。</span><span class="sxs-lookup"><span data-stu-id="3204f-130">Describes how to use `ClickOnce` deployment in a Windows Forms application and discusses the security implications.</span></span>  
   
-## ASP.NET 和 XML Web Service  
- ASP.NET 應用程式通常需要限制網站某部份的存取，並提供其他機制以保護資料和網站安全性。  這些連結提供保護 ASP.NET 應用程式的有用資訊。  
+## <a name="aspnet-and-xml-web-services"></a><span data-ttu-id="3204f-131">ASP.NET 和 XML Web Service</span><span class="sxs-lookup"><span data-stu-id="3204f-131">ASP.NET and XML Web Services</span></span>  
+ <span data-ttu-id="3204f-132">ASP.NET 應用程式通常需要限制網站某部份的存取，並提供其他機制以保護資料和網站安全性。</span><span class="sxs-lookup"><span data-stu-id="3204f-132">ASP.NET applications generally need to restrict access to some portions of the Web site and provide other mechanisms for data protection and site security.</span></span> <span data-ttu-id="3204f-133">這些連結提供保護 ASP.NET 應用程式的有用資訊。</span><span class="sxs-lookup"><span data-stu-id="3204f-133">These links provide useful information for securing your ASP.NET application.</span></span>  
   
- XML Web Service 所提供的資料可由 ASP.NET 應用程式、Windows Form 應用程式或其他 Web 服務使用。  除了管理 Web 服務本身的安全性外，也需要管理用戶端應用程式的安全性。  
+ <span data-ttu-id="3204f-134">XML Web Service 所提供的資料可由 ASP.NET 應用程式、Windows Form 應用程式或其他 Web 服務使用。</span><span class="sxs-lookup"><span data-stu-id="3204f-134">An XML Web service provides data that can be consumed by an ASP.NET application, a Windows Forms application, or another Web service.</span></span> <span data-ttu-id="3204f-135">除了管理 Web 服務本身的安全性外，也需要管理用戶端應用程式的安全性。</span><span class="sxs-lookup"><span data-stu-id="3204f-135">You need to manage security for the Web service itself as well as security for the client application.</span></span>  
   
- 如需詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="3204f-136">如需詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="3204f-136">For more information, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[NIB: ASP.NET Security](http://msdn.microsoft.com/zh-tw/04b37532-18d9-40b4-8e5f-ee09a70b311d)|討論如何保護 ASP.NET 應用程式。|  
-|[Securing XML Web Services Created Using ASP.NET](http://msdn.microsoft.com/zh-tw/354b2ab1-2782-4542-b32a-dc560178b90c)|討論如何實作 ASP.NET Web 服務的安全性。|  
-|[Script Exploits Overview](../Topic/Script%20Exploits%20Overview.md)|說明如何防堵指令碼式攻擊，此類攻擊會嘗試在網頁中插入惡意的字元。|  
-|[NIB:Basic Security Practices for ASP.NET Web Applications](http://msdn.microsoft.com/zh-tw/94a52ab8-731d-417e-b997-721baf43df38)|一般安全性資訊以及進階討論區的連結。|  
+|<span data-ttu-id="3204f-137">資源</span><span class="sxs-lookup"><span data-stu-id="3204f-137">Resource</span></span>|<span data-ttu-id="3204f-138">說明</span><span class="sxs-lookup"><span data-stu-id="3204f-138">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="3204f-139">NIB: ASP.NET 安全性</span><span class="sxs-lookup"><span data-stu-id="3204f-139">NIB: ASP.NET Security</span></span>](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)|<span data-ttu-id="3204f-140">討論如何保護 ASP.NET 應用程式。</span><span class="sxs-lookup"><span data-stu-id="3204f-140">Discusses how to secure ASP.NET applications.</span></span>|  
+|[<span data-ttu-id="3204f-141">保護使用 ASP.NET 建立 XML Web 服務</span><span class="sxs-lookup"><span data-stu-id="3204f-141">Securing XML Web Services Created Using ASP.NET</span></span>](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)|<span data-ttu-id="3204f-142">討論如何實作 ASP.NET Web 服務的安全性。</span><span class="sxs-lookup"><span data-stu-id="3204f-142">Discusses how to implement security for an ASP.NET Web Service.</span></span>|  
+|[<span data-ttu-id="3204f-143">指令碼擅用概觀</span><span class="sxs-lookup"><span data-stu-id="3204f-143">Script Exploits Overview</span></span>](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|<span data-ttu-id="3204f-144">說明如何防堵指令碼式攻擊，此類攻擊會嘗試在網頁中插入惡意的字元。</span><span class="sxs-lookup"><span data-stu-id="3204f-144">Discusses how to guard against a script exploit attack, which attempts to insert malicious characters into a Web page.</span></span>|  
+|[<span data-ttu-id="3204f-145">NIB： 基本的 ASP.NET Web 應用程式的安全性做法</span><span class="sxs-lookup"><span data-stu-id="3204f-145">NIB:Basic Security Practices for ASP.NET Web Applications</span></span>](http://msdn.microsoft.com/en-us/94a52ab8-731d-417e-b997-721baf43df38)|<span data-ttu-id="3204f-146">一般安全性資訊以及進階討論區的連結。</span><span class="sxs-lookup"><span data-stu-id="3204f-146">General security information and links to further discussion,</span></span>|  
   
-## 遠端處理  
- .NET 遠端處理可讓您輕鬆建置四處分散的應用程式，不論應用程式元件全都集中在同一台電腦或散佈在全世界各個角落。  您可以建置用戶端應用程式，讓它們使用相同電腦 \(或其網路上可連接的任何其他電腦\) 上其他處理序中的物件。  也可以使用 .NET 遠端處理，與同一處理序中的其他應用程式定義域通訊。  
+## <a name="remoting"></a><span data-ttu-id="3204f-147">遠端處理</span><span class="sxs-lookup"><span data-stu-id="3204f-147">Remoting</span></span>  
+ <span data-ttu-id="3204f-148">.NET 遠端處理可讓您輕鬆建置四處分散的應用程式，不論應用程式元件全都集中在同一台電腦或散佈在全世界各個角落。</span><span class="sxs-lookup"><span data-stu-id="3204f-148">.NET remoting enables you to build widely distributed applications easily, whether the application components are all on one computer or spread out across the entire world.</span></span> <span data-ttu-id="3204f-149">您可以建置用戶端應用程式，讓它們使用相同電腦 (或其網路上可連接的任何其他電腦) 上其他處理序中的物件。</span><span class="sxs-lookup"><span data-stu-id="3204f-149">You can build client applications that use objects in other processes on the same computer or on any other computer that is reachable over its network.</span></span> <span data-ttu-id="3204f-150">也可以使用 .NET 遠端處理，與同一處理序中的其他應用程式定義域通訊。</span><span class="sxs-lookup"><span data-stu-id="3204f-150">You can also use .NET remoting to communicate with other application domains in the same process.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[Configuration of Remote Applications](http://msdn.microsoft.com/zh-tw/92c0c097-d984-4315-835b-7490ecdf1097)|討論如何設定遠端處理應用程式以避免常見問題。|  
-|[Security in Remoting](http://msdn.microsoft.com/zh-tw/9574262c-d4b1-41c5-8600-24ff147c0add)|說明驗證和加密，以及與遠端處理相關的其他安全性主題。|  
-|[Security and Remoting Considerations](../../../../docs/framework/misc/security-and-remoting-considerations.md)|說明受保護的物件和跨應用程式定義域的安全性問題。|  
+|<span data-ttu-id="3204f-151">資源</span><span class="sxs-lookup"><span data-stu-id="3204f-151">Resource</span></span>|<span data-ttu-id="3204f-152">說明</span><span class="sxs-lookup"><span data-stu-id="3204f-152">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="3204f-153">遠端應用程式的組態</span><span class="sxs-lookup"><span data-stu-id="3204f-153">Configuration of Remote Applications</span></span>](http://msdn.microsoft.com/en-us/92c0c097-d984-4315-835b-7490ecdf1097)|<span data-ttu-id="3204f-154">討論如何設定遠端處理應用程式以避免常見問題。</span><span class="sxs-lookup"><span data-stu-id="3204f-154">Discusses how to configure remoting applications in order to avoid common problems.</span></span>|  
+|[<span data-ttu-id="3204f-155">在遠端處理中的安全性</span><span class="sxs-lookup"><span data-stu-id="3204f-155">Security in Remoting</span></span>](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add)|<span data-ttu-id="3204f-156">說明驗證和加密，以及與遠端處理相關的其他安全性主題。</span><span class="sxs-lookup"><span data-stu-id="3204f-156">Describes authentication and encryption as well as additional security topics relevant to remoting.</span></span>|  
+|[<span data-ttu-id="3204f-157">安全性和遠端處理考量</span><span class="sxs-lookup"><span data-stu-id="3204f-157">Security and Remoting Considerations</span></span>](../../../../docs/framework/misc/security-and-remoting-considerations.md)|<span data-ttu-id="3204f-158">說明受保護的物件和跨應用程式定義域的安全性問題。</span><span class="sxs-lookup"><span data-stu-id="3204f-158">Describes security issues with protected objects and application domain crossing.</span></span>|  
   
-## 請參閱  
- [保護 ADO.NET 應用程式](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Recommendations for Data Access Strategies](http://msdn.microsoft.com/zh-tw/72411f32-d12a-4de8-b961-e54fca7faaf5)   
- [設定應用程式的安全性](../Topic/Securing%20Applications.md)   
- [保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3204f-159">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3204f-159">See Also</span></span>  
+ [<span data-ttu-id="3204f-160">設定 ADO.NET 應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="3204f-160">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="3204f-161">資料存取策略的建議</span><span class="sxs-lookup"><span data-stu-id="3204f-161">Recommendations for Data Access Strategies</span></span>](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [<span data-ttu-id="3204f-162">設定應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="3204f-162">Securing Applications</span></span>](/visualstudio/ide/securing-applications)  
+ [<span data-ttu-id="3204f-163">保護連線資訊</span><span class="sxs-lookup"><span data-stu-id="3204f-163">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [<span data-ttu-id="3204f-164">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="3204f-164">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

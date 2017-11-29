@@ -1,97 +1,100 @@
 ---
-title: "UI Automation Support for the SplitButton Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Split Button control type"
-  - "control types, Split Button"
-  - "UI Automation, Split Button control type"
+title: "SplitButton 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Split Button control type
+- control types, Split Button
+- UI Automation, Split Button control type
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
-caps.latest.revision: 23
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 9f482c47ddfe434ac7ddd2f31437761932c6f714
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the SplitButton Control Type
+# <a name="ui-automation-support-for-the-splitbutton-control-type"></a><span data-ttu-id="8ba04-102">SplitButton 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="8ba04-102">UI Automation Support for the SplitButton Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="8ba04-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="8ba04-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="8ba04-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="8ba04-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供 SplitButton 控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控制項類型是一組控制項必須符合才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性的條件。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定指導方針。  
+ <span data-ttu-id="8ba04-105">本主題提供 SplitButton 控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="8ba04-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the SplitButton control type.</span></span> <span data-ttu-id="8ba04-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項必須符合才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性的條件。</span><span class="sxs-lookup"><span data-stu-id="8ba04-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="8ba04-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定指導方針。</span><span class="sxs-lookup"><span data-stu-id="8ba04-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 使用分割按鈕控制項，可以在控制項上執行動作並且展開控制項查看其他可執行動作的清單。  
+ <span data-ttu-id="8ba04-108">使用分割按鈕控制項，可以在控制項上執行動作並且展開控制項查看其他可執行動作的清單。</span><span class="sxs-lookup"><span data-stu-id="8ba04-108">The split button control enables the ability to perform an action on a control and expand the control to see a list of other possible actions that can be performed.</span></span>  
   
- 下列章節會定義 SplitButton 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用於所有 SplitButton 控制項。  
+ <span data-ttu-id="8ba04-109">下列章節會定義 SplitButton 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="8ba04-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the SplitButton control type.</span></span> <span data-ttu-id="8ba04-110">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有 SplitButton 控制項。</span><span class="sxs-lookup"><span data-stu-id="8ba04-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all split button controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述分割按鈕控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="8ba04-111">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="8ba04-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="8ba04-112">下表描述分割按鈕控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="8ba04-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to split button controls and describes what can be contained in each view.</span></span> <span data-ttu-id="8ba04-113">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8ba04-113">For more information about the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|SplitButton<br /><br /> <ul><li>影像 \(0 或 1\)</li><li>文字 \(0 或 1\)</li><li>按鈕 \(1 或 2\)<br /><br /> <ul><li>功能表 \(0 或 1；顯示為支援 ExpandCollapse 模式的按鈕子項目\)</li><li>MenuItem \(1 個以上\)</li></ul></li></ul>|SplitButton<br /><br /> -   MenuItem \(1 個以上\)|  
+|<span data-ttu-id="8ba04-114">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="8ba04-114">Control View</span></span>|<span data-ttu-id="8ba04-115">內容檢視</span><span class="sxs-lookup"><span data-stu-id="8ba04-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="8ba04-116">SplitButton</span><span class="sxs-lookup"><span data-stu-id="8ba04-116">SplitButton</span></span><br /><br /> <ul><li><span data-ttu-id="8ba04-117">影像 (0 或 1)</span><span class="sxs-lookup"><span data-stu-id="8ba04-117">Image (0 or 1)</span></span></li><li><span data-ttu-id="8ba04-118">文字 (0 或 1)</span><span class="sxs-lookup"><span data-stu-id="8ba04-118">Text (0 or 1)</span></span></li><li><span data-ttu-id="8ba04-119">按鈕 (1 或 2)</span><span class="sxs-lookup"><span data-stu-id="8ba04-119">Button (1 or 2)</span></span><br /><br /> <ul><li><span data-ttu-id="8ba04-120">功能表 (0 或 1；顯示為支援 ExpandCollapse 模式的按鈕子項目)</span><span class="sxs-lookup"><span data-stu-id="8ba04-120">Menu (0 or 1; appears as child of button that supports ExpandCollapse pattern)</span></span></li><li><span data-ttu-id="8ba04-121">MenuItem (1 個以上)</span><span class="sxs-lookup"><span data-stu-id="8ba04-121">MenuItem (1 to many)</span></span></li></ul></li></ul>|<span data-ttu-id="8ba04-122">SplitButton</span><span class="sxs-lookup"><span data-stu-id="8ba04-122">SplitButton</span></span><br /><br /> <span data-ttu-id="8ba04-123">-MenuItem (1 個以上)</span><span class="sxs-lookup"><span data-stu-id="8ba04-123">-   MenuItem (1 to many)</span></span>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與分割按鈕控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="8ba04-124">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="8ba04-124">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="8ba04-125">下表列示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與分割按鈕控制項特別有關。</span><span class="sxs-lookup"><span data-stu-id="8ba04-125">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to split button controls.</span></span> <span data-ttu-id="8ba04-126">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="8ba04-126">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|「上一步」|分割按鈕控制項的名稱會顯示在按鈕上。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Null|分割按鈕控制項沒有靜態文字標籤。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|SplitButton|此值與所有使用者介面架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「分割按鈕」|對應到 SplitButton 控制項類型的當地語系化字串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|請參閱備註。|說明文字可能指出啟動分割按鈕的結果，而這通常是透過工具提示顯示的相同類型資訊。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|分割按鈕控制項包含給使用者的資訊。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|使用者可以看到分割按鈕控制項。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="8ba04-127"> 屬性</span><span class="sxs-lookup"><span data-stu-id="8ba04-127"> Property</span></span>|<span data-ttu-id="8ba04-128">值</span><span class="sxs-lookup"><span data-stu-id="8ba04-128">Value</span></span>|<span data-ttu-id="8ba04-129">備註</span><span class="sxs-lookup"><span data-stu-id="8ba04-129">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="8ba04-130">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="8ba04-130">See notes.</span></span>|<span data-ttu-id="8ba04-131">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="8ba04-131">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="8ba04-132">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="8ba04-132">See notes.</span></span>|<span data-ttu-id="8ba04-133">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="8ba04-133">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="8ba04-134">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="8ba04-134">See notes.</span></span>|<span data-ttu-id="8ba04-135">如果有週框即受支援。</span><span class="sxs-lookup"><span data-stu-id="8ba04-135">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="8ba04-136">如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。</span><span class="sxs-lookup"><span data-stu-id="8ba04-136">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="8ba04-137">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="8ba04-137">See notes.</span></span>|<span data-ttu-id="8ba04-138">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="8ba04-138">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="8ba04-139">「上一步」</span><span class="sxs-lookup"><span data-stu-id="8ba04-139">"Back"</span></span>|<span data-ttu-id="8ba04-140">分割按鈕控制項的名稱會顯示在按鈕上。</span><span class="sxs-lookup"><span data-stu-id="8ba04-140">The split button control's name is displayed on the button.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="8ba04-141">Null</span><span class="sxs-lookup"><span data-stu-id="8ba04-141">Null</span></span>|<span data-ttu-id="8ba04-142">分割按鈕控制項沒有靜態文字標籤。</span><span class="sxs-lookup"><span data-stu-id="8ba04-142">Split button controls do not have a static text label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="8ba04-143">SplitButton</span><span class="sxs-lookup"><span data-stu-id="8ba04-143">SplitButton</span></span>|<span data-ttu-id="8ba04-144">此值與所有使用者介面架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="8ba04-144">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="8ba04-145">「分割按鈕」</span><span class="sxs-lookup"><span data-stu-id="8ba04-145">"split button"</span></span>|<span data-ttu-id="8ba04-146">對應到 SplitButton 控制項類型的當地語系化字串。</span><span class="sxs-lookup"><span data-stu-id="8ba04-146">Localized string corresponding to the SplitButton control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|<span data-ttu-id="8ba04-147">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="8ba04-147">See notes.</span></span>|<span data-ttu-id="8ba04-148">說明文字可能指出啟動分割按鈕的結果，而這通常是透過工具提示顯示的相同類型資訊。</span><span class="sxs-lookup"><span data-stu-id="8ba04-148">The help text can indicate the result of activating the split button, which is typically the same type of information presented through a tooltip.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="8ba04-149">True</span><span class="sxs-lookup"><span data-stu-id="8ba04-149">True</span></span>|<span data-ttu-id="8ba04-150">分割按鈕控制項包含給使用者的資訊。</span><span class="sxs-lookup"><span data-stu-id="8ba04-150">The split button control contains information for the end user.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="8ba04-151">True</span><span class="sxs-lookup"><span data-stu-id="8ba04-151">True</span></span>|<span data-ttu-id="8ba04-152">使用者可以看到分割按鈕控制項。</span><span class="sxs-lookup"><span data-stu-id="8ba04-152">The split button control is visible to the end user.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式  
- 下表列出所有分割按鈕控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="8ba04-153">必要的使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="8ba04-153">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="8ba04-154">下表列出所有分割按鈕控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="8ba04-154">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by split button controls.</span></span> <span data-ttu-id="8ba04-155">如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8ba04-155">For more information about control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式|支援|備註|  
-|-----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|必要項|分割按鈕一定要有與叫用相關聯的預設動作。|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|必要項|分割按鈕一律要能展開選項清單。|  
+|<span data-ttu-id="8ba04-156">控制項模式</span><span class="sxs-lookup"><span data-stu-id="8ba04-156">Control Pattern</span></span>|<span data-ttu-id="8ba04-157">支援</span><span class="sxs-lookup"><span data-stu-id="8ba04-157">Support</span></span>|<span data-ttu-id="8ba04-158">備註</span><span class="sxs-lookup"><span data-stu-id="8ba04-158">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|<span data-ttu-id="8ba04-159">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-159">Required</span></span>|<span data-ttu-id="8ba04-160">分割按鈕一定要有與叫用相關聯的預設動作。</span><span class="sxs-lookup"><span data-stu-id="8ba04-160">Split buttons always have a default action associated with Invoke.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|<span data-ttu-id="8ba04-161">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-161">Required</span></span>|<span data-ttu-id="8ba04-162">分割按鈕一律要能展開選項清單。</span><span class="sxs-lookup"><span data-stu-id="8ba04-162">Split buttons always have the ability to expand a list of options.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列出所有分割按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱[UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="8ba04-163">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="8ba04-163">Required UI Automation Events</span></span>  
+ <span data-ttu-id="8ba04-164">下表列出所有分割按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="8ba04-164">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all split button controls.</span></span> <span data-ttu-id="8ba04-165">如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8ba04-165">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="8ba04-166"> 事件</span><span class="sxs-lookup"><span data-stu-id="8ba04-166"> Event</span></span>|<span data-ttu-id="8ba04-167">支援</span><span class="sxs-lookup"><span data-stu-id="8ba04-167">Support</span></span>|<span data-ttu-id="8ba04-168">備註</span><span class="sxs-lookup"><span data-stu-id="8ba04-168">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|<span data-ttu-id="8ba04-169">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-169">Required</span></span>|<span data-ttu-id="8ba04-170">無</span><span class="sxs-lookup"><span data-stu-id="8ba04-170">None</span></span>|  
+|<span data-ttu-id="8ba04-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="8ba04-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="8ba04-172">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-172">Required</span></span>|<span data-ttu-id="8ba04-173">無</span><span class="sxs-lookup"><span data-stu-id="8ba04-173">None</span></span>|  
+|<span data-ttu-id="8ba04-174"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="8ba04-174"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="8ba04-175">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-175">Required</span></span>|<span data-ttu-id="8ba04-176">無</span><span class="sxs-lookup"><span data-stu-id="8ba04-176">None</span></span>|  
+|<span data-ttu-id="8ba04-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="8ba04-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="8ba04-178">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-178">Required</span></span>|<span data-ttu-id="8ba04-179">無</span><span class="sxs-lookup"><span data-stu-id="8ba04-179">None</span></span>|  
+|<span data-ttu-id="8ba04-180"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="8ba04-180"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> property-changed event.</span></span>|<span data-ttu-id="8ba04-181">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-181">Required</span></span>|<span data-ttu-id="8ba04-182">無</span><span class="sxs-lookup"><span data-stu-id="8ba04-182">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="8ba04-183">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-183">Required</span></span>|<span data-ttu-id="8ba04-184">無</span><span class="sxs-lookup"><span data-stu-id="8ba04-184">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="8ba04-185">必要項</span><span class="sxs-lookup"><span data-stu-id="8ba04-185">Required</span></span>|<span data-ttu-id="8ba04-186">無</span><span class="sxs-lookup"><span data-stu-id="8ba04-186">None</span></span>|  
   
 <a name="Split_Button_Control_Example"></a>   
-## SplitButton 控制項範例  
- 下圖顯示在資料格控制項中的 SplitButton 控制項類型。  
+## <a name="splitbutton-control-example"></a><span data-ttu-id="8ba04-187">SplitButton 控制項範例</span><span class="sxs-lookup"><span data-stu-id="8ba04-187">SplitButton Control Example</span></span>  
+ <span data-ttu-id="8ba04-188">下圖顯示在資料格控制項中的 SplitButton 控制項類型。</span><span class="sxs-lookup"><span data-stu-id="8ba04-188">The following image illustrates a SplitButton control type in a data grid control.</span></span>  
   
- ![Split 按鈕](../../../docs/framework/ui-automation/media/uiauto-splitbutton-detailed.png "uiauto\_splitbutton\_detailed")  
+ <span data-ttu-id="8ba04-189">![分割按鈕](../../../docs/framework/ui-automation/media/uiauto-splitbutton-detailed.gif "uiauto_splitbutton_detailed")</span><span class="sxs-lookup"><span data-stu-id="8ba04-189">![Split button](../../../docs/framework/ui-automation/media/uiauto-splitbutton-detailed.gif "uiauto_splitbutton_detailed")</span></span>  
   
- 與資料格和分割按鈕控制項相關、使用者介面自動化樹狀結構的控制項檢視和內容檢視顯示如下。 每個自動化項目的控制項模式顯示在括號中。  
+ <span data-ttu-id="8ba04-190">與資料格和分割按鈕控制項相關、使用者介面自動化樹狀結構的控制項檢視和內容檢視顯示如下。</span><span class="sxs-lookup"><span data-stu-id="8ba04-190">The Control View and the Content View of the UI Automation tree that pertains to the data grid and split button controls is displayed below.</span></span> <span data-ttu-id="8ba04-191">每個自動化項目的控制項模式顯示在括號中。</span><span class="sxs-lookup"><span data-stu-id="8ba04-191">The control patterns for each automation element are shown in parentheses.</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 \- 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 \- 內容檢視|  
-|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
-|<ul><li>SplitButton "名稱" \(Invoke, ExpandCollapse\)</li><li>Button "更多選項" \(Invoke\)<br /><br /> <ul><li>功能表</li><li>MenuItem</li><li>…</li></ul></li></ul>|<ul><li>SplitButton "名稱" \(Invoke, ExpandCollapse\)</li><li>Button "更多選項" \(Invoke\)<br /><br /> <ul><li>功能表</li><li>MenuItem</li><li>…</li></ul></li></ul>|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="8ba04-192"> 樹狀結構 - 控制項檢視</span><span class="sxs-lookup"><span data-stu-id="8ba04-192"> Tree - Control View</span></span>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="8ba04-193"> 樹狀結構 - 內容檢視</span><span class="sxs-lookup"><span data-stu-id="8ba04-193"> Tree - Content View</span></span>|  
+|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
+|<ul><li><span data-ttu-id="8ba04-194">SplitButton "名稱" (Invoke, ExpandCollapse)</span><span class="sxs-lookup"><span data-stu-id="8ba04-194">SplitButton "Name" (Invoke, ExpandCollapse)</span></span></li><li><span data-ttu-id="8ba04-195">Button "更多選項" (Invoke)</span><span class="sxs-lookup"><span data-stu-id="8ba04-195">Button "More options" (Invoke)</span></span><br /><br /> <ul><li><span data-ttu-id="8ba04-196">功能表</span><span class="sxs-lookup"><span data-stu-id="8ba04-196">Menu</span></span></li><li><span data-ttu-id="8ba04-197">MenuItem</span><span class="sxs-lookup"><span data-stu-id="8ba04-197">MenuItem</span></span></li><li><span data-ttu-id="8ba04-198">…</span><span class="sxs-lookup"><span data-stu-id="8ba04-198">…</span></span></li></ul></li></ul>|<ul><li><span data-ttu-id="8ba04-199">SplitButton "名稱" (Invoke, ExpandCollapse)</span><span class="sxs-lookup"><span data-stu-id="8ba04-199">SplitButton "Name" (Invoke, ExpandCollapse)</span></span></li><li><span data-ttu-id="8ba04-200">Button "更多選項" (Invoke)</span><span class="sxs-lookup"><span data-stu-id="8ba04-200">Button "More options" (Invoke)</span></span><br /><br /> <ul><li><span data-ttu-id="8ba04-201">功能表</span><span class="sxs-lookup"><span data-stu-id="8ba04-201">Menu</span></span></li><li><span data-ttu-id="8ba04-202">MenuItem</span><span class="sxs-lookup"><span data-stu-id="8ba04-202">MenuItem</span></span></li><li><span data-ttu-id="8ba04-203">…</span><span class="sxs-lookup"><span data-stu-id="8ba04-203">…</span></span></li></ul></li></ul>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.SplitButton>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="8ba04-204">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ba04-204">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.SplitButton>  
+ [<span data-ttu-id="8ba04-205">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="8ba04-205">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="8ba04-206">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="8ba04-206">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

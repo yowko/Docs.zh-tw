@@ -1,45 +1,44 @@
 ---
-title: "數學標準函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "數學標準函式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b6e69a9dbc204cfa8f0abc7e641b0784a08d747c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 數學標準函式
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包括一些數學標準函式。  
+# <a name="math-canonical-functions"></a><span data-ttu-id="dfb2b-102">數學標準函式</span><span class="sxs-lookup"><span data-stu-id="dfb2b-102">Math Canonical Functions</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="dfb2b-103"> 包括一些數學標準函式。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-103"> includes math canonical functions.</span></span>  
   
- 下表所示為數學 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
+ <span data-ttu-id="dfb2b-104">下表所示為數學 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-104">The following table shows the math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
-|函式|描述|  
-|--------|--------|  
-|`Abs(` `value` `)`|傳回 `value` 的絕對值。<br /><br /> **引數**<br /><br /> `Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double` 和 `Decimal`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> `Abs(-2)`|  
-|`Ceiling(` `value` `)`|傳回大於或等於 `value` 的最小整數。<br /><br /> **引數**<br /><br /> `Single`、 `Double` 和 `Decimal`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+|<span data-ttu-id="dfb2b-105">函式</span><span class="sxs-lookup"><span data-stu-id="dfb2b-105">Function</span></span>|<span data-ttu-id="dfb2b-106">說明</span><span class="sxs-lookup"><span data-stu-id="dfb2b-106">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="dfb2b-107">`Abs(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="dfb2b-107">`Abs(` `value` `)`</span></span>|<span data-ttu-id="dfb2b-108">傳回 `value` 的絕對值。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-108">Returns the absolute value of `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-109">**引數**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-109">**Arguments**</span></span><br /><br /> <span data-ttu-id="dfb2b-110">`Int16`， `Int32`， `Int64`， `Byte`， `Single`， `Double`，和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-110">An `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="dfb2b-111">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-111">**Return Value**</span></span><br /><br /> <span data-ttu-id="dfb2b-112">`value` 的類型。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-112">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-113">**範例**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-113">**Example**</span></span><br /><br /> `Abs(-2)`|  
+|<span data-ttu-id="dfb2b-114">`Ceiling(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="dfb2b-114">`Ceiling(` `value` `)`</span></span>|<span data-ttu-id="dfb2b-115">傳回大於或等於 `value` 的最小整數。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-115">Returns the smallest integer that is not less than `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-116">**引數**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-116">**Arguments**</span></span><br /><br /> <span data-ttu-id="dfb2b-117">A `Single`， `Double`，和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-117">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="dfb2b-118">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-118">**Return Value**</span></span><br /><br /> <span data-ttu-id="dfb2b-119">`value` 的類型。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-119">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-120">**範例**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-120">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
  [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(` `value` `)`|傳回小於或等於 `value` 的最大整數。<br /><br /> **引數**<br /><br /> `Single`、 `Double` 和 `Decimal`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+|<span data-ttu-id="dfb2b-121">`Floor(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="dfb2b-121">`Floor(` `value` `)`</span></span>|<span data-ttu-id="dfb2b-122">傳回小於或等於 `value` 的最大整數。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-122">Returns the largest integer that is not greater than `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-123">**引數**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-123">**Arguments**</span></span><br /><br /> <span data-ttu-id="dfb2b-124">A `Single`， `Double`，和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-124">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="dfb2b-125">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-125">**Return Value**</span></span><br /><br /> <span data-ttu-id="dfb2b-126">`value` 的類型。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-126">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-127">**範例**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-127">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
  [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(` `value`, `exponent``)`|傳回指定的 `value` 結果至指定的 `exponent`。<br /><br /> **引數**<br /><br /> `value`： `Int32, Int64, Double` 或 `Decimal`。<br /><br /> `exponent`： `Int64``, Double` 或 `Decimal`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> `Power(748.58,2)`|  
-|`Round(` `value` `)`|傳回 `value` 的整數部分，四捨五入成最接近的整數。<br /><br /> **引數**<br /><br /> `Single`、 `Double` 和 `Decimal`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> `Round(748.58)`|  
-|`Round(` `value`, `digits``)`|傳回 `value`，四捨五入至最接近的指定 `digits`。<br /><br /> **引數**<br /><br /> `value`：`Double` 或 `Decimal`。<br /><br /> `digits`：`Int16` 或 `Int32`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> `Round(748.58,1)`|  
-|`Truncate(` `value`, `digits``)`|傳回 `value`，截斷至最接近的指定 `digits`。<br /><br /> **引數**<br /><br /> `value`：`Double` 或 `Decimal`。<br /><br /> `digits`：`Int16` 或 `Int32`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> `Truncate(748.58,1)`|  
+|<span data-ttu-id="dfb2b-128">`Power(` `value`, `exponent``)`</span><span class="sxs-lookup"><span data-stu-id="dfb2b-128">`Power(` `value`, `exponent``)`</span></span>|<span data-ttu-id="dfb2b-129">傳回指定的 `value` 結果至指定的 `exponent`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-129">Returns the result of the specified `value` to the specified `exponent`.</span></span><br /><br /> <span data-ttu-id="dfb2b-130">**引數**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-130">**Arguments**</span></span><br /><br /> <span data-ttu-id="dfb2b-131">`value`: `Int32, Int64, Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-131">`value`: An `Int32, Int64, Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="dfb2b-132">`exponent`: `Int64``, Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-132">`exponent`: An `Int64``, Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="dfb2b-133">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-133">**Return Value**</span></span><br /><br /> <span data-ttu-id="dfb2b-134">`value` 的類型。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-134">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-135">**範例**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-135">**Example**</span></span><br /><br /> `Power(748.58,2)`|  
+|<span data-ttu-id="dfb2b-136">`Round(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="dfb2b-136">`Round(` `value` `)`</span></span>|<span data-ttu-id="dfb2b-137">傳回 `value` 的整數部分，四捨五入成最接近的整數。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-137">Returns the integer portion of `value`, rounded to the nearest integer.</span></span><br /><br /> <span data-ttu-id="dfb2b-138">**引數**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-138">**Arguments**</span></span><br /><br /> <span data-ttu-id="dfb2b-139">A `Single`， `Double`，和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-139">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="dfb2b-140">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-140">**Return Value**</span></span><br /><br /> <span data-ttu-id="dfb2b-141">`value` 的類型。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-141">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-142">**範例**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-142">**Example**</span></span><br /><br /> `Round(748.58)`|  
+|<span data-ttu-id="dfb2b-143">`Round(` `value`, `digits``)`</span><span class="sxs-lookup"><span data-stu-id="dfb2b-143">`Round(` `value`, `digits``)`</span></span>|<span data-ttu-id="dfb2b-144">傳回 `value`，四捨五入至最接近的指定 `digits`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-144">Returns the `value`, rounded to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="dfb2b-145">**引數**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-145">**Arguments**</span></span><br /><br /> <span data-ttu-id="dfb2b-146">`value`：`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-146">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="dfb2b-147">`digits`：`Int16` 或 `Int32`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-147">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="dfb2b-148">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-148">**Return Value**</span></span><br /><br /> <span data-ttu-id="dfb2b-149">`value` 的類型。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-149">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-150">**範例**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-150">**Example**</span></span><br /><br /> `Round(748.58,1)`|  
+|<span data-ttu-id="dfb2b-151">`Truncate(` `value`, `digits``)`</span><span class="sxs-lookup"><span data-stu-id="dfb2b-151">`Truncate(` `value`, `digits``)`</span></span>|<span data-ttu-id="dfb2b-152">傳回 `value`，截斷至最接近的指定 `digits`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-152">Returns the `value`, truncated to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="dfb2b-153">**引數**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-153">**Arguments**</span></span><br /><br /> <span data-ttu-id="dfb2b-154">`value`：`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-154">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="dfb2b-155">`digits`：`Int16` 或 `Int32`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-155">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="dfb2b-156">**傳回值**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-156">**Return Value**</span></span><br /><br /> <span data-ttu-id="dfb2b-157">`value` 的類型。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-157">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dfb2b-158">**範例**</span><span class="sxs-lookup"><span data-stu-id="dfb2b-158">**Example**</span></span><br /><br /> `Truncate(748.58,1)`|  
   
- 如果提供 `null` 輸入，這些函式會傳回 `null`。  
+ <span data-ttu-id="dfb2b-159">如果提供 `null` 輸入，這些函式會傳回 `null`。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-159">These functions will return `null` if given `null` input.</span></span>  
   
- Microsoft SQL Client Managed Provider 中提供了對等的功能。  如需詳細資訊，請參閱[Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
+ <span data-ttu-id="dfb2b-160">Microsoft SQL Client Managed Provider 中提供了對等的功能。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-160">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="dfb2b-161">如需詳細資訊，請參閱[適用於 Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="dfb2b-161">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>  
   
-## 請參閱  
- [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a><span data-ttu-id="dfb2b-162">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dfb2b-162">See Also</span></span>  
+ [<span data-ttu-id="dfb2b-163">標準函式</span><span class="sxs-lookup"><span data-stu-id="dfb2b-163">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

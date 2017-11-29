@@ -1,40 +1,43 @@
 ---
-title: "499 - TransferEmitted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 499 - TransferEmitted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 07a26434-a7a0-40fc-b5d0-3520a04328ae
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e786691ef3a6ee2a860461562c9de0f627fc907
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 499 - TransferEmitted
-## 屬性  
+# <a name="499---transferemitted"></a><span data-ttu-id="7b65c-102">499 - TransferEmitted</span><span class="sxs-lookup"><span data-stu-id="7b65c-102">499 - TransferEmitted</span></span>
+## <a name="properties"></a><span data-ttu-id="7b65c-103">屬性</span><span class="sxs-lookup"><span data-stu-id="7b65c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|499|  
-|關鍵字|Troubleshooting，UserEvents，EndToEndMonitoring，ServiceModel，WFTracking，ServiceHost，WCFMessageLogging|  
-|層級|LogAlways|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="7b65c-104">ID</span><span class="sxs-lookup"><span data-stu-id="7b65c-104">ID</span></span>|<span data-ttu-id="7b65c-105">499</span><span class="sxs-lookup"><span data-stu-id="7b65c-105">499</span></span>|  
+|<span data-ttu-id="7b65c-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="7b65c-106">Keywords</span></span>|<span data-ttu-id="7b65c-107">Troubleshooting，UserEvents，EndToEndMonitoring，ServiceModel，WFTracking，ServiceHost，WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="7b65c-107">Troubleshooting, UserEvents, EndToEndMonitoring, ServiceModel, WFTracking, ServiceHost, WCFMessageLogging</span></span>|  
+|<span data-ttu-id="7b65c-108">層級</span><span class="sxs-lookup"><span data-stu-id="7b65c-108">Level</span></span>|<span data-ttu-id="7b65c-109">LogAlways</span><span class="sxs-lookup"><span data-stu-id="7b65c-109">LogAlways</span></span>|  
+|<span data-ttu-id="7b65c-110">通道</span><span class="sxs-lookup"><span data-stu-id="7b65c-110">Channel</span></span>|<span data-ttu-id="7b65c-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="7b65c-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 說明  
- 這個事件會在傳輸事件發生時發出。  
+## <a name="description"></a><span data-ttu-id="7b65c-112">描述</span><span class="sxs-lookup"><span data-stu-id="7b65c-112">Description</span></span>  
+ <span data-ttu-id="7b65c-113">當傳輸事件發生時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="7b65c-113">This event is emitted when the transfer event takes place.</span></span>  
   
-## 訊息  
- 已發出的傳輸事件。  
+## <a name="message"></a><span data-ttu-id="7b65c-114">訊息</span><span class="sxs-lookup"><span data-stu-id="7b65c-114">Message</span></span>  
+ <span data-ttu-id="7b65c-115">已發出傳輸事件。</span><span class="sxs-lookup"><span data-stu-id="7b65c-115">Transfer event emitted.</span></span>  
   
-## 詳細資訊  
+## <a name="details"></a><span data-ttu-id="7b65c-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="7b65c-116">Details</span></span>  
   
-|資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。範例：'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'。|  
-|AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="7b65c-117">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="7b65c-117">Data Item Name</span></span>|<span data-ttu-id="7b65c-118">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="7b65c-118">Data Item Type</span></span>|<span data-ttu-id="7b65c-119">描述</span><span class="sxs-lookup"><span data-stu-id="7b65c-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="7b65c-120">HostReference</span><span class="sxs-lookup"><span data-stu-id="7b65c-120">HostReference</span></span>|`xs:string`|<span data-ttu-id="7b65c-121">若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。</span><span class="sxs-lookup"><span data-stu-id="7b65c-121">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="7b65c-122">其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName'。</span><span class="sxs-lookup"><span data-stu-id="7b65c-122">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="7b65c-123">範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'。</span><span class="sxs-lookup"><span data-stu-id="7b65c-123">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="7b65c-124">AppDomain</span><span class="sxs-lookup"><span data-stu-id="7b65c-124">AppDomain</span></span>|`xs:string`|<span data-ttu-id="7b65c-125">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="7b65c-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

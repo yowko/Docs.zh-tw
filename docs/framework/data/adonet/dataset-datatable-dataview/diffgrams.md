@@ -1,60 +1,63 @@
 ---
-title: "DiffGram | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DiffGram
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ff43b9279130ed710d9d88cbf2ba5ead4a6f0ebc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DiffGram
-DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。  <xref:System.Data.DataSet> 使用 DiffGram 格式以載入保存內容，並將內容序列化以透過網路連接傳輸。  將 <xref:System.Data.DataSet> 寫為 DiffGram 時，會把所有必要資訊填入 DiffGram，以正確重新建立 <xref:System.Data.DataSet> 的內容 \(而非結構描述\)，包括來自 **Original** 和 **Current** 資料列版本的資料行值、資料列錯誤資訊和資料列順序。  
+# <a name="diffgrams"></a><span data-ttu-id="75367-102">DiffGram</span><span class="sxs-lookup"><span data-stu-id="75367-102">DiffGrams</span></span>
+<span data-ttu-id="75367-103">DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。</span><span class="sxs-lookup"><span data-stu-id="75367-103">A DiffGram is an XML format that identifies current and original versions of data elements.</span></span> <span data-ttu-id="75367-104"><xref:System.Data.DataSet> 使用 DiffGram 格式以載入保存內容，並將內容序列化以透過網路連接傳輸。</span><span class="sxs-lookup"><span data-stu-id="75367-104">The <xref:System.Data.DataSet> uses the DiffGram format to load and persist its contents, and to serialize its contents for transport across a network connection.</span></span> <span data-ttu-id="75367-105">當<xref:System.Data.DataSet>寫入為 DiffGram，它所擴展的所有必要資訊 DiffGram，以正確重新建立內容，但不是架構的<xref:System.Data.DataSet>，包括資料行值，同時從**原始**和**目前**資料列版本中，資料列錯誤資訊和資料列順序。</span><span class="sxs-lookup"><span data-stu-id="75367-105">When a <xref:System.Data.DataSet> is written as a DiffGram, it populates the DiffGram with all the necessary information to accurately recreate the contents, though not the schema, of the <xref:System.Data.DataSet>, including column values from both the **Original** and **Current** row versions, row error information, and row order.</span></span>  
   
- 從 XML Web Service 傳送和擷取 <xref:System.Data.DataSet> 時，會隱含使用 DiffGram 格式。  此外，使用 **ReadXml** 方法從 XML 載入 <xref:System.Data.DataSet> 的內容，或使用 **WriteXml** 方法在 XML 中寫入 <xref:System.Data.DataSet> 的內容時，您可以指定將內容當做 DiffGram 來讀取或寫入。  如需詳細資訊，請參閱[從 XML 載入 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)與[將 DataSet 內容撰寫成 XML 資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。  
+ <span data-ttu-id="75367-106">從 XML Web Service 傳送和擷取 <xref:System.Data.DataSet> 時，會隱含使用 DiffGram 格式。</span><span class="sxs-lookup"><span data-stu-id="75367-106">When sending and retrieving a <xref:System.Data.DataSet> from an XML Web service, the DiffGram format is implicitly used.</span></span> <span data-ttu-id="75367-107">此外，當載入的內容<xref:System.Data.DataSet>XML 使用**ReadXml**方法，或寫入的內容時<xref:System.Data.DataSet>在 XML 中使用**WriteXml**方法，您可以指定要讀取或寫入為 DiffGram，內容。</span><span class="sxs-lookup"><span data-stu-id="75367-107">Additionally, when loading the contents of a <xref:System.Data.DataSet> from XML using the **ReadXml** method, or when writing the contents of a <xref:System.Data.DataSet> in XML using the **WriteXml** method, you can specify that the contents be read or written as a DiffGram.</span></span> <span data-ttu-id="75367-108">如需詳細資訊，請參閱[從 XML 載入 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)和[寫入為 XML 資料的資料集內容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。</span><span class="sxs-lookup"><span data-stu-id="75367-108">For more information, see [Loading a DataSet from XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) and [Writing DataSet Contents as XML Data](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).</span></span>  
   
- 雖然 DiffGram 格式在 .NET Framework 中主要是用來當做 <xref:System.Data.DataSet> 內容的序列化格式，您也可以使用 DiffGrams 修改 Microsoft SQL Server 資料庫中的資料表資料。  
+ <span data-ttu-id="75367-109">雖然 DiffGram 格式在 .NET Framework 中主要是用來當做 <xref:System.Data.DataSet> 內容的序列化格式，您也可以使用 DiffGrams 修改 Microsoft SQL Server 資料庫中的資料表資料。</span><span class="sxs-lookup"><span data-stu-id="75367-109">While the DiffGram format is primarily used by the .NET Framework as a serialization format for the contents of a <xref:System.Data.DataSet>, you can also use DiffGrams to modify data in tables in a Microsoft SQL Server database.</span></span>  
   
- Diffgram 是藉由將所有資料表的內容寫入至 **\<diffgram\>** 項目而產生。  
+ <span data-ttu-id="75367-110">Diffgram 會產生所有資料表都以內容寫入 **\<diffgram >**項目。</span><span class="sxs-lookup"><span data-stu-id="75367-110">A Diffgram is generated by writing the contents of all tables to a **\<diffgram>** element.</span></span>  
   
-### 若要產生 Diffgram  
+### <a name="to-generate-a-diffgram"></a><span data-ttu-id="75367-111">若要產生 Diffgram</span><span class="sxs-lookup"><span data-stu-id="75367-111">To generate a Diffgram</span></span>  
   
-1.  產生根資料表 \(即不具任何父項目的資料表\) 的清單。  
+1.  <span data-ttu-id="75367-112">產生根資料表 (即不具任何父項目的資料表) 的清單。</span><span class="sxs-lookup"><span data-stu-id="75367-112">Generate a list of Root tables (that is, tables without any parent).</span></span>  
   
-2.  針對清單中的每個資料表及其子代 \(Descendant\)，在 Diffgram 的第一個區段中寫出所有資料列的目前版本。  
+2.  <span data-ttu-id="75367-113">針對清單中的每個資料表及其子代 (Descendant)，在 Diffgram 的第一個區段中寫出所有資料列的目前版本。</span><span class="sxs-lookup"><span data-stu-id="75367-113">For each table and its descendants in the list, write out the current version of all rows in the first Diffgram section.</span></span>  
   
-3.  針對 <xref:System.Data.DataSet> 中的每個資料表，在 Diffgram 的 **\<before\>** 區段中寫出所有資料列的原始版本 \(若有\)。  
+3.  <span data-ttu-id="75367-114">每個資料表中<xref:System.Data.DataSet>，寫出所有的資料列的原始版本，如果有的話，請在**\<之前 >** Diffgram 區段。</span><span class="sxs-lookup"><span data-stu-id="75367-114">For each table in the <xref:System.Data.DataSet>, write out the original version of all rows, if any, in the **\<before>** section of the Diffgram.</span></span>  
   
-4.  針對有錯誤的資料列，在 Diffgram 的 **\<errors\>** 區段中寫入錯誤內容。  
+4.  <span data-ttu-id="75367-115">如有錯誤，資料列寫入錯誤內容中**\<錯誤 >** Diffgram 區段。</span><span class="sxs-lookup"><span data-stu-id="75367-115">For rows that have errors, write the error content in the **\<errors>** section of the Diffgram.</span></span>  
   
- Diffgram 會從 XML 檔案的開頭依序處理到結尾。  
+ <span data-ttu-id="75367-116">Diffgram 會從 XML 檔案的開頭依序處理到結尾。</span><span class="sxs-lookup"><span data-stu-id="75367-116">A Diffgram is processed in order from beginning of the XML file to the end.</span></span>  
   
-### 若要處理 Diffgram  
+### <a name="to-process-a-diffgram"></a><span data-ttu-id="75367-117">若要處理 Diffgram</span><span class="sxs-lookup"><span data-stu-id="75367-117">To process a Diffgram</span></span>  
   
-1.  處理 Diffgram 的第一個區段，其中包含資料列的目前版本。  
+1.  <span data-ttu-id="75367-118">處理 Diffgram 的第一個區段，其中包含資料列的目前版本。</span><span class="sxs-lookup"><span data-stu-id="75367-118">Process the first section of the Diffgram that contains the current version of the rows.</span></span>  
   
-2.  處理第二個或 **\<before\>** 區段，這些區段中包含已修改和已刪除資料列的原始資料列版本。  
+2.  <span data-ttu-id="75367-119">處理第二個或**\<之前 >**區段，其中包含原始資料列版本的修改和刪除資料列。</span><span class="sxs-lookup"><span data-stu-id="75367-119">Process the second or the **\<before>** section that contains the original row version of modified and deleted rows.</span></span>  
   
     > [!NOTE]
-    >  如果資料列標示為已刪除，則刪除作業可能也會刪除該資料列的子代，根據目前 <xref:System.Data.DataSet> 的 `Cascade` 屬性而定。  
+    >  <span data-ttu-id="75367-120">如果資料列標示為已刪除，則刪除作業可能也會刪除該資料列的子代，根據目前 `Cascade` 的 <xref:System.Data.DataSet> 屬性而定。</span><span class="sxs-lookup"><span data-stu-id="75367-120">If a row is marked deleted, the delete operation can delete the row's descendants as well, depending on the `Cascade` property of the current <xref:System.Data.DataSet>.</span></span>  
   
-3.  處理 **\<errors\>** 區段。  針對此區段中每個項目的指定資料列和資料行設定錯誤資訊。  
+3.  <span data-ttu-id="75367-121">處理序**\<錯誤 >** > 一節。</span><span class="sxs-lookup"><span data-stu-id="75367-121">Process the **\<errors>** section.</span></span> <span data-ttu-id="75367-122">針對此區段中每個項目的指定資料列和資料行設定錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="75367-122">Set the error information for the specified row and column for each item in this section.</span></span>  
   
 > [!NOTE]
->  如果將 <xref:System.Data.XmlWriteMode> 設定為 Diffgram，則目標 <xref:System.Data.DataSet> 和原始 <xref:System.Data.DataSet> 的內容可能不同。  
+>  <span data-ttu-id="75367-123">如果將 <xref:System.Data.XmlWriteMode> 設定為 Diffgram，則目標 <xref:System.Data.DataSet> 和原始 <xref:System.Data.DataSet> 的內容可能不同。</span><span class="sxs-lookup"><span data-stu-id="75367-123">If you set the <xref:System.Data.XmlWriteMode> to Diffgram, the content of the target <xref:System.Data.DataSet> and the original <xref:System.Data.DataSet> may differ.</span></span>  
   
-## DiffGram 格式  
- DiffGram 格式分成三個區段：目前資料、原始 \(或「過去」\) 資料和錯誤區段，如下列範例所示。  
+## <a name="diffgram-format"></a><span data-ttu-id="75367-124">DiffGram 格式</span><span class="sxs-lookup"><span data-stu-id="75367-124">DiffGram Format</span></span>  
+ <span data-ttu-id="75367-125">DiffGram 格式分成三個區段：目前資料、原始 (或「過去」) 資料和錯誤區段，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="75367-125">The DiffGram format is divided into three sections: the current data, the original (or "before") data, and an errors section, as shown in the following example.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <diffgr:diffgram   
          xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"  
@@ -72,41 +75,41 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
 </diffgr:diffgram>  
 ```  
   
- DiffGram 格式由下列資料區塊組成：  
+ <span data-ttu-id="75367-126">DiffGram 格式由下列資料區塊組成：</span><span class="sxs-lookup"><span data-stu-id="75367-126">The DiffGram format consists of the following blocks of data:</span></span>  
   
- **\<**  ***DataInstance***  **\>**  
- 項目的名稱 ***DataInstance***，是用來在這份文件中作為解釋之用。  ***DataInstance*** 項目代表 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 的資料列。  項目會包含 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 的名稱 \(而非 *DataInstance*\)。  無論這個 DiffGram 格式區塊是否經過修改，都會包含目前的資料。  已修改過的項目或資料列是以 **diffgr:hasChanges** 註釋來識別。  
+ <span data-ttu-id="75367-127">**\<**  ***DataInstance***  **>**</span><span class="sxs-lookup"><span data-stu-id="75367-127">**\<**  ***DataInstance***  **>**</span></span>  
+ <span data-ttu-id="75367-128">這個項目的名稱***DataInstance***，用於說明用途，此文件中。</span><span class="sxs-lookup"><span data-stu-id="75367-128">The name of this element, ***DataInstance***, is used for explanation purposes in this documentation.</span></span> <span data-ttu-id="75367-129">A ***DataInstance***元素代表<xref:System.Data.DataSet>或列<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="75367-129">A ***DataInstance*** element represents a <xref:System.Data.DataSet> or a row of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="75367-130">而不是*DataInstance*，項目會包含名稱<xref:System.Data.DataSet>或<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="75367-130">Instead of *DataInstance*, the element would contain the name of the <xref:System.Data.DataSet> or <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="75367-131">無論這個 DiffGram 格式區塊是否經過修改，都會包含目前的資料。</span><span class="sxs-lookup"><span data-stu-id="75367-131">This block of the DiffGram format contains the current data, whether it has been modified or not.</span></span> <span data-ttu-id="75367-132">項目或已修改資料列會用來識別**diffgr: haschanges**註解。</span><span class="sxs-lookup"><span data-stu-id="75367-132">An element, or row, that has been modified is identified with the **diffgr:hasChanges** annotation.</span></span>  
   
- **\<diffgr:before\>**  
- 這個 DiffGram 格式的區塊包含資料列的原始版本。  此區塊中的項目會使用 **diffgr:id** 註釋，對應至 ***DataInstance*** 區塊中的項目。  
+ <span data-ttu-id="75367-133">**\<before>： 之前 >**</span><span class="sxs-lookup"><span data-stu-id="75367-133">**\<diffgr:before>**</span></span>  
+ <span data-ttu-id="75367-134">這個 DiffGram 格式的區塊包含資料列的原始版本。</span><span class="sxs-lookup"><span data-stu-id="75367-134">This block of the DiffGram format contains the original version of a row.</span></span> <span data-ttu-id="75367-135">此區塊中的項目中的項目符合***DataInstance***封鎖使用**diffgr: id**註解。</span><span class="sxs-lookup"><span data-stu-id="75367-135">Elements in this block are matched to elements in the ***DataInstance*** block using the **diffgr:id** annotation.</span></span>  
   
- **\<diffgr:errors\>**  
- 這個 DiffGram 格式的區塊包含 ***DataInstance*** 區塊中特定資料列的錯誤資訊。  此區塊中的項目會使用 **diffgr:id** 註釋，對應至 ***DataInstance*** 區塊中的項目。  
+ <span data-ttu-id="75367-136">**\<diffgr:errors >**</span><span class="sxs-lookup"><span data-stu-id="75367-136">**\<diffgr:errors>**</span></span>  
+ <span data-ttu-id="75367-137">這個 DiffGram 格式的區塊包含在特定資料列的錯誤資訊***DataInstance***區塊。</span><span class="sxs-lookup"><span data-stu-id="75367-137">This block of the DiffGram format contains error information for a particular row in the ***DataInstance*** block.</span></span> <span data-ttu-id="75367-138">此區塊中的項目中的項目符合***DataInstance***封鎖使用**diffgr: id**註解。</span><span class="sxs-lookup"><span data-stu-id="75367-138">Elements in this block are matched to elements in the ***DataInstance*** block using the **diffgr:id** annotation.</span></span>  
   
-## DiffGram 註釋  
- DiffGram 使用數種註釋，將來自不同 DiffGram 區塊的項目關聯起來，這些 DiffGram 區塊分別代表 <xref:System.Data.DataSet> 中的不同資料列版本或錯誤訊息。  
+## <a name="diffgram-annotations"></a><span data-ttu-id="75367-139">DiffGram 註釋</span><span class="sxs-lookup"><span data-stu-id="75367-139">DiffGram Annotations</span></span>  
+ <span data-ttu-id="75367-140">DiffGram 使用數種註釋，將來自不同 DiffGram 區塊的項目關聯起來，這些 DiffGram 區塊分別代表 <xref:System.Data.DataSet> 中的不同資料列版本或錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="75367-140">DiffGrams use several annotations to relate elements from the different DiffGram blocks that represent different row versions or error information in the <xref:System.Data.DataSet>.</span></span>  
   
- 下列表格說明 DiffGram 命名空間 **urn:schemas\-microsoft\-com:xml\-diffgram\-v1** 中定義的 DiffGram 註釋。  
+ <span data-ttu-id="75367-141">以下表格說明 DiffGram 命名空間中定義的 DiffGram 註釋**描述 urn:-microsoft-schemas-microsoft-com:-diffgram-v1**。</span><span class="sxs-lookup"><span data-stu-id="75367-141">The following table describes the DiffGram annotations that are defined in the DiffGram namespace **urn:schemas-microsoft-com:xml-diffgram-v1**.</span></span>  
   
-|註釋|描述|  
-|--------|--------|  
-|**id**|作用是將 **\<** ***DataInstance*** **\>** 區塊中的項目與 **\<diffgr:before\>** 和 **\<diffgr:errors\>** 區塊中的項目進行配對。  具有 **diffgr:id** 註釋的值使用 *\[TableName\]\[RowIdentifier\]* 格式。  例如：`<Customers diffgr:id="Customers1">`。|  
-|**parentId**|識別 **\<** ***DataInstance*** **\>** 區塊中哪個項目是目前項目的父項目。  具有 **diffgr:parentId** 註釋的值使用 *\[TableName\]\[RowIdentifier\]* 格式。  例如：`<Orders diffgr:parentId="Customers1">`。|  
-|**hasChanges**|將 **\<** ***DataInstance*** **\>** 區塊中的資料列識別為已修改。  **hasChanges** 註釋可以具有以下兩個值的其中之一：<br /><br /> **inserted**<br /> 識別 **Added** 資料列。<br /><br /> **modified**<br /> 識別 **\<diffgr:before\>** 區塊中包含 **Original** 資料列版本的 **Modified** 資料列。  請注意，**Deleted** 資料列會有 **\<diffgr:before\>** 區塊中的 **Original** 資料列版本，但不會有 **\<** ***DataInstance*** **\>** 區塊中的註釋項目。|  
-|**hasErrors**|使用 **RowError** 識別 **\<** ***DataInstance*** **\>** 區塊中的資料列。  錯誤項目會置於 **\<diffgr:errors\>** 區塊中。|  
-|**錯誤**|包含 **\<diffgr:errors\>** 區塊中特定項目的 **RowError** 文字。|  
+|<span data-ttu-id="75367-142">註釋</span><span class="sxs-lookup"><span data-stu-id="75367-142">Annotation</span></span>|<span data-ttu-id="75367-143">說明</span><span class="sxs-lookup"><span data-stu-id="75367-143">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="75367-144">**id**</span><span class="sxs-lookup"><span data-stu-id="75367-144">**id**</span></span>|<span data-ttu-id="75367-145">配對中的項目 **\<before>： 之前 >**和 **\<diffgr:errors >**區塊中的項目 **\<** ***DataInstance***  **>** 區塊。</span><span class="sxs-lookup"><span data-stu-id="75367-145">Used to pair the elements in the **\<diffgr:before>** and **\<diffgr:errors>** blocks to elements in the **\<** ***DataInstance*** **>** block.</span></span> <span data-ttu-id="75367-146">值與**diffgr: id**註釋會在表單中*[TableName] [RowIdentifier]*。</span><span class="sxs-lookup"><span data-stu-id="75367-146">Values with the **diffgr:id** annotation are in the form *[TableName][RowIdentifier]*.</span></span> <span data-ttu-id="75367-147">例如：`<Customers diffgr:id="Customers1">`。</span><span class="sxs-lookup"><span data-stu-id="75367-147">For example: `<Customers diffgr:id="Customers1">`.</span></span>|  
+|<span data-ttu-id="75367-148">**parentId**</span><span class="sxs-lookup"><span data-stu-id="75367-148">**parentId**</span></span>|<span data-ttu-id="75367-149">識別哪個項目從 **\<**  ***DataInstance***  **>** 區塊是目前項目的父項目。</span><span class="sxs-lookup"><span data-stu-id="75367-149">Identifies which element from the **\<** ***DataInstance*** **>** block is the parent element of the current element.</span></span> <span data-ttu-id="75367-150">值與**diffgr: parentid**註釋會在表單中*[TableName] [RowIdentifier]*。</span><span class="sxs-lookup"><span data-stu-id="75367-150">Values with the **diffgr:parentId** annotation are in the form *[TableName][RowIdentifier]*.</span></span> <span data-ttu-id="75367-151">例如：`<Orders diffgr:parentId="Customers1">`。</span><span class="sxs-lookup"><span data-stu-id="75367-151">For example: `<Orders diffgr:parentId="Customers1">`.</span></span>|  
+|<span data-ttu-id="75367-152">**hasChanges**</span><span class="sxs-lookup"><span data-stu-id="75367-152">**hasChanges**</span></span>|<span data-ttu-id="75367-153">識別中的資料列 **\<**  ***DataInstance***  **>** 封鎖已修改。</span><span class="sxs-lookup"><span data-stu-id="75367-153">Identifies a row in the **\<** ***DataInstance*** **>** block as modified.</span></span> <span data-ttu-id="75367-154">**HasChanges**註釋可以具有下列兩個值之一：</span><span class="sxs-lookup"><span data-stu-id="75367-154">The **hasChanges** annotation can have one of the following two values:</span></span><br /><br /> <span data-ttu-id="75367-155">**插入**</span><span class="sxs-lookup"><span data-stu-id="75367-155">**inserted**</span></span><br /> <span data-ttu-id="75367-156">識別**Added**資料列。</span><span class="sxs-lookup"><span data-stu-id="75367-156">Identifies an **Added** row.</span></span><br /><br /> <span data-ttu-id="75367-157">**修改**</span><span class="sxs-lookup"><span data-stu-id="75367-157">**modified**</span></span><br /> <span data-ttu-id="75367-158">識別**Modified**包含資料列**原始**中的資料列版本 **\<before>： 之前 >**區塊。</span><span class="sxs-lookup"><span data-stu-id="75367-158">Identifies a **Modified** row that contains an **Original** row version in the **\<diffgr:before>** block.</span></span> <span data-ttu-id="75367-159">請注意，**刪除**資料列將沒有**原始**中的資料列版本 **\<before>： 之前 >**區塊，但會有被中的沒有標註項目**\<**  ***DataInstance***  **>** 區塊。</span><span class="sxs-lookup"><span data-stu-id="75367-159">Note that **Deleted** rows will have an **Original** row version in the **\<diffgr:before>** block, but there will be no annotated element in the **\<** ***DataInstance*** **>** block.</span></span>|  
+|<span data-ttu-id="75367-160">**hasErrors**</span><span class="sxs-lookup"><span data-stu-id="75367-160">**hasErrors**</span></span>|<span data-ttu-id="75367-161">識別中的資料列 **\<**  ***DataInstance***  **>** 區塊**RowError**。</span><span class="sxs-lookup"><span data-stu-id="75367-161">Identifies a row in the **\<** ***DataInstance*** **>** block with a **RowError**.</span></span> <span data-ttu-id="75367-162">錯誤項目會置於 **\<diffgr:errors >**區塊。</span><span class="sxs-lookup"><span data-stu-id="75367-162">The error element is placed in the **\<diffgr:errors>** block.</span></span>|  
+|<span data-ttu-id="75367-163">**錯誤**</span><span class="sxs-lookup"><span data-stu-id="75367-163">**Error**</span></span>|<span data-ttu-id="75367-164">包含文字的**RowError**中特定項目的 **\<diffgr:errors >**區塊。</span><span class="sxs-lookup"><span data-stu-id="75367-164">Contains the text of the **RowError** for a particular element in the **\<diffgr:errors>** block.</span></span>|  
   
- <xref:System.Data.DataSet> 將其內容讀取或寫為 DiffGram 時，亦會包含其他附註。  下列表格說明這些在命名空間 **urn:schemas\-microsoft\-com:xml\-msdata** 中定義的其他註釋。  
+ <span data-ttu-id="75367-165"><xref:System.Data.DataSet> 將其內容讀取或寫為 DiffGram 時，亦會包含其他附註。</span><span class="sxs-lookup"><span data-stu-id="75367-165">The <xref:System.Data.DataSet> includes additional annotations when reading or writing its contents as a DiffGram.</span></span> <span data-ttu-id="75367-166">下表描述這些其他註解命名空間中定義的**描述 urn:-microsoft-schemas-microsoft-com:-msdata**。</span><span class="sxs-lookup"><span data-stu-id="75367-166">The following table describes these additional annotations, which are defined in the namespace **urn:schemas-microsoft-com:xml-msdata**.</span></span>  
   
-|註釋|描述|  
-|--------|--------|  
-|**RowOrder**|保留原始資料的資料列順序，並識別特定 <xref:System.Data.DataTable> 中資料列的索引。|  
-|**Hidden**|識別 **ColumnMapping** 屬性設定為 **MappingType.Hidden** 的資料行。  屬性是以格式 **msdata:hidden** *\[ColumnName\]*\="*value*" 所撰寫。  例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 請注意，隱藏的資料行只有在包含資料時才會寫為 DiffGram 屬性。  否則便會予以忽略。|  
+|<span data-ttu-id="75367-167">註釋</span><span class="sxs-lookup"><span data-stu-id="75367-167">Annotation</span></span>|<span data-ttu-id="75367-168">說明</span><span class="sxs-lookup"><span data-stu-id="75367-168">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="75367-169">**RowOrder**</span><span class="sxs-lookup"><span data-stu-id="75367-169">**RowOrder**</span></span>|<span data-ttu-id="75367-170">保留原始資料的資料列順序，並識別特定 <xref:System.Data.DataTable> 中資料列的索引。</span><span class="sxs-lookup"><span data-stu-id="75367-170">Preserves the row order of the original data and identifies the index of a row in a particular <xref:System.Data.DataTable>.</span></span>|  
+|<span data-ttu-id="75367-171">**隱藏**</span><span class="sxs-lookup"><span data-stu-id="75367-171">**Hidden**</span></span>|<span data-ttu-id="75367-172">識別資料行做為具有**ColumnMapping**屬性設定為**MappingType.Hidden**。</span><span class="sxs-lookup"><span data-stu-id="75367-172">Identifies a column as having a **ColumnMapping** property set to **MappingType.Hidden**.</span></span> <span data-ttu-id="75367-173">格式會將屬性寫入**msdata： 隱藏** *[ColumnName]*="*值*"。</span><span class="sxs-lookup"><span data-stu-id="75367-173">The attribute is written in the format **msdata:hidden** *[ColumnName]*="*value*".</span></span> <span data-ttu-id="75367-174">例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。</span><span class="sxs-lookup"><span data-stu-id="75367-174">For example: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.</span></span><br /><br /> <span data-ttu-id="75367-175">請注意，隱藏的資料行只有在包含資料時才會寫為 DiffGram 屬性。</span><span class="sxs-lookup"><span data-stu-id="75367-175">Note that hidden columns are only written as a DiffGram attribute if they contain data.</span></span> <span data-ttu-id="75367-176">否則便會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="75367-176">Otherwise, they are ignored.</span></span>|  
   
-## 範例 DiffGram  
- 以下是 DiffGram 格式的範例。  這個範例顯示在確認變更前，資料表中資料列的更新結果。  CustomerID 為 "ALFKI" 的資料列已經修改，但尚未更新。  這樣一來，**\<** ***DataInstance*** **\>** 區塊中會有具 "Customers1" 之 **diffgr:id** 的 **Current** 資料列，而 **\<diffgr:before\>** 區塊中則會有具 "Customers1" 之 **diffgr:id** 的 **Original** 資料列。  CustomerID 為 "ANATR" 的資料列包括 **RowError**，所以它會加上 `diffgr:hasErrors="true"` 的附註且在 **\<diffgr:errors\>** 區塊中有相關項目。  
+## <a name="sample-diffgram"></a><span data-ttu-id="75367-177">範例 DiffGram</span><span class="sxs-lookup"><span data-stu-id="75367-177">Sample DiffGram</span></span>  
+ <span data-ttu-id="75367-178">以下是 DiffGram 格式的範例。</span><span class="sxs-lookup"><span data-stu-id="75367-178">An example of the DiffGram format is shown below.</span></span> <span data-ttu-id="75367-179">這個範例顯示在確認變更前，資料表中資料列的更新結果。</span><span class="sxs-lookup"><span data-stu-id="75367-179">This example shows the result of an update to a row in a table before the changes have been committed.</span></span> <span data-ttu-id="75367-180">CustomerID 為 "ALFKI" 的資料列已經修改，但尚未更新。</span><span class="sxs-lookup"><span data-stu-id="75367-180">The row with a CustomerID of "ALFKI" has been modified, but not updated.</span></span> <span data-ttu-id="75367-181">如此一來，沒有**目前**資料列**diffgr: id** "Customers1"中的 **\<**  ***DataInstance***  **>** 區塊，以及**原始**資料列**diffgr: id** "Customers1"中的 **\<before>： 之前 >**區塊。</span><span class="sxs-lookup"><span data-stu-id="75367-181">As a result, there is a **Current** row with a **diffgr:id** of "Customers1" in the **\<** ***DataInstance*** **>** block, and an **Original** row with a **diffgr:id** of "Customers1" in the **\<diffgr:before>** block.</span></span> <span data-ttu-id="75367-182">CustomerID 為"ANATR"的資料列包括**RowError**，因此它以註解`diffgr:hasErrors="true"`，而且沒有相關的項目中 **\<diffgr:errors >**區塊。</span><span class="sxs-lookup"><span data-stu-id="75367-182">The row with a CustomerID of "ANATR" includes a **RowError**, so it is annotated with `diffgr:hasErrors="true"` and there is a related element in the **\<diffgr:errors>** block.</span></span>  
   
-```  
+```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  
   <CustomerDataSet>  
     <Customers diffgr:id="Customers1" msdata:rowOrder="0" diffgr:hasChanges="modified">  
@@ -138,9 +141,9 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
 </diffgr:diffgram>  
 ```  
   
-## 請參閱  
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [從 XML 載入 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [將 DataSet 內容撰寫成 XML 資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)   
- [DataSet、DataTable 及 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="75367-183">另請參閱</span><span class="sxs-lookup"><span data-stu-id="75367-183">See Also</span></span>  
+ [<span data-ttu-id="75367-184">在 DataSet 中使用 XML</span><span class="sxs-lookup"><span data-stu-id="75367-184">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="75367-185">從 XML 載入資料集</span><span class="sxs-lookup"><span data-stu-id="75367-185">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="75367-186">將資料集內容寫入為 XML 資料</span><span class="sxs-lookup"><span data-stu-id="75367-186">Writing DataSet Contents as XML Data</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
+ [<span data-ttu-id="75367-187">DataSet、DataTable 和 DataView</span><span class="sxs-lookup"><span data-stu-id="75367-187">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="75367-188">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="75367-188">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,28 +1,37 @@
 ---
-title: "&lt;wsHttpBinding&gt; 的 &lt;message&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;wsHttpBinding&gt; 的 &lt;message&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b1306d637432587a771f5e79216c7a8373eb1eeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;wsHttpBinding&gt; 的 &lt;message&gt;
-定義 [\<wsHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)的訊息層級安全性設定。  
+# <a name="ltmessagegt-of-ltwshttpbindinggt"></a><span data-ttu-id="88def-102">&lt;wsHttpBinding&gt; 的 &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="88def-102">&lt;message&gt; of &lt;wsHttpBinding&gt;</span></span>
+<span data-ttu-id="88def-103">定義的訊息層級安全性設定[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="88def-103">Defines settings for message-level security of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
-## 語法  
+ <span data-ttu-id="88def-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="88def-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="88def-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="88def-105">\<bindings></span></span>  
+<span data-ttu-id="88def-106">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="88def-106">\<wsHttpBinding></span></span>  
+<span data-ttu-id="88def-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="88def-107">\<binding></span></span>  
+<span data-ttu-id="88def-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="88def-108">\<security></span></span>  
+<span data-ttu-id="88def-109">\<訊息 ></span><span class="sxs-lookup"><span data-stu-id="88def-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="88def-110">語法</span><span class="sxs-lookup"><span data-stu-id="88def-110">Syntax</span></span>  
   
+```xml  
 <message   
    algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
    clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"  
@@ -30,68 +39,68 @@ caps.handback.revision: 22
    negotiateServiceCredential="Boolean" />  
 ```  
   
-## 類型  
+## <a name="type"></a><span data-ttu-id="88def-111">類型</span><span class="sxs-lookup"><span data-stu-id="88def-111">Type</span></span>  
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
   
-## 屬性和項目  
- 下列各節說明屬性、子元素和父元素  
+## <a name="attributes-and-elements"></a><span data-ttu-id="88def-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="88def-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="88def-113">下列各節說明屬性、子元素和父元素</span><span class="sxs-lookup"><span data-stu-id="88def-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="88def-114">屬性</span><span class="sxs-lookup"><span data-stu-id="88def-114">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|algorithmSuite|設定訊息加密和金鑰包裝演算法。  這些演算法和金鑰大小是由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 類別所決定。  這些演算法會對應至安全性原則語言 \(WS\-SecurityPolicy\) 規格中指定的演算法。<br /><br /> 預設值是 `Basic256`。|  
-|clientCredentialType|選擇項。  指定使用的安全性模式為 `Message` 或 `TransportWithMessageCredentials` 執行用戶端驗證時，要使用的認證類型。  列舉值如下所示。  預設為 `Windows`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|  
-|establishSecurityContext|布林值，決定安全性通道是否建立安全工作階段。  安全工作階段會先建立安全性內容權杖 \(SCT\)，再交換應用程式訊息。  建立 SCT 後，安全性通道會提供 <xref:System.ServiceModel.Channels.ISession> 介面給上層通道。  如需使用安全工作階段的詳細資訊，請參閱 [HOW TO：建立安全工作階段](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)。<br /><br /> 預設值是 `true`。|  
-|negotiateServiceCredential|選擇項。  布林值，指定是否在超出範圍的用戶端提供服務認證，或透過交涉處理取得從服務到用戶端的服務認證。  此類交涉是一般訊息交換的前兆。<br /><br /> 如果 `clientCredentialType` 屬性等於 None、Username 或 Certificate，則將這個屬性設定為 `false` 意指服務憑證可在超出範圍的用戶端使用，且用戶端必須指定 [\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)服務行為中的服務憑證 \(使用 [\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\)。  這個模式可與實作 WS\-Trust 和 WS\-SecureConversation 的 SOAP 堆疊互通。<br /><br /> 如果 `ClientCredentialType` 屬性設定為 `Windows`，則將這個屬性設定為 `false` 可指定 Kerberos 驗證。  這表示用戶端和服務必須屬於同一個 Kerberos 網域。  這個模式可與實作 Kerberos 權杖設定檔 \(如在 OASIS WSS TC 所定義\) 以及 WS\-Trust 和 WS\-SecureConversation 的 SOAP 堆疊互通。<br /><br /> 當這個屬性是 `true` 時，會造成透過 SOAP 訊息以通道連接 SPNego 交換的 .NET SOAP 交涉。<br /><br /> 預設為 `true`。|  
+|<span data-ttu-id="88def-115">屬性</span><span class="sxs-lookup"><span data-stu-id="88def-115">Attribute</span></span>|<span data-ttu-id="88def-116">描述</span><span class="sxs-lookup"><span data-stu-id="88def-116">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="88def-117">algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="88def-117">algorithmSuite</span></span>|<span data-ttu-id="88def-118">設定訊息加密和金鑰包裝演算法。</span><span class="sxs-lookup"><span data-stu-id="88def-118">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="88def-119">這些演算法和金鑰大小是由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 類別所決定。</span><span class="sxs-lookup"><span data-stu-id="88def-119">The algorithms and the key sizes are determined by the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> class.</span></span> <span data-ttu-id="88def-120">這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。</span><span class="sxs-lookup"><span data-stu-id="88def-120">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="88def-121">預設值是 `Basic256`。</span><span class="sxs-lookup"><span data-stu-id="88def-121">The default value is `Basic256`.</span></span>|  
+|<span data-ttu-id="88def-122">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="88def-122">clientCredentialType</span></span>|<span data-ttu-id="88def-123">選擇項。</span><span class="sxs-lookup"><span data-stu-id="88def-123">Optional.</span></span> <span data-ttu-id="88def-124">指定使用的安全性模式為 `Message` 或 `TransportWithMessageCredentials` 執行用戶端驗證時，要使用的認證類型。</span><span class="sxs-lookup"><span data-stu-id="88def-124">Specifies the type of credential to be used when performing client authentication using the security mode is `Message` or `TransportWithMessageCredentials`.</span></span> <span data-ttu-id="88def-125">列舉值如下所示。</span><span class="sxs-lookup"><span data-stu-id="88def-125">See the enumeration values below.</span></span> <span data-ttu-id="88def-126">預設為 `Windows`。</span><span class="sxs-lookup"><span data-stu-id="88def-126">The default is `Windows`.</span></span><br /><br /> <span data-ttu-id="88def-127">此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="88def-127">This attribute is of type <xref:System.ServiceModel.MessageCredentialType>.</span></span>|  
+|<span data-ttu-id="88def-128">establishSecurityContext</span><span class="sxs-lookup"><span data-stu-id="88def-128">establishSecurityContext</span></span>|<span data-ttu-id="88def-129">布林值，決定安全性通道是否建立安全工作階段。</span><span class="sxs-lookup"><span data-stu-id="88def-129">A Boolean value that determines whether the security channel establishes a secure session.</span></span> <span data-ttu-id="88def-130">安全工作階段會先建立安全性內容權杖 (SCT)，再交換應用程式訊息。</span><span class="sxs-lookup"><span data-stu-id="88def-130">A secure session establishes a Security Context Token (SCT) before exchanging the application messages.</span></span> <span data-ttu-id="88def-131">建立 SCT 後，安全性通道會提供 <xref:System.ServiceModel.Channels.ISession> 介面給上層通道。</span><span class="sxs-lookup"><span data-stu-id="88def-131">When the SCT is established, the security channel offers a <xref:System.ServiceModel.Channels.ISession> interface to the upper channels.</span></span> <span data-ttu-id="88def-132">如需有關如何使用安全工作階段的詳細資訊，請參閱[How to： 建立安全工作階段](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)。</span><span class="sxs-lookup"><span data-stu-id="88def-132">For more information about using secure sessions, see [How to: Create a Secure Session](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).</span></span><br /><br /> <span data-ttu-id="88def-133">預設值是 `true`。</span><span class="sxs-lookup"><span data-stu-id="88def-133">The default value is `true`.</span></span>|  
+|<span data-ttu-id="88def-134">negotiateServiceCredential</span><span class="sxs-lookup"><span data-stu-id="88def-134">negotiateServiceCredential</span></span>|<span data-ttu-id="88def-135">選擇項。</span><span class="sxs-lookup"><span data-stu-id="88def-135">Optional.</span></span> <span data-ttu-id="88def-136">布林值，指定是否在超出範圍的用戶端提供服務認證，或透過交涉處理取得從服務到用戶端的服務認證。</span><span class="sxs-lookup"><span data-stu-id="88def-136">A Boolean value that specifies whether the service credential is provisioned at the client out of band, or is obtained from the service to the client through a process of negotiation.</span></span> <span data-ttu-id="88def-137">此類交涉是一般訊息交換的前兆。</span><span class="sxs-lookup"><span data-stu-id="88def-137">Such a negotiation is a precursor to the usual message exchange.</span></span><br /><br /> <span data-ttu-id="88def-138">如果`clientCredentialType`屬性為 [無] 的使用者名稱或憑證，請將此屬性設定為等於`false`意指服務憑證位於超出訊號範圍的用戶端，以及用戶端，必須指定服務憑證 (使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 中[ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)服務行為。</span><span class="sxs-lookup"><span data-stu-id="88def-138">If the `clientCredentialType` attribute equals to None, Username, or Certificate, setting this attribute to `false` implies that the service certificate is available at the client out of band and that the client needs to specify the service certificate (using the [\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) in the [\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) service behavior.</span></span> <span data-ttu-id="88def-139">這個模式可與實作 WS-Trust 和 WS-SecureConversation 的 SOAP 堆疊互通。</span><span class="sxs-lookup"><span data-stu-id="88def-139">This mode is interoperable with SOAP stacks which implement WS-Trust and WS-SecureConversation.</span></span><br /><br /> <span data-ttu-id="88def-140">如果 `ClientCredentialType` 屬性設定為 `Windows`，則將這個屬性設定為 `false` 可指定 Kerberos 驗證。</span><span class="sxs-lookup"><span data-stu-id="88def-140">If the `ClientCredentialType` attribute is set to `Windows`, setting this attribute to `false` specifies Kerberos based authentication.</span></span> <span data-ttu-id="88def-141">這表示用戶端和服務必須屬於同一個 Kerberos 網域。</span><span class="sxs-lookup"><span data-stu-id="88def-141">This means that the client and service must be part of the same Kerberos domain.</span></span> <span data-ttu-id="88def-142">這個模式可與實作 Kerberos 權杖設定檔 (如在 OASIS WSS TC 所定義) 以及 WS-Trust 和 WS-SecureConversation 的 SOAP 堆疊互通。</span><span class="sxs-lookup"><span data-stu-id="88def-142">This mode is interoperable with SOAP stacks which implement the Kerberos token profile (as defined at OASIS WSS TC) as well as WS-Trust and WS-SecureConversation.</span></span><br /><br /> <span data-ttu-id="88def-143">當這個屬性是 `true` 時，會造成透過 SOAP 訊息以通道連接 SPNego 交換的 .NET SOAP 交涉。</span><span class="sxs-lookup"><span data-stu-id="88def-143">When this attribute is `true`, it causes a .NET SOAP negotiation that tunnels SPNego exchange over SOAP messages.</span></span><br /><br /> <span data-ttu-id="88def-144">預設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="88def-144">The default is `true`.</span></span>|  
   
-## algorithmSuite 屬性  
+## <a name="algorithmsuite-attribute"></a><span data-ttu-id="88def-145">algorithmSuite 屬性</span><span class="sxs-lookup"><span data-stu-id="88def-145">algorithmSuite Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|Basic128|使用 Basic128 加密，Sha1 用於訊息摘要，Rsa\-oaep\-mgf1p 用於金鑰包裝。|  
-|Basic192|使用 Basic192 加密，Sha1 用於訊息摘要，Rsa\-oaep\-mgf1p 用於金鑰包裝。|  
-|Basic256|使用 Basic256 加密，Sha1 用於訊息摘要，Rsa\-oaep\-mgf1p 用於金鑰包裝。|  
-|Basic256Rsa15|將 Basic256 用於訊息加密，Sha1 用於訊息摘要，Rsa15 用於金鑰包裝。|  
-|Basic192Rsa15|將 Basic192 用於訊息加密，Sha1 用於訊息摘要，Rsa15 用於金鑰包裝。|  
-|TripleDes|使用 TripleDes 加密，Sha1 用於訊息摘要，Rsa\-oaep\-mgf1p 用於金鑰包裝。|  
-|Basic128Rsa15|將 Basic128 用於訊息加密，Sha1 用於訊息摘要，Rsa15 用於金鑰包裝。|  
-|TripleDesRsa15|使用 TripleDes 加密，Sha1 用於訊息摘要，Rsa15 用於金鑰包裝。|  
-|Basic128Sha256|將 Basic256 用於訊息加密，Sha256 用於訊息摘要，Rsa\-oaep\-mgf1p 用於金鑰包裝。|  
-|Basic192Sha256|將 Basic192 用於訊息加密，Sha256 用於訊息摘要，Rsa\-oaep\-mgf1p 用於金鑰包裝。|  
-|Basic256Sha256|將 Basic256 用於訊息加密，Sha256 用於訊息摘要，Rsa\-oaep\-mgf1p 用於金鑰包裝。|  
-|TripleDesSha256|將 TripleDes 用於訊息加密，Sha256 用於訊息摘要，Rsa\-oaep\-mgf1p 用於金鑰包裝。|  
-|Basic128Sha256Rsa15|將 Basic128 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。|  
-|Basic192Sha256Rsa15|將 Basic192 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。|  
-|Basic256Sha256Rsa15|將 Basic256 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。|  
-|TripleDesSha256Rsa15|將 TripleDes 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。|  
+|<span data-ttu-id="88def-146">值</span><span class="sxs-lookup"><span data-stu-id="88def-146">Value</span></span>|<span data-ttu-id="88def-147">描述</span><span class="sxs-lookup"><span data-stu-id="88def-147">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="88def-148">Basic128</span><span class="sxs-lookup"><span data-stu-id="88def-148">Basic128</span></span>|<span data-ttu-id="88def-149">使用 Basic128 加密，Sha1 用於訊息摘要，Rsa-oaep-mgf1p 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-149">Use Basic128 encryption, Sha1 for message digest, and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="88def-150">Basic192</span><span class="sxs-lookup"><span data-stu-id="88def-150">Basic192</span></span>|<span data-ttu-id="88def-151">使用 Basic192 加密，Sha1 用於訊息摘要，Rsa-oaep-mgf1p 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-151">Use Basic192 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="88def-152">Basic256</span><span class="sxs-lookup"><span data-stu-id="88def-152">Basic256</span></span>|<span data-ttu-id="88def-153">使用 Basic256 加密，Sha1 用於訊息摘要，Rsa-oaep-mgf1p 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-153">Use Basic256 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="88def-154">Basic256Rsa15</span><span class="sxs-lookup"><span data-stu-id="88def-154">Basic256Rsa15</span></span>|<span data-ttu-id="88def-155">將 Basic256 用於訊息加密，Sha1 用於訊息摘要，Rsa15 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-155">Use Basic256 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="88def-156">Basic192Rsa15</span><span class="sxs-lookup"><span data-stu-id="88def-156">Basic192Rsa15</span></span>|<span data-ttu-id="88def-157">將 Basic192 用於訊息加密，Sha1 用於訊息摘要，Rsa15 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-157">Use Basic192 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="88def-158">TripleDes</span><span class="sxs-lookup"><span data-stu-id="88def-158">TripleDes</span></span>|<span data-ttu-id="88def-159">使用 TripleDes 加密，Sha1 用於訊息摘要，Rsa-oaep-mgf1p 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-159">Use TripleDes encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="88def-160">Basic128Rsa15</span><span class="sxs-lookup"><span data-stu-id="88def-160">Basic128Rsa15</span></span>|<span data-ttu-id="88def-161">將 Basic128 用於訊息加密，Sha1 用於訊息摘要，Rsa15 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-161">Use Basic128 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="88def-162">TripleDesRsa15</span><span class="sxs-lookup"><span data-stu-id="88def-162">TripleDesRsa15</span></span>|<span data-ttu-id="88def-163">使用 TripleDes 加密，Sha1 用於訊息摘要，Rsa15 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-163">Use TripleDes encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="88def-164">Basic128Sha256</span><span class="sxs-lookup"><span data-stu-id="88def-164">Basic128Sha256</span></span>|<span data-ttu-id="88def-165">將 Basic256 用於訊息加密，Sha256 用於訊息摘要，Rsa-oaep-mgf1p 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-165">Use Basic256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="88def-166">Basic192Sha256</span><span class="sxs-lookup"><span data-stu-id="88def-166">Basic192Sha256</span></span>|<span data-ttu-id="88def-167">將 Basic192 用於訊息加密，Sha256 用於訊息摘要，Rsa-oaep-mgf1p 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-167">Use Basic192 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="88def-168">Basic256Sha256</span><span class="sxs-lookup"><span data-stu-id="88def-168">Basic256Sha256</span></span>|<span data-ttu-id="88def-169">將 Basic256 用於訊息加密，Sha256 用於訊息摘要，Rsa-oaep-mgf1p 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-169">Use Basic256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="88def-170">TripleDesSha256</span><span class="sxs-lookup"><span data-stu-id="88def-170">TripleDesSha256</span></span>|<span data-ttu-id="88def-171">將 TripleDes 用於訊息加密，Sha256 用於訊息摘要，Rsa-oaep-mgf1p 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-171">Use TripleDes for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="88def-172">Basic128Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="88def-172">Basic128Sha256Rsa15</span></span>|<span data-ttu-id="88def-173">將 Basic128 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-173">Use Basic128 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="88def-174">Basic192Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="88def-174">Basic192Sha256Rsa15</span></span>|<span data-ttu-id="88def-175">將 Basic192 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-175">Use Basic192 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="88def-176">Basic256Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="88def-176">Basic256Sha256Rsa15</span></span>|<span data-ttu-id="88def-177">將 Basic256 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-177">Use Basic256 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="88def-178">TripleDesSha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="88def-178">TripleDesSha256Rsa15</span></span>|<span data-ttu-id="88def-179">將 TripleDes 用於訊息加密，Sha256 用於訊息摘要，Rsa15 用於金鑰包裝。</span><span class="sxs-lookup"><span data-stu-id="88def-179">Use TripleDes for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
   
-## clientCredentialType 屬性  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="88def-180">clientCredentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="88def-180">clientCredentialType Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|無|這會允許服務與匿名用戶端互動。  在服務端上，這表示此服務不需要任何用戶端認證。  在用戶端上，這表示此用戶端不提供任何用戶端認證。|  
-|憑證|允許服務要求用戶端使用憑證進行驗證。  如果使用訊息安全性模式且 `negotiateServiceCredential` 屬性設定為 `false`，則必須為用戶端提供服務憑證。|  
-|IssuedToken|指定通常由安全性權杖服務所發出的自訂權杖。|  
-|UserName|允許服務要求用戶端必須使用 UserName 認證進行驗證。  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不支援傳送密碼摘要，或是使用密碼衍生金鑰，甚至對訊息安全性使用該金鑰。  這麼一來，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會在使用 UserName 認證時強制保護傳輸。  這個認證模式會產生可互通交換或是無法互通的交涉 \(根據 `negotiateServiceCredential` 屬性\)。|  
-|Windows|允許 SOAP 交換在 Windows 認證的已驗證內容中。  如果 `negotiateServiceCredential` 屬性設定為 `true`，這會執行 SSPI 交涉或 Kerberos \(互通標準\)。|  
+|<span data-ttu-id="88def-181">值</span><span class="sxs-lookup"><span data-stu-id="88def-181">Value</span></span>|<span data-ttu-id="88def-182">描述</span><span class="sxs-lookup"><span data-stu-id="88def-182">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="88def-183">無</span><span class="sxs-lookup"><span data-stu-id="88def-183">None</span></span>|<span data-ttu-id="88def-184">這會允許服務與匿名用戶端互動。</span><span class="sxs-lookup"><span data-stu-id="88def-184">This allows the service to interact with anonymous clients.</span></span> <span data-ttu-id="88def-185">在服務端上，這表示此服務不需要任何用戶端認證。</span><span class="sxs-lookup"><span data-stu-id="88def-185">On the service side, this indicates that the service does not require any client credential.</span></span> <span data-ttu-id="88def-186">在用戶端上，這表示此用戶端不提供任何用戶端認證。</span><span class="sxs-lookup"><span data-stu-id="88def-186">On the client, this indicates that the client does not provide any client credential.</span></span>|  
+|<span data-ttu-id="88def-187">憑證</span><span class="sxs-lookup"><span data-stu-id="88def-187">Certificate</span></span>|<span data-ttu-id="88def-188">允許服務要求用戶端使用憑證進行驗證。</span><span class="sxs-lookup"><span data-stu-id="88def-188">Allows the service to require that the client be authenticated using a certificate.</span></span> <span data-ttu-id="88def-189">如果使用訊息安全性模式且 `negotiateServiceCredential` 屬性設定為 `false`，則必須為用戶端提供服務憑證。</span><span class="sxs-lookup"><span data-stu-id="88def-189">If message security mode is used and the `negotiateServiceCredential` attribute is set to `false`, the client needs to be provisioned with the service certificate.</span></span>|  
+|<span data-ttu-id="88def-190">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="88def-190">IssuedToken</span></span>|<span data-ttu-id="88def-191">指定通常由安全性權杖服務所發出的自訂權杖。</span><span class="sxs-lookup"><span data-stu-id="88def-191">Specifies a custom token, usually issued by a Security Token Service.</span></span>|  
+|<span data-ttu-id="88def-192">UserName</span><span class="sxs-lookup"><span data-stu-id="88def-192">UserName</span></span>|<span data-ttu-id="88def-193">允許服務要求用戶端必須使用 UserName 認證進行驗證。</span><span class="sxs-lookup"><span data-stu-id="88def-193">Allows the service to require that the client be authenticated using a UserName credential.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="88def-194"> 不支援傳送密碼摘要，或是使用密碼衍生金鑰，甚至對訊息安全性使用該金鑰。</span><span class="sxs-lookup"><span data-stu-id="88def-194"> does not support sending a password digest or deriving keys using password and using such keys for message security.</span></span> <span data-ttu-id="88def-195">這麼一來，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會在使用 UserName 認證時強制保護傳輸。</span><span class="sxs-lookup"><span data-stu-id="88def-195">As such, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enforces that the transport is secured when using UserName credentials.</span></span> <span data-ttu-id="88def-196">這個認證模式會產生可互通交換或是無法互通的交涉 (根據 `negotiateServiceCredential` 屬性)。</span><span class="sxs-lookup"><span data-stu-id="88def-196">This credential mode results in either an interoperable exchange or a non-interoperable negotiation based on the `negotiateServiceCredential` attribute.</span></span>|  
+|<span data-ttu-id="88def-197">Windows</span><span class="sxs-lookup"><span data-stu-id="88def-197">Windows</span></span>|<span data-ttu-id="88def-198">允許 SOAP 交換在 Windows 認證的已驗證內容中。</span><span class="sxs-lookup"><span data-stu-id="88def-198">Allows the SOAP exchanges to be under the authenticated context of a Windows credential.</span></span> <span data-ttu-id="88def-199">如果 `negotiateServiceCredential` 屬性設定為 `true`，這會執行 SSPI 交涉或 Kerberos (互通標準)。</span><span class="sxs-lookup"><span data-stu-id="88def-199">If the `negotiateServiceCredential` attribute is set to `true`, this either performs an SSPI Negotiation or Kerberos (an interoperable standard).</span></span>|  
   
-### 子項目  
- 無  
+### <a name="child-elements"></a><span data-ttu-id="88def-200">子元素</span><span class="sxs-lookup"><span data-stu-id="88def-200">Child Elements</span></span>  
+ <span data-ttu-id="88def-201">無</span><span class="sxs-lookup"><span data-stu-id="88def-201">None</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="88def-202">父項目</span><span class="sxs-lookup"><span data-stu-id="88def-202">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|定義 [\<wsHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)的安全性設定。|  
+|<span data-ttu-id="88def-203">項目</span><span class="sxs-lookup"><span data-stu-id="88def-203">Element</span></span>|<span data-ttu-id="88def-204">說明</span><span class="sxs-lookup"><span data-stu-id="88def-204">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="88def-205">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="88def-205">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|<span data-ttu-id="88def-206">定義安全性設定[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="88def-206">Defines the security settings for a [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>|  
   
-## 請參閱  
- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>   
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>   
- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-tw/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<繫結\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="88def-207">另請參閱</span><span class="sxs-lookup"><span data-stu-id="88def-207">See Also</span></span>  
+ <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
+ <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>  
+ [<span data-ttu-id="88def-208">保護服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="88def-208">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="88def-209">繫結</span><span class="sxs-lookup"><span data-stu-id="88def-209">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="88def-210">設定系統提供繫結</span><span class="sxs-lookup"><span data-stu-id="88def-210">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="88def-211">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="88def-211">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="88def-212">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="88def-212">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

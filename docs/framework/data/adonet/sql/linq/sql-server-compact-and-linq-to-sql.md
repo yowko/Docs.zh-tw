@@ -1,53 +1,56 @@
 ---
-title: "SQL Server Compact 和 LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Compact 和 LINQ to SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 600d4deacd7a9b048fb9c3d996e62d441c87eeaa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# SQL Server Compact 和 LINQ to SQL
-SQL Server Compact 是與 Visual Studio 一起安裝的預設資料庫。如需詳細資訊，請參閱 [PAVE OVER Using SQL Server Compact \(Visual Studio\)](http://msdn.microsoft.com/zh-tw/13320dd1-94e5-4077-bf76-8df253695ccc)。  
+# <a name="sql-server-compact-and-linq-to-sql"></a><span data-ttu-id="9bced-102">SQL Server Compact 和 LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="9bced-102">SQL Server Compact and LINQ to SQL</span></span>
+<span data-ttu-id="9bced-103">SQL Server Compact 是與 Visual Studio 一起安裝的預設資料庫。</span><span class="sxs-lookup"><span data-stu-id="9bced-103">SQL Server Compact is the default database installed with Visual Studio.</span></span> <span data-ttu-id="9bced-104">如需詳細資訊，請參閱[PAVE 透過使用 SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/en-us/13320dd1-94e5-4077-bf76-8df253695ccc)。</span><span class="sxs-lookup"><span data-stu-id="9bced-104">For more information, see [PAVE OVER Using SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/en-us/13320dd1-94e5-4077-bf76-8df253695ccc).</span></span>  
   
- 本主題簡述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援之使用方式、設定、功能集與範圍的主要差異。  
+ <span data-ttu-id="9bced-105">本主題概述使用方式、 設定、 功能集和範圍的主要差異[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援。</span><span class="sxs-lookup"><span data-stu-id="9bced-105">This topic outlines the key differences in usage, configuration, feature sets, and scope of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] support.</span></span>  
   
-## 有關 LINQ to SQL 的 SQL Server Compact 特性  
- 根據預設，所有 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本都會安裝 SQL Server Compact，因此可在開發電腦上搭配 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用。  但是，部署使用 SQL Server Compact 和 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的應用程式與部署 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 應用程式不同  SQL Server Compact 不屬於 .NET Framework，因此必須封裝在應用程式中或從 Microsoft 網站個別下載。  
+## <a name="characteristics-of-sql-server-compact-in-relation-to-linq-to-sql"></a><span data-ttu-id="9bced-106">有關 LINQ to SQL 的 SQL Server Compact 特性</span><span class="sxs-lookup"><span data-stu-id="9bced-106">Characteristics of SQL Server Compact in Relation to LINQ to SQL</span></span>  
+ <span data-ttu-id="9bced-107">根據預設，SQL Server Compact 為所有安裝[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]版本中，因此會用於在開發電腦上[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9bced-107">By default, SQL Server Compact is installed for all [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] editions, and is therefore available on the development computer for use with [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span> <span data-ttu-id="9bced-108">但使用 SQL Server Compact 的應用程式的部署和[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]不同[!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="9bced-108">But deployment of an application that uses SQL Server Compact and [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] differs from that for a [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] application.</span></span> <span data-ttu-id="9bced-109">SQL Server Compact 不屬於 .NET Framework，因此必須封裝在應用程式中或從 Microsoft 網站個別下載。</span><span class="sxs-lookup"><span data-stu-id="9bced-109">SQL Server Compact is not a part of the .NET Framework, and therefore must be packaged with the application or downloaded separately from the Microsoft site.</span></span>  
   
- 並注意下列特性：  
+ <span data-ttu-id="9bced-110">並注意下列特性：</span><span class="sxs-lookup"><span data-stu-id="9bced-110">Note the following characteristics:</span></span>  
   
--   SQL Server Compact 會封裝成可直接用於資料庫檔案 \(.sdf 副檔名\) 的 DLL。  
+-   <span data-ttu-id="9bced-111">SQL Server Compact 會封裝成可直接用於資料庫檔案 (.sdf 副檔名) 的 DLL。</span><span class="sxs-lookup"><span data-stu-id="9bced-111">SQL Server Compact is packaged as a DLL that can be used against database files (.sdf extension) directly.</span></span>  
   
--   SQL Server Compact 會在與用戶端應用程式相同的處理序中執行。  因此，與 SQL Server Compact 通訊的效率遠大於與 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 通訊的效率。  另一方面，SQL Server Compact 一定需要 Managed 程式碼和 Unmanaged 程式碼與其附帶成本之間的互通性。  
+-   <span data-ttu-id="9bced-112">SQL Server Compact 在用戶端應用程式相同的程序中執行。</span><span class="sxs-lookup"><span data-stu-id="9bced-112">SQL Server Compact runs in the same process as the client application.</span></span> <span data-ttu-id="9bced-113">與 SQL Server Compact 通訊的效率因此可能遠大於與通訊[!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9bced-113">The efficiency of communication with SQL Server Compact can therefore be significantly higher than communicating with [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="9bced-114">相反地，SQL Server Compact 一定需要 managed 和 unmanaged 程式碼與其附帶成本之間的互通性。</span><span class="sxs-lookup"><span data-stu-id="9bced-114">On the other hand, SQL Server Compact does require interoperability between managed and unmanaged code with its attendant costs.</span></span>  
   
--   SQL Server Compact DLL 不大。  這項功能可縮減應用程式整體大小。  
+-   <span data-ttu-id="9bced-115">SQL Server Compact DLL 的大小很小。</span><span class="sxs-lookup"><span data-stu-id="9bced-115">The size of the SQL Server Compact DLL is small.</span></span> <span data-ttu-id="9bced-116">這項功能可縮減應用程式整體大小。</span><span class="sxs-lookup"><span data-stu-id="9bced-116">This feature reduces the overall application size.</span></span>  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 執行階段和 SQLMetal 命令列工具都支援 SQL Server Compact。  
+-   <span data-ttu-id="9bced-117">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 執行階段和 SQLMetal 命令列工具都支援 SQL Server Compact。</span><span class="sxs-lookup"><span data-stu-id="9bced-117">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] runtime and the SQLMetal command-line tool support SQL Server Compact.</span></span>  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]不支援 SQL Server Compact。  
+-   <span data-ttu-id="9bced-118">[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]不支援 SQL Server Compact。</span><span class="sxs-lookup"><span data-stu-id="9bced-118">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] does not support SQL Server Compact.</span></span>  
   
-## 功能集  
- 從下列會影響 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式的層面來說，SQL Server Compact 功能集比 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 的功能集簡單許多：  
+## <a name="feature-set"></a><span data-ttu-id="9bced-119">功能集</span><span class="sxs-lookup"><span data-stu-id="9bced-119">Feature Set</span></span>  
+ <span data-ttu-id="9bced-120">SQL Server Compact 功能集會更簡單的功能集比[!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]以下列方式可能會影響[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]應用程式：</span><span class="sxs-lookup"><span data-stu-id="9bced-120">The SQL Server Compact feature set is much simpler than the feature set of [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] in the following ways that can affect [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications :</span></span>  
   
--   SQL Server Compact 不支援預存程序或檢視。  
+-   <span data-ttu-id="9bced-121">SQL Server Compact 不支援預存程序或檢視。</span><span class="sxs-lookup"><span data-stu-id="9bced-121">SQL Server Compact does not support stored procedures or views.</span></span>  
   
--   SQL Server Compact 僅支援部分的資料類型和 SQL 函式。  
+-   <span data-ttu-id="9bced-122">SQL Server Compact 僅支援部分的資料類型和 SQL 函式。</span><span class="sxs-lookup"><span data-stu-id="9bced-122">SQL Server Compact supports only a subset of data types and SQL functions.</span></span>  
   
--   SQL Server Compact 僅支援部分的 SQL 建構。  
+-   <span data-ttu-id="9bced-123">SQL Server Compact 僅支援部分的 SQL 建構。</span><span class="sxs-lookup"><span data-stu-id="9bced-123">SQL Server Compact supports only a subset of SQL constructs.</span></span>  
   
--   SQL Server Compact 僅提供最簡單的最佳化工具。  因此有些查詢可能會逾時。  
+-   <span data-ttu-id="9bced-124">SQL Server Compact 僅提供最簡單的最佳化工具。</span><span class="sxs-lookup"><span data-stu-id="9bced-124">SQL Server Compact provides only a minimal optimizer.</span></span> <span data-ttu-id="9bced-125">有可能，有些查詢可能會逾時。</span><span class="sxs-lookup"><span data-stu-id="9bced-125">It is possible that some queries might time out.</span></span>  
   
--   SQL Server Compact 不支援部分信任。  
+-   <span data-ttu-id="9bced-126">SQL Server Compact 不支援部分信任。</span><span class="sxs-lookup"><span data-stu-id="9bced-126">SQL Server Compact does not support partial trust.</span></span>  
   
-## 請參閱  
- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a><span data-ttu-id="9bced-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9bced-127">See Also</span></span>  
+ [<span data-ttu-id="9bced-128">參考</span><span class="sxs-lookup"><span data-stu-id="9bced-128">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

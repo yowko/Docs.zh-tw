@@ -1,76 +1,77 @@
 ---
-title: "&lt;assert&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#assert"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<assert> 項目"
-  - "assert 項目"
+title: "&lt;判斷提示&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#assert
+helpviewer_keywords:
+- <assert> element
+- assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 520dfec180157c9a05c5fc3beb51b5fc17f9088b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;assert&gt; 項目
-指定您呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> 方法時是否顯示訊息方塊，同時指定要寫入訊息的檔案名稱。  
+# <a name="ltassertgt-element"></a><span data-ttu-id="b2f9e-102">&lt;判斷提示&gt;項目</span><span class="sxs-lookup"><span data-stu-id="b2f9e-102">&lt;assert&gt; Element</span></span>
+<span data-ttu-id="b2f9e-103">指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-103">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>  
   
-## 語法  
+ <span data-ttu-id="b2f9e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b2f9e-104">\<configuration></span></span>  
+<span data-ttu-id="b2f9e-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="b2f9e-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="b2f9e-106">\<判斷提示 ></span><span class="sxs-lookup"><span data-stu-id="b2f9e-106">\<assert></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="b2f9e-107">語法</span><span class="sxs-lookup"><span data-stu-id="b2f9e-107">Syntax</span></span>  
   
+```xml  
 <assert assertuienabled="true|false" logfilename="file name"/>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b2f9e-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="b2f9e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="b2f9e-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="b2f9e-110">屬性</span><span class="sxs-lookup"><span data-stu-id="b2f9e-110">Attributes</span></span>  
   
-|屬性|說明|  
-|--------|--------|  
-|`assertuienabled`|選擇性屬性。<br /><br /> 指定 **Debug.Assert** 方法評估為 **false** 時是否要顯示訊息方塊。|  
-|`logfilename`|選擇性屬性。<br /><br /> 指定如果 **Debug.Assert** 評估為 **false** 時，訊息要寫入的檔案名稱。|  
+|<span data-ttu-id="b2f9e-111">屬性</span><span class="sxs-lookup"><span data-stu-id="b2f9e-111">Attribute</span></span>|<span data-ttu-id="b2f9e-112">描述</span><span class="sxs-lookup"><span data-stu-id="b2f9e-112">Description</span></span>|  
+|---------------|-----------------|  
+|`assertuienabled`|<span data-ttu-id="b2f9e-113">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b2f9e-114">指定是否要顯示訊息方塊時**Debug.Assert**方法評估為**false**。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-114">Specifies whether to display a message box when the **Debug.Assert** method evaluates to **false**.</span></span>|  
+|`logfilename`|<span data-ttu-id="b2f9e-115">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b2f9e-116">指定要寫入訊息，如果檔案名稱**Debug.Assert**評估為**false**。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-116">Specifies the name of the file to write the message to if **Debug.Assert** evaluates to **false**.</span></span>|  
   
-## assertuienabled 屬性  
+## <a name="assertuienabled-attribute"></a><span data-ttu-id="b2f9e-117">assertuienabled 屬性</span><span class="sxs-lookup"><span data-stu-id="b2f9e-117">assertuienabled Attribute</span></span>  
   
-|值|說明|  
-|-------|--------|  
-|`true`|顯示訊息方塊。  這是預設值。|  
-|`false`|不顯示訊息方塊。|  
+|<span data-ttu-id="b2f9e-118">值</span><span class="sxs-lookup"><span data-stu-id="b2f9e-118">Value</span></span>|<span data-ttu-id="b2f9e-119">說明</span><span class="sxs-lookup"><span data-stu-id="b2f9e-119">Description</span></span>|  
+|-----------|-----------------|  
+|`true`|<span data-ttu-id="b2f9e-120">顯示訊息方塊。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-120">Displays the message box.</span></span> <span data-ttu-id="b2f9e-121">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-121">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="b2f9e-122">不會顯示訊息方塊。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-122">Does not display the message box.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="b2f9e-123">子元素</span><span class="sxs-lookup"><span data-stu-id="b2f9e-123">Child Elements</span></span>  
+ <span data-ttu-id="b2f9e-124">無。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-124">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="b2f9e-125">父項目</span><span class="sxs-lookup"><span data-stu-id="b2f9e-125">Parent Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`system.diagnostics`|指定收集、存放和傳送訊息的追蹤接聽程式，以及設定追蹤參數的層級。|  
+|<span data-ttu-id="b2f9e-126">項目</span><span class="sxs-lookup"><span data-stu-id="b2f9e-126">Element</span></span>|<span data-ttu-id="b2f9e-127">描述</span><span class="sxs-lookup"><span data-stu-id="b2f9e-127">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="b2f9e-128">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="b2f9e-129">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## 備註  
- **\<assert\>** 項目中這兩種屬性都是選擇性項目。  可以不指定訊息要寫入的檔案，停用訊息方塊，或者指定訊息要寫入的檔案，讓訊息方塊保持啟用。  
+## <a name="remarks"></a><span data-ttu-id="b2f9e-130">備註</span><span class="sxs-lookup"><span data-stu-id="b2f9e-130">Remarks</span></span>  
+ <span data-ttu-id="b2f9e-131">在這兩個屬性 **\<assert >**是選擇性的項目。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-131">Both attributes in the **\<assert>** element are optional.</span></span> <span data-ttu-id="b2f9e-132">未指定的檔案寫入的訊息，可以停用訊息方塊，或您可以指定要寫入訊息，讓訊息方塊，啟用的檔案。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-132">You can disable message boxes without specifying a file to write the messages to, or you can specify a file to write messages to while leaving message boxes enabled.</span></span>  
   
-## 範例  
- 以下範例顯示呼叫 **Debug.Assert** 並將訊息寫入 `c:\log.txt` 時，如何停用顯示訊息方塊。  
+## <a name="example"></a><span data-ttu-id="b2f9e-133">範例</span><span class="sxs-lookup"><span data-stu-id="b2f9e-133">Example</span></span>  
+ <span data-ttu-id="b2f9e-134">下列範例示範如何停用顯示訊息方塊，當您呼叫**Debug.Assert**和寫入訊息至`c:\log.txt`。</span><span class="sxs-lookup"><span data-stu-id="b2f9e-134">The following example shows how to disable displaying message boxes when you call **Debug.Assert** and write the messages to `c:\log.txt`.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <assert assertuienabled="false" logfilename="c:\log.txt"/>  
@@ -78,6 +79,6 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Diagnostics.Debug>   
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="b2f9e-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b2f9e-135">See Also</span></span>  
+ <xref:System.Diagnostics.Debug>  
+ [<span data-ttu-id="b2f9e-136">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="b2f9e-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

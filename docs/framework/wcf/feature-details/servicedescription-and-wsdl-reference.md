@@ -1,162 +1,165 @@
 ---
-title: "ServiceDescription 與 WSDL 參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ServiceDescription 與 WSDL 參考"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 26babd473ca78d6b55ada6c0505ec2f94214448b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceDescription 與 WSDL 參考
-這個主題會描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何在 <xref:System.ServiceModel.Description.ServiceDescription> 執行個體之間對應 Web 服務描述語言 \(WSDL\) 文件。  
+# <a name="servicedescription-and-wsdl-reference"></a><span data-ttu-id="f21d5-102">ServiceDescription 與 WSDL 參考</span><span class="sxs-lookup"><span data-stu-id="f21d5-102">ServiceDescription and WSDL Reference</span></span>
+<span data-ttu-id="f21d5-103">這個主題會描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何在 <xref:System.ServiceModel.Description.ServiceDescription> 執行個體之間對應 Web 服務描述語言 (WSDL) 文件。</span><span class="sxs-lookup"><span data-stu-id="f21d5-103">This topic describes how [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] maps Web Services Description Language (WSDL) documents to and from <xref:System.ServiceModel.Description.ServiceDescription> instances.</span></span>  
   
-## ServiceDescription 對應至 WSDL 1.1 的方法  
- 可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，對您的服務從 <xref:System.ServiceModel.Description.ServiceDescription> 執行個體中匯出 WSDL 文件。  發行中繼資料端點時，會為您的服務自動產生 WSDL 文件。  
+## <a name="how-servicedescription-maps-to-wsdl-11"></a><span data-ttu-id="f21d5-104">ServiceDescription 對應至 WSDL 1.1 的方法</span><span class="sxs-lookup"><span data-stu-id="f21d5-104">How ServiceDescription Maps to WSDL 1.1</span></span>  
+ <span data-ttu-id="f21d5-105">可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，對您的服務從 <xref:System.ServiceModel.Description.ServiceDescription> 執行個體中匯出 WSDL 文件。</span><span class="sxs-lookup"><span data-stu-id="f21d5-105">You can use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to export WSDL documents from a <xref:System.ServiceModel.Description.ServiceDescription> instance for your service.</span></span> <span data-ttu-id="f21d5-106">發行中繼資料端點時，會為您的服務自動產生 WSDL 文件。</span><span class="sxs-lookup"><span data-stu-id="f21d5-106">WSDL documents are automatically generated for your service when you publish metadata endpoints.</span></span>  
   
- 您也可以使用 `WsdlImporter` 型別，從 WSDL 文件中匯入 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體、<xref:System.ServiceModel.Description.ContractDescription> 執行個體和 <xref:System.ServiceModel.Channels.Binding> 執行個體。  
+ <span data-ttu-id="f21d5-107">您也可以使用 <xref:System.ServiceModel.Description.ServiceEndpoint> 型別，從 WSDL 文件中匯入 <xref:System.ServiceModel.Description.ContractDescription> 執行個體、<xref:System.ServiceModel.Channels.Binding> 執行個體和 `WsdlImporter` 執行個體。</span><span class="sxs-lookup"><span data-stu-id="f21d5-107">You can also import <xref:System.ServiceModel.Description.ServiceEndpoint> instances, <xref:System.ServiceModel.Description.ContractDescription> instances, and <xref:System.ServiceModel.Channels.Binding> instances from WSDL documents using the `WsdlImporter` type.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 匯出的 WSDL 文件會從外部 XML 結構描述文件中匯入使用的 XML 結構描述定義。  將會對資料型別在服務中使用的每個目標命名空間，匯出不同的 XML 結構描述文件。  同樣地，將會對服務合約使用的每個目標命名空間，匯出不同的 WSDL 文件。  
+ <span data-ttu-id="f21d5-108">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 匯出的 WSDL 文件會從外部 XML 結構描述文件中匯入使用的 XML 結構描述定義。</span><span class="sxs-lookup"><span data-stu-id="f21d5-108">The WSDL documents, exported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], import any XML Schema definitions used from external XML Schema documents.</span></span> <span data-ttu-id="f21d5-109">將會對資料型別在服務中使用的每個目標命名空間，匯出不同的 XML 結構描述文件。</span><span class="sxs-lookup"><span data-stu-id="f21d5-109">A separate XML Schema document is exported for each target namespace the data types use in the service.</span></span> <span data-ttu-id="f21d5-110">同樣地，將會對服務合約使用的每個目標命名空間，匯出不同的 WSDL 文件。</span><span class="sxs-lookup"><span data-stu-id="f21d5-110">Likewise, a separate WSDL document is exported for each target namespace the service contracts use.</span></span>  
   
-### ServiceDescription  
- <xref:System.ServiceModel.Description.ServiceDescription> 執行個體會對應至 `wsdl:service` 項目。  <xref:System.ServiceModel.Description.ServiceDescription> 執行個體包含 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體集合，其中每一個都會對應至個別 `wsdl:port` 項目。  
+### <a name="servicedescription"></a><span data-ttu-id="f21d5-111">ServiceDescription</span><span class="sxs-lookup"><span data-stu-id="f21d5-111">ServiceDescription</span></span>  
+ <span data-ttu-id="f21d5-112"><xref:System.ServiceModel.Description.ServiceDescription> 執行個體會對應至 `wsdl:service` 項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-112">A <xref:System.ServiceModel.Description.ServiceDescription> instance maps to a `wsdl:service` element.</span></span> <span data-ttu-id="f21d5-113"><xref:System.ServiceModel.Description.ServiceDescription> 執行個體包含 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體集合，其中每一個都會對應至個別 `wsdl:port` 項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-113">A <xref:System.ServiceModel.Description.ServiceDescription> instance contains a collection of <xref:System.ServiceModel.Description.ServiceEndpoint> instances that each map to individual `wsdl:port` elements.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`Name`|服務的 `wsdl:service`\/@name 值。|  
-|`Namespace`|服務之 `wsdl:service` 定義的 targetNamespace。|  
-|`Endpoints`|服務的 `wsdl:port` 定義。|  
+|<span data-ttu-id="f21d5-114">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-114">Properties</span></span>|<span data-ttu-id="f21d5-115">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-115">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="f21d5-116">`wsdl:service` /@name服務的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-116">The `wsdl:service`/@name value for the service.</span></span>|  
+|`Namespace`|<span data-ttu-id="f21d5-117">服務之 `wsdl:service` 定義的 targetNamespace。</span><span class="sxs-lookup"><span data-stu-id="f21d5-117">The targetNamespace for the `wsdl:service` definition for the service.</span></span>|  
+|`Endpoints`|<span data-ttu-id="f21d5-118">服務的 `wsdl:port` 定義。</span><span class="sxs-lookup"><span data-stu-id="f21d5-118">The `wsdl:port` definitions for the service.</span></span>|  
   
-### ServiceEndpoint  
- <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體會對應至 `wsdl:port` 項目。  <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體中包含位址、繫結和合約。  
+### <a name="serviceendpoint"></a><span data-ttu-id="f21d5-119">ServiceEndpoint</span><span class="sxs-lookup"><span data-stu-id="f21d5-119">ServiceEndpoint</span></span>  
+ <span data-ttu-id="f21d5-120"><xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體會對應至 `wsdl:port` 項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-120">A <xref:System.ServiceModel.Description.ServiceEndpoint> instance maps to a `wsdl:port` element.</span></span> <span data-ttu-id="f21d5-121"><xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體中包含位址、繫結和合約。</span><span class="sxs-lookup"><span data-stu-id="f21d5-121">A <xref:System.ServiceModel.Description.ServiceEndpoint> instance contains an address, a binding, and a contract.</span></span>  
   
- 實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面的端點行為可以修改所附加至端點的 `wsdl:port` 項目。  
+ <span data-ttu-id="f21d5-122">實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面的端點行為可以修改所附加至端點的 `wsdl:port` 項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-122">Endpoint behaviors that implement the <xref:System.ServiceModel.Description.IWsdlExportExtension> interface can modify the `wsdl:port` element for the endpoint they are attached to.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`Name`|端點的 `wsdl:port`\/@name 值以及端點繫結的 `wsdl:binding`\/@name 值。|  
-|`Address`|端點之 `wsdl:port` 定義的位址。<br /><br /> 端點的傳輸會決定位址的格式。  例如，針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援的傳輸，格式可以為 SOAP 位址或端點參考。|  
-|`Binding`|端點的 `wsdl:binding` 定義。<br /><br /> 和 `wsdl:binding` 定義不一樣，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的繫結不會連接至任何合約。|  
-|`Contract`|端點的 `wsdl:portType` 定義。|  
-|`Behaviors`|實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面的端點行為可以修改端點的 `wsdl:port`。|  
+|<span data-ttu-id="f21d5-123">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-123">Properties</span></span>|<span data-ttu-id="f21d5-124">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-124">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="f21d5-125">`wsdl:port` /@name端點的值和`wsdl:binding`/@name端點繫結的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-125">The `wsdl:port`/@name value for the endpoint and the `wsdl:binding`/@name value for the endpoint binding.</span></span>|  
+|`Address`|<span data-ttu-id="f21d5-126">端點之 `wsdl:port` 定義的位址。</span><span class="sxs-lookup"><span data-stu-id="f21d5-126">The address for the `wsdl:port` definition for the endpoint.</span></span><br /><br /> <span data-ttu-id="f21d5-127">端點的傳輸會決定位址的格式。</span><span class="sxs-lookup"><span data-stu-id="f21d5-127">The transport for the endpoint determines the format of the address.</span></span> <span data-ttu-id="f21d5-128">例如，針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援的傳輸，格式可以為 SOAP 位址或端點參考。</span><span class="sxs-lookup"><span data-stu-id="f21d5-128">For example, for [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-supported transports it could be a SOAP address or an endpoint reference.</span></span>|  
+|`Binding`|<span data-ttu-id="f21d5-129">端點的 `wsdl:binding` 定義。</span><span class="sxs-lookup"><span data-stu-id="f21d5-129">The `wsdl:binding` definition for the endpoint.</span></span><br /><br /> <span data-ttu-id="f21d5-130">和 `wsdl:binding` 定義不一樣，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的繫結不會連接至任何合約。</span><span class="sxs-lookup"><span data-stu-id="f21d5-130">Unlike `wsdl:binding` definitions, bindings in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] are not tied to any one contract.</span></span>|  
+|`Contract`|<span data-ttu-id="f21d5-131">端點的 `wsdl:portType` 定義。</span><span class="sxs-lookup"><span data-stu-id="f21d5-131">The `wsdl:portType` definition for the endpoint.</span></span>|  
+|`Behaviors`|<span data-ttu-id="f21d5-132">實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面的端點行為可以修改端點的 `wsdl:port`。</span><span class="sxs-lookup"><span data-stu-id="f21d5-132">Endpoint behaviors that implement the <xref:System.ServiceModel.Description.IWsdlExportExtension> interface can modify the `wsdl:port` for the endpoint.</span></span>|  
   
-### 繫結  
- `ServiceEndpoint` 執行個體的繫結執行個體會對應至 `wsdl:binding` 定義。  和必須與特定 `wsdl:portType` 定義相關聯的 `wsdl:binding` 定義不同，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結與任何合約都不相關。  
+### <a name="bindings"></a><span data-ttu-id="f21d5-133">繫結</span><span class="sxs-lookup"><span data-stu-id="f21d5-133">Bindings</span></span>  
+ <span data-ttu-id="f21d5-134">`ServiceEndpoint` 執行個體的繫結執行個體會對應至 `wsdl:binding` 定義。</span><span class="sxs-lookup"><span data-stu-id="f21d5-134">The binding instance for a `ServiceEndpoint` instance maps to a `wsdl:binding` definition.</span></span> <span data-ttu-id="f21d5-135">和必須與特定 `wsdl:binding` 定義相關聯的 `wsdl:portType` 定義不同，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結與任何合約都不相關。</span><span class="sxs-lookup"><span data-stu-id="f21d5-135">Unlike `wsdl:binding` definitions, which must be associated with a specific `wsdl:portType` definition, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bindings are independent of any contract.</span></span>  
   
- 繫結是由繫結項目集合所組成。  每個項目負責針對端點與用戶端通訊的方式稍加描述。  此外，繫結具有的 <xref:System.ServiceModel.Channels.MessageVersion> 會指出用於端點的 <xref:System.ServiceModel.EnvelopeVersion> 和 <xref:System.ServiceModel.Channels.AddressingVersion>。  
+ <span data-ttu-id="f21d5-136">繫結是由繫結項目集合所組成。</span><span class="sxs-lookup"><span data-stu-id="f21d5-136">A binding is made up of a collection of binding elements.</span></span> <span data-ttu-id="f21d5-137">每個項目負責針對端點與用戶端通訊的方式稍加描述。</span><span class="sxs-lookup"><span data-stu-id="f21d5-137">Each element describes some aspect of how the endpoint communicates with clients.</span></span> <span data-ttu-id="f21d5-138">此外，繫結具有的 <xref:System.ServiceModel.Channels.MessageVersion> 會指出用於端點的 <xref:System.ServiceModel.EnvelopeVersion> 和 <xref:System.ServiceModel.Channels.AddressingVersion>。</span><span class="sxs-lookup"><span data-stu-id="f21d5-138">Additionally, a binding has a <xref:System.ServiceModel.Channels.MessageVersion> that indicates the <xref:System.ServiceModel.EnvelopeVersion> and <xref:System.ServiceModel.Channels.AddressingVersion> for the endpoint.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`Name`|用於端點的預設名稱，而這個繫結名稱會以底線區隔附加的合約名稱。|  
-|`Namespace`|`wsdl:binding` 定義的 `targetNamespace`。<br /><br /> 在進行匯入時，如果將原則附加至 WSDL 連接埠，則匯入的繫結命名空間會對應至 `wsdl:port` 定義的 `targetNamespace` 中。|  
-|`BindingElementCollection` 是由 `CreateBindingElements`\(\) 方法所傳回|`wsdl:binding` 定義的各種網域特定延伸項目，一般來說是原則判斷提示 \(Assertion\)。|  
-|`MessageVersion`|端點的 `EnvelopeVersion` 和 `AddressingVersion`。<br /><br /> 指定 `MessageVersion.None` 時，WSDL 繫結不含 SOAP 繫結，而 WSDL 連接埠則不含 WS\-Addressing 內容。  這個設定通常會用於 Plain Old XML \(POX\) 端點。|  
+|<span data-ttu-id="f21d5-139">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-139">Properties</span></span>|<span data-ttu-id="f21d5-140">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-140">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="f21d5-141">用於端點的預設名稱，而這個繫結名稱會以底線區隔附加的合約名稱。</span><span class="sxs-lookup"><span data-stu-id="f21d5-141">Used in the default name of an endpoint, which is the binding name with the contract name appended separated by an underscore.</span></span>|  
+|`Namespace`|<span data-ttu-id="f21d5-142">`targetNamespace` 定義的 `wsdl:binding`。</span><span class="sxs-lookup"><span data-stu-id="f21d5-142">The `targetNamespace` for the `wsdl:binding` definition.</span></span><br /><br /> <span data-ttu-id="f21d5-143">在進行匯入時，如果將原則附加至 WSDL 連接埠，則匯入的繫結命名空間會對應至 `targetNamespace` 定義的 `wsdl:port` 中。</span><span class="sxs-lookup"><span data-stu-id="f21d5-143">On import, if a policy is attached to the WSDL port, the imported binding namespace maps to the `targetNamespace` for the `wsdl:port` definition.</span></span>|  
+|<span data-ttu-id="f21d5-144">`BindingElementCollection` 是由 `CreateBindingElements`() 方法所傳回</span><span class="sxs-lookup"><span data-stu-id="f21d5-144">`BindingElementCollection`, as returned by the `CreateBindingElements`() method</span></span>|<span data-ttu-id="f21d5-145">`wsdl:binding` 定義的各種網域特定延伸項目，一般來說是原則判斷提示 (Assertion)。</span><span class="sxs-lookup"><span data-stu-id="f21d5-145">Various domain-specific extensions to the `wsdl:binding` definition, typically policy assertions.</span></span>|  
+|`MessageVersion`|<span data-ttu-id="f21d5-146">端點的 `EnvelopeVersion` 和 `AddressingVersion`。</span><span class="sxs-lookup"><span data-stu-id="f21d5-146">The `EnvelopeVersion` and `AddressingVersion` for the endpoint.</span></span><br /><br /> <span data-ttu-id="f21d5-147">指定 `MessageVersion.None` 時，WSDL 繫結不含 SOAP 繫結，而 WSDL 連接埠則不含 WS-Addressing 內容。</span><span class="sxs-lookup"><span data-stu-id="f21d5-147">When `MessageVersion.None` is specified, the WSDL binding does not contain a SOAP binding and the WSDL port does not contain WS-Addressing content.</span></span> <span data-ttu-id="f21d5-148">這個設定通常會用於 Plain Old XML (POX) 端點。</span><span class="sxs-lookup"><span data-stu-id="f21d5-148">This setting is typically used for plain old XML (POX) endpoints.</span></span>|  
   
-#### BindingElements  
- 端點繫結的繫結項目會對應至 `wsdl:binding` 中的各種 WSDL 延伸項目，例如原則判斷提示。  
+#### <a name="bindingelements"></a><span data-ttu-id="f21d5-149">BindingElements</span><span class="sxs-lookup"><span data-stu-id="f21d5-149">BindingElements</span></span>  
+ <span data-ttu-id="f21d5-150">端點繫結的繫結項目會對應至 `wsdl:binding` 中的各種 WSDL 延伸項目，例如原則判斷提示。</span><span class="sxs-lookup"><span data-stu-id="f21d5-150">The binding elements for an endpoint binding map to various WSDL extensions in the `wsdl:binding`, such as policy assertions.</span></span>  
   
- 繫結的 <xref:System.ServiceModel.Channels.TransportBindingElement> 會判斷 SOAP 繫結的傳輸統一資源識別碼 \(URI\)。  
+ <span data-ttu-id="f21d5-151">繫結的 <xref:System.ServiceModel.Channels.TransportBindingElement> 會判斷 SOAP 繫結的傳輸統一資源識別碼 (URI)。</span><span class="sxs-lookup"><span data-stu-id="f21d5-151">The <xref:System.ServiceModel.Channels.TransportBindingElement> for the binding determines the transport Uniform Resource Identifier (URI) for a SOAP binding.</span></span>  
   
-#### AddressingVersion  
- 繫結上的 `AddressingVersion` 會對應至 `wsd:port` 中使用的定址版本。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 SOAP 1.1 和 SOAP 1.2 位址，以及 WS\-Addressing 08\/2004 和 WS\-Addressing 1.0 端點參考。  
+#### <a name="addressingversion"></a><span data-ttu-id="f21d5-152">AddressingVersion</span><span class="sxs-lookup"><span data-stu-id="f21d5-152">AddressingVersion</span></span>  
+ <span data-ttu-id="f21d5-153">繫結上的 `AddressingVersion` 會對應至 `wsd:port` 中使用的定址版本。</span><span class="sxs-lookup"><span data-stu-id="f21d5-153">The `AddressingVersion` on a binding maps to the version of addressing used in the `wsd:port`.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="f21d5-154"> 支援 SOAP 1.1 和 SOAP 1.2 位址，以及 WS-Addressing 08/2004 和 WS-Addressing 1.0 端點參考。</span><span class="sxs-lookup"><span data-stu-id="f21d5-154"> supports SOAP 1.1 and SOAP 1.2 addresses, and WS-Addressing 08/2004 and WS-Addressing 1.0 endpoint references.</span></span>  
   
-#### EnvelopeVersion  
- 繫結上的 `EnvelopeVersion` 會對應至 `wsdl:binding` 中使用的 SOAP 版本。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 SOAP 1.1 和 SOAP 1.2 繫結。  
+#### <a name="envelopeversion"></a><span data-ttu-id="f21d5-155">EnvelopeVersion</span><span class="sxs-lookup"><span data-stu-id="f21d5-155">EnvelopeVersion</span></span>  
+ <span data-ttu-id="f21d5-156">繫結上的 `EnvelopeVersion` 會對應至 `wsdl:binding` 中使用的 SOAP 版本。</span><span class="sxs-lookup"><span data-stu-id="f21d5-156">The `EnvelopeVersion` on a binding maps to the version of SOAP used in the `wsdl:binding`.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="f21d5-157"> 支援 SOAP 1.1 和 SOAP 1.2 繫結。</span><span class="sxs-lookup"><span data-stu-id="f21d5-157"> supports SOAP 1.1 and SOAP 1.2 bindings.</span></span>  
   
-### 合約  
- `ServiceEndpoint` 執行個體的 <xref:System.ServiceModel.Description.ContractDescription> 執行個體會對應至 `wsdl:portType`。  `ContractDescription` 執行個體會描述所提供之合約的所有作業。  
+### <a name="contracts"></a><span data-ttu-id="f21d5-158">合約</span><span class="sxs-lookup"><span data-stu-id="f21d5-158">Contracts</span></span>  
+ <span data-ttu-id="f21d5-159"><xref:System.ServiceModel.Description.ContractDescription> 執行個體的 `ServiceEndpoint` 執行個體會對應至 `wsdl:portType`。</span><span class="sxs-lookup"><span data-stu-id="f21d5-159">The <xref:System.ServiceModel.Description.ContractDescription> instance for a `ServiceEndpoint` instance maps to a `wsdl:portType`.</span></span> <span data-ttu-id="f21d5-160">`ContractDescription` 執行個體會描述所提供之合約的所有作業。</span><span class="sxs-lookup"><span data-stu-id="f21d5-160">A `ContractDescription` instance describes all of the operations for a given contract.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`Name`|合約的 `wsdl:portType`\/@name 值。|  
-|`Namespace`|`wsdl:portType` 定義的 targetNamespace。|  
-|`SessionMode`|合約的 `wsdl:portType`\/@msc:usingSession 值。  這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。|  
-|`Operations`|合約的 `wsdl:operation` 定義。|  
+|<span data-ttu-id="f21d5-161">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-161">Properties</span></span>|<span data-ttu-id="f21d5-162">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-162">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="f21d5-163">`wsdl:portType` /@name合約的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-163">The `wsdl:portType`/@name value for the contract.</span></span>|  
+|`Namespace`|<span data-ttu-id="f21d5-164">`wsdl:portType` 定義的 targetNamespace。</span><span class="sxs-lookup"><span data-stu-id="f21d5-164">The targetNamespace for the `wsdl:portType` definition.</span></span>|  
+|`SessionMode`|<span data-ttu-id="f21d5-165">`wsdl:portType` /@msc:usingSession合約的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-165">The `wsdl:portType`/@msc:usingSession value for the contract.</span></span> <span data-ttu-id="f21d5-166">這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-166">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`Operations`|<span data-ttu-id="f21d5-167">合約的 `wsdl:operation` 定義。</span><span class="sxs-lookup"><span data-stu-id="f21d5-167">The `wsdl:operation` definitions for the contract.</span></span>|  
   
-### 作業  
- <xref:System.ServiceModel.Description.OperationDescription> 執行個體會對應至 `wsdl:portType`\/`wsdl:operation`。  `OperationDescription` 包含 `MessageDescription` 執行個體集合，而這些執行個體會描述作業的各種訊息。  
+### <a name="operations"></a><span data-ttu-id="f21d5-168">作業</span><span class="sxs-lookup"><span data-stu-id="f21d5-168">Operations</span></span>  
+ <span data-ttu-id="f21d5-169"><xref:System.ServiceModel.Description.OperationDescription>執行個體會對應至`wsdl:portType` / `wsdl:operation`。</span><span class="sxs-lookup"><span data-stu-id="f21d5-169">An <xref:System.ServiceModel.Description.OperationDescription> instance maps to a `wsdl:portType`/`wsdl:operation`.</span></span> <span data-ttu-id="f21d5-170">`OperationDescription` 包含 `MessageDescription` 執行個體集合，而這些執行個體會描述作業的各種訊息。</span><span class="sxs-lookup"><span data-stu-id="f21d5-170">An `OperationDescription` contains a collection of `MessageDescription` instances that describe the messages for the operation.</span></span>  
   
- 有兩個作業行為會特別強調 `OperationDescription` 對應至 WSDL 文件的方法：`DataContractSerializerOperationBehavior` 和 `XmlSerializerOperationBehavior`。  
+ <span data-ttu-id="f21d5-171">有兩個作業行為會特別強調 `OperationDescription` 對應至 WSDL 文件的方法：`DataContractSerializerOperationBehavior` 和 `XmlSerializerOperationBehavior`。</span><span class="sxs-lookup"><span data-stu-id="f21d5-171">Two operation behaviors participate heavily in how an `OperationDescription` is mapped to a WSDL document: `DataContractSerializerOperationBehavior` and `XmlSerializerOperationBehavior`.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`Name`|作業的 `wsdl:portType`\/`wsdl:operation`\/@name 值。|  
-|`ProtectionLevel`|針對此作業，附加至 `wsdl:binding/wsdl:operation` 訊息之安全性原則中的保護判斷提示。|  
-|`IsInitiating`|作業的 `wsdl:portType`\/`wsdl:operation`\/@msc:isInitiating 值。  這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。|  
-|`IsTerminating`|作業的 `wsdl:portType`\/`wsdl:operation`\/@msc:isTerminating 值。  這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。|  
-|`Messages`|作業的 `wsdl:portType`\/`wsdl:operation`\/`wsdl:input` 和 `wsdl:portType`\/`wsdl:operation`\/`wsdl:output` 訊息。|  
-|`Faults`|作業的 `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault` 定義。|  
-|`Behaviors`|`DataContractSerializerOperationBehavior` 和 `XmlSerializerOperationBehavior` 會處理作業繫結和作業訊息。|  
+|<span data-ttu-id="f21d5-172">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-172">Properties</span></span>|<span data-ttu-id="f21d5-173">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-173">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="f21d5-174">`wsdl:portType` / `wsdl:operation` /@name該作業的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-174">The `wsdl:portType`/`wsdl:operation`/@name value for the operation.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="f21d5-175">針對此作業，附加至 `wsdl:binding/wsdl:operation` 訊息之安全性原則中的保護判斷提示。</span><span class="sxs-lookup"><span data-stu-id="f21d5-175">Protection assertions in security policy attached to the `wsdl:binding/wsdl:operation` messages for this operation.</span></span>|  
+|`IsInitiating`|<span data-ttu-id="f21d5-176">`wsdl:portType` / `wsdl:operation` /@msc:isInitiating該作業的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-176">The `wsdl:portType`/`wsdl:operation`/@msc:isInitiating value for the operation.</span></span> <span data-ttu-id="f21d5-177">這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-177">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`IsTerminating`|<span data-ttu-id="f21d5-178">`wsdl:portType` / `wsdl:operation` /@msc:isTerminating該作業的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-178">The `wsdl:portType`/`wsdl:operation`/@msc:isTerminating value for the operation.</span></span> <span data-ttu-id="f21d5-179">這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-179">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`Messages`|<span data-ttu-id="f21d5-180">`wsdl:portType` / `wsdl:operation` / `wsdl:input`和`wsdl:portType` / `wsdl:operation` / `wsdl:output`作業的訊息。</span><span class="sxs-lookup"><span data-stu-id="f21d5-180">The `wsdl:portType`/`wsdl:operation`/`wsdl:input` and `wsdl:portType`/`wsdl:operation`/`wsdl:output` messages for the operation.</span></span>|  
+|`Faults`|<span data-ttu-id="f21d5-181">`wsdl:portType` / `wsdl:operation` / `wsdl:fault`作業定義。</span><span class="sxs-lookup"><span data-stu-id="f21d5-181">The `wsdl:portType`/`wsdl:operation`/`wsdl:fault` definitions for the operation.</span></span>|  
+|`Behaviors`|<span data-ttu-id="f21d5-182">`DataContractSerializerOperationBehavior` 和 `XmlSerializerOperationBehavior` 會處理作業繫結和作業訊息。</span><span class="sxs-lookup"><span data-stu-id="f21d5-182">The `DataContractSerializerOperationBehavior` and `XmlSerializerOperationBehavior` deal with the operation binding and the operation messages.</span></span>|  
   
-#### DataContractSerializerOperationBehavior  
- 作業的 `DataContractSerializerOperationBehavior` 是 `IWsdlExportExtension` 實作，會針對作業匯出 WSDL 訊息和繫結。  將會使用 `XsdDataContractExporter` 匯出 XML 結構描述型別。  `DataContractSerializerOperationBehavior` 也會判斷用於該作業的用法、樣式和結構描述匯出工具與匯入工具。  
+#### <a name="the-datacontractserializeroperationbehavior"></a><span data-ttu-id="f21d5-183">DataContractSerializerOperationBehavior</span><span class="sxs-lookup"><span data-stu-id="f21d5-183">The DataContractSerializerOperationBehavior</span></span>  
+ <span data-ttu-id="f21d5-184">作業的 `DataContractSerializerOperationBehavior` 是 `IWsdlExportExtension` 實作，會針對作業匯出 WSDL 訊息和繫結。</span><span class="sxs-lookup"><span data-stu-id="f21d5-184">The `DataContractSerializerOperationBehavior` for an operation is an `IWsdlExportExtension` implementation that exports the WSDL messages and binding for that operation.</span></span> <span data-ttu-id="f21d5-185">將會使用 `XsdDataContractExporter` 匯出 XML 結構描述型別。</span><span class="sxs-lookup"><span data-stu-id="f21d5-185">The XML Schema types are exported using the `XsdDataContractExporter`.</span></span> <span data-ttu-id="f21d5-186">`DataContractSerializerOperationBehavior` 也會判斷用於該作業的用法、樣式和結構描述匯出工具與匯入工具。</span><span class="sxs-lookup"><span data-stu-id="f21d5-186">The `DataContractSerializerOperationBehavior` also determines the use, style, and schema exporter and importer to use for that operation.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`DataContractFormatAttribute`|這個屬性 \(Attribute\) 的 `Style` 屬性會對應至作業的 `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/@style 值。<br /><br /> `DataContractSerializerOperationBehavior` 在 WSDL 中僅支援結構描述型別的原來用法。|  
+|<span data-ttu-id="f21d5-187">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-187">Properties</span></span>|<span data-ttu-id="f21d5-188">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-188">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`DataContractFormatAttribute`|<span data-ttu-id="f21d5-189">`Style`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style該作業的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-189">The `Style` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/@style value for the operation.</span></span><br /><br /> <span data-ttu-id="f21d5-190">`DataContractSerializerOperationBehavior` 在 WSDL 中僅支援結構描述型別的原來用法。</span><span class="sxs-lookup"><span data-stu-id="f21d5-190">The `DataContractSerializerOperationBehavior` supports only the literal use of the schema types in the WSDL.</span></span>|  
   
-#### XmlSerializerOperationBehavior  
- 作業的 `XmlSerializerOperationBehavior` 是 `IWsdlExportExtension` 實作，會針對作業匯出 WSDL 訊息和繫結。  將會使用 `XmlSchemaExporter` 匯出 XML 結構描述型別。  `XmlSerializerOperationBehavior` 也會判斷用於該作業的用法、樣式和結構描述匯出工具與匯入工具。  
+#### <a name="the-xmlserializeroperationbehavior"></a><span data-ttu-id="f21d5-191">XmlSerializerOperationBehavior</span><span class="sxs-lookup"><span data-stu-id="f21d5-191">The XmlSerializerOperationBehavior</span></span>  
+ <span data-ttu-id="f21d5-192">作業的 `XmlSerializerOperationBehavior` 是 `IWsdlExportExtension` 實作，會針對作業匯出 WSDL 訊息和繫結。</span><span class="sxs-lookup"><span data-stu-id="f21d5-192">The `XmlSerializerOperationBehavior` for an operation is an `IWsdlExportExtension` implementation that exports the WSDL messages and binding for that operation.</span></span> <span data-ttu-id="f21d5-193">將會使用 `XmlSchemaExporter` 匯出 XML 結構描述型別。</span><span class="sxs-lookup"><span data-stu-id="f21d5-193">The XML Schema types are exported using the `XmlSchemaExporter`.</span></span> <span data-ttu-id="f21d5-194">`XmlSerializerOperationBehavior` 也會判斷用於該作業的用法、樣式和結構描述匯出工具與匯入工具。</span><span class="sxs-lookup"><span data-stu-id="f21d5-194">The `XmlSerializerOperationBehavior` also determines the use, style, and schema exporter and importer to use for that operation.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`XmlSerializerFormatAttribute`|這個屬性 \(Attribute\) 的 `Style` 屬性會對應至作業的 `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/@style 值。<br /><br /> 這個屬性 \(Attribute\) 的 `Use` 屬性會對應至作業中所有訊息的 `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/\*\/@use 值。|  
+|<span data-ttu-id="f21d5-195">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-195">Properties</span></span>|<span data-ttu-id="f21d5-196">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-196">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`XmlSerializerFormatAttribute`|<span data-ttu-id="f21d5-197">`Style`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style該作業的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-197">The `Style` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/@style value for the operation.</span></span><br /><br /> <span data-ttu-id="f21d5-198">`Use`屬性，這個屬性會對應至`wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use作業中的所有訊息的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-198">The `Use` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/*/@use values for all messages in the operation.</span></span>|  
   
-### 訊息  
- `MessageDescription` 執行個體會對應至 `wsdl:message`，而這會由作業中的 `wsdl:portType`\/`wsdl:operation`\/`wsdl:input` 或 `wsdl:portType`\/`wsdl:operation`\/`wsdl:output` 訊息所參考。  `MessageDescription` 中具有本文和標頭。  
+### <a name="messages"></a><span data-ttu-id="f21d5-199">訊息</span><span class="sxs-lookup"><span data-stu-id="f21d5-199">Messages</span></span>  
+ <span data-ttu-id="f21d5-200">A`MessageDescription`執行個體會對應至`wsdl:message`所參考`wsdl:portType` / `wsdl:operation` / `wsdl:input`或`wsdl:portType` / `wsdl:operation` / `wsdl:output`作業中的訊息。</span><span class="sxs-lookup"><span data-stu-id="f21d5-200">A `MessageDescription` instance maps to a `wsdl:message` that is referenced by a `wsdl:portType`/`wsdl:operation`/`wsdl:input` or a `wsdl:portType`/`wsdl:operation`/`wsdl:output` message in an operation.</span></span> <span data-ttu-id="f21d5-201">`MessageDescription` 中具有本文和標頭。</span><span class="sxs-lookup"><span data-stu-id="f21d5-201">A `MessageDescription` has a body and headers.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`Action`|訊息的 SOAP 或 WS\-Addressing 動作。<br /><br /> 請注意，使用動作字串 "\*" 的作業不會以 WSDL 表示。|  
-|`Direction`|`MessageDirection.Input` 對應至 `wsdl:input`。<br /><br /> `MessageDirection.Output` 對應至 `wsdl:output`。|  
-|`ProtectionLevel`|針對此訊息，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。|  
-|`Body`|訊息的訊息本文。|  
-|`Headers`|訊息的標頭。|  
-|`ContractDescription.Name`, `OperationContract.Name`|在匯出時，用來衍生 `wsdl:message`\/@name 值。|  
+|<span data-ttu-id="f21d5-202">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-202">Properties</span></span>|<span data-ttu-id="f21d5-203">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-203">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`Action`|<span data-ttu-id="f21d5-204">訊息的 SOAP 或 WS-Addressing 動作。</span><span class="sxs-lookup"><span data-stu-id="f21d5-204">The SOAP or WS-Addressing action for the message.</span></span><br /><br /> <span data-ttu-id="f21d5-205">請注意，使用動作字串 "*" 的作業不會以 WSDL 表示。</span><span class="sxs-lookup"><span data-stu-id="f21d5-205">Note that operations that use the Action string "*" are not represented in WSDL.</span></span>|  
+|`Direction`|<span data-ttu-id="f21d5-206">`MessageDirection.Input` 對應至 `wsdl:input`。</span><span class="sxs-lookup"><span data-stu-id="f21d5-206">`MessageDirection.Input` maps to `wsdl:input`.</span></span><br /><br /> <span data-ttu-id="f21d5-207">`MessageDirection.Output` 對應至 `wsdl:output`。</span><span class="sxs-lookup"><span data-stu-id="f21d5-207">`MessageDirection.Output` maps to `wsdl:output`.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="f21d5-208">針對此訊息，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。</span><span class="sxs-lookup"><span data-stu-id="f21d5-208">Protection assertions in security policy attached to the `wsdl:message` definition for this message.</span></span>|  
+|`Body`|<span data-ttu-id="f21d5-209">訊息的訊息本文。</span><span class="sxs-lookup"><span data-stu-id="f21d5-209">The message body for the message.</span></span>|  
+|`Headers`|<span data-ttu-id="f21d5-210">訊息的標頭。</span><span class="sxs-lookup"><span data-stu-id="f21d5-210">The headers for the message.</span></span>|  
+|<span data-ttu-id="f21d5-211">`ContractDescription.Name`, `OperationContract.Name`</span><span class="sxs-lookup"><span data-stu-id="f21d5-211">`ContractDescription.Name`, `OperationContract.Name`</span></span>|<span data-ttu-id="f21d5-212">在匯出時，用來衍生`wsdl:message`/@name值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-212">On export, used to derive the `wsdl:message`/@name value.</span></span>|  
   
-#### 訊息本文  
- `MessageBodyDescription` 執行個體會對應至訊息本文的 `wsdl:message`\/`wsdl:part` 定義。  訊息本文可以為包裝或不要包裝。  
+#### <a name="message-body"></a><span data-ttu-id="f21d5-213">訊息本文</span><span class="sxs-lookup"><span data-stu-id="f21d5-213">Message Body</span></span>  
+ <span data-ttu-id="f21d5-214">A`MessageBodyDescription`執行個體會對應至`wsdl:message` / `wsdl:part`定義訊息的本文。</span><span class="sxs-lookup"><span data-stu-id="f21d5-214">A `MessageBodyDescription` instance maps to the `wsdl:message`/`wsdl:part` definitions for the body of a message.</span></span> <span data-ttu-id="f21d5-215">訊息本文可以為包裝或不要包裝。</span><span class="sxs-lookup"><span data-stu-id="f21d5-215">The message body may be wrapped or bare.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`WrapperName`|如果樣式不是 RPC，則 `WrapperName` 會對應至其 @name 設定為「參數」之 `wsdl:message`\/`wsdl:part` 所參考的項目名稱。|  
-|`WrapperNamespace`|如果樣式不是 RPC，則 `WrapperNamespace` 會對應至其 @name 設定為「參數」之 `wsdl:message`\/`wsdl:part` 的項目命名空間。|  
-|`Parts`|此訊息本文的訊息部分。|  
-|`ReturnValue`|如果有包裝函式項目時則為包裝函式項目的子項目 \(文件包裝樣式或 RPC 樣式\)，否則為訊息中的第一個 `wsdl:message`\/`wsdl:part`。|  
+|<span data-ttu-id="f21d5-216">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-216">Properties</span></span>|<span data-ttu-id="f21d5-217">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-217">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`WrapperName`|<span data-ttu-id="f21d5-218">如果樣式不是 RPC，則`WrapperName`所參考的項目名稱的對應`wsdl:message` / `wsdl:part`與@name設定為 「 參數 」。</span><span class="sxs-lookup"><span data-stu-id="f21d5-218">If the style is not RPC, then the `WrapperName` maps to the element name referenced by the `wsdl:message`/`wsdl:part` with @name set to "parameters".</span></span>|  
+|`WrapperNamespace`|<span data-ttu-id="f21d5-219">如果樣式不是 RPC，則`WrapperNamespace`對應項目命名空間的`wsdl:message` / `wsdl:part`與@name設定為 「 參數 」。</span><span class="sxs-lookup"><span data-stu-id="f21d5-219">If the style is not RPC, then the `WrapperNamespace` maps to the element namespace for the `wsdl:message`/`wsdl:part` with @name set to "parameters".</span></span>|  
+|`Parts`|<span data-ttu-id="f21d5-220">此訊息本文的訊息部分。</span><span class="sxs-lookup"><span data-stu-id="f21d5-220">The message parts for this message body.</span></span>|  
+|`ReturnValue`|<span data-ttu-id="f21d5-221">子元素的包裝函式項目是否有包裝函式項目 （文件包裝樣式或 RPC 樣式），否則第一個`wsdl:message` / `wsdl:part`訊息中。</span><span class="sxs-lookup"><span data-stu-id="f21d5-221">The child element of the wrapper element if a wrapper element exists (document wrapped style, or RPC style), otherwise the first `wsdl:message`/`wsdl:part` in the message.</span></span>|  
   
-#### 訊息部分  
- `MessagePartDescription` 執行個體會對應至 `wsdl:message`\/`wsdl:part` 和 XML 結構描述型別，或者訊息部分所指向的項目。  
+#### <a name="message-parts"></a><span data-ttu-id="f21d5-222">訊息部分</span><span class="sxs-lookup"><span data-stu-id="f21d5-222">Message Parts</span></span>  
+ <span data-ttu-id="f21d5-223">A`MessagePartDescription`執行個體會對應至`wsdl:message` / `wsdl:part`和 XML 結構描述型別或訊息部分指向之項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-223">A `MessagePartDescription` instance maps to a `wsdl:message`/`wsdl:part` and the XML schema type or element that the message part points to.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`Name`|訊息部分的 `wsd:message`\/`wsdl:part`\/@name 值，以及訊息部分所指向之項目的名稱。|  
-|`Namespace`|訊息部分所指向之項目的命名空間。|  
-|`Index`|訊息之 `wsdl:message`\/`wsdl:part` 的索引。|  
-|`ProtectionLevel`|針對此訊息部分，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。  將會參數化原則以指向特定訊息部分。|  
-|`MessageType`|訊息部分指向之項目的 XML 結構描述型別。|  
+|<span data-ttu-id="f21d5-224">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-224">Properties</span></span>|<span data-ttu-id="f21d5-225">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-225">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="f21d5-226">`wsd:message` / `wsdl:part` /@name訊息部分及訊息部分指向之項目的名稱值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-226">The `wsd:message`/`wsdl:part`/@name value for the message part and the name of the element that the message part points to.</span></span>|  
+|`Namespace`|<span data-ttu-id="f21d5-227">訊息部分所指向之項目的命名空間。</span><span class="sxs-lookup"><span data-stu-id="f21d5-227">The namespace of the element that the message part points to.</span></span>|  
+|`Index`|<span data-ttu-id="f21d5-228">索引`wsdl:message` / `wsdl:part`訊息。</span><span class="sxs-lookup"><span data-stu-id="f21d5-228">The index of the `wsdl:message`/`wsdl:part` for the message.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="f21d5-229">針對此訊息部分，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。</span><span class="sxs-lookup"><span data-stu-id="f21d5-229">Protection assertions in security policy attached to the `wsdl:message` definition for this message part.</span></span> <span data-ttu-id="f21d5-230">將會參數化原則以指向特定訊息部分。</span><span class="sxs-lookup"><span data-stu-id="f21d5-230">The policy is parameterized to point to the specific message part.</span></span>|  
+|`MessageType`|<span data-ttu-id="f21d5-231">訊息部分指向之項目的 XML 結構描述型別。</span><span class="sxs-lookup"><span data-stu-id="f21d5-231">The XML Schema type of the element that the message part points to.</span></span>|  
   
-#### 訊息標頭  
- `MessageHeaderDescription` 執行個體是一種訊息部分，也會對應至訊息部分的 `soap:header` 繫結。  
+#### <a name="message-headers"></a><span data-ttu-id="f21d5-232">訊息標頭</span><span class="sxs-lookup"><span data-stu-id="f21d5-232">Message Headers</span></span>  
+ <span data-ttu-id="f21d5-233">`MessageHeaderDescription` 執行個體是一種訊息部分，也會對應至訊息部分的 `soap:header` 繫結。</span><span class="sxs-lookup"><span data-stu-id="f21d5-233">A `MessageHeaderDescription` instance is a message part that also maps to a `soap:header` binding for the message part.</span></span>  
   
-### 錯誤  
- `FaultDescription` 執行個體會對應至 `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault` 定義與其相關聯的 `wsdl:message` 定義。  `wsdl:message` 會新增至相同的目標命名空間，做為相關聯的 WSDL 連接埠型別。  `wsdl:message` 具有名稱為「詳細資訊」的單一訊息部分，而這個部分會指向對應至 `FaultDescription` 執行個體之 `DefaultType` 屬性值的 XML 結構描述項目。  
+### <a name="faults"></a><span data-ttu-id="f21d5-234">錯誤</span><span class="sxs-lookup"><span data-stu-id="f21d5-234">Faults</span></span>  
+ <span data-ttu-id="f21d5-235">A`FaultDescription`執行個體會對應至`wsdl:portType` / `wsdl:operation` / `wsdl:fault`定義以及其相關聯`wsdl:message`定義。</span><span class="sxs-lookup"><span data-stu-id="f21d5-235">A `FaultDescription` instance maps to a `wsdl:portType`/`wsdl:operation`/`wsdl:fault` definition and its associated `wsdl:message` definition.</span></span> <span data-ttu-id="f21d5-236">`wsdl:message` 會新增至相同的目標命名空間，做為相關聯的 WSDL 連接埠型別。</span><span class="sxs-lookup"><span data-stu-id="f21d5-236">The `wsdl:message` is added to the same target namespace as its associated WSDL port type.</span></span> <span data-ttu-id="f21d5-237">`wsdl:message` 具有名稱為「詳細資訊」的單一訊息部分，而這個部分會指向對應至 `DefaultType` 執行個體之 `FaultDescription` 屬性值的 XML 結構描述項目。</span><span class="sxs-lookup"><span data-stu-id="f21d5-237">The `wsdl:message` has a single message part named "detail" that points to the XML Schema element that corresponds to the `DefaultType` property value for the `FaultDescription` instance.</span></span>  
   
-|屬性|WSDL 對應|  
-|--------|-------------|  
-|`Name`|錯誤的 `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault`\/@name 值。|  
-|`Namespace`|錯誤詳細訊息部分所指向之 XML 結構描述項目的命名空間。|  
-|`Action`|錯誤的 SOAP 或 WS\-Addressing 動作。|  
-|`ProtectionLevel`|針對此錯誤，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。|  
-|`DetailType`|詳細訊息部分指向之項目的 XML 結構描述型別。|  
-|`Name, ContractDescription.Name, OperationDescription.Name,`|用於衍生錯誤訊息的 `wsdl:message`\/@name 值。|  
+|<span data-ttu-id="f21d5-238">屬性</span><span class="sxs-lookup"><span data-stu-id="f21d5-238">Properties</span></span>|<span data-ttu-id="f21d5-239">WSDL 對應</span><span class="sxs-lookup"><span data-stu-id="f21d5-239">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="f21d5-240">`wsdl:portType` / `wsdl:operation` / `wsdl:fault` /@name錯誤的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-240">The `wsdl:portType`/`wsdl:operation`/`wsdl:fault`/@name value for the fault.</span></span>|  
+|`Namespace`|<span data-ttu-id="f21d5-241">錯誤詳細訊息部分所指向之 XML 結構描述項目的命名空間。</span><span class="sxs-lookup"><span data-stu-id="f21d5-241">The namespace of the XML Schema element that the fault detail message part points to.</span></span>|  
+|`Action`|<span data-ttu-id="f21d5-242">錯誤的 SOAP 或 WS-Addressing 動作。</span><span class="sxs-lookup"><span data-stu-id="f21d5-242">The SOAP or WS-Addressing action for the fault.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="f21d5-243">針對此錯誤，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。</span><span class="sxs-lookup"><span data-stu-id="f21d5-243">Protection assertions in security policy attached to the `wsdl:message` definition for this fault.</span></span>|  
+|`DetailType`|<span data-ttu-id="f21d5-244">詳細訊息部分指向之項目的 XML 結構描述型別。</span><span class="sxs-lookup"><span data-stu-id="f21d5-244">The XML Schema type of the element that the detail message part points to.</span></span>|  
+|`Name, ContractDescription.Name, OperationDescription.Name,`|<span data-ttu-id="f21d5-245">用來衍生`wsdl:message`/@name錯誤訊息的值。</span><span class="sxs-lookup"><span data-stu-id="f21d5-245">Used to derive the `wsdl:message`/@name value for the fault message.</span></span>|  
   
-## 請參閱  
+## <a name="see-also"></a><span data-ttu-id="f21d5-246">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f21d5-246">See Also</span></span>  
  <xref:System.ServiceModel.Description>

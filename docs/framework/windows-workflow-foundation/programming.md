@@ -1,62 +1,66 @@
 ---
-title: "Windows Workflow Foundation 程式設計 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程式設計 [WF]"
-  - "WF [WF], 程式設計"
-  - "Windows Workflow Foundation [WF], 程式設計"
+title: "Windows Workflow Foundation 程式設計"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Workflow Foundation [WF], programming
+- programming [WF]
+- WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 952f1f16ff610282f2f15c9d78bf3d45d5c354da
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Workflow Foundation 程式設計
-本節包含入門主題集，您必須了解這些主題才能成為熟練的 [!INCLUDE[wf](../../../includes/wf-md.md)] 程式設計人員。  
+# <a name="windows-workflow-foundation-programming"></a><span data-ttu-id="190cb-102">Windows Workflow Foundation 程式設計</span><span class="sxs-lookup"><span data-stu-id="190cb-102">Windows Workflow Foundation Programming</span></span>
+<span data-ttu-id="190cb-103">本節包含入門主題集，您必須了解這些主題才能成為熟練的 [!INCLUDE[wf](../../../includes/wf-md.md)] 程式設計人員。</span><span class="sxs-lookup"><span data-stu-id="190cb-103">This section contains a set of primer topics that you should understand to become a proficient [!INCLUDE[wf](../../../includes/wf-md.md)] programmer.</span></span>  
   
-## 在本節中  
- [設計工作流程](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)  
- 描述工作流程開發中使用之流程控制開發架構的主題。  
+## <a name="in-this-section"></a><span data-ttu-id="190cb-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="190cb-104">In This Section</span></span>  
+ [<span data-ttu-id="190cb-105">設計工作流程</span><span class="sxs-lookup"><span data-stu-id="190cb-105">Designing Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ <span data-ttu-id="190cb-106">描述工作流程開發中使用之流程控制開發架構的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-106">Topics that describe the flow-control paradigms used in workflow development.</span></span>  
   
- [使用與建立活動](../../../docs/framework/windows-workflow-foundation//using-and-creating-activities.md)  
- 描述 [!INCLUDE[wf](../../../includes/wf-md.md)] 中可用系統提供活動的主題。  
+ [<span data-ttu-id="190cb-107">使用及建立活動</span><span class="sxs-lookup"><span data-stu-id="190cb-107">Using and Creating Activities</span></span>](../../../docs/framework/windows-workflow-foundation/using-and-creating-activities.md)  
+ <span data-ttu-id="190cb-108">描述 [!INCLUDE[wf](../../../includes/wf-md.md)] 中可用系統提供活動的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-108">Topics that describes the system-provided activities available in [!INCLUDE[wf](../../../includes/wf-md.md)].</span></span>  
   
- [Windows Workflow Foundation 資料模型](../../../docs/framework/windows-workflow-foundation//data-model.md)  
- 描述 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中變數、引數與運算式的主題。  
+ [<span data-ttu-id="190cb-109">Windows Workflow Foundation 資料模型</span><span class="sxs-lookup"><span data-stu-id="190cb-109">Windows Workflow Foundation Data Model</span></span>](../../../docs/framework/windows-workflow-foundation/data-model.md)  
+ <span data-ttu-id="190cb-110">描述 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中變數、引數與運算式的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-110">Topics that describe variables, arguments and expressions in [!INCLUDE[wf1](../../../includes/wf1-md.md)].</span></span>  
   
- [在工作流程中等待輸入](../../../docs/framework/windows-workflow-foundation//waiting-for-input-in-a-workflow.md)  
- 描述如何使用書籤和傳訊活動的主題。  
+ [<span data-ttu-id="190cb-111">等待工作流程中的輸入</span><span class="sxs-lookup"><span data-stu-id="190cb-111">Waiting for Input in a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)  
+ <span data-ttu-id="190cb-112">描述如何使用書籤和傳訊活動的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-112">Topics that describes how to use bookmarks and messaging activities.</span></span>  
   
- [例外狀況、交易與補償](../../../docs/framework/windows-workflow-foundation//exceptions-transactions-and-compensation.md)  
- 描述如何使用例外狀況處理常式、交易與補償來處理執行階段錯誤的主題。  
+ [<span data-ttu-id="190cb-113">例外狀況、異動與補償</span><span class="sxs-lookup"><span data-stu-id="190cb-113">Exceptions, Transactions, and Compensation</span></span>](../../../docs/framework/windows-workflow-foundation/exceptions-transactions-and-compensation.md)  
+ <span data-ttu-id="190cb-114">描述如何使用例外狀況處理常式、異動與補償來處理執行階段錯誤的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-114">Topics that describe how to use exception handlers, transactions, and compensation to handle run-time errors.</span></span>  
   
- [裝載工作流程](../../../docs/framework/windows-workflow-foundation//hosting-workflows.md)  
- 說明撰寫工作流程主機應用程式詳細資料的主題。  
+ [<span data-ttu-id="190cb-115">裝載工作流程</span><span class="sxs-lookup"><span data-stu-id="190cb-115">Hosting Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)  
+ <span data-ttu-id="190cb-116">說明撰寫工作流程主機應用程式詳細資料的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-116">Topics that describe the details for writing workflow host applications.</span></span>  
   
- [動態更新](../../../docs/framework/windows-workflow-foundation//dynamic-update.md)  
- 說明如何使用動態更新來更新持續性工作流程執行個體的工作流程定義。  
+ [<span data-ttu-id="190cb-117">動態更新</span><span class="sxs-lookup"><span data-stu-id="190cb-117">Dynamic Update</span></span>](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)  
+ <span data-ttu-id="190cb-118">說明如何使用動態更新來更新持續性工作流程執行個體的工作流程定義。</span><span class="sxs-lookup"><span data-stu-id="190cb-118">Describes how to use dynamic update to update the workflow definition of a persisted workflow instance.</span></span>  
   
- [工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)  
- 描述支援以宣告方式撰寫服務之程式設計模型的主題。  
+ [<span data-ttu-id="190cb-119">工作流程服務</span><span class="sxs-lookup"><span data-stu-id="190cb-119">Workflow Services</span></span>](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ <span data-ttu-id="190cb-120">描述支援以宣告方式撰寫服務之程式設計模型的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-120">Topics that describe the programming model that supports writing services declaratively.</span></span>  
   
- [工作流程持續性](../../../docs/framework/windows-workflow-foundation//workflow-persistence.md)  
- 描述自動或手動保存工作流程資料以及從記憶體卸載工作流程之選項的主題。  
+ [<span data-ttu-id="190cb-121">工作流程持續性</span><span class="sxs-lookup"><span data-stu-id="190cb-121">Workflow Persistence</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
+ <span data-ttu-id="190cb-122">描述自動或手動保存工作流程資料以及從記憶體卸載工作流程之選項的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-122">Topics that describe the options for automatically or manually persisting workflow data and unloading workflows from memory.</span></span>  
   
- [移轉指引](../../../docs/framework/windows-workflow-foundation//migration-guidance.md)  
- 描述如何從舊版 [!INCLUDE[wf](../../../includes/wf-md.md)] 移轉工作流程的主題。  
+ [<span data-ttu-id="190cb-123">移轉指引</span><span class="sxs-lookup"><span data-stu-id="190cb-123">Migration Guidance</span></span>](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)  
+ <span data-ttu-id="190cb-124">描述如何從舊版 [!INCLUDE[wf](../../../includes/wf-md.md)] 移轉工作流程的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-124">Topics that describe how to migrate workflows from previous versions of [!INCLUDE[wf](../../../includes/wf-md.md)].</span></span>  
   
- [工作流程追蹤與追查](../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)  
- 描述工作流程追蹤，以及這些功能如何用於監視工作流程應用程式的主題。  
+ [<span data-ttu-id="190cb-125">工作流程追蹤及追蹤</span><span class="sxs-lookup"><span data-stu-id="190cb-125">Workflow Tracking and Tracing</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ <span data-ttu-id="190cb-126">描述工作流程追蹤，以及這些功能如何用於監視工作流程應用程式的主題。</span><span class="sxs-lookup"><span data-stu-id="190cb-126">Topics that describe workflow tracking and tracing and how these features are used for monitoring workflow applications.</span></span>  
   
- [工作流程安全性](../../../docs/framework/windows-workflow-foundation//workflow-security.md)  
- 討論當使用 SQL 和 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 時，如何保持工作流程的安全性。  
+ [<span data-ttu-id="190cb-127">工作流程安全性</span><span class="sxs-lookup"><span data-stu-id="190cb-127">Workflow Security</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-security.md)  
+ <span data-ttu-id="190cb-128">討論當使用 SQL 和 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 時，如何保持工作流程的安全性。</span><span class="sxs-lookup"><span data-stu-id="190cb-128">Discusses how to keep your workflow secure when using SQL and [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span></span>  
   
- [Windows Workflow Foundation 4 效能](../../../docs/framework/windows-workflow-foundation//performance.md)  
- 討論 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 4 的效能，並與舊版本的 WF 比較。
+ [<span data-ttu-id="190cb-129">Windows Workflow Foundation 4 效能</span><span class="sxs-lookup"><span data-stu-id="190cb-129">Windows Workflow Foundation 4 Performance</span></span>](../../../docs/framework/windows-workflow-foundation/performance.md)  
+ <span data-ttu-id="190cb-130">討論 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 4 的效能，並與舊版本的 WF 比較。</span><span class="sxs-lookup"><span data-stu-id="190cb-130">Discusses [!INCLUDE[wf2](../../../includes/wf2-md.md)] 4 performance and compares it to the previous version of WF.</span></span>

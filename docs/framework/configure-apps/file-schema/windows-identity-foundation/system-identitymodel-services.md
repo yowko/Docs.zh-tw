@@ -1,61 +1,65 @@
 ---
-title: "&lt;system.identityModel.services&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;system.identityModel.services&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
-caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a5f0b6b207fbd51504149fd5c245f41ef89f17f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.identityModel.services&gt;
-使用 「 WS\-同盟通訊協定進行驗證的組態區段。  
+# <a name="ltsystemidentitymodelservicesgt"></a><span data-ttu-id="fe057-102">&lt;system.identityModel.services&gt;</span><span class="sxs-lookup"><span data-stu-id="fe057-102">&lt;system.identityModel.services&gt;</span></span>
+<span data-ttu-id="fe057-103">使用 WS-同盟通訊協定進行驗證的組態區段。</span><span class="sxs-lookup"><span data-stu-id="fe057-103">Configuration section for authentication using the WS-Federation protocol.</span></span>  
   
- \<system.identityModel.services\>  
+ <span data-ttu-id="fe057-104">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="fe057-104">\<system.identityModel.services></span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="fe057-105">語法</span><span class="sxs-lookup"><span data-stu-id="fe057-105">Syntax</span></span>  
   
-```  
+```xml  
 <system.identityModel.services>  
-  <federationConfiguration name=xs:string identityConfigurationName=xs:string>  
-  </federationConfiguration>  
+  <federationConfiguration name=xs:string identityConfigurationName=xs:string>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fe057-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="fe057-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="fe057-107">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="fe057-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- None  
+### <a name="attributes"></a><span data-ttu-id="fe057-108">屬性</span><span class="sxs-lookup"><span data-stu-id="fe057-108">Attributes</span></span>  
+ <span data-ttu-id="fe057-109">無</span><span class="sxs-lookup"><span data-stu-id="fe057-109">None</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="fe057-110">子元素</span><span class="sxs-lookup"><span data-stu-id="fe057-110">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|包含設定的<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\) HTTP 模組。|  
+|<span data-ttu-id="fe057-111">項目</span><span class="sxs-lookup"><span data-stu-id="fe057-111">Element</span></span>|<span data-ttu-id="fe057-112">說明</span><span class="sxs-lookup"><span data-stu-id="fe057-112">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="fe057-113">\<federationConfiguration></span><span class="sxs-lookup"><span data-stu-id="fe057-113">\<federationConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|<span data-ttu-id="fe057-114">包含設定的設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) HTTP 模組。</span><span class="sxs-lookup"><span data-stu-id="fe057-114">Contains the settings that configure the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) and the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) HTTP modules.</span></span>|  
   
-### 父項目  
- None  
+### <a name="parent-elements"></a><span data-ttu-id="fe057-115">父項目</span><span class="sxs-lookup"><span data-stu-id="fe057-115">Parent Elements</span></span>  
+ <span data-ttu-id="fe057-116">無</span><span class="sxs-lookup"><span data-stu-id="fe057-116">None</span></span>  
   
-## 備註  
- 新增`<system.identityModel.services>`一節，以提供設定的 SAM 和 WSFAM 應用程式組態檔。  
+## <a name="remarks"></a><span data-ttu-id="fe057-117">備註</span><span class="sxs-lookup"><span data-stu-id="fe057-117">Remarks</span></span>  
+ <span data-ttu-id="fe057-118">新增`<system.identityModel.services>`SAM 和 WSFAM 提供設定您的應用程式組態檔的區段。</span><span class="sxs-lookup"><span data-stu-id="fe057-118">Add a `<system.identityModel.services>` section to your application’s configuration file to provide settings for the SAM and WSFAM.</span></span>  
   
 > [!IMPORTANT]
->  使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別提供在程式碼，宣告的授權管理員中的宣告式存取控制 \(<xref:System.Security.Claims.ClaimsAuthorizationManager>\)，且用來製作授權決策的原則設定透過`<identityConfiguration>`隱含或明確地從參考的項目`<federationConfiguration>`在這一節中的項目。  如需詳細資訊，請參閱**註解**下[\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。  
+>  <span data-ttu-id="fe057-119">當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別，以提供您的程式碼宣告授權管理員中的宣告型存取控制 (<xref:System.Security.Claims.ClaimsAuthorizationManager>) 和用來製作授權決策的原則透過設定`<identityConfiguration>`參考項目隱含或明確地從`<federationConfiguration>`本節中的項目。</span><span class="sxs-lookup"><span data-stu-id="fe057-119">When using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control in your code, the claims authorization manager (<xref:System.Security.Claims.ClaimsAuthorizationManager>) and policy that is used to make authorization decisions are configured through an `<identityConfiguration>` element that is implicitly or explicitly referenced from a `<federationConfiguration>` element in this section.</span></span> <span data-ttu-id="fe057-120">如需詳細資訊，請參閱**備註**下[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。</span><span class="sxs-lookup"><span data-stu-id="fe057-120">For more information, see the **Remarks** under the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>  
   
- `<system.identityModel.services>`區段會顯示由<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>類別。  子系的集合`<federationConfiguration>`一節中所設定的項目會以<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>類別。  
+ <span data-ttu-id="fe057-121">`<system.identityModel.services>`區段由<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>類別。</span><span class="sxs-lookup"><span data-stu-id="fe057-121">The `<system.identityModel.services>` section is represented by the <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> class.</span></span> <span data-ttu-id="fe057-122">子集合`<federationConfiguration>`設定一節中的項目由<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>類別。</span><span class="sxs-lookup"><span data-stu-id="fe057-122">The collection of child `<federationConfiguration>` elements configured in the section is represented by the <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> class.</span></span>  
   
-## 範例  
- 下列 XML 程式碼顯示如何將`<system.identityModel.services>`一節，以組態檔。  您必須先新增區段宣告兩個`<system.identityModel.services>`一節並`<system.identityModel>`區段。  \(當您將加入`<system.identityModel.services>` \] 區段中，您應該加入宣告`<system.identityModel>`一節，以確保預設的`<identityConfiguration>`可以由執行階段建立區段，如有必要。\)加入區段宣告之後，您可以設定聯盟的驗證設定，在`<system.identityModel.services>`項目。  
+## <a name="example"></a><span data-ttu-id="fe057-123">範例</span><span class="sxs-lookup"><span data-stu-id="fe057-123">Example</span></span>  
+ <span data-ttu-id="fe057-124">下列 XML 說明如何新增`<system.identityModel.services>`區段的組態檔。</span><span class="sxs-lookup"><span data-stu-id="fe057-124">The following XML shows how to add a `<system.identityModel.services>` section to a configuration file.</span></span> <span data-ttu-id="fe057-125">您必須先新增兩個區段宣告`<system.identityModel.services>`區段和`<system.identityModel>`區段。</span><span class="sxs-lookup"><span data-stu-id="fe057-125">You must first add section declarations for both the `<system.identityModel.services>` section and the `<system.identityModel>` sections.</span></span> <span data-ttu-id="fe057-126">(當您將加入`<system.identityModel.services>` 區段中，您應該加入宣告`<system.identityModel>`> 一節以確保預設`<identityConfiguration>`如有必要，可以由執行階段建立區段。)在加入區段宣告之後，您可以設定同盟的驗證下`<system.identityModel.services>`項目。</span><span class="sxs-lookup"><span data-stu-id="fe057-126">(When you add a `<system.identityModel.services>` section, you should also add a declaration for the `<system.identityModel>` section to ensure that a default `<identityConfiguration>` section can be created by the runtime if necessary.) After the section declarations have been added, you can configure federated authentication settings under the `<system.identityModel.services>` element.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <configSections>  
     <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />  

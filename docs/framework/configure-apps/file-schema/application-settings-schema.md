@@ -1,99 +1,104 @@
 ---
-title: "應用程式設定結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式設定, 結構描述 [Windows Form]"
-  - "組態結構描述 [.NET Framework], 應用程式設定"
-  - "結構描述應用程式設定"
-  - "Windows Form, 應用程式設定結構描述"
+title: "應用程式設定結構描述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema application settings
+- application settings, schema [Windows Forms]
+- Windows Forms, application settings schema
+- configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-caps.latest.revision: 3
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d93a18b17e0d6b8e413903fb84dc6b427d94f6af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 應用程式設定結構描述
-應用程式設定可讓 Windows Form 或 ASP.NET 應用程式儲存及擷取應用程式範圍和使用者範圍的設定。  在本內容中，「設定」是指專用於應用程式或專用於目前使用者的任何一項資訊，從資料庫連接字串到使用者慣用的預設視窗大小等等都是。  
-  
- 根據預設，Windows Form 應用程式中的應用程式設定會使用 <xref:System.Configuration.LocalFileSettingsProvider>，其會使用 .NET 組態系統來儲存 XML 組態檔中的設定。  如需應用程式設定的檔案用法的詳細資訊，請參閱[應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
-  
- 應用程式設定會定義下列項目做為它所使用的組態檔的一部分。  
-  
-|元素|說明|  
-|--------|--------|  
-|`<applicationSettings>` 項目|包含應用程式專用的所有 `<setting>` 標籤。|  
-|`<userSettings>` 項目|包含目前使用者專用的所有 `<setting>` 標籤。|  
-|`<setting>` 項目|會定義某項設定，  是 `<applicationSettings>` 或 `<userSettings>` 的子系。|  
-|`<value>` 項目|會定義某項設定的值，  是 `<setting>` 的子系。|  
-  
-## \<applicationSettings\> 項目  
- 這個項目會包含用戶端電腦上應用程式執行個體專用的所有 \<setting\> 標籤。  它不會定義任何屬性。  
-  
-## \<userSettings\> 項目  
- 這個項目會包含目前正在使用應用程式的使用者所專用的所有 \<setting\> 標籤。  它不會定義任何屬性。  
-  
-## \<setting\> 項目  
- 這個項目會定義某個設定。  它具有下列屬性：  
-  
-|元素|說明|  
-|--------|--------|  
-|`name`|必要項。  設定的唯一 ID。  經由 Visual Studio 所建立的設定都是以 `ProjectName``.Properties.Settings` 的名稱來儲存。|  
-|`serializedAs`|必要項。  用於將值序列化為文字時要使用的格式。  有效值為：<br /><br /> -   `string`。  經由使用 <xref:System.ComponentModel.TypeConverter> 將值序列化為字串。<br />-   `xml`。  經由使用 XML 序列化將值加以序列化。<br />-   `binary`。  經由使用二進位序列化將值序列化為文字編碼的二進位碼。<br />-   `custom`。  設定提供者原本就瞭解這項設定，並且會將它序列化與還原序列化。<br />-   若要使用二進位或自訂序列化，您必須自己定義設定類別，並使用 <xref:System.Configuration.SettingsSerializeAsAttribute> 來指定二進位或自訂序列化。|  
-  
-## \<value\> 項目  
- 這個項目會包含設定的值。  
-  
-## 範例  
- 下列程式碼範例會示範一個應用程式設定檔，此檔會定義兩個應用程式範圍設定以及兩個使用者範圍設定。  
-  
-```  
-<?xml version="1.0" encoding="utf-8" ?>  
-<configuration>  
-    <configSections>  
-        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >  
-            <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
-        </sectionGroup>  
-        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >  
-            <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" />  
-        </sectionGroup>  
-    </configSections>  
-    <applicationSettings>  
-        <WindowsApplication1.Properties.Settings>  
-            <setting name="Cursor" serializeAs="String">  
-                <value>Default</value>  
-            </setting>  
-            <setting name="DoubleBuffering" serializeAs="String">  
-                <value>False</value>  
-            </setting>  
-        </WindowsApplication1.Properties.Settings>  
-    </applicationSettings>  
-    <userSettings>  
-        <WindowsApplication1.Properties.Settings>  
-            <setting name="FormTitle" serializeAs="String">  
-                <value>Form1</value>  
-            </setting>  
-            <setting name="FormSize" serializeAs="String">  
-                <value>595, 536</value>  
-            </setting>  
-        </WindowsApplication1.Properties.Settings>  
-    </userSettings>  
-</configuration>  
-```  
-  
-## 請參閱  
- [應用程式設定概觀](../../../../docs/framework/winforms/advanced/application-settings-overview.md)   
- [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+# <a name="application-settings-schema"></a><span data-ttu-id="9943a-102">應用程式設定結構描述</span><span class="sxs-lookup"><span data-stu-id="9943a-102">Application Settings schema</span></span>
+
+<span data-ttu-id="9943a-103">應用程式設定允許的 Windows Form 或 ASP.NET 應用程式來儲存和擷取應用程式範圍和使用者範圍設定。</span><span class="sxs-lookup"><span data-stu-id="9943a-103">Application settings allow a Windows Forms or ASP.NET application to store and retrieve application-scoped and user-scoped settings.</span></span> <span data-ttu-id="9943a-104">在此內容中*設定*任何一項可能是應用程式特定的或目前使用者特有的資訊，從使用者的資料庫連接字串的任何項目慣用的預設視窗大小。</span><span class="sxs-lookup"><span data-stu-id="9943a-104">In this context, a *setting* is any piece of information that may be specific to the application or specific to the current user — anything from a database connection string to the user's preferred default window size.</span></span>
+
+<span data-ttu-id="9943a-105">根據預設，Windows Forms 應用程式的應用程式設定使用<xref:System.Configuration.LocalFileSettingsProvider>類別，以將設定儲存在 XML 組態檔會使用.NET 組態系統。</span><span class="sxs-lookup"><span data-stu-id="9943a-105">By default, application settings in a Windows Forms application uses the <xref:System.Configuration.LocalFileSettingsProvider> class, which uses the .NET configuration system to store settings in an XML configuration file.</span></span> <span data-ttu-id="9943a-106">如需使用應用程式設定之檔案的詳細資訊，請參閱[應用程式設定架構](~/docs/framework/winforms/advanced/application-settings-architecture.md)。</span><span class="sxs-lookup"><span data-stu-id="9943a-106">For more information about the files used by application settings, see [Application Settings Architecture](~/docs/framework/winforms/advanced/application-settings-architecture.md).</span></span>
+
+<span data-ttu-id="9943a-107">應用程式設定會定義下列項目，它會使用組態檔的一部分。</span><span class="sxs-lookup"><span data-stu-id="9943a-107">Application settings defines the following elements as part of the configuration files it uses.</span></span>
+
+| <span data-ttu-id="9943a-108">項目</span><span class="sxs-lookup"><span data-stu-id="9943a-108">Element</span></span>                    | <span data-ttu-id="9943a-109">說明</span><span class="sxs-lookup"><span data-stu-id="9943a-109">Description</span></span>                                                                           |
+| -------------------------- | ------------------------------------------------------------------------------------- |
+| <span data-ttu-id="9943a-110">**\<applicationSettings >**</span><span class="sxs-lookup"><span data-stu-id="9943a-110">**\<applicationSettings>**</span></span> | <span data-ttu-id="9943a-111">包含所有**\<設定 >**應用程式特定的標記。</span><span class="sxs-lookup"><span data-stu-id="9943a-111">Contains all **\<setting>** tags specific to the application.</span></span>                         |
+| <span data-ttu-id="9943a-112">**\<userSettings >**</span><span class="sxs-lookup"><span data-stu-id="9943a-112">**\<userSettings>**</span></span>        | <span data-ttu-id="9943a-113">包含所有**\<設定 >**特定於目前的使用者標記。</span><span class="sxs-lookup"><span data-stu-id="9943a-113">Contains all **\<setting>** tags specific to the current user.</span></span>                        |
+| <span data-ttu-id="9943a-114">**\<設定 >**</span><span class="sxs-lookup"><span data-stu-id="9943a-114">**\<setting>**</span></span>             | <span data-ttu-id="9943a-115">定義設定。</span><span class="sxs-lookup"><span data-stu-id="9943a-115">Defines a setting.</span></span> <span data-ttu-id="9943a-116">子系 **\<applicationSettings >**或 **\<userSettings >**。</span><span class="sxs-lookup"><span data-stu-id="9943a-116">Child of either **\<applicationSettings>** or **\<userSettings>**.</span></span> |
+| <span data-ttu-id="9943a-117">**\<value>**</span><span class="sxs-lookup"><span data-stu-id="9943a-117">**\<value>**</span></span>               | <span data-ttu-id="9943a-118">定義設定的值。</span><span class="sxs-lookup"><span data-stu-id="9943a-118">Defines a setting's value.</span></span> <span data-ttu-id="9943a-119">子系**\<設定 >**。</span><span class="sxs-lookup"><span data-stu-id="9943a-119">Child of **\<setting>**.</span></span>                                   |
+
+## <a name="applicationsettings-element"></a><span data-ttu-id="9943a-120">\<applicationSettings > 項目</span><span class="sxs-lookup"><span data-stu-id="9943a-120">\<applicationSettings> element</span></span>
+
+<span data-ttu-id="9943a-121">這個項目包含所有**\<設定 >**特有的用戶端電腦上的應用程式執行個體的標籤。</span><span class="sxs-lookup"><span data-stu-id="9943a-121">This element contains all **\<setting>** tags that are specific to an instance of the application on a client computer.</span></span> <span data-ttu-id="9943a-122">它不會定義任何屬性。</span><span class="sxs-lookup"><span data-stu-id="9943a-122">It defines no attributes.</span></span>
+
+## <a name="usersettings-element"></a><span data-ttu-id="9943a-123">\<userSettings > 項目</span><span class="sxs-lookup"><span data-stu-id="9943a-123">\<userSettings> element</span></span>
+
+<span data-ttu-id="9943a-124">這個項目包含所有**\<設定 >**專屬於目前正在使用應用程式之使用者的標記。</span><span class="sxs-lookup"><span data-stu-id="9943a-124">This element contains all **\<setting>** tags that are specific to the user who is currently using the application.</span></span> <span data-ttu-id="9943a-125">它不會定義任何屬性。</span><span class="sxs-lookup"><span data-stu-id="9943a-125">It defines no attributes.</span></span>
+
+## <a name="setting-element"></a><span data-ttu-id="9943a-126">\<設定 > 項目</span><span class="sxs-lookup"><span data-stu-id="9943a-126">\<setting> element</span></span>
+
+<span data-ttu-id="9943a-127">這個項目定義的設定。</span><span class="sxs-lookup"><span data-stu-id="9943a-127">This element defines a setting.</span></span> <span data-ttu-id="9943a-128">它有下列屬性。</span><span class="sxs-lookup"><span data-stu-id="9943a-128">It has the following attributes.</span></span>
+
+| <span data-ttu-id="9943a-129">屬性</span><span class="sxs-lookup"><span data-stu-id="9943a-129">Attribute</span></span>        | <span data-ttu-id="9943a-130">說明</span><span class="sxs-lookup"><span data-stu-id="9943a-130">Description</span></span> |
+| ---------------- | ----------- |
+| <span data-ttu-id="9943a-131">**name**</span><span class="sxs-lookup"><span data-stu-id="9943a-131">**name**</span></span>         | <span data-ttu-id="9943a-132">必要項。</span><span class="sxs-lookup"><span data-stu-id="9943a-132">Required.</span></span> <span data-ttu-id="9943a-133">設定的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="9943a-133">The unique ID of the setting.</span></span> <span data-ttu-id="9943a-134">透過 Visual Studio 建立的設定會儲存具有名稱`ProjectName.Properties.Settings`。</span><span class="sxs-lookup"><span data-stu-id="9943a-134">Settings created through Visual Studio are saved with the name `ProjectName.Properties.Settings`.</span></span> |
+| <span data-ttu-id="9943a-135">**serializedAs**</span><span class="sxs-lookup"><span data-stu-id="9943a-135">**serializedAs**</span></span> | <span data-ttu-id="9943a-136">必要項。</span><span class="sxs-lookup"><span data-stu-id="9943a-136">Required.</span></span> <span data-ttu-id="9943a-137">要用於序列化成文字值的格式。</span><span class="sxs-lookup"><span data-stu-id="9943a-137">The format to use for serializing the value to text.</span></span> <span data-ttu-id="9943a-138">有效值為：</span><span class="sxs-lookup"><span data-stu-id="9943a-138">Valid values are:</span></span><br><br><span data-ttu-id="9943a-139">- `string`。</span><span class="sxs-lookup"><span data-stu-id="9943a-139">- `string`.</span></span> <span data-ttu-id="9943a-140">值序列化為字串，使用<xref:System.ComponentModel.TypeConverter>。</span><span class="sxs-lookup"><span data-stu-id="9943a-140">The value is serialized as a string using a <xref:System.ComponentModel.TypeConverter>.</span></span><br><span data-ttu-id="9943a-141">- `xml`。</span><span class="sxs-lookup"><span data-stu-id="9943a-141">- `xml`.</span></span> <span data-ttu-id="9943a-142">使用 XML 序列化序列化值。</span><span class="sxs-lookup"><span data-stu-id="9943a-142">The value is serialized using XML serialization.</span></span><br><span data-ttu-id="9943a-143">- `binary`。</span><span class="sxs-lookup"><span data-stu-id="9943a-143">- `binary`.</span></span> <span data-ttu-id="9943a-144">值序列化為文字編碼的二進位檔使用二進位序列化。</span><span class="sxs-lookup"><span data-stu-id="9943a-144">The value is serialized as text-encoded binary using binary serialization.</span></span><br /><span data-ttu-id="9943a-145">- `custom`。</span><span class="sxs-lookup"><span data-stu-id="9943a-145">- `custom`.</span></span> <span data-ttu-id="9943a-146">設定提供者知道固有的這項設定和序列化並將它取消序列化。</span><span class="sxs-lookup"><span data-stu-id="9943a-146">The settings provider has inherent knowledge of this setting and serializes and de-serializes it.</span></span> |
+
+## <a name="value-element"></a><span data-ttu-id="9943a-147">\<值 > 項目</span><span class="sxs-lookup"><span data-stu-id="9943a-147">\<value> element</span></span>
+
+<span data-ttu-id="9943a-148">這個項目包含設定的值。</span><span class="sxs-lookup"><span data-stu-id="9943a-148">This element contains the value of a setting.</span></span>
+
+## <a name="example"></a><span data-ttu-id="9943a-149">範例</span><span class="sxs-lookup"><span data-stu-id="9943a-149">Example</span></span>
+
+<span data-ttu-id="9943a-150">下列範例顯示定義兩個應用程式範圍的設定和兩個使用者範圍設定的應用程式設定檔：</span><span class="sxs-lookup"><span data-stu-id="9943a-150">The following example shows an application settings file that defines two application-scoped settings and two user-scoped settings:</span></span>
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    </sectionGroup>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" />
+    </sectionGroup>
+  </configSections>
+  <applicationSettings>
+    <WindowsApplication1.Properties.Settings>
+      <setting name="Cursor" serializeAs="String">
+        <value>Default</value>
+      </setting>
+      <setting name="DoubleBuffering" serializeAs="String">
+        <value>False</value>
+      </setting>
+    </WindowsApplication1.Properties.Settings>
+  </applicationSettings>
+  <userSettings>
+    <WindowsApplication1.Properties.Settings>
+      <setting name="FormTitle" serializeAs="String">
+        <value>Form1</value>
+      </setting>
+      <setting name="FormSize" serializeAs="String">
+        <value>595, 536</value>
+      </setting>
+    </WindowsApplication1.Properties.Settings>
+  </userSettings>
+</configuration>
+```
+
+## <a name="see-also"></a><span data-ttu-id="9943a-151">請參閱</span><span class="sxs-lookup"><span data-stu-id="9943a-151">See also</span></span>
+
+<span data-ttu-id="9943a-152">[應用程式設定概觀](~/docs/framework/winforms/advanced/application-settings-overview.md) </span><span class="sxs-lookup"><span data-stu-id="9943a-152">[Application Settings Overview](~/docs/framework/winforms/advanced/application-settings-overview.md) </span></span>  
+[<span data-ttu-id="9943a-153">應用程式設定架構</span><span class="sxs-lookup"><span data-stu-id="9943a-153">Application Settings Architecture</span></span>](~/docs/framework/winforms/advanced/application-settings-architecture.md)

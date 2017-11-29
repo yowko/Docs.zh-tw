@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - managed debugging assistants (MDAs), early bound calls AutoDispatch
 - dispatch-only mode
@@ -23,38 +17,37 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 838348b3af485025ee196931237527333be73235
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: eebbf48f084a0c0125bf40e5e14b8c71c1b0a6ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface MDA
-在已標記為僅限晚期繫結的類別介面上，嘗試透過 vtable 進行早期繫結呼叫時，會啟動 `dirtyCastAndCallOnInterface` Managed 偵錯助理 (MDA)。  
+# <a name="dirtycastandcalloninterface-mda"></a><span data-ttu-id="656ec-102">dirtyCastAndCallOnInterface MDA</span><span class="sxs-lookup"><span data-stu-id="656ec-102">dirtyCastAndCallOnInterface MDA</span></span>
+<span data-ttu-id="656ec-103">在已標記為僅限晚期繫結的類別介面上，嘗試透過 vtable 進行早期繫結呼叫時，會啟動 `dirtyCastAndCallOnInterface` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="656ec-103">The `dirtyCastAndCallOnInterface` managed debugging assistant (MDA) is activated when an early-bound call through a vtable is attempted on a class interface that has been marked late-bound only.</span></span>  
   
-## <a name="symptoms"></a>徵兆   
- 將經由 COM 進行的早期繫結呼叫置入 CLR 時，應用程式會擲回存取違規或發生未預期的行為。  
+## <a name="symptoms"></a><span data-ttu-id="656ec-104">徵兆 </span><span class="sxs-lookup"><span data-stu-id="656ec-104">Symptoms</span></span>  
+ <span data-ttu-id="656ec-105">將經由 COM 進行的早期繫結呼叫置入 CLR 時，應用程式會擲回存取違規或發生未預期的行為。</span><span class="sxs-lookup"><span data-stu-id="656ec-105">An application throws an access violation or has unexpected behavior when placing an early-bound call via COM into the CLR.</span></span>  
   
-## <a name="cause"></a>原因  
- 程式碼嘗試經由僅限晚期繫結的類別介面，透過 vtable 進行早期繫結呼叫。 請注意，預設會將類別介面識別為僅限晚期繫結。 使用 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 屬性搭配 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> 值 (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`)，也可能將類別介面識別為晚期繫結。  
+## <a name="cause"></a><span data-ttu-id="656ec-106">原因</span><span class="sxs-lookup"><span data-stu-id="656ec-106">Cause</span></span>  
+ <span data-ttu-id="656ec-107">程式碼嘗試經由僅限晚期繫結的類別介面，透過 vtable 進行早期繫結呼叫。</span><span class="sxs-lookup"><span data-stu-id="656ec-107">Code is attempting an early-bound call through a vtable via a class interface that is late-bound only.</span></span> <span data-ttu-id="656ec-108">請注意，預設會將類別介面識別為僅限晚期繫結。</span><span class="sxs-lookup"><span data-stu-id="656ec-108">Note that by default class interfaces are identified as being late-bound only.</span></span> <span data-ttu-id="656ec-109">使用 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 屬性搭配 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> 值 (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`)，也可能將類別介面識別為晚期繫結。</span><span class="sxs-lookup"><span data-stu-id="656ec-109">They can also be identified as late-bound with the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute with an <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> value (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).</span></span>  
   
-## <a name="resolution"></a>解決方式  
- 建議的解決方式是定義明確介面以供 COM 使用，並讓 COM 用戶端透過這個介面 (而不是透過自動產生的類別介面) 進行呼叫。 或者，從 COM 的呼叫也可以轉換成經由 `IDispatch` 的晚期繫結呼叫。  
+## <a name="resolution"></a><span data-ttu-id="656ec-110">解決方式</span><span class="sxs-lookup"><span data-stu-id="656ec-110">Resolution</span></span>  
+ <span data-ttu-id="656ec-111">建議的解決方式是定義明確介面以供 COM 使用，並讓 COM 用戶端透過這個介面 (而不是透過自動產生的類別介面) 進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="656ec-111">The recommended resolution is to define an explicit interface for use by COM and have the COM clients call through this interface instead of through the automatically generated class interface.</span></span> <span data-ttu-id="656ec-112">或者，從 COM 的呼叫也可以轉換成經由 `IDispatch` 的晚期繫結呼叫。</span><span class="sxs-lookup"><span data-stu-id="656ec-112">Alternatively, the call from COM can be transformed into a late-bound call via `IDispatch`.</span></span>  
   
- 最後，您可以將類別識別為 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`)，以允許從 COM 發出早期繫結呼叫；不過由於 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 中所述的版本控制限制，強烈不建議使用 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>。  
+ <span data-ttu-id="656ec-113">最後，您可以將類別識別為 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`)，以允許從 COM 發出早期繫結呼叫；不過由於 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 中所述的版本控制限制，強烈不建議使用 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>。</span><span class="sxs-lookup"><span data-stu-id="656ec-113">Finally, it is possible to identify the class as <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) to allow early bound calls to be placed from COM; however, using <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> is strongly discouraged because of the versioning limitations described in <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>對執行階段的影響  
- 此 MDA 對 CLR 沒有影響。 它只會報告有關晚期繫結介面上之早期繫結呼叫的資料。  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="656ec-114">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="656ec-114">Effect on the Runtime</span></span>  
+ <span data-ttu-id="656ec-115">此 MDA 對 CLR 沒有影響。</span><span class="sxs-lookup"><span data-stu-id="656ec-115">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="656ec-116">它只會報告有關晚期繫結介面上之早期繫結呼叫的資料。</span><span class="sxs-lookup"><span data-stu-id="656ec-116">It only reports data about early-bound calls on late-bound interfaces.</span></span>  
   
-## <a name="output"></a>輸出  
- 以早期繫結存取之方法或欄位的名稱。  
+## <a name="output"></a><span data-ttu-id="656ec-117">輸出</span><span class="sxs-lookup"><span data-stu-id="656ec-117">Output</span></span>  
+ <span data-ttu-id="656ec-118">以早期繫結存取之方法或欄位的名稱。</span><span class="sxs-lookup"><span data-stu-id="656ec-118">The name of the method or name of the field being accessed early-bound.</span></span>  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a><span data-ttu-id="656ec-119">組態</span><span class="sxs-lookup"><span data-stu-id="656ec-119">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -64,7 +57,6 @@ ms.lasthandoff: 08/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>   
- [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="656ec-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="656ec-120">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
+ [<span data-ttu-id="656ec-121">使用 Managed 偵錯助理診斷錯誤</span><span class="sxs-lookup"><span data-stu-id="656ec-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

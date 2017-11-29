@@ -1,66 +1,68 @@
 ---
-title: "Windows Communication Foundation 繫結概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "繫結 [WCF], 概觀"
+title: "Windows Communication Foundation 繫結概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a131574e0e3de8507a91807d5de2899238c14628
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation 繫結概觀
-繫結是一種物件，可用來指定連線至 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務端點時所需的通訊詳細資料。  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中的每個端點都需要繫結才能正確地指定。  這個主題會概述繫結所定義的通訊詳細資料類型、繫結項目、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所含的繫結以及對端點指定繫結的方式。  
+# <a name="windows-communication-foundation-bindings-overview"></a><span data-ttu-id="13ef2-102">Windows Communication Foundation 繫結概觀</span><span class="sxs-lookup"><span data-stu-id="13ef2-102">Windows Communication Foundation Bindings Overview</span></span>
+<span data-ttu-id="13ef2-103">繫結是一種物件，可用來指定連線至 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務端點時所需的通訊詳細資料。</span><span class="sxs-lookup"><span data-stu-id="13ef2-103">Bindings are objects that are used to specify the communication details that are required to connect to the endpoint of a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="13ef2-104">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中的每個端點都需要繫結才能正確地指定。</span><span class="sxs-lookup"><span data-stu-id="13ef2-104">Each endpoint in a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service requires a binding to be well-specified.</span></span> <span data-ttu-id="13ef2-105">這個主題會概述繫結所定義的通訊詳細資料類型、繫結項目、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所含的繫結以及對端點指定繫結的方式。</span><span class="sxs-lookup"><span data-stu-id="13ef2-105">This topic outlines the types of communication details that the bindings define, the elements of a binding, what bindings are included in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], and how a binding can be specified for an endpoint.</span></span>  
   
-## 繫結所定義的內容  
- 繫結中的資訊可能很基本，也可能很複雜。  最基本的繫結只會指定連線至端點時必須使用的傳輸通訊協定 \(例如 HTTP\)。  更一般來說，繫結中所含與如何連線至端點有關的資訊，與下列其中一種類別息息相關。  
+## <a name="what-a-binding-defines"></a><span data-ttu-id="13ef2-106">繫結所定義的內容</span><span class="sxs-lookup"><span data-stu-id="13ef2-106">What a Binding Defines</span></span>  
+ <span data-ttu-id="13ef2-107">繫結中的資訊可能很基本，也可能很複雜。</span><span class="sxs-lookup"><span data-stu-id="13ef2-107">The information in a binding can be very basic, or very complex.</span></span> <span data-ttu-id="13ef2-108">最基本的繫結只會指定連線至端點時必須使用的傳輸通訊協定 (例如 HTTP)。</span><span class="sxs-lookup"><span data-stu-id="13ef2-108">The most basic binding specifies only the transport protocol (such as HTTP) that must be used to connect to the endpoint.</span></span> <span data-ttu-id="13ef2-109">更一般來說，繫結中所含與如何連線至端點有關的資訊，與下列其中一種類別息息相關。</span><span class="sxs-lookup"><span data-stu-id="13ef2-109">More generally, the information a binding contains about how to connect to an endpoint falls into one of the following categories.</span></span>  
   
- 通訊協定  
- 判斷使用的安全性機制：可靠的傳訊能力或交易內容流量設定。  
+ <span data-ttu-id="13ef2-110">通訊協定</span><span class="sxs-lookup"><span data-stu-id="13ef2-110">Protocols</span></span>  
+ <span data-ttu-id="13ef2-111">判斷使用的安全性機制：可靠的傳訊能力或交易內容流量設定。</span><span class="sxs-lookup"><span data-stu-id="13ef2-111">Determines the security mechanism being used: either reliable messaging capability or transaction context flow settings.</span></span>  
   
- 編碼  
- 判斷訊息的編碼方式 \(例如，文字或二進位\)。  
+ <span data-ttu-id="13ef2-112">編碼</span><span class="sxs-lookup"><span data-stu-id="13ef2-112">Encoding</span></span>  
+ <span data-ttu-id="13ef2-113">判斷訊息的編碼方式 (例如，文字或二進位)。</span><span class="sxs-lookup"><span data-stu-id="13ef2-113">Determines the message encoding (for example, text or binary).</span></span>  
   
- Transport  
- 判斷要使用的基礎傳輸通訊協定 \(例如，TCP 或 HTTP\)。  
+ <span data-ttu-id="13ef2-114">Transport</span><span class="sxs-lookup"><span data-stu-id="13ef2-114">Transport</span></span>  
+ <span data-ttu-id="13ef2-115">判斷要使用的基礎傳輸通訊協定 (例如，TCP 或 HTTP)。</span><span class="sxs-lookup"><span data-stu-id="13ef2-115">Determines the underlying transport protocol to use (for example, TCP or HTTP).</span></span>  
   
-## 繫結項目  
- 繫結基本上是由排列順序的繫結項目堆疊所組成，而每個繫結項目都會指定連線至服務端點時所需的部分通訊資訊。  堆疊中最低的那兩層為必要項。  堆疊基底是傳輸繫結項目，而這個項目的正上方是其中含有訊息編碼規格的項目。  指定其他通訊協定的選用繫結元素則會置於這兩個必要元素之上。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]這些繫結元素與其正確順序的詳細資訊，請參閱 [自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)。  
+## <a name="the-elements-of-a-binding"></a><span data-ttu-id="13ef2-116">繫結項目</span><span class="sxs-lookup"><span data-stu-id="13ef2-116">The Elements of a Binding</span></span>  
+ <span data-ttu-id="13ef2-117">繫結基本上是由排列順序的繫結項目堆疊所組成，而每個繫結項目都會指定連線至服務端點時所需的部分通訊資訊。</span><span class="sxs-lookup"><span data-stu-id="13ef2-117">A binding basically consists of an ordered stack of binding elements, each of which specifies part of the communication information required to connect to a service endpoint.</span></span> <span data-ttu-id="13ef2-118">堆疊中最低的那兩層為必要項。</span><span class="sxs-lookup"><span data-stu-id="13ef2-118">The two lowest layers in the stack are both required.</span></span> <span data-ttu-id="13ef2-119">堆疊基底是傳輸繫結項目，而這個項目的正上方是其中含有訊息編碼規格的項目。</span><span class="sxs-lookup"><span data-stu-id="13ef2-119">At the base of the stack is the transport binding element and just above this is the element that contains the message encoding specifications.</span></span> <span data-ttu-id="13ef2-120">指定其他通訊協定的選用繫結元素則會置於這兩個必要元素之上。</span><span class="sxs-lookup"><span data-stu-id="13ef2-120">The optional binding elements that specify the other communication protocols are layered above these two required elements.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="13ef2-121">這些繫結項目和其正確順序，請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="13ef2-121"> these binding elements and their correct ordering, see [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
-## 系統提供的繫結  
- 繫結中的資訊可能很複雜，而有些設定也可能彼此不相容。  因此，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含了一組系統提供的繫結。  這些繫結設計為滿足大多數應用程式需求。  下列類別則表示系統提供之繫結的一些範例：  
+## <a name="system-provided-bindings"></a><span data-ttu-id="13ef2-122">系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="13ef2-122">System-Provided Bindings</span></span>  
+ <span data-ttu-id="13ef2-123">繫結中的資訊可能很複雜，而有些設定也可能彼此不相容。</span><span class="sxs-lookup"><span data-stu-id="13ef2-123">The information in a binding can be complex, and some settings may not be compatible with others.</span></span> <span data-ttu-id="13ef2-124">因此，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含了一組系統提供的繫結。</span><span class="sxs-lookup"><span data-stu-id="13ef2-124">For this reason, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] includes a set of system-provided bindings.</span></span> <span data-ttu-id="13ef2-125">這些繫結設計為滿足大多數應用程式需求。</span><span class="sxs-lookup"><span data-stu-id="13ef2-125">These bindings are designed to cover most application requirements.</span></span> <span data-ttu-id="13ef2-126">下列類別則表示系統提供之繫結的一些範例：</span><span class="sxs-lookup"><span data-stu-id="13ef2-126">The following classes represent some examples of system-provided bindings:</span></span>  
   
--   <xref:System.ServiceModel.BasicHttpBinding>：一種 HTTP 通訊協定繫結，可用於連線至 Web 服務，並符合 WS\-I Basic Profile 規格 \(例如，以 ASP.NET Web 服務為基礎的服務\)。  
+-   <span data-ttu-id="13ef2-127"><xref:System.ServiceModel.BasicHttpBinding>：一種 HTTP 通訊協定繫結，可用於連線至 Web 服務，並符合 WS-I Basic Profile 規格 (例如，以 ASP.NET Web 服務為基礎的服務)。</span><span class="sxs-lookup"><span data-stu-id="13ef2-127"><xref:System.ServiceModel.BasicHttpBinding>: An HTTP protocol binding suitable for connecting to Web services that conforms to the WS-I Basic Profile specification (for example, ASP.NET Web services-based services).</span></span>  
   
--   <xref:System.ServiceModel.WSHttpBinding>：一種互通的繫結，可用於連線至符合 WS\-\* 通訊協定的端點。  
+-   <span data-ttu-id="13ef2-128"><xref:System.ServiceModel.WSHttpBinding>：一種互通的繫結，可用於連線至符合 WS-* 通訊協定的端點。</span><span class="sxs-lookup"><span data-stu-id="13ef2-128"><xref:System.ServiceModel.WSHttpBinding>: An interoperable binding suitable for connecting to endpoints that conform to the WS-* protocols.</span></span>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 以連線至同一部電腦上的其他 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 端點。  
+-   <span data-ttu-id="13ef2-129"><xref:System.ServiceModel.NetNamedPipeBinding>：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 以連線至同一部電腦上的其他 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 端點。</span><span class="sxs-lookup"><span data-stu-id="13ef2-129"><xref:System.ServiceModel.NetNamedPipeBinding>: Uses the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] to connect to other [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoints on the same machine.</span></span>  
   
--   <xref:System.ServiceModel.NetMsmqBinding>：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 以建立與其他 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 端點的佇列訊息連線。  
+-   <span data-ttu-id="13ef2-130"><xref:System.ServiceModel.NetMsmqBinding>：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 以建立與其他 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 端點的佇列訊息連線。</span><span class="sxs-lookup"><span data-stu-id="13ef2-130"><xref:System.ServiceModel.NetMsmqBinding>: Uses the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] to create queued message connections with other [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoints.</span></span>  
   
- 如需所有 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供之繫結的完整清單和描述，請參閱[系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)。  
+ <span data-ttu-id="13ef2-131">如需完整清單，與所有的描述[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-提供的繫結，請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="13ef2-131">For a complete list, with descriptions, of all the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-provided bindings, see [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).</span></span>  
   
-## 使用您自己的繫結  
- 如果所含之系統提供的繫結都沒有服務應用程式需要的正確功能組合，您可以建立自己的繫結。  執行這項作業的方法有兩種。  您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 物件從已存在的繫結元素中建立新的繫結，或者藉由從 <xref:System.ServiceModel.Channels.Binding> 繫結衍生，而建立完整的使用者定義繫結。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用這兩種方法建立自有繫結的詳細資訊，請參閱 [自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md) 和[建立使用者定義繫結](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。  
+## <a name="using-your-own-bindings"></a><span data-ttu-id="13ef2-132">使用您自己的繫結</span><span class="sxs-lookup"><span data-stu-id="13ef2-132">Using Your Own Bindings</span></span>  
+ <span data-ttu-id="13ef2-133">如果所含之系統提供的繫結都沒有服務應用程式需要的正確功能組合，您可以建立自己的繫結。</span><span class="sxs-lookup"><span data-stu-id="13ef2-133">If none of the system-provided bindings included has the right combination of features that a service application requires, you can create your own binding.</span></span> <span data-ttu-id="13ef2-134">執行這項作業的方法有兩種。</span><span class="sxs-lookup"><span data-stu-id="13ef2-134">There are two ways to do this.</span></span> <span data-ttu-id="13ef2-135">您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 物件從已存在的繫結元素中建立新的繫結，或者藉由從 <xref:System.ServiceModel.Channels.Binding> 繫結衍生，而建立完整的使用者定義繫結。</span><span class="sxs-lookup"><span data-stu-id="13ef2-135">You can either create a new binding from pre-existing binding elements using a <xref:System.ServiceModel.Channels.CustomBinding> object or you can create a completely user-defined binding by deriving from the <xref:System.ServiceModel.Channels.Binding> binding.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="13ef2-136">建立您自己的繫結使用這兩種方法，請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)和[Creating User-Defined 繫結](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="13ef2-136"> creating your own binding using these two approaches, see [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md) and [Creating User-Defined Bindings](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).</span></span>  
   
-## 使用繫結  
- 使用繫結牽涉到兩個基本步驟：  
+## <a name="using-bindings"></a><span data-ttu-id="13ef2-137">使用繫結</span><span class="sxs-lookup"><span data-stu-id="13ef2-137">Using Bindings</span></span>  
+ <span data-ttu-id="13ef2-138">使用繫結牽涉到兩個基本步驟：</span><span class="sxs-lookup"><span data-stu-id="13ef2-138">Using bindings entails two basic steps:</span></span>  
   
-1.  選取或定義繫結。  最簡單的方法是選擇 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所含的其中一個系統提供的繫結，並使用其預設值。  也可以選擇系統提供的繫結，並重設其屬性值以符合您的需求。  此外，您可以建立自訂繫結或使用者定義的繫結，以對這些繫結擁有更高程度的控制權和自訂權。  
+1.  <span data-ttu-id="13ef2-139">選取或定義繫結。</span><span class="sxs-lookup"><span data-stu-id="13ef2-139">Select or define a binding.</span></span> <span data-ttu-id="13ef2-140">最簡單的方法是選擇 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所含的其中一個系統提供的繫結，並使用其預設值。</span><span class="sxs-lookup"><span data-stu-id="13ef2-140">The easiest method is to choose one of the system-provided bindings included with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] and use it with its default settings.</span></span> <span data-ttu-id="13ef2-141">也可以選擇系統提供的繫結，並重設其屬性值以符合您的需求。</span><span class="sxs-lookup"><span data-stu-id="13ef2-141">You can also choose a system-provided binding and reset its property values to suit your requirements.</span></span> <span data-ttu-id="13ef2-142">此外，您可以建立自訂繫結或使用者定義的繫結，以對這些繫結擁有更高程度的控制權和自訂權。</span><span class="sxs-lookup"><span data-stu-id="13ef2-142">Alternatively, you can create a custom binding or a user-defined binding to have higher degrees of control and customization.</span></span>  
   
-2.  建立使用已選取或已定義之繫結的端點。  
+2.  <span data-ttu-id="13ef2-143">建立使用已選取或已定義之繫結的端點。</span><span class="sxs-lookup"><span data-stu-id="13ef2-143">Create an endpoint that uses the binding selected or defined.</span></span>  
   
-## 程式碼和組態  
- 有兩種方法可讓您定義繫結：透過程示碼或透過組態。  這兩個方法與您是使用系統提供的繫結或自訂繫結無關。  一般來說，使用程式碼可讓您在設計階段時完全控制繫結的定義。  相反地，使用組態則可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務或用戶端的系統管理員或使用者變更繫結的參數，而不需要重新編譯服務應用程式。  使用者通常需要這種彈性，因為對於即將部署的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式來說，是沒有辦法預測特定的電腦需求。  將繫結 \(和位址\) 資訊留在程式碼外面，可在不需要重新編譯或重新部署應用程式的情況下，就可以變更繫結和位址資訊。  請注意，會先建立在組態中指定繫結，之後才建立在程式碼中定義的繫結，這樣可讓程式碼定義的繫結覆寫任何組態定義的繫結。  
+## <a name="code-and-configuration"></a><span data-ttu-id="13ef2-144">程式碼和組態</span><span class="sxs-lookup"><span data-stu-id="13ef2-144">Code and Configuration</span></span>  
+ <span data-ttu-id="13ef2-145">有兩種方法可讓您定義繫結：透過程示碼或透過組態。</span><span class="sxs-lookup"><span data-stu-id="13ef2-145">You can define bindings in two ways: through code or through configuration.</span></span> <span data-ttu-id="13ef2-146">這兩個方法與您是使用系統提供的繫結或自訂繫結無關。</span><span class="sxs-lookup"><span data-stu-id="13ef2-146">These two approaches do not depend on whether you are using a system-provided binding or a custom binding.</span></span> <span data-ttu-id="13ef2-147">一般來說，使用程式碼可讓您在設計階段時完全控制繫結的定義。</span><span class="sxs-lookup"><span data-stu-id="13ef2-147">In general, using code gives you complete control over the definition of a binding at design time.</span></span> <span data-ttu-id="13ef2-148">相反地，使用組態則可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務或用戶端的系統管理員或使用者變更繫結的參數，而不需要重新編譯服務應用程式。</span><span class="sxs-lookup"><span data-stu-id="13ef2-148">Using configuration, on the other hand, allows a system administrator or the user of a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service or client to change the parameters of a binding without having to recompile the service application.</span></span> <span data-ttu-id="13ef2-149">使用者通常需要這種彈性，因為對於即將部署的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式來說，是沒有辦法預測特定的電腦需求。</span><span class="sxs-lookup"><span data-stu-id="13ef2-149">This flexibility is often desirable because there is no way to predict specific machine requirements on which a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] application is to be deployed.</span></span> <span data-ttu-id="13ef2-150">將繫結 (和位址) 資訊留在程式碼外面，可在不需要重新編譯或重新部署應用程式的情況下，就可以變更繫結和位址資訊。</span><span class="sxs-lookup"><span data-stu-id="13ef2-150">Keeping the binding (and the addressing) information out of the code allows them to change without requiring recompilation or redeployment of the application.</span></span> <span data-ttu-id="13ef2-151">請注意，會先建立在組態中指定繫結，之後才建立在程式碼中定義的繫結，這樣可讓程式碼定義的繫結覆寫任何組態定義的繫結。</span><span class="sxs-lookup"><span data-stu-id="13ef2-151">Note that bindings defined in code are created after bindings specified in configuration, allowing the code-defined bindings to overwrite any configuration-defined bindings.</span></span>  
   
-## 請參閱  
- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="13ef2-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13ef2-152">See Also</span></span>  
+ [<span data-ttu-id="13ef2-153">使用繫結設定服務與用戶端</span><span class="sxs-lookup"><span data-stu-id="13ef2-153">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
