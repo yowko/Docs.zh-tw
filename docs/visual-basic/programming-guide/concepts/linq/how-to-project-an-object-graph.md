@@ -1,32 +1,28 @@
 ---
-title: "如何︰ 投影物件圖形 (Visual Basic) |Microsoft 文件"
+title: "如何： 投影物件圖形 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e634d2520e5b40d6ccb8ac11ce47f726980ef8cd
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 946c09035c2856203c544c6e5378624989b0e96b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>如何︰ 投影物件圖形 (Visual Basic)
+# <a name="how-to-project-an-object-graph-visual-basic"></a>如何： 投影物件圖形 (Visual Basic)
 本主題說明如何從 XML 規劃或填入物件圖形。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會填入物件圖形與`Address`， `PurchaseOrder`，和`PurchaseOrderItem`類別[範例 XML 檔︰ 典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件。  
+ 下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。  
   
 ```vb  
 Class Address  
@@ -307,10 +303,9 @@ Sub Main()
     }  
     Console.WriteLine(purchOrder)  
 End Sub  
-  
 ```  
   
- 在此範例中，將[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查詢傳回為<xref:System.Collections.Generic.IEnumerable%601>的`PurchaseOrderItem`。</xref:System.Collections.Generic.IEnumerable%601> 中的項目`PurchaseOrder`類別都屬於型別<xref:System.Collections.Generic.IEnumerable%601>的`PurchaseOrderItem`。</xref:System.Collections.Generic.IEnumerable%601> 程式碼使用<xref:System.Linq.Enumerable.ToList%2A>擴充方法，以建立<xref:System.Collections.Generic.List%601>從查詢結果的集合。</xref:System.Collections.Generic.List%601> </xref:System.Linq.Enumerable.ToList%2A>  
+ 在此範例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果會當作 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 傳回。 `PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
   
  這個範例會產生下列輸出：  
   
@@ -352,6 +347,6 @@ ShipDate: 5/21/1999
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
- <xref:System.Linq.Enumerable.ToList%2A></xref:System.Linq.Enumerable.ToList%2A>   
+ <xref:System.Linq.Enumerable.Select%2A>  
+ <xref:System.Linq.Enumerable.ToList%2A>  
  [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

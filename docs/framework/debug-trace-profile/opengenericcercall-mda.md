@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
 - open generic CER calls
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 347f9efcf1b0cdaf9cd37bcf6045a42341e4f643
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f82760eaeb051f2006a8baf11ac77c485d007758
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 啟用 `openGenericCERCall` Managed 偵錯助理，警告根方法有泛型型別變數的限制執行區域 (CER) 圖形將在 JIT 編譯或原生映像產生時間處理，而且至少一個泛型型別變數是物件參考型別。  
@@ -122,7 +115,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
+ <xref:System.Runtime.ConstrainedExecution>  
  [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

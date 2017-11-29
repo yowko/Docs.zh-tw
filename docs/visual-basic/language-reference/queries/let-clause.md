@@ -1,58 +1,55 @@
 ---
-title: "Let Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryLet"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [Visual Basic], Let"
-  - "Let clause"
-  - "Let statement"
+title: "Let 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryLet
+helpviewer_keywords:
+- queries [Visual Basic], Let
+- Let clause [Visual Basic]
+- Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 70e47517a62f58dcababd31c26277417b62eab66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Let Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-計算出一個值並將該值指派給查詢中的新變數。  
+# <a name="let-clause-visual-basic"></a>Let 子句 (Visual Basic)
+計算值，並將它指派給查詢中的新變數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Let variable = expression [, ...]  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
   
-|||  
-|-|-|  
 |詞彙|定義|  
-|`variable`|必要項。  可用於參考所提供運算式之結果的別名 \(Alias\)。|  
-|`expression`|必要項。  會進行評估並指派給指定變數的運算式。|  
+|---|---|  
+|`variable`|必要項。 別名可以用來參考提供運算式的結果。|  
+|`expression`|必要項。 運算式，會進行評估，並指派給指定的變數。|  
   
-## 備註  
- `Let` 子句可以讓您計算每個查詢結果的值並使用別名參考這些值。  別名可以用在其他子句中，例如 `Where` 子句。  `Let` 子句可以讓您建立較易讀取的查詢陳述式，因為您可以指定查詢中包含之運算式子句的別名，並且在每次使用運算式子句的時候取代此別名。  
+## <a name="remarks"></a>備註  
+ `Let`子句可讓您用來計算每個值查詢結果，並使用別名來參考它們。 別名可用於其他子句，例如`Where`子句。 `Let`子句可讓您建立更容易讀取，因為您可以指定包含在查詢運算式子句的別名，並以別名取代每次使用時的運算式子句的查詢陳述式。  
   
- 您可以在 `Let` 子句中包含任意數量的 `variable` 和 `expression` 指派。  請使用逗號 \(,\) 分隔每個指派。  
+ 您可以包含任意數目的`variable`和`expression`中的指派`Let`子句。 請以逗號 （，） 分隔每個指派。  
   
-## 範例  
- 下列程式碼範例使用 `Let` 子句計算產品的 10 % 折扣。  
+## <a name="example"></a>範例  
+ 下列程式碼範例使用`Let`子句來計算產品的 10%折扣。  
   
  [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
-## 請參閱  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>另請參閱  
+ [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [查詢](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)

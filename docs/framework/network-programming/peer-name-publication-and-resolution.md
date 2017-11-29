@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43f7a2220725bc251e476312654a070502171983
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 581d06930240022ae8792c02674d26491f44fa06
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="peer-name-publication-and-resolution"></a>對等名稱發佈和解析
 ## <a name="publishing-a-peer-name"></a>發行對等名稱  
@@ -65,4 +59,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Net.PeerToPeer>
-

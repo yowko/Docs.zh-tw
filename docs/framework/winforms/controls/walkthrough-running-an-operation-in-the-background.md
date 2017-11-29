@@ -1,68 +1,72 @@
 ---
-title: "逐步解說：在背景執行作業 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "背景作業"
-  - "背景工作"
-  - "背景執行緒"
-  - "BackgroundWorker 類別, 範例"
-  - "表單, 背景作業"
-  - "表單, 多執行緒"
-  - "執行緒處理 [Windows Form], 背景作業"
+title: "逐步解說：在背景執行作業"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- background tasks
+- forms [Windows Forms], multithreading
+- forms [Windows Forms], background operations
+- background threads
+- BackgroundWorker class [Windows Forms], examples
+- threading [Windows Forms], background operations
+- background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: de485eb0b9c67ee9c3c897b6521971f50aaf751c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：在背景執行作業
+# <a name="walkthrough-running-an-operation-in-the-background"></a>逐步解說：在背景執行作業
 如果您有要花費較長時間才能完成的作業，但您不想導致使用者介面發生延遲，就可以使用 <xref:System.ComponentModel.BackgroundWorker> 類別在另一個執行緒上執行該作業。  
   
- 如需在此範例中使用的完整程式碼清單，請參閱 [如何：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。  
+ 在此範例中使用的程式碼的完整清單，請參閱[How to： 在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 若要在背景執行作業  
+### <a name="to-run-an-operation-in-the-background"></a>若要在背景執行作業  
   
-1.  使您的表單成為 \[Windows Form 設計工具\] 中的現用表單，從 \[**工具箱**\] 拖曳兩個 <xref:System.Windows.Forms.Button> 控制項到表單中，然後根據下表設定按鈕的 `Name` 和 <xref:System.Windows.Forms.Control.Text%2A> 屬性。  
+1.  使用 Windows Form 設計工具中表單，拖放兩<xref:System.Windows.Forms.Button>控制從**工具箱**加入表單，並將其設定`Name`和<xref:System.Windows.Forms.Control.Text%2A>根據下表按鈕的屬性。  
   
-    |Button|名稱|文字|  
-    |------------|--------|--------|  
-    |`button1`|`startBtn`|Start|  
-    |`button2`|`cancelBtn`|Cancel|  
+    |按鈕|名稱|Text|  
+    |------------|----------|----------|  
+    |`button1`|`startBtn`|**Start**|  
+    |`button2`|`cancelBtn`|**[取消]**|  
   
-2.  開啟 \[**工具箱**\]，按一下 \[**元件**\] 索引標籤，然後將 <xref:System.ComponentModel.BackgroundWorker> 元件拖曳到表單上。  
+2.  開啟**工具箱**，按一下 **元件**索引標籤，然後拖曳<xref:System.ComponentModel.BackgroundWorker>元件拖曳至表單。  
   
-     `backgroundWorker1` 元件隨即出現在 \[**元件匣**\] 上。  
+     `backgroundWorker1`元件會出現在**元件匣**。  
   
-3.  在 \[**屬性**\] 視窗中，將 <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> 屬性設定為 `true`。  
+3.  在**屬性**視窗中，將<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>屬性`true`。  
   
-4.  在 \[**屬性**\] 視窗中，按一下 \[**事件**\] 按鈕，再按兩下 <xref:System.ComponentModel.BackgroundWorker.DoWork> 和 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件以建立事件處理常式。  
+4.  在**屬性**視窗中，按一下**事件**按鈕，然後再連按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。  
   
-5.  在 <xref:System.ComponentModel.BackgroundWorker.DoWork> 事件處理常式中插入會耗費許多時間的程式碼。  
+5.  插入程式碼相當耗時分為<xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式。  
   
-6.  從 <xref:System.ComponentModel.DoWorkEventArgs> 參數的 <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> 屬性中擷取這項作業所需的任何參數。  
+6.  擷取所需進行此作業的任何參數<xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>參數。  
   
-7.  將計算的結果指派至 <xref:System.ComponentModel.DoWorkEventArgs> 的 <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> 屬性。  
+7.  若要計算的結果指派<xref:System.ComponentModel.DoWorkEventArgs.Result%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>。  
   
-     <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件處理常式將可以使用這個結果。  
+     這是將可供<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
   
-8.  在 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件處理常式中插入擷取結果的程式碼。  
+8.  插入程式碼來擷取您的作業中的結果<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#3)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#3)]  
@@ -72,43 +76,43 @@ caps.handback.revision: 11
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#4)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#4)]  
   
-10. 在 \[Windows Form 設計工具\] 中按兩下 `startButton` 以建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式。  
+10. 在 Windows Form 設計工具中，按兩下`startButton`建立<xref:System.Windows.Forms.Control.Click>事件處理常式。  
   
-11. 為  `startButton` 呼叫 <xref:System.Windows.Forms.Control.Click> 事件處理常式中的 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 方法。  
+11. 呼叫<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>方法中的<xref:System.Windows.Forms.Control.Click>事件處理常式`startButton`。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#5)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#5)]  
   
-12. 在 \[Windows Form 設計工具\] 中按兩下 `cancelButton` 以建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式。  
+12. 在 Windows Form 設計工具中，按兩下`cancelButton`建立<xref:System.Windows.Forms.Control.Click>事件處理常式。  
   
-13. 為  `cancelButton` 呼叫 <xref:System.Windows.Forms.Control.Click> 事件處理常式中的 <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> 方法。  
+13. 呼叫<xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>方法中的<xref:System.Windows.Forms.Control.Click>事件處理常式`cancelButton`。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#6)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#6)]  
   
-14. 在檔案的頂端，匯入 System.ComponentModel 和 System.Threading 命名空間。  
+14. 在檔案頂端，匯入的 System.ComponentModel 和 System.Threading 命名空間。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#7)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#7)]  
   
-15. 按 F6 建置方案，然後按 CTRL\-F5 在偵錯工具外部執行應用程式。  
+15. 按 F6 建置此方案，，然後按 CTRL + F5 執行應用程式偵錯工具外部。  
   
 > [!NOTE]
->  如果您按 F5 在偵錯工具內部執行應用程式，偵錯工具會攔截並顯示在 `TimeConsumingOperation` 方法中所引發的例外狀況。  當您在偵錯工具內部執行應用程式時，<xref:System.ComponentModel.BackgroundWorker> 會處理例外狀況，並在 <xref:System.ComponentModel.RunWorkerCompletedEventArgs> 的 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> 屬性中將其攔截。  
+>  如果您按 F5 執行應用程式在偵錯工具中, 引發例外狀況`TimeConsumingOperation`方法會遭到攔截，並顯示偵錯工具。 當您執行應用程式偵錯工具中，外部<xref:System.ComponentModel.BackgroundWorker>處理例外狀況，並快取中<xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A>屬性<xref:System.ComponentModel.RunWorkerCompletedEventArgs>。  
   
-1.  按一下 \[**開始**\] 按鈕以執行非同步作業，然後按一下 \[**取消**\] 按鈕以停止執行中的非同步作業。  
+1.  按一下**啟動**執行非同步作業，按鈕，然後按一下**取消**按鈕以停止執行中的非同步作業。  
   
      每個作業的結果會顯示於 <xref:System.Windows.Forms.MessageBox>。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
--   實作一個可以回報非同步作業進度的表單。  如需詳細資訊，請參閱 [如何：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)。  
+-   實作非同步作業進行時，報告進度的表單。 如需詳細資訊，請參閱[How to： 實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)。  
   
--   實作一個支援元件非同步模式的類別。  如需詳細資訊，請參閱[Implementing the Event\-based Asynchronous Pattern](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)。  
+-   實作元件支援非同步模式的類別。 如需詳細資訊，請參閱[實作事件架構非同步模式](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)。  
   
-## 請參閱  
- <xref:System.ComponentModel.BackgroundWorker>   
- <xref:System.ComponentModel.DoWorkEventArgs>   
- [如何：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)   
- [如何：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ <xref:System.ComponentModel.DoWorkEventArgs>  
+ [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [操作說明：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

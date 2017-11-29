@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 使用執行緒集區 (Visual Basic) |Microsoft 文件"
+title: "如何： 使用執行緒集區 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 90a0bb24-39f8-41f5-a217-b52a7d4fed0b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60bceea0ed956075233f5f045131ffb2eb37eef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 42a4120900203eb7eb5ad8463fba4491636882b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-a-thread-pool-visual-basic"></a>如何︰ 使用執行緒集區 (Visual Basic)
-*執行緒集區*是一種多執行緒處理哪些工作加入佇列，而且系統會建立執行緒時自動啟動。 如需詳細資訊，請參閱[執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)。  
+# <a name="how-to-use-a-thread-pool-visual-basic"></a>如何： 使用執行緒集區 (Visual Basic)
+「執行緒共用」是一種多執行緒處理，其中的工作會加入佇列，並在建立執行緒時自動啟動。 如需詳細資訊，請參閱[執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)。  
   
- 下列範例會使用.NET Framework 執行緒集區來計算`Fibonacci`20 到 40 之間的 10 個數字的結果。 每個`Fibonacci`結果由`Fibonacci`類別，可提供方法，名為`ThreadPoolCallback`來執行計算。 物件，表示每個`Fibonacci`值的建立，而`ThreadPoolCallback`方法傳遞至<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>，這會指派可用的執行緒集區來執行方法中。</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ 下列範例使用 .NET Framework 執行緒集區來計算 20 到 40 之間十個數字的 `Fibonacci` 結果。 每個 `Fibonacci` 結果都會以 `Fibonacci` 類別表示，該類別提供一個執行計算的方法，稱為 `ThreadPoolCallback`。 這會建立代表每個 `Fibonacci` 值的物件，並將 `ThreadPoolCallback` 方法傳遞至 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>，以指派集區中的可用執行緒來執行此方法。  
   
- 因為每個`Fibonacci`物件提供了半隨機值來計算，而且每個執行緒都會競爭處理器時間，因為無法知道事先花多少時間將會計算所有的十個結果。 這就是為什麼每個`Fibonacci`物件的執行個體傳遞<xref:System.Threading.ManualResetEvent>類別在建構期間。</xref:System.Threading.ManualResetEvent> 每個物件表示提供的事件物件計算完成時，可讓主執行緒使用的區塊執行<xref:System.Threading.WaitHandle.WaitAll%2A>直到全部十`Fibonacci`物件已經計算的結果。</xref:System.Threading.WaitHandle.WaitAll%2A> `Main`方法接著會顯示每個`Fibonacci`結果。  
+ 由於會提供半隨機值給每個 `Fibonacci` 物件進行計算，而且每個執行緒會競爭處理器時間，因此您無法事先得知需要多久的時間才能計算完所有十個結果。 這就是為什麼會在建構期間將每個 `Fibonacci` 物件傳遞至 <xref:System.Threading.ManualResetEvent> 類別的執行個體。 每個物件會在計算完成時指出提供的事件物件，這可讓主要執行緒使用 <xref:System.Threading.WaitHandle.WaitAll%2A> 封鎖區塊的執行，直到所有十個 `Fibonacci` 物件都已計算出結果。 `Main` 方法接著會顯示每個 `Fibonacci` 結果。  
   
 ## <a name="example"></a>範例  
   
@@ -151,14 +143,14 @@ Fibonacci(27) = 196418
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.Mutex></xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- [執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)   
- [執行緒處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- @System.Threading.Monitor   
- [安全性](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Monitor>  
+ [執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [執行緒 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [安全性](../../../../standard/security/index.md)

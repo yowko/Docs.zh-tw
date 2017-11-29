@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 494e67b39187a2a38f29f994e17051430d90f708
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 顯示登入的狀態
 ## <a name="applies-to"></a>適用於  
@@ -165,4 +163,3 @@ ms.lasthandoff: 08/21/2017
 1.  在 Visual Studio 中，按 **F5** 鍵開始對應用程式進行偵錯。 如果沒有發現任何錯誤，則會開啟新的瀏覽器視窗。  
   
 2.  您可能會注意到瀏覽器以無訊息模式將您的要求重新導向至 STS，然後開啟 Default.aspx 網頁。 如果 WIF 已正確設定，您應該會看到網站顯示下列文字：**"You are signed in"**。
-

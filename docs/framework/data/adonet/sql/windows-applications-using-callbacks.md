@@ -1,36 +1,40 @@
 ---
-title: "使用回呼的 Windows 應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用回呼的 Windows 應用程式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 83286fa5909dde8cde081ef34864be8f27b57122
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用回呼的 Windows 應用程式
-在大多數非同步處理的案例中，使用者都會想要啟動資料庫作業，且無需等到完成該資料庫作業，就能繼續執行其他處理序。  不過許多案例會要求資料庫作業結束後，才能執行其他動作。  例如，在 Windows 應用程式中，可能要在允許使用者介面執行緒保持回應的同時，將長時間執行的作業委派至背景執行緒。  但是，當資料庫作業完成時，您想要用結果來填入表單。  此類案例最好使用回呼來實作。  
+# <a name="windows-applications-using-callbacks"></a>使用回呼的 Windows 應用程式
+在大多數非同步處理的案例中，使用者都會想要啟動資料庫作業，且無需等到完成該資料庫作業，就能繼續執行其他處理序。 不過許多案例會要求資料庫作業結束後，才能執行其他動作。 例如，在 Windows 應用程式中，可能要在允許使用者介面執行緒保持回應的同時，將長時間執行的作業委派至背景執行緒。 但是，當資料庫作業完成時，您想要用結果來填入表單。 此類案例最好使用回呼來實作。  
   
- 您可藉由在 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法中指定 <xref:System.AsyncCallback> 委派，來定義回呼。  當作業完成時，便會呼叫委派。  您可將 <xref:System.Data.SqlClient.SqlCommand> 本身的參考傳遞至委派，這樣，無需使用全域變數，即可很容易地存取 <xref:System.Data.SqlClient.SqlCommand> 物件，並呼叫適當的 `End` 方法。  
+ 您可藉由在 <xref:System.AsyncCallback>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 方法中指定 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 委派，來定義回呼。 當作業完成時，便會呼叫委派。 您可將 <xref:System.Data.SqlClient.SqlCommand> 本身的參考傳遞至委派，這樣，無需使用全域變數，即可很容易地存取 <xref:System.Data.SqlClient.SqlCommand> 物件，並呼叫適當的 `End` 方法。  
   
-## 範例  
- 下列 Windows 應用程式示範 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 方法的用法，它會執行包含數秒延遲 \(模擬長時間執行命令\) 的 Transact\-SQL 陳述式。  
+## <a name="example"></a>範例  
+ 下列 Windows 應用程式示範 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 方法的用法，它會執行包含數秒延遲 (模擬長時間執行命令) 的 Transact-SQL 陳述式。  
   
- 此範例示範數個重要技術，包括呼叫與來自其他執行緒之表單互動的方法。  此外，此範例還示範如何阻止使用者多次同時執行某一命令，以及如何確保在呼叫回呼程序之前，不會關閉表單。  
+ 此範例示範數個重要技術，包括呼叫與來自其他執行緒之表單互動的方法。 此外，此範例還示範如何阻止使用者多次同時執行某一命令，以及如何確保在呼叫回呼程序之前，不會關閉表單。  
   
- 若要設定此範例，請建立新的 Windows 應用程式。  在表單上放置一個 <xref:System.Windows.Forms.Button> 控制項及兩個 <xref:System.Windows.Forms.Label> 控制項 \(接受每個控制項的預設名稱\)。  將下列程式碼加入表單類別，並視環境需要修改連接字串。  
+ 若要設定此範例，請建立新的 Windows 應用程式。 在表單上放置一個 <xref:System.Windows.Forms.Button> 控制項及兩個 <xref:System.Windows.Forms.Label> 控制項 (接受每個控制項的預設名稱)。 將下列程式碼加入表單類別，並視環境需要修改連接字串。  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class:  
 Imports System  
 Imports System.Data  
@@ -384,6 +388,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## 請參閱  
- [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

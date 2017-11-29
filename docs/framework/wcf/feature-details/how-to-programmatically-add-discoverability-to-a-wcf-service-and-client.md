@@ -1,39 +1,42 @@
 ---
-title: "HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f94d99542a07711f618bc02316e6f61f6df647d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端
-本主題將說明如何讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務成為可探索狀態。 它根據[自我裝載](http://go.microsoft.com/fwlink/?LinkId=145523)範例。  
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端
+本主題將說明如何讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務成為可探索狀態。 它基礎[自我裝載](http://go.microsoft.com/fwlink/?LinkId=145523)範例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
   
 1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中開啟 [自我裝載] 方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
   
-2.  將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到此錯誤訊息，「System. ServiceModel.Discovery.dll 或其中一個相依性需要較新版的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]比所指定的專案...」 如果您看到此訊息，以滑鼠右鍵按一下 方案總管 中的專案，然後選擇 **屬性**。 在**專案屬性** 視窗中，請確定**目標 Framework**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+2.  將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到下列錯誤訊息: 「 系統。 ServiceModel.Discovery.dll 或其中一個相依性需要較新版的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]比所指定的專案...」 如果您看到此訊息，以滑鼠右鍵按一下 方案總管 中的專案，然後選擇 **屬性**。 在**專案屬性**視窗中，請確定**目標 Framework**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
 3.  開啟 Service.cs 檔案，然後加入下列 `using` 陳述式。  
   
-    ```  
+    ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  在`Main()`方法內，`using`陳述式中，加入<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>至服務主機執行個體。  
+4.  在 `Main()` 陳述式的 `using` 方法中，將 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 執行個體加入至服務主機。  
   
-    ```  
+    ```csharp  
     public static void Main()  
     {  
         // Create a ServiceHost for the CalculatorService type.  
@@ -47,11 +50,11 @@ caps.handback.revision: 13
     }  
     ```  
   
-     <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>指定它所套用的服務是設定為可探索。  
+     <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 會指定所套用的服務成為可探索狀態。  
   
-5.  新增<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>之後加入的程式碼的服務主機<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>。  
+5.  在加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 程式碼的後方直接將 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 加入至服務主機。  
   
-    ```  
+    ```csharp  
     // Add ServiceDiscoveryBehavior  
     serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());  
   
@@ -67,22 +70,21 @@ caps.handback.revision: 13
   
 2.  將參考加入至 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll`  
   
-3.  從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請以滑鼠右鍵按一下中的檔案**方案總管 中**，請選取**複製**，然後選取**DiscoveryClientApp**專案，以滑鼠右鍵按一下並選取**貼上**。  
+3.  從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請以滑鼠右鍵按一下中的檔案**方案總管 中**，選取**複製**，然後選取**DiscoveryClientApp**專案中，以滑鼠右鍵按一下並選取**貼上**。  
   
 4.  開啟 Program.cs。  
   
 5.  加入下列 `using` 陳述式。  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
     using System.ServiceModel.Discovery;  
     using Microsoft.ServiceModel.Samples;  
-  
     ```  
   
 6.  將名為 `FindCalculatorServiceAddress()` 的靜態方法加入至 `Program` 類別。  
   
-    ```  
+    ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
     {  
     }  
@@ -90,9 +92,9 @@ caps.handback.revision: 13
   
      這個方法會使用探索來搜尋 `CalculatorService` 服務。  
   
-7.  內部`FindCalculatorServiceAddress`方法，建立新<xref:System.ServiceModel.Discovery.DiscoveryClient>執行個體，傳入<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>建構函式。  
+7.  在 `FindCalculatorServiceAddress` 方法中，建立新的 <xref:System.ServiceModel.Discovery.DiscoveryClient> 執行個體，傳入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 至建構函式。  
   
-    ```  
+    ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
     {  
         // Create DiscoveryClient  
@@ -100,18 +102,18 @@ caps.handback.revision: 13
     }  
     ```  
   
-     這會告訴[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]， <xref:System.ServiceModel.Discovery.DiscoveryClient>類別應使用標準 UDP 探索端點來傳送和接收探索訊息。  
+     這樣做可告知 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，<xref:System.ServiceModel.Discovery.DiscoveryClient> 類別應使用標準 UDP 探索端點來傳送和接收探索訊息。  
   
-8.  在下一行，呼叫<xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>方法，並指定<xref:System.ServiceModel.Discovery.FindCriteria>包含您想要搜尋的服務合約的執行個體。 在此情況下，指定 `ICalculator`。  
+8.  在下一行，呼叫 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法並指定包含要搜尋之服務合約的 <xref:System.ServiceModel.Discovery.FindCriteria> 執行個體。 在此情況下，指定 `ICalculator`。  
   
-    ```  
+    ```csharp  
     // Find ICalculatorService endpoints              
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
-9. 在呼叫之後<xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>，查看是否至少一個相符的服務，然後傳回<xref:System.ServiceModel.EndpointAddress>的第一個符合的服務。 否則，傳回 `null`。  
+9. 呼叫 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 後，查看是否至少有一個符合的服務，然後傳回第一個符合服務的 <xref:System.ServiceModel.EndpointAddress>。 否則，傳回 `null`。  
   
-    ```  
+    ```csharp  
     if (findResponse.Endpoints.Count > 0)  
     {  
         return findResponse.Endpoints[0].Address;  
@@ -124,7 +126,7 @@ caps.handback.revision: 13
   
 10. 將名為 `InvokeCalculatorService` 的靜態方法加入至 `Program` 類別。  
   
-    ```  
+    ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
     {  
     }  
@@ -134,21 +136,21 @@ caps.handback.revision: 13
   
 11. 在 `InvokeCalculatorService` 方法中，建立 `CalculatorServiceClient` 類別的執行個體。 這個類別由定義[自我裝載](http://go.microsoft.com/fwlink/?LinkId=145523)範例。 它是使用 Svcutil.exe 來產生的。  
   
-    ```  
+    ```csharp  
     // Create a client  
     CalculatorClient client = new CalculatorClient();  
     ```  
   
 12. 在下一行，將用戶端的端點位址設為從 `FindCalculatorServiceAddress()` 傳回的端點位址。  
   
-    ```  
+    ```csharp  
     // Connect to the discovered service endpoint  
     client.Endpoint.Address = endpointAddress;  
     ```  
   
 13. 在前述的程式碼步驟之後，立即呼叫由計算機服務所公開的方法。  
   
-    ```  
+    ```csharp  
     Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress);  
   
     double value1 = 100.00D;  
@@ -177,7 +179,7 @@ caps.handback.revision: 13
   
 14. 在 `Main()` 類別中將程式碼加入至  `Program` 方法來呼叫 `FindCalculatorServiceAddress`。  
   
-    ```  
+    ```csharp  
     public static void Main()  
     {  
         EndpointAddress endpointAddress = FindCalculatorServiceAddress();  
@@ -186,7 +188,7 @@ caps.handback.revision: 13
   
 15. 在下一行，呼叫 `InvokeCalculatorService()` 並傳入從 `FindCalculatorServiceAddress()` 傳回的端點位址。  
   
-    ```  
+    ```csharp  
     if (endpointAddress != null)  
     {  
         InvokeCalculatorService(endpointAddress);  
@@ -228,10 +230,9 @@ caps.handback.revision: 13
     ```  
   
 ## <a name="example"></a>範例  
- 以下是本範例的程式碼清單。 因為此程式碼根據[自我裝載](http://go.microsoft.com/fwlink/?LinkId=145523)範例會列出已變更的檔案。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自我裝載的範例，請參閱[安裝指示](http://go.microsoft.com/fwlink/?LinkId=145522)。  
+ 以下是本範例的程式碼清單。 因為此程式碼根據[自我裝載](http://go.microsoft.com/fwlink/?LinkId=145523)範例，只會變更這些檔案會列出。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自我裝載範例中，請參閱[安裝指示](http://go.microsoft.com/fwlink/?LinkId=145522)。  
   
-```  
-  
+```csharp  
 // Service.cs  
 using System;  
 using System.Configuration;  
@@ -267,7 +268,7 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 using System;  
 using System.Collections.Generic;  
@@ -348,9 +349,7 @@ namespace DiscoveryClientApp
     }  
 }  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
+
 ## <a name="see-also"></a>另請參閱  
- [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
+ [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
  [WCF 探索物件模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

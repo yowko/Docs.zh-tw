@@ -1,99 +1,104 @@
 ---
-title: "如何：建立傳回 UI 的增益集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "增益集 [WPF], 傳回 UI"
-  - "建立傳回 UI 的增益集 [WPF]"
-  - "實作增益集管線區段 [WPF]"
+title: "如何：建立傳回 UI 的增益集"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- creating an add-in that returns a UI [WPF]
+- implementing add-in pipeline segments [WPF]
+- add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dd6956f1934f8594a941b57066cc2d4d6214a9a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：建立傳回 UI 的增益集
-本範例示範如何建立可將 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 傳回主 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式的增益集 \(Add\-In\)。  
+# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>如何：建立傳回 UI 的增益集
+這個範例示範如何建立傳回[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)][!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]主機[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式。  
   
- 此增益集所傳回的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用者控制項。  這個使用者控制項的內容是單一按鈕，當按下時，會顯示訊息方塊。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式則裝載增益集，會將使用者控制項 \(由增益集傳回\) 顯示為主應用程式視窗的內容。  
+ 增益集傳回[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]也就是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用者控制項。 此使用者控制項的內容是單一按鈕，當按下時，會顯示訊息方塊。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式裝載增益集與主應用程式視窗的內容以顯示使用者控制項 （增益集所傳回）。  
   
  **必要條件**  
   
- 這個範例的重點是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型實現此案例的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 擴充，並假設下列項目：  
+ 此範例中會反白顯示[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]延伸[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]增益集模型，讓此案例中，並假設下列：  
   
--   了解 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型，包括管線、增益集和主應用程式開發。  如果您不熟悉這些概念，請參閱[增益集和擴充性](../../../../ml/index.xml)。  如需示範實作管線、增益集和主應用程式的教學課程，請參閱[逐步解說：建立可延伸應用程式](../Topic/Walkthrough:%20Creating%20an%20Extensible%20Application.md)。  
+-   知識的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]增益集模型，包括管線、 增益集與主應用程式開發。 如果您不熟悉這些概念，請參閱[增益集和擴充性](../../../../docs/framework/add-ins/index.md)。 示範在管線、 增益集，與主應用程式的實作的教學課程，請參閱[逐步解說： 建立可延伸應用程式](../../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)。  
   
--   了解 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 擴充，相關知識請參閱：[WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+-   知識的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]延伸[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]增益集模型，可以在這裡找到： [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
   
-## 範例  
- 若要建立傳回 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的增益集，每個管線區段、增益集和主應用程式都需要特定的程式碼。  
-  
-   
+## <a name="example"></a>範例  
+ 若要建立傳回[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]每個管線區段、 增益集，以及主應用程式需要特定的程式碼。  
+    
   
 <a name="Contract"></a>   
-## 實作合約管線區段  
- 方法必須由傳回 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的合約所定義，且傳回值必須是型別 <xref:System.AddIn.Contract.INativeHandleContract>。  下列程式碼中以 `IWPFAddInContract` 合約的 `GetAddInUI` 方法來示範。  
+## <a name="implementing-the-contract-pipeline-segment"></a>實作合約管線區段  
+ 必須傳回合約所定義的方法[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，而且它的傳回值必須是型別<xref:System.AddIn.Contract.INativeHandleContract>。 這示範`GetAddInUI`方法`IWPFAddInContract`合約中的下列程式碼。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
  [!code-vb[SimpleAddInReturnsAUISample#ContractCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]  
   
 <a name="AddInView"></a>   
-## 實作增益集檢視管線區段  
- 因為增益集實作 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]，提供做為 <xref:System.Windows.FrameworkElement> 的子類別，增益集檢視上與 `IWPFAddInView.GetAddInUI` 關聯的方法，必須傳回型別為 <xref:System.Windows.FrameworkElement> 的值。  下列程式碼顯示合約的增益集檢視，實作為介面。  
+## <a name="implementing-the-add-in-view-pipeline-segment"></a>實作增益集檢視管線區段  
+ 因為增益集實作[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]為的子類別提供<xref:System.Windows.FrameworkElement>，增益集的檢視與相互關聯上的方法`IWPFAddInView.GetAddInUI`必須傳回型別的值<xref:System.Windows.FrameworkElement>。 下列程式碼顯示合約的增益集檢視，並實作為介面。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInViews/IWPFAddInView.cs#addinviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInViewCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInViews/IWPFAddInView.vb#addinviewcode)]  
   
 <a name="AddInSideAdapter"></a>   
-## 實作增益集端配接器管線區段  
- 合約方法傳回 <xref:System.AddIn.Contract.INativeHandleContract>，但增益集傳回 <xref:System.Windows.FrameworkElement> \(如增益集檢視所指定\)。  因此，在跨越隔離界限之前，<xref:System.Windows.FrameworkElement> 必須轉換為 <xref:System.AddIn.Contract.INativeHandleContract>。  這個工作是由增益集端配接器藉由呼叫 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 來執行的，如下列程式碼所示。  
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>實作增益集端配接器管線區段  
+ 合約方法會傳回<xref:System.AddIn.Contract.INativeHandleContract>，但是增益集傳回<xref:System.Windows.FrameworkElement>（如同增益集的檢視所指定）。 因此，<xref:System.Windows.FrameworkElement>必須轉換成<xref:System.AddIn.Contract.INativeHandleContract>之前跨越隔離界限。 這項工作由增益集端配接器呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>，如下列程式碼所示。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInSideAdapterCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]  
   
 <a name="HostView"></a>   
-## 實作主應用程式檢視管線區段  
- 因為主應用程式會顯示 <xref:System.Windows.FrameworkElement>，主應用程式檢視上與 `IWPFAddInHostView.GetAddInUI` 關聯的方法，必須傳回型別為 <xref:System.Windows.FrameworkElement> 的值。  下列程式碼顯示合約的主應用程式檢視，實作為介面。  
+## <a name="implementing-the-host-view-pipeline-segment"></a>實作主應用程式檢視管線區段  
+ 因為主應用程式會顯示<xref:System.Windows.FrameworkElement>，與相互關聯的主機 檢視上的方法`IWPFAddInHostView.GetAddInUI`必須傳回型別的值<xref:System.Windows.FrameworkElement>。 下列程式碼顯示合約的主應用程式檢視，並實作為介面。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostViews/IWPFAddInHostView.cs#hostviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostViewCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostViews/IWPFAddInHostView.vb#hostviewcode)]  
   
 <a name="HostSideAdapter"></a>   
-## 實作主應用程式端配接器管線區段  
- 合約方法傳回 <xref:System.AddIn.Contract.INativeHandleContract>，但主應用程式預期是 <xref:System.Windows.FrameworkElement> \(如主應用程式檢視所指定\)。  因此，在跨越隔離界限之後，<xref:System.AddIn.Contract.INativeHandleContract> 必須轉換為 <xref:System.Windows.FrameworkElement>。  這個工作是由主應用程式端配接器藉由呼叫 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 來執行的，如下列程式碼所示。  
+## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>實作主應用程式端配接器管線區段  
+ 合約方法會傳回<xref:System.AddIn.Contract.INativeHandleContract>，但主應用程式預期<xref:System.Windows.FrameworkElement>（如同 [主機] 檢視所指定）。 因此，<xref:System.AddIn.Contract.INativeHandleContract>必須轉換成<xref:System.Windows.FrameworkElement>之後跨越隔離界限。 這項工作由主應用程式端配接器呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>，如下列程式碼所示。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#hostsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostSideAdapterCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#hostsideadaptercode)]  
   
 <a name="AddIn"></a>   
-## 實作增益集  
- 隨著增益集端配接器和增益集檢視的建立，增益集 \(`WPFAddIn1.AddIn`\) 必須實作 `IWPFAddInView.GetAddInUI` 方法以傳回 <xref:System.Windows.FrameworkElement> 物件 \(本範例中的 <xref:System.Windows.Controls.UserControl>\)。  下列程式碼顯示 <xref:System.Windows.Controls.UserControl> 的實作 `AddInUI`。  
+## <a name="implementing-the-add-in"></a>實作增益集  
+ 使用增益集端配接器與增益集建立檢視，增益集 (`WPFAddIn1.AddIn`) 必須實作`IWPFAddInView.GetAddInUI`方法以傳回<xref:System.Windows.FrameworkElement>物件 (<xref:System.Windows.Controls.UserControl>在此範例中)。 實作<xref:System.Windows.Controls.UserControl>， `AddInUI`，以下列程式碼所示。  
   
- [!code-xml[SimpleAddInReturnsAUISample#AddInUIMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml#addinuimarkup)]  
+ [!code-xaml[SimpleAddInReturnsAUISample#AddInUIMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml#addinuimarkup)]  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#addinuicodebehind)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#addinuicodebehind)]  
   
- 增益集實作的 `IWPFAddInView.GetAddInUI` 只需要傳回 `AddInUI` 的新執行個體，如下列程式碼所示。  
+ 實作`IWPFAddInView.GetAddInUI`增益集只需要傳回的新執行個體`AddInUI`，如下列程式碼所示。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddIn.cs#addincode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddIn.vb#addincode)]  
   
 <a name="App"></a>   
-## 實作主應用程式  
- 隨著主應用程式端配接器和主應用程式檢視的建立，主應用程式可以使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型開啟管線、取得增益集的主應用程式檢視，以及呼叫 `IWPFAddInHostView.GetAddInUI` 方法。  這些步驟顯示在下列程式碼中。  
+## <a name="implementing-the-host-application"></a>實作主應用程式  
+ 主機端配接器和建立的 [主機] 檢視中，主應用程式可以使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]增益集模型，若要開啟管線，請取得增益集，並呼叫主應用程式檢視`IWPFAddInHostView.GetAddInUI`方法。 下列程式碼顯示這些步驟。  
   
  [!code-csharp[SimpleAddInReturnsAUISample#GetUICode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Host/MainWindow.xaml.cs#getuicode)]
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
-## 請參閱  
- [增益集和擴充性](../../../../ml/index.xml)   
+## <a name="see-also"></a>另請參閱  
+ [增益集和擴充性](../../../../docs/framework/add-ins/index.md)  
  [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

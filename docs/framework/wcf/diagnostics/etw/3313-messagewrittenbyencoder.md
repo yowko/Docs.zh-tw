@@ -1,35 +1,38 @@
 ---
-title: "3313 - MessageWrittenByEncoder | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3313 - MessageWrittenByEncoder
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: abdb7db5-373e-4862-b53d-befbb0949e32
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9bf42f0b48cf77e90e9152a06e35967b62c50c74
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 3313 - MessageWrittenByEncoder
-## 屬性  
+# <a name="3313---messagewrittenbyencoder"></a>3313 - MessageWrittenByEncoder
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|3313|  
 |關鍵字|通道|  
 |層級|資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|通道|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## 描述  
+## <a name="description"></a>描述  
  此事件於編碼器將訊息寫入時發出。  
   
-## 訊息  
+## <a name="message"></a>訊息  
  編碼器寫入大小為 '%1' 位元組的訊息。  
   
-## 詳細資料
+## <a name="details"></a>詳細資料

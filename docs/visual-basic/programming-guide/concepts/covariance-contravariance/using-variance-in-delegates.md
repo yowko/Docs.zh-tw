@@ -1,38 +1,30 @@
 ---
-title: "使用委派 (Visual Basic) 中的變異數 |Microsoft 文件"
+title: "使用委派 (Visual Basic) 中的變異數"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5bd3e60031eac713cee3dee1399af8c6b83e6656
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 435591d69e67c4fc4be8e781c5f63e025c71a8cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>使用委派 (Visual Basic) 中的變異數
-當您指派給委派的方法*共變數*和*反變數*進行比對方法簽章與委派型別提供的彈性。 共變數允許的方法有更多衍生於所定義的委派中的傳回型別。 反變數允許具有較少衍生比委派型別中的參數類型的方法。  
+當您將方法指派給委派時，「共變數」和「反變數」可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。  
   
-## <a name="example-1-covariance"></a>範例 1︰ 共變數  
+## <a name="example-1-covariance"></a>範例 1︰共變數  
   
 ### <a name="description"></a>描述  
- 這個範例會示範如何使用委派的傳回型別衍生自委派簽章中的傳回類型的方法。 傳回的資料型別`DogsHandler`的型別`Dogs`，衍生自`Mammals`定義在委派中的型別。  
+ 此範例示範如何搭配其傳回型別衍生自委派簽章中傳回型別的方法使用委派。 `DogsHandler` 所傳回的資料類型是 `Dogs` 類型，該類型衍生自定義於委派中的 `Mammals` 類型。  
   
 ### <a name="code"></a>程式碼  
   
@@ -59,10 +51,10 @@ Class Test
 End Class  
 ```  
   
-## <a name="example-2-contravariance"></a>範例 2︰ 反變數  
+## <a name="example-2-contravariance"></a>範例 2：反變數  
   
 ### <a name="description"></a>描述  
- 這個範例會示範如何使用委派的參數類型的委派簽章的參數型別的基底型別的方法。 與反變數，您可以使用一個事件處理常式，而不是個別的處理常式。 例如，您可以建立事件處理常式可接受`EventArgs`輸入參數，並將它與`Button.MouseClick`所傳送的事件`MouseEventArgs`類型做為參數，也可以與`TextBox.KeyDown`所傳送的事件`KeyEventArgs`參數。  
+ 此範例示範如何搭配其參數類型為委派簽章參數類型之基底類型的方法使用委派。 透過反變數，您可以使用一個事件處理常式，而不是不同的處理常式。 例如，您可以建立一個事件處理常式，該事件處理常式接受 `EventArgs` 輸入參數，並使用它來搭配將 `MouseEventArgs` 類型作為參數傳送的 `Button.MouseClick` 事件，以及搭配傳送 `KeyEventArgs` 參數的 `TextBox.KeyDown` 事件。  
   
 ### <a name="code"></a>程式碼  
   
@@ -87,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)   
- [針對 Func 與 Action 委派 (Visual Basic) 中使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+ [委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+ [針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

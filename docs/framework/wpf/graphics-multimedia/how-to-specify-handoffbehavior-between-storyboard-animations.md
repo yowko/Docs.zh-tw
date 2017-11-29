@@ -1,35 +1,38 @@
 ---
-title: "如何：指定腳本動畫之間的傳遞行為 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 之間的傳遞行為"
-  - "分鏡腳本, 動畫之間的傳遞行為"
+title: "如何：指定腳本動畫之間的傳遞行為"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Storyboards [WPF], handoff behavior between animations
+- animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 323ea563aec7bc7ad0abec2372e3af977c7e38eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：指定腳本動畫之間的傳遞行為
-這個範例說明如何指定腳本動畫之間的傳遞行為。  <xref:System.Windows.Media.Animation.BeginStoryboard> 的 <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> 屬性，指定新的動畫如何與已套用至屬性的任何現有動畫進行互動。  
+# <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>如何：指定腳本動畫之間的傳遞行為
+這個範例示範如何指定分鏡腳本動畫之間的遞移式行為。 <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>屬性<xref:System.Windows.Media.Animation.BeginStoryboard>指定新動畫已套用至屬性的現有與互動。  
   
-## 範例  
- 下列範例會建立兩個按鈕，當滑鼠移至按鈕上時按鈕會變大，滑鼠離開時按鈕會變小。  如果您將滑鼠移至按鈕上然後快速移走游標，則在第一個動畫結束前就會套用第二個動畫。  當兩個動畫像這樣重疊時，您就可以看到 <xref:System.Windows.Media.Animation.HandoffBehavior> 和 <xref:System.Windows.Media.Animation.HandoffBehavior> 的 <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> 值之間的差異。  <xref:System.Windows.Media.Animation.HandoffBehavior> 的值結合了重疊的動畫，可使動畫的轉換更平順，而 <xref:System.Windows.Media.Animation.HandoffBehavior> 的值可使新的動畫立即取代之前的重疊動畫。  
+## <a name="example"></a>範例  
+ 下列範例會建立兩個按鈕放大滑鼠游標移到上面時，會變小，當資料指標移開。 如果您將滑鼠移 按鈕，然後快速移除資料指標，第一個完成之前，將會套用第二個動畫。 您可以看到之間的差異如下重疊的兩個動畫時<xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>值<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>和<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>。 值為<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>結合造成平穩動畫時的值之間的重疊動畫<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>使新的動畫，若要立即取代先前重疊的動畫。  
   
- [!code-xml[timingbehaviors_snip#HandoffBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/HandoffBehaviorExample.xaml#handoffbehaviorwholepage)]  
+ [!code-xaml[timingbehaviors_snip#HandoffBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/HandoffBehaviorExample.xaml#handoffbehaviorwholepage)]  
   
-## 請參閱  
- <xref:System.Windows.Media.Animation.BeginStoryboard>   
- <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>   
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Animation and Timing](http://msdn.microsoft.com/zh-tw/7d83765b-d5ae-41b1-b423-80206e1124aa)   
- [HOW TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Media.Animation.BeginStoryboard>  
+ <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>  
+ [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [動畫和計時](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

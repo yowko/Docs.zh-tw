@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - corrupted CLR
 - fatal execution error
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e437f45e6d6ef6d7397c507667426e4dd9860620
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cda166645bad2ad7780da58c287880398605806f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
 在 Common Language Runtime (CLR) 中偵測到嚴重錯誤時，就會啟動 `fatalExecutionEngine``Error` Managed 偵錯助理 (MDA)。 處理程序會終止。  
@@ -89,7 +82,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
- <xref:System.Runtime.ConstrainedExecution.Cer>   
+ <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
+ <xref:System.Runtime.ConstrainedExecution.Cer>  
  [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

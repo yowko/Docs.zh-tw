@@ -1,27 +1,33 @@
 ---
-title: "管理 DataViews | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "管理 DataView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3cf89cd378d19b5de64a733e80ec757c7e3bdb89
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 管理 DataViews
-您可以使用 <xref:System.Data.DataViewManager> 管理 <xref:System.Data.DataView> 內所有資料表的檢視設定。  如果您想將某個控制項繫結至多個資料表，例如巡覽關聯性的方格，**DataViewManager** 是理想的選擇。  
+# <a name="managing-dataviews"></a>管理 DataView
+您可以使用 <xref:System.Data.DataViewManager> 管理 <xref:System.Data.DataView> 內所有資料表的檢視設定。 如果您有想要繫結至多個資料表的控制項，例如方格的巡覽關聯性**DataViewManager**時非常有用。  
   
- **DataViewManager** 包含 <xref:System.Data.DataViewSetting> 物件的集合，這些物件可用來設定 <xref:System.Data.DataSet> 之資料表的檢視設定。  在 **DataSet** 中，每一個資料表的 <xref:System.Data.DataViewSettingCollection> 都會包含一個 <xref:System.Data.DataViewSetting> 物件。  您可以使用參考資料表的 **DataViewSetting**，來設定參考資料表的預設 **ApplyDefaultSort**、**Sort**、**RowFilter** 和 **RowStateFilter** 屬性。  您可以參考特定資料表的 **DataViewSetting**，方法是透過名稱或序數參考，或將參考傳遞給這個特定資料表物件；  此外，您還可以使用 **DataViewSettings** 屬性來存取 **DataViewManager** 中的 **DataViewSetting** 物件集合。  
+ **DataViewManager**包含的集合<xref:System.Data.DataViewSetting>物件，用來設定中的資料表的檢視設定<xref:System.Data.DataSet>。 <xref:System.Data.DataViewSettingCollection>包含一個<xref:System.Data.DataViewSetting>物件中每個資料表**資料集**。 您可以設定預設**ApplyDefaultSort**，**排序**， **RowFilter**，和**RowStateFilter**屬性所參考的資料表使用其**Dataviewsettings**。 您可以參考**Dataviewsettings**特定資料表名稱或序數參考，或藉由傳遞給該特定資料表物件的參考。 您可以存取的集合**Dataviewsettings**中的物件**DataViewManager**使用**Dataviewsetting**屬性。  
   
- 下列程式碼範例以 SQL Server **Northwind** 資料庫的 **Customers**、**Orders** 和 **Order Details** 資料表來填入 **DataSet**、在資料表之間建立關聯性、使用 **DataViewManager** 設定預設 **DataView** 設定，並將 **DataGrid** 繫結至 **DataViewManager**。  範例中設定 **DataSet** 內所有資料表的預設 **DataView** 設定依照資料表的主索引鍵排序 \(**ApplyDefaultSort** \= **true**\)，接著將 **Customers** 資料表的排序順序修改為按照 **CompanyName** 排序。  
+ 下列程式碼範例會填入**資料集**與 SQL Server **Northwind**資料庫資料表**客戶**，**訂單**，和**訂單詳細資料**、 建立資料表之間的關聯性、 使用**DataViewManager**設定預設**DataView**設定，以及繫結**DataGrid**至**DataViewManager**。 此範例會設定預設**DataView**設定中的所有資料表**資料集**來排序資料表的主索引鍵 (**ApplyDefaultSort**  =  **true**)，然後修改的排序次序**客戶**排序所依據的資料表**CompanyName**。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -72,7 +78,6 @@ viewManager.DataViewSettings("Customers").Sort = "CompanyName"
 ' Bind to a DataGrid.  
 Dim grid As System.Windows.Forms.DataGrid = New System.Windows.Forms.DataGrid()  
 grid.SetDataBinding(viewManager, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -124,10 +129,10 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## 請參閱  
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataViewManager>   
- <xref:System.Data.DataViewSetting>   
- <xref:System.Data.DataViewSettingCollection>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataViewManager>  
+ <xref:System.Data.DataViewSetting>  
+ <xref:System.Data.DataViewSettingCollection>  
+ [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

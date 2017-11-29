@@ -1,60 +1,52 @@
 ---
-title: "轉換資料類型 (Visual Basic) |Microsoft 文件"
+title: "轉換資料類型 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 53d8ad292891a567e13ec8a5396bcc114b379351
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5fb0e9dfb0f1fb882116449757ed0f0bf9029b39
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="converting-data-types-visual-basic"></a>轉換資料類型 (Visual Basic)
-轉換方法變更輸入物件的類型。  
+轉換方法會變更輸入物件的類型。  
   
- LINQ 查詢中的轉換作業可用於各種不同的應用程式。 以下是一些範例︰  
+ LINQ 查詢中的轉換作業可用於各種應用程式。 下列是一些範例：  
   
--   <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>方法可用來隱藏的類型的標準查詢運算子的自訂實作。</xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>  
+-   <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> 方法可以用來隱藏類型之標準查詢運算子的自訂實作。  
   
--   <xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName>方法可用來啟用非參數化的 LINQ 查詢的集合。</xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName>  
+-   <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> 方法可以用來啟用非參數化集合以進行 LINQ 查詢。  
   
--   <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>， <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>， <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>，和<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>方法可以用來強制立即執行查詢而不是等到列舉查詢的延後。</xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>  
+-   <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>、<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>、<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 和 <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> 方法可以用來強制立即執行查詢，而不是延後到列舉查詢。  
   
 ## <a name="methods"></a>方法  
  下表列出執行資料型別轉換的標準查詢運算子方法。  
   
- 此表格中名稱開頭為"As"變更來源集合的靜態型別，但不是會列舉它的轉換方法。 方法名稱開頭為 「 目標 」 列舉來源集合，並將項目放入對應的集合型別。  
+ 此表格中名稱開頭為"As" 的轉換方法會變更來源集合的靜態類型，而不是列舉它。 名稱開頭為 "To" 的方法會列舉來源集合，並將項目放入對應的集合類型。  
   
 |方法名稱|說明|Visual Basic 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|AsEnumerable|傳回輸入型別為<xref:System.Collections.Generic.IEnumerable%601>。</xref:System.Collections.Generic.IEnumerable%601>|不適用。|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName></xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>|  
-|AsQueryable|將轉換 （一般）<xref:System.Collections.IEnumerable>到 （一般） <xref:System.Linq.IQueryable>。</xref:System.Linq.IQueryable> </xref:System.Collections.IEnumerable>|不適用。|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName></xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName>|  
-|Cast|將轉換為指定型別集合的項目。|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName></xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName>|  
-|OfType|篩選值，視其可以轉換為指定型別而定。|不適用。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName></xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName></xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
-|ToArray|將集合轉換成陣列。 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>|  
-|ToDictionary|將元素插入<xref:System.Collections.Generic.Dictionary%602>根據索引鍵選取器函式。</xref:System.Collections.Generic.Dictionary%602> 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>|  
-|ToList|將集合轉換成<xref:System.Collections.Generic.List%601>。</xref:System.Collections.Generic.List%601> 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>|  
-|ToLookup|將元素插入<xref:System.Linq.Lookup%602>（一對多字典） 會根據索引鍵選取器函式。</xref:System.Linq.Lookup%602> 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
+|AsEnumerable|傳回 <xref:System.Collections.Generic.IEnumerable%601> 類型的輸入。|不適用。|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
+|AsQueryable|將 (泛型) <xref:System.Collections.IEnumerable> 轉換成 (泛型) <xref:System.Linq.IQueryable>。|不適用。|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
+|Cast|將集合的項目轉型為指定的類型。|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
+|OfType|根據可轉型為所指定類型的能力來篩選值。|不適用。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|ToArray|將集合轉換為陣列。 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
+|ToDictionary|根據索引鍵選取器函式，將項目放入 <xref:System.Collections.Generic.Dictionary%602>。 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
+|ToList|將集合轉換成 <xref:System.Collections.Generic.List%601>。 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|  
+|ToLookup|根據索引鍵選取器函式，將項目放入 <xref:System.Linq.Lookup%602> (一對多字典)。 這個方法會強制執行查詢。|不適用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例  
- 下列程式碼範例使用`From As`子句，才能存取的成員為僅適用於子型別轉換子的型別。  
+ 下列程式碼範例使用`From As`子句，以存取僅適用於子型別成員之前的子型別類型轉型。  
   
 ```vb  
 Class Plant  
@@ -95,7 +87,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Linq></xref:System.Linq>   
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)   
- [如何︰ 使用 LINQ (Visual Basic) 查詢 ArrayList](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+ <xref:System.Linq>  
+ [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)  
+ [如何： 查詢 ArrayList 使用 LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

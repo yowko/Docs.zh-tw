@@ -1,43 +1,48 @@
 ---
-title: "如何：停用索引標籤頁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "索引標籤頁, 在表單中隱藏"
-  - "TabControl 控制項 [Windows Form], 停用頁面"
+title: "如何：停用索引標籤頁"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- tab pages [Windows Forms], hiding in forms
+- TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 20674a93459f42a793ddf5f7ee5dffb1fa122d0c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：停用索引標籤頁
-在某些狀況下，您會想要限制對 Windows Form 應用程式中可用資料的存取。  這種情況的例子之一，是當您將資料顯示在索引標籤控制項的索引標籤頁中時；管理員會擁有索引標籤頁上的資訊，而您會希望限制這些資訊，以防訪客或低階使用者存取。  
+# <a name="how-to-disable-tab-pages"></a>如何：停用索引標籤頁
+在某些情況下，您會想要限制存取您的 Windows Form 應用程式中使用的資料。 當您需要的索引標籤控制項; 索引標籤頁面中顯示的資料，可能是一個範例是系統管理員可能會有您想要限制 guest 帳戶或較低層級的使用者 索引標籤頁面上的資訊。  
   
-### 若要以程式設計的方式停用索引標籤頁  
+### <a name="to-disable-tab-pages-programmatically"></a>若要以程式設計的方式停用索引標籤頁  
   
-1.  撰寫程式碼處理索引標籤控制項的 <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> 事件。  這就是當使用者切換索引標籤間時所引發的事件。  
+1.  撰寫程式碼來處理索引標籤控制項的<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>事件。 這是當使用者從某個索引標籤切換至下一個引發的事件。  
   
-2.  檢查認證。  在允許使用者檢視索引標籤前，根據提供的資訊，您可能要檢查使用者用以登入的使用者名稱或其他形式的認證。  
+2.  請檢查認證。 視所呈現之資訊，您可以檢查使用者登入的使用者名稱或其他形式的認證，再允許使用者檢視 索引標籤。  
   
-3.  如果使用者具有適當的認證，則會顯示使用者所按的索引標籤。  如果使用者沒有適當的認證，則會顯示訊息方塊或其他使用者介面，表示使用者沒有存取權限，並返回最初的索引標籤。  
+3.  如果使用者有適當的認證，顯示已按下 [] 索引標籤。 如果使用者沒有適當的認證，會顯示訊息方塊中，或指出此問題的一些其他使用者介面他們沒有存取權，並返回 [初始] 索引標籤。  
   
     > [!NOTE]
-    >  在實際執行應用程式中實作這個功能時，您可以在表單的 <xref:System.Windows.Forms.Form.Load> 事件期間執行認證檢查。  如此可讓您在顯示任何使用者介面時隱藏索引標籤，對於程式設計而言是更為徹底的方法。  以下使用的方法論 \(在 <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> 事件期間檢查認證並停用索引標籤\) 是做為說明之用。  
+    >  當您在實際執行應用程式中實作這項功能時，您就可以在表單的期間執行這項認證檢查<xref:System.Windows.Forms.Form.Load>事件。 這可讓您顯示任何使用者介面，這是清理方式進行程式設計前隱藏 索引標籤。 使用以下方法 (檢查認證並停用 [期間] 索引標籤<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>事件) 為說明之用。  
   
-4.  如果您有兩個以上的索引標籤頁，也可以顯示有別於原始頁的索引標籤頁。  
+4.  （選擇性） 如果您有兩個以上的索引標籤頁，顯示與原始版本不同的索引標籤頁。  
   
-     在以下的範例中，<xref:System.Windows.Forms.CheckBox> 控制項是用以替代檢查認證，因為存取索引標籤的準則會依應用程式而有所不同。  當 <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> 事件引發時，如果認證檢查為 true \(即選取了核取方塊\)，而選取的索引標籤為 `TabPage2` \(在此範例中為具有機密資訊的索引標籤\)，則會顯示 `TabPage2`。  否則，會對使用者顯示 `TabPage3` 和訊息方塊，表示他們沒有適當的存取權限。  以下程式碼假設含 <xref:System.Windows.Forms.CheckBox> 控制項 \(`CredentialCheck`\) 的表單，以及含有三個索引標籤頁的 <xref:System.Windows.Forms.TabControl> 控制項。  
+     在下列範例中，<xref:System.Windows.Forms.CheckBox>控制項的用途就不需檢查認證，做為準則存取 索引標籤會根據應用程式而有所不同。 當<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>引發事件時，如果為 true 的認證核取 （也就是核取方塊） 選取的索引標籤，且`TabPage2`（索引標籤上的機密資訊，在此範例中），然後`TabPage2`會顯示。 否則，`TabPage3`會顯示訊息方塊會顯示給使用者，指出他們沒有適當存取權限。 下列程式碼會假設的表單具有<xref:System.Windows.Forms.CheckBox>控制項 (`CredentialCheck`) 和<xref:System.Windows.Forms.TabControl>具有三個索引標籤頁控制項。  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
@@ -53,7 +58,6 @@ caps.handback.revision: 15
           TabControl1.SelectedTab = TabPage3  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -71,7 +75,6 @@ caps.handback.revision: 15
             tabControl1.SelectedTab = tabPage3;  
         }  
     }  
-  
     ```  
   
     ```cpp  
@@ -96,12 +99,11 @@ caps.handback.revision: 15
        }  
     ```  
   
-     \(Visual C\#、Visual C\+\+\) 在表單的建構函式中加入下列程式碼，將事件處理常式加以註冊。  
+     （visual C#、 Visual c + +）下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.tabControl1.SelectedIndexChanged +=   
        new System.EventHandler(this.tabControl1_SelectedIndexChanged);  
-  
     ```  
   
     ```cpp  
@@ -109,8 +111,8 @@ caps.handback.revision: 15
        gcnew System::EventHandler(this, &Form1::tabControl1_SelectedIndexChanged);  
     ```  
   
-## 請參閱  
- [TabControl 控制項概觀](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [如何：將控制項加入至索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [如何：使用 Windows Form TabControl 加入和移除索引標籤](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)   
- [如何：變更 Windows Form TabControl 的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a>另請參閱  
+ [TabControl 控制項概觀](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [操作說明：將控制項加入至索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [操作說明：使用 Windows Forms TabControl 加入和移除索引標籤](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [操作說明：變更 Windows Forms TabControl 的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

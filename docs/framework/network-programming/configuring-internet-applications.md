@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - downloading Internet resources, default proxy
 - sending data, default proxy
@@ -32,16 +27,15 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a4a013b8a4ff60222bb88c6e9c4f14badd689b5d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 05f849810d28ebe69a773bd4bd9d536146df6357
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="configuring-internet-applications"></a>設定網際網路應用程式
 [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 組態項目包含應用程式的網路組態資訊。 使用 [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 項目，您可以設定 Proxy 伺服器、設定連線管理參數，以及在應用程式中包含自訂驗證和要求模組。  
@@ -113,7 +107,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)   
- [網路設定結構描述](../../../docs/framework/configure-apps/file-schema/network/index.md)   
+ [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
+ [網路設定結構描述](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [\<system.Net> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
-

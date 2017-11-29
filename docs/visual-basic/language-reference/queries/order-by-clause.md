@@ -1,65 +1,64 @@
 ---
-title: "Order By Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryOrderBy"
-  - "vb.QueryAscending"
-  - "vb.QueryDescending"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [Visual Basic], Order By"
-  - "Order By clause"
-  - "Order By statement"
+title: "Order By 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryOrderBy
+- vb.QueryAscending
+- vb.QueryDescending
+helpviewer_keywords:
+- queries [Visual Basic], Order By
+- Order By clause [Visual Basic]
+- Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 21ee21942b966668a67b14aba72b8f9fc5ee903c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Order By Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="order-by-clause-visual-basic"></a>Order By 子句 (Visual Basic)
 指定查詢結果的排序次序。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `orderExp1`  
- 必要項。  目前查詢結果的一個或多個欄位，用以識別如何排序傳回的值。  欄位名稱必須以逗號 \(,\) 分隔。  您可以使用 `Ascending` 或 `Descending` 關鍵字，將每個欄位識別為以遞增或遞減順序排序。  如果未指定 `Ascending` 或 `Descending` 關鍵字，預設排序次序是遞增排序。  排序次序欄位優先順序是由左至右。  
+ 必要項。 一或多個從目前的查詢結果識別欄位如何排序傳回的值。 欄位名稱必須以逗號 （，） 分隔。 您可以識別每個欄位，為已排序，以遞增或遞減順序，使用`Ascending`或`Descending`關鍵字。 如果沒有`Ascending`或`Descending`關鍵字已指定，預設排序次序為遞增。 排序次序欄位可以從左到右的優先順序。  
   
-## 備註  
- 您可以使用 `Order By` 子句排序查詢結果。  `Order By` 子句只能根據目前範圍 \(Scope\) 的範圍 \(Range\) 變數排序結果。  例如，`Select` 子句在查詢運算式中引入新的範圍 \(Scope\)，並用新的反覆運算變數代表該範圍 \(Scope\)。  在查詢中 `Select` 子句之前定義的範圍 \(Range\) 變數在 `Select` 子句之後就無法使用。  因此，如果您要依 `Select` 子句中無法使用的欄位排序結果，就必須將 `Order By` 子句放在 `Select` 子句前面。  您必須這麼做的其中一個範例就是依不在傳回結果中的欄位來排序查詢時。  
+## <a name="remarks"></a>備註  
+ 您可以使用`Order By`子句來排序查詢的結果。 `Order By`子句只能排序結果，根據目前範圍的範圍變數。 例如，`Select`子句會導入新範圍與新的反覆項目變數的查詢運算式中針對該領域。 範圍變數之前定義`Select`在查詢中的子句之後沒有`Select`子句。 因此，如果您想要排序您的結果來依欄位中都沒有`Select`子句，您必須將`Order By`子句之前`Select`子句。 一個範例說明時，您就必須執行這項操作，當您想要排序查詢不會傳回結果的一部分的欄位。  
   
- 欄位的遞增和遞減順序是由針對欄位的資料型別實作的 <xref:System.IComparable> 介面決定。  如果資料型別未實作 <xref:System.IComparable> 介面，則會略過排序次序。  
+ 遞增和遞減順序的欄位取決於實作<xref:System.IComparable>欄位的資料類型的介面。 如果資料類型未實作<xref:System.IComparable>介面，在排序次序會被忽略。  
   
-## 範例  
- 下列查詢運算式會使用 `From` 子句宣告 `books` 集合的範圍 \(Range\) 變數 `book`。  `Order By` 子句會依價格將查詢結果遞增 \(預設值\) 排序。  相同價格的書籍會依標題遞增排序。  `Select` 子句會選取 `Title` 和 `Price` 屬性做為查詢傳回的值。  
+## <a name="example"></a>範例  
+ 下列查詢運算式使用`From`子句來宣告範圍變數`book`如`books`集合。 `Order By`子句依照依遞增順序 （預設值） 的價格排序查詢結果。 使用相同的價格會依標題以遞增順序排序。 `Select`子句選取`Title`和`Price`屬性作為查詢所傳回的值。  
   
  [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
-## 範例  
- 下列查詢運算式會使用 `Order By` 子句依價格將查詢結果遞減排序。  相同價格的書籍會依標題遞增排序。  
+## <a name="example"></a>範例  
+ 下列查詢運算式使用`Order By`子句來排序查詢結果以遞減順序的價格。 使用相同的價格會依標題以遞增順序排序。  
   
  [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
-## 範例  
- 下列查詢運算式會使用 `Select` 子句選取書籍標題、價格、出版日期和作者。  然後針對新的範圍 \(Scope\) 填入 \(Populate\) 範圍 \(Range\) 變數的 `Title`、`Price`、`PublishDate` 和 `Author` 欄位。  `Order By` 子句會先依作者名稱，再依書籍標題，然後依價格排列新的範圍變數 \(Range Variable\)。  每個資料行都以預設順序 \(遞增\) 排序。  
+## <a name="example"></a>範例  
+ 下列查詢運算式使用`Select`子句來選取書名、 price、 發行日期，以及撰寫。 然後填入`Title`， `Price`， `PublishDate`，和`Author`新範圍的範圍變數的欄位。 `Order By`子句排序新的範圍變數的作者名稱、 書籍標題和價格。 每個資料行排序 （遞增） 的預設順序。  
   
  [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
-## 請參閱  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)
+## <a name="see-also"></a>另請參閱  
+ [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [查詢](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)

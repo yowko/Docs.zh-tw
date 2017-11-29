@@ -1,22 +1,28 @@
 ---
-title: "HOW TO：啟用資料流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：啟用資料流"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8436ceefea936ddbf708aa3f79c5f7bd8153ac66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：啟用資料流
+# <a name="how-to-enable-streaming"></a>HOW TO：啟用資料流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以透過緩衝處理或資料流處理的傳輸來傳送訊息。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
   
  若要啟用資料流處理，請適當定義 `OperationContract` 並在傳輸層級啟用資料流處理。  
@@ -27,7 +33,7 @@ caps.handback.revision: 13
   
     1.  用來存放要進行資料流處理之資料的參數，必須是方法中的唯一參數。 例如，如果輸入訊息是要處理成資料流的訊息，這項處理作業就必須剛好只有一個輸入參數。 同樣地，如果要將輸出訊息處理成資料流，這項作業也必須剛好只有一個輸出參數或傳回值。  
   
-    2.  至少一個型別參數和傳回值必須是<xref:System.IO.Stream>，<xref:System.ServiceModel.Channels.Message>，或<xref:System.Xml.Serialization.IXmlSerializable>。  
+    2.  至少有一個參數型別與傳回值必須是 <xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message> 或 <xref:System.Xml.Serialization.IXmlSerializable>。  
   
      下列為資料流處理資料合約的範例。  
   
@@ -52,7 +58,7 @@ caps.handback.revision: 13
   
     1.  範例中的下列組態片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
   
-         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
     2.  下列程式碼片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
   
@@ -71,7 +77,7 @@ caps.handback.revision: 13
   
 ### <a name="writing-a-custom-stream"></a>撰寫自訂資料流  
   
-1.  若要進行資料流的每個區塊的特殊處理，因為它傳送或接收，衍生的自訂資料流類別<xref:System.IO.Stream>。 下列程式碼包含 `GetReversedStream` 方法和 `ReverseStream` 類別，是一個自訂資料流範例。  
+1.  若要對每個正在傳送或接收的資料流區塊 (Chunk) 進行特殊處理，請從 <xref:System.IO.Stream> 衍生自訂資料流類別。 下列程式碼包含 `GetReversedStream` 方法和 `ReverseStream` 類別，是一個自訂資料流範例。  
   
      `GetReversedStream` 會建立並傳回 `ReverseStream` 的新執行個體。 實際的處理會在系統從這個 `ReverseStream` 物件讀取時進行。 `ReverseStream.Read` 方法會從基礎檔案讀取位元組區塊，然後將其序列反轉，再傳回此相反序列的位元組。 此方法不會反轉整個檔案內容，它只是一次反轉一個位元組區塊。 下列範例說明如何在對資料流讀取內容或寫入內容時執行資料流處理。  
   
@@ -79,5 +85,5 @@ caps.handback.revision: 13
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱  
- [大型資料與資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)   
+ [大型的資料與資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  [資料流](../../../../docs/framework/wcf/samples/stream.md)

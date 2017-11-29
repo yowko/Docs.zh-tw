@@ -1,37 +1,40 @@
 ---
-title: "Contract-First 工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Contract-First 工具"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ea0821d9dd6073c1e652d36c71b817647b8710c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Contract-First 工具
-服務合約通常必須從現有的服務來建立。在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用合約先行工具自動從現有的服務建立資料合約類別。若要使用合約先行工具，必須將 XML 結構描述定義 \(XSD\) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。  
+# <a name="contract-first-tool"></a>Contract-First 工具
+服務合約通常必須從現有的服務來建立。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用合約優先 (Contract-First) 工具自動從現有的服務建立資料合約類別。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。  
   
- 合約先行工具已整合至[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中做為建置工作。每當建置專案時就會建立建置工作所產生的程式碼檔案，讓專案可以輕鬆採用基礎服務合約中的變更。  
+ 合約優先工具已整合至 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中做為建置工作。 每當建置專案時就會建立建置工作所產生的程式碼檔案，讓專案可以輕鬆採用基礎服務合約中的變更。  
   
- 合約先行工具可以匯入的結構描述型別包括下列各項：  
+ 合約優先工具可以匯入的結構描述型別包括下列各項：  
   
-```  
+```xml  
 <xsd:complexType>  
 <xsd:simpleType>  
 ```  
   
- 如果這些型別是基本型別 \(例如 `Int16`或 `String`\) 則不產生簡單型別，如果是 `Collection` 型別則不產生複雜類型。如果這些型別是其他 `xsd:complexType` 的一部分，也不會產生型別。在所有這些情況下，型別會改為參考專案中的現有型別。  
+ 如果這些型別是基本型別 (例如 `Int16` 或 `String`) 則不產生簡單型別，如果是 `Collection` 型別則不產生複雜類型。 如果這些型別是其他 `xsd:complexType` 的一部分，也不會產生型別。 在所有這些情況下，型別會改為參考專案中的現有型別。  
   
-## 將資料合約加入至專案  
- 在使用合約先行工具之前，必須先將服務合約 \(XSD\) 加入至專案。為了便於說明本概觀，將會使用下列合約來解釋合約先行功能。這項服務定義是 Bing 的搜尋應用程式開發介面所使用之服務合約的一小部分。  
+## <a name="adding-a-data-contract-to-a-project"></a>將資料合約加入至專案  
+ 在使用合約優先工具之前，必須先將服務合約 (XSD) 加入至專案。 為了便於說明本概觀，將會使用下列合約來解釋合約優先功能。 這項服務定義是 Bing 的搜尋應用程式開發介面所使用之服務合約的一個小型子集合。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -61,64 +64,63 @@ caps.handback.revision: 8
     </xs:restriction>  
   </xs:simpleType>  
 </xs:schema>  
-  
 ```  
   
- 若要將上述服務合約加入至專案，請以滑鼠右鍵按一下專案並選取 \[**加入新的…**\]。從 \[範本\] 對話方塊的 \[WCF\] 窗格中選取 \[結構描述定義\]，並命名新的檔案 SampleContract.xsd。複製上面的程式碼，將其貼入新檔案的程式碼檢視中。  
+ 將上述服務合約加入至專案，以滑鼠右鍵按一下專案，然後選取**加入新...**. 從 [範本] 對話方塊的 [WCF] 窗格中選取 [結構描述定義]，並命名新的檔案 SampleContract.xsd。 複製上面的程式碼，將其貼入新檔案的程式碼檢視中。  
   
-## 設定合約先行選項  
- 合約先行選項可以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]專案的 \[屬性\] 功能表進行設定。若要啟用合約先行開發，請選取專案屬性視窗之 WCF 頁面中的 \[**將 XSD 啟用為型別定義語言**\] 核取方塊。  
+## <a name="configuring-contract-first-options"></a>設定合約優先選項  
+ 合約優先選項可以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]專案的 [屬性] 功能表進行設定。 若要啟用合約優先開發，請選取**將 XSD 啟用為型別定義語言**專案屬性 視窗的 WCF 頁面中核取方塊。  
   
- ![顯示合約優先的 WCF 專案屬性](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![WCF 專案選項顯示合約 &#45; 第一個](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
- 若要設定進階屬性，請按一下 \[進階\] 按鈕。  
+ 若要設定進階屬性，請按一下 [進階] 按鈕。  
   
- ![進階合約優先屬性](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![進階的合約 &#45;第一個屬性](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
- 您可以設定下列適用於從合約產生程式碼的進階設定。這些設定只能針對專案中的所有檔案進行，目前尚無法對個別檔案進行設定。  
+ 您可以設定下列適用於從合約產生程式碼的進階設定。 這些設定只能針對專案中的所有檔案進行，目前尚無法對個別檔案進行設定。  
   
--   **序列化程式模式**：這個設定決定使用哪個序列化程式來讀取服務合約檔。選取 \[**XML 序列化程式**\] 時會停用 \[**集合型別**\] 和 \[**重複使用型別**\] 選項。這些選項僅適用於 \[**資料合約序列化程式**\]。  
+-   **序列化程式模式**： 此設定會決定哪個序列化程式，可用來讀取服務合約檔案。 當**XML 序列化程式**選取時，**集合型別**和**重複使用型別**選項已停用。 這些選項僅適用於**資料合約序列化程式**。  
   
--   **重複使用型別**：這個設定指定哪些程式庫會用於型別重複使用。這個設定只有在 \[**序列化程式模式**\] 設定為 \[**資料合約序列化程式**\] 時才適用。  
+-   **重複使用型別**： 此設定可讓您指定哪些文件庫用於型別重複使用。 這項設定僅適用於**序列化程式模式**設**資料合約序列化程式**。  
   
--   **集合型別**：這個設定指定集合資料類型要使用完整限定或組件限定型別。這個設定只有在 \[**序列化程式模式**\] 設定為 \[**資料合約序列化程式**\] 時才適用。  
+-   **集合型別**： 此設定指定要用於集合的資料類型的完整限定或組件限定型別。 這項設定僅適用於**序列化程式模式**設**資料合約序列化程式**。  
   
--   **字典型別**：這個設定指定集合資料類型要使用完整限定或組件限定型別。  
+-   **字典型別的**： 此設定指定要用於字典資料型別的完整限定或組件限定型別。  
   
--   **EnableDataBinding**：這個設定指定是否要實作所有資料型別上的 <xref:System.ComponentModel.INotifyPropertyChanged> 介面以實作資料繫結。  
+-   **EnableDataBinding**： 此設定指定是否要實作<xref:System.ComponentModel.INotifyPropertyChanged>介面以實作資料繫結的所有資料類型。  
   
--   **ExcludedTypes**：這個設定指定要從參考組件中排除之完還限定或組件限定型別的清單。這個設定只有在 \[**序列化程式模式**\] 設定為 \[**資料合約序列化程式**\] 時才適用。  
+-   **ExcludedTypes**： 此設定指定要從參考的組件中排除的完整限定或組件限定類型的清單。 這項設定僅適用於**序列化程式模式**設**資料合約序列化程式**。  
   
--   **GenerateInternalTypes**：這個設定指定是否產生標記為內部的類別。這個設定只有在 \[**序列化程式模式**\] 設定為 \[**資料合約序列化程式**\] 時才適用。  
+-   **GenerateInternalTypes**： 此設定指定是否要產生標示為內部的類別。 這項設定僅適用於**序列化程式模式**設**資料合約序列化程式**。  
   
--   **GenerateSerializableTypes**：這個設定指定是否產生具有 <xref:System.SerializableAttribute> 屬性的類別。這個設定只有在 \[**序列化程式模式**\] 設定為 \[**資料合約序列化程式**\] 時才適用。  
+-   **GenerateSerializableTypes**： 此設定指定是否要產生與類別<xref:System.SerializableAttribute>屬性。 這項設定僅適用於**序列化程式模式**設**資料合約序列化程式**。  
   
--   **ImportXMLTypes**：這個設定指定是否將資料合約序列化程式設定為套用 <xref:System.SerializableAttribute> 屬性至沒有 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性的類別。這個設定只有在 \[**序列化程式模式**\] 設定為 \[**資料合約序列化程式**\] 時才適用。  
+-   **/Importxmltypes**： 此設定指定是否設定資料合約序列化程式，以套用<xref:System.SerializableAttribute>屬性設定為不具類別<xref:System.Runtime.Serialization.DataContractAttribute>屬性。  這項設定僅適用於**序列化程式模式**設**資料合約序列化程式**。  
   
--   **SupportFx35TypedDataSets**：這個設定指定是否要為針對 .Net Framework 3.5 所建立的具型別資料集提供其他功能。當 \[**序列化程式模式**\] 設定為 \[**XML 序列化程式**\] 時，只要這個值設定為 True，就會 <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> 擴充加入至 XML 結構描述匯入工具。當 \[**序列化程式模式**\] 設定為 \[**資料合約序列化程式**\] 時，只要這個設定為 False，就會從 \[參考\] 中排除 <xref:System.DateTimeOffset> 型別，使 [DateTimeOffset](assetId:///DateTimeOffset?qualifyHint=False&amp;autoUpgrade=True) 永遠針對舊版 Framework 而產生。  
+-   **SupportFx35TypedDataSets**： 此設定指定是否提供額外的功能，針對具類型資料集建立適用於.Net Framework 3.5。 當**序列化程式模式**設**XML 序列化程式**、<xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35>擴充將會加入至 XML 結構描述匯入工具，當此值設定為 True。 當**序列化程式模式**設為**資料合約序列化程式**，型別<xref:System.DateTimeOffset>時此值設定為 False，將從參考排除，讓<xref:System.DateTimeOffset>一定會產生針對舊版 framework。  
   
--   **InputXsdFiles**：這個設定指定輸入檔清單。每個檔案都必須包含有效的 XML 結構描述。  
+-   **InputXsdFiles**： 此設定指定輸入檔清單。 每個檔案都必須包含有效的 XML 結構描述。  
   
--   **語言**：這個設定指定產生的合約程式碼的語言。這個設定必須可以由 <xref:System.CodeDom.Compiler.CodeDomProvider> 辨識。  
+-   **語言**： 此設定指定產生的合約程式碼的語言。 這個設定必須可以由 <xref:System.CodeDom.Compiler.CodeDomProvider> 辨識。  
   
--   **NamespaceMappings**：這個設定指定從 XSD 目標命名空間到 CLR 命名空間的對應。每個對應都要使用下列格式：  
+-   **NamespaceMappings**： 此設定可指定從 XSD 目標命名空間到 CLR 命名空間的對應。 每個對應都要使用下列格式：  
   
     ```xml  
-    “<Schema Namespace>, <CLR Namespace>”  
+    "<Schema Namespace>, <CLR Namespace>"  
     ```  
   
      XML 序列化程式只接受一個使用下列格式的對應：  
   
     ```xml  
-    “*, <CLR Namespace>”  
+    "*, <CLR Namespace>"  
     ```  
   
--   **OutputDirectory**：這個設定指定產生程式碼檔案所在的目錄。  
+-   **OutputDirectory**： 此設定可指定將產生的程式碼檔案的目錄。  
   
  建置專案時，將會使用這些設定從服務合約檔案產生服務合約型別。  
   
-## 使用合約先行開發  
- 將服務合約加入至專案並確認 組建設定之後，按下 **F6** 以建置專案。服務合約中定義的型別接著就可以在專案中使用。  
+## <a name="using-contract-first-development"></a>使用合約優先開發  
+ 加入專案中的服務合約並確認組建設定，請按下建置專案後**F6**。 服務合約中定義的型別接著就可以在專案中使用。  
   
  若要使用服務合約中定義的型別，請在目前命名空間之下加入 `ContractTypes` 的參考：  
   
@@ -126,13 +128,13 @@ caps.handback.revision: 8
 using MyProjectNamespace.ContractTypes;  
 ```  
   
- 服務合約中定義的型別接著就可以在專案中解析，如下所示：  
+ 服務合約中定義的型別接著就可以在專案中解析，如下所示。  
   
- ![使用衍生自服務合約的型別](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")  
+ ![使用型別衍生自服務合約](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")  
   
- 工具所產生的型別會建立在 GeneratedXSDTypes.cs 檔案中。預設會在 \<專案目錄\>\/obj\/\<組建組態\>\/XSDGeneratedCode\/ 目錄中建立這個檔案。本主題開頭的範例結構描述轉換如下：  
+ 工具所產生的型別會建立在 GeneratedXSDTypes.cs 檔案中。 檔案建立在\<專案目錄 > j\<組建組態 > /XSDGeneratedCode/ 目錄預設。 本主題開頭的範例結構描述轉換如下：  
   
-```scr  
+```csharp
 //------------------------------------------------------------------------------  
 // <auto-generated>  
 //     This code was generated by a tool.  
@@ -347,11 +349,10 @@ namespace TestXSD3.ContractTypes
         DisableQueryAlterations,  
     }  
 }  
-  
 ```  
   
-## 錯誤和警告  
+## <a name="errors-and-warnings"></a>錯誤和警告  
  剖析 XSD 結構描述時發生的錯誤和警告將會顯示為建置錯誤和警告。  
   
-## 介面繼承  
- 不能同時使用介面繼承與合約優先開發；這與介面在其他作業中的行為方式一致。要使用繼承基底介面的介面，請使用兩個單獨的端點。第一個端點使用繼承的合約，第二個端點實作基底介面。
+## <a name="interface-inheritance"></a>介面繼承  
+ 不能同時使用介面繼承與合約優先開發；這與介面在其他作業中的運作方式一致。 若要使用繼承基底介面的介面，請使用兩個單獨的端點。 第一個端點使用繼承的合約，第二個端點實作基底介面。

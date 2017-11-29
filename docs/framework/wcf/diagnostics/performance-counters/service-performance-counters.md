@@ -1,30 +1,33 @@
 ---
-title: "服務效能計數器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "服務效能計數器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4210f549-31f2-4ea7-99bd-69eaffb98ddf
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: de51c6d0a3070f8bba8a2c77f9c028e7cfbc944d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 服務效能計數器
-服務效能計數器會測量整體的服務行為，而且可用於診斷整個服務的效能。以效能監視器 \(Perfmon.exe\) 檢視時，可以在 `ServiceModelService 4.0.0.0` 效能物件下找到它們。執行個體會使用以下模式來命名：  
+# <a name="service-performance-counters"></a>服務效能計數器
+服務效能計數器會測量整體的服務行為，而且可用於診斷整個服務的效能。 以效能監視器 (Perfmon.exe) 檢視時，可以在 `ServiceModelService 4.0.0.0` 效能物件下找到它們。 執行個體會使用以下模式來命名：  
   
 ```  
 ServiceName@ServiceBaseAddress  
 ```  
   
 > [!CAUTION]
->  效能計數器執行個體名稱有長度上的限制。當 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 計數器執行個體名稱超出最大長度時，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會以雜湊值取代此執行個體名稱的一部分。  
+>  效能計數器執行個體的名稱具有長度限制。 當 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 計數器執行個體名稱超出最大長度時，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會以雜湊值取代此執行個體名稱的一部分。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [效能計數器](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)

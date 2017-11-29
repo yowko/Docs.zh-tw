@@ -1,54 +1,60 @@
 ---
-title: "&lt;timeOuts&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;逾時&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 41ebd88f64b001b577342562c9c3010b307aaccc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;timeOuts&gt;
+# <a name="lttimeoutsgt"></a>&lt;逾時&gt;
 表示組態項目，指定允許服務主機開啟或關閉的時間間隔。  
   
-## 語法  
+ \<系統。ServiceModel >  
+\<用戶端 >  
+\<端點 >  
+\<主機 >  
+\<逾時 >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <timeOuts closeTimeout="TimeSpan"  
    openTimeout="TimeSpan" >  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
+|---------------|-----------------|  
 |`closeTimeout`|<xref:System.TimeSpan> 值，指定允許服務主機關閉的時間間隔。|  
 |`openTimeout`|<xref:System.TimeSpan> 值，指定允許服務主機開啟的時間間隔。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<Host \- 主應用程式\>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定服務主機設定的組態項目。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<主機 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定服務主機設定的組態項目。|  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.HostElement>   
- <xref:System.ServiceModel.ServiceHost>   
- <xref:System.ServiceModel.ServiceHost.CloseTimeout%2A>   
- <xref:System.ServiceModel.ServiceHost.OpenTimeout%2A>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Configuration.HostElement>  
+ <xref:System.ServiceModel.ServiceHost>  
  [裝載](../../../../../docs/framework/wcf/feature-details/hosting.md)

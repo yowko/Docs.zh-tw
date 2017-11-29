@@ -1,69 +1,71 @@
 ---
-title: "&lt;Thread_UseAllCpuGroups&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Thread_UseAllCpuGroups&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 187e391acf3b80a5ae2dfe795c4a3b397af815ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;Thread_UseAllCpuGroups&gt; 項目
-指定執行階段是否在所有 CPU 群組分配 Managed 執行緒。  
+# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt;項目
+指定執行階段是否會將 Managed 執行緒分散到所有 CPU 群組。  
   
-## 語法  
+ \<configuration>  
+\<執行階段 >  
+< Thread_UseAllCpuGroups >  
   
-```vb  
+## <a name="syntax"></a>語法  
+  
+```xml
 <Thread_UseAllCpuGroups    
    enabled="true|false"/>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|`enabled`|必要屬性。<br /><br /> 指定執行階段是否在所有 CPU 群組分配 Managed 執行緒。|  
+|---------------|-----------------|  
+|`enabled`|必要屬性。<br /><br /> 指定執行階段是否會將 Managed 執行緒分散到所有 CPU 群組。|  
   
-## 啟用屬性  
+## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
-|-------|--------|  
-|`false`|執行階段不會跨多個 CPU 群組分配 Managed 執行緒。  這是預設值。|  
-|`true`|如果電腦上有多個 CPU 群組，而且已啟用 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 項目，執行階段會將 Managed 執行緒分散到多個 CPU 群組。|  
+|值|說明|  
+|-----------|-----------------|  
+|`false`|執行階段不將多個 CPU 群組受管理的執行緒。 這是預設值。|  
+|`true`|執行階段受管理將執行緒分配給多個 CPU 群組，如果電腦中有多個 CPU 群組和[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)項目啟用。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|項目|描述|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
-## 備註  
- 當電腦上有多個 CPU 群組時，啟用這個項目會造成執行階段將 Managed 執行緒分散到所有的 CPU 群組。  若要使用此功能，您也必須啟用 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 項目，以將記憶體回收擴及所有 CPU 群組，並在建立和平衡堆積時考慮所有核心。  啟用 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 項目需要啟用 [\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 項目。  這些項目未啟用，啟用 `<Thread_UseAllCpuGroups>` 項目沒有作用。  
+## <a name="remarks"></a>備註  
+ 當電腦有多個 CPU 群組時，則啟用這個項目會導致執行階段散發 managed 的執行緒的所有 CPU 群組。 若要使用這項功能，您也必須啟用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素，其會延伸到所有的 CPU 群組記憶體回收並考量所有核心建立和平衡堆積時。 啟用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)項目時，必須啟用[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)項目。 如果這些項目未啟用，啟用`<Thread_UseAllCpuGroups>`項目沒有任何作用。  
   
-## 範例  
- 下列範例說明如何啟用多個 CPU 群組的支援。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何啟用支援多個 CPU 的群組。  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <Thread_UseAllCpuGroups enabled="true"/>  
@@ -73,7 +75,7 @@ caps.handback.revision: 6
 </configuration>  
 ```  
   
-## 請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<GCCpuGroup\> 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+## <a name="see-also"></a>另請參閱  
+ [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [\<GCCpuGroup > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

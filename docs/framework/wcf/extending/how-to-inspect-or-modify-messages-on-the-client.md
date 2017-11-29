@@ -1,33 +1,36 @@
 ---
-title: "HOW TO：檢查或修改用戶端上的訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：檢查或修改用戶端上的訊息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 164e19891e576b6d310839a1221ad8ed0d315444
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：檢查或修改用戶端上的訊息
-您可以實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName> 並將它插入用戶端執行階段，以檢查或修改 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端內傳入或傳出的訊息。  如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。  服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>。  如需完整的程式碼範例，請參閱 [訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md) 範例。  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>HOW TO：檢查或修改用戶端上的訊息
+您可以實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並將它插入用戶端執行階段，以檢查或修改 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 用戶端內傳入或傳出的訊息。 如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 如需完整的程式碼範例，請參閱[訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md)範例。  
   
-### 檢查或修改訊息  
+### <a name="to-inspect-or-modify-messages"></a>檢查或修改訊息  
   
-1.  實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName> 介面。  
+1.  實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 介面。  
   
-2.  根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName>。  <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> 允許您變更端點層級的行為。  <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> 允許您變更合約層級的行為。  
+2.  根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>可讓您變更端點層級的行為。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>可讓您變更合約層級的行為。  
   
-3.  在 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=fullName> 上呼叫 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=fullName> 或 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName> 方法前，請先插入行為。  如需詳細資訊，請參閱 [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+3.  在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。 如需詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例會依序顯示：  
   
 -   用戶端偵測器實作。  
@@ -57,7 +60,6 @@ public class SimpleMessageInspector : IClientMessageInspector
         return null;  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -102,10 +104,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
         return new SimpleEndpointBehavior();  
     }  
 }  
-  
 ```  
   
-```vb  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <system.serviceModel>  
@@ -132,10 +133,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
       </extensions>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 請參閱  
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>   
- [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
+ [設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

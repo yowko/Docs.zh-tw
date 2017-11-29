@@ -1,27 +1,30 @@
 ---
-title: "對應針對巢狀項目所指定的關聯 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "針對巢狀項目指定的關聯進行對應"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9866b556f2ba09cef7616fea4a2a6d8135e6b8e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 對應針對巢狀項目所指定的關聯
-結構描述可包含 **msdata:Relationship** 註釋，以明確指定結構描述內任何兩個項目間的對應。  **msdata:Relationship** 中指定的兩個項目可以 \(但非必要\) 在結構描述內進行巢狀化。  對應處理序在結構描述中使用 **msdata:Relationship**，以在兩個資料行間產生主索引鍵\/外部索引鍵關係。  
+# <a name="map-relations-specified-for-nested-elements"></a>針對巢狀項目指定的關聯進行對應
+結構描述可以包含**msdata: relationship**註解明確指定結構描述中任何兩個項目之間的對應。 在指定的兩個項目**msdata: relationship**可以巢狀結構描述，但沒有為。 對應處理會使用**msdata: relationship**結構描述產生的主索引鍵/外部索引鍵關聯性之間的兩個資料行中。  
   
- 下列範例顯示的 XML 結構描述中，**OrderDetail** 項目為 **Order** 的項目子系。  **msdata:Relationship** 識別了這個父子關係，並指定在產生的 **Order** 資料表的 **OrderNumber** 資料行與產生的 **OrderDetail** 資料表的 **OrderNo** 資料行之間有關聯。  
+ 下列範例顯示 XML 結構描述所在**OrderDetail**元素是子元素**順序**。 **Msdata: relationship**識別這個父子式關聯性，並指定**OrderNumber**所產生的資料行**順序**資料表與相關**OrderNo**所產生的資料行**OrderDetail**資料表。  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,14 +64,14 @@ caps.handback.revision: 4
   
  XML 結構描述對應處理序會在 <xref:System.Data.DataSet> 內建立下列各項：  
   
--   **Order** 和 **OrderDetail** 資料表。  
+-   **順序**和**OrderDetail**資料表。  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   **Order** 和 **OrderDetail** 資料表間的關聯性。  這項關聯性的 **Nested** 屬性設定為 **True**，因為 **Order** 和 **OrderDetail** 元素會巢狀化至結構描述內。  
+-   之間的關聯性**順序**和**OrderDetail**資料表。 **巢狀**此關聯性的屬性設定為**True**因為**順序**和**OrderDetail**元素的巢狀結構描述中.  
   
     ```  
     ParentTable: Order  
@@ -81,7 +84,7 @@ caps.handback.revision: 4
   
  對應處理序未建立任何條件約束。  
   
-## 請參閱  
- [從 XML 結構描述 \(XSD\) 產生 DataSet 關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [將 XML 結構描述 \(XSD\) 條件約束對應至 DataSet 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

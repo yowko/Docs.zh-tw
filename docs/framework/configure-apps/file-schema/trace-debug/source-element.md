@@ -1,76 +1,73 @@
 ---
-title: "&lt;source&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#source"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> 項目"
-  - "source 項目"
-ms.assetid: ecf86505-735d-4844-aaba-266fdd134218
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+title: "&lt;來源&gt;項目"
+ms.date: 09/29/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#source
+helpviewer_keywords:
+- <source> element
+- source element
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;source&gt; 項目
-指定會啟始追蹤訊息的追蹤來源。  
+# <a name="ltsourcegt-element"></a>&lt;來源&gt;項目
+指定起始追蹤訊息的追蹤來源。  
   
-## 語法  
+ \<configuration>  
+\<system.diagnostics >  
+\<來源 >  
+\<來源 >  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <source>   
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
+|---------------|-----------------|  
 |`name`|選擇性屬性。<br /><br /> 指定追蹤來源的名稱。|  
-|`switchName`|選擇性屬性。<br /><br /> 指定應用程式中追蹤參數執行個體的名稱。  如果此參數未在 `<switches>` 項目中識別，則此值會指定該參數的層級。|  
-|`switchType`|選擇性屬性。<br /><br /> 指定追蹤參數的型別。  如果有的話，則此型別必須是有效的類別名稱，且不能是空字串。|  
-|`extraAttribute`|選擇性屬性。<br /><br /> 指定由追蹤來源的特定屬性的值<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>為追蹤來源的方法。|  
+|`switchName`|選擇性屬性。<br /><br /> 應用程式中，指定追蹤交換器執行個體的名稱。 如果參數不會識別在`<switches>`項目，此值會指定交換器層級。|  
+|`switchType`|選擇性屬性。<br /><br /> 指定追蹤參數的類型。 如果有的話，類型必須是有效的類別名稱，並不能是空的字串。|  
+|`extraAttribute`|選擇性屬性。<br /><br /> 指定的值所識別的追蹤來源特定屬性<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>該追蹤來源的方法。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
+  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|包含收集、 儲存和路由傳送訊息的接聽程式。|  
+  
+### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
-|--------|--------|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|包含收集、儲存和傳送訊息的接聽程式。|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
+|`sources`|包含起始追蹤訊息的追蹤來源。|  
   
-### 父項目  
+## <a name="remarks"></a>備註  
+ 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
-|項目|描述|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`system.diagnostics`|指定收集、存放和傳送訊息的追蹤接聽程式，以及設定追蹤參數的層級。|  
-|`sources`|包含會啟始追蹤訊息的追蹤來源。|  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用`<source>`要加入追蹤來源項目的`mySource`和設定來源交換器層級具名`sourceSwitch`。 主控台追蹤接聽程式會加入，將追蹤資訊寫入主控台。  
   
-## 備註  
- 這個項目可以用於電腦組態檔 \(Machine.config\) 和應用程式組態檔。  
-  
-## 範例  
- 下列範例將示範如何使用 `<source>`  項目加入追蹤來源 `mySource`，以及針對名為 `sourceSwitch` 的來源參數設定層級。  可寫入追蹤資訊的主控台追蹤接聽項會加入到主控台中。  
-  
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -90,6 +87,6 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## 請參閱  
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Switches](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>另請參閱  
+ [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [追蹤參數](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c0eaafec80dbd7aa9b32c89a2d73a0fc444fb0bf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1788300407ad84a5ff7e3929eaa728f5399961ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
 將訊息編碼指定為位元組資料流，且含有指定字元編碼的選項。  
@@ -58,14 +56,13 @@ ms.lasthandoff: 09/25/2017
 |[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>   
- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>   
- [訊息編碼](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)   
- [選擇訊息編碼器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
+ <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+ <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>  
+ [訊息編碼](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
+ [選擇訊息編碼器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-

@@ -1,69 +1,68 @@
 ---
-title: "數學函式 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "數學函式，Visual Basic"
-  - "數學運算，數學函式"
-  - "數學常式"
-  - "Atn 函式"
+title: "數學函式 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- math functions, Visual Basic
+- arithmetic operations, math functions
+- math routines
+- Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4d67df44e5f4ea89475ea34e87fd5041ee6cb44f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 數學函式 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-<xref:System.Math?displayProperty=fullName> 類別中的方法提供三角，對數函數和其他一般數學函式。  
+# <a name="math-functions-visual-basic"></a>數學函式 (Visual Basic)
+方法的<xref:System.Math?displayProperty=nameWithType>類別提供三角函數、 對數以及其他一般數學函數。  
   
-## 備註  
- 下表列出 <xref:System.Math?displayProperty=fullName> 類別中的方法。  您可以使用 Visual Basic 程式中使用這些。  
+## <a name="remarks"></a>備註  
+ 下表列出的方法<xref:System.Math?displayProperty=nameWithType>類別。 您可以使用在 Visual Basic 程式中。  
   
-|.NET Framework 方法|描述|  
-|-----------------------|--------|  
-|<xref:System.Math.Abs%2A>|傳回數值的絕對值。|  
-|<xref:System.Math.Acos%2A>|傳回餘弦函數 \(Cosine\) 是指定數字的角。|  
-|<xref:System.Math.Asin%2A>|傳回正弦函數 \(Sine\) 是指定數字的角。|  
-|<xref:System.Math.Atan%2A>|傳回正切函數 \(Tangent\) 是指定數字的角。|  
+|.NET framework 方法|說明|  
+|---------------------------|-----------------|  
+|<xref:System.Math.Abs%2A>|傳回一個數字的絕對值。|  
+|<xref:System.Math.Acos%2A>|傳回餘弦函數 (Cosine) 是指定數字的角。|  
+|<xref:System.Math.Asin%2A>|傳回正弦函數 (Sine) 是指定數字的角。|  
+|<xref:System.Math.Atan%2A>|傳回正切函數 (Tangent) 是指定數字的角。|  
 |<xref:System.Math.Atan2%2A>|傳回正切函數是兩個指定數字之商數的角。|  
-|<xref:System.Math.BigMul%2A>|傳回兩個 32 位元數字完整的產品。|  
-|<xref:System.Math.Ceiling%2A>|傳回大於或等於指定之 `Decimal` 或 `Double`的最小整數值。|  
+|<xref:System.Math.BigMul%2A>|傳回完整的產品的兩個 32 位元數字。|  
+|<xref:System.Math.Ceiling%2A>|傳回大於或等於指定的最小整數值`Decimal`或`Double`。|  
 |<xref:System.Math.Cos%2A>|傳回指定角的餘弦函數。|  
 |<xref:System.Math.Cosh%2A>|傳回指定角的雙曲線餘弦函數。|  
-|<xref:System.Math.DivRem%2A>|傳回兩個 32 位元或 64 位元帶正負號的整數商數，也會在輸出參數。|  
-|<xref:System.Math.Exp%2A>|傳回 e \(自然對數的基數\) 的乘至指定的乘冪數。|  
-|<xref:System.Math.Floor%2A>|傳回小於或等於指定之 `Decimal` 或 `Double` 數字的最大整數。|  
-|<xref:System.Math.IEEERemainder%2A>|傳回指定數字的除法運算的結果為另一個指定數字的其餘部分。|  
-|<xref:System.Math.Log%2A>|傳回指定數字的自然 \(底數為 e\) 對數或指定數字的對數在指定的基底。|  
-|<xref:System.Math.Log10%2A>|傳回指定數字的底數 10 對數。|  
-|<xref:System.Math.Max%2A>|傳回兩個大數字。|  
+|<xref:System.Math.DivRem%2A>|傳回兩個 32 位元或 64 位元帶正負號整數商數，並為輸出參數傳回餘數。|  
+|<xref:System.Math.Exp%2A>|傳回指定次方的 e （自然對數的基底）。|  
+|<xref:System.Math.Floor%2A>|傳回小於或等於指定的最大整數`Decimal`或`Double`數目。|  
+|<xref:System.Math.IEEERemainder%2A>|傳回指定數字的另一個指定的點數相除所得到的餘數。|  
+|<xref:System.Math.Log%2A>|在指定的基底會傳回指定的數字的自然 （底數為 e） 對數或指定的數字的對數。|  
+|<xref:System.Math.Log10%2A>|傳回指定數字的以 10 為底數的對數。|  
+|<xref:System.Math.Max%2A>|傳回兩個數字的較大。|  
 |<xref:System.Math.Min%2A>|傳回兩個數字中較小的一個。|  
 |<xref:System.Math.Pow%2A>|傳回具有指定乘冪數的指定數字。|  
-|<xref:System.Math.Round%2A>|傳回 `Decimal` 或 `Double` 值會捨入為最接近的整數值或為小數位數的指定數目。|  
-|<xref:System.Math.Sign%2A>|傳回表示數字正負號的 `Integer` 值。|  
+|<xref:System.Math.Round%2A>|傳回`Decimal`或`Double`值四捨五入為最接近的整數值或指定的小數位數。|  
+|<xref:System.Math.Sign%2A>|傳回`Integer`指示數字的正負號的值。|  
 |<xref:System.Math.Sin%2A>|傳回指定角的正弦函數。|  
 |<xref:System.Math.Sinh%2A>|傳回指定角的雙曲線正弦函數。|  
 |<xref:System.Math.Sqrt%2A>|傳回指定數字的平方根。|  
 |<xref:System.Math.Tan%2A>|傳回指定角的正切函數。|  
 |<xref:System.Math.Tanh%2A>|傳回指定角的雙曲線正切函數。|  
-|<xref:System.Math.Truncate%2A>|計算指定的 `Decimal` 或 `Double` 數字的整數部分。|  
+|<xref:System.Math.Truncate%2A>|計算將指定的整數部分`Decimal`或`Double`數目。|  
   
- 若要使用這些函式，不需完整，請匯入 <xref:System.Math?displayProperty=fullName> 命名空間匯入您的專案將下列程式碼加入至原始程式檔的最前面:  
+ 若要使用這些函式，匯入<xref:System.Math?displayProperty=nameWithType>到您的專案加入原始程式檔頂端加入下列程式碼的命名空間：  
   
 ```  
 Imports System.Math  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Abs%2A> 方法來計算數字的絕對值。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Abs%2A>方法<xref:System.Math>類別來計算數字的絕對值。  
   
 ```  
 ' Returns 50.3.  
@@ -72,8 +71,8 @@ Dim MyNumber1 As Double = Math.Abs(50.3)
 Dim MyNumber2 As Double = Math.Abs(-50.3)  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Atan%2A> 方法來計算 pi 的值。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Atan%2A>方法<xref:System.Math>類別計算 pi 的值。  
   
 ```  
 Public Function GetPi() As Double  
@@ -82,8 +81,8 @@ Public Function GetPi() As Double
 End Function  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Cos%2A> 方法來傳回角度的餘弦函數 \(Cosine\)。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Cos%2A>方法<xref:System.Math>類別，以傳回某個角度的餘弦值。  
   
 ```  
 Public Function Sec(ByVal angle As Double) As Double  
@@ -92,8 +91,8 @@ Public Function Sec(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Exp%2A> 方法傳回乘冪數的 e。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Exp%2A>方法<xref:System.Math>類別，以傳回 e 的乘冪。  
   
 ```  
 Public Function Sinh(ByVal angle As Double) As Double  
@@ -102,8 +101,8 @@ Public Function Sinh(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Log%2A> 方法來傳回數字的自然對數。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Log%2A>方法<xref:System.Math>類別，以傳回數字的自然對數。  
   
 ```  
 Public Function Asinh(ByVal value As Double) As Double  
@@ -112,16 +111,16 @@ Public Function Asinh(ByVal value As Double) As Double
 End Function  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Round%2A> 方法來將數字捨入為最接近的整數。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Round%2A>方法<xref:System.Math>類別，以將數值四捨五入到最接近的整數。  
   
 ```  
 ' Returns 3.  
 Dim MyVar2 As Double = Math.Round(2.8)  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Sign%2A> 方法來決定數字的正負號。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Sign%2A>方法<xref:System.Math>類別來判斷數字的正負號。  
   
 ```  
 ' Returns 1.  
@@ -132,8 +131,8 @@ Dim MySign2 As Integer = Math.Sign(-2.4)
 Dim MySign3 As Integer = Math.Sign(0)  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Sin%2A> 方法來傳回角度的正弦函數 \(Sine\)。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Sin%2A>方法<xref:System.Math>類別，以傳回某個角度的正弦值。  
   
 ```  
 Public Function Csc(ByVal angle As Double) As Double  
@@ -142,8 +141,8 @@ Public Function Csc(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Sqrt%2A> 方法來計算數字的平方根。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Sqrt%2A>方法<xref:System.Math>類別來計算數字的平方根。  
   
 ```  
 ' Returns 2.  
@@ -156,8 +155,8 @@ Dim MySqr3 As Double = Math.Sqrt(0)
 Dim MySqr4 As Double = Math.Sqrt(-4)  
 ```  
   
-## 範例  
- 這個範例使用 <xref:System.Math> 類別的 <xref:System.Math.Tan%2A> 方法來傳回角度的正切函數 \(Tangent\)。  
+## <a name="example"></a>範例  
+ 這個範例會使用<xref:System.Math.Tan%2A>方法<xref:System.Math>類別，以傳回某個角度的正切值。  
   
 ```  
 Public Function Ctan(ByVal angle As Double) As Double  
@@ -166,16 +165,16 @@ Public Function Ctan(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## 需求  
- **類別︰** <xref:System.Math>  
+## <a name="requirements"></a>需求  
+ **類別：**<xref:System.Math>  
   
- **命名空間︰** <xref:System>  
+ **命名空間：**<xref:System>  
   
- **組件：**mscorlib \(在 mscorlib.dll 中\)  
+ **組件：** mscorlib （在 mscorlib.dll)  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>   
- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>   
- <xref:System.Double.NaN>   
- [Derived Math Functions](../../../visual-basic/language-reference/keywords/derived-math-functions.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
+ <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
+ <xref:System.Double.NaN>  
+ [衍生的數學函式](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
+ [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

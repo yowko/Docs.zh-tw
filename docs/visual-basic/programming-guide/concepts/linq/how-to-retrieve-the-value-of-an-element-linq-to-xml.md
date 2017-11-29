@@ -1,34 +1,30 @@
 ---
-title: "如何︰ 擷取項目 (LINQ to XML) 的值 (Visual Basic) |Microsoft 文件"
+title: "如何： 擷取項目 (LINQ to XML) 的值 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d38928df51006a8db9417d34ccbe6cd03091db66
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: e688872ea514e822a81b4b3e285ad0d0aa8a0f17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何︰ 擷取項目 (LINQ to XML) 的值 (Visual Basic)
-本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 要轉換的其中一種是<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XAttribute>所需的型別。</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>屬性或<xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>屬性。</xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何： 擷取項目 (LINQ to XML) 的值 (Visual Basic)
+本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 其中一種方式為，將 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。  
   
- 使用 Visual Basic 中，最好的方法是使用<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>屬性。</xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>  
+ 使用 Visual Basic 時，最好的方法是使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性。  
   
 ## <a name="example"></a>範例  
- 若要擷取項目的值，您只要轉換<xref:System.Xml.Linq.XElement>物件至您所需的類型。</xref:System.Xml.Linq.XElement> 您永遠可以將項目轉型為字串，如下所示：  
+ 若要擷取項目的值，您只要將 <xref:System.Xml.Linq.XElement> 物件轉型為所需的型別即可。 您永遠可以將項目轉型為字串，如下所示：  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -38,7 +34,7 @@ Console.WriteLine("Value of e:" & e.Value)
   
  這個範例會產生下列輸出：  
   
-```  
+```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -54,17 +50,17 @@ Console.WriteLine("Value of e:" & CInt(e))
   
  這個範例會產生下列輸出：  
   
-```  
+```xml  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會針對下列資料類型提供明確轉換運算子：`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 和 `GUID?`。  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]提供相同的轉換運算子，如<xref:System.Xml.Linq.XAttribute>物件。</xref:System.Xml.Linq.XAttribute>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會提供 <xref:System.Xml.Linq.XAttribute> 物件相同的轉換運算子。  
   
 ## <a name="example"></a>範例  
- 您可以使用<xref:System.Xml.Linq.XElement.Value%2A>屬性來擷取項目的內容︰</xref:System.Xml.Linq.XElement.Value%2A>  
+ 您可以使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性來擷取項目的內容：  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -74,13 +70,13 @@ Console.WriteLine("Value of e:" & e.Value)
   
  這個範例會產生下列輸出：  
   
-```  
+```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
 ## <a name="example"></a>範例  
- 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在此情況下，當您指派的轉換的項目可為 null 的型別 (可能是`string`或可為 null 的型別中的其中一個[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)])，如果項目不存在，被指派變數只會設定為`Nothing`。 下列程式碼會示範項目可能存在或可能不存在，更輕鬆地使用轉型比使用<xref:System.Xml.Linq.XElement.Value%2A>屬性。</xref:System.Xml.Linq.XElement.Value%2A>  
+ 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這個情況下，當您將轉換的項目指派給可為 Null 的型別 (`string` 或 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中其中一個可為 Null 的型別) 時，如果項目不存在，被指派的變數只會設定為 `Nothing`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -163,4 +159,4 @@ v4:element does not exist
  一般而言，使用轉換擷取元素及屬性內容時，您可以撰寫較簡易的程式碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to XML 軸心方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+ [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

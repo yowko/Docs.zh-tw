@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="custom-token-handlers"></a>自訂權杖處理常式
 本主題討論 WIF 中的權杖處理常式以及如何使用它們來處理權杖。 本主題也涵蓋建立權杖類型的自訂權杖處理常式所需的作業，而 WIF 中預設不支援這些權杖類型。  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/21/2017
         </identityConfiguration>  
     </system.identityModel>  
     ```
-

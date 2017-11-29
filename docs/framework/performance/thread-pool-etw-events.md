@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3dfd8b17e4ca01802651087ff20988744a411ed2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a>執行緒集區 ETW 事件
 <a name="top"></a> 這些事件會收集背景工作和 I/O 執行緒的資訊。  
@@ -227,4 +225,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另請參閱  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
-

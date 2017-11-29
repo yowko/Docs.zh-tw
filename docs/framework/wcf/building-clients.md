@@ -1,41 +1,41 @@
 ---
-title: "建置用戶端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "用戶端 [WCF]"
-  - "用戶端 [WCF], 建置"
+title: "建置用戶端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clients [WCF], building
+- clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 098af2ba342b780f7af7479c640e1acc5d44e4cc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 建置用戶端
+# <a name="building-clients"></a>建置用戶端
 本節的主題示範如何建立與使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 用戶端。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [WCF 用戶端概觀](../../../docs/framework/wcf/wcf-client-overview.md)  
  提供 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的概觀以及運作方式。  
   
  [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
  列出建立在用戶端應用程式中使用之 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件的基本方法。  
   
- [確保用戶端的安全](../../../docs/framework/wcf/securing-clients.md)  
+ [保護用戶端安全](../../../docs/framework/wcf/securing-clients.md)  
  描述如何設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的安全性。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.ServiceModel.ClientBase%601>  
   
  <xref:System.ServiceModel.DuplexClientBase%601>  
@@ -50,7 +50,7 @@ caps.handback.revision: 19
   
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [裝載服務](../../../docs/framework/wcf/hosting-services.md)  
   
  [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)
