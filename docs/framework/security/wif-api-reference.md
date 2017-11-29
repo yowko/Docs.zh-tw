@@ -5,59 +5,56 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ef439ff502fc39074d36f63d139fd23e42471d42
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d7ae7ef82d12c024441d01ef420bc9366e3c589d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="wif-api-reference"></a>WIF API 參考
-Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。 本主題提供 WIF 命名空間的連結，以及每個命名空間所包含類別的簡短說明。  
+# <a name="wif-api-reference"></a><span data-ttu-id="6a7bd-102">WIF API 參考</span><span class="sxs-lookup"><span data-stu-id="6a7bd-102">WIF API Reference</span></span>
+<span data-ttu-id="6a7bd-103">Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-103">Windows Identity Foundation (WIF) classes are split across the following assemblies: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll), and `System.ServiceModel` (System.ServiceModel.dll).</span></span> <span data-ttu-id="6a7bd-104">本主題提供 WIF 命名空間的連結，以及每個命名空間所包含類別的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-104">This topic provides links to the WIF namespaces and brief explanations of the classes that each namespace contains.</span></span>  
   
 > [!IMPORTANT]
->  下列 `System.IdentityModel` 命名空間包含的類別可實作 WCF 宣告式身分識別模型：<xref:System.IdentityModel.Claims?displayProperty=fullName>、<xref:System.IdentityModel.Policy?displayProperty=fullName> 和 <xref:System.IdentityModel.Selectors?displayProperty=fullName>。 從 .NET Framework 4.5 開始，WIF 已取代 WCF 宣告式身分識別模型。 在建置以 WIF 為基礎的方案時，您不應該使用這三個命名空間中的類別。  
+>  <span data-ttu-id="6a7bd-105">下列 `System.IdentityModel` 命名空間包含的類別可實作 WCF 宣告式身分識別模型：<xref:System.IdentityModel.Claims?displayProperty=nameWithType>、<xref:System.IdentityModel.Policy?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-105">The following `System.IdentityModel` namespaces contain classes that implement the WCF claims-based identity model: <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType>, and <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6a7bd-106">從 .NET Framework 4.5 開始，WIF 已取代 WCF 宣告式身分識別模型。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-106">Starting with .NET Framework 4.5, the WCF claims-based identity model is superseded by WIF.</span></span> <span data-ttu-id="6a7bd-107">在建置以 WIF 為基礎的方案時，您不應該使用這三個命名空間中的類別。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-107">You should not use classes in these three namespaces when building solutions based on WIF.</span></span>  
   
- <xref:System.IdentityModel?displayProperty=fullName>  
- 包含的類別代表 Cookie 轉換、安全性權杖服務，以及特定的 XML 字典讀取器。  
+ <xref:System.IdentityModel?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-108">包含的類別代表 Cookie 轉換、安全性權杖服務，以及特定的 XML 字典讀取器。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-108">Contains classes that represent cookie transforms, security token services, and specialized XML dictionary readers.</span></span>  
   
- <xref:System.IdentityModel.Configuration?displayProperty=fullName>  
- 包含的類別可為使用 Windows Identity Foundation (WIF) 建置的應用程式和服務提供組態。 此命名空間中的類別代表 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素下的設定。  
+ <xref:System.IdentityModel.Configuration?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-109">包含的類別可為使用 Windows Identity Foundation (WIF) 建置的應用程式和服務提供組態。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-109">Contains classes that provide configuration for applications and services built using the Windows Identity Foundation (WIF).</span></span> <span data-ttu-id="6a7bd-110">此命名空間中的類別代表 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素下的設定。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-110">The classes in this namespace represent settings under the [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element.</span></span>  
   
- <xref:System.IdentityModel.Metadata?displayProperty=fullName>  
- 包含的類別代表同盟中繼資料文件中的元素。  
+ <xref:System.IdentityModel.Metadata?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-111">包含的類別代表同盟中繼資料文件中的元素。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-111">Contains classes that represent elements in a Federation Metadata document.</span></span>  
   
- <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName>  
- 包含的類別代表 WS-Trust 成品。  
+ <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-112">包含的類別代表 WS-Trust 成品。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-112">Contains classes that represent WS-Trust artifacts.</span></span>  
   
- <xref:System.IdentityModel.Services?displayProperty=fullName>  
- 包含的類別用於被動 (WS-同盟) 情節。 也包含一些代表 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下設定的類別。 此元素下的設定可用來設定應用程式的 WS-同盟。 `System.IdentityModel.Services.Configuration` 命名空間包含大部分用來設定 WS-同盟的類別。  
+ <xref:System.IdentityModel.Services?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-113">包含的類別用於被動 (WS-同盟) 情節。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-113">Contains classes that are used in passive (WS-Federation) scenarios.</span></span> <span data-ttu-id="6a7bd-114">也包含一些代表 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下設定的類別。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-114">Also contains some classes that represent settings under the [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) element.</span></span> <span data-ttu-id="6a7bd-115">此元素下的設定可用來設定應用程式的 WS-同盟。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-115">Settings under this element configure WS-Federation for applications.</span></span> <span data-ttu-id="6a7bd-116">`System.IdentityModel.Services.Configuration` 命名空間包含大部分用來設定 WS-同盟的類別。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-116">The `System.IdentityModel.Services.Configuration` namespace contains most of the classes that are used to configure WS-Federation.</span></span>  
   
- <xref:System.IdentityModel.Services.Configuration?displayProperty=fullName>  
- 包含的類別可為使用 WS-同盟通訊協定的 WIF 應用程式提供組態。 此命名空間中的類別代表 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的設定。 `System.IdentityModel.Services` 命名空間也包含一些用來設定 WS-同盟的類別。  
+ <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-117">包含的類別可為使用 WS-同盟通訊協定的 WIF 應用程式提供組態。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-117">Contains classes that provide configuration for WIF applications that use the WS-Federation protocol.</span></span> <span data-ttu-id="6a7bd-118">此命名空間中的類別代表 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的設定。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-118">The classes in this namespace represent settings under the [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) element.</span></span> <span data-ttu-id="6a7bd-119">`System.IdentityModel.Services` 命名空間也包含一些用來設定 WS-同盟的類別。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-119">The `System.IdentityModel.Services` namespace also contains some classes that are used to configure WS-Federation.</span></span>  
   
- <xref:System.IdentityModel.Services.Tokens?displayProperty=fullName>  
- 包含適用於 Web 伺服陣列情節的特定安全性權杖處理常式。  
+ <xref:System.IdentityModel.Services.Tokens?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-120">包含適用於 Web 伺服陣列情節的特定安全性權杖處理常式。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-120">Contains specialized security token handlers for Web farm scenarios.</span></span>  
   
- <xref:System.IdentityModel.Tokens?displayProperty=fullName>  
- 包含的類別代表安全性權杖、安全性權杖處理常式，以及其他安全性權杖成品。  
+ <xref:System.IdentityModel.Tokens?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-121">包含的類別代表安全性權杖、安全性權杖處理常式，以及其他安全性權杖成品。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-121">Contains classes that represent security tokens, security token handlers, and other security token artifacts.</span></span>  
   
- <xref:System.Security.Claims?displayProperty=fullName>  
- 包含的類別代表宣告、宣告式身分識別、宣告式主體，以及其他宣告式身分識別模型成品。  
+ <xref:System.Security.Claims?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-122">包含的類別代表宣告、宣告式身分識別、宣告式主體，以及其他宣告式身分識別模型成品。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-122">Contains classes that represent claims, claims-based identities, claims-based principals, and other claims-based identity model artifacts.</span></span>  
   
- <xref:System.ServiceModel.Security?displayProperty=fullName>  
- 包含的類別代表 WCF 合約、通道、服務主機，以及主動 (WS-Trust) 情節中使用的其他成品。 此命名空間也包含專屬於 Windows Communication Foundation (WCF) 而不會由 WIF 使用的類別。  
+ <xref:System.ServiceModel.Security?displayProperty=nameWithType>  
+ <span data-ttu-id="6a7bd-123">包含的類別代表 WCF 合約、通道、服務主機，以及主動 (WS-Trust) 情節中使用的其他成品。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-123">Contains classes that represent WCF contracts, channels, service hosts and other artifacts that are used in active (WS-Trust) scenarios.</span></span> <span data-ttu-id="6a7bd-124">此命名空間也包含專屬於 Windows Communication Foundation (WCF) 而不會由 WIF 使用的類別。</span><span class="sxs-lookup"><span data-stu-id="6a7bd-124">This namespace also contains classes that are specific to Windows Communication Foundation (WCF) and that are not used by WIF.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)   
- [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
-
+## <a name="see-also"></a><span data-ttu-id="6a7bd-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a7bd-125">See Also</span></span>  
+ [<span data-ttu-id="6a7bd-126">WIF 組態參考</span><span class="sxs-lookup"><span data-stu-id="6a7bd-126">WIF Configuration Reference</span></span>](../../../docs/framework/security/wif-configuration-reference.md)  
+ [<span data-ttu-id="6a7bd-127">WIF 3.5 和 WIF 4.5 之間的命名空間對應</span><span class="sxs-lookup"><span data-stu-id="6a7bd-127">Namespace Mapping between WIF 3.5 and WIF 4.5</span></span>](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)

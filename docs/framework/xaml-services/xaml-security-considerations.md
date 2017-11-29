@@ -1,52 +1,55 @@
 ---
-title: "XAML Security Considerations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "security [XAML Services], .NET XAML services"
-  - "XAML security [XAML Services]"
+title: "XAML 安全性考量"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [XAML Services], .NET XAML services
+- XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 59d0b835a0de3e84e2cb6e77ed368511bfe21b19
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# XAML Security Considerations
-本主題說明在使用 XAML 和 .NET Framework XAML 服務 API 時保有應用程式安全性的最佳作法。  
+# <a name="xaml-security-considerations"></a><span data-ttu-id="20312-102">XAML 安全性考量</span><span class="sxs-lookup"><span data-stu-id="20312-102">XAML Security Considerations</span></span>
+<span data-ttu-id="20312-103">本主題描述在應用程式中的安全性最佳作法，當您使用 XAML 和.NET Framework XAML 服務 API。</span><span class="sxs-lookup"><span data-stu-id="20312-103">This topic describes best practices for security in applications when you use XAML and .NET Framework XAML Services API.</span></span>  
   
-## 應用程式中未受信任的 XAML  
- 最簡單的說，未受信任的 XAML 就是您的應用程式未明確加入或發出的任何 XAML 原始碼。  
+## <a name="untrusted-xaml-in-applications"></a><span data-ttu-id="20312-104">在應用程式中不受信任的 XAML</span><span class="sxs-lookup"><span data-stu-id="20312-104">Untrusted XAML in Applications</span></span>  
+ <span data-ttu-id="20312-105">最常見的意義而言，不受信任的 XAML 是未特別包含您的應用程式或發出任何 XAML 來源。</span><span class="sxs-lookup"><span data-stu-id="20312-105">In the most general sense, untrusted XAML is any XAML source that your application did not specifically include or emit.</span></span>  
   
- 根據這個定義，已在受信任且已簽署的組件中編譯或儲存為 `resx` 類資源的 XAML，本質上不是未受信任的 XAML。  您對整個組件有多信任，該 XAML 就會受到多信任。  在大部分情況下，您要擔心的只有要對鬆散 XAML 給予多少信任，所謂鬆散 XAML 是指您從資料流或其他 IO 載入的 XAML 原始碼。  鬆散 XAML 不是具有部署和封裝基礎結構之應用程式模型中的特定元件或功能。  不過，組件可能會實作牽涉到載入鬆散 XAML 的行為。  
+ <span data-ttu-id="20312-106">編譯成或儲存為 XAML `resx`-類型受信任和簽署組件內的資源不是原本就是不受信任。</span><span class="sxs-lookup"><span data-stu-id="20312-106">XAML that is compiled into or stored as a `resx`-type resource within a trusted and signed assembly is not inherently untrusted.</span></span> <span data-ttu-id="20312-107">如往常般信任整個組件中，您可以信任的 XAML。</span><span class="sxs-lookup"><span data-stu-id="20312-107">You can trust the XAML as much as you trust the assembly as a whole.</span></span> <span data-ttu-id="20312-108">在大部分情況下，您才關心鬆散的 XAML，這是您從資料流或其他 IO 載入 XAML 來源的信任層面。</span><span class="sxs-lookup"><span data-stu-id="20312-108">In most cases, you are only concerned with the trust aspects of loose XAML, which is a XAML source that you load from a stream or other IO.</span></span> <span data-ttu-id="20312-109">鬆散的 XAML 不是特定元件或功能的應用程式模型的部署與封裝基礎結構。</span><span class="sxs-lookup"><span data-stu-id="20312-109">Loose XAML is not a specific component or feature of an application model with a deployment and packaging infrastructure.</span></span> <span data-ttu-id="20312-110">不過，組件可能會實作牽涉到載入鬆散 XAML 的行為。</span><span class="sxs-lookup"><span data-stu-id="20312-110">However, an assembly might implement a behavior that involves loading loose XAML.</span></span>  
   
- 對於未受信任的 XAML，您通常應將其視同未受信任的程式碼。  請使用沙箱環境或其他環境，防止可能的未受信任 XAML 存取您的受信任程式碼。  
+ <span data-ttu-id="20312-111">針對不受信任的 XAML，您應該將它視為通常相同它已不受信任的程式碼。</span><span class="sxs-lookup"><span data-stu-id="20312-111">For untrusted XAML, you should treat it generally the same as if it were untrusted code.</span></span> <span data-ttu-id="20312-112">若要防止存取您信任的程式碼可能不受信任的 XAML 使用沙箱或其他象徵物。</span><span class="sxs-lookup"><span data-stu-id="20312-112">Use sandboxing or other metaphors to prevent possibly untrusted XAML from accessing your trusted code.</span></span>  
   
- XAML 功能的本質讓 XAML 有權建構物件並設定物件的屬性。  這些功能也包括存取型別轉換子、對應和存取應用程式定義域中的組件、使用標記延伸、`x:Code` 區塊等等。  
+ <span data-ttu-id="20312-113">性質的 XAML 功能可讓 XAML 建構物件，並設定其屬性的權限。</span><span class="sxs-lookup"><span data-stu-id="20312-113">The nature of XAML capabilities gives the XAML the right to construct objects and set their properties.</span></span> <span data-ttu-id="20312-114">這些功能也包括存取型別轉換子，對應及存取組件在應用程式網域中，使用標記延伸`x:Code`區塊，依此類推。</span><span class="sxs-lookup"><span data-stu-id="20312-114">These capabilities also include accessing type converters, mapping and accessing assemblies in the application domain, using markup extensions, `x:Code` blocks, and so on.</span></span>  
   
- 除了 XAML 的語言層級功能以外，許多技術也會使用 XAML 來定義 UI。  載入未受信任的 XAML，可能等於載入假冒的惡意 UI。  
+ <span data-ttu-id="20312-115">除了其語言層級功能，XAML 用於 UI 定義許多技術中。</span><span class="sxs-lookup"><span data-stu-id="20312-115">In addition to its language-level capabilities, XAML is used for UI definition in many technologies.</span></span> <span data-ttu-id="20312-116">載入未受信任的 XAML，可能表示載入惡意的詐騙 UI。</span><span class="sxs-lookup"><span data-stu-id="20312-116">Loading untrusted XAML might mean loading a malicious spoofing UI.</span></span>  
   
-## 讓讀取器和寫入器共用內容  
- .NET Framework XAML 服務的 XAML 讀取器和 XAML 寫入器架構，通常需要將 XAML 讀取器共用給 XAML 寫入器，不然就是需要共用的 XAML 結構描述內容。  如果您在撰寫 XAML 節點迴圈邏輯或是提供自訂儲存路徑，即可能需要共用物件或內容。  您不應讓受信任和未受信任的程式碼共用 XAML 讀取器執行個體、非預設 XAML 結構描述內容，或是 XAML 讀取器\/寫入器類別的設定。  
+## <a name="sharing-context-between-readers-and-writers"></a><span data-ttu-id="20312-117">共用讀取器與寫入器之間的內容</span><span class="sxs-lookup"><span data-stu-id="20312-117">Sharing Context Between Readers and Writers</span></span>  
+ <span data-ttu-id="20312-118">.NET Framework XAML 服務 XAML 讀取器和 XAML 寫入器架構通常需要在共用的 XAML 寫入器，或共用的 XAML 結構描述內容的 XAML 讀取器。</span><span class="sxs-lookup"><span data-stu-id="20312-118">The .NET Framework XAML Services architecture for XAML readers and XAML writers often requires sharing a XAML reader to a XAML writer, or a shared XAML schema context.</span></span> <span data-ttu-id="20312-119">共用的物件或內容可能需要當您要撰寫 XAML 節點迴圈邏輯，或提供自訂的儲存路徑。</span><span class="sxs-lookup"><span data-stu-id="20312-119">Sharing objects or contexts might be required if you are writing XAML node loop logic, or providing a custom save path.</span></span> <span data-ttu-id="20312-120">您不應共用的 XAML 讀取器執行個體、 非預設 XAML 結構描述內容或設定受信任和未受信任的程式碼之間的 XAML 讀取器/寫入器類別。</span><span class="sxs-lookup"><span data-stu-id="20312-120">You should not share XAML reader instances, nondefault XAML schema context, or settings for XAML reader/writer classes between trusted and untrusted code.</span></span>  
   
- 在大多數需要針對 CLR 型別備份而撰寫 XAML 物件的情節和作業中，只能使用預設 XAML 結構描述內容。  預設 XAML 結構描述內容不會明確加入可能破壞完全信任的設定。  因此，讓受信任與未受信任的 XAML 讀取器\/寫入器元件共用內容，並無安全上的問題。  但如果您這麼做，最好還是將這些讀取器和寫入器分置在不同的 <xref:System.AppDomain> 範圍，其中一個範圍是設為只獲部分信任的專用沙箱環境。  
+ <span data-ttu-id="20312-121">大部分的案例和牽涉到 XAML 物件寫入為以 CLR 為基礎的類型，支援的作業只可以使用的預設 XAML 結構描述內容。</span><span class="sxs-lookup"><span data-stu-id="20312-121">Most scenarios and operations involving XAML object writing for a CLR-based type backing can just use default XAML schema context.</span></span> <span data-ttu-id="20312-122">預設 XAML 結構描述內容未明確包括可能會危及完全信任的設定。</span><span class="sxs-lookup"><span data-stu-id="20312-122">The default XAML schema context does not explicitly include settings that could compromise full trust.</span></span> <span data-ttu-id="20312-123">因此，它可以安全地共用信任與不受信任的 XAML 讀取器/寫入器元件之間的內容。</span><span class="sxs-lookup"><span data-stu-id="20312-123">It is thus safe to share context between trusted and untrusted XAML reader/writer components.</span></span> <span data-ttu-id="20312-124">不過，如果您這麼做時，它仍然是最佳做法是在不同保留這類的讀取器和寫入器<xref:System.AppDomain>範圍，其中特別預期/沙箱化部分信任。</span><span class="sxs-lookup"><span data-stu-id="20312-124">However, if you do this, it is still a best practice to keep such readers and writers in separate <xref:System.AppDomain> scopes, with one of them specifically intended/sandboxed for partial trust.</span></span>  
   
-## XAML 命名空間與組件信任  
- XAML 如何將自訂 XAML 命名空間對應解譯成組件的相關基本未限定語法與定義，無法在受信任與未受信任的組件載入應用程式之中時加以區分。  因此在技術上，未受信任的組件可以假冒受信任組件的預定 XAML 命名空間對應，然後擷取 XAML 原始碼的已宣告物件和屬性資訊。  若要避免這種不安全的情況，您的預定 XAML 命名空間對應應該要以下列其中一項技術來建立：  
+## <a name="xaml-namespaces-and-assembly-trust"></a><span data-ttu-id="20312-125">XAML 命名空間和組件信任</span><span class="sxs-lookup"><span data-stu-id="20312-125">XAML Namespaces and Assembly Trust</span></span>  
+ <span data-ttu-id="20312-126">基本不合格的語法和 XAML 如何解譯的組件的自訂 XAML 命名空間對應的定義不會區分受信任和未受信任組件載入至應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="20312-126">The basic unqualified syntax and definition for how XAML interprets a custom XAML namespace mapping to an assembly does not distinguish between a trusted and untrusted assembly as loaded into the application domain.</span></span> <span data-ttu-id="20312-127">因此，它技術上可能會偽造受信任組件的預期的 XAML 命名空間對應，並擷取宣告 XAML 來源的物件和屬性資訊的不受信任組件。</span><span class="sxs-lookup"><span data-stu-id="20312-127">Thus, it is technically possible for an untrusted assembly to spoof a trusted assembly's intended XAML namespace mapping and capture a XAML source's declared object and property information.</span></span> <span data-ttu-id="20312-128">如果您有安全性需求，以避免這種情況，您預期的 XAML 命名空間對應應該可以使用下列技巧：</span><span class="sxs-lookup"><span data-stu-id="20312-128">If you have security requirements to avoid this situation, your intended XAML namespace mapping should be made using one of the following techniques:</span></span>  
   
--   在由您應用程式的 XAML 所建立的任何 XAML 命名空間對應中，使用具有強式名稱的完整限定組件名稱。  
+-   <span data-ttu-id="20312-129">使用應用程式的 XAML 所做的任何 XAML 命名空間對應中的強式名稱的完整組件名稱。</span><span class="sxs-lookup"><span data-stu-id="20312-129">Use a fully qualified assembly name with strong name in any XAML namespace mapping made by your application's XAML.</span></span>  
   
--   為您的 XAML 讀取器和 XAML 物件寫入器建構特定的 <xref:System.Xaml.XamlSchemaContext>，以將組件對應限定在固定一組參考組件。  請參閱 <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。  
+-   <span data-ttu-id="20312-130">限制對應至一組固定的參考組件，建構特定的組件<xref:System.Xaml.XamlSchemaContext>XAML 讀取器和 XAML 物件寫入器。</span><span class="sxs-lookup"><span data-stu-id="20312-130">Restrict assembly mapping to a fixed set of reference assemblies, by constructing a specific <xref:System.Xaml.XamlSchemaContext> for your XAML readers and XAML object writers.</span></span> <span data-ttu-id="20312-131">請參閱 <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。</span><span class="sxs-lookup"><span data-stu-id="20312-131">See <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.</span></span>  
   
-## XAML 型別對應和型別系統存取  
- XAML 支援自己的型別系統，這在許多方面都對應於 CLR 實作基本 CLR 型別系統的方式。  但是，針對某些型別意識面 \(您要根據型別資訊決定是否信任某個型別\)，您應該聽從 CLR 備份型別中的型別資訊。  這是因為 XAML 型別系統的特定報告功能有些仍保留為虛擬方法，因此不完全在原始 .NET Framework XAML 服務實作的控制下。  因為 XAML 型別系統是可擴充的，所以有這些擴充點存在，以便利用 XAML 本身的擴充性和其可能的替代型別對應策略，而不是使用預設 CLR 備份的實作和預設 XAML 結構描述內容。  如需詳細資訊，請參閱 <xref:System.Xaml.XamlType> 和 <xref:System.Xaml.XamlMember> 數項屬性的特定注意事項。  
+## <a name="xaml-type-mapping-and-type-system-access"></a><span data-ttu-id="20312-132">XAML 型別對應和類型系統存取</span><span class="sxs-lookup"><span data-stu-id="20312-132">XAML Type Mapping and Type System Access</span></span>  
+ <span data-ttu-id="20312-133">XAML 支援它自己的型別系統，其中有許多方式等 CLR 實作基本的 CLR 型別系統的方式。</span><span class="sxs-lookup"><span data-stu-id="20312-133">XAML supports its own type system, which in many ways is a peer to how CLR implements the basic CLR type system.</span></span> <span data-ttu-id="20312-134">不過，您會在此進行信任決策是根據其類型資訊的類型的類型感知的特定部分，您應該遵循在支援類型的 CLR 型別資訊。</span><span class="sxs-lookup"><span data-stu-id="20312-134">However, for certain aspects of type awareness where you are making trust decisions about a type based on its type information, you should defer to the type information in the CLR backing types.</span></span> <span data-ttu-id="20312-135">這是因為某些特定 XAML 類型系統的報告功能會保持在開啟做為虛擬方法，因此，不完全控制原始的.NET Framework XAML 服務實作。</span><span class="sxs-lookup"><span data-stu-id="20312-135">This is because some of the specific reporting capabilities of the XAML type system are left open as virtual methods and are therefore, not fully under the control of the original .NET Framework XAML Services implementations.</span></span> <span data-ttu-id="20312-136">這些擴充點存在，因為 XAML 類型系統可延伸，以符合 XAML 本身的擴充性和其可能的替代類型對應策略和預設 CLR 為基礎的實作及預設 XAML 結構描述內容。</span><span class="sxs-lookup"><span data-stu-id="20312-136">These extensibility points exist because the XAML type system is extensible, to match the extensibility of XAML itself and its possible alternative type-mapping strategies versus the default CLR-backed implementation and default XAML schema context.</span></span> <span data-ttu-id="20312-137">如需詳細資訊，請參閱特定的備忘稿幾個屬性的<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。</span><span class="sxs-lookup"><span data-stu-id="20312-137">For more information, see the specific notes on several of the properties of <xref:System.Xaml.XamlType> and <xref:System.Xaml.XamlMember>.</span></span>  
   
-## 請參閱  
+## <a name="see-also"></a><span data-ttu-id="20312-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="20312-138">See Also</span></span>  
  <xref:System.Xaml.Permissions.XamlAccessLevel>

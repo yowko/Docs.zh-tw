@@ -1,70 +1,73 @@
 ---
-title: "推斷限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "推斷限制"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 98ea3d5fa4427b391ef06b3fc6ace9a05dfb819a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 推斷限制
-根據每份文件的 XML 項目，當您執行從 XML 推斷 <xref:System.Data.DataSet> 結構描述的處理序時，可能會得到不同的結構描述。  例如，請考量下列 XML 文件。  
+# <a name="inference-limitations"></a><span data-ttu-id="44fd9-102">推斷限制</span><span class="sxs-lookup"><span data-stu-id="44fd9-102">Inference Limitations</span></span>
+<span data-ttu-id="44fd9-103">根據每份文件的 XML 項目，當您執行從 XML 推斷 <xref:System.Data.DataSet> 結構描述的處理序時，可能會得到不同的結構描述。</span><span class="sxs-lookup"><span data-stu-id="44fd9-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="44fd9-104">例如，請考量下列 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="44fd9-104">For example, consider the following XML documents.</span></span>  
   
- Document1:  
+ <span data-ttu-id="44fd9-105">Document1:</span><span class="sxs-lookup"><span data-stu-id="44fd9-105">Document1:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
   <Element1>Text2</Element1>  
 </DocumentElement>  
 ```  
   
- Document2:  
+ <span data-ttu-id="44fd9-106">Document2:</span><span class="sxs-lookup"><span data-stu-id="44fd9-106">Document2:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
 </DocumentElement>  
 ```  
   
- 若為 Document1，則因為 Element1 是重複的項目，所以推斷程序會產生名為 DocumentElement 的 **DataSet**，和名為 Element1 的資料表。  
+ <span data-ttu-id="44fd9-107">針對 「 文件 1 」，推斷程序會產生**資料集**名為"DocumentElement 」 和資料表，名為"Element1，"因為 「 Element1 」 是重複的項目。</span><span class="sxs-lookup"><span data-stu-id="44fd9-107">For "Document1," the inference process produces a **DataSet** named "DocumentElement" and a table named "Element1," because "Element1" is a repeating element.</span></span>  
   
- **DataSet：**DocumentElement  
+ <span data-ttu-id="44fd9-108">**資料集：** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="44fd9-108">**DataSet:** DocumentElement</span></span>  
   
- **資料表：**Element1  
+ <span data-ttu-id="44fd9-109">**Table:** Element1</span><span class="sxs-lookup"><span data-stu-id="44fd9-109">**Table:** Element1</span></span>  
   
-|Element1\_Text|  
+|<span data-ttu-id="44fd9-110">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="44fd9-110">Element1_Text</span></span>|  
 |--------------------|  
-|Text1|  
-|Text2|  
+|<span data-ttu-id="44fd9-111">Text1</span><span class="sxs-lookup"><span data-stu-id="44fd9-111">Text1</span></span>|  
+|<span data-ttu-id="44fd9-112">Text2</span><span class="sxs-lookup"><span data-stu-id="44fd9-112">Text2</span></span>|  
   
- 但是，推斷程序會為 Document2 產生名為 NewDataSet 的 **DataSet**，和名為 DocumentElement 的資料表。Element1 會被推斷為資料行，因為它沒有屬性和項目子系。  
+ <span data-ttu-id="44fd9-113">不過，如"Document2"，推斷程序會產生**資料集**名為"NewDataSet"和資料表，名為"DocumentElement。 」</span><span class="sxs-lookup"><span data-stu-id="44fd9-113">However, for "Document2," the inference process produces a **DataSet** named "NewDataSet" and a table named "DocumentElement."</span></span> <span data-ttu-id="44fd9-114">Element1 會被推斷為資料行，因為它沒有屬性和項目子系。</span><span class="sxs-lookup"><span data-stu-id="44fd9-114">"Element1" is inferred as a column because it has no attributes and no child elements.</span></span>  
   
- **DataSet：**NewDataSet  
+ <span data-ttu-id="44fd9-115">**資料集：** NewDataSet</span><span class="sxs-lookup"><span data-stu-id="44fd9-115">**DataSet:** NewDataSet</span></span>  
   
- **資料表：**DocumentElement  
+ <span data-ttu-id="44fd9-116">**Table:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="44fd9-116">**Table:** DocumentElement</span></span>  
   
-|Element1|  
+|<span data-ttu-id="44fd9-117">Element1</span><span class="sxs-lookup"><span data-stu-id="44fd9-117">Element1</span></span>|  
 |--------------|  
-|Text1|  
+|<span data-ttu-id="44fd9-118">Text1</span><span class="sxs-lookup"><span data-stu-id="44fd9-118">Text1</span></span>|  
   
- 這兩份 XML 文件原本可能意圖要產生相同的結構描述，但是根據每份文件包含的項目，推斷程序產生了相當不同的結果。  
+ <span data-ttu-id="44fd9-119">這兩份 XML 文件原本可能意圖要產生相同的結構描述，但是根據每份文件包含的項目，推斷程序產生了相當不同的結果。</span><span class="sxs-lookup"><span data-stu-id="44fd9-119">These two XML documents may have been intended to produce the same schema, but the inference process produces very different results based on the elements contained in each document.</span></span>  
   
- 若要避免從 XML 文件產生結構描述時發生不一致的情況，建議您從 XML 載入 **DataSet** 時，使用 XML 結構描述定義語言 \(XSD\) 或 XML 資料精簡 \(XDR\) 來明確地指定結構描述。  如需有關使用 XML 結構描述明確指定 **DataSet** 結構描述的詳細資訊，請參閱[從 XML 結構描述 \(XSD\) 衍生 DataSet 關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)。  
+ <span data-ttu-id="44fd9-120">若要避免從 XML 文件產生結構描述時，可能會發生不一致，我們建議您明確指定載入時，使用 XML 結構描述定義語言 (XSD) 或 XML 資料精簡 (XDR) 結構描述**資料集**從XML。</span><span class="sxs-lookup"><span data-stu-id="44fd9-120">To avoid the discrepancies that can occur when generating schema from an XML document, we recommend that you explicitly specify a schema using XML Schema definition language (XSD) or XML-Data Reduced (XDR) when loading a **DataSet** from XML.</span></span> <span data-ttu-id="44fd9-121">如需有關明確指定**資料集**結構描述與 XML 結構描述，請參閱[衍生資料集關聯式結構從 XML 結構描述 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)。</span><span class="sxs-lookup"><span data-stu-id="44fd9-121">For more information about explicitly specifying a **DataSet** schema with XML Schema, see [Deriving DataSet Relational Structure from XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span></span>  
   
-## 請參閱  
- [從 XML 推斷 DataSet 關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [從 XML 載入 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [從 XML 載入 DataSet 結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSet、DataTable 及 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="44fd9-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="44fd9-122">See Also</span></span>  
+ [<span data-ttu-id="44fd9-123">從 XML 推斷資料集關聯式結構</span><span class="sxs-lookup"><span data-stu-id="44fd9-123">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="44fd9-124">從 XML 載入資料集</span><span class="sxs-lookup"><span data-stu-id="44fd9-124">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="44fd9-125">從 XML 載入資料集結構描述資訊</span><span class="sxs-lookup"><span data-stu-id="44fd9-125">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="44fd9-126">在 DataSet 中使用 XML</span><span class="sxs-lookup"><span data-stu-id="44fd9-126">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="44fd9-127">DataSet、DataTable 和 DataView</span><span class="sxs-lookup"><span data-stu-id="44fd9-127">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="44fd9-128">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="44fd9-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

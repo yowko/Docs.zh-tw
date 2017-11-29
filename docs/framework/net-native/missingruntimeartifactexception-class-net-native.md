@@ -5,92 +5,89 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6089336f0b4c37e0bf867fbb18376705848b4104
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e477a870107a8d4d8fbac9a3d4fb10a285158280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException 類別 (.NET Native)
-**僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
+# <a name="missingruntimeartifactexception-class-net-native"></a><span data-ttu-id="313a7-102">MissingRuntimeArtifactException 類別 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="313a7-102">MissingRuntimeArtifactException Class (.NET Native)</span></span>
+<span data-ttu-id="313a7-103">**僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**</span><span class="sxs-lookup"><span data-stu-id="313a7-103">**.NET for Windows apps for Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] only**</span></span>  
   
- 當類型或類型成員的中繼資料可用，但已移除其實作時，會擲回這個例外狀況。  
+ <span data-ttu-id="313a7-104">當類型或類型成員的中繼資料可用，但已移除其實作時，會擲回這個例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-104">The exception that is thrown when metadata for a type or type member is available but its implementation has been removed.</span></span>  
   
- **命名空間：**System.Reflection  
+ <span data-ttu-id="313a7-105">**命名空間：**System.Reflection</span><span class="sxs-lookup"><span data-stu-id="313a7-105">**Namespace:** System.Reflection</span></span>  
   
 > [!IMPORTANT]
->  `MissingRuntimeArtifactException` 類別主要僅供　[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
+>  <span data-ttu-id="313a7-106">`MissingRuntimeArtifactException` 類別主要僅供　[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。</span><span class="sxs-lookup"><span data-stu-id="313a7-106">The `MissingRuntimeArtifactException` class is intended solely for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain.</span></span> <span data-ttu-id="313a7-107">這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-107">It is not intended for use in third-party code, nor should you handle the exception in your application code.</span></span> <span data-ttu-id="313a7-108">相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-108">Instead, you eliminate the exception by adding entries to your [runtime directives file](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span> <span data-ttu-id="313a7-109">如需詳細資訊，請參閱＜備註＞一節。</span><span class="sxs-lookup"><span data-stu-id="313a7-109">For more information, see the Remarks section.</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="313a7-110">語法</span><span class="sxs-lookup"><span data-stu-id="313a7-110">Syntax</span></span>  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
   
- 請注意 `MissingRuntimeArtifactException` 類別衍生自 <xref:System.MemberAccessException>。  
+ <span data-ttu-id="313a7-111">請注意 `MissingRuntimeArtifactException` 類別衍生自 <xref:System.MemberAccessException>。</span><span class="sxs-lookup"><span data-stu-id="313a7-111">Note that the `MissingRuntimeArtifactException` class derives from <xref:System.MemberAccessException>.</span></span>  
   
- `MissingRuntimeArtifactException` 類別具有下列成員：  
+ <span data-ttu-id="313a7-112">`MissingRuntimeArtifactException` 類別具有下列成員：</span><span class="sxs-lookup"><span data-stu-id="313a7-112">The `MissingRuntimeArtifactException` class has the following members:</span></span>  
   
-## <a name="constructors"></a>建構函式  
+## <a name="constructors"></a><span data-ttu-id="313a7-113">建構函式</span><span class="sxs-lookup"><span data-stu-id="313a7-113">Constructors</span></span>  
   
-|建構函式|描述|  
+|<span data-ttu-id="313a7-114">建構函式</span><span class="sxs-lookup"><span data-stu-id="313a7-114">Constructor</span></span>|<span data-ttu-id="313a7-115">描述</span><span class="sxs-lookup"><span data-stu-id="313a7-115">Description</span></span>|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|使用系統提供的錯誤說明訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 這個建構函式僅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。|  
-|`public MissingRuntimeArtifactException(String message)`|使用指定的錯誤訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 這個建構函式僅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。|  
+|`public MissingRuntimeArtifactException()`|<span data-ttu-id="313a7-116">使用系統提供的錯誤說明訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="313a7-116">Initializes a new instance of the `MissingRuntimeArtifactException` class by using a system-supplied message that describes the error.</span></span><br /><br /> <span data-ttu-id="313a7-117">這個建構函式僅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。</span><span class="sxs-lookup"><span data-stu-id="313a7-117">This constructor is for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain only.</span></span>|  
+|`public MissingRuntimeArtifactException(String message)`|<span data-ttu-id="313a7-118">使用指定的錯誤訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="313a7-118">Initializes a new instance of the `MissingRuntimeArtifactException` class with a specified error message.</span></span><br /><br /> <span data-ttu-id="313a7-119">這個建構函式僅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。</span><span class="sxs-lookup"><span data-stu-id="313a7-119">This constructor is for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain only.</span></span>|  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a><span data-ttu-id="313a7-120">屬性</span><span class="sxs-lookup"><span data-stu-id="313a7-120">Properties</span></span>  
   
-|屬性|描述|  
+|<span data-ttu-id="313a7-121">屬性</span><span class="sxs-lookup"><span data-stu-id="313a7-121">Property</span></span>|<span data-ttu-id="313a7-122">描述</span><span class="sxs-lookup"><span data-stu-id="313a7-122">Description</span></span>|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|取得提供例外狀況之其他使用者定義相關資訊的索引鍵/值組集合。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public string HelpLink { get; set; }`|取得或設定與這個例外狀況相關聯的說明檔連結。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public int HResult { get; protected set; }`|取得或設定 `HRESULT`，這是指派給特定例外狀況的編碼數值。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public Exception InnerException { get; }`|取得造成目前例外狀況的例外狀況。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public string Message { get; }`|取得描述目前例外狀況的訊息。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public string Source { get; set; }`|取得或設定造成錯誤的應用程式或物件名稱。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public string StackTrace { get; }`|取得呼叫堆疊上即時運算框架的字串表示。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public MethodBase TargetSite { get; }`|取得擲回目前例外狀況的方法。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
+|`public IDictionary Data { get; }`|<span data-ttu-id="313a7-123">取得提供例外狀況之其他使用者定義相關資訊的索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="313a7-123">Gets a collection of key/value pairs that provide additional user-defined information about the exception.</span></span> <span data-ttu-id="313a7-124">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-124">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string HelpLink { get; set; }`|<span data-ttu-id="313a7-125">取得或設定與這個例外狀況相關聯的說明檔連結。</span><span class="sxs-lookup"><span data-stu-id="313a7-125">Gets or sets a link to the help file associated with this exception.</span></span> <span data-ttu-id="313a7-126">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-126">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public int HResult { get; protected set; }`|<span data-ttu-id="313a7-127">取得或設定 `HRESULT`，這是指派給特定例外狀況的編碼數值。</span><span class="sxs-lookup"><span data-stu-id="313a7-127">Gets or sets the `HRESULT`, a coded numeric value that is assigned to a specific exception.</span></span> <span data-ttu-id="313a7-128">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-128">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public Exception InnerException { get; }`|<span data-ttu-id="313a7-129">取得造成目前例外狀況的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-129">Gets the exception that caused the current exception.</span></span> <span data-ttu-id="313a7-130">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-130">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string Message { get; }`|<span data-ttu-id="313a7-131">取得描述目前例外狀況的訊息。</span><span class="sxs-lookup"><span data-stu-id="313a7-131">Gets a message that describes the current exception.</span></span> <span data-ttu-id="313a7-132">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-132">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string Source { get; set; }`|<span data-ttu-id="313a7-133">取得或設定造成錯誤的應用程式或物件名稱。</span><span class="sxs-lookup"><span data-stu-id="313a7-133">Gets or sets the name of the application or object that caused the error.</span></span> <span data-ttu-id="313a7-134">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-134">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string StackTrace { get; }`|<span data-ttu-id="313a7-135">取得呼叫堆疊上即時運算框架的字串表示。</span><span class="sxs-lookup"><span data-stu-id="313a7-135">Gets a string representation of the immediate frames on the call stack.</span></span> <span data-ttu-id="313a7-136">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-136">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public MethodBase TargetSite { get; }`|<span data-ttu-id="313a7-137">取得擲回目前例外狀況的方法。</span><span class="sxs-lookup"><span data-stu-id="313a7-137">Gets the method that threw the current exception.</span></span> <span data-ttu-id="313a7-138">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-138">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
   
-## <a name="methods"></a>方法  
+## <a name="methods"></a><span data-ttu-id="313a7-139">方法</span><span class="sxs-lookup"><span data-stu-id="313a7-139">Methods</span></span>  
   
-|方法|描述|  
+|<span data-ttu-id="313a7-140">方法</span><span class="sxs-lookup"><span data-stu-id="313a7-140">Method</span></span>|<span data-ttu-id="313a7-141">描述</span><span class="sxs-lookup"><span data-stu-id="313a7-141">Description</span></span>|  
 |------------|-----------------|  
-|`public bool Equals(Object obj)`|判斷指定的物件是否等於目前的物件。  (繼承自 <xref:System.Object>。)|  
-|`protected void Finalize()`|在記憶體回收開始前，允許物件嘗試釋放資源，並執行其他清除作業。 (繼承自 <xref:System.Object>。)|  
-|`public Exception GetBaseException()`|傳回一或多個後續例外狀況之根本原因的例外狀況。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public int GetHashCode()`|傳回 `MissingRuntimeArtifactException` 執行個體的雜湊碼。   (繼承自 <xref:System.Object>。)|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|使用與例外狀況相關的資訊來設定 <xref:System.Runtime.Serialization.SerializationInfo> 物件。  (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`public Type GetType()`|取得目前執行個體的執行階段類型。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
-|`protected Object MemberwiseClone()`|建立目前物件的淺層複本。 (繼承自 <xref:System.Object>。)|  
-|`public string ToString()`|傳回目前例外狀況的字串表示。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
+|`public bool Equals(Object obj)`|<span data-ttu-id="313a7-142">判斷指定的物件是否等於目前的物件。</span><span class="sxs-lookup"><span data-stu-id="313a7-142">Determines whether the specified object is equal to the current object.</span></span>  <span data-ttu-id="313a7-143">(繼承自 <xref:System.Object>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-143">(Inherited from <xref:System.Object>.)</span></span>|  
+|`protected void Finalize()`|<span data-ttu-id="313a7-144">在記憶體回收開始前，允許物件嘗試釋放資源，並執行其他清除作業。</span><span class="sxs-lookup"><span data-stu-id="313a7-144">Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.</span></span> <span data-ttu-id="313a7-145">(繼承自 <xref:System.Object>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-145">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public Exception GetBaseException()`|<span data-ttu-id="313a7-146">傳回一或多個後續例外狀況之根本原因的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-146">Returns the exception that is the root cause of one or more subsequent exceptions.</span></span> <span data-ttu-id="313a7-147">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-147">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public int GetHashCode()`|<span data-ttu-id="313a7-148">傳回 `MissingRuntimeArtifactException` 執行個體的雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="313a7-148">Returns a hash code for a `MissingRuntimeArtifactException` instance.</span></span>   <span data-ttu-id="313a7-149">(繼承自 <xref:System.Object>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-149">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|<span data-ttu-id="313a7-150">使用與例外狀況相關的資訊來設定 <xref:System.Runtime.Serialization.SerializationInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="313a7-150">Sets a <xref:System.Runtime.Serialization.SerializationInfo> object with information about the exception.</span></span>  <span data-ttu-id="313a7-151">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-151">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public Type GetType()`|<span data-ttu-id="313a7-152">取得目前執行個體的執行階段類型。</span><span class="sxs-lookup"><span data-stu-id="313a7-152">Gets the runtime type of the current instance.</span></span> <span data-ttu-id="313a7-153">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-153">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`protected Object MemberwiseClone()`|<span data-ttu-id="313a7-154">建立目前物件的淺層複本。</span><span class="sxs-lookup"><span data-stu-id="313a7-154">Creates a shallow copy of the current object.</span></span> <span data-ttu-id="313a7-155">(繼承自 <xref:System.Object>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-155">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public string ToString()`|<span data-ttu-id="313a7-156">傳回目前例外狀況的字串表示。</span><span class="sxs-lookup"><span data-stu-id="313a7-156">Returns the string representation of the current exception.</span></span> <span data-ttu-id="313a7-157">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-157">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
   
-## <a name="events"></a>事件  
+## <a name="events"></a><span data-ttu-id="313a7-158">事件</span><span class="sxs-lookup"><span data-stu-id="313a7-158">Events</span></span>  
   
-|事件|描述|  
+|<span data-ttu-id="313a7-159">事件</span><span class="sxs-lookup"><span data-stu-id="313a7-159">Event</span></span>|<span data-ttu-id="313a7-160">描述</span><span class="sxs-lookup"><span data-stu-id="313a7-160">Description</span></span>|  
 |-----------|-----------------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|當例外狀況序列化，以建立包含例外狀況相關序列化資料的例外狀況狀態物件時，就會發生此事件。 (繼承自 <xref:System.Exception?displayProperty=fullName>。)|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|<span data-ttu-id="313a7-161">當例外狀況序列化，以建立包含例外狀況相關序列化資料的例外狀況狀態物件時，就會發生此事件。</span><span class="sxs-lookup"><span data-stu-id="313a7-161">Occurs when an exception is serialized to create an exception state object that contains serialized data about the exception.</span></span> <span data-ttu-id="313a7-162">(繼承自 <xref:System.Exception?displayProperty=nameWithType>。)</span><span class="sxs-lookup"><span data-stu-id="313a7-162">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
   
-## <a name="usage-details"></a>用法詳細資料  
- 當嘗試具現化類型或叫用類型成員時，雖然存在該類型或成員的中繼資料，但已移除其實作，在此情況下會擲回 `MissingRuntimeArtifactException` 例外狀況。  
+## <a name="usage-details"></a><span data-ttu-id="313a7-163">用法詳細資料</span><span class="sxs-lookup"><span data-stu-id="313a7-163">Usage Details</span></span>  
+ <span data-ttu-id="313a7-164">當嘗試具現化類型或叫用類型成員時，雖然存在該類型或成員的中繼資料，但已移除其實作，在此情況下會擲回 `MissingRuntimeArtifactException` 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-164">The `MissingRuntimeArtifactException` exception is thrown when an attempt is made to instantiate a type or invoke a type member and, although the type or member's metadata is present, its implementation has been removed.</span></span>  
   
- 應用程式在執行階段是否有可動態執行方法的中繼資料和實作程式碼可用，是由執行階段指示詞 (XML 組態) 檔案 *.rd.xml 所定義。 若要防止應用程式擲回這個例外狀況，您必須修改 \*.rd.xml，以確保在執行階段存在類型或類型成員所需的中繼資料。 如需 \*.rd.xml 檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
+ <span data-ttu-id="313a7-165">應用程式在執行階段是否有可動態執行方法的中繼資料和實作程式碼可用，是由執行階段指示詞 (XML 組態) 檔案 *.rd.xml 所定義。</span><span class="sxs-lookup"><span data-stu-id="313a7-165">Whether metadata and the implementation code to dynamically execute a method are available to an app at run time is defined by the runtime directives (XML configuration) file, *.rd.xml.</span></span> <span data-ttu-id="313a7-166">若要防止應用程式擲回這個例外狀況，您必須修改 \*.rd.xml，以確保在執行階段存在類型或類型成員所需的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="313a7-166">To prevent your app from throwing this exception, you must modify \*.rd.xml to ensure that the metadata needed by a type or type member is present at run time.</span></span> <span data-ttu-id="313a7-167">如需 \*.rd.xml 檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="313a7-167">For information about the format of the \*.rd.xml file, see [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span>  
   
 > [!IMPORTANT]
->  因為這個例外狀況指出應用程式所需的實作程式碼在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。 相反地，您應該診斷例外狀況的原因，然後透過執行階段指示詞檔案來去除這個例外狀況。 一般而言，您可以為執行階段指示詞檔案 (*.rd.xml 檔) 中的程式項目，指定適當的 `Activate` 或 `Dynamic` 原則，來去除這個例外狀況。 若要取得可加入執行階段指示詞檔案以消除例外狀況的項目，您可以使用下列兩個疑難排解工具之一：  
+>  <span data-ttu-id="313a7-168">因為這個例外狀況指出應用程式所需的實作程式碼在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-168">Because this exception indicates that the implementation code needed by your application isn’t available at run time, you shouldn’t handle this exception in a `try`/`catch` block.</span></span> <span data-ttu-id="313a7-169">相反地，您應該診斷例外狀況的原因，然後透過執行階段指示詞檔案來去除這個例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-169">Instead, you should diagnose the cause of the exception and eliminate it by using a runtime directives file.</span></span> <span data-ttu-id="313a7-170">一般而言，您可以為執行階段指示詞檔案 (*.rd.xml 檔) 中的程式項目，指定適當的 `Activate` 或 `Dynamic` 原則，來去除這個例外狀況。</span><span class="sxs-lookup"><span data-stu-id="313a7-170">Typically, you eliminate this exception by specifying the appropriate `Activate` or `Dynamic` policy for a program element in the runtime directives file (*.rd.xml file).</span></span> <span data-ttu-id="313a7-171">若要取得可加入執行階段指示詞檔案以消除例外狀況的項目，您可以使用下列兩個疑難排解工具之一：</span><span class="sxs-lookup"><span data-stu-id="313a7-171">To get the entry that you can add to your runtime directives file that eliminates the exception, you can use one of two troubleshooters:</span></span>  
 >   
->  -   針對類型的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/type.html) 。  
-> -   針對方法的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/method.html) 。  
+>  -   <span data-ttu-id="313a7-172">針對類型的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/type.html) 。</span><span class="sxs-lookup"><span data-stu-id="313a7-172">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/type.html) for types.</span></span>  
+> -   <span data-ttu-id="313a7-173">針對方法的 [MissingMetadataException 疑難排解工具](http://dotnet.github.io/native/troubleshooter/method.html) 。</span><span class="sxs-lookup"><span data-stu-id="313a7-173">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/method.html) for methods.</span></span>  
   
- `MissingRuntimeArtifactException` 類別沒有包含唯一成員；其所有成員都是繼承自其基底類別 <xref:System.MemberAccessException>。  
+ <span data-ttu-id="313a7-174">`MissingRuntimeArtifactException` 類別沒有包含唯一成員；其所有成員都是繼承自其基底類別 <xref:System.MemberAccessException>。</span><span class="sxs-lookup"><span data-stu-id="313a7-174">The `MissingRuntimeArtifactException` class contains no unique members; all of its members are inherited from its base class, <xref:System.MemberAccessException>.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="313a7-175">另請參閱</span><span class="sxs-lookup"><span data-stu-id="313a7-175">See Also</span></span>  
+ [<span data-ttu-id="313a7-176">執行階段指示詞 (rd.xml) 組態檔參考</span><span class="sxs-lookup"><span data-stu-id="313a7-176">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="313a7-177">執行階段指示詞原則設定</span><span class="sxs-lookup"><span data-stu-id="313a7-177">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

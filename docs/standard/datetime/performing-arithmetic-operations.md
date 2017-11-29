@@ -1,87 +1,99 @@
 ---
-title: "使用日期和時間執行算術運算 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "數學運算 [.NET Framework], 日期和時間"
-  - "日期 [.NET Framework], 數學運算"
-  - "日期 [.NET Framework], 比較"
-  - "DateTime 結構, 數學運算"
-  - "DateTimeOffset 結構, 數學運算"
-  - "時區 [.NET Framework], 數學運算"
-  - "時間 [.NET Framework], 數學運算"
+title: "使用日期和時間執行算術運算"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- times [.NET Framework], arithmetic operations
+- dates [.NET Framework], arithmetic operations
+- time zones [.NET Framework], arithmetic operations
+- arithmetic operations [.NET Framework], dates and times
+- dates [.NET Framework], comparing
+- DateTime structure, arithmetic operations
+- DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: def43f84186b53f9b0d2ade0a5a92e59606ee2af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用日期和時間執行算術運算
-雖然 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 結構都提供成員來對其值執行算術運算，但算術運算得到的結果極為不同。  本主題將說明這些差異、這些差異與日期和時間資料的時區感知程度有何關係，並討論如何使用日期和時間資料執行完整的時區感知運算。  
-  
-## 對 DateTime 值進行比較和算術運算  
- 從 .NET Framework 2.0 版開始，<xref:System.DateTime> 值加入了有限的時區感知程度。  <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性可讓 <xref:System.DateTimeKind> 值指派給日期和時間，指出其表示的是本地時間、Coordinated Universal Time \(UTC\) 或未指定時區的時間。  不過，若對 <xref:System.DateTime> 值進行比較或執行日期和時間算術，此有限的時區資訊就會被忽略。  下列範例將以比較目前本地時間和目前 UTC 時間來說明此點。  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual2.cs#2)]
- [!code-vb[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual2.vb#2)]  
-  
- <xref:System.DateTime.CompareTo%28System.DateTime%29> 方法會報告本地時間早於 \(或晚於\) UTC 時間，接著減法運算會指出 UTC 與本地時間之間的差異，以美國太平洋標準時區系統來說相差七個小時。  但由於這兩個值提供不同的單一時間點表示，因此，從此例可以清楚得知，這段時間間隔完全是本地時間與 UTC 之間的位移。  
-  
- 簡單地說，就是 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性並不會影響 <xref:System.DateTime> 比較和計算後傳回的結果 \(就如同兩個完全相同的時間點比較的結果\)，雖然這可能會影響結果的解讀。  例如：  
-  
--   對兩個 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性都等於 <xref:System.DateTimeKind> 的日期和時間值執行的任何算術運算所得到的結果，才會反映出兩個值之間的實際時間間隔。  同樣地，比較這兩個日期和時間值，才能準確反映出兩個時間之間的關係。  
-  
--   對兩個 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性都等於 <xref:System.DateTimeKind> 的日期和時間值，或對兩個有不同 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性值的日期和時間值，執行的任何算術或比較運算所得結果反映的是兩個值之間的時鐘時間。  
-  
--   對本地日期和時間值所做的算術或比較運算，不會考慮到特定值是否為模稜兩可或無效，也不會將本地時區與日光節約時間的來回轉換調整規則的影響列入考量。  
-  
--   任何比較或計算 UTC 與本地時間之時差的運算所得的時間間隔，就等於是本地時區與 UTC 之間的位移。  
-  
--   任何比較或計算未指定時間與 UTC 或本地時間之時差的運算，反映的是簡單的時鐘時間。  時區差異不會列入考量，而結果也不會反映出套用時區調整規則。  
-  
--   任何比較或計算兩個未指定時間之時差的運算，可能會加入一段未知的時間間隔，以反映兩個不同時區的時間之間的差異。  
-  
- 在很多情節中，時區差異並不會影響日期和時間計算 \(如需部分案例討論，請參閱[在 DateTime、DateTimeOffset、 TimeSpan 和  TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)\)，或是日期和時間資料的內容會定義比較或算術運算的意義。  
-  
-## 對 DateTimeOffset 值進行比較和算術運算  
- <xref:System.DateTimeOffset> 值不僅包含日期和時間，也包含位移，它會明確定義相對於 UTC 的日期和時間。  因此，相等的定義與 <xref:System.DateTime> 值稍有不同。  對於 <xref:System.DateTime> 值，如果兩個值有相同的日期和時間值，就表示相等，但對於 <xref:System.DateTimeOffset> 值，則要兩個值都是指相同的時間點，才算相等。  這可讓 <xref:System.DateTimeOffset> 值在進行比較或大多數算術運算，以判斷兩個日期和時間值之間的時間間隔時，結果更為準確，也不需要太多的解讀。  下列範例是前面比較本地和 UTC <xref:System.DateTime> 值的範例，但將值改為了 <xref:System.DateTimeOffset>，以說明此行為差異。  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual3.cs#3)]
- [!code-vb[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual3.vb#3)]  
-  
- 在這個範例中，<xref:System.DateTimeOffset.CompareTo%2A> 方法指出目前本地時間與目前 UTC 時間相等，而 <xref:System.DateTimeOffset> 值相減的結果顯示兩個時間的時差為 <xref:System.TimeSpan.Zero?displayProperty=fullName>。  
-  
- 在日期和時間的計算中使用 <xref:System.DateTimeOffset> 值的主要限制在於，雖然 <xref:System.DateTimeOffset> 值具有某些程度的時區感知，但卻不是完全的時區感知。  雖然在一開始指派值給 <xref:System.DateTimeOffset> 變數時，能夠讓 <xref:System.DateTimeOffset> 值的位移反映出時區與 UTC 之間的位移，但稍後就會與時區切斷關聯。  由於不再與可識別的時間直接相關聯，日期和時間間隔的加減就不會將時區的調整規則列入考量。  
-  
- 舉例而言，與日光節約時間轉換成在美國中央標準時區於 2008 年 3 月 9 日的 2:00 AM 。  這表示中央標準時間 2008 年 3 月 9 日 1:30 AM 加上兩個半小時，產生的日期應該為 2008 年 3 月 9 日 5:00 AM。  不過，如下列範例所示，加上兩個半小時後為 2008 年 3 月 9 日 4:00 A.M.。  請注意，這個運算結果並不代表正確的時間點，不過這也不是我們所要時區的時間 \(也就是說，沒有得到預期的時區位移\)。  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual4.cs#4)]
- [!code-vb[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual4.vb#4)]  
-  
-## 對時區時間進行算術運算  
- <xref:System.TimeZoneInfo> 類別包含數個轉換方法，將時間從某個時區轉換成另一個時區時，會自動套用調整。  這些需求包括下列各項：  
-  
--   <xref:System.TimeZoneInfo.ConvertTime%2A> 和 <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> 方法，這兩個方法會在任何兩個時區之間轉換時間。  
-  
--   <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> 和 <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> 方法，這兩個方法會將特定時區的時間轉換成 UTC，或將 UTC 轉換成特定時區的時間。  
-  
- 如需詳細資訊，請參閱 [在各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。  
-  
- <xref:System.TimeZoneInfo> 類別並沒有提供任何自動套用調整規則的方法，可供執行日期和時間算術使用。  不過，您可以這麼做：將時區的時間轉換成 UTC、執行算術運算，然後再將 UTC 轉換回該時區的時間。  如需詳細資訊，請參閱 [如何：在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。  
-  
- 例如，下列程式碼如同前面的程式碼，也是將 2008 年 3 月 9 日 2:00 A.M.加上兩個半小時。  不過，由於它是先將中部標準時間轉換成 UTC，然後才執行日期和時間算術，接著再將結果從 UTC 轉換回中部標準時間，因此所得時間就會反映轉換成日光節約時間之後的中部標準時區。  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
- [!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]  
-  
-## 請參閱  
- [日期、時間和時區](../../../docs/standard/datetime/index.md)   
- [如何：在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+# <a name="performing-arithmetic-operations-with-dates-and-times"></a><span data-ttu-id="f40e3-102">使用日期和時間執行算術運算</span><span class="sxs-lookup"><span data-stu-id="f40e3-102">Performing arithmetic operations with dates and times</span></span>
+
+<span data-ttu-id="f40e3-103">雖然同時<xref:System.DateTime>和<xref:System.DateTimeOffset>結構提供執行算術運算，其值的成員，算術運算的結果是非常不同。</span><span class="sxs-lookup"><span data-stu-id="f40e3-103">Although both the <xref:System.DateTime> and the <xref:System.DateTimeOffset> structures provide members that perform arithmetic operations on their values, the results of arithmetic operations are very different.</span></span> <span data-ttu-id="f40e3-104">本主題會檢查這些差異，與它們相關程度的時區感知日期和時間資料，並討論如何執行完整的時區感知的運算，使用日期和時間資料。</span><span class="sxs-lookup"><span data-stu-id="f40e3-104">This topic examines those differences, relates them to degrees of time zone awareness in date and time data, and discusses how to perform fully time zone aware operations using date and time data.</span></span>
+
+## <a name="comparisons-and-arithmetic-operations-with-datetime-values"></a><span data-ttu-id="f40e3-105">比較和算術運算，含有 DateTime 值</span><span class="sxs-lookup"><span data-stu-id="f40e3-105">Comparisons and arithmetic operations with DateTime values</span></span>
+
+<span data-ttu-id="f40e3-106"><xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性可讓<xref:System.DateTimeKind>来指派給來指出它是代表本地時間、 國際標準時間 (UTC) 或未指定時區的時間的日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="f40e3-106">The <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property allows a <xref:System.DateTimeKind> value to be assigned to the date and time to indicate whether it represents local time, Coordinated Universal Time (UTC), or the time in an unspecified time zone.</span></span> <span data-ttu-id="f40e3-107">當比較，或執行日期和時間運算上時，不過，忽略此有限的時區資訊<xref:System.DateTimeKind>值。</span><span class="sxs-lookup"><span data-stu-id="f40e3-107">However, this limited time zone information is ignored when comparing or performing date and time arithmetic on <xref:System.DateTimeKind> values.</span></span> <span data-ttu-id="f40e3-108">下列範例會比較目前當地時間與目前 UTC 時間，以說明這點。</span><span class="sxs-lookup"><span data-stu-id="f40e3-108">The following example, which compares the current local time with the current UTC time, illustrates this.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual2.cs#2)]
+[!code-vb[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual2.vb#2)]
+
+<span data-ttu-id="f40e3-109"><xref:System.DateTime.CompareTo%28System.DateTime%29>方法會報告本機時間早於 (或低於) 的 UTC 時間，且減法運算會指出在美國太平洋時區中 UTC 與本地時間，系統之間的差異太平洋標準時間時區系統來說相差七個小時。</span><span class="sxs-lookup"><span data-stu-id="f40e3-109">The <xref:System.DateTime.CompareTo%28System.DateTime%29> method reports that the local time is earlier than (or less than) the UTC time, and the subtraction operation indicates that the difference between UTC and the local time for a system in the U.S. Pacific Standard Time zone is seven hours.</span></span> <span data-ttu-id="f40e3-110">但因為這兩個值提供單一時間點的不同表示，所以在此情況下，此時間間隔很明顯地完全歸因於當地時區與 UTC 的位移。</span><span class="sxs-lookup"><span data-stu-id="f40e3-110">But because these two values provide different representations of a single point in time, it is clear in this case that this time interval is completely attributable to the local time zone's offset from UTC.</span></span>
+
+<span data-ttu-id="f40e3-111">較常見地，<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性不會影響所傳回的結果<xref:System.DateTime.Kind>比較和算術方法 （如比較的兩個相同時間點表示），但是它可能會影響這些結果的解譯。</span><span class="sxs-lookup"><span data-stu-id="f40e3-111">More generally, the <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property does not affect the results returned by <xref:System.DateTime.Kind> comparison and arithmetic methods (as the comparison of two identical points in time indicates), although it can affect the interpretation of those results.</span></span> <span data-ttu-id="f40e3-112">例如：</span><span class="sxs-lookup"><span data-stu-id="f40e3-112">For example:</span></span>
+
+* <span data-ttu-id="f40e3-113">任何算術運算的結果上執行兩個日期和時間值的<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性都等於<xref:System.DateTimeKind>反映出兩個值之間的實際時間間隔。</span><span class="sxs-lookup"><span data-stu-id="f40e3-113">The result of any arithmetic operation performed on two date and time values whose <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> properties both equal <xref:System.DateTimeKind> reflects the actual time interval between the two values.</span></span> <span data-ttu-id="f40e3-114">同樣地，兩個這類日期和時間值的比較會精確地反映時間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="f40e3-114">Similarly, the comparison of two such date and time values accurately reflects the relationship between times.</span></span>
+
+* <span data-ttu-id="f40e3-115">任何算術或比較運算的結果上執行兩個日期和時間值的<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性都等於<xref:System.DateTimeKind>或對兩個不同日期和時間值<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性值會反映時鐘時間的差距兩個值。</span><span class="sxs-lookup"><span data-stu-id="f40e3-115">The result of any arithmetic or comparison operation performed on two date and time values whose <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> properties both equal <xref:System.DateTimeKind> or on two date and time values with different <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property values reflects the difference in clock time between the two values.</span></span>
+
+* <span data-ttu-id="f40e3-116">當地日期和時間值的算術或比較作業不會考慮特定值是不明確或無效，也不會考慮當地時區與日光節約時間之轉換所產生的任何調整規則的影響。</span><span class="sxs-lookup"><span data-stu-id="f40e3-116">Arithmetic or comparison operations on local date and time values do not consider whether a particular value is ambiguous or invalid, nor do they take account of the effect of any adjustment rules that result from the local time zone's transition to or from daylight saving time.</span></span>
+
+* <span data-ttu-id="f40e3-117">任何比較或計算 UTC 與當地時間之差異的作業，都會在結果中包含等於當地時區與 UTC 之位移的時間間隔。</span><span class="sxs-lookup"><span data-stu-id="f40e3-117">Any operation that compares or calculates the difference between UTC and a local time includes a time interval equal to the local time zone's offset from UTC in the result.</span></span>
+
+* <span data-ttu-id="f40e3-118">任何比較或計算未指定時間與 UTC 或當地時間之差異的作業，都會反映簡單時鐘時間。</span><span class="sxs-lookup"><span data-stu-id="f40e3-118">Any operation that compares or calculates the difference between an unspecified time and either UTC or the local time reflects simple clock time.</span></span> <span data-ttu-id="f40e3-119">不考慮時區差異，而且結果不會反映如何套用時區調整規則。</span><span class="sxs-lookup"><span data-stu-id="f40e3-119">Time zone differences are not considered, and the result does not reflect the application of time zone adjustment rules.</span></span>
+
+* <span data-ttu-id="f40e3-120">任何比較或計算兩個未指定時間之差異的作業都可能包含未知間隔，而未知間隔反映兩個不同時區的時間差異。</span><span class="sxs-lookup"><span data-stu-id="f40e3-120">Any operation that compares or calculates the difference between two unspecified times may include an unknown interval that reflects the difference between the time in two different time zones.</span></span>
+
+<span data-ttu-id="f40e3-121">有許多案例中的時區差異並不會影響日期和時間計算 (其中有些的討論，請參閱[DateTime、 DateTimeOffset、 TimeSpan 和 TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)) 或在其中的內容日期和時間資料會定義的比較或算術運算的意義。</span><span class="sxs-lookup"><span data-stu-id="f40e3-121">There are many scenarios in which time zone differences do not affect date and time calculations (for a discussion of some of these, see [Choosing between DateTime, DateTimeOffset, TimeSpan, and TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)) or in which the context of the date and time data defines the meaning of comparison or arithmetic operations.</span></span>
+
+## <a name="comparisons-and-arithmetic-operations-with-datetimeoffset-values"></a><span data-ttu-id="f40e3-122">比較和 DateTimeOffset 值的算術運算</span><span class="sxs-lookup"><span data-stu-id="f40e3-122">Comparisons and arithmetic operations with DateTimeOffset values</span></span>
+
+<span data-ttu-id="f40e3-123">A<xref:System.DateTimeOffset>值包含不只一個日期和時間，還能明確定義該日期和時間相對於 UTC 的位移。</span><span class="sxs-lookup"><span data-stu-id="f40e3-123">A <xref:System.DateTimeOffset> value includes not only a date and time, but also an offset that unambiguously defines that date and time relative to UTC.</span></span> <span data-ttu-id="f40e3-124">這樣做可定義的方式稍有不同於相等<xref:System.DateTimeOffset>值。</span><span class="sxs-lookup"><span data-stu-id="f40e3-124">This makes it possible to define equality somewhat differently than for <xref:System.DateTimeOffset> values.</span></span> <span data-ttu-id="f40e3-125">而<xref:System.DateTime>值是否相等，如果有相同的日期和時間值<xref:System.DateTimeOffset>值是否相等，如果它們都參考相同的點的時間。</span><span class="sxs-lookup"><span data-stu-id="f40e3-125">Whereas <xref:System.DateTime> values are equal if they have the same date and time value, <xref:System.DateTimeOffset> values are equal if they both refer to the same point in time.</span></span> <span data-ttu-id="f40e3-126">這可讓<xref:System.DateTimeOffset>更精確且較不需要解譯時用於比較和大部分的算術運算，判斷兩個日期和時間之間的間隔中的值。</span><span class="sxs-lookup"><span data-stu-id="f40e3-126">This makes a <xref:System.DateTimeOffset> value more accurate and less in need of interpretation when used in comparisons and in most arithmetic operations that determine the interval between two dates and times.</span></span> <span data-ttu-id="f40e3-127">下列範例中，也就是<xref:System.DateTimeOffset>相當於上一個範例比較本機與 UTC<xref:System.DateTimeOffset>值，則將說明此行為差異。</span><span class="sxs-lookup"><span data-stu-id="f40e3-127">The following example, which is the <xref:System.DateTimeOffset> equivalent to the previous example that compared local and UTC <xref:System.DateTimeOffset> values, illustrates this difference in behavior.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual3.cs#3)]
+[!code-vb[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual3.vb#3)]
+
+<span data-ttu-id="f40e3-128">在此範例中，<xref:System.DateTimeOffset.CompareTo%2A>方法會指示目前的當地時間和目前的 UTC 時間為等於、 和減法<xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)>值，表示兩個時間之間的差異是<xref:System.TimeSpan.Zero?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="f40e3-128">In this example, the <xref:System.DateTimeOffset.CompareTo%2A> method indicates that the current local time and the current UTC time are equal, and subtraction of <xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)> values indicates that the difference between the two times is <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span></span>
+
+<span data-ttu-id="f40e3-129">使用的主要限制<xref:System.DateTimeOffset>日期和時間運算中的值是，雖然<xref:System.DateTimeOffset>值有一些時區感知，他們並不完全感知時區。</span><span class="sxs-lookup"><span data-stu-id="f40e3-129">The chief limitation of using <xref:System.DateTimeOffset> values in date and time arithmetic is that although <xref:System.DateTimeOffset> values have some time zone awareness, they are not fully time zone aware.</span></span> <span data-ttu-id="f40e3-130">雖然<xref:System.DateTimeOffset>值的位移會反映從 UTC 的時區位移時<xref:System.DateTimeOffset>變數會先指派值，它會變成解除關聯的時區時間之後。</span><span class="sxs-lookup"><span data-stu-id="f40e3-130">Although the <xref:System.DateTimeOffset> value's offset reflects a time zone's offset from UTC when a <xref:System.DateTimeOffset> variable is first assigned a value, it becomes disassociated from the time zone thereafter.</span></span> <span data-ttu-id="f40e3-131">因為它不再與可識別時間直接關聯，所以加上和減去日期和時間間隔不會視為時區的調整規則。</span><span class="sxs-lookup"><span data-stu-id="f40e3-131">Because it is no longer directly associated with an identifiable time, the addition and subtraction of date and time intervals does not consider a time zone's adjustment rules.</span></span>
+
+<span data-ttu-id="f40e3-132">舉例而言，美國中央標準時間時區轉換成日光節約時間是在 2008 年 3 月 9 日的</span><span class="sxs-lookup"><span data-stu-id="f40e3-132">To illustrate, the transition to daylight saving time in the U.S. Central Standard Time zone occurs at 2:00 A.M.</span></span> <span data-ttu-id="f40e3-133">凌晨 2:00 發生。</span><span class="sxs-lookup"><span data-stu-id="f40e3-133">on March 9, 2008.</span></span> <span data-ttu-id="f40e3-134">這表示，中央標準時間 2008 年 3 月 9 日上午 1:30 加上兩個半小時的間隔，</span><span class="sxs-lookup"><span data-stu-id="f40e3-134">This means that adding a two and a half hour interval to a Central Standard time of 1:30 A.M.</span></span> <span data-ttu-id="f40e3-135">就會產生 2008 年 3 月 9 日凌晨 5:00 的</span><span class="sxs-lookup"><span data-stu-id="f40e3-135">on March 9, 2008, should produce a date and time of 5:00 A.M.</span></span> <span data-ttu-id="f40e3-136">日期和時間。</span><span class="sxs-lookup"><span data-stu-id="f40e3-136">on March 9, 2008.</span></span> <span data-ttu-id="f40e3-137">不過，如下列範例所示，加上兩個半小時後為 2008 年 3 月 9 日</span><span class="sxs-lookup"><span data-stu-id="f40e3-137">However, as the following example shows, the result of the addition is 4:00 A.M.</span></span> <span data-ttu-id="f40e3-138">凌晨 4:00。</span><span class="sxs-lookup"><span data-stu-id="f40e3-138">on March 9, 2008.</span></span> <span data-ttu-id="f40e3-139">請注意，雖然這並非我們感興趣的時區時間 (亦即，它沒有預期的時區位移)，但是這項作業的結果確實代表正確時間點。</span><span class="sxs-lookup"><span data-stu-id="f40e3-139">Note that this result of this operation does represent the correct point in time, although it is not the time in the time zone in which we are interested (that is, it does not have the expected time zone offset).</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual4.cs#4)]
+[!code-vb[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual4.vb#4)]
+
+## <a name="arithmetic-operations-with-times-in-time-zones"></a><span data-ttu-id="f40e3-140">時區時間使用算術運算</span><span class="sxs-lookup"><span data-stu-id="f40e3-140">Arithmetic operations with times in time zones</span></span>
+
+<span data-ttu-id="f40e3-141"><xref:System.TimeZoneInfo>類別包含數種轉換方法，它們將時間從一個時區轉換成另一個時，會自動套用調整。</span><span class="sxs-lookup"><span data-stu-id="f40e3-141">The <xref:System.TimeZoneInfo> class includes a number of conversion methods that automatically apply adjustments when they convert times from one time zone to another.</span></span> <span data-ttu-id="f40e3-142">這些需求包括下列各項：</span><span class="sxs-lookup"><span data-stu-id="f40e3-142">These include the following:</span></span>
+
+* <span data-ttu-id="f40e3-143"><xref:System.TimeZoneInfo.ConvertTime%2A>和<xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>方法，將它轉換之間任何兩個時區的時間。</span><span class="sxs-lookup"><span data-stu-id="f40e3-143">The <xref:System.TimeZoneInfo.ConvertTime%2A> and <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> methods, which convert times between any two time zones.</span></span>
+
+* <span data-ttu-id="f40e3-144"><xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>和<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>的方法，將特定時區的時間轉換成 UTC，或為特定時區的時間轉換成 UTC。</span><span class="sxs-lookup"><span data-stu-id="f40e3-144">The <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> and <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> methods, which convert the time in a particular time zone to UTC, or convert UTC to the time in a particular time zone.</span></span>
+
+<span data-ttu-id="f40e3-145">如需詳細資訊，請參閱[轉換的時區時間](../../../docs/standard/datetime/converting-between-time-zones.md)。</span><span class="sxs-lookup"><span data-stu-id="f40e3-145">For details, see [Converting times between time zones](../../../docs/standard/datetime/converting-between-time-zones.md).</span></span>
+
+<span data-ttu-id="f40e3-146"><xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>類別並未提供當您執行日期和時間運算時，會自動套用的調整規則的任何方法。</span><span class="sxs-lookup"><span data-stu-id="f40e3-146">The <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> class does not provide any methods that automatically apply adjustment rules when you perform date and time arithmetic.</span></span> <span data-ttu-id="f40e3-147">不過，作法是將時區時間轉換為 UTC，並執行算術運算，然後從 UTC 轉換回時區時間。</span><span class="sxs-lookup"><span data-stu-id="f40e3-147">However, you can do this by converting the time in a time zone to UTC, performing the arithmetic operation, and then converting from UTC back to the time in the time zone.</span></span> <span data-ttu-id="f40e3-148">如需詳細資訊，請參閱[How to： 在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。</span><span class="sxs-lookup"><span data-stu-id="f40e3-148">For details, see [How to: Use time zones in date and time arithmetic](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).</span></span>
+
+<span data-ttu-id="f40e3-149">例如，下列程式碼與前面的程式碼類似，也是將 2008 年 3 月 9 日</span><span class="sxs-lookup"><span data-stu-id="f40e3-149">For example, the following code is similar to the previous code that added two-and-a-half hours to 2:00 A.M.</span></span> <span data-ttu-id="f40e3-150">凌晨 2:00 加上兩個半小時。</span><span class="sxs-lookup"><span data-stu-id="f40e3-150">on March 9, 2008.</span></span> <span data-ttu-id="f40e3-151">不過，因為它會先將美加中部標準時間轉換為 UTC，再執行日期和時間運算，然後將 UTC 的結果轉換回美加中部標準時間，所以產生的時間會反映美加中部標準時區到日光節約時間的轉換。</span><span class="sxs-lookup"><span data-stu-id="f40e3-151">However, because it converts a Central Standard time to UTC before it performs date and time arithmetic, and then converts the result from UTC back to Central Standard time, the resulting time reflects the Central Standard Time Zone's transition to daylight saving time.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
+[!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]
+
+## <a name="see-also"></a><span data-ttu-id="f40e3-152">請參閱</span><span class="sxs-lookup"><span data-stu-id="f40e3-152">See also</span></span>
+
+<span data-ttu-id="f40e3-153">[日期、 時間和時區](../../../docs/standard/datetime/index.md)
+[How to： 在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)</span><span class="sxs-lookup"><span data-stu-id="f40e3-153">[Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[How to: Use time zones in date and time arithmetic](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)</span></span>

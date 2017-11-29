@@ -1,63 +1,66 @@
 ---
-title: "工作流程追蹤與追查 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程式設計 [WF], 追蹤"
+title: "工作流程追蹤與追查"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d9f4df7832be962665c2a49d4b009d9cc6f76f93
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 工作流程追蹤與追查
-Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 功能。它提供追蹤基礎架構，可追蹤工作流程執行個體的執行。WF 追蹤基礎結構會透明化地檢測工作流程，在執行期間發出記錄以反映重要事件。根據預設，任何 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程都可使用這個功能。不需要對 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 工作流程做任何變更，即可進行追蹤。只需決定您想接收多少追蹤資料即可。當工作流程執行個體開始或完成時，會發出處理的追蹤記錄。追蹤也可以擷取與工作流程變數相關聯的商務相關資料。例如，如果工作流程代表訂單處理系統，則訂單識別碼可與 <xref:System.Activities.Tracking.TrackingRecord> 物件一併擷取。一般而言，啟用 WF 追蹤有助於對從執行工作流程而存取的資料進行診斷或業務分析。  
+# <a name="workflow-tracking-and-tracing"></a><span data-ttu-id="0caed-102">工作流程追蹤與追查</span><span class="sxs-lookup"><span data-stu-id="0caed-102">Workflow Tracking and Tracing</span></span>
+<span data-ttu-id="0caed-103">Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 功能。</span><span class="sxs-lookup"><span data-stu-id="0caed-103">Windows Workflow tracking is a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] feature designed to provide visibility into workflow execution.</span></span> <span data-ttu-id="0caed-104">它提供追蹤基礎架構，可追蹤工作流程執行個體的執行。</span><span class="sxs-lookup"><span data-stu-id="0caed-104">It provides a tracking infrastructure to track the execution of a workflow instance.</span></span> <span data-ttu-id="0caed-105">WF 追蹤基礎結構會透明化地檢測工作流程，在執行期間發出記錄以反映重要事件。</span><span class="sxs-lookup"><span data-stu-id="0caed-105">The WF tracking infrastructure transparently instruments a workflow to emit records reflecting key events during the execution.</span></span> <span data-ttu-id="0caed-106">根據預設，任何 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程都可使用這個功能。</span><span class="sxs-lookup"><span data-stu-id="0caed-106">This functionality is available by default for any [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="0caed-107">不需要對 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 工作流程做任何變更，即可進行追蹤。</span><span class="sxs-lookup"><span data-stu-id="0caed-107">No changes are required to be made to a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow for tracking to occur.</span></span> <span data-ttu-id="0caed-108">只需決定您想接收多少追蹤資料即可。</span><span class="sxs-lookup"><span data-stu-id="0caed-108">It is just a matter of deciding how much tracking data you want to receive.</span></span> <span data-ttu-id="0caed-109">當工作流程執行個體開始或完成時，會發出處理的追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="0caed-109">When a workflow instance starts or completes, its processing tracking records are emitted.</span></span> <span data-ttu-id="0caed-110">追蹤也可以擷取與工作流程變數相關聯的商務相關資料。</span><span class="sxs-lookup"><span data-stu-id="0caed-110">Tracking can also extract business-relevant data associated with the workflow variables.</span></span> <span data-ttu-id="0caed-111">例如，如果工作流程代表訂單處理系統，則訂單識別碼可與 <xref:System.Activities.Tracking.TrackingRecord> 物件一併擷取。</span><span class="sxs-lookup"><span data-stu-id="0caed-111">For example, if the workflow represents an order processing system, the order ID can be extracted along with the <xref:System.Activities.Tracking.TrackingRecord> object.</span></span> <span data-ttu-id="0caed-112">一般而言，啟用 WF 追蹤有助於對從執行工作流程而存取的資料進行診斷或業務分析。</span><span class="sxs-lookup"><span data-stu-id="0caed-112">In general, enabling WF tracking facilitates diagnostics or business analytics data to be accessed from a workflow execution.</span></span>  
   
- 這些追蹤元件等同於 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中的追蹤服務。在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中已改善效能，且已為 WF 追蹤功能簡化程式設計的模型。追蹤執行階段會檢測工作流程執行個體，以發出與工作流程生命週期相關的事件、工作流程活動和自訂事件。  
+ <span data-ttu-id="0caed-113">這些追蹤元件等同於 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中的追蹤服務。</span><span class="sxs-lookup"><span data-stu-id="0caed-113">These tracking components are equivalent to the tracking service in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].</span></span> <span data-ttu-id="0caed-114">在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中已改善效能，且已為 WF 追蹤功能簡化程式設計的模型。</span><span class="sxs-lookup"><span data-stu-id="0caed-114">In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], the performance has been improved and the programming model simplified for the WF tracking feature.</span></span> <span data-ttu-id="0caed-115">追蹤執行階段會檢測工作流程執行個體，以發出與工作流程生命週期相關的事件、工作流程活動和自訂事件。</span><span class="sxs-lookup"><span data-stu-id="0caed-115">The tracking runtime instruments a workflow instance to emit events related to the workflow life cycle, workflow activities and custom events.</span></span>  
   
- Windows 伺服器應用程式結構還提供了監視的 WCF 和工作流程服務執行的功能。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric 監控概念](http://go.microsoft.com/fwlink/?LinkId=201273) 和[以 Windows Server AppFabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201287)  
+ <span data-ttu-id="0caed-116">Windows Server App Fabric 還提供可監視 WCF 和工作流程服務執行的功能。</span><span class="sxs-lookup"><span data-stu-id="0caed-116">Windows Server App Fabric also provides the ability to monitor the execution of a WCF and workflow services.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="0caed-117">[Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)和[監視使用 Windows Server AppFabric 應用程式](http://go.microsoft.com/fwlink/?LinkId=201287)</span><span class="sxs-lookup"><span data-stu-id="0caed-117"> [Windows Server App Fabric Monitoring](http://go.microsoft.com/fwlink/?LinkId=201273) and [Monitoring Applications with Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201287)</span></span>  
   
- 若要針對工作流程執行階段進行疑難排解，您可開啟診斷工作流程追蹤。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][工作流程追蹤](../../../docs/framework/windows-workflow-foundation//workflow-tracing.md).  
+ <span data-ttu-id="0caed-118">若要針對工作流程執行階段進行疑難排解，您可開啟診斷工作流程追蹤。</span><span class="sxs-lookup"><span data-stu-id="0caed-118">To troubleshoot the workflow runtime, you can turn on diagnostic workflow tracing.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="0caed-119">[工作流程追蹤](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)。</span><span class="sxs-lookup"><span data-stu-id="0caed-119"> [Workflow Tracing](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md).</span></span>  
   
- 若要了解程式設計的模型，本主題已針對追蹤基礎結構的主要元件進行討論：  
+ <span data-ttu-id="0caed-120">若要了解程式設計的模型，本主題已針對追蹤基礎結構的主要元件進行討論：</span><span class="sxs-lookup"><span data-stu-id="0caed-120">To understand the programming model, the primary components of the tracking infrastructure are discussed in this topic:</span></span>  
   
--   從工作流程執行階段發出的 <xref:System.Activities.Tracking.TrackingRecord> 物件。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][追蹤記錄](../../../docs/framework/windows-workflow-foundation//tracking-records.md).  
+-   <span data-ttu-id="0caed-121">從工作流程執行階段發出的 <xref:System.Activities.Tracking.TrackingRecord> 物件。</span><span class="sxs-lookup"><span data-stu-id="0caed-121"><xref:System.Activities.Tracking.TrackingRecord> objects emitted from the workflow runtime.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="0caed-122">[追蹤記錄](../../../docs/framework/windows-workflow-foundation/tracking-records.md)。</span><span class="sxs-lookup"><span data-stu-id="0caed-122"> [Tracking Records](../../../docs/framework/windows-workflow-foundation/tracking-records.md).</span></span>  
   
--   訂閱 <xref:System.Activities.Tracking.TrackingRecord> 物件的 <xref:System.Activities.Tracking.TrackingParticipant> 物件。追蹤參與者包含處理來自 <xref:System.Activities.Tracking.TrackingRecord> 物件之裝載的邏輯 \(例如，他們可以選擇寫入檔案\)。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][追蹤參與者](../../../docs/framework/windows-workflow-foundation//tracking-participants.md).  
+-   <span data-ttu-id="0caed-123">訂閱 <xref:System.Activities.Tracking.TrackingParticipant> 物件的 <xref:System.Activities.Tracking.TrackingRecord> 物件。</span><span class="sxs-lookup"><span data-stu-id="0caed-123"><xref:System.Activities.Tracking.TrackingParticipant> objects subscribe to <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="0caed-124">追蹤參與者包含處理來自 <xref:System.Activities.Tracking.TrackingRecord> 物件之裝載的邏輯 (例如，他們可以選擇寫入檔案)。</span><span class="sxs-lookup"><span data-stu-id="0caed-124">The tracking participants contain the logic to process the payload from the <xref:System.Activities.Tracking.TrackingRecord> objects (for example, they could choose to write to a file).</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="0caed-125">[追蹤參與者](../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。</span><span class="sxs-lookup"><span data-stu-id="0caed-125"> [Tracking Participants](../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span></span>  
   
--   從工作流程執行個體發出的 <xref:System.Activities.Tracking.TrackingProfile> 物件篩選追蹤記錄。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][追蹤設定檔](../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+-   <span data-ttu-id="0caed-126">從工作流程執行個體發出的 <xref:System.Activities.Tracking.TrackingProfile> 物件篩選追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="0caed-126"><xref:System.Activities.Tracking.TrackingProfile> objects filter tracking records emitted from a workflow instance.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="0caed-127">[追蹤設定檔](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。</span><span class="sxs-lookup"><span data-stu-id="0caed-127"> [Tracking Profiles](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-## 工作流程追蹤基礎結構  
- 工作流程追蹤基礎結構會依照發行與訂閱的範例。工作流程執行個體是追蹤記錄的發行者，而追蹤記錄的訂閱者則是註冊為工作流程的延伸。訂閱 <xref:System.Activities.Tracking.TrackingRecord> 物件的這些延伸稱為追蹤參與者。追蹤參與者是可延伸點，可存取 <xref:System.Activities.Tracking.TrackingRecord> 物件，並以編寫它們的任何方式進行處理。追蹤基礎結構可讓應用程式篩選外送的追蹤記錄，讓參與者訂閱記錄的子集。這個篩選機制是透過追蹤設定檔來完成。  
+## <a name="workflow-tracking-infrastructure"></a><span data-ttu-id="0caed-128">工作流程追蹤基礎結構</span><span class="sxs-lookup"><span data-stu-id="0caed-128">Workflow Tracking Infrastructure</span></span>  
+ <span data-ttu-id="0caed-129">工作流程追蹤基礎結構會依照發行與訂閱的範例。</span><span class="sxs-lookup"><span data-stu-id="0caed-129">The workflow tracking infrastructure follows a publish-and-subscribe paradigm.</span></span> <span data-ttu-id="0caed-130">工作流程執行個體是追蹤記錄的發行者，而追蹤記錄的訂閱者則是註冊為工作流程的延伸。</span><span class="sxs-lookup"><span data-stu-id="0caed-130">The workflow instance is the publisher of tracking records, while subscribers of the tracking records are registered as extensions to the workflow.</span></span> <span data-ttu-id="0caed-131">訂閱 <xref:System.Activities.Tracking.TrackingRecord> 物件的這些延伸稱為追蹤參與者。</span><span class="sxs-lookup"><span data-stu-id="0caed-131">These extensions that subscribe to <xref:System.Activities.Tracking.TrackingRecord> objects are called tracking participants.</span></span> <span data-ttu-id="0caed-132">追蹤參與者是可延伸點，可存取 <xref:System.Activities.Tracking.TrackingRecord> 物件，並以編寫它們的任何方式進行處理。</span><span class="sxs-lookup"><span data-stu-id="0caed-132">Tracking participants are extensibility points that access <xref:System.Activities.Tracking.TrackingRecord> objects and process them in whatever manner they are written to do so.</span></span> <span data-ttu-id="0caed-133">追蹤基礎結構可讓應用程式篩選外送的追蹤記錄，讓參與者訂閱記錄的子集。</span><span class="sxs-lookup"><span data-stu-id="0caed-133">The tracking infrastructure allows the application of a filter on the outgoing tracking records to allow a participant to subscribe to a subset of the records.</span></span> <span data-ttu-id="0caed-134">這個篩選機制是透過追蹤設定檔來完成。</span><span class="sxs-lookup"><span data-stu-id="0caed-134">This filtering mechanism is accomplished through a tracking profile file.</span></span>  
   
- 下圖顯示追蹤基礎結構的高層級檢視。  
+ <span data-ttu-id="0caed-135">下圖顯示追蹤基礎結構的高層級檢視。</span><span class="sxs-lookup"><span data-stu-id="0caed-135">A high level view of the tracking infrastructure is shown in the following illustration.</span></span>  
   
- ![工作流程追蹤基礎結構](../../../docs/framework/windows-workflow-foundation//media/wv.gif "WV")  
+ <span data-ttu-id="0caed-136">![工作流程追蹤基礎結構](../../../docs/framework/windows-workflow-foundation/media/wv.gif "WV")</span><span class="sxs-lookup"><span data-stu-id="0caed-136">![Workflow Tracking Infrastructure](../../../docs/framework/windows-workflow-foundation/media/wv.gif "WV")</span></span>  
   
-## 本章節內容  
- [追蹤記錄](../../../docs/framework/windows-workflow-foundation//tracking-records.md)  
- 描述工作流程執行階段發出的追蹤記錄。  
+## <a name="in-this-section"></a><span data-ttu-id="0caed-137">本章節內容</span><span class="sxs-lookup"><span data-stu-id="0caed-137">In This Section</span></span>  
+ [<span data-ttu-id="0caed-138">追蹤記錄</span><span class="sxs-lookup"><span data-stu-id="0caed-138">Tracking Records</span></span>](../../../docs/framework/windows-workflow-foundation/tracking-records.md)  
+ <span data-ttu-id="0caed-139">描述工作流程執行階段發出的追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="0caed-139">Describes the tracking records that the workflow runtime emits.</span></span>  
   
- [追蹤設定檔](../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)  
- 討論如何使用追蹤設定檔。  
+ [<span data-ttu-id="0caed-140">追蹤設定檔</span><span class="sxs-lookup"><span data-stu-id="0caed-140">Tracking Profiles</span></span>](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ <span data-ttu-id="0caed-141">討論如何使用追蹤設定檔。</span><span class="sxs-lookup"><span data-stu-id="0caed-141">Discusses how tracking profiles are used.</span></span>  
   
- [追蹤參與者](../../../docs/framework/windows-workflow-foundation//tracking-participants.md)  
- 描述如何使用系統提供的追蹤參與者，或如何建立自訂追蹤參與者。  
+ [<span data-ttu-id="0caed-142">追蹤參與者</span><span class="sxs-lookup"><span data-stu-id="0caed-142">Tracking Participants</span></span>](../../../docs/framework/windows-workflow-foundation/tracking-participants.md)  
+ <span data-ttu-id="0caed-143">描述如何使用系統提供的追蹤參與者，或如何建立自訂追蹤參與者。</span><span class="sxs-lookup"><span data-stu-id="0caed-143">Describes how to use system-provided tracking participant or how to create custom tracking participants.</span></span>  
   
- [設定工作流程的追蹤](../../../docs/framework/windows-workflow-foundation//configuring-tracking-for-a-workflow.md)  
- 描述如何配置工作流程的追蹤。  
+ [<span data-ttu-id="0caed-144">設定工作流程的追蹤</span><span class="sxs-lookup"><span data-stu-id="0caed-144">Configuring Tracking for a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)  
+ <span data-ttu-id="0caed-145">描述如何配置工作流程的追蹤。</span><span class="sxs-lookup"><span data-stu-id="0caed-145">Describes how to configure tracking for a workflow.</span></span>  
   
- [工作流程追蹤](../../../docs/framework/windows-workflow-foundation//workflow-tracing.md)  
- 描述兩種啟用工作流程偵錯追蹤的方式。  
+ [<span data-ttu-id="0caed-146">工作流程追蹤</span><span class="sxs-lookup"><span data-stu-id="0caed-146">Workflow Tracing</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
+ <span data-ttu-id="0caed-147">描述兩種啟用工作流程偵錯追蹤的方式。</span><span class="sxs-lookup"><span data-stu-id="0caed-147">Describes the two ways to enable debug tracing for a workflow.</span></span>  
   
- [使用流程追蹤判斷工作流程的執行](../../../docs/framework/windows-workflow-foundation//determining-workflow-execution-duration-using-tracing.md)  
- 描述如何使用追蹤訊息判斷工作流程執行持續期間。  
+ [<span data-ttu-id="0caed-148">使用追蹤判斷工作流程的執行期間</span><span class="sxs-lookup"><span data-stu-id="0caed-148">Determining Workflow Execution Duration Using Tracing</span></span>](../../../docs/framework/windows-workflow-foundation/determining-workflow-execution-duration-using-tracing.md)  
+ <span data-ttu-id="0caed-149">說明如何使用追蹤訊息，以判斷工作流程執行持續期間。</span><span class="sxs-lookup"><span data-stu-id="0caed-149">Describes how to use tracing messages to determine workflow execution duration.</span></span>  
   
-## 請參閱  
- [SQL 追蹤](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+## <a name="see-also"></a><span data-ttu-id="0caed-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0caed-150">See Also</span></span>  
+ [<span data-ttu-id="0caed-151">SQL 追蹤</span><span class="sxs-lookup"><span data-stu-id="0caed-151">SQL Tracking</span></span>](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)

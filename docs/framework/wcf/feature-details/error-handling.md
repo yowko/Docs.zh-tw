@@ -1,78 +1,81 @@
 ---
-title: "Error handling | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "錯誤處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 308712ed4c8f44740622c57525f152152f7d6c73
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Error handling
-## Windows Communication Foundation 的錯誤處理  
- 當服務發生未預期的例外狀況或錯誤時，有幾種方式可設計例外狀況處理方案。  沒有單一「正確」或「最佳做法」的錯誤處理方案時，可以考慮多重有效路徑。  通常建議實作混合方案，從下列清單合併多個方法，依據 WCF 實作的複雜性、例外狀況的類別和頻率、例外狀況的已處理 vs.  未處理性質，以及任何相關聯的追蹤、記錄或原則要求。  
+# <a name="error-handling"></a><span data-ttu-id="6341f-102">錯誤處理</span><span class="sxs-lookup"><span data-stu-id="6341f-102">Error handling</span></span>
+## <a name="error-handling-in-windows-communication-foundation"></a><span data-ttu-id="6341f-103">Windows Communication Foundation 的錯誤處理</span><span class="sxs-lookup"><span data-stu-id="6341f-103">Error Handling in Windows Communication Foundation</span></span>  
+ <span data-ttu-id="6341f-104">當服務發生未預期的例外狀況或錯誤時，有幾種方式可設計例外狀況處理方案。</span><span class="sxs-lookup"><span data-stu-id="6341f-104">When a service encounters an unexpected exception or error, there are multiple ways to design an exception-handling solution.</span></span> <span data-ttu-id="6341f-105">雖然沒有單一 「 正確 」 或 「 最佳做法 」 的錯誤處理方案，可以考慮多重有效路徑。</span><span class="sxs-lookup"><span data-stu-id="6341f-105">While there is no single "correct" or "best practice" error-handling solution, there are multiple valid paths for one to consider.</span></span> <span data-ttu-id="6341f-106">通常建議實作混合式解決方案，結合多個方法，從清單下，根據 WCF 實作的型別和例外狀況，處理的頻率的複雜度與未處理性質例外狀況，以及任何相關聯的追蹤、 記錄或原則需求。</span><span class="sxs-lookup"><span data-stu-id="6341f-106">It is normally recommended that one implement a hybrid solution that combines multiple approaches from the list below, depending on the complexity of the WCF implementation, the type and frequency of the exceptions, the handled vs. unhandled nature of the exceptions, and any associated tracing, logging, or policy requirements.</span></span>  
   
- 這些方案在本節的其他部分會做更深入的說明。  
+ <span data-ttu-id="6341f-107">這些方案在本節的其他部分會做更深入的說明。</span><span class="sxs-lookup"><span data-stu-id="6341f-107">These solutions are explained more deeply in the rest of this section.</span></span>  
   
-### Microsoft 企業程式庫  
- Microsoft 企業程式庫例外狀況處理應用程式區塊協助實作常見的設計模式，並建立一致策略以處理企業應用程式的所有架構圖層中發生的例外狀況。  其設計目的為支援包含在應用程式元件之 catch 陳述式的典型程式碼。  並非在同一應用程式的相同 catch 區塊重複此程式碼 \(例如記錄例外狀況資訊的程式碼\)，例外狀況處理應用程式區塊可讓開發人員封裝這個邏輯，做為可重複使用的例外狀況處理常式。  
+### <a name="the-microsoft-enterprise-library"></a><span data-ttu-id="6341f-108">Microsoft 企業程式庫</span><span class="sxs-lookup"><span data-stu-id="6341f-108">The Microsoft Enterprise Library</span></span>  
+ <span data-ttu-id="6341f-109">Microsoft 企業程式庫例外狀況處理應用程式區塊協助實作常見的設計模式，並建立一致策略以處理企業應用程式的所有架構圖層中發生的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-109">The Microsoft Enterprise Library Exception Handling Application Block helps implement common design patterns and create a consistent strategy for processing exceptions that occur in all architectural layers of an enterprise application.</span></span> <span data-ttu-id="6341f-110">其設計目的為支援包含在應用程式元件之 catch 陳述式的典型程式碼。</span><span class="sxs-lookup"><span data-stu-id="6341f-110">It is designed to support the typical code contained in catch statements in application components.</span></span> <span data-ttu-id="6341f-111">並非在同一應用程式的相同 catch 區塊重複此程式碼 (例如記錄例外狀況資訊的程式碼)，例外狀況處理應用程式區塊可讓開發人員封裝這個邏輯，做為可重複使用的例外狀況處理常式。</span><span class="sxs-lookup"><span data-stu-id="6341f-111">Instead of repeating this code (such as code that logs exception information) in identical catch blocks throughout an application, the Exception Handling Application Block allows developers to encapsulate this logic as reusable exception handlers.</span></span>  
   
- 這個程式庫包含隨附的錯誤合約例外狀況處理常式。  這個例外狀況處理常式設計使用於 Windows® Communication Foundation \(WCF\) 服務界限，並產生例外狀況的新錯誤合約。  
+ <span data-ttu-id="6341f-112">這個程式庫包含隨附的錯誤合約例外狀況處理常式。</span><span class="sxs-lookup"><span data-stu-id="6341f-112">This Library includes out-of-the-box a Fault Contract Exception Handler.</span></span> <span data-ttu-id="6341f-113">這個例外狀況處理常式設計使用於 Windows® Communication Foundation (WCF) 服務界限，並產生例外狀況的新錯誤合約。</span><span class="sxs-lookup"><span data-stu-id="6341f-113">This exception handler is designed for use at Windows® Communication Foundation (WCF) service boundaries, and generates a new Fault Contract from the exception.</span></span>  
   
- 應用程式區塊的目標是納入常用的最佳做法，並在您的應用程式中提供處理例外狀況的常見方法。  另一方面，自訂錯誤處理常式和自行開發錯誤合約也非常有用。  例如，自訂錯誤處理常式提供一個好機會，可自動升級所有 FaultExceptions 的例外狀況，同時將記錄功能加入至您的應用程式。  
+ <span data-ttu-id="6341f-114">應用程式區塊的目標是納入常用的最佳做法，並在您的應用程式中提供處理例外狀況的常見方法。</span><span class="sxs-lookup"><span data-stu-id="6341f-114">Application blocks aim to incorporate commonly used best practices and provide a common approach for exception handling throughout your application.</span></span> <span data-ttu-id="6341f-115">另一方面，自訂錯誤處理常式和自行開發錯誤合約也非常有用。</span><span class="sxs-lookup"><span data-stu-id="6341f-115">On the other hand, custom error handlers and fault contracts developed on one’s own can also be very useful.</span></span> <span data-ttu-id="6341f-116">例如，自訂錯誤處理常式提供一個好機會，可自動升級所有 FaultExceptions 的例外，將記錄功能加入至您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="6341f-116">For instance, custom error handlers provide an excellent opportunity to automatically promote all exceptions to FaultExceptions and also to add logging capabilities to your application.</span></span>  
   
- 如需詳細資訊，請參閱 [Microsoft 企業程式庫](http://msdn.microsoft.com/library/ff632023.aspx)。  
+ <span data-ttu-id="6341f-117">如需詳細資訊，請參閱[Microsoft Enterprise Library](http://msdn.microsoft.com/library/ff632023.aspx)。</span><span class="sxs-lookup"><span data-stu-id="6341f-117">For more information, please see [Microsoft Enterprise Library](http://msdn.microsoft.com/library/ff632023.aspx).</span></span>  
   
-### 處理預期的例外狀況。  
- 適當的動作程序是找到每個作業或相關擴充點的例外狀況，決定是否可以復原，並傳回 FaultException\<T\> 中適當的自訂錯誤。  
+### <a name="dealing-with-expected-exceptions"></a><span data-ttu-id="6341f-118">處理預期的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-118">Dealing with Expected Exceptions</span></span>  
+ <span data-ttu-id="6341f-119">採取適當的動作會攔截預期的例外狀況，每個作業或相關擴充點，決定是否它們，可以復原，並傳回適當的自訂錯誤 FaultException\<T ></span><span class="sxs-lookup"><span data-stu-id="6341f-119">The proper course of action is to catch expected exceptions in every operation or relevant extensibility point, decide whether they can be recovered from, and return the proper custom fault in a FaultException\<T></span></span>  
   
-### 使用 IErrorHandler 處理未預期的例外狀況。  
- 若要處理未預期的例外狀況，建議的動作程序是「攔截」IErrorHandler。  錯誤處理常式只會在 WCF 執行階段層級 \(「服務模型」層\) 攔截例外狀況，而非通道層。  在通道層級攔截 IErrorHandler 的唯一方式是建立自訂通道，在大部分的情況下不建議使用。  
+### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a><span data-ttu-id="6341f-120">使用 IErrorHandler 處理未預期的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-120">Dealing with Unexpected Exceptions using an IErrorHandler</span></span>  
+ <span data-ttu-id="6341f-121">若要處理的非預期的例外狀況，建議的採取就是動作的 「 攔截 」 IErrorHandler。</span><span class="sxs-lookup"><span data-stu-id="6341f-121">To deal with unexpected exceptions, the recommended course of action is to "hook" an IErrorHandler.</span></span> <span data-ttu-id="6341f-122">在 WCF 執行階段層級 （「 服務模型 」 層），而不是通道層的錯誤處理常式只會攔截例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-122">Error handlers only catch exceptions at the WCF runtime level (the "service model" layer), not at the channel layer.</span></span> <span data-ttu-id="6341f-123">在通道層級攔截 IErrorHandler 的唯一方式是建立自訂通道，在大部分的情況下不建議使用。</span><span class="sxs-lookup"><span data-stu-id="6341f-123">The only way to hook an IErrorHandler at the channel level is to create a custom channel, which is not recommended in most scenarios.</span></span>  
   
- 「未預期的例外狀況」通常既不是無法復原的例外狀況，也不是處理中的例外狀況，而是未預期的使用者例外狀況。  無法復原的例外狀況 \(例如記憶體不足例外狀況\) – 通常由[服務模型例外狀況處理常式](http://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx)自動處理 – 通常無法正常處理，要處理這類例外狀況的唯一理由，可能是要做其他記錄或傳回標準例外狀況至用戶端。  處理中的例外狀況發生於訊息的處理過程中 \- 例如序列化、編碼器或格式器層級 \- 通常無法在 IErrorHandler 處理，因為對錯誤處理常式而言，這些例外狀況發生的時間通常太早或太晚，使其無法介入。  同樣地，也無法在 IErrorHandler 處理傳輸例外狀況。  
+ <span data-ttu-id="6341f-124">「 非預期例外狀況 」 通常是處理的例外狀況，都無法復原的例外狀況是，相反地，未預期的使用者例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-124">An "unexpected exception" is generally neither an irrecoverable exception nor a processing exception; it is, instead, an unexpected user exception.</span></span> <span data-ttu-id="6341f-125">無法修復的例外狀況 （例如記憶體不足例外狀況） – 其中一個通常由[服務模型例外狀況處理常式](http://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx)自動 – 無法通常可正常地處理，並處理這類例外狀況的唯一理由可能是完全做其他記錄或傳回給用戶端的標準例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-125">An irrecoverable exception (such as an out-of-memory exception) – one generally handled by the [Service Model Exception Handler](http://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) automatically – cannot generally be handled gracefully, and the only reason to handle such an exception at all may be do additional logging or to return a standard exception to the client.</span></span> <span data-ttu-id="6341f-126">處理中的例外狀況發生於訊息的處理過程中 - 例如序列化、編碼器或格式器層級 - 通常無法在 IErrorHandler 處理，因為對錯誤處理常式而言，這些例外狀況發生的時間通常太早或太晚，使其無法介入。</span><span class="sxs-lookup"><span data-stu-id="6341f-126">A processing exception occurs in the processing of the message – for example, at the serialization, encoder, or formatter level – generally cannot be handled at an IErrorHandler, because it is generally either too early or too late for the error handler to intervene by the time these exceptions occur.</span></span> <span data-ttu-id="6341f-127">同樣地，也無法在 IErrorHandler 處理傳輸例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-127">Similarly, transport exceptions cannot be handled at an IErrorHandler.</span></span>  
   
- 當例外狀況擲回時，您可使用 IErrorHandler 明確控制應用程式的行為。  您可以：  
+ <span data-ttu-id="6341f-128">當例外狀況擲回時，您可使用 IErrorHandler 明確控制應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="6341f-128">With an IErrorHandler, you can explicitly control the behavior of your application when an exception is thrown.</span></span> <span data-ttu-id="6341f-129">您可以：</span><span class="sxs-lookup"><span data-stu-id="6341f-129">You may:</span></span>  
   
-1.  決定是否要傳送錯誤給用戶端。  
+1.  <span data-ttu-id="6341f-130">決定是否要傳送錯誤給用戶端。</span><span class="sxs-lookup"><span data-stu-id="6341f-130">Decide whether or not to send a fault to the client</span></span>  
   
-2.  以錯誤取代例外狀況。  
+2.  <span data-ttu-id="6341f-131">以錯誤取代例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-131">Replace an exception with a fault</span></span>  
   
-3.  以另一個錯誤取代錯誤  
+3.  <span data-ttu-id="6341f-132">以另一個錯誤取代錯誤</span><span class="sxs-lookup"><span data-stu-id="6341f-132">Replace a fault with another fault</span></span>  
   
-4.  執行記錄或追蹤  
+4.  <span data-ttu-id="6341f-133">執行記錄或追蹤</span><span class="sxs-lookup"><span data-stu-id="6341f-133">Perform logging or tracing</span></span>  
   
-5.  執行其他自訂活動  
+5.  <span data-ttu-id="6341f-134">執行其他自訂活動</span><span class="sxs-lookup"><span data-stu-id="6341f-134">Perform other custom activities</span></span>  
   
- 針對您的服務將錯誤處理常式加入通道發送器的 ErrorHandlers 屬性，即可安裝自訂錯誤處理常式。  錯誤處理常式可能不只一個，會依照它們加入集合的順序呼叫它們。  
+ <span data-ttu-id="6341f-135">針對您的服務將錯誤處理常式加入通道發送器的 ErrorHandlers 屬性，即可安裝自訂錯誤處理常式。</span><span class="sxs-lookup"><span data-stu-id="6341f-135">One can install a custom error handler by adding it to the ErrorHandlers property of the channel dispatchers for your service.</span></span>  <span data-ttu-id="6341f-136">錯誤處理常式可能不只一個，會依照它們加入集合的順序呼叫它們。</span><span class="sxs-lookup"><span data-stu-id="6341f-136">It is possible to have more than one error handler and they are called in the order they are added to this collection.</span></span>  
   
- IErrorHandler.ProvideFault 可控制傳送至用戶端的錯誤訊息。  不論服務中的作業擲回何種例外狀況類型，都會呼叫這個方法。  如果此處沒有執行任何作業，WCF 會採用其預設行為並繼續進行，如同自訂錯誤處理常式並不存在一樣。  
+ <span data-ttu-id="6341f-137">IErrorHandler.ProvideFault 可控制傳送至用戶端的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="6341f-137">IErrorHandler.ProvideFault controls the fault message that is sent to the client.</span></span> <span data-ttu-id="6341f-138">不論服務中的作業擲回何種例外狀況類型，都會呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="6341f-138">This method is called regardless of the type of the exception thrown by an operation in your service.</span></span> <span data-ttu-id="6341f-139">如果此處沒有執行任何作業，WCF 會採用其預設行為並繼續進行，如同自訂錯誤處理常式並不存在一樣。</span><span class="sxs-lookup"><span data-stu-id="6341f-139">If no operation is performed here, WCF assumes its default behaviour and continues as if there were no custom error handlers in place.</span></span>  
   
- 您可能使用此方法的情況如下，當您想在例外狀況傳送給用戶端前，建立一個集中位置以將例外狀況轉換為錯誤時 \(確保不會處理執行個體，且不會將通道移至錯誤狀態\)。  
+ <span data-ttu-id="6341f-140">您可能使用此方法的情況如下，當您想在例外狀況傳送給用戶端前，建立一個集中位置以將例外狀況轉換為錯誤時 (確保不會處理執行個體，且不會將通道移至錯誤狀態)。</span><span class="sxs-lookup"><span data-stu-id="6341f-140">One area that you could perhaps use this approach is when you want to create a central place for converting exceptions to faults before they are sent to the client (ensuring that the instance is not disposed and the channel is not moved to the Faulted state).</span></span>  
   
- IErrorHandler.HandleError 方法通常用來實作與錯誤相關的行為，例如錯誤記錄，系統通知及關閉應用程式等。  可在服務內的多個地方呼叫 IErrorHandler.HandleError，根據錯誤擲回的地方，充當作業的同一個執行緒不一定會呼叫 HandleError 方法，這一點無法保證。  
+ <span data-ttu-id="6341f-141">IErrorHandler.HandleError 方法通常用來實作與錯誤相關的行為，例如錯誤記錄，系統通知及關閉應用程式等。可在服務內的多個地方呼叫 IErrorHandler.HandleError，根據錯誤擲回的地方，充當作業的同一個執行緒不一定會呼叫 HandleError 方法，這一點無法保證。</span><span class="sxs-lookup"><span data-stu-id="6341f-141">The IErrorHandler.HandleError method is usually used to implement error-related behaviors such as error logging, system notifications, shutting down the application, etc. IErrorHandler.HandleError can be called at multiple places inside the service, and depending on where the error is thrown, the HandleError method may or may not be called by the same thread as the operation; no guarantees are made in this regard.</span></span>  
   
-### 處理 WCF 外的例外狀況。  
- 通常，組態例外狀況、資料庫連接字串例外狀況以及其他類似的例外狀況，都可能發生在 WCF 應用程式的內容中，但其本身並不是由服務模型或 Web 服務自己所造成的例外狀況。  這些例外狀況是 Web 服務的外部「一般」例外狀況，處理方式應該比照環境中其他外部例外狀況的處理方式。  
+### <a name="dealing-with-exceptions-outside-wcf"></a><span data-ttu-id="6341f-142">處理 WCF 外的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-142">Dealing with Exceptions outside WCF</span></span>  
+ <span data-ttu-id="6341f-143">通常，組態例外狀況、資料庫連接字串例外狀況以及其他類似的例外狀況，都可能發生在 WCF 應用程式的內容中，但其本身並不是由服務模型或 Web 服務自己所造成的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-143">Often, configuration exceptions, database connection string exceptions, and other similar exceptions may occur within the context of a WCF application, but are themselves are not exceptions caused by the service model or the web service itself.</span></span> <span data-ttu-id="6341f-144">這些例外狀況的 web 服務的外部 「 一般 」 例外狀況，並應該比照環境中的其他外部例外狀況的處理。</span><span class="sxs-lookup"><span data-stu-id="6341f-144">These exceptions are "regular" exceptions external to the web service, and should be handled just as other external exceptions in the environment are to be handled.</span></span>  
   
-### 追蹤例外狀況  
- 追蹤是唯一的 "catch\-all" 位置，在此可能會看到所有例外狀況。  如需追蹤和記錄例外狀況的詳細資訊，請參閱追蹤和記錄。  
+### <a name="tracing-exceptions"></a><span data-ttu-id="6341f-145">追蹤例外狀況</span><span class="sxs-lookup"><span data-stu-id="6341f-145">Tracing exceptions</span></span>  
+ <span data-ttu-id="6341f-146">追蹤是其中一個可能會看到所有例外狀況的只有 「 包羅萬象 」 位置。</span><span class="sxs-lookup"><span data-stu-id="6341f-146">Tracing is the only "catch-all" place where one can potentially see all exceptions.</span></span> <span data-ttu-id="6341f-147">如需追蹤和記錄例外狀況的詳細資訊，請參閱追蹤和記錄。</span><span class="sxs-lookup"><span data-stu-id="6341f-147">For more information on tracing and logging exceptions, see Tracing and Logging.</span></span>  
   
-### 使用 WebGetAttribute 和 WebInvokeAttribute 時，URI 範本發生錯誤。  
- WebGet 和 WebInvoke 屬性允許您指定 URI 範本，此範本可將要求位址的元件對應至作業參數。  例如，URI 範本 "weather\/{state}\/{city}" 將要求位址對應到常值語彙基元、參數具名國家\/地區和參數具名城市。  接著這些參數可能依名稱繫結至一些作業的型式參數。  
+### <a name="uri-template-errors-when-using-webgetattribute-and-webinvokeattribute"></a><span data-ttu-id="6341f-148">使用 WebGetAttribute 和 WebInvokeAttribute 時，URI 範本發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="6341f-148">URI template errors when using WebGetAttribute and WebInvokeAttribute</span></span>  
+ <span data-ttu-id="6341f-149">WebGet 和 WebInvoke 屬性允許您指定 URI 範本，此範本可將要求位址的元件對應至作業參數。</span><span class="sxs-lookup"><span data-stu-id="6341f-149">The WebGet and WebInvoke attributes allow you to specify a URI template that maps components of the request address to operation parameters.</span></span> <span data-ttu-id="6341f-150">例如，URI 範本 "weather/{state}/{city}" 將要求位址對應到常值語彙基元、參數具名國家/地區和參數具名城市。</span><span class="sxs-lookup"><span data-stu-id="6341f-150">For example, the URI template "weather/{state}/{city}" maps the request address into literal tokens, a parameter named state, and a parameter named city.</span></span> <span data-ttu-id="6341f-151">接著這些參數可能依名稱繫結至一些作業的型式參數。</span><span class="sxs-lookup"><span data-stu-id="6341f-151">These parameters might then be bound by name to some of the formal parameters of the operation.</span></span>  
   
- 當類型合約的型式參數可能為非字串類型時，範本參數在 URI 中會以字串形式出現。  因此需要在作業可叫用之前進行轉換。  [轉換格式資料表](http://msdn.microsoft.com/library/bb412172.aspx)可供使用。  
+ <span data-ttu-id="6341f-152">當類型合約的型式參數可能為非字串類型時，範本參數在 URI 中會以字串形式出現。</span><span class="sxs-lookup"><span data-stu-id="6341f-152">The template parameters appear in the form of strings within the URI while the formal parameters of a typed contract might be of non-string types.</span></span> <span data-ttu-id="6341f-153">因此需要在作業可叫用之前進行轉換。</span><span class="sxs-lookup"><span data-stu-id="6341f-153">Therefore, a conversion needs to take place before the operation can be invoked.</span></span> <span data-ttu-id="6341f-154">A[轉換格式資料表](http://msdn.microsoft.com/library/bb412172.aspx)可用。</span><span class="sxs-lookup"><span data-stu-id="6341f-154">A [table of conversion formats](http://msdn.microsoft.com/library/bb412172.aspx) is available.</span></span>  
   
- 不過，如果轉換失敗，則無法讓作業知道錯誤已發生。  類型轉換改以分派失敗的形式呈現。  
+ <span data-ttu-id="6341f-155">不過，如果轉換失敗，則無法讓作業知道錯誤已發生。</span><span class="sxs-lookup"><span data-stu-id="6341f-155">However, if the conversion fails, then there's no way to let the operation know that something has gone wrong.</span></span> <span data-ttu-id="6341f-156">類型轉換改以分派失敗的形式呈現。</span><span class="sxs-lookup"><span data-stu-id="6341f-156">The type conversion instead surfaces in the form of a dispatch failure.</span></span>  
   
- 如同許多其他類型的分派失敗一般，透過安裝錯誤處理常式也可以檢查類型轉換分派失敗。  呼叫 IErrorHandler 擴充點，以處理服務層級例外狀況。  從此處，也可以選擇要送回呼叫端的回應 \- 同時也執行任何自訂的工作和報告。  
+ <span data-ttu-id="6341f-157">如同許多其他類型的分派失敗一般，透過安裝錯誤處理常式也可以檢查類型轉換分派失敗。</span><span class="sxs-lookup"><span data-stu-id="6341f-157">A type conversion dispatch failure can be inspected the same as with many other types of dispatch failures by installing an error handler.</span></span> <span data-ttu-id="6341f-158">呼叫 IErrorHandler 擴充點，以處理服務層級例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6341f-158">The IErrorHandler extensibility point is called to handle service-level exceptions.</span></span> <span data-ttu-id="6341f-159">從此處，也可以選擇要送回呼叫端的回應 - 同時也執行任何自訂的工作和報告。</span><span class="sxs-lookup"><span data-stu-id="6341f-159">From there, the response to be sent back to the caller – as well as perform any custom tasks and reporting – may be chosen.</span></span>  
   
-## 請參閱  
- [基本 WCF 錯誤處理](http://msdn.microsoft.com/library/gg281715.aspx)
+## <a name="see-also"></a><span data-ttu-id="6341f-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6341f-160">See Also</span></span>  
+ [<span data-ttu-id="6341f-161">基本 WCF 錯誤處理</span><span class="sxs-lookup"><span data-stu-id="6341f-161">Basic WCF Error Handling</span></span>](http://msdn.microsoft.com/library/gg281715.aspx)

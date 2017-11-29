@@ -1,51 +1,55 @@
 ---
-title: "如何：避免自動縮放以提高效能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自動縮放比例"
-  - "影像 [Windows Form], 改善效能"
-  - "影像 [Windows Form], 在沒有自動縮放比例下使用"
-  - "效能, 改善影像"
+title: "如何：避免自動縮放以提高效能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- automatic scaling
+- images [Windows Forms], improving performance
+- images [Windows Forms], using without automatic scaling
+- performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：避免自動縮放以提高效能
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可在您繪製影像時自動地縮放，這個動作會降低電腦效能。  此外，您可以將目的端矩形的維度傳遞至 <xref:System.Drawing.Graphics.DrawImage%2A> 方法以控制影像的縮放。  
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a><span data-ttu-id="20d66-102">如何：避免自動縮放以提高效能</span><span class="sxs-lookup"><span data-stu-id="20d66-102">How to: Improve Performance by Avoiding Automatic Scaling</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="20d66-103">可能會自動隨著映像您繪製，反而會降低效能。</span><span class="sxs-lookup"><span data-stu-id="20d66-103"> may automatically scale an image as you draw it, which would decrease performance.</span></span> <span data-ttu-id="20d66-104">或者，您可以控制傳遞到目的地矩形的維度影像的縮放<xref:System.Drawing.Graphics.DrawImage%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="20d66-104">Alternatively, you can control the scaling of the image by passing the dimensions of the destination rectangle to the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  
   
- 下列 <xref:System.Drawing.Graphics.DrawImage%2A> 方法呼叫會指定左上角位於 \(50, 30\)，但是不會指定目的端矩形：  
+ <span data-ttu-id="20d66-105">例如，下列呼叫<xref:System.Drawing.Graphics.DrawImage%2A>方法指定的左上角 （50，30），但未指定目的地矩形。</span><span class="sxs-lookup"><span data-stu-id="20d66-105">For example, the following call to the <xref:System.Drawing.Graphics.DrawImage%2A> method specifies an upper-left corner of (50, 30) but does not specify a destination rectangle.</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
- 雖然就所需的引數個數而言，這是 <xref:System.Drawing.Graphics.DrawImage%2A> 方法最簡單的版本，但是不一定最有效。  如果用於 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 的解析度 \(通常是 96 DPI\) 與儲存於 <xref:System.Drawing.Image> 物件的解析度不同，則 <xref:System.Drawing.Graphics.DrawImage%2A> 方法會縮放影像。  例如，假設 <xref:System.Drawing.Image> 物件的寬度為 216 像素，並且儲存的水平解析度值為 72 DPI。  因為 216 除以 72 等於 3，所以 <xref:System.Drawing.Graphics.DrawImage%2A> 會縮放影像，將影像寬度調整為 3 英吋，解析度為 96 DPI。  也就是說，<xref:System.Drawing.Graphics.DrawImage%2A> 所顯示的影像寬度為 96x3 \= 288 像素。  
+ <span data-ttu-id="20d66-106">雖然這是最簡單的版本<xref:System.Drawing.Graphics.DrawImage%2A>方法所需的引數數量不一定是最有效率。</span><span class="sxs-lookup"><span data-stu-id="20d66-106">Although this is the easiest version of the <xref:System.Drawing.Graphics.DrawImage%2A> method in terms of the number of required arguments, it is not necessarily the most efficient.</span></span> <span data-ttu-id="20d66-107">如果解析由[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)](通常是 96 dpi) 不同於儲存在解析<xref:System.Drawing.Image>物件，則<xref:System.Drawing.Graphics.DrawImage%2A>方法將縮放影像。</span><span class="sxs-lookup"><span data-stu-id="20d66-107">If the resolution used by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (usually 96 dots per inch) is different from the resolution stored in the <xref:System.Drawing.Image> object, then the <xref:System.Drawing.Graphics.DrawImage%2A> method will scale the image.</span></span> <span data-ttu-id="20d66-108">例如，假設<xref:System.Drawing.Image>物件具有 216 像素為單位的寬度和水平解析度是預存的值為 72 dpi。</span><span class="sxs-lookup"><span data-stu-id="20d66-108">For example, suppose an <xref:System.Drawing.Image> object has a width of 216 pixels and a stored horizontal resolution value of 72 dots per inch.</span></span> <span data-ttu-id="20d66-109">因為 216/72 為 3， <xref:System.Drawing.Graphics.DrawImage%2A> ，使其具有 3 英吋的寬度解析度為 96 dpi 縮放影像。</span><span class="sxs-lookup"><span data-stu-id="20d66-109">Because 216/72 is 3, <xref:System.Drawing.Graphics.DrawImage%2A> will scale the image so that it has a width of 3 inches at a resolution of 96 dots per inch.</span></span> <span data-ttu-id="20d66-110">也就是說，<xref:System.Drawing.Graphics.DrawImage%2A>會顯示影像的寬度為 96 x 3 = 288，像素為單位。</span><span class="sxs-lookup"><span data-stu-id="20d66-110">That is, <xref:System.Drawing.Graphics.DrawImage%2A> will display an image that has a width of 96x3 = 288 pixels.</span></span>  
   
- 即使您的螢幕解析度不是 96 DPI，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可能還是會將螢幕解析度當做是 96 DPI 來縮放影像。  那是因為 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> 物件與裝置內容有關，並且在 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 查詢裝置內容以取得螢幕解析度時，不論實際螢幕解析度為何，結果通常是 96。  您可以在 <xref:System.Drawing.Graphics.DrawImage%2A> 方法中指定目的端矩形以避免自動縮放。  
+ <span data-ttu-id="20d66-111">即使您的螢幕解析度 96 dpi，從不同[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]將可能刻度影像好像螢幕解析度 96 dpi。</span><span class="sxs-lookup"><span data-stu-id="20d66-111">Even if your screen resolution is different from 96 dots per inch, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] will probably scale the image as if the screen resolution were 96 dots per inch.</span></span> <span data-ttu-id="20d66-112">這是因為[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<xref:System.Drawing.Graphics>物件都與裝置內容，以及當[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]螢幕解析度時，結果的裝置內容通常是 96，不論實際螢幕解析度的查詢。</span><span class="sxs-lookup"><span data-stu-id="20d66-112">That is because a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> object is associated with a device context, and when [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] queries the device context for the screen resolution, the result is usually 96, regardless of the actual screen resolution.</span></span> <span data-ttu-id="20d66-113">您可以藉由指定目的地矩形中的自動調整，避免<xref:System.Drawing.Graphics.DrawImage%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="20d66-113">You can avoid automatic scaling by specifying the destination rectangle in the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  
   
-## 範例  
- 下列範例會繪製兩次相同的影像。  第一種情況不指定目的端矩形的寬度和高度，而是自動縮放影像。  第二種情況會將目的端矩形的寬度和高度 \(以像素為單位\) 指定成與原始影像的寬度和高度相同。  下圖顯示的是呈現兩次的影像。  
+## <a name="example"></a><span data-ttu-id="20d66-114">範例</span><span class="sxs-lookup"><span data-stu-id="20d66-114">Example</span></span>  
+ <span data-ttu-id="20d66-115">下列範例會繪製兩次相同的映像。</span><span class="sxs-lookup"><span data-stu-id="20d66-115">The following example draws the same image twice.</span></span> <span data-ttu-id="20d66-116">在第一個案例中，未指定目的地矩形的高度與寬度，並自動縮放影像。</span><span class="sxs-lookup"><span data-stu-id="20d66-116">In the first case, the width and height of the destination rectangle are not specified, and the image is automatically scaled.</span></span> <span data-ttu-id="20d66-117">在第二個案例中，寬度和目的地矩形的高度 （單位為像素為單位） 指定要做為原始影像的高度與寬度會相同。</span><span class="sxs-lookup"><span data-stu-id="20d66-117">In the second case, the width and height (measured in pixels) of the destination rectangle are specified to be the same as the width and height of the original image.</span></span> <span data-ttu-id="20d66-118">下圖顯示兩次呈現的影像。</span><span class="sxs-lookup"><span data-stu-id="20d66-118">The following illustration shows the image rendered twice.</span></span>  
   
- ![調整的紋理](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
+ <span data-ttu-id="20d66-119">![調整紋理](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")</span><span class="sxs-lookup"><span data-stu-id="20d66-119">![Scaled Texture](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
-## 編譯程式碼  
- 上述範例是專為與 Windows Form 搭配使用而設計的，而且它需要 <xref:System.Windows.Forms.PaintEventArgs> `e` \(即 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數\)。  以系統中有效的影像名稱及路徑取代 Texture.jpg。  
+## <a name="compiling-the-code"></a><span data-ttu-id="20d66-120">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="20d66-120">Compiling the Code</span></span>  
+ <span data-ttu-id="20d66-121">上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。</span><span class="sxs-lookup"><span data-stu-id="20d66-121">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="20d66-122">取代 Texture.jpg 映像名稱和您系統為有效的路徑。</span><span class="sxs-lookup"><span data-stu-id="20d66-122">Replace Texture.jpg with an image name and path that are valid on your system.</span></span>  
   
-## 請參閱  
- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="20d66-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="20d66-123">See Also</span></span>  
+ [<span data-ttu-id="20d66-124">影像、點陣圖和中繼檔</span><span class="sxs-lookup"><span data-stu-id="20d66-124">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="20d66-125">使用影像、點陣圖、圖示和中繼檔</span><span class="sxs-lookup"><span data-stu-id="20d66-125">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

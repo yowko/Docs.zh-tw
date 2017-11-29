@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - protocols, TCP/UDP
 - network resources, TCP/UDP
@@ -27,31 +22,29 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f067d24b59fbb5b49803605a625cef52d12fdbea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 04a3bb1c7499a60175aaaa9715e780ea5ddceb31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="tcp-udp"></a>TCP-UDP
-應用程式可以使用「傳輸控制通訊協定 (TCP)」和「使用者資料包通訊協定 (UDP)」服務，搭配 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別。 這些通訊協定類別建立在 <xref:System.Net.Sockets.Socket?displayProperty=fullName> 類別之上，並負責傳送資料的細節。  
+# <a name="tcp-udp"></a><span data-ttu-id="03a08-102">TCP-UDP</span><span class="sxs-lookup"><span data-stu-id="03a08-102">TCP-UDP</span></span>
+<span data-ttu-id="03a08-103">應用程式可以使用「傳輸控制通訊協定 (TCP)」和「使用者資料包通訊協定 (UDP)」服務，搭配 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別。</span><span class="sxs-lookup"><span data-stu-id="03a08-103">Applications can use Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) services with the <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, and <xref:System.Net.Sockets.UdpClient> classes.</span></span> <span data-ttu-id="03a08-104">這些通訊協定類別建立在 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別之上，並負責傳送資料的細節。</span><span class="sxs-lookup"><span data-stu-id="03a08-104">These protocol classes are built on top of the <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> class and take care of the details of transferring data.</span></span>  
   
- 通訊協定類別使用 **Socket** 類別的同步方法，以提供簡單且直接的網路服務存取，不需要維護狀態資訊或了解設定通訊協定特定通訊端的詳細資料等成本。 若要使用非同步 **Socket** 方法，您可以使用 <xref:System.Net.Sockets.NetworkStream> 類別所提供的非同步方法。 若要存取 **Socket** 類別中通訊協定類別未公開的功能，您必須使用 **Socket** 類別。  
+ <span data-ttu-id="03a08-105">通訊協定類別使用 **Socket** 類別的同步方法，以提供簡單且直接的網路服務存取，不需要維護狀態資訊或了解設定通訊協定特定通訊端的詳細資料等成本。</span><span class="sxs-lookup"><span data-stu-id="03a08-105">The protocol classes use the synchronous methods of the **Socket** class to provide simple and straightforward access to network services without the overhead of maintaining state information or knowing the details of setting up protocol-specific sockets.</span></span> <span data-ttu-id="03a08-106">若要使用非同步 **Socket** 方法，您可以使用 <xref:System.Net.Sockets.NetworkStream> 類別所提供的非同步方法。</span><span class="sxs-lookup"><span data-stu-id="03a08-106">To use asynchronous **Socket** methods, you can use the asynchronous methods supplied by the <xref:System.Net.Sockets.NetworkStream> class.</span></span> <span data-ttu-id="03a08-107">若要存取 **Socket** 類別中通訊協定類別未公開的功能，您必須使用 **Socket** 類別。</span><span class="sxs-lookup"><span data-stu-id="03a08-107">To access features of the **Socket** class not exposed by the protocol classes, you must use the **Socket** class.</span></span>  
   
- **TcpClient** 和 **TcpListener** 代表使用 **NetworkStream** 類別的網路。 您使用 <xref:System.Net.Sockets.TcpClient.GetStream%2A> 方法來傳回網路資料流，然後呼叫資料流的 <xref:System.Net.Sockets.NetworkStream.Read%2A> 和 <xref:System.Net.Sockets.NetworkStream.Write%2A> 方法。 **NetworkStream** 並未擁有通訊協定類別的基礎通訊端，因此關閉它並不會影響通訊端。  
+ <span data-ttu-id="03a08-108">**TcpClient** 和 **TcpListener** 代表使用 **NetworkStream** 類別的網路。</span><span class="sxs-lookup"><span data-stu-id="03a08-108">**TcpClient** and **TcpListener** represent the network using the **NetworkStream** class.</span></span> <span data-ttu-id="03a08-109">您使用 <xref:System.Net.Sockets.TcpClient.GetStream%2A> 方法來傳回網路資料流，然後呼叫資料流的 <xref:System.Net.Sockets.NetworkStream.Read%2A> 和 <xref:System.Net.Sockets.NetworkStream.Write%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="03a08-109">You use the <xref:System.Net.Sockets.TcpClient.GetStream%2A> method to return the network stream, and then call the stream's <xref:System.Net.Sockets.NetworkStream.Read%2A> and <xref:System.Net.Sockets.NetworkStream.Write%2A> methods.</span></span> <span data-ttu-id="03a08-110">**NetworkStream** 並未擁有通訊協定類別的基礎通訊端，因此關閉它並不會影響通訊端。</span><span class="sxs-lookup"><span data-stu-id="03a08-110">The **NetworkStream** does not own the protocol classes' underlying socket, so closing it does not affect the socket.</span></span>  
   
- **UdpClient** 類別使用位元組陣列來保留 UDP 資料包。 您使用 <xref:System.Net.Sockets.UdpClient.Send%2A> 方法將資料傳送到網路，及使用 <xref:System.Net.Sockets.UdpClient.Receive%2A> 方法來接收連入的資料包。  
+ <span data-ttu-id="03a08-111">**UdpClient** 類別使用位元組陣列來保留 UDP 資料包。</span><span class="sxs-lookup"><span data-stu-id="03a08-111">The **UdpClient** class uses an array of bytes to hold the UDP datagram.</span></span> <span data-ttu-id="03a08-112">您使用 <xref:System.Net.Sockets.UdpClient.Send%2A> 方法將資料傳送到網路，及使用 <xref:System.Net.Sockets.UdpClient.Receive%2A> 方法來接收連入的資料包。</span><span class="sxs-lookup"><span data-stu-id="03a08-112">You use the <xref:System.Net.Sockets.UdpClient.Send%2A> method to send the data to the network and the <xref:System.Net.Sockets.UdpClient.Receive%2A> method to receive an incoming datagram.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [使用 TCP 服務](../../../docs/framework/network-programming/using-tcp-services.md)   
- [使用 UDP 服務](../../../docs/framework/network-programming/using-udp-services.md)   
- [在網路上使用資料流](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)
-
+## <a name="see-also"></a><span data-ttu-id="03a08-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03a08-113">See Also</span></span>  
+ [<span data-ttu-id="03a08-114">使用 TCP 服務</span><span class="sxs-lookup"><span data-stu-id="03a08-114">Using TCP Services</span></span>](../../../docs/framework/network-programming/using-tcp-services.md)  
+ [<span data-ttu-id="03a08-115">使用 UDP 服務</span><span class="sxs-lookup"><span data-stu-id="03a08-115">Using UDP Services</span></span>](../../../docs/framework/network-programming/using-udp-services.md)  
+ [<span data-ttu-id="03a08-116">在網路上使用資料流</span><span class="sxs-lookup"><span data-stu-id="03a08-116">Using Streams on the Network</span></span>](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [<span data-ttu-id="03a08-117">使用非同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="03a08-117">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [<span data-ttu-id="03a08-118">使用非同步用戶端通訊端</span><span class="sxs-lookup"><span data-stu-id="03a08-118">Using an Asynchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [<span data-ttu-id="03a08-119">使用應用程式通訊協定</span><span class="sxs-lookup"><span data-stu-id="03a08-119">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)

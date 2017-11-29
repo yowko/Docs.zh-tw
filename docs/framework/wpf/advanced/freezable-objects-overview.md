@@ -1,147 +1,150 @@
 ---
-title: "Freezable 物件概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "類別, Freezable"
-  - "Freezable 物件, description"
-  - "解除凍結 Freezable 物件"
+title: "Freezable 物件概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Freezable objects [WPF], description
+- unfreezing Freezable objects [WPF]
+- classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-caps.latest.revision: 30
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49778dc9551652ee4a4d36426b4b396652b9dcd2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Freezable 物件概觀
-本主題描述如何有效率地使用並建立 <xref:System.Windows.Freezable> 物件，以提供可以協助改善應用程式效能的特定功能。  Freezable 物件的範例包含筆刷、畫筆、轉換、幾何和動畫。  
+# <a name="freezable-objects-overview"></a><span data-ttu-id="3cd47-102">Freezable 物件概觀</span><span class="sxs-lookup"><span data-stu-id="3cd47-102">Freezable Objects Overview</span></span>
+<span data-ttu-id="3cd47-103">本主題說明如何有效地使用並建立<xref:System.Windows.Freezable>提供特殊功能，可協助您改善應用程式效能的物件。</span><span class="sxs-lookup"><span data-stu-id="3cd47-103">This topic describes how to effectively use and create <xref:System.Windows.Freezable> objects, which provide special features that can help improve application performance.</span></span> <span data-ttu-id="3cd47-104">可凍結的物件的範例包括筆刷、 畫筆、 轉換、 幾何和動畫。</span><span class="sxs-lookup"><span data-stu-id="3cd47-104">Examples of freezable objects include brushes, pens, transformations, geometries, and animations.</span></span>  
   
- 此主題包括下列章節：  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="whatisafreezable"></a>   
-## 什麼是 Freezable  
- <xref:System.Windows.Freezable> 是具有下列兩種狀態的特殊物件型別：未凍結和凍結。  未凍結時，<xref:System.Windows.Freezable> 的行為就和其他任何物件一樣。  而凍結時，則無法再修改 <xref:System.Windows.Freezable>。  
+## <a name="what-is-a-freezable"></a><span data-ttu-id="3cd47-105">可凍結是什麼？</span><span class="sxs-lookup"><span data-stu-id="3cd47-105">What Is a Freezable?</span></span>  
+ <span data-ttu-id="3cd47-106">A<xref:System.Windows.Freezable>是特殊類型的物件，具有兩種狀態： 解除凍結但卻凍結。</span><span class="sxs-lookup"><span data-stu-id="3cd47-106">A <xref:System.Windows.Freezable> is a special type of object that has two states: unfrozen and frozen.</span></span> <span data-ttu-id="3cd47-107">當解除凍結，<xref:System.Windows.Freezable>似乎行為與任何其他物件一樣。</span><span class="sxs-lookup"><span data-stu-id="3cd47-107">When unfrozen, a <xref:System.Windows.Freezable> appears to behave like any other object.</span></span> <span data-ttu-id="3cd47-108">當凍結時，<xref:System.Windows.Freezable>無法再修改。</span><span class="sxs-lookup"><span data-stu-id="3cd47-108">When frozen, a <xref:System.Windows.Freezable> can no longer be modified.</span></span>  
   
- <xref:System.Windows.Freezable> 提供 <xref:System.Windows.Freezable.Changed> 事件，以在發生任何物件修改時通知觀察器。  凍結 <xref:System.Windows.Freezable> 之後，因為不再需要花費資源在變更告知上，所以可以改善效能。  凍結的 <xref:System.Windows.Freezable> 物件也可以供多個執行緒共用，而未凍結的 <xref:System.Windows.Freezable> 則不可以。  
+ <span data-ttu-id="3cd47-109">A<xref:System.Windows.Freezable>提供<xref:System.Windows.Freezable.Changed>事件以通知觀察者的任何物件的修改。</span><span class="sxs-lookup"><span data-stu-id="3cd47-109">A <xref:System.Windows.Freezable> provides a <xref:System.Windows.Freezable.Changed> event to notify observers of any modifications to the object.</span></span> <span data-ttu-id="3cd47-110">凍結<xref:System.Windows.Freezable>可以提升效能，因為它不再需要花上變更通知的資源。</span><span class="sxs-lookup"><span data-stu-id="3cd47-110">Freezing a <xref:System.Windows.Freezable> can improve its performance, because it no longer needs to spend resources on change notifications.</span></span> <span data-ttu-id="3cd47-111">凍結<xref:System.Windows.Freezable>也可同時加在未凍結的執行緒之間共用<xref:System.Windows.Freezable>無法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-111">A frozen <xref:System.Windows.Freezable> can also be shared across threads, while an unfrozen <xref:System.Windows.Freezable> cannot.</span></span>  
   
- 雖然 <xref:System.Windows.Freezable> 類別具有許多應用程式，但是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的大部分 <xref:System.Windows.Freezable> 物件都是與圖形子系統相關。  
+ <span data-ttu-id="3cd47-112">雖然<xref:System.Windows.Freezable>類別具有許多應用程式，最<xref:System.Windows.Freezable>中的物件[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]圖形的子系統相關。</span><span class="sxs-lookup"><span data-stu-id="3cd47-112">Although the <xref:System.Windows.Freezable> class has many applications, most <xref:System.Windows.Freezable> objects in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] are related to the graphics sub-system.</span></span>  
   
- <xref:System.Windows.Freezable> 類別可以簡化特定圖形系統物件的使用，而且可以協助改善應用程式效能。  繼承自 <xref:System.Windows.Freezable> 的型別範例包含 <xref:System.Windows.Media.Brush>、<xref:System.Windows.Media.Transform> 和 <xref:System.Windows.Media.Geometry> 類別。  因為它們包含 Unmanaged 資源，所以系統必須監視這些物件是否發生修改，然後在原始物件變更時更新這些物件的對應 Unmanaged 資源。  即使實際上未修改圖形系統物件，但系統仍然必須用掉它的一些資源來監視物件，以免您真的進行了變更。  
+ <span data-ttu-id="3cd47-113"><xref:System.Windows.Freezable>類別讓您更輕鬆地使用某些圖形系統物件，和有助於改善應用程式效能。</span><span class="sxs-lookup"><span data-stu-id="3cd47-113">The <xref:System.Windows.Freezable> class makes it easier to use certain graphics system objects and can help improve application performance.</span></span> <span data-ttu-id="3cd47-114">從繼承的類型的範例<xref:System.Windows.Freezable>包含<xref:System.Windows.Media.Brush>， <xref:System.Windows.Media.Transform>，和<xref:System.Windows.Media.Geometry>類別。</span><span class="sxs-lookup"><span data-stu-id="3cd47-114">Examples of types that inherit from <xref:System.Windows.Freezable> include the <xref:System.Windows.Media.Brush>, <xref:System.Windows.Media.Transform>, and <xref:System.Windows.Media.Geometry> classes.</span></span> <span data-ttu-id="3cd47-115">因為它們包含 unmanaged 的資源，系統就必須監視進行修改，這些物件，然後再更新其對應的 unmanaged 的資源，原始物件變更時。</span><span class="sxs-lookup"><span data-stu-id="3cd47-115">Because they contain unmanaged resources, the system must monitor these objects for modifications, and then update their corresponding unmanaged resources when there is a change to the original object.</span></span> <span data-ttu-id="3cd47-116">即使您實際上未修改的圖形系統物件，系統必須仍然會有一些監視物件，其資源以防您變更它。</span><span class="sxs-lookup"><span data-stu-id="3cd47-116">Even if you don't actually modify a graphics system object, the system must still spend some of its resources monitoring the object, in case you do change it.</span></span>  
   
- 例如，假設您建立 <xref:System.Windows.Media.SolidColorBrush> 筆刷，並使用該筆刷來繪製按鈕的背景。  
+ <span data-ttu-id="3cd47-117">例如，假設您建立<xref:System.Windows.Media.SolidColorBrush>筆刷，並用來繪製按鈕的背景。</span><span class="sxs-lookup"><span data-stu-id="3cd47-117">For example, suppose you create a <xref:System.Windows.Media.SolidColorBrush> brush and use it to paint the background of a button.</span></span>  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
   
- 當呈現按鈕時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形子系統會使用您所提供的資訊來繪製像素群組，以建立按鈕的外觀。  雖然使用純色筆刷來描述應該繪製按鈕的方式，但是純色筆刷並未實際進行繪製。  圖形系統會針對按鈕和筆刷產生快速且低階的物件，而這些就是實際顯示在螢幕上的物件。  
+ <span data-ttu-id="3cd47-118">轉譯按鈕時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]圖形子系統會使用您提供用來繪製要建立的按鈕外觀的像素的群組的資訊。</span><span class="sxs-lookup"><span data-stu-id="3cd47-118">When the button is rendered, the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] graphics sub-system uses the information you provided to paint a group of pixels to create the appearance of a button.</span></span> <span data-ttu-id="3cd47-119">雖然您來描述繪製按鈕的方式使用單色筆刷，單色筆刷實際上並不進行繪製。</span><span class="sxs-lookup"><span data-stu-id="3cd47-119">Although you used a solid color brush to describe how the button should be painted, your solid color brush doesn't actually do the painting.</span></span> <span data-ttu-id="3cd47-120">圖形系統會產生按鈕和筆刷，快速、 低層級物件，而且它是實際出現在螢幕的物件。</span><span class="sxs-lookup"><span data-stu-id="3cd47-120">The graphics system generates fast, low-level objects for the button and the brush, and it is those objects that actually appear on the screen.</span></span>  
   
- 如果要修改筆刷，則必須重新產生那些低階物件。  Freezable 類別讓筆刷可以找到與它對應的已產生低階物件，並在筆刷變更時更新這些物件。  啟用這個功能時，筆刷就稱為「未凍結」。  
+ <span data-ttu-id="3cd47-121">如果您要修改的筆刷，這些低階物件必須重新產生。</span><span class="sxs-lookup"><span data-stu-id="3cd47-121">If you were to modify the brush, those low-level objects would have to be regenerated.</span></span> <span data-ttu-id="3cd47-122">可凍結的類別可以賦予筆刷，來尋找對應產生的低層級物件，並更新它們，當監視變更的能力。</span><span class="sxs-lookup"><span data-stu-id="3cd47-122">The freezable class is what gives a brush the ability to find its corresponding generated, low-level objects and to update them when it changes.</span></span> <span data-ttu-id="3cd47-123">筆刷啟用這項功能時，就稱為 「 凍結 」。</span><span class="sxs-lookup"><span data-stu-id="3cd47-123">When this ability is enabled, the brush is said to be "unfrozen."</span></span>  
   
- Freezable 的 <xref:System.Windows.Freezable.Freeze%2A> 方法可讓您停用這個自我更新功能。  您可以使用這個方法，讓筆刷變成「已凍結」或不可以修改的。  
+ <span data-ttu-id="3cd47-124">可凍結的<xref:System.Windows.Freezable.Freeze%2A>方法可讓您停用這個自行更新功能。</span><span class="sxs-lookup"><span data-stu-id="3cd47-124">A freezable's <xref:System.Windows.Freezable.Freeze%2A> method enables you to disable this self-updating ability.</span></span> <span data-ttu-id="3cd47-125">您可以使用這個方法，使筆刷變成 「 凍結 」，或無法修改。</span><span class="sxs-lookup"><span data-stu-id="3cd47-125">You can use this method to make the brush become "frozen," or unmodifiable.</span></span>  
   
 > [!NOTE]
->  並非所有 Freezable 物件都可以進行凍結。  為了避免擲回 <xref:System.InvalidOperationException>，請在嘗試凍結之前，先檢查 Freezable 物件的 <xref:System.Windows.Freezable.CanFreeze%2A> 屬性值，判斷是否可以進行凍結。  
+>  <span data-ttu-id="3cd47-126">並非每個 Freezable 物件可以凍結。</span><span class="sxs-lookup"><span data-stu-id="3cd47-126">Not every Freezable object can be frozen.</span></span> <span data-ttu-id="3cd47-127">若要避免擲回<xref:System.InvalidOperationException>，檢查此 Freezable 物件的值<xref:System.Windows.Freezable.CanFreeze%2A>屬性來判斷是否可以凍結之前嘗試凍結它。</span><span class="sxs-lookup"><span data-stu-id="3cd47-127">To avoid throwing an <xref:System.InvalidOperationException>, check the value of the Freezable object's <xref:System.Windows.Freezable.CanFreeze%2A> property to determine whether it can be frozen before attempting to freeze it.</span></span>  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
   
- 當您不再需要修改 Freezable 時，將它凍結可提高效能。  如果要凍結這個範例中的筆刷，圖形系統就不再需要監視筆刷是否變更。  因為圖形系統知道筆刷不會變更，所以圖形系統也可以進行其他最佳化。  
+ <span data-ttu-id="3cd47-128">當您不再需要修改可凍結時，凍結提供效能優勢。</span><span class="sxs-lookup"><span data-stu-id="3cd47-128">When you no longer need to modify a freezable, freezing it provides performance benefits.</span></span> <span data-ttu-id="3cd47-129">如果您要凍結的筆刷在此範例中，圖形系統不再需要監視的變更。</span><span class="sxs-lookup"><span data-stu-id="3cd47-129">If you were to freeze the brush in this example, the graphics system would no longer need to monitor it for changes.</span></span> <span data-ttu-id="3cd47-130">圖形系統也可以將其他最佳化，因為它知道不會變更筆刷。</span><span class="sxs-lookup"><span data-stu-id="3cd47-130">The graphics system can also make other optimizations, because it knows the brush won't change.</span></span>  
   
 > [!NOTE]
->  為了方便使用，Freezable 物件在明確凍結之前都會保留未凍結狀態。  
+>  <span data-ttu-id="3cd47-131">為了方便起見，freezable 物件維持未凍結，除非您明確地凍結。</span><span class="sxs-lookup"><span data-stu-id="3cd47-131">For convenience, freezable objects remain unfrozen unless you explicitly freeze them.</span></span>  
   
 <a name="frozenfreezables"></a>   
-## 使用 Freezable  
- 使用未凍結的 Freezable 就和使用其他物件型別一樣。  在下列範例中，使用 <xref:System.Windows.Media.SolidColorBrush> 繪製按鈕的背景之後，它的顏色會從黃色變更為紅色。  圖形系統會在場景後面作業，以在下次重新整理螢幕時自動將按鈕的顏色從黃色變更為紅色。  
+## <a name="using-freezables"></a><span data-ttu-id="3cd47-132">使用 Freezable</span><span class="sxs-lookup"><span data-stu-id="3cd47-132">Using Freezables</span></span>  
+ <span data-ttu-id="3cd47-133">使用未凍結 freezable 就像是使用任何其他類型的物件。</span><span class="sxs-lookup"><span data-stu-id="3cd47-133">Using an unfrozen freezable is like using any other type of object.</span></span> <span data-ttu-id="3cd47-134">在下列範例中，色彩<xref:System.Windows.Media.SolidColorBrush>已從黃色變成紅色之後，它用來繪製按鈕的背景。</span><span class="sxs-lookup"><span data-stu-id="3cd47-134">In the following example, the color of a <xref:System.Windows.Media.SolidColorBrush> is changed from yellow to red after it's used to paint the background of a button.</span></span> <span data-ttu-id="3cd47-135">圖形系統會自動變更按鈕從黃色到紅色下次重新整理螢幕背景。</span><span class="sxs-lookup"><span data-stu-id="3cd47-135">The graphics system works behind the scenes to automatically change the button from yellow to red the next time the screen is refreshed.</span></span>  
   
  [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
  [!code-vb[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
   
-### 凍結 Freezable  
- 若要讓 <xref:System.Windows.Freezable> 變為不可修改，請呼叫它的 <xref:System.Windows.Freezable.Freeze%2A> 方法。  當您凍結的物件內含 Freezable 物件時，那些物件也會一併凍結。  例如，如果凍結 <xref:System.Windows.Media.PathGeometry>，則也會一併凍結它所含的圖形和區段。  
+### <a name="freezing-a-freezable"></a><span data-ttu-id="3cd47-136">凍結 Freezable</span><span class="sxs-lookup"><span data-stu-id="3cd47-136">Freezing a Freezable</span></span>  
+ <span data-ttu-id="3cd47-137">若要讓<xref:System.Windows.Freezable>為不可修改，呼叫其<xref:System.Windows.Freezable.Freeze%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-137">To make a <xref:System.Windows.Freezable> unmodifiable, you call its <xref:System.Windows.Freezable.Freeze%2A> method.</span></span> <span data-ttu-id="3cd47-138">當您凍結物件，包含可凍結的物件時，這些物件也會凍結。</span><span class="sxs-lookup"><span data-stu-id="3cd47-138">When you freeze an object that contains freezable objects, those objects are frozen as well.</span></span> <span data-ttu-id="3cd47-139">例如，如果您凍結<xref:System.Windows.Media.PathGeometry>，數據和它所包含的區段會凍結太。</span><span class="sxs-lookup"><span data-stu-id="3cd47-139">For example, if you freeze a <xref:System.Windows.Media.PathGeometry>, the figures and segments it contains would be frozen too.</span></span>  
   
- 如果符合下列任一項，就「不可以」凍結 Freezable 物件：  
+ <span data-ttu-id="3cd47-140">Freezable**無法**凍結如果下列任何一項成立：</span><span class="sxs-lookup"><span data-stu-id="3cd47-140">A Freezable **can't** be frozen if any of the following are true:</span></span>  
   
--   具有顯示為動畫或資料繫結屬性。  
+-   <span data-ttu-id="3cd47-141">它具有動畫或資料繫結屬性。</span><span class="sxs-lookup"><span data-stu-id="3cd47-141">It has animated or data bound properties.</span></span>  
   
--   具有動態資源設定的屬性   \(如需動態資源的詳細資訊，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)\)。  
+-   <span data-ttu-id="3cd47-142">它的動態資源設定的屬性。</span><span class="sxs-lookup"><span data-stu-id="3cd47-142">It has properties set by a dynamic resource.</span></span> <span data-ttu-id="3cd47-143">(請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)如需有關動態的資源。)</span><span class="sxs-lookup"><span data-stu-id="3cd47-143">(See the [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) for more information about dynamic resources.)</span></span>  
   
--   包含無法凍結的 <xref:System.Windows.Freezable> 子物件。  
+-   <span data-ttu-id="3cd47-144">它包含<xref:System.Windows.Freezable>無法凍結的子物件。</span><span class="sxs-lookup"><span data-stu-id="3cd47-144">It contains <xref:System.Windows.Freezable> sub-objects that can't be frozen.</span></span>  
   
- 如果不符合上述條件，而且不想要修改 <xref:System.Windows.Freezable>，則應該考慮將之凍結，如前所述來提升效能。  
+ <span data-ttu-id="3cd47-145">如果這些條件都為 false，而且您不想修改<xref:System.Windows.Freezable>，則您應該凍結它取得稍早所述的效能優勢。</span><span class="sxs-lookup"><span data-stu-id="3cd47-145">If these conditions are false, and you don't intend to modify the <xref:System.Windows.Freezable>, then you should freeze it to gain the performance benefits described earlier.</span></span>  
   
- 呼叫 Freezable 的 <xref:System.Windows.Freezable.Freeze%2A> 方法之後，就無法再修改 Freezable。  如果嘗試修改已凍結的物件，則會擲回 <xref:System.InvalidOperationException>。  在下列程式碼中，因為我們會在凍結筆刷之後嘗試修改該筆刷，所以會擲回例外狀況。  
+ <span data-ttu-id="3cd47-146">一旦您呼叫可凍結的<xref:System.Windows.Freezable.Freeze%2A>方法時，無法再修改。</span><span class="sxs-lookup"><span data-stu-id="3cd47-146">Once you call a freezable's <xref:System.Windows.Freezable.Freeze%2A> method, it can no longer be modified.</span></span> <span data-ttu-id="3cd47-147">嘗試修改凍結物件原因<xref:System.InvalidOperationException>擲回。</span><span class="sxs-lookup"><span data-stu-id="3cd47-147">Attempting to modify a frozen object causes an <xref:System.InvalidOperationException> to be thrown.</span></span> <span data-ttu-id="3cd47-148">下列程式碼擲回例外狀況，因為我們嘗試修改後已凍結的筆刷。</span><span class="sxs-lookup"><span data-stu-id="3cd47-148">The following code throws an exception, because we attempt to modify the brush after it's been frozen.</span></span>  
   
  [!code-csharp[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
  [!code-vb[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
   
- 為了避免擲回這個例外狀況，可以使用 <xref:System.Windows.Freezable.IsFrozen%2A> 方法，判斷 <xref:System.Windows.Freezable> 是否已凍結。  
+ <span data-ttu-id="3cd47-149">若要避免擲回這個例外狀況，您可以使用<xref:System.Windows.Freezable.IsFrozen%2A>方法，以判斷是否<xref:System.Windows.Freezable>已凍結。</span><span class="sxs-lookup"><span data-stu-id="3cd47-149">To avoid throwing this exception, you can use the <xref:System.Windows.Freezable.IsFrozen%2A> method to determine whether a <xref:System.Windows.Freezable> is frozen.</span></span>  
   
  [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
  [!code-vb[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
- 在上述程式碼範例中，使用 <xref:System.Windows.Freezable.Clone%2A> 方法建立了凍結物件的可修改複本。  下一節會詳細討論複製 \(Clone\)。  
+ <span data-ttu-id="3cd47-150">在上述程式碼範例中，可修改複本已凍結的物件使用的<xref:System.Windows.Freezable.Clone%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-150">In the preceding code example, a modifiable copy was made of a frozen object using the <xref:System.Windows.Freezable.Clone%2A> method.</span></span> <span data-ttu-id="3cd47-151">下一節會討論更詳細地複製。</span><span class="sxs-lookup"><span data-stu-id="3cd47-151">The next section discusses cloning in more detail.</span></span>  
   
- **注意**：因為已凍結的 Freezable 無法建立動畫，所以在您嘗試使用 <xref:System.Windows.Media.Animation.Storyboard> 建立已凍結 <xref:System.Windows.Freezable> 物件的動畫時，動畫系統會自動建立這些凍結物件的可修改複製品 \(Clone\)。  如果想要建立物件的動畫，則請將物件保留為未凍結狀態，以去除複製所造成的效能負荷。  如需使用腳本建立動畫的詳細資訊，請參閱[腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+ <span data-ttu-id="3cd47-152">**請注意**因為凍結 freezable 無法以動畫顯示、 動畫系統會自動建立的可修改複製品凍結<xref:System.Windows.Freezable>物件，當您嘗試以動畫顯示它們與<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="3cd47-152">**Note** Because a frozen freezable cannot be animated, the animation system will automatically create modifiable clones of frozen <xref:System.Windows.Freezable> objects when you try to animate them with a <xref:System.Windows.Media.Animation.Storyboard>.</span></span> <span data-ttu-id="3cd47-153">若要消除負擔複製所造成的效能，讓解除凍結但如果您想要製作動畫的物件。</span><span class="sxs-lookup"><span data-stu-id="3cd47-153">To eliminate the performance overhead caused by cloning, leave an object unfrozen if you intend to animate it.</span></span> <span data-ttu-id="3cd47-154">如需使用分鏡腳本建立動畫的詳細資訊，請參閱[概觀腳本](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="3cd47-154">For more information about animating with storyboards, see the [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span>  
   
-### 透過標記進行凍結  
- 若要凍結以標記宣告的 <xref:System.Windows.Freezable> 物件，請使用 `PresentationOptions:Freeze` 屬性。  在下列範例中，<xref:System.Windows.Media.SolidColorBrush> 宣告為頁面資源，而且已凍結。  接著會使用它來設定按鈕的背景。  
+### <a name="freezing-from-markup"></a><span data-ttu-id="3cd47-155">從標記的凍結</span><span class="sxs-lookup"><span data-stu-id="3cd47-155">Freezing from Markup</span></span>  
+ <span data-ttu-id="3cd47-156">若要凍結<xref:System.Windows.Freezable>物件宣告在標記中，您使用`PresentationOptions:Freeze`屬性。</span><span class="sxs-lookup"><span data-stu-id="3cd47-156">To freeze a <xref:System.Windows.Freezable> object declared in markup, you use the `PresentationOptions:Freeze` attribute.</span></span> <span data-ttu-id="3cd47-157">在下列範例中，<xref:System.Windows.Media.SolidColorBrush>是宣告為網頁資源，因此凍結。</span><span class="sxs-lookup"><span data-stu-id="3cd47-157">In the following example, a <xref:System.Windows.Media.SolidColorBrush> is declared as a page resource and frozen.</span></span> <span data-ttu-id="3cd47-158">它接著會用來設定按鈕的背景。</span><span class="sxs-lookup"><span data-stu-id="3cd47-158">It is then used to set the background of a button.</span></span>  
   
- [!code-xml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
+ [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- 若要使用 `Freeze` 屬性，則必須對應至呈現選項命名空間：`http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`。  `PresentationOptions` 是對應這個命名空間的建議前置字元：  
+ <span data-ttu-id="3cd47-159">若要使用`Freeze`屬性，您必須對應到簡報選項命名空間： `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`。</span><span class="sxs-lookup"><span data-stu-id="3cd47-159">To use the `Freeze` attribute, you must map to the presentation options namespace: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`.</span></span> <span data-ttu-id="3cd47-160">`PresentationOptions`是對應此命名空間的建議前置詞：</span><span class="sxs-lookup"><span data-stu-id="3cd47-160">`PresentationOptions` is the recommended prefix for mapping this namespace:</span></span>  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
   
- 因為並非所有 XAML 讀取器 \(Reader\) 都可以辨識這個屬性，所以建議您使用 [mc:Ignorable 屬性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)將 `Presentation:Freeze` 屬性標示為可忽略：  
+ <span data-ttu-id="3cd47-161">因為並非所有的 XAML 讀取器可辨識這個屬性，建議您改用[mc: Ignorable 屬性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)標示`Presentation:Freeze`做為可忽略的屬性：</span><span class="sxs-lookup"><span data-stu-id="3cd47-161">Because not all XAML readers recognize this attribute, it's recommended that you use the [mc:Ignorable Attribute](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) to mark the `Presentation:Freeze` attribute as ignorable:</span></span>  
   
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- 如需詳細資訊，請參閱 [mc:Ignorable 屬性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)網頁。  
+ <span data-ttu-id="3cd47-162">如需詳細資訊，請參閱[mc: Ignorable 屬性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)頁面。</span><span class="sxs-lookup"><span data-stu-id="3cd47-162">For more information, see the [mc:Ignorable Attribute](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) page.</span></span>  
   
-### 解除凍結 Freezable  
- 一旦凍結之後，就不可以再修改或解除凍結 <xref:System.Windows.Freezable>，但您可以使用 <xref:System.Windows.Freezable.Clone%2A> 或 <xref:System.Windows.Freezable.CloneCurrentValue%2A> 方法建立未凍結的複製品。  
+### <a name="unfreezing-a-freezable"></a><span data-ttu-id="3cd47-163">「 取消凍結 」 可凍結</span><span class="sxs-lookup"><span data-stu-id="3cd47-163">"Unfreezing" a Freezable</span></span>  
+ <span data-ttu-id="3cd47-164">一次凍結，<xref:System.Windows.Freezable>永遠不會修改或解除凍結; 不過，您可以建立使用的凍結的複製品<xref:System.Windows.Freezable.Clone%2A>或<xref:System.Windows.Freezable.CloneCurrentValue%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-164">Once frozen, a <xref:System.Windows.Freezable> can never be modified or unfrozen; however, you can create an unfrozen clone using the <xref:System.Windows.Freezable.Clone%2A> or <xref:System.Windows.Freezable.CloneCurrentValue%2A> method.</span></span>  
   
- 在下列範例中，使用筆刷設定按鈕的背景，隨後凍結該筆刷。  然後使用 <xref:System.Windows.Freezable.Clone%2A> 方法建立筆刷的未凍結複本。  接著修改該複製品，用來將按鈕的背景從黃色變更為紅色。  
+ <span data-ttu-id="3cd47-165">在下列範例中，使用筆刷設定按鈕的背景，然後會凍結該筆刷。</span><span class="sxs-lookup"><span data-stu-id="3cd47-165">In the following example, the button's background is set with a brush and that brush is then frozen.</span></span> <span data-ttu-id="3cd47-166">凍結的複本由筆刷使用<xref:System.Windows.Freezable.Clone%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-166">An unfrozen copy is made of the brush using the <xref:System.Windows.Freezable.Clone%2A> method.</span></span> <span data-ttu-id="3cd47-167">複本已修改，且用來從黃色的按鈕的背景變更為紅色。</span><span class="sxs-lookup"><span data-stu-id="3cd47-167">The clone is modified and used to change the button's background from yellow to red.</span></span>  
   
  [!code-csharp[freezablesample_procedural#CloneExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
->  不論使用哪種複製方法，都絕不會將動畫複製至新的 <xref:System.Windows.Freezable>。  
+>  <span data-ttu-id="3cd47-168">不論您使用的複製方法，動畫會永遠不會複製到新<xref:System.Windows.Freezable>。</span><span class="sxs-lookup"><span data-stu-id="3cd47-168">Regardless of which clone method you use, animations are never copied to the new <xref:System.Windows.Freezable>.</span></span>  
   
- <xref:System.Windows.Freezable.Clone%2A> 和 <xref:System.Windows.Freezable.CloneCurrentValue%2A> 方法都會產生 Freezable 的深層複本 \(Deep Copy\)。  如果 Freezable 包含其他凍結的 Freezable 物件，則也會一併複製它們，並將它們製作為可修改的。  例如，如果複製凍結的 <xref:System.Windows.Media.PathGeometry> 以將它製作為可修改的，則也會一併複製它所含的圖形和區段，並將它們製作為可修改的。  
+ <span data-ttu-id="3cd47-169"><xref:System.Windows.Freezable.Clone%2A>和<xref:System.Windows.Freezable.CloneCurrentValue%2A>方法會產生可凍結的深層複本。</span><span class="sxs-lookup"><span data-stu-id="3cd47-169">The <xref:System.Windows.Freezable.Clone%2A> and <xref:System.Windows.Freezable.CloneCurrentValue%2A> methods produce deep copies of the freezable.</span></span> <span data-ttu-id="3cd47-170">如果可凍結包含其他凍結可凍結的物件，也會複製，而進行修改。</span><span class="sxs-lookup"><span data-stu-id="3cd47-170">If the freezable contains other frozen freezable objects, they are also cloned and made modifiable.</span></span> <span data-ttu-id="3cd47-171">例如，如果您複製凍結<xref:System.Windows.Media.PathGeometry>，使它可修改，數據和它所包含的區段會也複製並進行修改。</span><span class="sxs-lookup"><span data-stu-id="3cd47-171">For example, if you clone a frozen <xref:System.Windows.Media.PathGeometry> to make it modifiable, the figures and segments it contains are also copied and made modifiable.</span></span>  
   
 <a name="createyourownfreezableclass"></a>   
-## 建立您自己的 Freezable 類別  
- 衍生自 <xref:System.Windows.Freezable> 的類別會獲得下列功能。  
+## <a name="creating-your-own-freezable-class"></a><span data-ttu-id="3cd47-172">建立您自己的可凍結類別</span><span class="sxs-lookup"><span data-stu-id="3cd47-172">Creating Your Own Freezable Class</span></span>  
+ <span data-ttu-id="3cd47-173">類別衍生自<xref:System.Windows.Freezable>獲得下列功能。</span><span class="sxs-lookup"><span data-stu-id="3cd47-173">A class that derives from <xref:System.Windows.Freezable> gains the following features.</span></span>  
   
--   特殊狀態：唯讀 \(凍結\) 和可寫入狀態。  
+-   <span data-ttu-id="3cd47-174">特殊狀態： 唯讀 （凍結） 和可寫入的狀態。</span><span class="sxs-lookup"><span data-stu-id="3cd47-174">Special states: a read-only (frozen) and a writable state.</span></span>  
   
--   執行緒安全：凍結的 <xref:System.Windows.Freezable> 可以供多個執行緒共用。  
+-   <span data-ttu-id="3cd47-175">執行緒安全： 凍結<xref:System.Windows.Freezable>可以跨執行緒共用。</span><span class="sxs-lookup"><span data-stu-id="3cd47-175">Thread safety: a frozen <xref:System.Windows.Freezable> can be shared across threads.</span></span>  
   
--   詳細變更告知：不同於其他 <xref:System.Windows.DependencyObject>，Freezable 物件會在子屬性值變更時提供變更告知。  
+-   <span data-ttu-id="3cd47-176">詳細的變更通知： 不同於其他<xref:System.Windows.DependencyObject>s，子屬性值變更時，可凍結的物件提供變更通知。</span><span class="sxs-lookup"><span data-stu-id="3cd47-176">Detailed change notification: Unlike other <xref:System.Windows.DependencyObject>s, Freezable objects provide change notifications when sub-property values change.</span></span>  
   
--   容易複製：Freezable 類別已實作數種可產生深層複製品的方法。  
+-   <span data-ttu-id="3cd47-177">容易複製： Freezable 的類別已實作數個方法可產生深層複製品。</span><span class="sxs-lookup"><span data-stu-id="3cd47-177">Easy cloning: the Freezable class has already implemented several methods that produce deep clones.</span></span>  
   
- <xref:System.Windows.Freezable> 的型別為 <xref:System.Windows.DependencyObject>，因此使用相依性屬性系統。  您的類別屬性並不需要是相依性屬性，但因為 <xref:System.Windows.Freezable> 類別的本質是以相依性屬性來設計的，所以使用相依性屬性可以減少需要撰寫的程式碼數量。  如需相依性屬性系統的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ <span data-ttu-id="3cd47-178">A<xref:System.Windows.Freezable>是一種<xref:System.Windows.DependencyObject>，因此會使用相依性屬性系統。</span><span class="sxs-lookup"><span data-stu-id="3cd47-178">A <xref:System.Windows.Freezable> is a type of <xref:System.Windows.DependencyObject>, and therefore uses the dependency property system.</span></span> <span data-ttu-id="3cd47-179">類別屬性不必是相依性屬性，但使用相依性屬性將會減少您需要撰寫，因為程式碼數量<xref:System.Windows.Freezable>類別的設計將記住的相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="3cd47-179">Your class properties don't have to be dependency properties, but using dependency properties will reduce the amount of code you have to write, because the <xref:System.Windows.Freezable> class was designed with dependency properties in mind.</span></span> <span data-ttu-id="3cd47-180">如需相依性屬性系統的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="3cd47-180">For more information about the dependency property system, see the [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  
   
- 每個 <xref:System.Windows.Freezable> 子類別都會覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 方法。  如果類別的所有資料都使用相依性屬性，則作業已完成。  
+ <span data-ttu-id="3cd47-181">每個<xref:System.Windows.Freezable>子類別必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-181">Every <xref:System.Windows.Freezable> subclass must override the <xref:System.Windows.Freezable.CreateInstanceCore%2A> method.</span></span> <span data-ttu-id="3cd47-182">如果您的類別會使用相依性屬性的所有資料，就完成了。</span><span class="sxs-lookup"><span data-stu-id="3cd47-182">If your class uses dependency properties for all its data, you're finished.</span></span>  
   
- 如果類別包含非相依性屬性資料成員，則也必須覆寫下列方法：  
+ <span data-ttu-id="3cd47-183">如果您的類別包含非相依性屬性資料成員，您也必須覆寫下列方法：</span><span class="sxs-lookup"><span data-stu-id="3cd47-183">If your class contains non-dependency property data members, you must also override the following methods:</span></span>  
   
 -   <xref:System.Windows.Freezable.CloneCore%2A>  
   
@@ -153,23 +156,23 @@ mc:Ignorable="PresentationOptions"
   
 -   <xref:System.Windows.Freezable.FreezeCore%2A>  
   
- 您也必須觀察下列規則，以存取和寫入至非相依性屬性的資料成員：  
+ <span data-ttu-id="3cd47-184">您也必須遵守下列規則，以存取和寫入至不是相依性屬性的資料成員：</span><span class="sxs-lookup"><span data-stu-id="3cd47-184">You must also observe the following rules for accessing and writing to data members that are not dependency properties:</span></span>  
   
--   在任何讀取非相依性屬性資料成員之 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 的開頭，呼叫 <xref:System.Windows.Freezable.ReadPreamble%2A> 方法。  
+-   <span data-ttu-id="3cd47-185">在任何開頭[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]讀取非相依性屬性資料成員，請呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-185">At the beginning of any [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] that reads non-dependency property data members, call the <xref:System.Windows.Freezable.ReadPreamble%2A> method.</span></span>  
   
--   在任何寫入非相依性屬性資料成員之 API 的開頭，呼叫 <xref:System.Windows.Freezable.WritePreamble%2A> 方法   \(在 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 中呼叫 <xref:System.Windows.Freezable.WritePreamble%2A> 之後，如果也要讀取非相依性屬性資料成員，則不需要額外呼叫 <xref:System.Windows.Freezable.ReadPreamble%2A>\)。  
+-   <span data-ttu-id="3cd47-186">在開始寫入非相依性屬性資料成員的任何 API 時，呼叫<xref:System.Windows.Freezable.WritePreamble%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-186">At the beginning of any API that writes non-dependency property data members, call the <xref:System.Windows.Freezable.WritePreamble%2A> method.</span></span> <span data-ttu-id="3cd47-187">(一旦您已呼叫<xref:System.Windows.Freezable.WritePreamble%2A>中[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，您不需要進行額外的呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>如果您也可以讀取非相依性屬性資料成員。)</span><span class="sxs-lookup"><span data-stu-id="3cd47-187">(Once you've called <xref:System.Windows.Freezable.WritePreamble%2A> in an [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], you don't need to make an additional call to <xref:System.Windows.Freezable.ReadPreamble%2A> if you also read non-dependency property data members.)</span></span>  
   
--   在結束寫入至非相依性屬性資料成員的方法之前，呼叫 <xref:System.Windows.Freezable.WritePostscript%2A> 方法。  
+-   <span data-ttu-id="3cd47-188">呼叫<xref:System.Windows.Freezable.WritePostscript%2A>方法，然後再結束寫入非相依性屬性資料成員的方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-188">Call the <xref:System.Windows.Freezable.WritePostscript%2A> method before exiting methods that write to non-dependency property data members.</span></span>  
   
- 如果類別包含為 <xref:System.Windows.DependencyObject> 物件的非相依性屬性資料成員，則每次變更它們的值時 \(即使是將成員設定為 `null`\)，也必須呼叫 <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> 方法。  
+ <span data-ttu-id="3cd47-189">如果您的類別包含的非相依性屬性的資料成員<xref:System.Windows.DependencyObject>物件，您也必須呼叫<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>方法每次您變更其值，即使您正在設定成員`null`。</span><span class="sxs-lookup"><span data-stu-id="3cd47-189">If your class contains non-dependency-property data members that are <xref:System.Windows.DependencyObject> objects, you must also call the <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> method each time you change on of their values, even if you're setting the member to `null`.</span></span>  
   
 > [!NOTE]
->  十分重要的是透過呼叫基本實作開始每個覆寫的 <xref:System.Windows.Freezable> 方法。  
+>  <span data-ttu-id="3cd47-190">它是非常重要，您會開始每<xref:System.Windows.Freezable>您覆寫呼叫基底實作的方法。</span><span class="sxs-lookup"><span data-stu-id="3cd47-190">It's very important that you begin each <xref:System.Windows.Freezable> method you override with a call to the base implementation.</span></span>  
   
- 如需自訂 <xref:System.Windows.Freezable> 類別的範例，請參閱[自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981) \(英文\)。  
+ <span data-ttu-id="3cd47-191">如需自訂的範例<xref:System.Windows.Freezable>類別，請參閱[自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981)。</span><span class="sxs-lookup"><span data-stu-id="3cd47-191">For an example of a custom <xref:System.Windows.Freezable> class, see the [Custom Animation Sample](http://go.microsoft.com/fwlink/?LinkID=159981).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Freezable>   
- [自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981)   
- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a><span data-ttu-id="3cd47-192">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3cd47-192">See Also</span></span>  
+ <xref:System.Windows.Freezable>  
+ [<span data-ttu-id="3cd47-193">自訂動畫範例</span><span class="sxs-lookup"><span data-stu-id="3cd47-193">Custom Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159981)  
+ [<span data-ttu-id="3cd47-194">相依性屬性概觀</span><span class="sxs-lookup"><span data-stu-id="3cd47-194">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="3cd47-195">自訂相依性屬性</span><span class="sxs-lookup"><span data-stu-id="3cd47-195">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

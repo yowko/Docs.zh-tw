@@ -1,65 +1,68 @@
 ---
-title: "探索 Proxy 範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "探索 Proxy 範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f16cf2ffc9e03308ce3b8a5e967c29e624ffd1af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 探索 Proxy 範例
-此範例示範如何建立探索 Proxy 的實作以儲存現有服務的相關資訊，以及用戶端如何查詢該 Proxy 的資訊。此範例包含三個專案：  
+# <a name="discovery-proxy-sample"></a><span data-ttu-id="df6e8-102">探索 Proxy 範例</span><span class="sxs-lookup"><span data-stu-id="df6e8-102">Discovery Proxy Sample</span></span>
+<span data-ttu-id="df6e8-103">此範例示範如何建立探索 Proxy 的實作以儲存現有服務的相關資訊，以及用戶端如何查詢該 Proxy 的資訊。</span><span class="sxs-lookup"><span data-stu-id="df6e8-103">This sample shows how to create an implementation of a Discovery proxy to store information about existing services and how clients can query that proxy for information.</span></span> <span data-ttu-id="df6e8-104">此範例包含三個專案：</span><span class="sxs-lookup"><span data-stu-id="df6e8-104">This sample consists of three projects:</span></span>  
   
--   **服務**：簡易的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 計算機服務，可向探索 Proxy 登錄其本身。  
+-   <span data-ttu-id="df6e8-105">**服務**： 簡單[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]向探索 proxy 註冊其本身的計算機服務。</span><span class="sxs-lookup"><span data-stu-id="df6e8-105">**Service**: A simple [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] calculator service that registers itself with the discovery proxy.</span></span>  
   
--   **探索 Proxy**：探索 Proxy 服務的實作。  
+-   <span data-ttu-id="df6e8-106">**探索 Proxy**： 探索 proxy 服務的實作。</span><span class="sxs-lookup"><span data-stu-id="df6e8-106">**Discovery Proxy**: The implementation of a discovery proxy service.</span></span>  
   
--   **用戶端**：呼叫探索 Proxy 搜尋服務的 WCF 用戶端應用程式。  
+-   <span data-ttu-id="df6e8-107">**用戶端**： 呼叫探索 proxy 搜尋服務的 WCF 用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="df6e8-107">**Client**: A WCF client application that calls the discovery proxy to search for services.</span></span>  
   
-## 示範  
- 探索 Proxy 實作  
+## <a name="demonstrates"></a><span data-ttu-id="df6e8-108">示範</span><span class="sxs-lookup"><span data-stu-id="df6e8-108">Demonstrates</span></span>  
+ <span data-ttu-id="df6e8-109">探索 Proxy 實作</span><span class="sxs-lookup"><span data-stu-id="df6e8-109">Discovery proxy implementation</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="df6e8-110">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="df6e8-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="df6e8-111">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="df6e8-111">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="df6e8-112">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="df6e8-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="df6e8-113">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="df6e8-113">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   
-## DiscoveryProxy  
- 在 Program.cs 檔案的 `Main` 方法中，此範例會示範如何裝載 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 類型的服務。它會公開兩個端點，其中一個屬於 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 類型，而另一個屬於 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 類型。兩個端點都使用 TCP 做為傳輸。<xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 會接聽 `probeEndpointAddress` 參數所指定的 URI，這是用戶端可以傳送探查訊息以查詢 Proxy 中之資料的位置。<xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 會接聽 `announcementEndpointAddress` 參數所指定的 URI。這是 Proxy 為公告所接聽的位置。收到線上公告時，Proxy 會將服務加入至其快取，而收到離線公告時，則會從其快取移除服務。  
+## <a name="discoveryproxy"></a><span data-ttu-id="df6e8-114">DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="df6e8-114">DiscoveryProxy</span></span>  
+ <span data-ttu-id="df6e8-115">在 Program.cs 檔案的 `Main` 方法中，此範例會示範如何裝載 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 類型的服務。</span><span class="sxs-lookup"><span data-stu-id="df6e8-115">In the `Main` method of the Program.cs file, the sample shows how a service of type <xref:System.ServiceModel.Discovery.DiscoveryProxy> is hosted.</span></span> <span data-ttu-id="df6e8-116">它會公開兩個端點，其中一個屬於 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 類型，而另一個屬於 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 類型。</span><span class="sxs-lookup"><span data-stu-id="df6e8-116">It exposes two endpoints, one of type <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> and another of type <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>.</span></span> <span data-ttu-id="df6e8-117">兩個端點都使用 TCP 做為傳輸。</span><span class="sxs-lookup"><span data-stu-id="df6e8-117">Both of the endpoints use TCP as a transport.</span></span> <span data-ttu-id="df6e8-118"><xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 會接聽 `probeEndpointAddress` 參數所指定的 URI，這是用戶端可以傳送探查訊息以查詢 Proxy 中之資料的位置。</span><span class="sxs-lookup"><span data-stu-id="df6e8-118">The <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> is listening at the URI specified by the `probeEndpointAddress` parameter, this is where clients can send probe messages to query the proxy for its data.</span></span> <span data-ttu-id="df6e8-119"><xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 會接聽 `announcementEndpointAddress` 參數所指定的 URI。</span><span class="sxs-lookup"><span data-stu-id="df6e8-119">The <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> is listening at the URI specified by the `announcementEndpointAddress` parameter.</span></span> <span data-ttu-id="df6e8-120">這是 Proxy 為公告所接聽的位置。</span><span class="sxs-lookup"><span data-stu-id="df6e8-120">This is where the proxy listens to for announcements.</span></span> <span data-ttu-id="df6e8-121">收到線上公告時，Proxy 會將服務加入至其快取，而收到離線公告時，則會從其快取移除服務。</span><span class="sxs-lookup"><span data-stu-id="df6e8-121">When an online announcement is received, the proxy adds the service to its cache and when an offline announcement is received it removes the service from its cache.</span></span>  
   
- DiscoveryProxy.cs 包含 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 的實作。Proxy 必須繼承自 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase> 類別，而且需要 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 的實作。在具現化時，Proxy 會建立新的 <xref:Systems.Collections.Generic.Dictionary%601>，用來儲存它所知道的項目。  
+ <span data-ttu-id="df6e8-122">DiscoveryProxy.cs 包含 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 的實作。</span><span class="sxs-lookup"><span data-stu-id="df6e8-122">The DiscoveryProxy.cs contains the implementation of the <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="df6e8-123">Proxy 必須繼承自 <xref:System.Object> 類別，而且需要 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 的實作。</span><span class="sxs-lookup"><span data-stu-id="df6e8-123">The Proxy must inherit from the <xref:System.Object> class and requires an implementation of <xref:System.Runtime.Remoting.Messaging.AsyncResult>.</span></span> <span data-ttu-id="df6e8-124">在具現化時，Proxy 會建立新的 <xref:System.Collections.Generic.Dictionary%602>，用來儲存它所知道的項目。</span><span class="sxs-lookup"><span data-stu-id="df6e8-124">At instantiation, the Proxy creates a new <xref:System.Collections.Generic.Dictionary%602>, which it uses to store elements it knows about.</span></span>  
   
- 此檔案分成兩個區域，分別是「Proxy 快取方法」和「探索 Proxy 實作」。「Proxy 快取方法」區域包含用來更新 <xref:Systems.Collections.Generic.Dictionary%601>、針對 <xref:Systems.Collections.Generic.Dictionary%601> 執行查詢，以及為使用者列印資料的方法。「探索 Proxy 實作」區域包含「公告」和「探查」功能所需的覆寫方法。這些方法會定義 Proxy 收到線上公告、離線公告或探查訊息後所採取的動作。  
+ <span data-ttu-id="df6e8-125">此檔案分成兩個區域，分別是「Proxy 快取方法」和「探索 Proxy 實作」。</span><span class="sxs-lookup"><span data-stu-id="df6e8-125">The file is divided into two regions, Proxy Cache Methods and Discovery Proxy Implementation.</span></span> <span data-ttu-id="df6e8-126">「Proxy 快取方法」區域包含用來更新 <xref:System.Collections.Generic.Dictionary%602>、針對 <xref:System.Collections.Generic.Dictionary%602> 執行查詢，以及為使用者列印資料的方法。</span><span class="sxs-lookup"><span data-stu-id="df6e8-126">The Proxy Cache Methods region contains methods used to update the <xref:System.Collections.Generic.Dictionary%602>, perform queries against the <xref:System.Collections.Generic.Dictionary%602>, and print the data for users.</span></span> <span data-ttu-id="df6e8-127">「探索 Proxy 實作」區域包含「公告」和「探查」功能所需的覆寫方法。</span><span class="sxs-lookup"><span data-stu-id="df6e8-127">The Discovery Proxy Implementation region contains the overridden methods required for the Announcement and Probe functionality.</span></span> <span data-ttu-id="df6e8-128">這些方法會定義 Proxy 收到線上公告、離線公告或探查訊息後所採取的動作。</span><span class="sxs-lookup"><span data-stu-id="df6e8-128">They define the actions taken by a proxy after receiving an Online Announcement, an Offline Announcement, or a Probe message.</span></span>  
   
-## 服務  
- 在服務專案的 Program.cs 檔案中，相同的 URI 用於其公告端點，做為探索 Proxy。這是因為服務使用端點傳送公告，而 Proxy 使用端點接收公告。服務會使用 <xref:System.ServiceModel.Discovery.DiscoveryBehavior>，並在其中加入公告端點。  
+## <a name="service"></a><span data-ttu-id="df6e8-129">服務</span><span class="sxs-lookup"><span data-stu-id="df6e8-129">Service</span></span>  
+ <span data-ttu-id="df6e8-130">在服務專案的 Program.cs 檔案中，相同的 URI 用於其公告端點，做為探索 Proxy。</span><span class="sxs-lookup"><span data-stu-id="df6e8-130">In the Program.cs file in the Service project, the same URI is used for its announcement endpoint as the discovery proxy.</span></span> <span data-ttu-id="df6e8-131">這是因為服務使用端點傳送公告，而 Proxy 使用端點接收公告。</span><span class="sxs-lookup"><span data-stu-id="df6e8-131">This is because service uses the endpoint for sending the announcements, while the proxy uses it for receiving them.</span></span> <span data-ttu-id="df6e8-132">服務會使用 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>，並在其中加入公告端點。</span><span class="sxs-lookup"><span data-stu-id="df6e8-132">The service uses the <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> and adds an announcement endpoint to it.</span></span>  
   
-## 用戶端  
- 用戶端專案會針對其探查端點使用相同的 URI 做為 Proxy。這是因為此案例中的探查也正在明確地單點傳送到 Proxy 上可用的端點。用戶端會連接至這個已知的位址，然後針對服務進行查詢。一旦找到服務，就會連接至該服務。  
+## <a name="client"></a><span data-ttu-id="df6e8-133">用戶端</span><span class="sxs-lookup"><span data-stu-id="df6e8-133">Client</span></span>  
+ <span data-ttu-id="df6e8-134">用戶端專案會針對其探查端點使用相同的 URI 做為 Proxy。</span><span class="sxs-lookup"><span data-stu-id="df6e8-134">The Client project uses the same URI for its probe endpoint as the Proxy.</span></span> <span data-ttu-id="df6e8-135">這是因為此案例中的探查也正在明確地單點傳送到 Proxy 上可用的端點。</span><span class="sxs-lookup"><span data-stu-id="df6e8-135">This is because the probes in this scenario are also being unicast specifically to the endpoint available on the proxy.</span></span> <span data-ttu-id="df6e8-136">用戶端會連接至這個已知的位址，然後針對服務進行查詢。</span><span class="sxs-lookup"><span data-stu-id="df6e8-136">The Client connects to this well-known address and then queries it for the service.</span></span> <span data-ttu-id="df6e8-137">一旦找到服務，就會連接至該服務。</span><span class="sxs-lookup"><span data-stu-id="df6e8-137">Once it has found the service it connects to it.</span></span>  
   
-#### 若要使用這個範例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="df6e8-138">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="df6e8-138">To use this sample</span></span>  
   
-1.  載入 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中的專案方案，然後建立專案。  
+1.  <span data-ttu-id="df6e8-139">在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中載入專案方案，然後建立專案。</span><span class="sxs-lookup"><span data-stu-id="df6e8-139">Load the project solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and build the project.</span></span>  
   
-2.  請先執行探索 Proxy 應用程式，這通常位於 \[方案基底目錄\]\\DiscoveryProxy\\bin\\debug。探索 Proxy 必須先執行，因為 TCP 公告端點必須為服務啟動，才能傳送其公告。  
+2.  <span data-ttu-id="df6e8-140">請先執行探索 Proxy 應用程式，這通常位於 [方案基底目錄]\DiscoveryProxy\bin\debug。</span><span class="sxs-lookup"><span data-stu-id="df6e8-140">First run the Discovery Proxy application, generated in [solution base directory]\DiscoveryProxy\bin\debug.</span></span> <span data-ttu-id="df6e8-141">探索 Proxy 必須先執行，因為 TCP 公告端點必須為服務啟動，才能傳送其公告。</span><span class="sxs-lookup"><span data-stu-id="df6e8-141">The Discovery Proxy must run first because TCP announcement endpoints must be up for the service to send its announcements.</span></span>  
   
-3.  接著，執行服務應用程式，這通常位於 \[方案基底目錄\]\\Service\\bin\\debug。啟動時，服務會將公告傳送至探索 Proxy 的公告端點，並在 Proxy 的快取中登錄。  
+3.  <span data-ttu-id="df6e8-142">接著，執行服務應用程式，這通常位於 [方案基底目錄]\Service\bin\debug。</span><span class="sxs-lookup"><span data-stu-id="df6e8-142">Second, run the service application generated in [solution base directory]\Service\bin\debug.</span></span> <span data-ttu-id="df6e8-143">啟動時，服務會將公告傳送至探索 Proxy 的公告端點，並在 Proxy 的快取中登錄。</span><span class="sxs-lookup"><span data-stu-id="df6e8-143">At start-up, the service sends an announcement to the announcement endpoint of the discovery proxy and is registered in the proxy’s cache.</span></span>  
   
-4.  再來，執行用戶端應用程式，這通常位於 \[方案基底目錄\]\\Client\\bin\\debug。用戶端會查詢 Proxy、取得服務位址，然後連接至該服務。  
+4.  <span data-ttu-id="df6e8-144">再來，執行用戶端應用程式，這通常位於 [方案基底目錄]\Client\bin\debug。</span><span class="sxs-lookup"><span data-stu-id="df6e8-144">Next, run the client application, generated in [solution base directory]\Client\bin\debug.</span></span> <span data-ttu-id="df6e8-145">用戶端會查詢 Proxy、取得服務位址，然後連接至該服務。</span><span class="sxs-lookup"><span data-stu-id="df6e8-145">The client queries the proxy, gets the service address and then connects to the service.</span></span>  
   
-5.  最後，終止用戶端、服務，以及 Proxy。Proxy 必須一直執行，才能接收服務的離線公告。  
+5.  <span data-ttu-id="df6e8-146">最後，終止用戶端、服務，以及 Proxy。</span><span class="sxs-lookup"><span data-stu-id="df6e8-146">Lastly, terminate the client, service and then the proxy.</span></span> <span data-ttu-id="df6e8-147">Proxy 必須一直執行，才能接收服務的離線公告。</span><span class="sxs-lookup"><span data-stu-id="df6e8-147">The proxy must be running for it to receive the service's offline announcement.</span></span>  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="df6e8-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="df6e8-148">See Also</span></span>

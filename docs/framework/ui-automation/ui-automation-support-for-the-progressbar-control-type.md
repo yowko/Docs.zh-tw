@@ -1,92 +1,95 @@
 ---
-title: "UI Automation Support for the ProgressBar Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Progress Bar"
-  - "ProgressBar control type"
-  - "UI Automation, Progress Bar control type"
+title: "ProgressBar 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Progress Bar
+- ProgressBar control type
+- UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 84ff5d1d59204fec4bbddd43dd834d1c9b22406d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the ProgressBar Control Type
+# <a name="ui-automation-support-for-the-progressbar-control-type"></a><span data-ttu-id="6a8ac-102">ProgressBar 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="6a8ac-102">UI Automation Support for the ProgressBar Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="6a8ac-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="6a8ac-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供進度列控制項類型之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援的相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值、控制項模式和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的特定指導方針。  
+ <span data-ttu-id="6a8ac-105">本主題提供進度列控制項類型之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the ProgressBar control type.</span></span> <span data-ttu-id="6a8ac-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="6a8ac-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值、控制項模式和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的特定指導方針。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values, control patterns, and [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events.</span></span>  
   
- 進度列控制項是實作進度列控制項類型的控制項範例。 進度列控制項可用來表示長時間作業的進度。 此控制項包含一個矩形，隨著作業的進度，會逐漸填滿系統的醒目提示色彩。  
+ <span data-ttu-id="6a8ac-108">進度列控制項是實作進度列控制項類型的控制項範例。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-108">Progress bar controls are an example of controls that implement the ProgressBar control type.</span></span> <span data-ttu-id="6a8ac-109">進度列控制項可用來表示長時間作業的進度。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-109">Progress bar controls are used to indicate the progress of a lengthy operation.</span></span> <span data-ttu-id="6a8ac-110">此控制項包含一個矩形，隨著作業的進度，會逐漸填滿系統的醒目提示色彩。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-110">The control consists of a rectangle that is gradually filled with the system highlight color as an operation progresses.</span></span>  
   
- 下列章節會定義進度列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用於所有清單控制項。  
+ <span data-ttu-id="6a8ac-111">下列章節會定義進度列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-111">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the ProgressBar control type.</span></span> <span data-ttu-id="6a8ac-112">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有清單控制項。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-112">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all list controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述進度列控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="6a8ac-113">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="6a8ac-113">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="6a8ac-114">下表描述進度列控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-114">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to progress bar controls and describes what can be contained in each view.</span></span> <span data-ttu-id="6a8ac-115">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-115">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|進度列|進度列|  
+|<span data-ttu-id="6a8ac-116">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="6a8ac-116">Control View</span></span>|<span data-ttu-id="6a8ac-117">內容檢視</span><span class="sxs-lookup"><span data-stu-id="6a8ac-117">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="6a8ac-118">進度列</span><span class="sxs-lookup"><span data-stu-id="6a8ac-118">ProgressBar</span></span>|<span data-ttu-id="6a8ac-119">進度列</span><span class="sxs-lookup"><span data-stu-id="6a8ac-119">ProgressBar</span></span>|  
   
- 進度列控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項或內容檢視中沒有任何子系。  
+ <span data-ttu-id="6a8ac-120">進度列控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項或內容檢視中沒有任何子系。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-120">The progress bar controls do not have any children in the control or content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與進度列控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="6a8ac-121">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="6a8ac-121">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="6a8ac-122">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與進度列控制項特別有關。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-122">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to progress bar controls.</span></span> <span data-ttu-id="6a8ac-123">如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-123">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|進度列控制項的名稱通常來自靜態文字標籤。 如果沒有靜態文字標籤，應用程式開發人員就必須公開 `Name` 屬性的值。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|請參閱備註。|如果有靜態文字標籤，那麼這個屬性必須公開該控制項的參考。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ProgressBar|此值與所有使用者介面架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「進度列」|對應到進度列控制項類型的當地語系化字串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|此進度列控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此進度列控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="6a8ac-124"> 屬性</span><span class="sxs-lookup"><span data-stu-id="6a8ac-124"> Property</span></span>|<span data-ttu-id="6a8ac-125">值</span><span class="sxs-lookup"><span data-stu-id="6a8ac-125">Value</span></span>|<span data-ttu-id="6a8ac-126">備註</span><span class="sxs-lookup"><span data-stu-id="6a8ac-126">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="6a8ac-127">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-127">See notes.</span></span>|<span data-ttu-id="6a8ac-128">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-128">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="6a8ac-129">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-129">See notes.</span></span>|<span data-ttu-id="6a8ac-130">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-130">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="6a8ac-131">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-131">See notes.</span></span>|<span data-ttu-id="6a8ac-132">如果有週框即受支援。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-132">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="6a8ac-133">如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-133">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="6a8ac-134">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-134">See notes.</span></span>|<span data-ttu-id="6a8ac-135">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-135">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="6a8ac-136">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-136">See notes.</span></span>|<span data-ttu-id="6a8ac-137">進度列控制項的名稱通常來自靜態文字標籤。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-137">The progress bar control typically gets its name from a static text label.</span></span> <span data-ttu-id="6a8ac-138">如果沒有靜態文字標籤，應用程式開發人員就必須公開 `Name` 屬性的值。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-138">If there is not a static text label the application developer must expose a value for the `Name` property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="6a8ac-139">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-139">See notes.</span></span>|<span data-ttu-id="6a8ac-140">如果有靜態文字標籤，那麼這個屬性必須公開該控制項的參考。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-140">If there is a static text label then this property must expose a reference to that control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="6a8ac-141">進度列</span><span class="sxs-lookup"><span data-stu-id="6a8ac-141">ProgressBar</span></span>|<span data-ttu-id="6a8ac-142">此值與所有使用者介面架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-142">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="6a8ac-143">「進度列」</span><span class="sxs-lookup"><span data-stu-id="6a8ac-143">"progress bar"</span></span>|<span data-ttu-id="6a8ac-144">對應到進度列控制項類型的當地語系化字串。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-144">Localized string corresponding to the ProgressBar control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="6a8ac-145">True</span><span class="sxs-lookup"><span data-stu-id="6a8ac-145">True</span></span>|<span data-ttu-id="6a8ac-146">此進度列控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-146">The progress bar control is always included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="6a8ac-147">True</span><span class="sxs-lookup"><span data-stu-id="6a8ac-147">True</span></span>|<span data-ttu-id="6a8ac-148">此進度列控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-148">The progress bar control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
-## 必要的使用者介面自動化控制項模式和屬性  
- 下表列出進度列控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns-and-properties"></a><span data-ttu-id="6a8ac-149">必要的使用者介面自動化控制項模式和屬性</span><span class="sxs-lookup"><span data-stu-id="6a8ac-149">Required UI Automation Control Patterns and Properties</span></span>  
+ <span data-ttu-id="6a8ac-150">下表列出進度列控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-150">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by progress bar controls.</span></span> <span data-ttu-id="6a8ac-151">如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-151">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式\/模式屬性|支援\/值|備註|  
-|-----------------|-----------|--------|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|以文字表示進度的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IValueProvider>。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|True|這個屬性的值一律為 True。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|請參閱備註。|此屬性會公開進度列控制項的文字進度。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|視情況而定|使用數值範圍的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider>。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|0.0|這個屬性的值是控制項可以設定的最小值。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|100.0|這個屬性的值是控制項可以設定的最大值。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|NaN|這個屬性不是必要項，因為進度列控制項是唯讀的。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider.LargeChange%2A>|NaN|這個屬性不是必要項，因為進度列控制項是唯讀的。|  
+|<span data-ttu-id="6a8ac-152">控制項模式/模式屬性</span><span class="sxs-lookup"><span data-stu-id="6a8ac-152">Control Pattern/Pattern Property</span></span>|<span data-ttu-id="6a8ac-153">支援/值</span><span class="sxs-lookup"><span data-stu-id="6a8ac-153">Support/Value</span></span>|<span data-ttu-id="6a8ac-154">備註</span><span class="sxs-lookup"><span data-stu-id="6a8ac-154">Notes</span></span>|  
+|---------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|<span data-ttu-id="6a8ac-155">視情況而定</span><span class="sxs-lookup"><span data-stu-id="6a8ac-155">Depends</span></span>|<span data-ttu-id="6a8ac-156">以文字表示進度的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IValueProvider>。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-156">Progress bar controls that give a textual indication of progress must implement <xref:System.Windows.Automation.Provider.IValueProvider>.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|<span data-ttu-id="6a8ac-157">True</span><span class="sxs-lookup"><span data-stu-id="6a8ac-157">True</span></span>|<span data-ttu-id="6a8ac-158">這個屬性的值一律為 True。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-158">The value for this property is always True.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|<span data-ttu-id="6a8ac-159">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-159">See notes.</span></span>|<span data-ttu-id="6a8ac-160">此屬性會公開進度列控制項的文字進度。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-160">This property exposes textual progress of a progress bar control.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|<span data-ttu-id="6a8ac-161">視情況而定</span><span class="sxs-lookup"><span data-stu-id="6a8ac-161">Depends</span></span>|<span data-ttu-id="6a8ac-162">使用數值範圍的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider>。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-162">Progress bar controls that take a numeric range must implement <xref:System.Windows.Automation.Provider.IRangeValueProvider></span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|<span data-ttu-id="6a8ac-163">0.0</span><span class="sxs-lookup"><span data-stu-id="6a8ac-163">0.0</span></span>|<span data-ttu-id="6a8ac-164">這個屬性的值是控制項可以設定的最小值。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-164">The value of this property is the smallest value that the control can be set to.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|<span data-ttu-id="6a8ac-165">100.0</span><span class="sxs-lookup"><span data-stu-id="6a8ac-165">100.0</span></span>|<span data-ttu-id="6a8ac-166">這個屬性的值是控制項可以設定的最大值。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-166">The value of this property is the largest value that the control can be set to.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|<span data-ttu-id="6a8ac-167">NaN</span><span class="sxs-lookup"><span data-stu-id="6a8ac-167">NaN</span></span>|<span data-ttu-id="6a8ac-168">這個屬性不是必要項，因為進度列控制項是唯讀的。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-168">This property is not required because progress bar controls are read-only.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider.LargeChange%2A>|<span data-ttu-id="6a8ac-169">NaN</span><span class="sxs-lookup"><span data-stu-id="6a8ac-169">NaN</span></span>|<span data-ttu-id="6a8ac-170">這個屬性不是必要項，因為進度列控制項是唯讀的。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-170">This property is not required because progress bar controls are read-only.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列出所有進度列控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md) 事件的詳細資訊，請參閱  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="6a8ac-171">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="6a8ac-171">Required UI Automation Events</span></span>  
+ <span data-ttu-id="6a8ac-172">下表列出所有進度列控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-172">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all progress bar controls.</span></span> <span data-ttu-id="6a8ac-173">如需 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)事件的詳細資訊，請參閱</span><span class="sxs-lookup"><span data-stu-id="6a8ac-173">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|視情況而定|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="6a8ac-174"> 事件</span><span class="sxs-lookup"><span data-stu-id="6a8ac-174"> Event</span></span>|<span data-ttu-id="6a8ac-175">支援</span><span class="sxs-lookup"><span data-stu-id="6a8ac-175">Support</span></span>|<span data-ttu-id="6a8ac-176">備註</span><span class="sxs-lookup"><span data-stu-id="6a8ac-176">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<span data-ttu-id="6a8ac-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="6a8ac-178">必要項</span><span class="sxs-lookup"><span data-stu-id="6a8ac-178">Required</span></span>|<span data-ttu-id="6a8ac-179">無</span><span class="sxs-lookup"><span data-stu-id="6a8ac-179">None</span></span>|  
+|<span data-ttu-id="6a8ac-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="6a8ac-181">必要項</span><span class="sxs-lookup"><span data-stu-id="6a8ac-181">Required</span></span>|<span data-ttu-id="6a8ac-182">無</span><span class="sxs-lookup"><span data-stu-id="6a8ac-182">None</span></span>|  
+|<span data-ttu-id="6a8ac-183"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-183"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="6a8ac-184">必要項</span><span class="sxs-lookup"><span data-stu-id="6a8ac-184">Required</span></span>|<span data-ttu-id="6a8ac-185">無</span><span class="sxs-lookup"><span data-stu-id="6a8ac-185">None</span></span>|  
+|<span data-ttu-id="6a8ac-186"><xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-186"><xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> property-changed event.</span></span>|<span data-ttu-id="6a8ac-187">必要項</span><span class="sxs-lookup"><span data-stu-id="6a8ac-187">Required</span></span>|<span data-ttu-id="6a8ac-188">無</span><span class="sxs-lookup"><span data-stu-id="6a8ac-188">None</span></span>|  
+|<span data-ttu-id="6a8ac-189"><xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="6a8ac-189"><xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> property-changed event.</span></span>|<span data-ttu-id="6a8ac-190">視情況而定</span><span class="sxs-lookup"><span data-stu-id="6a8ac-190">Depends</span></span>|<span data-ttu-id="6a8ac-191">無</span><span class="sxs-lookup"><span data-stu-id="6a8ac-191">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="6a8ac-192">必要項</span><span class="sxs-lookup"><span data-stu-id="6a8ac-192">Required</span></span>|<span data-ttu-id="6a8ac-193">無</span><span class="sxs-lookup"><span data-stu-id="6a8ac-193">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="6a8ac-194">必要項</span><span class="sxs-lookup"><span data-stu-id="6a8ac-194">Required</span></span>|<span data-ttu-id="6a8ac-195">無</span><span class="sxs-lookup"><span data-stu-id="6a8ac-195">None</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.ProgressBar>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="6a8ac-196">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a8ac-196">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.ProgressBar>  
+ [<span data-ttu-id="6a8ac-197">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="6a8ac-197">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="6a8ac-198">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="6a8ac-198">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

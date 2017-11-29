@@ -1,164 +1,165 @@
 ---
-title: "與資料繫結相關的介面 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料 [Windows Form], 資料繫結介面"
-  - "資料繫結, 介面"
-  - "IBindingList 介面, Windows Form 資料繫結"
-  - "IBindingListView 介面"
-  - "IDataErrorInfo 介面, Windows Form 資料繫結"
-  - "IEditableObject 介面, Windows Form 資料繫結"
-  - "IList 介面, Windows Form 資料繫結"
-  - "INotifyPropertyChanged 介面"
-  - "介面, Windows Form 資料繫結"
+title: "與資料繫結相關的介面"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], data-binding interfaces
+- INotifyPropertyChanged interface
+- IBindingListView interface
+- IList interface [Windows Forms], Windows Forms data binding
+- IBindingList interface [Windows Forms], Windows Forms data binding
+- interfaces [Windows Forms], Windows Forms data binding
+- IEditableObject interface [Windows Forms], Windows Forms data binding
+- data binding [Windows Forms], interfaces
+- IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8108cd3c5ae305b6def5324385cb12c94cd42774
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 與資料繫結相關的介面
-使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]，您可以建立許多不同的資料結構，以滿足應用程式和您所使用資料的繫結需求。  您可能會想建立自己的類別來提供或使用 Windows Form 中的資料。  這些物件能提供不同層次的功能和複雜度，從基本資料繫結到提供設計階段支援、錯誤檢查、變更告知，甚至對資料本身的變更提供結構性復原。  
+# <a name="interfaces-related-to-data-binding"></a><span data-ttu-id="4a765-102">與資料繫結相關的介面</span><span class="sxs-lookup"><span data-stu-id="4a765-102">Interfaces Related to Data Binding</span></span>
+<span data-ttu-id="4a765-103">透過 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]，您可以建立許多不同的資料結構，以滿足您正在使用之應用程式和資料的繫結需求。</span><span class="sxs-lookup"><span data-stu-id="4a765-103">With [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], you can create many different data structures to suit the binding needs of your application and the data you are working with.</span></span> <span data-ttu-id="4a765-104">您或許會想要建立自有類別以在 Windows Forms 中提供或取用資料。</span><span class="sxs-lookup"><span data-stu-id="4a765-104">You may want to create your own classes that provide or consume data in Windows Forms.</span></span> <span data-ttu-id="4a765-105">這些物件可以提供不同程度的功能和複雜度，從基本的資料繫結，到提供設計階段支援、錯誤檢查、變更通知，或甚至對資料本身所做變更的結構化回復支援。</span><span class="sxs-lookup"><span data-stu-id="4a765-105">These objects can offer varying levels of functionality and complexity, from basic data binding, to providing design-time support, error checking, change notification, or even support for a structured rollback of the changes made to the data itself.</span></span>  
   
-## 資枓繫結介面的消費者  
- 下列章節將說明介面物件的兩個群組。  第一個群組所列出的介面是由資料來源的作者在資料來源上實作。  這些介面是設計給資料來源的消費者使用，在大部分情況下是 Windows Form 控制項或元件。  第二個群組所列出的介面是由元件作者為使用者所設計。  當元件作者要建立一個支援資料繫結的元件給 Windows Form 的資料繫結引擎使用時，他們會使用這些介面。  您可以在與表單關聯的類別中實作這些介面來啟用資料繫結；每個案例所呈現的類別，都實作可與資料互動的介面。  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的快速應用程式開發 \(Rapid Application Development，RAD\) 資料設計經驗工具已經充分利用這個功能的優點。  
+## <a name="consumers-of-data-binding-interfaces"></a><span data-ttu-id="4a765-106">資料繫結介面的取用者</span><span class="sxs-lookup"><span data-stu-id="4a765-106">Consumers of Data-Binding Interfaces</span></span>  
+ <span data-ttu-id="4a765-107">下列幾節會說明兩個群組的介面物件。</span><span class="sxs-lookup"><span data-stu-id="4a765-107">Following sections describe two groups of interface objects.</span></span> <span data-ttu-id="4a765-108">第一個群組所列出的介面會由資料來源作者實作到資料來源上。</span><span class="sxs-lookup"><span data-stu-id="4a765-108">The first group lists interfaces that are implemented on data sources by data source authors.</span></span> <span data-ttu-id="4a765-109">這些介面是設計來供資料來源取用者取用，而在大部分情況下，這些取用者就是 Windows Forms 控制項或元件。</span><span class="sxs-lookup"><span data-stu-id="4a765-109">These interfaces are designed to be consumed by data source consumers, which are in most cases Windows Forms controls or components.</span></span> <span data-ttu-id="4a765-110">第二個群組所列出的介面則是設計來供元件作者使用。</span><span class="sxs-lookup"><span data-stu-id="4a765-110">The second group lists interfaces designed for use by component authors.</span></span> <span data-ttu-id="4a765-111">元件作者在建立可支援資料繫結的元件以供 Windows Forms 資料繫結引擎取用時，就會使用這些介面。</span><span class="sxs-lookup"><span data-stu-id="4a765-111">Component authors use these interfaces when they are creating a component that supports data binding to be consumed by the Windows Forms data-binding engine.</span></span> <span data-ttu-id="4a765-112">您可以在與表單相關聯的類別內實作這些介面，以啟用資料繫結；下列每個案例都會提出一個類別，該類別會實作可與資料互動的介面。</span><span class="sxs-lookup"><span data-stu-id="4a765-112">You can implement these interfaces within classes associated with your form to enable data binding; each case presents a class that implements an interface that enables interaction with data.</span></span> [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]<span data-ttu-id="4a765-113"> 快速應用程式開發 (RAD) 的資料設計體驗工具已利用這項功能。</span><span class="sxs-lookup"><span data-stu-id="4a765-113"> rapid application development (RAD) data design experience tools already take advantage of this functionality.</span></span>  
   
-### 由資料來源作者實作的介面  
- 下列介面是設計給 Windows Form 的控制項使用：  
+### <a name="interfaces-for-implementation-by-data-source-authors"></a><span data-ttu-id="4a765-114">可供資料來源作者實作的介面</span><span class="sxs-lookup"><span data-stu-id="4a765-114">Interfaces for Implementation by Data Source Authors</span></span>  
+ <span data-ttu-id="4a765-115">下列介面是設計來供 Windows Forms 控制項取用︰</span><span class="sxs-lookup"><span data-stu-id="4a765-115">The following interfaces are designed to be consumed by Windows Forms controls:</span></span>  
   
--   <xref:System.Collections.IList> 介面  
+-   <span data-ttu-id="4a765-116"><xref:System.Collections.IList>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-116"><xref:System.Collections.IList> interface</span></span>  
   
-     實作 <xref:System.Collections.IList> 介面的類別可以是 <xref:System.Array>、<xref:System.Collections.ArrayList> 或 <xref:System.Collections.CollectionBase>。  這些是 <xref:System.Object> 型別的項目之索引清單。  這些清單必須包含同質性型別，因為索引的第一個項目就決定了清單的型別。  <xref:System.Collections.IList> 只能在執行階段繫結。  
-  
-    > [!NOTE]
-    >  如果您想要建立一個商務物件的清單來與 Windows Form 繫結，您應該考慮使用 <xref:System.ComponentModel.BindingList%601>。  <xref:System.ComponentModel.BindingList%601> 是一個用來實作雙向 Windows Form 資料繫結所需之主要介面的擴充類別。  
-  
--   <xref:System.ComponentModel.IBindingList> 介面  
-  
-     實作 <xref:System.ComponentModel.IBindingList> 介面的類別，提供了更高層級的資料繫結功能。  這個實作所提供的基本排序功能和變更告知，可用於清單項目變更時 \(例如，客戶清單的第三個項目變更了地址欄的內容\)，也可用於清單本身變更時 \(例如，清單項目的數量增加\/減少\)。  如果您打算將多個控制項繫結至相同的資料，而且您希望在其中一個控制項所做的資料變更能傳播到其他繫結控制項，變更告知就變得很重要。  
+     <span data-ttu-id="4a765-117">類別可實作<xref:System.Collections.IList>介面可能是<xref:System.Array>， <xref:System.Collections.ArrayList>，或<xref:System.Collections.CollectionBase>。</span><span class="sxs-lookup"><span data-stu-id="4a765-117">A class that implements the <xref:System.Collections.IList> interface could be an <xref:System.Array>, <xref:System.Collections.ArrayList>, or <xref:System.Collections.CollectionBase>.</span></span> <span data-ttu-id="4a765-118">這些是項目類型的索引的清單<xref:System.Object>。</span><span class="sxs-lookup"><span data-stu-id="4a765-118">These are indexed lists of items of type <xref:System.Object>.</span></span> <span data-ttu-id="4a765-119">這些清單必須包含同質型別，因為此索引的第一個項目會決定其型別。</span><span class="sxs-lookup"><span data-stu-id="4a765-119">These lists must contain homogenous types, because the first item of the index determines the type.</span></span> <span data-ttu-id="4a765-120"><xref:System.Collections.IList>就可以使用只能在執行階段的繫結。</span><span class="sxs-lookup"><span data-stu-id="4a765-120"><xref:System.Collections.IList> would be available for binding only at run time.</span></span>  
   
     > [!NOTE]
-    >  <xref:System.ComponentModel.IBindingList> 介面的變更告知可藉由設定 <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A> 屬性來啟用，而當屬性值為 `true` 時，就會引發 <xref:System.ComponentModel.IBindingList.ListChanged> 事件，指出清單變更或清單中的項目變更。  
+    >  <span data-ttu-id="4a765-121">如果您想要利用 Windows Form 中建立商務物件繫結的清單，您應該考慮使用<xref:System.ComponentModel.BindingList%601>。</span><span class="sxs-lookup"><span data-stu-id="4a765-121">If you want to create a list of business objects for binding with Windows Forms, you should consider using the <xref:System.ComponentModel.BindingList%601>.</span></span> <span data-ttu-id="4a765-122"><xref:System.ComponentModel.BindingList%601>是一種可延伸的類別，實作雙向 Windows Form 資料繫結所需的主要介面。</span><span class="sxs-lookup"><span data-stu-id="4a765-122">The <xref:System.ComponentModel.BindingList%601> is an extensible class that implements the primary interfaces required for two-way Windows Forms data binding.</span></span>  
   
-     變更類型是由 <xref:System.ComponentModel.ListChangedEventArgs> 參數的 <xref:System.ComponentModel.ListChangedType> 屬性所描述。  因此，只要資料模型更新，所有相依的檢視 \(例如其他繫結至相同資料來源的控制項\) 也會隨之更新。  然而，包含於清單中的物件在發生變更時必須通知清單，以便讓清單引發 <xref:System.ComponentModel.IBindingList.ListChanged> 事件。  
+-   <span data-ttu-id="4a765-123"><xref:System.ComponentModel.IBindingList>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-123"><xref:System.ComponentModel.IBindingList> interface</span></span>  
   
-    > [!NOTE]
-    >  <xref:System.ComponentModel.BindingList%601> 提供了 <xref:System.ComponentModel.IBindingList> 介面的泛用實作。  
-  
--   <xref:System.ComponentModel.IBindingListView> 介面  
-  
-     實作 <xref:System.ComponentModel.IBindingListView> 介面的類別可提供 <xref:System.ComponentModel.IBindingList> 實作的所有功能，以及篩選和進階排序的功能。  這種實作提供了字串架構的篩選，並透過屬性描述項方向配對來提供多資料行排序。  
-  
--   <xref:System.ComponentModel.IEditableObject> 介面  
-  
-     實作 <xref:System.ComponentModel.IEditableObject> 介面的類別，當物件遭遇永久性變更時，允許該物件控制。  這項實作讓您擁有 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、<xref:System.ComponentModel.IEditableObject.EndEdit%2A> 和 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 方法，它們使您可以復原對物件所做的變更。  以下為 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、<xref:System.ComponentModel.IEditableObject.EndEdit%2A> 和 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 方法的簡短說明，以及如何將它們搭配使用以復原對資料所做的變更：  
-  
-    -   <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 發出信號告知開始對物件編輯。  實作這個介面的物件必須儲存 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 方法呼叫之後的任何更新，並必須在 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 方法被呼叫時，將更新捨棄。  在資料繫結  Windows Form 時，您可以在單次編輯異動中多次呼叫 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> \(例如：<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、<xref:System.ComponentModel.IEditableObject.EndEdit%2A>\)。  <xref:System.ComponentModel.IEditableObject> 的實作應該追蹤是否已呼叫 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>，並忽略對 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 的後續呼叫。  由於本方法可被多次呼叫，所以後續對它的呼叫必須為非破壞性的，也就是說，後續的 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 呼叫不可破壞已完成的更新，或變更第一次呼叫 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 時儲存的資料。  
-  
-    -   <xref:System.ComponentModel.IEditableObject.EndEdit%2A> 方法會將 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 呼叫後所發生的任何變更推入目前物件 \(如果該物件目前正處於編輯模式\)。  
-  
-    -   <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 方法會捨棄任何對物件所做的變更。  
-  
-     如需 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、<xref:System.ComponentModel.IEditableObject.EndEdit%2A> 和 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 方法如何運作的詳細資訊，請參閱 [儲存資料集中的資料](../Topic/Save%20data%20back%20to%20the%20database.md)。  
-  
-     這種資料功能異動的概念應用於 <xref:System.Windows.Forms.DataGridView> 控制項中。  
-  
--   <xref:System.ComponentModel.ICancelAddNew> 介面  
-  
-     實作 <xref:System.ComponentModel.ICancelAddNew> 介面的類別通常也會實作 <xref:System.ComponentModel.IBindingList> 介面，並允許您使用 <xref:System.ComponentModel.IBindingList.AddNew%2A> 方法來復原對資料所做的一個額外變更。  如果您的資料來源實作了 <xref:System.ComponentModel.IBindingList> 介面，您也應該要實作 <xref:System.ComponentModel.ICancelAddNew> 介面。  
-  
--   <xref:System.ComponentModel.IDataErrorInfo> 介面  
-  
-     實作 <xref:System.ComponentModel.IDataErrorInfo> 介面的類別可允許物件提供自訂錯誤訊息給繫結的控制項：  
-  
-    -   <xref:System.ComponentModel.IDataErrorInfo.Error%2A> 屬性會傳回一般性的錯誤訊息文字 \(例如：「發生錯誤」\)。  
-  
-    -   <xref:System.ComponentModel.IDataErrorInfo.Item%2A> 屬性會傳回字串，其中包含來自資料行的特定錯誤訊息 \(例如，「在 `State`  資料行中的值無效」\)。  
-  
--   <xref:System.Collections.IEnumerable> 介面  
-  
-     實作 <xref:System.Collections.IEnumerable> 介面的屬性通常會由 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 使用。  這個介面的 Windows Form 支援只能透過 <xref:System.Windows.Forms.BindingSource> 元件來達成。  
+     <span data-ttu-id="4a765-124">類別可實作<xref:System.ComponentModel.IBindingList>介面會提供更高層級的資料繫結功能。</span><span class="sxs-lookup"><span data-stu-id="4a765-124">A class that implements the <xref:System.ComponentModel.IBindingList> interface provides a much higher level of data-binding functionality.</span></span> <span data-ttu-id="4a765-125">此實作可提供您基本的排序功能和變更通知，讓您在清單項目變更時 (例如，客戶清單的第三個項目變更了 [位址] 欄位) 以及在清單本身變更時 (例如，清單的項目數增加或減少) 使用。</span><span class="sxs-lookup"><span data-stu-id="4a765-125">This implementation offers you basic sorting capabilities and change notification, both for when the list items change (for example, the third item in a list of customers has a change to the Address field), as well as when the list itself changes (for example, the number of items in the list increases or decreases).</span></span> <span data-ttu-id="4a765-126">如果您打算讓多個控制項繫結至相同資料，並想要讓其中一個控制項的資料變更傳播到其他繫結控制項，變更通知就很重要。</span><span class="sxs-lookup"><span data-stu-id="4a765-126">Change notification is important if you plan to have multiple controls bound to the same data, and you want data changes made in one of the controls to propagate to the other bound controls.</span></span>  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.BindingSource> 元件會將所有 <xref:System.Collections.IEnumerable> 項目複製到一個單獨的清單中以供繫結使用。  
+    >  <span data-ttu-id="4a765-127">已啟用變更通知<xref:System.ComponentModel.IBindingList>介面透過<xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A>屬性的當`true`，引發<xref:System.ComponentModel.IBindingList.ListChanged>變更事件，指出變更的清單中的項目。</span><span class="sxs-lookup"><span data-stu-id="4a765-127">Change notification is enabled for the <xref:System.ComponentModel.IBindingList> interface through the <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A> property which, when `true`, raises a <xref:System.ComponentModel.IBindingList.ListChanged> event, indicating the list changed or an item in the list changed.</span></span>  
   
--   <xref:System.ComponentModel.ITypedList> 介面  
-  
-     實作 <xref:System.ComponentModel.ITypedList> 介面的集合類別可提供控制順序以及公開 \(Expose\) 給繫結控制項的屬性組之能力。  
+     <span data-ttu-id="4a765-128">所描述的變更類型<xref:System.ComponentModel.ListChangedType>屬性<xref:System.ComponentModel.ListChangedEventArgs>參數。</span><span class="sxs-lookup"><span data-stu-id="4a765-128">The type of change is described by the <xref:System.ComponentModel.ListChangedType> property of the <xref:System.ComponentModel.ListChangedEventArgs> parameter.</span></span> <span data-ttu-id="4a765-129">因此，每當資料模型更新時，所有相依的檢視 (例如其他繫結至相同資料來源的控制項) 也會隨之更新。</span><span class="sxs-lookup"><span data-stu-id="4a765-129">Hence, whenever the data model is updated, any dependent views, such as other controls bound to the same data source, will also be updated.</span></span> <span data-ttu-id="4a765-130">不過，清單中包含的物件必須隨之變更，以便可以引發清單時，通知清單<xref:System.ComponentModel.IBindingList.ListChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="4a765-130">However, objects contained within the list will have to notify the list when they change so that the list can raise the <xref:System.ComponentModel.IBindingList.ListChanged> event.</span></span>  
   
     > [!NOTE]
-    >  當您實作了 <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> 方法，而且 <xref:System.ComponentModel.PropertyDescriptor> 陣列不是 null 時，陣列中的最後一個項目會是描述 list 屬性 \(另一個項目清單\) 的屬性描述項。  
+    >  <span data-ttu-id="4a765-131"><xref:System.ComponentModel.BindingList%601>提供的泛型實作<xref:System.ComponentModel.IBindingList>介面。</span><span class="sxs-lookup"><span data-stu-id="4a765-131">The <xref:System.ComponentModel.BindingList%601> provides a generic implementation of the <xref:System.ComponentModel.IBindingList> interface.</span></span>  
   
--   <xref:System.ComponentModel.ICustomTypeDescriptor> 介面  
+-   <span data-ttu-id="4a765-132"><xref:System.ComponentModel.IBindingListView>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-132"><xref:System.ComponentModel.IBindingListView> interface</span></span>  
   
-     實作 <xref:System.ComponentModel.ICustomTypeDescriptor> 介面的類別可提供該類別本身的動態資訊。  這個介面與 <xref:System.ComponentModel.ITypedList> 類似，但是使用於物件而不是清單。  <xref:System.Data.DataRowView> 使用此介面來呈現基礎資料列的結構描述。  <xref:System.ComponentModel.CustomTypeDescriptor> 類別提供了一個 <xref:System.ComponentModel.ICustomTypeDescriptor> 的簡單實作。  
+     <span data-ttu-id="4a765-133">類別可實作<xref:System.ComponentModel.IBindingListView>介面提供的實作的所有功能<xref:System.ComponentModel.IBindingList>，以及為篩選和進階排序功能。</span><span class="sxs-lookup"><span data-stu-id="4a765-133">A class that implements the <xref:System.ComponentModel.IBindingListView> interface provides all the functionality of an implementation of <xref:System.ComponentModel.IBindingList>, as well as filtering and advanced sorting functionality.</span></span> <span data-ttu-id="4a765-134">此實作可提供以字串為基礎的篩選功能，以及利用屬性描述元與方向配對來進行的多欄排序功能。</span><span class="sxs-lookup"><span data-stu-id="4a765-134">This implementation offers string-based filtering, and multicolumn sorting with property descriptor-direction pairs.</span></span>  
   
-    > [!NOTE]
-    >  若要支援在設計階段繫結至實作 <xref:System.ComponentModel.ICustomTypeDescriptor> 的型別，型別必須同時實作 <xref:System.ComponentModel.IComponent>，而且在表單中以執行個體形式存在。  
+-   <span data-ttu-id="4a765-135"><xref:System.ComponentModel.IEditableObject>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-135"><xref:System.ComponentModel.IEditableObject> interface</span></span>  
   
--   <xref:System.ComponentModel.IListSource> 介面  
+     <span data-ttu-id="4a765-136">類別可實作<xref:System.ComponentModel.IEditableObject>介面可讓要控制時進行永久變更，該物件的物件。</span><span class="sxs-lookup"><span data-stu-id="4a765-136">A class that implements the <xref:System.ComponentModel.IEditableObject> interface allows an object to control when changes to that object are made permanent.</span></span> <span data-ttu-id="4a765-137">這項實作帶給您<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>， <xref:System.ComponentModel.IEditableObject.EndEdit%2A>，和<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>方法，可讓您復原物件所做的變更。</span><span class="sxs-lookup"><span data-stu-id="4a765-137">This implementation affords you the <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, and <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> methods, which enable you to roll back changes made to the object.</span></span> <span data-ttu-id="4a765-138">以下是的運作的簡短說明<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>， <xref:System.ComponentModel.IEditableObject.EndEdit%2A>，和<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>方法，以及它們如何彼此啟用資料所做的變更可能回復搭配：</span><span class="sxs-lookup"><span data-stu-id="4a765-138">Following is a brief explanation of the functioning of the <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, and <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> methods and how they work in conjunction with one another to enable a possible rollback of changes made to the data:</span></span>  
   
-     實作 <xref:System.ComponentModel.IListSource> 介面的類別可在非清單物件上啟用清單架構繫結。  <xref:System.ComponentModel.IListSource> 的 <xref:System.ComponentModel.IListSource.GetList%2A> 方法可用來從不是繼承自 <xref:System.Collections.IList> 的物件傳回可繫結清單。  <xref:System.ComponentModel.IListSource> 是由 <xref:System.Data.DataSet> 類別所使用。  
+    -   <span data-ttu-id="4a765-139"><xref:System.ComponentModel.IEditableObject.BeginEdit%2A>方法發出訊號的物件上開始編輯。</span><span class="sxs-lookup"><span data-stu-id="4a765-139">The <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> method signals the start of an edit on an object.</span></span> <span data-ttu-id="4a765-140">實作這個介面的物件必須儲存任何更新之後<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>方法呼叫的方式更新，可捨棄如果<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="4a765-140">An object that implements this interface will need to store any updates after the <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> method call in such a way that the updates can be discarded if the <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> method is called.</span></span> <span data-ttu-id="4a765-141">在資料繫結 Windows Form，您可以呼叫<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>多次範圍內的單一編輯交易 (例如， <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>， <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>， <xref:System.ComponentModel.IEditableObject.EndEdit%2A>)。</span><span class="sxs-lookup"><span data-stu-id="4a765-141">In data binding Windows Forms, you can call <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> multiple times within the scope of a single edit transaction (for example, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>).</span></span> <span data-ttu-id="4a765-142">實作<xref:System.ComponentModel.IEditableObject>應該追蹤是否<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>已經呼叫，並忽略後續呼叫<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>。</span><span class="sxs-lookup"><span data-stu-id="4a765-142">Implementations of <xref:System.ComponentModel.IEditableObject> should keep track of whether <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> has already been called and ignore subsequent calls to <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>.</span></span> <span data-ttu-id="4a765-143">可以多次呼叫這個方法，因為它是很重要的後續呼叫會恢復。也就是說，後續<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>呼叫無法終結已進行，或變更已儲存的資料在第一個<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>呼叫。</span><span class="sxs-lookup"><span data-stu-id="4a765-143">Because this method can be called multiple times, it is important that subsequent calls to it are nondestructive; that is, subsequent <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> calls cannot destroy the updates that have been made or change the data that was saved on the first <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> call.</span></span>  
   
--   <xref:System.ComponentModel.IRaiseItemChangedEvents> 介面  
+    -   <span data-ttu-id="4a765-144"><xref:System.ComponentModel.IEditableObject.EndEdit%2A>方法推入後的任何變更<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>物件目前處於編輯模式，如果呼叫的基礎物件中。</span><span class="sxs-lookup"><span data-stu-id="4a765-144">The <xref:System.ComponentModel.IEditableObject.EndEdit%2A> method pushes any changes since <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> was called into the underlying object, if the object is currently in edit mode.</span></span>  
   
-     實作 <xref:System.ComponentModel.IRaiseItemChangedEvents> 介面的類別是一個同時實作 <xref:System.ComponentModel.IBindingList> 介面的可繫結清單。  如果您的型別透過其 <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> 屬性引發 <xref:System.ComponentModel.ListChangedType> 型別的 <xref:System.ComponentModel.IBindingList.ListChanged> 事件，會使用這個介面來指示。  
+    -   <span data-ttu-id="4a765-145"><xref:System.ComponentModel.IEditableObject.CancelEdit%2A>方法會捨棄任何物件所做的變更。</span><span class="sxs-lookup"><span data-stu-id="4a765-145">The <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> method discards any changes made to the object.</span></span>  
   
-    > [!NOTE]
-    >  如果您的資料來源提供前面所述的屬性，可列出事件的轉換，而且資料來源會與 <xref:System.Windows.Forms.BindingSource> 元件互動，您就應該實作 <xref:System.ComponentModel.IRaiseItemChangedEvents>。  否則 <xref:System.Windows.Forms.BindingSource> 也將執行屬性以列出事件轉換，這會造成效能低落。  
+     <span data-ttu-id="4a765-146">如需有關如何<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>， <xref:System.ComponentModel.IEditableObject.EndEdit%2A>，和<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>方法運作，請參閱[將資料儲存回資料庫](/visualstudio/data-tools/save-data-back-to-the-database)。</span><span class="sxs-lookup"><span data-stu-id="4a765-146">For more information about how the <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, and <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> methods work, see [Save data back to the database](/visualstudio/data-tools/save-data-back-to-the-database).</span></span>  
   
--   <xref:System.ComponentModel.ISupportInitialize> 介面  
+     <span data-ttu-id="4a765-147">資料功能的這個交易的概念由<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="4a765-147">This transactional notion of data functionality is used by the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-     實作 <xref:System.ComponentModel.ISupportInitialize> 介面的元件會利用批次最佳化來設定屬性和初始化相依的屬性。  <xref:System.ComponentModel.ISupportInitialize> 包含兩個方法：  
+-   <span data-ttu-id="4a765-148"><xref:System.ComponentModel.ICancelAddNew>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-148"><xref:System.ComponentModel.ICancelAddNew> interface</span></span>  
   
-    -   <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> 會發出物件初始化正在啟動的信號。  
+     <span data-ttu-id="4a765-149">類別可實作<xref:System.ComponentModel.ICancelAddNew>介面通常會實作<xref:System.ComponentModel.IBindingList>介面，並可讓您復原的資料來源所做的額外<xref:System.ComponentModel.IBindingList.AddNew%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="4a765-149">A class that implements the <xref:System.ComponentModel.ICancelAddNew> interface usually implements the <xref:System.ComponentModel.IBindingList> interface and allows you to roll back an addition made to the data source with the <xref:System.ComponentModel.IBindingList.AddNew%2A> method.</span></span> <span data-ttu-id="4a765-150">如果您的資料來源實作<xref:System.ComponentModel.IBindingList>介面，您也應該擁有它實作<xref:System.ComponentModel.ICancelAddNew>介面。</span><span class="sxs-lookup"><span data-stu-id="4a765-150">If your data source implements the <xref:System.ComponentModel.IBindingList> interface, you should also have it implement the <xref:System.ComponentModel.ICancelAddNew> interface.</span></span>  
   
-    -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> 會發出物件初始化正要完成的信號。  
+-   <span data-ttu-id="4a765-151"><xref:System.ComponentModel.IDataErrorInfo>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-151"><xref:System.ComponentModel.IDataErrorInfo> interface</span></span>  
   
--   <xref:System.ComponentModel.ISupportInitializeNotification> 介面  
+     <span data-ttu-id="4a765-152">類別可實作<xref:System.ComponentModel.IDataErrorInfo>介面可讓物件提供自訂的錯誤繫結控制項的資訊：</span><span class="sxs-lookup"><span data-stu-id="4a765-152">A class that implements the <xref:System.ComponentModel.IDataErrorInfo> interface allows objects to offer custom error information to bound controls:</span></span>  
   
-     實作 <xref:System.ComponentModel.ISupportInitializeNotification> 介面的元件也會同時實作 <xref:System.ComponentModel.ISupportInitialize> 介面。  這個介面允許您通知其他 <xref:System.ComponentModel.ISupportInitialize> 元件初始化已完成。  <xref:System.ComponentModel.ISupportInitializeNotification> 介面包含兩個成員：  
+    -   <span data-ttu-id="4a765-153"><xref:System.ComponentModel.IDataErrorInfo.Error%2A>屬性會傳回一般錯誤訊息文字 （例如，「 已發生錯誤 」）。</span><span class="sxs-lookup"><span data-stu-id="4a765-153">The <xref:System.ComponentModel.IDataErrorInfo.Error%2A> property returns general error message text (for example, "An error has occurred").</span></span>  
   
-    -   <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A> 傳回一個 `boolean` 值，指示元件是否已初始化。  
+    -   <span data-ttu-id="4a765-154"><xref:System.ComponentModel.IDataErrorInfo.Item%2A>屬性會傳回具有特定錯誤訊息的字串資料行 (例如，"中的值`State`資料行無效 」)。</span><span class="sxs-lookup"><span data-stu-id="4a765-154">The <xref:System.ComponentModel.IDataErrorInfo.Item%2A> property returns a string with the specific error message from the column (for example, "The value in the `State` column is invalid").</span></span>  
   
-    -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> 會在 <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> 被呼叫時出現。  
+-   <span data-ttu-id="4a765-155"><xref:System.Collections.IEnumerable>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-155"><xref:System.Collections.IEnumerable> interface</span></span>  
   
--   <xref:System.ComponentModel.INotifyPropertyChanged> 介面  
-  
-     實作這個介面的類別是一個型別，會在其任何屬性值變更時引發事件。  這個介面的設計目的，是要取代在控制項的每個屬性中都有變更事件的這種模式。  當在 <xref:System.ComponentModel.BindingList%601> 中使用時，商務物件應該實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，而 BindingList\`1 則會將 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件轉換成 <xref:System.ComponentModel.ListChangedType> 型別的 <xref:System.ComponentModel.BindingList%601.ListChanged> 事件。  
+     <span data-ttu-id="4a765-156">類別可實作<xref:System.Collections.IEnumerable>介面通常由[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4a765-156">A class that implements the <xref:System.Collections.IEnumerable> interface is typically consumed by [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].</span></span> <span data-ttu-id="4a765-157">僅可透過此介面的 Windows Form 支援<xref:System.Windows.Forms.BindingSource>元件。</span><span class="sxs-lookup"><span data-stu-id="4a765-157">Windows Forms support for this interface is only available through the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
     > [!NOTE]
-    >  .若要讓變更告知出現在受繫結之用戶端與資料來源之間的繫結上，繫結的資料來源型別應該要實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面 \(優先使用\)，或是您要提供 *propertyName*`Changed` 事件給繫結的型別，但請勿同時採用這兩種方式。  
+    >  <span data-ttu-id="4a765-158"><xref:System.Windows.Forms.BindingSource>元件會複製所有<xref:System.Collections.IEnumerable>成個別的清單，供繫結使用的項目。</span><span class="sxs-lookup"><span data-stu-id="4a765-158">The <xref:System.Windows.Forms.BindingSource> component copies all <xref:System.Collections.IEnumerable> items into a separate list for binding purposes.</span></span>  
   
-### 由元件作者實作的介面  
- 下列介面是設計給 Windows Form 的資料繫結引擎使用：  
+-   <span data-ttu-id="4a765-159"><xref:System.ComponentModel.ITypedList>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-159"><xref:System.ComponentModel.ITypedList> interface</span></span>  
   
--   <xref:System.Windows.Forms.IBindableComponent> 介面  
-  
-     實作這個介面的類別是一個支援資料繫結的非控制項元件。  這個類別會透過這個介面的  <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 和 <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> 屬性，傳回資料繫結和元件中的繫結內容。  
+     <span data-ttu-id="4a765-160">實作的集合類別<xref:System.ComponentModel.ITypedList>介面提供了可控制公開至繫結控制項的屬性集和順序。</span><span class="sxs-lookup"><span data-stu-id="4a765-160">A collections class that implements the <xref:System.ComponentModel.ITypedList> interface provides the ability to control the order and the set of properties exposed to the bound control.</span></span>  
   
     > [!NOTE]
-    >  如果元件繼承自 <xref:System.Windows.Forms.Control>，您就不需要實作 <xref:System.Windows.Forms.IBindableComponent> 介面。  
+    >  <span data-ttu-id="4a765-161">當您實作<xref:System.ComponentModel.ITypedList.GetItemProperties%2A>方法，而<xref:System.ComponentModel.PropertyDescriptor>陣列不是 null，陣列中的最後一個項目會描述為另一個項目清單的清單屬性的屬性描述元。</span><span class="sxs-lookup"><span data-stu-id="4a765-161">When you implement the <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> method, and the <xref:System.ComponentModel.PropertyDescriptor> array is not null, the last entry in the array will be the property descriptor that describes the list property that is another list of items.</span></span>  
   
--   <xref:System.Windows.Forms.ICurrencyManagerProvider> 介面  
+-   <span data-ttu-id="4a765-162"><xref:System.ComponentModel.ICustomTypeDescriptor>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-162"><xref:System.ComponentModel.ICustomTypeDescriptor> interface</span></span>  
   
-     實作 <xref:System.Windows.Forms.ICurrencyManagerProvider> 介面的類別是一個元件，會提供自身的 <xref:System.Windows.Forms.CurrencyManager> 來管理與這個特定元件關聯的繫結。  藉由 <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> 屬性提供對自訂 <xref:System.Windows.Forms.CurrencyManager> 的存取權限。  
+     <span data-ttu-id="4a765-163">類別可實作<xref:System.ComponentModel.ICustomTypeDescriptor>介面提供與其本身相關的動態資訊。</span><span class="sxs-lookup"><span data-stu-id="4a765-163">A class that implements the <xref:System.ComponentModel.ICustomTypeDescriptor> interface provides dynamic information about itself.</span></span> <span data-ttu-id="4a765-164">這個介面是類似於<xref:System.ComponentModel.ITypedList>，但用於物件，而不是清單。</span><span class="sxs-lookup"><span data-stu-id="4a765-164">This interface is similar to <xref:System.ComponentModel.ITypedList> but is used for objects rather than lists.</span></span> <span data-ttu-id="4a765-165">這個介面由<xref:System.Data.DataRowView>加入專案的結構描述的基礎資料列。</span><span class="sxs-lookup"><span data-stu-id="4a765-165">This interface is used by <xref:System.Data.DataRowView> to project the schema of the underlying rows.</span></span> <span data-ttu-id="4a765-166">簡單實作<xref:System.ComponentModel.ICustomTypeDescriptor>係由<xref:System.ComponentModel.CustomTypeDescriptor>類別。</span><span class="sxs-lookup"><span data-stu-id="4a765-166">A simple implementation of <xref:System.ComponentModel.ICustomTypeDescriptor> is provided by the <xref:System.ComponentModel.CustomTypeDescriptor> class.</span></span>  
   
     > [!NOTE]
-    >  繼承自 <xref:System.Windows.Forms.Control> 的類別會自動透過其 <xref:System.Windows.Forms.Control.BindingContext%2A> 屬性來管理繫結，所以您需要實作 <xref:System.Windows.Forms.ICurrencyManagerProvider> 的情況微乎其微。  
+    >  <span data-ttu-id="4a765-167">若要支援設計階段繫結至型別都會實作<xref:System.ComponentModel.ICustomTypeDescriptor>，型別也必須實作<xref:System.ComponentModel.IComponent>，做為表單上的執行個體存在。</span><span class="sxs-lookup"><span data-stu-id="4a765-167">To support design-time binding to types that implement <xref:System.ComponentModel.ICustomTypeDescriptor>, the type must also implement <xref:System.ComponentModel.IComponent> and exist as an instance on the Form.</span></span>  
   
-## 請參閱  
- [資料繫結和 Windows Form](../../../docs/framework/winforms/data-binding-and-windows-forms.md)   
- [如何：在 Windows Form 上建立簡單繫結控制項](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)   
- [Windows Form 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)
+-   <span data-ttu-id="4a765-168"><xref:System.ComponentModel.IListSource>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-168"><xref:System.ComponentModel.IListSource> interface</span></span>  
+  
+     <span data-ttu-id="4a765-169">類別可實作<xref:System.ComponentModel.IListSource>介面可讓非 list 物件上的清單架構繫結。</span><span class="sxs-lookup"><span data-stu-id="4a765-169">A class that implements the <xref:System.ComponentModel.IListSource> interface enables list-based binding on non-list objects.</span></span> <span data-ttu-id="4a765-170"><xref:System.ComponentModel.IListSource.GetList%2A>方法<xref:System.ComponentModel.IListSource>用來傳回可繫結的清單不是繼承自 object <xref:System.Collections.IList>。</span><span class="sxs-lookup"><span data-stu-id="4a765-170">The <xref:System.ComponentModel.IListSource.GetList%2A> method of <xref:System.ComponentModel.IListSource> is used to return a bindable list from an object that does not inherit from <xref:System.Collections.IList>.</span></span> <span data-ttu-id="4a765-171"><xref:System.ComponentModel.IListSource>正由<xref:System.Data.DataSet>類別。</span><span class="sxs-lookup"><span data-stu-id="4a765-171"><xref:System.ComponentModel.IListSource> is used by the <xref:System.Data.DataSet> class.</span></span>  
+  
+-   <span data-ttu-id="4a765-172"><xref:System.ComponentModel.IRaiseItemChangedEvents>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-172"><xref:System.ComponentModel.IRaiseItemChangedEvents> interface</span></span>  
+  
+     <span data-ttu-id="4a765-173">類別可實作<xref:System.ComponentModel.IRaiseItemChangedEvents>介面是以可繫結的清單，也會實作<xref:System.ComponentModel.IBindingList>介面。</span><span class="sxs-lookup"><span data-stu-id="4a765-173">A class that implements the <xref:System.ComponentModel.IRaiseItemChangedEvents> interface is a bindable list that also implements the <xref:System.ComponentModel.IBindingList> interface.</span></span> <span data-ttu-id="4a765-174">這個介面用來表示是否您的型別就會引發<xref:System.ComponentModel.IBindingList.ListChanged>類型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>透過其<xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="4a765-174">This interface is used to indicate if your type raises <xref:System.ComponentModel.IBindingList.ListChanged> events of type <xref:System.ComponentModel.ListChangedType.ItemChanged> through its <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> property.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="4a765-175">您應該實作<xref:System.ComponentModel.IRaiseItemChangedEvents>如果資料來源提供先前所述的清單事件轉換成該屬性，而在互動<xref:System.Windows.Forms.BindingSource>元件。</span><span class="sxs-lookup"><span data-stu-id="4a765-175">You should implement the <xref:System.ComponentModel.IRaiseItemChangedEvents> if your data source provides the property to list event conversion described previously and is interacting with the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="4a765-176">否則，<xref:System.Windows.Forms.BindingSource>也會導致效能變慢的清單事件轉換成屬性。</span><span class="sxs-lookup"><span data-stu-id="4a765-176">Otherwise, the <xref:System.Windows.Forms.BindingSource> will also perform property to list event conversion resulting in slower performance.</span></span>  
+  
+-   <span data-ttu-id="4a765-177"><xref:System.ComponentModel.ISupportInitialize>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-177"><xref:System.ComponentModel.ISupportInitialize> interface</span></span>  
+  
+     <span data-ttu-id="4a765-178">實作的元件<xref:System.ComponentModel.ISupportInitialize>介面會設定屬性和初始化共同相依的屬性批次最佳化的優點。</span><span class="sxs-lookup"><span data-stu-id="4a765-178">A component that implements the <xref:System.ComponentModel.ISupportInitialize> interface takes advantages of batch optimizations for setting properties and initializing co-dependent properties.</span></span> <span data-ttu-id="4a765-179"><xref:System.ComponentModel.ISupportInitialize>包含兩個方法：</span><span class="sxs-lookup"><span data-stu-id="4a765-179">The <xref:System.ComponentModel.ISupportInitialize> contains two methods:</span></span>  
+  
+    -   <span data-ttu-id="4a765-180"><xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>表示正在啟動該物件初始設定。</span><span class="sxs-lookup"><span data-stu-id="4a765-180"><xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> signals that object initialization is starting.</span></span>  
+  
+    -   <span data-ttu-id="4a765-181"><xref:System.ComponentModel.ISupportInitialize.EndInit%2A>表示已完成的物件初始設定。</span><span class="sxs-lookup"><span data-stu-id="4a765-181"><xref:System.ComponentModel.ISupportInitialize.EndInit%2A> signals that object initialization is finishing.</span></span>  
+  
+-   <span data-ttu-id="4a765-182"><xref:System.ComponentModel.ISupportInitializeNotification>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-182"><xref:System.ComponentModel.ISupportInitializeNotification> interface</span></span>  
+  
+     <span data-ttu-id="4a765-183">實作的元件<xref:System.ComponentModel.ISupportInitializeNotification>介面也會實作<xref:System.ComponentModel.ISupportInitialize>介面。</span><span class="sxs-lookup"><span data-stu-id="4a765-183">A component that implements the <xref:System.ComponentModel.ISupportInitializeNotification> interface also implements the <xref:System.ComponentModel.ISupportInitialize> interface.</span></span> <span data-ttu-id="4a765-184">這個介面可讓您通知其他<xref:System.ComponentModel.ISupportInitialize>元件初始化已完成。</span><span class="sxs-lookup"><span data-stu-id="4a765-184">This interface allows you to notify other <xref:System.ComponentModel.ISupportInitialize> components that initialization is complete.</span></span> <span data-ttu-id="4a765-185"><xref:System.ComponentModel.ISupportInitializeNotification>介面包含兩個成員：</span><span class="sxs-lookup"><span data-stu-id="4a765-185">The <xref:System.ComponentModel.ISupportInitializeNotification> interface contains two members:</span></span>  
+  
+    -   <span data-ttu-id="4a765-186"><xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A>傳回`boolean`值，指出元件是否已初始化。</span><span class="sxs-lookup"><span data-stu-id="4a765-186"><xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A> returns a `boolean` value indicating whether the component is initialized.</span></span>  
+  
+    -   <span data-ttu-id="4a765-187"><xref:System.ComponentModel.ISupportInitializeNotification.Initialized>發生時<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>呼叫。</span><span class="sxs-lookup"><span data-stu-id="4a765-187"><xref:System.ComponentModel.ISupportInitializeNotification.Initialized> occurs when <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> is called.</span></span>  
+  
+-   <span data-ttu-id="4a765-188"><xref:System.ComponentModel.INotifyPropertyChanged>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-188"><xref:System.ComponentModel.INotifyPropertyChanged> interface</span></span>  
+  
+     <span data-ttu-id="4a765-189">類別若實作此介面，代表其所屬的型別會在其任何屬性值變更時引發事件。</span><span class="sxs-lookup"><span data-stu-id="4a765-189">A class that implements this interface is a type that raises an event when any of its property values change.</span></span> <span data-ttu-id="4a765-190">對於會讓控制項的每個屬性有一個變更事件的模式，我們設計了此介面來加以取代。</span><span class="sxs-lookup"><span data-stu-id="4a765-190">This interface is designed to replace the pattern of having a change event for each property of a control.</span></span> <span data-ttu-id="4a765-191">當用於<xref:System.ComponentModel.BindingList%601>，應實作商務物件<xref:System.ComponentModel.INotifyPropertyChanged>介面和 BindingList\\`1 會將轉換<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>事件<xref:System.ComponentModel.BindingList%601.ListChanged>類型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>。</span><span class="sxs-lookup"><span data-stu-id="4a765-191">When used in a <xref:System.ComponentModel.BindingList%601>, a business object should implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface and the BindingList\\`1 will convert <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> events to <xref:System.ComponentModel.BindingList%601.ListChanged> events of type <xref:System.ComponentModel.ListChangedType.ItemChanged>.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="4a765-192">變更通知會出現在 繫結的用戶端和資料之間的繫結來源繫結的資料來源類型應該是實作<xref:System.ComponentModel.INotifyPropertyChanged>介面 （慣用） 或您可以提供*propertyName* `Changed`事件繫結的型別，但是您不應該執行。</span><span class="sxs-lookup"><span data-stu-id="4a765-192">For change notification to occur in a binding between a bound client and a data source your bound data-source type should either implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface (preferred) or you can provide *propertyName*`Changed` events for the bound type, but you shouldn't do both.</span></span>  
+  
+### <a name="interfaces-for-implementation-by-component-authors"></a><span data-ttu-id="4a765-193">可供元件作者實作的介面</span><span class="sxs-lookup"><span data-stu-id="4a765-193">Interfaces for Implementation by Component Authors</span></span>  
+ <span data-ttu-id="4a765-194">下列介面是設計來供 Windows Forms 資料繫結引擎取用︰</span><span class="sxs-lookup"><span data-stu-id="4a765-194">The following interfaces are designed for consumption by the Windows Forms data-binding engine:</span></span>  
+  
+-   <span data-ttu-id="4a765-195"><xref:System.Windows.Forms.IBindableComponent>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-195"><xref:System.Windows.Forms.IBindableComponent> interface</span></span>  
+  
+     <span data-ttu-id="4a765-196">類別若實作此介面，就是可支援資料繫結的非控制項元件。</span><span class="sxs-lookup"><span data-stu-id="4a765-196">A class that implements this interface is a non-control component that supports data binding.</span></span> <span data-ttu-id="4a765-197">這個類別會傳回的資料繫結和繫結內容的元件透過<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>和<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>此介面的屬性。</span><span class="sxs-lookup"><span data-stu-id="4a765-197">This class returns the data bindings and binding context of the component through the <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> and <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> properties of this interface.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="4a765-198">如果您的元件繼承自<xref:System.Windows.Forms.Control>，您不需要實作<xref:System.Windows.Forms.IBindableComponent>介面。</span><span class="sxs-lookup"><span data-stu-id="4a765-198">If your component inherits from <xref:System.Windows.Forms.Control>, you do not need to implement the <xref:System.Windows.Forms.IBindableComponent> interface.</span></span>  
+  
+-   <span data-ttu-id="4a765-199"><xref:System.Windows.Forms.ICurrencyManagerProvider>介面</span><span class="sxs-lookup"><span data-stu-id="4a765-199"><xref:System.Windows.Forms.ICurrencyManagerProvider> interface</span></span>  
+  
+     <span data-ttu-id="4a765-200">類別可實作<xref:System.Windows.Forms.ICurrencyManagerProvider>介面會提供自己的元件<xref:System.Windows.Forms.CurrencyManager>來管理此特定元件相關聯的繫結。</span><span class="sxs-lookup"><span data-stu-id="4a765-200">A class that implements the <xref:System.Windows.Forms.ICurrencyManagerProvider> interface is a component that provides its own <xref:System.Windows.Forms.CurrencyManager> to manage the bindings associated with this particular component.</span></span> <span data-ttu-id="4a765-201">存取自訂<xref:System.Windows.Forms.CurrencyManager>係由<xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="4a765-201">Access to the custom <xref:System.Windows.Forms.CurrencyManager> is provided by the <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> property.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="4a765-202">類別繼承自<xref:System.Windows.Forms.Control>管理繫結會自動透過其<xref:System.Windows.Forms.Control.BindingContext%2A>屬性，這樣的情況下，需要實作<xref:System.Windows.Forms.ICurrencyManagerProvider>都相當少見。</span><span class="sxs-lookup"><span data-stu-id="4a765-202">A class that inherits from <xref:System.Windows.Forms.Control> manages bindings automatically through its <xref:System.Windows.Forms.Control.BindingContext%2A> property, so cases in which you need to implement the <xref:System.Windows.Forms.ICurrencyManagerProvider> are fairly rare.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="4a765-203">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4a765-203">See Also</span></span>  
+ [<span data-ttu-id="4a765-204">資料繫結和 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4a765-204">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [<span data-ttu-id="4a765-205">操作說明：在 Windows Forms 上建立簡單繫結控制項</span><span class="sxs-lookup"><span data-stu-id="4a765-205">How to: Create a Simple-Bound Control on a Windows Form</span></span>](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
+ [<span data-ttu-id="4a765-206">Windows Forms 資料繫結</span><span class="sxs-lookup"><span data-stu-id="4a765-206">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)

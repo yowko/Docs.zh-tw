@@ -5,26 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 87d2e08ece2f3a2f6f366d5b93fa75e2330d854d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f603f795682c7ea1f48e5d9356af6e0477246da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltparametergt-element-net-native"></a>&lt;Parameter&gt; 項目 (.NET Native)
-將反映原則套用至傳遞給方法的引數類型。  
+# <a name="ltparametergt-element-net-native"></a><span data-ttu-id="0f870-102">&lt;Parameter&gt; 項目 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="0f870-102">&lt;Parameter&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="0f870-103">將反映原則套用至傳遞給方法的引數類型。</span><span class="sxs-lookup"><span data-stu-id="0f870-103">Applies reflection policy to the type of the argument passed to a method.</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="0f870-104">語法</span><span class="sxs-lookup"><span data-stu-id="0f870-104">Syntax</span></span>  
   
 ```xml  
 <Parameter Name="parameter_name"  
@@ -40,52 +38,51 @@ ms.lasthandoff: 08/21/2017
            MarshalStructure="policy_type" />  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0f870-105">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="0f870-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="0f870-106">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="0f870-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>屬性  
+### <a name="attributes"></a><span data-ttu-id="0f870-107">屬性</span><span class="sxs-lookup"><span data-stu-id="0f870-107">Attributes</span></span>  
   
-|屬性|屬性類型|說明|  
+|<span data-ttu-id="0f870-108">屬性</span><span class="sxs-lookup"><span data-stu-id="0f870-108">Attribute</span></span>|<span data-ttu-id="0f870-109">屬性類型</span><span class="sxs-lookup"><span data-stu-id="0f870-109">Attribute type</span></span>|<span data-ttu-id="0f870-110">說明</span><span class="sxs-lookup"><span data-stu-id="0f870-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|一般|必要屬性。 參數名稱。 例如，對於方法簽章 `String.CompareTo(Object value)`而言，`Name` 屬性的值是 "value"。|  
-|`Activate`|反射|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
-|`Browse`|反射|選擇性屬性。 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。|  
-|`Dynamic`|反射|選擇性屬性。 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。|  
-|`Serialize`|序列化|選擇性屬性。 控制建構函式、欄位和屬性的執行階段存取，以便 Newtonsoft JSON 序列化程式等程式庫可對類型執行個體進行序列化和還原序列化。|  
-|`DataContractSerializer`|序列化|選擇性屬性。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 類別的序列化原則。|  
-|`DataContractJsonSerializer`|序列化|選擇性屬性。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 類別的 JSON 序列化原則。|  
-|`XmlSerializer`|序列化|選擇性屬性。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 類別的 XML 序列化原則。|  
-|`MarshalObject`|Interop|選擇性屬性。 控制將參考類型封送處理至 WinRT 及 COM 的原則。|  
-|`MarshalDelegate`|Interop|選擇性屬性。 控制將委派類型當作函式指標封送處理至機器碼的原則。|  
-|`MarshalStructure`|Interop|選擇性屬性。 控制將值類型封送處理為原生程式碼的原則。|  
+|`Name`|<span data-ttu-id="0f870-111">一般</span><span class="sxs-lookup"><span data-stu-id="0f870-111">General</span></span>|<span data-ttu-id="0f870-112">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-112">Required attribute.</span></span> <span data-ttu-id="0f870-113">參數名稱。</span><span class="sxs-lookup"><span data-stu-id="0f870-113">The parameter name.</span></span> <span data-ttu-id="0f870-114">例如，對於方法簽章 `String.CompareTo(Object value)`而言，`Name` 屬性的值是 "value"。</span><span class="sxs-lookup"><span data-stu-id="0f870-114">For example, for the method signature `String.CompareTo(Object value)`, the value of the `Name` attribute is "value".</span></span>|  
+|`Activate`|<span data-ttu-id="0f870-115">反射</span><span class="sxs-lookup"><span data-stu-id="0f870-115">Reflection</span></span>|<span data-ttu-id="0f870-116">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-116">Optional attribute.</span></span> <span data-ttu-id="0f870-117">控制建構函式的執行階段存取，以便啟動執行個體。</span><span class="sxs-lookup"><span data-stu-id="0f870-117">Controls runtime access to constructors to enable activation of instances.</span></span>|  
+|`Browse`|<span data-ttu-id="0f870-118">反射</span><span class="sxs-lookup"><span data-stu-id="0f870-118">Reflection</span></span>|<span data-ttu-id="0f870-119">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-119">Optional attribute.</span></span> <span data-ttu-id="0f870-120">控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。</span><span class="sxs-lookup"><span data-stu-id="0f870-120">Controls querying for information about program elements, but does not enable any runtime access.</span></span>|  
+|`Dynamic`|<span data-ttu-id="0f870-121">反射</span><span class="sxs-lookup"><span data-stu-id="0f870-121">Reflection</span></span>|<span data-ttu-id="0f870-122">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-122">Optional attribute.</span></span> <span data-ttu-id="0f870-123">控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。</span><span class="sxs-lookup"><span data-stu-id="0f870-123">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>|  
+|`Serialize`|<span data-ttu-id="0f870-124">序列化</span><span class="sxs-lookup"><span data-stu-id="0f870-124">Serialization</span></span>|<span data-ttu-id="0f870-125">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-125">Optional attribute.</span></span> <span data-ttu-id="0f870-126">控制建構函式、欄位和屬性的執行階段存取，以便 Newtonsoft JSON 序列化程式等程式庫可對類型執行個體進行序列化和還原序列化。</span><span class="sxs-lookup"><span data-stu-id="0f870-126">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span>|  
+|`DataContractSerializer`|<span data-ttu-id="0f870-127">序列化</span><span class="sxs-lookup"><span data-stu-id="0f870-127">Serialization</span></span>|<span data-ttu-id="0f870-128">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-128">Optional attribute.</span></span> <span data-ttu-id="0f870-129">控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的序列化原則。</span><span class="sxs-lookup"><span data-stu-id="0f870-129">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`DataContractJsonSerializer`|<span data-ttu-id="0f870-130">序列化</span><span class="sxs-lookup"><span data-stu-id="0f870-130">Serialization</span></span>|<span data-ttu-id="0f870-131">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-131">Optional attribute.</span></span> <span data-ttu-id="0f870-132">控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的 JSON 序列化原則。</span><span class="sxs-lookup"><span data-stu-id="0f870-132">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`XmlSerializer`|<span data-ttu-id="0f870-133">序列化</span><span class="sxs-lookup"><span data-stu-id="0f870-133">Serialization</span></span>|<span data-ttu-id="0f870-134">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-134">Optional attribute.</span></span> <span data-ttu-id="0f870-135">控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 類別的 XML 序列化原則。</span><span class="sxs-lookup"><span data-stu-id="0f870-135">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`MarshalObject`|<span data-ttu-id="0f870-136">Interop</span><span class="sxs-lookup"><span data-stu-id="0f870-136">Interop</span></span>|<span data-ttu-id="0f870-137">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-137">Optional attribute.</span></span> <span data-ttu-id="0f870-138">控制將參考類型封送處理至 WinRT 及 COM 的原則。</span><span class="sxs-lookup"><span data-stu-id="0f870-138">Controls policy for marshaling reference types to WinRT and COM.</span></span>|  
+|`MarshalDelegate`|<span data-ttu-id="0f870-139">Interop</span><span class="sxs-lookup"><span data-stu-id="0f870-139">Interop</span></span>|<span data-ttu-id="0f870-140">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-140">Optional attribute.</span></span> <span data-ttu-id="0f870-141">控制將委派類型當作函式指標封送處理至機器碼的原則。</span><span class="sxs-lookup"><span data-stu-id="0f870-141">Controls policy for marshaling delegate types as function pointers to native code.</span></span>|  
+|`MarshalStructure`|<span data-ttu-id="0f870-142">Interop</span><span class="sxs-lookup"><span data-stu-id="0f870-142">Interop</span></span>|<span data-ttu-id="0f870-143">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="0f870-143">Optional attribute.</span></span> <span data-ttu-id="0f870-144">控制將值類型封送處理為原生程式碼的原則。</span><span class="sxs-lookup"><span data-stu-id="0f870-144">Controls policy for marshaling value types to native code.</span></span>|  
   
-## <a name="name-attribute"></a>Name 屬性  
+## <a name="name-attribute"></a><span data-ttu-id="0f870-145">Name 屬性</span><span class="sxs-lookup"><span data-stu-id="0f870-145">Name attribute</span></span>  
   
-|值|說明|  
+|<span data-ttu-id="0f870-146">值</span><span class="sxs-lookup"><span data-stu-id="0f870-146">Value</span></span>|<span data-ttu-id="0f870-147">說明</span><span class="sxs-lookup"><span data-stu-id="0f870-147">Description</span></span>|  
 |-----------|-----------------|  
-|*parameter_name*|套用原則的方法參數名稱。 例如，對於方法簽章 `String.CompareTo(Object value)`而言，`Name` 屬性的值是 "value"。|  
+|<span data-ttu-id="0f870-148">*parameter_name*</span><span class="sxs-lookup"><span data-stu-id="0f870-148">*parameter_name*</span></span>|<span data-ttu-id="0f870-149">套用原則的方法參數名稱。</span><span class="sxs-lookup"><span data-stu-id="0f870-149">The name of the method parameter to which policy is applied.</span></span> <span data-ttu-id="0f870-150">例如，對於方法簽章 `String.CompareTo(Object value)`而言，`Name` 屬性的值是 "value"。</span><span class="sxs-lookup"><span data-stu-id="0f870-150">For example, for the method signature `String.CompareTo(Object value)`, the value of the `Name` attribute is "value".</span></span>|  
   
-## <a name="all-other-attributes"></a>所有其他屬性  
+## <a name="all-other-attributes"></a><span data-ttu-id="0f870-151">所有其他屬性</span><span class="sxs-lookup"><span data-stu-id="0f870-151">All other attributes</span></span>  
   
-|值|說明|  
+|<span data-ttu-id="0f870-152">值</span><span class="sxs-lookup"><span data-stu-id="0f870-152">Value</span></span>|<span data-ttu-id="0f870-153">說明</span><span class="sxs-lookup"><span data-stu-id="0f870-153">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|<span data-ttu-id="0f870-154">*policy_setting*</span><span class="sxs-lookup"><span data-stu-id="0f870-154">*policy_setting*</span></span>|<span data-ttu-id="0f870-155">要套用到此原則類型的設定。</span><span class="sxs-lookup"><span data-stu-id="0f870-155">The setting to apply to this policy type.</span></span> <span data-ttu-id="0f870-156">可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。</span><span class="sxs-lookup"><span data-stu-id="0f870-156">Possible values are `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, and `Required All`.</span></span> <span data-ttu-id="0f870-157">如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="0f870-157">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>子元素  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="0f870-158">子元素</span><span class="sxs-lookup"><span data-stu-id="0f870-158">Child Elements</span></span>  
+ <span data-ttu-id="0f870-159">無。</span><span class="sxs-lookup"><span data-stu-id="0f870-159">None.</span></span>  
   
-### <a name="parent-elements"></a>父項目  
+### <a name="parent-elements"></a><span data-ttu-id="0f870-160">父項目</span><span class="sxs-lookup"><span data-stu-id="0f870-160">Parent Elements</span></span>  
   
-|項目|說明|  
+|<span data-ttu-id="0f870-161">項目</span><span class="sxs-lookup"><span data-stu-id="0f870-161">Element</span></span>|<span data-ttu-id="0f870-162">說明</span><span class="sxs-lookup"><span data-stu-id="0f870-162">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
+|[<span data-ttu-id="0f870-163">\<Method></span><span class="sxs-lookup"><span data-stu-id="0f870-163">\<Method></span></span>](../../../docs/framework/net-native/method-element-net-native.md)|<span data-ttu-id="0f870-164">將執行階段反映原則套用到建構函式或方法。</span><span class="sxs-lookup"><span data-stu-id="0f870-164">Applies runtime reflection policy to a constructor or method.</span></span>|  
   
-## <a name="remarks"></a>備註  
- `<Parameter>` 項目是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 項目的子項，用來將原則套用至特定的方法參數。 特定的方法參數是依名稱指定，而不是依類型。 必須存在至少一個表示原則類型的屬性，例如 `Activate` 或 `Dynamic`。  
+## <a name="remarks"></a><span data-ttu-id="0f870-165">備註</span><span class="sxs-lookup"><span data-stu-id="0f870-165">Remarks</span></span>  
+ <span data-ttu-id="0f870-166">`<Parameter>` 項目是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 項目的子項，用來將原則套用至特定的方法參數。</span><span class="sxs-lookup"><span data-stu-id="0f870-166">The `<Parameter>` element is a child of the [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) element and is used to apply policy to a particular method parameter.</span></span> <span data-ttu-id="0f870-167">特定的方法參數是依名稱指定，而不是依類型。</span><span class="sxs-lookup"><span data-stu-id="0f870-167">The specific method parameter is specified by name rather than by type.</span></span> <span data-ttu-id="0f870-168">必須存在至少一個表示原則類型的屬性，例如 `Activate` 或 `Dynamic`。</span><span class="sxs-lookup"><span data-stu-id="0f870-168">At least one attribute that represents a policy type, such as `Activate` or `Dynamic`, must be present.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)   
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
-
+## <a name="see-also"></a><span data-ttu-id="0f870-169">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f870-169">See Also</span></span>  
+ [<span data-ttu-id="0f870-170">\<Method> 項目</span><span class="sxs-lookup"><span data-stu-id="0f870-170">\<Method> Element</span></span>](../../../docs/framework/net-native/method-element-net-native.md)  
+ [<span data-ttu-id="0f870-171">執行階段指示詞 (rd.xml) 組態檔參考</span><span class="sxs-lookup"><span data-stu-id="0f870-171">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="0f870-172">執行階段指示詞原則設定</span><span class="sxs-lookup"><span data-stu-id="0f870-172">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
+ [<span data-ttu-id="0f870-173">執行階段指示詞項目</span><span class="sxs-lookup"><span data-stu-id="0f870-173">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)

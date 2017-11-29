@@ -1,37 +1,40 @@
 ---
-title: "如何：偵測有無安裝 .NET Framework 3.5 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "偵測 .NET Framework 3.5 安裝 [WPF]"
-  - "偵測有無安裝 .NET Framework 3.5 [WPF]"
-  - "判斷有無安裝 .NET Framework 3.5 [WPF]"
-  - "驗證有無安裝 .NET Framework 3.5 [WPF]"
+title: "如何： 偵測是否已安裝.NET Framework 3.5"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- verifying whether.NET Framework 3.5 is installed [WPF]
+- detecting .NET Framework 3.5 installation [WPF]
+- detecting whether.NET Framework 3.5 is installed [WPF]
+- determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b603bbd86bb5eb12782ff8aff7797b73444b8518
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：偵測有無安裝 .NET Framework 3.5
-系統管理員必須先確認 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 執行階段確實存在，然後才能在以 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 為目標的系統上部署 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式。  本主題提供以 HTML\/JavaScript 撰寫的指令碼，供系統管理員用來判斷系統上是否有 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="bc408-102">如何： 偵測是否已安裝.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="bc408-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
+<span data-ttu-id="bc408-103">系統管理員可以部署之前[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]應用程式為目標的系統上[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，必須先確認，[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]執行階段會出現。</span><span class="sxs-lookup"><span data-stu-id="bc408-103">Before administrators can deploy [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] applications on a system that targets the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], they must first confirm that the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] runtime is present.</span></span> <span data-ttu-id="bc408-104">本主題提供撰寫的指令碼 HTML/javascript，系統管理員可以用來判斷是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]存在於系統上。</span><span class="sxs-lookup"><span data-stu-id="bc408-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is present on a system.</span></span>  
   
 > [!NOTE]
->  如需安裝、部署及偵測 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的詳細資訊，請參閱[安裝.NET Framework](../../../../docs/framework/install/guide-for-developers.md)。  
+>  <span data-ttu-id="bc408-105">如需詳細資訊，在上安裝、 部署和偵測[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，請參閱[安裝.NET Framework 開發人員](../../../../docs/framework/install/guide-for-developers.md)。</span><span class="sxs-lookup"><span data-stu-id="bc408-105">For more detailed information on installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../../../docs/framework/install/guide-for-developers.md).</span></span>  
   
-## 範例  
- 安裝 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 時，MSI 會在 UserAgent 宇串中加入 ".NET CLR" 和版本號碼。  下列範例顯示內嵌在簡單 HTML 網頁中的指令碼。  這個指令碼會搜尋 UserAgent 字串，確定是否已安裝 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，並在搜尋結果中顯示狀態訊息。  
+## <a name="example"></a><span data-ttu-id="bc408-106">範例</span><span class="sxs-lookup"><span data-stu-id="bc408-106">Example</span></span>  
+ <span data-ttu-id="bc408-107">當[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]已安裝，MSI 新增 「.NET CLR"和版本號碼的使用者代理字串。</span><span class="sxs-lookup"><span data-stu-id="bc408-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="bc408-108">下列範例顯示簡單的 HTML 網頁中內嵌的指令碼。</span><span class="sxs-lookup"><span data-stu-id="bc408-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="bc408-109">指令碼搜尋使用者代理字串，以判斷是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]已安裝，且在搜尋結果中顯示狀態訊息。</span><span class="sxs-lookup"><span data-stu-id="bc408-109">The script searches the UserAgent string to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
   
 > [!NOTE]
->  這個指令碼是專為 Internet Explorer 而設計。  其他瀏覽器可能不會包含 UserAgent 字串中的 .NET CLR 資訊。  
+>  <span data-ttu-id="bc408-110">此指令碼可供 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="bc408-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="bc408-111">其他瀏覽器使用者代理字串中，可能不包含.NET CLR 的資訊。</span><span class="sxs-lookup"><span data-stu-id="bc408-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
   
 ```  
 <HTML>  
@@ -121,20 +124,19 @@ caps.handback.revision: 7
     <div id="result" />  
   </BODY>  
 </HTML>  
-  
 ```  
   
- 如果搜尋 ".NET CLR " 版本成功，則會顯示下列類型的狀態訊息：  
+ <span data-ttu-id="bc408-112">如果 「.NET CLR"版本的搜尋成功，則會出現下列類型的狀態訊息：</span><span class="sxs-lookup"><span data-stu-id="bc408-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; .NET CLR 3.5.20726; MS-RTC LM 8).`  
   
- 否則，便會出現下列類型的狀態訊息：  
+ <span data-ttu-id="bc408-113">否則，就會出現下列類型的狀態訊息：</span><span class="sxs-lookup"><span data-stu-id="bc408-113">Otherwise, the following type of status message appears:</span></span>  
   
- `This machine does not have the correct version of the .NET Framework 3.5.  The required version is v3.5.0.0.`  
+ `This machine does not have the correct version of the .NET Framework 3.5. The required version is v3.5.0.0.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## 請參閱  
- [偵測有無安裝 .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+## <a name="see-also"></a><span data-ttu-id="bc408-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bc408-114">See Also</span></span>  
+ [<span data-ttu-id="bc408-115">偵測有無安裝 .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="bc408-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)

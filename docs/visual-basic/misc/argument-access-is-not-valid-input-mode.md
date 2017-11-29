@@ -1,24 +1,26 @@
 ---
-title: "引數 &#39;Access&#39; 無效。 Input 模式的有效值是 &#39;OpenAccess.Read&#39; 和 &#39;OpenAccess.Default&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrFileSystem_IllegalInputAccess"
+title: "引數 &#39;存取 &#39;不正確。 Input 模式的有效值是 #39;OpenAccess.Read &#39;和 &#39;OpenAccess.Default &#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrFileSystem_IllegalInputAccess
 ms.assetid: 60929c62-b9dc-4a9c-9363-2325238f744d
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a85079274d748dae3452e50416fde36acd3fe9a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 引數 &#39;Access&#39; 無效。 Input 模式的有效值是 &#39;OpenAccess.Read&#39; 和 &#39;OpenAccess.Default&#39;
-存取值在 `Input` 模式中無效。  
+# <a name="argument-39access39-is-not-valid-valid-values-for-input-mode-are-39openaccessread39-and-39openaccessdefault39"></a><span data-ttu-id="98b98-103">引數 &#39;存取 &#39;不正確。</span><span class="sxs-lookup"><span data-stu-id="98b98-103">Argument &#39;Access&#39; is not valid.</span></span> <span data-ttu-id="98b98-104">Input 模式的有效值是 #39;OpenAccess.Read &#39;和 &#39;OpenAccess.Default &#39;</span><span class="sxs-lookup"><span data-stu-id="98b98-104">Valid values for Input mode are &#39;OpenAccess.Read&#39; and &#39;OpenAccess.Default&#39;</span></span>
+<span data-ttu-id="98b98-105">存取值在 `Input` 模式中無效。</span><span class="sxs-lookup"><span data-stu-id="98b98-105">An access value is not valid in `Input` mode.</span></span>  
   
-### 更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="98b98-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="98b98-106">To correct this error</span></span>  
   
--   將此值變更為 `OpenAccess.Read` 或 `OpenAccess.Default`。  
+-   <span data-ttu-id="98b98-107">將此值變更為 `OpenAccess.Read` 或 `OpenAccess.Default`。</span><span class="sxs-lookup"><span data-stu-id="98b98-107">Change the value to either `OpenAccess.Read` or `OpenAccess.Default`.</span></span>  
   
-## 請參閱  
- [NOTINBUILD OpenAccess 列舉](http://msdn.microsoft.com/zh-tw/90e29e92-1535-4754-9951-4579ccc8eda1)
+## <a name="see-also"></a><span data-ttu-id="98b98-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="98b98-108">See Also</span></span>  
+ [<span data-ttu-id="98b98-109">NOTINBUILD OpenAccess 列舉</span><span class="sxs-lookup"><span data-stu-id="98b98-109">NOTINBUILD OpenAccess Enumeration</span></span>](http://msdn.microsoft.com/en-us/90e29e92-1535-4754-9951-4579ccc8eda1)

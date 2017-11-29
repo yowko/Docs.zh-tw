@@ -1,77 +1,80 @@
 ---
-title: "SQL Server 中的伺服器和資料庫角色 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 中的伺服器和資料庫角色"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0bcb42e018f5e62179924634bfa49fcbfc4c7d16
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# SQL Server 中的伺服器和資料庫角色
-所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。  固定伺服器角色和固定資料庫角色都指派有固定的權限組。  
+# <a name="server-and-database-roles-in-sql-server"></a><span data-ttu-id="bde60-102">SQL Server 中的伺服器和資料庫角色</span><span class="sxs-lookup"><span data-stu-id="bde60-102">Server and Database Roles in SQL Server</span></span>
+<span data-ttu-id="bde60-103">所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。</span><span class="sxs-lookup"><span data-stu-id="bde60-103">All versions of SQL Server use role-based security, which allows you to assign permissions to a role, or group of users, instead of to individual users.</span></span> <span data-ttu-id="bde60-104">固定伺服器角色和固定資料庫角色都指派有固定的權限組。</span><span class="sxs-lookup"><span data-stu-id="bde60-104">Fixed server and fixed database roles have a fixed set of permissions assigned to them.</span></span>  
   
-## 固定伺服器角色  
- 固定伺服器角色擁有固定的權限組和整個伺服器的範圍，  這些角色專門用於管理 SQL Server，且指派給角色的權限都無法變更。  您可以將登入指派給固定伺服器角色，而不必擁有資料庫的使用者脹戶。  
+## <a name="fixed-server-roles"></a><span data-ttu-id="bde60-105">固定伺服器角色</span><span class="sxs-lookup"><span data-stu-id="bde60-105">Fixed Server Roles</span></span>  
+ <span data-ttu-id="bde60-106">固定伺服器角色擁有固定的權限組和整個伺服器的範圍，</span><span class="sxs-lookup"><span data-stu-id="bde60-106">Fixed server roles have a fixed set of permissions and server-wide scope.</span></span> <span data-ttu-id="bde60-107">這些角色專門用於管理 SQL Server，且指派給角色的權限都無法變更。</span><span class="sxs-lookup"><span data-stu-id="bde60-107">They are intended for use in administering SQL Server and the permissions assigned to them cannot be changed.</span></span> <span data-ttu-id="bde60-108">您可以將登入指派給固定伺服器角色，而不必擁有資料庫的使用者脹戶。</span><span class="sxs-lookup"><span data-stu-id="bde60-108">Logins can be assigned to fixed server roles without having a user account in a database.</span></span>  
   
 > [!IMPORTANT]
->  `sysadmin` 固定伺服器角色涵蓋所有其他的角色，而且範圍不受限制。  除非高度信任主體的安全性，否則請勿將主體新增到此角色中。  `sysadmin` 角色成員對於所有的伺服器資料庫和資源都具有不可撤銷的管理權限。  
+>  <span data-ttu-id="bde60-109">`sysadmin` 固定伺服器角色涵蓋所有其他的角色，而且範圍不受限制。</span><span class="sxs-lookup"><span data-stu-id="bde60-109">The `sysadmin` fixed server role encompasses all other roles and has unlimited scope.</span></span> <span data-ttu-id="bde60-110">除非高度信任主體的安全性，否則請勿將主體新增到此角色中。</span><span class="sxs-lookup"><span data-stu-id="bde60-110">Do not add principals to this role unless they are highly trusted.</span></span> <span data-ttu-id="bde60-111">`sysadmin` 角色成員對於所有的伺服器資料庫和資源都具有不可撤銷的管理權限。</span><span class="sxs-lookup"><span data-stu-id="bde60-111">`sysadmin` role members have irrevocable administrative privileges on all server databases and resources.</span></span>  
   
- 當您要將使用者新增到固定伺服器角色時，請嚴加篩選。  例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。  如需固定伺服器角色和權限的完整清單，請參閱《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》。  
+ <span data-ttu-id="bde60-112">當您要將使用者新增到固定伺服器角色時，請嚴加篩選。</span><span class="sxs-lookup"><span data-stu-id="bde60-112">Be selective when you add users to fixed server roles.</span></span> <span data-ttu-id="bde60-113">例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。</span><span class="sxs-lookup"><span data-stu-id="bde60-113">For example, the `bulkadmin` role allows users to insert the contents of any local file into a table, which could jeopardize data integrity.</span></span> <span data-ttu-id="bde60-114">如需固定伺服器角色和權限的完整清單，請參閱《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》。</span><span class="sxs-lookup"><span data-stu-id="bde60-114">See [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online for the complete list of fixed server roles and permissions.</span></span>  
   
-## 固定資料庫角色  
- 固定資料庫角色擁有預先定義的權限集合，其目的是讓您可以輕鬆地管理權限群組。  `db_owner` 角色的成員可以在資料庫上執行所有組態和維護活動。  
+## <a name="fixed-database-roles"></a><span data-ttu-id="bde60-115">固定資料庫角色</span><span class="sxs-lookup"><span data-stu-id="bde60-115">Fixed Database Roles</span></span>  
+ <span data-ttu-id="bde60-116">固定資料庫角色擁有預先定義的權限集合，其目的是讓您可以輕鬆地管理權限群組。</span><span class="sxs-lookup"><span data-stu-id="bde60-116">Fixed database roles have a pre-defined set of permissions that are designed to allow you to easily manage groups of permissions.</span></span> <span data-ttu-id="bde60-117">`db_owner` 角色的成員可以在資料庫上執行所有組態和維護活動。</span><span class="sxs-lookup"><span data-stu-id="bde60-117">Members of the `db_owner` role can perform all configuration and maintenance activities on the database.</span></span>  
   
- 如需 SQL Server 預先定義角色的詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bde60-118">如需 SQL Server 預先定義角色的詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bde60-118">For more information about SQL Server predefined roles, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》的[伺服器層級角色](http://msdn.microsoft.com/library/ms188659.aspx)和[固定伺服器角色的權限](http://msdn.microsoft.com/library/ms175892.aspx)|說明 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的固定伺服器角色和與其相關聯的權限。|  
-|《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》的[資料庫層級角色](http://msdn.microsoft.com/library/ms189121.aspx)和[固定資料庫角色的權限](http://msdn.microsoft.com/library/ms189612.aspx)|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
+|<span data-ttu-id="bde60-119">資源</span><span class="sxs-lookup"><span data-stu-id="bde60-119">Resource</span></span>|<span data-ttu-id="bde60-120">說明</span><span class="sxs-lookup"><span data-stu-id="bde60-120">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="bde60-121">[伺服器層級角色](http://msdn.microsoft.com/library/ms188659.aspx)和[固定的伺服器角色的權限](http://msdn.microsoft.com/library/ms175892.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》</span><span class="sxs-lookup"><span data-stu-id="bde60-121">[Server-Level Roles](http://msdn.microsoft.com/library/ms188659.aspx) and [Permissions of Fixed Server Roles](http://msdn.microsoft.com/library/ms175892.aspx) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online</span></span>|<span data-ttu-id="bde60-122">說明 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的固定伺服器角色和與其相關聯的權限。</span><span class="sxs-lookup"><span data-stu-id="bde60-122">Describes fixed server roles and the permissions associated with them in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>|  
+|<span data-ttu-id="bde60-123">[資料庫層級角色](http://msdn.microsoft.com/library/ms189121.aspx)和[固定的資料庫角色的權限](http://msdn.microsoft.com/library/ms189612.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》</span><span class="sxs-lookup"><span data-stu-id="bde60-123">[Database-Level Roles](http://msdn.microsoft.com/library/ms189121.aspx) and [Permissions of Fixed Database Roles](http://msdn.microsoft.com/library/ms189612.aspx) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online</span></span>|<span data-ttu-id="bde60-124">說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。</span><span class="sxs-lookup"><span data-stu-id="bde60-124">Describes fixed database roles and the permissions associated with them</span></span>|  
   
-## 資料庫角色和使用者  
- 登入必須對應至資料庫使用者帳戶，才能使用資料庫物件。  接著可以將資料庫使用者加入至資料庫角色、繼承任何與這些角色相關聯的權限集合。  所有權限都可授與。  
+## <a name="database-roles-and-users"></a><span data-ttu-id="bde60-125">資料庫角色和使用者</span><span class="sxs-lookup"><span data-stu-id="bde60-125">Database Roles and Users</span></span>  
+ <span data-ttu-id="bde60-126">登入必須對應至資料庫使用者帳戶，才能使用資料庫物件。</span><span class="sxs-lookup"><span data-stu-id="bde60-126">Logins must be mapped to database user accounts in order to work with database objects.</span></span> <span data-ttu-id="bde60-127">接著可以將資料庫使用者加入至資料庫角色、繼承任何與這些角色相關聯的權限集合。</span><span class="sxs-lookup"><span data-stu-id="bde60-127">Database users can then be added to database roles, inheriting any permission sets associated with those roles.</span></span> <span data-ttu-id="bde60-128">所有權限都可授與。</span><span class="sxs-lookup"><span data-stu-id="bde60-128">All permissions can be granted.</span></span>  
   
- 當您為應用程式設計安全性時，也必須考慮 `public` 角色、`dbo` 使用者帳戶和 `guest` 帳戶。  
+ <span data-ttu-id="bde60-129">當您為應用程式設計安全性時，也必須考慮 `public` 角色、`dbo` 使用者帳戶和 `guest` 帳戶。</span><span class="sxs-lookup"><span data-stu-id="bde60-129">You must also consider the `public` role, the `dbo` user account, and the `guest` account when you design security for your application.</span></span>  
   
-### public 角色  
- `public` 角色包含在每個資料庫中，系統資料庫也不例外。  您無法加以卸除，也無法從其加入或移除使用者。  授與 `public` 角色的權限會由所有其他的使用者和角色繼承，因為這些權限依預設是屬於 `public` 角色。  請僅為 `public` 授與所有使用者都可擁有的權限。  
+### <a name="the-public-role"></a><span data-ttu-id="bde60-130">public 角色</span><span class="sxs-lookup"><span data-stu-id="bde60-130">The public Role</span></span>  
+ <span data-ttu-id="bde60-131">`public` 角色包含在每個資料庫中，系統資料庫也不例外。</span><span class="sxs-lookup"><span data-stu-id="bde60-131">The `public` role is contained in every database, which includes system databases.</span></span> <span data-ttu-id="bde60-132">您無法加以卸除，也無法從其加入或移除使用者。</span><span class="sxs-lookup"><span data-stu-id="bde60-132">It cannot be dropped and you cannot add or remove users from it.</span></span> <span data-ttu-id="bde60-133">授與 `public` 角色的權限會由所有其他的使用者和角色繼承，因為這些權限依預設是屬於 `public` 角色。</span><span class="sxs-lookup"><span data-stu-id="bde60-133">Permissions granted to the `public` role are inherited by all other users and roles because they belong to the `public` role by default.</span></span> <span data-ttu-id="bde60-134">請僅為 `public` 授與所有使用者都可擁有的權限。</span><span class="sxs-lookup"><span data-stu-id="bde60-134">Grant `public` only the permissions you want all users to have.</span></span>  
   
-### dbo 使用者帳戶  
- `dbo` \(也稱為資料庫擁有者\) 是使用者帳戶，擁有可在資料庫中執行所有活動的隱含權限。  `sysadmin` 固定伺服器角色的成員會自動對應至 `dbo`。  
+### <a name="the-dbo-user-account"></a><span data-ttu-id="bde60-135">dbo 使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="bde60-135">The dbo User Account</span></span>  
+ <span data-ttu-id="bde60-136">`dbo` (也稱為資料庫擁有者) 是使用者帳戶，擁有可在資料庫中執行所有活動的隱含權限。</span><span class="sxs-lookup"><span data-stu-id="bde60-136">The `dbo`, or database owner, is a user account that has implied permissions to perform all activities in the database.</span></span> <span data-ttu-id="bde60-137">`sysadmin` 固定伺服器角色的成員會自動對應至 `dbo`。</span><span class="sxs-lookup"><span data-stu-id="bde60-137">Members of the `sysadmin` fixed server role are automatically mapped to `dbo`.</span></span>  
   
 > [!NOTE]
->  如 [SQL Server 中的擁有權和使用者結構描述分隔](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md) 中所述，`dbo` 也是結構描述的名稱。  
+>  <span data-ttu-id="bde60-138">`dbo`也是名稱的結構描述中所述[擁有權和 SQL Server 中的使用者結構描述分隔](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。</span><span class="sxs-lookup"><span data-stu-id="bde60-138">`dbo` is also the name of a schema, as discussed in [Ownership and User-Schema Separation in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).</span></span>  
   
- `dbo` 使用者帳戶經常會與 `db_owner` 固定資料庫角色混淆。  `db_owner` 的範圍是一個資料庫，而 `sysadmin` 的範圍是整個伺服器。  `db_owner` 角色中的成員資格不會授與 `dbo` 使用權限。  
+ <span data-ttu-id="bde60-139">`dbo` 使用者帳戶經常會與 `db_owner` 固定資料庫角色混淆。</span><span class="sxs-lookup"><span data-stu-id="bde60-139">The `dbo` user account is frequently confused with the `db_owner` fixed database role.</span></span> <span data-ttu-id="bde60-140">`db_owner` 的範圍是一個資料庫，而 `sysadmin` 的範圍是整個伺服器。</span><span class="sxs-lookup"><span data-stu-id="bde60-140">The scope of `db_owner` is a database; the scope of `sysadmin` is the whole server.</span></span> <span data-ttu-id="bde60-141">`db_owner` 角色中的成員資格不會授與 `dbo` 使用權限。</span><span class="sxs-lookup"><span data-stu-id="bde60-141">Membership in the `db_owner` role does not confer `dbo` user privileges.</span></span>  
   
-### guest 使用者帳戶  
- 使用者經過驗證並獲准登入 SQL Server 執行個體之後，每個資料庫中都必須要有另外的使用者帳戶。  之所以要求每個資料庫中都必須有使用者帳戶的原因，是這樣可以避免使用者連接到 SQL Server 執行個體 \(Instance\) 而存取伺服器上的所有資料庫。  資料庫中如果有 `guest` 使用者帳戶，則可以規避這項需求，因為這樣可以允許沒有資料庫使用者帳戶的登入對資料庫進行存取。  
+### <a name="the-guest-user-account"></a><span data-ttu-id="bde60-142">guest 使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="bde60-142">The guest User Account</span></span>  
+ <span data-ttu-id="bde60-143">使用者經過驗證並獲准登入 SQL Server 執行個體之後，每個資料庫中都必須要有另外的使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="bde60-143">After a user has been authenticated and allowed to log in to an instance of SQL Server, a separate user account must exist in each database the user has to access.</span></span> <span data-ttu-id="bde60-144">之所以要求每個資料庫中都必須有使用者帳戶的原因，是這樣可以避免使用者連接到 SQL Server 執行個體 (Instance) 而存取伺服器上的所有資料庫。</span><span class="sxs-lookup"><span data-stu-id="bde60-144">Requiring a user account in each database prevents users from connecting to an instance of SQL Server and accessing all the databases on a server.</span></span> <span data-ttu-id="bde60-145">資料庫中如果有 `guest` 使用者帳戶，則可以規避這項需求，因為這樣可以允許沒有資料庫使用者帳戶的登入對資料庫進行存取。</span><span class="sxs-lookup"><span data-stu-id="bde60-145">The existence of a `guest` user account in the database circumvents this requirement by allowing a login without a database user account to access a database.</span></span>  
   
- 在所有版本的 SQL Server 中，`guest` 帳戶都是內建帳戶。  依預設，此帳戶在新資料庫中是停用狀態。  如果有啟用此帳戶，則可以藉由執行 Transact\-SQL REVOKE CONNECT FROM GUEST 陳述式撤銷其 CONNECT 權限而加以停用。  
+ <span data-ttu-id="bde60-146">在所有版本的 SQL Server 中，`guest` 帳戶都是內建帳戶。</span><span class="sxs-lookup"><span data-stu-id="bde60-146">The `guest` account is a built-in account in all versions of SQL Server.</span></span> <span data-ttu-id="bde60-147">依預設，此帳戶在新資料庫中是停用狀態。</span><span class="sxs-lookup"><span data-stu-id="bde60-147">By default, it is disabled in new databases.</span></span> <span data-ttu-id="bde60-148">如果有啟用此帳戶，則可以藉由執行 Transact-SQL REVOKE CONNECT FROM GUEST 陳述式撤銷其 CONNECT 權限而加以停用。</span><span class="sxs-lookup"><span data-stu-id="bde60-148">If it is enabled, you can disable it by revoking its CONNECT permission by executing the Transact-SQL REVOKE CONNECT FROM GUEST statement.</span></span>  
   
 > [!IMPORTANT]
->  請避免使用 `guest` 帳戶；所有本身不具資料庫權限的登入，都會取得授與此帳戶的資料庫權限。  如果必須使用 `guest` 帳戶，請為其授與最小權限。  
+>  <span data-ttu-id="bde60-149">請避免使用 `guest` 帳戶；所有本身不具資料庫權限的登入，都會取得授與此帳戶的資料庫權限。</span><span class="sxs-lookup"><span data-stu-id="bde60-149">Avoid using the `guest` account; all logins without their own database permissions obtain the database permissions granted to this account.</span></span> <span data-ttu-id="bde60-150">如果必須使用 `guest` 帳戶，請為其授與最小權限。</span><span class="sxs-lookup"><span data-stu-id="bde60-150">If you must use the `guest` account, grant it minimum permissions.</span></span>  
   
- 如需有關 SQL Server 登入、使用者和角色的詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bde60-151">如需有關 SQL Server 登入、使用者和角色的詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bde60-151">For more information about SQL Server logins, users and roles, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|《SQL Server 線上叢書》的[識別和存取控制項](http://msdn.microsoft.com/library/bb510418.aspx)|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
-|《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》的[主體](http://msdn.microsoft.com/library/ms181127.aspx)|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
+|<span data-ttu-id="bde60-152">資源</span><span class="sxs-lookup"><span data-stu-id="bde60-152">Resource</span></span>|<span data-ttu-id="bde60-153">說明</span><span class="sxs-lookup"><span data-stu-id="bde60-153">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="bde60-154">[識別和存取控制](http://msdn.microsoft.com/library/bb510418.aspx)SQL Server 線上叢書中</span><span class="sxs-lookup"><span data-stu-id="bde60-154">[Identity and Access Control](http://msdn.microsoft.com/library/bb510418.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="bde60-155">包含說明主體、角色、認證、安全性實體和權限的主題連結。</span><span class="sxs-lookup"><span data-stu-id="bde60-155">Contains links to topics that describe principals, roles, credentials, securables and permissions.</span></span>|  
+|<span data-ttu-id="bde60-156">[主體](http://msdn.microsoft.com/library/ms181127.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》</span><span class="sxs-lookup"><span data-stu-id="bde60-156">[Principals](http://msdn.microsoft.com/library/ms181127.aspx) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online</span></span>|<span data-ttu-id="bde60-157">說明主體並包含說明伺服器和資料庫角色的主題連結。</span><span class="sxs-lookup"><span data-stu-id="bde60-157">Describes principals and contains links to topics that describe server and database roles.</span></span>|  
   
-## 請參閱  
- [保護 ADO.NET 應用程式](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [SQL Server 中的驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)   
- [SQL Server 中的擁有權和使用者結構描述分隔](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)   
- [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="bde60-158">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bde60-158">See Also</span></span>  
+ [<span data-ttu-id="bde60-159">設定 ADO.NET 應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="bde60-159">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="bde60-160">SQL Server 中的應用程式安全性案例</span><span class="sxs-lookup"><span data-stu-id="bde60-160">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="bde60-161">在 SQL Server 驗證</span><span class="sxs-lookup"><span data-stu-id="bde60-161">Authentication in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [<span data-ttu-id="bde60-162">擁有權和 SQL Server 中的使用者結構描述分隔</span><span class="sxs-lookup"><span data-stu-id="bde60-162">Ownership and User-Schema Separation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [<span data-ttu-id="bde60-163">授權和 SQL Server 中的權限</span><span class="sxs-lookup"><span data-stu-id="bde60-163">Authorization and Permissions in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [<span data-ttu-id="bde60-164">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="bde60-164">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,41 +4,39 @@ ms.date: 08/07/2017
 ms.prod: .net
 ms.topic: article
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 82349611fe127da46bed8998ac883c10c5164cd3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="serialization-concepts"></a>序列化概念
-為何會想要使用序列化？ 最重要的兩大原因是，在儲存媒體中保持物件的狀態以便在稍後階段重建完全相同的複本，以及利用值在應用程式定義域之間傳送物件。 例如，使用序列化來儲存 ASP.NET 的工作階段狀態，並且複製物件至 Windows Forms 的剪貼簿。 它也供遠端使用，利用值在應用程式定義域之間傳遞物件。
+# <a name="serialization-concepts"></a><span data-ttu-id="096de-102">序列化概念</span><span class="sxs-lookup"><span data-stu-id="096de-102">Serialization concepts</span></span>
+<span data-ttu-id="096de-103">為何會想要使用序列化？</span><span class="sxs-lookup"><span data-stu-id="096de-103">Why would you want to use serialization?</span></span> <span data-ttu-id="096de-104">最重要的兩大原因是，在儲存媒體中保持物件的狀態以便在稍後階段重建完全相同的複本，以及利用值在應用程式定義域之間傳送物件。</span><span class="sxs-lookup"><span data-stu-id="096de-104">The two most important reasons are to persist the state of an object to a storage medium so an exact copy can be re-created at a later stage, and to send the object by value from one application domain to another.</span></span> <span data-ttu-id="096de-105">例如，使用序列化來儲存 ASP.NET 的工作階段狀態，並且複製物件至 Windows Forms 的剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="096de-105">For example, serialization is used to save session state in ASP.NET and to copy objects to the Clipboard in Windows Forms.</span></span> <span data-ttu-id="096de-106">它也供遠端使用，利用值在應用程式定義域之間傳遞物件。</span><span class="sxs-lookup"><span data-stu-id="096de-106">It is also used by remoting to pass objects by value from one application domain to another.</span></span>
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-## <a name="persistent-storage"></a>持續性儲存體
-經常有需要將物件的欄位值儲存至磁碟，稍後再擷取此資料的情況。 儘管不需序列化就可以輕易取得，但是此做法經常繁瑣而易出錯，而且當需要追蹤物件階層時會變得越來越複雜。 想像撰寫包含數千個物件的大型企業應用程式，且必須對所有物件撰寫程式碼，將欄位和屬性儲存至磁碟和從磁碟中還原。 序列化提供方便的機制達到此目的。
+## <a name="persistent-storage"></a><span data-ttu-id="096de-107">持續性儲存體</span><span class="sxs-lookup"><span data-stu-id="096de-107">Persistent storage</span></span>
+<span data-ttu-id="096de-108">經常有需要將物件的欄位值儲存至磁碟，稍後再擷取此資料的情況。</span><span class="sxs-lookup"><span data-stu-id="096de-108">It is often necessary to store the value of the fields of an object to disk and then, later, retrieve this data.</span></span> <span data-ttu-id="096de-109">儘管不需序列化就可以輕易取得，但是此做法經常繁瑣而易出錯，而且當需要追蹤物件階層時會變得越來越複雜。</span><span class="sxs-lookup"><span data-stu-id="096de-109">Although this is easy to achieve without relying on serialization, this approach is often cumbersome and error prone, and becomes progressively more complex when you need to track a hierarchy of objects.</span></span> <span data-ttu-id="096de-110">想像撰寫包含數千個物件的大型企業應用程式，且必須對所有物件撰寫程式碼，將欄位和屬性儲存至磁碟和從磁碟中還原。</span><span class="sxs-lookup"><span data-stu-id="096de-110">Imagine writing a large business application, that contains thousands of objects, and having to write code to save and restore the fields and properties to and from disk for each object.</span></span> <span data-ttu-id="096de-111">序列化提供方便的機制達到此目的。</span><span class="sxs-lookup"><span data-stu-id="096de-111">Serialization provides a convenient mechanism for achieving this objective.</span></span>
 
-Common Language Runtime 管理物件在記憶體中儲存的方式，並使用[反映](../../../docs/framework/reflection-and-codedom/reflection.md)提供自動的序列化機制。 當物件序列化後，類別名稱、組件以及類別執行個體的所有資料成員都會寫入儲存區。 物件通常將對其他執行個體的參考儲存在成員變數中。 將類別序列化後，序列化引擎會追蹤已序列化的參考物件，確保不會將相同的物件序列化多次。 隨 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]所提供的序列化架構會正確地自動處理物件圖形和循環參考。 對物件圖形的唯一要求是所有由已序列化物件所參考的物件，必須也標示為 `Serializable` (如需詳細資訊，請參閱[基本序列化](basic-serialization.md))。 若不這麼做，當序列化程式嘗試序列化未標示的物件時，將擲回例外狀況。
+<span data-ttu-id="096de-112">Common Language Runtime 管理物件在記憶體中儲存的方式，並使用[反映](../../../docs/framework/reflection-and-codedom/reflection.md)提供自動的序列化機制。</span><span class="sxs-lookup"><span data-stu-id="096de-112">The common language runtime manages how objects are stored in memory and provides an automated serialization mechanism by using [reflection](../../../docs/framework/reflection-and-codedom/reflection.md).</span></span> <span data-ttu-id="096de-113">當物件序列化後，類別名稱、組件以及類別執行個體的所有資料成員都會寫入儲存區。</span><span class="sxs-lookup"><span data-stu-id="096de-113">When an object is serialized, the name of the class, the assembly, and all the data members of the class instance are written to storage.</span></span> <span data-ttu-id="096de-114">物件通常將對其他執行個體的參考儲存在成員變數中。</span><span class="sxs-lookup"><span data-stu-id="096de-114">Objects often store references to other instances in member variables.</span></span> <span data-ttu-id="096de-115">將類別序列化後，序列化引擎會追蹤已序列化的參考物件，確保不會將相同的物件序列化多次。</span><span class="sxs-lookup"><span data-stu-id="096de-115">When the class is serialized, the serialization engine tracks referenced objects, already serialized, to ensure that the same object is not serialized more than once.</span></span> <span data-ttu-id="096de-116">隨 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]所提供的序列化架構會正確地自動處理物件圖形和循環參考。</span><span class="sxs-lookup"><span data-stu-id="096de-116">The serialization architecture provided with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] correctly handles object graphs and circular references automatically.</span></span> <span data-ttu-id="096de-117">對物件圖形的唯一要求是所有由已序列化物件所參考的物件，必須也標示為 `Serializable` (如需詳細資訊，請參閱[基本序列化](basic-serialization.md))。</span><span class="sxs-lookup"><span data-stu-id="096de-117">The only requirement placed on object graphs is that all objects, referenced by the serialized object, must also be marked as `Serializable` (for more information, see [Basic Serialization](basic-serialization.md)).</span></span> <span data-ttu-id="096de-118">若不這麼做，當序列化程式嘗試序列化未標示的物件時，將擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="096de-118">If this is not done, an exception will be thrown when the serializer attempts to serialize the unmarked object.</span></span>
 
-將已序列化的類別還原序列化時，會重新建立該類別且自動還原所有資料成員的值。
+<span data-ttu-id="096de-119">將已序列化的類別還原序列化時，會重新建立該類別且自動還原所有資料成員的值。</span><span class="sxs-lookup"><span data-stu-id="096de-119">When the serialized class is deserialized, the class is recreated and the values of all the data members are automatically restored.</span></span>
 
-## <a name="marshal-by-value"></a>以傳值方式封送處理
-物件只有在建立它們的應用程式定義域中才有效。 除非物件衍生自 `MarshalByRefObject` 或是標示為 `Serializable`，否則任何嘗試將物件當作參數傳遞，或將物件當作結果傳回的做法都將失敗。 如果物件標示為 `Serializable`，則會自動序列化該物件，並從某個應用程式定義域傳輸至其他定義域，然後在第二個應用程式定義域中還原序列化以產生完全相同的物件複本。 此程序一般稱為傳值封送處理。
+## <a name="marshal-by-value"></a><span data-ttu-id="096de-120">以傳值方式封送處理</span><span class="sxs-lookup"><span data-stu-id="096de-120">Marshal by value</span></span>
+<span data-ttu-id="096de-121">物件只有在建立它們的應用程式定義域中才有效。</span><span class="sxs-lookup"><span data-stu-id="096de-121">Objects are valid only in the application domain where they are created.</span></span> <span data-ttu-id="096de-122">除非物件衍生自 `MarshalByRefObject` 或是標示為 `Serializable`，否則任何嘗試將物件當作參數傳遞，或將物件當作結果傳回的做法都將失敗。</span><span class="sxs-lookup"><span data-stu-id="096de-122">Any attempt to pass the object as a parameter or return it as a result will fail unless the object derives from `MarshalByRefObject` or is marked as `Serializable`.</span></span> <span data-ttu-id="096de-123">如果物件標示為 `Serializable`，則會自動序列化該物件，並從某個應用程式定義域傳輸至其他定義域，然後在第二個應用程式定義域中還原序列化以產生完全相同的物件複本。</span><span class="sxs-lookup"><span data-stu-id="096de-123">If the object is marked as `Serializable`, the object will automatically be serialized, transported from the one application domain to the other, and then deserialized to produce an exact copy of the object in the second application domain.</span></span> <span data-ttu-id="096de-124">此程序一般稱為傳值封送處理。</span><span class="sxs-lookup"><span data-stu-id="096de-124">This process is typically referred to as marshal-by-value.</span></span>
  
-物件衍生自 `MarshalByRefObject` 時，會將物件參考從某個應用程式定義域傳遞到另一個定義域，而不是物件本身。 您也可以將衍生自 `MarshalByRefObject` 的物件標示為 `Serializable`。 以遠端處理使用此物件時，已由代理選取器 (`SurrogateSelector`) 預先設定並負責序列化的格式子，並控制序列化處理序，然後取代所有具有 Proxy 且衍生自 `MarshalByRefObject` 的物件。 如果沒有 `SurrogateSelector`，序列化架構會遵循在[序列化程序中的步驟](steps-in-the-serialization-process.md)中說明的標準序列化規則。  
+<span data-ttu-id="096de-125">物件衍生自 `MarshalByRefObject` 時，會將物件參考從某個應用程式定義域傳遞到另一個定義域，而不是物件本身。</span><span class="sxs-lookup"><span data-stu-id="096de-125">When an object derives from `MarshalByRefObject`, an object reference is passed from one application domain to another, rather than the object itself.</span></span> <span data-ttu-id="096de-126">您也可以將衍生自 `MarshalByRefObject` 的物件標示為 `Serializable`。</span><span class="sxs-lookup"><span data-stu-id="096de-126">You can also mark an object that derives from `MarshalByRefObject` as `Serializable`.</span></span> <span data-ttu-id="096de-127">以遠端處理使用此物件時，已由代理選取器 (`SurrogateSelector`) 預先設定並負責序列化的格式子，並控制序列化處理序，然後取代所有具有 Proxy 且衍生自 `MarshalByRefObject` 的物件。</span><span class="sxs-lookup"><span data-stu-id="096de-127">When this object is used with remoting, the formatter responsible for serialization, which has been preconfigured with a surrogate selector (`SurrogateSelector`), takes control of the serialization process, and replaces all objects derived from `MarshalByRefObject` with a proxy.</span></span> <span data-ttu-id="096de-128">如果沒有 `SurrogateSelector`，序列化架構會遵循在[序列化程序中的步驟](steps-in-the-serialization-process.md)中說明的標準序列化規則。</span><span class="sxs-lookup"><span data-stu-id="096de-128">Without the `SurrogateSelector` in place, the serialization architecture follows the standard serialization rules described in [Steps in the Serialization Process](steps-in-the-serialization-process.md).</span></span>  
 
-## <a name="related-sections"></a>相關章節  
- [二進位序列化](../../../docs/standard/serialization/binary-serialization.md)  
- 說明 Common Language Runtime 中所含的二進位序列化機制。  
+## <a name="related-sections"></a><span data-ttu-id="096de-129">相關章節</span><span class="sxs-lookup"><span data-stu-id="096de-129">Related sections</span></span>  
+ [<span data-ttu-id="096de-130">二進位序列化</span><span class="sxs-lookup"><span data-stu-id="096de-130">Binary Serialization</span></span>](../../../docs/standard/serialization/binary-serialization.md)  
+ <span data-ttu-id="096de-131">說明 Common Language Runtime 中所含的二進位序列化機制。</span><span class="sxs-lookup"><span data-stu-id="096de-131">Describes the binary serialization mechanism that is included with the common language runtime.</span></span>  
   
- [遠端物件](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
- 說明 .NET Framework 中可用來進行遠端通訊的各種通訊方法。  
+ [<span data-ttu-id="096de-132">遠端物件</span><span class="sxs-lookup"><span data-stu-id="096de-132">Remote Objects</span></span>](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ <span data-ttu-id="096de-133">說明 .NET Framework 中可用來進行遠端通訊的各種通訊方法。</span><span class="sxs-lookup"><span data-stu-id="096de-133">Describes the various communications methods available in the .NET Framework for remote communications.</span></span>  
   
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- 說明 Common Language Runtime 中所含的 XML 和 SOAP 序列化機制。
-
+ [<span data-ttu-id="096de-134">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="096de-134">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ <span data-ttu-id="096de-135">說明 Common Language Runtime 中所含的 XML 和 SOAP 序列化機制。</span><span class="sxs-lookup"><span data-stu-id="096de-135">Describes the XML and SOAP serialization mechanism that is included with the common language runtime.</span></span>

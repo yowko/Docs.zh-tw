@@ -1,33 +1,37 @@
 ---
-title: "如何：開發簡單的 Windows Form 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Control 類別, Windows Form"
-  - "控制項 [Windows Form]"
-  - "自訂控制項 [Windows Form], 使用程式碼建立簡單控制項"
+title: "如何：開發簡單的 Windows Forms 控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms]
+- custom controls [Windows Forms], creating simple controls using code
+- Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 941bcb3d69a80ff415cb76d69414ad25e3a8c76d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：開發簡單的 Windows Form 控制項
-本章節逐步為您解說撰寫自訂 Windows Form 控制項的重要步驟。  這個逐步解說開發的簡單控制項允許您變更其 <xref:System.Windows.Forms.Control.Text%2A> 屬性的對齊。  它不會引發或處理事件。  
+# <a name="how-to-develop-a-simple-windows-forms-control"></a><span data-ttu-id="0dace-102">如何：開發簡單的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="0dace-102">How to: Develop a Simple Windows Forms Control</span></span>
+<span data-ttu-id="0dace-103">本節將逐步引導您完成撰寫自訂 Windows Forms 控制項的重要步驟。</span><span class="sxs-lookup"><span data-stu-id="0dace-103">This section walks you through the key steps for authoring a custom Windows Forms control.</span></span> <span data-ttu-id="0dace-104">在本逐步解說中開發的簡單控制項允許的對齊方式與其<xref:System.Windows.Forms.Control.Text%2A>来變更屬性。</span><span class="sxs-lookup"><span data-stu-id="0dace-104">The simple control developed in this walkthrough allows the alignment of its <xref:System.Windows.Forms.Control.Text%2A> property to be changed.</span></span> <span data-ttu-id="0dace-105">它不會引發或處理事件。</span><span class="sxs-lookup"><span data-stu-id="0dace-105">It does not raise or handle events.</span></span>  
   
-### 若要建立簡單自訂控制項  
+### <a name="to-create-a-simple-custom-control"></a><span data-ttu-id="0dace-106">建立簡單自訂控制項</span><span class="sxs-lookup"><span data-stu-id="0dace-106">To create a simple custom control</span></span>  
   
-1.  定義從 <xref:System.Windows.Forms.Control?displayProperty=fullName> 衍生的類別。  
+1.  <span data-ttu-id="0dace-107">定義衍生自 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 的類別。</span><span class="sxs-lookup"><span data-stu-id="0dace-107">Define a class that derives from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span>  
   
     ```vb  
     Public Class FirstControl  
@@ -40,30 +44,30 @@ caps.handback.revision: 17
     public class FirstControl:Control{}  
     ```  
   
-2.  定義屬性   \(您不需要定義屬性，因為控制項會從 <xref:System.Windows.Forms.Control> 類別繼承許多屬性，但大部分的自訂控制項通常會確實定義其他屬性\)。 下列程式碼片段定義名為 `TextAlignment`  的屬性，是 `FirstControl`  用來格式化繼承自 <xref:System.Windows.Forms.Control> 的 <xref:System.Windows.Forms.Control.Text%2A> 屬性的顯示。  如需定義屬性的詳細資訊，請參閱[屬性概觀](../Topic/Properties%20Overview.md)。  
+2.  <span data-ttu-id="0dace-108">定義屬性。</span><span class="sxs-lookup"><span data-stu-id="0dace-108">Define properties.</span></span> <span data-ttu-id="0dace-109">(您不需要定義屬性，因為控制項繼承從許多內容<xref:System.Windows.Forms.Control>類別，但大部分的自訂控制項通常定義的其他屬性。)下列程式碼片段會定義名為屬性`TextAlignment`，`FirstControl`的顯示格式會使用<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>。</span><span class="sxs-lookup"><span data-stu-id="0dace-109">(You are not required to define properties, because a control inherits many properties from the <xref:System.Windows.Forms.Control> class, but most custom controls generally do define additional properties.) The following code fragment defines a property named `TextAlignment` that `FirstControl` uses to format the display of the <xref:System.Windows.Forms.Control.Text%2A> property inherited from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="0dace-110">如需有關定義屬性的詳細資訊，請參閱[屬性概觀](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。</span><span class="sxs-lookup"><span data-stu-id="0dace-110">For more information about defining properties, see [Properties Overview](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span></span>  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     當您設定會變更控制項視覺顯示的屬性時，您必須叫用 <xref:System.Windows.Forms.Control.Invalidate%2A> 方法來重繪控制項。  <xref:System.Windows.Forms.Control.Invalidate%2A> 是在基底類別 <xref:System.Windows.Forms.Control> 中定義的。  
+     <span data-ttu-id="0dace-111">當您設定屬性，可變更控制項的視覺顯示時，您必須叫用<xref:System.Windows.Forms.Control.Invalidate%2A>重繪控制項的方法。</span><span class="sxs-lookup"><span data-stu-id="0dace-111">When you set a property that changes the visual display of the control, you must invoke the <xref:System.Windows.Forms.Control.Invalidate%2A> method to redraw the control.</span></span> <span data-ttu-id="0dace-112"><xref:System.Windows.Forms.Control.Invalidate%2A>定義於基底類別<xref:System.Windows.Forms.Control>。</span><span class="sxs-lookup"><span data-stu-id="0dace-112"><xref:System.Windows.Forms.Control.Invalidate%2A> is defined in the base class <xref:System.Windows.Forms.Control>.</span></span>  
   
-3.  覆寫保護的 \(Protected\) <xref:System.Windows.Forms.Control.OnPaint%2A> 方法 \(繼承自 <xref:System.Windows.Forms.Control>\)，為控制項提供呈現邏輯。  如果您不覆寫 <xref:System.Windows.Forms.Control.OnPaint%2A>，您的控制項將無法自行繪圖。  在下列程式碼片段中，<xref:System.Windows.Forms.Control.OnPaint%2A> 方法以 `alignmentValue` 欄位所指定的對齊顯示繼承自 <xref:System.Windows.Forms.Control> 的 <xref:System.Windows.Forms.Control.Text%2A> 屬性。  
+3.  <span data-ttu-id="0dace-113">覆寫的受保護<xref:System.Windows.Forms.Control.OnPaint%2A>方法繼承自<xref:System.Windows.Forms.Control>提供控制項的呈現邏輯。</span><span class="sxs-lookup"><span data-stu-id="0dace-113">Override the protected <xref:System.Windows.Forms.Control.OnPaint%2A> method inherited from <xref:System.Windows.Forms.Control> to provide rendering logic to your control.</span></span> <span data-ttu-id="0dace-114">如果您不覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>，您的控制項不能繪製本身。</span><span class="sxs-lookup"><span data-stu-id="0dace-114">If you do not override <xref:System.Windows.Forms.Control.OnPaint%2A>, your control will not be able to draw itself.</span></span> <span data-ttu-id="0dace-115">在下列程式碼片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法顯示<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>所指定的對齊`alignmentValue`欄位。</span><span class="sxs-lookup"><span data-stu-id="0dace-115">In the following code fragment, the <xref:System.Windows.Forms.Control.OnPaint%2A> method displays the <xref:System.Windows.Forms.Control.Text%2A> property inherited from <xref:System.Windows.Forms.Control> with the alignment specified by the `alignmentValue` field.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  提供屬性給您的控制項。  屬性讓視覺設計工具能夠在設計階段適當顯示您的控制項和它的屬性和事件。  下列程式碼片段套用屬性於 `TextAlignment` 屬性。  在設計工具 \(例如 Visual Studio\) 中，<xref:System.ComponentModel.CategoryAttribute.Category%2A> 屬性 \(Attribute\)\(顯示於程式碼片段\) 會造成屬性 \(Property\) 顯示在邏輯分類之下。  <xref:System.ComponentModel.DescriptionAttribute.Description%2A> 屬性 \(Attribute\) 在 `TextAlignment` 屬性 \(Property\) 選取時，會導致說明字串顯示於 \[**屬性**\] 視窗底部。  如需屬性 \(Attribute\) 的詳細資訊，請參閱[元件的設計階段屬性](../Topic/Design-Time%20Attributes%20for%20Components.md)。  
+4.  <span data-ttu-id="0dace-116">為您的控制項提供屬性 (attribute)。</span><span class="sxs-lookup"><span data-stu-id="0dace-116">Provide attributes for your control.</span></span> <span data-ttu-id="0dace-117">屬性可讓視覺化設計工具在設計階段適當地顯示您的控制項及其屬性與事件。</span><span class="sxs-lookup"><span data-stu-id="0dace-117">Attributes enable a visual designer to display your control and its properties and events appropriately at design time.</span></span> <span data-ttu-id="0dace-118">下列程式碼片段會將屬性 (attribute) 套用至 `TextAlignment` 屬性 (property)。</span><span class="sxs-lookup"><span data-stu-id="0dace-118">The following code fragment applies attributes to the `TextAlignment` property.</span></span> <span data-ttu-id="0dace-119">在 Visual Studio 中，例如設計工具<xref:System.ComponentModel.CategoryAttribute.Category%2A>屬性 （如程式碼片段所示） 會造成邏輯類別底下顯示的屬性。</span><span class="sxs-lookup"><span data-stu-id="0dace-119">In a designer such as Visual Studio, the <xref:System.ComponentModel.CategoryAttribute.Category%2A> attribute (shown in the code fragment) causes the property to be displayed under a logical category.</span></span> <span data-ttu-id="0dace-120"><xref:System.ComponentModel.DescriptionAttribute.Description%2A>屬性會造成在底部顯示描述性字串**屬性**視窗時`TextAlignment`選取屬性。</span><span class="sxs-lookup"><span data-stu-id="0dace-120">The <xref:System.ComponentModel.DescriptionAttribute.Description%2A> attribute causes a descriptive string to be displayed at the bottom of the **Properties** window when the `TextAlignment` property is selected.</span></span> <span data-ttu-id="0dace-121">如需屬性的詳細資訊，請參閱[元件的設計階段屬性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。</span><span class="sxs-lookup"><span data-stu-id="0dace-121">For more information about attributes, see [Design-Time Attributes for Components](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).</span></span>  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  \(選擇性\) 提供資源給您的控制項。  您可以使用編譯器選項 \(在 C\# 中為 `/res`\)，將資源與控制項一起封裝 \(Package\)，以提供資源 \(例如點陣圖\) 給控制項。  在執行階段時，可以使用 <xref:System.Resources.ResourceManager> 類別的方法來擷取資源。  如需建立和使用資源的詳細資訊，請參閱[桌面應用程式中的資源](../../../../docs/framework/resources/index.md)。  
+5.  <span data-ttu-id="0dace-122">(選擇性) 為您的控制項提供資源。</span><span class="sxs-lookup"><span data-stu-id="0dace-122">(optional) Provide resources for your control.</span></span> <span data-ttu-id="0dace-123">您可以使用編譯器選項 (`/res` 適用於 C#) 來封裝資源與您的控制項，為您的控制項提供資源 (例如點陣圖)。</span><span class="sxs-lookup"><span data-stu-id="0dace-123">You can provide a resource, such as a bitmap, for your control by using a compiler option (`/res` for C#) to package resources with your control.</span></span> <span data-ttu-id="0dace-124">在執行階段，資源可以使用擷取的方法<xref:System.Resources.ResourceManager>類別。</span><span class="sxs-lookup"><span data-stu-id="0dace-124">At run time, the resource can be retrieved using the methods of the <xref:System.Resources.ResourceManager> class.</span></span> <span data-ttu-id="0dace-125">如需有關建立和使用資源的詳細資訊，請參閱[桌面應用程式中的資源](../../../../docs/framework/resources/index.md)。</span><span class="sxs-lookup"><span data-stu-id="0dace-125">For more information about creating and using resources, see the [Resources in Desktop Apps](../../../../docs/framework/resources/index.md).</span></span>  
   
-6.  編譯和部署您的控制項。  若要編譯和部署 `FirstControl,`，請執行下列步驟。  
+6.  <span data-ttu-id="0dace-126">編譯及部署您的控制項。</span><span class="sxs-lookup"><span data-stu-id="0dace-126">Compile and deploy your control.</span></span> <span data-ttu-id="0dace-127">若要編譯及部署 `FirstControl,`，請執行下列步驟︰</span><span class="sxs-lookup"><span data-stu-id="0dace-127">To compile and deploy `FirstControl,` execute the following steps:</span></span>  
   
-    1.  儲存下列範例中的程式碼至原始程式檔 \(例如 FirstControl.cs 或 FirstControl.vb\)。  
+    1.  <span data-ttu-id="0dace-128">將下列範例中的程式碼儲存至原始程式檔 (SimpleForm.cs 或 SimpleForms.vb)。</span><span class="sxs-lookup"><span data-stu-id="0dace-128">Save the code in the following sample to a source file (such as FirstControl.cs or FirstControl.vb).</span></span>  
   
-    2.  將原始程式碼編譯成組件 \(Assembly\)，並將它儲存在您應用程式的目錄。  若要達成這點，請從含有原始程式檔的目錄中執行下列命令。  
+    2.  <span data-ttu-id="0dace-129">將原始程式碼編譯成組件，並將它儲存在您應用程式的目錄中。</span><span class="sxs-lookup"><span data-stu-id="0dace-129">Compile the source code into an assembly and save it in your application's directory.</span></span> <span data-ttu-id="0dace-130">若要達成此目的，請從包含原始程式檔的目錄執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="0dace-130">To accomplish this, execute the following command from the directory that contains the source file.</span></span>  
   
         ```vb  
         vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
@@ -73,21 +77,21 @@ caps.handback.revision: 17
         csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
         ```  
   
-         `/t:library` 編譯器選項會告訴編譯器，您正在建立的組件是程式庫 \(而不是可執行檔\)。  `/out` 選項指定組件的路徑和名稱。  `/r` 選項會提供您程式碼所參考組件的名稱。  在這個範例中，您建立只有您的應用程式可以使用的私用 \(Private\) 組件。  因此您必須將它儲存於您應用程式的目錄。  如需封裝和部署散發的控制項的詳細資訊，請參閱[部署](../../../../docs/framework/deployment/net-framework-and-applications.md)。  
+         <span data-ttu-id="0dace-131">`/t:library` 編譯器選項會告知編譯器您所建立的組件是程式庫 (而不是可執行檔)。</span><span class="sxs-lookup"><span data-stu-id="0dace-131">The `/t:library` compiler option tells the compiler that the assembly you are creating is a library (and not an executable).</span></span> <span data-ttu-id="0dace-132">`/out` 選項指定組件的路徑和名稱。</span><span class="sxs-lookup"><span data-stu-id="0dace-132">The `/out` option specifies the path and name of the assembly.</span></span> <span data-ttu-id="0dace-133">`/r` 選項會提供您的程式碼所參考的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="0dace-133">The`/r` option provides the name of the assemblies that are referenced by your code.</span></span> <span data-ttu-id="0dace-134">在此範例中，您會建立只有您的應用程式可以使用的私人組件。</span><span class="sxs-lookup"><span data-stu-id="0dace-134">In this example, you create a private assembly that only your applications can use.</span></span> <span data-ttu-id="0dace-135">因此，您必須將它儲存在您應用程式的目錄中。</span><span class="sxs-lookup"><span data-stu-id="0dace-135">Hence, you have to save it in your application's directory.</span></span> <span data-ttu-id="0dace-136">如需有關封裝和部署控制項以供散發的詳細資訊，請參閱[部署](../../../../docs/framework/deployment/index.md)。</span><span class="sxs-lookup"><span data-stu-id="0dace-136">For more information about packaging and deploying a control for distribution, see [Deployment](../../../../docs/framework/deployment/index.md).</span></span>  
   
- 下列範例示範 `FirstControl` 的程式碼。  控制項被封入在命名空間 `CustomWinControls` 中。  命名空間提供相關型別的邏輯群組。  您可以在新的或現有命名空間中建立您的控制項。  在 C\# 中，`using` 宣告 \(在 Visual Basic 中為 `Imports`\) 允許型別從命名空間來存取，而不需使用型別的完整名稱。  在下列範例中，`using` 宣告允許程式碼僅用 <xref:System.Windows.Forms.Control> 從 <xref:System.Windows.Forms?displayProperty=fullName> 存取 <xref:System.Windows.Forms.Control> 類別，而不必使用完整名稱 <xref:System.Windows.Forms.Control?displayProperty=fullName>。  
+ <span data-ttu-id="0dace-137">下列範例顯示 `FirstControl` 的程式碼。</span><span class="sxs-lookup"><span data-stu-id="0dace-137">The following sample shows the code for `FirstControl`.</span></span> <span data-ttu-id="0dace-138">控制項會包含在 `CustomWinControls` 命名空間中。</span><span class="sxs-lookup"><span data-stu-id="0dace-138">The control is enclosed in the namespace `CustomWinControls`.</span></span> <span data-ttu-id="0dace-139">命名空間會提供相關類型的邏輯分組。</span><span class="sxs-lookup"><span data-stu-id="0dace-139">A namespace provides a logical grouping of related types.</span></span> <span data-ttu-id="0dace-140">您可以在新的或現有命名空間中建立您的控制項。</span><span class="sxs-lookup"><span data-stu-id="0dace-140">You can create your control in a new or existing namespace.</span></span> <span data-ttu-id="0dace-141">在 C# 中，`using` 宣告 (在 Visual Basic 中為 `Imports`) 允許從命名空間存取類型，而不需使用完整的類型名稱。</span><span class="sxs-lookup"><span data-stu-id="0dace-141">In C#, the `using` declaration (in Visual Basic, `Imports`) allows types to be accessed from a namespace without using the fully qualified name of the type.</span></span> <span data-ttu-id="0dace-142">在下列範例中，`using`宣告可讓程式碼，以存取該類別<xref:System.Windows.Forms.Control>從<xref:System.Windows.Forms?displayProperty=nameWithType>為<xref:System.Windows.Forms.Control>而不需使用完整限定的名稱<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="0dace-142">In the following example, the `using` declaration allows code to access the class <xref:System.Windows.Forms.Control> from <xref:System.Windows.Forms?displayProperty=nameWithType> as simply <xref:System.Windows.Forms.Control> instead of having to use the fully qualified name <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
  [!code-vb[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]  
   
-## 在網頁上使用自訂控制項  
- 下列範例示範使用 `FirstControl` 的簡單表單。  它建立三個 `FirstControl` 的執行個體，各個都有不同的 `TextAlignment` 屬性值。  
+## <a name="using-the-custom-control-on-a-form"></a><span data-ttu-id="0dace-143">在表單上使用自訂控制項</span><span class="sxs-lookup"><span data-stu-id="0dace-143">Using the Custom Control on a Form</span></span>  
+ <span data-ttu-id="0dace-144">下列範例顯示一個使用 `FirstControl` 的簡單表單。</span><span class="sxs-lookup"><span data-stu-id="0dace-144">The following example shows a simple form that uses `FirstControl`.</span></span> <span data-ttu-id="0dace-145">它會建立三個 `FirstControl` 執行個體，各有不同的 `TextAlignment` 值。</span><span class="sxs-lookup"><span data-stu-id="0dace-145">It creates three instances of `FirstControl`, each with a different value for the `TextAlignment` property.</span></span>  
   
-#### 編譯和執行這個範例  
+#### <a name="to-compile-and-run-this-sample"></a><span data-ttu-id="0dace-146">若要編譯和執行這個範例</span><span class="sxs-lookup"><span data-stu-id="0dace-146">To compile and run this sample</span></span>  
   
-1.  儲存下列範例中的程式碼至原始程式檔 \(SimpleForm.cs 或 SimpleForms.vb\)。  
+1.  <span data-ttu-id="0dace-147">將下列範例中的程式碼儲存至原始程式檔 (SimpleForm.cs 或 SimpleForms.vb)。</span><span class="sxs-lookup"><span data-stu-id="0dace-147">Save the code in the following example to a source file (SimpleForm.cs or SimpleForms.vb).</span></span>  
   
-2.  從含有原始程式檔的目錄執行下列命令，將原始程式碼編譯成可執行組件。  
+2.  <span data-ttu-id="0dace-148">從包含原始程式檔的目錄執行下列命令，將原始程式檔編譯成可執行檔的組件。</span><span class="sxs-lookup"><span data-stu-id="0dace-148">Compile the source code into an executable assembly by executing the following command from the directory that contains the source file.</span></span>  
   
     ```vb  
     vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
@@ -97,9 +101,9 @@ caps.handback.revision: 17
     csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
     ```  
   
-     CustomWinControls.dll 為含有類別 `FirstControl` 的組件。  這個組件必須位於存取它的表單 \(SimpleForm.cs 或 SimpleForms.vb\) 的原始程式檔的相同目錄。  
+     <span data-ttu-id="0dace-149">CustomWinControls.dll 是包含類別的組件`FirstControl`。</span><span class="sxs-lookup"><span data-stu-id="0dace-149">CustomWinControls.dll is the assembly that contains the class `FirstControl`.</span></span> <span data-ttu-id="0dace-150">此組件所在的目錄必須與存取該組件之表單的原始程式檔 (SimpleForm.cs 或 SimpleForms.vb) 相同。</span><span class="sxs-lookup"><span data-stu-id="0dace-150">This assembly must be in the same directory as the source file for the form that accesses it (SimpleForm.cs or SimpleForms.vb).</span></span>  
   
-3.  使用下列命令執行 SimpleForm.exe。  
+3.  <span data-ttu-id="0dace-151">使用下列命令執行 SimpleForm.exe。</span><span class="sxs-lookup"><span data-stu-id="0dace-151">Execute SimpleForm.exe using the following command.</span></span>  
   
     ```  
     SimpleForm  
@@ -108,6 +112,6 @@ caps.handback.revision: 17
  [!code-csharp[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
  [!code-vb[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
-## 請參閱  
- [Windows Form 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Windows Form 控制項中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="0dace-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0dace-152">See Also</span></span>  
+ [<span data-ttu-id="0dace-153">Windows Forms 控制項中的屬性</span><span class="sxs-lookup"><span data-stu-id="0dace-153">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [<span data-ttu-id="0dace-154">Windows Forms 控制項中的事件</span><span class="sxs-lookup"><span data-stu-id="0dace-154">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)

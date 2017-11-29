@@ -1,119 +1,122 @@
 ---
-title: "Web 服務通訊協定互通性手冊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Web 服務通訊協定互通性手冊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: eff6ffe73d5296fb103811a51d94636ea757854e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Web 服務通訊協定互通性手冊
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會實作一些 Web 服務通訊協定。  許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。  本主題提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所實作的 Web 服務通訊協定清單。  本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。  
+# <a name="web-services-protocols-interoperability-guide"></a><span data-ttu-id="5e865-102">Web 服務通訊協定互通性手冊</span><span class="sxs-lookup"><span data-stu-id="5e865-102">Web Services Protocols Interoperability Guide</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="5e865-103"> 會實作一些 Web 服務通訊協定。</span><span class="sxs-lookup"><span data-stu-id="5e865-103"> implements a number of Web services protocols.</span></span> <span data-ttu-id="5e865-104">許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。</span><span class="sxs-lookup"><span data-stu-id="5e865-104">Many of these protocols include a number of options and extensibility points left to the discretion of the implementer.</span></span> <span data-ttu-id="5e865-105">本主題提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所實作的 Web 服務通訊協定清單。</span><span class="sxs-lookup"><span data-stu-id="5e865-105">This topic provides a list of Web services protocols [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implements.</span></span> <span data-ttu-id="5e865-106">本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="5e865-106">Other topics within this section provide implementation details for each protocol supported.</span></span>  
   
-## WCF 實作的 Web 服務通訊協定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 透過通道支援 Web 服務 \(WS\) 基礎結構通訊協定，並透過合約功能支援 Web 服務應用程式通訊協定。  應用程式通訊協定的互通性是透過 XML 結構描述語言 1.0 \(XSD\) 和 Web 服務描述語言 \(WSDL\) 1.1 來達成。  
+## <a name="web-services-protocols-implemented-by-wcf"></a><span data-ttu-id="5e865-107">WCF 實作的 Web 服務通訊協定</span><span class="sxs-lookup"><span data-stu-id="5e865-107">Web Services Protocols Implemented by WCF</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="5e865-108"> 透過通道支援 Web 服務 (WS) 基礎結構通訊協定，並透過合約功能支援 Web 服務應用程式通訊協定。</span><span class="sxs-lookup"><span data-stu-id="5e865-108"> provides support for Web services (WS) infrastructure protocols through channels and Web services application protocols through the contracts feature.</span></span> <span data-ttu-id="5e865-109">應用程式通訊協定的互通性是透過 XML 結構描述語言 1.0 (XSD) 和 Web 服務描述語言 (WSDL) 1.1 來達成。</span><span class="sxs-lookup"><span data-stu-id="5e865-109">Interoperability for application protocols is accomplished through XML Schema description language 1.0 (XSD) and Web Services Description Language (WSDL) 1.1.</span></span>  
   
- 基礎結構通訊協定互通性是由 WS\-\* 規格所提供。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道會支援一些 WS\-\* 基礎結構通訊協定。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道是使用繫結元素來設定。  下表包含各種 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結項目所實作的完整 WS\-\* 基礎結構通訊協定清單。  
+ <span data-ttu-id="5e865-110">基礎結構通訊協定互通性是由 WS-* 規格所提供。</span><span class="sxs-lookup"><span data-stu-id="5e865-110">Infrastructure protocols interoperability is provided by the WS-* specifications.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="5e865-111">通道會支援一些 WS-\*基礎結構通訊協定。</span><span class="sxs-lookup"><span data-stu-id="5e865-111"> channels provide support for a number of WS-\* infrastructure protocols.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="5e865-112"> 通道是使用繫結元素來設定。</span><span class="sxs-lookup"><span data-stu-id="5e865-112"> channels are configured using binding elements.</span></span> <span data-ttu-id="5e865-113">下表包含 WS-的完整清單\*實作不同的基礎結構通訊協定[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]繫結項目。</span><span class="sxs-lookup"><span data-stu-id="5e865-113">The following tables contain the full list of the WS-\* infrastructure protocols implemented by various [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] binding elements.</span></span>  
   
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 支援下表中的規格。  
+ <span data-ttu-id="5e865-114"><xref:System.ServiceModel.Channels.HttpTransportBindingElement> 支援下表中的規格。</span><span class="sxs-lookup"><span data-stu-id="5e865-114"><xref:System.ServiceModel.Channels.HttpTransportBindingElement> supports the specifications in the following table.</span></span>  
   
-|規格\/文件|連結|  
-|------------|--------|  
-|HTTP 1.1|[RFC 2616](http://go.microsoft.com/fwlink/?LinkId=90372)|  
-|SOAP 1.1 HTTP 繫結|[簡易物件存取通訊協定 \(SOAP\) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520)，第 7 節|  
-|SOAP 1.2 HTTP 繫結|[SOAP 1.2 版第 2 部分：附加 \(第二版\)](http://go.microsoft.com/fwlink/?LinkId=95329)，第 7 節|  
+|<span data-ttu-id="5e865-115">規格/文件</span><span class="sxs-lookup"><span data-stu-id="5e865-115">Specification/document</span></span>|<span data-ttu-id="5e865-116">連結</span><span class="sxs-lookup"><span data-stu-id="5e865-116">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="5e865-117">HTTP 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-117">HTTP 1.1</span></span>|[<span data-ttu-id="5e865-118">RFC 2616</span><span class="sxs-lookup"><span data-stu-id="5e865-118">RFC 2616</span></span>](http://go.microsoft.com/fwlink/?LinkId=90372)|  
+|<span data-ttu-id="5e865-119">SOAP 1.1 HTTP 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-119">SOAP 1.1 HTTP Binding</span></span>|<span data-ttu-id="5e865-120">[簡易物件存取通訊協定 (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520)，第 7 節</span><span class="sxs-lookup"><span data-stu-id="5e865-120">[Simple Object Access Protocol (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520), Section 7</span></span>|  
+|<span data-ttu-id="5e865-121">SOAP 1.2 HTTP 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-121">SOAP 1.2 HTTP Binding</span></span>|<span data-ttu-id="5e865-122">[SOAP 1.2 版第 2 部分： 附加 （第二版）](http://go.microsoft.com/fwlink/?LinkId=95329)，第 7 節</span><span class="sxs-lookup"><span data-stu-id="5e865-122">[SOAP Version 1.2 Part 2: Adjuncts (Second Edition)](http://go.microsoft.com/fwlink/?LinkId=95329), Section 7</span></span>|  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 支援下表中的規格。  
+ <span data-ttu-id="5e865-123"><xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 支援下表中的規格。</span><span class="sxs-lookup"><span data-stu-id="5e865-123"><xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> and <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> support the specifications in the following table.</span></span>  
   
-|規格\/文件|連結|  
-|------------|--------|  
-|XML|[可延伸標記語言 \(XML\) 1.0 \(第四版\)](http://go.microsoft.com/fwlink/?LinkId=15139)|  
-|SOAP 1.1|[簡易物件存取通訊協定 \(SOAP\) 1.1](http://go.microsoft.com/fwlink/?LinkId=96687)|  
-|SOAP 1.2 核心|[SOAP 1.2 版第 1 部分：訊息架構 \(第二版\)](http://go.microsoft.com/fwlink/?LinkId=94664)|  
-|WS\-Addressing 2004\/08|[Web 服務定址 \(WS\-Addressing\)](http://go.microsoft.com/fwlink/?LinkId=81239)|  
-|W3C Web 服務定址 1.0 \- 核心|[Web 服務定址 1.0 \- 核心](http://go.microsoft.com/fwlink/?LinkId=96688)|  
-|W3C Web 服務定址 1.0 \- SOAP 繫結|[Web 服務定址 1.0 \- SOAP 繫結](http://go.microsoft.com/fwlink/?LinkId=96689)|  
-|W3C Web 服務定址 1.0 \- WSDL 繫結\*|[Web 服務定址 1.0 \- WSDL 繫結](http://go.microsoft.com/fwlink/?LinkId=96690)|  
-|W3C Web 服務定址 1.0 中繼資料|[Web 服務定址 1.0 \- 中繼資料](http://www.w3.org/TR/ws-addr-metadata/)|  
-|WSDL SOAP1.1 繫結|[Web 服務描述語言 \(WSDL\) 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)|  
-|WSDL SOAP1.2 繫結|[SOAP 1.2 的 WSDL 1.1 繫結延伸](http://go.microsoft.com/fwlink/?LinkId=96691)|  
+|<span data-ttu-id="5e865-124">規格/文件</span><span class="sxs-lookup"><span data-stu-id="5e865-124">Specification/Document</span></span>|<span data-ttu-id="5e865-125">連結</span><span class="sxs-lookup"><span data-stu-id="5e865-125">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="5e865-126">XML</span><span class="sxs-lookup"><span data-stu-id="5e865-126">XML</span></span>|[<span data-ttu-id="5e865-127">可延伸標記語言 (XML) 1.0 （第四版）</span><span class="sxs-lookup"><span data-stu-id="5e865-127">Extensible Markup Language (XML) 1.0 (Fourth Edition)</span></span>](http://go.microsoft.com/fwlink/?LinkId=15139)|  
+|<span data-ttu-id="5e865-128">SOAP 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-128">SOAP 1.1</span></span>|[<span data-ttu-id="5e865-129">簡易物件存取通訊協定 (SOAP) 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-129">Simple Object Access Protocol (SOAP) 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=96687)|  
+|<span data-ttu-id="5e865-130">SOAP 1.2 核心</span><span class="sxs-lookup"><span data-stu-id="5e865-130">SOAP 1.2 Core</span></span>|[<span data-ttu-id="5e865-131">SOAP 1.2 版第 1 部分： 訊息架構 （第二版）</span><span class="sxs-lookup"><span data-stu-id="5e865-131">SOAP Version 1.2 Part 1: Messaging Framework (Second Edition)</span></span>](http://go.microsoft.com/fwlink/?LinkId=94664)|  
+|<span data-ttu-id="5e865-132">WS-Addressing 2004/08</span><span class="sxs-lookup"><span data-stu-id="5e865-132">WS-Addressing 2004/08</span></span>|[<span data-ttu-id="5e865-133">Web 服務定址 (Ws-addressing)</span><span class="sxs-lookup"><span data-stu-id="5e865-133">Web Services Addressing (WS-Addressing)</span></span>](http://go.microsoft.com/fwlink/?LinkId=81239)|  
+|<span data-ttu-id="5e865-134">W3C Web 服務定址 1.0 - 核心</span><span class="sxs-lookup"><span data-stu-id="5e865-134">W3C Web Services Addressing 1.0 - Core</span></span>|[<span data-ttu-id="5e865-135">Web 服務定址 1.0-核心</span><span class="sxs-lookup"><span data-stu-id="5e865-135">Web Services Addressing 1.0 - Core</span></span>](http://go.microsoft.com/fwlink/?LinkId=96688)|  
+|<span data-ttu-id="5e865-136">W3C Web 服務定址 1.0 - SOAP 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-136">W3C Web Services Addressing 1.0 - SOAP Binding</span></span>|[<span data-ttu-id="5e865-137">Web 服務定址 1.0-SOAP 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-137">Web Services Addressing 1.0 - SOAP Binding</span></span>](http://go.microsoft.com/fwlink/?LinkId=96689)|  
+|<span data-ttu-id="5e865-138">W3C Web 服務定址 1.0 - WSDL 繫結*</span><span class="sxs-lookup"><span data-stu-id="5e865-138">W3C Web Services Addressing 1.0 - WSDL Binding*</span></span>|[<span data-ttu-id="5e865-139">Web 服務定址 1.0-WSDL 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-139">Web Services Addressing 1.0 - WSDL Binding</span></span>](http://go.microsoft.com/fwlink/?LinkId=96690)|  
+|<span data-ttu-id="5e865-140">W3C Web 服務定址 1.0 中繼資料</span><span class="sxs-lookup"><span data-stu-id="5e865-140">W3C Web Services Addressing 1.0 Metadata</span></span>|[<span data-ttu-id="5e865-141">Web 服務定址 1.0-中繼資料</span><span class="sxs-lookup"><span data-stu-id="5e865-141">Web Services Addressing 1.0 - Metadata</span></span>](http://www.w3.org/TR/ws-addr-metadata/)|  
+|<span data-ttu-id="5e865-142">WSDL SOAP1.1 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-142">WSDL SOAP1.1 Binding</span></span>|[<span data-ttu-id="5e865-143">Web 服務描述語言 (WSDL) 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-143">Web Services Description Language (WSDL) 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=96160)|  
+|<span data-ttu-id="5e865-144">WSDL SOAP1.2 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-144">WSDL SOAP1.2 Binding</span></span>|[<span data-ttu-id="5e865-145">SOAP 1.2 的 WSDL 1.1 繫結延伸模組</span><span class="sxs-lookup"><span data-stu-id="5e865-145">WSDL 1.1 Binding Extension for SOAP 1.2</span></span>](http://go.microsoft.com/fwlink/?LinkId=96691)|  
   
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 支援下表中的規格。  
+ <span data-ttu-id="5e865-146"><xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 支援下表中的規格。</span><span class="sxs-lookup"><span data-stu-id="5e865-146"><xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> supports the specifications in the following table.</span></span>  
   
-|規格\/文件|連結|  
-|------------|--------|  
-|XOP|[XML 二進位最佳化套件](http://go.microsoft.com/fwlink/?LinkId=96714)|  
-|MTOM \+ SOAP1.2 繫結|[SOAP 訊息傳輸最佳化機制](http://go.microsoft.com/fwlink/?LinkId=96713)|  
-|MTOM SOAP 1.1 繫結|[MTOM 1.0 的 SOAP 1.1 繫結](http://go.microsoft.com/fwlink/?LinkId=96712)|  
-|MTOM WS\-PolicyAssertions|即將發行。|  
+|<span data-ttu-id="5e865-147">規格/文件</span><span class="sxs-lookup"><span data-stu-id="5e865-147">Specification/document</span></span>|<span data-ttu-id="5e865-148">連結</span><span class="sxs-lookup"><span data-stu-id="5e865-148">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="5e865-149">XOP</span><span class="sxs-lookup"><span data-stu-id="5e865-149">XOP</span></span>|[<span data-ttu-id="5e865-150">XML 二進位最佳化套件</span><span class="sxs-lookup"><span data-stu-id="5e865-150">XML-binary Optimized Packaging</span></span>](http://go.microsoft.com/fwlink/?LinkId=96714)|  
+|<span data-ttu-id="5e865-151">MTOM + SOAP1.2 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-151">MTOM + SOAP1.2 Binding</span></span>|[<span data-ttu-id="5e865-152">SOAP 訊息傳輸最佳化機制</span><span class="sxs-lookup"><span data-stu-id="5e865-152">SOAP Message Transmission Optimization Mechanism</span></span>](http://go.microsoft.com/fwlink/?LinkId=96713)|  
+|<span data-ttu-id="5e865-153">MTOM SOAP 1.1 繫結</span><span class="sxs-lookup"><span data-stu-id="5e865-153">MTOM SOAP 1.1 Binding</span></span>|[<span data-ttu-id="5e865-154">SOAP 1.1 繫結 MTOM 1.0 的</span><span class="sxs-lookup"><span data-stu-id="5e865-154">SOAP 1.1 Binding for MTOM 1.0</span></span>](http://go.microsoft.com/fwlink/?LinkId=96712)|  
+|<span data-ttu-id="5e865-155">MTOM WS-PolicyAssertions</span><span class="sxs-lookup"><span data-stu-id="5e865-155">MTOM WS-PolicyAssertions</span></span>|<span data-ttu-id="5e865-156">即將發行。</span><span class="sxs-lookup"><span data-stu-id="5e865-156">To be published.</span></span>|  
   
- <xref:System.ServiceModel.Channels.SecurityBindingElement> 支援下表中的規格。  
+ <span data-ttu-id="5e865-157"><xref:System.ServiceModel.Channels.SecurityBindingElement> 支援下表中的規格。</span><span class="sxs-lookup"><span data-stu-id="5e865-157"><xref:System.ServiceModel.Channels.SecurityBindingElement> supports the specifications in the following table.</span></span>  
   
-|規格\/文件|連結|  
-|------------|--------|  
-|WSS：SOAP 訊息安全性 1.0|[Web 服務安全性：SOAP 訊息安全性 1.1](http://go.microsoft.com/fwlink/?LinkId=94684)|  
-|WSS：使用者名稱權杖設定檔 1.0|[Web 服務安全性使用者名稱權杖設定檔 1.1](http://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> 需要 Password\/@Type\=PasswordText \(預設\)|  
-|WSS：X.509 權杖設定檔 1.0|[Web 服務安全性 X.509 憑證權杖設定檔](http://go.microsoft.com/fwlink/?LinkId=95335)|  
-|WSS：SAML 1.1 權杖設定檔 1.0|[Web 服務安全性：SAML 權杖設定檔](http://go.microsoft.com/fwlink/?LinkId=96693)|  
-|WSS：SOAP 訊息安全性 1.1|[Web 服務安全性：SOAP 訊息安全性 1.1](http://go.microsoft.com/fwlink/?LinkId=91240)|  
-|WSS：使用者名稱權杖設定檔 1.1|[Web 服務安全性使用者名稱權杖設定檔 1.1](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> 不會實作密碼架構金鑰衍生；<br /><br /> 需要 Password\/@Type\=PasswordText \(預設\)|  
-|WSS：X509 權杖設定檔 1.1|[Web 服務安全性 X.509 憑證權杖設定檔 1.1](http://go.microsoft.com/fwlink/?LinkId=95332)|  
-|WSS：Kerberos 權杖設定檔 1.1|[Web 服務安全性 Kerberos 權杖設定檔 1.1](http://go.microsoft.com/fwlink/?LinkId=95333)|  
-|WSS：SAML 1.1 權杖設定檔 1.1|[Web 服務安全性 SAML 權杖設定檔 1.1](http://go.microsoft.com/fwlink/?LinkId=96694)|  
-|WS\-SecureConversation|[Web 服務安全轉換語言](http://go.microsoft.com/fwlink/?LinkId=95317)|  
-|WS\-Trust 1.4|[Web 服務信任語言](http://go.microsoft.com/fwlink/?LinkId=169514)|  
-|WS\-SecurityPolicy 2005\/07|[Web 服務安全轉換語言](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> 已由提交至 OASIS WS\-SX 技術委員會的勘誤表修訂。<br /><br /> [ws\-sx 訊息](http://go.microsoft.com/fwlink/?LinkId=96700)|  
-|WS\-ReliableMessaging 1.1|[Reliable Messaging Protocol 1.1 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
+|<span data-ttu-id="5e865-158">規格/文件</span><span class="sxs-lookup"><span data-stu-id="5e865-158">Specification/document</span></span>|<span data-ttu-id="5e865-159">連結</span><span class="sxs-lookup"><span data-stu-id="5e865-159">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="5e865-160">WSS：SOAP 訊息安全性 1.0</span><span class="sxs-lookup"><span data-stu-id="5e865-160">WSS: SOAP Message Security 1.0</span></span>|[<span data-ttu-id="5e865-161">Web 服務安全性： SOAP 訊息安全性 1.0</span><span class="sxs-lookup"><span data-stu-id="5e865-161">Web Services Security: SOAP Message Security 1.0</span></span>](http://go.microsoft.com/fwlink/?LinkId=94684)|  
+|<span data-ttu-id="5e865-162">WSS：使用者名稱權杖設定檔 1.0</span><span class="sxs-lookup"><span data-stu-id="5e865-162">WSS: Username Token Profile 1.0</span></span>|[<span data-ttu-id="5e865-163">Web 服務安全性 UsernameToken 設定檔 1.0</span><span class="sxs-lookup"><span data-stu-id="5e865-163">Web Services Security UsernameToken Profile 1.0</span></span>](http://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> <span data-ttu-id="5e865-164">需要Password/@Type= PasswordText （預設值）</span><span class="sxs-lookup"><span data-stu-id="5e865-164">require Password/@Type=PasswordText (default)</span></span>|  
+|<span data-ttu-id="5e865-165">WSS：X.509 權杖設定檔 1.0</span><span class="sxs-lookup"><span data-stu-id="5e865-165">WSS: X.509 Token Profile 1.0</span></span>|[<span data-ttu-id="5e865-166">Web 服務安全性 X.509 憑證權杖設定檔</span><span class="sxs-lookup"><span data-stu-id="5e865-166">Web Services Security X.509 Certificate Token Profile</span></span>](http://go.microsoft.com/fwlink/?LinkId=95335)|  
+|<span data-ttu-id="5e865-167">WSS：SAML 1.1 權杖設定檔 1.0</span><span class="sxs-lookup"><span data-stu-id="5e865-167">WSS: SAML 1.1 Token Profile 1.0</span></span>|[<span data-ttu-id="5e865-168">Web 服務安全性： SAML 權杖設定檔</span><span class="sxs-lookup"><span data-stu-id="5e865-168">Web Services Security: SAML Token Profile</span></span>](http://go.microsoft.com/fwlink/?LinkId=96693)|  
+|<span data-ttu-id="5e865-169">WSS：SOAP 訊息安全性 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-169">WSS: SOAP Message Security 1.1</span></span>|[<span data-ttu-id="5e865-170">Web 服務安全性： SOAP 訊息安全性 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-170">Web Services Security: SOAP Message Security 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=91240)|  
+|<span data-ttu-id="5e865-171">WSS：使用者名稱權杖設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-171">WSS Username Token Profile 1.1</span></span>|[<span data-ttu-id="5e865-172">Web 服務安全性 UsernameToken 設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-172">Web Services Security UsernameToken Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> <span data-ttu-id="5e865-173">不會實作密碼架構金鑰衍生；</span><span class="sxs-lookup"><span data-stu-id="5e865-173">do not implement password-based key derivation;</span></span><br /><br /> <span data-ttu-id="5e865-174">需要Password/@Type= PasswordText （預設值）</span><span class="sxs-lookup"><span data-stu-id="5e865-174">require Password/@Type=PasswordText (default)</span></span>|  
+|<span data-ttu-id="5e865-175">WSS：X509 權杖設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-175">WSS: X509 Token Profile 1.1</span></span>|[<span data-ttu-id="5e865-176">Web 服務安全性 X.509 憑證權杖設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-176">Web Services Security X.509 Certificate Token Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=95332)|  
+|<span data-ttu-id="5e865-177">WSS：Kerberos 權杖設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-177">WSS: Kerberos Token Profile 1.1</span></span>|[<span data-ttu-id="5e865-178">Web 服務安全性 Kerberos 權杖設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-178">Web Services Security Kerberos Token Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=95333)|  
+|<span data-ttu-id="5e865-179">WSS：SAML 1.1 權杖設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-179">WSS: SAML 1.1 Token Profile 1.1</span></span>|[<span data-ttu-id="5e865-180">Web 服務安全性 SAML 權杖設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-180">Web Services Security SAML Token Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=96694)|  
+|<span data-ttu-id="5e865-181">WS-SecureConversation</span><span class="sxs-lookup"><span data-stu-id="5e865-181">WS-Secure Conversation</span></span>|[<span data-ttu-id="5e865-182">Web 服務安全轉換語言</span><span class="sxs-lookup"><span data-stu-id="5e865-182">Web Services Secure Conversation Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=95317)|  
+|<span data-ttu-id="5e865-183">WS-Trust 1.4</span><span class="sxs-lookup"><span data-stu-id="5e865-183">WS-Trust 1.4</span></span>|[<span data-ttu-id="5e865-184">Web 服務信任語言</span><span class="sxs-lookup"><span data-stu-id="5e865-184">Web Services Trust Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=169514)|  
+|<span data-ttu-id="5e865-185">WS-SecurityPolicy 2005/07</span><span class="sxs-lookup"><span data-stu-id="5e865-185">WS-SecurityPolicy 2005/07</span></span>|[<span data-ttu-id="5e865-186">Web 服務安全轉換語言</span><span class="sxs-lookup"><span data-stu-id="5e865-186">Web Services Secure Conversation Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> <span data-ttu-id="5e865-187">已由提交至 OASIS WS-SX 技術委員會的勘誤表修訂。</span><span class="sxs-lookup"><span data-stu-id="5e865-187">As amended by errata submitted to OASIS WS-SX Technical Committee.</span></span><br /><br /> [<span data-ttu-id="5e865-188">ws-sx 訊息</span><span class="sxs-lookup"><span data-stu-id="5e865-188">ws-sx message</span></span>](http://go.microsoft.com/fwlink/?LinkId=96700)|  
+|<span data-ttu-id="5e865-189">WS-ReliableMessaging 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-189">WS-ReliableMessaging 1.1</span></span>|[<span data-ttu-id="5e865-190">Reliable Messaging Protocol 1.1 版</span><span class="sxs-lookup"><span data-stu-id="5e865-190">Reliable Messaging Protocol version 1.1</span></span>](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 支援下表中的規格。  
+ <span data-ttu-id="5e865-191"><xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 支援下表中的規格。</span><span class="sxs-lookup"><span data-stu-id="5e865-191"><xref:System.ServiceModel.Channels.TransactionFlowBindingElement> supports the specifications in the following table.</span></span>  
   
-|規格\/文件|連結|  
-|------------|--------|  
-|WS\-Coordination|[Web 服務協調](http://go.microsoft.com/fwlink/?LinkId=95324)|  
-|WS\-AtomicTransaction|[Web 服務原子交易](http://go.microsoft.com/fwlink/?LinkId=95323)|  
+|<span data-ttu-id="5e865-192">規格/文件</span><span class="sxs-lookup"><span data-stu-id="5e865-192">Specification/Document</span></span>|<span data-ttu-id="5e865-193">連結</span><span class="sxs-lookup"><span data-stu-id="5e865-193">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="5e865-194">WS-Coordination</span><span class="sxs-lookup"><span data-stu-id="5e865-194">WS-Coordination</span></span>|[<span data-ttu-id="5e865-195">Web 服務協調</span><span class="sxs-lookup"><span data-stu-id="5e865-195">Web Services Coordination</span></span>](http://go.microsoft.com/fwlink/?LinkId=95324)|  
+|<span data-ttu-id="5e865-196">WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="5e865-196">WS-AtomicTransaction</span></span>|[<span data-ttu-id="5e865-197">Web 服務原子交易</span><span class="sxs-lookup"><span data-stu-id="5e865-197">Web Services Atomic Transaction</span></span>](http://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WSDLExporter>、<xref:System.ServiceModel.Description.WSDLImporter> 和 <xref:System.ServiceModel.Description.MetadataResolver> 類別支援下列中繼資料規格：  
+ <span data-ttu-id="5e865-198"><xref:System.ServiceModel.Description.MetadataExporter>， <xref:System.ServiceModel.Description.MetadataImporter>， <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`， `System.ServiceModel.Description.WSDLImporter`，和<xref:System.ServiceModel.Description.MetadataResolver>類別可支援下列的中繼資料規格：</span><span class="sxs-lookup"><span data-stu-id="5e865-198">The <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, and <xref:System.ServiceModel.Description.MetadataResolver> classes provide support for the following metadata specifications:</span></span>  
   
--   [XML 結構描述第一部分：結構第二版](http://go.microsoft.com/fwlink/?LinkId=3536)  
+-   [<span data-ttu-id="5e865-199">XML 結構描述第 1 部分： 結構第二版</span><span class="sxs-lookup"><span data-stu-id="5e865-199">XML Schema Part 1: Structures Second Edition</span></span>](http://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML 結構描述第二部分：資料型別第二版](http://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [<span data-ttu-id="5e865-200">XML 結構描述第 2 部分： 資料類型第二版</span><span class="sxs-lookup"><span data-stu-id="5e865-200">XML Schema Part 2: Data types Second Edition</span></span>](http://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)  
+-   [<span data-ttu-id="5e865-201">WSDL 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-201">WSDL 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS\-Policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
+-   [<span data-ttu-id="5e865-202">Ws-policy 1.2</span><span class="sxs-lookup"><span data-stu-id="5e865-202">WS-Policy 1.2</span></span>](http://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS\-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=96706)  
+-   [<span data-ttu-id="5e865-203">Ws-policy 1.5</span><span class="sxs-lookup"><span data-stu-id="5e865-203">WS-Policy 1.5</span></span>](http://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS\-Policy 1.2 附件](http://go.microsoft.com/fwlink/?LinkId=96707)  
+-   [<span data-ttu-id="5e865-204">WS-POLICY 1.2 附件</span><span class="sxs-lookup"><span data-stu-id="5e865-204">WS-PolicyAttachment 1.2</span></span>](http://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS\-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [<span data-ttu-id="5e865-205">Ws-metadataexchange 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-205">WS-MetadataExchange 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [用於中繼資料擷取的 WS\-Transfer Get](http://go.microsoft.com/fwlink/?LinkId=96708)  
+-   [<span data-ttu-id="5e865-206">Ws-transfer Get 擷取中繼資料</span><span class="sxs-lookup"><span data-stu-id="5e865-206">WS-Transfer Get for metadata retrieval</span></span>](http://go.microsoft.com/fwlink/?LinkId=96708)  
   
- 此外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會實作下列互通性設定檔：  
+ <span data-ttu-id="5e865-207">此外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會實作下列互通性設定檔：</span><span class="sxs-lookup"><span data-stu-id="5e865-207">In addition, the following Interoperability Profiles are implemented across [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:</span></span>  
   
--   [Basic Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)  
+-   [<span data-ttu-id="5e865-208">基本設定檔 1.1</span><span class="sxs-lookup"><span data-stu-id="5e865-208">Basic Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [簡單 SOAP 繫結 1.0](http://go.microsoft.com/fwlink/?LinkId=96710)  
+-   [<span data-ttu-id="5e865-209">簡單 SOAP 繫結 1.0</span><span class="sxs-lookup"><span data-stu-id="5e865-209">Simple SOAP Binding 1.0</span></span>](http://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [基本安全性設定檔 1.0 工作草稿](http://go.microsoft.com/fwlink/?LinkId=96711)  
+-   [<span data-ttu-id="5e865-210">基本的安全性設定檔 1.0 工作草稿</span><span class="sxs-lookup"><span data-stu-id="5e865-210">Basic Security Profile 1.0 Working Draft</span></span>](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## 請參閱  
- [系統提供的互通性繫結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)   
- [訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)   
- [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)   
- [WSDL 與原則](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)   
- [安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)   
- [Reliable Messaging Protocol 1.0 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)   
- [Reliable Messaging Protocol 1.1 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)   
- [交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)   
- [內容交換通訊協定](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a><span data-ttu-id="5e865-211">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5e865-211">See Also</span></span>  
+ [<span data-ttu-id="5e865-212">Web 服務系統提供的互通性繫結所支援的通訊協定</span><span class="sxs-lookup"><span data-stu-id="5e865-212">Web Services Protocols Supported by System-Provided Interoperability Bindings</span></span>](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [<span data-ttu-id="5e865-213">訊息通訊協定</span><span class="sxs-lookup"><span data-stu-id="5e865-213">Messaging Protocols</span></span>](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
+ [<span data-ttu-id="5e865-214">資料合約結構描述參考</span><span class="sxs-lookup"><span data-stu-id="5e865-214">Data Contract Schema Reference</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [<span data-ttu-id="5e865-215">WSDL 和原則</span><span class="sxs-lookup"><span data-stu-id="5e865-215">WSDL and Policy</span></span>](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
+ [<span data-ttu-id="5e865-216">安全性通訊協定</span><span class="sxs-lookup"><span data-stu-id="5e865-216">Security Protocols</span></span>](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
+ [<span data-ttu-id="5e865-217">Reliable Messaging Protocol 1.0 版</span><span class="sxs-lookup"><span data-stu-id="5e865-217">Reliable Messaging Protocol version 1.0</span></span>](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
+ [<span data-ttu-id="5e865-218">Reliable Messaging Protocol 1.1 版</span><span class="sxs-lookup"><span data-stu-id="5e865-218">Reliable Messaging Protocol version 1.1</span></span>](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
+ [<span data-ttu-id="5e865-219">交易通訊協定</span><span class="sxs-lookup"><span data-stu-id="5e865-219">Transaction Protocols</span></span>](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
+ [<span data-ttu-id="5e865-220">內容交換通訊協定</span><span class="sxs-lookup"><span data-stu-id="5e865-220">Context Exchange Protocol</span></span>](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
