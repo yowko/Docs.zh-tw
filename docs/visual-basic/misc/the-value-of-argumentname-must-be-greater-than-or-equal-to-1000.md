@@ -1,28 +1,30 @@
 ---
-title: "&lt;引數名稱&gt; 的值必須大於或等於 1000 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrApplicationLogNumberTooSmall"
+title: "值&lt;引數名稱&gt;必須大於或等於 1000年"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrApplicationLogNumberTooSmall
 ms.assetid: 81aed143-1abb-41c2-9922-8e83711100e3
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 600b82b55b76765e7abcdfd685b6115cd0a8c952
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;引數名稱&gt; 的值必須大於或等於 1000
-<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> 屬性的值必須大於或等於 1000。  
+# <a name="the-value-of-ltargumentnamegt-must-be-greater-than-or-equal-to-1000"></a><span data-ttu-id="ee0f7-102">值&lt;引數名稱&gt;必須大於或等於 1000年</span><span class="sxs-lookup"><span data-stu-id="ee0f7-102">The value of &lt;argumentname&gt; must be greater than or equal to 1000</span></span>
+<span data-ttu-id="ee0f7-103"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> 屬性的值必須大於或等於 1000。</span><span class="sxs-lookup"><span data-stu-id="ee0f7-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property must be greater than or equal to 1000.</span></span>  
   
- 新記錄檔建立之前，<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> 屬性會指定記錄檔所允許的位元組數目上限。  
+ <span data-ttu-id="ee0f7-104">新記錄檔建立之前， <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> 屬性會指定記錄檔所允許的位元組數目上限。</span><span class="sxs-lookup"><span data-stu-id="ee0f7-104">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property specifies the maximum number of bytes allowed in a log file before a new log file is created.</span></span>  
   
-### 更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ee0f7-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="ee0f7-105">To correct this error</span></span>  
   
--   將 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> 屬性設為大於或等於 1000 的數字。  
+-   <span data-ttu-id="ee0f7-106">將 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> 屬性設為大於或等於 1000 的數字。</span><span class="sxs-lookup"><span data-stu-id="ee0f7-106">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property to a number greater than or equal to 1000.</span></span>  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>   
- [My.Application.Log 物件](../../visual-basic/language-reference/objects/my-application-log-object.md)   
- [My.Log Object](../../visual-basic/language-reference/objects/my-log-object.md)
+## <a name="see-also"></a><span data-ttu-id="ee0f7-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ee0f7-107">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>  
+ [<span data-ttu-id="ee0f7-108">My.Application.Log 物件</span><span class="sxs-lookup"><span data-stu-id="ee0f7-108">My.Application.Log Object</span></span>](../../visual-basic/language-reference/objects/my-application-log-object.md)  
+ [<span data-ttu-id="ee0f7-109">My.Log 物件</span><span class="sxs-lookup"><span data-stu-id="ee0f7-109">My.Log Object</span></span>](../../visual-basic/language-reference/objects/my-log-object.md)

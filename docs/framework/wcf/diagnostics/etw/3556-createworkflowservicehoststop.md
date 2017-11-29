@@ -1,35 +1,38 @@
 ---
-title: "3556 - CreateWorkflowServiceHostStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3556 - CreateWorkflowServiceHostStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bac6387b-1096-4e17-9907-8e464ee780db
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 21211a9228fcfaf112574544901cfc3115b7b0ee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 3556 - CreateWorkflowServiceHostStop
-## 屬性  
+# <a name="3556---createworkflowservicehoststop"></a><span data-ttu-id="e3c80-102">3556 - CreateWorkflowServiceHostStop</span><span class="sxs-lookup"><span data-stu-id="e3c80-102">3556 - CreateWorkflowServiceHostStop</span></span>
+## <a name="properties"></a><span data-ttu-id="e3c80-103">屬性</span><span class="sxs-lookup"><span data-stu-id="e3c80-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3556|  
-|關鍵字|WebHost|  
-|層級|資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="e3c80-104">ID</span><span class="sxs-lookup"><span data-stu-id="e3c80-104">ID</span></span>|<span data-ttu-id="e3c80-105">3556</span><span class="sxs-lookup"><span data-stu-id="e3c80-105">3556</span></span>|  
+|<span data-ttu-id="e3c80-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="e3c80-106">Keywords</span></span>|<span data-ttu-id="e3c80-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="e3c80-107">WebHost</span></span>|  
+|<span data-ttu-id="e3c80-108">層級</span><span class="sxs-lookup"><span data-stu-id="e3c80-108">Level</span></span>|<span data-ttu-id="e3c80-109">資訊</span><span class="sxs-lookup"><span data-stu-id="e3c80-109">Information</span></span>|  
+|<span data-ttu-id="e3c80-110">通道</span><span class="sxs-lookup"><span data-stu-id="e3c80-110">Channel</span></span>|<span data-ttu-id="e3c80-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="e3c80-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 當 CreateWorkflowServiceHost 結束時，就會發出此事件。  
+## <a name="description"></a><span data-ttu-id="e3c80-112">描述</span><span class="sxs-lookup"><span data-stu-id="e3c80-112">Description</span></span>  
+ <span data-ttu-id="e3c80-113">當 CreateWorkflowServiceHost 結束時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="e3c80-113">This event is emitted on CreateWorkflowServiceHost stop.</span></span>  
   
-## 訊息  
- CreateWorkflowServiceHost 停止  
+## <a name="message"></a><span data-ttu-id="e3c80-114">訊息</span><span class="sxs-lookup"><span data-stu-id="e3c80-114">Message</span></span>  
+ <span data-ttu-id="e3c80-115">CreateWorkflowServiceHost 停止</span><span class="sxs-lookup"><span data-stu-id="e3c80-115">CreateWorkflowServiceHost Stop</span></span>  
   
-## 詳細資料
+## <a name="details"></a><span data-ttu-id="e3c80-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="e3c80-116">Details</span></span>

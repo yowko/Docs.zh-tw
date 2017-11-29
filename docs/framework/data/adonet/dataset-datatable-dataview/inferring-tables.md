@@ -1,55 +1,58 @@
 ---
-title: "推斷資料表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "推斷資料表"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ae6f7827b7206544ff7547cc04f44b7cda34bef8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 推斷資料表
-從 XML 文件推斷 <xref:System.Data.DataSet> 的結構描述時，ADO.NET 首先會決定要用哪些 XML 項目來表示資料表。  下列 XML 結構將針對 **DataSet** 結構描述產生資料表：  
+# <a name="inferring-tables"></a><span data-ttu-id="6b4bf-102">推斷資料表</span><span class="sxs-lookup"><span data-stu-id="6b4bf-102">Inferring Tables</span></span>
+<span data-ttu-id="6b4bf-103">從 XML 文件推斷 <xref:System.Data.DataSet> 的結構描述時，ADO.NET 首先會決定要用哪些 XML 項目來表示資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-103">When inferring a schema for a <xref:System.Data.DataSet> from an XML document, ADO.NET first determines which XML elements represent tables.</span></span> <span data-ttu-id="6b4bf-104">下列 XML 結構會導致資料表**資料集**結構描述：</span><span class="sxs-lookup"><span data-stu-id="6b4bf-104">The following XML structures result in a table for the **DataSet** schema:</span></span>  
   
--   具有屬性的項目  
+-   <span data-ttu-id="6b4bf-105">具有屬性的項目</span><span class="sxs-lookup"><span data-stu-id="6b4bf-105">Elements with attributes</span></span>  
   
--   具有項目子系的項目  
+-   <span data-ttu-id="6b4bf-106">具有項目子系的項目</span><span class="sxs-lookup"><span data-stu-id="6b4bf-106">Elements with child elements</span></span>  
   
--   重複項目  
+-   <span data-ttu-id="6b4bf-107">重複項目</span><span class="sxs-lookup"><span data-stu-id="6b4bf-107">Repeating elements</span></span>  
   
-## 具有屬性的項目  
- 具有指定屬性的項目會產生推斷資料表。  例如，請考量下列 XML：  
+## <a name="elements-with-attributes"></a><span data-ttu-id="6b4bf-108">具有屬性的項目</span><span class="sxs-lookup"><span data-stu-id="6b4bf-108">Elements with Attributes</span></span>  
+ <span data-ttu-id="6b4bf-109">具有指定屬性的項目會產生推斷資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-109">Elements that have attributes specified in them result in inferred tables.</span></span> <span data-ttu-id="6b4bf-110">例如，請考量下列 XML：</span><span class="sxs-lookup"><span data-stu-id="6b4bf-110">For example, consider the following XML:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1"/>  
   <Element1 attr1="value2">Text1</Element1>  
 </DocumentElement>  
 ```  
   
- 推斷處理序會產生名為 Element1 的資料表。  
+ <span data-ttu-id="6b4bf-111">推斷處理序會產生名為 Element1 的資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-111">The inference process produces a table named "Element1."</span></span>  
   
- **DataSet：**DocumentElement  
+ <span data-ttu-id="6b4bf-112">**資料集：** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="6b4bf-112">**DataSet:** DocumentElement</span></span>  
   
- **資料表：**Element1  
+ <span data-ttu-id="6b4bf-113">**Table:** Element1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-113">**Table:** Element1</span></span>  
   
-|attr1|Element1\_Text|  
+|<span data-ttu-id="6b4bf-114">attr1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-114">attr1</span></span>|<span data-ttu-id="6b4bf-115">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="6b4bf-115">Element1_Text</span></span>|  
 |-----------|--------------------|  
-|value1||  
-|value2|Text1|  
+|<span data-ttu-id="6b4bf-116">value1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-116">value1</span></span>||  
+|<span data-ttu-id="6b4bf-117">value2</span><span class="sxs-lookup"><span data-stu-id="6b4bf-117">value2</span></span>|<span data-ttu-id="6b4bf-118">Text1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-118">Text1</span></span>|  
   
-## 具有項目子系的項目  
- 具有項目子系的項目會產生推斷資料表。  例如，請考量下列 XML：  
+## <a name="elements-with-child-elements"></a><span data-ttu-id="6b4bf-119">具有項目子系的項目</span><span class="sxs-lookup"><span data-stu-id="6b4bf-119">Elements with Child Elements</span></span>  
+ <span data-ttu-id="6b4bf-120">具有項目子系的項目會產生推斷資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-120">Elements that have child elements result in inferred tables.</span></span> <span data-ttu-id="6b4bf-121">例如，請考量下列 XML：</span><span class="sxs-lookup"><span data-stu-id="6b4bf-121">For example, consider the following XML:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>  
     <ChildElement1>Text1</ChildElement1>  
@@ -57,78 +60,78 @@ caps.handback.revision: 4
 </DocumentElement>  
 ```  
   
- 推斷處理序會產生名為 Element1 的資料表。  
+ <span data-ttu-id="6b4bf-122">推斷處理序會產生名為 Element1 的資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-122">The inference process produces a table named "Element1."</span></span>  
   
- **DataSet：**DocumentElement  
+ <span data-ttu-id="6b4bf-123">**資料集：** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="6b4bf-123">**DataSet:** DocumentElement</span></span>  
   
- **資料表：**Element1  
+ <span data-ttu-id="6b4bf-124">**Table:** Element1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-124">**Table:** Element1</span></span>  
   
-|ChildElement1|  
+|<span data-ttu-id="6b4bf-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-125">ChildElement1</span></span>|  
 |-------------------|  
-|Text1|  
+|<span data-ttu-id="6b4bf-126">Text1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-126">Text1</span></span>|  
   
- 如果文件或根項目具有將推斷為資料行的屬性或項目子系，便會產生推斷資料表。  如果文件項目沒有可被推斷為資料行的屬性和項目子系，則項目將被推斷為 **DataSet**。  例如，請考量下列 XML：  
+ <span data-ttu-id="6b4bf-127">如果文件或根項目具有將推斷為資料行的屬性或項目子系，便會產生推斷資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-127">The document, or root, element result in an inferred table if it has attributes or child elements that are inferred as columns.</span></span> <span data-ttu-id="6b4bf-128">如果文件項目沒有屬性和任何子項目會推斷為資料行，項目會推斷為**資料集**。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-128">If the document element has no attributes and no child elements that would be inferred as columns, the element is inferred as a **DataSet**.</span></span> <span data-ttu-id="6b4bf-129">例如，請考量下列 XML：</span><span class="sxs-lookup"><span data-stu-id="6b4bf-129">For example, consider the following XML:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
   <Element2>Text2</Element2>  
 </DocumentElement>  
 ```  
   
- 推斷處理序會產生名為 DocumentElement 的資料表。  
+ <span data-ttu-id="6b4bf-130">推斷處理序會產生名為 DocumentElement 的資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-130">The inference process produces a table named "DocumentElement."</span></span>  
   
- **DataSet：**NewDataSet  
+ <span data-ttu-id="6b4bf-131">**資料集：** NewDataSet</span><span class="sxs-lookup"><span data-stu-id="6b4bf-131">**DataSet:** NewDataSet</span></span>  
   
- **資料表：**DocumentElement  
+ <span data-ttu-id="6b4bf-132">**Table:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="6b4bf-132">**Table:** DocumentElement</span></span>  
   
-|Element1|Element2|  
+|<span data-ttu-id="6b4bf-133">Element1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-133">Element1</span></span>|<span data-ttu-id="6b4bf-134">Element2</span><span class="sxs-lookup"><span data-stu-id="6b4bf-134">Element2</span></span>|  
 |--------------|--------------|  
-|Text1|Text2|  
+|<span data-ttu-id="6b4bf-135">Text1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-135">Text1</span></span>|<span data-ttu-id="6b4bf-136">Text2</span><span class="sxs-lookup"><span data-stu-id="6b4bf-136">Text2</span></span>|  
   
- 另一個方法是考量下列 XML：  
+ <span data-ttu-id="6b4bf-137">另一個方法是考量下列 XML：</span><span class="sxs-lookup"><span data-stu-id="6b4bf-137">Alternatively, consider the following XML:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1" attr2="value2"/>  
 </DocumentElement>  
 ```  
   
- 推斷程序會產生名為 DocumentElement 的 **DataSet**，其中包含名為 Element1 的資料表。  
+ <span data-ttu-id="6b4bf-138">推斷程序產生**資料集**名為"DocumentElement"，其中包含名為"Element1。 」 的資料表</span><span class="sxs-lookup"><span data-stu-id="6b4bf-138">The inference process produces a **DataSet** named "DocumentElement" that contains a table named "Element1."</span></span>  
   
- **DataSet：**DocumentElement  
+ <span data-ttu-id="6b4bf-139">**資料集：** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="6b4bf-139">**DataSet:** DocumentElement</span></span>  
   
- **資料表：**Element1  
+ <span data-ttu-id="6b4bf-140">**Table:** Element1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-140">**Table:** Element1</span></span>  
   
-|attr1|attr2|  
+|<span data-ttu-id="6b4bf-141">attr1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-141">attr1</span></span>|<span data-ttu-id="6b4bf-142">attr2</span><span class="sxs-lookup"><span data-stu-id="6b4bf-142">attr2</span></span>|  
 |-----------|-----------|  
-|value1|value2|  
+|<span data-ttu-id="6b4bf-143">value1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-143">value1</span></span>|<span data-ttu-id="6b4bf-144">value2</span><span class="sxs-lookup"><span data-stu-id="6b4bf-144">value2</span></span>|  
   
-## 重複項目  
- 重複項目會產生單一推斷資料表。  例如，請考量下列 XML：  
+## <a name="repeating-elements"></a><span data-ttu-id="6b4bf-145">重複項目</span><span class="sxs-lookup"><span data-stu-id="6b4bf-145">Repeating Elements</span></span>  
+ <span data-ttu-id="6b4bf-146">重複項目會產生單一推斷資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-146">Elements that repeat result in a single inferred table.</span></span> <span data-ttu-id="6b4bf-147">例如，請考量下列 XML：</span><span class="sxs-lookup"><span data-stu-id="6b4bf-147">For example, consider the following XML:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
   <Element1>Text2</Element1>  
 </DocumentElement>  
 ```  
   
- 推斷處理序會產生名為 Element1 的資料表。  
+ <span data-ttu-id="6b4bf-148">推斷處理序會產生名為 Element1 的資料表。</span><span class="sxs-lookup"><span data-stu-id="6b4bf-148">The inference process produces a table named "Element1."</span></span>  
   
- **DataSet：**DocumentElement  
+ <span data-ttu-id="6b4bf-149">**資料集：** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="6b4bf-149">**DataSet:** DocumentElement</span></span>  
   
- **資料表：**Element1  
+ <span data-ttu-id="6b4bf-150">**Table:** Element1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-150">**Table:** Element1</span></span>  
   
-|Element1\_Text|  
+|<span data-ttu-id="6b4bf-151">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="6b4bf-151">Element1_Text</span></span>|  
 |--------------------|  
-|Text1|  
-|Text2|  
+|<span data-ttu-id="6b4bf-152">Text1</span><span class="sxs-lookup"><span data-stu-id="6b4bf-152">Text1</span></span>|  
+|<span data-ttu-id="6b4bf-153">Text2</span><span class="sxs-lookup"><span data-stu-id="6b4bf-153">Text2</span></span>|  
   
-## 請參閱  
- [從 XML 推斷 DataSet 關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [從 XML 載入 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [從 XML 載入 DataSet 結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSet、DataTable 及 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="6b4bf-154">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6b4bf-154">See Also</span></span>  
+ [<span data-ttu-id="6b4bf-155">從 XML 推斷資料集關聯式結構</span><span class="sxs-lookup"><span data-stu-id="6b4bf-155">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="6b4bf-156">從 XML 載入資料集</span><span class="sxs-lookup"><span data-stu-id="6b4bf-156">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="6b4bf-157">從 XML 載入資料集結構描述資訊</span><span class="sxs-lookup"><span data-stu-id="6b4bf-157">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="6b4bf-158">在 DataSet 中使用 XML</span><span class="sxs-lookup"><span data-stu-id="6b4bf-158">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="6b4bf-159">DataSet、DataTable 和 DataView</span><span class="sxs-lookup"><span data-stu-id="6b4bf-159">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="6b4bf-160">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="6b4bf-160">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,32 +1,35 @@
 ---
-title: "mc:Ignorable 屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mc XML 命名空間前置字元"
-  - "mc:Ignorable 屬性"
-  - "mc:ProcessContent 屬性"
-  - "XAML, mc:Ignorable 屬性"
-  - "XAML, mc:ProcessContent 屬性"
-  - "XML, mc 命名空間前置字元"
+title: "mc:Ignorable 屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mc XML namespace prefix [WPF]
+- mc:Ignorable attribute
+- XML [WPF], mc namespace prefix
+- XAML [WPF], mc:Ignorable attribute
+- mc:ProcessContent attribute
+- XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3be5949ee26fbb21d913a7aefe2664202c5bef38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# mc:Ignorable 屬性
-指定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器可以忽略標記檔案中出現的哪些 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間前置字元。  `mc:Ignorable` 屬性 \(Attribute\) 可支援同時適用於自訂命名空間對應和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 版本控制的標記相容性。  
+# <a name="mcignorable-attribute"></a><span data-ttu-id="f3253-102">mc:Ignorable 屬性</span><span class="sxs-lookup"><span data-stu-id="f3253-102">mc:Ignorable Attribute</span></span>
+<span data-ttu-id="f3253-103">指定哪一個[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]標記檔案中遇到的命名空間前置詞可能會略過[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器。</span><span class="sxs-lookup"><span data-stu-id="f3253-103">Specifies which [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace prefixes encountered in a markup file may be ignored by a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor.</span></span> <span data-ttu-id="f3253-104">`mc:Ignorable`屬性支援標記相容性，適用於自訂的命名空間對應和[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。</span><span class="sxs-lookup"><span data-stu-id="f3253-104">The `mc:Ignorable` attribute supports markup compatibility both for custom namespace mapping and for [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] versioning.</span></span>  
   
-## XAML 屬性使用方式 \(單一前置字元\)  
+## <a name="xaml-attribute-usage-single-prefix"></a><span data-ttu-id="f3253-105">XAML 屬性使用方式 （單一前置詞）</span><span class="sxs-lookup"><span data-stu-id="f3253-105">XAML Attribute Usage (Single Prefix)</span></span>  
   
 ```  
 <object  
@@ -37,43 +40,43 @@ caps.handback.revision: 8
 </object>  
 ```  
   
-## XAML 屬性使用方式 \(兩個前置字元\)  
+## <a name="xaml-attribute-usage-two-prefixes"></a><span data-ttu-id="f3253-106">XAML 屬性使用方式 （兩個前置詞）</span><span class="sxs-lookup"><span data-stu-id="f3253-106">XAML Attribute Usage (Two Prefixes)</span></span>  
   
 ```  
 <object  
   xmlns:ignorablePrefix1="ignorableUri"  
   xmlns:ignorablePrefix2="ignorableUri2"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-  mc:Ignorable="ignorablePrefix1 ignorablePrefix2"...>  
+  mc:Ignorable="ignorablePrefix1 ignorablePrefix2"...>  
     <ignorablePrefix1:ThisElementCanBeIgnored/>  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="f3253-107">XAML 值</span><span class="sxs-lookup"><span data-stu-id="f3253-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|*ignorablePrefix、ignorablePrefix1 等*|依據 XML 1.0 規格，任何有效的前置字串。|  
-|*ignorableUri*|依據 XML 1.0 規格，用來指定命名空間的任何有效 URI。|  
-|*ThisElementCanBeIgnored*|無法解析基礎型別時，[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 處理器實作可以忽略的項目。|  
+|<span data-ttu-id="f3253-108">*ignorablePrefix ignorablePrefix1、 等等。*</span><span class="sxs-lookup"><span data-stu-id="f3253-108">*ignorablePrefix, ignorablePrefix1, etc.*</span></span>|<span data-ttu-id="f3253-109">任何有效的前置詞字串，根據 XML 1.0 規格。</span><span class="sxs-lookup"><span data-stu-id="f3253-109">Any valid prefix string, per the XML 1.0 specification.</span></span>|  
+|<span data-ttu-id="f3253-110">*ignorableUri*</span><span class="sxs-lookup"><span data-stu-id="f3253-110">*ignorableUri*</span></span>|<span data-ttu-id="f3253-111">指定命名空間，根據 XML 1.0 規格的任何有效的 URI。</span><span class="sxs-lookup"><span data-stu-id="f3253-111">Any valid URI for designating a namespace, per the XML 1.0 specification.</span></span>|  
+|<span data-ttu-id="f3253-112">*ThisElementCanBeIgnored*</span><span class="sxs-lookup"><span data-stu-id="f3253-112">*ThisElementCanBeIgnored*</span></span>|<span data-ttu-id="f3253-113">項目，可以忽略[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]處理器實作中，如果無法解析的基礎類型。</span><span class="sxs-lookup"><span data-stu-id="f3253-113">An element that can be ignored by [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] processor implementations, if the underlying type cannot be resolved.</span></span>|  
   
-## 備註  
- `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間前置字元是對應 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 相容性命名空間 [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] 時建議使用的前置字元慣例。  
+## <a name="remarks"></a><span data-ttu-id="f3253-114">備註</span><span class="sxs-lookup"><span data-stu-id="f3253-114">Remarks</span></span>  
+ <span data-ttu-id="f3253-115">`mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]命名空間前置詞是用來對應時的建議前置詞慣例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]相容性命名空間[!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f3253-115">The `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace prefix is the recommended prefix convention to use when mapping the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compatibility namespace [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)].</span></span>  
   
- 若項目或屬性中項目名稱的前置字元部分識別為 `mc:Ignorable`，則 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器並不會在處理這些項目或屬性時引發錯誤。  如果該屬性無法解析成基礎型別或程式設計建構，則會忽略該項目。  不過請注意，忽略的項目可能還是會產生其他項目需求的其他剖析錯誤，這也是沒有處理該項目的副作用。  例如，特定項目可能只需要一個子項目，但是如果指定的子項目包含在 `mc:Ignorable` 前置字元中，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器可能就不會引發錯誤。  
+ <span data-ttu-id="f3253-116">項目或屬性的項目名稱的前置詞部分會識別為`mc:Ignorable`將不會引發錯誤時處理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器。</span><span class="sxs-lookup"><span data-stu-id="f3253-116">Elements or attributes where the prefix portion of the element name are identified as `mc:Ignorable` will not raise errors when processed by a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor.</span></span> <span data-ttu-id="f3253-117">如果該屬性無法解析至基礎類型或程式設計建構，則會忽略該元素。</span><span class="sxs-lookup"><span data-stu-id="f3253-117">If that attribute could not be resolved to an underlying type or programming construct, then that element is ignored.</span></span> <span data-ttu-id="f3253-118">不過請注意略過的項目仍可能會產生副作用的未處理該元素的其他項目需求的其他剖析錯誤。</span><span class="sxs-lookup"><span data-stu-id="f3253-118">Note however that ignored elements might still generate additional parsing errors for additional element requirements that are side effects of that element not being processed.</span></span> <span data-ttu-id="f3253-119">比方說，特定項目內容的模型可能需要一個子元素，但如果指定的子項目已在`mc:Ignorable`前置詞和指定的子項目無法解析型別，則[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器可能引發錯誤。</span><span class="sxs-lookup"><span data-stu-id="f3253-119">For instance, a particular element content model might require exactly one child element, but if the specified child element was in an `mc:Ignorable` prefix, and the specified child element could not be resolved to a type, then the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor might raise an error.</span></span>  
   
- `mc:Ignorable` 只適用於識別項字串的命名空間對應。  `mc:Ignorable` 不適用於組件的命名空間對應，其指定 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空間和組件 \(或預設為目前做為組件的可執行檔\)。  
+ <span data-ttu-id="f3253-120">`mc:Ignorable`僅適用於命名空間對應的識別碼字串。</span><span class="sxs-lookup"><span data-stu-id="f3253-120">`mc:Ignorable` only applies to namespace mappings to identifier strings.</span></span> <span data-ttu-id="f3253-121">`mc:Ignorable`不適用於命名空間的對應為組件，指定[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空間和組件 （或在目前的組件的可執行檔的預設值）。</span><span class="sxs-lookup"><span data-stu-id="f3253-121">`mc:Ignorable` does not apply to namespace mappings into assemblies, which specify a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] namespace and an assembly (or default to the current executable as the assembly).</span></span>  
   
- 如果您是實作 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器，則在受識別為 `mc:Ignorable` 之前置字元限定的任何項目或屬性上進行型別解析時，此處理器實作不能引發剖析或處理錯誤。  但是您的處理器實作仍然可以引發因為無法載入或處理項目而產生的次要例外狀況 \(Exception\)，例如前面提供的單一子項目範例。  
+ <span data-ttu-id="f3253-122">如果您實作[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器，處理器實作必須不會引發剖析或處理的任何元素或屬性的識別做為前置詞限定的型別解析錯誤`mc:Ignorable`。</span><span class="sxs-lookup"><span data-stu-id="f3253-122">If you are implementing a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor, your processor implementation must not raise parsing or processing errors on type resolution for any element or attribute that is qualified by a prefix that is identified as `mc:Ignorable`.</span></span> <span data-ttu-id="f3253-123">但您的處理器實作仍然可以引發是項目無法載入或處理，例如稍早指定的其中一個子元素範例的第二個結果的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="f3253-123">But your processor implementation can still raise exceptions that are a secondary result of an element failing to load or be processed, such as the one-child element example given earlier.</span></span>  
   
- 根據預設，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器會忽略已忽略之項目的內容。  不過，您可以額外指定 [mc:ProcessContent 屬性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)屬性，要求下一個可用的父項目繼續處理已忽略之項目的內容。  
+ <span data-ttu-id="f3253-124">根據預設，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器將會忽略忽略項目內的內容。</span><span class="sxs-lookup"><span data-stu-id="f3253-124">By default, a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor will ignore content within an ignored element.</span></span> <span data-ttu-id="f3253-125">不過，您可以指定一個額外的屬性[mc:ProcessContent 屬性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)、 為需要繼續的處理的下一個可用的父元素所忽略項目內的內容。</span><span class="sxs-lookup"><span data-stu-id="f3253-125">However, you can specify an additional attribute, [mc:ProcessContent Attribute](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), to require continued processing of content within an ignored element by the next available parent element.</span></span>  
   
- 您可以使用一個或多個空白字元做為分隔符號，在屬性中指定多個前置字元，例如：`mc:Ignorable="ignore1 ignore2"`。  
+ <span data-ttu-id="f3253-126">中的屬性，做為分隔符號，例如使用一或多個空格字元，可以指定多個前置詞： `mc:Ignorable="ignore1 ignore2"`。</span><span class="sxs-lookup"><span data-stu-id="f3253-126">Multiple prefixes can be specified in the attribute, using one or more whitespace characters as the separator, for example: `mc:Ignorable="ignore1 ignore2"`.</span></span>  
   
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] 命名空間會定義[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 的這個區域內未記載的其他項目和屬性。  如需詳細資訊，請參閱 [XML 標記相容性規格](http://go.microsoft.com/fwlink/?LinkId=73824) \(英文\)。  
+ <span data-ttu-id="f3253-127">[!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空間會定義其他的項目和屬性的這個區域中未記載之[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f3253-127">The [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] namespace defines other elements and attributes that are not documented within this area of the [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)].</span></span> <span data-ttu-id="f3253-128">如需詳細資訊，請參閱[XML 標記相容性規格](http://go.microsoft.com/fwlink/?LinkId=73824)。</span><span class="sxs-lookup"><span data-stu-id="f3253-128">For more information, see [XML Markup Compatibility Specification](http://go.microsoft.com/fwlink/?LinkId=73824).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Markup.XamlReader>   
- [PresentationOptions:Freeze 屬性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)   
- [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="f3253-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f3253-129">See Also</span></span>  
+ <xref:System.Windows.Markup.XamlReader>  
+ [<span data-ttu-id="f3253-130">PresentationOptions:Freeze 屬性</span><span class="sxs-lookup"><span data-stu-id="f3253-130">PresentationOptions:Freeze Attribute</span></span>](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)  
+ [<span data-ttu-id="f3253-131">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="f3253-131">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="f3253-132">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="f3253-132">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

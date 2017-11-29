@@ -1,56 +1,62 @@
 ---
-title: "如何：讓資料可於 XAML 中繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料繫結, 讓資料可用於"
-  - "資料繫結, 讓資料可用於繫結"
+title: "如何：讓資料可於 XAML 中繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data binding [WPF], making data available for binding
+- binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d734a7f17f8843ff284ac0854ac41d4a5b9f5584
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：讓資料可於 XAML 中繫結
-本主題討論依據應用程式的需求，讓資料可於[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中繫結的不同方法。  
+# <a name="how-to-make-data-available-for-binding-in-xaml"></a><span data-ttu-id="19bf8-102">如何：讓資料可於 XAML 中繫結</span><span class="sxs-lookup"><span data-stu-id="19bf8-102">How to: Make Data Available for Binding in XAML</span></span>
+<span data-ttu-id="19bf8-103">本主題討論您可以將資料繫結中的不同方式[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，視您的應用程式的需求。</span><span class="sxs-lookup"><span data-stu-id="19bf8-103">This topic discusses the different ways you can make data available for binding in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], depending on the needs of your application.</span></span>  
   
-## 範例  
- 如果您有想要從 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 繫結的 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件，讓物件可以繫結的一個方法是將物件定義為資源並指定 `x:Key` 給它。  在下列範例中，您有具有 `PersonName` 字串屬性的 `Person` 物件。  `Person` 物件是在名為 `SDKSample` 的命名空間中定義的。  
+## <a name="example"></a><span data-ttu-id="19bf8-104">範例</span><span class="sxs-lookup"><span data-stu-id="19bf8-104">Example</span></span>  
+ <span data-ttu-id="19bf8-105">如果您有[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件您想要從繫結到[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您可以將物件提供的繫結是定義為資源，並提供給它的其中一種方式`x:Key`。</span><span class="sxs-lookup"><span data-stu-id="19bf8-105">If you have a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] object you would like to bind to from [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], one way you can make the object available for binding is to define it as a resource and give it an `x:Key`.</span></span> <span data-ttu-id="19bf8-106">在下列範例中，您必須`Person`物件具有名為字串屬性`PersonName`。</span><span class="sxs-lookup"><span data-stu-id="19bf8-106">In the following example, you have a `Person` object with a string property named `PersonName`.</span></span> <span data-ttu-id="19bf8-107">`Person`物件定義在命名空間稱為`SDKSample`。</span><span class="sxs-lookup"><span data-stu-id="19bf8-107">The `Person` object is defined in the namespace called `SDKSample`.</span></span>  
   
- [!code-xml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
-[!code-xml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
+ [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
+[!code-xaml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
   
- 然後您就可以在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中繫結至這個物件，如同下列範例所示。  
+ <span data-ttu-id="19bf8-108">您可以再繫結中的物件至[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="19bf8-108">You can then bind to the object in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], as shown in the following example.</span></span>  
   
- [!code-xml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
   
- 或者，您也可以使用 <xref:System.Windows.Data.ObjectDataProvider> 類別，如同下列範例。  
+ <span data-ttu-id="19bf8-109">或者，您可以使用<xref:System.Windows.Data.ObjectDataProvider>類別，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="19bf8-109">Alternatively, you can use the <xref:System.Windows.Data.ObjectDataProvider> class, as in the following example.</span></span>  
   
- [!code-xml[SimpleBinding#ODPCP](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#odpcp)]  
+ [!code-xaml[SimpleBinding#ODPCP](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#odpcp)]  
   
- 定義繫結的方法一樣：  
+ <span data-ttu-id="19bf8-110">定義繫結相同的方式：</span><span class="sxs-lookup"><span data-stu-id="19bf8-110">You define the binding the same way:</span></span>  
   
- [!code-xml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
   
- 在這個特定範例中，結果是一樣的：您有具有文字內容 `Joe` 的 <xref:System.Windows.Controls.TextBlock>。  但是，<xref:System.Windows.Data.ObjectDataProvider> 類別提供了直接繫結至方法結果等功能。  如果您需要它提供的功能，可以選擇使用 <xref:System.Windows.Data.ObjectDataProvider> 類別。  
+ <span data-ttu-id="19bf8-111">在這個範例中，結果都相同： 您有<xref:System.Windows.Controls.TextBlock>以文字內容`Joe`。</span><span class="sxs-lookup"><span data-stu-id="19bf8-111">In this particular example, the result is the same: you have a <xref:System.Windows.Controls.TextBlock> with the text content `Joe`.</span></span> <span data-ttu-id="19bf8-112">不過，<xref:System.Windows.Data.ObjectDataProvider>類別提供的功能，例如可以繫結至方法的結果。</span><span class="sxs-lookup"><span data-stu-id="19bf8-112">However, the <xref:System.Windows.Data.ObjectDataProvider> class provides functionality such as the ability to bind to the result of a method.</span></span> <span data-ttu-id="19bf8-113">您可以選擇使用<xref:System.Windows.Data.ObjectDataProvider>類別，如果您需要它所提供的功能。</span><span class="sxs-lookup"><span data-stu-id="19bf8-113">You can choose to use the <xref:System.Windows.Data.ObjectDataProvider> class if you need the functionality it provides.</span></span>  
   
- 但是，如果您是要繫結至已建立的物件，則需要在程式碼中設定 `DataContext`，如同下列範例。  
+ <span data-ttu-id="19bf8-114">不過，如果您要繫結至已建立的物件，您需要設定`DataContext`在程式碼，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="19bf8-114">However, if you are binding to an object that has already been created, you need to set the `DataContext` in code, as in the following example.</span></span>  
   
  [!code-csharp[ADODataSet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ADODataSet#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- 若要存取 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料以使用 <xref:System.Windows.Data.XmlDataProvider> 類別繫結，請參閱 [使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  若要存取 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料以使用 <xref:System.Windows.Data.ObjectDataProvider> 類別繫結，請參閱 [繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。  
+ <span data-ttu-id="19bf8-115">若要存取[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料繫結使用<xref:System.Windows.Data.XmlDataProvider>類別，請參閱[XMLDataProvider 和 XPath 查詢來使用 XML 資料繫結](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="19bf8-115">To access [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data for binding using the <xref:System.Windows.Data.XmlDataProvider> class, see [Bind to XML Data Using an XMLDataProvider and XPath Queries](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).</span></span> <span data-ttu-id="19bf8-116">若要存取[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料繫結使用<xref:System.Windows.Data.ObjectDataProvider>類別，請參閱[for XML 查詢結果繫結至 XDocument、 XElement 或 LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。</span><span class="sxs-lookup"><span data-stu-id="19bf8-116">To access [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data for binding using the <xref:System.Windows.Data.ObjectDataProvider> class, see [Bind to XDocument, XElement, or LINQ for XML Query Results](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).</span></span>  
   
- 如需各種可以指定要繫結之資料的方法的詳細資訊，請參閱 [指定繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)。  如需可以繫結的資料型別，或如何實作自己的 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件以進行繫結的詳細資訊，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
+ <span data-ttu-id="19bf8-117">如需不同的方式。 您可以指定您要繫結的資料，請參閱[指定繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)。</span><span class="sxs-lookup"><span data-stu-id="19bf8-117">For information about the different ways you can specify the data you are binding to, see [Specify the Binding Source](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md).</span></span> <span data-ttu-id="19bf8-118">如需哪些資料型別可以繫結或如何實作您自己[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件繫結，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="19bf8-118">For information about what types of data you can bind to or how to implement your own [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects for binding, see [Binding Sources Overview](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span></span>  
   
-## 請參閱  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [HOW TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="19bf8-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19bf8-119">See Also</span></span>  
+ [<span data-ttu-id="19bf8-120">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="19bf8-120">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="19bf8-121">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="19bf8-121">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -1,28 +1,37 @@
 ---
-title: "&lt;secureConversationBootstrap&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;secureConversationBootstrap&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c8b29b9b4253e51f8cc1d0625fb27998a2d10b3a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;secureConversationBootstrap&gt;
-指定用於啟始安全對話服務的預設值。  
+# <a name="ltsecureconversationbootstrapgt"></a><span data-ttu-id="cb5d0-102">&lt;secureConversationBootstrap&gt;</span><span class="sxs-lookup"><span data-stu-id="cb5d0-102">&lt;secureConversationBootstrap&gt;</span></span>
+<span data-ttu-id="cb5d0-103">指定用於啟始安全對話服務的預設值。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-103">Specifies the default values used for initiating a secure conversation service.</span></span>  
   
-## 語法  
+ <span data-ttu-id="cb5d0-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="cb5d0-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-105">\<bindings></span></span>  
+<span data-ttu-id="cb5d0-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-106">\<customBinding></span></span>  
+<span data-ttu-id="cb5d0-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-107">\<binding></span></span>  
+<span data-ttu-id="cb5d0-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-108">\<security></span></span>  
+<span data-ttu-id="cb5d0-109">\<secureConversationBootstrap ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-109">\<secureConversationBootstrap></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="cb5d0-110">語法</span><span class="sxs-lookup"><span data-stu-id="cb5d0-110">Syntax</span></span>  
   
+```xml  
 <secureConversationBootstrap  
    allowSerializedSigningTokenOnReply="Boolean"  
    authenticationMode="AuthenticationMode"  
@@ -39,50 +48,50 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
    includeTimestamp="Boolean" />  
 ```  
   
-## 類型  
+## <a name="type"></a><span data-ttu-id="cb5d0-111">類型</span><span class="sxs-lookup"><span data-stu-id="cb5d0-111">Type</span></span>  
  `Type`  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="cb5d0-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="cb5d0-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="cb5d0-113">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="cb5d0-114">屬性</span><span class="sxs-lookup"><span data-stu-id="cb5d0-114">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|`allowSerializedSigningTokenOnReply`|選擇項。  布林值，指定序列化權杖是否可以用在回覆上。  預設值是 `false`。  使用雙重繫結時，設定將預設為 `true`，並忽略所做的任何設定。|  
-|`authenticationMode`|指定啟動器和回應程式之間使用的 SOAP 驗證模式。<br /><br /> 預設為 sspiNegotiated。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Configuration.AuthenticationMode>。|  
-|`defaultAlgorithmSuite`|安全性演算法套件會定義各種不同的演算法，例如標準化、摘要式、KeyWrap、簽章、加密和 KeyDerivation 演算法。  每個安全性演算法套件會定義這些不同參數的值。  訊息安全性是使用這些演算法達成的。<br /><br /> 當使用另一個平台，且該平台選擇一組和預設值不同的演算法時，則使用這個屬性。  在修改這個設定時，您應該了解相關演算法的優點和缺點。  此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。  預設為 `Basic256`。|  
-|`includeTimestamp`|布林值，指定每個訊息是否包含時間戳記。  預設為 `true`。|  
-|`keyEntropyMode`|指定保護訊息安全之金鑰的計算方法。  金鑰可僅根據用戶端金鑰資料、僅根據服務金鑰資料，或兩者的組合。  有效值為：<br /><br /> -   ClientEntropy：工作階段金鑰是根據用戶端提供的金鑰資料。<br />-   ServerEntropy：工作階段金鑰是根據服務提供的金鑰資料。<br />-   CombinedEntropy：工作階段金鑰是根據用戶端和服務提供的金鑰資料。<br /><br /> 預設為 CombinedEntropy。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
-|`messageProtectionOrder`|設定順序，訊息層級安全性演算法會以這個順序套用至訊息。  有效值包括以下的值：<br /><br /> -   SignBeforeEncrypt：先簽署，再加密。<br />-   SignBeforeEncryptAndEncryptSignature：簽署、加密，然後加密簽章。<br />-   EncryptBeforeSign：先加密，再簽署。<br /><br /> 使用相互憑證搭配 WS\-Security 1.1 時，SignBeforeEncryptAndEncryptSignature 是預設值。  SignBeforeEncrypt 是 WS\-Security 1.0 的預設值。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
-|`messageSecurityVersion`|設定使用的 WS\-Security 版本。  有效值包括以下的值：<br /><br /> -   WSSecurityJan2004<br />-   WSSecurityXXX2005<br /><br /> 預設為 WSSecurityXXX2005。  此屬性的型別為 <xref:System.ServiceModel.MessageSecurityVersion>。|  
-|`requireDerivedKeys`|布林值，指定是否可以從原始的證明金鑰衍生金鑰。  預設為 `true`。|  
-|`requireSecurityContextCancellation`|布林值，指定當不再需要安全性內容時是否應取消及終止它。  預設為 `true`。|  
-|`requireSignatureConfirmation`|布林值，指定是否啟用 WS\-Security 簽章確認。  設定為 `true` 時，回應程式會確認訊息簽章。  預設為 `false`。<br /><br /> 簽章確認是用來確認服務的回應完全感知要求。|  
-|`securityHeaderLayout`|指定安全性標頭中的項目順序。  有效值為：<br /><br /> -   Strict：  會根據「使用前宣告」的一般原則，將項目加入至安全性標頭中。<br />-   Lax：  會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中。<br />-   LaxWithTimestampFirst：  會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中，例外的是安全性標頭中的第一個項目必須是 wsse:Timestamp 項目。<br />-   LaxWithTimestampLast：  會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中，例外的是安全性標頭中的最後一個項目必須是 wsse:Timestamp 項目。<br /><br /> 預設為 Strict。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。|  
+|<span data-ttu-id="cb5d0-115">屬性</span><span class="sxs-lookup"><span data-stu-id="cb5d0-115">Attribute</span></span>|<span data-ttu-id="cb5d0-116">描述</span><span class="sxs-lookup"><span data-stu-id="cb5d0-116">Description</span></span>|  
+|---------------|-----------------|  
+|`allowSerializedSigningTokenOnReply`|<span data-ttu-id="cb5d0-117">選擇項。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-117">Optional.</span></span> <span data-ttu-id="cb5d0-118">布林值，指定序列化權杖是否可以用在回覆上。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-118">A Boolean value that specifies if a serialized token can be used on reply.</span></span> <span data-ttu-id="cb5d0-119">預設值是 `false`。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-119">The default value is `false`.</span></span> <span data-ttu-id="cb5d0-120">使用雙重繫結時，設定將預設為 `true`，並忽略所做的任何設定。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-120">When using a dual binding, the setting defaults to `true` any setting made will be ignored.</span></span>|  
+|`authenticationMode`|<span data-ttu-id="cb5d0-121">指定啟動器和回應程式之間使用的 SOAP 驗證模式。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-121">Specifies the SOAP authentication mode used between the initiator and the responder.</span></span><br /><br /> <span data-ttu-id="cb5d0-122">預設為 sspiNegotiated。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-122">The default is sspiNegotiated.</span></span><br /><br /> <span data-ttu-id="cb5d0-123">此屬性的型別為 <xref:System.ServiceModel.Configuration.AuthenticationMode>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-123">This attribute is of type <xref:System.ServiceModel.Configuration.AuthenticationMode>.</span></span>|  
+|`defaultAlgorithmSuite`|<span data-ttu-id="cb5d0-124">安全性演算法套件會定義各種不同的演算法，例如標準化、摘要式、KeyWrap、簽章、加密和 KeyDerivation 演算法。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-124">Security algorithm suite defines of a variety of algorithms such as Canonicalization, Digest, KeyWrap, Signature, Encryption, and KeyDerivation algorithms.</span></span> <span data-ttu-id="cb5d0-125">每個安全性演算法套件會定義這些不同參數的值。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-125">Each of the security algorithm suites defines values for these different parameters.</span></span> <span data-ttu-id="cb5d0-126">訊息安全性是使用這些演算法達成的。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-126">Message-based security is achieved using these algorithms.</span></span><br /><br /> <span data-ttu-id="cb5d0-127">當使用另一個平台，且該平台選擇一組和預設值不同的演算法時，則使用這個屬性。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-127">This attribute is used when working with a different platform that opts for a set of algorithms different than the default.</span></span> <span data-ttu-id="cb5d0-128">在修改這個設定時，您應該了解相關演算法的優點和缺點。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-128">You should be aware of the strengths and weaknesses of the relevant algorithms when making modifications to this setting.</span></span> <span data-ttu-id="cb5d0-129">此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-129">This attribute is of type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.</span></span> <span data-ttu-id="cb5d0-130">預設為 `Basic256`。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-130">The default is `Basic256`.</span></span>|  
+|`includeTimestamp`|<span data-ttu-id="cb5d0-131">布林值，指定每個訊息是否包含時間戳記。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-131">A Boolean value that specifies whether time stamps are included in each message.</span></span> <span data-ttu-id="cb5d0-132">預設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-132">The default is `true`.</span></span>|  
+|`keyEntropyMode`|<span data-ttu-id="cb5d0-133">指定保護訊息安全之金鑰的計算方法。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-133">Specifies the way that keys for securing messages are computed.</span></span> <span data-ttu-id="cb5d0-134">金鑰可僅根據用戶端金鑰資料、僅根據服務金鑰資料，或兩者的組合。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-134">Keys can be based on the client key material only, on the service key material only or a combination of both.</span></span> <span data-ttu-id="cb5d0-135">有效值為：</span><span class="sxs-lookup"><span data-stu-id="cb5d0-135">Valid values are:</span></span><br /><br /> <span data-ttu-id="cb5d0-136">-ClientEntropy： 工作階段金鑰根據用戶端提供的金錀資料。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-136">-   ClientEntropy: The session key is based off the client provided key material.</span></span><br /><span data-ttu-id="cb5d0-137">-ServerEntropy： 工作階段金鑰根據提供的金鑰資料的服務。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-137">-   ServerEntropy: The session key is based off the service provided key material.</span></span><br /><span data-ttu-id="cb5d0-138">-CombinedEntropy： 工作階段金鑰根據用戶端和服務提供的金鑰處理內容。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-138">-   CombinedEntropy: The session key is based off the client and service provided keying material.</span></span><br /><br /> <span data-ttu-id="cb5d0-139">預設為 CombinedEntropy。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-139">The default is CombinedEntropy.</span></span><br /><br /> <span data-ttu-id="cb5d0-140">此屬性的型別為 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-140">This attribute is of type <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.</span></span>|  
+|`messageProtectionOrder`|<span data-ttu-id="cb5d0-141">設定順序，訊息層級安全性演算法會以這個順序套用至訊息。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-141">Sets the order in which message level security algorithms are applied to the message.</span></span> <span data-ttu-id="cb5d0-142">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="cb5d0-142">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="cb5d0-143">-SignBeforeEncrypt： 先簽署，再加密。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-143">-   SignBeforeEncrypt: Sign first, then encrypt.</span></span><br /><span data-ttu-id="cb5d0-144">-SignBeforeEncryptAndEncryptSignature： 簽署、 加密和加密簽章。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-144">-   SignBeforeEncryptAndEncryptSignature: Sign, encrypt, and encrypt signature.</span></span><br /><span data-ttu-id="cb5d0-145">-EncryptBeforeSign： 先加密，再簽署。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-145">-   EncryptBeforeSign: Encrypt first, then sign.</span></span><br /><br /> <span data-ttu-id="cb5d0-146">使用相互憑證搭配 WS-Security 1.1 時，SignBeforeEncryptAndEncryptSignature 是預設值。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-146">SignBeforeEncryptAndEncryptSignature is the default value when using mutual certificates with WS-Security 1.1.</span></span>  <span data-ttu-id="cb5d0-147">SignBeforeEncrypt 是 WS-Security 1.0 的預設值。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-147">SignBeforeEncrypt is the default value with WS-Security 1.0.</span></span><br /><br /> <span data-ttu-id="cb5d0-148">此屬性的型別為 <xref:System.ServiceModel.Security.MessageProtectionOrder>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-148">This attribute is of type <xref:System.ServiceModel.Security.MessageProtectionOrder>.</span></span>|  
+|`messageSecurityVersion`|<span data-ttu-id="cb5d0-149">設定使用的 WS-Security 版本。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-149">Sets the version of WS-Security that is used.</span></span> <span data-ttu-id="cb5d0-150">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="cb5d0-150">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="cb5d0-151">-WSSecurityJan2004</span><span class="sxs-lookup"><span data-stu-id="cb5d0-151">-   WSSecurityJan2004</span></span><br /><span data-ttu-id="cb5d0-152">-WSSecurityXXX2005</span><span class="sxs-lookup"><span data-stu-id="cb5d0-152">-   WSSecurityXXX2005</span></span><br /><br /> <span data-ttu-id="cb5d0-153">預設為 WSSecurityXXX2005。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-153">The default is WSSecurityXXX2005.</span></span> <span data-ttu-id="cb5d0-154">此屬性的型別為 <xref:System.ServiceModel.MessageSecurityVersion>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-154">This attribute is of type <xref:System.ServiceModel.MessageSecurityVersion>.</span></span>|  
+|`requireDerivedKeys`|<span data-ttu-id="cb5d0-155">布林值，指定是否可以從原始的證明金鑰衍生金鑰。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-155">A Boolean value that specifies whether keys can be derived from the original proof keys.</span></span> <span data-ttu-id="cb5d0-156">預設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-156">The default is `true`.</span></span>|  
+|`requireSecurityContextCancellation`|<span data-ttu-id="cb5d0-157">布林值，指定當不再需要安全性內容時是否應取消及終止它。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-157">A Boolean value that specifies whether security context should be cancelled and terminated when it is no longer required.</span></span> <span data-ttu-id="cb5d0-158">預設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-158">The default is `true`.</span></span>|  
+|`requireSignatureConfirmation`|<span data-ttu-id="cb5d0-159">布林值，指定是否啟用 WS-Security 簽章確認。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-159">A Boolean value that specifies whether WS-Security signature confirmation is enabled.</span></span> <span data-ttu-id="cb5d0-160">設定為 `true` 時，回應程式會確認訊息簽章。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-160">When set to `true`, message signatures are confirmed by the responder.</span></span> <span data-ttu-id="cb5d0-161">預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-161">The default is `false`.</span></span><br /><br /> <span data-ttu-id="cb5d0-162">簽章確認是用來確認服務的回應完全感知要求。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-162">Signature confirmation is used to confirm that the service is responding in full awareness of a request.</span></span>|  
+|`securityHeaderLayout`|<span data-ttu-id="cb5d0-163">指定安全性標頭中的項目順序。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-163">Specifies the ordering of the elements in security header.</span></span> <span data-ttu-id="cb5d0-164">有效值為：</span><span class="sxs-lookup"><span data-stu-id="cb5d0-164">Valid values are:</span></span><br /><br /> <span data-ttu-id="cb5d0-165">Strict。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-165">-   Strict.</span></span> <span data-ttu-id="cb5d0-166">會根據「使用前宣告」的一般原則，將項目加入至安全性標頭中。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-166">Items are added to the security header according to the general principle of "declare before use".</span></span><br /><span data-ttu-id="cb5d0-167">-Lax。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-167">-   Lax.</span></span> <span data-ttu-id="cb5d0-168">會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-168">Items are added to the security header in any order that confirms to WSS: SOAP Message security.</span></span><br /><span data-ttu-id="cb5d0-169">-LaxWithTimestampFirst。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-169">-   LaxWithTimestampFirst.</span></span> <span data-ttu-id="cb5d0-170">會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中，例外的是安全性標頭中的第一個項目必須是 wsse:Timestamp 項目。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-170">Items are added to the security header in any order that confirms to WSS: SOAP Message security except that the first element in the security header must be a wsse:Timestamp element.</span></span><br /><span data-ttu-id="cb5d0-171">-LaxWithTimestampLast。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-171">-   LaxWithTimestampLast.</span></span> <span data-ttu-id="cb5d0-172">會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中，例外的是安全性標頭中的最後一個項目必須是 wsse:Timestamp 項目。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-172">Items are added to the security header in any order that confirms to WSS: SOAP Message security except that the last element in the security header must be a wsse:Timestamp element.</span></span><br /><br /> <span data-ttu-id="cb5d0-173">預設為 Strict。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-173">The default is Strict.</span></span><br /><br /> <span data-ttu-id="cb5d0-174">此項目的型別為 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-174">This element is of type <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.</span></span>|  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="cb5d0-175">子元素</span><span class="sxs-lookup"><span data-stu-id="cb5d0-175">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<issuedTokenParameters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定目前發行的權杖。  此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
-|[\<localClientSettings\>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此繫結之本機用戶端的安全性設定。  此項目的型別為 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
-|[\<localServiceSettings\>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此繫結之本機服務的安全性設定。  此項目的型別為 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
+|<span data-ttu-id="cb5d0-176">項目</span><span class="sxs-lookup"><span data-stu-id="cb5d0-176">Element</span></span>|<span data-ttu-id="cb5d0-177">說明</span><span class="sxs-lookup"><span data-stu-id="cb5d0-177">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="cb5d0-178">\<></span><span class="sxs-lookup"><span data-stu-id="cb5d0-178">\<issuedTokenParameters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|<span data-ttu-id="cb5d0-179">指定目前發行的權杖。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-179">Specifies a current issued token.</span></span> <span data-ttu-id="cb5d0-180">此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-180">This element is of type <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.</span></span>|  
+|[<span data-ttu-id="cb5d0-181">\<localClientSettings ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-181">\<localClientSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|<span data-ttu-id="cb5d0-182">指定此繫結之本機用戶端的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-182">Specifies the security settings of a local client for this binding.</span></span> <span data-ttu-id="cb5d0-183">此項目的型別為 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-183">This element is of type <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.</span></span>|  
+|[<span data-ttu-id="cb5d0-184">\<localServiceSettings ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-184">\<localServiceSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|<span data-ttu-id="cb5d0-185">指定此繫結之本機服務的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-185">Specifies the security settings of a local service for this binding.</span></span> <span data-ttu-id="cb5d0-186">此項目的型別為 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-186">This element is of type <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="cb5d0-187">父項目</span><span class="sxs-lookup"><span data-stu-id="cb5d0-187">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
+|<span data-ttu-id="cb5d0-188">項目</span><span class="sxs-lookup"><span data-stu-id="cb5d0-188">Element</span></span>|<span data-ttu-id="cb5d0-189">說明</span><span class="sxs-lookup"><span data-stu-id="cb5d0-189">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="cb5d0-190">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-190">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|<span data-ttu-id="cb5d0-191">指定自訂繫結的安全性選項。</span><span class="sxs-lookup"><span data-stu-id="cb5d0-191">Specifies the security options for a custom binding.</span></span>|  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>   
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>   
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)   
- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a><span data-ttu-id="cb5d0-192">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cb5d0-192">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
+ <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="cb5d0-193">繫結</span><span class="sxs-lookup"><span data-stu-id="cb5d0-193">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="cb5d0-194">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="cb5d0-194">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="cb5d0-195">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="cb5d0-195">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="cb5d0-196">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="cb5d0-196">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="cb5d0-197">如何： 建立自訂繫結使用 SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="cb5d0-197">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="cb5d0-198">自訂繫結安全性</span><span class="sxs-lookup"><span data-stu-id="cb5d0-198">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

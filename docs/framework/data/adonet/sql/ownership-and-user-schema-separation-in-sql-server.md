@@ -1,40 +1,43 @@
 ---
-title: "SQL Server 中的擁有權和使用者結構描述分隔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 中的擁有權和使用者結構描述分離"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 168eaf9bc0bbac80cbd1e2bb0538aab89d262a49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# SQL Server 中的擁有權和使用者結構描述分隔
-SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。  您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。  
+# <a name="ownership-and-user-schema-separation-in-sql-server"></a><span data-ttu-id="e00bb-102">SQL Server 中的擁有權和使用者結構描述分離</span><span class="sxs-lookup"><span data-stu-id="e00bb-102">Ownership and User-Schema Separation in SQL Server</span></span>
+<span data-ttu-id="e00bb-103">SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。</span><span class="sxs-lookup"><span data-stu-id="e00bb-103">A core concept of SQL Server security is that owners of objects have irrevocable permissions to administer them.</span></span> <span data-ttu-id="e00bb-104">您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。</span><span class="sxs-lookup"><span data-stu-id="e00bb-104">You cannot remove privileges from an object owner, and you cannot drop users from a database if they own objects in it.</span></span>  
   
-## 使用者結構描述分隔  
- 使用者結構描述分隔可讓資料庫物件權限的管理更有彈性。  「*結構描述*」\(Schema\) 是資料庫物件的命名容器，可讓您將物件分隔到不同的命名空間 \(Namespace\) 中。  例如，AdventureWorks 範例資料庫包含 Production、Sales 和 HumanResources 的結構描述。  
+## <a name="user-schema-separation"></a><span data-ttu-id="e00bb-105">使用者結構描述分隔</span><span class="sxs-lookup"><span data-stu-id="e00bb-105">User-Schema Separation</span></span>  
+ <span data-ttu-id="e00bb-106">使用者結構描述分隔可讓資料庫物件權限的管理更有彈性。</span><span class="sxs-lookup"><span data-stu-id="e00bb-106">User-schema separation allows for more flexibility in managing database object permissions.</span></span> <span data-ttu-id="e00bb-107">A*結構描述*是資料庫物件，可讓您進行群組物件至不同的命名空間的命名的容器。</span><span class="sxs-lookup"><span data-stu-id="e00bb-107">A *schema* is a named container for database objects, which allows you to group objects into separate namespaces.</span></span> <span data-ttu-id="e00bb-108">例如，AdventureWorks 範例資料庫包含 Production、Sales 和 HumanResources 的結構描述。</span><span class="sxs-lookup"><span data-stu-id="e00bb-108">For example, the AdventureWorks sample database contains schemas for Production, Sales, and HumanResources.</span></span>  
   
- 參考物件的四部分命名語法會指定結構描述名稱。  
+ <span data-ttu-id="e00bb-109">參考物件的四部分命名語法會指定結構描述名稱。</span><span class="sxs-lookup"><span data-stu-id="e00bb-109">The four-part naming syntax for referring to objects specifies the schema name.</span></span>  
   
 ```  
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   
-### 結構描述擁有者和權限  
- 結構描述可以由任何資料庫主體所擁有，而單一的主體可以擁有多個結構描述。  您可以將安全性規則套用至結構描述，而結構描述中的所有物件都會繼承這些規則。  一旦設定結構描述的存取權限之後，就會在新物件加入至結構描述時自動套用這些權限。  您可以為使用者指派預設的結構描述，而多個資料庫使用者可以共用相同的結構描述。  
+### <a name="schema-owners-and-permissions"></a><span data-ttu-id="e00bb-110">結構描述擁有者和權限</span><span class="sxs-lookup"><span data-stu-id="e00bb-110">Schema Owners and Permissions</span></span>  
+ <span data-ttu-id="e00bb-111">結構描述可以由任何資料庫主體所擁有，而單一的主體可以擁有多個結構描述。</span><span class="sxs-lookup"><span data-stu-id="e00bb-111">Schemas can be owned by any database principal, and a single principal can own multiple schemas.</span></span> <span data-ttu-id="e00bb-112">您可以將安全性規則套用至結構描述，而結構描述中的所有物件都會繼承這些規則。</span><span class="sxs-lookup"><span data-stu-id="e00bb-112">You can apply security rules to a schema, which are inherited by all objects in the schema.</span></span> <span data-ttu-id="e00bb-113">一旦設定結構描述的存取權限之後，就會在新物件加入至結構描述時自動套用這些權限。</span><span class="sxs-lookup"><span data-stu-id="e00bb-113">Once you set up access permissions for a schema, those permissions are automatically applied as new objects are added to the schema.</span></span> <span data-ttu-id="e00bb-114">您可以為使用者指派預設的結構描述，而多個資料庫使用者可以共用相同的結構描述。</span><span class="sxs-lookup"><span data-stu-id="e00bb-114">Users can be assigned a default schema, and multiple database users can share the same schema.</span></span>  
   
- 根據預設，當開發人員建立結構描述中的物件時，這些物件會由擁有該結構描述的安全性主體，而非開發人員所擁有。  物件擁有權可以使用 ALTER AUTHORIZATION Transact\-SQL 陳述式轉移。  結構描述也可以包含由不同使用者所擁有的物件，且具備比指派給該結構描述更多的細微權限，但因為這樣會增加權限管理的複雜度，我們並不建議這麼做。  您可以在結構描述之間移動物件，也可以在主體之間轉移結構描述擁有權。  您可以卸除資料庫使用者，而不影響結構描述。  
+ <span data-ttu-id="e00bb-115">根據預設，當開發人員建立結構描述中的物件時，這些物件會由擁有該結構描述的安全性主體，而非開發人員所擁有。</span><span class="sxs-lookup"><span data-stu-id="e00bb-115">By default, when developers create objects in a schema, the objects are owned by the security principal that owns the schema, not the developer.</span></span> <span data-ttu-id="e00bb-116">物件擁有權可以使用 ALTER AUTHORIZATION Transact-SQL 陳述式轉移。</span><span class="sxs-lookup"><span data-stu-id="e00bb-116">Object ownership can be transferred with ALTER AUTHORIZATION Transact-SQL statement.</span></span> <span data-ttu-id="e00bb-117">結構描述也可以包含由不同使用者所擁有的物件，且具備比指派給該結構描述更多的細微權限，但因為這樣會增加權限管理的複雜度，我們並不建議這麼做。</span><span class="sxs-lookup"><span data-stu-id="e00bb-117">A schema can also contain objects that are owned by different users and have more granular permissions than those assigned to the schema, although this is not recommended because it adds complexity to managing permissions.</span></span> <span data-ttu-id="e00bb-118">您可以在結構描述之間移動物件，也可以在主體之間轉移結構描述擁有權。</span><span class="sxs-lookup"><span data-stu-id="e00bb-118">Objects can be moved between schemas, and schema ownership can be transferred between principals.</span></span> <span data-ttu-id="e00bb-119">您可以卸除資料庫使用者，而不影響結構描述。</span><span class="sxs-lookup"><span data-stu-id="e00bb-119">Database users can be dropped without affecting schemas.</span></span>  
   
-### 內建結構描述  
- SQL Server 隨附十個預先定義的結構描述，其名稱與內建的資料庫使用者及角色相同。  這些主要是為了回溯相容性 \(Backward Compatibility\) 而提供。  如果不需要這些與固定資料庫角色具有相同名稱的結構描述，您可以加以卸除，  但下列結構描述是不能卸除的：  
+### <a name="built-in-schemas"></a><span data-ttu-id="e00bb-120">內建結構描述</span><span class="sxs-lookup"><span data-stu-id="e00bb-120">Built-In Schemas</span></span>  
+ <span data-ttu-id="e00bb-121">SQL Server 隨附十個預先定義的結構描述，其名稱與內建的資料庫使用者及角色相同。</span><span class="sxs-lookup"><span data-stu-id="e00bb-121">SQL Server ships with ten pre-defined schemas that have the same names as the built-in database users and roles.</span></span> <span data-ttu-id="e00bb-122">這些主要是為了回溯相容性 (Backward Compatibility) 而提供。</span><span class="sxs-lookup"><span data-stu-id="e00bb-122">These exist mainly for backward compatibility.</span></span> <span data-ttu-id="e00bb-123">如果不需要這些與固定資料庫角色具有相同名稱的結構描述，您可以加以卸除，</span><span class="sxs-lookup"><span data-stu-id="e00bb-123">You can drop the schemas that have the same names as the fixed database roles if you do not need them.</span></span> <span data-ttu-id="e00bb-124">但下列結構描述是不能卸除的：</span><span class="sxs-lookup"><span data-stu-id="e00bb-124">You cannot drop the following schemas:</span></span>  
   
 -   `dbo`  
   
@@ -44,30 +47,30 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 -   `INFORMATION_SCHEMA`  
   
- 如果將這些結構描述從模型資料庫卸除，它們就不會出現在新資料庫中。  
+ <span data-ttu-id="e00bb-125">如果將這些結構描述從模型資料庫卸除，它們就不會出現在新資料庫中。</span><span class="sxs-lookup"><span data-stu-id="e00bb-125">If you drop them from the model database, they will not appear in new databases.</span></span>  
   
 > [!NOTE]
->  `sys` 和 `INFORMATION_SCHEMA` 結構描述是保留給系統物件使用。  您無法在這些結構描述中建立物件，也無法加以卸除。  
+>  <span data-ttu-id="e00bb-126">`sys` 和 `INFORMATION_SCHEMA` 結構描述是保留給系統物件使用。</span><span class="sxs-lookup"><span data-stu-id="e00bb-126">The `sys` and `INFORMATION_SCHEMA` schemas are reserved for system objects.</span></span> <span data-ttu-id="e00bb-127">您無法在這些結構描述中建立物件，也無法加以卸除。</span><span class="sxs-lookup"><span data-stu-id="e00bb-127">You cannot create objects in these schemas and you cannot drop them.</span></span>  
   
-#### dbo 結構描述  
- `dbo` 結構描述是新建立資料庫的預設結構描述。  `dbo` 結構描述是由 `dbo` 使用者帳戶所擁有。  依預設，使用 CREATE USER Transact\-SQL 命令所建立的使用者都會將 `dbo` 當做預設的結構描述。  
+#### <a name="the-dbo-schema"></a><span data-ttu-id="e00bb-128">dbo 結構描述</span><span class="sxs-lookup"><span data-stu-id="e00bb-128">The dbo Schema</span></span>  
+ <span data-ttu-id="e00bb-129">`dbo` 結構描述是新建立資料庫的預設結構描述。</span><span class="sxs-lookup"><span data-stu-id="e00bb-129">The `dbo` schema is the default schema for a newly created database.</span></span> <span data-ttu-id="e00bb-130">`dbo` 結構描述是由 `dbo` 使用者帳戶所擁有。</span><span class="sxs-lookup"><span data-stu-id="e00bb-130">The `dbo` schema is owned by the `dbo` user account.</span></span> <span data-ttu-id="e00bb-131">依預設，使用 CREATE USER Transact-SQL 命令所建立的使用者都會將 `dbo` 當做預設的結構描述。</span><span class="sxs-lookup"><span data-stu-id="e00bb-131">By default, users created with the CREATE USER Transact-SQL command have `dbo` as their default schema.</span></span>  
   
- 被指派 `dbo` 結構描述的使用者並不會繼承 `dbo` 使用者帳戶的權限。  使用者不會從結構描述繼承權限；結構描述權限是由結構描述中包含的資料庫物件所繼承。  
+ <span data-ttu-id="e00bb-132">被指派 `dbo` 結構描述的使用者並不會繼承 `dbo` 使用者帳戶的權限。</span><span class="sxs-lookup"><span data-stu-id="e00bb-132">Users who are assigned the `dbo` schema do not inherit the permissions of the `dbo` user account.</span></span> <span data-ttu-id="e00bb-133">使用者不會從結構描述繼承權限；結構描述權限是由結構描述中包含的資料庫物件所繼承。</span><span class="sxs-lookup"><span data-stu-id="e00bb-133">No permissions are inherited from a schema by users; schema permissions are inherited by the database objects contained in the schema.</span></span>  
   
 > [!NOTE]
->  當資料庫物件是使用一段式名稱來參考時，SQL Server 會先查看使用者的預設結構描述。  如果在該處找不到物件，SQL Server 接著會在 `dbo` 結構描述中尋找。  如果在 `dbo` 結構描述中也找不到物件，就會傳回錯誤。  
+>  <span data-ttu-id="e00bb-134">當資料庫物件是使用一段式名稱來參考時，SQL Server 會先查看使用者的預設結構描述。</span><span class="sxs-lookup"><span data-stu-id="e00bb-134">When database objects are referenced by using a one-part name, SQL Server first looks in the user's default schema.</span></span> <span data-ttu-id="e00bb-135">如果在該處找不到物件，SQL Server 接著會在 `dbo` 結構描述中尋找。</span><span class="sxs-lookup"><span data-stu-id="e00bb-135">If the object is not found there, SQL Server looks next in the `dbo` schema.</span></span> <span data-ttu-id="e00bb-136">如果在 `dbo` 結構描述中也找不到物件，就會傳回錯誤。</span><span class="sxs-lookup"><span data-stu-id="e00bb-136">If the object is not in the `dbo` schema, an error is returned.</span></span>  
   
-## 外部資源  
- 如需有關物件擁有權和結構描述的詳細資訊，請參閱下列資源。  
+## <a name="external-resources"></a><span data-ttu-id="e00bb-137">外部資源</span><span class="sxs-lookup"><span data-stu-id="e00bb-137">External Resources</span></span>  
+ <span data-ttu-id="e00bb-138">如需有關物件擁有權和結構描述的詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="e00bb-138">For more information on object ownership and schemas, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|《SQL Server 線上叢書》的[使用者結構描述分隔](http://msdn.microsoft.com/library/ms190387.aspx)|說明由使用者結構描述分隔引入的變更。  包括新增行為、對擁有權的影響、目錄檢視和權限。|  
+|<span data-ttu-id="e00bb-139">資源</span><span class="sxs-lookup"><span data-stu-id="e00bb-139">Resource</span></span>|<span data-ttu-id="e00bb-140">說明</span><span class="sxs-lookup"><span data-stu-id="e00bb-140">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="e00bb-141">[使用者結構描述分隔](http://msdn.microsoft.com/library/ms190387.aspx)SQL Server 線上叢書中</span><span class="sxs-lookup"><span data-stu-id="e00bb-141">[User-Schema Separation](http://msdn.microsoft.com/library/ms190387.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="e00bb-142">說明由使用者結構描述分隔引入的變更。</span><span class="sxs-lookup"><span data-stu-id="e00bb-142">Describes the changes introduced by user-schema separation.</span></span> <span data-ttu-id="e00bb-143">包括新增行為、對擁有權的影響、目錄檢視和權限。</span><span class="sxs-lookup"><span data-stu-id="e00bb-143">Includes new behavior, its impact on ownership, catalog views, and permissions.</span></span>|  
   
-## 請參閱  
- [保護 ADO.NET 應用程式](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [SQL Server 中的驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)   
- [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)   
- [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e00bb-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e00bb-144">See Also</span></span>  
+ [<span data-ttu-id="e00bb-145">設定 ADO.NET 應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="e00bb-145">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="e00bb-146">SQL Server 中的應用程式安全性案例</span><span class="sxs-lookup"><span data-stu-id="e00bb-146">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="e00bb-147">在 SQL Server 驗證</span><span class="sxs-lookup"><span data-stu-id="e00bb-147">Authentication in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [<span data-ttu-id="e00bb-148">伺服器和 SQL Server 中的資料庫角色</span><span class="sxs-lookup"><span data-stu-id="e00bb-148">Server and Database Roles in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [<span data-ttu-id="e00bb-149">授權和 SQL Server 中的權限</span><span class="sxs-lookup"><span data-stu-id="e00bb-149">Authorization and Permissions in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [<span data-ttu-id="e00bb-150">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="e00bb-150">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,0 +1,244 @@
+---
+title: "分析概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- managed code, profiling API support
+- unmanaged code, combining with managed code in profiling
+- notification threads [.NET Framework profiling]
+- unmanaged code, profiling
+- profiling API [.NET Framework], and COM
+- profiling API [.NET Framework], unmanaged code profiling
+- profilers, writing
+- profiling API [.NET Framework], call stacks
+- code profilers, writing
+- profiling API [.NET Framework], security considerations
+- profiling API [.NET Framework], managed code support
+- common language runtime, profiling
+- profiling API [.NET Framework], notification threads
+- call stacks [.NET Framework profiling]
+- profiling API [.NET Framework], stack depth
+- common language runtime, writing a profiler
+- profiling API [.NET Framework], information retrieval interfaces
+- shadow stacks [.NET Framework profiling]
+- COM, using in the profiling API
+- stack snapshots [.NET Framework profiling]
+- profiling API [.NET Framework], supported features
+- profiling API [.NET Framework], overview
+- security, profiling API considerations
+- stack depth [.NET Framework profiling]
+ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
+caps.latest.revision: "27"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
+---
+# <a name="profiling-overview"></a><span data-ttu-id="fa2fa-102">分析概觀</span><span class="sxs-lookup"><span data-stu-id="fa2fa-102">Profiling Overview</span></span>
+<span data-ttu-id="fa2fa-103"><a name="top"></a>分析工具是一種工具，監視執行的另一個應用程式。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-103"><a name="top"></a> A profiler is a tool that monitors the execution of another application.</span></span> <span data-ttu-id="fa2fa-104">Common Language Runtime (CLR) 分析工具是動態連結程式庫 (DLL) 由數個函式所組成，可使用分析 API，從 CLR 接收訊息，以及傳送訊息至 CLR。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-104">A common language runtime (CLR) profiler is a dynamic link library (DLL) that consists of functions that receive messages from, and send messages to, the CLR by using the profiling API.</span></span> <span data-ttu-id="fa2fa-105">CLR 會在執行階段載入分析工具 DLL。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-105">The profiler DLL is loaded by the CLR at run time.</span></span>  
+  
+ <span data-ttu-id="fa2fa-106">傳統的分析工具著重在測量應用程式的執行。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-106">Traditional profiling tools focus on measuring the execution of the application.</span></span> <span data-ttu-id="fa2fa-107">也就是說，它們會測量花費在每個函式的時間，或是應用程式經過一段時間的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-107">That is, they measure the time that is spent in each function or the memory usage of the application over time.</span></span> <span data-ttu-id="fa2fa-108">分析 API 的目標是更廣泛的診斷工具類別，例如程式碼涵蓋範圍公用程式，甚至進階偵錯輔助工具。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-108">The profiling API targets a broader class of diagnostic tools such as code-coverage utilities and even advanced debugging aids.</span></span> <span data-ttu-id="fa2fa-109">這些用途在本質上都是診斷。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-109">These uses are all diagnostic in nature.</span></span> <span data-ttu-id="fa2fa-110">分析 API 不僅會測量，也會監視應用程式的執行。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-110">The profiling API not only measures but also monitors the execution of an application.</span></span> <span data-ttu-id="fa2fa-111">基於這個理由，應用程式本身應該永遠都不要使用分析 API，而且應用程式的執行不應該依賴分析工具 (或受其影響)。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-111">For this reason, the profiling API should never be used by the application itself, and the application’s execution should not depend on (or be affected by) the profiler.</span></span>  
+  
+ <span data-ttu-id="fa2fa-112">分析 CLR 應用程式所需的支援，比依照慣例分析已編譯的機器碼更多。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-112">Profiling a CLR application requires more support than profiling conventionally compiled machine code.</span></span> <span data-ttu-id="fa2fa-113">這是因為 CLR 導入了下列概念：應用程式定義域、記憶體回收、Managed 例外狀況處理、程式碼的 Just-In-Time (JIT) 編譯 (將 Microsoft 中繼語言或 MSIL 程式碼轉換為原生機器碼) 之類的功能。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-113">This is because the CLR introduces concepts such as application domains, garbage collection, managed exception handling, just-in-time (JIT) compilation of code (converting Microsoft intermediate language, or MSIL, code into native machine code), and similar features.</span></span> <span data-ttu-id="fa2fa-114">傳統分析機制無法識別或提供關於這些功能的有用資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-114">Conventional profiling mechanisms cannot identify or provide useful information about these features.</span></span> <span data-ttu-id="fa2fa-115">分析 API 有效地提供這項遺漏的資訊，而幾乎不會影響 CLR 和已分析之應用程式的效能。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-115">The profiling API provides this missing information efficiently, with minimal effect on the performance of the CLR and the profiled application.</span></span>  
+  
+ <span data-ttu-id="fa2fa-116">執行階段的 JIT 編譯為分析提供很好的機會。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-116">JIT compilation at run time provides good opportunities for profiling.</span></span> <span data-ttu-id="fa2fa-117">分析 API 可讓分析工具先變更常式的記憶體中 MSIL 程式碼資料流，再進行 JIT 編譯。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-117">The profiling API enables a profiler to change the in-memory MSIL code stream for a routine before it is JIT-compiled.</span></span> <span data-ttu-id="fa2fa-118">以這種方式，分析工具可以將檢測程式碼動態加入需要更深入調查的特定常式。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-118">In this manner, the profiler can dynamically add instrumentation code to particular routines that need deeper investigation.</span></span> <span data-ttu-id="fa2fa-119">雖然這種方法在傳統案例中是可行的，但是使用分析 API 來為 CLR 實作會更加容易。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-119">Although this approach is possible in conventional scenarios, it is much easier to implement for the CLR by using the profiling API.</span></span>  
+  
+ <span data-ttu-id="fa2fa-120">本概觀包含下列各節：</span><span class="sxs-lookup"><span data-stu-id="fa2fa-120">This overview consists of the following sections:</span></span>  
+  
+-   [<span data-ttu-id="fa2fa-121">分析 API</span><span class="sxs-lookup"><span data-stu-id="fa2fa-121">The Profiling API</span></span>](#profiling_api)  
+  
+-   [<span data-ttu-id="fa2fa-122">支援的功能</span><span class="sxs-lookup"><span data-stu-id="fa2fa-122">Supported Features</span></span>](#support)  
+  
+-   [<span data-ttu-id="fa2fa-123">通知執行緒</span><span class="sxs-lookup"><span data-stu-id="fa2fa-123">Notification Threads</span></span>](#notification_threads)  
+  
+-   [<span data-ttu-id="fa2fa-124">安全性</span><span class="sxs-lookup"><span data-stu-id="fa2fa-124">Security</span></span>](#security)  
+  
+-   [<span data-ttu-id="fa2fa-125">Managed 和 Unmanaged 程式碼剖析工具中的程式碼合併</span><span class="sxs-lookup"><span data-stu-id="fa2fa-125">Combining Managed and Unmanaged Code in a Code Profiler</span></span>](#combining_managed_unmanaged)  
+  
+-   [<span data-ttu-id="fa2fa-126">分析 Unmanaged 程式碼</span><span class="sxs-lookup"><span data-stu-id="fa2fa-126">Profiling Unmanaged Code</span></span>](#unmanaged)  
+  
+-   [<span data-ttu-id="fa2fa-127">使用 COM</span><span class="sxs-lookup"><span data-stu-id="fa2fa-127">Using COM</span></span>](#com)  
+  
+-   [<span data-ttu-id="fa2fa-128">呼叫堆疊</span><span class="sxs-lookup"><span data-stu-id="fa2fa-128">Call stacks</span></span>](#call_stacks)  
+  
+-   [<span data-ttu-id="fa2fa-129">回呼和堆疊深度</span><span class="sxs-lookup"><span data-stu-id="fa2fa-129">Callbacks and Stack Depth</span></span>](#callbacks)  
+  
+-   [<span data-ttu-id="fa2fa-130">相關主題</span><span class="sxs-lookup"><span data-stu-id="fa2fa-130">Related Topics</span></span>](#related_topics)  
+  
+<a name="profiling_api"></a>   
+## <a name="the-profiling-api"></a><span data-ttu-id="fa2fa-131">程式碼剖析 API</span><span class="sxs-lookup"><span data-stu-id="fa2fa-131">The Profiling API</span></span>  
+ <span data-ttu-id="fa2fa-132">分析 API 通常用來寫入*程式碼剖析工具*，這是監視受管理的應用程式執行程式。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-132">Typically, the profiling API is used to write a *code profiler*, which is a program that monitors the execution of a managed application.</span></span>  
+  
+ <span data-ttu-id="fa2fa-133">分析工具 DLL 會使用分析 API，它會載入與所分析之應用程式相同的程序中。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-133">The profiling API is used by a profiler DLL, which is loaded into the same process as the application that is being profiled.</span></span> <span data-ttu-id="fa2fa-134">分析工具 DLL 會實作回呼介面 ([ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .NET Framework 1.0 和 1.1 版中[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 2.0 或更新版本)。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-134">The profiler DLL implements a callback interface ([ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) in the .NET Framework version 1.0 and 1.1, [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) in version 2.0 and later).</span></span> <span data-ttu-id="fa2fa-135">CLR 會在該介面中呼叫方法，以通知分析工具所分析之程序中的事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-135">The CLR calls the methods in that interface to notify the profiler of events in the profiled process.</span></span> <span data-ttu-id="fa2fa-136">分析工具可以呼叫回執行階段使用中的方法[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)和[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)介面，以取得所分析應用程式的狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-136">The profiler can call back into the runtime by using the methods in the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) and [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfaces to obtain information about the state of the profiled application.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="fa2fa-137">只有分析工具解決方案的資料蒐集部分，應該要在與所分析之應用程式相同的程序中執行。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-137">Only the data-gathering part of the profiler solution should be running in the same process as the profiled application.</span></span> <span data-ttu-id="fa2fa-138">所有使用者介面和資料分析都應該在分開的處理序中執行。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-138">All user interface and data analysis should be performed in a separate process.</span></span>  
+  
+ <span data-ttu-id="fa2fa-139">下圖顯示分析工具 DLL 如何與正在分析的應用程式和 CLR 互動。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-139">The following illustration shows how the profiler DLL interacts with the application that is being profiled and the CLR.</span></span>  
+  
+ <span data-ttu-id="fa2fa-140">![分析架構](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")</span><span class="sxs-lookup"><span data-stu-id="fa2fa-140">![Profiling Architecture](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")</span></span>  
+<span data-ttu-id="fa2fa-141">分析架構</span><span class="sxs-lookup"><span data-stu-id="fa2fa-141">Profiling architecture</span></span>  
+  
+### <a name="the-notification-interfaces"></a><span data-ttu-id="fa2fa-142">通知介面</span><span class="sxs-lookup"><span data-stu-id="fa2fa-142">The Notification Interfaces</span></span>  
+ <span data-ttu-id="fa2fa-143">[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)和[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)可視為告知介面。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-143">[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) and [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) can be considered notification interfaces.</span></span> <span data-ttu-id="fa2fa-144">這些介面包含方法的這類[ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)， [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)，和[JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-144">These interfaces consist of methods such as [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), and [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md).</span></span> <span data-ttu-id="fa2fa-145">每當 CLR 載入或卸載類別、編譯函式等等，都會在分析工具的 `ICorProfilerCallback` 或 `ICorProfilerCallback2` 介面上呼叫對應的方法。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-145">Each time the CLR loads or unloads a class, compiles a function, and so on, it calls the corresponding method in the profiler's `ICorProfilerCallback` or `ICorProfilerCallback2` interface.</span></span>  
+  
+ <span data-ttu-id="fa2fa-146">例如，分析工具可以測量透過兩個通知函式的程式碼效能： [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)和[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-146">For example, a profiler could measure code performance through two notification functions: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) and [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md).</span></span> <span data-ttu-id="fa2fa-147">它會即時戳記每個通知、彙總結果，並輸出一個清單，指出在應用程式執行期間，哪些函式耗用最多 CPU 或時鐘時間。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-147">It just time-stamps each notification, accumulates results, and outputs a list that indicates which functions consumed the most CPU or wall-clock time during the execution of the application.</span></span>  
+  
+### <a name="the-information-retrieval-interfaces"></a><span data-ttu-id="fa2fa-148">資訊擷取介面</span><span class="sxs-lookup"><span data-stu-id="fa2fa-148">The Information Retrieval Interfaces</span></span>  
+ <span data-ttu-id="fa2fa-149">其他主要介面參與分析為[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)和[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-149">The other main interfaces involved in profiling are [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) and [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md).</span></span> <span data-ttu-id="fa2fa-150">分析工具會視需要呼叫這些介面，以取得更多資訊來協助進行分析。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-150">The profiler calls these interfaces as required to obtain more information to help its analysis.</span></span> <span data-ttu-id="fa2fa-151">例如，每當 CLR 呼叫[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)函式，其提供函式識別項。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-151">For example, whenever the CLR calls the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function, it supplies a function identifier.</span></span> <span data-ttu-id="fa2fa-152">分析工具可以取得該函式的詳細資訊，藉由呼叫[icorprofilerinfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法來探索函式的父類別、 名稱和等等。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-152">The profiler can get more information about that function by calling the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method to discover the function's parent class, its name, and so on.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-153">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-153">Back to top</span></span>](#top)  
+  
+<a name="support"></a>   
+## <a name="supported-features"></a><span data-ttu-id="fa2fa-154">支援的功能</span><span class="sxs-lookup"><span data-stu-id="fa2fa-154">Supported Features</span></span>  
+ <span data-ttu-id="fa2fa-155">分析 API 會提供 Common Language Runtime 中發生之各種事件和動作的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-155">The profiling API provides information about a variety of events and actions that occur in the common language runtime.</span></span> <span data-ttu-id="fa2fa-156">您可以使用這項資訊來監視處理序的內部運作方式，以及分析 .NET Framework 應用程式的效能。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-156">You can use this information to monitor the inner workings of processes and to analyze the performance of your .NET Framework application.</span></span>  
+  
+ <span data-ttu-id="fa2fa-157">分析 API 會擷取 CLR 中發生之下列動作和事件的相關資訊：</span><span class="sxs-lookup"><span data-stu-id="fa2fa-157">The profiling API retrieves information about the following actions and events that occur in the CLR:</span></span>  
+  
+-   <span data-ttu-id="fa2fa-158">CLR 啟動和關閉事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-158">CLR startup and shutdown events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-159">應用程式定義域建立和關閉事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-159">Application domain creation and shutdown events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-160">組件載入與卸載事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-160">Assembly loading and unloading events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-161">模組載入與卸載事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-161">Module loading and unloading events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-162">COM vtable 建立和解構事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-162">COM vtable creation and destruction events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-163">Just-In-Time (JIT) 編譯和 code-pitching 事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-163">Just-in-time (JIT) compilation and code-pitching events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-164">類別載入和卸載事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-164">Class loading and unloading events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-165">執行緒建立和解構事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-165">Thread creation and destruction events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-166">函式進入和結束事件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-166">Function entry and exit events.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-167">例外狀況。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-167">Exceptions.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-168">Managed 和 Unmanaged 程式碼執行之間的轉換。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-168">Transitions between managed and unmanaged code execution.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-169">不同執行階段內容之間的轉換。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-169">Transitions between different runtime contexts.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-170">執行階段暫止的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-170">Information about runtime suspensions.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-171">執行階段記憶體堆積和記憶體回收活動的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-171">Information about the runtime memory heap and garbage collection activity.</span></span>  
+  
+ <span data-ttu-id="fa2fa-172">您可以從任何 (非 Managed) COM 相容語言呼叫分析 API 。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-172">The profiling API can be called from any (non-managed) COM-compatible language.</span></span>  
+  
+ <span data-ttu-id="fa2fa-173">在 CPU 和記憶體耗用量方面，此 API 很有效率。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-173">The API is efficient with regard to CPU and memory consumption.</span></span> <span data-ttu-id="fa2fa-174">分析並不會對所分析的應用程式造成足以誤導結果的變更。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-174">Profiling does not involve changes to the profiled application that are significant enough to cause misleading results.</span></span>  
+  
+ <span data-ttu-id="fa2fa-175">分析 API 對取樣和非取樣分析工具都非常有用。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-175">The profiling API is useful to both sampling and non-sampling profilers.</span></span> <span data-ttu-id="fa2fa-176">A*取樣分析工具*檢查規律的時脈週期，在 5 毫秒的距離。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-176">A *sampling profiler* inspects the profile at regular clock ticks, say, at 5 milliseconds apart.</span></span> <span data-ttu-id="fa2fa-177">A*非取樣分析工具*以同步方式與執行緒導致事件的事件通知。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-177">A *non-sampling profiler* is informed of an event synchronously with the thread that causes the event.</span></span>  
+  
+### <a name="unsupported-functionality"></a><span data-ttu-id="fa2fa-178">不支援的功能</span><span class="sxs-lookup"><span data-stu-id="fa2fa-178">Unsupported Functionality</span></span>  
+ <span data-ttu-id="fa2fa-179">分析 API 不支援下列功能：</span><span class="sxs-lookup"><span data-stu-id="fa2fa-179">The profiling API does not support the following functionality:</span></span>  
+  
+-   <span data-ttu-id="fa2fa-180">Unmanaged 程式碼，這必須使用傳統 Win32 方法來分析。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-180">Unmanaged code, which must be profiled using conventional Win32 methods.</span></span> <span data-ttu-id="fa2fa-181">不過，CLR 分析工具包含轉換事件，可判斷 Managed 與 Unmanaged 程式碼之間的界限。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-181">However, the CLR profiler includes transition events to determine the boundaries between managed and unmanaged code.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-182">自我修改的應用程式，它會針對外觀導向程式設計之類的目的，修改自己的程式碼。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-182">Self-modifying applications that modify their own code for purposes such as aspect-oriented programming.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-183">繫結檢查，因為分析 API 並未提供這項資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-183">Bounds checking, because the profiling API does not provide this information.</span></span> <span data-ttu-id="fa2fa-184">CLR 為所有 Managed 程式碼的繫結檢查提供內建支援。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-184">The CLR provides intrinsic support for bounds checking of all managed code.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-185">遠端分析，不支援的原因如下：</span><span class="sxs-lookup"><span data-stu-id="fa2fa-185">Remote profiling, which is not supported for the following reasons:</span></span>  
+  
+    -   <span data-ttu-id="fa2fa-186">遠端分析會延長執行時間。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-186">Remote profiling extends execution time.</span></span> <span data-ttu-id="fa2fa-187">當您使用分析介面時，您必須盡量減少執行時間，使分析結果不要受到過度影響。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-187">When you use the profiling interfaces, you must minimize execution time so that profiling results will not be unduly affected.</span></span> <span data-ttu-id="fa2fa-188">當執行效能受到監視時，特別是這樣。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-188">This is especially true when execution performance is being monitored.</span></span> <span data-ttu-id="fa2fa-189">不過，使用分析介面來監視記憶體使用量，或取得有關堆疊框架、物件等等的執行階段資訊時，遠端分析並不是個限制。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-189">However, remote profiling is not a limitation when the profiling interfaces are used to monitor memory usage or to obtain run-time information about stack frames, objects, and so on.</span></span>  
+  
+    -   <span data-ttu-id="fa2fa-190">CLR 程式碼分析工具必須向執行所分析應用程式之本機電腦上的執行階段，註冊一個或多個回呼介面。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-190">The CLR code profiler must register one or more callback interfaces with the runtime on the local computer on which the profiled application is running.</span></span> <span data-ttu-id="fa2fa-191">這會限制建立遠端程式碼分析工具的能力。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-191">This limits the ability to create a remote code profiler.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-192">在具有高可用性需求的生產環境中的分析。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-192">Profiling in production environments with high-availability requirements.</span></span> <span data-ttu-id="fa2fa-193">分析 API 是為了支援開發階段診斷而建立。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-193">The profiling API was created to support development-time diagnostics.</span></span> <span data-ttu-id="fa2fa-194">尚未經過支援生產環境所需的嚴格測試。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-194">It has not undergone the rigorous testing required to support production environments.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-195">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-195">Back to top</span></span>](#top)  
+  
+<a name="notification_threads"></a>   
+## <a name="notification-threads"></a><span data-ttu-id="fa2fa-196">通知執行緒</span><span class="sxs-lookup"><span data-stu-id="fa2fa-196">Notification Threads</span></span>  
+ <span data-ttu-id="fa2fa-197">在大部分情況下，產生事件的執行緒也會執行通知。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-197">In most cases, the thread that generates an event also executes notifications.</span></span> <span data-ttu-id="fa2fa-198">這類通知 (例如， [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)和[FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)) 不需要提供明確`ThreadID`。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-198">Such notifications (for example, [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) and [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)) do not need to supply the explicit `ThreadID`.</span></span> <span data-ttu-id="fa2fa-199">此外，根據受影響執行緒的 `ThreadID`，分析工具可能會決定使用執行緒區域儲存區來儲存和更新其分析區塊，而不是在全域儲存體中將分析區塊編製索引。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-199">Also, the profiler might decide to use thread-local storage to store and update its analysis blocks instead of indexing the analysis blocks in global storage, based on the `ThreadID` of the affected thread.</span></span>  
+  
+ <span data-ttu-id="fa2fa-200">請注意，這些回呼不會序列化。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-200">Note that these callbacks are not serialized.</span></span> <span data-ttu-id="fa2fa-201">使用者必須藉由下列方式保護他們的程式碼：建立執行緒安全資料結構，並且鎖定分析工具程式碼，進而防止從多個執行緒進行平行存取。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-201">Users must protect their code by creating thread-safe data structures and by locking the profiler code where necessary to prevent parallel access from multiple threads.</span></span> <span data-ttu-id="fa2fa-202">因此，在某些情況下，您會收到不尋常的回呼序列。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-202">Therefore, in certain cases you can receive an unusual sequence of callbacks.</span></span> <span data-ttu-id="fa2fa-203">例如，假設 Managed 應用程式正在繁衍兩個正在執行相同程式碼的執行緒。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-203">For example, assume that a managed application is spawning two threads that are executing identical code.</span></span> <span data-ttu-id="fa2fa-204">在此情況下，很可能會收到[icorprofilercallback:: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)某些函式，從一個執行緒的事件和`FunctionEnter`回呼之前收到另一個執行緒從[Icorprofilercallback:: Jitcompilationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-204">In this case, it is possible to receive a [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) event for some function from one thread and a `FunctionEnter` callback from the other thread before receiving the [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) callback.</span></span> <span data-ttu-id="fa2fa-205">在此情況下，使用者將會因為可能尚未完全 Just-In-Time (JIT) 編譯的函式，而收到 `FunctionEnter` 回呼。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-205">In this case, the user will receive a `FunctionEnter` callback for a function that may not have been fully just-in-time (JIT) compiled yet.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-206">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-206">Back to top</span></span>](#top)  
+  
+<a name="security"></a>   
+## <a name="security"></a><span data-ttu-id="fa2fa-207">安全性</span><span class="sxs-lookup"><span data-stu-id="fa2fa-207">Security</span></span>  
+ <span data-ttu-id="fa2fa-208">分析工具 DLL 是 Unmanaged 的 DLL，它會當做 Common Language Runtime 執行引擎的一部分來執行。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-208">A profiler DLL is an unmanaged DLL that runs as part of the common language runtime execution engine.</span></span> <span data-ttu-id="fa2fa-209">因此，分析工具 DLL 中的程式碼不受 Managed 程式碼存取安全性的限制。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-209">As a result, the code in the profiler DLL is not subject to the restrictions of managed code access security.</span></span> <span data-ttu-id="fa2fa-210">分析工具 DLL 的唯一限制，只有作業系統針對執行所分析應用程式的使用者施加的那些限制。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-210">The only limitations on the profiler DLL are those imposed by the operating system on the user who is running the profiled application.</span></span>  
+  
+ <span data-ttu-id="fa2fa-211">分析工具作者應該採取適當的預防措施，以避免安全性相關問題。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-211">Profiler authors should take appropriate precautions to avoid security-related issues.</span></span> <span data-ttu-id="fa2fa-212">例如，在安裝期間，應該將分析工具 DLL 加入存取控制清單 (ACL)，如此惡意使用者就無法加以修改。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-212">For example, during installation, a profiler DLL should be added to an access control list (ACL) so that a malicious user cannot modify it.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-213">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-213">Back to top</span></span>](#top)  
+  
+<a name="combining_managed_unmanaged"></a>   
+## <a name="combining-managed-and-unmanaged-code-in-a-code-profiler"></a><span data-ttu-id="fa2fa-214">將 Managed 和 Unmanaged 程式碼合併在程式碼分析工具中</span><span class="sxs-lookup"><span data-stu-id="fa2fa-214">Combining Managed and Unmanaged Code in a Code Profiler</span></span>  
+ <span data-ttu-id="fa2fa-215">撰寫不正確的分析工具可能會造成對本身循環參考，導致無法預期的行為。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-215">An incorrectly written profiler can cause circular references to itself, resulting in unpredictable behavior.</span></span>  
+  
+ <span data-ttu-id="fa2fa-216">檢閱 CLR 分析 API 可能會造成一個印象，認為您可以撰寫一個分析工具，其中包含 Managed 和 Unmanaged 元件，而它們可以透過 COM Interop 或間接呼叫來彼此呼叫。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-216">A review of the CLR profiling API may create the impression that you can write a profiler that contains managed and unmanaged components that call each other through COM interop or indirect calls.</span></span>  
+  
+ <span data-ttu-id="fa2fa-217">雖然從設計的觀點來看，這是可行的，但是分析 API 並不支援 Managed 元件。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-217">Although this is possible from a design perspective, the profiling API does not support managed components.</span></span> <span data-ttu-id="fa2fa-218">CLR 分析工具必須是完全 Unmanaged。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-218">A CLR profiler must be completely unmanaged.</span></span> <span data-ttu-id="fa2fa-219">嘗試將 Managed 和 Unmanaged 程式碼結合在 CLR 分析工具中，可能會造成存取違規、程式失敗或死結。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-219">Attempts to combine managed and unmanaged code in a CLR profiler may cause access violations, program failure, or deadlocks.</span></span> <span data-ttu-id="fa2fa-220">分析工具的 Managed 元件會引發事件回到其 Unmanaged 元件，Unmanaged 元件接著又會呼叫 Managed 的元件，而導致循環參考。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-220">The managed components of the profiler will fire events back to their unmanaged components, which would subsequently call the managed components again, resulting in circular references.</span></span>  
+  
+ <span data-ttu-id="fa2fa-221">CLR 分析工具可以安全呼叫 Managed 程式碼的唯一位置，是在方法的 Microsoft 中繼語言 (MSIL) 主體中。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-221">The only location where a CLR profiler can call managed code safely is in the Microsoft intermediate language (MSIL) body of a method.</span></span> <span data-ttu-id="fa2fa-222">修改 MSIL 主體的建議的做法是使用中的 JIT 重新編譯方法[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-222">The recommended practice for modifying the MSIL body is to use the  JIT recompilation methods in the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface.</span></span>  
+  
+ <span data-ttu-id="fa2fa-223">另外也可以使用較舊的檢測方法修改 MSIL。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-223">It is also possible to use the older instrumentation methods to modify MSIL.</span></span> <span data-ttu-id="fa2fa-224">函式在 just-in-time (JIT) 編譯完成之前，分析工具可以方法，然後 JIT 編譯的 MSIL 主體中插入 managed 的呼叫它 (請參閱[icorprofilerinfo:: Getilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md)方法)。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-224">Before the just-in-time (JIT) compilation of a function is completed, the profiler can insert managed calls in the MSIL body of a method and then JIT-compile it (see the [ICorProfilerInfo::GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) method).</span></span> <span data-ttu-id="fa2fa-225">這項技術可以成功用於選擇性的 Managed 程式碼檢測，或是用來收集 JIT 的相關統計資料和效能資料。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-225">This technique can successfully be used for selective instrumentation of managed code, or to gather statistics and performance data about the JIT.</span></span>  
+  
+ <span data-ttu-id="fa2fa-226">或者，程式碼分析工具在呼叫 Unmanaged 程式碼之每個 Managed 函式的 MSIL 主體中，插入原生攔截程序。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-226">Alternatively, a code profiler can insert native hooks in the MSIL body of every managed function that calls into unmanaged code.</span></span> <span data-ttu-id="fa2fa-227">這項技術可以用於檢測和涵蓋範圍。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-227">This technique can be used for instrumentation and coverage.</span></span> <span data-ttu-id="fa2fa-228">例如，程式碼分析工具可以在每個 MSIL 區塊後面，插入檢測攔截程序，以確保該區塊已被執行。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-228">For example, a code profiler could insert instrumentation hooks after every MSIL block to ensure that the block has been executed.</span></span> <span data-ttu-id="fa2fa-229">方法的 MSIL 主體修改是非常精細的作業，而且有許多應該列入考量的因素。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-229">The modification of the MSIL body of a method is a very delicate operation, and there are many factors that should be taken into consideration.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-230">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-230">Back to top</span></span>](#top)  
+  
+<a name="unmanaged"></a>   
+## <a name="profiling-unmanaged-code"></a><span data-ttu-id="fa2fa-231">分析 Unmanaged 程式碼</span><span class="sxs-lookup"><span data-stu-id="fa2fa-231">Profiling Unmanaged Code</span></span>  
+ <span data-ttu-id="fa2fa-232">Common Language Runtime (CLR) 分析 API 為分析 Unmanaged 程式碼提供最小支援。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-232">The common language runtime (CLR) profiling API provides minimal support for profiling unmanaged code.</span></span> <span data-ttu-id="fa2fa-233">提供下列功能：</span><span class="sxs-lookup"><span data-stu-id="fa2fa-233">The following functionality is provided:</span></span>  
+  
+-   <span data-ttu-id="fa2fa-234">堆疊鏈結的列舉。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-234">Enumeration of stack chains.</span></span> <span data-ttu-id="fa2fa-235">這項功能可讓程式碼分析工具判斷 Managed 程式碼與 Unmanaged 程式碼之間的界限。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-235">This feature enables a code profiler to determine the boundary between managed code and unmanaged code.</span></span>  
+  
+-   <span data-ttu-id="fa2fa-236">判斷堆疊鏈結是對應至 Managed 程式碼或原生程式碼。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-236">Determination whether a stack chain corresponds to managed code or native code.</span></span>  
+  
+ <span data-ttu-id="fa2fa-237">在 .NET Framework 1.0 和 1.1 版中，這些方法可用於 CLR 偵錯 API 的整個同處理序子集。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-237">In the .NET Framework versions 1.0 and 1.1, these methods are available through the in-process subset of the CLR debugging API.</span></span> <span data-ttu-id="fa2fa-238">其定義在 CorDebug.idl 檔案中。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-238">They are defined in the CorDebug.idl file.</span></span>  
+  
+ <span data-ttu-id="fa2fa-239">在.NET Framework 2.0 和更新版本，您可以使用[icorprofilerinfo2:: Dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)這項功能的方法。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-239">In the .NET Framework 2.0 and later, you can use the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method for this functionality.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-240">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-240">Back to top</span></span>](#top)  
+  
+<a name="com"></a>   
+## <a name="using-com"></a><span data-ttu-id="fa2fa-241">使用 COM</span><span class="sxs-lookup"><span data-stu-id="fa2fa-241">Using COM</span></span>  
+ <span data-ttu-id="fa2fa-242">雖然分析介面被定義為 COM 介面，但是 Common Language Runtime (CLR) 並不會實際初始化 COM 來使用這些介面。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-242">Although the profiling interfaces are defined as COM interfaces, the common language runtime (CLR) does not actually initialize COM to use these interfaces.</span></span> <span data-ttu-id="fa2fa-243">原因是為了避免使用設定的執行緒模型[CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543\(v=vs.85\).aspx)函式之前的受管理的應用程式有機會指定其所需的執行緒模型。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-243">The reason is to avoid having to set the threading model by using the [CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543\(v=vs.85\).aspx) function before the managed application has had a chance to specify its desired threading model.</span></span> <span data-ttu-id="fa2fa-244">同樣地，分析工具本身也不應該呼叫 `CoInitialize`，因為它所選擇的執行緒模型可能會與正在分析的應用程式不相容，而導致應用程式失敗。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-244">Similarly, the profiler itself should not call `CoInitialize`, because it may pick a threading model that is incompatible with the application being profiled and may cause the application to fail.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-245">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-245">Back to top</span></span>](#top)  
+  
+<a name="call_stacks"></a>   
+## <a name="call-stacks"></a><span data-ttu-id="fa2fa-246">呼叫堆疊</span><span class="sxs-lookup"><span data-stu-id="fa2fa-246">Call Stacks</span></span>  
+ <span data-ttu-id="fa2fa-247">分析 API 提供兩種取得呼叫堆疊的方式：堆疊快照方法，可啟用呼叫堆疊的疏鬆收集；以及陰影堆疊方法，可追蹤每個時刻的呼叫堆疊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-247">The profiling API provides two ways to obtain call stacks: a stack snapshot method, which enables sparse gathering of call stacks, and a shadow stack method, which tracks the call stack at every instant.</span></span>  
+  
+### <a name="stack-snapshot"></a><span data-ttu-id="fa2fa-248">堆疊快照</span><span class="sxs-lookup"><span data-stu-id="fa2fa-248">Stack Snapshot</span></span>  
+ <span data-ttu-id="fa2fa-249">堆疊快照是執行緒堆疊的即時追蹤。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-249">A stack snapshot is a trace of the stack of a thread at an instant in time.</span></span> <span data-ttu-id="fa2fa-250">分析 API 支援追蹤堆疊上的 Managed 函式，但會將 Unmanaged 函式的追蹤交由分析工具本身的堆疊查核器處理。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-250">The profiling API supports the tracing of managed functions on the stack, but it leaves the tracing of unmanaged functions to the profiler's own stack walker.</span></span>  
+  
+ <span data-ttu-id="fa2fa-251">如需如何以程式設計的程式碼剖析工具，以查核 managed 的堆疊方式的詳細資訊，請參閱[icorprofilerinfo2:: Dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)此文件集中的方法和[分析工具堆疊查核行程.NET Framework 2.0 中：基本概念和其他](http://go.microsoft.com/fwlink/?LinkId=73638)。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-251">For more information about how to program the profiler to walk managed stacks, see the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method in this documentation set, and [Profiler Stack Walking in the .NET Framework 2.0: Basics and Beyond](http://go.microsoft.com/fwlink/?LinkId=73638).</span></span>
+  
+### <a name="shadow-stack"></a><span data-ttu-id="fa2fa-252">陰影堆疊</span><span class="sxs-lookup"><span data-stu-id="fa2fa-252">Shadow Stack</span></span>  
+ <span data-ttu-id="fa2fa-253">過於頻繁使用快照方法，很快就會產生效能問題。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-253">Using the snapshot method too frequently can quickly create a performance issue.</span></span> <span data-ttu-id="fa2fa-254">如果您想要經常進行堆疊追蹤，您的分析工具應該改為建置陰影堆疊使用[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)， [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)，和[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)例外狀況回呼。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-254">If you want to take stack traces frequently, your profiler should instead build a shadow stack by using the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), and [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) exception callbacks.</span></span> <span data-ttu-id="fa2fa-255">每當需要堆疊快照時，陰影堆疊一定都是當前的，而且可以快速複製到儲存體。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-255">The shadow stack is always current and can quickly be copied to storage whenever a stack snapshot is needed.</span></span>  
+  
+ <span data-ttu-id="fa2fa-256">陰影堆疊可能會取得函式引數、傳回值，以及泛型具現化的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-256">A shadow stack may obtain function arguments, return values, and information about generic instantiations.</span></span> <span data-ttu-id="fa2fa-257">此資訊只能透過陰影堆疊來使用，並且可以在將控制權交給函式時取得。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-257">This information is available only through the shadow stack and may be obtained when control is handed to a function.</span></span> <span data-ttu-id="fa2fa-258">不過，之後在函式執行期間，可能無法使用這項資訊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-258">However, this information may not be available later during the run of the function.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-259">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-259">Back to top</span></span>](#top)  
+  
+<a name="callbacks"></a>   
+## <a name="callbacks-and-stack-depth"></a><span data-ttu-id="fa2fa-260">回呼和堆疊深度</span><span class="sxs-lookup"><span data-stu-id="fa2fa-260">Callbacks and Stack Depth</span></span>  
+ <span data-ttu-id="fa2fa-261">分析工具回呼可能會在堆疊極為受限的情況下發出，而分析工具回呼中的堆疊溢位將會導致處理序立即結束。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-261">Profiler callbacks may be issued in very stack-constrained circumstances, and a stack overflow in a profiler callback will lead to an immediate process exit.</span></span> <span data-ttu-id="fa2fa-262">分析工具在回應回呼，應該要確保儘可能少用堆疊。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-262">A profiler should make sure to use as little stack as possible in response to callbacks.</span></span> <span data-ttu-id="fa2fa-263">如果分析工具是為了用於防止堆疊溢位的穩固處理序，則分析工具本身也應該避免觸發堆疊溢位。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-263">If the profiler is intended for use against processes that are robust against stack overflow, the profiler itself should also avoid triggering stack overflow.</span></span>  
+  
+ [<span data-ttu-id="fa2fa-264">回到頁首</span><span class="sxs-lookup"><span data-stu-id="fa2fa-264">Back to top</span></span>](#top)  
+  
+<a name="related_topics"></a>   
+## <a name="related-topics"></a><span data-ttu-id="fa2fa-265">相關主題</span><span class="sxs-lookup"><span data-stu-id="fa2fa-265">Related Topics</span></span>  
+  
+|<span data-ttu-id="fa2fa-266">標題</span><span class="sxs-lookup"><span data-stu-id="fa2fa-266">Title</span></span>|<span data-ttu-id="fa2fa-267">說明</span><span class="sxs-lookup"><span data-stu-id="fa2fa-267">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="fa2fa-268">設定程式碼剖析環境</span><span class="sxs-lookup"><span data-stu-id="fa2fa-268">Setting Up a Profiling Environment</span></span>](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|<span data-ttu-id="fa2fa-269">說明如何初始化分析工具、設定事件通知，以及為 Windows 服務進行分析。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-269">Explains how to initialize a profiler, set event notifications, and profile a Windows Service.</span></span>|  
+|[<span data-ttu-id="fa2fa-270">分析介面</span><span class="sxs-lookup"><span data-stu-id="fa2fa-270">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|<span data-ttu-id="fa2fa-271">說明分析 API 所使用的 Unmanaged 介面。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-271">Describes the unmanaged interfaces that the profiling API uses.</span></span>|  
+|[<span data-ttu-id="fa2fa-272">分析全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="fa2fa-272">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|<span data-ttu-id="fa2fa-273">說明分析 API 所使用的 Unmanaged 全域靜態函式。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-273">Describes the unmanaged global static functions that the profiling API uses.</span></span>|  
+|[<span data-ttu-id="fa2fa-274">分析列舉</span><span class="sxs-lookup"><span data-stu-id="fa2fa-274">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|<span data-ttu-id="fa2fa-275">說明分析 API 所使用的 Unmanaged 列舉。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-275">Describes the unmanaged enumerations that the profiling API uses.</span></span>|  
+|[<span data-ttu-id="fa2fa-276">分析結構</span><span class="sxs-lookup"><span data-stu-id="fa2fa-276">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|<span data-ttu-id="fa2fa-277">說明分析 API 所使用的 Unmanaged 結構。</span><span class="sxs-lookup"><span data-stu-id="fa2fa-277">Describes the unmanaged structures that the profiling API uses.</span></span>|

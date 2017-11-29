@@ -1,54 +1,55 @@
 ---
-title: "圖形服務的三個分類 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "2D 向量圖形"
-  - "圖形, 分類"
-  - "影像處理"
-  - "印刷樣式"
-  - "向量圖形"
+title: "圖形服務的三個分類"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- imaging
+- graphics [Windows Forms], categories
+- 2-D vector graphics
+- vector graphics
+- typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53429513426d3b197da4740e5e92d44d8b3a5533
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 圖形服務的三個分類
-Windows Form 的圖形提供可分為三大分類：  
+# <a name="three-categories-of-graphics-services"></a><span data-ttu-id="a3b97-102">圖形服務的三個分類</span><span class="sxs-lookup"><span data-stu-id="a3b97-102">Three Categories of Graphics Services</span></span>
+<span data-ttu-id="a3b97-103">在 Windows Form 中的圖形供應項目可分為下列三個主要類別：</span><span class="sxs-lookup"><span data-stu-id="a3b97-103">The graphics offerings in Windows Forms fall into the following three broad categories:</span></span>  
   
--   二維 \(2\-D\) 向量圖形  
+-   <span data-ttu-id="a3b97-104">二維 (2d) 向量圖形</span><span class="sxs-lookup"><span data-stu-id="a3b97-104">Two-dimensional (2-D) vector graphics</span></span>  
   
--   影像處理  
+-   <span data-ttu-id="a3b97-105">映像</span><span class="sxs-lookup"><span data-stu-id="a3b97-105">Imaging</span></span>  
   
--   印刷樣式  
+-   <span data-ttu-id="a3b97-106">印刷樣式</span><span class="sxs-lookup"><span data-stu-id="a3b97-106">Typography</span></span>  
   
-## 2D 向量圖形  
- 二維向量圖形是繪圖基本項目 \(例如線條、曲線和圖形\)，這些基本項目是由座標系統上的點集合所指定。  例如，直線是由直線的兩個端點來指定，而矩形是由提供矩形左上方位置的點和一組提供矩形寬度和高度的數值來指定。  簡單的路徑是由直線連接起來的點陣列指定。  貝茲曲線是由四個控制點所指定的複雜曲線。  
+## <a name="2-d-vector-graphics"></a><span data-ttu-id="a3b97-107">2d 向量圖形</span><span class="sxs-lookup"><span data-stu-id="a3b97-107">2-D Vector Graphics</span></span>  
+ <span data-ttu-id="a3b97-108">2d 向量圖形是基本型別。例如線條、 曲線和數字。所指定的座標系統上的點集合。</span><span class="sxs-lookup"><span data-stu-id="a3b97-108">Two-dimensional vector graphics are primitives; such as lines, curves, and figures; that are specified by sets of points on a coordinate system.</span></span> <span data-ttu-id="a3b97-109">比方說，直線由兩個端點，並提供其左上角和提供其寬度和高度的數字組的位置點所指定的矩形。</span><span class="sxs-lookup"><span data-stu-id="a3b97-109">For example, a straight line is specified by its two endpoints, and a rectangle is specified by a point giving the location of its upper-left corner and a pair of numbers giving its width and height.</span></span> <span data-ttu-id="a3b97-110">連接的直線的點陣列所指定簡單的路徑。</span><span class="sxs-lookup"><span data-stu-id="a3b97-110">A simple path is specified by an array of points that are connected by straight lines.</span></span> <span data-ttu-id="a3b97-111">貝茲曲線是由四個控點的高性能的曲線。</span><span class="sxs-lookup"><span data-stu-id="a3b97-111">A Bézier spline is a sophisticated curve specified by four control points.</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供用以儲存基本項目相關資訊的類別和結構、用以儲存基本項目繪製方式相關資訊的類別以及實際進行繪製的類別。  例如，<xref:System.Drawing.Rectangle> 結構儲存矩形的位置和大小，而 <xref:System.Drawing.Pen> 類別儲存線條色彩、線條寬度和線條樣式的相關資訊，而 <xref:System.Drawing.Graphics> 類別則擁有繪製線條、矩形、路徑和其他圖形的方法。  另外同時還有好幾種 <xref:System.Drawing.Brush> 類別可儲存如何將封閉的圖形和路徑填滿色彩或圖樣的相關資訊。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="a3b97-112">提供類別和儲存自己的基本類型的相關資訊的結構、 類別可儲存資訊有關如何將繪製基本項目，以及實際進行繪製的類別。</span><span class="sxs-lookup"><span data-stu-id="a3b97-112"> provides classes and structures that store information about the primitives themselves, classes that store information about how the primitives will be drawn, and classes that actually do the drawing.</span></span> <span data-ttu-id="a3b97-113">比方說，<xref:System.Drawing.Rectangle>結構會儲存的位置和大小的矩形;<xref:System.Drawing.Pen>類別會儲存有關線條色彩、 線條寬度和線條樣式，而<xref:System.Drawing.Graphics>類別具有繪製線條、 矩形、 路徑、 方法和其他幾張圖。</span><span class="sxs-lookup"><span data-stu-id="a3b97-113">For example, the <xref:System.Drawing.Rectangle> structure stores the location and size of a rectangle; the <xref:System.Drawing.Pen> class stores information about line color, line width, and line style; and the <xref:System.Drawing.Graphics> class has methods for drawing lines, rectangles, paths, and other figures.</span></span> <span data-ttu-id="a3b97-114">有數個也<xref:System.Drawing.Brush>儲存方式的相關資訊的類別關閉圖表，而且路徑會填滿色彩或圖樣。</span><span class="sxs-lookup"><span data-stu-id="a3b97-114">There are also several <xref:System.Drawing.Brush> classes that store information about how closed figures and paths will be filled with colors or patterns.</span></span>  
   
- 您可以在中繼檔中記錄向量影像，該影像是一連串的圖形命令  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供 <xref:System.Drawing.Imaging.Metafile> 類別，以用於記錄、顯示和儲存中繼檔。  可以使用 <xref:System.Drawing.Imaging.MetafileHeader> 和 <xref:System.Drawing.Imaging.MetaHeader> 類別來檢查中繼檔標題中所儲存的資料。  
+ <span data-ttu-id="a3b97-115">您可以記錄是一串圖形命令，以向量映像中繼檔中。</span><span class="sxs-lookup"><span data-stu-id="a3b97-115">You can record a vector image, which is a sequence of graphics commands, in a metafile.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="a3b97-116">提供<xref:System.Drawing.Imaging.Metafile>錄製、 顯示和儲存中繼檔的類別。</span><span class="sxs-lookup"><span data-stu-id="a3b97-116"> provides the <xref:System.Drawing.Imaging.Metafile> class for recording, displaying, and saving metafiles.</span></span> <span data-ttu-id="a3b97-117">與<xref:System.Drawing.Imaging.MetafileHeader>和<xref:System.Drawing.Imaging.MetaHeader>類別，您可以檢查儲存在中繼檔標頭中的資料。</span><span class="sxs-lookup"><span data-stu-id="a3b97-117">With the <xref:System.Drawing.Imaging.MetafileHeader> and <xref:System.Drawing.Imaging.MetaHeader> classes, you can inspect the data stored in a metafile header.</span></span>  
   
-## 影像處理  
- 有些圖片種類很難或無法使用向量圖形的技術來顯示。  例如，工具列按鈕上的圖片和顯示為圖示的圖片，便很難將它們指定為線條和曲線的集合。  如果要使用向量技巧來建立擁擠棒球場上所拍攝的高解析度數位化相片，甚至會更困難。  這種類型的影像會儲存為點陣圖，點陣圖是螢幕上代表每個點之色彩的數字陣列。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供 <xref:System.Drawing.Bitmap> 類別以顯示、管理和儲存點陣圖。  
+## <a name="imaging"></a><span data-ttu-id="a3b97-118">映像</span><span class="sxs-lookup"><span data-stu-id="a3b97-118">Imaging</span></span>  
+ <span data-ttu-id="a3b97-119">某些類型的圖片會很難或無法與向量圖形的技術一起顯示。</span><span class="sxs-lookup"><span data-stu-id="a3b97-119">Certain kinds of pictures are difficult or impossible to display with the techniques of vector graphics.</span></span> <span data-ttu-id="a3b97-120">比方說，在工具列按鈕上的圖片，會顯示為圖示的圖片難以指定做為集合的直線和曲線。</span><span class="sxs-lookup"><span data-stu-id="a3b97-120">For example, the pictures on toolbar buttons and the pictures that appear as icons are difficult to specify as collections of lines and curves.</span></span> <span data-ttu-id="a3b97-121">高解析度數位擁擠的棒球場上所拍攝的相片是更難以建立與向量技巧。</span><span class="sxs-lookup"><span data-stu-id="a3b97-121">A high-resolution digital photograph of a crowded baseball stadium is even more difficult to create with vector techniques.</span></span> <span data-ttu-id="a3b97-122">此類型的影像會儲存為點陣圖，也就是數字，代表在螢幕上的每個點的色彩的陣列。</span><span class="sxs-lookup"><span data-stu-id="a3b97-122">Images of this type are stored as bitmaps, which are arrays of numbers that represent the colors of individual dots on the screen.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="a3b97-123">提供<xref:System.Drawing.Bitmap>以便顯示、 管理，以及將點陣圖另存的類別。</span><span class="sxs-lookup"><span data-stu-id="a3b97-123"> provides the <xref:System.Drawing.Bitmap> class for displaying, manipulating, and saving bitmaps.</span></span>  
   
-## 印刷樣式  
- 印刷樣式是各種字型、大小和樣式的文字顯示。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 為這項複雜的工作提供了擴充的支援。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 的其中一個新功能是子像素反鋸齒，可在 LCD 螢幕上提供文字更平滑的外觀。  
+## <a name="typography"></a><span data-ttu-id="a3b97-124">印刷樣式</span><span class="sxs-lookup"><span data-stu-id="a3b97-124">Typography</span></span>  
+ <span data-ttu-id="a3b97-125">印刷樣式是文字的各種不同的字型、 大小及樣式中顯示。</span><span class="sxs-lookup"><span data-stu-id="a3b97-125">Typography is the display of text in a variety of fonts, sizes, and styles.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="a3b97-126">這個複雜的工作，提供更詳盡的支援。</span><span class="sxs-lookup"><span data-stu-id="a3b97-126"> provides extensive support for this complex task.</span></span> <span data-ttu-id="a3b97-127">中的新功能的其中一個[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]素反鋸齒功能，可讓文字呈現 LCD 螢幕更順暢的外觀。</span><span class="sxs-lookup"><span data-stu-id="a3b97-127">One of the new features in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is subpixel antialiasing, which gives text rendered on an LCD screen a smoother appearance.</span></span>  
   
- 此外，Windows Form 還提供選項，讓您可選擇使用 <xref:System.Windows.Forms.TextRenderer> 類別中的 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 功能來繪製文字。  
+ <span data-ttu-id="a3b97-128">此外，Windows Form 提供繪製文字的選項[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中的功能及其<xref:System.Windows.Forms.TextRenderer>類別。</span><span class="sxs-lookup"><span data-stu-id="a3b97-128">In addition, Windows Forms offers the option to draw text with [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] capabilities in its <xref:System.Windows.Forms.TextRenderer> class.</span></span>  
   
-## 請參閱  
- [圖形概觀](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)   
- [關於 GDI\+ Managed 程式碼](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)   
- [使用 Managed 圖形類別](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+## <a name="see-also"></a><span data-ttu-id="a3b97-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a3b97-129">See Also</span></span>  
+ [<span data-ttu-id="a3b97-130">圖形概觀</span><span class="sxs-lookup"><span data-stu-id="a3b97-130">Graphics Overview</span></span>](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ [<span data-ttu-id="a3b97-131">關於 GDI+ Managed 程式碼</span><span class="sxs-lookup"><span data-stu-id="a3b97-131">About GDI+ Managed Code</span></span>](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ [<span data-ttu-id="a3b97-132">使用 Managed 圖形類別</span><span class="sxs-lookup"><span data-stu-id="a3b97-132">Using Managed Graphics Classes</span></span>](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

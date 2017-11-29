@@ -1,30 +1,36 @@
 ---
-title: "Oracle 和 ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle 和 ADO.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c615c985f885734800b471ee31451cfb8a4c8500
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle 和 ADO.NET
+# <a name="oracle-and-adonet"></a><span data-ttu-id="3280b-102">Oracle 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3280b-102">Oracle and ADO.NET</span></span>
 > [!NOTE]
->  <xref:System.Data.OracleClient> 中的型別已被取代。  目前版本的 .NET Framework 仍然支援這些型別，不過未來的版本就會將其移除。  Microsoft 建議您使用協力廠商的 Oracle 提供者。  
+>  <span data-ttu-id="3280b-103"><xref:System.Data.OracleClient> 中的型別已被取代。</span><span class="sxs-lookup"><span data-stu-id="3280b-103">The types in <xref:System.Data.OracleClient> are deprecated.</span></span> <span data-ttu-id="3280b-104">目前版本的 .NET Framework 仍然支援這些型別，不過未來的版本就會將其移除。</span><span class="sxs-lookup"><span data-stu-id="3280b-104">The types remain supported in the current version of.NET Framework but will be removed in a future release.</span></span> <span data-ttu-id="3280b-105">Microsoft 建議您使用協力廠商的 Oracle 提供者。</span><span class="sxs-lookup"><span data-stu-id="3280b-105">Microsoft recommends that you use a third-party Oracle provider.</span></span>  
   
- 本節說明 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 特定的功能與行為。  
+ <span data-ttu-id="3280b-106">本節說明 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 特定的功能與行為。</span><span class="sxs-lookup"><span data-stu-id="3280b-106">This section describes features and behaviors that are specific to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle.</span></span>  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 利用 Oracle 用戶端軟體所提供的「Oracle 呼叫介面」\(OCI\) 來存取 Oracle 資料庫。  該資料提供者的功能設計類似於 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]、OLE DB 和 ODBC 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者。  
+ <span data-ttu-id="3280b-107">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 利用 Oracle 用戶端軟體所提供的「Oracle 呼叫介面」(OCI) 來存取 Oracle 資料庫。</span><span class="sxs-lookup"><span data-stu-id="3280b-107">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle provides access to an Oracle database using the Oracle Call Interface (OCI) as provided by Oracle Client software.</span></span> <span data-ttu-id="3280b-108">該資料提供者的功能設計類似於 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]、OLE DB 和 ODBC 的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料提供者。</span><span class="sxs-lookup"><span data-stu-id="3280b-108">The functionality of the data provider is designed to be similar to that of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] data providers for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], OLE DB, and ODBC.</span></span>  
   
- 若要使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle，應用程式必須參考 <xref:System.Data.OracleClient> 命名空間，如下所示：  
+ <span data-ttu-id="3280b-109">若要使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle，應用程式必須參考 <xref:System.Data.OracleClient> 命名空間，如下所示：</span><span class="sxs-lookup"><span data-stu-id="3280b-109">To use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle, an application must reference the <xref:System.Data.OracleClient> namespace as follows:</span></span>  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -34,53 +40,53 @@ Imports System.Data.OracleClient
 using System.Data.OracleClient;  
 ```  
   
- 當您編譯程式碼時，還必須將參考併入 DLL 中。  例如，如果編譯 C\# 程式，則命令列應包括：  
+ <span data-ttu-id="3280b-110">當您編譯程式碼時，還必須將參考併入 DLL 中。</span><span class="sxs-lookup"><span data-stu-id="3280b-110">You also must include a reference to the DLL when you compile your code.</span></span> <span data-ttu-id="3280b-111">例如，如果編譯 C# 程式，則命令列應包括：</span><span class="sxs-lookup"><span data-stu-id="3280b-111">For example, if you are compiling a C# program, your command line should include:</span></span>  
   
 ```  
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## 在本節中  
- [系統需求](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- 說明使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 的需求，以及一些在使用時所要注意的問題。  
+## <a name="in-this-section"></a><span data-ttu-id="3280b-112">本章節內容</span><span class="sxs-lookup"><span data-stu-id="3280b-112">In This Section</span></span>  
+ [<span data-ttu-id="3280b-113">系統需求</span><span class="sxs-lookup"><span data-stu-id="3280b-113">System Requirements</span></span>](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
+ <span data-ttu-id="3280b-114">說明使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 的需求，以及一些在使用時所要注意的問題。</span><span class="sxs-lookup"><span data-stu-id="3280b-114">Describes requirements for using the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle, and describes a number of issues to be aware when using it.</span></span>  
   
- [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
- 說明用來與 Oracle BFILE 資料型別搭配使用的 <xref:System.Data.OracleClient.OracleBFile> 類別。  
+ [<span data-ttu-id="3280b-115">Oracle Bfile</span><span class="sxs-lookup"><span data-stu-id="3280b-115">Oracle BFILEs</span></span>](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
+ <span data-ttu-id="3280b-116">說明用來與 Oracle BFILE 資料型別搭配使用的 <xref:System.Data.OracleClient.OracleBFile> 類別。</span><span class="sxs-lookup"><span data-stu-id="3280b-116">Describes the <xref:System.Data.OracleClient.OracleBFile> class, which is used to work with the Oracle BFILE data type.</span></span>  
   
- [Oracle LOB](../../../../docs/framework/data/adonet/oracle-lobs.md)  
- 說明用來與 Oracle LOB 資料型別搭配使用的 <xref:System.Data.OracleClient.OracleLob> 類別。  
+ [<span data-ttu-id="3280b-117">Oracle Lob</span><span class="sxs-lookup"><span data-stu-id="3280b-117">Oracle LOBs</span></span>](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ <span data-ttu-id="3280b-118">說明用來與 Oracle LOB 資料型別搭配使用的 <xref:System.Data.OracleClient.OracleLob> 類別。</span><span class="sxs-lookup"><span data-stu-id="3280b-118">Describes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle LOB data types.</span></span>  
   
- [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- 說明 Oracle REF CURSOR 資料型別的支援。  
+ [<span data-ttu-id="3280b-119">Oracle REF Cursor</span><span class="sxs-lookup"><span data-stu-id="3280b-119">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ <span data-ttu-id="3280b-120">說明 Oracle REF CURSOR 資料型別的支援。</span><span class="sxs-lookup"><span data-stu-id="3280b-120">Describes support for the Oracle REF CURSOR data type.</span></span>  
   
- [OracleType](../../../../docs/framework/data/adonet/oracletypes.md)  
- 說明可用來與 Oracle 資料型別搭配使用的結構，包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。  
+ [<span data-ttu-id="3280b-121">OracleTypes</span><span class="sxs-lookup"><span data-stu-id="3280b-121">OracleTypes</span></span>](../../../../docs/framework/data/adonet/oracletypes.md)  
+ <span data-ttu-id="3280b-122">說明可用來與 Oracle 資料型別搭配使用的結構，包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。</span><span class="sxs-lookup"><span data-stu-id="3280b-122">Describes structures you can use to work with Oracle data types, including <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
   
- [Oracle 序列](../../../../docs/framework/data/adonet/oracle-sequences.md)  
- 說明針對擷取伺服器產生的索引鍵 Oracle Sequence 值所提供的支援。  
+ [<span data-ttu-id="3280b-123">Oracle 序列</span><span class="sxs-lookup"><span data-stu-id="3280b-123">Oracle Sequences</span></span>](../../../../docs/framework/data/adonet/oracle-sequences.md)  
+ <span data-ttu-id="3280b-124">說明針對擷取伺服器產生的索引鍵 Oracle Sequence 值所提供的支援。</span><span class="sxs-lookup"><span data-stu-id="3280b-124">Describes support for retrieving the server-generated key Oracle Sequence values.</span></span>  
   
- [Oracle 資料型別對應](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
- 列出 Oracle 資料型別及其與 <xref:System.Data.OracleClient.OracleDataReader> 的對應。  
+ [<span data-ttu-id="3280b-125">Oracle 資料類型對應</span><span class="sxs-lookup"><span data-stu-id="3280b-125">Oracle Data Type Mappings</span></span>](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
+ <span data-ttu-id="3280b-126">列出 Oracle 資料型別及其與 <xref:System.Data.OracleClient.OracleDataReader> 的對應。</span><span class="sxs-lookup"><span data-stu-id="3280b-126">Lists Oracle data types and their mappings to the <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
- [Oracle 分散式交易](../../../../docs/framework/data/adonet/oracle-distributed-transactions.md)  
- 說明如果 <xref:System.Data.OracleClient.OracleConnection> 物件判定交易處於作用中，它會如何自動登記在現有的分散式交易中。  
+ [<span data-ttu-id="3280b-127">Oracle 分散式異動</span><span class="sxs-lookup"><span data-stu-id="3280b-127">Oracle Distributed Transactions</span></span>](../../../../docs/framework/data/adonet/oracle-distributed-transactions.md)  
+ <span data-ttu-id="3280b-128">說明如果 <xref:System.Data.OracleClient.OracleConnection> 物件判定交易處於作用中，它會如何自動登記在現有的分散式交易中。</span><span class="sxs-lookup"><span data-stu-id="3280b-128">Describes how the <xref:System.Data.OracleClient.OracleConnection> object automatically enlists in an existing distributed transaction if it determines that a transaction is active.</span></span>  
   
-## 相關章節  
- [保護 ADO.NET 應用程式](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- 說明使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的安全程式碼撰寫實施方針。  
+## <a name="related-sections"></a><span data-ttu-id="3280b-129">相關章節</span><span class="sxs-lookup"><span data-stu-id="3280b-129">Related Sections</span></span>  
+ [<span data-ttu-id="3280b-130">設定 ADO.NET 應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="3280b-130">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ <span data-ttu-id="3280b-131">說明使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的安全程式碼撰寫實施方針。</span><span class="sxs-lookup"><span data-stu-id="3280b-131">Describes secure coding practices when using [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span>  
   
- [DataSet、DataTable 及 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- 說明如何建立及使用 `DataSets`、具型別 `DataSets`、`DataTables` 和 `DataViews`。  
+ [<span data-ttu-id="3280b-132">DataSet、DataTable 和 DataView</span><span class="sxs-lookup"><span data-stu-id="3280b-132">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="3280b-133">說明如何建立及使用 `DataSets`、具型別 `DataSets`、`DataTables` 和 `DataViews`。</span><span class="sxs-lookup"><span data-stu-id="3280b-133">Describes how to create and use `DataSets`, typed `DataSets`, `DataTables`, and `DataViews`.</span></span>  
   
- [擷取和修改 ADO.NET 中的資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- 說明如何使用 ADO.NET 中的資料。  
+ [<span data-ttu-id="3280b-134">在 ADO.NET 中擷取和修改資料</span><span class="sxs-lookup"><span data-stu-id="3280b-134">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ <span data-ttu-id="3280b-135">說明如何使用 ADO.NET 中的資料。</span><span class="sxs-lookup"><span data-stu-id="3280b-135">Describes how to work with data in ADO.NET.</span></span>  
   
- [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- 說明如何使用 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 特有的特性和功能。  
+ [<span data-ttu-id="3280b-136">SQL Server 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3280b-136">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
+ <span data-ttu-id="3280b-137">說明如何使用 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 特有的特性和功能。</span><span class="sxs-lookup"><span data-stu-id="3280b-137">Describes how to work with features and functionality that are specific to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span>  
   
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- 說明可讓您在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中撰寫提供者獨立程式碼的泛用類別。  
+ [<span data-ttu-id="3280b-138">DbProviderFactories</span><span class="sxs-lookup"><span data-stu-id="3280b-138">DbProviderFactories</span></span>](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ <span data-ttu-id="3280b-139">說明可讓您在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中撰寫提供者獨立程式碼的泛用類別。</span><span class="sxs-lookup"><span data-stu-id="3280b-139">Describes generic classes that allow you to write provider-independent code in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span>  
   
-## 請參閱  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3280b-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3280b-140">See Also</span></span>  
+ [<span data-ttu-id="3280b-141">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3280b-141">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)  
+ [<span data-ttu-id="3280b-142">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="3280b-142">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

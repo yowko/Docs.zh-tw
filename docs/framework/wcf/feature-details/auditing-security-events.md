@@ -1,69 +1,71 @@
 ---
-title: "稽核安全性事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "稽核安全性事件 [WCF]"
+title: "稽核安全性事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 933f62e1921fe12255965567bbec0faf651e0ba2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 稽核安全性事件
-以 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立的應用程式可以使用稽核功能記錄安全性事件 \(可能為成功、失敗或兩者並存\)。事件會寫入至 Windows 系統事件記錄檔，並且可以使用 \[事件檢視器\] 加以檢查。  
+# <a name="auditing-security-events"></a><span data-ttu-id="12f78-102">稽核安全性事件</span><span class="sxs-lookup"><span data-stu-id="12f78-102">Auditing Security Events</span></span>
+<span data-ttu-id="12f78-103">以 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立的應用程式可以使用稽核功能記錄安全性事件 (可能為成功、失敗或兩者並存)。</span><span class="sxs-lookup"><span data-stu-id="12f78-103">Applications created with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] can log security events (either success, failure, or both) with the auditing feature.</span></span> <span data-ttu-id="12f78-104">事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。</span><span class="sxs-lookup"><span data-stu-id="12f78-104">The events are written to the Windows system event log and can be examined using the Event Viewer.</span></span>  
   
- 稽核為系統管理員提供了一種方法，可偵測已發生或正在進行的攻擊。此外，稽核可以協助開發人員偵錯安全性相關的問題。例如，若授權的組態中出現錯誤，或是在檢查原則時不小心拒絕了某個授權使用者的存取，則開發人員可以藉由檢查事件日誌，快速地探索及隔離導致這個錯誤的原因。  
+ <span data-ttu-id="12f78-105">稽核為系統管理員提供了一種方法，可偵測已發生或正在進行的攻擊。</span><span class="sxs-lookup"><span data-stu-id="12f78-105">Auditing provides a way for an administrator to detect an attack that has already occurred or is in progress.</span></span> <span data-ttu-id="12f78-106">此外，稽核可以協助開發人員偵錯安全性相關的問題。</span><span class="sxs-lookup"><span data-stu-id="12f78-106">In addition, auditing can help a developer to debug security-related problems.</span></span> <span data-ttu-id="12f78-107">例如，若授權的組態中出現錯誤，或是在檢查原則時不小心拒絕了某個授權使用者的存取，則開發人員可以藉由檢查事件日誌，快速地探索及隔離導致這個錯誤的原因。</span><span class="sxs-lookup"><span data-stu-id="12f78-107">For example, if an error in the configuration of the authorization or checking policy accidentally denies access to an authorized user, a developer can quickly discover and isolate the cause of this error by examining the event log.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性的詳細資訊，請參閱 [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程式設計的詳細資訊，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="12f78-108">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="12f78-108"> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security, see [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="12f78-109">程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。</span><span class="sxs-lookup"><span data-stu-id="12f78-109"> programming [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  
   
-## 稽核層級和行為  
- 安全性稽核目前有兩種層級：  
+## <a name="audit-level-and-behavior"></a><span data-ttu-id="12f78-110">稽核層級和行為</span><span class="sxs-lookup"><span data-stu-id="12f78-110">Audit Level and Behavior</span></span>  
+ <span data-ttu-id="12f78-111">安全性稽核目前有兩種層級：</span><span class="sxs-lookup"><span data-stu-id="12f78-111">Two levels of security audits exist:</span></span>  
   
--   服務授權層級，其中呼叫者已獲得授權。  
+-   <span data-ttu-id="12f78-112">服務授權層級，其中呼叫者已獲得授權。</span><span class="sxs-lookup"><span data-stu-id="12f78-112">Service authorization level, in which a caller is authorized.</span></span>  
   
--   訊息層級，其中 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會檢查訊息的有效性，並驗證呼叫者。  
+-   <span data-ttu-id="12f78-113">訊息層級，其中 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會檢查訊息的有效性，並驗證呼叫者。</span><span class="sxs-lookup"><span data-stu-id="12f78-113">Message level, in which [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] checks for message validity and authenticates the caller.</span></span>  
   
- 您可以檢查兩種稽核層級為成功或失敗，這就是所謂的「*稽核行為*」\(Audit Behavior\)。  
+ <span data-ttu-id="12f78-114">您可以檢查兩種稽核層級為成功或失敗，也就是*稽核行為*。</span><span class="sxs-lookup"><span data-stu-id="12f78-114">You can check both audit levels for success or failure, which is known as the *audit behavior*.</span></span>  
   
-## 稽核記錄檔的位置  
- 決定稽核層級和行為後，您 \(或系統管理員\) 就可以指定稽核記錄檔的位置。您有三種選擇，包括：預設、應用程式和安全性。指定為 \[預設\] 時，實際的記錄檔會根據所使用的系統，以及系統是否支援寫入至安全性記錄來進行。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後的＜作業系統＞一節。  
+## <a name="audit-log-location"></a><span data-ttu-id="12f78-115">稽核記錄檔的位置</span><span class="sxs-lookup"><span data-stu-id="12f78-115">Audit Log Location</span></span>  
+ <span data-ttu-id="12f78-116">決定稽核層級和行為後，您 (或系統管理員) 就可以指定稽核記錄檔的位置。</span><span class="sxs-lookup"><span data-stu-id="12f78-116">Once you determine an audit level and behavior, you (or an administrator) can specify a location for the audit log.</span></span> <span data-ttu-id="12f78-117">您有三種選擇，包括：預設、應用程式和安全性。</span><span class="sxs-lookup"><span data-stu-id="12f78-117">The three choices include: Default, Application, and Security.</span></span> <span data-ttu-id="12f78-118">指定為 [預設] 時，實際的記錄檔取決於您所使用的系統，以及該系統是否支援寫入至安全性記錄檔。</span><span class="sxs-lookup"><span data-stu-id="12f78-118">When you specify Default, the actual log depends on which system you are using and whether the system supports writing to the security log.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="12f78-119">本主題稍後的＜作業系統＞一節。</span><span class="sxs-lookup"><span data-stu-id="12f78-119"> the "Operating System" section later in this topic.</span></span>  
   
- 若要寫入安全性記錄檔，您必須具備 `SeAuditPrivilege`。根據預設，只有本機系統帳戶和網路服務帳戶具有此權限。若要管理安全性記錄函式 `read` 和 `delete`，您必須具備 `SeSecurityPrivilege`。根據預設，只有系統管理員具有此權限。  
+ <span data-ttu-id="12f78-120">若要寫入安全性記錄檔，您必須具備 `SeAuditPrivilege`。</span><span class="sxs-lookup"><span data-stu-id="12f78-120">To write to the Security log requires the `SeAuditPrivilege`.</span></span> <span data-ttu-id="12f78-121">根據預設，只有本機系統帳戶和網路服務帳戶具有此權限。</span><span class="sxs-lookup"><span data-stu-id="12f78-121">By default, only Local System and Network Service accounts have this privilege.</span></span> <span data-ttu-id="12f78-122">若要管理安全性記錄函式 `read` 和 `delete`，您必須具備 `SeSecurityPrivilege`。</span><span class="sxs-lookup"><span data-stu-id="12f78-122">To manage the Security log functions `read` and `delete` requires the `SeSecurityPrivilege`.</span></span> <span data-ttu-id="12f78-123">根據預設，只有系統管理員具有此權限。</span><span class="sxs-lookup"><span data-stu-id="12f78-123">By default, only administrators have this privilege.</span></span>  
   
- 相反地，通過驗證的使用者可以讀取及寫入應用程式記錄檔。根據預設，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 會將稽核事件寫入應用程式記錄檔。記錄檔也可以包含個人資訊，所有通過驗證的使用者都可以檢視這些資訊。  
+ <span data-ttu-id="12f78-124">相反地，通過驗證的使用者可以讀取及寫入應用程式記錄檔。</span><span class="sxs-lookup"><span data-stu-id="12f78-124">In contrast, authenticated users can read and write to the Application log.</span></span> <span data-ttu-id="12f78-125">根據預設，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 會將稽核事件寫入應用程式記錄檔。</span><span class="sxs-lookup"><span data-stu-id="12f78-125">[!INCLUDE[wxp](../../../../includes/wxp-md.md)] writes audit events to the Application log by default.</span></span> <span data-ttu-id="12f78-126">記錄檔也可以包含個人資訊，所有通過驗證的使用者都可以檢視這些資訊。</span><span class="sxs-lookup"><span data-stu-id="12f78-126">The log can also contain personal information that is visible to all authenticated users.</span></span>  
   
-## 隱藏稽核失敗  
- 稽核期間可以使用的另一個選項為是否要隱藏任何稽核失敗。根據預設，稽核失敗不會影響到應用程式。不過，如果需要的話，您可以將選項設定為 `false`，如此便會擲回例外狀況。  
+## <a name="suppressing-audit-failures"></a><span data-ttu-id="12f78-127">隱藏稽核失敗</span><span class="sxs-lookup"><span data-stu-id="12f78-127">Suppressing Audit Failures</span></span>  
+ <span data-ttu-id="12f78-128">稽核期間可以使用的另一個選項為是否要隱藏任何稽核失敗。</span><span class="sxs-lookup"><span data-stu-id="12f78-128">Another option during auditing is whether to suppress any audit failure.</span></span> <span data-ttu-id="12f78-129">根據預設，稽核失敗不會影響到應用程式。</span><span class="sxs-lookup"><span data-stu-id="12f78-129">By default, an audit failure does not affect an application.</span></span> <span data-ttu-id="12f78-130">不過，如果需要的話，您可以將選項設定為 `false`，如此便會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="12f78-130">If required, however, you can set the option to `false`, which causes an exception to be thrown.</span></span>  
   
-## 程式設計稽核  
- 您可以使用程式設計的方式或透過組態的方式指定稽核行為。  
+## <a name="programming-auditing"></a><span data-ttu-id="12f78-131">程式設計稽核</span><span class="sxs-lookup"><span data-stu-id="12f78-131">Programming Auditing</span></span>  
+ <span data-ttu-id="12f78-132">您可以使用程式設計的方式或透過組態的方式指定稽核行為。</span><span class="sxs-lookup"><span data-stu-id="12f78-132">You can specify auditing behavior either programmatically or through configuration.</span></span>  
   
-### 稽核類別  
- 下表描述用來程式設計稽核行為的類別和屬性。  
+### <a name="auditing-classes"></a><span data-ttu-id="12f78-133">稽核類別</span><span class="sxs-lookup"><span data-stu-id="12f78-133">Auditing Classes</span></span>  
+ <span data-ttu-id="12f78-134">下表描述用來程式設計稽核行為的類別和屬性。</span><span class="sxs-lookup"><span data-stu-id="12f78-134">The following table describes the classes and properties used to program auditing behavior.</span></span>  
   
-|類別|描述|  
-|--------|--------|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|將稽核的設定選項啟用為服務行為。|  
-|<xref:System.ServiceModel.AuditLogLocation>|用於指定寫入哪個記錄檔的列舉。可能的值為 \[預設\]、\[應用程式\] 和 \[安全性\]。當您選取 \[預設\] 時，作業系統會判斷實際的記錄檔位置。如需詳細資訊，請參閱本主題稍後「應用程式或安全性事件記錄檔選擇」一節的說明。|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>|指定要在訊息層級上稽核哪種訊息驗證事件的類型。這些選擇有 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|指定要在服務層級上稽核哪種服務授權事件的類型。這些選擇有 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|指定當稽核失敗時，用戶端要求會產生什麼變化。例如，當服務嘗試寫入安全性記錄檔，但不具有 `SeAuditPrivilege` 時。`true` 的預設值表示忽略該失敗，並且正常處理用戶端要求。|  
+|<span data-ttu-id="12f78-135">類別</span><span class="sxs-lookup"><span data-stu-id="12f78-135">Class</span></span>|<span data-ttu-id="12f78-136">說明</span><span class="sxs-lookup"><span data-stu-id="12f78-136">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|<span data-ttu-id="12f78-137">將稽核的設定選項啟用為服務行為。</span><span class="sxs-lookup"><span data-stu-id="12f78-137">Enables setting options for auditing as a service behavior.</span></span>|  
+|<xref:System.ServiceModel.AuditLogLocation>|<span data-ttu-id="12f78-138">用於指定寫入哪個記錄檔的列舉。</span><span class="sxs-lookup"><span data-stu-id="12f78-138">Enumeration to specify which log to write to.</span></span> <span data-ttu-id="12f78-139">可能的值為 [預設]、[應用程式] 和 [安全性]。</span><span class="sxs-lookup"><span data-stu-id="12f78-139">The possible values are Default, Application, and Security.</span></span> <span data-ttu-id="12f78-140">當您選取 [預設] 時，作業系統會判斷實際的記錄檔位置。</span><span class="sxs-lookup"><span data-stu-id="12f78-140">When you select Default, the operating system determines the actual log location.</span></span> <span data-ttu-id="12f78-141">如需詳細資訊，請參閱本主題稍後「應用程式或安全性事件記錄檔選擇」一節的說明。</span><span class="sxs-lookup"><span data-stu-id="12f78-141">See the "Application or Security Event Log Choice" section later in this topic.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>|<span data-ttu-id="12f78-142">指定要在訊息層級上稽核哪種訊息驗證事件的類型。</span><span class="sxs-lookup"><span data-stu-id="12f78-142">Specifies which types of message authentication events are audited at the message level.</span></span> <span data-ttu-id="12f78-143">這些選擇有 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。</span><span class="sxs-lookup"><span data-stu-id="12f78-143">The choices are `None`, `Failure`, `Success`, and `SuccessOrFailure`.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|<span data-ttu-id="12f78-144">指定要在服務層級上稽核哪種服務授權事件的類型。</span><span class="sxs-lookup"><span data-stu-id="12f78-144">Specifies which types of service authorization events are audited at the service level.</span></span> <span data-ttu-id="12f78-145">這些選擇有 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。</span><span class="sxs-lookup"><span data-stu-id="12f78-145">The choices are `None`, `Failure`, `Success`, and `SuccessOrFailure`.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|<span data-ttu-id="12f78-146">指定當稽核失敗時，用戶端要求會產生什麼變化。</span><span class="sxs-lookup"><span data-stu-id="12f78-146">Specifies what happens to the client request when auditing fails.</span></span> <span data-ttu-id="12f78-147">例如，當服務嘗試寫入安全性記錄檔，但不具有 `SeAuditPrivilege` 時。</span><span class="sxs-lookup"><span data-stu-id="12f78-147">For example, when the service attempts to write to the security log, but does not have `SeAuditPrivilege`.</span></span> <span data-ttu-id="12f78-148">`true` 的預設值表示忽略該失敗，並且正常處理用戶端要求。</span><span class="sxs-lookup"><span data-stu-id="12f78-148">The default value of `true` indicates that failures are ignored, and the client request is processed normally.</span></span>|  
   
- 如需將應用程式設定為記錄稽核事件的範例，請參閱 [HOW TO：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
+ <span data-ttu-id="12f78-149">如需設定應用程式記錄稽核事件的範例，請參閱[How to： 稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。</span><span class="sxs-lookup"><span data-stu-id="12f78-149">For an example of setting up an application to log audit events, see [How to: Audit Security Events](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).</span></span>  
   
-### 組態  
- 您也可以使用組態來指定稽核行為，方法是在 [\<行為\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)下方加入 [\<serviceSecurityAudit\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)。您必須在 [\<行為\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)下方加入項目，如下列程式碼所示。  
+### <a name="configuration"></a><span data-ttu-id="12f78-150">組態</span><span class="sxs-lookup"><span data-stu-id="12f78-150">Configuration</span></span>  
+ <span data-ttu-id="12f78-151">您也可以使用組態來指定稽核行為加入[ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)下[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。</span><span class="sxs-lookup"><span data-stu-id="12f78-151">You can also use configuration to specify auditing behavior by adding a [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) under the [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).</span></span> <span data-ttu-id="12f78-152">您必須新增項目底下[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="12f78-152">You must add the element under a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) as shown in the following code.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
@@ -80,37 +82,37 @@ caps.handback.revision: 27
 </configuration>  
 ```  
   
- 如果已啟用稽核，但未指定 `auditLogLocation`，則支援寫入至安全性記錄檔的平台會使用的預設記錄名稱為「安全性」記錄檔，否則便是「應用程式」記錄檔。只有 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 作業系統支援寫入至安全性記錄檔。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後的＜作業系統＞一節。  
+ <span data-ttu-id="12f78-153">如果已啟用稽核，但未指定 `auditLogLocation`，則支援寫入至安全性記錄檔的平台會使用的預設記錄名稱為「安全性」記錄檔，否則便是「應用程式」記錄檔。</span><span class="sxs-lookup"><span data-stu-id="12f78-153">If auditing is enabled and an `auditLogLocation` is not specified, the default log name is "Security" log for the platform supporting writing to the Security log; otherwise, it is "Application" log.</span></span> <span data-ttu-id="12f78-154">只有 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 作業系統支援寫入至安全性記錄檔。</span><span class="sxs-lookup"><span data-stu-id="12f78-154">Only the [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wv](../../../../includes/wv-md.md)] operating systems support writing to the Security log.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="12f78-155">本主題稍後的＜作業系統＞一節。</span><span class="sxs-lookup"><span data-stu-id="12f78-155"> the "Operating System" section later in this topic.</span></span>  
   
-## 安全性考量  
- 如果惡意使用者得知已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 \[事件檢視器\] 的屬性來控制稽核行為。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]在 Windows XP 內使用 \[事件檢視器\] 來檢視和管理事件記錄檔的「Microsoft 技術支援」相關文章：[如何檢視並管理 Windows XP 事件檢視器中的事件記錄檔](http://go.microsoft.com/fwlink/?LinkId=89150)。  
+## <a name="security-considerations"></a><span data-ttu-id="12f78-156">安全性考量</span><span class="sxs-lookup"><span data-stu-id="12f78-156">Security Considerations</span></span>  
+ <span data-ttu-id="12f78-157">如果惡意使用者得知已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。</span><span class="sxs-lookup"><span data-stu-id="12f78-157">If a malicious user knows that auditing is enabled, that attacker can send invalid messages that cause audit entries to be written.</span></span> <span data-ttu-id="12f78-158">如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。</span><span class="sxs-lookup"><span data-stu-id="12f78-158">If the audit log is filled in this manner, the auditing system fails.</span></span> <span data-ttu-id="12f78-159">若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。</span><span class="sxs-lookup"><span data-stu-id="12f78-159">To mitigate this, set the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> property to `true` and use the properties of the Event Viewer to control the auditing behavior.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="12f78-160">在您檢視和管理事件記錄檔可在 Windows XP 中使用事件檢視器的 Microsoft 支援文章[如何檢視及管理在 Windows XP 中的事件檢視器中的事件記錄檔](http://go.microsoft.com/fwlink/?LinkId=89150)。</span><span class="sxs-lookup"><span data-stu-id="12f78-160"> the Microsoft Support article on viewing and managing event logs by using the Event Viewer in Windows XP available at [How to view and manage event logs in Event Viewer in Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).</span></span>  
   
- 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上，任何通過驗證的使用者都可以檢視寫入 \[應用程式記錄檔\] 的稽核事件。  
+ <span data-ttu-id="12f78-161">在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上，任何通過驗證的使用者都可以檢視寫入 [應用程式記錄檔] 的稽核事件。</span><span class="sxs-lookup"><span data-stu-id="12f78-161">Audit events that are written to the Application Log on [!INCLUDE[wxp](../../../../includes/wxp-md.md)] are visible to any authenticated user.</span></span>  
   
-## 在應用程式和安全性事件記錄檔之間選擇  
- 下表提供可協助您選擇要記錄至應用程式或安全性事件記錄檔的詳細資訊。  
+## <a name="choosing-between-application-and-security-event-logs"></a><span data-ttu-id="12f78-162">在應用程式和安全性事件記錄檔之間選擇</span><span class="sxs-lookup"><span data-stu-id="12f78-162">Choosing Between Application and Security Event Logs</span></span>  
+ <span data-ttu-id="12f78-163">下表提供可協助您選擇要記錄至應用程式或安全性事件記錄檔的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="12f78-163">The following tables provide information to help you choose whether to log into the Application or the Security event log.</span></span>  
   
-#### 作業系統  
+#### <a name="operating-system"></a><span data-ttu-id="12f78-164">作業系統</span><span class="sxs-lookup"><span data-stu-id="12f78-164">Operating System</span></span>  
   
-|系統|應用程式記錄檔|安全性記錄檔|  
-|--------|-------------|------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] \(含\) 以後版本|支援項目|不支援|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] 和[!INCLUDE[wv](../../../../includes/wv-md.md)]|支援項目|執行緒內容必須擁有 `SeAuditPrivilege`|  
+|<span data-ttu-id="12f78-165">系統</span><span class="sxs-lookup"><span data-stu-id="12f78-165">System</span></span>|<span data-ttu-id="12f78-166">應用程式記錄檔</span><span class="sxs-lookup"><span data-stu-id="12f78-166">Application log</span></span>|<span data-ttu-id="12f78-167">安全性記錄檔</span><span class="sxs-lookup"><span data-stu-id="12f78-167">Security log</span></span>|  
+|------------|---------------------|------------------|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]<span data-ttu-id="12f78-168"> (含) 以後版本</span><span class="sxs-lookup"><span data-stu-id="12f78-168"> or later</span></span>|<span data-ttu-id="12f78-169">支援</span><span class="sxs-lookup"><span data-stu-id="12f78-169">Supported</span></span>|<span data-ttu-id="12f78-170">不支援</span><span class="sxs-lookup"><span data-stu-id="12f78-170">Not supported</span></span>|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)]<span data-ttu-id="12f78-171"> 和 [!INCLUDE[wv](../../../../includes/wv-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12f78-171"> and [!INCLUDE[wv](../../../../includes/wv-md.md)]</span></span>|<span data-ttu-id="12f78-172">支援</span><span class="sxs-lookup"><span data-stu-id="12f78-172">Supported</span></span>|<span data-ttu-id="12f78-173">執行緒內容必須擁有 `SeAuditPrivilege`</span><span class="sxs-lookup"><span data-stu-id="12f78-173">Thread context must possess `SeAuditPrivilege`</span></span>|  
   
-#### 其他因素  
- 除了作業系統之外，下表描述其他控制記錄啟用的設定。  
+#### <a name="other-factors"></a><span data-ttu-id="12f78-174">其他因素</span><span class="sxs-lookup"><span data-stu-id="12f78-174">Other Factors</span></span>  
+ <span data-ttu-id="12f78-175">除了作業系統之外，下表描述其他控制記錄啟用的設定。</span><span class="sxs-lookup"><span data-stu-id="12f78-175">In addition to the operating system, the following table describes other settings that control the enablement of logging.</span></span>  
   
-|因素|應用程式記錄檔|安全性記錄檔|  
-|--------|-------------|------------|  
-|稽核原則管理|不適用。|安全性記錄檔也可以藉由本機安全性授權 \(LSA\) 原則與組態來加以控制。您也必須啟用 \[稽核物件存取\] 類別。|  
-|預設的使用者經驗|所有通過驗證的使用者都可以寫入應用程式記錄檔，因此不需要為應用程式處理序額外執行設定權限的步驟。|應用程式處理序 \(內容\) 必須具有 `SeAuditPrivilege`。|  
+|<span data-ttu-id="12f78-176">因素</span><span class="sxs-lookup"><span data-stu-id="12f78-176">Factor</span></span>|<span data-ttu-id="12f78-177">應用程式記錄檔</span><span class="sxs-lookup"><span data-stu-id="12f78-177">Application log</span></span>|<span data-ttu-id="12f78-178">安全性記錄檔</span><span class="sxs-lookup"><span data-stu-id="12f78-178">Security log</span></span>|  
+|------------|---------------------|------------------|  
+|<span data-ttu-id="12f78-179">稽核原則管理</span><span class="sxs-lookup"><span data-stu-id="12f78-179">Audit policy management</span></span>|<span data-ttu-id="12f78-180">不適用。</span><span class="sxs-lookup"><span data-stu-id="12f78-180">Not applicable.</span></span>|<span data-ttu-id="12f78-181">安全性記錄檔也可以藉由本機安全性授權 (LSA) 原則與組態來加以控制。</span><span class="sxs-lookup"><span data-stu-id="12f78-181">Along with configuration, the Security log is also controlled by the local security authority (LSA) policy.</span></span> <span data-ttu-id="12f78-182">您也必須啟用 [稽核物件存取] 類別。</span><span class="sxs-lookup"><span data-stu-id="12f78-182">The "Audit object access" category must also be enabled.</span></span>|  
+|<span data-ttu-id="12f78-183">預設的使用者經驗</span><span class="sxs-lookup"><span data-stu-id="12f78-183">Default user experience</span></span>|<span data-ttu-id="12f78-184">所有通過驗證的使用者都可以寫入應用程式記錄檔，因此不需要為應用程式處理序額外執行設定權限的步驟。</span><span class="sxs-lookup"><span data-stu-id="12f78-184">All authenticated users can write to the Application log, so no additional permission step is needed for application processes.</span></span>|<span data-ttu-id="12f78-185">應用程式處理序 (內容) 必須具有 `SeAuditPrivilege`。</span><span class="sxs-lookup"><span data-stu-id="12f78-185">The application process (context) must have `SeAuditPrivilege`.</span></span>|  
   
-## 請參閱  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>   
- <xref:System.ServiceModel.AuditLogLocation>   
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)   
- [HOW TO：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)   
- [\<serviceSecurityAudit\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)   
- [\<行為\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)   
- [Windows Server AppFabric 的資訊安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="12f78-186">另請參閱</span><span class="sxs-lookup"><span data-stu-id="12f78-186">See Also</span></span>  
+ <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
+ <xref:System.ServiceModel.AuditLogLocation>  
+ [<span data-ttu-id="12f78-187">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="12f78-187">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="12f78-188">基本 WCF 程式設計</span><span class="sxs-lookup"><span data-stu-id="12f78-188">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="12f78-189">How to： 稽核安全性事件</span><span class="sxs-lookup"><span data-stu-id="12f78-189">How to: Audit Security Events</span></span>](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [<span data-ttu-id="12f78-190">\<serviceSecurityAudit ></span><span class="sxs-lookup"><span data-stu-id="12f78-190">\<serviceSecurityAudit></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
+ [<span data-ttu-id="12f78-191">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="12f78-191">\<behaviors></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [<span data-ttu-id="12f78-192">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="12f78-192">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

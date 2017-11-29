@@ -1,78 +1,76 @@
 ---
-title: "CType 函式 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.CType"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "運算式轉換結果"
-  - "明確資料類型轉換"
-  - "CType 函式"
-  - "轉換，運算式"
+title: "CType 函式 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.CType
+helpviewer_keywords:
+- expression conversion results
+- explicit data type conversions [Visual Basic]
+- CType function
+- conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6118ca5f73a0d446842c33859e0623032082bcd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# CType 函式 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-傳回運算式明確轉換成指定資料類型、物件、結構、類別或介面的結果。  
+# <a name="ctype-function-visual-basic"></a><span data-ttu-id="9f5df-102">CType 函式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f5df-102">CType Function (Visual Basic)</span></span>
+<span data-ttu-id="9f5df-103">傳回運算式明確轉換指定的資料類型、 物件、 結構、 類別或介面的結果。</span><span class="sxs-lookup"><span data-stu-id="9f5df-103">Returns the result of explicitly converting an expression to a specified data type, object, structure, class, or interface.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="9f5df-104">語法</span><span class="sxs-lookup"><span data-stu-id="9f5df-104">Syntax</span></span>  
   
 ```  
 CType(expression, typename)  
 ```  
   
-## 組件  
+## <a name="parts"></a><span data-ttu-id="9f5df-105">組件</span><span class="sxs-lookup"><span data-stu-id="9f5df-105">Parts</span></span>  
  `expression`  
- 任何有效的運算式。  如果 `expression` 值在 `typename` 允許的範圍外，Visual Basic 會擲回例外狀況。  
+ <span data-ttu-id="9f5df-106">任何有效的運算式。</span><span class="sxs-lookup"><span data-stu-id="9f5df-106">Any valid expression.</span></span> <span data-ttu-id="9f5df-107">如果值`expression`超出所允許的範圍`typename`，Visual Basic 會擲回的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="9f5df-107">If the value of `expression` is outside the range allowed by `typename`, Visual Basic throws an exception.</span></span>  
   
  `typename`  
- 在 `Dim` 陳述式的 `As` 子句中合法的任何運算式，也就是任何資料類型、物件、結構、類別或介面的名稱。  
+ <span data-ttu-id="9f5df-108">任何運算式中合法`As`中的子句`Dim`陳述式，也就是任何資料類型、 物件、 結構、 類別或介面的名稱。</span><span class="sxs-lookup"><span data-stu-id="9f5df-108">Any expression that is legal within an `As` clause in a `Dim` statement, that is, the name of any data type, object, structure, class, or interface.</span></span>  
   
-## 備註  
+## <a name="remarks"></a><span data-ttu-id="9f5df-109">備註</span><span class="sxs-lookup"><span data-stu-id="9f5df-109">Remarks</span></span>  
   
 > [!TIP]
->  您也可以使用下列函式來執行類型轉換：  
+>  <span data-ttu-id="9f5df-110">您也可以使用下列函數來執行類型轉換：</span><span class="sxs-lookup"><span data-stu-id="9f5df-110">You can also use the following functions to perform a type conversion:</span></span>  
 >   
->  -   類型轉換函式，例如對特定資料類型執行轉換的 `CByte`、`CDbl` 和 `CInt`。  如需詳細資訊，請參閱 [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)。  
-> -   [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) 或 [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md)。  這些運算子要求一個類型必須繼承自另一個類型或實作另一個類型。  與 `Object` 資料類型之間來回進行轉換時，它們可以提供比 `CType` 略微好的效能。  
+>  -   <span data-ttu-id="9f5df-111">類型轉換函式，例如`CByte`， `CDbl`，和`CInt`來執行特定資料型別轉換。</span><span class="sxs-lookup"><span data-stu-id="9f5df-111">Type conversion functions such as `CByte`, `CDbl`, and `CInt` that perform a conversion to a specific data type.</span></span> <span data-ttu-id="9f5df-112">如需詳細資訊，請參閱[類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="9f5df-112">For more information, see [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md).</span></span>  
+> -   <span data-ttu-id="9f5df-113">[DirectCast 運算子](../../../visual-basic/language-reference/operators/directcast-operator.md)或[TryCast 運算子](../../../visual-basic/language-reference/operators/trycast-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="9f5df-113">[DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) or [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).</span></span> <span data-ttu-id="9f5df-114">這些運算子需要一種類型繼承自或實作其他的型別。</span><span class="sxs-lookup"><span data-stu-id="9f5df-114">These operators require that one type inherit from or implement the other type.</span></span> <span data-ttu-id="9f5df-115">它們可以提供稍微較佳的效能比`CType`時的轉換`Object`資料型別。</span><span class="sxs-lookup"><span data-stu-id="9f5df-115">They can provide somewhat better performance than `CType` when converting to and from the `Object` data type.</span></span>  
   
- `CType` 是以內嵌方式編譯的，也就是說，轉換程式碼是評估運算式的部分程式碼。  在某些情況下，因為沒有呼叫程序執行轉換，程式碼執行得更快速。  
+ <span data-ttu-id="9f5df-116">`CType`已編譯的內嵌，這表示，轉換程式碼的程式碼可評估運算式的一部分。</span><span class="sxs-lookup"><span data-stu-id="9f5df-116">`CType` is compiled inline, which means that the conversion code is part of the code that evaluates the expression.</span></span> <span data-ttu-id="9f5df-117">在某些情況下，更快的程式碼執行因為程序不會呼叫以執行轉換。</span><span class="sxs-lookup"><span data-stu-id="9f5df-117">In some cases, the code runs faster because no procedures are called to perform the conversion.</span></span>  
   
- 如果沒有定義從 `expression` 到 `typename` 的轉換 \(例如，從 `Integer` 轉換為 `Date`\)，Visual Basic 會顯示編譯時期錯誤訊息。  
+ <span data-ttu-id="9f5df-118">如果沒有轉換定義從`expression`至`typename`(例如，從`Integer`至`Date`)，Visual Basic 會顯示編譯時間錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="9f5df-118">If no conversion is defined from `expression` to `typename` (for example, from `Integer` to `Date`), Visual Basic displays a compile-time error message.</span></span>  
   
- 若在執行階段發生轉換失敗，則擲回適當的例外狀況。  如果縮小轉換失敗，最可能發生 <xref:System.OverflowException> 結果。  如果未定義轉換，則擲回 <xref:System.InvalidCastException>。  例如，如果 `expression` 屬於類型 `Object`，且其執行階段類型並未轉換成 `typename`，就可能發生這種情況。  
+ <span data-ttu-id="9f5df-119">如果轉換失敗，在執行階段，會擲回適當的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="9f5df-119">If a conversion fails at run time, the appropriate exception is thrown.</span></span> <span data-ttu-id="9f5df-120">如果有縮小轉換失敗，<xref:System.OverflowException>是最常見的結果。</span><span class="sxs-lookup"><span data-stu-id="9f5df-120">If a narrowing conversion fails, an <xref:System.OverflowException> is the most common result.</span></span> <span data-ttu-id="9f5df-121">如果未定義，轉換<xref:System.InvalidCastException>在擲回。</span><span class="sxs-lookup"><span data-stu-id="9f5df-121">If the conversion is undefined, an <xref:System.InvalidCastException> in thrown.</span></span> <span data-ttu-id="9f5df-122">比方說，這種情況`expression`的型別`Object`不轉換成它的執行階段型別且`typename`。</span><span class="sxs-lookup"><span data-stu-id="9f5df-122">For example, this can happen  if `expression` is of type `Object` and its run-time type has no conversion to `typename`.</span></span>  
   
- 如果 `expression` 或 `typename` 的資料類型是已定義的類別或結構，您可以將該類別或結構上的 `CType` 定義為轉換運算子。  這會將 `CType` 當做「*多載運算子*」\(Overloaded Operator\)。  如果執行這個動作，就可以控制與類別或結構之間的轉換行為，包括可能擲回的例外狀況。  
+ <span data-ttu-id="9f5df-123">資料類型，是否`expression`或`typename`是類別或結構，您定義了，您可以定義`CType`上該類別或結構做為轉換運算子。</span><span class="sxs-lookup"><span data-stu-id="9f5df-123">If the data type of `expression` or `typename` is a class or structure you've defined, you can define `CType` on that class or structure as a conversion operator.</span></span> <span data-ttu-id="9f5df-124">這可讓`CType`做為*多載運算子*。</span><span class="sxs-lookup"><span data-stu-id="9f5df-124">This makes `CType` act as an *overloaded operator*.</span></span> <span data-ttu-id="9f5df-125">如果您這樣做，您可以控制之間的轉換與類別或結構，包括可能會擲回的例外狀況行為。</span><span class="sxs-lookup"><span data-stu-id="9f5df-125">If you do this, you can control the behavior of conversions to and from your class or structure, including the exceptions that can be thrown.</span></span>  
   
-## 多載化  
- 也可以在程式碼外部所定義的類別或結構上多載 `CType` 運算子。  如果程式碼與此類類別或結構進行轉換，請務必了解其 `CType` 運算子的行為。  如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+## <a name="overloading"></a><span data-ttu-id="9f5df-126">多載化</span><span class="sxs-lookup"><span data-stu-id="9f5df-126">Overloading</span></span>  
+ <span data-ttu-id="9f5df-127">`CType`運算子也能在類別或您的程式碼之外定義的結構上多載。</span><span class="sxs-lookup"><span data-stu-id="9f5df-127">The `CType` operator can also be overloaded on a class or structure defined outside your code.</span></span> <span data-ttu-id="9f5df-128">如果您的程式碼轉換，或從這類類別或結構，請務必了解的行為及其`CType`運算子。</span><span class="sxs-lookup"><span data-stu-id="9f5df-128">If your code converts to or from such a class or structure, be sure you understand the behavior of its `CType` operator.</span></span> <span data-ttu-id="9f5df-129">如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="9f5df-129">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## 轉換的動態物件  
- 動態物件的類型轉換是由使用 <xref:System.Dynamic.DynamicObject.TryConvert%2A> 或 <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> 方法之使用者定義的動態轉換來執行。  如果您搭配動態物件使用，請使用 <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> 方法轉換動態物件。  
+## <a name="converting-dynamic-objects"></a><span data-ttu-id="9f5df-130">轉換的動態物件</span><span class="sxs-lookup"><span data-stu-id="9f5df-130">Converting Dynamic Objects</span></span>  
+ <span data-ttu-id="9f5df-131">動態物件的類型轉換都是透過使用者定義的動態轉換使用<xref:System.Dynamic.DynamicObject.TryConvert%2A>或<xref:System.Dynamic.DynamicMetaObject.BindConvert%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="9f5df-131">Type conversions of dynamic objects are performed by user-defined dynamic conversions that use the <xref:System.Dynamic.DynamicObject.TryConvert%2A> or <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> methods.</span></span> <span data-ttu-id="9f5df-132">如果您使用動態物件，使用<xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A>方法，將轉換的動態物件。</span><span class="sxs-lookup"><span data-stu-id="9f5df-132">If you're working with dynamic objects, use the <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> method to convert the dynamic object.</span></span>  
   
-## 範例  
- 下列範例會使用 `CType` 函式來將運算式轉換為 `Single` 資料類型。  
+## <a name="example"></a><span data-ttu-id="9f5df-133">範例</span><span class="sxs-lookup"><span data-stu-id="9f5df-133">Example</span></span>  
+ <span data-ttu-id="9f5df-134">下列範例會使用`CType`函式將轉換運算式，以便`Single`資料型別。</span><span class="sxs-lookup"><span data-stu-id="9f5df-134">The following example uses the `CType` function to convert an expression to the `Single` data type.</span></span>  
   
  [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
   
- 如需其他範例，請參閱 [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
+ <span data-ttu-id="9f5df-135">如需其他範例，請參閱[隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。</span><span class="sxs-lookup"><span data-stu-id="9f5df-135">For additional examples, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).</span></span>  
   
-## 請參閱  
- <xref:System.OverflowException>   
- <xref:System.InvalidCastException>   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Conversion Functions](../../../visual-basic/language-reference/functions/conversion-functions.md)   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [.NET Framework 中的類型轉換](../Topic/Type%20Conversion%20in%20the%20.NET%20Framework.md)
+## <a name="see-also"></a><span data-ttu-id="9f5df-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9f5df-136">See Also</span></span>  
+ <xref:System.OverflowException>  
+ <xref:System.InvalidCastException>  
+ [<span data-ttu-id="9f5df-137">類型轉換函式</span><span class="sxs-lookup"><span data-stu-id="9f5df-137">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="9f5df-138">轉換函式</span><span class="sxs-lookup"><span data-stu-id="9f5df-138">Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [<span data-ttu-id="9f5df-139">Operator 陳述式</span><span class="sxs-lookup"><span data-stu-id="9f5df-139">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="9f5df-140">如何：定義轉換運算子</span><span class="sxs-lookup"><span data-stu-id="9f5df-140">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="9f5df-141">.NET Framework 中的型別轉換</span><span class="sxs-lookup"><span data-stu-id="9f5df-141">Type Conversion in the .NET Framework</span></span>](http://msdn.microsoft.com/library/ba36154f-064c-47d3-9f05-72f93a7ca96d)

@@ -1,74 +1,79 @@
 ---
-title: "如何：使用腳本建立屬性的動畫後進行設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 之後變更屬性值"
+title: "如何：使用腳本建立屬性的動畫後進行設定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 357a9bb6c1a01b00e7f9bcfc17267797f20366b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用腳本建立屬性的動畫後進行設定
-在某些情況下，建立屬性值的動畫之後，可能會出現看似無法變更該屬性值的狀況。  
+# <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a><span data-ttu-id="25a33-102">如何：使用腳本建立屬性的動畫後進行設定</span><span class="sxs-lookup"><span data-stu-id="25a33-102">How to: Set a Property After Animating It with a Storyboard</span></span>
+<span data-ttu-id="25a33-103">在某些情況下，它可能會出現，動畫之後，您無法變更屬性的值。</span><span class="sxs-lookup"><span data-stu-id="25a33-103">In some cases, it might appear that you can't change the value of a property after it has been animated.</span></span>  
   
-## 範例  
- 下列範例使用 <xref:System.Windows.Media.Animation.Storyboard> 建立 <xref:System.Windows.Media.SolidColorBrush> 的色彩動畫。  按一下按鈕時，便會觸發此腳本。  系統會處理 <xref:System.Windows.Media.Animation.Timeline.Completed>，讓程式在 <xref:System.Windows.Media.Animation.ColorAnimation> 完成時收到通知。  
+## <a name="example"></a><span data-ttu-id="25a33-104">範例</span><span class="sxs-lookup"><span data-stu-id="25a33-104">Example</span></span>  
+ <span data-ttu-id="25a33-105">在下列範例中，<xref:System.Windows.Media.Animation.Storyboard>用來建立動畫的色彩<xref:System.Windows.Media.SolidColorBrush>。</span><span class="sxs-lookup"><span data-stu-id="25a33-105">In the following example, a <xref:System.Windows.Media.Animation.Storyboard> is used to animate the color of a <xref:System.Windows.Media.SolidColorBrush>.</span></span> <span data-ttu-id="25a33-106">按一下按鈕時，會觸發分鏡腳本。</span><span class="sxs-lookup"><span data-stu-id="25a33-106">The storyboard is triggered when the button is clicked.</span></span> <span data-ttu-id="25a33-107"><xref:System.Windows.Media.Animation.Timeline.Completed>如此，程式會收到通知，處理事件時<xref:System.Windows.Media.Animation.ColorAnimation>完成。</span><span class="sxs-lookup"><span data-stu-id="25a33-107">The <xref:System.Windows.Media.Animation.Timeline.Completed> event is handled so that the program is notified when the <xref:System.Windows.Media.Animation.ColorAnimation> completes.</span></span>  
   
- [!code-xml[timingbehaviors_snip#GraphicsMMButton1Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton1declaration)]  
+ [!code-xaml[timingbehaviors_snip#GraphicsMMButton1Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton1declaration)]  
   
-## 範例  
- 在 <xref:System.Windows.Media.Animation.ColorAnimation> 完成之後，程式會嘗試將筆刷的色彩變更為藍色。  
+## <a name="example"></a><span data-ttu-id="25a33-108">範例</span><span class="sxs-lookup"><span data-stu-id="25a33-108">Example</span></span>  
+ <span data-ttu-id="25a33-109">之後<xref:System.Windows.Media.Animation.ColorAnimation>完成，則程式會嘗試變更為藍色的筆刷的色彩。</span><span class="sxs-lookup"><span data-stu-id="25a33-109">After the <xref:System.Windows.Media.Animation.ColorAnimation> completes, the program attempts to change the brush's color to blue.</span></span>  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton1Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton1handler)]
  [!code-vb[timingbehaviors_snip#GraphicsMMButton1Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/animatethensetpropertyexample.xaml.vb#graphicsmmbutton1handler)]  
   
- 前述程式碼看似沒有任何效果：筆刷仍為黃色，也就是建立筆刷動畫效果之 <xref:System.Windows.Media.Animation.ColorAnimation> 所提供的值。  實際上基礎屬性值 \(基底值\) 已經變更為藍色。  但是有效的值或是目前的值仍然是黃色，因為 <xref:System.Windows.Media.Animation.ColorAnimation> 還是會覆寫基底值。  如果要讓基底值再次變成有效值，您必須停止動畫對屬性的影響。  有三種方式可以對腳本動畫執行這個動作：  
+ <span data-ttu-id="25a33-110">先前的程式碼看起來並沒有任何項目： 所提供的筆刷會維持為黃色，也就是值<xref:System.Windows.Media.Animation.ColorAnimation>所繪製的筆刷。</span><span class="sxs-lookup"><span data-stu-id="25a33-110">The previous code doesn't appear to do anything: the brush remains yellow, which is the value supplied by the <xref:System.Windows.Media.Animation.ColorAnimation> that animated the brush.</span></span> <span data-ttu-id="25a33-111">基礎的屬性值 （基底值） 會實際變更為藍色。</span><span class="sxs-lookup"><span data-stu-id="25a33-111">The underlying property value (the base value) is actually changed to blue.</span></span> <span data-ttu-id="25a33-112">不過，有效，或最新的該值會維持黃色因為<xref:System.Windows.Media.Animation.ColorAnimation>仍然會覆寫基底值。</span><span class="sxs-lookup"><span data-stu-id="25a33-112">However, the effective, or current, value remains yellow because the <xref:System.Windows.Media.Animation.ColorAnimation> is still overriding the base value.</span></span> <span data-ttu-id="25a33-113">如果您想要再次變成有效的值的基底值，您必須停止動畫屬性的影響。</span><span class="sxs-lookup"><span data-stu-id="25a33-113">If you want the base value to become the effective value again, you must stop the animation from influencing the property.</span></span> <span data-ttu-id="25a33-114">有三種方法可以使用分鏡腳本動畫達到此目的：</span><span class="sxs-lookup"><span data-stu-id="25a33-114">There are three ways to do this with storyboard animations:</span></span>  
   
--   將動畫的 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 屬性設定為 <xref:System.Windows.Media.Animation.FillBehavior>。  
+-   <span data-ttu-id="25a33-115">設定此動畫的<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性<xref:System.Windows.Media.Animation.FillBehavior.Stop></span><span class="sxs-lookup"><span data-stu-id="25a33-115">Set the animation's <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> property to <xref:System.Windows.Media.Animation.FillBehavior.Stop></span></span>  
   
--   移除整個腳本。  
+-   <span data-ttu-id="25a33-116">移除整個分鏡腳本。</span><span class="sxs-lookup"><span data-stu-id="25a33-116">Remove the entire Storyboard.</span></span>  
   
--   從個別屬性移除動畫。  
+-   <span data-ttu-id="25a33-117">移除個別屬性的動畫。</span><span class="sxs-lookup"><span data-stu-id="25a33-117">Remove the animation from the individual property.</span></span>  
   
-## 將動畫的 FillBehavior 屬性設定為 Stop  
- 將 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 設定為 <xref:System.Windows.Media.Animation.FillBehavior>，可以指示動畫在其作用期結束後停止影響它的目標屬性。  
+## <a name="set-the-animations-fillbehavior-property-to-stop"></a><span data-ttu-id="25a33-118">動畫的 FillBehavior 屬性設定為 停止</span><span class="sxs-lookup"><span data-stu-id="25a33-118">Set the animation's FillBehavior property to Stop</span></span>  
+ <span data-ttu-id="25a33-119">藉由設定<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>至<xref:System.Windows.Media.Animation.FillBehavior.Stop>，告訴停止作用期結束後，會影響其目標屬性的動畫。</span><span class="sxs-lookup"><span data-stu-id="25a33-119">By setting <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> to <xref:System.Windows.Media.Animation.FillBehavior.Stop>, you tell the animation to stop affecting its target property after it reaches the end of its active period.</span></span>  
   
- [!code-xml[timingbehaviors_snip#GraphicsMMButton2Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton2declaration)]  
+ [!code-xaml[timingbehaviors_snip#GraphicsMMButton2Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton2declaration)]  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton2Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton2handler)]
  [!code-vb[timingbehaviors_snip#GraphicsMMButton2Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/animatethensetpropertyexample.xaml.vb#graphicsmmbutton2handler)]  
   
-## 移除整個腳本  
- 使用 <xref:System.Windows.Media.Animation.RemoveStoryboard> 觸發程序 \(Trigger\) 或 <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=fullName> 方法，可以指示腳本動畫停止影響其目標屬性。  這個方法和設定 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 屬性的差別是您可以隨時移除腳本，而 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 屬性只在動畫的作用期結束時才有作用。  
+## <a name="remove-the-entire-storyboard"></a><span data-ttu-id="25a33-120">移除整個分鏡腳本</span><span class="sxs-lookup"><span data-stu-id="25a33-120">Remove the entire storyboard</span></span>  
+ <span data-ttu-id="25a33-121">使用<xref:System.Windows.Media.Animation.RemoveStoryboard>觸發程序或<xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>方法，您可告知停止影響其目標屬性的分鏡腳本動畫。</span><span class="sxs-lookup"><span data-stu-id="25a33-121">By using a <xref:System.Windows.Media.Animation.RemoveStoryboard> trigger or the <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType> method, you tell the storyboard animations to stop affecting their target properties.</span></span> <span data-ttu-id="25a33-122">這個方法與設定之間的差異<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性是您可以移除分鏡腳本在任何時候，雖然<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性只有在動畫達到作用期結束時。</span><span class="sxs-lookup"><span data-stu-id="25a33-122">The difference between this approach and setting the <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> property is that you can remove the storyboard at anytime, while the <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> property only has an effect when the animation reaches the end of its active period.</span></span>  
   
- [!code-xml[timingbehaviors_snip#GraphicsMMButton3Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton3declaration)]  
+ [!code-xaml[timingbehaviors_snip#GraphicsMMButton3Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton3declaration)]  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton3Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton3handler)]
  [!code-vb[timingbehaviors_snip#GraphicsMMButton3Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/animatethensetpropertyexample.xaml.vb#graphicsmmbutton3handler)]  
   
-## 從個別屬性移除動畫  
- 讓動畫停止影響屬性的另一種方法是使用顯示為動畫之物件的 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> 方法。  請將顯示動畫的屬性指定為第一個參數，而 `null` 則為第二個參數。  
+## <a name="remove-an-animation-from-an-individual-property"></a><span data-ttu-id="25a33-123">移除個別屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="25a33-123">Remove an animation from an individual property</span></span>  
+ <span data-ttu-id="25a33-124">若要停止動畫影響屬性的另一個技術是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>正在顯示動畫之物件的方法。</span><span class="sxs-lookup"><span data-stu-id="25a33-124">Another technique to stop an animation from affecting a property is to use the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> method of the object being animated.</span></span> <span data-ttu-id="25a33-125">指定要繪製的第一個參數之屬性和`null`做為第二個。</span><span class="sxs-lookup"><span data-stu-id="25a33-125">Specify the property being animated as the first parameter and `null` as the second.</span></span>  
   
- [!code-xml[timingbehaviors_snip#GraphicsMMButton4Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton4declaration)]  
+ [!code-xaml[timingbehaviors_snip#GraphicsMMButton4Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton4declaration)]  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton4Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton4handler)]
  [!code-vb[timingbehaviors_snip#GraphicsMMButton4Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/animatethensetpropertyexample.xaml.vb#graphicsmmbutton4handler)]  
   
- 這個方法也適用於非腳本動畫。  
+ <span data-ttu-id="25a33-126">這項技術也適用於非分鏡腳本動畫。</span><span class="sxs-lookup"><span data-stu-id="25a33-126">This technique also works for non-storyboard animations.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>   
- <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=fullName>   
- <xref:System.Windows.Media.Animation.RemoveStoryboard>   
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [建立屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a><span data-ttu-id="25a33-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="25a33-127">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>  
+ <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Media.Animation.RemoveStoryboard>  
+ [<span data-ttu-id="25a33-128">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="25a33-128">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="25a33-129">屬性動畫技術概觀</span><span class="sxs-lookup"><span data-stu-id="25a33-129">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

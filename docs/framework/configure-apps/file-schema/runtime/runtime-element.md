@@ -1,143 +1,104 @@
 ---
-title: "&lt;runtime&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<runtime> 項目"
-  - "容器標記, <runtime> 項目"
-  - "runtime 項目"
+title: "&lt;執行階段&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime
+helpviewer_keywords:
+- <runtime> element
+- runtime element
+- container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-caps.latest.revision: 70
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 62
+caps.latest.revision: "70"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c4c64de42f82590e1e8dc24afa46f66c3efb35b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;runtime&gt; 項目
-包含有關組件繫結和記憶體回收的資訊。  
+# <a name="ltruntimegt-element"></a><span data-ttu-id="74fee-102">&lt;執行階段&gt;項目</span><span class="sxs-lookup"><span data-stu-id="74fee-102">&lt;runtime&gt; Element</span></span>
+<span data-ttu-id="74fee-103">提供 common language runtime 用來設定應用程式的資訊。</span><span class="sxs-lookup"><span data-stu-id="74fee-103">Provides information used by the common language runtime to configure applications.</span></span>  
   
-## 語法  
+ <span data-ttu-id="74fee-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="74fee-104">\<configuration></span></span>  
+<span data-ttu-id="74fee-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="74fee-105">\<runtime></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="74fee-106">語法</span><span class="sxs-lookup"><span data-stu-id="74fee-106">Syntax</span></span>  
+  
+```xml  
 <runtime>  
 </runtime>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="74fee-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="74fee-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="74fee-108">下列章節說明子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="74fee-108">The following sections describe child elements and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="74fee-109">屬性</span><span class="sxs-lookup"><span data-stu-id="74fee-109">Attributes</span></span>  
+ <span data-ttu-id="74fee-110">無。</span><span class="sxs-lookup"><span data-stu-id="74fee-110">None.</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="74fee-111">子項目</span><span class="sxs-lookup"><span data-stu-id="74fee-111">Child Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|[\<alwaysFlowImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|指定 Windows 識別一定會跨非同步點流動，不論如何執行模擬。|  
-|[\<appDomainManagerAssembly\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|指定在處理序中為預設應用程式定義域提供應用程式定義域管理員的組件。|  
-|[\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|指定當做預設應用程式定義域之應用程式定義域管理員使用的型別。|  
-|[\<appDomainResourceMonitoring\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|指示執行階段收集處理序中，所有應用程式定義域在處理序存留期間的統計資料。|  
-|[\<assemblyBinding\>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|包含有關組件版本重新導向和組件位置的資訊。|  
-|[\<bypassTrustedAppStrongNames\>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|指定是否應略過信任組件的強式名稱驗證。|  
-|[\<CompatSortNLSVersion\>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|指定執行階段在執行字串比較時，應使用舊版排序行為。|  
-|[\<developmentMode\>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|指定執行階段是否在 DEVPATH 環境變數所指定的目錄中搜尋組件。|  
-|[\<disableCachingBindingFailures\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|指定是否停用繫結失敗的快取，這是 .NET Framework 2.0 版內的預設行為。|  
-|[\<disableCommitThreadStack\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|指定執行緒啟動時，是否認可完整執行緒堆疊。|  
-|[\<disableFusionUpdatesFromADManager\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|指定是否停用預設行為 \(允許執行階段主機覆寫應用程式定義域的組態設定\)。|  
-|[\<enforceFIPSPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|指定是否強制電腦組態要求，也就是加密演算法必須遵守聯邦資訊處理標準 \(FIPS\)。|  
-|[\<etwEnable\>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|指定是否針對 Common Language Runtime 事件啟用 Windows \(ETW\) 的事件追蹤。|  
-|[\<forcePerformanceCounterUniqueSharedMemoryReads\>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|指定 PerfCounter.dll 是否在 .NET Framework 1.1 版應用程式中使用 CategoryOptions 登錄設定，來決定要從分類特定的共用記憶體或全域記憶體載入效能計數器資料。|  
-|[\<gcAllowVeryLargeObjects\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|在 64 位元平台上，啟用大小超過 2 GB 的陣列。|  
-|[\<gcConcurrent\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|指定 Common Language Runtime 是否並行執行記憶體回收。|  
-|[\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|指定記憶體回收是否支援多個 CPU 群組。|  
-|[\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|指定 Common Language Runtime 是否要執行伺服器記憶體回收。|  
-|[\<generatePublisherEvidence\>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|指定 Runtime 是否要使用程式碼存取安全性 \(CAS\) 發行者原則。|  
-|[\<legacyCorruptedStateExceptionsPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|指定執行階段是否允許 Managed 程式碼攔截存取違規，以及其他毀損狀態例外狀況。|  
-|[\<legacyImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|指定 Windows 識別不會跨非同步點流動，不論目前執行緒上的執行內容之流程設定為何。|  
-|[\<loadfromRemoteSources\>](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|指定是否以完全信任的方式載入遠端來源的組件。|  
-|[\<NetFx40\_LegacySecurityPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|指定執行階段是否會使用舊有的程式碼存取安全性 \(CAS\) 原則。|  
-|[\<NetFx40\_PInvokeStackResilience\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|指定執行階段是否會在執行階段期間自動修正不正確的平台叫用，其代價是 Managed 與 Unmanaged 程式碼之間的較慢轉換。|  
-|[\<NetFx45\_CultureAwareComparerGetHashCode\_LongStrings\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|指定執行階段是否使用一定數目的記憶體來計算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName> 方法的雜湊程式碼。|  
-|[\<PreferComInsteadOfRemoting\>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|指示執行階段會使用 COM Interop，而不會從遠端跨越應用程式定義域界限。|  
-|[\<relativeBindForResources\>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|最佳化附屬組件的探查。|  
-|[\<shadowCopyVerifyByTimeStamp\>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|指定陰影複製是否使用在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 中引入的預設啟動行為，或者會還原到舊版 .NET Framework 的啟動行為。|  
-|[\<supportPortability\>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|指定應用程式可以停用為了達到應用程式可攜性而將組件視為相等的預設行為，以參考兩個不同 .NET Framework 實作中的同一個組件。|  
-|[\<system.runtime.caching\>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|提供預設記憶體中物件快取的組態資訊。|  
-|[\<Thread\_UseAllCpuGroups\>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|指定執行階段是否在所有 CPU 群組分配 Managed 執行緒。|  
-|[\<ThrowUnobservedTaskExceptions\>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|指定未處理的工作例外狀況是否應該結束執行中處理序。|  
-|[\<TimeSpan\_LegacyFormatMode\>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)|指定執行階段是否會使用 <xref:System.TimeSpan> 值的舊格式。|  
-|[\<UseRandomizedStringHashAlgorithm\>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|指定執行階段是否以每個應用程式定義域為基準，計算字串的雜湊碼。|  
-|[\<UseSmallInternalThreadStacks\>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|會要求執行階段於建立某些在內部使用的執行緒時，使用明確的堆疊大小，而非預設的堆疊大小。|  
+|<span data-ttu-id="74fee-112">項目</span><span class="sxs-lookup"><span data-stu-id="74fee-112">Element</span></span>|<span data-ttu-id="74fee-113">說明</span><span class="sxs-lookup"><span data-stu-id="74fee-113">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="74fee-114">\<alwaysFlowImpersonationPolicy></span><span class="sxs-lookup"><span data-stu-id="74fee-114">\<alwaysFlowImpersonationPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|<span data-ttu-id="74fee-115">指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。</span><span class="sxs-lookup"><span data-stu-id="74fee-115">Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>|  
+|[<span data-ttu-id="74fee-116">\<AppContextSwitchOverrides></span><span class="sxs-lookup"><span data-stu-id="74fee-116">\<AppContextSwitchOverrides></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)|<span data-ttu-id="74fee-117">定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。</span><span class="sxs-lookup"><span data-stu-id="74fee-117">Defines one or more switches used by the <xref:System.AppContext> class to provide an opt-out mechanism for new functionality.</span></span>|  
+|[<span data-ttu-id="74fee-118">\<appDomainManagerAssembly></span><span class="sxs-lookup"><span data-stu-id="74fee-118">\<appDomainManagerAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|<span data-ttu-id="74fee-119">針對處理序中的預設應用程式網域，指定提供應用程式網域管理員的組件。</span><span class="sxs-lookup"><span data-stu-id="74fee-119">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>|  
+|[<span data-ttu-id="74fee-120">\<appDomainManagerType></span><span class="sxs-lookup"><span data-stu-id="74fee-120">\<appDomainManagerType></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|<span data-ttu-id="74fee-121">針對預設應用程式網域，指定做為應用程式網域管理員的類型。</span><span class="sxs-lookup"><span data-stu-id="74fee-121">Specifies the type that serves as the application domain manager for the default application domain.</span></span>|  
+|[<span data-ttu-id="74fee-122">\<appDomainResourceMonitoring></span><span class="sxs-lookup"><span data-stu-id="74fee-122">\<appDomainResourceMonitoring></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|<span data-ttu-id="74fee-123">針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。</span><span class="sxs-lookup"><span data-stu-id="74fee-123">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>|  
+|[<span data-ttu-id="74fee-124">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="74fee-124">\<assemblyBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|<span data-ttu-id="74fee-125">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="74fee-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|[<span data-ttu-id="74fee-126">\<bypassTrustedAppStrongNames></span><span class="sxs-lookup"><span data-stu-id="74fee-126">\<bypassTrustedAppStrongNames></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|<span data-ttu-id="74fee-127">指定是否應略過信任組件的強式名稱驗證。</span><span class="sxs-lookup"><span data-stu-id="74fee-127">Specifies whether strong name verification for trusted assemblies should be bypassed.</span></span>|  
+|[<span data-ttu-id="74fee-128">\<CompatSortNLSVersion></span><span class="sxs-lookup"><span data-stu-id="74fee-128">\<CompatSortNLSVersion></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|<span data-ttu-id="74fee-129">指定執行階段在執行字串比較時，應使用舊版的排序行為。</span><span class="sxs-lookup"><span data-stu-id="74fee-129">Specifies that the runtime should use legacy sorting behavior when performing string comparisons.</span></span>|  
+|[<span data-ttu-id="74fee-130">\<developmentMode></span><span class="sxs-lookup"><span data-stu-id="74fee-130">\<developmentMode></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|<span data-ttu-id="74fee-131">指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。</span><span class="sxs-lookup"><span data-stu-id="74fee-131">Specifies whether the runtime searches for assemblies in directories specified by the DEVPATH environment variable.</span></span>|  
+|[<span data-ttu-id="74fee-132">\<disableCachingBindingFailures></span><span class="sxs-lookup"><span data-stu-id="74fee-132">\<disableCachingBindingFailures></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|<span data-ttu-id="74fee-133">指定是否快取繫結失敗，這是.NET Framework 2.0 版中的預設行為，已停用。</span><span class="sxs-lookup"><span data-stu-id="74fee-133">Specifies whether the caching of binding failures, which is the default behavior in the .NET Framework version 2.0, is disabled.</span></span>|  
+|[<span data-ttu-id="74fee-134">\<disableCommitThreadStack></span><span class="sxs-lookup"><span data-stu-id="74fee-134">\<disableCommitThreadStack></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|<span data-ttu-id="74fee-135">指定是否在執行緒啟動時認可完整執行緒堆疊。</span><span class="sxs-lookup"><span data-stu-id="74fee-135">Specifies whether the full thread stack is committed when a thread is started.</span></span>|  
+|[<span data-ttu-id="74fee-136">\<disableFusionUpdatesFromADManager></span><span class="sxs-lookup"><span data-stu-id="74fee-136">\<disableFusionUpdatesFromADManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|<span data-ttu-id="74fee-137">指定是否停用預設行為 (亦即允許執行階段主機覆寫應用程式網域的組態設定)。</span><span class="sxs-lookup"><span data-stu-id="74fee-137">Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.</span></span>|  
+|[<span data-ttu-id="74fee-138">\<EnableAmPmParseAdjustment></span><span class="sxs-lookup"><span data-stu-id="74fee-138">\<EnableAmPmParseAdjustment></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|<span data-ttu-id="74fee-139">針對只包含日期、月份、小時和上午/下午指示項的日期字串，決定日期及時間剖析方法是否使用一組調整過的規則來剖析。</span><span class="sxs-lookup"><span data-stu-id="74fee-139">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|[<span data-ttu-id="74fee-140">\<enforceFIPSPolicy></span><span class="sxs-lookup"><span data-stu-id="74fee-140">\<enforceFIPSPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|<span data-ttu-id="74fee-141">指定是否強制執行電腦設定需求，以便讓密碼編譯演算法符合美國聯邦資訊處理標準 (FIPS) 的規範。</span><span class="sxs-lookup"><span data-stu-id="74fee-141">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>|  
+|[<span data-ttu-id="74fee-142">\<etwEnable></span><span class="sxs-lookup"><span data-stu-id="74fee-142">\<etwEnable></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|<span data-ttu-id="74fee-143">指定是否為通用語言執行平台事件啟用 Windows 事件追蹤 (ETW)。</span><span class="sxs-lookup"><span data-stu-id="74fee-143">Specifies whether to enable event tracing for Windows (ETW) for common language runtime events.</span></span>|  
+|[<span data-ttu-id="74fee-144">\<forcePerformanceCounterUniqueSharedMemoryReads></span><span class="sxs-lookup"><span data-stu-id="74fee-144">\<forcePerformanceCounterUniqueSharedMemoryReads></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|<span data-ttu-id="74fee-145">指定 PerfCounter.dll 是否在 .NET Framework 1.1 版的應用程式中使用 CategoryOptions 登錄設定，以決定要從類別特定共用記憶體或從全域記憶體載入效能計數器資料。</span><span class="sxs-lookup"><span data-stu-id="74fee-145">Specifies whether PerfCounter.dll uses the CategoryOptions registry setting in a .NET Framework version 1.1 application to determine whether to load performance counter data from category-specific shared memory or global memory.</span></span>|  
+|[<span data-ttu-id="74fee-146">\<gcAllowVeryLargeObjects></span><span class="sxs-lookup"><span data-stu-id="74fee-146">\<gcAllowVeryLargeObjects></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|<span data-ttu-id="74fee-147">在 64 位元平台上，啟用總大小大於 2 GB 的陣列。</span><span class="sxs-lookup"><span data-stu-id="74fee-147">On 64-bit platforms, enables arrays that are greater than 2 gigabytes (GB) in total size.</span></span>|  
+|[<span data-ttu-id="74fee-148">\<gcConcurrent></span><span class="sxs-lookup"><span data-stu-id="74fee-148">\<gcConcurrent></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|<span data-ttu-id="74fee-149">指定 common language runtime 是否同時執行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="74fee-149">Specifies whether the common language runtime runs garbage collection concurrently.</span></span>|  
+|[<span data-ttu-id="74fee-150">\<GCCpuGroup></span><span class="sxs-lookup"><span data-stu-id="74fee-150">\<GCCpuGroup></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|<span data-ttu-id="74fee-151">指定記憶體回收是否支援多個 CPU 群組。</span><span class="sxs-lookup"><span data-stu-id="74fee-151">Specifies whether garbage collection supports multiple CPU groups.</span></span>|  
+|[<span data-ttu-id="74fee-152">\<gcServer></span><span class="sxs-lookup"><span data-stu-id="74fee-152">\<gcServer></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|<span data-ttu-id="74fee-153">指定 Common Language Runtime 是否執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="74fee-153">Specifies whether the common language runtime runs server garbage collection.</span></span>|  
+|[<span data-ttu-id="74fee-154">\<generatePublisherEvidence></span><span class="sxs-lookup"><span data-stu-id="74fee-154">\<generatePublisherEvidence></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|<span data-ttu-id="74fee-155">指定執行階段是否使用程式碼存取安全性 (CAS) 發行者原則。</span><span class="sxs-lookup"><span data-stu-id="74fee-155">Specifies whether the runtime uses code access security (CAS) publisher policy.</span></span>|  
+|[<span data-ttu-id="74fee-156">\<legacyCorruptedStateExceptionsPolicy></span><span class="sxs-lookup"><span data-stu-id="74fee-156">\<legacyCorruptedStateExceptionsPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|<span data-ttu-id="74fee-157">指定執行階段是否允許 Managed 程式碼攔截存取違規和其他損毀狀態例外狀況。</span><span class="sxs-lookup"><span data-stu-id="74fee-157">Specifies whether the runtime allows managed code to catch access violations and other corrupted state exceptions.</span></span>|  
+|[<span data-ttu-id="74fee-158">\<legacyImpersonationPolicy></span><span class="sxs-lookup"><span data-stu-id="74fee-158">\<legacyImpersonationPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|<span data-ttu-id="74fee-159">指定 Windows 識別不會流經非同步點，而不論目前執行緒上執行內容的流程設定為何。</span><span class="sxs-lookup"><span data-stu-id="74fee-159">Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.</span></span>|  
+|[<span data-ttu-id="74fee-160">\<loadfromRemoteSources></span><span class="sxs-lookup"><span data-stu-id="74fee-160">\<loadfromRemoteSources></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|<span data-ttu-id="74fee-161">指定是否以完全信任的方式載入來自遠端來源的組件。</span><span class="sxs-lookup"><span data-stu-id="74fee-161">Specifies whether assemblies from remote sources are loaded as full trust.</span></span>|  
+|[<span data-ttu-id="74fee-162"><NetFx40_LegacySecurityPolicy></span><span class="sxs-lookup"><span data-stu-id="74fee-162"><NetFx40_LegacySecurityPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|<span data-ttu-id="74fee-163">指定執行階段是否使用舊版程式碼存取安全性 (CAS) 原則。</span><span class="sxs-lookup"><span data-stu-id="74fee-163">Specifies whether the runtime uses legacy code access security (CAS) policy.</span></span>|  
+|[<span data-ttu-id="74fee-164"><NetFx40_PInvokeStackResilience></span><span class="sxs-lookup"><span data-stu-id="74fee-164"><NetFx40_PInvokeStackResilience></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|<span data-ttu-id="74fee-165">指定執行階段是否會在執行階段自動修復不正確的平台叫用宣告，即使這麼做會使 Managed 和 Unmanaged 程式碼之間的轉換變慢。</span><span class="sxs-lookup"><span data-stu-id="74fee-165">Specifies whether the runtime automatically fixes incorrect platform invoke declarations at run time, at the cost of slower transitions between managed and unmanaged code.</span></span>|  
+|[<span data-ttu-id="74fee-166"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span><span class="sxs-lookup"><span data-stu-id="74fee-166"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|<span data-ttu-id="74fee-167">指定執行階段是否使用固定的記憶體數量計算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="74fee-167">Specifies whether the runtime uses a fixed amount of memory to calculate hash codes for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method.</span></span>|  
+|[<span data-ttu-id="74fee-168">\<PreferComInsteadOfRemoting ></span><span class="sxs-lookup"><span data-stu-id="74fee-168">\<PreferComInsteadOfRemoting></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|<span data-ttu-id="74fee-169">指定執行階段會使用 COM Interop，而不是跨越應用程式網域界限的遠端處理。</span><span class="sxs-lookup"><span data-stu-id="74fee-169">Specifies that the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
+|[<span data-ttu-id="74fee-170">\<relativeBindForResources></span><span class="sxs-lookup"><span data-stu-id="74fee-170">\<relativeBindForResources></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|<span data-ttu-id="74fee-171">最佳化附屬組件的探查。</span><span class="sxs-lookup"><span data-stu-id="74fee-171">Optimizes the probe for satellite assemblies.</span></span>|  
+|[<span data-ttu-id="74fee-172">\<shadowCopyVerifyByTimeStamp></span><span class="sxs-lookup"><span data-stu-id="74fee-172">\<shadowCopyVerifyByTimeStamp></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|<span data-ttu-id="74fee-173">指定陰影複製是否使用在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 引進的預設啟動行為，或是要還原成舊版 .NET Framework 的啟動行為。</span><span class="sxs-lookup"><span data-stu-id="74fee-173">Specifies whether shadow copying uses the default startup behavior introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], or reverts to the startup behavior of earlier versions of the .NET Framework.</span></span>|  
+|[<span data-ttu-id="74fee-174">\<supportPortability></span><span class="sxs-lookup"><span data-stu-id="74fee-174">\<supportPortability></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|<span data-ttu-id="74fee-175">指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。</span><span class="sxs-lookup"><span data-stu-id="74fee-175">Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.</span></span>|  
+|[<span data-ttu-id="74fee-176">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="74fee-176">\<system.runtime.caching></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|<span data-ttu-id="74fee-177">提供預設記憶體內部物件快取的組態資訊。</span><span class="sxs-lookup"><span data-stu-id="74fee-177">Provides configuration information for the default in-memory object cache.</span></span>|  
+|[<span data-ttu-id="74fee-178"><Thread_UseAllCpuGroups></span><span class="sxs-lookup"><span data-stu-id="74fee-178"><Thread_UseAllCpuGroups></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|<span data-ttu-id="74fee-179">指定執行階段是否會將 Managed 執行緒分散到所有 CPU 群組。</span><span class="sxs-lookup"><span data-stu-id="74fee-179">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>|  
+|[<span data-ttu-id="74fee-180">\<ThrowUnobservedTaskExceptions></span><span class="sxs-lookup"><span data-stu-id="74fee-180">\<ThrowUnobservedTaskExceptions></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|<span data-ttu-id="74fee-181">指定未處理的工作例外狀況是否應終止執行中的處理序。</span><span class="sxs-lookup"><span data-stu-id="74fee-181">Specifies whether unhandled task exceptions should terminate a running process.</span></span>|  
+|[<span data-ttu-id="74fee-182"><TimeSpan_LegacyFormatMode></span><span class="sxs-lookup"><span data-stu-id="74fee-182"><TimeSpan_LegacyFormatMode></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/timespan-legacyformatmode-element.md)|<span data-ttu-id="74fee-183">指定執行階段是否針對 <xref:System.TimeSpan> 值使用舊版格式。</span><span class="sxs-lookup"><span data-stu-id="74fee-183">Specifies whether the runtime uses legacy formatting for <xref:System.TimeSpan> values.</span></span>|  
+|[<span data-ttu-id="74fee-184">\<useLegacyJit></span><span class="sxs-lookup"><span data-stu-id="74fee-184">\<useLegacyJit></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)|<span data-ttu-id="74fee-185">決定通用語言執行平台是否針對 Just-In-Time 編譯使用舊版 64 位元 JIT 編譯器。</span><span class="sxs-lookup"><span data-stu-id="74fee-185">Determines whether the common language runtime uses the legacy 64-bit JIT compiler for just-in-time compilation.</span></span>|  
+|[<span data-ttu-id="74fee-186">\<UseRandomizedStringHashAlgorithm></span><span class="sxs-lookup"><span data-stu-id="74fee-186">\<UseRandomizedStringHashAlgorithm></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|<span data-ttu-id="74fee-187">指定執行階段是否依照應用程式網域來計算字串的雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="74fee-187">Specifies whether the runtime calculates hash codes for strings on a per application domain basis.</span></span>|  
+|[<span data-ttu-id="74fee-188">\<UseSmallInternalThreadStacks></span><span class="sxs-lookup"><span data-stu-id="74fee-188">\<UseSmallInternalThreadStacks></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|<span data-ttu-id="74fee-189">要求執行階段在建立內部使用的特定執行緒時，使用明確的堆疊大小，而不是預設的堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="74fee-189">Requests that the runtime use explicit stack sizes when it creates certain threads that it uses internally, instead of the default stack size.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="74fee-190">父項目</span><span class="sxs-lookup"><span data-stu-id="74fee-190">Parent Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|<span data-ttu-id="74fee-191">項目</span><span class="sxs-lookup"><span data-stu-id="74fee-191">Element</span></span>|<span data-ttu-id="74fee-192">描述</span><span class="sxs-lookup"><span data-stu-id="74fee-192">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="74fee-193">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="74fee-193">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## 備註  
- 在 .NET Framework 2.0 版中，模擬的識別 \(Identity\) 會跨越應用程式定義域內的非同步 \(Asynchronous\) 點流動。  在 .NET Framework 2.0 版中，您可以在 machine.config 檔或應用程式組態檔內適當地設定執行階段項目，以啟用或停用跨越非同步點的模擬流動。  對ASP.NET來說，可在 aspnet.config 檔案內設定模擬流動，而這個檔案位於 \<Windows Folder\>\\Microsoft.NET\\Framework\\vx.x.xxxx 目錄中。  
+## <a name="remarks"></a><span data-ttu-id="74fee-194">備註</span><span class="sxs-lookup"><span data-stu-id="74fee-194">Remarks</span></span>  
+ <span data-ttu-id="74fee-195">中的子項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)組態檔區段 common language runtime 用來設定應用程式的執行方式。</span><span class="sxs-lookup"><span data-stu-id="74fee-195">The child elements in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of a configuration file are used by the common language runtime to configure how an application executes.</span></span> <span data-ttu-id="74fee-196">例如， [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素會決定是否記憶體回收行程會使用工作站記憶體回收或伺服器記憶體回收[ \<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)元素會決定是否通用語言執行平台計算雜湊碼的字串，在每個應用程式或以每個應用程式網域為基礎，而`AppContextSwitchOverrides`元素可讓程式庫的使用者若要選擇加入或退出變更文件庫所提供的功能。</span><span class="sxs-lookup"><span data-stu-id="74fee-196">For example, the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element determines whether the garbage collector uses workstation garbage collection or server garbage collection, the [\<UseRandomizedStringHashAlgorithm>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) element determines whether the common language runtime calculates hash codes for string on a per-application or a per-application domain basis, and the `AppContextSwitchOverrides` element allows library users to opt in or opt out of changed  functionality provided by a library.</span></span>  
   
- 根據預設，ASP.NET 會使用下列組態設定，在 aspnet.config 檔案內停用模擬流動：  
+ <span data-ttu-id="74fee-197">中的項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) common language runtime 應用程式啟動時自動讀取 > 一節。</span><span class="sxs-lookup"><span data-stu-id="74fee-197">The elements in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section are read automatically by the common language runtime at application startup.</span></span> <span data-ttu-id="74fee-198">您也可以藉由提供其名稱定義的非預設應用程式定義域的組態檔<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>屬性; 它會讀取設定自動載入應用程式定義域時。</span><span class="sxs-lookup"><span data-stu-id="74fee-198">You can also define the configuration file for a non-default application domain by supplying its name to the <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> property; its settings are read automatically when the application domain is loaded.</span></span> <span data-ttu-id="74fee-199">您應該很少，如果有的話，有需要的設定會直接讀取[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) > 一節，在您的應用程式組態檔中。</span><span class="sxs-lookup"><span data-stu-id="74fee-199">You should rarely, if ever, have a need to directly read the settings in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section in your application's configuration file.</span></span>  
   
-```  
-configuration>  
-   <runtime>  
-      <legacyImpersonationPolicy enabled="true"/>  
-      <alwaysFlowImpersonationPolicy enabled="false"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- 在 ASP.NET 內，如果您要改為允許模擬流動，則必須明確使用下列組態設定：  
-  
-```  
-<configuration>  
-   <runtime>  
-      <legacyImpersonationPolicy enabled="false"/>  
-      <alwaysFlowImpersonationPolicy enabled="true"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- 如需詳細資訊，請參閱[\<legacyImpersonationPolicy\> 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)與[\<alwaysFlowImpersonationPolicy\> 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)。  
-  
-## 範例  
- 下列範例顯示如何將一個組件版本重新導向為另一個版本。  
-  
-```  
-<configuration>  
-   <runtime>  
-      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <dependentAssembly>  
-            <assemblyIdentity name="myAssembly"  
-                              publicKeyToken="32ab4ba45e0a69a1"  
-                              culture="neutral" />  
-             <bindingRedirect oldVersion="1.0.0.0"  
-                              newVersion="2.0.0.0"/>  
-         </dependentAssembly>  
-      </assemblyBinding>  
-   </runtime>  
-</configuration>  
-```  
-  
-## 請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)   
- [How to: Disable Concurrent Garbage Collection](http://msdn.microsoft.com/zh-tw/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a><span data-ttu-id="74fee-200">另請參閱</span><span class="sxs-lookup"><span data-stu-id="74fee-200">See Also</span></span>  
+ [<span data-ttu-id="74fee-201">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="74fee-201">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="74fee-202">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="74fee-202">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

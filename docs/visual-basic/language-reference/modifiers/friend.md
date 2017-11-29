@@ -1,88 +1,86 @@
 ---
-title: "Friend (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Friend"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Friend 關鍵字"
-  - "Friend 存取修飾詞"
-  - "Friend 關鍵字, 語法"
-  - "Protected Friend 關鍵字組合"
-  - "Friend 關鍵字, 和 Protected"
+title: Friend (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Friend
+helpviewer_keywords:
+- Friend keyword [Visual Basic]
+- Friend access modifier
+- Friend keyword [Visual Basic], syntax
+- Protected Friend keyword combination
+- Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 32f993e4b9bcd126ebb6d70310fc0781e8b137b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Friend (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定一或多個宣告的程式設計項目只能從包含其宣告的組件中存取。  
+# <a name="friend-visual-basic"></a><span data-ttu-id="7456a-102">Friend (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7456a-102">Friend (Visual Basic)</span></span>
+<span data-ttu-id="7456a-103">指定一或多個宣告的程式設計項目只能從包含其宣告的組件內存取。</span><span class="sxs-lookup"><span data-stu-id="7456a-103">Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.</span></span>  
   
-## 備註  
- 在許多情況下，您可能想要整個組件都可使用程式設計項目 \(例如類別和結構\)，而不只是由宣告它們的元件使用。  不過，您可能不希望它們可由組件外部的程式碼 \(例如，因此，如果應用程式是私用的\)。  如果您要以這種方式限制項目的存取，您可以使用 `Friend` 修飾詞，您可以宣告它。  
+## <a name="remarks"></a><span data-ttu-id="7456a-104">備註</span><span class="sxs-lookup"><span data-stu-id="7456a-104">Remarks</span></span>  
+ <span data-ttu-id="7456a-105">在許多情況下，您會想程式設計元素，例如類別和結構，以供整個組件，只要其宣告的元件。</span><span class="sxs-lookup"><span data-stu-id="7456a-105">In many cases, you want programming elements such as classes and structures to be used by the entire assembly, not only by the component that declares them.</span></span> <span data-ttu-id="7456a-106">不過，您可能不想要讓他們存取組件之外的程式碼 （例如，如果應用程式是專屬的）。</span><span class="sxs-lookup"><span data-stu-id="7456a-106">However, you might not want them to be accessible by code outside the assembly (for example, if the application is proprietary).</span></span> <span data-ttu-id="7456a-107">如果您想要限制存取的項目，如此一來，您就可以將它宣告使用`Friend`修飾詞。</span><span class="sxs-lookup"><span data-stu-id="7456a-107">If you want to limit access to an element in this way, you can declare it by using the `Friend` modifier.</span></span>  
   
- 編譯成相同組件之其他類別、結構和模組的程式碼，都可以存取該組件中的所有 `Friend` 項目。  
+ <span data-ttu-id="7456a-108">其他的類別、 結構和編譯成相同的模組中的程式碼組件可以存取所有`Friend`該組件中的項目。</span><span class="sxs-lookup"><span data-stu-id="7456a-108">Code in other classes, structures, and modules that are compiled to the same assembly can access all the `Friend` elements in that assembly.</span></span>  
   
- `Friend` 存取通常是應用程式項目的慣用層級，，且 `Friend` 是介面、模組、類別或結構的預設存取層級。  
+ <span data-ttu-id="7456a-109">`Friend`存取通常是慣用的應用程式的程式設計項目層級和`Friend`是介面、 模組、 類別或結構的層級的預設存取權。</span><span class="sxs-lookup"><span data-stu-id="7456a-109">`Friend` access is often the preferred level for an application's programming elements, and `Friend` is the default access level of an interface, a module, a class, or a structure.</span></span>  
   
- 您只能使用 `Friend` 在模組、介面或命名空間層級。  因此， `Friend` 項目的宣告內容必須是原始程式檔、命名空間、介面、模組、類別或結構;它不能是程序。  
+ <span data-ttu-id="7456a-110">您可以使用`Friend`只在模組、 介面或命名空間層級。</span><span class="sxs-lookup"><span data-stu-id="7456a-110">You can use `Friend` only at the module, interface, or namespace level.</span></span> <span data-ttu-id="7456a-111">因此，宣告內容`Friend`項目必須是原始程式檔、 命名空間、 介面、 模組、 類別或結構，不能在程序。</span><span class="sxs-lookup"><span data-stu-id="7456a-111">Therefore, the declaration context for a `Friend` element must be a source file, a namespace, an interface, a module, a class, or a structure; it can't be a procedure.</span></span>  
   
- 您可在同一個宣告中搭配使用 `Friend` 修飾詞與 [Protected](../../../visual-basic/language-reference/modifiers/protected.md) 修飾詞。  這個組合在宣告項目授與兩個 `Friend` 存取和受保護的存取，因此，它們可從任何位置相同的組件時，從其類別和衍生類別。  您只能在類別成員上指定 `Protected Friend`。  
+ <span data-ttu-id="7456a-112">您可以使用`Friend`修飾詞搭配[保護](../../../visual-basic/language-reference/modifiers/protected.md)相同宣告中的修飾詞。</span><span class="sxs-lookup"><span data-stu-id="7456a-112">You can use the `Friend` modifier in conjunction with the [Protected](../../../visual-basic/language-reference/modifiers/protected.md) modifier in the same declaration.</span></span> <span data-ttu-id="7456a-113">這個組合會授與兩者`Friend`存取，以及上宣告的項目，這樣就可從相同組件，從其自己的類別和衍生類別中的任何位置存取受保護的存取。</span><span class="sxs-lookup"><span data-stu-id="7456a-113">This combination confers both `Friend` access and protected access on the declared elements, so they are accessible from anywhere in the same assembly, from their own class, and from derived classes.</span></span> <span data-ttu-id="7456a-114">您可以指定`Protected Friend`只能在類別成員上。</span><span class="sxs-lookup"><span data-stu-id="7456a-114">You can specify `Protected Friend` only on members of classes.</span></span>  
   
- 對於 `Friend` 和其他的比較存取修飾詞，請參閱 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ <span data-ttu-id="7456a-115">如需的比較`Friend`和其他存取修飾詞，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="7456a-115">For a comparison of `Friend` and the other access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
 > [!NOTE]
->  您可以指定另一個組件為 Friend 組件，讓它可以存取所有型別和成員標記為 `Friend`。  如需詳細資訊，請參閱[Friend 組件](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)。  
+>  <span data-ttu-id="7456a-116">您可以指定另一個組件是 friend 組件，使其可以存取所有類型和成員標記為`Friend`。</span><span class="sxs-lookup"><span data-stu-id="7456a-116">You can specify that another assembly is a friend assembly, which allows it to access all types and members that are marked as `Friend`.</span></span> <span data-ttu-id="7456a-117">如需詳細資訊，請參閱 [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055) (Friend 組件)。</span><span class="sxs-lookup"><span data-stu-id="7456a-117">For more information, see [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span></span>  
   
-## 範例  
- 下列類別會使用 `Friend` 修飾詞，以允許相同組件內的其他程式設計項目存取某些成員。  
+## <a name="example"></a><span data-ttu-id="7456a-118">範例</span><span class="sxs-lookup"><span data-stu-id="7456a-118">Example</span></span>  
+ <span data-ttu-id="7456a-119">下列類別使用`Friend`修飾詞，以允許存取特定成員相同的組件中的其他程式設計項目。</span><span class="sxs-lookup"><span data-stu-id="7456a-119">The following class uses the `Friend` modifier to allow other programming elements within the same assembly to access certain members.</span></span>  
   
  [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
-## 使用方式  
- 您可以在這些內容使用 `Friend` 修飾詞:  
+## <a name="usage"></a><span data-ttu-id="7456a-120">使用方式</span><span class="sxs-lookup"><span data-stu-id="7456a-120">Usage</span></span>  
+ <span data-ttu-id="7456a-121">您可以使用`Friend`修飾詞在這些內容中：</span><span class="sxs-lookup"><span data-stu-id="7456a-121">You can use the `Friend` modifier in these contexts:</span></span>  
   
- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="7456a-122">Class 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-122">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="7456a-123">Const 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-123">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="7456a-124">Declare 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-124">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="7456a-125">Delegate 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-125">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="7456a-126">Dim 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-126">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="7456a-127">Enum 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-127">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="7456a-128">Event 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-128">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="7456a-129">Function 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-129">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="7456a-130">Interface 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-130">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="7456a-131">Module 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-131">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="7456a-132">Property 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-132">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="7456a-133">Structure 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-133">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="7456a-134">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="7456a-134">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 請參閱  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)   
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Procedures](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a><span data-ttu-id="7456a-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7456a-135">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [<span data-ttu-id="7456a-136">Public</span><span class="sxs-lookup"><span data-stu-id="7456a-136">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)  
+ [<span data-ttu-id="7456a-137">Protected</span><span class="sxs-lookup"><span data-stu-id="7456a-137">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [<span data-ttu-id="7456a-138">Private</span><span class="sxs-lookup"><span data-stu-id="7456a-138">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="7456a-139">在 Visual Basic 中的存取層級</span><span class="sxs-lookup"><span data-stu-id="7456a-139">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="7456a-140">程序</span><span class="sxs-lookup"><span data-stu-id="7456a-140">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [<span data-ttu-id="7456a-141">結構</span><span class="sxs-lookup"><span data-stu-id="7456a-141">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="7456a-142">物件和類別</span><span class="sxs-lookup"><span data-stu-id="7456a-142">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

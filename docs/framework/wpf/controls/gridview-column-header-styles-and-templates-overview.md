@@ -1,48 +1,51 @@
 ---
-title: "GridView 資料行行首樣式和範本概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料行行首, 自訂"
-  - "控制項, ListView"
-  - "GridView 檢視模式, 自訂資料行行首"
-  - "頁首, 自訂"
-  - "ListView 控制項 [WPF], GridView 資料行行首樣式"
+title: "GridView 資料行行首樣式和範本概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- column headers [WPF], customizing
+- ListView controls [WPF], GridView column header styles
+- controls [WPF], ListView
+- headers [WPF], customizing
+- GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# GridView 資料行行首樣式和範本概觀
-本概觀將討論在 <xref:System.Windows.Controls.ListView> 控制項的 <xref:System.Windows.Controls.GridView> 檢視模式下，用來自訂資料行行首的屬性優先順序。  
+# <a name="gridview-column-header-styles-and-templates-overview"></a><span data-ttu-id="36428-102">GridView 資料行行首樣式和範本概觀</span><span class="sxs-lookup"><span data-stu-id="36428-102">GridView Column Header Styles and Templates Overview</span></span>
+<span data-ttu-id="36428-103">這個概觀討論的屬性，用來自訂中的資料行標頭的優先順序<xref:System.Windows.Controls.GridView>檢視模式<xref:System.Windows.Controls.ListView>控制項。</span><span class="sxs-lookup"><span data-stu-id="36428-103">This overview discusses the order of precedence for properties that you use to customize a column header in the <xref:System.Windows.Controls.GridView> view mode of a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## 自訂 GridView 中的資料行行首  
- 在 <xref:System.Windows.Controls.GridView> 中定義資料行行首的內容、配置和樣式的屬性可以在許多相關的類別找到。  這些屬性有部分的功能類似或完全相同。  
+## <a name="customizing-a-column-header-in-a-gridview"></a><span data-ttu-id="36428-104">自訂在 GridView 的資料行標頭</span><span class="sxs-lookup"><span data-stu-id="36428-104">Customizing a Column Header in a GridView</span></span>  
+ <span data-ttu-id="36428-105">定義內容、 配置和樣式中的資料行標頭的屬性，<xref:System.Windows.Controls.GridView>找到許多相關的類別上。</span><span class="sxs-lookup"><span data-stu-id="36428-105">The properties that define the content, layout, and style of a column header in a <xref:System.Windows.Controls.GridView> are found on many related classes.</span></span> <span data-ttu-id="36428-106">其中某些屬性具有功能類似或相同。</span><span class="sxs-lookup"><span data-stu-id="36428-106">Some of these properties have functionality that is similar or the same.</span></span>  
   
- 下表的列顯示執行相同功能的屬性群組。  您可以使用這些屬性自訂 <xref:System.Windows.Controls.GridView> 中的資料行行首。  相關屬性的優先順序是從右到左，最右欄的屬性擁有最高的優先順序。  例如，如果在 <xref:System.Windows.Controls.GridViewColumnHeader> 物件上設定 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>，而且在相關聯的 <xref:System.Windows.Controls.GridViewColumn> 上設定 <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>，則 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 優先適用。  在此情況下，<xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> 就沒有作用。  
+ <span data-ttu-id="36428-107">下表中的資料列顯示一組執行相同的函式的內容。</span><span class="sxs-lookup"><span data-stu-id="36428-107">The rows in the following table show groups of properties that perform the same function.</span></span> <span data-ttu-id="36428-108">您可以使用這些屬性來自訂資料行標頭中的<xref:System.Windows.Controls.GridView>。</span><span class="sxs-lookup"><span data-stu-id="36428-108">You can use these properties to customize the column headers in a <xref:System.Windows.Controls.GridView>.</span></span> <span data-ttu-id="36428-109">相關屬性的優先順序是由右至左右欄中的屬性具有最高優先順序的位置。</span><span class="sxs-lookup"><span data-stu-id="36428-109">The order of precedence for related properties is from right to left where the property in the farthest right column has the highest precedence.</span></span> <span data-ttu-id="36428-110">例如，如果<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>上設定<xref:System.Windows.Controls.GridViewColumnHeader>物件和<xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>就會在相關聯集<xref:System.Windows.Controls.GridViewColumn>、<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>優先。</span><span class="sxs-lookup"><span data-stu-id="36428-110">For example, if a <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> is set on the <xref:System.Windows.Controls.GridViewColumnHeader> object and the <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> is set on the associated <xref:System.Windows.Controls.GridViewColumn>, the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> takes precedence.</span></span> <span data-ttu-id="36428-111">在此案例中，<xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>沒有任何作用。</span><span class="sxs-lookup"><span data-stu-id="36428-111">In this scenario, the <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> has no effect.</span></span>  
   
- **GridView 中資料行行首的相關屬性**  
+ <span data-ttu-id="36428-112">**在 GridView 的資料行標頭的相關的屬性**</span><span class="sxs-lookup"><span data-stu-id="36428-112">**Related properties for column headers in a GridView**</span></span>  
   
 |||||  
 |-|-|-|-|  
-|**類別**|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
-|**內容功能表屬性**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|不適用|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
-|**工具提示**<br /><br /> **屬性**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|不適用|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
-|**頁首樣板**<br /><br /> **屬性**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
-|**樣式屬性**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
+|<span data-ttu-id="36428-113">**類別**</span><span class="sxs-lookup"><span data-stu-id="36428-113">**Classes**</span></span>|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
+|<span data-ttu-id="36428-114">**內容功能表屬性**</span><span class="sxs-lookup"><span data-stu-id="36428-114">**Context Menu Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|<span data-ttu-id="36428-115">不適用</span><span class="sxs-lookup"><span data-stu-id="36428-115">Not applicable</span></span>|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
+|<span data-ttu-id="36428-116">**ToolTip**</span><span class="sxs-lookup"><span data-stu-id="36428-116">**ToolTip**</span></span><br /><br /> <span data-ttu-id="36428-117">**屬性**</span><span class="sxs-lookup"><span data-stu-id="36428-117">**Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|<span data-ttu-id="36428-118">不適用</span><span class="sxs-lookup"><span data-stu-id="36428-118">Not applicable</span></span>|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
+|<span data-ttu-id="36428-119">**標頭範本**</span><span class="sxs-lookup"><span data-stu-id="36428-119">**Header Template**</span></span><br /><br /> <span data-ttu-id="36428-120">**屬性**</span><span class="sxs-lookup"><span data-stu-id="36428-120">**Properties**</span></span>|<span data-ttu-id="36428-121"><xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="36428-121"><xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<span data-ttu-id="36428-122"><xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="36428-122"><xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<span data-ttu-id="36428-123"><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="36428-123"><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
+|<span data-ttu-id="36428-124">**樣式屬性**</span><span class="sxs-lookup"><span data-stu-id="36428-124">**Style Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
- <sup>1</sup>針對**行首樣板屬性**，如果同時設定樣板和樣板選取器屬性，則樣板屬性優先適用。  例如，如果同時設定 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 和 <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> 屬性，則 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 屬性優先適用。  
+ <span data-ttu-id="36428-125"><sup>1</sup>如**標頭範本內容**，如果您設定範本及範本選擇器內容、 範本屬性會優先採用。</span><span class="sxs-lookup"><span data-stu-id="36428-125"><sup>1</sup>For **Header Template Properties**, if you set both the template and template selector properties, the template property takes precedence.</span></span> <span data-ttu-id="36428-126">例如，如果您同時設定<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>屬性<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>屬性會優先。</span><span class="sxs-lookup"><span data-stu-id="36428-126">For example, if you set both the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> and <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> properties, the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> property takes precedence.</span></span>  
   
-## 請參閱  
- [HOW TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="36428-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36428-127">See Also</span></span>  
+ [<span data-ttu-id="36428-128">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="36428-128">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="36428-129">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="36428-129">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="36428-130">GridView 概觀</span><span class="sxs-lookup"><span data-stu-id="36428-130">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)

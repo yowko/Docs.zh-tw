@@ -1,27 +1,33 @@
 ---
-title: "將 XSLT 轉換套用至 DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將 XSLT 轉換套用至 DataSet"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 將 XSLT 轉換套用至 DataSet
-您可以使用 <xref:System.Data.DataSet> 的 **WriteXml** 方法，將 **DataSet** 的內容撰寫為 XML 資料。  接下來，通用工作會使用 XML 轉換 \(XSLT\)，將這個 XML 轉換為另一種格式。  但是，將 <xref:System.Xml.XmlDataDocument> 與 **DataSet** 同步處理，也可讓您將 XSLT 樣式表套用至 **DataSet** 的內容，而不需先使用 **WriteXml** 將 **DataSet** 的內容撰寫為 XML 資料。  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="3daa7-102">將 XSLT 轉換套用至 DataSet</span><span class="sxs-lookup"><span data-stu-id="3daa7-102">Applying an XSLT Transform to a DataSet</span></span>
+<span data-ttu-id="3daa7-103">**WriteXml**方法<xref:System.Data.DataSet>可讓您撰寫的內容**資料集**為 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="3daa7-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="3daa7-104">接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。</span><span class="sxs-lookup"><span data-stu-id="3daa7-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="3daa7-105">不過，同步處理**資料集**與<xref:System.Xml.XmlDataDocument>可讓您套用 XSLT 樣式表的內容**資料集**而不必先撰寫的內容**資料集**做為 XML 資料使用**WriteXml**。</span><span class="sxs-lookup"><span data-stu-id="3daa7-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
   
- 下列範例以資料表和關聯性填入 **DataSet**，再使用 **XmlDataDocument** 同步處理 **DataSet**，接著使用 XSLT 樣式表將一部份的 **DataSet** 寫為 HTML 檔案。  下列為 XSLT 樣式表的內容。  
+ <span data-ttu-id="3daa7-106">下列範例會填入**資料集**與資料表和關聯性，同步處理**資料集**與**XmlDataDocument**，並將寫入的一部分**資料集**為 HTML 檔案使用 XSLT 樣式表。</span><span class="sxs-lookup"><span data-stu-id="3daa7-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="3daa7-107">下列為 XSLT 樣式表的內容。</span><span class="sxs-lookup"><span data-stu-id="3daa7-107">Following are the contents of the XSLT stylesheet.</span></span>  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
   
 <xsl:template match="CustomerOrders">  
@@ -60,10 +66,10 @@ caps.handback.revision: 4
 </xsl:stylesheet>  
 ```  
   
- 下列程式碼會填入 **DataSet** 並套用 XSLT 樣式表。  
+ <span data-ttu-id="3daa7-108">下列程式碼會填入**資料集**並套用 XSLT 樣式表。</span><span class="sxs-lookup"><span data-stu-id="3daa7-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
   
 > [!NOTE]
->  如果要將 XSLT 樣式表套用至包含關聯的 **DataSet**，則將每個巢狀關聯之 <xref:System.Data.DataRelation> 的 **Nested** 屬性設為 **true**，即可達到最佳效能。  這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 \(例如，樣式表中之前和之後同層級節點測試運算式\)，來巡覽階層並轉換資料。  如需巢狀關聯的詳細資訊，請參閱 [巢狀 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+>  <span data-ttu-id="3daa7-109">如果您要套用 XSLT 樣式表以**資料集**包含關聯性，您會達成最佳效能，如果您設定**巢狀**屬性<xref:System.Data.DataRelation>至**true**每個巢狀關聯性。</span><span class="sxs-lookup"><span data-stu-id="3daa7-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="3daa7-110">這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。</span><span class="sxs-lookup"><span data-stu-id="3daa7-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="3daa7-111">如需有關巢狀關聯的詳細資訊，請參閱[巢狀 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。</span><span class="sxs-lookup"><span data-stu-id="3daa7-111">For more information on nested relations, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -127,6 +133,6 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## 請參閱  
- [DataSet 和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3daa7-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3daa7-112">See Also</span></span>  
+ [<span data-ttu-id="3daa7-113">資料集和 XmlDataDocument 同步處理</span><span class="sxs-lookup"><span data-stu-id="3daa7-113">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="3daa7-114">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="3daa7-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,36 +1,28 @@
 ---
-title: "序列化至 XmlReader (叫用 XSLT) (Visual Basic) |Microsoft 文件"
+title: "序列化至 XmlReader (叫用 XSLT) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bca1e63bbe5b3ccd13f183c3cc6081917624ad94
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ea4a8a17e938b22d6e307ebe307c69481e44e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>序列化至 XmlReader (叫用 XSLT) (Visual Basic)
-當您使用<xref:System.Xml?displayProperty=fullName>的互通性功能[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，可用<xref:System.Xml.Linq.XNode.CreateReader%2A>來建立<xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.CreateReader%2A> </xref:System.Xml?displayProperty=fullName> 這可讀取的模組<xref:System.Xml.XmlReader>讀取 XML 樹狀結構的節點，並加以處理。</xref:System.Xml.XmlReader>  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a><span data-ttu-id="b98d3-102">序列化至 XmlReader (叫用 XSLT) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b98d3-102">Serializing to an XmlReader (Invoking XSLT) (Visual Basic)</span></span>
+<span data-ttu-id="b98d3-103">當您使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的 <xref:System.Xml?displayProperty=nameWithType> 互通性能力時，可以使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 來建立 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="b98d3-103">When you use the <xref:System.Xml?displayProperty=nameWithType> interoperability capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="b98d3-104">從這個 <xref:System.Xml.XmlReader> 讀取的模組會讀取 XML 樹狀結構中的節點並加以處理。</span><span class="sxs-lookup"><span data-stu-id="b98d3-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  
   
-## <a name="invoking-an-xslt-transformation"></a>叫用 XSLT 轉換  
- 此方法的其中一個可能的使用時機為叫用 XSLT 轉換時。 您可以建立 XML 樹狀結構、 建立<xref:System.Xml.XmlReader>從 XML 樹狀結構中，建立新的文件，然後再建立<xref:System.Xml.XmlWriter>來寫入新文件。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 然後，您可以叫用 XSLT 轉換，以傳遞<xref:System.Xml.XmlReader>和<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。  
+## <a name="invoking-an-xslt-transformation"></a><span data-ttu-id="b98d3-105">叫用 XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="b98d3-105">Invoking an XSLT Transformation</span></span>  
+ <span data-ttu-id="b98d3-106">此方法的其中一個可能的使用時機為叫用 XSLT 轉換時。</span><span class="sxs-lookup"><span data-stu-id="b98d3-106">One possible use for this method is when invoking an XSLT transformation.</span></span> <span data-ttu-id="b98d3-107">您可以建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新文件，然後建立 <xref:System.Xml.XmlWriter> 以寫入新文件中。</span><span class="sxs-lookup"><span data-stu-id="b98d3-107">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and then create an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="b98d3-108">接著，您可以叫用 XSLT 轉換，以傳入 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="b98d3-108">Then, you can invoke the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="b98d3-109">轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="b98d3-109">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
   
 ```vb  
 Dim xslMarkup As XDocument = _  
@@ -68,7 +60,7 @@ End Using
 Console.WriteLine(newTree)  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="b98d3-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="b98d3-110">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -77,5 +69,5 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [序列化 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="b98d3-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b98d3-111">See Also</span></span>  
+ [<span data-ttu-id="b98d3-112">序列化 XML 樹狀結構 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b98d3-112">Serializing XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

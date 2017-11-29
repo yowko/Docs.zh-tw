@@ -1,44 +1,47 @@
 ---
-title: "220 - MessageSentToTransport | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 220 - MessageSentToTransport
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aef4e781-240b-45bc-bff8-400053037e71
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a84aa9ccbb51f2390376fc549660ca5e027969c1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 220 - MessageSentToTransport
-## 屬性  
+# <a name="220---messagesenttotransport"></a><span data-ttu-id="f838f-102">220 - MessageSentToTransport</span><span class="sxs-lookup"><span data-stu-id="f838f-102">220 - MessageSentToTransport</span></span>
+## <a name="properties"></a><span data-ttu-id="f838f-103">屬性</span><span class="sxs-lookup"><span data-stu-id="f838f-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|220|  
-|關鍵字|EndToEndMonitoring，Troubleshooting，ServiceModel|  
-|層級|Information|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="f838f-104">ID</span><span class="sxs-lookup"><span data-stu-id="f838f-104">Id</span></span>|<span data-ttu-id="f838f-105">220</span><span class="sxs-lookup"><span data-stu-id="f838f-105">220</span></span>|  
+|<span data-ttu-id="f838f-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="f838f-106">Keywords</span></span>|<span data-ttu-id="f838f-107">EndToEndMonitoring，Troubleshooting，ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f838f-107">EndToEndMonitoring, Troubleshooting, ServiceModel</span></span>|  
+|<span data-ttu-id="f838f-108">層級</span><span class="sxs-lookup"><span data-stu-id="f838f-108">Level</span></span>|<span data-ttu-id="f838f-109">資訊</span><span class="sxs-lookup"><span data-stu-id="f838f-109">Information</span></span>|  
+|<span data-ttu-id="f838f-110">通道</span><span class="sxs-lookup"><span data-stu-id="f838f-110">Channel</span></span>|<span data-ttu-id="f838f-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="f838f-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 描述  
- 服務模型將訊息傳送至傳輸時，便會發出此事件。  
+## <a name="description"></a><span data-ttu-id="f838f-112">描述</span><span class="sxs-lookup"><span data-stu-id="f838f-112">Description</span></span>  
+ <span data-ttu-id="f838f-113">服務模型將訊息傳送至傳輸時，便會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="f838f-113">This event is emitted when the Service Model sends a message to the transport.</span></span>  
   
 > [!NOTE]
->  單向傳輸將不會發出此事件。  
+>  <span data-ttu-id="f838f-114">單向傳輸將不會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="f838f-114">This event will not be emitted for one-way transports.</span></span>  
   
-## 訊息  
- 發送器已將訊息傳送至傳輸。相互關聯 ID \=\= '%1'。  
+## <a name="message"></a><span data-ttu-id="f838f-115">訊息</span><span class="sxs-lookup"><span data-stu-id="f838f-115">Message</span></span>  
+ <span data-ttu-id="f838f-116">發送器已傳送訊息到傳輸。</span><span class="sxs-lookup"><span data-stu-id="f838f-116">The Dispatcher sent a message to the transport.</span></span> <span data-ttu-id="f838f-117">相互關聯 ID == '%1'。</span><span class="sxs-lookup"><span data-stu-id="f838f-117">Correlation ID == '%1'.</span></span>  
   
-## 詳細資料  
+## <a name="details"></a><span data-ttu-id="f838f-118">詳細資料</span><span class="sxs-lookup"><span data-stu-id="f838f-118">Details</span></span>  
   
-|資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
-|相互關聯 ID|`xs:GUID`|活動識別碼，會將來自服務或用戶端的 `MessageSentToTransport` 事件，與另一端對應的 `MessageReceivedFromTransport` 相互關聯。|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。範例：'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'。|  
-|AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="f838f-119">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="f838f-119">Data Item Name</span></span>|<span data-ttu-id="f838f-120">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="f838f-120">Data Item Type</span></span>|<span data-ttu-id="f838f-121">描述</span><span class="sxs-lookup"><span data-stu-id="f838f-121">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="f838f-122">相互關聯 ID</span><span class="sxs-lookup"><span data-stu-id="f838f-122">Correlation ID</span></span>|`xs:GUID`|<span data-ttu-id="f838f-123">活動識別碼，會將來自服務或用戶端的 `MessageSentToTransport` 事件，與另一端對應的 `MessageReceivedFromTransport` 相互關聯。</span><span class="sxs-lookup"><span data-stu-id="f838f-123">The activity ID used to correlate a `MessageSentToTransport` event from a service or client to its corresponding `MessageReceivedFromTransport` on the other end.</span></span>|  
+|<span data-ttu-id="f838f-124">HostReference</span><span class="sxs-lookup"><span data-stu-id="f838f-124">HostReference</span></span>|`xs:string`|<span data-ttu-id="f838f-125">若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。</span><span class="sxs-lookup"><span data-stu-id="f838f-125">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="f838f-126">其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName'。</span><span class="sxs-lookup"><span data-stu-id="f838f-126">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="f838f-127">範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'。</span><span class="sxs-lookup"><span data-stu-id="f838f-127">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="f838f-128">AppDomain</span><span class="sxs-lookup"><span data-stu-id="f838f-128">AppDomain</span></span>|`xs:string`|<span data-ttu-id="f838f-129">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="f838f-129">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

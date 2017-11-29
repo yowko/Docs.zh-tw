@@ -1,67 +1,69 @@
 ---
-title: "ProgressBar 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ProgressBar"
-  - "組件 [WPF], ProgressBar"
-  - "ProgressBar [WPF], 樣式和範本"
-  - "狀態 [WPF], ProgressBar"
-  - "樣式 [WPF], ProgressBar"
-  - "範本 [WPF], ProgressBar"
+title: "ProgressBar 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], ProgressBar
+- ProgressBar [WPF], styles and templates
+- styles [WPF], ProgressBar
+- ControlTemplate [WPF], ProgressBar
+- templates [WPF], ProgressBar
+- states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 475607381f16d7b42f26f12809a11d5eaf4e74bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ProgressBar 樣式和範本
-本主題說明 <xref:System.Windows.Controls.ProgressBar> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="progressbar-styles-and-templates"></a><span data-ttu-id="632c1-102">ProgressBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="632c1-102">ProgressBar Styles and Templates</span></span>
+<span data-ttu-id="632c1-103">本主題描述樣式和範本<xref:System.Windows.Controls.ProgressBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="632c1-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.ProgressBar> control.</span></span> <span data-ttu-id="632c1-104">您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。</span><span class="sxs-lookup"><span data-stu-id="632c1-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="632c1-105">如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。</span><span class="sxs-lookup"><span data-stu-id="632c1-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## ProgressBar 組件  
- 下表列出 <xref:System.Windows.Controls.ProgressBar> 控制項的具名組件。  
+## <a name="progressbar-parts"></a><span data-ttu-id="632c1-106">ProgressBar 組件</span><span class="sxs-lookup"><span data-stu-id="632c1-106">ProgressBar Parts</span></span>  
+ <span data-ttu-id="632c1-107">下表列出的具名組件<xref:System.Windows.Controls.ProgressBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="632c1-107">The following table lists the named parts for the <xref:System.Windows.Controls.ProgressBar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="632c1-108">組件</span><span class="sxs-lookup"><span data-stu-id="632c1-108">Part</span></span>|<span data-ttu-id="632c1-109">類型</span><span class="sxs-lookup"><span data-stu-id="632c1-109">Type</span></span>|<span data-ttu-id="632c1-110">說明</span><span class="sxs-lookup"><span data-stu-id="632c1-110">Description</span></span>|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_Indicator|<xref:System.Windows.FrameworkElement>|指示進度的物件。|  
-|PART\_Track|<xref:System.Windows.FrameworkElement>|定義進度列指示器路徑的物件。|  
-|PART\_GlowRect|<xref:System.Windows.FrameworkElement>|裝飾進度列的物件。|  
+|<span data-ttu-id="632c1-111">PART_Indicator</span><span class="sxs-lookup"><span data-stu-id="632c1-111">PART_Indicator</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="632c1-112">物件，表示進度。</span><span class="sxs-lookup"><span data-stu-id="632c1-112">The object that indicates progress.</span></span>|  
+|<span data-ttu-id="632c1-113">PART_Track</span><span class="sxs-lookup"><span data-stu-id="632c1-113">PART_Track</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="632c1-114">定義進度列指示器的路徑物件。</span><span class="sxs-lookup"><span data-stu-id="632c1-114">The object that defines the path of the progress indicator.</span></span>|  
+|<span data-ttu-id="632c1-115">PART_GlowRect</span><span class="sxs-lookup"><span data-stu-id="632c1-115">PART_GlowRect</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="632c1-116">物件，embellishes 進度列。</span><span class="sxs-lookup"><span data-stu-id="632c1-116">An object that embellishes the progress bar.</span></span>|  
   
-## ProgressBar 狀態  
- 下表列出 <xref:System.Windows.Controls.ProgressBar> 控制項的可見狀態。  
+## <a name="progressbar-states"></a><span data-ttu-id="632c1-117">進度列狀態</span><span class="sxs-lookup"><span data-stu-id="632c1-117">ProgressBar States</span></span>  
+ <span data-ttu-id="632c1-118">下表列出的視覺狀態<xref:System.Windows.Controls.ProgressBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="632c1-118">The following table lists the visual states for the <xref:System.Windows.Controls.ProgressBar> control.</span></span>  
   
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|--------------------|-------------------------|--------|  
-|Determinate|CommonStates|<xref:System.Windows.Controls.ProgressBar> 是以 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 屬性為基礎來報告進度。|  
-|Indeterminate|CommonStates|<xref:System.Windows.Controls.ProgressBar> 會報告具有重複模式的一般進度。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="632c1-119">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="632c1-119">VisualState Name</span></span>|<span data-ttu-id="632c1-120">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="632c1-120">VisualStateGroup Name</span></span>|<span data-ttu-id="632c1-121">說明</span><span class="sxs-lookup"><span data-stu-id="632c1-121">Description</span></span>|  
+|----------------------|---------------------------|-----------------|  
+|<span data-ttu-id="632c1-122">確定</span><span class="sxs-lookup"><span data-stu-id="632c1-122">Determinate</span></span>|<span data-ttu-id="632c1-123">CommonStates</span><span class="sxs-lookup"><span data-stu-id="632c1-123">CommonStates</span></span>|<span data-ttu-id="632c1-124"><xref:System.Windows.Controls.ProgressBar>報告進度根據<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="632c1-124"><xref:System.Windows.Controls.ProgressBar> reports progress based on the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> property.</span></span>|  
+|<span data-ttu-id="632c1-125">不定</span><span class="sxs-lookup"><span data-stu-id="632c1-125">Indeterminate</span></span>|<span data-ttu-id="632c1-126">CommonStates</span><span class="sxs-lookup"><span data-stu-id="632c1-126">CommonStates</span></span>|<span data-ttu-id="632c1-127"><xref:System.Windows.Controls.ProgressBar>報告泛型的進度，以重複模式。</span><span class="sxs-lookup"><span data-stu-id="632c1-127"><xref:System.Windows.Controls.ProgressBar> reports generic progress with a repeating pattern.</span></span>|  
+|<span data-ttu-id="632c1-128">驗證</span><span class="sxs-lookup"><span data-stu-id="632c1-128">Valid</span></span>|<span data-ttu-id="632c1-129">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="632c1-129">ValidationStates</span></span>|<span data-ttu-id="632c1-130">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="632c1-130">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="632c1-131">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="632c1-131">InvalidFocused</span></span>|<span data-ttu-id="632c1-132">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="632c1-132">ValidationStates</span></span>|<span data-ttu-id="632c1-133"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="632c1-133">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="632c1-134">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="632c1-134">InvalidUnfocused</span></span>|<span data-ttu-id="632c1-135">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="632c1-135">ValidationStates</span></span>|<span data-ttu-id="632c1-136"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="632c1-136">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## ProgressBar ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.ProgressBar> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="progressbar-controltemplate-example"></a><span data-ttu-id="632c1-137">ProgressBar ControlTemplate 範例</span><span class="sxs-lookup"><span data-stu-id="632c1-137">ProgressBar ControlTemplate Example</span></span>  
+ <span data-ttu-id="632c1-138">下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.ProgressBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="632c1-138">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.ProgressBar> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#ProgressBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
+ [!code-xaml[ControlTemplateExamples#ProgressBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
   
- 前述範例使用了下列一或多項資源。  
+ <span data-ttu-id="632c1-139">上述範例使用下列一或多項資源。</span><span class="sxs-lookup"><span data-stu-id="632c1-139">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱          [使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="632c1-140">如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。</span><span class="sxs-lookup"><span data-stu-id="632c1-140">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="632c1-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="632c1-141">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="632c1-142">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="632c1-142">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="632c1-143">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="632c1-143">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="632c1-144">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="632c1-144">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="632c1-145">透過建立 ControlTemplate 自訂現有控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="632c1-145">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

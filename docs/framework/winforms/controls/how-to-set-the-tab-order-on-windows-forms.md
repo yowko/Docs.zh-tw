@@ -1,70 +1,71 @@
 ---
-title: "如何：在 Windows Form 上設定定位順序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TabStop"
-  - "TabIndex"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 設定定位順序"
-  - "定位順序, Windows Form 上的控制項"
-  - "Windows Form 控制項, 設定定位順序"
-  - "Windows Form, 設定定位順序"
+title: "如何：在 Windows Form 上設定定位順序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TabStop
+- TabIndex
+helpviewer_keywords:
+- tab order [Windows Forms], controls on Windows forms
+- Windows Forms controls, setting tab order
+- controls [Windows Forms], setting tab order
+- Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a7acca633a5a2b98d7c4b6dd64355996e763d6df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows Form 上設定定位順序
-定位順序是使用者藉著按 TAB 鍵，將焦點 \(Focus\) 從一個控制項移動到另一個控制項的順序。  每一個表單都有它自己的定位順序。  依照預設值，定位順序和您建立控制項的順序一樣。  定位順序從零開始計數。  
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a><span data-ttu-id="c921d-102">如何：在 Windows Form 上設定定位順序</span><span class="sxs-lookup"><span data-stu-id="c921d-102">How to: Set the Tab Order on Windows Forms</span></span>
+<span data-ttu-id="c921d-103">定位順序是以使用者焦點從某個控制項移動到另一個按下 TAB 鍵的順序。</span><span class="sxs-lookup"><span data-stu-id="c921d-103">The tab order is the order in which a user moves focus from one control to another by pressing the TAB key.</span></span> <span data-ttu-id="c921d-104">每個表單都有它自己的定位順序。</span><span class="sxs-lookup"><span data-stu-id="c921d-104">Each form has its own tab order.</span></span> <span data-ttu-id="c921d-105">根據預設，定位順序是用來建立控制項的順序相同。</span><span class="sxs-lookup"><span data-stu-id="c921d-105">By default, the tab order is the same as the order in which you created the controls.</span></span> <span data-ttu-id="c921d-106">定位順序編號從 0 開始。</span><span class="sxs-lookup"><span data-stu-id="c921d-106">Tab-order numbering begins with zero.</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="c921d-107">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="c921d-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c921d-108">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="c921d-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c921d-109">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="c921d-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要設定控制項的定位順序  
+### <a name="to-set-the-tab-order-of-a-control"></a><span data-ttu-id="c921d-110">若要設定控制項的定位順序</span><span class="sxs-lookup"><span data-stu-id="c921d-110">To set the tab order of a control</span></span>  
   
-1.  選擇 \[**檢視**\] 功能表上的 \[**定位順序**\]。  
+1.  <span data-ttu-id="c921d-111">在**檢視**功能表上，按一下 **定位順序**。</span><span class="sxs-lookup"><span data-stu-id="c921d-111">On the **View** menu, click **Tab Order**.</span></span>  
   
-     這樣做會啟動表單上的定位順序選取模式。  每一控制項的左上角會出現一個數字 \(代表 <xref:System.Windows.Forms.Control.TabIndex%2A> 屬性\)。  
+     <span data-ttu-id="c921d-112">這會啟動在表單上的定位順序選取模式。</span><span class="sxs-lookup"><span data-stu-id="c921d-112">This activates the tab-order selection mode on the form.</span></span> <span data-ttu-id="c921d-113">數字 (表示<xref:System.Windows.Forms.Control.TabIndex%2A>屬性) 會出現在每個控制項的左上角。</span><span class="sxs-lookup"><span data-stu-id="c921d-113">A number (representing the <xref:System.Windows.Forms.Control.TabIndex%2A> property) appears in the upper-left corner of each control.</span></span>  
   
-2.  循序按控制項以建立您要的定位順序。  
-  
-    > [!NOTE]
-    >  控制項在定位順序中的位置可以設定成任何大於或等於 0 的數值。  若兩個控制項的數值重複，則以疊置順序為準，位於較頂端的控制項其定位順序排在前面。  \(疊置順序是沿著表單 Z 軸 \(深度\) 為表單控制項進行視覺分層。  疊置順序決定哪些控制項排在其他控制項的前面\)。 如需疊置順序的詳細資訊，請參閱[將 Windows Form 上的物件分層](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
-  
-3.  完成後，請再選擇 \[**檢視**\] 功能表上的 \[**定位順序**\]，離開定位順序模式。  
+2.  <span data-ttu-id="c921d-114">按一下以建立您想要的索引標籤順序的控制項。</span><span class="sxs-lookup"><span data-stu-id="c921d-114">Click the controls sequentially to establish the tab order you want.</span></span>  
   
     > [!NOTE]
-    >  不能夠得到焦點 \(Focus\) 的控制項，跟停用和不可見的控制項一樣，都沒有 <xref:System.Windows.Forms.Control.TabIndex%2A> 屬性，而且不包含在定位順序之中。  當使用者按 TAB 鍵，這些控制項會被略過。  
+    >  <span data-ttu-id="c921d-115">在定位順序中的控制項位置都可以將任何值大於或等於 0。</span><span class="sxs-lookup"><span data-stu-id="c921d-115">A control's place within the tab order can be set to any value greater than or equal to 0.</span></span> <span data-ttu-id="c921d-116">重複的項目發生時，會評估兩個控制項疊置順序，並在最上層控制項定位為第一個。</span><span class="sxs-lookup"><span data-stu-id="c921d-116">When duplicates occur, the z-order of the two controls is evaluated and the control on top is tabbed to first.</span></span> <span data-ttu-id="c921d-117">（圖層順序是沿著表單的 z 軸 [深度] 表單上控制項的視覺化圖層。</span><span class="sxs-lookup"><span data-stu-id="c921d-117">(The z-order is the visual layering of controls on a form along the form's z-axis [depth].</span></span> <span data-ttu-id="c921d-118">疊置順序決定哪一個控制項是其他控制項的前面）。如需有關疊置順序的詳細資訊，請參閱[分層 Windows Form 上的物件](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="c921d-118">The z-order determines which controls are in front of other controls.) For more information on z-order, see [Layering Objects on Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).</span></span>  
   
- 另外，也可在 \[屬性\] 視窗中使用 <xref:System.Windows.Forms.Control.TabIndex%2A> 屬性設定定位順序。  控制項的 <xref:System.Windows.Forms.Control.TabIndex%2A> 屬性會決定它在定位順序中放置的位置。  根據預設，第一個加入的控制項的 <xref:System.Windows.Forms.Control.TabIndex%2A> 值為 0，第二個控制項的 <xref:System.Windows.Forms.Control.TabIndex%2A> 值為 1，以此類推。  
-  
- 此外，根據預設，<xref:System.Windows.Forms.GroupBox> 控制項有自己的 <xref:System.Windows.Forms.Control.TabIndex%2A> 值，而這個值是整數。  <xref:System.Windows.Forms.GroupBox> 控制項本身在執行階段不能取得焦點。  於是，<xref:System.Windows.Forms.GroupBox> 內的每一個控制項都有自己的十進位 <xref:System.Windows.Forms.Control.TabIndex%2A> 值，並以 .0 開始。  很自然的，當 <xref:System.Windows.Forms.GroupBox> 控制項的 <xref:System.Windows.Forms.Control.TabIndex%2A> 值增加，它內部的控制項也將增加。  假如您將 <xref:System.Windows.Forms.Control.TabIndex%2A> 的值從 5 變成 6，群組內第一個控制項的 <xref:System.Windows.Forms.Control.TabIndex%2A> 值自動改變為 6.0，以此類推。  
-  
- 最後，您也可以讓表單上的控制項在定位順序中被略過。  通常，在執行階段連續按 TAB 鍵可選擇定位順序內的每一個控制項。  藉由關閉 <xref:System.Windows.Forms.Control.TabStop%2A> 屬性，您可以在表單的定位順序中跳過控制項。  
-  
-#### 若要從定位順序中移除控制項  
-  
-1.  在 \[屬性\] 視窗中，將控制項的 <xref:System.Windows.Forms.Control.TabStop%2A> 屬性設定為 `false`。  
-  
-     <xref:System.Windows.Forms.Control.TabStop%2A> 屬性設為 `false` 的控制項仍會維持它在定位順序中的位置，即使使用 TAB 鍵循環控制項時略過這個控制項也不受影響。  
+3.  <span data-ttu-id="c921d-119">當您完成時，按一下 **定位順序**上**檢視**再次將定位順序模式的功能表。</span><span class="sxs-lookup"><span data-stu-id="c921d-119">When you have finished, click **Tab Order** on the **View** menu again to leave tab order mode.</span></span>  
   
     > [!NOTE]
-    >  選項按鈕群組在執行階段有一個定位停駐點 \(Tab Stop\)。  已選取的按鈕 \(也就是說，<xref:System.Windows.Forms.RadioButton.Checked%2A> 屬性設定為 `true` 的按鈕\)，會將其 <xref:System.Windows.Forms.Control.TabStop%2A> 屬性自動設為 `true`，其他按鈕則把自己的 <xref:System.Windows.Forms.Control.TabStop%2A> 屬性設為 `false`。  如需 <xref:System.Windows.Forms.RadioButton> 控制項群組的詳細資訊，請參閱[將 Windows Form RadioButton 控制項組成集合使用](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
+    >  <span data-ttu-id="c921d-120">無法取得焦點的控制項，以及已停用不可見的控制項，並沒有<xref:System.Windows.Forms.Control.TabIndex%2A>屬性並不包含在定位順序。</span><span class="sxs-lookup"><span data-stu-id="c921d-120">Controls that cannot get the focus, as well as disabled and invisible controls, do not have a <xref:System.Windows.Forms.Control.TabIndex%2A> property and are not included in the tab order.</span></span> <span data-ttu-id="c921d-121">當使用者按下 TAB 鍵，則會略過這些控制項。</span><span class="sxs-lookup"><span data-stu-id="c921d-121">As a user presses the TAB key, these controls are skipped.</span></span>  
   
-## 請參閱  
- [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)   
- [排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [依功能區分 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ <span data-ttu-id="c921d-122">或者，可以設定定位順序中的 [屬性] 視窗使用<xref:System.Windows.Forms.Control.TabIndex%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="c921d-122">Alternatively, tab order can be set in the Properties window using the <xref:System.Windows.Forms.Control.TabIndex%2A> property.</span></span> <span data-ttu-id="c921d-123"><xref:System.Windows.Forms.Control.TabIndex%2A>控制項的屬性會決定它位於定位順序中。</span><span class="sxs-lookup"><span data-stu-id="c921d-123">The <xref:System.Windows.Forms.Control.TabIndex%2A> property of a control determines where it is positioned in the tab order.</span></span> <span data-ttu-id="c921d-124">根據預設，第一個控制項繪製的<xref:System.Windows.Forms.Control.TabIndex%2A>值為 0，第二個具有<xref:System.Windows.Forms.Control.TabIndex%2A>為 1，依此類推。</span><span class="sxs-lookup"><span data-stu-id="c921d-124">By default, the first control drawn has a <xref:System.Windows.Forms.Control.TabIndex%2A> value of 0, the second has a <xref:System.Windows.Forms.Control.TabIndex%2A> of 1, and so on.</span></span>  
+  
+ <span data-ttu-id="c921d-125">此外，根據預設，<xref:System.Windows.Forms.GroupBox>控制項都有它自己<xref:System.Windows.Forms.Control.TabIndex%2A>是整數的值。</span><span class="sxs-lookup"><span data-stu-id="c921d-125">Additionally, by default, a <xref:System.Windows.Forms.GroupBox> control has its own <xref:System.Windows.Forms.Control.TabIndex%2A> value, which is a whole number.</span></span> <span data-ttu-id="c921d-126">A<xref:System.Windows.Forms.GroupBox>控制項本身不能在執行階段有焦點。</span><span class="sxs-lookup"><span data-stu-id="c921d-126">A <xref:System.Windows.Forms.GroupBox> control itself cannot have focus at run time.</span></span> <span data-ttu-id="c921d-127">因此，每個控制項內<xref:System.Windows.Forms.GroupBox>有它自己的小<xref:System.Windows.Forms.Control.TabIndex%2A>開頭.0 的值。</span><span class="sxs-lookup"><span data-stu-id="c921d-127">Thus, each control within a <xref:System.Windows.Forms.GroupBox> has its own decimal <xref:System.Windows.Forms.Control.TabIndex%2A> value, beginning with .0.</span></span> <span data-ttu-id="c921d-128">當然，做為<xref:System.Windows.Forms.Control.TabIndex%2A>的<xref:System.Windows.Forms.GroupBox>控制項就會遞增，會隨之遞增的控制項。</span><span class="sxs-lookup"><span data-stu-id="c921d-128">Naturally, as the <xref:System.Windows.Forms.Control.TabIndex%2A> of a <xref:System.Windows.Forms.GroupBox> control is incremented, the controls within it will be incremented accordingly.</span></span> <span data-ttu-id="c921d-129">如果您變更<xref:System.Windows.Forms.Control.TabIndex%2A>5 的值為 6，<xref:System.Windows.Forms.Control.TabIndex%2A>自動將其群組中的第一個控制項的值變更為 6.0，依此類推。</span><span class="sxs-lookup"><span data-stu-id="c921d-129">If you changed a <xref:System.Windows.Forms.Control.TabIndex%2A> value from 5 to 6, the <xref:System.Windows.Forms.Control.TabIndex%2A> value of the first control in its group automatically changes to 6.0, and so on.</span></span>  
+  
+ <span data-ttu-id="c921d-130">定位順序中最後，略過您的表單上的任何控制項。</span><span class="sxs-lookup"><span data-stu-id="c921d-130">Finally, any control of the many on your form can be skipped in the tab order.</span></span> <span data-ttu-id="c921d-131">通常，連續按 TAB 鍵在執行的階段選取每個控制項的定位順序。</span><span class="sxs-lookup"><span data-stu-id="c921d-131">Usually, pressing TAB successively at run time selects each control in the tab order.</span></span> <span data-ttu-id="c921d-132">透過關閉<xref:System.Windows.Forms.Control.TabStop%2A>屬性，您可以讓控制項在表單的定位順序中，透過傳遞。</span><span class="sxs-lookup"><span data-stu-id="c921d-132">By turning off the <xref:System.Windows.Forms.Control.TabStop%2A> property, you can make a control be passed over in the tab order of the form.</span></span>  
+  
+#### <a name="to-remove-a-control-from-the-tab-order"></a><span data-ttu-id="c921d-133">若要移除定位順序中的控制項</span><span class="sxs-lookup"><span data-stu-id="c921d-133">To remove a control from the tab order</span></span>  
+  
+1.  <span data-ttu-id="c921d-134">將控制項的<xref:System.Windows.Forms.Control.TabStop%2A>屬性`false`屬性 視窗中。</span><span class="sxs-lookup"><span data-stu-id="c921d-134">Set the control's <xref:System.Windows.Forms.Control.TabStop%2A> property to `false` in the Properties window.</span></span>  
+  
+     <span data-ttu-id="c921d-135">A 控制項<xref:System.Windows.Forms.Control.TabStop%2A>屬性已設定為`false`仍保持在定位順序，其位置，即使控制項時將跳過循環的控制項使用 TAB 鍵。</span><span class="sxs-lookup"><span data-stu-id="c921d-135">A control whose <xref:System.Windows.Forms.Control.TabStop%2A> property has been set to `false` still maintains its position in the tab order, even though the control is skipped when you cycle through the controls with the TAB key.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="c921d-136">選項按鈕群組有一個索引標籤停止在執行階段。</span><span class="sxs-lookup"><span data-stu-id="c921d-136">A radio button group has a single tab stop at run time.</span></span> <span data-ttu-id="c921d-137">選取的按鈕 (也就是具有按鈕其<xref:System.Windows.Forms.RadioButton.Checked%2A>屬性設定為`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性會自動設定為`true`，其他按鈕有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性設定為`false`。</span><span class="sxs-lookup"><span data-stu-id="c921d-137">The selected button (that is, the button with its <xref:System.Windows.Forms.RadioButton.Checked%2A> property set to `true`) has its <xref:System.Windows.Forms.Control.TabStop%2A> property automatically set to `true`, while the other buttons have their <xref:System.Windows.Forms.Control.TabStop%2A> property set to `false`.</span></span> <span data-ttu-id="c921d-138">如需有關群組<xref:System.Windows.Forms.RadioButton>控制項，請參閱[函式，為一組群組 Windows Form RadioButton 控制項](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。</span><span class="sxs-lookup"><span data-stu-id="c921d-138">For more information about grouping <xref:System.Windows.Forms.RadioButton> controls, see [Grouping Windows Forms RadioButton Controls to Function as a Set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c921d-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c921d-139">See Also</span></span>  
+ [<span data-ttu-id="c921d-140">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="c921d-140">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="c921d-141">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="c921d-141">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="c921d-142">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="c921d-142">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="c921d-143">依功能區分 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="c921d-143">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

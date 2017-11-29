@@ -7,62 +7,55 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43f7a2220725bc251e476312654a070502171983
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 581d06930240022ae8792c02674d26491f44fa06
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="peer-name-publication-and-resolution"></a>對等名稱發佈和解析
-## <a name="publishing-a-peer-name"></a>發行對等名稱  
- 為了發行新的 PNRP 識別碼，對等會執行下列動作：  
+# <a name="peer-name-publication-and-resolution"></a><span data-ttu-id="c08a8-102">對等名稱發佈和解析</span><span class="sxs-lookup"><span data-stu-id="c08a8-102">Peer Name Publication and Resolution</span></span>
+## <a name="publishing-a-peer-name"></a><span data-ttu-id="c08a8-103">發行對等名稱</span><span class="sxs-lookup"><span data-stu-id="c08a8-103">Publishing a Peer Name</span></span>  
+ <span data-ttu-id="c08a8-104">為了發行新的 PNRP 識別碼，對等會執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="c08a8-104">To publish a new PNRP ID, a peer performs the following:</span></span>  
   
--   將 PNRP 發行訊息傳送至相鄰的快取 (在快取的最下層中註冊 PNRP 識別碼的對等)，讓其快取成為種子。  
+-   <span data-ttu-id="c08a8-105">將 PNRP 發行訊息傳送至相鄰的快取 (在快取的最下層中註冊 PNRP 識別碼的對等)，讓其快取成為種子。</span><span class="sxs-lookup"><span data-stu-id="c08a8-105">Sends PNRP publication messages to its cache neighbors (the peers that have registered PNRP IDs in the lowest level of the cache) to seed their caches.</span></span>  
   
--   在雲端中隨機選擇非相鄰的節點，並將其專屬 P2P 識別碼的 PNRP 名稱解析要求傳送至這些節點。 產生的端點判斷處理序會以發行對等的 PNRP 識別碼，作為雲端中隨機節點的快取種子。  
-  
--  
-  
- 如果 PNRP 第 2 版僅解析其他 P2P 識別碼，則其節點不會發行 PNRP 識別碼。 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 登錄值 (REG_DWORD 類型) 指定對等節點只能使用 PNRP 進行名稱解析，而不進行名稱發行。 此登錄值也可以透過群組原則進行設定。  
-  
-## <a name="resolving-a-peer-name"></a>解析對等名稱  
- 在 PNRP 網路或雲端中尋找其他對等，是包含兩個階段的處理序：  
-  
-1.  端點判斷  
-  
-2.  PNRP 識別碼解析  
-  
- 在端點判斷階段中，嘗試解析另一部電腦上服務之 PNRP 識別碼的對等會判斷該遠端對等的 IPv6 位址。  遠端對等是發行電腦或服務之 PNRP 識別碼的對等，或與之建立關聯的對等。  
-  
- 確認已將遠端端點註冊至 PNRP 雲端之後，PNRP 識別碼解析階段中發出要求的對等會將要求傳送至所需服務之 PNRP 識別碼的那個對等端點。 端點會傳送回覆，確認服務的 PNRP 識別碼、註解，以及最多 4 KB 的額外資訊，以供發出要求的對等未來進行通訊時使用。 例如，如果所需的端點是遊戲伺服器，則額外的對等名稱記錄資料可能會包含遊戲、參與遊戲等級和目前玩家人數的相關資訊。  
-  
- 在端點判斷階段中，PNRP 會使用互動的處理序尋找發佈 PNRP 識別碼的節點，其中執行解析的節點會負責連絡接近目標 PNRP 識別碼的後續節點。  
-  
- 為了在 PNRP 中執行名稱解析，對等節點會檢查本身的快取項目中是否有符合目標 PNRP 識別碼的項目。 如果找到相符項目，對等會將 PNRP 要求訊息傳送至對等，並等候回應。 如果找不到 PNRP 識別碼的項目，則對等會將 PNRP 要求訊息傳送至對應到最接近目標 PNRP 識別碼之 PNRP 識別碼的對等。 收到 PNRP 要求訊息的節點會檢查自己的快取，並執行下列動作：  
-  
--   如果找到 PNRP 識別碼，則收到要求的對等會直接回覆發出要求的對等。  
-  
--   如果找不到 PNRP 識別碼，而快取中有接近目標 PNRP 識別碼的 PNRP 識別碼，則收到要求的對等會將回應傳送至發出要求的對等，其中包含代表擁有較接近目標 PNRP 識別碼之 PNRP 識別碼的對等 IPv6 位址。 使用回應中的 IP 位址時，發出要求的節點會將另一個 PNRP 要求訊息傳送至 IPv6 位址來進行回應，或檢查其快取。  
-  
--   如果找不到 PNRP 識別碼，而且快取中沒有接近目標 PNRP 識別碼的 PNRP 識別碼，則收到要求的對等會將指出此情況的回應傳送給發出要求的對等。 發出要求的對等接著會選擇下一個最接近的 PNRP 識別碼。  
+-   <span data-ttu-id="c08a8-106">在雲端中隨機選擇非相鄰的節點，並將其專屬 P2P 識別碼的 PNRP 名稱解析要求傳送至這些節點。</span><span class="sxs-lookup"><span data-stu-id="c08a8-106">Chooses random nodes in the cloud that are not its neighbors and sends them PNRP name resolution requests for its own P2P ID.</span></span> <span data-ttu-id="c08a8-107">產生的端點判斷處理序會以發行對等的 PNRP 識別碼，作為雲端中隨機節點的快取種子。</span><span class="sxs-lookup"><span data-stu-id="c08a8-107">The resulting endpoint determination process seeds the caches of random nodes in the cloud with the PNRP ID of the publishing peer.</span></span>  
   
 -  
   
- 發出要求的對等會繼續重複執行此處理序，直到最後找到登錄 PNRP 識別碼的節點。  
+ <span data-ttu-id="c08a8-108">如果 PNRP 第 2 版僅解析其他 P2P 識別碼，則其節點不會發行 PNRP 識別碼。</span><span class="sxs-lookup"><span data-stu-id="c08a8-108">PNRP version 2 nodes do not publish PNRP IDs if they are only resolving other P2P IDs.</span></span> <span data-ttu-id="c08a8-109">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 登錄值 (REG_DWORD 類型) 指定對等節點只能使用 PNRP 進行名稱解析，而不進行名稱發行。</span><span class="sxs-lookup"><span data-stu-id="c08a8-109">The HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 registry value (REG_DWORD type) specifies that peers only use PNRP for name resolution, never for name publication.</span></span> <span data-ttu-id="c08a8-110">此登錄值也可以透過群組原則進行設定。</span><span class="sxs-lookup"><span data-stu-id="c08a8-110">This registry value can also be configured through Group Policy.</span></span>  
   
- 在 <xref:System.Net.PeerToPeer> 命名空間內，包含端點以及在其中進行通訊之 PNRP 雲端或網格的 <xref:System.Net.PeerToPeer.PeerName> 記錄間有多對多關聯性。 如果有重複或過時項目，或多個具有相同對等名稱的節點，則 PNRP 節點可以使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 類別來取得目前資訊。 <xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用單一對等名稱，來簡化一個對等到多個對等名稱記錄以及相同的一個對等到許多雲端的觀點。 這類似於使用關聯式資料表聯結所執行的查詢。 成功完成時，解析程式物件會傳回所指定對等名稱的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection>。  例如，對等名稱發生在集合的所有對等名稱記錄中，並依雲端進行排序。 這些是對等名稱的執行個體，而 PNRP 應用程式可以要求其支援資料。  
+## <a name="resolving-a-peer-name"></a><span data-ttu-id="c08a8-111">解析對等名稱</span><span class="sxs-lookup"><span data-stu-id="c08a8-111">Resolving a Peer Name</span></span>  
+ <span data-ttu-id="c08a8-112">在 PNRP 網路或雲端中尋找其他對等，是包含兩個階段的處理序：</span><span class="sxs-lookup"><span data-stu-id="c08a8-112">Locating other peers in a PNRP network or cloud is a process comprised of two phases:</span></span>  
   
-## <a name="see-also"></a>另請參閱  
+1.  <span data-ttu-id="c08a8-113">端點判斷</span><span class="sxs-lookup"><span data-stu-id="c08a8-113">Endpoint Determination</span></span>  
+  
+2.  <span data-ttu-id="c08a8-114">PNRP 識別碼解析</span><span class="sxs-lookup"><span data-stu-id="c08a8-114">PNRP ID Resolution</span></span>  
+  
+ <span data-ttu-id="c08a8-115">在端點判斷階段中，嘗試解析另一部電腦上服務之 PNRP 識別碼的對等會判斷該遠端對等的 IPv6 位址。</span><span class="sxs-lookup"><span data-stu-id="c08a8-115">In the endpoint determination phase, a peer that is attempting to resolve the PNRP ID of a service on another computer determines the IPv6 address of that remote peer.</span></span>  <span data-ttu-id="c08a8-116">遠端對等是發行電腦或服務之 PNRP 識別碼的對等，或與之建立關聯的對等。</span><span class="sxs-lookup"><span data-stu-id="c08a8-116">The remote peer is the one that published, or is associated with, the PNRP ID of the computer or service.</span></span>  
+  
+ <span data-ttu-id="c08a8-117">確認已將遠端端點註冊至 PNRP 雲端之後，PNRP 識別碼解析階段中發出要求的對等會將要求傳送至所需服務之 PNRP 識別碼的那個對等端點。</span><span class="sxs-lookup"><span data-stu-id="c08a8-117">After confirming that the remote endpoint has been registered into the PNRP cloud, the requesting peer in the PNRP ID resolution phase sends a request to that peer endpoint for the PNRP ID of the desired service.</span></span> <span data-ttu-id="c08a8-118">端點會傳送回覆，確認服務的 PNRP 識別碼、註解，以及最多 4 KB 的額外資訊，以供發出要求的對等未來進行通訊時使用。</span><span class="sxs-lookup"><span data-stu-id="c08a8-118">The endpoint sends a reply confirming the PNRP ID of the service, a comment, and up to 4 kilobytes of additional information that the requesting peer can use for future communication.</span></span> <span data-ttu-id="c08a8-119">例如，如果所需的端點是遊戲伺服器，則額外的對等名稱記錄資料可能會包含遊戲、參與遊戲等級和目前玩家人數的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="c08a8-119">For example, if the desired endpoint is a gaming server, the additional peer name record data can contain information about the game, the level of play, and the current number of players.</span></span>  
+  
+ <span data-ttu-id="c08a8-120">在端點判斷階段中，PNRP 會使用互動的處理序尋找發佈 PNRP 識別碼的節點，其中執行解析的節點會負責連絡接近目標 PNRP 識別碼的後續節點。</span><span class="sxs-lookup"><span data-stu-id="c08a8-120">In the endpoint determination phase, PNRP uses an iterative process for locating the node that published the PNRP ID, in which the node performing the resolution is responsible for contacting nodes that are successively closer to the target PNRP ID.</span></span>  
+  
+ <span data-ttu-id="c08a8-121">為了在 PNRP 中執行名稱解析，對等節點會檢查本身的快取項目中是否有符合目標 PNRP 識別碼的項目。</span><span class="sxs-lookup"><span data-stu-id="c08a8-121">To perform name resolution in PNRP, the peer examines the entries in its own cache for an entry that matches the target PNRP ID.</span></span> <span data-ttu-id="c08a8-122">如果找到相符項目，對等會將 PNRP 要求訊息傳送至對等，並等候回應。</span><span class="sxs-lookup"><span data-stu-id="c08a8-122">If found, the peer sends a PNRP Request message to the peer and waits for a response.</span></span> <span data-ttu-id="c08a8-123">如果找不到 PNRP 識別碼的項目，則對等會將 PNRP 要求訊息傳送至對應到最接近目標 PNRP 識別碼之 PNRP 識別碼的對等。</span><span class="sxs-lookup"><span data-stu-id="c08a8-123">If an entry for the PNRP ID is not found, the peer sends a PNRP Request message to the peer that corresponds to the entry that has a PNRP ID that most closely matches the target PNRP ID.</span></span> <span data-ttu-id="c08a8-124">收到 PNRP 要求訊息的節點會檢查自己的快取，並執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="c08a8-124">The node that receives the PNRP Request message examines its own cache and does the following:</span></span>  
+  
+-   <span data-ttu-id="c08a8-125">如果找到 PNRP 識別碼，則收到要求的對等會直接回覆發出要求的對等。</span><span class="sxs-lookup"><span data-stu-id="c08a8-125">If the PNRP ID is found, the requested endpoint peer replies directly to the requesting peer.</span></span>  
+  
+-   <span data-ttu-id="c08a8-126">如果找不到 PNRP 識別碼，而快取中有接近目標 PNRP 識別碼的 PNRP 識別碼，則收到要求的對等會將回應傳送至發出要求的對等，其中包含代表擁有較接近目標 PNRP 識別碼之 PNRP 識別碼的對等 IPv6 位址。</span><span class="sxs-lookup"><span data-stu-id="c08a8-126">If the PNRP ID is not found and a PNRP ID in the cache is closer to the target PNRP ID, the requested peer sends a response to the requesting peer containing the IPv6 address of the peer that represents the entry with a PNRP ID that more closely matches the target PNRP ID.</span></span> <span data-ttu-id="c08a8-127">使用回應中的 IP 位址時，發出要求的節點會將另一個 PNRP 要求訊息傳送至 IPv6 位址來進行回應，或檢查其快取。</span><span class="sxs-lookup"><span data-stu-id="c08a8-127">Using the IP address in the response, the requesting node sends another PNRP Request message to the IPv6 address to respond or examine its cache.</span></span>  
+  
+-   <span data-ttu-id="c08a8-128">如果找不到 PNRP 識別碼，而且快取中沒有接近目標 PNRP 識別碼的 PNRP 識別碼，則收到要求的對等會將指出此情況的回應傳送給發出要求的對等。</span><span class="sxs-lookup"><span data-stu-id="c08a8-128">If the PNRP ID is not found and there is no PNRP ID in its cache that is closer to the target PNRP ID, the requested peer sends the requesting peer a response that indicates this condition.</span></span> <span data-ttu-id="c08a8-129">發出要求的對等接著會選擇下一個最接近的 PNRP 識別碼。</span><span class="sxs-lookup"><span data-stu-id="c08a8-129">The requesting peer then chooses the next-closest PNRP ID.</span></span>  
+  
+-  
+  
+ <span data-ttu-id="c08a8-130">發出要求的對等會繼續重複執行此處理序，直到最後找到登錄 PNRP 識別碼的節點。</span><span class="sxs-lookup"><span data-stu-id="c08a8-130">The requesting peer continues this process with successive iterations, eventually locating the node that registered the PNRP ID.</span></span>  
+  
+ <span data-ttu-id="c08a8-131">在 <xref:System.Net.PeerToPeer> 命名空間內，包含端點以及在其中進行通訊之 PNRP 雲端或網格的 <xref:System.Net.PeerToPeer.PeerName> 記錄間有多對多關聯性。</span><span class="sxs-lookup"><span data-stu-id="c08a8-131">Within the <xref:System.Net.PeerToPeer> namespace, there is a many-to-many relationship between the <xref:System.Net.PeerToPeer.PeerName> records that contain endpoints and PNRP clouds or meshes in which they communicate.</span></span> <span data-ttu-id="c08a8-132">如果有重複或過時項目，或多個具有相同對等名稱的節點，則 PNRP 節點可以使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 類別來取得目前資訊。</span><span class="sxs-lookup"><span data-stu-id="c08a8-132">When there are duplicate or stale entries, or multiple nodes with the same peer name, PNRP nodes can obtain current information using the <xref:System.Net.PeerToPeer.PeerNameResolver> class.</span></span> <span data-ttu-id="c08a8-133"><xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用單一對等名稱，來簡化一個對等到多個對等名稱記錄以及相同的一個對等到許多雲端的觀點。</span><span class="sxs-lookup"><span data-stu-id="c08a8-133">The <xref:System.Net.PeerToPeer.PeerNameResolver> methods use a single peer name to simplify the perspective to one peer-to-many peer name records and the same one peer to many clouds.</span></span> <span data-ttu-id="c08a8-134">這類似於使用關聯式資料表聯結所執行的查詢。</span><span class="sxs-lookup"><span data-stu-id="c08a8-134">This is similar to a query performed using a relational-table join.</span></span> <span data-ttu-id="c08a8-135">成功完成時，解析程式物件會傳回所指定對等名稱的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection>。</span><span class="sxs-lookup"><span data-stu-id="c08a8-135">Upon successful completion, the Resolver object returns a <xref:System.Net.PeerToPeer.PeerNameRecordCollection> for the specified peer name.</span></span>  <span data-ttu-id="c08a8-136">例如，對等名稱發生在集合的所有對等名稱記錄中，並依雲端進行排序。</span><span class="sxs-lookup"><span data-stu-id="c08a8-136">For example, a peer name would occur in all the peer name records in the collection, ordered by cloud.</span></span> <span data-ttu-id="c08a8-137">這些是對等名稱的執行個體，而 PNRP 應用程式可以要求其支援資料。</span><span class="sxs-lookup"><span data-stu-id="c08a8-137">These are the instances of the peer name whose supporting data may be requested by a PNRP-based application.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c08a8-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c08a8-138">See Also</span></span>  
  <xref:System.Net.PeerToPeer>
-

@@ -1,52 +1,58 @@
 ---
-title: "UI Automation and Screen Scaling | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "scaling, screens"
-  - "screens, scaling"
-  - "UI (user interface), automation"
-  - "UI Automation"
+title: "UI 自動化和畫面縮放比例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- scaling, screens
+- screens, scaling
+- UI (user interface), automation
+- UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-caps.latest.revision: 16
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 98a2069009d04a2c1ff9127006c2382bf7481e04
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# UI Automation and Screen Scaling
+# <a name="ui-automation-and-screen-scaling"></a><span data-ttu-id="9aabd-102">UI 自動化和畫面縮放比例</span><span class="sxs-lookup"><span data-stu-id="9aabd-102">UI Automation and Screen Scaling</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="9aabd-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="9aabd-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="9aabd-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="9aabd-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 可讓使用者變更 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 設定，以便讓畫面上大部分的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 項目看起來較大。 雖然在 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 中早已經提供這項功能，但在舊版中，縮放比例必須由應用程式實作。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 中，桌面視窗管理員會針對所有不處理其本身縮放比例的應用程式執行預設的縮放功能。 使用者介面自動化用戶端應用程式必須將這項功能納入考量。  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]<span data-ttu-id="9aabd-105"> 可讓使用者變更 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 設定，以便讓畫面上大部分的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 項目看起來較大。</span><span class="sxs-lookup"><span data-stu-id="9aabd-105"> enables users to change the [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] setting so that most [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements on the screen appear larger.</span></span> <span data-ttu-id="9aabd-106">雖然在 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中早已經提供這項功能，但在舊版中，縮放比例必須由應用程式實作。</span><span class="sxs-lookup"><span data-stu-id="9aabd-106">Although this feature has long been available in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], in previous versions the scaling had to be implemented by applications.</span></span> <span data-ttu-id="9aabd-107">在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面視窗管理員會針對所有不處理其本身縮放比例的應用程式執行預設的縮放功能。</span><span class="sxs-lookup"><span data-stu-id="9aabd-107">In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], the Desktop Window Manager performs default scaling for all applications that do not handle their own scaling.</span></span> <span data-ttu-id="9aabd-108">使用者介面自動化用戶端應用程式必須將這項功能納入考量。</span><span class="sxs-lookup"><span data-stu-id="9aabd-108">UI Automation client applications must take this feature into account.</span></span>  
   
 <a name="Scaling_in_Windows_Vista"></a>   
-## Windows Vista 中的縮放比例  
- 預設的 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定是 96，表示 96 像素佔會用一英吋的寬度或高度。 「英吋」的確切測量值取決於監視器的大小和實體解析度。 例如，在 12 英吋寬、1280 像素水平解析度的監視器上，96 像素的水平線長度約一英吋的 9\/10。  
+## <a name="scaling-in-windows-vista"></a><span data-ttu-id="9aabd-109">Windows Vista 中的縮放比例</span><span class="sxs-lookup"><span data-stu-id="9aabd-109">Scaling in Windows Vista</span></span>  
+ <span data-ttu-id="9aabd-110">預設的 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定是 96，表示 96 像素佔會用一英吋的寬度或高度。</span><span class="sxs-lookup"><span data-stu-id="9aabd-110">The default [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] setting is 96, which means that 96 pixels occupy a width or height of one notional inch.</span></span> <span data-ttu-id="9aabd-111">「英吋」的確切測量值取決於監視器的大小和實體解析度。</span><span class="sxs-lookup"><span data-stu-id="9aabd-111">The exact measure of an "inch" depends on the size and physical resolution of the monitor.</span></span> <span data-ttu-id="9aabd-112">例如，在 12 英吋寬、1280 像素水平解析度的監視器上，96 像素的水平線長度約一英吋的 9/10。</span><span class="sxs-lookup"><span data-stu-id="9aabd-112">For example, on a monitor 12 inches wide, at a horizontal resolution of 1280 pixels, a horizontal line of 96 pixels extends about 9/10 of an inch.</span></span>  
   
- 變更 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定與變更螢幕解析度不同。 使用 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 縮放比例時，畫面上的實體像素數目會維持不變。 不過，縮放比例會套用至 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目的大小和位置。 針對未明確要求不縮放的桌面和應用程式，桌面視窗管理員 \(DWM\) 會自動執行縮放。  
+ <span data-ttu-id="9aabd-113">變更 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定與變更螢幕解析度不同。</span><span class="sxs-lookup"><span data-stu-id="9aabd-113">Changing the [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] setting is not the same as changing the screen resolution.</span></span> <span data-ttu-id="9aabd-114">使用 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 縮放比例時，畫面上的實體像素數目會維持不變。</span><span class="sxs-lookup"><span data-stu-id="9aabd-114">With [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] scaling, the number of physical pixels on the screen remains the same.</span></span> <span data-ttu-id="9aabd-115">不過，縮放比例會套用至 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目的大小和位置。</span><span class="sxs-lookup"><span data-stu-id="9aabd-115">However, scaling is applied to the size and location of [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elements.</span></span> <span data-ttu-id="9aabd-116">針對未明確要求不縮放的桌面和應用程式，桌面視窗管理員 (DWM) 會自動執行縮放。</span><span class="sxs-lookup"><span data-stu-id="9aabd-116">This scaling can be performed automatically by the Desktop Window Manager (DWM) for the desktop and for applications that do not explicitly ask not to be scaled.</span></span>  
   
- 實際上，當使用者將縮放因數設定為 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 時，畫面上的垂直或水平英吋會增大 25%。 所有維度都會因此調整。 來自畫面上方和左邊緣的應用程式視窗位移會增加 25%。 如果應用程式縮放已啟用，但應用程式不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 感知，則視窗大小以及它所包含的所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目的位移和大小也會以相同比例增加。  
+ <span data-ttu-id="9aabd-117">實際上，當使用者將縮放因數設定為 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]時，畫面上的垂直或水平英吋會增大 25%。</span><span class="sxs-lookup"><span data-stu-id="9aabd-117">In effect, when the user sets the scale factor to 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], a vertical or horizontal inch on the screen becomes bigger by 25 percent.</span></span> <span data-ttu-id="9aabd-118">所有維度都會因此調整。</span><span class="sxs-lookup"><span data-stu-id="9aabd-118">All dimensions are scaled accordingly.</span></span> <span data-ttu-id="9aabd-119">來自畫面上方和左邊緣的應用程式視窗位移會增加 25%。</span><span class="sxs-lookup"><span data-stu-id="9aabd-119">The offset of an application window from the top and left edges of the screen increases by 25 percent.</span></span> <span data-ttu-id="9aabd-120">如果應用程式縮放已啟用，但應用程式不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知，則視窗大小以及它所包含的所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目的位移和大小也會以相同比例增加。</span><span class="sxs-lookup"><span data-stu-id="9aabd-120">If application scaling is enabled and the application is not [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware, the size of the window increases in the same proportion, along with the offsets and sizes of all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elements it contains.</span></span>  
   
 > [!NOTE]
->  根據預設，當使用者將 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為 120 時，DWM 不會針對非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 感知的應用程式執行縮放，但當 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為自訂值 144 \(含\) 以上時就會執行縮放。 不過，使用者可以覆寫此預設行為。  
+>  <span data-ttu-id="9aabd-121">根據預設，當使用者將[!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]設定為 120 時，DWM 不會針對非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 感知的應用程式執行縮放，但當 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為自訂值 144 (含) 以上時就會執行縮放。</span><span class="sxs-lookup"><span data-stu-id="9aabd-121">By default, the DWM does not perform scaling for non-[!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware applications when the user sets the [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] to 120, but does perform it when the [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] is set to a custom value of 144 or higher.</span></span> <span data-ttu-id="9aabd-122">不過，使用者可以覆寫此預設行為。</span><span class="sxs-lookup"><span data-stu-id="9aabd-122">However, the user can override the default behavior.</span></span>  
   
- 針對重視畫面座標的應用程式，畫面縮放比例會產生新挑戰。 畫面現在包含兩個座標系統：實體和邏輯。 點的實體座標是來自原點左上方的實際位移 \(以像素為單位\)。 邏輯座標則是像素本身縮放時，跟著縮放的位移。  
+ <span data-ttu-id="9aabd-123">針對重視畫面座標的應用程式，畫面縮放比例會產生新挑戰。</span><span class="sxs-lookup"><span data-stu-id="9aabd-123">Screen scaling creates new challenges for applications that are concerned in any way with screen coordinates.</span></span> <span data-ttu-id="9aabd-124">畫面現在包含兩個座標系統：實體和邏輯。</span><span class="sxs-lookup"><span data-stu-id="9aabd-124">The screen now contains two coordinate systems: physical and logical.</span></span> <span data-ttu-id="9aabd-125">點的實體座標是來自原點左上方的實際位移 (以像素為單位)。</span><span class="sxs-lookup"><span data-stu-id="9aabd-125">The physical coordinates of a point are the actual offset in pixels from the top left of the origin.</span></span> <span data-ttu-id="9aabd-126">邏輯座標則是像素本身縮放時，跟著縮放的位移。</span><span class="sxs-lookup"><span data-stu-id="9aabd-126">The logical coordinates are the offsets as they would be if the pixels themselves were scaled.</span></span>  
   
- 假設您設計的對話方塊在座標 \(100, 48\) 上有一個按鈕。 當這個對話方塊以預設 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 顯示時，按鈕位在實體座標 \(100, 48\)。 在 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 時，它位在實體座標 \(125, 60\)。 但邏輯座標在任何 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定時都是相同的：\(100, 48\)。  
+ <span data-ttu-id="9aabd-127">假設您設計的對話方塊在座標 (100, 48) 上有一個按鈕。</span><span class="sxs-lookup"><span data-stu-id="9aabd-127">Suppose you design a dialog box with a button at coordinates (100, 48).</span></span> <span data-ttu-id="9aabd-128">當這個對話方塊以預設 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]顯示時，按鈕位在實體座標 (100, 48)。</span><span class="sxs-lookup"><span data-stu-id="9aabd-128">When this dialog box is displayed at the default 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], the button is located at physical coordinates of (100, 48).</span></span> <span data-ttu-id="9aabd-129">在 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]時，它位在實體座標 (125, 60)。</span><span class="sxs-lookup"><span data-stu-id="9aabd-129">At 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], it is located at physical coordinates of (125, 60).</span></span> <span data-ttu-id="9aabd-130">但邏輯座標在任何 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定時都是相同的：(100, 48)。</span><span class="sxs-lookup"><span data-stu-id="9aabd-130">But the logical coordinates are the same at any [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] setting: (100, 48).</span></span>  
   
- 邏輯座標很重要，因為不論 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為何，它們都會維持作業系統和應用程式的一致行為。 例如，<xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=fullName> 一般會傳回邏輯座標。 如果您將游標移至對話方塊內的項目上，不論 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為何，都會傳回相同座標。 如果您在 \(100, 100\) 繪製控制項，它會繪製到這些邏輯座標上，並在任何 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定上佔用相同的相對位置。  
+ <span data-ttu-id="9aabd-131">邏輯座標很重要，因為不論 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為何，它們都會維持作業系統和應用程式的一致行為。</span><span class="sxs-lookup"><span data-stu-id="9aabd-131">Logical coordinates are important, because they make the behavior of the operating system and applications consistent regardless of the [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] setting.</span></span> <span data-ttu-id="9aabd-132">例如，<xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>通常會傳回邏輯座標。</span><span class="sxs-lookup"><span data-stu-id="9aabd-132">For example, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> normally returns the logical coordinates.</span></span> <span data-ttu-id="9aabd-133">如果您將游標移至對話方塊內的項目上，不論 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為何，都會傳回相同座標。</span><span class="sxs-lookup"><span data-stu-id="9aabd-133">If you move the cursor over an element in a dialog box, the same coordinates are returned regardless of the [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] setting.</span></span> <span data-ttu-id="9aabd-134">如果您在 (100, 100) 繪製控制項，它會繪製到這些邏輯座標上，並在任何 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定上佔用相同的相對位置。</span><span class="sxs-lookup"><span data-stu-id="9aabd-134">If you draw a control at (100, 100), it is drawn to those logical coordinates, and will occupy the same relative position at any [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] setting.</span></span>  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
-## 使用者介面自動化用戶端中的縮放比例  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 不會使用邏輯座標。 下列方法和屬性會傳回實體座標或採用它們做為參數。  
+## <a name="scaling-in-ui-automation-clients"></a><span data-ttu-id="9aabd-135">使用者介面自動化用戶端中的縮放比例</span><span class="sxs-lookup"><span data-stu-id="9aabd-135">Scaling in UI Automation Clients</span></span>  
+ <span data-ttu-id="9aabd-136">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 不會使用邏輯座標。</span><span class="sxs-lookup"><span data-stu-id="9aabd-136">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] does not use logical coordinates.</span></span> <span data-ttu-id="9aabd-137">下列方法和屬性會傳回實體座標或採用它們做為參數。</span><span class="sxs-lookup"><span data-stu-id="9aabd-137">The following methods and properties either return physical coordinates or take them as parameters.</span></span>  
   
 -   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
@@ -58,26 +64,26 @@ caps.handback.revision: 16
   
 -   <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
   
- 根據預設，在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 環境中執行的使用者介面自動化用戶端應用程式將無法從這些方法和屬性取得正確結果。 例如，因為游標位置是在邏輯座標中，用戶端無法單純地將這些座標傳遞至 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>，以取得游標下的項目。 此外，應用程式也將無法在其用戶端區域之外正確放置視窗。  
+ <span data-ttu-id="9aabd-138">根據預設，在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 環境中執行的使用者介面自動化用戶端應用程式將無法從這些方法和屬性取得正確結果。</span><span class="sxs-lookup"><span data-stu-id="9aabd-138">By default, a UI Automation client application running in a non-96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] environment will not be able to obtain correct results from these methods and properties.</span></span> <span data-ttu-id="9aabd-139">例如，因為游標位置是在邏輯座標中，用戶端無法單純地將這些座標傳遞至 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> ，以取得游標下的項目。</span><span class="sxs-lookup"><span data-stu-id="9aabd-139">For example, because the cursor position is in logical coordinates, the client cannot simply pass these coordinates to <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> to obtain the element that is under the cursor.</span></span> <span data-ttu-id="9aabd-140">此外，應用程式也將無法在其用戶端區域之外正確放置視窗。</span><span class="sxs-lookup"><span data-stu-id="9aabd-140">In addition, the application will not be able to correctly place windows outside its client area.</span></span>  
   
- 解決方法分為兩個部分。  
+ <span data-ttu-id="9aabd-141">解決方法分為兩個部分。</span><span class="sxs-lookup"><span data-stu-id="9aabd-141">The solution is in two parts.</span></span>  
   
-1.  第一，讓用戶端應用程式成為 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 感知。 若要執行這項動作，請在啟動時呼叫 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `SetProcessDPIAware`。 以 Managed 程式碼的下列宣告，讓這個函式成為可用的。  
+1.  <span data-ttu-id="9aabd-142">第一，讓用戶端應用程式成為 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知。</span><span class="sxs-lookup"><span data-stu-id="9aabd-142">First, make the client application [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware.</span></span> <span data-ttu-id="9aabd-143">若要執行這項動作，請在啟動時呼叫 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `SetProcessDPIAware` 。</span><span class="sxs-lookup"><span data-stu-id="9aabd-143">To do this, call the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] function `SetProcessDPIAware` at startup.</span></span> <span data-ttu-id="9aabd-144">以 Managed 程式碼的下列宣告，讓這個函式成為可用的。</span><span class="sxs-lookup"><span data-stu-id="9aabd-144">In managed code, the following declaration makes this function available.</span></span>  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     這個函式會讓整個處理序成為 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 感知，表示屬於該處理序的所有視窗都是未縮放。 例如，在 [Highlighter Sample](http://msdn.microsoft.com/zh-tw/19ba4577-753e-4efd-92cc-c02ee67c1b69) 中，構成反白顯示矩型的四個視窗是位在取自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的實體座標，而非邏輯座標。 如果這個範例不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 感知，就會在桌面的邏輯座標上繪製反白顯示，而在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 環境中，這會造成放置不正確的情況。  
+     <span data-ttu-id="9aabd-145">這個函式會讓整個處理序成為 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知，表示屬於該處理序的所有視窗都是未縮放。</span><span class="sxs-lookup"><span data-stu-id="9aabd-145">This function makes the entire process [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware, meaning that all windows that belong to the process are unscaled.</span></span> <span data-ttu-id="9aabd-146">例如，在 [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)中，構成反白顯示矩型的四個視窗是位在取自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的實體座標，而非邏輯座標。</span><span class="sxs-lookup"><span data-stu-id="9aabd-146">In the [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69), for instance, the four windows that make up the highlight rectangle are located at the physical coordinates obtained from [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], not the logical coordinates.</span></span> <span data-ttu-id="9aabd-147">如果這個範例不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知，就會在桌面的邏輯座標上繪製反白顯示，而在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 環境中，這會造成放置不正確的情況。</span><span class="sxs-lookup"><span data-stu-id="9aabd-147">If the sample were not [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware, the highlight would be drawn at the logical coordinates on the desktop, which would result in incorrect placement in a non-96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] environment.</span></span>  
   
-2.  若要取得游標座標，請呼叫 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `GetPhysicalCursorPos`。 下列範例顯示如何宣告及使用這個函式。  
+2.  <span data-ttu-id="9aabd-148">若要取得游標座標，請呼叫 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `GetPhysicalCursorPos`。</span><span class="sxs-lookup"><span data-stu-id="9aabd-148">To get cursor coordinates, call the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] function `GetPhysicalCursorPos`.</span></span> <span data-ttu-id="9aabd-149">下列範例顯示如何宣告及使用這個函式。</span><span class="sxs-lookup"><span data-stu-id="9aabd-149">The following example shows how to declare and use this function.</span></span>  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
   
 > [!CAUTION]
->  請勿使用 <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=fullName>。 這個屬性在縮放環境中用戶端視窗之外的行為是未定義的。  
+>  <span data-ttu-id="9aabd-150">請勿使用<xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="9aabd-150">Do not use <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="9aabd-151">這個屬性在縮放環境中用戶端視窗之外的行為是未定義的。</span><span class="sxs-lookup"><span data-stu-id="9aabd-151">The behavior of this property outside client windows in a scaled environment is undefined.</span></span>  
   
- 如果您的應用程式與非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 感知的應用程式執行直接跨處理序通訊，您可能必須使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`，在邏輯與實體座標之間轉換。  
+ <span data-ttu-id="9aabd-152">如果您的應用程式與非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的應用程式執行直接跨處理序通訊，您可能必須使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`，在邏輯與實體座標之間轉換。</span><span class="sxs-lookup"><span data-stu-id="9aabd-152">If your application performs direct cross-process communication with non- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware applications, you may have convert between logical and physical coordinates by using the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] functions `PhysicalToLogicalPoint` and `LogicalToPhysicalPoint`.</span></span>  
   
-## 請參閱  
- [Highlighter Sample](http://msdn.microsoft.com/zh-tw/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+## <a name="see-also"></a><span data-ttu-id="9aabd-153">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9aabd-153">See Also</span></span>  
+ [<span data-ttu-id="9aabd-154">Highlighter Sample</span><span class="sxs-lookup"><span data-stu-id="9aabd-154">Highlighter Sample</span></span>](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)

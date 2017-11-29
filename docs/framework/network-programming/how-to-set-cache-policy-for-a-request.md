@@ -8,29 +8,25 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- request cache policies
+- csharp
+- vb
+helpviewer_keywords: request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4acef4b118422a8276260d083a5c31c41472eb68
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2cd278f307784cd994f733c029e606f507c523f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>如何：設定要求的快取原則
-下列範例示範如何設定要求的快取原則。 範例的輸入是如 http://www.contoso.com/ 之類的 URI。  
+# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="bef90-102">如何：設定要求的快取原則</span><span class="sxs-lookup"><span data-stu-id="bef90-102">How to: Set Cache Policy for a Request</span></span>
+<span data-ttu-id="bef90-103">下列範例示範如何設定要求的快取原則。</span><span class="sxs-lookup"><span data-stu-id="bef90-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="bef90-104">範例的輸入是如 http://www.contoso.com/ 之類的 URI。</span><span class="sxs-lookup"><span data-stu-id="bef90-104">The example input is a URI such as http://www.contoso.com/.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼範例會建立一個快取原則，允許所要求的資源在快取中的時間尚未超過一天時，從快取使用該資源。 此範例會顯示一個訊息，指出是否已從快取使用資源 (例如，`"The response was retrieved from the cache : False."`)，然後顯示該資源。 用戶端與伺服器之間的任何快取都可以滿足要求。  
+## <a name="example"></a><span data-ttu-id="bef90-105">範例</span><span class="sxs-lookup"><span data-stu-id="bef90-105">Example</span></span>  
+ <span data-ttu-id="bef90-106">下列程式碼範例會建立一個快取原則，允許所要求的資源在快取中的時間尚未超過一天時，從快取使用該資源。</span><span class="sxs-lookup"><span data-stu-id="bef90-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="bef90-107">此範例會顯示一個訊息，指出是否已從快取使用資源 (例如，`"The response was retrieved from the cache : False."`)，然後顯示該資源。</span><span class="sxs-lookup"><span data-stu-id="bef90-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="bef90-108">用戶端與伺服器之間的任何快取都可以滿足要求。</span><span class="sxs-lookup"><span data-stu-id="bef90-108">A request can be fulfilled by any cache between the client and server.</span></span>  
   
 ```csharp  
 using System;  
@@ -117,10 +113,9 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [快取原則](../../../docs/framework/network-programming/cache-policy.md)   
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="bef90-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bef90-109">See Also</span></span>  
+ [<span data-ttu-id="bef90-110">網路應用程式的快取管理</span><span class="sxs-lookup"><span data-stu-id="bef90-110">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="bef90-111">快取原則</span><span class="sxs-lookup"><span data-stu-id="bef90-111">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="bef90-112">以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="bef90-112">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="bef90-113">以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="bef90-113">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="bef90-114">\<requestCaching> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="bef90-114">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

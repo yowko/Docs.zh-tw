@@ -1,45 +1,49 @@
 ---
-title: "如何：建立標準的 Windows Form 列印工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "列印 [Visual Basic], 在 Windows 應用程式中"
-  - "列印 [Windows Form]"
-  - "列印 [Windows Form], 建立列印工作"
+title: "如何：建立標準的 Windows Form 列印工作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- printing [Windows Forms]
+- printing [Windows Forms], creating print jobs
+- printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c2b0ce30f76fe7f8cbdc156c4a8ff5abffafae10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：建立標準的 Windows Form 列印工作
-Windows Form 中的列印基礎是 <xref:System.Drawing.Printing.PrintDocument> 元件，特別是 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。  藉由撰寫處理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件的程式碼，您可指定列印項目和如何列印。  
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a><span data-ttu-id="d3b02-102">如何：建立標準的 Windows Form 列印工作</span><span class="sxs-lookup"><span data-stu-id="d3b02-102">How to: Create Standard Windows Forms Print Jobs</span></span>
+<span data-ttu-id="d3b02-103">列印 Windows Form 中的基礎是<xref:System.Drawing.Printing.PrintDocument>元件 — 更具體來說，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件。</span><span class="sxs-lookup"><span data-stu-id="d3b02-103">The foundation of printing in Windows Forms is the <xref:System.Drawing.Printing.PrintDocument> component—more specifically, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span> <span data-ttu-id="d3b02-104">藉由撰寫程式碼來處理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件，您可以指定要列印的內容，以及如何進行列印。</span><span class="sxs-lookup"><span data-stu-id="d3b02-104">By writing code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, you can specify what to print and how to print it.</span></span>  
   
-### 若要建立列印工作  
+### <a name="to-create-a-print-job"></a><span data-ttu-id="d3b02-105">若要建立列印工作</span><span class="sxs-lookup"><span data-stu-id="d3b02-105">To create a print job</span></span>  
   
-1.  將 <xref:System.Drawing.Printing.PrintDocument> 元件加入至表單。  
+1.  <span data-ttu-id="d3b02-106">新增<xref:System.Drawing.Printing.PrintDocument>元件加入至表單。</span><span class="sxs-lookup"><span data-stu-id="d3b02-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2.  撰寫用來處理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件的程式碼。  
+2.  <span data-ttu-id="d3b02-107">撰寫程式碼來處理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。</span><span class="sxs-lookup"><span data-stu-id="d3b02-107">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span>  
   
-     您必須編寫自己的列印邏輯。  此外，您必須指定所要列印的材料。  
+     <span data-ttu-id="d3b02-108">您必須撰寫您自己的列印邏輯的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d3b02-108">You will have to code your own printing logic.</span></span> <span data-ttu-id="d3b02-109">此外，您必須指定要列印的資料。</span><span class="sxs-lookup"><span data-stu-id="d3b02-109">Additionally, you will have to specify the material to be printed.</span></span>  
   
-     在下列程式碼範例中，會在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件處理常式中建立一個紅色矩形的樣本圖形，以做為要列印的材料。  
+     <span data-ttu-id="d3b02-110">在下列程式碼範例中，建立範例圖形中以紅色矩形的圖形<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件處理常式，以做為要列印的資料。</span><span class="sxs-lookup"><span data-stu-id="d3b02-110">In the following code example, a sample graphic in the shape of a red rectangle is created in the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler to act as material to be printed.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
        e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -49,7 +53,6 @@ Windows Form 中的列印基礎是 <xref:System.Drawing.Printing.PrintDocument> 
        e.Graphics.FillRectangle(Brushes.Red,   
          new Rectangle(500, 500, 500, 500));  
     }  
-  
     ```  
   
     ```cpp  
@@ -62,13 +65,12 @@ Windows Form 中的列印基礎是 <xref:System.Drawing.Printing.PrintDocument> 
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 將下列程式碼加入表單的建構函式以註冊事件處理常式。  
+     <span data-ttu-id="d3b02-111">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="d3b02-111">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
        System.Drawing.Printing.PrintPageEventHandler  
        (this.printDocument1_PrintPage);  
-  
     ```  
   
     ```cpp  
@@ -77,13 +79,13 @@ Windows Form 中的列印基礎是 <xref:System.Drawing.Printing.PrintDocument> 
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     您可能還需要撰寫 <xref:System.Drawing.Printing.PrintDocument.BeginPrint> 和 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 事件的程式碼，或許還包括代表總列印頁數的整數 \(會在每一頁列印時遞減\)。  
+     <span data-ttu-id="d3b02-112">您也可以撰寫程式碼<xref:System.Drawing.Printing.PrintDocument.BeginPrint>和<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件，可能包括整數，代表總頁數列印，隨著每一頁列印會遞減。</span><span class="sxs-lookup"><span data-stu-id="d3b02-112">You may also want to write code for the <xref:System.Drawing.Printing.PrintDocument.BeginPrint> and <xref:System.Drawing.Printing.PrintDocument.EndPrint> events, perhaps including an integer representing the total number of pages to print that is decremented as each page prints.</span></span>  
   
     > [!NOTE]
-    >  您可以將 <xref:System.Windows.Forms.PrintDialog> 元件加入至表單，為使用者提供清楚且高效率的使用者介面 \(UI\)。  藉由設定 <xref:System.Windows.Forms.PrintDialog> 元件的 <xref:System.Windows.Forms.PrintDialog.Document%2A> 屬性，可讓您設定與表單上正在使用的列印文件有關的屬性。  如需 <xref:System.Windows.Forms.PrintDialog> 元件的詳細資訊，請參閱 [PrintDialog 元件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)。  
+    >  <span data-ttu-id="d3b02-113">您可以加入<xref:System.Windows.Forms.PrintDialog>元件加入至表單，以全新且有效的使用者介面 (UI) 提供給您的使用者。</span><span class="sxs-lookup"><span data-stu-id="d3b02-113">You can add a <xref:System.Windows.Forms.PrintDialog> component to your form to provide a clean and efficient user interface (UI) to your users.</span></span> <span data-ttu-id="d3b02-114">設定<xref:System.Windows.Forms.PrintDialog.Document%2A>屬性<xref:System.Windows.Forms.PrintDialog>元件可讓您設定與列印相關屬性的文件您正在使用您的表單上。</span><span class="sxs-lookup"><span data-stu-id="d3b02-114">Setting the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> component enables you to set properties related to the print document you are working with on your form.</span></span> <span data-ttu-id="d3b02-115">如需有關<xref:System.Windows.Forms.PrintDialog>元件，請參閱[PrintDialog 元件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="d3b02-115">For more information about the <xref:System.Windows.Forms.PrintDialog> component, see [PrintDialog Component](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md).</span></span>  
   
-     如需 Windows Form 列印工作細節 \(包括如何以程式設計的方式來建立列印工作\) 的詳細資訊，請參閱 <xref:System.Drawing.Printing.PrintPageEventArgs>。  
+     <span data-ttu-id="d3b02-116">如需特定的 Windows Form 列印工作，包括如何建立列印工作，以程式設計的方式，請參閱<xref:System.Drawing.Printing.PrintPageEventArgs>。</span><span class="sxs-lookup"><span data-stu-id="d3b02-116">For more information about the specifics of Windows Forms print jobs, including how to create a print job programmatically, see <xref:System.Drawing.Printing.PrintPageEventArgs>.</span></span>  
   
-## 請參閱  
- <xref:System.Drawing.Printing.PrintDocument>   
- [Windows Form 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a><span data-ttu-id="d3b02-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d3b02-117">See Also</span></span>  
+ <xref:System.Drawing.Printing.PrintDocument>  
+ [<span data-ttu-id="d3b02-118">Windows Forms 列印支援</span><span class="sxs-lookup"><span data-stu-id="d3b02-118">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

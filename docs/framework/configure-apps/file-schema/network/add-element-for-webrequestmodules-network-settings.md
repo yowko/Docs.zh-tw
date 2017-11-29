@@ -1,82 +1,84 @@
 ---
-title: "webRequestModules 的 &lt;add&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> 項目, webRequestModules"
-  - "<webRequestModules>, add 項目"
-  - "add 項目, webRequestModules"
-  - "webRequestModules, add 項目"
+title: "&lt;新增&gt;webRequestModules （網路設定） 的項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <webRequestModules>, add element
+- webRequestModules, add element
+- add element, webRequestModules
+- <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fd407f77e75bce4bdbc37acd5f28bbe39f92d564
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# webRequestModules 的 &lt;add&gt; 項目 (網路設定)
-將自訂 Web 要求模組加入至應用程式。  
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="18319-102">&lt;新增&gt;webRequestModules （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="18319-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="18319-103">將自訂的 Web 要求模組加入至應用程式。</span><span class="sxs-lookup"><span data-stu-id="18319-103">Adds a custom Web request module to the application.</span></span>  
   
-## 語法  
+ <span data-ttu-id="18319-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="18319-104">\<configuration></span></span>  
+<span data-ttu-id="18319-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="18319-105">\<system.net></span></span>  
+<span data-ttu-id="18319-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="18319-106">\<webRequestModules></span></span>  
+<span data-ttu-id="18319-107">\<add></span><span class="sxs-lookup"><span data-stu-id="18319-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="18319-108">語法</span><span class="sxs-lookup"><span data-stu-id="18319-108">Syntax</span></span>  
   
-      <add   
-  prefix = "URI prefix"   
-  type = "module name, Version, Culture, PublicKeyToken"   
+```xml  
+<add   
+  prefix="URI prefix"   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="18319-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="18319-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="18319-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="18319-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="18319-111">屬性</span><span class="sxs-lookup"><span data-stu-id="18319-111">Attributes</span></span>  
   
-|**屬性**|**描述**|  
-|------------|------------|  
-|`prefix`|這個 Web 要求模組所處理之要求的 URI 前置詞。|  
-|`type`|實作這個 Web 要求模組之模組的組件和類別名稱。|  
+|<span data-ttu-id="18319-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="18319-112">**Attribute**</span></span>|<span data-ttu-id="18319-113">**說明**</span><span class="sxs-lookup"><span data-stu-id="18319-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`prefix`|<span data-ttu-id="18319-114">此 Web 要求模組所處理的要求 URI 前置詞。</span><span class="sxs-lookup"><span data-stu-id="18319-114">The URI prefix for requests handled by this Web request module.</span></span>|  
+|`type`|<span data-ttu-id="18319-115">完整限定的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)、 分隔逗號，可實作此 Web 要求的模組。</span><span class="sxs-lookup"><span data-stu-id="18319-115">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="18319-116">子元素</span><span class="sxs-lookup"><span data-stu-id="18319-116">Child Elements</span></span>  
+ <span data-ttu-id="18319-117">無。</span><span class="sxs-lookup"><span data-stu-id="18319-117">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="18319-118">父項目</span><span class="sxs-lookup"><span data-stu-id="18319-118">Parent Elements</span></span>  
   
-|**項目**|**描述**|  
-|------------|------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定向網路主機要求資訊所使用的模組。|  
+|<span data-ttu-id="18319-119">**目**</span><span class="sxs-lookup"><span data-stu-id="18319-119">**Element**</span></span>|<span data-ttu-id="18319-120">**說明**</span><span class="sxs-lookup"><span data-stu-id="18319-120">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="18319-121">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="18319-121">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="18319-122">指定要求資訊從網路主機使用的模組。</span><span class="sxs-lookup"><span data-stu-id="18319-122">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## 備註  
- `prefix` 屬性會定義使用指定之 Web 要求模組的 URI 前置詞。  Web 要求模組通常是註冊成處理特定的通訊協定 \(例如 HTTP 或 FTP\)，但是也可以註冊成處理對特定伺服器或伺服器路徑的要求。  
+## <a name="remarks"></a><span data-ttu-id="18319-123">備註</span><span class="sxs-lookup"><span data-stu-id="18319-123">Remarks</span></span>  
+ <span data-ttu-id="18319-124">`prefix`屬性定義會使用指定的 Web 要求模組的 URI 前置詞。</span><span class="sxs-lookup"><span data-stu-id="18319-124">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="18319-125">Web 要求模組來處理特定的通訊協定，例如 HTTP 或 FTP，通常註冊，但可以登錄來處理要求特定伺服器或伺服器上的路徑。</span><span class="sxs-lookup"><span data-stu-id="18319-125">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
   
- URI 相符的前置詞傳遞至 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 方法後，就會建立 Web 要求模組。  
+ <span data-ttu-id="18319-126">當符合 URI 的前置詞傳遞給建立 Web 要求模組<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="18319-126">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
   
- `prefix` 屬性的值必須是有效 UR 的前置字元，例如 "http" 或 "http:\/\/www.contoso.com"。  
+ <span data-ttu-id="18319-127">值`prefix`屬性應該是有效的 URI-例如，「 http 」 或 「 http://www.contoso.com"的前置字元。</span><span class="sxs-lookup"><span data-stu-id="18319-127">The value for the `prefix` attribute should be the leading characters of a valid URI --for example, "http", or "http://www.contoso.com".</span></span>  
   
- `type` 屬性的值必須是有效的 DLL 名稱和對應的類別名稱，並且以逗號分隔。  
+ <span data-ttu-id="18319-128">值`type`屬性應為有效型別名稱和對應的組件名稱，以逗號分隔。</span><span class="sxs-lookup"><span data-stu-id="18319-128">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma .</span></span>  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a><span data-ttu-id="18319-129">組態檔</span><span class="sxs-lookup"><span data-stu-id="18319-129">Configuration Files</span></span>  
+ <span data-ttu-id="18319-130">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="18319-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 範例  
- 下列程式碼範例會註冊 HTTP 的自訂 Web 要求模組。  您應該將 Version 和 PublicKeyToken 的值取代成指定之模組的正確值。  
+## <a name="example"></a><span data-ttu-id="18319-131">範例</span><span class="sxs-lookup"><span data-stu-id="18319-131">Example</span></span>  
+ <span data-ttu-id="18319-132">下列範例會註冊自訂的 Web 要求模組的 HTTP。</span><span class="sxs-lookup"><span data-stu-id="18319-132">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="18319-133">您應該取得版本和 PublicKeyToken 的值取代為指定模組的正確值。</span><span class="sxs-lookup"><span data-stu-id="18319-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -89,6 +91,6 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net.WebRequest>   
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="18319-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="18319-134">See Also</span></span>  
+ <xref:System.Net.WebRequest>  
+ [<span data-ttu-id="18319-135">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="18319-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

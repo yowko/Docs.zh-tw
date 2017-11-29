@@ -1,97 +1,98 @@
 ---
-title: "如何：撰寫複合控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "複合控制項, 建立"
-  - "使用者控制項 [Windows Form], 建立"
-  - "使用者控制項 [Windows Form], 繼承自"
-  - "UserControl 類別, 建立複合控制項"
+title: "如何：撰寫複合控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UserControl class [Windows Forms], creating composite controls
+- user controls [Windows Forms], creating
+- user controls [Windows Forms], inheriting from
+- composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72c68568f0178956d6154f0b3a070e69b6ff0502
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：撰寫複合控制項
-複合控制項 \(Composite Control\) 可用於許多方面。  您可以將它們撰寫為 Windows 桌面應用程式專案的一部分，並且只在專案的表單上使用它們。  或者您可以在 Windows 控制項程式庫專案中撰寫它們、將專案編譯成組件 \(Assembly\)，並在其他專案中使用控制項。  您甚至可以繼承它們，然後針對特殊目的，使用視覺繼承來快速自訂它們。  
+# <a name="how-to-author-composite-controls"></a><span data-ttu-id="e4def-102">如何：撰寫複合控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-102">How to: Author Composite Controls</span></span>
+<span data-ttu-id="e4def-103">複合控制項的運用方式有許多種。</span><span class="sxs-lookup"><span data-stu-id="e4def-103">Composite controls can be employed in many ways.</span></span> <span data-ttu-id="e4def-104">您可以將它們撰寫成 Windows 桌面應用程式專案的一部分，且只在專案中的表單上使用它們。</span><span class="sxs-lookup"><span data-stu-id="e4def-104">You can author them as part of a Windows desktop application project, and use them only on forms in the project.</span></span> <span data-ttu-id="e4def-105">或者，您可以在 Windows 控制項程式庫專案中撰寫它們、將專案編譯成組件，然後在其他專案中使用控制項。</span><span class="sxs-lookup"><span data-stu-id="e4def-105">Or you can author them in a Windows Control Library project, compile the project into an assembly, and use the controls in other projects.</span></span> <span data-ttu-id="e4def-106">您甚至可以繼承它們，並使用視覺繼承來針對特殊用途進行快速自訂。</span><span class="sxs-lookup"><span data-stu-id="e4def-106">You can even inherit from them, and use visual inheritance to customize them quickly for special purposes.</span></span>  
   
 > [!NOTE]
->  如果您想要撰寫使用於 Web Form 上的複合控制項，請參閱 [Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md)。  
+>  <span data-ttu-id="e4def-107">如果您想要撰寫複合控制項以在 Web Forms 上使用，請參閱[開發自訂 ASP.NET 伺服器控制項](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。</span><span class="sxs-lookup"><span data-stu-id="e4def-107">If you want to author a composite control to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
 >   
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="e4def-108">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="e4def-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="e4def-109">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="e4def-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="e4def-110">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="e4def-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要撰寫複合控制項  
+### <a name="to-author-a-composite-control"></a><span data-ttu-id="e4def-111">撰寫複合控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-111">To author a composite control</span></span>  
   
-1.  開啟名為 `DemoControlHost` 的新 \[**Windows 應用程式**\] 專案。  
+1.  <span data-ttu-id="e4def-112">開啟名為 `DemoControlHost` 的新 [Windows 應用程式] 專案。</span><span class="sxs-lookup"><span data-stu-id="e4def-112">Open a new **Windows Application** project called `DemoControlHost`.</span></span>  
   
-2.  在 \[**專案**\] 功能表上，按一下 \[**加入使用者控制項**\]。  
+2.  <span data-ttu-id="e4def-113">在 [專案] 功能表上，按一下 [新增使用者控制項]。</span><span class="sxs-lookup"><span data-stu-id="e4def-113">On the **Project**menu, click **Add User Control**.</span></span>  
   
-3.  在 \[**加入新項目**\] 對話方塊中，提供您希望複合控制項擁有的名稱給類別檔案 \(.vb 或 .cs 檔\)。  
+3.  <span data-ttu-id="e4def-114">在 [新增項目] 對話方塊中，為類別檔案 (.vb 或 .cs 檔案) 指定您希望複合控制項擁有的名稱。</span><span class="sxs-lookup"><span data-stu-id="e4def-114">In the **Add New Item** dialog box, give the class file (.vb or .cs file) the name you want the composite control to have.</span></span>  
   
-4.  按一下 \[**加入**\] 按鈕以建立複合控制項的類別檔案。  
+4.  <span data-ttu-id="e4def-115">按一下 [新增] 按鈕以建立複合控制項的類別檔案。</span><span class="sxs-lookup"><span data-stu-id="e4def-115">Click the **Add** button to create the class file for the composite control.</span></span>  
   
-5.  從 \[**工具箱**\] 將控制項加入至複合控制項介面。  
+5.  <span data-ttu-id="e4def-116">將控制項從 [工具箱] 新增至複合控制項介面。</span><span class="sxs-lookup"><span data-stu-id="e4def-116">Add controls from the **Toolbox** to the composite control surface.</span></span>  
   
-6.  在事件程序中放置程式碼，以便處理複合控制項或其構成控制項所引發的事件。  
+6.  <span data-ttu-id="e4def-117">將程式碼放在事件程序中，以處理複合控制項或其組成控制項所引發的事件。</span><span class="sxs-lookup"><span data-stu-id="e4def-117">Place code in event procedures, to handle events raised by the composite control or by its constituent controls.</span></span>  
   
-7.  關閉複合控制項的設計工具，並在接到提示時儲存檔案。  
+7.  <span data-ttu-id="e4def-118">關閉複合控制項的設計工具，並在系統提示時儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="e4def-118">Close the designer for the composite control, and save the file when you are prompted.</span></span>  
   
-8.  在 \[**建置**\] 功能表上，按一下 \[**建置方案**\]。  
+8.  <span data-ttu-id="e4def-119">在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。</span><span class="sxs-lookup"><span data-stu-id="e4def-119">On the **Build** menu, click **Build Solution**.</span></span>  
   
-     必須建置專案，自訂控制項才能出現在 \[**工具箱**\] 中。  
+     <span data-ttu-id="e4def-120">必須建置專案，以便自訂要顯示於 [工具箱] 的控制項。</span><span class="sxs-lookup"><span data-stu-id="e4def-120">The project must be built in order for custom controls to appear in the **Toolbox**.</span></span>  
   
-9. 使用 \[**工具箱**\] 的 \[**DemoControlHost**\] 索引標籤，將控制項的執行個體加入至 `Form1`。  
+9. <span data-ttu-id="e4def-121">使用 [工具箱] 的 [DemoControlHost] 索引標籤，將控制項的執行個體新增至 `Form1`。</span><span class="sxs-lookup"><span data-stu-id="e4def-121">Use the **DemoControlHost** tab of the **Toolbox** to add instances of your control to `Form1`.</span></span>  
   
-### 若要撰寫控制項類別程式庫  
+### <a name="to-author-a-control-class-library"></a><span data-ttu-id="e4def-122">撰寫控制項類別庫</span><span class="sxs-lookup"><span data-stu-id="e4def-122">To author a control class library</span></span>  
   
-1.  開啟新的 \[**Windows 控制項程式庫**\] 專案。  
+1.  <span data-ttu-id="e4def-123">開啟新的 [Windows 控制項程式庫] 專案。</span><span class="sxs-lookup"><span data-stu-id="e4def-123">Open a new **Windows Control Library** project.</span></span>  
   
-     根據預設，專案包含有複合控制項。  
+     <span data-ttu-id="e4def-124">根據預設，專案會包含複合控制項。</span><span class="sxs-lookup"><span data-stu-id="e4def-124">By default, the project contains a composite control.</span></span>  
   
-2.  如以上程序所述加入控制項和程式碼。  
+2.  <span data-ttu-id="e4def-125">如上述程序所述，新增控制項和程式碼。</span><span class="sxs-lookup"><span data-stu-id="e4def-125">Add controls and code as described in the procedure above.</span></span>  
   
-3.  選擇不要繼承類別變更的控制項，並將這個控制項的 \[**Modifiers**\] 屬性設定為 \[**Private**\]。  
+3.  <span data-ttu-id="e4def-126">選擇您不希望繼承類別變更的控制項，並將此控制項的 [修飾詞] 屬性設定為 [私人]。</span><span class="sxs-lookup"><span data-stu-id="e4def-126">Choose a control you do not want inheriting classes to change, and set the **Modifiers** property of this control to **Private**.</span></span>  
   
-4.  建置 DLL。  
+4.  <span data-ttu-id="e4def-127">建置 DLL。</span><span class="sxs-lookup"><span data-stu-id="e4def-127">Build the DLL.</span></span>  
   
-### 若要繼承控制項類別程式庫中的複合控制項  
+### <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a><span data-ttu-id="e4def-128">繼承自控制項類別庫中的複合控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-128">To inherit from a composite control in a control class library</span></span>  
   
-1.  在 \[**檔案**\] 功能表上指向 \[**加入**\]，然後按一下 \[**新增專案**\]，以加入新的 \[**Windows 應用程式**\] 專案至方案。  
+1.  <span data-ttu-id="e4def-129">在 [檔案] 功能表上，指向 [新增]，然後選取 [新增專案]，以將新的 [Windows 應用程式] 專案新增至方案。</span><span class="sxs-lookup"><span data-stu-id="e4def-129">On the **File** menu, point to **Add** and select **New Project** to add a new **Windows Application** project to the solution.</span></span>  
   
-2.  在 \[**方案總管**\] 中，以滑鼠右鍵按一下新專案的 \[**參考**\] 資料夾，並選擇 \[**加入參考**\] 以開啟 \[**加入參考**\] 對話方塊。  
+2.  <span data-ttu-id="e4def-130">在 [方案總管] 中，以滑鼠右鍵按一下新專案的 [參考] 資料夾，然後選擇 [新增參考] 以開啟 [新增參考] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="e4def-130">In **Solution Explorer**, right-click the **References** folder for the new project and choose **Add Reference** to open the **Add Reference** dialog box.</span></span>  
   
-3.  選取 \[**專案**\] 索引標籤並且按兩下您的控制項程式庫專案。  
+3.  <span data-ttu-id="e4def-131">選取 [專案] 索引標籤並連按兩下您的控制項程式庫專案。</span><span class="sxs-lookup"><span data-stu-id="e4def-131">Select the **Projects** tab and double-click your control library project.</span></span>  
   
-4.  在 \[**建置**\] 功能表上，按一下 \[**建置方案**\]。  
+4.  <span data-ttu-id="e4def-132">在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。</span><span class="sxs-lookup"><span data-stu-id="e4def-132">On the **Build** menu, click **Build Solution**.</span></span>  
   
-5.  在 \[**方案總管**\] 中，以滑鼠右鍵按一下控制項程式庫專案，然後從捷徑功能表中選取 \[**加入新項目**\]。  
+5.  <span data-ttu-id="e4def-133">在 [方案總管] 中，以滑鼠右鍵按一下您的控制項程式庫專案並選取捷徑功能表中的 [新增項目]。</span><span class="sxs-lookup"><span data-stu-id="e4def-133">In **Solution Explorer**, right-click your control library project and select **Add New Item** from the shortcut menu.</span></span>  
   
-6.  從 \[**加入新項目**\] 對話方塊選取 \[**繼承的使用者控制項**\] 樣板。  
+6.  <span data-ttu-id="e4def-134">從 [新增項目] 對話方塊中，選取 [繼承的使用者控制項] 範本。</span><span class="sxs-lookup"><span data-stu-id="e4def-134">Select the **Inherited User Control** template from the **Add New Item** dialog box.</span></span>  
   
-7.  在 \[**繼承選取器**\] 對話方塊中，按兩下要繼承的控制項。  
+7.  <span data-ttu-id="e4def-135">在 [繼承選取器] 對話方塊方塊中，連按兩下您想要繼承的控制項。</span><span class="sxs-lookup"><span data-stu-id="e4def-135">In the **Inheritance Picker** dialog box, double-click the control you want to inherit from.</span></span>  
   
-     新的控制項已加入至您的專案中。  
+     <span data-ttu-id="e4def-136">新的控制項會新增至您的專案。</span><span class="sxs-lookup"><span data-stu-id="e4def-136">A new control is added to your project.</span></span>  
   
-8.  開啟新控制項的視覺設計工具，及加入額外的組成控制項。  
+8.  <span data-ttu-id="e4def-137">開啟新控制項的視覺化設計工具並新增其他組成控制項。</span><span class="sxs-lookup"><span data-stu-id="e4def-137">Open the visual designer for the new control and add additional constituent controls.</span></span>  
   
-     您可以看到繼承自 DLL 的複合控制項的組成控制項，而且可以改變 \[**Modifiers**\] 屬性為 \[**Public**\] 的控制項屬性。  您無法變更 \[**Modifiers**\] 屬性為 \[**Private**\] 的控制項屬性。  
+     <span data-ttu-id="e4def-138">您可以在 DLL 中看見繼承自複合控制項的組成控制項，而且可以修改其 [修飾詞] 屬性為 [公用] 之控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="e4def-138">You can see the constituent controls that were inherited from the composite control in your DLL, and you can alter the properties of controls whose **Modifiers** property is **Public**.</span></span> <span data-ttu-id="e4def-139">您無法變更其 [修飾詞] 屬性為 [私人] 之控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="e4def-139">You cannot change the properties of the control whose **Modifiers** property is **Private**.</span></span>  
   
-## 請參閱  
- [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)   
- [逐步解說：使用 Visual C\# 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)   
- [逐步解說：使用 Visual Basic 繼承自 Windows Form 控制項](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)   
- [逐步解說：使用 Visual C\# 繼承自 Windows Form 控制項](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)   
- [控制項類型建議](../../../../docs/framework/winforms/controls/control-type-recommendations.md)   
- [如何：撰寫 Windows Form 的控制項](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)   
- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="e4def-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e4def-140">See Also</span></span>  
+ [<span data-ttu-id="e4def-141">逐步解說：使用 Visual Basic 撰寫複合控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-141">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [<span data-ttu-id="e4def-142">逐步解說：使用 Visual C# 撰寫複合控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-142">Walkthrough: Authoring a Composite Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [<span data-ttu-id="e4def-143">逐步解說：使用 Visual Basic 繼承自 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-143">Walkthrough: Inheriting from a Windows Forms Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [<span data-ttu-id="e4def-144">逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-144">Walkthrough: Inheriting from a Windows Forms Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [<span data-ttu-id="e4def-145">控制項類型建議</span><span class="sxs-lookup"><span data-stu-id="e4def-145">Control Type Recommendations</span></span>](../../../../docs/framework/winforms/controls/control-type-recommendations.md)  
+ [<span data-ttu-id="e4def-146">操作說明：撰寫 Windows Forms 的控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-146">How to: Author Controls for Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [<span data-ttu-id="e4def-147">各種自訂控制項</span><span class="sxs-lookup"><span data-stu-id="e4def-147">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

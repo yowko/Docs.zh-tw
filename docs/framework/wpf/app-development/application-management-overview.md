@@ -1,98 +1,102 @@
 ---
-title: "應用程式管理概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式管理 [WPF]"
+title: "應用程式管理概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-caps.latest.revision: 56
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 52
+caps.latest.revision: "56"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 應用程式管理概觀
-所有的應用程式會共用常見的一組適用於應用程式實作和管理的功能。  本主題提供的功能，在<xref:System.Windows.Application>來建立和管理應用程式的類別。  
-  
+# <a name="application-management-overview"></a><span data-ttu-id="5074a-102">應用程式管理概觀</span><span class="sxs-lookup"><span data-stu-id="5074a-102">Application Management Overview</span></span>
+<span data-ttu-id="5074a-103">所有應用程式通常會共用一組適用於應用程式實作和管理的通用功能。</span><span class="sxs-lookup"><span data-stu-id="5074a-103">All applications tend to share a common set of functionality that applies to application implementation and management.</span></span> <span data-ttu-id="5074a-104">本主題提供中的功能概觀<xref:System.Windows.Application>類別，用於建立和管理應用程式。</span><span class="sxs-lookup"><span data-stu-id="5074a-104">This topic provides an overview of the functionality in the <xref:System.Windows.Application> class for creating and managing applications.</span></span>  
    
   
-## Application 類別  
- 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，應用程式範圍的一般功能封裝在<xref:System.Windows.Application>類別。  <xref:System.Windows.Application>類別還包含下列功能：  
+## <a name="the-application-class"></a><span data-ttu-id="5074a-105">Application 類別</span><span class="sxs-lookup"><span data-stu-id="5074a-105">The Application Class</span></span>  
+ <span data-ttu-id="5074a-106">在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，應用程式範圍的一般功能封裝在<xref:System.Windows.Application>類別。</span><span class="sxs-lookup"><span data-stu-id="5074a-106">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], common application-scoped functionality is encapsulated in the <xref:System.Windows.Application> class.</span></span> <span data-ttu-id="5074a-107"><xref:System.Windows.Application>類別包含下列功能：</span><span class="sxs-lookup"><span data-stu-id="5074a-107">The <xref:System.Windows.Application> class includes the following functionality:</span></span>  
   
--   追蹤應用程式的存留期 \(Lifetime\) 並與其互動。  
+-   <span data-ttu-id="5074a-108">追蹤應用程式存留期並與其互動。</span><span class="sxs-lookup"><span data-stu-id="5074a-108">Tracking and interacting with application lifetime.</span></span>  
   
--   擷取和處理命令列參數。  
+-   <span data-ttu-id="5074a-109">擷取及處理命令列參數。</span><span class="sxs-lookup"><span data-stu-id="5074a-109">Retrieving and processing command-line parameters.</span></span>  
   
--   偵測及回應未處理的例外狀況 \(Exception\)。  
+-   <span data-ttu-id="5074a-110">偵測及回應未處理的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="5074a-110">Detecting and responding to unhandled exceptions.</span></span>  
   
--   共用應用程式範圍屬性和資源。  
+-   <span data-ttu-id="5074a-111">共用應用程式範圍的屬性和資源。</span><span class="sxs-lookup"><span data-stu-id="5074a-111">Sharing application-scope properties and resources.</span></span>  
   
--   管理獨立應用程式中的視窗。  
+-   <span data-ttu-id="5074a-112">管理獨立應用程式中的視窗。</span><span class="sxs-lookup"><span data-stu-id="5074a-112">Managing windows in standalone applications.</span></span>  
   
--   追蹤和管理功能。  
+-   <span data-ttu-id="5074a-113">追蹤及管理瀏覽。</span><span class="sxs-lookup"><span data-stu-id="5074a-113">Tracking and managing navigation.</span></span>  
   
 <a name="The_Application_Class"></a>   
-## 如何使用應用程式類別的一般工作  
- 如果您不感興趣的詳細資料的所有<xref:System.Windows.Application>類別下, 表列出一些常見工作，如<xref:System.Windows.Application> ，以及如何完成這些。  檢視相關的 API 和主題，您可以找到更多的資訊和範例程式碼。  
+## <a name="how-to-perform-common-tasks-using-the-application-class"></a><span data-ttu-id="5074a-114">如何使用 Application 類別執行一般工作</span><span class="sxs-lookup"><span data-stu-id="5074a-114">How to Perform Common Tasks Using the Application Class</span></span>  
+ <span data-ttu-id="5074a-115">如果您不感興趣的詳細資料的所有<xref:System.Windows.Application>下表列出一些常見工作的類別，<xref:System.Windows.Application>以及如何完成這些工作。</span><span class="sxs-lookup"><span data-stu-id="5074a-115">If you are not interested in all of the details of the <xref:System.Windows.Application> class, the following table lists some of the common tasks for <xref:System.Windows.Application> and how to accomplish them.</span></span> <span data-ttu-id="5074a-116">您可以檢視相關的 API 和主題，來尋找詳細資訊和範例程式碼。</span><span class="sxs-lookup"><span data-stu-id="5074a-116">By viewing the related API and topics, you can find more information and sample code.</span></span>  
   
-|工作|處理方式|  
-|--------|----------|  
-|取得物件，表示目前的應用程式|使用 <xref:System.Windows.Application.Current%2A?displayProperty=fullName> 屬性。|  
-|加入至應用程式的啟動畫面|請參閱 [在 WPF 應用程式中加入啟動顯示畫面](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。|  
-|啟動應用程式|請使用 <xref:System.Windows.Application.Run%2A?displayProperty=fullName> 方法。|  
-|停止應用程式|請使用 <xref:System.Windows.Application.Current%2A> 物件的 <xref:System.Windows.Application.Shutdown%2A?displayProperty=fullName> 方法。|  
-|取得從命令列的引數|處理<xref:System.Windows.Application.Startup?displayProperty=fullName>事件，並使用<xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=fullName>屬性。  如需範例，請參閱<xref:System.Windows.Application.Startup?displayProperty=fullName>事件。|  
-|取得和設定應用程式的結束代碼|設定<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=fullName>屬性在<xref:System.Windows.Application.Exit?displayProperty=fullName>事件處理常式或呼叫<xref:System.Windows.Application.Shutdown%2A>方法，並傳入整數。|  
-|偵測及回應未處理的例外狀況|處理 <xref:System.Windows.Application.DispatcherUnhandledException> 事件。|  
-|取得和設定應用程式範圍資源|使用 <xref:System.Windows.Application.Resources%2A?displayProperty=fullName> 屬性。|  
-|使用應用程式範圍資源字典|請參閱 [使用應用程式範圍的資源字典](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md)。|  
-|取得和設定應用程式範圍的屬性|使用 <xref:System.Windows.Application.Properties%2A?displayProperty=fullName> 屬性。|  
-|取得和儲存應用程式的狀態|請參閱 [跨應用程式工作階段保存和還原應用程式範圍的屬性](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)。|  
-|管理非程式碼資料檔案，包括資源檔、 內容檔和來源網站檔。|請參閱 [WPF 應用程式資源、內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。|  
-|管理獨立應用程式中的視窗|請參閱 [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。|  
-|追蹤和管理功能|請參閱 [巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。|  
+|<span data-ttu-id="5074a-117">工作</span><span class="sxs-lookup"><span data-stu-id="5074a-117">Task</span></span>|<span data-ttu-id="5074a-118">方法</span><span class="sxs-lookup"><span data-stu-id="5074a-118">Approach</span></span>|  
+|----------|--------------|  
+|<span data-ttu-id="5074a-119">取得代表目前應用程式的物件</span><span class="sxs-lookup"><span data-stu-id="5074a-119">Get an object that represents the current application</span></span>|<span data-ttu-id="5074a-120">請使用 <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-120">Use the <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> property.</span></span>|  
+|<span data-ttu-id="5074a-121">將啟動畫面新增至應用程式</span><span class="sxs-lookup"><span data-stu-id="5074a-121">Add a startup screen to an application</span></span>|<span data-ttu-id="5074a-122">請參閱[WPF 應用程式中加入啟動顯示畫面](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-122">See [Add a Splash Screen to a WPF Application](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).</span></span>|  
+|<span data-ttu-id="5074a-123">啟動應用程式</span><span class="sxs-lookup"><span data-stu-id="5074a-123">Start an application</span></span>|<span data-ttu-id="5074a-124">請使用 <xref:System.Windows.Application.Run%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="5074a-124">Use the <xref:System.Windows.Application.Run%2A?displayProperty=nameWithType> method.</span></span>|  
+|<span data-ttu-id="5074a-125">停止應用程式</span><span class="sxs-lookup"><span data-stu-id="5074a-125">Stop an application</span></span>|<span data-ttu-id="5074a-126">使用<xref:System.Windows.Application.Shutdown%2A>方法<xref:System.Windows.Application.Current%2A?displayProperty=nameWithType>物件。</span><span class="sxs-lookup"><span data-stu-id="5074a-126">Use the <xref:System.Windows.Application.Shutdown%2A> method of the <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> object.</span></span>|  
+|<span data-ttu-id="5074a-127">從命令列取得引數</span><span class="sxs-lookup"><span data-stu-id="5074a-127">Get arguments from the command line</span></span>|<span data-ttu-id="5074a-128">處理<xref:System.Windows.Application.Startup?displayProperty=nameWithType>事件並使用<xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-128">Handle the <xref:System.Windows.Application.Startup?displayProperty=nameWithType> event and use the <xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5074a-129">如需範例，請參閱<xref:System.Windows.Application.Startup?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-129">For an example, see the <xref:System.Windows.Application.Startup?displayProperty=nameWithType> event.</span></span>|  
+|<span data-ttu-id="5074a-130">取得及設定應用程式結束代碼</span><span class="sxs-lookup"><span data-stu-id="5074a-130">Get and set the application exit code</span></span>|<span data-ttu-id="5074a-131">設定<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType>屬性<xref:System.Windows.Application.Exit?displayProperty=nameWithType>事件處理常式或呼叫<xref:System.Windows.Application.Shutdown%2A>方法並傳入整數。</span><span class="sxs-lookup"><span data-stu-id="5074a-131">Set the <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType> property in the <xref:System.Windows.Application.Exit?displayProperty=nameWithType> event handler or call the <xref:System.Windows.Application.Shutdown%2A> method and pass in an integer.</span></span>|  
+|<span data-ttu-id="5074a-132">偵測及回應未處理的例外狀況</span><span class="sxs-lookup"><span data-stu-id="5074a-132">Detect and respond to unhandled exceptions</span></span>|<span data-ttu-id="5074a-133">處理<xref:System.Windows.Application.DispatcherUnhandledException>事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-133">Handle the <xref:System.Windows.Application.DispatcherUnhandledException> event.</span></span>|  
+|<span data-ttu-id="5074a-134">取得及設定應用程式範圍的資源</span><span class="sxs-lookup"><span data-stu-id="5074a-134">Get and set application-scoped resources</span></span>|<span data-ttu-id="5074a-135">請使用 <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-135">Use the <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> property.</span></span>|  
+|<span data-ttu-id="5074a-136">使用應用程式範圍的資源字典</span><span class="sxs-lookup"><span data-stu-id="5074a-136">Use an application-scope resource dictionary</span></span>|<span data-ttu-id="5074a-137">請參閱[使用應用程式範圍的資源字典](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-137">See [Use an Application-Scope Resource Dictionary](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md).</span></span>|  
+|<span data-ttu-id="5074a-138">取得及設定應用程式範圍的屬性</span><span class="sxs-lookup"><span data-stu-id="5074a-138">Get and set application-scoped properties</span></span>|<span data-ttu-id="5074a-139">請使用 <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-139">Use the <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> property.</span></span>|  
+|<span data-ttu-id="5074a-140">取得及儲存應用程式的狀態</span><span class="sxs-lookup"><span data-stu-id="5074a-140">Get and save an application's state</span></span>|<span data-ttu-id="5074a-141">請參閱[保存及還原應用程式範圍的屬性可以跨應用程式工作階段](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-141">See [Persist and Restore Application-Scope Properties Across Application Sessions](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).</span></span>|  
+|<span data-ttu-id="5074a-142">管理非程式碼資料檔案，包括資源檔、內容檔案和來源網站檔案。</span><span class="sxs-lookup"><span data-stu-id="5074a-142">Manage non-code data files, including resource files, content files, and site-of-origin files.</span></span>|<span data-ttu-id="5074a-143">請參閱[WPF 應用程式資源、 內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-143">See [WPF Application Resource, Content, and Data Files](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).</span></span>|  
+|<span data-ttu-id="5074a-144">管理獨立應用程式中的視窗</span><span class="sxs-lookup"><span data-stu-id="5074a-144">Manage windows in standalone applications</span></span>|<span data-ttu-id="5074a-145">請參閱[WPF Windows 概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-145">See [WPF Windows Overview](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).</span></span>|  
+|<span data-ttu-id="5074a-146">追蹤及管理瀏覽</span><span class="sxs-lookup"><span data-stu-id="5074a-146">Track and manage navigation</span></span>|<span data-ttu-id="5074a-147">請參閱[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-147">See [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span></span>|  
   
 <a name="The_Application_Definition"></a>   
-## 應用程式定義  
- 若要使用的功能<xref:System.Windows.Application>類別，您必須實作應用程式定義。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式定義是衍生自 <xref:System.Windows.Application> 而且已經設定特殊 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 設定的類別。  
+## <a name="the-application-definition"></a><span data-ttu-id="5074a-148">應用程式定義</span><span class="sxs-lookup"><span data-stu-id="5074a-148">The Application Definition</span></span>  
+ <span data-ttu-id="5074a-149">若要利用的功能<xref:System.Windows.Application>類別，您必須實作應用程式定義。</span><span class="sxs-lookup"><span data-stu-id="5074a-149">To utilize the functionality of the <xref:System.Windows.Application> class, you must implement an application definition.</span></span> <span data-ttu-id="5074a-150">A[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式定義是類別，衍生自<xref:System.Windows.Application>且具有特殊設定[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]設定。</span><span class="sxs-lookup"><span data-stu-id="5074a-150">A [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application definition is a class that derives from <xref:System.Windows.Application> and is configured with a special [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] setting.</span></span>  
   
-### 實作應用程式定義  
- 一般的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式定義都是同時使用標記和程式碼後置 \(Code\-Behind\) 來實作。  這種實作方式可以讓您使用標記，以宣告方式設定應用程式屬性、資源和註冊事件，同時在程式碼後置中處理事件並實作應用程式特有的行為。  
+### <a name="implementing-an-application-definition"></a><span data-ttu-id="5074a-151">實作應用程式定義</span><span class="sxs-lookup"><span data-stu-id="5074a-151">Implementing an Application Definition</span></span>  
+ <span data-ttu-id="5074a-152">一般[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用標記和程式碼後置實作應用程式定義。</span><span class="sxs-lookup"><span data-stu-id="5074a-152">A typical [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application definition is implemented using both markup and code-behind.</span></span> <span data-ttu-id="5074a-153">這可讓您使用標記，以宣告方式設定應用程式屬性、資源和註冊事件，同時在程式碼後置中，處理事件及實作應用程式特定行為。</span><span class="sxs-lookup"><span data-stu-id="5074a-153">This allows you to use markup to declaratively set application properties, resources, and register events, while handling events and implementing application-specific behavior in code-behind.</span></span>  
   
- 下列範例示範如何同時使用標記和程式碼後置來實作應用程式定義：  
+ <span data-ttu-id="5074a-154">下列範例示範如何使用標記和程式碼後置，來實作應用程式定義：</span><span class="sxs-lookup"><span data-stu-id="5074a-154">The following example shows how to implement an application definition using both markup and code-behind:</span></span>  
   
- [!code-xml[ApplicationSnippets#ApplicationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
+ [!code-xaml[ApplicationSnippets#ApplicationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
   
  [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
  [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
   
- 若要讓標記檔案和程式碼後置的檔案一起運作，必須符合下列條件：  
+ <span data-ttu-id="5074a-155">若要搭配使用標記檔案和程式碼後置檔案，下列情況必須成立：</span><span class="sxs-lookup"><span data-stu-id="5074a-155">To allow a markup file and code-behind file to work together, the following needs to happen:</span></span>  
   
--   標記中的 `Application` 項目必須包含 `x:Class` 屬性 \(Attribute\)。  建置應用程式時，標記檔案中若存在 `x:Class` 會造成 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 建立衍生自 <xref:System.Windows.Application> 且具有 `x:Class` 屬性指定之名稱的 `partial` 類別。  這需要加入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 結構描述的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間宣告 \(`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`\)。  
+-   <span data-ttu-id="5074a-156">在標記中，`Application`元素必須包含`x:Class`屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-156">In markup, the `Application` element must include the `x:Class` attribute.</span></span> <span data-ttu-id="5074a-157">應用程式建置的時，是否存在`x:Class`標記中的檔案會導致[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]建立`partial`類別衍生自<xref:System.Windows.Application>且具有所指定名稱`x:Class`屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-157">When the application is built, the existence of `x:Class` in the markup file causes [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] to create a `partial` class that derives from <xref:System.Windows.Application> and has the name that is specified by the `x:Class` attribute.</span></span> <span data-ttu-id="5074a-158">這需要加入[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]的命名空間宣告[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]結構描述 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。</span><span class="sxs-lookup"><span data-stu-id="5074a-158">This requires the addition of an [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace declaration for the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] schema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ).</span></span>  
   
--   程式碼後置中的類別必須是 `partial` 類別，並具有標記中 `x:Class` 屬性所指定的相同名稱，且必須衍生自 <xref:System.Windows.Application>。  允許程式碼後置的檔案與 `partial` 類別產生關聯，這個類別是在建置應用程式時根據標記產生的 \(請參閱[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)\)。  
+-   <span data-ttu-id="5074a-159">在程式碼後置類別必須是`partial`類別具有相同名稱的指定`x:Class`屬性標記中，必須衍生自<xref:System.Windows.Application>。</span><span class="sxs-lookup"><span data-stu-id="5074a-159">In code-behind, the class must be a `partial` class with the same name that is specified by the `x:Class` attribute in markup and must derive from <xref:System.Windows.Application>.</span></span> <span data-ttu-id="5074a-160">這可讓相關聯的程式碼後置檔案`partial`建置應用程式時，所產生的標記檔案類別 (請參閱[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md))。</span><span class="sxs-lookup"><span data-stu-id="5074a-160">This allows the code-behind file to be associated with the `partial` class that is generated for the markup file when the application is built (see [Building a WPF Application](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).</span></span>  
   
 > [!NOTE]
->  當您使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 建立新的 WPF 應用程式專案或 WPF 瀏覽器應用程式專案時，預設會包含應用程式定義，並同時使用標記和程式碼後置加以定義。  
+>  <span data-ttu-id="5074a-161">當您建立新的 WPF 應用程式專案或 WPF 瀏覽器應用程式的專案使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，應用程式定義預設隨附且使用標記和程式碼後置定義。</span><span class="sxs-lookup"><span data-stu-id="5074a-161">When you create a new WPF Application project or WPF Browser Application project using [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], an application definition is included by default and is defined using both markup and code-behind.</span></span>  
   
- 這個程式碼是實作應用程式定義所需的最基本程式碼。  不過，建置 \(Build\) 及執行應用程式之前，您還必須對應用程式定義進行一項額外的 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 組態設定。  
+ <span data-ttu-id="5074a-162">此程式碼是實作應用程式定義的最低需求。</span><span class="sxs-lookup"><span data-stu-id="5074a-162">This code is the minimum that is required to implement an application definition.</span></span> <span data-ttu-id="5074a-163">不過，其他[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]需要對應用程式定義，再建置及執行應用程式的組態。</span><span class="sxs-lookup"><span data-stu-id="5074a-163">However, an additional [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] configuration needs to be made to the application definition before building and running the application.</span></span>  
   
-### 設定 MSBuild 的應用程式定義  
- 獨立應用程式和 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 必須實作特定層級的基礎結構之後才能執行。  這個基礎結構最重要的部分是進入點 \(Entry Point\)。  當使用者啟動應用程式時，作業系統會呼叫進入點，也就是用來啟動應用程式的已知功能。  
+### <a name="configuring-the-application-definition-for-msbuild"></a><span data-ttu-id="5074a-164">設定 MSBuild 的應用程式定義</span><span class="sxs-lookup"><span data-stu-id="5074a-164">Configuring the Application Definition for MSBuild</span></span>  
+ <span data-ttu-id="5074a-165">獨立應用程式和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]可以執行之前，需要特定層級的基礎結構的實作。</span><span class="sxs-lookup"><span data-stu-id="5074a-165">Standalone applications and [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] require the implementation of a certain level of infrastructure before they can run.</span></span> <span data-ttu-id="5074a-166">此基礎結構的最重要部分是進入點。</span><span class="sxs-lookup"><span data-stu-id="5074a-166">The most important part of this infrastructure is the entry point.</span></span> <span data-ttu-id="5074a-167">當使用者啟動應用程式時，作業系統會呼叫進入點，這是用於啟動應用程式的已知函式。</span><span class="sxs-lookup"><span data-stu-id="5074a-167">When an application is launched by a user, the operating system calls the entry point, which is a well-known function for starting applications.</span></span>  
   
- 依照慣例，開發人員必須自行撰寫這個程式碼的某些部分或全部 \(依技術而定\)。  不過，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會在將應用程式定義的標記檔案設定為 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` 項目時自動產生這個程式碼，如下列 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 專案檔所示。  
+ <span data-ttu-id="5074a-168">傳統上，開發人員必須自行撰寫這段程式碼的一部分或全部 (視使用技術而定)。</span><span class="sxs-lookup"><span data-stu-id="5074a-168">Traditionally, developers have needed to write some or all of this code for themselves, depending on the technology.</span></span> <span data-ttu-id="5074a-169">不過，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]標記檔案的應用程式定義設定為時，為您產生這個程式碼[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`ApplicationDefinition`項目，如下列所示[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]專案檔：</span><span class="sxs-lookup"><span data-stu-id="5074a-169">However, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] generates this code for you when the markup file of your application definition is configured as an [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`ApplicationDefinition` item, as shown in the following [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] project file:</span></span>  
   
-```  
+```xml  
 <Project   
   DefaultTargets="Build"  
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+                        xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   ...  
   <ApplicationDefinition Include="App.xaml" />  
   <Compile Include="App.xaml.cs" />  
@@ -100,282 +104,281 @@ caps.handback.revision: 52
 </Project>  
 ```  
   
- 因為程式碼後置的檔案包含程式碼，所以如同一般情況，這個檔案會標記為 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` 項目。  
+ <span data-ttu-id="5074a-170">程式碼後置檔案包含程式碼，因為它會標示為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile`項目，做為是正常現象。</span><span class="sxs-lookup"><span data-stu-id="5074a-170">Because the code-behind file contains code, it is marked as an [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` item, as is normal.</span></span>  
   
- 將這些 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 組態套用至應用程式定義的標記和程式碼後置檔案將會使 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 產生如下的程式碼：  
+ <span data-ttu-id="5074a-171">這些應用程式[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]標記和程式碼後置檔案的應用程式定義的設定會導致[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]來產生程式碼如下所示：</span><span class="sxs-lookup"><span data-stu-id="5074a-171">The application of these [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] configurations to the markup and code-behind files of an application definition causes [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] to generate code like the following:</span></span>  
   
  [!code-csharp[AppDefAugSnippets#AppDefAugCODE1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs#appdefaugcode1)]
  [!code-vb[AppDefAugSnippets#AppDefAugCODE1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb#appdefaugcode1)]  
 [!code-csharp[AppDefAugSnippets#AppDefAugCODE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs#appdefaugcode2)]
 [!code-vb[AppDefAugSnippets#AppDefAugCODE2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb#appdefaugcode2)]  
   
- 產生的程式碼會以額外的基礎架構程式碼 \(包括進入點方法 `Main`\) 來擴充您的應用程式定義。  <xref:System.STAThreadAttribute> 屬性會套用至 `Main` 方法，以指出 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的主要 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 執行緒是 STA 執行緒 \(此為 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 之所需\)。呼叫 `Main` 時，它會在呼叫 `InitializeComponent` 方法以註冊事件並設定標記中實作的屬性之前，建立 `App` 的新執行個體。  因為 `InitializeComponent` 是自動產生的，所以您不需要像實作 <xref:System.Windows.Controls.Page> 和 <xref:System.Windows.Window> 時一樣，從應用程式定義明確呼叫 `InitializeComponent`。  最後，此程式碼會呼叫 <xref:System.Windows.Application.Run%2A> 方法來啟動應用程式。  
+ <span data-ttu-id="5074a-172">產生的程式碼加強您的應用程式定義的其他基礎結構程式碼，其中包括 進入點方法`Main`。</span><span class="sxs-lookup"><span data-stu-id="5074a-172">The resulting code augments your application definition with additional infrastructure code, which includes the entry-point method `Main`.</span></span> <span data-ttu-id="5074a-173"><xref:System.STAThreadAttribute>屬性套用至`Main`方法，指出主[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式是 STA 執行緒，所需的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="5074a-173">The <xref:System.STAThreadAttribute> attribute is applied to the `Main` method to indicate that the main [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread for the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application is an STA thread, which is required for [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.</span></span> <span data-ttu-id="5074a-174">呼叫時，`Main`建立的新執行個體`App`之前先呼叫`InitializeComponent`方法，以註冊事件，並設定屬性，會在標記中實作。</span><span class="sxs-lookup"><span data-stu-id="5074a-174">When called, `Main` creates a new instance of `App` before calling the `InitializeComponent` method to register the events and set the properties that are implemented in markup.</span></span> <span data-ttu-id="5074a-175">因為`InitializeComponent`產生，您不需要明確地呼叫`InitializeComponent`從應用程式定義像您在執行動作<xref:System.Windows.Controls.Page>和<xref:System.Windows.Window>實作。</span><span class="sxs-lookup"><span data-stu-id="5074a-175">Because `InitializeComponent` is generated for you, you don't need to explicitly call `InitializeComponent` from an application definition like you do for <xref:System.Windows.Controls.Page> and <xref:System.Windows.Window> implementations.</span></span> <span data-ttu-id="5074a-176">最後，<xref:System.Windows.Application.Run%2A>呼叫方法來啟動應用程式。</span><span class="sxs-lookup"><span data-stu-id="5074a-176">Finally, the <xref:System.Windows.Application.Run%2A> method is called to start the application.</span></span>  
   
 <a name="Getting_the_Current_Application"></a>   
-## 取得目前的應用程式  
- 因為功能的<xref:System.Windows.Application>類別跨應用程式共用 」，可以是只有一個執行個體<xref:System.Windows.Application>類別每個<xref:System.AppDomain>。  為強制施行此原則，<xref:System.Windows.Application> 類別會實作成單一類別 \(請參閱[在 C\# 中實作單一類別](http://msdn2.microsoft.com/zh-tw/library/ms998558.aspx)\)；此類別可建立本身的單一執行個體，並使用 `static` <xref:System.Windows.Application.Current%2A> 屬性提供其共用存取權。  
+## <a name="getting-the-current-application"></a><span data-ttu-id="5074a-177">取得目前的應用程式</span><span class="sxs-lookup"><span data-stu-id="5074a-177">Getting the Current Application</span></span>  
+ <span data-ttu-id="5074a-178">因為功能的<xref:System.Windows.Application>類別由應用程式共用，可以有只有一個執行個體<xref:System.Windows.Application>每個類別<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="5074a-178">Because the functionality of the <xref:System.Windows.Application> class are shared across an application, there can be only one instance of the <xref:System.Windows.Application> class per <xref:System.AppDomain>.</span></span> <span data-ttu-id="5074a-179">若要強制執行，<xref:System.Windows.Application>類別實作為單一類別 (請參閱[C# 中實作的單一](http://go.microsoft.com/fwlink/?LinkId=100567))，建立本身的單一執行個體，並提供的共用存取權與`static` <xref:System.Windows.Application.Current%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-179">To enforce this, the <xref:System.Windows.Application> class is implemented as a singleton class (see [Implementing Singleton in C#](http://go.microsoft.com/fwlink/?LinkId=100567)), which creates a single instance of itself and provides shared access to it with the `static`<xref:System.Windows.Application.Current%2A> property.</span></span>  
   
- 下列程式碼顯示如何取得目前 <xref:System.AppDomain> 之 <xref:System.Windows.Application> 物件的參考。  
+ <span data-ttu-id="5074a-180">下列程式碼示範如何取得參考<xref:System.Windows.Application>物件目前<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="5074a-180">The following code shows how to acquire a reference to the <xref:System.Windows.Application> object for the current <xref:System.AppDomain>.</span></span>  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
- <xref:System.Windows.Application.Current%2A> 會傳回 <xref:System.Windows.Application> 類別執行個體的參考。  如果需要 <xref:System.Windows.Application> 衍生類別 \(Derived Class\) 的參考，必須轉換 <xref:System.Windows.Application.Current%2A> 屬性的值，如下列範例所示。  
+ <span data-ttu-id="5074a-181"><xref:System.Windows.Application.Current%2A>傳回的執行個體的參考<xref:System.Windows.Application>類別。</span><span class="sxs-lookup"><span data-stu-id="5074a-181"><xref:System.Windows.Application.Current%2A> returns a reference to an instance of the <xref:System.Windows.Application> class.</span></span> <span data-ttu-id="5074a-182">如果您想要的參考您<xref:System.Windows.Application>衍生的類別，您必須轉換的值<xref:System.Windows.Application.Current%2A>屬性，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="5074a-182">If you want a reference to your <xref:System.Windows.Application> derived class you must cast the value of the <xref:System.Windows.Application.Current%2A> property, as shown in the following example.</span></span>  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
   
- 您可以在 <xref:System.Windows.Application> 物件存留期的任何時間點檢查 <xref:System.Windows.Application.Current%2A> 的值。  不過，您應該小心。  在 <xref:System.Windows.Application> 類別具現化 \(Instantiated\) 之後，有一段時間 <xref:System.Windows.Application> 物件的狀態並不一致。  在這段時間，<xref:System.Windows.Application> 會執行執行程式碼所需的各種初始設定工作，包括建立應用程式基礎結構、設定屬性和註冊事件。  如果您在這段時間嘗試使用 <xref:System.Windows.Application> 物件，程式碼可能會產生無法預期的結果，尤其是當程式碼相依於正在設定的各種 <xref:System.Windows.Application> 屬性時。  
+ <span data-ttu-id="5074a-183">您可以檢查的值<xref:System.Windows.Application.Current%2A>存留期間的任何一點<xref:System.Windows.Application>物件。</span><span class="sxs-lookup"><span data-stu-id="5074a-183">You can inspect the value of <xref:System.Windows.Application.Current%2A> at any point in the lifetime of an <xref:System.Windows.Application> object.</span></span> <span data-ttu-id="5074a-184">不過，您應該要小心。</span><span class="sxs-lookup"><span data-stu-id="5074a-184">However, you should be careful.</span></span> <span data-ttu-id="5074a-185">之後<xref:System.Windows.Application>類別具現化，所以在一段期間的狀態<xref:System.Windows.Application>物件不一致。</span><span class="sxs-lookup"><span data-stu-id="5074a-185">After the <xref:System.Windows.Application> class is instantiated, there is a period during which the state of the <xref:System.Windows.Application> object is inconsistent.</span></span> <span data-ttu-id="5074a-186">在這段期間，<xref:System.Windows.Application>正在執行的各種初始設定工作所需的程式碼，若要執行，包括建立應用程式基礎結構、 設定屬性，以及註冊事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-186">During this period, <xref:System.Windows.Application> is performing the various initialization tasks that are required by your code to run, including establishing application infrastructure, setting properties, and registering events.</span></span> <span data-ttu-id="5074a-187">如果您嘗試使用<xref:System.Windows.Application>物件在這段期間，您的程式碼可能會有非預期的結果，特別是當它相依於各種<xref:System.Windows.Application>屬性設定。</span><span class="sxs-lookup"><span data-stu-id="5074a-187">If you try to use the <xref:System.Windows.Application> object during this period, your code may have unexpected results, particularly if it depends on the various <xref:System.Windows.Application> properties being set.</span></span>  
   
- 在 <xref:System.Windows.Application> 完成初始設定工作時，其存留期才會正式開始。  
+ <span data-ttu-id="5074a-188">當<xref:System.Windows.Application>完成初始設定工作，其存留期真正開始。</span><span class="sxs-lookup"><span data-stu-id="5074a-188">When <xref:System.Windows.Application> completes its initialization work, its lifetime truly begins.</span></span>  
   
 <a name="Application_Lifetime"></a>   
-## 應用程式存留期  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的存留期是由 <xref:System.Windows.Application> 引發的幾個事件標記，讓您知道應用程式何時啟動、何時啟用並停用，以及何時關閉。  
+## <a name="application-lifetime"></a><span data-ttu-id="5074a-189">應用程式存留期</span><span class="sxs-lookup"><span data-stu-id="5074a-189">Application Lifetime</span></span>  
+ <span data-ttu-id="5074a-190">存留期[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式由多個所引發的事件標記<xref:System.Windows.Application>，讓您知道您的應用程式已啟動時，已啟用及停用，並已關閉。</span><span class="sxs-lookup"><span data-stu-id="5074a-190">The lifetime of a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application is marked by several events that are raised by <xref:System.Windows.Application> to let you know when your application has started, has been activated and deactivated, and has been shut down.</span></span>  
   
-   
   
 <a name="Splash_Screen"></a>   
-### 開頭顯示畫面  
- 在 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] 中進行啟動時，您可以指定要在啟動視窗或「*啟動顯示畫面*」\(Splash Screen\) 中使用影像。  <xref:System.Windows.SplashScreen> 類別讓您可以輕易在應用程式載入時，顯示啟動視窗。  會建立 <xref:System.Windows.SplashScreen> 視窗，並在呼叫 <xref:System.Windows.Application.Run%2A> 前顯示這個視窗。  如需詳細資訊，請參閱 [應用程式啟動時間](../../../../docs/framework/wpf/advanced/application-startup-time.md) 和 [在 WPF 應用程式中加入啟動顯示畫面](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
+### <a name="splash-screen"></a><span data-ttu-id="5074a-191">啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="5074a-191">Splash Screen</span></span>  
+ <span data-ttu-id="5074a-192">從開始[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，您可以指定要在啟動視窗中，使用的影像或*啟動顯示畫面*。</span><span class="sxs-lookup"><span data-stu-id="5074a-192">Starting in the [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], you can specify an image to be used in a startup window, or *splash screen*.</span></span> <span data-ttu-id="5074a-193"><xref:System.Windows.SplashScreen>類別可讓您輕鬆地載入您的應用程式時顯示啟動視窗。</span><span class="sxs-lookup"><span data-stu-id="5074a-193">The <xref:System.Windows.SplashScreen> class makes it easy to display a startup window while your application is loading.</span></span> <span data-ttu-id="5074a-194"><xref:System.Windows.SplashScreen>建立 window 並顯示之前<xref:System.Windows.Application.Run%2A>呼叫。</span><span class="sxs-lookup"><span data-stu-id="5074a-194">The <xref:System.Windows.SplashScreen> window is created and shown before <xref:System.Windows.Application.Run%2A> is called.</span></span> <span data-ttu-id="5074a-195">如需詳細資訊，請參閱[應用程式啟動時間](../../../../docs/framework/wpf/advanced/application-startup-time.md)和[WPF 應用程式中加入啟動顯示畫面](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-195">For more information, see [Application Startup Time](../../../../docs/framework/wpf/advanced/application-startup-time.md) and [Add a Splash Screen to a WPF Application](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).</span></span>  
   
 <a name="Starting_an_Application"></a>   
-### 啟動應用程式  
- 呼叫 <xref:System.Windows.Application.Run%2A> 並初始化應用程式之後，執行應用程式的準備工作便已完成。  這個時間點是以引發 <xref:System.Windows.Application.Startup> 事件來表示：  
+### <a name="starting-an-application"></a><span data-ttu-id="5074a-196">啟動應用程式</span><span class="sxs-lookup"><span data-stu-id="5074a-196">Starting an Application</span></span>  
+ <span data-ttu-id="5074a-197">之後<xref:System.Windows.Application.Run%2A>稱為和應用程式初始化、 應用程式已準備好執行。</span><span class="sxs-lookup"><span data-stu-id="5074a-197">After <xref:System.Windows.Application.Run%2A> is called and the application is initialized, the application is ready to run.</span></span> <span data-ttu-id="5074a-198">表示當目前<xref:System.Windows.Application.Startup>引發：</span><span class="sxs-lookup"><span data-stu-id="5074a-198">This moment is signified when the <xref:System.Windows.Application.Startup> event is raised:</span></span>  
   
  [!code-csharp[ApplicationStartupSnippets#StartupCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#startupcodebehind1)]
  [!code-vb[ApplicationStartupSnippets#StartupCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#startupcodebehind1)]  
 [!code-csharp[ApplicationStartupSnippets#StartupCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#startupcodebehind2)]
 [!code-vb[ApplicationStartupSnippets#StartupCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#startupcodebehind2)]  
   
- 在應用程式存留期的這個階段，最常執行的工作是顯示 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+ <span data-ttu-id="5074a-199">此時在應用程式的存留期間，最常見的做法是以顯示[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5074a-199">At this point in an application's lifetime, the most common thing to do is to show a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span>  
   
 <a name="Showing_a_User_Interface"></a>   
-### 顯示使用者介面  
- 大部分的獨立 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 應用程式在開始執行時都會開啟 <xref:System.Windows.Window>。  如下列程式碼所示範，<xref:System.Windows.Application.Startup> 事件處理常式是可以執行這項工作的其中一個位置。  
+### <a name="showing-a-user-interface"></a><span data-ttu-id="5074a-200">顯示使用者介面</span><span class="sxs-lookup"><span data-stu-id="5074a-200">Showing a User Interface</span></span>  
+ <span data-ttu-id="5074a-201">大部分的獨立[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]應用程式開啟<xref:System.Windows.Window>何時開始執行。</span><span class="sxs-lookup"><span data-stu-id="5074a-201">Most standalone [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] applications open a <xref:System.Windows.Window> when they begin running.</span></span> <span data-ttu-id="5074a-202"><xref:System.Windows.Application.Startup>事件處理常式是一個位置，從中您可以這樣做，請以下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="5074a-202">The <xref:System.Windows.Application.Startup> event handler is one location from which you can do this, as demonstrated by the following code.</span></span>  
   
- [!code-xml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
+ [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
  [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  根據預設，獨立應用程式中所要具現化的第一個 <xref:System.Windows.Window> 會成為主應用程式視窗。  這個 <xref:System.Windows.Window> 物件是由 <xref:System.Windows.Application.MainWindow%2A?displayProperty=fullName> 屬性所參考。  如果主視窗應該是第一個具現化之 <xref:System.Windows.Window> 以外的其他視窗，可以透過程式設計的方式變更 <xref:System.Windows.Application.MainWindow%2A> 屬性的值。  
+>  <span data-ttu-id="5074a-203">第一個<xref:System.Windows.Window>為具現化在獨立應用程式就會變成主應用程式視窗的預設值。</span><span class="sxs-lookup"><span data-stu-id="5074a-203">The first <xref:System.Windows.Window> to be instantiated in a standalone application becomes the main application window by default.</span></span> <span data-ttu-id="5074a-204">這<xref:System.Windows.Window>所參考物件<xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-204">This <xref:System.Windows.Window> object is referenced by the <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5074a-205">值<xref:System.Windows.Application.MainWindow%2A>如果不同的視窗比第一個屬性也可以透過程式設計方式變更具現化<xref:System.Windows.Window>應該是主視窗。</span><span class="sxs-lookup"><span data-stu-id="5074a-205">The value of the <xref:System.Windows.Application.MainWindow%2A> property can be changed programmatically if a different window than the first instantiated <xref:System.Windows.Window> should be the main window.</span></span>  
   
- 在 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 第一次啟動時，它最有可能會巡覽至 <xref:System.Windows.Controls.Page>。  請參考下列程式碼中的示範。  
+ <span data-ttu-id="5074a-206">當[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]第一次啟動時，它會最有可能瀏覽至<xref:System.Windows.Controls.Page>。</span><span class="sxs-lookup"><span data-stu-id="5074a-206">When an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] first starts, it will most likely navigate to a <xref:System.Windows.Controls.Page>.</span></span> <span data-ttu-id="5074a-207">如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="5074a-207">This is shown in the following code.</span></span>  
   
- [!code-xml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
+ [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
  [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
  [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
   
- 如果您將 <xref:System.Windows.Application.Startup> 處理成只開啟 <xref:System.Windows.Window> 或巡覽至 <xref:System.Windows.Controls.Page>，可以改為設定標記中的 `StartupUri` 屬性。  
+ <span data-ttu-id="5074a-208">如果您處理<xref:System.Windows.Application.Startup>只能開啟<xref:System.Windows.Window>或瀏覽至<xref:System.Windows.Controls.Page>，您可以設定`StartupUri`屬性，屬性標記中。</span><span class="sxs-lookup"><span data-stu-id="5074a-208">If you handle <xref:System.Windows.Application.Startup> to only open a <xref:System.Windows.Window> or navigate to a <xref:System.Windows.Controls.Page>, you can set the `StartupUri` attribute in markup instead.</span></span>  
   
- 下列範例示範如何從獨立應用程式使用 <xref:System.Windows.Application.StartupUri%2A> 開啟 <xref:System.Windows.Window>。  
+ <span data-ttu-id="5074a-209">下列範例示範如何使用<xref:System.Windows.Application.StartupUri%2A>從獨立應用程式，來開啟<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="5074a-209">The following example shows how to use the <xref:System.Windows.Application.StartupUri%2A> from a standalone application to open a <xref:System.Windows.Window>.</span></span>  
   
- [!code-xml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
+ [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
- 下列範例示範如何使用 <xref:System.Windows.Application.StartupUri%2A> 從 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 巡覽至 <xref:System.Windows.Controls.Page>。  
+ <span data-ttu-id="5074a-210">下列範例示範如何使用<xref:System.Windows.Application.StartupUri%2A>從[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]瀏覽至<xref:System.Windows.Controls.Page>。</span><span class="sxs-lookup"><span data-stu-id="5074a-210">The following example shows how to use <xref:System.Windows.Application.StartupUri%2A> from an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] to navigate to a <xref:System.Windows.Controls.Page>.</span></span>  
   
- [!code-xml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
+ [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
- 這個標記的效果與前述用來開啟視窗的程式碼相同。  
+ <span data-ttu-id="5074a-211">此標記與前述用來開啟視窗的程式碼有相同的效果。</span><span class="sxs-lookup"><span data-stu-id="5074a-211">This markup has the same effect as the previous code for opening a window.</span></span>  
   
 > [!NOTE]
->  如需巡覽的詳細資訊，請參閱[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+>  <span data-ttu-id="5074a-212">如需有關瀏覽的詳細資訊，請參閱[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-212">For more information on navigation, see [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span></span>  
   
- 在下列情況下，您必須處理 <xref:System.Windows.Application.Startup> 事件來開啟 <xref:System.Windows.Window>：需要使用非預設建構函式 \(Constructor\) 將它具現化、需要在顯示它之前設定其屬性或訂閱其事件，或是需要處理啟動應用程式時所提供的任何命令列引數。  
+ <span data-ttu-id="5074a-213">您需要處理<xref:System.Windows.Application.Startup>事件，以開啟<xref:System.Windows.Window>如果您需要具現化使用非預設的建構函式，或您要設定其屬性或事件訂閱，然後才顯示，您需要處理的任何命令列引數，當應用程式的啟動時提供。</span><span class="sxs-lookup"><span data-stu-id="5074a-213">You need to handle the <xref:System.Windows.Application.Startup> event to open a <xref:System.Windows.Window> if you need to instantiate it using a non-default constructor, or you need to set its properties or subscribe to its events before showing it, or you need to process any command-line arguments that were supplied when the application was launched.</span></span>  
   
 <a name="Processing_Command_Line_Arguments"></a>   
-### 處理命令列引數  
- 在 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 中，獨立應用程式可以從命令提示字元或桌面啟動。  在這兩種情況下，都可以將命令列引數傳遞至應用程式。下列範例顯示以單一命令列引數 "\/StartMinimized" 啟動應用程式：  
+### <a name="processing-command-line-arguments"></a><span data-ttu-id="5074a-214">處理命令列引數</span><span class="sxs-lookup"><span data-stu-id="5074a-214">Processing Command-Line Arguments</span></span>  
+ <span data-ttu-id="5074a-215">在[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]，可以從命令提示字元或桌面啟動獨立應用程式。</span><span class="sxs-lookup"><span data-stu-id="5074a-215">In [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)], standalone applications can be launched from either a command prompt or the desktop.</span></span> <span data-ttu-id="5074a-216">在這兩種情況下，都會將命令列引數傳遞至應用程式。</span><span class="sxs-lookup"><span data-stu-id="5074a-216">In both cases, command-line arguments can be passed to the application.</span></span> <span data-ttu-id="5074a-217">下列範例顯示以單一命令列引數 "/StartMinimized" 啟動的應用程式：</span><span class="sxs-lookup"><span data-stu-id="5074a-217">The following example shows an application that is launched with a single command-line argument, "/StartMinimized":</span></span>  
   
  `wpfapplication.exe /StartMinimized`  
   
- 在應用程式初始設定期間，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會從作業系統擷取命令列引數，並透過 <xref:System.Windows.StartupEventArgs> 參數的 <xref:System.Windows.StartupEventArgs.Args%2A> 屬性，將它們傳遞至 <xref:System.Windows.Application.Startup> 事件處理常式。  您可以使用如下的程式碼擷取及儲存命令列引數。  
+ <span data-ttu-id="5074a-218">應用程式初始化期間[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]從作業系統擷取命令列引數，並將它們傳遞<xref:System.Windows.Application.Startup>透過事件處理常式<xref:System.Windows.StartupEventArgs.Args%2A>屬性<xref:System.Windows.StartupEventArgs>參數。</span><span class="sxs-lookup"><span data-stu-id="5074a-218">During application initialization, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] retrieves the command-line arguments from the operating system and passes them to the <xref:System.Windows.Application.Startup> event handler via the <xref:System.Windows.StartupEventArgs.Args%2A> property of the <xref:System.Windows.StartupEventArgs> parameter.</span></span> <span data-ttu-id="5074a-219">您可以使用如下的程式碼擷取及儲存命令列引數。</span><span class="sxs-lookup"><span data-stu-id="5074a-219">You can retrieve and store the command-line arguments using code like the following.</span></span>  
   
- [!code-xml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
+ [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
  [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
  [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
- 這個程式碼會處理 <xref:System.Windows.Application.Startup>，檢查是否已提供 **\/StartMinimized** 命令列引數；如果已提供，它會使用 <xref:System.Windows.WindowState> 的 <xref:System.Windows.WindowState> 開啟主視窗。  請注意，因為 <xref:System.Windows.Window.WindowState%2A> 屬性必須以程式設計方式設定，所以必須在程式碼中明確開啟主 <xref:System.Windows.Window>。  
+ <span data-ttu-id="5074a-220">程式碼控制代碼<xref:System.Windows.Application.Startup>來檢查是否**/StartMinimized**提供命令列引數; 如果是的話，它會開啟主視窗與<xref:System.Windows.WindowState>的<xref:System.Windows.WindowState.Minimized>。</span><span class="sxs-lookup"><span data-stu-id="5074a-220">The code handles <xref:System.Windows.Application.Startup> to check whether the **/StartMinimized** command-line argument was provided; if so, it opens the main window with a <xref:System.Windows.WindowState> of <xref:System.Windows.WindowState.Minimized>.</span></span> <span data-ttu-id="5074a-221">請注意，因為<xref:System.Windows.Window.WindowState%2A>屬性必須設定以程式設計的方式，主要<xref:System.Windows.Window>必須在程式碼中明確地開啟。</span><span class="sxs-lookup"><span data-stu-id="5074a-221">Note that because the <xref:System.Windows.Window.WindowState%2A> property must be set programmatically, the main <xref:System.Windows.Window> must be opened explicitly in code.</span></span>  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 無法擷取及處理命令列引數，因為它們是使用 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 部署來啟動 \(請參閱[部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)\)。  不過，可以從啟動 URL 中擷取和處理查詢字串參數。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]<span data-ttu-id="5074a-222">無法擷取和處理命令列引數，因為在啟動使用[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]部署 (請參閱[WPF 應用程式部署](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md))。</span><span class="sxs-lookup"><span data-stu-id="5074a-222"> cannot retrieve and process command-line arguments because they are launched using [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] deployment (see [Deploying a WPF Application](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)).</span></span> <span data-ttu-id="5074a-223">不過，它們可以透過用來啟動的 URL 擷取及處理查詢字串參數。</span><span class="sxs-lookup"><span data-stu-id="5074a-223">However, they can retrieve and process query string parameters from the URLs that are used to launch them.</span></span>  
   
 <a name="Application_Activation_and_Deactivation"></a>   
-### 應用程式啟動和停用  
- [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 也允許使用者在應用程式之間進行切換。最常用的方式是使用 ALT\+TAB 按鍵組合。  只有在應用程式具有使用者可以選取的可見 <xref:System.Windows.Window> 時，使用者才能切換到該應用程式。  目前選取的 <xref:System.Windows.Window> 是「*使用中視窗*」\(Active Window\)，又稱為「*前景視窗*」\(Foreground Window\)，也是用來接收使用者輸入的 <xref:System.Windows.Window>。具有使用者視窗的應用程式是「*作用中應用程式*」\(Active Application\)，也稱為「*前景應用程式*」\(Foreground Application\)。在下列情況中，應用程式會變成作用中應用程式：  
+### <a name="application-activation-and-deactivation"></a><span data-ttu-id="5074a-224">應用程式啟用和停用</span><span class="sxs-lookup"><span data-stu-id="5074a-224">Application Activation and Deactivation</span></span>  
+ [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]<span data-ttu-id="5074a-225"> 可讓使用者在應用程式之間切換。</span><span class="sxs-lookup"><span data-stu-id="5074a-225"> allows users to switch between applications.</span></span> <span data-ttu-id="5074a-226">最常見的做法是使用 ALT+TAB 按鍵組合。</span><span class="sxs-lookup"><span data-stu-id="5074a-226">The most common way is to use the ALT+TAB key combination.</span></span> <span data-ttu-id="5074a-227">應用程式可以只切換是否顯示<xref:System.Windows.Window>，使用者可以選取。</span><span class="sxs-lookup"><span data-stu-id="5074a-227">An application can only be switched to if it has a visible <xref:System.Windows.Window> that a user can select.</span></span> <span data-ttu-id="5074a-228">目前所選<xref:System.Windows.Window>是*作用中視窗*(也稱為*前景視窗*)，且<xref:System.Windows.Window>接收使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="5074a-228">The currently selected <xref:System.Windows.Window> is the *active window* (also known as the *foreground window*) and is the <xref:System.Windows.Window> that receives user input.</span></span> <span data-ttu-id="5074a-229">應用程式與現用視窗*作用中應用程式*(或*前景應用程式*)。</span><span class="sxs-lookup"><span data-stu-id="5074a-229">The application with the active window is the *active application* (or *foreground application*).</span></span> <span data-ttu-id="5074a-230">在下列情況中，應用程式會變成使用中應用程式：</span><span class="sxs-lookup"><span data-stu-id="5074a-230">An application becomes the active application in the following circumstances:</span></span>  
   
--   應用程式已啟動並顯示 <xref:System.Windows.Window>。  
+-   <span data-ttu-id="5074a-231">它會啟動並顯示<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="5074a-231">It is launched and shows a <xref:System.Windows.Window>.</span></span>  
   
--   使用者透過在應用程式中選取 <xref:System.Windows.Window> 從其他應用程式進行切換。  
+-   <span data-ttu-id="5074a-232">使用者從另一個應用程式切換選取<xref:System.Windows.Window>應用程式中。</span><span class="sxs-lookup"><span data-stu-id="5074a-232">A user switches from another application by selecting a <xref:System.Windows.Window> in the application.</span></span>  
   
- 您可藉由處理 <xref:System.Windows.Application.Activated?displayProperty=fullName> 事件，偵測應用程式變成作用中的時間。  
+ <span data-ttu-id="5074a-233">當應用程式變成作用中處理，您可以偵測<xref:System.Windows.Application.Activated?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-233">You can detect when an application becomes active by handling the <xref:System.Windows.Application.Activated?displayProperty=nameWithType> event.</span></span>  
   
- 同樣地，在下列情況中，應用程式會變成非作用中：  
+ <span data-ttu-id="5074a-234">同樣地，在下列情況中，應用程式會變成非使用中：</span><span class="sxs-lookup"><span data-stu-id="5074a-234">Likewise, an application can become inactive in the following circumstances:</span></span>  
   
--   使用者從目前的應用程式切換到其他應用程式。  
+-   <span data-ttu-id="5074a-235">使用者從目前的應用程式切換至另一個應用程式。</span><span class="sxs-lookup"><span data-stu-id="5074a-235">A user switches to another application from the current one.</span></span>  
   
--   應用程式關閉時。  
+-   <span data-ttu-id="5074a-236">應用程式關閉時。</span><span class="sxs-lookup"><span data-stu-id="5074a-236">When the application shuts down.</span></span>  
   
- 您可藉由處理 <xref:System.Windows.Application.Deactivated?displayProperty=fullName> 事件，偵測應用程式變成非作用中的時間。  
+ <span data-ttu-id="5074a-237">您可以藉由處理應用程式變成非作用時偵測到<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-237">You can detect when an application becomes inactive by handling the <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> event.</span></span>  
   
- 下列程式碼顯示如何處理 <xref:System.Windows.Application.Activated> 和 <xref:System.Windows.Application.Deactivated> 事件，以判斷應用程式是否正在作用。  
+ <span data-ttu-id="5074a-238">下列程式碼示範如何處理<xref:System.Windows.Application.Activated>和<xref:System.Windows.Application.Deactivated>事件，以判斷應用程式是否為作用中。</span><span class="sxs-lookup"><span data-stu-id="5074a-238">The following code shows how to handle the <xref:System.Windows.Application.Activated> and <xref:System.Windows.Application.Deactivated> events to determine whether an application is active.</span></span>  
   
- [!code-xml[ApplicationActivationSnippets#DetectActivationStateXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
+ [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
   
  [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
  [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
   
- <xref:System.Windows.Window> 也可以啟動及停用。  如需詳細資訊，請參閱 <xref:System.Windows.Window.Activated?displayProperty=fullName> 和 <xref:System.Windows.Window.Deactivated?displayProperty=fullName>。  
+ <span data-ttu-id="5074a-239">A<xref:System.Windows.Window>也可以啟用和停用。</span><span class="sxs-lookup"><span data-stu-id="5074a-239">A <xref:System.Windows.Window> can also be activated and deactivated.</span></span> <span data-ttu-id="5074a-240">如需詳細資訊，請參閱 <xref:System.Windows.Window.Activated?displayProperty=nameWithType> 和 <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="5074a-240">See <xref:System.Windows.Window.Activated?displayProperty=nameWithType> and <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType> for more information.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 既不會引發 <xref:System.Windows.Application.Activated?displayProperty=fullName> 也不會引發 <xref:System.Windows.Application.Deactivated?displayProperty=fullName>。  
+>  <span data-ttu-id="5074a-241">既不<xref:System.Windows.Application.Activated?displayProperty=nameWithType>也<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>，就會引發[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5074a-241">Neither <xref:System.Windows.Application.Activated?displayProperty=nameWithType> nor <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> is raised for [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span>  
   
 <a name="Application_Shutdown"></a>   
-### 應用程式關閉  
- 應用程式一旦關閉，其存留期間便告結束，而應用程式關閉的可能原因包括：  
+### <a name="application-shutdown"></a><span data-ttu-id="5074a-242">應用程式關閉</span><span class="sxs-lookup"><span data-stu-id="5074a-242">Application Shutdown</span></span>  
+ <span data-ttu-id="5074a-243">應用程式一旦關閉，其存留期間便告結束，而應用程式關閉的可能原因包括：</span><span class="sxs-lookup"><span data-stu-id="5074a-243">The life of an application ends when it is shut down, which can occur for the following reasons:</span></span>  
   
--   使用者關閉每個 <xref:System.Windows.Window>。  
+-   <span data-ttu-id="5074a-244">使用者關閉每個<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="5074a-244">A user closes every <xref:System.Windows.Window>.</span></span>  
   
--   使用者關閉主 <xref:System.Windows.Window>。  
+-   <span data-ttu-id="5074a-245">使用者關閉主<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="5074a-245">A user closes the main <xref:System.Windows.Window>.</span></span>  
   
--   使用者透過登出或關機結束 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 工作階段 \(Session\)。  
+-   <span data-ttu-id="5074a-246">在使用者結束[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]透過登出或關閉的工作階段。</span><span class="sxs-lookup"><span data-stu-id="5074a-246">A user ends the [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] session by logging off or shutting down.</span></span>  
   
--   已符合應用程式特定條件。  
+-   <span data-ttu-id="5074a-247">已符合應用程式特定條件。</span><span class="sxs-lookup"><span data-stu-id="5074a-247">An application-specific condition has been met.</span></span>  
   
- 為了協助您管理應用程式關閉作業，<xref:System.Windows.Application> 提供了 <xref:System.Windows.Application.Shutdown%2A> 方法、<xref:System.Windows.Application.ShutdownMode%2A> 屬性，以及 <xref:System.Windows.Application.SessionEnding> 和 <xref:System.Windows.Application.Exit> 事件。  
-  
-> [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A> 只能從擁有 <xref:System.Security.Permissions.UIPermission> 的應用程式呼叫。  獨立的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式全都擁有這種使用權限。  不過，執行於網際網路區域部分信任安全性沙箱的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 並無這種使用權限。  
-  
-#### 程式關閉模式  
- 大部分的應用程式都是在所有視窗關閉或主視窗關閉時便會關閉。  不過，有時候應用程式關閉的時機可能是由其他應用程式特定條件決定。  您可以使用下列其中一個 <xref:System.Windows.ShutdownMode> 列舉值設定 <xref:System.Windows.Application.ShutdownMode%2A>，藉以指定應用程式關閉的條件：  
-  
--   <xref:System.Windows.ShutdownMode>  
-  
--   <xref:System.Windows.ShutdownMode>  
-  
--   <xref:System.Windows.ShutdownMode>  
-  
- <xref:System.Windows.Application.ShutdownMode%2A> 的預設值是 <xref:System.Windows.ShutdownMode>，這個值表示應用程式會在使用者關閉應用程式的最後一個視窗時自動關閉。  不過，如果應用程式應該在主視窗時關閉，如果您將 <xref:System.Windows.Application.ShutdownMode%2A> 設定為 <xref:System.Windows.ShutdownMode>，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 便會自動執行該項動作。  這在下列範例中顯示。  
-  
- [!code-xml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
-  
- 當您擁有應用程式特定關閉條件時，您會將 <xref:System.Windows.Application.ShutdownMode%2A> 設定為 <xref:System.Windows.ShutdownMode>。  在這種情況下，您必須負責透過明確呼叫 <xref:System.Windows.Application.Shutdown%2A> 方法來關閉應用程式；否則，即使所有視窗都已關閉，應用程式仍會繼續執行。  請注意，當 <xref:System.Windows.Application.ShutdownMode%2A> 是 <xref:System.Windows.ShutdownMode> 或 <xref:System.Windows.ShutdownMode> 時，則會以隱含方式呼叫 <xref:System.Windows.Application.Shutdown%2A>。  
+ <span data-ttu-id="5074a-248">若要可協助您管理應用程式關閉<xref:System.Windows.Application>提供<xref:System.Windows.Application.Shutdown%2A>方法，<xref:System.Windows.Application.ShutdownMode%2A>屬性，而<xref:System.Windows.Application.SessionEnding>和<xref:System.Windows.Application.Exit>事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-248">To help you manage application shutdown, <xref:System.Windows.Application> provides the <xref:System.Windows.Application.Shutdown%2A> method, the <xref:System.Windows.Application.ShutdownMode%2A> property, and the <xref:System.Windows.Application.SessionEnding> and <xref:System.Windows.Application.Exit> events.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A> 可以從 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 設定，但是系統會忽略它；每次從瀏覽器離開時，或是裝載 \(Host\)  [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的瀏覽器關閉時，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 一定都會關閉。  如需詳細資訊，請參閱 [巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+>  <span data-ttu-id="5074a-249"><xref:System.Windows.Application.Shutdown%2A>只能從包含的應用程式呼叫<xref:System.Security.Permissions.UIPermission>。</span><span class="sxs-lookup"><span data-stu-id="5074a-249"><xref:System.Windows.Application.Shutdown%2A> can only be called from applications that have <xref:System.Security.Permissions.UIPermission>.</span></span> <span data-ttu-id="5074a-250">獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式永遠擁有這個權限。</span><span class="sxs-lookup"><span data-stu-id="5074a-250">Standalone [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications always have this permission.</span></span> <span data-ttu-id="5074a-251">不過，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]網際網路區域的部分信任安全性沙箱中執行不這麼做。</span><span class="sxs-lookup"><span data-stu-id="5074a-251">However, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] running in the Internet zone partial-trust security sandbox do not.</span></span>  
   
-#### 工作階段結束  
- <xref:System.Windows.Application.ShutdownMode%2A> 屬性所描述的關閉條件是應用程式專屬條件。  不過在某些情況下，應用程式可能會因為外部條件而關閉。  最常見的外部條件是當使用者透過下列動作結束 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 工作階段時：  
+#### <a name="shutdown-mode"></a><span data-ttu-id="5074a-252">程式關閉模式</span><span class="sxs-lookup"><span data-stu-id="5074a-252">Shutdown Mode</span></span>  
+ <span data-ttu-id="5074a-253">大多數應用程式會在所有視窗關閉或主視窗關閉時一併關閉。</span><span class="sxs-lookup"><span data-stu-id="5074a-253">Most applications shut down either when all the windows are closed or when the main window is closed.</span></span> <span data-ttu-id="5074a-254">不過有時候，應用程式關閉的時機可能是由其他應用程式特定條件決定。</span><span class="sxs-lookup"><span data-stu-id="5074a-254">Sometimes, however, other application-specific conditions may determine when an application shuts down.</span></span> <span data-ttu-id="5074a-255">您可以指定在您的應用程式將關閉設定的條件<xref:System.Windows.Application.ShutdownMode%2A>具有下列其中一種<xref:System.Windows.ShutdownMode>列舉值：</span><span class="sxs-lookup"><span data-stu-id="5074a-255">You can specify the conditions under which your application will shut down by setting <xref:System.Windows.Application.ShutdownMode%2A> with one of the following <xref:System.Windows.ShutdownMode> enumeration values:</span></span>  
   
--   登出  
+-   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   關機  
+-   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   重新開機  
+-   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
--   休眠  
+ <span data-ttu-id="5074a-256">預設值<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnLastWindowClose>，也就是說，應用程式會自動關閉當使用者關閉應用程式中的上一個視窗時。</span><span class="sxs-lookup"><span data-stu-id="5074a-256">The default value of <xref:System.Windows.Application.ShutdownMode%2A> is <xref:System.Windows.ShutdownMode.OnLastWindowClose>, which means that an application automatically shuts down when the last window in the application is closed by the user.</span></span> <span data-ttu-id="5074a-257">不過，如果您的應用程式應該關閉主視窗關閉時，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]會自動執行，如果您設定<xref:System.Windows.Application.ShutdownMode%2A>至<xref:System.Windows.ShutdownMode.OnMainWindowClose>。</span><span class="sxs-lookup"><span data-stu-id="5074a-257">However, if your application should be shut down when the main window is closed, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] automatically does that if you set <xref:System.Windows.Application.ShutdownMode%2A> to <xref:System.Windows.ShutdownMode.OnMainWindowClose>.</span></span> <span data-ttu-id="5074a-258">這在下列範例中顯示。</span><span class="sxs-lookup"><span data-stu-id="5074a-258">This is shown in the following example.</span></span>  
   
- 若要偵測 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 工作階段何時結束，您可以處理 <xref:System.Windows.Application.SessionEnding> 事件，如同下列範例所示。  
+ [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
- [!code-xml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
+ <span data-ttu-id="5074a-259">當您有特定的應用程式關閉條件時，您設定<xref:System.Windows.Application.ShutdownMode%2A>至<xref:System.Windows.ShutdownMode.OnExplicitShutdown>。</span><span class="sxs-lookup"><span data-stu-id="5074a-259">When you have application-specific shutdown conditions, you set <xref:System.Windows.Application.ShutdownMode%2A> to <xref:System.Windows.ShutdownMode.OnExplicitShutdown>.</span></span> <span data-ttu-id="5074a-260">在此情況下，它是透過明確呼叫關閉應用程式，您必須負責<xref:System.Windows.Application.Shutdown%2A>方法; 否則您的應用程式將會繼續執行，即使關閉所有視窗。</span><span class="sxs-lookup"><span data-stu-id="5074a-260">In this case, it is your responsibility to shut an application down by explicitly calling the <xref:System.Windows.Application.Shutdown%2A> method; otherwise, your application will continue running even if all the windows are closed.</span></span> <span data-ttu-id="5074a-261">請注意，<xref:System.Windows.Application.Shutdown%2A>會隱含呼叫時<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnLastWindowClose>或<xref:System.Windows.ShutdownMode.OnMainWindowClose>。</span><span class="sxs-lookup"><span data-stu-id="5074a-261">Note that <xref:System.Windows.Application.Shutdown%2A> is called implicitly when the <xref:System.Windows.Application.ShutdownMode%2A> is either <xref:System.Windows.ShutdownMode.OnLastWindowClose> or <xref:System.Windows.ShutdownMode.OnMainWindowClose>.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="5074a-262"><xref:System.Windows.Application.ShutdownMode%2A>您可以將從[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]，但會忽略它;[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]在瀏覽器或瀏覽器裝載，離開的瀏覽已一律關閉[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]已關閉。</span><span class="sxs-lookup"><span data-stu-id="5074a-262"><xref:System.Windows.Application.ShutdownMode%2A> can be set from an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], but it is ignored; an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is always shut down when it is navigated away from in a browser or when the browser that hosts the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is closed.</span></span> <span data-ttu-id="5074a-263">如需詳細資訊，請參閱[覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-263">For more information, see [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span></span>  
+  
+#### <a name="session-ending"></a><span data-ttu-id="5074a-264">工作階段結束</span><span class="sxs-lookup"><span data-stu-id="5074a-264">Session Ending</span></span>  
+ <span data-ttu-id="5074a-265">所描述的關機條件<xref:System.Windows.Application.ShutdownMode%2A>屬性專屬於應用程式。</span><span class="sxs-lookup"><span data-stu-id="5074a-265">The shutdown conditions that are described by the <xref:System.Windows.Application.ShutdownMode%2A> property are specific to an application.</span></span> <span data-ttu-id="5074a-266">不過在某些情況下，應用程式可能會因為外部狀況而關閉。</span><span class="sxs-lookup"><span data-stu-id="5074a-266">In some cases, though, an application may shut down as a result of an external condition.</span></span> <span data-ttu-id="5074a-267">當使用者結束時，就會發生最常見的外部狀況[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]工作階段的下列動作：</span><span class="sxs-lookup"><span data-stu-id="5074a-267">The most common external condition occurs when a user ends the [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] session by the following actions:</span></span>  
+  
+-   <span data-ttu-id="5074a-268">登出</span><span class="sxs-lookup"><span data-stu-id="5074a-268">Logging off</span></span>  
+  
+-   <span data-ttu-id="5074a-269">關機</span><span class="sxs-lookup"><span data-stu-id="5074a-269">Shutting down</span></span>  
+  
+-   <span data-ttu-id="5074a-270">重新啟動</span><span class="sxs-lookup"><span data-stu-id="5074a-270">Restarting</span></span>  
+  
+-   <span data-ttu-id="5074a-271">休眠</span><span class="sxs-lookup"><span data-stu-id="5074a-271">Hibernating</span></span>  
+  
+ <span data-ttu-id="5074a-272">若要偵測何時[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]工作階段隨即結束，您可以處理<xref:System.Windows.Application.SessionEnding>事件，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="5074a-272">To detect when a [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] session ends, you can handle the <xref:System.Windows.Application.SessionEnding> event, as illustrated in the following example.</span></span>  
+  
+ [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
  [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
  [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
- 在這個範例中，程式碼會檢查 <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> 屬性，以判斷 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 工作階段結束的方式。  接著，它會使用這個值對使用者顯示確認訊息。  如果使用者不想結束工作階段，程式碼會將 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 設定為 `true`，以避免結束 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 工作階段。  
+ <span data-ttu-id="5074a-273">在此範例中，程式碼會檢查<xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A>屬性來判斷如何[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]工作階段結束時。</span><span class="sxs-lookup"><span data-stu-id="5074a-273">In this example, the code inspects the <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> property to determine how the [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] session is ending.</span></span> <span data-ttu-id="5074a-274">接著，它會使用這個值對使用者顯示確認訊息。</span><span class="sxs-lookup"><span data-stu-id="5074a-274">It uses this value to display a confirmation message to the user.</span></span> <span data-ttu-id="5074a-275">如果使用者不想要結束的工作階段，此程式碼設定<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>至`true`防止[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]結束工作階段。</span><span class="sxs-lookup"><span data-stu-id="5074a-275">If the user does not want the session to end, the code sets <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> to `true` to prevent the [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] session from ending.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 不會引發 <xref:System.Windows.Application.SessionEnding>。  
+>  <span data-ttu-id="5074a-276"><xref:System.Windows.Application.SessionEnding>不會引發[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5074a-276"><xref:System.Windows.Application.SessionEnding> is not raised for [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span>  
   
-#### Exit  
- 當應用程式關閉時，可能需要執行某些最終處理作業，例如保存應用程式狀態。  針對這種情況，您可以處理 <xref:System.Windows.Application.Exit> 事件。  
+#### <a name="exit"></a><span data-ttu-id="5074a-277">結束</span><span class="sxs-lookup"><span data-stu-id="5074a-277">Exit</span></span>  
+ <span data-ttu-id="5074a-278">當應用程式關閉時，可能需要執行一些最終處理作業，例如保存應用程式狀態。</span><span class="sxs-lookup"><span data-stu-id="5074a-278">When an application shuts down, it may need to perform some final processing, such as persisting application state.</span></span> <span data-ttu-id="5074a-279">這些情況下，您可以處理<xref:System.Windows.Application.Exit>事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-279">For these situations, you can handle the <xref:System.Windows.Application.Exit> event.</span></span>  
   
- [!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+ [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
+[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
   
  [!code-csharp[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistappscopepropertiescodebehind1)]
  [!code-vb[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistappscopepropertiescodebehind1)]  
 [!code-csharp[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistappscopepropertiescodebehind2)]
 [!code-vb[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistappscopepropertiescodebehind2)]  
   
- 如需完整的範例，請參閱 [跨應用程式工作階段保存和還原應用程式範圍的屬性](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)。  
+ <span data-ttu-id="5074a-280">完整的範例，請參閱[保存和還原應用程式領域屬性跨應用程式工作階段](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)。</span><span class="sxs-lookup"><span data-stu-id="5074a-280">For the complete example, see [Persist and Restore Application-Scope Properties Across Application Sessions](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).</span></span>  
   
- 獨立應用程式和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 都可以處理 <xref:System.Windows.Application.Exit>。  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 會在發生下列情況時引發 <xref:System.Windows.Application.Exit>：  
+ <span data-ttu-id="5074a-281"><xref:System.Windows.Application.Exit>可以由兩個獨立應用程式和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5074a-281"><xref:System.Windows.Application.Exit> can be handled by both standalone applications and [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span> <span data-ttu-id="5074a-282">如[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，<xref:System.Windows.Application.Exit>會在下列情況中引發：</span><span class="sxs-lookup"><span data-stu-id="5074a-282">For [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> is raised when in the following circumstances:</span></span>  
   
--   離開 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 時。  
+-   <span data-ttu-id="5074a-283">[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]巡覽離開的。</span><span class="sxs-lookup"><span data-stu-id="5074a-283">An [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is navigated away from.</span></span>  
   
--   在 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 中關閉裝載 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的索引標籤時。  
+-   <span data-ttu-id="5074a-284">在[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]，當 [] 索引標籤裝載[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]已關閉。</span><span class="sxs-lookup"><span data-stu-id="5074a-284">In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], when the tab that is hosting the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is closed.</span></span>  
   
--   關閉瀏覽器時。  
+-   <span data-ttu-id="5074a-285">關閉瀏覽器時。</span><span class="sxs-lookup"><span data-stu-id="5074a-285">When the browser is closed.</span></span>  
   
-#### 結束代碼  
- 應用程式大多由作業系統啟動以回應使用者的要求。  不過，其他應用程式也可以啟動應用程式來執行某項特定工作。  在被啟動的應用程式關閉時，啟動端的應用程式可能需要知道被啟動之應用程式是在什麼狀況下關閉的。  在這種情況下，[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 可以讓應用程式在關閉時傳回應用程式結束代碼 \(Exit Code\)。  根據預設，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會傳回結束代碼值 0。  
+#### <a name="exit-code"></a><span data-ttu-id="5074a-286">結束代碼</span><span class="sxs-lookup"><span data-stu-id="5074a-286">Exit Code</span></span>  
+ <span data-ttu-id="5074a-287">應用程式大部分是由作業系統啟動，以回應使用者要求。</span><span class="sxs-lookup"><span data-stu-id="5074a-287">Applications are mostly launched by the operating system in response to a user request.</span></span> <span data-ttu-id="5074a-288">不過，應用程式可由另一個應用程式啟動，以執行某項特定工作。</span><span class="sxs-lookup"><span data-stu-id="5074a-288">However, an application can be launched by another application to perform some specific task.</span></span> <span data-ttu-id="5074a-289">關閉已啟動的應用程式時，正在啟動的應用程式可能需要知道已啟動之應用程式的關閉條件。</span><span class="sxs-lookup"><span data-stu-id="5074a-289">When the launched application shuts down, the launching application may want to know the condition under which the launched application shut down.</span></span> <span data-ttu-id="5074a-290">在這些情況下，[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]可讓應用程式在關閉傳回應用程式結束代碼。</span><span class="sxs-lookup"><span data-stu-id="5074a-290">In these situations, [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] allows applications to return an application exit code on shutdown.</span></span> <span data-ttu-id="5074a-291">根據預設，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式會傳回 0 的結束代碼值。</span><span class="sxs-lookup"><span data-stu-id="5074a-291">By default, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications return an exit code value of 0.</span></span>  
   
 > [!NOTE]
->  當您從 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 進行偵錯時，應用程式結束代碼會在應用程式關閉時顯示在 \[**輸出**\] 視窗中類似下面的訊息中：  
+>  <span data-ttu-id="5074a-292">當您偵錯從[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，應用程式結束程式碼會顯示在**輸出**應用程式關閉時，看起來像下列的訊息中的視窗：</span><span class="sxs-lookup"><span data-stu-id="5074a-292">When you debug from [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], the application exit code is displayed in the     **Output** window when the application shuts down, in a message that looks like the following:</span></span>  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
->  您可以按一下 \[**檢視**\] 功能表上的 \[**輸出**\]，開啟 \[**輸出**\] 視窗。  
+>  <span data-ttu-id="5074a-293">您開啟**輸出**按一下視窗**輸出**上**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="5074a-293">You open the     **Output** window by clicking     **Output** on the     **View** menu.</span></span>  
   
- 若要變更結束代碼，可以呼叫 <xref:System.Windows.Application.Shutdown%28System.Int32%29> 多載；此多載可接受整數引數做為結束代碼：  
+ <span data-ttu-id="5074a-294">若要變更的結束代碼，您可以呼叫<xref:System.Windows.Application.Shutdown%28System.Int32%29>多載，可接受整數引數的結束代碼為：</span><span class="sxs-lookup"><span data-stu-id="5074a-294">To change the exit code, you can call the <xref:System.Windows.Application.Shutdown%28System.Int32%29> overload, which accepts an integer argument to be the exit code:</span></span>  
   
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- 您可以透過處理 <xref:System.Windows.Application.Exit> 事件偵測及變更結束代碼的值。  <xref:System.Windows.Application.Exit> 事件處理常式會收到傳入的 <xref:System.Windows.ExitEventArgs>，其透過 <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> 屬性提供結束代碼的存取權。  如需詳細資訊，請參閱 <xref:System.Windows.Application.Exit>。  
+ <span data-ttu-id="5074a-295">您可以偵測結束程式碼的值，並將它變更，藉由處理<xref:System.Windows.Application.Exit>事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-295">You can detect the value of the exit code, and change it, by handling the <xref:System.Windows.Application.Exit> event.</span></span> <span data-ttu-id="5074a-296"><xref:System.Windows.Application.Exit>傳遞事件處理常式<xref:System.Windows.ExitEventArgs>可存取的結束代碼<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="5074a-296">The <xref:System.Windows.Application.Exit> event handler is passed an <xref:System.Windows.ExitEventArgs> which provides access to the exit code with the <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> property.</span></span> <span data-ttu-id="5074a-297">如需詳細資訊，請參閱<xref:System.Windows.Application.Exit>。</span><span class="sxs-lookup"><span data-stu-id="5074a-297">For more information, see <xref:System.Windows.Application.Exit>.</span></span>  
   
 > [!NOTE]
->  您可以同時在獨立應用程式和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 中設定結束代碼。  不過，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 會忽略結束代碼值。  
+>  <span data-ttu-id="5074a-298">您可以在兩個獨立應用程式設定結束碼和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5074a-298">You can set the exit code in both standalone applications and [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span> <span data-ttu-id="5074a-299">不過，會忽略結束代碼值[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5074a-299">However, the exit code value is ignored for [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span>  
   
 <a name="Unhandled_Exceptions"></a>   
-### 未處理的例外狀況  
- 有時候，應用程式可能會在異常的狀況下關閉，例如擲回無法預期的例外狀況時。  在這種情況下，應用程式可能沒有程式碼可以偵測及處理例外狀況。  這種類型的例外狀況是未處理的例外狀況；在應用程式關閉之前，將會顯示與下圖所示類似的通知訊息。  
+### <a name="unhandled-exceptions"></a><span data-ttu-id="5074a-300">未處理的例外狀況</span><span class="sxs-lookup"><span data-stu-id="5074a-300">Unhandled Exceptions</span></span>  
+ <span data-ttu-id="5074a-301">有時候，應用程式可能會在異常情況下關閉，例如擲回非預期的例外狀況時。</span><span class="sxs-lookup"><span data-stu-id="5074a-301">Sometimes an application may shut down under abnormal conditions, such as when an unanticipated exception is thrown.</span></span> <span data-ttu-id="5074a-302">在此情況下，應用程式可能沒有可偵測及處理例外狀況的程式碼。</span><span class="sxs-lookup"><span data-stu-id="5074a-302">In this case, the application may not have the code to detect and process the exception.</span></span> <span data-ttu-id="5074a-303">這種類型的例外狀況是未處理的例外狀況；在應用程式關閉之前，會顯示與下圖所示類似的通知。</span><span class="sxs-lookup"><span data-stu-id="5074a-303">This type of exception is an unhandled exception; a notification similar to that shown in the following figure is displayed before the application is closed.</span></span>  
   
- ![未處理的例外狀況通知](../../../../docs/framework/wpf/app-development/media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ <span data-ttu-id="5074a-304">![未處理的例外狀況](../../../../docs/framework/wpf/app-development/media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")</span><span class="sxs-lookup"><span data-stu-id="5074a-304">![Unhandled exception notification](../../../../docs/framework/wpf/app-development/media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")</span></span>  
   
- 從使用者經驗的觀點來看，應用程式最好能夠採取以下部分或所有措施，以避免這種預設行為：  
+ <span data-ttu-id="5074a-305">從使用者體驗的觀點來看，應用程式最好能夠藉由執行下列部分或所有動作，來避免此預設行為：</span><span class="sxs-lookup"><span data-stu-id="5074a-305">From the user experience perspective, it is better for an application to avoid this default behavior by doing some or all of the following:</span></span>  
   
--   顯示使用者容易理解的資訊。  
+-   <span data-ttu-id="5074a-306">顯示方便使用的資訊。</span><span class="sxs-lookup"><span data-stu-id="5074a-306">Displaying user-friendly information.</span></span>  
   
--   嘗試讓應用程式繼續執行。  
+-   <span data-ttu-id="5074a-307">嘗試繼續執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="5074a-307">Attempting to keep an application running.</span></span>  
   
--   在 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 中記錄詳細、方便開發者參考的例外狀況資訊。  
+-   <span data-ttu-id="5074a-308">記錄中詳細的開發人員易用的例外狀況資訊[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]事件記錄檔。</span><span class="sxs-lookup"><span data-stu-id="5074a-308">Recording detailed, developer-friendly, exception information in the [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] event log.</span></span>  
   
- 這項支援的實作需視是否能夠偵測未處理的例外狀況而定，而這也是引發 <xref:System.Windows.Application.DispatcherUnhandledException> 的原因。  
+ <span data-ttu-id="5074a-309">實作這項支援取決於要能夠偵測到未處理的例外狀況，這是什麼<xref:System.Windows.Application.DispatcherUnhandledException>都會引發事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-309">Implementing this support depends on being able to detect unhandled exceptions, which is what the <xref:System.Windows.Application.DispatcherUnhandledException> event is raised for.</span></span>  
   
- [!code-xml[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
+ [!code-xaml[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
  [!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind1)]
  [!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind1)]  
 [!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind2)]
 [!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind2)]  
   
- <xref:System.Windows.Application.DispatcherUnhandledException> 事件處理常式會收到傳入的 <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> 參數，其中包含關於未處理之例外狀況的內容資訊，包括例外狀況本身 \(<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=fullName>\)。  您可以使用這項資訊決定處理例外狀況的方式。  
+ <span data-ttu-id="5074a-310"><xref:System.Windows.Application.DispatcherUnhandledException>傳遞事件處理常式<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs>包含未處理的例外狀況，包括本身的例外狀況的相關內容資訊的參數 (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="5074a-310">The <xref:System.Windows.Application.DispatcherUnhandledException> event handler is passed a <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> parameter that contains contextual information regarding the unhandled exception, including the exception itself (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>).</span></span> <span data-ttu-id="5074a-311">您可以使用這項資訊來判斷如何處理例外狀況。</span><span class="sxs-lookup"><span data-stu-id="5074a-311">You can use this information to determine how to handle the exception.</span></span>  
   
- 處理 <xref:System.Windows.Application.DispatcherUnhandledException> 時，您應該將 <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=fullName> 屬性設定為 `true`，否則 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 仍會將例外狀況視為未處理，並還原成前述的預設行為。  如果已引發未處理的例外狀況，而且沒有處理 <xref:System.Windows.Application.DispatcherUnhandledException> 事件，或是已處理事件且 <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> 已設定為 `false`，應用程式會立即關閉。  此外，也不會引發其他任何 <xref:System.Windows.Application> 事件。  因此，如果應用程式包含必須在應用程式關閉之前執行的程式碼，您就必須處理 <xref:System.Windows.Application.DispatcherUnhandledException>。  
+ <span data-ttu-id="5074a-312">當您處理<xref:System.Windows.Application.DispatcherUnhandledException>，您應該設定<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType>屬性`true`，否則[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]仍然會視為未處理的例外狀況，並會還原為先前所述的預設行為。</span><span class="sxs-lookup"><span data-stu-id="5074a-312">When you handle <xref:System.Windows.Application.DispatcherUnhandledException>, you should set the <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType> property to `true`; otherwise, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] still considers the exception to be unhandled and reverts to the default behavior described earlier.</span></span> <span data-ttu-id="5074a-313">如果引發未處理的例外狀況，而<xref:System.Windows.Application.DispatcherUnhandledException>不處理事件，或在處理事件和<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A>設`false`，應用程式立即關閉。</span><span class="sxs-lookup"><span data-stu-id="5074a-313">If an unhandled exception is raised and either the <xref:System.Windows.Application.DispatcherUnhandledException> event is not handled, or the event is handled and <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> is set to `false`, the application shuts down immediately.</span></span> <span data-ttu-id="5074a-314">此外，沒有其他<xref:System.Windows.Application>引發事件。</span><span class="sxs-lookup"><span data-stu-id="5074a-314">Furthermore, no other <xref:System.Windows.Application> events are raised.</span></span> <span data-ttu-id="5074a-315">因此，您需要處理<xref:System.Windows.Application.DispatcherUnhandledException>如果應用程式的應用程式關閉之前，必須執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="5074a-315">Consequently, you need to handle <xref:System.Windows.Application.DispatcherUnhandledException> if your application has code that must run before the application shuts down.</span></span>  
   
- 雖然應用程式可能因為未處理的例外狀況而關閉，但是如下節所述，應用程式通常是為了回應使用者的要求而關閉。  
+ <span data-ttu-id="5074a-316">雖然應用程式可能因為未處理的例外狀況而關閉，但是應用程式通常是為了回應使用者的要求而關閉 (如下節所述)。</span><span class="sxs-lookup"><span data-stu-id="5074a-316">Although an application may shut down as a result of an unhandled exception, an application usually shuts down in response to a user request, as discussed in the next section.</span></span>  
   
 <a name="Application_Lifetime_Events"></a>   
-### 應用程式存留期事件  
- 獨立應用程式和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 並無完全相同的存留期。下圖說明獨立應用程式存留期的重要事件，並顯示這些事件的引發順序。  
+### <a name="application-lifetime-events"></a><span data-ttu-id="5074a-317">應用程式存留期事件</span><span class="sxs-lookup"><span data-stu-id="5074a-317">Application Lifetime Events</span></span>  
+ <span data-ttu-id="5074a-318">獨立應用程式和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]沒有完全相同的存留期。</span><span class="sxs-lookup"><span data-stu-id="5074a-318">Standalone applications and [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] don't have exactly the same lifetimes.</span></span> <span data-ttu-id="5074a-319">下圖說明獨立應用程式存留期內的主要事件，並顯示這些事件的引發順序。</span><span class="sxs-lookup"><span data-stu-id="5074a-319">The following figure illustrates the key events in the lifetime of a standalone application and shows the sequence in which they are raised.</span></span>  
   
- ![獨立應用程式 &#45; 應用程式物件事件](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview\_ApplicationObjectEvents")  
+ <span data-ttu-id="5074a-320">![獨立應用程式 &#45; 應用程式物件事件](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")</span><span class="sxs-lookup"><span data-stu-id="5074a-320">![Standalone Application &#45; Application Object Events](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")</span></span>  
   
- 同樣地，下圖也說明 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 存留期的重要事件，並顯示其引發順序。  
+ <span data-ttu-id="5074a-321">同樣地下, 圖說明重要的事件存留期間的[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]，並顯示其引發的順序。</span><span class="sxs-lookup"><span data-stu-id="5074a-321">Likewise, the following figure illustrates the key events in the lifetime of an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], and shows the sequence in which they are raised.</span></span>  
   
- ![XBAP &#45; 應用程式物件事件](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview\_ApplicationObjectEvents\_xbap")  
+ <span data-ttu-id="5074a-322">![XBAP &#45; 應用程式物件事件](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")</span><span class="sxs-lookup"><span data-stu-id="5074a-322">![XBAP &#45; Application Object Events](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Application>   
- [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)   
- [巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)   
- [WPF 應用程式資源、內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)   
- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)   
- [Application Model: How\-to Topics](http://msdn.microsoft.com/zh-tw/76771b09-3688-4d1c-8818-9b3f4cf39a30)   
- [應用程式開發](../../../../docs/framework/wpf/app-development/index.md)
+## <a name="see-also"></a><span data-ttu-id="5074a-323">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5074a-323">See Also</span></span>  
+ <xref:System.Windows.Application>  
+ [<span data-ttu-id="5074a-324">WPF 視窗概觀</span><span class="sxs-lookup"><span data-stu-id="5074a-324">WPF Windows Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
+ [<span data-ttu-id="5074a-325">瀏覽概觀</span><span class="sxs-lookup"><span data-stu-id="5074a-325">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [<span data-ttu-id="5074a-326">WPF 應用程式資源、內容和資料檔案</span><span class="sxs-lookup"><span data-stu-id="5074a-326">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
+ [<span data-ttu-id="5074a-327">WPF 中的 Pack URI</span><span class="sxs-lookup"><span data-stu-id="5074a-327">Pack URIs in WPF</span></span>](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [<span data-ttu-id="5074a-328">應用程式模型： 使用說明主題</span><span class="sxs-lookup"><span data-stu-id="5074a-328">Application Model: How-to Topics</span></span>](http://msdn.microsoft.com/en-us/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
+ [<span data-ttu-id="5074a-329">應用程式開發</span><span class="sxs-lookup"><span data-stu-id="5074a-329">Application Development</span></span>](../../../../docs/framework/wpf/app-development/index.md)
