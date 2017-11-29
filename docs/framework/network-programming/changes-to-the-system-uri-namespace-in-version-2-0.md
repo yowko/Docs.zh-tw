@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 906abbcbd3ec00e76d8c183f61828fb5135d9154
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>2.0 版之 System.Uri 命名空間的變更
-已對 <xref:System.Uri?displayProperty=fullName> 類別進行數項變更。 這些變更已修正不正確的行為、增強可用性和增強式安全性。  
+已對 <xref:System.Uri?displayProperty=nameWithType> 類別進行數項變更。 這些變更已修正不正確的行為、增強可用性和增強式安全性。  
   
 ## <a name="obsolete-and-deprecated-members"></a>已淘汰和已取代的成員  
  建構函式：  
@@ -85,5 +79,4 @@ ms.lasthandoff: 08/21/2017
 -   已修正 URI 路徑壓縮，因此中斷 URI 無法周遊檔案系統的根目錄。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Uri?displayProperty=fullName>
-
+ <xref:System.Uri?displayProperty=nameWithType>

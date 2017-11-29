@@ -1,72 +1,70 @@
 ---
-title: "&lt;Uri&gt; 項目 (Uri 設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Uri&gt;項目 （Uri 設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 44ef28ca2188973ccd353f4e8615c7c95f5674a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;Uri&gt; 項目 (Uri 設定)
-內含設定，指定 .NET Framework 如何處理使用統一資源識別元 \(URI\) 表示的網址。  
+# <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;項目 （Uri 設定）
+包含會指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址設定。  
   
-## 結構描述階層架構  
- [\<configuration\> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a>結構描述階層架構  
+ [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<uri\>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<uri >](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```xml  
 <uri>  
 </uri>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
  無。  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
   
-|**項目**|**描述**|  
-|------------|------------|  
-|[idn](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|指定是否要對網域名稱套用國際化網域名稱 \(Internationalized Domain Name，IDN\) 剖析。|  
-|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否要將國際資源識別項 \(International Resource Identifier，IRI\) 剖析套用至 <xref:System.Uri>，以及是否應該套用 IRI 剖析規則。|  
+|**目**|**說明**|  
+|-----------------|---------------------|  
+|[idn](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|指定是否要對網域名稱套用國際化網域名稱 (IDN) 剖析。|  
+|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否套用國際資源識別項 (IRI) 剖析至<xref:System.Uri>，以及是否應該套用 IRI 剖析規則。|  
 |[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
-|------------|------------|  
+|**目**|**說明**|  
+|-----------------|---------------------|  
 |[組態](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空間的設定。|  
   
-## 備註  
- `uri` 項目包含 <xref:System.Net> 命名空間中類別所使用 <xref:System.Uri> 類別成員的設定。  這些設定會設定 IRI 和 IDN 的支援。  
+## <a name="remarks"></a>備註  
+ `uri`項目包含的成員設定<xref:System.Uri>類別中的類別使用<xref:System.Net>命名空間。 這些設定會設定 IRI 和 IDN 支援。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 描述  
- 在下列程式碼範例中，會說明 <xref:System.Uri> 類別用來支援 IRI 剖析和 IDN 名稱的組態。  範例也會清楚所有配置設定，然後加入 HTTP 配置非逸出百分比編碼路徑分隔符號的支援。  
+### <a name="description"></a>說明  
+ 下列範例示範使用組態<xref:System.Uri>類別，以支援 IRI 剖析和 IDN 名稱。 此範例也會清除所有配置設定，然後新增 支援的未逸出的 http 配置的百分比編碼路徑分隔符號。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All" />  
@@ -79,5 +77,5 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,30 +1,26 @@
 ---
-title: "增強 Windows Forms 應用程式 | Microsoft Docs"
+title: "增強 Windows Forms 應用程式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- jsharp
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: cbdc12b72de5d8943cd193195d6f382dfc4a496f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 5efd63e971ea3ae2fa5cfd03a148fa453130c646
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="enhancing-windows-forms-applications"></a>增強 Windows Forms 應用程式
 Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，以符合您的使用者的特定需求。 下列主題將描述這些功能及其用法。  

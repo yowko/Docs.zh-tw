@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a80b0cdd762a9dc26089aa450cf998b1832dbc1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6f7bfee4375a14a4456493333e65a953d406c732
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 當執行緒嘗試在另一個執行緒中在引入非同步中止時，就會啟用 `asynchronousThreadAbort` Managed 偵錯助理 (MDA)。 同步執行緒中止不會啟動 `asynchronousThreadAbort` MDA。
@@ -43,7 +36,7 @@ ms.lasthandoff: 08/21/2017
  由於這個問題原有的隨機性，徵兆可能會有很大的不同。
 
 ## <a name="cause"></a>原因
- 一個執行緒中的程式碼呼叫了目標執行緒上的 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> 方法，以引入非同步執行緒中止。 由於對 <xref:System.Threading.Thread.Abort%2A> 發出呼叫的程式碼不是在中止作業目標的執行緒上執行；因此，執行緒中止為非同步。 同步執行緒中止應該不會造成問題，因為執行 <xref:System.Threading.Thread.Abort%2A> 的執行緒應該只會在應用程式狀態一致的安全檢查點上完成。
+ 一個執行緒中的程式碼呼叫了目標執行緒上的 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法，以引入非同步執行緒中止。 由於對 <xref:System.Threading.Thread.Abort%2A> 發出呼叫的程式碼不是在中止作業目標的執行緒上執行；因此，執行緒中止為非同步。 同步執行緒中止應該不會造成問題，因為執行 <xref:System.Threading.Thread.Abort%2A> 的執行緒應該只會在應用程式狀態一致的安全檢查點上完成。
 
  由於非同步執行緒中止是在目標執行緒執行中的不可預期點進行處理，因而出現問題。 若要避免發生這種情形，請撰寫程式碼，並在可能以這種方式中止的執行緒上執行該程式碼，以便在程式碼的幾乎每一行處理 <xref:System.Threading.ThreadAbortException>，讓應用程式資料能夠回到一致的狀態。 期待在撰寫程式碼時已設想這個問題，或是撰寫出能夠預防各種可能情況的程式碼，都是不切實際的。
 
@@ -87,4 +80,3 @@ void FireMda()
 
 ## <a name="see-also"></a>另請參閱
  <xref:System.Threading.Thread> [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

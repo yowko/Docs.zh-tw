@@ -1,48 +1,29 @@
 ---
-title: "Visual Basic 中的 LINQ | Microsoft Docs"
+title: "Visual Basic 中的 LINQ"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- what's new [Visual Basic]
+helpviewer_keywords: what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 26d2ceac051905f5ac46b59f6fd2598e924355c7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7dc6fb3c53df9bec7808031513051e628096a0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
-本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]。  
+本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- 提供 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 提供者、運算子、查詢結構及語言功能的簡介。  
+ 提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者、運算子、查詢結構及語言功能的簡介。  
   
  [如何：查詢資料庫](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  提供如何使用 LINQ 連線到 SQL Server 資料庫並執行查詢的範例。  
@@ -72,7 +53,7 @@ ms.lasthandoff: 03/13/2017
  提供以特定型別而非匿名型別傳回 LINQ 查詢結果的範例。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)   
- [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)   
- [LINQ to DataSet 概觀](https://msdn.microsoft.com/library/bb399399)   
+ [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ [LINQ to DataSet 概觀](https://msdn.microsoft.com/library/bb399399)  
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)

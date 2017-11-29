@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Networking
 - Internet
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b63aeadb795e5457266bd75d1f2bf0e695eac7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/18/2017
-
+ms.openlocfilehash: 76b747624a22212fb7b9ba1a6353956a99ed1559
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 您的網路應用程式可以建置在可外掛式通訊協定上，以便自動利用新的網際網路通訊協定，或者也可以使用 Windows Socket 介面的 Managed 實作，以便搭配使用通訊端層級上的網路。  
@@ -55,7 +49,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  說明如何使用網路追蹤以取得有關方法叫用及 Managed 應用程式所產生的網路流量的資訊。  
   
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- 說明如何針對使用 <xref:System.Net.WebClient?displayProperty=fullName>、 <xref:System.Net.WebRequest?displayProperty=fullName>和 <xref:System.Net.HttpWebRequest?displayProperty=fullName> 類別的應用程式來使用快取。  
+ 說明如何針對使用 <xref:System.Net.WebClient?displayProperty=nameWithType>、<xref:System.Net.WebRequest?displayProperty=nameWithType> 和 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> 類別的應用程式來使用快取。  
   
  [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)  
  描述如何使用標準網際網路安全性和驗證技術。  
@@ -67,31 +61,31 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  描述如何設定 Proxy。  
   
  [NetworkInformation](../../../docs/framework/network-programming/networkinformation.md)  
- 描述如何蒐集網路事件、變更、統計資料和屬性的相關資訊，以及說明如何判斷遠端主機是否可以使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=fullName> 類別取得聯繫。  
+ 描述如何蒐集網路事件、變更、統計資料和屬性的相關資訊，以及說明如何判斷遠端主機是否可以使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 類別取得聯繫。  
   
  [2.0 版中 System.Uri 命名空間的變更](../../../docs/framework/network-programming/changes-to-the-system-uri-namespace-in-version-2-0.md)  
- 說明在版本 2.0 中對 <xref:System.Uri?displayProperty=fullName> 類別所做的幾個變更，以修正不正確的行為、提高可用性，以及增強安全性。  
+ 說明在版本 2.0 中對 <xref:System.Uri?displayProperty=nameWithType> 類別所做的幾個變更，以修正不正確的行為、提高可用性，以及增強安全性。  
   
  [System.Uri 的國際資源識別項支援](../../../docs/framework/network-programming/international-resource-identifier-support-in-system-uri.md)  
- 說明在版本 3.5、3.0 SP1 和 2.0 SP1 中的 <xref:System.Uri?displayProperty=fullName> 類別增強功能，以支援國際資源識別項 (IRI) 和國際化網域名稱 (IDN)。  
+ 說明在版本 3.5、3.0 SP1 和 2.0 SP1 中的 <xref:System.Uri?displayProperty=nameWithType> 類別增強功能，以支援國際資源識別項 (IRI) 和國際化網域名稱 (IDN)。  
   
  [3.5 版中的通訊端效能增強功能](../../../docs/framework/network-programming/socket-performance-enhancements-in-version-3-5.md)  
- 說明在版本 3.5、3.0 SP1 和 2.0 SP1 中 <xref:System.Net.Sockets.Socket?displayProperty=fullName> 類別的一組增強功能，其提供另一種非同步模式，可供專業化的高效能通訊端應用程式使用。  
+ 說明在版本 3.5、3.0 SP1 和 2.0 SP1 中 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別的一組增強功能，其提供另一種非同步模式，可供專業化的高效能通訊端應用程式使用。  
   
  [對等名稱解析通訊協定](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)  
- 說明在版本 3.5 中所新增的支援，以支援對等名稱解析通訊協定 (PNRP)、無伺服器和動態名稱登錄以及名稱解析通訊協定。 這些新功能是由 <xref:System.Net.PeerToPeer?displayProperty=fullName> 命名空間所支援。  
+ 說明在版本 3.5 中所新增的支援，以支援對等名稱解析通訊協定 (PNRP)、無伺服器和動態名稱登錄以及名稱解析通訊協定。 這些新功能是由 <xref:System.Net.PeerToPeer?displayProperty=nameWithType> 命名空間所支援。  
   
  [對等共同作業](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
- 說明在版本 3.5 中所新增的支援，以支援建置在 PNRP 上的對等協同作業。 這些新功能是由 <xref:System.Net.PeerToPeer.Collaboration?displayProperty=fullName> 命名空間所支援。  
+ 說明在版本 3.5 中所新增的支援，以支援建置在 PNRP 上的對等協同作業。 這些新功能是由 <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> 命名空間所支援。  
   
  [3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
- 說明在版本 3.5 SP1 中所做的安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest?displayProperty=fullName>、 <xref:System.Net.HttpListener?displayProperty=fullName>、 <xref:System.Net.Security.NegotiateStream?displayProperty=fullName>以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。  
+ 說明在版本 3.5 SP1 中所做的安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、<xref:System.Net.HttpListener?displayProperty=nameWithType>、<xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> 以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。  
   
  [具有延伸保護的整合式 Windows 驗證](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
- 說明延伸保護的增強功能，這些增強功能會影響 <xref:System.Net.HttpWebRequest?displayProperty=fullName>、 <xref:System.Net.HttpListener?displayProperty=fullName>、 <xref:System.Net.Mail.SmtpClient?displayProperty=fullName>、 <xref:System.Net.Security.SslStream?displayProperty=fullName>、 <xref:System.Net.Security.NegotiateStream?displayProperty=fullName>以及 <xref:System.Net?displayProperty=fullName> 和相關命名空間中的相關類別處理整合式 Windows 驗證的方式。  
+ 說明延伸保護的增強功能，這些增強功能會影響 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、<xref:System.Net.HttpListener?displayProperty=nameWithType>、<xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>、<xref:System.Net.Security.SslStream?displayProperty=nameWithType>、<xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> 以及 <xref:System.Net?displayProperty=nameWithType> 和相關命名空間中的相關類別處理整合式 Windows 驗證的方式。  
   
  [使用 IPv6 和 Teredo 的 NAT 周遊](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
- 說明 <xref:System.Net?displayProperty=fullName>、 <xref:System.Net.NetworkInformation?displayProperty=fullName>和 <xref:System.Net.Sockets?displayProperty=fullName> 命名空間所新增的增強功能，以支援使用 IPv6 和 Teredo 進行 NAT 周遊。  
+ 說明 <xref:System.Net?displayProperty=nameWithType>、<xref:System.Net.NetworkInformation?displayProperty=nameWithType> 和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空間所新增的增強功能，以支援使用 IPv6 和 Teredo 進行 NAT 周遊。  
   
  [Windows 市集應用程式的網路隔離](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
  說明當 <xref:System.Net>、 <xref:System.Net.Http>和 <xref:System.Net.Http.Headers> 命名空間中的類別用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式時，網路隔離的影響。  
@@ -100,57 +94,56 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  可供下載的網路程式設計範例的連結，這些範例會使用 <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>以及 <xref:System.Net.Sockets> 命名空間中的類別。  
   
 ## <a name="reference"></a>參考資料  
- <xref:System.Net?displayProperty=fullName>  
- 提供一個簡單的程式設計介面，讓現今網路所用的許多通訊協定使用。 此命名空間中的 <xref:System.Net.WebRequest?displayProperty=fullName> 和 <xref:System.Net.WebResponse?displayProperty=fullName> 類別是可外掛式通訊協定的基礎。  
+ <xref:System.Net?displayProperty=nameWithType>  
+ 提供一個簡單的程式設計介面，讓現今網路所用的許多通訊協定使用。 此命名空間中的 <xref:System.Net.WebRequest?displayProperty=nameWithType> 和 <xref:System.Net.WebResponse?displayProperty=nameWithType> 類別是可外掛式通訊協定的基礎。  
   
- <xref:System.Net.Cache?displayProperty=fullName>  
- 可定義類型和列舉，這些類型和列舉是用來定義使用 <xref:System.Net.WebRequest?displayProperty=fullName> 和 <xref:System.Net.HttpWebRequest?displayProperty=fullName> 類別所取得之資源的快取原則。  
+ <xref:System.Net.Cache?displayProperty=nameWithType>  
+ 可定義類型和列舉，這些類型和列舉是用來定義使用 <xref:System.Net.WebRequest?displayProperty=nameWithType> 和 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> 類別所取得之資源的快取原則。  
   
- <xref:System.Net.Configuration?displayProperty=fullName>  
+ <xref:System.Net.Configuration?displayProperty=nameWithType>  
  應用程式用來以程式設計方式存取及更新 System.Net 命名空間組態設定的類別。  
   
- <xref:System.Net.Http?displayProperty=fullName>  
+ <xref:System.Net.Http?displayProperty=nameWithType>  
  可為現代 HTTP 應用程式提供程式設計介面的類別。  
   
- <xref:System.Net.Http.Headers?displayProperty=fullName>  
- 為 <xref:System.Net.Http?displayProperty=fullName> 命名空間所使用的 HTTP 標頭集合提供支援  
+ <xref:System.Net.Http.Headers?displayProperty=nameWithType>  
+ 為 <xref:System.Net.Http?displayProperty=nameWithType> 命名空間所使用的 HTTP 標頭集合提供支援  
   
- <xref:System.Net.Mail?displayProperty=fullName>  
+ <xref:System.Net.Mail?displayProperty=nameWithType>  
  用於使用 SMTP 通訊協定撰寫及傳送郵件的類別。  
   
- <xref:System.Net.Mime?displayProperty=fullName>  
- 可定義類型，這些類型是用於表示 <xref:System.Net.Mail?displayProperty=fullName> 命名空間中的類別所使用的多用途網際網路郵件交換 (MIME) 標頭。  
+ <xref:System.Net.Mime?displayProperty=nameWithType>  
+ 可定義類型，這些類型是用於表示 <xref:System.Net.Mail?displayProperty=nameWithType> 命名空間中的類別所使用的多用途網際網路郵件交換 (MIME) 標頭。  
   
- <xref:System.Net.NetworkInformation?displayProperty=fullName>  
+ <xref:System.Net.NetworkInformation?displayProperty=nameWithType>  
  以程式設計方式收集網路事件、變更、統計資料和屬性的相關資訊的類別。  
   
- <xref:System.Net.PeerToPeer?displayProperty=fullName>  
+ <xref:System.Net.PeerToPeer?displayProperty=nameWithType>  
  為開發人員提供對等名稱解析通訊協定 (PNRP) 的 Managed 實作。  
   
- <xref:System.Net.PeerToPeer.Collaboration?displayProperty=fullName>  
+ <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType>  
  為開發人員提供對等協同作業介面的 Managed 實作。  
   
- <xref:System.Net.Security?displayProperty=fullName>  
+ <xref:System.Net.Security?displayProperty=nameWithType>  
  用於提供主機之間安全通訊的網路資料流的類別。  
   
- <xref:System.Net.Sockets?displayProperty=fullName>  
+ <xref:System.Net.Sockets?displayProperty=nameWithType>  
  提供 Windows Sockets (Winsock) 介面的 Managed 實作，讓需要協助控制網路存取的開發人員使用。  
   
- <xref:System.Net.WebSockets?displayProperty=fullName>  
+ <xref:System.Net.WebSockets?displayProperty=nameWithType>  
  為開發人員提供 WebSocket 介面的 Managed 實作。  
   
- <xref:System.Uri?displayProperty=fullName>  
+ <xref:System.Uri?displayProperty=nameWithType>  
  提供統一資源識別元 (URI) 的物件表示，以及對 URI 各部分的簡易存取。  
   
- <xref:System.Security.Authentication.ExtendedProtection?displayProperty=fullName>  
+ <xref:System.Security.Authentication.ExtendedProtection?displayProperty=nameWithType>  
  為應用程式提供使用延伸保護進行驗證的支援。  
   
- <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=fullName>  
+ <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  為應用程式提供使用延伸保護設定驗證組態的支援。  
   
 ## <a name="see-also"></a>另請參閱  
- [網路程式設計「如何」主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
- [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)   
- [MSDN 程式碼庫中的 .NET 網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)   
+ [網路程式設計 how to 主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+ [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [MSDN Code Gallery 上的 .NET 網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
  [HttpClient 範例](http://go.microsoft.com/fwlink/?LinkId=242550)
-

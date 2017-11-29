@@ -1,39 +1,21 @@
 ---
 title: "Visual Basic 的宣告項目"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 074ae8af056784e2ae4b870545ec4389deb9388e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 0c437331e5fb1a5b9d727b3e24760250685fd365
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic 的宣告項目
 「宣告項目」是宣告陳述式中定義的程式設計項目。 宣告項目包含變數、常數、列舉、類別、結構、模組、介面、程序、程序參數、函式傳回、外部程序參考、運算子、屬性、事件和委派。  
@@ -87,4 +69,3 @@ ms.lasthandoff: 07/28/2017
   
  [宣告內容和預設存取層級](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
  列出宣告項目的類型，並針對每個宣告陳述式，顯示您可以宣告的內容及預設存取層級。
-

@@ -1,62 +1,71 @@
 ---
-title: "&lt;certificateReference&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;certificateReference&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c8acf4b6d6e6e8a0fcf7d73139a1d2c5ea03f063
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;certificateReference&gt;
-指定用來找出並驗證 x.509 憑證存放區中的設定。  
+# <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
+指定用來尋找和驗證 x.509 憑證存放區中的設定。  
   
-## 語法  
+ \<system.identityModel.services >  
+\<federationConfiguration >  
+\<serviceCertificate >  
+\<certificateReference >  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <system.identityModel.services>  
-  <federationConfiguration>  
-    <serviceCertificate>  
-      <certificateReference   
-        storeName=”AddressBook||AuthRoot||CertificateAuthority||Disallowed||My||Root||TrustedPeople||TrustedPublisher”  
-        storeLocation=”CurrentUser||LocalMachine”  
-        x509FindType="FindByThumbprint||FindBySubjectName||FindBySubjectDistinguishedName||FindByIssuerName||FindByIssuerDistinguishedName||FindBySerialNumber||FindByTimeValid||FindByTimeNotYetValid||FindByTimeExpired||FindByTemplateName||FindByApplicationPolicy||FindByCertificatePolicy||FindByExtension||FindByKeyUsage||FindBySubjectKeyIdentifier"  
-        findValue=xs:String  
-        isChainIncluded=xs:Boolean >  
-      </certificateReference>  
-    </serviceCertificate>  
-  </federationConfiguration>  
+  <federationConfiguration>  
+    <serviceCertificate>  
+      <certificateReference   
+        storeName="AddressBook||AuthRoot||CertificateAuthority||Disallowed||My||Root||TrustedPeople||TrustedPublisher"  
+        storeLocation="CurrentUser||LocalMachine"  
+        x509FindType="FindByThumbprint||FindBySubjectName||FindBySubjectDistinguishedName||FindByIssuerName||FindByIssuerDistinguishedName||FindBySerialNumber||FindByTimeValid||FindByTimeNotYetValid||FindByTimeExpired||FindByTemplateName||FindByApplicationPolicy||FindByCertificatePolicy||FindByExtension||FindByKeyUsage||FindBySubjectKeyIdentifier"  
+        findValue=xs:String  
+        isChainIncluded=xs:Boolean >  
+      </certificateReference>  
+    </serviceCertificate>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
-|--------|--------|  
-|storeName|X.509 憑證存放區的名稱。  預設值是"My"。  選擇項。|  
-|storeLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，指定的 X.509 憑證存放區位置。  預設值為"LocalMachine"。  選擇項。|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>值，指定要執行的搜尋種類。  預設為"FindBySubjectDistinguishedName"。  選擇項。|  
-|findValue|要在 X.509 憑證存放區內搜尋的值。  選擇項。|  
-|isChainIncluded|指定是否應該使用的憑證鏈結中執行驗證。  預設值是 「 真正 」 ； 藉由使用的憑證鏈結，會執行驗證。  選擇項。|  
+|屬性|說明|  
+|---------------|-----------------|  
+|storeName|X.509 憑證存放區的名稱。 預設值是"My"。 選擇項。|  
+|storeLocation|A<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，指定 X.509 憑證存放區的位置。 預設值是 「 本機電腦 」。 選擇項。|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>值，指定所要執行的搜尋類型。 預設值為"FindBySubjectDistinguishedName"。 選擇項。|  
+|findValue|要在 X.509 憑證存放區內搜尋的值。 選擇項。|  
+|isChainIncluded|指定是否應該使用憑證鏈結中執行驗證。 預設值為"true";使用憑證鏈結會執行驗證。 選擇項。|  
   
-### 子項目  
- None  
+### <a name="child-elements"></a>子元素  
+ 無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定憑證，用來加密和解密語彙基元。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定用來加密和解密權杖的憑證。|  
   
-## 備註  
- `<certificateReference>`項目會指定用來找出並驗證 x.509 憑證存放區中的設定。  當已指定為子項目， `<serviceCertficate>`項目，它會指定 X.509 憑證，用來加密和解密語彙基元的位置\] 與 \[驗證設定。  `<certificateReference>`項目會以<xref:System.ServiceModel.Configuration.CertificateReferenceElement>類別。
+## <a name="remarks"></a>備註  
+ `<certificateReference>`項目會指定用來尋找和驗證 x.509 憑證存放區中的設定。 指定為子元素時`<serviceCertficate>`項目，它會指定用來加密和解密權杖的 X.509 憑證的位置和驗證設定。 `<certificateReference>`項目由<xref:System.ServiceModel.Configuration.CertificateReferenceElement>類別。

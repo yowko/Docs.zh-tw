@@ -1,31 +1,22 @@
 ---
 title: "組件和全域組件快取 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 8a53a153851973c735a430056520b01c27b1ef59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>組件和全域組件快取 (Visual Basic)
 組件會構成 .NET 型應用程式之部署、版本控制、重複使用、啟動範圍和安全性權限的基本單位。 組件會採用可執行檔 (.exe) 或動態連結程式庫 (.dll) 的格式，而且是 .NET Framework 的建置組塊。 它們為通用語言執行平台提供了感知型別實作所需的資訊。 您可以將組件視為型別和資源的集合，其構成功能的邏輯單元，而且是為了共同運作而建置。  
@@ -51,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
 -   一個檔案表格，說明構成該組件的所有其他檔案，例如，您所建立為 .exe 或 .dll 檔依賴的任何其他組件，甚至是點陣圖或讀我檔案。  
   
--   一個「組件參考清單」，它是所有外部相依性的清單 - 應用程式所需的 .dll 檔或其他檔案，可能是由其他人所建立。 組件參考同時包含全域和私用物件的參考。 全域物件位於全域組件快取中，此區域可供其他應用程式使用，有點像是 System32 目錄。 <xref:Microsoft.VisualBasic?displayProperty=fullName> 命名空間就是全域組件快取中組件的一個例子。 私用物件必須同樣位在您的應用程式安裝目錄中或位在其底下的目錄。  
+-   一個「組件參考清單」，它是所有外部相依性的清單 - 應用程式所需的 .dll 檔或其他檔案，可能是由其他人所建立。 組件參考同時包含全域和私用物件的參考。 全域物件位於全域組件快取中，此區域可供其他應用程式使用，有點像是 System32 目錄。 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空間就是全域組件快取中組件的一個例子。 私用物件必須同樣位在您的應用程式安裝目錄中或位在其底下的目錄。  
   
  因為組件包含有關內容、版本管理及相依性的資訊，所以您使用 Visual Basic 建立的應用程式不依賴 Windows 登錄值就能正常運作。 組件可減少 .dll 衝突，並讓您的應用程式更可靠，也更容易部署。 在許多情況下，您只要將 .NET 型應用程式的檔案複製到目標電腦，即完成安裝。  
   
@@ -67,12 +58,11 @@ ms.lasthandoff: 07/28/2017
 >  若要在 Visual Studio 中建置組件，請在[建置] 功能表中選擇 [建置]。  
   
 ## <a name="see-also"></a>另請參閱  
- [通用語言執行平台中的組件](https://msdn.microsoft.com/library/k3677y81)   
- [Friend 組件 (Visual Basic)](friend-assemblies.md)   
- [如何：與其他應用程式共用組件 (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)   
- [如何：載入和卸載組件 (Visual Basic)](how-to-load-and-unload-assemblies.md)   
- [如何：判斷檔案是否為組件 (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)   
- [如何：使用命令列建立和使用組件 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)   
- [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
+ [Common Language Runtime 中的組件](https://msdn.microsoft.com/library/k3677y81)  
+ [Friend 組件 (Visual Basic)](friend-assemblies.md)  
+ [如何： 共用組件與其他應用程式 (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
+ [如何： 載入和卸載組件 (Visual Basic)](how-to-load-and-unload-assemblies.md)  
+ [如何： 判斷檔案是否為組件 (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
+ [如何： 建立和使用組件使用命令列 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [逐步解說： 在 Visual Studio (Visual Basic) 中內嵌 Managed 組件的類型](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊 (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
-

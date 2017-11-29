@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 987157bc3663330d9c610c1016787890e9dc6137
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>如何：使用表單型驗證建置宣告感知的 ASP.NET 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -67,7 +65,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
  在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式。  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>建立簡單 ASP.NET 應用程式  
+#### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
   
 1.  啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。  
   
@@ -138,4 +136,3 @@ ms.lasthandoff: 08/21/2017
 2.  在 [註冊] 頁面上，建立使用者帳戶，然後按一下 [註冊]。 將使用表單驗證建立您的帳戶，並自動將您登入。  
   
 3.  將您重新導向至首頁之後，應該會看到 [Your Claims] (您的宣告) 標題下方有一個資料表，其中包含有關您帳戶的 **Issuer**、**OriginalIssuer**、**Type**、**Value** 和 **ValueType** 宣告資訊。
-

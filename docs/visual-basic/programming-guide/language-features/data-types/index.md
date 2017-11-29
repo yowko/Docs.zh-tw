@@ -1,15 +1,12 @@
 ---
-title: "Visual Basic 中的資料類型 | Microsoft Docs"
+title: "Visual Basic 中的資料類型"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data types [Visual Basic], declaring
 - typing
@@ -17,30 +14,14 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c86e1bfacbe06d10915bd476a5c6f528fcebe70d
-ms.openlocfilehash: 2642145e496469eb8bcb382408fda2147f48b0d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/30/2017
-
+ms.openlocfilehash: 20a24c8632e1f2193cfa86319a824dfcc038d9d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic 中的資料類型
 程式設計元素的「資料類型」是指其可以保留何種資料，以及儲存該資料的方式。 資料類型會應用於所有能儲存在電腦記憶體中的值，或是所有參與運算式評估的值。 每個變數、常值、常數、列舉、屬性、程序參數、程序引數和程序傳回值都具有資料類型。  
@@ -62,14 +43,14 @@ ms.lasthandoff: 04/30/2017
  如需 Visual Basic 資料類型清單，請參閱[資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+ [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [在 Visual Basic 中的型別轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [元組](tuples.md)     
- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+ [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [有效率地使用資料類型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
