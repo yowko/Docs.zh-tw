@@ -1,69 +1,69 @@
 ---
-title: "應用程式設定概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ApplicationsSettingsOverview"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式設定 [Windows Form]，關於應用程式設定"
-  - "動態屬性"
-  - "使用者偏好設定，追蹤"
+title: "應用程式設定概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ApplicationsSettingsOverview
+helpviewer_keywords:
+- application settings [Windows Forms], about application settings
+- dynamic properties
+- user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d617ce5b4e7222b60ce711e2e081e0bf3cb8065d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 應用程式設定概觀
-本主題討論如何代表您的應用程式和使用者來建立及儲存設定資料。  
+# <a name="application-settings-overview"></a><span data-ttu-id="640df-102">應用程式設定概觀</span><span class="sxs-lookup"><span data-stu-id="640df-102">Application Settings Overview</span></span>
+<span data-ttu-id="640df-103">本主題討論如何代表您的應用程式和使用者來建立及儲存設定資料。</span><span class="sxs-lookup"><span data-stu-id="640df-103">This topic discusses how to create and store settings data on behalf of your application and your users.</span></span>  
   
- Windows Form 應用程式設定功能可讓您輕鬆地建立、儲存和維護自訂應用程式和用戶端電腦上的使用者喜好設定。 利用 Windows Form 應用程式設定，您不只可以儲存應用程式資料，例如資料庫連接字串，也可以儲存使用者專屬資料，例如使用者應用程式喜好設定。 使用 Visual Studio 或自訂的 Managed 程式碼，您可以建立新的設定、從磁碟讀取及寫入磁碟、將其繫結至您表單上的屬性，並驗證載入和儲存之前的設定資料。  
+ <span data-ttu-id="640df-104">Windows Form 應用程式設定功能可讓您輕鬆地建立、儲存和維護自訂應用程式和用戶端電腦上的使用者喜好設定。</span><span class="sxs-lookup"><span data-stu-id="640df-104">The Application Settings feature of Windows Forms makes it easy to create, store, and maintain custom application and user preferences on the client computer.</span></span> <span data-ttu-id="640df-105">利用 Windows Form 應用程式設定，您不只可以儲存應用程式資料，例如資料庫連接字串，也可以儲存使用者專屬資料，例如使用者應用程式喜好設定。</span><span class="sxs-lookup"><span data-stu-id="640df-105">With Windows Forms application settings, you can store not only application data such as database connection strings, but also user-specific data, such as user application preferences.</span></span> <span data-ttu-id="640df-106">使用 Visual Studio 或自訂的 Managed 程式碼，您可以建立新的設定、從磁碟讀取及寫入磁碟、將其繫結至您表單上的屬性，並驗證載入和儲存之前的設定資料。</span><span class="sxs-lookup"><span data-stu-id="640df-106">Using Visual Studio or custom managed code, you can create new settings, read them from and write them to disk, bind them to properties on your forms, and validate settings data prior to loading and saving.</span></span>  
   
- 應用程式設定可讓開發人員使用極少的自訂程式碼在應用程式中儲存狀態，可取代舊版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的動態屬性。 透過唯讀的晚期繫結動態屬性，應用程式設定包含許多改良，而且需要更多的自訂程式設計。 動態屬性類別已保留在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]，但它們只是精簡包裝應用程式設定類別的殼層類別。  
+ <span data-ttu-id="640df-107">應用程式設定可讓開發人員使用極少的自訂程式碼在應用程式中儲存狀態，可取代舊版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中的動態屬性。</span><span class="sxs-lookup"><span data-stu-id="640df-107">Application settings enables developers to save state in their application using very little custom code, and is a replacement for dynamic properties in previous versions of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="640df-108">透過唯讀的晚期繫結動態屬性，應用程式設定包含許多改良，而且需要更多的自訂程式設計。</span><span class="sxs-lookup"><span data-stu-id="640df-108">Application settings contains many improvements over dynamic properties, which are read-only, late-bound, and require more custom programming.</span></span> <span data-ttu-id="640df-109">動態屬性類別已保留在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]，但它們只是精簡包裝應用程式設定類別的殼層類別。</span><span class="sxs-lookup"><span data-stu-id="640df-109">The dynamic property classes have been retained in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], but they are just shell classes that thinly wrap the application settings classes.</span></span>  
   
-## 什麼是應用程式設定？  
- Windows Form 應用程式通常需要這些對於執行應用程式很重要的資料，但您不想直接在應用程式的程式碼中包含這些資料。 如果您的應用程式使用 Web 服務或資料庫伺服器，您可能要將此資訊儲存在不同的檔案，以便您在未來可變更它而不需重新編譯。 同樣地，您的應用程式可能需要儲存目前使用者的特定資料。 例如，大部分的應用程式有能自訂應用程式外觀和行為的使用者喜好設定。  
+## <a name="what-are-application-settings"></a><span data-ttu-id="640df-110">什麼是應用程式設定？</span><span class="sxs-lookup"><span data-stu-id="640df-110">What Are Application Settings?</span></span>  
+ <span data-ttu-id="640df-111">Windows Form 應用程式通常需要這些對於執行應用程式很重要的資料，但您不想直接在應用程式的程式碼中包含這些資料。</span><span class="sxs-lookup"><span data-stu-id="640df-111">Your Windows Forms applications will often require data that is critical to running the application, but which you do not want to include directly in the application's code.</span></span> <span data-ttu-id="640df-112">如果您的應用程式使用 Web 服務或資料庫伺服器，您可能要將此資訊儲存在不同的檔案，以便您在未來可變更它而不需重新編譯。</span><span class="sxs-lookup"><span data-stu-id="640df-112">If your application uses a Web Service or a database server, you may want to store this information in a separate file, so that you can change it in the future without re-compiling.</span></span> <span data-ttu-id="640df-113">同樣地，您的應用程式可能需要儲存目前使用者的特定資料。</span><span class="sxs-lookup"><span data-stu-id="640df-113">Similarly, your applications may require storing data that is specific to the current user.</span></span> <span data-ttu-id="640df-114">例如，大部分的應用程式有能自訂應用程式外觀和行為的使用者喜好設定。</span><span class="sxs-lookup"><span data-stu-id="640df-114">Most applications, for example, have user preferences that customize the application's appearance and behavior.</span></span>  
   
- 以應用程式設定解決此兩項需求，要提供在用戶端電腦上於應用程式範圍和使用者範圍設定的簡單儲存方法。 您可使用 Visual Studio 或程式碼編輯器，藉由指定其名稱、資料類型及範圍 \(應用程式或使用者\) 來定義指定屬性的設定。 您甚至可以將相關的設定置於具名群組，以便更容易地使用並提升可讀性。 一旦定義好之後，這些設定會在執行階段自動保存並讀回記憶體。 可外掛式架構可變更持續性機制，但根據預設，會使用本機檔案系統。  
+ <span data-ttu-id="640df-115">以應用程式設定解決此兩項需求，要提供在用戶端電腦上於應用程式範圍和使用者範圍設定的簡單儲存方法。</span><span class="sxs-lookup"><span data-stu-id="640df-115">Application settings addresses both needs by providing an easy way to store both application-scoped and user-scoped settings on the client computer.</span></span> <span data-ttu-id="640df-116">您可使用 Visual Studio 或程式碼編輯器，藉由指定其名稱、資料類型及範圍 (應用程式或使用者) 來定義指定屬性的設定。</span><span class="sxs-lookup"><span data-stu-id="640df-116">Using Visual Studio or a code editor, you define a setting for a given property by specifying its name, data type, and scope (application or user).</span></span> <span data-ttu-id="640df-117">您甚至可以將相關的設定置於具名群組，以便更容易地使用並提升可讀性。</span><span class="sxs-lookup"><span data-stu-id="640df-117">You can even place related settings into named groups for easier use and readability.</span></span> <span data-ttu-id="640df-118">一旦定義好之後，這些設定會在執行階段自動保存並讀回記憶體。</span><span class="sxs-lookup"><span data-stu-id="640df-118">Once defined, these settings are persisted and read back into memory automatically at run time.</span></span> <span data-ttu-id="640df-119">可外掛式架構可變更持續性機制，但根據預設，會使用本機檔案系統。</span><span class="sxs-lookup"><span data-stu-id="640df-119">A pluggable architecture enables the persistence mechanism to be changed, but by default, the local file system is used.</span></span>  
   
- 應用程式設定的運作方式是以 XML 保存資料到不同的組態 \(.config\)，這與此設定為應用程式範圍或使用者範圍相對應。 在大部分情況下，應用程式範圍的設定都是唯讀的；因為它們是程式的資訊，您通常不需要覆寫它們。 相較之下，在執行階段可以讀取和寫入使用者範圍的設定，即使您的應用程式在部分信任下執行。 如需部分信任的詳細資訊，請參閱 [Windows Form 中的安全性概觀](../../../../docs/framework/winforms/security-in-windows-forms-overview.md)。  
+ <span data-ttu-id="640df-120">應用程式設定的運作方式是以 XML 保存資料到不同的組態 (.config)，這與此設定為應用程式範圍或使用者範圍相對應。</span><span class="sxs-lookup"><span data-stu-id="640df-120">Application settings works by persisting data as XML to different configuration (.config) files, corresponding to whether the setting is application-scoped or user-scoped.</span></span> <span data-ttu-id="640df-121">在大部分情況下，應用程式範圍的設定都是唯讀的；因為它們是程式的資訊，您通常不需要覆寫它們。</span><span class="sxs-lookup"><span data-stu-id="640df-121">In most cases, the application-scoped settings are read-only; because they are program information, you will typically not need to overwrite them.</span></span> <span data-ttu-id="640df-122">相較之下，在執行階段可以讀取和寫入使用者範圍的設定，即使您的應用程式在部分信任下執行。</span><span class="sxs-lookup"><span data-stu-id="640df-122">By contrast, user-scoped settings can be read and written safely at run time, even if your application runs under partial trust.</span></span> <span data-ttu-id="640df-123">如需部分信任的詳細資訊，請參閱 [Security in Windows Forms Overview](../../../../docs/framework/winforms/security-in-windows-forms-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="640df-123">For more information about partial trust, see [Security in Windows Forms Overview](../../../../docs/framework/winforms/security-in-windows-forms-overview.md).</span></span>  
   
- 設定會在組態檔中儲存為 XML 片段。 應用程式範圍的設定由 `<application.Settings>` 項目代表，且通常會放在 *app*.exe.config，其中  *app* 是您主要可執行檔的名稱。 使用者範圍的設定由 `<userSettings>` 項目代表，放在 *user*.config，其中  *user* 是目前正在執行應用程式之人員的使用者名稱。 您必須根據應用程式部署  *app*.exe.config 檔案；該設定架構將會依應用程式第一次儲存該使用者設定的需要來建立 *user*.config 檔案。 您也可以在 *app*.exe.config 中定義 `<userSettings>` 區塊，以提供使用者範圍設定的預設值。  
+ <span data-ttu-id="640df-124">設定會在組態檔中儲存為 XML 片段。</span><span class="sxs-lookup"><span data-stu-id="640df-124">Settings are stored as XML fragments in configuration files.</span></span> <span data-ttu-id="640df-125">應用程式範圍的設定由 `<application.Settings>` 項目代表，且通常會放在 *app*.exe.config，其中 *app* 是您主要可執行檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="640df-125">Application-scoped settings are represented by the `<application.Settings>` element, and generally are placed in *app*.exe.config, where *app* is the name of your main executable file.</span></span> <span data-ttu-id="640df-126">使用者範圍的設定由 `<userSettings>` 項目代表，放在 *user*.config，其中 *user* 是目前正在執行應用程式之人員的使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="640df-126">User-scoped settings are represented by the `<userSettings>` element and are placed in *user*.config, where *user* is the user name of the person currently running the application.</span></span> <span data-ttu-id="640df-127">您必須根據應用程式部署 *app*.exe.config 檔案；該設定架構將會依應用程式第一次儲存該使用者設定的需要來建立 *user*.config 檔案。</span><span class="sxs-lookup"><span data-stu-id="640df-127">You must deploy the *app*.exe.config file with your application; the settings architecture will create the *user*.config files on demand the first time the application saves settings for that user.</span></span> <span data-ttu-id="640df-128">您也可以在 `<userSettings>` app *.exe.config 中定義*區塊，以提供使用者範圍設定的預設值。</span><span class="sxs-lookup"><span data-stu-id="640df-128">You can also define a `<userSettings>` block within *app*.exe.config to provide default values for user-scoped settings.</span></span>  
   
- 自訂控制項也可以藉由實作 <xref:System.Configuration.IPersistComponentSettings> 介面來儲存自己的設定，這介面會公開 <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> 方法。 Windows Form <xref:System.Windows.Forms.ToolStrip> 控制項實作此介面，以便儲存應用程式工作階段之間工具列和工具列項目的位置。 如需自訂控制項和應用程式設定的詳細資訊，請參閱[自訂控制項的應用程式設定](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)。  
+ <span data-ttu-id="640df-129">自訂控制項也可以藉由實作 <xref:System.Configuration.IPersistComponentSettings> 介面來儲存自己的設定，這介面會公開 <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="640df-129">Custom controls can also save their own settings by implementing the <xref:System.Configuration.IPersistComponentSettings> interface, which exposes the <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> method.</span></span> <span data-ttu-id="640df-130">Windows Form <xref:System.Windows.Forms.ToolStrip> 控制項實作此介面，以便儲存應用程式工作階段之間工具列和工具列項目的位置。</span><span class="sxs-lookup"><span data-stu-id="640df-130">The Windows Forms <xref:System.Windows.Forms.ToolStrip> control implements this interface to save the position of toolbars and toolbar items between application sessions.</span></span> <span data-ttu-id="640df-131">如需自訂控制項和應用程式設定的詳細資訊，請參閱 [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="640df-131">For more information about custom controls and application settings, see [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md).</span></span>  
   
-## 應用程式設定的限制  
- 您無法在裝載 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 Unmanaged 應用程式使用應用程式設定。 設定將不會在這類環境中運作，如 Visual Studio 增益集、Microsoft Office 的 C\+\+ 及裝載於 Internet Explorer 或 Microsoft Outlook 增益集及專案中的控制項。  
+## <a name="limitations-of-application-settings"></a><span data-ttu-id="640df-132">應用程式設定的限制</span><span class="sxs-lookup"><span data-stu-id="640df-132">Limitations of Application Settings</span></span>  
+ <span data-ttu-id="640df-133">您無法在裝載 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的 Unmanaged 應用程式使用應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="640df-133">You cannot use application settings in an unmanaged application that hosts the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="640df-134">設定將不會在這類環境中運作，如 Visual Studio 增益集、Microsoft Office 的 C++ 及裝載於 Internet Explorer 或 Microsoft Outlook 增益集及專案中的控制項。</span><span class="sxs-lookup"><span data-stu-id="640df-134">Settings will not work in such environments as Visual Studio add-ins, C++ for Microsoft Office, control hosting in Internet Explorer, or Microsoft Outlook add-ins and projects.</span></span>  
   
- 您目前無法在 Windows Form 中繫結某些屬性。 最值得注意的範例是 <xref:System.Windows.Forms.Form.ClientSize%2A> 屬性，因為繫結至這個屬性會在執行階段造成無法預期的行為。 通常您可以程式設計的方式儲存並載入這些設定，來解決這些問題。  
+ <span data-ttu-id="640df-135">您目前無法在 Windows Form 中繫結某些屬性。</span><span class="sxs-lookup"><span data-stu-id="640df-135">You currently cannot bind to some properties in Windows Forms.</span></span> <span data-ttu-id="640df-136">最值得注意的範例是 <xref:System.Windows.Forms.Form.ClientSize%2A> 屬性，因為繫結至這個屬性會在執行階段造成無法預期的行為。</span><span class="sxs-lookup"><span data-stu-id="640df-136">The most notable example is the <xref:System.Windows.Forms.Form.ClientSize%2A> property, as binding to this property would cause unpredictable behavior at run time.</span></span> <span data-ttu-id="640df-137">通常您可以程式設計的方式儲存並載入這些設定，來解決這些問題。</span><span class="sxs-lookup"><span data-stu-id="640df-137">You can usually work around these issues by saving and loading these settings programmatically.</span></span>  
   
- 應用程式設定並沒有內建自動加密資訊的能力。 您絕不應該以純文字格式儲存安全性相關的資訊，例如資料庫密碼。 如果您想要儲存這類的機密資訊，身為應用程式開發人員，您要負責確保安全。 如果您想要儲存連接字串，我們建議您使用 Windows Integrated Security，並且不要求助於硬式編碼成 URL 的密碼。 如需詳細資訊，請參閱[程式碼存取安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)。  
+ <span data-ttu-id="640df-138">應用程式設定並沒有內建自動加密資訊的能力。</span><span class="sxs-lookup"><span data-stu-id="640df-138">Application settings has no built-in facility for encrypting information automatically.</span></span> <span data-ttu-id="640df-139">您絕不應該以純文字格式儲存安全性相關的資訊，例如資料庫密碼。</span><span class="sxs-lookup"><span data-stu-id="640df-139">You should never store security-related information, such as database passwords, in clear text.</span></span> <span data-ttu-id="640df-140">如果您想要儲存這類的機密資訊，身為應用程式開發人員，您要負責確保安全。</span><span class="sxs-lookup"><span data-stu-id="640df-140">If you want to store such sensitive information, you as the application developer are responsible for making sure it is secure.</span></span> <span data-ttu-id="640df-141">如果您想要儲存連接字串，我們建議您使用 Windows Integrated Security，並且不要求助於硬式編碼成 URL 的密碼。</span><span class="sxs-lookup"><span data-stu-id="640df-141">If you want to store connection strings, we recommend that you use Windows Integrated Security and not resort to hard-coding passwords into the URL.</span></span> <span data-ttu-id="640df-142">如需詳細資訊，請參閱 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)。</span><span class="sxs-lookup"><span data-stu-id="640df-142">For more information, see [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).</span></span>  
   
-## 開始使用應用程式設定  
- 如果您使用 Visual Studio，您可以在 Windows Form 設計工具中使用 \[屬性\] 視窗中的 **\(ApplicationSettings\)** 屬性定義設定。 當您以這種方式定義設定時，Visual Studio 會自動建立自訂的 Managed 包裝函式類別，這會以類別屬性與每個設定產生關聯。 Visual Studio 也會負責將設定繫結到表單或控制項上的屬性，以便於在表單顯示時自動還原控制項設定，以及在表單關閉時會自動儲存控制項設定。  
+## <a name="getting-started-with-application-settings"></a><span data-ttu-id="640df-143">開始使用應用程式設定</span><span class="sxs-lookup"><span data-stu-id="640df-143">Getting Started with Application Settings</span></span>  
+ <span data-ttu-id="640df-144">如果您使用 Visual Studio，您可以在 Windows Form 設計工具中使用 [屬性]  視窗中的 **(ApplicationSettings)** 屬性定義設定。</span><span class="sxs-lookup"><span data-stu-id="640df-144">If you use Visual Studio, you can define settings within the Windows Forms Designer using the **(ApplicationSettings)** property in the **Properties** window.</span></span> <span data-ttu-id="640df-145">當您以這種方式定義設定時，Visual Studio 會自動建立自訂的 Managed 包裝函式類別，這會以類別屬性與每個設定產生關聯。</span><span class="sxs-lookup"><span data-stu-id="640df-145">When you define settings this way, Visual Studio automatically creates a custom managed wrapper class which associates each setting with a class property.</span></span> <span data-ttu-id="640df-146">Visual Studio 也會負責將設定繫結到表單或控制項上的屬性，以便於在表單顯示時自動還原控制項設定，以及在表單關閉時會自動儲存控制項設定。</span><span class="sxs-lookup"><span data-stu-id="640df-146">Visual Studio also takes care of binding the setting to a property on a form or control so that the control's settings are restored automatically when its form is displayed, and saved automatically when the form is closed.</span></span>  
   
- 如果您想要更進一步控制您的設定，您可以定義自己的自訂應用程式設定包裝函式類別。 這可以藉由衍生自 <xref:System.Configuration.ApplicationSettingsBase> 的類別來完成，以及藉由加入對應至每個設定的屬性，並將特殊屬性套用至這些屬性。 如需建立包裝函式類別的詳細資訊，請參閱[應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
+ <span data-ttu-id="640df-147">如果您想要更進一步控制您的設定，您可以定義自己的自訂應用程式設定包裝函式類別。</span><span class="sxs-lookup"><span data-stu-id="640df-147">If you want more detailed control over your settings, you can define your own custom applications settings wrapper class.</span></span> <span data-ttu-id="640df-148">這可以藉由衍生自 <xref:System.Configuration.ApplicationSettingsBase>的類別來完成，以及藉由加入對應至每個設定的屬性，並將特殊屬性套用至這些屬性。</span><span class="sxs-lookup"><span data-stu-id="640df-148">This is accomplished by deriving a class from <xref:System.Configuration.ApplicationSettingsBase>, adding a property that corresponds to each setting, and applying special attributes to these properties.</span></span> <span data-ttu-id="640df-149">如需建立包裝函式類別的詳細資訊，請參閱 [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)。</span><span class="sxs-lookup"><span data-stu-id="640df-149">For details about creating wrapper classes, see [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md).</span></span>  
   
- 您也可以使用 <xref:System.Windows.Forms.Binding> 類別以程式設計的方式來繫結設定至表單和控制項上的屬性。  
+ <span data-ttu-id="640df-150">您也可以使用 <xref:System.Windows.Forms.Binding> 類別以程式設計的方式來繫結設定至表單和控制項上的屬性。</span><span class="sxs-lookup"><span data-stu-id="640df-150">You can also use the <xref:System.Windows.Forms.Binding> class to bind settings programmatically to properties on forms and controls.</span></span>  
   
-## 請參閱  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.SettingsProvider>   
- <xref:System.Configuration.LocalFileSettingsProvider>   
- <xref:System.Configuration.IPersistComponentSettings>   
- [如何：驗證應用程式設定](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)   
- [管理應用程式設定 \(.NET\)](../Topic/Managing%20Application%20Settings%20\(.NET\).md)   
- [如何：在執行階段使用 C\# 讀取設定](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)   
- [使用應用程式設定和使用者設定](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)   
- [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
- [自訂控制項的應用程式設定](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="640df-151">另請參閱</span><span class="sxs-lookup"><span data-stu-id="640df-151">See Also</span></span>  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.SettingsProvider>  
+ <xref:System.Configuration.LocalFileSettingsProvider>  
+ <xref:System.Configuration.IPersistComponentSettings>  
+ [<span data-ttu-id="640df-152">操作說明：驗證應用程式設定</span><span class="sxs-lookup"><span data-stu-id="640df-152">How to: Validate Application Settings</span></span>](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
+ [<span data-ttu-id="640df-153">管理應用程式設定 (.NET)</span><span class="sxs-lookup"><span data-stu-id="640df-153">Managing Application Settings (.NET)</span></span>](http://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
+ [<span data-ttu-id="640df-154">操作說明：在執行階段使用 C# 讀取設定</span><span class="sxs-lookup"><span data-stu-id="640df-154">How To: Read Settings at Run Time With C#</span></span>](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
+ [<span data-ttu-id="640df-155">使用應用程式設定和使用者設定</span><span class="sxs-lookup"><span data-stu-id="640df-155">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
+ [<span data-ttu-id="640df-156">應用程式設定架構</span><span class="sxs-lookup"><span data-stu-id="640df-156">Application Settings Architecture</span></span>](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [<span data-ttu-id="640df-157">自訂控制項的應用程式設定</span><span class="sxs-lookup"><span data-stu-id="640df-157">Application Settings for Custom Controls</span></span>](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)

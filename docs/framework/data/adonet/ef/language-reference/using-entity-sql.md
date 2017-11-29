@@ -1,53 +1,51 @@
 ---
-title: "USING (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: USING (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c506484908d6b0ffe3a11e33b51d0bcc2d27c25c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# USING (Entity SQL)
-指定查詢運算式中使用的命名空間 \(Namespace\)。  
+# <a name="using-entity-sql"></a><span data-ttu-id="7430a-102">USING (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7430a-102">USING (Entity SQL)</span></span>
+<span data-ttu-id="7430a-103">指定查詢運算式中使用的命名空間 (Namespace)。</span><span class="sxs-lookup"><span data-stu-id="7430a-103">Specifies namespaces used in a query expression.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="7430a-104">語法</span><span class="sxs-lookup"><span data-stu-id="7430a-104">Syntax</span></span>  
   
 ```  
 USING [ alias = ] namespace  
 ```  
   
-## 引數  
+## <a name="arguments"></a><span data-ttu-id="7430a-105">引數</span><span class="sxs-lookup"><span data-stu-id="7430a-105">Arguments</span></span>  
  `alias`  
- 指定較短的別名 \(Alias\)，以便限定命名空間。  
+ <span data-ttu-id="7430a-106">指定較短的別名 (Alias)，以便限定命名空間。</span><span class="sxs-lookup"><span data-stu-id="7430a-106">Specifies a shorter alias to qualify a namespace with.</span></span>  
   
  `namespace`  
- 任何有效的命名空間。  
+ <span data-ttu-id="7430a-107">任何有效的命名空間。</span><span class="sxs-lookup"><span data-stu-id="7430a-107">Any valid namespace.</span></span>  
   
-## 範例  
- 下列 Entity SQL 查詢會使用 USING 運算子來指定查詢運算式中使用的命名空間。  若要編譯及執行此查詢，請遵循以下步驟：  
+## <a name="example"></a><span data-ttu-id="7430a-108">範例</span><span class="sxs-lookup"><span data-stu-id="7430a-108">Example</span></span>  
+ <span data-ttu-id="7430a-109">下列 Entity SQL 查詢會使用 USING 運算子來指定查詢運算式中使用的命名空間。</span><span class="sxs-lookup"><span data-stu-id="7430a-109">The following Entity SQL query uses the USING operator to specify namespaces used in a query expression.</span></span> <span data-ttu-id="7430a-110">若要編譯及執行此查詢，請遵循以下步驟：</span><span class="sxs-lookup"><span data-stu-id="7430a-110">To compile and run this query, follow these steps:</span></span>  
   
-1.  按照[HOW TO：執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)中的程序進行。  
+1.  <span data-ttu-id="7430a-111">請依照下列中的程序[如何： 執行查詢，傳回 PrimitiveType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="7430a-111">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2.  將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
+2.  <span data-ttu-id="7430a-112">將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="7430a-112">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
   
 ```  
 using SqlServer; RAND()  
 ```  
   
-## 請參閱  
- [命名空間](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)   
- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="7430a-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7430a-113">See Also</span></span>  
+ [<span data-ttu-id="7430a-114">命名空間</span><span class="sxs-lookup"><span data-stu-id="7430a-114">Namespaces</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
+ [<span data-ttu-id="7430a-115">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="7430a-115">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

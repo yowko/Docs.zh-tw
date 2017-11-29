@@ -1,170 +1,171 @@
 ---
-title: "建立長期執行的工作流程服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立長期執行的工作流程服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f4204de8c113c2ff553afec934b68f0beeb89580
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 建立長期執行的工作流程服務
-本主題會說明如何建立長時間執行的工作流程服務。  長時間執行的工作流程服務可能會執行一段很長的時間。  有時候，此工作流程可能會處於閒置狀態，等候其他某些資訊。  發生這種情況時，此工作流程會保存至 SQL 資料庫並從記憶體中移除。  當其他資訊可用時，此工作流程執行個體就會重新載入記憶體中並繼續執行。  在本案例中，您要實作非常簡化的訂購系統。  用戶端會將初始訊息傳送至工作流程服務，以便啟動訂單。  然後，服務會將訂單 ID 傳回給用戶端。  此時，工作流程服務會等候用戶端的其他訊息、進入閒置狀態並保存至 SQL Server 資料庫。  當用戶端傳送下一則訊息以訂購項目時，工作流程服務就會重新載入記憶體中，並且完成訂單處理作業。  在程式碼範例中，它會傳回一個字串，表示項目已經加入至訂單。  此程式碼範例並非採用此技術的實際應用程式，而是說明長時間執行工作流程服務的簡單範例。本主題假設您知道如何建立 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 專案和方案。  
+# <a name="creating-a-long-running-workflow-service"></a><span data-ttu-id="f1e82-102">建立長期執行的工作流程服務</span><span class="sxs-lookup"><span data-stu-id="f1e82-102">Creating a Long-running Workflow Service</span></span>
+<span data-ttu-id="f1e82-103">本主題會說明如何建立長時間執行的工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="f1e82-103">This topic describes how to create a long-running workflow service.</span></span> <span data-ttu-id="f1e82-104">長時間執行的工作流程服務可能會執行一段很長的時間。</span><span class="sxs-lookup"><span data-stu-id="f1e82-104">Long running workflow services may run for long periods of time.</span></span> <span data-ttu-id="f1e82-105">有時候，此工作流程可能會處於閒置狀態，等候其他某些資訊。</span><span class="sxs-lookup"><span data-stu-id="f1e82-105">At some point the workflow may go idle waiting for some additional information.</span></span> <span data-ttu-id="f1e82-106">發生這種情況時，此工作流程會保存至 SQL 資料庫並從記憶體中移除。</span><span class="sxs-lookup"><span data-stu-id="f1e82-106">When this occurs the workflow is persisted to a SQL database and is removed from memory.</span></span> <span data-ttu-id="f1e82-107">當其他資訊可用時，此工作流程執行個體就會重新載入記憶體中並繼續執行。</span><span class="sxs-lookup"><span data-stu-id="f1e82-107">When the additional information becomes available the workflow instance is loaded back into memory and continues executing.</span></span>  <span data-ttu-id="f1e82-108">在本案例中，您要實作非常簡化的訂購系統。</span><span class="sxs-lookup"><span data-stu-id="f1e82-108">In this scenario you are implementing a very simplified ordering system.</span></span>  <span data-ttu-id="f1e82-109">用戶端會將初始訊息傳送至工作流程服務，以便啟動訂單。</span><span class="sxs-lookup"><span data-stu-id="f1e82-109">The client sends an initial message to the workflow service to start the order.</span></span> <span data-ttu-id="f1e82-110">然後，服務會將訂單 ID 傳回給用戶端。</span><span class="sxs-lookup"><span data-stu-id="f1e82-110">It returns an order ID to the client.</span></span> <span data-ttu-id="f1e82-111">此時，工作流程服務會等候用戶端的其他訊息、進入閒置狀態並保存至 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="f1e82-111">At this point the workflow service is waiting for another message from the client and goes into the idle state and is persisted to a SQL Server database.</span></span>  <span data-ttu-id="f1e82-112">當用戶端傳送下一則訊息以訂購項目時，工作流程服務就會重新載入記憶體中，並且完成訂單處理作業。</span><span class="sxs-lookup"><span data-stu-id="f1e82-112">When the client sends the next message to order an item, the workflow service is loaded back into memory and finishes processing the order.</span></span> <span data-ttu-id="f1e82-113">在程式碼範例中，它會傳回一個字串，表示項目已經加入至訂單。</span><span class="sxs-lookup"><span data-stu-id="f1e82-113">In the code sample it returns a string stating the item has been added to the order.</span></span> <span data-ttu-id="f1e82-114">此程式碼範例並非採用此技術的實際應用程式，而是說明長時間執行工作流程服務的簡單範例。</span><span class="sxs-lookup"><span data-stu-id="f1e82-114">The code sample is not meant to be a real world application of the technology, but rather a simple sample that illustrates long running workflow services.</span></span> <span data-ttu-id="f1e82-115">本主題假設您知道如何建立 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 專案和方案。</span><span class="sxs-lookup"><span data-stu-id="f1e82-115">This topic assumes you know how to create [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projects and solutions.</span></span>  
   
-## 必要條件  
- 您必須先安裝下列軟體，才能使用此逐步解說：  
+## <a name="prerequisites"></a><span data-ttu-id="f1e82-116">必要條件</span><span class="sxs-lookup"><span data-stu-id="f1e82-116">Prerequisites</span></span>  
+ <span data-ttu-id="f1e82-117">您必須先安裝下列軟體，才能使用此逐步解說：</span><span class="sxs-lookup"><span data-stu-id="f1e82-117">You must have the following software installed to use this walkthrough:</span></span>  
   
-1.  Microsoft SQL Server 2008  
+1.  <span data-ttu-id="f1e82-118">Microsoft SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="f1e82-118">Microsoft SQL Server 2008</span></span>  
   
 2.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]  
   
-3.  Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
+3.  <span data-ttu-id="f1e82-119">Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1e82-119">Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]</span></span>  
   
-4.  您已熟悉 WCF 和 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，而且知道如何建立專案\/方案。  
+4.  <span data-ttu-id="f1e82-120">您已熟悉 WCF 和 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，而且知道如何建立專案/方案。</span><span class="sxs-lookup"><span data-stu-id="f1e82-120">You are familiar with WCF and [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and know how to create projects/solutions.</span></span>  
   
-### 若要設定 SQL 資料庫  
+### <a name="to-setup-the-sql-database"></a><span data-ttu-id="f1e82-121">若要設定 SQL 資料庫</span><span class="sxs-lookup"><span data-stu-id="f1e82-121">To Setup the SQL Database</span></span>  
   
-1.  為了保存工作流程服務執行個體，您必須已經安裝 Microsoft SQL Server 而且必須設定資料庫來儲存已保存的工作流程執行個體。  請按一下 \[**開始**\] 按鈕，然後依序選取 \[**所有程式**\]、\[**Microsoft SQL Server 2008**\] 和 \[**Microsoft SQL Management Studio**\]，藉以執行 Microsoft SQL Management Studio。  
+1.  <span data-ttu-id="f1e82-122">為了保存工作流程服務執行個體，您必須已經安裝 Microsoft SQL Server 而且必須設定資料庫來儲存已保存的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="f1e82-122">In order for workflow service instances to be persisted you must have Microsoft SQL Server installed and you must configure a database to store the persisted workflow instances.</span></span> <span data-ttu-id="f1e82-123">按一下以執行 Microsoft SQL Management Studio**啟動**按鈕、 選取**所有程式**， **Microsoft SQL Server 2008**，和**Microsoft SQLManagement Studio**。</span><span class="sxs-lookup"><span data-stu-id="f1e82-123">Run Microsoft SQL Management Studio by clicking the **Start** button, selecting **All Programs**, **Microsoft SQL Server 2008**, and **Microsoft SQL Management Studio**.</span></span>  
   
-2.  按一下 \[**連接**\] 按鈕，登入 SQL Server 執行個體。  
+2.  <span data-ttu-id="f1e82-124">按一下**連接**按鈕以登入 SQL Server 執行個體</span><span class="sxs-lookup"><span data-stu-id="f1e82-124">Click the **Connect** button to log on to the SQL Server instance</span></span>  
   
-3.  在樹狀檢視中，以滑鼠右鍵按一下 \[**資料庫**\]，然後選取 \[**新增資料庫**\] 建立名為 `SQLPersistenceStore` 的新資料庫。  
+3.  <span data-ttu-id="f1e82-125">以滑鼠右鍵按一下**資料庫**在樹狀檢視，然後選取**新資料庫...**</span><span class="sxs-lookup"><span data-stu-id="f1e82-125">Right click **Databases** in the tree view and select **New Database..**</span></span> <span data-ttu-id="f1e82-126">若要建立新的資料庫稱為`SQLPersistenceStore`。</span><span class="sxs-lookup"><span data-stu-id="f1e82-126">to create a new database called `SQLPersistenceStore`.</span></span>  
   
-4.  執行 SqlWorkflowInstanceStoreSchema.sql 指令碼檔 \(位於 SQLPersistenceStore 資料庫的 C:\\Windows\\Microsoft.NET\\Framework\\v4.0\\SQL\\en 目錄中\)，以便設定所需的資料庫結構描述。  
+4.  <span data-ttu-id="f1e82-127">執行 SqlWorkflowInstanceStoreSchema.sql 指令碼檔 (位於 SQLPersistenceStore 資料庫的 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 目錄中)，以便設定所需的資料庫結構描述。</span><span class="sxs-lookup"><span data-stu-id="f1e82-127">Run the SqlWorkflowInstanceStoreSchema.sql script file located in the C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en directory on the SQLPersistenceStore database to set up the needed database schemas.</span></span>  
   
-5.  執行 SqlWorkflowInstanceStoreLogic.sql 指令碼檔 \(位於 SQLPersistenceStore 資料庫的 C:\\Windows\\Microsoft.NET\\Framework\\v4.0\\SQL\\en 目錄中\)，以便設定所需的資料庫邏輯。  
+5.  <span data-ttu-id="f1e82-128">執行 SqlWorkflowInstanceStoreLogic.sql 指令碼檔 (位於 SQLPersistenceStore 資料庫的 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 目錄中)，以便設定所需的資料庫邏輯。</span><span class="sxs-lookup"><span data-stu-id="f1e82-128">Run the SqlWorkflowInstanceStoreLogic.sql script file located in the C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en directory on the SQLPersistenceStore database to set up the needed database logic.</span></span>  
   
-### 若要建立 Web 裝載的工作流程服務  
+### <a name="to-create-the-web-hosted-workflow-service"></a><span data-ttu-id="f1e82-129">若要建立 Web 裝載的工作流程服務</span><span class="sxs-lookup"><span data-stu-id="f1e82-129">To Create the Web Hosted Workflow Service</span></span>  
   
-1.  建立空白的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 方案並將它命名為 `OrderProcessing`。  
+1.  <span data-ttu-id="f1e82-130">建立空白的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 方案並將它命名為 `OrderProcessing`。</span><span class="sxs-lookup"><span data-stu-id="f1e82-130">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution, name it `OrderProcessing`.</span></span>  
   
-2.  將名為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的新 `OrderService` 工作流程服務應用程式專案加入至此方案。  
+2.  <span data-ttu-id="f1e82-131">將名為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的新 `OrderService` 工作流程服務應用程式專案加入至此方案。</span><span class="sxs-lookup"><span data-stu-id="f1e82-131">Add a new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Workflow Service Application project called `OrderService` to the solution.</span></span>  
   
-3.  在 \[專案屬性\] 對話方塊中，選取 \[**Web**\] 索引標籤。  
+3.  <span data-ttu-id="f1e82-132">在 專案屬性 對話方塊中，選取**Web**  索引標籤。</span><span class="sxs-lookup"><span data-stu-id="f1e82-132">In the project properties dialog, select the **Web** tab.</span></span>  
   
-    1.  在 \[**起始動作**\] 底下，選取 \[**指定頁**\] 並指定 `Service1.xamlx`。  
+    1.  <span data-ttu-id="f1e82-133">在下**起始動作**選取**特定頁面**並指定`Service1.xamlx`。</span><span class="sxs-lookup"><span data-stu-id="f1e82-133">Under **Start Action** select **Specific Page** and specify `Service1.xamlx`.</span></span>  
   
-         ![工作流程服務專案 Web 屬性](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")  
+         <span data-ttu-id="f1e82-134">![工作流程服務專案 Web 屬性](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")</span><span class="sxs-lookup"><span data-stu-id="f1e82-134">![Workflow Service Project Web Properties](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")</span></span>  
   
-    2.  在 \[**伺服器**\] 底下，選取 \[**使用本機 IIS Web 伺服器**\]。  
+    2.  <span data-ttu-id="f1e82-135">在下**伺服器**選取**使用本機 IIS Web 伺服器**。</span><span class="sxs-lookup"><span data-stu-id="f1e82-135">Under **Servers** select **Use Local IIS Web server**.</span></span>  
   
-         ![本機 Web 伺服器設定](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")  
+         <span data-ttu-id="f1e82-136">![本機 Web 伺服器設定](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")</span><span class="sxs-lookup"><span data-stu-id="f1e82-136">![Local Web Server Settings](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")</span></span>  
   
         > [!WARNING]
-        >  您必須在系統管理員模式中執行 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，才能進行這項設定。  
+        >  <span data-ttu-id="f1e82-137">您必須在系統管理員模式中執行 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，才能進行這項設定。</span><span class="sxs-lookup"><span data-stu-id="f1e82-137">You must run [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] in administrator mode to make this setting.</span></span>  
   
-         這兩個步驟會將工作流程服務專案設定為由 IIS 裝載。  
+         <span data-ttu-id="f1e82-138">這兩個步驟會將工作流程服務專案設定為由 IIS 裝載。</span><span class="sxs-lookup"><span data-stu-id="f1e82-138">These two steps configure the workflow service project to be hosted by IIS.</span></span>  
   
-4.  開啟 `Service1.xamlx` \(如果尚未開啟的話\) 並刪除現有的 \[**ReceiveRequest**\] 和 \[**SendResponse**\] 活動。  
+4.  <span data-ttu-id="f1e82-139">開啟`Service1.xamlx`是否已開啟及刪除現有**ReceiveRequest**和**SendResponse**活動。</span><span class="sxs-lookup"><span data-stu-id="f1e82-139">Open `Service1.xamlx` if it is not open already and delete the existing **ReceiveRequest** and **SendResponse** activities.</span></span>  
   
-5.  選取 \[**循序服務**\] 活動、按一下 \[**變數**\] 連結，然後加入下圖所示的變數。  這樣做就會加入一些之後將用於工作流程服務的變數。  
+5.  <span data-ttu-id="f1e82-140">選取**循序服務**活動，然後按一下**變數**連結並新增下列圖例所示的變數。</span><span class="sxs-lookup"><span data-stu-id="f1e82-140">Select the **Sequential Service** activity and click the **Variables** link and add the variables shown in the following illustration.</span></span> <span data-ttu-id="f1e82-141">這樣做就會加入一些之後將用於工作流程服務的變數。</span><span class="sxs-lookup"><span data-stu-id="f1e82-141">Doing this adds some variables that will be used later on in the workflow service.</span></span>  
   
     > [!NOTE]
-    >  如果 CorrelationHandle 不在 \[變數型別\] 下拉式清單中，請從下拉式清單中選取 \[**瀏覽型別**\]。  在 \[**型別名稱**\] 方塊中輸入 CorrelationHandle、從清單方塊中選取 CorrelationHandle，然後按一下 \[**確定**\]。  
+    >  <span data-ttu-id="f1e82-142">如果 CorrelationHandle 不在 [變數類型] 下拉式清單中，選取**瀏覽型別**從下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="f1e82-142">If CorrelationHandle is not in the Variable Type drop-down, select **Browse for types** from the drop-down.</span></span> <span data-ttu-id="f1e82-143">輸入中的 CorrelationHandle**型別名稱**，從清單方塊中選取 CorrelationHandle，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="f1e82-143">Type CorrelationHandle in the **Type name** box, select CorrelationHandle from the listbox and click **OK**.</span></span>  
   
-     ![加入變數](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")  
+     <span data-ttu-id="f1e82-144">![將變數加入](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")</span><span class="sxs-lookup"><span data-stu-id="f1e82-144">![Add Variables](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")</span></span>  
   
-6.  將 \[**ReceiveAndSendReply**\] 活動範本拖放至 \[**循序服務**\] 活動中。  這組活動將會接收用戶端的訊息並傳回回覆。  
+6.  <span data-ttu-id="f1e82-145">將拖放**ReceiveAndSendReply**活動範本**循序服務**活動。</span><span class="sxs-lookup"><span data-stu-id="f1e82-145">Drag and drop a **ReceiveAndSendReply** activity template into the **Sequential Service** activity.</span></span> <span data-ttu-id="f1e82-146">這組活動將會接收用戶端的訊息並傳回回覆。</span><span class="sxs-lookup"><span data-stu-id="f1e82-146">This set of activities will receive a message from a client and send a reply back.</span></span>  
   
-    1.  選取 \[**Receive**\] 活動，然後設定在下圖中反白顯示的屬性。  
+    1.  <span data-ttu-id="f1e82-147">選取**接收**活動，然後設定下圖中反白的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1e82-147">Select the **Receive** activity and set the properties highlighted in the following illustration.</span></span>  
   
-         ![設定 Receive 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
+         <span data-ttu-id="f1e82-148">![設定 Receive 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")</span><span class="sxs-lookup"><span data-stu-id="f1e82-148">![Set Receive Activity Properties](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")</span></span>  
   
-         DisplayName 屬性會針對設計工具中的 Receive 活動設定顯示名稱。  ServiceContractName 和 OperationName 屬性會指定 Receive 活動所實作之服務合約和作業的名稱。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何在工作流程服務中使用合約的詳細資訊，請參閱[在工作流程中使用合約](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。  
+         <span data-ttu-id="f1e82-149">DisplayName 屬性會針對設計工具中的 Receive 活動設定顯示名稱。</span><span class="sxs-lookup"><span data-stu-id="f1e82-149">The DisplayName property sets the name displayed for the Receive activity in the designer.</span></span> <span data-ttu-id="f1e82-150">ServiceContractName 和 OperationName 屬性會指定 Receive 活動所實作之服務合約和作業的名稱。</span><span class="sxs-lookup"><span data-stu-id="f1e82-150">The ServiceContractName and OperationName properties specify the name of the service contract and operation that are implemented by the Receive activity.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="f1e82-151">在工作流程中使用合約的服務，請參閱[工作流程中使用的合約](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。</span><span class="sxs-lookup"><span data-stu-id="f1e82-151"> how contracts are used in Workflow services see [Using Contracts in Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).</span></span>  
   
-    2.  在 \[**ReceiveStartOrder**\] 活動中，按一下 \[**定義**\] 連結，然後設定下圖所示的屬性。  請注意，\[**參數**\] 選項按鈕已選取，而且名為 `p_customerName` 的參數已繫結至 `customerName` 變數。  這樣會將 \[**Receive**\] 活動設定為接收部分資料，並將該項資料繫結至區域變數。  
+    2.  <span data-ttu-id="f1e82-152">按一下**定義...**中連結**ReceiveStartOrder**活動並設定在下圖所示的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1e82-152">Click the **Define...** link in the **ReceiveStartOrder** activity and set the properties shown in the following illustration.</span></span>  <span data-ttu-id="f1e82-153">請注意，**參數**選取選項按鈕時，名為`p_customerName`繫結至`customerName`變數。</span><span class="sxs-lookup"><span data-stu-id="f1e82-153">Notice that the **Parameters** radio button is selected, a parameter named `p_customerName` is bound to the `customerName` variable.</span></span> <span data-ttu-id="f1e82-154">這會設定**接收**活動接收部分資料，並將該資料繫結至區域變數。</span><span class="sxs-lookup"><span data-stu-id="f1e82-154">This configures the **Receive** activity to receive some data and bind that data to local variables.</span></span>  
   
-         ![設定 Receive 活動所接收的資料](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")  
+         <span data-ttu-id="f1e82-155">![設定 Receive 活動接收的資料](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")</span><span class="sxs-lookup"><span data-stu-id="f1e82-155">![Setting the data received by the Receive activity](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")</span></span>  
   
-    3.  選取 \[**SendReplyToReceive**\] 活動，然後設定在下圖中反白顯示的屬性。  
+    3.  <span data-ttu-id="f1e82-156">選取**SendReplyToReceive**活動，然後設定反白顯示在下圖中的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1e82-156">Select The **SendReplyToReceive** activity and set the highlighted property shown in the following illustration.</span></span>  
   
-         ![設定 SendReply 活動的屬性](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")  
+         <span data-ttu-id="f1e82-157">![設定 SendReply 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")</span><span class="sxs-lookup"><span data-stu-id="f1e82-157">![Setting the properties of the SendReply activity](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")</span></span>  
   
-    4.  在 \[**SendReplyToStartOrder**\] 活動中，按一下 \[**定義**\] 連結，然後設定下圖所示的屬性。  請注意，\[**參數**\] 選項按鈕已選取，而且名為 `p_orderId` 的參數已繫結至 `orderId` 變數。  這項設定會指定 SendReplyToStartOrder 活動將字串型別的值傳回給呼叫端。  
+    4.  <span data-ttu-id="f1e82-158">按一下**定義...**中連結**SendReplyToStartOrder**活動並設定在下圖所示的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1e82-158">Click the **Define...** link in the **SendReplyToStartOrder** activity and set the properties shown in the following illustration.</span></span> <span data-ttu-id="f1e82-159">請注意，**參數**選取選項按鈕，則為參數命名為`p_orderId`繫結至`orderId`變數。</span><span class="sxs-lookup"><span data-stu-id="f1e82-159">Notice that the **Parameters** radio button is selected; a parameter named `p_orderId` is bound to the `orderId` variable.</span></span> <span data-ttu-id="f1e82-160">這項設定會指定 SendReplyToStartOrder 活動將字串型別的值傳回給呼叫端。</span><span class="sxs-lookup"><span data-stu-id="f1e82-160">This setting specifies that the SendReplyToStartOrder activity will return a value of type string to the caller.</span></span>  
   
-         ![設定 SendReply 活動內容資料](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")  
+         <span data-ttu-id="f1e82-161">![設定 SendReply 活動內容資料](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")</span><span class="sxs-lookup"><span data-stu-id="f1e82-161">![Configuring the SendReply activity content data](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")</span></span>  
   
-        > [!NOTE]
-    5.  將 Assign 活動拖放至 \[**Receive**\] 與 \[**SendReply**\] 活動之間，然後設定下圖所示的屬性：  
+    5.  <span data-ttu-id="f1e82-162">將拖放 Assign 活動之間**接收**和**SendReply**活動並設定屬性，如下圖所示：</span><span class="sxs-lookup"><span data-stu-id="f1e82-162">Drag and drop an Assign activity in between the **Receive** and **SendReply** activities and set the properties as shown in the following illustration:</span></span>  
   
-         ![加入 Assign 活動](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")  
+         <span data-ttu-id="f1e82-163">![加入 assign 活動](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")</span><span class="sxs-lookup"><span data-stu-id="f1e82-163">![Adding an assign activity](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")</span></span>  
   
-         這樣就會建立新的訂單 ID 並將此值放入 orderId 變數中。  
+         <span data-ttu-id="f1e82-164">這樣就會建立新的訂單 ID 並將此值放入 orderId 變數中。</span><span class="sxs-lookup"><span data-stu-id="f1e82-164">This creates a new order ID and places the value in the orderId variable.</span></span>  
   
-    6.  選取 \[**ReplyToStartOrder**\] 活動。  在 \[屬性\] 視窗中，按一下 \[**CorrelationInitializers**\] 的省略符號按鈕。  選取 \[**新增初始設定式**\] 連結、在 \[初始設定式\] 文字方塊中輸入 `orderIdHandle`、針對 \[相互關聯型別\] 選取查詢相互關聯初始設定式，然後在 \[XPath 查詢\] 下拉式方塊底下選取 p\_orderId。  下圖將顯示這些設定。  按一下 \[**確定**\]。  這樣就會初始化用戶端與這個工作流程服務執行個體之間的相互關聯。  收到包含此訂單 ID 的訊息時，它就會路由傳送至這個工作流程服務執行個體。  
+    6.  <span data-ttu-id="f1e82-165">選取**ReplyToStartOrder**活動。</span><span class="sxs-lookup"><span data-stu-id="f1e82-165">Select the **ReplyToStartOrder** activity.</span></span> <span data-ttu-id="f1e82-166">在 屬性 視窗中按一下 省略符號按鈕**CorrelationInitializers**。</span><span class="sxs-lookup"><span data-stu-id="f1e82-166">In the properties window click the ellipsis button for **CorrelationInitializers**.</span></span> <span data-ttu-id="f1e82-167">選取**新增初始設定式**連結並輸入`orderIdHandle`在初始設定式 文字方塊中，選取查詢相互關聯類型的相互關聯初始設定式，並在 XPATH 查詢 下拉式方塊底下選取 p_orderId。</span><span class="sxs-lookup"><span data-stu-id="f1e82-167">Select the **Add initializer** link, enter `orderIdHandle` in the Initializer text box, select Query correlation initializer for the Correlation type, and select p_orderId under the XPATH Queries dropdown box.</span></span> <span data-ttu-id="f1e82-168">下圖將顯示這些設定。</span><span class="sxs-lookup"><span data-stu-id="f1e82-168">These settings are shown in the following illustration.</span></span> <span data-ttu-id="f1e82-169">按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="f1e82-169">Click **OK**.</span></span>  <span data-ttu-id="f1e82-170">這樣就會初始化用戶端與這個工作流程服務執行個體之間的相互關聯。</span><span class="sxs-lookup"><span data-stu-id="f1e82-170">This initializes a correlation between the client and this instance of the workflow service.</span></span> <span data-ttu-id="f1e82-171">收到包含此訂單 ID 的訊息時，它就會路由傳送至這個工作流程服務執行個體。</span><span class="sxs-lookup"><span data-stu-id="f1e82-171">When a message containing this order ID is received it is routed to this instance of the workflow service.</span></span>  
   
-         ![加入相互關聯初始設定式](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")  
+         <span data-ttu-id="f1e82-172">![加入相互關聯初始設定式](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")</span><span class="sxs-lookup"><span data-stu-id="f1e82-172">![Adding a correlation initializer](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")</span></span>  
   
-7.  將另一個 \[**ReceiveAndSendReply**\] 活動拖放至工作流程的結尾 \(包含第一個 \[**Receive**\] 和 \[**SendReply**\] 活動的 \[**序列**\] 以外\)。  這樣就會接收用戶端所傳送的第二則訊息並回應訊息。  
+7.  <span data-ttu-id="f1e82-173">拖放另一個**ReceiveAndSendReply**活動至工作流程的結尾 (外部**順序**包含第一個**接收**和**SendReply**活動)。</span><span class="sxs-lookup"><span data-stu-id="f1e82-173">Drag and drop another **ReceiveAndSendReply** activity to the end of the workflow (outside the **Sequence** containing the first **Receive** and **SendReply** activities).</span></span> <span data-ttu-id="f1e82-174">這樣就會接收用戶端所傳送的第二則訊息並回應訊息。</span><span class="sxs-lookup"><span data-stu-id="f1e82-174">This will receive the second message sent by the client and respond to it.</span></span>  
   
-    1.  選取包含新加入之 \[**Receive**\] 和 \[**SendReply**\] 活動的 \[**序列**\]，然後按一下 \[**變數**\] 按鈕。  加入在下圖中反白顯示的變數：  
+    1.  <span data-ttu-id="f1e82-175">選取**順序**，其中包含新加入**接收**和**SendReply**活動，然後按一下**變數** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f1e82-175">Select the **Sequence** that contains the newly added **Receive** and **SendReply** activities and click the **Variables** button.</span></span> <span data-ttu-id="f1e82-176">加入在下圖中反白顯示的變數：</span><span class="sxs-lookup"><span data-stu-id="f1e82-176">Add the variable highlighted in the following illustration:</span></span>  
   
-         ![加入新變數](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")  
+         <span data-ttu-id="f1e82-177">![加入新變數](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")</span><span class="sxs-lookup"><span data-stu-id="f1e82-177">![Adding new variables](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")</span></span>  
   
-    2.  選取 \[**Receive**\] 活動，然後設定下圖所示的屬性：  
+    2.  <span data-ttu-id="f1e82-178">選取**接收**活動並設定屬性，如下圖所示：</span><span class="sxs-lookup"><span data-stu-id="f1e82-178">Select the **Receive** activity and set the properties shown in the following illustration:</span></span>  
   
-         ![設定 Receive 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")  
+         <span data-ttu-id="f1e82-179">![設定 Receive 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")</span><span class="sxs-lookup"><span data-stu-id="f1e82-179">![Set the Receive acitivity properties](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")</span></span>  
   
-    3.  在 \[**ReceiveAddItem**\] 活動中，按一下 \[**定義**\] 連結，然後加入下圖所示的參數：這樣就會將 Receive 活動設定為接收兩個參數：訂單 ID 以及所訂購之項目的 ID。  
+    3.  <span data-ttu-id="f1e82-180">按一下**定義...**中連結**ReceiveAddItem**活動並加入下圖中顯示的參數： 這樣就會設定 receive 活動，以接受兩個參數，訂單 ID 以及所訂購項目的識別碼。</span><span class="sxs-lookup"><span data-stu-id="f1e82-180">Click the **Define...** link in the **ReceiveAddItem** activity and add the parameters shown in the following illustration:This configures the receive activity to accept two parameters, the order ID and the ID of the item being ordered.</span></span>  
   
-         ![為第二個接收活動指定參數](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
+         <span data-ttu-id="f1e82-181">![指定第二個參數接收](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")</span><span class="sxs-lookup"><span data-stu-id="f1e82-181">![Specifying parameters for the second receive](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")</span></span>  
   
-    4.  按一下 \[**CorrelateOn**\] 省略符號按鈕並輸入 `orderIdHandle`。  在 \[**XPath 查詢**\] 底下，按一下下拉式箭號並選取 `p_orderId`。  這樣就會設定第二個 Receive 活動的相互關聯。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]相互關聯的詳細資訊，請參閱[相互關聯](../../../../docs/framework/wcf/feature-details/correlation.md)。  
+    4.  <span data-ttu-id="f1e82-182">按一下**CorrelateOn**省略符號按鈕，並輸入`orderIdHandle`。</span><span class="sxs-lookup"><span data-stu-id="f1e82-182">Click the **CorrelateOn** ellipsis button and enter `orderIdHandle`.</span></span> <span data-ttu-id="f1e82-183">在下**XPath 查詢**，按一下下拉式箭號並選取`p_orderId`。</span><span class="sxs-lookup"><span data-stu-id="f1e82-183">Under **XPath Queries**, click the drop down arrow and select `p_orderId`.</span></span> <span data-ttu-id="f1e82-184">這樣就會設定第二個 Receive 活動的相互關聯。</span><span class="sxs-lookup"><span data-stu-id="f1e82-184">This configures the correlation on the second receive activity.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="f1e82-185">相互關聯，請參閱[相互關聯](../../../../docs/framework/wcf/feature-details/correlation.md)。</span><span class="sxs-lookup"><span data-stu-id="f1e82-185"> correlation see [Correlation](../../../../docs/framework/wcf/feature-details/correlation.md).</span></span>  
   
-         ![設定 CorrelatesOn 屬性](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
+         <span data-ttu-id="f1e82-186">![設定 CorrelatesOn 屬性](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")</span><span class="sxs-lookup"><span data-stu-id="f1e82-186">![Setting the CorrelatesOn property](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")</span></span>  
   
-    5.  將 \[**If**\] 活動拖放至緊接在 \[**ReceiveAddItem**\] 活動後面。  這個活動的運作方式就如同 if 陳述式。  
+    5.  <span data-ttu-id="f1e82-187">將拖放**如果**活動之後立即**ReceiveAddItem**活動。</span><span class="sxs-lookup"><span data-stu-id="f1e82-187">Drag and drop an **If** activity immediately after the **ReceiveAddItem** activity.</span></span> <span data-ttu-id="f1e82-188">這個活動的運作方式就如同 if 陳述式。</span><span class="sxs-lookup"><span data-stu-id="f1e82-188">This activity acts just like an if statement.</span></span>  
   
-        1.  將 \[**Condition**\] 屬性設定為 `itemId==”Zune HD” (itemId=”Zune HD” for Visual Basic)`。  
+        1.  <span data-ttu-id="f1e82-189">設定**條件**屬性`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`</span><span class="sxs-lookup"><span data-stu-id="f1e82-189">Set the **Condition** property to `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`</span></span>  
   
-        2.  將 \[**Assign**\] 活動拖放至 \[**Then**\] 區段中、將另一個活動拖放至 \[**Else**\] 區段中，然後設定 \[**Assign**\] 活動的屬性，如下圖所示。  
+        2.  <span data-ttu-id="f1e82-190">將拖放**指派**活動中的**然後**區段，而另一個到**Else**區段中設定的屬性**指派**下圖所示的活動。</span><span class="sxs-lookup"><span data-stu-id="f1e82-190">Drag and drop an **Assign** activity in to the **Then** section and another into the **Else** section set the properties of the **Assign** activities as shown in the following illustration.</span></span>  
   
-             ![指派服務呼叫的結果](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")  
+             <span data-ttu-id="f1e82-191">![指派服務呼叫的結果](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")</span><span class="sxs-lookup"><span data-stu-id="f1e82-191">![Assigning the result of the service call](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")</span></span>  
   
-             如果條件為 `true`，就會執行 \[**Then**\] 區段。  如果條件為 `false`，則會執行 \[**Else**\] 區段。  
+             <span data-ttu-id="f1e82-192">如果條件為`true`**然後**> 一節將會執行。</span><span class="sxs-lookup"><span data-stu-id="f1e82-192">If the condition is `true` the **Then** section will be executed.</span></span> <span data-ttu-id="f1e82-193">如果條件為`false` **Else**執行的區段。</span><span class="sxs-lookup"><span data-stu-id="f1e82-193">If the condition is `false` the **Else** section is executed.</span></span>  
   
-        3.  選取 \[**SendReplyToReceive**\] 活動，然後設定下圖所示的 \[**DisplayName**\] 屬性。  
+        3.  <span data-ttu-id="f1e82-194">選取**SendReplyToReceive**活動，然後設定**DisplayName**下圖所示的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1e82-194">Select the **SendReplyToReceive** activity and set the **DisplayName** property shown in the following illustration.</span></span>  
   
-             ![設定 SendReply 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")  
+             <span data-ttu-id="f1e82-195">![設定 SendReply 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")</span><span class="sxs-lookup"><span data-stu-id="f1e82-195">![Setting the SendReply activity properties](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")</span></span>  
   
-        4.  在 \[**SetReplyToAddItem**\] 活動中，按一下 \[**定義**\] 連結，然後設定此屬性，如下圖所示。  這樣就會將 \[**SendReplyToAddItem**\] 活動設定為傳回 `orderResult` 變數的值。  
+        4.  <span data-ttu-id="f1e82-196">按一下**定義...**中連結**SetReplyToAddItem**活動並將它設定在下圖所示。</span><span class="sxs-lookup"><span data-stu-id="f1e82-196">Click the **Define ...** link in the **SetReplyToAddItem** activity and configure it as shown in the following illustration.</span></span> <span data-ttu-id="f1e82-197">這會設定**SendReplyToAddItem**活動中的將值傳回`orderResult`變數。</span><span class="sxs-lookup"><span data-stu-id="f1e82-197">This configures the **SendReplyToAddItem** activity to return the value in the `orderResult` variable.</span></span>  
   
-             ![為 SendReply 活動設定資料繫結](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")  
+             <span data-ttu-id="f1e82-198">![設定 SendReply 活動的資料繫結](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")</span><span class="sxs-lookup"><span data-stu-id="f1e82-198">![Setting the data binding for the SendReply activit](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")</span></span>  
   
-8.  開啟 web.config 檔案並在 \<behavior\> 區段中加入下列項目，以便啟用工作流程持續性。  
+8.  <span data-ttu-id="f1e82-199">開啟 web.config 檔案，然後加入下列項目中的\<行為 > 區段以啟用工作流程持續性。</span><span class="sxs-lookup"><span data-stu-id="f1e82-199">Open the web.config file and add the following elements in the \<behavior> section to enable workflow persistence.</span></span>  
   
     ```xml  
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />  
               <workflowIdle timeToUnload="0"/>  
-  
     ```  
   
     > [!WARNING]
-    >  請務必取代上一個程式碼片段中的主機和 SQL Server 執行個體名稱。  
+    >  <span data-ttu-id="f1e82-200">請務必取代上一個程式碼片段中的主機和 SQL Server 執行個體名稱。</span><span class="sxs-lookup"><span data-stu-id="f1e82-200">Make sure to replace your host and SQL server instance name in the previous code snippet.</span></span>  
   
-9. 建置方案。  
+9. <span data-ttu-id="f1e82-201">建置方案。</span><span class="sxs-lookup"><span data-stu-id="f1e82-201">Build the solution.</span></span>  
   
-### 若要建立用戶端應用程式來呼叫工作流程服務  
+### <a name="to-create-a-client-application-to-call-the-workflow-service"></a><span data-ttu-id="f1e82-202">若要建立用戶端應用程式來呼叫工作流程服務</span><span class="sxs-lookup"><span data-stu-id="f1e82-202">To Create a Client Application to Call the Workflow Service</span></span>  
   
-1.  將名為 `OrderClient` 的新主控台應用程式專案加入至方案。  
+1.  <span data-ttu-id="f1e82-203">將名為 `OrderClient` 的新主控台應用程式專案加入至方案。</span><span class="sxs-lookup"><span data-stu-id="f1e82-203">Add a new Console application project called `OrderClient` to the solution.</span></span>  
   
-2.  將下列組件的參考加入至 `OrderClient` 專案。  
+2.  <span data-ttu-id="f1e82-204">將下列組件的參考加入至 `OrderClient` 專案。</span><span class="sxs-lookup"><span data-stu-id="f1e82-204">Add references to the following assemblies to the `OrderClient` project</span></span>  
   
-    1.  System.ServiceModel.dll  
+    1.  <span data-ttu-id="f1e82-205">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="f1e82-205">System.ServiceModel.dll</span></span>  
   
-    2.  System.ServiceModel.Activities.dll  
+    2.  <span data-ttu-id="f1e82-206">System.ServiceModel.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="f1e82-206">System.ServiceModel.Activities.dll</span></span>  
   
-3.  將服務參考加入至工作流程服務並將 `OrderService` 指定為命名空間。  
+3.  <span data-ttu-id="f1e82-207">將服務參考加入至工作流程服務並將 `OrderService` 指定為命名空間。</span><span class="sxs-lookup"><span data-stu-id="f1e82-207">Add a service reference to the workflow service and specify `OrderService` as the namespace.</span></span>  
   
-4.  在用戶端專案的 `Main()` 方法中，加入下列程式碼：  
+4.  <span data-ttu-id="f1e82-208">在用戶端專案的 `Main()` 方法中，加入下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="f1e82-208">In the `Main()` method of the client project add the following code:</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -189,29 +190,23 @@ caps.handback.revision: 9
        string orderResult = addProxy.AddItem(item);  
        Console.WriteLine("Service returned: " + orderResult);  
     }  
-  
     ```  
   
-5.  建置方案並執行 `OrderClient` 應用程式。  用戶端就會顯示下列文字：  
+5.  <span data-ttu-id="f1e82-209">建置方案並執行 `OrderClient` 應用程式。</span><span class="sxs-lookup"><span data-stu-id="f1e82-209">Build the solution and run the `OrderClient` application.</span></span> <span data-ttu-id="f1e82-210">用戶端就會顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="f1e82-210">The client will display the following text:</span></span>  
   
     ```Output  
-  
-                  傳送開始訊息  
-    工作流程服務閒置中...  按下 [ENTER] 來傳送加入項目訊息，以重新啟動工作流程服務...    
+    Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...  
     ```  
   
-6.  若要確認工作流程服務已保存，請移至 \[**開始**\] 功能表，然後依序選取 \[**所有程式**\]、\[**Microsoft SQL Server 2008**\] 和 \[**SQL Server Management Studio**\]，藉以啟動 SQL Server Management Studio。  
+6.  <span data-ttu-id="f1e82-211">若要確認已保存工作流程服務，啟動 SQL Server Management Studio，請前往**啟動**功能表上，選取**所有程式**， **Microsoft SQL Server 2008**， **SQL Server Management Studio**。</span><span class="sxs-lookup"><span data-stu-id="f1e82-211">To verify that the workflow service has been persisted, start the SQL Server Management Studio by going to the **Start** menu, Selecting **All Programs**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.</span></span>  
   
-    1.  在左側窗格中，依序展開 \[**資料庫**\]、\[**SQLPersistenceStore**\] 和 \[**檢視**\]、以滑鼠右鍵按一下 \[**System.Activities.DurableInstancing.Instances**\]，然後選取 \[**選取前 1000 個資料列**\]。  在 \[**結果**\] 窗格中，確認您至少看見列出一個執行個體。  如果執行時發生例外狀況，可能會有先前執行的其他執行個體。  您可以用滑鼠右鍵按一下 \[**System.Activities.DurableInstancing.Instances**\]、選取 \[**編輯前 200 個資料列**\]、按下 \[**執行**\] 按鈕、選取 \[結果\] 窗格中的所有資料列，然後選取 \[**刪除**\]，藉以刪除現有的資料列。  若要確認顯示在資料庫中的執行個體就是應用程式所建立的執行個體，請先確認 Instances 檢視表是空的，然後再執行用戶端。  一旦用戶端執行之後，請重新執行查詢 \(選取前 1000 個資料列\) 並確認已經加入新的執行個體。  
+    1.  <span data-ttu-id="f1e82-212">在左窗格中展開，**資料庫**， **SQLPersistenceStore**，**檢視**，以滑鼠右鍵按一下**System.Activities.DurableInstancing.Instances**選取**選取前 1000 個資料列**。</span><span class="sxs-lookup"><span data-stu-id="f1e82-212">In the left hand pane expand, **Databases**, **SQLPersistenceStore**, **Views** and right click **System.Activities.DurableInstancing.Instances** and select **Select Top 1000 Rows**.</span></span> <span data-ttu-id="f1e82-213">在**結果**窗格可讓您確認您看到列出至少一個執行個體。</span><span class="sxs-lookup"><span data-stu-id="f1e82-213">In the **Results** pane verify you see at least one instance listed.</span></span> <span data-ttu-id="f1e82-214">如果執行時發生例外狀況，可能會有先前執行的其他執行個體。</span><span class="sxs-lookup"><span data-stu-id="f1e82-214">There may be other instances from prior runs if an exception occurred while running.</span></span> <span data-ttu-id="f1e82-215">您可以刪除現有的資料列，以滑鼠右鍵按一下**System.Activities.DurableInstancing.Instances** ，然後選取**編輯前 200 個資料列**、 按下**Execute** ] 按鈕，在 [結果] 窗格中選取所有資料列，選取 [**刪除**。</span><span class="sxs-lookup"><span data-stu-id="f1e82-215">You can delete existing rows by right clicking **System.Activities.DurableInstancing.Instances** and selecting **Edit Top 200 rows**, pressing the **Execute** button, selecting all rows in the results pane and selecting **delete**.</span></span>  <span data-ttu-id="f1e82-216">若要確認顯示在資料庫中的執行個體就是應用程式所建立的執行個體，請先確認 Instances 檢視表是空的，然後再執行用戶端。</span><span class="sxs-lookup"><span data-stu-id="f1e82-216">To verify the instance displayed in the database is the instance your application created, verify the instances view is empty prior to running the client.</span></span> <span data-ttu-id="f1e82-217">一旦用戶端執行之後，請重新執行查詢 (選取前 1000 個資料列) 並確認已經加入新的執行個體。</span><span class="sxs-lookup"><span data-stu-id="f1e82-217">Once the client is running re-run the query (Select Top 1000 Rows) and verify a new instance has been added.</span></span>  
   
-7.  按下 Enter，將 add item 訊息傳送至工作流程服務。  用戶端就會顯示下列文字：  
+7.  <span data-ttu-id="f1e82-218">按下 Enter，將 add item 訊息傳送至工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="f1e82-218">Press enter to send the add item message to the workflow service.</span></span> <span data-ttu-id="f1e82-219">用戶端就會顯示下列文字：</span><span class="sxs-lookup"><span data-stu-id="f1e82-219">The client will display the following text:</span></span>  
   
     ```Output  
-  
-                  正在傳送加入項目訊息  
-    傳回的服務：已將項目加入至命令  
-    按任意鍵繼續。  .  .    
+    Sending add item messageService returned: Item added to orderPress any key to continue . . .  
     ```  
   
-## 請參閱  
- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+## <a name="see-also"></a><span data-ttu-id="f1e82-220">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1e82-220">See Also</span></span>  
+ [<span data-ttu-id="f1e82-221">工作流程服務</span><span class="sxs-lookup"><span data-stu-id="f1e82-221">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)

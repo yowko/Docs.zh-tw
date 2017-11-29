@@ -1,51 +1,52 @@
 ---
-title: "CheckedListBox 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "核取記號"
-  - "已核取的清單項目, Windows Form 控制項"
-  - "CheckedListBox 控制項 [Windows Form]"
-  - "CheckedListBox 控制項 [Windows Form], 參考"
-  - "清單方塊控制項"
-  - "清單方塊"
-  - "清單方塊, 顯示核取記號"
-  - "清單方塊, Windows Form 控制項"
-  - "清單控制項, Windows Form"
-  - "清單項目, 顯示的 Windows Form 控制項"
+title: "CheckedListBox 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CheckedListBox control [Windows Forms], reference
+- checked list items [Windows Forms], Windows Forms controls
+- list controls [Windows Forms], Windows Forms
+- CheckedListBox control [Windows Forms]
+- list box controls [Windows Forms]
+- check marks
+- list boxes [Windows Forms], displaying check marks
+- list boxes [Windows Forms], Windows Forms controls
+- list items [Windows Forms], Windows Forms controls that display
+- list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6926d72f5aae82588cb45d1a231e8f1b413b22c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# CheckedListBox 控制項 (Windows Form)
-Windows Form `CheckedListBox` 控制項和 <xref:System.Windows.Forms.ListBox> 控制項一樣會顯示項目清單，而且也可以在清單中的項目旁邊顯示核取記號。  
+# <a name="checkedlistbox-control-windows-forms"></a><span data-ttu-id="632dd-102">CheckedListBox 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="632dd-102">CheckedListBox Control (Windows Forms)</span></span>
+<span data-ttu-id="632dd-103">Windows Form`CheckedListBox`控制項會顯示清單的項目，例如<xref:System.Windows.Forms.ListBox>控制項，然後還可以顯示在清單中項目旁的核取記號。</span><span class="sxs-lookup"><span data-stu-id="632dd-103">The Windows Forms `CheckedListBox` control displays a list of items, like the <xref:System.Windows.Forms.ListBox> control, and also can display a check mark next to items in the list.</span></span>  
   
-## 在本節中  
- [CheckedListBox 控制項概觀](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- 解釋這個控制項是什麼，以及其主要功能和屬性。  
+## <a name="in-this-section"></a><span data-ttu-id="632dd-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="632dd-104">In This Section</span></span>  
+ [<span data-ttu-id="632dd-105">CheckedListBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="632dd-105">CheckedListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="632dd-106">說明此控制項是什麼，並說明其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="632dd-106">Explains what this control is and its key features and properties.</span></span>  
   
- [如何：判斷 Windows Form CheckedListBox 控制項中的已核取項目](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- 描述如何逐步執行清單以決定核取項目。  
+ [<span data-ttu-id="632dd-107">操作說明：判斷 Windows Forms CheckedListBox 控制項中的已核取項目</span><span class="sxs-lookup"><span data-stu-id="632dd-107">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ <span data-ttu-id="632dd-108">描述如何逐步執行來判斷哪些項目會檢查清單。</span><span class="sxs-lookup"><span data-stu-id="632dd-108">Describes how to step through a list to determine which items are checked.</span></span>  
   
-## 參考  
- <xref:System.Windows.Forms.CheckedListBox> 類別  
- 描述這個類別並且連結到它所有的成員。  
+## <a name="reference"></a><span data-ttu-id="632dd-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="632dd-109">Reference</span></span>  
+ <span data-ttu-id="632dd-110"><xref:System.Windows.Forms.CheckedListBox> 類別</span><span class="sxs-lookup"><span data-stu-id="632dd-110"><xref:System.Windows.Forms.CheckedListBox> class</span></span>  
+ <span data-ttu-id="632dd-111">說明這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="632dd-111">Describes this class and has links to all its members.</span></span>  
   
-## 相關章節  
- [用來列出選項的 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- 提供可以使用清單方塊、下拉式方塊和核取的清單方塊執行作業的清單。  
+## <a name="related-sections"></a><span data-ttu-id="632dd-112">相關章節</span><span class="sxs-lookup"><span data-stu-id="632dd-112">Related Sections</span></span>  
+ [<span data-ttu-id="632dd-113">用來列出選項的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="632dd-113">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="632dd-114">提供一份使用清單方塊、 下拉式方塊和選取的清單方塊可以執行的作業。</span><span class="sxs-lookup"><span data-stu-id="632dd-114">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>  
   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。
+ [<span data-ttu-id="632dd-115">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="632dd-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="632dd-116">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="632dd-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

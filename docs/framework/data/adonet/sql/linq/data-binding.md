@@ -1,114 +1,120 @@
 ---
-title: "資料繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "資料繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7405cf37aaa21f8773952c9e7ed941bc8ae3150b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 資料繫結
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援與通用控制項 \(如方格控制項\) 的繫結。  特別的是，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 定義了繫結至資料方格以及處理主從式繫結的基本模式，而且都可以進行顯示和更新作業。  
+# <a name="data-binding"></a><span data-ttu-id="d316b-102">資料繫結</span><span class="sxs-lookup"><span data-stu-id="d316b-102">Data Binding</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d316b-103">支援與通用控制項，如方格控制項繫結。</span><span class="sxs-lookup"><span data-stu-id="d316b-103"> supports binding to common controls, such as grid controls.</span></span> <span data-ttu-id="d316b-104">具體來說，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]定義繫結至資料方格以及處理主從式繫結，都可以進行顯示和更新的基本模式。</span><span class="sxs-lookup"><span data-stu-id="d316b-104">Specifically, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] defines the basic patterns for binding to a data grid and handling master-detail binding, both with regard to display and updating.</span></span>  
   
-## 基礎準則  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢轉譯為 SQL，以便在資料庫上執行。  而產生的結果會是強型別 \(Strongly Typed\) `IEnumerable`。  因為這些物件是一般 Common Language Runtime \(CLR\) 物件，所以一般物件資料繫結 \(Data Binding\) 可以用來顯示結果。  另一方面，變更作業 \(插入、更新和刪除\) 則需要額外的步驟。  
+## <a name="underlying-principle"></a><span data-ttu-id="d316b-105">基礎準則</span><span class="sxs-lookup"><span data-stu-id="d316b-105">Underlying Principle</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d316b-106">將轉譯[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]to SQL 查詢，以便在資料庫上執行。</span><span class="sxs-lookup"><span data-stu-id="d316b-106"> translates [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries to SQL for execution on a database.</span></span> <span data-ttu-id="d316b-107">而產生的結果會是強型別 (Strongly Typed) `IEnumerable`。</span><span class="sxs-lookup"><span data-stu-id="d316b-107">The results are strongly typed `IEnumerable`.</span></span> <span data-ttu-id="d316b-108">因為這些物件是一般 common language runtime (CLR) 物件，所以一般物件資料繫結可用來顯示結果。</span><span class="sxs-lookup"><span data-stu-id="d316b-108">Because these objects are ordinary common language runtime (CLR) objects, ordinary object data binding can be used to display the results.</span></span> <span data-ttu-id="d316b-109">另一方面，變更作業 (插入、更新和刪除) 則需要額外的步驟。</span><span class="sxs-lookup"><span data-stu-id="d316b-109">On the other hand, change operations (inserts, updates, and deletes) require additional steps.</span></span>  
   
-## 運算  
- 實作 <xref:System.ComponentModel.IListSource>，就可以隱含地繫結至 Windows Forms 控制項。  C\# 中的資料來源泛型 <xref:System.Data.Linq.Table%601> \(C\# 中的 `Table<T>` 或 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的 `Table(Of T)`\) 和泛型 `DataQuery` 已更新為實作 <xref:System.ComponentModel.IListSource>。使用者介面 \(UI\) 資料繫結引擎 \(Windows Form 和 Windows Presentation Foundation\) 兩者都會測試其資料來源是否實作 <xref:System.ComponentModel.IListSource>。  因此，直接對控制項資料來源撰寫查詢，會隱含地呼叫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 集合產生，如下列範例所示：  
+## <a name="operation"></a><span data-ttu-id="d316b-110">運算</span><span class="sxs-lookup"><span data-stu-id="d316b-110">Operation</span></span>  
+ <span data-ttu-id="d316b-111">實作 <xref:System.ComponentModel.IListSource>，就可以隱含地繫結至 Windows Forms 控制項。</span><span class="sxs-lookup"><span data-stu-id="d316b-111">Implicitly binding to Windows Forms controls is accomplished by implementing <xref:System.ComponentModel.IListSource>.</span></span> <span data-ttu-id="d316b-112">C# 中的資料來源泛型 <xref:System.Data.Linq.Table%601> (C# 中的 `Table<T>` 或 `Table(Of T)` 中的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) 和泛型 `DataQuery` 已更新為實作 <xref:System.ComponentModel.IListSource>。</span><span class="sxs-lookup"><span data-stu-id="d316b-112">Data sources generic <xref:System.Data.Linq.Table%601> (`Table<T>` in C# or `Table(Of T)` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) and generic `DataQuery` have been updated to implement <xref:System.ComponentModel.IListSource>.</span></span> <span data-ttu-id="d316b-113">使用者介面 (UI) 資料繫結引擎 (Windows Form 和 Windows Presentation Foundation) 兩者都會測試其資料來源是否實作 <xref:System.ComponentModel.IListSource>。</span><span class="sxs-lookup"><span data-stu-id="d316b-113">User interface (UI) data-binding engines (Windows Forms and Windows Presentation Foundation) both test whether their data source implements <xref:System.ComponentModel.IListSource>.</span></span> <span data-ttu-id="d316b-114">因此，撰寫查詢直接對資料來源控制項的隱含地呼叫[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]集合產生，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="d316b-114">Therefore, writing a direct affectation of a query to a data source of a control implicitly calls [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] collection generation, as in the following example:</span></span>  
   
  [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
  [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]  
   
- 而 Windows Presentation Foundation 也會發生相同的狀況：  
+ <span data-ttu-id="d316b-115">而 Windows Presentation Foundation 也會發生相同的狀況：</span><span class="sxs-lookup"><span data-stu-id="d316b-115">The same occurs with Windows Presentation Foundation:</span></span>  
   
  [!code-csharp[DLinqDataBinding#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#2)]
  [!code-vb[DLinqDataBinding#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#2)]  
   
- 集合產生是透過 <xref:System.ComponentModel.IListSource.GetList%2A> 中的泛型 <xref:System.Data.Linq.Table%601> 和泛型 `DataQuery` 予以實作。  
+ <span data-ttu-id="d316b-116">集合產生是透過 <xref:System.Data.Linq.Table%601> 中的泛型 `DataQuery` 和泛型 <xref:System.ComponentModel.IListSource.GetList%2A> 予以實作。</span><span class="sxs-lookup"><span data-stu-id="d316b-116">Collection generations are implemented by generic <xref:System.Data.Linq.Table%601> and generic `DataQuery` in <xref:System.ComponentModel.IListSource.GetList%2A>.</span></span>  
   
-## IListSource 實作  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會在兩個位置實作 <xref:System.ComponentModel.IListSource>：  
+## <a name="ilistsource-implementation"></a><span data-ttu-id="d316b-117">IListSource 實作</span><span class="sxs-lookup"><span data-stu-id="d316b-117">IListSource Implementation</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d316b-118">實作<xref:System.ComponentModel.IListSource>在兩個位置：</span><span class="sxs-lookup"><span data-stu-id="d316b-118"> implements <xref:System.ComponentModel.IListSource> in two locations:</span></span>  
   
--   資料來源是 <xref:System.Data.Linq.Table%601>：[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會瀏覽資料表以填入 `DataBindingList` 集合，這個集合會保存對該資料表的參考。  
+-   <span data-ttu-id="d316b-119">資料來源是<xref:System.Data.Linq.Table%601>:[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]瀏覽資料表以填入`DataBindingList`集合會保存在資料表上的參考。</span><span class="sxs-lookup"><span data-stu-id="d316b-119">The data source is a <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] browses the table to fill a `DataBindingList` collection that keeps a reference on the table.</span></span>  
   
--   資料來源是 <xref:System.Linq.IQueryable%601>。  有兩種案例：  
+-   <span data-ttu-id="d316b-120">資料來源是 <xref:System.Linq.IQueryable%601>。</span><span class="sxs-lookup"><span data-stu-id="d316b-120">The data source is an <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="d316b-121">有兩種案例：</span><span class="sxs-lookup"><span data-stu-id="d316b-121">There are two scenarios:</span></span>  
   
-    -   如果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以從 <xref:System.Linq.IQueryable%601> 找到基礎 <xref:System.Data.Linq.Table%601>，則來源會允許進行編輯，而且狀況與第一點相同。  
+    -   <span data-ttu-id="d316b-122">如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找到基礎<xref:System.Data.Linq.Table%601>從<xref:System.Linq.IQueryable%601>、 來源會允許進行編輯，而且狀況與第一點相同。</span><span class="sxs-lookup"><span data-stu-id="d316b-122">If [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] finds the underlying <xref:System.Data.Linq.Table%601> from the <xref:System.Linq.IQueryable%601>, the source allows for edition and the situation is the same as in the first bullet point.</span></span>  
   
-    -   如果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 找不到基礎 <xref:System.Data.Linq.Table%601>，則來源不允許進行編輯 \(例如，`groupby`\)。[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會瀏覽查詢以填入泛型 `SortableBindingList`，這是簡單的 <xref:System.ComponentModel.BindingList%601>，用來實作所指定屬性之 T 實體 \(Entity\) 的排序功能。  
+    -   <span data-ttu-id="d316b-123">如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基礎<xref:System.Data.Linq.Table%601>，來源不允許進行編輯 (例如， `groupby`)。</span><span class="sxs-lookup"><span data-stu-id="d316b-123">If [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cannot find the underlying <xref:System.Data.Linq.Table%601>, the source does not allow for edition (for example, `groupby`).</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d316b-124">瀏覽查詢以填入泛型`SortableBindingList`，這是簡單<xref:System.ComponentModel.BindingList%601>實作之 T 實體的給定屬性的排序功能。</span><span class="sxs-lookup"><span data-stu-id="d316b-124"> browses the query to fill a generic `SortableBindingList`, which is a simple <xref:System.ComponentModel.BindingList%601> that implements the sorting feature for T entities for a given property.</span></span>  
   
-## 特定的集合  
- <xref:System.ComponentModel.BindingList%601> 已針對本文件之前描述的許多功能，特殊化為一些不同類別。  這些類別是泛型 `SortableBindingList` 和泛型 `DataBindingList`。  這兩種類別都是宣告為內部。  
+## <a name="specialized-collections"></a><span data-ttu-id="d316b-125">特定的集合</span><span class="sxs-lookup"><span data-stu-id="d316b-125">Specialized Collections</span></span>  
+ <span data-ttu-id="d316b-126"><xref:System.ComponentModel.BindingList%601> 已針對本文件之前描述的許多功能，特殊化為一些不同類別。</span><span class="sxs-lookup"><span data-stu-id="d316b-126">For many features described earlier in this document, <xref:System.ComponentModel.BindingList%601> has been specialized to some different classes.</span></span> <span data-ttu-id="d316b-127">這些類別是泛型 `SortableBindingList` 和泛型 `DataBindingList`。</span><span class="sxs-lookup"><span data-stu-id="d316b-127">These classes are generic `SortableBindingList` and generic `DataBindingList`.</span></span> <span data-ttu-id="d316b-128">這兩種類別都是宣告為內部。</span><span class="sxs-lookup"><span data-stu-id="d316b-128">Both are declared as internal.</span></span>  
   
-### 泛型 SortableBindingList  
- 這個類別繼承自 <xref:System.ComponentModel.BindingList%601>，而且是 <xref:System.ComponentModel.BindingList%601> 的可排序版本。  排序動作僅在記憶體中執行，並不會連絡資料庫本身。  <xref:System.ComponentModel.BindingList%601> 會實作 <xref:System.ComponentModel.IBindingList>，但是預設不支援排序。  不過，<xref:System.ComponentModel.BindingList%601> 會使用虛擬 *core* 方法來實作 <xref:System.ComponentModel.IBindingList>。  您可以輕鬆地覆寫這些方法。  泛型 `SortableBindingList` 會覆寫 <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>、<xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>、<xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> 和 <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>。  `ApplySortCore` 是透過 <xref:System.ComponentModel.IBindingList.ApplySort%2A> 進行呼叫，而且會排序所指定屬性的 T 項目清單。  
+### <a name="generic-sortablebindinglist"></a><span data-ttu-id="d316b-129">泛型 SortableBindingList</span><span class="sxs-lookup"><span data-stu-id="d316b-129">Generic SortableBindingList</span></span>  
+ <span data-ttu-id="d316b-130">這個類別繼承自 <xref:System.ComponentModel.BindingList%601>，而且是 <xref:System.ComponentModel.BindingList%601> 的可排序版本。</span><span class="sxs-lookup"><span data-stu-id="d316b-130">This class inherits from <xref:System.ComponentModel.BindingList%601>, and is a sortable version of <xref:System.ComponentModel.BindingList%601>.</span></span> <span data-ttu-id="d316b-131">排序動作僅在記憶體中執行，並不會連絡資料庫本身。</span><span class="sxs-lookup"><span data-stu-id="d316b-131">Sorting is an in-memory solution and never contacts the database itself.</span></span> <span data-ttu-id="d316b-132"><xref:System.ComponentModel.BindingList%601> 會實作 <xref:System.ComponentModel.IBindingList>，但是預設不支援排序。</span><span class="sxs-lookup"><span data-stu-id="d316b-132"><xref:System.ComponentModel.BindingList%601> implements <xref:System.ComponentModel.IBindingList> but does not support sorting by default.</span></span> <span data-ttu-id="d316b-133">不過，<xref:System.ComponentModel.BindingList%601>實作<xref:System.ComponentModel.IBindingList>虛擬*核心*方法。</span><span class="sxs-lookup"><span data-stu-id="d316b-133">However, <xref:System.ComponentModel.BindingList%601> implements <xref:System.ComponentModel.IBindingList> with virtual *core* methods.</span></span> <span data-ttu-id="d316b-134">您可以輕鬆地覆寫這些方法。</span><span class="sxs-lookup"><span data-stu-id="d316b-134">You can easily override these methods.</span></span> <span data-ttu-id="d316b-135">泛型 `SortableBindingList` 會覆寫 <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>、<xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>、<xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> 和 <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>。</span><span class="sxs-lookup"><span data-stu-id="d316b-135">Generic `SortableBindingList` overrides <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>, <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>, <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A>, and <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>.</span></span> <span data-ttu-id="d316b-136">`ApplySortCore` 是透過 <xref:System.ComponentModel.IBindingList.ApplySort%2A> 進行呼叫，而且會排序所指定屬性的 T 項目清單。</span><span class="sxs-lookup"><span data-stu-id="d316b-136">`ApplySortCore` is called by <xref:System.ComponentModel.IBindingList.ApplySort%2A> and sorts the list of T items for a given property.</span></span>  
   
- 如果屬性不屬於 T，則會引發例外狀況 \(Exception\)。  
+ <span data-ttu-id="d316b-137">如果屬性不屬於 T，則會引發例外狀況 (Exception)。</span><span class="sxs-lookup"><span data-stu-id="d316b-137">An exception is raised if the property does not belong to T.</span></span>  
   
- 為了進行排序，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會建立繼承自泛型 <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> 的泛型 `SortableBindingList.PropertyComparer` 類別，並實作所指定型別 T 的預設比較子 \(Comparer\)、`PropertyDescriptor` 以及方向。  這個類別會動態建立 T 的 `Comparer`，其中 T 是 `PropertyDescriptor` 的 `PropertyType`。  然後，會從靜態泛型 `Comparer` 中擷取預設比較子。  而預設執行個體是使用反映 \(Reflection\) 取得。  
+ <span data-ttu-id="d316b-138">為了進行排序，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]建立泛型`SortableBindingList.PropertyComparer`繼承自泛型類別<xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A>和實作指定的型別 T 的預設比較子、 `PropertyDescriptor`，和方向。</span><span class="sxs-lookup"><span data-stu-id="d316b-138">To achieve sorting, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a generic `SortableBindingList.PropertyComparer` class that inherits from generic <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> and implements a default comparer for a given type T, a `PropertyDescriptor`, and a direction.</span></span> <span data-ttu-id="d316b-139">這個類別會動態建立 T 的 `Comparer`，其中 T 是 `PropertyType` 的 `PropertyDescriptor`。</span><span class="sxs-lookup"><span data-stu-id="d316b-139">This class dynamically creates a `Comparer` of T where T is the `PropertyType` of the `PropertyDescriptor`.</span></span> <span data-ttu-id="d316b-140">然後，會從靜態泛型 `Comparer` 中擷取預設比較子。</span><span class="sxs-lookup"><span data-stu-id="d316b-140">Then, the default comparer is retrieved from the static generic `Comparer`.</span></span> <span data-ttu-id="d316b-141">而預設執行個體是使用反映 (Reflection) 取得。</span><span class="sxs-lookup"><span data-stu-id="d316b-141">A default instance is obtained by using reflection.</span></span>  
   
- 泛型 `SortableBindingList` 也是 `DataBindingList` 的基底類別。  泛型 `SortableBindingList` 提供兩種虛擬方法，以暫止或繼續項目的新增\/移除追蹤 \(Tracking\)。  這兩種方法都適用於排序這類的基本功能，但是會由泛型 `DataBindingList` 這類的上層類別實際實作。  
+ <span data-ttu-id="d316b-142">泛型 `SortableBindingList` 也是 `DataBindingList` 的基底類別。</span><span class="sxs-lookup"><span data-stu-id="d316b-142">Generic `SortableBindingList` is also the base class for `DataBindingList`.</span></span> <span data-ttu-id="d316b-143">泛型 `SortableBindingList` 提供兩種虛擬方法，以暫止或繼續項目的新增/移除追蹤 (Tracking)。</span><span class="sxs-lookup"><span data-stu-id="d316b-143">Generic `SortableBindingList` offers two virtual methods for suspending or resuming items add/remove tracking.</span></span> <span data-ttu-id="d316b-144">這兩種方法都適用於排序這類的基本功能，但是會由泛型 `DataBindingList` 這類的上層類別實際實作。</span><span class="sxs-lookup"><span data-stu-id="d316b-144">Those two methods can be used for base features such as sorting, but will really be implemented by upper classes like generic `DataBindingList`.</span></span>  
   
-### 泛型 DataBindingList  
- 這個類別繼承自泛型 `SortableBindingLIst`。  泛型 `DataBindingList` 會保存對泛型 `IQueryable` 之基礎泛型 `Table` \(用於初始填入集合\) 的參考。  泛型 `DatabindingList` 會覆寫 `InsertItem`\(\) 和 `RemoveItem`\(\)，以將項目新增\/移除的追蹤加入至集合。  也會實作抽象的暫止\/繼續追蹤功能，讓追蹤具有條件性。  這個功能可以讓泛型 `DataBindingList` 利用父類別之追蹤功能的所有多型使用。  
+### <a name="generic-databindinglist"></a><span data-ttu-id="d316b-145">泛型 DataBindingList</span><span class="sxs-lookup"><span data-stu-id="d316b-145">Generic DataBindingList</span></span>  
+ <span data-ttu-id="d316b-146">這個類別繼承自泛型 `SortableBindingLIst`。</span><span class="sxs-lookup"><span data-stu-id="d316b-146">This class inherits from generic `SortableBindingLIst`.</span></span> <span data-ttu-id="d316b-147">泛型 `DataBindingList` 會保存對泛型 `Table` 之基礎泛型 `IQueryable` (用於初始填入集合) 的參考。</span><span class="sxs-lookup"><span data-stu-id="d316b-147">Generic `DataBindingList` keeps a reference on the underlying generic `Table` of the generic `IQueryable` used for the initial filling of the collection.</span></span> <span data-ttu-id="d316b-148">泛型 `DatabindingList` 會覆寫 `InsertItem`() 和 `RemoveItem`()，以將項目新增/移除的追蹤加入至集合。</span><span class="sxs-lookup"><span data-stu-id="d316b-148">Generic `DatabindingList` adds tracking for item add/remove to the collection by overriding `InsertItem`() and `RemoveItem`().</span></span> <span data-ttu-id="d316b-149">也會實作抽象的暫止/繼續追蹤功能，讓追蹤具有條件性。</span><span class="sxs-lookup"><span data-stu-id="d316b-149">It also implements the abstract suspend/resume tracking feature to make tracking conditional.</span></span> <span data-ttu-id="d316b-150">這個功能可以讓泛型 `DataBindingList` 利用父類別之追蹤功能的所有多型使用。</span><span class="sxs-lookup"><span data-stu-id="d316b-150">This feature makes generic `DataBindingList` take advantage of all the polymorphic usage of the tracking feature of the parent classes.</span></span>  
   
-## 繫結至 EntitySet  
- 因為 `EntitySet` 已經是實作 <xref:System.ComponentModel.IBindingList> 的集合，所以繫結至 `EntitySet` 是特殊情況。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會加入排序和取消 \(<xref:System.ComponentModel.ICancelAddNew>\) 支援。  `EntitySet` 類別會使用內部清單來儲存實體。  這份清單是以泛型陣列 \(泛型 `ItemList` 類別\) 為基礎的低階集合。  
+## <a name="binding-to-entitysets"></a><span data-ttu-id="d316b-151">繫結至 EntitySet</span><span class="sxs-lookup"><span data-stu-id="d316b-151">Binding to EntitySets</span></span>  
+ <span data-ttu-id="d316b-152">因為 `EntitySet` 已經是實作 `EntitySet` 的集合，所以繫結至 <xref:System.ComponentModel.IBindingList> 是特殊情況。</span><span class="sxs-lookup"><span data-stu-id="d316b-152">Binding to `EntitySet` is a special case because `EntitySet` is already a collection that implements <xref:System.ComponentModel.IBindingList>.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d316b-153">加入排序和取消 (<xref:System.ComponentModel.ICancelAddNew>) 支援。</span><span class="sxs-lookup"><span data-stu-id="d316b-153"> adds sorting and canceling (<xref:System.ComponentModel.ICancelAddNew>) support.</span></span> <span data-ttu-id="d316b-154">`EntitySet` 類別會使用內部清單來儲存實體。</span><span class="sxs-lookup"><span data-stu-id="d316b-154">An `EntitySet` class uses an internal list to store entities.</span></span> <span data-ttu-id="d316b-155">這份清單是以泛型陣列 (泛型 `ItemList` 類別) 為基礎的低階集合。</span><span class="sxs-lookup"><span data-stu-id="d316b-155">This list is a low-level collection based on a generic array, the generic `ItemList` class.</span></span>  
   
-### 加入排序功能  
- 陣列提供的排序方法 \(`Array.Sort()`\) 可以與 T 的 `Comparer` 搭配使用。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用本主題之前所述的泛型 `SortableBindingList.PropertyComparer` 類別，來取得屬性的這個 `Comparer` 以及排序方向。  `ApplySort` 方法會加入至泛型 `ItemList`，以呼叫這個功能。  
+### <a name="adding-a-sorting-feature"></a><span data-ttu-id="d316b-156">加入排序功能</span><span class="sxs-lookup"><span data-stu-id="d316b-156">Adding a Sorting Feature</span></span>  
+ <span data-ttu-id="d316b-157">陣列提供的排序方法 (`Array.Sort()`) 可以與 T 的 `Comparer` 搭配使用。而 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用本主題之前所述的泛型 `SortableBindingList.PropertyComparer` 類別，來取得屬性的這個 `Comparer` 以及排序方向。</span><span class="sxs-lookup"><span data-stu-id="d316b-157">Arrays offer a sort method (`Array.Sort()`) that you can be used with a `Comparer` of T. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses the generic `SortableBindingList.PropertyComparer` class described earlier in this topic to obtain this `Comparer` for the property and the direction to be sorted on.</span></span> <span data-ttu-id="d316b-158">`ApplySort` 方法會加入至泛型 `ItemList`，以呼叫這個功能。</span><span class="sxs-lookup"><span data-stu-id="d316b-158">An `ApplySort` method is added to generic `ItemList` to call this feature.</span></span>  
   
- 您現在必須在 `EntitySet` 端上宣告排序支援：  
+ <span data-ttu-id="d316b-159">您現在必須在 `EntitySet` 端上宣告排序支援：</span><span class="sxs-lookup"><span data-stu-id="d316b-159">On the `EntitySet` side, you now have to declare sorting support:</span></span>  
   
--   <xref:System.ComponentModel.IBindingList.SupportsSorting%2A> 會傳回 `true`。  
+-   <span data-ttu-id="d316b-160"><xref:System.ComponentModel.IBindingList.SupportsSorting%2A> 會傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="d316b-160"><xref:System.ComponentModel.IBindingList.SupportsSorting%2A> returns `true`.</span></span>  
   
--   <xref:System.ComponentModel.IBindingList.ApplySort%2A> 會呼叫 `entities.ApplySort()`，然後呼叫 `OnListChanged()`。  
+-   <span data-ttu-id="d316b-161"><xref:System.ComponentModel.IBindingList.ApplySort%2A> 會呼叫 `entities.ApplySort()`，然後呼叫 `OnListChanged()`。</span><span class="sxs-lookup"><span data-stu-id="d316b-161"><xref:System.ComponentModel.IBindingList.ApplySort%2A> calls `entities.ApplySort()` and then `OnListChanged()`.</span></span>  
   
--   <xref:System.ComponentModel.IBindingList.SortDirection%2A> 和 <xref:System.ComponentModel.IBindingList.SortProperty%2A> 屬性會公開 \(Expose\) 目前儲存在本機成員中的排序定義。  
+-   <span data-ttu-id="d316b-162"><xref:System.ComponentModel.IBindingList.SortDirection%2A> 和 <xref:System.ComponentModel.IBindingList.SortProperty%2A> 屬性會公開 (Expose) 目前儲存在本機成員中的排序定義。</span><span class="sxs-lookup"><span data-stu-id="d316b-162"><xref:System.ComponentModel.IBindingList.SortDirection%2A> and <xref:System.ComponentModel.IBindingList.SortProperty%2A> properties expose the current sorting definition, which is stored in local members.</span></span>  
   
- 當您使用 System.Windows.Forms.BindingSource 並將 EntitySet\<TEntity\> 繫結至 System.Windows.Forms.BindingSource.DataSource 時，必須呼叫 EntitySet\<Tentity\>.GetNewBindingList 來更新 BindingSource.List。  
+ <span data-ttu-id="d316b-163">當您使用 System.Windows.Forms.BindingSource 並繫結 EntitySet\<TEntity > 至 system.windows.forms.bindingsource.datasource 時，您必須呼叫 EntitySet\<Tentity >。GetNewBindingList 來更新 BindingSource.List。</span><span class="sxs-lookup"><span data-stu-id="d316b-163">When you use a System.Windows.Forms.BindingSource and bind an EntitySet\<TEntity> to the System.Windows.Forms.BindingSource.DataSource, you must call EntitySet\<Tentity>.GetNewBindingList to update BindingSource.List.</span></span>  
   
- 如果您使用 System.Windows.Forms.BindingSource 並設定 BindingSource.DataMember 屬性，然後將 BindingSource.DataSource 設定為具有名為 BindingSource.DataMember 之屬性的類別且該屬性會公開 EntitySet\<TEntity\>，則不必呼叫 EntitySet\<Tentity\>.GetNewBindingList 來更新 BindingSource.List，但您會遺失排序功能。  
+ <span data-ttu-id="d316b-164">如果您使用 System.Windows.Forms.BindingSource 並設定 BindingSource.DataMember 屬性，將 BindingSource.DataSource 設定為具有名為 bindingsource.datamember 之公開 EntitySet 屬性的類別，\<TEntity >，您不必呼叫 EntitySet\<Tentity >。GetNewBindingList 來更新 BindingSource.List，但您會遺失排序功能。</span><span class="sxs-lookup"><span data-stu-id="d316b-164">If you use a System.Windows.Forms.BindingSource and set the BindingSource.DataMember property and set BindingSource.DataSource to a class that has a property named in the BindingSource.DataMember that exposes the EntitySet\<TEntity>, you don’t have to call EntitySet\<Tentity>.GetNewBindingList to update the BindingSource.List but you lose Sorting capability.</span></span>  
   
-## 快取  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢實作 <xref:System.ComponentModel.IListSource.GetList%2A>。  Windows Forms BindingSource 類別符合這個介面時，會針對單一連接呼叫三次 GetList\(\)。  為了解決這個情況，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會針對每個執行個體實作快取，以儲存且一律傳回相同的產生集合。  
+## <a name="caching"></a><span data-ttu-id="d316b-165">快取</span><span class="sxs-lookup"><span data-stu-id="d316b-165">Caching</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d316b-166">查詢實作<xref:System.ComponentModel.IListSource.GetList%2A>。</span><span class="sxs-lookup"><span data-stu-id="d316b-166"> queries implement <xref:System.ComponentModel.IListSource.GetList%2A>.</span></span> <span data-ttu-id="d316b-167">Windows Forms BindingSource 類別符合這個介面時，會針對單一連接呼叫三次 GetList()。</span><span class="sxs-lookup"><span data-stu-id="d316b-167">When the Windows Forms BindingSource class meets this interface, it calls GetList() threes time for a single connection.</span></span> <span data-ttu-id="d316b-168">若要解決此情況下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]實作每個執行個體以儲存且一律傳回相同的產生集合的快取。</span><span class="sxs-lookup"><span data-stu-id="d316b-168">To work around this situation, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implements a cache per instance to store and always return the same generated collection.</span></span>  
   
-## 取消  
- <xref:System.ComponentModel.IBindingList> 定義 <xref:System.ComponentModel.IBindingList.AddNew%2A> 方法，讓控制項用來從繫結集合建立新項目。  `DataGridView` 控制項會在最後一個可見資料列的標頭顯示星號，能充分地呈現這個功能特徵。  星號表示您可以加入新的項目。  
+## <a name="cancellation"></a><span data-ttu-id="d316b-169">取消</span><span class="sxs-lookup"><span data-stu-id="d316b-169">Cancellation</span></span>  
+ <span data-ttu-id="d316b-170"><xref:System.ComponentModel.IBindingList> 定義 <xref:System.ComponentModel.IBindingList.AddNew%2A> 方法，讓控制項用來從繫結集合建立新項目。</span><span class="sxs-lookup"><span data-stu-id="d316b-170"><xref:System.ComponentModel.IBindingList> defines an <xref:System.ComponentModel.IBindingList.AddNew%2A> method that is used by controls to create a new item from a bound collection.</span></span> <span data-ttu-id="d316b-171">`DataGridView` 控制項會在最後一個可見資料列的標頭顯示星號，能充分地呈現這個功能特徵。</span><span class="sxs-lookup"><span data-stu-id="d316b-171">The `DataGridView` control shows this feature very well when the last visible row contains a star in its header.</span></span> <span data-ttu-id="d316b-172">星號表示您可以加入新的項目。</span><span class="sxs-lookup"><span data-stu-id="d316b-172">The star shows you that you can add a new item.</span></span>  
   
- 除了這個功能之外，集合也可以實作 <xref:System.ComponentModel.ICancelAddNew>。  這個功能允許控制項取消或驗證是否已驗證過新的編輯過項目。  
+ <span data-ttu-id="d316b-173">除了這個功能之外，集合也可以實作 <xref:System.ComponentModel.ICancelAddNew>。</span><span class="sxs-lookup"><span data-stu-id="d316b-173">In addition to this feature, a collection can also implement <xref:System.ComponentModel.ICancelAddNew>.</span></span> <span data-ttu-id="d316b-174">這個功能允許控制項取消或驗證是否已驗證過新的編輯過項目。</span><span class="sxs-lookup"><span data-stu-id="d316b-174">This feature allows for the controls to cancel or validate that the new edited item has been validated or not.</span></span>  
   
- <xref:System.ComponentModel.ICancelAddNew> 是在所有 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 資料繫結集合中實作 \(泛型 `SortableBindingList` 和泛型 `EntitySet`\)。在這兩個實作中，程式碼執行如下：  
+ <span data-ttu-id="d316b-175"><xref:System.ComponentModel.ICancelAddNew> 是在所有 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 資料繫結集合中實作 (泛型 `SortableBindingList` 和泛型 `EntitySet`)。</span><span class="sxs-lookup"><span data-stu-id="d316b-175"><xref:System.ComponentModel.ICancelAddNew> is implemented in all [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] databound collections (generic `SortableBindingList` and generic `EntitySet`).</span></span> <span data-ttu-id="d316b-176">在這兩個實作中，程式碼執行如下：</span><span class="sxs-lookup"><span data-stu-id="d316b-176">In both implementations the code performs as follows:</span></span>  
   
--   允許項目插入後又從集合中移除。  
+-   <span data-ttu-id="d316b-177">允許項目插入後又從集合中移除。</span><span class="sxs-lookup"><span data-stu-id="d316b-177">Lets items be inserted and then removed from the collection.</span></span>  
   
--   只要 UI 未認可編輯，就不追蹤變更。  
+-   <span data-ttu-id="d316b-178">只要 UI 未認可編輯，就不追蹤變更。</span><span class="sxs-lookup"><span data-stu-id="d316b-178">Does not track changes as long as the UI does not commit the edition.</span></span>  
   
--   只要取消編輯，就不追蹤變更 \(<xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>\)。  
+-   <span data-ttu-id="d316b-179">只要取消編輯，就不追蹤變更 (<xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>)。</span><span class="sxs-lookup"><span data-stu-id="d316b-179">Does not track changes as long as the edition is canceled (<xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>).</span></span>  
   
--   允許在認可編輯時進行追蹤 \(<xref:System.ComponentModel.ICancelAddNew.EndNew%2A>\)。  
+-   <span data-ttu-id="d316b-180">允許在認可編輯時進行追蹤 (<xref:System.ComponentModel.ICancelAddNew.EndNew%2A>)。</span><span class="sxs-lookup"><span data-stu-id="d316b-180">Allows tracking when the edition is committed (<xref:System.ComponentModel.ICancelAddNew.EndNew%2A>).</span></span>  
   
--   如果新項目不是來自 <xref:System.ComponentModel.IBindingList.AddNew%2A>，則讓集合正常運作。  
+-   <span data-ttu-id="d316b-181">如果新項目不是來自 <xref:System.ComponentModel.IBindingList.AddNew%2A>，則讓集合正常運作。</span><span class="sxs-lookup"><span data-stu-id="d316b-181">Lets the collection behave normally if the new item does not come from <xref:System.ComponentModel.IBindingList.AddNew%2A>.</span></span>  
   
-## 疑難排解  
- 本節會呼叫數個項目，協助您疑難排解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 資料繫結應用程式。  
+## <a name="troubleshooting"></a><span data-ttu-id="d316b-182">疑難排解</span><span class="sxs-lookup"><span data-stu-id="d316b-182">Troubleshooting</span></span>  
+ <span data-ttu-id="d316b-183">本節會呼叫數個項目，協助您疑難排解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 資料繫結應用程式。</span><span class="sxs-lookup"><span data-stu-id="d316b-183">This section calls out several items that might help troubleshoot your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] data binding applications.</span></span>  
   
--   您必須使用屬性，只使用欄位是不夠的。  Windows Forms 需要這種使用方式。  
+-   <span data-ttu-id="d316b-184">您必須使用屬性，只使用欄位是不夠的。</span><span class="sxs-lookup"><span data-stu-id="d316b-184">You must use properties; using only fields is not sufficient.</span></span> <span data-ttu-id="d316b-185">Windows Forms 需要這種使用方式。</span><span class="sxs-lookup"><span data-stu-id="d316b-185">Windows Forms require this usage.</span></span>  
   
--   `image`、`varbinary` 和 `timestamp` 資料庫類型預設會對應至位元組陣列。  因為此案例不支援 `ToString()`，所以無法顯示這些物件。  
+-   <span data-ttu-id="d316b-186">根據預設， `image`， `varbinary`，和`timestamp`資料庫型別對應至位元組陣列。</span><span class="sxs-lookup"><span data-stu-id="d316b-186">By default, `image`, `varbinary`, and `timestamp` database types map to byte array.</span></span> <span data-ttu-id="d316b-187">因為此案例不支援 `ToString()`，所以無法顯示這些物件。</span><span class="sxs-lookup"><span data-stu-id="d316b-187">Because `ToString()` is not supported in this scenario, these objects cannot be displayed.</span></span>  
   
--   對應至主索引鍵的類別成員會有 setter，但是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援物件識別變更。  因此，無法更新資料庫中用於對應的主\/唯一索引鍵。  在您呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 時，方格中的變更會導致例外狀況。  
+-   <span data-ttu-id="d316b-188">對應到主索引鍵的類別成員會有 setter，但是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]不支援物件識別變更。</span><span class="sxs-lookup"><span data-stu-id="d316b-188">A class member mapped to a primary key has a setter, but [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support object identity change.</span></span> <span data-ttu-id="d316b-189">因此，無法更新資料庫中用於對應的主/唯一索引鍵。</span><span class="sxs-lookup"><span data-stu-id="d316b-189">Therefore, the primary/unique key that is used in mapping cannot be updated in the database.</span></span> <span data-ttu-id="d316b-190">在方格中的變更會造成例外狀況，當您呼叫<xref:System.Data.Linq.DataContext.SubmitChanges%2A>。</span><span class="sxs-lookup"><span data-stu-id="d316b-190">A change in the grid causes an exception when you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span></span>  
   
--   如果實體是繫結在兩個不同方格中 \(例如，一個是主版方格，而另一個詳細方格\)，則主版方格中的 `Delete` 不會散佈至詳細方格。  
+-   <span data-ttu-id="d316b-191">如果實體是繫結在兩個不同方格中 (例如，一個是主版方格，而另一個詳細方格)，則主版方格中的 `Delete` 不會散佈至詳細方格。</span><span class="sxs-lookup"><span data-stu-id="d316b-191">If an entity is bound in two separate grids (for example, one master and another detail), a `Delete` in the master grid is not propagated to the detail grid.</span></span>  
   
-## 請參閱  
- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a><span data-ttu-id="d316b-192">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d316b-192">See Also</span></span>  
+ [<span data-ttu-id="d316b-193">背景資訊</span><span class="sxs-lookup"><span data-stu-id="d316b-193">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

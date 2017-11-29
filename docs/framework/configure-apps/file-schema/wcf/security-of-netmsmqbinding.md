@@ -1,28 +1,36 @@
 ---
-title: "&lt;netMsmqBinding&gt; 的 &lt;security&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;netMsmqBinding&gt; 的 &lt;security&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 15ebbd1f0f139ef0d66ed802b990876735074485
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;netMsmqBinding&gt; 的 &lt;security&gt;
-定義 MSMQ 繫結的安全性設定。  它指定是否啟用傳輸或 SOAP 安全性，以及如果啟用，正在使用的驗證模式和保護層級。  
+# <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="1e82c-102">&lt;netMsmqBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="1e82c-102">&lt;security&gt; of &lt;netMsmqBinding&gt;</span></span>
+<span data-ttu-id="1e82c-103">定義 MSMQ 繫結的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="1e82c-103">Defines the security settings for a MSMQ binding.</span></span> <span data-ttu-id="1e82c-104">它指定是否啟用傳輸或 SOAP 安全性，以及如果啟用，正在使用的驗證模式和保護層級。</span><span class="sxs-lookup"><span data-stu-id="1e82c-104">It specifies whether transport or SOAP security is enabled and, if so, what authentication mode and protection levels are in use.</span></span>  
   
-## 語法  
+ <span data-ttu-id="1e82c-105">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="1e82c-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="1e82c-106">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="1e82c-106">\<bindings></span></span>  
+<span data-ttu-id="1e82c-107">\<netMsmqBinding ></span><span class="sxs-lookup"><span data-stu-id="1e82c-107">\<netMsmqBinding></span></span>  
+<span data-ttu-id="1e82c-108">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="1e82c-108">\<binding></span></span>  
+<span data-ttu-id="1e82c-109">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="1e82c-109">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="1e82c-110">語法</span><span class="sxs-lookup"><span data-stu-id="1e82c-110">Syntax</span></span>  
   
+```xml  
 <security mode="None/Transport/Message/Both">  
    <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
       msmqEncryptionAlgorithm="RC4Stream/AES"  
@@ -34,36 +42,36 @@ caps.handback.revision: 15
 </security>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1e82c-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="1e82c-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="1e82c-112">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="1e82c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="1e82c-113">屬性</span><span class="sxs-lookup"><span data-stu-id="1e82c-113">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|模式|指定負責控制完整性、機密性和驗證的安全性類型。  有效值包括以下的值：<br /><br /> -   None：這會停用安全性。<br />-   Transport：由傳輸提供保護和驗證。  這會套用在兩個佇列管理員之間的訊息安全性。  應用程式和佇列管理員之間沒有提供安全性。  現有 Msmq 應用程式在功能上相當於這個安全性模式類型。<br />-   Message：指定端對端應用程式安全性。  在傳輸層沒有提供安全性。  這與其他標準繫結提供的安全性類似。<br />-   Both：在傳輸和 SOAP 傳訊層提供安全性。  這兩個層級需要相同的認證。<br /><br /> 預設值為 Transport。  此屬性的型別為 <xref:System.ServiceModel.NetMsmqSecurityMode>。|  
+|<span data-ttu-id="1e82c-114">屬性</span><span class="sxs-lookup"><span data-stu-id="1e82c-114">Attribute</span></span>|<span data-ttu-id="1e82c-115">描述</span><span class="sxs-lookup"><span data-stu-id="1e82c-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="1e82c-116">模式</span><span class="sxs-lookup"><span data-stu-id="1e82c-116">mode</span></span>|<span data-ttu-id="1e82c-117">指定負責控制完整性、機密性和驗證的安全性類型。</span><span class="sxs-lookup"><span data-stu-id="1e82c-117">Specifies the type of security that controls integrity, confidentiality and authentication.</span></span> <span data-ttu-id="1e82c-118">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="1e82c-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="1e82c-119">-None： 這會停用安全性。</span><span class="sxs-lookup"><span data-stu-id="1e82c-119">-   None: This disables security.</span></span><br /><span data-ttu-id="1e82c-120">傳輸： 保護和驗證是由傳輸提供。</span><span class="sxs-lookup"><span data-stu-id="1e82c-120">-   Transport: Protection and authentication are offered by the transport.</span></span> <span data-ttu-id="1e82c-121">這會套用在兩個佇列管理員之間的訊息安全性。</span><span class="sxs-lookup"><span data-stu-id="1e82c-121">This applies to the message security between the two queue managers.</span></span> <span data-ttu-id="1e82c-122">應用程式和佇列管理員之間沒有提供安全性。</span><span class="sxs-lookup"><span data-stu-id="1e82c-122">There is no security offered between the application and queue manager.</span></span> <span data-ttu-id="1e82c-123">現有 Msmq 應用程式在功能上相當於這個安全性模式類型。</span><span class="sxs-lookup"><span data-stu-id="1e82c-123">Existing Msmq applications are functionally equivalent with this type of security mode.</span></span><br /><span data-ttu-id="1e82c-124">-訊息： 指定端對端應用程式的安全性。</span><span class="sxs-lookup"><span data-stu-id="1e82c-124">-   Message: Specifies end-end application security.</span></span> <span data-ttu-id="1e82c-125">在傳輸層沒有提供安全性。</span><span class="sxs-lookup"><span data-stu-id="1e82c-125">There is no security offered at the transport layer.</span></span> <span data-ttu-id="1e82c-126">這與其他標準繫結提供的安全性類似。</span><span class="sxs-lookup"><span data-stu-id="1e82c-126">This is similar to the security offered by other standard bindings.</span></span><br /><span data-ttu-id="1e82c-127">-兩者： 提供傳輸和 SOAP 訊息層級安全性。</span><span class="sxs-lookup"><span data-stu-id="1e82c-127">-   Both: Offers security at both the transport and SOAP messaging layer.</span></span> <span data-ttu-id="1e82c-128">這兩個層級需要相同的認證。</span><span class="sxs-lookup"><span data-stu-id="1e82c-128">The same credential is required at both the levels.</span></span><br /><br /> <span data-ttu-id="1e82c-129">預設值為 Transport。</span><span class="sxs-lookup"><span data-stu-id="1e82c-129">The default value is Transport.</span></span> <span data-ttu-id="1e82c-130">此屬性的型別為 <xref:System.ServiceModel.NetMsmqSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="1e82c-130">This attribute is of type <xref:System.ServiceModel.NetMsmqSecurityMode>.</span></span>|  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="1e82c-131">子元素</span><span class="sxs-lookup"><span data-stu-id="1e82c-131">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<訊息\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|定義 SOAP 訊息安全性設定。  此項目的型別為 <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>。|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|定義 MSMQ 傳輸的安全性設定。  此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。|  
+|<span data-ttu-id="1e82c-132">項目</span><span class="sxs-lookup"><span data-stu-id="1e82c-132">Element</span></span>|<span data-ttu-id="1e82c-133">說明</span><span class="sxs-lookup"><span data-stu-id="1e82c-133">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="1e82c-134">\<訊息 ></span><span class="sxs-lookup"><span data-stu-id="1e82c-134">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|<span data-ttu-id="1e82c-135">定義 SOAP 訊息安全性設定。</span><span class="sxs-lookup"><span data-stu-id="1e82c-135">Defines the SOAP message security settings.</span></span> <span data-ttu-id="1e82c-136">此項目的型別為 <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>。</span><span class="sxs-lookup"><span data-stu-id="1e82c-136">This element is of type <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.</span></span>|  
+|[<span data-ttu-id="1e82c-137">\<傳輸 ></span><span class="sxs-lookup"><span data-stu-id="1e82c-137">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|<span data-ttu-id="1e82c-138">定義 MSMQ 傳輸的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="1e82c-138">Defines the security settings for the MSMQ transport.</span></span> <span data-ttu-id="1e82c-139">此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="1e82c-139">This element is of type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="1e82c-140">父項目</span><span class="sxs-lookup"><span data-stu-id="1e82c-140">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|繫結|[\<netMsmqBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) 的繫結項目|  
+|<span data-ttu-id="1e82c-141">項目</span><span class="sxs-lookup"><span data-stu-id="1e82c-141">Element</span></span>|<span data-ttu-id="1e82c-142">描述</span><span class="sxs-lookup"><span data-stu-id="1e82c-142">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="1e82c-143">繫結</span><span class="sxs-lookup"><span data-stu-id="1e82c-143">binding</span></span>|<span data-ttu-id="1e82c-144">繫結項目[ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)</span><span class="sxs-lookup"><span data-stu-id="1e82c-144">The binding element of the [\<netMsmqBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)</span></span>|  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>   
- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>   
- <xref:System.ServiceModel.NetMsmqSecurity>   
- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-tw/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<繫結\>](../../../../../docs/framework/misc/binding.md)   
- [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="1e82c-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e82c-145">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>  
+ <xref:System.ServiceModel.NetMsmqBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>  
+ <xref:System.ServiceModel.NetMsmqSecurity>  
+ [<span data-ttu-id="1e82c-146">保護服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="1e82c-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="1e82c-147">繫結</span><span class="sxs-lookup"><span data-stu-id="1e82c-147">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="1e82c-148">設定系統提供繫結</span><span class="sxs-lookup"><span data-stu-id="1e82c-148">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="1e82c-149">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="1e82c-149">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="1e82c-150">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="1e82c-150">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="1e82c-151">WCF 中的佇列</span><span class="sxs-lookup"><span data-stu-id="1e82c-151">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

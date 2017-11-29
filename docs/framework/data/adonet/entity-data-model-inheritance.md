@@ -1,37 +1,40 @@
 ---
-title: "實體資料模型：繼承 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "實體資料模型：繼承"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 15862f545092d0573b97b77d6cdb2e1fcdc33978
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 實體資料模型：繼承
-實體資料模型 \(EDM\) 支援[實體類型](../../../../docs/framework/data/adonet/entity-type.md)的繼承。  EDM 中的繼承類似於物件導向程式設計語言中的類別繼承。  如同物件導向語言中的類別，在概念模型中，您可以定義繼承自另一個實體類型 \(「*基底類型*」\(Base Type\)\) 的實體類型 \(「*衍生型別*」\(Derived Type\)\) 。  不過，不同於物件導向程式設計中的類別，在概念模型中，衍生型別永遠會繼承基底類型的所有[屬性](../../../../docs/framework/data/adonet/property.md)和[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)。  您不能覆寫衍生型別中的繼承屬性。  
+# <a name="entity-data-model-inheritance"></a><span data-ttu-id="3da0a-102">實體資料模型：繼承</span><span class="sxs-lookup"><span data-stu-id="3da0a-102">Entity Data Model: Inheritance</span></span>
+<span data-ttu-id="3da0a-103">實體資料模型 (EDM) 支援的繼承[實體類型](../../../../docs/framework/data/adonet/entity-type.md)。</span><span class="sxs-lookup"><span data-stu-id="3da0a-103">The Entity Data Model (EDM) supports inheritance for [entity types](../../../../docs/framework/data/adonet/entity-type.md).</span></span> <span data-ttu-id="3da0a-104">EDM 中的繼承類似於物件導向程式設計語言中的類別繼承。</span><span class="sxs-lookup"><span data-stu-id="3da0a-104">Inheritance in the EDM is similar to inheritance for classes in object-oriented programming languages.</span></span> <span data-ttu-id="3da0a-105">Like 與物件導向語言中的類別，，您也可以在概念模型中定義實體類型 (*衍生型別*) 繼承自另一個實體類型 (*基底型別*)。</span><span class="sxs-lookup"><span data-stu-id="3da0a-105">Like with classes in object-oriented languages, in a conceptual model you can define an entity type (a *derived type*) that inherits from another entity type (the *base type*).</span></span> <span data-ttu-id="3da0a-106">不過，不同於物件導向程式設計中的類別，概念模型中的衍生的類型一律會繼承所有[屬性](../../../../docs/framework/data/adonet/property.md)和[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)基底類型。</span><span class="sxs-lookup"><span data-stu-id="3da0a-106">However, unlike classes in object-oriented programming, in a conceptual model the derived type always inherits all the [properties](../../../../docs/framework/data/adonet/property.md) and [navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) of the base type.</span></span> <span data-ttu-id="3da0a-107">您不能覆寫衍生型別中的繼承屬性。</span><span class="sxs-lookup"><span data-stu-id="3da0a-107">You cannot override inherited properties in a derived type.</span></span>  
   
- 在概念模型中，您可以組建繼承階層，其中的衍生型別繼承自另一種衍生型別。  階層上層的型別 \(階層中非衍生型別的型別\) 稱為「*根型別*」\(Root Type\)。  在繼承階層中，必須在根型別定義[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)。  
+ <span data-ttu-id="3da0a-108">在概念模型中，您可以組建繼承階層，其中的衍生型別繼承自另一種衍生型別。</span><span class="sxs-lookup"><span data-stu-id="3da0a-108">In a conceptual model you can build inheritance hierarchies in which a derived type inherits from another derived type.</span></span> <span data-ttu-id="3da0a-109">頂端的階層 （不是衍生的型別階層架構中的一個類型） 的類型稱為*根類型*。</span><span class="sxs-lookup"><span data-stu-id="3da0a-109">The type at the top of the hierarchy (the one type in the hierarchy that is not a derived type) is called the *root type*.</span></span> <span data-ttu-id="3da0a-110">繼承階層架構中[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)必須在根類型上定義。</span><span class="sxs-lookup"><span data-stu-id="3da0a-110">In an inheritance hierarchy, the [entity key](../../../../docs/framework/data/adonet/entity-key.md) must be defined on the root type.</span></span>  
   
- 您不可建置衍生型別繼承自多個型別的繼承階層。  例如，在具有 `Book` 實體類型的概念模型中，您可以定義分別繼承自 `Book` 的衍生型別 `FictionBook` 和 `NonFictionBook`。  不過，您可能無法定義同時繼承自 `FictionBook` 和 `NonFictionBook` 型別的型別。  
+ <span data-ttu-id="3da0a-111">您不可建置衍生型別繼承自多個型別的繼承階層。</span><span class="sxs-lookup"><span data-stu-id="3da0a-111">You cannot build inheritance hierarchies in which a derived type inherits from more than one type.</span></span> <span data-ttu-id="3da0a-112">例如，在具有 `Book` 實體類型的概念模型中，您可以定義分別繼承自 `FictionBook` 的衍生型別 `NonFictionBook` 和 `Book`。</span><span class="sxs-lookup"><span data-stu-id="3da0a-112">For example, in a conceptual model with a `Book` entity type, you could define derived types `FictionBook` and `NonFictionBook` that each inherit from `Book`.</span></span> <span data-ttu-id="3da0a-113">不過，您可能無法定義同時繼承自 `FictionBook` 和 `NonFictionBook` 型別的型別。</span><span class="sxs-lookup"><span data-stu-id="3da0a-113">However, you could not then define a type that inherits from both the `FictionBook` and `NonFictionBook` types.</span></span>  
   
-## 範例  
- 下圖顯示包含四種實體類型 \(`Book`、`FictionBook`、`Publisher` 和 `Author`\) 的概念模型：  `FictionBook` 實體類型為衍生型別，繼承自 `Book` 實體類型。  `FictionBook` 型別繼承自 `ISBN (Key)`、`Title` 和 `Revision` 屬性，並且定義稱為 `Genre` 的額外屬性。  
+## <a name="example"></a><span data-ttu-id="3da0a-114">範例</span><span class="sxs-lookup"><span data-stu-id="3da0a-114">Example</span></span>  
+ <span data-ttu-id="3da0a-115">下圖顯示包含四種實體類型 (`Book`、`FictionBook`、`Publisher` 和 `Author`) 的概念模型：</span><span class="sxs-lookup"><span data-stu-id="3da0a-115">The diagram below shows a conceptual model with four entity types: `Book`, `FictionBook`, `Publisher`, and `Author`.</span></span> <span data-ttu-id="3da0a-116">`FictionBook` 實體類型為衍生型別，繼承自 `Book` 實體類型。</span><span class="sxs-lookup"><span data-stu-id="3da0a-116">The `FictionBook` entity type is a derived type, inheriting from the `Book` entity type.</span></span> <span data-ttu-id="3da0a-117">`FictionBook` 型別繼承自 `ISBN (Key)`、`Title` 和 `Revision` 屬性，並且定義稱為 `Genre` 的額外屬性。</span><span class="sxs-lookup"><span data-stu-id="3da0a-117">The `FictionBook` type inherits the `ISBN (Key)`, `Title`, and `Revision` properties, and defines an additional property called `Genre`.</span></span>  
   
- ![繼承](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")  
+ <span data-ttu-id="3da0a-118">![繼承](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")</span><span class="sxs-lookup"><span data-stu-id="3da0a-118">![Inheritance](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")</span></span>  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 會使用稱為概念結構定義語言 \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\) 的特定定義域語言 \(DSL\) 來定義概念模型。  下列 CSDL 定義實體類型 `FictionBook`，此實體類型繼承自 `Book` 型別 \(如上圖所示\)：  
+ <span data-ttu-id="3da0a-119">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。</span><span class="sxs-lookup"><span data-stu-id="3da0a-119">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="3da0a-120">下列 CSDL 定義實體類型 `FictionBook`，此實體類型繼承自 `Book` 型別 (如上圖所示)：</span><span class="sxs-lookup"><span data-stu-id="3da0a-120">The following CSDL defines an entity type, `FictionBook`, that inherits from the `Book` type (as in the diagram above):</span></span>  
   
  [!code-xml[EDM_Example_Model#DerivedType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books5.edmx#derivedtype)]  
   
-## 請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="3da0a-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3da0a-121">See Also</span></span>  
+ [<span data-ttu-id="3da0a-122">實體資料模型的重要概念</span><span class="sxs-lookup"><span data-stu-id="3da0a-122">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="3da0a-123">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="3da0a-123">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

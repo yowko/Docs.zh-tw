@@ -1,66 +1,76 @@
 ---
-title: "&lt;serviceTokenResolver&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;serviceTokenResolver&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 06e871ee31880a219d9105ff4ce667618bfb78f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;serviceTokenResolver&gt;
-註冊服務權杖解析程式所使用的語彙基元的處理常式集合中的處理常式。  權杖解析程式服務用來解析加密上的語彙基元連入的語彙基元和訊息。  
+# <a name="ltservicetokenresolvergt"></a><span data-ttu-id="3ebaa-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="3ebaa-102">&lt;serviceTokenResolver&gt;</span></span>
+<span data-ttu-id="3ebaa-103">註冊由權杖處理常式集合中的處理常式的服務權杖解析程式。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="3ebaa-104">服務語彙基元解析程式用來解析連入權杖和訊息上的加密語彙基元。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  
   
-## 語法  
+ <span data-ttu-id="3ebaa-105">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="3ebaa-105">\<system.identityModel></span></span>  
+<span data-ttu-id="3ebaa-106">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="3ebaa-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="3ebaa-107">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="3ebaa-107">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="3ebaa-108">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="3ebaa-108">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="3ebaa-109">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="3ebaa-109">\<serviceTokenResolver></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="3ebaa-110">語法</span><span class="sxs-lookup"><span data-stu-id="3ebaa-110">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <serviceTokenResolver type=xs:string>  
-        </serviceTokenResolver>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <serviceTokenResolver type=xs:string>  
+        </serviceTokenResolver>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3ebaa-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="3ebaa-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="3ebaa-112">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="3ebaa-113">屬性</span><span class="sxs-lookup"><span data-stu-id="3ebaa-113">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|type|指定服務權杖解析的型別。  不論是哪一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>型別或衍生自型別<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。  如需有關如何指定`type`屬性，請參閱[Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences)。  必要項。|  
+|<span data-ttu-id="3ebaa-114">屬性</span><span class="sxs-lookup"><span data-stu-id="3ebaa-114">Attribute</span></span>|<span data-ttu-id="3ebaa-115">描述</span><span class="sxs-lookup"><span data-stu-id="3ebaa-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="3ebaa-116">類型</span><span class="sxs-lookup"><span data-stu-id="3ebaa-116">type</span></span>|<span data-ttu-id="3ebaa-117">指定的服務權杖解析程式類型。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-117">Specifies the type of the service token resolver.</span></span> <span data-ttu-id="3ebaa-118">任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類型或衍生自類型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-118">Either the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> type or a type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span> <span data-ttu-id="3ebaa-119">如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-119">For more information about how to specify the `type` attribute, see [Custom Type References].</span></span> <span data-ttu-id="3ebaa-120">必要項。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-120">Required.</span></span>|  
   
-### 子項目  
- None  
+### <a name="child-elements"></a><span data-ttu-id="3ebaa-121">子元素</span><span class="sxs-lookup"><span data-stu-id="3ebaa-121">Child Elements</span></span>  
+ <span data-ttu-id="3ebaa-122">無</span><span class="sxs-lookup"><span data-stu-id="3ebaa-122">None</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="3ebaa-123">父項目</span><span class="sxs-lookup"><span data-stu-id="3ebaa-123">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性語彙基元的處理常式。|  
+|<span data-ttu-id="3ebaa-124">項目</span><span class="sxs-lookup"><span data-stu-id="3ebaa-124">Element</span></span>|<span data-ttu-id="3ebaa-125">說明</span><span class="sxs-lookup"><span data-stu-id="3ebaa-125">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="3ebaa-126">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="3ebaa-126">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="3ebaa-127">提供組態集合的安全性權杖處理常式。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-127">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## 備註  
- 權杖解析程式服務可用來解決加密上的語彙基元連入的語彙基元和訊息。  它用來擷取的機碼，應該用來解密連入的語彙基元。  您必須指定`type`屬性。  指定的型別可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>或自訂的型別衍生自<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。  
+## <a name="remarks"></a><span data-ttu-id="3ebaa-128">備註</span><span class="sxs-lookup"><span data-stu-id="3ebaa-128">Remarks</span></span>  
+ <span data-ttu-id="3ebaa-129">服務語彙基元解析程式可以用來解析連入權杖和訊息上的加密權杖。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-129">The service token resolver can be used to resolve the encryption token on incoming tokens and messages.</span></span> <span data-ttu-id="3ebaa-130">它用來擷取應該用來將傳入的權杖解密的金鑰。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-130">It is used to retrieve the key that should be used to decrypt incoming tokens.</span></span> <span data-ttu-id="3ebaa-131">您必須指定`type`屬性。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-131">You must specify the `type` attribute.</span></span> <span data-ttu-id="3ebaa-132">指定的型別可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>或自訂型別衍生自<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-132">The type specified can be either <xref:System.IdentityModel.Selectors.SecurityTokenResolver> or a custom type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span>  
   
- 某些語彙基元的處理常式可讓您在組態中指定服務權杖解析程式設定。  在個別的語彙基元處理常式的設定會覆寫安全性語彙基元的處理常式集合上指定。  
+ <span data-ttu-id="3ebaa-133">某些權杖處理常式可讓您在組態中指定服務語彙基元解析程式設定。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-133">Some token handlers allow you to specify service token resolver settings in configuration.</span></span> <span data-ttu-id="3ebaa-134">在個別的語彙基元處理常式上的設定會覆寫安全性權杖處理常式集合上指定。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-134">Settings on individual token handlers override those specified on the security token handler collection.</span></span>  
   
 > [!NOTE]
->  指定`<serviceTokenResolver>`項目做為子項目， [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍然支援回溯相容性。  設定在`<securityTokenHandlerConfiguration>`項目會覆寫那些在`<identityConfiguration>`項目。  
+>  <span data-ttu-id="3ebaa-135">指定`<serviceTokenResolver>`為的子元素的項目[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍支援回溯相容性。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-135">Specifying the `<serviceTokenResolver>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="3ebaa-136">設定`<securityTokenHandlerConfiguration>`元素會覆寫上`<identityConfiguration>`項目。</span><span class="sxs-lookup"><span data-stu-id="3ebaa-136">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="3ebaa-137">範例</span><span class="sxs-lookup"><span data-stu-id="3ebaa-137">Example</span></span>  
   
-```  
+```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
 ```

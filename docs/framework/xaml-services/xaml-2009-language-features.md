@@ -1,43 +1,46 @@
 ---
-title: "XAML 2009 Language Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML 2009 [XAML Services]"
-  - "XAML [XAML Services], XAML 2009"
+title: "XAML 2009 語言功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML 2009 [XAML Services]
+- XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-caps.latest.revision: 11
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 6299a29cb79650eb59df3f198c3ea3fcd49d0076
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# XAML 2009 Language Features
-XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語言規格。 XAML 2009 引進了數個新的指示詞和建構。 這些包括 [x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md)、[x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md)、[x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md)、[x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md) 和通用語言基本類型的內建類型 \(例如 `x:Char`\)。  
+# <a name="xaml-2009-language-features"></a><span data-ttu-id="574fc-102">XAML 2009 語言功能</span><span class="sxs-lookup"><span data-stu-id="574fc-102">XAML 2009 Language Features</span></span>
+<span data-ttu-id="574fc-103">XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語言規格。</span><span class="sxs-lookup"><span data-stu-id="574fc-103">XAML 2009 is the shorthand term for new XAML language features that extend the existing XAML language specification.</span></span> <span data-ttu-id="574fc-104">XAML 2009 引進了數個新的指示詞和建構。</span><span class="sxs-lookup"><span data-stu-id="574fc-104">XAML 2009 introduces several new directives and constructs.</span></span> <span data-ttu-id="574fc-105">這些包括[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md)、 [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md)、 [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md)、 [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md)和通用語言基本類型的內建類型 (例如 `x:Char`)。</span><span class="sxs-lookup"><span data-stu-id="574fc-105">These include the[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); the [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); the [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); the [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md); and built-in types for common language primitives (for example `x:Char`).</span></span>  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
-## WPF 和 Visual Studio 中的 XAML 2009 支援  
- 在 WPF 中，您可以使用 XAML 2009 功能，但只能針對未編譯 WPF 標記的 XAML。 編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 語言關鍵字和功能。  
+## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a><span data-ttu-id="574fc-106">WPF 和 Visual Studio 中的 XAML 2009 支援</span><span class="sxs-lookup"><span data-stu-id="574fc-106">XAML 2009 Support in WPF and Visual Studio</span></span>  
+ <span data-ttu-id="574fc-107">在 WPF 中，您可以使用 XAML 2009 功能，但只能針對未編譯 WPF 標記的 XAML。</span><span class="sxs-lookup"><span data-stu-id="574fc-107">In WPF, you can use XAML 2009 features, but only for XAML that is not WPF markup-compiled.</span></span> <span data-ttu-id="574fc-108">編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 語言關鍵字和功能。</span><span class="sxs-lookup"><span data-stu-id="574fc-108">Markup-compiled XAML and the BAML form of XAML do not currently support the XAML 2009 language keywords and features.</span></span>  
   
- 請注意，對於 CLR 類型和類型系統，在 WPF 中載入鬆散 XAML 的現有技術，可能也會有比編譯標記的 XAML 更嚴格的安全性和存取限制。 如需詳細資訊，請參閱[安全性 \(WPF\)](../../../ocs/framework/wpf/security-wpf.md) 或 [WPF 安全性策略 \- 平台安全性](../../../ocs/framework/wpf/wpf-security-strategy-platform-security.md)。  
+ <span data-ttu-id="574fc-109">請注意，對於 CLR 類型和類型系統，在 WPF 中載入鬆散 XAML 的現有技術，可能也會有比編譯標記的 XAML 更嚴格的安全性和存取限制。</span><span class="sxs-lookup"><span data-stu-id="574fc-109">Note that existing techniques for loading loose XAML in WPF also have possible security and access restrictions to CLR types and the type system that are more restrictive than for markup-compiled XAML.</span></span> <span data-ttu-id="574fc-110">如需詳細資訊，請參閱 [安全性 (WPF)](../../../docs/framework/wpf/security-wpf.md) 或 [WPF 安全性策略 - 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)。</span><span class="sxs-lookup"><span data-stu-id="574fc-110">For more information, see [Security (WPF)](../../../docs/framework/wpf/security-wpf.md) or [WPF Security Strategy - Platform Security](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).</span></span>  
   
- XAML 2009 也引進了額外的功能，可修改先前的 XAML 2006 建構或修改基本標記形式。  
+ <span data-ttu-id="574fc-111">XAML 2009 也引進了額外的功能，可修改先前的 XAML 2006 建構或修改基本標記形式。</span><span class="sxs-lookup"><span data-stu-id="574fc-111">XAML 2009 also introduces additional features that either modify the previous XAML 2006 constructs or that modify the basic markup forms.</span></span>  
   
-### x:Key 做為物件項目  
- XAML 2009 可支援 `x:Key` 做為物件 \(具有物件項目值的屬性 \(Property\) 項目\)，但 XAML 2006 僅支援 `x:Key` 做為屬性 \(Attribute\)。 請參閱 [x:Key Directive](../../../docs/framework/xaml-services/x-key-directive.md) 的＜XAML 2009＞一節。  
+### <a name="xkey-as-an-object-element"></a><span data-ttu-id="574fc-112">x:Key 做為物件項目</span><span class="sxs-lookup"><span data-stu-id="574fc-112">x:Key as an Object Element</span></span>  
+ <span data-ttu-id="574fc-113">XAML 2009 可支援 `x:Key` 做為物件 (具有物件項目值的屬性 (Property) 項目)，但 XAML 2006 僅支援 `x:Key` 做為屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="574fc-113">XAML 2009 can support `x:Key` as an object (a property element that has object element value); however, XAML 2006 only supported `x:Key` as an attribute.</span></span> <span data-ttu-id="574fc-114">請參閱 [x:Key Directive](../../../docs/framework/xaml-services/x-key-directive.md)的＜XAML 2009＞一節。</span><span class="sxs-lookup"><span data-stu-id="574fc-114">See the "XAML 2009" section of [x:Key Directive](../../../docs/framework/xaml-services/x-key-directive.md).</span></span>  
   
-### 屬性項目上的 xmlns  
- XAML 2009 可支援屬性項目的 XAML 命名空間 \(xmlns\) 定義，但 XAML 2006 僅支援物件項目上的 xmlns 定義。  
+### <a name="xmlns-on-property-elements"></a><span data-ttu-id="574fc-115">屬性項目上的 xmlns</span><span class="sxs-lookup"><span data-stu-id="574fc-115">xmlns on Property Elements</span></span>  
+ <span data-ttu-id="574fc-116">XAML 2009 可支援屬性項目的 XAML 命名空間 (xmlns) 定義，但 XAML 2006 僅支援物件項目上的 xmlns 定義。</span><span class="sxs-lookup"><span data-stu-id="574fc-116">XAML 2009 can support XAML namespace (xmlns) definitions on property elements; however, XAML 2006 only supports xmlns definitions on object elements.</span></span>  
   
-### 事件屬性  
- 針對事件所支援的屬性，XAML 2006 會假定標記編譯與將事件送出到標記編譯有關。 XAML 2009 支援類似標記延伸的標記形式，這會將事件連接延遲到 XAML 的執行階段剖析和載入。 不過，WPF 應用程式和 WPF UI 的 XAML 情節通常不會使用這項功能。 WPF 及其 XAML 2006 實作會使用事件處理常式連接組合進行在 <xref:System.Windows.UIElement> 層級定義的路由事件，並使用其標記編譯器步驟進行大部分的事件屬性處理。 標記編譯器也會前置處理在 XAML 中找到的任何事件屬性，建置動作會在此 XAML 中宣告使用標記編譯器。  
+### <a name="event-attributes"></a><span data-ttu-id="574fc-117">事件屬性</span><span class="sxs-lookup"><span data-stu-id="574fc-117">Event Attributes</span></span>  
+ <span data-ttu-id="574fc-118">針對事件所支援的屬性，XAML 2006 會假定標記編譯與將事件送出到標記編譯有關。</span><span class="sxs-lookup"><span data-stu-id="574fc-118">For attributes that are backed by events, XAML 2006 presumes that markup compilation is involved and submits the events to markup compilation.</span></span> <span data-ttu-id="574fc-119">XAML 2009 支援類似標記延伸的標記形式，這會將事件連接延遲到 XAML 的執行階段剖析和載入。</span><span class="sxs-lookup"><span data-stu-id="574fc-119">XAML 2009 supports a markup form that resembles a markup extension, which defers the event wiring until run-time parsing and loading of the XAML.</span></span> <span data-ttu-id="574fc-120">不過，WPF 應用程式和 WPF UI 的 XAML 情節通常不會使用這項功能。</span><span class="sxs-lookup"><span data-stu-id="574fc-120">However, WPF applications and XAML scenarios for WPF UI generally do not use this capability.</span></span> <span data-ttu-id="574fc-121">WPF 及其 XAML 2006 實作會使用事件處理常式連接組合進行在 <xref:System.Windows.UIElement> 層級定義的路由事件，並使用其標記編譯器步驟進行大部分的事件屬性處理。</span><span class="sxs-lookup"><span data-stu-id="574fc-121">WPF and its XAML 2006 implementation uses the combination of event handler wiring for routed events defined at the <xref:System.Windows.UIElement> level and its markup compiler step for much of its event attribute processing.</span></span> <span data-ttu-id="574fc-122">標記編譯器也會前置處理在 XAML 中找到的任何事件屬性，建置動作會在此 XAML 中宣告使用標記編譯器。</span><span class="sxs-lookup"><span data-stu-id="574fc-122">The markup compiler also preprocesses any event attributes found in XAML where the build actions declare that the markup compiler is used.</span></span>  
   
-## 請參閱  
- [XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="574fc-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="574fc-123">See Also</span></span>  
+ [<span data-ttu-id="574fc-124">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="574fc-124">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

@@ -1,49 +1,53 @@
 ---
-title: "107 -- BookmarkResumptionRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 107 -- BookmarkResumptionRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa2d37ed-2bfa-439b-89e8-a9354027f155
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 247a439dcbe566e74fd0157fbd92b9cb6c96e375
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 107 -- BookmarkResumptionRecord
-## 屬性  
+# <a name="107----bookmarkresumptionrecord"></a><span data-ttu-id="df400-102">107 -- BookmarkResumptionRecord</span><span class="sxs-lookup"><span data-stu-id="df400-102">107 -- BookmarkResumptionRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="df400-103">屬性</span><span class="sxs-lookup"><span data-stu-id="df400-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|107|  
-|關鍵字|EndToEndMonitoring，Troubleshooting，HealthMonitoring，WFTracking|  
-|層級|Information|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="df400-104">ID</span><span class="sxs-lookup"><span data-stu-id="df400-104">Id</span></span>|<span data-ttu-id="df400-105">107</span><span class="sxs-lookup"><span data-stu-id="df400-105">107</span></span>|  
+|<span data-ttu-id="df400-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="df400-106">Keywords</span></span>|<span data-ttu-id="df400-107">EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking</span><span class="sxs-lookup"><span data-stu-id="df400-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="df400-108">層級</span><span class="sxs-lookup"><span data-stu-id="df400-108">Level</span></span>|<span data-ttu-id="df400-109">資訊</span><span class="sxs-lookup"><span data-stu-id="df400-109">Information</span></span>|  
+|<span data-ttu-id="df400-110">通道</span><span class="sxs-lookup"><span data-stu-id="df400-110">Channel</span></span>|<span data-ttu-id="df400-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="df400-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 說明  
- 此事件是當工作流程執行個體發出 BookmarkResumptionRecord 時，由 ETW 追蹤參與者發出。  
+## <a name="description"></a><span data-ttu-id="df400-112">描述</span><span class="sxs-lookup"><span data-stu-id="df400-112">Description</span></span>  
+ <span data-ttu-id="df400-113">此事件是當工作流程執行個體發出 BookmarkResumptionRecord 時，由 ETW 追蹤參與者發出。</span><span class="sxs-lookup"><span data-stu-id="df400-113">This event is emitted by the ETW tracking participant when a workflow instance emits a BookmarkResumptionRecord.</span></span>  
   
-## 訊息  
- TrackRecord \= BookmarkResumptionRecord, InstanceID\=%1, RecordNumber\=%2,EventTime\=%3, Name\=%4, SubInstanceID\=%5,  OwnerActivityName\=%6, OwnerActivityId \=%7, OwnerActivityInstanceId\=%8, OwnerActivityTypeName\=%9, Annotations\=%10, ProfileName \= %11  
+## <a name="message"></a><span data-ttu-id="df400-114">訊息</span><span class="sxs-lookup"><span data-stu-id="df400-114">Message</span></span>  
+ <span data-ttu-id="df400-115">TrackRecord = BookmarkResumptionRecord、InstanceID=%1、RecordNumber=%2,EventTime=%3、Name=%4、SubInstanceID=%5、OwnerActivityName=%6、OwnerActivityId =%7、OwnerActivityInstanceId=%8、OwnerActivityTypeName=%9、Annotations=%10、ProfileName = %11</span><span class="sxs-lookup"><span data-stu-id="df400-115">TrackRecord = BookmarkResumptionRecord, InstanceID=%1, RecordNumber=%2,EventTime=%3, Name=%4, SubInstanceID=%5,  OwnerActivityName=%6, OwnerActivityId =%7, OwnerActivityInstanceId=%8, OwnerActivityTypeName=%9, Annotations=%10, ProfileName = %11</span></span>  
   
-## 詳細資料  
+## <a name="details"></a><span data-ttu-id="df400-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="df400-116">Details</span></span>  
   
-|資料項目名稱|資料項目型別|說明|  
-|------------|------------|--------|  
-|InstanceId|xs:GUID|工作流程的執行個體 ID。|  
-|RecordNumber|xs:long|發出之記錄的序號。|  
-|EventTime|xs:dateTime|發出事件時的 UTC 時間。|  
-|Name|xs:string|已繼續執行的書籤名稱。|  
-|SubInstanceID|xs:GUID|書籤範圍的 ID。|  
-|OwnerActivityName|xs:string|書籤活動的名稱。|  
-|OwnerActivityId|xs:string|書籤活動的 ID。|  
-|OwnerActivityInstanceId|xs:string|書籤活動的執行個體 ID。|  
-|OwnerActivityTypeName|xs:string|書籤活動的型別。|  
-|Annotations|xs:string|加入至此事件中的附註。這些值會以下列格式儲存在 XML 項目中：\<items\>\<\> item  name \= "annotationName" type\="System.String"\<annotationValue\>\<\/item\>\/items。如果沒有指定的附註，則字串會包含 \<items\/\>。ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。如果事件大小超過 ETW 限制，則會捨棄附註並以 \<items\>...\<\/items\> 取代附註值來截斷事件。|  
-|ProfileName|xs:string|造成發送這個事件的名稱或追蹤設定檔。|  
-|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。範例：'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="df400-117">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="df400-117">Data Item Name</span></span>|<span data-ttu-id="df400-118">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="df400-118">Data Item Type</span></span>|<span data-ttu-id="df400-119">描述</span><span class="sxs-lookup"><span data-stu-id="df400-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="df400-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="df400-120">InstanceId</span></span>|<span data-ttu-id="df400-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="df400-121">xs:GUID</span></span>|<span data-ttu-id="df400-122">工作流程的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="df400-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="df400-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="df400-123">RecordNumber</span></span>|<span data-ttu-id="df400-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="df400-124">xs:long</span></span>|<span data-ttu-id="df400-125">發出之記錄的序號。</span><span class="sxs-lookup"><span data-stu-id="df400-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="df400-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="df400-126">EventTime</span></span>|<span data-ttu-id="df400-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="df400-127">xs:dateTime</span></span>|<span data-ttu-id="df400-128">發出事件時的 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="df400-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="df400-129">名稱</span><span class="sxs-lookup"><span data-stu-id="df400-129">Name</span></span>|<span data-ttu-id="df400-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-130">xs:string</span></span>|<span data-ttu-id="df400-131">已繼續執行的書籤名稱。</span><span class="sxs-lookup"><span data-stu-id="df400-131">The name of the bookmark that was resumed</span></span>|  
+|<span data-ttu-id="df400-132">SubInstanceID</span><span class="sxs-lookup"><span data-stu-id="df400-132">SubInstanceID</span></span>|<span data-ttu-id="df400-133">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="df400-133">xs:GUID</span></span>|<span data-ttu-id="df400-134">書籤範圍的 ID。</span><span class="sxs-lookup"><span data-stu-id="df400-134">The id of the bookmark scope</span></span>|  
+|<span data-ttu-id="df400-135">OwnerActivityName</span><span class="sxs-lookup"><span data-stu-id="df400-135">OwnerActivityName</span></span>|<span data-ttu-id="df400-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-136">xs:string</span></span>|<span data-ttu-id="df400-137">書籤活動的名稱。</span><span class="sxs-lookup"><span data-stu-id="df400-137">The name of the bookmark activity</span></span>|  
+|<span data-ttu-id="df400-138">OwnerActivityId</span><span class="sxs-lookup"><span data-stu-id="df400-138">OwnerActivityId</span></span>|<span data-ttu-id="df400-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-139">xs:string</span></span>|<span data-ttu-id="df400-140">書籤活動的 ID。</span><span class="sxs-lookup"><span data-stu-id="df400-140">The id of the bookmark activity</span></span>|  
+|<span data-ttu-id="df400-141">OwnerActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="df400-141">OwnerActivityInstanceId</span></span>|<span data-ttu-id="df400-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-142">xs:string</span></span>|<span data-ttu-id="df400-143">書籤活動的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="df400-143">The instance id of the bookmark activity</span></span>|  
+|<span data-ttu-id="df400-144">OwnerActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="df400-144">OwnerActivityTypeName</span></span>|<span data-ttu-id="df400-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-145">xs:string</span></span>|<span data-ttu-id="df400-146">書籤活動的型別。</span><span class="sxs-lookup"><span data-stu-id="df400-146">The type of the bookmark activity</span></span>|  
+|<span data-ttu-id="df400-147">標註</span><span class="sxs-lookup"><span data-stu-id="df400-147">Annotations</span></span>|<span data-ttu-id="df400-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-148">xs:string</span></span>|<span data-ttu-id="df400-149">加入至此事件中的附註。</span><span class="sxs-lookup"><span data-stu-id="df400-149">The annotations that were added to this event.</span></span>  <span data-ttu-id="df400-150">值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"type ="> annotationValue\</項目 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="df400-150">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="df400-151">如果沒有指定的註釋的字串，包含\<項目 / >。</span><span class="sxs-lookup"><span data-stu-id="df400-151">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="df400-152">ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。</span><span class="sxs-lookup"><span data-stu-id="df400-152">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="df400-153">如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代具有註釋值截斷\<項目 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="df400-153">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="df400-154">ProfileName</span><span class="sxs-lookup"><span data-stu-id="df400-154">ProfileName</span></span>|<span data-ttu-id="df400-155">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-155">xs:string</span></span>|<span data-ttu-id="df400-156">造成發送這個事件的名稱或追蹤設定檔。</span><span class="sxs-lookup"><span data-stu-id="df400-156">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="df400-157">HostReference</span><span class="sxs-lookup"><span data-stu-id="df400-157">HostReference</span></span>|<span data-ttu-id="df400-158">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-158">xs:string</span></span>|<span data-ttu-id="df400-159">若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。</span><span class="sxs-lookup"><span data-stu-id="df400-159">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="df400-160">其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName' 範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="df400-160">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="df400-161">AppDomain</span><span class="sxs-lookup"><span data-stu-id="df400-161">AppDomain</span></span>|<span data-ttu-id="df400-162">xs:string</span><span class="sxs-lookup"><span data-stu-id="df400-162">xs:string</span></span>|<span data-ttu-id="df400-163">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="df400-163">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

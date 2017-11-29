@@ -5,37 +5,34 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3a2db2aba0904aac89bf5fe73c715ff7a5eeb5f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a>COM Interop 範例：.NET 用戶端與 COM 伺服器
-此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="c4649-102">COM Interop 範例：.NET 用戶端與 COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="c4649-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="c4649-103">此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。</span><span class="sxs-lookup"><span data-stu-id="c4649-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- 在此範例中，用戶端會建立和呼叫 **Loan** coclass 執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。 這個範例的程式碼片段會出現在本節中。  
+ <span data-ttu-id="c4649-104">在此範例中，用戶端會建立和呼叫 **Loan** coclass 執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="c4649-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="c4649-105">這個範例的程式碼片段會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="c4649-105">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a>.NET 用戶端  
+## <a name="net-client"></a><span data-ttu-id="c4649-106">.NET 用戶端</span><span class="sxs-lookup"><span data-stu-id="c4649-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -165,7 +162,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## <a name="com-server"></a>COM 伺服器  
+## <a name="com-server"></a><span data-ttu-id="c4649-107">COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="c4649-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -310,6 +307,5 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
-
+## <a name="see-also"></a><span data-ttu-id="c4649-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c4649-108">See Also</span></span>  
+ [<span data-ttu-id="c4649-109">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c4649-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)

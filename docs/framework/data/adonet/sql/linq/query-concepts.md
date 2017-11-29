@@ -1,43 +1,46 @@
 ---
-title: "查詢概念 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "查詢概念"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a125749-ccb5-49d5-999d-d2db7171d74d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 14be34b5d988a51a4785defbfcec95a4a073cc2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 查詢概念
-本節說明在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中設計 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢的主要概念。  
+# <a name="query-concepts"></a><span data-ttu-id="02b06-102">查詢概念</span><span class="sxs-lookup"><span data-stu-id="02b06-102">Query Concepts</span></span>
+<span data-ttu-id="02b06-103">本節說明在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中設計 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢的主要概念。</span><span class="sxs-lookup"><span data-stu-id="02b06-103">This section describes key concepts for designing [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
-## 在本節中  
- [LINQ to SQL 查詢](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
- 參考 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 一般主題，並說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 特有的項目。  
+## <a name="in-this-section"></a><span data-ttu-id="02b06-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="02b06-104">In This Section</span></span>  
+ [<span data-ttu-id="02b06-105">LINQ to SQL 查詢</span><span class="sxs-lookup"><span data-stu-id="02b06-105">LINQ to SQL Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
+ <span data-ttu-id="02b06-106">參考 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 一般主題，並說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 特有的項目。</span><span class="sxs-lookup"><span data-stu-id="02b06-106">Refers to general [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] topics, and explains items specific to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [跨關聯性查詢](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
- 說明如何使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型中的關聯。  
+ [<span data-ttu-id="02b06-107">跨關聯性查詢</span><span class="sxs-lookup"><span data-stu-id="02b06-107">Querying Across Relationships</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
+ <span data-ttu-id="02b06-108">說明如何使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型中的關聯。</span><span class="sxs-lookup"><span data-stu-id="02b06-108">Explains how to use associations in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model.</span></span>  
   
- [遠端和本機執行的比較](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
- 說明如何指定您要執行查詢的位置。  
+ [<span data-ttu-id="02b06-109">遠端與本機執行</span><span class="sxs-lookup"><span data-stu-id="02b06-109">Remote vs. Local Execution</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
+ <span data-ttu-id="02b06-110">說明如何指定您要執行查詢的位置。</span><span class="sxs-lookup"><span data-stu-id="02b06-110">Explains how to specify where you want your query executed.</span></span>  
   
- [延後和立即載入的比較](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)  
- 說明如何指定載入相關物件的時間。  
+ [<span data-ttu-id="02b06-111">延後執行與立即載入</span><span class="sxs-lookup"><span data-stu-id="02b06-111">Deferred versus Immediate Loading</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)  
+ <span data-ttu-id="02b06-112">說明如何指定載入相關物件的時間。</span><span class="sxs-lookup"><span data-stu-id="02b06-112">Describes how to specify when related objects are loaded.</span></span>  
   
-## 相關章節  
- [程式設計手冊](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- 包含可說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的主題連結。  
+## <a name="related-sections"></a><span data-ttu-id="02b06-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="02b06-113">Related Sections</span></span>  
+ [<span data-ttu-id="02b06-114">程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="02b06-114">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ <span data-ttu-id="02b06-115">包含可說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的主題連結。</span><span class="sxs-lookup"><span data-stu-id="02b06-115">Contains links to topics that explain the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology.</span></span>  
   
- [物件識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- 說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的物件識別概念。  
+ [<span data-ttu-id="02b06-116">物件識別</span><span class="sxs-lookup"><span data-stu-id="02b06-116">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ <span data-ttu-id="02b06-117">說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的物件識別概念。</span><span class="sxs-lookup"><span data-stu-id="02b06-117">Explains the concept of object identity in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md)  
- 提供 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中查詢作業的簡介。
+ [<span data-ttu-id="02b06-118">LINQ 查詢簡介 (C#)</span><span class="sxs-lookup"><span data-stu-id="02b06-118">Introduction to LINQ Queries (C#)</span></span>](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ <span data-ttu-id="02b06-119">提供 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中查詢作業的簡介。</span><span class="sxs-lookup"><span data-stu-id="02b06-119">Provides an introduction to query operations in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span></span>

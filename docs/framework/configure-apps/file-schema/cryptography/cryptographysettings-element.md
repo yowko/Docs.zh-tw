@@ -1,67 +1,68 @@
 ---
-title: "&lt;cryptographySettings&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptographySettings"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptographySettings> 項目"
-  - "cryptographySettings 項目"
+title: "&lt;cryptographySettings&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptographySettings
+helpviewer_keywords:
+- cryptographySettings element
+- <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 0f023dbc3049f558acfc0fb83056f462d390fa7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;cryptographySettings&gt; 項目
-包含密碼編譯設定。  
+# <a name="ltcryptographysettingsgt-element"></a><span data-ttu-id="e75ac-102">&lt;cryptographySettings&gt;項目</span><span class="sxs-lookup"><span data-stu-id="e75ac-102">&lt;cryptographySettings&gt; Element</span></span>
+<span data-ttu-id="e75ac-103">包含密碼編譯設定。</span><span class="sxs-lookup"><span data-stu-id="e75ac-103">Contains cryptography settings.</span></span>  
   
-## 語法  
+ <span data-ttu-id="e75ac-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e75ac-104">\<configuration></span></span>  
+<span data-ttu-id="e75ac-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="e75ac-105">\<mscorlib></span></span>  
+<span data-ttu-id="e75ac-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="e75ac-106">\<cryptographySettings></span></span>  
   
+## <a name="syntax"></a><span data-ttu-id="e75ac-107">語法</span><span class="sxs-lookup"><span data-stu-id="e75ac-107">Syntax</span></span>  
+  
+```xml  
+      <cryptographySettings>   
+</cryptographySettings>  
 ```  
   
-      <cryptographySettings>   
-</crytopgraphySettings>  
-```  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e75ac-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="e75ac-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e75ac-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="e75ac-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+### <a name="attributes"></a><span data-ttu-id="e75ac-110">屬性</span><span class="sxs-lookup"><span data-stu-id="e75ac-110">Attributes</span></span>  
+ <span data-ttu-id="e75ac-111">無。</span><span class="sxs-lookup"><span data-stu-id="e75ac-111">None.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="e75ac-112">子項目</span><span class="sxs-lookup"><span data-stu-id="e75ac-112">Child Elements</span></span>  
   
-### 子項目  
+|<span data-ttu-id="e75ac-113">項目</span><span class="sxs-lookup"><span data-stu-id="e75ac-113">Element</span></span>|<span data-ttu-id="e75ac-114">說明</span><span class="sxs-lookup"><span data-stu-id="e75ac-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e75ac-115">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="e75ac-115">\<cryptoNameMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|<span data-ttu-id="e75ac-116">包含易記名稱的類別對應。</span><span class="sxs-lookup"><span data-stu-id="e75ac-116">Contains mappings of classes to friendly names.</span></span>|  
+|[<span data-ttu-id="e75ac-117">\<oidMap ></span><span class="sxs-lookup"><span data-stu-id="e75ac-117">\<oidMap></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|<span data-ttu-id="e75ac-118">包含類別到 ASN.1 物件識別碼 (OID) 對應。</span><span class="sxs-lookup"><span data-stu-id="e75ac-118">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
   
-|元素|說明|  
-|--------|--------|  
-|[\<cryptoNameMapping\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
-|[\<oidMap\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|包含類別的 ASN.1 物件識別項 \(OID\) 對應。|  
+### <a name="parent-elements"></a><span data-ttu-id="e75ac-119">父項目</span><span class="sxs-lookup"><span data-stu-id="e75ac-119">Parent Elements</span></span>  
   
-### 父項目  
+|<span data-ttu-id="e75ac-120">項目</span><span class="sxs-lookup"><span data-stu-id="e75ac-120">Element</span></span>|<span data-ttu-id="e75ac-121">描述</span><span class="sxs-lookup"><span data-stu-id="e75ac-121">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="e75ac-122">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="e75ac-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`mscorlib`|<span data-ttu-id="e75ac-123">包含`cryptographySettings`項目。</span><span class="sxs-lookup"><span data-stu-id="e75ac-123">Contains the `cryptographySettings` element.</span></span>|  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`mscorlib`|包含 `cryptographySettings` 項目。|  
+## <a name="example"></a><span data-ttu-id="e75ac-124">範例</span><span class="sxs-lookup"><span data-stu-id="e75ac-124">Example</span></span>  
+ <span data-ttu-id="e75ac-125">下列範例示範如何使用 **\<cryptographySettings >**包含密碼編譯名稱對應和 OID 對應的項目。</span><span class="sxs-lookup"><span data-stu-id="e75ac-125">The following example shows how use the **\<cryptographySettings>** element to contain cryptography name mappings and OID mappings.</span></span> <span data-ttu-id="e75ac-126">這個範例會設定執行階段，讓<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>傳回`MyHashClass`物件和`MyCryptoClass`類別對應至物件識別碼 1.3.36.2.1。</span><span class="sxs-lookup"><span data-stu-id="e75ac-126">This example configures the runtime so that <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> returns a `MyHashClass` object and the `MyCryptoClass` class maps to the object identifier 1.3.36.2.1.</span></span>  
   
-## 範例  
- 下列範例顯示如何使用 **\<cryptographySettings\>** 項目來包含密碼編譯名稱對應和 OID 對應。  這個範例設定執行階段，讓 [System.Security.Cryptography.HashAlgorithm.Create](frlrfSystemSecurityCryptographyHashAlgorithmClassCreateTopic) 傳回 `MyHashClass` 物件，並讓 `MyCryptoClass` 類別對應物件識別項 1.3.36.2.1。  
-  
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -85,7 +86,7 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 請參閱  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="e75ac-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e75ac-127">See Also</span></span>  
+ [<span data-ttu-id="e75ac-128">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="e75ac-128">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="e75ac-129">密碼編譯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="e75ac-129">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="e75ac-130">密碼編譯服務</span><span class="sxs-lookup"><span data-stu-id="e75ac-130">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)

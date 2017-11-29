@@ -1,50 +1,53 @@
 ---
-title: "實體資料模型：基本資料型別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "實體資料模型：基本資料型別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 實體資料模型：基本資料型別
-實體資料模型 \(EDM\) 支援一組抽象的基本資料型別 \(例如字串、布林值、Int32 等\)，這些型別用於定義概念模型中的[屬性](../../../../docs/framework/data/adonet/property.md)。  這些基本資料型別是實際基本資料型別的 Proxy，無論在 SQL Server 資料庫或 Common Language Runtime \(CLR\) 等儲存或裝載環境中皆可支援。  EDM 不會定義基本資料型別作業或慣例的語意，這些語意是由儲存或裝載環境定義的。  一般來說，EDM 中的基本資料型別對應於儲存或裝載環境中相對應的基本資料型別。  如需 Entity Framework 如何將 EDM 中的基底類型對應至 SQL Server 資料型別的詳細資訊，請參閱 [Entity FrameworkTypes 的 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
+# <a name="entity-data-model-primitive-data-types"></a><span data-ttu-id="fc518-102">實體資料模型：基本資料型別</span><span class="sxs-lookup"><span data-stu-id="fc518-102">Entity Data Model: Primitive Data Types</span></span>
+<span data-ttu-id="fc518-103">實體資料模型 (EDM) 支援一組用來定義的抽象基本資料類型 （例如字串、 布林值、 Int32 等） 的[屬性](../../../../docs/framework/data/adonet/property.md)概念模型中。</span><span class="sxs-lookup"><span data-stu-id="fc518-103">The Entity Data Model (EDM) supports a set of abstract primitive data types (such as String, Boolean, Int32, and so on) that are used to define [properties](../../../../docs/framework/data/adonet/property.md) in a conceptual model.</span></span> <span data-ttu-id="fc518-104">這些基本資料型別是實際基本資料型別的 Proxy，無論在 SQL Server 資料庫或 Common Language Runtime (CLR) 等儲存或裝載環境中皆可支援。</span><span class="sxs-lookup"><span data-stu-id="fc518-104">These primitive data types are proxies for actual primitive data types that are supported in the storage or hosting environment, such as a SQL Server database or the common language runtime (CLR).</span></span> <span data-ttu-id="fc518-105">EDM 不會定義基本資料型別作業或慣例的語意，這些語意是由儲存或裝載環境定義的。</span><span class="sxs-lookup"><span data-stu-id="fc518-105">The EDM does not define the semantics of operations or conversions over primitive data types; these semantics are defined by the storage or hosting environment.</span></span> <span data-ttu-id="fc518-106">一般來說，EDM 中的基本資料型別對應於儲存或裝載環境中相對應的基本資料型別。</span><span class="sxs-lookup"><span data-stu-id="fc518-106">Typically, primitive data types in the EDM are mapped to corresponding primitive data types in the storage or hosting environment.</span></span> <span data-ttu-id="fc518-107">如需如何 Entity Framework 將 EDM 中的基本類型對應到 SQL Server 資料類型資訊，請參閱[適用於 Entity Framework 的 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。</span><span class="sxs-lookup"><span data-stu-id="fc518-107">For information about how the Entity Framework maps primitive types in the EDM to SQL Server data types, see [SqlClient for Entity FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).</span></span>  
   
 > [!NOTE]
->  EDM 不支援基本資料型別集合。  
+>  <span data-ttu-id="fc518-108">EDM 不支援基本資料型別集合。</span><span class="sxs-lookup"><span data-stu-id="fc518-108">The EDM does not support collections of primitive data types.</span></span>  
   
- 如需 EDM 中結構化資料型別的詳細資訊，請參閱[實體類型](../../../../docs/framework/data/adonet/entity-type.md)和[複雜類型](../../../../docs/framework/data/adonet/complex-type.md)。  
+ <span data-ttu-id="fc518-109">如需 EDM 中結構化的資料類型的資訊，請參閱[實體類型](../../../../docs/framework/data/adonet/entity-type.md)和[複雜型別](../../../../docs/framework/data/adonet/complex-type.md)。</span><span class="sxs-lookup"><span data-stu-id="fc518-109">For information about structured data types in the EDM, see [entity type](../../../../docs/framework/data/adonet/entity-type.md) and [complex type](../../../../docs/framework/data/adonet/complex-type.md).</span></span>  
   
-## 實體資料模型中支援的基本資料型別  
- 下表列出 EDM 所支援的基本資料型別。  表中亦列出可套用於每個基本資料型別的 [Facet](../../../../docs/framework/data/adonet/facet.md)。  
+## <a name="primitive-data-types-supported-in-the-entity-data-model"></a><span data-ttu-id="fc518-110">實體資料模型中支援的基本資料型別</span><span class="sxs-lookup"><span data-stu-id="fc518-110">Primitive Data Types Supported in the Entity Data Model</span></span>  
+ <span data-ttu-id="fc518-111">下表列出 EDM 所支援的基本資料型別。</span><span class="sxs-lookup"><span data-stu-id="fc518-111">The table below lists the primitive data types supported by the EDM.</span></span> <span data-ttu-id="fc518-112">這個表格也列出[facet](../../../../docs/framework/data/adonet/facet.md) ，可以套用到每個基本資料類型。</span><span class="sxs-lookup"><span data-stu-id="fc518-112">The table also lists the [facets](../../../../docs/framework/data/adonet/facet.md) that can be applied to each primitive data type.</span></span>  
   
-|基本資料型別|描述|適用的 Facet|  
-|------------|--------|---------------|  
-|二元|包含二進位資料。|MaxLength、FixedLength、Nullable、Default|  
-|Boolean|包含值 `true` 或`false`。|Nullable、Default|  
-|Byte|包含不帶正負號的 8 位元整數值。|Precision、Nullable、Default|  
-|DateTime|表示日期和時間。|Precision、Nullable、Default|  
-|DateTimeOffset|包含與 GMT 的日期和時間時差 \(以分鐘為單位\)。|Precision、Nullable、Default|  
-|Decimal|包含固定有效位數和小數位數的數值。|Precision、Nullable、Default|  
-|Double|包含具有 15 位數精確度的浮點數。|Precision、Nullable、Default|  
-|浮動|包含具有 7 位數精確度的浮點數。|Precision、Nullable、Default|  
-|Guid|包含 16 位元組的唯一識別碼。|Precision、Nullable、Default|  
-|Int16|包含帶正負號的 16 位元整數值。|Precision、Nullable、Default|  
-|Int32|包含帶正負號的 32 位元整數值。|Precision、Nullable、Default|  
-|Int64|包含帶正負號的 64 位元整數值。|Precision、Nullable、Default|  
-|SByte|包含帶正負號的 8 位元整數值。|Precision、Nullable、Default|  
-|String|包含字元資料。|Unicode、FixedLength、MaxLength、Collation、Precision、Nullable、Default|  
-|時間|包含一天的時間。|Precision、Nullable、Default|  
+|<span data-ttu-id="fc518-113">基本資料型別</span><span class="sxs-lookup"><span data-stu-id="fc518-113">Primitive Data Type</span></span>|<span data-ttu-id="fc518-114">描述</span><span class="sxs-lookup"><span data-stu-id="fc518-114">Description</span></span>|<span data-ttu-id="fc518-115">適用的 Facet</span><span class="sxs-lookup"><span data-stu-id="fc518-115">Applicable Facets</span></span>|  
+|-------------------------|-----------------|-----------------------|  
+|<span data-ttu-id="fc518-116">二元</span><span class="sxs-lookup"><span data-stu-id="fc518-116">Binary</span></span>|<span data-ttu-id="fc518-117">包含二進位資料。</span><span class="sxs-lookup"><span data-stu-id="fc518-117">Contains binary data.</span></span>|<span data-ttu-id="fc518-118">MaxLength、FixedLength、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-118">MaxLength, FixedLength, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-119">Boolean</span><span class="sxs-lookup"><span data-stu-id="fc518-119">Boolean</span></span>|<span data-ttu-id="fc518-120">包含值 `true` 或`false`。</span><span class="sxs-lookup"><span data-stu-id="fc518-120">Contains the value `true` or `false`.</span></span>|<span data-ttu-id="fc518-121">Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-121">Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-122">Byte</span><span class="sxs-lookup"><span data-stu-id="fc518-122">Byte</span></span>|<span data-ttu-id="fc518-123">包含不帶正負號的 8 位元整數值。</span><span class="sxs-lookup"><span data-stu-id="fc518-123">Contains an unsigned 8-bit integer value.</span></span>|<span data-ttu-id="fc518-124">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-124">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-125">DateTime</span><span class="sxs-lookup"><span data-stu-id="fc518-125">DateTime</span></span>|<span data-ttu-id="fc518-126">表示日期和時間。</span><span class="sxs-lookup"><span data-stu-id="fc518-126">Represents a date and time.</span></span>|<span data-ttu-id="fc518-127">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-127">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-128">DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="fc518-128">DateTimeOffset</span></span>|<span data-ttu-id="fc518-129">包含與 GMT 的日期和時間時差 (以分鐘為單位)。</span><span class="sxs-lookup"><span data-stu-id="fc518-129">Contains a date and time as an offset in minutes from GMT.</span></span>|<span data-ttu-id="fc518-130">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-130">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-131">Decimal</span><span class="sxs-lookup"><span data-stu-id="fc518-131">Decimal</span></span>|<span data-ttu-id="fc518-132">包含固定有效位數和小數位數的數值。</span><span class="sxs-lookup"><span data-stu-id="fc518-132">Contains a numeric value with fixed precision and scale.</span></span>|<span data-ttu-id="fc518-133">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-133">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-134">Double</span><span class="sxs-lookup"><span data-stu-id="fc518-134">Double</span></span>|<span data-ttu-id="fc518-135">包含具有 15 位數精確度的浮點數。</span><span class="sxs-lookup"><span data-stu-id="fc518-135">Contains a floating point number with 15 digit precision.</span></span>|<span data-ttu-id="fc518-136">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-136">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-137">浮動</span><span class="sxs-lookup"><span data-stu-id="fc518-137">Float</span></span>|<span data-ttu-id="fc518-138">包含具有 7 位數精確度的浮點數。</span><span class="sxs-lookup"><span data-stu-id="fc518-138">Contains a floating point number with seven digit precision.</span></span>|<span data-ttu-id="fc518-139">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-139">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-140">Guid</span><span class="sxs-lookup"><span data-stu-id="fc518-140">Guid</span></span>|<span data-ttu-id="fc518-141">包含 16 位元組的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="fc518-141">Contains a 16-byte unique identifier.</span></span>|<span data-ttu-id="fc518-142">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-142">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-143">Int16</span><span class="sxs-lookup"><span data-stu-id="fc518-143">Int16</span></span>|<span data-ttu-id="fc518-144">包含帶正負號的 16 位元整數值。</span><span class="sxs-lookup"><span data-stu-id="fc518-144">Contains a signed 16-bit integer value.</span></span>|<span data-ttu-id="fc518-145">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-145">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-146">Int32</span><span class="sxs-lookup"><span data-stu-id="fc518-146">Int32</span></span>|<span data-ttu-id="fc518-147">包含帶正負號的 32 位元整數值。</span><span class="sxs-lookup"><span data-stu-id="fc518-147">Contains a signed 32-bit integer value.</span></span>|<span data-ttu-id="fc518-148">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-148">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-149">Int64</span><span class="sxs-lookup"><span data-stu-id="fc518-149">Int64</span></span>|<span data-ttu-id="fc518-150">包含帶正負號的 64 位元整數值。</span><span class="sxs-lookup"><span data-stu-id="fc518-150">Contains a signed 64-bit integer value.</span></span>|<span data-ttu-id="fc518-151">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-151">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-152">SByte</span><span class="sxs-lookup"><span data-stu-id="fc518-152">SByte</span></span>|<span data-ttu-id="fc518-153">包含帶正負號的 8 位元整數值。</span><span class="sxs-lookup"><span data-stu-id="fc518-153">Contains a signed 8-bit integer value.</span></span>|<span data-ttu-id="fc518-154">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-154">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-155">String</span><span class="sxs-lookup"><span data-stu-id="fc518-155">String</span></span>|<span data-ttu-id="fc518-156">包含字元資料。</span><span class="sxs-lookup"><span data-stu-id="fc518-156">Contains character data.</span></span>|<span data-ttu-id="fc518-157">Unicode、FixedLength、MaxLength、Collation、Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-157">Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="fc518-158">時間</span><span class="sxs-lookup"><span data-stu-id="fc518-158">Time</span></span>|<span data-ttu-id="fc518-159">包含一天的時間。</span><span class="sxs-lookup"><span data-stu-id="fc518-159">Contains a time of day.</span></span>|<span data-ttu-id="fc518-160">Precision、Nullable、Default</span><span class="sxs-lookup"><span data-stu-id="fc518-160">Precision, Nullable, Default</span></span>|  
   
-## 請參閱  
- [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="fc518-161">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fc518-161">See Also</span></span>  
+ [<span data-ttu-id="fc518-162">實體資料模型的重要概念</span><span class="sxs-lookup"><span data-stu-id="fc518-162">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="fc518-163">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="fc518-163">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

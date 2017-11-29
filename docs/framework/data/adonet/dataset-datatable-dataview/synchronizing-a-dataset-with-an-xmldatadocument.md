@@ -1,27 +1,33 @@
 ---
-title: "使用 XmlDataDocument 同步處理 DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 XmlDataDocument 同步處理資料集"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bea557d8a09ba874fb4b6a3f3a54c09dac4778cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用 XmlDataDocument 同步處理 DataSet
-本節將使用已與 <xref:System.Xml.XmlDataDocument> 同步處理的強型別 <xref:System.Data.DataSet>，來示範處理採購單的其中一個步驟。  後續範例建立的 **DataSet** 具有最小結構描述，且只與來源 XML 文件部分相符。  範例將使用 **XmlDataDocument** 來保留來源 XML 文件的精確度，使 **DataSet** 能夠用來公開 XML 文件的子集。  
+# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a><span data-ttu-id="a7d3a-102">使用 XmlDataDocument 同步處理資料集</span><span class="sxs-lookup"><span data-stu-id="a7d3a-102">Synchronizing a DataSet with an XmlDataDocument</span></span>
+<span data-ttu-id="a7d3a-103">本節將使用已與 <xref:System.Data.DataSet> 同步處理的強型別 <xref:System.Xml.XmlDataDocument>，來示範處理採購單的其中一個步驟。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-103">This section demonstrates one step in the processing of a purchase order, using a strongly typed <xref:System.Data.DataSet> synchronized with an <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="a7d3a-104">請依照下列範例會建立**資料集**的最小化的結構描述，比對只包含來源 XML 文件的一部分。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-104">The examples that follow create a **DataSet** with a minimized schema that matches only a portion of the source XML document.</span></span> <span data-ttu-id="a7d3a-105">這些範例使用**XmlDataDocument**來保留來源 XML 文件精確度啟用**資料集**用來公開 XML 文件的子集。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-105">The examples use an **XmlDataDocument** to preserve the fidelity of the source XML document, enabling the **DataSet** to be used to expose a subset of the XML document.</span></span>  
   
- 下列 XML 文件包含所有採購單的相關資訊：客戶資訊、訂購項目、運送資訊等。  
+ <span data-ttu-id="a7d3a-106">下列 XML 文件包含所有採購單的相關資訊：客戶資訊、訂購項目、運送資訊等。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-106">The following XML document contains all the information pertaining to a purchase order: customer information, items ordered, shipping information, and so on.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" standalone="yes"?>  
 <PurchaseOrder>  
   <Customers>  
@@ -113,11 +119,11 @@ caps.handback.revision: 4
 </PurchaseOrder>  
 ```  
   
- 前述 XML 文件中處理採購單資訊的其中一個步驟，是從公司目前的存貨中提領採購單的貨品。  負責從公司的倉儲提供採購訂單貨品的員工不需要檢視整份採購訂單內容，而是只需要看到訂單的產品資訊即可。  若要只公開 XML 文件的產品資訊，請建立具有結構描述的強型別 **DataSet**，其結構描述是以 XML 結構描述定義語言 \(XSD\) 撰寫並對應至產品和訂購數量。  如需關於強型別 **DataSet** 物件的詳細資訊，請參閱 [具型別的 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  
+ <span data-ttu-id="a7d3a-107">前述 XML 文件中處理採購單資訊的其中一個步驟，是從公司目前的存貨中提領採購單的貨品。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-107">One step in processing the purchase order information contained in the preceding XML document is for the order to be filled from the company's current inventory.</span></span> <span data-ttu-id="a7d3a-108">負責從公司的倉儲提供採購訂單貨品的員工不需要檢視整份採購訂單內容，而是只需要看到訂單的產品資訊即可。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-108">The employee responsible for filling the order from the company's warehouse does not need to see the entire contents of the purchase order; they only need to see the product information for the order.</span></span> <span data-ttu-id="a7d3a-109">若要只公開的產品資訊從 XML 文件，建立強型別**資料集**結構描述時，寫入為 XML 結構描述定義語言 (XSD) 結構描述，且對應至產品和數量排序。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-109">To expose only the product information from the XML document, create a strongly typed **DataSet** with a schema, written as XML Schema definition language (XSD) schema, that maps to the products and quantities ordered.</span></span> <span data-ttu-id="a7d3a-110">如需有關強型別**資料集**物件，請參閱[型別資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-110">For more information about strongly typed **DataSet** objects, see [Typed DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).</span></span>  
   
- 這個範例的強型別 **DataSet**，便是從下列程式碼所顯示的結構描述而產生。  
+ <span data-ttu-id="a7d3a-111">下列程式碼所顯示的結構描述的強型別**資料集**產生此範例。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-111">The following code shows the schema from which the strongly typed **DataSet** is generated for this sample.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" standalone="yes"?>  
 <xs:schema id="OrderDetail" xmlns=""   
                             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
@@ -161,11 +167,11 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- 請注意，只有來自原始 XML 文件之 **OrderDetails** 和 **Products** 項目的資訊，才會包含在 **DataSet** 的結構描述中。  將 **DataSet** 與 **XmlDataDocument** 同步處理將能夠確保不包括在 **DataSet** 中的項目會保存在 XML 文件中。  
+ <span data-ttu-id="a7d3a-112">請注意，唯一的資訊從**OrderDetails**和**產品**的結構描述中包含的原始 XML 文件項目**資料集**。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-112">Notice that only information from the **OrderDetails** and **Products** elements of the original XML document are included in the schema for the **DataSet**.</span></span> <span data-ttu-id="a7d3a-113">同步處理**資料集**與**XmlDataDocument**可確保不包含在項目**資料集**會保存在 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-113">Synchronizing the **DataSet** with an **XmlDataDocument** ensures that the elements not included in the **DataSet** will persist with the XML document.</span></span>  
   
- 您可使用產生自 XML 結構描述 \(且命名空間為 **Northwind.FillOrder**\) 的強型別 **DataSet**，將 **DataSet** 與載入自來源 XML 文件的 **XmlDataDocument** 同步處理，以公開原始 XML 文件的一部份。  請注意，產生自結構描述的 **DataSet** 會包含結構，但不包含資料。  待您將 XML 載入 **XmlDataDocument** 後，資料才會填入。  若您嘗試載入的 **XmlDataDocument** 已經與包含資料的 **DataSet** 同步處理，便會擲回例外狀況。  
+ <span data-ttu-id="a7d3a-114">強型別**資料集**產生自 XML 結構描述 (命名空間為**Northwind.FillOrder**)，才能公開原始 XML 文件的一部分，請同步處理**資料集**與**XmlDataDocument**載入自來源 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-114">With the strongly typed **DataSet** generated from the XML Schema (with a namespace of **Northwind.FillOrder**), a portion of the original XML document can be exposed by synchronizing the **DataSet** with the **XmlDataDocument** loaded from the source XML document.</span></span> <span data-ttu-id="a7d3a-115">請注意，**資料集**從產生的結構描述包含的結構，但沒有資料。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-115">Notice that the **DataSet** generated from the schema contains structure but no data.</span></span> <span data-ttu-id="a7d3a-116">將 XML 載入時，填入資料**XmlDataDocument**。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-116">The data is filled in when you load the XML into the **XmlDataDocument**.</span></span> <span data-ttu-id="a7d3a-117">如果您嘗試載入**XmlDataDocument** ，是否已同步處理與**資料集**已經包含資料，將會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-117">If you attempt to load an **XmlDataDocument** that has been synchronized with a **DataSet** that already contains data, an exception will be thrown.</span></span>  
   
- **DataSet** \(和 **XmlDataDocument**\) 完成更新後，**XmlDataDocument** 即可接著寫出修改過的 XML 文件，其中 **DataSet** 所忽略的項目仍然完好如初，如下所示。  在採購單案例中，當提領出訂單項目後，已修改的 XML 文件便會接著傳遞給訂單處理過程中的下一個步驟，例如傳送至公司的運送部門。  
+ <span data-ttu-id="a7d3a-118">之後**資料集**(和**XmlDataDocument**) 已更新， **XmlDataDocument**即可忽略項目的接著寫出修改過的 XML 文件**資料集**仍保持不變，如下所示。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-118">After the **DataSet** (and the **XmlDataDocument**) has been updated, the **XmlDataDocument** can then write out the modified XML document with the elements ignored by the **DataSet** still intact, as shown below.</span></span> <span data-ttu-id="a7d3a-119">在採購單案例中，當提領出訂單項目後，已修改的 XML 文件便會接著傳遞給訂單處理過程中的下一個步驟，例如傳送至公司的運送部門。</span><span class="sxs-lookup"><span data-stu-id="a7d3a-119">In the purchase order scenario, after the order items have been filled, the modified XML document can then be passed on to the next step in the order process, perhaps to the company's shipping department.</span></span>  
   
 ```vb  
 Imports System  
@@ -235,6 +241,6 @@ public class Sample
 }  
 ```  
   
-## 請參閱  
- [DataSet 和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="a7d3a-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a7d3a-120">See Also</span></span>  
+ [<span data-ttu-id="a7d3a-121">資料集和 XmlDataDocument 同步處理</span><span class="sxs-lookup"><span data-stu-id="a7d3a-121">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="a7d3a-122">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="a7d3a-122">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

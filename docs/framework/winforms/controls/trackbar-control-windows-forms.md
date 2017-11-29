@@ -1,38 +1,39 @@
 ---
-title: "TrackBar 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "滑桿"
-  - "滑桿"
-  - "TrackBar 控制項 [Windows Form]"
+title: "TrackBar 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sliders
+- slider controls [Windows Forms]
+- TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 36e978aedd1f1259ff99703e0b94d623d565a8ee
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# TrackBar 控制項 (Windows Form)
-Windows Form `TrackBar` 控制項 \(有時也稱為「滑桿」\(Slider\) 控制項\) 是用來瀏覽大量資訊或視覺調整數字設定。  `TrackBar` 控制項是由兩個部分組成：縮圖 \(也稱為滑桿\) 和刻度標記。  縮圖是可以調整的部分。  它的位置和 <xref:System.Windows.Forms.TrackBar.Value%2A> 屬性對應。  刻度標記則是有著固定間距的視覺指示器 \(Indicator\)。  TrackBar 會依照您指定的遞增量移動，並且可以水平或垂直調整。  TrackBar 常用來設定游標閃爍速度或滑鼠速度。  
+# <a name="trackbar-control-windows-forms"></a><span data-ttu-id="dfdea-102">TrackBar 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="dfdea-102">TrackBar Control (Windows Forms)</span></span>
+<span data-ttu-id="dfdea-103">Windows Form`TrackBar`控制項 （有時也稱為 「 滑桿 」 控制項） 用來瀏覽大量的資訊或以視覺方式調整數字設定。</span><span class="sxs-lookup"><span data-stu-id="dfdea-103">The Windows Forms `TrackBar` control (also sometimes called a "slider" control) is used for navigating through a large amount of information or for visually adjusting a numeric setting.</span></span> <span data-ttu-id="dfdea-104">`TrackBar`控制項有兩個部分： 也稱為滑桿，與刻度標記縮圖。</span><span class="sxs-lookup"><span data-stu-id="dfdea-104">The `TrackBar` control has two parts: the thumb, also known as a slider, and the tick marks.</span></span> <span data-ttu-id="dfdea-105">基本原則是可調整的部分。</span><span class="sxs-lookup"><span data-stu-id="dfdea-105">The thumb is the part that can be adjusted.</span></span> <span data-ttu-id="dfdea-106">它的位置對應至<xref:System.Windows.Forms.TrackBar.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="dfdea-106">Its position corresponds to the <xref:System.Windows.Forms.TrackBar.Value%2A> property.</span></span> <span data-ttu-id="dfdea-107">刻度是定期為間距的視覺指標。</span><span class="sxs-lookup"><span data-stu-id="dfdea-107">The tick marks are visual indicators that are spaced at regular intervals.</span></span> <span data-ttu-id="dfdea-108">追蹤列移動您指定和可以對齊水平或垂直增量。</span><span class="sxs-lookup"><span data-stu-id="dfdea-108">The track bar moves in increments that you specify and can be aligned horizontally or vertically.</span></span> <span data-ttu-id="dfdea-109">使用追蹤列的範例之一是讓設定游標閃爍的速率或滑鼠速度。</span><span class="sxs-lookup"><span data-stu-id="dfdea-109">An example use of a track bar would be for setting cursor blink rate or mouse speed.</span></span>  
   
-## 在本節中  
- [TrackBar 控制項概觀](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
- 簡介 `TrackBar` 控制項的一般概念，這個控制項可讓使用者以視覺化調整數字設定的方式來巡覽資訊。  
+## <a name="in-this-section"></a><span data-ttu-id="dfdea-110">本章節內容</span><span class="sxs-lookup"><span data-stu-id="dfdea-110">In This Section</span></span>  
+ [<span data-ttu-id="dfdea-111">TrackBar 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="dfdea-111">TrackBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
+ <span data-ttu-id="dfdea-112">導入的一般概念`TrackBar`控制項，可讓使用者瀏覽資訊以視覺方式調整數字設定。</span><span class="sxs-lookup"><span data-stu-id="dfdea-112">Introduces the general concepts of the `TrackBar` control, which allows users to navigate through information by visually adjusting a numeric setting.</span></span>  
   
-## 參考  
- <xref:System.Windows.Forms.TrackBar> 類別  
- 提供類別和其成員的參考資訊。  
+## <a name="reference"></a><span data-ttu-id="dfdea-113">參考資料</span><span class="sxs-lookup"><span data-stu-id="dfdea-113">Reference</span></span>  
+ <span data-ttu-id="dfdea-114"><xref:System.Windows.Forms.TrackBar> 類別</span><span class="sxs-lookup"><span data-stu-id="dfdea-114"><xref:System.Windows.Forms.TrackBar> class</span></span>  
+ <span data-ttu-id="dfdea-115">提供這個類別及其成員的相關參考資訊。</span><span class="sxs-lookup"><span data-stu-id="dfdea-115">Provides reference information on the class and its members.</span></span>  
   
-## 相關章節  
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。
+## <a name="related-sections"></a><span data-ttu-id="dfdea-116">相關章節</span><span class="sxs-lookup"><span data-stu-id="dfdea-116">Related Sections</span></span>  
+ [<span data-ttu-id="dfdea-117">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="dfdea-117">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="dfdea-118">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="dfdea-118">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

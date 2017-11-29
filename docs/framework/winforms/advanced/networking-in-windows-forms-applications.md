@@ -1,45 +1,46 @@
 ---
-title: "Windows Form 應用程式中的網路 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "網路, Windows Form"
-  - "Windows Form, 網路"
+title: "Windows Forms 應用程式中的網路"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- networking [Windows Forms], Windows Forms
+- Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4b9748de672e36ae4c4ff913ab8c76262dc5875
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Form 應用程式中的網路
-.NET Framework 提供的類別可以用來顯示 Web 網頁、下載 Web 內容、與檔案傳輸通訊協定 \(File Transfer Protocol，FTP\) 站台互動以及使用 Web 服務，這使得在應用程式中建置網路功能變得相當容易。  下列資源將協助您了解 .NET Framework 的網路技術，以及如何將它們整合到 Windows Form 中。  
+# <a name="networking-in-windows-forms-applications"></a><span data-ttu-id="8cb81-102">Windows Forms 應用程式中的網路</span><span class="sxs-lookup"><span data-stu-id="8cb81-102">Networking in Windows Forms Applications</span></span>
+<span data-ttu-id="8cb81-103">.NET Framework 會提供顯示網頁、 網頁內容下載、 互動使用檔案傳輸通訊協定 (FTP) 網站時，和使用 Web 服務，以便輕鬆地建置到應用程式的網路功能類別。</span><span class="sxs-lookup"><span data-stu-id="8cb81-103">The .NET Framework provides classes for displaying Web pages, downloading Web content, interacting with file transfer protocol (FTP) sites, and consuming Web Services, making it easy to build network functionality into your application.</span></span> <span data-ttu-id="8cb81-104">下列資源會協助您了解.NET Framework 和如何您可以將它們整合到 Windows Form 的網路技術。</span><span class="sxs-lookup"><span data-stu-id="8cb81-104">The following resources will help you understand the networking technologies of the .NET Framework and how you can integrate them into Windows Forms.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="8cb81-105">參考資料</span><span class="sxs-lookup"><span data-stu-id="8cb81-105">Reference</span></span>  
  <xref:System.Net>  
- .NET Framework 中處理網路連接的類別的根命名空間。  
+ <span data-ttu-id="8cb81-106">類別在.NET Framework 中的控制代碼的網路連線的根命名空間。</span><span class="sxs-lookup"><span data-stu-id="8cb81-106">The root namespace for classes in the .NET Framework that handle network connectivity.</span></span>  
   
  <xref:System.Net.WebClient>  
- 以程式設計方式擷取 Web 或 HTTP 內容的實用類別。  
+ <span data-ttu-id="8cb81-107">方便的類別以程式設計方式擷取 Web 或 HTTP 為基礎的內容。</span><span class="sxs-lookup"><span data-stu-id="8cb81-107">A convenient class for retrieving Web or HTTP-based content programmatically.</span></span>  
   
  <xref:System.Net.FtpWebRequest>  
- 以 FTP 擷取和傳送檔案的類別。  
+ <span data-ttu-id="8cb81-108">用來擷取並傳送檔案，與 FTP 類別。</span><span class="sxs-lookup"><span data-stu-id="8cb81-108">A class for retrieving and sending files with FTP.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowser>  
- 包含在 Windows 中的 `WebBrowser` 控制項的 Managed 包裝函式類別。  
+ <span data-ttu-id="8cb81-109">Managed 包裝函式類別`WebBrowser`Windows 隨附的控制項。</span><span class="sxs-lookup"><span data-stu-id="8cb81-109">A managed wrapper class for the `WebBrowser` control that is included with Windows.</span></span>  
   
-## 相關章節  
- [以 .NET Framework 進行網路程式設計](../../../../docs/framework/network-programming/index.md)  
- .NET Framework 中網路的簡介。  
+## <a name="related-sections"></a><span data-ttu-id="8cb81-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="8cb81-110">Related Sections</span></span>  
+ [<span data-ttu-id="8cb81-111">以 .NET Framework 進行網路程式設計</span><span class="sxs-lookup"><span data-stu-id="8cb81-111">Network Programming in the .NET Framework</span></span>](../../../../docs/framework/network-programming/index.md)  
+ <span data-ttu-id="8cb81-112">.NET Framework 中的網路功能簡介。</span><span class="sxs-lookup"><span data-stu-id="8cb81-112">An introduction to networking in the .NET Framework.</span></span>  
   
- [Windows Form 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- 描述如何在應用程式中顯示資料庫內容，可以從本機資料存放區或位於網路上的資料庫。
+ [<span data-ttu-id="8cb81-113">Windows Forms 資料繫結</span><span class="sxs-lookup"><span data-stu-id="8cb81-113">Windows Forms Data Binding</span></span>](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ <span data-ttu-id="8cb81-114">描述如何顯示您的應用程式，從本機資料存放區或位於網路上的資料庫中的資料庫內容。</span><span class="sxs-lookup"><span data-stu-id="8cb81-114">Describes how to display database content in your application, either from a local data store or a database located on a network.</span></span>

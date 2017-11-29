@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - member info cache creation
 - MemberInfoCacheCreation MDA
@@ -23,38 +17,37 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 991055f537bfcbb2a533384ffc787c070a0122d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1aeda59172e52c9880b39d6bf94ea9685a0203c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
-建立 <xref:System.Reflection.MemberInfo> 快取時，會啟用 `memberInfoCacheCreation` Managed 偵錯助理 (MDA)。 這明顯指出利用耗用大量資源之反映功能的程式。  
+# <a name="memberinfocachecreation-mda"></a><span data-ttu-id="8d78c-102">memberInfoCacheCreation MDA</span><span class="sxs-lookup"><span data-stu-id="8d78c-102">memberInfoCacheCreation MDA</span></span>
+<span data-ttu-id="8d78c-103">建立 <xref:System.Reflection.MemberInfo> 快取時，會啟用 `memberInfoCacheCreation` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="8d78c-103">The `memberInfoCacheCreation` managed debugging assistant (MDA) is activated when a <xref:System.Reflection.MemberInfo> cache is created.</span></span> <span data-ttu-id="8d78c-104">這明顯指出利用耗用大量資源之反映功能的程式。</span><span class="sxs-lookup"><span data-stu-id="8d78c-104">This is a strong indication of a program that is making use of resource-expensive reflection features.</span></span>  
   
-## <a name="symptoms"></a>徵兆   
- 程式的工作集會增加，因為程式正在使用耗用大量資源的反映。  
+## <a name="symptoms"></a><span data-ttu-id="8d78c-105">徵兆 </span><span class="sxs-lookup"><span data-stu-id="8d78c-105">Symptoms</span></span>  
+ <span data-ttu-id="8d78c-106">程式的工作集會增加，因為程式正在使用耗用大量資源的反映。</span><span class="sxs-lookup"><span data-stu-id="8d78c-106">A program's working set increases because the program is using resource-expensive reflection.</span></span>  
   
-## <a name="cause"></a>原因  
- 包含 <xref:System.Reflection.MemberInfo> 物件的反映作業會耗用大量資源，因為它們必須讀取冷頁面中所儲存的中繼資料，而且一般會指出程式正在使用某種類型的晚期繫結案例。  
+## <a name="cause"></a><span data-ttu-id="8d78c-107">原因</span><span class="sxs-lookup"><span data-stu-id="8d78c-107">Cause</span></span>  
+ <span data-ttu-id="8d78c-108">包含 <xref:System.Reflection.MemberInfo> 物件的反映作業會耗用大量資源，因為它們必須讀取冷頁面中所儲存的中繼資料，而且一般會指出程式正在使用某種類型的晚期繫結案例。</span><span class="sxs-lookup"><span data-stu-id="8d78c-108">Reflection operations that involve <xref:System.Reflection.MemberInfo> objects are considered resource expensive because they must read metadata that is stored in cold pages and in general they indicate the program is using some type of late-bound scenario.</span></span>  
   
-## <a name="resolution"></a>解決方式  
- 您可以啟用此 MDA，然後在偵錯工具中執行程式碼，或在啟用 MDA 時使用偵錯工具附加，來判斷將在程式中使用反映的位置。 透過偵錯工具，您將取得堆疊追蹤以顯示 <xref:System.Reflection.MemberInfo> 快取建立位置，並且您可以在該處判斷程式將使用反映的位置。  
+## <a name="resolution"></a><span data-ttu-id="8d78c-109">解決方式</span><span class="sxs-lookup"><span data-stu-id="8d78c-109">Resolution</span></span>  
+ <span data-ttu-id="8d78c-110">您可以啟用此 MDA，然後在偵錯工具中執行程式碼，或在啟用 MDA 時使用偵錯工具附加，來判斷將在程式中使用反映的位置。</span><span class="sxs-lookup"><span data-stu-id="8d78c-110">You can determine where reflection is being used in your program by enabling this MDA and then running your code in a debugger or attaching with a debugger when the MDA is activated.</span></span> <span data-ttu-id="8d78c-111">透過偵錯工具，您將取得堆疊追蹤以顯示 <xref:System.Reflection.MemberInfo> 快取建立位置，並且您可以在該處判斷程式將使用反映的位置。</span><span class="sxs-lookup"><span data-stu-id="8d78c-111">Under a debugger you will get a stack trace showing where the <xref:System.Reflection.MemberInfo> cache was created and from there you can determine where your program is using reflection.</span></span>  
   
- 解決方式取決於程式碼目標。 此 MDA 會提醒您程式具有晚期繫結案例。 您可能想要決定是否可以替代早期繫結案例，或考慮晚期繫結案例的效能。  
+ <span data-ttu-id="8d78c-112">解決方式取決於程式碼目標。</span><span class="sxs-lookup"><span data-stu-id="8d78c-112">The resolution is dependent on the objectives of the code.</span></span> <span data-ttu-id="8d78c-113">此 MDA 會提醒您程式具有晚期繫結案例。</span><span class="sxs-lookup"><span data-stu-id="8d78c-113">This MDA alerts you that your program has a late-bound scenario.</span></span> <span data-ttu-id="8d78c-114">您可能想要決定是否可以替代早期繫結案例，或考慮晚期繫結案例的效能。</span><span class="sxs-lookup"><span data-stu-id="8d78c-114">You might want to determine if you can substitute an early-bound scenario or consider the performance of the late bound scenario.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>對執行階段的影響  
- 會針對每個建立的 <xref:System.Reflection.MemberInfo> 快取啟用此 MDA。 效能影響微不足道。  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="8d78c-115">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="8d78c-115">Effect on the Runtime</span></span>  
+ <span data-ttu-id="8d78c-116">會針對每個建立的 <xref:System.Reflection.MemberInfo> 快取啟用此 MDA。</span><span class="sxs-lookup"><span data-stu-id="8d78c-116">This MDA is activated for every <xref:System.Reflection.MemberInfo> cache that is created.</span></span> <span data-ttu-id="8d78c-117">效能影響微不足道。</span><span class="sxs-lookup"><span data-stu-id="8d78c-117">The performance impact is negligible.</span></span>  
   
-## <a name="output"></a>輸出  
- MDA 會輸出訊息，指出已建立 <xref:System.Reflection.MemberInfo> 快取。 使用偵錯工具取得堆疊追蹤，以顯示將在程式中使用反映的位置。  
+## <a name="output"></a><span data-ttu-id="8d78c-118">輸出</span><span class="sxs-lookup"><span data-stu-id="8d78c-118">Output</span></span>  
+ <span data-ttu-id="8d78c-119">MDA 會輸出訊息，指出已建立 <xref:System.Reflection.MemberInfo> 快取。</span><span class="sxs-lookup"><span data-stu-id="8d78c-119">The MDA outputs a message indicating the <xref:System.Reflection.MemberInfo> cache was created.</span></span> <span data-ttu-id="8d78c-120">使用偵錯工具取得堆疊追蹤，以顯示將在程式中使用反映的位置。</span><span class="sxs-lookup"><span data-stu-id="8d78c-120">Use a debugger to get a stack trace showing where your program is using reflection.</span></span>  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a><span data-ttu-id="8d78c-121">組態</span><span class="sxs-lookup"><span data-stu-id="8d78c-121">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -64,8 +57,8 @@ ms.lasthandoff: 08/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="example"></a>範例  
- 此範例程式碼將會啟用 `memberInfoCacheCreation` MDA。  
+## <a name="example"></a><span data-ttu-id="8d78c-122">範例</span><span class="sxs-lookup"><span data-stu-id="8d78c-122">Example</span></span>  
+ <span data-ttu-id="8d78c-123">此範例程式碼將會啟用 `memberInfoCacheCreation` MDA。</span><span class="sxs-lookup"><span data-stu-id="8d78c-123">This sample code will activate the `memberInfoCacheCreation` MDA.</span></span>  
   
 ```  
 using System;  
@@ -79,7 +72,6 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Reflection.MemberInfo>   
- [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="8d78c-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8d78c-124">See Also</span></span>  
+ <xref:System.Reflection.MemberInfo>  
+ [<span data-ttu-id="8d78c-125">使用 Managed 偵錯助理診斷錯誤</span><span class="sxs-lookup"><span data-stu-id="8d78c-125">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

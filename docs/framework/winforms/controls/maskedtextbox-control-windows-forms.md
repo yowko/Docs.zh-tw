@@ -1,44 +1,44 @@
 ---
-title: "MaskedTextBox 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MaskedTextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MaskedTextBox 控制項 [Windows Form]"
-  - "文字方塊, 驗證使用者輸入"
-  - "使用者輸入, 在 Windows Form 中驗證"
-  - "驗證使用者輸入, Windows Form"
+title: "MaskedTextBox 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MaskedTextBox
+helpviewer_keywords:
+- MaskedTextBox control [Windows Forms]
+- user input [Windows Forms], validating in Windows Forms
+- validating user input [Windows Forms], Windows Forms
+- text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 668d1b2184c2ae3e089c9996854eef9c28b5a5f4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# MaskedTextBox 控制項 (Windows Form)
-本主題會連結至與 `MaskedTextBox` 控制項相關的其他控制項。  
+# <a name="maskedtextbox-control-windows-forms"></a><span data-ttu-id="49e9f-102">MaskedTextBox 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="49e9f-102">MaskedTextBox Control (Windows Forms)</span></span>
+<span data-ttu-id="49e9f-103">關於本主題會連結到其他人`MaskedTextBox`控制項。</span><span class="sxs-lookup"><span data-stu-id="49e9f-103">This topic links to others about the `MaskedTextBox` control.</span></span>  
   
-## 在本節中  
- [逐步解說：使用 MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
- 示範 `MaskedTextBox` 控制項的主要功能。  
+## <a name="in-this-section"></a><span data-ttu-id="49e9f-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="49e9f-104">In This Section</span></span>  
+ [<span data-ttu-id="49e9f-105">逐步解說：使用 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="49e9f-105">Walkthrough: Working with the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
+ <span data-ttu-id="49e9f-106">示範的主要功能`MaskedTextBox`控制項。</span><span class="sxs-lookup"><span data-stu-id="49e9f-106">Demonstrates the key features of the `MaskedTextBox` control.</span></span>  
   
- [如何：將資料繫結至 MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
- 示範當資料庫中的資料不符合遮罩定義所指定的格式時，如何重新格式化資料。  
+ [<span data-ttu-id="49e9f-107">操作說明：將資料繫結至 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="49e9f-107">How to: Bind Data to the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
+ <span data-ttu-id="49e9f-108">示範如何在資料庫中的資料與遮罩定義所預期的格式不相符時，重新格式化資料。</span><span class="sxs-lookup"><span data-stu-id="49e9f-108">Demonstrates how to reformat the data when data in the database does not match the format expected by your mask definition.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="49e9f-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="49e9f-109">Reference</span></span>  
  <xref:System.Windows.Forms.MaskedTextBox>  
- 用來實作遮罩文字方塊控制項的主要類別。  
+ <span data-ttu-id="49e9f-110">遮罩的文字方塊控制項的實作主要的類別。</span><span class="sxs-lookup"><span data-stu-id="49e9f-110">The primary class for the implementation of the masked text box control.</span></span>  
   
-## 相關章節  
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。
+## <a name="related-sections"></a><span data-ttu-id="49e9f-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="49e9f-111">Related Sections</span></span>  
+ [<span data-ttu-id="49e9f-112">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="49e9f-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="49e9f-113">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="49e9f-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

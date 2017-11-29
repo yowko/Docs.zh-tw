@@ -1,117 +1,120 @@
 ---
-title: "&lt;runtime&gt; 的 &lt;assemblyIdentity&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<assemblyIdentity> 項目"
-  - "assemblyIdentity 項目"
-  - "容器標記, <assemblyIdentity> 項目"
+title: "&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity
+helpviewer_keywords:
+- <assemblyIdentity> element
+- container tags, <assemblyIdentity> element
+- assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 740b08806dff65d3ce1b8de378138c2647944fd4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;runtime&gt; 的 &lt;assemblyIdentity&gt; 項目
-包含有關組件的識別資訊。  
+# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a><span data-ttu-id="89c31-102">&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;</span><span class="sxs-lookup"><span data-stu-id="89c31-102">&lt;assemblyIdentity&gt; Element for &lt;runtime&gt;</span></span>
+<span data-ttu-id="89c31-103">包含有關組件的識別資訊。</span><span class="sxs-lookup"><span data-stu-id="89c31-103">Contains identifying information about the assembly.</span></span>  
   
-## 語法  
+ <span data-ttu-id="89c31-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="89c31-104">\<configuration></span></span>  
+<span data-ttu-id="89c31-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="89c31-105">\<runtime></span></span>  
+<span data-ttu-id="89c31-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="89c31-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="89c31-107">\<y ></span><span class="sxs-lookup"><span data-stu-id="89c31-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="89c31-108">\<assemblyIdentity ></span><span class="sxs-lookup"><span data-stu-id="89c31-108">\<assemblyIdentity></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="89c31-109">語法</span><span class="sxs-lookup"><span data-stu-id="89c31-109">Syntax</span></span>  
   
-   <assemblyIdentity    
+```xml  
+   <assemblyIdentity    
 name="assembly name"  
 publicKeyToken="public key token"  
 culture="assembly culture"/>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="89c31-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="89c31-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="89c31-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="89c31-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="89c31-112">屬性</span><span class="sxs-lookup"><span data-stu-id="89c31-112">Attributes</span></span>  
   
-|屬性|說明|  
-|--------|--------|  
-|`name`|必要屬性。<br /><br /> 組件的名稱。|  
-|`culture`|選擇性屬性。<br /><br /> 為字串，指定組件的語言和國家\/地區。|  
-|`publicKeyToken`|選擇性屬性。<br /><br /> 為十六進位值，指定組件的強式名稱 \(Strong Name\)。|  
-|`processorArchitecture`|選擇性屬性。<br /><br /> "x86"、"amd64"、"msil" 或 "ia64" 的其中一個值，會針對包含處理器特定程式碼的組件指定處理器架構。  這些值不區分大小寫。  如果為此屬性指派了任何其他值，則會忽略整個 `<assemblyIdentity>` 項目。  請參閱 <xref:System.Reflection.ProcessorArchitecture>。|  
+|<span data-ttu-id="89c31-113">屬性</span><span class="sxs-lookup"><span data-stu-id="89c31-113">Attribute</span></span>|<span data-ttu-id="89c31-114">描述</span><span class="sxs-lookup"><span data-stu-id="89c31-114">Description</span></span>|  
+|---------------|-----------------|  
+|`name`|<span data-ttu-id="89c31-115">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="89c31-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="89c31-116">組件名稱</span><span class="sxs-lookup"><span data-stu-id="89c31-116">The name of the assembly</span></span>|  
+|`culture`|<span data-ttu-id="89c31-117">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="89c31-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="89c31-118">字串，指定的語言和國家/地區的組件。</span><span class="sxs-lookup"><span data-stu-id="89c31-118">A string that specifies the language and country/region of the assembly.</span></span>|  
+|`publicKeyToken`|<span data-ttu-id="89c31-119">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="89c31-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="89c31-120">指定組件的強式名稱的十六進位值。</span><span class="sxs-lookup"><span data-stu-id="89c31-120">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
+|`processorArchitecture`|<span data-ttu-id="89c31-121">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="89c31-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="89c31-122">其中一個值"x86"、"amd64"、"msil"或"ia64"，指定包含處理器特定程式碼組件的處理器架構。</span><span class="sxs-lookup"><span data-stu-id="89c31-122">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="89c31-123">值不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="89c31-123">The values are not case-sensitive.</span></span> <span data-ttu-id="89c31-124">如果屬性被指派任何其他值，將整個`<assemblyIdentity>`項目會被忽略。</span><span class="sxs-lookup"><span data-stu-id="89c31-124">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="89c31-125">請參閱 <xref:System.Reflection.ProcessorArchitecture>。</span><span class="sxs-lookup"><span data-stu-id="89c31-125">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
   
-## processorArchitecture 屬性  
+## <a name="processorarchitecture-attribute"></a><span data-ttu-id="89c31-126">processorArchitecture 屬性</span><span class="sxs-lookup"><span data-stu-id="89c31-126">processorArchitecture Attribute</span></span>  
   
-|值|說明|  
-|-------|--------|  
-|`amd64`|僅限 64 位元的 AMD 處理器。|  
-|`ia64`|僅限 64 位元的 Intel 處理器。|  
-|`msil`|與處理器和每個字組的位元數無關|  
-|`x86`|32 位元的 Intel 處理器 \(原生或位於 64 位元平台的 Windows on Windows \(WOW\) 環境下\)。|  
+|<span data-ttu-id="89c31-127">值</span><span class="sxs-lookup"><span data-stu-id="89c31-127">Value</span></span>|<span data-ttu-id="89c31-128">說明</span><span class="sxs-lookup"><span data-stu-id="89c31-128">Description</span></span>|  
+|-----------|-----------------|  
+|`amd64`|<span data-ttu-id="89c31-129">將 64 位元的 AMD 處理器只。</span><span class="sxs-lookup"><span data-stu-id="89c31-129">A 64-bit AMD processor only.</span></span>|  
+|`ia64`|<span data-ttu-id="89c31-130">64 位元 Intel 處理器只。</span><span class="sxs-lookup"><span data-stu-id="89c31-130">A 64-bit Intel processor only.</span></span>|  
+|`msil`|<span data-ttu-id="89c31-131">處理器和每個字組的位元中性</span><span class="sxs-lookup"><span data-stu-id="89c31-131">Neutral with respect to processor and bits-per-word</span></span>|  
+|`x86`|<span data-ttu-id="89c31-132">32 位元 Intel 處理器，其中一個原生或 Windows on Windows (WOW) 的 64 位元平台上的環境中。</span><span class="sxs-lookup"><span data-stu-id="89c31-132">A 32-bit Intel processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="89c31-133">子元素</span><span class="sxs-lookup"><span data-stu-id="89c31-133">Child Elements</span></span>  
+ <span data-ttu-id="89c31-134">無。</span><span class="sxs-lookup"><span data-stu-id="89c31-134">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="89c31-135">父項目</span><span class="sxs-lookup"><span data-stu-id="89c31-135">Parent Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`dependentAssembly`|封裝每一個組件的繫結原則和組件位置。  為每個組件 \(Assembly\) 使用一個 `<dependentAssembly>` 項目。|  
-|`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
+|<span data-ttu-id="89c31-136">項目</span><span class="sxs-lookup"><span data-stu-id="89c31-136">Element</span></span>|<span data-ttu-id="89c31-137">說明</span><span class="sxs-lookup"><span data-stu-id="89c31-137">Description</span></span>|  
+|-------------|-----------------|  
+|`assemblyBinding`|<span data-ttu-id="89c31-138">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="89c31-138">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="89c31-139">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="89c31-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`dependentAssembly`|<span data-ttu-id="89c31-140">封裝每一個組件的繫結原則和組件位置。</span><span class="sxs-lookup"><span data-stu-id="89c31-140">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="89c31-141">使用其中一個`<dependentAssembly>`每個組件的項目。</span><span class="sxs-lookup"><span data-stu-id="89c31-141">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
+|`runtime`|<span data-ttu-id="89c31-142">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="89c31-142">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 備註  
- 每一個 **\<dependentAssembly\>**項目必須有一個 **\<assemblyIdentity\>**子項目。  
+## <a name="remarks"></a><span data-ttu-id="89c31-143">備註</span><span class="sxs-lookup"><span data-stu-id="89c31-143">Remarks</span></span>  
+ <span data-ttu-id="89c31-144">每個 **\<dependentAssembly >**項目必須有一個 **\<assemblyIdentity >**子項目。</span><span class="sxs-lookup"><span data-stu-id="89c31-144">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
   
- 如果 `processorArchitecture` 屬性存在，則 `<assemblyIdentity>` 項目只會套用到具有對應處理器架構的組件上。  如果 `processorArchitecture` 屬性不存在，則 `<assemblyIdentity>` 項目可以套用到具有任何處理器架構的組件上。  
+ <span data-ttu-id="89c31-145">如果`processorArchitecture`屬性已存在，`<assemblyIdentity>`項目只適用於具有對應的處理器架構的組件。</span><span class="sxs-lookup"><span data-stu-id="89c31-145">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="89c31-146">如果`processorArchitecture`屬性不存在，`<assemblyIdentity>`項目可以套用至任何處理器架構的組件。</span><span class="sxs-lookup"><span data-stu-id="89c31-146">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
   
- 下列範例會示範適用於兩個同名組件的一個組態檔，這兩個組件是以兩種不同的處理器架構為目標，而且其版本尚未同步加以維護。  當應用程式在 x86 平台上執行時，會套用第一個 `<assemblyIdentity>` 項目，而忽略另一個項目。  如果在 x86 或 ia64 以外的平台上執行應用程式，這兩個項目皆會被忽略。  
+ <span data-ttu-id="89c31-147">下列範例顯示兩個組件具有相同名稱以兩個不同的兩個處理器架構，以及其版本已受到維護的同步處理不組態檔。當應用程式執行 x86 平台的第一個`<assemblyIdentity>`元素會套用，而其他都會被忽略。</span><span class="sxs-lookup"><span data-stu-id="89c31-147">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="89c31-148">如果在非 x86 或 ia64 平台上，執行應用程式，兩者都會被忽略。</span><span class="sxs-lookup"><span data-stu-id="89c31-148">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
   
-```  
+```xml  
 <configuration>  
-   <runtime>  
-      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <dependentAssembly>  
-            <assemblyIdentity name="MyAssembly"  
-                  publicKeyToken="14a739be0244c389"  
-                  culture="neutral"  
-                  processorArchitecture="x86" />  
-            <bindingRedirect oldVersion= "1.0.0.0"   
-                  newVersion="1.1.0.0" />  
-         </dependentAssembly>  
-         <dependentAssembly>  
-            <assemblyIdentity name="MyAssembly"  
-                  publicKeyToken="14a739be0244c389"  
-                  culture="neutral"   
-                  processorArchitecture="ia64" />  
-            <bindingRedirect oldVersion="1.0.0.0"   
-                  newVersion="2.0.0.0" />  
-         </dependentAssembly>  
-      </assemblyBinding>  
-   </runtime>  
+   <runtime>  
+      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
+         <dependentAssembly>  
+            <assemblyIdentity name="MyAssembly"  
+                  publicKeyToken="14a739be0244c389"  
+                  culture="neutral"  
+                  processorArchitecture="x86" />  
+            <bindingRedirect oldVersion= "1.0.0.0"   
+                  newVersion="1.1.0.0" />  
+         </dependentAssembly>  
+         <dependentAssembly>  
+            <assemblyIdentity name="MyAssembly"  
+                  publicKeyToken="14a739be0244c389"  
+                  culture="neutral"   
+                  processorArchitecture="ia64" />  
+            <bindingRedirect oldVersion="1.0.0.0"   
+                  newVersion="2.0.0.0" />  
+         </dependentAssembly>  
+      </assemblyBinding>  
+   </runtime>  
 </configuration>  
 ```  
   
- 如果組態檔包含一個沒有 `processorArchitecture` 屬性的 `<assemblyIdentity>` 項目，而且未包含符合此平台的項目，則會使用沒有 `processorArchitecture` 屬性的此項目。  
+ <span data-ttu-id="89c31-149">如果組態檔包含`<assemblyIdentity>`項目不含`processorArchitecture`屬性，而且不包含符合的平台的項目不含的項目`processorArchitecture`屬性使用。</span><span class="sxs-lookup"><span data-stu-id="89c31-149">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
   
-## 範例  
- 下列範例顯示如何提供有關組件的資訊。  
+## <a name="example"></a><span data-ttu-id="89c31-150">範例</span><span class="sxs-lookup"><span data-stu-id="89c31-150">Example</span></span>  
+ <span data-ttu-id="89c31-151">下列範例會示範如何提供組件的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="89c31-151">The following example shows how to provide information about an assembly.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -126,7 +129,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## 請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="89c31-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="89c31-152">See Also</span></span>  
+ [<span data-ttu-id="89c31-153">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="89c31-153">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="89c31-154">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="89c31-154">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="89c31-155">重新導向組件版本</span><span class="sxs-lookup"><span data-stu-id="89c31-155">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

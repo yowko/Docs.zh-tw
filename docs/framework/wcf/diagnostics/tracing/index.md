@@ -1,50 +1,53 @@
 ---
-title: "追蹤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "追蹤"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e0a291e3ca277bc58f69b8016c523b383b3cece8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 追蹤
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供應用程式檢測與診斷資料，以便進行錯誤監視與分析。您可以不使用偵錯工具而改用追蹤，以了解應用程式行為以及發生錯誤的原因。您也可以將各元件的錯誤與處理相互關聯，以提供端對端的經驗。  
+# <a name="tracing"></a><span data-ttu-id="fddc6-102">追蹤</span><span class="sxs-lookup"><span data-stu-id="fddc6-102">Tracing</span></span>
+[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<span data-ttu-id="fddc6-103"> 提供應用程式檢測與診斷資料，以便進行錯誤監視與分析。</span><span class="sxs-lookup"><span data-stu-id="fddc6-103"> provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="fddc6-104">您可以不使用偵錯工具而改用追蹤，以了解應用程式行為以及發生錯誤的原因。</span><span class="sxs-lookup"><span data-stu-id="fddc6-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="fddc6-105">您也可以將各元件的錯誤與處理相互關聯，以提供端對端的經驗。</span><span class="sxs-lookup"><span data-stu-id="fddc6-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會輸出下列資料來進行診斷追蹤：  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="fddc6-106"> 會輸出下列資料來進行診斷追蹤：</span><span class="sxs-lookup"><span data-stu-id="fddc6-106"> outputs the following data for diagnostic tracing:</span></span>  
   
--   所有應用程式元件的處理過程里程碑追蹤，例如作業呼叫、程式碼例外狀況、警告和其他重大處理事件。  
+-   <span data-ttu-id="fddc6-107">所有應用程式元件的處理過程里程碑追蹤，例如作業呼叫、程式碼例外狀況、警告和其他重大處理事件。</span><span class="sxs-lookup"><span data-stu-id="fddc6-107">Traces for process milestones across all components of the applications, such as operation calls, code exceptions, warnings and other significant processing events."</span></span>  
   
--   追蹤功能故障時出現的 Windows 錯誤事件。  
+-   <span data-ttu-id="fddc6-108">追蹤功能故障時出現的 Windows 錯誤事件。</span><span class="sxs-lookup"><span data-stu-id="fddc6-108">Windows error events when the tracing feature malfunctions.</span></span>  
   
-## 在本節中  
- [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fddc6-109">本章節內容</span><span class="sxs-lookup"><span data-stu-id="fddc6-109">In This Section</span></span>  
+ [<span data-ttu-id="fddc6-110">設定追蹤</span><span class="sxs-lookup"><span data-stu-id="fddc6-110">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
- 此主題描述如何設定不同的追蹤層級以符合特定需求。  
+ <span data-ttu-id="fddc6-111">此主題描述如何設定不同的追蹤層級以符合特定需求。</span><span class="sxs-lookup"><span data-stu-id="fddc6-111">This topic describes how you can configure tracing at different levels to suit your specific need.</span></span>  
   
- [端對端追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [<span data-ttu-id="fddc6-112">端對端追蹤</span><span class="sxs-lookup"><span data-stu-id="fddc6-112">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
   
- 本節描述如何將活動追蹤和散佈用於端對端的相互關聯，以便協助偵錯。  
+ <span data-ttu-id="fddc6-113">本節描述如何將活動追蹤和散佈用於端對端的相互關聯，以便協助偵錯。</span><span class="sxs-lookup"><span data-stu-id="fddc6-113">This section describes how you can use Activity Tracing and Propagation for end-to-end correlation to assist debugging.</span></span>  
   
- [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="fddc6-114">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="fddc6-114">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
- 本節描述如何使用追蹤為應用程式偵錯。  
+ <span data-ttu-id="fddc6-115">本節描述如何使用追蹤為應用程式偵錯。</span><span class="sxs-lookup"><span data-stu-id="fddc6-115">This section describes how you can use tracing to debug your application.</span></span>  
   
- [追蹤的安全性考量及實用秘訣](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [<span data-ttu-id="fddc6-116">安全性考量及實用秘訣，追蹤</span><span class="sxs-lookup"><span data-stu-id="fddc6-116">Security Concerns and Useful Tips for Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
   
- 此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。  
+ <span data-ttu-id="fddc6-117">此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。</span><span class="sxs-lookup"><span data-stu-id="fddc6-117">This topic describes how you can protect sensitive information from being exposed, as well as useful tips when using WebHost.</span></span>  
   
- [追蹤參考](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [<span data-ttu-id="fddc6-118">追蹤參考</span><span class="sxs-lookup"><span data-stu-id="fddc6-118">Traces Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- 此主題會列出 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 產生的所有追蹤。  
+ <span data-ttu-id="fddc6-119">此主題會列出 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 產生的所有追蹤。</span><span class="sxs-lookup"><span data-stu-id="fddc6-119">This topic lists all the traces generated by [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span></span>  
   
-## 請參閱  
- [服務追蹤檢視器工具 \(SvcTraceViewer.exe\)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a><span data-ttu-id="fddc6-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fddc6-120">See Also</span></span>  
+ [<span data-ttu-id="fddc6-121">服務追蹤檢視器工具 (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="fddc6-121">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

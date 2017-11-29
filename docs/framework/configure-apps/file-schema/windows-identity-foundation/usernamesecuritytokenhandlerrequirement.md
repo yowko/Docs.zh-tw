@@ -1,62 +1,72 @@
 ---
-title: "&lt;userNameSecurityTokenHandlerRequirement&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;userNameSecurityTokenHandlerRequirement&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 4ffe9764eb730be4859fb66ae2f0cc845c9404e8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;userNameSecurityTokenHandlerRequirement&gt;
-提供 <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> 類別或衍生類別 \(Derived Class\) 提供設定。  
+# <a name="ltusernamesecuritytokenhandlerrequirementgt"></a><span data-ttu-id="dac08-102">&lt;userNameSecurityTokenHandlerRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="dac08-102">&lt;userNameSecurityTokenHandlerRequirement&gt;</span></span>
+<span data-ttu-id="dac08-103">提供組態<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>類別或衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="dac08-103">Provides configuration for the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> class or derived classes.</span></span>  
   
-## 語法  
+ <span data-ttu-id="dac08-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="dac08-104">\<system.identityModel></span></span>  
+<span data-ttu-id="dac08-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="dac08-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="dac08-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="dac08-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="dac08-107">\<add></span><span class="sxs-lookup"><span data-stu-id="dac08-107">\<add></span></span>  
+<span data-ttu-id="dac08-108">\<userNameSecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="dac08-108">\<userNameSecurityTokenHandlerRequirement></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="dac08-109">語法</span><span class="sxs-lookup"><span data-stu-id="dac08-109">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add type="System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler, System.IdentityModel.Services">  
-        <userNameSecurityTokenHandlerRequirement membershipProviderName=xs:string >  
-        </userNameSecurityTokenHandlerRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add type="System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler, System.IdentityModel.Services">  
+        <userNameSecurityTokenHandlerRequirement membershipProviderName=xs:string >  
+        </userNameSecurityTokenHandlerRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dac08-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="dac08-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="dac08-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="dac08-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="dac08-112">屬性</span><span class="sxs-lookup"><span data-stu-id="dac08-112">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|membershipProviderName|指定應該根據安全性權杖管理員使用的 <xref:System.Web.Security.MembershipProvider> 。|  
+|<span data-ttu-id="dac08-113">屬性</span><span class="sxs-lookup"><span data-stu-id="dac08-113">Attribute</span></span>|<span data-ttu-id="dac08-114">說明</span><span class="sxs-lookup"><span data-stu-id="dac08-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="dac08-115">membershipProviderName</span><span class="sxs-lookup"><span data-stu-id="dac08-115">membershipProviderName</span></span>|<span data-ttu-id="dac08-116">指定<xref:System.Web.Security.MembershipProvider>，應由安全性權杖處理常式。</span><span class="sxs-lookup"><span data-stu-id="dac08-116">Specifies the <xref:System.Web.Security.MembershipProvider> that should be used by the security token handler.</span></span>|  
   
-### 子項目  
- None  
+### <a name="child-elements"></a><span data-ttu-id="dac08-117">子元素</span><span class="sxs-lookup"><span data-stu-id="dac08-117">Child Elements</span></span>  
+ <span data-ttu-id="dac08-118">無</span><span class="sxs-lookup"><span data-stu-id="dac08-118">None</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="dac08-119">父項目</span><span class="sxs-lookup"><span data-stu-id="dac08-119">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|將指定的安全性語彙基元的處理常式加入至指定的處理常式集合。|  
+|<span data-ttu-id="dac08-120">項目</span><span class="sxs-lookup"><span data-stu-id="dac08-120">Element</span></span>|<span data-ttu-id="dac08-121">描述</span><span class="sxs-lookup"><span data-stu-id="dac08-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="dac08-122">\<add></span><span class="sxs-lookup"><span data-stu-id="dac08-122">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|<span data-ttu-id="dac08-123">將指定的安全性權杖處理常式加入至權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="dac08-123">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## 備註  
- `<userNameSecurityTokenHandlerRequirement>` 項目集合 <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> 屬性，當 <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> 物件從設定來初始化。  
+## <a name="remarks"></a><span data-ttu-id="dac08-124">備註</span><span class="sxs-lookup"><span data-stu-id="dac08-124">Remarks</span></span>  
+ <span data-ttu-id="dac08-125">`<userNameSecurityTokenHandlerRequirement>`項目集合<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A>屬性時<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>從設定初始化物件。</span><span class="sxs-lookup"><span data-stu-id="dac08-125">The `<userNameSecurityTokenHandlerRequirement>` element sets the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> property when a <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> object is initialized from configuration.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="dac08-126">範例</span><span class="sxs-lookup"><span data-stu-id="dac08-126">Example</span></span>  
   
-```  
+```xml  
 <add type="System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler, System.IdentityModel.Services">  
     <userNameSecurityTokenHandlerRequirement membershipProviderName="AspNetSqlProvider/>  
 </add>  

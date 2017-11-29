@@ -1,80 +1,80 @@
 ---
-title: "Windows Form 資料繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "繫結控制項, Windows Form"
-  - "資料 [Windows Form]"
-  - "資料 [Windows Form], 架構"
-  - "Windows Form 控制項, 資料繫結"
-  - "Windows Form, 資料繫結"
+title: "Windows Form 資料繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms]
+- Windows Forms, data binding
+- data [Windows Forms], architecture
+- Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60a9f66fec64ceda71dd5b70211b897c84113429
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Form 資料繫結
-在 Windows Form 中的資料繫結會提供方法，讓您在表單上的控制項顯示及變更來自資料來源的資訊。  您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。  
+# <a name="windows-forms-data-binding"></a><span data-ttu-id="01c08-102">Windows Form 資料繫結</span><span class="sxs-lookup"><span data-stu-id="01c08-102">Windows Forms Data Binding</span></span>
+<span data-ttu-id="01c08-103">在 Windows Form 中的資料繫結會提供方法，讓您在表單上的控制項顯示及變更來自資料來源的資訊。</span><span class="sxs-lookup"><span data-stu-id="01c08-103">Data binding in Windows Forms gives you the means to display and make changes to information from a data source in controls on the form.</span></span> <span data-ttu-id="01c08-104">您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。</span><span class="sxs-lookup"><span data-stu-id="01c08-104">You can bind to both traditional data sources as well as almost any structure that contains data.</span></span>  
   
-## 在本節中  
- [資料繫結和 Windows Form](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- 提供在 Windows Form 中的資料繫結概觀。  
+## <a name="in-this-section"></a><span data-ttu-id="01c08-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="01c08-105">In This Section</span></span>  
+ [<span data-ttu-id="01c08-106">資料繫結和 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="01c08-106">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ <span data-ttu-id="01c08-107">提供在 Windows Form 中的資料繫結概觀。</span><span class="sxs-lookup"><span data-stu-id="01c08-107">Provides an overview of data binding in Windows Forms.</span></span>  
   
- [Windows Form 支援的資料來源](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
- 描述可以搭配 Windows Form 使用的資料來源。  
+ [<span data-ttu-id="01c08-108">Windows Forms 支援的資料來源</span><span class="sxs-lookup"><span data-stu-id="01c08-108">Data Sources Supported by Windows Forms</span></span>](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ <span data-ttu-id="01c08-109">描述可以搭配 Windows Form 使用的資料來源。</span><span class="sxs-lookup"><span data-stu-id="01c08-109">Describes the data sources that can be used with Windows Forms.</span></span>  
   
- [與資料繫結相關的介面](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
- 描述數個與 Windows Form 資料繫結搭配使用的介面。  
+ [<span data-ttu-id="01c08-110">與資料繫結相關的介面</span><span class="sxs-lookup"><span data-stu-id="01c08-110">Interfaces Related to Data Binding</span></span>](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
+ <span data-ttu-id="01c08-111">描述數個與 Windows Form 資料繫結搭配使用的介面。</span><span class="sxs-lookup"><span data-stu-id="01c08-111">Describes several of the interfaces used with Windows Forms data binding.</span></span>  
   
- [如何：巡覽 Windows Form 中的資料](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
- 示範如何瀏覽資料來源中的項目。  
+ [<span data-ttu-id="01c08-112">操作說明：巡覽 Windows Forms 中的資料</span><span class="sxs-lookup"><span data-stu-id="01c08-112">How to: Navigate Data in Windows Forms</span></span>](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
+ <span data-ttu-id="01c08-113">示範如何瀏覽資料來源中的項目。</span><span class="sxs-lookup"><span data-stu-id="01c08-113">Shows how to navigate through items in a data source.</span></span>  
   
- [Windows Form 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- 說明不同類型的 Windows Form 資料繫結變更通知。  
+ [<span data-ttu-id="01c08-114">Windows Forms 資料繫結中的變更告知</span><span class="sxs-lookup"><span data-stu-id="01c08-114">Change Notification in Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ <span data-ttu-id="01c08-115">說明不同類型的 Windows Form 資料繫結變更通知。</span><span class="sxs-lookup"><span data-stu-id="01c08-115">Describes different types of change notification for Windows Forms data binding.</span></span>  
   
- [如何：實作 INotifyPropertyChanged 介面](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
- 示範如何實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。  介面會與繫結的控制項溝通商務物件的屬性變更  
+ [<span data-ttu-id="01c08-116">操作說明：實作 INotifyPropertyChanged 介面</span><span class="sxs-lookup"><span data-stu-id="01c08-116">How to: Implement the INotifyPropertyChanged Interface</span></span>](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
+ <span data-ttu-id="01c08-117">示範如何實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。</span><span class="sxs-lookup"><span data-stu-id="01c08-117">Shows how to implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span> <span data-ttu-id="01c08-118">介面會與繫結的控制項溝通商務物件的屬性變更</span><span class="sxs-lookup"><span data-stu-id="01c08-118">The interface  communicates to a bound control the property changes on a business object</span></span>  
   
- [如何：套用 PropertyNameChanged 模式](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
- 示範如何將 *PropertyNameChanged* 模式套用到 Windows Form 使用者控制項。  
+ [<span data-ttu-id="01c08-119">操作說明：套用 PropertyNameChanged 模式</span><span class="sxs-lookup"><span data-stu-id="01c08-119">How to: Apply the PropertyNameChanged Pattern</span></span>](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
+ <span data-ttu-id="01c08-120">示範如何套用*PropertyName*模式的 Windows Form 使用者控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="01c08-120">Shows how to apply the *PropertyName*Changed pattern to properties of a Windows Forms user control.</span></span>  
   
- [如何：實作 ITypedList 介面](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
- 示範如何藉由實作 <xref:System.ComponentModel.ITypedList> 介面，讓您探索可繫結清單的結構描述。  
+ [<span data-ttu-id="01c08-121">操作說明：實作 ITypedList 介面</span><span class="sxs-lookup"><span data-stu-id="01c08-121">How to: Implement the ITypedList Interface</span></span>](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
+ <span data-ttu-id="01c08-122">示範如何藉由實作 <xref:System.ComponentModel.ITypedList> 介面，讓您探索可繫結清單的結構描述。</span><span class="sxs-lookup"><span data-stu-id="01c08-122">Shows how to enable discovery of the schema for a bindable list by implementing the <xref:System.ComponentModel.ITypedList> interface.</span></span>  
   
- [如何：實作 IListSource 介面](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
- 示範如何實作 <xref:System.ComponentModel.IListSource> 介面來建立可繫結的類別，它不會實作 <xref:System.Collections.IList>，而是從另一個位置提供清單。  
+ [<span data-ttu-id="01c08-123">操作說明：實作 IListSource 介面</span><span class="sxs-lookup"><span data-stu-id="01c08-123">How to: Implement the IListSource Interface</span></span>](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
+ <span data-ttu-id="01c08-124">示範如何實作 <xref:System.ComponentModel.IListSource> 介面來建立可繫結的類別，它不會實作 <xref:System.Collections.IList>，而是從另一個位置提供清單。</span><span class="sxs-lookup"><span data-stu-id="01c08-124">Shows how to implement the <xref:System.ComponentModel.IListSource> interface to create a bindable class does not implement <xref:System.Collections.IList>, but provides a list from another location.</span></span>  
   
- [如何：確保繫結至相同資料來源的多個控制項都能保持同步](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- 示範如何處理 <xref:System.Windows.Forms.BindingSource.BindingComplete> 事件以確保繫結至資料來源的所有控制項都能保持同步。  
+ [<span data-ttu-id="01c08-125">操作說明：確保繫結至相同資料來源的多個控制項都能保持同步</span><span class="sxs-lookup"><span data-stu-id="01c08-125">How to: Ensure Multiple Controls Bound to the Same Data Source Remain Synchronized</span></span>](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ <span data-ttu-id="01c08-126">示範如何處理 <xref:System.Windows.Forms.BindingSource.BindingComplete> 事件以確保繫結至資料來源的所有控制項都能保持同步。</span><span class="sxs-lookup"><span data-stu-id="01c08-126">Shows how to handle the <xref:System.Windows.Forms.BindingSource.BindingComplete> event to ensure all controls bound to a data source remain synchronized.</span></span>  
   
- [如何：確認子資料表中選取的資料列保持在正確位置](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
- 示範在變更父資料表的欄位時，如何確定子資料表的所選取資料列不會變更。  
+ [<span data-ttu-id="01c08-127">操作說明：確認子資料表中選取的資料列保持在正確位置</span><span class="sxs-lookup"><span data-stu-id="01c08-127">How to: Ensure the Selected Row in a Child Table Remains at the Correct Position</span></span>](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
+ <span data-ttu-id="01c08-128">示範在變更父資料表的欄位時，如何確定子資料表的所選取資料列不會變更。</span><span class="sxs-lookup"><span data-stu-id="01c08-128">Shows how to ensure the selected row of a child table does not change, when a change is made to a field of the parent table.</span></span>  
   
- 另請參閱[與資料繫結相關的介面](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\))、[如何：巡覽 Windows Form 中的資料](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\))、[如何：在 Windows Form 上建立簡單繫結控制項](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\))。  
+ <span data-ttu-id="01c08-129">另請參閱[介面相關的資料繫結](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\))，[如何： 巡覽 Windows Form 中的資料](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\))， [How to： 建立 Windows Form 上的簡單繫結控制項](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="01c08-129">Also see [Interfaces Related to Data Binding](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [How to: Navigate Data in Windows Forms](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [How to: Create a Simple-Bound Control on a Windows Form](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).</span></span>  
   
-## 參考  
- <xref:System.Windows.Forms.Binding?displayProperty=fullName>  
- 描述代表可繫結元件和資料來源之間繫結的類別。  
+## <a name="reference"></a><span data-ttu-id="01c08-130">參考資料</span><span class="sxs-lookup"><span data-stu-id="01c08-130">Reference</span></span>  
+ <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
+ <span data-ttu-id="01c08-131">描述代表可繫結元件和資料來源之間繫結的類別。</span><span class="sxs-lookup"><span data-stu-id="01c08-131">Describes the class that represents the binding between a bindable component and a data source.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource?displayProperty=fullName>  
- 描述封裝資料來源以便繫結至控制項的類別。  
+ <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>  
+ <span data-ttu-id="01c08-132">描述封裝資料來源以便繫結至控制項的類別。</span><span class="sxs-lookup"><span data-stu-id="01c08-132">Describes the class that encapsulates a data source for binding to controls.</span></span>  
   
-## 相關章節  
- [BindingSource 元件](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- 包含主題的清單，這些主題會示範如何使用 <xref:System.Windows.Forms.BindingSource> 元件。  
+## <a name="related-sections"></a><span data-ttu-id="01c08-133">相關章節</span><span class="sxs-lookup"><span data-stu-id="01c08-133">Related Sections</span></span>  
+ [<span data-ttu-id="01c08-134">BindingSource 元件</span><span class="sxs-lookup"><span data-stu-id="01c08-134">BindingSource Component</span></span>](../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ <span data-ttu-id="01c08-135">包含主題的清單，這些主題會示範如何使用 <xref:System.Windows.Forms.BindingSource> 元件。</span><span class="sxs-lookup"><span data-stu-id="01c08-135">Contains a list of topics that demonstrate how to use the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- [DataGridView 控制項](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- 提供主題的清單，這些主題會示範如何使用可繫結 datagrid 控制項。  
+ [<span data-ttu-id="01c08-136">DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="01c08-136">DataGridView Control</span></span>](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ <span data-ttu-id="01c08-137">提供主題的清單，這些主題會示範如何使用可繫結 datagrid 控制項。</span><span class="sxs-lookup"><span data-stu-id="01c08-137">Provides a list of topics that demonstrate how to use a bindable datagrid control.</span></span>  
   
- 另請參閱[存取 Visual Studio 中的資料](http://msdn.microsoft.com/library/wzabh8c4%20\(v=vs.110\))或[存取 Visual Studio 中的資料](http://msdn.microsoft.com/library/wzabh8c4%20\(v=vs.110\))。
+ <span data-ttu-id="01c08-138">另請參閱[存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)。</span><span class="sxs-lookup"><span data-stu-id="01c08-138">Also see [Accessing Data in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).</span></span>

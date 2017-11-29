@@ -1,79 +1,80 @@
 ---
-title: "&lt;settings&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#settings"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<settings> 項目"
-  - "settings 項目"
+title: "&lt;設定&gt;項目 （網路設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings
+helpviewer_keywords:
+- settings element
+- <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-caps.latest.revision: 21
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 07f356c0425b071ac320e702a9ba7cd6b9537341
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;settings&gt; 項目 (網路設定)
-為 <xref:System.Net?displayProperty=fullName> 命名空間設定基本的網路選項。  
+# <a name="ltsettingsgt-element-network-settings"></a><span data-ttu-id="e364e-102">&lt;設定&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="e364e-102">&lt;settings&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="e364e-103">為 <xref:System.Net?displayProperty=nameWithType> 命名空間設定基本的網路選項。</span><span class="sxs-lookup"><span data-stu-id="e364e-103">Configures basic network options for the <xref:System.Net?displayProperty=nameWithType> namespace.</span></span>  
   
-## 語法  
+ <span data-ttu-id="e364e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e364e-104">\<configuration></span></span>  
+<span data-ttu-id="e364e-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="e364e-105">\<system.net></span></span>  
+<span data-ttu-id="e364e-106">\<設定 ></span><span class="sxs-lookup"><span data-stu-id="e364e-106">\<settings></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e364e-107">語法</span><span class="sxs-lookup"><span data-stu-id="e364e-107">Syntax</span></span>  
   
-      <settings>  
-..<httpListener> … </httpListener>  
-..<httpWebRequest> … </httpWebRequest>  
-..<ipv6> … </ipv6>  
-..<performanceCounters> … </performanceCounters>  
+```xml  
+<settings>  
+  <httpListener> … </httpListener>  
+  <httpWebRequest> … </httpWebRequest>  
+  <ipv6> … </ipv6>  
+  <performanceCounters> … </performanceCounters>  
   <servicePointManager> … </servicePointManager>  
-..<socket> … </socket>  
-..<webProxyScript> … </webProxyScript>  
+  <socket> … </socket>  
+  <webProxyScript> … </webProxyScript>  
 </settings>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e364e-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="e364e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e364e-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="e364e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="e364e-110">屬性</span><span class="sxs-lookup"><span data-stu-id="e364e-110">Attributes</span></span>  
+ <span data-ttu-id="e364e-111">無。</span><span class="sxs-lookup"><span data-stu-id="e364e-111">None.</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="e364e-112">子項目</span><span class="sxs-lookup"><span data-stu-id="e364e-112">Child Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|自訂 <xref:System.Net.HttpListener> 類別所使用的參數。|  
-|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|自訂 Web 要求參數。|  
-|[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|啟用網際網路通訊協定第 6 版 \(IPv6\) 支援。|  
-|[\<performanceCounter\> 項目 \(網路設定\)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|啟用網路效能計數器。|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|設定網路資源連線。|  
-|[通訊端](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|指定通訊端操作是否使用完成通訊埠。|  
-|[\<webProxyScript\> 項目 \(網路設定\)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|設定用來探索 Web Proxy 的指令碼的特性。|  
+|<span data-ttu-id="e364e-113">項目</span><span class="sxs-lookup"><span data-stu-id="e364e-113">Element</span></span>|<span data-ttu-id="e364e-114">說明</span><span class="sxs-lookup"><span data-stu-id="e364e-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e364e-115">httpListener</span><span class="sxs-lookup"><span data-stu-id="e364e-115">httpListener</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|<span data-ttu-id="e364e-116">自訂所用參數<xref:System.Net.HttpListener>類別。</span><span class="sxs-lookup"><span data-stu-id="e364e-116">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>|  
+|[<span data-ttu-id="e364e-117">httpWebRequest</span><span class="sxs-lookup"><span data-stu-id="e364e-117">httpWebRequest</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|<span data-ttu-id="e364e-118">可自訂 Web 要求參數。</span><span class="sxs-lookup"><span data-stu-id="e364e-118">Customizes Web request parameters.</span></span>|  
+|[<span data-ttu-id="e364e-119">ipv6</span><span class="sxs-lookup"><span data-stu-id="e364e-119">ipv6</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|<span data-ttu-id="e364e-120">可讓網際網路通訊協定第 6 版 (IPv6) 支援。</span><span class="sxs-lookup"><span data-stu-id="e364e-120">Enables Internet Protocol version 6 (IPv6) support.</span></span>|  
+|[<span data-ttu-id="e364e-121">\<performanceCounter > 項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="e364e-121">\<performanceCounter> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|<span data-ttu-id="e364e-122">啟用網路效能計數器。</span><span class="sxs-lookup"><span data-stu-id="e364e-122">Enables network performance counters.</span></span>|  
+|[<span data-ttu-id="e364e-123">servicePointManager</span><span class="sxs-lookup"><span data-stu-id="e364e-123">servicePointManager</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|<span data-ttu-id="e364e-124">設定連線到網路資源。</span><span class="sxs-lookup"><span data-stu-id="e364e-124">Configures connections to network resources.</span></span>|  
+|[<span data-ttu-id="e364e-125">通訊端</span><span class="sxs-lookup"><span data-stu-id="e364e-125">socket</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|<span data-ttu-id="e364e-126">指定通訊端作業是否使用完成通訊埠。</span><span class="sxs-lookup"><span data-stu-id="e364e-126">Specifies whether socket operations use completion ports.</span></span>|  
+|[<span data-ttu-id="e364e-127">\<webProxyScript > 項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="e364e-127">\<webProxyScript> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|<span data-ttu-id="e364e-128">設定用來探索 Web proxy 的指令碼的特性。</span><span class="sxs-lookup"><span data-stu-id="e364e-128">Configures the characteristics of the script used to discover Web proxies.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="e364e-129">父項目</span><span class="sxs-lookup"><span data-stu-id="e364e-129">Parent Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 如何連接至網路的設定。|  
+|<span data-ttu-id="e364e-130">項目</span><span class="sxs-lookup"><span data-stu-id="e364e-130">Element</span></span>|<span data-ttu-id="e364e-131">說明</span><span class="sxs-lookup"><span data-stu-id="e364e-131">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e364e-132">system.net</span><span class="sxs-lookup"><span data-stu-id="e364e-132">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="e364e-133">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="e364e-133">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## 備註  
+## <a name="remarks"></a><span data-ttu-id="e364e-134">備註</span><span class="sxs-lookup"><span data-stu-id="e364e-134">Remarks</span></span>  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a><span data-ttu-id="e364e-135">組態檔</span><span class="sxs-lookup"><span data-stu-id="e364e-135">Configuration Files</span></span>  
+ <span data-ttu-id="e364e-136">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="e364e-136">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 請參閱  
- <xref:System.Net?displayProperty=fullName>   
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="e364e-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e364e-137">See Also</span></span>  
+ <xref:System.Net?displayProperty=nameWithType>  
+ [<span data-ttu-id="e364e-138">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="e364e-138">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

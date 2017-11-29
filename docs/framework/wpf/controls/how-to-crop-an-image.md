@@ -1,49 +1,53 @@
 ---
-title: "如何：裁剪影像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "類別, CroppedBitmap"
-  - "CroppedBitmap 類別"
-  - "裁剪影像"
-  - "影像, 裁剪"
+title: "如何：裁剪影像"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [WPF], cropping
+- cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6de7914a1226381da763b3348d1794453fe93b02
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：裁剪影像
-本範例顯示如何使用 <xref:System.Windows.Media.Imaging.CroppedBitmap> 裁剪影像。  
+# <a name="how-to-crop-an-image"></a><span data-ttu-id="aaeb6-102">如何：裁剪影像</span><span class="sxs-lookup"><span data-stu-id="aaeb6-102">How to: Crop an Image</span></span>
+<span data-ttu-id="aaeb6-103">這個範例示範如何裁剪影像使用<xref:System.Windows.Media.Imaging.CroppedBitmap>。</span><span class="sxs-lookup"><span data-stu-id="aaeb6-103">This example shows how to crop an image using <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span></span>  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap> 主要用於編碼影像的裁剪版本，以儲存到檔案中。  若要針對顯示目的裁剪影像，請參閱 [Create a Clip Region](http://msdn.microsoft.com/zh-tw/56e4bed6-78d7-4292-b917-d72d0b3e4376)主題。  
+ <span data-ttu-id="aaeb6-104"><xref:System.Windows.Media.Imaging.CroppedBitmap>主要用於編碼影像的裁剪的版本時儲存的檔案。</span><span class="sxs-lookup"><span data-stu-id="aaeb6-104"><xref:System.Windows.Media.Imaging.CroppedBitmap> is primarily used when encoding a cropped version of an image to save out to a file.</span></span> <span data-ttu-id="aaeb6-105">若要裁剪的影像顯示用途，請參閱[建立裁剪區域](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)主題。</span><span class="sxs-lookup"><span data-stu-id="aaeb6-105">To crop an image for display purposes see the [Create a Clip Region](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) topic.</span></span>  
   
-## 範例  
- 下列[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 會定義以下範例內所使用的資源。  
+## <a name="example"></a><span data-ttu-id="aaeb6-106">範例</span><span class="sxs-lookup"><span data-stu-id="aaeb6-106">Example</span></span>  
+ <span data-ttu-id="aaeb6-107">下列[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定義在下面的範例中使用的資源。</span><span class="sxs-lookup"><span data-stu-id="aaeb6-107">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] defines resources used within the samples below.</span></span>  
   
- [!code-xml[imageelementexample#CroppedXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml1)]  
+ [!code-xaml[imageelementexample#CroppedXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml1)]  
   
- 下列範例使用 <xref:System.Windows.Media.Imaging.CroppedBitmap> 做為來源以建立影像。  
+ <span data-ttu-id="aaeb6-108">下列範例會建立映像使用<xref:System.Windows.Media.Imaging.CroppedBitmap>作為其來源。</span><span class="sxs-lookup"><span data-stu-id="aaeb6-108">The following example creates an image using a <xref:System.Windows.Media.Imaging.CroppedBitmap> as its source.</span></span>  
   
- [!code-xml[imageelementexample#CroppedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml2)]  
+ [!code-xaml[imageelementexample#CroppedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml2)]  
   
  [!code-csharp[imageelementexample#CroppedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml.cs#croppedcsharp1)]
  [!code-vb[imageelementexample#CroppedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp1)]  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap> 也可以用來做為另一個 <xref:System.Windows.Media.Imaging.CroppedBitmap> 的來源，鏈結裁剪作業。  請注意，<xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A> 使用的值是與來源裁剪點陣圖相關聯的，而非初始影像。  
+ <span data-ttu-id="aaeb6-109"><xref:System.Windows.Media.Imaging.CroppedBitmap>也可用做為另一個來源<xref:System.Windows.Media.Imaging.CroppedBitmap>，鏈結裁剪。</span><span class="sxs-lookup"><span data-stu-id="aaeb6-109">The <xref:System.Windows.Media.Imaging.CroppedBitmap> can also be used as the source of another <xref:System.Windows.Media.Imaging.CroppedBitmap>, chaining the cropping.</span></span> <span data-ttu-id="aaeb6-110">請注意，<xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A>使用相對於來源點陣圖和不初始映像將裁剪的值。</span><span class="sxs-lookup"><span data-stu-id="aaeb6-110">Note that the <xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A> uses values that are relative to the source cropped bitmap and not the initial image.</span></span>  
   
- [!code-xml[imageelementexample#CroppedXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml3)]  
+ [!code-xaml[imageelementexample#CroppedXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml3)]  
   
  [!code-csharp[imageelementexample#CroppedCSharp2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml.cs#croppedcsharp2)]
  [!code-vb[imageelementexample#CroppedCSharp2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
-## 請參閱  
- [Create a Clip Region](http://msdn.microsoft.com/zh-tw/56e4bed6-78d7-4292-b917-d72d0b3e4376)
+## <a name="see-also"></a><span data-ttu-id="aaeb6-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aaeb6-111">See Also</span></span>  
+ [<span data-ttu-id="aaeb6-112">建立裁剪區域</span><span class="sxs-lookup"><span data-stu-id="aaeb6-112">Create a Clip Region</span></span>](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)

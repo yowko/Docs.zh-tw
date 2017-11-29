@@ -1,154 +1,147 @@
 ---
-title: "Code Access Security Policy Compatibility and Migration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "policy migration, compatibility"
-  - "CLR poliicy migration"
+title: "程式碼存取安全性原則相容性和移轉"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- policy migration, compatibility
+- CLR poliicy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-caps.latest.revision: 15
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 29e81f5e83bc3cbf9467c7940ba6acfd0a8c99b7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Code Access Security Policy Compatibility and Migration
-程式碼存取安全性 \(CAS\) 的原則部分在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中已過時。  因此，如果您以[明確](#explicit_use)或[隱含](#implicit_use)方式 \(透過其他類型和成員\) 呼叫過時的原則類型和成員，可能會遇到編譯警告和執行階段例外狀況。  
+# <a name="code-access-security-policy-compatibility-and-migration"></a><span data-ttu-id="fa659-102">程式碼存取安全性原則相容性和移轉</span><span class="sxs-lookup"><span data-stu-id="fa659-102">Code Access Security Policy Compatibility and Migration</span></span>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 您可以透過下列方式避免出現警告和錯誤：  
+ <span data-ttu-id="fa659-103">程式碼存取安全性 (CAS) 的原則部分在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中已過時。</span><span class="sxs-lookup"><span data-stu-id="fa659-103">The policy portion of code access security (CAS) has been made obsolete in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="fa659-104">如此一來，您可能會遇到編譯警告和執行階段例外狀況如果您呼叫過時的原則類型和成員[明確](#explicit_use)或[隱含](#implicit_use)（透過其他類型和成員）。</span><span class="sxs-lookup"><span data-stu-id="fa659-104">As a result, you may encounter compilation warnings and runtime exceptions if you call the obsolete policy types and members [explicitly](#explicit_use) or [implicitly](#implicit_use) (through other types and members).</span></span>  
   
--   [移轉](#migration)至 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，以取代過時呼叫。  
+ <span data-ttu-id="fa659-105">您可以透過下列方式避免出現警告和錯誤：</span><span class="sxs-lookup"><span data-stu-id="fa659-105">You can avoid the warnings and errors by either:</span></span>  
   
-     \-或\-  
+-   <span data-ttu-id="fa659-106">[移轉](#migration)至[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]取代過時呼叫。</span><span class="sxs-lookup"><span data-stu-id="fa659-106">[Migrating](#migration) to the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] replacements for the obsolete calls.</span></span>  
   
--   使用 [\<NetFx40\_LegacySecurityPolicy\> 組態項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)選擇使用舊版的 CAS 原則行為。  
+     <span data-ttu-id="fa659-107">\-或-</span><span class="sxs-lookup"><span data-stu-id="fa659-107">\- or -</span></span>  
   
- 此主題包括下列章節：  
+-   <span data-ttu-id="fa659-108">使用[< NetFx40_LegacySecurityPolicy > 組態項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)選擇使用舊版的 CAS 原則行為。</span><span class="sxs-lookup"><span data-stu-id="fa659-108">Using the [<NetFx40_LegacySecurityPolicy> configuration element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) to opt into the legacy CAS policy behavior.</span></span>  
   
--   [明確使用](#explicit_use)  
+ <span data-ttu-id="fa659-109">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="fa659-109">This topic contains the following sections:</span></span>  
   
--   [隱含使用](#implicit_use)  
+-   [<span data-ttu-id="fa659-110">明確使用</span><span class="sxs-lookup"><span data-stu-id="fa659-110">Explicit Use</span></span>](#explicit_use)  
   
--   [錯誤和警告](#errors_and_warnings)  
+-   [<span data-ttu-id="fa659-111">隱含使用</span><span class="sxs-lookup"><span data-stu-id="fa659-111">Implicit Use</span></span>](#implicit_use)  
   
--   [移轉：取代過時呼叫](#migration)  
+-   [<span data-ttu-id="fa659-112">錯誤和警告</span><span class="sxs-lookup"><span data-stu-id="fa659-112">Errors and Warnings</span></span>](#errors_and_warnings)  
   
--   [相容性：使用 CAS 原則的舊版選項](#compatibility)  
+-   [<span data-ttu-id="fa659-113">移轉： 取代過時呼叫</span><span class="sxs-lookup"><span data-stu-id="fa659-113">Migration: Replacement for Obsolete Calls</span></span>](#migration)  
   
-> [!CAUTION]
->  程式碼存取安全性和部分信任的程式碼  
->   
->  .NET Framework 提供一個稱為程式碼存取安全性 \(CAS\) 的機制，可對在同一個應用程式中執行的不同程式碼強制執行各種信任層級。  .NET Framework 中的程式碼存取安全性不應該做為部分信任的程式碼 \(特別是未知來源的程式碼\) 的安全性界限使用。  建議不要載入及執行未知來源的程式碼，如此便不需要使用替代的安全措施。  
->   
->  這項原則適用於所有 .NET Framework 版本，但不適用於 Silverlight 隨附的 .NET Framework。  
+-   [<span data-ttu-id="fa659-114">相容性： 使用 CAS 原則的舊版選項</span><span class="sxs-lookup"><span data-stu-id="fa659-114">Compatibility: Using the CAS Policy Legacy Option</span></span>](#compatibility)  
   
 <a name="explicit_use"></a>   
-## 明確使用  
- 直接管理安全性原則或要求 CAS 原則進行沙箱化的成員都已過時，而且預設會出現錯誤。  
+## <a name="explicit-use"></a><span data-ttu-id="fa659-115">明確使用</span><span class="sxs-lookup"><span data-stu-id="fa659-115">Explicit Use</span></span>  
+ <span data-ttu-id="fa659-116">直接管理安全性原則或要求 CAS 原則進行沙箱化的成員都已過時，而且預設會出現錯誤。</span><span class="sxs-lookup"><span data-stu-id="fa659-116">Members that directly manipulate security policy or require CAS policy to sandbox are obsolete and will produce errors by default.</span></span>  
   
- 範例如下：  
+ <span data-ttu-id="fa659-117">範例如下：</span><span class="sxs-lookup"><span data-stu-id="fa659-117">Examples of these are:</span></span>  
   
--   <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.HostSecurityManager.DomainPolicy%2A?displayProperty=fullName>  
+-   <xref:System.Security.HostSecurityManager.DomainPolicy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.Policy.PolicyLevel.CreateAppDomainLevel%2A?displayProperty=fullName>  
+-   <xref:System.Security.Policy.PolicyLevel.CreateAppDomainLevel%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.LoadPolicyLevelFromString%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.LoadPolicyLevelFromString%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.ResolveSystemPolicy%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.ResolveSystemPolicy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.ResolvePolicyGroups%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.ResolvePolicyGroups%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.PolicyHierarchy%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.PolicyHierarchy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.SavePolicy%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.SavePolicy%2A?displayProperty=nameWithType>  
   
 <a name="implicit_use"></a>   
-## 隱含使用  
- 有幾個載入多載的組件出現錯誤，因為它們隱含使用了 CAS 原則。  這些多載會接受用於解析 CAS 原則的 <xref:System.Security.Policy.Evidence> 參數，並且為組件提供權限授權集。  
+## <a name="implicit-use"></a><span data-ttu-id="fa659-118">隱含使用</span><span class="sxs-lookup"><span data-stu-id="fa659-118">Implicit Use</span></span>  
+ <span data-ttu-id="fa659-119">有幾個載入多載的組件出現錯誤，因為它們隱含使用了 CAS 原則。</span><span class="sxs-lookup"><span data-stu-id="fa659-119">Several assembly loading overloads produce errors because of their implicit use of CAS policy.</span></span> <span data-ttu-id="fa659-120">這些多載會接受用於解析 CAS 原則的 <xref:System.Security.Policy.Evidence> 參數，並且為組件提供權限授權集。</span><span class="sxs-lookup"><span data-stu-id="fa659-120">These overloads take an <xref:System.Security.Policy.Evidence> parameter that is used to resolve CAS policy and provide a permission grant set for an assembly.</span></span>  
   
- 以下是一些範例。  過時的多載是指接受 <xref:System.Security.Policy.Evidence> 做為參數的下列多載：  
+ <span data-ttu-id="fa659-121">以下是一些範例。</span><span class="sxs-lookup"><span data-stu-id="fa659-121">Here are some examples.</span></span> <span data-ttu-id="fa659-122">過時的多載是指接受 <xref:System.Security.Policy.Evidence> 做為參數的下列多載：</span><span class="sxs-lookup"><span data-stu-id="fa659-122">The obsolete overloads are those that take <xref:System.Security.Policy.Evidence> as a parameter:</span></span>  
   
--   <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=fullName>  
+-   <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
   
 <a name="errors_and_warnings"></a>   
-## 錯誤和警告  
- 如果使用了過時的類型和成員，會出現下列錯誤訊息。  請注意，<xref:System.Security.Policy.Evidence?displayProperty=fullName> 類型本身並沒有過時。  
+## <a name="errors-and-warnings"></a><span data-ttu-id="fa659-123">錯誤和警告</span><span class="sxs-lookup"><span data-stu-id="fa659-123">Errors and Warnings</span></span>  
+ <span data-ttu-id="fa659-124">如果使用了過時的類型和成員，會出現下列錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="fa659-124">The obsolete types and members produce the following error messages when they are used.</span></span> <span data-ttu-id="fa659-125">請注意，<xref:System.Security.Policy.Evidence?displayProperty=nameWithType> 類型本身並沒有過時。</span><span class="sxs-lookup"><span data-stu-id="fa659-125">Note that the <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> type itself is not obsolete.</span></span>  
   
- 編譯時期的警告：  
+ <span data-ttu-id="fa659-126">編譯時間的警告：</span><span class="sxs-lookup"><span data-stu-id="fa659-126">Compile-time warning:</span></span>  
   
- `warning CS0618: '<API Name>' is obsolete: 'This method is obsolete and will be removed in a future release of the .NET Framework.  Please use <suggested alternate API>.  See <link> for more information.'`  
+ `warning CS0618: '<API Name>' is obsolete: 'This method is obsolete and will be removed in a future release of the .NET Framework. Please use <suggested alternate API>. See <link> for more information.'`  
   
- 執行階段例外狀況：  
+ <span data-ttu-id="fa659-127">執行階段例外狀況：</span><span class="sxs-lookup"><span data-stu-id="fa659-127">Run-time exception:</span></span>  
   
- <xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`  
+ <span data-ttu-id="fa659-128"><xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`</span><span class="sxs-lookup"><span data-stu-id="fa659-128"><xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`</span></span>  
   
 <a name="migration"></a>   
-## 移轉：取代過時呼叫  
+## <a name="migration-replacement-for-obsolete-calls"></a><span data-ttu-id="fa659-129">移轉：取代過時呼叫</span><span class="sxs-lookup"><span data-stu-id="fa659-129">Migration: Replacement for Obsolete Calls</span></span>  
   
-### 決定組件的信任層級  
- CAS 原則通常用於決定組件或應用程式定義域的權限授權集或信任層級。  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 會公開下列實用的屬性，這些屬性不需要解析安全性原則：  
+### <a name="determining-an-assemblys-trust-level"></a><span data-ttu-id="fa659-130">決定組件的信任層級</span><span class="sxs-lookup"><span data-stu-id="fa659-130">Determining an Assembly’s Trust Level</span></span>  
+ <span data-ttu-id="fa659-131">CAS 原則通常用於決定組件或應用程式定義域的權限授權集或信任層級。</span><span class="sxs-lookup"><span data-stu-id="fa659-131">CAS policy is often used to determine an assembly’s or application domain’s permission grant set or trust level.</span></span> <span data-ttu-id="fa659-132">[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 會公開下列實用的屬性，這些屬性不需要解析安全性原則：</span><span class="sxs-lookup"><span data-stu-id="fa659-132">The [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] exposes the following useful properties that do not need to resolve security policy:</span></span>  
   
--   <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.PermissionSet%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.PermissionSet%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>  
   
-### 應用程式定義域沙箱作業  
- <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=fullName> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 會公開不需基於這個目的而使用 <xref:System.Security.Policy.PolicyLevel> 的成員。 如需詳細資訊，請參閱[How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。  
+### <a name="application-domain-sandboxing"></a><span data-ttu-id="fa659-133">應用程式定義域沙箱作業</span><span class="sxs-lookup"><span data-stu-id="fa659-133">Application Domain Sandboxing</span></span>  
+ <span data-ttu-id="fa659-134"><xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。</span><span class="sxs-lookup"><span data-stu-id="fa659-134">The <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> method is typically used for sandboxing the assemblies in an application domain.</span></span> <span data-ttu-id="fa659-135">[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]公開不需要使用的成員<xref:System.Security.Policy.PolicyLevel>針對此目的。</span><span class="sxs-lookup"><span data-stu-id="fa659-135">The [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] exposes members that do not have to use <xref:System.Security.Policy.PolicyLevel> for this purpose.</span></span> <span data-ttu-id="fa659-136">如需詳細資訊，請參閱[如何： 執行部分信任程式碼在沙箱中](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。</span><span class="sxs-lookup"><span data-stu-id="fa659-136">For more information, see [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).</span></span>  
   
-### 決定部分信任程式碼的安全或合理權限集合  
- 主機通常需要決定對裝載的程式碼進行沙箱化處理的適當權限。  在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前，CAS 原則可透過 <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=fullName> 方法來執行這項作業。  為了取代這項功能，[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 提供了 <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=fullName> 方法，為已提供的辨識項傳回安全、標準的權限集合。  
+### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a><span data-ttu-id="fa659-137">決定部分信任程式碼的安全或合理權限集合</span><span class="sxs-lookup"><span data-stu-id="fa659-137">Determining a Safe or Reasonable Permission Set for Partially Trusted Code</span></span>  
+ <span data-ttu-id="fa659-138">主機通常需要決定對裝載的程式碼進行沙箱化處理的適當權限。</span><span class="sxs-lookup"><span data-stu-id="fa659-138">Hosts often need to determine the permissions that are appropriate for sandboxing hosted code.</span></span> <span data-ttu-id="fa659-139">之前[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，CAS 原則提供的方法與<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="fa659-139">Before the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], CAS policy provided a way to do this with the <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="fa659-140">做為替代，[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]提供<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>方法傳回安全、 標準的權限，為提供的辨識項集合。</span><span class="sxs-lookup"><span data-stu-id="fa659-140">As a replacement, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] provides the <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> method, which returns a safe, standard permission set for the provided evidence.</span></span>  
   
-### 非沙箱化案例：組件載入的多載  
- 不對組件進行沙箱化處理，而使用組件載入多載的原因，可能是為了要使用在其他情況下無法使用的參數。  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 起，不需要 <xref:System.Security.Policy.Evidence?displayProperty=fullName> 物件做為參數 \(例如 [AppDomain.ExecuteAssembly\(String, String\[\], Byte\<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=fullName>\) 的組件載入多載就適用這個案例。  
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a><span data-ttu-id="fa659-141">非沙箱化案例：組件載入的多載</span><span class="sxs-lookup"><span data-stu-id="fa659-141">Non-Sandboxing Scenarios: Overloads for Assembly Loads</span></span>  
+ <span data-ttu-id="fa659-142">不對組件進行沙箱化處理，而使用組件載入多載的原因，可能是為了要使用在其他情況下無法使用的參數。</span><span class="sxs-lookup"><span data-stu-id="fa659-142">The reason for using an assembly load overload might be to use parameters that are not otherwise available, instead of sandboxing the assembly.</span></span> <span data-ttu-id="fa659-143">從開始[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，不需要的組件載入多載<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>物件做為參數，例如<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>，實現此案例。</span><span class="sxs-lookup"><span data-stu-id="fa659-143">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], assembly load overloads that do not require a <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> object as a parameter, for example, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, enable this scenario.</span></span>  
   
- 如果您要對組件進行沙箱化處理，請使用 [AppDomain.CreateDomain\(String, Evidence, AppDomainSetup, PermissionSet, StrongName\<xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=fullName> 多載。  
+ <span data-ttu-id="fa659-144">如果您要對組件進行沙箱化處理，請使用 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 多載。</span><span class="sxs-lookup"><span data-stu-id="fa659-144">If you want to sandbox an assembly, use the <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> overload.</span></span>  
   
 <a name="compatibility"></a>   
-## 相容性：使用 CAS 原則的舊版選項  
- [\<NetFx40\_LegacySecurityPolicy\> 組態項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)可以讓您指定處理序或程式庫要使用舊版 CAS 原則。  當您啟用這個項目時，原則和辨識項多載的運作方式與在舊版 Framework 中的運作方式相同。  
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a><span data-ttu-id="fa659-145">相容性：使用 CAS 原則的舊版選項</span><span class="sxs-lookup"><span data-stu-id="fa659-145">Compatibility: Using the CAS Policy Legacy Option</span></span>  
+ <span data-ttu-id="fa659-146">[< NetFx40_LegacySecurityPolicy > 組態項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)可讓您指定的處理程序或程式庫會使用舊版 CAS 原則。</span><span class="sxs-lookup"><span data-stu-id="fa659-146">The [<NetFx40_LegacySecurityPolicy> configuration element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) lets you specify that a process or library uses legacy CAS policy.</span></span> <span data-ttu-id="fa659-147">當您啟用這個項目時，原則和辨識項多載的運作方式與在舊版 Framework 中的運作方式相同。</span><span class="sxs-lookup"><span data-stu-id="fa659-147">When you enable this element, the policy and evidence overloads will work as they did in previous versions of the framework.</span></span>  
   
 > [!NOTE]
->  CAS 原則行為是以執行階段版本為依據所指定，如此一來，修改某一個執行階段版本的 CAS 原則，就不會影響另一個版本的 CAS 原則。  
+>  <span data-ttu-id="fa659-148">CAS 原則行為是以執行階段版本為依據所指定，如此一來，修改某一個執行階段版本的 CAS 原則，就不會影響另一個版本的 CAS 原則。</span><span class="sxs-lookup"><span data-stu-id="fa659-148">CAS policy behavior is specified on a runtime version basis, so modifying CAS policy for one runtime version does not affect the CAS policy of another version.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <NetFx40_LegacySecurityPolicy enabled="true"/>  
@@ -156,5 +149,5 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## 請參閱  
- [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+## <a name="see-also"></a><span data-ttu-id="fa659-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fa659-149">See Also</span></span>  
+ [<span data-ttu-id="fa659-150">如何：在沙箱中執行部分信任的程式碼</span><span class="sxs-lookup"><span data-stu-id="fa659-150">How to: Run Partially Trusted Code in a Sandbox</span></span>](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

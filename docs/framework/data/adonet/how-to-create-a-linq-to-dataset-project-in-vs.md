@@ -1,61 +1,64 @@
 ---
-title: "HOW TO：在 Visual Studio 中建立 LINQ to DataSet 專案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：在 Visual Studio 中建立 LINQ to DataSet 專案"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 192273c6d364cebe828965ed016eea81135602f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：在 Visual Studio 中建立 LINQ to DataSet 專案
-不同的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 專案類型需要特定匯入的命名空間 \(Namespace\) \(Visual Basic\) 或 `using` 指示詞 \(C\#\) 和參考。  最小需求是 System.Core.dll 的參考和 <xref:System.Linq> 的 `using` 指示詞。  根據預設，如果您建立新的 [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] 專案，系統就會提供這些項目。  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 也需要 System.Data.dll 和 System.Data.DataSetExtensions.dll 的參考以及 `Imports` \(Visual Basic\) 或 `using` \(C\#\) 指示詞。  
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a><span data-ttu-id="bd267-102">如何：在 Visual Studio 中建立 LINQ to DataSet 專案</span><span class="sxs-lookup"><span data-stu-id="bd267-102">How to: Create a LINQ to DataSet Project In Visual Studio</span></span>
+<span data-ttu-id="bd267-103">不同的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 專案類型需要特定匯入的命名空間 (Namespace) (Visual Basic) 或 `using` 指示詞 (C#) 和參考。</span><span class="sxs-lookup"><span data-stu-id="bd267-103">The different types of [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projects require certain imported namespaces (Visual Basic) or `using` directives (C#) and references.</span></span> <span data-ttu-id="bd267-104">最小需求是 System.Core.dll 的參考和 `using` 的 <xref:System.Linq> 指示詞。</span><span class="sxs-lookup"><span data-stu-id="bd267-104">The minimum requirement is a reference to System.Core.dll and a `using` directive for <xref:System.Linq>.</span></span> <span data-ttu-id="bd267-105">根據預設，如果您建立新的 [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] 專案，系統就會提供這些項目。</span><span class="sxs-lookup"><span data-stu-id="bd267-105">By default, these are supplied if you create a new [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] project.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="bd267-106"> 也需要 System.Data.dll 和 System.Data.DataSetExtensions.dll 的參考以及 `Imports` (Visual Basic) 或 `using` (C#) 指示詞。</span><span class="sxs-lookup"><span data-stu-id="bd267-106"> also requires a reference to System.Data.dll and System.Data.DataSetExtensions.dll and an `Imports` (Visual Basic) or `using` (C#) directive.</span></span>  
   
- 如果您要從舊版 Visual Studio 升級專案，可能必須手動提供這些 LINQ 相關的參考。  此外，您可能也必須手動將專案設定為以 .NET Framework 3.5 版為目標。  
+ <span data-ttu-id="bd267-107">如果您要從舊版 Visual Studio 升級專案，可能必須手動提供這些 LINQ 相關的參考。</span><span class="sxs-lookup"><span data-stu-id="bd267-107">If you are upgrading a project from an earlier version of Visual Studio, you might have to supply these LINQ-related references manually.</span></span> <span data-ttu-id="bd267-108">此外，您可能也必須手動將專案設定為以 .NET Framework 3.5 版為目標。</span><span class="sxs-lookup"><span data-stu-id="bd267-108">You might also have to manually set the project to target the .NET Framework version 3.5.</span></span>  
   
 > [!NOTE]
->  如果您要從命令提示字元建立，就必須手動參考 `drive`**:**\\Program Files\\Reference Assemblies\\Microsoft\\Framework\\v3.5 中的 LINQ 相關 DLL。  
+>  <span data-ttu-id="bd267-109">如果您要從命令提示字元建置，您必須手動參考中的 LINQ 相關 Dll `drive` **:**\program Assemblies\Microsoft\Framework\v3.5。</span><span class="sxs-lookup"><span data-stu-id="bd267-109">If you are building from a command prompt, you must manually reference the LINQ-related DLLs in `drive`**:**\Program Files\Reference Assemblies\Microsoft\Framework\v3.5.</span></span>  
   
-### 以 .NET Framework 3.5 為目標  
+### <a name="to-target-the-net-framework-35"></a><span data-ttu-id="bd267-110">以 .NET Framework 3.5 為目標</span><span class="sxs-lookup"><span data-stu-id="bd267-110">To target the .NET Framework 3.5</span></span>  
   
-1.  在 [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] 中，建立新的 Visual Basic 或 C\# 專案。或者，您也可以開啟在 Visual Studio 2005 中建立的 Visual Basic 或 C\# 專案，然後遵循提示，將它轉換成 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 專案。  
+1.  <span data-ttu-id="bd267-111">在 [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] 中，建立新的 Visual Basic 或 C# 專案。</span><span class="sxs-lookup"><span data-stu-id="bd267-111">In [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)], create a new Visual Basic or C# project.</span></span> <span data-ttu-id="bd267-112">或者，您也可以開啟在 Visual Studio 2005 中建立的 Visual Basic 或 C# 專案，然後遵循提示，將它轉換成 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 專案。</span><span class="sxs-lookup"><span data-stu-id="bd267-112">Alternatively, you can open a Visual Basic or C# project that was created in Visual Studio 2005 and follow the prompts to convert it to a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] project.</span></span>  
   
-2.  若為 C\# 專案，請按一下 \[**專案**\] 功能表，然後按一下 \[**屬性**\]。  
+2.  <span data-ttu-id="bd267-113">C# 專案，請按一下**專案**功能表，然後再按一下**屬性**。</span><span class="sxs-lookup"><span data-stu-id="bd267-113">For a C# project, click the **Project** menu, and then click **Properties**.</span></span>  
   
-    1.  在 \[**應用程式**\] 屬性頁的 \[**目標 Framework**\] 下拉式清單中，選取 .NET Framework 3.5。  
+    1.  <span data-ttu-id="bd267-114">在**應用程式**屬性頁上，選取.NET Framework 3.5 中**目標 Framework**下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="bd267-114">In the **Application** property page, select .NET Framework 3.5 in the **Target Framework** drop-down list.</span></span>  
   
-3.  如果是 Visual Basic 專案，請按一下 \[**專案**\] 功能表，然後按一下 \[**屬性**\]。  
+3.  <span data-ttu-id="bd267-115">Visual Basic 專案，請按一下**專案**功能表，然後再按一下**屬性**。</span><span class="sxs-lookup"><span data-stu-id="bd267-115">For a Visual Basic project, click the **Project** menu, and then click **Properties**.</span></span>  
   
-    1.  在 \[**編譯**\] 屬性頁中，按一下 \[**進階編譯選項**\]，然後選取 \[**目標 Framework \(所有組態\)**\] 下拉式清單中的 .NET Framework 3.5。  
+    1.  <span data-ttu-id="bd267-116">在**編譯**屬性頁上，按一下 **進階編譯選項**，然後選取 在.NET Framework 3.5**目標 Framework （所有組態）**下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="bd267-116">In the **Compile** property page, click **Advanced Compile Options** and then select .NET Framework 3.5 in the **Target Framework (all configurations)** drop-down list.</span></span>  
   
-4.  在 \[**專案**\] 功能表中，依序按一下 \[**加入參考**\] 和 \[**.NET**\] 索引標籤、向下捲動至 \[**System.Core**\] 並按一下它，然後按一下 \[**確定**\]。  
+4.  <span data-ttu-id="bd267-117">在**專案**功能表上，按一下 **加入參考**，按一下  **.NET**索引標籤上，向下捲動至**System.Core**，按一下它，然後按  **確定**。</span><span class="sxs-lookup"><span data-stu-id="bd267-117">On the **Project** menu, click **Add Reference**, click the **.NET** tab, scroll down to **System.Core**, click it, and then click **OK**.</span></span>  
   
-5.  將 <xref:System.Linq> 的 `using` 指示詞或匯入的命名空間加入至您的原始程式碼檔或專案。  
+5.  <span data-ttu-id="bd267-118">將 `using` 的 <xref:System.Linq> 指示詞或匯入的命名空間加入至您的原始程式碼檔或專案。</span><span class="sxs-lookup"><span data-stu-id="bd267-118">Add a `using` directive or imported namespace for <xref:System.Linq> to your source code file or project.</span></span>  
   
-     如需詳細資訊，請參閱 [using 指示詞](../Topic/using%20Directive%20\(C%23%20Reference\).md)或 [如何：加入或移除匯入的命名空間 \(Visual Basic\)](../Topic/How%20to:%20Add%20or%20Remove%20Imported%20Namespaces%20\(Visual%20Basic\).md)。  
+     <span data-ttu-id="bd267-119">如需詳細資訊，請參閱[using 指示詞](~/docs/csharp/language-reference/keywords/using-directive.md)或[如何： 加入或移除已匯入命名空間 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="bd267-119">For more information, see [using Directive](~/docs/csharp/language-reference/keywords/using-directive.md) or [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span></span>  
   
-### 若要啟用 LINQ to DataSet 功能  
+### <a name="to-enable-linq-to-dataset-functionality"></a><span data-ttu-id="bd267-120">若要啟用 LINQ to DataSet 功能</span><span class="sxs-lookup"><span data-stu-id="bd267-120">To enable LINQ to DataSet functionality</span></span>  
   
-1.  必要時，請遵循本主題先前的步驟來加入 System.Core.dll 的參考和 System.Linq 的 `using` 指示詞或匯入命名空間。  
+1.  <span data-ttu-id="bd267-121">必要時，請遵循本主題先前的步驟來加入 System.Core.dll 的參考和 System.Linq 的 `using` 指示詞或匯入命名空間。</span><span class="sxs-lookup"><span data-stu-id="bd267-121">If necessary, follow the steps earlier in this topic to add a reference to System.Core.dll and a `using` directive or imported namespace for System.Linq.</span></span>  
   
-2.  在 C\# 或 Visual Basic 中，按一下 \[**專案**\] 功能表，然後按一下 \[**加入參考**\]。  
+2.  <span data-ttu-id="bd267-122">在 C# 或 Visual Basic 中，按一下**專案**功能表，然後再按一下**加入參考**。</span><span class="sxs-lookup"><span data-stu-id="bd267-122">In C# or Visual Basic, click the **Project** menu, and then click **Add Reference**.</span></span>  
   
-3.  在 \[**加入參考**\] 對話方塊中，按一下 \[**.NET**\] 索引標籤 \(如果它不是在最上層的話\)。  向下捲動至 \[**System.Data**\] 和 \[**System.Data.DataSetExtensions**\]，然後按一下這些項目。  按一下 \[**確定**\] 按鈕。  
+3.  <span data-ttu-id="bd267-123">在**加入參考**對話方塊中，按一下  **.NET**索引標籤上，如果不在最上方。</span><span class="sxs-lookup"><span data-stu-id="bd267-123">In the **Add Reference** dialog box, click the **.NET** tab if it is not on top.</span></span> <span data-ttu-id="bd267-124">向下捲動至**System.Data**和**System.Data.DataSetExtensions** ，然後按一下 它們。</span><span class="sxs-lookup"><span data-stu-id="bd267-124">Scroll down to **System.Data** and **System.Data.DataSetExtensions** and click on them.</span></span> <span data-ttu-id="bd267-125">按一下**確定** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="bd267-125">Click the **OK** button.</span></span>  
   
-4.  將 <xref:System.Data> 的 `using` 指示詞或匯入的命名空間加入至您的原始程式碼檔或專案。  如需詳細資訊，請參閱 [using 指示詞](../Topic/using%20Directive%20\(C%23%20Reference\).md)或 [如何：加入或移除匯入的命名空間 \(Visual Basic\)](../Topic/How%20to:%20Add%20or%20Remove%20Imported%20Namespaces%20\(Visual%20Basic\).md)。  
+4.  <span data-ttu-id="bd267-126">將 `using` 的 <xref:System.Data> 指示詞或匯入的命名空間加入至您的原始程式碼檔或專案。</span><span class="sxs-lookup"><span data-stu-id="bd267-126">Add a `using` directive or imported namespace for <xref:System.Data> to your source code file or project.</span></span> <span data-ttu-id="bd267-127">如需詳細資訊，請參閱[using 指示詞](~/docs/csharp/language-reference/keywords/using-directive.md)或[如何： 加入或移除已匯入命名空間 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="bd267-127">For more information, see [using Directive](~/docs/csharp/language-reference/keywords/using-directive.md) or [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span></span>  
   
-5.  針對 LINQ to Dataset 功能，加入 System.Data.DataSetExtensions.dll 的參考。  如果 System.Data.dll 的參考原本不存在，請加入這項參考。  
+5.  <span data-ttu-id="bd267-128">針對 LINQ to Dataset 功能，加入 System.Data.DataSetExtensions.dll 的參考。</span><span class="sxs-lookup"><span data-stu-id="bd267-128">Add a reference to System.Data.DataSetExtensions.dll for LINQ to Dataset functionality.</span></span> <span data-ttu-id="bd267-129">如果 System.Data.dll 的參考原本不存在，請加入這項參考。</span><span class="sxs-lookup"><span data-stu-id="bd267-129">Add a reference to System.Data.dll if it does not already exist.</span></span>  
   
-6.  或者，根據您連接至資料庫的方式，加入 `System.Data.Common` 或 `System.Data.SqlClient` 的 `using` 指示詞或匯入的命名空間。  
+6.  <span data-ttu-id="bd267-130">或者，根據您連接至資料庫的方式，加入 `using` 或 `System.Data.Common` 的 `System.Data.SqlClient` 指示詞或匯入的命名空間。</span><span class="sxs-lookup"><span data-stu-id="bd267-130">Optionally, add a `using` directive or imported namespace for `System.Data.Common` or `System.Data.SqlClient`, depending on how you connect to the database.</span></span>  
   
-## 請參閱  
- [使用者入門](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)   
- [Getting Started with LINQ](http://msdn.microsoft.com/zh-tw/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+## <a name="see-also"></a><span data-ttu-id="bd267-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bd267-131">See Also</span></span>  
+ [<span data-ttu-id="bd267-132">快速入門</span><span class="sxs-lookup"><span data-stu-id="bd267-132">Getting Started</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
+ [<span data-ttu-id="bd267-133">LINQ 使用者入門</span><span class="sxs-lookup"><span data-stu-id="bd267-133">Getting Started with LINQ</span></span>](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

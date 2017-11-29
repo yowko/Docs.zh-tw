@@ -1,54 +1,57 @@
 ---
-title: "參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "參考資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 參考
-本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
+# <a name="reference"></a><span data-ttu-id="9737f-102">參考資料</span><span class="sxs-lookup"><span data-stu-id="9737f-102">Reference</span></span>
+<span data-ttu-id="9737f-103">本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。</span><span class="sxs-lookup"><span data-stu-id="9737f-103">This section provides reference information for [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] developers.</span></span>  
   
- 同時建議您在 MSDN Library 中搜尋特定問題，尤其建議您參加 [LINQ 論壇](http://go.microsoft.com/fwlink/?LinkId=76488) \(英文\)，您可以在此與專家詳細討論更多複雜的主題。  此外，您還可以研讀詳述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的白皮書，其中包含 Visual Basic 和 C\# 程式碼範例。  如需詳細資訊，請參閱 [LINQ to SQL：關聯式資料的 .NET Language\-Integrated Query](http://go.microsoft.com/fwlink/?LinkId=93205)。  
+ <span data-ttu-id="9737f-104">您也是鼓勵搜尋特定問題，Microsoft 文件，以及特別是參與[LINQ 論壇](http://go.microsoft.com/fwlink/?LinkId=76488)，您可以在其中討論與專家更複雜的主題的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="9737f-104">You are also encouraged to search Microsoft Docs for specific issues, and especially to participate in the [LINQ Forum](http://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.</span></span> <span data-ttu-id="9737f-105">此外，您還可以研讀詳述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的白皮書，其中包含 Visual Basic 和 C# 程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="9737f-105">In addition, you can study a white paper detailing [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with Visual Basic and C# code examples.</span></span> <span data-ttu-id="9737f-106">如需詳細資訊，請參閱[LINQ to SQL： 關聯式資料的.net language-integrated Query](http://go.microsoft.com/fwlink/?LinkId=93205)。</span><span class="sxs-lookup"><span data-stu-id="9737f-106">For more information, see [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205).</span></span>  
   
-## 在本節中  
- [資料型別和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何在轉譯引擎中明確提供轉換，Common Language Runtime \(CLR\) 建構在 SQL 中才會具有對應運算式。  
+## <a name="in-this-section"></a><span data-ttu-id="9737f-107">本章節內容</span><span class="sxs-lookup"><span data-stu-id="9737f-107">In This Section</span></span>  
+ [<span data-ttu-id="9737f-108">資料型別和函式</span><span class="sxs-lookup"><span data-stu-id="9737f-108">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
+ <span data-ttu-id="9737f-109">描述如何 common language runtime (CLR) 建構在 SQL 中有對應的運算式才[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]明確提供的轉譯引擎的轉換。</span><span class="sxs-lookup"><span data-stu-id="9737f-109">Describes how common language runtime (CLR) constructs have corresponding expressions in SQL only where [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] has explicitly provided a conversion in the translation engine.</span></span>  
   
- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 以屬性 \(Attribute\) 為基礎的方法，用以將 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型 \(Object Model\) 對應至 SQL Server 資料庫。  
+ [<span data-ttu-id="9737f-110">屬性為基礎的對應</span><span class="sxs-lookup"><span data-stu-id="9737f-110">Attribute-Based Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ <span data-ttu-id="9737f-111">描述[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]屬性為基礎的方法，來對應[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]到 SQL Server 資料庫的物件模型。</span><span class="sxs-lookup"><span data-stu-id="9737f-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] attribute-based approach to mapping a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model to a SQL Server database.</span></span>  
   
- [LINQ to SQL 的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何從資料庫取得中繼資訊，然後產生程式碼檔。  
+ [<span data-ttu-id="9737f-112">LINQ to SQL 中的程式碼產生</span><span class="sxs-lookup"><span data-stu-id="9737f-112">Code Generation in LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ <span data-ttu-id="9737f-113">描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何從資料庫取得中繼資訊，然後產生程式碼檔。</span><span class="sxs-lookup"><span data-stu-id="9737f-113">Describes how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obtains meta information from a database and then generates code files.</span></span>  
   
- [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 外部對應方法，用以將 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型對應至 SQL Server 資料庫。  提供對應檔的 XSD 結構描述定義。  
+ [<span data-ttu-id="9737f-114">外部對應</span><span class="sxs-lookup"><span data-stu-id="9737f-114">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ <span data-ttu-id="9737f-115">描述[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]外部對應方法，來對應[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]到 SQL Server 資料庫的物件模型。</span><span class="sxs-lookup"><span data-stu-id="9737f-115">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] external-mapping approach to mapping a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model to a SQL Server database.</span></span> <span data-ttu-id="9737f-116">提供對應檔的 XSD 結構描述定義。</span><span class="sxs-lookup"><span data-stu-id="9737f-116">Provides the XSD schema definition for mapping files.</span></span>  
   
- [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
- 提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相關常見問題的答案。  
+ [<span data-ttu-id="9737f-117">常見問題集</span><span class="sxs-lookup"><span data-stu-id="9737f-117">Frequently Asked Questions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
+ <span data-ttu-id="9737f-118">提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相關常見問題的答案。</span><span class="sxs-lookup"><span data-stu-id="9737f-118">Provides answers to common questions regarding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [SQL Server Compact 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式中的 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 和 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 有何不同。  
+ [<span data-ttu-id="9737f-119">SQL Server Compact 和 LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="9737f-119">SQL Server Compact and LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
+ <span data-ttu-id="9737f-120">描述 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 應用程式中的 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 有何不同。</span><span class="sxs-lookup"><span data-stu-id="9737f-120">Describes how [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] differs from [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications.</span></span>  
   
- [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
- 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何將標準查詢運算子轉譯成 SQL 命令。  
+ [<span data-ttu-id="9737f-121">標準查詢運算子轉譯</span><span class="sxs-lookup"><span data-stu-id="9737f-121">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
+ <span data-ttu-id="9737f-122">描述如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將標準查詢運算子轉譯為 SQL 命令。</span><span class="sxs-lookup"><span data-stu-id="9737f-122">Describes how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates Standard Query Operators to SQL commands.</span></span>  
   
-## 相關章節  
- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- 提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主題的入口網站。  
+## <a name="related-sections"></a><span data-ttu-id="9737f-123">相關章節</span><span class="sxs-lookup"><span data-stu-id="9737f-123">Related Sections</span></span>  
+ [<span data-ttu-id="9737f-124">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="9737f-124">LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ <span data-ttu-id="9737f-125">提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主題的入口網站。</span><span class="sxs-lookup"><span data-stu-id="9737f-125">Provides a portal for [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] topics.</span></span>  
   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)  
- 提供 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 主題的入口網站。  
+ [<span data-ttu-id="9737f-126">LINQ (Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="9737f-126">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ <span data-ttu-id="9737f-127">提供 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 主題的入口網站。</span><span class="sxs-lookup"><span data-stu-id="9737f-127">Provides a portal for [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] topics.</span></span>  
   
- [LinqDataSource 技術概觀](http://msdn.microsoft.com/zh-tw/104cfc3f-7385-47d3-8a51-830dfa791136)  
- 描述 <xref:System.Web.UI.WebControls.LinqDataSource> 控制項如何透過 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] 資料來源控制項架構，將 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 公開給 Web 程式開發人員。
+ [<span data-ttu-id="9737f-128">LinqDataSource 技術概觀</span><span class="sxs-lookup"><span data-stu-id="9737f-128">LinqDataSource Technology Overview</span></span>](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ <span data-ttu-id="9737f-129">描述 <xref:System.Web.UI.WebControls.LinqDataSource> 控制項如何透過 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 資料來源控制項架構，將 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] 公開給 Web 程式開發人員。</span><span class="sxs-lookup"><span data-stu-id="9737f-129">Describes how the <xref:System.Web.UI.WebControls.LinqDataSource> control exposes [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] to Web developers through the [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] data-source control architecture.</span></span>

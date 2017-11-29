@@ -1,42 +1,42 @@
 ---
-title: "ListBox 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ListBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "清單方塊, 關於清單方塊"
-  - "ListBox 控制項 [Windows Form], 關於 ListBox 控制項"
+title: "ListBox 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ListBox
+helpviewer_keywords:
+- list boxes [Windows Forms], about list boxes
+- ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6e73d76a2d9b31a87bf5a693b5ffa387d7ab5cef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ListBox 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.ListBox> 控制項會顯示清單來讓使用者從中選取一或多個項目。  如果項目的總數超過可顯示的數目，則捲軸會自動加入至 <xref:System.Windows.Forms.ListBox> 控制項。  將 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 屬性設定為 `true` 時，清單方塊會以多欄方式顯示項目，這時會出現水平捲軸。  將 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 屬性設定為 `false` 時，清單方塊會以單欄方式顯示項目，這時會出現垂直捲軸。  將 <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> 設定為 `true` 時，則不管項目數為何，都會出現捲軸。  <xref:System.Windows.Forms.ListBox.SelectionMode%2A> 屬性決定一次可選取的清單項目數量。  
+# <a name="listbox-control-overview-windows-forms"></a><span data-ttu-id="200d2-102">ListBox 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="200d2-102">ListBox Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="200d2-103">Windows Form<xref:System.Windows.Forms.ListBox>控制項會顯示的清單，使用者可以從中選取一個或多個項目。</span><span class="sxs-lookup"><span data-stu-id="200d2-103">A Windows Forms <xref:System.Windows.Forms.ListBox> control displays a list from which the user can select one or more items.</span></span> <span data-ttu-id="200d2-104">如果項目總數超過可以顯示的數字，捲軸會自動加入<xref:System.Windows.Forms.ListBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="200d2-104">If the total number of items exceeds the number that can be displayed, a scroll bar is automatically added to the <xref:System.Windows.Forms.ListBox> control.</span></span> <span data-ttu-id="200d2-105">當<xref:System.Windows.Forms.ListBox.MultiColumn%2A>屬性設定為`true`，清單方塊會顯示在多個資料行中的項目，水平捲軸會顯示。</span><span class="sxs-lookup"><span data-stu-id="200d2-105">When the <xref:System.Windows.Forms.ListBox.MultiColumn%2A> property is set to `true`, the list box displays items in multiple columns and a horizontal scroll bar appears.</span></span> <span data-ttu-id="200d2-106">當<xref:System.Windows.Forms.ListBox.MultiColumn%2A>屬性設定為`false`，清單方塊會顯示單一資料行中的項目，而垂直捲軸會顯示。</span><span class="sxs-lookup"><span data-stu-id="200d2-106">When the <xref:System.Windows.Forms.ListBox.MultiColumn%2A> property is set to `false`, the list box displays items in a single column and a vertical scroll bar appears.</span></span> <span data-ttu-id="200d2-107">當<xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A>設`true`，捲軸出現不論項目數目。</span><span class="sxs-lookup"><span data-stu-id="200d2-107">When <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> is set to `true`, the scroll bar appears regardless of the number of items.</span></span> <span data-ttu-id="200d2-108"><xref:System.Windows.Forms.ListBox.SelectionMode%2A>屬性會決定可以一次選取清單項目數目。</span><span class="sxs-lookup"><span data-stu-id="200d2-108">The <xref:System.Windows.Forms.ListBox.SelectionMode%2A> property determines how many list items can be selected at a time.</span></span>  
   
-## ListBox 控制項的變更方法  
- <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 屬性會傳回整數，此整數對應至清單方塊中的第一個選取項目。  您可以在程式碼中變更 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 值，用程式設計來變更選取的項目；清單中的對應項目將反白顯示出現在 Windows Form 上。  如果未選取任何項目，<xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 值會是 –1。  如果選取清單中的第一個項目，<xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 值就會是 0。  當選取多個項目時，<xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 值會反映最先出現在清單中的選取項目。  <xref:System.Windows.Forms.ListBox.SelectedItem%2A> 屬性和 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 類似，但它會傳回項目本身，通常為字串值。  <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> 屬性會反映清單中項目的數目，而且 <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> 屬性值永遠比最大可能的 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 值多 1，因為 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 是以零起始的。  
+## <a name="ways-to-change-the-listbox-control"></a><span data-ttu-id="200d2-109">若要變更清單方塊控制項的方式</span><span class="sxs-lookup"><span data-stu-id="200d2-109">Ways to Change the ListBox Control</span></span>  
+ <span data-ttu-id="200d2-110"><xref:System.Windows.Forms.ListBox.SelectedIndex%2A>屬性會傳回整數值，對應到第一個選取的項目，清單方塊中。</span><span class="sxs-lookup"><span data-stu-id="200d2-110">The <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> property returns an integer value that corresponds to the first selected item in the list box.</span></span> <span data-ttu-id="200d2-111">您可以變更，以程式設計的方式變更選取的項目<xref:System.Windows.Forms.ListBox.SelectedIndex%2A>程式碼中的值，則為對應的項目在清單中會出現在 Windows Form 上反白顯示。</span><span class="sxs-lookup"><span data-stu-id="200d2-111">You can programmatically change the selected item by changing the <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value in code; the corresponding item in the list will appear highlighted on the Windows Form.</span></span> <span data-ttu-id="200d2-112">如果未不選取任何項目，則<xref:System.Windows.Forms.ListBox.SelectedIndex%2A>值為-1。</span><span class="sxs-lookup"><span data-stu-id="200d2-112">If no item is selected, the <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value is -1.</span></span> <span data-ttu-id="200d2-113">如果選取清單中的第一個項目，則<xref:System.Windows.Forms.ListBox.SelectedIndex%2A>值為 0。</span><span class="sxs-lookup"><span data-stu-id="200d2-113">If the first item in the list is selected, the <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value is 0.</span></span> <span data-ttu-id="200d2-114">多個選取項目時，<xref:System.Windows.Forms.ListBox.SelectedIndex%2A>值反映會出現在清單中第一個選取的項目。</span><span class="sxs-lookup"><span data-stu-id="200d2-114">When multiple items are selected, the <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value reflects the selected item that appears first in the list.</span></span> <span data-ttu-id="200d2-115"><xref:System.Windows.Forms.ListBox.SelectedItem%2A>屬性是類似於<xref:System.Windows.Forms.ListBox.SelectedIndex%2A>，但傳回的項目本身，通常是字串值。</span><span class="sxs-lookup"><span data-stu-id="200d2-115">The <xref:System.Windows.Forms.ListBox.SelectedItem%2A> property is similar to <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>, but returns the item itself, usually a string value.</span></span> <span data-ttu-id="200d2-116"><xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A>屬性會反映在清單中的項目數，而<xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A>屬性一律會是一個以上的最大可能<xref:System.Windows.Forms.ListBox.SelectedIndex%2A>值，因為<xref:System.Windows.Forms.ListBox.SelectedIndex%2A>以零為起始。</span><span class="sxs-lookup"><span data-stu-id="200d2-116">The <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> property reflects the number of items in the list, and the value of the <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> property is always one more than the largest possible <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value because <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> is zero-based.</span></span>  
   
- 若要在 <xref:System.Windows.Forms.ListBox> 控制項中加入或刪除項目，請使用 <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>、<xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>、<xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> 或 <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> 方法。  此外，您也可在設計階段使用 <xref:System.Windows.Forms.ListBox.Items%2A> 屬性，將項目加入清單中。  
+ <span data-ttu-id="200d2-117">若要加入或刪除的項目<xref:System.Windows.Forms.ListBox>控制，請使用<xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>， <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>，<xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A>或<xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="200d2-117">To add or delete items in a <xref:System.Windows.Forms.ListBox> control, use the <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> or <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> method.</span></span> <span data-ttu-id="200d2-118">或者，您可以加入項目清單使用<xref:System.Windows.Forms.ListBox.Items%2A>在設計階段屬性。</span><span class="sxs-lookup"><span data-stu-id="200d2-118">Alternatively, you can add items to the list by using the <xref:System.Windows.Forms.ListBox.Items%2A> property at design time.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.ListBox>   
- [如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)   
- [如何：排序 Windows Form 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)   
- [如何：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)   
- [ComboBox 控制項概觀](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)   
- [CheckedListBox 控制項概觀](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)   
- [用來列出選項的 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)   
- [如何：為 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)
+## <a name="see-also"></a><span data-ttu-id="200d2-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="200d2-119">See Also</span></span>  
+ <xref:System.Windows.Forms.ListBox>  
+ [<span data-ttu-id="200d2-120">操作說明：從 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目</span><span class="sxs-lookup"><span data-stu-id="200d2-120">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ [<span data-ttu-id="200d2-121">操作說明：排序 Windows Forms 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容</span><span class="sxs-lookup"><span data-stu-id="200d2-121">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [<span data-ttu-id="200d2-122">操作說明：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料</span><span class="sxs-lookup"><span data-stu-id="200d2-122">How to: Bind a Windows Forms ComboBox or ListBox Control to Data</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ [<span data-ttu-id="200d2-123">ComboBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="200d2-123">ComboBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="200d2-124">CheckedListBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="200d2-124">CheckedListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="200d2-125">用來列出選項的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="200d2-125">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [<span data-ttu-id="200d2-126">操作說明：為 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表</span><span class="sxs-lookup"><span data-stu-id="200d2-126">How to: Create a Lookup Table for a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)

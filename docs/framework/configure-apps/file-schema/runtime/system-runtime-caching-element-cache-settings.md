@@ -1,74 +1,72 @@
 ---
-title: "&lt;system.runtime.caching&gt; 項目 (快取設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<system.runtime.caching> 項目"
-  - "快取 [.NET Framework], 組態"
-  - "system.runtime.caching 項目"
+title: "&lt;system.runtime.caching&gt;項目 （快取設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <system.runtime.caching> element
+- caching [.NET Framework], configuration
+- system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 13d19560e8d8fbf9254f8baea3811f5d29832dc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.runtime.caching&gt; 項目 (快取設定)
-透過組態檔中的 `memoryCache` 項目，提供預設記憶體內 <xref:System.Runtime.Caching.ObjectCache> 實作的組態。  
+# <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="c2c14-102">&lt;system.runtime.caching&gt;項目 （快取設定）</span><span class="sxs-lookup"><span data-stu-id="c2c14-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
+<span data-ttu-id="c2c14-103">透過組態檔中的 <xref:System.Runtime.Caching.ObjectCache> 項目，提供預設記憶體內 `memoryCache` 實作的組態。</span><span class="sxs-lookup"><span data-stu-id="c2c14-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  
   
- \<configuration\>  
-\<system.runtime.caching\>  
+ <span data-ttu-id="c2c14-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c2c14-104">\<configuration></span></span>  
+<span data-ttu-id="c2c14-105">\<system.runtime.caching ></span><span class="sxs-lookup"><span data-stu-id="c2c14-105">\<system.runtime.caching></span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="c2c14-106">語法</span><span class="sxs-lookup"><span data-stu-id="c2c14-106">Syntax</span></span>  
   
-```  
+```xml  
 <system.runtime.caching >  
-   <!-- child elements -->  
+   <!-- child elements -->  
 </system.runtime.caching >  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c2c14-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c2c14-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="c2c14-108">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c2c14-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="c2c14-109">屬性</span><span class="sxs-lookup"><span data-stu-id="c2c14-109">Attributes</span></span>  
  `None`  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="c2c14-110">子元素</span><span class="sxs-lookup"><span data-stu-id="c2c14-110">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<memoryCache\>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。|  
+|<span data-ttu-id="c2c14-111">項目</span><span class="sxs-lookup"><span data-stu-id="c2c14-111">Element</span></span>|<span data-ttu-id="c2c14-112">說明</span><span class="sxs-lookup"><span data-stu-id="c2c14-112">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c2c14-113">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="c2c14-113">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="c2c14-114">定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。</span><span class="sxs-lookup"><span data-stu-id="c2c14-114">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="c2c14-115">父項目</span><span class="sxs-lookup"><span data-stu-id="c2c14-115">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|指定通用語言執行平台和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式所使用之每個組態檔中的根項目。|  
+|<span data-ttu-id="c2c14-116">項目</span><span class="sxs-lookup"><span data-stu-id="c2c14-116">Element</span></span>|<span data-ttu-id="c2c14-117">說明</span><span class="sxs-lookup"><span data-stu-id="c2c14-117">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c2c14-118">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c2c14-118">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="c2c14-119">指定通用語言執行平台和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="c2c14-119">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
   
-## 備註  
- 這個命名空間中的類別提供如同在 ASP.NET 中使用快取設備的方式，但是不需要在 `System.Web` 組件上的相依性。 如需詳細資訊，請參閱[.NET Framework 應用程式中的快取](../../../../../docs/framework/performance/caching-in-net-framework-applications.md)。  
+## <a name="remarks"></a><span data-ttu-id="c2c14-120">備註</span><span class="sxs-lookup"><span data-stu-id="c2c14-120">Remarks</span></span>  
+ <span data-ttu-id="c2c14-121">這個命名空間中的類別提供如同在 ASP.NET 中使用快取設備的方式，但是不需要在 `System.Web` 組件上的相依性。</span><span class="sxs-lookup"><span data-stu-id="c2c14-121">The classes in this namespace provide a way to use caching facilities like those in ASP.NET, but without a dependency on the `System.Web` assembly.</span></span> <span data-ttu-id="c2c14-122">如需詳細資訊，請參閱 [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="c2c14-122">For more information, see [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span></span>  
   
 > [!NOTE]
->  輸出快取功能，以及 <xref:System.Runtime.Caching> 命名空間中的類型是 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 中的新功能。  
+>  <span data-ttu-id="c2c14-123">輸出快取功能，以及 <xref:System.Runtime.Caching> 命名空間中的類型是 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]中的新功能。</span><span class="sxs-lookup"><span data-stu-id="c2c14-123">The output caching functionality and types in the <xref:System.Runtime.Caching> namespace are new in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## 範例  
- 下列範例示範如何設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取， 並示範如何設定記憶體快取之 `namedCaches` 項目的執行個體。 您可將 `name` 屬性設為 "default"，以將快取的名稱設定為預設快取項目。  
+## <a name="example"></a><span data-ttu-id="c2c14-124">範例</span><span class="sxs-lookup"><span data-stu-id="c2c14-124">Example</span></span>  
+ <span data-ttu-id="c2c14-125">下列範例示範如何設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取，</span><span class="sxs-lookup"><span data-stu-id="c2c14-125">The following example shows how to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="c2c14-126">並示範如何設定記憶體快取之 `namedCaches` 項目的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c2c14-126">The example shows how to configure an instance of the `namedCaches` entry for memory cache.</span></span> <span data-ttu-id="c2c14-127">您可將 `name` 屬性設為 "default"，以將快取的名稱設定為預設快取項目。</span><span class="sxs-lookup"><span data-stu-id="c2c14-127">The name of the cache is set to the default cache entry name by setting the `name` attribute to "default".</span></span>  
   
- `cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryPercentage` 屬性都設定為零。 將這些屬性設定為零表示預設會使用 <xref:System.Runtime.Caching.MemoryCache> 自動調整啟發學習法。 快取實作應該會每隔兩分鐘即比較目前的記憶體負載與絕對和百分比型記憶體限制。  
+ <span data-ttu-id="c2c14-128">`cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryPercentage` 屬性都設定為零。</span><span class="sxs-lookup"><span data-stu-id="c2c14-128">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="c2c14-129">將這些屬性設定為零表示預設會使用 <xref:System.Runtime.Caching.MemoryCache> 自動調整啟發學習法。</span><span class="sxs-lookup"><span data-stu-id="c2c14-129">Setting these attributes to zero means that the <xref:System.Runtime.Caching.MemoryCache> autosizing heuristics are used by default.</span></span> <span data-ttu-id="c2c14-130">快取實作應該會每隔兩分鐘即比較目前的記憶體負載與絕對和百分比型記憶體限制。</span><span class="sxs-lookup"><span data-stu-id="c2c14-130">The cache implementation should compare the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.runtime.caching>  
     <memoryCache>  
@@ -83,5 +81,5 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 請參閱  
- [\<memoryCache\> 項目 \(快取設定\)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="c2c14-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c2c14-131">See Also</span></span>  
+ [<span data-ttu-id="c2c14-132">\<memoryCache > 項目 （快取設定）</span><span class="sxs-lookup"><span data-stu-id="c2c14-132">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

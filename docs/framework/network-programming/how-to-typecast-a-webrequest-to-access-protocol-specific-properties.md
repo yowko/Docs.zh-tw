@@ -8,26 +8,23 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 83c1d85f9f69eac42a9fa5c747819a76b754499d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 471b4dc36cdb32ff7e68aa25c5a2036fec7b1293
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：轉換 WebRequest 類型以存取通訊協定特定屬性
-這個範例示範如何轉換 WebRequest 類型以存取通訊協定特定屬性。  
+# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a><span data-ttu-id="560c0-102">如何：轉換 WebRequest 類型以存取通訊協定特定屬性</span><span class="sxs-lookup"><span data-stu-id="560c0-102">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>
+<span data-ttu-id="560c0-103">這個範例示範如何轉換 WebRequest 類型以存取通訊協定特定屬性。</span><span class="sxs-lookup"><span data-stu-id="560c0-103">This example shows how to typecast a WebRequest so that you can access protocol specific properties.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="560c0-104">範例</span><span class="sxs-lookup"><span data-stu-id="560c0-104">Example</span></span>  
   
 ```csharp  
 HttpWebRequest httpreq =   
@@ -39,6 +36,5 @@ Dim httpreq As HttpWebRequest = _
    CType(WebRequest.Create("http://www.contoso.com/"), HttpWebRequest)  
 ```  
   
-## 另請參閱  
- [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-
+## <a name="see-also"></a><span data-ttu-id="560c0-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="560c0-105">See Also</span></span>  
+ [<span data-ttu-id="560c0-106">可插式通訊協定程式設計</span><span class="sxs-lookup"><span data-stu-id="560c0-106">Programming Pluggable Protocols</span></span>](../../../docs/framework/network-programming/programming-pluggable-protocols.md)

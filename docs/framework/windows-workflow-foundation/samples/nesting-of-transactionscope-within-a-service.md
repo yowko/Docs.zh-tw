@@ -1,43 +1,47 @@
 ---
-title: "巢狀處理服務中的 TransactionScope | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "巢狀處理服務中的 TransactionScope"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 475da3f9204764a2585bd7a50381db7ad72c2b1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 巢狀處理服務中的 TransactionScope
-這個範例是由兩個執行的案例所組成，可示範如何在服務中處理 <xref:System.Activities.Statements.TransactionScope> 活動執行個體。首先，交易是使用 <xref:System.Activities.Statements.TransactionScope> 活動 \(可在用戶端建立新交易\) 及 <xref:System.ServiceModel.Activities.TransactedReceiveScope> \(可在伺服器上接收交易存留期及設定其範圍\) 所起始。服務內的第一個案例會執行次要 <xref:System.Activities.Statements.TransactionScope> 活動，以示範服務內 <xref:System.Activities.Statements.TransactionScope> 活動的巢狀結構。第二個案例會示範如何在巢狀 <xref:System.Activities.Statements.TransactionScope> 活動內遵守逾時。  
+# <a name="nesting-of-transactionscope-within-a-service"></a><span data-ttu-id="67210-102">巢狀處理服務中的 TransactionScope</span><span class="sxs-lookup"><span data-stu-id="67210-102">Nesting of TransactionScope within a service</span></span>
+<span data-ttu-id="67210-103">這個範例是由兩個執行的案例所組成，可示範如何在服務中處理 <xref:System.Activities.Statements.TransactionScope> 活動執行個體。</span><span class="sxs-lookup"><span data-stu-id="67210-103">This sample consists of two scenarios that run showing how to handle <xref:System.Activities.Statements.TransactionScope> activity instances within a service.</span></span> <span data-ttu-id="67210-104">首先，交易是使用 <xref:System.Activities.Statements.TransactionScope> 活動 (可在用戶端建立新交易) 及 <xref:System.ServiceModel.Activities.TransactedReceiveScope> (可在伺服器上接收交易存留期及設定其範圍) 所起始。</span><span class="sxs-lookup"><span data-stu-id="67210-104">First the transaction is initiated using the <xref:System.Activities.Statements.TransactionScope> activity to create a new transaction on the client and <xref:System.ServiceModel.Activities.TransactedReceiveScope> to receive and scope the lifetime of the transaction on the server.</span></span> <span data-ttu-id="67210-105">服務內的第一個案例會執行次要 <xref:System.Activities.Statements.TransactionScope> 活動，以示範服務內 <xref:System.Activities.Statements.TransactionScope> 活動的巢狀結構。</span><span class="sxs-lookup"><span data-stu-id="67210-105">The first scenario within the service runs a secondary <xref:System.Activities.Statements.TransactionScope> activity to demonstrate the nesting of the <xref:System.Activities.Statements.TransactionScope> activities within the service.</span></span> <span data-ttu-id="67210-106">第二個案例會示範如何在巢狀 <xref:System.Activities.Statements.TransactionScope> 活動內遵守逾時。</span><span class="sxs-lookup"><span data-stu-id="67210-106">The second scenario shows how time-outs are respected within the nested <xref:System.Activities.Statements.TransactionScope> activities.</span></span>  
   
-## 用戶端應用程式  
- 用戶端應用程式會執行一個工作流程，此工作流程會啟動 <xref:System.Activities.Statements.TransactionScope> 活動、列印分散式交易識別碼、傳送訊息給伺服器、讓交易流動、接收回應、再次列印分散式交易識別碼，然後完成。它會針對每一個服務案例執行一次這項處理。  
+## <a name="client-application"></a><span data-ttu-id="67210-107">用戶端應用程式</span><span class="sxs-lookup"><span data-stu-id="67210-107">Client Application</span></span>  
+ <span data-ttu-id="67210-108">用戶端應用程式會執行一個工作流程，此工作流程會啟動 <xref:System.Activities.Statements.TransactionScope> 活動、列印分散式交易識別碼、傳送訊息給伺服器、讓交易流動、接收回應、再次列印分散式交易識別碼，然後完成。</span><span class="sxs-lookup"><span data-stu-id="67210-108">The client application runs a workflow that starts a <xref:System.Activities.Statements.TransactionScope> activity, prints the distributed transaction ID, sends a message to the server, flows the transaction, receives the reply, prints the distributed transaction ID again and completes.</span></span> <span data-ttu-id="67210-109">它會針對每一個服務案例執行一次這項處理。</span><span class="sxs-lookup"><span data-stu-id="67210-109">It does this once for each service scenario.</span></span>  
   
-## 伺服器應用程式  
- 伺服器專案會在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中裝載，後者會建立用來接聽用戶端訊息的端點。此工作流程會集中在 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，它會接收來自用戶端的流動交易、列印分散式交易識別碼，然後執行第二個 <xref:System.Activities.Statements.TransactionScope> 活動。在第一個案例中，已順利完成交易。在第二個案例中，<xref:System.Activities.Statements.TransactionScope> 活動的主體為五秒鐘延遲，而交易的逾時設為兩秒。當交易逾時的時候，就會中止交易。  
+## <a name="server-application"></a><span data-ttu-id="67210-110">伺服器應用程式</span><span class="sxs-lookup"><span data-stu-id="67210-110">Server Application</span></span>  
+ <span data-ttu-id="67210-111">伺服器專案會在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中裝載，後者會建立用來接聽用戶端訊息的端點。</span><span class="sxs-lookup"><span data-stu-id="67210-111">The server project is hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost>, which creates the endpoint to listen for the message from the client.</span></span> <span data-ttu-id="67210-112">此工作流程會集中在 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，它會接收來自用戶端的流動交易、列印分散式交易識別碼，然後執行第二個 <xref:System.Activities.Statements.TransactionScope> 活動。</span><span class="sxs-lookup"><span data-stu-id="67210-112">The workflow is centered on the <xref:System.ServiceModel.Activities.TransactedReceiveScope>, which receives the flowed transaction from the client, prints the distributed transaction ID and then executes a second <xref:System.Activities.Statements.TransactionScope> activity.</span></span> <span data-ttu-id="67210-113">在第一個案例中，已順利完成交易。</span><span class="sxs-lookup"><span data-stu-id="67210-113">In the first scenario, the transaction is completed successfully.</span></span> <span data-ttu-id="67210-114">在第二個案例中，<xref:System.Activities.Statements.TransactionScope> 活動的主體為五秒鐘延遲，而交易的逾時設為兩秒。</span><span class="sxs-lookup"><span data-stu-id="67210-114">In the second scenario, the body of the <xref:System.Activities.Statements.TransactionScope> activity is a five-second delay and the time-out for the transaction is set to two seconds.</span></span> <span data-ttu-id="67210-115">當交易逾時的時候，就會中止交易。</span><span class="sxs-lookup"><span data-stu-id="67210-115">When the transaction times out the transaction is aborted.</span></span>  
   
-#### 若要執行範例  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="67210-116">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="67210-116">To run the sample</span></span>  
   
-1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 TransactionServiceExample.sln 方案。  
+1.  <span data-ttu-id="67210-117">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 TransactionServiceExample.sln 方案。</span><span class="sxs-lookup"><span data-stu-id="67210-117">Open the TransactionServiceExample.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  若要建置方案，請按 CTRL\+SHIFT\+B 或選取 \[**建置**\] 功能表中的 \[**建置方案**\]。  
+2.  <span data-ttu-id="67210-118">若要建置此方案，請按 CTRL + SHIFT + B 或選取**建置方案**從**建置**功能表。</span><span class="sxs-lookup"><span data-stu-id="67210-118">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-3.  成功建置後，以滑鼠右鍵按一下方案，並選取 \[**設定啟始專案**\]。從對話方塊選取 \[**多個啟始專案**\]，並確認兩個專案的動作都是 \[**開始**\]。  
+3.  <span data-ttu-id="67210-119">已成功建置，以滑鼠右鍵按一下方案，並選取**設定啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="67210-119">Once the build has succeeded, right-click the solution and select **Set Startup Projects**.</span></span> <span data-ttu-id="67210-120">從對話方塊中，選取**多個啟始專案**，並確定這兩個專案的動作是**啟動**。</span><span class="sxs-lookup"><span data-stu-id="67210-120">From the dialog box, select **Multiple Startup Projects** and ensure the action for both projects is **Start**.</span></span>  
   
-4.  按 F5 或選取 \[**偵錯**\] 功能表中的 \[**開始偵錯**\]。或者，您可以按 CTRL\+F5 或選取 \[**偵錯**\] 功能表中的 \[**啟動但不偵錯**\]，執行但不偵錯。  
+4.  <span data-ttu-id="67210-121">按 F5 或選取**開始偵錯**從**偵錯**功能表。</span><span class="sxs-lookup"><span data-stu-id="67210-121">Press F5 or select **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="67210-122">或者，您可以按 CTRL + F5 或選取**啟動但不偵錯**從**偵錯**執行，而不偵錯 功能表。</span><span class="sxs-lookup"><span data-stu-id="67210-122">Alternatively, you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="67210-123">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="67210-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="67210-124">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="67210-124">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="67210-125">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="67210-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="67210-126">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="67210-126">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TRSComposability`

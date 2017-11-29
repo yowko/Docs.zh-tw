@@ -1,70 +1,74 @@
 ---
-title: "工作流程服務概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "工作流程服務概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f33920dbad701d803b9cb062cdd2b11aa1346df4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 工作流程服務概觀
-工作流程服務是以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為主的服務，這些服務是使用工作流程實作的。  工作流程服務是使用傳訊活動傳送及接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 訊息的工作流程。  .NET Framework 4.5 引入了許多傳訊活動，可讓您從工作流程內傳送及接收訊息。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 傳訊活動的詳細資訊，以及如何運用這些活動來實作不同訊息交換模式的詳細資訊，請參閱[訊息活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  
+# <a name="workflow-services-overview"></a><span data-ttu-id="304e5-102">工作流程服務概觀</span><span class="sxs-lookup"><span data-stu-id="304e5-102">Workflow Services Overview</span></span>
+<span data-ttu-id="304e5-103">工作流程服務是以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為主的服務，這些服務是使用工作流程實作的。</span><span class="sxs-lookup"><span data-stu-id="304e5-103">Workflow services are [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-based services that are implemented using workflows.</span></span> <span data-ttu-id="304e5-104">工作流程服務是使用傳訊活動傳送及接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 訊息的工作流程。</span><span class="sxs-lookup"><span data-stu-id="304e5-104">Workflow services are workflows that use the messaging activities to send and receive [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] messages.</span></span> <span data-ttu-id="304e5-105">.NET Framework 4.5 引入了許多傳訊活動，可讓您從工作流程內傳送及接收訊息。</span><span class="sxs-lookup"><span data-stu-id="304e5-105">.NET Framework 4.5 introduces a number of messaging activities that allow you send and receive messages from within a workflow.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="304e5-106">傳訊活動，以及如何使用它們來實作不同訊息交換模式，請參閱[傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。</span><span class="sxs-lookup"><span data-stu-id="304e5-106"> messaging activities and how they can be used to implement different message exchange patterns, see [Messaging Activities](../../../../docs/framework/wcf/feature-details/messaging-activities.md).</span></span>  
   
-## 使用工作流程服務的好處  
- 當應用程式的散發範圍越來越廣時，就必須由個別服務負責呼叫其他服務來卸載部分工作。  實作這些呼叫做為非同步作業會為程式碼增添少許複雜性。  錯誤處理會增加額外的複雜性，因為它需要處理例外狀況及提供詳細的追蹤資訊。  部分服務經常需要長時間執行，等待輸入時可能會佔用重要的系統資源。  由於這些問題，分散式應用程式通常非常複雜，而且難以撰寫及維護。  工作流程是表達非同步工作 \(特別是呼叫外部服務\) 協調性的自然方式。  工作流程也能有效地表示長期執行的商務程序。  這些特質使得工作流程成為在分散式環境中建置服務的重要資產。  
+## <a name="benefits-of-using-workflow-services"></a><span data-ttu-id="304e5-107">使用工作流程服務的好處</span><span class="sxs-lookup"><span data-stu-id="304e5-107">Benefits of Using Workflow Services</span></span>  
+ <span data-ttu-id="304e5-108">當應用程式的散發範圍越來越廣時，就必須由個別服務負責呼叫其他服務來卸載部分工作。</span><span class="sxs-lookup"><span data-stu-id="304e5-108">As applications become increasingly distributed, individual services become responsible for calling other services to offload some of the work.</span></span> <span data-ttu-id="304e5-109">實作這些呼叫做為非同步作業會為程式碼增添少許複雜性。</span><span class="sxs-lookup"><span data-stu-id="304e5-109">Implementing these calls as asynchronous operations introduces some complexity into the code.</span></span> <span data-ttu-id="304e5-110">錯誤處理會增加額外的複雜性，因為它需要處理例外狀況及提供詳細的追蹤資訊。</span><span class="sxs-lookup"><span data-stu-id="304e5-110">Error handling adds additional complexity in the form of handling exceptions and providing detailed tracking information.</span></span> <span data-ttu-id="304e5-111">部分服務經常需要長時間執行，等待輸入時可能會佔用重要的系統資源。</span><span class="sxs-lookup"><span data-stu-id="304e5-111">Some services are often long running and can take up valuable system resources while waiting for input.</span></span> <span data-ttu-id="304e5-112">由於這些問題，分散式應用程式通常非常複雜，而且難以撰寫及維護。</span><span class="sxs-lookup"><span data-stu-id="304e5-112">Because of these issues, distributed applications are often very complex and difficult to write and maintain.</span></span> <span data-ttu-id="304e5-113">工作流程是表達非同步工作 (特別是呼叫外部服務) 協調性的自然方式。</span><span class="sxs-lookup"><span data-stu-id="304e5-113">Workflows are a natural way to express the coordination of asynchronous work, especially calls to external services.</span></span> <span data-ttu-id="304e5-114">工作流程也能有效地表示長期執行的商務程序。</span><span class="sxs-lookup"><span data-stu-id="304e5-114">Workflows are also effective at representing long-running business processes.</span></span> <span data-ttu-id="304e5-115">這些特質使得工作流程成為在分散式環境中建置服務的重要資產。</span><span class="sxs-lookup"><span data-stu-id="304e5-115">It is these qualities that make the workflow a great asset to building services in a distributed environment.</span></span>  
   
-## 實作工作流程服務  
- 實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，您會定義許多合約，這些合約會描述服務及服務傳送與接收的資料。  資料會以資料合約及訊息合約表示。  WCF 和工作流程服務都使用資料合約和訊息合約定義做為部分服務描述。  服務本身會公開中繼資料 \(以 WSDL 的形式\) 來描述服務的作業。  在 WCF 中，服務合約和作業合約會定義所支援的服務及作業。  不過，在工作流程服務中，這些合約是商務程序的一部分。  它們會藉由名為合約推斷的程序在中繼資料中公布。  使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 裝載工作流程服務時，會檢查該工作流程定義，並根據在工作流程中找到的傳訊活動集產生合約。  特別是，下列活動和屬性會用來產生合約：  
+## <a name="implementing-a-workflow-service"></a><span data-ttu-id="304e5-116">實作工作流程服務</span><span class="sxs-lookup"><span data-stu-id="304e5-116">Implementing a Workflow Service</span></span>  
+ <span data-ttu-id="304e5-117">實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，您會定義許多合約，這些合約會描述服務及服務傳送與接收的資料。</span><span class="sxs-lookup"><span data-stu-id="304e5-117">When implementing a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, you define a number of contracts that describe the service and the data that it sends and receives.</span></span> <span data-ttu-id="304e5-118">資料會以資料合約及訊息合約表示。</span><span class="sxs-lookup"><span data-stu-id="304e5-118">The data is represented as data contracts and message contracts.</span></span> <span data-ttu-id="304e5-119">WCF 和工作流程服務都使用資料合約和訊息合約定義做為部分服務描述。</span><span class="sxs-lookup"><span data-stu-id="304e5-119">Both WCF and workflow services use data contract and message contract definitions as part of service descriptions.</span></span> <span data-ttu-id="304e5-120">服務本身會公開中繼資料 (以 WSDL 的形式) 來描述服務的作業。</span><span class="sxs-lookup"><span data-stu-id="304e5-120">The service itself exposes metadata (in the form of WSDL) to describe the operations of the service.</span></span> <span data-ttu-id="304e5-121">在 WCF 中，服務合約和作業合約會定義所支援的服務及作業。</span><span class="sxs-lookup"><span data-stu-id="304e5-121">In WCF, service contracts and operation contracts define the service and the operations it supports.</span></span> <span data-ttu-id="304e5-122">不過，在工作流程服務中，這些合約是商務程序的一部分。</span><span class="sxs-lookup"><span data-stu-id="304e5-122">However in a workflow service, these contracts are part of the business process itself.</span></span> <span data-ttu-id="304e5-123">它們會藉由名為合約推斷的程序在中繼資料中公布。</span><span class="sxs-lookup"><span data-stu-id="304e5-123">They are exposed in metadata by a process called contract inference.</span></span> <span data-ttu-id="304e5-124">使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 裝載工作流程服務時，會檢查該工作流程定義，並根據在工作流程中找到的傳訊活動集產生合約。</span><span class="sxs-lookup"><span data-stu-id="304e5-124">When a workflow service is hosted using <xref:System.ServiceModel.Activities.WorkflowServiceHost>, the workflow definition is examined and a contract is generated based on the set of messaging activities found in the workflow.</span></span> <span data-ttu-id="304e5-125">特別是，下列活動和屬性會用來產生合約：</span><span class="sxs-lookup"><span data-stu-id="304e5-125">In particular, the following activities and properties are used to generate the contract:</span></span>  
   
- <xref:System.ServiceModel.Activities.Receive> 活動  
+ <span data-ttu-id="304e5-126"><xref:System.ServiceModel.Activities.Receive> 活動</span><span class="sxs-lookup"><span data-stu-id="304e5-126"><xref:System.ServiceModel.Activities.Receive> Activity</span></span>  
   
 -   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
--   <xref:System.ServiceModel.Activities.Receive.OperationContractName%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.Receive.OperationContractName%2A>  --> `System.ServiceModel.Activities.Receive.OperationContractName`
   
 -   <xref:System.ServiceModel.Activities.Receive.Action%2A>  
   
--   <xref:System.ServiceModel.Activities.Receive.ValueType%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.Receive.ValueType%2A>  --> `System.ServiceModel.Activities.Receive.ValueType`
   
- <xref:System.ServiceModel.Activities.SendReply> 活動  
+ <span data-ttu-id="304e5-127"><xref:System.ServiceModel.Activities.SendReply> 活動</span><span class="sxs-lookup"><span data-stu-id="304e5-127"><xref:System.ServiceModel.Activities.SendReply> Activity</span></span>  
   
 -   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
   
--   <xref:System.ServiceModel.Activities.SendReply.ValueType%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.SendReply.ValueType%2A> -->
+`xref:System.ServiceModel.Activities.SendReply.ValueType`
   
- <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動  
+ <span data-ttu-id="304e5-128"><xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動</span><span class="sxs-lookup"><span data-stu-id="304e5-128"><xref:System.ServiceModel.Activities.TransactedReceiveScope> Activity</span></span>  
   
- 合約推斷的最終結果是與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務和作業合約使用相同資料結構的服務描述。  接著，這項資訊會用來公開工作流程服務的 WSDL。  
+ <span data-ttu-id="304e5-129">合約推斷的最終結果是與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務和作業合約使用相同資料結構的服務描述。</span><span class="sxs-lookup"><span data-stu-id="304e5-129">The end result of contract inference is a description of the service using the same data structures as [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services and operation contracts.</span></span> <span data-ttu-id="304e5-130">接著，這項資訊會用來公開工作流程服務的 WSDL。</span><span class="sxs-lookup"><span data-stu-id="304e5-130">This information is then used to expose WSDL for the workflow service.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 不允許您使用現有的合約定義而不使用其他工具撰寫工作流程服務。  工作流程服務合約是由上述合約推斷程序所建立的，  但可以完全支援訊息合約和資料合約。  
+>  [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]<span data-ttu-id="304e5-131"> 不允許您使用現有的合約定義而不使用其他工具撰寫工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="304e5-131"> does not allow you to write workflow services using an existing contract definition without some additional tooling support.</span></span> <span data-ttu-id="304e5-132">工作流程服務合約是由上述合約推斷程序所建立的，</span><span class="sxs-lookup"><span data-stu-id="304e5-132">Workflow service contracts are created by the contract inference process discussed previously.</span></span> <span data-ttu-id="304e5-133">但可以完全支援訊息合約和資料合約。</span><span class="sxs-lookup"><span data-stu-id="304e5-133">Message contracts and data contracts are fully supported, however.</span></span>  
   
-## 工作流程服務與以 MSMQ 為主的繫結  
- WCF 定義兩種以 MSMQ 為主的繫結：<xref:System.ServiceModel.NetMsmqBinding> 與 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。  由於工作流程服務的長期執行特性，以 MSMQ 為主的繫結通常會與此類服務搭配使用。  以 MSMQ 為主的繫結具有 `ValidityDuration` 屬性，該屬性會指定可以假設 MSMQ 訊息有效的時間長短。  由於工作流程服務的長期執行特性，因此 MSMQ 訊息的有效性持續時間可能會在工作流程服務能夠處理該訊息之前結束。  因此，將 MSMQ 繫結的有效性持續時間設定為適當的值相當重要。  您必須根據工作流程和工作流程處理訊息的方式選擇這個值。  例如，如果您的工作流程含有 <xref:System.ServiceModel.Activities.Receive> 活動加上需要執行 10 分鐘的自訂活動，接著是另一個 <xref:System.ServiceModel.Activities.Receive> 活動，正確的 `ValidityDuration` 值便會大於 10 分鐘。  
+## <a name="workflow-services-and-msmq-based-bindings"></a><span data-ttu-id="304e5-134">工作流程服務與以 MSMQ 為主的繫結</span><span class="sxs-lookup"><span data-stu-id="304e5-134">Workflow Services and MSMQ-Based Bindings</span></span>  
+ <span data-ttu-id="304e5-135">WCF 定義兩種以 MSMQ 為主的繫結：<xref:System.ServiceModel.NetMsmqBinding> 與 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。</span><span class="sxs-lookup"><span data-stu-id="304e5-135">WCF defines two MSMQ-based bindings <xref:System.ServiceModel.NetMsmqBinding> and <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.</span></span>  <span data-ttu-id="304e5-136">由於工作流程服務的長期執行特性，以 MSMQ 為主的繫結通常會與此類服務搭配使用。</span><span class="sxs-lookup"><span data-stu-id="304e5-136">MSMQ-based bindings are often used with workflow services because of the long-running nature of such services.</span></span> <span data-ttu-id="304e5-137">以 MSMQ 為主的繫結具有 `ValidityDuration` 屬性，該屬性會指定可以假設 MSMQ 訊息有效的時間長短。</span><span class="sxs-lookup"><span data-stu-id="304e5-137">The MSMQ-based bindings have a `ValidityDuration` property that specifies how long MSMQ messages can assume to be valid.</span></span> <span data-ttu-id="304e5-138">由於工作流程服務的長期執行特性，因此 MSMQ 訊息的有效性持續時間可能會在工作流程服務能夠處理該訊息之前結束。</span><span class="sxs-lookup"><span data-stu-id="304e5-138">Because of the long running nature of workflow services it is possible that the validity duration of a MSMQ message may elapse before the workflow service can process it.</span></span> <span data-ttu-id="304e5-139">因此，將 MSMQ 繫結的有效性持續時間設定為適當的值相當重要。</span><span class="sxs-lookup"><span data-stu-id="304e5-139">It is therefore very important to set the validity duration of a MSMQ binding to an appropriate value.</span></span> <span data-ttu-id="304e5-140">您必須根據工作流程和工作流程處理訊息的方式選擇這個值。</span><span class="sxs-lookup"><span data-stu-id="304e5-140">This value must be chosen based on the workflow and how it processes messages.</span></span> <span data-ttu-id="304e5-141">例如，如果您的工作流程含有 <xref:System.ServiceModel.Activities.Receive> 活動加上需要執行 10 分鐘的自訂活動，接著是另一個 <xref:System.ServiceModel.Activities.Receive> 活動，正確的 `ValidityDuration` 值便會大於 10 分鐘。</span><span class="sxs-lookup"><span data-stu-id="304e5-141">For example if you have a workflow with a <xref:System.ServiceModel.Activities.Receive> activity followed by a custom activity that takes 10 minutes to run, followed by another <xref:System.ServiceModel.Activities.Receive> activity, the correct value for `ValidityDuration` would be greater than 10 minutes.</span></span>  
   
-## 裝載工作流程服務  
- 如同 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，工作流程服務必須經過裝載。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會使用 <xref:System.ServiceModel.ServiceHost> 類別來裝載服務，而工作流程服務則會使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 來裝載服務。  如同 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，工作流程服務可透過許多不同的方式進行裝載，例如：  
+## <a name="hosting-a-workflow-service"></a><span data-ttu-id="304e5-142">裝載工作流程服務</span><span class="sxs-lookup"><span data-stu-id="304e5-142">Hosting a Workflow Service</span></span>  
+ <span data-ttu-id="304e5-143">如同 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，工作流程服務必須經過裝載。</span><span class="sxs-lookup"><span data-stu-id="304e5-143">Like [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services, workflow services must be hosted.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="304e5-144"> 服務會使用 <xref:System.ServiceModel.ServiceHost> 類別來裝載服務，而工作流程服務則會使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 來裝載服務。</span><span class="sxs-lookup"><span data-stu-id="304e5-144"> services use the <xref:System.ServiceModel.ServiceHost> class to host services and workflow services use <xref:System.ServiceModel.Activities.WorkflowServiceHost> to host services.</span></span> <span data-ttu-id="304e5-145">如同 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，工作流程服務可透過許多不同的方式進行裝載，例如：</span><span class="sxs-lookup"><span data-stu-id="304e5-145">Like [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services, workflow services can be hosted in a variety of ways, for example:</span></span>  
   
--   在 Managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式中。  
+-   <span data-ttu-id="304e5-146">在 Managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式中。</span><span class="sxs-lookup"><span data-stu-id="304e5-146">In a managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] application.</span></span>  
   
--   在網際網路資訊服務 \(IIS\) 中。  
+-   <span data-ttu-id="304e5-147">在網際網路資訊服務 (IIS) 中。</span><span class="sxs-lookup"><span data-stu-id="304e5-147">In Internet Information Services (IIS).</span></span>  
   
--   在 Windows 處理序啟用服務 \(WAS\) 中。  
+-   <span data-ttu-id="304e5-148">在 Windows 處理序啟用服務 (WAS) 中。</span><span class="sxs-lookup"><span data-stu-id="304e5-148">In Windows Process Activation Service (WAS).</span></span>  
   
--   在 Managed Windows 服務中。  
+-   <span data-ttu-id="304e5-149">在 Managed Windows 服務中。</span><span class="sxs-lookup"><span data-stu-id="304e5-149">In a managed Windows Service.</span></span>  
   
- 裝載於 Managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式或 Managed Windows 服務中的工作流程服務會建立 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別的執行個體，並將該執行個體傳遞至 <xref:System.ServiceModel.Activities.WorkflowService> 的執行個體 \(此執行個體包含 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 屬性中的工作流程定義\)。  包含傳訊活動的工作流程定義會公開為工作流程服務。  
+ <span data-ttu-id="304e5-150">裝載於 Managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式或 Managed Windows 服務中的工作流程服務會建立 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別的執行個體，並將該執行個體傳遞至 <xref:System.ServiceModel.Activities.WorkflowService> 的執行個體 (此執行個體包含 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 屬性中的工作流程定義)。</span><span class="sxs-lookup"><span data-stu-id="304e5-150">Workflow services hosted in a managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] application or a managed Windows service create an instance of the <xref:System.ServiceModel.Activities.WorkflowServiceHost> class and pass it an instance of the <xref:System.ServiceModel.Activities.WorkflowService> that contains the workflow definition within the <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> property.</span></span> <span data-ttu-id="304e5-151">包含傳訊活動的工作流程定義會公開為工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="304e5-151">A workflow definition that contains messaging activities is exposed as a workflow service.</span></span>  
   
- 若要將工作流程服務裝載於 IIS 或 WAS 中，請將包含工作流程服務定義的 .xamlx 檔案置入虛擬目錄中。  系統會自動建立預設的端點 \(使用 <xref:System.ServiceModel.BasicHttpBinding>\) [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)。  您也可以將 Web.config 檔案置於虛擬目錄中，指定您自己的端點。  如果工作流程定義位於組件中，您可以將 .svc 檔案置於虛擬目錄內，並將工作流程組件置於 App\_Code 目錄中。  .svc 檔案必須指定服務主機處理站，以及實作工作流程服務的類別。  下列範例示範如何指定服務主機處理站，以及指定實作工作流程服務的類別。  
+ <span data-ttu-id="304e5-152">若要將工作流程服務裝載於 IIS 或 WAS 中，請將包含工作流程服務定義的 .xamlx 檔案置入虛擬目錄中。</span><span class="sxs-lookup"><span data-stu-id="304e5-152">To host a workflow service in IIS or WAS, place the .xamlx file that contains the workflow service definition into a virtual directory.</span></span> <span data-ttu-id="304e5-153">預設端點 (使用<xref:System.ServiceModel.BasicHttpBinding>) 會自動建立[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)。</span><span class="sxs-lookup"><span data-stu-id="304e5-153">A default endpoint (using <xref:System.ServiceModel.BasicHttpBinding>) is created automatically [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).</span></span> <span data-ttu-id="304e5-154">您也可以將 Web.config 檔案置於虛擬目錄中，指定您自己的端點。</span><span class="sxs-lookup"><span data-stu-id="304e5-154">You can also place a Web.config file in the virtual directory to specify your own endpoints.</span></span> <span data-ttu-id="304e5-155">如果工作流程定義位於組件中，您可以將 .svc 檔案置於虛擬目錄內，並將工作流程組件置於 App_Code 目錄中。</span><span class="sxs-lookup"><span data-stu-id="304e5-155">If your workflow definition is in an assembly you can place a .svc file in the virtual directory and the workflow assembly in the App_Code directory.</span></span> <span data-ttu-id="304e5-156">.svc 檔案必須指定服務主機處理站，以及實作工作流程服務的類別。</span><span class="sxs-lookup"><span data-stu-id="304e5-156">The .svc file must specify the service host factory and the class that implements the workflow service.</span></span> <span data-ttu-id="304e5-157">下列範例示範如何指定服務主機處理站，以及指定實作工作流程服務的類別。</span><span class="sxs-lookup"><span data-stu-id="304e5-157">The following example shows how to specify the service host factory and specify the class that implements the workflow service.</span></span>  
   
 ```  
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory  

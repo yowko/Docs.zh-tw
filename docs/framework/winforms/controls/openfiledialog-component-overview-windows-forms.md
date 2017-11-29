@@ -1,38 +1,38 @@
 ---
-title: "OpenFileDialog 元件概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OpenFileDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "開啟檔案對話方塊, 在 Windows Form 中顯示"
-  - "OpenFileDialog 元件, 關於 OpenFileDialog"
+title: "OpenFileDialog 元件概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OpenFileDialog
+helpviewer_keywords:
+- OpenFileDialog component [Windows Forms], about OpenFileDialog
+- Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 35c947e3efbb9b2e5df775f83ffc6068e49c84e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# OpenFileDialog 元件概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的對話方塊。  它與 Windows 作業系統所公開 \(Expose\) 的 \[**開啟檔案**\] 對話方塊是相同的對話方塊，  繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
+# <a name="openfiledialog-component-overview-windows-forms"></a><span data-ttu-id="52ce6-102">OpenFileDialog 元件概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="52ce6-102">OpenFileDialog Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="52ce6-103">Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的對話方塊。</span><span class="sxs-lookup"><span data-stu-id="52ce6-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="52ce6-104">它會是相同**開啟檔案**Windows 作業系統所公開的對話方塊。</span><span class="sxs-lookup"><span data-stu-id="52ce6-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="52ce6-105">它繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。</span><span class="sxs-lookup"><span data-stu-id="52ce6-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  
   
-## 使用這個元件  
- 在您的 Windows 應用程式中使用這個元件來做為檔案選擇的簡單方案，您就不用設定自己的對話方塊。  利用標準的 Windows 對話方塊做為基礎，您可以建立使用者可立即熟悉基本功能的應用程式。  但是請注意，當使用 <xref:System.Windows.Forms.OpenFileDialog> 元件時，您必須撰寫自己的檔案開啟邏輯。  
+## <a name="using-this-component"></a><span data-ttu-id="52ce6-106">使用此元件</span><span class="sxs-lookup"><span data-stu-id="52ce6-106">Using this Component</span></span>  
+ <span data-ttu-id="52ce6-107">作為此元件在 Windows 架構應用程式內的簡單解決方案就不需設定您自己的對話方塊中的檔案選取。</span><span class="sxs-lookup"><span data-stu-id="52ce6-107">Use this component within your Windows-based application as a simple solution for file selection in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="52ce6-108">藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。</span><span class="sxs-lookup"><span data-stu-id="52ce6-108">By relying on standard Windows dialog boxes, you create applications whose basic functionality is immediately familiar to users.</span></span> <span data-ttu-id="52ce6-109">不過，要注意，當使用<xref:System.Windows.Forms.OpenFileDialog>元件，您必須撰寫您自己的檔案開啟邏輯。</span><span class="sxs-lookup"><span data-stu-id="52ce6-109">Be aware, however, that when using the <xref:System.Windows.Forms.OpenFileDialog> component, you must write your own file-opening logic.</span></span>  
   
- 您可以使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法在執行階段顯示對話方塊，  也可以使用 <xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A> 屬性讓使用者複選要開啟的檔案。  此外，您還可以使用 <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> 屬性，決定對話方塊中是否要出現唯讀核取方塊。  <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> 屬性表示唯讀核取方塊是否已選取。  最後，<xref:System.Windows.Forms.FileDialog.Filter%2A> 屬性會設定目前檔名的篩選字串，用來決定對話方塊中出現在 \[檔案類型\] 方塊中的選擇。  
+ <span data-ttu-id="52ce6-110">使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法，以在執行階段顯示對話方塊。</span><span class="sxs-lookup"><span data-stu-id="52ce6-110">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog at run time.</span></span> <span data-ttu-id="52ce6-111">您可以讓使用者多重選取的檔案，以使用開啟<xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="52ce6-111">You can enable users to multi-select files to be opened with the <xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A> property.</span></span> <span data-ttu-id="52ce6-112">此外，您可以使用<xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A>屬性來判斷是否唯讀核取方塊會出現在對話方塊中。</span><span class="sxs-lookup"><span data-stu-id="52ce6-112">Additionally, you can use the <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> property to determine if a read-only check box appears in the dialog box.</span></span> <span data-ttu-id="52ce6-113"><xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A>屬性會指出是否選取唯讀核取方塊。</span><span class="sxs-lookup"><span data-stu-id="52ce6-113">The <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> property indicates whether the read-only check box is selected.</span></span> <span data-ttu-id="52ce6-114">最後，<xref:System.Windows.Forms.FileDialog.Filter%2A>屬性會設定目前檔案名稱篩選字串，以決定出現在 [檔案類型] 方塊中，在對話方塊中的選擇。</span><span class="sxs-lookup"><span data-stu-id="52ce6-114">Finally, the <xref:System.Windows.Forms.FileDialog.Filter%2A> property sets the current file name filter string, which determines the choices that appear in the "Files of type" box in the dialog box.</span></span>  
   
- 當 <xref:System.Windows.Forms.OpenFileDialog> 元件加入表單時，它會出現在 \[Windows Form 設計工具\] 下方的匣中。  
+ <span data-ttu-id="52ce6-115">當加入至表單，<xref:System.Windows.Forms.OpenFileDialog>元件會出現在 Windows Form 設計工具底部的紙匣。</span><span class="sxs-lookup"><span data-stu-id="52ce6-115">When it is added to a form, the <xref:System.Windows.Forms.OpenFileDialog> component appears in the tray at the bottom of the Windows Forms Designer.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.OpenFileDialog>   
- [OpenFileDialog 元件](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="52ce6-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52ce6-116">See Also</span></span>  
+ <xref:System.Windows.Forms.OpenFileDialog>  
+ [<span data-ttu-id="52ce6-117">OpenFileDialog 元件</span><span class="sxs-lookup"><span data-stu-id="52ce6-117">OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)

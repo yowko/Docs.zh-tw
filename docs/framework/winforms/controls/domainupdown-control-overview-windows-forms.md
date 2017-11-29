@@ -1,41 +1,41 @@
 ---
-title: "DomainUpDown 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DomainUpDown"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DomainUpDown 控制項 [Windows Form], 關於 DomainUpDown 控制項"
-  - "微調按鈕控制項, 關於微調按鈕"
+title: "DomainUpDown 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DomainUpDown
+helpviewer_keywords:
+- spin button control [Windows Forms], about spin button
+- DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a0692677b8ef596bb31b1869480603573a9ec98d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DomainUpDown 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.DomainUpDown> 控制項基本上是文字方塊和一對可在清單中上下移動的按鈕之組合。  這個控制項會顯示和設定選擇清單中的文字字串。  使用者可以按一下向上和向下按鈕在清單中移動、按向上鍵和向下鍵或輸入與清單項目相符的字串來選取字串。  這個控制項的可能用法之一，是從依字母順序排序的名稱清單中選取項目  
+# <a name="domainupdown-control-overview-windows-forms"></a><span data-ttu-id="fe994-102">DomainUpDown 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="fe994-102">DomainUpDown Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="fe994-103">Windows Form<xref:System.Windows.Forms.DomainUpDown>控制項是基本上文字方塊中的組合和一組的清單中向上或向下移動的按鈕。</span><span class="sxs-lookup"><span data-stu-id="fe994-103">The Windows Forms <xref:System.Windows.Forms.DomainUpDown> control is essentially a combination of a text box and a pair of buttons for moving up or down through a list.</span></span> <span data-ttu-id="fe994-104">控制項顯示，並設定選項的清單中的文字字串。</span><span class="sxs-lookup"><span data-stu-id="fe994-104">The control displays and sets a text string from a list of choices.</span></span> <span data-ttu-id="fe994-105">按一下向上和向下按鈕移動清單、 按向上鍵和向下鍵，或輸入清單中的項目相符的字串，使用者可以選取的字串。</span><span class="sxs-lookup"><span data-stu-id="fe994-105">The user can select the string by clicking up and down buttons to move through a list, by pressing the UP and DOWN ARROW keys, or by typing a string that matches an item in the list.</span></span> <span data-ttu-id="fe994-106">這個控制項的其中一個可能的使用是從依字母順序排序的名稱清單中選取項目。</span><span class="sxs-lookup"><span data-stu-id="fe994-106">One possible use for this control is for selecting items from an alphabetically sorted list of names.</span></span>  
   
 > [!NOTE]
->  若要排序清單，請將 <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> 屬性設定為 `true`。  
+>  <span data-ttu-id="fe994-107">若要排序清單，請設定<xref:System.Windows.Forms.DomainUpDown.Sorted%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="fe994-107">To sort the list, set the <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> property to `true`.</span></span>  
   
- 這個控制項的功能與清單方塊或下拉式方塊非常類似，但它所佔的空間極少。  
+ <span data-ttu-id="fe994-108">這個控制項的功能清單方塊或下拉式方塊中，非常類似，但是它會佔用很少的空間。</span><span class="sxs-lookup"><span data-stu-id="fe994-108">The function of this control is very similar to the list box or combo box, but it takes up very little space.</span></span>  
   
-## 主要屬性  
- 控制項的主要屬性有：<xref:System.Windows.Forms.DomainUpDown.Items%2A>、<xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> 和 <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>。  <xref:System.Windows.Forms.DomainUpDown.Items%2A> 屬性包含於控制項中顯示其文字值的物件清單。  如果將 <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> 設定為 `false`，控制項會自動完成使用者輸入的文字，並將它與清單中的值比對。  如果將 <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> 設定為 `true`，捲至最後一個項目之後將會回到清單的第一個項目，反之亦然。  此控制項的主要方法是：<xref:System.Windows.Forms.DomainUpDown.UpButton%2A> 和 <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>。  
+## <a name="key-properties"></a><span data-ttu-id="fe994-109">索引鍵屬性</span><span class="sxs-lookup"><span data-stu-id="fe994-109">Key Properties</span></span>  
+ <span data-ttu-id="fe994-110">控制項的索引鍵屬性是<xref:System.Windows.Forms.DomainUpDown.Items%2A>， <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>，和<xref:System.Windows.Forms.DomainUpDown.Wrap%2A>。</span><span class="sxs-lookup"><span data-stu-id="fe994-110">The key properties of the control are <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, and <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.</span></span> <span data-ttu-id="fe994-111"><xref:System.Windows.Forms.DomainUpDown.Items%2A>屬性包含的控制項中顯示其文字值的物件清單。</span><span class="sxs-lookup"><span data-stu-id="fe994-111">The <xref:System.Windows.Forms.DomainUpDown.Items%2A> property contains the list of objects whose text values are displayed in the control.</span></span> <span data-ttu-id="fe994-112">如果<xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>設`false`，控制項時自動完成文字使用者輸入，然後進行比對清單中的值。</span><span class="sxs-lookup"><span data-stu-id="fe994-112">If <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> is set to `false`, the control automatically completes text that the user types and matches it to a value in the list.</span></span> <span data-ttu-id="fe994-113">如果<xref:System.Windows.Forms.DomainUpDown.Wrap%2A>設`true`，過去的最後一個項目捲動會帶您前往第一個項目在清單中，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="fe994-113">If <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> is set to `true`, scrolling past the last item will take you to the first item in the list and vice versa.</span></span> <span data-ttu-id="fe994-114">控制項的主要方法是<xref:System.Windows.Forms.DomainUpDown.UpButton%2A>和<xref:System.Windows.Forms.DomainUpDown.DownButton%2A>。</span><span class="sxs-lookup"><span data-stu-id="fe994-114">The key methods of the control are <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> and <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.</span></span>  
   
- 這個控制項只會顯示文字字串。  如果您想要使用顯示數值的控制項，請使用 <xref:System.Windows.Forms.NumericUpDown> 控制項。  如需詳細資訊，請參閱 [NumericUpDown 控制項概觀](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)。  
+ <span data-ttu-id="fe994-115">此控制項顯示只是文字字串。</span><span class="sxs-lookup"><span data-stu-id="fe994-115">This control displays only text strings.</span></span> <span data-ttu-id="fe994-116">如果您想要顯示數值的控制項，使用<xref:System.Windows.Forms.NumericUpDown>控制項。</span><span class="sxs-lookup"><span data-stu-id="fe994-116">If you want a control that displays numeric values, use the <xref:System.Windows.Forms.NumericUpDown> control.</span></span> <span data-ttu-id="fe994-117">如需詳細資訊，請參閱[NumericUpDown 控制項概觀](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="fe994-117">For more information, see [NumericUpDown Control Overview](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.DomainUpDown>   
- [DomainUpDown 控制項](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="fe994-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fe994-118">See Also</span></span>  
+ <xref:System.Windows.Forms.DomainUpDown>  
+ [<span data-ttu-id="fe994-119">DomainUpDown 控制項</span><span class="sxs-lookup"><span data-stu-id="fe994-119">DomainUpDown Control</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)

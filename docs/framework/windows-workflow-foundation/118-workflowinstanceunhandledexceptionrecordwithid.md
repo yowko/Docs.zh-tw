@@ -1,50 +1,54 @@
 ---
-title: "118 - WorkflowInstanceUnhandledExceptionRecordWithId | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 118 - WorkflowInstanceUnhandledExceptionRecordWithId
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a1c20182b5f53a188e95a31124e30f04418eb909
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 118 - WorkflowInstanceUnhandledExceptionRecordWithId
-## 屬性  
+# <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a><span data-ttu-id="7f9fe-102">118 - WorkflowInstanceUnhandledExceptionRecordWithId</span><span class="sxs-lookup"><span data-stu-id="7f9fe-102">118 - WorkflowInstanceUnhandledExceptionRecordWithId</span></span>
+## <a name="properties"></a><span data-ttu-id="7f9fe-103">屬性</span><span class="sxs-lookup"><span data-stu-id="7f9fe-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|118|  
-|關鍵字|HealthMonitoring、WFTracking|  
-|層級|錯誤|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="7f9fe-104">ID</span><span class="sxs-lookup"><span data-stu-id="7f9fe-104">ID</span></span>|<span data-ttu-id="7f9fe-105">118</span><span class="sxs-lookup"><span data-stu-id="7f9fe-105">118</span></span>|  
+|<span data-ttu-id="7f9fe-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="7f9fe-106">Keywords</span></span>|<span data-ttu-id="7f9fe-107">HealthMonitoring、WFTracking</span><span class="sxs-lookup"><span data-stu-id="7f9fe-107">HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="7f9fe-108">層級</span><span class="sxs-lookup"><span data-stu-id="7f9fe-108">Level</span></span>|<span data-ttu-id="7f9fe-109">錯誤</span><span class="sxs-lookup"><span data-stu-id="7f9fe-109">Error</span></span>|  
+|<span data-ttu-id="7f9fe-110">通道</span><span class="sxs-lookup"><span data-stu-id="7f9fe-110">Channel</span></span>|<span data-ttu-id="7f9fe-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="7f9fe-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 描述  
- 此事件是當工作流程執行個體發出 WorkflowInstanceUnhandledExceptionRecord 時，由 ETW 追蹤參與者發出。  
+## <a name="description"></a><span data-ttu-id="7f9fe-112">描述</span><span class="sxs-lookup"><span data-stu-id="7f9fe-112">Description</span></span>  
+ <span data-ttu-id="7f9fe-113">此事件是當工作流程執行個體發出 WorkflowInstanceUnhandledExceptionRecord 時，由 ETW 追蹤參與者發出。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceUnhandledExceptionRecord.</span></span>  
   
-## 訊息  
- TrackRecord \= WorkflowInstanceUnhandledExceptionRecord、InstanceID \= %1、RecordNumber \= %2、EventTime \= %3、ActivityDefinitionId \= %4、SourceName \= %5、SourceId \= %6、SourceInstanceId \= %7、SourceTypeName\=%8、Exception\=%9、Annotations\= %10、ProfileName \= %11、WorkflowDefinitionIdentity \= %12  
+## <a name="message"></a><span data-ttu-id="7f9fe-114">訊息</span><span class="sxs-lookup"><span data-stu-id="7f9fe-114">Message</span></span>  
+ <span data-ttu-id="7f9fe-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord、 InstanceID = %1、 RecordNumber = %2、 EventTime = %3、 ActivityDefinitionId = %4、 SourceName = %5、 SourceId = %6、 SourceInstanceId = %7、 SourceTypeName = %8、 Exception = %9、 Annotations = %10、 ProfileName =%11、 WorkflowDefinitionIdentity = %12</span><span class="sxs-lookup"><span data-stu-id="7f9fe-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9,  Annotations= %10, ProfileName = %11, WorkflowDefinitionIdentity = %12</span></span>  
   
-## 詳細資料  
+## <a name="details"></a><span data-ttu-id="7f9fe-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="7f9fe-116">Details</span></span>  
   
-|資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
-|InstanceId|xs:GUID|工作流程的執行個體 ID。|  
-|RecordNumber|xs:long|發出之記錄的序號。|  
-|EventTime|xs:dateTime|發出事件時的 UTC 時間。|  
-|ActivityDefinitionId|xs:string|工作流程中根活動的名稱。|  
-|SourceName|xs:string|錯誤造成之 unhandledException 的來源活動名稱|  
-|SourceId|xs:string|錯誤來源活動的活動識別碼。|  
-|SourceInstanceId|xs:string|錯誤來源活動的活動執行個體 ID。|  
-|SourceTypeName|xs:string|錯誤造成之 unhandledException 的來源活動型別名稱。|  
-|例外狀況|xs:string|未處理之例外狀況的例外狀況詳細資料。|  
-|狀態|xs:string|工作流程的目前狀態。|  
-|標註|xs:string|加入至此事件中的附註。  這些值會以下列格式儲存在 XML 元素中：\<items\>\< item name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>。  如果沒有指定的註釋，則字串會包含 \<items\/\>。  ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。  如果事件大小超過 ETW 限制，則會捨棄註釋並以 \<items\>...\<\/items\> 取代註釋值來截斷事件。|  
-|ProfileName|xs:string|造成發送這個事件的名稱或追蹤設定檔。|  
-|WorkflowDefinitionIdentity|xs:string|工作流程定義 ID|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="7f9fe-117">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="7f9fe-117">Data Item Name</span></span>|<span data-ttu-id="7f9fe-118">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="7f9fe-118">Data Item Type</span></span>|<span data-ttu-id="7f9fe-119">描述</span><span class="sxs-lookup"><span data-stu-id="7f9fe-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="7f9fe-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="7f9fe-120">InstanceId</span></span>|<span data-ttu-id="7f9fe-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="7f9fe-121">xs:GUID</span></span>|<span data-ttu-id="7f9fe-122">工作流程的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="7f9fe-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="7f9fe-123">RecordNumber</span></span>|<span data-ttu-id="7f9fe-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="7f9fe-124">xs:long</span></span>|<span data-ttu-id="7f9fe-125">發出之記錄的序號。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="7f9fe-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="7f9fe-126">EventTime</span></span>|<span data-ttu-id="7f9fe-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="7f9fe-127">xs:dateTime</span></span>|<span data-ttu-id="7f9fe-128">發出事件時的 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="7f9fe-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="7f9fe-129">ActivityDefinitionId</span></span>|<span data-ttu-id="7f9fe-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-130">xs:string</span></span>|<span data-ttu-id="7f9fe-131">工作流程中根活動的名稱。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="7f9fe-132">SourceName</span><span class="sxs-lookup"><span data-stu-id="7f9fe-132">SourceName</span></span>|<span data-ttu-id="7f9fe-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-133">xs:string</span></span>|<span data-ttu-id="7f9fe-134">錯誤造成之 unhandledException 的來源活動名稱</span><span class="sxs-lookup"><span data-stu-id="7f9fe-134">The source activity name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="7f9fe-135">SourceId</span><span class="sxs-lookup"><span data-stu-id="7f9fe-135">SourceId</span></span>|<span data-ttu-id="7f9fe-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-136">xs:string</span></span>|<span data-ttu-id="7f9fe-137">錯誤來源活動的活動識別碼。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-137">The activity id of the fault source activity</span></span>|  
+|<span data-ttu-id="7f9fe-138">SourceInstanceId</span><span class="sxs-lookup"><span data-stu-id="7f9fe-138">SourceInstanceId</span></span>|<span data-ttu-id="7f9fe-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-139">xs:string</span></span>|<span data-ttu-id="7f9fe-140">錯誤來源活動的活動執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-140">The activity instance id of the fault source activity</span></span>|  
+|<span data-ttu-id="7f9fe-141">SourceTypeName</span><span class="sxs-lookup"><span data-stu-id="7f9fe-141">SourceTypeName</span></span>|<span data-ttu-id="7f9fe-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-142">xs:string</span></span>|<span data-ttu-id="7f9fe-143">錯誤造成之 unhandledException 的來源活動型別名稱。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-143">The source activity type name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="7f9fe-144">例外狀況</span><span class="sxs-lookup"><span data-stu-id="7f9fe-144">Exception</span></span>|<span data-ttu-id="7f9fe-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-145">xs:string</span></span>|<span data-ttu-id="7f9fe-146">未處理之例外狀況的例外狀況詳細資料。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-146">The exception details for the unhandled exception</span></span>|  
+|<span data-ttu-id="7f9fe-147">狀態</span><span class="sxs-lookup"><span data-stu-id="7f9fe-147">State</span></span>|<span data-ttu-id="7f9fe-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-148">xs:string</span></span>|<span data-ttu-id="7f9fe-149">工作流程的目前狀態。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-149">The current state of the Workflow.</span></span>|  
+|<span data-ttu-id="7f9fe-150">標註</span><span class="sxs-lookup"><span data-stu-id="7f9fe-150">Annotations</span></span>|<span data-ttu-id="7f9fe-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-151">xs:string</span></span>|<span data-ttu-id="7f9fe-152">加入至此事件中的附註。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-152">The annotations that were added to this event.</span></span> <span data-ttu-id="7f9fe-153">值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"type ="> annotationValue\</項目 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-153">The values are stored in an xml element in the format \<items>\< item name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span> <span data-ttu-id="7f9fe-154">如果沒有指定的註釋的字串，包含\<項目 / >。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-154">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="7f9fe-155">ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-155">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="7f9fe-156">如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代具有註釋值截斷\<項目 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-156">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="7f9fe-157">ProfileName</span><span class="sxs-lookup"><span data-stu-id="7f9fe-157">ProfileName</span></span>|<span data-ttu-id="7f9fe-158">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-158">xs:string</span></span>|<span data-ttu-id="7f9fe-159">造成發送這個事件的名稱或追蹤設定檔。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-159">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="7f9fe-160">WorkflowDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="7f9fe-160">WorkflowDefinitionIdentity</span></span>|<span data-ttu-id="7f9fe-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-161">xs:string</span></span>|<span data-ttu-id="7f9fe-162">工作流程定義 ID</span><span class="sxs-lookup"><span data-stu-id="7f9fe-162">The workflow definition id</span></span>|  
+|<span data-ttu-id="7f9fe-163">AppDomain</span><span class="sxs-lookup"><span data-stu-id="7f9fe-163">AppDomain</span></span>|<span data-ttu-id="7f9fe-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="7f9fe-164">xs:string</span></span>|<span data-ttu-id="7f9fe-165">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="7f9fe-165">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

@@ -1,26 +1,32 @@
 ---
-title: "HOW TO：使用資料表值使用者定義函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用資料表值使用者定義函式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 58a1803618845e3914d57d425a1b3d1e5e857aac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：使用資料表值使用者定義函式
-資料表值函式會傳回單一資料列集 \(Rowset\)，而不像預存程序 \(Stored Procedure\) 會傳回多個結果圖案。  因為資料表值函式的傳回型別為 `Table`，所以在可使用資料表的 SQL 中，您可以在任意處使用資料表值函式。  您也可以如同處理資料表一樣來處理資料表值函式。  
+# <a name="how-to-use-table-valued-user-defined-functions"></a><span data-ttu-id="2a469-102">如何：使用資料表值使用者定義函式</span><span class="sxs-lookup"><span data-stu-id="2a469-102">How to: Use Table-Valued User-Defined Functions</span></span>
+<span data-ttu-id="2a469-103">資料表值函式會傳回單一資料列集 (Rowset)，而不像預存程序 (Stored Procedure) 會傳回多個結果圖案。</span><span class="sxs-lookup"><span data-stu-id="2a469-103">A table-valued function returns a single rowset (unlike stored procedures, which can return multiple result shapes).</span></span> <span data-ttu-id="2a469-104">因為資料表值函式的傳回型別為 `Table`，所以在可使用資料表的 SQL 中，您可以在任意處使用資料表值函式。</span><span class="sxs-lookup"><span data-stu-id="2a469-104">Because the return type of a table-valued function is `Table`, you can use a table-valued function anywhere in SQL that you can use a table.</span></span> <span data-ttu-id="2a469-105">您也可以如同處理資料表一樣來處理資料表值函式。</span><span class="sxs-lookup"><span data-stu-id="2a469-105">You can also treat the table-valued function just as you would a table.</span></span>  
   
-## 範例  
- 下列 SQL 函式明確地指出它傳回 `TABLE`。  因此，會以隱含的方式定義傳回的資料列集結構。  
+## <a name="example"></a><span data-ttu-id="2a469-106">範例</span><span class="sxs-lookup"><span data-stu-id="2a469-106">Example</span></span>  
+ <span data-ttu-id="2a469-107">下列 SQL 函式明確地指出它傳回 `TABLE`。</span><span class="sxs-lookup"><span data-stu-id="2a469-107">The following SQL function explicitly states that it returns a `TABLE`.</span></span> <span data-ttu-id="2a469-108">因此，會以隱含的方式定義傳回的資料列集結構。</span><span class="sxs-lookup"><span data-stu-id="2a469-108">Therefore, the returned rowset structure is implicitly defined.</span></span>  
   
 ```  
 CREATE FUNCTION ProductsCostingMoreThan(@cost money)  
@@ -32,13 +38,13 @@ RETURN
     WHERE UnitPrice > @cost  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會依照下列方式對應函式：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="2a469-109"> 會依照下列方式對應函式：</span><span class="sxs-lookup"><span data-stu-id="2a469-109"> maps the function as follows:</span></span>  
   
  [!code-csharp[DLinqUDFS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#1)]
  [!code-vb[DLinqUDFS#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#1)]  
   
-## 範例  
- 下列 SQL 程式碼顯示您可以聯結 \(Join\) 至函式所傳回的資料表，否則就如同處理其他資料表一樣地處理該資料表：  
+## <a name="example"></a><span data-ttu-id="2a469-110">範例</span><span class="sxs-lookup"><span data-stu-id="2a469-110">Example</span></span>  
+ <span data-ttu-id="2a469-111">下列 SQL 程式碼顯示您可以聯結 (Join) 至函式所傳回的資料表，否則就如同處理其他資料表一樣地處理該資料表：</span><span class="sxs-lookup"><span data-stu-id="2a469-111">The following SQL code shows that you can join to the table that the function returns and otherwise treat it as you would any other table:</span></span>  
   
 ```  
 SELECT p2.ProductName, p1.UnitPrice  
@@ -46,10 +52,10 @@ FROM dbo.ProductsCostingMoreThan(80.50)
 AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID  
 ```  
   
- 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，查詢會依照下列方式轉譯：  
+ <span data-ttu-id="2a469-112">在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，查詢會依照下列方式轉譯：</span><span class="sxs-lookup"><span data-stu-id="2a469-112">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the query would be rendered as follows:</span></span>  
   
  [!code-csharp[DLinqUDFS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#2)]
  [!code-vb[DLinqUDFS#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#2)]  
   
-## 請參閱  
- [使用者定義函式](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a><span data-ttu-id="2a469-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2a469-113">See Also</span></span>  
+ [<span data-ttu-id="2a469-114">使用者定義函式</span><span class="sxs-lookup"><span data-stu-id="2a469-114">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

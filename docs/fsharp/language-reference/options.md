@@ -1,0 +1,78 @@
+---
+title: "選項 (F#)"
+description: "了解如何使用 F # 選項類型時的實際值可能不存在的具名的值或變數。"
+keywords: "Visual F#, F#, 函式程式設計"
+author: cartermp
+ms.author: phcart
+ms.date: 05/16/2016
+ms.topic: language-reference
+ms.prod: .net
+ms.technology: devlang-fsharp
+ms.devlang: fsharp
+ms.assetid: a15b5cf1-9055-4481-918c-4c8a051b5829
+ms.openlocfilehash: 537ba69aecc1ab489de63d67c5f9ff857afb4a28
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
+---
+# <a name="options"></a><span data-ttu-id="d9c5b-104">選項</span><span class="sxs-lookup"><span data-stu-id="d9c5b-104">Options</span></span>
+
+<span data-ttu-id="d9c5b-105">實際值可能不存在的具名的值或變數時，會使用在 F # 中的選項類型。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-105">The option type in F# is used when an actual value might not exist for a named value or variable.</span></span> <span data-ttu-id="d9c5b-106">選項都具有基礎類型，並可以保存該類型的值，或可能不會有值。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-106">An option has an underlying type and can hold a value of that type, or it might not have a value.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="d9c5b-107">備註</span><span class="sxs-lookup"><span data-stu-id="d9c5b-107">Remarks</span></span>
+<span data-ttu-id="d9c5b-108">下列程式碼說明函式會產生選項類型。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-108">The following code illustrates a function which generates an option type.</span></span>
+
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1404.fs)]
+
+<span data-ttu-id="d9c5b-109">如您所見，如果輸入`a`大於 0，`Some(a)`產生。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-109">As you can see, if the input `a` is greater than 0, `Some(a)` is generated.</span></span>  <span data-ttu-id="d9c5b-110">否則，`None`產生。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-110">Otherwise, `None` is generated.</span></span>
+
+<span data-ttu-id="d9c5b-111">值`None`選項並沒有實際的值時，會使用。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-111">The value `None` is used when an option does not have an actual value.</span></span> <span data-ttu-id="d9c5b-112">否則，運算式`Some( ... )`提供的選項值。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-112">Otherwise, the expression `Some( ... )` gives the option a value.</span></span> <span data-ttu-id="d9c5b-113">值`Some`和`None`適合用於模式比對，如下列的函式所示`exists`，它會傳回`true`如果選項的值和`false`如果不存在。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-113">The values `Some` and `None` are useful in pattern matching, as in the following function `exists`, which returns `true` if the option has a value and `false` if it does not.</span></span>
+
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1401.fs)]
+
+## <a name="using-options"></a><span data-ttu-id="d9c5b-114">使用選項</span><span class="sxs-lookup"><span data-stu-id="d9c5b-114">Using Options</span></span>
+<span data-ttu-id="d9c5b-115">選項時常用的搜尋不會傳回符合的結果，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-115">Options are commonly used when a search does not return a matching result, as shown in the following code.</span></span>
+
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1403.fs)]
+
+<span data-ttu-id="d9c5b-116">為先前的程式碼清單是遞迴地搜尋。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-116">In the previous code, a list is searched recursively.</span></span> <span data-ttu-id="d9c5b-117">此函式`tryFindMatch`述詞函式會採用`pred`傳回布林值，以及搜尋清單。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-117">The function `tryFindMatch` takes a predicate function `pred` that returns a Boolean value, and a list to search.</span></span> <span data-ttu-id="d9c5b-118">如果找到符合此述詞的項目，則遞迴結束，且此函式傳回的值當做運算式中的選項`Some(head)`。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-118">If an element that satisfies the predicate is found, the recursion ends and the function returns the value as an option in the expression `Some(head)`.</span></span> <span data-ttu-id="d9c5b-119">符合空白清單時，就會結束遞迴。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-119">The recursion ends when the empty list is matched.</span></span> <span data-ttu-id="d9c5b-120">在該點的值`head`未找到，和`None`傳回。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-120">At that point the value `head` has not been found, and `None` is returned.</span></span>
+
+<span data-ttu-id="d9c5b-121">許多 F # 程式庫函式值，可能會或可能不存在傳回集合中搜尋`option`型別。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-121">Many F# library functions that search a collection for a value that may or may not exist return the `option` type.</span></span> <span data-ttu-id="d9c5b-122">依照慣例，這些函式開頭`try`前置詞，例如[ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-122">By convention, these functions begin with the `try` prefix, for example, [`Seq.tryFindIndex`](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).</span></span>
+
+<span data-ttu-id="d9c5b-123">值可能不存在時，例如，如果可能的話，當您嘗試建構值時，會擲回例外狀況，選項可以也很有用。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-123">Options can also be useful when a value might not exist, for example if it is possible that an exception will be thrown when you try to construct a value.</span></span> <span data-ttu-id="d9c5b-124">下列程式碼範例會說明這點。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-124">The following code example illustrates this.</span></span>
+
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1402.fs)]
+
+<span data-ttu-id="d9c5b-125">`openFile`前一個範例中的函式具有類型`string -> File option`因為它會傳回`File`如果已順利開啟檔案的物件和`None`發生的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-125">The `openFile` function in the previous example has type `string -> File option` because it returns a `File` object if the file opens successfully and `None` if an exception occurs.</span></span> <span data-ttu-id="d9c5b-126">視情況，它可能不是適當的設計選擇來攔截例外狀況，而不是允許傳播。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-126">Depending on the situation, it may not be an appropriate design choice to catch an exception rather than allowing it to propagate.</span></span>
+
+
+## <a name="option-properties-and-methods"></a><span data-ttu-id="d9c5b-127">選項屬性和方法</span><span class="sxs-lookup"><span data-stu-id="d9c5b-127">Option Properties and Methods</span></span>
+<span data-ttu-id="d9c5b-128">選項類型支援下列屬性和方法。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-128">The option type supports the following properties and methods.</span></span>
+
+
+
+|<span data-ttu-id="d9c5b-129">屬性或方法</span><span class="sxs-lookup"><span data-stu-id="d9c5b-129">Property or method</span></span>|<span data-ttu-id="d9c5b-130">類型</span><span class="sxs-lookup"><span data-stu-id="d9c5b-130">Type</span></span>|<span data-ttu-id="d9c5b-131">說明</span><span class="sxs-lookup"><span data-stu-id="d9c5b-131">Description</span></span>|
+|------------------|----|-----------|
+|[<span data-ttu-id="d9c5b-132">無</span><span class="sxs-lookup"><span data-stu-id="d9c5b-132">None</span></span>](https://msdn.microsoft.com/library/83ef260a-aa33-4e6f-aee6-b9bf0a461476)|`'T option`|<span data-ttu-id="d9c5b-133">可讓您建立具有選項值的靜態屬性`None`值。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-133">A static property that enables you to create an option value that has the `None` value.</span></span>|
+|[<span data-ttu-id="d9c5b-134">IsNone</span><span class="sxs-lookup"><span data-stu-id="d9c5b-134">IsNone</span></span>](https://msdn.microsoft.com/library/f08532ca-1716-4f60-ae59-8ef6256df234)|`bool`|<span data-ttu-id="d9c5b-135">傳回`true`若選項有`None`值。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-135">Returns `true` if the option has the `None` value.</span></span>|
+|[<span data-ttu-id="d9c5b-136">IsSome</span><span class="sxs-lookup"><span data-stu-id="d9c5b-136">IsSome</span></span>](https://msdn.microsoft.com/library/c5088d51-c5d7-425f-a77f-12c379bb356f)|`bool`|<span data-ttu-id="d9c5b-137">傳回`true`如果選項的值不是`None`。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-137">Returns `true` if the option has a value that is not `None`.</span></span>|
+|[<span data-ttu-id="d9c5b-138">某些</span><span class="sxs-lookup"><span data-stu-id="d9c5b-138">Some</span></span>](https://msdn.microsoft.com/library/12f048d2-e293-4596-accb-de036ecd63fc)|`'T option`|<span data-ttu-id="d9c5b-139">靜態成員，可建立一個選項，都有值不是`None`。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-139">A static member that creates an option that has a value that is not `None`.</span></span>|
+|[<span data-ttu-id="d9c5b-140">值</span><span class="sxs-lookup"><span data-stu-id="d9c5b-140">Value</span></span>](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|<span data-ttu-id="d9c5b-141">傳回基礎值，或擲回`System.NullReferenceException`如果值為`None`。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-141">Returns the underlying value, or throws a `System.NullReferenceException` if the value is `None`.</span></span>|
+
+## <a name="option-module"></a><span data-ttu-id="d9c5b-142">Option 模組</span><span class="sxs-lookup"><span data-stu-id="d9c5b-142">Option Module</span></span>
+<span data-ttu-id="d9c5b-143">沒有對模組[選項](https://msdn.microsoft.com/library/e615e4d3-bbbb-49ba-addc-6061ea2e2f4c)，其中包含在選項執行作業的有用函式。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-143">There is a module, [Option](https://msdn.microsoft.com/library/e615e4d3-bbbb-49ba-addc-6061ea2e2f4c), that contains useful functions that perform operations on options.</span></span> <span data-ttu-id="d9c5b-144">某些函式重複內容的功能，不過能用在內容中需要函式的位置。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-144">Some functions repeat the functionality of the properties but are useful in contexts where a function is needed.</span></span> <span data-ttu-id="d9c5b-145">[Option.isSome](https://msdn.microsoft.com/library/41ad0857-5672-4326-84b5-c33dc43dcf79)和[Option.isNone](https://msdn.microsoft.com/library/73db6a53-15e7-40a6-94f9-a0049e5f4819)是這兩個模組函式，測試是否選項保留的值。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-145">[Option.isSome](https://msdn.microsoft.com/library/41ad0857-5672-4326-84b5-c33dc43dcf79) and [Option.isNone](https://msdn.microsoft.com/library/73db6a53-15e7-40a6-94f9-a0049e5f4819) are both module functions that test whether an option holds a value.</span></span> <span data-ttu-id="d9c5b-146">[Option.get](https://msdn.microsoft.com/library/803e9fcb-6edd-4910-808c-25f08cbc55ea)取得值，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-146">[Option.get](https://msdn.microsoft.com/library/803e9fcb-6edd-4910-808c-25f08cbc55ea) obtains the value, if there is one.</span></span> <span data-ttu-id="d9c5b-147">如果沒有任何值，就會擲回`System.ArgumentException`。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-147">If there is no value, it throws `System.ArgumentException`.</span></span>
+
+<span data-ttu-id="d9c5b-148">[Option.bind](https://msdn.microsoft.com/library/c3406192-24ac-49b5-bc3b-8f805187f1c0)函式值時，執行的函式的值。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-148">The [Option.bind](https://msdn.microsoft.com/library/c3406192-24ac-49b5-bc3b-8f805187f1c0) function executes a function on the value, if there is a value.</span></span> <span data-ttu-id="d9c5b-149">函式必須接受一個引數，而其參數類型必須是選項類型。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-149">The function must take exactly one argument, and its parameter type must be the option type.</span></span> <span data-ttu-id="d9c5b-150">此函式的傳回值是另一個選項類型。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-150">The return value of the function is another option type.</span></span>
+
+<span data-ttu-id="d9c5b-151">Option 模組也包含對應至可用的清單、 陣列、 序列和其他集合型別的函式的函式。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-151">The option module also includes functions that correspond to the functions that are available for lists, arrays, sequences, and other collection types.</span></span> <span data-ttu-id="d9c5b-152">這些函數包括[ `Option.map` ](https://msdn.microsoft.com/library/91a20385-7e73-40c2-9adc-635e86d6a622)， [ `Option.iter` ](https://msdn.microsoft.com/library/83389eef-3dff-4074-b4cc-f69581c25191)， [ `Option.forall` ](https://msdn.microsoft.com/library/ba884586-5eae-49c5-9e36-05481c1c3428)， [ `Option.exists` ](https://msdn.microsoft.com/library/a606d2d4-fddc-4eab-ab37-c6138fb7ad99)， [ `Option.foldBack` ](https://msdn.microsoft.com/library/a882fbaf-c019-46f0-b4f5-b8c2b8b90ffb)， [ `Option.fold` ](https://msdn.microsoft.com/library/af896794-3d53-406c-9411-316cd5c33ad8)，和[ `Option.count` ](https://msdn.microsoft.com/library/2dac83a9-684e-4d0f-b50e-ff722a8bb876)。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-152">These functions include [`Option.map`](https://msdn.microsoft.com/library/91a20385-7e73-40c2-9adc-635e86d6a622), [`Option.iter`](https://msdn.microsoft.com/library/83389eef-3dff-4074-b4cc-f69581c25191), [`Option.forall`](https://msdn.microsoft.com/library/ba884586-5eae-49c5-9e36-05481c1c3428), [`Option.exists`](https://msdn.microsoft.com/library/a606d2d4-fddc-4eab-ab37-c6138fb7ad99), [`Option.foldBack`](https://msdn.microsoft.com/library/a882fbaf-c019-46f0-b4f5-b8c2b8b90ffb), [`Option.fold`](https://msdn.microsoft.com/library/af896794-3d53-406c-9411-316cd5c33ad8), and [`Option.count`](https://msdn.microsoft.com/library/2dac83a9-684e-4d0f-b50e-ff722a8bb876).</span></span> <span data-ttu-id="d9c5b-153">這些功能可讓零個或一個項目的集合，例如要使用的選項。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-153">These functions enable options to be used like a collection of zero or one elements.</span></span> <span data-ttu-id="d9c5b-154">如需詳細資訊與範例，請參閱集合中的函式的討論[列出](lists.md)。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-154">For more information and examples, see the discussion of collection functions in [Lists](lists.md).</span></span>
+
+
+## <a name="converting-to-other-types"></a><span data-ttu-id="d9c5b-155">將轉換成其他類型</span><span class="sxs-lookup"><span data-stu-id="d9c5b-155">Converting to Other Types</span></span>
+<span data-ttu-id="d9c5b-156">選項可以轉換成清單或陣列。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-156">Options can be converted to lists or arrays.</span></span> <span data-ttu-id="d9c5b-157">當這些資料結構，其中一個轉換選項時，所產生的資料結構會有零個或一個項目。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-157">When an option is converted into either of these data structures, the resulting data structure has zero or one element.</span></span> <span data-ttu-id="d9c5b-158">若要轉換成陣列的選項，使用[ `Option.toArray` ](https://msdn.microsoft.com/library/c8044873-ba17-4b52-8231-eb1a28318c64)。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-158">To convert an option to an array, use [`Option.toArray`](https://msdn.microsoft.com/library/c8044873-ba17-4b52-8231-eb1a28318c64).</span></span> <span data-ttu-id="d9c5b-159">若要轉換的選項清單，使用[ `Option.toList` ](https://msdn.microsoft.com/library/5f1af295-9fa9-40ad-b4a1-3578d94d44e1)。</span><span class="sxs-lookup"><span data-stu-id="d9c5b-159">To convert an option to a list, use [`Option.toList`](https://msdn.microsoft.com/library/5f1af295-9fa9-40ad-b4a1-3578d94d44e1).</span></span>
+
+
+## <a name="see-also"></a><span data-ttu-id="d9c5b-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d9c5b-160">See Also</span></span>
+[<span data-ttu-id="d9c5b-161">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="d9c5b-161">F# Language Reference</span></span>](index.md)
+
+[<span data-ttu-id="d9c5b-162">F# 類型</span><span class="sxs-lookup"><span data-stu-id="d9c5b-162">F# Types</span></span>](fsharp-types.md)

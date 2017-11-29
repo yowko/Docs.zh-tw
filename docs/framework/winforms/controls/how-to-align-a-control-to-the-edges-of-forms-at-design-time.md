@@ -1,63 +1,64 @@
 ---
-title: "如何：在設計階段將控制項對齊表單邊緣 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自訂控制項 [Windows Form], 使用設計工具停駐"
-  - "Dock 屬性, 對齊控制項 (使用設計工具)"
+title: "如何：在設計階段將控制項對齊表單邊緣"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], docking using designer
+- Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 86134902a6645d2c9bf7bcef2cf93bf543d8c9bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在設計階段將控制項對齊表單邊緣
-您可設定 <xref:System.Windows.Forms.Control.Dock%2A> 讓控制項對齊表單邊緣。  這個屬性會指定您的控制項在表單中的位置。  您可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：  
+# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a><span data-ttu-id="575da-102">如何：在設計階段將控制項對齊表單邊緣</span><span class="sxs-lookup"><span data-stu-id="575da-102">How to: Align a Control to the Edges of Forms at Design Time</span></span>
+<span data-ttu-id="575da-103">您可以讓控制項對齊表單邊緣藉由設定<xref:System.Windows.Forms.Control.Dock%2A>。</span><span class="sxs-lookup"><span data-stu-id="575da-103">You can make your control align to the edge of your forms by setting the <xref:System.Windows.Forms.Control.Dock%2A>.</span></span> <span data-ttu-id="575da-104">這個屬性會指定您的控制項在表單中的位置。</span><span class="sxs-lookup"><span data-stu-id="575da-104">This property designates where your control resides in the form.</span></span> <span data-ttu-id="575da-105">可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：</span><span class="sxs-lookup"><span data-stu-id="575da-105">The <xref:System.Windows.Forms.Control.Dock%2A> property can be set to the following values:</span></span>  
   
-|設定|對控制項的影響|  
-|--------|-------------|  
-|<xref:System.Windows.Forms.DockStyle>|停駐在表單下方。|  
-|<xref:System.Windows.Forms.DockStyle>|填滿表單中剩下的空間。|  
-|<xref:System.Windows.Forms.DockStyle>|停駐在表單左方。|  
-|<xref:System.Windows.Forms.DockStyle>|不會停駐在任何地方，且會出現在 <xref:System.Windows.Forms.Control.Location%2A> 指定的位置。|  
-|<xref:System.Windows.Forms.DockStyle>|停駐在表單右方。|  
-|<xref:System.Windows.Forms.DockStyle>|停駐在表單上方。|  
+|<span data-ttu-id="575da-106">設定值</span><span class="sxs-lookup"><span data-stu-id="575da-106">Setting</span></span>|<span data-ttu-id="575da-107">對控制項的影響</span><span class="sxs-lookup"><span data-stu-id="575da-107">Effect on your control</span></span>|  
+|-------------|----------------------------|  
+|<xref:System.Windows.Forms.DockStyle.Bottom>|<span data-ttu-id="575da-108">停駐在表單下方。</span><span class="sxs-lookup"><span data-stu-id="575da-108">Docks to the bottom of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Fill>|<span data-ttu-id="575da-109">填滿表單中剩下的空間。</span><span class="sxs-lookup"><span data-stu-id="575da-109">Fills all remaining space in the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Left>|<span data-ttu-id="575da-110">停駐在表單左方。</span><span class="sxs-lookup"><span data-stu-id="575da-110">Docks to the left side of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.None>|<span data-ttu-id="575da-111">未停駐在任何地方，且會出現在所指定的位置及其<xref:System.Windows.Forms.Control.Location%2A>。</span><span class="sxs-lookup"><span data-stu-id="575da-111">Does not dock anywhere, and it appears at the location specified by its <xref:System.Windows.Forms.Control.Location%2A>.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Right>|<span data-ttu-id="575da-112">停駐在表單右方。</span><span class="sxs-lookup"><span data-stu-id="575da-112">Docks to the right side of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Top>|<span data-ttu-id="575da-113">停駐在表單上方。</span><span class="sxs-lookup"><span data-stu-id="575da-113">Docks to the top of the form.</span></span>|  
   
- 這些值可在程式碼中設定。  如需詳細資訊，請參閱 [如何：將控制項和表單邊緣對齊](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)。  
+ <span data-ttu-id="575da-114">也可以在程式碼中設定這些值。</span><span class="sxs-lookup"><span data-stu-id="575da-114">These values can also be set in code.</span></span> <span data-ttu-id="575da-115">如需詳細資訊，請參閱[How to： 將控制項至表單的邊緣對齊](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="575da-115">For more information, see [How to: Align a Control to the Edges of Forms](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="575da-116">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="575da-116">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="575da-117">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="575da-117">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="575da-118">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="575da-118">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要在設計階段設定控制項的 Dock 屬性  
+### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a><span data-ttu-id="575da-119">若要在設計階段設定控制項的 Dock 屬性</span><span class="sxs-lookup"><span data-stu-id="575da-119">To set the Dock property for your control at design time</span></span>  
   
-1.  在 Windows Form 設計工具中選取您的控制項。  
+1.  <span data-ttu-id="575da-120">在 Windows Form 設計工具中，選取您的控制項。</span><span class="sxs-lookup"><span data-stu-id="575da-120">In the Windows Forms Designer, select your control.</span></span>  
   
-2.  在 \[**屬性**\] 視窗中，按一下 <xref:System.Windows.Forms.Control.Dock%2A> 屬性旁的下拉式方塊。  
+2.  <span data-ttu-id="575da-121">在**屬性**視窗中，按一下下拉式清單方塊的下的一步<xref:System.Windows.Forms.Control.Dock%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="575da-121">In the **Properties** window, click the drop-down box next to the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span>  
   
-     接著會顯示表示六個可能 <xref:System.Windows.Forms.Control.Dock%2A> 設定的圖形介面。  
+     <span data-ttu-id="575da-122">圖形化介面，代表可能的六個<xref:System.Windows.Forms.Control.Dock%2A>設定顯示。</span><span class="sxs-lookup"><span data-stu-id="575da-122">A graphical interface representing the six possible <xref:System.Windows.Forms.Control.Dock%2A> settings is displayed.</span></span>  
   
-3.  選擇適當的設定。  
+3.  <span data-ttu-id="575da-123">選擇適當的設定。</span><span class="sxs-lookup"><span data-stu-id="575da-123">Choose the appropriate setting.</span></span>  
   
-4.  這時您的控制項就會依設定指定的方式停駐。  
+4.  <span data-ttu-id="575da-124">控制項現在會設定所指定的方式停駐。</span><span class="sxs-lookup"><span data-stu-id="575da-124">Your control will now dock in the manner specified by the setting.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=fullName>   
- [如何：將控制項和表單邊緣對齊](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)   
- [逐步解說：使用對齊線排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [如何：錨定 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)   
- [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)   
- [如何：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)   
- [逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [在設計階段開發 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+## <a name="see-also"></a><span data-ttu-id="575da-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="575da-125">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="575da-126">操作說明：將控制項和表單邊緣對齊</span><span class="sxs-lookup"><span data-stu-id="575da-126">How to: Align a Control to the Edges of Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)  
+ [<span data-ttu-id="575da-127">逐步解說：使用對齊線排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="575da-127">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="575da-128">操作說明：錨定 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="575da-128">How to: Anchor Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ [<span data-ttu-id="575da-129">操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項</span><span class="sxs-lookup"><span data-stu-id="575da-129">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [<span data-ttu-id="575da-130">操作說明：錨定和停駐 FlowLayoutPanel 控制項中的子控制項</span><span class="sxs-lookup"><span data-stu-id="575da-130">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ [<span data-ttu-id="575da-131">逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="575da-131">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="575da-132">逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項</span><span class="sxs-lookup"><span data-stu-id="575da-132">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="575da-133">在設計階段開發 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="575da-133">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

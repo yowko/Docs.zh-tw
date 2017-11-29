@@ -1,96 +1,98 @@
 ---
-title: "指定端點位址 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "端點 [WCF] 定址"
+title: "指定端點位址"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 41
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8615c4a1b1ebfed2b6779d53422f346456f4fb2a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 指定端點位址
-所有 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的通訊都會透過其端點進行。 每個<xref:System.ServiceModel.Description.ServiceEndpoint>包含<xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>，和<xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 合約會指定哪些為可用的作業。 繫結會指定如何與服務通訊，而位址則指定何處可找到服務。 每個端點必須具備唯一的位址。 端點位址由<xref:System.ServiceModel.EndpointAddress>類別，其中包含統一資源識別元 (URI)，表示服務的位址，<xref:System.ServiceModel.EndpointAddress.Identity%2A>，用來表示服務的安全性識別和選用的集合<xref:System.ServiceModel.EndpointAddress.Headers%2A>。 選用標頭會提供更多詳細的定址資訊來識別端點或與端點互動。 例如，標頭會指出如何處理傳入訊息、端點應該將回覆訊息傳送到哪裡，或是當有多個執行個體可用時，要使用哪個服務執行個體來處理來自特定使用者的傳入訊息。  
+# <a name="specifying-an-endpoint-address"></a><span data-ttu-id="9dd45-102">指定端點位址</span><span class="sxs-lookup"><span data-stu-id="9dd45-102">Specifying an Endpoint Address</span></span>
+<span data-ttu-id="9dd45-103">所有 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的通訊都會透過其端點進行。</span><span class="sxs-lookup"><span data-stu-id="9dd45-103">All communication with a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service occurs through its endpoints.</span></span> <span data-ttu-id="9dd45-104">每個 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含有 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。</span><span class="sxs-lookup"><span data-stu-id="9dd45-104">Each <xref:System.ServiceModel.Description.ServiceEndpoint> contains an <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, and a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>.</span></span> <span data-ttu-id="9dd45-105">合約會指定哪些為可用的作業。</span><span class="sxs-lookup"><span data-stu-id="9dd45-105">The contract specifies which operations are available.</span></span> <span data-ttu-id="9dd45-106">繫結會指定如何與服務通訊，而位址則指定何處可找到服務。</span><span class="sxs-lookup"><span data-stu-id="9dd45-106">The binding specifies how to communicate with the service, and the address specifies where to find the service.</span></span> <span data-ttu-id="9dd45-107">每個端點必須具備唯一的位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-107">Every endpoint must have a unique address.</span></span> <span data-ttu-id="9dd45-108">端點位址是由 <xref:System.ServiceModel.EndpointAddress> 類別所代表，其中包含代表服務位址的統一資源識別元 (URI)、代表服務之安全性身分識別的 <xref:System.ServiceModel.EndpointAddress.Identity%2A>，以及選用的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。</span><span class="sxs-lookup"><span data-stu-id="9dd45-108">The endpoint address is represented by the <xref:System.ServiceModel.EndpointAddress> class, which contains a Uniform Resource Identifier (URI) that represents the address of the service, an <xref:System.ServiceModel.EndpointAddress.Identity%2A>, which represents the security identity of the service, and a collection of optional <xref:System.ServiceModel.EndpointAddress.Headers%2A>.</span></span> <span data-ttu-id="9dd45-109">選用標頭會提供更多詳細的定址資訊來識別端點或與端點互動。</span><span class="sxs-lookup"><span data-stu-id="9dd45-109">The optional headers provide more detailed addressing information to identify or interact with the endpoint.</span></span> <span data-ttu-id="9dd45-110">例如，標頭會指出如何處理傳入訊息、端點應該將回覆訊息傳送到哪裡，或是當有多個執行個體可用時，要使用哪個服務執行個體來處理來自特定使用者的傳入訊息。</span><span class="sxs-lookup"><span data-stu-id="9dd45-110">For example, headers can indicate how to process an incoming message, where the endpoint should send a reply message, or which instance of a service to use to process an incoming message from a particular user when multiple instances are available.</span></span>  
   
-## <a name="definition-of-an-endpoint-address"></a>端點位址的定義  
- 在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]、 <xref:System.ServiceModel.EndpointAddress>端點參考 (EPR) 的 Ws-addressing 標準中定義的模型。  
+## <a name="definition-of-an-endpoint-address"></a><span data-ttu-id="9dd45-111">端點位址的定義</span><span class="sxs-lookup"><span data-stu-id="9dd45-111">Definition of an Endpoint Address</span></span>  
+ <span data-ttu-id="9dd45-112">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，<xref:System.ServiceModel.EndpointAddress> 會依據 WS-Addressing 標準的定義，製造端點參考 (EPR) 的模型。</span><span class="sxs-lookup"><span data-stu-id="9dd45-112">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], an <xref:System.ServiceModel.EndpointAddress> models an endpoint reference (EPR) as defined in the WS-Addressing standard.</span></span>  
   
- 大部分傳輸的位址 URI 具有四個部分。 例如，"http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" 這個 URI 便具有下列四個部分：  
+ <span data-ttu-id="9dd45-113">大部分傳輸的位址 URI 具有四個部分。</span><span class="sxs-lookup"><span data-stu-id="9dd45-113">The address URI for most transports has four parts.</span></span> <span data-ttu-id="9dd45-114">例如，"http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" 這個 URI 便具有下列四個部分：</span><span class="sxs-lookup"><span data-stu-id="9dd45-114">For example, this URI, "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" has the following four parts:</span></span>  
   
--   配置：http:  
+-   <span data-ttu-id="9dd45-115">配置：http:</span><span class="sxs-lookup"><span data-stu-id="9dd45-115">Scheme: http:</span></span>  
   
--   電腦：www.fabrikam.com  
+-   <span data-ttu-id="9dd45-116">電腦：www.fabrikam.com</span><span class="sxs-lookup"><span data-stu-id="9dd45-116">Machine: www.fabrikam.com</span></span>  
   
--   (選擇性) 連接埠：322  
+-   <span data-ttu-id="9dd45-117">(選擇性) 連接埠：322</span><span class="sxs-lookup"><span data-stu-id="9dd45-117">(Optional) Port: 322</span></span>  
   
--   路徑：/mathservice.svc/secureEndpoint  
+-   <span data-ttu-id="9dd45-118">路徑：/mathservice.svc/secureEndpoint</span><span class="sxs-lookup"><span data-stu-id="9dd45-118">Path: /mathservice.svc/secureEndpoint</span></span>  
   
- EPR 模型的一部分，就是每個端點參考都包含可新增額外識別資訊的某些參考參數。 在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，這些參考參數會模型化為的執行個體<xref:System.ServiceModel.Channels.AddressHeader>類別。  
+ <span data-ttu-id="9dd45-119">EPR 模型的一部分，就是每個端點參考都包含可新增額外識別資訊的某些參考參數。</span><span class="sxs-lookup"><span data-stu-id="9dd45-119">Part of the EPR model is that each endpoint reference can carry some reference parameters that add extra identifying information.</span></span> <span data-ttu-id="9dd45-120">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，這些參考參數會模型化為 <xref:System.ServiceModel.Channels.AddressHeader> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="9dd45-120">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], these reference parameters are modeled as instances of the <xref:System.ServiceModel.Channels.AddressHeader> class.</span></span>  
   
- 您可以強制使用程式碼，或是透過組態以宣告的形式來指定服務的端點位址。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 一般來說，透過組態來定義服務端點會比透過程式碼來得實際一些。 將繫結和位址資訊留在程式碼外面可讓它們直接進行變更，而不需要重新編譯或重新部署應用程式。 如果在程式碼或組態中沒有指定端點，則執行階段會針對服務所實作的每個合約，在每個基底位址上加入一個預設端點。  
+ <span data-ttu-id="9dd45-121">您可以強制使用程式碼，或是透過組態以宣告的形式來指定服務的端點位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-121">The endpoint address for a service can be specified either imperatively by using code or declaratively through configuration.</span></span> <span data-ttu-id="9dd45-122">在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。</span><span class="sxs-lookup"><span data-stu-id="9dd45-122">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="9dd45-123">一般來說，透過組態來定義服務端點會比透過程式碼來得實際一些。</span><span class="sxs-lookup"><span data-stu-id="9dd45-123">Generally, it is more practical to define service endpoints using configuration rather than code.</span></span> <span data-ttu-id="9dd45-124">將繫結和位址資訊留在程式碼外面可讓它們直接進行變更，而不需要重新編譯或重新部署應用程式。</span><span class="sxs-lookup"><span data-stu-id="9dd45-124">Keeping the binding and addressing information out of the code allows them to change without having to recompile and redeploy the application.</span></span> <span data-ttu-id="9dd45-125">如果在程式碼或組態中沒有指定端點，則執行階段會針對服務所實作的每個合約，在每個基底位址上加入一個預設端點。</span><span class="sxs-lookup"><span data-stu-id="9dd45-125">If no endpoints are specified in code or in configuration, then the runtime adds one default endpoint on each base address for each contract implemented by the service.</span></span>  
   
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，有兩種方式可以用來指定服務的端點位址。 您可以指定與服務相關聯的每個端點的絕對位址，或者您可以提供的基底位址<xref:System.ServiceModel.ServiceHost>的服務，然後指定相對於此基底位址會定義此服務相關聯的每個端點的位址。 您可以透過組態或程式碼，使用這些程序中的任何一個來指定服務的端點位址。 如果您沒有指定相對位址，則服務會使用基底位址。 您可以讓同一個服務使用多個基底位址，但是每個服務只允許每個傳輸使用一個基底位址。 如果您具有多個端點，而其中每一個都設定為不同的繫結，則其位址必須是唯一的。 使用相同繫結但不同合約的端點可以使用相同的位址。  
+ <span data-ttu-id="9dd45-126">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，有兩種方式可以用來指定服務的端點位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-126">There are two ways to specify endpoint addresses for a service in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="9dd45-127">您可以為每個與服務相關聯的端點指定絕對位址，或是為服務的 <xref:System.ServiceModel.ServiceHost> 提供基底位址，然後指定相對於此基底位址所定義之服務相關聯的每個端點位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-127">You can specify an absolute address for each endpoint associated with the service or you can provide a base address for the <xref:System.ServiceModel.ServiceHost> of a service and then specify an address for each endpoint associated with this service that is defined relative to this base address.</span></span> <span data-ttu-id="9dd45-128">您可以透過組態或程式碼，使用這些程序中的任何一個來指定服務的端點位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-128">You can use each of these procedures to specify the endpoint addresses for a service in either configuration or code.</span></span> <span data-ttu-id="9dd45-129">如果您沒有指定相對位址，則服務會使用基底位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-129">If you do not specify a relative address, the service uses the base address.</span></span> <span data-ttu-id="9dd45-130">您可以讓同一個服務使用多個基底位址，但是每個服務只允許每個傳輸使用一個基底位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-130">You can also have multiple base addresses for a service, but each service is allowed only one base address for each transport.</span></span> <span data-ttu-id="9dd45-131">如果您具有多個端點，而其中每一個都設定為不同的繫結，則其位址必須是唯一的。</span><span class="sxs-lookup"><span data-stu-id="9dd45-131">If you have multiple endpoints, each of which is configured with a different binding, their addresses must be unique.</span></span> <span data-ttu-id="9dd45-132">使用相同繫結但不同合約的端點可以使用相同的位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-132">Endpoints that use the same binding but different contracts can use the same address.</span></span>  
   
- 使用 IIS 裝載時，您就不是管理<xref:System.ServiceModel.ServiceHost>自行執行個體。 裝載於 IIS 時，基底位址一律是服務的 .svc 檔案中指定的位址。 因此請務必針對 IIS 裝載的服務端點使用相對端點位址。 在部署服務時，提供完整的端點位址可能會導致錯誤。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][部署網際網路資訊服務裝載的 WCF 服務](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
+ <span data-ttu-id="9dd45-133">使用 IIS 裝載時，您不用自行管理 <xref:System.ServiceModel.ServiceHost> 執行個體。</span><span class="sxs-lookup"><span data-stu-id="9dd45-133">When hosting with IIS, you do not manage the <xref:System.ServiceModel.ServiceHost> instance yourself.</span></span> <span data-ttu-id="9dd45-134">裝載於 IIS 時，基底位址一律是服務的 .svc 檔案中指定的位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-134">The base address is always the address specified in the .svc file for the service when hosting in IIS.</span></span> <span data-ttu-id="9dd45-135">因此請務必針對 IIS 裝載的服務端點使用相對端點位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-135">So you must use relative endpoint addresses for IIS-hosted service endpoints.</span></span> <span data-ttu-id="9dd45-136">在部署服務時，提供完整的端點位址可能會導致錯誤。</span><span class="sxs-lookup"><span data-stu-id="9dd45-136">Supplying a fully-qualified endpoint address can lead to errors in the deployment of the service.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="9dd45-137">[部署網際網路資訊服務裝載的 WCF 服務](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。</span><span class="sxs-lookup"><span data-stu-id="9dd45-137"> [Deploying an Internet Information Services-Hosted WCF Service](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).</span></span>  
   
-## <a name="defining-endpoint-addresses-in-configuration"></a>在組態中定義端點位址  
- 若要在組態檔中定義的端點，使用[ <> \> ](http://msdn.microsoft.com/zh-tw/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
+## <a name="defining-endpoint-addresses-in-configuration"></a><span data-ttu-id="9dd45-138">在組態中定義端點位址</span><span class="sxs-lookup"><span data-stu-id="9dd45-138">Defining Endpoint Addresses in Configuration</span></span>  
+ <span data-ttu-id="9dd45-139">若要在組態檔中定義的端點，使用[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。</span><span class="sxs-lookup"><span data-stu-id="9dd45-139">To define an endpoint in a configuration file, use the [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element.</span></span>  
   
- <!-- TODO: review snippet reference [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  -->  
+ [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   
- 當<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>呼叫方法時 （亦即，當裝載應用程式會嘗試啟動服務），系統會尋找[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md)項目名稱屬性來指定 「 UE。Samples.HelloService 」。 如果[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md)找到項目，系統會載入指定的類別，並建立使用組態檔中提供的端點定義的端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。  
+ <span data-ttu-id="9dd45-140">當<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>呼叫方法時 （也就是當裝載應用程式會嘗試啟動服務），系統會尋找[\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)具有 name 屬性，指定 「 UE 項目。Samples.HelloService"。</span><span class="sxs-lookup"><span data-stu-id="9dd45-140">When the <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> method is called (that is, when the hosting application attempts to start the service), the system looks for a [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md) element with a name attribute that specifies "UE.Samples.HelloService".</span></span> <span data-ttu-id="9dd45-141">如果[\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)找到項目，系統就會載入指定的類別並建立使用組態檔中提供的端點定義的端點。</span><span class="sxs-lookup"><span data-stu-id="9dd45-141">If the [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md) element is found, the system loads the specified class and creates endpoints using the endpoint definitions provided in the configuration file.</span></span> <span data-ttu-id="9dd45-142">這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。</span><span class="sxs-lookup"><span data-stu-id="9dd45-142">This mechanism allows you to load and start a service with two lines of code while keeping binding and addressing information out of your code.</span></span> <span data-ttu-id="9dd45-143">使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。</span><span class="sxs-lookup"><span data-stu-id="9dd45-143">The advantage of this approach is that these changes can be made without having to recompile or redeploy the application.</span></span>  
   
- 選擇性標頭中宣告[ <> \</> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下列是用來指定組態檔中服務端點的項目範例，此指定組態檔會區分以下兩個標頭的不同：來自 http://tempuri1.org/ 的 "Gold" 用戶端和來自 http://tempuri2.org/ 的 "Standard" 用戶端。 呼叫此服務的用戶端必須有適當[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。  
+ <span data-ttu-id="9dd45-144">選擇性標頭中宣告[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。</span><span class="sxs-lookup"><span data-stu-id="9dd45-144">The optional headers are declared in a [\<headers>](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md).</span></span> <span data-ttu-id="9dd45-145">下列是用來指定組態檔中服務端點的項目範例，此指定組態檔會區分以下兩個標頭的不同：來自 http://tempuri1.org/ 的 "Gold" 用戶端和來自 http://tempuri2.org/ 的 "Standard" 用戶端。</span><span class="sxs-lookup"><span data-stu-id="9dd45-145">The following is an example of the elements used to specify endpoints for a service in a configuration file that distinguishes between two headers: "Gold" clients from http://tempuri1.org/ and "Standard" clients from http://tempuri2.org/.</span></span> <span data-ttu-id="9dd45-146">呼叫此服務的用戶端必須擁有適當[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。</span><span class="sxs-lookup"><span data-stu-id="9dd45-146">The client calling this service must have the appropriate [\<headers>](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) in its configuration file.</span></span>  
   
- <!-- TODO: review snippet reference [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  -->  
+ [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
- 如先前所示，您也可以在個別訊息上設定標頭，而不是在某個端點的所有訊息上設定標頭。 這由使用<xref:System.ServiceModel.OperationContextScope>若要將自訂標頭新增至傳出的訊息，用戶端應用程式中建立新的內容，如下列範例所示。  
+ <span data-ttu-id="9dd45-147">如先前所示，您也可以在個別訊息上設定標頭，而不是在某個端點的所有訊息上設定標頭。</span><span class="sxs-lookup"><span data-stu-id="9dd45-147">Headers can also be set on individual messages instead of all messages on an endpoint (as shown previously).</span></span> <span data-ttu-id="9dd45-148">如下列範例所示，您可以使用 <xref:System.ServiceModel.OperationContextScope> 在用戶端應用程式上建立新的內容，將自訂標頭新增至傳出的訊息，以完成這項工作。</span><span class="sxs-lookup"><span data-stu-id="9dd45-148">This is done by using <xref:System.ServiceModel.OperationContextScope> to create a new context in a client application to add a custom header to the outgoing message, as shown in the following example.</span></span>  
   
  [!code-csharp[OperationContextScope#4](../../../samples/snippets/csharp/VS_Snippets_CFX/operationcontextscope/cs/client.cs#4)]
  [!code-vb[OperationContextScope#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationcontextscope/vb/client.vb#4)]  
   
-## <a name="endpoint-address-in-metadata"></a>中繼資料中的端點位址  
- 在 Web 服務描述語言 (WSDL) 中，端點位址會表示為對應端點的 `EndpointReference` 項目中之 WS-Addressing `wsdl:port` (EPR) 項目。 EPR 包含端點的位址以及任何位址屬性。 請注意，`wsdl:port` 內的 EPR 會取代 `soap:Address`，如下列範例所示。  
+## <a name="endpoint-address-in-metadata"></a><span data-ttu-id="9dd45-149">中繼資料中的端點位址</span><span class="sxs-lookup"><span data-stu-id="9dd45-149">Endpoint Address in Metadata</span></span>  
+ <span data-ttu-id="9dd45-150">在 Web 服務描述語言 (WSDL) 中，端點位址會表示為對應端點的 `EndpointReference` 項目中之 WS-Addressing `wsdl:port` (EPR) 項目。</span><span class="sxs-lookup"><span data-stu-id="9dd45-150">An endpoint address is represented in Web Services Description Language (WSDL) as a WS-Addressing `EndpointReference` (EPR) element inside the corresponding endpoint's `wsdl:port` element.</span></span> <span data-ttu-id="9dd45-151">EPR 包含端點的位址以及任何位址屬性。</span><span class="sxs-lookup"><span data-stu-id="9dd45-151">The EPR contains the endpoint's address as well as any address properties.</span></span> <span data-ttu-id="9dd45-152">請注意，`wsdl:port` 內的 EPR 會取代 `soap:Address`，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="9dd45-152">Note that the EPR inside `wsdl:port` replaces `soap:Address` as seen in the following example.</span></span>  
   
   
   
-## <a name="defining-endpoint-addresses-in-code"></a>在程式碼中定義端點位址  
- 可以建立的程式碼中的端點位址<xref:System.ServiceModel.EndpointAddress>類別。 您可以為端點位址指定完整路徑的 URI，或是相對於服務基底位址的路徑 URI。 下列程式碼說明如何建立的執行個體<xref:System.ServiceModel.EndpointAddress>類別，並將它加入至<xref:System.ServiceModel.ServiceHost>裝載服務的執行個體。  
+## <a name="defining-endpoint-addresses-in-code"></a><span data-ttu-id="9dd45-153">在程式碼中定義端點位址</span><span class="sxs-lookup"><span data-stu-id="9dd45-153">Defining Endpoint Addresses in Code</span></span>  
+ <span data-ttu-id="9dd45-154">您可以使用 <xref:System.ServiceModel.EndpointAddress> 類別，在程式碼中建立端點位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-154">An endpoint address can be created in code with the <xref:System.ServiceModel.EndpointAddress> class.</span></span> <span data-ttu-id="9dd45-155">您可以為端點位址指定完整路徑的 URI，或是相對於服務基底位址的路徑 URI。</span><span class="sxs-lookup"><span data-stu-id="9dd45-155">The URI specified for the endpoint address can be a fully-qualified path or a path that is relative to the service's base address.</span></span> <span data-ttu-id="9dd45-156">下列程式碼說明如何建立 <xref:System.ServiceModel.EndpointAddress> 類別的執行個體，並將其新增至裝載服務的 <xref:System.ServiceModel.ServiceHost> 執行個體。</span><span class="sxs-lookup"><span data-stu-id="9dd45-156">The following code illustrates how to create an instance of the <xref:System.ServiceModel.EndpointAddress> class and add it to the <xref:System.ServiceModel.ServiceHost> instance that is hosting the service.</span></span>  
   
- 下列範例示範如何在程式碼中指定完整端點位址。  
+ <span data-ttu-id="9dd45-157">下列範例示範如何在程式碼中指定完整端點位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-157">The following example demonstrates how to specify the full endpoint address in code.</span></span>  
   
  [!code-csharp[S_UEHelloWorld#2](../../../samples/snippets/csharp/VS_Snippets_CFX/s_uehelloworld/cs/snippet.cs#2)]  
   
- 下列範例示範如何將相對位址 ("MyService") 新增至服務主機的基底位址。  
+ <span data-ttu-id="9dd45-158">下列範例示範如何將相對位址 ("MyService") 新增至服務主機的基底位址。</span><span class="sxs-lookup"><span data-stu-id="9dd45-158">The following example demonstrates how to add a relative address ("MyService") to the base address of the service host.</span></span>  
   
  [!code-csharp[S_UEHelloWorld#3](../../../samples/snippets/csharp/VS_Snippets_CFX/s_uehelloworld/cs/snippet.cs#3)]  
   
 > [!NOTE]
->  屬性的<xref:System.ServiceModel.Description.ServiceDescription>服務中的應用程式絕不能修改之後<xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A>方法<xref:System.ServiceModel.ServiceHostBase>。 一些成員，例如<xref:System.ServiceModel.ServiceHostBase.Credentials%2A>屬性和`AddServiceEndpoint`方法<xref:System.ServiceModel.ServiceHostBase>和<xref:System.ServiceModel.ServiceHost>，如果通過該點之後修改，會擲回例外狀況。 其他成員可讓您加以修改，但結果仍未定義。  
+>  <span data-ttu-id="9dd45-159">在服務應用程式中 <xref:System.ServiceModel.Description.ServiceDescription> 的屬性，絕對不能在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> 上的 <xref:System.ServiceModel.ServiceHostBase> 方法之後遭到修改。</span><span class="sxs-lookup"><span data-stu-id="9dd45-159">Properties of the <xref:System.ServiceModel.Description.ServiceDescription> in the service application must not be modified subsequent to the <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> method on <xref:System.ServiceModel.ServiceHostBase>.</span></span> <span data-ttu-id="9dd45-160">如果在通過該點之後修改一些成員，像是 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 屬性及 `AddServiceEndpoint` 與 <xref:System.ServiceModel.ServiceHostBase> 上的 <xref:System.ServiceModel.ServiceHost> 方法，便會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="9dd45-160">Some members, such as the <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> property and the `AddServiceEndpoint` methods on <xref:System.ServiceModel.ServiceHostBase> and <xref:System.ServiceModel.ServiceHost>, throw an exception if modified after that point.</span></span> <span data-ttu-id="9dd45-161">其他成員可讓您加以修改，但結果仍未定義。</span><span class="sxs-lookup"><span data-stu-id="9dd45-161">Others permit you to modify them, but the result is undefined.</span></span>  
 >   
->  同樣地，在用戶端<xref:System.ServiceModel.Description.ServiceEndpoint>值不會修改呼叫之後<xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A>上<xref:System.ServiceModel.ChannelFactory>。 <xref:System.ServiceModel.ChannelFactory.Credentials%2A>屬性在該點之後修改，會擲回例外狀況。 其他的用戶端說明值可以修改而不會造成錯誤，但是結果仍為未定義。  
+>  <span data-ttu-id="9dd45-162">同樣地，您不可以在呼叫 <xref:System.ServiceModel.Description.ServiceEndpoint> 上的 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> 之後修改用戶端上的 <xref:System.ServiceModel.ChannelFactory> 值。</span><span class="sxs-lookup"><span data-stu-id="9dd45-162">Similarly, on the client the <xref:System.ServiceModel.Description.ServiceEndpoint> values must not be modified after the call to <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> on the <xref:System.ServiceModel.ChannelFactory>.</span></span> <span data-ttu-id="9dd45-163"><xref:System.ServiceModel.ChannelFactory.Credentials%2A> 屬性如果在通過該點之後修改，便會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="9dd45-163">The <xref:System.ServiceModel.ChannelFactory.Credentials%2A> property throws an exception if modified after that point.</span></span> <span data-ttu-id="9dd45-164">其他的用戶端說明值可以修改而不會造成錯誤，但是結果仍為未定義。</span><span class="sxs-lookup"><span data-stu-id="9dd45-164">The other client description values can be modified without error, but the result is undefined.</span></span>  
 >   
->  是否在服務或用戶端，建議您修改的描述，然後才呼叫<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>。  
+>  <span data-ttu-id="9dd45-165">無論是在服務或是用戶端，建議的做法都是在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前修改說明。</span><span class="sxs-lookup"><span data-stu-id="9dd45-165">Whether for the service or client, it is recommended that you modify the description prior to calling <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>.</span></span>  
   
-## <a name="using-default-endpoints"></a>使用預設端點  
- 如果在程式碼或組態中沒有指定端點，則執行階段會針對服務所實作的每個服務合約，在每個基底位址上加入一個預設端點，藉以提供預設端點。 您可以指定基底的位址，在程式碼，或在組態中，並會加入預設端點時<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>上稱為<xref:System.ServiceModel.ServiceHost>。  
+## <a name="using-default-endpoints"></a><span data-ttu-id="9dd45-166">使用預設端點</span><span class="sxs-lookup"><span data-stu-id="9dd45-166">Using Default Endpoints</span></span>  
+ <span data-ttu-id="9dd45-167">如果在程式碼或組態中沒有指定端點，則執行階段會針對服務所實作的每個服務合約，在每個基底位址上加入一個預設端點，藉以提供預設端點。</span><span class="sxs-lookup"><span data-stu-id="9dd45-167">If no endpoints are specified in code or in configuration then the runtime provides default endpoints by adding one default endpoint on each base address for each service contract implemented by the service.</span></span> <span data-ttu-id="9dd45-168">基底位址可以在程式碼或組態中指定，而預設端點則會在 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 上呼叫 <xref:System.ServiceModel.ServiceHost> 時加入。</span><span class="sxs-lookup"><span data-stu-id="9dd45-168">The base address can be specified in code or in configuration, and the default endpoints are added when <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> is called on the <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
- 如果沒有明確提供端點的預設端點仍加入藉由呼叫<xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A>上<xref:System.ServiceModel.ServiceHost>之前，先呼叫<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]預設端點、 繫結和行為，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+ <span data-ttu-id="9dd45-169">如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。</span><span class="sxs-lookup"><span data-stu-id="9dd45-169">If endpoints are explicitly provided, the default endpoints can still be added by calling <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> on the <xref:System.ServiceModel.ServiceHost> before calling <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="9dd45-170"> 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="9dd45-170"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.EndpointAddress>   
- [服務身分識別與驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)   
- [裝載](../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a><span data-ttu-id="9dd45-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9dd45-171">See Also</span></span>  
+ <xref:System.ServiceModel.EndpointAddress>  
+ [<span data-ttu-id="9dd45-172">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="9dd45-172">Service Identity and Authentication</span></span>](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="9dd45-173">建立端點概觀</span><span class="sxs-lookup"><span data-stu-id="9dd45-173">Endpoint Creation Overview</span></span>](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [<span data-ttu-id="9dd45-174">裝載</span><span class="sxs-lookup"><span data-stu-id="9dd45-174">Hosting</span></span>](../../../docs/framework/wcf/feature-details/hosting.md)

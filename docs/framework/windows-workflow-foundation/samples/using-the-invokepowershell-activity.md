@@ -1,65 +1,68 @@
 ---
-title: "使用 InvokePowerShell 活動 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 InvokePowerShell 活動"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 23351ad32e608dc27b973691ec9a00fc2f94b3fe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用 InvokePowerShell 活動
-InvokePowerShell 範例示範如何使用 `InvokePowerShell` 活動叫用 Windows PowerShell 命令。  
+# <a name="using-the-invokepowershell-activity"></a><span data-ttu-id="72f6c-102">使用 InvokePowerShell 活動</span><span class="sxs-lookup"><span data-stu-id="72f6c-102">Using the InvokePowerShell Activity</span></span>
+<span data-ttu-id="72f6c-103">InvokePowerShell 範例示範如何使用 `InvokePowerShell` 活動叫用 Windows PowerShell 命令。</span><span class="sxs-lookup"><span data-stu-id="72f6c-103">The InvokePowerShell sample demonstrates how to invoke Windows PowerShell commands using the `InvokePowerShell` activity.</span></span>  
   
-## 示範  
+## <a name="demonstrates"></a><span data-ttu-id="72f6c-104">示範</span><span class="sxs-lookup"><span data-stu-id="72f6c-104">Demonstrates</span></span>  
   
--   Windows PowerShell 命令的簡單引動過程。  
+-   <span data-ttu-id="72f6c-105">Windows PowerShell 命令的簡單引動過程。</span><span class="sxs-lookup"><span data-stu-id="72f6c-105">Simple innovation of Windows PowerShell commands.</span></span>  
   
--   從 Windows PowerShell 輸出管線擷取值，並將值儲存在工作流程變數中。  
+-   <span data-ttu-id="72f6c-106">從 Windows PowerShell 輸出管線擷取值，並將值儲存在工作流程變數中。</span><span class="sxs-lookup"><span data-stu-id="72f6c-106">Retrieve values from the Windows PowerShell output pipeline and store them in workflow variables.</span></span>  
   
--   將資料當做執行命令的輸入管線傳遞至 Windows PowerShell。  
+-   <span data-ttu-id="72f6c-107">將資料當做執行命令的輸入管線傳遞至 Windows PowerShell。</span><span class="sxs-lookup"><span data-stu-id="72f6c-107">Pass data into windows PowerShell as input pipeline for an executing command.</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="72f6c-108">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="72f6c-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="72f6c-109">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="72f6c-109">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="72f6c-110">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="72f6c-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="72f6c-111">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="72f6c-111">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
-## 討論  
- 這個範例包含下列三個專案。  
+## <a name="discussion"></a><span data-ttu-id="72f6c-112">討論</span><span class="sxs-lookup"><span data-stu-id="72f6c-112">Discussion</span></span>  
+ <span data-ttu-id="72f6c-113">這個範例包含下列三個專案。</span><span class="sxs-lookup"><span data-stu-id="72f6c-113">This sample contains the following three projects.</span></span>  
   
-|專案名稱|說明|主要檔案|  
-|----------|--------|----------|  
-|CodedClient|使用 PowerShell 活動的範例用戶端應用程式。|-   **Program.cs**：以程式設計方式來建立可呼叫 InvokePowerShell 活動的循序工作流程。|  
-|DesignerClient|包含 `InvokePowerShell` 自訂活動和其他自訂活動在內的一組自訂活動，以及使用它們的工作流程。|<ul><li>活動：<br /><br /> <ul><li>**PrintCollection.cs**：協助程式活動，可將集合中的所有項目列印至主控台。</li><li>**ReadLine.cs**：用來從主控台讀取輸入的協助程式活動。</li></ul></li><li>檔案系統：<br /><br /> <ul><li>**Copy.xaml**：複製檔案的活動。</li><li>**CreateFile.xaml**：建立檔案的活動。</li><li>**DeleteFile.xaml**：刪除檔案的活動。</li><li>**MakeDir.xaml**：建立目錄的活動。</li><li>**Move.xaml**：移動檔案的活動。</li><li>**ReadFile.xaml**：用來讀取檔案並傳回其內容的活動。</li><li>**TestPath.xaml**：測試路徑是否存在的活動。</li></ul></li><li>處理序：<br /><br /> <ul><li>**GetProcess.xaml**：取得執行中處理序清單的活動。</li><li>**StopProcess.xaml**：停止特定處理序的活動。</li></ul></li><li>**Program.cs**：呼叫 Sequence1 工作流程。</li><li>**Sequence1.xaml**：循序工作流程。</li></ul>|  
-|PowerShell|`InvokePowerShell` 活動及其相關聯的設計工具。|活動檔案<br /><br /> -   **ExecutePowerShell.cs**：活動的主要執行邏輯。<br />-   **InvokePowerShell.cs**：主要執行邏輯的包裝函式，其中包含泛型 \(傳回值\) 版本和非泛型 \(非傳回值\) 版本。這是活動的公用介面。<br />-   **NoPersistZone.cs**：這個活動會防止任何子活動保存。在 `InvokePowerShell` 活動實作中使用這個類別，以防止活動於執行中保存。<br /><br /> 設計工具檔案：<br /><br /> 1.  **ArgumentDictionaryEditor.cs**：Windows 對話方塊，可讓使用者編輯 `InvokePowerShell` 活動的引數。<br />2.  **GenericInvokePowerShellDesigner.xaml** 和 **GenericInvokePowerShellDesigner.xaml.cs**：定義泛型 `InvokePowerShell` 活動在 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 中的外觀。<br />3.  **InvokePowerShellDesigner.xaml** 和 **InvokePowerShellDesigner.cs**：定義非泛型 `InvokePowerShell` 活動在 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 中的外觀。|  
+|<span data-ttu-id="72f6c-114">專案名稱</span><span class="sxs-lookup"><span data-stu-id="72f6c-114">Project Name</span></span>|<span data-ttu-id="72f6c-115">描述</span><span class="sxs-lookup"><span data-stu-id="72f6c-115">Description</span></span>|<span data-ttu-id="72f6c-116">主要檔案</span><span class="sxs-lookup"><span data-stu-id="72f6c-116">Main Files</span></span>|  
+|------------------|-----------------|----------------|  
+|<span data-ttu-id="72f6c-117">CodedClient</span><span class="sxs-lookup"><span data-stu-id="72f6c-117">CodedClient</span></span>|<span data-ttu-id="72f6c-118">使用 PowerShell 活動的範例用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="72f6c-118">A sample client application that uses the PowerShell activity.</span></span>|<span data-ttu-id="72f6c-119">-   **Program.cs**： 以程式設計方式建立循序工作流程可呼叫 InvokePowerShell 活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-119">-   **Program.cs**: Programmatically creates a sequence-based workflow that calls the InvokePowerShell activity.</span></span>|  
+|<span data-ttu-id="72f6c-120">DesignerClient</span><span class="sxs-lookup"><span data-stu-id="72f6c-120">DesignerClient</span></span>|<span data-ttu-id="72f6c-121">包含 `InvokePowerShell` 自訂活動和其他自訂活動在內的一組自訂活動，以及使用它們的工作流程。</span><span class="sxs-lookup"><span data-stu-id="72f6c-121">A set of custom activities that contain the `InvokePowerShell` custom activity and other miscellaneous custom activities, and a workflow that uses them.</span></span>|<ul><li><span data-ttu-id="72f6c-122">活動：</span><span class="sxs-lookup"><span data-stu-id="72f6c-122">Activities:</span></span><br /><br /> <ul><li><span data-ttu-id="72f6c-123">**PrintCollection.cs**： 協助程式活動會列印到主控台的集合中的所有項目。</span><span class="sxs-lookup"><span data-stu-id="72f6c-123">**PrintCollection.cs**: A helper activity that prints all the items in a collection to the console.</span></span></li><li><span data-ttu-id="72f6c-124">**ReadLine.cs**： 從主控台讀取輸入的協助程式活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-124">**ReadLine.cs**: A helper activity for reading input from the console.</span></span></li></ul></li><li><span data-ttu-id="72f6c-125">檔案系統：</span><span class="sxs-lookup"><span data-stu-id="72f6c-125">File System:</span></span><br /><br /> <ul><li><span data-ttu-id="72f6c-126">**Copy.xaml**： 將檔案複製的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-126">**Copy.xaml**: An activity that copies a file.</span></span></li><li><span data-ttu-id="72f6c-127">**CreateFile.xaml**： 建立檔案的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-127">**CreateFile.xaml**: An activity that creates a file.</span></span></li><li><span data-ttu-id="72f6c-128">**DeleteFile.xaml**： 刪除檔案活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-128">**DeleteFile.xaml**: An activity that deletes a file.</span></span></li><li><span data-ttu-id="72f6c-129">**MakeDir.xaml**： 建立目錄的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-129">**MakeDir.xaml**: An activity that creates a directory.</span></span></li><li><span data-ttu-id="72f6c-130">**Move.xaml**： 移動檔案的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-130">**Move.xaml**: An activity that moves a file.</span></span></li><li><span data-ttu-id="72f6c-131">**ReadFile.xaml**： 讀取檔案，並傳回其內容的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-131">**ReadFile.xaml**: An activity that reads a file and returns its contents.</span></span></li><li><span data-ttu-id="72f6c-132">**TestPath.xaml**： 測試路徑是否存在的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-132">**TestPath.xaml**: An activity that tests for the existence of a path.</span></span></li></ul></li><li><span data-ttu-id="72f6c-133">處理序：</span><span class="sxs-lookup"><span data-stu-id="72f6c-133">Process:</span></span><br /><br /> <ul><li><span data-ttu-id="72f6c-134">**GetProcess.xaml**： 取得執行中處理序清單的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-134">**GetProcess.xaml**: An activity that gets a list of running processes.</span></span></li><li><span data-ttu-id="72f6c-135">**StopProcess.xaml**： 停止特定處理序的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-135">**StopProcess.xaml**: An activity that stops a specific process.</span></span></li></ul></li><li><span data-ttu-id="72f6c-136">**Program.cs**： 呼叫 Sequence1 工作流程。</span><span class="sxs-lookup"><span data-stu-id="72f6c-136">**Program.cs**: Calls the Sequence1 workflow.</span></span></li><li><span data-ttu-id="72f6c-137">**Sequence1.xaml**： 循序工作流程。</span><span class="sxs-lookup"><span data-stu-id="72f6c-137">**Sequence1.xaml**: A sequence-based workflow.</span></span></li></ul>|  
+|<span data-ttu-id="72f6c-138">PowerShell</span><span class="sxs-lookup"><span data-stu-id="72f6c-138">PowerShell</span></span>|<span data-ttu-id="72f6c-139">`InvokePowerShell` 活動及其相關聯的設計工具。</span><span class="sxs-lookup"><span data-stu-id="72f6c-139">The `InvokePowerShell` activity and its associated designers.</span></span>|<span data-ttu-id="72f6c-140">活動檔案</span><span class="sxs-lookup"><span data-stu-id="72f6c-140">Activity Files</span></span><br /><br /> <span data-ttu-id="72f6c-141">-   **ExecutePowerShell.cs**： 主要執行邏輯的活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-141">-   **ExecutePowerShell.cs**: The main execution logic of the activity.</span></span><br /><span data-ttu-id="72f6c-142">-   **InvokePowerShell.cs**： 主要執行邏輯，其中包含泛型 （傳回值） 版本和非泛型 （非傳回值） 版本的包裝函式。</span><span class="sxs-lookup"><span data-stu-id="72f6c-142">-   **InvokePowerShell.cs**: The wrapper around the main execution logic, which contains a generic (return value) version and a non-generic (non-return value) version.</span></span> <span data-ttu-id="72f6c-143">這是活動的公用介面。</span><span class="sxs-lookup"><span data-stu-id="72f6c-143">This is the public interface for the activity.</span></span><br /><span data-ttu-id="72f6c-144">-   **NoPersistZone.cs**： 這個活動會防止任何子活動保存。</span><span class="sxs-lookup"><span data-stu-id="72f6c-144">-   **NoPersistZone.cs**: This activity prevents any child activities from persisting.</span></span> <span data-ttu-id="72f6c-145">在 `InvokePowerShell` 活動實作中使用這個類別，以防止活動於執行中保存。</span><span class="sxs-lookup"><span data-stu-id="72f6c-145">This class is used within the `InvokePowerShell` activity implementation to prevent the activity from being persisted mid-execution.</span></span><br /><br /> <span data-ttu-id="72f6c-146">設計工具檔案：</span><span class="sxs-lookup"><span data-stu-id="72f6c-146">Designer files:</span></span><br /><br /> <span data-ttu-id="72f6c-147">1.**ArgumentDictionaryEditor.cs**: Windows 對話方塊，可讓使用者編輯的引數`InvokePowerShell`活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-147">1.  **ArgumentDictionaryEditor.cs**: A Windows dialog that allows the user to edit the arguments of the `InvokePowerShell` activity.</span></span><br /><span data-ttu-id="72f6c-148">2.**GenericInvokePowerShellDesigner.xaml**和**GenericInvokePowerShellDesigner.xaml.cs**： 定義泛型外觀`InvokePowerShell`中的活動[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="72f6c-148">2.  **GenericInvokePowerShellDesigner.xaml** and **GenericInvokePowerShellDesigner.xaml.cs**: Defines the appearance of the generic `InvokePowerShell` activity in [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].</span></span><br /><span data-ttu-id="72f6c-149">3.**InvokePowerShellDesigner.xaml**和**InvokePowerShellDesigner.cs**： 定義非泛型的外觀`InvokePowerShell`中的活動[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="72f6c-149">3.  **InvokePowerShellDesigner.xaml** and **InvokePowerShellDesigner.cs**: Defines the appearance of the non-generic `InvokePowerShell` activity in [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].</span></span>|  
   
- 先討論用戶端專案，因為了解 PowerShell 活動的用法後，就會比較容易了解其內部功能。  
+ <span data-ttu-id="72f6c-150">先討論用戶端專案，因為了解 PowerShell 活動的用法後，就會比較容易了解其內部功能。</span><span class="sxs-lookup"><span data-stu-id="72f6c-150">The client projects are discussed first, as it is easier to understand the internal functionality of the PowerShell activity once its use is understood.</span></span>  
   
-## 使用這個範例  
- 下列章節描述如何使用範例中的三個專案。  
+## <a name="using-this-sample"></a><span data-ttu-id="72f6c-151">使用這個範例</span><span class="sxs-lookup"><span data-stu-id="72f6c-151">Using This Sample</span></span>  
+ <span data-ttu-id="72f6c-152">下列章節描述如何使用範例中的三個專案。</span><span class="sxs-lookup"><span data-stu-id="72f6c-152">The following sections describe how to use the three projects in the sample.</span></span>  
   
-### 使用程式碼用戶端專案  
- 範例用戶端以程式設計方式建立序列活動，其中包含使用 `InvokePowerShell` 活動的數個不同方法範例。第一個引動過程會啟動記事本。  
+### <a name="using-the-coded-client-project"></a><span data-ttu-id="72f6c-153">使用程式碼用戶端專案</span><span class="sxs-lookup"><span data-stu-id="72f6c-153">Using the Coded Client Project</span></span>  
+ <span data-ttu-id="72f6c-154">範例用戶端以程式設計方式建立序列活動，其中包含使用 `InvokePowerShell` 活動的數個不同方法範例。</span><span class="sxs-lookup"><span data-stu-id="72f6c-154">The sample client programmatically creates a sequence activity, which contains examples of several different methods of using the `InvokePowerShell` activity.</span></span> <span data-ttu-id="72f6c-155">第一個引動過程會啟動記事本。</span><span class="sxs-lookup"><span data-stu-id="72f6c-155">The first invocation launches Notepad.</span></span>  
   
 ```  
 new InvokePowerShell()  
 {  
     CommandText = "notepad"  
 },  
-  
 ```  
   
- 第二個引動過程取得本機電腦上執行中處理序的清單。  
+ <span data-ttu-id="72f6c-156">第二個引動過程取得本機電腦上執行中處理序的清單。</span><span class="sxs-lookup"><span data-stu-id="72f6c-156">The second invocation gets a list of the processes running on the local machine.</span></span>  
   
 ```  
 new InvokePowerShell<Process>()  
@@ -67,54 +70,50 @@ new InvokePowerShell<Process>()
     CommandText = "Get-Process",  
     Output = processes1,  
 },  
-  
 ```  
   
- `Output` 是用來儲存命令輸出的變數。  
+ <span data-ttu-id="72f6c-157">`Output` 是用來儲存命令輸出的變數。</span><span class="sxs-lookup"><span data-stu-id="72f6c-157">`Output` is the variable used to store the output of the command.</span></span>  
   
- 下一個呼叫示範如何針對 PowerShell 叫用的每個個別輸出執行後處理步驟。`InitializationAction` 設為函式，會輸出每個處理序的字串表示。由 `InvokePowerShell<string>` 活動將這些字串的集合傳回到 `Output` 變數中。  
+ <span data-ttu-id="72f6c-158">下一個呼叫示範如何針對 PowerShell 叫用的每個個別輸出執行後置處理步驟。</span><span class="sxs-lookup"><span data-stu-id="72f6c-158">The next call demonstrates how to run a post-processing step on each individual output of the PowerShell invocation.</span></span> <span data-ttu-id="72f6c-159">`InitializationAction` 設為函式，會輸出每個處理序的字串表示法。</span><span class="sxs-lookup"><span data-stu-id="72f6c-159">`InitializationAction` is set to the function that outputs a string representation for each process.</span></span> <span data-ttu-id="72f6c-160">由 `Output` 活動將這些字串的集合傳回到 `InvokePowerShell<string>` 變數中。</span><span class="sxs-lookup"><span data-stu-id="72f6c-160">The collection of these strings is returned in the `Output` variable by the `InvokePowerShell<string>` activity.</span></span>  
   
- 後續 `InvokePowerShell` 呼叫示範如何將資料傳遞至活動，並取得輸出和錯誤。  
+ <span data-ttu-id="72f6c-161">後續 `InvokePowerShell` 呼叫示範如何將資料傳遞至活動，並取得輸出和錯誤。</span><span class="sxs-lookup"><span data-stu-id="72f6c-161">The succeeding `InvokePowerShell` calls demonstrate passing data into the activity and getting outputs and errors out.</span></span>  
   
-### 使用設計工具用戶端專案  
- DesignerClient 專案包含一組自訂活動，其中大部分活動在建置中包含 `InvokePowerShell` 活動。大部分活動會呼叫非泛型 `InvokePowerShell` 活動版本，而且不預期接收傳回值。其他活動會使用泛型 `InvokePowerShell` 活動版本，而且使用 `InitializationAction` 引數，對結果進行後置處理。  
+### <a name="using-the-designer-client-project"></a><span data-ttu-id="72f6c-162">使用設計工具用戶端專案</span><span class="sxs-lookup"><span data-stu-id="72f6c-162">Using the Designer Client Project</span></span>  
+ <span data-ttu-id="72f6c-163">DesignerClient 專案包含一組自訂活動，其中大部分活動在建置中包含 `InvokePowerShell` 活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-163">The DesignerClient project consists of a set of custom activities, almost all of which are built containing the `InvokePowerShell` activity.</span></span> <span data-ttu-id="72f6c-164">大部分活動會呼叫非泛型 `InvokePowerShell` 活動版本，而且不預期接收傳回值。</span><span class="sxs-lookup"><span data-stu-id="72f6c-164">Most of the activities call the non-generic version of the `InvokePowerShell` activity, and do not expect a return value.</span></span> <span data-ttu-id="72f6c-165">其他活動會使用泛型 `InvokePowerShell` 活動版本，而且使用 `InitializationAction` 引數，對結果進行後置處理。</span><span class="sxs-lookup"><span data-stu-id="72f6c-165">Other activities use the generic version of the `InvokePowerShell` activity, and use the `InitializationAction` argument to post-process the results.</span></span>  
   
-## 使用 PowerShell 專案  
- 活動的主要動作發生於 `ExecutePowerShell` 類別。因為 PowerShell 命令執行不應該封鎖主要工作流程執行緒，所以活動會繼承自 <xref:System.Activities.AsyncCodeActivity> 類別，建立成為非同步活動。  
+## <a name="using-the-powershell-project"></a><span data-ttu-id="72f6c-166">使用 PowerShell 專案</span><span class="sxs-lookup"><span data-stu-id="72f6c-166">Using the PowerShell Project</span></span>  
+ <span data-ttu-id="72f6c-167">活動的主要動作發生於 `ExecutePowerShell` 類別。</span><span class="sxs-lookup"><span data-stu-id="72f6c-167">The main action of the activity takes place in the `ExecutePowerShell` class.</span></span> <span data-ttu-id="72f6c-168">因為 PowerShell 命令執行不應該封鎖主要工作流程執行緒，所以活動會繼承自 <xref:System.Activities.AsyncCodeActivity> 類別，建立成為非同步活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-168">Because the execution of PowerShell commands should not block the main workflow thread, the activity is created to be an asynchronous activity by inheriting from the <xref:System.Activities.AsyncCodeActivity> class.</span></span>  
   
- 工作流程執行階段呼叫 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 方法，開始執行活動。開始時先呼叫 PowerShell API 以建立 PowerShell 管線。  
+ <span data-ttu-id="72f6c-169">工作流程執行階段呼叫 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 方法，開始執行活動。</span><span class="sxs-lookup"><span data-stu-id="72f6c-169">The <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> method is called by the workflow runtime to begin running the activity.</span></span> <span data-ttu-id="72f6c-170">開始時先呼叫 PowerShell API 以建立 PowerShell 管線。</span><span class="sxs-lookup"><span data-stu-id="72f6c-170">It starts by calling PowerShell APIs to create a PowerShell pipeline.</span></span>  
   
 ```  
 runspace = RunspaceFactory.CreateRunspace();  
 runspace.Open();  
 pipeline = runspace.CreatePipeline();  
-  
 ```  
   
- 接著建立 PowerShell 命令，並以參數和變數來擴展命令。  
+ <span data-ttu-id="72f6c-171">接著建立 PowerShell 命令，並以參數和變數來擴展命令。</span><span class="sxs-lookup"><span data-stu-id="72f6c-171">It then creates a PowerShell command and populates it with parameters and variables.</span></span>  
   
 ```  
 Command cmd = new Command(this.CommandText, this.IsScript);   
 // loop over parameters and run: cmd.Parameters.Add(...)  
 // loop over variables and run: runspace.SessionStateProxy.SetVariable(...)  
 pipeline.Commands.Add(cmd);  
-  
 ```  
   
- 透過管道傳入的輸入此時也會傳送至管線。最後，將管線包裝在 `PipelineInvokerAsyncResult` 物件中並予以傳回。`PipelineInvokerAsyncResult` 物件會註冊接聽程式並叫用管線。  
+ <span data-ttu-id="72f6c-172">透過管道傳入的輸入此時也會傳送至管線。</span><span class="sxs-lookup"><span data-stu-id="72f6c-172">The inputs piped in are also sent to the pipeline at this point.</span></span> <span data-ttu-id="72f6c-173">最後，將管線包裝在 `PipelineInvokerAsyncResult` 物件中並予以傳回。</span><span class="sxs-lookup"><span data-stu-id="72f6c-173">Finally, the pipeline is wrapped in a `PipelineInvokerAsyncResult` object and returned.</span></span> <span data-ttu-id="72f6c-174">`PipelineInvokerAsyncResult` 物件會註冊接聽程式並叫用管線。</span><span class="sxs-lookup"><span data-stu-id="72f6c-174">The `PipelineInvokerAsyncResult` object registers a listener and invokes the pipeline.</span></span>  
   
 ```  
 pipeline.InvokeAsync();  
-  
 ```  
   
- 執行完成時，輸出和錯誤會儲存在相同的 `PipelineInvokerAsyncResult` 物件中，並透過呼叫原先傳遞至 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 的回呼方法，讓控制權回到工作流程執行階段。  
+ <span data-ttu-id="72f6c-175">執行完成時，輸出和錯誤會儲存在相同的 `PipelineInvokerAsyncResult` 物件中，並透過呼叫原先傳遞至 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 的回呼方法，讓控制權回到工作流程執行階段。</span><span class="sxs-lookup"><span data-stu-id="72f6c-175">When execution finishes, output and errors are stored within the same `PipelineInvokerAsyncResult` object, and control is handed back to the workflow runtime by calling the callback method originally passed to <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>.</span></span>  
   
- 在方法執行結束時，工作流程執行階段會呼叫活動的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 方法。  
+ <span data-ttu-id="72f6c-176">在方法執行結束時，工作流程執行階段會呼叫活動的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="72f6c-176">At the end of the method's execution, the workflow runtime calls the activity’s <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> method.</span></span>  
   
- `InvokePowerShell` 類別會包裝 `ExecutePowerShellCommand` 類別，並建立活動的兩個版本：泛型版本和非泛型版本。非泛型版本會直接傳回 PowerShell 執行的輸出，而泛型版本會將個別結果轉換成泛型類型。  
+ <span data-ttu-id="72f6c-177">`InvokePowerShell` 類別會包裝 `ExecutePowerShellCommand` 類別，並建立活動的兩個版本：泛型版本和非泛型版本。</span><span class="sxs-lookup"><span data-stu-id="72f6c-177">The `InvokePowerShell` class wraps the `ExecutePowerShellCommand` class and creates two versions of the activity; a generic version and a non-generic version.</span></span> <span data-ttu-id="72f6c-178">非泛型版本會直接傳回 PowerShell 執行的輸出，而泛型版本會將個別結果轉換成泛型類型。</span><span class="sxs-lookup"><span data-stu-id="72f6c-178">The non-generic version returns the output of the PowerShell execution directly, whereas the generic version transforms the individual results to the generic type.</span></span>  
   
- 活動的泛型版本是當做會呼叫 `ExecutePowerShellCommand` 並對其結果進行後置處理的循序工作流程來實作。針對結果集合中的每個項目，如果設定 `InitializationAction`，後置處理步驟就會呼叫它，否則會執行簡單轉型。  
+ <span data-ttu-id="72f6c-179">活動的泛型版本是當做會呼叫 `ExecutePowerShellCommand` 並對其結果進行後置處理的循序工作流程來實作。</span><span class="sxs-lookup"><span data-stu-id="72f6c-179">The generic version of the activity is implemented as a sequential workflow that calls `ExecutePowerShellCommand` and post-processes its results.</span></span> <span data-ttu-id="72f6c-180">針對結果集合中的每個項目，如果設定 `InitializationAction`，後置處理步驟就會呼叫它，</span><span class="sxs-lookup"><span data-stu-id="72f6c-180">For each element in the result collection, the post-processing step calls `InitializationAction` if it is set.</span></span> <span data-ttu-id="72f6c-181">否則會執行簡單轉型。</span><span class="sxs-lookup"><span data-stu-id="72f6c-181">Otherwise, it does a simple cast.</span></span>  
   
 ```  
 new ForEach<PSObject>  
@@ -151,10 +150,9 @@ new ForEach<PSObject>
         }  
     }  
 },  
-  
 ```  
   
- 針對兩個 `InvokePowerShell` 活動 \(泛型和非泛型\)，分別建立一個設計工具。InvokePowerShellDesigner.xaml 及其相關聯的 .cs 檔案定義非泛型 `InvokePowerShell` 活動版本在 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 中的外觀。在 InvokePowerShellDesigner.xaml 中，<xref:System.Windows.Controls.DockPanel> 是用來代表圖形介面。  
+ <span data-ttu-id="72f6c-182">針對兩個 `InvokePowerShell` 活動 (泛型和非泛型)，分別建立一個設計工具。</span><span class="sxs-lookup"><span data-stu-id="72f6c-182">For each of the two `InvokePowerShell` activities (generic, and non-generic), a designer was created.</span></span> <span data-ttu-id="72f6c-183">InvokePowerShellDesigner.xaml 及其相關聯的 .cs 檔案定義非泛型 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 活動版本在 `InvokePowerShell` 中的外觀。</span><span class="sxs-lookup"><span data-stu-id="72f6c-183">InvokePowerShellDesigner.xaml and its associated .cs file define the appearance in [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] for the non-generic version of the `InvokePowerShell` activity.</span></span> <span data-ttu-id="72f6c-184">在 InvokePowerShellDesigner.xaml 中，<xref:System.Windows.Controls.DockPanel> 是用來代表圖形介面。</span><span class="sxs-lookup"><span data-stu-id="72f6c-184">Inside InvokePowerShellDesigner.xaml, a <xref:System.Windows.Controls.DockPanel> is used to represent the graphical interface.</span></span>  
   
 ```  
 <DockPanel x:Uid="DockPanel_1" LastChildFill="True">  
@@ -163,12 +161,11 @@ new ForEach<PSObject>
                  TextWrapping="WrapWithOverflow"  AcceptsReturn="True" MinLines="4" MaxLines="4"  
                  Background="{x:Null}" Margin="3" />  
     </DockPanel>  
-  
 ```  
   
- 請注意，文字方塊的 `Text` 屬性是雙向繫結，可確保活動的 `CommandText` 屬性值相當於設計工具中的輸入值。  
+ <span data-ttu-id="72f6c-185">請注意，文字方塊的 `Text` 屬性是雙向繫結，可確保活動的 `CommandText` 屬性值相當於設計工具中的輸入值。</span><span class="sxs-lookup"><span data-stu-id="72f6c-185">Note that the `Text` property of the text box is a two-way binding that ensures that the value of the activity’s `CommandText` property is equivalent to the value input into the designer.</span></span>  
   
- GenericInvokePowerShellDesigner.xaml 及其相關聯的 .cs 檔案定義泛型 `InvokePowerShell` 活動的圖形介面。此設計工具略為複雜，因為它可讓使用者設定 `InitializationAction`。關鍵項目是 <xref:System.Activities.Presentation.WorkflowItemPresenter> 允許子活動拖放至 `InvokePowerShell` 設計工具介面上的使用方式。  
+ <span data-ttu-id="72f6c-186">GenericInvokePowerShellDesigner.xaml 及其相關聯的 .cs 檔案定義泛型 `InvokePowerShell` 活動的圖形介面。</span><span class="sxs-lookup"><span data-stu-id="72f6c-186">GenericInvokePowerShellDesigner.xaml and its associated .cs file define the graphical interface for the generic `InvokePowerShell` activity.</span></span> <span data-ttu-id="72f6c-187">此設計工具略為複雜，因為它可讓使用者設定 `InitializationAction`。</span><span class="sxs-lookup"><span data-stu-id="72f6c-187">The designer is slightly more complicated because it allows users to set an `InitializationAction`.</span></span> <span data-ttu-id="72f6c-188">關鍵項目是 <xref:System.Activities.Presentation.WorkflowItemPresenter> 允許子活動拖放至 `InvokePowerShell` 設計工具介面上的使用方式。</span><span class="sxs-lookup"><span data-stu-id="72f6c-188">The key element is the usage of <xref:System.Activities.Presentation.WorkflowItemPresenter> to allow drag and drop of child activities onto the `InvokePowerShell` designer surface.</span></span>  
   
 ```  
 <sap:WorkflowItemPresenter x:Uid="sap:WorkflowItemPresenter_1" Margin="0,10,0,10"  
@@ -176,49 +173,48 @@ new ForEach<PSObject>
     AllowedItemType="{x:Type sa:Activity}"  
     Item="{Binding Path=ModelItem.InitializationAction.Handler, Mode=TwoWay}"  
     Grid.Row="1" Grid.Column="1" />  
-  
 ```  
   
- 設計工具自訂並不止於在設計畫布上定義活動外觀的 .xaml 檔案。用來顯示活動參數的對話方塊也可以自訂。這些參數和 PowerShell 變數會影響 PowerShell 命令的行為。活動將它們公開為 <xref:System.Collections.Generic.Dictionary%601> 類型。ArgumentDictionaryEditor.cs、PropertyEditorResources.xaml 和 PropertyEditorResources.cs 定義可讓您編輯這些類型的對話方塊。  
+ <span data-ttu-id="72f6c-189">設計工具自訂並不止於在設計畫布上定義活動外觀的 .xaml 檔案。</span><span class="sxs-lookup"><span data-stu-id="72f6c-189">The designer customization does not stop with the .xaml files that define the appearance of the activity on the design canvas.</span></span> <span data-ttu-id="72f6c-190">用來顯示活動參數的對話方塊也可以自訂。</span><span class="sxs-lookup"><span data-stu-id="72f6c-190">The dialog boxes used to display the parameters of the activity can also be customized.</span></span> <span data-ttu-id="72f6c-191">這些參數和 PowerShell 變數會影響 PowerShell 命令的行為。</span><span class="sxs-lookup"><span data-stu-id="72f6c-191">These parameters and PowerShell variables affect the behavior of PowerShell commands.</span></span> <span data-ttu-id="72f6c-192">活動將它們當做公開<!--zz <xref:System.Collections.Generic.Dictionary%601>-->`System.Collections.Generic.Dictionary`型別。</span><span class="sxs-lookup"><span data-stu-id="72f6c-192">The activity exposes them as <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` types.</span></span> <span data-ttu-id="72f6c-193">ArgumentDictionaryEditor.cs、PropertyEditorResources.xaml 和 PropertyEditorResources.cs 定義可讓您編輯這些類型的對話方塊。</span><span class="sxs-lookup"><span data-stu-id="72f6c-193">ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml and PropertyEditorResources.cs define the dialog box that allows you to edit these types.</span></span>  
   
-## 若要安裝、建立及執行範例  
- 您必須安裝 Windows PowerShell，才能執行這個範例。Windows PowerShell 可從下列位置安裝：[Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383)。  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="72f6c-194">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="72f6c-194">To set up, build, and run the sample</span></span>  
+ <span data-ttu-id="72f6c-195">您必須安裝 Windows PowerShell，才能執行這個範例。</span><span class="sxs-lookup"><span data-stu-id="72f6c-195">You must install Windows PowerShell to run this sample.</span></span> <span data-ttu-id="72f6c-196">可以從下列位置安裝 Windows PowerShell: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383)。</span><span class="sxs-lookup"><span data-stu-id="72f6c-196">Windows PowerShell can be installed from this location: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383).</span></span>  
   
-#### 若要執行程式碼用戶端  
+#### <a name="to-run-the-coded-client"></a><span data-ttu-id="72f6c-197">若要執行程式碼用戶端</span><span class="sxs-lookup"><span data-stu-id="72f6c-197">To run the coded client</span></span>  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 PowerShell.sln。  
+1.  <span data-ttu-id="72f6c-198">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 PowerShell.sln。</span><span class="sxs-lookup"><span data-stu-id="72f6c-198">Open PowerShell.sln using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  以滑鼠右鍵按一下方案，建置此方案。  
+2.  <span data-ttu-id="72f6c-199">以滑鼠右鍵按一下方案，建置此方案。</span><span class="sxs-lookup"><span data-stu-id="72f6c-199">Right-click the solution and build it.</span></span>  
   
-3.  以滑鼠右鍵按一下 **CodedClient** 專案，並選取 \[**設定為啟始專案**\]。  
+3.  <span data-ttu-id="72f6c-200">以滑鼠右鍵按一下**CodedClient**專案，然後選取**設定為啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="72f6c-200">Right-click the **CodedClient** project and select **Set as Startup Project**.</span></span>  
   
-4.  按 CTRL\+F5 執行應用程式。  
+4.  <span data-ttu-id="72f6c-201">按 CTRL+F5 執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="72f6c-201">Press CTRL+F5 to run the application.</span></span>  
   
-#### 若要執行設計工具用戶端  
+#### <a name="to-run-the-designer-client"></a><span data-ttu-id="72f6c-202">若要執行設計工具用戶端</span><span class="sxs-lookup"><span data-stu-id="72f6c-202">To run the designer client</span></span>  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 PowerShell.sln。  
+1.  <span data-ttu-id="72f6c-203">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 PowerShell.sln。</span><span class="sxs-lookup"><span data-stu-id="72f6c-203">Open PowerShell.sln using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  以滑鼠右鍵按一下方案，建置此方案。  
+2.  <span data-ttu-id="72f6c-204">以滑鼠右鍵按一下方案，建置此方案。</span><span class="sxs-lookup"><span data-stu-id="72f6c-204">Right-click the solution and build it.</span></span>  
   
-3.  以滑鼠右鍵按一下 **DesignerClient** 專案，並選取 \[**設定為啟始專案**\]。  
+3.  <span data-ttu-id="72f6c-205">以滑鼠右鍵按一下**DesignerClient**專案，然後選取**設定為啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="72f6c-205">Right-click the **DesignerClient** project and select **Set as Startup Project**.</span></span>  
   
-4.  按 CTRL\+F5 執行應用程式。  
+4.  <span data-ttu-id="72f6c-206">按 CTRL+F5 執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="72f6c-206">Press CTRL+F5 to run the application.</span></span>  
   
-## 已知問題  
+## <a name="known-issues"></a><span data-ttu-id="72f6c-207">已知問題</span><span class="sxs-lookup"><span data-stu-id="72f6c-207">Known Issues</span></span>  
   
-1.  如果因為從另一個專案參考 `InvokePowerShell` 活動組件或專案而造成建置錯誤，您可能需要將 `<SpecificVersion>True</SpecificVersion>` 項目手動加入至新專案 .csproj 檔案中參考 `InvokePowerShell` 的程式行底下。  
+1.  <span data-ttu-id="72f6c-208">如果因為從另一個專案參考 `InvokePowerShell` 活動組件或專案而造成建置錯誤，您可能需要將 `<SpecificVersion>True</SpecificVersion>` 項目手動加入至新專案 .csproj 檔案中參考 `InvokePowerShell` 的程式行底下。</span><span class="sxs-lookup"><span data-stu-id="72f6c-208">If referencing the `InvokePowerShell` activity assembly or project from another project results in a build error, you may need to manually add the `<SpecificVersion>True</SpecificVersion>` element to the .csproj file of the new project under the line that references `InvokePowerShell`.</span></span>  
   
-2.  如果未安裝 Windows PowerShell，當您將 `InvokePowerShell` 活動加入至工作流程時，Visual Studio 中就會顯示下列錯誤訊息：`工作流程設計工具在您的文件中發生問題。無法載入檔案或組件 'System.Management.Automation' 或其相依性的其中之一。系統找不到指定的檔案。`  
+2.  <span data-ttu-id="72f6c-209">當您新增如果未安裝 Windows PowerShell，將下列的錯誤訊息會顯示在 Visual Studio 中`InvokePowerShell`至工作流程活動：`Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`</span><span class="sxs-lookup"><span data-stu-id="72f6c-209">If Windows PowerShell is not installed, the following error message is displayed in Visual Studio as soon as you add an `InvokePowerShell` activity onto a workflow: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`</span></span>  
   
-3.  在 Windows PowerShell 2.0 中，以程式設計方式呼叫 `$input.MoveNext()` 會失敗，而且使用 `$input.MoveNext()` 的程式碼會產生非預期的錯誤和結果。若要解決此問題，逐一查看陣列時，請考慮使用 PowerShell 動詞命令 `foreach`，而不要呼叫 `MoveNext()`。  
+3.  <span data-ttu-id="72f6c-210">在 Windows PowerShell 2.0 中，以程式設計方式呼叫 `$input.MoveNext()` 會失敗，而且使用 `$input.MoveNext()` 的程式碼會產生非預期的錯誤和結果。</span><span class="sxs-lookup"><span data-stu-id="72f6c-210">In Windows PowerShell 2.0, programmatically calling `$input.MoveNext()` fails and scripts using `$input.MoveNext()` produce unintended errors and results.</span></span> <span data-ttu-id="72f6c-211">若要解決此問題，逐一查看陣列時，請考慮使用 PowerShell 動詞命令 `foreach`，而不要呼叫 `MoveNext()`。</span><span class="sxs-lookup"><span data-stu-id="72f6c-211">To work around this issue, consider using the PowerShell verb `foreach` instead of calling `MoveNext()` when iterating an array.</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="72f6c-212">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="72f6c-212">The samples may already be installed on your machine.</span></span> <span data-ttu-id="72f6c-213">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="72f6c-213">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="72f6c-214">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="72f6c-214">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="72f6c-215">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="72f6c-215">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="72f6c-216">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72f6c-216">See Also</span></span>
