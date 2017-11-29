@@ -1,1 +1,1 @@
-Windows 市集
+<span data-ttu-id="f6138-101">Windows 市集</span><span class="sxs-lookup"><span data-stu-id="f6138-101">Windows Store</span></span>

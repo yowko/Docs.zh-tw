@@ -1,96 +1,91 @@
 ---
-title: "Common Tasks Performed with Visual Basic Operators | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operators [Visual Basic], logical"
-  - "operators [Visual Basic], string concatenation"
-  - "operators [Visual Basic], bitwise"
-  - "operators [Visual Basic], bit-shift"
-  - "operators [Visual Basic], arithmetic"
-  - "operators [Visual Basic], string comparison"
-  - "operators [Visual Basic], concatenation"
-  - "Visual Basic code, operators"
-  - "operators [Visual Basic], comparison"
-  - "operators [Visual Basic], short-circuiting logical"
+title: "與 Visual Basic 運算子一起執行的一般工作"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- operators [Visual Basic], logical
+- operators [Visual Basic], string concatenation
+- operators [Visual Basic], bitwise
+- operators [Visual Basic], bit-shift
+- operators [Visual Basic], arithmetic
+- operators [Visual Basic], string comparison
+- operators [Visual Basic], concatenation
+- Visual Basic code, operators
+- operators [Visual Basic], comparison
+- operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Common Tasks Performed with Visual Basic Operators
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-運算子會執行許多一般工作，這些工作會涉及一或多個稱為「*運算元*」\(Operand\) 的運算式。  
+# <a name="common-tasks-performed-with-visual-basic-operators"></a><span data-ttu-id="0d434-102">與 Visual Basic 運算子一起執行的一般工作</span><span class="sxs-lookup"><span data-stu-id="0d434-102">Common Tasks Performed with Visual Basic Operators</span></span>
+<span data-ttu-id="0d434-103">運算子會執行許多常見的工作包含一個或多個運算式呼叫*運算元*。</span><span class="sxs-lookup"><span data-stu-id="0d434-103">Operators perform many common tasks involving one or more expressions called *operands*.</span></span>  
   
-## 算術和位元移位工作  
- 下表會彙總可用的算術和位元移位作業。  
+## <a name="arithmetic-and-bit-shift-tasks"></a><span data-ttu-id="0d434-104">算術和位元移位的工作</span><span class="sxs-lookup"><span data-stu-id="0d434-104">Arithmetic and Bit-shift Tasks</span></span>  
+ <span data-ttu-id="0d434-105">下表摘要說明可用的算術以及位元移位作業。</span><span class="sxs-lookup"><span data-stu-id="0d434-105">The following table summarizes the available arithmetic and bit-shift operations.</span></span>  
   
-|||  
-|-|-|  
-|若要|請參閱|  
-|將兩個數值相加|[\+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|將兩個數值相減|[\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|改變數值的正負號|[\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|將兩個數值相乘|[\* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|將兩個數值相除|[\/ Operator](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
-|尋找兩個數值相除後的商數 \(沒有餘數\)|[\\ Operator](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
-|尋找兩個數值相除後的餘數 \(沒有商數\)|[Mod 運算子](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|將某個數值提高為另一個數值的次方|[^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|將數值的位元模式移位至左邊|[\<\< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|將數值的位元模式移位至右邊|[\>\> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|<span data-ttu-id="0d434-106">以</span><span class="sxs-lookup"><span data-stu-id="0d434-106">To</span></span>|<span data-ttu-id="0d434-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="0d434-107">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="0d434-108">加入另一個數字的值</span><span class="sxs-lookup"><span data-stu-id="0d434-108">Add one numeric value to another</span></span>|[<span data-ttu-id="0d434-109">+ 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-109">+ Operator</span></span>](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
+|<span data-ttu-id="0d434-110">從另一個數字的值相減</span><span class="sxs-lookup"><span data-stu-id="0d434-110">Subtract one numeric value from another</span></span>|[<span data-ttu-id="0d434-111">-運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d434-111">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="0d434-112">反轉數字值的符號</span><span class="sxs-lookup"><span data-stu-id="0d434-112">Reverse the sign of a numeric value</span></span>|[<span data-ttu-id="0d434-113">-運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d434-113">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="0d434-114">乘以另一個數字的值</span><span class="sxs-lookup"><span data-stu-id="0d434-114">Multiply one numeric value by another</span></span>|[<span data-ttu-id="0d434-115">* 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-115">* Operator</span></span>](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
+|<span data-ttu-id="0d434-116">將一個數字的值分割成另一個</span><span class="sxs-lookup"><span data-stu-id="0d434-116">Divide one numeric value into another</span></span>|[<span data-ttu-id="0d434-117">/ 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d434-117">/ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
+|<span data-ttu-id="0d434-118">尋找商數的兩個數值 （沒有餘數）</span><span class="sxs-lookup"><span data-stu-id="0d434-118">Find the quotient of one numeric value divided by another (without the remainder)</span></span>|[<span data-ttu-id="0d434-119">\ 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d434-119">\ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
+|<span data-ttu-id="0d434-120">找出餘數的數字的值除以另一個 （不含商數）</span><span class="sxs-lookup"><span data-stu-id="0d434-120">Find the remainder of one numeric value divided by another (without the quotient)</span></span>|[<span data-ttu-id="0d434-121">Mod 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-121">Mod Operator</span></span>](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
+|<span data-ttu-id="0d434-122">引發的另一個數字的值</span><span class="sxs-lookup"><span data-stu-id="0d434-122">Raise one numeric value to the power of another</span></span>|[<span data-ttu-id="0d434-123">^ 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-123">^ Operator</span></span>](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
+|<span data-ttu-id="0d434-124">向左移一個數字值的位元模式</span><span class="sxs-lookup"><span data-stu-id="0d434-124">Shift the bit pattern of a numeric value to the left</span></span>|[<span data-ttu-id="0d434-125"><\<運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-125"><\< Operator</span></span>](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|<span data-ttu-id="0d434-126">向右移位一個數字值的位元模式</span><span class="sxs-lookup"><span data-stu-id="0d434-126">Shift the bit pattern of a numeric value to the right</span></span>|[<span data-ttu-id="0d434-127">>> 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-127">>> Operator</span></span>](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
-## 比較工作  
- 下表會彙總可用的比較作業。  
+## <a name="comparison-tasks"></a><span data-ttu-id="0d434-128">比較工作</span><span class="sxs-lookup"><span data-stu-id="0d434-128">Comparison Tasks</span></span>  
+ <span data-ttu-id="0d434-129">下表摘要說明可用的比較作業。</span><span class="sxs-lookup"><span data-stu-id="0d434-129">The following table summarizes the available comparison operations.</span></span>  
   
-|||  
-|-|-|  
-|若要|請參閱|  
-|判斷兩個值是否相等|`=` 運算子 \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|判斷兩個值是否不相等|`<>` 運算子 \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|判斷某個值是否小於另一個值|`<` 運算子 \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|判斷某個值是否大於另一個值|`>` 運算子 \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|判斷某個值是否小於或等於另一個值|`<=` 運算子 \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|判斷某個值是否大於或等於另一個值|`>=` 運算子 \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|判斷兩個物件變數是否參考相同的物件執行個體 \(Instance\)|[Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|判斷兩個物件變數是否參考不同的物件執行個體|[IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
-|判斷物件是否具有特定型別|[TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
+|<span data-ttu-id="0d434-130">以</span><span class="sxs-lookup"><span data-stu-id="0d434-130">To</span></span>|<span data-ttu-id="0d434-131">請參閱</span><span class="sxs-lookup"><span data-stu-id="0d434-131">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="0d434-132">判斷兩個值是否相等</span><span class="sxs-lookup"><span data-stu-id="0d434-132">Determine whether two values are equal</span></span>|<span data-ttu-id="0d434-133">`=`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="0d434-133">`=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="0d434-134">判斷兩個值是否不相等</span><span class="sxs-lookup"><span data-stu-id="0d434-134">Determine whether two values are unequal</span></span>|<span data-ttu-id="0d434-135">`<>`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="0d434-135">`<>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="0d434-136">判斷某個值是否小於另一個</span><span class="sxs-lookup"><span data-stu-id="0d434-136">Determine whether one value is less than another</span></span>|<span data-ttu-id="0d434-137">`<`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="0d434-137">`<` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="0d434-138">判斷某個值是否大於另一個</span><span class="sxs-lookup"><span data-stu-id="0d434-138">Determine whether one value is greater than another</span></span>|<span data-ttu-id="0d434-139">`>`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="0d434-139">`>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="0d434-140">判斷某個值是否小於或等於另一個</span><span class="sxs-lookup"><span data-stu-id="0d434-140">Determine whether one value is less than or equal to another</span></span>|<span data-ttu-id="0d434-141">`<=`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="0d434-141">`<=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="0d434-142">判斷某個值是否大於或等於另一個</span><span class="sxs-lookup"><span data-stu-id="0d434-142">Determine whether one value is greater than or equal to another</span></span>|<span data-ttu-id="0d434-143">`>=`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="0d434-143">`>=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="0d434-144">判斷兩個物件變數是否參考相同的物件執行個體</span><span class="sxs-lookup"><span data-stu-id="0d434-144">Determine whether two object variables refer to the same object instance</span></span>|[<span data-ttu-id="0d434-145">Is 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-145">Is Operator</span></span>](../../../../visual-basic/language-reference/operators/is-operator.md)|  
+|<span data-ttu-id="0d434-146">判斷兩個物件變數是否參考不同物件執行個體</span><span class="sxs-lookup"><span data-stu-id="0d434-146">Determine whether two object variables refer to different object instances</span></span>|[<span data-ttu-id="0d434-147">IsNot 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-147">IsNot Operator</span></span>](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
+|<span data-ttu-id="0d434-148">判斷物件是否為特定的型別</span><span class="sxs-lookup"><span data-stu-id="0d434-148">Determine whether an object is of a specific type</span></span>|[<span data-ttu-id="0d434-149">TypeOf 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-149">TypeOf Operator</span></span>](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
   
-## 串連工作  
- 下表會彙總可用的串連作業。  
+## <a name="concatenation-tasks"></a><span data-ttu-id="0d434-150">串連工作</span><span class="sxs-lookup"><span data-stu-id="0d434-150">Concatenation Tasks</span></span>  
+ <span data-ttu-id="0d434-151">下表摘要說明可用的串連作業。</span><span class="sxs-lookup"><span data-stu-id="0d434-151">The following table summarizes the available concatenation operations.</span></span>  
   
-|||  
-|-|-|  
-|若要|請參閱|  
-|將多個字串聯結 \(Join\) 成單一字串|`&` 運算子 \([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
-|聯結數值與字串值|`+` 運算子 \([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
+|<span data-ttu-id="0d434-152">以</span><span class="sxs-lookup"><span data-stu-id="0d434-152">To</span></span>|<span data-ttu-id="0d434-153">請參閱</span><span class="sxs-lookup"><span data-stu-id="0d434-153">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="0d434-154">多個字串結合成單一字串</span><span class="sxs-lookup"><span data-stu-id="0d434-154">Join multiple strings into a single string</span></span>|<span data-ttu-id="0d434-155">`&`運算子 ([Visual Basic 中的串連運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="0d434-155">`&` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
+|<span data-ttu-id="0d434-156">聯結數值與字串值</span><span class="sxs-lookup"><span data-stu-id="0d434-156">Join numeric values with string values</span></span>|<span data-ttu-id="0d434-157">`+`運算子 ([Visual Basic 中的串連運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="0d434-157">`+` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
   
-## 邏輯和位元工作  
- 下表會彙總可用的邏輯和位元運算。  
+## <a name="logical-and-bitwise-tasks"></a><span data-ttu-id="0d434-158">邏輯和位元的工作</span><span class="sxs-lookup"><span data-stu-id="0d434-158">Logical and Bitwise Tasks</span></span>  
+ <span data-ttu-id="0d434-159">下表摘要說明可用的邏輯和位元作業。</span><span class="sxs-lookup"><span data-stu-id="0d434-159">The following table summarizes the available logical and bitwise operations.</span></span>  
   
-|||  
-|-|-|  
-|若要|請參閱|  
-|對布林 \(Boolean\) 值執行邏輯負運算|[Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
-|對兩個布林值執行邏輯結合|[And Operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|對兩個布林值執行內含的邏輯分離 \(Logical Disjunction\)|[Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|對兩個布林值執行排除的邏輯分離|[Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|對兩個布林值執行最少運算 \(Short\-Circuit\) 的邏輯結合|[AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
-|對兩個布林值執行最少運算內含的邏輯分離|[OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|對兩個整數值執行逐位元的邏輯結合|[And Operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|對兩個整數值執行逐位元的內含邏輯分離|[Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|對兩個整數值執行逐位元的排除邏輯分離|[Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|對一個整數值執行逐位元的邏輯負運算|[Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="0d434-160">以</span><span class="sxs-lookup"><span data-stu-id="0d434-160">To</span></span>|<span data-ttu-id="0d434-161">請參閱</span><span class="sxs-lookup"><span data-stu-id="0d434-161">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="0d434-162">布林值上執行邏輯否定</span><span class="sxs-lookup"><span data-stu-id="0d434-162">Perform logical negation on a Boolean value</span></span>|[<span data-ttu-id="0d434-163">Not 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-163">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="0d434-164">在兩個布林值上執行邏輯結合</span><span class="sxs-lookup"><span data-stu-id="0d434-164">Perform logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="0d434-165">And 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-165">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="0d434-166">在兩個布林值上執行內含邏輯分離</span><span class="sxs-lookup"><span data-stu-id="0d434-166">Perform inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="0d434-167">Or 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-167">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="0d434-168">排除的邏輯分離對兩個布林值</span><span class="sxs-lookup"><span data-stu-id="0d434-168">Perform exclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="0d434-169">Xor 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-169">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="0d434-170">在兩個布林值上執行最少運算邏輯結合</span><span class="sxs-lookup"><span data-stu-id="0d434-170">Perform short-circuited logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="0d434-171">AndAlso 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-171">AndAlso Operator</span></span>](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
+|<span data-ttu-id="0d434-172">在兩個布林值上執行最少運算的內含邏輯分離</span><span class="sxs-lookup"><span data-stu-id="0d434-172">Perform short-circuited inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="0d434-173">OrElse 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-173">OrElse Operator</span></span>](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
+|<span data-ttu-id="0d434-174">在兩個整數值上執行位元邏輯結合</span><span class="sxs-lookup"><span data-stu-id="0d434-174">Perform bit-by-bit logical conjunction on two integral values</span></span>|[<span data-ttu-id="0d434-175">And 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-175">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="0d434-176">在兩個整數值上執行位元的內含邏輯分離</span><span class="sxs-lookup"><span data-stu-id="0d434-176">Perform bit-by-bit inclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="0d434-177">Or 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-177">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="0d434-178">在兩個整數值上執行位元互斥邏輯分離</span><span class="sxs-lookup"><span data-stu-id="0d434-178">Perform bit-by-bit exclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="0d434-179">Xor 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-179">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="0d434-180">整數值上執行位元邏輯否定</span><span class="sxs-lookup"><span data-stu-id="0d434-180">Perform bit-by-bit logical negation on an integral value</span></span>|[<span data-ttu-id="0d434-181">Not 運算子</span><span class="sxs-lookup"><span data-stu-id="0d434-181">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
-## 請參閱  
- [Operators and Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Operators Listed by Functionality](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="0d434-182">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0d434-182">See Also</span></span>  
+ [<span data-ttu-id="0d434-183">運算子和運算式</span><span class="sxs-lookup"><span data-stu-id="0d434-183">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="0d434-184">運算子 (依功能排列)</span><span class="sxs-lookup"><span data-stu-id="0d434-184">Operators Listed by Functionality</span></span>](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

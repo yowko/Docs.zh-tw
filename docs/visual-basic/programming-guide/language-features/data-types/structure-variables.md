@@ -1,30 +1,29 @@
 ---
-title: "Structure Variables (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "structures, variables"
-  - "structures, structure variables"
-  - "variables [Visual Basic], structure variables"
-  - "structure variables"
+title: "結構變數 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- structures [Visual Basic], variables
+- structures [Visual Basic], structure variables
+- variables [Visual Basic], structure variables
+- structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ef42c44de84caffde909eb2b3e9361016a6abb97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Structure Variables (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-一旦建立結構之後，您可以將程序層次及模組層次變數宣告為該型別。  例如，您可以建立一個結構，來記錄關於電腦系統的資訊。  以下範例就是示範這項作業。  
+# <a name="structure-variables-visual-basic"></a><span data-ttu-id="64ff3-102">結構變數 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64ff3-102">Structure Variables (Visual Basic)</span></span>
+<span data-ttu-id="64ff3-103">當您建立結構之後時，您可以為該型別宣告程序層級和模組層級變數。</span><span class="sxs-lookup"><span data-stu-id="64ff3-103">Once you have created a structure, you can declare procedure-level and module-level variables as that type.</span></span> <span data-ttu-id="64ff3-104">例如，您可以建立結構有關電腦系統記錄資訊。</span><span class="sxs-lookup"><span data-stu-id="64ff3-104">For example, you can create a structure that records information about a computer system.</span></span> <span data-ttu-id="64ff3-105">下列範例為其示範。</span><span class="sxs-lookup"><span data-stu-id="64ff3-105">The following example demonstrates this.</span></span>  
   
 ```  
 Public Structure systemInfo  
@@ -34,17 +33,17 @@ Public Structure systemInfo
 End Structure  
 ```  
   
- 接著您可以宣告該型別的變數。  下面這個宣告可說明這點：  
+ <span data-ttu-id="64ff3-106">您現在可以宣告該類型的變數。</span><span class="sxs-lookup"><span data-stu-id="64ff3-106">You can now declare variables of that type.</span></span> <span data-ttu-id="64ff3-107">下列宣告會說明這點。</span><span class="sxs-lookup"><span data-stu-id="64ff3-107">The following declaration illustrates this.</span></span>  
   
 ```  
 Dim mySystem, yourSystem As systemInfo  
 ```  
   
 > [!NOTE]
->  在類別 \(Class\) 及模組中，使用可進行公用存取的 [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) 預設值來宣告結構。  如果您希望結構是私用的，請確定使用 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 關鍵字來宣告結構。  
+>  <span data-ttu-id="64ff3-108">在類別和模組中，使用宣告的結構[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)預設為公用存取。</span><span class="sxs-lookup"><span data-stu-id="64ff3-108">In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access.</span></span> <span data-ttu-id="64ff3-109">如果您想要為私用的結構，請確定您使用宣告[私人](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字。</span><span class="sxs-lookup"><span data-stu-id="64ff3-109">If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.</span></span>  
   
-## 存取結構值  
- 若要指派並擷取結構變數元素的值，使用的方法與在物件上設定並取得屬性的語法相同。  您可以在結構變數名稱與項目名稱之間，放置成員存取運算子 \(Member Access Operator\) \(`.`\)。  下列範例會存取之前宣告為型別 `systemInfo` 的變數項目。  
+## <a name="access-to-structure-values"></a><span data-ttu-id="64ff3-110">結構值的存取權</span><span class="sxs-lookup"><span data-stu-id="64ff3-110">Access to Structure Values</span></span>  
+ <span data-ttu-id="64ff3-111">指派和擷取項目的結構變數的值，您會使用相同的語法，您可以設定及取得屬性的物件上使用。</span><span class="sxs-lookup"><span data-stu-id="64ff3-111">To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object.</span></span> <span data-ttu-id="64ff3-112">將成員存取運算子 (`.`) 結構的變數名稱之間的項目名稱。</span><span class="sxs-lookup"><span data-stu-id="64ff3-112">You place the member access operator (`.`) between the structure variable name and the element name.</span></span> <span data-ttu-id="64ff3-113">下列範例會存取先前宣告為類型的變數中的項目`systemInfo`。</span><span class="sxs-lookup"><span data-stu-id="64ff3-113">The following example accesses elements of the variables previously declared as type `systemInfo`.</span></span>  
   
 ```  
 mySystem.cPU = "486"  
@@ -52,23 +51,23 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True  
 ```  
   
-## 指派結構變數  
- 若兩變數都屬於相同的結構型別，您也可以將一變數指派至另一變數。  這樣會將結構的所有項目都複製到另一個結構的對應項目。  下面這個宣告可說明這點：  
+## <a name="assigning-structure-variables"></a><span data-ttu-id="64ff3-114">指派結構變數</span><span class="sxs-lookup"><span data-stu-id="64ff3-114">Assigning Structure Variables</span></span>  
+ <span data-ttu-id="64ff3-115">您也可以指派到另一個變數，如果兩者都是相同的結構類型。</span><span class="sxs-lookup"><span data-stu-id="64ff3-115">You can also assign one variable to another if both are of the same structure type.</span></span> <span data-ttu-id="64ff3-116">這會將一個結構的所有項目複製其他的對應元素。</span><span class="sxs-lookup"><span data-stu-id="64ff3-116">This copies all the elements of one structure to the corresponding elements in the other.</span></span> <span data-ttu-id="64ff3-117">下列宣告會說明這點。</span><span class="sxs-lookup"><span data-stu-id="64ff3-117">The following declaration illustrates this.</span></span>  
   
 ```  
 yourSystem = mySystem  
 ```  
   
- 如果結構元素是一個參考型別，例如 `String`、`Object` 或陣列，則會複製資料指標。  在前述範例中，如果 `systemInfo` 包含物件變數，則會將指標從 `mySystem` 複製到 `yourSystem`，並透過存取其他結構時可能生效的結構，來變更物件資料。  
+ <span data-ttu-id="64ff3-118">如果結構項目是參考類型，例如`String`， `Object`，或複製的資料指標的陣列。</span><span class="sxs-lookup"><span data-stu-id="64ff3-118">If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied.</span></span> <span data-ttu-id="64ff3-119">在上述範例中，如果`systemInfo`包含物件變數，則上述範例中會複製從指標`mySystem`至`yourSystem`，而且透過一個結構的物件的資料變更會是作用中時存取透過其他結構。</span><span class="sxs-lookup"><span data-stu-id="64ff3-119">In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.</span></span>  
   
-## 請參閱  
- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [How to: Declare a Structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Structures and Other Programming Elements](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)   
- [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a><span data-ttu-id="64ff3-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="64ff3-120">See Also</span></span>  
+ [<span data-ttu-id="64ff3-121">資料類型</span><span class="sxs-lookup"><span data-stu-id="64ff3-121">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="64ff3-122">基礎資料類型</span><span class="sxs-lookup"><span data-stu-id="64ff3-122">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="64ff3-123">複合資料類型</span><span class="sxs-lookup"><span data-stu-id="64ff3-123">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="64ff3-124">值類型和參考類型</span><span class="sxs-lookup"><span data-stu-id="64ff3-124">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="64ff3-125">結構</span><span class="sxs-lookup"><span data-stu-id="64ff3-125">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="64ff3-126">資料類型的疑難排解</span><span class="sxs-lookup"><span data-stu-id="64ff3-126">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="64ff3-127">如何：宣告結構</span><span class="sxs-lookup"><span data-stu-id="64ff3-127">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="64ff3-128">結構和其他程式設計項目</span><span class="sxs-lookup"><span data-stu-id="64ff3-128">Structures and Other Programming Elements</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [<span data-ttu-id="64ff3-129">結構和類別</span><span class="sxs-lookup"><span data-stu-id="64ff3-129">Structures and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [<span data-ttu-id="64ff3-130">Structure 陳述式</span><span class="sxs-lookup"><span data-stu-id="64ff3-130">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)

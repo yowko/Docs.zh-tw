@@ -1,1 +1,1 @@
-.NET 核心
+<span data-ttu-id="c217f-101">.NET Core</span><span class="sxs-lookup"><span data-stu-id="c217f-101">.NET Core</span></span>

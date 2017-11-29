@@ -1,75 +1,74 @@
 ---
-title: "How to: Declare an Object by Using an Object Initializer (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declaring objects using object initializer"
-  - "object initializers [Visual Basic]"
-  - "initializers [Visual Basic]"
-  - "Video How tos, Visual Basic"
+title: "如何：使用物件初始設定式宣告物件 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- declaring objects using object initializer
+- object initializers [Visual Basic]
+- initializers [Visual Basic]
+- Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 87c818765cbeac7a3080ee666d464052493e5bde
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Declare an Object by Using an Object Initializer (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-物件初始設定式可讓您在單一陳述式 \(Statement\) 中宣告及具現化類別 \(Class\) 的執行個體 \(Instance\)。  此外，您可以同時初始化執行個體的一個或多個成員，而不需要叫用 \(Invoke\) 參數型建構函式 \(Constructor\)。  
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a><span data-ttu-id="51d23-102">如何：使用物件初始設定式宣告物件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="51d23-102">How to: Declare an Object by Using an Object Initializer (Visual Basic)</span></span>
+<span data-ttu-id="51d23-103">物件初始設定式可讓您宣告並具現化類別，以在單一陳述式的執行個體。</span><span class="sxs-lookup"><span data-stu-id="51d23-103">Object initializers enable you to declare and instantiate an instance of a class in a single statement.</span></span> <span data-ttu-id="51d23-104">此外，您可以在相同的時間初始化執行個體的一或多個的成員，而不叫用的參數化建構函式。</span><span class="sxs-lookup"><span data-stu-id="51d23-104">In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.</span></span>  
   
- 當您使用物件初始設定式來建立具名型別的執行個體時，會呼叫類別的預設建構函式，接著按照您指定的順序初始化指定的成員。  
+ <span data-ttu-id="51d23-105">當您使用物件初始設定式來建立具名型別的執行個體時，會呼叫類別的預設建構函式，後面接著初始化指定的成員，您所指定的順序。</span><span class="sxs-lookup"><span data-stu-id="51d23-105">When you use an object initializer to create an instance of a named type, the default constructor for the class is called, followed by initialization of designated members in the order you specify.</span></span>  
   
- 下列程序顯示如何以三種不同的方式來建立 `Student` 類別的執行個體。  此類別具有姓氏、名字和年級屬性。  這三項宣告中的每一項都會建立 `Student` 的新執行個體，其 `First` 屬性設為 "Michael"、`Last` 屬性設為 "Tucker"，而其他所有屬性則設為預設值。  此程序中的每項宣告結果都符合下列不使用物件初始設定式的範例。  
+ <span data-ttu-id="51d23-106">下列程序示範如何建立執行個體`Student`三種不同方式的類別。</span><span class="sxs-lookup"><span data-stu-id="51d23-106">The following procedure shows how to create an instance of a `Student` class in three different ways.</span></span> <span data-ttu-id="51d23-107">類別有名字、 姓氏和年級屬性和其他項目。</span><span class="sxs-lookup"><span data-stu-id="51d23-107">The class has first name, last name, and class year properties, among others.</span></span> <span data-ttu-id="51d23-108">每三個宣告建立的新執行個體`Student`，與屬性`First`設為"Michael，"屬性`Last`設定為"Tucker"，而所有其他成員設定為其預設值。</span><span class="sxs-lookup"><span data-stu-id="51d23-108">Each of the three declarations creates a new instance of `Student`, with property `First` set to "Michael", property `Last` set to "Tucker", and all other members set to their default values.</span></span> <span data-ttu-id="51d23-109">程序中的每個宣告的結果就相當於下列的範例中，不會使用物件初始設定式。</span><span class="sxs-lookup"><span data-stu-id="51d23-109">The result of each declaration in the procedure is equivalent to the following example, which does not use an object initializer.</span></span>  
   
  [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
   
- 如需 `Student` 類別的實作 \(Implementation\)，請參閱 [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。  您可以複製該主題中的程式碼，以設定類別並建立要處理的 `Student` 物件。  
+ <span data-ttu-id="51d23-110">實作`Student`類別，請參閱[How to： 建立項目的清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。</span><span class="sxs-lookup"><span data-stu-id="51d23-110">For an implementation of the `Student` class, see [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).</span></span> <span data-ttu-id="51d23-111">您可以從設定的類別，並建立一份該主題複製程式碼`Student`若要使用的物件。</span><span class="sxs-lookup"><span data-stu-id="51d23-111">You can copy the code from that topic to set up the class and create a list of `Student` objects to work with.</span></span>  
   
-### 若要使用物件初始設定式建立具名類別的物件  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a><span data-ttu-id="51d23-112">若要使用物件初始設定式建立具名類別的物件</span><span class="sxs-lookup"><span data-stu-id="51d23-112">To create an object of a named class by using an object initializer</span></span>  
   
-1.  如同您計劃使用建構函式一樣開始宣告。  
+1.  <span data-ttu-id="51d23-113">開始宣告，如同您計劃使用建構函式。</span><span class="sxs-lookup"><span data-stu-id="51d23-113">Begin the declaration as if you planned to use a constructor.</span></span>  
   
      `Dim student1 As New Student`  
   
-2.  輸入關鍵字 `With`，後面接著以大括弧括住的初始設定清單。  
+2.  <span data-ttu-id="51d23-114">輸入關鍵字`With`，後面接著括號括住的初始設定清單。</span><span class="sxs-lookup"><span data-stu-id="51d23-114">Type the keyword `With`, followed by an initialization list in braces.</span></span>  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3.  在初始設定清單中，包含您想初始化的每個屬性並且指派其初始值。  屬性名稱前面必須有一個句號。  
+3.  <span data-ttu-id="51d23-115">在初始設定清單中，包含您想要初始化，並將初始值指派給它的每一個屬性。</span><span class="sxs-lookup"><span data-stu-id="51d23-115">In the initialization list, include each property that you want to initialize and assign an initial value to it.</span></span> <span data-ttu-id="51d23-116">屬性名稱前面有一個句號。</span><span class="sxs-lookup"><span data-stu-id="51d23-116">The name of the property is preceded by a period.</span></span>  
   
      [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
   
-     您可以初始化類別的一個或多個成員。  
+     <span data-ttu-id="51d23-117">您可以初始化類別的一個或多個成員。</span><span class="sxs-lookup"><span data-stu-id="51d23-117">You can initialize one or more members of the class.</span></span>  
   
-4.  此外，您也可以宣告類別的新執行個體，然後指派其值。  首先，宣告 `Student` 的執行個體：  
+4.  <span data-ttu-id="51d23-118">或者，您可以宣告類別的新執行個體，然後再將值指派給它。</span><span class="sxs-lookup"><span data-stu-id="51d23-118">Alternatively, you can declare a new instance of the class and then assign a value to it.</span></span> <span data-ttu-id="51d23-119">首先，宣告的執行個體`Student`:</span><span class="sxs-lookup"><span data-stu-id="51d23-119">First, declare an instance of `Student`:</span></span>  
   
      `Dim student2 As Student`  
   
-5.  以正常方式開始建立 `Student` 的執行個體。  
+5.  <span data-ttu-id="51d23-120">開始的執行個體建立`Student`以一般方式。</span><span class="sxs-lookup"><span data-stu-id="51d23-120">Begin the creation of an instance of `Student` in the normal way.</span></span>  
   
      `Dim student2 As Student = New Student`  
   
-6.  依序輸入 `With` 和物件初始設定式，以初始化新執行個體的一個或多個成員。  
+6.  <span data-ttu-id="51d23-121">型別`With`，然後物件初始設定式來初始化新執行個體的一或多個成員。</span><span class="sxs-lookup"><span data-stu-id="51d23-121">Type `With` and then an object initializer to initialize one or more members of the new instance.</span></span>  
   
      [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
   
-7.  您可以省略 `As Student`，以簡化前一個步驟中的定義。  如果您這麼做，編譯器 \(Compiler\) 會使用區域型別推斷，判斷 `student3` 為 `Student` 的執行個體。  
+7.  <span data-ttu-id="51d23-122">您可以藉由略過簡化上一個步驟中的定義`As Student`。</span><span class="sxs-lookup"><span data-stu-id="51d23-122">You can simplify the definition in the previous step by omitting `As Student`.</span></span> <span data-ttu-id="51d23-123">如果您這樣做，在編譯器判斷`student3`的執行個體`Student`使用區域類型推斷。</span><span class="sxs-lookup"><span data-stu-id="51d23-123">If you do this, the compiler determines that `student3` is an instance of `Student` by using local type inference.</span></span>  
   
      [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
   
-     如需詳細資訊，請參閱[Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+     <span data-ttu-id="51d23-124">如需詳細資訊，請參閱[區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。</span><span class="sxs-lookup"><span data-stu-id="51d23-124">For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span></span>  
   
-## 請參閱  
- [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)   
- [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a><span data-ttu-id="51d23-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51d23-125">See Also</span></span>  
+ [<span data-ttu-id="51d23-126">區域類型推斷</span><span class="sxs-lookup"><span data-stu-id="51d23-126">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="51d23-127">如何：建立項目清單</span><span class="sxs-lookup"><span data-stu-id="51d23-127">How to: Create a List of Items</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)  
+ [<span data-ttu-id="51d23-128">物件初始設定式：具名和匿名類型</span><span class="sxs-lookup"><span data-stu-id="51d23-128">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [<span data-ttu-id="51d23-129">匿名類型</span><span class="sxs-lookup"><span data-stu-id="51d23-129">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

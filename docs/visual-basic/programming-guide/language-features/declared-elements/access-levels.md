@@ -1,103 +1,102 @@
 ---
-title: "Access Levels in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "members, accessing in Visual Basic"
-  - "Friend access modifier"
-  - "access levels, declared elements"
-  - "access levels"
-  - "access modifiers"
-  - "Public access modifier"
-  - "Protected access modifier"
-  - "Protected Friend access modifier"
-  - "Private access modifier"
-  - "declared elements, access level"
+title: "Visual Basic 中的存取層級"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- members [Visual Basic], accessing in Visual Basic
+- Friend access modifier
+- access levels, declared elements
+- access levels
+- access modifiers
+- Public access modifier
+- Protected access modifier
+- Protected Friend access modifier
+- Private access modifier
+- declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 87e43ac7e813cece1179bdaf24c86fa62adcb438
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Access Levels in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-宣告項目的「*存取層級*」\(Access Level\) 表示對項目進行存取的能力範圍，也就代表哪些程式碼對項目具有讀寫權限。  這不只是取決於您宣告項目本身的方式，也需視項目容器 \(Container\) 的存取層級而定。  不能存取包含項目的程式碼，也就無法存取其所包含的任何項目，即使所包含的項目是宣告為 `Public`。  例如，在 `Private` 結構中的 `Public` 變數可從包含該結構的類別內存取，但無法從該類別外存取。  
+# <a name="access-levels-in-visual-basic"></a><span data-ttu-id="0354c-102">Visual Basic 中的存取層級</span><span class="sxs-lookup"><span data-stu-id="0354c-102">Access Levels in Visual Basic</span></span>
+<span data-ttu-id="0354c-103">*存取層級*的宣告的項目存取它的範圍，也就是何種程式碼具有讀取或寫入其中的權限。</span><span class="sxs-lookup"><span data-stu-id="0354c-103">The *access level* of a declared element is the extent of the ability to access it, that is, what code has permission to read it or write to it.</span></span> <span data-ttu-id="0354c-104">這決定您如何宣告項目本身，不僅可以也的項目容器的存取層級。</span><span class="sxs-lookup"><span data-stu-id="0354c-104">This is determined not only by how you declare the element itself, but also by the access level of the element's container.</span></span> <span data-ttu-id="0354c-105">無法存取包含的項目中的程式碼無法存取任何其包含的項目，即使這些宣告為`Public`。</span><span class="sxs-lookup"><span data-stu-id="0354c-105">Code that cannot access a containing element cannot access any of its contained elements, even those declared as `Public`.</span></span> <span data-ttu-id="0354c-106">例如，`Public`變數中`Private`結構從存取類別的一部分，其中包含結構，而不是從該類別之外。</span><span class="sxs-lookup"><span data-stu-id="0354c-106">For example, a `Public` variable in a `Private` structure can be accessed from inside the class that contains the structure, but not from outside that class.</span></span>  
   
-## Public  
- 宣告陳述式中的 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 關鍵字會指定該項目可從相同專案、從參考該專案的其他專案和從該專案所建置的組件內的任何地方存取。  下列程式碼說明 `Public` 宣告的範例。  
+## <a name="public"></a><span data-ttu-id="0354c-107">Public</span><span class="sxs-lookup"><span data-stu-id="0354c-107">Public</span></span>  
+ <span data-ttu-id="0354c-108">[公用](../../../../visual-basic/language-reference/modifiers/public.md)關鍵字宣告陳述式中的指定的項目可以在從程式碼在同一個專案中的任何位置、 其他參考該專案的專案和專案所建立的任何組件存取。</span><span class="sxs-lookup"><span data-stu-id="0354c-108">The [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the declaration statement specifies that the elements can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.</span></span> <span data-ttu-id="0354c-109">下列程式碼顯示範例`Public`宣告。</span><span class="sxs-lookup"><span data-stu-id="0354c-109">The following code shows a sample `Public` declaration.</span></span>  
   
 ```  
 Public Class classForEverybody  
 ```  
   
- 您只能在模組、介面或命名空間層級使用 `Public`。  這表示您可以在原始程式檔或命名空間層級，或者是介面、模組、類別或結構內宣告 public 項目，但不可以在程序內宣告該項目。  
+ <span data-ttu-id="0354c-110">您可以使用`Public`只能在模組、 介面或命名空間層級。</span><span class="sxs-lookup"><span data-stu-id="0354c-110">You can use `Public` only at module, interface, or namespace level.</span></span> <span data-ttu-id="0354c-111">這表示您可以宣告在原始程式檔或命名空間，或介面、 模組、 類別或結構，但不是在程序層級的公用項目。</span><span class="sxs-lookup"><span data-stu-id="0354c-111">This means you can declare a public element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.</span></span>  
   
-## Protected  
- 宣告陳述式中的 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) 關鍵字會指定該項目只能從相同類別或從該類別的衍生類別中存取。  下列程式碼說明 `Protected` 宣告的範例。  
+## <a name="protected"></a><span data-ttu-id="0354c-112">Protected</span><span class="sxs-lookup"><span data-stu-id="0354c-112">Protected</span></span>  
+ <span data-ttu-id="0354c-113">[保護](../../../../visual-basic/language-reference/modifiers/protected.md)關鍵字宣告陳述式中的指定的項目可存取只會從相同的類別，或從衍生自這個類別的類別中。</span><span class="sxs-lookup"><span data-stu-id="0354c-113">The [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the declaration statement specifies that the elements can be accessed only from within the same class, or from a class derived from this class.</span></span> <span data-ttu-id="0354c-114">下列程式碼顯示範例`Protected`宣告。</span><span class="sxs-lookup"><span data-stu-id="0354c-114">The following code shows a sample `Protected` declaration.</span></span>  
   
 ```  
 Protected Class classForMyHeirs  
 ```  
   
- 您只能在類別層級使用 `Protected`，而且只能在宣告類別的成員時使用。  這表示您可以在類別中宣告 protected 項目，但不可以在原始程式檔或命名空間層級，或者是介面、模組、結構或程序內宣告該項目。  
+ <span data-ttu-id="0354c-115">您可以使用`Protected`只能在類別層級，而且只有當您宣告類別的成員。</span><span class="sxs-lookup"><span data-stu-id="0354c-115">You can use `Protected` only at class level, and only when you declare a member of a class.</span></span> <span data-ttu-id="0354c-116">這表示您可以宣告在類別中，但不是在原始程式檔或命名空間，或介面、 模組、 結構或程序內的層級的受保護項目。</span><span class="sxs-lookup"><span data-stu-id="0354c-116">This means you can declare a protected element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.</span></span>  
   
-## Friend  
- 宣告陳述式中的 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 關鍵字會指定該項目可從相同組件內存取，但不可以從組件以外存取。  下列程式碼說明 `Friend` 宣告的範例。  
+## <a name="friend"></a><span data-ttu-id="0354c-117">Friend</span><span class="sxs-lookup"><span data-stu-id="0354c-117">Friend</span></span>  
+ <span data-ttu-id="0354c-118">[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)宣告陳述式中的關鍵字會指定從可以存取的項目，在相同的組件內，而不是從外部組件。</span><span class="sxs-lookup"><span data-stu-id="0354c-118">The [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the declaration statement specifies that the elements can be accessed from within the same assembly, but not from outside the assembly.</span></span> <span data-ttu-id="0354c-119">下列程式碼顯示範例`Friend`宣告。</span><span class="sxs-lookup"><span data-stu-id="0354c-119">The following code shows a sample `Friend` declaration.</span></span>  
   
 ```  
 Friend stringForThisProject As String  
 ```  
   
- 您只能在模組、介面或命名空間層級使用 `Friend`。  這表示您可以在原始程式檔或命名空間層級，或者是介面、模組、類別或結構內宣告 friend 項目，但不可以在程序內宣告該項目。  
+ <span data-ttu-id="0354c-120">您可以使用`Friend`只能在模組、 介面或命名空間層級。</span><span class="sxs-lookup"><span data-stu-id="0354c-120">You can use `Friend` only at module, interface, or namespace level.</span></span> <span data-ttu-id="0354c-121">這表示您可以宣告 friend 項目層級的來源檔案或命名空間，或介面、 模組、 類別或結構，但不是在程序。</span><span class="sxs-lookup"><span data-stu-id="0354c-121">This means you can declare a friend element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.</span></span>  
   
-## Protected Friend  
- 宣告陳述式中同時出現 `Protected` 和 `Friend` 關鍵字，會指定該項目可從衍生類別、相同組件或兩者內存取。  下列程式碼說明 `Protected` `Friend` 宣告的範例。  
+## <a name="protected-friend"></a><span data-ttu-id="0354c-122">Protected 的 Friend</span><span class="sxs-lookup"><span data-stu-id="0354c-122">Protected Friend</span></span>  
+ <span data-ttu-id="0354c-123">`Protected`和`Friend`關鍵字宣告陳述式中同時指定衍生類別，或是從項目，可以存取相同組件，或兩者。</span><span class="sxs-lookup"><span data-stu-id="0354c-123">The `Protected` and `Friend` keywords together in the declaration statement specify that the elements can be accessed either from derived classes or from within the same assembly, or both.</span></span> <span data-ttu-id="0354c-124">下列程式碼顯示範例`Protected Friend`宣告。</span><span class="sxs-lookup"><span data-stu-id="0354c-124">The following code shows a sample `Protected Friend` declaration.</span></span>  
   
 ```  
 Protected Friend stringForProjectAndHeirs As String  
 ```  
   
- 您只能在類別層級使用 `Protected` `Friend`，而且只能在宣告類別的成員時使用。  這表示您可以在類別中宣告 protected friend 項目，但不可以在原始程式檔或命名空間層級，或者是介面、模組、結構或程序內宣告該項目。  
+ <span data-ttu-id="0354c-125">您可以使用`Protected Friend`只能在類別層級，而且只有當您宣告類別的成員。</span><span class="sxs-lookup"><span data-stu-id="0354c-125">You can use `Protected Friend` only at class level, and only when you declare a member of a class.</span></span> <span data-ttu-id="0354c-126">這表示您可以宣告為 protected 的 friend 項目在類別中，但不是在原始程式檔或命名空間，或介面、 模組、 結構或程序內的層級。</span><span class="sxs-lookup"><span data-stu-id="0354c-126">This means you can declare a protected friend element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.</span></span>  
   
-## Private  
- 宣告陳述式中的 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 關鍵字會指定該項目只能從相同模組、類別或結構內存取。  下列程式碼說明 `Private` 宣告的範例。  
+## <a name="private"></a><span data-ttu-id="0354c-127">Private</span><span class="sxs-lookup"><span data-stu-id="0354c-127">Private</span></span>  
+ <span data-ttu-id="0354c-128">[私人](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字宣告陳述式中的指定項目可以存取只能從，在相同的模組、 類別或結構內。</span><span class="sxs-lookup"><span data-stu-id="0354c-128">The [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the declaration statement specifies that the elements can be accessed only from within the same module, class, or structure.</span></span> <span data-ttu-id="0354c-129">下列程式碼顯示範例`Private`宣告。</span><span class="sxs-lookup"><span data-stu-id="0354c-129">The following code shows a sample `Private` declaration.</span></span>  
   
 ```  
 Private numberForMeOnly As Integer  
 ```  
   
- 只能在模組層級使用 `Private`。  這表示您可以在模組、類別或結構中宣告 private 項目，但不可以在原始程式檔或命名空間層級，或者是介面或程序內宣告該項目。  
+ <span data-ttu-id="0354c-130">您只能在模組層級使用 `Private`。</span><span class="sxs-lookup"><span data-stu-id="0354c-130">You can use `Private` only at module level.</span></span> <span data-ttu-id="0354c-131">這表示您可以宣告私用的項目內模組、 類別或結構，但不是在原始程式檔或命名空間、 介面或程序中的層級。</span><span class="sxs-lookup"><span data-stu-id="0354c-131">This means you can declare a private element inside a module, class, or structure, but not at the level of a source file or namespace, inside an interface, or in a procedure.</span></span>  
   
- 在模組層級中，沒有任何存取層級關鍵字的 `Dim` 陳述式跟 `Private` 宣告是一樣的。  但是，您可能會想要用 `Private` 關鍵字使您的程式碼更容易讀取與解譯。  
+ <span data-ttu-id="0354c-132">在模組層級`Dim`陳述式不含任何存取層級關鍵字相當於`Private`宣告。</span><span class="sxs-lookup"><span data-stu-id="0354c-132">At the module level, the `Dim` statement without any access level keywords is equivalent to a `Private` declaration.</span></span> <span data-ttu-id="0354c-133">不過，您可能想要使用`Private`關鍵字，讓您的程式碼更容易閱讀及解譯。</span><span class="sxs-lookup"><span data-stu-id="0354c-133">However, you might want to use the `Private` keyword to make your code easier to read and interpret.</span></span>  
   
-## 存取修飾詞  
- 表示存取層級的關鍵字稱為「*存取修飾詞*」\(Access Modifier\)。  下表對存取修飾詞進行比較。  
+## <a name="access-modifiers"></a><span data-ttu-id="0354c-134">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="0354c-134">Access Modifiers</span></span>  
+ <span data-ttu-id="0354c-135">指定存取層級的關鍵字稱為*存取修飾詞*。</span><span class="sxs-lookup"><span data-stu-id="0354c-135">The keywords that specify access level are called *access modifiers*.</span></span> <span data-ttu-id="0354c-136">下表比較的存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="0354c-136">The following table compares the access modifiers.</span></span>  
   
-|存取修飾詞|授與的存取層級|可以使用此存取層級宣告的項目|可以使用此修飾詞的宣告內容|  
-|-----------|-------------|--------------------|-------------------|  
-|`Public`|不受限：<br /><br /> 任何程式碼只要可以看到 public 項目，都可以存取該項目|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|原始程式檔<br /><br /> 命名空間<br /><br /> 介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構|  
-|`Protected`|衍生的：<br /><br /> 宣告 protected 項目的類別或其衍生類別內的程式碼，即可以存取該項目|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|類別|  
-|`Friend`|組件：<br /><br /> 宣告 friend 項目組件內的程式碼，即可以存取該項目|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|原始程式檔<br /><br /> 命名空間<br /><br /> 介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構|  
-|`Protected` `Friend`|`Protected` 和 `Friend` 的結合：<br /><br /> 與 protected friend 項目位於相同類別或相同組件內，或者是該項目類別的任何衍生類別內的程式碼，即可以存取該項目|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|類別|  
-|`Private`|宣告內容：<br /><br /> 宣告 private 項目的型別內的程式碼，包括所包含型別內的程式碼，即可以存取該項目|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|模組<br /><br /> 類別<br /><br /> 結構|  
+|<span data-ttu-id="0354c-137">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="0354c-137">Access modifier</span></span>|<span data-ttu-id="0354c-138">授與存取層級</span><span class="sxs-lookup"><span data-stu-id="0354c-138">Access level granted</span></span>|<span data-ttu-id="0354c-139">您可以宣告具有此存取層級項目</span><span class="sxs-lookup"><span data-stu-id="0354c-139">Elements you can declare with this access level</span></span>|<span data-ttu-id="0354c-140">宣告內容中，您可以使用此修飾詞</span><span class="sxs-lookup"><span data-stu-id="0354c-140">Declaration context within which you can use this modifier</span></span>|  
+|---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
+|`Public`|<span data-ttu-id="0354c-141">不受限制的：</span><span class="sxs-lookup"><span data-stu-id="0354c-141">Unrestricted:</span></span><br /><br /> <span data-ttu-id="0354c-142">可以看到公用項目中的任何程式碼可以存取它</span><span class="sxs-lookup"><span data-stu-id="0354c-142">Any code that can see a public element can access it</span></span>|<span data-ttu-id="0354c-143">介面</span><span class="sxs-lookup"><span data-stu-id="0354c-143">Interfaces</span></span><br /><br /> <span data-ttu-id="0354c-144">模組</span><span class="sxs-lookup"><span data-stu-id="0354c-144">Modules</span></span><br /><br /> <span data-ttu-id="0354c-145">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-145">Classes</span></span><br /><br /> <span data-ttu-id="0354c-146">結構</span><span class="sxs-lookup"><span data-stu-id="0354c-146">Structures</span></span><br /><br /> <span data-ttu-id="0354c-147">結構成員</span><span class="sxs-lookup"><span data-stu-id="0354c-147">Structure members</span></span><br /><br /> <span data-ttu-id="0354c-148">程序</span><span class="sxs-lookup"><span data-stu-id="0354c-148">Procedures</span></span><br /><br /> <span data-ttu-id="0354c-149">屬性</span><span class="sxs-lookup"><span data-stu-id="0354c-149">Properties</span></span><br /><br /> <span data-ttu-id="0354c-150">成員變數</span><span class="sxs-lookup"><span data-stu-id="0354c-150">Member variables</span></span><br /><br /> <span data-ttu-id="0354c-151">常數</span><span class="sxs-lookup"><span data-stu-id="0354c-151">Constants</span></span><br /><br /> <span data-ttu-id="0354c-152">列舉</span><span class="sxs-lookup"><span data-stu-id="0354c-152">Enumerations</span></span><br /><br /> <span data-ttu-id="0354c-153">事件</span><span class="sxs-lookup"><span data-stu-id="0354c-153">Events</span></span><br /><br /> <span data-ttu-id="0354c-154">外部宣告</span><span class="sxs-lookup"><span data-stu-id="0354c-154">External declarations</span></span><br /><br /> <span data-ttu-id="0354c-155">委派</span><span class="sxs-lookup"><span data-stu-id="0354c-155">Delegates</span></span>|<span data-ttu-id="0354c-156">原始程式檔</span><span class="sxs-lookup"><span data-stu-id="0354c-156">Source file</span></span><br /><br /> <span data-ttu-id="0354c-157">命名空間</span><span class="sxs-lookup"><span data-stu-id="0354c-157">Namespace</span></span><br /><br /> <span data-ttu-id="0354c-158">介面</span><span class="sxs-lookup"><span data-stu-id="0354c-158">Interface</span></span><br /><br /> <span data-ttu-id="0354c-159">模組</span><span class="sxs-lookup"><span data-stu-id="0354c-159">Module</span></span><br /><br /> <span data-ttu-id="0354c-160">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-160">Class</span></span><br /><br /> <span data-ttu-id="0354c-161">結構</span><span class="sxs-lookup"><span data-stu-id="0354c-161">Structure</span></span>|  
+|`Protected`|<span data-ttu-id="0354c-162">衍生：</span><span class="sxs-lookup"><span data-stu-id="0354c-162">Derivational:</span></span><br /><br /> <span data-ttu-id="0354c-163">在類別宣告為受保護的項目或從其衍生的類別可以存取之項目的程式碼</span><span class="sxs-lookup"><span data-stu-id="0354c-163">Code in the class that declares a protected element, or a class derived from it, can access the element</span></span>|<span data-ttu-id="0354c-164">介面</span><span class="sxs-lookup"><span data-stu-id="0354c-164">Interfaces</span></span><br /><br /> <span data-ttu-id="0354c-165">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-165">Classes</span></span><br /><br /> <span data-ttu-id="0354c-166">結構</span><span class="sxs-lookup"><span data-stu-id="0354c-166">Structures</span></span><br /><br /> <span data-ttu-id="0354c-167">程序</span><span class="sxs-lookup"><span data-stu-id="0354c-167">Procedures</span></span><br /><br /> <span data-ttu-id="0354c-168">屬性</span><span class="sxs-lookup"><span data-stu-id="0354c-168">Properties</span></span><br /><br /> <span data-ttu-id="0354c-169">成員變數</span><span class="sxs-lookup"><span data-stu-id="0354c-169">Member variables</span></span><br /><br /> <span data-ttu-id="0354c-170">常數</span><span class="sxs-lookup"><span data-stu-id="0354c-170">Constants</span></span><br /><br /> <span data-ttu-id="0354c-171">列舉</span><span class="sxs-lookup"><span data-stu-id="0354c-171">Enumerations</span></span><br /><br /> <span data-ttu-id="0354c-172">事件</span><span class="sxs-lookup"><span data-stu-id="0354c-172">Events</span></span><br /><br /> <span data-ttu-id="0354c-173">外部宣告</span><span class="sxs-lookup"><span data-stu-id="0354c-173">External declarations</span></span><br /><br /> <span data-ttu-id="0354c-174">委派</span><span class="sxs-lookup"><span data-stu-id="0354c-174">Delegates</span></span>|<span data-ttu-id="0354c-175">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-175">Class</span></span>|  
+|`Friend`|<span data-ttu-id="0354c-176">組件︰</span><span class="sxs-lookup"><span data-stu-id="0354c-176">Assembly:</span></span><br /><br /> <span data-ttu-id="0354c-177">宣告 friend 項目可以存取它的組件中的程式碼</span><span class="sxs-lookup"><span data-stu-id="0354c-177">Code in the assembly that declares a friend element can access it</span></span>|<span data-ttu-id="0354c-178">介面</span><span class="sxs-lookup"><span data-stu-id="0354c-178">Interfaces</span></span><br /><br /> <span data-ttu-id="0354c-179">模組</span><span class="sxs-lookup"><span data-stu-id="0354c-179">Modules</span></span><br /><br /> <span data-ttu-id="0354c-180">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-180">Classes</span></span><br /><br /> <span data-ttu-id="0354c-181">結構</span><span class="sxs-lookup"><span data-stu-id="0354c-181">Structures</span></span><br /><br /> <span data-ttu-id="0354c-182">結構成員</span><span class="sxs-lookup"><span data-stu-id="0354c-182">Structure members</span></span><br /><br /> <span data-ttu-id="0354c-183">程序</span><span class="sxs-lookup"><span data-stu-id="0354c-183">Procedures</span></span><br /><br /> <span data-ttu-id="0354c-184">屬性</span><span class="sxs-lookup"><span data-stu-id="0354c-184">Properties</span></span><br /><br /> <span data-ttu-id="0354c-185">成員變數</span><span class="sxs-lookup"><span data-stu-id="0354c-185">Member variables</span></span><br /><br /> <span data-ttu-id="0354c-186">常數</span><span class="sxs-lookup"><span data-stu-id="0354c-186">Constants</span></span><br /><br /> <span data-ttu-id="0354c-187">列舉</span><span class="sxs-lookup"><span data-stu-id="0354c-187">Enumerations</span></span><br /><br /> <span data-ttu-id="0354c-188">事件</span><span class="sxs-lookup"><span data-stu-id="0354c-188">Events</span></span><br /><br /> <span data-ttu-id="0354c-189">外部宣告</span><span class="sxs-lookup"><span data-stu-id="0354c-189">External declarations</span></span><br /><br /> <span data-ttu-id="0354c-190">委派</span><span class="sxs-lookup"><span data-stu-id="0354c-190">Delegates</span></span>|<span data-ttu-id="0354c-191">原始程式檔</span><span class="sxs-lookup"><span data-stu-id="0354c-191">Source file</span></span><br /><br /> <span data-ttu-id="0354c-192">命名空間</span><span class="sxs-lookup"><span data-stu-id="0354c-192">Namespace</span></span><br /><br /> <span data-ttu-id="0354c-193">介面</span><span class="sxs-lookup"><span data-stu-id="0354c-193">Interface</span></span><br /><br /> <span data-ttu-id="0354c-194">模組</span><span class="sxs-lookup"><span data-stu-id="0354c-194">Module</span></span><br /><br /> <span data-ttu-id="0354c-195">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-195">Class</span></span><br /><br /> <span data-ttu-id="0354c-196">結構</span><span class="sxs-lookup"><span data-stu-id="0354c-196">Structure</span></span>|  
+|<span data-ttu-id="0354c-197">`Protected` `Friend`</span><span class="sxs-lookup"><span data-stu-id="0354c-197">`Protected` `Friend`</span></span>|<span data-ttu-id="0354c-198">等位的`Protected`和`Friend`:</span><span class="sxs-lookup"><span data-stu-id="0354c-198">Union of `Protected` and `Friend`:</span></span><br /><br /> <span data-ttu-id="0354c-199">在相同類別或為受保護的 friend 項目，或在任何衍生自的項目類別的類別中的相同組件中的程式碼後，即可存取</span><span class="sxs-lookup"><span data-stu-id="0354c-199">Code in the same class or the same assembly as a protected friend element, or within any class derived from the element's class, can access it</span></span>|<span data-ttu-id="0354c-200">介面</span><span class="sxs-lookup"><span data-stu-id="0354c-200">Interfaces</span></span><br /><br /> <span data-ttu-id="0354c-201">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-201">Classes</span></span><br /><br /> <span data-ttu-id="0354c-202">結構</span><span class="sxs-lookup"><span data-stu-id="0354c-202">Structures</span></span><br /><br /> <span data-ttu-id="0354c-203">程序</span><span class="sxs-lookup"><span data-stu-id="0354c-203">Procedures</span></span><br /><br /> <span data-ttu-id="0354c-204">屬性</span><span class="sxs-lookup"><span data-stu-id="0354c-204">Properties</span></span><br /><br /> <span data-ttu-id="0354c-205">成員變數</span><span class="sxs-lookup"><span data-stu-id="0354c-205">Member variables</span></span><br /><br /> <span data-ttu-id="0354c-206">常數</span><span class="sxs-lookup"><span data-stu-id="0354c-206">Constants</span></span><br /><br /> <span data-ttu-id="0354c-207">列舉</span><span class="sxs-lookup"><span data-stu-id="0354c-207">Enumerations</span></span><br /><br /> <span data-ttu-id="0354c-208">事件</span><span class="sxs-lookup"><span data-stu-id="0354c-208">Events</span></span><br /><br /> <span data-ttu-id="0354c-209">外部宣告</span><span class="sxs-lookup"><span data-stu-id="0354c-209">External declarations</span></span><br /><br /> <span data-ttu-id="0354c-210">委派</span><span class="sxs-lookup"><span data-stu-id="0354c-210">Delegates</span></span>|<span data-ttu-id="0354c-211">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-211">Class</span></span>|  
+|`Private`|<span data-ttu-id="0354c-212">宣告內容：</span><span class="sxs-lookup"><span data-stu-id="0354c-212">Declaration context:</span></span><br /><br /> <span data-ttu-id="0354c-213">宣告私用的項目，包括所包含的型別內的程式碼可以存取之項目的型別中的程式碼</span><span class="sxs-lookup"><span data-stu-id="0354c-213">Code in the type that declares a private element, including code within contained types, can access the element</span></span>|<span data-ttu-id="0354c-214">介面</span><span class="sxs-lookup"><span data-stu-id="0354c-214">Interfaces</span></span><br /><br /> <span data-ttu-id="0354c-215">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-215">Classes</span></span><br /><br /> <span data-ttu-id="0354c-216">結構</span><span class="sxs-lookup"><span data-stu-id="0354c-216">Structures</span></span><br /><br /> <span data-ttu-id="0354c-217">結構成員</span><span class="sxs-lookup"><span data-stu-id="0354c-217">Structure members</span></span><br /><br /> <span data-ttu-id="0354c-218">程序</span><span class="sxs-lookup"><span data-stu-id="0354c-218">Procedures</span></span><br /><br /> <span data-ttu-id="0354c-219">屬性</span><span class="sxs-lookup"><span data-stu-id="0354c-219">Properties</span></span><br /><br /> <span data-ttu-id="0354c-220">成員變數</span><span class="sxs-lookup"><span data-stu-id="0354c-220">Member variables</span></span><br /><br /> <span data-ttu-id="0354c-221">常數</span><span class="sxs-lookup"><span data-stu-id="0354c-221">Constants</span></span><br /><br /> <span data-ttu-id="0354c-222">列舉</span><span class="sxs-lookup"><span data-stu-id="0354c-222">Enumerations</span></span><br /><br /> <span data-ttu-id="0354c-223">事件</span><span class="sxs-lookup"><span data-stu-id="0354c-223">Events</span></span><br /><br /> <span data-ttu-id="0354c-224">外部宣告</span><span class="sxs-lookup"><span data-stu-id="0354c-224">External declarations</span></span><br /><br /> <span data-ttu-id="0354c-225">委派</span><span class="sxs-lookup"><span data-stu-id="0354c-225">Delegates</span></span>|<span data-ttu-id="0354c-226">模組</span><span class="sxs-lookup"><span data-stu-id="0354c-226">Module</span></span><br /><br /> <span data-ttu-id="0354c-227">類別</span><span class="sxs-lookup"><span data-stu-id="0354c-227">Class</span></span><br /><br /> <span data-ttu-id="0354c-228">結構</span><span class="sxs-lookup"><span data-stu-id="0354c-228">Structure</span></span>|  
   
-## 請參閱  
- [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)   
- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)   
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="0354c-229">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0354c-229">See Also</span></span>  
+ [<span data-ttu-id="0354c-230">Dim 陳述式</span><span class="sxs-lookup"><span data-stu-id="0354c-230">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="0354c-231">Static</span><span class="sxs-lookup"><span data-stu-id="0354c-231">Static</span></span>](../../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="0354c-232">宣告項目名稱</span><span class="sxs-lookup"><span data-stu-id="0354c-232">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="0354c-233">對已宣告項目的參考</span><span class="sxs-lookup"><span data-stu-id="0354c-233">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="0354c-234">宣告項目特性</span><span class="sxs-lookup"><span data-stu-id="0354c-234">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="0354c-235">在 Visual Basic 中的存留期</span><span class="sxs-lookup"><span data-stu-id="0354c-235">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="0354c-236">在 Visual Basic 中的範圍</span><span class="sxs-lookup"><span data-stu-id="0354c-236">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="0354c-237">如何：控制變數的可用性</span><span class="sxs-lookup"><span data-stu-id="0354c-237">How to: Control the Availability of a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
+ [<span data-ttu-id="0354c-238">變數</span><span class="sxs-lookup"><span data-stu-id="0354c-238">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="0354c-239">變數宣告</span><span class="sxs-lookup"><span data-stu-id="0354c-239">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

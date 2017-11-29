@@ -1,58 +1,41 @@
 ---
-title: "在 Visual Basic 中建立 XML |Microsoft 文件"
+title: "在 Visual Basic 中建立 XML"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - XML [Visual Basic], creating
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 48123bda37be0ca1ee0c3d4360cac71c5825fa8a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 95ab82f2a8ae11b04e3887d5a179931c47346155
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="creating-xml-in-visual-basic"></a>在 Visual Basic 中建立 XML
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]可讓您使用*XML 常值*直接在您的程式碼中。 XML 常值語法代表[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]物件，並且會類似於 XML 1.0 語法。 這可讓您更輕鬆地以程式設計方式建立 XML 項目、 文件和片段，因為您的程式碼有最後的 XML 的結構相同。  
+# <a name="creating-xml-in-visual-basic"></a><span data-ttu-id="eeb14-102">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="eeb14-102">Creating XML in Visual Basic</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="eeb14-103">可讓您使用*XML 常值*直接在程式碼。</span><span class="sxs-lookup"><span data-stu-id="eeb14-103"> enables you to use *XML literals* directly in your code.</span></span> <span data-ttu-id="eeb14-104">XML 常值語法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件，而且這是 XML 1.0 語法類似。</span><span class="sxs-lookup"><span data-stu-id="eeb14-104">The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax.</span></span> <span data-ttu-id="eeb14-105">這可讓您更輕鬆地以程式設計方式建立 XML 項目、 文件和片段，因為您程式碼具有相同的最後一個 XML 結構。</span><span class="sxs-lookup"><span data-stu-id="eeb14-105">This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="eeb14-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="eeb14-106">In This Section</span></span>  
   
-|詞彙|定義|  
+|<span data-ttu-id="eeb14-107">詞彙</span><span class="sxs-lookup"><span data-stu-id="eeb14-107">Term</span></span>|<span data-ttu-id="eeb14-108">定義</span><span class="sxs-lookup"><span data-stu-id="eeb14-108">Definition</span></span>|  
 |---|---|  
-|[XML 常值概觀](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|簡介 XML 常值和它們之間的關係[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]。|  
-|[XML 中內嵌的運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|描述如何使用 XML 常值中內嵌的運算式。|  
-|[如何：建立 XML 常值](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|描述如何使用 XML 常值程式碼中建立的 XML 項目。|  
-|[XML 常值中的空白字元](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|描述如何[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]會將 XML 常值中的泛空白字元。|  
-|[XML 常值和 XML 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|描述如何在 XML 常值語法[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]與 XML 1.0 規格。|  
-|[如何：將運算式內嵌在 XML 常值中](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|描述如何使用 XML 常值中內嵌的運算式，在執行階段建立的內容。|  
-|[宣告的 XML 項目和屬性的名稱](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|描述 XML 元素和屬性命名指導方針。|  
+|[<span data-ttu-id="eeb14-109">XML 常值概觀</span><span class="sxs-lookup"><span data-stu-id="eeb14-109">XML Literals Overview</span></span>](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|<span data-ttu-id="eeb14-110">簡介 XML 常值和其關聯到[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="eeb14-110">Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>|  
+|[<span data-ttu-id="eeb14-111">XML 中內嵌的運算式</span><span class="sxs-lookup"><span data-stu-id="eeb14-111">Embedded Expressions in XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|<span data-ttu-id="eeb14-112">描述如何在 XML 常值中使用內嵌的運算式。</span><span class="sxs-lookup"><span data-stu-id="eeb14-112">Describes how to use embedded expressions in XML literals.</span></span>|  
+|[<span data-ttu-id="eeb14-113">如何：建立 XML 常值</span><span class="sxs-lookup"><span data-stu-id="eeb14-113">How to: Create XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|<span data-ttu-id="eeb14-114">描述如何在程式碼中使用 XML 常值建立的 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="eeb14-114">Describes how to create an XML element in code by using an XML literal.</span></span>|  
+|[<span data-ttu-id="eeb14-115">XML 常值中的空白字元</span><span class="sxs-lookup"><span data-stu-id="eeb14-115">White Space in XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|<span data-ttu-id="eeb14-116">描述如何[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]處理 XML 常值空白字元。</span><span class="sxs-lookup"><span data-stu-id="eeb14-116">Describes how [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] treats white space in XML literals.</span></span>|  
+|[<span data-ttu-id="eeb14-117">XML 常值和 XML 1.0 規格</span><span class="sxs-lookup"><span data-stu-id="eeb14-117">XML Literals and the XML 1.0 Specification</span></span>](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|<span data-ttu-id="eeb14-118">描述如何在 XML 常值的語法[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]與 XML 1.0 規格。</span><span class="sxs-lookup"><span data-stu-id="eeb14-118">Describes how the XML literal syntax in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] relates to the XML 1.0 specification.</span></span>|  
+|[<span data-ttu-id="eeb14-119">如何：將運算式內嵌在 XML 常值中</span><span class="sxs-lookup"><span data-stu-id="eeb14-119">How to: Embed Expressions in XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|<span data-ttu-id="eeb14-120">描述如何使用 XML 常值中的內嵌的運算式，在執行階段建立的內容。</span><span class="sxs-lookup"><span data-stu-id="eeb14-120">Describes how to use embedded expressions in XML literals to create content at run time.</span></span>|  
+|[<span data-ttu-id="eeb14-121">宣告的 XML 項目和屬性的名稱</span><span class="sxs-lookup"><span data-stu-id="eeb14-121">Names of Declared XML Elements and Attributes</span></span>](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|<span data-ttu-id="eeb14-122">描述 XML 元素和屬性命名指導方針。</span><span class="sxs-lookup"><span data-stu-id="eeb14-122">Describes guidelines for naming XML elements and attributes.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="eeb14-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eeb14-123">See Also</span></span>  
+ [<span data-ttu-id="eeb14-124">XML</span><span class="sxs-lookup"><span data-stu-id="eeb14-124">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)

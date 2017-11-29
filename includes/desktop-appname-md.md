@@ -1,1 +1,1 @@
-桌面
+<span data-ttu-id="076a3-101">桌面</span><span class="sxs-lookup"><span data-stu-id="076a3-101">desktop</span></span>

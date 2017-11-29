@@ -1,73 +1,72 @@
 ---
-title: "Declared Element Characteristics (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declared elements, lifetime"
-  - "access levels, declared elements"
-  - "declared elements, scope"
-  - "visibility, declared elements"
-  - "elements, programming"
-  - "scope, declared elements"
-  - "lifetime, declared elements"
-  - "declared elements, access level"
-  - "data types [Visual Basic], declared elements"
-  - "declared elements, visibility"
+title: "宣告項目特性 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- declared elements [Visual Basic], lifetime
+- access levels, declared elements
+- declared elements [Visual Basic], scope
+- visibility [Visual Basic], declared elements
+- elements [Visual Basic], programming
+- scope [Visual Basic], declared elements
+- lifetime [Visual Basic], declared elements
+- declared elements [Visual Basic], access level
+- data types [Visual Basic], declared elements
+- declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Declared Element Characteristics (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-宣告項目的「*特性*」\(Characteristic\) 應從該項目如何影響程式碼，以及兩者之間互動的角度來觀察。  每個宣告項目都有一個或多個與其關聯的特性，如下：  
+# <a name="declared-element-characteristics-visual-basic"></a><span data-ttu-id="f2603-102">宣告項目特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2603-102">Declared Element Characteristics (Visual Basic)</span></span>
+<span data-ttu-id="f2603-103">A*特性*宣告的項目是會影響程式碼可以使用了該項目的外觀。</span><span class="sxs-lookup"><span data-stu-id="f2603-103">A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it.</span></span> <span data-ttu-id="f2603-104">每個宣告的項目有一或多個與它相關的下列特性：</span><span class="sxs-lookup"><span data-stu-id="f2603-104">Every declared element has one or more of the following characteristics associated with it:</span></span>  
   
--   「*資料型別*」\(Data type\) \- 項目可保留的值，以及儲存這些值的方式。  如需詳細資訊，請參閱 [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+-   <span data-ttu-id="f2603-105">*資料型別*— 項目可以保留的值，以及如何儲存這些值。</span><span class="sxs-lookup"><span data-stu-id="f2603-105">*Data type* — the values the element can hold, and how it stores those values.</span></span> <span data-ttu-id="f2603-106">如需詳細資訊，請參閱[資料型別](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。</span><span class="sxs-lookup"><span data-stu-id="f2603-106">For more information, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
--   「*存留期*」\(Lifetime\) \- 可使用該項目的執行時間。  如需詳細資訊，請參閱 [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
+-   <span data-ttu-id="f2603-107">*存留期*— 這段期間的項目是可供使用的執行時間。</span><span class="sxs-lookup"><span data-stu-id="f2603-107">*Lifetime* — the period of execution time during which the element is available for use.</span></span> <span data-ttu-id="f2603-108">如需詳細資訊，請參閱[在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。</span><span class="sxs-lookup"><span data-stu-id="f2603-108">For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
--   「*範圍*」\(Scope\) \- 不需完整名稱而可參考該項目的整組程式碼。  如需詳細資訊，請參閱 [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。  
+-   <span data-ttu-id="f2603-109">*範圍*— 可以參考項目而不需要限定其名稱的所有程式碼。</span><span class="sxs-lookup"><span data-stu-id="f2603-109">*Scope* — the set of all code that can refer to the element without qualifying its name.</span></span> <span data-ttu-id="f2603-110">如需詳細資訊，請參閱[如何： 控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。</span><span class="sxs-lookup"><span data-stu-id="f2603-110">For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).</span></span>  
   
--   「*存取層級*」\(Access Level\) \- 程式碼對該項目的使用權限。  如需詳細資訊，請參閱 [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。  
+-   <span data-ttu-id="f2603-111">*存取層級*： 進行程式碼的權限的項目使用。</span><span class="sxs-lookup"><span data-stu-id="f2603-111">*Access level* — the permission for code to make use of the element.</span></span> <span data-ttu-id="f2603-112">如需詳細資訊，請參閱[如何： 控制變數的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。</span><span class="sxs-lookup"><span data-stu-id="f2603-112">For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).</span></span>  
   
-## 項目特性  
- 下表顯示的是宣告項目及可套用至每一個項目的特性。  
+## <a name="characteristics-of-the-elements"></a><span data-ttu-id="f2603-113">項目特性</span><span class="sxs-lookup"><span data-stu-id="f2603-113">Characteristics of the Elements</span></span>  
+ <span data-ttu-id="f2603-114">下表顯示宣告的項目，並套用至每一個的特性。</span><span class="sxs-lookup"><span data-stu-id="f2603-114">The following table shows the declared elements and the characteristics that apply to each one.</span></span>  
   
-|項目|資料型別|存留期|範圍 <sup>1</sup>|存取層級|  
-|--------|----------|---------|---------------------|----------|  
-|變數|是|是|是|是|  
-|常數|是|否|是|是|  
-|列舉|是|否|是|是|  
-|結構|否|否|是|是|  
-|屬性|是|是|是|是|  
-|方法|否|是|是|是|  
-|程序 \(`Sub` 或 `Function`\)|否|是|是|是|  
-|程序參數|是|是|是|否|  
-|函式傳回|是|是|是|否|  
-|運算子|是|否|是|是|  
-|介面|否|否|是|是|  
-|類別|否|否|是|是|  
-|事件|否|否|是|是|  
-|委派|否|否|是|是|  
+|<span data-ttu-id="f2603-115">項目</span><span class="sxs-lookup"><span data-stu-id="f2603-115">Element</span></span>|<span data-ttu-id="f2603-116">資料類型</span><span class="sxs-lookup"><span data-stu-id="f2603-116">Data Type</span></span>|<span data-ttu-id="f2603-117">存留期</span><span class="sxs-lookup"><span data-stu-id="f2603-117">Lifetime</span></span>|<span data-ttu-id="f2603-118">範圍<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="f2603-118">Scope <sup>1</sup></span></span>|<span data-ttu-id="f2603-119">存取層級</span><span class="sxs-lookup"><span data-stu-id="f2603-119">Access Level</span></span>|  
+|-------------|---------------|--------------|------------------------|------------------|  
+|<span data-ttu-id="f2603-120">變數</span><span class="sxs-lookup"><span data-stu-id="f2603-120">Variable</span></span>|<span data-ttu-id="f2603-121">是</span><span class="sxs-lookup"><span data-stu-id="f2603-121">Yes</span></span>|<span data-ttu-id="f2603-122">是</span><span class="sxs-lookup"><span data-stu-id="f2603-122">Yes</span></span>|<span data-ttu-id="f2603-123">是</span><span class="sxs-lookup"><span data-stu-id="f2603-123">Yes</span></span>|<span data-ttu-id="f2603-124">是</span><span class="sxs-lookup"><span data-stu-id="f2603-124">Yes</span></span>|  
+|<span data-ttu-id="f2603-125">常數</span><span class="sxs-lookup"><span data-stu-id="f2603-125">Constant</span></span>|<span data-ttu-id="f2603-126">是</span><span class="sxs-lookup"><span data-stu-id="f2603-126">Yes</span></span>|<span data-ttu-id="f2603-127">否</span><span class="sxs-lookup"><span data-stu-id="f2603-127">No</span></span>|<span data-ttu-id="f2603-128">是</span><span class="sxs-lookup"><span data-stu-id="f2603-128">Yes</span></span>|<span data-ttu-id="f2603-129">是</span><span class="sxs-lookup"><span data-stu-id="f2603-129">Yes</span></span>|  
+|<span data-ttu-id="f2603-130">列舉</span><span class="sxs-lookup"><span data-stu-id="f2603-130">Enumeration</span></span>|<span data-ttu-id="f2603-131">是</span><span class="sxs-lookup"><span data-stu-id="f2603-131">Yes</span></span>|<span data-ttu-id="f2603-132">否</span><span class="sxs-lookup"><span data-stu-id="f2603-132">No</span></span>|<span data-ttu-id="f2603-133">是</span><span class="sxs-lookup"><span data-stu-id="f2603-133">Yes</span></span>|<span data-ttu-id="f2603-134">是</span><span class="sxs-lookup"><span data-stu-id="f2603-134">Yes</span></span>|  
+|<span data-ttu-id="f2603-135">結構</span><span class="sxs-lookup"><span data-stu-id="f2603-135">Structure</span></span>|<span data-ttu-id="f2603-136">否</span><span class="sxs-lookup"><span data-stu-id="f2603-136">No</span></span>|<span data-ttu-id="f2603-137">否</span><span class="sxs-lookup"><span data-stu-id="f2603-137">No</span></span>|<span data-ttu-id="f2603-138">是</span><span class="sxs-lookup"><span data-stu-id="f2603-138">Yes</span></span>|<span data-ttu-id="f2603-139">是</span><span class="sxs-lookup"><span data-stu-id="f2603-139">Yes</span></span>|  
+|<span data-ttu-id="f2603-140">屬性</span><span class="sxs-lookup"><span data-stu-id="f2603-140">Property</span></span>|<span data-ttu-id="f2603-141">是</span><span class="sxs-lookup"><span data-stu-id="f2603-141">Yes</span></span>|<span data-ttu-id="f2603-142">是</span><span class="sxs-lookup"><span data-stu-id="f2603-142">Yes</span></span>|<span data-ttu-id="f2603-143">是</span><span class="sxs-lookup"><span data-stu-id="f2603-143">Yes</span></span>|<span data-ttu-id="f2603-144">是</span><span class="sxs-lookup"><span data-stu-id="f2603-144">Yes</span></span>|  
+|<span data-ttu-id="f2603-145">方法</span><span class="sxs-lookup"><span data-stu-id="f2603-145">Method</span></span>|<span data-ttu-id="f2603-146">否</span><span class="sxs-lookup"><span data-stu-id="f2603-146">No</span></span>|<span data-ttu-id="f2603-147">是</span><span class="sxs-lookup"><span data-stu-id="f2603-147">Yes</span></span>|<span data-ttu-id="f2603-148">是</span><span class="sxs-lookup"><span data-stu-id="f2603-148">Yes</span></span>|<span data-ttu-id="f2603-149">是</span><span class="sxs-lookup"><span data-stu-id="f2603-149">Yes</span></span>|  
+|<span data-ttu-id="f2603-150">程序 (`Sub`或`Function`)</span><span class="sxs-lookup"><span data-stu-id="f2603-150">Procedure (`Sub` or `Function`)</span></span>|<span data-ttu-id="f2603-151">否</span><span class="sxs-lookup"><span data-stu-id="f2603-151">No</span></span>|<span data-ttu-id="f2603-152">是</span><span class="sxs-lookup"><span data-stu-id="f2603-152">Yes</span></span>|<span data-ttu-id="f2603-153">是</span><span class="sxs-lookup"><span data-stu-id="f2603-153">Yes</span></span>|<span data-ttu-id="f2603-154">是</span><span class="sxs-lookup"><span data-stu-id="f2603-154">Yes</span></span>|  
+|<span data-ttu-id="f2603-155">程序參數</span><span class="sxs-lookup"><span data-stu-id="f2603-155">Procedure parameter</span></span>|<span data-ttu-id="f2603-156">是</span><span class="sxs-lookup"><span data-stu-id="f2603-156">Yes</span></span>|<span data-ttu-id="f2603-157">是</span><span class="sxs-lookup"><span data-stu-id="f2603-157">Yes</span></span>|<span data-ttu-id="f2603-158">是</span><span class="sxs-lookup"><span data-stu-id="f2603-158">Yes</span></span>|<span data-ttu-id="f2603-159">否</span><span class="sxs-lookup"><span data-stu-id="f2603-159">No</span></span>|  
+|<span data-ttu-id="f2603-160">函式傳回</span><span class="sxs-lookup"><span data-stu-id="f2603-160">Function return</span></span>|<span data-ttu-id="f2603-161">是</span><span class="sxs-lookup"><span data-stu-id="f2603-161">Yes</span></span>|<span data-ttu-id="f2603-162">是</span><span class="sxs-lookup"><span data-stu-id="f2603-162">Yes</span></span>|<span data-ttu-id="f2603-163">是</span><span class="sxs-lookup"><span data-stu-id="f2603-163">Yes</span></span>|<span data-ttu-id="f2603-164">否</span><span class="sxs-lookup"><span data-stu-id="f2603-164">No</span></span>|  
+|<span data-ttu-id="f2603-165">運算子</span><span class="sxs-lookup"><span data-stu-id="f2603-165">Operator</span></span>|<span data-ttu-id="f2603-166">是</span><span class="sxs-lookup"><span data-stu-id="f2603-166">Yes</span></span>|<span data-ttu-id="f2603-167">否</span><span class="sxs-lookup"><span data-stu-id="f2603-167">No</span></span>|<span data-ttu-id="f2603-168">是</span><span class="sxs-lookup"><span data-stu-id="f2603-168">Yes</span></span>|<span data-ttu-id="f2603-169">是</span><span class="sxs-lookup"><span data-stu-id="f2603-169">Yes</span></span>|  
+|<span data-ttu-id="f2603-170">介面</span><span class="sxs-lookup"><span data-stu-id="f2603-170">Interface</span></span>|<span data-ttu-id="f2603-171">否</span><span class="sxs-lookup"><span data-stu-id="f2603-171">No</span></span>|<span data-ttu-id="f2603-172">否</span><span class="sxs-lookup"><span data-stu-id="f2603-172">No</span></span>|<span data-ttu-id="f2603-173">是</span><span class="sxs-lookup"><span data-stu-id="f2603-173">Yes</span></span>|<span data-ttu-id="f2603-174">是</span><span class="sxs-lookup"><span data-stu-id="f2603-174">Yes</span></span>|  
+|<span data-ttu-id="f2603-175">類別</span><span class="sxs-lookup"><span data-stu-id="f2603-175">Class</span></span>|<span data-ttu-id="f2603-176">否</span><span class="sxs-lookup"><span data-stu-id="f2603-176">No</span></span>|<span data-ttu-id="f2603-177">否</span><span class="sxs-lookup"><span data-stu-id="f2603-177">No</span></span>|<span data-ttu-id="f2603-178">是</span><span class="sxs-lookup"><span data-stu-id="f2603-178">Yes</span></span>|<span data-ttu-id="f2603-179">是</span><span class="sxs-lookup"><span data-stu-id="f2603-179">Yes</span></span>|  
+|<span data-ttu-id="f2603-180">事件</span><span class="sxs-lookup"><span data-stu-id="f2603-180">Event</span></span>|<span data-ttu-id="f2603-181">否</span><span class="sxs-lookup"><span data-stu-id="f2603-181">No</span></span>|<span data-ttu-id="f2603-182">否</span><span class="sxs-lookup"><span data-stu-id="f2603-182">No</span></span>|<span data-ttu-id="f2603-183">是</span><span class="sxs-lookup"><span data-stu-id="f2603-183">Yes</span></span>|<span data-ttu-id="f2603-184">是</span><span class="sxs-lookup"><span data-stu-id="f2603-184">Yes</span></span>|  
+|<span data-ttu-id="f2603-185">委派</span><span class="sxs-lookup"><span data-stu-id="f2603-185">Delegate</span></span>|<span data-ttu-id="f2603-186">否</span><span class="sxs-lookup"><span data-stu-id="f2603-186">No</span></span>|<span data-ttu-id="f2603-187">否</span><span class="sxs-lookup"><span data-stu-id="f2603-187">No</span></span>|<span data-ttu-id="f2603-188">是</span><span class="sxs-lookup"><span data-stu-id="f2603-188">Yes</span></span>|<span data-ttu-id="f2603-189">是</span><span class="sxs-lookup"><span data-stu-id="f2603-189">Yes</span></span>|  
   
- <sup>1</sup> 範圍有時是指「*可視性*」\(Visibility\)。  
+ <span data-ttu-id="f2603-190"><sup>1</sup>範圍有時稱為*可視性*。</span><span class="sxs-lookup"><span data-stu-id="f2603-190"><sup>1</sup> Scope is sometimes referred to as *visibility*.</span></span>  
   
-## 請參閱  
- [Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)   
- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="f2603-191">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f2603-191">See Also</span></span>  
+ [<span data-ttu-id="f2603-192">宣告項目</span><span class="sxs-lookup"><span data-stu-id="f2603-192">Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
+ [<span data-ttu-id="f2603-193">宣告項目名稱</span><span class="sxs-lookup"><span data-stu-id="f2603-193">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="f2603-194">對已宣告項目的參考</span><span class="sxs-lookup"><span data-stu-id="f2603-194">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="f2603-195">在 Visual Basic 中的存留期</span><span class="sxs-lookup"><span data-stu-id="f2603-195">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="f2603-196">在 Visual Basic 中的範圍</span><span class="sxs-lookup"><span data-stu-id="f2603-196">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="f2603-197">在 Visual Basic 中的存取層級</span><span class="sxs-lookup"><span data-stu-id="f2603-197">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="f2603-198">資料類型</span><span class="sxs-lookup"><span data-stu-id="f2603-198">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="f2603-199">變數宣告</span><span class="sxs-lookup"><span data-stu-id="f2603-199">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

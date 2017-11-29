@@ -1,32 +1,30 @@
 ---
-title: "How to: Create an Add Extension Method Used by a Collection Initializer (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "collection initializers [Visual Basic]"
+title: "如何：建立集合初始設定式所使用的 Add 擴充方法 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d19ac8b03b992eb9b09b5cb45fdcceadad3a822a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create an Add Extension Method Used by a Collection Initializer (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-當您使用集合初始設定式建立集合時，Visual Basic 編譯器會搜尋集合型別的 `Add` 方法，而且 `Add` 方法的參數型別會與集合初始設定式中的值型別相符。  這個 `Add` 方法是用來將集合初始設定式中的值填入集合。  
+# <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a><span data-ttu-id="23259-102">如何：建立集合初始設定式所使用的 Add 擴充方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="23259-102">How to: Create an Add Extension Method Used by a Collection Initializer (Visual Basic)</span></span>
+<span data-ttu-id="23259-103">當您使用集合初始設定式來建立集合時，Visual Basic 編譯器會搜尋`Add`的集合型別的方法的參數`Add`方法符合型別集合初始設定式中的值。</span><span class="sxs-lookup"><span data-stu-id="23259-103">When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer.</span></span> <span data-ttu-id="23259-104">這`Add`方法用來填入集合初始設定式中的值集合。</span><span class="sxs-lookup"><span data-stu-id="23259-104">This `Add` method is used to populate the collection with the values from the collection initializer.</span></span>  
   
- 如果沒有相符的 `Add` 方法存在，而也無法修改集合的程式碼，那麼您可以加入名為 `Add` 的擴充方法，這個擴充方法會接受集合初始設定式所需的參數。  當您使用集合初始設定式來建立泛型集合時，通常都必須這麼做。  
+ <span data-ttu-id="23259-105">如果沒有相符的`Add`方法的存在，您無法修改集合的程式碼，您可以加入擴充方法呼叫`Add`採用所需的集合初始設定式的參數。</span><span class="sxs-lookup"><span data-stu-id="23259-105">If no matching `Add` method exists and you cannot modify the code for the collection, you can add an extension method called `Add` that takes the parameters that are required by the collection initializer.</span></span> <span data-ttu-id="23259-106">這通常是您需要時，您可以使用集合初始設定式的泛型集合。</span><span class="sxs-lookup"><span data-stu-id="23259-106">This is typically what you need to do when you use collection initializers for generic collections.</span></span>  
   
-## 範例  
- 下列範例示範如何將擴充方法加入至泛型 <xref:System.Collections.Generic.List%601> 型別，以便使用集合初始設定式來加入型別為 `Employee` 的物件。  擴充方法可讓您使用縮短的集合初始設定式語法。  
+## <a name="example"></a><span data-ttu-id="23259-107">範例</span><span class="sxs-lookup"><span data-stu-id="23259-107">Example</span></span>  
+ <span data-ttu-id="23259-108">下列範例示範如何將擴充方法新增至泛型<xref:System.Collections.Generic.List%601>型別，如此集合初始設定式可以用來加入類型的物件`Employee`。</span><span class="sxs-lookup"><span data-stu-id="23259-108">The following example shows how to add an extension method to the generic <xref:System.Collections.Generic.List%601> type so that a collection initializer can be used to add objects of type `Employee`.</span></span> <span data-ttu-id="23259-109">擴充方法可讓您使用簡短的集合初始設定式語法。</span><span class="sxs-lookup"><span data-stu-id="23259-109">The extension method enables you to use the shortened collection initializer syntax.</span></span>  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_1.vb)]  
   
@@ -34,6 +32,6 @@ caps.handback.revision: 8
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_3.vb)]  
   
-## 請參閱  
- [Collection Initializers](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [How to: Create a Collection Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)
+## <a name="see-also"></a><span data-ttu-id="23259-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="23259-110">See Also</span></span>  
+ [<span data-ttu-id="23259-111">集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="23259-111">Collection Initializers</span></span>](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [<span data-ttu-id="23259-112">如何：建立集合初始設定式所使用的集合</span><span class="sxs-lookup"><span data-stu-id="23259-112">How to: Create a Collection Used by a Collection Initializer</span></span>](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)
