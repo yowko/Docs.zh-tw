@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0bb682c6eaebf7e1a0c2c2de5b584c28e4c192c5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 22c2272118c8f8a42523d9bc8ceaa2007c0b7b57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 伺服陣列
 當您使用 Windows Identity Foundation (WIF) 來保護部署於 Web 伺服陣列中的信賴憑證者 (RP) 應用程式的資源時，必須採取特定的步驟，以確保 WIF 可以處理伺服陣列中不同電腦上所執行之 RP 應用程式執行個體的權杖。 這項處理包含驗證工作階段權杖簽章、加密和解密工作階段權杖、快取工作階段權杖，以及偵測重新執行的安全性權杖。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/21/2017
     </securityTokenHandlers>  
     ```  
   
--   衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 並實作分散式快取，也就是可從伺服陣列中所有可能執行 RP 的電腦上存取的快取。 設定 RP 以使用分散式快取，做法為在組態檔中指定 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素。 您可以覆寫衍生類別中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=fullName> 方法，來實作所需之 `<sessionSecurityTokenCache>` 元素的子元素。  
+-   衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 並實作分散式快取，也就是可從伺服陣列中所有可能執行 RP 的電腦上存取的快取。 設定 RP 以使用分散式快取，做法為在組態檔中指定 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素。 您可以覆寫衍生類別中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法，來實作所需之 `<sessionSecurityTokenCache>` 元素的子元素。  
   
     ```xml  
     <caches>  
@@ -262,8 +260,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>   
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>   
- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>   
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+ <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  
  [WIF 工作階段管理](../../../docs/framework/security/wif-session-management.md)
-

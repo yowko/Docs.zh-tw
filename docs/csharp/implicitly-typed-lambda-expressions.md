@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 663613af001f9727c48bd48553540305e47a6bab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="implicitly-typed-lambda-expressions"></a>隱含型別 Lambda 運算式
 
 我將不會使用 `var` 來宣告此運算式樹狀架構。 您無法使用隱含型別變數宣告來宣告 Lambda 運算式。
@@ -26,6 +24,5 @@ ms.lasthandoff: 07/28/2017
 指派兩邊都無法告知編譯器檢視指派運算子另一邊的物件，並查看我的類型是否相符。
 
 您可以閱讀[這篇文章](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (PDF 下載)，以取得更多有關 C# 語言為什麼會指定該行為的詳細資訊
-
 
 

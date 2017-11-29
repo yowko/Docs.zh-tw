@@ -1,1 +1,1 @@
-.NET 核心
+.NET Core

@@ -4,16 +4,15 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.topic: article
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: e76d0e3722be1246a46604aba19eb38aecc54e83
 ms.openlocfilehash: 7b7f13a5119b429d8a80f48cf670b897ed97e094
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/15/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) 範例
 這些範例會針對 [!INCLUDE[wf](../../../../includes/wf-md.md)] 的各種層面提供指示。  
@@ -33,7 +32,6 @@ ms.lasthandoff: 09/15/2017
  [案例](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)  
  提供 [!INCLUDE[wf](../../../../includes/wf-md.md)] 案例的範例。  
   
- 此節中的範例使用 C# 3.0 的新功能。 如需某些可能不熟悉之 C# 3.0 新功能的詳細資訊，請參閱 [C# 3.0 概觀](http://go.microsoft.com/fwlink/?LinkId=193972) \(英文\)。  
+ 此章節中的範例會使用 C# 3.0 的新功能。 如需某些可能不熟悉的 C# 3.0 新功能的詳細資訊，請參閱 [C# 3.0 Overview](http://go.microsoft.com/fwlink/?LinkId=193972) (C# 3.0 概觀)。  
   
  這些範例可從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=150780)下載。
-

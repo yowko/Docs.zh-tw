@@ -1,23 +1,27 @@
 ---
-title: "驗證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Validation2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ea741d7-ccfb-46c5-a3fb-b66d6ebd6928
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b5a53bde3309af48f09d70201ad6d13069a609ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 驗證
+# <a name="validation"></a>驗證
 本節包含示範活動驗證的範例。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [外部活動驗證](../../../../docs/framework/windows-workflow-foundation/samples/external-activity-validation.md)  
  這個範例示範如何將驗證邏輯加入至不是您撰寫的內建活動。  
   

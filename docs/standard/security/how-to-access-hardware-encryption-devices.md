@@ -1,48 +1,50 @@
 ---
-title: "How to: Access Hardware Encryption Devices | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "encryption"
-  - "key card"
-  - "cryptography"
-  - "hardware encryption"
-  - "CspParameters"
+title: "如何：存取硬體加密裝置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- encryption
+- key card
+- cryptography
+- hardware encryption
+- CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5156316387f94d434301e2d5286bd325d7e04320
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Access Hardware Encryption Devices
-您可以使用 <xref:System.Security.Cryptography.CspParameters> 類別來存取硬體加密裝置。  例如，您可以使用這個類別來整合應用程式與智慧卡、硬體亂數產生器或特定密碼編譯演算法的硬體實作。  
+# <a name="how-to-access-hardware-encryption-devices"></a>如何：存取硬體加密裝置
+您可以使用 <xref:System.Security.Cryptography.CspParameters> 類別來存取硬體加密裝置。 例如，您可以使用這個類別來整合應用程式與智慧卡、硬體亂數產生器或特定密碼編譯演算法的硬體實作。  
   
- <xref:System.Security.Cryptography.CspParameters> 類別會建立存取正確安裝之硬體加密裝置的密碼編譯服務提供者 \(CSP\)。  您可以使用登錄編輯程式 \(Regedit.exe\) 檢查下列登錄機碼，以驗證 CSP 的可用性：HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Cryptography\\Defaults\\Provider。  
+ <xref:System.Security.Cryptography.CspParameters> 類別會建立存取正確安裝之硬體加密裝置的密碼編譯服務提供者 (CSP)。  您可以使用登錄編輯程式 (Regedit.exe) 檢查下列登錄機碼，以驗證 CSP 的可用性：HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider。  
   
-### 使用金鑰卡簽署資料  
+### <a name="to-sign-data-using-a-key-card"></a>使用金鑰卡簽署資料  
   
 1.  建立 <xref:System.Security.Cryptography.CspParameters> 類別的新執行個體，並將整數提供者類型和提供者名稱傳遞給建構函式。  
   
-2.  將適當的旗標傳遞給新建立之 <xref:System.Security.Cryptography.CspParameters> 物件的 <xref:System.Security.Cryptography.CspParameters.Flags%2A> 屬性。  例如，傳遞 <xref:System.Security.Cryptography.CspProviderFlags> 旗標。  
+2.  將適當的旗標傳遞給新建立之 <xref:System.Security.Cryptography.CspParameters> 物件的 <xref:System.Security.Cryptography.CspParameters.Flags%2A> 屬性。  例如，傳遞 <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer> 旗標。  
   
-3.  建立 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 類別的新執行個體 \(例如，<xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別\)，並傳遞 <xref:System.Security.Cryptography.CspParameters> 物件給建構函式。  
+3.  建立 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 類別的新執行個體 (例如，<xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別)，並傳遞 <xref:System.Security.Cryptography.CspParameters> 物件給建構函式。  
   
 4.  使用其中一個 `Sign` 方法簽署資料，並使用其中一個 `Verify` 方法驗證資料。  
   
-### 使用硬體亂數產生器產生亂數  
+### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>使用硬體亂數產生器產生亂數  
   
 1.  建立 <xref:System.Security.Cryptography.CspParameters> 類別的新執行個體，並將整數提供者類型和提供者名稱傳遞給建構函式。  
   
@@ -50,14 +52,14 @@ caps.handback.revision: 9
   
 3.  使用 <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> 或 <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> 方法建立亂數。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例示範如何使用智慧卡簽署資料。  程式碼範例會建立公開智慧卡的 <xref:System.Security.Cryptography.CspParameters> 物件，然後使用 CSP 初始化 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件。  程式碼範例接著會簽署並驗證某些資料。  
   
  [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
  [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
  [!code-vb[Cryptography.SmartCardCSP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.SmartCardCSP/VB/example.vb#1)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   包含 <xref:System> 和 <xref:System.Security.Cryptography> 命名空間。  
   

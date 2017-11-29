@@ -1,23 +1,26 @@
 ---
-title: "自訂權杖 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自訂權杖"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 19593e61cc640068ac7c90a6abbd6ea0d6a3ff08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 自訂權杖
-這個範例示範如何將自訂權杖實作新增至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式中。  範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。  權杖會在 WS\-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結項目，與訊息本文及其他訊息標頭一起經過簽署和加密。  當內建權杖的安全性不足時，這會十分有幫助。  這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。  服務會實作定義要求\-回覆通訊模式的合約。  
+# <a name="custom-token"></a>自訂權杖
+這個範例示範如何將自訂權杖實作新增至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式中。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -28,12 +31,12 @@ caps.handback.revision: 28
   
 -   服務如何取用並驗證自訂安全性權杖。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務程式碼如何取得所收到關於安全性權杖 \(包含自訂安全性權杖\) 的資訊。  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務程式碼如何取得所收到關於安全性權杖 (包含自訂安全性權杖) 的資訊。  
   
 -   如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。  
   
-## 使用自訂安全性權杖的用戶端驗證  
- 服務會使用 `BindingHelper` 和 `EchoServiceHost` 類別，公開透過程式設計所建立的單一端點。  端點是由位址、繫結及合約所組成。  繫結是透過使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 的自訂繫結所設定。  這個範例會設定 `SymmetricSecurityBindingElement`，使其在傳輸期間使用服務的 X.509 憑證來保護對稱金鑰，以及在 WS\-Security 訊息標頭中傳遞自訂 `CreditCardToken` 做為簽署和加密的安全性權杖。  此行為會指定要用於用戶端驗證的服務認證，以及服務 X.509 憑證的相關資訊。  
+## <a name="client-authentication-using-a-custom-security-token"></a>使用自訂安全性權杖的用戶端驗證  
+ 服務會使用 `BindingHelper` 和 `EchoServiceHost` 類別，公開透過程式設計所建立的單一端點。 端點是由位址、繫結及合約所組成。 繫結是透過使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 的自訂繫結所設定。 這個範例會設定 `SymmetricSecurityBindingElement`，使其在傳輸期間使用服務的 X.509 憑證來保護對稱金鑰，以及在 WS-Security 訊息標頭中傳遞自訂 `CreditCardToken` 做為簽署和加密的安全性權杖。 此行為會指定要用於用戶端驗證的服務認證，以及服務 X.509 憑證的相關資訊。  
   
 ```  
 public static class BindingHelper  
@@ -54,7 +57,7 @@ public static class BindingHelper
 }  
 ```  
   
- 為了取用訊息中的信用卡權杖，範例會使用自訂服務認證來提供這項功能。  服務認證類別位於 `CreditCardServiceCredentials` 類別中，而且會在 `EchoServiceHost.InitializeRuntime` 方法中新增至服務主機的行為集合。  
+ 為了取用訊息中的信用卡權杖，範例會使用自訂服務認證來提供這項功能。 服務認證類別位於 `CreditCardServiceCredentials` 類別中，而且會在 `EchoServiceHost.InitializeRuntime` 方法中新增至服務主機的行為集合。  
   
 ```  
 class EchoServiceHost : ServiceHost  
@@ -89,10 +92,9 @@ class EchoServiceHost : ServiceHost
         base.InitializeRuntime();  
     }  
 }  
-  
 ```  
   
- 用戶端端點與服務端點的設定方式相似。  用戶端會使用相同的 `BindingHelper` 類別來建立繫結。  其餘的設定工作則在 `Client` 類別中進行。  用戶端還會將含有適當資料的 `CreditCardClientCredentials` 執行個體新增至用戶端端點行為集合，以設定要包含在 `CreditCardToken` 中的資訊，以及要包含在安裝程式碼中的服務 X.509 憑證資訊。  範例會使用其主體名稱設為 `CN=localhost` 的 X.509 憑證做為服務憑證。  
+ 用戶端端點與服務端點的設定方式相似。 用戶端會使用相同的 `BindingHelper` 類別來建立繫結。 其餘的設定工作則在 `Client` 類別中進行。 用戶端還會將含有適當資料的 `CreditCardToken` 執行個體新增至用戶端端點行為集合，以設定要包含在 `CreditCardClientCredentials` 中的資訊，以及要包含在安裝程式碼中的服務 X.509 憑證資訊。 範例會使用其主體名稱設為 `CN=localhost` 的 X.509 憑證做為服務憑證。  
   
 ```  
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();  
@@ -122,8 +124,8 @@ Console.WriteLine("Echo service returned: {0}", client.Echo());
 channelFactory.Close();  
 ```  
   
-## 自訂安全性權杖實作  
- 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中啟用自訂安全性權杖，請建立自訂安全性權杖的物件表示。  範例會在 `CreditCardToken` 類別中產生這個表示。  此物件表示負責保存所有相關的安全性權杖資訊，並提供安全性權杖所含安全性金鑰的清單。  在本例中，信用卡安全性權杖未包含任何安全性金鑰。  
+## <a name="custom-security-token-implementation"></a>自訂安全性權杖實作  
+ 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中啟用自訂安全性權杖，請建立自訂安全性權杖的物件表示。 範例會在 `CreditCardToken` 類別中產生這個表示。 此物件表示負責保存所有相關的安全性權杖資訊，並提供安全性權杖所含安全性金鑰的清單。 在本例中，信用卡安全性權杖未包含任何安全性金鑰。  
   
  下一節會說明應該如何做，才能讓自訂權杖在網路上傳輸並且供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點取用。  
   
@@ -160,11 +162,10 @@ class CreditCardToken : SecurityToken
     public override DateTime ValidTo { get { return this.cardInfo.ExpirationDate; } }  
     public override string Id { get { return this.id; } }  
 }  
-  
 ```  
   
-## 在訊息中存取自訂信用卡權杖  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的安全性權杖序列化程式會負責從訊息的 XML 中建立安全性權杖的物件表示，以及從安全性權杖的物件表示中建立 XML。  它們還負責像是讀取和寫入指向安全性權杖之金鑰識別項等其他的功能，但是本範例僅使用與安全性權杖相關的功能。  若要啟用自訂權杖，就必須實作您自己的安全性權杖序列化程式。  本範例會使用 `CreditCardSecurityTokenSerializer` 類別來達到這個目的。  
+## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>在訊息中存取自訂信用卡權杖  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的安全性權杖序列化程式會負責從訊息的 XML 中建立安全性權杖的物件表示，以及從安全性權杖的物件表示中建立 XML。 它們還負責像是讀取和寫入指向安全性權杖之金鑰識別項等其他的功能，但是本範例僅使用與安全性權杖相關的功能。 若要啟用自訂權杖，就必須實作您自己的安全性權杖序列化程式。 本範例會使用 `CreditCardSecurityTokenSerializer` 類別來達到這個目的。  
   
  在服務上，自訂序列化程式會讀取自訂權杖的 XML 表單，並由其中建立自訂權杖物件表示。  
   
@@ -251,14 +252,14 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 }  
 ```  
   
-## 建立權杖提供者和權杖驗證器類別的方式  
- 用戶端和服務認證負責提供安全性權杖管理員執行個體。  安全性權杖管理員執行個體可以用來取得權杖提供者、權杖驗證器和權杖序列化程式。  
+## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>建立權杖提供者和權杖驗證器類別的方式  
+ 用戶端和服務認證負責提供安全性權杖管理員執行個體。 安全性權杖管理員執行個體可以用來取得權杖提供者、權杖驗證器和權杖序列化程式。  
   
- 權杖提供者會根據用戶端或服務認證中包含的資訊，以建立權杖的物件表示，  然後使用權杖序列化程式 \(如上一節所討論的\) 將權杖物件表示寫入訊息中。  
+ 權杖提供者會根據用戶端或服務認證中包含的資訊，以建立權杖的物件表示， 然後使用權杖序列化程式 (如上一節所討論的) 將權杖物件表示寫入訊息中。  
   
- 權杖驗證器會驗證抵達訊息的權杖。  傳入的權杖物件表示是權杖序列化程式所建立的。  這個物件表示會接著傳遞給權杖驗證器以供驗證。  當權杖成功通過驗證後，權杖驗證器便會傳回代表權杖內所含資訊的 `IAuthorizationPolicy` 物件集合。  這項資訊稍後會在處理訊息時用來進行授權決策，以及提供應用程式的宣告。  在此範例中，信用卡權杖驗證器會使用 `CreditCardTokenAuthorizationPolicy` 來達成這個目的。  
+ 權杖驗證器會驗證抵達訊息的權杖。 傳入的權杖物件表示是權杖序列化程式所建立的。 這個物件表示會接著傳遞給權杖驗證器以供驗證。 當權杖成功通過驗證後，權杖驗證器便會傳回代表權杖內所含資訊的 `IAuthorizationPolicy` 物件集合。 這項資訊稍後會在處理訊息時用來進行授權決策，以及提供應用程式的宣告。 在此範例中，信用卡權杖驗證器會使用 `CreditCardTokenAuthorizationPolicy` 來達成這個目的。  
   
- 權杖序列化程式會負責在網路傳輸上存取權杖的物件表示。  上一節已討論過這一點。  
+ 權杖序列化程式會負責在網路傳輸上存取權杖的物件表示。 上一節已討論過這一點。  
   
  在此範例中，因為只是要以用戶端到服務的方向來傳輸信用卡權杖，所以在用戶端只使用了權杖提供者，而在服務上只使用權杖驗證器。  
   
@@ -506,11 +507,10 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
             return true;  
         }  
     }  
-  
 ```  
   
-## 顯示呼叫端的資訊  
- 若要顯示呼叫者的資訊，請使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下列範例程式碼所示。  `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含與目前呼叫者關聯的授權宣告。  `AuthorizationPolicies` 集合中的 `CreditCardToken` 類別會提供這些宣告。  
+## <a name="displaying-the-callers-information"></a>顯示呼叫端的資訊  
+ 若要顯示呼叫者的資訊，請使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下列範例程式碼所示。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含與目前呼叫者關聯的授權宣告。 `CreditCardToken` 集合中的 `AuthorizationPolicies` 類別會提供這些宣告。  
   
 ```  
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)  
@@ -551,21 +551,20 @@ string GetCallerCreditCardNumber()
 }  
 ```  
   
- 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。  在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
+ 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-## 設定批次檔  
- 本範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的 IIS 裝載應用程式。  這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。  
+## <a name="setup-batch-file"></a>設定批次檔  
+ 本範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的 IIS 裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。  
   
  下面提供批次檔的各區段簡要概觀，讓將批次檔得以修改為在適當的組態下執行。  
   
 -   建立伺服器憑證：  
   
-     下列 `Setup.bat` 批次檔中的程式行會建立要使用的伺服器憑證。  `%SERVER_NAME%` 變數會指定伺服器名稱。  您可以變更這個變數來指定自己的伺服器名稱。  這個批次檔中的預設值為 localhost。  如果您變更 `%SERVER_NAME%` 變數，就必須在 Client.cs 和 Service.cs 檔案中遍尋 localhost，並以您在 Setup.bat 指令碼中使用的伺服器名稱來取代 localhost 的所有例項。  
+     下列 `Setup.bat` 批次檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔中的預設值為 localhost。 如果您變更 `%SERVER_NAME%` 變數，就必須在 Client.cs 和 Service.cs 檔案中遍尋 localhost，並以您在 Setup.bat 指令碼中使用的伺服器名稱來取代 localhost 的所有例項。  
   
-     憑證會儲存在 `LocalMachine` 存放區位置下的 My \(Personal\) 存放區中。  憑證會儲存在 IIS 裝載服務的 LocalMachine 存放區中。  對於自我裝載的服務，您應該以 CurrentUser 取代字串 LocalMachine，將批次檔改為在 CurrentUser 存放區的位置上儲存用戶端憑證。  
+     憑證會儲存在 `LocalMachine` 存放區位置下的 My (Personal) 存放區中。 憑證會儲存在 IIS 裝載服務的 LocalMachine 存放區中。 對於自我裝載的服務，您應該以 CurrentUser 取代字串 LocalMachine，將批次檔改為在 CurrentUser 存放區的位置上儲存用戶端憑證。  
   
     ```  
-  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -573,23 +572,20 @@ string GetCallerCreditCardNumber()
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
 -   將伺服器憑證安裝至用戶端的受信任憑證存放區中：  
   
-     Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。  這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。  如果您已經有一個以用戶端信任的根憑證 \(例如 Microsoft 所發行的憑證\) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。  
+     Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。  
   
     ```  
-  
     echo ************  
     echo copying server cert to client's TrustedPeople store  
     echo ************  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-  
     ```  
   
--   若要啟用從 IIS 裝載服務對憑證私密金鑰進行的存取，就必須將私密金鑰的適當權限授與用於執行 IIS 裝載處理序的使用者帳戶。  Setup.bat 指令碼中的最後幾個步驟將會完成這個部分。  
+-   若要啟用從 IIS 裝載服務對憑證私密金鑰進行的存取，就必須將私密金鑰的適當權限授與用於執行 IIS 裝載處理序的使用者帳戶。 Setup.bat 指令碼中的最後幾個步驟將會完成這個部分。  
   
     ```  
     echo ************  
@@ -603,38 +599,38 @@ string GetCallerCreditCardNumber()
     ```  
   
 > [!NOTE]
->  Setup.bat 批次檔是設計用來從 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元執行。  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元中設定的 PATH 環境變數會指向包含 Setup.bat 指令碼所需之可執行檔的目錄。  
+>  Setup.bat 批次檔是設計用來從 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元執行。 在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元中設定的 PATH 環境變數會指向包含 Setup.bat 指令碼所需之可執行檔的目錄。  
   
-#### 若要設定和建置範例  
+#### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案，請遵循 [建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md) 中的指示進行。  
+2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-#### 若要在同一部電腦上執行範例  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
-1.  使用系統管理員權限來開啟 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元視窗，然後執行範例安裝資料夾中的 Setup.bat。  這會安裝執行範例所需的所有憑證。確認路徑中包含 Makecert.exe 所在的資料夾。  
+1.  使用系統管理員權限來開啟 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元視窗，然後執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。確認路徑中包含 Makecert.exe 所在的資料夾。  
   
 > [!NOTE]
->  當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。  其他安全性範例使用相同的憑證。  
+>  當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
-1.  從 \\client\\bin 目錄啟動 Client.exe。  用戶端活動會顯示在用戶端主控台應用程式上。  
+1.  從 \client\bin 目錄啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-2.  如果用戶端和服務無法通訊，請參閱[Troubleshooting Tips](http://msdn.microsoft.com/zh-tw/8787c877-5e96-42da-8214-fa737a38f10b)。  
+2.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 若要跨電腦執行範例  
+#### <a name="to-run-the-sample-across-computer"></a>若要跨電腦執行範例  
   
 1.  在服務電腦上為服務二進位碼檔案建立一個目錄。  
   
-2.  將服務程式檔複製到服務電腦上的服務目錄中。  別忘了複製 CreditCardFile.txt，否則信用卡驗證器將無法驗證用戶端傳來的信用卡資訊。  同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
+2.  將服務程式檔複製到服務電腦上的服務目錄中。 別忘了複製 CreditCardFile.txt，否則信用卡驗證器將無法驗證用戶端傳來的信用卡資訊。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-3.  您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。  只要將 `%SERVER_NAME%` 變數變更為裝載服務之電腦的完整名稱，您就可以使用 Setup.bat 建立憑證。  請注意，您必須在使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 Setup.bat 檔案。  
+3.  您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 只要將 `%SERVER_NAME%` 變數變更為裝載服務之電腦的完整名稱，您就可以使用 Setup.bat 建立憑證。 請注意，您必須在使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 Setup.bat 檔案。  
   
-4.  將伺服器憑證複製到用戶端的 CurrentUser\-TrustedPeople 存放區中。  只有在伺服器憑證不是由受信任的簽發者發行時才必須這麼做。  
+4.  將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 只有在伺服器憑證不是由受信任的簽發者發行時才必須這麼做。  
   
 5.  在 EchoServiceHost.cs 檔案中，將憑證主體名稱的值改為指定完整電腦名稱，而不指定 localhost。  
   
-6.  將語言特定資料夾下 \\client\\bin\\ 資料夾中的用戶端程式檔案複製到用戶端電腦。  
+6.  將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端電腦。  
   
 7.  在 Client.cs 檔案中，變更端點的位址值以符合服務的新位址。  
   
@@ -642,10 +638,10 @@ string GetCallerCreditCardNumber()
   
 9. 在用戶端電腦上，從命令提示字元視窗啟動 Client.exe。  
   
-10. 如果用戶端和服務無法通訊，請參閱[Troubleshooting Tips](http://msdn.microsoft.com/zh-tw/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 若要在使用範例之後進行清除  
+#### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

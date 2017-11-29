@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SOAP, XML serialization
 - XML serialization, SOAP
@@ -19,16 +14,15 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: a6af8cd2560bb9c39657d8e5b088954996ba2a04
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 052996bedcb10494cb2fee1ccf3ba7b5a083356b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>控制編碼 SOAP 序列化的屬性 
 全球資訊網協會 (www.w3.org) 的文件《Simple Object Access Protocol (SOAP) 1.1》，其中包含描述 SOAP 參數如何編碼的選擇性章節 (第 5 節)。 若要遵循第 5 節的規格，您必須使用在 <xref:System.Xml.Serialization> 命名空間中的特殊屬性集。 套用適合類別與類別成員的那些屬性，然後使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化類別的執行個體。  
@@ -47,11 +41,10 @@ ms.lasthandoff: 08/21/2017
 |<xref:System.Xml.Serialization.SoapTypeAttribute>|公用類別宣告|類別應序列化成 XML 型別。|  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [如何：將物件序列化為 SOAP 編碼的 XML 資料流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)   
- [如何：覆寫編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)   
- [屬性](../../../docs/standard/attributes/index.md)   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [如何：將物件序列化為 SOAP 編碼的 XML 資料流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+ [如何：覆寫已編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
+ [屬性](../../../docs/standard/attributes/index.md)  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

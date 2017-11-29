@@ -1,75 +1,78 @@
 ---
-title: "HOW TO：存取來自工作流程應用程式的服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：存取來自工作流程應用程式的服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d2d87c045fe81e3f5bf2cb490e47fb5fbd6bc7a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：存取來自工作流程應用程式的服務
-本主題描述如何從工作流程主控台應用程式呼叫工作流程服務。進行之前，必須先完成 [HOW TO：說明如何使用訊息活動建立工作流程服務。](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題所述內容。雖然本主題描述如何從工作流程應用程式呼叫工作流程服務，但是同樣的方法也可以用來從工作流程應用程式呼叫任何 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務。  
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>HOW TO：存取來自工作流程應用程式的服務
+本主題描述如何從工作流程主控台應用程式呼叫工作流程服務。 它相依於是否完成[How to： 使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。 雖然本主題描述如何從工作流程應用程式呼叫工作流程服務，但是同樣的方法也可以用來從工作流程應用程式呼叫任何 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務。  
   
-### 建立工作流程主控台應用程式專案  
+### <a name="create-a-workflow-console-application-project"></a>建立工作流程主控台應用程式專案  
   
 1.  啟動 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
   
-2.  載入您在 [HOW TO：說明如何使用訊息活動建立工作流程服務。](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題中建立的 MyWFService 專案。  
+2.  載入您在建立 MyWFService 專案[How to： 使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。  
   
-3.  以滑鼠右鍵按一下 \[**方案總管**\] 中的 \[**MyWFService**\] 方案，並依序選取 \[**加入**\]、\[**新專案**\]。從專案類型清單的 \[**已安裝的範本**\] 和 \[**工作流程主控台應用程式**\] 中，選取 \[**工作流程**\]。將專案命名為 MyWFClient，並且使用預設位置，如下圖所示。  
+3.  以滑鼠右鍵按一下**MyWFService**解決方案**方案總管 中**選取**新增**，**新專案**。 選取**工作流程**中**已安裝的範本**和**工作流程主控台應用程式**從專案類型清單。 將專案命名為 MyWFClient，並且使用預設位置，如下圖所示。  
   
-     ![加入新的專案對話方塊](../../../../docs/framework/wcf/feature-details/media/addnewprojectdlg.JPG "AddNewProjectDlg")  
+     ![加入新的專案 對話方塊](../../../../docs/framework/wcf/feature-details/media/addnewprojectdlg.JPG "AddNewProjectDlg")  
   
-     按一下 \[**確定**\] 按鈕以關閉 \[**加入新的專案**\] 對話方塊。  
+     按一下**確定**按鈕以關閉**新增專案 對話方塊**。  
   
-4.  建立專案之後，Workflow1.xaml 檔會在設計工具中開啟。按一下 \[**工具箱**\] 索引標籤開啟工具箱 \(如果尚未開啟的話\)，然後按一下圖釘，讓工具箱視窗保持在開啟狀態。  
+4.  建立專案之後，Workflow1.xaml 檔會在設計工具中開啟。 按一下**工具箱**索引標籤，以開啟工具箱 中，如果不是已開啟，然後按一下圖釘，讓工具箱視窗保持開啟。  
   
-5.  按下 Ctrl\+F5 以建置並啟動服務。ASP.NET 程式開發伺服器會如往常一般隨即啟動，而且 Internet Explorer 會顯示 WCF 說明網頁。請記下這個網頁的 URI，因為您必須在下一個步驟中使用。  
+5.  按下 Ctrl+F5 以建置並啟動服務。 ASP.NET 程式開發伺服器會如往常一般隨即啟動，而且 Internet Explorer 會顯示 WCF 說明網頁。 請記下這個網頁的 URI，因為您必須在下一個步驟中使用。  
   
-     ![顯示 WCF 說明頁面和 URI 的 IE](../../../../docs/framework/wcf/feature-details/media/iewcfhelppagewuri.JPG "IEWCFHelpPageWURI")  
+     ![IE 顯示 WCF 說明頁面及 URI](../../../../docs/framework/wcf/feature-details/media/iewcfhelppagewuri.JPG "IEWCFHelpPageWURI")  
   
-6.  以滑鼠右鍵按一下 \[**方案總管**\] 中的 \[**MyWFClient**\] 專案，並選取 \[**加入服務參考**\]。按一下 \[**探索**\] 按鈕，搜尋目前方案中的任何服務。按一下 \[服務\] 清單中 Service1.xamlx 旁邊的三角形。按一下 Service1 旁邊的三角形，即可列出 Service1 服務實作的合約。展開 \[**服務**\] 清單中的 \[**Service1**\] 節點。\[**作業**\] 清單中會顯示 Echo 作業，如下圖所示。  
+6.  以滑鼠右鍵按一下**命名為 MyWFClient**專案中**方案總管 中**選取**加入服務參考**。 按一下**探索**按鈕，以搜尋目前方案中的任何服務。 按一下 [服務] 清單中 Service1.xamlx 旁邊的三角形。 按一下 Service1 旁邊的三角形，即可列出 Service1 服務實作的合約。 展開**Service1**節點**服務**清單。 Echo 作業，都會在**作業**列示在下圖所示。  
   
      ![加入服務參考對話方塊](../../../../docs/framework/wcf/feature-details/media/addservicereference.JPG "AddServiceReference")  
   
-     保留預設的命名空間，然後按一下 \[**確定**\]，關閉 \[**加入服務參考**\] 對話方塊。此時會顯示下列對話方塊。  
+     保留預設的命名空間然後按一下 **確定**解除**加入服務參考**對話方塊。 此時會顯示下列對話方塊。  
   
-     ![&#91;加入服務參考&#93; 通知對話方塊](../../../../docs/framework/wcf/feature-details/media/asrdlg.JPG "ASRDlg")  
+     ![加入服務參考通知對話](../../../../docs/framework/wcf/feature-details/media/asrdlg.JPG "ASRDlg")  
   
-     按一下 \[**確定**\] 關閉對話方塊。接著，請按下 CTRL\+SHIFT\+B 建置方案。您會注意到工具箱中已加入名為 \[**MyWFClient.ServiceReference1.Activities**\] 的新區段。展開此區段並注意已加入的 Echo 活動，如下圖所示。  
+     按一下**確定**以關閉對話方塊。 接著，請按下 CTRL+SHIFT+B 建置方案。 請注意，在 [工具箱] 加入新的區段呼叫**MyWFClient.ServiceReference1.Activities**。 展開此區段並注意已加入的 Echo 活動，如下圖所示。  
   
-     ![工具箱中的 Echo 活動](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")  
+     ![Echo 工具箱中的活動](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")  
   
-7.  將 <xref:System.ServiceModel.Activities.Sequence> 活動拖放至設計工具介面上。它位於工具箱的 \[**控制流程**\] 區段下方。  
+7.  將拖放<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`拖曳至設計工具介面上的活動。 在之下**控制流程**工具箱的區段。  
   
-8.  在 <xref:System.ServiceModel.Activities.Sequence> 活動擁有焦點時，按一下 \[**變數**\] 連結，並且加入名為 `inString` 的字串變數。為變數指定預設值 `“Hello, world”`，以及名為 `outString` 的字串變數，如下圖所示。  
+8.  與<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活動焦點，請按一下**變數**連結並新增名為的字串變數`inString`。 為變數指定預設值是`"Hello, world"`以及名為的字串變數`outString`下圖所示。  
   
-     ![加入變數](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")  
+     ![將變數加入](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")  
   
-9. 將 \[**Echo**\] 活動拖放至 <xref:System.ServiceModel.Activities.Sequence> 中。在 \[屬性\] 視窗中，將 \_string 引數繫結至 `inString` 變數，以及將 `out_string` 引數繫結至 outString 變數，如下圖所示。這樣做會將 `inString` 變數的值傳遞至作業中，然後取得傳回值並放入 `outString` 變數。  
+9. 將拖放**Echo**活動<!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`。 在 [屬性] 視窗中將繫結`inMsg`引數`inString`變數和`outMsg`引數`outString`變數，如下圖所示。 這樣做會將 `inString` 變數的值傳遞至作業中，然後取得傳回值並放入 `outString` 變數。  
   
-     ![將引數繫結至變數](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")  
+     ![引數繫結至變數](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")  
   
-10. 將 \[**WriteLine**\] 活動拖放至 \[**Echo**\] 活動下方，以顯示服務呼叫傳回的字串。\[**WriteLine**\] 活動會位於工具箱的 \[**Primitives**\] 節點中。在 \[**WriteLine**\] 活動的文字方塊中輸入 `outString`，藉此將 \[**WriteLine**\] 活動的 \[**Text**\] 引數繫結至 `outString` 變數。現在，工作流程的外觀應該如下圖所示。  
+10. 將拖放**WriteLine**活動下方**Echo**活動，以顯示服務呼叫所傳回的字串。 **WriteLine**活動會位於**基本型別**工具箱中的節點。 繫結**文字**引數的**WriteLine**活動`outString`變數輸入`outString`在文字方塊**WriteLine**活動。 現在，工作流程的外觀應該如下圖所示。  
   
      ![完整的用戶端工作流程](../../../../docs/framework/wcf/feature-details/media/completeclientwf.JPG "CompleteClientWF")  
   
-11. 以滑鼠右鍵按一下 \[MyWFService\] 方案，並選取 \[**設定啟始專案**\]。選取 \[**多個啟始專案**\] 選項按鈕，然後在 \[**動作**\] 欄中針對每個專案選取 \[**啟動**\]，如下圖所示。  
+11. 以滑鼠右鍵按一下 [MyWFService] 方案，然後選取**設定啟始專案...**.選取**多個啟始專案**選項按鈕，然後選取**啟動**中每個專案**動作**下圖所示的資料行。  
   
      ![啟始專案選項](../../../../docs/framework/wcf/feature-details/media/startupprojects.JPG "StartupProjects")  
   
-12. 按下 Ctrl\+F5，同時啟動服務與用戶端。ASP.NET 程式開發伺服器會裝載服務，Internet Explorer 會顯示 WCF 說明網頁，而用戶端工作流程應用程式會在主控台視窗中啟動，並且顯示從服務傳回的字串 \(“Hello, world”\)。  
+12. 按下 Ctrl+F5，同時啟動服務與用戶端。 ASP.NET 程式開發伺服器裝載的服務、 Internet Explorer 會顯示 WCF 說明頁面中，和用戶端工作流程應用程式會在主控台視窗中啟動，並顯示從服務 （"Hello，world"） 傳回的字串。  
   
-## 請參閱  
- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [HOW TO：說明如何使用訊息活動建立工作流程服務。](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)   
- [從 Web 專案的工作流程中取用 WCF 服務](http://go.microsoft.com/fwlink/?LinkId=207725)
+## <a name="see-also"></a>另請參閱  
+ [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [如何： 使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [使用 WCF 服務，從工作流程中的 Web 專案](http://go.microsoft.com/fwlink/?LinkId=207725)

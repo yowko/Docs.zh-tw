@@ -1,44 +1,48 @@
 ---
-title: "如何：自動縮放 ToolStripTextBox 以填滿 ToolStrip 的剩餘寬度 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "文字方塊, ToolStrip 控制項中自動縮放 [Windows Form]"
-  - "ToolStrip 控制項 [Windows Forms], 自動縮放文字方塊"
+title: "如何：自動縮放 ToolStripTextBox 以填滿 ToolStrip 的剩餘寬度 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
+- ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 213929e52f08fff19eb7641092789501c31648e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：自動縮放 ToolStripTextBox 以填滿 ToolStrip 的剩餘寬度 (Windows Form)
-當您將 <xref:System.Windows.Forms.ToolStrip> 控制項的 <xref:System.Windows.Forms.ToolStrip.Stretch%2A> 屬性設定為 `true` 時，控制項會填滿其容器的兩端，並且會隨著其容器調整大小而調整大小。  在這個組態中，您可能會發現它非常有助於自動縮放控制項中的項目 \(例如：<xref:System.Windows.Forms.ToolStripTextBox>\) 以填滿可用的空間，並隨著控制項調整大小而調整大小。  例如，如果您想要實現類似於 Microsoft® Internet Explorer 中之位址列的外觀和行為，這個自動縮放功能是非常有用的。  
+# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>如何：自動縮放 ToolStripTextBox 以填滿 ToolStrip 的剩餘寬度 (Windows Form)
+當您將<xref:System.Windows.Forms.ToolStrip.Stretch%2A>屬性<xref:System.Windows.Forms.ToolStrip>控制權傳輸至`true`，控制項從端對端，填滿其容器和其容器調整大小時，調整大小時。 在此組態中，您可能會發現這類延伸項目在控制項中， <xref:System.Windows.Forms.ToolStripTextBox>、 填滿可用空間和調整大小的控制項重新調整大小時。 延伸而非常有用，例如，如果您想要達到的外觀和行為類似於 Microsoft® Internet Explorer 中的網址列。  
   
-## 範例  
- 下列程式碼範例將提供衍生自 <xref:System.Windows.Forms.ToolStripTextBox> 且名稱為 `ToolStripSpringTextBox` 的類別。  這個類別將覆寫 <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> 方法，以計算在減去其他所有項目的寬度之後，父 <xref:System.Windows.Forms.ToolStrip> 控制項的可用寬度。  這個程式碼範例將同時提供 <xref:System.Windows.Forms.Form> 類別和 `Program` 類別，以示範新的行為。  
+## <a name="example"></a>範例  
+ 下列程式碼範例提供一個衍生自類別<xref:System.Windows.Forms.ToolStripTextBox>呼叫`ToolStripSpringTextBox`。 這個類別會覆寫<xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A>方法來計算可用寬度的父代<xref:System.Windows.Forms.ToolStrip>控制項之後已經減去的其他所有項目結合的寬度。 這個程式碼範例也會提供<xref:System.Windows.Forms.Form>類別和`Program`類別來示範新的行為。  
   
  [!code-csharp[ToolStripSpringTextBox#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
  [!code-vb[ToolStripSpringTextBox#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripSpringTextBox/vb/ToolStripSpringTextBox.vb#00)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
-## 請參閱  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripTextBox>   
- <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=fullName>   
- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
- [如何：在 StatusStrip 中以互動方式使用 Spring 屬性](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripTextBox>  
+ <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>  
+ [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [操作說明：在 StatusStrip 中以互動方式使用 Spring 屬性](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

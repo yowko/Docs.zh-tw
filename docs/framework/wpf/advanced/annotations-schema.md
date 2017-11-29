@@ -1,54 +1,48 @@
 ---
-title: "附註結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文件, 附註"
-  - "Microsoft Annotations Framework"
-  - "XML 結構描述定義 (XSD)"
+title: "附註結構描述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML schema definition (XSD)
+- Microsoft Annotations Framework [WPF]
+- documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4a68b8966e72339a6bf5929661cf89f7f8a0b07c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 附註結構描述
-本主題說明 Microsoft Annotations Framework 用來儲存及擷取使用者附註資料的 XML 結構描述定義 \(XSD\)。  
+# <a name="annotations-schema"></a>附註結構描述
+本主題說明 Microsoft Annotations Framework 用來儲存和擷取使用者註釋資料的 XML 結構描述定義 (XSD)。  
   
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 會將附註資料從內部表示法[序列化](GTMT)為 XML 格式。  這種轉換所使用的 XML 格式由 [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD 結構描述定義。  這個結構描述定義了與實作無關的 XML 格式，而這種格式可以用來在應用程式之間交換附註資料。  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 會將註釋資料從內部表示法序列化為 XML 格式。  [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD 結構描述描述用來進行此轉換的 XML 格式。  結構描述會定義可以用來在應用程式之間交換註釋資料之無關實作的 XML 格式。  
   
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML 結構描述定義是由兩個子結構描述組成：  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML 結構描述定義包含兩個子結構描述  
   
--   附註 XML 核心結構描述 \(核心結構描述\)。  
+-   註釋 XML 核心結構描述 (核心結構描述)。  
   
--   附註 XML 基底結構描述 \(基底結構描述\)。  
+-   註釋 XML 基底結構描述 (基底結構描述)。  
   
- 核心結構描述定義 <xref:System.Windows.Annotations.Annotation> 的主要 XML 結構。  核心結構描述中定義的 XML 項目大都對應於 <xref:System.Windows.Annotations> 命名空間中的型別。  核心結構描述會公開三個擴充點，供應用程式用來加入自己的 XML 資料。  這些擴充點包括 <xref:System.Windows.Annotations.Annotation.Authors%2A>、<xref:System.Windows.Annotations.ContentLocatorPart> 和「內容」  \(內容項目是以 <xref:System.Xml.XmlElement> 清單的形式提供\)。  
+ 核心結構描述定義的主要 XML 結構<xref:System.Windows.Annotations.Annotation>。  大部分的核心結構描述中定義的 XML 項目對應到以<xref:System.Windows.Annotations>命名空間。  核心結構描述會公開三個擴充點，應用程式可以在其中新增它們自己的 XML 資料。  這些擴充點包含<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和 「 內容 」。  (內容項目中的形式提供<xref:System.Xml.XmlElement>清單。)  
   
- 本主題描述的基底結構描述定義了 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 初始版本隨附之 <xref:System.Windows.Annotations.Annotation.Authors%2A>、<xref:System.Windows.Annotations.ContentLocatorPart> 和內容類型的擴充。  
-  
- 此主題包括下列章節：  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [附註 XML 核心結構描述](#CoreSchema)  
-  
--   [附註 XML 基底結構描述](#BaseSchema)  
-  
--   [附註 XmlStreamStore 建立的 XML](#SampleXML)  
+ 本主題中所述的基底結構描述定義的延伸<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和內容類型包含與初始[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]版本。  
   
 <a name="CoreSchema"></a>   
-## 附註 XML 核心結構描述  
- 附註 XML 核心結構描述定義用來儲存 <xref:System.Windows.Annotations.Annotation> 物件的 XML 結構。  
+## <a name="annotations-xml-core-schema"></a>註釋 XML 核心結構描述  
+ 註解 XML 核心結構描述會定義用來儲存的 XML 結構<xref:System.Windows.Annotations.Annotation>物件。  
   
-```  
+```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
             blockDefault="#all"  
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -197,10 +191,10 @@ caps.handback.revision: 13
 ```  
   
 <a name="BaseSchema"></a>   
-## 附註 XML 基底結構描述  
- 基底結構描述定義核心結構描述中所定義三個抽象項目的 XML 結構：<xref:System.Windows.Annotations.Annotation.Authors%2A>、<xref:System.Windows.Annotations.ContentLocatorPart> 和 <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。  
+## <a name="annotations-xml-base-schema"></a>註釋 XML 基底結構描述  
+ 基底結構描述會定義在核心結構描述 – 中定義的三個抽象元素的 XML 結構<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。  
   
-```  
+```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
      blockDefault="#all"  
      xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -508,10 +502,10 @@ caps.handback.revision: 13
 ```  
   
 <a name="SampleXML"></a>   
-## 附註 XmlStreamStore 產生的範例 XML  
- 下列 XML 顯示附註 <xref:System.Windows.Annotations.Storage.XmlStreamStore> 的輸出，以及包含三個附註 \(醒目提示、文字自黏便箋和筆墨自黏便箋\) 的簡單檔案組織架構。  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>註釋 XmlStreamStore 所產生的 XML 範例  
+ XML 程式碼，顯示註釋的輸出<xref:System.Windows.Annotations.Storage.XmlStreamStore>和範例檔案，其中包含三個註解-反白顯示文字自黏便箋，筆跡搖桿便箋的組織。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <anc:Annotations  
      xmlns:anc="http://schemas.microsoft.com/windows/annotations/2003/11/core"  
@@ -597,10 +591,10 @@ caps.handback.revision: 13
 </anc:Annotations>  
 ```  
   
-## 請參閱  
- <xref:System.Windows.Annotations>   
- <xref:System.Windows.Annotations.Storage>   
- <xref:System.Windows.Annotations.Annotation>   
- <xref:System.Windows.Annotations.Storage.AnnotationStore>   
- <xref:System.Windows.Annotations.Storage.XmlStreamStore>   
- [附註概觀](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Annotations>  
+ <xref:System.Windows.Annotations.Storage>  
+ <xref:System.Windows.Annotations.Annotation>  
+ <xref:System.Windows.Annotations.Storage.AnnotationStore>  
+ <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
+ [註釋概觀](../../../../docs/framework/wpf/advanced/annotations-overview.md)

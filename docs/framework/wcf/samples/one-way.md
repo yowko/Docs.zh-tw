@@ -1,23 +1,26 @@
 ---
-title: "單向 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "單向"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 05dbd465345f3b0cd9506f581f1a779f834c50fe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 單向
-這個範例示範具有單向服務作業的服務合約。與雙向服務作業的情況不同，用戶端不會等候服務作業完成。這個範例是以[使用者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，並且會使用 `wsHttpBinding` 繫結。這個範例中的服務是自我裝載的主控台應用程式，您可以用來觀察接收和處理要求的服務。用戶端也是主控台應用程式。  
+# <a name="one-way"></a>單向
+這個範例示範具有單向服務作業的服務合約。 與雙向服務作業的情況不同，用戶端不會等候服務作業完成。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)並用`wsHttpBinding`繫結。 這個範例中的服務是自我裝載的主控台應用程式，您可以用來觀察接收和處理要求的服務。 用戶端也是主控台應用程式。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -37,7 +40,6 @@ public interface IOneWayCalculator
     [OperationContract(IsOneWay = true)]  
     void Divide(double n1, double n2);  
 }  
-  
 ```  
   
  為了示範用戶端不等待服務作業完成的狀況，本範例中的服務程式碼實作了五秒鐘的延遲，如下列範例程式碼所示：  
@@ -58,14 +60,13 @@ public class CalculatorService : IOneWayCalculator
     }  
     ...  
 }  
-  
 ```  
   
  當用戶端呼叫服務時，該呼叫會逕自傳回，而不等待服務作業完成。  
   
- 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。您可以查看來自用戶端的服務接收訊息。請在每個主控台視窗中按下 ENTER，以關閉服務與用戶端。  
+ 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 請在每個主控台視窗中按下 ENTER，以關閉服務與用戶端。  
   
- 用戶端會比服務先完成，表示用戶端不會等候單向服務作業完成。用戶端輸出如下：  
+ 用戶端會比服務先完成，表示用戶端不會等候單向服務作業完成。 用戶端輸出如下：  
   
 ```  
 Add(100,15.99)  
@@ -74,7 +75,6 @@ Multiply(9,81.25)
 Divide(22,7)  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
  服務輸出如下：  
@@ -91,30 +91,29 @@ Processing Add(100,15.99) - result: 115.99
 Processing Subtract(145,76.54) - result: 68.46  
 Processing Multiply(9,81.25) - result: 731.25  
 Processing Divide(22,7) - result: 3.14285714285714  
-  
 ```  
   
 > [!NOTE]
->  根據定義，HTTP 是一種要求\/回應通訊協定；當要求提出時，就會傳回回應。即便是在 HTTP 上公開的單向服務作業，也是如此。呼叫作業時，服務會在服務作業執行以前傳回 202 的 HTTP 狀態碼。這個狀態碼表示已接受要求進行處理，但是處理尚未完成。呼叫此項作業的用戶端會封鎖，直到從服務收到 202 回應為止。當使用設定為使用工作階段的繫結來傳送多則單向訊息時，這可能會產生某種未預期的行為。根據預設，這個範例中使用的 `wsHttpBinding` 繫結會設定為使用工作階段，以便建立安全性內容。在預設情況下，將保證工作階段中的訊息依照傳送的順序抵達。因此，傳送工作階段中的第二則訊息時，就不會在第一則訊息處理完成之前加以處理。因此，除非完成處理上一則的訊息，否則，用戶端將不會收到訊息的 202 回應。所以用戶端會顯示為封鎖每次呼叫後續的作業。為了避免這種行為，此範例將執行階段設定為同時分派訊息至不同執行個體以進行處理。範例將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 設定為 `PerCall`，讓個別訊息可以分別由不同執行個體來處理<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 會設定為 `Multiple`，以允許多個執行緒同時分派訊息。  
+>  根據定義，HTTP 是一種要求/回應通訊協定；當要求提出時，就會傳回回應。 即便是在 HTTP 上公開的單向服務作業，也是如此。 呼叫作業時，服務會在服務作業執行以前傳回 202 的 HTTP 狀態碼。 這個狀態碼表示已接受要求進行處理，但是處理尚未完成。 呼叫此項作業的用戶端會封鎖，直到從服務收到 202 回應為止。 當使用設定為使用工作階段的繫結來傳送多則單向訊息時，這可能會產生某種未預期的行為。 根據預設，這個範例中使用的 `wsHttpBinding` 繫結會設定為使用工作階段，以便建立安全性內容。 在預設情況下，將保證工作階段中的訊息依照傳送的順序抵達。 因此，傳送工作階段中的第二則訊息時，就不會在第一則訊息處理完成之前加以處理。 因此，除非完成處理上一則的訊息，否則，用戶端將不會收到訊息的 202 回應。 所以用戶端會顯示為封鎖每次呼叫後續的作業。 為了避免這種行為，此範例將執行階段設定為同時分派訊息至不同執行個體以進行處理。 範例將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 設定為 `PerCall`，讓個別訊息可以分別由不同執行個體來處理。 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 會設定為 `Multiple`，以允許多個執行緒同時分派訊息。  
   
-### 若要設定、建置及執行範例  
+### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C\# 或 Visual Basic .NET 版本，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
->  請先執行服務，然後才執行用戶端；先關閉用戶端，再關閉服務。這可以避免當用戶端因服務消失而無法正常關閉安全性工作階段時，所發生的用戶端例外狀況。  
+>  請先執行服務，然後才執行用戶端；先關閉用戶端，再關閉服務。 這可以避免當用戶端因服務消失而無法正常關閉安全性工作階段時，所發生的用戶端例外狀況。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

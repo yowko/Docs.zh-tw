@@ -1,25 +1,28 @@
 ---
-title: "從工作流程服務存取 OperationContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "從工作流程服務存取 OperationContext"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 11a6a1efad59ba5b9f3a143277909b63a5fe5e05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 從工作流程服務存取 OperationContext
-若要在工作流程服務內部存取 <xref:System.ServiceModel.OperationContext>，您必須在自訂執行屬性中實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 介面。請覆寫會收到 <xref:System.ServiceModel.OperationContext> 之參考的 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False&autoUpgrade=True 方法。本主題將逐步引導您實作這個執行屬性來擷取自訂標頭，以及將在執行階段呈現此屬性給 <xref:System.ServiceModel.Activities.Receive> 的自訂活動。此自訂活動會與 <xref:System.ServiceModel.Activities.Sequence> 活動實作相同的行為，不過在該活動內部放置 <xref:System.ServiceModel.Activities.Receive> 時，系統就會呼叫 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 而且會擷取 <xref:System.ServiceModel.OperationContext> 資訊。此外，本主題也將示範如何透過 <xref:System.ServiceModel.Activities.ISendMessageCallback> 介面存取用戶端 <xref:System.ServiceModel.OperationContext> 來加入傳出標頭。  
+# <a name="accessing-operationcontext-from-a-workflow-service"></a>從工作流程服務存取 OperationContext
+若要在工作流程服務內部存取 <xref:System.ServiceModel.OperationContext>，您必須在自訂執行屬性中實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 介面。 覆寫<xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A>System.Activities.ExecutionProperties)?qualifyHint=False & autoUpgrade = True 的方法是傳遞參考<xref:System.ServiceModel.OperationContext>。 本主題將逐步引導您實作這個執行屬性來擷取自訂標頭，以及將在執行階段呈現此屬性給 <xref:System.ServiceModel.Activities.Receive> 的自訂活動。  自訂活動會實作相同的行為<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活動，不過在該<xref:System.ServiceModel.Activities.Receive>放置內，<xref:System.ServiceModel.Activities.IReceiveMessageCallback>將呼叫和<xref:System.ServiceModel.OperationContext>會擷取資訊。  此外，本主題也將示範如何透過 <xref:System.ServiceModel.OperationContext> 介面存取用戶端 <xref:System.ServiceModel.Activities.ISendMessageCallback> 來加入傳出標頭。  
   
-### 實作服務端 IReceiveMessageCallback  
+### <a name="implement-the-service-side-ireceivemessagecallback"></a>實作服務端 IReceiveMessageCallback  
   
 1.  建立空的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 方案。  
   
@@ -54,12 +57,11 @@ caps.handback.revision: 9
                 }  
             }  
     }  
-  
     ```  
   
      這段程式碼會使用傳遞至方法的 <xref:System.ServiceModel.OperationContext> 來存取傳入訊息的標頭。  
   
-### 實作服務端原生活動，將 IReceiveMessageCallback 實作加入至 NativeActivityContext  
+### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>實作服務端原生活動，將 IReceiveMessageCallback 實作加入至 NativeActivityContext  
   
 1.  加入衍生自 <xref:System.Activities.NativeActivity> 且名為 `ReceiveInstanceIdScope` 的新類別。  
   
@@ -73,7 +75,6 @@ caps.handback.revision: 9
             Variable<int> currentIndex;  
             CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  實作建構函式  
@@ -87,7 +88,6 @@ caps.handback.revision: 9
                 this.currentIndex = new Variable<int>();  
             }  
     }  
-  
     ```  
   
 4.  實作 `Activities` 和 `Variables` 屬性。  
@@ -102,7 +102,6 @@ caps.handback.revision: 9
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
 5.  覆寫 <xref:System.Activities.NativeActivity.CacheMetadata%2A>  
@@ -115,7 +114,6 @@ caps.handback.revision: 9
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
 6.  覆寫 <xref:System.Activities.NativeActivity.Execute%2A>  
@@ -152,12 +150,11 @@ caps.handback.revision: 9
                 //increment the currentIndex  
                 this.currentIndex.Set(context, ++currentActivityIndex);  
             }  
-  
     ```  
   
-### 實作工作流程服務  
+### <a name="implement-the-workflow-service"></a>實作工作流程服務  
   
-1.  開啟現有的 `Program` 類別。  
+1.  開啟現有`Program`類別。  
   
 2.  定義下列常數：  
   
@@ -167,7 +164,6 @@ caps.handback.revision: 9
        const string addr = "http://localhost:8080/Service";  
        static XName contract = XName.Get("IService", "http://tempuri.org");  
     }  
-  
     ```  
   
 3.  加入名為 `GetWorkflowService` 的靜態方法，以便建立工作流程服務。  
@@ -206,7 +202,6 @@ caps.handback.revision: 9
                     }  
                 };  
             }  
-  
     ```  
   
 4.  在現有的 `Main` 方法中，裝載工作流程服務。  
@@ -227,10 +222,9 @@ caps.handback.revision: 9
                     host.Close();  
                 }  
             }  
-  
     ```  
   
-### 實作用戶端 ISendMessageCallback  
+### <a name="implement-the-client-side-isendmessagecallback"></a>實作用戶端 ISendMessageCallback  
   
 1.  將名為 `Service` 的新主控台應用程式加入至此方案。  
   
@@ -257,12 +251,11 @@ caps.handback.revision: 9
                 operationContext.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader(HeaderName, HeaderNS, this.InstanceId));  
             }  
         }  
-  
     ```  
   
      這段程式碼會使用傳遞至方法的 <xref:System.ServiceModel.OperationContext>，將自訂標頭加入至傳入訊息。  
   
-### 實作用戶端原生活動，將用戶端 ISendMessageCallback 實作加入至 NativeActivityContext  
+### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a>實作用戶端原生活動，將用戶端 ISendMessageCallback 實作加入至 NativeActivityContext  
   
 1.  加入衍生自 <xref:System.Activities.NativeActivity> 且名為 `SendInstanceIdScope` 的新類別。  
   
@@ -276,7 +269,6 @@ caps.handback.revision: 9
             Variable<int> currentIndex;  
             CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  實作建構函式  
@@ -289,7 +281,6 @@ caps.handback.revision: 9
                 this.variables = new Collection<Variable>();  
                 this.currentIndex = new Variable<int>();  
             }  
-  
     ```  
   
 4.  實作 `Activities` 和 `Variables` 屬性。  
@@ -304,7 +295,6 @@ caps.handback.revision: 9
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
 5.  覆寫 <xref:System.Activities.NativeActivity.CacheMetadata%2A>  
@@ -317,7 +307,6 @@ caps.handback.revision: 9
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
 6.  覆寫 <xref:System.Activities.NativeActivity.Execute%2A>  
@@ -385,10 +374,9 @@ caps.handback.revision: 9
                 //increment the currentIndex  
                 this.currentIndex.Set(context, ++currentActivityIndex);  
             }  
-  
     ```  
   
-### 實作工作流程用戶端  
+### <a name="implement-a-workflow-client"></a>實作工作流程用戶端  
   
 1.  建立名為 `Client` 的新主控台應用程式專案。  
   
@@ -458,7 +446,6 @@ caps.handback.revision: 9
                     }  
                 };  
             }  
-  
     ```  
   
 4.  將下列裝載程式碼加入至 `Main()` 方法。  
@@ -472,10 +459,9 @@ caps.handback.revision: 9
        Console.WriteLine("Press [ENTER] to exit");  
        Console.ReadLine();  
     }  
-  
     ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下面是本主題中使用之原始程式碼的完整清單。  
   
 ```  
@@ -561,7 +547,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -595,7 +580,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -671,7 +655,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
     }  
   
 }  
-  
 ```  
   
 ```  
@@ -699,7 +682,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -785,7 +767,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -864,12 +845,11 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
  選擇性註解。  
   
-## 請參閱  
- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [存取 OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)   
- [使用命令式程式碼撰寫工作流程、活動和運算式](../../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>另請參閱  
+ [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [存取 OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [使用命令式程式碼撰寫工作流程、活動與運算式](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -1,29 +1,32 @@
 ---
-title: "探索擴充性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "探索擴充性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6c1bca31-c143-468a-8ddd-32f87998a5ff
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5a7f2cc8dc94bf7fc0fc124f3070d57fa5cf7b78
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 探索擴充性
+# <a name="discovery-extensibility"></a>探索擴充性
 本節中的範例示範如何擴充 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 探索功能。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [CustomDiscoveryMetadata](../../../../docs/framework/wcf/samples/customdiscoverymetadata.md)  
  示範如何將自訂 XML 中繼資料插入服務公開之可探索端點的探索中繼資料。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> <xref:System.ServiceModel.Discovery.DiscoveryClient> <xref:System.ServiceModel.Discovery.FindResponse>  
   
-## 相關章節
+## <a name="related-sections"></a>相關章節

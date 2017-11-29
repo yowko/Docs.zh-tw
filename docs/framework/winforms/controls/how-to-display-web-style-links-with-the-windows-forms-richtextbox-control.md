@@ -1,44 +1,49 @@
 ---
-title: "如何：使用 Windows Form RichTextBox 控制項顯示 Web 樣式連結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "範例 [Windows Form], 文字方塊"
-  - "RichTextBox 控制項 [Windows Form], 連結至 Web 網頁"
-  - "文字方塊, 顯示 Web 連結"
+title: "如何：使用 Windows Form RichTextBox 控制項顯示 Web 樣式連結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- text boxes [Windows Forms], displaying Web links
+- examples [Windows Forms], text boxes
+- RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5391c48720e68a8a7e6e0fb7735252d00025adc6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows Form RichTextBox 控制項顯示 Web 樣式連結
-Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項可以使用色彩和底線顯示 Web 連結。  您可以寫入程式碼來在按一下連結時，開啟瀏覽器視窗以顯示連結文字中指定的網站。  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows Form RichTextBox 控制項顯示 Web 樣式連結
+Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以顯示為彩色和加底線的網頁連結。 您可以撰寫會顯示在按下連結時，連結文字中指定的網站的瀏覽器視窗開啟的程式碼。  
   
-### 若要使用 RichTextBox 控制項連結至網頁  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>若要連結至 Web 網頁與 RichTextBox 控制項  
   
-1.  將 <xref:System.Windows.Forms.RichTextBox.Text%2A> 屬性設定為包含有效 URL \(例如 "http:\/\/www.microsoft.com\/taiwan"\) 的字串。  
+1.  設定<xref:System.Windows.Forms.RichTextBox.Text%2A>屬性設為字串，其中包含有效的 URL (例如"http://www.microsoft.com/taiwan/")。  
   
-2.  確定 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 屬性是設為 `true` \(預設值\)。  
+2.  請確定<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>屬性設定為`true`（預設值）。  
   
-3.  建立 <xref:System.Diagnostics.Process> 物件的新的全域執行個體。  
+3.  建立新的全域執行個體的<xref:System.Diagnostics.Process>物件。  
   
-4.  為 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 事件撰寫事件處理常式，將所需文字傳送到瀏覽器。  
+4.  撰寫事件處理常式<xref:System.Windows.Forms.RichTextBox.LinkClicked>傳送瀏覽器所需的文字的事件。  
   
-     在以下範例中，<xref:System.Windows.Forms.RichTextBox.LinkClicked> 事件將 Internet Explorer 的執行個體，開啟至 <xref:System.Windows.Forms.RichTextBox> 控制項的 <xref:System.Windows.Forms.RichTextBox.Text%2A> 屬性中指定之 URL。  這個範例假設含 <xref:System.Windows.Forms.RichTextBox> 控制項的表單。  
+     在下列範例中，<xref:System.Windows.Forms.RichTextBox.LinkClicked>事件就會開啟 Internet Explorer 中指定的 URL 的執行個體<xref:System.Windows.Forms.RichTextBox.Text%2A>屬性<xref:System.Windows.Forms.RichTextBox>控制項。 這個範例假設的表單具有<xref:System.Windows.Forms.RichTextBox>控制項。  
   
     > [!IMPORTANT]
-    >  在呼叫 <xref:System.Diagnostics.Process.Start%2A?displayProperty=fullName> 方法時，如果您是在部分信任的內容中執行程式碼，將會因為權限不足而發生 <xref:System.Security.SecurityException> 例外狀況。  如需詳細資訊，請參閱[Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md)。  
+    >  在呼叫<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>方法，您將會遇到<xref:System.Security.SecurityException>例外狀況，如果您因為權限不足，而部分信任的內容中執行程式碼。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../docs/framework/misc/code-access-security-basics.md)。  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -50,7 +55,6 @@ Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項可以使用色彩
           ' with link text as URL.  
           p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -63,7 +67,6 @@ Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項可以使用色彩
        // with link text as URL.  
        p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);  
     }  
-  
     ```  
   
     ```cpp  
@@ -81,19 +84,18 @@ Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項可以使用色彩
        }  
     ```  
   
-     \([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 您必須初始化處理序`p`，方法是將以下陳述式加入表單的建構函式中：  
+     ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 您必須先初始化程序`p`，可執行下列陳述式併入您的表單的建構函式：  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]、[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 將下列程式碼加入表單的建構函式以註冊事件處理常式。  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
        System.Windows.Forms.LinkClickedEventHandler  
        (this.richTextBox1_LinkClicked);  
-  
     ```  
   
     ```cpp  
@@ -102,13 +104,12 @@ Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項可以使用色彩
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     一旦完成使用後，務必立即停止您已建立的處理序。  在參考上述的程式碼之後，用以停止處理序的程式碼可能看起來像是這樣：  
+     請務必立即停止處理序當處理完成後，您已建立。 參考上述程式碼，您的程式碼，以停止處理程序可能會看起來像這樣：  
   
     ```vb  
     Public Sub StopWebProcess()  
        p.Kill()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -116,7 +117,6 @@ Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項可以使用色彩
     {  
        p.Kill();  
     }  
-  
     ```  
   
     ```cpp  
@@ -126,9 +126,9 @@ Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項可以使用色彩
     }  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>   
- <xref:System.Windows.Forms.RichTextBox.LinkClicked>   
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>  
+ <xref:System.Windows.Forms.RichTextBox.LinkClicked>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

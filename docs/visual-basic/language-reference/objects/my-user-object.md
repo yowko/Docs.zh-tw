@@ -1,37 +1,36 @@
 ---
-title: "My.User Object | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.User property"
-  - "My.User object"
+title: "My.User 物件"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.User property
+- My.User object
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5c905ad1f0f9efcfbf4341b96d057af4dc16d6b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# My.User Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-提供目前使用者相關資訊的存取。  
+# <a name="myuser-object"></a>My.User 物件
+提供目前使用者相關資訊的存取權。  
   
-## 備註  
- 如需有關的方法和屬性的資訊`My.User`物件，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=fullName>。  
+## <a name="remarks"></a>備註  
+ 如需方法和屬性`My.User`物件，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>。  
   
- 如需詳細資訊，請參閱 [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md)。  
+ 如需詳細資訊，請參閱[存取使用者資料](../../../visual-basic/developing-apps/programming/accessing-user-data.md)。  
   
-## 需求  
- **組件**：Visual Basic 執行階段程式庫 \(在 Microsoft.VisualBasic.dll 中\)  
+## <a name="requirements"></a>需求  
+ **組件：** Visual Basic Runtime Library （位於 Microsoft.VisualBasic.dll)  
   
-## 請參閱  
- <xref:System.Security.Principal.IPrincipal>   
- <xref:System.Threading.Thread.CurrentPrincipal%2A>   
- <xref:System.Web.HttpContext.User%2A>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Security.Principal.IPrincipal>  
+ <xref:System.Threading.Thread.CurrentPrincipal%2A>  
+ <xref:System.Web.HttpContext.User%2A>  
  <xref:System.Web.HttpContext.Current%2A>

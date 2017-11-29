@@ -1,24 +1,28 @@
 ---
-title: "NativeActivity 基底類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "NativeActivity 基底類別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 22c9557c53c15fef3ca8dee4a0f665d333c5ffe4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# NativeActivity 基底類別
-<xref:System.Activities.NativeActivity> 是具有受保護建構函式的抽象類別。如同 <xref:System.Activities.CodeActivity>，<xref:System.Activities.NativeActivity> 會用於透過實作 <xref:System.Activities.NativeActivity.Execute%2A> 方法的方式寫入命令式行為。不同於 <xref:System.Activities.CodeActivity> 的是，<xref:System.Activities.NativeActivity> 可透過傳遞至 <xref:System.Activities.NativeActivity.Execute%2A> 方法的 <xref:System.Activities.NativeActivityContext> 物件，存取工作流程執行階段的所有公開功能。  
+# <a name="nativeactivity-base-class"></a>NativeActivity 基底類別
+<xref:System.Activities.NativeActivity> 是具有受保護建構函式的抽象類別。 如同 <xref:System.Activities.CodeActivity>，<xref:System.Activities.NativeActivity> 會用於透過實作 <xref:System.Activities.NativeActivity.Execute%2A> 方法的方式寫入命令式行為。 不同於 <xref:System.Activities.CodeActivity> 的是，<xref:System.Activities.NativeActivity> 可透過傳遞至 <xref:System.Activities.NativeActivityContext> 方法的 <xref:System.Activities.NativeActivity.Execute%2A> 物件，存取工作流程執行階段的所有公開功能。  
   
-## 使用 NativeActivityContext  
- 工作流程執行階段的功能可透過 <xref:System.Activities.NativeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 \(型別為 <xref:System.Activities.NativeActivityContext>\)。透過 <xref:System.Activities.NativeActivityContext> 可使用的功能如下：  
+## <a name="using-nativeactivitycontext"></a>使用 NativeActivityContext  
+ 工作流程執行階段的功能可透過 <xref:System.Activities.NativeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.NativeActivityContext>)。 透過 <xref:System.Activities.NativeActivityContext> 可使用的功能如下：  
   
 -   取得與設定引數和變數。  
   
@@ -36,15 +40,15 @@ caps.handback.revision: 8
   
 -   使用 <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> 和 <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> 排訂活動動作與功能。  
   
-#### 若要建立繼承自 NativeActivity 的自訂活動  
+#### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>若要建立繼承自 NativeActivity 的自訂活動  
   
 1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  依序選取 \[**檔案**\]、\[**新增**\]、\[**專案**\]。在 \[**專案類型**\] 視窗中，選取 \[**Visual C\#**\] 下方 \[**Workflow 4.0**\]，然後選取 \[**v2010**\] 節點。選取 \[**範本**\] 視窗中的 \[**活動程式庫**\]。將新專案命名為 HelloActivity。  
+2.  選取**檔案**，**新**，然後**專案**。 選取**Workflow 4.0**下**Visual C#**中**專案類型**視窗，並選取**v2010**節點。 選取**活動程式庫**中**範本**視窗。 將新專案命名為 HelloActivity。  
   
-3.  以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取 \[**刪除**\]。  
+3.  以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取**刪除**。  
   
-4.  以滑鼠右鍵按一下 HelloActivity 專案並選取 \[**加入**\]，然後選取 \[**類別**\]。將新類別命名為 HelloActivity.cs。  
+4.  以滑鼠右鍵按一下 HelloActivity 專案並選取**新增**，然後**類別**。 將新類別命名為 HelloActivity.cs。  
   
 5.  在 HelloActivity.cs 檔案中加入下列 `using` 指示詞。  
   
@@ -68,9 +72,9 @@ caps.handback.revision: 8
     }  
     ```  
   
-8.  覆寫 <xref:System.Activities.NativeActivity.CacheMetadata%2A>方法並呼叫適當的 Add 方法，讓工作流程執行階段知道自訂活動的變數、引數、子系和委派。如需詳細資訊，請參閱 <xref:System.Activities.NativeActivityMetadata> 類別。  
+8.  覆寫 <xref:System.Activities.NativeActivity.CacheMetadata%2A> 方法，並呼叫適當的 Add 方法，讓工作流程執行階段知道自訂活動的變數、引數、子系和委派。 如需詳細資訊，請參閱 <xref:System.Activities.NativeActivityMetadata> 類別。  
   
-9. 使用 <xref:System.Activities.NativeActivityContext> 物件排程書籤。如需如何建立、排程和繼續書籤的詳細資訊，請參閱 <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>。  
+9. 使用 <xref:System.Activities.NativeActivityContext> 物件排程書籤。 如需如何建立、排程和繼續書籤的詳細資訊，請參閱 <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>。  
   
     ```  
     protected override void Execute(NativeActivityContext context)  
@@ -79,5 +83,4 @@ caps.handback.revision: 8
             context.CreateBookmark(BookmarkName.Get(context),   
                 new BookmarkCallback(OnResumeBookmark));  
         }  
-  
     ```

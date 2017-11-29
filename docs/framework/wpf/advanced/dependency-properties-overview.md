@@ -1,224 +1,209 @@
 ---
-title: "相依性屬性概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "附加屬性"
-  - "資料繫結"
-  - "相依性屬性"
-  - "屬性, 附加"
-  - "屬性, 概觀"
-  - "資源, 參考至"
-  - "樣式"
+title: "相依性屬性概觀"
+description: "WPF 屬性系統所支援的屬性稱為相依性屬性。 本概觀說明 WPF 屬性系統和相依性屬性的功能。"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-wpf
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [WPF], attached
+- properties [WPF], overview
+- styles [WPF]
+- attached properties [WPF]
+- data binding [WPF]
+- dependency properties [WPF]
+- resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: 30
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 29
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aa1ad02de74cc73ea67267de7548442078a2f5db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 相依性屬性概觀
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組服務，可以用於擴充 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性的功能。  這些服務通常合稱為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統。  受到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統支援的屬性稱為[相依性屬性](GTMT)。本概觀將說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統和[相依性屬性](GTMT)的功能。這包括如何在 XAML 和程式碼中使用現有的[相依性屬性](GTMT)。  本概觀也會介紹相依性屬性的特製化觀點，例如相依性屬性中繼資料，以及如何在自訂類別中建立您自己的相依性屬性。  
+# <a name="dependency-properties-overview"></a>相依性屬性概觀
+
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組可用來擴充 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性功能的服務。 整體而言，這些服務通常稱為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統。 受到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統支援的屬性則稱為相依性屬性。 本概觀說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統和相依性屬性的功能。 這包括如何在 XAML 和程式碼中使用現有的相依性屬性。 本概觀也介紹相依性屬性的特製化層面，例如相依性屬性中繼資料，以及如何在自訂類別中建立您自己的相依性屬性。
+
+## <a name="prerequisites"></a>必要條件
+本主題假設您對 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 和物件導向程式設計有基本的認識。 為了解本主題中的範例，您也應該了解 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。 如需詳細資訊，請參閱[逐步解說： 第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
-   
+## <a name="dependency-properties-and-clr-properties"></a>相依性屬性和 CLR 屬性
+ 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，屬性通常會公開為 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性。 在基本層級，您可以和這些屬性直接互動，永遠不知道它們會實作為相依性屬性。 但您應該要熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統的部分或全部功能，以便可以利用這些功能。
+
+相依性屬性的目的是提供一個方式，根據其他輸入的值來計算屬性值。 這些其他輸入可能包含系統屬性 (例如佈景主題和使用者喜好設定)、Just-In-Time 屬性決策機制 (例如資料繫結和動畫/腳本)、多用途的範本 (例如資源和樣式)，或者透過父子關聯性與項目樹狀結構中的其他項目知道的值。 此外，您也可以實作相依性屬性，提供獨立的驗證、預設值、監視其他屬性變更的回撥，以及可根據潛在執行階段資訊強制轉型屬性值的系統。 衍生的類別也可以透過覆寫相依性屬性中繼資料，而不是覆寫現有屬性的實際實作或建立新屬性，來變更現有屬性的某些特定特性。
+
+在 SDK 參考中，您可以在該屬性 Managed 參考頁面出現相依性屬性資訊區段時，識別哪個屬性是相依性屬性。 相依性屬性資訊區段包含的連結<xref:System.Windows.DependencyProperty>識別項欄位的相依性屬性，而且也包含設定該屬性，每個類別中覆寫資訊，以及其他詳細資料的中繼資料 選項的清單。
+
+## <a name="dependency-properties-back-clr-properties"></a>相依性屬性回 CLR 屬性
+相依性屬性和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統透過提供支援屬性的類型來擴充屬性功能，作為支援有私用欄位屬性之標準模式的替代實作。 此類型的名稱是<xref:System.Windows.DependencyProperty>。 其他重要定義的型別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]屬性系統<xref:System.Windows.DependencyObject>。 <xref:System.Windows.DependencyObject>定義可以註冊及擁有相依性屬性的基底類別。
+
+以下是本 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 文件討論相依性屬性時使用的術語總結︰
+
+- **相依性屬性：**屬性，並受到<xref:System.Windows.DependencyProperty>。
+
+- **相依性屬性的識別項：** A<xref:System.Windows.DependencyProperty>執行個體，這是註冊相依性屬性時，取得做為傳回值，並儲存為類別的靜態成員。 此識別碼用為與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統互動之多個 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 的參數。
+
+- **CLR「包裝函式」：**實際取得及設定屬性的實作。 這些實作結合的使用中的相依性屬性的識別項<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>呼叫，因此能提供屬性使用的備份[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]屬性系統。
+
+下列範例會定義`IsSpinning`相依性屬性，並顯示的關係<xref:System.Windows.DependencyProperty>到它所支援之屬性的識別項。
+
+[!code-csharp[PropertiesOvwSupport#DPFormBasic](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#dpformbasic)]
+[!code-vb[PropertiesOvwSupport#DPFormBasic](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#dpformbasic)]  
   
-<a name="prerequisites"></a>   
-## 必要條件  
- 本主題假設您具有部分 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 和物件導向程式設計的基本知識。  為了能夠理解本主題中的範例，您也應該了解 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  如需詳細資訊，請參閱 [逐步解說：WPF 使用者入門](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
-  
-<a name="why_dependency_properties"></a>   
-## 相依性屬性和 CLR 屬性  
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，屬性通常會公開為 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性。  在基本的層面上，您可以直接與這些屬性互動，而永遠不需要知道他們是以[相依性屬性](GTMT)實作的。  然而，您應該要更為熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統的部分或所有功能，這樣才能善用這些功能。  
-  
- [相依性屬性](GTMT)的目的在於提供一個依據其他輸入值來計算屬性值的方式。  這些其他輸入可能包括系統屬性 \(例如佈景主題和使用者偏好設定\)、Just\-in\-Time 屬性決策機制 \(例如資料繫結和動畫\/Storyboard\)、多用途樣板 \(例如資源和樣式\)，或者是項目樹狀結構中透過父子關係與其他項目關聯的已知值。  除此之外，實作[相依性屬性](GTMT)可以提供獨立的 \(Self\-Contained\) 驗證、預設值、監視其他屬性變更的回呼，以及可以依據可能的執行階段資訊來強制轉型屬性值的系統。  衍生類別也可以藉由覆寫相依性屬性中繼資料來變更現有屬性的某些特定特性，而不用覆寫現有屬性的實際實作或建立新屬性。  
-  
- 在 SDK 參考中，您可以識別哪個屬性是相依性屬性，方法是看該屬性的 Managed 參考頁面上是否有＜相依性屬性資訊＞一節。  ＜相依性屬性資訊＞一節包含該相依性屬性的 <xref:System.Windows.DependencyProperty> 識別項欄位連結，也包含針對該屬性設定的中繼資料選項清單、針對類別的覆寫資訊，以及其他詳細資料。  
-  
-<a name="back_dependency_properties"></a>   
-## 相依性屬性支援 CLR 屬性  
- 藉由提供支援屬性的型別，[相依性屬性](GTMT)和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統會擴充屬性的功能，做為使用私用 \(Private\) 欄位來支援屬性的標準模式外的替代實作方式。  這個型別的名稱為 <xref:System.Windows.DependencyProperty>。  另一個定義 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統的重要型別是 <xref:System.Windows.DependencyObject>。<xref:System.Windows.DependencyObject> 定義的基底類別可以註冊並擁有[相依性屬性](GTMT)。  
-  
- 以下是本[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 說明文件在討論[相依性屬性](GTMT)時，所使用的術語總結：  
-  
--   **相依性屬性**：受到 <xref:System.Windows.DependencyProperty> 支援的屬性。  
-  
--   **相依性屬性識別項**：一個 <xref:System.Windows.DependencyProperty> 執行個體，這是在註冊[相依性屬性](GTMT)時以傳回值的方式取得的，然後會儲存為靜態類別成員。  在許多與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統互動的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 中，會將這個識別項做為參數使用。  
-  
--   **CLR 包裝函式**：屬性實際上的 get 和 set 實作。  藉由在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫中使用識別項，這些實作會合併相依性屬性識別項，因而可支援使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統的屬性。  
-  
- 下列範例會定義 `IsSpinning` [相依性屬性](GTMT)，並顯示 <xref:System.Windows.DependencyProperty> 識別項對其支援屬性的關係。  
-  
- [!code-csharp[PropertiesOvwSupport#DPFormBasic](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#dpformbasic)]
- [!code-vb[PropertiesOvwSupport#DPFormBasic](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#dpformbasic)]  
-[!code-csharp[PropertiesOvwSupport#DPFormBasic2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#dpformbasic2)]  
-  
- 屬性和其支援 <xref:System.Windows.DependencyProperty> 欄位的命名慣例是很重要的。  欄位的名稱一定要是屬性的名稱附加上後置字元 `Property`。  如需這個慣例和其原因的詳細資訊，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。  
-  
-<a name="setting_property_values"></a>   
-## 設定屬性值  
- 您可以在程式碼或是 XAML 中設定屬性。  
-  
-<a name="local_property_values"></a>   
-### 在 XAML 中設定屬性值  
- 下列 XAML 範例會將按鈕的背景色彩指定為紅色。  這個範例說明的情況是在產生的程式碼中，使用 WPF XAML 剖析器將 XAML 屬性的簡單字串值型別轉換成 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 型別 \(即 <xref:System.Windows.Media.Color>，經由 <xref:System.Windows.Media.SolidColorBrush>\)。  
-  
- [!code-xml[PropertiesOvwSupport#MostBasicProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]  
-  
- XAML 支援各種設定屬性的語法型式。  而特定屬性該使用何種語法將取決於屬性所使用的實值型別以及其他因素，例如是否有型別轉換子存在。  如需屬性設定的 XAML 語法的詳細資訊，請參閱 [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)和 [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
-  
- 下列 XAML 範例則為非屬性 \(Attribute\) 語法範例，會顯示另一個按鈕背景。  這次不是設定簡單的純色，而是將背景設為影像，其中的項目代表該影像，而該影像來源則指定為巢狀項目的屬性 \(Attribute\)。  這是屬於屬性 \(Property\) 項目語法的範例。  
-  
- [!code-xml[PropertiesOvwSupport#PESyntaxProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]  
-  
-<a name="setting_properties_code"></a>   
-### 在程式碼中設定屬性  
- 在程式碼中設定[相依性屬性](GTMT)值，通常只是簡單呼叫 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 包裝函式所公開的 set 實作。  
-  
- [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
- [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]  
-  
- 而取得屬性值基本上也只是呼叫 get 包裝函式實作：  
-  
- [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
- [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]  
-  
- 您也可以直接呼叫屬性系統 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A>。  在使用現有屬性時通常都不需要這樣做 \(包裝函式較為方便，並對於開發人員工具提供較好的屬性公開\)，但在某些情況下直接呼叫 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 則比較適當。  
-  
- 屬性也可以在 XAML 中設定，稍後再於程式碼中透過程式碼後置進行存取。  如需詳細資訊，請參閱[WPF 中的程式碼後置和 XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
-  
-<a name="functionality"></a>   
-## 相依性屬性提供的屬性功能  
- 相對於欄位所支援的屬性，相依性屬性所提供的功能可以擴充原來屬性的功能。  通常，每個這類的功能即代表或支援整體 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能集中的某個特定功能：  
-  
--   [資源](#setting_properties_resources)  
-  
--   [資料繫結](#setting_properties_data_binding)  
-  
--   [樣式](#setting_properties_styles)  
-  
--   [動畫](#animations)  
-  
--   [中繼資料覆寫](#metadata)  
-  
--   [屬性值繼承](#setting_properties_inheritance)  
-  
--   [WPF 設計工具整合](#vs2008_integration)  
-  
-<a name="setting_properties_resources"></a>   
-### 資源  
- 相依性屬性的值可以藉由參考資源來設定。  資源通常都會指定做為頁面根項目的或是應用程式的 `Resources` 屬性值 \(這些位置可以提供最為方便的資源存取\)。  下列範例顯示如何定義 <xref:System.Windows.Media.SolidColorBrush> 資源。  
-  
- [!code-xml[PropertiesOvwSupport#ResourcesResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]  
-  
- 一旦定義好資源，您就可以參考資源並用來提供屬性值：  
-  
- [!code-xml[PropertiesOvwSupport#ResourcesReference](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]  
-  
- 這個特別的資源是當做 [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)來參考 \(在 WPF XAML 中，您可以使用靜態或是動態資源參考\)。  若要使用動態資源參考，必須設定為相依性屬性，這樣就會是由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統所啟用的特別動態資源參考使用方式。  如需詳細資訊，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
-  
+屬性和其支援的命名慣例<xref:System.Windows.DependencyProperty>欄位很重要。 欄位名稱一律是屬性名稱，後綴尾碼 `Property`。 如需此慣例及其原因的詳細資訊，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。  
+
+## <a name="setting-property-values"></a>設定屬性值
+您可以在程式碼或 XAML 中設定屬性。
+
+### <a name="setting-property-values-in-xaml"></a>在 XAML 中設定屬性值 
+下列 XAML 範例將按鈕的背景色彩指定為紅色。 這個範例將說明其中 XAML 屬性的簡單字串值是型別轉換成 WPF XAML 剖析器的情況[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類型 ( <xref:System.Windows.Media.Color>，藉由<xref:System.Windows.Media.SolidColorBrush>) 產生的程式碼中。
+
+[!code-xaml[PropertiesOvwSupport#MostBasicProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
+
+XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語法，取決於屬性使用的實值型別以及其他因素，例如有無類型轉換器。 如需屬性設定之 XAML 語法的詳細資訊，請參閱 [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 和 [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。
+
+下列 XAML 範例為非屬性語法的範例，示範另一個按鈕的背景。 這一次不是設定簡單的純色，而是將背景設定為映像，將表示該映像和該映像來源的項目指定為巢狀項目的屬性。 這是屬性項目語法的範例。
+
+[!code-xaml[PropertiesOvwSupport#PESyntaxProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
+
+### <a name="setting-properties-in-code"></a>在程式碼中設定屬性
+ 在程式碼中設定相依性屬性值，通常只要呼叫 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]「包裝函式」公開的 set 實作即可。
+
+[!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
+[!code-vb[PropertiesOvwSupport#ProceduralPropertySet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
+
+取得屬性值，基本上也就是呼叫 get「包裝函式」實作︰
+
+[!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
+ [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
+
+您也可以呼叫屬性系統[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 如果您使用現有的屬性，這通常非必要 (包裝函式更方便，也更好公開開發人員工具屬性)，但某些情況下直接呼叫 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 更適當。
+
+屬性也可以在 XAML 中設定，稍後再於程式碼中透過程式碼後置存取。 如需詳細資訊，請參閱 [WPF 中的程式碼後置和 XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)。
+
+## <a name="property-functionality-provided-by-a-dependency-property"></a>屬性的相依性屬性所提供的功能
+相對於欄位支援屬性，相依性屬性提供能擴充屬性功能的功能。 通常，這類功能每一個都代表或支援整體 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能集的特定功能：
+
+- [資源](#resources)
+
+- [資料繫結](#data-binding)
+
+- [樣式](#styles)
+
+- [動畫](#animations)
+
+- [中繼資料覆寫](#metadata-overrides)
+
+- [屬性值繼承](#property-value-inheritance)
+
+- [WPF 設計工具整合](#wpf-designer-integration)
+
+### <a name="resources"></a>資源
+您可以參考資源來設定相依性屬性值。 資源通常指定為 `Resources` 頁面根項目或應用程式的屬性值 (這些位置最方便存取資源)。 下列範例示範如何定義<xref:System.Windows.Media.SolidColorBrush>資源。
+
+[!code-xaml[PropertiesOvwSupport#ResourcesResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
+
+定義資源之後，您即可參考資源並用它提供屬性值︰
+
+[!code-xaml[PropertiesOvwSupport#ResourcesReference](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
+
+這個特定的資源稱之為 [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) (在 WPF XAML 中，您可以使用靜態或動態資源參考)。 若要使用動態資源參考，您必須設定相依性屬性，因此它是由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統啟用的專門動態資源參考使用。 如需詳細資訊，請參閱 [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。
+
 > [!NOTE]
->  資源會視為是區域值，這代表如果您設定另一個區域值，就會排除該資源參考。  如需詳細資訊，請參閱[相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)。  
-  
-<a name="setting_properties_data_binding"></a>   
-### 資料繫結  
- 相依性屬性可以透過資料繫結來參考值。  而資料繫結是透過 XAML 中的特定標記延伸語法，或是程式碼中的 <xref:System.Windows.Data.Binding> 物件運作。  藉由資料繫結，最後的屬性值決策會延後到執行階段，屆時會從資料來源取得值。  
-  
- 下列範例會使用 XAML 中宣告的繫結，設定 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.ContentControl.Content%2A> 屬性。  繫結使用繼承資料內容和 <xref:System.Windows.Data.XmlDataProvider> 資料來源 \(未顯示\)。  而繫結本身會在資料來源內藉由 <xref:System.Windows.Data.Binding.XPath%2A> 指定所要的來源屬性。  
-  
- [!code-xml[PropertiesOvwSupport#BasicInlineBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#basicinlinebinding)]  
-  
+> 資源視為區域數值，這表示如果您設定另一個區域數值，就會排除資源參考。 如需詳細資訊，請參閱[相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)。
+
+### <a name="data-binding"></a>資料繫結
+相依性屬性可以透過資料繫結參考值。 資料繫結適用於透過特定的標記延伸語法，在 XAML 中，或<xref:System.Windows.Data.Binding>程式碼中的物件。 使用資料繫結，最後一個屬性值決定會延後到執行階段，此時已自資料來源取得值。
+
+下列範例會設定<xref:System.Windows.Controls.ContentControl.Content%2A>屬性<xref:System.Windows.Controls.Button>，在 XAML 中使用的繫結宣告。 繫結使用繼承的資料內容和<xref:System.Windows.Data.XmlDataProvider>（未顯示） 的資料來源。 本身的繫結會指定所需的來源屬性<xref:System.Windows.Data.Binding.XPath%2A>內的資料來源。
+
+[!code-xaml[PropertiesOvwSupport#BasicInlineBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#basicinlinebinding)]
+
 > [!NOTE]
->  繫結會視為是區域值，這代表如果您設定另一個區域值，就會排除該繫結。  如需詳細資訊，請參閱[相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)。  
-  
- 為了要產生資料繫結作業的 <xref:System.Windows.DependencyObject> 來源屬性值的變更告知，相依性屬性或者是 <xref:System.Windows.DependencyObject> 類別本來就不支援 <xref:System.ComponentModel.INotifyPropertyChanged>。  如需如何建立用於資料繫結的屬性以回報資料繫結目標變更的詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
-  
-<a name="setting_properties_styles"></a>   
-### 樣式  
- 樣式和樣板是兩個主要刺激使用相依性屬性的情況。  對於設定能夠定義應用程式 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的屬性而言，樣式特別好用。  通常在 XAML 中樣式會定義為資源。  因為樣式通常包含特定屬性的 setter，以及包含會依據其他屬性的即時值來變更屬性值的 trigger，所以樣式會與屬性系統互動。  
-  
- 下列範例會建立很簡單的樣式 \(應該是定義在 <xref:System.Windows.FrameworkElement.Resources%2A> 字典內，在此未顯示\)，然後將該樣式直接套用到 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.FrameworkElement.Style%2A> 屬性。  樣式內的 setter 會將 <xref:System.Windows.Controls.Button> 樣式的 <xref:System.Windows.Controls.Control.Background%2A> 屬性設定為綠色。  
-  
- [!code-xml[PropertiesOvwSupport#SimpleStyleDef](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]  
-  
- [!code-xml[PropertiesOvwSupport#SimpleStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]  
-  
- 如需詳細資訊，請參閱 [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
-  
-<a name="animations"></a>   
-### 動畫  
- 相依性屬性可以使用動畫。  套用或執行動畫時，動畫值會比屬性所具有的其他任何值 \(例如區域值\) 擁有較高的優先順序。  
-  
- 下列範例會對 <xref:System.Windows.Controls.Button> 屬性使用動畫 <xref:System.Windows.Controls.Control.Background%2A> \(嚴格來說，<xref:System.Windows.Controls.Control.Background%2A> 使用動畫的方式是藉由使用屬性項目語法指定空白的 <xref:System.Windows.Media.SolidColorBrush> 做為 <xref:System.Windows.Controls.Control.Background%2A>，然後該 <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 屬性是直接使用動畫的屬性\)。  
-  
- [!code-xml[PropertiesOvwSupport#MiniAnimate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#minianimate)]  
-  
- 如需動畫屬性的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)和 [腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
-  
-<a name="metadata"></a>   
-### 中繼資料覆寫  
- 您可以變更[相依性屬性](GTMT)的某些行為，方法是在從原來註冊[相依性屬性](GTMT)的類別衍生時，覆寫該屬性的中繼資料。  覆寫中繼資料需要靠 <xref:System.Windows.DependencyProperty> 識別項。  覆寫中繼資料並不需要重新實作屬性。  中繼資料的變更本來就是由屬性系統處理的，基於以每個型別為基礎，每個類別很可能會持有繼承自基底類別的所有屬性的個別中繼資料。  
-  
- 下列範例會覆寫相依性屬性 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的中繼資料。  覆寫這個特殊的相依性屬性中繼資料是實作模式的一部分，該實作模式會建立可以使用佈景主題的預設樣式的控制項。  
-  
- [!code-csharp[PropertiesOvwSupport#OverrideMetadata](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#overridemetadata)]
- [!code-vb[PropertiesOvwSupport#OverrideMetadata](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#overridemetadata)]  
-  
- 如需覆寫或取得屬性中繼資料的詳細資訊，請參閱[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
-  
-<a name="setting_properties_inheritance"></a>   
-### 屬性值繼承  
- 項目可以從物件樹狀結構中的父項目繼承相依性屬性值。  
-  
+> 繫結視為區域數值，這表示如果您設定另一個區域數值，就會排除繫結。 如需詳細資訊，請參閱[相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)。
+
+相依性屬性，或<xref:System.Windows.DependencyObject>類別中，執行原本不支援<xref:System.ComponentModel.INotifyPropertyChanged>產生通知中的變更進行<xref:System.Windows.DependencyObject>來源的資料繫結作業的屬性值。 如需如何建立資料繫結所用屬性的詳細資訊，該資料繫結可以報告資料繫結目標的變更，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。
+
+### <a name="styles"></a>樣式
+樣式和範本是使用相依性屬性的兩大激勵案例。 樣式特別適用於設定定義應用程式 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的屬性。 樣式通常會定義為 XAML 中的資源。 樣式與屬性系統互動，因為它們通常包含特定屬性的 "setter"，以及根據另一個屬性的即時值變更屬性值的「觸發程序」。
+
+下列範例會建立非常簡單的樣式 (這會定義在<xref:System.Windows.FrameworkElement.Resources%2A>字典中，不會顯示)，然後直接將套用該樣式<xref:System.Windows.FrameworkElement.Style%2A>屬性<xref:System.Windows.Controls.Button>。 樣式集內 setter<xref:System.Windows.Controls.Control.Background%2A>屬性已設定樣式的<xref:System.Windows.Controls.Button>為綠色。
+
+[!code-xaml[PropertiesOvwSupport#SimpleStyleDef](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
+
+[!code-xaml[PropertiesOvwSupport#SimpleStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
+
+如需詳細資訊，請參閱 [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。
+
+### <a name="animations"></a>Animations
+相依性屬性可以動畫方式顯示。 套用並執行動畫時，動畫顯示值的運作優先於屬性可能執行的任何值 (例如本機值)。
+
+下列範例以動畫方式顯示<xref:System.Windows.Controls.Control.Background%2A>上<xref:System.Windows.Controls.Button>屬性 (技術上來說，<xref:System.Windows.Controls.Control.Background%2A>會使用屬性項目語法來指定空白動畫<xref:System.Windows.Media.SolidColorBrush>為<xref:System.Windows.Controls.Control.Background%2A>，然後在<xref:System.Windows.Media.SolidColorBrush.Color%2A>屬性，<xref:System.Windows.Media.SolidColorBrush>是直接繪製的屬性)。
+
+[!code-xaml[PropertiesOvwSupport#MiniAnimate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#minianimate)]
+
+如需可動畫顯示屬性的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)及[腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。
+
+### <a name="metadata-overrides"></a>中繼資料會覆寫
+當您衍生自最初登錄相依性屬性的類別時，您可以覆寫該屬性的中繼資料，變更相依性屬性的特定行為。 覆寫中繼資料依賴<xref:System.Windows.DependencyProperty>識別項。 覆寫中繼資料不需要重新實作屬性。 屬性系統會以原生方式處理中繼資料變更。每個類別都可能依每個類型，保存繼承自基底類別之所有屬性的個別中繼資料。
+
+下列範例會覆寫相依性屬性的中繼資料<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>。 覆寫此特定相依性屬性中繼資料，是建立可使用佈景主題預設樣式控制項之實作模式的一部分。
+
+[!code-csharp[PropertiesOvwSupport#OverrideMetadata](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#overridemetadata)]
+[!code-vb[PropertiesOvwSupport#OverrideMetadata](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#overridemetadata)]
+
+如需覆寫或取得屬性中繼資料的詳細資訊，請參閱[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。
+
+### <a name="property-value-inheritance"></a>屬性值繼承
+項目可以繼承物件樹狀結構中的父代相依性屬性值。
+
 > [!NOTE]
->  屬性值的繼承行為並沒有針對所有相依性屬性全面啟用，因為繼承所需的計算時間的確會對效能造成某些影響。  通常只有在特定案例建議要有適當屬性值繼承時，才會啟用屬性的屬性值繼承。  您可以在 SDK 參考中查看該相依性屬性的＜**相依性屬性資訊**＞一節，以判斷相依性屬性是否可繼承。  
-  
- 下列範例顯示繫結，並會設定用於指定繫結來源的 <xref:System.Windows.FrameworkElement.DataContext%2A> 屬性，這在稍早的繫結範例中沒有顯示。  子物件中任何後續繫結都不需要指定來源，可以使用父 <xref:System.Windows.Controls.StackPanel> 物件中 <xref:System.Windows.FrameworkElement.DataContext%2A> 的繼承值。  或者，子物件可以選擇在 <xref:System.Windows.Data.Binding> 中直接指定自己的 <xref:System.Windows.FrameworkElement.DataContext%2A> 或 <xref:System.Windows.Data.Binding.Source%2A>，並且刻意不使用其繫結之資料內容的繼承值。  
-  
- [!code-xml[PropertiesOvwSupport#InheritanceContext](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#inheritancecontext)]  
-  
- 如需詳細資訊，請參閱[屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)。  
-  
-<a name="vs2008_integration"></a>   
-### WPF 設計工具整合  
- 自訂控制項如果具有以相依性屬性實作的屬性，就會收到適當的 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 支援。  有一個範例是使用 \[**屬性**\] 視窗來編輯直接和附加相依性屬性的能力。  如需詳細資訊，請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)。  
-  
-<a name="value_determination"></a>   
-## 相依性屬性值優先順序  
- 在取得[相依性屬性](GTMT)的值時，您可能會透過參與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統中的任何一項其他屬性輸入，取得該屬性上設定的值。  因為存有相依性屬性值優先順序，所以屬性如何取得其值的各種案例的互動方式就可以預測。  
-  
- 參考下列範例：  範例中包含的樣式可以套用到所有按鈕和其 <xref:System.Windows.Controls.Control.Background%2A> 屬性，但接著也會指定一個具有 <xref:System.Windows.Controls.Control.Background%2A> 區域設定值的按鈕。  
-  
+> 並非所有的相依性屬性都會啟用屬性值繼承行為，因為繼承的計算時間會影響效能。 通常只有建議屬性值繼承為適當的特定案例屬性才會啟用屬性值繼。 您可以在＜SDK 參考＞的**相依性屬性資訊**一節中查看相依性屬性，判斷該相依性屬性是否有繼承行為。
+
+下列範例顯示繫結並設定<xref:System.Windows.FrameworkElement.DataContext%2A>指定的繫結，已不會顯示在先前範例中，繫結來源的屬性。 指定的來源不需要任何後續的繫結中的子物件，即可使用繼承的值從<xref:System.Windows.FrameworkElement.DataContext%2A>父系<xref:System.Windows.Controls.StackPanel>物件。 (或者，子物件可以改為選擇直接指定它自己<xref:System.Windows.FrameworkElement.DataContext%2A>或<xref:System.Windows.Data.Binding.Source%2A>中<xref:System.Windows.Data.Binding>，且如果故意不使用它的繫結的資料內容繼承的值。)
+
+[!code-xaml[PropertiesOvwSupport#InheritanceContext](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#inheritancecontext)]
+
+如需詳細資訊，請參閱[屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)。
+
+### <a name="wpf-designer-integration"></a>WPF 設計工具整合
+有實作為相依性屬性之屬性的自訂控制項會獲得適當的 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 支援。 其中一例就是能夠使用 [屬性] 視窗編輯直接和附加的相依性屬性。 如需詳細資訊，請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)。
+
+## <a name="dependency-property-value-precedence"></a>相依性屬性的值優先順序
+當您取得相依性屬性的值時，您就可能取得一個值，此值原透過參與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統的任何其他屬性型輸入來設定在該屬性上。 相依性屬性值有優先順序，所以屬性如何取得其值的各種案例才能以可預測的方式互動。
+
+請參考下列範例。 此範例也包含適用於所有按鈕的樣式和其<xref:System.Windows.Controls.Control.Background%2A>屬性，但是再也會指定一個按鈕與本機設定<xref:System.Windows.Controls.Control.Background%2A>值。
+
 > [!NOTE]
->  SDK 說明文件在討論相依性屬性 \(Property\) 時會穿插使用詞彙「區域值」或「區域設定值」。  區域設定值這個屬性 \(Property\) 值，是以編寫程式碼的方式直接在物件執行個體中設定的，或是做為 XAML 的項目屬性 \(Attribute\)。  
+> SDK 文件在討論相依性屬性時，偶爾會使用詞彙「區域數值」或「本機設定值」。 本機設定值是一個屬性值，其直接設定在程式碼的物件執行個體上，或作為 XAML 項目上的屬性。  
   
- 原則上，對第一個按鈕來說，屬性設定了兩次，但只會套用一個值：具有最高優先順序的值。  區域設定值具有最高優先順序 \(執行動畫時除外，但本範例中沒有套用動畫\)，因此會為第一個按鈕背景使用區域設定值，而非樣式 setter 值。  第二個按鈕沒有區域值 \(也沒有比樣式 setter 具有較高優先順序的其他值\)，因此該按鈕的背景來自樣式 setter。  
-  
- [!code-xml[PropertiesOvwSupport#MiniPrecedence](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
-  
-### 為什麼會存在相依性屬性優先順序  
- 通常您不一定會想套用樣式，或是讓樣式混淆個別項目的區域設定值 \(否則，一般來說很難使用樣式或項目\)。  因此，來自樣式的值會比區域設定值的優先順序低。  如需更完整的相依性屬性清單，以及相依性屬性有效值的可能來源，請參閱[相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)。  
-  
+基本上，第一個按鈕會設定兩次屬性，但只套用一個值：有最高優先順序的值。 本機設定值有最高優先順序 (執行中的動畫除外，但本例中未套用任何動畫)，因此第一個按鈕的背景使用本機設定值，而不使用樣式 setter 值。 第二個按鈕沒有區域數值 (樣式 setter 有最高的優先順序)，因此該按鈕的背景來自樣式 setter。
+
+[!code-xaml[PropertiesOvwSupport#MiniPrecedence](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
+
+### <a name="why-does-dependency-property-precedence-exist"></a>為什麼會有相依性屬性的優先順序？
+通常您不會希望樣式一律套用樣式，甚至隱藏個別項目的本機設定值 (否則一般很難使用樣式或項目)。 因此，來自樣式的值運作優先順序比本機設定值低。 如需更完整的相依性屬性清單及相依性屬性有效值的可能來源，請參閱[相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)。
+
 > [!NOTE]
->  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目上定義的屬性有許多不是相依性屬性。  總結來說，只有在需要支援至少一個屬性系統所啟用的案例時，才要將屬性實作為相依性屬性，這些案例包括：資料繫結、樣式、動畫、預設值支援、繼承、附加屬性或失效。  
-  
-<a name="dp_implement_roadmap"></a>   
-## 進一步了解相依性屬性  
-  
--   [附加屬性](GTMT)是支援 XAML 中特製化語法的屬性型別。  附加屬性對 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性通常沒有一對一的對應，也不一定要是[相依性屬性](GTMT)。  [附加屬性](GTMT)的一般目的在於允許子項目回報屬性值給父項目，即使父項目和子項目的類別成員清單並沒有同時擁有該屬性。  一個主要的案例是讓子項目通知父項目在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈現子項目的方式；如需範例，請參閱 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。  如需詳細資訊，請參閱[附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。  
-  
--   元件開發人員或應用程式開發人員可能會想要建立自己的[相依性屬性](GTMT)，以啟用如資料繫結或樣式支援這類的功能，或是用於失效和值強制型轉 \(Coercion\) 支援。  如需詳細資訊，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。  
-  
--   相依性屬性通常應該要考慮為公用屬性，可以讓能夠存取執行個體的任何呼叫端進行存取，或是至少可以發現該屬性。  如需詳細資訊，請參閱 [相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。  
-  
-## 請參閱  
- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)   
- [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
+> 許多屬性是定義在相依性屬性的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目上。 大體上，屬性過去只有在需要支援至少一個屬性系統啟用的案例時，才會實作為相依性屬性︰資料繫結、樣式、動畫、預設值支援、繼承、附加屬性或失效。
+
+## <a name="learning-more-about-dependency-properties"></a>深入了解相依性屬性  
+
+- 附加屬性是支援 XAML 特殊語法的屬性類型。 附加屬性通常和 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性沒有 1:1 對應，而且不一定是相依性屬性。 附加屬性的一般用途是允許子項目向父項目回報屬性值，即使父項目和子項目未同時擁有列為類別成員的該屬性。 其中一個主要案例是啟用通知如何它們應呈現在父系的子項目[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; 如需範例，請參閱<xref:System.Windows.Controls.DockPanel.Dock%2A>或<xref:System.Windows.Controls.Canvas.Left%2A>。 如需詳細資訊，請參閱[附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。
+
+- 元件開發人員或應用程式開發人員可能希望建立自己的相依性屬性，以便啟用資料繫結或樣式支援等功能，或用於失效和值的強制型轉支援。 如需詳細資訊，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。
+
+- 相依性屬性通常應該視為公用屬性，任何可存取執行個體的呼叫端皆可存取或至少可探索它們。 如需詳細資訊，請參閱[相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。
+
+## <a name="see-also"></a>請參閱
+ [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
+ [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

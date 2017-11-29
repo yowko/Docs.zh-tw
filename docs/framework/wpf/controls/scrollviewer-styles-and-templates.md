@@ -1,66 +1,67 @@
 ---
-title: "ScrollViewer 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ScrollViewer"
-  - "組件 [WPF], ScrollViewer"
-  - "ScrollViewer [WPF], 樣式和範本"
-  - "狀態 [WPF], ScrollViewer"
-  - "樣式 [WPF], ScrollViewer"
-  - "範本 [WPF], ScrollViewer"
+title: "ScrollViewer 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], ScrollViewer
+- states [WPF], ScrollViewer
+- styles [WPF], ScrollViewer
+- templates [WPF], ScrollViewer
+- ControlTemplate [WPF], ScrollViewer
+- ScrollViewer [WPF], styles and templates
 ms.assetid: dffdd822-ae69-4946-abaf-710860cd65b2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ac02896708744bc9b1c2d017da4e6f56ac32b53a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ScrollViewer 樣式和範本
-本主題說明 <xref:System.Windows.Controls.ScrollViewer> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="scrollviewer-styles-and-templates"></a>ScrollViewer 樣式和範本
+本主題描述樣式和範本<xref:System.Windows.Controls.ScrollViewer>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
-## ScrollViewer 組件  
- 下表列出 <xref:System.Windows.Controls.ScrollViewer> 控制項的具名組件。  
+## <a name="scrollviewer-parts"></a>ScrollViewer 組件  
+ 下表列出的具名組件<xref:System.Windows.Controls.ScrollViewer>控制項。  
   
-||||  
+|組件|類型|說明|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|<xref:System.Windows.Controls.ScrollViewer> 中內容的預留位置。|  
-|PART\_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|用來水平捲動內容的 <xref:System.Windows.Controls.Primitives.ScrollBar>。|  
-|PART\_VerticalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|用來垂直捲動內容的 <xref:System.Windows.Controls.Primitives.ScrollBar>。|  
+|PART_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|在內容預留位置<xref:System.Windows.Controls.ScrollViewer>。|  
+|PART_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>用來水平捲動內容。|  
+|PART_VerticalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>用於垂直捲動內容。|  
   
-## ScrollViewer 狀態  
- 下表列出 <xref:System.Windows.Controls.ScrollViewer> 控制項的可見狀態。  
+## <a name="scrollviewer-states"></a>ScrollViewer 狀態  
+ 下表列出的視覺狀態<xref:System.Windows.Controls.ScrollViewer>控制項。  
   
-||||  
-|-|-|-|  
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|-|-|-|  
+|驗證|ValidationStates|此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。|  
   
-## ScrollViewer ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.ScrollViewer> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="scrollviewer-controltemplate-example"></a>ScrollViewer ControlTemplate 範例  
+ 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.ScrollViewer>控制項。  
   
- [!code-xml[ControlTemplateExamples#ScrollViewer](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollviewer.xaml#scrollviewer)]  
+ [!code-xaml[ControlTemplateExamples#ScrollViewer](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollviewer.xaml#scrollviewer)]  
   
- 前述範例使用了下列一或多項資源。  
+ 上述範例使用下列一或多項資源。  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱[使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) \(英文\)。  
+ 如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

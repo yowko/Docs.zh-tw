@@ -1,37 +1,38 @@
 ---
-title: "How to: Create GenericPrincipal and GenericIdentity Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Creating Generic Identity Objects"
-  - "GenericPrincipal Objects"
-  - "Creating GenericPrincipal Objects"
-  - "GenericIdentity Objects"
+title: "如何：建立 GenericPrincipal 和 GenericIdentity 物件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Creating Generic Identity Objects
+- GenericPrincipal Objects
+- Creating GenericPrincipal Objects
+- GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 93cd88d0321133a8340864645954b450a8e530ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create GenericPrincipal and GenericIdentity Objects
-您可以將 <xref:System.Security.Principal.GenericIdentity> 類別與 <xref:System.Security.Principal.GenericPrincipal> 類別配合使用，以建立獨立存在於 Windows NT 或 Windows 2000 網域之外的授權配置。  
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：建立 GenericPrincipal 和 GenericIdentity 物件
+您可以使用<xref:System.Security.Principal.GenericIdentity>類別搭配<xref:System.Security.Principal.GenericPrincipal>類別來建立獨立的 Windows 網域存在的授權配置。  
   
-### 若要建立 GenericPrincipal 物件  
+### <a name="to-create-a-genericprincipal-object"></a>建立 GenericPrincipal 物件  
   
-1.  建立識別類別的新執行個體，並以您想要它保留的名稱將它初始化。  下列程式碼會建立新的 **GenericIdentity** 物件，並以 `MyUser` 名稱將它初始化。  
+1.  建立身分識別類別的新執行個體，並以您想要它保留的名稱進行初始化。 下列程式碼會建立新的 **GenericIdentity** 物件並以名稱 `MyUser` 進行初始化。  
   
     ```vb  
     Dim MyIdentity As New GenericIdentity("MyUser")  
@@ -41,7 +42,7 @@ caps.handback.revision: 8
     GenericIdentity MyIdentity = new GenericIdentity("MyUser");  
     ```  
   
-2.  建立 **GenericPrincipal** 類別的新執行個體，並以先前建立的 **GenericIdentity** 物件和表示您要與此主體相關的角色之字串陣列加以初始化。  下列程式碼範例指定代表系統管理員角色和使用者角色的字串陣列。  接著以先前的 **GenericIdentity** 和字串陣列初始化 **GenericPrincipal**。  
+2.  建立 **GenericPrincipal** 類別的新執行個體，並以先前建立的 **GenericIdentity** 物件和代表您要與此主體建立關聯之角色的字串陣列進行初始化。 下列程式碼範例會指定代表系統管理員角色和使用者角色的字串陣列。 然後會使用先前的 **GenericIdentity** 和字串陣列初始化 **GenericPrincipal**。  
   
     ```vb  
     Dim MyStringArray As String() = {"Manager", "Teller"}  
@@ -53,7 +54,7 @@ caps.handback.revision: 8
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  使用下列程式碼將主體附加至目前執行緒。  因為這一點在主體必須經過驗證許多次的情況下，是很重要的，所以該主體必須經過被應用程式中執行的其他程式碼驗證，或是必須經過 <xref:System.Security.Permissions.PrincipalPermission> 物件驗證。  您仍然可以在主體物件上執行角色架構驗證，而不將它附加到執行緒。  如需詳細資訊，請參閱[取代主體物件](../../../docs/standard/security/replacing-a-principal-object.md)。  
+3.  使用下列程式碼將主體附加至目前的執行緒。 這是其重要性的主體必須驗證數次，它必須驗證您的應用程式中執行其他程式碼，或它必須經過<xref:System.Security.Permissions.PrincipalPermission>物件。 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)。  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -63,8 +64,8 @@ caps.handback.revision: 8
     Thread.CurrentPrincipal = MyPrincipal;  
     ```  
   
-## 範例  
- 下列程式碼範例示範如何建立 **GenericPrincipal** 和 **GenericIdentity** 的執行個體。  這個程式碼將這些物件的值顯示到主控台。  
+## <a name="example"></a>範例  
+ 下列程式碼範例示範如何建立 **GenericPrincipal** 和 **GenericIdentity** 的執行個體。 此程式碼會在主控台中顯示這些物件的值。  
   
 ```vb  
 Imports System  
@@ -138,7 +139,7 @@ public class Class1
 }  
 ```  
   
- 執行後，應用程式顯示類似下列的輸出。  
+ 執行後，應用程式會顯示與下列類似的輸出。  
   
 ```  
 The Name is: MyIdentity  
@@ -146,9 +147,9 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## 請參閱  
- <xref:System.Security.Principal.GenericIdentity>   
- <xref:System.Security.Principal.GenericPrincipal>   
- <xref:System.Security.Permissions.PrincipalPermission>   
- [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md)   
- [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Security.Principal.GenericIdentity>  
+ <xref:System.Security.Principal.GenericPrincipal>  
+ <xref:System.Security.Permissions.PrincipalPermission>  
+ [取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [Principal 和 Identity 物件](../../../docs/standard/security/principal-and-identity-objects.md)

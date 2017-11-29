@@ -1,53 +1,53 @@
 ---
-title: "在 Windows Form 控制項中的多執行緒 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BackgroundWorker 元件"
-  - "BeginInvoke 方法"
-  - "執行緒處理 [Windows Form], 控制項"
+title: "在 Windows Form 控制項中的多執行緒"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BackgroundWorker component
+- threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4651ca9707dcf0fac2edea0f004275cfcf18cf2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 在 Windows Form 控制項中的多執行緒
-在許多應用程式中，您都可以利用另一個執行緒來執行耗時的作業，讓您的使用者介面 \(UI\) 有更快的回應。  有許多工具都可以讓您的 Windows Form 控制項具有多執行緒的能力，包括 <xref:System.Threading> 命名空間、<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName> 方法，以及 `BackgroundWorker` 元件。  
+# <a name="multithreading-in-windows-forms-controls"></a>在 Windows Form 控制項中的多執行緒
+在許多應用程式，您可以讓您的使用者介面 (UI) 更能有效回應執行耗時的作業，另一個執行緒上。 數個工具可供多執行緒 Windows Form 控制項，包括<xref:System.Threading>命名空間，<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法，而`BackgroundWorker`元件。  
   
 > [!NOTE]
->  `BackgroundWorker` 元件會取代並加入功能至 <xref:System.Threading> 命名空間以及 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName> 方法；不過，您可以依選擇為回溯相容性 \(Backward Compatibility\) 和未來使用將其保留。  如需詳細資訊，請參閱 [BackgroundWorker 元件概觀](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
+>  `BackgroundWorker`元件取代，並將功能加入<xref:System.Threading>命名空間和<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法; 不過，這些會保留回溯相容性及未來使用，如果您選擇。 如需詳細資訊，請參閱[BackgroundWorker 元件概觀](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
   
-## 在本節中  
- [如何：進行對 Windows Form 控制項的安全執行緒呼叫](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
- 顯示如何進行對 Windows Form 控制項的安全執行緒呼叫  
+## <a name="in-this-section"></a>本章節內容  
+ [操作說明：進行對 Windows Forms 控制項的安全執行緒呼叫](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
+ 示範如何進行安全執行緒呼叫 Windows Form 控制項。  
   
- [如何：使用背景執行緒搜尋檔案](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
- 顯示如何使用 <xref:System.Threading> 命名空間和 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 方法來非同步搜尋檔案。  
+ [操作說明：使用背景執行緒搜尋檔案](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
+ 示範如何使用<xref:System.Threading>命名空間和<xref:System.Windows.Forms.Control.BeginInvoke%2A>方法來以非同步方式搜尋的檔案。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.ComponentModel.BackgroundWorker>  
- 提供以一個封裝了背景工作執行緒的元件來執行非同步作業的文件。  
+ 文件元件，可封裝工作者執行緒的非同步作業。  
   
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
- 提供如何非同步載入音效的文件。  
+ 如何以非同步方式載入音效文件。  
   
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
- 提供如何非同步載入影像的文件。  
+ 如何以非同步方式載入影像的文件。  
   
-## 相關章節  
- [如何：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- 顯示如何使用 <xref:System.ComponentModel.BackgroundWorker> 元件來執行耗時的作業。  
+## <a name="related-sections"></a>相關章節  
+ [操作說明：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ 示範如何執行耗時的作業與<xref:System.ComponentModel.BackgroundWorker>元件。  
   
  [BackgroundWorker 元件概觀](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
- 提供描述如何使用 <xref:System.ComponentModel.BackgroundWorker> 元件來執行非同步作業的主題
+ 提供主題描述如何使用<xref:System.ComponentModel.BackgroundWorker>元件的非同步作業。

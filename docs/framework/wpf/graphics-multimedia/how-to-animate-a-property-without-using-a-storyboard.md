@@ -1,48 +1,55 @@
 ---
-title: "如何：不使用腳本而建立屬性的動畫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 非腳本 (本機)"
-  - "本機動畫"
-  - "非腳本動畫"
+title: "操作說明：不使用分鏡腳本而建立屬性的動畫"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- non-Storyboard animation
+- local animation [WPF]
+- animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cfc1de83c6c91e7a42c09b080b647aaf440e5a61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：不使用腳本而建立屬性的動畫
-本範例說明如何在不使用 <xref:System.Windows.Media.Animation.Storyboard> 的情況下，將動畫套用到屬性的一種方式。  
+# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>操作說明：不使用分鏡腳本而建立屬性的動畫
+這個範例示範一種方式套用至屬性的動畫，而不使用<xref:System.Windows.Media.Animation.Storyboard>。  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 無法使用這個功能。  如需在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中將屬性顯示為動畫的詳細資訊，請參閱 [使用腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)。  
+>  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中無法使用此功能。 如需以動畫顯示 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中屬性的詳細資訊，請參閱[使用分鏡腳本建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)。  
   
- 若要將本機動畫套用到屬性，請使用 <xref:System.Windows.UIElement.BeginAnimation%2A> 方法。  這個方法接受兩個參數：一是 <xref:System.Windows.DependencyProperty>，用來指定要顯示為動畫的屬性，另一是要套用到該屬性的動畫。  
+ 若要將本機動畫套用至屬性，使用<xref:System.Windows.UIElement.BeginAnimation%2A>方法。 這個方法會採用兩個參數：<xref:System.Windows.DependencyProperty>指定屬性，即可建立動畫的來源，以及要套用到該屬性的動畫。  
   
-## 範例  
- 下列範例顯示如何將 <xref:System.Windows.Controls.Button> 的寬度和背景色彩顯示為動畫。  
+## <a name="example"></a>範例  
+ 下列範例示範如何建立動畫的寬度和背景色彩<xref:System.Windows.Controls.Button>。  
   
  [!code-cpp[animateproperty#11](../../../../samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
  [!code-csharp[animateproperty#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
  [!code-vb[animateproperty#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
- <xref:System.Windows.Media.Animation> 命名空間有各種動畫類別，可用來將不同型別的屬性顯示為動畫。  如需將屬性顯示為動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  如需[相依性屬性](GTMT) \(這些範例中顯示之屬性的型別\) 及其功能的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ 動畫類別中的各種不同<xref:System.Windows.Media.Animation>命名空間存在適用於不同類型的屬性。 如需將屬性顯示為動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 如需相依性屬性 (這些範例所示的內容類型) 和其功能的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
   
- 另外還有其他方式可以在不使用 <xref:System.Windows.Media.Animation.Storyboard> 物件的情況下顯示動畫；如需詳細資訊，請參閱[建立屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
+ 還有其他方式，以動畫方式顯示，而不使用<xref:System.Windows.Media.Animation.Storyboard>物件; 如需詳細資訊，請參閱[屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
   
-## 請參閱  
- <xref:System.Windows.Media.Animation.AnimationTimeline>   
- <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>   
- <xref:System.Windows.Media.Animation>   
- <xref:System.Windows.Media.Animation.Storyboard>   
- [建立屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Media.Animation.AnimationTimeline>  
+ <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>  
+ <xref:System.Windows.Media.Animation>  
+ <xref:System.Windows.Media.Animation.Storyboard>  
+ [屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

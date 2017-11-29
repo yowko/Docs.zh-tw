@@ -1,52 +1,34 @@
 ---
-title: "Visual Basic 中的物件和類別 | Microsoft Docs"
+title: "Visual Basic 中的物件和類別"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4892ed6dcfb3843bd6cb2de2d3e032bfeb1efdf9
-ms.openlocfilehash: 2c2db6fcbbd3d3736d9ab0e1e9190c2516a17937
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/16/2017
-
+ms.openlocfilehash: be5e0156b4cacc39e1613e06fe3c138838b02700
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的物件和類別
 「物件」是可視為一個單位的程式碼和資料組合。 物件可以是應用程式的一部分，例如控制項或表單。 整個應用程式也可以是一個物件。
 
-當您在 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中建立應用程式時，經常會使用物件。 您可以使用 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 所提供的物件，例如控制項、表單和資料存取物件。 您也可以在 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 應用程式內使用其他應用程式的物件。 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。  
+當您在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中建立應用程式時，經常會使用物件。 您可以使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 所提供的物件，例如控制項、表單和資料存取物件。 您也可以在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 應用程式內使用其他應用程式的物件。 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。  
   
 本主題會詳細討論物件。  
 
 ## <a name="objects-and-classes"></a>物件和類別
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中的每個物件都是由「類別」所定義。 類別會描述物件的變數、屬性、程序及事件。 物件是類別的執行個體；當您定義類別之後，就能視需要建立最多的物件。
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的每個物件都是由「類別」所定義。 類別會描述物件的變數、屬性、程序及事件。 物件是類別的執行個體；當您定義類別之後，就能視需要建立最多的物件。
 
 若要了解物件和其類別之間的關聯性，請想像餅乾壓模與餅乾。 餅乾壓模是類別。 它會定義每塊餅乾的特性，例如大小和形狀。 類別可用來建立物件。 物件則是餅乾。
 
@@ -190,7 +172,7 @@ safetyTimer.Start()
 ## <a name="reusing-classes-and-objects"></a>重複使用類別和物件  
 物件可讓您宣告變數和程序一次，接著就能在需要時重複使用它們。 例如，如果您想要在應用程式中加入拼字檢查程式，您可以定義所有變數和支援函式來提供拼字檢查功能。 如果您以類別形式建立拼字檢查程式，接著就能藉由加入對已編譯組件的參考，在其他應用程式中重複使用它。 更棒的是，您或許能夠使用其他人已經開發的拼字檢查程式類別來簡化您的一些工作。
 
-[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 提供許多可供使用的元件範例。 下列範例使用 <xref:System> 命名空間中的 <xref:System.TimeZone> 類別。 <xref:System.TimeZone> 提供可讓您擷取目前電腦系統時區相關資訊的成員。
+[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 提供許多可供使用的元件範例。 下列範例使用 <xref:System> 命名空間中的 <xref:System.TimeZone> 類別。 <xref:System.TimeZone> 提供可讓您擷取目前電腦系統時區相關資訊的成員。
 
 ```vb
 Public Sub examineTimeZone()
@@ -258,7 +240,7 @@ End Sub
 另一個可讓物件相關聯的方法是「內含項目關係」。 容器物件邏輯上會封裝其他物件。 例如，<xref:System.OperatingSystem> 物件在邏輯上會包含 <xref:System.Version> 物件，這會透過其 <xref:System.OperatingSystem.Version%2A> 屬性傳回。 請注意，容器物件實際上不會包含任何其他物件。
 
 #### <a name="collections"></a>集合
-物件內含項目的一個特定型別是由「集合」來代表。 集合是一組可列舉的相似物件。 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 支援 [For Each...Next 陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)中的特定語法，可讓您逐一查看集合的項目。 此外，集合通常可讓您使用 <xref:Microsoft.VisualBasic.Collection.Item%2A>，依其索引來擷取項目，或者將它們關聯至唯一字串來擷取項目。 比起陣列，集合更容易使用，因為它們讓您不需使用索引，就能新增或移除項目。 由於集合易於使用，因此，通常會用來儲存表單和控制項。
+物件內含項目的一個特定型別是由「集合」來代表。 集合是一組可列舉的相似物件。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 支援 [For Each...Next 陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)中的特定語法，可讓您逐一查看集合的項目。 此外，集合通常可讓您使用 <xref:Microsoft.VisualBasic.Collection.Item%2A>，依其索引來擷取項目，或者將它們關聯至唯一字串來擷取項目。 比起陣列，集合更容易使用，因為它們讓您不需使用索引，就能新增或移除項目。 由於集合易於使用，因此，通常會用來儲存表單和控制項。
 
 ## <a name="related-topics"></a>相關主題  
  [逐步解說：定義類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
@@ -281,4 +263,3 @@ End Sub
 
  [如何：在匿名類型宣告中推斷屬性名稱和類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  說明如何在匿名型別宣告中推斷屬性名稱和型別。 提供成功和失敗的推斷範例。
-

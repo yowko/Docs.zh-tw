@@ -1,41 +1,22 @@
 ---
 title: "用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- file I/O classes
+helpviewer_keywords: file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: abb2291ce797f3630eebd24e563994a2d86242bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a87d2e6f87b92b5f66706095d3f485c080008e0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)
 下列各表列出 .NET Framework 檔案 I/O 的常用類別、分類為檔案 I/O 類別的檔案、用於建立資料流的類別，以及用來讀取和寫入至資料流的類別。  
@@ -83,8 +64,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|將字元寫入至 `String`。 輸出可以是任何編碼的資料流或 `String`。|  
   
 ## <a name="see-also"></a>另請參閱  
- [撰寫資料流](https://msdn.microsoft.com/library/e4y2dch9)   
- [檔案和資料流 I/O](https://msdn.microsoft.com/library/k3352a4t)   
- [非同步檔案 I/O](https://msdn.microsoft.com/library/kztecsys)   
+ [撰寫資料流](https://msdn.microsoft.com/library/e4y2dch9)  
+ [檔案和資料流 I/O](https://msdn.microsoft.com/library/k3352a4t)  
+ [非同步檔案 I/O](https://msdn.microsoft.com/library/kztecsys)  
  [.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
-

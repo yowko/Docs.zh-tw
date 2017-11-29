@@ -1,51 +1,53 @@
 ---
-title: "相依性屬性的安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "相依性屬性, access"
-  - "相依性屬性, 安全性"
-  - "安全性, 相依性屬性"
-  - "安全性, 包裝函式"
-  - "驗證, 相依性屬性"
-  - "包裝函式, access"
-  - "包裝函式, 安全性"
+title: "相依性屬性的安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wrappers [WPF], access
+- wrappers [WPF], security
+- dependency properties [WPF], security
+- security [WPF], wrappers
+- validation [WPF], dependency properties
+- dependency properties [WPF], access
+- security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8c1dc0ea45efe32e36b649d92111fff3d5f61a7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 相依性屬性的安全性
-相依性屬性通常應該視為公用屬性。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統在本質上會防止進行相依性屬性值的安全性保證。  
+# <a name="dependency-property-security"></a>相依性屬性的安全性
+相依性屬性通常應該視為公用屬性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統在本質上會防止進行相依性屬性值的安全性保證。  
   
-   
   
 <a name="AccessSecurity"></a>   
-## 包裝函式和相依性屬性的存取和安全性  
- 通常，相依性屬性會與「包裝函式」[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性一起實作，該屬性會簡化對執行個體屬性的取得和設定。  不過，包裝函式實際上只是方便的方法，用於實作在與相依性屬性互動時所使用的基礎 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 靜態呼叫。  從另一個方式來想，公開為 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性的屬性，是剛好受到相依性屬性的支援，而非受到私用欄位的支援。  套用到包裝函式的安全性機制，與屬性系統行為和基礎相依性屬性的存取並不相同。  對包裝函式放置安全性要求只會防止使用這種方便的方法，卻無法防止呼叫 <xref:System.Windows.DependencyObject.GetValue%2A> 或 <xref:System.Windows.DependencyObject.SetValue%2A>。  同樣地，對包裝函式放置保護或私用存取層級並不會提供任何有效的安全性防護。  
+## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>包裝函式和相依性屬性的存取和安全性  
+ 通常，相依性屬性會與「包裝函式」[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性一起實作，該屬性會簡化對執行個體屬性的取得或設定。 包裝函式，其實就是便利的方法實作的基礎，但是<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>靜態相依性屬性和互動時所使用的呼叫。 從另一個方面來思考，這些屬性會公開為剛好受到相依性屬性 (而不是私用欄位) 支援的[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性。 套用到包裝函式的安全性機制，與屬性系統行為和基礎相依性屬性的存取並不相同。 置於包裝函式的安全性要求將不僅可以防止便利的方法的使用方式，但不是會防止呼叫<xref:System.Windows.DependencyObject.GetValue%2A>或<xref:System.Windows.DependencyObject.SetValue%2A>。 同樣地，對包裝函式設置保護或私用存取層級並不會提供任何有效的安全性防護。  
   
- 如果您在撰寫自己的相依性屬性，應該要將包裝函式和 <xref:System.Windows.DependencyProperty> 識別項欄位宣告為公用成員，這樣呼叫端才不會誤會該屬性的真實存取層級 \(因為其存放區會實作為相依性屬性\)。  
+ 如果您要撰寫您自己的相依性屬性，您應該宣告包裝函式和<xref:System.Windows.DependencyProperty>識別碼欄位，做為公用成員，讓呼叫端沒有未取得容易發生錯誤，該屬性，則為 true 的存取層級的相關資訊 （因為它的存放區正在實作為相依性屬性。）  
   
- 對於自訂相依性屬性，您可以將屬性註冊為唯讀相依性屬性，這樣即能有效防止未持有屬性的 <xref:System.Windows.DependencyPropertyKey> 參考的任何人設定該屬性。  如需詳細資訊，請參閱[唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)。  
+ 自訂相依性屬性，您可以註冊您的屬性為唯讀相依性屬性，並防止任何人都不包含的參考設定屬性的有效方法，這提供<xref:System.Windows.DependencyPropertyKey>該屬性。 如需詳細資訊，請參閱[唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)。  
   
 > [!NOTE]
->  宣告 <xref:System.Windows.DependencyProperty> 識別項欄位為私用並不會受到禁止，而且也認定可用於協助降低直接公開自訂類別的命名空間，但不應該以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 語言定義會定義該存取層級的相同概念來將這類屬性視為「私用」，下節會詳細討論其原因。  
+>  宣告<xref:System.Windows.DependencyProperty>不禁止的識別項欄位私用，並有助於減少立即公開的命名空間的自訂類別，可用理論上，但這類屬性不應視為相同的意義上，為 「 私人 」 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]語言定義所定義的存取層級下, 一節中所述的原因。  
   
 <a name="PropertySystemExposure"></a>   
-## 相依性屬性的屬性系統公開  
- 將 <xref:System.Windows.DependencyProperty> 宣告為公用以外的任何存取層級，通常並不好用而且很可能造成誤會。  該存取層級設定只能防止某人能夠取得宣告類別執行個體的參考。  但還是有數個屬性系統，會將傳回 <xref:System.Windows.DependencyProperty> 做為特定屬性是否存在於類別執行個體或衍生類別執行個體中的識別方式，而即使原始靜態識別項是宣告為非公用，仍然可以在 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫中使用這個識別項。  而 <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> 虛擬方法也會接收任何變更值的現有相依性屬性的資訊。  除此之外，對於具有區域設定值的執行個體的任何屬性，<xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A> 方法會傳回其識別項。  
+## <a name="property-system-exposure-of-dependency-properties"></a>相依性屬性的屬性系統公開  
+ 不是通常很有用，而且很可能會產生誤導，來宣告<xref:System.Windows.DependencyProperty>任何存取層級而不是公用。 該存取層級設定只能防止使用者取得宣告類別執行個體的參考。 但有幾個層面的屬性系統，將會傳回<xref:System.Windows.DependencyProperty>做為識別特定的屬性，因為它存在於類別的執行個體或衍生的類別執行個體，而且這個識別碼是在仍可使用的方法<xref:System.Windows.DependencyObject.SetValue%2A>即使呼叫如果原始的靜態識別項宣告為 nonpublic。 此外，<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>虛擬方法都會接收值變更任何現有相依性屬性資訊。 此外，<xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A>方法會傳回任何屬性的識別項執行個體與本機設定值。  
   
-### 驗證和安全性  
- 藉由套用 <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> 的要求，並預期要求失敗會造成驗證失敗，即可防止屬性是在不足夠的安全性機制下設定的。  如果惡意呼叫端是在應用程式定義域內操作的話，這些呼叫端也可以隱藏透過 <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> 強制的設定值失效。  
+### <a name="validation-and-security"></a>驗證和安全性  
+ 套用要求<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>和預期要求失敗，以防止屬性所設定的驗證失敗不是適當的安全性機制。 透過強制執行設定值失效<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>可能也會歸併被惡意呼叫端，如果應用程式定義域內操作這些呼叫端。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

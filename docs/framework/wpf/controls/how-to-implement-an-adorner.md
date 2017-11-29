@@ -1,37 +1,42 @@
 ---
-title: "如何：實作裝飾項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Adorner, 實作"
+title: "如何：實作裝飾項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: adorners [WPF], implementing
 ms.assetid: 56ae32b6-0599-455c-b52f-2ff97e6f1ec2
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3f69fee64ea65e8d49cce523c85669993cc6bce
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：實作裝飾項
-此範例示範最小裝飾項的實作。  
+# <a name="how-to-implement-an-adorner"></a>如何：實作裝飾項
+此範例會顯示最少的裝飾項的實作。  
   
-## 實作器注意事項  
- 請特別注意，裝飾項不包含任何繼承呈現行為，以確保裝飾項呈現是裝飾項實作器的職責。  實作呈現行為的常見方式，就是覆寫 <xref:System.Windows.UIElement.OnRender%2A> 方法並視需要使用一個或多個 <xref:System.Windows.Media.DrawingContext> 物件來呈現裝飾項的視覺物件 \(如這個範例所示\)。  
+## <a name="notes-for-implementers"></a>實作者注意事項  
+ 請務必注意，裝飾項並不包括任何繼承的轉譯行為。裝飾項實作者必須負責確定裝飾項轉譯器。   實作轉譯行為的常見方式是覆寫<xref:System.Windows.UIElement.OnRender%2A>方法並使用一或多個<xref:System.Windows.Media.DrawingContext>物件來呈現裝飾項的視覺效果視 （如本範例所示）。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 描述  
- 實作繼承自抽象 <xref:System.Windows.Documents.Adorner> 類別的類別，即可建立自訂裝飾項。  這個範例裝飾項會覆寫 <xref:System.Windows.UIElement.OnRender%2A> 方法，藉此方式用圓形裝飾 <xref:System.Windows.UIElement> 的角落。  
+### <a name="description"></a>說明  
+ 藉由實作繼承自抽象類別建立的自訂裝飾項<xref:System.Windows.Documents.Adorner>類別。  範例裝飾項只 adorns 角落<xref:System.Windows.UIElement>使用圓形藉由覆寫<xref:System.Windows.UIElement.OnRender%2A>方法。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
  [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
  [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [裝飾項概觀](../../../../docs/framework/wpf/controls/adorners-overview.md)

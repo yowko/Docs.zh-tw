@@ -1,92 +1,92 @@
 ---
-title: "DataGrid 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料 [Windows Form], 在 Windows Form 上顯示"
-  - "資料格"
-  - "DataGrid 控制項 [Windows Form]"
-  - "資料集 [Windows Form], 在 DataGrid 控制項中顯示"
-  - "資料集 [Windows Form], 使用者介面"
-  - "顯示資料, 在表單上"
+title: "DataGrid 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- datasets [Windows Forms], user interface
+- DataGrid control [Windows Forms]
+- datasets [Windows Forms], displaying in DataGrid control
+- displaying data [Windows Forms], on forms
+- data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c60927451ad4350ef507f2e2a661bcfaab4ea788
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DataGrid 控制項 (Windows Form)
+# <a name="datagrid-control-windows-forms"></a>DataGrid 控制項 (Windows Form)
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 `DataGrid` 控制項並加入其他功能，不過您也可以選擇保留 `DataGrid` 控制項，以提供回溯相容性及未來使用。  如需詳細資訊，請參閱 [Windows Form DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控制項會取代 `DataGrid` 控制項並加入其他功能，不過您也可以選擇保留 `DataGrid` 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- Windows Form `DataGrid` 控制項會提供 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料集的使用者介面，以顯示表格式資料並允許更新資料來源。  
+ Windows Forms `DataGrid` 控制項提供 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料集的使用者介面，可顯示表格式資料並啟用資料來源的更新。  
   
- 當 `DataGrid` 控制項設定了有效資料來源時，控制項就會自動填入 \(Populate\)，並根據資料的形式來建立資料行和資料列。  `DataGrid` 控制項可用來顯示單一資料表或一組資料表間的階層式關聯性。  
+ 將 `DataGrid` 控制項設定為有效資料來源時，會自動填入控制項，並根據資料的形狀來建立資料行和資料列。 `DataGrid` 控制項可以用來顯示單一資料表，或一組資料表之間的階層關聯性。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [DataGrid 控制項概觀](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  描述 `DataGrid` 控制項的基本功能。  
   
- [如何：使用設計工具在 Windows Form DataGrid 控制項中加入表格和資料行](../../../../docs/framework/winforms/controls/add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
- 描述如何使用設計工具將表格和資料行加入至 `DataGrid` 控制項。  
+ [如何：使用設計工具在 Windows Forms DataGrid 控制項中新增資料表和資料行](../../../../docs/framework/winforms/controls/add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
+ 描述如何使用設計工具在 `DataGrid` 控制項中新增資料表和資料行。  
   
- [如何：將資料表和資料行加入至 Windows Form DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- 描述如何以程式設計的方式將表格和資料行加入至 `DataGrid` 控制項。  
+ [如何：將資料表和資料行新增至 Windows Forms DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ 描述如何透過程式設計方式在 `DataGrid` 控制項中新增資料表和資料行。  
   
- [如何：使用設計工具將 Windows Form DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
+ [如何：使用設計工具將 Windows Forms DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
  描述如何使用設計工具將 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料集繫結至 `DataGrid` 控制項。  
   
- [如何：將 Windows Form DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [如何：將 Windows Forms DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
  描述如何將 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料集繫結至 `DataGrid` 控制項。  
   
- [如何：在執行階段時變更 Windows Form DataGrid 控制項中顯示的資料](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
- 描述如何以程式設計的方式變更 `DataGrid` 控制項中的資料。  
+ [如何：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
+ 描述如何透過程式設計方式在 `DataGrid` 控制項中變更資料。  
   
- [如何：使用設計工具搭配 Windows Form DataGrid 控制項建立主版詳細資料清單](../../../../docs/framework/winforms/controls/create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
- 描述如何使用設計工具在兩個不同的 `DataGrid` 控制項中顯示由父\/子關係繫結的兩個資料表。  
+ [如何：使用設計工具搭配 Windows Forms DataGrid 控制項建立主版詳細資料清單](../../../../docs/framework/winforms/controls/create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
+ 描述如何使用設計工具在兩個不同的 `DataGrid` 控制項中顯示兩個透過父子式關係繫結在一起的資料表。  
   
- [如何：使用 Windows Form DataGrid 控制項建立主從式清單](../../../../docs/framework/winforms/controls/how-to-create-master-detail-lists-with-the-windows-forms-datagrid-control.md)  
- 描述如何在兩個不同的 `DataGrid` 控制項中顯示由父\/子關係繫結的兩個資料表。  
+ 如何：使用 Windows Forms DataGrid 控制項建立主版詳細資料清單  
+ 描述如何在兩個不同的 `DataGrid` 控制項中顯示兩個透過父子式關係繫結在一起的資料表。  
   
- [如何：刪除或隱藏 Windows Form DataGrid 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- 描述如何在 `DataGrid` 控制項中移除資料行。  
+ [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ 描述如何移除 `DataGrid` 控制項中的資料行。  
   
- [如何：使用設計工具格式化 Windows Form DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
+ [如何：使用設計工具格式化 Windows Forms DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
  描述如何使用設計工具變更 `DataGrid` 控制項的外觀相關屬性。  
   
- [如何：格式化 Windows Form DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)  
+ [如何：格式化 Windows Forms DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)  
  描述如何變更 `DataGrid` 控制項的外觀相關屬性。  
   
- [Windows Form DataGrid 控制項的鍵盤快速鍵](../../../../docs/framework/winforms/controls/keyboard-shortcuts-for-the-windows-forms-datagrid-control.md)  
- 列出巡覽 `DataGrid` 控制項的快速鍵。  
+ [Windows Forms DataGrid 控制項的鍵盤快速鍵](../../../../docs/framework/winforms/controls/keyboard-shortcuts-for-the-windows-forms-datagrid-control.md)  
+ 列出用於巡覽 `DataGrid` 控制項的捷徑。  
   
- [如何：回應 Windows Form DataGrid 控制項中的按選動作](../../../../docs/framework/winforms/controls/how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
- 描述如何判斷在 `DataGrid` 控制項中使用者所按的儲存格為何。  
+ [如何：回應 Windows Forms DataGrid 控制項中的按選動作](../../../../docs/framework/winforms/controls/how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
+ 描述如何判斷使用者在 `DataGrid` 控制項中所按的儲存格。  
   
- [如何：使用 Windows Form DataGrid 控制項驗證輸入](../../../../docs/framework/winforms/controls/how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
- 描述如何驗證繫結至 `DataGrid` 控制項的資料集中的輸入。  
+ [如何：使用 Windows Forms DataGrid 控制項驗證輸入](../../../../docs/framework/winforms/controls/how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
+ 描述如何驗證繫結至 `DataGrid` 控制項之資料集中的輸入。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.DataGrid>  
- 提供 <xref:System.Windows.Forms.DataGrid> 類別的概觀。  
+ 提供概觀<xref:System.Windows.Forms.DataGrid>類別。  
   
  <xref:System.Windows.Forms.DataGrid.DataSource%2A>  
- 提供關於使用這個屬性將 <xref:System.Windows.Forms.DataGrid> 控制項繫結至資料的詳細資訊。  
+ 提供有關使用這個屬性來繫結詳細資料<xref:System.Windows.Forms.DataGrid>資料的控制項。  
   
-## 相關章節  
- [Windows Form 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- 提供 Windows Form 中資料繫結的主題連結。  
+## <a name="related-sections"></a>相關章節  
+ [Windows Forms 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ 提供 Windows Forms 中資料繫結主題的連結。  
   
-## 請參閱  
- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Windows Form DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)
+## <a name="see-also"></a>另請參閱  
+ [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

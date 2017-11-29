@@ -1,35 +1,33 @@
 ---
-title: "Optional parameters must specify a default value | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30812"
-  - "bc30812"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30812"
+title: "選擇性參數必須指定預設值"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30812
+- bc30812
+helpviewer_keywords: BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e9ec6d044ba0a1bb904030ddbb4c4fa406c3ba63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Optional parameters must specify a default value
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-選擇性參數必須提供預設值，當呼叫程序沒有提供參數時可以使用。  
+# <a name="optional-parameters-must-specify-a-default-value"></a>選擇性參數必須指定預設值
+選擇性參數必須提供如果未提供參數呼叫程序可以使用的預設值。  
   
- **錯誤 ID**︰BC30812  
+ **錯誤 ID:** BC30812  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請指定選擇性參數的預設值，例如：  
+-   指定選擇性參數，預設的值例如：  
   
     ```  
     Sub Proc1(ByVal X As Integer,   
@@ -38,5 +36,5 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Optional](../../../visual-basic/language-reference/modifiers/optional.md)

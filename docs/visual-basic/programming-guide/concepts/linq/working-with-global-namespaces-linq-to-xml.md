@@ -1,33 +1,25 @@
 ---
-title: "使用全域命名空間 (Visual Basic) (LINQ to XML) |Microsoft 文件"
+title: "處理全域命名空間 (Visual Basic) (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e20d0c0b670d63ebe2be137a48dc1a1a9a861b9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 376a6d2dfbca22fb8efc6395f478839d716e14d4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>處理全域命名空間 (Visual Basic) (LINQ to XML)
-在 Visual Basic XML 常值的重要功能之一就是能夠使用宣告 XML 命名空間`Imports`陳述式。 利用這個功能，您可以宣告使用前置詞的 XML 命名空間，或者，您可以宣告預設的 XML 命名空間。  
+在 Visual Basic 中的 XML 常值的重要功能的其中一個是使用宣告 XML 命名空間的能力`Imports`陳述式。 利用這個功能，您可以宣告使用前置詞的 XML 命名空間，或者，您可以宣告預設的 XML 命名空間。  
   
  這項功能在兩種情況下很有用。 第一，在 XML 常值中宣告的命名空間不會延續到內嵌的運算式中。 宣告全域命名空間會減少您必須做的工作量，以便搭配命名空間使用內嵌的運算式。 第二，您必須宣告全域命名空間，才能搭配 XML 使用命名空間。  
   
@@ -35,10 +27,10 @@ ms.lasthandoff: 03/13/2017
   
  使用位於全域宣告之命名空間中的 XML 常值或 XML 屬性時，您可以在 Visual Studio 中，將滑鼠停留在 XML 常值或屬性的擴充名稱上，藉以查看它們。 您將會在工具提示中看到擴充名稱。  
   
- 您可以取得<xref:System.Xml.Linq.XNamespace>物件對應到全域命名空間使用`GetXmlNamespace`方法。</xref:System.Xml.Linq.XNamespace>  
+ 您可以使用 <xref:System.Xml.Linq.XNamespace> 方法，取得對應到全域命名空間的 `GetXmlNamespace` 物件。  
   
 ## <a name="examples-of-global-namespaces"></a>全域命名空間的範例  
- 下列範例會宣告預設的全域命名空間使用`Imports`陳述式，然後使用 XML 常值來初始化<xref:System.Xml.Linq.XElement>該命名空間中的物件︰</xref:System.Xml.Linq.XElement>  
+ 下列範例會使用 `Imports` 陳述式宣告預設的全域命名空間，然後使用 XML 常值來初始化該命名空間中的 <xref:System.Xml.Linq.XElement> 物件：  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -194,7 +186,7 @@ End Module
 ```  
   
 ## <a name="xnamespace-and-global-namespaces"></a>XNamespace 和全域命名空間  
- 您可以取得<xref:System.Xml.Linq.XNamespace>物件使用`GetXmlNamespace`方法︰</xref:System.Xml.Linq.XNamespace>  
+ 您可以使用 <xref:System.Xml.Linq.XNamespace> 方法，取得 `GetXmlNamespace` 物件：  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

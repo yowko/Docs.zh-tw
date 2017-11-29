@@ -1,39 +1,21 @@
 ---
 title: "範例 COM 類別 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ad14b414c037d38da55ce0ec82685b790cc46d2f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a759a7dcd211207c8740dd99d592daa509ddec47
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-com-class-c-programming-guide"></a>範例 COM 類別 (C# 程式設計手冊)
 以下是公開為 COM 物件類別的範例。 在此程式碼放入 .cs 檔案並新增至專案之後，將**註冊 COM Interop** 屬性設定為 **True**。 如需詳細資訊，請參閱 [NIB：如何：登錄 COM Interop 元件](http://msdn.microsoft.com/en-us/4de7d474-56e8-4027-994d-d47ca4725c5e)。  
@@ -57,10 +39,9 @@ ms.lasthandoff: 07/28/2017
  類別會實作類別介面，它可以實作多個介面，但首次實作是在預設類別介面。 實作此處向 COM 公開的方法和屬性。 它們必須標示為公用，且必須符合類別介面中的宣告。 此外，宣告類別在此引發的事件。 它們必須標示為公用，且必須符合事件介面中的宣告。  
   
 ## <a name="example"></a>範例  
- [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
+ [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [互通性](../../../csharp/programming-guide/interop/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [互通性](../../../csharp/programming-guide/interop/index.md)  
  [專案設計工具、建置頁面 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-

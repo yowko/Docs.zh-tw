@@ -1,45 +1,46 @@
 ---
-title: "在 Windows Form 上裝載 ActiveX 控制項的考慮因素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ActiveX 控制項 [Windows Form], 加入"
-  - "ActiveX 控制項 [Windows Form], 裝載"
-  - "Windows Form 控制項, ActiveX 控制項"
-  - "Windows Form, ActiveX 控制項"
-  - "Windows Form, 裝載 ActiveX 控制項"
+title: "在 Windows Form 上裝載 ActiveX 控制項的考慮因素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- ActiveX controls [Windows Forms], hosting
+- Windows Forms, ActiveX controls
+- Windows Forms, hosting ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ec828ca0b2bd8231d0baca72bf97bef566f2651
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Windows Form 上裝載 ActiveX 控制項的考慮因素
-雖然 Windows Form 是最佳化來裝載 \(Host\) Windows Form 控制項，但您還是可使用 ActiveX 控制項。  在規劃使用 ActiveX 控制項的應用程式時，請務必考慮下列事項：  
+# <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>在 Windows Form 上裝載 ActiveX 控制項的考慮因素
+雖然 Windows Forms 已進行最佳化來裝載 Windows Forms 控制項，但是您仍然可以使用 ActiveX 控制項。 規劃使用 ActiveX 控制項的應用程式時，請注意下列考量：  
   
--   **安全性**：Common Language Runtime 已在程式碼存取的安全性方面加強。  具有 Windows Form 的應用程式可在完全受信任的環境下正常運作，而且也可在非完全信任的環境下存取大部分的功能。  Windows Form 控制項可以輕易地裝載於瀏覽器中。  但是，Windows Form 上的 ActiveX 控制項無法享有這些安全性增強的好處。  執行 ActiveX 控制項需要 Unmanaged 程式碼使用權限，您可使用 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=fullName> 屬性加以設定。  如需安全性和 Unmanaged  程式碼使用權限，請參閱 [SecurityPermissionAttribute 類別](frlrfSystemSecurityPermissionsSecurityPermissionAttributeClassTopic)。  
+-   **安全性** Common Language Runtime 已增強程式碼存取安全性。 具備 Windows Forms 的應用程式可以在完全信任的環境中執行而不發生問題，而在半受信任的環境中則可以存取大部分的功能。 Windows Forms 控制項可以裝載在瀏覽器中，而且不會很複雜。 不過，Windows Forms 上的 ActiveX 控制項無法利用這些安全性加強功能。 執行 ActiveX 控制項需要 unmanaged 程式碼權限，就會以設定<xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType>屬性。 如需安全性和 unmanaged 程式碼權限的詳細資訊，請參閱<xref:System.Security.Permissions.SecurityPermissionAttribute>。  
   
--   **整體擁有成本 \(TCO\)**：任何加入至 Windows Form 的 ActiveX 控制項都會與該 Windows Form 一起部署，這麼做會明顯地增加已建立檔案的大小。  此外，在 Windows Form 上使用 ActiveX 控制項必須寫入登錄。  對使用者的電腦而言，這比 Windows Form 控制項更具侵入性，因為 Windows Form 控制項不需要這麼做。  
-  
-    > [!NOTE]
-    >  使用 ActiveX 控制項需要 COM Interop 包裝函式。  如需詳細資訊，請參閱 [Visual Basic 和 Visual C\# 中的 COM 互通性](../Topic/COM%20Interoperability%20in%20.NET%20Framework%20Applications%20\(Visual%20Basic\).md)。  
+-   新增至 Windows Forms 的**擁有權總成本** ActiveX 控制項會與該 Windows Forms 一起完整部署，這樣會大幅增加所建立檔案的大小。 此外，在 Windows Forms 上使用 ActiveX 控制項需要寫入至登錄。 這與不需要這麼做的 Windows Forms 控制項比起來，更容易擴散到使用者的電腦。  
   
     > [!NOTE]
-    >  如果 ActiveX 控制項成員的名稱與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中定義的名稱相符，則 ActiveX 控制項匯入工具會在建立 <xref:System.Windows.Forms.AxHost> 衍生類別 \(Derived Class\) 時，在成員名稱前加上 **Ctl** 前置詞。  例如，如果 ActiveX 控制項有名為 **Layout** 的成員，它在 AxHost 衍生類別中會重新命名為 **CtlLayout**，因為 **Layout** 事件是在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 內定義的。  
+    >  使用 ActiveX 控制項需要使用 COM Interop 包裝函式。 如需詳細資訊，請參閱 [Visual Basic 和 C# 中的 COM 互通性](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
-## 請參閱  
- [如何：將 ActiveX 控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)   
- [Code Access Security](../../../../docs/framework/misc/code-access-security.md)   
- [Controls and Programmable Objects Compared in Various Languages and Libraries](http://msdn.microsoft.com/zh-tw/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)   
- [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)
+    > [!NOTE]
+    >  如果 ActiveX 控制項的成員名稱符合已定義的名稱[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，ActiveX 控制項匯入工具會使用成員名稱的首碼則**Ctl**當建立<xref:System.Windows.Forms.AxHost>衍生的類別。 例如，如果您的 ActiveX 控制項有一個名為 **Layout** 的成員，它在 AxHost 衍生類別中就會被重新命名為 **CtlLayout**，因為 **Layout** 事件是在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中定義的。  
+  
+## <a name="see-also"></a>另請參閱  
+ [操作說明：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [程式碼存取安全性](../../../../docs/framework/misc/code-access-security.md)  
+ [比較各種語言和程式庫的控制項與可以透過程式設計的物件](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [將控制項加入 Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)

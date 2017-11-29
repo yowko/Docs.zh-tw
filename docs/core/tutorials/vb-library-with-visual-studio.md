@@ -8,15 +8,13 @@ ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-vb
-ms.devlang: vb
+dev_langs: vb
+ms.openlocfilehash: 6572f35b1e2b652c9f2ff5448165ece104f0bdf6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: a933e1eef6e4e9814aeba4206469a64563a7e91d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫
 
 「類別庫」會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，允許支援該 .NET Standard 版本的任何 .NET 實作呼叫您的類別庫。 當您完成類別庫時，您可以決定要將它散發為協力廠商元件，還是要將它併入作為一或多個應用程式隨附的元件。
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/12/2017
 
 1. 在 Visual Studio 功能表列上，選擇 [檔案]  >  [新增]   >  [專案]。
 
-1. 在 [新增專案] 對話方塊中，展開 [其他專案類型] 節點，並選取 [Visual Studio 方案]。 將方案命名為 "ClassLibraryProjects"，然後選取 [確定] 按鈕。
+1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]**。 將方案命名為 "ClassLibraryProjects"，然後選取 [確定] 按鈕。
 
    ![[新增專案] 對話方塊](./media/library-with-visual-studio/newproject.png)
 
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/12/2017
 
   [!CODE-vb[ClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
 
-   類別庫 `UtilityLibraries.StringLibrary` 包含一個名為 `StartsWithUpper` 的方法，它會傳回 <xref:System.Boolean> 值，指出目前的字串執行個體是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> 方法會傳回 `true`。
+   類別庫 `UtilityLibraries.StringLibrary` 包含一個名為 `StartsWithUpper` 的方法，它會傳回 <xref:System.Boolean> 值，指出目前的字串執行個體是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
 
 1. 在功能表列中，選取 [組建]  >  [組建方案]。 專案應該會編譯而不會發生錯誤。
 
@@ -71,4 +69,3 @@ ms.lasthandoff: 08/12/2017
 ## <a name="next-step"></a>後續步驟
 
 您已成功組建類別庫。 因為您尚未呼叫它的任何方法，所以它能否正常運作還不得而知。 開發程式庫的下一個步驟是使用[單元測試專案](testing-library-with-visual-studio.md)來測試它。
-

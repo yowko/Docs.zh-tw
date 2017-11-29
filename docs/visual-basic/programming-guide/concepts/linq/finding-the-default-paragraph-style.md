@@ -1,38 +1,34 @@
 ---
-title: "尋找預設段落樣式 (Visual Basic) |Microsoft 文件"
+title: "尋找預設段落樣式 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 041e99f4fd70008208a8f661f6763159ac7f4479
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: cd22a545f8162352050ba698717fb0ceb3a72cfc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>尋找預設段落樣式 (Visual Basic)
-管理中的資訊 WordprocessingML 文件教學課程的第一個工作是文件中找到的預設段落樣式。  
+＜管理 WordprocessingML 文件中的資訊＞教學課程中的第一個工作是，尋找文件中的預設段落樣式。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
  下列範例會開啟 Office Open XML WordprocessingML 文件、尋找文件和封裝的樣式部分，然後執行尋找預設樣式名稱的查詢。 如需 Office Open XML 文件封裝和組件，其中包含的資訊，請參閱[詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。  
   
- 查詢會尋找名稱為 `w:style` 的節點，其中擁有名稱為 `w:type` 且值為 "paragraph" 的屬性，同時也擁有名稱為 `w:default` 且值為 "1" 的屬性。 因為會有這些屬性只有一個 XML 節點，此查詢會使用<xref:System.Linq.Enumerable.First%2A?displayProperty=fullName>運算子，將集合轉換為單一子句。</xref:System.Linq.Enumerable.First%2A?displayProperty=fullName> 接著，它會取得名稱為 `w:styleId` 之屬性的值。  
+ 查詢會尋找名稱為 `w:style` 的節點，其中擁有名稱為 `w:type` 且值為 "paragraph" 的屬性，同時也擁有名稱為 `w:default` 且值為 "1" 的屬性。 由於這些屬性只有一個 XML 節點，查詢會使用 <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 運算子，將集合轉換為單一子句。 接著，它會取得名稱為 `w:styleId` 之屬性的值。  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用中的型別<xref:System.IO.Packaging?displayProperty=fullName>命名空間。</xref:System.IO.Packaging?displayProperty=fullName>  
+ 這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
 ### <a name="code"></a>程式碼  
   
@@ -100,9 +96,9 @@ The default style is: Normal
 ```  
   
 ## <a name="next-steps"></a>後續步驟  
- 在下一個範例中，您將建立在文件及其樣式中尋找所有段落的類似查詢︰  
+ 在下一個範例中，您將建立可在文件中尋找所有段落及其樣式的類似查詢：  
   
 -   [擷取段落及其樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [教學課程︰ 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+ [教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

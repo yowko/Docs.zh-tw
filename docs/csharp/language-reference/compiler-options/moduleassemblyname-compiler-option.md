@@ -1,42 +1,23 @@
 ---
 title: "-moduleassemblyname (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /moduleassemblyname
-dev_langs:
-- CSharp
+f1_keywords: /moduleassemblyname
 helpviewer_keywords:
 - moduleassemblyname compiler option [C#]
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (C# 編譯器選項)
 指定 .netmodule 可以存取其非公用類型的組件。  
@@ -62,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
  如需建置 .netmodule 的詳細資訊，請參閱 [/target:module (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
   
- 如需 Friend 組件的詳細資訊，請參閱 [Friend 組件](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)。  
+ 如需 Friend 組件的詳細資訊，請參閱 [Friend 組件](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
   
  這個選項不適用於開發環境；只有在從命令列編譯時才可用。  
   
@@ -116,8 +97,7 @@ class A {
 }  
 ```  
   
- **已呼叫 An_Internal_Class.Test**   
+ **已呼叫 An_Internal_Class.Test**  
 ## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-

@@ -1,40 +1,43 @@
 ---
-title: "根據開發情況比較 ASP.NET Web 服務與 WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "根據開發情況比較 ASP.NET Web 服務與 WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 82fb1848fc329db2921b626a894b9f91e766cd30
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 根據開發情況比較 ASP.NET Web 服務與 WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 具有 ASP.NET 相容性模式選項，可讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式以類似 ASP.NET Web 服務的方式來進行程式設計和組態，並且可模擬其行為。  下列章節將根據使用這兩種技術來開發應用程式時的需求，比較 ASP.NET Web 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+# <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 具有 ASP.NET 相容性模式選項，可讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式以類似 ASP.NET Web 服務的方式來進行程式設計和組態，並且可模擬其行為。 下列章節將根據使用這兩種技術來開發應用程式時的需求，比較 ASP.NET Web 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
   
-## 資料表示  
- 使用 ASP.NET 開發 Web 服務時，通常一開始會先定義服務所要使用的任何複雜資料型別。  ASP.NET 會依賴 <xref:System.Xml.Serialization.XmlSerializer> 將 .NET Framework 型別表示的資料轉譯為 XML 以便與服務進行來回傳輸，以及將接收到的 XML 資料轉譯為 .NET Framework 物件。  定義 ASP.NET 服務所要使用的複雜資料型別時需要定義 .NET Framework 類別，這個類別可由 <xref:System.Xml.Serialization.XmlSerializer> 序列化成 XML 以及從 XML 還原序列化。  這種類別可手動撰寫，或是使用命令列 XML 結構描述\/資料型別支援公用程式 xsd.exe，從 XML 結構描述中的型別定義產生。  
+## <a name="data-representation"></a>資料表示  
+ 使用 ASP.NET 開發 Web 服務時，通常一開始會先定義服務所要使用的任何複雜資料型別。 ASP.NET 會依賴 <xref:System.Xml.Serialization.XmlSerializer> 將 .NET Framework 型別表示的資料轉譯為 XML 以便與服務進行來回傳輸，以及將接收到的 XML 資料轉譯為 .NET Framework 物件。 定義 ASP.NET 服務所要使用的複雜資料型別時需要定義 .NET Framework 類別，這個類別可由 <xref:System.Xml.Serialization.XmlSerializer> 序列化成 XML 以及從 XML 還原序列化。 這種類別可手動撰寫，或是使用命令列 XML 結構描述/資料型別支援公用程式 xsd.exe，從 XML 結構描述中的型別定義產生。  
   
  下列清單列出在定義可由 <xref:System.Xml.Serialization.XmlSerializer> 序列化成 XML 以及從 XML 還原序列化的 .NET Framework 類別時，必須瞭解的主要問題：  
   
 -   只有 .NET Framework 物件的公用欄位和屬性會轉譯為 XML。  
   
--   集合類別 \(Collection Class\) 的執行個體只有在類別實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.ICollection> 介面時，才能序列化為 XML。  
+-   集合類別 (Collection Class) 的執行個體只有在類別實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.ICollection> 介面時，才能序列化為 XML。  
   
--   實作 <xref:System.Collections.IDictionary> 介面的類別 \(例如 <xref:System.Collections.Hashtable>\) 並不能序列化為 XML。  
+-   實作 <xref:System.Collections.IDictionary> 介面的類別 (例如 <xref:System.Collections.Hashtable>) 並不能序列化為 XML。  
   
--   絕大多數在 <xref:System.Xml.Serialization> 命名空間 \(Namespace\) 中的屬性型別可以新增至 .NET Framework 類別及其成員，以控制如何使用 XML 來表示此類別執行個體。  
+-   絕大多數在 <xref:System.Xml.Serialization> 命名空間 (Namespace) 中的屬性型別可以新增至 .NET Framework 類別及其成員，以控制如何使用 XML 來表示此類別執行個體。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的開發通常也是從定義複雜類型開始。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以設定為使用與 ASP.NET Web 服務相同的 .NET Framework 型別。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的開發通常也是從定義複雜類型開始。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以設定為使用與 ASP.NET Web 服務相同的 .NET Framework 型別。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以新增至 .NET Framework 型別，以表示要將型別的執行個體序列化為 XML，以及要序列化型別的哪些特定欄位或屬性，如下列範例程式碼所示。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以新增至 .NET Framework 型別，以表示要將型別的執行個體序列化為 XML，以及要序列化型別的哪些特定欄位或屬性，如下列範例程式碼所示。  
   
 ```  
 //Example One:   
@@ -148,14 +151,13 @@ public class LineItem
           }  
      }  
 }  
-  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractAttribute> 表示要序列化型別的零或多個欄位或屬性，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 則表示會序列化特定的欄位或屬性。  <xref:System.Runtime.Serialization.DataContractAttribute> 可以套用於類別或結構。  <xref:System.Runtime.Serialization.DataMemberAttribute> 可以套用至欄位或屬性 \(Property\)，而套用此屬性 \(Attribute\) 的欄位和屬性 \(Property\) 可以是公用或私用。  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，已套用 <xref:System.Runtime.Serialization.DataContractAttribute> 之型別的執行個體是指資料合約。  這些資料合約會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 來序列化為 XML。  
+ <xref:System.Runtime.Serialization.DataContractAttribute> 表示要序列化型別的零或多個欄位或屬性，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 則表示會序列化特定的欄位或屬性。 <xref:System.Runtime.Serialization.DataContractAttribute> 可以套用於類別或結構。 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以套用至欄位或屬性 (Property)，而套用此屬性 (Attribute) 的欄位和屬性 (Property) 可以是公用或私用。 在 <xref:System.Runtime.Serialization.DataContractAttribute> 中，已套用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 之型別的執行個體是指資料合約。 這些資料合約會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 來序列化為 XML。  
   
  下列為使用 <xref:System.Runtime.Serialization.DataContractSerializer> 和使用 <xref:System.Xml.Serialization.XmlSerializer> 之間的重要差異清單，以及 <xref:System.Xml.Serialization> 命名空間的各種屬性。  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Xml.Serialization> 命名空間屬性是設計用來讓您將 .NET Framework 型別對應至 XML 結構描述中任何有效型別，因此，它們會就控制如何使用 XML 來表示型別方面提供極為精密的控制。  <xref:System.Runtime.Serialization.DataContractSerializer>、<xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 對於控制如何使用 XML 來表示型別則提供較少的控制。  您只能指定在採用 XML 時用來表示型別及其欄位或屬性的命名空間和名稱，以及指定這些欄位和屬性在 XML 中的顯示順序：  
+-   <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Xml.Serialization> 命名空間屬性是設計用來讓您將 .NET Framework 型別對應至 XML 結構描述中任何有效型別，因此，它們會就控制如何使用 XML 來表示型別方面提供極為精密的控制。 <xref:System.Runtime.Serialization.DataContractSerializer>、<xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 對於控制如何使用 XML 來表示型別則提供較少的控制。 您只能指定在採用 XML 時用來表示型別及其欄位或屬性的命名空間和名稱，以及指定這些欄位和屬性在 XML 中的顯示順序：  
   
     ```  
     [DataContract(  
@@ -174,23 +176,23 @@ public class LineItem
   
      有關用來表示 .NET 型別之 XML 結構的其他任何項目，都由 <xref:System.Runtime.Serialization.DataContractSerializer> 決定。  
   
--   透過這樣對如何使用 XML 來表示型別不允許太多控制的方式，使得 <xref:System.Runtime.Serialization.DataContractSerializer> 非常易於預測序列化 \(Serialization\) 處理序 \(Process\)，也因此更容易進行最佳化。  <xref:System.Runtime.Serialization.DataContractSerializer> 設計的實質優點是提供更高的效能 \(約提升 10% 的效能\)。  
+-   透過這樣對如何使用 XML 來表示型別不允許太多控制的方式，使得 <xref:System.Runtime.Serialization.DataContractSerializer> 非常易於預測序列化 (Serialization) 處理序 (Process)，也因此更容易進行最佳化。 <xref:System.Runtime.Serialization.DataContractSerializer> 設計的實質優點是提供更高的效能 (約提升 10% 的效能)。  
   
--   搭配 <xref:System.Xml.Serialization.XmlSerializer> 使用的屬性並不會指出要將型別的哪些欄位或屬性序列化為 XML，不過搭配 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的 <xref:System.Runtime.Serialization.DataMemberAttribute> 會明確指示哪些欄位或屬性會進行序列化。  因此，資料合約為應用程式所要傳送及接收之資料結構的明確合約。  
+-   搭配 <xref:System.Xml.Serialization.XmlSerializer> 使用的屬性並不會指出要將型別的哪些欄位或屬性序列化為 XML，不過搭配 <xref:System.Runtime.Serialization.DataMemberAttribute> 使用的 <xref:System.Runtime.Serialization.DataContractSerializer> 會明確指示哪些欄位或屬性會進行序列化。 因此，資料合約為應用程式所要傳送及接收之資料結構的明確合約。  
   
 -   <xref:System.Xml.Serialization.XmlSerializer> 只能將 .NET 物件的 Public 成員轉譯為 XML，而 <xref:System.Runtime.Serialization.DataContractSerializer> 則不論這些物件成員的存取修飾詞為何都會將這些成員轉譯為 XML。  
   
--   這樣會導致其能夠將型別的非 Public 成員序列化為 XML，進而使得 <xref:System.Runtime.Serialization.DataContractSerializer> 在可以處理序列化為 XML 的各種 .NET 型別上具有較少限制。  特別值得一提的是，它可以將像是實作 <xref:System.Collections.IDictionary> 介面的 <xref:System.Collections.Hashtable> 的型別轉譯為 XML 型別。  <xref:System.Runtime.Serialization.DataContractSerializer> 很有可能可以在不用修改型別定義或為型別開發包裝函式的情況下，將任何預先存在的 .NET 型別執行個體轉譯為 XML。  
+-   這樣會導致其能夠將型別的非 Public 成員序列化為 XML，進而使得 <xref:System.Runtime.Serialization.DataContractSerializer> 在可以處理序列化為 XML 的各種 .NET 型別上具有較少限制。 特別值得一提的是，它可以將像是實作 <xref:System.Collections.Hashtable> 介面的 <xref:System.Collections.IDictionary> 的型別轉譯為 XML 型別。 <xref:System.Runtime.Serialization.DataContractSerializer> 很有可能可以在不用修改型別定義或為型別開發包裝函式的情況下，將任何預先存在的 .NET 型別執行個體轉譯為 XML。  
   
--   對於 <xref:System.Runtime.Serialization.DataContractSerializer> 來說，能夠存取型別的非 Public 成員能力會造成它需要完全信任，而 <xref:System.Xml.Serialization.XmlSerializer> 則不需要。  對於可透過用於執行此程式碼之認證來存取的電腦上所有資源，完全信任程式碼存取權限會提供這些資源的完整存取權。  由於完全信任的程式碼會存取電腦上的所有資源，所以請務必小心使用此選項。  
+-   對於 <xref:System.Runtime.Serialization.DataContractSerializer> 來說，能夠存取型別的非 Public 成員能力會造成它需要完全信任，而 <xref:System.Xml.Serialization.XmlSerializer> 則不需要。 對於可透過用於執行此程式碼之認證來存取的電腦上所有資源，完全信任程式碼存取權限會提供這些資源的完整存取權。 由於完全信任的程式碼會存取電腦上的所有資源，所以請務必小心使用此選項。  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> 併入了一些版本控制功能的支援：  
   
-    -   <xref:System.Runtime.Serialization.DataMemberAttribute> 具有 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性，這個屬性可以指派 false 的值以表示新增到資料合約新版本的成員 \(沒有出現在舊版本中\)，這樣便可以讓擁有新版合約的應用程式可以處理舊版合約。  
+    -   <xref:System.Runtime.Serialization.DataMemberAttribute> 具有 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性，這個屬性可以指派 false 的值以表示新增到資料合約新版本的成員 (沒有出現在舊版本中)，這樣便可以讓擁有新版合約的應用程式可以處理舊版合約。  
   
     -   藉由讓資料合約實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面，便可讓 <xref:System.Runtime.Serialization.DataContractSerializer> 將定義於新版資料合約中的成員透過擁有舊版合約的應用程式傳遞。  
   
- 儘管存在以上這些差異，但根據預設，只要 XML 的命名空間已明確定義，<xref:System.Xml.Serialization.XmlSerializer> 序列化型別的目標 XML 與 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化型別的目標 XML 在語意上是完全相同的。  下列擁有可搭配這兩種序列化程式使用之屬性的類別，會由 <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Runtime.Serialization.DataContractAttribute> 轉譯為相同語意的 XML：  
+ 儘管存在以上這些差異，但根據預設，只要 XML 的命名空間已明確定義，<xref:System.Xml.Serialization.XmlSerializer> 序列化型別的目標 XML 與 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化型別的目標 XML 在語意上是完全相同的。 下列擁有可搭配這兩種序列化程式使用之屬性的類別，會由 <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Runtime.Serialization.DataContractAttribute> 轉譯為相同語意的 XML：  
   
 ```  
 [Serializable]  
@@ -205,15 +207,14 @@ public class LineItem
      [DataMember]  
      public decimal UnitPrice;  
 }  
-  
 ```  
   
- Windows 軟體開發套件 \(Software Development Kit，SDK\) 包含稱為[ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 的命令列工具。就像 ASP.NET Web 服務所使用的 xsd.exe 工具，Svcutil.exe 可以從 XML 結構描述產生 .NET 資料型別的定義。  如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可以發出採用 XML 結構描述定義格式的 XML，型別就是資料合約，否則這些型別會使用 <xref:System.Xml.Serialization.XmlSerializer> 來進行序列化。  此工具 Svcutil.exe 工具也可以設定為使用其 `/dataContractOnly` 參數，從資料合約產生 XML 結構描述。  
+ Windows 軟體開發套件 (SDK) 包含一個命令列工具，稱為[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。要與 ASP.NET Web 服務所使用的 xsd.exe 工具 Svcutil.exe 可從 XML 結構描述產生的.NET 資料型別定義。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可以發出採用 XML 結構描述定義格式的 XML，型別就是資料合約，否則這些型別會使用 <xref:System.Xml.Serialization.XmlSerializer> 來進行序列化。 此工具 Svcutil.exe 工具也可以設定為使用其 `/dataContractOnly` 參數，從資料合約產生 XML 結構描述。  
   
 > [!NOTE]
->  雖然 ASP.NET Web 服務使用 <xref:System.Xml.Serialization.XmlSerializer>，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 相容性模式會讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務模擬 ASP.NET Web 服務的行為，但 ASP.NET 相容性模式選項並不會限制要求使用 <xref:System.Xml.Serialization.XmlSerializer>。  使用者還是可以搭配 ASP.NET 相容性模式中的執行服務使用 <xref:System.Runtime.Serialization.DataContractSerializer>。  
+>  雖然 ASP.NET Web 服務使用 <xref:System.Xml.Serialization.XmlSerializer>，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 相容性模式會讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務模擬 ASP.NET Web 服務的行為，但 ASP.NET 相容性模式選項並不會限制要求使用 <xref:System.Xml.Serialization.XmlSerializer>。 使用者還是可以搭配 ASP.NET 相容性模式中的執行服務使用 <xref:System.Runtime.Serialization.DataContractSerializer>。  
   
-## 服務開發  
+## <a name="service-development"></a>服務開發  
  若要使用 ASP.NET 開發服務，習慣上會將 <xref:System.Web.Services.WebService> 屬性新增至類別，以及將 <xref:System.Web.Services.WebMethodAttribute> 新增至該類別要成為服務作業的任何方法：  
   
 ```  
@@ -228,7 +229,7 @@ public class Service : T:System.Web.Services.WebService
 }  
 ```  
   
- ASP.NET 2.0 引入了將屬性 <xref:System.Web.Services.WebService> 和 <xref:System.Web.Services.WebMethodAttribute> 新增至介面 \(而非類別\)，以及撰寫類別來實作介面的選項：  
+ ASP.NET 2.0 引入了將屬性 <xref:System.Web.Services.WebService> 和 <xref:System.Web.Services.WebMethodAttribute> 新增至介面 (而非類別)，以及撰寫類別來實作介面的選項：  
   
 ```  
 [WebService]  
@@ -250,7 +251,7 @@ public class Service : IEcho
   
  我們建議您使用這個選項，因為具有 <xref:System.Web.Services.WebService> 屬性的介面會構成可以讓不同類別重複使用之服務所執行的作業合約，而這些類別可能會用不同方式來實作該份相同合約。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的提供方式為定義一個或多個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點。  端點會由位址、繫結和服務合約所定義。  位址會定義服務的所在位置。  繫結會指定與服務的通訊方式。  服務合約會定義服務可以執行的作業。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的提供方式為定義一個或多個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點。 端點會由位址、繫結和服務合約所定義。 位址會定義服務的所在位置。 繫結會指定與服務的通訊方式。 服務合約會定義服務可以執行的作業。  
   
  通常會先定義服務合約，定義方式是將 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 新增至介面：  
   
@@ -263,7 +264,7 @@ public interface IEcho
 }  
 ```  
   
- <xref:System.ServiceModel.ServiceContractAttribute> 會指示該介面會定義 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務合約，而 <xref:System.ServiceModel.OperationContractAttribute> 則表示介面中的哪一個方法 \(如果有的話\) 要定義服務合約的作業。  
+ <xref:System.ServiceModel.ServiceContractAttribute> 會指示該介面會定義 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務合約，而 <xref:System.ServiceModel.OperationContractAttribute> 則表示介面中的哪一個方法 (如果有的話) 要定義服務合約的作業。  
   
  完成定義服務合約之後，這個服務合約就會在類別實作用來定義此服務合約之介面的程序下，實作於類別中：  
   
@@ -279,9 +280,9 @@ public class Service : IEcho
   
  實作服務合約的類別在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中是指服務類型。  
   
- 下一步是讓位址和繫結與服務類型產生關聯。  這項工作通常會在組態檔中完成，方法可以是直接編輯組態檔或使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所提供的組態編輯器。  下列是組態檔的範例。  
+ 下一步是讓位址和繫結與服務類型產生關聯。 這項工作通常會在組態檔中完成，方法可以是直接編輯組態檔或使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所提供的組態編輯器。 下列是組態檔的範例。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
      <system.serviceModel>  
@@ -295,16 +296,15 @@ public class Service : IEcho
       </services>  
      </system.serviceModel>  
 </configuration>  
-  
 ```  
   
- 繫結會指定用來與應用程式通訊的一組通訊協定。  下表會列出表示常用選項的系統提供繫結。  
+ 繫結會指定用來與應用程式通訊的一組通訊協定。 下表會列出表示常用選項的系統提供繫結。  
   
 |名稱|用途|  
-|--------|--------|  
-|BasicHttpBinding|與支援 WS\-BasicProfile 1.1 和 Basic Security Profile 1.0 之 Web 服務和用戶端的互通性。|  
-|WSHttpBinding|與支援 WS\-\* 通訊協定 \(透過 HTTP\) 之 Web 服務和用戶端的互通性。|  
-|WSDualHttpBinding|雙工 HTTP 通訊，使用這種通訊時，初始訊息的接收者不會直接回覆給初始傳送者，而是可能在一段期間使用符合 WS\-\* 通訊協定的 HTTP 傳輸任意數目的回應。|  
+|----------|-------------|  
+|BasicHttpBinding|與支援 WS-BasicProfile 1.1 和 Basic Security Profile 1.0 之 Web 服務和用戶端的互通性。|  
+|WSHttpBinding|與支援 WS-* 通訊協定 (透過 HTTP) 之 Web 服務和用戶端的互通性。|  
+|WSDualHttpBinding|雙工 HTTP 通訊，使用這種通訊時，初始訊息的接收者不會直接回覆給初始傳送者，而是可能在一段期間使用符合 WS-* 通訊協定的 HTTP 傳輸任意數目的回應。|  
 |WSFederationBinding|HTTP 通訊，其中可以根據明確識別之認證提供者所發行的認證來控制對服務資源的存取。|  
 |NetTcpBinding|在整個網路之 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 軟體實體之間進行的安全、可靠、高效能通訊。|  
 |NetNamedPipeBinding|在相同電腦上之 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 軟體實體之間進行的安全、可靠、高效能通訊。|  
@@ -314,30 +314,29 @@ public class Service : IEcho
   
  系統提供的繫結 <xref:System.ServiceModel.BasicHttpBinding> 併入了 ASP.NET Web 服務所支援的通訊協定集合。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的自訂繫結可輕鬆定義為繫結項目類別集合，而這些類別會由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用來實作個別的通訊協定。  還可以撰寫新的繫結項目來表示額外的通訊協定。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的自訂繫結可輕鬆定義為繫結項目類別集合，而這些類別會由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用來實作個別的通訊協定。 還可以撰寫新的繫結項目來表示額外的通訊協定。  
   
- 服務類型的內部行為可以透過使用一系列類別的屬性 \(稱為行為\) 來進行調整。  在下面範例中，<xref:System.ServiceModel.ServiceBehaviorAttribute> 類別是用來指定此服務類型要成為多執行緒。  
+ 服務類型的內部行為可以透過使用一系列類別的屬性 (稱為行為) 來進行調整。 在下面範例中，<xref:System.ServiceModel.ServiceBehaviorAttribute> 類別是用來指定此服務類型要成為多執行緒。  
   
 ```  
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple]  
 public class DerivativesCalculatorServiceType: IDerivativesCalculator  
-  
 ```  
   
- 有些像是 <xref:System.ServiceModel.ServiceBehaviorAttribute> 的行為是屬性。  而具有系統管理員可能要設定之屬性的其他行為，則可以在應用程式的組態中進行修改。  
+ 有些像是 <xref:System.ServiceModel.ServiceBehaviorAttribute> 的行為是屬性。 而具有系統管理員可能要設定之屬性的其他行為，則可以在應用程式的組態中進行修改。  
   
- 在程式設計服務類型時，常見的使用方式會包括 <xref:System.ServiceModel.OperationContext> 類別。  它的靜態 <xref:System.ServiceModel.OperationContext.Current%2A> 屬性會提供有關其中執行作業之內容資訊的存取。  <xref:System.ServiceModel.OperationContext> 類似於 <xref:System.Web.HttpContext> 和 <xref:System.EnterpriseServices.ContextUtil> 類別兩者。  
+ 在程式設計服務類型時，常見的使用方式會包括 <xref:System.ServiceModel.OperationContext> 類別。 它的靜態 <xref:System.ServiceModel.OperationContext.Current%2A> 屬性會提供有關其中執行作業之內容資訊的存取。 <xref:System.ServiceModel.OperationContext> 類似於 <xref:System.Web.HttpContext> 和 <xref:System.EnterpriseServices.ContextUtil> 類別兩者。  
   
-## 裝載  
- ASP.NET Web 服務會編譯為類別庫 \(Class Library\) 組件。  此時會提供稱為服務檔的檔案，該檔案擁有 .asmx 的副檔名，而且它所包含的 `@ WebService` 指示詞可識別其中包含服務程式碼的類別，以及可在其中找到該類別的組件。  
+## <a name="hosting"></a>裝載  
+ ASP.NET Web 服務會編譯為類別庫 (Class Library) 組件。 此時會提供稱為服務檔的檔案，該檔案擁有 .asmx 的副檔名，而且它所包含的 `@ WebService` 指示詞可識別其中包含服務程式碼的類別，以及可在其中找到該類別的組件。  
   
 ```  
 <%@ WebService Language="C#" Class="Service,ServiceAssembly" %>  
 ```  
   
- 此服務檔會複製到網際網路資訊服務 \(IIS\) 中的 ASP.NET 應用程式根目錄，而組件則會複製到應用程式根目錄的 \\bin 子目錄。  接著，該應用程式可以透過應用程式根目錄中服務檔的統一資源定位器 \(URL\) 來存取。  
+ 此服務檔會複製到網際網路資訊服務 (IIS) 中的 ASP.NET 應用程式根目錄，而組件則會複製到應用程式根目錄的 \bin 子目錄。 接著，該應用程式可以透過應用程式根目錄中服務檔的統一資源定位器 (URL) 來存取。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可隨時裝載於 IIS 5.1 或 6.0、提供做為 IIS 7.0 一部分的 Windows Process Activation Service \(WAS\)，以及任何的 .NET 應用程式。  若要將服務裝載於 IIS 5.1 或 6.0 之中，此服務必須使用 HTTP 做為通訊傳輸通訊協定。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可隨時裝載於 IIS 5.1 或 6.0、提供做為 IIS 7.0 一部分的 Windows Process Activation Service (WAS)，以及任何的 .NET 應用程式。 若要將服務裝載於 IIS 5.1 或 6.0 之中，此服務必須使用 HTTP 做為通訊傳輸通訊協定。  
   
  若要將服務裝載於 IIS 5.1、6.0 或 WAS 之中，請使用下列步驟：  
   
@@ -346,16 +345,16 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
 2.  使用可識別服務類型的 `@ ServiceHost` 指示詞，建立含有 .svc 副檔名的服務檔：  
   
     ```  
-    <%@ServiceHost language=”c#” Service="MyService" %>  
+    <%@ServiceHost language="c#" Service="MyService" %>  
     ```  
   
-3.  將服務檔複製到虛擬目錄，然後將組件複製到虛擬目錄的 \\bin 子目錄。  
+3.  將服務檔複製到虛擬目錄，然後將組件複製到虛擬目錄的 \bin 子目錄。  
   
 4.  將組態檔複製到虛擬目錄，然後將檔案重新命名為 Web.config。  
   
  接著，該應用程式可以透過應用程式根目錄中服務檔的 URL 來存取。  
   
- 若要將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務裝載於 .NET 應用程式，請將此服務類型編譯到應用程式所參考的類別庫組件，並將應用程式程式設計成使用 <xref:System.ServiceModel.ServiceHost> 類別來裝載服務。  下列是所需要的基礎程式設計範例：  
+ 若要將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務裝載於 .NET 應用程式，請將此服務類型編譯到應用程式所參考的類別庫組件，並將應用程式程式設計成使用 <xref:System.ServiceModel.ServiceHost> 類別來裝載服務。 下列是所需要的基礎程式設計範例：  
   
 ```  
 string httpBaseAddress = "http://www.contoso.com:8000/";  
@@ -369,7 +368,7 @@ Uri[] baseAdresses = new Uri[] {
  tcpBaseAddressUri};  
   
 using(ServiceHost host = new ServiceHost(  
-typeof(Service), //”Service” is the name of the service type baseAdresses))  
+typeof(Service), //"Service" is the name of the service type baseAdresses))  
 {  
      host.Open();  
   
@@ -378,11 +377,11 @@ typeof(Service), //”Service” is the name of the service type baseAdresses))
 }  
 ```  
   
- 下列範例會示範如何在 <xref:System.ServiceModel.ServiceHost> 的建構中指定一個或多個傳輸通訊協定的位址。  這些位址指的是基底位址 \(Base Address\)。  
+ 下列範例會示範如何在 <xref:System.ServiceModel.ServiceHost> 的建構中指定一個或多個傳輸通訊協定的位址。 這些位址指的是基底位址 (Base Address)。  
   
- 針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務任何端點所提供的位址會相對於端點主機的基底位址。  主機的每個通訊傳輸通訊協定都可以擁有一個基底位址。  在上述組態檔的範例組態中，針對端點選取的 <xref:System.ServiceModel.BasicHttpBinding> 會以 HTTP 做為傳輸通訊協定，因此端點 `EchoService` 的位址會相對於主機的 HTTP 基底位址。  在上述範例中，主機的 HTTP 基底位址為 http:\/\/www.contoso.com:8000\/。  對於裝載於 IIS 或 WAS 的服務，其基底位址是服務之服務檔的 URL。  
+ 針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務任何端點所提供的位址會相對於端點主機的基底位址。 主機的每個通訊傳輸通訊協定都可以擁有一個基底位址。 在上述組態檔的範例組態中，針對端點選取的 <xref:System.ServiceModel.BasicHttpBinding> 會以 HTTP 做為傳輸通訊協定，因此端點 `EchoService` 的位址會相對於主機的 HTTP 基底位址。 在上述範例中，主機的 HTTP 基底位址為 http://www.contoso.com:8000/。 對於裝載於 IIS 或 WAS 的服務，其基底位址是服務之服務檔的 URL。  
   
- 只有裝載於 IIS 或 WAS 的服務，以及設定使用 HTTP 做為唯一傳輸通訊協定的服務，可以設定為使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 相容性模式選項。  若要開啟該選項，請遵循下列步驟。  
+ 只有裝載於 IIS 或 WAS 的服務，以及設定使用 HTTP 做為唯一傳輸通訊協定的服務，可以設定為使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 相容性模式選項。 若要開啟該選項，請遵循下列步驟。  
   
 1.  程式設計人員必須將 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 屬性新增至服務類型，並指定允許或需要 ASP.NET 相容性模式。  
   
@@ -394,7 +393,7 @@ typeof(Service), //”Service” is the name of the service type baseAdresses))
   
 2.  系統管理員必須將此應用程式設定成使用 ASP.NET 相容性模式。  
   
-    ```  
+    ```xml  
     <configuration>  
          <system.serviceModel>  
           <services>  
@@ -407,7 +406,7 @@ typeof(Service), //”Service” is the name of the service type baseAdresses))
   
      [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式也可以設定其服務檔的副檔名要使用 .asmx，而不是使用 .svc。  
   
-    ```  
+    ```xml  
     <system.web>  
          <compilation>  
           <compilation debug="true">  
@@ -427,15 +426,15 @@ typeof(Service), //”Service” is the name of the service type baseAdresses))
   
      在將服務修改成使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，此選項可讓您不用修改已設定為使用 .asmx 服務檔之 URL 的用戶端。  
   
-## 用戶端開發  
- ASP.NET Web 服務的用戶端是使用命令列工具 WSDL.exe 所產生的，這項工具會提供 .asmx 檔案的 URL 做為輸入。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的對應工具為[ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  它會產生程式碼模組，其中包含服務合約的定義以及 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別的定義。  它還會產生含有服務位址和繫結的組態檔。  
+## <a name="client-development"></a>用戶端開發  
+ ASP.NET Web 服務的用戶端是使用命令列工具 WSDL.exe 所產生的，這項工具會提供 .asmx 檔案的 URL 做為輸入。 所提供的對應工具[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]是[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 它會產生程式碼模組，其中包含服務合約的定義以及 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別的定義。 它還會產生含有服務位址和繫結的組態檔。  
   
- 在程式設計遠端服務的用戶端時，通常建議根據非同步模式來進行程式設計。  根據預設，WSDL.exe 工具所產生的程式碼永遠可供同步和非同步模式使用。  [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 所產生的程式碼則只供其中一個模式使用。  根據預設，此程式碼會提供給同步模式使用。  如果是使用 `/async` 參數來執行工具，所產生的程式碼會提供給非同步模式使用。  
+ 在程式設計遠端服務的用戶端時，通常建議根據非同步模式來進行程式設計。 根據預設，WSDL.exe 工具所產生的程式碼永遠可供同步和非同步模式使用。 產生的程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可以提供的其中一個模式。 根據預設，此程式碼會提供給同步模式使用。 如果是使用 `/async` 參數來執行工具，所產生的程式碼會提供給非同步模式使用。  
   
- 根據預設，ASP.NET 的 WSDL.exe 工具在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別中所產生的名稱，並不保證會與 Svcutil.exe 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別中所產生的的名稱相符。  尤其是，在 Svcutil.exe 工具產生的程式碼中，必須使用 <xref:System.Xml.Serialization.XmlSerializer> 進行序列化的類別屬性名稱預設會被加上後置字元 Property，但是 WSDL.exe 工具就不是這種情形。  
+ 根據預設，ASP.NET 的 WSDL.exe 工具在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別中所產生的名稱，並不保證會與 Svcutil.exe 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別中所產生的的名稱相符。 尤其是，在 Svcutil.exe 工具產生的程式碼中，必須使用 <xref:System.Xml.Serialization.XmlSerializer> 進行序列化的類別屬性名稱預設會被加上後置字元 Property，但是 WSDL.exe 工具就不是這種情形。  
   
-## 訊息表示  
- 您可以自訂 ASP.NET Web 服務所傳送及接收之 SOAP 訊息的標頭。  此時會從 <xref:System.Web.Services.Protocols.SoapHeader> 衍生類別來定義標頭的結構，接著，使用 <xref:System.Web.Services.Protocols.SoapHeaderAttribute> 來表示標頭是否存在。  
+## <a name="message-representation"></a>訊息表示  
+ 您可以自訂 ASP.NET Web 服務所傳送及接收之 SOAP 訊息的標頭。 此時會從 <xref:System.Web.Services.Protocols.SoapHeader> 衍生類別來定義標頭的結構，接著，使用 <xref:System.Web.Services.Protocols.SoapHeaderAttribute> 來表示標頭是否存在。  
   
 ```  
 public class SomeProtocol : SoapHeader  
@@ -522,9 +521,9 @@ public interface IItemService
 }  
 ```  
   
- 這個語法會產生訊息結構的明確表示，而訊息的結構會隱含在 ASP.NET Web 服務的程式碼中。  此外，使用 ASP.NET 語法時，訊息標頭會表示為服務的屬性，例如在先前範例中的 `ProtocolHeader` 屬性，若是使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 語法，訊息標頭就會更精確地表示為訊息的屬性。  此外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允許將訊息標頭新增至端點的組態中。  
+ 這個語法會產生訊息結構的明確表示，而訊息的結構會隱含在 ASP.NET Web 服務的程式碼中。 此外，使用 ASP.NET 語法時，訊息標頭會表示為服務的屬性，例如在先前範例中的 `ProtocolHeader` 屬性，若是使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 語法，訊息標頭就會更精確地表示為訊息的屬性。 此外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允許將訊息標頭新增至端點的組態中。  
   
-```  
+```xml  
 <service name="Service ">  
      <endpoint   
       address="EchoService"  
@@ -538,18 +537,16 @@ public interface IItemService
       </headers>  
      </endpoint>  
 </service>  
-  
 ```  
   
  該選項可讓您避免在用戶端或服務之程式碼中使用基礎結構通訊協定標頭的參考，實際上，這些標頭會依據端點的設定方式新增至訊息中。  
   
-## 服務描述  
- 使用查詢 WSDL 向 ASP.NET Web 服務 .asmx 檔案發出 HTTP GET 要求，會讓 ASP.NET 產生 WSDL 來描述服務。  它會傳回 WSDL 做為要求的回應。  
+## <a name="service-description"></a>服務描述  
+ 使用查詢 WSDL 向 ASP.NET Web 服務 .asmx 檔案發出 HTTP GET 要求，會讓 ASP.NET 產生 WSDL 來描述服務。 它會傳回 WSDL 做為要求的回應。  
   
- ASP.NET 2.0 可以驗證服務是否相容於 Web Services\-Interoperability Organization \(WS\-I\) 的 Basic Profile 1.1，而且可以插入有關服務相容於其 WSDL 的宣告。  透過 <xref:System.Web.Services.WebServiceBindingAttribute> 屬性的 `ConformsTo` 和 `EmitConformanceClaims` 參數，便可完成這個動作。  
+ ASP.NET 2.0 可以驗證服務是否相容於 Web Services-Interoperability Organization (WS-I) 的 Basic Profile 1.1，而且可以插入有關服務相容於其 WSDL 的宣告。 透過 `ConformsTo` 屬性的 `EmitConformanceClaims` 和 <xref:System.Web.Services.WebServiceBindingAttribute> 參數，便可完成這個動作。  
   
 ```  
-  
 [WebService(Namespace = "http://tempuri.org/")]  
 [WebServiceBinding(  
      ConformsTo = WsiProfiles.BasicProfile1_1,  
@@ -557,15 +554,15 @@ public interface IItemService
 public interface IEcho  
 ```  
   
- 您可以自訂 ASP.NET 為服務產生的 WSDL。  建立 <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> 的衍生類別來將項目新增至 WSDL，便可進行自訂。  
+ 您可以自訂 ASP.NET 為服務產生的 WSDL。 建立 <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> 的衍生類別來將項目新增至 WSDL，便可進行自訂。  
   
- 使用查詢 WSDL 向 IIS 51、6.0 或 WAS 所裝載之 HTTP 端點的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務 .svc 檔案發出 HTTP GET 要求，會讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WSDL 回應來描述服務。  使用查詢 WSDL 向 .NET 應用程式所裝載之服務的 HTTP 基底位址發出 HTTP GET 要求，如果 httpGetEnabled 設定為 true，也會產生相同作用。  
+ 使用查詢 WSDL 向 IIS 51、6.0 或 WAS 所裝載之 HTTP 端點的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務 .svc 檔案發出 HTTP GET 要求，會讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WSDL 回應來描述服務。 使用查詢 WSDL 向 .NET 應用程式所裝載之服務的 HTTP 基底位址發出 HTTP GET 要求，如果 httpGetEnabled 設定為 true，也會產生相同作用。  
   
- 不過，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會以自己為描述服務而產生的 WSDL 來回應 WS\-MetadataExchange 要求。  ASP.NET Web 服務並沒有 WS\-MetadataExchange 要求的內建支援。  
+ 不過，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會以自己為描述服務而產生的 WSDL 來回應 WS-MetadataExchange 要求。 ASP.NET Web 服務並沒有 WS-MetadataExchange 要求的內建支援。  
   
- 您還可以廣泛地自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所產生的 WSDL。  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 類別提供了一些可以自訂 WSDL 的功能。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也可以設定為不產生 WSDL，而改用位於指定 URL 的靜態 WSDL 檔案。  
+ 您還可以廣泛地自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所產生的 WSDL。 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 類別提供了一些可以自訂 WSDL 的功能。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也可以設定為不產生 WSDL，而改用位於指定 URL 的靜態 WSDL 檔案。  
   
-```  
+```xml  
 <behaviors>  
      <behavior name="DescriptionBehavior">  
      <metadataPublishing   
@@ -578,12 +575,12 @@ public interface IEcho
 </behaviors>  
 ```  
   
-## 例外狀況處理  
- 在 ASP.NET Web 服務中，未處理的例外狀況會以 SOAP 錯誤傳回給用戶端。  您也可以明確擲回 <xref:System.Web.Services.Protocols.SoapException> 類別的執行個體，並對傳輸給用戶端的 SOAP 錯誤內容擁有更高的控制。  
+## <a name="exception-handling"></a>例外狀況處理  
+ 在 ASP.NET Web 服務中，未處理的例外狀況會以 SOAP 錯誤傳回給用戶端。 您也可以明確擲回 <xref:System.Web.Services.Protocols.SoapException> 類別的執行個體，並對傳輸給用戶端的 SOAP 錯誤內容擁有更高的控制。  
   
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務中，未處理的例外狀況不會以 SOAP 錯誤傳回給用戶端，以免不小心透過例外狀況公開機密資訊。  此時會提供組態設定，指定將未處理的例外狀況傳回給用戶端以進行偵錯。  
+ 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務中，未處理的例外狀況不會以 SOAP 錯誤傳回給用戶端，以免不小心透過例外狀況公開機密資訊。 此時會提供組態設定，指定將未處理的例外狀況傳回給用戶端以進行偵錯。  
   
- 若要將 SOAP 錯誤傳回給用戶端，您可以使用資料合約類型做為泛型型別，並擲回此泛型型別的執行個體，<xref:System.ServiceModel.FaultException%601>。  您還可以新增 <xref:System.ServiceModel.FaultContractAttribute> 屬性至作業，以指定作業可能產生的錯誤。  
+ 若要將 SOAP 錯誤傳回給用戶端，您可以使用資料合約類型做為泛型型別，並擲回此泛型型別的執行個體，<xref:System.ServiceModel.FaultException%601>。 您還可以新增 <xref:System.ServiceModel.FaultContractAttribute> 屬性至作業，以指定作業可能產生的錯誤。  
   
 ```  
 [DataContract]  
@@ -613,14 +610,14 @@ try
 }  
 catch (FaultException<MathFault> e)  
 {  
- Console.WriteLine("FaultException<MathFault>: Math fault while doing "   
+ Console.WriteLine("FaultException<MathFault>: Math fault while doing "  
   + e.Detail.operation   
   + ". Problem: "   
   + e.Detail.problemType);  
 }  
 ```  
   
-## 狀態管理  
+## <a name="state-management"></a>狀態管理  
  用來實作 ASP.NET Web 服務的類別可以從 <xref:System.Web.Services.WebService> 衍生。  
   
 ```  
@@ -634,11 +631,11 @@ public class Service : WebService, IEcho
 }  
 ```  
   
- 在這種情況下，該類別可以程式設計成使用 <xref:System.Web.Services.WebService> 基底類別 \(Base Class\) 的 Context 屬性來存取 <xref:System.Web.HttpContext> 物件。  <xref:System.Web.HttpContext> 物件可以使用其 Application 屬性來更新及擷取應用程式狀態資訊，並使用其 Session 屬性來更新及擷取工作階段狀態資訊。  
+ 在這種情況下，該類別可以程式設計成使用 <xref:System.Web.Services.WebService> 基底類別 (Base Class) 的 Context 屬性來存取 <xref:System.Web.HttpContext> 物件。 <xref:System.Web.HttpContext> 物件可以使用其 Application 屬性來更新及擷取應用程式狀態資訊，並使用其 Session 屬性來更新及擷取工作階段狀態資訊。  
   
- 對於透過使用 <xref:System.Web.HttpContext> 的 Session 屬性所存取之工作階段狀態資訊得實際存取位置，ASP.NET 提供了相當程度的控制。  此項資訊可能是儲存在 Cookie、資料庫、目前伺服器的記憶體，或是指定伺服器的記憶體中。  您可在服務的組態檔中選擇儲存位置。  
+ 對於透過使用 <xref:System.Web.HttpContext> 的 Session 屬性所存取之工作階段狀態資訊得實際存取位置，ASP.NET 提供了相當程度的控制。 此項資訊可能是儲存在 Cookie、資料庫、目前伺服器的記憶體，或是指定伺服器的記憶體中。 您可在服務的組態檔中選擇儲存位置。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供可擴充物件來進行狀態管理。  可擴充物件是指實作 <xref:System.ServiceModel.IExtensibleObject%601> 的物件。  最重要的擴充物件為 <xref:System.ServiceModel.ServiceHostBase> 和 <xref:System.ServiceModel.InstanceContext>。  `ServiceHostBase` 可讓您維護相同主機上所有服務類型之所有執行個體可以存取的狀態，而 `InstanceContext` 則可讓您維護相同服務類型執行個體中執行之任何程式碼可以存取的狀態。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供可擴充物件來進行狀態管理。 可擴充物件是指實作 <xref:System.ServiceModel.IExtensibleObject%601> 的物件。 最重要的擴充物件為 <xref:System.ServiceModel.ServiceHostBase> 和 <xref:System.ServiceModel.InstanceContext>。 `ServiceHostBase` 可讓您維護相同主機上所有服務類型之所有執行個體可以存取的狀態，而 `InstanceContext` 則可讓您維護相同服務類型執行個體中執行之任何程式碼可以存取的狀態。  
   
  下面範例中的服務類型 `TradingSystem` 具有 <xref:System.ServiceModel.ServiceBehaviorAttribute>，這個屬性指定所有來自相同 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端執行個體的呼叫都要傳送至相同的服務類型執行個體。  
   
@@ -679,20 +676,20 @@ void ITradingService.AddTrade(Trade trade)
 }  
 ```  
   
- 相對於 ASP.NET 會控制 <xref:System.Web.HttpContext> 類別中狀態資訊的實際儲存位置，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] \(至少在初始版本中\) 對於可擴充物件的儲存位置並不會提供任何控制。  這一點充分地解釋了為什麼要選擇 ASP.NET 相容性模式來用於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  如果可設定狀態管理是必要的工作，這時選擇 ASP.NET 相容性模式可讓您以與 ASP.NET 完全相同的方式來使用 <xref:System.Web.HttpContext> 類別的功能，而且也可以設定使用 <xref:System.Web.HttpContext> 類別管理之狀態資訊的儲存位置。  
+ 相對於 ASP.NET 會控制 <xref:System.Web.HttpContext> 類別中狀態資訊的實際儲存位置，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (至少在初始版本中) 對於可擴充物件的儲存位置並不會提供任何控制。 這一點充分地解釋了為什麼要選擇 ASP.NET 相容性模式來用於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 如果可設定狀態管理是必要的工作，這時選擇 ASP.NET 相容性模式可讓您以與 ASP.NET 完全相同的方式來使用 <xref:System.Web.HttpContext> 類別的功能，而且也可以設定使用 <xref:System.Web.HttpContext> 類別管理之狀態資訊的儲存位置。  
   
-## 安全性  
- 用來保護 ASP.NET Web 服務的選項，就是用來保護任何 IIS 應用程式的選項。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式不只可以裝載於 IIS，也可以裝載於任何的 .NET 可執行檔中，因此用來保護 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的選項必須設定成獨立於 IIS 的機能。  不過，提供 ASP.NET Web 服務使用的機能，也可提供在 ASP.NET 相容性模式中的執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務使用。  
+## <a name="security"></a>安全性  
+ 用來保護 ASP.NET Web 服務的選項，就是用來保護任何 IIS 應用程式的選項。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式不只可以裝載於 IIS，也可以裝載於任何的 .NET 可執行檔中，因此用來保護 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的選項必須設定成獨立於 IIS 的機能。 不過，提供 ASP.NET Web 服務使用的機能，也可提供在 ASP.NET 相容性模式中的執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務使用。  
   
-### 安全性：驗證  
- IIS 會提供可以用來控制存取應用程式的機能，而您可以從其中選取匿名存取或各種的驗證模式：Windows 驗證、摘要式驗證、基本驗證和 .NET Passport 驗證。  Windows 驗證選項可用來控制 ASP.NET Web 服務的存取。  不過，當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式是裝載於 IIS 時，IIS 就必須設定成允許匿名存取應用程式，這樣才能透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 本身來管理驗證，因為在其他各種選項中，只有它會支援 Windows 驗證。  其他選項還包括使用者名稱權杖、X.509 憑證、SAML 權杖和 CardSpace 卡，但是您也可以定義自訂的驗證機制。  
+### <a name="security-authentication"></a>安全性：驗證  
+ IIS 會提供可以用來控制存取應用程式的機能，而您可以從其中選取匿名存取或各種的驗證模式：Windows 驗證、摘要式驗證、基本驗證和 .NET Passport 驗證。 Windows 驗證選項可用來控制 ASP.NET Web 服務的存取。 不過，當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式是裝載於 IIS 時，IIS 就必須設定成允許匿名存取應用程式，這樣才能透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 本身來管理驗證，因為在其他各種選項中，只有它會支援 Windows 驗證。 其他選項還包括使用者名稱權杖、X.509 憑證、SAML 權杖和 CardSpace 卡，但是您也可以定義自訂的驗證機制。  
   
-### 安全性：模擬  
- ASP.NET 提供了身分識別項目，透過此項目，ASP.NET Web 服務便可設定成模擬特定的使用者，或是目前要求所提供的任何使用者認證。  該項目可用來設定在 ASP.NET 相容性模式中執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式內的模擬。  
+### <a name="security-impersonation"></a>安全性：模擬  
+ ASP.NET 提供了身分識別項目，透過此項目，ASP.NET Web 服務便可設定成模擬特定的使用者，或是目前要求所提供的任何使用者認證。 該項目可用來設定在 ASP.NET 相容性模式中執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式內的模擬。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組態系統會提供自己的身分識別項目來指定要模擬的特定使用者。  此外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和伺服器可以獨立設定用於模擬。  用戶端可以設定為在傳輸要求時模擬目前使用者。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組態系統會提供自己的身分識別項目來指定要模擬的特定使用者。 此外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和伺服器可以獨立設定用於模擬。 用戶端可以設定為在傳輸要求時模擬目前使用者。  
   
-```  
+```xml  
 <behaviors>  
      <behavior name="DerivativesCalculatorClientBehavior">  
       <clientCredentials>  
@@ -709,17 +706,17 @@ void ITradingService.AddTrade(Trade trade)
 public void Receive(Message input)  
 ```  
   
-### 安全性：使用存取控制清單進行驗證  
- 存取控制清單 \(ACL\) 可用來限制對 .asmx 檔案的存取。  不過，除非是在 ASP.NET 相容性模式下，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .svc 檔案上的 ACL 會被忽略。  
+### <a name="security-authorization-using-access-control-lists"></a>安全性：使用存取控制清單進行驗證  
+ 存取控制清單 (ACL) 可用來限制對 .asmx 檔案的存取。 不過，除非是在 ASP.NET 相容性模式下，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .svc 檔案上的 ACL 會被忽略。  
   
-### 安全性：以角色為基礎的授權  
- IIS Windows 驗證選項可以搭配 ASP.NET 設定語言所提供的 authorization 項目一起使用，以便根據獲指派使用者的 Windows 群組，為 ASP.NET Web 服務進行以角色為基礎的驗證。  ASP.NET 2.0 引進了更一般性的以角色為基礎的驗證機制：角色提供者。  
+### <a name="security-role-based-authorization"></a>安全性：以角色為基礎的授權  
+ IIS Windows 驗證選項可以搭配 ASP.NET 設定語言所提供的 authorization 項目一起使用，以便根據獲指派使用者的 Windows 群組，為 ASP.NET Web 服務進行以角色為基礎的驗證。 ASP.NET 2.0 引進了更一般性的以角色為基礎的驗證機制：角色提供者。  
   
- 角色提供者為類別，這些類別全部都會實作可查詢使用者所獲派角色的基本介面，而且每個角色提供者都知道如何從不同來源擷取該資訊。  ASP.NET 2.0 會提供可自 Microsoft SQL Server 資料庫中擷取角色指派的角色提供者，並提供另一個可自 Windows Server 2003 授權管理員擷取角色指派的角色提供者。  
+ 角色提供者為類別，這些類別全部都會實作可查詢使用者所獲派角色的基本介面，而且每個角色提供者都知道如何從不同來源擷取該資訊。 ASP.NET 2.0 會提供可自 Microsoft SQL Server 資料庫中擷取角色指派的角色提供者，並提供另一個可自 Windows Server 2003 授權管理員擷取角色指派的角色提供者。  
   
- 角色提供者機制的使用實際上可以獨立於任何 .NET 應用程式 \(包括 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式\) 中的 ASP.NET。  下列 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的組態範例會示範如何透過 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 的方式來選取使用 ASP.NET 角色提供者選項。  
+ 角色提供者機制的使用實際上可以獨立於任何 .NET 應用程式 (包括 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式) 中的 ASP.NET。 下列 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的組態範例會示範如何透過 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 的方式來選取使用 ASP.NET 角色提供者選項。  
   
-```  
+```xml  
 <system.serviceModel>  
      <services>  
          <service name="Service.ResourceAccessServiceType"   
@@ -738,12 +735,12 @@ public void Receive(Message input)
 </system.serviceModel>  
 ```  
   
-### 安全性：宣告架構的授權  
- 最重要的一項 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 創新功能，就是全面支援以宣告為基礎之受保護資源的授權存取。  宣告是由類型、權限和值組成。以駕照為例，  駕照會建立一組關於持有人的宣告，而其中一個宣告是持有人的生日。  該宣告的類型為生日，而宣告的值為駕駛人的出生日期。  宣告賦予持有人的權限會指定持有人可以如何使用宣告值。  例如，在宣告為駕駛人生日、權限為持有的案例中：駕駛人持有該生日，但無法更改這個日期。  宣告架構的授權也包含以角色為基礎的驗證，因為角色就是一種宣告類型。  
+### <a name="security-claims-based-authorization"></a>安全性：宣告架構的授權  
+ 最重要的一項 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 創新功能，就是全面支援以宣告為基礎之受保護資源的授權存取。 宣告是由類型、權限和值組成。以駕照為例， 駕照會建立一組關於持有人的宣告，而其中一個宣告是持有人的生日。 該宣告的類型為生日，而宣告的值為駕駛人的出生日期。 宣告賦予持有人的權限會指定持有人可以如何使用宣告值。 例如，在宣告為駕駛人生日、權限為持有的案例中：駕駛人持有該生日，但無法更改這個日期。 宣告架構的授權也包含以角色為基礎的驗證，因為角色就是一種宣告類型。  
   
- 宣告架構的授權方式會藉由將一組宣告與作業的存取需求進行比較，並根據該比較的結果授與或拒絕作業存取，來完成其作業。  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，您可以指定要用來執行宣告架構授權的類別，指定方式同樣指派值給 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 的 `ServiceAuthorizationManager` 屬性。  
+ 宣告架構的授權方式會藉由將一組宣告與作業的存取需求進行比較，並根據該比較的結果授與或拒絕作業存取，來完成其作業。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，您可以指定要用來執行宣告架構授權的類別，指定方式同樣指派值給 `ServiceAuthorizationManager` 的 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 屬性。  
   
-```  
+```xml  
 <behaviors>  
      <behavior name='ServiceBehavior'>  
      <serviceAuthorization   
@@ -753,15 +750,15 @@ public void Receive(Message input)
 </behaviors>  
 ```  
   
- 用來執行宣告架構授權的類別必須是衍生自 <xref:System.ServiceModel.ServiceAuthorizationManager>，而它只需要覆寫 `AccessCheck()` 方法。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在每次叫用服務作業時呼叫該方法，並提供 <xref:System.ServiceModel.OperationContext> 物件，而此物件會在其 `ServiceSecurityContext.AuthorizationContext` 屬性中包含使用者的宣告。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會從使用者提供以進行驗證的任何安全性權杖，執行組合使用者相關宣告的工作，而不評估這些宣告是否足以進行指定的作業。  
+ 用來執行宣告架構授權的類別必須是衍生自 <xref:System.ServiceModel.ServiceAuthorizationManager>，而它只需要覆寫 `AccessCheck()` 方法。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在每次叫用服務作業時呼叫該方法，並提供 <xref:System.ServiceModel.OperationContext> 物件，而此物件會在其 `ServiceSecurityContext.AuthorizationContext` 屬性中包含使用者的宣告。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會從使用者提供以進行驗證的任何安全性權杖，執行組合使用者相關宣告的工作，而不評估這些宣告是否足以進行指定的作業。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動組合任何類型之安全性權杖中的宣告是一項很重要的創新，因為它會使宣告架構授權的程式碼完全獨立於驗證機制。  相對地，使用 ACL 或 ASP.NET 中角色的授權方式，與 Windows 驗證有密切的關係。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動組合任何類型之安全性權杖中的宣告是一項很重要的創新，因為它會使宣告架構授權的程式碼完全獨立於驗證機制。 相對地，使用 ACL 或 ASP.NET 中角色的授權方式，與 Windows 驗證有密切的關係。  
   
-### 安全性：機密性  
- 透過將 IIS 中的應用程式設定成使用 Secure Hypertext Transfer Protocol \(HTTPS\)，可以確保使用 ASP.NET Web 服務交換之訊息在傳輸層的機密性。  裝載於 IIS 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式也可以採取相同的設定。  不過，裝載於 IIS 外部的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式也可以設定成使用安全傳輸通訊協定。  更重要的是，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式還可以設定為使用 WS\-Security 通訊協定來保護訊息在傳送之前的安全。  使用 WS\-Security 來保護只有訊息本文的方式，可以讓訊息機密地在媒介中傳輸，直到訊息到達最終目的地為止。  
+### <a name="security-confidentiality"></a>安全性：機密性  
+ 透過將 IIS 中的應用程式設定成使用 Secure Hypertext Transfer Protocol (HTTPS)，可以確保使用 ASP.NET Web 服務交換之訊息在傳輸層的機密性。 裝載於 IIS 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式也可以採取相同的設定。 不過，裝載於 IIS 外部的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式也可以設定成使用安全傳輸通訊協定。 更重要的是，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式還可以設定為使用 WS-Security 通訊協定來保護訊息在傳送之前的安全。 使用 WS-Security 來保護只有訊息本文的方式，可以讓訊息機密地在媒介中傳輸，直到訊息到達最終目的地為止。  
   
-## 全球化  
- ASP.NET 設定語言可讓您指定個別服務的文化特性。  除非是在 ASP.NET 相容性模式下，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援此組態設定。  若要當地語系化未使用 ASP.NET 相容性模式的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，請將服務類型編譯為文化特性特定的組件，並為各個文化特性特定的組件設定個別的文化特性特定端點。  
+## <a name="globalization"></a>全球化  
+ ASP.NET 設定語言可讓您指定個別服務的文化特性。 除非是在 ASP.NET 相容性模式下，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援此組態設定。 若要當地語系化未使用 ASP.NET 相容性模式的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，請將服務類型編譯為文化特性特定的組件，並為各個文化特性特定的組件設定個別的文化特性特定端點。  
   
-## 請參閱  
- [依據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>另請參閱  
+ [比較 ASP.NET Web 服務與 WCF 依據用途與使用的標準](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

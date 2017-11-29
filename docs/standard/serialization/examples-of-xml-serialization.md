@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - XML serialization, examples
 - arrays, serializing
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 3f3fd8ce07b5b23d92c3ced93c733ec0c0f7680c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 874836c83fbe681692260be03efed3aec85dcfe4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化的範例
 XML 序列化的形式不只一種，從簡單到複雜都有。 例如，您可序列化僅包含公用欄位及屬性的類別，如 [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下列程式碼範例說明各種不同的進階案例，包括如何使用 XML 序列化以產生符合特定 XML 結構描述 (XSD) 文件的 XML 資料流。  
@@ -775,10 +772,9 @@ public class Test
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)   
- [可控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
- [XmlSerializer 類別](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)   
- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [可控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [XmlSerializer 類別](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+ [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

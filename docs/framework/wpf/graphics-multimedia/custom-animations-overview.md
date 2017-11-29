@@ -1,144 +1,145 @@
 ---
-title: "自訂動畫概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 自訂類別"
-  - "自訂動畫類別"
-  - "自訂類別, 動畫"
-  - "自訂主要畫面格"
-  - "主要畫面格, 自訂"
+title: "自訂動畫概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom classes [WPF], animation
+- key frames [WPF], custom
+- custom key frames [WPF]
+- animation [WPF], custom classes
+- custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a206e0234f4e6365e76f73977beda1688c036a79
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 自訂動畫概觀
-本主題描述如何及何時藉由建立自訂主要畫面格、動畫類別，或使用單格回呼 \(Callback\) 予以略過，進而擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統。  
+# <a name="custom-animations-overview"></a>自訂動畫概觀
+本主題說明如何以及何時建立自訂主要畫面格、動畫類別來擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統，或使用每一畫面的回呼來略過它。  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## 必要條件  
- 若要了解本主題，您應該熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的不同動畫型別。  如需詳細資訊，請參閱 [From\/To\/By 動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)、[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)和[路徑動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。  
+## <a name="prerequisites"></a>必要條件  
+ 若要了解本主題，您應該熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的不同動畫類型。 如需詳細資訊，請參閱＜From/To/By 動畫概觀＞、[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)以及[路徑動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。  
   
- 由於動畫類別繼承自 <xref:System.Windows.Freezable> 類別，所以您應該熟悉 <xref:System.Windows.Freezable> 物件以及如何從 <xref:System.Windows.Freezable> 繼承。  如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 因為動畫類別是繼承自<xref:System.Windows.Freezable>類別，您應該熟悉<xref:System.Windows.Freezable>物件，以及如何在繼承自<xref:System.Windows.Freezable>。 如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
 <a name="extendingtheanimationsystem"></a>   
-## 擴充動畫系統  
- 根據您要使用的內建功能層級而定，擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統的方法有很多種。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎中有三個主要擴充點：  
+## <a name="extending-the-animation-system"></a>擴充動畫系統  
+ 有數種方式可以擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統，根據您想要使用的內建功能層級而定。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎中有三個主要擴充點︰  
   
--   藉由從其中一個 *\<Type\>*KeyFrame 類別 \(例如 <xref:System.Windows.Media.Animation.DoubleKeyFrame>\) 繼承，建立自訂主要畫面格物件。  此方法會使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎的大部分內建功能。  
+-   其中一個繼承來建立自訂的主要畫面格物件*\<類型 >*主要畫面格類別，例如<xref:System.Windows.Media.Animation.DoubleKeyFrame>。 這個方法可使用大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎內建功能。  
   
--   藉由從 <xref:System.Windows.Media.Animation.AnimationTimeline> 或其中一個 *\<Type\>*AnimationBase 類別繼承，建立自己的動畫類別。  
+-   建立您自己的動畫類別繼承自<xref:System.Windows.Media.Animation.AnimationTimeline>或其中一個*\<類型 >*AnimationBase 類別。  
   
--   使用單格回呼，以單格方式產生動畫。  此方法會完全略過動畫和計時系統。  
+-   您可以針對每一畫面格使用每一畫面的回呼來產生動畫。 這個方法完全略過動畫與計時系統。  
   
  下表說明一些擴充動畫系統的案例。  
   
 |當您要...|使用這個方法|  
-|------------|------------|  
-|在具有對應 *\<Type\>*AnimationUsingKeyFrames 之型別的值之間自訂插補|建立自訂主要畫面格。  如需詳細資訊，請參閱[建立自訂主要畫面格](#createacustomkeyframe)一節。|  
-|在具有對應 *\<Type\>*Animation 之型別的值之間，自訂插補以外的功能|建立繼承自 *\<Type\>*AnimationBase 類別 \(此類別對應於您要以動畫顯示的型別\) 的自訂動畫類別。  如需詳細資訊，請參閱[建立自訂動畫類別](#createcustomanimationtype)一節。|  
-|以動畫顯示沒有對應 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫的型別|使用 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 或建立繼承自 <xref:System.Windows.Media.Animation.AnimationTimeline> 的類別。  如需詳細資訊，請參閱[建立自訂動畫類別](#createcustomanimationtype)一節。|  
-|使用每個畫面格都會計算而且以最後一組物件互動為基礎的值，以動畫顯示多個物件|使用單格回呼。  如需詳細資訊，請參閱[建立使用單格回呼](#useperframecallback)一節。|  
+|-------------------------|-----------------------|  
+|在有對應 *\<Type>*AnimationUsingKeyFrames 的類型值之間自訂內插補點|建立自訂主要畫面格。 如需詳細資訊，請參閱[建立自訂主要畫面格](#createacustomkeyframe)一節。|  
+|不只是在有對應 *\<Type>*Animation 的類型值之間自訂內插補點。|建立自訂動畫類別，其繼承自和您想要以動畫顯示的類型對應的 *\<Type>*AnimationBase 類別。 如需詳細資訊，請參閱[建立自訂動畫類別](#createacustomanimationtype)一節。|  
+|以動畫顯示沒有對應 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類型的動畫|使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>或建立繼承自一個類別<xref:System.Windows.Media.Animation.AnimationTimeline>。 如需詳細資訊，請參閱[建立自訂動畫類別](#createacustomanimationtype)一節。|  
+|利用每個畫面格都會計算的值，並根據最後一組物件互動的值，以動畫顯示多個物件|使用每一畫面的回呼。 如需詳細資訊，請參閱[使用每一畫面的回呼](#useperframecallback)一節。|  
   
 <a name="createacustomkeyframe"></a>   
-## 建立自訂主要畫面格  
- 建立自訂主要畫面格類別，是擴充動畫系統的最簡單方式。  當您要對主要畫面格動畫使用不同的插補方法時，請使用此方法。  如[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)所述，主要畫面格動畫使用主要畫面格物件來產生其輸出值。  每個主要畫面格物件可執行三項功能：  
+## <a name="create-a-custom-key-frame"></a>建立自訂主要畫面格  
+ 建立自訂主要畫面格類別是擴充動畫系統最簡單的方式。 當您想要不同的主要畫面格動畫內插補點方法時，請使用這個方法。  如[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)中所述，主要畫面格動畫使用主要畫面格物件來產生其輸出值。 每個主要畫面格物件都會執行三個函式︰  
   
--   使用其 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 屬性，指定目標值。  
+-   指定目標值，使用其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性。  
   
--   使用其 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 屬性，指定應達到該值的時間。  
+-   指定的值應該到達的時間使用其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性。  
   
--   實作 InterpolateValueCore 方法，在前一個主要畫面格的值與它自己的值之間進行插補。  
+-   藉由實作 InterpolateValueCore 方法，在前一個主要畫面格與其自身的值之間插入。  
   
  **實作指示**  
   
- 從 *\<Type\>*KeyFrame 抽象類別 \(Abstract Class\) 衍生，並實作 InterpolateValueCore 方法。  InterpolateValueCore 方法會傳回主要畫面格目前的值。  它會採用兩個參數：前一個主要畫面格的值和範圍從 0 到 1 的進度值。  進度為 0 表示主要畫面格才剛開始，而值為 1 則表示主要畫面格剛結束，而且應傳回其 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 屬性所指定的值。  
+ 衍生自 *\<Type>*KeyFrame 抽象類別並實作 InterpolateValueCore 方法。 InterpolateValueCore 方法會傳回主要畫面格目前的值。 它接受兩個參數︰前一個主要畫面格的值和範圍從 0 到 1 的進度值。 進度的 0 表示剛開始主要畫面格，而且值為 1 表示主要畫面格剛剛完成，並應傳回所指定的值及其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性。  
   
- 因為 *\<Type\>*KeyFrame 類別繼承自 <xref:System.Windows.Freezable> 類別，所以您也必須覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 核心，以便傳回新的類別執行個體。  如果此類別不使用[相依性屬性](GTMT)來儲存其資料，或者在建立之後需要額外進行初始化，您就必須覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 因為*\<類型 >*主要畫面格類別繼承自<xref:System.Windows.Freezable>類別，您也必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>傳回類別的新執行個體的核心。 如果類別不使用相依性屬性來儲存其資料或需要在建立之後額外進行初始化，您可能需要覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
- 在您建立自訂 *\<Type\>*KeyFrame 動畫之後，您可以將它與該型別的 *\<Type\>*AnimationUsingKeyFrames 一起使用。  
+ 在您建立自訂 *\<Type>*KeyFrame 動畫後，您可以將它和該類型的 *\<Type>*AnimationUsingKeyFrames 搭配使用。  
   
 <a name="createacustomanimationtype"></a>   
-## 建立自訂動畫類別  
- 建立您自己的動畫型別，讓您更能夠控制以動畫顯示物件的方式。  建立自己的動畫型別有兩種建議方法：您可以從 <xref:System.Windows.Media.Animation.AnimationTimeline> 類別或 *\<Type\>*AnimationBase 類別衍生。  但不建議從 *\<Type\>*Animation 或 *\<Type\>*AnimationUsingKeyFrames 類別衍生。  
+## <a name="create-a-custom-animation-class"></a>建立自訂動畫類別  
+ 建立您自己的動畫類型可讓您更充分掌控物件的動畫效果。 有兩種建立您自己的動畫類型的建議的方法： 您可以從衍生<xref:System.Windows.Media.Animation.AnimationTimeline>類別或*\<類型 >*AnimationBase 類別。 不建議衍生自 *\<Type>*Animation 或 *\<Type>*AnimationUsingKeyFrames 類型。  
   
-### 從 \<Type\>AnimationBase 衍生  
- 從 *\<Type\>*AnimationBase 類別衍生，是建立新動畫型別的最簡單方式。  當您要針對已經有對應 *\<Type\>*AnimationBase 類別的型別建立新動畫時，請使用此方法。  
-  
- **實作指示**  
-  
- 從 *\<Type\>*Animation 類別衍生，並實作 GetCurrentValueCore 方法。  GetCurrentValueCore 方法會傳回動畫目前的值。  它會採用三個參數：建議的開始值、建議的結束值，以及用於判斷動畫進度的 <xref:System.Windows.Media.Animation.AnimationClock>。  
-  
- 因為 *\<Type\>*AnimationBase 類別繼承自 <xref:System.Windows.Freezable> 類別，所以您也必須覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 核心，以便傳回新的類別執行個體。  如果此類別不使用[相依性屬性](GTMT)來儲存其資料，或者在建立之後需要額外進行初始化，您就必須覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
-  
- 如需詳細資訊，請參閱 GetCurrentValueCore 方法文件中您要建立動畫之型別的 *\<Type\>*AnimationBase 類別。  如需範例，請參閱[自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981) \(英文\)  
-  
- **替代方法**  
-  
- 如果您只想變更動畫值的插補方式，請考慮從其中一個 *\<Type\>*KeyFrame 類別衍生。  您所建立的主要畫面格可以搭配 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的對應 *\<Type\>*AnimationUsingKeyFrames 使用。  
-  
-### 從 AnimationTimeline 衍生  
- 當您要針對尚未有對應 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫的型別建立動畫，或要建立不是強型別 \(Strongly Typed\) 的動畫時，請從 <xref:System.Windows.Media.Animation.AnimationTimeline> 類別衍生。  
+### <a name="derive-from-typeanimationbase"></a>衍生自 \<Type>AnimationBase  
+ 衍生自 *\<Type>*AnimationBase 類別是建立新動畫類型最簡單的方式。 當您想要對已有對應 *\<Type>*AnimationBase 類別的類型建立新動畫時，使用這個方法。  
   
  **實作指示**  
   
- 從 <xref:System.Windows.Media.Animation.AnimationTimeline> 類別衍生並覆寫下列成員：  
+ 衍生自 *\<Type>*Animation 類別並實作 GetCurrentValueCore 方法。 GetCurrentValueCore 方法會傳回動畫目前的值。 它會採用三個參數： 建議的起始值、 建議的結束值和<xref:System.Windows.Media.Animation.AnimationClock>，用來判斷的動畫進度。  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – 如果您的新類別是具象類別，則必須覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A>，以傳回類別的新執行個體。  
+ 因為*\<類型 >*AnimationBase 類別繼承自<xref:System.Windows.Freezable>類別，您也必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>傳回類別的新執行個體的核心。 如果類別不使用相依性屬性來儲存其資料或需要在建立之後額外進行初始化，您可能需要覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – 覆寫這個方法以傳回動畫的目前值。  它採用三個參數：預設起始值、預設目的值和 <xref:System.Windows.Media.Animation.AnimationClock>。  使用 <xref:System.Windows.Media.Animation.AnimationClock> 來取得動畫的目前時間或進度。  您可以選擇是否使用預設起始值和目的值。  
-  
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – 覆寫這個屬性，以指出您的動畫是否使用由 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> 方法指定的預設目的值。  
-  
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – 覆寫這個屬性，以指出您的動畫所產生之輸出的 <xref:System.Type>。  
-  
- 如果此類別不使用[相依性屬性](GTMT)來儲存其資料，或者在建立之後需要額外進行初始化，您就必須覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
-  
- 建議的開發架構 \(Paradigm\) \(由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫採用\) 就是使用兩個繼承 \(Inheritance\) 層級：  
-  
-1.  建立衍生自 <xref:System.Windows.Media.Animation.AnimationTimeline> 的抽象 *\<Type\>*AnimationBase 類別。  這個類別應該覆寫 <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> 方法。  它也應該會引入新的抽象方法 GetCurrentValueCore 並覆寫 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便驗證預設起始值和預設目的值參數的型別，然後再呼叫 GetCurrentValueCore。  
-  
-2.  建立另一個會繼承自新 *\<Type\>*AnimationBase 類別的類別，並覆寫 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 方法、您引入的 GetCurrentValueCore 方法和 <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> 屬性。  
+ 如需詳細資訊，請參閱想要以動畫顯示之類型的*\<Type>*AnimationBase 類別適用的 GetCurrentValueCore 方法文件。 如需範例，請參閱[自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981)  
   
  **替代方法**  
   
- 如果您要以動畫顯示沒有對應 From\/To\/By 動畫或主要畫面格動畫的型別，請考慮使用 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>。  因為它是弱型別，所以 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 可以以動畫顯示任何型別的值。  這個方法的缺點為 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 只支援[離散插補](GTMT)。  
+ 如果您只想要變更插入動畫值的方式，可考慮衍生自 *\<Type>*KeyFrame 類別之一。 您建立的主要畫面格可以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的對應 *\<Type>*AnimationUsingKeyFrames 一起使用。  
+  
+### <a name="derive-from-animationtimeline"></a>衍生自 AnimationTimeline  
+ 衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>類別時，您想要建立動畫針對還沒有相符的型別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]動畫，或您想要建立的動畫，並不強型別。  
+  
+ **實作指示**  
+  
+ 衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>類別並覆寫下列成員：  
+  
+-   <xref:System.Windows.Freezable.CreateInstanceCore%2A>– 如果您的新類別為固定，您必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>傳回類別的新執行個體。  
+  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>-覆寫此方法以傳回目前的動畫值。 它會採用三個參數： 預設的原始值、 預設目的地值和<xref:System.Windows.Media.Animation.AnimationClock>。 使用<xref:System.Windows.Media.Animation.AnimationClock>以取得目前的時間或動畫進度。 您可以選擇是否要使用預設的來源和目的值。  
+  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>-覆寫這個屬性，指出動畫是否使用所指定的預設目的地值<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>方法。  
+  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>-覆寫這個屬性，指出<xref:System.Type>動畫所產生的輸出。  
+  
+ 如果類別不使用相依性屬性來儲存其資料或需要在建立之後額外進行初始化，您可能需要覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+  
+ 建議的範例 (由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫使用) 是使用兩個繼承層級︰  
+  
+1.  建立一種抽象*\<類型 >*AnimationBase 類別衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 這個類別應該覆寫<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 應該還會引進新的抽象方法，GetCurrentValueCore，並覆寫<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>驗證預設的原始值和預設目的地值參數的類型，然後呼叫 GetCurrentValueCore。  
+  
+2.  建立另一個類別繼承從您的新*\<類型 >*AnimationBase 類別並覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法，則您導入，此 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>屬性。  
+  
+ **替代方法**  
+  
+ 如果您想要製作動畫沒有對應 From/To/By 動畫或主要畫面格動畫的類型，請考慮使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>。 這是弱式型別，因為<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>可以動畫顯示任何類型的值。 這個方法的缺點在於<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>僅支援離散插補。  
   
 <a name="useperframecallback"></a>   
-## 使用單格回呼  
- 當您需要完全略過 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統時，請使用此方法。  此方法的其中一個案例就是物理動畫，其中的每個動畫步驟都需要根據最後一組物件互動而重新計算動畫物件的新方向或位置。  
+## <a name="use-per-frame-callback"></a>使用每一畫面的回呼  
+ 當您需要完全略過 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統時，使用此方法。 此方法的一個案例為物理動畫，其中的每個動畫步驟都需要根據最後一組物件互動來重新計算動畫物件的新方向或位置。  
   
  **實作指示**  
   
- 與本概觀所描述的其他方法不同，若要使用單格回呼，您不必建立自訂動畫或主要畫面格類別。  
+ 和本概觀中所述的其他方法不同，若要使用每一畫面的回呼，您不需要建立自訂動畫或主要畫面格類別。  
   
- 您應改為註冊物件的 <xref:System.Windows.Media.CompositionTarget.Rendering> 事件，其中包含您要以動畫顯示的物件。  每個畫面格都會呼叫此事件處理常式方法一次。  每次 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 將[視覺化樹狀結構](GTMT)中保留的呈現資料封送處理至複合樹狀結構，就會呼叫事件處理常式方法。  
+ 相反地，您註冊<xref:System.Windows.Media.CompositionTarget.Rendering>事件包含您想要建立動畫之的物件的物件。 系統會針對每個畫面呼叫一次此事件處理常式方法。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 每次封送處理視覺化樹狀結構中已保存的轉譯資料，跨越到組合樹狀結構時，就會呼叫您的事件處理常式方法。  
   
- 在事件處理常式中，執行動畫效果所需的所有計算，並設定您要用這些值來動畫顯示之物件的屬性。  
+ 在事件處理常式中，執行動畫效果所需的任何計算，並使用這些值設定您想要建立動畫的物件屬性。  
   
- 若要取得目前畫面格的展示時間，可以將與此事件相關聯的 <xref:System.EventArgs> 轉型為 <xref:System.Windows.Media.RenderingEventArgs>，以提供您可用來取得目前畫面格呈現時間的 <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> 屬性。  
+ 若要取得目前的框架，簡報時<xref:System.EventArgs>與此相關聯事件可以轉換成<xref:System.Windows.Media.RenderingEventArgs>，這兩個提供<xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A>屬性，可用來取得目前的畫面格的轉譯時間。  
   
- 如需詳細資訊，請參閱 <xref:System.Windows.Media.CompositionTarget.Rendering> 頁面。  
+ 如需詳細資訊，請參閱<xref:System.Windows.Media.CompositionTarget.Rendering>頁面。  
   
-## 請參閱  
- <xref:System.Windows.Media.Animation.AnimationTimeline>   
- <xref:System.Windows.Media.Animation.IKeyFrame>   
- [建立屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [From\/To\/By 動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)   
- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [路徑動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)   
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Media.Animation.AnimationTimeline>  
+ <xref:System.Windows.Media.Animation.IKeyFrame>  
+ [屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
+ [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [路徑動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
+ [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
  [自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981)

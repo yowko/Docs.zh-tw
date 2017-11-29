@@ -1,46 +1,28 @@
 ---
 title: "疑難排解：讀取和寫入文字檔 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - troubleshooting file I/O
-- writing text to files, troubleshooting
+- writing text to files [Visual Basic], troubleshooting
 - troubleshooting Visual Basic, text files
 - I/O [Visual Basic], troubleshooting text files
-- writing to files, troubleshooting
-- reading text files, troubleshooting
+- writing to files [Visual Basic], troubleshooting
+- reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e836f79cd05dbaa180cc7bf5413ce57004e3500b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f1d26df53445ee9711ebb2840071d2560c5380d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>疑難排解：讀取和寫入文字檔 (Visual Basic)
 本主題討論處理文字檔時所遇到的常見問題，並建議每個問題的處理方法。  
@@ -58,8 +40,7 @@ ms.lasthandoff: 07/28/2017
  剖析檔案路徑時，特別是相對路徑，很容易就會提供錯誤資料。 確認您所提供的路徑正確，即可更正許多問題。 如需詳細資訊，請參閱[如何：剖析檔案路徑](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)。  
   
 ## <a name="see-also"></a>請參閱  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  [使用 TextFieldParser 物件剖析文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-

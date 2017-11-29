@@ -1,60 +1,63 @@
 ---
-title: "如何：使用純色繪製區域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筆刷, 使用純色繪製"
-  - "繪圖, 使用純色"
-  - "純色, 繪製方式"
+title: "操作說明：使用純色繪製區域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- solid colors [WPF], painting with
+- brushes [WPF], painting with solid colors
+- painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cde7f7df5089806ffb3235393eacc855d137ee51
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用純色繪製區域
-若要使用純色繪製區域，您可以使用預先定義的系統筆刷，例如 <xref:System.Windows.Media.Brushes.Red%2A> 或 <xref:System.Windows.Media.Brushes.Blue%2A>，或者您也可以建立新的 <xref:System.Windows.Media.SolidColorBrush>，並使用 Alpha 值、紅色值、綠色值和藍色值來描述其 <xref:System.Windows.Media.SolidColorBrush.Color%2A>。  在 XAML 中，您還可以利用十六進位標記法，使用純色來繪製區域。  
+# <a name="how-to-paint-an-area-with-a-solid-color"></a>操作說明：使用純色繪製區域
+若要繪製用純色區域，您可以使用預先定義的系統筆刷，例如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，或者您可以建立新<xref:System.Windows.Media.SolidColorBrush>並描述其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 紅色、 綠色和藍色值。 在 XAML 中，您也可以使用十六進位標記法來以純色繪製區域。  
   
- 下列範例將使用上述各項技巧將 <xref:System.Windows.Shapes.Rectangle> 繪製成藍色。  
+ 下列範例會使用兩種技巧來繪製<xref:System.Windows.Shapes.Rectangle>藍色。  
   
-## 範例  
+## <a name="example"></a>範例  
  **使用預先定義的筆刷**  
   
- 下列範例使用預先定義的筆刷 <xref:System.Windows.Media.Brushes.Blue%2A> 將矩形繪製成藍色。  
+ 在下列範例會使用預先定義的筆刷<xref:System.Windows.Media.Brushes.Blue%2A>來繪製矩形藍色。  
   
- [!code-xml[brushsamples_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
  **使用十六進位標記法**  
   
- 下一個範例使用 8 位數的十六進位標記法，將矩形繪製成藍色。  
+ 下一個範例會使用 8 位數的十六進位標記法將矩形繪製成藍色。  
   
- [!code-xml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
   
  **使用 ARGB 值**  
   
- 下一個範例會建立 <xref:System.Windows.Media.SolidColorBrush>，並使用藍色的 ARGB 值描述它的 <xref:System.Windows.Media.SolidColorBrush.Color%2A>。  
+ 下一個範例會建立<xref:System.Windows.Media.SolidColorBrush>，並說明其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 ARGB 色彩藍色值。  
   
- [!code-xml[brushsamples_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_rgbnotation1)]  
   
- 如需了解其他描述色彩的方法，請參閱 <xref:System.Windows.Media.Color>。  
+ 如需描述色彩的其他方式，請參閱<xref:System.Windows.Media.Color>結構。  
   
  **相關主題**  
   
- 如需 <xref:System.Windows.Media.SolidColorBrush> 的詳細資訊及其他範例，請參閱[使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  
+ 如需有關<xref:System.Windows.Media.SolidColorBrush>和其他範例，請參閱[使用單色和漸層概觀繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)概觀。  
   
- 這個程式碼範例是 <xref:System.Windows.Media.SolidColorBrush> 類別完整範例的一部分。  如需完整範例，請參閱[筆刷範例](http://go.microsoft.com/fwlink/?LinkID=159973) \(英文\)。  
+ 這個程式碼範例是針對所提供之較大範例的一部分<xref:System.Windows.Media.SolidColorBrush>類別。 如需完整的範例，請參閱 [Brush 範例](http://go.microsoft.com/fwlink/?LinkID=159973)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Brushes>

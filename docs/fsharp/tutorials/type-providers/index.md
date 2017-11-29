@@ -1,6 +1,6 @@
 ---
 title: "型別提供者"
-description: "型別提供者"
+description: "了解 F # 類型提供者的提供類型、 屬性和方法讓您的程式中使用的元件的方式。"
 keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: e9e67e6531e0c1daad0c0d4a9f778670d5cb2263
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="type-providers"></a>型別提供者
 
 > [!NOTE]

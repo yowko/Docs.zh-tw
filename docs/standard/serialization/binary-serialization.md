@@ -11,15 +11,14 @@ helpviewer_keywords:
 - binary serialization, .net core serialization
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: ViktorHofer
 ms.author: mairaw
+ms.openlocfilehash: 74ee4e21934c1e4f3fd008664b1315429dc47b37
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 995430b2426cb124ee889ed49cc7260c68138151
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="binary-serialization"></a>二進位序列化
 
@@ -40,103 +39,104 @@ ms.lasthandoff: 08/21/2017
 
 ### <a name="serializable-types"></a>可序列化類型
 
-- <xref:System.AggregateException?displayProperty=fullName>   
-- <xref:System.Array?displayProperty=fullName>   
-- <xref:System.ArraySegment%601?displayProperty=fullName>   
-- <xref:System.Attribute?displayProperty=fullName>   
-- <xref:System.Boolean?displayProperty=fullName>   
-- <xref:System.Byte?displayProperty=fullName>   
-- <xref:System.Char?displayProperty=fullName>   
-- <xref:System.Collections.ArrayList?displayProperty=fullName>   
-- <xref:System.Collections.BitArray?displayProperty=fullName>   
-- <xref:System.Collections.Comparer?displayProperty=fullName>   
-- <xref:System.Collections.DictionaryEntry?displayProperty=fullName>   
-- <xref:System.Collections.Generic.Comparer%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>   
-- <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.HashSet%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=fullName>   
-- <xref:System.Collections.Generic.LinkedList%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.List%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName>   
-- <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>   
-- <xref:System.Collections.Generic.SortedSet%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>   
-- <xref:System.Collections.Hashtable?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=fullName>   
-- <xref:System.Collections.Queue?displayProperty=fullName>   
-- <xref:System.Collections.SortedList?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.ListDictionary?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.StringCollection?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.StringDictionary?displayProperty=fullName>   
-- <xref:System.Collections.Stack?displayProperty=fullName>   
-- <xref:System.ComponentModel.BindingList%601?displayProperty=fullName>   
-- <xref:System.Data.DataSet?displayProperty=fullName>   
-- <xref:System.Data.DataTable?displayProperty=fullName>   
-- <xref:System.Data.PropertyCollection?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlByte?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlDouble?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlGuid?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlInt16?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlInt32?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlInt64?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlString?displayProperty=fullName>   
-- <xref:System.DateTime?displayProperty=fullName>   
-- <xref:System.DateTimeOffset?displayProperty=fullName>   
-- <xref:System.Decimal?displayProperty=fullName>   
-- <xref:System.Double?displayProperty=fullName>   
-- <xref:System.Drawing.Color?displayProperty=fullName>   
-- <xref:System.Drawing.Point?displayProperty=fullName>   
-- <xref:System.Drawing.PointF?displayProperty=fullName>   
-- <xref:System.Drawing.Rectangle?displayProperty=fullName>   
-- <xref:System.Drawing.RectangleF?displayProperty=fullName>   
-- <xref:System.Drawing.Size?displayProperty=fullName>   
-- <xref:System.Drawing.SizeF?displayProperty=fullName>   
-- <xref:System.Enum?displayProperty=fullName>   
-- <xref:System.Exception?displayProperty=fullName>   
-- <xref:System.Globalization.CompareInfo?displayProperty=fullName>   
-- <xref:System.Globalization.SortVersion?displayProperty=fullName>   
-- <xref:System.Guid?displayProperty=fullName>   
-- <xref:System.Int16?displayProperty=fullName>   
-- <xref:System.Int32?displayProperty=fullName>   
-- <xref:System.Int64?displayProperty=fullName>   
-- <xref:System.IntPtr?displayProperty=fullName>   
-- <xref:System.Net.Cookie?displayProperty=fullName>   
-- <xref:System.Net.CookieCollection?displayProperty=fullName>   
-- <xref:System.Net.CookieContainer?displayProperty=fullName>   
-- <xref:System.Nullable%601?displayProperty=fullName>   
-- <xref:System.Numerics.BigInteger?displayProperty=fullName>   
-- <xref:System.Numerics.Complex?displayProperty=fullName>   
-- <xref:System.Object?displayProperty=fullName>   
-- <xref:System.SByte?displayProperty=fullName>   
-- <xref:System.Single?displayProperty=fullName>   
-- <xref:System.String?displayProperty=fullName>   
-- <xref:System.StringComparer?displayProperty=fullName>   
-- <xref:System.Text.StringBuilder?displayProperty=fullName>   
-- <xref:System.TimeSpan?displayProperty=fullName>   
-- <xref:System.TimeZoneInfo?displayProperty=fullName>   
-- <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=fullName>   
-- <xref:System.Tuple?displayProperty=fullName>   
-- <xref:System.UInt16?displayProperty=fullName>   
-- <xref:System.UInt32?displayProperty=fullName>   
-- <xref:System.UInt64?displayProperty=fullName>   
-- <xref:System.UIntPtr?displayProperty=fullName>   
-- <xref:System.Uri?displayProperty=fullName>   
-- <xref:System.ValueTuple?displayProperty=fullName>   
-- <xref:System.ValueType?displayProperty=fullName>   
-- <xref:System.Version?displayProperty=fullName>   
-- <xref:System.WeakReference?displayProperty=fullName>   
-- <xref:System.WeakReference%601?displayProperty=fullName>   
+- <xref:System.AggregateException?displayProperty=nameWithType>   
+- <xref:System.Array?displayProperty=nameWithType>   
+- <xref:System.ArraySegment%601?displayProperty=nameWithType>   
+- <xref:System.Attribute?displayProperty=nameWithType>   
+- <xref:System.Boolean?displayProperty=nameWithType>   
+- <xref:System.Byte?displayProperty=nameWithType>   
+- <xref:System.Char?displayProperty=nameWithType>   
+- <xref:System.Collections.ArrayList?displayProperty=nameWithType>   
+- <xref:System.Collections.BitArray?displayProperty=nameWithType>   
+- <xref:System.Collections.Comparer?displayProperty=nameWithType>   
+- <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.Comparer%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Hashtable?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Queue?displayProperty=nameWithType>   
+- <xref:System.Collections.SortedList?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.ListDictionary?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType>   
+- <xref:System.Collections.Stack?displayProperty=nameWithType>   
+- <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>   
+- <xref:System.DBNull?displayProperty=nameWithType>（適用於.NET Core 2.0.2 和更新版本）   
+- <xref:System.Data.DataSet?displayProperty=nameWithType>   
+- <xref:System.Data.DataTable?displayProperty=nameWithType>   
+- <xref:System.Data.PropertyCollection?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlDouble?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlGuid?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlInt16?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlInt32?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlInt64?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlString?displayProperty=nameWithType>   
+- <xref:System.DateTime?displayProperty=nameWithType>   
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>   
+- <xref:System.Decimal?displayProperty=nameWithType>   
+- <xref:System.Double?displayProperty=nameWithType>   
+- <xref:System.Drawing.Color?displayProperty=nameWithType>   
+- <xref:System.Drawing.Point?displayProperty=nameWithType>   
+- <xref:System.Drawing.PointF?displayProperty=nameWithType>   
+- <xref:System.Drawing.Rectangle?displayProperty=nameWithType>   
+- <xref:System.Drawing.RectangleF?displayProperty=nameWithType>   
+- <xref:System.Drawing.Size?displayProperty=nameWithType>   
+- <xref:System.Drawing.SizeF?displayProperty=nameWithType>   
+- <xref:System.Enum?displayProperty=nameWithType>   
+- <xref:System.Exception?displayProperty=nameWithType>   
+- <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>   
+- <xref:System.Globalization.SortVersion?displayProperty=nameWithType>   
+- <xref:System.Guid?displayProperty=nameWithType>   
+- <xref:System.Int16?displayProperty=nameWithType>   
+- <xref:System.Int32?displayProperty=nameWithType>   
+- <xref:System.Int64?displayProperty=nameWithType>   
+- <xref:System.IntPtr?displayProperty=nameWithType>   
+- <xref:System.Net.Cookie?displayProperty=nameWithType>   
+- <xref:System.Net.CookieCollection?displayProperty=nameWithType>   
+- <xref:System.Net.CookieContainer?displayProperty=nameWithType>   
+- <xref:System.Nullable%601?displayProperty=nameWithType>   
+- <xref:System.Numerics.BigInteger?displayProperty=nameWithType>   
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>   
+- <xref:System.Object?displayProperty=nameWithType>   
+- <xref:System.SByte?displayProperty=nameWithType>   
+- <xref:System.Single?displayProperty=nameWithType>   
+- <xref:System.String?displayProperty=nameWithType>   
+- <xref:System.StringComparer?displayProperty=nameWithType>   
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>   
+- <xref:System.TimeSpan?displayProperty=nameWithType>   
+- <xref:System.TimeZoneInfo?displayProperty=nameWithType>   
+- <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=nameWithType>   
+- <xref:System.Tuple?displayProperty=nameWithType>   
+- <xref:System.UInt16?displayProperty=nameWithType>   
+- <xref:System.UInt32?displayProperty=nameWithType>   
+- <xref:System.UInt64?displayProperty=nameWithType>   
+- <xref:System.UIntPtr?displayProperty=nameWithType>   
+- <xref:System.Uri?displayProperty=nameWithType>   
+- <xref:System.ValueTuple?displayProperty=nameWithType>（不在.NET Framework 4.7 及較早版本中序列化）  
+- <xref:System.ValueType?displayProperty=nameWithType>   
+- <xref:System.Version?displayProperty=nameWithType>   
+- <xref:System.WeakReference?displayProperty=nameWithType>   
+- <xref:System.WeakReference%601?displayProperty=nameWithType>   
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -175,6 +175,5 @@ ms.lasthandoff: 08/21/2017
  [遠端物件](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
  說明 .NET Framework 中可用來進行遠端通訊的各種通訊方法。  
   
- [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Services](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
  提供一個主題，說明並解釋如何設計使用 ASP.NET 建立的 XML Web 服務。
-

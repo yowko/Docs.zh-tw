@@ -1,46 +1,44 @@
 ---
-title: "Unicode (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Unicode"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Unicode, external references"
-  - "Declare statement, marshaling strings"
-  - "Unicode keyword"
-  - "Unicode, marshaling strings"
+title: Unicode (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Unicode
+helpviewer_keywords:
+- Unicode, external references
+- Declare statement [Visual Basic], marshaling strings
+- Unicode keyword [Visual Basic]
+- Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 042908b8427de2de0de96bbb32df7be018bb915c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Unicode (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-不管所宣告的外部程序名稱為何，指定 Visual Basic 都應該將所有字串封送處理 \(Marshal\) 為 Unicode 值。  
+# <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
+指定 Visual Basic 應封送處理為 Unicode 值，不論所宣告外部程序名稱的所有字串。  
   
- 呼叫在專案以外定義的程序時，Visual Basic 編譯器並未擁有所需資訊的存取權限，無法正確呼叫該程序。  本資訊包含程序所在位置、如何識別此程序、其呼叫順序 \(Calling Sequence\) 和傳回型別，以及所使用的字串字元集。  [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)會建立外部程序的參考，並提供這項必要資訊。  
+ 當您呼叫在專案外部定義的程序時，Visual Basic 編譯器並沒有存取它必須有它才能正確地呼叫程序的資訊。 此資訊包括程序所在的位置、 如何識別、 它的呼叫順序和傳回型別，以及字串字元設定它使用。 [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)會建立外部程序的參考，並提供此必要資訊。  
   
- 呼叫外部程序時，`Declare` 陳述式中的 `charsetmodifier` 部分會提供封送處理字串的字元集資訊。  它也會影響 Visual Basic 搜尋外部檔案，找出外部程序名稱的方式。  `Unicode` 修飾詞 \(Modifier\) 會指定 Visual Basic 應將所有字串封送處理為 Unicode 值，且應查閱程序而不需在搜尋期間修改其名稱。  
+ `charsetmodifier`的一部分`Declare`陳述式提供的外部程序呼叫期間封送處理字串的字元組資訊。 它也會影響 Visual Basic 會將外部檔案的外部程序名稱的搜尋。 `Unicode`修飾詞會指定 Visual Basic 應封送處理為 Unicode 值的所有字串和應查詢程序而不需在搜尋期間修改其名稱。  
   
- 如果未指定字元集 \(Character Set\) 修飾詞，則 `Ansi` 為預設值。  
+ 如果未不指定任何字元 set 修飾詞，則`Ansi`是預設值。  
   
-## 備註  
- `Unicode` 修飾詞可用於以下內容中：  
+## <a name="remarks"></a>備註  
+ `Unicode`修飾詞可用於此內容：  
   
  [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## 智慧型裝置開發人員注意事項  
- 不支援這個關鍵字。  
+## <a name="smart-device-developer-notes"></a>智慧型裝置開發人員注意事項  
+ 不支援此關鍵字。  
   
-## 請參閱  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)   
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)   
+## <a name="see-also"></a>另請參閱  
+ [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
+ [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
  [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

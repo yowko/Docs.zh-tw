@@ -1,61 +1,60 @@
 ---
-title: "Typographic and Code Conventions (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "coding conventions, Visual Basic"
-  - "best practices, coding conventions"
-  - "conventions, Visual Basic coding"
-  - "typographic conventions"
-  - "document conventions"
-  - "conventions, documentation"
-  - "Visual Basic code, conventions"
+title: "印刷樣式與程式碼慣例 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- coding conventions [Visual Basic], Visual Basic
+- best practices [Visual Basic], coding conventions
+- conventions [Visual Basic], Visual Basic coding
+- typographic conventions [Visual Basic]
+- document conventions [Visual Basic]
+- conventions [Visual Basic], documentation
+- Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Typographic and Code Conventions (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
-
-Visual Basic 文件使用下列的印刷樣式與程式碼慣例。  
+# <a name="typographic-and-code-conventions-visual-basic"></a>印刷樣式與程式碼慣例 (Visual Basic)
+Visual Basic 文件使用下列印刷樣式與程式碼慣例。  
   
-## 印刷樣式慣例  
+## <a name="typographic-conventions"></a>印刷樣式慣例  
   
 |範例|描述|  
-|--------|--------|  
-|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|如範例所示，語言特有的關鍵字和執行階段成員都有第一個字母大寫並已格式化。|  
-|SmallProject, ButtonCollection|如範例所示，要求您輸入的單字和片語已格式化。|  
-|[Module Statement](../../visual-basic/language-reference/statements/module-statement.md)|如範例所示，您可以按一下以移至其他說明頁的連結已格式化。|  
-|*object*, *variableName*, `argumentList`|如範例所示，您提供資訊的預留位置已格式化。|  
-|\[ Shadows \], \[ *expressionList* \]|在語法中，選擇性項目是放在方括號內。|  
-|{ `Public` &#124; `Friend` &#124; `Private` }|在語法中，當您必須在兩個以上的項目做選擇時，這些項目是放在大括號內，並以分隔號分隔。<br /><br /> 您只能選取其中一個項目。|  
-|\[ `Protected` &#124; `Friend` \]|在語法中，當您可以選取兩個以上的項目時，這些項目是放在方括號內，並以分隔號分隔。<br /><br /> 您可以選取這些項目中的任何組合，或不選擇任何項目。|  
-|\[{ `ByVal` &#124; `ByRef` }\]|在語法中，當您只能選取一個項目，但也可以完全忽略這些項目時，這些項目會放在方括號內，前後圍繞著大括號並以分隔號分隔。|  
-|*memberName* 1、*memberName*2、*memberName*3|如範例所示，註標 \(Subscript\) 會區分相同預留位置的多個執行個體。|  
-|*memberName1*<br /><br /> ...<br /><br /> *memberNameN*|在語法中，省略號 \(...\) 是用來表示省略號之前還有很多個該種類的項目。<br /><br /> 在程式碼中，為能清楚表示，省略號代表省略的程式碼。|  
-|ESC、ENTER|鍵盤上的按鍵名稱和按鍵組合以全字大寫顯示。|  
-|ALT\+F1|當按鍵名稱之間出現加號 \(\+\) 時，您必須按住一個按鍵，同時按下其他按鍵。  例如，ALT\+F1 表示按住 ALT 鍵的同時，按下 F1 鍵。|  
+|-------------|-----------------|  
+|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|語言特有的關鍵字和執行階段成員具有第一個字母大寫，而且會格式化為此範例所示。|  
+|**SmallProject**， **ButtonCollection**|單字和片語指示您輸入的格式，如同此範例所示。|  
+|[Module 陳述式](../../visual-basic/language-reference/statements/module-statement.md)|您可以按一下以移至另一個說明頁面的連結會格式化為此範例所示。|  
+|*物件*， *variableName*，`argumentList`|您提供的資訊的預留位置的格式，如同此範例所示。|  
+|[陰影]、 [ *expressionList* ]|在語法中，選用項目會放在括號。|  
+|{ `Public` &#124; `Friend` &#124; `Private` }|在語法中，當您必須做出選擇兩個或多個項目之間的項目會括在大括弧和以分隔號分隔。<br /><br /> 您必須選取其中一個，而且只有一個，項目。|  
+|[ `Protected` &#124; `Friend` ]|在語法中，當您有兩個或多個項目之間選擇時的項目會以方括弧括住，和以分隔號分隔。<br /><br /> 您可以選取任何項目組合的或任何項目。|  
+|[{ `ByVal` &#124; `ByRef` }]|在語法中，您可以選取一個以上的項目，但您也可以完整地忽略這些項目時項目會以方括弧括住以大括號括住並以分隔號分隔。|  
+|*memberName*1， *memberName*2， *memberName*3|此範例中所示註標，來區分相同預留位置的多個執行個體。|  
+|*1>*<br /><br /> ...<br /><br /> *memberNameN*|在語法中，省略符號 （...） 用來指示了不定數量的項目之前的種類。<br /><br /> 在程式碼中省略符號表示省略為避免混淆的程式碼。|  
+|ESC 鍵，請輸入|索引鍵的名稱和鍵盤上的索引鍵序列顯示全部大寫的字母。|  
+|ALT + F1|當索引鍵名稱之間，會顯示加號 （+） 時，必須在時按下其他按住一個索引鍵。 例如，ALT + F1 表示按住 ALT 鍵，同時按下 F1 鍵。|  
   
-## 程式碼慣例  
+## <a name="code-conventions"></a>程式碼慣例  
   
-|範例|描述|  
-|--------|--------|  
-|`sampleString = "Hello, world!"`|如範例所示，程式碼範例以固定字幅 \(Fixed\-Pitch\) 的字型顯示並已格式化。|  
-|上述陳述式會將 `sampleString` 的值設定為 "Hello, world\!"。|如範例所示，說明文字中的程式碼項目以固定字幅的字型顯示。|  
-|`' This is a comment.`<br /><br /> `REM This is also a comment.`|所有格符號 \('\) 或 REM 關鍵字後方可加入程式碼註解。|  
-|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|在程式碼行尾空格後加上底線 \( \_\) 表示陳述式延續到下一行。|  
+|範例|說明|  
+|-------------|-----------------|  
+|`sampleString = "Hello, world!"`|程式碼範例會出現在固定字幅的字型，而且會格式化為此範例所示。|  
+|前一個陳述式設定的值`sampleString`以"Hello，world ！"|說明文字中的程式碼項目出現固定字幅的字型，此範例所示。|  
+|`' This is a comment.`<br /><br /> `REM This is also a comment.`|程式碼註解會以單引號 （'） 或 REM 關鍵字引入。|  
+|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|空格，後面接著底線 (_) 行結尾指出陳述式會繼續到下一行。|  
   
-## 請參閱  
- [Visual Basic Language Reference](../../visual-basic/language-reference/index.md)   
- [關鍵字](../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic Runtime Library Members](../../visual-basic/language-reference/runtime-library-members.md)   
- [Visual Basic Naming Conventions](../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [如何：在程式碼中中斷和合併陳述式](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)   
- [Comments in Code](../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+## <a name="see-also"></a>另請參閱  
+ [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)  
+ [關鍵字](../../visual-basic/language-reference/keywords/index.md)  
+ [Visual Basic 執行階段程式庫成員](../../visual-basic/language-reference/runtime-library-members.md)  
+ [Visual Basic 命名慣例](../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ [操作說明：在程式碼內中斷和合併陳述式](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
+ [程式碼中的註解](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

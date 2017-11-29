@@ -1,40 +1,22 @@
 ---
 title: "如何：在登錄中建立機碼 (Visual C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f6cc79a8a914d3ef5b7c496db4dc0d2b3eb17768
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>如何：在登錄中建立機碼 (Visual C#)
 本範例會將 "Name" 和 "Isabella" 的值組新增至目前使用者之登錄的 "Names" 索引鍵下。  
@@ -79,8 +61,7 @@ key.Close();
  即使使用存取控制清單 (ACL) 來保護登錄機碼，將密碼等機密資料以純文字儲存在登錄中也不安全。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.IO?displayProperty=fullName>   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [檔案系統和登錄 (C# 程式設計手冊)](../../../csharp/programming-guide/file-system/index.md)   
+ <xref:System.IO?displayProperty=nameWithType>  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)  
  [使用 C# 從登錄進行讀取、寫入和刪除](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
-

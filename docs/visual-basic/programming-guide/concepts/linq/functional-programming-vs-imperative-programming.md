@@ -1,34 +1,30 @@
 ---
-title: "功能性程式設計與命令式程式設計 (Visual Basic) |Microsoft 文件"
+title: "功能性程式設計與命令式程式設計 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7fd7a2defabe2d03b658977cc0106e3bbf985202
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 8519ca7fcda63e73e29d33a768c589829aafa0b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>功能性程式設計與命令式程式設計 (Visual Basic)
 本主題比較與對照功能性程式設計與更傳統的命令性 (程序性) 程式設計。  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>功能性程式設計與命令式程式設計  
- *函式程式設計*典範明確建立可支援解決問題的純功能性方法。 功能性程式設計是一種*宣告式程式設計*。 相較之下，多數主流語言，包括物件導向程式設計 (OOP) 語言，例如 C#、 Visual Basic、 c + + 和 Java 的設計主要是支援*命令式*（程序性） 程式設計。  
+ 明確建立「功能性程式設計」開發架構時，可支援解決問題的純功能性方法。 功能性程式設計是一種「宣告式程式設計」。 相較之下，多數主流語言 (包括物件導向程式設計 (OOP) 語言，例如 C#、Visual Basic、C++ 與 Java) 的設計主要支援「命令性」(程序性) 程式設計。  
   
- 利用命令性方法，開發人員可以撰寫詳細描寫電腦必須採取之步驟以達成目標的程式碼。 這有時候稱為*演算法*程式設計。 相較之下，功能性方法包含將問題撰寫成要執行的一組函式。 您可以仔細定義每個函式的輸入，以及每個函式會傳回的東西。 下表描述這兩種方法之間的幾項一般差異。  
+ 利用命令性方法，開發人員可以撰寫詳細描寫電腦必須採取之步驟以達成目標的程式碼。 這有時候稱為「演算法」程式設計。 相較之下，功能性方法包含將問題撰寫成要執行的一組函式。 您可以仔細定義每個函式的輸入，以及每個函式會傳回的東西。 下表描述這兩種方法之間的幾項一般差異。  
   
 |特性|命令性方法|功能性方法|  
 |--------------------|-------------------------|-------------------------|  
@@ -38,12 +34,12 @@ ms.lasthandoff: 03/13/2017
 |主要流量控制|迴圈、條件與函式 (方法) 呼叫。|函式呼叫，包括遞迴。|  
 |主要操作單位|結構或類別的執行個體。|當做第一級物件與資料集合的函式。|  
   
- 雖然多數語言的設計在於支援特定的程式設計開發架構，但許多一般的語言還是有足夠的彈性，可以支援多種開發架構。 例如，包含函式指標的多數語言可用於確實支援功能性程式設計。 此外，Visual Basic 就有包含明確的語言擴充功能以支援功能性程式設計，包括 lambda 運算式與型別推斷。 LINQ 技術是一種宣告式功能性程式設計。  
+ 雖然多數語言的設計在於支援特定的程式設計開發架構，但許多一般的語言還是有足夠的彈性，可以支援多種開發架構。 例如，包含函式指標的多數語言可用於確實支援功能性程式設計。 此外，Visual Basic 包含明確的語言擴充功能以支援功能性程式設計，包括 lambda 運算式與型別推斷。 LINQ 技術是一種宣告式功能性程式設計。  
   
 ## <a name="functional-programming-using-xslt"></a>使用 XSLT 的功能性程式設計  
- 許多 XSLT 開發人員都很熟悉純功能性方法。 開發 XSLT 樣式表最有效的方式，就是將每個範本都視為可組合的隔離轉換。 執行順序完全不重視。 XSLT 不允許副作用 (除非執行程序性程式碼的溢出機制可以產生導致非純功能性的副作用)。 不過，雖然 XSLT 是一個有效的工具，但是有些特性並不是最好的。 例如，在 XML 中表示程式設計建構會使程式碼相當詳細，因此難以維護。 同時，大量依賴流量控制遞迴可能會使程式碼難以讀取。 如需 XSLT 的詳細資訊，請參閱[XSLT 轉換](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)。  
+ 許多 XSLT 開發人員都很熟悉純功能性方法。 開發 XSLT 樣式表最有效的方式，就是將每個範本都視為可組合的隔離轉換。 執行順序完全不重視。 XSLT 不允許副作用 (除非執行程序性程式碼的溢出機制可以產生導致非純功能性的副作用)。 不過，雖然 XSLT 是一個有效的工具，但是有些特性並不是最好的。 例如，在 XML 中表示程式設計建構會使程式碼相當詳細，因此難以維護。 同時，大量依賴流量控制遞迴可能會使程式碼難以讀取。 如需 XSLT 的詳細資訊，請參閱 [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)。  
   
- 不過，XSLT 已經證明使用純功能性方法將 XML 從一個組織結構轉換為另一個組織結構的值。 包含 LINQ to XML 的純功能性程式設計類似於 XSLT 的許多方法。 不過，LINQ to XML 和 Visual Basic 所引進的程式設計建構可讓您撰寫更容易讀取與比 XSLT 更易於維護的純功能性轉換。  
+ 不過，XSLT 已經證明使用純功能性方法將 XML 從一個組織結構轉換為另一個組織結構的值。 包含 LINQ to XML 的純功能性程式設計類似於 XSLT 的許多方法。 不過，LINQ to XML 和 Visual Basic 所引進的程式設計建構可讓您撰寫更容易讀取與維護比 XSLT 的純功能性轉換。  
   
 ## <a name="advantages-of-pure-functions"></a>純虛擬函式的優點  
  實作功能性轉換做為純虛擬函式的主要原因是純虛擬函式是可組合的：也就是說，純虛擬函式是獨立的，而且沒有狀態 (Stateless)。 這些特性帶來很多益處，包括：  
@@ -61,9 +57,9 @@ ms.lasthandoff: 03/13/2017
   
  相較之下，功能性程式設計會考慮運算問題，做為評估資料集合之純功能性轉換的練習。 功能性程式設計會避免狀態與可變動的資料，而強調函式的應用。  
   
- 幸好，Visual Basic 不需要完全跳到功能性程式設計，因為它支援命令性與功能性程式設計方法。 開發人員可以選擇哪個方法最適合特定的案例。 事實上，程式通常會結合這兩種方法。  
+ 幸運的是，Visual Basic 不需要完全跳到功能性程式設計，因為它支援命令性與功能性程式設計的方法。 開發人員可以選擇哪個方法最適合特定的案例。 事實上，程式通常會結合這兩種方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [純功能性轉換 (Visual Basic) 簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XSLT 轉換](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)   
- [重構為純虛擬函式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+ [Introduction to 純功能性轉換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)  
+ [重構到純虛擬函式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

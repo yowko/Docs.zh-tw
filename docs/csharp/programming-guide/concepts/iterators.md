@@ -1,30 +1,21 @@
 ---
 title: "迭代器 (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
-「迭代器」**可用來逐步執行集合，例如清單和陣列。  
+「迭代器」可用來逐步執行集合，例如清單和陣列。  
   
  迭代器方法或 `get` 存取子會對集合執行自訂反覆運算。 迭代器方法使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式，一次傳回一個項目。 當到達 `yield return` 陳述式時，系統會記住程式碼中的目前位置。 下次呼叫迭代器函式時，便會從這個位置重新開始執行。  
   
@@ -103,7 +94,7 @@ public static System.Collections.Generic.IEnumerable<int>
 ```  
   
 ##  <a name="BKMK_CollectionClass"></a> 建立集合類別  
- 在下列範例中，`DaysOfTheWeek` 類別會實作 <xref:System.Collections.IEnumerable> 介面，這需要 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 編譯器會隱含呼叫 `GetEnumerator` 方法，以傳回 <xref:System.Collections.IEnumerator>。  
+ 在以下範例中，`DaysOfTheWeek` 類別會實作 <xref:System.Collections.IEnumerable> 介面，而這個介面需使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 編譯器會隱含呼叫 `GetEnumerator` 方法，以傳回 <xref:System.Collections.IEnumerator>。  
   
  `GetEnumerator` 方法使用 `yield return` 陳述式，一次傳回一個字串。  
   
@@ -232,9 +223,9 @@ public class Zoo : IEnumerable
 ```  
   
 ##  <a name="BKMK_GenericList"></a> 搭配泛型清單使用迭代器  
- 在下列範例中，`Stack(Of T)` 泛型類別會實作 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面。 `Push` 方法會將值指派給 `T` 類型的陣列。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法使用 `yield return` 陳述式傳回陣列值。  
+ 在以下範例中，`Stack(Of T)` 泛型類別會實作 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面。 `Push` 方法會將值指派給 `T` 類型的陣列。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法會使用 `yield return` 陳述式以傳回陣列值。  
   
- 除了泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法，還必須實作非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 這是因為 <xref:System.Collections.Generic.IEnumerable%601> 繼承自 <xref:System.Collections.IEnumerable>。 非泛型實作會延後到泛型實作。  
+ 除了泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法，您也必須實作非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 這是因為 <xref:System.Collections.Generic.IEnumerable%601> 繼承自 <xref:System.Collections.IEnumerable>。 非泛型實作會延後到泛型實作。  
   
  此範例使用具名迭代器來支援逐一查看相同資料集合的各種方法。 這些具名迭代器是 `TopToBottom` 和 `BottomToTop` 屬性，以及 `TopN` 方法。  
   
@@ -349,7 +340,7 @@ public class Stack<T> : IEnumerable<T>
 ```  
   
 ##  <a name="BKMK_SyntaxInformation"></a> 語法資訊  
- 出現的迭代器可以是方法或 `get` 存取子。 迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態解構函式中。  
+ 出現的迭代器可以是方法或 `get` 存取子。 迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態完成項中。  
   
  `yield return` 陳述式中的運算式類型必須隱含轉換成迭代器的傳回型別。  
   
@@ -366,7 +357,7 @@ public class Stack<T> : IEnumerable<T>
   
  之後每次反覆運算 `foreach` 迴圈 (或直接呼叫 `IEnumerator.MoveNext`)，下一個迭代器程式碼主體都會在上一個 `yield return` 陳述式之後繼續。 然後繼續執行至下一個 `yield return` 陳述式，直到達到迭代器主體結尾，或遇到 `yield break` 陳述式為止。  
   
- 迭代器不支援 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName> 方法。 若要從頭開始逐一查看，您必須取得新的迭代器。  
+ 迭代器不支援 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> 方法。 若要從頭開始逐一查看，您必須取得新的迭代器。  
   
  如需其他資訊，請參閱 [C# 語言規格](../../../csharp/language-reference/language-specification/index.md)。  
   
@@ -375,15 +366,14 @@ public class Stack<T> : IEnumerable<T>
   
 -   在第一次反覆運算 `foreach` 迴圈之後修改清單序列。  
   
--   避免在第一次反覆運算 `foreach` 迴圈之前完整載入大型清單。 分頁擷取以分批載入資料表資料列即為一例。 另一個範例是 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，它會實作 .NET Framework 內的迭代器。  
+-   避免在第一次反覆運算 `foreach` 迴圈之前完整載入大型清單。 分頁擷取以分批載入資料表資料列即為一例。 另一個範例是 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，它會在 .NET Framework 中實作迭代器。  
   
 -   在迭代器中封裝建立清單。 在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.Generic>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [yield](../../../csharp/language-reference/keywords/yield.md)   
- [搭配陣列使用 foreach](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
+ <xref:System.Collections.Generic>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [yield](../../../csharp/language-reference/keywords/yield.md)  
+ [搭配陣列使用 foreach](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
  [泛型](../../../csharp/programming-guide/generics/index.md)
-

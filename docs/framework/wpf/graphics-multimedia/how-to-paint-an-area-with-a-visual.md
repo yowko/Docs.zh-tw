@@ -1,39 +1,45 @@
 ---
-title: "如何：使用 Visual 繪製區域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筆刷, 使用視覺效果繪製"
-  - "繪圖"
-  - "視覺效果, 繪製方式"
+title: "如何：使用 Visual 繪製區域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- painting [WPF]
+- visuals [WPF], painting with
+- brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4cd1bafb528613f15ec5eb597179bc0dd05ace0f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用 Visual 繪製區域
-本範例示範如何使用 <xref:System.Windows.Media.VisualBrush> 類別，以 <xref:System.Windows.Media.Visual> 繪製區域。  
+# <a name="how-to-paint-an-area-with-a-visual"></a>如何：使用 Visual 繪製區域
+這個範例示範如何使用<xref:System.Windows.Media.VisualBrush>類別來使用繪製區域<xref:System.Windows.Media.Visual>。  
   
- 下列範例使用多個控制項和一個面板做為矩形的背景。  
+ 在下列範例中，數個控制項和工作面板會做為矩形的背景。  
   
-## 範例  
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
+## <a name="example"></a>範例  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- 如需 <xref:System.Windows.Media.VisualBrush> 的詳細資訊及其他範例，請參閱[使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)概觀。  
+ 如需有關<xref:System.Windows.Media.VisualBrush>和其他範例，請參閱[使用映像、 繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)概觀。  
   
- 這個程式碼範例是 <xref:System.Windows.Media.VisualBrush> 類別完整範例的一部分。  如需完整範例，請參閱 [VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049) \(英文\)。  
+ 這個程式碼範例是針對所提供之較大範例的一部分<xref:System.Windows.Media.VisualBrush>類別。 如需完整範例，請參閱[VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

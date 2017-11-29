@@ -1,74 +1,75 @@
 ---
-title: "圖形程式設計入門 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "繪製"
-  - "範例 [Windows Form], 圖形"
-  - "使用者入門, 圖形程式設計"
-  - "圖形, 使用者入門"
+title: "圖形程式設計入門"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], getting started
+- getting started [Windows Forms], graphics programming
+- examples [Windows Forms], graphics
+- drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 圖形程式設計入門
-本節說明如何在 Windows Form 應用程式中開始使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  下列主題示範如何完成幾種 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 工作，例如繪圖和填滿圖案與文字。  
+# <a name="getting-started-with-graphics-programming"></a>圖形程式設計入門
+本節說明如何開始使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Windows Forms 應用程式。 下列主題示範如何完成數個[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]工作，例如繪製和填滿圖形和文字。  
   
-## 在本節中  
- [如何：建立繪製的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- 示範如何建立要描繪的 <xref:System.Drawing.Graphics> 物件。  
+## <a name="in-this-section"></a>本章節內容  
+ [操作說明：建立繪圖的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ 示範如何建立<xref:System.Drawing.Graphics>繪圖的物件。  
   
- [如何：建立畫筆](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [操作說明：建立畫筆](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
  示範如何建立畫筆。  
   
- [如何：設定畫筆顏色](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
- 示範如何設定畫筆的色彩。  
+ [操作說明：設定畫筆顏色](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
+ 示範如何設定畫筆顏色。  
   
- [如何：建立實心筆刷](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
- 示範如何建立實心筆刷 \(Solid Brush\)。  
+ [操作說明：建立實心筆刷](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
+ 描述如何建立實心筆刷。  
   
- [如何：在 Windows Form 上繪製線條](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- 示範如何繪製線條。  
+ [操作說明：在 Windows Form 上繪製線條](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ 示範如何繪製一條線。  
   
- [如何：繪製外框形狀](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
- 示範如何繪製圖案。  
+ [操作說明：繪製外框形狀](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
+ 描述如何繪製圖形。  
   
- [如何：在 Windows Form 上繪製實心矩形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ [操作說明：在 Windows Forms 上繪製實心矩形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
  說明如何繪製矩形。  
   
- [如何：在 Windows Form 上繪製實心橢圓形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- 示範如何繪製實心橢圓形。  
+ [操作說明：在 Windows Forms 上繪製實心橢圓形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ 示範如何繪製實心的橢圓形。  
   
- [如何：在 Windows Form 上繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- 示範如何繪製文字。  
+ [操作說明：在 Windows Forms 上繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
+ 描述如何繪製文字。  
   
- [如何：在 Windows Form 上繪製直排文字](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
+ [操作說明：在 Windows Forms 上繪製垂直文字](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
  示範如何繪製垂直文字。  
   
- [如何：使用 GDI\+ 呈現影像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ [操作說明：使用 GDI+ 呈現影像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
  示範如何繪製影像。  
   
- [如何：建立具圖案的 Windows Form](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
- 說明如何變更表單圖案。  
+ [操作說明：建立具圖案的 Windows Form](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
+ 說明如何變更表單的圖形。  
   
- [如何：複製像素以降低 Windows Form 的閃動](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- 說明如何在區域之間複製像素。  
+ [操作說明：複製像素以降低 Windows Forms 的閃動](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ 說明如何以像素為單位複製到另一個區域。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Drawing>  
- 描述這個命名空間 \(Namespace\) 並且連結到它所有的成員。  
+ 描述這個命名空間，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms>  
- 描述這個命名空間並且連結到它所有的成員。
+ 描述這個命名空間，並且提供其所有成員的連結。

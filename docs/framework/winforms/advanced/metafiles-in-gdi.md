@@ -1,47 +1,51 @@
 ---
-title: "GDI+ 中的中繼檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, 中繼檔"
-  - "影像 [Windows Form], 中繼檔"
-  - "中繼檔"
+title: "GDI+ 中的中繼檔"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], metafiles
+- GDI+, metafiles
+- metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b75ceb08df0454172a000d5d1ad15445f685ddf
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# GDI+ 中的中繼檔
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供 <xref:System.Drawing.Imaging.Metafile> 類別來記錄和顯示中繼檔。  中繼檔又稱為向量檔案，它是一種被儲存為繪圖命令和設定序列的影像。  <xref:System.Drawing.Imaging.Metafile> 物件中所記錄的命令和設定可儲存於記憶體或儲存至檔案或資料流。  
+# <a name="metafiles-in-gdi"></a>GDI+ 中的中繼檔
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供<xref:System.Drawing.Imaging.Metafile>類別，因此您可以記錄，並顯示中繼檔。 中繼檔，也稱為向量映像，是儲存為一連串的繪圖命令和設定映像。 命令和設定記錄在<xref:System.Drawing.Imaging.Metafile>可以儲存在記憶體中或儲存到檔案或資料流物件。  
   
-## 中繼檔的格式  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可顯示儲存為下列格式的中繼檔：  
+## <a name="metafile-formats"></a>中繼檔格式  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以顯示已儲存在下列格式的中繼檔：  
   
--   Windows 中繼檔 \(WMF\)  
+-   Windows 中繼檔 (WMF)  
   
--   加強型中繼檔 \(EMF\)  
+-   加強型中繼檔 (EMF)   
   
--   EMF\+  
+-   EMF +  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可記錄 EMF 和 EMF\+ 格式的中繼檔，但無法記錄 WMF 格式的中繼檔。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]EMF 和 EMF + 格式，但不是在 WMF 格式，則可以錄製中繼檔。  
   
- EMF\+ 是 EMF 的擴充功能，可用來儲存 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 資料錄。  EMF\+ 格式有兩種變化：EMF\+ Only 和 EMF\+ Dual。  EMF\+ Only 中繼檔僅包含 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 資料錄。  此類中繼檔可由 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 顯示，但無法使用 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 顯示。  EMF\+ Dual 中繼檔包含 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 及 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 資料錄。  EMF\+ Dual 中繼檔的每個 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 資料錄都會與替代 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 資料錄配對。  此類中繼檔可由 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 或 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 顯示。  
+ EMF + 是擴充功能，可讓 EMF[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]来儲存的記錄。 有兩種變化 EMF + 格式： EMF + 只有和 EMF + 雙重。 EMF + 僅中繼檔只包含[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]記錄。 這類中繼檔可以顯示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]不[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]。 EMF + 雙重中繼檔包含[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]和[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]記錄。 每個[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]記錄 EMF + 雙重中繼檔搭配替代[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]記錄。 這類中繼檔可以顯示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]或[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]。  
   
- 下列範例顯示先前儲存為檔案的中繼檔。  中繼檔的左上角顯示為 \(100, 100\)。  
+ 下列範例會顯示先前為檔案儲存在中繼檔。 中繼檔就會顯示在其左上角 （100，100）。  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

@@ -1,44 +1,45 @@
 ---
-title: "ErrorProvider 元件 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "錯誤訊息, 顯示"
-  - "ErrorProvider 元件 [Windows Form]"
-  - "錯誤 [Windows Form]"
+title: "ErrorProvider 元件 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error messages [Windows Forms], displaying
+- errors [Windows Forms]
+- ErrorProvider component [Windows Forms]
 ms.assetid: c0f2e231-c5c9-413d-a507-75af2db499b6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1dd0cfd8062274d4e2ad9ce75ae41ed69e703d4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# ErrorProvider 元件 (Windows Form)
-Windows Form 的 `ErrorProvider` 元件能夠以不干擾使用者的方式顯示錯誤狀況。  它通常會和使用者的表單輸入驗證一起使用，或在資料集中顯示錯誤。  
+# <a name="errorprovider-component-windows-forms"></a>ErrorProvider 元件 (Windows Form)
+Windows Form`ErrorProvider`元件可用來讓使用者不會造成干擾的方式有不對勁的錯誤。 通常用於搭配驗證表單上的使用者輸入或顯示資料集內的錯誤。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [ErrorProvider 元件概觀](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
- 解釋這個元件是什麼，以及其主要功能和屬性。  
+ 說明此元件是什麼及其重要功能與屬性。  
   
- [如何：使用 Windows Form ErrorProvider 元件顯示表單驗證的錯誤圖示](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)  
- 提供使用錯誤提供者元件驗證使用者輸入的說明。  
+ [操作說明：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)  
+ 說明如何驗證使用者輸入錯誤提供者元件。  
   
- [如何：使用 Windows Form ErrorProvider 元件檢視資料集錯誤](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
- 提供使用錯誤提供者元件顯示資料錯誤的說明。  
+ [操作說明：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ 說明如何使用錯誤提供者元件，即可顯示資料的錯誤。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ErrorProvider>  
- 描述這個類別並且連結到它所有的成員。  
+ 說明這個類別，並且提供其所有成員的連結。  
   
-## 相關章節  
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。
+## <a name="related-sections"></a>相關章節  
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ 提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。

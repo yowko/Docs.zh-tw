@@ -1,30 +1,21 @@
 ---
 title: AttributeUsage (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 81e7440279a2d7dfa801394ee0e9af6181da3c13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c008c1a696e93bc3b756a926a046aa5a6942bc10
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 決定如何使用自訂屬性類別。 `AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。 明確套用時，預設設定看起來會像這樣︰  
@@ -154,12 +145,11 @@ A2
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Attribute>   
- <xref:System.Reflection>   
- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)   
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)   
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [屬性](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
+ <xref:System.Attribute>  
+ <xref:System.Reflection>  
+ [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+ [屬性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [屬性](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
  [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

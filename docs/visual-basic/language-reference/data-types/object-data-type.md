@@ -1,39 +1,38 @@
 ---
-title: "Object Data Type | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Object"
-  - "vb.Variant"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "object variables, Object type"
-  - "data types [Visual Basic], assigning"
-  - "Object data type"
-  - "Object data type, reference"
+title: Object Data Type
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Object
+- vb.Variant
+helpviewer_keywords:
+- object variables [Visual Basic], Object type
+- data types [Visual Basic], assigning
+- Object data type
+- Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Object Data Type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-保留參考物件的位址。  您可以將任何參考型別 \(字串、陣列、類別或介面\) 指派給 `Object` 變數。  `Object` 變數也可參考任何實值型別的資料 \(數字、`Boolean`、`Char`、`Date`、結構或列舉\)。  
+# <a name="object-data-type"></a>Object Data Type
+參考物件的保留位址。 您可以將任何參考類型 （字串、 陣列、 類別或介面） 指派給`Object`變數。 `Object`變數也可以指任何實值類型的資料 (數值， `Boolean`， `Char`， `Date`、 結構或列舉型別)。  
   
-## 備註  
- `Object` 資料型別可指向任何資料型別的資料，包含應用程式所辨識的任何物件執行個體。  在編譯時期，如果不知道變數可能指向的資料型別，則請使用 `Object`。  
+## <a name="remarks"></a>備註  
+ `Object`資料型別可以指向任何資料類型，包括您的應用程式可辨識的任何物件執行個體的資料。 使用`Object`時您不知道在編譯時期何種資料類型的變數可能指向。  
   
- `Object` 的預設值為 `Nothing` \(null 參考\)。  
+ 預設值`Object`是`Nothing`（null 參考）。  
   
-## 資料型別  
- 您可以將任何資料型別的變數、常數或運算式指派至 `Object` 變數。  若要判斷 `Object` 變數目前所參考的資料型別，可使用 <xref:System.Type?displayProperty=fullName> 類別的 <xref:System.Type.GetTypeCode%2A> 方法。  下列範例將說明這點。  
+## <a name="data-types"></a>資料類型  
+ 您可以指派變數、 常數或運算式的任何資料型別`Object`變數。 若要判斷資料型別`Object`目前參考變數，您可以使用<xref:System.Type.GetTypeCode%2A>方法<xref:System.Type?displayProperty=nameWithType>類別。 下列範例將說明這點。  
   
 ```  
 Dim myObject As Object  
@@ -42,29 +41,29 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())  
 ```  
   
- `Object` 資料型別就是參考型別。  不過，Visual Basic 在參考實值型別的資料時，會將 `Object` 變數視為實值型別。  
+ `Object`資料類型是參考類型。 不過，Visual Basic 會將`Object`變數作為時參考的是實值類型的實值類型。  
   
-## 儲存區  
- 無論它所參考的資料型別為何，`Object` 變數都不會包含資料值本身，而是值的指標。  它在電腦記憶體中所佔的空間為 4 個位元組，但這並不包括儲存表示變數值的資料。  由於使用指標來找出資料的程式碼之故，存放實值型別的 `Object` 變數會比有明確型別的變數在存取方面要來得稍慢些。  
+## <a name="storage"></a>儲存區  
+ 任何資料類型，則是指，`Object`本身，但而不是值的指標變數不包含資料值。 在電腦記憶體中，永遠使用四個位元組，但這不包括代表變數的值資料的儲存體。 由於使用找到的資料指標的程式碼`Object`持有實值類型的變數會稍微慢一點比明確存取具類型的變數。  
   
-## 程式設計提示  
+## <a name="programming-tips"></a>程式設計提示  
   
--   **Interop 考量：**：如果使用的是未針對 .NET Framework 撰寫的元件 \(例如 Automation 或 COM 物件\)，請記住其他環境中的指標型別與 Visual Basic `Object` 型別不相容。  
+-   **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住在其他環境中的指標類型不相容，使用 Visual Basic`Object`型別。  
   
--   **效能**：使用 `Object` 型別宣告的變數能夠包含任何物件的參考。  不過，在此類變數上叫用方法或屬性時，一律會在執行階段時造成「*晚期繫結*」\(Late Binding\)。  若要在編譯時期強制「*早期繫結*」\(Early Binding\) 和較佳的效能，請使用特定類別名稱來宣告變數，或將它轉換成特定資料型別。  
+-   **效能。** 以宣告的變數`Object`型別是有足夠的彈性，以包含任何物件的參考。 不過，當您叫用方法或屬性，這類變數上的，您一定會造成*晚期繫結*（在執行階段）。 若要強制*早期繫結*（在編譯時期） 和較佳的效能、 宣告變數的特定類別名稱，或將它轉換成特定資料類型。  
   
-     當您宣告物件變數時，請試著使用特定的類別型別 \(例如，<xref:System.OperatingSystem>\)，而非通用 `Object` 型別。  您也應使用最適合的特定類別，例如 <xref:System.Windows.Forms.TextBox> 而非 <xref:System.Windows.Forms.Control>，如此一來您就可存取其屬性和方法。  您通常可使用 \[**物件瀏覽器**\] 中的 \[**類別**\] 清單，找出可用的類別名稱。  
+     當您宣告物件變數時，再試一次使用特定類別類型，例如<xref:System.OperatingSystem>，而非一般化`Object`型別。 您也應該使用最適合的類別使用，例如<xref:System.Windows.Forms.TextBox>而不是<xref:System.Windows.Forms.Control>，如此一來，您可以存取其屬性和方法。 您通常可以使用**類別**清單中**物件瀏覽器**來尋找可用的類別名稱。  
   
--   **擴展：**：所有資料型別和所有參考型別都會擴展成 `Object` 資料型別。  這表示您可以將任何類型轉換成 `Object`，而不會發生 <xref:System.OverflowException?displayProperty=fullName> 錯誤。  
+-   **擴展。** 所有的資料型別和所有參考型別擴展為`Object`資料型別。 這表示您可以將任何型別轉換`Object`而不會發生<xref:System.OverflowException?displayProperty=nameWithType>錯誤。  
   
-     不過，如果轉換實值型別與 `Object`，則 Visual Basic 會執行稱為「*Boxing*」和「*Unboxing*」的作業，這些作業會讓執行速度變慢。  
+     不過，如果您實值類型之間進行轉換和`Object`，Visual Basic 會在執行作業呼叫*boxing*和*unboxing*，剩下的執行速度變慢。  
   
--   **型別字元**：`Object` 沒有常值型別字元或識別項型別字元。  
+-   **類型字元。** `Object`沒有任何常值類型字元或識別項類型字元。  
   
--   **架構型別。**.NET Framework 中的對應型別為 <xref:System.Object?displayProperty=fullName> 類別。  
+-   **架構類型。** .NET Framework 中對應的類型是<xref:System.Object?displayProperty=nameWithType>類別。  
   
-## 範例  
- 下列範例會說明指向物件執行個體的 `Object` 變數。  
+## <a name="example"></a>範例  
+ 下列範例說明`Object`變數指向的物件執行個體。  
   
 ```  
 Dim objDb As Object  
@@ -73,11 +72,11 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)  
 ```  
   
-## 請參閱  
- <xref:System.Object>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [How to: Determine Whether Two Objects Are Related](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)   
- [How to: Determine Whether Two Objects Are Identical](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Object>  
+ [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [如何：判斷兩個物件是否關聯](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
+ [如何：判斷兩個物件是否相同](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

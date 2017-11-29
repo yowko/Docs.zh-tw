@@ -1,74 +1,73 @@
 ---
-title: "User-Defined Data Type | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "UserDefined"
-  - "UDT"
-  - "vb.UDT"
-  - "User-Defined"
-  - "vb.UserDefined"
-  - "vb.User-Defined"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "user-defined data types, Visual Basic"
-  - "user-defined types"
-  - "structures, as user-defined data types"
-  - "user-defined types, Visual Basic"
-  - "user-defined types, structure declaration"
-  - "user-defined types, structures in Visual Basic"
-  - "user-defined data types, structure declaration"
-  - "data types [Visual Basic], assigning"
-  - "Structure statement"
-  - "data types [Visual Basic], user-defined"
-  - "user-defined data types, structures in Visual Basic"
-  - "user-defined data types"
-  - "types [Visual Basic], user-defined"
+title: "使用者定義資料類型"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- UserDefined
+- UDT
+- vb.UDT
+- User-Defined
+- vb.UserDefined
+- vb.User-Defined
+helpviewer_keywords:
+- user-defined data types [Visual Basic], Visual Basic
+- user-defined types
+- structures [Visual Basic], as user-defined data types
+- user-defined types [Visual Basic], Visual Basic
+- user-defined types [Visual Basic], structure declaration
+- user-defined types [Visual Basic], structures in Visual Basic
+- user-defined data types [Visual Basic], structure declaration
+- data types [Visual Basic], assigning
+- Structure statement [Visual Basic]
+- data types [Visual Basic], user-defined
+- user-defined data types [Visual Basic], structures in Visual Basic
+- user-defined data types
+- types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7e1876d61a2ce89b04c6e5061b868f0be365639f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# User-Defined Data Type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-保留您定義之格式的資料。  `Structure` 陳述式 \(Statement\) 會定義格式。  
+# <a name="user-defined-data-type"></a>使用者定義資料類型
+資料保留在您定義的格式。 `Structure`陳述式定義的格式。  
   
- 舊版的 Visual Basic 支援使用者定義型別 \(UDT\)。  目前的版本會將 UDT 展開成「*結構*」\(Structure\)。  結構是各種資料型別之一個或多個「*成員*」\(Member\) 的串連。  Visual Basic 會將結構視為單一單位，但您也能個別存取其成員。  
+ 舊版的 Visual Basic 支援使用者定義型別 (UDT)。 目前的版本會擴展 UDT 到*結構*。 結構是一或多個串連*成員*的各種資料類型。 Visual Basic 會將結構視為單一單位，雖然您也可以個別存取其成員。  
   
-## 備註  
- 當您需要將各種資料型別結合成單一單位，或是沒有適合所需的基礎資料型別 \(Elementary Data Type\) 時，請定義和使用結構資料型別。  
+## <a name="remarks"></a>備註  
+ 定義和使用結構的資料類型，當您需要將各種資料型別結合成一個單位，或沒有任何基本資料類型符合您的需要。  
   
- 結構資料型別的預設值，是由其每個成員的預設值組合所組成。  
+ 結構的資料類型的預設值是由每個成員的預設值的組合所組成。  
   
-## 宣告格式  
- 結構宣告是以 [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)開始，並以 `End` `Structure` 陳述式結束。  `Structure` 陳述式會提供結構的名稱，這同時也是由結構定義的資料型別識別項。  程式碼的其他部分可以使用這個識別項，將變數、參數和函式傳回值宣告為這個結構的資料型別。  
+## <a name="declaration-format"></a>宣告格式  
+ 結構宣告的開頭[Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)，並結束`End``Structure`陳述式。 `Structure`陳述式提供的結構，這也是結構定義資料類型的識別項的名稱。 程式碼的其他部分可以利用這個識別碼，來宣告變數、 參數和函式的傳回值，這個結構的資料型別。  
   
- `Structure` 陳述式和 `End` `Structure` 陳述式之間的宣告可定義結構成員。  
+ 宣告之間`Structure`和`End``Structure`陳述式定義的結構成員。  
   
-## 成員存取層級  
- 您必須使用 [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) 或指定存取層級的陳述式 \(例如 [Public](../../../visual-basic/language-reference/modifiers/public.md)、[Friend](../../../visual-basic/language-reference/modifiers/friend.md) 或 [Private](../../../visual-basic/language-reference/modifiers/private.md)\) 來宣告每個成員。  如果您使用 `Dim` 陳述式，則存取層級會預設為公用 \(Public\)。  
+## <a name="member-access-levels"></a>成員存取層級  
+ 您必須宣告使用每個成員[Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)或陳述式，指定存取層級，例如[公用](../../../visual-basic/language-reference/modifiers/public.md)， [Friend](../../../visual-basic/language-reference/modifiers/friend.md)，或[私用](../../../visual-basic/language-reference/modifiers/private.md). 如果您使用`Dim`陳述式中，為公用存取層級預設值。  
   
-## 程式設計提示  
+## <a name="programming-tips"></a>程式設計提示  
   
--   **記憶體消耗量**： ：和所有複合資料型別一樣，將成員的表面儲存配置加總起來不一定就是結構的總記憶體耗用量。  除此之外，您也不能就將記憶體中的儲存順序視為與您宣告的順序相同。  如果需要控制結構的儲存體配置，可將 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性 \(Attribute\) 套用到 `Structure` 陳述式。  
+-   **記憶體耗用量。** 如同所有的複合資料類型，您無法安全地將相加名義儲存配置，其成員的計算結構的總記憶體耗用量。 此外，您不能安全地假設在記憶體中的儲存體的順序是您宣告的順序相同。 如果您需要控制結構的儲存體配置，您可以套用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性`Structure`陳述式。  
   
--   **Interop 考量：** ：如果您正在使用的元件不是針對 .NET Framework 所撰寫的 \(例如 Automation 或 COM 物件\)，請記住，其他環境中的使用者定義型別會與 Visual Basic 結構型別不相容。  
+-   **Interop 考量。** 如果您要使用的不是針對.NET Framework 撰寫的元件，例如 Automation 或 COM 物件，請記住，在其他環境中的 使用者定義型別不是使用 Visual Basic 相容結構類型。  
   
--   **擴展：** ：不會與任何結構資料型別進行自動轉換。  您可以使用 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)，在結構上定義轉換運算子，也可以將每一個轉換運算子宣告成 `Widening` 或 `Narrowing`。  
+-   **擴展。** 沒有任何結構的資料類型無法自動轉換。 您可以定義轉換運算子，在您使用結構[Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)，而且您可以宣告為每個轉換運算子`Widening`或`Narrowing`。  
   
--   **型別字元。** ：結構資料型別沒有常值 \(Literal\) 型別字元或識別項型別字元。  
+-   **類型字元。** 結構的資料型別具有任何常值類型字元或識別項類型字元。  
   
--   **架構型別。** ：.NET Framework 中沒有對應的型別。  所有結構都繼承自 .NET Framework 類別 <xref:System.ValueType?displayProperty=fullName>，但沒有個別結構對應於 <xref:System.ValueType?displayProperty=fullName>。  
+-   **架構類型。** .NET Framework 中沒有對應的型別。 所有的結構會繼承自.NET Framework 類別<xref:System.ValueType?displayProperty=nameWithType>，但沒有個別的結構會對應到<xref:System.ValueType?displayProperty=nameWithType>。  
   
-## 範例  
- 下列的開發架構將顯示結構宣告的大綱。  
+## <a name="example"></a>範例  
+ 下列範例將顯示外框的結構宣告。  
   
 ```  
 [Public | Protected | Friend | Protected Friend | Private] Structure structname  
@@ -78,14 +77,14 @@ caps.handback.revision: 12
 End Structure  
 ```  
   
-## 請參閱  
- <xref:System.ValueType>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ValueType>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

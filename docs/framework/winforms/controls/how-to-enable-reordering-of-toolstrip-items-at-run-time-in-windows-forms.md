@@ -1,51 +1,52 @@
 ---
-title: "如何：啟用 Windows Form 在執行階段時重新排列 ToolStrip 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "AllowItemReorder 屬性"
-  - "範例 [Windows Form], 工具列"
-  - "工具列 [Windows Form], 重先排列控制項"
-  - "ToolStrip 控制項 [Windows Forms], 範例"
-  - "ToolStrip 控制項 [Windows Forms], 重新排序項目"
+title: "如何：啟用 Windows Form 在執行階段時重新排列 ToolStrip 項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], examples
+- examples [Windows Forms], toolbars
+- toolbars [Windows Forms], rearranging controls
+- ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 73ea6d3615780c8def31b7dbdcf870020a106e80
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：啟用 Windows Form 在執行階段時重新排列 ToolStrip 項目
-您可以讓使用者重新整理 <xref:System.Windows.Forms.ToolStrip> 上的 <xref:System.Windows.Forms.ToolStripItem> 控制項。  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>如何：啟用 Windows Form 在執行階段時重新排列 ToolStrip 項目
+您可以讓使用者重新排列<xref:System.Windows.Forms.ToolStripItem>控制項<xref:System.Windows.Forms.ToolStrip>。  
   
-### 若要在執行階段啟用 ToolStripItem 重新整理  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>若要啟用在執行階段的 ToolStripItem，重新排列  
   
--   將 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性設為 `true`。  根據預設，<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 為 `false`。  
+-   將 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性設定為 `true`。 根據預設，<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>是`false`。  
   
-     在執行階段中，使用者只要按住 ALT 鍵和滑鼠左鍵，即可將 <xref:System.Windows.Forms.ToolStripItem> 拖曳到 <xref:System.Windows.Forms.ToolStrip> 上的不同位置。  
+     在執行階段，按住 ALT 鍵，然後拖曳滑鼠左鍵<xref:System.Windows.Forms.ToolStripItem>上的不同位置<xref:System.Windows.Forms.ToolStrip>。  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  
-  
     ```  
   
     ```csharp  
     toolStrip1.AllowItemReorder = true;  
-  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>   
- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>  
+ [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
  [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

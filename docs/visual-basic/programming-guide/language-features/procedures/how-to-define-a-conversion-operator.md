@@ -1,53 +1,52 @@
 ---
-title: "How to: Define a Conversion Operator (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "operators [Visual Basic], defining"
-  - "procedures, operator"
-  - "operators [Visual Basic], overloading"
-  - "return values, Operator procedures"
-  - "operator overloading"
+title: "如何：定義轉換運算子 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- operators [Visual Basic], defining
+- procedures [Visual Basic], operator
+- operators [Visual Basic], overloading
+- return values [Visual Basic], Operator procedures
+- operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b0f9e63ba039a48226186fa4ce118d3e47b5673e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Define a Conversion Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-如果已定義類別或結構，則可定義類別或結構型別與其他資料型別 \(例如 `Integer`、`Double` 或 `String`\) 之間的型別轉換運算子。  
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a>如何：定義轉換運算子 (Visual Basic)
+如果您已定義類別或結構，您可以定義類別或結構的類型和其他資料型別之間型別轉換運算子 (例如`Integer`， `Double`，或`String`)。  
   
- 將型別轉換定義成類別或結構內的 [CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)程序。  所有轉換程序都必須是 `Public Shared`，且每個程序都必須指定 [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) 或 [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)。  
+ 定義型別轉換為[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)類別或結構中的程序。 所有的轉換程序必須是`Public Shared`，和每個必須指定[Widening](../../../../visual-basic/language-reference/modifiers/widening.md)或[Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)。  
   
- 在類別或結構上定義運算子，也稱為「*多載*」\(Overload\) 運算子。  
+ 在類別或結構上定義運算子，也稱為*多載*運算子。  
   
-## 範例  
- 下列範例會定義名為  `digit`  之結構與 `Byte` 間的轉換運算子。  
+## <a name="example"></a>範例  
+ 下列範例會定義稱為結構之間的轉換運算子`digit`和`Byte`。  
   
  [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
   
- 您可以使用下列程式碼來測試結構 `digit`。  
+ 您可以測試的結構`digit`為下列程式碼。  
   
  [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
   
-## 請參閱  
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [How to: Define an Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [How to: Call an Operator Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)   
- [How to: Use a Class that Defines Operators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)   
- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [How to: Declare a Structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Implicit and Explicit Conversions](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>另請參閱  
+ [運算子程序](./operator-procedures.md)  
+ [如何：定義運算子](./how-to-define-an-operator.md)  
+ [如何：呼叫運算子程序](./how-to-call-an-operator-procedure.md)  
+ [如何：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)  
+ [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

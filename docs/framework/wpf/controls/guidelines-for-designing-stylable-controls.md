@@ -1,132 +1,133 @@
 ---
-title: "設計可設定樣式控制項的方針 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制項, 樣式設計"
-  - "控制項的樣式設計"
+title: "設計可設定樣式控制項的方針"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- style design for controls [WPF]
+- controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 80edbd452be52e77a464ab29347dbe5d4067d0e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 設計可設定樣式控制項的方針
-本文件摘要說明在設計控制項時，若希望能很容易地設定控制項的樣式並且可做成樣板，要考量的一套最佳做法。  我們是在處理內建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項集的佈景主題控制項樣式時，歷經許多的嘗試和錯誤，最後得出這一套最佳做法。  我們學到，成功的樣式設定不僅取決於樣式本身，還要有良好的物件模型設計。  本文件的目標對象是控制項的作者，不是樣式的作者。  
+# <a name="guidelines-for-designing-stylable-controls"></a>設計可設定樣式控制項的方針
+本文摘要說明當設計要能夠容易設定樣式及範本化的控制項時，可考量的一組最佳做法。 我們是在研究內建之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項集的佈景主題控制項樣式時，經過許多嘗試和錯誤，才得出這組最佳做法。 我們了解到成功的樣式設定對設計良好的物件模型來說，不僅是樣式本身，也是一項功能。 本文件的適用對象是控制項作者，而不是樣式作者。  
   
-   
+  <a name="Terminology"></a>   
+## <a name="terminology"></a>用語  
+ 「樣式設定和範本化」係指一套技術，可讓控制項作者將控制項的視覺方面交給控制項的樣式和範本去處理。 這套技術包括：  
   
-<a name="Terminology"></a>   
-## 用語  
- 「設計樣式和樣板化」是指一套技巧，可以讓控制項的作者將控制項的視覺外觀處理委派給控制項的樣式和樣板。  這一套技巧包括：  
-  
--   樣式 \(包括屬性 setter、觸發程序和腳本\)。  
+-   樣式 (包括屬性 setter、觸發程序及分鏡腳本)。  
   
 -   資源。  
   
--   控制項樣板。  
+-   控制項範本。  
   
 -   資料範本。  
   
- 如需設計樣式和樣板化的簡介，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 如需樣式設定和範本化的簡介，請參閱[樣式設定和範本化範例](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
-## 在開始之前：了解您的控制項  
- 在您閱讀這些方針之前，最重要的是了解您的控制項，並且定義它們的常見用途。  設計樣式會帶出一堆通常難以駕馭的可能性。  預定要廣泛使用 \(由許多開發人員使用於許多應用程式中\) 的控制項面臨的挑戰是，樣式可能會產生深遠的控制項視覺外觀變更。  事實上，經過樣式設計的控制項甚至可能和作者原本想要的完全不同。  因為樣式設計有如此無限大的彈性，您可以利用常見用途的概念來規劃樣式。  
+## <a name="before-you-start-understanding-your-control"></a>開始之前：了解您的控制項  
+ 在您開始研究這些方針之前，請務必先了解並定義您控制項的一般使用方式。 樣式設定所揭露的通常是一組難以駕馭的可能性。 撰寫來廣泛使用的控制項 (在許多應用程式中、供許多開發人員使用) 面臨挑戰，即樣式設定可用來對控制項的視覺外觀進行更深遠的變更。 事實上，已設定樣式的控制項甚至可能與控制項作者的意圖不符。 由於樣式設定所提供的彈性基本上是無限的，因此您可以使用一般使用方式的概念來協助限制您的決策範圍。  
   
- 為了要了解您的控制項常見用法，最好想想控制項的價值所在。  您的控制項帶給表格什麼其他控制項所沒有的？  常見用法不是指特定的視覺外觀，而是指控制項的使用哲學及對其用法的一套合理期望。  了解這個，讓您可以針對常見情況，做出關於控制項的撰寫模式和由樣式定義之行為的假設。  以 <xref:System.Windows.Controls.ComboBox> 為例，了解常見用法無法告訴您特定 <xref:System.Windows.Controls.ComboBox> 是否有圓角，但會告訴您 <xref:System.Windows.Controls.ComboBox>可能需要快顯視窗以及某種開啟它的切換機制。  
+ 為了了解您控制項的一般使用方式，思考一下控制項的價值主張會相當有幫助。 您的控制項可為表格提供哪些任何其他控制所無法提供的效果？ 一般使用方式不包含任何特定的視覺外觀，而是包含控制項的原理，以及一組關於其使用方式的合理預期。 這項理解可讓您對一般情況下控制項的撰寫模型和已定義樣式的行為，進行一些假設。 如果是<xref:System.Windows.Controls.ComboBox>，比方說，了解常見的用法不允許您任何深入了解有關特定是否<xref:System.Windows.Controls.ComboBox>有圓的角，但它可讓您深入了解事實，<xref:System.Windows.Controls.ComboBox>可能需要快顯視窗和切換是否開啟某種方式。  
   
 <a name="General_Guidelines"></a>   
-## 一般方針  
+## <a name="general-guidelines"></a>一般方針  
   
--   **不要嚴格強制執行樣板合約**： 控制項的樣板合約可能由項目、命令、繫結、觸發程序 \(Trigger\)，甚至屬性設定 \(控制項運作正常所需要或期望的\) 組成。  
+-   **請勿強制執行範本合約。** 控制項的範本合約成份可能包含元素、命令、繫結、觸發程序，或甚至是讓控制項正常運作所需或應有的屬性設定。  
   
-    -   盡量將合約最小化。  
+    -   將合約儘量縮減到最少。  
   
-    -   在設計時要有心理準備，也就是說在設計階段 \(即使用設計工具時\) 的控制項樣板常常會處於未完成狀態。  由於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 沒有提供「撰寫中」狀態的基礎架構，因此建置控制項時您可能要有控制項處於這類狀態的心理準備。  
+    -   設計時需有心理準備，即在設計階段 (亦即在使用設計工具時) 控制項範本處於不完整狀態是正常的。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 並不提供「撰寫中」狀態的基礎結構，因此建置控制項時，必須預期這類狀態可能是有效的狀態。  
   
-    -   當樣板合約的任何一方面沒有做到時，不要擲回例外狀況。  遵循這些方針，如果面板中的子系太多或太少，都不應該擲回例外狀況。  
+    -   當有未遵守範本合約任何方面的情況時，請勿擲回例外狀況。 同樣地，面板在子系太多或太少時，也不應該擲回例外狀況。  
   
--   **把周邊功能因素計入樣板 Helper 項目**： 每個控制項都應該專注於其核心功能和真正價值所在，並按照控制項的常見用途定義。  為達這個目的，請在樣板中使用撰寫和 Helper 項目，以展示周邊行為和視覺化效果 \(也就是與控制項核心功能無關的行為和視覺化效果\)。  Helper 項目分成三類：  
+-   **將周邊功能列入為範本協助程式元素的考量因素。** 每個控制項都應該將焦點放在其核心功能和實際的價值主張，並由控制項的一般使用方式定義。 為了達到該目的，請使用範本內的撰寫和協助程式元素來啟用周邊行為和視覺效果，也就是未包含在控制項核心功能內的那些行為和視覺效果。 協助程式元素分成三個分類：  
   
-    -   **獨立** 的 Helper 型別是在樣板中「匿名」使用的公用、可重複使用的控制項或基本型別，而所謂匿名意指這個 Helper 項目和已設定樣式的控制項都不知道彼此的存在。  就技術上而言，任何項目都可以是匿名型別，但是在這個情境中，獨立一詞是指封裝了特殊功能 \(以實現目標案例\) 的型別。  
+    -   「獨立」協助程式是範本中公開且可重複使用的控制項，或是以「匿名方式」使用的基本型別，也就是說，協助程式元素和已設定樣式的控制項都不知道彼此。 就技術而言，任何元素都可以是匿名型別，但在此內容中，此詞彙所描述的是那些封裝特製化功能來實現目標案例的型別。  
   
-    -   **以型別為基礎** 的 Helper 項目是封裝了特殊功能的新型別。  這些項目的功能設計範圍，通常比通用控制項或基本型別要窄。  和獨立 Helper 項目不同的是，以型別為基礎的 Helper 項目知道它們所處的使用內容，而且通常必須與其所屬樣板的控制項共用資料。  
+    -   「型別型」協助程式元素是封裝了特製化功能的新型別。 與一般控制項或基本型別相比，這些元素通常是設計為功能範圍較窄。 與獨立協助程式元素不同，型別型協助程式元素知道所處的使用內容，且通常必須與其所屬控制項範本的控制項共用資料。  
   
-    -   **具名** 的 Helper 項目是控制項可以利用名稱在樣板內找到的通用控制項或基本型別。這些項目在樣板中具有已知的名稱，使控制項能夠找到它們，並且用程式設計的方式與其互動。  在任何樣板中，一個名稱只能對應至一個項目。  
+    -   「具名」協助程式元素是控制項預期要在其範本內，依名稱找到的一般控制項或基本型別。 這些元素在範本內都有一個已知的名稱，使得控制項能夠透過程式設計方式找到元素並與其進行互動。 在任一範本中，只能有一個元素具有指定的名稱。  
   
-     下表列出今日的控制項樣式可以採用的 Helper 項目 \(此表未列出所有項目\)：  
+     下表說明現今控制項樣式所採用的協助程式元素 (本清單並不完全)：  
   
-    |項目|型別|使用|  
-    |--------|--------|--------|  
-    |<xref:System.Windows.Controls.ContentPresenter>|以型別為基礎|<xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.CheckBox>、<xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame> 等等 \(所有 <xref:System.Windows.Controls.ContentControl> 型別\)|  
-    |<xref:System.Windows.Controls.ItemsPresenter>|以型別為基礎|<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.Menu> 等等 \(所有 <xref:System.Windows.Controls.ItemsControl> 型別\)|  
+    |元素|類型|使用對象|  
+    |-------------|----------|-------------|  
+    |<xref:System.Windows.Controls.ContentPresenter>|型別型|<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.CheckBox>， <xref:System.Windows.Controls.RadioButton>，<xref:System.Windows.Controls.Frame>等等 (所有<xref:System.Windows.Controls.ContentControl>類型)|  
+    |<xref:System.Windows.Controls.ItemsPresenter>|型別型|<xref:System.Windows.Controls.ListBox><xref:System.Windows.Controls.ComboBox>，<xref:System.Windows.Controls.Menu>等等 (所有<xref:System.Windows.Controls.ItemsControl>類型)|  
     |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|具名|<xref:System.Windows.Controls.ToolBar>|  
-    |<xref:System.Windows.Controls.Primitives.Popup>|獨立|<xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ToolBar>、<xref:System.Windows.Controls.Menu>、<xref:System.Windows.Controls.ToolTip> 等等|  
-    |<xref:System.Windows.Controls.Primitives.RepeatButton>|具名|<xref:System.Windows.Controls.Slider>、<xref:System.Windows.Controls.Primitives.ScrollBar> 等等|  
+    |<xref:System.Windows.Controls.Primitives.Popup>|獨立|<xref:System.Windows.Controls.ComboBox><xref:System.Windows.Controls.ToolBar>， <xref:System.Windows.Controls.Menu>， <xref:System.Windows.Controls.ToolTip>，依此類推|  
+    |<xref:System.Windows.Controls.Primitives.RepeatButton>|具名|<xref:System.Windows.Controls.Slider><xref:System.Windows.Controls.Primitives.ScrollBar>，依此類推|  
     |<xref:System.Windows.Controls.Primitives.ScrollBar>|具名|<xref:System.Windows.Controls.ScrollViewer>|  
-    |<xref:System.Windows.Controls.ScrollViewer>|獨立|<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.Menu>、<xref:System.Windows.Controls.Frame> 等等|  
+    |<xref:System.Windows.Controls.ScrollViewer>|獨立|<xref:System.Windows.Controls.ListBox><xref:System.Windows.Controls.ComboBox>， <xref:System.Windows.Controls.Menu>， <xref:System.Windows.Controls.Frame>，依此類推|  
     |<xref:System.Windows.Controls.Primitives.TabPanel>|獨立|<xref:System.Windows.Controls.TabControl>|  
     |<xref:System.Windows.Controls.TextBox>|具名|<xref:System.Windows.Controls.ComboBox>|  
-    |<xref:System.Windows.Controls.Primitives.TickBar>|以型別為基礎|<xref:System.Windows.Controls.Slider>|  
+    |<xref:System.Windows.Controls.Primitives.TickBar>|型別型|<xref:System.Windows.Controls.Slider>|  
   
--   **在 Helper 項目上將使用者需要指定的繫結或屬性設定減至最少**：  Helper 項目經常需要特定的繫結或屬性設定，才能在控制項樣板中正常運作。  Helper 項目和樣板化的控制項應該盡可能建立這些設定。  在設定屬性或建立繫結時，應特別小心不要覆寫使用者設定的值。  具體的最佳做法如下：  
+-   **將在協助程式元素上所需的使用者指定繫結或屬性設定縮減到最少**。 協助程式元素通常必須要有特定繫結或屬性設定，才能在控制項範本內正常運作。 協助程式元素和樣板化控制項應該儘可能建立這些設定。 設定屬性或建立繫結時，應該小心，不要覆寫使用者所設定的值。 特定的最佳做法如下：  
   
-    -   具名 Helper 項目應該由父代 \(Parent\) 識別，且父代應該在 Helper 項目上建立所有需要的設定。  
+    -   具名協助程式元素應該可由父代識別，而父代應該在該協助程式元素上建立任何必要的設定。  
   
-    -   以型別為基礎的 Helper 項目應該直接在自己身上建立所有需要的設定。  若要這麼做，Helper 項目可能需要查詢它所處的使用資訊內容，包括它的 `TemplatedParent` \(要使用它的樣板控制項型別\)。  例如，當在 <xref:System.Windows.Controls.ContentControl> 衍生型別 \(Derived Type\) 中使用時，<xref:System.Windows.Controls.ContentPresenter> 會自動將其 `TemplatedParent` 的 `Content` 屬性繫結至其 <xref:System.Windows.Controls.ContentPresenter.Content%2A> 屬性。  
+    -   型別型協助程式元素應該在本身直接建立任何必要的設定。 這麼做可能需要協助程式元素查詢所處的使用資訊內容，包括其 `TemplatedParent` (所處使用範本的控制項型別)。 例如，<xref:System.Windows.Controls.ContentPresenter>自動繫結`Content`屬性其`TemplatedParent`至其<xref:System.Windows.Controls.ContentPresenter.Content%2A>屬性中使用時<xref:System.Windows.Controls.ContentControl>衍生型別。  
   
-    -   獨立的 Helper 項目則無法以這種方式最佳化，因為在定義上 Helper 項目和父代都不知道彼此的存在。  
+    -   您無法以此方式將獨立協助程式元素最佳化，因為根據定義，協助程式元素和父代都不知道彼此。  
   
--   **使用 Name 屬性標示樣板內的項目**：  如果控制項需要在其樣式中尋找某個項目並以程式設計的方式加以存取，應該使用 `Name` 屬性和 `FindName` 開發架構來達成這個目的。  找不到項目時，控制項不應該擲回例外狀況，而是要安靜而正常地停用需要該項目的功能。  
+-   **使用 Name 屬性在範本內標幟元素**。 控制項如果需要在其樣式中尋找元素，以便透過程式設計方式存取該元素，應該使用 `Name` 屬性和 `FindName` 典型來執行此操作。 控制項不應該在找不到元素時擲回例外狀況，而是應該以無訊息且依正常程序的方式，停用需要該元素的功能。  
   
--   **在樣式中使用最佳做法來表達控制項狀態和行為**： 下列依序列出在樣式中表達控制項狀態變更和行為的最佳做法。  您應該使用清單中第一個符合您案例的做法。  
+-   **使用可表達樣式中控制項狀態和行為的最佳做法。** 以下是已排序的最佳做法清單，用來表達樣式中的控制項狀態變更和行為。 您應該使用清單上第一個可實現您案例的項目。  
   
-    1.  屬性繫結。  範例：<xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=fullName> 和 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=fullName> 之間的繫結。  
+    1.  屬性繫結。 範例： 繫結之間<xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>。  
   
-    2.  觸發的屬性變更或屬性動畫。  範例：<xref:System.Windows.Controls.Button> 的停留 \(Hover\) 狀態。  
+    2.  觸發的屬性變更或屬性動畫。 範例： 停留狀態的<xref:System.Windows.Controls.Button>。  
   
-    3.  命令。  範例：<xref:System.Windows.Controls.Primitives.ScrollBar> 中的 <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand> \/ <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand>。  
+    3.  命令。 範例： <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand>中<xref:System.Windows.Controls.Primitives.ScrollBar>。  
   
-    4.  獨立的 Helper 項目。  範例：<xref:System.Windows.Controls.TabControl> 中的 <xref:System.Windows.Controls.Primitives.TabPanel>。  
+    4.  獨立協助程式元素。 範例：<xref:System.Windows.Controls.Primitives.TabPanel>中<xref:System.Windows.Controls.TabControl>。  
   
-    5.  以型別為基礎的 Helper 型別。  範例：<xref:System.Windows.Controls.Button> 中的 <xref:System.Windows.Controls.ContentPresenter>、<xref:System.Windows.Controls.Slider> 中的 <xref:System.Windows.Controls.Primitives.TickBar>。  
+    5.  型別型協助程式型別。 範例：<xref:System.Windows.Controls.ContentPresenter>中<xref:System.Windows.Controls.Button>，<xref:System.Windows.Controls.Primitives.TickBar>中<xref:System.Windows.Controls.Slider>。  
   
-    6.  具名的 Helper 項目。  範例：<xref:System.Windows.Controls.ComboBox> 中的 <xref:System.Windows.Controls.TextBox>。  
+    6.  具名協助程式元素。 範例：<xref:System.Windows.Controls.TextBox>中<xref:System.Windows.Controls.ComboBox>。  
   
-    7.  來自具名 Helper 型別的反昇 \(Bubbled\) 事件。  如果您接聽來自樣式項目的反昇事件，應該要求產生該事件的項目必須能夠受到唯一識別。  範例：<xref:System.Windows.Controls.ToolBar> 中的 <xref:System.Windows.Controls.Primitives.Thumb>。  
+    7.  來自具名協助程式型別的反昇事件。 如果您接聽來自樣式元素的反昇事件，您應該要求必須能夠唯一識別產生該事件的元素。 範例：<xref:System.Windows.Controls.Primitives.Thumb>中<xref:System.Windows.Controls.ToolBar>。  
   
-    8.  自訂的 `OnRender` 行為。  範例：<xref:System.Windows.Controls.Button> 中的 <xref:Microsoft.Windows.Themes.ButtonChrome>。  
+    8.  自訂的 `OnRender` 行為。 範例：<xref:Microsoft.Windows.Themes.ButtonChrome>中<xref:System.Windows.Controls.Button>。  
   
--   **謹慎使用樣式觸發程序 \(相對於樣板觸發程序\)**：  要用以影響樣板中之項目屬性的觸發程序，必須宣告在樣板中。  除非您確知變更樣板也會終結觸發程序，否則就可以在樣式中宣告會影響控制項上之屬性的觸發程序 \(沒有 `TargetName`\)。  
+-   **儘量不要使用樣式觸發程序 (與範本觸發程序相反)**。 針對會影響範本中元素上屬性的觸發程序，您必須在範本中進行宣告。 針對會影響控制項 (無 `TargetName`) 上屬性的觸發程序，除非您知道變更範本應該也會終結觸發程序，否則您可以在樣式中進行宣告。  
   
--   **與現有的樣式模式一致**： 許多時候解決問題的方法不只一種。  要知道現有的控制項樣式模式，並盡量與之一致。  這對於從同一基底類別衍生出來的控制項來說尤其重要 \(如 <xref:System.Windows.Controls.ContentControl>、<xref:System.Windows.Controls.ItemsControl>、<xref:System.Windows.Controls.Primitives.RangeBase> 等等\)。  
+-   **與現有的樣式設定模式保持一致。** 在很多時候，都有多種方式可以解決問題。 請注意，儘可能與現有的控制項樣式設定模式保持一致。 這點特別重要之衍生自基底類型相同的控制項 (例如， <xref:System.Windows.Controls.ContentControl>， <xref:System.Windows.Controls.ItemsControl>，<xref:System.Windows.Controls.Primitives.RangeBase>等等)。  
   
--   **公開屬性以提供常用的自訂案例，而不需重製樣板**：  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支援可外掛\/可自訂的組件，因此控制項使用者只剩下兩種自訂方法可用：直接設定屬性或者用樣式設定屬性。  知道這一點後，就可以針對十分常用、高優先權的自訂案例公開少數屬性，而不需重製樣板。  以下是適合啟用自訂案例的時間與方法之最佳做法：  
+-   **公開屬性來啟用常見的自訂案例，而不重新範本化**。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支援可插式/可自訂的組件，因此控制項使用者僅有兩種自訂方法可用：直接設定屬性，或使用樣式來設定屬性。 記住這一點之後，就可以公開以非常常見、高優先順序自訂案例為目標的數量有限屬性，否則這些案例將需要重新範本化。 以下是啟用自訂案例的時機和方式的最佳做法：  
   
-    -   如為十分常用的自訂，則應該在控制項上公開為屬性，並由樣板使用。  
+    -   非常常見的自訂應該以控制項上屬性的形式公開，並由範本取用。  
   
-    -   如為較不常用 \(但非極少用\) 的自訂，則應該公開附加屬性，並由樣板使用。  
+    -   較不常見 (但並非罕見) 的自訂應該以附加屬性的形式公開，並由範本取用。  
   
-    -   如為已知但極少用的自訂，則重製樣板是可以接受的。  
+    -   針對已知但罕見的自訂，則可接受要求重新範本化。  
   
 <a name="Theme_Considerations"></a>   
-## 佈景主題考量  
+## <a name="theme-considerations"></a>佈景主題考量  
   
--   **所有佈景主題的佈景主題樣式都應該盡量保有一致的屬性語意，但不必強制保證**：  您的控制項的文件中應該要有份文件來描述控制項的屬性語意 \(Semantics\)，也就是屬性對控制項的「意義」。  例如，<xref:System.Windows.Controls.ComboBox> 控制項應該在 <xref:System.Windows.Controls.ComboBox>中定義 <xref:System.Windows.Controls.Control.Background%2A> 屬性的意義。  不論什麼佈景主題，控制項的預設樣式都應該盡量遵循在這份文件中定義的語意。  另一方面，控制項使用者則應該知道屬性語意可能因佈景主題不同而改變。  在某些情況下，可能因為特定佈景主題的視覺物件限制，而無法表達某個屬性   \(例如，Classic 佈景主題就沒有單一邊界可以讓 `Thickness` 針對許多控制項來套用\)。  
+-   **佈景主題樣式應該嘗試在所有佈景主題都具有一致的屬性語意，但不保證能做到**。 作為其記載的一部分，您的控制項應該要有一份文件，其中描述控制項的屬性語意，也就是控制項屬性的「意義」。 例如，<xref:System.Windows.Controls.ComboBox>控制項應該定義的意義<xref:System.Windows.Controls.Control.Background%2A>內屬性<xref:System.Windows.Controls.ComboBox>。 您控制項的預設樣式應該嘗試在所有佈景主題都遵守該文件中定義的語意。 另一方面，控制項使用者則應該注意屬性語意可能會因佈景主題不同而改變。 在某些情況下，在特定佈景主題所需的視覺條件約束下，可能會無法表達指定的屬性。 (例如，「傳統」佈景主題並沒有可針對許多控制項套用 `Thickness` 的單一框線)。  
   
--   **所有佈景主題的佈景主題樣式不需要都有一致的觸發程序語意**：  控制項樣式透過觸發程序或動畫公開的行為可能依佈景主題而異。  控制項使用者應該知道，不同佈景主題的控制項不一定會採用相同機制來達成特定行為。  例如，一個佈景主題可能用動畫來表達停留 \(Hover\) 行為，而另一個佈景主題則用觸發程序來表達同樣的行為。  這可能造成自訂控制項上保留的行為不一致   \(例如，如果控制項的停留 \(Hover\) 狀態是以觸發程序表達，變更背景 \(Background\) 屬性並不會影響控制項的停留狀態。  但是，如果停留狀態是以動畫實作，變更背景就會中斷動畫，進而中斷狀態轉換作業，而且無法恢復\)。  
+-   **佈景主題樣式不需要在所有佈景主題都具有一致的觸發程序語意**。 控制項樣式透過觸發程序或動畫公開的行為可能會因佈景主題不同而不同。 控制項使用者應該注意，控制項未必會採用相同的機制在所有佈景主題達到特定的行為。 例如，可能有一個佈景主題使用動畫來表達暫留行為，而另一個佈景主題則使用觸發程序。 這會導致在保留自訂控制項上的行為時不一致。 (例如，變更背景屬性可能不會影響控制項的暫留狀態，如果是使用觸發程序來表達該狀態。 不過，如果是使用動畫來實作暫留狀態，變更背景可能就會無法挽回地破壞動畫，也因而破壞狀態轉換)。  
   
--   **所有佈景主題的佈景主題樣式不需要都有一致的「配置」語意**：  例如，預設樣式不必保證控制項會在所有佈景主題中佔據同樣的大小，或保證控制項在所有佈景主題中都有相同的內容邊界 \/ 邊框。  
+-   **佈景主題樣式不需要在所有佈景主題都具有一致的「版面配置」語意**。 例如，預設樣式不需要保證控制項在所有佈景主題中都佔據相同的大小，或是保證控制項在所有佈景主題中都具有相同的內容邊界/邊框間距。  
   
-## 請參閱  
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另請參閱  
+ [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

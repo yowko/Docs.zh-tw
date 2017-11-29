@@ -1,61 +1,53 @@
 ---
-title: "逐步解說︰ 將從 Microsoft Office 組件的類型資訊內嵌在 Visual Studio (Visual Basic) |Microsoft 文件"
+title: "逐步解說： 將從 Microsoft Office 組件的類型資訊內嵌在 Visual Studio (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4347ba0e740419b53a1aa662c43933dead107e9c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 26e6fee5147e8477c64f7eaf0dc2aeb928c13e15
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>逐步解說︰ 將從 Microsoft Office 組件的類型資訊內嵌在 Visual Studio (Visual Basic)
-如果您參考的 COM 物件的應用程式中內嵌類型資訊，您可以不需要主要 interop 組件 (PIA)。 此外，內嵌的類型資訊可讓您達成版本獨立應用程式。 也就是您的程式可以寫入使用 COM 程式庫的多個版本的型別，而不需要特定的 PIA，每個版本。 這是與 Microsoft Office 文件庫中使用物件的應用程式的常見案例。 內嵌類型資訊，可讓相同組建的程式以使用不同版本的 Microsoft Office，而不需要重新部署的程式或每個版本的 Microsoft Office PIA 的不同電腦上。  
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>逐步解說： 將從 Microsoft Office 組件的類型資訊內嵌在 Visual Studio (Visual Basic)
+如果您在參考 COM 物件的應用程式中內嵌類型資訊，就不必使用主要 Interop 組件 (PIA)。 此外，內嵌的類型資訊可讓您確保應用程式的版本獨立。 也就是說，您可以撰寫程式來使用 COM 程式庫多個版本的類型，而不需每個版本使用特定的 PIA。 當應用程式使用來自 Microsoft Office 程式庫的物件時，這是十分常見的案例。 當您內嵌類型資訊時，可讓相同組建的程式在個別電腦上使用不同版本的 Microsoft Office，而不需要針對每個版本的 Microsoft Office 重新部署程式或 PIA。  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必要條件  
  本逐步解說需要下列項目：  
   
--   會安裝 Visual Studio 和 Microsoft Excel 的電腦。  
+-   已安裝 Visual Studio 和 Microsoft Excel 的電腦。  
   
--   第二部電腦，會安裝.NET Framework 4 或更新版本和不同的 excel 版本。  
+-   已安裝 .NET Framework 4 或更新版本和不同版本 Excel 的第二台電腦。  
   
-##  <a name="BKMK_createapp"></a>若要建立使用多個版本的 Microsoft Office 應用程式  
+##  <a name="BKMK_createapp"></a> 若要建立應用程式以使用多個版本的 Microsoft Office  
   
-1.  啟動 Visual Studio 安裝 Excel 的電腦上。  
+1.  在安裝 Excel 的電腦上啟動 Visual Studio。  
   
-2.  在 [檔案] **** 功能表上，依序選擇 [新增] ****和 [專案] ****。  
+2.  在 [檔案]  功能表上，依序選擇 [新增] 和 [專案] 。  
   
-3.  在**新的專案**對話方塊中，於**專案類型** 窗格中，請確定**Windows**已選取。 選取**主控台應用程式**中**範本**窗格。 在**名稱**方塊中，輸入`CreateExcelWorkbook`，然後選擇 [**確定**] 按鈕。 建立新的專案。  
+3.  在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 選取 [範本] 窗格中的 [主控台應用程式]。 在 [名稱] 文字方塊中，輸入 `CreateExcelWorkbook`，然後選擇 [確定] 按鈕。 隨即會建立新專案。  
   
-4.  開啟 CreateExcelWorkbook 專案的捷徑功能表，然後選擇**屬性**。 選擇**參考** 索引標籤。 選擇 [ **加入** ] 按鈕。  
+4.  開啟 CreateExcelWorkbook 專案的捷徑功能表，然後選擇**屬性**。 選擇**參考** 索引標籤。選擇  **加入**  按鈕。  
   
-5.  在**.NET**索引標籤上，選擇最新版本`Microsoft.Office.Interop.Excel`。 例如， **Microsoft.Office.Interop.Excel 版本為 14.0.0.0**。 選擇 [確定] **** 按鈕。  
+5.  在 [.NET] 索引標籤上，選擇最新版本的 `Microsoft.Office.Interop.Excel`。 例如，**Microsoft.Office.Interop.Excel 14.0.0.0**。 選擇 [確定]  按鈕。  
   
-6.  中的參考清單**CreateExcelWorkbook**專案中，選取的參考`Microsoft.Office.Interop.Excel`您在上一個步驟中加入。 在**屬性** 視窗中，請確定`Embed Interop Types`屬性設定為`True`。  
+6.  在 **CreateExcelWorkbook** 專案的參考清單中，選取上一個步驟所加入的 `Microsoft.Office.Interop.Excel` 參考。 在 [屬性] 視窗中，確認 `Embed Interop Types` 屬性已設為 `True`。  
   
     > [!NOTE]
-    >  由於內嵌 interop 類型資訊，以不同版本的 Microsoft Office 執行本逐步解說中建立的應用程式。 如果`Embed Interop Types`屬性設定為`False`，您必須包含每個版本的應用程式會執行與 Microsoft Office PIA。  
+    >  由於使用了內嵌的 Interop 類型資訊，因此本逐步解說所建立的應用程式可執行於不同版本的 Microsoft Office。 如果 `Embed Interop Types` 屬性設定為 `False`，您就必須將執行應用程式之每個版本 Microsoft Office 的 PIA 包含在內。  
   
-7.  開啟 Module1.vb 檔案。 下列程式碼取代檔案中的程式碼︰  
+7.  開啟 Module1.vb 檔案。 以下列程式碼取代檔案中的程式碼：  
   
     ```vb  
     Imports Excel = Microsoft.Office.Interop.Excel  
@@ -112,21 +104,20 @@ ms.lasthandoff: 03/13/2017
   
 8.  儲存專案。  
   
-9. 按 CTRL + F5 以建置並執行專案。 確認 Excel 活頁簿已經建立的範例程式碼中指定的位置︰ C:\SampleFolder\SampleWorkbook.xls。  
+9. 按 CTRL+F5 建置並執行專案。 確認範例程式碼中指定的位置 (C:\SampleFolder\SampleWorkbook.xls) 已建立 Excel 活頁簿。  
   
-##  <a name="BKMK_publishapp"></a>要發行到電腦安裝不同版本的 Microsoft Office 應用程式  
+##  <a name="BKMK_publishapp"></a> 若要將應用程式發行到安裝不同版本的 Microsoft Office 電腦  
   
-1.  開啟 Visual Studio 中的這個逐步解說所建立的專案。  
+1.  在 Visual Studio 中，開啟本逐步解說所建立的專案。  
   
-2.  在**建置**] 功能表上，選擇 [**發行 CreateExcelWorkbook**。 若要建立的應用程式可安裝版本的發行精靈的步驟。 如需詳細資訊，請參閱[發行精靈 （在 Visual Studio 中的 Office 程式開發）](https://msdn.microsoft.com/library/bb625071)。  
+2.  在 [建置] 功能表上，選擇 [發行 CreateExcelWorkbook]。 遵循 [發行精靈] 的步驟，建立應用程式的可安裝版本。 如需詳細資訊，請參閱[發行精靈 (Visual Studio 中的 Office 程式開發)](https://msdn.microsoft.com/library/bb625071)。  
   
-3.  安裝應用程式會安裝.NET Framework 4 或更新版本和不同的 excel 版本的電腦上。  
+3.  在已安裝 .NET Framework 4 或更新版本和不同版本 Excel 的電腦上，安裝應用程式。  
   
-4.  當安裝完成時，執行安裝的程式。  
+4.  當安裝完成時，執行已安裝的程式。  
   
-5.  確認 Excel 活頁簿已經建立的範例程式碼中指定的位置︰ C:\SampleFolder\SampleWorkbook.xls。  
+5.  確認範例程式碼中指定的位置 (C:\SampleFolder\SampleWorkbook.xls) 已建立 Excel 活頁簿。  
   
 ## <a name="see-also"></a>另請參閱  
- [逐步解說︰ 在 Visual Studio (Visual Basic) 中內嵌 Managed 組件的類型](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
+ [逐步解說： 在 Visual Studio (Visual Basic) 中內嵌 Managed 組件的類型](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
-

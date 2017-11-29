@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a53900d8305352a1122efda1abc75ce2b1626fe6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ea17e384ecb4536ed544e3b874631db6fe54e0e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  
@@ -48,7 +46,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
   
 1.  被動式重新導向：當未驗證使用者嘗試存取受保護資源，且您希望只將他們重新導向至 STS 而無需使用登入頁面時，請使用這種方法。 STS 會驗證使用者的身分識別，並簽發包含該使用者之適當宣告的安全性權杖。 這個選項會要求 WS-FAM 必須加入 HTTP 模組管線中。 您可以使用 Visual Studio 2012 的身分識別與存取工具 ，修改應用程式組態檔來使用 WS-FAM 以及建立與 STS 的同盟。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
-2.  您可以針對 RP 應用程式的登入頁面，在程式碼後置中呼叫 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=fullName> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
+2.  您可以針對 RP 應用程式的登入頁面，在程式碼後置中呼叫 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
   
  在被動式重新導向中，所有通訊都是透過用戶端 (通常是瀏覽器) 的回應/重新導向來執行。 您可以將 WS-FAM 新增至應用程式的 HTTP 管線，它會在其中監看是否有未經驗證的使用者要求，並將使用者重新導向至您指定的 STS。  
   
@@ -76,7 +74,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
   
 -   ASP.NET 基礎結構會叫用模組的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法來初始化模組。  
   
--   當 ASP.NET 基礎結構在衍生自 <xref:System.IdentityModel.Services.HttpModuleBase> 的其中一個應用程式模組上第一次叫用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法時，就會引發 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=fullName> 事件。 這個方法會存取靜態 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName> 屬性，因而導致從 Web.config 檔案中載入組態。 只有在第一次存取這個屬性時才會引發此事件。 從組態初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 物件可以透過事件處理常式中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=fullName> 屬性進行存取。 在將組態套用到任何模組之前，可以使用此事件來修改組態。 您可以在 Application_Start 方法中加入此事件的處理常式：  
+-   當 ASP.NET 基礎結構在衍生自 <xref:System.IdentityModel.Services.HttpModuleBase> 的其中一個應用程式模組上第一次叫用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法時，就會引發 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 事件。 這個方法會存取靜態 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 屬性，因而導致從 Web.config 檔案中載入組態。 只有在第一次存取這個屬性時才會引發此事件。 從組態初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 物件可以透過事件處理常式中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 屬性進行存取。 在將組態套用到任何模組之前，可以使用此事件來修改組態。 您可以在 Application_Start 方法中加入此事件的處理常式：  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -85,7 +83,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
     }  
     ```  
   
-     每個模組都會覆寫 <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=fullName> 和 <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=fullName> 抽象方法。 其中的第一個方法會新增與模組相關之 ASP.NET 管線事件的處理常式。 在大部分情況下，模組的預設實作便已足夠。 其中的第二個方法則會從其下列屬性初始化模組的屬性：<xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=fullName> 屬性。 (這是先前所載入之組態的複本)。如果您想要針對類別組態中衍生自 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 的新屬性支援其初始化作業，則可以覆寫第二個方法。 在這種情況下，您也必須衍生自適當的組態物件，才能支援新增的組態屬性；例如，衍生自 <xref:System.IdentityModel.Configuration.IdentityConfiguration>、<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 或 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>。  
+     每個模組都會覆寫 <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType> 抽象方法。 其中的第一個方法會新增與模組相關之 ASP.NET 管線事件的處理常式。 在大部分情況下，模組的預設實作便已足夠。 其中的第二個方法則會從其下列屬性初始化模組的屬性：<xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType> 屬性。 (這是先前所載入之組態的複本)。如果您想要針對類別組態中衍生自 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 的新屬性支援其初始化作業，則可以覆寫第二個方法。 在這種情況下，您也必須衍生自適當的組態物件，才能支援新增的組態屬性；例如，衍生自 <xref:System.IdentityModel.Configuration.IdentityConfiguration>、<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 或 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>。  
   
 -   WS-FAM 在攔截 STS 所簽發的安全性權杖時，會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> 事件。  
   
@@ -102,7 +100,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
 -   WS-FAM 會在每個使用者的工作階段關閉時，針對每一個工作階段引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 事件一次。 如果工作階段是在用戶端上關閉 (例如，藉由刪除工作階段 Cookie)，則不會引發此事件。 在 SSO 環境中，IP-STS 也可以要求每個 RP 登出。 若將 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> 設定為 `true`，這也會引發此事件。  
   
 > [!NOTE]
->  您不應該在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 所引發的任何事件期間使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> 屬性。 這是因為 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> 會在驗證程序之後才設定，而事件則是在驗證程序期間引發。  
+>  您不應該在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 所引發的任何事件期間使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性。 這是因為 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 會在驗證程序之後才設定，而事件則是在驗證程序期間引發。  
   
 ### <a name="configuration-of-federated-authentication"></a>同盟驗證的組態  
  WS-FAM 和 SAM 是透過 [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素進行設定。 [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) 子元素可設定 WS-FAM 屬性的預設值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> 屬性和 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> 屬性。 (藉由提供某些 WS FAM 事件的處理常式，即可依要求來變更這些值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>)。SAM 所使用的 Cookie 處理常式則是透過 [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 子元素進行設定。 WIF 提供了已在 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 類別中實作的預設 Cookie 處理常式，其區塊大小可透過 [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 元素來設定。 `<federationConfiguration>` 元素會參考 <xref:System.IdentityModel.Configuration.IdentityConfiguration>，這樣便可提供應用程式所使用之其他 WIF 元件的組態，例如 <xref:System.Security.Claims.ClaimsAuthenticationManager> 和 <xref:System.Security.Claims.ClaimsAuthorizationManager>。 透過在 `<federationConfiguration>` 元素的 `identityConfigurationName` 屬性中指定具名的 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素，即可明確參考身分識別組態。 如果未明確參考身分識別組態，將會使用預設的身分識別組態。  
@@ -151,7 +149,6 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>   
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
+ <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
  [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
-

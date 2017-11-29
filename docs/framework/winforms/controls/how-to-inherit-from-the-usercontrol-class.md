@@ -1,52 +1,53 @@
 ---
-title: "如何：繼承自 UserControl 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "複合控制項, 建立"
-  - "繼承, Windows Form 自訂控制項"
-  - "使用者控制項 [Windows Form], 建立"
-  - "UserControl 類別, 繼承自"
+title: "如何：繼承自 UserControl 類別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inheritance [Windows Forms], Windows Forms custom controls
+- UserControl class [Windows Forms], inheriting from
+- user controls [Windows Forms], creating
+- composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fbeb2712742ae4c500ccd14a19c397d5d411c73a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：繼承自 UserControl 類別
-如果您要將一或多個 Windows Form 控制項的功能與自訂程式碼結合，就必須建立「*使用者控制項*」。  使用者控制項結合快速控制項開發、標準 Windows Form 控制項功能，及自訂屬性和方法的多樣化功能。  建立使用者控制項時，會顯示可見的設計工具，您可使用它來放置標準的 Windows Form 控制項。  這些控制項會保留所有的固有功能，以及標準控制項的外觀和行為 \(外觀及操作\)。  然而，一旦這些控制項建置到使用者控制項時，就無法再透過程式碼使用它們了。  使用者控制項執行它們自己的繪製，也處理控制項相關的所有基本功能。  
+# <a name="how-to-inherit-from-the-usercontrol-class"></a>如何：繼承自 UserControl 類別
+若要結合一或多個 Windows Forms 控制項的功能與自訂程式碼，您可以建立「使用者控制項」。 使用者控制項可結合快速控制項開發、標準 Windows Forms 控制項功能，以及自訂屬性和方法的各種用途。 當您開始建立使用者控制項時，您會看到吸引人的設計工具，您可以在其上放置標準 Windows Forms 控制項。 這些控制項會保留其所有固有功能，以及標準控制項的外觀和行為 (外觀及操作)。 不過，這些控制項一旦內建於使用者控制項，您就無法再透過程式碼使用它們。 使用者控制項會進行自己的繪製，也會處理與控制項相關聯的所有基本功能。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 若要建立使用者控制項  
+### <a name="to-create-a-user-control"></a>建立使用者控制項  
   
-1.  建立新的 \[**Windows 控制項程式庫**\] 專案。  
+1.  建立新的 [Windows 控制項程式庫] 專案。  
   
-     新專案將以空白的使用者控制項建立。  
+     使用空白使用者控制項來建立新專案。  
   
-2.  將控制項從 \[**工具箱**\] 的 \[**Windows Form**\] 索引標籤拖曳至您的設計工具。  
+2.  將控制項從 [工具箱] 的 [Windows Forms] 索引標籤拖曳到您的設計工具。  
   
-3.  當您要這些控制項出現在最終的使用者控制項時，您必須放置和設計它們。  如果您要允許開發者存取組成控制項 \(Constituent Control\)，您必須將它們宣告為公用，或選擇性地公開組成控制項的屬性。  如需詳細資訊，請參閱 [如何：公開組成控制項的屬性](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)。  
+3.  這些控制項的放置和設計方式應該依照您希望它們出現於最終使用者控制項的方式。 如果您想要讓開發人員存取組成控制項，您必須將它們宣告為公用，或選擇性地公開組成控制項的屬性。 如需詳細資訊，請參閱[如何：公開組成控制項的屬性](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)。  
   
-4.  實作您的控制項將加入的任何自訂方法或屬性。  
+4.  實作您的控制項將併入的任何自訂方法或屬性。  
   
-5.  按下 F5 鍵以建置專案，並在 \[**使用者控制項測試容器**\] 中執行控制項。  如需詳細資訊，請參閱 [如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+5.  按下 F5 鍵以建置專案，並且在 **UserControl 測試容器**中執行您的控制項。 如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
-## 請參閱  
- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [如何：繼承自 Control 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)   
- [如何：繼承自現有的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)   
- [如何：撰寫 Windows Form 的控制項](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)   
- [Troubleshooting Inherited Event Handlers in Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)   
- [如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+## <a name="see-also"></a>另請參閱  
+ [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [操作說明：繼承自 Control 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [操作說明：繼承自現有的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [操作說明：撰寫 Windows Forms 的控制項](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ [操作說明：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)

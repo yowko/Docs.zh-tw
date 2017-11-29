@@ -1,61 +1,63 @@
 ---
-title: "ContextMenu 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ContextMenu [WPF], 樣式和範本"
-  - "ControlTemplate [WPF], ContextMenu"
-  - "組件 [WPF], ContextMenu"
-  - "狀態 [WPF], ContextMenu"
-  - "樣式 [WPF], ContextMenu"
-  - "範本 [WPF], ContextMenu"
+title: "ContextMenu 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [WPF], ContextMenu
+- parts [WPF], ContextMenu
+- ContextMenu [WPF], styles and templates
+- styles [WPF], ContextMenu
+- ControlTemplate [WPF], ContextMenu
+- states [WPF], ContextMenu
 ms.assetid: 342d1f17-c406-4f94-8f55-867c5f3ea511
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a51860b21c21f8ce21510b04e817ec75d0e3b4fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ContextMenu 樣式和範本
-本主題說明 <xref:System.Windows.Controls.ContextMenu> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="contextmenu-styles-and-templates"></a>ContextMenu 樣式和範本
+本主題描述樣式和範本<xref:System.Windows.Controls.ContextMenu>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
-## ContextMenu 組件  
- <xref:System.Windows.Controls.ContextMenu> 控制項沒有任何具名組件。  
+## <a name="contextmenu-parts"></a>ContextMenu 組件  
+ <xref:System.Windows.Controls.ContextMenu>控制項沒有任何已命名的組件。  
   
- 當您建立 <xref:System.Windows.Controls.ContextMenu> 的 <xref:System.Windows.Controls.ControlTemplate> 時，您的範本可能包含以 <xref:System.Windows.Controls.ScrollViewer> 包住的 <xref:System.Windows.Controls.ItemsPresenter> \(<xref:System.Windows.Controls.ItemsPresenter> 會顯示 <xref:System.Windows.Controls.ContextMenu> 中的每一個項目，而 <xref:System.Windows.Controls.ScrollViewer> 會啟用控制項內的捲動功能\)。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer> 的直接子系，您必須將 <xref:System.Windows.Controls.ItemsPresenter> 命名為 `ItemsPresenter`。  
+ 當您建立<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.ContextMenu>，可能會包含您的範本<xref:System.Windows.Controls.ItemsPresenter>內<xref:System.Windows.Controls.ScrollViewer>。 (<xref:System.Windows.Controls.ItemsPresenter>會顯示每個項目<xref:System.Windows.Controls.ContextMenu>;<xref:System.Windows.Controls.ScrollViewer>可捲動控制項內)。  如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子系<xref:System.Windows.Controls.ScrollViewer>，您必須提供<xref:System.Windows.Controls.ItemsPresenter>名稱`ItemsPresenter`。  
   
-## ContextMenu 狀態  
- 下表列出 <xref:System.Windows.Controls.ContextMenu> 控制項的可見狀態。  
+## <a name="contextmenu-states"></a>ContextMenu 狀態  
+ 下表列出的視覺狀態<xref:System.Windows.Controls.ContextMenu>控制項。  
   
-||||  
-|-|-|-|  
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|-|-|-|  
+|驗證|ValidationStates|此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。|  
   
-## ContextMenu ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.ContextMenu> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="contextmenu-controltemplate-example"></a>ContextMenu ControlTemplate 範例  
+ 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.ContextMenu>控制項。  
   
- [!code-xml[ControlTemplateExamples#ContextMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#contextmenu)]  
+ [!code-xaml[ControlTemplateExamples#ContextMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#contextmenu)]  
   
- <xref:System.Windows.Controls.ControlTemplate> 使用下列資源。  
+ <xref:System.Windows.Controls.ControlTemplate>使用下列資源。  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱[使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) \(英文\)。  
+ 如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

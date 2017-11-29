@@ -1,76 +1,59 @@
 ---
-title: "在 Visual Basic 中的運算子優先順序 |Microsoft 文件"
-ms.date: 2015-07-20
+title: "Visual Basic 中的運算子優先順序"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- arithmetic operators, precedence
+- arithmetic operators [Visual Basic], precedence
 - operator precedence
-- logical operators, precedence
+- logical operators [Visual Basic], precedence
 - operators [Visual Basic], associativity
 - operators [Visual Basic], resolution
-- associativity of operators
+- associativity of operators [Visual Basic]
 - operators [Visual Basic], precedence
-- precedence, of operators
-- comparison operators, precedence
-- math operators
+- precedence [Visual Basic], of operators
+- comparison operators [Visual Basic], precedence
+- math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6532fc0c26db3b736c863be075571570a3d25eef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的運算子優先順序
-每個部分數個作業發生時在運算式中，評估並解決在預先定義的順序呼叫*運算子優先順序*。  
+每個組件時數個作業發生時在運算式中，評估，而且在呼叫預先定義的順序解決*運算子優先順序*。  
   
 ## <a name="precedence-rules"></a>優先順序規則  
- 當運算式包含運算子，從多個類別時，會評估根據下列規則︰  
+ 當運算式包含來自多個類別目錄的運算子時，它們會根據下列規則進行評估：  
   
--   算術和串連運算子有下列的一節所述的優先順序，而且全都有更高的優先順序高於比較、 邏輯和位元運算子。  
+-   算術和串連運算子具有的優先順序在下一節中所述，而且全都有更高的優先順序高於比較、 邏輯和位元運算子。  
   
--   所有比較運算子優先順序都都相同，且只需要較高的優先順序高於邏輯和位元運算子，但低於算術和串連運算子。  
+-   所有比較運算子都有相同的優先順序，以及所有都具有較高的優先順序高於邏輯和位元運算子，但較低的優先順序高於算術和串連運算子。  
   
--   邏輯和位元運算子有下列的一節所述的優先順序，而且全都有較低的優先順序高於算術、 串連運算子和比較運算子。  
+-   邏輯和位元運算子具有的優先順序在下一節中所述，而且全都有較低的優先順序高於算術、 串連運算子和比較運算子。  
   
--   具有相同優先順序的運算子會向左到右評估運算式中出現的順序。  
+-   具有相同優先順序的運算子會由左至右評估的運算式中出現的順序。  
   
 ## <a name="precedence-order"></a>優先順序  
- 運算子會依下列優先順序進行評估︰  
+ 運算子會評估順序的優先順序如下：  
   
 ### <a name="await-operator"></a>Await 運算子  
- Await  
+ await  
   
-### <a name="arithmetic-and-concatenation-operators"></a>算術和串連運算子  
+### <a name="arithmetic-and-concatenation-operators"></a>算術運算子和串連運算子  
  乘冪 (`^`)  
   
- 一元識別和否定 (`+`， `–`)  
+ 一元身分識別和否定 (`+`， `–`)  
   
- 乘法和除法浮點數 (`*`， `/`)  
+ 乘法和除法浮點 (`*`， `/`)  
   
  整數除法 (`\`)  
   
@@ -83,7 +66,7 @@ ms.lasthandoff: 03/13/2017
  算術的位元移位 (`<<`， `>>`)  
   
 ### <a name="comparison-operators"></a>比較運算子  
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)  
+ 所有比較運算子 (`=`， `<>`， `<`， `<=`， `>`， `>=`， `Is`， `IsNot`， `Like`， `TypeOf`...`Is`)  
   
 ### <a name="logical-and-bitwise-operators"></a>邏輯和位元運算子  
  否定 (`Not`)  
@@ -95,14 +78,14 @@ ms.lasthandoff: 03/13/2017
  排除分離 (`Xor`)  
   
 ### <a name="comments"></a>註解  
- `=`運算子只是等號比較運算子，指派運算子。  
+ `=`運算子只是等號比較運算子，不是指派運算子。  
   
  字串串連運算子 (`&`) 不是算術運算子，但它分組搭配算術運算子的優先順序。  
   
- `Is`和`IsNot`運算子是物件參考的比較運算子。 它們不會比較兩個物件的值這些檢查只是為了確定是否兩個物件變數參考相同物件執行個體。  
+ `Is`和`IsNot`運算子都是物件參考的比較運算子。 不會比較兩個物件的值他們檢查只是用來判斷兩個物件變數是否參考相同的物件執行個體。  
   
 ## <a name="associativity"></a>順序關聯性  
- 相同優先順序的運算子一起出現在運算式中，例如乘法與除法，編譯器會評估為遇到它從左到右每項作業。 下列範例將說明這點。  
+ 相同優先順序的運算子一起出現在運算式中，例如乘法與除法，編譯器會評估為遇到它從左到右每一項作業。 下列範例將說明這點。  
   
 ```  
 Dim n1 As Integer = 96 / 8 / 4  
@@ -110,12 +93,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- 第一個運算式會評估除法 96 / 8 （這會產生 12），然後除法 12 / 4，這會產生三個。 因為編譯器會判斷值為作業`n1`從左到右，評估時，相同的明確指定該順序`n2`。 同時`n1`和`n2`有三個結果。 相較之下，`n3`的結果是 48，因為括號會強制編譯器將評估 8 / 4 第一次。  
+ 第一個運算式會評估除法 96 / 8 （這會產生 12），然後除法 12 / 4，這會產生三個。 因為編譯器會評估為作業`n1`從左到右，評估時，相同的明確指定該順序`n2`。 同時`n1`和`n2`有三個結果。 相反地，`n3`的結果是 48，因為括號會強制編譯器將評估 8 / 4 第一次。  
   
- 基於此行為，運算子可以說是*左向*中[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+ 基於此行為，運算子可視為是*左向關聯*中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
   
-## <a name="overriding-precedence-and-associativity"></a>覆寫優先順序和順序關聯性  
- 您可以使用括號強制優先評估運算式的某些部分。 優先順序和左順序關聯性，也可以覆寫。 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]永遠執行之前以外的括號括住的作業。 不過，在括號括住，它會維護一般優先順序和關聯性，除非您使用括號括號內。 下列範例將說明這點。  
+## <a name="overriding-precedence-and-associativity"></a>覆寫優先順序和關聯性  
+ 您可以使用括號強制其他項目之前，在評估運算式的某些部分。 優先順序和左順序關聯性，也可以覆寫。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]一律會執行之前以外的括號括住的作業。 不過，在括號，它仍保留一般優先順序和關聯性，除非您使用括號括號內。 下列範例將說明這點。  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -136,11 +119,11 @@ g = (a - (b + c)) / (d * e)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [= 運算子](../../../visual-basic/language-reference/operators/assignment-operator.md)   
- [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Like 運算子](../../../visual-basic/language-reference/operators/like-operator.md)   
- [TypeOf 運算子](../../../visual-basic/language-reference/operators/typeof-operator.md)   
- [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)   
- [依功能排列的運算子](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
+ [= 運算子](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Like 運算子](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [TypeOf 運算子](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

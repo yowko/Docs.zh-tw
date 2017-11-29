@@ -1,51 +1,33 @@
 ---
 title: "使用 Visual Basic 存取檔案"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - file access
-- files, input and output
+- files [Visual Basic], input and output
 - file access, Visual Basic
-- files, I/O
+- files [Visual Basic], I/O
 - file I/O classes
 - data [Visual Basic], accessing from files
-- files, accessing
+- files [Visual Basic], accessing
 - file access, using components
 - My.Computer.FileSystem object, accessing files
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9929061feeccee31028056bc93f0f0a2f119eb4e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 71e941bf33c3b1051c22c8170b327df9fae7d4b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 存取檔案
 `My.Computer.FileSystem` 物件提供用於處理檔案和資料夾的工具。 其屬性、方法和事件可讓您建立、複製、移動、調查及刪除檔案和資料夾。 `My.Computer.FileSystem` 比 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 所提供的舊版函式 (`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等) 提供更佳效能，以利回溯相容性。  
@@ -71,4 +53,3 @@ ms.lasthandoff: 07/28/2017
   
  [疑難排解：讀取和寫入文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  列出讀取和寫入文字檔時遇到的常見問題，並針對每個問題提供補救建議。
-

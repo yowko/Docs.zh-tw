@@ -1,111 +1,112 @@
 ---
-title: "逐步解說：自動將自訂元件填入工具箱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自訂元件, 加入至工具箱"
-  - "IToolboxService 介面"
-  - "工具箱 [Windows Form], 填入"
+title: "逐步解說：自動將自訂元件填入工具箱"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IToolboxService interface
+- Toolbox [Windows Forms], populating
+- custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 691487046e2a34dbf233dc4bc03e20f9ec245da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：自動將自訂元件填入工具箱
-如果元件是由目前開啟方案中的專案所定義，您不需進行任何動作，這些元件就會自動出現在 \[**工具箱**\] 中。  您也可以使用 [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/zh-tw/bd07835f-18a8-433e-bccc-7141f65263bb)，以手動方式將自訂元件填入 \[**工具箱**\]，但是 \[**工具箱**\] 會使用下列所有特性來考量方案建置輸出中的項目：  
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>逐步解說：自動將自訂元件填入工具箱
+如果您的元件會由目前開啟的方案中的專案，會自動將會出現在**工具箱**，而不需要您所需的動作。 您也可以手動填入**工具箱**與使用自訂元件[選擇工具箱項目 對話方塊 (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**考慮您的方案中的項目建置輸出具有所有下列特性：  
   
--   實作 <xref:System.ComponentModel.IComponent>；  
+-   實作<xref:System.ComponentModel.IComponent>;  
   
--   並未將 <xref:System.ComponentModel.ToolboxItemAttribute> 設定為 `false`；  
+-   沒有<xref:System.ComponentModel.ToolboxItemAttribute>設`false`;  
   
--   並未將 <xref:System.ComponentModel.DesignTimeVisibleAttribute> 設定為 `false`。  
+-   沒有<xref:System.ComponentModel.DesignTimeVisibleAttribute>設`false`。  
   
 > [!NOTE]
->  因為 \[**工具箱**\] 沒有遵循參考鏈結，所以不會顯示並非由方案中的專案建置的項目。  
+>  **工具箱**未遵循參考鏈結，所以它不會顯示並不是您方案中的專案所建置的項目。  
   
- 這個逐步解說示範在建置自訂元件後，如何讓此元件自動出現在 \[**工具箱**\] 中。  逐步解說將說明的工作包括：  
+ 本逐步解說示範如何自訂元件會自動出現在**工具箱**建置元件之後。 這個逐步解說中所述的工作包括：  
   
--   建立 Windows Form 專案  
+-   建立 Windows Form 專案。  
   
 -   建立自訂元件。  
   
 -   建立自訂元件的執行個體。  
   
--   卸載和重新載入自訂元件。  
+-   卸載並重新載入自訂元件。  
   
- 當您完成時，將會看見您所建立的元件填入了 \[**工具箱**\]。  
+ 當您完成時，您會看到**工具箱**會填入您所建立的元件。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
-## 建立專案  
+## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
-#### 若要建立專案  
+#### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立名為 `ToolboxExample` 的 Windows 架構應用程式專案。  
+1.  建立以 Windows 為基礎的應用程式專案，名為 `ToolboxExample`。  
   
-     如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+     如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
-2.  加入新的元件至專案。  將它稱為 `DemoComponent`。  
+2.  將新元件加入至專案。 呼叫它`DemoComponent`。  
   
-     如需詳細資訊，請參閱 [NIB:How to: Add New Project Items](http://msdn.microsoft.com/zh-tw/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。  
+     如需詳細資訊，請參閱[NIB： 如何： 加入新的專案項目](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。  
   
 3.  建置專案。  
   
-4.  按一下 \[**工具**\] 功能表上的 \[**選項**\] 項目。  按一下 \[**Windows Form 設計工具**\] 項目下的 \[**一般**\]，並確定 \[**AutoToolboxPopulate**\] 選項設定為 \[**True**\]。  
+4.  從**工具**功能表上，按一下 **選項**項目。 按一下**一般**下**Windows Form 設計工具**項目，並確定**AutoToolboxPopulate**選項設定為**True**。  
   
-## 建立自訂元件的執行個體  
- 下一步則是建立表單上自訂元件的執行個體。  因為 \[**工具箱**\] 會自動產生新元件，所以這就和建立任何其他元件或控制項一樣簡單。  
+## <a name="creating-an-instance-of-a-custom-component"></a>建立自訂元件的執行個體  
+ 下一個步驟是在表單上建立自訂元件的執行個體。 因為**工具箱**自動帳戶的新元件，這非常容易，只要建立元件或控制項。  
   
-#### 若要建立自訂元件的執行個體  
+#### <a name="to-create-an-instance-of-a-custom-component"></a>若要建立自訂元件的執行個體  
   
-1.  在 \[**Form 設計工具**\] 中開啟專案的表單。  
+1.  開啟專案的表單中**Form 設計工具**。  
   
-2.  在 \[**工具箱**\] 中按一下稱為 \[**ToolboxExample 元件**\] 的新索引標籤。  
+2.  在**工具箱**，按一下 新索引標籤呼叫**ToolboxExample 元件**。  
   
-     按一下索引標籤後，您就會看見 \[**DemoComponent**\]。  
+     一旦您按一下索引標籤，您會看到**DemoComponent**。  
   
     > [!NOTE]
-    >  基於效能原因，\[**工具箱**\] 自動填入區域的元件不會顯示自訂點陣圖，且不支援 <xref:System.Drawing.ToolboxBitmapAttribute>。  若要在 \[**工具箱**\] 中顯示自訂元件的圖示，請使用 \[**選擇工具箱項目**\] 對話方塊載入您的元件。  
+    >  基於效能考量，自動填入內容區域中的元件**工具箱**不會顯示自訂點陣圖與<xref:System.Drawing.ToolboxBitmapAttribute>不支援。 若要顯示的圖示中的自訂元件**工具箱**，使用**選擇工具箱項目**載入您的元件 對話方塊。  
   
-3.  將您的元件拖曳至表單上。  
+3.  您的元件拖曳至表單。  
   
-     會建立元件的執行個體，並將它加入至 \[**元件匣**\]。  
+     建立元件的執行個體並將其加入**元件匣**。  
   
-## 卸載和重新載入自訂元件  
- \[**工具箱**\] 會考慮每個載入專案中的元件，且在卸載專案時移除對專案元件的參考。  
+## <a name="unloading-and-reloading-a-custom-component"></a>卸載並重新載入自訂元件  
+ **工具箱**會考慮在每個元件的載入專案，並卸載專案之後，它會移除專案的元件的參考。  
   
-#### 若要實驗在工具箱上卸載和重新載入元件的作用  
+#### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>若要試驗的卸載和重新載入元件工具箱上的效果  
   
-1.  將專案從方案中卸載。  
+1.  專案從方案中卸載。  
   
-     如需卸載專案的詳細資訊，請參閱 [NIB:How to: Unload and Reload Projects](http://msdn.microsoft.com/zh-tw/abc0155b-8fcb-4ffc-95b6-698518a7100b)。  如果您接到儲存的提示，請選擇 \[**是**\]。  
+     如需 卸載專案的詳細資訊，請參閱[NIB： 如何： 卸載再重新載入專案](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b)。 如果提示您儲存時，請選擇**是**。  
   
-2.  加入新的 \[**Windows 應用程式**\] 專案至方案。  在 \[**設計工具**\] 中開啟表單。  
+2.  加入新**Windows 應用程式**專案加入方案。 開啟表單中的**設計師**。  
   
-     來自先前專案的 \[**ToolboxExample 元件**\] 索引標籤已經移走了。  
+     **ToolboxExample 元件**從先前的專案 索引標籤現在會消失。  
   
-3.  重新載入 \[`ToolboxExample`\] 專案。  
+3.  重新載入`ToolboxExample`專案。  
   
-     \[**ToolboxExample 元件**\] 索引標籤會再度出現。  
+     **ToolboxExample 元件**索引標籤現在隨即再度出現。  
   
-## 後續步驟  
- 這個逐步解說示範 \[**工具箱**\] 對專案元件的考量，不過 \[**工具箱**\] 也會考慮控制項。  從方案加入或移除控制項專案，藉此試用您的自訂控制項。  
+## <a name="next-steps"></a>後續步驟  
+ 本逐步解說會示範**工具箱**考慮專案的元件，但**工具箱**也是會考慮控制項。 實驗您自己的自訂控制項加入和移除控制項的專案，從您的方案。  
   
-## 請參閱  
- [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/zh-tw/8dd170af-72f0-4212-b04b-034ceee92834)   
- [How to: Manipulate Toolbox Tabs](http://msdn.microsoft.com/zh-tw/21285050-cadd-455a-b1f5-a2289a89c4db)   
- [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/zh-tw/bd07835f-18a8-433e-bccc-7141f65263bb)   
- [將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱  
+ [選項對話方塊、 Windows Form 設計工具，一般](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [如何：操作工具箱索引標籤](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [選擇工具箱項目對話方塊 (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [將控制項加入 Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

@@ -1,28 +1,31 @@
 ---
-title: "HOW TO：指定通道安全性認證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：指定通道安全性認證"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：指定通道安全性認證
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務 Moniker 允許 COM 應用程式呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 大部分 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務都會要求用戶端必須指定驗證和授權的認證。 從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，您可以在 Managed 程式碼或應用程式組態檔中指定這些認證。 當呼叫[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務從 COM 應用程式，您可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面來指定認證。 本主題將說明使用來指定認證的各種方式<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面。  
+# <a name="how-to-specify-channel-security-credentials"></a>HOW TO：指定通道安全性認證
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務 Moniker 允許 COM 應用程式呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 大部分 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務都會要求用戶端必須指定驗證和授權的認證。 從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，您可以在 Managed 程式碼或應用程式組態檔中指定這些認證。 如果是從 COM 應用程式呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，則可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials>是以 IDispatch 為基礎的介面，您將無法取得 Visual Studio 環境中的 IntelliSense 功能。  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是以 IDispatch 為基礎的介面，因此您無法在 Visual Studio 環境中使用 IntelliSense 功能。  
   
- 本文將使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中定義的服務[訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
+ 此發行項將會使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中定義的服務[訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
   
 ### <a name="to-specify-a-client-certificate"></a>若要指定用戶端憑證  
   
@@ -57,7 +60,7 @@ caps.handback.revision: 18
   
 7.  執行 Visual Basic 應用程式及驗證結果。  
   
-     Visual Basic 應用程式將會顯示含有呼叫 Add(3, 4) 之結果的訊息方塊。 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29>或<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>也可取代<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29>來設定用戶端憑證︰  
+     Visual Basic 應用程式將會顯示含有呼叫 Add(3, 4) 之結果的訊息方塊。 您也可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 或 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> 替代 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 來設定用戶端憑證：  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -98,7 +101,7 @@ caps.handback.revision: 18
 4.  執行 Visual Basic 應用程式及驗證結果。 Visual Basic 應用程式將會顯示含有呼叫 Add(3, 4) 之結果的訊息方塊。  
   
     > [!NOTE]
-    >  在這個範例的服務 Moniker 中指定的繫結已經變更為 WSHttpBinding_ICalculator。 也請注意，您必須提供有效的使用者名稱和密碼的呼叫中<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>。  
+    >  在這個範例的服務 Moniker 中指定的繫結已經變更為 WSHttpBinding_ICalculator。 另請注意，您必須在對 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> 的呼叫中提供有效的使用者名稱和密碼。  
   
 ### <a name="to-specify-windows-credentials"></a>若要指定 Windows 認證  
   
@@ -128,9 +131,9 @@ caps.handback.revision: 18
   
 ### <a name="to-specify-an-issue-token"></a>指定發行權杖  
   
-1.  發行權杖僅適用於使用聯合安全性的應用程式。 如需聯合安全性的詳細資訊，請參閱[聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)和[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+1.  發行權杖僅適用於使用聯合安全性的應用程式。 如需聯合安全性的詳細資訊，請參閱[同盟和發出的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)和[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
-     下列 Visual Basic 程式碼範例示範如何呼叫<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>方法︰  
+     下列 Visual Basic 程式碼範例示範如何呼叫 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 方法：  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -142,11 +145,11 @@ caps.handback.revision: 18
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     如需這個方法之參數的詳細資訊，請參閱<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>。  
+     如需此方法之參數的詳細資訊，請參閱 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>。  
   
 ## <a name="see-also"></a>另請參閱  
- [同盟](../../../../docs/framework/wcf/feature-details/federation.md)   
- [如何︰ 設定聯合服務認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
- [如何︰ 建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
+ [同盟](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [如何： 設定聯合服務認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何： 建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

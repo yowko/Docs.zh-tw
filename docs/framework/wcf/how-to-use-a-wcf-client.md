@@ -1,30 +1,29 @@
 ---
-title: "HOW TO：使用 Windows Communication Foundation 用戶端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF 用戶端 [WCF], 使用"
+title: "HOW TO：使用 Windows Communication Foundation 用戶端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c4b0612cc18129f9f35ed3f475bca8941a20d3ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用 Windows Communication Foundation 用戶端
-這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的最後一個。  如需這六個工作的概觀，請參閱[快速入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
+# <a name="how-to-use-a-windows-communication-foundation-client"></a>HOW TO：使用 Windows Communication Foundation 用戶端
+這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的最後一個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
   
- 在建立並設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Proxy 之後，就可以建立用戶端執行個體，也可以編譯用戶端應用程式並用於與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務通訊。  本主題將說明具現化及使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的程序。  這個程序會執行三項工作：  
+ 在建立並設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Proxy 之後，就可以建立用戶端執行個體，也可以編譯用戶端應用程式並用於與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務通訊。 本主題將說明具現化及使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的程序。 這個程序會執行三項工作：  
   
 1.  具現化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。  
   
@@ -32,7 +31,7 @@ caps.handback.revision: 38
   
 3.  在完成作業呼叫後即關閉用戶端。  
   
-### 若要使用 Windows Communication Foundation 用戶端  
+### <a name="to-use-a-windows-communication-foundation-client"></a>若要使用 Windows Communication Foundation 用戶端  
   
 1.  開啟 GettingStartedClient 專案中的 Program.cs 或 Program.vb 檔案，並以下列程式碼取代現有的程式碼：  
   
@@ -82,7 +81,6 @@ caps.handback.revision: 38
             }  
         }  
     }  
-  
     ```  
   
     ```  
@@ -133,44 +131,28 @@ caps.handback.revision: 38
         End Sub  
   
     End Module  
-  
     ```  
   
-     注意匯入 GettingStartedClient.ServiceReference1 的 using 或 imports 陳述式。  這會匯入在 Visual Studio 中 \[加入服務參考\] 所產生的程式碼。  程式碼會具現化 WCF Proxy，然後呼叫計算機服務所公開的每一項服務作業、關閉 Proxy 並終止。  
+     注意匯入 GettingStartedClient.ServiceReference1 的 using 或 imports 陳述式。 這會匯入在 Visual Studio 中 [加入服務參考] 所產生的程式碼。 程式碼會具現化 WCF Proxy，然後呼叫計算機服務所公開的每一項服務作業、關閉 Proxy 並終止。  
   
- 您現在已完成教學課程。  您定義服務合約、實作服務合約、產生 WCF Proxy、設定 WCF 用戶端應用程式，然後使用 Proxy 來呼叫服務作業。  若要測試應用程式，請先執行 GettingStartedHost 以啟動服務，然後再執行 GettingStartedClient。  GettingStartedHost 的輸出應該看起來像這樣：  
+ 您現在已完成教學課程。 您定義服務合約、實作服務合約、產生 WCF Proxy、設定 WCF 用戶端應用程式，然後使用 Proxy 來呼叫服務作業。 若要測試應用程式，請先執行 GettingStartedHost 以啟動服務，然後再執行 GettingStartedClient。 GettingStartedHost 的輸出應該看起來像這樣：  
   
 ```Output  
-  
-            服務已經就緒。  按下 <ENTER> 鍵可終止服務。  Received Add(100,15.99)  
-Return: 115.99  
-Received Subtract(145,76.54)  
-Return: 68.46  
-Received Multiply(9,81.25)  
-Return: 731.25  
-Received Divide(22,7)  
-Return: 3.14285714285714    
+The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714  
 ```  
   
  GettingStartedClient 的輸出應該看起來像這樣：  
   
 ```Output  
-  
-            Add(100,15.99) = 115.99  
-Subtract(145,76.54) = 68.46  
-Multiply(9,81.25) = 731.25  
-Divide(22,7) = 3.14285714285714  
-  
-按下 <ENTER> 鍵可終止用戶端。  
-  
+Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.  
 ```  
   
-## 請參閱  
- [建置用戶端](../../../docs/framework/wcf/building-clients.md)   
- [HOW TO：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [快速入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)   
- [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)   
- [HOW TO：建立雙工合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)   
- [HOW TO：使用雙工合約存取服務](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)   
- [使用者入門](../../../docs/framework/wcf/samples/getting-started-sample.md)   
+## <a name="see-also"></a>另請參閱  
+ [建置用戶端](../../../docs/framework/wcf/building-clients.md)  
+ [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [快速入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [如何： 建立雙工合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [如何： 存取使用雙工合約的服務](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自我裝載](../../../docs/framework/wcf/samples/self-host.md)

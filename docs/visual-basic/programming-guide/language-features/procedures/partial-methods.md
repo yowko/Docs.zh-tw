@@ -1,88 +1,87 @@
 ---
-title: "Partial Methods (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PartialMethod"
-  - "PartialMethod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "custom logic into code [Visual Basic]"
-  - "partial methods [Visual Basic]"
-  - "partial, methods [Visual Basic]"
-  - "methods [Visual Basic], partial methods"
-  - "inserting custom logic into code"
+title: "部分方法 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PartialMethod
+- PartialMethod
+helpviewer_keywords:
+- custom logic into code [Visual Basic]
+- partial methods [Visual Basic]
+- partial [Visual Basic], methods [Visual Basic]
+- methods [Visual Basic], partial methods
+- inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Partial Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-開發人員可以利用部分方法在程式碼中插入自訂邏輯。  通常，這個程式碼是在設計工具所產生的類別 \(Class\) 中。  部分方法定義於程式碼產生器所建立的部分類別中，通常用來提供變更通知。  部分方法讓開發人員得以自訂當變更發生時的回應行為。  
+# <a name="partial-methods-visual-basic"></a>部分方法 (Visual Basic)
+部分方法可讓開發人員程式碼中插入自訂邏輯。 通常，程式碼是類別的設計工具產生的一部分。 部分方法中所建立的程式碼產生器中，部分類別定義，它們通常用來提供到的項目已變更的通知。 它們可讓開發人員指定自訂的行為變更的回應。  
   
- 程式碼產生器的設計工具只會定義方法簽章以及對方法的一個或多個呼叫。  然後，如果開發人員想要自訂所產生程式碼的行為，便可以提供該方法的實作 \(Implementation\)。  不提供實作時，編譯器 \(Compiler\) 會移除對方法的呼叫，而不會對效能造成額外的負荷。  
+ 程式碼產生器的設計工具定義方法簽章和一或多個方法的呼叫。 如果他們想要自訂產生程式碼的行為，開發人員隨後即可提供方法的實作。 提供沒有實作時，編譯器，導致沒有產生額外效能負荷會移除對方法的呼叫。  
   
-## 宣告  
- 產生的程式碼會藉由在簽章行開頭加上 `Partial` 關鍵字，標記部分方法的定義。  
+## <a name="declaration"></a>宣告  
+ 產生的程式碼將放入關鍵字標記的部分方法定義`Partial`簽章一行的開頭。  
   
-```vb#  
+```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
  定義必須符合下列條件：  
   
--   方法必須是 `Sub`，而不是 `Function`。  
+-   方法必須為`Sub`，而非`Function`。  
   
--   方法的主體必須保持為空白。  
+-   方法的主體必須是空白。  
   
--   存取修飾詞必須是 `Private`。  
+-   存取修飾詞必須`Private`。  
   
-## 實作  
- 實作工作主要是填入部分方法的主體。  這項實作通常是在定義之外的另一個部分類別中進行，並且是由想要擴充所產生程式碼的開發人員撰寫。  
+## <a name="implementation"></a>實作  
+ 實作包含主要填滿的部分方法主體中。 通常是在不同的部分類別定義中，從與想要將產生的程式碼擴充的開發人員撰寫的實作。  
   
-```vb#  
+```vb  
 Private Sub QuantityChanged()  
 '    Code for executing the desired action.  
 End Sub  
 ```  
   
- 上述範例完整複製了宣告中的簽章，但還可以做許多變化。  具體而言，可以加入 `Overloads` 或 `Overrides` 等其他修飾詞 \(Modifier\)。  只允許有一個 `Overrides` 修飾詞。  如需方法修飾詞的詳細資訊，請參閱 [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)。  
+ 上述範例重複項目中宣告的簽章，但可能會有變化。 特別是，其他修飾詞可增加，例如`Overloads`或`Overrides`。 只有一個`Overrides`允許修飾詞。 如需有關方法的修飾詞的詳細資訊，請參閱[Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
-## 使用  
- 呼叫部分方法時，就像是呼叫任何其他 `Sub` 程序一樣。  如果方法已實作，便會評估引數並且執行方法主體。  不過，請記住，實作部分方法的舉動是選擇性的。  如果方法沒有實作，則對該方法的呼叫會無效，而做為引數傳遞給方法的運算式也不會受到評估。  
+## <a name="use"></a>用法  
+ 您呼叫的部分方法時，就會呼叫任何其他`Sub`程序。 如果已實作的方法，評估引數，並執行之方法主體。 不過請記住，實作部分方法是選擇性的。 如果未實作方法，它的呼叫沒有任何作用，並不會評估運算式做為引數傳遞給方法。  
   
-## 範例  
- 在名為 Product.Designer.vb 的檔案中，定義具有 `Quantity` 屬性 \(Property\) 的 `Product` 類別。  
+## <a name="example"></a>範例  
+ 在檔案中名為 Product.Designer.vb，定義`Product`類別具有`Quantity`屬性。  
   
  [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
   
- 在名為 Product.vb 的檔案中，提供 `QuantityChanged` 的實作。  
+ 在檔案中名為 Product.vb，提供實作`QuantityChanged`。  
   
  [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
   
- 最後在專案的 Main 方法中，宣告 `Product` 執行個體 \(Instance\) 並指定其 `Quantity` 屬性的初始值。  
+ 最後，在專案的 Main 方法中，宣告`Product`執行個體並提供的初始值其`Quantity`屬性。  
   
  [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
   
- 此時應該會出現訊息方塊，並顯示下列訊息：  
+ 應該會出現訊息方塊會顯示此訊息：  
   
  `Quantity was changed to 100`  
   
-## 請參閱  
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Optional Parameters](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
- [LINQ to SQL 的程式碼產生](../Topic/Code%20Generation%20in%20LINQ%20to%20SQL.md)   
- [使用部分方法加入商務邏輯](../Topic/Adding%20Business%20Logic%20By%20Using%20Partial%20Methods.md)
+## <a name="see-also"></a>另請參閱  
+ [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub 程序](./sub-procedures.md)  
+ [選擇性參數](./optional-parameters.md)  
+ [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [LINQ to SQL 中的程式碼產生](https://msdn.microsoft.com/library/bb399400)  
+ [使用部分方法加入商務邏輯](https://msdn.microsoft.com/library/bb546176)

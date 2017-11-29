@@ -1,73 +1,76 @@
 ---
-title: "如何：控制複合圖案的填色 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "複合控制填滿圖案"
-  - "複合圖案，控制填滿"
-  - "圖形 [WPF] 中，複合圖案"
-  - "填滿 控制"
+title: "操作說明：控制複合圖案的填色"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- shapes [WPF], composite [WPF], controlling fill
+- composite shapes [WPF], controlling fill
+- graphics [WPF], composite shapes
+- fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5730b930a4f863ad01fcb6153d9bfd8f700fdb92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：控制複合圖案的填色
-<xref:System.Windows.Media.GeometryGroup.FillRule%2A>屬性<xref:System.Windows.Media.GeometryGroup>或<xref:System.Windows.Media.PathGeometry>，指定 「 規則 」 複合圖案用它來判斷指定的點是幾何的一部分。 有兩個可能的值，如<xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule>和<xref:System.Windows.Media.FillRule>。 下列各節將說明如何使用這兩個規則。  
+# <a name="how-to-control-the-fill-of-a-composite-shape"></a>操作說明：控制複合圖案的填色
+<xref:System.Windows.Media.GeometryGroup.FillRule%2A>屬性<xref:System.Windows.Media.GeometryGroup>或<xref:System.Windows.Media.PathGeometry>，指定 「 規則 」 複合圖形會用來判斷指定的點是否幾何的一部分。 有兩個可能的值為<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>和<xref:System.Windows.Media.FillRule.Nonzero>。 以下各節將說明如何使用這兩個規則。  
   
- **EvenOdd:**此規則會判斷某個點是否填滿區域中，從該點畫光線往任何方向，並計算給定圖案射線內的路徑線段數目。 如果這個數字是奇數，該點即是在區域內；如為偶數，該點即在區域外。  
+ **EvenOdd：**這個規則會從某個點朝任意方向繪製無限遠的光線，並且計算給定圖案中與光線相交的路徑線段數目，以判斷該點是否在填滿區域中。 如果這個數字是奇數，該點即是在區域內；如為偶數，該點即在區域外。  
   
- 例如，以下的 XAML 會建立一系列的同心環 （目標） 所組成的複合圖案<xref:System.Windows.Media.GeometryGroup.FillRule%2A>設<xref:System.Windows.Media.FillRule>。  
+ 例如，以下的 XAML 會建立一系列的同心圓環形 （目標） 所組成的複合圖形<xref:System.Windows.Media.GeometryGroup.FillRule%2A>設<xref:System.Windows.Media.FillRule.EvenOdd>。  
   
- [!code-xml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
   
- 下圖顯示在上述範例中所建立的圖案。  
+ 下圖顯示上一個範例中所建立的圖案。  
   
- ![螢幕擷取畫面︰ FillRule 屬性為 EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")  
+ ![螢幕擷取畫面：EvenOdd 的 FillRule 屬性](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")  
   
- 在上圖中，請注意不填入 置中與第 3 個信號。 這是因為來自兩個環內任何點光線通過偶數數目的區段。 請參閱下圖︰  
+ 在上圖中，請注意中間和第 3 個環形不會填滿。 這是因為從這兩個環形中的任何點所繪製的光線，會通過偶數數目的線段。 請參閱下圖︰  
   
- ![圖表︰ FillRule 屬性值為 EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
+ ![圖表：FillRule 屬性值為 EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
   
- **NonZero:**此規則會判斷某個點是否在路徑的填滿區域中，往任何方向繪製從該點的光線，然後檢查圖案線段與光線的交叉位置。 開頭為零，計數加一次射線光跡從左到右和減一次路徑線段由右至左射線。 計算交會後，如果結果為零，則點即在路徑外。 否則就在路徑內。  
+ **NonZero：**這個規則會從某個點朝任意方向繪製無限遠的光線，然後檢查圖案線段與光線相交的位置，以判斷該點是否在路徑填滿區域內。 從零開始計算，路徑線段每次從左到右與光線交會就加一，每次從右到左與光線交會就減一。 計算交會後，如果結果為零，則點即在路徑外。 否則就在路徑內。  
   
- [!code-xml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
- 使用上述的值範例<xref:System.Windows.Media.FillRule>的<xref:System.Windows.Media.GeometryGroup.FillRule%2A>因此提供下圖︰  
+ 使用上述的值範例<xref:System.Windows.Media.FillRule.Nonzero>如<xref:System.Windows.Media.GeometryGroup.FillRule%2A>結果提供下圖：  
   
- ![螢幕擷取畫面︰ FillRule 值為 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")  
+ ![螢幕擷取畫面：FillRule 屬性值為 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")  
   
- 如您所見，所有環形都將會填滿。 這是因為所有區段都相同的方向都執行，所以從任何點繪製光線相交的其中一個或多個區段和交叉的總和不會等於零。 例如下, 圖中，紅色箭號代表區段繪製的方向和白色箭號表示從最裡面環點的任意射線。 開始值是零，相交，每個區段的值為&1; 會新增因為線段射線從左到右。  
+ 如您所見，所有環形都會填滿。 這是因為所有的線段都是相同的方向，因此從任何點所繪製的光線會與一或多個線段交會，而相交的總和不等於零。 例如，在下圖中，紅色箭頭代表繪製線段的方向，而白色箭頭代表從最內側環形中的點射出的任意光線。 起始值為零，針對光線交會的每個線段，值會增加 1，因為線段由左至右與光線交會。  
   
- ![圖表︰ FillRule 屬性值等於 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")  
+ ![圖表：FillRule 屬性值等於 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")  
   
- 若要進一步示範的行為<xref:System.Windows.Media.FillRule>規則更複雜的形狀，以執行不同方向的區段是必要。 下列 XAML 程式碼會建立與前一個範例形狀相似之處在於它會透過<xref:System.Windows.Media.PathGeometry>而非<xref:System.Windows.Media.EllipseGeometry>這樣就可以建立四個同心圓弧形而不是完全關閉同心圓。  
+ 若要詳細說明的行為<xref:System.Windows.Media.FillRule.Nonzero>規則複雜的圖形，以執行不同方向的區段是必要。 下列 XAML 程式碼會建立與前一個範例形狀相似之處在於它會透過<xref:System.Windows.Media.PathGeometry>而非<xref:System.Windows.Media.EllipseGeometry>可建立四個同心圓弧形而不是完全關閉同心圓。  
   
- [!code-xml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
   
- 下圖顯示在上述範例中所建立的圖案。  
+ 下圖顯示上一個範例中所建立的圖案。  
   
- ![螢幕擷取畫面︰ FillRule 屬性值為 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero3.png "FillRuleNonZero3")  
+ ![螢幕擷取畫面：FillRule 屬性值為 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero3.png "FillRuleNonZero3")  
   
- 請注意，第三個弧形中心不會填滿。 下圖顯示為什麼會這樣。 在圖中，紅色箭號代表區段繪製的方向。 兩個白色箭號代表兩條任意射線移出的 「 未填滿 」 區域中的點。 從圖中可以看出，給定的光線跨越其路徑中的區段中的值總和為零。 如以上的定義，總合為零表示點不是幾何 （非填滿的一部分） 的一部分時是總和*不*零，包括為負值，是幾何的一部分。  
+ 請注意，由中心開始的第三個弧形不會填滿。 下圖說明其原因。 在圖中，紅色箭頭代表繪製線段的方向。 兩個白色箭頭代表兩個從「未填滿」區域中的點射出的任意光線。 從圖中可以看出，交會線段的指定光線，在其路徑中之值的總和為零。 如上面所定義，總和為零表示該點不屬於幾何的一部分 (並非填滿的一部分)，而「非」零的總和 (包含負值) 則屬於幾何的一部分。  
   
- ![圖表︰ FillRule 屬性值為 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
+ ![圖表：FillRule 屬性值為 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **注意︰**目的<xref:System.Windows.Media.FillRule>，所有圖形都視為封閉式。 如果沒有區段中的有間隔，繪製虛構的線，將它關閉。 在上述範例中，有小型間隙鈴響幾次。 如此一來，其中一個可能預期透過不同的結果缺口的射線，然後執行另一個方向的光線。 以下是其中一個這些漏洞及 「 虛數區段 」 的放大的圖 (區段繪製以供套用<xref:System.Windows.Media.FillRule>)，就會關閉它。  
+ **注意：**目的<xref:System.Windows.Media.FillRule>，所有圖形都視為封閉式。 如果線段中有間隙，請繪製虛構線段將它封閉。 在上面的範例中，環形中有小型的間隙。 有鑑於此，我們可能會預期通過間隙射出的光線，會提供與另一個方向的光線不同的結果。 以下是放大的圖中的其中一個這些間距和 「 虛數區段 」 (繪製基於套用的區段<xref:System.Windows.Media.FillRule>)，就會關閉它。  
   
- ![圖表︰ FillRule，線段一定都會關閉](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
+ ![]圖表：對於 FillRule，線段一定都會封閉(../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   
 ## <a name="example"></a>範例  
   
 ## <a name="see-also"></a>另請參閱  
- [建立複合圖案](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)   
+ [建立複合圖案](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
  [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

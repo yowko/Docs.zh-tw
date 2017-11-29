@@ -1,42 +1,42 @@
 ---
-title: "PrintDocument 元件概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PrintDocument"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "PrintDocument 元件 [Windows Form], 關於 PrintDocument 元件"
-  - "列印 [Windows Form], PrintDocument 元件"
+title: "PrintDocument 元件概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PrintDocument
+helpviewer_keywords:
+- PrintDocument component [Windows Forms], about PrintDocument component
+- printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f052283b743d5f1a7ed9d2bb6576390e5343dcae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# PrintDocument 元件概觀 (Windows Form)
-Windows Form [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 元件可用來設定描述 Windows 架構應用程式中列印內容及列印文件能力的屬性。  它可以與 [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) 元件一起用於控制與文件列印相關的所有事項。  
+# <a name="printdocument-component-overview-windows-forms"></a>PrintDocument 元件概觀 (Windows Form)
+Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 元件可用來設定描述列印項目的屬性，以及在 Windows 應用程式中列印文件的能力。 它可以與 [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) 元件一起使用，以控制文件列印的各個方面。  
   
-## 使用 PrintDocument 元件  
- 涉及 <xref:System.Drawing.Printing.PrintDocument> 元件的兩個主要案例為：  
+## <a name="working-with-the-printdocument-component"></a>使用 PrintDocument 元件  
+ 兩個有關的主要案例<xref:System.Drawing.Printing.PrintDocument>元件是：  
   
--   簡單列印工作，例如列印個別的文字檔。  在這種情況中，您會將 <xref:System.Drawing.Printing.PrintDocument> 元件加入至 Windows Form，接著在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件處理常式中加入列印檔案的程式設計邏輯。  程式設計邏輯應該以 <xref:System.Drawing.Printing.PrintDocument.Print%2A> 方法列印文件做為目標。  這個方法會將包含在 <xref:System.Drawing.Printing.PrintPageEventArgs> 類別的 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 屬性中的 <xref:System.Drawing.Graphics> 物件傳送至印表機。  如需示範如何使用 <xref:System.Drawing.Printing.PrintDocument> 元件列印文字文件的範例，請參閱 [如何：在 Windows Form 中列印多頁文字檔](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)。  
+-   簡單列印工作，例如列印個別的文字檔。 在此情況下您會將<xref:System.Drawing.Printing.PrintDocument>元件至 Windows 表單，然後新增列印的檔案中的程式設計邏輯<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件處理常式。 與應該做為目標的程式設計邏輯<xref:System.Drawing.Printing.PrintDocument.Print%2A>列印文件的方法。 這個方法會傳送<xref:System.Drawing.Graphics>中包含的物件<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>屬性<xref:System.Drawing.Printing.PrintPageEventArgs>類別，以印表機。 如需範例，示範如何使用文字文件列印<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[如何： 列印 Windows Form 中的多頁文字檔](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)。  
   
--   較複雜的列印工作，例如您要重複使用已撰寫的列印邏輯。  在這種情況中，您會從 <xref:System.Drawing.Printing.PrintDocument> 元件衍生新元件，並覆寫 \(請參閱 Visual Basic 的 [Overrides](../Topic/Overrides%20\(Visual%20Basic\).md) 或 C\# 的 [override](../Topic/override%20\(C%23%20Reference\).md)\) <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。  
+-   更複雜的列印工作，例如，您想要重複使用您所撰寫之列印邏輯的情況。 在這種情況下，您會衍生新的元件，從<xref:System.Drawing.Printing.PrintDocument>元件，然後覆寫 (請參閱[會覆寫](~/docs/visual-basic/language-reference/modifiers/overrides.md)適用於 Visual Basic 或[覆寫](~/docs/csharp/language-reference/keywords/override.md)C#)<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件。  
   
- 當 <xref:System.Drawing.Printing.PrintDocument> 元件加入表單時，它會出現在 \[Windows Form 設計工具\] 下方的匣中。  
+ 當加入至表單，<xref:System.Drawing.Printing.PrintDocument>元件會出現在 Windows Form 設計工具底部的紙匣。  
   
-## 請參閱  
- <xref:System.Drawing.Graphics>   
- <xref:System.Drawing.Printing.PrintDocument>   
- [Windows Form 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Drawing.Graphics>  
+ <xref:System.Drawing.Printing.PrintDocument>  
+ [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
  [PrintDocument 元件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)

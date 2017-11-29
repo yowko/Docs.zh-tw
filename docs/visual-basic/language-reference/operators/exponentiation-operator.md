@@ -1,95 +1,92 @@
 ---
-title: "^ Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.^"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "raising numbers to powers"
-  - "^ operator [Visual Basic], exponention"
-  - "square operator"
-  - "^ operator [Visual Basic]"
-  - "exponentiation operator [Visual Basic]"
-  - "exponent"
-  - "numbers, rasing"
-  - "powers"
-  - "arithmetic operators, exponentiation"
+title: "^ 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.^
+helpviewer_keywords:
+- raising numbers to powers
+- ^ operator [Visual Basic], exponention
+- square operator [Visual Basic]
+- ^ operator [Visual Basic]
+- exponentiation operator [Visual Basic]
+- exponent
+- numbers [Visual Basic], rasing
+- powers
+- arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ^ Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-將一數值對另一數值做乘冪運算。  
+# <a name="-operator-visual-basic"></a>^ 運算子 (Visual Basic)
+數目自乘至另一個數字乘冪。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
 number ^ exponent  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `number`  
- 必要項。  任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
  `exponent`  
- 必要項。  任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
-## 結果  
- 結果是 `exponent` 對 `number` 做乘冪運算，且必定是 `Double` 值。  
+## <a name="result"></a>結果  
+ 結果是`number`乘冪`exponent`，一律為`Double`值。  
   
-## 支援類型  
- `Double`.  任何不同型別的運算元都會轉換成 `Double`。  
+## <a name="supported-types"></a>支援的型別  
+ `Double`. 任何其他類型的運算元都轉換成`Double`。  
   
-## 備註  
- Visual Basic 一律會在 [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md) 中執行乘冪。  
+## <a name="remarks"></a>備註  
+ Visual Basic 一律會執行中的乘冪[Double 資料類型](../../../visual-basic/language-reference/data-types/double-data-type.md)。  
   
- `exponent` 的值可以是小數、負數或兩者。  
+ 值`exponent`可以是分數，負數，或兩者。  
   
- 當在單一運算式中執行一個以上乘冪運算時，會按照從左至右的出現順序評估 `^` 運算子。  
+ 在單一運算式中，執行一個以上的乘冪時`^`運算子時發現從左到右評估。  
   
 > [!NOTE]
->  `^` 運算子可以「*多載*」，也就是，當運算元具備類別或結構的類型時，該類別或結構就可以重新定義其行為。  如果您的程式碼在這種類別或結構上使用此運算子，就一定要先瞭解其重新定義的行為。  如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+>  `^`運算子可以是*多載*，這表示，類別或結構可以重新定義它的行為時的運算元有該類別或結構的類型。 如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其重新定義的行為。 如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
-## 範例  
- 下列範例使用 `^` 運算子以將數值與其指數做乘冪運算。  結果是第一運算元與第二運算元做乘冪運算。  
+## <a name="example"></a>範例  
+ 下列範例會使用`^`運算子引發的數字的指數乘冪。 結果會是第一個運算元的乘冪的第二個。  
   
  [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
- 前一個範例會產生以下結果：  
+ 上述範例會產生下列結果：  
   
- `exp1` 設為 4 \(2 的平方\)。  
+ `exp1`設為 4 (平方 2)。  
   
- `exp2` 設為 19683 \(3 的立方，再將該值乘以三次方\)。  
+ `exp2`設定為 19683 (3 立方，然後該值立方)。  
   
- `exp3` 設為 \-125 \(\-5 的立方\)。  
+ `exp3`設定為-125 (立方-5)。  
   
- `exp4` 設為 625 \(\-5 的第四次乘冪\)。  
+ `exp4`設定為 625 (第四個的乘冪-5)。  
   
- `exp5` 設為 2 \(8 的立方根\)。  
+ `exp5`設定為 2 （8 個的立方根）。  
   
- `exp6` 設為 0.5 \(1.0 除以 8 的立方根\)。  
+ `exp6`設定為 0.5 (除以 8 的立方根 1.0)。  
   
- 請注意前述範例的運算式中的括號，這一點很重要。  基於「*運算子優先順序*」，Visual Basic 通常會先執行 `^` 運算子再執行其他運算子，即使是一元 `–` 運算子也一樣。  若已計算不含括號的 `exp4` 和 `exp6`，則可能產生下列結果：  
+ 請注意在上述範例中的運算式中的括弧的重要性。 因為*運算子優先順序*，通常會先執行 Visual Basic`^`運算子，再執行其他的即使是一元`–`運算子。 如果`exp4`和`exp6`已計算沒有括號，則可能產生下列結果：  
   
- `exp4 = -5 ^ 4`將計算成 – \(5 第四次方\)，從而會導致\-625。  
+ `exp4 = -5 ^ 4`會計算為 (第四個的乘冪 5)，這會導致-625。  
   
- `exp6 = 8 ^ -1.0 / 3.0` 計算成 \(8 的 –1 乘冪，或 0.125\) 除以 3.0，得到 0.041666666666666666666666666666667。  
+ `exp6 = 8 ^ -1.0 / 3.0`將計算成 (8 – 1 乘冪或 0.125) 除以可得到 0.041666666666666666666666666666667 3.0。  
   
-## 請參閱  
- [^\= Operator](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>另請參閱  
+ [^= 運算子](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

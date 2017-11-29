@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: bf0cc4ed21c92a57f3f5b2cfa27ac1f054e15172
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-overview"></a>非同步總覽
 
 不久之前，只要購買較新的電腦或伺服器，應用程式的執行速度就會更快，然後逐漸停止。 這事實上相反。 具有 1ghz 單一核心 ARM 晶片和伺服器工作負載的行動電話已轉換為 VM。 使用者仍然想要回應式 UI，而且企業擁有者想要擁有隨其業務調整的伺服器。 行動和雲端以及已連接網際網路母體 >3B 使用者的轉換已導致新的一組軟體模式。 
@@ -41,4 +39,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="whats-next"></a>後續步驟
 
 若要深入探討非同步概念和程式設計，請參閱[深入了解非同步](async-in-depth.md)和[工作架構非同步程式設計](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md)。
-

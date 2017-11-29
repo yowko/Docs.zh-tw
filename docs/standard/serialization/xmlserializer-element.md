@@ -7,26 +7,20 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 963850f2ef05ec51c4a9548b77eadf12fcf978c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cadca32d5aa34d5cb6f9091f65c34c7cba603ff5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt; 元素
 指定是否已完成 <xref:System.Xml.Serialization.XmlSerializer> 進度的其他檢查。  
@@ -57,7 +51,7 @@ ms.lasthandoff: 08/21/2017
   
 |項目|說明|  
 |-------------|-----------------|  
-|[\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)|包含 <xref:System.Xml.Serialization.XmlSerializer> 及 <xref:System.Xml.Serialization.XmlSchemaImporter> 類別的組態設定。|  
+|[\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)|包含 <xref:System.Xml.Serialization.XmlSerializer> 及 <xref:System.Xml.Serialization.XmlSchemaImporter> 類別的組態設定。|  
   
 ## <a name="remarks"></a>備註  
  根據預設， <xref:System.Xml.Serialization.XmlSerializer> 提供額外層級的安全性，在還原序列化未受信任的資料時，避免潛在的拒絕服務攻擊。 做法是嘗試在還原序列化期間，偵測無限迴圈。 若偵測到這樣的狀況，將擲回例外狀況並顯示下列訊息：「內部錯誤: 還原序列化無法處理基礎資料流」。  
@@ -76,7 +70,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Serialization.XmlSerializer>   
- [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)   
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)  
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-

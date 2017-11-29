@@ -1,39 +1,21 @@
 ---
 title: "匿名類型 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 24ebf1c98e14eaf74572a6143ea6865d89735a6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 80a0d3c99f7765dba1166fd9c5ecc3e7fbadc7a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名類型 (C# 程式設計手冊)
 匿名類型提供一個便利的方法，將一組唯讀屬性封裝成一個物件，而不需要事先明確定義類型。 類型名稱會由編譯器產生，並且無法在原始程式碼層級使用。 每個屬性的類型會由編譯器推斷。  
@@ -58,7 +40,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  如果未在匿名類型中指定成員名稱，編譯器會為匿名類型成員指定與用於初始化類型之屬性相同的名稱。 您必須為以運算式初始化的屬性提供一個名稱，如上述範例所示。 在下列範例中，匿名類型的屬性名稱是 `Color` 和 `Price`。  
   
- [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
   
  一般而言，當您使用匿名型別初始化變數時，您可以使用 [var](../../../csharp/language-reference/keywords/var.md) 將變數宣告為隱含型別區域變數。 由於只有編譯器可以存取匿名類型的基本名稱，因此無法在變數宣告中指定類型名稱。 如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
@@ -78,8 +60,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
  由於匿名類型上的 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法會以屬性的 `Equals` 和 `GetHashCode` 方法來定義，相同匿名類型的兩個執行個體僅在其所有屬性都相等時，這兩個執行個體才相等。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
-

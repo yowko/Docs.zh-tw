@@ -1,65 +1,64 @@
 ---
-title: "Efficient Combination of Operators (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "expressions [Visual Basic], parentheses"
-  - "operators [Visual Basic], associativity"
-  - "expressions [Visual Basic], operators"
-  - "operators [Visual Basic], precedence"
-  - "Visual Basic code, operators"
-  - "Visual Basic code, expressions"
-  - "operators [Visual Basic], complex expressions"
-  - "expressions [Visual Basic], complex"
-  - "parentheses, complex expressions"
-  - "numeric expressions"
+title: "有效的運算子組合 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- expressions [Visual Basic], parentheses
+- operators [Visual Basic], associativity
+- expressions [Visual Basic], operators
+- operators [Visual Basic], precedence
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- operators [Visual Basic], complex expressions
+- expressions [Visual Basic], complex
+- parentheses [Visual Basic], complex expressions
+- numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4b0f1d637bc1757515cf271a8c70d62effab0843
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Efficient Combination of Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-複雜的運算式可包含許多不同的運算子。  下列範例將說明這點。  
+# <a name="efficient-combination-of-operators-visual-basic"></a>有效的運算子組合 (Visual Basic)
+複雜運算式可包含許多不同的運算子。 下列範例將說明這點。  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- 建立複雜運算式 \(如前一個範例中的複雜運算式\) 需要徹底了解運算子優先順序 \(Operator Precedence\) 的規則。  如需詳細資訊，請參閱 [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
+ 建立複雜的運算式，例如上述範例中的一個需要瞭解的運算子優先順序的規則。 如需詳細資訊，請參閱[Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
   
-## 括號內的運算式  
- 通常您會想要以不同於運算子優先順序所決定的順序進行運算。  參考下列範例：  
+## <a name="parenthetical-expressions"></a>括號運算式  
+ 通常您會想從運算子優先順序所決定以不同順序繼續進行作業。 請參考下列範例。  
   
  `x = z * y + 4`  
   
- 前一個範例會將 `z` 乘以 `y`，然後將結果與 `4` 相加。  但是，如果想要 `y` 與 `4` 先相加，再將結果乘以 `z`，您可以使用括號覆寫一般運算子優先順序。  藉由用括號將運算式括住，您可以強制先計算該運算式，而不管運算子優先順序。  若要強制上述範例先執行加法，您可以將它重寫，如下列範例所示。  
+ 上述範例會乘以`z`由`y`，然後將結果以`4`。 但是，如果您想要新增`y`和`4`之前相乘的結果`z`，您可以使用括號覆寫一般運算子優先順序。 您可以以括弧括住運算式，強制該運算式要評估第一次，不論運算子優先順序。 若要強制執行加法上述的範例，您無法將它改寫下列範例所示。  
   
  `x = z * (y + 4)`  
   
- 前一個範例會將 `y` 與 `4` 相加，然後將該總和乘以 `z`。  
+ 前述範例新增`y`和`4`，然後乘以相加的`z`。  
   
-### 巢狀括號運算式  
- 您可以巢狀方式將運算式放在多層括號中，以進一步覆寫優先順序。  括號中最裡層巢狀的運算式會最先計算，接著是次裡層的巢狀，依此類推直到最外層的巢狀，最後計算括號外的運算式。  下列範例將說明這點。  
+### <a name="nested-parenthetical-expressions"></a>巢狀括號運算式  
+ 您可以巢狀括號來覆寫優先順序更進一步的多個層級中的運算式。 最深的巢狀括號括住的運算式會先評估，接著是巢狀最深處，依此類推，最深的巢狀，最後括號外的運算式。 下列範例將說明這點。  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- 在上述範例中，會最先計算 `z + 2`，接著是其他括號運算式。  乘冪運算通常具有比加法或乘法更高的優先順序，但是在本範例中，因為其他的運算式都是放在括號內，所以會最後計算乘冪運算。  
+ 在上述範例中，`z + 2`會先評估，然後放在括號運算式。 在此範例中，因為其他運算式會以括號括住乘冪，通常具有較高的優先順序高於加法或乘法，是上一次評估。  
   
-## 請參閱  
- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)   
- [Logical\/Bitwise Operators](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Boolean Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   
- [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
- [How to: Calculate Numeric Values](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)   
- [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+## <a name="see-also"></a>另請參閱  
+ [在 Visual Basic 中的算術運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [在 Visual Basic 中的邏輯和位元運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
+ [邏輯/位元運算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [布林運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
+ [數值比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [如何：計算數值](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)  
+ [Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)

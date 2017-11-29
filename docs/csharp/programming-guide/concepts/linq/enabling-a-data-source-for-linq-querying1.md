@@ -1,30 +1,21 @@
 ---
 title: "啟用資料來源以進行 LINQ 查詢1"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bbb21c5cc0367e0bdc0dd935a5c91538c18c071b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 86818768e01574bc9a3aebcd09b8e282c92ec18d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>啟用資料來源以進行 LINQ 查詢
 您可以使用各種方式來擴充 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以啟用要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式下進行查詢的任何資料來源。 資料來源可能是資料結構、Web 服務、檔案系統或資料庫等等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式可以讓用戶端輕鬆查詢已啟用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的資料來源，因為查詢的語法和模式並未改變。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 可以擴充至這些資料來源的方式包括：  
@@ -57,9 +48,8 @@ ms.lasthandoff: 07/28/2017
  複雜的 `IQueryable` 提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 提供者) 可能會將完整的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢解譯成表示查詢語言，例如 SQL。 複雜的提供者比複雜度較低的提供者更為廣泛，因為它可以在查詢中處理更多種類的問題。 它也具有開放類型系統，因此必須包含廣泛的基礎結構，以對應使用者定義的類型。 開發複雜的提供者需要花費相當大量的心力。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Linq.IQueryable%601>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- <xref:System.Linq.Enumerable>   
- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq.IQueryable%601>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ <xref:System.Linq.Enumerable>  
+ [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-

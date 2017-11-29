@@ -1,45 +1,25 @@
 ---
 title: "#<a name=\"if-c-reference\"></a>if (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#if'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#if directive [C#]'
+f1_keywords: '#if'
+helpviewer_keywords: '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e4e3b79f64f5190d48d7248726ecdf031ad685e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f70dac98d5731370ae961f795b08a71946867d9b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 當 C# 編譯器遇到 `#if` 指示詞 (最後面接著 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 指示詞) 時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。  不同於 C 和 C++，您無法將數值指派給符號；C# 中的 #if 陳述式是布林值，只會測試是否已定義符號。 例如：  
   
-```  
+```csharp
 #define DEBUG  
 // ...  
 #if DEBUG  
@@ -64,9 +44,10 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="example"></a>範例  
   
-```  
+```csharp
 // preprocessor_if.cs  
-#define DEBUG#define MYTEST  
+#define DEBUG
+#define MYTEST  
 using System;  
 public class MyClass   
 {  
@@ -85,8 +66,8 @@ public class MyClass
 }  
 ```  
   
- **已定義 DEBUG 和 MYTEST**   
+ **已定義 DEBUG 和 MYTEST**  
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)

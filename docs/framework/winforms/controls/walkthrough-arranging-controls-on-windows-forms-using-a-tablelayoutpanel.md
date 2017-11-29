@@ -1,202 +1,203 @@
 ---
-title: "逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 使用 TableLayoutPanel 排列"
-  - "TableLayoutPanel 控制項 [Windows Form], 逐步解說"
-  - "Windows Form 控制項, 排列"
+title: "逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], arranging with TableLayoutPanel
+- TableLayoutPanel control [Windows Forms], walkthroughs
+- Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2d5c07be4ddebc3bfaa8c1979b39e3ef172a428
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項
-某些應用程式需要具有配置的表單，此配置會在表單重新調整大小或內容大小變更時適當地排列表單。  當您需要動態的配置，且不希望在程式碼中明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項
+有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> 控制項和 <xref:System.Windows.Forms.TableLayoutPanel> 控制項會以容易了解的方式排列表單上的控制項。  兩者都提供自動而可設定的能力，可控制包含在其中的子控制項相對位置，且都提供在執行階段的動態配置功能，因此可以在父表單的維度變更時，調整子控制項的大小及位置。  配置面板可以用巢狀方式套疊在配置面板內，藉此提供複雜的使用者介面。  
+ <xref:System.Windows.Forms.FlowLayoutPanel> 控制項和 <xref:System.Windows.Forms.TableLayoutPanel> 控制項提供直覺的方式，排列表單上的控制項。 這兩者都提供自動且可設定的功能，可用來控制其內含子控制項的相對位置，而且也都能為執行階段提供動態配置功能，所以每當父表單變更維度時，子控制項的大小和位置就會相應調整。 配置面板可以巢嵌在配置面板內，從而提供精緻的使用者介面。  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> 會以特定的流量方向排列內容：水平或垂直。  其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。  此外，也可裁剪該內容而不換行。  如需詳細資訊，請參閱[逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
+ <xref:System.Windows.Forms.FlowLayoutPanel> 會以特定的水平或垂直文字方向排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。 如需詳細資訊，請參閱[逐步解說： 在 Windows Form 使用 FlowLayoutPanel 排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
   
- <xref:System.Windows.Forms.TableLayoutPanel> 會排列方格中的內容，提供與 HTML \<table\> 項目類似的功能。  <xref:System.Windows.Forms.TableLayoutPanel> 控制項能讓您將控制項放置在格線配置中，而不需要精確地指定每個個別控制項的位置。  它的儲存格會在資料列和資料行中排列，且這些儲存格可以具有不同大小。  儲存格可以跨資料列和資料行合併。  儲存格能包含任何表單可以包含的內容，並在大部分的其他方面均像容器一般運作。  
+ <xref:System.Windows.Forms.TableLayoutPanel>排列其內容在方格中，提供的功能類似於 HTML\<表格 > 項目。 <xref:System.Windows.Forms.TableLayoutPanel>控制項可讓您將控制項放在格線版面配置，而不需要精確指定每個個別控制項的位置。 其儲存格依資料列和資料行排列，大小可以各不相同。 跨越資料列和資料行，可以合併資料格。 資料格可以包含任何項目可以包含表單，並在做為容器的大部分其他方面的行為相同。  
   
- <xref:System.Windows.Forms.TableLayoutPanel> 控制項也提供在執行階段時的按比例調整大小能力，所以您的配置可以在調整表單時順利地變更。  這會讓 <xref:System.Windows.Forms.TableLayoutPanel> 控制項非常適合類似資料輸入表單或當地語系化應用程式等用途。  如需詳細資訊，請參閱[Walkthrough: Creating a Resizable Windows Form for Data Entry](http://msdn.microsoft.com/zh-tw/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[Walkthrough: Creating a Localizable Windows Form](http://msdn.microsoft.com/zh-tw/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>控制項也提供比例調整大小功能在執行階段，好讓您配置也可能變更順暢地調整表單大小時。 這可讓<xref:System.Windows.Forms.TableLayoutPanel>控制也適用於資料輸入表單和當地語系化應用程式之類的目的。 如需詳細資訊，請參閱[逐步解說： 建立可調整大小的 Windows Form 用於資料輸入](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[逐步解說： 建立可當地語系化的 Windows Form](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
   
- 一般說來，您不應該使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項做為整個配置的容器。  請使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項，為配置的組件提供按比例調整大小的功能。  
+ 一般情況下，您不應該使用<xref:System.Windows.Forms.TableLayoutPanel>做為整個版面配置容器的控制項。 使用<xref:System.Windows.Forms.TableLayoutPanel>控制項，以提供的配置部分的比例調整大小功能。  
   
- 逐步解說將說明的工作包括：  
+ 這個逐步解說中所述的工作包括：  
   
--   建立 Windows Form 專案  
+-   建立 Windows Forms 專案  
   
 -   排列資料列和資料行中的控制項  
   
 -   設定資料列和資料行屬性  
   
--   使用控制項擴展資料列和資料行  
+-   擴展資料列和資料行與控制項  
   
 -   溢位的自動處理  
   
--   按兩下工具箱中的控制項以插入該控制項  
+-   在 [工具箱] 中按兩下控制項以插入控制項  
   
--   繪製外框以插入控制項  
+-   繪製控制項外框以插入控制項  
   
--   將現有的控制項重新指派至不同的父代  
+-   將現有控制項重新指派至不同的父代  
   
- 當您完成時，將會對這些重要的配置功能所扮演的角色有所了解。  
+ 完成後，您就會了解這些重要配置功能所扮演的角色。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
-## 建立專案  
+## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
-#### 若要建立專案  
+#### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立稱為 "TableLayoutPanelExample" 的 Windows 應用程式專案。  如需詳細資訊，請參閱[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立 Windows 應用程式專案，稱為 「 TableLayoutPanelExample"。 如需詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
-2.  從 \[**Windows Form 設計工具**\] 中選取表單。  
+2.  選取的表單中**Windows** **Form 設計工具**。  
   
-## 排列資料列和資料行中的控制項  
- <xref:System.Windows.Forms.TableLayoutPanel> 控制項能讓您輕鬆地將控制項排列成資料列和資料行。  
+## <a name="arranging-controls-in-rows-and-columns"></a>排列資料列和資料行中的控制項  
+ <xref:System.Windows.Forms.TableLayoutPanel>控制項可讓您輕鬆地排列成資料列和資料行的控制項。  
   
-#### 若要使用 TableLayoutPanel 排列資料列和資料行中的控制項  
+#### <a name="to-arrange-controls-in-rows-and-columns-using-a-tablelayoutpanel"></a>若要排列資料列和資料行使用 TableLayoutPanel 控制項  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項拖曳至表單。  請注意，根據預設，<xref:System.Windows.Forms.TableLayoutPanel> 控制項具有四個儲存格。  
+1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。 請注意，根據預設，<xref:System.Windows.Forms.TableLayoutPanel>控制項有四個資料格。  
   
-2.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.Button> 控制項拖曳至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項，並將它放入其中一個儲存格。  請注意，在您選取的儲存格中會建立 <xref:System.Windows.Forms.Button> 控制項。  
+2.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**到<xref:System.Windows.Forms.TableLayoutPanel>控制，並將其放置到其中一個資料格。 請注意，<xref:System.Windows.Forms.Button>控制項在您選取的儲存格內建立。  
   
-3.  從 \[**工具箱**\] 再拖曳三個 <xref:System.Windows.Forms.Button> 控制項至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項，讓每個儲存格都包含一個按鈕。  
+3.  將更多的三個<xref:System.Windows.Forms.Button>控制從**工具箱**到<xref:System.Windows.Forms.TableLayoutPanel>控制，使每個資料格都包含一個按鈕。  
   
-4.  抓取在兩個資料行之間的垂直縮放控點 \(Sizing Handle\)，然後將它移至左邊。  請注意，在第一個資料行中的 <xref:System.Windows.Forms.Button> 控制項會重新調整為較小的寬度，而第二個資料行中的 <xref:System.Windows.Forms.Button> 控制項大小則不會有所變更。  
+4.  抓取兩個資料行之間的垂直調整大小控點，並將它移到左邊。 請注意，<xref:System.Windows.Forms.Button>第一個資料行中的控制項為較小的寬度時的大小會調整的大小<xref:System.Windows.Forms.Button>第二個資料行中的控制項不會變更。  
   
-5.  抓取在兩個資料行之間的垂直縮放控點，然後將它移至右邊。  請注意，在第一個資料行中的 <xref:System.Windows.Forms.Button> 控制項會回到原來的大小，而第二個資料行中的 <xref:System.Windows.Forms.Button> 控制項則會移至右邊。  
+5.  抓取兩個資料行之間的垂直調整大小控點，並將它移到右邊。 請注意，<xref:System.Windows.Forms.Button>第一個資料行中的控制項返回原始大小，而<xref:System.Windows.Forms.Button>第二個資料行中的控制項都移到右側。  
   
-6.  向上和向下移動水平縮放控點，觀察在面板中對於控制項的作用。  
+6.  移動之水平縮放控制代碼向上和向下看到面板中控制項上的效果。  
   
-## 使用停駐和錨定在儲存格中放置控制項  
- <xref:System.Windows.Forms.TableLayoutPanel> 中子控制項的錨定行為，不同於在其他容器控制項中的錨定行為。  子控制項的停駐行為則和其他容器控制項的停駐行為一樣。  
+## <a name="positioning-controls-within-cells-using-docking-and-anchoring"></a>使用停駐和錨定儲存格內的控制項定位  
+ 中的子控制項的錨定行為<xref:System.Windows.Forms.TableLayoutPanel>不同於其他容器控制項中的行為。 子控制項的停駐行為等同於其他容器控制項。  
   
-#### 在儲存格內放置控制項  
+#### <a name="positioning-controls-within-cells"></a>儲存格內的控制項定位  
   
-1.  選取第一個 <xref:System.Windows.Forms.Button> 控制項。  將其 <xref:System.Windows.Forms.Control.Dock%2A> 屬性的值變更為 <xref:System.Windows.Forms.DockStyle>。  請注意，<xref:System.Windows.Forms.Button> 控制項會展開，以填滿儲存格。  
+1.  選取第一個<xref:System.Windows.Forms.Button>控制項。 將其 <xref:System.Windows.Forms.Control.Dock%2A> 屬性的值變更為 <xref:System.Windows.Forms.DockStyle.Fill>。 請注意，<xref:System.Windows.Forms.Button>控制展開並填滿其儲存格。  
   
-2.  選取其他 <xref:System.Windows.Forms.Button> 控制項的其中一個。  將其 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性的值變更為 <xref:System.Windows.Forms.AnchorStyles>。  請注意，它已經移動，所以右框線會接近儲存格的右框線。  在框線之間的距離是 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Margin%2A> 屬性和面板的 <xref:System.Windows.Forms.Control.Padding%2A> 屬性的總和。  
+2.  選取其中一個其他<xref:System.Windows.Forms.Button>控制項。 將其 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性的值變更為 <xref:System.Windows.Forms.AnchorStyles.Right>。 請注意，它已移動，因此它的右框線靠近儲存格的右框線。 框線之間的距離是總和<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Margin%2A>屬性和面板的<xref:System.Windows.Forms.Control.Padding%2A>屬性。  
   
-3.  將 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值變更為 <xref:System.Windows.Forms.AnchorStyles> 和 <xref:System.Windows.Forms.AnchorStyles>。  請注意，控制項會調整大小為儲存格的寬度，同時會將 <xref:System.Windows.Forms.Control.Margin%2A> 和 <xref:System.Windows.Forms.Control.Padding%2A> 值納入考慮。  
+3.  值變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性<xref:System.Windows.Forms.AnchorStyles.Right>和<xref:System.Windows.Forms.AnchorStyles.Left>。 請注意，控制項的大小調整成的資料格，寬度與<xref:System.Windows.Forms.Control.Margin%2A>和<xref:System.Windows.Forms.Control.Padding%2A>列入考量的值。  
   
-4.  使用 <xref:System.Windows.Forms.AnchorStyles> 和 <xref:System.Windows.Forms.AnchorStyles> 樣式重複執行步驟 2 和 3。  
+4.  重複步驟 2 和 3。<xref:System.Windows.Forms.AnchorStyles.Top>和<xref:System.Windows.Forms.AnchorStyles.Bottom>樣式。  
   
-## 設定資料列和資料行屬性  
- 您可以設定資料列和資料行的個別屬性，方法是使用 <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> 和 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合。  
+## <a name="setting-row-and-column-properties"></a>設定資料列和資料行屬性  
+ 您可以設定個別屬性的資料列和資料行使用<xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>和<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合。  
   
-#### 若要設定資料列和資料行屬性  
+#### <a name="to-set-row-and-column-properties"></a>若要設定資料列和資料行屬性  
   
-1.  從 \[**Windows Form 設計工具**\] 中選取 <xref:System.Windows.Forms.TableLayoutPanel> 控制項。  
+1.  選取<xref:System.Windows.Forms.TableLayoutPanel>控制**Windows Form 設計工具**。  
   
-2.  在 \[**屬性**\] 視窗中，按一下 \[**資料行**\] 項目旁邊的省略 \(![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) 按鈕，藉此開啟 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合。  
+2.  在**屬性**開啟視窗<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，依序按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕旁邊**資料行**項目。  
   
-3.  選取第一個資料行，並將 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 屬性值變更為 <xref:System.Windows.Forms.SizeType>。  按一下 \[**確定**\] 接受變更。  請注意，第一個資料行的寬度會縮小，以符合 <xref:System.Windows.Forms.Button> 控制項。  同時也請注意，資料行的寬度是無法調整的。  
+3.  選取第一個資料行，然後將值變更其<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>屬性<xref:System.Windows.Forms.SizeType.AutoSize>。 按一下**確定**以接受變更。 請注意第一個資料行的寬度會縮小，以符合<xref:System.Windows.Forms.Button>控制項。 也請注意資料行寬度不是可調整大小。  
   
-4.  在 \[**屬性**\] 視窗中，開啟 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合，並選取第一個資料行。  將其 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 屬性的值變更為 <xref:System.Windows.Forms.SizeType>。  按一下 \[**確定**\] 接受變更。  將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項調整為較大的寬度，並且請注意，第一個資料行的寬度會擴充。  將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項調整為較小的寬度，並且請注意，第一個資料行中的按鈕會調整大小以符合儲存格。  同時也請注意，資料行的寬度是可以調整的。  
+4.  在**屬性**視窗中，開啟<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，然後選取第一個資料行。 值變更其<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>屬性<xref:System.Windows.Forms.SizeType.Percent>。 按一下**確定**以接受變更。 調整大小<xref:System.Windows.Forms.TableLayoutPanel>控制較大的寬度，並記下的第一個資料行寬度會展開。 調整大小<xref:System.Windows.Forms.TableLayoutPanel>控制權傳輸至較小的寬度，並記下的第一個資料行中的按鈕的大小，以配合儲存格。 也請注意，資料行寬度可調整大小。  
   
-5.  在 \[**屬性**\] 視窗中，開啟 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 集合，並選取所有列出的資料行。  將每個 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 屬性值都設定為 <xref:System.Windows.Forms.SizeType>。  按一下 \[**確定**\] 接受變更。  使用 <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> 集合重複執行。  
+5.  在**屬性**視窗中，開啟<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，然後選取所有列出的資料行。 值設定每個<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>屬性<xref:System.Windows.Forms.SizeType.Percent>。 按一下**確定**以接受變更。 重複使用<xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>集合。  
   
-6.  抓取其中一個角落縮放控點，並調整 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的寬度和高度。  請注意，資料列和資料行會在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的大小變更時重新調整。  同時也請注意，資料列和資料行可以使用水平或垂直縮放控點調整大小。  
+6.  抓取邊角調整大小控點，並調整大小的寬度和高度<xref:System.Windows.Forms.TableLayoutPanel>控制項。 請注意，資料列和資料行調整為大小<xref:System.Windows.Forms.TableLayoutPanel>控制項的大小變更。 也請注意，資料列和資料行可調整大小以水平和垂直縮放控點。  
   
-## 使用控制項擴展資料列和資料行  
- <xref:System.Windows.Forms.TableLayoutPanel> 控制項會在設計階段時加入數種新屬性至控制項。  這些屬性的其中兩個為 `RowSpan` 和 `ColumnSpan`。  您可以使用這些屬性，讓控制項擴展一個以上的資料列或資料行。  
+## <a name="spanning-rows-and-columns-with-a-control"></a>擴展資料列和資料行與控制項  
+ <xref:System.Windows.Forms.TableLayoutPanel>控制項設計階段將數個新屬性加入至控制項。 這些屬性的兩個是`RowSpan`和`ColumnSpan`。 您可以使用這些屬性使控制項的範圍超過一個資料列或資料行。  
   
-#### 若要使用控制項擴展資料列和資料行  
+#### <a name="to-span-rows-and-columns-with-a-control"></a>若要擴展資料列和資料行與控制項  
   
-1.  選取第一個資料列和第一個資料行中的 <xref:System.Windows.Forms.Button> 控制項。  
+1.  選取<xref:System.Windows.Forms.Button>控制項中的第一個資料列和第一個資料行。  
   
-2.  在 \[**屬性**\] 視窗中，將 `ColumnSpan` 屬性的值變更為 2。  請注意，<xref:System.Windows.Forms.Button> 控制項會填滿第一個資料行和第二個資料行。  同時也請注意，已經加入額外的資料列以容納這項變更。  
+2.  在**屬性**windows，變更的值`ColumnSpan`屬性**2**。 請注意，<xref:System.Windows.Forms.Button>控制項會填滿第一個資料行和第二個資料行。 同時也請注意已加入額外的資料列，以配合這項變更。  
   
-3.  重複執行 `RowSpan` 屬性的步驟 2。  
+3.  重複步驟 2 的`RowSpan`屬性。  
   
-## 按兩下工具箱中的控制項以插入該控制項  
- 您可以按兩下 \[**工具箱**\] 中的控制項，藉此填入 <xref:System.Windows.Forms.TableLayoutPanel> 控制項。  
+## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>在 [工具箱] 中按兩下控制項以插入控制項  
+ 您可以填入您<xref:System.Windows.Forms.TableLayoutPanel>控制項中按兩下控制項**工具箱**。  
   
-#### 若要按兩下工具箱中的控制項以插入該控制項  
+#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>在 [工具箱] 中按兩下控制項以插入控制項  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項拖曳至表單。  
+1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
   
-2.  在 \[**工具箱**\] 中，按兩下 <xref:System.Windows.Forms.Button> 控制項圖示。  請注意，新的按鈕控制項會出現在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的第一個儲存格中。  
+2.  在 [工具箱] <xref:System.Windows.Forms.Button>**中按兩下**控制項圖示。 請注意，新的按鈕控制項出現在<xref:System.Windows.Forms.TableLayoutPanel>控制項的第一個資料格。  
   
-3.  在 \[**工具箱**\] 中的數個控制項上按兩下。  請注意，新控制項會連續出現在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的未佔用儲存格中。  同時也請注意，如果沒有可以使用的開放儲存格，<xref:System.Windows.Forms.TableLayoutPanel> 控制項會擴充以容納新控制項。  
+3.  在數個 [工具箱] 的控制項上按兩下。 請注意，新的控制項中會陸續出現<xref:System.Windows.Forms.TableLayoutPanel>控制項的未佔用的儲存格。 也請注意，<xref:System.Windows.Forms.TableLayoutPanel>控制項擴展以容納新的控制項，如果沒有開啟的資料格可用。  
   
-## 溢位的自動處理  
- 當您將控制項插入至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項時，可能會用完新控制項的空白儲存格。  <xref:System.Windows.Forms.TableLayoutPanel> 控制項會自動處理這種狀況，方法是增加儲存格數目。  
+## <a name="automatic-handling-of-overflows"></a>溢位的自動處理  
+ 當您要插入至控制項<xref:System.Windows.Forms.TableLayoutPanel>控制項，您可能會用完空白資料格為新的控制項。 <xref:System.Windows.Forms.TableLayoutPanel>控制這種情況下會自動處理增加的資料格數目。  
   
-#### 若要觀察溢位的自動處理  
+#### <a name="to-observe-automatic-handling-of-overflows"></a>若要觀察溢位的自動處理  
   
-1.  如果在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中仍有空白儲存格，繼續插入新的 <xref:System.Windows.Forms.Button> 控制項，直到 <xref:System.Windows.Forms.TableLayoutPanel> 控制項已滿。  
+1.  如果中的仍然空白資料格<xref:System.Windows.Forms.TableLayoutPanel>控制，請繼續插入新<xref:System.Windows.Forms.Button>直到控制<xref:System.Windows.Forms.TableLayoutPanel>控制項已滿。  
   
-2.  一旦 <xref:System.Windows.Forms.TableLayoutPanel> 控制項已滿，請按兩下 \[**工具箱**\] 中的 <xref:System.Windows.Forms.Button> 圖示，以插入另一個 <xref:System.Windows.Forms.Button> 控制項。  請注意，<xref:System.Windows.Forms.TableLayoutPanel> 控制項會建立新儲存格，以容納新控制項。  再插入數個控制項，並觀察調整大小行為。  
+2.  一次<xref:System.Windows.Forms.TableLayoutPanel>控制項已滿，按兩下<xref:System.Windows.Forms.Button>中的圖示**工具箱**插入另一個<xref:System.Windows.Forms.Button>控制項。 請注意，<xref:System.Windows.Forms.TableLayoutPanel>控制項建立新的儲存格，以容納新的控制項。 插入一些更多控制項，並觀察調整大小的行為。  
   
-3.  將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的 <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> 屬性值變更為 <xref:System.Windows.Forms.TableLayoutPanelGrowStyle>。  按兩下 \[**工具箱**\] 中的 <xref:System.Windows.Forms.Button> 圖示，以插入 <xref:System.Windows.Forms.Button> 控制項，直到 <xref:System.Windows.Forms.TableLayoutPanel> 控制項已滿。  在 \[**工具箱**\] 中，再次按兩下 <xref:System.Windows.Forms.Button> 圖示。  請注意，您會從 \[**Windows Form 設計工具**\] 接收到錯誤訊息，通知您無法建立其他的資料列和資料行。  
+3.  變更 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的 <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> 屬性值為 <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>。 按兩下<xref:System.Windows.Forms.Button>中的圖示**工具箱**插入<xref:System.Windows.Forms.Button>控制直到<xref:System.Windows.Forms.TableLayoutPanel>控制項已滿。 按兩下<xref:System.Windows.Forms.Button>中的圖示**工具箱**一次。 請注意，您會收到錯誤訊息從**Windows Form 設計工具**通知您無法建立額外的資料列和資料行。  
   
-## 繪製外框以插入控制項  
- 您可以插入控制項至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項，並在儲存格中繪製外框，藉此指定大小。  
+## <a name="inserting-a-control-by-drawing-its-outline"></a>繪製控制項外框以插入控制項  
+ 您可以插入到控制項<xref:System.Windows.Forms.TableLayoutPanel>控制，並指定其大小在儲存格中繪製控制項外框。  
   
-#### 若要繪製外框以插入控制項  
+#### <a name="to-insert-a-control-by-drawing-its-outline"></a>繪製控制項外框以插入控制項  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項拖曳至表單。  
+1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
   
-2.  在 \[**工具箱**\] 中，請按 <xref:System.Windows.Forms.Button> 控制項圖示。  請勿拖曳至表單。  
+2.  按一下 [工具箱] 的 <xref:System.Windows.Forms.Button> 控制項圖示。 請勿拖曳到表單。  
   
-3.  將滑鼠指標移至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項上。  請注意：指標會變成十字形，並且附有 <xref:System.Windows.Forms.Button> 控制項圖示。  
+3.  將滑鼠指標移<xref:System.Windows.Forms.TableLayoutPanel>控制項。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.Button> 控制項圖示。  
   
 4.  按住滑鼠按鈕。  
   
-5.  拖曳滑鼠指標以繪製 <xref:System.Windows.Forms.Button> 控制項的外框。  當您對於大小感到滿意時，請放開滑鼠按鍵。  請注意，<xref:System.Windows.Forms.Button> 控制項會建立在您繪製控制項外框的儲存格中。  
+5.  拖曳滑鼠指標以繪製 <xref:System.Windows.Forms.Button> 控制項的外框。 如滿意大小，請放開滑鼠按鈕。 請注意，<xref:System.Windows.Forms.Button>控制項建立您所繪製控制項的外框的儲存格。  
   
-## 不允許在儲存格中使用多個控制項  
- <xref:System.Windows.Forms.TableLayoutPanel> 控制項在每個儲存格中只能包含一個子控制項。  
+## <a name="multiple-controls-within-cells-are-not-permitted"></a>不允許多個儲存格內的控制項  
+ <xref:System.Windows.Forms.TableLayoutPanel>控制項可以包含只有一個子系控制項，每個儲存格。  
   
-#### 若要示範不允許在儲存格中使用多個控制項  
+#### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>若要示範不允許的儲存格內的多個控制項  
   
--   從 \[**工具箱**\] 將 <xref:System.Windows.Forms.Button> 控制項拖曳至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項，並將它放入其中一個佔用的儲存格。  請注意，<xref:System.Windows.Forms.TableLayoutPanel> 控制項不允許您將 <xref:System.Windows.Forms.Button> 控制項放入佔用的儲存格。  
+-   拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**到<xref:System.Windows.Forms.TableLayoutPanel>控制，並將其放置到佔用儲存格的其中一個。 請注意，<xref:System.Windows.Forms.TableLayoutPanel>控制項不允許卸除<xref:System.Windows.Forms.Button>佔用的儲存格的控制項。  
   
-## 交換控制項  
- <xref:System.Windows.Forms.TableLayoutPanel> 控制項能讓您交換佔有兩個不同儲存格的控制項。  
+## <a name="swapping-controls"></a>交換控制項  
+ <xref:System.Windows.Forms.TableLayoutPanel>控制項可讓您交換佔用兩個不同的儲存格的控制項。  
   
-#### 若要交換控制項  
+#### <a name="to-swap-controls"></a>若要交換控制項  
   
--   從佔用的儲存格中拖曳其中一個 <xref:System.Windows.Forms.Button> 控制項，並將它放入另一個佔用的儲存格。  請注意，這兩個控制項會從一個儲存格移入另一個儲存格。  
+-   拖曳其中一個<xref:System.Windows.Forms.Button>中佔用的儲存格並放入到另一個佔用的儲存格的控制項。 請注意，兩個控制項都從一個儲存格移入其他。  
   
-## 後續步驟  
- 您可使用配置面板和控制項的組合，完成複雜的配置。  建議另外再研究以下各項：  
+## <a name="next-steps"></a>後續步驟  
+ 您可以組合配置面板和控制項，完成複雜的配置。 進一步的探索建議包括：  
   
--   嘗試將其中一個 <xref:System.Windows.Forms.Button> 控制項調整為較大的大小，並且注意此動作對於配置的作用。  
+-   請嘗試調整大小的其中一個<xref:System.Windows.Forms.Button>控制項，以較大的大小並注意配置的效果。  
   
--   將多個控制項的選取範圍貼入 <xref:System.Windows.Forms.TableLayoutPanel> 控制項，並且注意控制項是如何插入的。  
+-   貼上到多個控制項的選取範圍<xref:System.Windows.Forms.TableLayoutPanel>控制，並記下如何插入控制項。  
   
--   配置面板可包含其他配置面板。  嘗試將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項放入現有的控制項。  
+-   配置面板可以包含其他的配置面板。 實驗將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項放入現有的控制項。  
   
--   將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項停駐至父表單。  調整表單大小，並注意此動作對於配置的作用。  
+-   停駐<xref:System.Windows.Forms.TableLayoutPanel>父表單的控制項。 調整表單的大小，並注意配置的效果。  
   
-## 請參閱  
- <xref:System.Windows.Forms.FlowLayoutPanel>   
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [逐步解說：使用對齊線排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. \(USBN: 0\-7356\-0566\-1\)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)   
- [Walkthrough: Creating a Resizable Windows Form for Data Entry](http://msdn.microsoft.com/zh-tw/e193b4fc-912a-4917-b036-b76c7a6f58ab)   
- [Walkthrough: Creating a Localizable Windows Form](http://msdn.microsoft.com/zh-tw/c5240b6e-aaca-4286-9bae-778a416edb9c)   
- [TableLayoutPanel 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)   
- [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [如何：將控制項停駐在 Windows Form 上](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [如何：錨定 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)   
- [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.FlowLayoutPanel>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond, WA: Microsoft Press, 1999.(USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
+ [逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
+ [逐步解說： 建立可當地語系化的 Windows Form](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)  
+ [TableLayoutPanel 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
+ [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [操作說明：將控制項停駐在 Windows Forms 上](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [操作說明：錨定 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

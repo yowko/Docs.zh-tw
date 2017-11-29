@@ -1,33 +1,25 @@
 ---
-title: "如何︰ 查詢目錄樹狀結構 (LINQ) (Visual Basic) 中的重複檔案 |Microsoft 文件"
+title: "如何： 查詢目錄樹狀 (LINQ) (Visual Basic) 中的重複檔案"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9773f1fc5a17957cb77a0f14e12a2f61e67d73c3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 30ff1afe31b2dd23e7e9618093a8b1d383b5d713
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>如何︰ 查詢目錄樹狀結構 (LINQ) (Visual Basic) 中的重複檔案
-有時具有相同名稱的檔案可能位於一個以上的資料夾中。 比方說，Visual Studio 安裝資料夾下的資料夾有 readme.htm 檔案。 這個範例示範如何查詢指定的根資料夾下這種重複的檔案名稱。 第二個範例顯示如何查詢檔案的大小和建立時間也相符。  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>如何： 查詢目錄樹狀 (LINQ) (Visual Basic) 中的重複檔案
+同名的檔案有時可能位於多個資料夾中。 例如，在 Visual Studio 安裝資料夾下，有數個資料夾內含 readme.htm 檔案。 這個範例示範如何查詢所指定根資料夾下的這類重複檔案名稱。 第二個範例示範如何查詢大小和建立時間也相符的檔案。  
   
 ## <a name="example"></a>範例  
   
@@ -115,11 +107,11 @@ Module QueryDuplicateFileNames
 End Module  
 ```  
   
- 第一個查詢使用簡單的索引鍵來判斷相符。這會尋找具有相同名稱但其內容可能會有不同的檔案。 第二個查詢使用複合索引鍵來比對的三個屬性<xref:System.IO.FileInfo>物件。</xref:System.IO.FileInfo> 此查詢是很有可能找不到具有相同名稱和內容類似或相同的檔案。  
+ 第一個查詢會使用簡單索引鍵來判斷相符項目；這會尋找同名但內容可能不同的檔案。 第二個查詢會使用複合索引鍵來比對 <xref:System.IO.FileInfo> 物件的三個屬性。 此查詢很有可能找到同名以及內容類似或相同的檔案。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

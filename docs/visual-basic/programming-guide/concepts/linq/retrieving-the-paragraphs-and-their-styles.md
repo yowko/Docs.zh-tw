@@ -1,31 +1,27 @@
 ---
-title: "擷取段落及其樣式 (Visual Basic) |Microsoft 文件"
+title: "擷取段落及其樣式 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bb6d68296a720a796a319502c4cb2f0319727459
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 95c85b4731a9ada0a6af1a9d825bef9b873e89ee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>擷取段落及其樣式 (Visual Basic)
 在此範例中，我們會撰寫一個從 WordprocessingML 文件擷取段落節點的查詢。 它也可以識別每個段落的樣式。  
   
- 此查詢是根據在前一個範例中，查詢[尋找預設段落樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)，這會從樣式清單中擷取預設樣式。 系統需要這個資訊，讓查詢可以識別沒有明確設定樣式之段落的樣式。 段落樣式是透過 `w:pPr` 項目設定的；如果段落不包含這個項目，則會格式化為預設樣式。  
+ 此查詢會根據在前一個範例中，查詢[尋找預設段落樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)，抓取的預設樣式的樣式清單。 系統需要這個資訊，讓查詢可以識別沒有明確設定樣式之段落的樣式。 段落樣式是透過 `w:pPr` 項目設定的；如果段落不包含這個項目，則會格式化為預設樣式。  
   
  本主題說明某些查詢片段的重要性，然後將查詢顯示為完整、實用範例的一部分。  
   
@@ -36,7 +32,7 @@ ms.lasthandoff: 03/13/2017
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- 此運算式是在前一個範例中，查詢的來源類似[尋找預設段落樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)。 主要的差別在於它會使用<xref:System.Xml.Linq.XContainer.Descendants%2A>座標軸而非<xref:System.Xml.Linq.XContainer.Elements%2A>軸。</xref:System.Xml.Linq.XContainer.Elements%2A> </xref:System.Xml.Linq.XContainer.Descendants%2A> 此查詢會使用<xref:System.Xml.Linq.XContainer.Descendants%2A>軸由於文件中具有章節中，段落將不會是本文項目的直接子系; 而是會兩個層級向下階層架構中。</xref:System.Xml.Linq.XContainer.Descendants%2A> 使用<xref:System.Xml.Linq.XContainer.Descendants%2A>軸，程式碼能夠運作的文件是否使用章節。</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ 此運算式是類似於在上一個範例中，查詢的來源[尋找預設段落樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)。 主要差異在於，這個運算式使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸而非 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。 該查詢使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸是因為在具有章節的文件中，段落將不會是本文項目的直接子系，而會在階層中的兩個層級下。 藉由使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸，不管文件是否使用章節，程式碼都可以運作。  
   
 ## <a name="example"></a>範例  
  此查詢使用 `Let` 子句來判斷包含樣式節點的項目。 如果沒有項目，則 `styleNode` 會設定為 `Nothing`：  
@@ -45,7 +41,7 @@ xDoc.Root.<w:body>...<w:p>
 Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()  
 ```  
   
- `Let`子句會先使用<xref:System.Xml.Linq.XContainer.Elements%2A>座標軸來尋找所有項目，名為`pPr`，然後使用<xref:System.Xml.Linq.Extensions.Elements%2A>擴充方法，以尋找所有子項目，名為`pStyle`，最後使用<xref:System.Linq.Enumerable.FirstOrDefault%2A>標準查詢運算子，將集合轉換為單一子句。</xref:System.Linq.Enumerable.FirstOrDefault%2A> </xref:System.Xml.Linq.Extensions.Elements%2A> </xref:System.Xml.Linq.XContainer.Elements%2A> 如果集合是空的，`styleNode` 會設定為 `Nothing`。 若要尋找 `pStyle` 下階節點，這是相當實用的慣用句。 請注意，如果 `pPr` 子節點不存在，擲出例外狀況不會讓程式碼失敗；但是，`styleNode` 會設定為 `Nothing`，這是此 `Let` 子句所需的行為。  
+ `Let` 子句會先使用 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸來尋找名稱為 `pPr` 的所有項目，然後使用 <xref:System.Xml.Linq.Extensions.Elements%2A> 擴充方法來尋找名稱為 `pStyle` 的所有子項目，最後使用 <xref:System.Linq.Enumerable.FirstOrDefault%2A> 標準查詢運算子，將集合轉換為單一子句。 如果集合是空的，`styleNode` 會設定為 `Nothing`。 若要尋找 `pStyle` 下階節點，這是相當實用的慣用句。 請注意，如果 `pPr` 子節點不存在，擲出例外狀況不會讓程式碼失敗；但是，`styleNode` 會設定為 `Nothing`，這是此 `Let` 子句所需的行為。  
   
  此查詢會使用兩個成員 (`StyleName` 和 `ParagraphNode`) 規劃一組匿名型別。  
   
@@ -54,7 +50,7 @@ Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()
   
  您可以找到建立此範例中的來源文件的指示[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
- 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用中的型別<xref:System.IO.Packaging?displayProperty=fullName>命名空間。</xref:System.IO.Packaging?displayProperty=fullName>  
+ 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -148,4 +144,4 @@ StyleName:Code
  在下一個主題中，[擷取段落 (Visual Basic) 的文字](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)，您將建立查詢以擷取段落的文字。  
   
 ## <a name="see-also"></a>另請參閱  
- [教學課程︰ 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+ [教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

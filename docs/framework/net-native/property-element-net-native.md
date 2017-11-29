@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1df3d7368597abdb991facc399bcedf7412d4fdb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d41e05c39f8483cc668962c53534bb531a8007ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltpropertygt-element-net-native"></a>&lt;Property&gt; 項目 (.NET Native)
 將執行階段反映原則套用至屬性。  
@@ -110,7 +108,6 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-

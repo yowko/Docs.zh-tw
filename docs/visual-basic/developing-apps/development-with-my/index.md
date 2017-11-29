@@ -1,43 +1,25 @@
 ---
-title: "使用 My 進行開發 (Visual Basic) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "使用 My 進行開發 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- My.MyWpfExtension.Windows
-dev_langs:
-- VB
+f1_keywords: My.MyWpfExtension.Windows
 helpviewer_keywords:
 - My object
 - My namespace
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 815f459a651adf98dfb78a8444f4b873dece8283
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2cf51e1f6292a61c071fe6d92f5fcbce4be84ff4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="development-with-my-visual-basic"></a>使用 My 進行開發 (Visual Basic)
 Visual Basic 提供可進行快速應用程式開發的新功能來提高產能且易於使用，同時還能提供電源。 這其中一個功能稱為 `My`，可提供對與應用程式及其執行階段環境相關資訊和預設物件執行個體的存取。 此資訊的組織方式是以可透過 IntelliSense 進行探索且邏輯上根據使用方式分隔的格式來進行。  
@@ -59,15 +41,15 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
  描述 `My.Resources` 和 `My.Settings` 物件，它們提供對應用程式資源和設定的存取。  
   
  [Visual Basic 應用程式模型概觀](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 描述 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 應用程式啟動/關機模型。  
+ 描述 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 應用程式啟動/關機模型。  
   
  [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  提供有關 `My` 功能可在不同專案型別中使用的詳細資料。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)   
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
  [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

@@ -1,15 +1,12 @@
 ---
 title: ".NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
 - file attributes, determining
@@ -18,30 +15,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b84e8bbaeb09bfe2ccddb17ecb9b0f8f71cd37c6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
 <xref:System.IO> 命名空間中的類別是用來處理磁碟機、檔案和目錄。  
@@ -126,8 +107,7 @@ ms.lasthandoff: 09/25/2017
  <xref:System.IO.FileSystemWatcher> 元件可讓您監看系統或任何具有網路存取之電腦上的檔案和目錄變更。 例如，如果修改檔案，您可能要將已進行變更的警示傳送給使用者。 發生變更時，會引發一或多個事件、將其儲存在緩衝區中，並且交給 <xref:System.IO.FileSystemWatcher> 元件進行處理。  
   
 ## <a name="see-also"></a>另請參閱  
- [撰寫資料流](https://msdn.microsoft.com/library/e4y2dch9)   
- [檔案和資料流 I/O](https://msdn.microsoft.com/library/k3352a4t)   
- [非同步檔案 I/O](https://msdn.microsoft.com/library/kztecsys)   
+ [撰寫資料流](https://msdn.microsoft.com/library/e4y2dch9)  
+ [檔案和資料流 I/O](https://msdn.microsoft.com/library/k3352a4t)  
+ [非同步檔案 I/O](https://msdn.microsoft.com/library/kztecsys)  
  [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
-

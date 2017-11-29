@@ -1,63 +1,61 @@
 ---
-title: "Static (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Static"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "static modifier"
-  - "Static keyword"
+title: Static (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Static
+helpviewer_keywords:
+- static modifier
+- Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e08f46076281e766a5bc0b99cd61fee9cd41ece5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Static (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定一個或多個宣告的區域變數會繼續存在，並在宣告它們的程序終止之後保持其最新的值。  
+# <a name="static-visual-basic"></a>Static (Visual Basic)
+指定一或多個宣告的區域變數會繼續存在，且在宣告的程序終止之後保持最新的值。  
   
-## 備註  
- 通常，一旦程序停止後，程序中的區域變數就不復存在，  而靜態變數會繼續存在並保留其最新值。  下次當程式碼呼叫程序時，不會重新初始化變數，而且它仍會保存您指派給它的最新值。  只要在其中定義靜態變數的類別或模組存在，靜態變數就會繼續存在。  
+## <a name="remarks"></a>備註  
+ 一般來說，程序中的區域變數就不會存在儘速程序會停止。 靜態變數會繼續存在，並會保留最新的值。 您的程式碼呼叫的程序，在下一次不會重新初始化變數，和它仍會保留您指派給它的最新值。 靜態變數會繼續存在的類別或模組中定義的存留期間。  
   
-## 規則  
+## <a name="rules"></a>規則  
   
--   **宣告內容：**您只能在區域變數上使用 `Static`。  這表示 `Static` 變數的宣告內容必須是程序或程序內的區塊，而且它不能是原始程式檔 \(Source File\)、命名空間、類別、結構或模組。  
+-   **宣告內容。** 您可以使用`Static`只對本機變數。 這表示宣告內容`Static`變數必須在程序或程序中的區塊，而且不得原始程式檔、 命名空間、 類別、 結構或模組。  
   
-     您不可在結構程序內使用 `Static`。  
+     您無法使用`Static`結構程序內。  
   
--   無法推斷 `Static` 區域變數的資料型別。  如需詳細資訊，請參閱[Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+-   資料類型的`Static`無法推斷本機變數。 如需詳細資訊，請參閱[區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
--   **組合的修飾詞：**您無法在同一個宣告中同時指定 `Static` 與 `ReadOnly`、`Shadows` 或 `Shared`。  
+-   **結合的修飾詞。** 您無法指定`Static`搭配`ReadOnly`， `Shadows`，或`Shared`相同宣告中。  
   
-## 行為  
- 當您宣告中的靜態變數`Shared`程序中，此靜態變數只有一個複本適用於整個應用程式。  您呼叫`Shared`程序，使用類別名稱、 非指向類別的執行個體變數。  
+## <a name="behavior"></a>行為  
+ 當您宣告中的靜態變數`Shared`程序只能有一個靜態變數的複本是適用於整個應用程式。 您呼叫`Shared`程序使用類別的名稱，不是變數，以指向類別的執行個體。  
   
- 當您宣告靜態變數中的程序不是`Shared`，只有一個變數的複本可用每個執行個體的類別。  您可以使用此變數會指向特定類別的執行個體，以呼叫非共用的程序。  
+ 當您宣告靜態變數不是程序中的`Shared`，只有一個變數的複本可供每個執行個體的類別。 您可以使用的變數會指向特定類別的執行個體來呼叫非共用程序。  
   
-## 範例  
- 以下範例將說明 `Static` 的用法。  
+## <a name="example"></a>範例  
+ 下列範例示範 `Static` 的用法。  
   
  [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
   
- `Static` 變數 `totalSales` 只會初始化為 0 一次。  每次輸入 `updateSales` 時，`totalSales` 仍具有您為它計算的最新值。  
+ `Static`變數`totalSales`會初始化為 0 僅一次。 您輸入每次`updateSales`，`totalSales`仍有最新您計算的值。  
   
- `Static` 修飾詞可用於以下內容中：  
+ `Static`修飾詞可用於此內容：  
   
- [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-## 請參閱  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [變數宣告](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>另請參閱  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [在 Visual Basic 中的存留期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [變數宣告](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

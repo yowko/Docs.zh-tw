@@ -1,30 +1,33 @@
 ---
-title: "要求-回覆服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "合約 [WCF], 要求-回覆服務"
-  - "要求-回覆合約 [WCF]"
-  - "WCF [WCF], 要求-回覆服務"
-  - "Windows Communication Foundation [WCF], 要求-回覆服務"
+title: "要求-回覆服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation [WCF], request-reply services
+- contracts [WCF], request-reply services
+- WCF [WCF], request-reply services
+- request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a38a90d4e9ec249f91e8bfda88c646c006890d8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 要求-回覆服務
-要求\-回覆服務是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中作業合約的預設類型。用戶端呼叫服務作業然後等候服務回應。您可以使用同步 \(用戶端會鎖定，直到其接收到來自服務或呼叫階段的回應\) 或非同步 \(用戶端會呼叫服務作業、繼續工作，然後接收來自其他執行緒服務的回應\) 方式呼叫服務作業。  
+# <a name="request-reply-services"></a>要求-回覆服務
+要求-回覆服務是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中作業合約的預設類型。 用戶端呼叫服務作業然後等候服務回應。 您可以使用同步 (用戶端會鎖定，直到其接收到來自服務或呼叫階段的回應) 或非同步 (用戶端會呼叫服務作業、繼續工作，然後接收來自其他執行緒服務的回應) 方式呼叫服務作業。  
   
- 若要建立要求\-回覆服務合約，請定義服務合約然後將 <xref:System.ServiceModel.OperationContractAttribute> 類別套用至每個作業，如同下列範例程式碼所示。  
+ 若要建立要求-回覆服務合約，請定義服務合約然後將 <xref:System.ServiceModel.OperationContractAttribute> 類別套用至每個作業，如同下列範例程式碼所示。  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -33,11 +36,10 @@ public interface IRequestReplyCalculator
     [OperationContract]  
     double Add(double n1, double n2);  
 }  
-  
 ```  
   
  您不需要將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性設定為 `false`，因為這是預設行為。  
   
-## 請參閱  
- [單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)   
+## <a name="see-also"></a>另請參閱  
+ [單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)  
  [雙工服務](../../../../docs/framework/wcf/feature-details/duplex-services.md)

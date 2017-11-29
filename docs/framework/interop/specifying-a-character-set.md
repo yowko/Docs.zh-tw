@@ -5,33 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3e97c640472156c1a47ad125bffeaf39b8eb0762
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-a-character-set"></a>指定字元集
-<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> 欄位控制字串封送處理，並決定平台叫用如何在 DLL 中尋找函式名稱。 這個主題將描述這兩種行為。  
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位控制字串封送處理，並決定平台叫用如何在 DLL 中尋找函式名稱。 這個主題將描述這兩種行為。  
   
  某些 API 匯出兩個版本的函式，接受字串引數：窄 (ANSI) 和寬 (Unicode)。 例如，Win32 API 包括 **MessageBox** 函式的下列進入點名稱：  
   
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/21/2017
   
 -   名稱比對  
   
-     當 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> 欄位是 **true** 時，如同 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 中的預設值，平台叫用僅會搜尋您指定的名稱。 例如，如果您指定 **MessageBox**，平台叫用會搜尋 **MessageBox**，並在找不到正確的拼字時失敗。  
+     當 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> 欄位是 **true** 時，如同 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 中的預設值，平台叫用僅會搜尋您指定的名稱。 例如，如果您指定 **MessageBox**，平台叫用會搜尋 **MessageBox**，並在找不到正確的拼字時失敗。  
   
      當 **ExactSpelling** 欄位是 **false** 時，如同在 C++ 和 C# 中的預設值，平台叫用會先搜尋未損壞別名 (**MessageBox**)，然後如果找不到未損壞別名則搜尋損壞名稱 (**MessageBoxA**)。 請注意，ANSI 名稱比對行為不同於 Unicode 名稱比對行為。  
   
@@ -77,7 +74,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="specifying-a-character-set-in-visual-basic"></a>在 Visual Basic 中指定字元集  
  下列範例會宣告 **MessageBox** 函式三次，每次都有不同的字元集行為。 您可以在宣告陳述式新增 **Ansi**、**Unicode** 或 **Auto** 關鍵字，在 Visual Basic 中指定字元集行為。  
   
- 如果您省略字元集關鍵字，如同您在第一個宣告陳述式的做法，<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> 欄位會預設為 ANSI 字元集。 在範例中的第二個和第三個陳述式，明確地以關鍵字指定字元集。  
+ 如果您省略字元集關鍵字，如同您在第一個宣告陳述式的做法，<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位會預設為 ANSI 字元集。 在範例中的第二個和第三個陳述式，明確地以關鍵字指定字元集。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -98,7 +95,7 @@ End Class
 ```  
   
 ## <a name="specifying-a-character-set-in-c-and-c"></a>在 C# 和 C++ 指定字元集  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> 欄位將基礎字元集識別為 ANSI 或 Unicode。 字元集控制應該如何封送處理方法的字串引數。 您可以使用下列格式之一來表示字元集：  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位將基礎字元集識別為 ANSI 或 Unicode。 字元集控制應該如何封送處理方法的字串引數。 您可以使用下列格式之一來表示字元集：  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
@@ -152,8 +149,7 @@ extern "C" int MessageBox(HWND hWnd,
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  
  [使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-

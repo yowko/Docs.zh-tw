@@ -1,52 +1,52 @@
 ---
-title: "如何：在 TableLayoutPanel 控制項中對齊和縮放控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 對齊"
-  - "控制項 [Windows Form], 自動縮放"
-  - "TableLayoutPanel 控制項 [Windows Form], 自動縮放控制項"
+title: "如何：在 TableLayoutPanel 控制項中對齊和縮放控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
+helpviewer_keywords:
+- TableLayoutPanel control [Windows Forms], stretching controls
+- controls [Windows Forms], stretching
+- controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 043adb68b88ab031cea3de1206d1f2c4252b75d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：在 TableLayoutPanel 控制項中對齊和縮放控制項
-您可以在 <xref:System.Windows.Forms.TableLayoutPanel> 中使用 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性對齊和自動縮放控制項。  
+# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控制項中對齊和縮放控制項
+您可以對齊和縮放控制項<xref:System.Windows.Forms.TableLayoutPanel>與<xref:System.Windows.Forms.Control.Anchor%2A>和<xref:System.Windows.Forms.Control.Dock%2A>屬性。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 若要對齊和自動縮放控制項  
+### <a name="to-align-and-stretch-a-control"></a>若要對齊和縮放控制項  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項拖曳至表單。  
+1.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
   
-2.  從 \[**工具箱**\] 拖曳 <xref:System.Windows.Forms.Button> 控制項至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的左上方儲存格。  <xref:System.Windows.Forms.Button> 控制項是置中於儲存格。  
+2.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**左上方儲存格的<xref:System.Windows.Forms.TableLayoutPanel>控制項。 <xref:System.Windows.Forms.Button>控制項置中於資料格。  
   
-3.  將 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值設定為 `Left,Right`。  <xref:System.Windows.Forms.Button> 控制項會縮放至符合儲存格的寬度。  
+3.  值設定<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性`Left,Right`。 <xref:System.Windows.Forms.Button>控制兩端之間自動縮放以符合儲存格的寬度。  
   
-4.  將 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值設定為 `Top,Bottom`。  <xref:System.Windows.Forms.Button> 控制項會縮放至符合儲存格的高度。  
+4.  值設定<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性`Top,Bottom`。 <xref:System.Windows.Forms.Button>控制兩端之間自動縮放以符合資料格的高度。  
   
-5.  將 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性值設定為 <xref:System.Windows.Forms.DockStyle>。  <xref:System.Windows.Forms.Button> 控制項會展開以填滿儲存格。  
+5.  值設定<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.Button>控制展開並填滿資料格。  
   
-6.  將 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性值設定為 <xref:System.Windows.Forms.DockStyle>。  <xref:System.Windows.Forms.Button> 控制項會回到原始大小，並移至儲存格的左上角。  \[**Windows Form 設計工具**\] 已將 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性設定為 `Top, Left`。  
+6.  值設定<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.None>。 <xref:System.Windows.Forms.Button>控制項傳回至其原始大小，並將移至儲存格的左上角。 **Windows Form 設計工具**已設定<xref:System.Windows.Forms.Control.Anchor%2A>屬性`Top, Left`。  
   
-7.  將 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值設定為 `Bottom,Right`。  <xref:System.Windows.Forms.Button> 控制項會移至儲存格的右下角。  
+7.  值設定<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性`Bottom,Right`。 <xref:System.Windows.Forms.Button>控制項移到儲存格右下角。  
   
-8.  將 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值設定為 <xref:System.Windows.Forms.AnchorStyles>。  <xref:System.Windows.Forms.Button> 控制項會移至儲存格的中間。  
+8.  值設定<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Anchor%2A>屬性<xref:System.Windows.Forms.AnchorStyles.None>。 <xref:System.Windows.Forms.Button>控制項移到儲存格中央。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

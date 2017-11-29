@@ -1,49 +1,55 @@
 ---
-title: "&lt;webSocketSettings&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;webSocketSettings&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2714b27916a47ae8e002ea857c93377736c4eff5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;webSocketSettings&gt;
+# <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 用來指定 Web 通訊端設定的組態元素。  
   
-## 語法  
+\<系統。ServiceModel >  
+\<繫結 >  
+\<netHttpBinding >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <netHttpBinding>  
-   <binding>   
-       <webSocketSettings createNotificationOnConnection="boolean"  
-                              disablePayloadMasking="boolean"  
-                              keepAliveInterval="TimeSpan"  
-                              maxPendingConnections="Integer"  
-                              receiveBufferSize="Integer"  
-                              sendBufferSize="Integer"  
-                              subProtocol="String"  
-                              transportUsage="WhenDuplex/Always/Never"/>  
-   </binding>  
+  <binding>   
+    <webSocketSettings createNotificationOnConnection="boolean" 
+                       disablePayloadMasking="boolean" 
+                       keepAliveInterval="TimeSpan" 
+                       maxPendingConnections="Integer" 
+                       receiveBufferSize="Integer" 
+                       sendBufferSize="Integer" 
+                       subProtocol="String" 
+                       transportUsage="WhenDuplex/Always/Never"/>
+  </binding>  
 </netHttpBinding>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
+|---------------|-----------------|  
 |createNotificationOnConnection|指定是否在連接時傳送通知。|  
 |disablePayloadMasking|指定是否停用 Web 通訊端遮罩。|  
 |keepAliveInterval|指定保持運作的間隔。|  
@@ -53,25 +59,25 @@ caps.handback.revision: 3
 |subProtocol|指定 Web 通訊端子通訊協定。|  
 |transportUsage|指定何時要使用 Web 通訊端。|  
   
-## transportUsage 屬性  
+## <a name="transportusage-attribute"></a>transportUsage 屬性  
   
 |值|描述|  
-|-------|--------|  
+|-----------|-----------------|  
 |WhenDuplex|當合約為雙工合約時，使用 Web 通訊端通訊協定。|  
 |永遠|不論合約為何，永遠使用 Web 通訊端通訊協定。|  
 |永不|永遠不使用 Web 通訊端通訊協定。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|\<netHttpBinding\>|指定 NetHttpBinding|  
+|項目|說明|  
+|-------------|-----------------|  
+|\<netHttpBinding >|指定 NetHttpBinding|  
   
-## 範例  
- 下列範例示範如何使用 \<webSocketSettings\> 項目。  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用\<webSocketSettings > 項目。  
   
 ```xml  
 <netHttpBinding>  
@@ -89,12 +95,12 @@ caps.handback.revision: 3
       </netHttpBinding>  
 ```  
   
-## 請參閱  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-tw/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<繫結\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

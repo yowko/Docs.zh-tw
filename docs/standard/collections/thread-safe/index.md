@@ -8,27 +8,25 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, overview
+helpviewer_keywords: thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b5394cd2e9c9fa2b0cacb93ddf2cf05b33fabc71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 19ecc67b38e2eab52994fb278211c6d9ff67ae7e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-safe-collections"></a>安全執行緒集合
-[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 引進 <xref:System.Collections.Concurrent?displayProperty=fullName> 命名空間，其中包含數個具備安全執行緒且可擴充的集合類別。 多個執行緒可以安全且有效率地新增或移除這些集合中的項目，而不需要利用使用者程式碼進行額外同步處理。 當您撰寫新的程式碼時，只要集合同時寫入多個執行緒，就使用並行集合類別。 如果您僅讀取共用集合，則可以使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間中的類別。 除非您需要將目標設為 .NET Framework 1.1 或舊版本的執行階段，否則建議您不要使用 1.0 集合類別。  
+[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 引進 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間，其中包含數個具備安全執行緒且可擴充的集合類別。 多個執行緒可以安全且有效率地新增或移除這些集合中的項目，而不需要利用使用者程式碼進行額外同步處理。 當您撰寫新的程式碼時，只要集合同時寫入多個執行緒，就使用並行集合類別。 如果您僅讀取共用集合，則可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中的類別。 除非您需要將目標設為 .NET Framework 1.1 或舊版本的執行階段，否則建議您不要使用 1.0 集合類別。  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>.NET Framework 1.0 和 2.0 集合中的執行緒同步處理  
- 您可以在 <xref:System.Collections?displayProperty=fullName> 命名空間中找到 .NET Framework 1.0 中引進的集合。 這些包括常用 <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Hashtable> 的集合透過 `Synchronized` 屬性來提供某種安全執行緒，而這個屬性會傳回集合的安全執行緒包裝函式。 包裝函式的運作方式是針對每個新增或移除作業鎖定整個集合。 因此，嘗試存取集合的每個執行緒都必須等待，直到輪到它取得一個鎖定。 這無法進行擴充，而且可能會造成大型集合的重大效能下降。 此外，設計未完全保護競爭情形。 如需詳細資訊，請參閱 MSDN 網站上的[在泛型集合中同步處理 (英文)](http://go.microsoft.com/fwlink/?LinkID=161130)。  
+ 您可以在 <xref:System.Collections?displayProperty=nameWithType> 命名空間中找到 .NET Framework 1.0 中引進的集合。 這些包括常用 <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Hashtable> 的集合透過 `Synchronized` 屬性來提供某種安全執行緒，而這個屬性會傳回集合的安全執行緒包裝函式。 包裝函式的運作方式是針對每個新增或移除作業鎖定整個集合。 因此，嘗試存取集合的每個執行緒都必須等待，直到輪到它取得一個鎖定。 這無法進行擴充，而且可能會造成大型集合的重大效能下降。 此外，設計未完全保護競爭情形。 如需詳細資訊，請參閱 MSDN 網站上的[在泛型集合中同步處理 (英文)](http://go.microsoft.com/fwlink/?LinkID=161130)。  
   
- 您可以在 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間中找到 .NET Framework 2.0 中引進的集合類別， 包括 <xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.Dictionary%602> 等。 這些類別提供相較起 .NET Framework 1.0 類別的改良型別安全和效能。 不過，.NET Framework 2.0 集合類別不會提供任何執行緒同步處理；在多個執行緒上同時新增或移除項目時，使用者程式碼必須提供所有同步處理。  
+ 您可以在 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中找到 .NET Framework 2.0 中引進的集合類別， 包括 <xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.Dictionary%602> 等。 這些類別提供相較起 .NET Framework 1.0 類別的改良型別安全和效能。 不過，.NET Framework 2.0 集合類別不會提供任何執行緒同步處理；在多個執行緒上同時新增或移除項目時，使用者程式碼必須提供所有同步處理。  
   
  我們建議使用 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 中的並行集合類別，因為它們不僅提供 .NET Framework 2.0 集合類別的型別安全，而且效率和安全執行緒也會比 [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)] 集合所提供的效率和安全執行緒更高且完整。  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/06/2017
 > [!NOTE]
 >  因為並行集合類別支援 <xref:System.Collections.ICollection>，所以會提供 <xref:System.Collections.ICollection.IsSynchronized%2A> 和 <xref:System.Collections.ICollection.SyncRoot%2A> 屬性的實作，即使這些屬性無關也是一樣。 `IsSynchronized` 一律會傳回 `false`，而 `SyncRoot` 一律為 `null` (在 Visual Basic 中為 `Nothing`)。  
   
- 下表列出 <xref:System.Collections.Concurrent?displayProperty=fullName> 命名空間中的集合類型。  
+ 下表列出 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類型。  
   
 |類型|說明|  
 |----------|-----------------|  
@@ -64,5 +62,4 @@ ms.lasthandoff: 09/06/2017
 |[操作說明：使用 ConcurrentBag 建立物件集區](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|示範在您可以重複使用物件而非持續建立新物件的情況下，如何使用並行資料包改善效能。|  
   
 ## <a name="reference"></a>參考資料  
- <xref:System.Collections.Concurrent?displayProperty=fullName>
-
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>

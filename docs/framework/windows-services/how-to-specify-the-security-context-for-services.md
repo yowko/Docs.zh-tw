@@ -1,56 +1,59 @@
 ---
-title: "如何：指定服務的安全性內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "內容, Visual Studio 安全性"
-  - "安全性 [Visual Studio], 內容"
-  - "安全性 [Visual Studio], 服務應用程式"
-  - "ServiceInstaller 類別, 安全性內容"
-  - "ServiceProcessInstaller 類別, 安全性內容"
-  - "服務, 安全性"
-  - "Windows 服務應用程式, 安全性"
+title: "如何：指定服務的安全性內容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Service applications, security
+- security [Visual Studio], contexts
+- contexts, Visual Studio security
+- security [Visual Studio], service applications
+- ServiceProcessInstaller class, security context
+- services, security
+- ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 50a9c6ff7f02cda4475aa5390181fa5d410af161
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：指定服務的安全性內容
-根據預設，服務是在不同於登入使用者的安全性內容下執行。  服務是在稱為 `LocalSystem` 的預設系統帳戶內容下執行，這個帳戶會賦予它們不同於使用者的系統資源存取權限。  您可以改變此行為，指定服務應該在其他的使用者帳戶下執行。  
+# <a name="how-to-specify-the-security-context-for-services"></a>如何：指定服務的安全性內容
+根據預設，服務會在不同的安全性內容以外的登入的使用者中執行。 預設的系統帳戶內容中執行的服務呼叫`LocalSystem`，讓他們擁有不同的存取權限與使用者的系統資源。 您可以變更此行為，以指定不同的使用者帳戶，您的服務應在其下執行。  
   
- 您可以管理服務所執行處理序中的 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性，設定安全性內容。  這個屬性可讓您將服務設定為下列四種帳戶類型之一：  
+ 管理設定的安全性內容<xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>服務執行所在的處理序的屬性。 這個屬性可讓您將服務設定為四種帳戶類型之一：  
   
--   `User`，當服務在網路上單一使用者指定的帳戶內容中安裝和執行時，引發系統提示必須輸入有效的使用者名稱和密碼。  
+-   `User`這會使系統服務已安裝，且指定的網路; 上的單一使用者帳戶內容中執行時，有效的使用者名稱和密碼提示  
   
--   `LocalService`，在當做本機電腦上沒有權限使用者的帳戶內容中執行，而且將匿名認證提供給任何遠端伺服器。  
+-   `LocalService`其中會做為沒有權限的使用者的本機電腦上，並提供匿名認證給任何遠端伺服器的帳戶內容中執行  
   
--   `LocalSystem`，在帳戶中提供各種本機權限，而且將電腦的認證提供給任何遠端伺服器;  
+-   `LocalSystem`其中會提供延伸本機的權限，並顯示電腦的認證給任何遠端伺服器; 的帳戶內容中執行  
   
--   `NetworkService`，在當做本機電腦上沒有權限使用者的帳戶內容中執行，而且將電腦的認證提供給任何遠端伺服器。  
+-   `NetworkService`其中會做為沒有權限的使用者的本機電腦上，並顯示電腦的認證給任何遠端伺服器的帳戶內容中執行。  
   
  如需詳細資訊，請參閱 <xref:System.ServiceProcess.ServiceAccount> 列舉。  
   
-### 指定服務的安全性內容  
+### <a name="to-specify-the-security-context-for-a-service"></a>若要指定服務的安全性內容  
   
-1.  建立您的服務後，為它加入必要的安裝程式。  如需詳細資訊，請參閱[如何：加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+1.  建立您的服務之後, 加入必要的安裝它。 如需詳細資訊，請參閱[如何： 加入至您的服務應用程式的安裝程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-2.  在設計工具中，存取 `ProjectInstaller` 類別並按一下您正在使用之服務的服務處理序安裝程式。  
+2.  在設計工具中，存取`ProjectInstaller`類別，並按一下您要使用的服務的服務處理程序安裝程式。  
   
     > [!NOTE]
-    >  對每一個服務應用程式而言，`ProjectInstaller` 類別中至少有兩個安裝元件：負責安裝專案中所有服務的處理序，以及應用程式包含的每一個服務的安裝程式。  在這個例子中，您希望選取 <xref:System.ServiceProcess.ServiceProcessInstaller>。  
+    >  每一個服務應用程式中，有至少兩個安裝元件中的`ProjectInstaller`類別 — 一個用於專案中，而每個服務應用程式包含一個安裝程式會安裝所有服務的程序。 在本例中，您想要選取<xref:System.ServiceProcess.ServiceProcessInstaller>。  
   
-3.  在 \[**屬性**\] 視窗中，將 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 設定為適當值。  
+3.  在**屬性**視窗中，將<xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>適當的值。  
   
-## 請參閱  
- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [如何：加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)   
- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>另請參閱  
+ [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何： 加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [如何： 建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)

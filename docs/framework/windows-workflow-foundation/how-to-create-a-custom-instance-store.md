@@ -1,30 +1,34 @@
 ---
-title: "HOW TO：建立自訂執行個體存放區 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：建立自訂執行個體存放區"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c383d3af92ba2f76f8ba09bc194220c170beaa0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：建立自訂執行個體存放區
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，這是使用 SQL Server 來保存工作流程資料的執行個體存放區。  如果您的應用程式需要將工作流程資料保存在另一個媒體中，例如不同的資料庫或檔案系統，您可以實作自訂的執行個體存放區。  擴充抽象的 <xref:System.Runtime.DurableInstancing.InstanceStore> 類別，並實作進行實作所需的方法，即可建立自訂執行個體存放區。  有關自訂執行個體存放區的完整實作，請參閱[公司購買程序](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)範例。  
+# <a name="how-to-create-a-custom-instance-store"></a>HOW TO：建立自訂執行個體存放區
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，這是使用 SQL Server 來保存工作流程資料的執行個體存放區。 如果您的應用程式需要將工作流程資料保存在另一個媒體中，例如不同的資料庫或檔案系統，您可以實作自訂的執行個體存放區。 擴充抽象的 <xref:System.Runtime.DurableInstancing.InstanceStore> 類別，並實作進行實作所需的方法，即可建立自訂執行個體存放區。 自訂執行個體存放區的完整實作，請參閱[公司購買程序](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)範例。  
   
-## 實作 BeginTryCommand 方法  
- 持續性引擎會將 <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> 傳送至執行個體存放區。  `command` 參數的型別會表示所執行的命令；此參數可以是下列其中一種型別：  
+## <a name="implementing-the-begintrycommand-method"></a>實作 BeginTryCommand 方法  
+ 持續性引擎會將 <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> 傳送至執行個體存放區。 `command` 參數的型別會表示所執行的命令；此參數可以是下列其中一種型別：  
   
--   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>：需要將工作流程保存至儲存媒體中時，持續性引擎會將此命令傳送至執行個體存放區。  工作流程持續性資料已提供給在<xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 參數之 `command` 成員中的方法。  
+-   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>：需要將工作流程保存至儲存媒體中時，持續性引擎會將此命令傳送至執行個體存放區。 工作流程持續性資料已提供給在<xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 參數之 `command` 成員中的方法。  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>：需要從儲存媒體載入工作流程時，持續性引擎會將此命令傳送至執行個體存放區。  所要載入之工作流程的執行個體 ID 會提供給 `instanceId` 參數的 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> 屬性的 `context` 參數中的方法。  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>：需要從儲存媒體載入工作流程時，持續性引擎會將此命令傳送至執行個體存放區。 所要載入之工作流程的執行個體 ID 會提供給 `instanceId` 參數的 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> 屬性的 `context` 參數中的方法。  
   
--   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>：必須將 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 登錄為鎖定擁有人時，持續性引擎會將此命令傳送至執行個體存放區。  應使用 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> 參數的 `context` 方法，將目前工作流程的執行個體 ID 提供給執行個體存放區。  
+-   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>：必須將 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 登錄為鎖定擁有人時，持續性引擎會將此命令傳送至執行個體存放區。 應使用 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> 參數的 `context` 方法，將目前工作流程的執行個體 ID 提供給執行個體存放區。  
   
      下列程式碼片段示範如何實作 CreateWorkflowOwner 命令，以指派明確的鎖定擁有人。  
   
@@ -44,10 +48,9 @@ caps.handback.revision: 11
                                    createCommand,  
                                    TimeSpan.FromSeconds(30)).InstanceOwner;  
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>：可以從執行個體存放區中移除鎖定擁有人的執行個體 ID 時，持續性引擎會將此命令傳送至執行個體存放區。  就像使用 <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> 一樣，應由應用程式提供鎖定擁有人的 ID。  
+-   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>：可以從執行個體存放區中移除鎖定擁有人的執行個體 ID 時，持續性引擎會將此命令傳送至執行個體存放區。 就像使用 <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> 一樣，應由應用程式提供鎖定擁有人的 ID。  
   
      下列程式碼片段示範如何使用 <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand> 來解除鎖定。  
   
@@ -72,10 +75,9 @@ caps.handback.revision: 11
             store.DefaultInstanceOwner = null;  
         }  
     }  
-  
     ```  
   
-     當子執行個體執行時，應在 Try\/Catch 區塊中叫用上述方法。  
+     當子執行個體執行時，應在 Try/Catch 區塊中叫用上述方法。  
   
     ```  
     try  
@@ -90,14 +92,13 @@ caps.handback.revision: 11
     {  
         FreeHandleAndDeleteOwner(store, ownerHandle);  
     }  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>：需要使用工作流程的執行個體索引鍵載入工作流程執行個體時，持續性引擎會將此命令傳送至執行個體存放區。  可以使用命令的 <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> 參數來判斷執行個體索引鍵的 ID。  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>：需要使用工作流程的執行個體索引鍵載入工作流程執行個體時，持續性引擎會將此命令傳送至執行個體存放區。 可以使用命令的 <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> 參數來判斷執行個體索引鍵的 ID。  
   
--   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>：持續性引擎會將這個命令傳送至執行個體存放區，以擷取持續工作流程的啟動參數，進而建立可以載入工作流程的工作流程主機。  在找到可以啟動的執行個體時，引擎會傳送此命令，以回應向主機發出 <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> 的執行個體存放區。  應輪詢執行個體存放區，以判斷是否有可啟動的工作流程。  
+-   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>：持續性引擎會將這個命令傳送至執行個體存放區，以擷取持續工作流程的啟動參數，進而建立可以載入工作流程的工作流程主機。 在找到可以啟動的執行個體時，引擎會傳送此命令，以回應向主機發出 <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> 的執行個體存放區。 應輪詢執行個體存放區，以判斷是否有可啟動的工作流程。  
   
--   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>：持續性引擎會傳送這個命令至執行個體存放區，以載入可執行的工作流程執行個體。  在找到可以執行的執行個體時，引擎會傳送此命令，以回應向主機發出 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> 的執行個體存放區。  執行個體存放區應輪詢可以執行的工作流程。  下列程式碼片段示範如何在執行個體存放區中輪詢可執行或啟動的工作流程。  
+-   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>：持續性引擎會傳送這個命令至執行個體存放區，以載入可執行的工作流程執行個體。 在找到可以執行的執行個體時，引擎會傳送此命令，以回應向主機發出 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> 的執行個體存放區。 執行個體存放區應輪詢可以執行的工作流程。 下列程式碼片段示範如何在執行個體存放區中輪詢可執行或啟動的工作流程。  
   
     ```  
     public void PollForEvents()  
@@ -135,10 +136,9 @@ caps.handback.revision: 11
             }  
         }  
     }  
-  
     ```  
   
-     在上面的程式碼片段中，執行個體存放區會查詢可用的事件，並檢查每一個事件以判斷其是否為<xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> 事件。  如果找到此類事件，會呼叫 <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A>，以通知主機傳送命令至執行個體存放區。  下列程式碼片段示範如何實作此命令的處理常式。  
+     在上面的程式碼片段中，執行個體存放區會查詢可用的事件，並檢查每一個事件以判斷其是否為<xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> 事件。 如果找到此類事件，會呼叫 <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A>，以通知主機傳送命令至執行個體存放區。  下列程式碼片段示範如何實作此命令的處理常式。  
   
     ```  
     If (command is TryLoadRunnableWorkflowCommand)  
@@ -227,19 +227,17 @@ caps.handback.revision: 11
             break;  
         }  
     }  
-  
     ```  
   
-     在上面的程式碼片段中，執行個體存放區會搜尋可執行的執行個體。  如果找到執行個體，就會將它繫結到執行內容並載入。  
+     在上面的程式碼片段中，執行個體存放區會搜尋可執行的執行個體。 如果找到執行個體，就會將它繫結到執行內容並載入。  
   
-## 使用自訂執行個體存放區  
- 若要實作自訂執行個體存放區，請將該執行個體存放區的執行個體指派至 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>，並且實作 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>方法。  如需特定資訊，請參閱[HOW TO：建立與執行長期執行的工作流程](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md)教學課程。  
+## <a name="using-a-custom-instance-store"></a>使用自訂執行個體存放區  
+ 若要實作自訂執行個體存放區，請將該執行個體存放區的執行個體指派至 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>，並且實作 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>方法。  請參閱[How to： 建立和執行長時間執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)教學課程的細節。  
   
-## 執行個體存放區範例  
- 下列程式碼片段是完整的執行個體存放區實作，取自[公司購買程序](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)範例。  此執行個體存放區會使用 XML 將工作流程資料保存至檔案。  
+## <a name="a-sample-instance-store"></a>執行個體存放區範例  
+ 下列程式碼範例是完整的執行個體存放區實作，取自[公司購買程序](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)範例。 此執行個體存放區會使用 XML 將工作流程資料保存至檔案。  
   
 ```  
-  
 using System;  
 using System.Activities.DurableInstancing;  
 using System.Collections.Generic;  
@@ -400,5 +398,4 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         }  
     }  
 }  
-  
 ```

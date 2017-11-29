@@ -1,34 +1,30 @@
 ---
-title: "如何︰ 擷取單一屬性 (LINQ to XML) (Visual Basic) |Microsoft 文件"
+title: "如何： 擷取單一屬性 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 35f477ead2bdcfdf78781459f93a755dbc89e5cc
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 08b9b2bed60f5818db9c494047ade576e8526bb7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>如何︰ 擷取單一屬性 (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>如何： 擷取單一屬性 (LINQ to XML) (Visual Basic)
 這個主題會說明如何擷取項目的單一屬性 (如果有屬性名稱)。 這在撰寫您要尋找具有特定屬性之項目的查詢運算式時，相當實用。  
   
- <xref:System.Xml.Linq.XElement.Attribute%2A>方法<xref:System.Xml.Linq.XElement>類別會傳回<xref:System.Xml.Linq.XAttribute>具有指定名稱。</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement.Attribute%2A>  
+ <xref:System.Xml.Linq.XElement.Attribute%2A> 類別的 <xref:System.Xml.Linq.XElement> 方法會傳回具有指定之名稱的 <xref:System.Xml.Linq.XAttribute>。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用<xref:System.Xml.Linq.XElement.Attribute%2A>方法。</xref:System.Xml.Linq.XElement.Attribute%2A>  
+ 下列範例使用 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法。  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -51,7 +47,7 @@ work
 ```  
   
 ## <a name="example"></a>範例  
- 如果您想要擷取屬性的值，您可以將它轉換，就像進行<xref:System.Xml.Linq.XElement>物件。</xref:System.Xml.Linq.XElement> 下列範例為其示範。  
+ 如果您要擷取屬性的值，您可以進行轉型，如同將 <xref:System.Xml.Linq.XElement> 物件轉型。 下列範例為其示範。  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -73,7 +69,7 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</xref:System.Xml.Linq.XAttribute>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供了 <xref:System.Xml.Linq.XAttribute> 類別至 `string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 及 `GUID?` 的明確轉換運算子。  
   
 ## <a name="example"></a>範例  
  下列範例顯示命名空間中之屬性的相同程式碼。 如需詳細資訊，請參閱[處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
@@ -106,4 +102,4 @@ work
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to XML 軸心方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+ [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

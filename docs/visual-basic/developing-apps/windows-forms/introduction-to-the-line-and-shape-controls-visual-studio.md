@@ -1,61 +1,60 @@
 ---
-title: "Introduction to the Line and Shape Controls (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Line control, overview"
-  - "Shape control, overview"
-  - "lines, drawing"
-  - "shapes, drawing"
+title: "Line 和 Shape 控制項簡介 (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Line control [Visual Basic], overview
+- Shape control [Visual Basic], overview
+- lines, drawing
+- shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e691d57c6de640c83556937eeddedf89e79b6846
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Introduction to the Line and Shape Controls (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Visual Basic Power Packs 中的 Line 和 Shape 控制項是一組三種圖形的控制項，可讓您在表單與容器上繪製線條及形狀。  <xref:Microsoft.VisualBasic.PowerPacks.LineShape> 控制項用來繪製水平線、垂直線和對角線。  <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 控制項用來繪製圓形和橢圓形，而 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 控制項用來繪製矩形和正方形。  
+# <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Line 和 Shape 控制項簡介 (Visual Studio)
+Visual Basic Power Pack 線條和圖案控制項是一組可讓您在表單和容器上繪製線條和形狀的三個圖形化控制項。 <xref:Microsoft.VisualBasic.PowerPacks.LineShape>控制項用來繪製水平、 垂直和對角線線條。 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>控制項用來繪製圓形和橢圓形，而<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>控制項用來繪製的矩形和正方形。  
   
-## Line 和 Shape 控制項  
- Line 和 Shape 控制項封裝了許多包含在 <xref:System.Drawing> 命名空間中的圖形方法，  讓您只要做一個步驟就能完成繪製線條及形狀，而不必建立圖形物件、畫筆與筆刷。  複雜的圖形技巧 \(例如漸層填滿\) 也只要設定一些屬性便能實現。  
+## <a name="line-and-shape-controls"></a>Line 和 Shape 控制項  
+ Line 和 Shape 控制項封裝的圖形方法中所包含的許多<xref:System.Drawing>命名空間。 這可讓您在單一步驟中繪製線條與圖形，而不需要建立圖形物件，畫筆和筆刷。 複雜圖形技術，例如漸層填滿可藉由直接設定某些屬性。  
   
- 雖然也有可能使用圖形方法繪製線條及形狀，但使用 Line 和 Shape 控制項有幾個好處：  
+ 此外，也可以使用圖形方法來繪製線條和形狀，雖然有使用線條和圖案控制項的數個優點：  
   
--   圖形方法只能在執行階段呼叫。  您可以在設計階段將 Line 和 Shape 控制項加入表單中，  這麼一來，您就能知道圖形的樣子以及並準確定位，您也可以在執行階段加入這些控制項。  
+-   可以呼叫圖形方法只能在執行階段。 在設計階段時，可以加入線條和圖案控制項的表單。 這可讓您若要查看其外觀及位置一樣大。它們也可以加入在執行階段。  
   
--   Line 和 Shape 控制項在執行階段是可選取的，並提供 <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> 和 <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A> 等事件。  無法選取圖形方法的輸出，而且並未提供事件。  
+-   Line 和 Shape 控制項可在執行階段選取，提供的事件，例如<xref:Microsoft.VisualBasic.PowerPacks.Shape.Click>和<xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>。 圖形方法的輸出不能選取，並不提供事件。  
   
--   Line 和 Shape 控制項提供的 <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> 及 <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> 方法，有助於在設計階段與執行階段控制其疊置順序。  圖形方法的疊置順序只能在執行階段透過變更其執行順序來進行控制。  
+-   Line 和 Shape 控制項提供<xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A>和<xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A>可讓您控制他們的疊置順序，在設計階段和執行階段方法。 可以控制圖形方法疊置順序，只是藉由變更其在執行階段的執行順序。  
   
--   Line 和 Shape 控制項是無視窗 \(Windowless\) 控制項，它們沒有視窗控制代碼 \(Window Handle\)，因此使用的系統資源較少。  
+-   線條和圖案控制項是無視窗控制項。它們有沒有任何視窗控制代碼，因此使用較少的系統資源。  
   
-### 物件模型  
- Line 和 Shape 控制項衍生自 <xref:Microsoft.VisualBasic.PowerPacks.Shape> 基底類別 \(Base Class\)，這個類別會定義它們的共用屬性、方法及事件。  
+### <a name="object-model"></a>物件模型  
+ Line 和 Shape 控制項衍生自基底<xref:Microsoft.VisualBasic.PowerPacks.Shape>類別來定義其共用的屬性、 方法和事件。  
   
  下圖顯示 Line 和 Shape 物件階層架構。  
   
- ![Line 和 Shape 物件階層架構的圖表](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")  
+ ![Line 和 Shape 物件階層架構圖表](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")  
 Line 和 Shape 物件階層架構  
   
- 衍生的 <xref:Microsoft.VisualBasic.PowerPacks.LineShape> 類別包含線條特有的屬性、方法及事件。  衍生的 <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> 類別是 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 和 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 的基底類別；它包含所有形狀通用的屬性、方法及事件。  您也可以從 <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> 衍生，以建立自己的 `Shape` 控制項。  
+ 在衍生<xref:Microsoft.VisualBasic.PowerPacks.LineShape>類別包含屬性、 方法和事件都是唯一的各行。 在衍生<xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>類別是基底類別<xref:Microsoft.VisualBasic.PowerPacks.OvalShape>和<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; 它包含屬性、 方法和事件通用於所有形狀。 您也可以衍生自<xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>自行建立`Shape`控制項。  
   
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 和 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 類別可以用來繪製圓形、橢圓形、矩形及圓角矩形。  
+ <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>和<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>類別可以用來繪製圓形、 橢圓形、 矩形和具有圓角矩形。  
   
- 當 Line 或 Shape 控制項加入到表單或容器時，會建立不可見的 <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> 物件。  <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> 在容器控制項內為形狀的畫布；每一個 <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> 都有對應的 <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection>，可讓您逐一查看 Line 和 Shape 控制項。  此外，使用剪貼或拖曳的方式，可以將形狀從一個容器移到另一個容器。  從容器中移除最後一個形狀時，會一併移除 <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>。  
+ 當加入線條或圖形控制項在表單或容器，隱藏<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>建立物件。 <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>做為每個容器控制項中的圖形畫布; 每一個<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>都有對應<xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection>，可讓您逐一查看 Line 和 Shape 控制項。 您可以移動圖形從一個容器到另一個使用剪下和貼上或透過拖放。 從容器中，移除最後一個圖形時<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>也會移除。  
   
 > [!NOTE]
->  並非所有容器控制項都支援 Line 和 Shape 控制項。  您無法在 <xref:System.Windows.Forms.TableLayoutPanel> 或 <xref:System.Windows.Forms.FlowLayoutPanel> 上裝載 Line 和 Shape 控制項。  
+>  並非所有的容器控制項支援線條和圖案控制項。 您無法將裝載線條或圖形控制項上<xref:System.Windows.Forms.TableLayoutPanel>或<xref:System.Windows.Forms.FlowLayoutPanel>。  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.PowerPacks>   
- [How to: Draw Lines with the LineShape Control](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)   
- [How to: Draw Shapes with the OvalShape and RectangleShape Controls](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)   
- [How to: Enable Tabbing Between Shapes](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:Microsoft.VisualBasic.PowerPacks>  
+ [操作說明：使用 LineShape 控制項繪製線條](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
+ [操作說明：使用 OvalShape 和 RectangleShape 控制項繪製圖案](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
+ [操作說明：在圖案間啟用定位停駐點](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)

@@ -1,32 +1,28 @@
 ---
-title: "如何︰ 尋找單一子代使用 Descendants 方法 (Visual Basic) |Microsoft 文件"
+title: "如何： 尋找單一子系使用 Descendants 方法 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74d4dd0b805a5ea2c189cb89bcaeca3f4cac1268
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0647dee5ced1e986fcb3fac7915437dfb37b0796
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>如何︰ 尋找單一子代使用 Descendants 方法 (Visual Basic)
-您可以使用<xref:System.Xml.Linq.XContainer.Descendants%2A>座標軸方法快速撰寫程式碼來尋找唯一單一具名項目。</xref:System.Xml.Linq.XContainer.Descendants%2A> 當您想要利用特定名稱尋找特定子代時，這個技術特別實用。 您可以撰寫程式碼來導覽至所需的項目，但通常是比較快而且容易撰寫程式碼使用<xref:System.Xml.Linq.XContainer.Descendants%2A>軸。</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>如何： 尋找單一子系使用 Descendants 方法 (Visual Basic)
+您可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法快速撰寫程式碼以尋找唯一具名的單一項目。 當您想要利用特定名稱尋找特定子代時，這個技術特別實用。 您可以撰寫程式碼來導覽所需的項目，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸撰寫程式碼通常比較快也比較容易。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用<xref:System.Linq.Enumerable.First%2A>標準查詢運算子。</xref:System.Linq.Enumerable.First%2A>  
+ 此範例使用 <xref:System.Linq.Enumerable.First%2A> 標準查詢運算子。  
   
 ```vb  
 Dim root As XElement = _  

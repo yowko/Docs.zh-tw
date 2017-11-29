@@ -1,40 +1,31 @@
 ---
-title: "如何︰ 傳送資料流 XML 片段並存取標頭資訊 (Visual Basic) |Microsoft 文件"
+title: "如何： 串流 XML 片段，以存取標頭資訊 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>如何︰ 傳送資料流 XML 片段並存取標頭資訊 (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>如何： 串流 XML 片段，以存取標頭資訊 (Visual Basic)
 有時候您必須讀取任意大的 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用大型 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比，也就是，變成過度。 因此，您應該改用資料流技術。  
   
- 其中一個選項是撰寫使用<xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader>應用程式 不過，您可能想要使用[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查詢 XML 樹狀結構。 若發生這種情況，您可以撰寫自己的自訂座標軸方法。 如需詳細資訊，請參閱[How to︰ 撰寫 LINQ to XML 軸心方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
+ 其中一個選項是使用 <xref:System.Xml.XmlReader> 撰寫您的應用程式。 但是，您可能想要使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢 XML 樹狀結構。 若發生這種情況，您可以撰寫自己的自訂座標軸方法。 如需詳細資訊，請參閱[How to： 撰寫 LINQ to XML 軸心方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
   
- 若要撰寫您自己的座標軸方法，您可以撰寫小型的方法，以使用<xref:System.Xml.XmlReader>讀取節點，直到它到達您感興趣之節點的其中一個。</xref:System.Xml.XmlReader> 該方法會呼叫<xref:System.Xml.Linq.XNode.ReadFrom%2A>，它會讀取<xref:System.Xml.XmlReader>和具現化 XML 片段。</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> 此時，您就可以在自訂座標軸方法上撰寫 LINQ 查詢。  
+ 若要撰寫您自己的座標軸方法，您可以撰寫使用 <xref:System.Xml.XmlReader> 讀取節點的小方法，直到該方法到達您感興趣的其中一個節點。 然後，該方法會呼叫從 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 讀取的 <xref:System.Xml.XmlReader>，並具現化 XML 片段。 此時，您就可以在自訂座標軸方法上撰寫 LINQ 查詢。  
   
- 在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。 特定的標準查詢運算子，例如<xref:System.Linq.Enumerable.OrderBy%2A>、 反覆查看其來源、 收集所有資料、 排序以及最後產生順序中的第一個項目。</xref:System.Linq.Enumerable.OrderBy%2A> 請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會保留小的記憶體使用量。  
+ 在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。 特定的標準查詢運算子 (例如，<xref:System.Linq.Enumerable.OrderBy%2A>) 會反覆查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。 請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會保留小的記憶體使用量。  
   
 ## <a name="example"></a>範例  
  有時候問題會變得更有趣。 在下列 XML 文件中，您自訂座標軸方法的消費者也必須知道每個項目所屬客戶的名稱。  
@@ -250,4 +241,3 @@ End Class
   
 ## <a name="see-also"></a>另請參閱  
  [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

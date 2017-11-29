@@ -1,6 +1,6 @@
 ---
 title: "F# Interactive (fsi.exe) 參考"
-description: "F# Interactive (fsi.exe) 參考"
+description: "了解如何 F # Interactive (fsi.exe) 用來以互動方式在主控台執行 F # 程式碼或執行 F # 指令碼。"
 keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
@@ -10,14 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 87980bada62b568ec8795ab3566089f1bb510652
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: bcf3fe052f305f29ae4cf618d93759bd911e0078
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="interactive-programming-with-f"></a>F# 互動式程式設計# #
+# <a name="interactive-programming-with-f"></a>F# 互動式程式設計 #
 
 > [!NOTE]
 本文目前僅描述 Windows 的體驗。  將會加以重新撰寫。
@@ -27,7 +26,7 @@ API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整�
 
 F# Interactive (fsi.exe) 在主控台中，以互動方式用於執行 F# 程式碼，或執行 F# 指令碼。 換句話說，F# Interactive 會執行 F# 語言的 REPL (讀取、評估、列印迴圈)。
 
-若要從主控台執行 F# Interactive，請執行 fsi.exe。  您可以在 “c:\Program Files (x86)\Microsoft SDKs\F#\<版本>\Framework\<版本>\” 中找到 fsi.exe。 如需可用命令列選項的資訊，請參閱 [F# Interactive 選項](fsharp-interactive-options.md)。
+若要從主控台執行 F# Interactive，請執行 fsi.exe。  您可以獲悉 fsi.exe 在"c:\Program 檔案 (x86) \Microsoft SDKs\F#\<版本 > \Framework\<版本 >\"。 如需可用命令列選項的資訊，請參閱 [F# Interactive 選項](fsharp-interactive-options.md)。
 
 若要透過 Visual Studio 執行 F# Interactive，您可以按一下標示為 **F# Interactive** 的合適工具列按鈕，或使用按鍵 **Ctrl+Alt+F**。 如此會開啟互動式視窗，也就是執行 F# Interactive 工作階段的工具視窗。 您也可以選取要在互動式視窗中執行的部分程式碼，然後點擊按鍵組合 **ALT+ENTER**。 F# Interactive 會隨即在標示為 **F# Interactive** 的工具視窗中啟動。 當您使用這個按鍵組合時，請確定編輯器視窗具有焦點。
 
@@ -44,7 +43,7 @@ F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程�
 您可以調整設定來控制 F# Interactive 命令列引數 (選項)。 在 [工具] 功能表上，選取 [選項...]，然後展開 [F# 工具]。 您只能變更 F# Interactive 選項和 [64 位元 F# Interactive] 這兩項設定，而且只有在 64 位元電腦上執行 F# Interactive 時才相關。 這項設定會判斷您要執行專用的 64 位元版 fsi.exe 或 fsianycpu.exe，它會使用電腦架構判斷要以 32 位元或 64 位元處理序執行。
 
 
-## <a name="scripting-with-f"></a>使用 F# 撰寫指令碼# #
+## <a name="scripting-with-f"></a>F# 指令碼作業 #
 指令碼使用副檔名 **.fsx** 或 **.fsscript**。 您只要執行 **fsi.exe**，並指定 F# 原始程式碼的指令碼檔名，F# Interactive 就會即時讀取程式碼並執行程式碼，而不是編譯原始程式碼，然後稍後再執行已編譯的組件。
 
 

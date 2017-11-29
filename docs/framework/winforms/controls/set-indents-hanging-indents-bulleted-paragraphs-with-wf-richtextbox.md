@@ -1,71 +1,72 @@
 ---
-title: "如何：使用 Windows Form RichTextBox 控制項設定縮排、首行縮排和分項段落 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - ".rtf 檔案, 在 RichTextBox 制項中格式化"
-  - "範例 [Windows Form], 文字方塊"
-  - "RichTextBox 控制項 [Windows Form], 設定縮排和項目符號"
-  - "RTF 檔案, 在 RichTextBox 制項中格式化"
-  - "文字方塊, 項目符號"
-  - "文字方塊, 設定縮排"
+title: "如何：使用 Windows Form RichTextBox 控制項設定縮排、首行縮排和分項段落"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- text boxes [Windows Forms], setting indents
+- .rtf files [Windows Forms], formatting in RichTextBox control
+- examples [Windows Forms], text boxes
+- RTF files [Windows Forms], formatting in RichTextBox control
+- RichTextBox control [Windows Forms], setting indents and bullets
+- text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b9b1398c0438f9ebe528e9394014f5f6529ea8f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows Form RichTextBox 控制項設定縮排、首行縮排和分項段落
-Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項有各種選項可格式化其所顯示的文字。  您可藉由設定 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性來將選取的段落格式化為項目符號清單。  您也可使用 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>、<xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> 和 <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> 屬性來相對於控制項的左右邊緣和其他行文字的左邊緣，設定段落的縮排。  
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows Form RichTextBox 控制項設定縮排、首行縮排和分項段落
+Windows Form<xref:System.Windows.Forms.RichTextBox>控制項有許多選項可以格式化所顯示的文字。 您也可以設定為項目符號清單格式化選取的段落<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>屬性。 您也可以使用<xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>， <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>，和<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性可用來設定段落相對於左和右邊緣的控制項，以及其他行文字的左邊的緣的縮排。  
   
-### 若要將段落格式化為項目符號清單  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>將段落格式化為項目符號清單  
   
-1.  將 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性設為 `true`。  
+1.  將 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性設定為 `true`。  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
-  
     ```  
   
     ```csharp  
     richTextBox1.SelectionBullet = true;  
-  
     ```  
   
     ```cpp  
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### 若要縮排段落  
+### <a name="to-indent-a-paragraph"></a>縮排段落  
   
-1.  將 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> 屬性設定為表示控制項左邊緣和文字左邊緣之間像素距離的整數。  
+1.  設定<xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>屬性為整數，代表控制項左的緣與文字的左邊的緣之間的像素為單位的距離。  
   
-2.  將 <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> 屬性設定為表示段落第一行文字左邊緣和同一段落中後續幾行左邊緣之間像素距離的整數。  <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> 屬性的值只會套用至段落中在第一行之下換行的文字。  
+2.  設定<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性為整數，表示段落中文字的第一行的左邊的緣與位於相同的 paragraph 下來幾行的左邊的緣之間的像素為單位的距離。 值<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性只適用於線條段落中的第一行下方換行。  
   
-3.  將 <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> 屬性設定為表示控制項右邊緣和文字右邊緣之間像素距離的整數。  
+3.  設定<xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>屬性為整數，代表控制項右邊緣和文字的右邊緣之間的像素為單位的距離。  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
     RichTextBox1.SelectionHangingIndent = 3  
     RichTextBox1.SelectionRightIndent = 12  
-  
     ```  
   
     ```csharp  
     richTextBox1.SelectionIndent = 8;  
     richTextBox1.SelectionHangingIndent = 3;  
     richTextBox1.SelectionRightIndent = 12;  
-  
     ```  
   
     ```cpp  
@@ -75,9 +76,9 @@ Windows Form <xref:System.Windows.Forms.RichTextBox> 控制項有各種選項可
     ```  
   
     > [!NOTE]
-    >  上述所有屬性都會影響任何包含選取文字的段落，而且也會影響在目前插入點之後輸入的文字。  例如，當使用者選取段落中的一個字並接著調整縮排時，新的設定值會套用至包含這個字的整個段落，以及在選取段落之後輸入的任何後續段落。  如需利用程式設計方式選取文字的詳細資訊，請參閱 [TextBoxBase.Select 方法](frlrfSystemWindowsFormsTextBoxBaseClassSelectTopic)。  
+    >  所有這些屬性都會影響任何包含所選取文字的段落，也會影響在目前插入點後面所輸入的文字。 例如，如果使用者選取段落中的文字，然後調整縮排，則新的設定會套用到包含該文字的整個段落，也會套用到任何在選取的段落之後後續輸入的段落。 如需以程式設計方式選取文字，請參閱<xref:System.Windows.Forms.TextBoxBase.Select%2A>。  
   
-## 請參閱  
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

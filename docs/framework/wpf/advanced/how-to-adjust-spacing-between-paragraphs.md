@@ -1,33 +1,36 @@
 ---
-title: "如何：調整段落之間的間距 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文件, 調整段落之間的間距"
-  - "段落, 間距"
-  - "段落之間的間距"
+title: "如何：調整段落之間的間距"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- spacing between paragraphs [WPF]
+- paragraphs [WPF], spacing between
+- documents [WPF], adjusting spacing between paragraphs
 ms.assetid: 7cd2f2ac-0e19-4587-bfb6-7f5b18c9536e
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1936426b44ed667d03e4881e66a081d5097a2880
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：調整段落之間的間距
-這個範例顯示如何調整或消除非固定格式內容中各段落間的間距。  
+# <a name="how-to-adjust-spacing-between-paragraphs"></a>如何：調整段落之間的間距
+此範例顯示如何調整或排除段落中非固定格式內容之間的間距。  
   
- 在非固定格式內容中，段落間所出現的多餘間格是由這些段落上所設定的邊界所致，因此，段落間的間距可藉由調整這些段落的邊界來控制。  若要完全消除兩個段落間的多餘間距，請將段落的邊界設為 **0**。  若要讓整個 <xref:System.Windows.Documents.FlowDocument> 的段落間皆使用統一的間距，請使用樣式對 <xref:System.Windows.Documents.FlowDocument> 中所有的段落設定統一的邊界值。  
+ 在非固定格式內容的段落之間會出現額外空間是這些段落; 上設定的邊界的結果因此，可以控制段落間距調整邊界的段落。  若要完全消除兩個段落的額外間距，設定的邊界的段落**0**。  若要達到整個段落的統一間距<xref:System.Windows.Documents.FlowDocument>，使用樣式設定來設定所有段落中的統一的邊界值<xref:System.Windows.Documents.FlowDocument>。  
   
- 請務必留意，兩個相鄰段落的邊界會「縮疊」為兩個邊界中的較大者，而非變成兩倍大。  因此，如果兩個相鄰段落的邊界分別為 20 個像素與 40 個像素，段落間所產生的間距即為兩個邊界值中的較大者，也就是 40 個像素。  
+ 請務必注意，兩個相鄰的段落的邊界會 「 摺疊 」 到較大的兩個邊界，而非倍。 因此，如果兩個相鄰的段落分別有 20 像素和 40 像素的邊界，段落產生間距是 40 像素，較大的兩個邊界值。  
   
-## 範例  
- 下列範例會使用樣式設定，將 <xref:System.Windows.Documents.FlowDocument> 中所有 <xref:System.Windows.Documents.Paragraph> 項目的邊界設為 **0**，這個值可以有效消除 <xref:System.Windows.Documents.FlowDocument> 中各段落間的多餘間距。  
+## <a name="example"></a>範例  
+ 下列範例會使用樣式將邊界設定所有<xref:System.Windows.Documents.Paragraph>中的項目<xref:System.Windows.Documents.FlowDocument>至**0**，其有效地排除段落中的額外間距<xref:System.Windows.Documents.FlowDocument>。  
   
- [!code-xml[BlockSnippets#_ParagraphSpacingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]
+ [!code-xaml[BlockSnippets#_ParagraphSpacingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]

@@ -1,45 +1,30 @@
 ---
-title: "/subsystemversion (Visual Basic) |Microsoft 文件"
-ms.date: 2015-07-20
+title: /subsystemversion (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bc9ea6a844fae7f98315e5d3557fdf306f467dd5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8330896f890febc4d9f8627715fdd55a8f341f0c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="subsystemversion-visual-basic"></a>/subsystemversion (Visual Basic)
-指定的子系統可以執行產生的可執行檔，以決定可以執行的可執行檔的 Windows 版本的最小版本。 大多數情況下，此選項可確保可執行檔可以利用特定的安全性功能，與舊版本的 Windows。  
+指定產生的可執行檔可在其上執行的最小子系統版本，進而決定可執行檔可在其上執行的 Windows 版本。 大多數情況下，此選項可確保可執行檔可以利用舊版 Windows 未提供的特定安全性功能。  
   
 > [!NOTE]
->  若要指定的子系統本身，請使用[/目標](../../../csharp/language-reference/compiler-options/target-compiler-option.md)編譯器選項。  
+>  若要指定子系統本身，請使用 [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 編譯器選項。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,14 +34,14 @@ ms.lasthandoff: 03/13/2017
   
 #### <a name="parameters"></a>參數  
  `major.minor`  
- 最小必要版本的子系統，主要和次要版本的點標記法中表示。 例如，您可以指定應用程式不能是早於 Windows 7 如果您將此選項的值設定為 6.01，如本主題稍後的表格所述的作業系統上執行。 您必須指定的值`major`和`minor`為整數。  
+ 最小必要版本的子系統，以點標記法表示主要和次要版本。 例如，如果您將此選項的值設定為 6.01，則可以指定應用程式無法在 Windows 7 之前的作業系統上執行，如本主題稍後的表格所述。 您必須將 `major` 和 `minor` 的值指定為整數。  
   
- 前置歸零，然後`minor`版本不會變更版本，但尾端為零。 比方說，6.1 和 6.01 參考相同的版本，但 6.10 指的是不同的版本。 我們建議以避免產生混淆的兩位數表示的次要版本。  
+ `minor` 版本中的前置零不會變更版本，但尾端零則會。 例如，6.1 和 6.01 參照相同版本，但 6.10 參照不同版本。 建議您將次要版本表示為兩位數，以避免混淆。  
   
 ## <a name="remarks"></a>備註  
- 下表列出常見的子系統版本的 Windows。  
+ 下表列出常見的 Windows 子系統版本。  
   
-|Windows 版本|子系統的版本|  
+|Windows 版本|子系統版本|  
 |---------------------|-----------------------|  
 |Windows 2000|5.00|  
 |Windows XP|5.01|  
@@ -64,30 +49,29 @@ ms.lasthandoff: 03/13/2017
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8_md.md)]|6.02|  
+|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>預設值  
- 預設值的**/subsystemversion**編譯器選項取決於下列清單中的條件︰  
+ **/subsystemversion** 編譯器選項的預設值取決於下列清單中的條件︰  
   
--   預設值為 6.02，如果下列清單中的任何編譯器選項設定︰  
+-   如果設定下列清單中的任何編譯器選項，則預設值為 6.02：  
   
-    -   [/target: appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [/target: winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
   
     -   [/platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
--   如果您使用 MSBuild，預設值是 6.00、 您的目標[!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)]，而且您還沒有設定任何稍早在此清單中所指定的編譯器選項。  
+-   如果您使用的是 MSBuild、以 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 為目標，並且尚未設定稍早在此清單中指定的任何編譯器選項，則預設值為 6.00。  
   
--   預設值是 4.00 如果前一個條件為 true。  
+-   如果先前的條件均非為 true，則預設值是 4.00。  
   
 ## <a name="setting-this-option"></a>設定這個選項  
- 若要設定**/subsystemversion**編譯器選項在 Visual Studio 中，您必須開啟.vbproj 檔案，並指定的值`SubsystemVersion`MSBuild XML 中的屬性。 您無法在 Visual Studio IDE 中設定這個選項。 詳細資訊，請參閱本主題前面的 「 預設值 」 或[一般 MSBuild 專案屬性](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)。  
+ 若要設定**/subsystemversion**編譯器選項在 Visual Studio 中，您就必須開啟.vbproj 檔案並將指定的值`SubsystemVersion`MSBuild XML 中的屬性。 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。  
   
 
   
 ## <a name="see-also"></a>另請參閱  
 [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 
-[MSBuild 屬性](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties)
-
+[MSBuild 屬性](/visualstudio/msbuild/msbuild-properties)

@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: be04c759d53b74208ac4e9a9cf7a2ac4cf3f8cce
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 68e89053d1d4a36a0f015ed4e0082ae88e1de6a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension 技術範例
 [下載範例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -50,19 +49,18 @@ ms.lasthandoff: 08/21/2017
  如需二進位碼建立和註冊步驟之範例的詳細資訊，請參閱原始程式碼和 build.proj 檔案中的註解。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.CodeDom.CodeCompileUnit>   
- <xref:System.CodeDom.CodeNamespace>   
- <xref:System.CodeDom.CodeNamespaceImport>   
- <xref:Microsoft.CSharp.CSharpCodeProvider>   
- <xref:System.Xml.Serialization.IXmlSerializable>   
- <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>   
- <xref:System.CodeDom>   
- <xref:System.CodeDom.Compiler>   
- <xref:System.Web.Services.Description>   
- <xref:System.Web.Services.Discovery>   
- <xref:System.Xml.Serialization>   
- <xref:System.Uri>   
- <xref:Microsoft.VisualBasic.VBCodeProvider>   
- <xref:System.Web.Services.Description.WebReference>   
+ <xref:System.CodeDom.CodeCompileUnit>  
+ <xref:System.CodeDom.CodeNamespace>  
+ <xref:System.CodeDom.CodeNamespaceImport>  
+ <xref:Microsoft.CSharp.CSharpCodeProvider>  
+ <xref:System.Xml.Serialization.IXmlSerializable>  
+ <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>  
+ <xref:System.CodeDom>  
+ <xref:System.CodeDom.Compiler>  
+ <xref:System.Web.Services.Description>  
+ <xref:System.Web.Services.Discovery>  
+ <xref:System.Xml.Serialization>  
+ <xref:System.Uri>  
+ <xref:Microsoft.VisualBasic.VBCodeProvider>  
+ <xref:System.Web.Services.Description.WebReference>  
  <xref:System.Xml.Serialization.XmlSchemaImporter>
-

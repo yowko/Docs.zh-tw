@@ -1,38 +1,39 @@
 ---
-title: "Windows Form 和控制項中的國際字型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Form 中的字型備用"
-  - "字型, 全球化的考量"
-  - "字型, 國際化"
-  - "全球化 [Windows Form], 字元集"
-  - "國際應用程式 [Windows Form], 字元顯示"
-  - "當地語系化 [Windows Form], 字型"
-  - "Windows Form 控制項, 標籤"
+title: "Windows Form 和控制項中的國際字型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fonts [Windows Forms], international
+- international applications [Windows Forms], character display
+- fonts [Windows Forms], globalization considerations
+- localization [Windows Forms], fonts
+- Windows Forms controls, labels
+- font fallback in Windows Forms
+- globalization [Windows Forms], character sets
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form 和控制項中的國際字型
-在國際應用程式中，選取字型的建議方法是盡可能使用字型後援。  字型後援表示系統決定字元所屬的指令碼。  
+# <a name="international-fonts-in-windows-forms-and-controls"></a>Windows Form 和控制項中的國際字型
+國際應用程式中選取字型的建議的方法是盡可能使用字型遞補。 所屬字型遞補表示系統決定指令碼字元。  
   
-## 使用字型後援  
- 若要利用這個功能，請不要設定表單或任何其他項目的 <xref:System.Drawing.Font> 屬性。  應用程式會自動使用預設系統字型，這會因作業系統的當地語系化語言而異。  當應用程式執行時，系統會針對作業系統中所選的文化特性來自動提供正確的字型。  
+## <a name="using-font-fallback"></a>使用字型遞補  
+ 若要利用這項功能，請勿設定<xref:System.Drawing.Font>表單或其他任何項目屬性。 應用程式會自動使用預設系統字型，這與不同作業系統的當地語系化語言到另一個。 應用程式執行時，系統將會自動提供正確的字型，在作業系統中選取的文化特性。  
   
- 上述不設定字型的規則有一項例外，這便是變更字型樣式的狀況。  對於使用者按一下按鈕以使用粗體顯示文字方塊中的文字的應用程式而言，這可能非常重要。  若要如此執行，您必須撰寫函式，依據表單的字型將文字方塊的字型樣式變更成粗體。  在下列兩個位置呼叫這個函式非常重要：在按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式中和在 <xref:System.Windows.Forms.Control.FontChanged> 事件處理常式中。  如果只在 <xref:System.Windows.Forms.Control.Click> 事件處理常式中呼叫這個函式，而其他某個程式碼片段會變更整個表單的字型系列，則文字方塊不會隨著其餘的表單而變更。  
+ 沒有規則的例外狀況都不設定字型，這是變更字型樣式。 這可能是很重要的應用程式中的使用者按一下按鈕，以粗體文字在文字方塊中出現。 若要這樣做，您可以撰寫函式來變更文字方塊的字型樣式，要以粗體顯示，根據表單的字型是。 請務必呼叫此函式在兩個地方： 在按鈕的<xref:System.Windows.Forms.Control.Click>事件處理常式並在<xref:System.Windows.Forms.Control.FontChanged>事件處理常式。 如果只有在呼叫此函式<xref:System.Windows.Forms.Control.Click>事件處理常式和其他一些程式碼變更整個表單的字型系列，文字方塊中不會變更表單的其餘部分。  
   
 ```  
 ' Visual Basic  
@@ -78,7 +79,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }  
 ```  
   
- 然而，當您當地語系化您的應用程式時，某些語言的粗體字型顯示效果可能不佳。  如果這點非常重要，則您會希望當地語系化工程師具備將字型從粗體變更成標準文字的選項。  因為當地語系化工程師通常不是開發人員，並且不具有原始程式碼的存取權，而只有資源檔的存取權，所以必須在資源檔中設定這個選項。  若要這麼做，您必須將 <xref:System.Drawing.Font.Bold%2A> 屬性設定為 `true`。  字型設定中的結果會寫入至當地語系化工程師可編輯的資源檔。  然後請在 `InitializeComponent`  方法之後撰寫程式碼，以便依據表單的字型來重設字型，但是使用資源檔中所指定的字型樣式。  
+ 不過，當當地語系化您的應用程式時，粗體字型可能會顯示特定狀況不佳的語言。 如果這是一項考量，您會希望當地語系化切換成一般文字的字型從粗體的選項。 因為當地語系化人員通常不是開發人員，而且不需要存取原始程式碼，只以資源檔，這個選項必須設定資源檔中。 若要這樣做，您會設定<xref:System.Drawing.Font.Bold%2A>屬性`true`。 這樣會寫入至資源檔，當地語系化人員可以編輯的字型設定。 接著，您撰寫程式碼之後`InitializeComponent`方法來重設字型根據表單的字型，但使用的字型樣式資源檔中指定。  
   
 ```  
 ' Visual Basic  
@@ -88,6 +89,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);  
 ```  
   
-## 請參閱  
- [全球化 Windows Form](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)   
+## <a name="see-also"></a>另請參閱  
+ [全球化 Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  [使用字型和文字](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

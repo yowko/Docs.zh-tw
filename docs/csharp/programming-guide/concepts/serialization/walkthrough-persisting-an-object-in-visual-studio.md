@@ -1,30 +1,21 @@
 ---
 title: "逐步解說：在 Visual Studio 中保存物件 (#C)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中保存物件 (#C)
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  
@@ -230,6 +221,5 @@ ms.lasthandoff: 07/28/2017
  您現在可以再次建置並執行應用程式。 一開始，文字方塊中會顯示預設值。 請嘗試變更值，並在第四個文字方塊中輸入名稱。 關閉應用程式，然後再重新執行。 請注意，現在文字方塊中會出現新的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [序列化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
-

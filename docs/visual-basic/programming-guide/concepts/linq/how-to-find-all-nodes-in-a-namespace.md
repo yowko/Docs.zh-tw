@@ -1,29 +1,24 @@
 ---
-title: "如何︰ 尋找命名空間 (Visual Basic) 中的所有節點 |Microsoft 文件"
+title: "如何： 尋找命名空間 (Visual Basic) 中的所有節點"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4216ba0ab8c8026705a82f505807fb4b1f31e424
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 8664d29e27673e1ad08d3d72b29d8dc9c711a9fb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何︰ 尋找命名空間 (Visual Basic) 中的所有節點
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何： 尋找命名空間 (Visual Basic) 中的所有節點
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  
   
 ## <a name="example"></a>範例  
@@ -68,7 +63,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>範例  
  下列查詢所存取的 XML 檔案包含兩種不同命名空間中的採購訂單。 此查詢只會使用其中一個命名空間中的項目建立新的樹狀。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 合併的採購單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：合併的採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -125,4 +120,3 @@ End Module
   
 ## <a name="see-also"></a>另請參閱  
  [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-

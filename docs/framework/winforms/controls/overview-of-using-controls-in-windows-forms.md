@@ -1,38 +1,42 @@
 ---
-title: "在 Windows Form 中使用控制項的概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form]"
-  - "自訂控制項 [Windows Form]"
-  - "Windows Form, 控制項"
+title: "在 Windows Form 中使用控制項的概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, controls
+- controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Windows Form 中使用控制項的概觀
-這個主題說明 Windows Form 應用程式的基本項目，並提供使用控制項和在 Windows Form 應用程式中處理事件的簡單範例。  
+# <a name="overview-of-using-controls-in-windows-forms"></a>在 Windows Form 中使用控制項的概觀
+本主題描述 Windows Form 應用程式的基本項目，並提供簡單的範例，使用的控制項及處理 Windows Form 應用程式中的事件。  
   
-## 簡單 Windows Form 應用程式  
- 就最低限度，Windows Form 應用程式至少由下列項目組成。  
+## <a name="simple-windows-forms-applications"></a>簡單的 Windows Forms 應用程式  
+ 最小值，Windows Forms 應用程式包含下列項目：  
   
--   衍生自 <xref:System.Windows.Forms.Form?displayProperty=fullName> 的一或多個類別。  
+-   一個或多個類別衍生自<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
   
--   叫用 \(Invoke\) `static` \(在 Visual Basic 中為 `shared`\) <xref:System.Windows.Forms.Application.Run%2A> 方法並且為其傳遞 <xref:System.Windows.Forms.Form> 執行個體的 `Main` 方法。  <xref:System.Windows.Forms.Application.Run%2A> 方法會處理從作業系統傳到應用程式的訊息。  
+-   A`Main`叫用方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，並傳遞<xref:System.Windows.Forms.Form>給它的執行個體。 <xref:System.Windows.Forms.Application.Run%2A>方法處理來自作業系統至應用程式的訊息。  
   
- 下列程式碼範例示範 Windows Form 應用程式的基本項目。  
+ 下列程式碼範例顯示 Windows Form 應用程式的基本項目。  
   
 ```vb  
 Option Explicit  
@@ -80,8 +84,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## 在 Windows Form 應用程式中使用控制項  
- 下列程式碼範例示範簡單應用程式，說明 Windows Form 應用程式如何使用控制項和處理事件。  該範例包含在表單上的三個按鈕；每一個按鈕在被按一下時，都會變更背景色彩。  
+## <a name="using-controls-in-a-windows-forms-application"></a>在 Windows Forms 應用程式中使用控制項  
+ 下列程式碼範例顯示簡單的 Windows Form 應用程式如何使用控制項和處理事件的應用程式。 此範例包含三個表單; 上的按鈕每個按鈕會變更當按下的背景色彩。  
   
 ```vb  
 Option Explicit  
@@ -229,6 +233,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## 請參閱  
- [使用 .NET Framework 開發自訂的 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Windows Form 控制項開發的基本概念](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [Windows Forms 控制項開發的基本概念](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

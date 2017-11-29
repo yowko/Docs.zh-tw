@@ -1,28 +1,24 @@
 ---
-title: "投影 XML 不同形式 (Visual Basic) |Microsoft 文件"
+title: "不同的組織結構 (Visual Basic) 的組織結構規劃 XML"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b05fbff86bcac06a3ce375c162c70dc308f4913
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 2cf5f963b8675f22c9cab0297d8f48eb68f5aefb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>組織結構規劃 XML 不同形式 (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>不同的組織結構 (Visual Basic) 的組織結構規劃 XML
 本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  
   
  許多典型的 XML 轉換都包含鏈結的查詢，如此範例中所示。 常見的狀況是，從特定格式的 XML 開始，將中繼結果規劃為匿名型別或具名型別的集合，最後再將結果規劃回完全不同於來源 XML 之組織結構的 XML。  
@@ -30,9 +26,9 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。 它也可以識別每個段落的樣式和文字。 最後，此範例會使用不同的組織結構規劃 XML。 此範例在這個教學課程中，會在先前的範例上建置。 進行規劃的新陳述式會在以下程式碼的註解中叫出。  
   
- 如需建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用中的型別<xref:System.IO.Packaging?displayProperty=fullName>命名空間。</xref:System.IO.Packaging?displayProperty=fullName>  
+ 這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -241,9 +237,9 @@ End Module
 ```  
   
 ## <a name="next-steps"></a>後續步驟  
- 在下一個範例中，您將查詢以尋找 Word 文件中的所有文字︰  
+ 在下一個範例中，您將在 Word 文件中進行查詢以尋找所有文字：  
   
--   [Word 文件 (Visual Basic) 中尋找文字](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [在 Word 文件 (Visual Basic) 中尋找文字](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [教學課程︰ 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+ [教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

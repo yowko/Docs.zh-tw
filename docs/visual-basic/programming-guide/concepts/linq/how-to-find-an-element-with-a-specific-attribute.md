@@ -1,34 +1,30 @@
 ---
-title: "如何︰ 尋找具有特定屬性 (Visual Basic) 的項目 |Microsoft 文件"
+title: "如何： 尋找具有特定屬性 (Visual Basic) 的項目"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce57f1c7e0e1860d858d36ccaff256aa4afe7e2b
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 97842cc0c42ca531c0965914d086f4c2a1faa6f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>如何︰ 尋找具有特定屬性 (Visual Basic) 的項目
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>如何： 尋找具有特定屬性 (Visual Basic) 的項目
 這個主題顯示如何尋找其屬性具有特定值的項目。  
   
 ## <a name="example"></a>範例  
  此範例顯示如何尋找其 `Address` 屬性具有 "Billing" 值的 `Type` 項目。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -44,7 +40,6 @@ Next
  此程式碼會產生下列輸出：  
   
 ```xml  
-  
           <Address Type="Billing">  
   <Name>Tai Yee</Name>  
   <Street>8 Oak Avenue</Street>  
@@ -60,7 +55,7 @@ Next
 ## <a name="example"></a>範例  
  下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 命名空間中的典型採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的典型採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -93,8 +88,8 @@ End Module
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement.Attribute%2A></xref:System.Xml.Linq.XElement.Attribute%2A>   
- <xref:System.Xml.Linq.XContainer.Elements%2A></xref:System.Xml.Linq.XContainer.Elements%2A>   
- [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Xml.Linq.XElement.Attribute%2A>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A>  
+ [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [投影作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

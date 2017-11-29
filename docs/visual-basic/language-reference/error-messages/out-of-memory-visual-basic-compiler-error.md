@@ -1,45 +1,43 @@
 ---
-title: "Out of memory (Visual Basic Compiler Error) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc2004"
-  - "bc2004"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC2004"
+title: "記憶體不足 (Visual Basic 編譯器錯誤)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc2004
+- bc2004
+helpviewer_keywords: BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d6cf270002eac63badd8ceff28c4b8b57af0ab
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Out of memory (Visual Basic Compiler Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-需要的記憶體大於可用的記憶體。  
+# <a name="out-of-memory-visual-basic-compiler-error"></a>記憶體不足 (Visual Basic 編譯器錯誤)
+需要提供更多的記憶體。  
   
- **錯誤 ID：**BC2004  
+ **錯誤 ID:** BC2004  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請關閉不必要的應用程式、文件或原始程式檔 \(Source File\)。  
+-   關閉不必要的應用程式、 文件和原始程式檔。  
   
--   請排除不必要的控制項和表單，讓一次載入較少的項目。  
+-   消除不必要的控制項和表單，以便一次載入較少  
   
--   請減少 `Public` 變數的數目。  
+-   請減少`Public`變數。  
   
--   請檢查可用的磁碟空間。  
+-   檢查可用磁碟空間。  
   
--   請安裝額外的記憶體或重新配置記憶體，以增加可用的 RAM。  
+-   安裝額外的記憶體，或重新配置記憶體，以增加可用的 RAM。  
   
--   請務必於不再需要記憶體時進行釋放。  
+-   請確定它已不再需要時釋放記憶體。  
   
-## 請參閱  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>另請參閱  
+ [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

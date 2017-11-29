@@ -1,33 +1,24 @@
 ---
 title: "如何：使用執行緒集區 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 210a9235-83a6-420b-af52-2d6a58e5133f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9ad5ffb224821c67d227297f8a5a4a1476d77b0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f90262cdfa6e4d6c8c37c553e999d51fee736d6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>如何：使用執行緒集區 (C#)
-「執行緒共用」**是一種多執行緒處理，其中的工作會加入佇列，並在建立執行緒時自動啟動。 如需詳細資訊，請參閱[執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)。  
+「執行緒共用」是一種多執行緒處理，其中的工作會加入佇列，並在建立執行緒時自動啟動。 如需詳細資訊，請參閱[執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)。  
   
  下列範例使用 .NET Framework 執行緒集區來計算 20 到 40 之間十個數字的 `Fibonacci` 結果。 每個 `Fibonacci` 結果都會以 `Fibonacci` 類別表示，該類別提供一個執行計算的方法，稱為 `ThreadPoolCallback`。 這會建立代表每個 `Fibonacci` 值的物件，並將 `ThreadPoolCallback` 方法傳遞至 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>，以指派集區中的可用執行緒來執行此方法。  
   
@@ -150,15 +141,14 @@ Fibonacci(27) = 196418
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent>   
- [執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
- [執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- @System.Threading.Monitor   
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Monitor>  
+ [執行緒集區 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)  
+ [執行緒 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [安全性](../../../../standard/security/index.md)
-

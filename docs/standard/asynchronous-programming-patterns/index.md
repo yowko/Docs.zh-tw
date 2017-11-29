@@ -12,18 +12,16 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET Framework
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a527824ba11928d59bc700f253c5a4d77056abf0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="asynchronous-programming-patterns"></a>非同步程式設計模式
 
 .NET Framework 提供三種模式來執行非同步作業：  
@@ -91,4 +89,3 @@ public class MyClass
 [C# 中的非同步程式設計](~/docs/csharp/async.md)   
 [F# 中的非同步程式設計](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
 [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-

@@ -1,48 +1,49 @@
 ---
-title: "自訂控制項的應用程式設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式設定 [Windows Form], 自訂控制項"
-  - "自訂控制項 [Windows Form], 應用程式設定"
+title: "自訂控制項的應用程式設定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], application settings
+- application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3f8292ac459a2943376229ef62466b0a772430dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 自訂控制項的應用程式設定
-當自訂控制項要裝載於協力廠商的應用程式中時，您必須先完成某些特定的工作，該控制項才能夠保存應用程式設定。  
+# <a name="application-settings-for-custom-controls"></a>自訂控制項的應用程式設定
+您必須完成特定工作，讓您的自訂控制項能夠保存應用程式設定，在第三方應用程式中裝載控制項時。  
   
- 大多數關於應用程式設定功能的文件都是假設您要建立獨立應用程式 \(Standalone Application\)。  不過，如果您要建立的是其他開發人員將在他們的應用程式中裝載的控制項，則必須另外採取其他步驟，才能讓控制項正確保存它的設定。  
+ 大部分的應用程式設定功能的相關文件會假設您要建立的獨立應用程式寫入。 不過，如果您要建立其他開發人員將裝載的控制項在其應用程式，您需要採取一些額外的步驟，才能讓控制項保存它的設定正確。  
   
-## 應用程式設定和自訂控制項  
- 若要讓您的控制項能夠正確地保存它的設定，則必須建立該控制項專屬的衍生自 <xref:System.Configuration.ApplicationSettingsBase> 之應用程式設定包裝函式類別 \(Wrapper Class\)，藉此將程序封裝起來。  另外，主控制項類別必須實作 <xref:System.Configuration.IPersistComponentSettings>。  這個介面包含數個屬性以及兩個方法，即 <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> 和 <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>。  如果您是使用 Visual Studio 中的 \[**Windows Form 設計工具**\] 將控制項加入至表單，當控制項在初始化時 Windows Form 將會自動呼叫 <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A>；您必須在控制項的  `Dispose`  方法中自行呼叫 <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>。  
+## <a name="application-settings-and-custom-controls"></a>應用程式設定和自訂控制項  
+ 您要讓控制項正確保存它的設定，它必須封裝程序，藉由建立它自己專用的應用程式設定包裝函式類別，衍生自<xref:System.Configuration.ApplicationSettingsBase>。 此外，主控制項類別必須實作<xref:System.Configuration.IPersistComponentSettings>。 介面包含數個屬性，以及兩個方法：<xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A>和<xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>。 如果您將控制項加入表單使用**Windows Form 設計工具**在 Visual Studio 中，會呼叫 Windows Form<xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A>自動初始化控制項時，您必須呼叫<xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>自行在`Dispose`控制項的方法。  
   
- 此外，您應該實作下列項目，以便讓自訂控制項的應用程式設定能在如 Visual Studio 的設計階段環境中適當運作。  
+ 此外，您應該實作下列自訂控制項，例如 Visual Studio 設計階段環境中正常運作的應用程式設定的順序：  
   
-1.  自訂的應用程式設定類別，其建構函式接受 <xref:System.ComponentModel.IComponent> 做為單一的參數。  請使用這個類別來儲存和載入所有的應用程式設定。  當您建立此類別的新執行個體時，請使用這個建構函式來傳遞您的自訂控制項。  
+1.  自訂應用程式設定類別的建構函式與<xref:System.ComponentModel.IComponent>做為單一參數。 使用這個類別來儲存及載入的所有應用程式設定。 當您建立這個類別的新執行個體時，傳遞您的自訂控制項的建構函式。  
   
-2.  在建立控制項並將其放置在表單上之後，建立這個自訂設定類別 \(例如在表單的 <xref:System.Windows.Forms.Form.Load> 事件處理常式中\)。  
+2.  已建立並放置在表單中，例如在表單的控制項之後，建立此自訂設定類別<xref:System.Windows.Forms.Form.Load>事件處理常式。  
   
- 如需建立自訂設定類別的指示，請參閱 [如何：建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 如需建立自訂的設定類別的指示，請參閱[How to： 建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
   
-## 設定索引鍵和共用設定  
- 某些控制項可以在同一表單中多次使用。  通常，您會希望這些控制項能夠保存各自的個別設定。  利用 <xref:System.Configuration.IPersistComponentSettings> 上的 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> 屬性，您可以提供唯一的字串用以明示表單上某控制項的版本。  
+## <a name="settings-keys-and-shared-settings"></a>設定索引鍵和共用的設定  
+ 有些控制項可用於多次相同的格式。 大部分的情況下，您會想要保存其自己的個別設定這些控制項。 與<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>屬性<xref:System.Configuration.IPersistComponentSettings>，您可以提供用來釐清多個版本的表單上控制項的唯一字串。  
   
- 實作 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> 的最簡單方法是使用控制項的 <xref:System.Windows.Forms.Control.Name%2A> 屬性做為 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>。  載入或儲存控制項的設定時，您會將 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> 值傳遞給 <xref:System.Configuration.ApplicationSettingsBase> 類別的 <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> 屬性。  應用程式設定使用這個唯一鍵將使用者設定保存為 XML。  下列程式碼範例會示範  `<userSettings>`  區段可以如何尋找一個名為  `CustomControl1`  的自訂控制項執行個體，此控制項是儲存其  `Text`  屬性的設定。  
+ 最簡單的方式實作<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>是使用<xref:System.Windows.Forms.Control.Name%2A>的控制項屬性<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>。 當您載入或儲存控制項的設定時，您將值傳遞<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>入<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>屬性<xref:System.Configuration.ApplicationSettingsBase>類別。 它會保存為 XML 的使用者的設定時，應用程式設定就會使用這個唯一索引鍵。 下列程式碼範例示範如何`<userSettings>`區段可能會尋找名為自訂控制項的執行個體`CustomControl1`，將儲存的設定及其`Text`屬性。  
   
-```  
+```xml  
 <userSettings>  
     <CustomControl1>  
         <setting name="Text" serializedAs="string">  
@@ -52,9 +53,9 @@ caps.handback.revision: 13
 </userSettings>  
 ```  
   
- 不會把值提供給 <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> 的任何控制項執行個體將會共用相同的設定。  
+ 未提供的值之控制項的任何執行個體<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>會共用相同的設定。  
   
-## 請參閱  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.IPersistComponentSettings>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.IPersistComponentSettings>  
  [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)

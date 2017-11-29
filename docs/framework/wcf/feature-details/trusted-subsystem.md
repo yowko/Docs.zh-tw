@@ -1,25 +1,31 @@
 ---
-title: "受信任的子系統 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "受信任的子系統"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 229efd7fed9b8aeb1effff7bd4358930ab8c44ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 受信任的子系統
-用戶端會存取分散在網路上的一或多個 Web 服務。Web 服務的設計會將對其他資源 \(例如資料庫或其他 Web 服務\) 的存取封裝在 Web 服務的商務邏輯中。這些資源必須受到保護，以避免未經授權的存取。下圖說明受信任的子系統處理序。  
+# <a name="trusted-subsystem"></a>受信任的子系統
+用戶端會存取分散在網路上的一或多個 Web 服務。 Web 服務的設計會將對其他資源 (例如資料庫或其他 Web 服務) 的存取封裝在 Web 服務的商務邏輯中。 這些資源必須受到保護，以避免未經授權的存取。 下圖說明受信任的子系統處理序。  
   
- ![受信任的子系統](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc\_TrustedSubsystemc")  
+ ![受信任子系統](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  下列步驟說明受信任的子系統處理序，如圖所示：  
   
@@ -27,35 +33,35 @@ caps.handback.revision: 10
   
 2.  受信任的子系統會驗證並授權使用者。  
   
-3.  受信任的子系統將要求訊息傳送至遠端資源。這個要求會伴隨受信任子系統的認證 \(或執行受信任子系統處理序所使用的服務帳戶\)。  
+3.  受信任的子系統將要求訊息傳送至遠端資源。 這個要求會伴隨受信任子系統的認證 (或執行受信任子系統處理序所使用的服務帳戶)。  
   
-4.  後端資源會驗證並授權受信任的子系統。然後，處理要求並將回應發出至受信任的子系統。  
+4.  後端資源會驗證並授權受信任的子系統。 然後，處理要求並將回應發出至受信任的子系統。  
   
 5.  受信任的子系統會處理回應，並將自己的回應發出至用戶端。  
   
 |特性|描述|  
-|--------|--------|  
+|--------------------|-----------------|  
 |安全性模式|訊息|  
 |互通性|僅限 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。|  
-|驗證 \(服務\)|安全性權杖服務會驗證並授權用戶端。|  
-|驗證 \(用戶端\)|受信任的子系統會驗證用戶端，而資源會驗證受信任的子系統服務。|  
+|驗證 (服務)|安全性權杖服務會驗證並授權用戶端。|  
+|驗證 (用戶端)|受信任的子系統會驗證用戶端，而資源會驗證受信任的子系統服務。|  
 |完整性|是|  
 |機密性|是|  
-|傳輸|用戶端與受信任子系統服務之間的 HTTP。<br /><br /> 受信任子系統服務與資源 \(後端服務\) 之間的 NET.TCP。|  
-|繫結|<xref:System.ServiceModel.WSHttpBinding> 和<xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Transport|用戶端與受信任子系統服務之間的 HTTP。<br /><br /> 受信任子系統服務與資源 (後端服務) 之間的 NET.TCP。|  
+|繫結|<xref:System.ServiceModel.WSHttpBinding>和<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
-## 資源 \(後端服務\)  
+## <a name="resource-back-end-service"></a>資源 (後端服務)  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
  下列程式碼示範如何建立資源的服務端點，這個服務端點會透過 TCP 傳輸通訊協定使用傳輸安全性。  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### 組態  
+### <a name="configuration"></a>組態  
  下列組態會使用組態來設定相同端點。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -91,9 +97,9 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 受信任的子系統  
+## <a name="trusted-subsystem"></a>受信任的子系統  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
  下列程式碼示範如何建立受信任子系統的服務端點，這個服務端點會透過 HTTP 通訊協定使用訊息安全性，並且使用使用者名稱和密碼進行驗證。  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
@@ -104,10 +110,10 @@ caps.handback.revision: 10
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### 組態  
- 下列組態會使用組態來設定相同端點。請注意兩個繫結，一個會保護受信任子系統所裝載的服務，另一個則會在受信任子系統和後端服務之間進行通訊。  
+### <a name="configuration"></a>組態  
+ 下列組態會使用組態來設定相同端點。 請注意兩個繫結，一個會保護受信任子系統所裝載的服務，另一個則會在受信任子系統和後端服務之間進行通訊。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -167,18 +173,18 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 用戶端  
+## <a name="client"></a>用戶端  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
  下列程式碼示範如何建立用戶端，這個用戶端會透過 HTTP 通訊協定使用訊息安全性，並且使用使用者名稱和密碼進行驗證，藉此與受信任的子系統進行通訊。  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### 組態  
- 下列程式碼會將用戶端設定為透過 HTTP 通訊協定使用訊息安全性，並且使用使用者名稱和密碼進行驗證。使用者名稱和密碼只能使用程式碼 \(它是不可設定的\) 來指定。  
+### <a name="configuration"></a>組態  
+ 下列程式碼會將用戶端設定為透過 HTTP 通訊協定使用訊息安全性，並且使用使用者名稱和密碼進行驗證。 使用者名稱和密碼只能使用程式碼 (它是不可設定的) 來指定。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -214,6 +220,6 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Windows Server AppFabric 的資訊安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱  
+ [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

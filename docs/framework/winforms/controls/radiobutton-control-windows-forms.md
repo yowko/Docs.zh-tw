@@ -1,43 +1,44 @@
 ---
-title: "RadioButton 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "已核取的清單項目, Windows Form 控制項"
-  - "清單控制項, Windows Form"
-  - "清單項目, 顯示的 Windows Form 控制項"
-  - "選項按鈕"
-  - "RadioButton 控制項 [Windows Form]"
+title: "RadioButton 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checked list items [Windows Forms], Windows Forms controls
+- list controls [Windows Forms], Windows Forms
+- list items [Windows Forms], Windows Forms controls that display
+- radio buttons
+- RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b763217527a2306bfe648e3b327124408cea62f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# RadioButton 控制項 (Windows Form)
-Windows Form `RadioButton` 控制項提供使用者一組兩個或多個互斥 \(Mutually Exclusive\) 選項。  選項按鈕和核取方塊的功能雖然類似，但有一個很重要的差異：當使用者選取一個選項按鈕時，便無法選取相同群組中的其他選項按鈕。  
+# <a name="radiobutton-control-windows-forms"></a>RadioButton 控制項 (Windows Form)
+Windows Form`RadioButton`控制項向使用者顯示一組兩個或多個互斥。 選項按鈕和核取方塊看起來可能類似函式，而是一項重要差異： 無法選取以及當使用者選取選項按鈕，在相同群組中的其他選項按鈕。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [RadioButton 控制項概觀](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
- 解釋這個控制項是什麼，以及其主要功能和屬性。  
+ 說明此控制項是什麼，並說明其重要功能與屬性。  
   
- [如何：將 Windows Form RadioButton 控制項群組成集合使用](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- 解釋如何將選項按鈕群組成集合，並只可選取當中的一項。  
+ [操作說明：將 Windows Forms RadioButton 控制項群組成集合使用](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ 說明如何在群組的集合，其中只有一個可選取選項按鈕。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.RadioButton> 類別  
- 描述這個類別並且連結到它所有的成員。  
+ 說明這個類別，並且提供其所有成員的連結。  
   
-## 相關章節  
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。
+## <a name="related-sections"></a>相關章節  
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ 提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。

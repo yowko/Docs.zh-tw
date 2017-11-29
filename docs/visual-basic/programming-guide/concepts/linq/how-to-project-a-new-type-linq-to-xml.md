@@ -1,34 +1,30 @@
 ---
-title: "如何︰ 投影新類型 (LINQ to XML) (Visual Basic) |Microsoft 文件"
+title: "如何： 投影新類型 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a7cbbce130aa78a7e14ffd61a1dcd76b969e1b35
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 73b677e45be1d457d54de01331c93f60348e6bfd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>如何︰ 投影新類型 (LINQ to XML) (Visual Basic)
-本章節中的其他範例顯示的查詢會傳回結果，當做<xref:System.Collections.Generic.IEnumerable%601>的<xref:System.Xml.Linq.XElement>，<xref:System.Collections.Generic.IEnumerable%601>的`string`，和<xref:System.Collections.Generic.IEnumerable%601>的`int`。</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.Generic.IEnumerable%601> </xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> 這些是常見的結果型別，但這些型別不適用於每個案例。 在許多情況下，您會想要傳回查詢<xref:System.Collections.Generic.IEnumerable%601>某個其他型別的。</xref:System.Collections.Generic.IEnumerable%601>  
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>如何： 投影新類型 (LINQ to XML) (Visual Basic)
+本節中的其他範例顯示的查詢會傳回結果，當做 <xref:System.Collections.Generic.IEnumerable%601> 之 <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> 的 `string`，以及 <xref:System.Collections.Generic.IEnumerable%601> 的 `int`。 這些是常見的結果型別，但這些型別不適用於每個案例。 在許多情況下，您會希望您的查詢傳回其他型別的 <xref:System.Collections.Generic.IEnumerable%601>。  
   
 ## <a name="example"></a>範例  
  此範例顯示如何具現化 `Select` 子句中的物件。 此程式碼會先利用建構函式定義新的類別，然後修改 `Select` 陳述式，讓運算式成為新類別的新執行個體。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
   
 ```vb  
 Public Class NameQty  
@@ -56,7 +52,7 @@ Public Class Program
 End Class  
 ```  
   
- 這個範例會使用`M:System.Xml.Linq.XElement.Element`引進 > 主題中的方法[How to︰ 擷取單一子項目 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)。 它也會使用轉換以擷取 `M:System.Xml.Linq.XElement.Element` 方法所傳回的元素值。  
+ 這個範例會使用`M:System.Xml.Linq.XElement.Element`方法主題中導入[How to： 擷取單一子項目 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)。 它也會使用轉換以擷取 `M:System.Xml.Linq.XElement.Element` 方法所傳回的元素值。  
   
  這個範例會產生下列輸出：  
   

@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 83da65d17d927e6afa8c669d5a3123d458246b31
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 79d7aef2cf374acc4380fac6009615f75eaf1e81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 結構描述定義工具 (Xsd.exe) 可以從 XDR、XML 和 XSD 檔案或從執行階段組件的類別中，產生 XML 結構描述或 Common Language Runtime 類別。  
@@ -65,7 +64,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/enableDataBinding**|在所有產生的型別上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結 (Data Binding)。 簡短形式為 `/edb`。|  
 |**/enableLinqDataSet**|(簡短形式：`/eld`)。指定產生的 DataSet 可使用 LINQ to DataSet 查詢。 如果也指定了 /dataset 選項，就會使用這個選項。 如需詳細資訊，請參閱 [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 如需使用 LINQ 的一般資訊，請參閱 [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。|  
 |**/f**[**ields**]|產生欄位，而不是產生屬性。 根據預設，會產生屬性。|  
-|**/l**[**anguage**]**:***language*|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您也可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 的類別指定完整名稱。|  
+|**/l**[**anguage**]**:***language*|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您也可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的類別指定完整名稱。|  
 |**/n**[**amespace**]**:***namespace*|指定產生的型別的執行階段命名空間。 預設命名空間是 `Schemas`。|  
 |**/nologo**|隱藏產品啟始畫面。|  
 |**/order**|在所有物件成員上產生明確順序識別項。|  
@@ -91,7 +90,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  從 XSD 結構描述檔中產生 Common Language Runtime <xref:System.Data.DataSet> 類別。 產生的類別為一般 XML 資料提供了豐富的物件模型。  
   
  XSD 轉換成類別  
- 從 XSD 結構描述檔中產生執行階段類別。 產生的類別可以配合 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 使用，以讀取和寫入遵循結構描述的 XML 程式碼。  
+ 從 XSD 結構描述檔中產生執行階段類別。 產生的類別可以配合 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 使用，以讀取和寫入遵循結構描述的 XML 程式碼。  
   
  類別轉換成 XSD  
  從型別或執行階段組件檔中的型別中產生 XML 結構描述。 產生的結構描述會定義 `System.Xml.Serialization.XmlSerializer` 所使用的 XML 格式。  
@@ -233,10 +232,9 @@ xsd myAssembly.dll
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>   
+ <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [工具](../../../docs/framework/tools/index.md)      
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)   
- [查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)   
+ [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
-

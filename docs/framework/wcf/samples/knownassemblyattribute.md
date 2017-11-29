@@ -1,26 +1,29 @@
 ---
-title: "KnownAssemblyAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: KnownAssemblyAttribute
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e2ffa42fabed3fe32f557cee9c4cb14a331d7350
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# KnownAssemblyAttribute
-此範例示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別來自訂序列化和還原序列化程序。  此範例示範如何在序列化和還原序列化期間動態加入已知的型別。  
+# <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
+此範例示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別來自訂序列化和還原序列化程序。 此範例示範如何在序列化和還原序列化期間動態加入已知的型別。  
   
-## 範例詳細資料  
- 此範例是由四個專案所組成。  其中一個專案會對應到 IIS 所裝載的服務，這個專案會定義下列服務合約。  
+## <a name="sample-details"></a>範例詳細資料  
+ 此範例是由四個專案所組成。 其中一個專案會對應到 IIS 所裝載的服務，這個專案會定義下列服務合約。  
   
 ```  
 // Definition of a service contract.  
@@ -43,7 +46,6 @@ public interface IDataContractCalculator
     [OperationContract]  
     List<ComplexNumber> CombineLists(List<ComplexNumber> list1, List<ComplexNumber> list2);  
 }  
-  
 ```  
   
  服務合約的實作方式如下列範例所示。  
@@ -90,10 +92,9 @@ public interface IDataContractCalculator
         return result;  
     }  
 }  
-  
 ```  
   
- 另一個專案會對應到用戶端，以便與伺服器進行通訊並叫用所公開的方法。  用戶端的定義顯示在以下範例中。  
+ 另一個專案會對應到用戶端，以便與伺服器進行通訊並叫用所公開的方法。 用戶端的定義顯示在以下範例中。  
   
 ```  
  // Client implementation code.  
@@ -194,12 +195,11 @@ public interface IDataContractCalculator
         Console.ReadLine();  
     }  
 }  
-  
 ```  
   
- 服務合約的定義會以 `KnownAssembly` 屬性標示。  此屬性包含類型程式庫的名稱，在執行階段，服務和用戶端都會知道所有類型。  
+ 服務合約的定義會以 `KnownAssembly` 屬性標示。 此屬性包含類型程式庫的名稱，在執行階段，服務和用戶端都會知道所有類型。  
   
- `KnownAssembly` 屬性會實作 `IContractBehavior` 以定義 `DataContractSerializer`，並針對每個作業行為定義 `DataContractResolver`。  建立 `DataContractResolver` 時，會透過組件反映，並以序列化和還原序列化不同類型時使用之類型和名稱的對應建立字典。  如此一來，`ResolveType` 和 `ResolveName` 類型就必須在字典中查閱所需的資料。  
+ `KnownAssembly` 屬性會實作 `IContractBehavior` 以定義 `DataContractSerializer`，並針對每個作業行為定義 `DataContractResolver`。 建立 `DataContractResolver` 時，會透過組件反映，並以序列化和還原序列化不同類型時使用之類型和名稱的對應建立字典。 如此一來，`ResolveType` 和 `ResolveName` 類型就必須在字典中查閱所需的資料。  
   
  針對此範例定義的 `DataContractResolver` 會顯示在以下範例中。  
   
@@ -283,7 +283,6 @@ public class MyDataContractResolver : DataContractResolver
            }  
        }  
    }  
-  
 ```  
   
  此範例中所使用之類型的程式庫會顯示在以下範例中。  
@@ -329,7 +328,6 @@ public class ComplexNumberWithMagnitude : ComplexNumber
         set { }  
     }  
 }  
-  
 ```  
   
  請注意，`ComplexNumber` 不需要以靜態方式了解 `ComplexNumberWithMagnitude` 類型，因為在執行階段就會知道它。  
@@ -354,34 +352,33 @@ Lists combined:
 2 + 2i  
 3 + 3i  
 4 + 4i  
-  
 ```  
   
-#### 若要設定、執行及建立範例  
+#### <a name="to-set-up-run-and-build-the-sample"></a>若要設定、執行及建立範例  
   
-1.  以滑鼠右鍵按一下 \[**KnownAssemblyAttribute**\] 方案，然後選取 \[**屬性**\]。  
+1.  以滑鼠右鍵按一下方案**KnownAssemblyAttribute**選取**屬性**。  
   
-2.  選取 \[**通用屬性**\] 中的 \[**啟始專案**\]，然後按一下 \[**多個啟始專案**\]。  
+2.  在**通用屬性**，選取**啟始專案**，然後按一下 **多個啟始專案**。  
   
-3.  將 \[**開始**\] 動作加入至 \[**服務**\] 和 \[**用戶端**\] 專案。  
+3.  新增**啟動**動作**服務**和**用戶端**專案。  
   
-4.  按一下 \[**確定**\]，然後按 **F5** 執行範例。  
+4.  按一下**確定**，然後按**F5**執行範例。  
   
 5.  如果應用程式沒有正確執行，請遵循下列步驟確認您的環境已正確設定：  
   
-6.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](http://go.microsoft.com/fwlink/?LinkId=150774)。  
+6.  請確定您已執行[單次安裝程序的 Windows Communication Foundation 範例](http://go.microsoft.com/fwlink/?LinkId=150774)。  
   
-7.  若要建置方案，請遵循[建置 Windows Communication Foundation 範例](http://go.microsoft.com/fwlink/?LinkId=150775)中的指示進行。  
+7.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](http://go.microsoft.com/fwlink/?LinkId=150775)。  
   
-8.  若要在單一或跨機器的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](http://go.microsoft.com/fwlink/?LinkId=150776)中的指示進行。  
+8.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](http://go.microsoft.com/fwlink/?LinkId=150776)。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。  請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[適用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。  此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

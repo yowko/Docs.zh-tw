@@ -1,46 +1,49 @@
 ---
-title: "如何：使用 GridSplitter 調整資料行的大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "方格資料行, 調整大小"
-  - "GridSplitter 控制項, 調整方格資料行大小"
-  - "調整方格資料行大小"
+title: "操作說明：使用 GridSplitter 調整資料行的大小"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- grid columns [WPF], resizing
+- GridSplitter control [WPF], resizing grid columns
+- resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5c8299a3f4885618601c8087a61c21dc5d989813
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 GridSplitter 調整資料行的大小
-本範例說明如何建立垂直 <xref:System.Windows.Controls.GridSplitter>，以重新分配 <xref:System.Windows.Controls.Grid> 中兩行之間的空間，而不變更 <xref:System.Windows.Controls.Grid> 的大小。  
+# <a name="how-to-resize-columns-with-a-gridsplitter"></a>操作說明：使用 GridSplitter 調整資料行的大小
+這個範例示範如何建立垂直<xref:System.Windows.Controls.GridSplitter>才能重新發佈中的兩個資料行之間的間距<xref:System.Windows.Controls.Grid>而不需要變更維度的<xref:System.Windows.Controls.Grid>。  
   
-## 範例  
- **如何建立重疊在資料行邊緣的 GridSplitter**  
+## <a name="example"></a>範例  
+ **如何建立重疊資料行邊緣的 GridSplitter**  
   
- 若要指定 <xref:System.Windows.Controls.GridSplitter> 來調整 <xref:System.Windows.Controls.Grid> 中相鄰行的大小，請將 <xref:System.Windows.Controls.Grid.Column%2A> [附加屬性](GTMT)設為要調整大小的其中一個行。  如果 <xref:System.Windows.Controls.Grid> 有多列，請將 <xref:System.Windows.Controls.Grid.RowSpan%2A> 附加屬性設為列數。  接著將 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 屬性設為 <xref:System.Windows.HorizontalAlignment> 或 <xref:System.Windows.HorizontalAlignment> \(設定的對齊方式會根據要調整大小的兩行而定\)。  最後，將 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 屬性設為 <xref:System.Windows.VerticalAlignment>。  
+ 若要指定<xref:System.Windows.Controls.GridSplitter>的調整大小，相鄰的資料行中<xref:System.Windows.Controls.Grid>，將<xref:System.Windows.Controls.Grid.Column%2A>附加至其中一個您要調整大小的資料行的屬性。 如果您<xref:System.Windows.Controls.Grid>有一個以上的資料列集<xref:System.Windows.Controls.Grid.RowSpan%2A>附加屬性的資料列數目。 然後設定<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性<xref:System.Windows.HorizontalAlignment.Left>或<xref:System.Windows.HorizontalAlignment.Right>（您所設定的對齊方式取決於您要調整大小的兩個資料行上）。 最後，設定<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性<xref:System.Windows.VerticalAlignment.Stretch>。  
   
- [!code-xml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
   
- 沒有資料行的 <xref:System.Windows.Controls.GridSplitter> 可能會被 <xref:System.Windows.Controls.Grid> 中的其他控制項所遮蔽。  如需如何避免此問題的詳細資訊，請參閱 [確保 GridSplitter 是可見的](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)。  
+ A<xref:System.Windows.Controls.GridSplitter>沒有自己的資料行中的其他控制項可能會遮蔽<xref:System.Windows.Controls.Grid>。 如需有關如何防止此問題的詳細資訊，請參閱[確保 GridSplitter 是可見的](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)。  
   
- **如何建立佔用行空間的 GridSplitter**  
+ **如何建立佔有資料行的 GridSplitter**  
   
- 若要指定在 <xref:System.Windows.Controls.Grid> 中佔用行空間的 <xref:System.Windows.Controls.GridSplitter>，請將 <xref:System.Windows.Controls.Grid.Column%2A> [附加屬性](GTMT)設為要調整大小的其中一行。  如果 Grid 有多列，請將 <xref:System.Windows.Controls.Grid.RowSpan%2A> 附加屬性設為列數。  接著將 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 設為 <xref:System.Windows.HorizontalAlignment>、將 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 屬性設為 <xref:System.Windows.VerticalAlignment>，然後將包含 <xref:System.Windows.Controls.GridSplitter> 之行的 <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 設為 <xref:System.Windows.GridLength.Auto%2A>。  
+ 若要指定<xref:System.Windows.Controls.GridSplitter>，佔用中的資料行<xref:System.Windows.Controls.Grid>，將<xref:System.Windows.Controls.Grid.Column%2A>附加至其中一個您要調整大小的資料行的屬性。 如果方格具有多個資料列，設定<xref:System.Windows.Controls.Grid.RowSpan%2A>附加屬性的資料列數目。 然後設定<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>至<xref:System.Windows.HorizontalAlignment.Center>，將<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性<xref:System.Windows.VerticalAlignment.Stretch>，並設定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>包含的資料行的<xref:System.Windows.Controls.GridSplitter>至<xref:System.Windows.GridLength.Auto%2A>。  
   
- 下列範例示範如何定義垂直 <xref:System.Windows.Controls.GridSplitter> 佔用行空間並調整兩側行的大小。  
+ 下列範例示範如何定義垂直<xref:System.Windows.Controls.GridSplitter>佔用資料行，而且會在左邊或右邊的資料行的調整大小。  
   
- [!code-xml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
-[!code-xml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
   
-## 請參閱  
- <xref:System.Windows.Controls.GridSplitter>   
- [HOW TO 主題](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Controls.GridSplitter>  
+ [操作說明主題](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

@@ -1,84 +1,81 @@
 ---
-title: "Get Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Get"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Get statement, syntax"
-  - "Get statement"
-  - "properties [Visual Basic], read-only"
-  - "read-only properties"
-  - "Get keyword"
-  - "property procedures, Get statements"
+title: "Get 陳述式"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Get
+helpviewer_keywords:
+- Get statement [Visual Basic], syntax
+- Get statement [Visual Basic]
+- properties [Visual Basic], read-only
+- read-only properties
+- Get keyword [Visual Basic]
+- property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Get Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-宣告用以擷取屬性 \(Property\) 值的 `Get` 屬性程序。  
+# <a name="get-statement"></a>Get 陳述式
+宣告`Get`屬性程序用來擷取屬性的值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] Get()  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ] Get()  
+    [ statements ]  
 End Get  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
   
-|||  
-|-|-|  
 |詞彙|定義|  
-|`attributelist`|選擇項。  請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|在這個屬性之其中一個 `Get` 和 `Set` 陳述式上的選擇項。  可以是下列其中一項：<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`statements`|選擇項。  呼叫 `Get` 屬性程序時會執行的一或多個陳述式。|  
-|`End Get`|必要項。  用於結束 `Get` 屬性程序的定義。|  
+|---|---|  
+|`attributelist`|選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|上一個選擇性`Get`和`Set`這個屬性中的陳述式。 可以是下列其中一項：<br /><br /> -   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`statements`|選擇項。 一或多個陳述式時執行`Get`呼叫屬性程序。|  
+|`End Get`|必要項。 結束的定義`Get`屬性程序。|  
   
-## 備註  
- 除非屬性標示為 `WriteOnly`，否則每一個屬性都必須有一個 `Get` 屬性程序。  `Get` 程序是用於傳回屬性的目前值。  
+## <a name="remarks"></a>備註  
+ 每個屬性必須有`Get`屬性程序除非屬性標記為`WriteOnly`。 `Get`程序用來傳回屬性的目前值。  
   
- 當運算式要求屬性值時，Visual Basic 就會自動呼叫屬性的 `Get` 程序。  
+ Visual Basic 會自動呼叫屬性`Get`運算式要求屬性的值時的程序。  
   
- 屬性宣告主體只可在 [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)與 `End Property` 陳述式之間包含屬性的 `Get` 和 `Set` 程序，  除了這些程序以外，它無法儲存其他程序。  特別是無法儲存屬性的目前值。  因為如果將這個值儲存在任一屬性程序中，則其他屬性程序無法存取它，所以必須將它儲存在屬性外部。  一般的處理方式是將值儲存在與屬性相同層級上宣告的 [Private](../../../visual-basic/language-reference/modifiers/private.md) 變數中。  您必須將 `Get` 程序定義在套用它的屬性內。  
+ 屬性宣告的主體可以包含屬性的`Get`和`Set`程序之間[Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)和`End Property`陳述式。 無法將儲存這些程序之外的任何項目。 特別是，它無法儲存屬性的目前值。 您必須先儲存此值超出屬性，因為如果您將其儲存在任一屬性程序，其他屬性程序無法存取它。 一般的方法是將值儲存[私人](../../../visual-basic/language-reference/modifiers/private.md)屬性與相同層級宣告的變數。 您必須定義`Get`它所套用的屬性內的程序。  
   
- `Get` 程序預設為包含屬性的存取層級，除非您在 `Get` 陳述式中使用 `accessmodifier`。  
+ `Get`程序會預設為其包含屬性的存取層級，除非您使用`accessmodifier`中`Get`陳述式。  
   
-## 規則  
+## <a name="rules"></a>規則  
   
--   **混合存取層級** 如果您要定義 read\-write 屬性，可以選擇指定 `Get` 或 `Set` 程序的不同存取層級，但不可同時指定這兩者。  如果您這樣做，程序的存取層級必須比屬性的存取層級更嚴格。  例如，如果屬性已宣告為 `Friend`，則您可以將 `Get` 程序宣告為 `Private`，但不能宣告為 `Public`。  
+-   **混合的存取層級。** 如果您要定義讀 / 寫屬性，您可以選擇其中一個指定的不同存取層`Get`或`Set`程序，但非兩者。 如果您這麼做時，程序的存取層級必須比屬性存取層級更受限。 例如，如果屬性宣告`Friend`，您可以宣告`Get`程序`Private`，但不是`Public`。  
   
-     如果正在定義 `ReadOnly` 屬性，則 `Get` 程序會代表整個屬性。  若為 `Get` 宣告不同的存取層級，則會為屬性設定兩種存取層級，因此您不能這樣做。  
+     如果您要定義`ReadOnly`屬性，`Get`程序都代表整個屬性。 您無法宣告不同的存取層級`Get`，因為，則會設定兩個屬性的存取層級。  
   
--   **傳回型別** [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)可以宣告它所傳回之值的資料型別。  `Get` 程序會自動傳回該資料型別。  您可以指定任何資料型別，或列舉型別、結構、類別或介面的名稱。  
+-   **傳回型別。** [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)可以宣告其傳回的值的資料類型。 `Get`程序會自動傳回資料類型。 您可以指定任何資料類型或列舉、 結構、 類別或介面的名稱。  
   
-     如果 `Property` 陳述式未指定 `returntype`，程序將傳回 `Object`。  
+     如果`Property`陳述式未指定`returntype`，程序會傳回`Object`。  
   
-## 行為  
+## <a name="behavior"></a>行為  
   
--   **從程序傳回** 當 `Get` 程序傳回到呼叫程式碼時，執行會在已要求屬性值的陳述式內繼續進行。  
+-   **傳回從程序。** 當`Get`程序傳回呼叫程式碼，會繼續執行要求的屬性值的陳述式中。  
   
-     `Get` 屬性程序可以傳回值，方法是使用 [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md)，或指派傳回值給屬性名稱。  如需詳細資訊，請參閱 [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) 中的＜傳回值＞一節。  
+     `Get`屬性程序可以傳回值使用[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)或傳回值指派至屬性名稱。 如需詳細資訊，請參閱 「 傳回的值 」 中[Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
-     `Exit Property` 和 `Return` 陳述式會造成立即退出屬性程序。  任意數目的 `Exit Property` 和 `Return` 陳述式可以出現在程序中的任何地方，並且 `Exit Property` 和 `Return` 陳述式可以混合使用。  
+     `Exit Property`和`Return`陳述式會導致屬性程序立即結束。 任何數目的`Exit Property`和`Return`陳述式可以出現在任何地方程序，且您可以混合`Exit Property`和`Return`陳述式。  
   
--   **傳回值** 若要從 `Get` 程序傳回值，您可以指派值給屬性名稱，或將它併入 [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md)。  `Return` 陳述式會同時指派 `Get` 程序傳回值並結束程序。  
+-   **傳回值。** 若要傳回值，以從`Get`程序中，您可以將值指派給屬性名稱，或將它併入[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。 `Return`陳述式會同時指派`Get`程序傳回值，然後結束程序。  
   
-     如果您使用 `Exit Property`，但未指派值給屬性名稱，則 `Get` 程序會傳回屬性資料型別的預設值。  如需詳細資訊，請參閱 [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) 中的＜傳回值＞一節。  
+     如果您使用`Exit Property`而不將值指派至屬性名稱，`Get`程序會傳回屬性的資料類型的預設值。 如需詳細資訊，請參閱 「 傳回的值 」 中[Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
-     下列範例會說明兩種方法，唯讀屬性 `quoteForTheDay` 可以用於傳回私用變數 `quoteValue` 中所保留的值。  
+     下列範例說明兩種方式的唯讀屬性`quoteForTheDay`可以保存在私用變數值傳回`quoteValue`。  
   
      [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_1.vb)]  
   
@@ -86,14 +83,14 @@ End Get
   
      [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_3.vb)]  
   
-## 範例  
- 下列範例會使用 `Get` 陳述式，傳回屬性的值。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Get`陳述式來傳回屬性的值。  
   
  [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
-## 請參閱  
- [Set Statement](../../../visual-basic/language-reference/statements/set-statement.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Walkthrough: Defining Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+## <a name="see-also"></a>另請參閱  
+ [Set 陳述式](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [逐步解說：定義類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

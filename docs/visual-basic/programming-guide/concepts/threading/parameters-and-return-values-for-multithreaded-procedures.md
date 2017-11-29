@@ -1,36 +1,28 @@
 ---
-title: "參數和傳回值的多執行緒程序 (Visual Basic) |Microsoft 文件"
+title: "參數和傳回值的多執行緒程序 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cbdce172-7ff6-41a9-bb21-53a7c6f538a5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5d8adde531d31aa6bf353f53bd4cfecc084f515
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 071e0aa916e4b3464c7c0cbff6596cabc6b67906
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a>參數和傳回值的多執行緒程序 (Visual Basic)
-提供和傳回值的多執行緒應用程式中很複雜，因為執行緒類別的建構函式必須傳遞到採用任何引數，且不傳回值的程序的參考。 下列各節說明一些簡單的方法來提供參數，以及從程序傳回值，在個別執行緒上。  
+在多執行緒應用程式中提供和傳回值很複雜，因為執行緒類別的建構函式必須傳遞到不採用任何引數且不傳回任何值的程序參考。 下節會說明一些簡單的方法來提供參數，以及從不同執行緒的程序傳回值。  
   
-## <a name="supplying-parameters-for-multithreaded-procedures"></a>如需多執行緒程序中提供的參數  
- 提供多執行緒的方法呼叫參數的最佳方式是將目標方法包裝在類別中，並將做為參數的新執行緒的類別定義欄位。 這種方法的優點是，您可以建立類別的新執行個體使用它自己的參數，每次您想要啟動新執行緒。 例如，假設您有函式會計算區域中的三角形，如下列程式碼所示︰  
+## <a name="supplying-parameters-for-multithreaded-procedures"></a>為多執行緒程序提供參數  
+ 為多執行緒方法呼叫提供參數的最佳方式，是將目標方法包裝在類別中，並為要用為新執行緒參數的類別定義欄位。 這種方法的優點是您可以建立類別的新執行個體，每次想要開始新執行緒都可以使用它自己的參數。 例如，假設您有計算三角形面積的函式，如下列程式碼所示︰  
   
 ```vb  
 Function CalcArea(ByVal Base As Double, ByVal Height As Double) As Double  
@@ -38,7 +30,7 @@ Function CalcArea(ByVal Base As Double, ByVal Height As Double) As Double
 End Function  
 ```  
   
- 您可以撰寫類別包裝`CalcArea`函式並建立欄位來儲存輸入的參數，如下所示︰  
+ 您可以撰寫類別，包裝 `CalcArea` 函式並建立儲存輸入參數的欄位，如下所示︰  
   
 ```vb  
 Class AreaClass  
@@ -52,7 +44,7 @@ Class AreaClass
 End Class  
 ```  
   
- 若要使用`AreaClass`，您可以建立`AreaClass`物件，然後設定`Base`和`Height`屬性，如下列程式碼所示︰  
+ 若要使用 `AreaClass`，您可以建立 `AreaClass` 物件，然後設定 `Base` 和 `Height` 屬性，如下列程式碼所示︰  
   
 ```vb  
 Protected Sub TestArea()  
@@ -65,12 +57,12 @@ Protected Sub TestArea()
 End Sub  
 ```  
   
- 請注意，`TestArea`程序不會檢查值`Area`欄位之後呼叫`CalcArea`方法。 因為`CalcArea`個別的執行緒上執行`Area`欄位不保證只有當您呼叫之後立即檢查設定`Thread.Start`。 下一節中討論更好的方法，從多執行緒程序傳回值。  
+ 請注意，呼叫 `CalcArea` 方法之後，`TestArea` 程序不會檢查 `Area` 欄位的值。 如果您在呼叫 `Thread.Start` 之後立即檢查，因為 `CalcArea` 在另外的執行緒上執行，所以不保證會設定 `Area` 欄位。 下節會討論從多執行緒程序傳回值的更好方法。  
   
 ## <a name="returning-values-from-multithreaded-procedures"></a>從多執行緒程序傳回值  
- 從個別執行緒執行的程序傳回值複雜的程序不可為函式，且無法使用`ByRef`引數。 傳回值的最簡單方式是使用<xref:System.ComponentModel.BackgroundWorker>元件來管理您的執行緒，並引發事件的工作完成時，並處理與事件處理常式的結果。</xref:System.ComponentModel.BackgroundWorker>  
+ 從在其他執行緒上執行的程序傳回值很複雜，因為這些程序不能是函式，也無法使用 `ByRef` 引數。 傳回值最簡單的方式是使用 <xref:System.ComponentModel.BackgroundWorker> 元件來管理您的執行緒，並在工作完成時引發事件，然後以事件處理常式來處理結果。  
   
- 下列範例會傳回值，藉由引發另一個執行緒上執行的程序中的事件︰  
+ 下例會透過從在另一個執行緒上執行的程序引發事件傳回值：  
   
 ```vb  
 Private Class AreaClass2  
@@ -116,13 +108,13 @@ Private Sub BackgroundWorker1_RunWorkerCompleted(
 End Sub  
 ```  
   
- 您可以提供參數，並使用選擇性的數值傳回執行緒集區執行緒`ByVal`狀態物件變數<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>方法。</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 執行緒計時器執行緒也支援狀態物件，針對此目的。 如需執行緒集區和執行緒計時器，請參閱[執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[執行緒集區](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701)和[執行緒計時器 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)。  
+ 您可以使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的選擇性 `ByVal` 狀態物件變數，提供參數並將值傳回給執行緒集區執行緒。 執行緒計時器執行緒也支援針對此目的狀態物件。 在執行緒集區和執行緒計時器上的資訊，請參閱[執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[執行緒集區](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701)和[執行緒計時器 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [逐步解說︰ 使用 BackgroundWorker 元件 (Visual Basic) 的多執行緒處理](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)   
- [執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)   
- [執行緒同步處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)   
- [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)   
- [多執行緒應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [多執行緒元件](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+ [逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
+ [執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [執行緒同步處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  
+ [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [多執行緒應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [元件中的多執行緒](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)

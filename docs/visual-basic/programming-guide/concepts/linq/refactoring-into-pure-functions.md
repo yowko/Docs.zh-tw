@@ -1,28 +1,24 @@
 ---
-title: "重構為純虛擬函式 (Visual Basic) |Microsoft 文件"
+title: "重構到純虛擬函式 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e622436905893872521994f6dc1a5bc1c8b3d06a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0a1b8d314cf1403ef5065e5432f7acd15ebb440
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>重構為純虛擬函式 (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>重構到純虛擬函式 (Visual Basic)
 純功能性轉換的重要觀點為學習如何使用純虛擬函式重構程式碼。  
   
  如同本節先前所述，純虛擬函式擁有兩個實用的特性：  
@@ -33,7 +29,7 @@ ms.lasthandoff: 03/13/2017
   
  轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。 以此種方式，您可以建立現有程式碼的純虛擬函式版本。  
   
- 這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程︰ 管理 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教學課程顯示如何管理 WordprocessingML 文件，並包含的兩個範例都使用純虛擬函式重構。  
+ 這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程： WordprocessingML 文件 (Visual Basic) 中的 內容操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教學課程示範如何管理 WordprocessingML 文件，並包含兩個範例的方式來使用純虛擬函式重構。  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>排除副作用與外部相依性  
  下列範例對照兩個非純虛擬函式與一個純虛擬函式。  
@@ -62,7 +58,7 @@ End Module
 StringOne-StringTwo  
 ```  
   
- 請注意，它是不相關要修改的資料是否有`public`或`private`存取權，或者是`shared`成員或執行個體成員。 純虛擬函式不會變更函式以外的任何資料。  
+ 請注意，它是不相關要修改的資料是否有`public`或`private`存取，或已`shared`成員或執行個體成員。 純虛擬函式不會變更函式以外的任何資料。  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>變更引數的非純虛擬函式  
  此外，這個相同函式的下列版本不是純虛擬函式，因為它會修改其參數 `sb` 的內容。  
@@ -81,7 +77,7 @@ Module Module1
 End Module  
 ```  
   
- 此版本的程式會產生相同的輸出做為第一個版本，因為`HypenatedConcat`函式已變更其第一個參數的值 （狀態），藉由叫用<xref:System.Text.StringBuilder.Append%2A>成員函式。</xref:System.Text.StringBuilder.Append%2A> 請注意，雖然 `HypenatedConcat` 使用 call-by-value 參數傳遞 (Parameter Passing)，還是會發生這個改變。  
+ 這個版本的程式會產生與第一版相同的輸出，因為 `HypenatedConcat` 函式已經叫用 <xref:System.Text.StringBuilder.Append%2A> 成員函式來變更其第一個參數的值 (狀態)。 請注意，雖然 `HypenatedConcat` 使用 call-by-value 參數傳遞 (Parameter Passing)，還是會發生這個改變。  
   
 > [!IMPORTANT]
 >  若是參考型別 (Reference Type)，如果您依據值傳遞參數，會使參考的副本傳遞到物件。 這個副本仍然跟原始參考一樣，與相同的執行個體資料相關聯 (直到將參考變數指派給新的物件)。 對於要修改參數的函式，則不一定需要 Call-by-reference。  
@@ -113,5 +109,5 @@ End Module
  如需詳細資訊，請參閱[標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [純功能性轉換 (Visual Basic) 簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
+ [Introduction to 純功能性轉換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [函數式程式設計與命令式程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

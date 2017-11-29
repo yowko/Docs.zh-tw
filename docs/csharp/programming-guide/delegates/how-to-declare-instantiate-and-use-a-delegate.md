@@ -1,66 +1,47 @@
 ---
 title: "如何：宣告、產生和使用委派 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- delegates [C#], declaring and instantiating
+helpviewer_keywords: delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b5a5329b9e99fcd5830a57eb8f97b4edb67ad8a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5a16fe4c627989f701ba523769cd87839d074849
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何：宣告、產生和使用委派 (C# 程式設計手冊)
 在 C# 1.0 和更新版本中，宣告委派的方式如下列範例所示。  
   
- [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
   
- [!code-cs[csProgGuideDelegates#14](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_2.cs)]  
+ [!code-csharp[csProgGuideDelegates#14](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_2.cs)]  
   
  C# 2.0 提供更簡單的方式來撰寫先前的宣告，如下列範例所示。  
   
- [!code-cs[csProgGuideDelegates#32](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_3.cs)]  
+ [!code-csharp[csProgGuideDelegates#32](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_3.cs)]  
   
  在 C# 2.0 和更新版本中，也可以使用匿名方法來宣告和初始化[委派](../../../csharp/language-reference/keywords/delegate.md)，如下列範例所示。  
   
- [!code-cs[csProgGuideDelegates#15](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_4.cs)]  
+ [!code-csharp[csProgGuideDelegates#15](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_4.cs)]  
   
  在 C# 3.0 和更新版本中，也可以使用 lambda 運算式來宣告委派並將它具現化，如下列範例所示。  
   
- [!code-cs[csProgGuideDelegates#31](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_5.cs)]  
+ [!code-csharp[csProgGuideDelegates#31](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_5.cs)]  
   
  如需詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
- 下列範例說明如何宣告、具現化和使用委派。 `BookDB` 類別會封裝書店資料庫來保留書籍資料庫。 它會公開 `ProcessPaperbackBooks` 方法，此方法會尋找資料庫中的所有平裝書，並針對每本書呼叫委派。 所使用的 `delegate` 類型稱為 `ProcessBookDelegate`。 `Test` 類別會使用這個類別來列印平裝書的書名和平均價格。  
+ 下列範例說明如何宣告、具現化和使用委派。 `BookDB` 類別會封裝用來保留書籍資料的書店資料庫。 它會公開 `ProcessPaperbackBooks` 方法，此方法會尋找資料庫中的所有平裝書，並針對每本書呼叫委派。 所使用的 `delegate` 類型稱為 `ProcessBookDelegate`。 `Test` 類別會使用這個類別來列印平裝書的書名和平均價格。  
   
  使用委派，可在書店資料庫和用戶端程式碼之間建立良好的功能區隔。 用戶端程式碼不需要瞭解保存書籍的方式，或是書店程式碼尋找平裝書的方式。 書店程式碼不需要知道當它找到平裝書之後該如何處理它們。  
   
 ## <a name="example"></a>範例  
- [!code-cs[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_6.cs)]  
+ [!code-csharp[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_6.cs)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
   
@@ -68,7 +49,7 @@ ms.lasthandoff: 07/28/2017
   
      下列陳述式會宣告新的委派類型。  
   
-     [!code-cs[csProgGuideDelegates#16](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_7.cs)]  
+     [!code-csharp[csProgGuideDelegates#16](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_7.cs)]  
   
      每個委派類型都會描述引數的數目和類型，以及它可以封裝之方法的傳回值類型。 每當需要一組新的引數類型或傳回值類型時，就必須宣告新的委派類型。  
   
@@ -76,11 +57,11 @@ ms.lasthandoff: 07/28/2017
   
      宣告委派類型之後，就必須建立委派物件並將其關聯至特定的方法。 在上述範例中，您可以藉由將 `PrintTitle` 方法傳遞至 `ProcessPaperbackBooks` 方法來執行此動作，如下列範例所示：  
   
-     [!code-cs[csProgGuideDelegates#17](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_8.cs)]  
+     [!code-csharp[csProgGuideDelegates#17](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_8.cs)]  
   
      這會建立與[靜態](../../../csharp/language-reference/keywords/static.md)方法 `Test.PrintTitle` 相關聯的新委派物件。 同樣地，也可傳遞 `totaller` 物件上的非靜態方法 `AddBookToTotal`，如下列範例所示：  
   
-     [!code-cs[csProgGuideDelegates#18](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_9.cs)]  
+     [!code-csharp[csProgGuideDelegates#18](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_9.cs)]  
   
      在這兩種情況下，會將新的委派物件傳遞至 `ProcessPaperbackBooks` 方法。  
   
@@ -90,12 +71,11 @@ ms.lasthandoff: 07/28/2017
   
      建立委派物件之後，通常會將委派物件傳遞至其他將呼叫委派的程式碼。 委派物件的呼叫方法是，使用委派物件的名稱，後面接著要傳遞至委派且已加上括號的引數。 以下是委派呼叫的範例：  
   
-     [!code-cs[csProgGuideDelegates#19](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_10.cs)]  
+     [!code-csharp[csProgGuideDelegates#19](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_10.cs)]  
   
      委派可以同步呼叫 (如此範例所示)，或使用 `BeginInvoke` 和 `EndInvoke` 方法以非同步方式呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [事件](../../../csharp/programming-guide/events/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [事件](../../../csharp/programming-guide/events/index.md)  
  [委派](../../../csharp/programming-guide/delegates/index.md)
-

@@ -1,28 +1,34 @@
 ---
-title: "如何：透過 Blocks 屬性管理非固定格式內容項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Blocks 屬性, 管理非固定格式內容項目"
-  - "文件, 透過 Blocks 屬性管理非固定格式內容項目"
-  - "非固定格式內容項目, 透過 Blocks 屬性管理"
-  - "屬性, Blocks, 管理非固定格式內容項目"
+title: "如何：透過 Blocks 屬性管理非固定格式內容項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- documents [WPF], manipulating flow content elements through Blocks property
+- flow content elements [WPF], manipulating through Blocks property
+- properties [WPF], Blocks [WPF], manipulating flow content elements
+- Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f246b7ab5eae52b745849daf2bedadb7431d7d34
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：透過 Blocks 屬性管理非固定格式內容項目
-這些範例示範可以透過 **Blocks** 屬性對非固定格式內容項目執行的幾項常見作業。  這個屬性用於加入和移除 <xref:System.Windows.Documents.BlockCollection> 的項目。  具有 **Blocks** 屬性的非固定格式內容項目包括：  
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>如何：透過 Blocks 屬性管理非固定格式內容項目
+這些範例會示範一些較常見可以透過動態內容的項目執行的運算**區塊**屬性。 這個屬性用來加入和移除項目從<xref:System.Windows.Documents.BlockCollection>。 非固定格式內容項目該功能**區塊**屬性包括：  
   
 -   <xref:System.Windows.Documents.Figure>  
   
@@ -34,43 +40,43 @@ caps.handback.revision: 6
   
 -   <xref:System.Windows.Documents.TableCell>  
   
- 雖然這些範例中都是使用 <xref:System.Windows.Documents.Section> 做為非固定格式內容項目，但這些方法也適用於裝載非固定格式內容項目集合的所有項目。  
+ 這些範例會使用<xref:System.Windows.Documents.Section>資料流內容的項目，但是這些技術都適用於裝載非固定格式內容項目集合的所有項目。  
   
-## 範例  
- 下列範例會建立新的 <xref:System.Windows.Documents.Section>，然後使用 **Add** 方法將新 Paragraph 加入至 **Section** 內容。  
+## <a name="example"></a>範例  
+ 下列範例會建立新<xref:System.Windows.Documents.Section>，然後使用**新增**方法新增至新的段落**區段**內容。  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
   
-## 範例  
- 下列範例會建立新的 <xref:System.Windows.Documents.Paragraph> 項目，並將其插入至 <xref:System.Windows.Documents.Section> 的開頭。  
+## <a name="example"></a>範例  
+ 下列範例會建立新<xref:System.Windows.Documents.Paragraph>項目並將它的開頭插入<xref:System.Windows.Documents.Section>。  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksinsert)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksinsert)]  
   
-## 範例  
- 下列範例會取得 <xref:System.Windows.Documents.Section> 中包含的最上層 <xref:System.Windows.Documents.Block> 項目。  
+## <a name="example"></a>範例  
+ 下列範例會取得的最上層數<xref:System.Windows.Documents.Block>內的項目<xref:System.Windows.Documents.Section>。  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblockscount)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblockscount)]  
   
-## 範例  
- 下列範例會刪除 <xref:System.Windows.Documents.Section> 中的最後一個 <xref:System.Windows.Documents.Block> 項目。  
+## <a name="example"></a>範例  
+ 下列範例會刪除最後一個<xref:System.Windows.Documents.Block>中的項目<xref:System.Windows.Documents.Section>。  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksremovelast)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksremovelast)]  
   
-## 範例  
- 下列範例會清除 <xref:System.Windows.Documents.Section> 的所有內容 \(<xref:System.Windows.Documents.Block> 項目\)。  
+## <a name="example"></a>範例  
+ 下列範例會清除所有內容 (<xref:System.Windows.Documents.Block>項目) 從<xref:System.Windows.Documents.Section>。  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksclear)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
-## 請參閱  
- <xref:System.Windows.Documents.BlockCollection>   
- <xref:System.Windows.Documents.InlineCollection>   
- <xref:System.Windows.Documents.ListItemCollection>   
- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [透過 RowGroups 屬性管理資料表的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)   
- [透過 Columns 屬性管理資料表的資料行](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)   
- [透過 RowGroups 屬性管理資料表的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Documents.BlockCollection>  
+ <xref:System.Windows.Documents.InlineCollection>  
+ <xref:System.Windows.Documents.ListItemCollection>  
+ [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [透過 RowGroups 屬性管理表格的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [透過 Columns 屬性管理表格的資料行](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [透過 RowGroups 屬性管理表格的資料列群組](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

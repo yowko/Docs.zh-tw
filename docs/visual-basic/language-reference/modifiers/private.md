@@ -1,43 +1,41 @@
 ---
-title: "Private (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Private"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Private keyword"
-  - "Private keyword, syntax"
+title: Private (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Private
+helpviewer_keywords:
+- Private keyword [Visual Basic]
+- Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 07450c2a5443bf6bc147cad2cfc779072bfc363b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Private (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定一或多個宣告的程式設計項目只能從其宣告內容中進行存取 \(包括從任何內含的型別中\)。  
+# <a name="private-visual-basic"></a>Private (Visual Basic)
+指定一或多個宣告的程式設計項目只能從其宣告的內容，包括從任何所包含的型別中存取。  
   
-## 備註  
- 如果程式設計項目表示專屬功能或包含機密資料，則您通常要盡可能地限制存取程式設計項目。  您可以設定最大的限制，方法是只允許定義該功能或資料的模組、類別或結構才能存取它。  若要用這種方法來限制項目的存取，則可使用 `Private` 來宣告它。  
+## <a name="remarks"></a>備註  
+ 如果程式設計項目表示專屬功能，或包含機密資料，您通常要盡可能地限制其存取權。 您藉由只模組、 類別或結構定義該存取權限達到最大的限制。 若要限制存取的項目，如此一來，您可以將它與宣告`Private`。  
   
-## 規則  
+## <a name="rules"></a>規則  
   
--   **宣告內容：** 只能在模組層級使用 `Private`。  這表示 `Private` 項目的宣告內容必須是模組、類別或結構，且不能是原始程式檔、命名空間、介面或程序。  
+-   **宣告內容。** 您只能在模組層級使用 `Private`。 這表示宣告內容`Private`項目必須是模組、 類別或結構，而且不得原始程式檔、 命名空間、 介面或程序。  
   
-## 行為  
+## <a name="behavior"></a>行為  
   
--   **存取層級** 宣告內容中的所有程式碼都可存取其 `Private` 項目。  這包含內含型別內部的程式碼，例如，列舉型別中的巢狀類別或指派運算式。  宣告內容外部的程式碼都不能存取該 `Private` 項目。  
+-   **存取層級。** 宣告內容中的所有程式碼可以存取其`Private`項目。 這包括所包含的型別，例如巢狀的類別或列舉型別中的，指派運算式中的程式碼。 宣告內容以外的任何程式碼可以存取其`Private`項目。  
   
--   **存取修飾詞。** 表示存取層級的關鍵字稱為「*存取修飾詞*」\(Access Modifier\)。  如需存取修飾詞的比較，請參閱 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+-   **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
- `Private` 修飾詞可用於以下內容中：  
+ `Private` 修飾詞可用於以下內容：  
   
  [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -59,15 +57,15 @@ caps.handback.revision: 13
   
  [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 請參閱  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)   
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Procedures](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>另請參閱  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

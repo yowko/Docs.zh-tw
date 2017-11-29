@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
+ms.openlocfilehash: 6878a408ef892ee47a03bfa04f736b9bf9671696
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5f290b2cb7074d0b442d5971e5e08a0f6cac55ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="attributes"></a>屬性
 
 C# 程式中的型別、成員和其他實體支援控制其某方面行為的修飾詞。 例如，方法的協助工具是使用 `public`、`protected`、`internal` 和 `private` 修飾詞控制。 C# 將此能力一般化，宣告式資訊的使用者定義型別才能附加至程式實體，並在執行階段擷取。 程式是透過定義和使用***屬性***指定這項額外的宣告式資訊。
@@ -26,7 +24,7 @@ C# 程式中的型別、成員和其他實體支援控制其某方面行為的�
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-所有屬性類別均衍生自標準程式庫提供的 @System.Attribute 基底類別。 在相關聯的宣告之前，於方括弧中提供屬性的名稱 (及任何引數) 即可套用屬性。 如果屬性名稱的結尾是 `Attribute`，則參考該屬性時可以省略該部分名稱。 例如，`HelpAttribute` 屬性可以下列方式使用。
+所有屬性類別均衍生自標準程式庫提供的 <xref:System.Attribute> 基底類別。 在相關聯的宣告之前，於方括弧中提供屬性的名稱 (及任何引數) 即可套用屬性。 如果屬性名稱的結尾是 `Attribute`，則參考該屬性時可以省略該部分名稱。 例如，`HelpAttribute` 屬性可以下列方式使用。
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 
@@ -36,4 +34,3 @@ C# 程式中的型別、成員和其他實體支援控制其某方面行為的�
 
 >[!div class="step-by-step"]
 [上一步](delegates.md)
-
