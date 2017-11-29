@@ -1,78 +1,80 @@
 ---
-title: "指定與處理合約和服務中的錯誤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "處理錯誤 [WCF]"
+title: "指定與處理合約和服務中的錯誤"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7be16a899974f325231a4010ad74bc55ee56d2a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 指定與處理合約和服務中的錯誤
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式會將 Managed 例外狀況物件對應至 SOAP 錯誤物件，並將 SOAP 錯誤物件對應至 Managed 例外狀況物件來處理錯誤情況。本節中的主題討論如何設計合約以將錯誤條件公開為自訂 SOAP 錯誤、如何將此類錯誤當成服務實作的一部份傳回，以及用戶端如何捕捉此類錯誤。  
+# <a name="specifying-and-handling-faults-in-contracts-and-services"></a><span data-ttu-id="a62bd-102">指定與處理合約和服務中的錯誤</span><span class="sxs-lookup"><span data-stu-id="a62bd-102">Specifying and Handling Faults in Contracts and Services</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="a62bd-103"> 應用程式會將 Managed 例外狀況物件對應至 SOAP 錯誤物件，並將 SOAP 錯誤物件對應至 Managed 例外狀況物件來處理錯誤情況。</span><span class="sxs-lookup"><span data-stu-id="a62bd-103"> applications handle error situations by mapping managed exception objects to SOAP fault objects and SOAP fault objects to managed exception objects.</span></span> <span data-ttu-id="a62bd-104">本節中的主題討論如何設計合約以將錯誤條件公開為自訂 SOAP 錯誤、如何將此類錯誤當成服務實作的一部份傳回，以及用戶端如何捕捉此類錯誤。</span><span class="sxs-lookup"><span data-stu-id="a62bd-104">The topics in this section discuss how to design contracts to expose error conditions as custom SOAP faults, how to return such faults as part of service implementation, and how clients catch such faults.</span></span>  
   
-## 錯誤處理概觀  
- 在所有 Managed 應用程式中，處理錯誤由 <xref:System.Exception> 物件表示。在 SOAP 應用程式中 \(如 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式\)，服務方法使用 SOAP 錯誤訊息來溝通處理錯誤資訊。SOAP 錯誤是包含在服務作業之中繼資料內的訊息類型，因此會建立錯誤合約，而用戶端可使用該合約來讓其作業更穩定或更具互動性。此外，由於已透過 XML 格式將 SOAP 錯誤公開給用戶端，現在這個類型的系統已經具備高度互通性，可供任何 SOAP 平台使用並擴充您的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式應用範圍。  
+## <a name="error-handling-overview"></a><span data-ttu-id="a62bd-105">錯誤處理概觀</span><span class="sxs-lookup"><span data-stu-id="a62bd-105">Error Handling Overview</span></span>  
+ <span data-ttu-id="a62bd-106">在所有 Managed 應用程式中，處理錯誤由 <xref:System.Exception> 物件表示。</span><span class="sxs-lookup"><span data-stu-id="a62bd-106">In all managed applications, processing errors are represented by <xref:System.Exception> objects.</span></span> <span data-ttu-id="a62bd-107">在 SOAP 應用程式中 (如 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式)，服務方法使用 SOAP 錯誤訊息來溝通處理錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="a62bd-107">In SOAP-based applications such as [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="a62bd-108">SOAP 錯誤是包含在服務作業之中繼資料內的訊息類型，因此會建立錯誤合約，而用戶端可使用該合約來讓其作業更穩定或更具互動性。</span><span class="sxs-lookup"><span data-stu-id="a62bd-108">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their operation more robust or interactive.</span></span> <span data-ttu-id="a62bd-109">此外，由於已透過 XML 格式將 SOAP 錯誤公開給用戶端，現在這個類型的系統已經具備高度互通性，可供任何 SOAP 平台使用並擴充您的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式應用範圍。</span><span class="sxs-lookup"><span data-stu-id="a62bd-109">In addition, because SOAP faults are expressed to clients in XML form, it is a highly interoperable type system that clients on any SOAP platform can use, increasing the reach of your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] application.</span></span>  
   
- 由於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式必須同時在兩種錯誤系統類型下執行，任何一個傳送至用戶端的 Managed 例外狀況資訊必須從例外狀況轉換為服務中的 SOAP 錯誤並加以傳送，然後再從 SOAP 錯誤轉換為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端中的錯誤例外狀況。在雙工用戶端的情況當中，用戶端合約也可能會將 SOAP 錯誤傳回服務。不管哪種情況，您都可以使用預設的服務例外狀況行為，或明確地控制是否要將例外狀況對應到錯誤訊息，以及其對應方式。  
+ <span data-ttu-id="a62bd-110">由於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式必須同時在兩種錯誤系統類型下執行，任何一個傳送至用戶端的 Managed 例外狀況資訊必須從例外狀況轉換為服務中的 SOAP 錯誤並加以傳送，然後再從 SOAP 錯誤轉換為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端中的錯誤例外狀況。</span><span class="sxs-lookup"><span data-stu-id="a62bd-110">Because [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications run under both types of error systems, any managed exception information that is sent to the client must be converted from exceptions into SOAP faults on the service, sent, and converted from SOAP faults to fault exceptions in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients.</span></span> <span data-ttu-id="a62bd-111">在雙工用戶端的情況當中，用戶端合約也可能會將 SOAP 錯誤傳回服務。</span><span class="sxs-lookup"><span data-stu-id="a62bd-111">In the case of duplex clients, client contracts can also send SOAP faults back to a service.</span></span> <span data-ttu-id="a62bd-112">不管哪種情況，您都可以使用預設的服務例外狀況行為，或明確地控制是否要將例外狀況對應到錯誤訊息，以及其對應方式。</span><span class="sxs-lookup"><span data-stu-id="a62bd-112">In either case, you can use the default service exception behaviors, or you can explicitly control whether—and how—exceptions are mapped to fault messages.</span></span>  
   
- 您可以傳送兩種類型的 SOAP 錯誤：「*已宣告*」\(Declared\) 和「*未宣告*」\(Undeclared\)。已宣告的 SOAP 錯誤是其中作業具有指定自訂 SOAP 錯誤類型之 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=fullName> 屬性的 SOAP 錯誤。*未宣告* SOAP 錯誤則不會在作業的合約中指定。  
+ <span data-ttu-id="a62bd-113">可以傳送兩種類型的 SOAP 錯誤：*宣告*和*未宣告*。</span><span class="sxs-lookup"><span data-stu-id="a62bd-113">Two types of SOAP faults can be sent: *declared* and *undeclared*.</span></span> <span data-ttu-id="a62bd-114">已宣告的 SOAP 錯誤是其中作業具有指定自訂 SOAP 錯誤類型之 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 屬性的 SOAP 錯誤。</span><span class="sxs-lookup"><span data-stu-id="a62bd-114">Declared SOAP faults are those in which an operation has a <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> attribute that specifies a custom SOAP fault type.</span></span> <span data-ttu-id="a62bd-115">*未宣告*作業的合約中未指定的 SOAP 錯誤。</span><span class="sxs-lookup"><span data-stu-id="a62bd-115">*Undeclared* SOAP faults are not specified in the contract for an operation.</span></span>  
   
- 我們強烈建議，服務作業應使用 <xref:System.ServiceModel.FaultContractAttribute> 屬性正式指定用戶端在正常作業期間可能收到的所有 SOAP 錯誤，以宣告其錯誤。我們也建議您只在 SOAP 錯誤中傳回用戶端應該知道的資訊，將資訊暴露的程度降至最低。  
+ <span data-ttu-id="a62bd-116">我們強烈建議，服務作業應使用 <xref:System.ServiceModel.FaultContractAttribute> 屬性正式指定用戶端在正常作業期間可能收到的所有 SOAP 錯誤，以宣告其錯誤。</span><span class="sxs-lookup"><span data-stu-id="a62bd-116">It is strongly recommended that service operations declare their faults by using the <xref:System.ServiceModel.FaultContractAttribute> attribute to formally specify all SOAP faults that a client can expect to receive in the normal course of an operation.</span></span> <span data-ttu-id="a62bd-117">我們也建議您只在 SOAP 錯誤中傳回用戶端應該知道的資訊，將資訊暴露的程度降至最低。</span><span class="sxs-lookup"><span data-stu-id="a62bd-117">It is also recommended that you return in a SOAP fault only the information that a client must know to minimize information disclosure.</span></span>  
   
- 一般來說，服務 \(與雙工用戶端\) 會採取下列步驟，成功地將錯誤處理整合到應用程式中：  
+ <span data-ttu-id="a62bd-118">一般來說，服務 (與雙工用戶端) 會採取下列步驟，成功地將錯誤處理整合到應用程式中：</span><span class="sxs-lookup"><span data-stu-id="a62bd-118">Typically, services (and duplex clients) take the following steps to successfully integrate error handling into their applications:</span></span>  
   
--   將例外狀況條件對應至自訂 SOAP 錯誤。  
+-   <span data-ttu-id="a62bd-119">將例外狀況條件對應至自訂 SOAP 錯誤。</span><span class="sxs-lookup"><span data-stu-id="a62bd-119">Map exception conditions to custom SOAP faults.</span></span>  
   
--   用戶端與服務會將 SOAP 錯誤當成例外狀況來傳送與接收。  
+-   <span data-ttu-id="a62bd-120">用戶端與服務會將 SOAP 錯誤當成例外狀況來傳送與接收。</span><span class="sxs-lookup"><span data-stu-id="a62bd-120">Clients and services send and receive SOAP faults as exceptions.</span></span>  
   
- 此外，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端與服務可以使用未宣告的 SOAP 錯誤做為偵錯用途，同時延伸預設的錯誤行為。下列各節將說明這些工作與概念。  
+ <span data-ttu-id="a62bd-121">此外，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端與服務可以使用未宣告的 SOAP 錯誤做為偵錯用途，同時延伸預設的錯誤行為。</span><span class="sxs-lookup"><span data-stu-id="a62bd-121">In addition, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients and services can use undeclared soap faults for debugging purposes and can extend the default error behavior.</span></span> <span data-ttu-id="a62bd-122">下列各節將說明這些工作與概念。</span><span class="sxs-lookup"><span data-stu-id="a62bd-122">The following sections discuss these tasks and concepts.</span></span>  
   
-## 將例外狀況對應至 SOAP 錯誤  
- 建立可以處理錯誤情況的作業的第一步，就是決定用戶端應用程式在哪種情況下應該收到有關錯誤的通知。某些作業會有專屬自身功能的一些錯誤情況。例如，`PurchaseOrder` 作業可能會將特定資訊傳回給已經無法再初始化採購單的客戶。在其他情況中 \(例如 `Calculator` 服務\)，更常見的 `MathFault` SOAP 錯誤也許能夠說明整個服務的所有錯誤情況。一旦識別出您服務用戶端的錯誤情況，就可以建構自訂 SOAP 錯誤，並在引發 SOAP 錯誤的對應錯誤情況時將作業標示為傳回該 SOAP 錯誤。  
+## <a name="map-exceptions-to-soap-faults"></a><span data-ttu-id="a62bd-123">將例外狀況對應至 SOAP 錯誤</span><span class="sxs-lookup"><span data-stu-id="a62bd-123">Map Exceptions to SOAP Faults</span></span>  
+ <span data-ttu-id="a62bd-124">建立可以處理錯誤情況的作業的第一步，就是決定用戶端應用程式在哪種情況下應該收到有關錯誤的通知。</span><span class="sxs-lookup"><span data-stu-id="a62bd-124">The first step in creating an operation that handles error conditions is to decide under what conditions a client application should be informed about errors.</span></span> <span data-ttu-id="a62bd-125">某些作業會有專屬自身功能的一些錯誤情況。</span><span class="sxs-lookup"><span data-stu-id="a62bd-125">Some operations have error conditions specific to their functionality.</span></span> <span data-ttu-id="a62bd-126">例如，`PurchaseOrder` 作業可能會將特定資訊傳回給已經無法再初始化採購單的客戶。</span><span class="sxs-lookup"><span data-stu-id="a62bd-126">For example, a `PurchaseOrder` operation might return specific information to customers who are no longer permitted to initiate a purchase order.</span></span> <span data-ttu-id="a62bd-127">在其他情況中 (例如 `Calculator` 服務)，更常見的 `MathFault` SOAP 錯誤也許能夠說明整個服務的所有錯誤情況。</span><span class="sxs-lookup"><span data-stu-id="a62bd-127">In other cases, such as a `Calculator` service, a more general `MathFault` SOAP fault may be able to describe all error conditions across an entire service.</span></span> <span data-ttu-id="a62bd-128">一旦識別出您服務用戶端的錯誤情況，就可以建構自訂 SOAP 錯誤，並在引發 SOAP 錯誤的對應錯誤情況時將作業標示為傳回該 SOAP 錯誤。</span><span class="sxs-lookup"><span data-stu-id="a62bd-128">Once the error conditions of clients of your service are identified, a custom SOAP fault can be constructed and the operation can be marked as returning that SOAP fault when its corresponding error condition arises.</span></span>  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]開發您的服務或用戶端的步驟完整資訊，請參閱[定義並指定錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="a62bd-129">此步驟的開發您的服務或用戶端，請參閱[定義與指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。</span><span class="sxs-lookup"><span data-stu-id="a62bd-129"> this step of developing your service or client, see [Defining and Specifying Faults](../../../docs/framework/wcf/defining-and-specifying-faults.md).</span></span>  
   
-## 用戶端與服務會將 SOAP 錯誤當成例外狀況來處理。  
- 要在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中成功處理錯誤的第一步，就是辨識作業錯誤情況、定義自訂 SOAP 錯誤，並將這些作業標示為傳回這些錯誤。下一步則是適當地實作這些錯誤的傳送與接收作業。一般來說，服務會傳送錯誤以通知用戶端應用程式有關錯誤的情況，但是雙工用戶端可以同時將 SOAP 錯誤傳送給服務。  
+## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a><span data-ttu-id="a62bd-130">用戶端與服務會將 SOAP 錯誤當成例外狀況來處理。</span><span class="sxs-lookup"><span data-stu-id="a62bd-130">Clients and Services Handle SOAP Faults as Exceptions</span></span>  
+ <span data-ttu-id="a62bd-131">要在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中成功處理錯誤的第一步，就是辨識作業錯誤情況、定義自訂 SOAP 錯誤，並將這些作業標示為傳回這些錯誤。</span><span class="sxs-lookup"><span data-stu-id="a62bd-131">Identifying operation error conditions, defining custom SOAP faults, and marking those operations as returning those faults are the first steps in successful error handling in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications.</span></span> <span data-ttu-id="a62bd-132">下一步則是適當地實作這些錯誤的傳送與接收作業。</span><span class="sxs-lookup"><span data-stu-id="a62bd-132">The next step is to properly implement the sending and receiving of these faults.</span></span> <span data-ttu-id="a62bd-133">一般來說，服務會傳送錯誤以通知用戶端應用程式有關錯誤的情況，但是雙工用戶端可以同時將 SOAP 錯誤傳送給服務。</span><span class="sxs-lookup"><span data-stu-id="a62bd-133">Typically services send faults to inform client applications about error conditions, but duplex clients can also send SOAP faults to services.</span></span>  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="a62bd-134">[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。</span><span class="sxs-lookup"><span data-stu-id="a62bd-134"> [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md).</span></span>  
   
-## 未宣告的 SOAP 錯誤與偵錯  
- 已宣告的 SOAP 錯誤非常適合用來建置穩固、可互通，與分散式應用程式。但是，在某些情況下則適合透過服務 \(或雙工用戶端\) 來傳送未宣告的 SOAP 錯誤，此錯誤並未在該作業的 Web 服務描述語言 \(WSDL\) 中提及。例如，當您開發服務時，一旦碰到未預期的情況，就可以將資訊傳回用戶端以便進行偵錯。此外，您可以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 屬性或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 屬性設為 `true` 以允許 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端取得有關內部服務作業例外狀況的資訊。[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)一文說明同時傳送個別錯誤與設定偵錯行為屬性。  
+## <a name="undeclared-soap-faults-and-debugging"></a><span data-ttu-id="a62bd-135">未宣告的 SOAP 錯誤與偵錯</span><span class="sxs-lookup"><span data-stu-id="a62bd-135">Undeclared SOAP Faults and Debugging</span></span>  
+ <span data-ttu-id="a62bd-136">已宣告的 SOAP 錯誤非常適合用來建置穩固、可互通，與分散式應用程式。</span><span class="sxs-lookup"><span data-stu-id="a62bd-136">Declared SOAP faults are extremely useful for building robust, interoperable, distributed applications.</span></span> <span data-ttu-id="a62bd-137">但是，在某些情況下則適合透過服務 (或雙工用戶端) 來傳送未宣告的 SOAP 錯誤，此錯誤並未在該作業的 Web 服務描述語言 (WSDL) 中提及。</span><span class="sxs-lookup"><span data-stu-id="a62bd-137">However, in some cases it is useful for a service (or duplex client) to send an undeclared SOAP fault, one that is not mentioned in the Web Services Description Language (WSDL) for that operation.</span></span> <span data-ttu-id="a62bd-138">例如，當您開發服務時，一旦碰到未預期的情況，就可以將資訊傳回用戶端以便進行偵錯。</span><span class="sxs-lookup"><span data-stu-id="a62bd-138">For example, when developing a service, unexpected situations can occur in which it is useful for debugging purposes to send information back to the client.</span></span> <span data-ttu-id="a62bd-139">此外，您可以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設為 `true` 以允許 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端取得有關內部服務作業例外狀況的資訊。</span><span class="sxs-lookup"><span data-stu-id="a62bd-139">In addition, you can set the <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> property or the <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> property to `true` to permit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients to obtain information about internal service operation exceptions.</span></span> <span data-ttu-id="a62bd-140">同時傳送個別的錯誤，並設定偵錯行為屬性中所述[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。</span><span class="sxs-lookup"><span data-stu-id="a62bd-140">Both sending individual faults and setting the debugging behavior properties are described in [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md).</span></span>  
   
 > [!IMPORTANT]
->  由於 Managed 例外狀況會暴露內部應用程式資訊，所以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 設為 `true`，便可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端取得內部服務作業例外狀況的相關資訊，包括個人識別資訊或其他敏感資訊。  
+>  <span data-ttu-id="a62bd-141">由於 Managed 例外狀況會暴露內部應用程式資訊，所以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`，便可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端取得內部服務作業例外狀況的相關資訊，包括個人識別資訊或其他敏感資訊。</span><span class="sxs-lookup"><span data-stu-id="a62bd-141">Because managed exceptions can expose internal application information, setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> to `true` can permit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients to obtain information about internal service operation exceptions, including personally identifiable or other sensitive information.</span></span>  
 >   
->  因此，若您只是暫時對服務應用程式進行偵錯，才建議把 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 設為 `true`。此外，若某個方法以這種方式傳回未處理的 Managed 例外狀況，則該方法的 WSDL 不會包含 <xref:System.ServiceModel.ExceptionDetail> 型別之 <xref:System.ServiceModel.FaultException%601> 的合約。用戶端必須接受有未知 SOAP 錯誤 \(以 <xref:System.ServiceModel.FaultException?displayProperty=fullName> 物件的形式傳回給 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端\) 的可能性，才能正確取得偵錯資訊。  
+>  <span data-ttu-id="a62bd-142">因此，若您只是暫時對服務應用程式進行偵錯，才建議把 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="a62bd-142">Therefore, setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> to `true` is recommended only as a way to temporarily debug a service application.</span></span> <span data-ttu-id="a62bd-143">此外，若某個方法以這種方式傳回未處理的 Managed 例外狀況，則該方法的 WSDL 不會包含 <xref:System.ServiceModel.FaultException%601> 型別之 <xref:System.ServiceModel.ExceptionDetail> 的合約。</span><span class="sxs-lookup"><span data-stu-id="a62bd-143">In addition, the WSDL for a method that returns unhandled managed exceptions in this way does not contain the contract for the <xref:System.ServiceModel.FaultException%601> of type <xref:System.ServiceModel.ExceptionDetail>.</span></span> <span data-ttu-id="a62bd-144">用戶端必須接受有未知 SOAP 錯誤 (以 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 物件的形式傳回給 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 用戶端) 的可能性，才能正確取得偵錯資訊。</span><span class="sxs-lookup"><span data-stu-id="a62bd-144">Clients must expect the possibility of an unknown SOAP fault (returned to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients as <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> objects) to obtain the debugging information properly.</span></span>  
   
-## 使用 IErrorHandler 自訂錯誤處理  
- 如果您有特殊需求，需要在發生應用程式層級例外狀況時自訂給用戶端的回應訊息，或是在傳回回應訊息後執行某些自訂處理，請實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=fullName> 介面。  
+## <a name="customizing-error-handling-with-ierrorhandler"></a><span data-ttu-id="a62bd-145">使用 IErrorHandler 自訂錯誤處理</span><span class="sxs-lookup"><span data-stu-id="a62bd-145">Customizing Error Handling with IErrorHandler</span></span>  
+ <span data-ttu-id="a62bd-146">如果您有特殊需求，需要在發生應用程式層級例外狀況時自訂給用戶端的回應訊息，或是在傳回回應訊息後執行某些自訂處理，請實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> 介面。</span><span class="sxs-lookup"><span data-stu-id="a62bd-146">If you have special requirements to either customize the response message to the client when an application-level exception happens or perform some custom processing after the response message is returned, implement the <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> interface.</span></span>  
   
-## 錯誤序列化問題  
- 還原序列化錯誤合約時，WCF 會先嘗試使用錯誤合約型別來比對 SOAP 訊息中的錯誤合約名稱。如果它找不到完全符合的項目，就會按照字母順序，在可用的錯誤合約清單中搜尋相容型別。如果有兩個錯誤合約是相容型別 \(例如，其中一個合約是另一個合約的子類別\)，可能會使用錯誤的型別來還原序列化錯誤合約。只有當錯誤合約沒有指定名稱、命名空間和動作時，才會發生這種情況。若要避免此問題發生，請一律指定名稱、命名空間和動作屬性，藉以完整限定錯誤合約。此外，如果您已經定義許多衍生自共用基底類別的相關錯誤合約，請務必使用 `[DataMember(IsRequired=true)]` 來標記任何新成員。如需這個 `IsRequired` 屬性的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataMemberAttribute>。這個屬性可避免基底類別成為相容型別，並且強制將錯誤合約還原序列化成正確的衍生型別。  
+## <a name="fault-serialization-issues"></a><span data-ttu-id="a62bd-147">錯誤序列化問題</span><span class="sxs-lookup"><span data-stu-id="a62bd-147">Fault Serialization Issues</span></span>  
+ <span data-ttu-id="a62bd-148">還原序列化錯誤合約時，WCF 會先嘗試使用錯誤合約型別來比對 SOAP 訊息中的錯誤合約名稱。</span><span class="sxs-lookup"><span data-stu-id="a62bd-148">When deserializing a fault contract, WCF first attempts to match the fault contract name in the SOAP message with the fault contract type.</span></span> <span data-ttu-id="a62bd-149">如果它找不到完全符合的項目，就會按照字母順序，在可用的錯誤合約清單中搜尋相容型別。</span><span class="sxs-lookup"><span data-stu-id="a62bd-149">If it cannot find an exact match it will then search the list of available fault contracts in alphabetical order for a compatible type.</span></span> <span data-ttu-id="a62bd-150">如果有兩個錯誤合約是相容型別 (例如，其中一個合約是另一個合約的子類別)，可能會使用錯誤的型別來還原序列化錯誤合約。</span><span class="sxs-lookup"><span data-stu-id="a62bd-150">If two fault contracts are compatible types (one is a subclass of another, for example) the wrong type may be used to de-serialize the fault.</span></span> <span data-ttu-id="a62bd-151">只有當錯誤合約沒有指定名稱、命名空間和動作時，才會發生這種情況。</span><span class="sxs-lookup"><span data-stu-id="a62bd-151">This only occurs if the fault contract does not specify a name, namespace, and action.</span></span> <span data-ttu-id="a62bd-152">若要避免此問題發生，請一律指定名稱、命名空間和動作屬性，藉以完整限定錯誤合約。</span><span class="sxs-lookup"><span data-stu-id="a62bd-152">To prevent this issue from occurring, always fully qualify fault contracts by specifying the name, namespace, and action attributes.</span></span> <span data-ttu-id="a62bd-153">此外，如果您已經定義許多衍生自共用基底類別的相關錯誤合約，請務必使用 `[DataMember(IsRequired=true)]` 來標記任何新成員。</span><span class="sxs-lookup"><span data-stu-id="a62bd-153">Additionally if you have defined a number of related fault contracts derived from a shared base class, make sure to mark any new members with `[DataMember(IsRequired=true)]`.</span></span> <span data-ttu-id="a62bd-154">如需這個 `IsRequired` 屬性的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataMemberAttribute>。</span><span class="sxs-lookup"><span data-stu-id="a62bd-154">For more information on this `IsRequired` attribute see, <xref:System.Runtime.Serialization.DataMemberAttribute>.</span></span> <span data-ttu-id="a62bd-155">這個屬性可避免基底類別成為相容型別，並且強制將錯誤合約還原序列化成正確的衍生型別。</span><span class="sxs-lookup"><span data-stu-id="a62bd-155">This will prevent a base class from being a compatible type and force the fault to be deserialized into the correct derived type.</span></span>  
   
-## 請參閱  
- <xref:System.ServiceModel.FaultException>   
- <xref:System.ServiceModel.FaultContractAttribute>   
- <xref:System.ServiceModel.FaultException>   
- <xref:System.Xml.Serialization.XmlSerializer>   
- <xref:System.ServiceModel.XmlSerializerFormatAttribute>   
- <xref:System.ServiceModel.FaultContractAttribute>   
- <xref:System.ServiceModel.CommunicationException>   
- <xref:System.ServiceModel.FaultContractAttribute.Action%2A>   
- <xref:System.ServiceModel.FaultException.Code%2A>   
- <xref:System.ServiceModel.FaultException.Reason%2A>   
- <xref:System.ServiceModel.FaultCode.SubCode%2A>   
- <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>   
- [定義並指定錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)
+## <a name="see-also"></a><span data-ttu-id="a62bd-156">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a62bd-156">See Also</span></span>  
+ <xref:System.ServiceModel.FaultException>  
+ <xref:System.ServiceModel.FaultContractAttribute>  
+ <xref:System.ServiceModel.FaultException>  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ <xref:System.ServiceModel.XmlSerializerFormatAttribute>  
+ <xref:System.ServiceModel.FaultContractAttribute>  
+ <xref:System.ServiceModel.CommunicationException>  
+ <xref:System.ServiceModel.FaultContractAttribute.Action%2A>  
+ <xref:System.ServiceModel.FaultException.Code%2A>  
+ <xref:System.ServiceModel.FaultException.Reason%2A>  
+ <xref:System.ServiceModel.FaultCode.SubCode%2A>  
+ <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
+ [<span data-ttu-id="a62bd-157">定義並指定錯誤</span><span class="sxs-lookup"><span data-stu-id="a62bd-157">Defining and Specifying Faults</span></span>](../../../docs/framework/wcf/defining-and-specifying-faults.md)

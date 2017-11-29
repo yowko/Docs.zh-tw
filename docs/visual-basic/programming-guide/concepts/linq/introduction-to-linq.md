@@ -1,54 +1,46 @@
 ---
-title: "(Visual Basic) 的 LINQ 簡介 |Microsoft 文件"
+title: "LINQ (Visual Basic) 簡介"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41964e2fcbb079b7650c3132c9035fc2f754f3de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3edb26616bf53be8a26522775effd079fafbac97
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="introduction-to-linq-visual-basic"></a>(Visual Basic) 的 LINQ 簡介
-語言整合查詢 (LINQ) 是一項創新技術引進.NET Framework 3.5 版中該橋接器世界的物件與世界的資料之間的差距。  
+# <a name="introduction-to-linq-visual-basic"></a><span data-ttu-id="25e7d-102">LINQ (Visual Basic) 簡介</span><span class="sxs-lookup"><span data-stu-id="25e7d-102">Introduction to LINQ (Visual Basic)</span></span>
+<span data-ttu-id="25e7d-103">Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技術，用來填補許多物件與資料之間的缺口。</span><span class="sxs-lookup"><span data-stu-id="25e7d-103">Language-Integrated Query (LINQ) is an innovation introduced in the .NET Framework version 3.5 that bridges the gap between the world of objects and the world of data.</span></span>  
   
- 傳統上，對資料執行查詢被以簡單的字串，不具型別檢查在編譯時間或 IntelliSense 支援。 此外，您必須了解每個資料來源類型的不同的查詢語言︰ SQL 資料庫、 XML 文件、 不同的 Web 服務等等。 LINQ 可讓*查詢*在 Visual Basic 中的第一級語言建構。 您可以使用語言關鍵字和熟悉的運算子，以撰寫強型別的物件集合的查詢。  
+ <span data-ttu-id="25e7d-104">傳統上，資料查詢是以簡單的字串表示，既不會在編譯時進行類型檢查，也不支援 IntelliSense。</span><span class="sxs-lookup"><span data-stu-id="25e7d-104">Traditionally, queries against data are expressed as simple strings without type checking at compile time or IntelliSense support.</span></span> <span data-ttu-id="25e7d-105">此外，您必須針對每個資料來源型別 (例如 SQL 資料庫、XML 文件、各種 Web 服務等等) 學習不同的查詢語言。</span><span class="sxs-lookup"><span data-stu-id="25e7d-105">Furthermore, you have to learn a different query language for each type of data source: SQL databases, XML documents, various Web services, and so on.</span></span> <span data-ttu-id="25e7d-106">LINQ 可讓*查詢*在 Visual Basic 中的第一級語言建構。</span><span class="sxs-lookup"><span data-stu-id="25e7d-106">LINQ makes a *query* a first-class language construct in Visual Basic.</span></span> <span data-ttu-id="25e7d-107">您可以使用語言關鍵字和熟悉的運算子，針對強型別的物件集合撰寫查詢。</span><span class="sxs-lookup"><span data-stu-id="25e7d-107">You write queries against strongly typed collections of objects by using language keywords and familiar operators.</span></span>  
   
- 您可以在 Visual Basic 中撰寫 LINQ 查詢，SQL Server 資料庫、 XML 文件、 ADO.NET 資料集和任何支援的物件集合<xref:System.Collections.IEnumerable>或泛型<xref:System.Collections.Generic.IEnumerable%601>介面。</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.IEnumerable> 協力廠商也被提供 LINQ 支援許多 Web 服務和其他資料庫實作。  
+ <span data-ttu-id="25e7d-108">您可以在 Visual Basic 中撰寫 LINQ 查詢 SQL Server 資料庫、 XML 文件、 ADO.NET 資料集和任何支援的物件集合<xref:System.Collections.IEnumerable>或泛型<xref:System.Collections.Generic.IEnumerable%601>介面。</span><span class="sxs-lookup"><span data-stu-id="25e7d-108">You can write LINQ queries in Visual Basic for SQL Server databases, XML documents, ADO.NET Datasets, and any collection of objects that supports <xref:System.Collections.IEnumerable> or the generic <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="25e7d-109">也有協力廠商針對許多 Web 服務和其他資料庫實作提供 LINQ 支援。</span><span class="sxs-lookup"><span data-stu-id="25e7d-109">LINQ support is also provided by third parties for many Web services and other database implementations.</span></span>  
   
- 在新的專案，或與現有的專案中的非 LINQ 查詢，您可以使用 LINQ 查詢。 唯一的需求是將專案目標.NET Framework 3.5 或更新版本。  
+ <span data-ttu-id="25e7d-110">您可以在新的專案中使用 LINQ 查詢，也可以與現有專案中的非 LINQ 查詢一起使用。</span><span class="sxs-lookup"><span data-stu-id="25e7d-110">You can use LINQ queries in new projects, or alongside non-LINQ queries in existing projects.</span></span> <span data-ttu-id="25e7d-111">唯一的必要條件是專案要以 .NET Framework 3.5 或更新版本為目標。</span><span class="sxs-lookup"><span data-stu-id="25e7d-111">The only requirement is that the project target .NET Framework 3.5 or later.</span></span>  
   
- 從 Visual Studio 下的圖顯示的部分完成 LINQ 查詢對 SQL Server 資料庫在 C# 和 Visual Basic 中使用完整的型別檢查和 IntelliSense 支援。  
+ <span data-ttu-id="25e7d-112">下圖顯示 Visual Studio 中針對 SQL Server 資料庫以 C# 和 Visual Basic 撰寫之部分完成的 LINQ 查詢，其中有完整的類型檢查和 IntelliSense 支援。</span><span class="sxs-lookup"><span data-stu-id="25e7d-112">The following illustration from Visual Studio shows a partially-completed LINQ query against a SQL Server database in both C# and Visual Basic with full type checking and IntelliSense support.</span></span>  
   
- ![具有 Intellisense 的 LINQ 查詢](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")  
+ <span data-ttu-id="25e7d-113">![具有 Intellisense 的 LINQ 查詢](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")</span><span class="sxs-lookup"><span data-stu-id="25e7d-113">![LINQ query with Intellisense](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")</span></span>  
   
-## <a name="next-steps"></a>後續步驟  
- 若要了解更多詳細 LINQ，開始熟悉入門 」 一節中的某些基本概念[在 Visual Basic 中撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)，然後讀取您感興趣的 LINQ 技術的文件︰  
+## <a name="next-steps"></a><span data-ttu-id="25e7d-114">後續步驟</span><span class="sxs-lookup"><span data-stu-id="25e7d-114">Next Steps</span></span>  
+ <span data-ttu-id="25e7d-115">若要深入了解更多詳細 LINQ，一開始熟悉的使用者入門的區段中的一些基本概念[在 Visual Basic 中撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)，然後讀取您所 LINQ 技術的文件想要：</span><span class="sxs-lookup"><span data-stu-id="25e7d-115">To learn more details about LINQ, start by becoming familiar with some basic concepts in the Getting Started section [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), and then read the documentation for the LINQ technology in which you are interested:</span></span>  
   
--   SQL Server 資料庫︰ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+-   <span data-ttu-id="25e7d-116">SQL Server 資料庫：[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)</span><span class="sxs-lookup"><span data-stu-id="25e7d-116">SQL Server databases: [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)</span></span>  
   
--   XML 文件︰ [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+-   <span data-ttu-id="25e7d-117">XML 文件： [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)</span><span class="sxs-lookup"><span data-stu-id="25e7d-117">XML documents: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)</span></span>  
   
--   ADO.NET 資料集︰ [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
+-   <span data-ttu-id="25e7d-118">ADO.NET 資料集：[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)</span><span class="sxs-lookup"><span data-stu-id="25e7d-118">ADO.NET Datasets: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)</span></span>  
   
--   .NET 集合、 檔案、 字串等等︰ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+-   <span data-ttu-id="25e7d-119">.NET 集合、 檔案、 字串等： [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)</span><span class="sxs-lookup"><span data-stu-id="25e7d-119">.NET collections, files, strings and so on: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [語言整合查詢 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a><span data-ttu-id="25e7d-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="25e7d-120">See Also</span></span>  
+ [<span data-ttu-id="25e7d-121">Language-Integrated Query (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25e7d-121">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)

@@ -1,43 +1,49 @@
 ---
-title: "如何：使用影像繪製區域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筆刷, 以影像繪製"
-  - "影像, 繪製方式"
-  - "繪圖, 使用影像"
+title: "操作說明：使用影像繪製區域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [WPF], painting with
+- painting [WPF], with images
+- brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3edbe30347580bb4f9677d7fb98d3b4fd8b92cff
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用影像繪製區域
-本範例示範如何使用 <xref:System.Windows.Media.ImageBrush> 類別以影像繪製區域。  <xref:System.Windows.Media.ImageBrush> 會顯示以其 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 屬性所指定的單一影像。  
+# <a name="how-to-paint-an-area-with-an-image"></a><span data-ttu-id="04fdd-102">操作說明：使用影像繪製區域</span><span class="sxs-lookup"><span data-stu-id="04fdd-102">How to: Paint an Area with an Image</span></span>
+<span data-ttu-id="04fdd-103">這個範例示範如何使用<xref:System.Windows.Media.ImageBrush>類別，以使用影像繪製區域。</span><span class="sxs-lookup"><span data-stu-id="04fdd-103">This example shows how to use the <xref:System.Windows.Media.ImageBrush> class to paint an area with an image.</span></span> <span data-ttu-id="04fdd-104"><xref:System.Windows.Media.ImageBrush>會顯示所指定的單一映像及其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="04fdd-104">An <xref:System.Windows.Media.ImageBrush> displays a single image, which is specified by its <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property.</span></span>  
   
-## 範例  
- 下列範例會使用 <xref:System.Windows.Media.ImageBrush> 繪製按鈕的 <xref:System.Windows.Controls.Control.Background%2A>。  
+## <a name="example"></a><span data-ttu-id="04fdd-105">範例</span><span class="sxs-lookup"><span data-stu-id="04fdd-105">Example</span></span>  
+ <span data-ttu-id="04fdd-106">下列範例繪製<xref:System.Windows.Controls.Control.Background%2A>按鈕所使用的<xref:System.Windows.Media.ImageBrush>。</span><span class="sxs-lookup"><span data-stu-id="04fdd-106">The following example paints the <xref:System.Windows.Controls.Control.Background%2A> of a button by using an <xref:System.Windows.Media.ImageBrush>.</span></span>  
   
  [!code-csharp[UsingImageBrush_snip#ImageBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/PaintingWithImagesExample.cs#imagebrushexamplewholepage)]  
   
- 根據預設，<xref:System.Windows.Media.ImageBrush> 會延伸其影像，填滿您正在繪製的區域。  在上面的範例中，影像會延伸填滿按鈕，這可能會使影像扭曲。  您可以透過將 <xref:System.Windows.Media.TileBrush> 的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性設為 <xref:System.Windows.Media.Stretch> 或 <xref:System.Windows.Media.Stretch> 以控制此行為，這些設定會使得筆刷保留影像的[外觀比例](GTMT) \(Aspect Ratio\)。  
+ <span data-ttu-id="04fdd-107">根據預設，<xref:System.Windows.Media.ImageBrush>自動縮放它的映像完全填滿您所繪製的區域。</span><span class="sxs-lookup"><span data-stu-id="04fdd-107">By default, an <xref:System.Windows.Media.ImageBrush> stretches its image to completely fill the area that you are painting.</span></span> <span data-ttu-id="04fdd-108">在上一個範例中，已自動縮放影像來填滿按鈕，且可能造成影像扭曲。</span><span class="sxs-lookup"><span data-stu-id="04fdd-108">In the preceding example, the image is stretched to fill the button, possibly distorting the image.</span></span> <span data-ttu-id="04fdd-109">您可以設定來控制此行為<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性<xref:System.Windows.Media.TileBrush>至<xref:System.Windows.Media.Stretch.Uniform>或<xref:System.Windows.Media.Stretch.UniformToFill>，因而導致保留外觀比例的影像筆刷。</span><span class="sxs-lookup"><span data-stu-id="04fdd-109">You can control this behavior by setting the <xref:System.Windows.Media.TileBrush.Stretch%2A> property of <xref:System.Windows.Media.TileBrush> to <xref:System.Windows.Media.Stretch.Uniform> or <xref:System.Windows.Media.Stretch.UniformToFill>, which causes the brush to preserve the aspect ratio of the image.</span></span>  
   
- 如果您設定了 <xref:System.Windows.Media.ImageBrush> 的 <xref:System.Windows.Media.TileBrush.Viewport%2A> 和 <xref:System.Windows.Media.TileBrush.TileMode%2A> 屬性，則可以建立重複的圖樣。  下列範例會使用從影像建立的圖樣繪製按鈕。  
+ <span data-ttu-id="04fdd-110">如果您設定<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性<xref:System.Windows.Media.ImageBrush>，您可以建立重複的圖樣。</span><span class="sxs-lookup"><span data-stu-id="04fdd-110">If you set the <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.TileMode%2A> properties of an <xref:System.Windows.Media.ImageBrush>, you can create a repeating pattern.</span></span> <span data-ttu-id="04fdd-111">下列範例使用從影像建立的圖樣來繪製按鈕。</span><span class="sxs-lookup"><span data-stu-id="04fdd-111">The following example paints a button by using a pattern that is created from an image.</span></span>  
   
  [!code-csharp[UsingImageBrush_snip#TiledImageBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TiledImageBrushExample.cs#tiledimagebrushexamplewholepage)]
  [!code-vb[UsingImageBrush_snip#TiledImageBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UsingImageBrush_snip/VisualBasic/TiledImageBrushExample.vb#tiledimagebrushexamplewholepage)]  
   
- 如需 <xref:System.Windows.Media.ImageBrush> 類別的詳細資訊，請參閱[使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ <span data-ttu-id="04fdd-112">如需有關<xref:System.Windows.Media.ImageBrush>類別，請參閱[使用映像、 繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。</span><span class="sxs-lookup"><span data-stu-id="04fdd-112">For more information about the <xref:System.Windows.Media.ImageBrush> class, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
- 這個程式碼範例是 <xref:System.Windows.Media.ImageBrush> 類別完整範例的一部分。  如需完整範例，請參閱 [ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005) \(英文\)。  
+ <span data-ttu-id="04fdd-113">這個程式碼範例是所提供之較大範例的一部分<xref:System.Windows.Media.ImageBrush>類別。</span><span class="sxs-lookup"><span data-stu-id="04fdd-113">This code example is part of a larger example that is provided for the <xref:System.Windows.Media.ImageBrush> class.</span></span> <span data-ttu-id="04fdd-114">如需完整範例，請參閱[ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005)。</span><span class="sxs-lookup"><span data-stu-id="04fdd-114">For the complete sample, see [ImageBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160005).</span></span>  
   
-## 請參閱  
- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="04fdd-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="04fdd-115">See Also</span></span>  
+ [<span data-ttu-id="04fdd-116">使用影像、繪圖和視覺效果繪製</span><span class="sxs-lookup"><span data-stu-id="04fdd-116">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

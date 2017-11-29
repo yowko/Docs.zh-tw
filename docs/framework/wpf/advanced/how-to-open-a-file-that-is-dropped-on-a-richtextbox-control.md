@@ -1,39 +1,45 @@
 ---
-title: "如何：開啟置放在 RichTextBox 控制項上的檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "拖放功能 [WPF], 開啟置放的檔案"
-  - "拖放功能 [WPF], RichTextBox"
-  - "RichTextBox [WPF], 拖放"
+title: "如何：開啟置放在 RichTextBox 控制項上的檔案"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- drag-and-drop [WPF], RichTextBox
+- RichTextBox [WPF], drag-and-drop
+- drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f65ecaf9c6ef34176967e1ebf9134ceee195036b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：開啟置放在 RichTextBox 控制項上的檔案
-在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中，<xref:System.Windows.Controls.TextBox>、<xref:System.Windows.Controls.RichTextBox> 和 <xref:System.Windows.Documents.FlowDocument> 控制項全都內建拖放功能。  此內建功能提供在控制項內和控制項間拖放文字的能力。  但是，並不提供透過將檔案放置到控制項上來開啟檔案的能力。  這些控制項也會將拖放事件標記為已處理。  因此，根據預設您無法加入自己的事件處理常式來提供開啟所放置檔案的功能。  
+# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a><span data-ttu-id="2ba1a-102">如何：開啟置放在 RichTextBox 控制項上的檔案</span><span class="sxs-lookup"><span data-stu-id="2ba1a-102">How to: Open a File That is Dropped on a RichTextBox Control</span></span>
+<span data-ttu-id="2ba1a-103">在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、 <xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Documents.FlowDocument>控制項所有具有內建的拖放功能。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-103">In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], the <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, and <xref:System.Windows.Documents.FlowDocument> controls all have built-in drag-and-drop functionality.</span></span> <span data-ttu-id="2ba1a-104">內建功能可讓拖放文字與控制項間。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-104">The built-in functionality enables drag-and-drop of text within and between the controls.</span></span> <span data-ttu-id="2ba1a-105">不過，不會啟用拖放控制項上的檔案來開啟檔案。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-105">However, it does not enable opening a file by dropping the file on the control.</span></span> <span data-ttu-id="2ba1a-106">這些控制項也標記為已處理拖放事件。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-106">These controls also mark the drag-and-drop events as handled.</span></span> <span data-ttu-id="2ba1a-107">如此一來，根據預設，您無法加入您自己的事件處理常式，以提供的功能來開啟卸除的檔案。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-107">As a result, by default, you cannot add your own event handlers to provide functionality to open dropped files.</span></span>  
   
- 若要在這些控制項中加入對拖放事件的其他處理方式，請使用 <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> 方法加入您的拖放事件處理常式。  將 `handledEventsToo` 參數設定為 `true`，可針對已經由事件路由上的另一個項目標記為已處理的路由事件，叫用指定的處理常式。  
+ <span data-ttu-id="2ba1a-108">若要新增這些控制項的拖放事件的額外處理，使用<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>方法，將您的事件處理常式的拖放事件。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-108">To add additional handling for drag-and-drop events in these controls, use the <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> method to add your event handlers for the drag-and-drop events.</span></span> <span data-ttu-id="2ba1a-109">設定`handledEventsToo`參數`true`來指定要叫用的已標示為已由另一個項目，此事件路由上的路由事件的處理常式。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-109">Set the `handledEventsToo` parameter to `true` to have the specified handler be invoked for a routed event that has already been marked as handled by another element along the event route.</span></span>  
   
 > [!TIP]
->  您可以取代 <xref:System.Windows.Controls.TextBox>、<xref:System.Windows.Controls.RichTextBox> 和 <xref:System.Windows.Documents.FlowDocument> 的內建拖放功能，方法是處理拖放事件的預覽版本並將預覽版本標記為已處理。  不過，這樣會停用內建拖放功能，並不建議這麼做。  
+>  <span data-ttu-id="2ba1a-110">您可以取代內建的拖放功能<xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Documents.FlowDocument>方法是處理拖放事件的預覽版本，並標示為已處理的預覽事件。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-110">You can replace the built-in drag-and-drop functionality of <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, and <xref:System.Windows.Documents.FlowDocument> by handling the preview versions of the drag-and-drop events and marking the preview events as handled.</span></span> <span data-ttu-id="2ba1a-111">不過，這將會停用內建的拖放功能，並不建議使用。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-111">However, this will disable the built-in drag-and-drop functionality, and is not recommended.</span></span>  
   
-## 範例  
- 下列範例示範如何在 <xref:System.Windows.Controls.RichTextBox> 上加入 <xref:System.Windows.DragDrop.DragOver> 和 <xref:System.Windows.DragDrop.Drop> 事件的處理常式。  這個範例會使用 <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> 方法，並將 `handledEventsToo` 參數設定為 `true`，使得即使 <xref:System.Windows.Controls.RichTextBox> 已將這些事件標記為已處理，仍會叫用事件處理常式。  事件處理常式中的程式碼會加入功能，以開啟放置到 <xref:System.Windows.Controls.RichTextBox> 上的文字檔。  
+## <a name="example"></a><span data-ttu-id="2ba1a-112">範例</span><span class="sxs-lookup"><span data-stu-id="2ba1a-112">Example</span></span>  
+ <span data-ttu-id="2ba1a-113">下列範例示範如何加入處理常式<xref:System.Windows.DragDrop.DragOver>和<xref:System.Windows.DragDrop.Drop>上的事件<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-113">The following example demonstrates how to add handlers for the <xref:System.Windows.DragDrop.DragOver> and <xref:System.Windows.DragDrop.Drop> events on a <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="2ba1a-114">這個範例會使用<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>方法和集合`handledEventsToo`參數`true`以便即使將會叫用事件處理常式<xref:System.Windows.Controls.RichTextBox>標記為已處理這些事件。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-114">This example uses the <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> method and sets the `handledEventsToo` parameter to `true` so that the events handlers will be invoked even though the <xref:System.Windows.Controls.RichTextBox> marks these events as handled.</span></span> <span data-ttu-id="2ba1a-115">中的事件處理常式的程式碼會將功能加入開啟文字檔上卸除<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-115">The code in the event handlers adds functionality to open a text file that is dropped on the <xref:System.Windows.Controls.RichTextBox>.</span></span>  
   
- 若要測試這個範例，請從 Windows 檔案總管拖曳文字檔或 RTF 檔案至 <xref:System.Windows.Controls.RichTextBox>。  該檔案將會在 <xref:System.Windows.Controls.RichTextBox> 中開啟。  如果您在放置檔案前按 SHIFT 鍵，該檔案將會開啟為純文字檔。  
+ <span data-ttu-id="2ba1a-116">若要測試此範例中，從 Windows 檔案總管拖曳文字檔案或 rtf 文字格式 (RTF) 檔案<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-116">To test this example, drag a text file or a rich text format (RTF) file from Windows Explorer to the <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="2ba1a-117">該檔案開啟<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-117">The file will be opened in the <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="2ba1a-118">如果您按下 SHIFT 鍵，再卸除檔案，將會以純文字格式開啟檔案。</span><span class="sxs-lookup"><span data-stu-id="2ba1a-118">If you press the SHIFT key before the dropping the file, the file will be opened as plain text.</span></span>  
   
- [!code-xml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
+ [!code-xaml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
   
  [!code-csharp[DragDropSnippets#RtbHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#rtbhandlers)]
  [!code-vb[DragDropSnippets#RtbHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#rtbhandlers)]

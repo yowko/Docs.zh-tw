@@ -1,123 +1,124 @@
 ---
-title: "各種自訂控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "複合控制項"
-  - "控制項 [Windows Form], 複合"
-  - "控制項 [Windows Form], 延伸"
-  - "控制項 [Windows Form], 類型"
-  - "控制項 [Windows Form], 使用者控制項"
-  - "自訂控制項 [Windows Form]"
-  - "擴充的控制項"
-  - "使用者控制項 [Windows Form]"
+title: "各種自訂控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], user controls
+- controls [Windows Forms], types of
+- composite controls [Windows Forms]
+- extended controls [Windows Forms]
+- controls [Windows Forms], extended
+- user controls [Windows Forms]
+- custom controls [Windows Forms]
+- controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8a8d858228630147e1fbcdfab6a52fba5a63a566
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 各種自訂控制項
-藉由 .NET Framework，可以開發及實作新的控制項。  您可以透過繼承 \(Inheritance\) 擴充熟悉的使用者控制項以及現有控制項的功能，  也可以撰寫自行執行繪製作業的自訂控制項。  
+# <a name="varieties-of-custom-controls"></a><span data-ttu-id="bb059-102">各種自訂控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-102">Varieties of Custom Controls</span></span>
+<span data-ttu-id="bb059-103">使用 .NET Framework，您可以開發及實作新的控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-103">With the .NET Framework, you can develop and implement new controls.</span></span> <span data-ttu-id="bb059-104">您可以擴充熟悉的使用者控制項的功能，以及透過繼承擴充現有的控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-104">You can extend the functionality of the familiar user control as well as existing controls through inheritance.</span></span> <span data-ttu-id="bb059-105">您也可以撰寫自訂控制項來執行它們自己的繪製。</span><span class="sxs-lookup"><span data-stu-id="bb059-105">You can also write custom controls that perform their own painting.</span></span>  
   
- 決定要建立哪種類型的控制項，可能會令人感到困惑。  這個主題強調您可繼承的各種控制項之間的差異，並提供您如何為專案選擇特定控制項的詳細資訊。  
+ <span data-ttu-id="bb059-106">決定要建立的控制項類型可能會令人困擾。</span><span class="sxs-lookup"><span data-stu-id="bb059-106">Deciding which kind of control to create can be confusing.</span></span> <span data-ttu-id="bb059-107">本主題著重於您可以繼承之各種控制項之間的差異，並且提供如何為專案選擇特定種類控制項的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="bb059-107">This topic highlights the differences among the various kinds of controls from which you can inherit, and provides you with information about how to choose a particular kind of control for your project.</span></span>  
   
 > [!NOTE]
->  如需撰寫使用在 Web Form 上的控制項的詳細資訊，請參閱[Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md)。  
+>  <span data-ttu-id="bb059-108">如需撰寫控制項以在 Web Form 上使用的詳細資訊，請參閱[開發自訂 ASP.NET 伺服器控制項](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。</span><span class="sxs-lookup"><span data-stu-id="bb059-108">For information about authoring a control to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
   
-## 基底控制項類別  
- <xref:System.Windows.Forms.Control> 類別是 Windows Form 控制項的基底類別。  它提供在 Windows Form 應用程式中進行視覺顯示所需的基礎結構。  
+## <a name="base-control-class"></a><span data-ttu-id="bb059-109">基底控制項類別</span><span class="sxs-lookup"><span data-stu-id="bb059-109">Base Control Class</span></span>  
+ <span data-ttu-id="bb059-110"><xref:System.Windows.Forms.Control>類別是基底類別，針對 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-110">The <xref:System.Windows.Forms.Control> class is the base class for Windows Forms controls.</span></span> <span data-ttu-id="bb059-111">它提供視覺顯示 Windows Forms 應用程式所需的基礎結構。</span><span class="sxs-lookup"><span data-stu-id="bb059-111">It provides the infrastructure required for visual display in Windows Forms applications.</span></span>  
   
- <xref:System.Windows.Forms.Control> 類別執行下列工作，在 Windows Form 應用程式中提供視覺顯示：  
+ <span data-ttu-id="bb059-112"><xref:System.Windows.Forms.Control>類別執行下列工作來提供 Windows Form 應用程式中的視覺顯示：</span><span class="sxs-lookup"><span data-stu-id="bb059-112">The <xref:System.Windows.Forms.Control> class performs the following tasks to provide visual display in Windows Forms applications:</span></span>  
   
--   公開視窗控制代碼  
+-   <span data-ttu-id="bb059-113">公開視窗控制代碼。</span><span class="sxs-lookup"><span data-stu-id="bb059-113">Exposes a window handle.</span></span>  
   
--   管理訊息路由  
+-   <span data-ttu-id="bb059-114">管理訊息路由。</span><span class="sxs-lookup"><span data-stu-id="bb059-114">Manages message routing.</span></span>  
   
--   提供滑鼠與鍵盤事件，及許多其他使用者介面事件  
+-   <span data-ttu-id="bb059-115">提供滑鼠和鍵盤事件，以及其他許多使用者介面事件。</span><span class="sxs-lookup"><span data-stu-id="bb059-115">Provides mouse and keyboard events, and many other user interface events.</span></span>  
   
--   提供進階的配置功能  
+-   <span data-ttu-id="bb059-116">提供進階版面配置功能。</span><span class="sxs-lookup"><span data-stu-id="bb059-116">Provides advanced layout features.</span></span>  
   
--   包含許多視覺顯示特定的屬性，例如 <xref:System.Windows.Forms.Control.ForeColor%2A>、<xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.Height%2A> 和 <xref:System.Windows.Forms.Control.Width%2A>。  
+-   <span data-ttu-id="bb059-117">包含許多視覺顯示，特定的屬性，例如<xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Height%2A>，和<xref:System.Windows.Forms.Control.Width%2A>。</span><span class="sxs-lookup"><span data-stu-id="bb059-117">Contains many properties specific to visual display, such as <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, and <xref:System.Windows.Forms.Control.Width%2A>.</span></span>  
   
--   提供 Windows Form 控制項要做為 Microsoft® ActiveX® 控制項所需要的安全性和執行緒支援  
+-   <span data-ttu-id="bb059-118">提供 Windows Forms 控制項做為 Microsoft® ActiveX® 控制項所需的安全性和執行緒支援。</span><span class="sxs-lookup"><span data-stu-id="bb059-118">Provides the security and threading support necessary for a Windows Forms control to act as a Microsoft® ActiveX® control.</span></span>  
   
- 因為基底類別提供如此大量的基礎結構，開發您自己的 Windows Form 控制項變得相當容易。  
+ <span data-ttu-id="bb059-119">因為基底類別提供了非常多的基礎結構，所以開發您自己的 Windows Forms 控制項相對容易。</span><span class="sxs-lookup"><span data-stu-id="bb059-119">Because so much of the infrastructure is provided by the base class, it is relatively easy to develop your own Windows Forms controls.</span></span>  
   
-## 控制項的種類  
- Windows Form 支援三種使用者定義的控制項：「*複合*」、「*擴充*」和「*自訂*」。  下列章節會說明每一種控制項，並針對要在專案中選澤使用何種控制項提供了建議。  
+## <a name="kinds-of-controls"></a><span data-ttu-id="bb059-120">控制項種類</span><span class="sxs-lookup"><span data-stu-id="bb059-120">Kinds of Controls</span></span>  
+ <span data-ttu-id="bb059-121">Windows Forms 支援三種使用者定義的控制項︰複合、擴充和自訂。</span><span class="sxs-lookup"><span data-stu-id="bb059-121">Windows Forms supports three kinds of user-defined controls: *composite*, *extended*, and *custom*.</span></span> <span data-ttu-id="bb059-122">下列章節描述每一種控制項，並且提供選擇要用於專案類型的建議。</span><span class="sxs-lookup"><span data-stu-id="bb059-122">The following sections describe each kind of control and give recommendations for choosing the kind to use in your projects.</span></span>  
   
-### 複合控制項  
- 複合控制項是封裝在通用容器 \(Container\) 中的 Windows Form 控制項的集合。  這種控制項有時稱為「*使用者控制項*」。  被收納的控制項稱為「*構成控制項*」。  
+### <a name="composite-controls"></a><span data-ttu-id="bb059-123">複合控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-123">Composite Controls</span></span>  
+ <span data-ttu-id="bb059-124">複合控制項是封裝成通用容器的 Windows Forms 控制項的集合。</span><span class="sxs-lookup"><span data-stu-id="bb059-124">A composite control is a collection of Windows Forms controls encapsulated in a common container.</span></span> <span data-ttu-id="bb059-125">這類控制項有時候稱為「使用者控制項」。</span><span class="sxs-lookup"><span data-stu-id="bb059-125">This kind of control is sometimes called a *user control*.</span></span> <span data-ttu-id="bb059-126">包含的控制項稱為「組成控制項」。</span><span class="sxs-lookup"><span data-stu-id="bb059-126">The contained controls are called *constituent controls*.</span></span>  
   
- 複合控制項保留與每個被收納的 Windows Form 控制項關聯的所有繼承功能，且可讓您選擇性地公開及繫結其屬性。  複合控制項也提供了許多預設的鍵盤處理功能，使您不需要耗費額外的心力在開發工作上。  
+ <span data-ttu-id="bb059-127">複合控制項保存了與每個 Windows Forms 控制項相關聯的所有固有功能，並可讓您選擇性地公開和繫結其屬性。</span><span class="sxs-lookup"><span data-stu-id="bb059-127">A composite control holds all of the inherent functionality associated with each of the contained Windows Forms controls and enables you to selectively expose and bind their properties.</span></span> <span data-ttu-id="bb059-128">複合控制項也提供大量的預設鍵盤處理功能，讓您在開發時不需要付出額外努力。</span><span class="sxs-lookup"><span data-stu-id="bb059-128">A composite control also provides a great deal of default keyboard handling functionality with no extra development effort on your part.</span></span>  
   
- 例如，可以建置複合控制項，以顯示資料庫的客戶地址資料。  這個控制項可能包含顯示資料庫欄位的 <xref:System.Windows.Forms.DataGridView> 控制項、處理繫結至資料來源的 <xref:System.Windows.Forms.BindingSource>，以及在資料錄之間移動的 <xref:System.Windows.Forms.BindingNavigator> 控制項。  您可以選擇性地公開資料繫結屬性，且能夠在不同的應用程式之間封裝並重複使用整個控制項。  如需這種複合控制項的詳細資訊，請參閱 [如何：在 Windows Form 控制項中套用屬性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
+ <span data-ttu-id="bb059-129">例如，可以建置複合控制項來顯示資料庫中的客戶地址資料。</span><span class="sxs-lookup"><span data-stu-id="bb059-129">For example, a composite control could be built to display customer address data from a database.</span></span> <span data-ttu-id="bb059-130">這個控制項可能包含<xref:System.Windows.Forms.DataGridView>控制項來顯示資料庫欄位，<xref:System.Windows.Forms.BindingSource>以處理繫結至資料來源，以及<xref:System.Windows.Forms.BindingNavigator>控制項移動記錄。</span><span class="sxs-lookup"><span data-stu-id="bb059-130">This control could include a <xref:System.Windows.Forms.DataGridView> control to display the database fields, a <xref:System.Windows.Forms.BindingSource> to handle binding to a data source, and a <xref:System.Windows.Forms.BindingNavigator> control to move through the records.</span></span> <span data-ttu-id="bb059-131">您可以選擇性地公開資料繫結屬性，而整個控制項可以封裝，並且在各應用程式之間重複使用。</span><span class="sxs-lookup"><span data-stu-id="bb059-131">You could selectively expose data binding properties, and you could package and reuse the entire control from application to application.</span></span> <span data-ttu-id="bb059-132">如需此類複合控制項的範例，請參閱[如何：在 Windows Forms 控制項中套用屬性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="bb059-132">For an example of this kind of composite control, see [How to: Apply Attributes in Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).</span></span>  
   
- 若要撰寫複合控制項，請衍生自 <xref:System.Windows.Forms.UserControl> 類別。  基底類別 <xref:System.Windows.Forms.UserControl> 提供子控制項的鍵盤路由，並讓子控制項能夠當做群組使用。  如需詳細資訊，請參閱[開發複合 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)。  
+ <span data-ttu-id="bb059-133">若要撰寫複合控制項，衍生自<xref:System.Windows.Forms.UserControl>類別。</span><span class="sxs-lookup"><span data-stu-id="bb059-133">To author a composite control, derive from the <xref:System.Windows.Forms.UserControl> class.</span></span> <span data-ttu-id="bb059-134"><xref:System.Windows.Forms.UserControl>基底類別提供鍵盤路徑的子控制項，並讓做為群組的子控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-134">The <xref:System.Windows.Forms.UserControl> base class provides keyboard routing for child controls and enables child controls to work as a group.</span></span> <span data-ttu-id="bb059-135">如需詳細資訊，請參閱[開發複合 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)。</span><span class="sxs-lookup"><span data-stu-id="bb059-135">For more information, see [Developing a Composite Windows Forms Control](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).</span></span>  
   
- **建議**  
+ <span data-ttu-id="bb059-136">**建議**</span><span class="sxs-lookup"><span data-stu-id="bb059-136">**Recommendation**</span></span>  
   
- 如果發生下列情況，請繼承 <xref:System.Windows.Forms.UserControl> 類別：  
+ <span data-ttu-id="bb059-137">如果有下列情況，便繼承自 <xref:System.Windows.Forms.UserControl> 類別：</span><span class="sxs-lookup"><span data-stu-id="bb059-137">Inherit from the <xref:System.Windows.Forms.UserControl> class if:</span></span>  
   
--   您要將多個 Windows Form 控制項的功能結合至單一可重複使用的單位。  
+-   <span data-ttu-id="bb059-138">您想要將數個 Windows Form 控制項的功能結合成一個可重複使用的單位。</span><span class="sxs-lookup"><span data-stu-id="bb059-138">You want to combine the functionality of several Windows Forms controls into a single reusable unit.</span></span>  
   
-### 擴充控制項  
- 您可以從任何現有的 Windows Form 控制項衍生出繼承控制項。  透過這個方法，可以保留 Windows Form 控制項的所有繼承功能，然後藉由加入自訂屬性、方法或其他功能來擴充該功能。  您可以使用這個選項來覆寫基底控制項的繪製邏輯，然後藉由變更外觀來擴充它的使用者介面。  
+### <a name="extended-controls"></a><span data-ttu-id="bb059-139">擴充控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-139">Extended Controls</span></span>  
+ <span data-ttu-id="bb059-140">您可以從任何現有的 Windows Form 控制項衍生繼承的控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-140">You can derive an inherited control from any existing Windows Forms control.</span></span> <span data-ttu-id="bb059-141">使用這種方法，您可以保留 Windows Forms 控制項的所有固有功能，然後藉由新增自訂屬性、方法或其他功能，以擴充該功能。</span><span class="sxs-lookup"><span data-stu-id="bb059-141">With this approach, you can retain all of the inherent functionality of a Windows Forms control, and then extend that functionality by adding custom properties, methods, or other features.</span></span> <span data-ttu-id="bb059-142">使用這個選項，您可以覆寫基底控制項的繪製邏輯，然後藉由變更其外觀，以擴充其使用者介面。</span><span class="sxs-lookup"><span data-stu-id="bb059-142">With this option, you can override the base control's paint logic, and then extend its user interface by changing its appearance.</span></span>  
   
- 例如，您可以建立衍生自 <xref:System.Windows.Forms.Button> 控制項的控制項，追蹤使用者點選該控制項的次數。  
+ <span data-ttu-id="bb059-143">例如，您可以建立衍生自控制項<xref:System.Windows.Forms.Button>控制追蹤多少次使用者已按一下它。</span><span class="sxs-lookup"><span data-stu-id="bb059-143">For example, you can create a control derived from the <xref:System.Windows.Forms.Button> control that tracks how many times a user has clicked it.</span></span>  
   
- 在部分控制項中，也可以藉由覆寫基底類別的 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法，將自訂外觀加入控制項的圖形化使用者介面。  對於追蹤點選次數的擴充按鈕，您可以覆寫 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法以呼叫 <xref:System.Windows.Forms.Control.OnPaint%2A> 的基底實作，然後在 <xref:System.Windows.Forms.Button> 控制項工作區 \(Client Area\) 的其中一個角落中，繪製點選計數。  
+ <span data-ttu-id="bb059-144">在某些控制項中，您也可以加入自訂外觀控制項的圖形化使用者介面藉由覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>基底類別的方法。</span><span class="sxs-lookup"><span data-stu-id="bb059-144">In some controls, you can also add a custom appearance to the graphical user interface of your control by overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method of the base class.</span></span> <span data-ttu-id="bb059-145">延伸按鈕，以追蹤按下，您可以覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法呼叫的基底實作<xref:System.Windows.Forms.Control.OnPaint%2A>，然後繪製按一下計數角的<xref:System.Windows.Forms.Button>控制項工作區。</span><span class="sxs-lookup"><span data-stu-id="bb059-145">For an extended button that tracks clicks, you can override the <xref:System.Windows.Forms.Control.OnPaint%2A> method to call the base implementation of <xref:System.Windows.Forms.Control.OnPaint%2A>, and then draw the click count in one corner of the <xref:System.Windows.Forms.Button> control's client area.</span></span>  
   
- **建議**  
+ <span data-ttu-id="bb059-146">**建議**</span><span class="sxs-lookup"><span data-stu-id="bb059-146">**Recommendation**</span></span>  
   
- 如果發生下列情況，請繼承 Windows Form 控制項：  
+ <span data-ttu-id="bb059-147">如果有下列情況，便繼承自 Windows Form 控制項：</span><span class="sxs-lookup"><span data-stu-id="bb059-147">Inherit from a Windows Forms control if:</span></span>  
   
--   您需要的大部分功能與現有的 Windows Form 控制項相同。  
+-   <span data-ttu-id="bb059-148">大部分的所需功能已經與現有的 Windows Form 控制項相同。</span><span class="sxs-lookup"><span data-stu-id="bb059-148">Most of the functionality you need is already identical to an existing Windows Forms control.</span></span>  
   
--   您不需要自訂的圖形化使用者介面，或者希望針對現有的控制項設計新的圖形化使用者介面  
+-   <span data-ttu-id="bb059-149">您不需要自訂的圖形化使用者介面，或是您想要為現有的控制項設計新的圖形化使用者介面。</span><span class="sxs-lookup"><span data-stu-id="bb059-149">You do not need a custom graphical user interface, or you want to design a new graphical user interface for an existing control.</span></span>  
   
-### 自訂控制項  
- 建立控制項的另一種方式，是藉由繼承自 <xref:System.Windows.Forms.Control> 來建立控制項，這種方式幾乎是從頭建置控制項。  <xref:System.Windows.Forms.Control> 類別提供控制項所需的所有基本功能 \(包括滑鼠和鍵盤處理事件\)，但不提供控制項特定的功能或圖形介面。  
+### <a name="custom-controls"></a><span data-ttu-id="bb059-150">自訂控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-150">Custom Controls</span></span>  
+ <span data-ttu-id="bb059-151">建立控制項的另一個方法是建立一個從開頭大幅透過繼承自<xref:System.Windows.Forms.Control>。</span><span class="sxs-lookup"><span data-stu-id="bb059-151">Another way to create a control is to create one substantially from the beginning by inheriting from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="bb059-152"><xref:System.Windows.Forms.Control>類別會提供所有控制項，包括滑鼠和鍵盤處理事件，所需的基本功能，但沒有控制項特定功能或圖形化介面。</span><span class="sxs-lookup"><span data-stu-id="bb059-152">The <xref:System.Windows.Forms.Control> class provides all of the basic functionality required by controls, including mouse and keyboard handling events, but no control-specific functionality or graphical interface.</span></span>  
   
- 藉由繼承 <xref:System.Windows.Forms.Control> 類別以建立控制項，比繼承 <xref:System.Windows.Forms.UserControl> 或現有的 Windows Form 控制項更費心力。  因為您擁有許多實作的空間，所以產生的控制項可擁有比複合或擴充控制項還要大的彈性，並且可以量身訂做以符合真正的需求。  
+ <span data-ttu-id="bb059-153">建立控制項繼承自<xref:System.Windows.Forms.Control>類別需要更多的思考和投入時間，比繼承自<xref:System.Windows.Forms.UserControl>或現有的 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-153">Creating a control by inheriting from the <xref:System.Windows.Forms.Control> class requires much more thought and effort than inheriting from <xref:System.Windows.Forms.UserControl> or an existing Windows Forms control.</span></span> <span data-ttu-id="bb059-154">因為已為您保留許多實作，所以您的控制項比複合或擴充控制項具有更大的彈性，您可以量身打造您的控制項以符合您的確切需求。</span><span class="sxs-lookup"><span data-stu-id="bb059-154">Because a great deal of implementation is left for you, your control can have greater flexibility than a composite or extended control, and you can tailor your control to suit your exact needs.</span></span>  
   
- 若要實作自訂控制項，您必須為控制項的 <xref:System.Windows.Forms.Control.OnPaint%2A> 事件撰寫程式碼，以及撰寫所需的任何功能特定的程式碼。  您也可以覆寫 <xref:System.Windows.Forms.Control.WndProc%2A> 方法，並直接處理 Windows 訊息。  這是建立控制項最有力的方法，但是要有效使用這項技術，您需要熟悉 Microsoft Win32® API。  
+ <span data-ttu-id="bb059-155">若要實作自訂控制項，您必須撰寫程式碼<xref:System.Windows.Forms.Control.OnPaint%2A>控制項，以及您需要的任何特定功能的程式碼的事件。</span><span class="sxs-lookup"><span data-stu-id="bb059-155">To implement a custom control, you must write code for the <xref:System.Windows.Forms.Control.OnPaint%2A> event of the control, as well as any feature-specific code you need.</span></span> <span data-ttu-id="bb059-156">您也可以覆寫<xref:System.Windows.Forms.Control.WndProc%2A>方法並處理 windows 訊息直接。</span><span class="sxs-lookup"><span data-stu-id="bb059-156">You can also override the <xref:System.Windows.Forms.Control.WndProc%2A> method and handle windows messages directly.</span></span> <span data-ttu-id="bb059-157">這是建立控制項最強大的方式，但是若要有效使用這項技術，您必須先熟悉 Microsoft Win32® API。</span><span class="sxs-lookup"><span data-stu-id="bb059-157">This is the most powerful way to create a control, but to use this technique effectively, you need to be familiar with the Microsoft Win32® API.</span></span>  
   
- 複製類比時鐘的外觀和行為的時鐘控制項，是自訂控制項的一個範例。  在此控制項中叫用 \(Invoke\) 了自訂繪製，使時鐘的指針依據內部 <xref:System.Windows.Forms.Timer> 元件的 <xref:System.Windows.Forms.Timer.Tick> 事件來移動。  如需詳細資訊，請參閱 [如何：開發簡單的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)。  
+ <span data-ttu-id="bb059-158">自訂控制項的範例是複製類比時鐘外觀和行為的時鐘控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-158">An example of a custom control is a clock control that duplicates the appearance and behavior of an analog clock.</span></span> <span data-ttu-id="bb059-159">若要讓移動以回應時鐘指針叫用自訂繪製<xref:System.Windows.Forms.Timer.Tick>自內部事件<xref:System.Windows.Forms.Timer>元件。</span><span class="sxs-lookup"><span data-stu-id="bb059-159">Custom painting is invoked to cause the hands of the clock to move in response to <xref:System.Windows.Forms.Timer.Tick> events from an internal <xref:System.Windows.Forms.Timer> component.</span></span> <span data-ttu-id="bb059-160">如需詳細資訊，請參閱[如何：開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)。</span><span class="sxs-lookup"><span data-stu-id="bb059-160">For more information, see [How to: Develop a Simple Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).</span></span>  
   
- **建議**  
+ <span data-ttu-id="bb059-161">**建議**</span><span class="sxs-lookup"><span data-stu-id="bb059-161">**Recommendation**</span></span>  
   
- 如果發生下列情況，請繼承 <xref:System.Windows.Forms.Control> 類別：  
+ <span data-ttu-id="bb059-162">如果有下列情況，便繼承自 <xref:System.Windows.Forms.Control> 類別：</span><span class="sxs-lookup"><span data-stu-id="bb059-162">Inherit from the <xref:System.Windows.Forms.Control> class if:</span></span>  
   
--   您要提供您控制項的自訂圖形表示。  
+-   <span data-ttu-id="bb059-163">您想要提供控制項的自訂圖形表示。</span><span class="sxs-lookup"><span data-stu-id="bb059-163">You want to provide a custom graphical representation of your control.</span></span>  
   
--   您需要實作無法從標準控制項取得的自訂功能。  
+-   <span data-ttu-id="bb059-164">您需要實作無法透過標準控制項使用的自訂功能。</span><span class="sxs-lookup"><span data-stu-id="bb059-164">You need to implement custom functionality that is not available through standard controls.</span></span>  
   
-### ActiveX 控制項  
- 雖然 Windows Form 基礎結構已經最佳化以裝載 \(Host\) Windows Form 控制項，您仍然可以使用 ActiveX 控制項。  Visual Studio 中會支援這項工作。  如需詳細資訊，請參閱 [如何：將 ActiveX 控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)。  
+### <a name="activex-controls"></a><span data-ttu-id="bb059-165">ActiveX 控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-165">ActiveX Controls</span></span>  
+ <span data-ttu-id="bb059-166">雖然 Windows Forms 基礎結構已進行最佳化來裝載 Windows Forms 控制項，但是您仍然可以使用 ActiveX 控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-166">Although the Windows Forms infrastructure has been optimized to host Windows Forms controls, you can still use ActiveX controls.</span></span> <span data-ttu-id="bb059-167">在 Visual Studio 中會支援這項工作。</span><span class="sxs-lookup"><span data-stu-id="bb059-167">There is support for this task in Visual Studio.</span></span> <span data-ttu-id="bb059-168">如需詳細資訊，請參閱[如何：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="bb059-168">For more information, see [How to: Add ActiveX Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).</span></span>  
   
-### 無視窗控制項  
- Microsoft Visual Basic® 6.0 和 ActiveX 技術支援「*無視窗*」控制項。  Windows Form 不支援無視窗控制項。  
+### <a name="windowless-controls"></a><span data-ttu-id="bb059-169">無視窗控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-169">Windowless Controls</span></span>  
+ <span data-ttu-id="bb059-170">Microsoft Visual Basic® 6.0 和 ActiveX 技術支援「無視窗」控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-170">The Microsoft Visual Basic® 6.0and ActiveX technologies support *windowless* controls.</span></span> <span data-ttu-id="bb059-171">在 Windows Forms 中不支援無視窗控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-171">Windowless controls are not supported in Windows Forms.</span></span>  
   
-## 自訂設計經驗  
- 如果需要實作自訂的設計階段經驗，可以撰寫自己的設計工具。  針對複合控制項，請從 <xref:System.Windows.Forms.Design.ParentControlDesigner> 或 <xref:System.Windows.Forms.Design.DocumentDesigner> 類別衍生您的自訂設計工具類別。  針對擴充及自訂控制項，請從 <xref:System.Windows.Forms.Design.ControlDesigner> 類別衍生您的自訂設計工具類別。  
+## <a name="custom-design-experience"></a><span data-ttu-id="bb059-172">自訂設計體驗</span><span class="sxs-lookup"><span data-stu-id="bb059-172">Custom Design Experience</span></span>  
+ <span data-ttu-id="bb059-173">如果您需要實作自訂設計階段經驗，您可以撰寫自己的設計工具。</span><span class="sxs-lookup"><span data-stu-id="bb059-173">If you need to implement a custom design-time experience, you can author your own designer.</span></span> <span data-ttu-id="bb059-174">複合控制項，衍生的自訂設計工具類別從<xref:System.Windows.Forms.Design.ParentControlDesigner>或<xref:System.Windows.Forms.Design.DocumentDesigner>類別。</span><span class="sxs-lookup"><span data-stu-id="bb059-174">For composite controls, derive your custom designer class from the <xref:System.Windows.Forms.Design.ParentControlDesigner> or the <xref:System.Windows.Forms.Design.DocumentDesigner> classes.</span></span> <span data-ttu-id="bb059-175">擴充和自訂控制項衍生自訂類別設計工具從<xref:System.Windows.Forms.Design.ControlDesigner>類別。</span><span class="sxs-lookup"><span data-stu-id="bb059-175">For extended and custom controls, derive your custom designer class from the <xref:System.Windows.Forms.Design.ControlDesigner> class.</span></span>  
   
- 使用 <xref:System.ComponentModel.DesignerAttribute> 將您的控制項與設計工具相關聯。  如需詳細資訊，請參閱[Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)和 [How to: Create a Windows Forms Control That Takes Advantage of Design\-Time Features](../Topic/How%20to:%20Create%20a%20Windows%20Forms%20Control%20That%20Takes%20Advantage%20of%20Design-Time%20Features.md)。  
+ <span data-ttu-id="bb059-176">使用<xref:System.ComponentModel.DesignerAttribute>與您的設計工具中的控制項。</span><span class="sxs-lookup"><span data-stu-id="bb059-176">Use the <xref:System.ComponentModel.DesignerAttribute> to associate your control with your designer.</span></span> <span data-ttu-id="bb059-177">如需詳細資訊，請參閱[擴充設計階段支援](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)和[如何：建立採用設計階段功能的 Windows Forms 控制項](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。</span><span class="sxs-lookup"><span data-stu-id="bb059-177">For more information, see [Extending Design-Time Support](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) and [How to: Create a Windows Forms Control That Takes Advantage of Design-Time Features](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).</span></span>  
   
-## 請參閱  
- [使用 .NET Framework 開發自訂的 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [如何：開發簡單的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)   
- [開發複合 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)   
- [How to: Create a Windows Forms Control That Takes Advantage of Design\-Time Features](../Topic/How%20to:%20Create%20a%20Windows%20Forms%20Control%20That%20Takes%20Advantage%20of%20Design-Time%20Features.md)
+## <a name="see-also"></a><span data-ttu-id="bb059-178">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bb059-178">See Also</span></span>  
+ [<span data-ttu-id="bb059-179">使用 .NET Framework 開發自訂的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-179">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="bb059-180">操作說明：開發簡單的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-180">How to: Develop a Simple Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
+ [<span data-ttu-id="bb059-181">開發複合 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-181">Developing a Composite Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
+ [<span data-ttu-id="bb059-182">擴充設計階段支援</span><span class="sxs-lookup"><span data-stu-id="bb059-182">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [<span data-ttu-id="bb059-183">如何：建立採用設計階段功能的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="bb059-183">How to: Create a Windows Forms Control That Takes Advantage of Design-Time Features</span></span>](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)

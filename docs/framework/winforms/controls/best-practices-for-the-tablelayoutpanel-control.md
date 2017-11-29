@@ -1,69 +1,70 @@
 ---
-title: "TableLayoutPanel 控制項的最佳作法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自動調整大小"
-  - "AutoSize 屬性, TableLayoutPanel 控制項"
-  - "最佳作法, TableLayoutPanel 控制項"
-  - "控制項 [Windows Form], 調整大小"
-  - "表單, 最佳作法"
-  - "版面配置 [Windows Form]"
-  - "版面配置 [Windows Form], 最佳作法"
-  - "版面配置 [Windows Form], AutoSize"
-  - "調整大小, 自動"
-  - "TableLayoutPanel 控制項 [Windows Form], 最佳作法"
-  - "TableLayoutPanel 控制項 [Windows Form], AutoSize 行為"
+title: "TableLayoutPanel 控制項的最佳作法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- layout [Windows Forms]
+- TableLayoutPanel control [Windows Forms], best practices
+- forms [Windows Forms], best practices
+- AutoSize property [Windows Forms], tableLayoutPanel control
+- controls [Windows Forms], sizing
+- TableLayoutPanel control [Windows Forms], AutoSize behavior
+- layout [Windows Forms], AutoSize
+- layout [Windows Forms], best practices
+- best practices [Windows Forms], tableLayoutPanel control
+- sizing [Windows Forms], automatic
+- automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 802cc501b695f6c5cfe990bf72a4d9d2af68ba2b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# TableLayoutPanel 控制項的最佳作法
-<xref:System.Windows.Forms.TableLayoutPanel> 控制項提供了強大的配置功能，您在 Windows Form 上使用這些功能之前應該先仔細考量。  
+# <a name="best-practices-for-the-tablelayoutpanel-control"></a><span data-ttu-id="0354f-102">TableLayoutPanel 控制項的最佳作法</span><span class="sxs-lookup"><span data-stu-id="0354f-102">Best Practices for the TableLayoutPanel Control</span></span>
+<span data-ttu-id="0354f-103"><xref:System.Windows.Forms.TableLayoutPanel>控制項提供功能強大的配置功能，您應該先在 Windows Form 上使用仔細考慮。</span><span class="sxs-lookup"><span data-stu-id="0354f-103">The <xref:System.Windows.Forms.TableLayoutPanel> control provides powerful layout features that you should consider carefully before using on your Windows Forms.</span></span>  
   
-## 建議事項  
- 下列建議將有助您充分利用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的優點。  
+## <a name="recommendations"></a><span data-ttu-id="0354f-104">建議</span><span class="sxs-lookup"><span data-stu-id="0354f-104">Recommendations</span></span>  
+ <span data-ttu-id="0354f-105">下列建議將協助您使用<xref:System.Windows.Forms.TableLayoutPanel>控制項的最佳優勢。</span><span class="sxs-lookup"><span data-stu-id="0354f-105">The following recommendations will help you use the <xref:System.Windows.Forms.TableLayoutPanel> control to its best advantage.</span></span>  
   
-### 目標使用  
- 盡量不要使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項。  在所有需要調整配置大小的情況中都不應該使用此控制項。  下列清單描述從使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項獲益最多的配置：  
+### <a name="targeted-use"></a><span data-ttu-id="0354f-106">目標的使用</span><span class="sxs-lookup"><span data-stu-id="0354f-106">Targeted Use</span></span>  
+ <span data-ttu-id="0354f-107">使用<xref:System.Windows.Forms.TableLayoutPanel>謹慎控制。</span><span class="sxs-lookup"><span data-stu-id="0354f-107">Use the <xref:System.Windows.Forms.TableLayoutPanel> control sparingly.</span></span> <span data-ttu-id="0354f-108">您不應該使用所有的情況下，需要可調整大小的配置。</span><span class="sxs-lookup"><span data-stu-id="0354f-108">You should not use it in all situations that require a resizable layout.</span></span> <span data-ttu-id="0354f-109">下列清單描述獲益最多使用的版面配置<xref:System.Windows.Forms.TableLayoutPanel>控制項：</span><span class="sxs-lookup"><span data-stu-id="0354f-109">The following list describes layouts that benefit most from the use of the <xref:System.Windows.Forms.TableLayoutPanel> control:</span></span>  
   
--   表單的多個部分會按彼此之間比例調整大小的配置。  
+-   <span data-ttu-id="0354f-110">有多個部分彼此依比例調整表單的配置。</span><span class="sxs-lookup"><span data-stu-id="0354f-110">Layouts in which there are multiple parts of the form that resize proportionally to each other.</span></span>  
   
--   在執行階段時會動態修改或產生的配置，例如依照喜好設定加入或減去使用者可自訂欄位的資料輸入表單。  
+-   <span data-ttu-id="0354f-111">要修改或動態產生在執行階段，例如有加上或扣除的使用者可自訂欄位的資料輸入表單的配置會根據喜好設定。</span><span class="sxs-lookup"><span data-stu-id="0354f-111">Layouts that will be modified or generated dynamically at run time, such as data entry forms that have user-customizable fields added or subtracted based on preferences.</span></span>  
   
--   應該維持在整體固定大小的配置。  例如，您可能有應該維持在小於 800 x 600 的對話方塊，但是需要支援當地語系化字串。  
+-   <span data-ttu-id="0354f-112">應該保持為整體的固定大小的配置。</span><span class="sxs-lookup"><span data-stu-id="0354f-112">Layouts that should remain at an overall fixed size.</span></span> <span data-ttu-id="0354f-113">例如，您可能應保持小於 800 x 600，對話方塊中，但是您需要支援當地語系化的字串。</span><span class="sxs-lookup"><span data-stu-id="0354f-113">For example, you may have a dialog box that should remain smaller than 800 x 600, but you need to support localized strings.</span></span>  
   
- 下列清單說明無法從使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項大幅獲益的配置：  
+ <span data-ttu-id="0354f-114">下列清單描述不使用大大受益的版面配置<xref:System.Windows.Forms.TableLayoutPanel>控制項：</span><span class="sxs-lookup"><span data-stu-id="0354f-114">The following list describes layouts that do not benefit greatly from using the <xref:System.Windows.Forms.TableLayoutPanel> control:</span></span>  
   
--   具有單一標籤資料行和單一文字輸入區資料行的簡單資料輸入表單。  
+-   <span data-ttu-id="0354f-115">簡單資料項目表單的單一資料行的標籤和單一資料行的文字輸入區域。</span><span class="sxs-lookup"><span data-stu-id="0354f-115">Simple data entry forms with a single column of labels and a single column of text-entry areas.</span></span>  
   
--   具有單一大型顯示區，應該在調整大小發生時填滿所有可用空間的表單。  其中一個範例是顯示單一 <xref:System.Windows.Forms.PropertyGrid> 控制項的表單。  在這種情況下請使用錨定 \(Anchor\)，因為在調整表單大小時不應該展開其他內容。  
+-   <span data-ttu-id="0354f-116">以單一大型的表單顯示時調整大小，就會發生應該填滿所有可用空間的區域。</span><span class="sxs-lookup"><span data-stu-id="0354f-116">Forms with a single large display area that should fill all the available space when a resize occurs.</span></span> <span data-ttu-id="0354f-117">舉例來說，這是一個表單來顯示單一<xref:System.Windows.Forms.PropertyGrid>控制項。</span><span class="sxs-lookup"><span data-stu-id="0354f-117">An example of this is a form that displays a single <xref:System.Windows.Forms.PropertyGrid> control.</span></span> <span data-ttu-id="0354f-118">在此情況下，使用錨點，因為重新調整表單大小時，都應該展開。</span><span class="sxs-lookup"><span data-stu-id="0354f-118">In this case, use anchoring, because nothing else should expand when the form is resized.</span></span>  
   
- 請小心選擇需要在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中的控制項。  如果您有空間可以使用錨定讓文字變大 30% ，請考慮只使用 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性。  如果您可以估計配置所需要的空間，使用 <xref:System.Windows.Forms.Control.Dock%2A> 和 <xref:System.Windows.Forms.Control.Anchor%2A> 會比評估剩餘空間和 <xref:System.Windows.Forms.Control.AutoSize%2A> 行為的詳細資料更為容易。  
+ <span data-ttu-id="0354f-119">請小心選擇哪些控制項需要位於<xref:System.Windows.Forms.TableLayoutPanel>控制項。</span><span class="sxs-lookup"><span data-stu-id="0354f-119">Choose carefully which controls need to be in a <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="0354f-120">如果您有文字，以擴大使用錨定的 30%的空間，請考慮使用<xref:System.Windows.Forms.Control.Anchor%2A>只屬性。</span><span class="sxs-lookup"><span data-stu-id="0354f-120">If you have room for your text to grow by 30% using anchoring, consider using the <xref:System.Windows.Forms.Control.Anchor%2A> property only.</span></span> <span data-ttu-id="0354f-121">如果您可以評估您的配置所需的空間，使用<xref:System.Windows.Forms.Control.Dock%2A>和<xref:System.Windows.Forms.Control.Anchor%2A>比預估的剩餘空間的詳細資料更容易及<xref:System.Windows.Forms.Control.AutoSize%2A>行為。</span><span class="sxs-lookup"><span data-stu-id="0354f-121">If you can estimate the space required by your layout, use of <xref:System.Windows.Forms.Control.Dock%2A> and <xref:System.Windows.Forms.Control.Anchor%2A> is easier than estimating the details of remaining space and <xref:System.Windows.Forms.Control.AutoSize%2A> behavior.</span></span>  
   
- 一般來說，當使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項設計配置時，請盡量保持設計的簡單化。  
+ <span data-ttu-id="0354f-122">一般而言，當設計具有配置<xref:System.Windows.Forms.TableLayoutPanel>控制項，讓設計越簡單越好。</span><span class="sxs-lookup"><span data-stu-id="0354f-122">In general, when designing your layout with the <xref:System.Windows.Forms.TableLayoutPanel> control, keep the design as simple as possible.</span></span>  
   
-### 使用文件大綱視窗  
- \[文件大綱\] 視窗提供配置的樹狀結構檢視，您可以用來管理控制項的疊置順序 \(Z\-order\) 和父\-子關係 \(Parent\-Child Relationship\)。  請從 \[**檢視**\] 功能表中，選取 \[**其他視窗**\]，然後選取 \[**文件大綱**\]。  
+### <a name="use-the-document-outline-window"></a><span data-ttu-id="0354f-123">使用文件大綱 視窗</span><span class="sxs-lookup"><span data-stu-id="0354f-123">Use the Document Outline Window</span></span>  
+ <span data-ttu-id="0354f-124">[文件大綱] 視窗可讓您的配置，您可以使用來操作控制項的疊置順序與父子式關聯性的樹狀檢視。</span><span class="sxs-lookup"><span data-stu-id="0354f-124">The Document Outline window gives you a tree view of your layout, which you can use to manipulate the z-order and parent-child relationships of your controls.</span></span> <span data-ttu-id="0354f-125">從**檢視 功能表**，選取**其他視窗**，然後選取**文件大綱**。</span><span class="sxs-lookup"><span data-stu-id="0354f-125">From the **View menu**, select **Other Windows**, then select **Document Outline**.</span></span>  
   
-### 避免巢狀結構  
- 避免 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中有其他 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的巢狀結構。  巢狀配置的偵錯可能會很困難。  
+### <a name="avoid-nesting"></a><span data-ttu-id="0354f-126">避免巢狀結構</span><span class="sxs-lookup"><span data-stu-id="0354f-126">Avoid Nesting</span></span>  
+ <span data-ttu-id="0354f-127">避免其他的巢狀<xref:System.Windows.Forms.TableLayoutPanel>內控制<xref:System.Windows.Forms.TableLayoutPanel>控制項。</span><span class="sxs-lookup"><span data-stu-id="0354f-127">Avoid nesting other <xref:System.Windows.Forms.TableLayoutPanel> controls within a <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="0354f-128">偵錯巢狀的配置可能相當困難。</span><span class="sxs-lookup"><span data-stu-id="0354f-128">Debugging nested layouts can be difficult.</span></span>  
   
-### 避免視覺化繼承  
- <xref:System.Windows.Forms.TableLayoutPanel> 控制項不支援在 Windows Forms 設計工具中的視覺化繼承。  在設計階段，衍生類別的 <xref:System.Windows.Forms.TableLayoutPanel> 控制項將顯示為「已鎖定」。  
+### <a name="avoid-visual-inheritance"></a><span data-ttu-id="0354f-129">避免視覺化繼承</span><span class="sxs-lookup"><span data-stu-id="0354f-129">Avoid Visual Inheritance</span></span>  
+ <span data-ttu-id="0354f-130"><xref:System.Windows.Forms.TableLayoutPanel>控制項不支援在 Windows Form 設計工具的視覺化繼承。</span><span class="sxs-lookup"><span data-stu-id="0354f-130">The <xref:System.Windows.Forms.TableLayoutPanel> control does not support visual inheritance in the Windows Forms Designer.</span></span> <span data-ttu-id="0354f-131">A <xref:System.Windows.Forms.TableLayoutPanel> 「 已鎖定 」 在設計階段，會出現在衍生類別中的控制項。</span><span class="sxs-lookup"><span data-stu-id="0354f-131">A <xref:System.Windows.Forms.TableLayoutPanel> control in a derived class appears as "locked" at design time.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.TableLayoutPanel>   
+## <a name="see-also"></a><span data-ttu-id="0354f-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0354f-132">See Also</span></span>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
  <xref:System.Windows.Forms.FlowLayoutPanel>

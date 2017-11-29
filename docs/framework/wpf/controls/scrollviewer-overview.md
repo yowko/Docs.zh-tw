@@ -1,88 +1,80 @@
 ---
-title: "ScrollViewer 概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制項, ScrollViewer"
-  - "ScrollViewer 控制項, 關於 ScrollViewer 控制項"
+title: "ScrollViewer 概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- controls [WPF], ScrollViewer
+- ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f6398e4a40a1d4a83bc0ae080321112fb6d9fcd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ScrollViewer 概觀
-使用者介面中的內容通常會大於電腦螢幕的顯示區域。  <xref:System.Windows.Controls.ScrollViewer> 控制項提供便利的方式，讓您可以捲動 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的內容。  本主題將介紹 <xref:System.Windows.Controls.ScrollViewer> 項目並且提供多個使用範例。  
-  
- 此主題包括下列章節：  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [ScrollViewer 控制項](#what_is_a_scrollviewer_element)  
-  
--   [實體與邏輯捲動的比較](#scrollviewer_physical_vs_logical)  
-  
--   [定義和使用 ScrollViewer 項目](#scrollviewer_markup_syntax_and_sample)  
-  
--   [設定 ScrollViewer 的樣式](#scrollviewer_styling_scrollviewer)  
-  
--   [分頁文件](#scrollviewer_scroll_vs_paginate)  
-  
--   [Related Topics](#seeAlsoToggle)  
+# <a name="scrollviewer-overview"></a><span data-ttu-id="ba5fa-102">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="ba5fa-102">ScrollViewer Overview</span></span>
+<span data-ttu-id="ba5fa-103">使用者介面內的內容常常會大於電腦螢幕的顯示區域。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-103">Content within a user interface is often larger than a computer screen's display area.</span></span> <span data-ttu-id="ba5fa-104"><xref:System.Windows.Controls.ScrollViewer>控制項提供便利的方式，若要啟用的內容中捲動[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-104">The <xref:System.Windows.Controls.ScrollViewer> control provides a convenient way to enable scrolling of content in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="ba5fa-105">本主題將介紹<xref:System.Windows.Controls.ScrollViewer>項目，並提供數種使用方式範例。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-105">This topic introduces the <xref:System.Windows.Controls.ScrollViewer> element and provides several usage examples.</span></span>  
   
 <a name="what_is_a_scrollviewer_element"></a>   
-## ScrollViewer 控制項  
- 有含兩個預先定義的項目，可以讓您在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中捲動：<xref:System.Windows.Controls.Primitives.ScrollBar> 和 <xref:System.Windows.Controls.ScrollViewer>。  <xref:System.Windows.Controls.ScrollViewer> 控制項會封裝水平與垂直的 <xref:System.Windows.Controls.Primitives.ScrollBar> 項目和內容容器 \(例如，<xref:System.Windows.Controls.Panel> 項目\)，才能在可捲動區域中顯示其他可見的項目。  您必須建置自訂物件，才能使用 <xref:System.Windows.Controls.Primitives.ScrollBar> 項目來捲動內容。  但是，您可以使用 <xref:System.Windows.Controls.ScrollViewer> 項目本身，因為此項目是會封裝 <xref:System.Windows.Controls.Primitives.ScrollBar> 功能的複合控制項。  
+## <a name="the-scrollviewer-control"></a><span data-ttu-id="ba5fa-106">ScrollViewer 控制項</span><span class="sxs-lookup"><span data-stu-id="ba5fa-106">The ScrollViewer Control</span></span>  
+ <span data-ttu-id="ba5fa-107">有兩個預先定義的項目啟用捲動功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式：<xref:System.Windows.Controls.Primitives.ScrollBar>和<xref:System.Windows.Controls.ScrollViewer>。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-107">There are two predefined elements that enable scrolling in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications: <xref:System.Windows.Controls.Primitives.ScrollBar> and <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="ba5fa-108"><xref:System.Windows.Controls.ScrollViewer>控制項封裝水平和垂直<xref:System.Windows.Controls.Primitives.ScrollBar>項目和內容的容器 (例如<xref:System.Windows.Controls.Panel>元素) 以顯示其他可見元素的可捲動區域中。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-108">The <xref:System.Windows.Controls.ScrollViewer> control encapsulates horizontal and vertical <xref:System.Windows.Controls.Primitives.ScrollBar> elements and a content container (such as a <xref:System.Windows.Controls.Panel> element) in order to display other visible elements in a scrollable area.</span></span> <span data-ttu-id="ba5fa-109">您必須建立自訂物件，才能使用<xref:System.Windows.Controls.Primitives.ScrollBar>內容捲動的項目。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-109">You must build a custom object in order to use the <xref:System.Windows.Controls.Primitives.ScrollBar> element for content scrolling.</span></span> <span data-ttu-id="ba5fa-110">不過，您可以使用<xref:System.Windows.Controls.ScrollViewer>單獨使用的項目，因為它是複合控制項封裝<xref:System.Windows.Controls.Primitives.ScrollBar>功能。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-110">However, you can use the <xref:System.Windows.Controls.ScrollViewer> element by itself because it is a composite control that encapsulates <xref:System.Windows.Controls.Primitives.ScrollBar> functionality.</span></span>  
   
- <xref:System.Windows.Controls.ScrollViewer> 控制項會同時回應滑鼠和鍵盤命令，並定義許多方法，使用預先決定的遞增量來捲動內容。  您可以使用 <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> 事件來偵測 <xref:System.Windows.Controls.ScrollViewer> 狀態中的變更。  
+ <span data-ttu-id="ba5fa-111"><xref:System.Windows.Controls.ScrollViewer>控制回應滑鼠和鍵盤命令，並定義許多方法，用來捲動預先決定的增量的內容。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-111">The <xref:System.Windows.Controls.ScrollViewer> control responds to both mouse and keyboard commands, and defines numerous methods with which to scroll content by predetermined increments.</span></span> <span data-ttu-id="ba5fa-112">您可以使用<xref:System.Windows.Controls.ScrollViewer.ScrollChanged>事件來偵測變更<xref:System.Windows.Controls.ScrollViewer>狀態。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-112">You can use the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event to detect a change in a <xref:System.Windows.Controls.ScrollViewer> state.</span></span>  
   
- <xref:System.Windows.Controls.ScrollViewer> 只能有一個子系，通常是 <xref:System.Windows.Controls.Panel> 項目，此項目可裝載項目的 <xref:System.Windows.Controls.Panel.Children%2A> 集合。  <xref:System.Windows.Controls.ContentPresenter.Content%2A> 屬性會定義 <xref:System.Windows.Controls.ScrollViewer> 的唯一子系。  
+ <span data-ttu-id="ba5fa-113">A<xref:System.Windows.Controls.ScrollViewer>通常只能有一個子系，<xref:System.Windows.Controls.Panel>項目，可裝載<xref:System.Windows.Controls.Panel.Children%2A>項目的集合。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-113">A <xref:System.Windows.Controls.ScrollViewer> can only have one child, typically a <xref:System.Windows.Controls.Panel> element that can host a <xref:System.Windows.Controls.Panel.Children%2A> collection of elements.</span></span> <span data-ttu-id="ba5fa-114"><xref:System.Windows.Controls.ContentPresenter.Content%2A>屬性定義的唯一子系<xref:System.Windows.Controls.ScrollViewer>。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-114">The <xref:System.Windows.Controls.ContentPresenter.Content%2A> property defines the sole child of the <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
   
 <a name="scrollviewer_physical_vs_logical"></a>   
-## 實體與邏輯捲動的比較  
- 實體捲動會以預先決定之實體遞增量捲動內容，通常是以像素宣告的值。  邏輯捲動用於捲動邏輯樹狀目錄中的下一個項目。  實體捲動對大多數 <xref:System.Windows.Controls.Panel> 項目而言是預設的捲動行為。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援兩種類型的捲動。  
+## <a name="physical-vs-logical-scrolling"></a><span data-ttu-id="ba5fa-115">實體捲動與邏輯捲動的比較</span><span class="sxs-lookup"><span data-stu-id="ba5fa-115">Physical vs. Logical Scrolling</span></span>  
+ <span data-ttu-id="ba5fa-116">實體捲動可用來依預先決定的實體遞增值 (通常是以像素為單位宣告的值) 捲動內容。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-116">Physical scrolling is used to scroll content by a predetermined physical increment, typically by a value that is declared in pixels.</span></span> <span data-ttu-id="ba5fa-117">邏輯捲動可用來捲動至邏輯樹狀結構中的下一個項目。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-117">Logical scrolling is used to scroll to the next item in the logical tree.</span></span> <span data-ttu-id="ba5fa-118">實體捲動是預設的捲動行為，適用於大部分<xref:System.Windows.Controls.Panel>項目。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-118">Physical scrolling is the default scroll behavior for most <xref:System.Windows.Controls.Panel> elements.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="ba5fa-119"> 同時支援這兩種類型的捲動。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-119"> supports both types of scrolling.</span></span>  
   
-#### IScrollInfo 介面  
- <xref:System.Windows.Controls.Primitives.IScrollInfo> 介面表示 <xref:System.Windows.Controls.ScrollViewer> 中的主要捲動區域或衍生控制項。  介面會定義捲動可由 <xref:System.Windows.Controls.Panel> 實作的屬性和方法，這些屬性和方法必須以邏輯單位捲動，而不是以實體遞增量捲動。  將 <xref:System.Windows.Controls.Primitives.IScrollInfo> 的執行個體轉換為衍生的 <xref:System.Windows.Controls.Panel>，然後使用其捲動方法，提供捲動至子系集合中下一個邏輯單位的有用方法，而不是以像素遞增量進行捲動。  根據預設，<xref:System.Windows.Controls.ScrollViewer> 控制項支援以實體單位進行捲動。  
+#### <a name="the-iscrollinfo-interface"></a><span data-ttu-id="ba5fa-120">IScrollInfo 介面</span><span class="sxs-lookup"><span data-stu-id="ba5fa-120">The IScrollInfo Interface</span></span>  
+ <span data-ttu-id="ba5fa-121"><xref:System.Windows.Controls.Primitives.IScrollInfo>介面代表主要捲動區域內<xref:System.Windows.Controls.ScrollViewer>或衍生的控制項。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-121">The <xref:System.Windows.Controls.Primitives.IScrollInfo> interface represents the main scrolling region within a <xref:System.Windows.Controls.ScrollViewer> or derived control.</span></span> <span data-ttu-id="ba5fa-122">介面會定義捲動屬性和方法，可由實作<xref:System.Windows.Controls.Panel>需要捲動邏輯單元，而非實體的遞增值的項目。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-122">The interface defines scrolling properties and methods that can be implemented by <xref:System.Windows.Controls.Panel> elements that require scrolling by logical unit, rather than by a physical increment.</span></span> <span data-ttu-id="ba5fa-123">轉型的執行個體<xref:System.Windows.Controls.Primitives.IScrollInfo>來衍生<xref:System.Windows.Controls.Panel>，然後使用它的捲動方法提供實用的方式，捲動至下一個邏輯單元中子集合，而不是像素。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-123">Casting an instance of <xref:System.Windows.Controls.Primitives.IScrollInfo> to a derived <xref:System.Windows.Controls.Panel> and then using its scrolling methods provides a useful way to scroll to the next logical unit in a child collection, rather than by pixel increment.</span></span> <span data-ttu-id="ba5fa-124">根據預設，<xref:System.Windows.Controls.ScrollViewer>控制項支援捲動實體單位。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-124">By default, the <xref:System.Windows.Controls.ScrollViewer> control supports scrolling by physical units.</span></span>  
   
- <xref:System.Windows.Controls.StackPanel> 和 <xref:System.Windows.Controls.VirtualizingStackPanel> 同時實作 <xref:System.Windows.Controls.Primitives.IScrollInfo> 而且原本就會支援邏輯捲動。  對於原本就支援邏輯捲動的版面配置控制項，您仍然可以透過包裝 <xref:System.Windows.Controls.ScrollViewer> 中的主 <xref:System.Windows.Controls.Panel> 項目，並將 <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> 屬性設定為 `false`。  
+ <span data-ttu-id="ba5fa-125"><xref:System.Windows.Controls.StackPanel>和<xref:System.Windows.Controls.VirtualizingStackPanel>兩者實作<xref:System.Windows.Controls.Primitives.IScrollInfo>和原生方式支援邏輯捲動。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-125"><xref:System.Windows.Controls.StackPanel> and <xref:System.Windows.Controls.VirtualizingStackPanel> both implement <xref:System.Windows.Controls.Primitives.IScrollInfo> and natively support logical scrolling.</span></span> <span data-ttu-id="ba5fa-126">針對版面配置控制項的原生支援邏輯捲動，您仍然可以達到包裝主機的實體捲動<xref:System.Windows.Controls.Panel>中的項目<xref:System.Windows.Controls.ScrollViewer>和設定<xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A>屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-126">For layout controls that natively support logical scrolling, you can still achieve physical scrolling by wrapping the host <xref:System.Windows.Controls.Panel> element in a <xref:System.Windows.Controls.ScrollViewer> and setting the <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> property to `false`.</span></span>  
   
- 下列程式碼範例會示範如何將 <xref:System.Windows.Controls.Primitives.IScrollInfo> 的執行個體轉換為 <xref:System.Windows.Controls.StackPanel>，以及使用介面定義的內容捲動方法 \(<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> 和 <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>\)。  
+ <span data-ttu-id="ba5fa-127">下列程式碼範例示範如何轉型的執行個體<xref:System.Windows.Controls.Primitives.IScrollInfo>至<xref:System.Windows.Controls.StackPanel>並使用內容捲動方法 (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A>和<xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) 介面所定義。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-127">The following code example demonstrates how to cast an instance of <xref:System.Windows.Controls.Primitives.IScrollInfo> to a <xref:System.Windows.Controls.StackPanel> and use content scrolling methods (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> and <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) defined by the interface.</span></span>  
   
  [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
  [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
-## 定義和使用 ScrollViewer 項目  
- 下列範例會在視窗中建立含有某些文字和一個矩形的 <xref:System.Windows.Controls.ScrollViewer>。  <xref:System.Windows.Controls.Primitives.ScrollBar> 項目只會在必要時才顯示。  當您重新調整視窗大小時，因為 <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> 更新值和 <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> 屬性的緣故，<xref:System.Windows.Controls.Primitives.ScrollBar> 項目會出現然後消失。  
+## <a name="defining-and-using-a-scrollviewer-element"></a><span data-ttu-id="ba5fa-128">定義和使用 ScrollViewer 元素</span><span class="sxs-lookup"><span data-stu-id="ba5fa-128">Defining and Using a ScrollViewer Element</span></span>  
+ <span data-ttu-id="ba5fa-129">下列範例會建立<xref:System.Windows.Controls.ScrollViewer>視窗，其中包含一些文字和矩形中。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-129">The following example creates a <xref:System.Windows.Controls.ScrollViewer> in a window that contains some text and a rectangle.</span></span> <span data-ttu-id="ba5fa-130"><xref:System.Windows.Controls.Primitives.ScrollBar>元素會顯示只有當他們有必要。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-130"><xref:System.Windows.Controls.Primitives.ScrollBar> elements appear only when they are necessary.</span></span> <span data-ttu-id="ba5fa-131">當您調整視窗<xref:System.Windows.Controls.Primitives.ScrollBar>項目出現，而且會消失，因為已更新的值，所以<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A>和<xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-131">When you resize the window, the <xref:System.Windows.Controls.Primitives.ScrollBar> elements appear and disappear, due to updated values of the <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> and <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> properties.</span></span>  
   
  [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
  [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
  [!code-vb[ScrollViewer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
- [!code-xml[ScrollViewer#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
+ [!code-xaml[ScrollViewer#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
   
 <a name="scrollviewer_styling_scrollviewer"></a>   
-## 設定 ScrollViewer 的樣式  
- 和 Windows Presentation Foundation 中所有控制項一樣，可設定 <xref:System.Windows.Controls.ScrollViewer> 的樣式，來變更控制項的預設呈現行為。  如需控制項樣式設定的額外資訊，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+## <a name="styling-a-scrollviewer"></a><span data-ttu-id="ba5fa-132">設定 ScrollViewer 的樣式</span><span class="sxs-lookup"><span data-stu-id="ba5fa-132">Styling a ScrollViewer</span></span>  
+ <span data-ttu-id="ba5fa-133">要在 Windows Presentation Foundation 中，所有控制項<xref:System.Windows.Controls.ScrollViewer>可以套用樣式，以變更控制項的預設轉譯行為。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-133">Like all controls in Windows Presentation Foundation, the <xref:System.Windows.Controls.ScrollViewer> can be styled in order to change the default rendering behavior of the control.</span></span> <span data-ttu-id="ba5fa-134">如需有關控制項樣式設定的其他資訊，請參閱[樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-134">For additional information on control styling, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>  
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
-## 分頁文件  
- 就文件內容而言，另一個捲動的方法是選擇支援分頁的文件容器。  <xref:System.Windows.Documents.FlowDocument> 是針對設計裝載於檢視控制項 \(例如 <xref:System.Windows.Controls.FlowDocumentPageViewer>\) 內的文件，而檢視控制項支援跨多個頁面來編頁內容，以避免捲動。  <xref:System.Windows.Controls.DocumentViewer> 提供方案來檢視 <xref:System.Windows.Documents.FixedDocument> 內容，這種方案使用傳統捲動來顯示不在顯示區範圍內的內容。  
+## <a name="paginating-documents"></a><span data-ttu-id="ba5fa-135">文件分頁</span><span class="sxs-lookup"><span data-stu-id="ba5fa-135">Paginating Documents</span></span>  
+ <span data-ttu-id="ba5fa-136">就文件內容而言，捲動的替代方案是選擇一個支援分頁的文件容器。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-136">For document content, an alternative to scrolling is to choose a document container that supports pagination.</span></span> <span data-ttu-id="ba5fa-137"><xref:System.Windows.Documents.FlowDocument>適用於文件，專為將服務裝載在檢視控制項，例如<xref:System.Windows.Controls.FlowDocumentPageViewer>，跨多個頁面，這樣就不需要捲動支援分頁的內容。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-137"><xref:System.Windows.Documents.FlowDocument> is for documents that are designed to be hosted within a viewing control, such as <xref:System.Windows.Controls.FlowDocumentPageViewer>, that supports paginating content across multiple pages, preventing the need for scrolling.</span></span> <span data-ttu-id="ba5fa-138"><xref:System.Windows.Controls.DocumentViewer>提供的檢視解決方案<xref:System.Windows.Documents.FixedDocument>使用傳統捲動顯示內容以外的領域的顯示區域的內容。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-138"><xref:System.Windows.Controls.DocumentViewer> provides a solution for viewing <xref:System.Windows.Documents.FixedDocument> content, which uses traditional scrolling to display content outside the realm of the display area.</span></span>  
   
- 如需文件格式和展示選項的額外資訊，請參閱 [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
+ <span data-ttu-id="ba5fa-139">如需有關文件格式和呈現方式選項的其他資訊，請參閱 [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="ba5fa-139">For additional information about document formats and presentation options, see [Documents in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Controls.ScrollViewer>   
- <xref:System.Windows.Controls.Primitives.ScrollBar>   
- <xref:System.Windows.Controls.Primitives.IScrollInfo>   
- [Create a Scroll Viewer](http://msdn.microsoft.com/zh-tw/c8e46af7-b417-441b-aa30-791cbdbd43ef)   
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [ScrollBar 樣式和範本](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)   
- [控制項](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a><span data-ttu-id="ba5fa-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ba5fa-140">See Also</span></span>  
+ <xref:System.Windows.Controls.ScrollViewer>  
+ <xref:System.Windows.Controls.Primitives.ScrollBar>  
+ <xref:System.Windows.Controls.Primitives.IScrollInfo>  
+ [<span data-ttu-id="ba5fa-141">建立捲動檢視器</span><span class="sxs-lookup"><span data-stu-id="ba5fa-141">Create a Scroll Viewer</span></span>](http://msdn.microsoft.com/en-us/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
+ [<span data-ttu-id="ba5fa-142">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="ba5fa-142">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="ba5fa-143">ScrollBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="ba5fa-143">ScrollBar Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
+ [<span data-ttu-id="ba5fa-144">控制項</span><span class="sxs-lookup"><span data-stu-id="ba5fa-144">Controls</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

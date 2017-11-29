@@ -1,256 +1,257 @@
 ---
-title: "逐步解說：使用對齊線排列 Windows Form 上的控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 使用對齊線排列"
-  - "SnapLine 類別, 逐步解說"
-  - "對齊線, 排列 Windows Form 控制項"
-  - "Windows Form 控制項, 排列"
+title: "逐步解說：使用對齊線排列 Windows Form 上的控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], arranging with snaplines
+- snaplines [Windows Forms], arranging Windows Forms controls
+- SnapLine class [Windows Forms], walkthroughs
+- Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be514f435b787c770eca114d42bee5c1424a40c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：使用對齊線排列 Windows Form 上的控制項
-表單控制項的精確置放對許多應用程式而言非常重要。  Windows Form 設計工具能提供您許多配置工具以完成這項作業。  其中最重要的一項就是 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 功能。  
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a><span data-ttu-id="cb8d2-102">逐步解說：使用對齊線排列 Windows Form 上的控制項</span><span class="sxs-lookup"><span data-stu-id="cb8d2-102">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>
+<span data-ttu-id="cb8d2-103">對許多應用程式而言，控制項在表單上的精確位置是高優先順序。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="cb8d2-104">Windows Form 設計工具提供您許多版面配置工具，可完成這項作業。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-104">The Windows Forms Designer gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="cb8d2-105">其中一個最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-105">One of the most important is the <xref:System.Windows.Forms.Design.Behavior.SnapLine> feature.</span></span>  
   
- 對齊線能精確顯示控制項與其他控制項對齊的位置。  它們也能顯示在控制項之間的建議邊界距離 \(由 Windows 使用者介面方針所指定\)。  如需詳細資訊，請參閱[使用者介面設計與開發](http://go.microsoft.com/FWLink/?LinkId=83878) \(英文\)。  
+ <span data-ttu-id="cb8d2-106">對齊線所顯示的精確對齊控制項與其他控制項的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-106">Snaplines show you precisely where to line up controls with other controls.</span></span> <span data-ttu-id="cb8d2-107">它們也會顯示您的 Windows 使用者介面指導方針所指定的控制項之間的邊界建議的距離。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-107">They also show you the recommended distances for margins between controls, as specified by the Windows User Interface Guidelines.</span></span> <span data-ttu-id="cb8d2-108">如需詳細資訊，請參閱[使用者介面的設計和開發](http://go.microsoft.com/FWLink/?LinkId=83878)。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-108">For details, see [User Interface Design and Development](http://go.microsoft.com/FWLink/?LinkId=83878).</span></span>  
   
- 對齊線讓對齊控制項變得很簡單，可以獲得乾淨俐落、專業的外觀與行為 \(外觀和操作\)。  
+ <span data-ttu-id="cb8d2-109">對齊線讓您輕鬆對齊控制項，以產生簡潔、 專業外觀和行為 （外觀及操作）。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-109">Snaplines make it easy to align your controls, for crisp, professional appearance and behavior (look and feel).</span></span>  
   
- 逐步解說將說明的工作包括：  
+ <span data-ttu-id="cb8d2-110">這個逐步解說中所述的工作包括：</span><span class="sxs-lookup"><span data-stu-id="cb8d2-110">Tasks illustrated in this walkthrough include:</span></span>  
   
--   建立 Windows Form 專案  
+-   <span data-ttu-id="cb8d2-111">建立 Windows Forms 專案</span><span class="sxs-lookup"><span data-stu-id="cb8d2-111">Creating a Windows Forms project</span></span>  
   
--   使用對齊線調整控制項間距並對齊控制項  
+-   <span data-ttu-id="cb8d2-112">間距和對齊控制項使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-112">Spacing and Aligning Controls Using Snaplines</span></span>  
   
--   對齊至表單和容器邊界  
+-   <span data-ttu-id="cb8d2-113">對齊表單和容器的邊界</span><span class="sxs-lookup"><span data-stu-id="cb8d2-113">Aligning to Form and Container Margins</span></span>  
   
--   對齊至群組的控制項  
+-   <span data-ttu-id="cb8d2-114">對齊控制項群組</span><span class="sxs-lookup"><span data-stu-id="cb8d2-114">Aligning to Grouped Controls</span></span>  
   
--   繪製外框大小以使用對齊線放置控制項  
+-   <span data-ttu-id="cb8d2-115">使用對齊線來放置控制項框大小</span><span class="sxs-lookup"><span data-stu-id="cb8d2-115">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
   
--   從工具箱拖曳控制項時使用對齊線  
+-   <span data-ttu-id="cb8d2-116">從 [工具箱] 拖曳控制項時使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-116">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
   
--   使用對齊線調整控制項大小  
+-   <span data-ttu-id="cb8d2-117">使用對齊線的控制項調整大小</span><span class="sxs-lookup"><span data-stu-id="cb8d2-117">Resizing Controls Using Snaplines</span></span>  
   
--   讓標籤對齊至控制項的文字  
+-   <span data-ttu-id="cb8d2-118">對齊控制項的文字標籤</span><span class="sxs-lookup"><span data-stu-id="cb8d2-118">Aligning a Label to a Control's Text</span></span>  
   
--   使用具有鍵盤瀏覽的對齊線  
+-   <span data-ttu-id="cb8d2-119">使用鍵盤瀏覽使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-119">Using Snaplines with Keyboard Navigation</span></span>  
   
--   對齊線和配置面板  
+-   <span data-ttu-id="cb8d2-120">對齊線和版面配置面板</span><span class="sxs-lookup"><span data-stu-id="cb8d2-120">Snaplines and Layout Panels</span></span>  
   
--   停用對齊線  
+-   <span data-ttu-id="cb8d2-121">停用的對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-121">Disabling Snaplines</span></span>  
   
- 當您完成時，將會對於對齊線功能所扮演的配置角色有所了解。  
-  
-> [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
-  
-## 建立專案  
- 第一個步驟是建立專案並設定表單。  
-  
-#### 若要建立專案  
-  
-1.  建立稱為 "SnaplineExample" 的 Windows 架構應用程式專案。  如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
-  
-2.  從 \[表單設計工具\] 中選取表單。  
-  
-## 使用對齊線調整控制項間距並對齊控制項  
- 對齊線提供您精確而容易了解的方式，以對齊表單上的控制項。  當您將選取的一或多個控制項移近與另一個控制項或控制項集對齊的位置時，對齊線便會出現。  當您將此控制項移動至超出其他控制項時，選取範圍就會「貼齊」\(Snap\) 至建議的位置。  
-  
-#### 若要使用對齊線排列控制項  
-  
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.Button> 控制項拖曳至表單。  
-  
-2.  將 <xref:System.Windows.Forms.Button> 控制項移至表單的右下角。  請注意在 <xref:System.Windows.Forms.Button> 控制項接近表單底部和右框線時，所出現的對齊線。  這些對齊線會顯示控制項邊框和表單之間的建議距離。  
-  
-3.  在表單的框線周圍移動 <xref:System.Windows.Forms.Button> 控制項，並注意對齊線出現的地方。  當您完成時，請將 <xref:System.Windows.Forms.Button> 控制項移至表單的中心附近。  
-  
-4.  從 \[**工具箱**\] 將另一個 <xref:System.Windows.Forms.Button> 控制項拖曳至表單。  
-  
-5.  移動第二個 <xref:System.Windows.Forms.Button> 控制項，直到幾乎與第一個控制項對齊為止。  請注意出現在兩個按鈕之文字基線中的對齊線，並請注意您所移動的控制項，會貼齊至與另一個控制項相同層次的位置。  
-  
-6.  移動第二個 <xref:System.Windows.Forms.Button> 控制項，直到它的位置在第一個控制項的正上方為止。  請注意出現在兩個按鈕左邊緣和右邊緣的對齊線，並請注意您所移動的控制項，會貼齊至與另一個控制項完全對齊的位置。  
-  
-7.  選取其中一個 <xref:System.Windows.Forms.Button> 控制項，並將它移動至靠近另一個控制項，直到幾乎彼此接觸為止。  請注意出現在它們之間的對齊線。  這個距離就是在控制項框線之間的建議距離。  同時也請注意，您移動的控制項會貼齊至這個位置。  
-  
-8.  從 \[**工具箱**\] 將兩個 <xref:System.Windows.Forms.Panel> 控制項拖曳至表單。  
-  
-9. 移動其中一個 <xref:System.Windows.Forms.Panel> 控制項，直到幾乎與第一個控制項對齊為止。  請注意出現在兩個控制項的上方和下方邊緣的對齊線，並請注意您所移動的控制項，會貼齊至與另一個控制項完全對齊的位置。  
-  
-## 對齊至表單和容器邊界  
- 對齊線能協助您以一致的方式，將控制項對齊至表單和容器的邊界。  
-  
-#### 若要將控制項對齊至表單和容器邊界  
-  
-1.  選取其中一個 <xref:System.Windows.Forms.Button> 控制項，並將它移至靠近表單的右框線，直到對齊線出現為止。  對齊線到右框線的距離是控制項的 <xref:System.Windows.Forms.Control.Margin%2A> 屬性值和表單的 <xref:System.Windows.Forms.Control.Padding%2A> 屬性值的總和。  
+ <span data-ttu-id="cb8d2-122">當您完成時，您必須了解版面配置功能所扮演角色的對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-122">When you are finished, you will have an understanding of the layout role played by the snaplines feature.</span></span>  
   
 > [!NOTE]
->  如果表單的 <xref:System.Windows.Forms.Control.Padding%2A> 屬性設定為 0,0,0,0，Windows Form 設計工具便會為表單指定 9,9,9,9 的 <xref:System.Windows.Forms.Control.Padding%2A> 值。  若要覆寫這項行為，請指派不同於 0,0,0,0 的值。  
+>  <span data-ttu-id="cb8d2-123">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-123">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="cb8d2-124">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-124">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="cb8d2-125">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="cb8d2-125">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-1.  在 \[**屬性**\] 視窗中展開 <xref:System.Windows.Forms.Control.Margin%2A> 項目，並將 <xref:System.Windows.Forms.Padding.All%2A> 屬性設定為 0，藉此變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Margin%2A> 屬性值。  如需詳細資訊，請參閱[逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。  
+## <a name="creating-the-project"></a><span data-ttu-id="cb8d2-126">建立專案</span><span class="sxs-lookup"><span data-stu-id="cb8d2-126">Creating the Project</span></span>  
+ <span data-ttu-id="cb8d2-127">第一個步驟是建立專案並設定表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-127">The first step is to create the project and set up the form.</span></span>  
   
-2.  將 <xref:System.Windows.Forms.Button> 控制項移至靠近表單的右框線，直到對齊線出現為止。  這個距離是由表單的 <xref:System.Windows.Forms.Control.Padding%2A> 屬性值所提供。  
+#### <a name="to-create-the-project"></a><span data-ttu-id="cb8d2-128">若要建立專案</span><span class="sxs-lookup"><span data-stu-id="cb8d2-128">To create the project</span></span>  
   
-3.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.GroupBox> 控制項拖曳至表單。  
+1.  <span data-ttu-id="cb8d2-129">建立 Windows 架構應用程式專案，稱為 「 SnaplineExample"。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-129">Create a Windows-based application project called "SnaplineExample".</span></span> <span data-ttu-id="cb8d2-130">如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-130">For details, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-4.  在 \[**屬性**\] 視窗中展開 <xref:System.Windows.Forms.Control.Padding%2A> 項目，並將 <xref:System.Windows.Forms.Padding.All%2A> 屬性設定為 10，藉此變更 <xref:System.Windows.Forms.GroupBox> 控制項的 <xref:System.Windows.Forms.Control.Padding%2A> 屬性值。  
+2.  <span data-ttu-id="cb8d2-131">在表單設計工具中選取的表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-131">Select the form in the Forms Designer.</span></span>  
   
-5.  將 <xref:System.Windows.Forms.Button> 控制項從 \[**工具箱**\] 拖曳至 <xref:System.Windows.Forms.GroupBox> 控制項。  
+## <a name="spacing-and-aligning-controls-using-snaplines"></a><span data-ttu-id="cb8d2-132">間距和對齊控制項使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-132">Spacing and Aligning Controls Using Snaplines</span></span>  
+ <span data-ttu-id="cb8d2-133">對齊線可讓您精確且直覺式對齊表單上的控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-133">Snaplines give you an accurate and intuitive way to align controls on your form.</span></span> <span data-ttu-id="cb8d2-134">當您要移動選取的控制項附近的位置時，對齊線與另一個控制項或一組控制項便會出現。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-134">They appear when you are moving a selected control or controls near a position that would align with another control or set of controls.</span></span> <span data-ttu-id="cb8d2-135">您的選擇將 「 對齊 」 至建議的位置超出其他控制項時。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-135">Your selection will "snap" to the suggested position as you move it past the other controls.</span></span>  
   
-6.  將 <xref:System.Windows.Forms.Button> 控制項移至靠近 <xref:System.Windows.Forms.GroupBox> 控制項的右框線，直到對齊線出現為止。  在 <xref:System.Windows.Forms.GroupBox> 控制項內移動 <xref:System.Windows.Forms.Button> 控制項，直到對齊線出現為止。  
+#### <a name="to-arrange-controls-using-snaplines"></a><span data-ttu-id="cb8d2-136">使用對齊線排列控制項</span><span class="sxs-lookup"><span data-stu-id="cb8d2-136">To arrange controls using snaplines</span></span>  
   
-## 對齊至群組的控制項  
- 您可以使用對齊線來對齊群組的控制項以及 <xref:System.Windows.Forms.GroupBox> 控制項內的控制項。  
+1.  <span data-ttu-id="cb8d2-137">拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-137">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-#### 若要對齊至群組的控制項  
+2.  <span data-ttu-id="cb8d2-138">移動<xref:System.Windows.Forms.Button>表單的右下角的控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-138">Move the <xref:System.Windows.Forms.Button> control to the lower-right corner of the form.</span></span> <span data-ttu-id="cb8d2-139">請注意會顯示為的對齊線<xref:System.Windows.Forms.Button>控制方法的下和右框線的表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-139">Note the snaplines that appear as the <xref:System.Windows.Forms.Button> control approaches the bottom and right borders of the form.</span></span> <span data-ttu-id="cb8d2-140">這些對齊線顯示控制項的框線和表單的建議的距離。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-140">These snaplines display the recommended distance between the borders of the control and the form.</span></span>  
   
-1.  選取表單上的兩個控制項。  移動選取的控制項，並注意出現在您選取的控制項和其他控制項之間的對齊線。  
+3.  <span data-ttu-id="cb8d2-141">移動<xref:System.Windows.Forms.Button>控制項周圍的框線的表單，並注意對齊線出現的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-141">Move the <xref:System.Windows.Forms.Button> control around the borders of the form and note where the snaplines appear.</span></span> <span data-ttu-id="cb8d2-142">當您完成時，移動<xref:System.Windows.Forms.Button>表單的中央附近的控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-142">When you are finished, move the <xref:System.Windows.Forms.Button> control near the center of the form.</span></span>  
   
-2.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.GroupBox> 控制項拖曳至表單。  
+4.  <span data-ttu-id="cb8d2-143">拖曳其他<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-143">Drag another <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-3.  將 <xref:System.Windows.Forms.Button> 控制項從 \[**工具箱**\] 拖曳至 <xref:System.Windows.Forms.GroupBox> 控制項。  
+5.  <span data-ttu-id="cb8d2-144">將第二個<xref:System.Windows.Forms.Button>控制直到幾乎層級的第一個。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-144">Move the second <xref:System.Windows.Forms.Button> control until it is nearly level with the first.</span></span> <span data-ttu-id="cb8d2-145">請注意會出現在這兩個按鈕的文字基準線對齊線，請注意您要移動的控制項貼齊至是完全與其他控制項的層級的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-145">Note the snapline that appears at the text baseline of both buttons, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-4.  選取其中一個 <xref:System.Windows.Forms.Button> 控制項，並將其在 <xref:System.Windows.Forms.GroupBox> 控制項的周圍移動。  請注意出現在 <xref:System.Windows.Forms.GroupBox> 控制項邊緣的對齊線。  同時也請注意，出現在 <xref:System.Windows.Forms.Button> 控制項邊緣的對齊線，此控制項是包含在 <xref:System.Windows.Forms.GroupBox> 控制項中。  容器控制項子系的控制項也支援對齊線。  
+6.  <span data-ttu-id="cb8d2-146">將第二個<xref:System.Windows.Forms.Button>控制直到將其置於上方的第一個。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-146">Move the second <xref:System.Windows.Forms.Button> control until it is positioned directly above the first.</span></span> <span data-ttu-id="cb8d2-147">請注意的對齊線出現在這兩個按鈕，左和右邊緣，並請注意，控制項必須移動的貼齊至完全對齊其他控制項的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-147">Note the snaplines that appear along the left and right edges of both buttons, and note that the control you are moving snaps to a position that is exactly aligned with the other control.</span></span>  
   
-## 繪製外框大小以使用對齊線放置控制項  
- 對齊線能在您剛將控制項放置在表單上時，協助對齊控制項。  
+7.  <span data-ttu-id="cb8d2-148">選取其中一個<xref:System.Windows.Forms.Button>控制，並將其接近，直到幾乎碰觸。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-148">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the other, until they are almost touching.</span></span> <span data-ttu-id="cb8d2-149">請注意，出現在它們之間的對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-149">Note the snapline that appears between them.</span></span> <span data-ttu-id="cb8d2-150">這個距離是控制項的框線之間的建議的距離。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-150">This distance is the recommended distance between the borders of the controls.</span></span> <span data-ttu-id="cb8d2-151">也請注意，您要移動的控制項貼齊至這個位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-151">Also note that the control you are moving snaps to this position.</span></span>  
   
-#### 若要繪製外框大小以使用對齊線放置控制項  
+8.  <span data-ttu-id="cb8d2-152">拖放兩<xref:System.Windows.Forms.Panel>控制從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-152">Drag two <xref:System.Windows.Forms.Panel> controls from the **Toolbox** onto your form.</span></span>  
   
-1.  在 \[**工具箱**\] 中，請按 <xref:System.Windows.Forms.Button> 控制項圖示。  請勿拖曳至表單。  
+9. <span data-ttu-id="cb8d2-153">將其中一個移<xref:System.Windows.Forms.Panel>直到幾乎層級的第一個控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-153">Move one of the <xref:System.Windows.Forms.Panel> controls until it is nearly level with the first.</span></span> <span data-ttu-id="cb8d2-154">請注意，出現在這兩個控制項的頂端和底端邊緣，並記下您要移動的控制項貼齊至是完全與其他控制項的層級位置的對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-154">Note the snaplines that appear along the top and bottom edges of both controls, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-2.  將滑鼠指標移至表單的設計工具介面上。  請注意：指標會變成十字形，並且附有 <xref:System.Windows.Forms.Button> 控制項圖示。  同時也請注意，為建議 <xref:System.Windows.Forms.Button> 控制項的對齊位置而出現的對齊線。  
+## <a name="aligning-to-form-and-container-margins"></a><span data-ttu-id="cb8d2-155">對齊表單和容器的邊界</span><span class="sxs-lookup"><span data-stu-id="cb8d2-155">Aligning to Form and Container Margins</span></span>  
+ <span data-ttu-id="cb8d2-156">對齊線可協助您對齊表單和容器的邊界控制項以一致的方式。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-156">Snaplines help you to align your controls to form and container margins in a consistent manner.</span></span>  
   
-3.  按住滑鼠按鈕。  
+#### <a name="to-align-controls-to-form-and-container-margins"></a><span data-ttu-id="cb8d2-157">對齊控制項加入表單和容器的邊界</span><span class="sxs-lookup"><span data-stu-id="cb8d2-157">To align controls to form and container margins</span></span>  
   
-4.  在表單上四處拖曳滑鼠指標。  請注意已繪製外框，指示出控制項的位置與大小。  
+1.  <span data-ttu-id="cb8d2-158">選取其中一個<xref:System.Windows.Forms.Button>控制，並將其移接近右框線的形式，直到對齊線出現。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-158">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="cb8d2-159">右框線的對齊線的距離就是控制項的總和<xref:System.Windows.Forms.Control.Margin%2A>屬性和表單的<xref:System.Windows.Forms.Control.Padding%2A>屬性值。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-159">The snapline's distance from the right border is the sum of the control's <xref:System.Windows.Forms.Control.Margin%2A> property and the form's <xref:System.Windows.Forms.Control.Padding%2A> property values.</span></span>  
   
-5.  拖曳指標，直到對齊表單上的另一個控制項為止。  請注意，會出現對齊線以指示對齊。  
+> [!NOTE]
+>  <span data-ttu-id="cb8d2-160">如果表單的<xref:System.Windows.Forms.Control.Padding%2A>屬性設為 0,0,0,0，加上陰影的 Windows Form 設計工具提供表單<xref:System.Windows.Forms.Control.Padding%2A>9,9,9,9 的值。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-160">If the form's <xref:System.Windows.Forms.Control.Padding%2A> property is set to 0,0,0,0, the Windows Forms Designer gives the form a shadowed <xref:System.Windows.Forms.Control.Padding%2A> value of 9,9,9,9.</span></span> <span data-ttu-id="cb8d2-161">若要覆寫此行為，請指派 0,0,0,0 以外的值。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-161">To override this behavior, assign a value other than 0,0,0,0.</span></span>  
   
-6.  放開滑鼠按鈕。  會按照外框所指示的位置與大小建立控制項。  
+1.  <span data-ttu-id="cb8d2-162">值變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Margin%2A>屬性展開<xref:System.Windows.Forms.Control.Margin%2A>中的項目**屬性**視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性設為 0。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-162">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Margin%2A> property by expanding the <xref:System.Windows.Forms.Control.Margin%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 0.</span></span> <span data-ttu-id="cb8d2-163">如需詳細資訊，請參閱[逐步解說： 用來配置 Windows Form 控制項的邊框距離、 邊界和 AutoSize 屬性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-163">For details, see [Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).</span></span>  
   
-## 從工具箱拖曳控制項時使用對齊線  
- 對齊線能在您將控制項從 \[**工具箱**\] 拖曳至表單時對齊控制項。  
+2.  <span data-ttu-id="cb8d2-164">移動<xref:System.Windows.Forms.Button>接近右框線直到對齊線出現在表單的控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-164">Move the <xref:System.Windows.Forms.Button> control close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="cb8d2-165">表單的值現在會提供這個距離<xref:System.Windows.Forms.Control.Padding%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-165">This distance is now given by the value of the form's <xref:System.Windows.Forms.Control.Padding%2A> property.</span></span>  
   
-#### 若要從工具箱拖曳控制項時使用對齊線  
+3.  <span data-ttu-id="cb8d2-166">拖曳<xref:System.Windows.Forms.GroupBox>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-166">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-1.  將 <xref:System.Windows.Forms.Button> 控制項從 \[**工具箱**\] 拖曳至表單，但不要放開滑鼠按鈕。  
+4.  <span data-ttu-id="cb8d2-167">值變更<xref:System.Windows.Forms.GroupBox>控制項的<xref:System.Windows.Forms.Control.Padding%2A>屬性展開<xref:System.Windows.Forms.Control.Padding%2A>中的項目**屬性**視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性為 10。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-167">Change the value of the <xref:System.Windows.Forms.GroupBox> control's <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 10.</span></span>  
   
-2.  將滑鼠指標移至表單的設計工具介面上。  請注意，指標會變更，以指示建立新 <xref:System.Windows.Forms.Button> 控制項的位置。  
+5.  <span data-ttu-id="cb8d2-168">拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**到<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-168">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  在表單上四處拖曳滑鼠指標。  請注意出現的對齊線，這些對齊線是用來建議 <xref:System.Windows.Forms.Button> 控制項的對齊位置。  尋找與其他控制項對齊的位置。  
+6.  <span data-ttu-id="cb8d2-169">移動<xref:System.Windows.Forms.Button>控制項的右框線接近<xref:System.Windows.Forms.GroupBox>控制直到對齊線出現。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-169">Move the <xref:System.Windows.Forms.Button> control close to the right border of the <xref:System.Windows.Forms.GroupBox> control until a snapline appears.</span></span> <span data-ttu-id="cb8d2-170">移動<xref:System.Windows.Forms.Button>內控制<xref:System.Windows.Forms.GroupBox>控制項和附註的對齊線出現的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-170">Move the <xref:System.Windows.Forms.Button> control within the <xref:System.Windows.Forms.GroupBox> control and note where the snaplines appear.</span></span>  
   
-4.  放開滑鼠按鈕。  控制項會建立於對齊線所指示的位置。  
+## <a name="aligning-to-grouped-controls"></a><span data-ttu-id="cb8d2-171">對齊控制項群組</span><span class="sxs-lookup"><span data-stu-id="cb8d2-171">Aligning to Grouped Controls</span></span>  
+ <span data-ttu-id="cb8d2-172">您可以使用對齊線來對齊控制項群組以及做為控制內<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-172">You can use snaplines to align grouped controls as well as controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-## 使用對齊線調整控制項大小  
- 在您調整控制項大小時，對齊線能協助您對齊控制項。  
+#### <a name="to-align-to-grouped-controls"></a><span data-ttu-id="cb8d2-173">對齊控制項群組</span><span class="sxs-lookup"><span data-stu-id="cb8d2-173">To align to grouped controls</span></span>  
   
-#### 若要使用對齊線調整控制項大小  
+1.  <span data-ttu-id="cb8d2-174">選取您的表單上控制項的兩個。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-174">Select two of the controls on your form.</span></span> <span data-ttu-id="cb8d2-175">移動選取項目，並記下出現在您的選取項目和其他控制項之間的對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-175">Move the selection around and note the snaplines that appear between your selection and the other controls.</span></span>  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.Button> 控制項拖曳至表單。  
+2.  <span data-ttu-id="cb8d2-176">拖曳<xref:System.Windows.Forms.GroupBox>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-176">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-2.  藉由抓取其中一個角落縮放控點並加以拖曳，調整 <xref:System.Windows.Forms.Button> 控制項大小。  如需詳細資訊，請參閱 [如何：重新調整 Windows Form 上控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。  
+3.  <span data-ttu-id="cb8d2-177">拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**到<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-177">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  拖曳縮放控點直到其中一個 <xref:System.Windows.Forms.Button> 控制項的邊框對齊另一個控制項。  請注意會出現對齊線。  同時也請注意，縮放控點會貼齊至對齊線所指示的位置。  
+4.  <span data-ttu-id="cb8d2-178">選取其中一個<xref:System.Windows.Forms.Button>控制，並將之移<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-178">Select one of the <xref:System.Windows.Forms.Button> controls and move it around the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="cb8d2-179">請注意會出現在邊緣對齊線<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-179">Note the snaplines that appear at the edges of the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="cb8d2-180">也請注意會出現在邊緣對齊線<xref:System.Windows.Forms.Button>所包含的控制項<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-180">Also note the snaplines that appear at the edges of the <xref:System.Windows.Forms.Button> control that is contained by the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="cb8d2-181">容器控制項的子系的控制項也支援對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-181">Controls that are children of a container control also support snaplines.</span></span>  
   
-4.  在不同方向中調整 <xref:System.Windows.Forms.Button> 控制項的大小，並將縮放控點對齊至不同的控制項。  請注意，對齊線會以不同的方向出現以指示對齊。  
+## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="cb8d2-182">使用對齊線來放置控制項框大小</span><span class="sxs-lookup"><span data-stu-id="cb8d2-182">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
+ <span data-ttu-id="cb8d2-183">對齊線幫助您對齊控制當您第一次將它們放在表單上。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-183">Snaplines help you align controls when you first place them on a form.</span></span>  
   
-## 讓標籤對齊至控制項的文字  
- 某些控制項提供對齊線，可將其他控制項對齊至顯示的文字。  
+#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="cb8d2-184">使用對齊線來放置控制項框大小</span><span class="sxs-lookup"><span data-stu-id="cb8d2-184">To use snaplines to place a control by outlining its size</span></span>  
   
-#### 若要讓標籤對齊至控制項的文字  
+1.  <span data-ttu-id="cb8d2-185">按一下 [工具箱] 的 <xref:System.Windows.Forms.Button> 控制項圖示。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-185">In the **Toolbox**, click the <xref:System.Windows.Forms.Button> control icon.</span></span> <span data-ttu-id="cb8d2-186">請勿拖曳到表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-186">Do not drag it onto the form.</span></span>  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.TextBox> 控制項拖曳至表單。  當您把 <xref:System.Windows.Forms.TextBox> 控制項放在表單上時，請按一下智慧標籤圖像 \(Glyph\)，並選取 \[**設定文字為 textBox1**\] 選項。  如需詳細資訊，請參閱[逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
+2.  <span data-ttu-id="cb8d2-187">將滑鼠指標移至表單的設計介面上。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-187">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="cb8d2-188">請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.Button> 控制項圖示。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-188">Note that the pointer changes to a crosshair with the <xref:System.Windows.Forms.Button> control icon attached.</span></span> <span data-ttu-id="cb8d2-189">也請注意對齊線來建議對齊的位置可<xref:System.Windows.Forms.Button>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-189">Also note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span>  
   
-2.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.Label> 控制項拖曳至表單。  
+3.  <span data-ttu-id="cb8d2-190">按住滑鼠按鈕。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-190">Click and hold the mouse button.</span></span>  
   
-3.  將 <xref:System.Windows.Forms.Label> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值變更為 `true`。  請注意，控制項的框線會加以調整，以符合顯示文字。  
+4.  <span data-ttu-id="cb8d2-191">拖曳滑鼠指標圍繞表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-191">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="cb8d2-192">請注意，已繪製外框，表示位置和控制項的大小。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-192">Note that an outline is drawn, indicating the position and the size of the control.</span></span>  
   
-4.  將 <xref:System.Windows.Forms.Label> 控制項移至 <xref:System.Windows.Forms.TextBox> 控制項的左邊，讓它對齊 <xref:System.Windows.Forms.TextBox> 控制項的下邊緣。  請注意出現在兩個控制項下邊緣的對齊線。  
+5.  <span data-ttu-id="cb8d2-193">拖曳滑鼠指標，使其與另一個控制項在表單上對齊。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-193">Drag the pointer until it aligns with another control on the form.</span></span> <span data-ttu-id="cb8d2-194">請注意，會出現對齊線，表示對齊方式。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-194">Note that a snapline appears to indicate alignment.</span></span>  
   
-5.  將 <xref:System.Windows.Forms.Label>控制項略微往上移動，直到 <xref:System.Windows.Forms.Label>文字與 <xref:System.Windows.Forms.TextBox> 文字對齊為止。  請注意會顯示不同樣式的對齊線，指示兩個控制項的文字欄位對齊的時機。  
+6.  <span data-ttu-id="cb8d2-195">放開滑鼠按鈕。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-195">Release the mouse button.</span></span> <span data-ttu-id="cb8d2-196">建立控制項的位置與大小以 外框。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-196">The control is created at the position and size indicated by the outline.</span></span>  
   
-## 使用具有鍵盤瀏覽的對齊線  
- 當您使用鍵盤的方向鍵排列控制項時，對齊線可幫您對齊控制項。  
+## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="cb8d2-197">從 [工具箱] 拖曳控制項時使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-197">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
+ <span data-ttu-id="cb8d2-198">對齊線線可協助您對齊控制項拖曳它們從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-198">Snaplines help you align controls when you drag them from the **Toolbox** onto your form.</span></span>  
   
-#### 若要使用具有鍵盤瀏覽的對齊線  
+#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="cb8d2-199">若要從 [工具箱] 拖曳控制項時使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-199">To use snaplines when dragging a control from the Toolbox</span></span>  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.Button> 控制項拖曳至表單。  將它放在表單的左上角。  
+1.  <span data-ttu-id="cb8d2-200">拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單，但不要放開滑鼠按鈕。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-200">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form, but do not release the mouse button.</span></span>  
   
-2.  按下 CTRL\+向下鍵。  請注意，控制項會往表單下方移動至第一個可使用的水平對齊位置。  
+2.  <span data-ttu-id="cb8d2-201">將滑鼠指標移至表單的設計介面上。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-201">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="cb8d2-202">請注意，指標會變成表示之位置的新<xref:System.Windows.Forms.Button>會建立控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-202">Note that the pointer changes to indicate the position at which the new <xref:System.Windows.Forms.Button> control will be created.</span></span>  
   
-3.  按住 CTRL\+向下鍵，直到控制項到達表單下方為止。  請注意在往表單下方移動時，控制項佔有的位置。  
+3.  <span data-ttu-id="cb8d2-203">拖曳滑鼠指標圍繞表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-203">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="cb8d2-204">請注意對齊線來建議對齊的位置可<xref:System.Windows.Forms.Button>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-204">Note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="cb8d2-205">找出與其他控制項對齊的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-205">Find a position that is aligned with other controls.</span></span>  
   
-4.  按下 CTRL\+向右鍵。  請注意，控制項會在表單中移動至第一個可使用的垂直對齊位置。  
+4.  <span data-ttu-id="cb8d2-206">放開滑鼠按鈕。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-206">Release the mouse button.</span></span> <span data-ttu-id="cb8d2-207">對齊線所指示之位置建立控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-207">The control is created at the position indicated by the snaplines.</span></span>  
   
-5.  按下 CTRL\+向右鍵，直到控制項到達表單的側邊為止。  請注意在表單上移動時，控制項佔有的位置。  
+## <a name="resizing-controls-using-snaplines"></a><span data-ttu-id="cb8d2-208">使用對齊線的控制項調整大小</span><span class="sxs-lookup"><span data-stu-id="cb8d2-208">Resizing Controls Using Snaplines</span></span>  
+ <span data-ttu-id="cb8d2-209">對齊線可協助您對齊的控制項，調整其大小時。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-209">Snaplines help you align controls as you resize them.</span></span>  
   
-6.  使用方向鍵的組合，在表單上四處移動控制項。  請注意控制項佔有的位置，以及伴隨出現的對齊線。  
+#### <a name="to-resize-a-control-using-snaplines"></a><span data-ttu-id="cb8d2-210">若要調整大小的控制項使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-210">To resize a control using snaplines</span></span>  
   
-7.  按下 SHIFT\+任何方向鍵，以調整 <xref:System.Windows.Forms.Button> 控制項大小 \(以一個像素遞增\)。  
+1.  <span data-ttu-id="cb8d2-211">拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-211">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-8.  按下 CTRL\+SHIFT\+任何方向鍵，以調整 <xref:System.Windows.Forms.Button> 控制項大小 \(以對齊線來遞增\)。  
+2.  <span data-ttu-id="cb8d2-212">調整大小<xref:System.Windows.Forms.Button>抓取其中一個調整大小控點，並拖曳邊角的控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-212">Resize the <xref:System.Windows.Forms.Button> control by grabbing one of the corner sizing handles and dragging.</span></span> <span data-ttu-id="cb8d2-213">如需詳細資訊，請參閱[如何： 調整 Windows Form 上控制項](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-213">For details, see [How to: Resize Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).</span></span>  
   
-## 對齊線和配置面板  
- 配置面板內停用對齊線。  
+3.  <span data-ttu-id="cb8d2-214">拖曳調整大小控點，直到其中一個<xref:System.Windows.Forms.Button>控制項的框線對齊的另一個控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-214">Drag the sizing handle until one of the <xref:System.Windows.Forms.Button> control's borders is aligned with another control.</span></span> <span data-ttu-id="cb8d2-215">請注意，會出現對齊。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-215">Note that a snapline appears.</span></span> <span data-ttu-id="cb8d2-216">另外請注意，調整大小控點貼齊至對齊線所指定的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-216">Also note that the sizing handle snaps to the position indicated by the snapline.</span></span>  
   
-#### 若要選擇性地停用對齊線  
+4.  <span data-ttu-id="cb8d2-217">調整大小<xref:System.Windows.Forms.Button>控制不同的方向並對齊到不同的控制項調整大小控點。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-217">Resize the <xref:System.Windows.Forms.Button> control in different directions and align the sizing handle to different controls.</span></span> <span data-ttu-id="cb8d2-218">請注意對齊線出現在不同的方向，以指示對齊的方式。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-218">Note how the snaplines appear in various orientations to indicate alignment.</span></span>  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項拖曳至表單。  
+## <a name="aligning-a-label-to-a-controls-text"></a><span data-ttu-id="cb8d2-219">對齊控制項的文字標籤</span><span class="sxs-lookup"><span data-stu-id="cb8d2-219">Aligning a Label to a Control's Text</span></span>  
+ <span data-ttu-id="cb8d2-220">某些控制項提供的對齊線來對齊其他控制項加入顯示的文字。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-220">Some controls offer a snapline for aligning other controls to displayed text.</span></span>  
   
-2.  在 \[**工具箱**\] 中，按兩下 <xref:System.Windows.Forms.Button> 控制項圖示。  請注意，新的按鈕控制項會出現在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的第一個儲存格中。  
+#### <a name="to-align-a-label-to-a-controls-text"></a><span data-ttu-id="cb8d2-221">若要對齊的標籤控制項的文字</span><span class="sxs-lookup"><span data-stu-id="cb8d2-221">To align a label to a control's text</span></span>  
   
-3.  多做兩次按兩下 \[**工具箱**\] 中 <xref:System.Windows.Forms.Button> 控制項圖示的動作。  這會在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中保留一個空白的儲存格。  
+1.  <span data-ttu-id="cb8d2-222">拖曳<xref:System.Windows.Forms.TextBox>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-222">Drag a <xref:System.Windows.Forms.TextBox> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="cb8d2-223">當您卸除<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中，按一下智慧標籤圖像，然後選取**文字設 textBox1**選項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-223">When you drop the <xref:System.Windows.Forms.TextBox> control onto the form, click the smart-tag glyph and select the **Set text to textBox1** option.</span></span> <span data-ttu-id="cb8d2-224">如需詳細資訊，請參閱[逐步解說： 執行常見工作使用智慧標籤上的 Windows Form 控制項](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-224">For details, see [Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).</span></span>  
   
-4.  將 <xref:System.Windows.Forms.Button> 控制項從 \[**工具箱**\] 拖曳至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的空白儲存格。  請注意，不會出現對齊線。  
+2.  <span data-ttu-id="cb8d2-225">拖曳<xref:System.Windows.Forms.Label>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-225">Drag a <xref:System.Windows.Forms.Label> control from the **Toolbox** onto your form.</span></span>  
   
-5.  從 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中拖曳出 <xref:System.Windows.Forms.Button> 控制項，並將它在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項周圍移動。  請注意，對齊線會再度出現。  
+3.  <span data-ttu-id="cb8d2-226">變更 <xref:System.Windows.Forms.Label> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值為 `true`。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-226">Change the value of the <xref:System.Windows.Forms.Label> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="cb8d2-227">請注意控制項的框線會調整以符合顯示文字。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-227">Note that the control's borders are adjusted to fit the display text.</span></span>  
   
-## 停用對齊線  
- 依據預設會開啟對齊線。  您可以選擇性地停用對齊線，或者在設計環境中停用對齊線。  
+4.  <span data-ttu-id="cb8d2-228">移動<xref:System.Windows.Forms.Label>控制項左邊<xref:System.Windows.Forms.TextBox>控制，讓它配合的下邊緣<xref:System.Windows.Forms.TextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-228">Move the <xref:System.Windows.Forms.Label> control to the left of the <xref:System.Windows.Forms.TextBox> control, so it is aligned with the bottom edge of the <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="cb8d2-229">請注意會出現兩個控制項下邊緣對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-229">Note the snapline that appears along the bottom edges of the two controls.</span></span>  
   
-#### 若要選擇性地停用對齊線  
+5.  <span data-ttu-id="cb8d2-230">移動<xref:System.Windows.Forms.Label>控制項稍微向上，直到<xref:System.Windows.Forms.Label>文字和<xref:System.Windows.Forms.TextBox>對齊文字。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-230">Move the <xref:System.Windows.Forms.Label> control slightly upward, until the <xref:System.Windows.Forms.Label> text and the <xref:System.Windows.Forms.TextBox> text are aligned.</span></span> <span data-ttu-id="cb8d2-231">請注意會出現，指出對齊兩個控制項的文字欄位時的不同樣式對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-231">Note the differently styled snapline that appears, indicating when the text fields of both controls are aligned.</span></span>  
   
--   當控制項在表單上四處移動時按下 ALT 鍵。  
+## <a name="using-snaplines-with-keyboard-navigation"></a><span data-ttu-id="cb8d2-232">使用鍵盤瀏覽使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-232">Using Snaplines with Keyboard Navigation</span></span>  
+ <span data-ttu-id="cb8d2-233">對齊線幫助您對齊控制當您排列使用鍵盤的方向鍵。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-233">Snaplines help you align controls when you are arranging them using the keyboard's arrow keys.</span></span>  
   
-     請注意，不會出現任何對齊線，且控制項也不會貼齊至任何可能的對齊位置。  
+#### <a name="to-use-snaplines-with-keyboard-navigation"></a><span data-ttu-id="cb8d2-234">若要使用鍵盤瀏覽可以使用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-234">To use snaplines with keyboard navigation</span></span>  
   
-#### 若要在設計環境中停用對齊線  
+1.  <span data-ttu-id="cb8d2-235">拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-235">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="cb8d2-236">請將它放在表單的左上角。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-236">Place it in the upper-left corner of the form.</span></span>  
   
-1.  從 \[**工具箱**\] 功能表中開啟 \[**選項**\] 對話方塊。  開啟 \[Windows Form 設計工具\] 對話方塊。  如需詳細資訊，請參閱[General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/zh-tw/8dd170af-72f0-4212-b04b-034ceee92834)。  
+2.  <span data-ttu-id="cb8d2-237">按 CTRL + 向下箭號。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-237">Press CTRL+DOWN ARROW.</span></span> <span data-ttu-id="cb8d2-238">請注意，控制項移到表單下方的第一個可用的水平對齊的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-238">Note that the control moves down the form to the first available horizontal alignment position.</span></span>  
   
-2.  請選取 \[**一般**\] 節點。  在 \[**配置模式**\] 區段中，將選取範圍從 \[**SnapLines**\] 變更為 \[**SnapToGrid**\]。  
+3.  <span data-ttu-id="cb8d2-239">請按 CTRL + 向下箭號，直到控制項到達表單底部。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-239">Press CTRL+DOWN ARROW until the control reaches the bottom of the form.</span></span> <span data-ttu-id="cb8d2-240">請注意佔有表單下方移動的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-240">Note the positions it occupies as it moves down the form.</span></span>  
   
-3.  按一下 \[確定\] 以套用設定。  
+4.  <span data-ttu-id="cb8d2-241">按 CTRL + 向右鍵。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-241">Press CTRL+RIGHT ARROW.</span></span> <span data-ttu-id="cb8d2-242">請注意，控制項在表單中移動至第一個可用的垂直對齊位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-242">Note that the control moves across the form to the first available vertical alignment position.</span></span>  
   
-4.  選取表單上的控制項，並將它移至其他控制項周圍。  請注意，不會出現對齊線。  
+5.  <span data-ttu-id="cb8d2-243">請按 CTRL + 向右箭號，直到控制項到達表單的側邊。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-243">Press CTRL+RIGHT ARROW until the control reaches the side of the form.</span></span> <span data-ttu-id="cb8d2-244">請注意佔有移動在表單上的位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-244">Note the positions it occupies as it moves across the form.</span></span>  
   
-## 後續步驟  
- 對齊線提供在表單上對齊控制項的易用工具。  建議另外再研究以下各項：  
+6.  <span data-ttu-id="cb8d2-245">移動周圍表單控制項使用的箭頭按鍵組合。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-245">Move the control around the form with a combination of arrow keys.</span></span> <span data-ttu-id="cb8d2-246">請注意，控制項所佔的位置和對齊線，其會隨附於。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-246">Note the positions the control occupies and the snaplines that accompany them.</span></span>  
   
--   嘗試在另一個 <xref:System.Windows.Forms.GroupBox> 控制項中巢狀套疊 <xref:System.Windows.Forms.GroupBox> 控制項。  在 <xref:System.Windows.Forms.GroupBox> 子控制項內放置一個 <xref:System.Windows.Forms.Button> 控制項，並在父 <xref:System.Windows.Forms.GroupBox> 控制項中放置另一個。  四處移動 <xref:System.Windows.Forms.Button> 控制項，查看對齊線跨越容器界限的方式。  
+7.  <span data-ttu-id="cb8d2-247">按 SHIFT + 任何方向鍵調整<xref:System.Windows.Forms.Button>增加一個像素的控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-247">Press SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control by increments of one pixel.</span></span>  
   
--   建立 <xref:System.Windows.Forms.TextBox> 控制項的資料行和 <xref:System.Windows.Forms.Label> 控制項的對應資料行。  將 <xref:System.Windows.Forms.Label> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值設定為 `true`。  使用對齊線移動 <xref:System.Windows.Forms.Label> 控制項，讓顯示的文字對齊 <xref:System.Windows.Forms.TextBox> 控制項中的文字。  
+8.  <span data-ttu-id="cb8d2-248">按下 CTRL + SHIFT + 任何方向鍵調整<xref:System.Windows.Forms.Button>對齊線為增量來控制。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-248">Press CTRL+SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control in snapline increments.</span></span>  
   
- 如需 Windows 使用者介面設計的詳細資訊，請參閱*《Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers》*一書，Redmond, WA: Microsoft Press, 1999  \(USBN: 0\-7356\-0566\-1\)。  
+## <a name="snaplines-and-layout-panels"></a><span data-ttu-id="cb8d2-249">對齊線和版面配置面板</span><span class="sxs-lookup"><span data-stu-id="cb8d2-249">Snaplines and Layout Panels</span></span>  
+ <span data-ttu-id="cb8d2-250">對齊線會在配置面板內停用。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-250">Snaplines are disabled within layout panels.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.Design.Behavior.SnapLine>   
- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)   
- [排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="cb8d2-251">若要選擇性地停用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-251">To selectively disable snaplines</span></span>  
+  
+1.  <span data-ttu-id="cb8d2-252">拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-252">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
+  
+2.  <span data-ttu-id="cb8d2-253">在 [工具箱] <xref:System.Windows.Forms.Button>**中按兩下**控制項圖示。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-253">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox**.</span></span> <span data-ttu-id="cb8d2-254">請注意，新的按鈕控制項出現在<xref:System.Windows.Forms.TableLayoutPanel>控制項的第一個資料格。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-254">Note that a new button control appears in the <xref:System.Windows.Forms.TableLayoutPanel> control's first cell.</span></span>  
+  
+3.  <span data-ttu-id="cb8d2-255">按兩下<xref:System.Windows.Forms.Button>中的控制項圖示**工具箱**兩次。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-255">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox** twice more.</span></span> <span data-ttu-id="cb8d2-256">這會保留在一個空資料格<xref:System.Windows.Forms.TableLayoutPanel>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-256">This leaves one empty cell in the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
+  
+4.  <span data-ttu-id="cb8d2-257">拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**的空白儲存格中<xref:System.Windows.Forms.TableLayoutPanel>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-257">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the empty cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="cb8d2-258">請注意，沒有對齊線隨即出現。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-258">Note that no snaplines appear.</span></span>  
+  
+5.  <span data-ttu-id="cb8d2-259">拖曳<xref:System.Windows.Forms.Button>超出控制<xref:System.Windows.Forms.TableLayoutPanel>控制，並將其移<xref:System.Windows.Forms.TableLayoutPanel>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-259">Drag the <xref:System.Windows.Forms.Button> control out of the <xref:System.Windows.Forms.TableLayoutPanel> control and move it around the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="cb8d2-260">請注意對齊線出現一次。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-260">Note that snaplines appear again.</span></span>  
+  
+## <a name="disabling-snaplines"></a><span data-ttu-id="cb8d2-261">停用的對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-261">Disabling Snaplines</span></span>  
+ <span data-ttu-id="cb8d2-262">預設會開啟對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-262">Snaplines are turned on by default.</span></span> <span data-ttu-id="cb8d2-263">您可以選擇性地停用對齊線，或您可以在設計環境中停用它們。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-263">You can disable snaplines selectively, or you can disable them in the design environment.</span></span>  
+  
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="cb8d2-264">若要選擇性地停用對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-264">To selectively disable snaplines</span></span>  
+  
+-   <span data-ttu-id="cb8d2-265">按下 ALT 鍵並移動周圍表單的控制項時。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-265">Press the ALT key and while moving a control around the form.</span></span>  
+  
+     <span data-ttu-id="cb8d2-266">請注意，任何對齊線出現控制項不會貼齊至任何可能的對齊位置。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-266">Note that no snaplines appear and the control does not snap to any potential alignment positions.</span></span>  
+  
+#### <a name="to-disable-snaplines-in-the-design-environment"></a><span data-ttu-id="cb8d2-267">若要停用在設計環境中的對齊線</span><span class="sxs-lookup"><span data-stu-id="cb8d2-267">To disable snaplines in the design environment</span></span>  
+  
+1.  <span data-ttu-id="cb8d2-268">從**工具**功能表中，開啟**選項** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-268">From the **Tools** menu, open the **Options** dialog box.</span></span> <span data-ttu-id="cb8d2-269">開啟 [Windows Form 設計工具] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-269">Open the Windows Forms Designer dialog box.</span></span> <span data-ttu-id="cb8d2-270">如需詳細資訊，請參閱[一般]、 [Windows Form 設計工具、 [選項] 對話方塊](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-270">For details, see [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).</span></span>  
+  
+2.  <span data-ttu-id="cb8d2-271">選取**一般**節點。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-271">Select the **General** node.</span></span> <span data-ttu-id="cb8d2-272">在**版面配置模式**區段中，變更選取項目從**對齊線**至**SnapToGrid**。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-272">In the **Layout Mode** section, change the selection from **SnapLines** to **SnapToGrid**.</span></span>  
+  
+3.  <span data-ttu-id="cb8d2-273">按一下 [確定] 以套用此設定。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-273">Click OK to apply the setting.</span></span>  
+  
+4.  <span data-ttu-id="cb8d2-274">選取您的表單上控制項，並將它移至其他控制項周圍。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-274">Select a control on your form and move it around the other controls.</span></span> <span data-ttu-id="cb8d2-275">請注意，不會顯示對齊線。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-275">Note that snaplines do not appear.</span></span>  
+  
+## <a name="next-steps"></a><span data-ttu-id="cb8d2-276">後續步驟</span><span class="sxs-lookup"><span data-stu-id="cb8d2-276">Next Steps</span></span>  
+ <span data-ttu-id="cb8d2-277">對齊線可直覺的對齊表單上的控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-277">Snaplines offer an intuitive means of aligning controls on your form.</span></span> <span data-ttu-id="cb8d2-278">進一步的探索建議包括：</span><span class="sxs-lookup"><span data-stu-id="cb8d2-278">Suggestions for more exploration include:</span></span>  
+  
+-   <span data-ttu-id="cb8d2-279">請嘗試巢狀<xref:System.Windows.Forms.GroupBox>在另一個控制項<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-279">Try nesting a <xref:System.Windows.Forms.GroupBox> control within another <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="cb8d2-280">位置<xref:System.Windows.Forms.Button>內的子控制項<xref:System.Windows.Forms.GroupBox>控制項，以及另一個父系內<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-280">Place a <xref:System.Windows.Forms.Button> control within the child <xref:System.Windows.Forms.GroupBox> control, and another within the parent <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="cb8d2-281">移動<xref:System.Windows.Forms.Button>大約以查看如何對齊跨容器界限的控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-281">Move the <xref:System.Windows.Forms.Button> controls around to see how the snaplines cross container boundaries.</span></span>  
+  
+-   <span data-ttu-id="cb8d2-282">建立的資料行<xref:System.Windows.Forms.TextBox>控制項和對應的資料行的<xref:System.Windows.Forms.Label>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-282">Create a column of <xref:System.Windows.Forms.TextBox> controls and a corresponding column of <xref:System.Windows.Forms.Label> controls.</span></span> <span data-ttu-id="cb8d2-283">值設定<xref:System.Windows.Forms.Label>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-283">Set the value of the <xref:System.Windows.Forms.Label> controls' <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="cb8d2-284">使用對齊線來移動<xref:System.Windows.Forms.Label>控制項，其顯示的文字中的文字對齊<xref:System.Windows.Forms.TextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-284">Use snaplines to move the <xref:System.Windows.Forms.Label> controls so their displayed text is aligned with the text in the <xref:System.Windows.Forms.TextBox> controls.</span></span>  
+  
+ <span data-ttu-id="cb8d2-285">Windows 使用者介面設計的相關資訊，請參閱本書*Microsoft Windows 使用者經驗、 使用者介面的開發人員和設計工具的正式方針*Redmond，WA: Microsoft Press，1999年。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-285">For information about Windows user interface design, see the book *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA: Microsoft Press, 1999.</span></span> <span data-ttu-id="cb8d2-286">(USBN: 0-7356-0566年-1)。</span><span class="sxs-lookup"><span data-stu-id="cb8d2-286">(USBN: 0-7356-0566-1).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="cb8d2-287">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cb8d2-287">See Also</span></span>  
+ <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
+ [<span data-ttu-id="cb8d2-288">逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項</span><span class="sxs-lookup"><span data-stu-id="cb8d2-288">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="cb8d2-289">逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="cb8d2-289">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="cb8d2-290">逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="cb8d2-290">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
+ [<span data-ttu-id="cb8d2-291">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="cb8d2-291">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)

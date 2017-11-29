@@ -1,90 +1,96 @@
 ---
-title: "相依性屬性回呼和驗證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "回呼, 驗證"
-  - "強制轉型值回呼"
-  - "相依性屬性, 回呼"
-  - "相依性屬性, 驗證"
-  - "相依性屬性驗證"
+title: "相依性屬性回呼和驗證"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dependency properties [WPF], validation
+- coerce value callbacks [WPF]
+- callbacks [WPF], validation
+- dependency properties [WPF], callbacks
+- validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 相依性屬性回呼和驗證
-本主題說明如何使用屬性相關功能 \(例如有效性驗證\) 的替代自訂實作、每次屬性有效值變更時叫用 \(Invoke\) 的回呼 \(Callback\)，以及對值決策的覆寫可能外在影響，建立相依性屬性。  這個主題也討論適合使用這些技巧來擴大預設屬性系統行為的案例。  
+# <a name="dependency-property-callbacks-and-validation"></a><span data-ttu-id="41e3f-102">相依性屬性回呼和驗證</span><span class="sxs-lookup"><span data-stu-id="41e3f-102">Dependency Property Callbacks and Validation</span></span>
+<span data-ttu-id="41e3f-103">本主題說明如何針對屬性相關的功能建立使用替代自訂實作的相依性屬性，例如：驗證判斷、每當屬性有效值變更時叫用的回撥，以及覆寫值決策的可能外在影響。</span><span class="sxs-lookup"><span data-stu-id="41e3f-103">This topic describes how to create dependency properties using alternative custom implementations for property-related features such as validation determination, callbacks that are invoked whenever the property's effective value is changed, and overriding possible outside influences on value determination.</span></span> <span data-ttu-id="41e3f-104">本主題也會討論適合使用這些技術在展開預設屬性系統行為的案例。</span><span class="sxs-lookup"><span data-stu-id="41e3f-104">This topic also discusses scenarios where expanding on the default property system behaviors by using these techniques is appropriate.</span></span>  
   
-   
+  
   
 <a name="prerequisites"></a>   
-## 必要條件  
- 本主題假設您已了解實作相依性屬性的基本案例，以及中繼資料 \(Metadata\) 套用至自訂相依性屬性的方式。  如需相關內容，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="41e3f-105">必要條件</span><span class="sxs-lookup"><span data-stu-id="41e3f-105">Prerequisites</span></span>  
+ <span data-ttu-id="41e3f-106">本主題假設您已了解實作相依性屬性的基本案例，以及如何將中繼資料套用到自訂相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="41e3f-106">This topic assumes that you understand the basic scenarios of implementing a dependency property, and how metadata is applied to a custom dependency property.</span></span> <span data-ttu-id="41e3f-107">如需相關內容，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。</span><span class="sxs-lookup"><span data-stu-id="41e3f-107">See [Custom Dependency Properties](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) and [Dependency Property Metadata](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) for context.</span></span>  
   
 <a name="Validation_Callbacks"></a>   
-## 驗證回呼  
- 您可以在第一次註冊相依性屬性時為其指派驗證回呼。  驗證回呼不是屬性中繼資料的一部分，而是 <xref:System.Windows.DependencyProperty.Register%2A> 方法的直接輸入。  因此，一旦建立相依性屬性的驗證回呼之後，就不能以新實作加以覆寫。  
+## <a name="validation-callbacks"></a><span data-ttu-id="41e3f-108">驗證回撥</span><span class="sxs-lookup"><span data-stu-id="41e3f-108">Validation Callbacks</span></span>  
+ <span data-ttu-id="41e3f-109">第一次登錄驗證回撥時，可以將它指派給相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="41e3f-109">Validation callbacks can be assigned to a dependency property when you first register it.</span></span> <span data-ttu-id="41e3f-110">不屬於屬性中繼資料; 這種驗證回呼。它是直接輸入的<xref:System.Windows.DependencyProperty.Register%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="41e3f-110">The validation callback is not part of property metadata; it is a direct input of the <xref:System.Windows.DependencyProperty.Register%2A> method.</span></span> <span data-ttu-id="41e3f-111">因此，一旦針對相依性屬性建立驗證回撥，就不能以新的實作覆寫。</span><span class="sxs-lookup"><span data-stu-id="41e3f-111">Therefore, once a validation callback is created for a dependency property, it cannot be overridden by a new implementation.</span></span>  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- 實作回呼的方式就是針對回呼提供物件值。  如果提供的值是屬性的有效值，回呼會傳回 `true`，否則便會傳回 `false`。  一般假設屬性具有正確的型別 \(依據向屬性系統註冊的型別來判斷\)，因此通常不會在回呼內檢查型別。  屬性系統會在各種不同的作業中使用回呼，  包括依預設值進行初次的型別初始設定、透過叫用 <xref:System.Windows.DependencyObject.SetValue%2A> 進行程式設計變更，或是嘗試以提供的預設值覆寫中繼資料。  如果驗證回呼是由前述任何一項作業所叫用，並傳回 `false`，則會引發例外狀況。  應用程式撰寫者必須做好處理這些例外狀況的準備。  驗證回呼通常用來驗證列舉值，或是在屬性設定必須是零或大於零的度量資訊時，限制整數或雙精度浮點數 \(Double\) 的值。  
+ <span data-ttu-id="41e3f-112">實作回撥以提供物件值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-112">The callbacks are implemented such that they are provided an object value.</span></span> <span data-ttu-id="41e3f-113">如果提供的值對屬性有效，它們會傳回 `true`；否則傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="41e3f-113">They return `true` if the provided value is valid for the property; otherwise, they return `false`.</span></span> <span data-ttu-id="41e3f-114">因為假設屬性是依照屬性系統登錄類型的正確類型，所以通常不會在回撥內檢查類型。</span><span class="sxs-lookup"><span data-stu-id="41e3f-114">It is assumed that the property is of the correct type per the type registered with the property system, so checking type within the callbacks is not ordinarily done.</span></span> <span data-ttu-id="41e3f-115">屬性系統在各種不同的作業中使用回撥。</span><span class="sxs-lookup"><span data-stu-id="41e3f-115">The callbacks are used by the property system in a variety of different operations.</span></span> <span data-ttu-id="41e3f-116">這包括初始型別初始設定為預設值，以程式設計方式變更叫用<xref:System.Windows.DependencyObject.SetValue%2A>，或嘗試使用提供的新預設值來覆寫中繼資料。</span><span class="sxs-lookup"><span data-stu-id="41e3f-116">This includes the initial type initialization by default value, programmatic change by invoking <xref:System.Windows.DependencyObject.SetValue%2A>, or attempts to override metadata with new default value provided.</span></span> <span data-ttu-id="41e3f-117">如果這些作業的任何一項叫用了驗證回撥，並傳回 `false`，則會引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="41e3f-117">If the validation callback is invoked by any of these operations, and returns `false`, then an exception will be raised.</span></span> <span data-ttu-id="41e3f-118">應用程式撰寫者必須準備好處理這些例外狀況。</span><span class="sxs-lookup"><span data-stu-id="41e3f-118">Application writers must be prepared to handle these exceptions.</span></span> <span data-ttu-id="41e3f-119">驗證回撥的常見用法是驗證列舉值，或屬性設定必須為零或大於零的度量時，限制整數或雙精度浮點數。</span><span class="sxs-lookup"><span data-stu-id="41e3f-119">A common use of validation callbacks is validating enumeration values, or constraining values of integers or doubles when the property sets measurements that must be zero or greater.</span></span>  
   
- 驗證回呼是專門用來做為類別驗證程式，而非執行個體驗證程式。  回呼的參數不會傳遞設定要驗證之屬性的特定 <xref:System.Windows.DependencyObject>。  因此驗證回呼並不能用來強制採用可能影響屬性值的「相依性」，其中屬性的執行個體專用值相依於諸如其他屬性之執行個體專用值或執行階段狀態等因素。  
+ <span data-ttu-id="41e3f-120">驗證回撥原為專用的類別驗證程式，不是執行個體驗證程式。</span><span class="sxs-lookup"><span data-stu-id="41e3f-120">Validation callbacks specifically are intended to be class validators, not instance validators.</span></span> <span data-ttu-id="41e3f-121">回呼參數進行通訊的特定<xref:System.Windows.DependencyObject>上會設定要驗證的屬性。</span><span class="sxs-lookup"><span data-stu-id="41e3f-121">The parameters of the callback do not communicate a specific <xref:System.Windows.DependencyObject> on which the properties to validate are set.</span></span> <span data-ttu-id="41e3f-122">因此，驗證回撥對強制執行可能影響屬性值的可能「相依性」無幫助，其中屬性的執行個體特定值是取決於其他屬性的執行個體特定值或執行階段狀態等因素。</span><span class="sxs-lookup"><span data-stu-id="41e3f-122">Therefore the validation callbacks are not useful for enforcing the possible "dependencies" that might influence a property value, where the instance-specific value of a property is dependent on factors such as instance-specific values of other properties, or run-time state.</span></span>  
   
- 下列範例程式碼適用於非常簡單的驗證回呼案例：驗證基本型別為 <xref:System.Double> 的屬性不是 <xref:System.Double.PositiveInfinity> 或 <xref:System.Double.NegativeInfinity>。  
+ <span data-ttu-id="41e3f-123">以下是非常簡單的驗證回呼案例的範例程式碼： 驗證的屬性，其類型為<xref:System.Double>基本不<xref:System.Double.PositiveInfinity>或<xref:System.Double.NegativeInfinity>。</span><span class="sxs-lookup"><span data-stu-id="41e3f-123">The following is example code for a very simple validation callback scenario: validating that a property that is typed as the <xref:System.Double> primitive is not <xref:System.Double.PositiveInfinity> or <xref:System.Double.NegativeInfinity>.</span></span>  
   
  [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
  [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
-## 強制轉型值回呼和屬性變更事件  
- 強制轉型值回呼會傳遞屬性的特定 <xref:System.Windows.DependencyObject> 執行個體，而每次相依性屬性值變更時屬性系統所叫用的 <xref:System.Windows.PropertyChangedCallback> 實作也一樣。  您可以搭配使用這兩種回呼，在項目上建立一系列屬性，讓其中一個屬性的變更強制另一個屬性進行強制轉型或重新評估。  
+## <a name="coerce-value-callbacks-and-property-changed-events"></a><span data-ttu-id="41e3f-124">強制轉型值回撥和屬性變更事件</span><span class="sxs-lookup"><span data-stu-id="41e3f-124">Coerce Value Callbacks and Property Changed Events</span></span>  
+ <span data-ttu-id="41e3f-125">指定值回呼就會傳遞特定<xref:System.Windows.DependencyObject>執行個體的屬性一樣<xref:System.Windows.PropertyChangedCallback>相依性屬性的值變更時叫用之屬性系統的實作。</span><span class="sxs-lookup"><span data-stu-id="41e3f-125">Coerce value callbacks do pass the specific <xref:System.Windows.DependencyObject> instance for properties, as do <xref:System.Windows.PropertyChangedCallback> implementations that are invoked by the property system whenever the value of a dependency property changes.</span></span> <span data-ttu-id="41e3f-126">搭配使用這兩種回撥，您可以在有以下特性的項目上建立一系列的屬性：一個屬性中的變更會強制另一個屬性轉型或重新評估。</span><span class="sxs-lookup"><span data-stu-id="41e3f-126">Using these two callbacks in combination, you can create a series of properties on elements where changes in one property will force a coercion or reevaluation of another property.</span></span>  
   
- 使用相依性屬性之連結的典型案例是當您擁有使用者介面驅動屬性，而其中項目各持有一個最小值和最大值的屬性，以及另一個實際值或目前值的屬性。  在此案例中，如果調整最大值後導致目前的值超過新的最大值，您可能需要強制轉型目前的值，使其不大於新的最大值，同時讓最小值與目前的值產生類似的關係。  
+ <span data-ttu-id="41e3f-127">使用相依性屬性連結的一般案例，是當您有使用者介面驅動的屬性，其中項目為最小值和最大值各保留一個屬性，為實際值或目前值保留第三個屬性。</span><span class="sxs-lookup"><span data-stu-id="41e3f-127">A typical scenario for using a linkage of dependency properties is when you have a user interface driven property where the element holds one property each for the minimum and maximum value, and a third property for the actual or current value.</span></span> <span data-ttu-id="41e3f-128">在這裡，如果以某種方式調整了最大值，以致目前的值超過新的最大值，您可能會想要將目前的值強制轉型為不大於新的最大值，且為最小值和目前值的類似關聯。</span><span class="sxs-lookup"><span data-stu-id="41e3f-128">Here, if the maximum was adjusted in such a way that the current value exceeded the new maximum, you would want to coerce the current value to be no greater than the new maximum, and a similar relationship for minimum to current.</span></span>  
   
- 以下顯示一段非常簡短的程式碼範例，僅適用於說明這種關係的三種相依性屬性其中一種。  此範例示範如何註冊相關 \*Reading 屬性之 Min\/Max\/Current 集合的 `CurrentReading` 屬性。  範例中使用驗證的方式如上一節所示。  
+ <span data-ttu-id="41e3f-129">以下是示範這種關係之三種相依性屬性其一的極短範例程式碼。</span><span class="sxs-lookup"><span data-stu-id="41e3f-129">The following is very brief example code for just one of the three dependency properties that illustrate this relationship.</span></span> <span data-ttu-id="41e3f-130">本例示範如何登錄相關 *Reading 屬性的最小值/最大值/目前值集合的 `CurrentReading` 屬性。</span><span class="sxs-lookup"><span data-stu-id="41e3f-130">The example shows how the `CurrentReading` property of a Min/Max/Current set of related *Reading properties is registered.</span></span> <span data-ttu-id="41e3f-131">它使用上一節中示範的驗證。</span><span class="sxs-lookup"><span data-stu-id="41e3f-131">It uses the validation as shown in the previous section.</span></span>  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- Current 的屬性變更回呼可用來將變更轉送至其他相依屬性，方法是明確叫用針對其他屬性註冊的強制轉型值回呼：  
+ <span data-ttu-id="41e3f-132">目前值的屬性變更回撥藉由明確叫用已為其他屬性登錄的強制轉型值回撥，用來將變更轉送至其他相依的屬性：</span><span class="sxs-lookup"><span data-stu-id="41e3f-132">The property changed callback for Current is used to forward the change to other dependent properties, by explicitly invoking the coerce value callbacks that are registered for those other properties:</span></span>  
   
  [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
  [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
- 強制轉型值回會檢查目前屬性可能相依的屬性值，並在必要時強制轉型目前的值：  
+ <span data-ttu-id="41e3f-133">強制轉型值回撥會檢查目前屬性可能相依的屬性值，如有必要會強制轉型目前的值︰</span><span class="sxs-lookup"><span data-stu-id="41e3f-133">The coerce value callback checks the values of properties that the current property is potentially dependent upon, and coerces the current value if necessary:</span></span>  
   
  [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
  [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
->  屬性的預設值不會強制轉型。  屬性值等於預設值的情況可能發生在屬性值仍然具有其初始預設值時，或是以 <xref:System.Windows.DependencyObject.ClearValue%2A> 清除其他值之後。  
+>  <span data-ttu-id="41e3f-134">不會強制轉型屬性的預設值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-134">Default values of properties are not coerced.</span></span> <span data-ttu-id="41e3f-135">如果屬性值仍有其初始的預設值，或透過清除其他的值，屬性值等於預設值可能會發生<xref:System.Windows.DependencyObject.ClearValue%2A>。</span><span class="sxs-lookup"><span data-stu-id="41e3f-135">A property value equal to the default value might occur if a property value still has its initial default, or through clearing other values with <xref:System.Windows.DependencyObject.ClearValue%2A>.</span></span>  
   
- 強制轉型值回呼和屬性變更回呼是屬性中繼資料的一部分。  因此，若特定相依屬性所在的型別係衍生自擁有該相依屬性的型別，您就可以透過在自己的型別上覆寫該屬性的中繼資料，以變更該特定相依性屬性的回呼。  
+ <span data-ttu-id="41e3f-136">強制轉型值和屬性變更回撥是屬性中繼資料的一部分。</span><span class="sxs-lookup"><span data-stu-id="41e3f-136">The coerce value and property changed callbacks are part of property metadata.</span></span> <span data-ttu-id="41e3f-137">因此，您可以覆寫您類型上該屬性的中繼資料，變更特定相依性屬性的回撥，因為它存在於擁有相依性屬性之衍生來源的類型。</span><span class="sxs-lookup"><span data-stu-id="41e3f-137">Therefore, you can change the callbacks for a particular dependency property as it exists on a type that you derive from the type that owns the dependency property, by overriding the metadata for that property on your type.</span></span>  
   
 <a name="Advanced"></a>   
-## 進階強制轉型和回呼案例  
+## <a name="advanced-coercion-and-callback-scenarios"></a><span data-ttu-id="41e3f-138">進階的強制型轉和回撥案例</span><span class="sxs-lookup"><span data-stu-id="41e3f-138">Advanced Coercion and Callback Scenarios</span></span>  
   
-### 限制條件和需要的值  
- 屬性系統會依照您宣告的邏輯，使用 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 回呼來強制轉型值，但本機設定之屬性的強制轉型值在內部仍會保留「需要的值」。  如果條件約束以在應用程式存留期 \(Lifetime\) 間可能動態變更的其他屬性值做為基礎，強制轉型 \(Coercion\) 條件約束也會動態變更，而受限制的屬性則可變更其值，以便在新條件約束的限制下取得最接近需要的值。  如果解除所有條件約束，這個值就會變成需要的值。  如果您擁有多個屬性，而這些屬性彼此具有循環相依關係，您可能會引入某些相當複雜的相依性案例。  例如，在 Min\/Max\/Current 案例中，您可以選擇讓 Minimum 和 Maximum 變成使用者可設定的項目。  若是如此，您可能必須強制轉型讓 Maximum 永遠大於 Minimum，且反之亦然。  但是如果該強制轉型正在作用，且 Maximum 強制轉型成 Minimum，它就會讓 Current 處於無法設定的狀態，因為這個值相依於兩者，而且受限為兩個值之間的範圍，而這個範圍是零。  接著，如果 Maximum 或 Minimum 已經過調整，Current 就會「採用」其中一個值，因為 Current 需要的值仍為儲存狀態，而且正嘗試達到需要的值，如同解除條件約束時一般。  
+### <a name="constraints-and-desired-values"></a><span data-ttu-id="41e3f-139">條件約束和所需的值</span><span class="sxs-lookup"><span data-stu-id="41e3f-139">Constraints and Desired Values</span></span>  
+ <span data-ttu-id="41e3f-140"><xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>像素來邏輯的宣告，但強制型轉的本機設定值指定的值對屬性系統將使用回呼屬性在內部仍然保留 」 所需的值 」。</span><span class="sxs-lookup"><span data-stu-id="41e3f-140">The <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> callbacks will be used by the property system to coerce a value in accordance to the logic you declare, but a coerced value of a locally set property will still retain a "desired value" internally.</span></span> <span data-ttu-id="41e3f-141">如果條件約束是以在應用程式存留期間可能動態變更的其他屬性值為基礎，則強制型轉條件約束也會動態變更，而受條件約束的屬性可以變更其值，以儘量接近新條件約束指定的所需值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-141">If the constraints are based on other property values that may change dynamically during the application lifetime, the coercion constraints are changed dynamically also, and the constrained property can change its value to get as close to the desired value as possible given the new constraints.</span></span> <span data-ttu-id="41e3f-142">如果提取所有條件約束，則值會成為所需的值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-142">The value will become the desired value if all constraints are lifted.</span></span> <span data-ttu-id="41e3f-143">如有多個屬性彼此循環相依，您可能會造成相當複雜的相依性情況。</span><span class="sxs-lookup"><span data-stu-id="41e3f-143">You can potentially introduce some fairly complicated dependency scenarios if you have multiple properties that are dependent on one another in a circular manner.</span></span> <span data-ttu-id="41e3f-144">例如，在最小值/最大值/目前值的案例中，您可以選擇讓使用者能設定最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-144">For instance, in the Min/Max/Current scenario, you could choose to have Minimum and Maximum be user settable.</span></span> <span data-ttu-id="41e3f-145">如果這樣，您可能需要強制轉型「最大值」一律大於「最小值」，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="41e3f-145">If so, you might need to coerce that Maximum is always greater than Minimum and vice versa.</span></span> <span data-ttu-id="41e3f-146">但若該強制型轉為作用中，且「最大值」強制轉型成「最小值」，會讓目前值處於無法設定的狀態，因為它相依於兩者，且受條件約束在值的範圍內，也就是零。</span><span class="sxs-lookup"><span data-stu-id="41e3f-146">But if that coercion is active, and Maximum coerces to Minimum, it leaves Current in an unsettable state, because it is dependent on both and is constrained to the range between the values, which is zero.</span></span> <span data-ttu-id="41e3f-147">然後，如果調整「最大值」或「最小值」，目前值就似乎會「遵循」其中一個值，因為因為當條件約束放寬時，目前值的所需值仍會儲存並嘗試達到所需的值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-147">Then, if Maximum or Minimum are adjusted, Current will seem to "follow" one of the values, because the desired value of Current is still stored and is attempting to reach the desired value as the constraints are loosened.</span></span>  
   
- 複雜的相依性在技術上並無任何不當之處，但是如果這種相依性需要進行大量的重新評估可能會對效能造成些微的負面影響，而若直接影響到 UI，也會對使用者造成困擾。  請審慎使用屬性變更和強制轉型值回呼，並確定嘗試執行的強制轉型能夠以最明確的方式處理，而且不會產生「過度條件約束」。  
+ <span data-ttu-id="41e3f-148">複雜相依性沒有任何技術問題，但如果它們需要大量重新評估，對效能會略有損害，如果直接影響到 UI 也會造成使用者困擾。</span><span class="sxs-lookup"><span data-stu-id="41e3f-148">There is nothing technically wrong with complex dependencies, but they can be a slight performance detriment if they require large numbers of reevaluations, and can also be confusing to users if they affect the UI directly.</span></span> <span data-ttu-id="41e3f-149">請小心使用屬性變更和強制轉型值回撥，確定嘗試中的強制轉型能盡可能明確處理，不會「過度約束」。</span><span class="sxs-lookup"><span data-stu-id="41e3f-149">Be careful with property changed and coerce value callbacks and make sure that the coercion being attempted can be treated as unambiguously as possible, and does not "overconstrain".</span></span>  
   
-### 使用 CoerceValue 取消值變更  
- 屬性系統會將傳回 <xref:System.Windows.DependencyProperty.UnsetValue> 值的任何 <xref:System.Windows.CoerceValueCallback> 視為特例。  這個特例表示屬性系統應該拒絕造成呼叫 <xref:System.Windows.CoerceValueCallback> 之結果的屬性變更，而且應該改為回報屬性先前擁有的任何值。  這項機制可以用來檢查非同步啟始的屬性變更對於目前的物件狀態是否仍然有效，若已無效則隱藏這些變更。  另一個可能的案例是您可以依據負責回報值的屬性值元件，選擇性地隱藏值。  若要執行這項動作，您可以使用回呼中傳入的 <xref:System.Windows.DependencyProperty> 以及屬性識別項做為 <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A> 的輸入，然後再處理 <xref:System.Windows.ValueSource>。  
+### <a name="using-coercevalue-to-cancel-value-changes"></a><span data-ttu-id="41e3f-150">使用 CoerceValue 取消值變更</span><span class="sxs-lookup"><span data-stu-id="41e3f-150">Using CoerceValue to Cancel Value Changes</span></span>  
+ <span data-ttu-id="41e3f-151">對屬性系統會將任何<xref:System.Windows.CoerceValueCallback>可傳回值<xref:System.Windows.DependencyProperty.UnsetValue>做為特殊案例。</span><span class="sxs-lookup"><span data-stu-id="41e3f-151">The property system will treat any <xref:System.Windows.CoerceValueCallback> that returns the value <xref:System.Windows.DependencyProperty.UnsetValue> as a special case.</span></span> <span data-ttu-id="41e3f-152">表示屬性變更，導致這種特殊案例<xref:System.Windows.CoerceValueCallback>呼叫應拒絕屬性系統，且對屬性系統應該改為報告屬性中有任何先前的值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-152">This special case means that the property change that resulted in the <xref:System.Windows.CoerceValueCallback> being called should be rejected by the property system, and that the property system should instead report whatever previous value the property had.</span></span> <span data-ttu-id="41e3f-153">這項機制很有用，可用來檢查過去以非同步方式初始化的屬性變更，現在是否對目前的物件狀態仍然有效，如果無效，則隱藏這些變更。</span><span class="sxs-lookup"><span data-stu-id="41e3f-153">This mechanism can be useful to check that changes to a property that were initiated asynchronously are still valid for the current object state, and suppress the changes if not.</span></span> <span data-ttu-id="41e3f-154">另一個可能的情況是，您可以看哪一個屬性值決定元件負責要回報的值，選擇性地隱藏值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-154">Another possible scenario is that you can selectively suppress a value depending on which component of property value determination is responsible for the value being reported.</span></span> <span data-ttu-id="41e3f-155">若要這樣做，您可以使用<xref:System.Windows.DependencyProperty>回呼和屬性的識別項中傳遞做為輸入<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>，然後再處理<xref:System.Windows.ValueSource>。</span><span class="sxs-lookup"><span data-stu-id="41e3f-155">To do this, you can use the <xref:System.Windows.DependencyProperty> passed in the callback and the property identifier as input for <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, and then process the <xref:System.Windows.ValueSource>.</span></span>  
   
-## 請參閱  
- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)   
- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a><span data-ttu-id="41e3f-156">另請參閱</span><span class="sxs-lookup"><span data-stu-id="41e3f-156">See Also</span></span>  
+ [<span data-ttu-id="41e3f-157">相依性屬性概觀</span><span class="sxs-lookup"><span data-stu-id="41e3f-157">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="41e3f-158">相依性屬性中繼資料</span><span class="sxs-lookup"><span data-stu-id="41e3f-158">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [<span data-ttu-id="41e3f-159">自訂相依性屬性</span><span class="sxs-lookup"><span data-stu-id="41e3f-159">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

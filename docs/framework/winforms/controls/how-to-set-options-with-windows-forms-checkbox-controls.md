@@ -1,37 +1,41 @@
 ---
-title: "如何：使用 Windows Form CheckBox 控制項設定選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "checked"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "核取方塊, 設定選項的方法"
-  - "CheckBox 控制項 [Windows Form], 核取狀態"
-  - "CheckBox 控制項 [Windows Form], 設定選項的方法"
+title: "如何：使用 Windows Form CheckBox 控制項設定選項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: checked
+helpviewer_keywords:
+- CheckBox control [Windows Forms], checked state
+- check boxes [Windows Forms], using to set options
+- CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b7d3ddb090488f6503c0765f6054308c28d4ab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows Form CheckBox 控制項設定選項
-Windows Form <xref:System.Windows.Forms.CheckBox> 控制項是用來提供使用者 True\/False 或 Yes\/No 選項。  控制項被選取後會顯示核取記號。  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="cfd06-102">如何：使用 Windows Form CheckBox 控制項設定選項</span><span class="sxs-lookup"><span data-stu-id="cfd06-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
+<span data-ttu-id="cfd06-103">Windows Form<xref:System.Windows.Forms.CheckBox>控制項可用來給予使用者 True/False 或 Yes/No 選項。</span><span class="sxs-lookup"><span data-stu-id="cfd06-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="cfd06-104">選取時，控制項就會顯示核取記號。</span><span class="sxs-lookup"><span data-stu-id="cfd06-104">The control displays a check mark when it is selected.</span></span>  
   
-### 若要使用 CheckBox 控制項設定選項  
+### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="cfd06-105">若要設定選項的核取方塊控制項</span><span class="sxs-lookup"><span data-stu-id="cfd06-105">To set options with CheckBox controls</span></span>  
   
-1.  檢查 <xref:System.Windows.Forms.CheckBox.Checked%2A> 屬性值以決定其狀態，並使用該值來設定選項。  
+1.  <span data-ttu-id="cfd06-106">檢查值<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性來判斷其狀態，並使用該值來設定的選項。</span><span class="sxs-lookup"><span data-stu-id="cfd06-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
   
-     在下列程式碼範例中，當引發 <xref:System.Windows.Forms.CheckBox> 控制項的 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 事件時，若已選取該核取方塊，則表單的 <xref:System.Windows.Forms.Control.AllowDrop%2A> 屬性會設定為 `false`。  這在當您要限制使用者互動的情況下很有用。  
+     <span data-ttu-id="cfd06-107">在之下，當程式碼範例<xref:System.Windows.Forms.CheckBox>控制項的<xref:System.Windows.Forms.CheckBox.CheckedChanged>引發事件時，表單的<xref:System.Windows.Forms.Control.AllowDrop%2A>屬性設定為`false`如果勾選此核取方塊。</span><span class="sxs-lookup"><span data-stu-id="cfd06-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="cfd06-108">這是您要限制使用者互動的情況下很有用。</span><span class="sxs-lookup"><span data-stu-id="cfd06-108">This is useful for situations where you want to restrict user interaction.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -42,7 +46,6 @@ Windows Form <xref:System.Windows.Forms.CheckBox> 控制項是用來提供使用
           Me.AllowDrop = False  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -55,7 +58,6 @@ Windows Form <xref:System.Windows.Forms.CheckBox> 控制項是用來提供使用
           this.AllowDrop = false;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,8 +74,8 @@ Windows Form <xref:System.Windows.Forms.CheckBox> 控制項是用來提供使用
        }  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.CheckBox>   
- [CheckBox 控制項概觀](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [如何：回應 Windows Form CheckBox 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)   
- [CheckBox 控制項](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="cfd06-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cfd06-109">See Also</span></span>  
+ <xref:System.Windows.Forms.CheckBox>  
+ [<span data-ttu-id="cfd06-110">CheckBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="cfd06-110">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="cfd06-111">操作說明：回應 Windows Forms CheckBox 按一下動作</span><span class="sxs-lookup"><span data-stu-id="cfd06-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [<span data-ttu-id="cfd06-112">CheckBox 控制項</span><span class="sxs-lookup"><span data-stu-id="cfd06-112">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

@@ -1,67 +1,68 @@
 ---
-title: "如何：使用設計工具搭配 Windows Form DataGrid 控制項建立主版詳細資料清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid 控制項 [Windows Form], 主從式清單"
-  - "主從式清單"
-  - "關聯資料表, 在 DataGrid 控制項中顯示"
+title: "如何：使用設計工具搭配 Windows Form DataGrid 控制項建立主版詳細資料清單"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master-details lists
+- DataGrid control [Windows Forms], master-details lists
+- related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 66de6fb17e3ee5b916c4bb20dfa0799758375406
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用設計工具搭配 Windows Form DataGrid 控制項建立主版詳細資料清單
+# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a><span data-ttu-id="f8a93-102">如何：使用設計工具搭配 Windows Form DataGrid 控制項建立主版詳細資料清單</span><span class="sxs-lookup"><span data-stu-id="f8a93-102">How to: Create Master-Details Lists with the Windows Forms DataGrid Control Using the Designer</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。  如需詳細資訊，請參閱 [Windows Form DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <span data-ttu-id="f8a93-103"><xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="f8a93-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="f8a93-104">如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="f8a93-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- 如果您的 <xref:System.Data.DataSet> 包含一系列關聯的資料表，您可以使用兩個 <xref:System.Windows.Forms.DataGrid> 控制項，以主版詳細資料格式顯示資料。  一個 <xref:System.Windows.Forms.DataGrid> 指定為主版資料格，第二個則指定為詳細資料資料格。  當您在主要清單中選取項目時，相關的所有子項目都將顯示在詳細資料清單中。  例如，如果 <xref:System.Data.DataSet> 包含 Customers 資料表和關聯的 Orders 資料表，則您會將 Customers 資料表指定為主版資料格，並將 Orders 資料表指定為詳細資料資料格。  在主要資料格中選取客戶時，Orders 資料表中與該客戶相關的所有訂單都會顯示於詳細資料格中。  
+ <span data-ttu-id="f8a93-105">如果您<xref:System.Data.DataSet>包含一系列相關的資料表，您可以使用兩個<xref:System.Windows.Forms.DataGrid>控制項以顯示在主版詳細資料格式的資料。</span><span class="sxs-lookup"><span data-stu-id="f8a93-105">If your <xref:System.Data.DataSet> contains a series of related tables, you can use two <xref:System.Windows.Forms.DataGrid> controls to display the data in a master-detail format.</span></span> <span data-ttu-id="f8a93-106">一個<xref:System.Windows.Forms.DataGrid>指定為主要方格中，與第二個指定為詳細資料方格。</span><span class="sxs-lookup"><span data-stu-id="f8a93-106">One <xref:System.Windows.Forms.DataGrid> is designated to be the master grid, and the second is designated to be the details grid.</span></span> <span data-ttu-id="f8a93-107">當您的主機清單中選取一個項目時，所有相關的子系項目會顯示在詳細資料清單。</span><span class="sxs-lookup"><span data-stu-id="f8a93-107">When you select an entry in the master list, all of the related child entries are shown in the details list.</span></span> <span data-ttu-id="f8a93-108">例如，如果您<xref:System.Data.DataSet>包含 Customers 資料表和相關的 Orders 資料表，您會指定為主要的方格的 [客戶] 資料表和訂單資料表詳細資料方格。</span><span class="sxs-lookup"><span data-stu-id="f8a93-108">For example, if your <xref:System.Data.DataSet> contains a Customers table and a related Orders table, you would specify the Customers table to be the master grid and the Orders table to be the details grid.</span></span> <span data-ttu-id="f8a93-109">從主版方格選取客戶時，所有相關 [Orders] 資料表中與該客戶的訂單會顯示詳細資料方格中。</span><span class="sxs-lookup"><span data-stu-id="f8a93-109">When a customer is selected from the master grid, all of the orders associated with that customer in the Orders table would be displayed in the details grid.</span></span>  
   
- 下列程序需要 \[**Windows 應用程式**\] 專案。  如需設定這類專案的詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+ <span data-ttu-id="f8a93-110">下列程序需要**Windows 應用程式**專案。</span><span class="sxs-lookup"><span data-stu-id="f8a93-110">The following procedure requires a **Windows Application** project.</span></span> <span data-ttu-id="f8a93-111">設定這類專案的詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。</span><span class="sxs-lookup"><span data-stu-id="f8a93-111">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="f8a93-112">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="f8a93-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f8a93-113">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="f8a93-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f8a93-114">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="f8a93-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要在設計工具中建立主版詳細資料清單  
+### <a name="to-create-a-master-details-list-in-the-designer"></a><span data-ttu-id="f8a93-115">在設計工具中建立主從式清單</span><span class="sxs-lookup"><span data-stu-id="f8a93-115">To create a master-details list in the designer</span></span>  
   
-1.  加入兩個 <xref:System.Windows.Forms.DataGrid> 控制項至表單。  如需詳細資訊，請參閱 [如何：將控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  在 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 中，<xref:System.Windows.Forms.DataGrid> 控制項預設不會在 \[**工具箱**\] 中。  如需詳細資訊，請參閱 [How to: Add Items to the Toolbox](http://msdn.microsoft.com/zh-tw/458e119e-17fe-450b-b889-e31c128bd7e0)。  
+1.  <span data-ttu-id="f8a93-116">加入兩個<xref:System.Windows.Forms.DataGrid>控制項加入表單。</span><span class="sxs-lookup"><span data-stu-id="f8a93-116">Add two <xref:System.Windows.Forms.DataGrid> controls to the form.</span></span> <span data-ttu-id="f8a93-117">如需詳細資訊，請參閱[How to： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="f8a93-117">For more information, see [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span> <span data-ttu-id="f8a93-118">在[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>控制項不是在**工具箱**預設。</span><span class="sxs-lookup"><span data-stu-id="f8a93-118">In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], the <xref:System.Windows.Forms.DataGrid> control is not in the **Toolbox** by default.</span></span> <span data-ttu-id="f8a93-119">如需詳細資訊，請參閱[How to： 將項目加入工具箱](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0)。</span><span class="sxs-lookup"><span data-stu-id="f8a93-119">For more information, see [How to: Add Items to the Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span></span>  
   
     > [!NOTE]
-    >  下列步驟不適用於 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，其設計階段資料繫結是使用 \[**資料來源**\] 視窗來進行。  如需詳細資訊，請參閱[將控制項繫結至 Visual Studio 中的資料](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)和 [如何：在 Windows Form 應用程式中顯示相關的資料](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md)。  
+    >  <span data-ttu-id="f8a93-120">下列步驟不適用於[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，它會使用**資料來源**設計階段資料繫結的視窗。</span><span class="sxs-lookup"><span data-stu-id="f8a93-120">The following steps are not applicable to [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], which uses the **Data Sources** window for design-time data binding.</span></span> <span data-ttu-id="f8a93-121">如需詳細資訊，請參閱[控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)和[How to： 在 Windows Forms 應用程式中顯示相關資料](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)。</span><span class="sxs-lookup"><span data-stu-id="f8a93-121">For more information, see [Bind controls to data in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) and [How to: Display Related Data in a Windows Forms Application](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).</span></span>  
   
-2.  從 \[**伺服器總管**\] 中拖放兩個或多個資料表至表單。  
+2.  <span data-ttu-id="f8a93-122">將兩個或多個資料表，從**伺服器總管**至表單。</span><span class="sxs-lookup"><span data-stu-id="f8a93-122">Drag two or more tables from **Server Explorer** to the form.</span></span>  
   
-3.  從 \[**資料**\] 功能表中，選取 \[**產生資料集**\]。  
+3.  <span data-ttu-id="f8a93-123">從**資料**功能表上，選取**產生資料集**。</span><span class="sxs-lookup"><span data-stu-id="f8a93-123">From the **Data** menu, select **Generate DataSet**.</span></span>  
   
-4.  使用 XML 設計工具設定資料表間的關聯性。  如需詳細資訊，請參閱 MSDN 上的＜HOW TO：在 XML 結構描述和資料集中建立一對多關聯性＞。  
+4.  <span data-ttu-id="f8a93-124">設定使用 XML 設計工具的資料表之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="f8a93-124">Set the relationships between the tables using the XML Designer.</span></span> <span data-ttu-id="f8a93-125">如需詳細資訊，請參閱 「 如何： 建立一對多關聯性中的 XML 結構描述和資料集"MSDN 上。</span><span class="sxs-lookup"><span data-stu-id="f8a93-125">For details, see "How to: Create One-to-Many Relationships in XML Schemas and Datasets" on MSDN.</span></span>  
   
-5.  從 \[**檔案**\] 功能表選取 \[**全部儲存**\] 來儲存關聯性。  
+5.  <span data-ttu-id="f8a93-126">儲存選取的關聯性**全部儲存**從**檔案**功能表。</span><span class="sxs-lookup"><span data-stu-id="f8a93-126">Save the relationships by selecting **Save All** from the **File** menu.</span></span>  
   
-6.  設定您要指定為主版資料格的 <xref:System.Windows.Forms.DataGrid> 控制項，如以下所示：  
+6.  <span data-ttu-id="f8a93-127">設定<xref:System.Windows.Forms.DataGrid>控制項，您想要指定主要格線，如下所示：</span><span class="sxs-lookup"><span data-stu-id="f8a93-127">Configure the <xref:System.Windows.Forms.DataGrid> control that you want to designate the master grid, as follows:</span></span>  
   
-    1.  從 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 屬性的下拉式清單中，選取 <xref:System.Data.DataSet>。  
+    1.  <span data-ttu-id="f8a93-128">選取<xref:System.Data.DataSet>從下拉式清單中<xref:System.Windows.Forms.DataGrid.DataSource%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="f8a93-128">Select the <xref:System.Data.DataSet> from the drop-down list in the <xref:System.Windows.Forms.DataGrid.DataSource%2A> property.</span></span>  
   
-    2.  從 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 屬性的下拉式清單中，選取主版資料表 \(例如 "Customers"\)。  
+    2.  <span data-ttu-id="f8a93-129">從下拉式清單中選取主要資料表 （例如，「 客戶 」）<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="f8a93-129">Select the master table (for example, "Customers") from the drop-down list in the <xref:System.Windows.Forms.DataGrid.DataMember%2A> property.</span></span>  
   
-7.  設定您要指定為詳細資料資料格的 <xref:System.Windows.Forms.DataGrid> 控制項，如以下所示：  
+7.  <span data-ttu-id="f8a93-130">設定<xref:System.Windows.Forms.DataGrid>控制您想要將詳細資料方格中，指定，如下所示：</span><span class="sxs-lookup"><span data-stu-id="f8a93-130">Configure the <xref:System.Windows.Forms.DataGrid> control that you want to designate the details grid, as follows:</span></span>  
   
-    1.  從 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 屬性的下拉式清單中，選取 <xref:System.Data.DataSet>。  
+    1.  <span data-ttu-id="f8a93-131">選取<xref:System.Data.DataSet>從下拉式清單中<xref:System.Windows.Forms.DataGrid.DataSource%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="f8a93-131">Select the <xref:System.Data.DataSet> from the drop-down list in the <xref:System.Windows.Forms.DataGrid.DataSource%2A> property.</span></span>  
   
-    2.  從 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 屬性的下拉式清單中，選取主版和詳細資料資料表之間的關聯性 \(例如 "Customers.CustOrd"\)。  若要檢視關聯性，按一下下拉式清單中主要資料表旁的加號 \(**\+**\) 來展開節點。  
+    2.  <span data-ttu-id="f8a93-132">選取從下拉式清單中的主要和詳細資料表之間的關聯性 (例如，"Customers.CustOrd 」)<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="f8a93-132">Select the relationship (for example, "Customers.CustOrd") between the master and detail tables from the drop-down list in the <xref:System.Windows.Forms.DataGrid.DataMember%2A> property.</span></span> <span data-ttu-id="f8a93-133">若要查看的關聯性，請展開節點加上的 (**+**) 旁邊的下拉式清單中主要資料表。</span><span class="sxs-lookup"><span data-stu-id="f8a93-133">In order to see the relationship, expand the node by clicking on the plus (**+**) sign next to the master table in the drop-down list.</span></span>  
   
-## 請參閱  
- [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [DataGrid 控制項概觀](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [如何：將 Windows Form DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)   
- [將控制項繫結至 Visual Studio 中的資料](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)
+## <a name="see-also"></a><span data-ttu-id="f8a93-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8a93-134">See Also</span></span>  
+ [<span data-ttu-id="f8a93-135">DataGrid 控制項</span><span class="sxs-lookup"><span data-stu-id="f8a93-135">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="f8a93-136">DataGrid 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="f8a93-136">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f8a93-137">操作說明：將 Windows Forms DataGrid 控制項繫結至資料來源</span><span class="sxs-lookup"><span data-stu-id="f8a93-137">How to: Bind the Windows Forms DataGrid Control to a Data Source</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [<span data-ttu-id="f8a93-138">將控制項繫結至 Visual Studio 中的資料</span><span class="sxs-lookup"><span data-stu-id="f8a93-138">Bind controls to data in Visual Studio</span></span>](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

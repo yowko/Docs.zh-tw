@@ -1,130 +1,131 @@
 ---
-title: "逐步解說：在 Windows Form 中裝載 WPF 複合控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "將 WPF 內容裝載在 Windows Form 中"
+title: "逐步解說：在 Windows Form 中裝載 WPF 複合控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-caps.latest.revision: 34
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "34"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5dc0a0f7b579feca6150e299cd7f0ef3a6e7a5e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：在 Windows Form 中裝載 WPF 複合控制項
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。  然而，長期開發 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 程式碼時，更有效的方式是使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 延伸現有 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式，而不是從頭重新撰寫程式碼。  一個常見案例是，您想要將以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的一個或多個控制項內嵌在您的 [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 應用程式內。  如需自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)。  
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a><span data-ttu-id="a53a7-102">逐步解說：在 Windows Form 中裝載 WPF 複合控制項</span><span class="sxs-lookup"><span data-stu-id="a53a7-102">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="a53a7-103"> 提供用來建立應用程式的豐富環境。</span><span class="sxs-lookup"><span data-stu-id="a53a7-103"> provides a rich environment for creating applications.</span></span> <span data-ttu-id="a53a7-104">不過，當您擁有了大筆投資的[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的程式碼，它可更有效率地擴充您現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而非將它重新改寫。</span><span class="sxs-lookup"><span data-stu-id="a53a7-104">However, when you have a substantial investment in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, it can be more effective to extend your existing [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rather than to rewrite it from scratch.</span></span> <span data-ttu-id="a53a7-105">常見的案例是當您想要將內嵌其中一個或更多控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內您[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-105">A common scenario is when you want to embed one or more controls implemented with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] within your [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] application.</span></span> <span data-ttu-id="a53a7-106">如需自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)。</span><span class="sxs-lookup"><span data-stu-id="a53a7-106">For more information about customizing WPF controls, see [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md).</span></span>  
   
- 這個逐步解說會引導您完成一個應用程式，這個應用程式會裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項來執行 [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 應用程式中的資料輸入工作。  複合控制項會封裝成 DLL。  這個一般程序可以延伸至更複雜的應用程式和控制項。  這個逐步解說的外觀及功能設計與[逐步解說：在 WPF 中裝載 Windows Form 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)幾乎完全相同。  主要差異是保留了裝載案例。  
+ <span data-ttu-id="a53a7-107">這個逐步解說會引導您透過應用程式裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，執行中的資料項目[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-107">This walkthrough steps you through an application that hosts a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control to perform data-entry in a [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] application.</span></span> <span data-ttu-id="a53a7-108">複合控制項會封裝在 DLL 中。</span><span class="sxs-lookup"><span data-stu-id="a53a7-108">The composite control is packaged in a DLL.</span></span> <span data-ttu-id="a53a7-109">這個一般程序可以延伸到更複雜的應用程式和控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-109">This general procedure can be extended to more complex applications and controls.</span></span> <span data-ttu-id="a53a7-110">本逐步解說的設計幾乎相同的外觀和功能[逐步解說： 在 WPF 中的 Windows Form 複合控制項裝載](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="a53a7-110">This walkthrough is designed to be nearly identical in appearance and functionality to [Walkthrough: Hosting a Windows Forms Composite Control in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md).</span></span> <span data-ttu-id="a53a7-111">主要差異在於裝載案例相反。</span><span class="sxs-lookup"><span data-stu-id="a53a7-111">The primary difference is that the hosting scenario is reversed.</span></span>  
   
- 逐步解說分成兩個部分。  第一個部分簡短說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項的實作。  第二個部分則詳細討論如何在 [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 應用程式中裝載複合控制項、從控制項接收事件，以及存取控制項的部分屬性。  
+ <span data-ttu-id="a53a7-112">本逐步解說分為兩節。</span><span class="sxs-lookup"><span data-stu-id="a53a7-112">The walkthrough is divided into two sections.</span></span> <span data-ttu-id="a53a7-113">第一節將簡短描述的實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-113">The first section briefly describes the implementation of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control.</span></span> <span data-ttu-id="a53a7-114">第二個區段詳細資料中將討論如何裝載中的複合控制項[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]應用程式，從控制項，接收事件，以及存取某些控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-114">The second section discusses in detail how to host the composite control in a [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] application, receive events from the control, and access some of the control’s properties.</span></span>  
   
- 逐步解說將說明的工作包括：  
+ <span data-ttu-id="a53a7-115">這個逐步解說中所述的工作包括：</span><span class="sxs-lookup"><span data-stu-id="a53a7-115">Tasks illustrated in this walkthrough include:</span></span>  
   
--   實作 WPF 複合控制項。  
+-   <span data-ttu-id="a53a7-116">實作 WPF 複合控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-116">Implementing the WPF composite control.</span></span>  
   
--   實作 Windows Forms 主應用程式 \(Host Application\)。  
+-   <span data-ttu-id="a53a7-117">實作 Windows Form 主應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-117">Implementing the Windows Forms host application.</span></span>  
   
- 如需這個逐步解說中所說明之工作的完整程式碼清單，請參閱[在 Windows Form 中裝載 WPF 複合控制項範例](http://go.microsoft.com/fwlink/?LinkID=159996) \(英文\)。  
+ <span data-ttu-id="a53a7-118">在此逐步解說中所述的工作的完整程式碼清單，請參閱[裝載 Windows Form 範例中的 WPF 複合控制項](http://go.microsoft.com/fwlink/?LinkID=159996)。</span><span class="sxs-lookup"><span data-stu-id="a53a7-118">For a complete code listing of the tasks illustrated in this walkthrough, see [Hosting a WPF Composite Control in Windows Forms Sample](http://go.microsoft.com/fwlink/?LinkID=159996).</span></span>  
   
-## 必要條件  
- 您需要下列元件才能完成此逐步解說：  
+## <a name="prerequisites"></a><span data-ttu-id="a53a7-119">必要條件</span><span class="sxs-lookup"><span data-stu-id="a53a7-119">Prerequisites</span></span>  
+ <span data-ttu-id="a53a7-120">您需要下列元件才能完成此逐步解說：</span><span class="sxs-lookup"><span data-stu-id="a53a7-120">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="a53a7-121">.</span><span class="sxs-lookup"><span data-stu-id="a53a7-121">.</span></span>  
   
-## 實作 WPF 複合控制項  
- 這個範例中使用的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項是一個簡單的資料輸入表單，用來輸入使用者名稱和地址。  當使用者按一下兩個按鈕中的其中一個按鈕表示工作已完成時，控制項會引發自訂事件，將該資訊傳回給主應用程式。  下圖顯示呈現的控制項。  
+## <a name="implementing-the-wpf-composite-control"></a><span data-ttu-id="a53a7-122">實作 WPF 複合控制項</span><span class="sxs-lookup"><span data-stu-id="a53a7-122">Implementing the WPF Composite Control</span></span>  
+ <span data-ttu-id="a53a7-123">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，此範例中使用是簡單的資料輸入表單，會使用使用者名稱和地址。</span><span class="sxs-lookup"><span data-stu-id="a53a7-123">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control used in this example is a simple data-entry form that takes the user's name and address.</span></span> <span data-ttu-id="a53a7-124">使用者按一下兩個按鈕中的其中一個來表示工作已完成時，控制項會引發自訂事件，以將該資訊傳回給主應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-124">When the user clicks one of two buttons to indicate that the task is finished, the control raises a custom event to return that information to the host.</span></span> <span data-ttu-id="a53a7-125">下圖顯示轉譯的控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-125">The following illustration shows the rendered control.</span></span>  
   
- ![簡單的 WPF 控制項](../../../../docs/framework/wpf/advanced/media/avaloncontrol.png "AvalonControl")  
-WPF 複合控制項  
+ <span data-ttu-id="a53a7-126">![簡單的 WPF 控制項](../../../../docs/framework/wpf/advanced/media/avaloncontrol.png "AvalonControl")</span><span class="sxs-lookup"><span data-stu-id="a53a7-126">![Simple WPF control](../../../../docs/framework/wpf/advanced/media/avaloncontrol.png "AvalonControl")</span></span>  
+<span data-ttu-id="a53a7-127">WPF 複合控制項</span><span class="sxs-lookup"><span data-stu-id="a53a7-127">WPF composite control</span></span>  
   
-### 建立專案  
- 若要開始專案：  
+### <a name="creating-the-project"></a><span data-ttu-id="a53a7-128">建立專案</span><span class="sxs-lookup"><span data-stu-id="a53a7-128">Creating the Project</span></span>  
+ <span data-ttu-id="a53a7-129">啟動專案：</span><span class="sxs-lookup"><span data-stu-id="a53a7-129">To start the project:</span></span>  
   
-1.  啟動 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，並開啟 \[**新增專案**\] 對話方塊。  
+1.  <span data-ttu-id="a53a7-130">啟動[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，並開啟**新專案** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="a53a7-130">Launch [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], and open the **New Project** dialog box.</span></span>  
   
-2.  在 Visual C\# 和 Windows 分類中，選取 \[**WPF 使用者控制項程式庫**\] 範本。  
+2.  <span data-ttu-id="a53a7-131">在 Visual C# 和 Windows 類別目錄中，選取**WPF 使用者控制項程式庫**範本。</span><span class="sxs-lookup"><span data-stu-id="a53a7-131">In Visual C# and the Windows category, select the **WPF User Control Library** template.</span></span>  
   
-3.  將新專案命名為 `MyControls`。  
+3.  <span data-ttu-id="a53a7-132">將新專案`MyControls`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-132">Name the new project `MyControls`.</span></span>  
   
-4.  在位置中，指定適當命名的最上層資料夾，例如 `WindowsFormsHostingWpfControl`。  稍後，您會將主應用程式放在這個資料夾中。  
+4.  <span data-ttu-id="a53a7-133">位置，請指定方便具名的最上層資料夾，例如`WindowsFormsHostingWpfControl`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-133">For the location, specify a conveniently named top-level folder, such as `WindowsFormsHostingWpfControl`.</span></span> <span data-ttu-id="a53a7-134">稍後，您會將主應用程式放在此資料夾中。</span><span class="sxs-lookup"><span data-stu-id="a53a7-134">Later, you will put the host application in this folder.</span></span>  
   
-5.  按一下 \[**確定**\] 建立專案。  預設專案包含一個名為 `UserControl1` 的控制項。  
+5.  <span data-ttu-id="a53a7-135">按一下**確定**建立專案。</span><span class="sxs-lookup"><span data-stu-id="a53a7-135">Click **OK** to create the project.</span></span> <span data-ttu-id="a53a7-136">預設專案包含單一的控制項，名為`UserControl1`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-136">The default project contains a single control named `UserControl1`.</span></span>  
   
-6.  在 \[方案總管\] 中，將 `UserControl1` 重新命名為 `MyControl1`。  
+6.  <span data-ttu-id="a53a7-137">在 [方案總管] 中，重新命名`UserControl1`至`MyControl1`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-137">In Solution Explorer, rename `UserControl1` to `MyControl1`.</span></span>  
   
- 您的專案應該參考下列系統 DLL。  如果預設未包含下列任一 DLL，請將它們加入至您的專案。  
+ <span data-ttu-id="a53a7-138">您的專案應該有下列系統 DLL 的參考。</span><span class="sxs-lookup"><span data-stu-id="a53a7-138">Your project should have references to the following system DLLs.</span></span> <span data-ttu-id="a53a7-139">如果預設未包括所有這些 DLL，則請將它們新增至專案。</span><span class="sxs-lookup"><span data-stu-id="a53a7-139">If any of these DLLs are not included by default, add them to your project.</span></span>  
   
--   PresentationCore  
+-   <span data-ttu-id="a53a7-140">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="a53a7-140">PresentationCore</span></span>  
   
--   PresentationFramework  
+-   <span data-ttu-id="a53a7-141">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="a53a7-141">PresentationFramework</span></span>  
   
--   System  
+-   <span data-ttu-id="a53a7-142">系統</span><span class="sxs-lookup"><span data-stu-id="a53a7-142">System</span></span>  
   
--   WindowsBase  
+-   <span data-ttu-id="a53a7-143">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="a53a7-143">WindowsBase</span></span>  
   
-### 建立使用者介面  
- 複合控制項的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 是使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 實作。  複合控制項的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 是由五個 <xref:System.Windows.Controls.TextBox> 項目組成：  每個 <xref:System.Windows.Controls.TextBox> 項目都會有當成標籤的相關 <xref:System.Windows.Controls.TextBlock> 項目。  底端有兩個 <xref:System.Windows.Controls.Button> 項目：\[**OK**\] 和 \[**Cancel**\]。  當使用者按任一個按鈕時，控制項會引發自訂事件，將資訊傳回給主應用程式。  
+### <a name="creating-the-user-interface"></a><span data-ttu-id="a53a7-144">建立使用者介面</span><span class="sxs-lookup"><span data-stu-id="a53a7-144">Creating the User Interface</span></span>  
+ <span data-ttu-id="a53a7-145">[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]複合控制項是實作與[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a53a7-145">The [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] for the composite control is implemented with [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="a53a7-146">複合控制項[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]包含五個<xref:System.Windows.Controls.TextBox>項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-146">The composite control [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] consists of five <xref:System.Windows.Controls.TextBox> elements.</span></span> <span data-ttu-id="a53a7-147">每個<xref:System.Windows.Controls.TextBox>項目都具有相關聯<xref:System.Windows.Controls.TextBlock>做為標籤的項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-147">Each <xref:System.Windows.Controls.TextBox> element has an associated <xref:System.Windows.Controls.TextBlock> element that serves as a label.</span></span> <span data-ttu-id="a53a7-148">有兩個<xref:System.Windows.Controls.Button>項目底部，**確定**和**取消**。</span><span class="sxs-lookup"><span data-stu-id="a53a7-148">There are two <xref:System.Windows.Controls.Button> elements at the bottom, **OK** and **Cancel**.</span></span> <span data-ttu-id="a53a7-149">使用者按一下任一個按鈕時，控制項會引發自訂事件，以將資訊傳回給主應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-149">When the user clicks either button, the control raises a custom event to return the information to the host.</span></span>  
   
-#### 基本配置  
- 各種 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目都是包含在 <xref:System.Windows.Controls.Grid> 項目中。  您可以使用 <xref:System.Windows.Controls.Grid> 排列複合控制項的內容，方式與您在 HTML 中使用 `Table` 項目很相似。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也具有 <xref:System.Windows.Documents.Table> 項目，但是 <xref:System.Windows.Controls.Grid> 比較輕量，也較適合簡單的配置工作。  
+#### <a name="basic-layout"></a><span data-ttu-id="a53a7-150">基本版面配置</span><span class="sxs-lookup"><span data-stu-id="a53a7-150">Basic Layout</span></span>  
+ <span data-ttu-id="a53a7-151">各種[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素都包含在<xref:System.Windows.Controls.Grid>項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-151">The various [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elements are contained in a <xref:System.Windows.Controls.Grid> element.</span></span> <span data-ttu-id="a53a7-152">您可以使用<xref:System.Windows.Controls.Grid>要排列的複合內容控制大致相同方式使用`Table`HTML 中的項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-152">You can use <xref:System.Windows.Controls.Grid> to arrange the contents of the composite control in much the same way you would use a `Table` element in HTML.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="a53a7-153">也有<xref:System.Windows.Documents.Table>項目，但<xref:System.Windows.Controls.Grid>是更輕鬆且更適合簡單配置工作。</span><span class="sxs-lookup"><span data-stu-id="a53a7-153"> also has a <xref:System.Windows.Documents.Table> element, but <xref:System.Windows.Controls.Grid> is more lightweight and better suited for simple layout tasks.</span></span>  
   
- 下列 XAML 顯示基本配置。  這段 XAML 會在 <xref:System.Windows.Controls.Grid> 項目中指定資料行和資料列數目，以定義控制項的整體結構。  
+ <span data-ttu-id="a53a7-154">下列 XAML 顯示基本版面配置。</span><span class="sxs-lookup"><span data-stu-id="a53a7-154">The following XAML shows the basic layout.</span></span> <span data-ttu-id="a53a7-155">此 XAML 定義控制項的整體結構，藉由指定的資料行數目和資料列<xref:System.Windows.Controls.Grid>項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-155">This XAML defines the overall structure of the control by specifying the number of columns and rows in the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
- 在 MyControl1.xaml 中，使用下列 XAML 取代現有的 XAML。  
+ <span data-ttu-id="a53a7-156">在 MyControl1.xaml 中，將現有的 XAML 取代為下列 XAML。</span><span class="sxs-lookup"><span data-stu-id="a53a7-156">In MyControl1.xaml, replace the existing XAML with the following XAML.</span></span>  
   
- [!code-xml[WindowsFormsHostingWpfControl#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
-[!code-xml[WindowsFormsHostingWpfControl#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
+[!code-xaml[WindowsFormsHostingWpfControl#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
   
-#### 將 TextBlock 和 TextBox 項目加入至格線  
- 將項目的 <xref:System.Windows.Controls.Grid.RowProperty> 和 <xref:System.Windows.Controls.Grid.ColumnProperty> 屬性設為適當的資料列和資料行編號，就可以將 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目放到格線中。  請記住，資料列和資料行編號都是以零起始。  而設定項目的 <xref:System.Windows.Controls.Grid.ColumnSpanProperty> 屬性，則可以讓一個項目跨越多個資料行。  如需 <xref:System.Windows.Controls.Grid> 項目的詳細資訊，請參閱[建立 Grid 項目](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)。  
+#### <a name="adding-textblock-and-textbox-elements-to-the-grid"></a><span data-ttu-id="a53a7-157">將 TextBlock 和 TextBox 項目新增至格線</span><span class="sxs-lookup"><span data-stu-id="a53a7-157">Adding TextBlock and TextBox Elements to the Grid</span></span>  
+ <span data-ttu-id="a53a7-158">您放置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]藉由設定項目的方格中的項目<xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>屬性，將適當的資料列和資料行數目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-158">You place a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] element in the grid by setting the element's <xref:System.Windows.Controls.Grid.RowProperty> and <xref:System.Windows.Controls.Grid.ColumnProperty> attributes to the appropriate row and column number.</span></span> <span data-ttu-id="a53a7-159">請記住，資料列和資料行編號是以零起始。</span><span class="sxs-lookup"><span data-stu-id="a53a7-159">Remember that row and column numbering are zero-based.</span></span> <span data-ttu-id="a53a7-160">您可以藉由設定跨越多個資料行的項目及其<xref:System.Windows.Controls.Grid.ColumnSpanProperty>屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-160">You can have an element span multiple columns by setting its <xref:System.Windows.Controls.Grid.ColumnSpanProperty> attribute.</span></span> <span data-ttu-id="a53a7-161">如需有關<xref:System.Windows.Controls.Grid>項目，請參閱[建立方格項目](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)。</span><span class="sxs-lookup"><span data-stu-id="a53a7-161">For more information about <xref:System.Windows.Controls.Grid> elements, see [Create a Grid Element](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md).</span></span>  
   
- 下列 XAML 顯示複合控制項的 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.TextBlock> 項目，以及其 <xref:System.Windows.Controls.Grid.RowProperty> 和 <xref:System.Windows.Controls.Grid.ColumnProperty> 屬性，這些屬性設定會使項目正確地放在格線中。  
+ <span data-ttu-id="a53a7-162">下列 XAML 顯示複合控制項<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.TextBlock>的項目及其<xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>屬性設定為正確放置方格中的項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-162">The following XAML shows the composite control’s <xref:System.Windows.Controls.TextBox> and <xref:System.Windows.Controls.TextBlock> elements with their <xref:System.Windows.Controls.Grid.RowProperty> and <xref:System.Windows.Controls.Grid.ColumnProperty> attributes, which are set to place the elements properly in the grid.</span></span>  
   
- 在 MyControl1.xaml 中，將下列 XAML 加入至 <xref:System.Windows.Controls.Grid> 項目內。  
+ <span data-ttu-id="a53a7-163">在 MyControl1.xaml，加入下列 XAML 內<xref:System.Windows.Controls.Grid>項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-163">In MyControl1.xaml, add the following XAML within the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
- [!code-xml[WindowsFormsHostingWpfControl#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
   
-#### 設定 UI 項目的樣式  
- 資料輸入表單上許多項目的外觀都類似，這表示它們的一些屬性具有相同的設定。  前一個 XAML 並未個別設定每個項目的屬性 \(Attribute\)，而是使用 <xref:System.Windows.Style> 項目來定義項目類別的標準屬性 \(Property\) 設定。  這個方式可降低控制項的複雜性，而且可讓您透過單一樣式屬性 \(Attribute\) 變更多個項目的外觀。  
+#### <a name="styling-the-ui-elements"></a><span data-ttu-id="a53a7-164">設定 UI 項目的樣式</span><span class="sxs-lookup"><span data-stu-id="a53a7-164">Styling the UI Elements</span></span>  
+ <span data-ttu-id="a53a7-165">資料輸入表單上的許多項目都會有類似的外觀，表示它們具有數個屬性的相同設定。</span><span class="sxs-lookup"><span data-stu-id="a53a7-165">Many of the elements on the data-entry form have a similar appearance, which means that they have identical settings for several of their properties.</span></span> <span data-ttu-id="a53a7-166">而不是個別設定每個元素的屬性，使用先前的 XAML<xref:System.Windows.Style>項目定義標準的屬性設定為類別的項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-166">Rather than setting each element's attributes separately, the previous XAML uses <xref:System.Windows.Style> elements to define standard property settings for classes of elements.</span></span> <span data-ttu-id="a53a7-167">此方法會減少控制項的複雜度，並可讓您透過單一樣式屬性來變更多個項目的外觀。</span><span class="sxs-lookup"><span data-stu-id="a53a7-167">This approach reduces the complexity of the control and enables you to change the appearance of multiple elements through a single style attribute.</span></span>  
   
- <xref:System.Windows.Style> 項目是包含在 <xref:System.Windows.Controls.Grid> 項目的 <xref:System.Windows.FrameworkElement.Resources%2A> 屬性 \(Property\) 中，因此可以供控制項中的所有項目使用。  如果樣式已命名，則加入設為這個樣式名稱的 <xref:System.Windows.Style> 項目，就可以將樣式套用至項目。  未命名的樣式會變成項目的預設樣式。  如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 樣式的詳細資訊，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ <span data-ttu-id="a53a7-168"><xref:System.Windows.Style>元素都包含在<xref:System.Windows.Controls.Grid>項目的<xref:System.Windows.FrameworkElement.Resources%2A>屬性，因此可供在控制項中的所有項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-168">The <xref:System.Windows.Style> elements are contained in the <xref:System.Windows.Controls.Grid> element's <xref:System.Windows.FrameworkElement.Resources%2A> property, so they can be used by all elements in the control.</span></span> <span data-ttu-id="a53a7-169">如果為樣式，您將它套用到項目加入<xref:System.Windows.Style>項目設定樣式的名稱。</span><span class="sxs-lookup"><span data-stu-id="a53a7-169">If a style is named, you apply it to an element by adding a <xref:System.Windows.Style> element set to the style's name.</span></span> <span data-ttu-id="a53a7-170">未命名的樣式會成為項目的預設樣式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-170">Styles that are not named become the default style for the element.</span></span> <span data-ttu-id="a53a7-171">如需有關[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]樣式，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。</span><span class="sxs-lookup"><span data-stu-id="a53a7-171">For more information about [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] styles, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>  
   
- 下列 XAML 顯示複合控制項的 <xref:System.Windows.Style> 項目。  若要查看樣式套用至項目的方式，請參閱前一個 XAML。  例如，最後一個 <xref:System.Windows.Controls.TextBlock> 項目具有 `inlineText` 樣式，而最後一個 <xref:System.Windows.Controls.TextBox> 項目則使用預設樣式。  
+ <span data-ttu-id="a53a7-172">下列 XAML 顯示<xref:System.Windows.Style>複合控制項的項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-172">The following XAML shows the <xref:System.Windows.Style> elements for the composite control.</span></span> <span data-ttu-id="a53a7-173">若要查看如何將樣式套用至項目，請參閱先前的 XAML。</span><span class="sxs-lookup"><span data-stu-id="a53a7-173">To see how the styles are applied to elements, see the previous XAML.</span></span> <span data-ttu-id="a53a7-174">例如，上次<xref:System.Windows.Controls.TextBlock>項目具有`inlineText`樣式和最後一個<xref:System.Windows.Controls.TextBox>項目使用的預設樣式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-174">For example, the last <xref:System.Windows.Controls.TextBlock> element has the `inlineText` style, and the last <xref:System.Windows.Controls.TextBox> element uses the default style.</span></span>  
   
- 在 MyControl1.xaml 中，在 <xref:System.Windows.Controls.Grid> 起始項目後面緊接著加入下列 XAML。  
+ <span data-ttu-id="a53a7-175">在 MyControl1.xaml，加入下列 XAML 後方<xref:System.Windows.Controls.Grid>開始項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-175">In MyControl1.xaml, add the following XAML just after the <xref:System.Windows.Controls.Grid> start element.</span></span>  
   
- [!code-xml[WindowsFormsHostingWpfControl#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
   
-#### 加入確定和取消按鈕  
- 複合控制項上的最終項目是 \[**OK**\] 和 \[**Cancel**\] <xref:System.Windows.Controls.Button> 項目，這兩個會佔用 <xref:System.Windows.Controls.Grid> 最後一個資料列的前兩個資料行。  這些項目會使用通用事件處理常式 `ButtonClicked`，以及前一個 XAML 中定義的預設 <xref:System.Windows.Controls.Button> 樣式。  
+#### <a name="adding-the-ok-and-cancel-buttons"></a><span data-ttu-id="a53a7-176">新增 OK 和 Cancel 按鈕</span><span class="sxs-lookup"><span data-stu-id="a53a7-176">Adding the OK and Cancel Buttons</span></span>  
+ <span data-ttu-id="a53a7-177">複合控制項上的最後一個元素**確定**和**取消**<xref:System.Windows.Controls.Button>佔用的最後一個資料列的前兩個資料行項目<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="a53a7-177">The final elements on the composite control are the **OK** and **Cancel**<xref:System.Windows.Controls.Button> elements, which occupy the first two columns of the last row of the <xref:System.Windows.Controls.Grid>.</span></span> <span data-ttu-id="a53a7-178">這些項目使用常見的事件處理常式， `ButtonClicked`，且預設<xref:System.Windows.Controls.Button>在先前的 XAML 中定義的樣式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-178">These elements use a common event handler, `ButtonClicked`, and the default <xref:System.Windows.Controls.Button> style defined in the previous XAML.</span></span>  
   
- 在 MyControl1.xaml 中，在最後一個 <xref:System.Windows.Controls.TextBox> 項目後面加入下列 XAML。  複合控制項的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 部分現在已完成。  
+ <span data-ttu-id="a53a7-179">在 MyControl1.xaml，加入下列 XAML 最後一個之後<xref:System.Windows.Controls.TextBox>項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-179">In MyControl1.xaml, add the following XAML after the last <xref:System.Windows.Controls.TextBox> element.</span></span> <span data-ttu-id="a53a7-180">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]屬於複合控制項現在已完成。</span><span class="sxs-lookup"><span data-stu-id="a53a7-180">The [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] part of the composite control is now complete.</span></span>  
   
- [!code-xml[WindowsFormsHostingWpfControl#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
   
-### 實作程式碼後置檔案  
- 程式碼後置檔案 MyControl1.xaml.cs 會實作三項基本工作：  
+### <a name="implementing-the-code-behind-file"></a><span data-ttu-id="a53a7-181">實作程式碼後置檔案</span><span class="sxs-lookup"><span data-stu-id="a53a7-181">Implementing the Code-Behind File</span></span>  
+ <span data-ttu-id="a53a7-182">程式碼後置檔案，MyControl1.xaml.cs，會實作三個重要的工作：</span><span class="sxs-lookup"><span data-stu-id="a53a7-182">The code-behind file, MyControl1.xaml.cs, implements three essential tasks:</span></span>
   
-1.  處理使用者按一下其中一個按鈕時進行的事件。  
+1.  <span data-ttu-id="a53a7-183">處理使用者按一下其中一個按鈕時所發生的事件。</span><span class="sxs-lookup"><span data-stu-id="a53a7-183">Handles the event that occurs when the user clicks one of the buttons.</span></span>  
   
-2.  從 <xref:System.Windows.Controls.TextBox> 項目中擷取資料，並將它封裝到自訂事件引數物件中。  
+2.  <span data-ttu-id="a53a7-184">擷取從資料<xref:System.Windows.Controls.TextBox>項目，並將封裝中的自訂事件引數物件。</span><span class="sxs-lookup"><span data-stu-id="a53a7-184">Retrieves the data from the <xref:System.Windows.Controls.TextBox> elements, and packages it in a custom event argument object.</span></span>  
   
-3.  引發自訂 `OnButtonClick` 事件，用以通知主應用程式使用者已完成，並將資料傳回給主應用程式。  
+3.  <span data-ttu-id="a53a7-185">引發自訂`OnButtonClick`事件，通知使用者已完成，並且將資料傳遞回主機的主機。</span><span class="sxs-lookup"><span data-stu-id="a53a7-185">Raises the custom `OnButtonClick` event, which notifies the host that the user is finished and passes the data back to the host.</span></span>  
   
- 控制項也會公開一些色彩和字型屬性，讓您可以變更外觀。  與用來裝載 [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 控制項的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 類別不同，<xref:System.Windows.Forms.Integration.ElementHost> 類別只會公開控制項的 <xref:System.Windows.Controls.Panel.Background%2A> 屬性。  為了維持這個程式碼範例與[逐步解說：在 WPF 中裝載 Windows Form 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)中所討論範例的相似性，控制項會直接公開其餘屬性。  
+ <span data-ttu-id="a53a7-186">此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-186">The control also exposes a number of color and font properties that enable you to change the appearance.</span></span> <span data-ttu-id="a53a7-187">不同於<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別，這時會使用主機[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]控制項，<xref:System.Windows.Forms.Integration.ElementHost>類別會公開控制項的<xref:System.Windows.Controls.Panel.Background%2A>只屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-187">Unlike the <xref:System.Windows.Forms.Integration.WindowsFormsHost> class, which is used to host a [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control, the <xref:System.Windows.Forms.Integration.ElementHost> class exposes the control’s <xref:System.Windows.Controls.Panel.Background%2A> property only.</span></span> <span data-ttu-id="a53a7-188">若要維護與之間文字相似度這個程式碼範例中所討論的範例[逐步解說： 在 WPF 中的 Windows Form 複合控制項裝載](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，控制會直接公開的剩餘屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-188">To maintain the similarity between this code example and the example discussed in [Walkthrough: Hosting a Windows Forms Composite Control in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), the control exposes the remaining properties directly.</span></span>  
   
-#### 程式碼後置檔案的基本結構  
- 程式碼後置檔案是由單一命名空間 `MyControls` 所組成，而這個命名空間包含 `MyControl1` 和 `MyControlEventArgs` 這兩個類別。  
+#### <a name="the-basic-structure-of-the-code-behind-file"></a><span data-ttu-id="a53a7-189">程式碼後置檔案的基本結構</span><span class="sxs-lookup"><span data-stu-id="a53a7-189">The Basic Structure of the Code-Behind File</span></span>  
+ <span data-ttu-id="a53a7-190">此程式碼後置檔案包含單一命名空間， `MyControls`，其中會包含兩個類別：`MyControl1`和`MyControlEventArgs`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-190">The code-behind file consists of a single namespace, `MyControls`, which will contain two classes, `MyControl1` and `MyControlEventArgs`.</span></span>  
   
 ```  
-  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -136,203 +137,202 @@ namespace MyControls
     //...  
   }  
 }  
-  
 ```  
   
- 第一個類別 `MyControl1` 是部分類別，內含的程式碼實作 MyControl1.xaml 中定義之 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。  剖析 MyControl1.xaml 時，會將 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 轉換為相同的部分類別，而且會合併這兩個部分類別以產生編譯的控制項。  因此，程式碼後置檔案中的類別名稱必須符合指派給 MyControl1.xaml 的類別名稱，而且必須繼承自控制項的根項目。  第二個類別 `MyControlEventArgs` 是事件引數類別，用來將資料傳回給主應用程式。  
+ <span data-ttu-id="a53a7-191">第一個類別， `MyControl1`，是部分類別，其中包含實作的功能的程式碼[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]MyControl1.xaml 中定義。</span><span class="sxs-lookup"><span data-stu-id="a53a7-191">The first class, `MyControl1`, is a partial class containing the code that implements the functionality of the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] defined in MyControl1.xaml.</span></span> <span data-ttu-id="a53a7-192">剖析 MyControl1.xaml 時，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]轉換成相同的部分類別，並會合併兩個部分類別，以形成編譯的控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-192">When MyControl1.xaml is parsed, the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is converted to the same partial class, and the two partial classes are merged to form the compiled control.</span></span> <span data-ttu-id="a53a7-193">因此，程式碼後置檔案中的類別名稱必須符合指派給 MyControl1.xaml 的類別名稱，而且必須繼承自控制項的根項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-193">For this reason, the class name in the code-behind file must match the class name assigned to MyControl1.xaml, and it must inherit from the root element of the control.</span></span> <span data-ttu-id="a53a7-194">第二個類別中， `MyControlEventArgs`，是用來將資料傳送回主應用程式的事件引數類別。</span><span class="sxs-lookup"><span data-stu-id="a53a7-194">The second class, `MyControlEventArgs`, is an event arguments class that is used to send the data back to the host.</span></span>  
   
- 開啟 MyControl1.xaml.cs。  變更現有的類別宣告，使其具有下列名稱並繼承自 <xref:System.Windows.Controls.Grid>。  
+ <span data-ttu-id="a53a7-195">開啟 MyControl1.xaml.cs。</span><span class="sxs-lookup"><span data-stu-id="a53a7-195">Open MyControl1.xaml.cs.</span></span> <span data-ttu-id="a53a7-196">變更現有的類別宣告，使其具有下列名稱和繼承自<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="a53a7-196">Change the existing class declaration so that it has the following name and inherits from <xref:System.Windows.Controls.Grid>.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
   
-#### 初始化控制項  
- 下列程式碼會實作數項基本工作：  
+#### <a name="initializing-the-control"></a><span data-ttu-id="a53a7-197">初始化控制項</span><span class="sxs-lookup"><span data-stu-id="a53a7-197">Initializing the Control</span></span>  
+ <span data-ttu-id="a53a7-198">下例程式碼實作數個基本工作︰</span><span class="sxs-lookup"><span data-stu-id="a53a7-198">The following code implements several basic tasks:</span></span>  
   
--   宣告私用 \(Private\) 事件 `OnButtonClick` 和其相關委派 `MyControlEventHandler`。  
+-   <span data-ttu-id="a53a7-199">宣告私用的事件， `OnButtonClick`，以及其相關聯的委派， `MyControlEventHandler`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-199">Declares a private event, `OnButtonClick`, and its associated delegate, `MyControlEventHandler`.</span></span>  
   
--   建立數個儲存使用者資料的私用全域變數。  這個資料是透過對應的屬性所公開。  
+-   <span data-ttu-id="a53a7-200">建立可儲存使用者資料的數個私用全域變數。</span><span class="sxs-lookup"><span data-stu-id="a53a7-200">Creates several private global variables that store the user's data.</span></span> <span data-ttu-id="a53a7-201">這項資料是透過對應的屬性所公開。</span><span class="sxs-lookup"><span data-stu-id="a53a7-201">This data is exposed through corresponding properties.</span></span>  
   
--   針對控制項的 <xref:System.Windows.FrameworkElement.Loaded> 事件，實作處理常式 `Init`。  這個處理常式會將 MyControl1.xaml 中定義的值指派給全域變數，以初始化全域變數。  而做法是使用指派給一般 <xref:System.Windows.Controls.TextBlock> 項目 `nameLabel` 的 <xref:System.Windows.FrameworkElement.Name%2A>，來存取該項目的屬性設定。  
+-   <span data-ttu-id="a53a7-202">實作處理常式， `Init`，控制項的<xref:System.Windows.FrameworkElement.Loaded>事件。</span><span class="sxs-lookup"><span data-stu-id="a53a7-202">Implements a handler, `Init`, for the control’s <xref:System.Windows.FrameworkElement.Loaded> event.</span></span> <span data-ttu-id="a53a7-203">此處理常式會初始化全域變數，方法是將 MyControl1.xaml 中所定義的值指派給它們。</span><span class="sxs-lookup"><span data-stu-id="a53a7-203">This handler initializes the global variables by assigning them the values defined in MyControl1.xaml.</span></span> <span data-ttu-id="a53a7-204">若要這樣做，它會使用<xref:System.Windows.FrameworkElement.Name%2A>指派給一般<xref:System.Windows.Controls.TextBlock>項目， `nameLabel`，以存取該元素的屬性設定。</span><span class="sxs-lookup"><span data-stu-id="a53a7-204">To do this, it uses the <xref:System.Windows.FrameworkElement.Name%2A> assigned to a typical <xref:System.Windows.Controls.TextBlock> element, `nameLabel`, to access that element's property settings.</span></span>  
   
- 請刪除現有的建構函式，並將下列程式碼加入至 `MyControl1` 類別。  
+ <span data-ttu-id="a53a7-205">刪除現有的建構函式，並將下列程式碼加入您`MyControl1`類別。</span><span class="sxs-lookup"><span data-stu-id="a53a7-205">Delete the existing constructor and add the following code to your `MyControl1` class.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
   
-#### 處理按鈕的按一下事件  
- 使用者按一下 \[**OK**\] 按鈕或 \[**Cancel**\] 按鈕，表示完成資料輸入工作。  這兩個按鈕都使用相同的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件處理常式 `ButtonClicked`。  而這兩個按鈕的名稱為 `btnOK` 或 `btnCancel`，讓處理常式只要檢查 `sender` 引數的值就可以判斷按的是哪一個按鈕。  處理常式會執行下列動作：  
+#### <a name="handling-the-buttons-click-events"></a><span data-ttu-id="a53a7-206">處理 Buttons 的 Click 事件</span><span class="sxs-lookup"><span data-stu-id="a53a7-206">Handling the Buttons' Click Events</span></span>  
+ <span data-ttu-id="a53a7-207">使用者會指出資料輸入工作已完成按一下**確定**按鈕或**取消** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="a53a7-207">The user indicates that the data-entry task is finished by clicking either the **OK** button or the **Cancel** button.</span></span> <span data-ttu-id="a53a7-208">這兩個按鈕使用的相同<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式， `ButtonClicked`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-208">Both buttons use the same <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler, `ButtonClicked`.</span></span> <span data-ttu-id="a53a7-209">這兩個按鈕有名稱、`btnOK`或`btnCancel`，可判斷哪一個按鈕已按下藉由檢查的值的處理常式`sender`引數。</span><span class="sxs-lookup"><span data-stu-id="a53a7-209">Both buttons have a name, `btnOK` or `btnCancel`, that enables the handler to determine which button was clicked by examining the value of the `sender` argument.</span></span> <span data-ttu-id="a53a7-210">此處理常式會執行下列動作︰</span><span class="sxs-lookup"><span data-stu-id="a53a7-210">The handler does the following:</span></span>  
   
--   建立 `MyControlEventArgs` 物件，並讓它包含 <xref:System.Windows.Controls.TextBox> 項目中的資料。  
+-   <span data-ttu-id="a53a7-211">建立`MyControlEventArgs`物件，其中包含從資料<xref:System.Windows.Controls.TextBox>項目。</span><span class="sxs-lookup"><span data-stu-id="a53a7-211">Creates a `MyControlEventArgs` object that contains the data from the <xref:System.Windows.Controls.TextBox> elements.</span></span>  
   
--   如果使用者按的是 \[**取消**\] 按鈕，則會將 `MyControlEventArgs` 物件的 `IsOK` 屬性設為 `false`。  
+-   <span data-ttu-id="a53a7-212">如果使用者已按下**取消**按鈕，設定`MyControlEventArgs`物件的`IsOK`屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-212">If the user clicked the **Cancel** button, sets the `MyControlEventArgs` object's `IsOK` property to `false`.</span></span>  
   
--   引發 `OnButtonClick` 事件，告知主應用程式使用者已完成，並傳回收集的資料。  
+-   <span data-ttu-id="a53a7-213">引發`OnButtonClick`事件至主機，指出使用者已完成，而且將傳回所收集的資料。</span><span class="sxs-lookup"><span data-stu-id="a53a7-213">Raises the `OnButtonClick` event to indicate to the host that the user is finished, and passes back the collected data.</span></span>  
   
- 請將下列程式碼加入至 `MyControl1` 類別內的 `Init` 方法之後。  
+ <span data-ttu-id="a53a7-214">將下列程式碼加入您`MyControl1`之後類別`Init`方法。</span><span class="sxs-lookup"><span data-stu-id="a53a7-214">Add the following code to your `MyControl1` class, after the `Init` method.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
   
-#### 建立屬性  
- 類別的其餘部分只會公開與先前討論之全域變數對應的屬性。  當屬性變更時，set 存取子會變更對應的項目屬性，並更新基礎全域變數，以修改控制項的外觀。  
+#### <a name="creating-properties"></a><span data-ttu-id="a53a7-215">建立屬性</span><span class="sxs-lookup"><span data-stu-id="a53a7-215">Creating Properties</span></span>  
+ <span data-ttu-id="a53a7-216">類別的其餘部分只會公開對應至先前所討論之全域變數的屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-216">The remainder of the class simply exposes properties that correspond to the global variables discussed previously.</span></span> <span data-ttu-id="a53a7-217">屬性變更時，set 存取子會變更對應的項目屬性以及更新基礎全域變數來修改控制項的外觀。</span><span class="sxs-lookup"><span data-stu-id="a53a7-217">When a property changes, the set accessor modifies the appearance of the control by changing the corresponding element properties and updating the underlying global variables.</span></span>  
   
- 將下列程式碼加入至 `MyControl1` 類別。  
+ <span data-ttu-id="a53a7-218">將下列程式碼加入您`MyControl1`類別。</span><span class="sxs-lookup"><span data-stu-id="a53a7-218">Add the following code to your `MyControl1` class.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
   
-#### 將資料傳回給主應用程式  
- 檔案中的最終元件是 `MyControlEventArgs` 類別，這個類別是用來將收集的資料傳回給主應用程式。  
+#### <a name="sending-the-data-back-to-the-host"></a><span data-ttu-id="a53a7-219">將資料傳回主應用程式</span><span class="sxs-lookup"><span data-stu-id="a53a7-219">Sending the Data Back to the Host</span></span>  
+ <span data-ttu-id="a53a7-220">在檔案中的最後一個元件是`MyControlEventArgs`類別，用來將收集的資料傳送回主應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-220">The final component in the file is the `MyControlEventArgs` class, which is used to send the collected data back to the host.</span></span>  
   
- 請將下列程式碼加入至 `MyControls` 命名空間。  這項實作十分簡單，因此不再進一步討論。  
+ <span data-ttu-id="a53a7-221">將下列程式碼加入您`MyControls`命名空間。</span><span class="sxs-lookup"><span data-stu-id="a53a7-221">Add the following code to your `MyControls` namespace.</span></span> <span data-ttu-id="a53a7-222">此實作十分簡單，未來不會進行討論。</span><span class="sxs-lookup"><span data-stu-id="a53a7-222">The implementation is straightforward, and is not discussed further.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
   
- 建置方案。  此組建會產生名稱為 MyControls.dll 的 DLL。  
+ <span data-ttu-id="a53a7-223">建置方案。</span><span class="sxs-lookup"><span data-stu-id="a53a7-223">Build the solution.</span></span> <span data-ttu-id="a53a7-224">組置將會產生名為 MyControls.dll 的 DLL。</span><span class="sxs-lookup"><span data-stu-id="a53a7-224">The build will produce a DLL named MyControls.dll.</span></span>  
   
 <a name="winforms_host_section"></a>   
-## 實作 Windows Forms 主應用程式  
- [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 主應用程式使用 <xref:System.Windows.Forms.Integration.ElementHost> 物件來裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項。  此應用程式會處理 `OnButtonClick` 事件，以便接收來自複合控制項的資料。  應用程式也有一組可用來修改控制項外觀的選項按鈕。  下圖顯示此應用程式。  
+## <a name="implementing-the-windows-forms-host-application"></a><span data-ttu-id="a53a7-225">實作 Windows Forms 主應用程式</span><span class="sxs-lookup"><span data-stu-id="a53a7-225">Implementing the Windows Forms Host Application</span></span>  
+ <span data-ttu-id="a53a7-226">[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]裝載應用程式會使用<xref:System.Windows.Forms.Integration.ElementHost>主機的物件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-226">The [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] host application uses an <xref:System.Windows.Forms.Integration.ElementHost> object to host the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control.</span></span> <span data-ttu-id="a53a7-227">應用程式的控制代碼`OnButtonClick`事件接收複合控制項中的資料。</span><span class="sxs-lookup"><span data-stu-id="a53a7-227">The application handles the `OnButtonClick` event to receive the data from the composite control.</span></span> <span data-ttu-id="a53a7-228">應用程式也會有一組選項按鈕，可用來修改控制項的外觀。</span><span class="sxs-lookup"><span data-stu-id="a53a7-228">The application also has a set of option buttons that you can use to modify the control’s appearance.</span></span> <span data-ttu-id="a53a7-229">下圖顯示應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-229">The following illustration shows the application.</span></span>  
   
- ![Windows Form 裝載 Avalon 控制項](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")  
-Windows Form 應用程式中裝載的 WPF 複合控制項  
+ <span data-ttu-id="a53a7-230">![Windows Form 裝載 Avalon 控制項](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")</span><span class="sxs-lookup"><span data-stu-id="a53a7-230">![Windows Form Hosting Avalon Control](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")</span></span>  
+<span data-ttu-id="a53a7-231">Windows Forms 應用程式中裝載的 WPF 複合控制項</span><span class="sxs-lookup"><span data-stu-id="a53a7-231">WPF composite control hosted in a Windows Forms application</span></span>  
   
-### 建立專案  
- 若要開始專案：  
+### <a name="creating-the-project"></a><span data-ttu-id="a53a7-232">建立專案</span><span class="sxs-lookup"><span data-stu-id="a53a7-232">Creating the Project</span></span>  
+ <span data-ttu-id="a53a7-233">啟動專案：</span><span class="sxs-lookup"><span data-stu-id="a53a7-233">To start the project:</span></span>  
   
-1.  啟動 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，並開啟 \[**新增專案**\] 對話方塊。  
+1.  <span data-ttu-id="a53a7-234">啟動[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，並開啟**新專案** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="a53a7-234">Launch [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], and open the **New Project** dialog box.</span></span>  
   
-2.  在 Visual C\# 和 Windows 分類中，選取 \[**Windows Form 應用程式**\] 範本。  
+2.  <span data-ttu-id="a53a7-235">在 Visual C# 和 Windows 類別目錄中，選取**Windows Forms 應用程式**範本。</span><span class="sxs-lookup"><span data-stu-id="a53a7-235">In Visual C# and the Windows category, select  the **Windows Forms Application** template.</span></span>  
   
-3.  將新專案命名為 `WFHost`。  
+3.  <span data-ttu-id="a53a7-236">將新專案`WFHost`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-236">Name the new project `WFHost`.</span></span>  
   
-4.  在位置中，指定內含 MyControls 專案的相同最上層資料夾。  
+4.  <span data-ttu-id="a53a7-237">針對位置，指定包含 MyControls 專案的相同最上層資料夾。</span><span class="sxs-lookup"><span data-stu-id="a53a7-237">For the location, specify the same top-level folder that contains the MyControls project.</span></span>  
   
-5.  按一下 \[**確定**\] 建立專案。  
+5.  <span data-ttu-id="a53a7-238">按一下**確定**建立專案。</span><span class="sxs-lookup"><span data-stu-id="a53a7-238">Click **OK** to create the project.</span></span>  
   
- 對於內含 `MyControl1` 的 DLL 和其他組件，您也需要加入這些 DLL 和組件的參考。  
+ <span data-ttu-id="a53a7-239">您也需要將參考加入至包含的 DLL`MyControl1`和其他組件。</span><span class="sxs-lookup"><span data-stu-id="a53a7-239">You also need to add references to the DLL that contains `MyControl1` and other assemblies.</span></span>  
   
-1.  以滑鼠右鍵按一下 \[方案總管\] 中的專案名稱，然後選取 \[**加入參考**\]。  
+1.  <span data-ttu-id="a53a7-240">以滑鼠右鍵按一下方案總管 中的專案名稱，然後選取**加入參考**。</span><span class="sxs-lookup"><span data-stu-id="a53a7-240">Right-click the project name in Solution Explorer, and select **Add Reference**.</span></span>  
   
-2.  按一下 \[**瀏覽**\] 索引標籤，然後瀏覽至內含 MyControls.dll 的資料夾。  在此逐步解說中，這個資料夾為 MyControls\\bin\\Debug。  
+2.  <span data-ttu-id="a53a7-241">按一下**瀏覽**索引標籤，然後瀏覽至包含 MyControls.dll 的資料夾。</span><span class="sxs-lookup"><span data-stu-id="a53a7-241">Click the **Browse** tab, and browse to the folder that contains MyControls.dll.</span></span> <span data-ttu-id="a53a7-242">在此逐步解說中，這個資料夾是 MyControls\bin\Debug。</span><span class="sxs-lookup"><span data-stu-id="a53a7-242">For this walkthrough, this folder is MyControls\bin\Debug.</span></span>  
   
-3.  選取 MyControls.dll，然後按一下 \[**確定**\]。  
+3.  <span data-ttu-id="a53a7-243">選取 MyControls.dll，，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="a53a7-243">Select MyControls.dll, and then click **OK**.</span></span>  
   
-4.  加入下列組件的參考。  
+4.  <span data-ttu-id="a53a7-244">加入下列組件的參考。</span><span class="sxs-lookup"><span data-stu-id="a53a7-244">Add references to the following assemblies.</span></span>  
   
-    -   PresentationCore  
+    -   <span data-ttu-id="a53a7-245">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="a53a7-245">PresentationCore</span></span>  
   
-    -   PresentationFramework  
+    -   <span data-ttu-id="a53a7-246">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="a53a7-246">PresentationFramework</span></span>  
   
-    -   System.Xaml  
+    -   <span data-ttu-id="a53a7-247">System.Xaml</span><span class="sxs-lookup"><span data-stu-id="a53a7-247">System.Xaml</span></span>  
   
-    -   WindowsBase  
+    -   <span data-ttu-id="a53a7-248">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="a53a7-248">WindowsBase</span></span>  
   
-    -   WindowsFormsIntegration  
+    -   <span data-ttu-id="a53a7-249">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="a53a7-249">WindowsFormsIntegration</span></span>  
   
-### 實作應用程式的使用者介面  
- Windows Form 應用程式的 UI 包含數個可以與 WPF 複合控制項互動的控制項。  
+### <a name="implementing-the-user-interface-for-the-application"></a><span data-ttu-id="a53a7-250">實作應用程式的使用者介面</span><span class="sxs-lookup"><span data-stu-id="a53a7-250">Implementing the User Interface for the Application</span></span>  
+ <span data-ttu-id="a53a7-251">Windows Forms 應用程式的 UI 包含數個控制項，可與 WPF 複合控制項互動。</span><span class="sxs-lookup"><span data-stu-id="a53a7-251">The UI for the Windows Form application contains several controls to interact with the WPF composite control.</span></span>  
   
-1.  在 \[Windows Form 設計工具\] 中開啟 Form1。  
+1.  <span data-ttu-id="a53a7-252">在 Windows Forms 設計工具中，開啟 Form1。</span><span class="sxs-lookup"><span data-stu-id="a53a7-252">Open Form1 in the Windows Form Designer.</span></span>  
   
-2.  拉大表單以放入控制項。  
+2.  <span data-ttu-id="a53a7-253">放大表單，以容納控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-253">Enlarge the form to accommodate the controls.</span></span>  
   
-3.  在表單的右上角，加入 <xref:System.Windows.Forms.Panel?displayProperty=fullName> 控制項來容納 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項。  
+3.  <span data-ttu-id="a53a7-254">在表單的右上角，新增<xref:System.Windows.Forms.Panel?displayProperty=nameWithType>控制項來保存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-254">In the upper-right corner of the form, add a <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> control to hold the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control.</span></span>  
   
-4.  將下列 <xref:System.Windows.Forms.GroupBox?displayProperty=fullName> 控制項加入至表單。  
+4.  <span data-ttu-id="a53a7-255">加入下列<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項加入表單。</span><span class="sxs-lookup"><span data-stu-id="a53a7-255">Add the following <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> controls to the form.</span></span>  
   
-    |名稱|文字|  
-    |--------|--------|  
-    |groupBox1|背景色彩|  
-    |groupBox2|前景色彩|  
-    |groupBox3|字型大小|  
-    |groupBox4|字型家族|  
-    |groupBox5|字型樣式|  
-    |groupBox6|字型粗細|  
-    |groupBox7|來自控制項的資料|  
+    |<span data-ttu-id="a53a7-256">名稱</span><span class="sxs-lookup"><span data-stu-id="a53a7-256">Name</span></span>|<span data-ttu-id="a53a7-257">Text</span><span class="sxs-lookup"><span data-stu-id="a53a7-257">Text</span></span>|  
+    |----------|----------|  
+    |<span data-ttu-id="a53a7-258">groupBox1</span><span class="sxs-lookup"><span data-stu-id="a53a7-258">groupBox1</span></span>|<span data-ttu-id="a53a7-259">背景色彩</span><span class="sxs-lookup"><span data-stu-id="a53a7-259">Background Color</span></span>|  
+    |<span data-ttu-id="a53a7-260">groupBox2</span><span class="sxs-lookup"><span data-stu-id="a53a7-260">groupBox2</span></span>|<span data-ttu-id="a53a7-261">前景色彩</span><span class="sxs-lookup"><span data-stu-id="a53a7-261">Foreground Color</span></span>|  
+    |<span data-ttu-id="a53a7-262">groupBox3</span><span class="sxs-lookup"><span data-stu-id="a53a7-262">groupBox3</span></span>|<span data-ttu-id="a53a7-263">字型大小</span><span class="sxs-lookup"><span data-stu-id="a53a7-263">Font Size</span></span>|  
+    |<span data-ttu-id="a53a7-264">groupBox4</span><span class="sxs-lookup"><span data-stu-id="a53a7-264">groupBox4</span></span>|<span data-ttu-id="a53a7-265">字型家族</span><span class="sxs-lookup"><span data-stu-id="a53a7-265">Font Family</span></span>|  
+    |<span data-ttu-id="a53a7-266">groupBox5</span><span class="sxs-lookup"><span data-stu-id="a53a7-266">groupBox5</span></span>|<span data-ttu-id="a53a7-267">字型樣式</span><span class="sxs-lookup"><span data-stu-id="a53a7-267">Font Style</span></span>|  
+    |<span data-ttu-id="a53a7-268">groupBox6</span><span class="sxs-lookup"><span data-stu-id="a53a7-268">groupBox6</span></span>|<span data-ttu-id="a53a7-269">字型粗細</span><span class="sxs-lookup"><span data-stu-id="a53a7-269">Font Weight</span></span>|  
+    |<span data-ttu-id="a53a7-270">groupBox7</span><span class="sxs-lookup"><span data-stu-id="a53a7-270">groupBox7</span></span>|<span data-ttu-id="a53a7-271">來自控制項的資料</span><span class="sxs-lookup"><span data-stu-id="a53a7-271">Data from control</span></span>|  
   
-5.  將下列 <xref:System.Windows.Forms.RadioButton?displayProperty=fullName> 控制項加入至 <xref:System.Windows.Forms.GroupBox?displayProperty=fullName> 控制項。  
+5.  <span data-ttu-id="a53a7-272">加入下列<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控制項<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-272">Add the following <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> controls to the <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> controls.</span></span>  
   
-    |GroupBox|名稱|文字|  
-    |--------------|--------|--------|  
-    |groupBox1|radioBackgroundOriginal|原始|  
-    |groupBox1|radioBackgroundLightGreen|LightGreen|  
-    |groupBox1|radioBackgroundLightSalmon|LightSalmon|  
-    |groupBox2|radioForegroundOriginal|原始|  
-    |groupBox2|radioForegroundRed|紅色|  
-    |groupBox2|radioForegroundYellow|黃色|  
-    |groupBox3|radioSizeOriginal|原始|  
-    |groupBox3|radioSizeTen|10|  
-    |groupBox3|radioSizeTwelve|12|  
-    |groupBox4|radioFamilyOriginal|原始|  
-    |groupBox4|radioFamilyTimes|Times New Roman|  
-    |groupBox4|radioFamilyWingDings|WingDings|  
-    |groupBox5|radioStyleOriginal|Normal|  
-    |groupBox5|radioStyleItalic|斜體|  
-    |groupBox6|radioWeightOriginal|原始|  
-    |groupBox6|radioWeightBold|粗體|  
+    |<span data-ttu-id="a53a7-273">GroupBox</span><span class="sxs-lookup"><span data-stu-id="a53a7-273">GroupBox</span></span>|<span data-ttu-id="a53a7-274">名稱</span><span class="sxs-lookup"><span data-stu-id="a53a7-274">Name</span></span>|<span data-ttu-id="a53a7-275">Text</span><span class="sxs-lookup"><span data-stu-id="a53a7-275">Text</span></span>|  
+    |--------------|----------|----------|  
+    |<span data-ttu-id="a53a7-276">groupBox1</span><span class="sxs-lookup"><span data-stu-id="a53a7-276">groupBox1</span></span>|<span data-ttu-id="a53a7-277">radioBackgroundOriginal</span><span class="sxs-lookup"><span data-stu-id="a53a7-277">radioBackgroundOriginal</span></span>|<span data-ttu-id="a53a7-278">原始</span><span class="sxs-lookup"><span data-stu-id="a53a7-278">Original</span></span>|  
+    |<span data-ttu-id="a53a7-279">groupBox1</span><span class="sxs-lookup"><span data-stu-id="a53a7-279">groupBox1</span></span>|<span data-ttu-id="a53a7-280">radioBackgroundLightGreen</span><span class="sxs-lookup"><span data-stu-id="a53a7-280">radioBackgroundLightGreen</span></span>|<span data-ttu-id="a53a7-281">LightGreen</span><span class="sxs-lookup"><span data-stu-id="a53a7-281">LightGreen</span></span>|  
+    |<span data-ttu-id="a53a7-282">groupBox1</span><span class="sxs-lookup"><span data-stu-id="a53a7-282">groupBox1</span></span>|<span data-ttu-id="a53a7-283">radioBackgroundLightSalmon</span><span class="sxs-lookup"><span data-stu-id="a53a7-283">radioBackgroundLightSalmon</span></span>|<span data-ttu-id="a53a7-284">LightSalmon</span><span class="sxs-lookup"><span data-stu-id="a53a7-284">LightSalmon</span></span>|  
+    |<span data-ttu-id="a53a7-285">groupBox2</span><span class="sxs-lookup"><span data-stu-id="a53a7-285">groupBox2</span></span>|<span data-ttu-id="a53a7-286">radioForegroundOriginal</span><span class="sxs-lookup"><span data-stu-id="a53a7-286">radioForegroundOriginal</span></span>|<span data-ttu-id="a53a7-287">原始</span><span class="sxs-lookup"><span data-stu-id="a53a7-287">Original</span></span>|  
+    |<span data-ttu-id="a53a7-288">groupBox2</span><span class="sxs-lookup"><span data-stu-id="a53a7-288">groupBox2</span></span>|<span data-ttu-id="a53a7-289">radioForegroundRed</span><span class="sxs-lookup"><span data-stu-id="a53a7-289">radioForegroundRed</span></span>|<span data-ttu-id="a53a7-290">紅色</span><span class="sxs-lookup"><span data-stu-id="a53a7-290">Red</span></span>|  
+    |<span data-ttu-id="a53a7-291">groupBox2</span><span class="sxs-lookup"><span data-stu-id="a53a7-291">groupBox2</span></span>|<span data-ttu-id="a53a7-292">radioForegroundYellow</span><span class="sxs-lookup"><span data-stu-id="a53a7-292">radioForegroundYellow</span></span>|<span data-ttu-id="a53a7-293">黃色</span><span class="sxs-lookup"><span data-stu-id="a53a7-293">Yellow</span></span>|  
+    |<span data-ttu-id="a53a7-294">groupBox3</span><span class="sxs-lookup"><span data-stu-id="a53a7-294">groupBox3</span></span>|<span data-ttu-id="a53a7-295">radioSizeOriginal</span><span class="sxs-lookup"><span data-stu-id="a53a7-295">radioSizeOriginal</span></span>|<span data-ttu-id="a53a7-296">原始</span><span class="sxs-lookup"><span data-stu-id="a53a7-296">Original</span></span>|  
+    |<span data-ttu-id="a53a7-297">groupBox3</span><span class="sxs-lookup"><span data-stu-id="a53a7-297">groupBox3</span></span>|<span data-ttu-id="a53a7-298">radioSizeTen</span><span class="sxs-lookup"><span data-stu-id="a53a7-298">radioSizeTen</span></span>|<span data-ttu-id="a53a7-299">10</span><span class="sxs-lookup"><span data-stu-id="a53a7-299">10</span></span>|  
+    |<span data-ttu-id="a53a7-300">groupBox3</span><span class="sxs-lookup"><span data-stu-id="a53a7-300">groupBox3</span></span>|<span data-ttu-id="a53a7-301">radioSizeTwelve</span><span class="sxs-lookup"><span data-stu-id="a53a7-301">radioSizeTwelve</span></span>|<span data-ttu-id="a53a7-302">12</span><span class="sxs-lookup"><span data-stu-id="a53a7-302">12</span></span>|  
+    |<span data-ttu-id="a53a7-303">groupBox4</span><span class="sxs-lookup"><span data-stu-id="a53a7-303">groupBox4</span></span>|<span data-ttu-id="a53a7-304">radioFamilyOriginal</span><span class="sxs-lookup"><span data-stu-id="a53a7-304">radioFamilyOriginal</span></span>|<span data-ttu-id="a53a7-305">原始</span><span class="sxs-lookup"><span data-stu-id="a53a7-305">Original</span></span>|  
+    |<span data-ttu-id="a53a7-306">groupBox4</span><span class="sxs-lookup"><span data-stu-id="a53a7-306">groupBox4</span></span>|<span data-ttu-id="a53a7-307">radioFamilyTimes</span><span class="sxs-lookup"><span data-stu-id="a53a7-307">radioFamilyTimes</span></span>|<span data-ttu-id="a53a7-308">Tw Cen MT Condensed</span><span class="sxs-lookup"><span data-stu-id="a53a7-308">Times New Roman</span></span>|  
+    |<span data-ttu-id="a53a7-309">groupBox4</span><span class="sxs-lookup"><span data-stu-id="a53a7-309">groupBox4</span></span>|<span data-ttu-id="a53a7-310">radioFamilyWingDings</span><span class="sxs-lookup"><span data-stu-id="a53a7-310">radioFamilyWingDings</span></span>|<span data-ttu-id="a53a7-311">WingDings</span><span class="sxs-lookup"><span data-stu-id="a53a7-311">WingDings</span></span>|  
+    |<span data-ttu-id="a53a7-312">groupBox5</span><span class="sxs-lookup"><span data-stu-id="a53a7-312">groupBox5</span></span>|<span data-ttu-id="a53a7-313">radioStyleOriginal</span><span class="sxs-lookup"><span data-stu-id="a53a7-313">radioStyleOriginal</span></span>|<span data-ttu-id="a53a7-314">一般</span><span class="sxs-lookup"><span data-stu-id="a53a7-314">Normal</span></span>|  
+    |<span data-ttu-id="a53a7-315">groupBox5</span><span class="sxs-lookup"><span data-stu-id="a53a7-315">groupBox5</span></span>|<span data-ttu-id="a53a7-316">radioStyleItalic</span><span class="sxs-lookup"><span data-stu-id="a53a7-316">radioStyleItalic</span></span>|<span data-ttu-id="a53a7-317">斜體</span><span class="sxs-lookup"><span data-stu-id="a53a7-317">Italic</span></span>|  
+    |<span data-ttu-id="a53a7-318">groupBox6</span><span class="sxs-lookup"><span data-stu-id="a53a7-318">groupBox6</span></span>|<span data-ttu-id="a53a7-319">radioWeightOriginal</span><span class="sxs-lookup"><span data-stu-id="a53a7-319">radioWeightOriginal</span></span>|<span data-ttu-id="a53a7-320">原始</span><span class="sxs-lookup"><span data-stu-id="a53a7-320">Original</span></span>|  
+    |<span data-ttu-id="a53a7-321">groupBox6</span><span class="sxs-lookup"><span data-stu-id="a53a7-321">groupBox6</span></span>|<span data-ttu-id="a53a7-322">radioWeightBold</span><span class="sxs-lookup"><span data-stu-id="a53a7-322">radioWeightBold</span></span>|<span data-ttu-id="a53a7-323">粗體</span><span class="sxs-lookup"><span data-stu-id="a53a7-323">Bold</span></span>|  
   
-6.  將下列 <xref:System.Windows.Forms.Label?displayProperty=fullName> 控制項加入至最後一個 <xref:System.Windows.Forms.GroupBox?displayProperty=fullName>。  這些控制項會顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項所傳回的資料。  
+6.  <span data-ttu-id="a53a7-324">加入下列<xref:System.Windows.Forms.Label?displayProperty=nameWithType>到最後一個控制<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="a53a7-324">Add the following <xref:System.Windows.Forms.Label?displayProperty=nameWithType> controls to the last <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a53a7-325">這些控制項會顯示所傳回的資料[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-325">These controls display the data returned by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control.</span></span>  
   
-    |GroupBox|名稱|文字|  
-    |--------------|--------|--------|  
-    |groupBox7|lblName|姓名：|  
-    |groupBox7|lblAddress|街道地址：|  
-    |groupBox7|lblCity|城市：|  
-    |groupBox7|lblState|省\/市：|  
-    |groupBox7|lblZip|郵遞區號：|  
+    |<span data-ttu-id="a53a7-326">GroupBox</span><span class="sxs-lookup"><span data-stu-id="a53a7-326">GroupBox</span></span>|<span data-ttu-id="a53a7-327">名稱</span><span class="sxs-lookup"><span data-stu-id="a53a7-327">Name</span></span>|<span data-ttu-id="a53a7-328">Text</span><span class="sxs-lookup"><span data-stu-id="a53a7-328">Text</span></span>|  
+    |--------------|----------|----------|  
+    |<span data-ttu-id="a53a7-329">groupBox7</span><span class="sxs-lookup"><span data-stu-id="a53a7-329">groupBox7</span></span>|<span data-ttu-id="a53a7-330">lblName</span><span class="sxs-lookup"><span data-stu-id="a53a7-330">lblName</span></span>|<span data-ttu-id="a53a7-331">名稱：</span><span class="sxs-lookup"><span data-stu-id="a53a7-331">Name:</span></span>|  
+    |<span data-ttu-id="a53a7-332">groupBox7</span><span class="sxs-lookup"><span data-stu-id="a53a7-332">groupBox7</span></span>|<span data-ttu-id="a53a7-333">lblAddress</span><span class="sxs-lookup"><span data-stu-id="a53a7-333">lblAddress</span></span>|<span data-ttu-id="a53a7-334">街道地址：</span><span class="sxs-lookup"><span data-stu-id="a53a7-334">Street Address:</span></span>|  
+    |<span data-ttu-id="a53a7-335">groupBox7</span><span class="sxs-lookup"><span data-stu-id="a53a7-335">groupBox7</span></span>|<span data-ttu-id="a53a7-336">lblCity</span><span class="sxs-lookup"><span data-stu-id="a53a7-336">lblCity</span></span>|<span data-ttu-id="a53a7-337">城市：</span><span class="sxs-lookup"><span data-stu-id="a53a7-337">City:</span></span>|  
+    |<span data-ttu-id="a53a7-338">groupBox7</span><span class="sxs-lookup"><span data-stu-id="a53a7-338">groupBox7</span></span>|<span data-ttu-id="a53a7-339">lblState</span><span class="sxs-lookup"><span data-stu-id="a53a7-339">lblState</span></span>|<span data-ttu-id="a53a7-340">狀態:</span><span class="sxs-lookup"><span data-stu-id="a53a7-340">State:</span></span>|  
+    |<span data-ttu-id="a53a7-341">groupBox7</span><span class="sxs-lookup"><span data-stu-id="a53a7-341">groupBox7</span></span>|<span data-ttu-id="a53a7-342">lblZip</span><span class="sxs-lookup"><span data-stu-id="a53a7-342">lblZip</span></span>|<span data-ttu-id="a53a7-343">郵遞區號︰</span><span class="sxs-lookup"><span data-stu-id="a53a7-343">Zip:</span></span>|  
   
-### 初始化表單  
- 一般實作的是表單之 <xref:System.Windows.Forms.Form.Load> 事件處理常式中的裝載程式碼。  下列程式碼顯示 <xref:System.Windows.Forms.Form.Load> 事件處理常式 \([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項之 <xref:System.Windows.FrameworkElement.Loaded> 事件的處理常式\)，以及之後使用的數個全域變數的宣告。  
+### <a name="initializing-the-form"></a><span data-ttu-id="a53a7-344">初始化表單</span><span class="sxs-lookup"><span data-stu-id="a53a7-344">Initializing the Form</span></span>  
+ <span data-ttu-id="a53a7-345">您通常會在表單的實作裝載程式碼<xref:System.Windows.Forms.Form.Load>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-345">You generally implement the hosting code in the form's <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="a53a7-346">下列程式碼會示範<xref:System.Windows.Forms.Form.Load>事件處理常式、 處理常式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項<xref:System.Windows.FrameworkElement.Loaded>事件，並稍後使用的數個全域變數的宣告。</span><span class="sxs-lookup"><span data-stu-id="a53a7-346">The following code shows the <xref:System.Windows.Forms.Form.Load> event handler, a handler for the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control’s <xref:System.Windows.FrameworkElement.Loaded> event, and declarations for several global variables that are used later.</span></span>  
   
- 請在 \[Windows Form 設計工具\] 中按兩下表單，建立 <xref:System.Windows.Forms.Form.Load> 事件處理常式。  在 Form1.cs 最上方加入下列 `using` 陳述式。  
+ <span data-ttu-id="a53a7-347">在 Windows Form 設計工具中，按兩下表單，以建立<xref:System.Windows.Forms.Form.Load>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-347">In the Windows Forms Designer, double-click the form to create a <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="a53a7-348">在 Form1.cs 頂端，加入下列`using`陳述式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-348">At the top of Form1.cs, add the following `using` statements.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
   
- 以下列程式碼取代現有 `Form1` 類別的內容。  
+ <span data-ttu-id="a53a7-349">取代的現有內容`Form1`為下列程式碼的類別。</span><span class="sxs-lookup"><span data-stu-id="a53a7-349">Replace the contents of the existing `Form1` class with the following code.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
   
- 前一個程式碼中的 `Form1_Load` 方法顯示裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項的一般程序：  
+ <span data-ttu-id="a53a7-350">`Form1_Load`方法，在上述程式碼中的顯示的一般程序裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項：</span><span class="sxs-lookup"><span data-stu-id="a53a7-350">The `Form1_Load` method in the preceding code shows the general procedure for hosting a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] control:</span></span>  
   
-1.  建立新的 <xref:System.Windows.Forms.Integration.ElementHost> 物件。  
+1.  <span data-ttu-id="a53a7-351">建立新<xref:System.Windows.Forms.Integration.ElementHost>物件。</span><span class="sxs-lookup"><span data-stu-id="a53a7-351">Create a new <xref:System.Windows.Forms.Integration.ElementHost> object.</span></span>  
   
-2.  將控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性 \(Property\) 設為 <xref:System.Windows.Forms.DockStyle?displayProperty=fullName>。  
+2.  <span data-ttu-id="a53a7-352">將控制項的<xref:System.Windows.Forms.Control.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="a53a7-352">Set the control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>.</span></span>  
   
-3.  將 <xref:System.Windows.Forms.Integration.ElementHost> 控制項加入至 <xref:System.Windows.Forms.Panel> 控制項的 <xref:System.Windows.Forms.Control.Controls%2A> 集合。  
+3.  <span data-ttu-id="a53a7-353">新增<xref:System.Windows.Forms.Integration.ElementHost>控制權傳輸至<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Control.Controls%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="a53a7-353">Add the <xref:System.Windows.Forms.Integration.ElementHost> control to the <xref:System.Windows.Forms.Panel> control's <xref:System.Windows.Forms.Control.Controls%2A> collection.</span></span>  
   
-4.  建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項的執行個體。  
+4.  <span data-ttu-id="a53a7-354">建立的執行個體[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-354">Create an instance of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] control.</span></span>  
   
-5.  將複合控制項指派給 <xref:System.Windows.Forms.Integration.ElementHost> 控制項的 <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> 屬性，以將複合控制項裝載在表單上。  
+5.  <span data-ttu-id="a53a7-355">藉由指定的控制項裝載複合控制項在表單上的<xref:System.Windows.Forms.Integration.ElementHost>控制項的<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-355">Host the composite control on the form by assigning the control to the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> property.</span></span>  
   
- `Form1_Load` 方法中的其餘兩行程式碼會將處理常式附加至兩個控制項事件：  
+ <span data-ttu-id="a53a7-356">中的其餘兩行`Form1_Load`方法附加至兩個控制項事件的處理常式：</span><span class="sxs-lookup"><span data-stu-id="a53a7-356">The remaining two lines in the `Form1_Load` method attach handlers to two control events:</span></span>  
   
--   `OnButtonClick` 是在使用者按一下 \[**OK**\] 或 \[**Cancel**\] 按鈕時，由複合控制項所引發的自訂事件。  處理這個事件可以取得使用者的回應，以及收集使用者指定的任何資料。  
+-   <span data-ttu-id="a53a7-357">`OnButtonClick`是在使用者按一下時，會將複合控制項所引發自訂事件**確定**或**取消** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="a53a7-357">`OnButtonClick` is a custom event that is fired by the composite control when the user clicks the **OK** or **Cancel** button.</span></span> <span data-ttu-id="a53a7-358">您可以處理事件以取得使用者回應，以及收集使用者所指定的任何資料。</span><span class="sxs-lookup"><span data-stu-id="a53a7-358">You handle the event to get the user's response and to collect any data that the user specified.</span></span>  
   
--   <xref:System.Windows.FrameworkElement.Loaded> 是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項在完全載入時所引發的標準事件。  因為範例需要使用控制項的屬性來初始化數個全域變數，所以在這裡使用這個事件。  發生表單的 <xref:System.Windows.Forms.Form.Load> 事件時，並未完全載入控制項，因此那些值仍然設為 `null`。  您必須等到控制項的 <xref:System.Windows.FrameworkElement.Loaded> 事件發生，才能存取那些屬性。  
+-   <span data-ttu-id="a53a7-359"><xref:System.Windows.FrameworkElement.Loaded>是標準的事件所引發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制時完全載入。</span><span class="sxs-lookup"><span data-stu-id="a53a7-359"><xref:System.Windows.FrameworkElement.Loaded> is a standard event that is raised by a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] control when it is fully loaded.</span></span> <span data-ttu-id="a53a7-360">因為此範例需要使用控制項中的屬性來初始化數個全域變數，所以在這裡使用這個事件。</span><span class="sxs-lookup"><span data-stu-id="a53a7-360">The event is used here because the example needs to initialize several global variables using properties from the control.</span></span> <span data-ttu-id="a53a7-361">在表單的時間<xref:System.Windows.Forms.Form.Load>事件，控制項不是完全載入，而這些值仍會設定為`null`。</span><span class="sxs-lookup"><span data-stu-id="a53a7-361">At the time of the form's <xref:System.Windows.Forms.Form.Load> event, the control is not fully loaded and those values are still set to `null`.</span></span> <span data-ttu-id="a53a7-362">您必須等候直到在控制項的<xref:System.Windows.FrameworkElement.Loaded>才能存取這些屬性，就會發生事件。</span><span class="sxs-lookup"><span data-stu-id="a53a7-362">You need to wait until the control’s <xref:System.Windows.FrameworkElement.Loaded> event occurs before you can access those properties.</span></span>  
   
- 前一個程式碼中顯示了 <xref:System.Windows.FrameworkElement.Loaded> 事件處理常式。  `OnButtonClick` 處理常式則會在下一節中進行討論。  
+ <span data-ttu-id="a53a7-363"><xref:System.Windows.FrameworkElement.Loaded>上述程式碼所示事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-363">The <xref:System.Windows.FrameworkElement.Loaded> event handler is shown in the preceding code.</span></span> <span data-ttu-id="a53a7-364">`OnButtonClick`處理常式會在下一節中討論。</span><span class="sxs-lookup"><span data-stu-id="a53a7-364">The `OnButtonClick` handler is discussed in the next section.</span></span>  
   
-### 處理 OnButtonClick  
- 當使用者按一下 \[**OK**\] 或 \[**Cancel**\] 按鈕時，就會發生 `OnButtonClick` 事件。  
+### <a name="handling-onbuttonclick"></a><span data-ttu-id="a53a7-365">處理 OnButtonClick</span><span class="sxs-lookup"><span data-stu-id="a53a7-365">Handling OnButtonClick</span></span>  
+ <span data-ttu-id="a53a7-366">`OnButtonClick`事件發生於使用者按一下時**確定**或**取消** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="a53a7-366">The `OnButtonClick` event occurs when the user clicks the **OK** or **Cancel** button.</span></span>  
   
- 事件處理常式會檢查事件引數的 `IsOK` 欄位，判斷按下的是哪個按鈕。  `lbl`*data* 變數對應於稍早討論的 <xref:System.Windows.Forms.Label> 控制項。  如果使用者按一下 \[**OK**\] 按鈕，則會將控制項之 <xref:System.Windows.Controls.TextBox> 控制項的資料指派給對應的 <xref:System.Windows.Forms.Label> 控制項。  如果使用按一下 \[**Cancel**\]，則會將 <xref:System.Windows.Forms.Label.Text%2A> 值設定為預設字串。  
+ <span data-ttu-id="a53a7-367">此事件處理常式會檢查事件引數的`IsOK`欄位，以判斷哪一個按鈕已按下。</span><span class="sxs-lookup"><span data-stu-id="a53a7-367">The event handler checks the event argument's `IsOK` field to determine which button was clicked.</span></span> <span data-ttu-id="a53a7-368">`lbl`*資料*變數對應到<xref:System.Windows.Forms.Label>先前討論的控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-368">The `lbl`*data* variables correspond to the <xref:System.Windows.Forms.Label> controls that were discussed earlier.</span></span> <span data-ttu-id="a53a7-369">如果使用者按一下**確定**按鈕，從控制項的資料<xref:System.Windows.Controls.TextBox>控制項指派至對應<xref:System.Windows.Forms.Label>控制項。</span><span class="sxs-lookup"><span data-stu-id="a53a7-369">If the user clicks the **OK** button, the data from the control’s <xref:System.Windows.Controls.TextBox> controls is assigned to the corresponding <xref:System.Windows.Forms.Label> control.</span></span> <span data-ttu-id="a53a7-370">如果使用者按一下**取消**、<xref:System.Windows.Forms.Label.Text%2A>值都會設為預設字串。</span><span class="sxs-lookup"><span data-stu-id="a53a7-370">If the user clicks **Cancel**, the <xref:System.Windows.Forms.Label.Text%2A> values are set to the default strings.</span></span>  
   
- 請將下列按鈕 click 事件處理常式加入至 `Form1` 類別。  
+ <span data-ttu-id="a53a7-371">加入下列按鈕按一下事件處理常式程式碼，使`Form1`類別。</span><span class="sxs-lookup"><span data-stu-id="a53a7-371">Add the following button click event handler code to the `Form1` class.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
   
- 建置並執行應用程式。  在 WPF 複合控制項中加入一些文字，然後按一下 \[**OK**\]。  這些文字會出現在標籤中。  目前尚未加入程式碼來處理選項按鈕。  
+ <span data-ttu-id="a53a7-372">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-372">Build and run the application.</span></span> <span data-ttu-id="a53a7-373">WPF 複合控制項中加入一些文字，然後按一下 **確定**。</span><span class="sxs-lookup"><span data-stu-id="a53a7-373">Add some text in the WPF composite control and then click **OK**.</span></span> <span data-ttu-id="a53a7-374">文字會顯示在標籤中。</span><span class="sxs-lookup"><span data-stu-id="a53a7-374">The text appears in the labels.</span></span> <span data-ttu-id="a53a7-375">此時，尚未新增程式碼來處理選項按鈕。</span><span class="sxs-lookup"><span data-stu-id="a53a7-375">At this point, code has not been added to handle the radio buttons.</span></span>  
   
-### 修改控制項的外觀  
- 表單上的 <xref:System.Windows.Forms.RadioButton> 控制項可讓使用者變更 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項的前景和背景色彩，以及數個字型屬性。  背景色彩是透過 <xref:System.Windows.Forms.Integration.ElementHost> 物件公開。  其餘屬性則是公開為控制項自訂屬性。  
+### <a name="modifying-the-appearance-of-the-control"></a><span data-ttu-id="a53a7-376">修改控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="a53a7-376">Modifying the Appearance of the Control</span></span>  
+ <span data-ttu-id="a53a7-377"><xref:System.Windows.Forms.RadioButton>表單上的控制項可讓使用者變更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項的前景和背景色彩也是以多個字型屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-377">The <xref:System.Windows.Forms.RadioButton> controls on the form will enable the user to change the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control’s foreground and background colors as well as several font properties.</span></span> <span data-ttu-id="a53a7-378">背景色彩由<xref:System.Windows.Forms.Integration.ElementHost>物件。</span><span class="sxs-lookup"><span data-stu-id="a53a7-378">The background color is exposed by the <xref:System.Windows.Forms.Integration.ElementHost> object.</span></span> <span data-ttu-id="a53a7-379">其餘的屬性會公開為控制項的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="a53a7-379">The remaining properties are exposed as custom properties of the control.</span></span>  
   
- 按兩下表單上的每個 <xref:System.Windows.Forms.RadioButton> 控制項，以建立 <xref:System.Windows.Forms.RadioButton.CheckedChanged> 事件處理常式。  以下列程式碼取代 <xref:System.Windows.Forms.RadioButton.CheckedChanged> 事件處理常式。  
+ <span data-ttu-id="a53a7-380">依序按兩下<xref:System.Windows.Forms.RadioButton>建立表單上的控制項<xref:System.Windows.Forms.RadioButton.CheckedChanged>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-380">Double-click each <xref:System.Windows.Forms.RadioButton> control on the form to create <xref:System.Windows.Forms.RadioButton.CheckedChanged> event handlers.</span></span> <span data-ttu-id="a53a7-381">取代<xref:System.Windows.Forms.RadioButton.CheckedChanged>事件處理常式取代下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="a53a7-381">Replace the <xref:System.Windows.Forms.RadioButton.CheckedChanged> event handlers with the following code.</span></span>  
   
  [!code-csharp[WindowsFormsHostingWpfControl#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
   
- 建置並執行應用程式。  按一下不同的選項按鈕，以查看在 WPF 複合控制項上的效果。  
+ <span data-ttu-id="a53a7-382">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="a53a7-382">Build and run the application.</span></span> <span data-ttu-id="a53a7-383">按一下不同的選項按鈕，以查看在 WPF 複合控制項上的效果。</span><span class="sxs-lookup"><span data-stu-id="a53a7-383">Click the different radio buttons to see the effect on the WPF composite control.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [WPF Designer](http://msdn.microsoft.com/zh-tw/c6c65214-8411-4e16-b254-163ed4099c26)   
- [逐步解說：在 WPF 中裝載 Windows Form 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [逐步解說：在 Windows Form 中裝載立體 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="a53a7-384">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a53a7-384">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="a53a7-385">WPF 設計工具</span><span class="sxs-lookup"><span data-stu-id="a53a7-385">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="a53a7-386">逐步解說：在 WPF 中裝載 Windows Forms 複合控制項</span><span class="sxs-lookup"><span data-stu-id="a53a7-386">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="a53a7-387">逐步解說：在 Windows Forms 中裝載立體 WPF 複合控制項</span><span class="sxs-lookup"><span data-stu-id="a53a7-387">Walkthrough: Hosting a 3-D WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

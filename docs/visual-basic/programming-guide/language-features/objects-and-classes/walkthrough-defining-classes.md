@@ -1,109 +1,91 @@
 ---
-title: "定義類別 (Visual Basic) |Microsoft 文件"
+title: "定義類別 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- execution, ending
+- execution [Visual Basic], ending
 - objects [Visual Basic], initializing
-- Initialize event
-- files, closing
-- programs, quitting
+- Initialize event [Visual Basic]
+- files [Visual Basic], closing
+- programs [Visual Basic], quitting
 - code, exiting
 - objects [Visual Basic], creating
 - program termination
 - classes [Visual Basic], walkthroughs
 - class modules, walkthroughs
-- Terminate event
-- execution, stopping
+- Terminate event [Visual Basic]
+- execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aeaa5c2bb85c1a642da15c6a29546cf065380e27
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ec002e1709fa5fe31dfe7744fb91a230c32337a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-defining-classes-visual-basic"></a>逐步解說：定義類別 (Visual Basic)
-本逐步解說示範如何定義類別，您可以用它來建立物件。 它也說明如何將屬性和方法新增至新的類別，並示範如何初始化物件。  
+# <a name="walkthrough-defining-classes-visual-basic"></a><span data-ttu-id="d279f-102">逐步解說：定義類別 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d279f-102">Walkthrough: Defining Classes (Visual Basic)</span></span>
+<span data-ttu-id="d279f-103">本逐步解說示範如何定義類別，您可以使用它來建立物件。</span><span class="sxs-lookup"><span data-stu-id="d279f-103">This walkthrough demonstrates how to define classes, which you can then use to create objects.</span></span> <span data-ttu-id="d279f-104">它也示範如何將屬性和方法新增至新的類別，並示範如何初始化物件。</span><span class="sxs-lookup"><span data-stu-id="d279f-104">It also shows you how to add properties and methods to the new class, and demonstrates how to initialize an object.</span></span>  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-define-a-class"></a>若要定義類別  
+### <a name="to-define-a-class"></a><span data-ttu-id="d279f-105">若要定義類別</span><span class="sxs-lookup"><span data-stu-id="d279f-105">To define a class</span></span>  
   
-1.  按一下 建立專案**新的專案**上**檔案**功能表。 [ **新增專案** ] 對話方塊隨即出現。  
+1.  <span data-ttu-id="d279f-106">建立專案，依序按一下**新專案**上**檔案**功能表。</span><span class="sxs-lookup"><span data-stu-id="d279f-106">Create a project by clicking **New Project** on the **File** menu.</span></span> <span data-ttu-id="d279f-107">[ **新增專案** ] 對話方塊隨即出現。</span><span class="sxs-lookup"><span data-stu-id="d279f-107">The **New Project** dialog box appears.</span></span>  
   
-2.  從清單選取 Windows 應用程式[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]專案範本，以顯示新的專案。  
+2.  <span data-ttu-id="d279f-108">從清單選取 Windows 應用程式[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]專案範本，以顯示新的專案。</span><span class="sxs-lookup"><span data-stu-id="d279f-108">Select Windows Application from the list of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] project templates to display the new project.</span></span>  
   
-3.  將新類別加入專案，依序按一下**加入類別**上**專案**功能表。 **加入新項目** 對話方塊隨即出現。  
+3.  <span data-ttu-id="d279f-109">將新類別加入專案，依序按一下**加入類別**上**專案**功能表。</span><span class="sxs-lookup"><span data-stu-id="d279f-109">Add a new class to the project by clicking **Add Class** on the **Project** menu.</span></span> <span data-ttu-id="d279f-110">[新增項目] 對話方塊隨即出現。</span><span class="sxs-lookup"><span data-stu-id="d279f-110">The **Add New Item** dialog box appears.</span></span>  
   
-4.  選取**類別**範本。  
+4.  <span data-ttu-id="d279f-111">選取**類別**範本。</span><span class="sxs-lookup"><span data-stu-id="d279f-111">Select the **Class** template.</span></span>  
   
-5.  將新類別`UserNameInfo.vb`，然後按一下 **新增**以顯示新的類別的程式碼。  
+5.  <span data-ttu-id="d279f-112">將新類別`UserNameInfo.vb`，然後按一下 **新增**以顯示新類別的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d279f-112">Name the new class `UserNameInfo.vb`, and then click **Add** to display the code for the new class.</span></span>  
   
-     [!code-vb[VbVbalrOOP #&5;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_1.vb)]  
+     [!code-vb[VbVbalrOOP#5](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_1.vb)]  
   
     > [!NOTE]
-    >  您可以使用[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]**程式碼編輯器**將類別加入至啟動表單中，輸入`Class`關鍵字後面加上新類別的名稱。 **程式碼編輯器**提供對應`End Class`為您的陳述式。  
+    >  <span data-ttu-id="d279f-113">您可以使用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]**程式碼編輯器**若要將類別加入至啟動表單中，輸入`Class`關鍵字後面接著新類別的名稱。</span><span class="sxs-lookup"><span data-stu-id="d279f-113">You can use the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Code Editor** to add a class to your startup form by typing the `Class` keyword followed by the name of the new class.</span></span> <span data-ttu-id="d279f-114">**程式碼編輯器**提供對應`End Class`為您的陳述式。</span><span class="sxs-lookup"><span data-stu-id="d279f-114">The **Code Editor** provides a corresponding `End Class` statement for you.</span></span>  
   
-6.  藉由加入下列程式碼之間定義類別的私用欄位`Class`和`End Class`陳述式︰  
+6.  <span data-ttu-id="d279f-115">藉由加入下列程式碼之間定義類別的私用欄位`Class`和`End Class`陳述式：</span><span class="sxs-lookup"><span data-stu-id="d279f-115">Define a private field for the class by adding the following code between the `Class` and `End Class` statements:</span></span>  
   
-     [!code-vb[VbVbalrOOP #&7;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_2.vb)]  
+     [!code-vb[VbVbalrOOP#7](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_2.vb)]  
   
-     宣告欄位設為`Private`表示中，才可以使用它。 您可以讓欄位可從類別外使用存取修飾詞，例如`Public`可提供更多存取權。 如需詳細資訊，請參閱[在 Visual Basic 中的存取層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     <span data-ttu-id="d279f-116">宣告為欄位`Private`表示它可以只在類別內使用。</span><span class="sxs-lookup"><span data-stu-id="d279f-116">Declaring the field as `Private` means it can be used only within the class.</span></span> <span data-ttu-id="d279f-117">您可以提供欄位從類別外使用存取修飾詞，例如`Public`可提供更多的存取。</span><span class="sxs-lookup"><span data-stu-id="d279f-117">You can make fields available from outside a class by using access modifiers such as `Public` that provide more access.</span></span> <span data-ttu-id="d279f-118">如需詳細資訊，請參閱[存取 Visual Basic 中的層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="d279f-118">For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-7.  藉由加入下列程式碼中定義類別的屬性︰  
+7.  <span data-ttu-id="d279f-119">加入下列程式碼定義類別的屬性：</span><span class="sxs-lookup"><span data-stu-id="d279f-119">Define a property for the class by adding the following code:</span></span>  
   
-     [!code-vb[VbVbalrOOP #&8;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_3.vb)]  
+     [!code-vb[VbVbalrOOP#8](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_3.vb)]  
   
-8.  定義類別的方法，加入下列程式碼︰  
+8.  <span data-ttu-id="d279f-120">加入下列程式碼定義類別的方法：</span><span class="sxs-lookup"><span data-stu-id="d279f-120">Define a method for the class by adding the following code:</span></span>  
   
-     [!code-vb[VbVbalrOOP #&9;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_4.vb)]  
+     [!code-vb[VbVbalrOOP#9](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_4.vb)]  
   
-9. 加入名為程序來定義新類別的參數化建構函式`Sub New`:  
+9. <span data-ttu-id="d279f-121">加入名為程序來定義新類別的參數化建構函式`Sub New`:</span><span class="sxs-lookup"><span data-stu-id="d279f-121">Define a parameterized constructor for the new class by adding a procedure named `Sub New`:</span></span>  
   
-     [!code-vb[VbVbalrOOP #&10;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_5.vb)]  
+     [!code-vb[VbVbalrOOP#10](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_5.vb)]  
   
-     `Sub New`根據此類別的物件建立時自動呼叫建構函式。 這個建構函式設定的保留使用者名稱欄位的值。  
+     <span data-ttu-id="d279f-122">`Sub New`根據此類別的物件建立時自動呼叫建構函式。</span><span class="sxs-lookup"><span data-stu-id="d279f-122">The `Sub New` constructor is called automatically when an object based on this class is created.</span></span> <span data-ttu-id="d279f-123">這個建構函式設定的保留使用者名稱欄位的值。</span><span class="sxs-lookup"><span data-stu-id="d279f-123">This constructor sets the value of the field that holds the user name.</span></span>  
   
-### <a name="to-create-a-button-to-test-the-class"></a>若要建立一個按鈕來測試類別  
+### <a name="to-create-a-button-to-test-the-class"></a><span data-ttu-id="d279f-124">若要建立的按鈕來測試類別</span><span class="sxs-lookup"><span data-stu-id="d279f-124">To create a button to test the class</span></span>  
   
-1.  以滑鼠右鍵按一下其名稱變更為設計模式的啟動表單**方案總管] 中**，然後按一下 [**檢視表設計工具**。 根據預設，Windows 應用程式專案啟動表單稱為 Form1.vb。 接著會出現在主要表單。  
+1.  <span data-ttu-id="d279f-125">以滑鼠右鍵按一下其名稱變更為設計模式的啟動表單**方案總管] 中**，然後按一下 [**檢視表設計工具**。</span><span class="sxs-lookup"><span data-stu-id="d279f-125">Change the startup form to design mode by right-clicking its name in **Solution Explorer** and then clicking **View Designer**.</span></span> <span data-ttu-id="d279f-126">根據預設，Windows 應用程式專案啟動表單名為 Form1.vb。</span><span class="sxs-lookup"><span data-stu-id="d279f-126">By default, the startup form for Windows Application projects is named Form1.vb.</span></span> <span data-ttu-id="d279f-127">即會出現在主要表單。</span><span class="sxs-lookup"><span data-stu-id="d279f-127">The main form will then appear.</span></span>  
   
-2.  將按鈕加入至主表單，然後按兩下以顯示的程式碼`Button1_Click`事件處理常式。 新增下列程式碼來呼叫測試程序︰  
+2.  <span data-ttu-id="d279f-128">將按鈕加入主要表單，然後按兩下以顯示的程式碼`Button1_Click`事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="d279f-128">Add a button to the main form and double-click it to display the code for the `Button1_Click` event handler.</span></span> <span data-ttu-id="d279f-129">加入下列程式碼來呼叫測試程序：</span><span class="sxs-lookup"><span data-stu-id="d279f-129">Add the following code to call the test procedure:</span></span>  
   
-     [!code-vb[VbVbalrOOP #&12;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_6.vb)]  
+     [!code-vb[VbVbalrOOP#12](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_6.vb)]  
   
-### <a name="to-run-your-application"></a>執行應用程式  
+### <a name="to-run-your-application"></a><span data-ttu-id="d279f-130">執行應用程式</span><span class="sxs-lookup"><span data-stu-id="d279f-130">To run your application</span></span>  
   
-1.  按 f5 鍵執行應用程式。 按一下表單上的按鈕來呼叫測試程序。 它會顯示訊息，指出原始`UserName`是 「 摩爾 BOBBY 」，因為呼叫此程序`Capitalize`物件的方法。  
+1.  <span data-ttu-id="d279f-131">按 F5 執行您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="d279f-131">Run your application by pressing F5.</span></span> <span data-ttu-id="d279f-132">按一下呼叫測試程序表單上的按鈕。</span><span class="sxs-lookup"><span data-stu-id="d279f-132">Click the button on the form to call the test procedure.</span></span> <span data-ttu-id="d279f-133">它會顯示訊息，指出原始`UserName`是"暄 BOBBY"，因為該程序呼叫`Capitalize`物件的方法。</span><span class="sxs-lookup"><span data-stu-id="d279f-133">It displays a message stating that the original `UserName` is "MOORE, BOBBY", because the procedure called the `Capitalize` method of the object.</span></span>  
   
-2.  按一下 **確定**來解除訊息方塊。 `Button1 Click`程序變更的值`UserName`屬性，並顯示訊息，指出新的值`UserName`是 「 Worden Joe 」。  
+2.  <span data-ttu-id="d279f-134">按一下**確定**來解除訊息方塊。</span><span class="sxs-lookup"><span data-stu-id="d279f-134">Click **OK** to dismiss the message box.</span></span> <span data-ttu-id="d279f-135">`Button1 Click`程序的值變更`UserName`屬性，並顯示訊息，指出新的值`UserName`是"Worden Joe"。</span><span class="sxs-lookup"><span data-stu-id="d279f-135">The `Button1 Click` procedure changes the value of the `UserName` property and displays a message stating that the new value of `UserName` is "Worden, Joe".</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [物件導向程式設計](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)   
- [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="d279f-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d279f-136">See Also</span></span>  
+ [<span data-ttu-id="d279f-137">物件導向程式設計</span><span class="sxs-lookup"><span data-stu-id="d279f-137">Object-Oriented Programming</span></span>](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)  
+ [<span data-ttu-id="d279f-138">物件和類別</span><span class="sxs-lookup"><span data-stu-id="d279f-138">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

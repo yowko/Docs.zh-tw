@@ -1,43 +1,46 @@
 ---
-title: "如何：將控制項加入 ToolStripContentPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ToolStripContentPanel [Windows Form], 加入控制項"
+title: "如何：將控制項新增至 ToolStripContentPanel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 150dd8939077052d4e6d947925c047da0d0432c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將控制項加入 ToolStripContentPanel
-您可以程式設計方式將一個或多個控制項加入 <xref:System.Windows.Forms.ToolStripContentPanel>。  
+# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a><span data-ttu-id="46958-102">如何：將控制項新增至 ToolStripContentPanel</span><span class="sxs-lookup"><span data-stu-id="46958-102">How to: Add a Control to a ToolStripContentPanel</span></span>
+<span data-ttu-id="46958-103">您可以程式設計方式將一個或多個控制項加入 <xref:System.Windows.Forms.ToolStripContentPanel>。</span><span class="sxs-lookup"><span data-stu-id="46958-103">You can programmatically add one or more controls to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
   
-## 範例  
- 下列程式碼範例示範如何將 <xref:System.Windows.Forms.RichTextBox> 加入 <xref:System.Windows.Forms.ToolStripContentPanel>。  
+## <a name="example"></a><span data-ttu-id="46958-104">範例</span><span class="sxs-lookup"><span data-stu-id="46958-104">Example</span></span>  
+ <span data-ttu-id="46958-105">下列程式碼範例示範如何將 <xref:System.Windows.Forms.RichTextBox> 加入 <xref:System.Windows.Forms.ToolStripContentPanel>。</span><span class="sxs-lookup"><span data-stu-id="46958-105">The following code example demonstrates how to add a <xref:System.Windows.Forms.RichTextBox> to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStripContainer#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStripContainer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/VB/Form1.vb#1)]  
   
-## 編譯程式碼  
- 這個程式碼範例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="46958-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="46958-106">Compiling the Code</span></span>  
+ <span data-ttu-id="46958-107">這個程式碼範例需要：</span><span class="sxs-lookup"><span data-stu-id="46958-107">This code example requires:</span></span>  
   
--   System、System.Data 和 System.Windows.Forms 組件的參考。  
+-   <span data-ttu-id="46958-108">System、System.Data 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="46958-108">References to the System, System.Data and System.Windows.Forms assemblies.</span></span>  
   
- 如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的相關資訊，請參閱[從命令列建置](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) 或[使用 csc.exe 建置命令列](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。  請同時參閱[如何：使用 Visual Studio 編譯並執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228%20\(v=vs.110\))或 [ToolStripContainer 工作對話方塊](http://msdn.microsoft.com/library/ms233647%20\(v=vs.110\))。  
+ <span data-ttu-id="46958-109">如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="46958-109">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="46958-110">您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。</span><span class="sxs-lookup"><span data-stu-id="46958-110">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="46958-111">另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))或 [ToolStripContainer 工作對話方塊](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="46958-111">See also [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) or [ToolStripContainer Tasks Dialog Box](http://msdn.microsoft.com/library/ms233647\(v=vs.110\)).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.ToolStripContentPanel>   
- <xref:System.Windows.Forms.ToolStripContainer>   
- [ToolStripContainer 控制項](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)   
- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="46958-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="46958-112">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStripContentPanel>  
+ <xref:System.Windows.Forms.ToolStripContainer>  
+ [<span data-ttu-id="46958-113">ToolStripContainer 控制項</span><span class="sxs-lookup"><span data-stu-id="46958-113">ToolStripContainer Control</span></span>](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
+ [<span data-ttu-id="46958-114">ToolStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="46958-114">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

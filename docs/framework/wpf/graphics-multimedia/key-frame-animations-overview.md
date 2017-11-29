@@ -1,322 +1,305 @@
 ---
-title: "主要畫面格動畫概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 主要畫面格"
-  - "主要畫面格 [WPF], 關於主要畫面格動畫"
-  - "多個動畫目標值"
+title: "主要畫面格動畫概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], key-frame
+- key frames [WPF], about key-frame animations
+- multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: 29
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 主要畫面格動畫概觀
-本主題介紹主要畫面格動畫。  主要畫面格動畫可讓您使用兩個以上的目標值來建立動畫，並且控制動畫的插補方法。  
-  
- 本主題包含下列章節。  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [必要條件](#prerequisites)  
-  
--   [使用主要畫面格動畫](#keyframeanimations)  
-  
--   [相關主題](#seeAlsoToggle)  
+# <a name="key-frame-animations-overview"></a><span data-ttu-id="11f2b-102">主要畫面格動畫概觀</span><span class="sxs-lookup"><span data-stu-id="11f2b-102">Key-Frame Animations Overview</span></span>
+<span data-ttu-id="11f2b-103">本主題介紹主要畫面格動畫。</span><span class="sxs-lookup"><span data-stu-id="11f2b-103">This topic introduces you to key-frame animations.</span></span> <span data-ttu-id="11f2b-104">主要畫面格動畫可讓您使用兩個以上的目標值來建立動畫，並且控制動畫的插補方法。</span><span class="sxs-lookup"><span data-stu-id="11f2b-104">Key-frame animations enable you to animate using more than two target values, and control an animation's interpolation method.</span></span>  
   
 <a name="prerequisites"></a>   
-## 必要條件  
- 若要了解本概觀，您應該熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 動畫和時間表的概念。  如需動畫的簡介，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。熟悉 From\/To\/By 動畫也會有幫助。  如需詳細資訊，請參閱 [From\/To\/By 動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="11f2b-105">必要條件</span><span class="sxs-lookup"><span data-stu-id="11f2b-105">Prerequisites</span></span>  
+ <span data-ttu-id="11f2b-106">若要了解本概觀，您應該熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 動畫和時間軸。</span><span class="sxs-lookup"><span data-stu-id="11f2b-106">To understand this overview, you should be familiar with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animations and timelines.</span></span> <span data-ttu-id="11f2b-107">如需動畫的簡介，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="11f2b-107">For an introduction to animations, see the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span> <span data-ttu-id="11f2b-108">它也有助於熟悉 From/To/By 動畫。</span><span class="sxs-lookup"><span data-stu-id="11f2b-108">It also helps to be familiar with From/To/By animations.</span></span> <span data-ttu-id="11f2b-109">如需詳細資訊，請參閱 From/To/By 動畫概觀。</span><span class="sxs-lookup"><span data-stu-id="11f2b-109">For more information, see the From/To/By Animations Overview.</span></span>  
   
 <a name="whatisakeyframeanimation"></a>   
-## 何謂主要畫面格動畫  
- 如同 From\/To\/By 動畫，主要畫面格動畫會以目標屬性的值建立動畫。  它會在 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 期間建立目標值間的轉換。  不過，不像 From\/To\/By 動畫只能建立兩個值之間的轉換，單一主要畫面格動畫可以建立任意個目標值之間的轉換。  此外，主要畫面格動畫沒有 From\/To\/By 動畫的 From、To 或 By 屬性可供設定目標值。  主要畫面格動畫的目標值是以主要畫面格物件來描述 \(所以才有「主要畫面格動畫」一詞\)。  若要指定動畫的目標值時，必須建立主要畫面格物件，再將這些物件加入至動畫的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 集合。  執行動畫時，就會在您指定的畫面格之間轉換。  
+## <a name="what-is-a-key-frame-animation"></a><span data-ttu-id="11f2b-110">什麼是主要畫面格動畫？</span><span class="sxs-lookup"><span data-stu-id="11f2b-110">What is a Key-Frame Animation?</span></span>  
+ <span data-ttu-id="11f2b-111">就像 From/To/By 動畫一樣，主要畫面格動畫會以目標屬性的值產生動畫。</span><span class="sxs-lookup"><span data-stu-id="11f2b-111">Like a From/To/By animation, a key-frame animation animates the value of a target property.</span></span> <span data-ttu-id="11f2b-112">它會透過建立在其目標值之間的轉換其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-112">It creates a transition among its target values over its <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.</span></span> <span data-ttu-id="11f2b-113">不過，不像 From/To/By 動畫只能建立兩個值之間的轉換，單一畫面格動畫可以建立任意數目目標值之間的轉換。</span><span class="sxs-lookup"><span data-stu-id="11f2b-113">However, while a From/To/By animation creates a transition between two values, a single key-frame animation can create transitions among any number of target values.</span></span> <span data-ttu-id="11f2b-114">不同於 From/To/By 動畫，主要畫面格動畫沒有 From、To 或 By 屬性可供設定目標值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-114">Unlike a From/To/By animation, a key frame animation has no From, To, or By properties with which to set its target values.</span></span> <span data-ttu-id="11f2b-115">主要畫面格動畫的目標值是以主要畫面格物件來描述 (因此有「主要畫面格動畫」一詞)。</span><span class="sxs-lookup"><span data-stu-id="11f2b-115">A key-frame animation's target values are described using key frames objects (hence the term, "key-frame animation").</span></span> <span data-ttu-id="11f2b-116">若要指定動畫的目標值，建立主要畫面格的物件，並將它們加入到此動畫的<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="11f2b-116">To specify the animation's target values, you create key frame objects and add them to the animation's <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection.</span></span> <span data-ttu-id="11f2b-117">動畫執行時，就會在您指定的畫面格之間轉換。</span><span class="sxs-lookup"><span data-stu-id="11f2b-117">When the animation runs, it transitions between the frames you specified.</span></span>  
   
- 有些主要畫面格方法除了可以支援多個目標值，甚至還可以支援多種插補方法。  動畫的插補方法定義了動畫如何從某個值轉換成下一個值。  共有三種插補類型：[離散](GTMT)、[線性](GTMT)和[曲線](GTMT)。  
+ <span data-ttu-id="11f2b-118">除了支援多個目標值之外，某些主要畫面格方法甚至支援多種插補方法。</span><span class="sxs-lookup"><span data-stu-id="11f2b-118">In addition to supporting multiple target values, some key-frame methods even support multiple interpolation methods.</span></span> <span data-ttu-id="11f2b-119">動畫的插補方法定義了動畫如何從某個值轉換成下一個值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-119">An animation's interpolation method defines how it transitions from one value to the next.</span></span> <span data-ttu-id="11f2b-120">插補有以下三種類型：離散、線性和曲線。</span><span class="sxs-lookup"><span data-stu-id="11f2b-120">There are three types of interpolations: discrete, linear, and splined.</span></span>  
   
- 若要以主要畫面格建立動畫，請完成下列步驟。  
+ <span data-ttu-id="11f2b-121">若要以主要畫面格動畫建立動畫，您必須完成下列步驟。</span><span class="sxs-lookup"><span data-stu-id="11f2b-121">To animate with a key-frame animation, you complete the following steps.</span></span>  
   
--   如同 from\/to\/by 動畫，先宣告動畫並指定其 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
+-   <span data-ttu-id="11f2b-122">宣告動畫，並指定其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>，就像您對從/至/的動畫。</span><span class="sxs-lookup"><span data-stu-id="11f2b-122">Declare the animation and specify its <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, just like you would for a from/to/by animation.</span></span>  
   
--   針對每個目標值建立適當類型的主要畫面格、設定其值和 <xref:System.Windows.Media.Animation.KeyTime>，然後將它加入至動畫的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 集合。  
+-   <span data-ttu-id="11f2b-123">每個目標值，建立適當類型的主要畫面格，請將其值和<xref:System.Windows.Media.Animation.KeyTime>，並將它加入此動畫的<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="11f2b-123">For each target value, create a key frame of the appropriate type, set its value and <xref:System.Windows.Media.Animation.KeyTime>, and add it to the animation's <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection.</span></span>  
   
--   如同 From\/To\/By 動畫，建立動畫與屬性的關聯。  如需使用腳本將動畫套用至屬性的詳細資訊，請參閱[腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+-   <span data-ttu-id="11f2b-124">如同 From/To/By 動畫，建立動畫與屬性的關聯。</span><span class="sxs-lookup"><span data-stu-id="11f2b-124">Associate the animation with a property, just like you would with a From/To/By animation.</span></span> <span data-ttu-id="11f2b-125">如需使用分鏡腳本將動畫套用至屬性的詳細資訊，請參閱[分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="11f2b-125">For more information about applying an animation to a property using a storyboard, see [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span>  
   
- 下列範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 以動畫方式將 <xref:System.Windows.Shapes.Rectangle> 項目變換到四個不同的位置。  
+ <span data-ttu-id="11f2b-126">下列範例會使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>以動畫方式顯示<xref:System.Windows.Shapes.Rectangle>到四個不同的位置的項目。</span><span class="sxs-lookup"><span data-stu-id="11f2b-126">The following example uses a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> to animate a <xref:System.Windows.Shapes.Rectangle> element to four different locations.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
- 如同 From\/To\/By 動畫，在標記和程式碼中使用 <xref:System.Windows.Media.Animation.Storyboard> 或在程式碼中使用 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 方法，即可將主要畫面格動畫套用至屬性。  您也可以使用主要畫面格動畫建立 <xref:System.Windows.Media.Animation.AnimationClock>，然後將它套用至一個或多個屬性。  如需套用動畫之不同方法的詳細資訊，請參閱[建立屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
+ <span data-ttu-id="11f2b-127">自/至/所要動畫主要畫面格動畫可以套用至屬性使用<xref:System.Windows.Media.Animation.Storyboard>標記和程式碼或使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>程式碼中的方法。</span><span class="sxs-lookup"><span data-stu-id="11f2b-127">Like a From/To/By animation, a key-frame animation can be applied to a property by using a <xref:System.Windows.Media.Animation.Storyboard> in markup and code or by using the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method in code.</span></span> <span data-ttu-id="11f2b-128">您也可以建立使用主要畫面格動畫<xref:System.Windows.Media.Animation.AnimationClock>並將它套用到一或多個屬性。</span><span class="sxs-lookup"><span data-stu-id="11f2b-128">You may also use a key-frame animation to create an <xref:System.Windows.Media.Animation.AnimationClock> and apply it to one or more properties.</span></span> <span data-ttu-id="11f2b-129">如需套用動畫之不同方法的詳細資訊，請參閱[屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="11f2b-129">For more information about the different methods for applying animations, see the [Property Animation Techniques Overview](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).</span></span>  
   
 <a name="animation_types"></a>   
-## 主要畫面格動畫類型  
- 由於動畫會產生屬性值，因此屬性型別不同，動畫型別也不同。  若要以接受 <xref:System.Double> 的屬性 \(例如項目的 <xref:System.Windows.FrameworkElement.Width%2A> 屬性\) 建立動畫，請使用會產生 <xref:System.Double> 值的動畫。  如果要讓使用 <xref:System.Windows.Point> 的屬性顯示動畫，請使用會產生 <xref:System.Windows.Point> 值的動畫，依此類推。  
+## <a name="key-frame-animation-types"></a><span data-ttu-id="11f2b-130">主要畫面格動畫型別</span><span class="sxs-lookup"><span data-stu-id="11f2b-130">Key-Frame Animation Types</span></span>  
+ <span data-ttu-id="11f2b-131">由於動畫會產生屬性值，因此針對不同的屬性類型會有不同的動畫類型。</span><span class="sxs-lookup"><span data-stu-id="11f2b-131">Because animations generate property values, there are different animation types for different property types.</span></span> <span data-ttu-id="11f2b-132">若要動畫方式顯示屬性<xref:System.Double>(例如項目<xref:System.Windows.FrameworkElement.Width%2A>屬性)，您可以使用會產生動畫<xref:System.Double>值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-132">To animate a property that takes a <xref:System.Double> (such as an element's <xref:System.Windows.FrameworkElement.Width%2A> property), you use an animation that produces <xref:System.Double> values.</span></span> <span data-ttu-id="11f2b-133">若要動畫方式顯示屬性<xref:System.Windows.Point>，您使用會產生動畫<xref:System.Windows.Point>值等等。</span><span class="sxs-lookup"><span data-stu-id="11f2b-133">To animate a property that takes a <xref:System.Windows.Point>, you use an animation that produces <xref:System.Windows.Point> values, and so on.</span></span>  
   
- 主要畫面格動畫類別屬於 <xref:System.Windows.Media.Animation> 命名空間，並遵循下列命名慣例：  
+ <span data-ttu-id="11f2b-134">主要畫面格動畫類別屬於<xref:System.Windows.Media.Animation>命名空間，並遵循下列命名慣例：</span><span class="sxs-lookup"><span data-stu-id="11f2b-134">The key-frame animation classes belong to the <xref:System.Windows.Media.Animation> namespace and adhere to the following naming convention:</span></span>  
   
- *\<型別\>* `AnimationUsingKeyFrames`  
+ <span data-ttu-id="11f2b-135">*\<Type>* `AnimationUsingKeyFrames`</span><span class="sxs-lookup"><span data-stu-id="11f2b-135">*\<Type>* `AnimationUsingKeyFrames`</span></span>  
   
- 其中 *\<Type\>* 是類別顯示為動畫之值的型別。  
+ <span data-ttu-id="11f2b-136">其中 *\<Type>* 是該類別建立動畫的值類型。</span><span class="sxs-lookup"><span data-stu-id="11f2b-136">Where *\<Type>* is the type of value that the class animates.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供下列主要畫面格動畫類別。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="11f2b-137"> 提供下列主要畫面格動畫類別。</span><span class="sxs-lookup"><span data-stu-id="11f2b-137"> provides the following key-frame animation classes.</span></span>  
   
-|屬性型別|對應的 from\/to\/by 動畫類別|支援的插補方法|  
-|----------|---------------------------|-------------|  
-|<xref:System.Boolean>|<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>|離散|  
-|<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Decimal>|<xref:System.Windows.Media.Animation.DecimalAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Int16>|<xref:System.Windows.Media.Animation.Int16AnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Int32>|<xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Int64>|<xref:System.Windows.Media.Animation.Int64AnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>|離散|  
-|<xref:System.Object>|<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>|離散|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Windows.Media.Media3D.Quaternion>|<xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Windows.Rect>|<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Windows.Media.Media3D.Rotation3D>|<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Single>|<xref:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.String>|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|離散|  
-|<xref:System.Windows.Size>|<xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Windows.Thickness>|<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Windows.Media.Media3D.Vector3D>|<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>|離散、線性、曲線|  
-|<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimationUsingKeyFrames>|離散、線性、曲線|  
+|<span data-ttu-id="11f2b-138">屬性類型</span><span class="sxs-lookup"><span data-stu-id="11f2b-138">Property type</span></span>|<span data-ttu-id="11f2b-139">對應 from/to/by 動畫類別</span><span class="sxs-lookup"><span data-stu-id="11f2b-139">Corresponding from/to/by animation class</span></span>|<span data-ttu-id="11f2b-140">支援的插補方法</span><span class="sxs-lookup"><span data-stu-id="11f2b-140">Interpolation methods supported</span></span>|  
+|-------------------|------------------------------------------------|-------------------------------------|  
+|<xref:System.Boolean>|<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-141">離散</span><span class="sxs-lookup"><span data-stu-id="11f2b-141">Discrete</span></span>|  
+|<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-142">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-142">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-143">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-143">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Decimal>|<xref:System.Windows.Media.Animation.DecimalAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-144">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-144">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-145">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-145">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Int16>|<xref:System.Windows.Media.Animation.Int16AnimationUsingKeyFrames>|<span data-ttu-id="11f2b-146">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-146">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Int32>|<xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames>|<span data-ttu-id="11f2b-147">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-147">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Int64>|<xref:System.Windows.Media.Animation.Int64AnimationUsingKeyFrames>|<span data-ttu-id="11f2b-148">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-148">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-149">離散</span><span class="sxs-lookup"><span data-stu-id="11f2b-149">Discrete</span></span>|  
+|<xref:System.Object>|<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-150">離散</span><span class="sxs-lookup"><span data-stu-id="11f2b-150">Discrete</span></span>|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-151">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-151">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Media3D.Quaternion>|<xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-152">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-152">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Rect>|<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-153">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-153">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Media3D.Rotation3D>|<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-154">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-154">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Single>|<xref:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-155">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-155">Discrete, Linear, Splined</span></span>|  
+|<xref:System.String>|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-156">離散</span><span class="sxs-lookup"><span data-stu-id="11f2b-156">Discrete</span></span>|  
+|<xref:System.Windows.Size>|<xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-157">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-157">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Thickness>|<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-158">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-158">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Media3D.Vector3D>|<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-159">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-159">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimationUsingKeyFrames>|<span data-ttu-id="11f2b-160">離散、線性、曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-160">Discrete, Linear, Splined</span></span>|  
   
 <a name="animation_target_values"></a>   
-## 目標值 \(主要畫面格\) 和關鍵時間  
- 就如同不同類型的主要畫面格動畫適用於不同屬性類型的動畫，主要畫面格物件也有不同類型：每種主要畫面格物件各適用於一種值的動畫，且各支援一種插補方法。  主要畫面格類型會遵循下列命名慣例：  
+## <a name="target-values-key-frames-and-key-times"></a><span data-ttu-id="11f2b-161">目標值 (主要畫面格) 和關鍵時間</span><span class="sxs-lookup"><span data-stu-id="11f2b-161">Target Values (key frames) and Key Times</span></span>  
+ <span data-ttu-id="11f2b-162">就如同不同型別的主要畫面格動畫適用於不同屬性型別的動畫，主要畫面格物件也有不同型別：每種主要畫面格物件各適用於一種值的動畫，且各支援一種插補方法。</span><span class="sxs-lookup"><span data-stu-id="11f2b-162">Just as there are different types of key-frame animations for animating different property types, there are also different types of key frame objects: one for each type of value animated and interpolation method supported.</span></span> <span data-ttu-id="11f2b-163">主要畫面格型別會遵循下列命名慣例：</span><span class="sxs-lookup"><span data-stu-id="11f2b-163">Key frame types adhere to the following naming convention:</span></span>  
   
- *\<InterpolationMethod\>\<Type\>* `KeyFrame`  
+ <span data-ttu-id="11f2b-164">*\<InterpolationMethod>\<Type>* `KeyFrame`</span><span class="sxs-lookup"><span data-stu-id="11f2b-164">*\<InterpolationMethod>\<Type>* `KeyFrame`</span></span>  
   
- 其中 *\<InterpolationMethod\>* 為主要畫面格所使用的插補方法，而 *\<Type\>* 則為此類別使用的動畫值類型。  如果主要畫面格動畫支援所有插補方法，則有三種主要畫面格類型可供您使用。  例如，您可以對 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 使用三種主要畫面格類型：<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>、<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> 和 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> \(後面的章節會詳述插補方法\)。  
+ <span data-ttu-id="11f2b-165">其中 *\<InterpolationMethod>* 是主要畫面格使用的插補方法，而 *\<Type>* 是該類別建立動畫的值類型。</span><span class="sxs-lookup"><span data-stu-id="11f2b-165">Where *\<InterpolationMethod>* is the interpolation method the key frame uses and *\<Type>* is the type of value that the class animates.</span></span> <span data-ttu-id="11f2b-166">支援所有三種插補方法的主要畫面格動畫，會有三種主要畫面格型別可供您使用。</span><span class="sxs-lookup"><span data-stu-id="11f2b-166">A key-frame animation that supports all three interpolation methods will have three key frame types that you can use.</span></span> <span data-ttu-id="11f2b-167">例如，您可以使用三個主要畫面格類型<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>， <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>，和<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-167">For example, you can use three key frame types with a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, and <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>.</span></span> <span data-ttu-id="11f2b-168">(稍後的章節會詳述插補方法。)</span><span class="sxs-lookup"><span data-stu-id="11f2b-168">(Interpolation methods are described in detail in a later section.)</span></span>  
   
- 主要畫面格的主要目的在於指定 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 和 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>。  每種主要畫面格類型都提供下列兩個屬性。  
+ <span data-ttu-id="11f2b-169">主要畫面格的主要目的是指定<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-169">The primary purpose of a key frame is to specify a <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> and a <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>.</span></span> <span data-ttu-id="11f2b-170">每個主要畫面格型別都提供下列兩個屬性。</span><span class="sxs-lookup"><span data-stu-id="11f2b-170">Every key frame type provides these two properties.</span></span>  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 屬性指定該主要畫面格的目標值。  
+-   <span data-ttu-id="11f2b-171"><xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性會指定該主要畫面格的目標值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-171">The <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> property specifies the target value for that key-frame.</span></span>  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 屬性指定何時 \(在動畫的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 之內\) 到達主要畫面格的 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>。  
+-   <span data-ttu-id="11f2b-172"><xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性會指定當 (中動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>為止。</span><span class="sxs-lookup"><span data-stu-id="11f2b-172">The <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> property specifies when (within the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) a key frame's <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> is reached.</span></span>  
   
- 當主要畫面格動畫開始時，會依主要畫面格的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 屬性所定義的順序逐一查看主要畫面格。  
+ <span data-ttu-id="11f2b-173">主要畫面格動畫開始時，逐一查看其所定義的順序中的主要畫面格其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="11f2b-173">When a key frame animation begins, iterates through its key frames in the order defined by their <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> properties.</span></span>  
   
--   如果在時間為 0 時沒有主要畫面格，則動畫會在目標屬性的目前值與第一個主要畫面格的 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 之間建立轉換。否則，動畫的輸出值會成為第一個主要畫面格的值。  
+-   <span data-ttu-id="11f2b-174">如果在時間 0 沒有主要畫面格，動畫會建立目標屬性的目前值之間的轉換和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>第一個主要畫面格; 否則動畫之輸出值會成為第一個主要畫面格的值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-174">If there is no key frame at time 0, the animation creates a transition between the target property's current value and the <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> of the first key frame; otherwise, the animation's output value becomes the value of the first key frame.</span></span>  
   
--   動畫會使用第二個主要畫面格所指定的插補方法，在第一個與第二個主要畫面格的 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 之間建立轉換。  此轉換會在第一個主要畫面格的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 開始，並在到達第二個主要畫面格的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 時結束。  
+-   <span data-ttu-id="11f2b-175">動畫建立之間的轉換<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>第一個和第二個主要畫面格使用插補方法，指定第二個主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="11f2b-175">The animation creates a transition between the <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> of the first and second key frames using the interpolation method specified by the second key frame.</span></span> <span data-ttu-id="11f2b-176">轉換會從第一個主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>結束時，第二個主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>為止。</span><span class="sxs-lookup"><span data-stu-id="11f2b-176">The transition starts at the first key frame's <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> and ends when the second key frame's <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> is reached.</span></span>  
   
--   動畫會繼續在後續每個主要畫面格與其前一個主要畫面格之間建立轉換。  
+-   <span data-ttu-id="11f2b-177">動畫會繼續在後續每個主要畫面格與其前一個主要畫面格之間建立轉換。</span><span class="sxs-lookup"><span data-stu-id="11f2b-177">The animation continues, creating transitions between each subsequent key frame and its preceding key frame.</span></span>  
   
--   最後，動畫會轉換至具有最大關鍵時間的主要畫面格的值，而該關鍵時間會小於或等於動畫的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
+-   <span data-ttu-id="11f2b-178">最後，主要畫面格的最大索引鍵的時間，動畫會轉換成的值，則是等於或小於此動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-178">Finally, the animation transitions to the value of the key frame with the greatest key time that is equal to or smaller than the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.</span></span>  
   
- 如果動畫的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 為 <xref:System.Windows.Duration.Automatic%2A>，或是其 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 等於最後一個主要畫面格的時間，動畫即會結束。  否則，如果動畫的 <xref:System.Windows.Duration> 大於最後一個主要畫面格的關鍵時間，則動畫會保留主要畫面格值，直到 <xref:System.Windows.Duration> 結束為止。  如同所有動畫一樣，主要畫面格動畫會使用其 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 屬性，來決定是否要一直使用最後的值直到它的作用期結束為止。  如需詳細資訊，請參閱 [計時行為概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)。  
+ <span data-ttu-id="11f2b-179">如果動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>是<xref:System.Windows.Duration.Automatic%2A>或其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>等於最後一個主要畫面格，動畫結束時間。</span><span class="sxs-lookup"><span data-stu-id="11f2b-179">If the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A> is <xref:System.Windows.Duration.Automatic%2A> or its <xref:System.Windows.Media.Animation.Timeline.Duration%2A> is equal to the time of the last key frame, the animation ends.</span></span> <span data-ttu-id="11f2b-180">否則，如果此動畫的<xref:System.Windows.Duration>最後一個主要畫面格，主要畫面格的值，直到到達結束動畫保存金鑰的時間比其<xref:System.Windows.Duration>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-180">Otherwise, if the animation's <xref:System.Windows.Duration> is greater than the key time of the last key frame, the animation holds the key frame value until it reaches the end of its <xref:System.Windows.Duration>.</span></span> <span data-ttu-id="11f2b-181">如同所有的動畫主要畫面格動畫使用其<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性來判斷是否保留其最終值到達其作用期結束時。</span><span class="sxs-lookup"><span data-stu-id="11f2b-181">Like all animations, a key-frame animation uses its <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> property to determine whether it holds it final value when it reaches the end of its active period.</span></span> <span data-ttu-id="11f2b-182">如需詳細資訊，請參閱[計時行為概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="11f2b-182">For more information, see the [Timing Behaviors Overview](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).</span></span>  
   
- 下列範例會使用上述範例中定義的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 物件，來示範 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 和 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 屬性如何運作。  
+ <span data-ttu-id="11f2b-183">下列範例會使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>物件定義在上述範例中示範如何<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性工作。</span><span class="sxs-lookup"><span data-stu-id="11f2b-183">The following example uses the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> object defined in the preceding example to demonstrate how the <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> and <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> properties work.</span></span>  
   
--   第一個主要畫面格會立即將動畫的輸出值設定為 0。  
+-   <span data-ttu-id="11f2b-184">第一個主要畫面格會立即將動畫的輸出值設定為 0。</span><span class="sxs-lookup"><span data-stu-id="11f2b-184">The first key frame immediately sets the animation's output value to 0.</span></span>  
   
--   第二個主要畫面格會從 0 展示動畫至 350。  它會在第一個主要畫面格結束 \(時間等於 0 秒\) 後開始播放 2 秒，並且在時間等於 0:0:2 時結束。  
+-   <span data-ttu-id="11f2b-185">第二個主要畫面格會從 0 展示動畫至 350。</span><span class="sxs-lookup"><span data-stu-id="11f2b-185">The second key frame animates from 0 to 350.</span></span> <span data-ttu-id="11f2b-186">它會在第一個主要畫面格結束 (時間等於 0 秒) 後開始播放 2 秒，並且在時間等於 0:0:2 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-186">It starts after the first key frame ends (at time = 0 seconds) and plays for 2 seconds, ending at time = 0:0:2.</span></span>  
   
--   第三個主要畫面格會從 350 展示動畫至 50。  它會在第二個主要畫面格結束 \(時間等於 2 秒\) 時開始播放 5 秒，並且在時間等於 0:0:7 時結束。  
+-   <span data-ttu-id="11f2b-187">第三個主要畫面格會從 350 展示動畫至 50。</span><span class="sxs-lookup"><span data-stu-id="11f2b-187">The third key frame animates from 350 to 50.</span></span> <span data-ttu-id="11f2b-188">它會在第二個主要畫面格結束 (時間等於 2 秒) 時開始播放 5 秒，並且在時間等於 0:0:7 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-188">It starts when the second key frame ends (at time = 2 seconds) and plays for 5 seconds, ending at time = 0:0:7.</span></span>  
   
--   第四個主要畫面格會從 50 展示動畫至 200。  它會在第三個主要畫面格結束 \(時間等於 7 秒\) 時開始播放 1 秒，並且在時間等於 0:0:8 時結束。  
+-   <span data-ttu-id="11f2b-189">第四個主要畫面格會從 50 展示動畫至 200。</span><span class="sxs-lookup"><span data-stu-id="11f2b-189">The fourth key frame animates from 50 to 200.</span></span> <span data-ttu-id="11f2b-190">它會在第三個主要畫面格結束 (時間等於 7 秒) 時開始播放 1 秒，並且在時間等於 0:0:8 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-190">It starts when the third key frame ends (at time = 7 seconds) and plays for 1 second, ending at time = 0:0:8.</span></span>  
   
--   因為動畫的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 屬性已設定為 10 秒，所以動畫會在最後的值停留 2 秒，然後在時間等於 0:0:10 時結束。  
+-   <span data-ttu-id="11f2b-191">因為<xref:System.Windows.Media.Animation.Timeline.Duration%2A>動畫屬性已設為 10 秒，動畫結束之前的兩秒持有其最終的值在時間 = 0:0:10。</span><span class="sxs-lookup"><span data-stu-id="11f2b-191">Because the <xref:System.Windows.Media.Animation.Timeline.Duration%2A> property of the animation was set to 10 seconds, the animation holds its final value for two seconds before ending at time = 0:0:10.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
 <a name="interpolationmethods"></a>   
-## 插補方法  
- 前面幾節曾提到有些主要畫面格動畫可以支援多種插補方法。  動畫的插補方法描述了動畫如何在其持續期間內進行值之間的轉換。  選取動畫所要使用的主要畫面格類型，即可定義該主要畫面格區段的插補方法。  共有三種不同的插補類型：線性、離散和曲線。  
+## <a name="interpolation-methods"></a><span data-ttu-id="11f2b-192">插補方法</span><span class="sxs-lookup"><span data-stu-id="11f2b-192">Interpolation Methods</span></span>  
+ <span data-ttu-id="11f2b-193">前面幾節曾提到有些主要畫面格動畫可以支援多種插補方法。</span><span class="sxs-lookup"><span data-stu-id="11f2b-193">The preceding sections mentioned that some key-frame animations support multiple interpolation methods.</span></span> <span data-ttu-id="11f2b-194">動畫的插補描述了動畫如何在其持續期間內進行值之間的轉換。</span><span class="sxs-lookup"><span data-stu-id="11f2b-194">An animation's interpolation describes how an animation transitions between values over its duration.</span></span> <span data-ttu-id="11f2b-195">選取動畫所要使用的主要畫面格型別，即可定義該主要畫面格區段的插補方法。</span><span class="sxs-lookup"><span data-stu-id="11f2b-195">By selecting which key frame type you use with your animation, you can define the interpolation method for that key frame segment.</span></span> <span data-ttu-id="11f2b-196">插補方法有三種不同類型：線性、離散和曲線。</span><span class="sxs-lookup"><span data-stu-id="11f2b-196">There are three different types of interpolation methods: linear, discrete, and splined.</span></span>  
   
-### 線性插補  
- 使用[線性插補](GTMT) \(Linear Interpolation\) 時，動畫會在區段的持續期間內以不變的速率進行。  例如，如果主要畫面格區段在 5 秒的持續期間內從 0 轉換成 10，則動畫會在指定的時間輸出下列值：  
+### <a name="linear-interpolation"></a><span data-ttu-id="11f2b-197">線性插補</span><span class="sxs-lookup"><span data-stu-id="11f2b-197">Linear Interpolation</span></span>  
+ <span data-ttu-id="11f2b-198">使用線性插補，動畫在區段的持續時間會以不變的速率進行。</span><span class="sxs-lookup"><span data-stu-id="11f2b-198">With linear interpolation, the animation progresses at a constant rate of the segment duration.</span></span> <span data-ttu-id="11f2b-199">例如，如果主要畫面格區段在 5 秒的持續期間從 0 轉換為 10，動畫將會於指定的時間輸出下列值：</span><span class="sxs-lookup"><span data-stu-id="11f2b-199">For example, if a key frame segment transitions from 0 to 10 over a duration of 5 seconds, the animation will output the following values at the specified times:</span></span>  
   
-|時間|輸出值|  
-|--------|---------|  
-|0|0|  
-|1|2|  
-|2|4|  
-|3|6|  
-|4|8|  
-|4.25|8.5|  
-|4.5|9|  
-|5|10|  
+|<span data-ttu-id="11f2b-200">時間</span><span class="sxs-lookup"><span data-stu-id="11f2b-200">Time</span></span>|<span data-ttu-id="11f2b-201">輸出值</span><span class="sxs-lookup"><span data-stu-id="11f2b-201">Output value</span></span>|  
+|----------|------------------|  
+|<span data-ttu-id="11f2b-202">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-202">0</span></span>|<span data-ttu-id="11f2b-203">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-203">0</span></span>|  
+|<span data-ttu-id="11f2b-204">1</span><span class="sxs-lookup"><span data-stu-id="11f2b-204">1</span></span>|<span data-ttu-id="11f2b-205">2</span><span class="sxs-lookup"><span data-stu-id="11f2b-205">2</span></span>|  
+|<span data-ttu-id="11f2b-206">2</span><span class="sxs-lookup"><span data-stu-id="11f2b-206">2</span></span>|<span data-ttu-id="11f2b-207">4</span><span class="sxs-lookup"><span data-stu-id="11f2b-207">4</span></span>|  
+|<span data-ttu-id="11f2b-208">3</span><span class="sxs-lookup"><span data-stu-id="11f2b-208">3</span></span>|<span data-ttu-id="11f2b-209">6</span><span class="sxs-lookup"><span data-stu-id="11f2b-209">6</span></span>|  
+|<span data-ttu-id="11f2b-210">4</span><span class="sxs-lookup"><span data-stu-id="11f2b-210">4</span></span>|<span data-ttu-id="11f2b-211">8</span><span class="sxs-lookup"><span data-stu-id="11f2b-211">8</span></span>|  
+|<span data-ttu-id="11f2b-212">4.25</span><span class="sxs-lookup"><span data-stu-id="11f2b-212">4.25</span></span>|<span data-ttu-id="11f2b-213">8.5</span><span class="sxs-lookup"><span data-stu-id="11f2b-213">8.5</span></span>|  
+|<span data-ttu-id="11f2b-214">4.5</span><span class="sxs-lookup"><span data-stu-id="11f2b-214">4.5</span></span>|<span data-ttu-id="11f2b-215">9</span><span class="sxs-lookup"><span data-stu-id="11f2b-215">9</span></span>|  
+|<span data-ttu-id="11f2b-216">5</span><span class="sxs-lookup"><span data-stu-id="11f2b-216">5</span></span>|<span data-ttu-id="11f2b-217">10</span><span class="sxs-lookup"><span data-stu-id="11f2b-217">10</span></span>|  
   
-### 離散插補  
- 使用[離散插補](GTMT) \(Discrete Interpolation\)，動畫功能會直接從某個值跳到下一個值，而不使用插補。  如果主要畫面格區段在 5 秒的持續期間內從 0 轉換成 10，則動畫會在指定的時間輸出下列值：  
+### <a name="discrete-interpolation"></a><span data-ttu-id="11f2b-218">離散插補</span><span class="sxs-lookup"><span data-stu-id="11f2b-218">Discrete Interpolation</span></span>  
+ <span data-ttu-id="11f2b-219">使用離散插補，動畫功能會從某個值跳到下個值而不使用插補。</span><span class="sxs-lookup"><span data-stu-id="11f2b-219">With discrete interpolation, the animation function jumps from one value to the next without interpolation.</span></span> <span data-ttu-id="11f2b-220">如果主要畫面格區段在 5 秒的持續期間從 0 轉換為 10，動畫將會於指定的時間輸出下列值：</span><span class="sxs-lookup"><span data-stu-id="11f2b-220">If a key frame segment transitions from 0 to 10 over a duration of 5 seconds, the animation will output the following values at the specified times:</span></span>  
   
-|時間|輸出值|  
-|--------|---------|  
-|0|0|  
-|1|0|  
-|2|0|  
-|3|0|  
-|4|0|  
-|4.25|0|  
-|4.5|0|  
-|5|10|  
+|<span data-ttu-id="11f2b-221">時間</span><span class="sxs-lookup"><span data-stu-id="11f2b-221">Time</span></span>|<span data-ttu-id="11f2b-222">輸出值</span><span class="sxs-lookup"><span data-stu-id="11f2b-222">Output value</span></span>|  
+|----------|------------------|  
+|<span data-ttu-id="11f2b-223">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-223">0</span></span>|<span data-ttu-id="11f2b-224">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-224">0</span></span>|  
+|<span data-ttu-id="11f2b-225">1</span><span class="sxs-lookup"><span data-stu-id="11f2b-225">1</span></span>|<span data-ttu-id="11f2b-226">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-226">0</span></span>|  
+|<span data-ttu-id="11f2b-227">2</span><span class="sxs-lookup"><span data-stu-id="11f2b-227">2</span></span>|<span data-ttu-id="11f2b-228">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-228">0</span></span>|  
+|<span data-ttu-id="11f2b-229">3</span><span class="sxs-lookup"><span data-stu-id="11f2b-229">3</span></span>|<span data-ttu-id="11f2b-230">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-230">0</span></span>|  
+|<span data-ttu-id="11f2b-231">4</span><span class="sxs-lookup"><span data-stu-id="11f2b-231">4</span></span>|<span data-ttu-id="11f2b-232">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-232">0</span></span>|  
+|<span data-ttu-id="11f2b-233">4.25</span><span class="sxs-lookup"><span data-stu-id="11f2b-233">4.25</span></span>|<span data-ttu-id="11f2b-234">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-234">0</span></span>|  
+|<span data-ttu-id="11f2b-235">4.5</span><span class="sxs-lookup"><span data-stu-id="11f2b-235">4.5</span></span>|<span data-ttu-id="11f2b-236">0</span><span class="sxs-lookup"><span data-stu-id="11f2b-236">0</span></span>|  
+|<span data-ttu-id="11f2b-237">5</span><span class="sxs-lookup"><span data-stu-id="11f2b-237">5</span></span>|<span data-ttu-id="11f2b-238">10</span><span class="sxs-lookup"><span data-stu-id="11f2b-238">10</span></span>|  
   
- 請注意，直到區段的持續期間要結束時，動畫才會變更其輸出值。  
+ <span data-ttu-id="11f2b-239">請注意，在區段持續期間結束之前，動畫不會變更其輸出值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-239">Notice how the animation does not change its output value until the very end of the segment duration.</span></span>  
   
- [曲線插補](GTMT) \(Splined Interpolation\) 更為複雜。  下一節將加以說明。  
+ <span data-ttu-id="11f2b-240">曲線插補更為複雜。</span><span class="sxs-lookup"><span data-stu-id="11f2b-240">Splined interpolation is more complex.</span></span> <span data-ttu-id="11f2b-241">下一節將加以說明。</span><span class="sxs-lookup"><span data-stu-id="11f2b-241">It is described in the next section.</span></span>  
   
 <a name="anim_spline"></a>   
-### 曲線插補  
- 曲線插補可以達到更逼真的時間效果。  因為動畫經常會用於模擬真實世界中發生的效果，因此開發人員需要精確控制物件的加速和減速情形，並且仔細操控時間區段。  曲線主要畫面格可讓您使用曲線插補來建立動畫。  使用其他主要畫面格時，您必須指定 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 和 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>。  使用曲線主要畫面格時，則還必須指定 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>。  下列範例顯示 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 的單一曲線主要畫面格。  請注意 <xref:System.Windows.Media.Animation.KeySpline> 屬性，就是這個屬性使曲線主要畫面格與其他類型的主要畫面格有所不同。  
+### <a name="splined-interpolation"></a><span data-ttu-id="11f2b-242">曲線插補</span><span class="sxs-lookup"><span data-stu-id="11f2b-242">Splined Interpolation</span></span>  
+ <span data-ttu-id="11f2b-243">曲線插補可用來達成更逼真的時間效果。</span><span class="sxs-lookup"><span data-stu-id="11f2b-243">Splined interpolation can be used to achieve more realistic timing effects.</span></span> <span data-ttu-id="11f2b-244">因為動畫經常用來模擬真實世界中發生的效果，因此開發人員需要精確控制物件的加速和減速情形，並且仔細操控時間區段。</span><span class="sxs-lookup"><span data-stu-id="11f2b-244">Because animations are so often used to imitate effects that occur in the real world, developers might need fine control of the acceleration and deceleration of objects, and close manipulation of timing segments.</span></span> <span data-ttu-id="11f2b-245">曲線主要畫面格可讓您使用曲線插補來建立動畫。</span><span class="sxs-lookup"><span data-stu-id="11f2b-245">Spline key frames enable you to animate with splined interpolation.</span></span> <span data-ttu-id="11f2b-246">您可以使用其他的主要畫面格，指定<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-246">With other key frames, you specify a <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> and <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>.</span></span> <span data-ttu-id="11f2b-247">使用曲線主要畫面格，您也指定<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-247">With a spline key frame, you also specify a <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>.</span></span> <span data-ttu-id="11f2b-248">下列範例顯示針對單一曲線主要畫面格<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-248">The following example shows a single spline key frame for a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>.</span></span> <span data-ttu-id="11f2b-249">請注意<xref:System.Windows.Media.Animation.KeySpline>屬性; 讓曲線主要畫面格不同於其他類型的主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="11f2b-249">Notice the <xref:System.Windows.Media.Animation.KeySpline> property; that's what makes a spline key frame different from the other types of key frames.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- [三次方貝茲曲線](GTMT)是由一個起始點、一個結束點和兩個控制點所定義。  曲線主要畫面格的 <xref:System.Windows.Media.Animation.KeySpline> 屬性會定義從 \(0,0\) 延伸至 \(1,1\) 之貝茲曲線的兩個控制點。  第一個控制點控制貝茲曲線前半段的曲率，第二個控制點則控制貝茲線段後半段的曲率。  產生的曲線即描述該曲線主要畫面格的變化速率。  曲線越陡峭，主要畫面格變更值的速度就越快。  曲線越平滑，主要畫面格變更值的速度就越慢。  
+ <span data-ttu-id="11f2b-250">三次方貝茲曲線是由一個起始點、一個結束點和兩個控制點所定義。</span><span class="sxs-lookup"><span data-stu-id="11f2b-250">A cubic Bezier curve is defined by a start point, an end point, and two control points.</span></span> <span data-ttu-id="11f2b-251"><xref:System.Windows.Media.Animation.KeySpline>曲線主要畫面格的屬性會定義兩個控制點 (0，0) 會延伸到 (1，1) 的貝茲曲線。</span><span class="sxs-lookup"><span data-stu-id="11f2b-251">The <xref:System.Windows.Media.Animation.KeySpline> property of a spline key frame defines the two control point of a Bezier curve that extends from (0,0) to (1,1).</span></span> <span data-ttu-id="11f2b-252">第一個控制點控制貝茲曲線前半段的曲率，第二個控制點則控制貝茲線段後半段的曲率。</span><span class="sxs-lookup"><span data-stu-id="11f2b-252">The first control point controls the curve factor of the first half of the Bezier curve, and the second control point controls the curve factor of the second half of the Bezier segment.</span></span> <span data-ttu-id="11f2b-253">產生的曲線即描述該曲線主要畫面格的變化速率。</span><span class="sxs-lookup"><span data-stu-id="11f2b-253">The resulting curve describes the rate of change for that spline key frame.</span></span> <span data-ttu-id="11f2b-254">曲線越陡峭，主要畫面格變更值的速度就越快。</span><span class="sxs-lookup"><span data-stu-id="11f2b-254">The steeper the curve, the faster the key frame changes its values.</span></span> <span data-ttu-id="11f2b-255">曲線越平滑，主要畫面格變更值的速度就越慢。</span><span class="sxs-lookup"><span data-stu-id="11f2b-255">As the curve gets flatter, the key frame changes its values more slowly.</span></span>  
   
- 您可以使用 <xref:System.Windows.Media.Animation.KeySpline> 來模擬實際軌跡 \(像是滴下的水或彈起的球\)，或將其他「加速」與「減速」效果套用至移動動畫。  至於使用者互動效果 \(像是背景淡出或控制按鈕彈回\)，您可以套用曲線插補，以特定方式加速或減慢動畫的變化速率。  
+ <span data-ttu-id="11f2b-256">您可能會使用<xref:System.Windows.Media.Animation.KeySpline>來模擬實體 trajectories 下降上限等彈跳的球，或將其他 「 緩"和"緩和 」 效果套用至移動動畫。</span><span class="sxs-lookup"><span data-stu-id="11f2b-256">You might use <xref:System.Windows.Media.Animation.KeySpline> to simulate physical trajectories like falling water or bouncing balls, or apply other "ease in" and "ease out" effects to motion animations.</span></span> <span data-ttu-id="11f2b-257">至於使用者互動效果 (像是背景淡出或控制按鈕彈回)，您可以套用曲線插補，以特定方式加速或減慢動畫的變化速率。</span><span class="sxs-lookup"><span data-stu-id="11f2b-257">For user interaction effects like background fades or control button rebound, you might apply splined interpolation to speed up or slow down the rate of change for an animation in a specific way.</span></span>  
   
- 下列範例以 0,1 1,0 指定 <xref:System.Windows.Media.Animation.KeySpline>，這會建立下列貝茲曲線。  
+ <span data-ttu-id="11f2b-258">下列範例會指定<xref:System.Windows.Media.Animation.KeySpline>的 0 1 1，會建立下列的貝茲曲線，0。</span><span class="sxs-lookup"><span data-stu-id="11f2b-258">The following example specifies a <xref:System.Windows.Media.Animation.KeySpline> of 0,1 1,0, which creates the following Bezier curve.</span></span>  
   
- ![貝茲曲線](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm\_keyspline\_0\_1\_1\_0")  
-控制點位於 \(0.0, 1.0\) 和 \(1.0, 0.0\) 的關鍵 Spline  
+ <span data-ttu-id="11f2b-259">![貝茲曲線](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")</span><span class="sxs-lookup"><span data-stu-id="11f2b-259">![A Bezier curve](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")</span></span>  
+<span data-ttu-id="11f2b-260">控制點位於 (0.0, 1.0) 和 (1.0, 0.0) 的主要曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-260">A key spline with control points (0.0, 1.0) and (1.0, 0.0)</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- 這個主要畫面格在開始時會急速顯示動畫、而後減慢，然後在結束之前再次加速。  
+ <span data-ttu-id="11f2b-261">這個主要畫面格在開始時會急速顯示動畫，而後減慢，然後在結束之前再次加速。</span><span class="sxs-lookup"><span data-stu-id="11f2b-261">This key frame animates rapidly when it begins, slows down, and then speeds up again before it ends.</span></span>  
   
- 下列範例以 0.5,0.25 0.75,1.0 指定 <xref:System.Windows.Media.Animation.KeySpline>，這會建立下列貝茲曲線。  
+ <span data-ttu-id="11f2b-262">下列範例會指定<xref:System.Windows.Media.Animation.KeySpline>的 0.5,0.25 0.75,1.0，建立下列的貝茲曲線。</span><span class="sxs-lookup"><span data-stu-id="11f2b-262">The following example specifies a <xref:System.Windows.Media.Animation.KeySpline> of 0.5,0.25 0.75,1.0, which creates the following Bezier curve.</span></span>  
   
- ![貝茲曲線](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm\_keyspline\_025\_050\_075\_10")  
-控制點位於 \(0.25, 0.5\) 和 \(0.75, 1.0\) 的關鍵 Spline  
+ <span data-ttu-id="11f2b-263">![貝茲曲線](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")</span><span class="sxs-lookup"><span data-stu-id="11f2b-263">![A Bezier curve](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")</span></span>  
+<span data-ttu-id="11f2b-264">控制點位於 (0.25, 0.5) 和 (0.75, 1.0) 的主要曲線</span><span class="sxs-lookup"><span data-stu-id="11f2b-264">A key spline with control points (0.25, 0.5) and (0.75, 1.0)</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
   
- 因為貝茲曲線的曲率變化很小，所以這個主要畫面格幾乎是以不變的速率顯示動畫，而在結束之前會稍微減慢。  
+ <span data-ttu-id="11f2b-265">因為貝茲曲線的曲率變化很小，所以這個主要畫面格幾乎是以不變的速率顯示動畫；它在結束之前會稍微減慢。</span><span class="sxs-lookup"><span data-stu-id="11f2b-265">Because the curvature of the Bezier curve changes very little, this key frame animates at an almost constant rate; it slows down somewhat toward its very end.</span></span>  
   
- 下列範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 以動畫的方式變換矩形的位置。  因為 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 會使用 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> 物件，所以每個主要畫面格值之間的轉換都會使用曲線插補。  
+ <span data-ttu-id="11f2b-266">下列範例會使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>来繪製矩形的位置。</span><span class="sxs-lookup"><span data-stu-id="11f2b-266">The following example uses a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> to animate the position of rectangle.</span></span> <span data-ttu-id="11f2b-267">因為<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>使用<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>物件，每個主要畫面格的值之間的轉換使用曲線插補。</span><span class="sxs-lookup"><span data-stu-id="11f2b-267">Because the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> uses <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> objects, the transition between each key frame value uses splined interpolation.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
   
- 曲線插補的概念可能不好懂，試試不同的設定會有所幫助。  [關鍵 Spline 動畫範例](http://go.microsoft.com/fwlink/?LinkID=160011) \(英文\) 可讓您變更關鍵 Spline 值，並查看它在動畫上的效果。  
+ <span data-ttu-id="11f2b-268">曲線插補的概念可能不好理解；試試不同的設定會有所幫助。</span><span class="sxs-lookup"><span data-stu-id="11f2b-268">Splined interpolation can be difficult to understand; experimenting with different settings can help.</span></span> <span data-ttu-id="11f2b-269">[主要曲線動畫範例 (英文)](http://go.microsoft.com/fwlink/?LinkID=160011) 可讓您變更主要曲線值，並查看它在動畫上的效果。</span><span class="sxs-lookup"><span data-stu-id="11f2b-269">The [Key Spline Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160011) enables you to change key spline values and see the result it has on an animation.</span></span>  
   
 <a name="combininginterpolationmethods"></a>   
-### 混用插補方法  
- 在單一主要畫面格動畫中，您可以對各主要畫面格使用不同的插補類型。  當具有不同插補的兩個主要畫面格動畫彼此相隨時，第二個主要畫面格的插補方法會用於建立由第一個值至第二個值的轉換。  
+### <a name="combining-interpolation-methods"></a><span data-ttu-id="11f2b-270">結合插補方法</span><span class="sxs-lookup"><span data-stu-id="11f2b-270">Combining Interpolation Methods</span></span>  
+ <span data-ttu-id="11f2b-271">在單一主要畫面格動畫中，您可以使用主要畫面格搭配不同的插補類型。</span><span class="sxs-lookup"><span data-stu-id="11f2b-271">You can use key frames with different interpolation types in a single key frame animation.</span></span> <span data-ttu-id="11f2b-272">當具有不同插補的兩個主要畫面格動畫彼此相隨時，第二個主要畫面格的插補方法會用來建立第一個值到第二個值的轉換。</span><span class="sxs-lookup"><span data-stu-id="11f2b-272">When two key frame animations with different interpolations follow each other, the interpolation method of the second key frame is used to create the transition from the first value to the second.</span></span>  
   
- 在下列範例中，會建立使用線性、曲線及離散插補的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>。  
+ <span data-ttu-id="11f2b-273">在下列範例中，<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>會建立該使用直線、 曲線和離散插補。</span><span class="sxs-lookup"><span data-stu-id="11f2b-273">In the following example, a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> is created that uses linear, splined, and discrete interpolation.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  
   
 <a name="keytimes"></a>   
-## 深入了解持續期間和關鍵時間  
- 如同其他動畫，主要畫面格動畫也有 <xref:System.Windows.Duration> 屬性。  除了指定動畫的 <xref:System.Windows.Duration>，您還需要指定每個主要畫面格要使用這段期間的哪個部分。  若要這麼做，您必須描述動畫之每個主要畫面格的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>。  每個主要畫面格的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 都指定該主要畫面格的結束時間。  
+## <a name="more-about-duration-and-key-times"></a><span data-ttu-id="11f2b-274">深入了解持續期間和關鍵時間</span><span class="sxs-lookup"><span data-stu-id="11f2b-274">More about Duration and Key Times</span></span>  
+ <span data-ttu-id="11f2b-275">如同其他動畫主要畫面格動畫具有<xref:System.Windows.Duration>屬性。</span><span class="sxs-lookup"><span data-stu-id="11f2b-275">Like other animations, key-frame animations have a <xref:System.Windows.Duration> property.</span></span> <span data-ttu-id="11f2b-276">除了指定動畫<xref:System.Windows.Duration>，您必須指定該持續時間的哪些部分提供給每一個主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="11f2b-276">In addition to specifying the animation's <xref:System.Windows.Duration>, you need to specify what portion of that duration is given to each key frame.</span></span> <span data-ttu-id="11f2b-277">這麼做會描述<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>動畫主要畫面格的每個。</span><span class="sxs-lookup"><span data-stu-id="11f2b-277">You do so by describing a   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> for each of the animation's key frames.</span></span> <span data-ttu-id="11f2b-278">每個主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>指定該索引鍵的畫面格的結束時。</span><span class="sxs-lookup"><span data-stu-id="11f2b-278">Each key frame's <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> specifies when that key frame ends.</span></span>  
   
- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 屬性並不是指主要畫面格的播放時間長度。  主要畫面格的播放時間量取決於主要畫面格的結束時間、前一個主要畫面格的結束時間，以及動畫的持續期間。  您可以時間值、百分比或以特殊值 \(<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 或 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>\) 指定關鍵時間。  
+ <span data-ttu-id="11f2b-279"><xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性不會指定在播放多久的 key time。</span><span class="sxs-lookup"><span data-stu-id="11f2b-279">The <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> property does not specify how long the key time plays.</span></span> <span data-ttu-id="11f2b-280">主要畫面格的播放時間量取決於主要畫面格的結束時間、前一個主要畫面格的結束時間，以及動畫的持續期間。</span><span class="sxs-lookup"><span data-stu-id="11f2b-280">The amount of time a key frame plays is determined by when the key frame ends, when the previous key frame ended, and the animation's duration.</span></span> <span data-ttu-id="11f2b-281">關鍵時間可指定為時間值的百分比，或做為特殊值<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-281">Key times may be specified as a time value, a percentage, or as the special values <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> or <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.</span></span>  
   
- 下列清單說明用於指定關鍵時間的幾種不同方法。  
+ <span data-ttu-id="11f2b-282">下列清單說明指定關鍵時間的幾種不同方式。</span><span class="sxs-lookup"><span data-stu-id="11f2b-282">The following list describes the different ways of specifying key times.</span></span>  
   
-### TimeSpan 值  
- 您可以使用 <xref:System.TimeSpan> 值來指定 <xref:System.Windows.Media.Animation.KeyTime>。  此值應該大於或等於 0，並且小於或等於動畫的持續期間。  下列範例顯示的動畫具有 10 秒的持續期間和四個主要畫面格，其中每個主要畫面格的關鍵時間都是以時間值指定。  
+### <a name="timespan-values"></a><span data-ttu-id="11f2b-283">TimeSpan 值</span><span class="sxs-lookup"><span data-stu-id="11f2b-283">TimeSpan Values</span></span>  
+ <span data-ttu-id="11f2b-284">您可以使用<xref:System.TimeSpan>值，指定關於<xref:System.Windows.Media.Animation.KeyTime>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-284">You may use <xref:System.TimeSpan> values to specify a <xref:System.Windows.Media.Animation.KeyTime>.</span></span> <span data-ttu-id="11f2b-285">此值應該大於或等於 0，並且小於或等於動畫的持續期間。</span><span class="sxs-lookup"><span data-stu-id="11f2b-285">The value should be greater than or equal to 0 and less than or equal to the animation's duration.</span></span> <span data-ttu-id="11f2b-286">下列範例顯示的動畫具有 10 秒的持續期間和四個主要畫面格，其中每個主要畫面格的關鍵時間都是以時間值指定。</span><span class="sxs-lookup"><span data-stu-id="11f2b-286">The following example shows an animation with a duration of 10 seconds and four key frames whose key times are specified as time values.</span></span>  
   
--   第一個主要畫面格會在前 3 秒顯示從基底實值至 100 的動畫，並且在時間等於 0:0:03 時結束。  
+-   <span data-ttu-id="11f2b-287">第一個主要畫面格會在前 3 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:03 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-287">The first key frame animates from the base value to 100 over the first 3 seconds, ending at time = 0:0:03.</span></span>  
   
--   第二個主要畫面格會從 100 展示動畫至 200。  它會在第一個主要畫面格結束 \(時間等於 3 秒\) 後開始播放 5 秒，並且在時間等於 0:0:8 時結束。  
+-   <span data-ttu-id="11f2b-288">第二個主要畫面格會從 100 展示動畫至 200。</span><span class="sxs-lookup"><span data-stu-id="11f2b-288">The second key frame animates from 100 to 200.</span></span> <span data-ttu-id="11f2b-289">它會在第一個主要畫面格結束 (時間等於 3 秒) 後開始播放 5 秒，並且在時間等於 0:0:8 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-289">It starts after the first key frame ends (at time = 3 seconds) and plays for 5 seconds, ending at time = 0:0:8.</span></span>  
   
--   第三個主要畫面格會從 200 展示動畫至 500。  它會在第二個主要畫面格結束 \(時間等於 8 秒\) 時開始播放 1 秒，並且在時間等於 0:0:9 時結束。  
+-   <span data-ttu-id="11f2b-290">第三個主要畫面格會從 200 展示動畫至 500。</span><span class="sxs-lookup"><span data-stu-id="11f2b-290">The third key frame animates from 200 to 500.</span></span> <span data-ttu-id="11f2b-291">它會在第二個主要畫面格結束 (時間等於 8 秒) 時開始播放 1 秒，並且在時間等於 0:0:9 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-291">It starts when the second key frame ends (at time = 8 seconds) and plays for 1 second, ending at time = 0:0:9.</span></span>  
   
--   第四個主要畫面格會從 500 展示動畫至 600。  它會在第三個主要畫面格結束 \(時間等於 9 秒\) 時開始播放 1 秒，並且在時間等於 0:0:10 時結束。  
+-   <span data-ttu-id="11f2b-292">第四個主要畫面格會從 500 展示動畫至 600。</span><span class="sxs-lookup"><span data-stu-id="11f2b-292">The fourth key frame animates from 500 to 600.</span></span> <span data-ttu-id="11f2b-293">它會在第三個主要畫面格結束 (時間等於 9 秒) 時開始播放 1 秒，並且在時間等於 0:0:10 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-293">It starts when the third key frame ends (at time = 9 seconds) and plays for 1 second, ending at time = 0:0:10.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
-### 百分比值  
- 百分比值，指定主要畫面格在動畫到達 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 的某個百分比時結束。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，百分比的指定方式為在數字後面加上 `%` 符號。  在程式碼中，則需將使用 <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> 方法並將表示百分比 <xref:System.Double> 傳遞給它。  此值必須大於或等於 0，並且小於或等於 100%。  下列範例顯示的動畫具有 10 秒的持續期間和四個主要畫面格，其中每個主要畫面格的關鍵時間都是以百分比指定。  
+### <a name="percentage-values"></a><span data-ttu-id="11f2b-294">百分比值</span><span class="sxs-lookup"><span data-stu-id="11f2b-294">Percentage Values</span></span>  
+ <span data-ttu-id="11f2b-295">百分比值指定的主要畫面格結尾的動畫的某個百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-295">A percentage value specifies that the key frame ends at some percentage of the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.</span></span> <span data-ttu-id="11f2b-296">在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，百分比的指定方式為在數字後面加上 `%` 符號。</span><span class="sxs-lookup"><span data-stu-id="11f2b-296">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you specify the percentage as a number followed by the `%` symbol.</span></span> <span data-ttu-id="11f2b-297">在程式碼中，您會使用<xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A>方法並將它傳遞<xref:System.Double>指出的百分比。</span><span class="sxs-lookup"><span data-stu-id="11f2b-297">In code, you use the <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> method and pass it a <xref:System.Double> indicating the percentage.</span></span> <span data-ttu-id="11f2b-298">值必須大於或等於 0 且小於或等於 100%。</span><span class="sxs-lookup"><span data-stu-id="11f2b-298">The value must be greater than or equal to 0 and less than or equal to 100 percent.</span></span> <span data-ttu-id="11f2b-299">下列範例顯示的動畫具有 10 秒的持續期間和四個主要畫面格，其中每個主要畫面格的關鍵時間都是以百分比指定。</span><span class="sxs-lookup"><span data-stu-id="11f2b-299">The following example shows an animation with a duration of 10 seconds and four key frames whose key times are specified as percentages.</span></span>  
   
--   第一個主要畫面格會在前 3 秒顯示從基底實值至 100 的動畫，並且在時間等於 0:0:3 時結束。  
+-   <span data-ttu-id="11f2b-300">第一個主要畫面格會在前 3 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:3 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-300">The first key frame animates from the base value to 100 over the first 3 seconds, ending at time = 0:0:3.</span></span>  
   
--   第二個主要畫面格會從 100 展示動畫至 200。  它會在第一個主要畫面格結束 \(時間等於 3 秒\) 後開始播放 5 秒，並且在時間等於 0:0:8 \(0.8 \* 10 \= 8\) 時結束。  
+-   <span data-ttu-id="11f2b-301">第二個主要畫面格會從 100 展示動畫至 200。</span><span class="sxs-lookup"><span data-stu-id="11f2b-301">The second key frame animates from 100 to 200.</span></span> <span data-ttu-id="11f2b-302">它會在第一個主要畫面格結束 (時間等於 3 秒) 後開始播放 5 秒，並且在時間等於 0:0:8 (0.8 * 10 = 8) 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-302">It starts after the first key frame ends (at time = 3 seconds) and plays for 5 seconds, ending at time = 0:0:8 (0.8 * 10 = 8).</span></span>  
   
--   第三個主要畫面格會從 200 展示動畫至 500。  它會在第二個主要畫面格結束 \(時間等於 8 秒\) 時開始播放 1 秒，並且在時間等於 0:0:9 \(0.9 \* 10 \= 9\) 時結束。  
+-   <span data-ttu-id="11f2b-303">第三個主要畫面格會從 200 展示動畫至 500。</span><span class="sxs-lookup"><span data-stu-id="11f2b-303">The third key frame animates from 200 to 500.</span></span> <span data-ttu-id="11f2b-304">它會在第二個主要畫面格結束 (時間等於 8 秒) 時開始播放 1 秒，並且在時間等於 0:0:9 (0.9 * 10 = 9) 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-304">It starts when the second key frame ends (at time = 8 seconds) and plays for 1 second, ending at time = 0:0:9 (0.9 * 10 = 9).</span></span>  
   
--   第四個主要畫面格會從 500 展示動畫至 600。  它會在第三個主要畫面格結束 \(時間等於 9 秒\) 時開始播放 1 秒，並且在時間等於 0:0:10 \(1 \* 10 \= 10\) 時結束。  
+-   <span data-ttu-id="11f2b-305">第四個主要畫面格會從 500 展示動畫至 600。</span><span class="sxs-lookup"><span data-stu-id="11f2b-305">The fourth key frame animates from 500 to 600.</span></span> <span data-ttu-id="11f2b-306">它會在第三個主要畫面格結束 (時間等於 9 秒) 時開始播放 1 秒，並且在時間等於 0:0:10 (1 * 10 = 10) 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-306">It starts when the third key frame ends (at time = 9 seconds) and plays for 1 second, ending at time = 0:0:10 (1 * 10 = 10).</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
-### Uniform 特殊值  
- 當您希望每個主要畫面格都使用相同的時間量時，請使用 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 時間。  
+### <a name="special-value-uniform"></a><span data-ttu-id="11f2b-307">特殊值 Uniform</span><span class="sxs-lookup"><span data-stu-id="11f2b-307">Special Value, Uniform</span></span>  
+ <span data-ttu-id="11f2b-308">使用<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>逾時要採取相同的時間量的每一個主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="11f2b-308">Use <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> timing when you want each key frame to take the same amount of time.</span></span>  
   
- <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 關鍵時間會依主要畫面格數目將可用時間做平均分割，以決定每個主要畫面格的結束時間。  下列範例顯示的動畫具有 10 秒的持續期間和四個主要畫面格，其中每個主要畫面格的關鍵時間都是以 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 指定。  
+ <span data-ttu-id="11f2b-309">A<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>關鍵時間除以可用的時間同樣來判斷每個主要畫面格的結束時間的主要畫面格數目。</span><span class="sxs-lookup"><span data-stu-id="11f2b-309">A <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> key time divides the available time equally by the number of key frames to determine the end time of each key frame.</span></span> <span data-ttu-id="11f2b-310">下列範例顯示持續時間為 10 秒的動畫和四個主要畫面格時間索引鍵會指定為<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-310">The following example shows an animation with a duration of 10 seconds and four key frames whose key times are specified as <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.</span></span>  
   
--   第一個主要畫面格會在前 2.5 秒顯示從基底實值至 100 的動畫，並且在時間等於 0:0:2.5 時結束。  
+-   <span data-ttu-id="11f2b-311">第一個主要畫面格會在前 2.5 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:2.5 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-311">The first key frame animates from the base value to 100 over the first 2.5 seconds, ending at time = 0:0:2.5.</span></span>  
   
--   第二個主要畫面格會從 100 展示動畫至 200。  它會在第一個主要畫面格結束 \(時間等於 2.5 秒\) 後開始播放約 2.5 秒，並且在時間等於 0:0:5 時結束。  
+-   <span data-ttu-id="11f2b-312">第二個主要畫面格會從 100 展示動畫至 200。</span><span class="sxs-lookup"><span data-stu-id="11f2b-312">The second key frame animates from 100 to 200.</span></span> <span data-ttu-id="11f2b-313">它會在第一個主要畫面格結束 (時間等於 2.5 秒) 後開始播放 2.5 秒，並且在時間等於 0:0:5 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-313">It starts after the first key frame ends (at time = 2.5 seconds) and plays for approximately 2.5 seconds, ending at time = 0:0:5.</span></span>  
   
--   第三個主要畫面格會從 200 展示動畫至 500。  它會在第二個主要畫面格結束 \(時間等於 5 秒\) 時開始播放 2.5 秒，並且在時間等於 0:0:7.5 時結束。  
+-   <span data-ttu-id="11f2b-314">第三個主要畫面格會從 200 展示動畫至 500。</span><span class="sxs-lookup"><span data-stu-id="11f2b-314">The third key frame animates from 200 to 500.</span></span> <span data-ttu-id="11f2b-315">它會在第二個主要畫面格結束 (時間等於 5 秒) 時開始播放 2.5 秒，並且在時間等於 0:0:7.5 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-315">It starts when the second key frame ends (at time = 5 seconds) and plays for 2.5 seconds, ending at time = 0:0:7.5.</span></span>  
   
--   第四個主要畫面格會從 500 展示動畫至 600。  它會在第二個主要畫面格結束 \(時間等於 7.5 秒\) 時開始播放 2.5 秒，並且在時間等於 0:0:1 時結束。  
+-   <span data-ttu-id="11f2b-316">第四個主要畫面格會從 500 展示動畫至 600。</span><span class="sxs-lookup"><span data-stu-id="11f2b-316">The fourth key frame animates from 500 to 600.</span></span> <span data-ttu-id="11f2b-317">它會在第二個主要畫面格結束 (時間等於 7.5 秒) 時開始播放 2.5 秒，並且在時間等於 0:0:1 時結束。</span><span class="sxs-lookup"><span data-stu-id="11f2b-317">It starts when the second key frame ends (at time = 7.5 seconds) and plays for 2.5 seconds, ending at time = 0:0:1.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
-### Paced 特殊值  
- 當您要以不變的速率顯示動畫時，請使用 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 時間。  
+### <a name="special-value-paced"></a><span data-ttu-id="11f2b-318">特殊值 Paced</span><span class="sxs-lookup"><span data-stu-id="11f2b-318">Special Value, Paced</span></span>  
+ <span data-ttu-id="11f2b-319">使用<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>計時當您想要製作動畫以常數速率。</span><span class="sxs-lookup"><span data-stu-id="11f2b-319">Use <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> timing when you want to animate at a constant rate.</span></span>  
   
- <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 關鍵時間會根據每個主要畫面格的長度來配置可用時間，以決定每個畫面格的持續期間。  這樣會使動畫的速度或步調維持不變。  下列範例顯示的動畫具有 10 秒的持續期間和三個主要畫面格，其中每個主要畫面格的關鍵時間都是以 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 指定。  
+ <span data-ttu-id="11f2b-320">A<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>關鍵時間配置可用的時間，根據每個主要畫面格，以判斷每個畫面格的持續時間的長度。</span><span class="sxs-lookup"><span data-stu-id="11f2b-320">A <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> key time allocates the available time according to the length of each of the key frames to determine the duration of each frame.</span></span>  <span data-ttu-id="11f2b-321">這樣會使動畫的速度或步調維持不變。</span><span class="sxs-lookup"><span data-stu-id="11f2b-321">This will provide the behavior that the velocity or pace of the animation remains constant.</span></span>  <span data-ttu-id="11f2b-322">下列範例顯示持續時間為 10 秒的動畫和三個主要畫面格時間索引鍵會指定為<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>。</span><span class="sxs-lookup"><span data-stu-id="11f2b-322">The following example shows an animation with a duration of 10 seconds and three key frames whose key times are specified as <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  
   
- 請注意，如果最後一個主要畫面格的關鍵時間為 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 或 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>，其解析後的關鍵時間將會設定 100%。  如果多格動畫中的第一個主要畫面格已設定速度，其解析後的關鍵時間將會設定 0。  如果主要畫面格集合僅包含單一主要畫面格，而且是已設定速度的主要畫面格，其解析後的關鍵時間將會設定為 100%。  
+ <span data-ttu-id="11f2b-323">請注意，如果最後一個主要畫面格的索引鍵時間<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>或<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>，其已解決的關鍵時間會設定為 100%。</span><span class="sxs-lookup"><span data-stu-id="11f2b-323">Note that, if the last key frame's key time is <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> or <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, its resolved key time will be set to 100 percent.</span></span> <span data-ttu-id="11f2b-324">如果多格動畫中的第一個主要畫面格已設定速度，其解析後的關鍵時間將會設定 0。</span><span class="sxs-lookup"><span data-stu-id="11f2b-324">If the first key frame in a multiframe animation is paced, its resolved key time will be set to 0.</span></span> <span data-ttu-id="11f2b-325">(如果主要畫面格集合僅包含單一主要畫面格，而且是已設定速度的主要畫面格，其解析後的關鍵時間將會設定為 100%。)</span><span class="sxs-lookup"><span data-stu-id="11f2b-325">(If the key frame collection contains only a single key frame and it is a paced key frame, its resolved key time will be set to 100 percent.)</span></span>  
   
- 單一主要畫面格動畫中的不同主要畫面格可以使用不同的主要畫面格類型。  
+ <span data-ttu-id="11f2b-326">單一主要畫面格動畫中的不同主要畫面格可以使用不同的主要畫面格型別。</span><span class="sxs-lookup"><span data-stu-id="11f2b-326">Different key frames within a single key frame animation may use different key time types.</span></span>  
   
 <a name="combiningkeytimes"></a>   
-## 合併關鍵時間、不按順序的主要畫面格  
- 您可以在相同動畫中使用具有不同 <xref:System.Windows.Media.Animation.KeyTime> 值類型的主要畫面格。  而且，雖然建議您依播放順序加入主要畫面格，但這不是必要的。  動畫和計時系統能夠解析不按順序的主要畫面格。  系統會忽略具有無效關鍵時間的主要畫面格。  
+## <a name="combining-key-times-out-of-order-key-frames"></a><span data-ttu-id="11f2b-327">合併關鍵時間、不按順序的主要畫面格</span><span class="sxs-lookup"><span data-stu-id="11f2b-327">Combining Key Times, Out-Of-Order Key Frames</span></span>  
+ <span data-ttu-id="11f2b-328">您可以使用不同的主要畫面格<xref:System.Windows.Media.Animation.KeyTime>實值類型中相同的動畫。</span><span class="sxs-lookup"><span data-stu-id="11f2b-328">You can use key frames with different <xref:System.Windows.Media.Animation.KeyTime> value types in the same animation.</span></span> <span data-ttu-id="11f2b-329">而且，雖然建議您依播放順序加入主要畫面格，但這不是必要的。</span><span class="sxs-lookup"><span data-stu-id="11f2b-329">And, although it's recommended that you add key frames in the order in which they should play, it's not necessary.</span></span> <span data-ttu-id="11f2b-330">動畫和計時系統能夠解析不按順序的主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="11f2b-330">The animation and timing system is capable of resolving out of order key frames.</span></span> <span data-ttu-id="11f2b-331">系統會忽略具有無效關鍵時間的主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="11f2b-331">Key frames with invalid key times are ignored.</span></span>  
   
- 下列清單說明在主要畫面格動畫中，解析主要畫面格關鍵時間的程序。  
+ <span data-ttu-id="11f2b-332">下列清單說明在主要畫面格動畫中，解析主要畫面格關鍵時間的程序。</span><span class="sxs-lookup"><span data-stu-id="11f2b-332">The following list describes the procedure by which key times are resolved for a key-frame animation's key frames.</span></span>  
   
-1.  解析 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 值。  
+1.  <span data-ttu-id="11f2b-333">解決<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-333">Resolve <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> values.</span></span>  
   
-2.  決定動畫的「總插補時間」，也就是主要畫面格動畫用於完成向前查看的總時間。  
+2.  <span data-ttu-id="11f2b-334">決定動畫的「總插補時間」，也就是主要畫面格動畫用於完成向前逐一查看的總時間。</span><span class="sxs-lookup"><span data-stu-id="11f2b-334">Determine the animation’s *total interpolation time*, the total time it takes the key-frame animation to complete a forward iteration.</span></span>  
   
-    1.  如果動畫的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 不是 <xref:System.Windows.Duration.Automatic%2A> 或 <xref:System.Windows.Duration.Forever%2A>，則總插補時間為動畫的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 屬性值。  
+    1.  <span data-ttu-id="11f2b-335">如果動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>不<xref:System.Windows.Duration.Automatic%2A>或<xref:System.Windows.Duration.Forever%2A>，總插補時間是值的動畫<xref:System.Windows.Media.Animation.Timeline.Duration%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="11f2b-335">If the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A> is not <xref:System.Windows.Duration.Automatic%2A> or <xref:System.Windows.Duration.Forever%2A>, the total interpolation time is the value of the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A> property.</span></span>  
   
-    2.  否則，總插補時間為在其主要畫面格中指定的最大 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 值 \(如果有的話\)。  
+    2.  <span data-ttu-id="11f2b-336">否則，總插補時間是最大<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>如果有的話，它的主要畫面格之間指定的值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-336">Otherwise, the total interpolation time is the largest <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> value specified among its key frames, if any exist.</span></span>  
   
-    3.  否則，總插補時間為 1 秒。  
+    3.  <span data-ttu-id="11f2b-337">否則，總插補時間為 1 秒。</span><span class="sxs-lookup"><span data-stu-id="11f2b-337">Otherwise, the total interpolation time is 1 second.</span></span>  
   
-3.  使用總插補時間值來解析 <xref:System.Windows.Media.Animation.KeyTimeType> <xref:System.Windows.Media.Animation.KeyTime> 值。  
+3.  <span data-ttu-id="11f2b-338">使用的總插補時間值來解決<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-338">Use the total interpolation time value to resolve <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> values.</span></span>  
   
-4.  如果尚未在先前步驟中解析最後一個主要畫面格，則加以解析。  如果最後一個主要畫面格的 <xref:System.Windows.Media.Animation.KeyTime> 為 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 或 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，則其解析後的時間將會等於總插補時間。  
+4.  <span data-ttu-id="11f2b-339">如果尚未在先前步驟中解析最後一個主要畫面格，則加以解析。</span><span class="sxs-lookup"><span data-stu-id="11f2b-339">Resolve last key frame, if it wasn't already resolved in the previous steps.</span></span> <span data-ttu-id="11f2b-340">如果<xref:System.Windows.Media.Animation.KeyTime>之最後一個主要畫面格是<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，它已解決的時間將會等於總插補時間。</span><span class="sxs-lookup"><span data-stu-id="11f2b-340">If the <xref:System.Windows.Media.Animation.KeyTime> of the last key frame is <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> or <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, its resolved time will be equal to the total interpolation time.</span></span>  
   
-     如果第一個主要畫面格的 <xref:System.Windows.Media.Animation.KeyTime> 為 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 且此動畫有不只一個主要畫面格，則將其 <xref:System.Windows.Media.Animation.KeyTime> 值解析為零。如果只有一個主要畫面格且其 <xref:System.Windows.Media.Animation.KeyTime> 值為 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，則會如前一個步驟所述而解析為總插補時間。  
+     <span data-ttu-id="11f2b-341">如果<xref:System.Windows.Media.Animation.KeyTime>第一個主要畫面格是<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>這個動畫有多個主要畫面格，在解決和其<xref:System.Windows.Media.Animation.KeyTime>值為零; 如果只有一個主要畫面格及其<xref:System.Windows.Media.Animation.KeyTime>值是<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，它會解析成總計插補時間，在上一個步驟中所述。</span><span class="sxs-lookup"><span data-stu-id="11f2b-341">If the <xref:System.Windows.Media.Animation.KeyTime> of the first key frame is <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> and this animation has more than on key frames, resolve its <xref:System.Windows.Media.Animation.KeyTime> value to zero; if there is only one key frame and its <xref:System.Windows.Media.Animation.KeyTime> value is <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, it is resolved to the total interpolation time, as described in the preceding step.</span></span>  
   
-5.  解析剩餘的 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 值：它們都會平等分到可用時間。  在此程序期間，未解析的 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 值會暫時視為 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 值，而取得暫時解析的時間。  
+5.  <span data-ttu-id="11f2b-342">解決剩餘<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值： 每個指定為平均共用可用的時間。</span><span class="sxs-lookup"><span data-stu-id="11f2b-342">Resolve remaining <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> values: they are each given an equal share of the available time.</span></span>  <span data-ttu-id="11f2b-343">在此過程中，無法解析<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值暫時會被視為<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值，以及取得暫時的解決時間。</span><span class="sxs-lookup"><span data-stu-id="11f2b-343">During this process, unresolved <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> values  are temporarily treated as <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> values, and get a temporary resolved time.</span></span>  
   
-6.  使用宣告最接近且已解析 <xref:System.Windows.Media.Animation.KeyTime> 值的主要畫面格，來解析未指定關鍵時間之主要畫面格的 <xref:System.Windows.Media.Animation.KeyTime> 值。  
+6.  <span data-ttu-id="11f2b-344">解決<xref:System.Windows.Media.Animation.KeyTime>與主要畫面格的值未指定使用的主要畫面格最接近它們的宣告，表示已解決的關鍵時間<xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-344">Resolve the <xref:System.Windows.Media.Animation.KeyTime> values of key frames with unspecified key times by using the key frames declared nearest them that have resolved <xref:System.Windows.Media.Animation.KeyTime> values.</span></span>  
   
-7.  解析剩餘的 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 值。  <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 會使用鄰近主要畫面格的 <xref:System.Windows.Media.Animation.KeyTime> 值來決定其解析後的時間。  這是為了確保動畫的速度維持在此主要畫面格的解析時間左右。  
+7.  <span data-ttu-id="11f2b-345">解決剩餘<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-345">Resolve remaining <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> values.</span></span> <span data-ttu-id="11f2b-346"><xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>使用<xref:System.Windows.Media.Animation.KeyTime>鄰近的值索引鍵以判斷其解決的時間的畫面格。</span><span class="sxs-lookup"><span data-stu-id="11f2b-346"><xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> use the <xref:System.Windows.Media.Animation.KeyTime> values of the neighboring key frames to determine their resolved time.</span></span>  <span data-ttu-id="11f2b-347">這是為了確保動畫的速度維持在此主要畫面格的解析時間。</span><span class="sxs-lookup"><span data-stu-id="11f2b-347">The goal is to ensure that the velocity of the animation is constant around this key frame's resolved time.</span></span>  
   
-8.  按照解析後的時間的順序 \(主索引鍵\) 和宣告的順序 \(次要索引鍵\) 來排序主要畫面格，也就是使用以解析後的主要畫面格 <xref:System.Windows.Media.Animation.KeyTime> 值為基礎的穩定排序。  
+8.  <span data-ttu-id="11f2b-348">也就是排序順序的解決時間 （主索引鍵） 和宣告 （次要索引鍵） 的順序中的主要畫面格，請使用穩定的排序是根據已解決的主要畫面格<xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="11f2b-348">Sort key frames in order of resolved time (primary key), and order of declaration (secondary key), i.e., use a stable sort based on the resolved key frame <xref:System.Windows.Media.Animation.KeyTime> values.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.Animation.KeyTime>   
- <xref:System.Windows.Media.Animation.KeySpline>   
- <xref:System.Windows.Media.Animation.Timeline>   
- [關鍵 Spline 動畫範例](http://go.microsoft.com/fwlink/?LinkID=160011)   
- [KeyFrame 動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)   
- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)   
- [主要畫面格 HOW TO 主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)   
- [計時行為概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a><span data-ttu-id="11f2b-349">另請參閱</span><span class="sxs-lookup"><span data-stu-id="11f2b-349">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.KeyTime>  
+ <xref:System.Windows.Media.Animation.KeySpline>  
+ <xref:System.Windows.Media.Animation.Timeline>  
+ [<span data-ttu-id="11f2b-350">主要曲線動畫範例</span><span class="sxs-lookup"><span data-stu-id="11f2b-350">Key Spline Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160011)  
+ [<span data-ttu-id="11f2b-351">主要畫面格動畫範例</span><span class="sxs-lookup"><span data-stu-id="11f2b-351">KeyFrame Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160012)  
+ [<span data-ttu-id="11f2b-352">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="11f2b-352">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="11f2b-353">分鏡腳本概觀</span><span class="sxs-lookup"><span data-stu-id="11f2b-353">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [<span data-ttu-id="11f2b-354">主要畫面格操作說明主題</span><span class="sxs-lookup"><span data-stu-id="11f2b-354">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
+ [<span data-ttu-id="11f2b-355">計時行為概觀</span><span class="sxs-lookup"><span data-stu-id="11f2b-355">Timing Behaviors Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

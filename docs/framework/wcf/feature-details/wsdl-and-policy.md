@@ -1,85 +1,88 @@
 ---
-title: "WSDL 與原則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WSDL 與原則"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d9255800b08fee4ab15a6d6feef3a53c2755dde8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WSDL 與原則
-這個主題中涵蓋了 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1、WS\-Policy 和 WS\-PolicyAttachment 實作詳細資料，以及 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所引入的其他 WS\-Policy 判斷提示和 WSDL 1.1 延伸項目。  
+# <a name="wsdl-and-policy"></a><span data-ttu-id="d8d2f-102">WSDL 與原則</span><span class="sxs-lookup"><span data-stu-id="d8d2f-102">WSDL and Policy</span></span>
+<span data-ttu-id="d8d2f-103">這個主題中涵蓋了 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1、WS-Policy 和 WS-PolicyAttachment 實作詳細資料，以及 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所引入的其他 WS-Policy 判斷提示和 WSDL 1.1 延伸項目。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-103">This topic covers [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy and WS-PolicyAttachment implementation details, as well as additional WS-Policy assertions and WSDL 1.1 extensions introduced by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會利用本文件所述的限制和說明，實作提交至 W3C 的 WS\-Policy 和 WS\-PolicyAttachment 規格。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d8d2f-104"> 會利用本文件所述的限制和說明，實作提交至 W3C 的 WS-Policy 和 WS-PolicyAttachment 規格。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-104"> implements WS-Policy and WS-PolicyAttachment specifications submitted to W3C with constraints and clarifications described in this document.</span></span>  
   
- 本文件會使用下表所示的前置詞和命名空間。  
+ <span data-ttu-id="d8d2f-105">本文件會使用下表所示的前置詞和命名空間。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-105">This document uses the prefixes and namespaces shown in the following table.</span></span>  
   
-|前置詞|命名空間|  
-|---------|----------|  
-|wsp \(WS\-Policy 1.2\)|http:\/\/schemas.xmlsoap.org\/ws\/2004\/09\/policy|  
-|wsp \(WS\-Policy 1.5\)|http:\/\/www.w3.org\/ns\/ws\-policy|  
-|http|http:\/\/schemas.microsoft.com\/ws\/06\/2004\/policy\/http|  
-|msmq|http:\/\/schemas.microsoft.com\/ws\/06\/2004\/mspolicy\/msmq|  
-|msf|http:\/\/schemas.microsoft.com\/ws\/2006\/05\/framing\/policy|  
-|mssp|http:\/\/schemas.microsoft.com\/ws\/2005\/07\/securitypolicy|  
-|msc|http:\/\/schemas.microsoft.com\/ws\/2005\/12\/wsdl\/contract|  
-|cdp|http:\/\/schemas.microsoft.com\/net\/2006\/06\/duplex|  
+|<span data-ttu-id="d8d2f-106">前置詞</span><span class="sxs-lookup"><span data-stu-id="d8d2f-106">Prefix</span></span>|<span data-ttu-id="d8d2f-107">命名空間</span><span class="sxs-lookup"><span data-stu-id="d8d2f-107">Namespace</span></span>|  
+|------------|---------------|  
+|<span data-ttu-id="d8d2f-108">wsp (WS-Policy 1.2)</span><span class="sxs-lookup"><span data-stu-id="d8d2f-108">wsp (WS-Policy 1.2)</span></span>|<span data-ttu-id="d8d2f-109">http://schemas.xmlsoap.org/ws/2004/09/policy</span><span class="sxs-lookup"><span data-stu-id="d8d2f-109">http://schemas.xmlsoap.org/ws/2004/09/policy</span></span>|  
+|<span data-ttu-id="d8d2f-110">wsp (WS-Policy 1.5)</span><span class="sxs-lookup"><span data-stu-id="d8d2f-110">wsp (WS-Policy 1.5)</span></span>|<span data-ttu-id="d8d2f-111">http://www.w3.org/ns/ws-policy</span><span class="sxs-lookup"><span data-stu-id="d8d2f-111">http://www.w3.org/ns/ws-policy</span></span>|  
+|<span data-ttu-id="d8d2f-112">http</span><span class="sxs-lookup"><span data-stu-id="d8d2f-112">http</span></span>|<span data-ttu-id="d8d2f-113">http://schemas.microsoft.com/ws/06/2004/policy/http</span><span class="sxs-lookup"><span data-stu-id="d8d2f-113">http://schemas.microsoft.com/ws/06/2004/policy/http</span></span>|  
+|<span data-ttu-id="d8d2f-114">msmq</span><span class="sxs-lookup"><span data-stu-id="d8d2f-114">msmq</span></span>|<span data-ttu-id="d8d2f-115">http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq</span><span class="sxs-lookup"><span data-stu-id="d8d2f-115">http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq</span></span>|  
+|<span data-ttu-id="d8d2f-116">msf</span><span class="sxs-lookup"><span data-stu-id="d8d2f-116">msf</span></span>|<span data-ttu-id="d8d2f-117">http://schemas.microsoft.com/ws/2006/05/framing/policy</span><span class="sxs-lookup"><span data-stu-id="d8d2f-117">http://schemas.microsoft.com/ws/2006/05/framing/policy</span></span>|  
+|<span data-ttu-id="d8d2f-118">mssp</span><span class="sxs-lookup"><span data-stu-id="d8d2f-118">mssp</span></span>|<span data-ttu-id="d8d2f-119">http://schemas.microsoft.com/ws/2005/07/securitypolicy</span><span class="sxs-lookup"><span data-stu-id="d8d2f-119">http://schemas.microsoft.com/ws/2005/07/securitypolicy</span></span>|  
+|<span data-ttu-id="d8d2f-120">msc</span><span class="sxs-lookup"><span data-stu-id="d8d2f-120">msc</span></span>|<span data-ttu-id="d8d2f-121">http://schemas.microsoft.com/ws/2005/12/wsdl/contract</span><span class="sxs-lookup"><span data-stu-id="d8d2f-121">http://schemas.microsoft.com/ws/2005/12/wsdl/contract</span></span>|  
+|<span data-ttu-id="d8d2f-122">cdp</span><span class="sxs-lookup"><span data-stu-id="d8d2f-122">cdp</span></span>|<span data-ttu-id="d8d2f-123">http://schemas.microsoft.com/net/2006/06/duplex</span><span class="sxs-lookup"><span data-stu-id="d8d2f-123">http://schemas.microsoft.com/net/2006/06/duplex</span></span>|  
   
-## WCF WSDL1.1 延伸項目  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用下列 WSDL1.1 延伸項目來描述合約工作階段的需求。  
+## <a name="wcf-wsdl11-extensions"></a><span data-ttu-id="d8d2f-124">WCF WSDL1.1 延伸項目</span><span class="sxs-lookup"><span data-stu-id="d8d2f-124">WCF WSDL1.1 Extensions</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d8d2f-125"> 會使用下列 WSDL1.1 延伸項目來描述合約工作階段的需求。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-125"> uses the following WSDL1.1 extensions to describe contract session requirements.</span></span>  
   
- wsdl:portType\/wsdl:operation\/@msc:isInitiating  
- xs:boolean，指出此作業會初始化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段；預設值為 `false`。  
+ wsdl:portType/wsdl:operation/@msc:isInitiating  
+ <span data-ttu-id="d8d2f-126">xs:boolean，指出此作業會初始化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段；預設值為 `false`。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-126">xs:boolean, indicates this operation initiates a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] session; the default value is `false`.</span></span>  
   
- wsdl:portType\/wsdl:operation\/@msc:isTerminating  
- xs:boolean，指出此作業會終止 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段；預設值為 `false`。  
+ wsdl:portType/wsdl:operation/@msc:isTerminating  
+ <span data-ttu-id="d8d2f-127">xs:boolean，指出此作業會終止 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段；預設值為 `false`。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-127">xs:boolean, indicates this operation terminates a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] session; the default value is `false`.</span></span>  
   
- wsdl:portType\/wsdl:operation\/@msc:usingSession  
- xs:boolean，指出此合約需要建立工作階段。  
+ wsdl:portType/wsdl:operation/@msc:usingSession  
+ <span data-ttu-id="d8d2f-128">xs:boolean，指出此合約需要建立工作階段。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-128">xs:boolean, indicates this contract requires session to be established.</span></span>  
   
-### SOAP 1.x HTTP 繫結傳輸 URI  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用下列 URI 指出要用於 WSDL 1.1、SOAP 1.1 和 SOAP 1.2 繫結延伸項目的傳輸。  
+### <a name="soap-1x-http-binding-transport-uris"></a><span data-ttu-id="d8d2f-129">SOAP 1.x HTTP 繫結傳輸 URI</span><span class="sxs-lookup"><span data-stu-id="d8d2f-129">SOAP 1.x HTTP Binding Transport URIs</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d8d2f-130"> 會使用下列 URI 指出要用於 WSDL 1.1、SOAP 1.1 和 SOAP 1.2 繫結延伸項目的傳輸。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-130"> uses the following URIs to indicate transports to be used for WSDL 1.1, SOAP 1.1, and SOAP 1.2 binding extension elements.</span></span>  
   
-|Transport|URI|  
+|<span data-ttu-id="d8d2f-131">Transport</span><span class="sxs-lookup"><span data-stu-id="d8d2f-131">Transport</span></span>|<span data-ttu-id="d8d2f-132">URI</span><span class="sxs-lookup"><span data-stu-id="d8d2f-132">URI</span></span>|  
 |---------------|---------|  
-|HTTP|http:\/\/schemas.xmlsoap.org\/soap\/http|  
-|TCP|http:\/\/schemas.microsoft.com\/soap\/tcp|  
-|MSMQ|http:\/\/schemas.microsoft.com\/soap\/msmq|  
-|具名管道|http:\/\/schemas.microsoft.com\/soap\/named\-pipe|  
+|<span data-ttu-id="d8d2f-133">HTTP</span><span class="sxs-lookup"><span data-stu-id="d8d2f-133">HTTP</span></span>|<span data-ttu-id="d8d2f-134">http://schemas.xmlsoap.org/soap/http</span><span class="sxs-lookup"><span data-stu-id="d8d2f-134">http://schemas.xmlsoap.org/soap/http</span></span>|  
+|<span data-ttu-id="d8d2f-135">TCP</span><span class="sxs-lookup"><span data-stu-id="d8d2f-135">TCP</span></span>|<span data-ttu-id="d8d2f-136">http://schemas.microsoft.com/soap/tcp</span><span class="sxs-lookup"><span data-stu-id="d8d2f-136">http://schemas.microsoft.com/soap/tcp</span></span>|  
+|<span data-ttu-id="d8d2f-137">MSMQ</span><span class="sxs-lookup"><span data-stu-id="d8d2f-137">MSMQ</span></span>|<span data-ttu-id="d8d2f-138">http://schemas.microsoft.com/soap/msmq</span><span class="sxs-lookup"><span data-stu-id="d8d2f-138">http://schemas.microsoft.com/soap/msmq</span></span>|  
+|<span data-ttu-id="d8d2f-139">具名管道</span><span class="sxs-lookup"><span data-stu-id="d8d2f-139">Named Pipes</span></span>|<span data-ttu-id="d8d2f-140">http://schemas.microsoft.com/soap/named-pipe</span><span class="sxs-lookup"><span data-stu-id="d8d2f-140">http://schemas.microsoft.com/soap/named-pipe</span></span>|  
   
-## WCF 實作的原則判斷提示  
- 除了在 Web 服務規格 \(WS\-\*\) 中引入以及在本文件其他章節所提及的原則判斷提示以外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會實作下列原則判斷提示。  
+## <a name="policy-assertions-implemented-by-wcf"></a><span data-ttu-id="d8d2f-141">WCF 實作的原則判斷提示</span><span class="sxs-lookup"><span data-stu-id="d8d2f-141">Policy Assertions Implemented by WCF</span></span>  
+ <span data-ttu-id="d8d2f-142">除了在 Web 服務規格 (WS-*) 中引入以及在本文件其他章節所提及的原則判斷提示以外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會實作下列原則判斷提示。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-142">In addition to policy assertions introduced in the Web Services specifications (WS-*) and mentioned in other sections of this document, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implements the following policy assertions.</span></span>  
   
-|原則判斷提示|原則主體|描述|  
-|------------|----------|--------|  
-|http:HttpBasicAuthentication|端點|端點會使用 HTTP 基本驗證。|  
-|http:HttpDigestAuthentication|端點|端點會使用 HTTP 摘要式驗證。|  
-|http:HttpNegotiateAuthentication|端點|端點會使用 HTTP 交涉式驗證。|  
-|http:HttpNtlmAuthentication|端點|端點會使用 HTTP NTLM 驗證。|  
-|msf:Streamed|端點|端點會使用已進行資料流處理的訊息框架處理。  這個判斷提示會與訊息框架處理通訊協定搭配使用，而這個通訊協定是專為 TCP 這類傳輸和具名管道所提供。|  
-|msf:SslTransportSecurity|端點|端點會使用傳輸層安全性 \(TLS\) 搭配訊息框架處理。|  
-|msf:WindowsTransportSecurity|端點|端點會使用安全性提供者交涉 \(SPNEGO\) 搭配訊息框架處理。|  
-|msmq:MsmqBestEffort|端點|具備最佳保證的 MSMQ。|  
-|msmq:MsmqSession|端點|具備工作階段保證的 MSMQ。|  
-|msmq:MsmqVolatile|端點|MSMQ 變動性。|  
-|msmq:Authenticated|端點|驗證會與 MSMQ 傳輸搭配使用。|  
-|msmq:WindowsDomain|端點|MSMQ 會使用 Windows 網域驗證。|  
-|cdp:CompositeDuplex|端點|端點會針對傳入和傳出訊息，使用兩種分離的相反傳輸連線。|  
-|mssp:RsaToken|巢狀|RSA 金鑰權杖判斷提示。  在簽署簽章中直接做為金鑰資訊而序列化的 RSA 金鑰，通常就可以滿足此需求。|  
-|mssp:SslContextToken|巢狀|需要使用二進位 TLS 信號交換 \(使用已使用的 WS\-Trust\) 來取得 SecurityContextToken。  巢狀判斷提示包括：sp:RequireDerivedKeys、mssp:MustNotSendCancel、mssp:RequireClientCertificate。|  
-|mssp:MustNotSendCancel|巢狀|所指定的需求為：使用取消繫結 \[WS\-Trust, WS\-SC\] 的要求安全性權杖 \(RST\) 要求訊息 \[WS\-Trust\]，不要傳送至提供之 SecurityContextToken 的簽發者。  如果出現這個判斷提示，則這種要求訊息一定不能傳送至簽發者。  如果未出現這個判斷提示，則這種要求訊息可以傳送至簽發者。|  
-|mssp:RequireClientCertificate|巢狀|這個選用項目會對用戶端憑證指定要求，也就是是否要做為 TLSNEGO 通訊協定的一部分而提供。  如果出現這個判斷提示，則必須提供用戶端憑證。  如果未出現這個判斷提示，則不可提供用戶端憑證。  這個判斷提示不可在 mssp:SslContextToken 以外使用。|  
+|<span data-ttu-id="d8d2f-143">原則判斷提示</span><span class="sxs-lookup"><span data-stu-id="d8d2f-143">Policy assertion</span></span>|<span data-ttu-id="d8d2f-144">原則主體</span><span class="sxs-lookup"><span data-stu-id="d8d2f-144">Policy subject</span></span>|<span data-ttu-id="d8d2f-145">描述</span><span class="sxs-lookup"><span data-stu-id="d8d2f-145">Description</span></span>|  
+|----------------------|--------------------|-----------------|  
+|<span data-ttu-id="d8d2f-146">http:HttpBasicAuthentication</span><span class="sxs-lookup"><span data-stu-id="d8d2f-146">http:HttpBasicAuthentication</span></span>|<span data-ttu-id="d8d2f-147">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-147">Endpoint</span></span>|<span data-ttu-id="d8d2f-148">端點會使用 HTTP 基本驗證。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-148">Endpoint uses HTTP Basic Authentication.</span></span>|  
+|<span data-ttu-id="d8d2f-149">http:HttpDigestAuthentication</span><span class="sxs-lookup"><span data-stu-id="d8d2f-149">http:HttpDigestAuthentication</span></span>|<span data-ttu-id="d8d2f-150">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-150">Endpoint</span></span>|<span data-ttu-id="d8d2f-151">端點會使用 HTTP 摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-151">Endpoint uses HTTP Digest Authentication.</span></span>|  
+|<span data-ttu-id="d8d2f-152">http:HttpNegotiateAuthentication</span><span class="sxs-lookup"><span data-stu-id="d8d2f-152">http:HttpNegotiateAuthentication</span></span>|<span data-ttu-id="d8d2f-153">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-153">Endpoint</span></span>|<span data-ttu-id="d8d2f-154">端點會使用 HTTP 交涉式驗證。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-154">Endpoint uses HTTP Negotiate Authentication.</span></span>|  
+|<span data-ttu-id="d8d2f-155">http:HttpNtlmAuthentication</span><span class="sxs-lookup"><span data-stu-id="d8d2f-155">http:HttpNtlmAuthentication</span></span>|<span data-ttu-id="d8d2f-156">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-156">Endpoint</span></span>|<span data-ttu-id="d8d2f-157">端點會使用 HTTP NTLM 驗證。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-157">Endpoint uses HTTP NTLM Authentication.</span></span>|  
+|<span data-ttu-id="d8d2f-158">msf:Streamed</span><span class="sxs-lookup"><span data-stu-id="d8d2f-158">msf:Streamed</span></span>|<span data-ttu-id="d8d2f-159">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-159">Endpoint</span></span>|<span data-ttu-id="d8d2f-160">端點會使用已進行資料流處理的訊息框架處理。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-160">Endpoint uses streamed message framing.</span></span> <span data-ttu-id="d8d2f-161">這個判斷提示會與訊息框架處理通訊協定搭配使用，而這個通訊協定是專為 TCP 這類傳輸和具名管道所提供。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-161">This assertion is used with the Message Framing protocol provided for transports such as TCP, and named pipes.</span></span>|  
+|<span data-ttu-id="d8d2f-162">msf:SslTransportSecurity</span><span class="sxs-lookup"><span data-stu-id="d8d2f-162">msf:SslTransportSecurity</span></span>|<span data-ttu-id="d8d2f-163">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-163">Endpoint</span></span>|<span data-ttu-id="d8d2f-164">端點會使用傳輸層安全性 (TLS) 搭配訊息框架處理。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-164">Endpoint uses transport-layer security (TLS) with message framing.</span></span>|  
+|<span data-ttu-id="d8d2f-165">msf:WindowsTransportSecurity</span><span class="sxs-lookup"><span data-stu-id="d8d2f-165">msf:WindowsTransportSecurity</span></span>|<span data-ttu-id="d8d2f-166">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-166">Endpoint</span></span>|<span data-ttu-id="d8d2f-167">端點會使用安全性提供者交涉 (SPNEGO) 搭配訊息框架處理。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-167">Endpoint uses Security Provider Negotiation (SPNEGO) with message framing.</span></span>|  
+|<span data-ttu-id="d8d2f-168">msmq:MsmqBestEffort</span><span class="sxs-lookup"><span data-stu-id="d8d2f-168">msmq:MsmqBestEffort</span></span>|<span data-ttu-id="d8d2f-169">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-169">Endpoint</span></span>|<span data-ttu-id="d8d2f-170">具備最佳保證的 MSMQ。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-170">MSMQ with best-effort guarantees.</span></span>|  
+|<span data-ttu-id="d8d2f-171">msmq:MsmqSession</span><span class="sxs-lookup"><span data-stu-id="d8d2f-171">msmq:MsmqSession</span></span>|<span data-ttu-id="d8d2f-172">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-172">Endpoint</span></span>|<span data-ttu-id="d8d2f-173">具備工作階段保證的 MSMQ。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-173">MSMQ with Session guarantees.</span></span>|  
+|<span data-ttu-id="d8d2f-174">msmq:MsmqVolatile</span><span class="sxs-lookup"><span data-stu-id="d8d2f-174">msmq:MsmqVolatile</span></span>|<span data-ttu-id="d8d2f-175">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-175">Endpoint</span></span>|<span data-ttu-id="d8d2f-176">MSMQ 變動性。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-176">MSMQ Volatile.</span></span>|  
+|<span data-ttu-id="d8d2f-177">msmq:Authenticated</span><span class="sxs-lookup"><span data-stu-id="d8d2f-177">msmq:Authenticated</span></span>|<span data-ttu-id="d8d2f-178">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-178">Endpoint</span></span>|<span data-ttu-id="d8d2f-179">驗證會與 MSMQ 傳輸搭配使用。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-179">Authentication is used with MSMQ transport.</span></span>|  
+|<span data-ttu-id="d8d2f-180">msmq:WindowsDomain</span><span class="sxs-lookup"><span data-stu-id="d8d2f-180">msmq:WindowsDomain</span></span>|<span data-ttu-id="d8d2f-181">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-181">Endpoint</span></span>|<span data-ttu-id="d8d2f-182">MSMQ 會使用 Windows 網域驗證。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-182">MSMQ uses Windows Domain authentication.</span></span>|  
+|<span data-ttu-id="d8d2f-183">cdp:CompositeDuplex</span><span class="sxs-lookup"><span data-stu-id="d8d2f-183">cdp:CompositeDuplex</span></span>|<span data-ttu-id="d8d2f-184">端點</span><span class="sxs-lookup"><span data-stu-id="d8d2f-184">Endpoint</span></span>|<span data-ttu-id="d8d2f-185">端點會針對傳入和傳出訊息，使用兩種分離的相反傳輸連線。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-185">Endpoint uses two separate converse transport connections for in and out messages.</span></span>|  
+|<span data-ttu-id="d8d2f-186">mssp:RsaToken</span><span class="sxs-lookup"><span data-stu-id="d8d2f-186">mssp:RsaToken</span></span>|<span data-ttu-id="d8d2f-187">巢狀</span><span class="sxs-lookup"><span data-stu-id="d8d2f-187">Nested</span></span>|<span data-ttu-id="d8d2f-188">RSA 金鑰權杖判斷提示。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-188">RSA key token assertion.</span></span> <span data-ttu-id="d8d2f-189">在簽署簽章中直接做為金鑰資訊而序列化的 RSA 金鑰，通常就可以滿足此需求。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-189">This requirement is typically satisfied by an RSA key serialized directly as part of the key information in an endorsing signature.</span></span>|  
+|<span data-ttu-id="d8d2f-190">mssp:SslContextToken</span><span class="sxs-lookup"><span data-stu-id="d8d2f-190">mssp:SslContextToken</span></span>|<span data-ttu-id="d8d2f-191">巢狀</span><span class="sxs-lookup"><span data-stu-id="d8d2f-191">Nested</span></span>|<span data-ttu-id="d8d2f-192">需要使用二進位 TLS 信號交換 (使用已使用的 WS-Trust) 來取得 SecurityContextToken。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-192">Requires that a SecurityContextToken obtained using binary TLS handshake using WS-Trust be used.</span></span> <span data-ttu-id="d8d2f-193">巢狀判斷提示包括：sp:RequireDerivedKeys、mssp:MustNotSendCancel、mssp:RequireClientCertificate。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-193">Nested assertions include: sp:RequireDerivedKeys, mssp:MustNotSendCancel, mssp:RequireClientCertificate.</span></span>|  
+|<span data-ttu-id="d8d2f-194">mssp:MustNotSendCancel</span><span class="sxs-lookup"><span data-stu-id="d8d2f-194">mssp:MustNotSendCancel</span></span>|<span data-ttu-id="d8d2f-195">巢狀</span><span class="sxs-lookup"><span data-stu-id="d8d2f-195">Nested</span></span>|<span data-ttu-id="d8d2f-196">所指定的需求為：使用取消繫結 [WS-Trust, WS-SC] 的要求安全性權杖 (RST) 要求訊息 [WS-Trust]，不要傳送至提供之 SecurityContextToken 的簽發者。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-196">Specifies a requirement that a request security token (RST) request messages [WS-Trust] using the Cancel binding [WS-Trust, WS-SC] not be sent to the issuer of a given SecurityContextToken.</span></span> <span data-ttu-id="d8d2f-197">如果出現這個判斷提示，則這種要求訊息一定不能傳送至簽發者。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-197">If this assertion is present, then such request messages must not be sent to the issuer.</span></span> <span data-ttu-id="d8d2f-198">如果未出現這個判斷提示，則這種要求訊息可以傳送至簽發者。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-198">If this assertion is not present, then such request messages can be sent to the issuer.</span></span>|  
+|<span data-ttu-id="d8d2f-199">mssp:RequireClientCertificate</span><span class="sxs-lookup"><span data-stu-id="d8d2f-199">mssp:RequireClientCertificate</span></span>|<span data-ttu-id="d8d2f-200">巢狀</span><span class="sxs-lookup"><span data-stu-id="d8d2f-200">Nested</span></span>|<span data-ttu-id="d8d2f-201">這個選用項目會對用戶端憑證指定要求，也就是是否要做為 TLSNEGO 通訊協定的一部分而提供。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-201">This optional element specifies a requirement for a client certificate to be provided as part of the TLSNEGO protocol.</span></span> <span data-ttu-id="d8d2f-202">如果出現這個判斷提示，則必須提供用戶端憑證。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-202">If this assertion is present, then a client certificate must be provided.</span></span> <span data-ttu-id="d8d2f-203">如果未出現這個判斷提示，則不可提供用戶端憑證。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-203">If this assertion is not present, then a client certificate must not be provided.</span></span> <span data-ttu-id="d8d2f-204">這個判斷提示不可在 mssp:SslContextToken 以外使用。</span><span class="sxs-lookup"><span data-stu-id="d8d2f-204">This assertion must not be used outside of mssp:SslContextToken.</span></span>|  
   
-## 請參閱  
- [自訂 WSDL 發行物](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)   
- [HOW TO：匯出自訂的 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)   
- [HOW TO：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a><span data-ttu-id="d8d2f-205">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d8d2f-205">See Also</span></span>  
+ [<span data-ttu-id="d8d2f-206">自訂 WSDL 發行物</span><span class="sxs-lookup"><span data-stu-id="d8d2f-206">Custom WSDL Publication</span></span>](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+ [<span data-ttu-id="d8d2f-207">如何： 匯出自訂 WSDL</span><span class="sxs-lookup"><span data-stu-id="d8d2f-207">How to: Export Custom WSDL</span></span>](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [<span data-ttu-id="d8d2f-208">如何： 匯入自訂 WSDL</span><span class="sxs-lookup"><span data-stu-id="d8d2f-208">How to: Import Custom WSDL</span></span>](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

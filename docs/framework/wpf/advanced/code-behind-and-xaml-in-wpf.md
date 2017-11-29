@@ -1,72 +1,75 @@
 ---
-title: "WPF 中的程式碼後置和 XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程式碼後置檔案, XAML"
-  - "XAML, 程式碼後置"
+title: "WPF 中的程式碼後置和 XAML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [WPF], code-behind
+- code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 241fe815f1a7c2e70a664068a47d511a3dbd7e0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WPF 中的程式碼後置和 XAML
-<a name="introduction"></a> 程式碼後置 \(Code\-Behind\) 一詞是用來描述以標記編譯 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面時，與標記定義的物件聯結的程式碼。  本主題說明程式碼後置的需求，以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中程式碼的替代內嵌程式碼機制。  
+# <a name="code-behind-and-xaml-in-wpf"></a><span data-ttu-id="3c7cf-102">WPF 中的程式碼後置和 XAML</span><span class="sxs-lookup"><span data-stu-id="3c7cf-102">Code-Behind and XAML in WPF</span></span>
+<span data-ttu-id="3c7cf-103"><a name="introduction"></a>程式碼後置是用來描述與標記定義的物件，聯結的程式碼的詞彙時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是標記編譯。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-103"><a name="introduction"></a> Code-behind is a term used to describe the code that is joined with markup-defined objects, when a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page is markup-compiled.</span></span> <span data-ttu-id="3c7cf-104">本主題描述程式碼後置的需求，以及程式碼中的替代的內嵌程式碼機制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-104">This topic describes requirements for code-behind as well as an alternative inline code mechanism for code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  
   
- 此主題包括下列章節：  
+ <span data-ttu-id="3c7cf-105">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="3c7cf-105">This topic contains the following sections:</span></span>  
   
--   [必要條件](#Prerequisites)  
+-   [<span data-ttu-id="3c7cf-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="3c7cf-106">Prerequisites</span></span>](#Prerequisites)  
   
--   [程式碼後置和 XAML 語言](#codebehind_and_the_xaml_language)  
+-   [<span data-ttu-id="3c7cf-107">程式碼後置和 XAML 語言</span><span class="sxs-lookup"><span data-stu-id="3c7cf-107">Code-Behind and the XAML Language</span></span>](#codebehind_and_the_xaml_language)  
   
--   [WPF 中程式碼後置、事件處理常式和部分類別的需求](#Code_behind__Event_Handler__and_Partial_Class)  
+-   [<span data-ttu-id="3c7cf-108">程式碼後置、 事件處理常式，並在 WPF 中的部分類別需求</span><span class="sxs-lookup"><span data-stu-id="3c7cf-108">Code-behind, Event Handler, and Partial Class Requirements in WPF</span></span>](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+-   [<span data-ttu-id="3c7cf-109">x： 程式碼</span><span class="sxs-lookup"><span data-stu-id="3c7cf-109">x:Code</span></span>](#x_Code)  
   
--   [內嵌程式碼限制](#Inline_Code_Limitations)  
+-   [<span data-ttu-id="3c7cf-110">內嵌程式碼的限制</span><span class="sxs-lookup"><span data-stu-id="3c7cf-110">Inline Code Limitations</span></span>](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## 必要條件  
- 本主題假設您已讀過 [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)，而且有一些 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 和物件導向程式設計的基本知識。  
+## <a name="prerequisites"></a><span data-ttu-id="3c7cf-111">必要條件</span><span class="sxs-lookup"><span data-stu-id="3c7cf-111">Prerequisites</span></span>  
+ <span data-ttu-id="3c7cf-112">本主題假設您已閱讀[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)和具備一些基本知識的[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]與物件導向程式設計。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-112">This topic assumes that you have read the [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) and have some basic knowledge of the [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] and object-oriented programming.</span></span>  
   
 <a name="codebehind_and_the_xaml_language"></a>   
-## 程式碼後置和 XAML 語言  
- XAML 語言包括語言層級的功能，這些功能可從標記檔這一端讓程式碼檔與標記檔產生關聯。  具體而言，XAML 語言會定義語言功能 [x:Class 指示詞](../../../../docs/framework/xaml-services/x-class-directive.md)、[x:Subclass 指示詞](../../../../docs/framework/xaml-services/x-subclass-directive.md)和 [x:ClassModifier 指示詞](../../../../docs/framework/xaml-services/x-classmodifier-directive.md)。  不過，XAML 語言指定的範圍並不包括該如何產生程式碼，以及如何整合標記和程式碼。  這類工作取決於架構 \(例如 WPF\)，決定如何整合程式碼、如何在應用程式和程式設計模型中使用 XAML，以及這類工作需要的所有建置動作或其他支援。  
+## <a name="code-behind-and-the-xaml-language"></a><span data-ttu-id="3c7cf-113">程式碼後置和 XAML 語言</span><span class="sxs-lookup"><span data-stu-id="3c7cf-113">Code-Behind and the XAML Language</span></span>  
+ <span data-ttu-id="3c7cf-114">XAML 語言包含語言層級功能，使其可將程式碼檔案與標記檔案，從標記檔案端產生關聯。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-114">The XAML language includes language-level features that make it possible to associate code files with markup files, from the markup file side.</span></span> <span data-ttu-id="3c7cf-115">具體而言，XAML 語言定義的語言功能[X:class 指示詞](../../../../docs/framework/xaml-services/x-class-directive.md)， [X:subclass 指示詞](../../../../docs/framework/xaml-services/x-subclass-directive.md)，和[X:classmodifier 指示詞](../../../../docs/framework/xaml-services/x-classmodifier-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-115">Specifically, the XAML language defines the language features [x:Class Directive](../../../../docs/framework/xaml-services/x-class-directive.md), [x:Subclass Directive](../../../../docs/framework/xaml-services/x-subclass-directive.md), and [x:ClassModifier Directive](../../../../docs/framework/xaml-services/x-classmodifier-directive.md).</span></span> <span data-ttu-id="3c7cf-116">完全方式應該產生程式碼，以及如何將整合標記和程式碼，不是為 XAML 語言的指定部分。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-116">Exactly how the code should be produced, and how to integrate markup and code, is not part of what the XAML language specifies.</span></span> <span data-ttu-id="3c7cf-117">再由架構，例如 WPF 來判斷將整合程式碼的方式、 如何使用 XAML 應用程式和程式設計模型，以及組建中的動作或其他支援的所有這需要。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-117">It is left up to frameworks such as WPF to determine how to integrate the code, how to use XAML in the application and programming models, and the build actions or other support that all this requires.</span></span>  
   
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
-## WPF 中程式碼後置、事件處理常式和部分類別的需求  
+## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a><span data-ttu-id="3c7cf-118">程式碼後置、 事件處理常式，並在 WPF 中的部分類別需求</span><span class="sxs-lookup"><span data-stu-id="3c7cf-118">Code-behind, Event Handler, and Partial Class Requirements in WPF</span></span>  
   
--   部分類別必須衍生自支援根項目的型別。  
+-   <span data-ttu-id="3c7cf-119">部分類別必須衍生自支援的根項目類型。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-119">The partial class must derive from the type that backs the root element.</span></span>  
   
--   請注意，在標記編譯建置動作的行為之下，您可以在程式碼後置端的部分類別定義中將衍生留白。  即使沒有指定，編譯的結果仍會採用頁面根項目的支援類型做為部分類別的基礎。  不過，倚賴此行為並不是最佳做法。  
+-   <span data-ttu-id="3c7cf-120">請注意下標記編譯建置動作的預設行為，您可以將衍生空白部分類別定義中的程式碼後置端上。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-120">Note that under the default behavior of the markup compile build actions, you can leave the derivation blank in the partial class definition on the code-behind side.</span></span> <span data-ttu-id="3c7cf-121">已編譯的結果會假設頁面根支援類型，作為部分類別中，為基礎，即使未指定。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-121">The compiled result will assume the page root's backing type to be the basis for the partial class, even if it not specified.</span></span> <span data-ttu-id="3c7cf-122">不過，依賴此行為並不是最佳作法。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-122">However, relying on this behavior is not a best practice.</span></span>  
   
--   您在程式碼後置中撰寫的事件處理常式必須是執行個體方法，而不能是靜態方法。  這些方法必須由部分類別在 `x:Class` 所識別的 CLR 命名空間內定義。  您無法限制事件處理常式的名稱，藉此指示 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器在不同的類別範圍中尋找事件連接的事件處理常式。  
+-   <span data-ttu-id="3c7cf-123">您撰寫程式碼後置中的事件處理常式必須是執行個體方法，而且不可為靜態方法。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-123">The event handlers you write in the code behind must be instance methods and cannot be static methods.</span></span> <span data-ttu-id="3c7cf-124">這些方法必須由所識別的 CLR 命名空間內的部分類別定義`x:Class`。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-124">These methods must be defined by the partial class within the CLR namespace identified by `x:Class`.</span></span> <span data-ttu-id="3c7cf-125">您無法限定名稱的事件處理常式，以指示[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器尋找事件連接不同的類別範圍中的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-125">You cannot qualify the name of an event handler to instruct a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor to look for an event handler for event wiring in a different class scope.</span></span>  
   
--   處理常式必須符合支援類型系統中適當事件的委派。  
+-   <span data-ttu-id="3c7cf-126">處理常式必須符合在支援類型系統中的適當事件的委派。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-126">The handler must match the delegate for the appropriate event in the backing type system.</span></span>  
   
--   您可特別針對 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 語言，使用語言特定 `Handles` 關鍵字建立處理常式與處理常式宣告中執行個體和事件的關聯，而不必附加處理常式與 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的屬性 \(Attribute\)。  不過，這項技術有一些限制，因為 `Handles` 關鍵字無法支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系統的所有特定功能，例如特定路由事件情節或附加事件。  如需詳細資訊，請參閱 [Visual Basic 和 WPF 事件處理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+-   <span data-ttu-id="3c7cf-127">如[!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]語言具體來說，您可以使用特定語言`Handles`關鍵字來關聯執行個體，以及事件處理常式宣告，而不是附加與中屬性的處理常式中的處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-127">For the [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] language specifically, you can use the language-specific `Handles` keyword to associate handlers with instances and events in the handler declaration, instead of attaching handlers with attributes in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="3c7cf-128">不過，這項技術還是有一些限制因為`Handles`關鍵字不能支援的特定功能的所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系統，例如特定路由事件的案例，或附加事件。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-128">However, this technique does have some limitations because the `Handles` keyword cannot support all of the specific features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] event system, such as certain routed event scenarios or attached events.</span></span> <span data-ttu-id="3c7cf-129">如需詳細資訊，請參閱[Visual Basic 和 WPF 的事件處理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-129">For details, see [Visual Basic and WPF Event Handling](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).</span></span>  
   
 <a name="x_Code"></a>   
-## x:Code  
- [x:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) 是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中定義的指示詞項目。`x:Code` 指示詞項目可以包含內嵌程式碼。  這種以內嵌方式定義的程式碼可以與相同頁面上的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 互動。  下列範例顯示內嵌的 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 程式碼。  請注意此程式碼位於 `x:Code` 項目內，而且程式碼必須放在 `<CDATA[`...`]]>` 中，以逸出 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 的內容，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器 \(解譯 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 結構描述或 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 結構描述\) 才不會嘗試依字面將內容解譯為 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。  
+## <a name="xcode"></a><span data-ttu-id="3c7cf-130">x： 程式碼</span><span class="sxs-lookup"><span data-stu-id="3c7cf-130">x:Code</span></span>  
+ <span data-ttu-id="3c7cf-131">[X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)指示詞的項目中定義[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-131">[x:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) is a directive element defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="3c7cf-132">`x:Code`指示詞項目可以包含內嵌程式碼。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-132">An `x:Code` directive element can contain inline programming code.</span></span> <span data-ttu-id="3c7cf-133">內嵌定義的程式碼可以與互動[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]相同頁面上。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-133">The code that is defined inline can interact with the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] on the same page.</span></span> <span data-ttu-id="3c7cf-134">下列範例說明內嵌[!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)]程式碼。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-134">The following example illustrates inline [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] code.</span></span> <span data-ttu-id="3c7cf-135">請注意，程式碼位於`x:Code`項目和程式碼，必須以括住`<CDATA[`...`]]>`來逸出的內容[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]，如此[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器 (解譯 [[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]結構描述或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]結構描述) 不會嘗試解譯內容常值做為[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-135">Notice that the code is inside the `x:Code` element and that the code must be surrounded by `<CDATA[`...`]]>` to escape the contents for [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], so that a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor (interpreting either the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] schema or the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] schema) will not try to interpret the contents literally as [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].</span></span>  
   
- [!code-xml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
+ [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
 <a name="Inline_Code_Limitations"></a>   
-## 內嵌程式碼限制  
- 您應該考慮避免或限制使用內嵌程式碼。  就架構和程式碼撰寫原理而言，將標記和程式碼後置分開，可以讓設計人員和開發人員的角色更為涇渭分明。  就較為技術性的層面來看，撰寫內嵌程式碼的難度可能較高，因為您總是寫入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 產生的部分類別，而且只能使用預設 XML 命名空間對應。  因為您不能加入 `using` 陳述式，所以必須完整限定您所進行的許多 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 呼叫。  預設 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 對應包括存在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 組件中的多數 \(但非全部\) [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空間；您必須完全限定對包含在其他 CLR 命名空間內之型別和成員的呼叫。  您也無法在內嵌程式碼中定義超出部分類別的任何項目，而且您參考的所有使用者程式碼實體都必須以成員或變數的形式存在於產生的部分類別內。  其他語言特定的程式設計功能，例如巨集或相對於全域變數或建置變數的 `#ifdef`，也無法使用。  如需詳細資訊，請參閱 [x:Code 內建 XAML 類型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)。  
+## <a name="inline-code-limitations"></a><span data-ttu-id="3c7cf-136">內嵌程式碼的限制</span><span class="sxs-lookup"><span data-stu-id="3c7cf-136">Inline Code Limitations</span></span>  
+ <span data-ttu-id="3c7cf-137">您應該考慮避免或限制的內嵌程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-137">You should consider avoiding or limiting the use of inline code.</span></span> <span data-ttu-id="3c7cf-138">架構和程式碼撰寫原理，維護的區隔標記和程式碼後置會保留的設計工具和開發人員角色更多相異。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-138">In terms of architecture and coding philosophy, maintaining a separation between markup and code-behind keeps the designer and developer roles much more distinct.</span></span> <span data-ttu-id="3c7cf-139">在更多技術層級，您為內嵌程式碼撰寫的程式碼可以是很冗長，因此若要撰寫，因為永遠寫入至[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]產生部分類別，且只能使用預設 XML 命名空間對應。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-139">On a more technical level, the code that you write for inline code can be awkward to write, because you are always writing into the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] generated partial class, and can only use the default XML namespace mappings.</span></span> <span data-ttu-id="3c7cf-140">因為您無法將`using`陳述式，您必須完整限定的許多[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]您進行的呼叫。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-140">Because you cannot add `using` statements, you must fully qualify many of the [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] calls that you make.</span></span> <span data-ttu-id="3c7cf-141">預設值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]對應包含大部分但非全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]中出現的命名空間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件; 您必須完整限定型別和成員包含在其他的 CLR 命名空間內的呼叫。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-141">The default [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mappings include most but not all [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] namespaces that are present in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies; you will have to fully qualify calls to types and members contained within the other CLR namespaces.</span></span> <span data-ttu-id="3c7cf-142">您也不能超過的部分類別的任何項目中定義內嵌程式碼，且您參考的所有使用者程式碼實體都必須是成員或產生的部分類別中的變數。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-142">You also cannot define anything beyond the partial class in the inline code, and all user code entities you reference must exist as a member or variable within the generated partial class.</span></span> <span data-ttu-id="3c7cf-143">其他語言特定程式設計功能，例如巨集或`#ifdef`針對全域變數或建置變數，也會不提供。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-143">Other language specific programming features, such as macros or `#ifdef` against global variables or build variables, are also not available.</span></span> <span data-ttu-id="3c7cf-144">如需詳細資訊，請參閱[X:code 內建 XAML 類型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)。</span><span class="sxs-lookup"><span data-stu-id="3c7cf-144">For more information, see [x:Code Intrinsic XAML Type](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md).</span></span>  
   
-## 請參閱  
- [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [x:Code 內建 XAML 類型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)   
- [建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
- [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a><span data-ttu-id="3c7cf-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c7cf-145">See Also</span></span>  
+ [<span data-ttu-id="3c7cf-146">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="3c7cf-146">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="3c7cf-147">x:Code 內建 XAML 類型</span><span class="sxs-lookup"><span data-stu-id="3c7cf-147">x:Code Intrinsic XAML Type</span></span>](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="3c7cf-148">建置 WPF 應用程式</span><span class="sxs-lookup"><span data-stu-id="3c7cf-148">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="3c7cf-149">XAML 語法詳細資料</span><span class="sxs-lookup"><span data-stu-id="3c7cf-149">XAML Syntax In Detail</span></span>](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

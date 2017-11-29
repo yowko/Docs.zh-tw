@@ -1,194 +1,197 @@
 ---
-title: "WCF 安全性用語 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全性 [WCF], 術語"
-  - "安全性字彙 [WCF]"
-  - "安全性詞彙 [WCF]"
+title: "WCF 安全性用語"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [WCF], terminology
+- security glossary [WCF]
+- security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 386e58c5b04ed82f9ee42c7f04eacd4610c2a598
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 安全性用語
-您可能會對討論安全性時使用的一些用語感到陌生。本主題僅針對一些安全性名詞提供簡短說明，而不會針對每個項目逐一提供完整的文件說明。  
+# <a name="wcf-security-terminology"></a><span data-ttu-id="fcb81-102">WCF 安全性用語</span><span class="sxs-lookup"><span data-stu-id="fcb81-102">WCF Security Terminology</span></span>
+<span data-ttu-id="fcb81-103">您可能會對討論安全性時使用的一些用語感到陌生。</span><span class="sxs-lookup"><span data-stu-id="fcb81-103">Some of the terminology used when discussing security may be unfamiliar.</span></span> <span data-ttu-id="fcb81-104">本主題僅針對一些安全性名詞提供簡短說明，而不會針對每個項目逐一提供完整的文件說明。</span><span class="sxs-lookup"><span data-stu-id="fcb81-104">This topic provides short explanations of some of security terms, but is not intended to provide comprehensive documentation for every item.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 文件中所用詞彙的詳細資訊，請參閱[Windows Communication Foundation 的主要概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="fcb81-105">使用的字彙[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]文件，請參閱[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。</span><span class="sxs-lookup"><span data-stu-id="fcb81-105"> terms used in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentation, see [Fundamental Windows Communication Foundation Concepts](../../../../docs/framework/wcf/fundamental-concepts.md).</span></span>  
   
- Access Control List \(ACL\) \- 存取控制清單 \(ACL\)  
- 套用到物件的安全性保護清單 \(物件可以是檔案、處理序、事件或具有安全性描述元的任何其他項目\)。ACL 中的項目稱為存取控制項目 \(ACE\)。ACL 有兩種：Discretionary 存取控制清單和系統存取控制清單。  
+ <span data-ttu-id="fcb81-106">Access Control List (ACL) - 存取控制清單 (ACL)</span><span class="sxs-lookup"><span data-stu-id="fcb81-106">access control list (ACL)</span></span>  
+ <span data-ttu-id="fcb81-107">套用到物件的安全性保護清單 </span><span class="sxs-lookup"><span data-stu-id="fcb81-107">A list of security protections that applies to an object.</span></span> <span data-ttu-id="fcb81-108">(物件可以是檔案、處理序、事件或具有安全性描述元的任何其他項目)。ACL 中的項目稱為存取控制項目 (ACE)。</span><span class="sxs-lookup"><span data-stu-id="fcb81-108">(An object can be a file, process, event, or anything else having a security descriptor.) An entry in an ACL is an access control entry (ACE).</span></span> <span data-ttu-id="fcb81-109">ACL 有兩種：Discretionary 存取控制清單和系統存取控制清單。</span><span class="sxs-lookup"><span data-stu-id="fcb81-109">There are two types of ACLs: discretionary and system.</span></span>  
   
- 驗證  
- 用於驗證使用者、電腦、服務或處理序為何者或是否符合自稱之身分的處理序。  
+ <span data-ttu-id="fcb81-110">驗證</span><span class="sxs-lookup"><span data-stu-id="fcb81-110">authentication</span></span>  
+ <span data-ttu-id="fcb81-111">用於驗證使用者、電腦、服務或處理序為何者或是否符合自稱之身分的處理序。</span><span class="sxs-lookup"><span data-stu-id="fcb81-111">The process for verifying that a user, computer, service, or process is who or what it claims to be.</span></span>  
   
- 授權  
- 控制資源的存取與權限的行為。例如，允許某個群組成員閱讀檔案，但是只允許另一個群組的成員變更檔案。  
+ <span data-ttu-id="fcb81-112">授權</span><span class="sxs-lookup"><span data-stu-id="fcb81-112">authorization</span></span>  
+ <span data-ttu-id="fcb81-113">控制資源的存取與權限的行為。</span><span class="sxs-lookup"><span data-stu-id="fcb81-113">The act of controlling access and rights to a resource.</span></span> <span data-ttu-id="fcb81-114">例如，允許某個群組成員閱讀檔案，但是只允許另一個群組的成員變更檔案。</span><span class="sxs-lookup"><span data-stu-id="fcb81-114">For example, allowing members of one group to read a file, but allowing only members of another group to alter the file.</span></span>  
   
- 憑證授權單位 \(CA\) 憑證  
- 識別會將伺服器和用戶端驗證憑證發給要求這些憑證之伺服器和用戶端的憑證授權單位 \(CA\)。由於此憑證包含數位簽章中所用的公開金鑰，因此也稱為「*簽章憑證*」\(Signature Certificate\)。如果 CA 是根憑證授權單位，則 CA 憑證可稱為「*根憑證*」\(Root Certificate\)有時亦稱為「*網站憑證*」\(Site Certificate\)。  
+ <span data-ttu-id="fcb81-115">憑證授權單位 (CA) 憑證</span><span class="sxs-lookup"><span data-stu-id="fcb81-115">certification authority (CA) certificate</span></span>  
+ <span data-ttu-id="fcb81-116">識別會將伺服器和用戶端驗證憑證發給要求這些憑證之伺服器和用戶端的憑證授權單位 (CA)。</span><span class="sxs-lookup"><span data-stu-id="fcb81-116">Identifies the CA that issues server and client authentication certificates to the servers and clients that request these certificates.</span></span> <span data-ttu-id="fcb81-117">因為它包含數位簽章中使用的公開金鑰時，它也稱為*簽章憑證*。</span><span class="sxs-lookup"><span data-stu-id="fcb81-117">Because it contains a public key used in digital signatures, it is also referred to as a *signature certificate*.</span></span> <span data-ttu-id="fcb81-118">如果 CA 是根授權單位，CA 憑證可能稱為*根憑證*。</span><span class="sxs-lookup"><span data-stu-id="fcb81-118">If the CA is a root authority, the CA certificate may be referred to as a *root certificate*.</span></span> <span data-ttu-id="fcb81-119">有時也稱為*站台憑證*。</span><span class="sxs-lookup"><span data-stu-id="fcb81-119">Also sometimes known as a *site certificate*.</span></span>  
   
- CA 階層架構  
- CA 階層架構包含多個 CA。它有經過組織，因此每個 CA 都可由較高階層架構中的另一個 CA 進行驗證，一直到達階層架構最頂層 \(亦稱為「*根憑證授權單位*」\(Root Authority\) 為止。  
+ <span data-ttu-id="fcb81-120">CA 階層架構</span><span class="sxs-lookup"><span data-stu-id="fcb81-120">CA hierarchy</span></span>  
+ <span data-ttu-id="fcb81-121">CA 階層架構包含多個 CA。</span><span class="sxs-lookup"><span data-stu-id="fcb81-121">A CA hierarchy contains multiple CAs.</span></span> <span data-ttu-id="fcb81-122">它會進行編排，每個 CA 經過其他 CA 中較高層級的階層頂端的階層，直到也稱為*根授權*，為止。</span><span class="sxs-lookup"><span data-stu-id="fcb81-122">It is organized so that each CA is certified by another CA in a higher level of the hierarchy until the top of the hierarchy, also known as the *root authority*, is reached.</span></span>  
   
- 憑證  
- 包含實體與實體公開金鑰相關資訊的數位簽署陳述式，因此會將這兩個資訊片段繫結在一起。當實體通過授權單位驗證後，就會由稱為憑證授權單位的信任組織 \(或實體\) 發給憑證。  
+ <span data-ttu-id="fcb81-123">憑證</span><span class="sxs-lookup"><span data-stu-id="fcb81-123">certificate</span></span>  
+ <span data-ttu-id="fcb81-124">包含實體與實體公開金鑰相關資訊的數位簽署陳述式，因此會將這兩個資訊片段繫結在一起。</span><span class="sxs-lookup"><span data-stu-id="fcb81-124">A digitally signed statement that contains information about an entity and the entity's public key, thus binding these two pieces of information together.</span></span> <span data-ttu-id="fcb81-125">當實體通過授權單位驗證後，就會由稱為憑證授權單位的信任組織 (或實體) 發給憑證。</span><span class="sxs-lookup"><span data-stu-id="fcb81-125">A certificate is issued by a trusted organization (or entity), called a certification authority, after the authority has verified that the entity is who it says it is.</span></span>  
   
- 憑證可包含不同的資料類型。例如，X.509 憑證包含憑證格式、憑證序號、用來簽署憑證的演算法、發行憑證的 CA 名稱、要求憑證的實體名稱與其公開金鑰，以及 CA 的簽章。  
+ <span data-ttu-id="fcb81-126">憑證可包含不同的資料類型。</span><span class="sxs-lookup"><span data-stu-id="fcb81-126">Certificates can contain different types of data.</span></span> <span data-ttu-id="fcb81-127">例如，X.509 憑證包含憑證格式、憑證序號、用來簽署憑證的演算法、發行憑證的 CA 名稱、要求憑證的實體名稱與其公開金鑰，以及 CA 的簽章。</span><span class="sxs-lookup"><span data-stu-id="fcb81-127">For example, an X.509 certificate includes the format of the certificate, the serial number of the certificate, the algorithm used to sign the certificate, the name of the CA that issued the certificate, the name and public key of the entity requesting the certificate, and the CA's signature.</span></span>  
   
- 憑證存放區  
- 一般來說，指的是用來存放憑證、憑證撤銷清單 \(CRL\)，以及憑證信任清單 \(CTL\) 的永久存放區。然而，當您使用不需要存放在永久存放區的憑證時，可以單純在記憶體中建立並開啟憑證存放區。  
+ <span data-ttu-id="fcb81-128">憑證存放區</span><span class="sxs-lookup"><span data-stu-id="fcb81-128">certificate store</span></span>  
+ <span data-ttu-id="fcb81-129">一般來說，指的是用來存放憑證、憑證撤銷清單 (CRL)，以及憑證信任清單 (CTL) 的永久存放區。</span><span class="sxs-lookup"><span data-stu-id="fcb81-129">Typically, a permanent storage where certificates, certificate revocation lists (CRLs), and certificate trust lists (CTLs) are stored.</span></span> <span data-ttu-id="fcb81-130">然而，當您使用不需要存放在永久存放區的憑證時，可以單純在記憶體中建立並開啟憑證存放區。</span><span class="sxs-lookup"><span data-stu-id="fcb81-130">It is possible, however, to create and open a certificate store solely in memory when working with certificates that do not need to be put in permanent storage.</span></span>  
   
- 宣告  
- 從某個實體傳遞至另一個實體，用來建立傳送者身分識別的資訊。例如，使用者名稱與密碼權杖，或是 X.509 憑證。  
+ <span data-ttu-id="fcb81-131">宣告</span><span class="sxs-lookup"><span data-stu-id="fcb81-131">claims</span></span>  
+ <span data-ttu-id="fcb81-132">從某個實體傳遞至另一個實體，用來建立傳送者身分識別的資訊。</span><span class="sxs-lookup"><span data-stu-id="fcb81-132">Information passed from one entity to another used to establish the sender's identity.</span></span> <span data-ttu-id="fcb81-133">例如，使用者名稱與密碼權杖，或是 X.509 憑證。</span><span class="sxs-lookup"><span data-stu-id="fcb81-133">For example, a username and password token, or an X.509 certificate.</span></span>  
   
- 用戶端憑證  
- 指的是用在用戶端驗證作業的憑證，例如在 Web 伺服器上驗證網頁瀏覽器。當網頁瀏覽器用戶端嘗試存取安全的 Web 伺服器時，用戶端會將其憑證傳送給伺服器，以允許伺服器驗證用戶端身分識別。  
+ <span data-ttu-id="fcb81-134">用戶端憑證</span><span class="sxs-lookup"><span data-stu-id="fcb81-134">client certificate</span></span>  
+ <span data-ttu-id="fcb81-135">指的是用在用戶端驗證作業的憑證，例如在 Web 伺服器上驗證網頁瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="fcb81-135">Refers to a certificate used for client authentication, such as authenticating a Web browser on a Web server.</span></span> <span data-ttu-id="fcb81-136">當網頁瀏覽器用戶端嘗試存取安全的 Web 伺服器時，用戶端會將其憑證傳送給伺服器，以允許伺服器驗證用戶端身分識別。</span><span class="sxs-lookup"><span data-stu-id="fcb81-136">When a Web browser client attempts to access a secured Web server, the client sends its certificate to the server to allow it to verify the client's identity.</span></span>  
   
- 認證  
- 安全性原則用來建立本身之身分識別的已驗證登入資料，例如密碼，或是 Kerberos 通訊協定票證。認證可用來控制資源的存取。  
+ <span data-ttu-id="fcb81-137">credentials</span><span class="sxs-lookup"><span data-stu-id="fcb81-137">credentials</span></span>  
+ <span data-ttu-id="fcb81-138">安全性原則用來建立本身之身分識別的已驗證登入資料，例如密碼，或是 Kerberos 通訊協定票證。</span><span class="sxs-lookup"><span data-stu-id="fcb81-138">Previously authenticated logon data that a security principal uses to establish its own identity, such as a password, or a Kerberos protocol ticket.</span></span> <span data-ttu-id="fcb81-139">認證可用來控制資源的存取。</span><span class="sxs-lookup"><span data-stu-id="fcb81-139">Credentials are used to control access to resources.</span></span>  
   
- 已處理的資料  
- 由公開金鑰密碼編譯標準 \(PKCS\) \#7 \(包含任何類型的資料加上內容的訊息雜湊 \(摘要\)\) 所定義的資料內容類型。  
+ <span data-ttu-id="fcb81-140">已處理的資料</span><span class="sxs-lookup"><span data-stu-id="fcb81-140">digested data</span></span>  
+ <span data-ttu-id="fcb81-141">由公開金鑰密碼編譯標準 (PKCS) #7 (包含任何類型的資料加上內容的訊息雜湊 (摘要)) 所定義的資料內容類型。</span><span class="sxs-lookup"><span data-stu-id="fcb81-141">A data content type defined by public key cryptographic standard (PKCS) #7 that consists of any type of data plus a message hash (digest) of the content.</span></span>  
   
- 數位簽章  
- 將傳送者的身分識別繫結至所傳送資訊的資料。數位簽章可與任何訊息、檔案，或其他數位編碼資訊一併送出，也可以個別傳輸。數位簽章可以用在公開金鑰環境中，並提供驗證與完整性服務。  
+ <span data-ttu-id="fcb81-142">數位簽章</span><span class="sxs-lookup"><span data-stu-id="fcb81-142">digital signature</span></span>  
+ <span data-ttu-id="fcb81-143">將傳送者的身分識別繫結至所傳送資訊的資料。</span><span class="sxs-lookup"><span data-stu-id="fcb81-143">Data that binds a sender's identity to the information being sent.</span></span> <span data-ttu-id="fcb81-144">數位簽章可與任何訊息、檔案，或其他數位編碼資訊一併送出，也可以個別傳輸。</span><span class="sxs-lookup"><span data-stu-id="fcb81-144">A digital signature may be bundled with any message, file, or other digitally encoded information, or transmitted separately.</span></span> <span data-ttu-id="fcb81-145">數位簽章可以用在公開金鑰環境中，並提供驗證與完整性服務。</span><span class="sxs-lookup"><span data-stu-id="fcb81-145">Digital signatures are used in public key environments and provide authentication and integrity services.</span></span>  
   
- 編碼  
- 將資料轉換為位元資料流的處理序。編碼是將資料轉換為零 \(0\) 與壹 \(1\) 資料流之序列化處理序的一部分。  
+ <span data-ttu-id="fcb81-146">編碼</span><span class="sxs-lookup"><span data-stu-id="fcb81-146">encoding</span></span>  
+ <span data-ttu-id="fcb81-147">將資料轉換為位元資料流的處理序。</span><span class="sxs-lookup"><span data-stu-id="fcb81-147">The process of turning data into a stream of bits.</span></span> <span data-ttu-id="fcb81-148">編碼是將資料轉換為零 (0) 與壹 (1) 資料流之序列化處理序的一部分。</span><span class="sxs-lookup"><span data-stu-id="fcb81-148">Encoding is part of the serialization process that converts data into a stream of ones and zeros.</span></span>  
   
- 交換金鑰組  
- 公開\/私密金鑰組，可用來加密工作階段金鑰，使其能安全地儲存並與其他使用者交換。  
+ <span data-ttu-id="fcb81-149">交換金鑰組</span><span class="sxs-lookup"><span data-stu-id="fcb81-149">exchange key pair</span></span>  
+ <span data-ttu-id="fcb81-150">公開/私密金鑰組，可用來加密工作階段金鑰，使其能安全地儲存並與其他使用者交換。</span><span class="sxs-lookup"><span data-stu-id="fcb81-150">A public/private key pair used to encrypt session keys so that they can be safely stored and exchanged with other users.</span></span>  
   
- 雜湊  
- 透過將數學函式 \(請參閱「雜湊演算法」\) 套用到任意數量的資料，所取得的固定大小數值。一般來說，此資料包含稱為 *Nonce* 的隨機資料。服務與用戶端同時都會提供交換 Nonce 以增加結果的複雜性。此結果亦稱為「*訊息摘要*」\(Message Digest\)。傳送雜湊值會比傳送機密資料 \(例如密碼\) 要來得安全，即使密碼已經加密也是一樣。雜湊傳送者與接收者必須在雜湊演算法與 Nonce 上達成共識，以便在收到雜湊時可以加以驗證。  
+ <span data-ttu-id="fcb81-151">雜湊</span><span class="sxs-lookup"><span data-stu-id="fcb81-151">hash</span></span>  
+ <span data-ttu-id="fcb81-152">透過將數學函式 (請參閱「雜湊演算法」) 套用到任意數量的資料，所取得的固定大小數值。</span><span class="sxs-lookup"><span data-stu-id="fcb81-152">A fixed-size numerical value obtained by applying a mathematical function (see hashing algorithm) to an arbitrary amount of data.</span></span> <span data-ttu-id="fcb81-153">資料通常會包含隨機資料，又稱為*nonce*。</span><span class="sxs-lookup"><span data-stu-id="fcb81-153">The data typically includes random data, known as a *nonce*.</span></span> <span data-ttu-id="fcb81-154">服務與用戶端同時都會提供交換 Nonce 以增加結果的複雜性。</span><span class="sxs-lookup"><span data-stu-id="fcb81-154">Both the service and client contribute exchange nonces to increase the complexity of the result.</span></span> <span data-ttu-id="fcb81-155">結果就是所謂*訊息摘要*。</span><span class="sxs-lookup"><span data-stu-id="fcb81-155">The result is also known as a *message digest*.</span></span> <span data-ttu-id="fcb81-156">傳送雜湊值會比傳送機密資料 (例如密碼) 要來得安全，即使密碼已經加密也是一樣。</span><span class="sxs-lookup"><span data-stu-id="fcb81-156">Sending a hash value is safer than sending sensitive data, such as a password, even if the password is encrypted.</span></span> <span data-ttu-id="fcb81-157">雜湊傳送者與接收者必須在雜湊演算法與 Nonce 上達成共識，以便在收到雜湊時可以加以驗證。</span><span class="sxs-lookup"><span data-stu-id="fcb81-157">The hash sender and receiver must agree on the hashing algorithm and the nonces so that, once received, a hash can be verified.</span></span>  
   
- 雜湊演算法  
- 演算法，用來產生某些資料片段 \(例如訊息或工作階段金鑰\) 的雜湊值。傳統的雜湊演算法包含 MD2、MD4、MD5，與 SHA\-1。  
+ <span data-ttu-id="fcb81-158">雜湊演算法</span><span class="sxs-lookup"><span data-stu-id="fcb81-158">hashing algorithm</span></span>  
+ <span data-ttu-id="fcb81-159">演算法，用來產生某些資料片段 (例如訊息或工作階段金鑰) 的雜湊值。</span><span class="sxs-lookup"><span data-stu-id="fcb81-159">An algorithm used to produce a hash value of some piece of data, such as a message or session key.</span></span> <span data-ttu-id="fcb81-160">傳統的雜湊演算法包含 MD2、MD4、MD5，與 SHA-1。</span><span class="sxs-lookup"><span data-stu-id="fcb81-160">Typical hashing algorithms include MD2, MD4, MD5, and SHA-1.</span></span>  
   
- Kerberos 通訊協定  
- 一種通訊協定，可定義用戶端與網路驗證服務的互動方式。用戶端從 Kerberos 金鑰發佈中心 \(KDC\) 取得票證，並在建立連線時將這些票證呈交給伺服器。Kerberos 票證代表用戶端的網路認證。  
+ <span data-ttu-id="fcb81-161">Kerberos 通訊協定</span><span class="sxs-lookup"><span data-stu-id="fcb81-161">Kerberos protocol</span></span>  
+ <span data-ttu-id="fcb81-162">一種通訊協定，可定義用戶端與網路驗證服務的互動方式。</span><span class="sxs-lookup"><span data-stu-id="fcb81-162">A protocol that defines how clients interact with a network authentication service.</span></span> <span data-ttu-id="fcb81-163">用戶端從 Kerberos 金鑰發佈中心 (KDC) 取得票證，並在建立連線時將這些票證呈交給伺服器。</span><span class="sxs-lookup"><span data-stu-id="fcb81-163">Clients obtain tickets from the Kerberos Key Distribution Center (KDC), and they present these tickets to servers when connections are established.</span></span> <span data-ttu-id="fcb81-164">Kerberos 票證代表用戶端的網路認證。</span><span class="sxs-lookup"><span data-stu-id="fcb81-164">Kerberos tickets represent the client's network credentials.</span></span>  
   
- 本機安全性授權 \(LSA\)  
- 一種受保護的子系統，可驗證使用者並將使用者登入本機系統中。LSA 同時會在系統上維護所有本機安全性的相關資訊，合稱為系統的本機安全性原則。  
+ <span data-ttu-id="fcb81-165">本機安全性授權 (LSA)</span><span class="sxs-lookup"><span data-stu-id="fcb81-165">local security authority (LSA)</span></span>  
+ <span data-ttu-id="fcb81-166">一種受保護的子系統，可驗證使用者並將使用者登入本機系統中。</span><span class="sxs-lookup"><span data-stu-id="fcb81-166">A protected subsystem that authenticates and logs users on to the local system.</span></span> <span data-ttu-id="fcb81-167">LSA 同時會在系統上維護所有本機安全性的相關資訊，合稱為系統的本機安全性原則。</span><span class="sxs-lookup"><span data-stu-id="fcb81-167">LSA also maintains information about all aspects of local security on a system, collectively known as the local security policy of the system.</span></span>  
   
- 交涉  
- 安全性支援提供者 \(SSP\)，可做為安全性支援提供者介面 \(SSPI\) 與其他 SSP 之間的應用程式層來使用。當應用程式呼叫 SSPI 以登入網路時，它可以指定 SSP 來處理要求。如果應用程式指定 `Negotiate`，則 `Negotiate` 會分析要求，然後依據客戶設定的安全性原則，挑選最好的 SSP 來處理要求。  
+ <span data-ttu-id="fcb81-168">交涉</span><span class="sxs-lookup"><span data-stu-id="fcb81-168">Negotiate</span></span>  
+ <span data-ttu-id="fcb81-169">安全性支援提供者 (SSP)，可做為安全性支援提供者介面 (SSPI) 與其他 SSP 之間的應用程式層來使用。</span><span class="sxs-lookup"><span data-stu-id="fcb81-169">A security support provider (SSP) that acts as an application layer between the Security Support Provider Interface (SSPI) and the other SSPs.</span></span> <span data-ttu-id="fcb81-170">當應用程式呼叫 SSPI 以登入網路時，它可以指定 SSP 來處理要求。</span><span class="sxs-lookup"><span data-stu-id="fcb81-170">When an application calls into SSPI to log on to a network, it can specify an SSP to process the request.</span></span> <span data-ttu-id="fcb81-171">如果應用程式指定 `Negotiate`，則 `Negotiate` 會分析要求，然後依據客戶設定的安全性原則，挑選最好的 SSP 來處理要求。</span><span class="sxs-lookup"><span data-stu-id="fcb81-171">If the application specifies `Negotiate`, `Negotiate` analyzes the request and picks the best SSP to handle the request based on the customer-configured security policy.</span></span>  
   
- nonce  
- 隨機產生的值，可用來使「重新執行」攻擊失效。  
+ <span data-ttu-id="fcb81-172">nonce</span><span class="sxs-lookup"><span data-stu-id="fcb81-172">nonce</span></span>  
+ <span data-ttu-id="fcb81-173">隨機產生的值，可用來使「重新執行」攻擊失效。</span><span class="sxs-lookup"><span data-stu-id="fcb81-173">A randomly generated value used to defeat "replay" attacks.</span></span>  
   
- 不可否認性  
- 此功能可指出執行特定動作的使用者，因此毫無疑問地將讓使用者無法拒絕承擔責任。例如，系統可能會在刪除檔案時，記錄使用者的識別碼。  
+ <span data-ttu-id="fcb81-174">不可否認性</span><span class="sxs-lookup"><span data-stu-id="fcb81-174">nonrepudiation</span></span>  
+ <span data-ttu-id="fcb81-175">此功能可指出執行特定動作的使用者，因此毫無疑問地將讓使用者無法拒絕承擔責任。</span><span class="sxs-lookup"><span data-stu-id="fcb81-175">The ability to identify users who performed certain actions, thus irrefutably countering any attempts by a user to deny responsibility.</span></span> <span data-ttu-id="fcb81-176">例如，系統可能會在刪除檔案時，記錄使用者的識別碼。</span><span class="sxs-lookup"><span data-stu-id="fcb81-176">For example, a system may log the ID of a user whenever a file is deleted.</span></span>  
   
- 公開金鑰密碼編譯標準 \(PKCS\)  
- RSA Data Security, Inc. 與全球安全系統開發人員合作研發出來的規格，可加速公開金鑰密碼編譯的部署。  
+ <span data-ttu-id="fcb81-177">公開金鑰密碼編譯標準 (PKCS)</span><span class="sxs-lookup"><span data-stu-id="fcb81-177">Public Key Cryptography Standard (PKCS)</span></span>  
+ <span data-ttu-id="fcb81-178">RSA Data Security, Inc. 與全球安全系統開發人員合作研發出來的規格，可加速公開金鑰密碼編譯的部署。</span><span class="sxs-lookup"><span data-stu-id="fcb81-178">Specifications produced by RSA Data Security, Inc. in cooperation with developers of secure systems worldwide in order to accelerate the deployment of public-key cryptography.</span></span>  
   
- PKCS \#7  
- 密碼編譯訊息語法標準。一種通用的資料語法，可套用在數位簽章與加密之類的密碼編譯上。它同時提供將憑證或憑證撤銷清單與其他訊息屬性 \(例如時間戳記\) 散佈到訊息的語法。  
+ <span data-ttu-id="fcb81-179">PKCS #7</span><span class="sxs-lookup"><span data-stu-id="fcb81-179">PKCS #7</span></span>  
+ <span data-ttu-id="fcb81-180">密碼編譯訊息語法標準。</span><span class="sxs-lookup"><span data-stu-id="fcb81-180">The Cryptographic Message Syntax Standard.</span></span> <span data-ttu-id="fcb81-181">一種通用的資料語法，可套用在數位簽章與加密之類的密碼編譯上。</span><span class="sxs-lookup"><span data-stu-id="fcb81-181">A general syntax for data to which cryptography may be applied, such as digital signatures and encryption.</span></span> <span data-ttu-id="fcb81-182">它同時提供將憑證或憑證撤銷清單與其他訊息屬性 (例如時間戳記) 散佈到訊息的語法。</span><span class="sxs-lookup"><span data-stu-id="fcb81-182">It also provides syntax for disseminating certificates or certificate revocation lists and other message attributes, such as time stamps, to the message.</span></span>  
   
- 純文字  
- 尚未加密的訊息。純文字 \(Plaintext\) 訊息有時亦稱為「*純文字*」\(Cleartext\) 訊息。  
+ <span data-ttu-id="fcb81-183">純文字</span><span class="sxs-lookup"><span data-stu-id="fcb81-183">plaintext</span></span>  
+ <span data-ttu-id="fcb81-184">尚未加密的訊息。</span><span class="sxs-lookup"><span data-stu-id="fcb81-184">A message that is not encrypted.</span></span> <span data-ttu-id="fcb81-185">純文字訊息有時稱為*純文字*訊息。</span><span class="sxs-lookup"><span data-stu-id="fcb81-185">Plaintext messages are sometimes referred to as *cleartext* messages.</span></span>  
   
- 權限  
- 使用者用來執行各種系統相關作業的權限，例如關閉系統、載入裝置驅動程式，或是變更系統時間等等。使用者的存取權杖包含使用者或使用者群組所擁有的權限清單。  
+ <span data-ttu-id="fcb81-186">權限</span><span class="sxs-lookup"><span data-stu-id="fcb81-186">privilege</span></span>  
+ <span data-ttu-id="fcb81-187">使用者用來執行各種系統相關作業的權限，例如關閉系統、載入裝置驅動程式，或是變更系統時間等等。</span><span class="sxs-lookup"><span data-stu-id="fcb81-187">The right of a user to perform various system-related operations, such as shutting down the system, loading device drivers, or changing the system time.</span></span> <span data-ttu-id="fcb81-188">使用者的存取權杖包含使用者或使用者群組所擁有的權限清單。</span><span class="sxs-lookup"><span data-stu-id="fcb81-188">A user's access token contains a list of the privileges that the user or the user's groups hold.</span></span>  
   
- 私密金鑰  
- 公開金鑰演算法中使用的金鑰組的密碼部分。一般來說，私密金鑰可用來加密對稱工作階段金鑰、對訊息進行數位簽署，或是針對使用對應公開金鑰加密的訊息進行解密。請參閱「公開金鑰」。  
+ <span data-ttu-id="fcb81-189">私密金鑰</span><span class="sxs-lookup"><span data-stu-id="fcb81-189">private key</span></span>  
+ <span data-ttu-id="fcb81-190">公開金鑰演算法中使用的金鑰組的密碼部分。</span><span class="sxs-lookup"><span data-stu-id="fcb81-190">The secret half of a key pair used in a public-key algorithm.</span></span> <span data-ttu-id="fcb81-191">一般來說，私密金鑰可用來加密對稱工作階段金鑰、對訊息進行數位簽署，或是針對使用對應公開金鑰加密的訊息進行解密。</span><span class="sxs-lookup"><span data-stu-id="fcb81-191">Private keys are typically used to encrypt a symmetric session key, digitally sign a message, or decrypt a message that has been encrypted with the corresponding public key.</span></span> <span data-ttu-id="fcb81-192">請參閱「公開金鑰」。</span><span class="sxs-lookup"><span data-stu-id="fcb81-192">See also "public key."</span></span>  
   
- 處理序  
- 應用程式賴以執行的安全性內容。一般來說，安全性內容會與使用者相關聯，因此所有在特定處理序下執行的應用程式都會具備擁有之使用者的權限。  
+ <span data-ttu-id="fcb81-193">處理序</span><span class="sxs-lookup"><span data-stu-id="fcb81-193">process</span></span>  
+ <span data-ttu-id="fcb81-194">應用程式賴以執行的安全性內容。</span><span class="sxs-lookup"><span data-stu-id="fcb81-194">The security context under which an application runs.</span></span> <span data-ttu-id="fcb81-195">一般來說，安全性內容會與使用者相關聯，因此所有在特定處理序下執行的應用程式都會具備擁有之使用者的權限。</span><span class="sxs-lookup"><span data-stu-id="fcb81-195">Typically, the security context is associated with a user, so all applications running under a given process take on the permissions and privileges of the owning user.</span></span>  
   
- 公開\/私密金鑰組  
- 一組用在公開金鑰密碼編譯上的密碼編譯金鑰。對每個使用者來說，密碼編譯服務提供者 \(CSP\) 通常需維護兩組公開\/私密金鑰：一組交換金鑰，以及一組數位簽章金鑰。兩組金鑰不管任何工作階段都會受到維護。  
+ <span data-ttu-id="fcb81-196">公開/私密金鑰組</span><span class="sxs-lookup"><span data-stu-id="fcb81-196">public/private key pair</span></span>  
+ <span data-ttu-id="fcb81-197">一組用在公開金鑰密碼編譯上的密碼編譯金鑰。</span><span class="sxs-lookup"><span data-stu-id="fcb81-197">A set of cryptographic keys used for public key cryptography.</span></span> <span data-ttu-id="fcb81-198">對每個使用者來說，密碼編譯服務提供者 (CSP) 通常需維護兩組公開/私密金鑰：一組交換金鑰，以及一組數位簽章金鑰。</span><span class="sxs-lookup"><span data-stu-id="fcb81-198">For each user, a cryptographic service provider (CSP) usually maintains two public/private key pairs: an exchange key pair and a digital signature key pair.</span></span> <span data-ttu-id="fcb81-199">兩組金鑰不管任何工作階段都會受到維護。</span><span class="sxs-lookup"><span data-stu-id="fcb81-199">Both key pairs are maintained from session to session.</span></span>  
   
- 公開金鑰  
- 解密工作階段金鑰或數位簽章時，慣常使用的密碼編譯金鑰。公開金鑰也可以用來加密訊息，以保證只有擁有對應之私密金鑰的使用者才能解密訊息。  
+ <span data-ttu-id="fcb81-200">公開金鑰</span><span class="sxs-lookup"><span data-stu-id="fcb81-200">public key</span></span>  
+ <span data-ttu-id="fcb81-201">解密工作階段金鑰或數位簽章時，慣常使用的密碼編譯金鑰。</span><span class="sxs-lookup"><span data-stu-id="fcb81-201">A cryptographic key typically used when decrypting a session key or a digital signature.</span></span> <span data-ttu-id="fcb81-202">公開金鑰也可以用來加密訊息，以保證只有擁有對應之私密金鑰的使用者才能解密訊息。</span><span class="sxs-lookup"><span data-stu-id="fcb81-202">The public key can also be used to encrypt a message, guaranteeing that only the person with the corresponding private key can decrypt the message.</span></span>  
   
- 公開金鑰加密  
- 使用一組金鑰來加密，其中一支金鑰用來加密資料，而另一支用來解密資料。反之，對稱的加密演算法會使用相同的金鑰來進行加密與解密。實務上，我們通常透過公開金鑰密碼編譯來保護對稱加密演算法所使用的工作階段金鑰。在此情況下，會使用公開金鑰來加密工作階段金鑰，而過去則是用它來加密一些資料，而私密金鑰則是用來解密。除了保護工作階段金鑰之外，公開金鑰密碼編譯同時也可用來數位簽署訊息 \(使用私密金鑰\) 並驗證簽章 \(使用公開金鑰\)。  
+ <span data-ttu-id="fcb81-203">公開金鑰加密</span><span class="sxs-lookup"><span data-stu-id="fcb81-203">public key encryption</span></span>  
+ <span data-ttu-id="fcb81-204">使用一組金鑰來加密，其中一支金鑰用來加密資料，而另一支用來解密資料。</span><span class="sxs-lookup"><span data-stu-id="fcb81-204">Encryption that uses a pair of keys, one key to encrypt data and the other key to decrypt data.</span></span> <span data-ttu-id="fcb81-205">反之，對稱的加密演算法會使用相同的金鑰來進行加密與解密。</span><span class="sxs-lookup"><span data-stu-id="fcb81-205">In contrast, symmetric encryption algorithms that use the same key for both encryption and decryption.</span></span> <span data-ttu-id="fcb81-206">實務上，我們通常透過公開金鑰密碼編譯來保護對稱加密演算法所使用的工作階段金鑰。</span><span class="sxs-lookup"><span data-stu-id="fcb81-206">In practice, public key cryptography is typically used to protect the session key a symmetric encryption algorithm uses.</span></span> <span data-ttu-id="fcb81-207">在此情況下，會使用公開金鑰來加密工作階段金鑰，而過去則是用它來加密一些資料，而私密金鑰則是用來解密。</span><span class="sxs-lookup"><span data-stu-id="fcb81-207">In this case, the public key is used to encrypt the session key, which in turn was used to encrypt some data, and the private key is used for decryption.</span></span> <span data-ttu-id="fcb81-208">除了保護工作階段金鑰之外，公開金鑰密碼編譯同時也可用來數位簽署訊息 (使用私密金鑰) 並驗證簽章 (使用公開金鑰)。</span><span class="sxs-lookup"><span data-stu-id="fcb81-208">In addition to protecting session keys, public key cryptography may also be used to digitally sign a message (using the private key) and validate the signature (using the public key).</span></span>  
   
- 公開金鑰基礎結構 \(PKI\)  
- 這個基礎結構可提供整合式服務組合及一些管理工作，協助使用者建立、部署與管理公開金鑰應用程式。  
+ <span data-ttu-id="fcb81-209">公開金鑰基礎結構 (PKI)</span><span class="sxs-lookup"><span data-stu-id="fcb81-209">public key infrastructure (PKI)</span></span>  
+ <span data-ttu-id="fcb81-210">這個基礎結構可提供整合式服務組合及一些管理工作，協助使用者建立、部署與管理公開金鑰應用程式。</span><span class="sxs-lookup"><span data-stu-id="fcb81-210">An infrastructure providing an integrated set of services and administrative tools for creating, deploying, and managing public-key applications.</span></span>  
   
- 否認  
- 此功能可讓使用者拒絕承認執行了某些動作，而其他人亦無法證明是否為事實。例如，使用者刪除了檔案之後，可以順利拒絕承認已刪除此檔案。  
+ <span data-ttu-id="fcb81-211">否認</span><span class="sxs-lookup"><span data-stu-id="fcb81-211">repudiation</span></span>  
+ <span data-ttu-id="fcb81-212">此功能可讓使用者拒絕承認執行了某些動作，而其他人亦無法證明是否為事實。</span><span class="sxs-lookup"><span data-stu-id="fcb81-212">The ability of a user to falsely deny having performed an action while other parties cannot prove otherwise.</span></span> <span data-ttu-id="fcb81-213">例如，使用者刪除了檔案之後，可以順利拒絕承認已刪除此檔案。</span><span class="sxs-lookup"><span data-stu-id="fcb81-213">For example, a user who deletes a file and who can successfully deny having done so.</span></span>  
   
- 根授權單位  
- 位於 CA 階層架構上層的 CA。根授權可於下一層階層架構中驗證 CA。  
+ <span data-ttu-id="fcb81-214">根授權單位</span><span class="sxs-lookup"><span data-stu-id="fcb81-214">root authority</span></span>  
+ <span data-ttu-id="fcb81-215">位於 CA 階層架構上層的 CA。</span><span class="sxs-lookup"><span data-stu-id="fcb81-215">The CA at the top of a CA hierarchy.</span></span> <span data-ttu-id="fcb81-216">根授權可於下一層階層架構中驗證 CA。</span><span class="sxs-lookup"><span data-stu-id="fcb81-216">The root authority certifies CAs in the next level of the hierarchy.</span></span>  
   
- 安全雜湊演算法 \(SHA\)  
- 可產生訊息摘要的雜湊演算法。SHA 專門用在數位簽章標準 \(DSS\) 的數位簽章演算法 \(DSA\) 中。SHA 共衍生出四種強度不同的演算法：SHA\-1、SHA\-256、SHA\-384，與 SHA\-512。SHA\-1 可產生 160 位元的訊息摘要。SHA\-256、SHA\-384，與 SHA\-512 可分別產生 256 位元、384 位元，與 512 位元的訊息摘要。SHA 是由美國國家標準與技術局 \(NIST\) 與美國國家安全局 \(NSA\) 所共同開發出來的標準。  
+ <span data-ttu-id="fcb81-217">安全雜湊演算法 (SHA)</span><span class="sxs-lookup"><span data-stu-id="fcb81-217">Secure Hash Algorithm (SHA)</span></span>  
+ <span data-ttu-id="fcb81-218">可產生訊息摘要的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="fcb81-218">A hashing algorithm that generates a message digest.</span></span> <span data-ttu-id="fcb81-219">SHA 專門用在數位簽章標準 (DSS) 的數位簽章演算法 (DSA) 中。</span><span class="sxs-lookup"><span data-stu-id="fcb81-219">SHA is used with the Digital Signature Algorithm (DSA) in the Digital Signature Standard (DSS), among other places.</span></span> <span data-ttu-id="fcb81-220">SHA 共衍生出四種強度不同的演算法：SHA-1、SHA-256、SHA-384，與 SHA-512。</span><span class="sxs-lookup"><span data-stu-id="fcb81-220">There are four varieties of SHA: SHA-1, SHA-256, SHA-384, and SHA-512.</span></span> <span data-ttu-id="fcb81-221">SHA-1 可產生 160 位元的訊息摘要。</span><span class="sxs-lookup"><span data-stu-id="fcb81-221">SHA-1 generates a 160-bit message digest.</span></span> <span data-ttu-id="fcb81-222">SHA-256、SHA-384，與 SHA-512 可分別產生 256 位元、384 位元，與 512 位元的訊息摘要。</span><span class="sxs-lookup"><span data-stu-id="fcb81-222">SHA-256, SHA-384, and SHA-512 generate 256-bit, 384-bit, and 512-bit message digests, respectively.</span></span> <span data-ttu-id="fcb81-223">SHA 是由美國國家標準與技術局 (NIST) 與美國國家安全局 (NSA) 所共同開發出來的標準。</span><span class="sxs-lookup"><span data-stu-id="fcb81-223">SHA was developed by the National Institute of Standards and Technology (NIST) and by the National Security Agency (NSA).</span></span>  
   
- 安全通訊端層 \(SSL\)  
- 透過結合公開與私密金鑰技術來進行安全網路通訊的通訊協定。  
+ <span data-ttu-id="fcb81-224">安全通訊端層 (SSL)</span><span class="sxs-lookup"><span data-stu-id="fcb81-224">Secure Sockets Layer (SSL)</span></span>  
+ <span data-ttu-id="fcb81-225">透過結合公開與私密金鑰技術來進行安全網路通訊的通訊協定。</span><span class="sxs-lookup"><span data-stu-id="fcb81-225">A protocol for secure network communications using a combination of public and secret key technology.</span></span>  
   
- 安全性內容  
- 目前生效的安全性屬性或規則。例如，目前登入電腦的使用者或由智慧卡使用者所輸入的個人識別碼。對 SSPI 來說，安全性內容是一種不透明的資料結構，其中包含與連線相關的安全性資料，例如工作階段金鑰或是指出工作階段的持續時間。  
+ <span data-ttu-id="fcb81-226">安全性內容</span><span class="sxs-lookup"><span data-stu-id="fcb81-226">security context</span></span>  
+ <span data-ttu-id="fcb81-227">目前生效的安全性屬性或規則。</span><span class="sxs-lookup"><span data-stu-id="fcb81-227">The security attributes or rules that are currently in effect.</span></span> <span data-ttu-id="fcb81-228">例如，目前登入電腦的使用者或由智慧卡使用者所輸入的個人識別碼。</span><span class="sxs-lookup"><span data-stu-id="fcb81-228">For example, the current user logged on to the computer or the personal identification number entered by the smart card user.</span></span> <span data-ttu-id="fcb81-229">對 SSPI 來說，安全性內容是一種不透明的資料結構，其中包含與連線相關的安全性資料，例如工作階段金鑰或是指出工作階段的持續時間。</span><span class="sxs-lookup"><span data-stu-id="fcb81-229">For SSPI, a security context is an opaque data structure that contains security data relevant to a connection, such as a session key or an indication of the duration of the session.</span></span>  
   
- 安全性原則  
- 安全性系統所識別的實體。這些原則包括人類使用者，以及自發處理序。  
+ <span data-ttu-id="fcb81-230">安全性原則</span><span class="sxs-lookup"><span data-stu-id="fcb81-230">security principal</span></span>  
+ <span data-ttu-id="fcb81-231">安全性系統所識別的實體。</span><span class="sxs-lookup"><span data-stu-id="fcb81-231">An entity recognized by the security system.</span></span> <span data-ttu-id="fcb81-232">這些原則包括人類使用者，以及自發處理序。</span><span class="sxs-lookup"><span data-stu-id="fcb81-232">Principals can include human users as well as autonomous processes.</span></span>  
   
- 安全性支援提供者 \(SSP\)  
- 動態連結程式庫 \(DLL\)，可將一或多個安全性套件提供給應用程式以實作 SSPI。每個安全性套件都能在應用程式的 SSPI 函式呼叫以及實際安全性模型的函式之間提供對應。安全性套件可支援 Kerberos 驗證與 Microsoft LAN Manager \(LanMan\) 之類的安全性通訊協定。  
+ <span data-ttu-id="fcb81-233">安全性支援提供者 (SSP)</span><span class="sxs-lookup"><span data-stu-id="fcb81-233">security support provider (SSP)</span></span>  
+ <span data-ttu-id="fcb81-234">動態連結程式庫 (DLL)，可將一或多個安全性套件提供給應用程式以實作 SSPI。</span><span class="sxs-lookup"><span data-stu-id="fcb81-234">A dynamic-link library (DLL) that implements the SSPI by making one or more security packages available to applications.</span></span> <span data-ttu-id="fcb81-235">每個安全性套件都能在應用程式的 SSPI 函式呼叫以及實際安全性模型的函式之間提供對應。</span><span class="sxs-lookup"><span data-stu-id="fcb81-235">Each security package provides mappings between an application's SSPI function calls and an actual security model's functions.</span></span> <span data-ttu-id="fcb81-236">安全性套件可支援 Kerberos 驗證與 Microsoft LAN Manager (LanMan) 之類的安全性通訊協定。</span><span class="sxs-lookup"><span data-stu-id="fcb81-236">Security packages support security protocols such as Kerberos authentication and the Microsoft LAN Manager (LanMan).</span></span>  
   
- 安全性支援提供者介面 \(SSPI\)  
- 一種介於傳輸層應用程式 \(例如，Microsoft 遠端程序呼叫 \(RPC\)\)，以及安全性提供者 \(例如，Windows 分散式安全性\) 之間的公用介面。SSPI 可讓傳輸應用程式呼叫其中一個安全性提供者來取得驗證的連線。您不需要了解太多有關安全性通訊協定細節，就可以執行這些呼叫。  
+ <span data-ttu-id="fcb81-237">安全性支援提供者介面 (SSPI)</span><span class="sxs-lookup"><span data-stu-id="fcb81-237">Security Support Provider Interface (SSPI)</span></span>  
+ <span data-ttu-id="fcb81-238">一種介於傳輸層應用程式 (例如，Microsoft 遠端程序呼叫 (RPC))，以及安全性提供者 (例如，Windows 分散式安全性) 之間的公用介面。</span><span class="sxs-lookup"><span data-stu-id="fcb81-238">A common interface between transport-level applications, such as Microsoft remote procedure call (RPC), and security providers, such as Windows distributed security.</span></span> <span data-ttu-id="fcb81-239">SSPI 可讓傳輸應用程式呼叫其中一個安全性提供者來取得驗證的連線。</span><span class="sxs-lookup"><span data-stu-id="fcb81-239">SSPI allows a transport application to call one of several security providers to obtain an authenticated connection.</span></span> <span data-ttu-id="fcb81-240">您不需要了解太多有關安全性通訊協定細節，就可以執行這些呼叫。</span><span class="sxs-lookup"><span data-stu-id="fcb81-240">These calls do not require extensive knowledge of the security protocol's details.</span></span>  
   
- 安全性權杖服務  
- 在多重服務的情況下，設計用來發行與管理自訂安全性權杖 \(已發行的權杖\) 的服務。自訂權杖通常指的是包含自訂認證的安全性判斷提示標記語言 \(Security Assertions Markup Language，SAML\) 權杖。  
+ <span data-ttu-id="fcb81-241">安全性權杖服務</span><span class="sxs-lookup"><span data-stu-id="fcb81-241">security token service</span></span>  
+ <span data-ttu-id="fcb81-242">在多重服務的情況下，設計用來發行與管理自訂安全性權杖 (已發行的權杖) 的服務。</span><span class="sxs-lookup"><span data-stu-id="fcb81-242">Services designed to issue and manage custom security tokens (issued tokens) in a multiservice scenario.</span></span> <span data-ttu-id="fcb81-243">自訂權杖通常指的是包含自訂認證的安全性判斷提示標記語言 (Security Assertions Markup Language，SAML) 權杖。</span><span class="sxs-lookup"><span data-stu-id="fcb81-243">The custom tokens are usually Security Assertions Markup Language (SAML) tokens that include a custom credential.</span></span>  
   
- 伺服器憑證  
- 指供伺服器驗證作業使用的憑證，例如針對網頁瀏覽器驗證 Web 伺服器。當網頁瀏覽器用戶端嘗試存取安全的 Web 伺服器時，伺服器會將其憑證傳送給瀏覽器，以允許用戶端驗證伺服器識別。  
+ <span data-ttu-id="fcb81-244">伺服器憑證</span><span class="sxs-lookup"><span data-stu-id="fcb81-244">server certificate</span></span>  
+ <span data-ttu-id="fcb81-245">指供伺服器驗證作業使用的憑證，例如針對網頁瀏覽器驗證 Web 伺服器。</span><span class="sxs-lookup"><span data-stu-id="fcb81-245">Refers to a certificate used for server authentication, such as authenticating a Web server to a Web browser.</span></span> <span data-ttu-id="fcb81-246">當網頁瀏覽器用戶端嘗試存取安全的 Web 伺服器時，伺服器會將其憑證傳送給瀏覽器，以允許用戶端驗證伺服器識別。</span><span class="sxs-lookup"><span data-stu-id="fcb81-246">When a Web browser client attempts to access a secured Web server, the server sends its certificate to the browser to allow it to verify the server's identity.</span></span>  
   
- 工作階段  
- 在保護單一金鑰設定資料的原則下，訊息的交換作業。例如，SSL 工作階段使用單一金鑰，來回傳送多則訊息。  
+ <span data-ttu-id="fcb81-247">工作階段</span><span class="sxs-lookup"><span data-stu-id="fcb81-247">session</span></span>  
+ <span data-ttu-id="fcb81-248">在保護單一金鑰設定資料的原則下，訊息的交換作業。</span><span class="sxs-lookup"><span data-stu-id="fcb81-248">An exchange of messages under the protection of a single piece of keying material.</span></span> <span data-ttu-id="fcb81-249">例如，SSL 工作階段使用單一金鑰，來回傳送多則訊息。</span><span class="sxs-lookup"><span data-stu-id="fcb81-249">For example, SSL sessions use a single key to send multiple messages back and forth under that key.</span></span>  
   
- 工作階段金鑰  
- 只使用一次便捨棄的隨機產生金鑰。工作階段金鑰是對稱式的 \(可同時用來加密與解密\)。他們會與訊息一起傳送，並受到各個收件者的公開金鑰加密保護。工作階段金鑰大約包含 40 到 2,000 位元的隨機數量。  
+ <span data-ttu-id="fcb81-250">工作階段金鑰</span><span class="sxs-lookup"><span data-stu-id="fcb81-250">session key</span></span>  
+ <span data-ttu-id="fcb81-251">只使用一次便捨棄的隨機產生金鑰。</span><span class="sxs-lookup"><span data-stu-id="fcb81-251">A randomly generated key that is used once and then discarded.</span></span> <span data-ttu-id="fcb81-252">工作階段金鑰是對稱式的 (可同時用來加密與解密)。</span><span class="sxs-lookup"><span data-stu-id="fcb81-252">Session keys are symmetric (used for both encryption and decryption).</span></span> <span data-ttu-id="fcb81-253">他們會與訊息一起傳送，並受到各個收件者的公開金鑰加密保護。</span><span class="sxs-lookup"><span data-stu-id="fcb81-253">They are sent with the message, protected by encryption with a public key from the intended recipient.</span></span> <span data-ttu-id="fcb81-254">工作階段金鑰大約包含 40 到 2,000 位元的隨機數量。</span><span class="sxs-lookup"><span data-stu-id="fcb81-254">A session key consists of a random number of approximately 40 to 2,000 bits.</span></span>  
   
- 附加認證  
- 用來驗證外部安全性網域之安全性原則的認證。  
+ <span data-ttu-id="fcb81-255">附加認證</span><span class="sxs-lookup"><span data-stu-id="fcb81-255">supplemental credentials</span></span>  
+ <span data-ttu-id="fcb81-256">用來驗證外部安全性網域之安全性原則的認證。</span><span class="sxs-lookup"><span data-stu-id="fcb81-256">Credentials for use in authenticating a security principal to foreign security domains.</span></span>  
   
- 對稱加密  
- 在加密與解密過程中，使用單一金鑰的加密作業。針對大量資料進行加密時，通常會使用對稱加密。一些較常用的對稱加密演算法包括 RC2、RC4，與資料加密標準 \(Data Encryption Standard，DES\)。  
+ <span data-ttu-id="fcb81-257">對稱加密</span><span class="sxs-lookup"><span data-stu-id="fcb81-257">symmetric encryption</span></span>  
+ <span data-ttu-id="fcb81-258">在加密與解密過程中，使用單一金鑰的加密作業。</span><span class="sxs-lookup"><span data-stu-id="fcb81-258">Encryption that uses a single key for both encryption and decryption.</span></span> <span data-ttu-id="fcb81-259">針對大量資料進行加密時，通常會使用對稱加密。</span><span class="sxs-lookup"><span data-stu-id="fcb81-259">Symmetric encryption is preferred when encrypting large amounts of data.</span></span> <span data-ttu-id="fcb81-260">一些較常用的對稱加密演算法包括 RC2、RC4，與資料加密標準 (Data Encryption Standard，DES)。</span><span class="sxs-lookup"><span data-stu-id="fcb81-260">Some of the more common symmetric encryption algorithms are RC2, RC4, and Data Encryption Standard (DES).</span></span>  
   
- 請參閱「公開金鑰加密」。  
+ <span data-ttu-id="fcb81-261">請參閱「公開金鑰加密」。</span><span class="sxs-lookup"><span data-stu-id="fcb81-261">See also "public key encryption."</span></span>  
   
- 對稱金鑰  
- 在加密與解密過程中，所使用的單一金鑰。工作階段金鑰通常是對稱的。  
+ <span data-ttu-id="fcb81-262">對稱金鑰</span><span class="sxs-lookup"><span data-stu-id="fcb81-262">symmetric key</span></span>  
+ <span data-ttu-id="fcb81-263">在加密與解密過程中，所使用的單一金鑰。</span><span class="sxs-lookup"><span data-stu-id="fcb81-263">A single key used for both encryption and decryption.</span></span> <span data-ttu-id="fcb81-264">工作階段金鑰通常是對稱的。</span><span class="sxs-lookup"><span data-stu-id="fcb81-264">Session keys are usually symmetric.</span></span>  
   
- 權杖 \(存取權杖\)  
- 存取權杖包含登入工作階段所需的安全性資訊。系統會在使用者登入時建立存取權杖，而且每個代表使用者執行的處理序都會擁有該權杖的複本。權杖可識別使用者、使用者群組，以及使用者權限。系統會使用權杖來控制安全物件的存取權限，並控制使用者是否能夠在本機電腦上執行與系統相關的各種作業。存取權杖分為兩種：主要權杖與模擬權杖。  
+ <span data-ttu-id="fcb81-265">權杖 (存取權杖)</span><span class="sxs-lookup"><span data-stu-id="fcb81-265">token (access token)</span></span>  
+ <span data-ttu-id="fcb81-266">存取權杖包含登入工作階段所需的安全性資訊。</span><span class="sxs-lookup"><span data-stu-id="fcb81-266">An access token contains the security information for a logon session.</span></span> <span data-ttu-id="fcb81-267">系統會在使用者登入時建立存取權杖，而且每個代表使用者執行的處理序都會擁有該權杖的複本。</span><span class="sxs-lookup"><span data-stu-id="fcb81-267">The system creates an access token when a user logs on, and every process executed on behalf of the user has a copy of the token.</span></span> <span data-ttu-id="fcb81-268">權杖可識別使用者、使用者群組，以及使用者權限。</span><span class="sxs-lookup"><span data-stu-id="fcb81-268">The token identifies the user, the user's groups, and the user's privileges.</span></span> <span data-ttu-id="fcb81-269">系統會使用權杖來控制安全物件的存取權限，並控制使用者是否能夠在本機電腦上執行與系統相關的各種作業。</span><span class="sxs-lookup"><span data-stu-id="fcb81-269">The system uses the token to control access to securable objects and to control the ability of the user to perform various system-related operations on the local computer.</span></span> <span data-ttu-id="fcb81-270">存取權杖分為兩種：主要權杖與模擬權杖。</span><span class="sxs-lookup"><span data-stu-id="fcb81-270">There are two kinds of access tokens, primary and impersonation.</span></span>  
   
- 傳輸層  
- 同時負責服務品質與正確資訊傳遞的網路層。此網路層所負責執行的工作當中，包含錯誤偵測與修正。  
+ <span data-ttu-id="fcb81-271">傳輸層</span><span class="sxs-lookup"><span data-stu-id="fcb81-271">transport layer</span></span>  
+ <span data-ttu-id="fcb81-272">同時負責服務品質與正確資訊傳遞的網路層。</span><span class="sxs-lookup"><span data-stu-id="fcb81-272">The network layer that is responsible for both quality of service and accurate delivery of information.</span></span> <span data-ttu-id="fcb81-273">此網路層所負責執行的工作當中，包含錯誤偵測與修正。</span><span class="sxs-lookup"><span data-stu-id="fcb81-273">Among the tasks performed in this layer are error detection and correction.</span></span>  
   
- 信任清單 \(憑證信任清單，或稱為 CTL\)  
- 由信任實體所簽署的預先定義項目清單。CTL 可以任何形式出現，例如憑證的雜湊清單，或是檔案名稱清單。清單裡的所有項目都會經由簽署實體加以驗證 \(核准\)。  
+ <span data-ttu-id="fcb81-274">信任清單 (憑證信任清單，或稱為 CTL)</span><span class="sxs-lookup"><span data-stu-id="fcb81-274">trust list (certificate trust list, or CTL)</span></span>  
+ <span data-ttu-id="fcb81-275">由信任實體所簽署的預先定義項目清單。</span><span class="sxs-lookup"><span data-stu-id="fcb81-275">A predefined list of items that have been signed by a trusted entity.</span></span> <span data-ttu-id="fcb81-276">CTL 可以任何形式出現，例如憑證的雜湊清單，或是檔案名稱清單。</span><span class="sxs-lookup"><span data-stu-id="fcb81-276">A CTL can be anything, such as a list of hashes of certificates, or a list of file names.</span></span> <span data-ttu-id="fcb81-277">清單裡的所有項目都會經由簽署實體加以驗證 (核准)。</span><span class="sxs-lookup"><span data-stu-id="fcb81-277">All the items in the list are authenticated (approved) by the signing entity.</span></span>  
   
- 信任提供者  
- 決定是否信任特定檔案的軟體。此決策是依據檔案相關的憑證而定。  
+ <span data-ttu-id="fcb81-278">信任提供者</span><span class="sxs-lookup"><span data-stu-id="fcb81-278">trust provider</span></span>  
+ <span data-ttu-id="fcb81-279">決定是否信任特定檔案的軟體。</span><span class="sxs-lookup"><span data-stu-id="fcb81-279">The software that decides whether a given file is trusted.</span></span> <span data-ttu-id="fcb81-280">此決策是依據檔案相關的憑證而定。</span><span class="sxs-lookup"><span data-stu-id="fcb81-280">This decision is based on the certificate associated with the file.</span></span>  
   
- 使用者主要名稱 \(UPN\)  
- 使用者帳戶名稱 \(有時稱為「*使用者登入名稱*」\(User Logon Name\)\) 和識別使用者帳戶所在網域的網域名稱。這是登入 Windows 網域時的標準用法。格式為：someone@example.com \(如同電子郵件地址\)。  
+ <span data-ttu-id="fcb81-281">使用者主要名稱 (UPN)</span><span class="sxs-lookup"><span data-stu-id="fcb81-281">user principal name (UPN)</span></span>  
+ <span data-ttu-id="fcb81-282">使用者帳戶名稱 (有時稱為*使用者登入名稱*) 和識別使用者帳戶所在之網域的網域名稱。</span><span class="sxs-lookup"><span data-stu-id="fcb81-282">A user account name (sometimes referred to as the *user logon name*) and a domain name identifying the domain in which the user account is located.</span></span> <span data-ttu-id="fcb81-283">這是登入 Windows 網域時的標準用法。</span><span class="sxs-lookup"><span data-stu-id="fcb81-283">This is the standard usage for logging on to a Windows domain.</span></span> <span data-ttu-id="fcb81-284">格式為： someone@example.com （如同電子郵件地址）。</span><span class="sxs-lookup"><span data-stu-id="fcb81-284">The format is: someone@example.com (as for an e-mail address).</span></span>  
   
 > [!NOTE]
->  除了標準 UPN 格式之外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 還接受低階格式的 UPN，例如，cohowinery.com\\someone。  
+>  <span data-ttu-id="fcb81-285">除了標準 UPN 格式之外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 還接受低階格式的 UPN，例如，cohowinery.com\someone。</span><span class="sxs-lookup"><span data-stu-id="fcb81-285">In addition to standard UPN form, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] accepts UPNs in down-level form, for example, cohowinery.com\someone.</span></span>  
   
- X.509  
- 國際認可的標準，適用於定義其所需部分的憑證。  
+ <span data-ttu-id="fcb81-286">X.509</span><span class="sxs-lookup"><span data-stu-id="fcb81-286">X.509</span></span>  
+ <span data-ttu-id="fcb81-287">國際認可的標準，適用於定義其所需部分的憑證。</span><span class="sxs-lookup"><span data-stu-id="fcb81-287">An internationally recognized standard for certificates that defines their required parts.</span></span>  
   
-## 請參閱  
- [Windows Communication Foundation 的主要概念](../../../../docs/framework/wcf/fundamental-concepts.md)   
- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)   
- [Windows Server AppFabric 的資訊安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="fcb81-288">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fcb81-288">See Also</span></span>  
+ [<span data-ttu-id="fcb81-289">Windows Communication Foundation 的基本概念</span><span class="sxs-lookup"><span data-stu-id="fcb81-289">Fundamental Windows Communication Foundation Concepts</span></span>](../../../../docs/framework/wcf/fundamental-concepts.md)  
+ [<span data-ttu-id="fcb81-290">安全性概念</span><span class="sxs-lookup"><span data-stu-id="fcb81-290">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [<span data-ttu-id="fcb81-291">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="fcb81-291">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

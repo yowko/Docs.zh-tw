@@ -1,70 +1,74 @@
 ---
-title: "追蹤記錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "追蹤記錄"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bfb5c297b903909af7df08f150f3e2f507ee190d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 追蹤記錄
-工作流程執行階段經檢測會發出追蹤記錄，以追蹤工作流程執行個體的執行。  
+# <a name="tracking-records"></a><span data-ttu-id="52ee1-102">追蹤記錄</span><span class="sxs-lookup"><span data-stu-id="52ee1-102">Tracking Records</span></span>
+<span data-ttu-id="52ee1-103">工作流程執行階段經檢測會發出追蹤記錄，以追蹤工作流程執行個體的執行。</span><span class="sxs-lookup"><span data-stu-id="52ee1-103">The workflow runtime is instrumented to emit tracking records to follow the execution of a workflow instance.</span></span>  
   
-## 追蹤記錄  
- 下表詳細說明工作流程執行階段發出的追蹤記錄。  
+## <a name="tracking-records"></a><span data-ttu-id="52ee1-104">追蹤記錄</span><span class="sxs-lookup"><span data-stu-id="52ee1-104">Tracking Records</span></span>  
+ <span data-ttu-id="52ee1-105">下表詳細說明工作流程執行階段發出的追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="52ee1-105">The following table details the tracking records that the workflow runtime emits.</span></span>  
   
-|追蹤記錄|說明|  
-|----------|--------|  
-|工作流程開發生命週期記錄|在工作流程執行個體開發週期的不同階段發出。例如，當工作流程啟動或完成時，就會發出記錄。|  
-|活動開發生命週期記錄|活動執行詳細資訊。這些記錄會指出工作流程活動的狀態，例如活動排程時間、活動完成時間，或是發生錯誤的時間。|  
-|書籤繼續記錄|只要工作流程執行個體中的書籤繼續，就會發出。|  
-|自訂追蹤記錄|工作流程作者可建立自訂追蹤事件記錄，並在自訂活動中發出這些記錄。|  
+|<span data-ttu-id="52ee1-106">追蹤記錄</span><span class="sxs-lookup"><span data-stu-id="52ee1-106">Tracking record</span></span>|<span data-ttu-id="52ee1-107">描述</span><span class="sxs-lookup"><span data-stu-id="52ee1-107">Description</span></span>|  
+|---------------------|-----------------|  
+|<span data-ttu-id="52ee1-108">工作流程生命週期記錄</span><span class="sxs-lookup"><span data-stu-id="52ee1-108">Workflow life cycle records</span></span>|<span data-ttu-id="52ee1-109">在工作流程執行個體開發週期的不同階段發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-109">Emitted during various stages of the life cycle of the workflow instance.</span></span> <span data-ttu-id="52ee1-110">例如，當工作流程啟動或完成時，就會發出記錄。</span><span class="sxs-lookup"><span data-stu-id="52ee1-110">For example, a record is emitted when the workflow starts or completes.</span></span>|  
+|<span data-ttu-id="52ee1-111">活動生命週期記錄</span><span class="sxs-lookup"><span data-stu-id="52ee1-111">Activity life cycle records</span></span>|<span data-ttu-id="52ee1-112">活動執行詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="52ee1-112">Details activity execution.</span></span> <span data-ttu-id="52ee1-113">這些記錄會指出工作流程活動的狀態，例如活動排程時間、活動完成時間，或是發生錯誤的時間。</span><span class="sxs-lookup"><span data-stu-id="52ee1-113">These records indicate the state of a workflow activity such as when an activity is scheduled, when the activity completes, or when a fault occurs.</span></span>|  
+|<span data-ttu-id="52ee1-114">書籤繼續記錄</span><span class="sxs-lookup"><span data-stu-id="52ee1-114">Bookmark resumption records</span></span>|<span data-ttu-id="52ee1-115">只要工作流程執行個體中的書籤繼續，就會發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-115">Emitted whenever a bookmark within a workflow instance is resumed.</span></span>|  
+|<span data-ttu-id="52ee1-116">自訂追蹤記錄</span><span class="sxs-lookup"><span data-stu-id="52ee1-116">Custom tracking records</span></span>|<span data-ttu-id="52ee1-117">工作流程作者可建立自訂追蹤事件記錄，並在自訂活動中發出這些記錄。</span><span class="sxs-lookup"><span data-stu-id="52ee1-117">A workflow author can create custom tracking records and emit them within a custom activity.</span></span>|  
   
- 所有與追蹤相關的記錄均會從衍生自基底類別 <xref:System.Activities.Tracking.TrackingRecord> \(包含通用資料集\) 的 WF 執行階段發出。追蹤記錄會顯示簡單工作流程的開發生命週期。每個追蹤記錄均包含相關聯之追蹤事件的詳細資訊，例如 <xref:System.Activities.Tracking.TrackingRecord.InstanceId%2A>、<xref:System.Activities.Tracking.TrackingRecord.RecordNumber%2A>，以及追蹤記錄類型專屬的其他資訊。  
+ <span data-ttu-id="52ee1-118">所有與追蹤相關的記錄均會從衍生自基底類別 <xref:System.Activities.Tracking.TrackingRecord> (包含通用資料集) 的 WF 執行階段發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-118">All tracking-related records emitted from the WF runtime derive from the base class <xref:System.Activities.Tracking.TrackingRecord>, which contains the common set of data.</span></span> <span data-ttu-id="52ee1-119">追蹤記錄會顯示簡單工作流程的生命週期。</span><span class="sxs-lookup"><span data-stu-id="52ee1-119">Tracking records show the life cycle for a simple workflow.</span></span> <span data-ttu-id="52ee1-120">每個追蹤記錄均包含相關聯之追蹤事件的詳細資訊，例如 <xref:System.Activities.Tracking.TrackingRecord.InstanceId%2A>、<xref:System.Activities.Tracking.TrackingRecord.RecordNumber%2A>，以及追蹤記錄類型專屬的其他資訊。</span><span class="sxs-lookup"><span data-stu-id="52ee1-120">Each tracking record contains details about the associated tracking event, such as the <xref:System.Activities.Tracking.TrackingRecord.InstanceId%2A>, <xref:System.Activities.Tracking.TrackingRecord.RecordNumber%2A>, and additional information specific to the type of tracking record.</span></span>  
   
- 工作流程執行階段會發出下列型別的 <xref:System.Activities.Tracking.TrackingRecord> 物件：  
+ <span data-ttu-id="52ee1-121">工作流程執行階段會發出下列型別的 <xref:System.Activities.Tracking.TrackingRecord> 物件：</span><span class="sxs-lookup"><span data-stu-id="52ee1-121">The following types of <xref:System.Activities.Tracking.TrackingRecord> objects are emitted by the workflow runtime:</span></span>  
   
--   **WorkflowInstanceRecord** \- 這個 <xref:System.Activities.Tracking.TrackingRecord> 描述工作流程執行個體的開發生命週期。例如，當工作流程啟動或完成時，就會發出記錄，同時包含工作流程執行個體的狀態。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceRecord> 中找到。  
+-   <span data-ttu-id="52ee1-122">**WorkflowInstanceRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>描述工作流程執行個體的生命週期。</span><span class="sxs-lookup"><span data-stu-id="52ee1-122">**WorkflowInstanceRecord** - This <xref:System.Activities.Tracking.TrackingRecord> describes the life cycle of the workflow instance.</span></span> <span data-ttu-id="52ee1-123">例如，當工作流程啟動或完成時，就會發出記錄，同時包含工作流程執行個體的狀態。</span><span class="sxs-lookup"><span data-stu-id="52ee1-123">For example, a record is emitted when the workflow starts or completes, and contains the state of the workflow instance.</span></span> <span data-ttu-id="52ee1-124">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-124">The details of this record can be found at <xref:System.Activities.Tracking.WorkflowInstanceRecord>.</span></span>  
   
--   **WorkflowInstanceAbortedRecord** \- 這個 <xref:System.Activities.Tracking.TrackingRecord> 會在工作流程執行個體中止時發出。記錄包含工作流程執行個體中止的原因。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord> 中找到。  
+-   <span data-ttu-id="52ee1-125">**WorkflowInstanceAbortedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>中止工作流程執行個體時，就會發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-125">**WorkflowInstanceAbortedRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is emitted when a workflow instance aborts.</span></span> <span data-ttu-id="52ee1-126">記錄包含工作流程執行個體中止的原因。</span><span class="sxs-lookup"><span data-stu-id="52ee1-126">The record contains the reason for the workflow instance being aborted.</span></span> <span data-ttu-id="52ee1-127">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-127">The details of this record can be found at <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.</span></span>  
   
--   **WorkflowInstanceUnhandledExceptionRecord** \- 如果工作流程執行個體中發生例外狀況，且未經任何活動處理，就會發出這個 <xref:System.Activities.Tracking.TrackingRecord>。記錄包含例外狀況的詳細資訊。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> 中找到。  
+-   <span data-ttu-id="52ee1-128">**WorkflowInstanceUnhandledExceptionRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>如果工作流程執行個體，就會發生例外狀況，而不由任何活動處理，就會發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-128">**WorkflowInstanceUnhandledExceptionRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is emitted if an exception occurs in the workflow instance and is not handled by any activity.</span></span> <span data-ttu-id="52ee1-129">記錄包含例外狀況的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="52ee1-129">The record contains the exception details.</span></span> <span data-ttu-id="52ee1-130">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-130">The details of this record can be found at <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.</span></span>  
   
--   **WorkflowInstanceSuspendedRecord** \- 只要工作流程執行個體暫停，就會發出這個 <xref:System.Activities.Tracking.TrackingRecord>。記錄包含工作流程執行個體暫停的原因。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord> 中找到。  
+-   <span data-ttu-id="52ee1-131">**WorkflowInstanceSuspendedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>每當工作流程執行個體被擱置時，就會發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-131">**WorkflowInstanceSuspendedRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is emitted whenever a workflow instance is suspended.</span></span> <span data-ttu-id="52ee1-132">記錄包含工作流程執行個體暫停的原因。</span><span class="sxs-lookup"><span data-stu-id="52ee1-132">The record contains the reason for the workflow instance being suspended.</span></span> <span data-ttu-id="52ee1-133">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-133">The details of this record can be found at <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.</span></span>  
   
--   **WorkflowInstanceTerminatedRecord** \- 只要工作流程執行個體終止，就會發出這個 <xref:System.Activities.Tracking.TrackingRecord>。記錄包含工作流程執行個體終止的原因。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord> 中找到。  
+-   <span data-ttu-id="52ee1-134">**WorkflowInstanceTerminatedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>只要終止工作流程執行個體就會發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-134">**WorkflowInstanceTerminatedRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is emitted whenever a workflow instance is terminated.</span></span> <span data-ttu-id="52ee1-135">記錄包含工作流程執行個體終止的原因。</span><span class="sxs-lookup"><span data-stu-id="52ee1-135">The record contains the reason for the workflow instance being terminated.</span></span> <span data-ttu-id="52ee1-136">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-136">The details of this record can be found at <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.</span></span>  
   
--   **ActivityStateRecord** \- 當工作流程中的活動執行時，就會發出這個 <xref:System.Activities.Tracking.TrackingRecord>。這些記錄會指出工作流程執行個體內之活動的狀態。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.ActivityStateRecord> 中找到。  
+-   <span data-ttu-id="52ee1-137">**ActivityStateRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>工作流程內的活動執行時，就會發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-137">**ActivityStateRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is emitted when an activity within a workflow executes.</span></span> <span data-ttu-id="52ee1-138">這些記錄會指出工作流程執行個體內之活動的狀態。</span><span class="sxs-lookup"><span data-stu-id="52ee1-138">These records indicate the state of the activity within the workflow instance.</span></span> <span data-ttu-id="52ee1-139">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.ActivityStateRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-139">The details of this record can be found at <xref:System.Activities.Tracking.ActivityStateRecord>.</span></span>  
   
--   **ActivityScheduledRecord** \- 當活動排程子活動時，就會發出這個 <xref:System.Activities.Tracking.TrackingRecord>。這個記錄包含父活動 \(排程活動\) 及排程之子活動的詳細資訊。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.ActivityScheduledRecord> 中找到。  
+-   <span data-ttu-id="52ee1-140">**ActivityScheduledRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>當活動排程的子活動，就會發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-140">**ActivityScheduledRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is emitted when an activity schedules a child activity.</span></span> <span data-ttu-id="52ee1-141">這個記錄包含父活動 (排程活動) 及排程之子活動的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="52ee1-141">This record contains details for both the parent activity (scheduling activity) and the scheduled child activity.</span></span> <span data-ttu-id="52ee1-142">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.ActivityScheduledRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-142">The details of this record can be found at <xref:System.Activities.Tracking.ActivityScheduledRecord>.</span></span>  
   
--   **FaultPropagationRecord** \- 只要處理常式在記錄處理前查看該記錄，就會發出這個 <xref:System.Activities.Tracking.TrackingRecord>。這個記錄會用於表示錯誤在工作流程執行個體中採取的路徑。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.FaultPropagationRecord> 中找到。  
+-   <span data-ttu-id="52ee1-143">**FaultPropagationRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>為每個處理常式在記錄處理它之前發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-143">**FaultPropagationRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is emitted for each handler that looks at the record until it is handled.</span></span> <span data-ttu-id="52ee1-144">這個記錄會用於表示錯誤在工作流程執行個體中採取的路徑。</span><span class="sxs-lookup"><span data-stu-id="52ee1-144">It is used to denote the path a fault took within the workflow instance.</span></span> <span data-ttu-id="52ee1-145">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.FaultPropagationRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-145">The details of this record can be found at <xref:System.Activities.Tracking.FaultPropagationRecord>.</span></span>  
   
--   **CancelRequestedRecord** \- 只要活動嘗試取消子活動，就會發出這個 <xref:System.Activities.Tracking.TrackingRecord>。這個記錄包含父活動及要取消之子活動的詳細資訊。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.CancelRequestedRecord> 中找到。  
+-   <span data-ttu-id="52ee1-146">**CancelRequestedRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>只要活動嘗試取消子活動就會發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-146">**CancelRequestedRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is emitted whenever an activity tries to cancel a child activity.</span></span> <span data-ttu-id="52ee1-147">這個記錄包含父活動及要取消之子活動的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="52ee1-147">This record contains details for both the parent activity and the child activity that is being canceled.</span></span> <span data-ttu-id="52ee1-148">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.CancelRequestedRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-148">The details of this record can be found at <xref:System.Activities.Tracking.CancelRequestedRecord>.</span></span>  
   
--   **BookmarkResumptionRecord** \- 這個 <xref:System.Activities.Tracking.TrackingRecord> 會追蹤順利繼續的任何書籤。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.BookmarkResumptionRecord> 中找到。  
+-   <span data-ttu-id="52ee1-149">**BookmarkResumptionRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>會追蹤順利繼續的任何書籤。</span><span class="sxs-lookup"><span data-stu-id="52ee1-149">**BookmarkResumptionRecord** - This <xref:System.Activities.Tracking.TrackingRecord> tracks any bookmark that is successfully resumed.</span></span> <span data-ttu-id="52ee1-150">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.BookmarkResumptionRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-150">The details of this record can be found at <xref:System.Activities.Tracking.BookmarkResumptionRecord>.</span></span>  
   
--   **CustomTrackingRecord** \- 這個 <xref:System.Activities.Tracking.TrackingRecord> 會由工作流程作者在自訂工作流程活動中建立及發出。自訂追蹤記錄中可以填入要發出的資料與記錄。這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.CustomTrackingRecord> 中找到。  
+-   <span data-ttu-id="52ee1-151">**CustomTrackingRecord** -這個<xref:System.Activities.Tracking.TrackingRecord>建立後，工作流程作者在自訂工作流程活動所發出。</span><span class="sxs-lookup"><span data-stu-id="52ee1-151">**CustomTrackingRecord** - This <xref:System.Activities.Tracking.TrackingRecord> is created and emitted by a workflow author within a custom workflow activity.</span></span> <span data-ttu-id="52ee1-152">自訂追蹤記錄中可以填入要發出的資料與記錄。</span><span class="sxs-lookup"><span data-stu-id="52ee1-152">Custom tracking records can be populated with data to be emitted along with the records.</span></span> <span data-ttu-id="52ee1-153">這個記錄的詳細資訊可以在 <xref:System.Activities.Tracking.CustomTrackingRecord> 中找到。</span><span class="sxs-lookup"><span data-stu-id="52ee1-153">The details of this record can be found at <xref:System.Activities.Tracking.CustomTrackingRecord>.</span></span>  
   
- 例如，若有包含 <xref:System.Activities.Statements.WriteLine> 作業的簡單 <xref:System.Activities.Statements.Sequence> 活動，其追蹤記錄是按下列順序發出的。  
+ <span data-ttu-id="52ee1-154">例如，若有包含 <xref:System.Activities.Statements.Sequence> 作業的簡單 <xref:System.Activities.Statements.WriteLine> 活動，其追蹤記錄是按下列順序發出的：</span><span class="sxs-lookup"><span data-stu-id="52ee1-154">For example, there could be a simple <xref:System.Activities.Statements.Sequence> activity that contains a <xref:System.Activities.Statements.WriteLine> operation with tracking records emitted in the following order:</span></span>  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在啟動。  
+1.  <span data-ttu-id="52ee1-155"><xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在啟動。</span><span class="sxs-lookup"><span data-stu-id="52ee1-155"><xref:System.Activities.Tracking.WorkflowInstanceRecord> indicates that the workflow is starting.</span></span>  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> 表示活動已排程。在此種情況下，這是 <xref:System.Activities.Statements.Sequence> 活動。  
+2.  <span data-ttu-id="52ee1-156"><xref:System.Activities.Tracking.ActivityScheduledRecord> 表示活動已排程。</span><span class="sxs-lookup"><span data-stu-id="52ee1-156"><xref:System.Activities.Tracking.ActivityScheduledRecord> indicates that an activity has been scheduled.</span></span> <span data-ttu-id="52ee1-157">在此種情況下，這是 <xref:System.Activities.Statements.Sequence> 活動。</span><span class="sxs-lookup"><span data-stu-id="52ee1-157">In this case it is a <xref:System.Activities.Statements.Sequence> activity.</span></span>  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> 代表 <xref:System.Activities.Statements.WriteLine> 活動。  
+3.  <span data-ttu-id="52ee1-158"><xref:System.Activities.Tracking.ActivityScheduledRecord> 代表 <xref:System.Activities.Statements.WriteLine> 活動。</span><span class="sxs-lookup"><span data-stu-id="52ee1-158"><xref:System.Activities.Tracking.ActivityScheduledRecord> represents the <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
   
-4.  有兩個 <xref:System.Activities.Tracking.ActivityStateRecord> 記錄，代表兩個即將完成的活動。  
+4.  <span data-ttu-id="52ee1-159">有兩個 <xref:System.Activities.Tracking.ActivityStateRecord> 記錄，代表兩個即將完成的活動。</span><span class="sxs-lookup"><span data-stu-id="52ee1-159">There are two <xref:System.Activities.Tracking.ActivityStateRecord> records that represent the two activities completing.</span></span>  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在完成。  
+5.  <span data-ttu-id="52ee1-160"><xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在完成。</span><span class="sxs-lookup"><span data-stu-id="52ee1-160"><xref:System.Activities.Tracking.WorkflowInstanceRecord> indicates that the workflow is completing.</span></span>  
   
-## 請參閱  
- [監控功能概念](http://go.microsoft.com/fwlink/?LinkId=201273)   
- [監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a><span data-ttu-id="52ee1-161">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52ee1-161">See Also</span></span>  
+ [<span data-ttu-id="52ee1-162">Windows Server App Fabric 監控</span><span class="sxs-lookup"><span data-stu-id="52ee1-162">Windows Server App Fabric Monitoring</span></span>](http://go.microsoft.com/fwlink/?LinkId=201273)  
+ [<span data-ttu-id="52ee1-163">使用 App Fabric 監控應用程式</span><span class="sxs-lookup"><span data-stu-id="52ee1-163">Monitoring Applications with App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=201275)

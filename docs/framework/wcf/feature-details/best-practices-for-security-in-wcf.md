@@ -1,68 +1,73 @@
 ---
-title: "WCF 中安全性的最佳做法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "最佳做法 [WCF], 安全性"
+title: "WCF 中安全性的最佳做法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 441b3a72d5b0a9e63d6093bc130335801503489e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 中安全性的最佳做法
-下列各節將列出在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立安全應用程式時，應該考慮採用的最佳做法。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 安全性的詳細資訊，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)、[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，以及[中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
+# <a name="best-practices-for-security-in-wcf"></a><span data-ttu-id="b7e70-102">WCF 中安全性的最佳做法</span><span class="sxs-lookup"><span data-stu-id="b7e70-102">Best Practices for Security in WCF</span></span>
+<span data-ttu-id="b7e70-103">下列各節將列出在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立安全應用程式時，應該考慮採用的最佳做法。</span><span class="sxs-lookup"><span data-stu-id="b7e70-103">The following sections list the best practices to consider when creating secure applications using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b7e70-104">安全性，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[與中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。</span><span class="sxs-lookup"><span data-stu-id="b7e70-104"> security, see [Security Considerations](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Security Considerations for Data](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), and [Security Considerations with Metadata](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).</span></span>  
   
-## 利用 SPN 識別執行 Windows 驗證的服務  
- 服務可以透過使用者主要名稱 \(UPN\) 或服務主要名稱 \(SPN\) 進行識別。以如網路服務的電腦帳戶來執行的服務，都有一個對應於所執行電腦的 SPN 身分識別。雖然 `setspn` 工具可用於指派 SPN 給使用者帳戶，但是以使用者帳戶執行的服務都有一個對應於所執行之使用者身分的 UPN 身分識別。對服務進行設定，讓服務可以透過 SPN 識別，並且設定用戶端要連結到該服務，以使用該 SPN，才能確保服務不容易受到特定攻擊。這個方法也適用於使用 Kerberos 或 SSPI 交涉的繫結。在 SSPI 又改回使用 NTLM 的情況下，用戶端應該仍然能夠指定 SPN。  
+## <a name="identify-services-performing-windows-authentication-with-spns"></a><span data-ttu-id="b7e70-105">利用 SPN 識別執行 Windows 驗證的服務</span><span class="sxs-lookup"><span data-stu-id="b7e70-105">Identify Services Performing Windows Authentication with SPNs</span></span>  
+ <span data-ttu-id="b7e70-106">服務可以透過使用者主要名稱 (UPN) 或服務主要名稱 (SPN) 進行識別。</span><span class="sxs-lookup"><span data-stu-id="b7e70-106">Services can be identified with either user principal names (UPNs) or service principal names (SPNs).</span></span> <span data-ttu-id="b7e70-107">以如網路服務的電腦帳戶來執行的服務，都有一個對應於所執行電腦的 SPN 身分識別。</span><span class="sxs-lookup"><span data-stu-id="b7e70-107">Services running under machine accounts such as network service have an SPN identity corresponding to the machine they're running.</span></span> <span data-ttu-id="b7e70-108">雖然 `setspn` 工具可用於指派 SPN 給使用者帳戶，但是以使用者帳戶執行的服務都有一個對應於所執行之使用者身分的 UPN 身分識別。</span><span class="sxs-lookup"><span data-stu-id="b7e70-108">Services running under user accounts have a UPN identity corresponding to the user they're running as, although the `setspn` tool can be used to assign an SPN to the user account.</span></span> <span data-ttu-id="b7e70-109">對服務進行設定，讓服務可以透過 SPN 識別，並且設定用戶端要連結到該服務，以使用該 SPN，才能確保服務不容易受到特定攻擊。</span><span class="sxs-lookup"><span data-stu-id="b7e70-109">Configuring a service so it can be identified via SPN and configuring the clients connecting to the service to use that SPN can make certain attacks more difficult.</span></span> <span data-ttu-id="b7e70-110">這個方法也適用於使用 Kerberos 或 SSPI 交涉的繫結。</span><span class="sxs-lookup"><span data-stu-id="b7e70-110">This guidance applies to bindings using Kerberos or SSPI negotiation.</span></span>  <span data-ttu-id="b7e70-111">在 SSPI 又改回使用 NTLM 的情況下，用戶端應該仍然能夠指定 SPN。</span><span class="sxs-lookup"><span data-stu-id="b7e70-111">Clients should still specify an SPN in the case where SSPI falls back to NTLM.</span></span>  
   
-## 利用 WSDL 驗證服務身分識別  
- WS\-SecurityPolicy 允許服務以中繼資料發佈關於本身身分識別的資訊。透過 `svcutil` 或如 <xref:System.ServiceModel.Description.WsdlImporter> 的其他方法擷取時，身分識別資訊會轉譯為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務端點位址的身分識別屬性。沒有驗證這些服務的用戶端屬於正確且有效的略過服務驗證。但是，惡意的服務會利用這類用戶端，變更 WSDL 中聲稱的身分，執行認證轉送或其他的中間人攻擊。  
+## <a name="verify-service-identities-in-wsdl"></a><span data-ttu-id="b7e70-112">利用 WSDL 驗證服務身分識別</span><span class="sxs-lookup"><span data-stu-id="b7e70-112">Verify Service Identities in WSDL</span></span>  
+ <span data-ttu-id="b7e70-113">WS-SecurityPolicy 允許服務以中繼資料發佈關於本身身分識別的資訊。</span><span class="sxs-lookup"><span data-stu-id="b7e70-113">WS-SecurityPolicy allows services to publish information about their own identities in metadata.</span></span> <span data-ttu-id="b7e70-114">透過 `svcutil` 或如 <xref:System.ServiceModel.Description.WsdlImporter>[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的其他方法擷取時，身分識別資訊會轉譯為  服務端點位址的身分識別屬性。</span><span class="sxs-lookup"><span data-stu-id="b7e70-114">When retrieved via `svcutil` or other methods such as <xref:System.ServiceModel.Description.WsdlImporter>, this identity information is translated to the identity properties of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service endpoint addresses.</span></span> <span data-ttu-id="b7e70-115">沒有驗證這些服務的用戶端屬於正確且有效的略過服務驗證。</span><span class="sxs-lookup"><span data-stu-id="b7e70-115">Clients which do not verify that these service identities are correct and valid effectively bypass service authentication.</span></span> <span data-ttu-id="b7e70-116">但是，惡意的服務會利用這類用戶端，變更 WSDL 中聲稱的身分，執行認證轉送或其他的中間人攻擊。</span><span class="sxs-lookup"><span data-stu-id="b7e70-116">A malicious service can exploit such clients to execute credential forwarding and other "man in the middle" attacks by changing the identity claimed in its WSDL.</span></span>  
   
-## 使用 X509 憑證取代 NTLM  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供兩種對等驗證機制，分別是 X509 憑證 \(用於對等通道\) 以及 Windows 驗證，後者的使用案例中，SSPI 交涉會從 Kerberos 降級為 NTLM。相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：  
+## <a name="use-x509-certificates-instead-of-ntlm"></a><span data-ttu-id="b7e70-117">使用 X509 憑證取代 NTLM</span><span class="sxs-lookup"><span data-stu-id="b7e70-117">Use X509 Certificates Instead of NTLM</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b7e70-118">提供兩種對等驗證機制，分別是 X509 憑證 (用於對等通道) 以及 Windows 驗證，後者的使用案例中，SSPI 交涉會從 Kerberos 降級為 NTLM。</span><span class="sxs-lookup"><span data-stu-id="b7e70-118"> offers two mechanisms for peer-to-peer authentication: X509 certificates (used by peer channel) and Windows authentication where an SSPI negotiation downgrades from Kerberos to NTLM.</span></span>  <span data-ttu-id="b7e70-119">相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：</span><span class="sxs-lookup"><span data-stu-id="b7e70-119">Certificate-based authentication using key sizes of 1024 bits or more is preferred to NTLM for several reasons:</span></span>  
   
--   雙向驗證的可用性  
+-   <span data-ttu-id="b7e70-120">雙向驗證的可用性</span><span class="sxs-lookup"><span data-stu-id="b7e70-120">the availability of mutual authentication,</span></span>  
   
--   使用更強的密碼編譯演算法  
+-   <span data-ttu-id="b7e70-121">使用更強的密碼編譯演算法</span><span class="sxs-lookup"><span data-stu-id="b7e70-121">the use of stronger cryptographic algorithms, and</span></span>  
   
--   更不容易利用轉送的 X509 憑證  
+-   <span data-ttu-id="b7e70-122">更不容易利用轉送的 X509 憑證</span><span class="sxs-lookup"><span data-stu-id="b7e70-122">the greater difficulty of utilizing forwarded X509 credentials.</span></span>  
   
- 如需 NTLM 轉送攻擊的總覽請參閱 [http:\/\/msdn.microsoft.com\/msdnmag\/issues\/06\/09\/SecureByDesign\/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571) \(本頁面可能為英文\)。  
+ <span data-ttu-id="b7e70-123">如需 NTLM 轉寄攻擊的概觀，請移至[http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571)。</span><span class="sxs-lookup"><span data-stu-id="b7e70-123">For an overview of NTLM forwarding attacks, go to [http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571).</span></span>  
   
-## 在模擬完畢後一律還原  
- 在使用可啟用用戶端模擬的 API 時，請務必還原成原始身分識別。例如，在使用 <xref:System.Security.Principal.WindowsIdentity> 和 <xref:System.Security.Principal.WindowsImpersonationContext> 時，請使用 C\# `using` 陳述式或 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` 陳述式，如下列程式碼所示。<xref:System.Security.Principal.WindowsImpersonationContext> 類別會實作 <xref:System.IDisposable> 介面，因此 Common Language Runtime \(CLR\) 會在程式碼離開 `using` 區塊後，自動還原成原始身分識別。  
+## <a name="always-revert-after-impersonation"></a><span data-ttu-id="b7e70-124">在模擬完畢後一律還原</span><span class="sxs-lookup"><span data-stu-id="b7e70-124">Always Revert After Impersonation</span></span>  
+ <span data-ttu-id="b7e70-125">在使用可啟用用戶端模擬的 API 時，請務必還原成原始身分識別。</span><span class="sxs-lookup"><span data-stu-id="b7e70-125">When using APIs that enable impersonation of a client, be sure to revert to the original identity.</span></span> <span data-ttu-id="b7e70-126">例如，在使用 <xref:System.Security.Principal.WindowsIdentity> 和 <xref:System.Security.Principal.WindowsImpersonationContext> 時，請使用 C# `using` 陳述式或 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` 陳述式，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="b7e70-126">For example, when using the <xref:System.Security.Principal.WindowsIdentity> and <xref:System.Security.Principal.WindowsImpersonationContext>, use the C# `using` statement or the [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` statement, as shown in the following code.</span></span> <span data-ttu-id="b7e70-127"><xref:System.Security.Principal.WindowsImpersonationContext> 類別會實作 <xref:System.IDisposable> 介面，因此 Common Language Runtime (CLR) 會在程式碼離開 `using` 區塊後，自動還原成原始身分識別。</span><span class="sxs-lookup"><span data-stu-id="b7e70-127">The <xref:System.Security.Principal.WindowsImpersonationContext> class implements the <xref:System.IDisposable> interface, and therefore the common language runtime (CLR) automatically reverts to the original identity once the code leaves the `using` block.</span></span>  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
   
-## 只有必要時才模擬  
- 透過 <xref:System.Security.Principal.WindowsIdentity> 類別的 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法，您可以在嚴格控制的範圍內使用模擬。這與使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 的 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 屬性剛好相反，後者允許對整個作業範圍進行模擬。只要可能，任何時候都請您使用更精確的 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法來控制模擬範圍。  
+## <a name="impersonate-only-as-needed"></a><span data-ttu-id="b7e70-128">只有必要時才模擬</span><span class="sxs-lookup"><span data-stu-id="b7e70-128">Impersonate Only as Needed</span></span>  
+ <span data-ttu-id="b7e70-129">透過 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 類別的 <xref:System.Security.Principal.WindowsIdentity> 方法，您可以在嚴格控制的範圍內使用模擬。</span><span class="sxs-lookup"><span data-stu-id="b7e70-129">Using the <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> method of the <xref:System.Security.Principal.WindowsIdentity> class, it is possible to use impersonation in a very controlled scope.</span></span> <span data-ttu-id="b7e70-130">這與使用 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 的 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性剛好相反，後者允許對整個作業範圍進行模擬。</span><span class="sxs-lookup"><span data-stu-id="b7e70-130">This is in contrast to using the <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> property of the <xref:System.ServiceModel.OperationBehaviorAttribute>, which allows impersonation for the scope of the entire operation.</span></span> <span data-ttu-id="b7e70-131">只要可能，任何時候都請您使用更精確的 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法來控制模擬範圍。</span><span class="sxs-lookup"><span data-stu-id="b7e70-131">Whenever possible, control the scope of impersonation by using the more precise <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> method.</span></span>  
   
-## 取得來自信任來源的中繼資料  
- 請務必信任您的中繼資料來源，並確認中繼資料未遭受任何竄改。使用 HTTP 通訊協定擷取的中繼資料以純文字傳送出去且可以竄改。如果服務使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 屬性，請以服務建立者提供的 URL 來使用 HTTPS 通訊協定下載資料。  
+## <a name="obtain-metadata-from-trusted-sources"></a><span data-ttu-id="b7e70-132">取得來自信任來源的中繼資料</span><span class="sxs-lookup"><span data-stu-id="b7e70-132">Obtain Metadata from Trusted Sources</span></span>  
+ <span data-ttu-id="b7e70-133">請務必信任您的中繼資料來源，並確認中繼資料未遭受任何竄改。</span><span class="sxs-lookup"><span data-stu-id="b7e70-133">Be sure you trust the source of your metadata and make sure that no one has tampered with the metadata.</span></span> <span data-ttu-id="b7e70-134">使用 HTTP 通訊協定擷取的中繼資料會以純文字傳送出去且可以竄改。</span><span class="sxs-lookup"><span data-stu-id="b7e70-134">Metadata retrieved using the HTTP protocol is sent in clear text and can be tampered with.</span></span> <span data-ttu-id="b7e70-135">如果服務使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 屬性，請以服務建立者提供的 URL 來使用 HTTPS 通訊協定下載資料。</span><span class="sxs-lookup"><span data-stu-id="b7e70-135">If the service uses the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> and <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> properties, use the URL supplied by the service creator to download the data using the HTTPS protocol.</span></span>  
   
-## 使用安全性發行中繼資料  
- 若要預防服務的已發行中繼資料遭到竄改，請使用傳輸或訊息層級的安全性來保護中繼資料交換端點的安全。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) 和 [HOW TO：使用程式碼發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
+## <a name="publish-metadata-using-security"></a><span data-ttu-id="b7e70-136">使用安全性發行中繼資料</span><span class="sxs-lookup"><span data-stu-id="b7e70-136">Publish Metadata Using Security</span></span>  
+ <span data-ttu-id="b7e70-137">若要預防服務的已發行中繼資料遭到竄改，請使用傳輸或訊息層級的安全性來保護中繼資料交換端點的安全。</span><span class="sxs-lookup"><span data-stu-id="b7e70-137">To prevent tampering with a service's published metadata, secure the metadata exchange endpoint with transport or message-level security.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b7e70-138">[發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[How to： 使用程式碼的服務發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。</span><span class="sxs-lookup"><span data-stu-id="b7e70-138"> [Publishing Metadata Endpoints](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) and [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span>  
   
-## 確定本機簽發者的用途  
- 如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 null。  
+## <a name="ensure-use-of-local-issuer"></a><span data-ttu-id="b7e70-139">確定本機簽發者的用途</span><span class="sxs-lookup"><span data-stu-id="b7e70-139">Ensure Use of Local Issuer</span></span>  
+ <span data-ttu-id="b7e70-140">如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。</span><span class="sxs-lookup"><span data-stu-id="b7e70-140">If an issuer address and binding are specified for a given binding, the local issuer is not used for endpoints that use that binding.</span></span> <span data-ttu-id="b7e70-141">預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 null。</span><span class="sxs-lookup"><span data-stu-id="b7e70-141">Clients who expect to always use the local issuer should ensure that they do not use such a binding or that they modify the binding such that the issuer address is null.</span></span>  
   
-## SAML 權杖大小配額  
- 當安全性判斷提示標記語言 SAML 權杖在訊息中序列化，不論這些權杖是由安全性權杖服務 \(STS\) 所核發，或者這些權杖由用戶端視為驗證的一部份提供至服務，最大訊息大小配額必須大到足以容納 SAML 權杖及其他訊息部份。正常情況下，預設訊息大小配額應足夠。然而，若 SAML 權杖因為包含數百個宣告而變很大時，您就需要增加配額以容納序列化的權杖。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]配額的詳細資訊，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
+## <a name="saml-token-size-quotas"></a><span data-ttu-id="b7e70-142">SAML 權杖大小配額</span><span class="sxs-lookup"><span data-stu-id="b7e70-142">SAML Token Size Quotas</span></span>  
+ <span data-ttu-id="b7e70-143">當安全性判斷提示標記語言 SAML 權杖在訊息中序列化，不論這些權杖是由安全性權杖服務 (STS) 所核發，或者這些權杖由用戶端視為驗證的一部份提供至服務，最大訊息大小配額必須大到足以容納 SAML 權杖及其他訊息部份。</span><span class="sxs-lookup"><span data-stu-id="b7e70-143">When Security Assertions Markup Language (SAML) tokens are serialized in messages, either when they are issued by a Security Token Service (STS) or when clients present them to services as part of authentication, the maximum message size quota must be sufficiently large to accommodate the SAML token and the other message parts.</span></span> <span data-ttu-id="b7e70-144">正常情況下，預設訊息大小配額應足夠。</span><span class="sxs-lookup"><span data-stu-id="b7e70-144">In normal cases, the default message size quotas are sufficient.</span></span> <span data-ttu-id="b7e70-145">然而，若 SAML 權杖因為包含數百個宣告而變很大時，您就需要增加配額以容納序列化的權杖。</span><span class="sxs-lookup"><span data-stu-id="b7e70-145">However, in cases where a SAML token is large because it contains hundreds of claims, the quotas should be increased to accommodate the serialized token.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b7e70-146">配額，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。</span><span class="sxs-lookup"><span data-stu-id="b7e70-146"> quotas, see [Security Considerations for Data](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).</span></span>  
   
-## 在自訂繫結上，將 SecurityBindingElement.IncludeTimestamp 設定為 True  
- 當您建立自訂繫結時，您必須將 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `true`。否則，如果 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `false`，而且用戶端使用以非對稱金鑰為基礎的權杖 \(如 X509 憑證\)，則不會簽署訊息。  
+## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a><span data-ttu-id="b7e70-147">在自訂繫結上，將 SecurityBindingElement.IncludeTimestamp 設定為 True</span><span class="sxs-lookup"><span data-stu-id="b7e70-147">Set SecurityBindingElement.IncludeTimestamp to True on Custom Bindings</span></span>  
+ <span data-ttu-id="b7e70-148">當您建立自訂繫結時，您必須將 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="b7e70-148">When you create a custom binding, you must set <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> to `true`.</span></span> <span data-ttu-id="b7e70-149">否則，如果 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `false`，而且用戶端使用以非對稱金鑰為基礎的權杖 (如 X509 憑證)，則不會簽署訊息。</span><span class="sxs-lookup"><span data-stu-id="b7e70-149">Otherwise, if <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> is set to `false`, and the client is using an asymmetric key-based token such as an X509 certificate, the message will not be signed.</span></span>  
   
-## 請參閱  
- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)   
- [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)   
- [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="b7e70-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7e70-150">See Also</span></span>  
+ [<span data-ttu-id="b7e70-151">安全性考量</span><span class="sxs-lookup"><span data-stu-id="b7e70-151">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [<span data-ttu-id="b7e70-152">資料的安全性考量</span><span class="sxs-lookup"><span data-stu-id="b7e70-152">Security Considerations for Data</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [<span data-ttu-id="b7e70-153">使用中繼資料的安全性考量</span><span class="sxs-lookup"><span data-stu-id="b7e70-153">Security Considerations with Metadata</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

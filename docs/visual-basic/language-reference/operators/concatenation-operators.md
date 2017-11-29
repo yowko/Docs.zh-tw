@@ -1,34 +1,33 @@
 ---
-title: "Concatenation Operators (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operators [Visual Basic], concatenation"
-  - "concatenation operators, Visual Basic strings"
+title: "串連運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- operators [Visual Basic], concatenation
+- concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 888530199048a6fab6a5a47f0f0959834532ddac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Concatenation Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-下列是在 Visual Basic 中定義的串連運算子。  
+# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="e4886-102">串連運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e4886-102">Concatenation Operators (Visual Basic)</span></span>
+<span data-ttu-id="e4886-103">以下是定義在 Visual Basic 中的串連運算子。</span><span class="sxs-lookup"><span data-stu-id="e4886-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
   
- [& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [<span data-ttu-id="e4886-104">& 運算子</span><span class="sxs-lookup"><span data-stu-id="e4886-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
- [\+ 運算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [<span data-ttu-id="e4886-105">+ 運算子</span><span class="sxs-lookup"><span data-stu-id="e4886-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
-## 請參閱  
- <xref:System.Text>   
- <xref:System.Text.StringBuilder>   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+## <a name="see-also"></a><span data-ttu-id="e4886-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e4886-106">See Also</span></span>  
+ <xref:System.Text>  
+ <xref:System.Text.StringBuilder>  
+ [<span data-ttu-id="e4886-107">Visual Basic 中的運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="e4886-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="e4886-108">在 Visual Basic 中的串連運算子</span><span class="sxs-lookup"><span data-stu-id="e4886-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

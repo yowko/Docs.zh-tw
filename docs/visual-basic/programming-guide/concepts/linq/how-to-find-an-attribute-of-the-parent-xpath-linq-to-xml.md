@@ -1,39 +1,34 @@
 ---
-title: "如何︰ 尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic) |Microsoft 文件"
+title: "如何： 尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: adaece829b167e432963980f7fb4cbc326b0cfda
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 4da7888ab838dacbdda097f24580745692d407fd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>如何︰ 尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic)
-這個主題顯示如何導覽到父項目並尋找其屬性。  
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="f7d66-102">如何： 尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f7d66-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="f7d66-103">這個主題顯示如何導覽到父項目並尋找其屬性。</span><span class="sxs-lookup"><span data-stu-id="f7d66-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>  
   
- XPath 運算式為：  
+ <span data-ttu-id="f7d66-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="f7d66-104">The XPath expression is:</span></span>  
   
  `../@id`  
   
-## <a name="example"></a>範例  
- 這個範例會先尋找 `Author` 項目。 接著，它會尋找父項目的 `id` 屬性。  
+## <a name="example"></a><span data-ttu-id="f7d66-105">範例</span><span class="sxs-lookup"><span data-stu-id="f7d66-105">Example</span></span>  
+ <span data-ttu-id="f7d66-106">這個範例會先尋找 `Author` 項目。</span><span class="sxs-lookup"><span data-stu-id="f7d66-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="f7d66-107">接著，它會尋找父項目的 `id` 屬性。</span><span class="sxs-lookup"><span data-stu-id="f7d66-107">It then finds the `id` attribute of the parent element.</span></span>  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ <span data-ttu-id="f7d66-108">此範例使用下列 XML 文件︰[範例 XML 檔：書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="f7d66-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -54,13 +49,12 @@ End If
 Console.WriteLine(att1)  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="f7d66-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="f7d66-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 id="bk101"  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to XML 的 XPath 使用者 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-
+## <a name="see-also"></a><span data-ttu-id="f7d66-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f7d66-110">See Also</span></span>  
+ [<span data-ttu-id="f7d66-111">LINQ to XML (Visual Basic) 的 XPath 使用者適用的</span><span class="sxs-lookup"><span data-stu-id="f7d66-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

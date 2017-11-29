@@ -1,44 +1,48 @@
 ---
-title: "如何：建立垂直文字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "字串 [Windows Form], 描繪垂直的"
-  - "文字 [Windows Form], 描繪垂直的"
-  - "垂直文字, 繪製"
-  - "Windows Form, 繪製垂直文字"
+title: "如何：建立垂直文字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [Windows Forms], drawing vertical
+- Windows Forms, drawing vertical text
+- strings [Windows Forms], drawing vertical
+- vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d690700224954e71b163f6e22a25e343d7e414ce
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：建立垂直文字
-您可以使用 <xref:System.Drawing.StringFormat> 物件指定以垂直而非水平方式繪製文字。  
+# <a name="how-to-create-vertical-text"></a><span data-ttu-id="d8a09-102">如何：建立垂直文字</span><span class="sxs-lookup"><span data-stu-id="d8a09-102">How to: Create Vertical Text</span></span>
+<span data-ttu-id="d8a09-103">您可以使用<xref:System.Drawing.StringFormat>物件，以指定垂直而非水平繪製文字。</span><span class="sxs-lookup"><span data-stu-id="d8a09-103">You can use a <xref:System.Drawing.StringFormat> object to specify that text be drawn vertically rather than horizontally.</span></span>  
   
-## 範例  
- 下列範例會將 <xref:System.Drawing.StringFormatFlags> 值指派給 <xref:System.Drawing.StringFormat> 物件的 <xref:System.Drawing.StringFormat.FormatFlags%2A> 屬性。  這個 <xref:System.Drawing.StringFormat> 物件會傳遞給 <xref:System.Drawing.Graphics> 類別的 <xref:System.Drawing.Graphics.DrawString%2A> 方法。  <xref:System.Drawing.StringFormatFlags> 值是 <xref:System.Drawing.StringFormatFlags> 列舉型別的成員。  
+## <a name="example"></a><span data-ttu-id="d8a09-104">範例</span><span class="sxs-lookup"><span data-stu-id="d8a09-104">Example</span></span>  
+ <span data-ttu-id="d8a09-105">下列範例會將值指派<xref:System.Drawing.StringFormatFlags.DirectionVertical>至<xref:System.Drawing.StringFormat.FormatFlags%2A>屬性<xref:System.Drawing.StringFormat>物件。</span><span class="sxs-lookup"><span data-stu-id="d8a09-105">The following example assigns the value <xref:System.Drawing.StringFormatFlags.DirectionVertical> to the <xref:System.Drawing.StringFormat.FormatFlags%2A> property of a <xref:System.Drawing.StringFormat> object.</span></span> <span data-ttu-id="d8a09-106">確認<xref:System.Drawing.StringFormat>物件傳遞至<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>類別。</span><span class="sxs-lookup"><span data-stu-id="d8a09-106">That <xref:System.Drawing.StringFormat> object is passed to the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="d8a09-107">值<xref:System.Drawing.StringFormatFlags.DirectionVertical>隸屬<xref:System.Drawing.StringFormatFlags>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="d8a09-107">The value <xref:System.Drawing.StringFormatFlags.DirectionVertical> is a member of the <xref:System.Drawing.StringFormatFlags> enumeration.</span></span>  
   
- 下圖顯示的是垂直文字。  
+ <span data-ttu-id="d8a09-108">下圖顯示垂直文字。</span><span class="sxs-lookup"><span data-stu-id="d8a09-108">The following illustration shows the vertical text.</span></span>  
   
- ![字型文字](../../../../docs/framework/winforms/advanced/media/csfontstext5.png "csfontstext5")  
+ <span data-ttu-id="d8a09-109">![字型文字](../../../../docs/framework/winforms/advanced/media/csfontstext5.png "csfontstext5")</span><span class="sxs-lookup"><span data-stu-id="d8a09-109">![Fonts Text](../../../../docs/framework/winforms/advanced/media/csfontstext5.png "csfontstext5")</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.FontsAndText#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#31)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a><span data-ttu-id="d8a09-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="d8a09-110">Compiling the Code</span></span>  
   
--   上述範例是專為與 Windows Form 搭配使用而設計的，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`  \(即 <xref:System.Windows.Forms.PaintEventHandler> 的參數\)。  
+-   <span data-ttu-id="d8a09-111">上述範例設計用於搭配 Windows Form，且其需要<xref:System.Windows.Forms.PaintEventArgs> `e` ，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="d8a09-111">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e` , which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 請參閱  
- [如何：使用 GDI 繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="d8a09-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d8a09-112">See Also</span></span>  
+ [<span data-ttu-id="d8a09-113">操作說明：使用 GDI 繪製文字</span><span class="sxs-lookup"><span data-stu-id="d8a09-113">How to: Draw Text with GDI</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

@@ -1,35 +1,38 @@
 ---
-title: "如何：使用 FontSizeConverter 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FontSizeConverter 物件"
-  - "印刷樣式, FontSizeConverter 物件"
+title: "如何：使用 FontSizeConverter 類別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FontSizeConverter objects [WPF]
+- typography [WPF], FontSizeConverter objects
 ms.assetid: 3b0592bd-7223-4860-a108-a5d72f3a9178
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bcf2d7348ca5b6b9d3b2edc44f92afbd46d32594
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用 FontSizeConverter 類別
-## 範例  
- 本範例示範如何建立 <xref:System.Windows.FontSizeConverter> 的執行個體並用它來變更字型大小。  
+# <a name="how-to-use-the-fontsizeconverter-class"></a><span data-ttu-id="9499d-102">如何：使用 FontSizeConverter 類別</span><span class="sxs-lookup"><span data-stu-id="9499d-102">How to: Use the FontSizeConverter Class</span></span>
+## <a name="example"></a><span data-ttu-id="9499d-103">範例</span><span class="sxs-lookup"><span data-stu-id="9499d-103">Example</span></span>  
+ <span data-ttu-id="9499d-104">這個範例示範如何建立的執行個體<xref:System.Windows.FontSizeConverter>並用它來變更字型的大小。</span><span class="sxs-lookup"><span data-stu-id="9499d-104">This example shows how to create an instance of <xref:System.Windows.FontSizeConverter> and use it to change a font size.</span></span>  
   
- 此範例會定義名為 `changeSize` 的自訂方法，將 <xref:System.Windows.Controls.ListBoxItem> 的內容 \(如另外的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 檔案所定義\) 轉換為 <xref:System.Double> 的執行個體，再轉換為 <xref:System.String>。  這個方法會將 <xref:System.Windows.Controls.ListBoxItem> 傳遞至 <xref:System.Windows.FontSizeConverter> 物件，此物件再將 <xref:System.Windows.Controls.ListBoxItem> 的 <xref:System.Windows.Controls.ContentControl.Content%2A> 轉換為 <xref:System.Double> 的執行個體。  此值接著會以 <xref:System.Windows.Controls.TextBlock> 項目的 <xref:System.Windows.Controls.TextBlock.FontSize%2A> 屬性值傳回。  
+ <span data-ttu-id="9499d-105">此範例會定義自訂的方法呼叫`changeSize`將轉換的內容<xref:System.Windows.Controls.ListBoxItem>定義在個別[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案，以執行個體<xref:System.Double>，及更新版本為<xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="9499d-105">The example defines a custom method called `changeSize` that converts the contents of a <xref:System.Windows.Controls.ListBoxItem>, as defined in a separate [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file, to an instance of <xref:System.Double>, and later into a <xref:System.String>.</span></span> <span data-ttu-id="9499d-106">這個方法會傳遞<xref:System.Windows.Controls.ListBoxItem>至<xref:System.Windows.FontSizeConverter>物件，然後將轉換<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>的執行個體<xref:System.Double>。</span><span class="sxs-lookup"><span data-stu-id="9499d-106">This method passes the <xref:System.Windows.Controls.ListBoxItem> to a <xref:System.Windows.FontSizeConverter> object, which converts the <xref:System.Windows.Controls.ContentControl.Content%2A> of a <xref:System.Windows.Controls.ListBoxItem> to an instance of <xref:System.Double>.</span></span> <span data-ttu-id="9499d-107">此值接著會傳遞做為值回<xref:System.Windows.Controls.TextBlock.FontSize%2A>屬性<xref:System.Windows.Controls.TextBlock>項目。</span><span class="sxs-lookup"><span data-stu-id="9499d-107">This value is then passed back as the value of the <xref:System.Windows.Controls.TextBlock.FontSize%2A> property of the <xref:System.Windows.Controls.TextBlock> element.</span></span>  
   
- 此範例會再定義第二個自訂方法，名為 `changeFamily`。  這個方法會將 <xref:System.Windows.Controls.ListBoxItem> 的 <xref:System.Windows.Controls.ContentControl.Content%2A> 轉換為 <xref:System.String>，然後將此值傳遞至 <xref:System.Windows.Controls.TextBlock> 項目的 <xref:System.Windows.Controls.TextBlock.FontFamily%2A> 屬性。  
+ <span data-ttu-id="9499d-108">這個範例也會定義呼叫的第二個自訂方法`changeFamily`。</span><span class="sxs-lookup"><span data-stu-id="9499d-108">This example also defines a second custom method that is called `changeFamily`.</span></span> <span data-ttu-id="9499d-109">這個方法會將轉換<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>至<xref:System.String>，然後將傳送至該值<xref:System.Windows.Controls.TextBlock.FontFamily%2A>屬性<xref:System.Windows.Controls.TextBlock>項目。</span><span class="sxs-lookup"><span data-stu-id="9499d-109">This method converts the <xref:System.Windows.Controls.ContentControl.Content%2A> of the <xref:System.Windows.Controls.ListBoxItem> to a <xref:System.String>, and then passes that value to the <xref:System.Windows.Controls.TextBlock.FontFamily%2A> property of the <xref:System.Windows.Controls.TextBlock> element.</span></span>  
   
- 此範例不會執行。  
+ <span data-ttu-id="9499d-110">此範例不會執行。</span><span class="sxs-lookup"><span data-stu-id="9499d-110">This example does not run.</span></span>  
   
  [!code-csharp[FontSizeConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSizeConverter/CSharp/Window1.xaml.cs#1)]  
   
-## 請參閱  
+## <a name="see-also"></a><span data-ttu-id="9499d-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9499d-111">See Also</span></span>  
  <xref:System.Windows.FontSizeConverter>

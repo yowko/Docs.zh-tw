@@ -1,55 +1,48 @@
 ---
-title: "移除項目、 屬性和節點從 XML 樹狀結構 (Visual Basic) |Microsoft 文件"
-ms.custom: 
-ms.date: 2015-07-20
+title: "移除項目、 屬性和節點從 XML 樹狀結構 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eef13476733f7c883080923614683a41d7cb3b3a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c1662f0cd1461cc00a8859464b8da3ecb8fd9faf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>移除項目、 屬性和節點從 XML 樹狀結構 (Visual Basic)
-您可以修改 XML 樹狀以移除項目、屬性以及其他類型的節點。  
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a><span data-ttu-id="afd7a-102">移除項目、 屬性和節點從 XML 樹狀結構 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="afd7a-102">Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="afd7a-103">您可以修改 XML 樹狀以移除項目、屬性以及其他類型的節點。</span><span class="sxs-lookup"><span data-stu-id="afd7a-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  
   
- 從 XML 文件移除單一項目或單一屬性很直接。 不過，移除項目或屬性的集合時，您應該先將集合具體化到清單中，然後從清單中刪除項目或屬性。 最好的方法是使用<xref:System.Xml.Linq.Extensions.Remove%2A>擴充方法，將您執行此工作。</xref:System.Xml.Linq.Extensions.Remove%2A>  
+ <span data-ttu-id="afd7a-104">從 XML 文件移除單一項目或單一屬性很直接。</span><span class="sxs-lookup"><span data-stu-id="afd7a-104">Removing a single element or a single attribute from an XML document is straightforward.</span></span> <span data-ttu-id="afd7a-105">不過，移除項目或屬性的集合時，您應該先將集合具體化到清單中，然後從清單中刪除項目或屬性。</span><span class="sxs-lookup"><span data-stu-id="afd7a-105">However, when removing collections of elements or attributes, you should first materialize a collection into a list, and then delete the elements or attributes from the list.</span></span> <span data-ttu-id="afd7a-106">最好的方法是，使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 擴充方法替您執行。</span><span class="sxs-lookup"><span data-stu-id="afd7a-106">The best approach is to use the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method, which will do this for you.</span></span>  
   
- 這麼做的主要原因是因為您從 XML 樹狀結構中擷取的大部分集合都是使用延後執行產生的。 如果您沒有先將這些集合具體化到清單中，或沒有使用擴充方法，則可能發生特定類別的 Bug。 如需詳細資訊，請參閱[混合宣告式程式碼/命令式程式碼 Bug (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)。  
+ <span data-ttu-id="afd7a-107">這麼做的主要原因是因為您從 XML 樹狀結構中擷取的大部分集合都是使用延後執行產生的。</span><span class="sxs-lookup"><span data-stu-id="afd7a-107">The main reason for doing this is that most of the collections you retrieve from an XML tree are yielded using deferred execution.</span></span> <span data-ttu-id="afd7a-108">如果您沒有先將這些集合具體化到清單中，或沒有使用擴充方法，則可能發生特定類別的 Bug。</span><span class="sxs-lookup"><span data-stu-id="afd7a-108">If you do not first materialize them into a list, or if you do not use the extension methods, it is possible to encounter a certain class of bugs.</span></span> <span data-ttu-id="afd7a-109">如需詳細資訊，請參閱[混合宣告式程式碼/命令式程式碼 Bug (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="afd7a-109">For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).</span></span>  
   
- 下列方法會從 XML 樹狀移除節點和屬性。  
+ <span data-ttu-id="afd7a-110">下列方法會從 XML 樹狀移除節點和屬性。</span><span class="sxs-lookup"><span data-stu-id="afd7a-110">The following methods remove nodes and attributes from an XML tree.</span></span>  
   
-|方法|描述|  
+|<span data-ttu-id="afd7a-111">方法</span><span class="sxs-lookup"><span data-stu-id="afd7a-111">Method</span></span>|<span data-ttu-id="afd7a-112">描述</span><span class="sxs-lookup"><span data-stu-id="afd7a-112">Description</span></span>|  
 |------------|-----------------|  
-|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|移除<xref:System.Xml.Linq.XAttribute>從其父代。</xref:System.Xml.Linq.XAttribute>|  
-|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|從<xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer>移除子節點|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|從<xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>移除內容和屬性|  
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|移除<xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>屬性|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|如果您針對值傳遞 `null`，則會移除屬性。|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=fullName>|如果您針對值傳遞 `null`，則會移除子項目。|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=fullName>|移除<xref:System.Xml.Linq.XNode>從其父代。</xref:System.Xml.Linq.XNode>|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=fullName></xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=fullName>|從其父項目移除來源集合中的每個屬性或項目。|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="afd7a-113">從其父代移除 <xref:System.Xml.Linq.XAttribute>。</span><span class="sxs-lookup"><span data-stu-id="afd7a-113">Removes an <xref:System.Xml.Linq.XAttribute> from its parent.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|<span data-ttu-id="afd7a-114">從 <xref:System.Xml.Linq.XContainer> 移除子節點。</span><span class="sxs-lookup"><span data-stu-id="afd7a-114">Removes the child nodes from an <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|<span data-ttu-id="afd7a-115">從 <xref:System.Xml.Linq.XElement> 移除內容和屬性。</span><span class="sxs-lookup"><span data-stu-id="afd7a-115">Removes content and attributes from an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|<span data-ttu-id="afd7a-116">移除 <xref:System.Xml.Linq.XElement> 的屬性。</span><span class="sxs-lookup"><span data-stu-id="afd7a-116">Removes the attributes of an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|<span data-ttu-id="afd7a-117">如果您針對值傳遞 `null`，則會移除屬性。</span><span class="sxs-lookup"><span data-stu-id="afd7a-117">If you pass `null` for value, then removes the attribute.</span></span>|  
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|<span data-ttu-id="afd7a-118">如果您針對值傳遞 `null`，則會移除子項目。</span><span class="sxs-lookup"><span data-stu-id="afd7a-118">If you pass `null` for value, then removes the child element.</span></span>|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="afd7a-119">從其父代移除 <xref:System.Xml.Linq.XNode>。</span><span class="sxs-lookup"><span data-stu-id="afd7a-119">Removes an <xref:System.Xml.Linq.XNode> from its parent.</span></span>|  
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="afd7a-120">從其父項目移除來源集合中的每個屬性或項目。</span><span class="sxs-lookup"><span data-stu-id="afd7a-120">Removes every attribute or element in the source collection from its parent element.</span></span>|  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="afd7a-121">範例</span><span class="sxs-lookup"><span data-stu-id="afd7a-121">Example</span></span>  
   
-### <a name="description"></a>描述  
- 這個範例會示範三種移除項目的方法。 首先，它會移除單一項目。 第二，它會擷取項目的集合，具體化它們使用<xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>運算子，並將集合中移除。</xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> 最後，它會擷取項目的集合，並將其移除使用<xref:System.Xml.Linq.Extensions.Remove%2A>擴充方法。</xref:System.Xml.Linq.Extensions.Remove%2A>  
+### <a name="description"></a><span data-ttu-id="afd7a-122">描述</span><span class="sxs-lookup"><span data-stu-id="afd7a-122">Description</span></span>  
+ <span data-ttu-id="afd7a-123">這個範例會示範三種移除項目的方法。</span><span class="sxs-lookup"><span data-stu-id="afd7a-123">This example demonstrates three approaches to removing elements.</span></span> <span data-ttu-id="afd7a-124">首先，它會移除單一項目。</span><span class="sxs-lookup"><span data-stu-id="afd7a-124">First, it removes a single element.</span></span> <span data-ttu-id="afd7a-125">接著，它會反覆運算項目的集合，使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 運算子具體化它們，然後移除集合。</span><span class="sxs-lookup"><span data-stu-id="afd7a-125">Second, it retrieves a collection of elements, materializes them using the <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> operator, and removes the collection.</span></span> <span data-ttu-id="afd7a-126">最後，它會擷取項目的集合，並使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 擴充方法加以移除。</span><span class="sxs-lookup"><span data-stu-id="afd7a-126">Finally, it retrieves a collection of elements and removes them using the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method.</span></span>  
   
- 如需有關<xref:System.Linq.Enumerable.ToList%2A>運算子，請參閱[轉換資料類型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)。</xref:System.Linq.Enumerable.ToList%2A>  
+ <span data-ttu-id="afd7a-127">如需有關<xref:System.Linq.Enumerable.ToList%2A>運算子，請參閱[轉換資料類型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)。</span><span class="sxs-lookup"><span data-stu-id="afd7a-127">For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).</span></span>  
   
-### <a name="code"></a>程式碼  
+### <a name="code"></a><span data-ttu-id="afd7a-128">程式碼</span><span class="sxs-lookup"><span data-stu-id="afd7a-128">Code</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -74,11 +67,10 @@ root.<Child1>.<GrandChild1>.Remove()
 root.<Child2>.Elements().ToList().Remove()  
 root.<Child3>.Elements().Remove()  
 Console.WriteLine(root)  
-  
 ```  
   
-### <a name="comments"></a>註解  
- 此程式碼會產生下列輸出：  
+### <a name="comments"></a><span data-ttu-id="afd7a-129">註解</span><span class="sxs-lookup"><span data-stu-id="afd7a-129">Comments</span></span>  
+ <span data-ttu-id="afd7a-130">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="afd7a-130">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -91,7 +83,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- 請注意，第一個後代子項目已從 `Child1` 移除。 所有後代子項目都已經從 `Child2` 和 `Child3` 移除。  
+ <span data-ttu-id="afd7a-131">請注意，第一個後代子項目已從 `Child1` 移除。</span><span class="sxs-lookup"><span data-stu-id="afd7a-131">Notice that the first grandchild element has been removed from `Child1`.</span></span> <span data-ttu-id="afd7a-132">所有後代子項目都已經從 `Child2` 和 `Child3` 移除。</span><span class="sxs-lookup"><span data-stu-id="afd7a-132">All grandchildren elements have been removed from `Child2` and from `Child3`.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="afd7a-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="afd7a-133">See Also</span></span>  
+ [<span data-ttu-id="afd7a-134">修改 XML 樹狀 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="afd7a-134">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

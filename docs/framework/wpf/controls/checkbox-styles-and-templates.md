@@ -1,67 +1,70 @@
 ---
-title: "CheckBox 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CheckBox [WPF], 樣式和範本"
-  - "ControlTemplate [WPF], CheckBox"
-  - "組件 [WPF], CheckBox"
-  - "狀態 [WPF], CheckBox"
-  - "樣式 [WPF], CheckBox"
-  - "範本 [WPF], CheckBox"
+title: "CheckBox 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], CheckBox
+- templates [WPF], CheckBox
+- parts [WPF], CheckBox
+- ControlTemplate [WPF], CheckBox
+- CheckBox [WPF], styles and templates
+- styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c901d710e96cd111104b9fef2219b157377adc3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# CheckBox 樣式和範本
-本主題說明 <xref:System.Windows.Controls.CheckBox> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="checkbox-styles-and-templates"></a><span data-ttu-id="26f49-102">CheckBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="26f49-102">CheckBox Styles and Templates</span></span>
+<span data-ttu-id="26f49-103">本主題描述樣式和範本<xref:System.Windows.Controls.CheckBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="26f49-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.CheckBox> control.</span></span> <span data-ttu-id="26f49-104">您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。</span><span class="sxs-lookup"><span data-stu-id="26f49-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="26f49-105">如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。</span><span class="sxs-lookup"><span data-stu-id="26f49-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## CheckBox 組件  
- <xref:System.Windows.Controls.CheckBox> 控制項沒有任何具名組件。  
+## <a name="checkbox-parts"></a><span data-ttu-id="26f49-106">核取方塊組件</span><span class="sxs-lookup"><span data-stu-id="26f49-106">CheckBox Parts</span></span>  
+ <span data-ttu-id="26f49-107"><xref:System.Windows.Controls.CheckBox>控制項沒有任何已命名的組件。</span><span class="sxs-lookup"><span data-stu-id="26f49-107">The <xref:System.Windows.Controls.CheckBox> control does not have any named parts.</span></span>  
   
-## CheckBox 狀態  
- 下表列出 <xref:System.Windows.Controls.CheckBox> 控制項的可見狀態。  
+## <a name="checkbox-states"></a><span data-ttu-id="26f49-108">核取方塊狀態</span><span class="sxs-lookup"><span data-stu-id="26f49-108">CheckBox States</span></span>  
+ <span data-ttu-id="26f49-109">下表列出的視覺狀態<xref:System.Windows.Controls.CheckBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="26f49-109">The following table lists the visual states for the <xref:System.Windows.Controls.CheckBox> control.</span></span>  
   
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|--------------------|-------------------------|--------|  
-|Normal|CommonStates|預設狀態。|  
-|MouseOver|CommonStates|滑鼠指標位於控制項上方。|  
-|Pressed|CommonStates|已按下控制項。|  
-|Disabled|CommonStates|控制項已停用。|  
-|Focused|FocusStates|控制項擁有焦點。|  
-|Unfocused|FocusStates|控制項沒有焦點。|  
-|Checked|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `true`。|  
-|Unchecked|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `false`。|  
-|Indeterminate|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> 為 `true`，而 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `null`。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="26f49-110">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="26f49-110">VisualState Name</span></span>|<span data-ttu-id="26f49-111">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="26f49-111">VisualStateGroup Name</span></span>|<span data-ttu-id="26f49-112">描述</span><span class="sxs-lookup"><span data-stu-id="26f49-112">Description</span></span>|  
+|----------------------|---------------------------|-----------------|  
+|<span data-ttu-id="26f49-113">一般</span><span class="sxs-lookup"><span data-stu-id="26f49-113">Normal</span></span>|<span data-ttu-id="26f49-114">CommonStates</span><span class="sxs-lookup"><span data-stu-id="26f49-114">CommonStates</span></span>|<span data-ttu-id="26f49-115">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="26f49-115">The default state.</span></span>|  
+|<span data-ttu-id="26f49-116">MouseOver</span><span class="sxs-lookup"><span data-stu-id="26f49-116">MouseOver</span></span>|<span data-ttu-id="26f49-117">CommonStates</span><span class="sxs-lookup"><span data-stu-id="26f49-117">CommonStates</span></span>|<span data-ttu-id="26f49-118">滑鼠指標移到控制項上。</span><span class="sxs-lookup"><span data-stu-id="26f49-118">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="26f49-119">按下</span><span class="sxs-lookup"><span data-stu-id="26f49-119">Pressed</span></span>|<span data-ttu-id="26f49-120">CommonStates</span><span class="sxs-lookup"><span data-stu-id="26f49-120">CommonStates</span></span>|<span data-ttu-id="26f49-121">已按下控制項。</span><span class="sxs-lookup"><span data-stu-id="26f49-121">The control is pressed.</span></span>|  
+|<span data-ttu-id="26f49-122">已停用</span><span class="sxs-lookup"><span data-stu-id="26f49-122">Disabled</span></span>|<span data-ttu-id="26f49-123">CommonStates</span><span class="sxs-lookup"><span data-stu-id="26f49-123">CommonStates</span></span>|<span data-ttu-id="26f49-124">已停用控制項。</span><span class="sxs-lookup"><span data-stu-id="26f49-124">The control is disabled.</span></span>|  
+|<span data-ttu-id="26f49-125">已取得焦點</span><span class="sxs-lookup"><span data-stu-id="26f49-125">Focused</span></span>|<span data-ttu-id="26f49-126">FocusStates</span><span class="sxs-lookup"><span data-stu-id="26f49-126">FocusStates</span></span>|<span data-ttu-id="26f49-127">控制項已取得焦點。</span><span class="sxs-lookup"><span data-stu-id="26f49-127">The control has focus.</span></span>|  
+|<span data-ttu-id="26f49-128">未取得焦點</span><span class="sxs-lookup"><span data-stu-id="26f49-128">Unfocused</span></span>|<span data-ttu-id="26f49-129">FocusStates</span><span class="sxs-lookup"><span data-stu-id="26f49-129">FocusStates</span></span>|<span data-ttu-id="26f49-130">控制項未取得焦點。</span><span class="sxs-lookup"><span data-stu-id="26f49-130">The control does not have focus.</span></span>|  
+|<span data-ttu-id="26f49-131">已核取</span><span class="sxs-lookup"><span data-stu-id="26f49-131">Checked</span></span>|<span data-ttu-id="26f49-132">CheckStates</span><span class="sxs-lookup"><span data-stu-id="26f49-132">CheckStates</span></span>|<span data-ttu-id="26f49-133"><xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `true`。</span><span class="sxs-lookup"><span data-stu-id="26f49-133"><xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `true`.</span></span>|  
+|<span data-ttu-id="26f49-134">若未選取</span><span class="sxs-lookup"><span data-stu-id="26f49-134">Unchecked</span></span>|<span data-ttu-id="26f49-135">CheckStates</span><span class="sxs-lookup"><span data-stu-id="26f49-135">CheckStates</span></span>|<span data-ttu-id="26f49-136"><xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `false`。</span><span class="sxs-lookup"><span data-stu-id="26f49-136"><xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `false`.</span></span>|  
+|<span data-ttu-id="26f49-137">不定</span><span class="sxs-lookup"><span data-stu-id="26f49-137">Indeterminate</span></span>|<span data-ttu-id="26f49-138">CheckStates</span><span class="sxs-lookup"><span data-stu-id="26f49-138">CheckStates</span></span>|<span data-ttu-id="26f49-139"><xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>是`true`，和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>是`null`。</span><span class="sxs-lookup"><span data-stu-id="26f49-139"><xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> is `true`, and <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `null`.</span></span>|  
+|<span data-ttu-id="26f49-140">驗證</span><span class="sxs-lookup"><span data-stu-id="26f49-140">Valid</span></span>|<span data-ttu-id="26f49-141">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="26f49-141">ValidationStates</span></span>|<span data-ttu-id="26f49-142">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="26f49-142">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="26f49-143">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="26f49-143">InvalidUnfocused</span></span>|<span data-ttu-id="26f49-144">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="26f49-144">ValidationStates</span></span>|<span data-ttu-id="26f49-145"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="26f49-145">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="26f49-146">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="26f49-146">InvalidFocused</span></span>|<span data-ttu-id="26f49-147">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="26f49-147">ValidationStates</span></span>|<span data-ttu-id="26f49-148"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="26f49-148">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CheckBox ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.CheckBox> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="checkbox-controltemplate-example"></a><span data-ttu-id="26f49-149">核取方塊 ControlTemplate 範例</span><span class="sxs-lookup"><span data-stu-id="26f49-149">CheckBox ControlTemplate Example</span></span>  
+ <span data-ttu-id="26f49-150">下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.CheckBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="26f49-150">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.CheckBox> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#CheckBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/checkbox.xaml#checkbox)]  
+ [!code-xaml[ControlTemplateExamples#CheckBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/checkbox.xaml#checkbox)]  
   
- 前述範例使用了下列一或多項資源。  
+ <span data-ttu-id="26f49-151">上述範例使用下列一或多項資源。</span><span class="sxs-lookup"><span data-stu-id="26f49-151">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱          [使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="26f49-152">如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。</span><span class="sxs-lookup"><span data-stu-id="26f49-152">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="26f49-153">另請參閱</span><span class="sxs-lookup"><span data-stu-id="26f49-153">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="26f49-154">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="26f49-154">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="26f49-155">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="26f49-155">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="26f49-156">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="26f49-156">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="26f49-157">透過建立 ControlTemplate 自訂現有控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="26f49-157">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

@@ -1,89 +1,86 @@
 ---
-title: "WCF 服務發行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 服務發行"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1dd63ca472ef5ee9211a8a9a1fd19d983694b43f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 服務發行
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行可協助您從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端提供的早期開發環境，進入實際部署應用程式至實際執行環境進行測試。  在認可最後開發計畫之前，您可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行確認 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務正確執行，而且可開始發行。  您也可以選擇將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫部署到各種不同的目標位置進行測試。  
+# <a name="wcf-service-publishing"></a><span data-ttu-id="37a60-102">WCF 服務發行</span><span class="sxs-lookup"><span data-stu-id="37a60-102">WCF Service Publishing</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="37a60-103"> 服務發行可協助您從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端提供的早期開發環境，進入實際部署應用程式至實際執行環境進行測試。</span><span class="sxs-lookup"><span data-stu-id="37a60-103"> Service Publishing assists you in progressing from the early development environment provided by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host and [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client to actually deploying the application to a production environment for testing purposes.</span></span> <span data-ttu-id="37a60-104">在認可最後開發計畫之前，您可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行確認 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務正確執行，而且可開始發行。</span><span class="sxs-lookup"><span data-stu-id="37a60-104">Before you commit to a final deployment plan, you can use [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Publishing to verify that your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service performs correctly and is ready to be published.</span></span> <span data-ttu-id="37a60-105">您也可以選擇將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫部署到各種不同的目標位置進行測試。</span><span class="sxs-lookup"><span data-stu-id="37a60-105">You can also choose to deploy your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service libraries to various target locations for testing.</span></span>  
   
-## 支援的服務和目標位置  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行支援發行從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫範本集及其對應的項目範本建立的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，這些範本包括如下：  
+## <a name="supported-services-and-target-locations"></a><span data-ttu-id="37a60-106">支援的服務和目標位置</span><span class="sxs-lookup"><span data-stu-id="37a60-106">Supported Services and Target Locations</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="37a60-107"> 服務發行支援發行從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫範本集及其對應的項目範本建立的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，這些範本包括如下：</span><span class="sxs-lookup"><span data-stu-id="37a60-107"> Service Publishing supports publishing [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services created from the set of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library templates, and their corresponding item templates, which include the following:</span></span>  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫範本，包含項目範本。  
+-   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="37a60-108"> 服務程式庫範本，包含項目範本。</span><span class="sxs-lookup"><span data-stu-id="37a60-108"> Service Library template with item template.</span></span>  
   
--   循序工作流程服務程式庫範本，包含項目範本。  
+-   <span data-ttu-id="37a60-109">新聞訂閱服務程式庫。</span><span class="sxs-lookup"><span data-stu-id="37a60-109">Syndication Service Library.</span></span>  
   
--   狀態機器工作流程服務程式庫範本，包含項目範本。  
+ <span data-ttu-id="37a60-110">您可以找到這些服務範本選擇**檔案** -> **新專案** -> **Visual Basic**或**Visual C#**  ->  **WCF**。</span><span class="sxs-lookup"><span data-stu-id="37a60-110">You can find these service templates by choosing **File** -> **New Project** -> **Visual Basic** or **Visual C#** -> **WCF**.</span></span> <span data-ttu-id="37a60-111">在此位置 （包括 WCF 工作流程服務應用程式和 WCF 服務應用程式） 的其他 WCF 範本可以使用發行[單鍵發行 web 應用程式的](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx)。</span><span class="sxs-lookup"><span data-stu-id="37a60-111">For other WCF templates in this location (including WCF Workflow Service Application and WCF Service Application) you can publish using [One-Click publishing for web applications](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).</span></span>  
   
--   新聞訂閱服務程式庫。  
+ <span data-ttu-id="37a60-112">此服務可以發行至下列目標位置。</span><span class="sxs-lookup"><span data-stu-id="37a60-112">The service can be published to the following target locations.</span></span>  
   
- 選擇 \[檔案\] \-\> \[新增專案\] \-\> \[Visual Basic\] 或 \[Visual C\#\] \-\> \[WCF\]，便可找出這些範本。  
+-   <span data-ttu-id="37a60-113">本機 IIS。</span><span class="sxs-lookup"><span data-stu-id="37a60-113">Local IIS.</span></span>  
   
- 此服務可以發行至下列目標位置。  
+-   <span data-ttu-id="37a60-114">檔案系統。</span><span class="sxs-lookup"><span data-stu-id="37a60-114">File System.</span></span>  
   
--   本機 IIS。  
+-   <span data-ttu-id="37a60-115">FTP 站台。</span><span class="sxs-lookup"><span data-stu-id="37a60-115">FTP Site.</span></span>  
   
--   檔案系統。  
+## <a name="using-wcf-service-publishing"></a><span data-ttu-id="37a60-116">使用 WCF 服務發行</span><span class="sxs-lookup"><span data-stu-id="37a60-116">Using WCF Service Publishing</span></span>  
+ <span data-ttu-id="37a60-117">執行下列步驟，部署服務實作：</span><span class="sxs-lookup"><span data-stu-id="37a60-117">Perform the following steps to deploy a service implementation:</span></span>  
   
--   FTP 站台。  
+1.  <span data-ttu-id="37a60-118">開啟 Visual Studio 的提高權限 （以滑鼠右鍵按一下可執行檔並使用 「 系統管理員身分執行 」 來啟動它）。</span><span class="sxs-lookup"><span data-stu-id="37a60-118">Open Visual Studio with elevated privilege ( right-click the executable and use "Run as Administrator" to launch it).</span></span>  <span data-ttu-id="37a60-119">如果您使用的 IIS 7.0 或更新版本中，確定是否已安裝"IIS Metabase 及 iis 6 設定相容性 」 元件使用"' 開啟或關閉 Windows 功能 」 在控制台中。</span><span class="sxs-lookup"><span data-stu-id="37a60-119">If you are using IIS 7.0 or later, ensure that you have installed the "IIS Metabase and IIS6 Configuration Compatibility" component using "'Turn Windows features on or off" in Control Panel.</span></span>  
   
--   遠端站台。  
+2.  <span data-ttu-id="37a60-120">開啟服務專案中，選取**建置**->**發行\<專案名稱 >**從主功能表中的專案上按一下滑鼠右鍵或**方案總管 中**按一下**發行**。</span><span class="sxs-lookup"><span data-stu-id="37a60-120">Open a service project, select **Build**->**Publish \<Project Name>** from the main menu, or right-click the project in **Solution Explorer** and click **Publish**.</span></span>  
   
-## 使用 WCF 服務發行  
- 執行下列步驟，部署服務實作：  
+3.  <span data-ttu-id="37a60-121">**發行** 視窗隨即出現。</span><span class="sxs-lookup"><span data-stu-id="37a60-121">The **Publish** window appears.</span></span> <span data-ttu-id="37a60-122">按一下**...**.</span><span class="sxs-lookup"><span data-stu-id="37a60-122">Click the **…**.</span></span> <span data-ttu-id="37a60-123">按鈕，指定服務應部署至其中的目標位置。</span><span class="sxs-lookup"><span data-stu-id="37a60-123">button to specify the target location that the service should be deployed to.</span></span> <span data-ttu-id="37a60-124">您可以選取應用程式部署至本機 IIS、 檔案系統或 FTP 站台。</span><span class="sxs-lookup"><span data-stu-id="37a60-124">You can select to deploy the application to local IIS, File System, or FTP Site.</span></span> <span data-ttu-id="37a60-125">如果部署至本機 IIS 應用程式，您可以選取您的網站，並建立 web 應用程式在其下方，依序按一下**建立新的 Web 應用程式**在右上角的圖示。</span><span class="sxs-lookup"><span data-stu-id="37a60-125">If deploying the application to local IIS, you can select your website and create your web application under it, by clicking the **Create New Web Application** icon at the top right corner.</span></span>  
   
-1.  使用更高的權限來開啟 Visual Studio \(以滑鼠右鍵按一下可執行檔，然後使用 \[以系統管理員身分執行\] 來啟動它\)。  如果您使用的是 IIS 7.0 或更新版本，請使用 \[控制台\] 中的 \[開啟或關閉 Windows 功能\] 來確定是否已安裝「IIS Metabase 及 IIS 6 設定相容性」元件。  
+4.  <span data-ttu-id="37a60-126">按一下 之後**發行**在主視窗中，Visual Studio 應用程式部署至指定的目標位置和 Web.config、.svc 和組件檔案複製到目標目錄。</span><span class="sxs-lookup"><span data-stu-id="37a60-126">After you click **Publish** in the main window, Visual Studio deploys the application to the specified target location and copies the Web.config, .svc, and assembly files to the target directory.</span></span> <span data-ttu-id="37a60-127">。</span><span class="sxs-lookup"><span data-stu-id="37a60-127">.</span></span> <span data-ttu-id="37a60-128">.Svc 的名稱會是"ProjectName.ServiceName.svc"。</span><span class="sxs-lookup"><span data-stu-id="37a60-128">The name of .svc will be "ProjectName.ServiceName.svc".</span></span> <span data-ttu-id="37a60-129">已成功發行服務之後，您可以找到類似 「 正在連接至超連結"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName...」 的 Visual Studio 輸出 視窗中。</span><span class="sxs-lookup"><span data-stu-id="37a60-129">After the service is published successfully, you can find a hotlink in the Visual Studio Output window, which looks similar to "Connecting to  HYPERLINK "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...".</span></span> <span data-ttu-id="37a60-130">您可以按下 CTRL，然後按一下此連結，以便在 Visual Studio 內部開啟瀏覽器頁面來檢視服務目錄結構。</span><span class="sxs-lookup"><span data-stu-id="37a60-130">You can press CTRL and click the link to open a browser page inside Visual Studio to view the service directory structure.</span></span>  
   
-2.  開啟服務專案，從主功能表選取 \[建置\] \-\> \[發行 \<專案名稱\>\]，或以滑鼠右鍵按一下 \[方案總管\] 中的專案，然後按一下 \[發行\]。  
+     <span data-ttu-id="37a60-131">如果您無法瀏覽至網站，可能是因為 IIS 沒有啟用目錄瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="37a60-131">If you cannot browse to the site, it may because directory browser is not enabled in IIS.</span></span> <span data-ttu-id="37a60-132">請依照提示 」 項目可以嘗試 」 區段中要加以啟用。</span><span class="sxs-lookup"><span data-stu-id="37a60-132">Please follow the tips in the "Things you can try" section to enable it.</span></span> <span data-ttu-id="37a60-133">或者，您可以直接輸入 」 超連結"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc"來檢視您的服務頁面。</span><span class="sxs-lookup"><span data-stu-id="37a60-133">Alternatively, you can directly type" HYPERLINK "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" to view your service page.</span></span>  
   
-3.  \[**發行**\] 視窗隨即出現。  按一下 **…** 按鈕，指定服務應部署至其中的目標位置。  您可以選擇將應用程式部署到本機 IIS、檔案系統、FTP 站台或遠端站台。  如果您要將應用程式部署至本機 IIS，可以選取您的網站，然後按一下位於右上角的 \[**建立新 Web 應用程式**\] 圖示，藉以建立 Web 應用程式。  
+ <span data-ttu-id="37a60-134">您可以使用**發行**指定是否您想要複製的組件、 組態和目標位置，專案中定義之所有服務的.svc 檔案，並覆寫現有目的地檔案。</span><span class="sxs-lookup"><span data-stu-id="37a60-134">You can use **Publish** to specify if you want to copy the assembly, configuration, and .svc file for all services defined in the project to the target location, and overwrite existing files at the destination.</span></span>  
   
-4.  按一下主視窗中的 \[**發行**\] 後，Visual Studio 會將應用程式部署至指定的目標位置，並且將 Web.config、.svc 和組件檔複製到目標目錄。  .  .svc 的名稱就是 “ProjectName.ServiceName.svc”。  成功發行服務之後，您就可以在 \[Visual Studio 輸出\] 視窗中找到類似「正在連接到 http:\/\/localhost\/WebApplicationFolderName ...」的熱連結。  您可以按下 CTRL，然後按一下此連結，以便在 Visual Studio 內部開啟瀏覽器頁面來檢視服務目錄結構。  
+ <span data-ttu-id="37a60-135">如果您選擇將應用程式部署至本機 IIS，可能會遇到有關 IIS 安裝程式的錯誤。</span><span class="sxs-lookup"><span data-stu-id="37a60-135">If you choose to deploy your application to local IIS, you may encounter errors related to IIS setup.</span></span> <span data-ttu-id="37a60-136">請確定 IIS 已正確安裝。</span><span class="sxs-lookup"><span data-stu-id="37a60-136">Please ensure that IIS is installed properly.</span></span> <span data-ttu-id="37a60-137">您可以在您的瀏覽器中輸入"超連結"http://localhost"http://localhost"，並檢查是否顯示 IIS 預設頁面。</span><span class="sxs-lookup"><span data-stu-id="37a60-137">You can type " HYPERLINK "http://localhost" http://localhost" in your browser and check whether the IIS default page is showing up.</span></span>  <span data-ttu-id="37a60-138">在某些情況下，IIS 中註冊不當的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 可能也會導致這些問題。</span><span class="sxs-lookup"><span data-stu-id="37a60-138">In some cases, the issues may also be caused by ASP.NET or [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] improper registration in IIS.</span></span> <span data-ttu-id="37a60-139">您可以開啟 Visual Studio 命令提示字元並執行命令"aspnet_regiis.exe-ir"來修正 ASP.NET 註冊問題，或執行"ServiceModelReg.exe – ia"命令來修正 WCF 註冊問題。</span><span class="sxs-lookup"><span data-stu-id="37a60-139">You can open the Visual Studio Command Prompt and run the command "aspnet_regiis.exe -ir" to fix ASP.NET registration issues, or run command "ServiceModelReg.exe –ia" to fix WCF registration issues.</span></span>  
   
-     如果您無法瀏覽至網站，可能是因為 IIS 沒有啟用目錄瀏覽器。  請遵循＜您可以嘗試的事項＞一節中的提示進行，以便啟用此功能。  或者，您也可以直接輸入 “http:\/\/localhost\/WebApplicationFolderName\/ProjectName.ServiceName.svc” 來檢視服務頁面。  
+## <a name="files-generated-for-publishing"></a><span data-ttu-id="37a60-140">針對發行產生的檔案</span><span class="sxs-lookup"><span data-stu-id="37a60-140">Files Generated for Publishing</span></span>  
+ <span data-ttu-id="37a60-141">此工具會先產生組件檔、Web.config 檔和 .svc 檔等檔案，才能使 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫成為 Web 裝載。</span><span class="sxs-lookup"><span data-stu-id="37a60-141">Before a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library can be Web-hosted, the following files are generated by the tool: assembly files, Web.config file, and .svc file.</span></span> <span data-ttu-id="37a60-142">所有檔案都會複製到目標位置。</span><span class="sxs-lookup"><span data-stu-id="37a60-142">All the files are copied to the target location.</span></span> <span data-ttu-id="37a60-143">接著便會發行服務。</span><span class="sxs-lookup"><span data-stu-id="37a60-143">The service is then published.</span></span>  
   
- 您可以使用 \[**發行**\]，指定是否要將專案中所定義之所有服務的組件、組態和 .svc 檔案複製到目標位置，以及是否要覆寫目的地的現有檔案。  
+### <a name="assembly-files"></a><span data-ttu-id="37a60-144">組件檔</span><span class="sxs-lookup"><span data-stu-id="37a60-144">Assembly files</span></span>  
+ <span data-ttu-id="37a60-145">當您使用這個工具發行 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務時，服務會先自動建置，而組件檔會在建置之後於服務專案中產生。</span><span class="sxs-lookup"><span data-stu-id="37a60-145">When you publish a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service using this tool, the service is automatically built first and the assembly files are generated in the service project after building.</span></span>  
   
- 如果您選擇將應用程式部署至本機 IIS，可能會遇到有關 IIS 安裝程式的錯誤。  請確定 IIS 已正確安裝。  您可以在瀏覽器中輸入 “http:\/\/localhost”，然後檢查是否顯示 IIS 預設頁面。  在某些情況下，IIS 中註冊不當的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 可能也會導致這些問題。  您可以開啟 Visual Studio 命令提示字元，然後執行 “aspnet\_regiis.exe \-ir” 命令來修正 ASP.NET 註冊問題，或執行 “ServiceModelReg.exe –ia” 命令來修正 WCF 註冊問題。  
+### <a name="svc-file"></a><span data-ttu-id="37a60-146">.SVC 檔案</span><span class="sxs-lookup"><span data-stu-id="37a60-146">.SVC File</span></span>  
+ <span data-ttu-id="37a60-147">發行作業會為每個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務產生 *.svc 檔 (無論檔案是否存在)，確保版本有效。</span><span class="sxs-lookup"><span data-stu-id="37a60-147">The publishing operation generates a *.svc file for each [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service, whether the file exists or not, to ensure version validity.</span></span> <span data-ttu-id="37a60-148">svc 檔有兩種不同的版本：一種用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫和新聞訂閱服務程式庫，另一種用於循序和狀態機器工作流程服務程式庫。</span><span class="sxs-lookup"><span data-stu-id="37a60-148">There are two different kinds of svc files: one for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library and Syndication Service Library, and another one for Sequential and State Machine Workflow Service Library.</span></span> <span data-ttu-id="37a60-149">產生\*.svc 檔案會複製到目標位置中的根資料夾。</span><span class="sxs-lookup"><span data-stu-id="37a60-149">The generated \*.svc file is copied to the root folder in the target location.</span></span>  
   
-## 針對發行產生的檔案  
- 此工具會先產生組件檔、Web.config 檔和 .svc 檔等檔案，才能使 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫成為 Web 裝載。  所有檔案都會複製到目標位置。  接著便會發行服務。  
+### <a name="webconfig-file"></a><span data-ttu-id="37a60-150">Web.config 檔</span><span class="sxs-lookup"><span data-stu-id="37a60-150">Web.config File</span></span>  
+ <span data-ttu-id="37a60-151">每次服務專案發行到特定目標位置時，都會建立 Web.config 檔。</span><span class="sxs-lookup"><span data-stu-id="37a60-151">Each time a service project is published to a specific target location, a Web.config file is created.</span></span>  
   
-### 組件檔  
- 當您使用這個工具發行 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務時，服務會先自動建置，而組件檔會在建置之後於服務專案中產生。  
+ <span data-ttu-id="37a60-152">產生的 Web.config 檔包括可用於 Web 裝載的 Web 區段，以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫的 App.config 內容，其中包含下列變更：</span><span class="sxs-lookup"><span data-stu-id="37a60-152">The generated Web.config file includes Web sections that are useful for Web hosting, and the content of App.config for the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library with the following changes:</span></span>  
   
-### .SVC 檔案  
- 發行作業會為每個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務產生 \*.svc 檔 \(無論檔案是否存在\)，確保版本有效。  svc 檔有兩種不同的版本：一種用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫和新聞訂閱服務程式庫，另一種用於循序和狀態機器工作流程服務程式庫。  產生的 \*.svc 檔會複製到目標位置的根資料夾。  
+-   <span data-ttu-id="37a60-153">已排除基底位址 (Base Address)。</span><span class="sxs-lookup"><span data-stu-id="37a60-153">The base address is excluded.</span></span>  
   
-### Web.config 檔  
- 每次服務專案發行到特定目標位置時，都會建立 Web.config 檔。  
+-   <span data-ttu-id="37a60-154">已排除 `<diagnostics>` 項目中的設定，以保留目標平台的追蹤設定。</span><span class="sxs-lookup"><span data-stu-id="37a60-154">Settings in the `<diagnostics>` element are excluded to preserve the tracing settings of the target platform.</span></span>  
   
- 產生的 Web.config 檔包括可用於 Web 裝載的 Web 區段，以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫的 App.config 內容，其中包含下列變更：  
+## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a><span data-ttu-id="37a60-155">將包含非 HTTP 繫結的 WCF 服務發行至 IIS</span><span class="sxs-lookup"><span data-stu-id="37a60-155">Publishing WCF services with non-HTTP Bindings to IIS</span></span>  
+ <span data-ttu-id="37a60-156">如果您使用的是 IIS7.0 或更新版本，就可以將包含非 HTTP 繫結的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行至 IIS。</span><span class="sxs-lookup"><span data-stu-id="37a60-156">If you are using IIS7.0 or later, you can publish [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services with non-HTTP bindings to IIS.</span></span> <span data-ttu-id="37a60-157">不過，您必須進行一些預先組態設定。</span><span class="sxs-lookup"><span data-stu-id="37a60-157">You need to do some pre-configurations.</span></span> <span data-ttu-id="37a60-158">如需詳細資訊，請參閱主題[Windows Process Activation Service 中裝載](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。</span><span class="sxs-lookup"><span data-stu-id="37a60-158">For more information, please see the topics at  [Hosting in Windows Process Activation Service](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).</span></span>  
   
--   已排除基底位址 \(Base Address\)。  
+## <a name="security"></a><span data-ttu-id="37a60-159">安全性</span><span class="sxs-lookup"><span data-stu-id="37a60-159">Security</span></span>  
+ <span data-ttu-id="37a60-160">發行到本機 IIS 時需要具有系統管理員權限，因為 IIS 需要使用 Administrator 帳戶執行。</span><span class="sxs-lookup"><span data-stu-id="37a60-160">Publishing to local IIS requires administrator privilege, because IIS requires running in Administrator account.</span></span> <span data-ttu-id="37a60-161">如果由不具系統管理員權限的使用者開啟 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行，IIS 就不能做為目標位置使用。</span><span class="sxs-lookup"><span data-stu-id="37a60-161">If a user without administrator privilege opens [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Publishing, IIS is not available as a target location.</span></span> <span data-ttu-id="37a60-162">發行至檔案系統或 FTP 站台的運作方式沒有系統管理員權限。</span><span class="sxs-lookup"><span data-stu-id="37a60-162">Publishing to File System, or FTP Site works without administrator privilege.</span></span>  
   
--   已排除 `<diagnostics>` 項目中的設定，以保留目標平台的追蹤設定。  
-  
-## 將包含非 HTTP 繫結的 WCF 服務發行至 IIS  
- 如果您使用的是 IIS7.0 或更新版本，就可以將包含非 HTTP 繫結的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行至 IIS。  不過，您必須進行一些預先組態設定。  如需詳細資訊，請參閱 [在 Windows Process Activation Service 中裝載](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md) 中的主題。  
-  
-## 安全性  
- 發行到本機 IIS 時需要具有系統管理員權限，因為 IIS 需要使用 Administrator 帳戶執行。  如果由不具系統管理員權限的使用者開啟 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行，IIS 就不能做為目標位置使用。  發行至檔案系統、FTP 站台或遠端站台時，則可以在未具備系統管理員權限的情況下進行。  
-  
-## 請參閱  
- [WCF Visual Studio 範本](../../../docs/framework/wcf/wcf-vs-templates.md)   
- [WCF 服務主機 \(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)   
- [WCF 測試用戶端 \(WcfTestClient.exe\)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a><span data-ttu-id="37a60-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37a60-163">See Also</span></span>  
+ [<span data-ttu-id="37a60-164">WCF Visual Studio 範本</span><span class="sxs-lookup"><span data-stu-id="37a60-164">WCF Visual Studio Templates</span></span>](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [<span data-ttu-id="37a60-165">WCF 服務主機 (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="37a60-165">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [<span data-ttu-id="37a60-166">WCF 測試用戶端 (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="37a60-166">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

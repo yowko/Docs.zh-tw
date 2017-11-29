@@ -1,52 +1,44 @@
 ---
-title: "如何︰ 使用 Task.WhenAll (Visual Basic) 來擴充非同步逐步解說 |Microsoft 文件"
+title: "如何： 使用 Task.WhenAll (Visual Basic) 擴充非同步逐步解說"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 46c5cb9328f2fa1a4ffc5116d318bc3286419e13
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 49cca45336cb25850c888e3389e97b323c70d89d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何︰ 使用 Task.WhenAll (Visual Basic) 來擴充非同步逐步解說
-您可以改善效能的非同步方案中[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>方法。</xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 這個方法以非同步方式等候多個非同步作業，表示為工作的集合。  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a><span data-ttu-id="96ec6-102">如何： 使用 Task.WhenAll (Visual Basic) 擴充非同步逐步解說</span><span class="sxs-lookup"><span data-stu-id="96ec6-102">How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)</span></span>
+<span data-ttu-id="96ec6-103">您可以改善效能中的非同步方案[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="96ec6-103">You can improve the performance of the async solution in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) by using the <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="96ec6-104">此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。</span><span class="sxs-lookup"><span data-stu-id="96ec6-104">This method asynchronously awaits multiple asynchronous operations, which are represented as a collection of tasks.</span></span>  
   
- 您可能已經注意到在這個逐步解說的網站下載不同的速率。 有時網站是非常緩慢，這會延遲所有剩餘的下載。 當您執行您建置的非同步方案逐步解說中，您可以結束程式輕鬆地如果不想等待，但更好的選項會啟動一次的所有下載並讓更快下載繼續而不需等待的延遲。  
+ <span data-ttu-id="96ec6-105">您在此逐步解說中可能已注意到網站下載的速度各自不同。</span><span class="sxs-lookup"><span data-stu-id="96ec6-105">You might have noticed in the walkthrough that the websites download at different rates.</span></span> <span data-ttu-id="96ec6-106">有時其中一個網站的速度很慢，而導致所有其餘下載延後執行。</span><span class="sxs-lookup"><span data-stu-id="96ec6-106">Sometimes one of the websites is very slow, which delays all the remaining downloads.</span></span> <span data-ttu-id="96ec6-107">當您執行在此逐步解說中建立的非同步方案時，如果不想要等候，您可以輕鬆地結束程式；但更好的做法是同時啟動所有下載，並讓較快的下載繼續執行而不等候延遲的下載。</span><span class="sxs-lookup"><span data-stu-id="96ec6-107">When you run the asynchronous solutions that you build in the walkthrough, you can end the program easily if you don't want to wait, but a better option would be to start all the downloads at the same time and let faster downloads continue without waiting for the one that’s delayed.</span></span>  
   
- 您套用`Task.WhenAll`的工作集合的方法。 應用程式的`WhenAll`傳回集合中的每項工作完成之前未完成的單一工作。 若要平行執行，就會出現的工作，但沒有其他執行緒會建立。 工作可以依任何順序完成。  
+ <span data-ttu-id="96ec6-108">您可以將 `Task.WhenAll` 方法套用至工作集合。</span><span class="sxs-lookup"><span data-stu-id="96ec6-108">You apply the `Task.WhenAll` method to a collection of tasks.</span></span> <span data-ttu-id="96ec6-109">套用 `WhenAll` 會傳回未完成的單一工作，直到集合中的所有工作都完成為止。</span><span class="sxs-lookup"><span data-stu-id="96ec6-109">The application of `WhenAll` returns a single task that isn’t complete until every task in the collection is completed.</span></span> <span data-ttu-id="96ec6-110">工作似乎會平行執行，但不會建立其他任何執行緒。</span><span class="sxs-lookup"><span data-stu-id="96ec6-110">The tasks appear to run in parallel, but no additional threads are created.</span></span> <span data-ttu-id="96ec6-111">工作可以依任何順序完成。</span><span class="sxs-lookup"><span data-stu-id="96ec6-111">The tasks can complete in any order.</span></span>  
   
 > [!IMPORTANT]
->  下列程序說明中的非同步應用程式的擴充功能[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以開發應用程式以完成這個逐步解說，或下載的程式碼來[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)。  
+>  <span data-ttu-id="96ec6-112">下列程序描述擴充功能的非同步應用程式都是以開發[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。</span><span class="sxs-lookup"><span data-stu-id="96ec6-112">The following procedures describe extensions to the async applications that are developed in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="96ec6-113">您可以藉由完成此逐步解說，或從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)下載程式碼，來開發應用程式。</span><span class="sxs-lookup"><span data-stu-id="96ec6-113">You can develop the applications by either completing the walkthrough or downloading the code from [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191).</span></span>  
 >   
->  若要執行此範例，您必須安裝 Visual Studio 2012 或更新版本安裝在電腦上。  
+>  <span data-ttu-id="96ec6-114">若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="96ec6-114">To run the example, you must have Visual Studio 2012 or later installed on your computer.</span></span>  
   
-### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>若要新增 Task.WhenAll GetURLContentsAsync 解決方案  
+### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a><span data-ttu-id="96ec6-115">將 Task.WhenAll 新增至您的 GetURLContentsAsync 方案</span><span class="sxs-lookup"><span data-stu-id="96ec6-115">To add Task.WhenAll to your GetURLContentsAsync solution</span></span>  
   
-1.  新增`ProcessURLAsync`開發中的第一個應用程式的方法[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1.  <span data-ttu-id="96ec6-116">新增`ProcessURLAsync`開發中的第一個應用程式的方法[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。</span><span class="sxs-lookup"><span data-stu-id="96ec6-116">Add the `ProcessURLAsync` method to the first application that's developed in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
   
-    -   如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)，開啟 AsyncWalkthrough 專案，然後再新增`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
+    -   <span data-ttu-id="96ec6-117">如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)、 開啟 AsyncWalkthrough 專案，然後再將`ProcessURLAsync`MainWindow.xaml.vb 檔案。</span><span class="sxs-lookup"><span data-stu-id="96ec6-117">If you downloaded the code from  [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191), open the AsyncWalkthrough project, and then add `ProcessURLAsync` to the MainWindow.xaml.vb file.</span></span>  
   
-    -   如果您完成逐步解說開發的程式碼，加入`ProcessURLAsync`應用程式，其中包含`GetURLContentsAsync`方法。 此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節的第一個範例。  
+    -   <span data-ttu-id="96ec6-118">如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至包含 `GetURLContentsAsync` 方法的應用程式。</span><span class="sxs-lookup"><span data-stu-id="96ec6-118">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that includes the `GetURLContentsAsync` method.</span></span> <span data-ttu-id="96ec6-119">此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節中的第一個範例。</span><span class="sxs-lookup"><span data-stu-id="96ec6-119">The MainWindow.xaml.vb file for this application is the first example in the "Complete Code Examples from the Walkthrough" section.</span></span>  
   
-     `ProcessURLAsync`方法會彙總的主體中的動作`For Each`迴圈`SumPageSizesAsync`在原始的逐步解說。 此方法以非同步方式為位元組陣列，指定網站的內容下載然後並顯示傳回的位元組陣列的長度。  
+     <span data-ttu-id="96ec6-120">`ProcessURLAsync` 方法會合併原始逐步解說中 `SumPageSizesAsync` 之 `For Each` 迴圈主體內的動作。</span><span class="sxs-lookup"><span data-stu-id="96ec6-120">The `ProcessURLAsync` method consolidates the actions in the body of the `For Each` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="96ec6-121">此方法會以非同步方式將指定網站的內容下載為位元組陣列，然後顯示並傳回位元組陣列的長度。</span><span class="sxs-lookup"><span data-stu-id="96ec6-121">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String) As Task(Of Integer)  
@@ -57,7 +49,7 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-2.  註解化或刪除`For Each`迴圈`SumPageSizesAsync`，如下列程式碼所示。  
+2.  <span data-ttu-id="96ec6-122">將 `SumPageSizesAsync` 中的 `For Each` 迴圈註解化或刪除，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="96ec6-122">Comment out or delete the `For Each` loop in `SumPageSizesAsync`, as the following code shows.</span></span>  
   
     ```vb  
     'Dim total = 0  
@@ -79,9 +71,9 @@ ms.lasthandoff: 03/13/2017
     'Next  
     ```  
   
-3.  建立工作的集合。 下列程式碼定義[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，程式執行時<xref:System.Linq.Enumerable.ToArray%2A>方法建立的每個網站的內容下載工作的集合。</xref:System.Linq.Enumerable.ToArray%2A> 當評估查詢時，會啟動工作。  
+3.  <span data-ttu-id="96ec6-123">建立工作集合。</span><span class="sxs-lookup"><span data-stu-id="96ec6-123">Create a collection of tasks.</span></span> <span data-ttu-id="96ec6-124">下列程式碼定義一個[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。</span><span class="sxs-lookup"><span data-stu-id="96ec6-124">The following code defines a [query](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="96ec6-125">工作會在評估查詢之後啟動。</span><span class="sxs-lookup"><span data-stu-id="96ec6-125">The tasks are started when the query is evaluated.</span></span>  
   
-     將下列程式碼加入至方法`SumPageSizesAsync`宣告後`urlList`。  
+     <span data-ttu-id="96ec6-126">將下列程式碼新增至 `urlList` 宣告後面的 `SumPageSizesAsync` 方法。</span><span class="sxs-lookup"><span data-stu-id="96ec6-126">Add the following code to method `SumPageSizesAsync` after the declaration of `urlList`.</span></span>  
   
     ```vb  
     ' Create a query.   
@@ -92,9 +84,9 @@ ms.lasthandoff: 03/13/2017
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  套用`Task.WhenAll`至集合的工作， `downloadTasks`。 `Task.WhenAll`傳回已完成的工作集合中的所有工作完成的單一工作。  
+4.  <span data-ttu-id="96ec6-127">將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。</span><span class="sxs-lookup"><span data-stu-id="96ec6-127">Apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="96ec6-128">`Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。</span><span class="sxs-lookup"><span data-stu-id="96ec6-128">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>  
   
-     在下列範例中，`Await`運算式等候完成的單一工作`WhenAll`傳回。 運算式評估為整數，其中每個整數是下載網站的長度的陣列。 加入下列程式碼以`SumPageSizesAsync`，只是您在上一個步驟中加入的程式碼後面。  
+     <span data-ttu-id="96ec6-129">在下列範例中，`Await` 運算式會等候 `WhenAll` 傳回的單一工作完成。</span><span class="sxs-lookup"><span data-stu-id="96ec6-129">In the following example, the `Await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="96ec6-130">此運算式會評估為整數陣列，其中每個整數都是所下載網站的長度。</span><span class="sxs-lookup"><span data-stu-id="96ec6-130">The expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="96ec6-131">將下列程式碼新增至 `SumPageSizesAsync`，就在您於上一個步驟中新增的程式碼之後。</span><span class="sxs-lookup"><span data-stu-id="96ec6-131">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -105,23 +97,23 @@ ms.lasthandoff: 03/13/2017
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  最後，使用<xref:System.Linq.Enumerable.Sum%2A>方法，以計算所有網站的長度總和。</xref:System.Linq.Enumerable.Sum%2A> 將下列行加入`SumPageSizesAsync`。  
+5.  <span data-ttu-id="96ec6-132">最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法來計算所有網站的長度總和。</span><span class="sxs-lookup"><span data-stu-id="96ec6-132">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to calculate the sum of the lengths of all the websites.</span></span> <span data-ttu-id="96ec6-133">將下列程式碼行新增至 `SumPageSizesAsync`。</span><span class="sxs-lookup"><span data-stu-id="96ec6-133">Add the following line to `SumPageSizesAsync`.</span></span>  
   
     ```vb  
     Dim total = lengths.Sum()  
     ```  
   
-### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>若要新增 Task.WhenAll HttpClient.GetByteArrayAsync 解決方案  
+### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a><span data-ttu-id="96ec6-134">將 Task.WhenAll 新增至 HttpClient.GetByteArrayAsync 方案</span><span class="sxs-lookup"><span data-stu-id="96ec6-134">To add Task.WhenAll to the HttpClient.GetByteArrayAsync solution</span></span>  
   
-1.  加入下列版本`ProcessURLAsync`開發中的第二個應用程式[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1.  <span data-ttu-id="96ec6-135">加入下列版本`ProcessURLAsync`開發中的第二個應用程式[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。</span><span class="sxs-lookup"><span data-stu-id="96ec6-135">Add the following version of `ProcessURLAsync` to the second application that's developed in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
   
-    -   如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)，開啟 AsyncWalkthrough_HttpClient 專案，然後再新增`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
+    -   <span data-ttu-id="96ec6-136">如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)、 開啟位於 AsyncWalkthrough_HttpClient 專案，然後再將`ProcessURLAsync`MainWindow.xaml.vb 檔案。</span><span class="sxs-lookup"><span data-stu-id="96ec6-136">If you downloaded the code from [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191), open the AsyncWalkthrough_HttpClient project, and then add `ProcessURLAsync` to the MainWindow.xaml.vb file.</span></span>  
   
-    -   如果您完成逐步解說開發的程式碼，加入`ProcessURLAsync`應用程式使用`HttpClient.GetByteArrayAsync`方法。 此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節中的第二個範例。  
+    -   <span data-ttu-id="96ec6-137">如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至使用 `HttpClient.GetByteArrayAsync` 方法的應用程式。</span><span class="sxs-lookup"><span data-stu-id="96ec6-137">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that uses the `HttpClient.GetByteArrayAsync` method.</span></span> <span data-ttu-id="96ec6-138">此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節中的第二個範例。</span><span class="sxs-lookup"><span data-stu-id="96ec6-138">The MainWindow.xaml.vb file for this application is the second example in the "Complete Code Examples from the Walkthrough" section.</span></span>  
   
-     `ProcessURLAsync`方法會彙總的主體中的動作`For Each`迴圈`SumPageSizesAsync`在原始的逐步解說。 此方法以非同步方式為位元組陣列，指定網站的內容下載然後並顯示傳回的位元組陣列的長度。  
+     <span data-ttu-id="96ec6-139">`ProcessURLAsync` 方法會合併原始逐步解說中 `SumPageSizesAsync` 之 `For Each` 迴圈主體內的動作。</span><span class="sxs-lookup"><span data-stu-id="96ec6-139">The `ProcessURLAsync` method consolidates the actions in the body of the `For Each` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="96ec6-140">此方法會以非同步方式將指定網站的內容下載為位元組陣列，然後顯示並傳回位元組陣列的長度。</span><span class="sxs-lookup"><span data-stu-id="96ec6-140">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>  
   
-     唯一差別`ProcessURLAsync`在先前程序中的方法是使用<xref:System.Net.Http.HttpClient>執行個體， `client`。</xref:System.Net.Http.HttpClient>  
+     <span data-ttu-id="96ec6-141">其與上一個步驟中 `ProcessURLAsync` 方法的唯一差別，在於使用了 <xref:System.Net.Http.HttpClient> 執行個體 `client`。</span><span class="sxs-lookup"><span data-stu-id="96ec6-141">The only difference from the `ProcessURLAsync` method in the previous procedure is the use of the <xref:System.Net.Http.HttpClient> instance, `client`.</span></span>  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -132,7 +124,7 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-2.  註解化或刪除`For Each`迴圈`SumPageSizesAsync`，如下列程式碼所示。  
+2.  <span data-ttu-id="96ec6-142">將 `SumPageSizesAsync` 中的 `For Each` 迴圈註解化或刪除，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="96ec6-142">Comment out or delete the `For Each` loop in `SumPageSizesAsync`, as the following code shows.</span></span>  
   
     ```vb  
     'Dim total = 0   
@@ -150,12 +142,11 @@ ms.lasthandoff: 03/13/2017
     '    ' Update the total.   
     '    total += urlContents.Length   
     'Next  
-  
     ```  
   
-3.  定義[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，程式執行時<xref:System.Linq.Enumerable.ToArray%2A>方法建立的每個網站的內容下載工作的集合。</xref:System.Linq.Enumerable.ToArray%2A> 當評估查詢時，會啟動工作。  
+3.  <span data-ttu-id="96ec6-143">定義一個[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。</span><span class="sxs-lookup"><span data-stu-id="96ec6-143">Define a [query](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="96ec6-144">工作會在評估查詢之後啟動。</span><span class="sxs-lookup"><span data-stu-id="96ec6-144">The tasks are started when the query is evaluated.</span></span>  
   
-     將下列程式碼加入至方法`SumPageSizesAsync`宣告後`client`和`urlList`。  
+     <span data-ttu-id="96ec6-145">將下列程式碼新增至 `client` 和 `urlList` 宣告後面的 `SumPageSizesAsync` 方法。</span><span class="sxs-lookup"><span data-stu-id="96ec6-145">Add the following code to method `SumPageSizesAsync` after the declaration of `client` and `urlList`.</span></span>  
   
     ```vb  
     ' Create a query.  
@@ -166,9 +157,9 @@ ms.lasthandoff: 03/13/2017
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  接下來，套用`Task.WhenAll`至集合的工作， `downloadTasks`。 `Task.WhenAll`傳回已完成的工作集合中的所有工作完成的單一工作。  
+4.  <span data-ttu-id="96ec6-146">接下來，將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。</span><span class="sxs-lookup"><span data-stu-id="96ec6-146">Next, apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="96ec6-147">`Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。</span><span class="sxs-lookup"><span data-stu-id="96ec6-147">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>  
   
-     在下列範例中，`Await`運算式等候完成的單一工作`WhenAll`傳回。 完成時，`Await`運算式評估為整數，其中每個整數是下載網站的長度的陣列。 加入下列程式碼以`SumPageSizesAsync`，只是您在上一個步驟中加入的程式碼後面。  
+     <span data-ttu-id="96ec6-148">在下列範例中，`Await` 運算式會等候 `WhenAll` 傳回的單一工作完成。</span><span class="sxs-lookup"><span data-stu-id="96ec6-148">In the following example, the `Await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="96ec6-149">完成時，`Await` 運算式會評估為整數陣列，其中每個整數都是所下載網站的長度。</span><span class="sxs-lookup"><span data-stu-id="96ec6-149">When complete, the `Await` expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="96ec6-150">將下列程式碼新增至 `SumPageSizesAsync`，就在您於上一個步驟中新增的程式碼之後。</span><span class="sxs-lookup"><span data-stu-id="96ec6-150">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -179,18 +170,18 @@ ms.lasthandoff: 03/13/2017
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  最後，使用<xref:System.Linq.Enumerable.Sum%2A>方法來取得所有網站的長度總和。</xref:System.Linq.Enumerable.Sum%2A> 將下列行加入`SumPageSizesAsync`。  
+5.  <span data-ttu-id="96ec6-151">最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法取得所有網站的長度總和。</span><span class="sxs-lookup"><span data-stu-id="96ec6-151">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to get the sum of the lengths of all the websites.</span></span> <span data-ttu-id="96ec6-152">將下列程式碼行新增至 `SumPageSizesAsync`。</span><span class="sxs-lookup"><span data-stu-id="96ec6-152">Add the following line to `SumPageSizesAsync`.</span></span>  
   
     ```vb  
     Dim total = lengths.Sum()  
     ```  
   
-### <a name="to-test-the-taskwhenall-solutions"></a>若要測試 Task.WhenAll 解決方案  
+### <a name="to-test-the-taskwhenall-solutions"></a><span data-ttu-id="96ec6-153">測試 Task.WhenAll 方案</span><span class="sxs-lookup"><span data-stu-id="96ec6-153">To test the Task.WhenAll solutions</span></span>  
   
--   其中一個解決方案中，選擇 F5 鍵以執行程式，然後選擇**啟動** 按鈕。 輸出應該類似的輸出中的非同步方案[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 但是請注意，網站會出現在不同的順序每次。  
+-   <span data-ttu-id="96ec6-154">針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="96ec6-154">For either solution, choose the F5 key to run the program, and then choose the **Start** button.</span></span> <span data-ttu-id="96ec6-155">輸出看起來應該像中的非同步方案的輸出[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。</span><span class="sxs-lookup"><span data-stu-id="96ec6-155">The output should resemble the output from the async solutions in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="96ec6-156">不過請注意，網站每次出現的順序都不同。</span><span class="sxs-lookup"><span data-stu-id="96ec6-156">However, notice that the websites appear in a different order each time.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼顯示使用專案的擴充`GetURLContentsAsync`方法，從 web 下載內容。  
+## <a name="example"></a><span data-ttu-id="96ec6-157">範例</span><span class="sxs-lookup"><span data-stu-id="96ec6-157">Example</span></span>  
+ <span data-ttu-id="96ec6-158">下列程式碼顯示專案擴充，其使用 `GetURLContentsAsync` 方法從 Web 下載內容。</span><span class="sxs-lookup"><span data-stu-id="96ec6-158">The following code shows the extensions to the project that uses the `GetURLContentsAsync` method to download content from the web.</span></span>  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -322,8 +313,8 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="example"></a>範例  
- 下列程式碼顯示擴充方法會使用專案`HttpClient.GetByteArrayAsync`從 web 下載內容。  
+## <a name="example"></a><span data-ttu-id="96ec6-159">範例</span><span class="sxs-lookup"><span data-stu-id="96ec6-159">Example</span></span>  
+ <span data-ttu-id="96ec6-160">下列程式碼顯示專案擴充，其使用 `HttpClient.GetByteArrayAsync` 方法從 Web 下載內容。</span><span class="sxs-lookup"><span data-stu-id="96ec6-160">The following code shows the extensions to the project that uses method `HttpClient.GetByteArrayAsync` to download content from the web.</span></span>  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -437,6 +428,6 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName></xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
- [逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a><span data-ttu-id="96ec6-161">另請參閱</span><span class="sxs-lookup"><span data-stu-id="96ec6-161">See Also</span></span>  
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="96ec6-162">逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96ec6-162">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

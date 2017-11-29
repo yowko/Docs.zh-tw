@@ -1,27 +1,29 @@
 ---
-title: "IEnumRAWINPUTDEVIC:Next | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Next 方法"
+title: IEnumRAWINPUTDEVIC:Next
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 644a8e724a280a8b23048a381a099acd6e655d2c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# IEnumRAWINPUTDEVIC:Next
-將接下來的 `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) 結構列舉在列舉值的清單中，將其傳回在 `rgelt`，並隨附 `pceltFetched` 中列舉項目的實際數目。  
+# <a name="ienumrawinputdevicnext"></a><span data-ttu-id="8217b-102">IEnumRAWINPUTDEVIC:Next</span><span class="sxs-lookup"><span data-stu-id="8217b-102">IEnumRAWINPUTDEVIC:Next</span></span>
+<span data-ttu-id="8217b-103">列舉的下一步 `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)中列舉值的清單中，傳回其結構`rgelt`列舉中的項目實際數目以及`pceltFetched`。</span><span class="sxs-lookup"><span data-stu-id="8217b-103">Enumerates the next `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) structures in the enumerator's list, returning them in `rgelt` along with the actual number of enumerated elements in `pceltFetched`.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="8217b-104">語法</span><span class="sxs-lookup"><span data-stu-id="8217b-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -30,18 +32,18 @@ HRESULT Next(
       [out] ULONG *pceltFetched);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a><span data-ttu-id="8217b-105">參數</span><span class="sxs-lookup"><span data-stu-id="8217b-105">Parameters</span></span>  
  `celt`  
   
- \[in\] 傳回 `rgelt` 中的 [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) 結構數目。  
+ <span data-ttu-id="8217b-106">[in]數目[RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)中傳回的結構`rgelt`。</span><span class="sxs-lookup"><span data-stu-id="8217b-106">[in] Number of [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) structures returned in `rgelt`.</span></span>  
   
  `rgelt`  
   
- \[out\] 要接收所列舉之 RAWINPUTDEVICE 結構的大小 celt \(或更大\) 陣列。  
+ <span data-ttu-id="8217b-107">[out] 要接收所列舉之 RAWINPUTDEVICE 結構的大小 celt (或更大) 陣列。</span><span class="sxs-lookup"><span data-stu-id="8217b-107">[out] Array of size celt (or larger) to receive enumerated RAWINPUTDEVICE structures.</span></span>  
   
  `pceltFetched`  
   
- \[out\] 指向 `rgelt` 中實際提供項目數的指標。  如果 `rgelt` 是 1，呼叫端就可以傳入 `NULL`。  
+ <span data-ttu-id="8217b-108">[out] 指向 `rgelt` 中實際提供項目數的指標。</span><span class="sxs-lookup"><span data-stu-id="8217b-108">[out] Pointer to the number of elements actually supplied in `rgelt`.</span></span> <span data-ttu-id="8217b-109">如果 `NULL` 是 1，呼叫端就可以傳入 `rgelt`。</span><span class="sxs-lookup"><span data-stu-id="8217b-109">Caller can pass in `NULL` if `rgelt` is one.</span></span>  
   
-## 屬性值\/傳回值  
- HRESULT: 如果提供的項目數是 `celt`，則為 S\_OK；否則為 S\_FALSE。
+## <a name="property-valuereturn-value"></a><span data-ttu-id="8217b-110">屬性值/傳回值</span><span class="sxs-lookup"><span data-stu-id="8217b-110">Property Value/Return Value</span></span>  
+ <span data-ttu-id="8217b-111">HRESULT: 如果提供的項目數是 `celt`，則為 S_OK；否則為 S_FALSE。</span><span class="sxs-lookup"><span data-stu-id="8217b-111">HRESULT: S_OK if the number of elements supplied is `celt`; S_FALSE otherwise.</span></span>

@@ -1,0 +1,66 @@
+---
+title: "ICLRTask 介面"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICLRTask
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: ICLRTask
+helpviewer_keywords: ICLRTask interface [.NET Framework hosting]
+ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
+topic_type: apiref
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 17c8f798b3c9d6c135bff11cd909fd74d8c9a697
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
+---
+# <a name="iclrtask-interface"></a><span data-ttu-id="c3ec5-102">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="c3ec5-102">ICLRTask Interface</span></span>
+<span data-ttu-id="c3ec5-103">提供方法，讓主應用程式提出要求的 common language runtime (CLR)，或提供相關聯的工作有關 clr 的通知。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-103">Provides methods that allow the host to make requests of the common language runtime (CLR), or to provide notification to the CLR about the associated task.</span></span>  
+  
+## <a name="methods"></a><span data-ttu-id="c3ec5-104">方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-104">Methods</span></span>  
+  
+|<span data-ttu-id="c3ec5-105">方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-105">Method</span></span>|<span data-ttu-id="c3ec5-106">說明</span><span class="sxs-lookup"><span data-stu-id="c3ec5-106">Description</span></span>|  
+|------------|-----------------|  
+|[<span data-ttu-id="c3ec5-107">Abort 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-107">Abort Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|<span data-ttu-id="c3ec5-108">CLR 會中止工作的要求，目前`ICLRTask`執行個體所表示。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-108">Requests that the CLR abort the task that the current `ICLRTask` instance represents.</span></span>|  
+|[<span data-ttu-id="c3ec5-109">ExitTask 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-109">ExitTask Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|<span data-ttu-id="c3ec5-110">通知與目前的工作相關聯的 CLR`ICLRTask`執行個體即將結束，並嘗試依正常程序關閉的工作。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-110">Notifies the CLR that the task associated with the current `ICLRTask` instance is ending, and attempts to shut the task down gracefully.</span></span>|  
+|[<span data-ttu-id="c3ec5-111">GetMemStats 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-111">GetMemStats Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|<span data-ttu-id="c3ec5-112">取得表示由目前的工作所使用的記憶體資源統計資訊`ICLRTask`執行個體。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-112">Gets statistical information on the use of memory resources by the task represented by the current `ICLRTask` instance.</span></span>|  
+|[<span data-ttu-id="c3ec5-113">LocksHeld 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-113">LocksHeld Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|<span data-ttu-id="c3ec5-114">取得目前工作上保留的鎖定數目。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-114">Gets the number of locks currently held on the task.</span></span>|  
+|[<span data-ttu-id="c3ec5-115">NeedsPriorityScheduling 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-115">NeedsPriorityScheduling Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|<span data-ttu-id="c3ec5-116">取得值，表示主機是否應將高優先順序指派給重新排定表示由目前的工作`ICLRTask`執行個體。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-116">Gets a value indicating whether the host should assign a high priority to rescheduling the task represented by the current `ICLRTask` instance.</span></span>|  
+|[<span data-ttu-id="c3ec5-117">Reset 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-117">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|<span data-ttu-id="c3ec5-118">通知主機已完成工作，並啟用 CLR，若要重複使用目前的 CLR`ICLRTask`來代表另一項工作的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-118">Informs the CLR that the host has completed a task, and enables the CLR to reuse the current `ICLRTask` instance to represent another task.</span></span>|  
+|[<span data-ttu-id="c3ec5-119">RudeAbort 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-119">RudeAbort Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|<span data-ttu-id="c3ec5-120">造成 CLR 中止表示由目前的工作`ICLRTask`立即執行個體，但不保證將會執行完成項。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-120">Causes the CLR to abort the task represented by the current `ICLRTask` instance immediately, without a guarantee that finalizers will be executed.</span></span>|  
+|[<span data-ttu-id="c3ec5-121">SetTaskIdentifier 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-121">SetTaskIdentifier Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|<span data-ttu-id="c3ec5-122">設定表示由目前的工作的唯一識別碼`ICLRTask`執行個體，以用於偵錯。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-122">Sets a unique identifier for the task represented by the current `ICLRTask` instance, for use in debugging.</span></span>|  
+|[<span data-ttu-id="c3ec5-123">SwitchIn 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-123">SwitchIn Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|<span data-ttu-id="c3ec5-124">通知代表由目前的工作 CLR`ICLRTask`執行個體處於運作狀態。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-124">Notifies the CLR that the task represented by the current `ICLRTask` instance is in an operable state.</span></span>|  
+|[<span data-ttu-id="c3ec5-125">SwitchOut 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-125">SwitchOut Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|<span data-ttu-id="c3ec5-126">通知代表由目前的工作 CLR`ICLRTask`執行個體已不再處於運作狀態。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-126">Notifies the CLR that the task represented by the current `ICLRTask` instance is no longer in an operable state.</span></span>|  
+|[<span data-ttu-id="c3ec5-127">YieldTask 方法</span><span class="sxs-lookup"><span data-stu-id="c3ec5-127">YieldTask Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|<span data-ttu-id="c3ec5-128">要求 CLR 讓處理器時間可供其他工作。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-128">Requests that the CLR make processor time available to other tasks.</span></span> <span data-ttu-id="c3ec5-129">Clr 不保證會將該工作放在狀態，它可以在其中產生處理時間。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-129">The CLR makes no guarantee that the task will be put in a state where it can yield processing time.</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="c3ec5-130">備註</span><span class="sxs-lookup"><span data-stu-id="c3ec5-130">Remarks</span></span>  
+ <span data-ttu-id="c3ec5-131">`ICLRTask` Clr 工作的表示法。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-131">An `ICLRTask` is the representation of a task for the CLR.</span></span> <span data-ttu-id="c3ec5-132">在任何時間點執行程式碼，工作可以描述為正在執行，或是等候執行。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-132">At any point during code execution, a task can be described either as running or waiting to run.</span></span> <span data-ttu-id="c3ec5-133">主機會呼叫`ICLRTask::SwitchIn`方法來通知 CLR，工作的目前`ICLRTask`執行個體表示現在處於運作狀態。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-133">The host calls the `ICLRTask::SwitchIn` method to notify the CLR that the task that the current `ICLRTask` instance represents is now in an operable state.</span></span> <span data-ttu-id="c3ec5-134">若要在呼叫之後`ICLRTask::SwitchIn`，主機可以上排定工作的任何作業系統執行緒，除了在執行階段需要的執行緒相似性，呼叫所指定位置的情況下[ihosttaskmanager:: Beginthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)和[Ihosttaskmanager:: Endthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-134">After a call to `ICLRTask::SwitchIn`, the host can schedule the task on any operating system thread, except in cases where the runtime requires thread-affinity, as specified by calls to the [IHostTaskManager::BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) and [IHostTaskManager::EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) methods.</span></span> <span data-ttu-id="c3ec5-135">稍後，作業系統可能會決定從執行緒中移除工作，並將它放在非執行狀態。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-135">Some time later, the operating system might decide to remove the task from the thread and place it in a non-running state.</span></span> <span data-ttu-id="c3ec5-136">比方說，這可能會發生工作同步處理原始物件，會封鎖或等候 I/O 作業完成時。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-136">For example, this might happen whenever the task blocks on synchronization primitives, or waits for I/O operations to complete.</span></span> <span data-ttu-id="c3ec5-137">主機會呼叫[SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)通知代表由目前的工作 CLR`ICLRTask`執行個體已不再處於運作狀態。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-137">The host calls [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) to notify the CLR that the task represented by the current `ICLRTask` instance is no longer in an operable state.</span></span>  
+  
+ <span data-ttu-id="c3ec5-138">工作通常會終止執行程式碼的結尾。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-138">A task typically terminates at the end of code execution.</span></span> <span data-ttu-id="c3ec5-139">此時，主機會呼叫`ICLRTask::ExitTask`終結相關聯`ICLRTask`。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-139">At that time, the host calls `ICLRTask::ExitTask` to destroy the associated `ICLRTask`.</span></span> <span data-ttu-id="c3ec5-140">不過，工作可以也被回收，做法是透過呼叫`ICLRTask::Reset`，可讓`ICLRTask`重複使用的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-140">However, tasks can also be recycled by using a call to `ICLRTask::Reset`, which allows the `ICLRTask` instance to be used again.</span></span> <span data-ttu-id="c3ec5-141">這種方法可避免重複建立和終結執行個體的額外負荷。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-141">This approach prevents the overhead of repeatedly creating and destroying instances.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="c3ec5-142">需求</span><span class="sxs-lookup"><span data-stu-id="c3ec5-142">Requirements</span></span>  
+ <span data-ttu-id="c3ec5-143">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c3ec5-143">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="c3ec5-144">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c3ec5-144">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="c3ec5-145">**程式庫：**包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c3ec5-145">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="c3ec5-146">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3ec5-146">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c3ec5-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c3ec5-147">See Also</span></span>  
+ [<span data-ttu-id="c3ec5-148">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="c3ec5-148">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
+ [<span data-ttu-id="c3ec5-149">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="c3ec5-149">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
+ [<span data-ttu-id="c3ec5-150">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="c3ec5-150">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+ [<span data-ttu-id="c3ec5-151">裝載介面</span><span class="sxs-lookup"><span data-stu-id="c3ec5-151">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [<span data-ttu-id="c3ec5-152">ICLRTask2 介面</span><span class="sxs-lookup"><span data-stu-id="c3ec5-152">ICLRTask2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)

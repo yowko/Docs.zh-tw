@@ -1,48 +1,48 @@
 ---
-title: "如何：擴展 TableLayoutPanel 控制項中的資料列和資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor.TLP.SpanRowsColumns"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "儲存格, 合併"
-  - "資料行 [Windows Form], 擴展"
-  - "合併儲存格"
-  - "資料列 [Windows Form], 擴展"
-  - "TableLayoutPanel 控制項 [Windows Form], 擴展資料列和資料行"
+title: "如何：擴展 TableLayoutPanel 控制項中的資料列和資料行"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: net.ComponentModel.StyleCollectionEditor.TLP.SpanRowsColumns
+helpviewer_keywords:
+- columns [Windows Forms], spanning
+- merging cells
+- TableLayoutPanel control [Windows Forms], spanning rows and columns
+- rows [Windows Forms], spanning
+- cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0380e63925dcbd27a7ee6262ddbfb2706455c2a9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：擴展 TableLayoutPanel 控制項中的資料列和資料行
-<xref:System.Windows.Forms.TableLayoutPanel> 控制項中的控制項可以擴展相鄰的資料列和資料行。  
+# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a><span data-ttu-id="cd485-102">如何：擴展 TableLayoutPanel 控制項中的資料列和資料行</span><span class="sxs-lookup"><span data-stu-id="cd485-102">How to: Span Rows and Columns in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="cd485-103">中的控制項<xref:System.Windows.Forms.TableLayoutPanel>控制項可以跨越相鄰的資料列和資料行。</span><span class="sxs-lookup"><span data-stu-id="cd485-103">Controls in a <xref:System.Windows.Forms.TableLayoutPanel> control can span adjacent rows and columns.</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="cd485-104">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="cd485-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="cd485-105">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="cd485-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="cd485-106">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="cd485-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要擴展資料行和資料列  
+### <a name="to-span-columns-and-rows"></a><span data-ttu-id="cd485-107">若要擴展資料行和資料列</span><span class="sxs-lookup"><span data-stu-id="cd485-107">To span columns and rows</span></span>  
   
-1.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項拖曳至表單。  
+1.  <span data-ttu-id="cd485-108">拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="cd485-108">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
   
-2.  從 \[**工具箱**\] 拖曳 <xref:System.Windows.Forms.Button> 控制項至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的左上方儲存格。  
+2.  <span data-ttu-id="cd485-109">拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**左上方儲存格的<xref:System.Windows.Forms.TableLayoutPanel>控制項。</span><span class="sxs-lookup"><span data-stu-id="cd485-109">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the upper-left cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-3.  將 <xref:System.Windows.Forms.Button> 控制項的 \[**ColumnSpan**\] 屬性設定為 2。  請注意 <xref:System.Windows.Forms.Button> 控制項會擴展第一個和第二個資料行。  
+3.  <span data-ttu-id="cd485-110">設定<xref:System.Windows.Forms.Button>控制項的**ColumnSpan**屬性**2**。</span><span class="sxs-lookup"><span data-stu-id="cd485-110">Set the <xref:System.Windows.Forms.Button> control's **ColumnSpan** property to **2**.</span></span> <span data-ttu-id="cd485-111">請注意，<xref:System.Windows.Forms.Button>控制項跨越的第一個和第二個資料行。</span><span class="sxs-lookup"><span data-stu-id="cd485-111">Note that the <xref:System.Windows.Forms.Button> control spans the first and second columns.</span></span>  
   
-4.  將 <xref:System.Windows.Forms.Button> 控制項的 \[**RowSpan**\] 屬性設定為 2。  請注意 <xref:System.Windows.Forms.Button> 控制項會擴展第一個和第二個資料列。  
+4.  <span data-ttu-id="cd485-112">設定<xref:System.Windows.Forms.Button>控制項的**RowSpan**屬性**2**。</span><span class="sxs-lookup"><span data-stu-id="cd485-112">Set the <xref:System.Windows.Forms.Button> control's **RowSpan** property to **2**.</span></span> <span data-ttu-id="cd485-113">請注意，<xref:System.Windows.Forms.Button>控制項跨越的第一個和第二個資料列。</span><span class="sxs-lookup"><span data-stu-id="cd485-113">Note that the <xref:System.Windows.Forms.Button> control spans the first and second rows.</span></span>  
   
-5.  將 <xref:System.Windows.Forms.Button> 控制項的 \[**ColumnSpan**\] 屬性設定為 1。  請注意 <xref:System.Windows.Forms.Button> 控制項會移入第一個資料行，並擴展第一個和第二個資料列。  
+5.  <span data-ttu-id="cd485-114">設定<xref:System.Windows.Forms.Button>控制項的**ColumnSpan**屬性**1**。</span><span class="sxs-lookup"><span data-stu-id="cd485-114">Set the <xref:System.Windows.Forms.Button> control's **ColumnSpan** property to **1**.</span></span> <span data-ttu-id="cd485-115">請注意，<xref:System.Windows.Forms.Button>控制項將移至第一個資料行，並跨越的第一個和第二個資料列。</span><span class="sxs-lookup"><span data-stu-id="cd485-115">Note that the <xref:System.Windows.Forms.Button> control moves into the first column and spans the first and second rows.</span></span>  
   
-## 請參閱  
- [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="cd485-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd485-116">See Also</span></span>  
+ [<span data-ttu-id="cd485-117">TableLayoutPanel 控制項</span><span class="sxs-lookup"><span data-stu-id="cd485-117">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

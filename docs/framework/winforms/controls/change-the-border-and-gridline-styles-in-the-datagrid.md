@@ -1,74 +1,78 @@
 ---
-title: "如何：變更 Windows Form DataGridView 控制項中的框線和格線樣式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料格, 變更框線樣式"
-  - "資料格, 變更格線樣式"
-  - "DataGridView 控制項 [Windows Form], 框線樣式"
-  - "DataGridView 控制項 [Windows Form], 格線樣式"
-  - "格線, 變更樣式"
+title: "如何：變更 Windows Form DataGridView 控制項中的框線和格線樣式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- gridlines [Windows Forms], changing styles
+- data grids [Windows Forms], changing gridline styles
+- DataGridView control [Windows Forms], border styles
+- data grids [Windows Forms], changing border styles
+- DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ebe73e0c29a211e3319998ef7acd14e78e4eb14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：變更 Windows Form DataGridView 控制項中的框線和格線樣式
-您可以使用 <xref:System.Windows.Forms.DataGridView> 控制項自訂控制項的框線和格線的外觀，以改進使用者經歷。  除了控制項中儲存格的框線樣式之外，還可以修改格線色彩和控制項框線樣式。  也可以針對一般儲存格、資料列行首儲存格，以及資料行行首儲存格套用不同的儲存格框線樣式。  
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="fff67-102">如何：變更 Windows Form DataGridView 控制項中的框線和格線樣式</span><span class="sxs-lookup"><span data-stu-id="fff67-102">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="fff67-103">與<xref:System.Windows.Forms.DataGridView>控制項，您可以自訂控制項的框線和格線，以改善使用者體驗的外觀。</span><span class="sxs-lookup"><span data-stu-id="fff67-103">With the <xref:System.Windows.Forms.DataGridView> control, you can customize the appearance of the control's border and gridlines to improve the user experience.</span></span> <span data-ttu-id="fff67-104">您可以修改格線的色彩和控制項的框線樣式，除了在控制項中的資料格的框線樣式。</span><span class="sxs-lookup"><span data-stu-id="fff67-104">You can modify the gridline color and the control border style in addition to the border styles for the cells within the control.</span></span> <span data-ttu-id="fff67-105">您也可以套用不同的儲存格一般儲存格、 資料列標題儲存格和資料行首儲存格的框線樣式。</span><span class="sxs-lookup"><span data-stu-id="fff67-105">You can also apply different cell border styles for ordinary cells, row header cells, and column header cells.</span></span>  
   
 > [!NOTE]
->  格線色彩只能用於 <xref:System.Windows.Forms.DataGridViewCellBorderStyle> 列舉型別的 <xref:System.Windows.Forms.DataGridViewCellBorderStyle>、<xref:System.Windows.Forms.DataGridViewCellBorderStyle> 和 <xref:System.Windows.Forms.DataGridViewCellBorderStyle> 值以及 <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> 列舉型別的 <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> 值。  這些列舉型別的其他值則使用由作業系統所指定的色彩。  此外，當透過 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName> 方法啟用 Windows XP 和 Windows Server 2003 系列的視覺化樣式時，不會使用 <xref:System.Windows.Forms.DataGridView.GridColor%2A> 屬性值。  
+>  <span data-ttu-id="fff67-106">格線的色彩只會搭配使用<xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>， <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>，和<xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical>值<xref:System.Windows.Forms.DataGridViewCellBorderStyle>列舉型別和<xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single>值<xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="fff67-106">The gridline color is used only with the <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, and <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> values of the <xref:System.Windows.Forms.DataGridViewCellBorderStyle> enumeration and the <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> value of the <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> enumeration.</span></span> <span data-ttu-id="fff67-107">這些列舉型別的其他值會使用作業系統所指定的色彩。</span><span class="sxs-lookup"><span data-stu-id="fff67-107">The other values of these enumerations use colors specified by the operating system.</span></span> <span data-ttu-id="fff67-108">此外，當啟用視覺化樣式 Windows XP 和 Windows Server 2003 系列，透過<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法，<xref:System.Windows.Forms.DataGridView.GridColor%2A>不會使用屬性值。</span><span class="sxs-lookup"><span data-stu-id="fff67-108">Additionally, when visual styles are enabled on Windows XP and the Windows Server 2003 family through the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method, the <xref:System.Windows.Forms.DataGridView.GridColor%2A> property value is not used.</span></span>  
   
-### 若要以程式設計方式變更格線色彩  
+### <a name="to-change-the-gridline-color-programmatically"></a><span data-ttu-id="fff67-109">若要以程式設計方式變更格線的色彩</span><span class="sxs-lookup"><span data-stu-id="fff67-109">To change the gridline color programmatically</span></span>  
   
--   設定 <xref:System.Windows.Forms.DataGridView.GridColor%2A> 屬性。  
+-   <span data-ttu-id="fff67-110">設定 <xref:System.Windows.Forms.DataGridView.GridColor%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="fff67-110">Set the <xref:System.Windows.Forms.DataGridView.GridColor%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### 若要以程式設計方式變更整個 DataGridView 控制項的框線樣式  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a><span data-ttu-id="fff67-111">若要以程式設計方式變更整個 DataGridView 控制項的框線樣式</span><span class="sxs-lookup"><span data-stu-id="fff67-111">To change the border style of the entire DataGridView control programmatically</span></span>  
   
--   將 <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> 屬性設定為其中一個 <xref:System.Windows.Forms.BorderStyle> 列舉值。  
+-   <span data-ttu-id="fff67-112">將 <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> 屬性設定為其中一個 <xref:System.Windows.Forms.BorderStyle> 列舉值。</span><span class="sxs-lookup"><span data-stu-id="fff67-112">Set the <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> property to one of the <xref:System.Windows.Forms.BorderStyle> enumeration values.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### 若要以程式設計方式變更 DataGridView 儲存格的框線樣式  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a><span data-ttu-id="fff67-113">若要以程式設計方式變更 DataGridView 儲存格的框線樣式</span><span class="sxs-lookup"><span data-stu-id="fff67-113">To change the border styles for DataGridView cells programmatically</span></span>  
   
--   設定 <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>、<xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A> 和 <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> 屬性。  
+-   <span data-ttu-id="fff67-114">設定<xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>， <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>，和<xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="fff67-114">Set the <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, and <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> properties.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="fff67-115">範例</span><span class="sxs-lookup"><span data-stu-id="fff67-115">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#030](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#030)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#030](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#030)]  
   
-## 編譯程式碼  
- 這個範例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="fff67-116">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="fff67-116">Compiling the Code</span></span>  
+ <span data-ttu-id="fff67-117">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="fff67-117">This example requires:</span></span>  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+-   <span data-ttu-id="fff67-118">名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="fff67-118">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <xref:System?displayProperty=fullName>、<xref:System.Windows.Forms?displayProperty=fullName> 和 <xref:System.Drawing?displayProperty=fullName> 組件的參考。  
+-   <span data-ttu-id="fff67-119"><xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="fff67-119">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, and <xref:System.Drawing?displayProperty=nameWithType> assemblies.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.BorderStyle>   
- <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCellBorderStyle>   
- <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>   
- [Windows Form DataGridView 控制項中的基本格式化和樣式設定](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="fff67-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fff67-120">See Also</span></span>  
+ <xref:System.Windows.Forms.BorderStyle>  
+ <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCellBorderStyle>  
+ <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>  
+ [<span data-ttu-id="fff67-121">Windows Forms DataGridView 控制項中的基本格式化和樣式設定</span><span class="sxs-lookup"><span data-stu-id="fff67-121">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)

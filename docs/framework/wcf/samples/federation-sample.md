@@ -1,40 +1,43 @@
 ---
-title: "聯合範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "聯合範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b66bf65ba6165902eb90191a262f2715424d8b7e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 聯合範例
-這個範例將示範聯合安全性。  
+# <a name="federation-sample"></a><span data-ttu-id="91dbf-102">聯合範例</span><span class="sxs-lookup"><span data-stu-id="91dbf-102">Federation Sample</span></span>
+<span data-ttu-id="91dbf-103">這個範例將示範聯合安全性。</span><span class="sxs-lookup"><span data-stu-id="91dbf-103">This sample demonstrates federated security.</span></span>  
   
-## 範例詳細資料  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 透過 `wsFederationHttpBinding` 提供部署聯合安全性架構的支援。`wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求\/回覆通訊的基礎傳輸機制，以及採用文字\/XML 做為編碼的 Wire 格式。[!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中聯合的詳細資訊，請參閱 [聯合](../../../../docs/framework/wcf/feature-details/federation.md)。  
+## <a name="sample-details"></a><span data-ttu-id="91dbf-104">範例詳細資料</span><span class="sxs-lookup"><span data-stu-id="91dbf-104">Sample Details</span></span>  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="91dbf-105"> 透過 `wsFederationHttpBinding` 提供部署聯合安全性架構的支援。</span><span class="sxs-lookup"><span data-stu-id="91dbf-105"> provides support for deploying federated security architectures through the `wsFederationHttpBinding`.</span></span> <span data-ttu-id="91dbf-106">`wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。</span><span class="sxs-lookup"><span data-stu-id="91dbf-106">The `wsFederationHttpBinding` provides a secure, reliable, and interoperable binding that involves the use of HTTP as the underlying transport mechanism for request/reply communication, and Text/XML as the wire format for encoding.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="91dbf-107">中的同盟[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。</span><span class="sxs-lookup"><span data-stu-id="91dbf-107"> Federation in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], see [Federation](../../../../docs/framework/wcf/feature-details/federation.md).</span></span>  
   
- 本案例由 4 個部分組成：  
+ <span data-ttu-id="91dbf-108">本案例由 4 個部分組成：</span><span class="sxs-lookup"><span data-stu-id="91dbf-108">The scenario is made up of 4 pieces:</span></span>  
   
--   BookStore 服務  
+-   <span data-ttu-id="91dbf-109">BookStore 服務</span><span class="sxs-lookup"><span data-stu-id="91dbf-109">BookStore service</span></span>  
   
--   BookStore STS  
+-   <span data-ttu-id="91dbf-110">BookStore STS</span><span class="sxs-lookup"><span data-stu-id="91dbf-110">BookStore STS</span></span>  
   
--   HomeRealm STS  
+-   <span data-ttu-id="91dbf-111">HomeRealm STS</span><span class="sxs-lookup"><span data-stu-id="91dbf-111">HomeRealm STS</span></span>  
   
--   BookStore 用戶端  
+-   <span data-ttu-id="91dbf-112">BookStore 用戶端</span><span class="sxs-lookup"><span data-stu-id="91dbf-112">BookStore Client</span></span>  
   
- BookStore 服務支援兩項作業：`BrowseBooks` 和 `BuyBook`。它允許匿名存取 `BrowseBooks` 作業，但是要求必須有通過驗證的存取權才能存取 `BuyBooks` 作業。驗證的形式採用 BookStore STS 所發行的權杖。BookStore 服務的組態檔會使用 `wsFederationHttpBinding`，將用戶端指向 BookStore STS。  
+ <span data-ttu-id="91dbf-113">BookStore 服務支援兩項作業：`BrowseBooks` 和 `BuyBook`。</span><span class="sxs-lookup"><span data-stu-id="91dbf-113">The BookStore service supports two operations, `BrowseBooks` and `BuyBook`.</span></span> <span data-ttu-id="91dbf-114">它允許匿名存取 `BrowseBooks` 作業，但是要求必須有通過驗證的存取權才能存取 `BuyBooks` 作業。</span><span class="sxs-lookup"><span data-stu-id="91dbf-114">It allows anonymous access to the `BrowseBooks` operation, but requires authenticated access to access the `BuyBooks` operation.</span></span> <span data-ttu-id="91dbf-115">驗證的形式採用 BookStore STS 所發行的權杖。</span><span class="sxs-lookup"><span data-stu-id="91dbf-115">The authentication takes the form of a token issued by the BookStore STS.</span></span> <span data-ttu-id="91dbf-116">BookStore 服務的組態檔會使用 `wsFederationHttpBinding`，將用戶端指向 BookStore STS。</span><span class="sxs-lookup"><span data-stu-id="91dbf-116">The configuration file for the BookStore Service points clients to the BookStore STS using the `wsFederationHttpBinding`.</span></span>  
   
-```  
+```xml  
 <wsFederationHttpBinding>  
 <!-- This is the Service binding for the BuyBooks endpoint. It redirects clients to the BookStore STS -->  
     <binding name='BuyBookBinding'>  
@@ -52,9 +55,9 @@ caps.handback.revision: 26
 </wsFederationHttpBinding>  
 ```  
   
- BookStore STS 接著會要求用戶端使用 HomeRealm STS 所發行的權杖進行驗證。同樣地，BookStore STS 的組態檔也會使用 `wsFederationHttpBinding`，將用戶端指向 HomeRealm STS。  
+ <span data-ttu-id="91dbf-117">BookStore STS 接著會要求用戶端使用 HomeRealm STS 所發行的權杖進行驗證。</span><span class="sxs-lookup"><span data-stu-id="91dbf-117">The BookStore STS then requires that clients authenticate using a token issued by the HomeRealm STS.</span></span> <span data-ttu-id="91dbf-118">同樣地，BookStore STS 的組態檔也會使用 `wsFederationHttpBinding`，將用戶端指向 HomeRealm STS。</span><span class="sxs-lookup"><span data-stu-id="91dbf-118">Again, the configuration file for the BookStore STS points clients to the HomeRealm STS using the `wsFederationHttpBinding`.</span></span>  
   
-```  
+```xml  
 <wsFederationHttpBinding>  
  <!-- This is the binding for the clients requesting tokens from this STS. It redirects clients to the HomeRealm STS -->  
     <binding name='BookStoreSTSBinding'>  
@@ -72,56 +75,56 @@ caps.handback.revision: 26
 </wsFederationHttpBinding>  
 ```  
   
- 在存取 `BuyBook` 作業時，事件的順序如下：  
+ <span data-ttu-id="91dbf-119">在存取 `BuyBook` 作業時，事件的順序如下：</span><span class="sxs-lookup"><span data-stu-id="91dbf-119">The sequence of events when accessing the `BuyBook` operation is as follows:</span></span>  
   
-1.  用戶端使用 Windows 認證，向 HomeRealm STS 驗證。  
+1.  <span data-ttu-id="91dbf-120">用戶端使用 Windows 認證，向 HomeRealm STS 驗證。</span><span class="sxs-lookup"><span data-stu-id="91dbf-120">The client authenticates to the HomeRealm STS using Windows credentials.</span></span>  
   
-2.  HomeRealm STS 發行可用來向 BookStore STS 進行驗證的權杖。  
+2.  <span data-ttu-id="91dbf-121">HomeRealm STS 發行可用來向 BookStore STS 進行驗證的權杖。</span><span class="sxs-lookup"><span data-stu-id="91dbf-121">The HomeRealm STS issues a token that can be used to authenticate to the BookStore STS.</span></span>  
   
-3.  用戶端使用 HomeRealm STS 所發行的權杖，向 BookStore STS 驗證。  
+3.  <span data-ttu-id="91dbf-122">用戶端使用 HomeRealm STS 所發行的權杖，向 BookStore STS 驗證。</span><span class="sxs-lookup"><span data-stu-id="91dbf-122">The client authenticates to the BookStore STS using the token issued by the HomeRealm STS.</span></span>  
   
-4.  BookStore STS 發行可用來向 BookStore 服務進行驗證的權杖。  
+4.  <span data-ttu-id="91dbf-123">BookStore STS 發行可用來向 BookStore 服務進行驗證的權杖。</span><span class="sxs-lookup"><span data-stu-id="91dbf-123">The BookStore STS issues a token that can be used to authenticate to the BookStore Service.</span></span>  
   
-5.  用戶端使用 BookStore STS 所發行的權杖，向 BookStore 服務驗證。  
+5.  <span data-ttu-id="91dbf-124">用戶端使用 BookStore STS 所發行的權杖，向 BookStore 服務驗證。</span><span class="sxs-lookup"><span data-stu-id="91dbf-124">The client authenticates to the BookStore service using the token issued by the BookStore STS.</span></span>  
   
-6.  用戶端會存取 `BuyBook` 作業。  
+6.  <span data-ttu-id="91dbf-125">用戶端會存取 `BuyBook` 作業。</span><span class="sxs-lookup"><span data-stu-id="91dbf-125">The client accesses the `BuyBook` operation.</span></span>  
   
- 請參閱下列指示，以了解如何安裝和執行這個範例。  
+ <span data-ttu-id="91dbf-126">請參閱下列指示，以了解如何安裝和執行這個範例。</span><span class="sxs-lookup"><span data-stu-id="91dbf-126">See the following instructions about how to set up and run this sample.</span></span>  
   
 > [!NOTE]
->  您必須擁有 **wwwroot** 目錄的寫入權限，才能執行這個範例。  
+>  <span data-ttu-id="91dbf-127">您必須擁有寫入權限**wwwroot**才能執行此範例的目錄。</span><span class="sxs-lookup"><span data-stu-id="91dbf-127">You must have Write permissions to the **wwwroot** directory to run this sample.</span></span>  
   
-#### 若要設定、建置及執行範例  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="91dbf-128">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="91dbf-128">To set up, build, and run the sample</span></span>  
   
-1.  開啟 SDK 命令視窗。在範例的路徑中，執行 Setup.bat。這會建立範例所需的虛擬目錄，並安裝具有適當權限的必要憑證。  
-  
-    > [!NOTE]
-    >  Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。它要求 MSSDK 環境變數指向安裝 SDK 的目錄。這個環境變數是自動在 Windows SDK 命令提示字元中設定。在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，您必須確定已安裝 IIS 6.0 管理相容性，因為安裝會使用 IIS 系統管理員指令碼。在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上執行安裝指令碼時，需要系統管理員權限。  
-  
-2.  在 Visual Studio 中開啟 FederationSample.sln，然後選取 \[**建置**\] 功能表中的 \[**建置方案**\]。這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\\BookStoreClient\\bin\\Debug 資料夾中。  
-  
-3.  按兩下 BookStoreClient.exe。BookStoreClient 視窗隨即顯示。  
-  
-4.  您可以按一下 \[**瀏覽書籍**\]，瀏覽書店中展售的書籍。  
-  
-5.  若要購買特定書籍，請選取清單中的書籍，再按一下 \[**購買書籍**\]。應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。  
-  
-     此範例已設定為允許使用者購買價值在 $15 \(含\) 以下的書籍。嘗試購買價值超過 15 美元的書籍，會導致用戶端從「書店服務」\(Book Store Service\) 收到「拒絕存取」訊息。  
+1.  <span data-ttu-id="91dbf-129">開啟 SDK 命令視窗。</span><span class="sxs-lookup"><span data-stu-id="91dbf-129">Open the SDK command window.</span></span> <span data-ttu-id="91dbf-130">在範例的路徑中，執行 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="91dbf-130">In the sample path, run Setup.bat.</span></span> <span data-ttu-id="91dbf-131">這會建立範例所需的虛擬目錄，並安裝具有適當權限的必要憑證。</span><span class="sxs-lookup"><span data-stu-id="91dbf-131">This creates the virtual directories required for the sample and installs the required certificates with appropriate permissions.</span></span>  
   
     > [!NOTE]
-    >  此範例不會在使用者購買之後更新其信用額度限制。您可以在使用者的 \(固定\) 信用額度限制以內重複購買書籍。  
+    >  <span data-ttu-id="91dbf-132">Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。</span><span class="sxs-lookup"><span data-stu-id="91dbf-132">The Setup.bat batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="91dbf-133">它要求 MSSDK 環境變數指向安裝 SDK 的目錄。</span><span class="sxs-lookup"><span data-stu-id="91dbf-133">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="91dbf-134">這個環境變數是自動在 Windows SDK 命令提示字元中設定。</span><span class="sxs-lookup"><span data-stu-id="91dbf-134">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span> <span data-ttu-id="91dbf-135">在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，您必須確定已安裝 IIS 6.0 管理相容性，因為安裝會使用 IIS 系統管理員指令碼。</span><span class="sxs-lookup"><span data-stu-id="91dbf-135">On [!INCLUDE[wv](../../../../includes/wv-md.md)], you must ensure that IIS 6.0 Management Compatibility is installed because the set up uses IIS administrator scripts.</span></span> <span data-ttu-id="91dbf-136">在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上執行安裝指令碼時，需要系統管理員權限。</span><span class="sxs-lookup"><span data-stu-id="91dbf-136">Running the set-up script on [!INCLUDE[wv](../../../../includes/wv-md.md)] requires administrator privileges.</span></span>  
   
-#### 若要清除  
+2.  <span data-ttu-id="91dbf-137">在 Visual Studio 中開啟 FederationSample.sln，然後選取**建置方案**從**建置**功能表。</span><span class="sxs-lookup"><span data-stu-id="91dbf-137">Open FederationSample.sln in Visual Studio and select **Build Solution** from the **Build** menu.</span></span> <span data-ttu-id="91dbf-138">這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。</span><span class="sxs-lookup"><span data-stu-id="91dbf-138">This builds the common project files, Bookstore service, Bookstore STS, HomeRealm STS, and deploys them in IIS.</span></span> <span data-ttu-id="91dbf-139">還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。</span><span class="sxs-lookup"><span data-stu-id="91dbf-139">This also builds the Bookstore client application and places the executable BookStoreClient.exe in the FederationSample\BookStoreClient\bin\Debug folder.</span></span>  
   
-1.  執行 Cleanup.bat。這會刪除安裝期間建立的虛擬目錄，也會移除安裝期間所安裝的憑證。  
+3.  <span data-ttu-id="91dbf-140">按兩下 BookStoreClient.exe。</span><span class="sxs-lookup"><span data-stu-id="91dbf-140">Double-click BookStoreClient.exe.</span></span> <span data-ttu-id="91dbf-141">BookStoreClient 視窗隨即顯示。</span><span class="sxs-lookup"><span data-stu-id="91dbf-141">The BookStoreClient window is displayed.</span></span>  
+  
+4.  <span data-ttu-id="91dbf-142">您可以按一下瀏覽書店中的書籍**瀏覽書籍**。</span><span class="sxs-lookup"><span data-stu-id="91dbf-142">You can browse the books available in the bookstore by clicking **Browse Books**.</span></span>  
+  
+5.  <span data-ttu-id="91dbf-143">若要購買特定書籍，在清單中選取活頁簿，然後按一下**購買書籍**。</span><span class="sxs-lookup"><span data-stu-id="91dbf-143">To purchase a particular book, select the book in the list and click **Buy Book**.</span></span> <span data-ttu-id="91dbf-144">應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。</span><span class="sxs-lookup"><span data-stu-id="91dbf-144">The application starts up and authenticates using Windows authentication with the HomeRealm Security Token Service.</span></span>  
+  
+     <span data-ttu-id="91dbf-145">此範例已設定為允許使用者購買價值在 $15 (含) 以下的書籍。</span><span class="sxs-lookup"><span data-stu-id="91dbf-145">The sample is configured to allow users to purchase books that cost $15 or less.</span></span> <span data-ttu-id="91dbf-146">嘗試購買價值超過 15 美元的書籍，會導致用戶端從「書店服務」(Book Store Service) 收到「拒絕存取」訊息。</span><span class="sxs-lookup"><span data-stu-id="91dbf-146">Attempting to buy books that cost more than $15 results in the client getting an Access Denied message from the Book Store Service.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="91dbf-147">此範例不會在使用者購買之後更新其信用額度限制。</span><span class="sxs-lookup"><span data-stu-id="91dbf-147">The sample does not update the user’s credit limit after a purchase.</span></span> <span data-ttu-id="91dbf-148">您可以在使用者的 (固定) 信用額度限制以內重複購買書籍。</span><span class="sxs-lookup"><span data-stu-id="91dbf-148">You can repeatedly purchase books within the user’s (fixed) credit limit.</span></span>  
+  
+#### <a name="to-clean-up"></a><span data-ttu-id="91dbf-149">若要清除</span><span class="sxs-lookup"><span data-stu-id="91dbf-149">To clean up</span></span>  
+  
+1.  <span data-ttu-id="91dbf-150">執行 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="91dbf-150">Run Cleanup.bat.</span></span> <span data-ttu-id="91dbf-151">這會刪除安裝期間建立的虛擬目錄，也會移除安裝期間所安裝的憑證。</span><span class="sxs-lookup"><span data-stu-id="91dbf-151">This deletes the virtual directories that were created during set up and also removes the certificates installed during setup.</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="91dbf-152">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="91dbf-152">The samples may already be installed on your machine.</span></span> <span data-ttu-id="91dbf-153">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="91dbf-153">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="91dbf-154">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="91dbf-154">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="91dbf-155">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="91dbf-155">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="91dbf-156">另請參閱</span><span class="sxs-lookup"><span data-stu-id="91dbf-156">See Also</span></span>
