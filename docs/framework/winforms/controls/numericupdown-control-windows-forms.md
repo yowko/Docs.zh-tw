@@ -1,50 +1,51 @@
 ---
-title: "NumericUpDown 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "NumericUpDown 控制項 [Windows Form]"
-  - "微調按鈕控制項"
-  - "微調按鈕控制項, 上下按鈕控制項"
-  - "上下按鈕控制項"
-  - "上下按鈕控制項, 微調按鈕控制項"
-  - "Windows Form 控制項, NumericUpDown 控制項"
+title: "NumericUpDown 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, NumericUpDown control
+- spin button control [Windows Forms], up-down controls
+- up-down controls [Windows Forms], spin button control
+- up-down controls
+- spin button control
+- NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c674fec227e765213edfe2f2827543024cceac7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# NumericUpDown 控制項 (Windows Form)
-Windows Form `NumericUpDown` 控制項看起來像文字方塊與一對箭號 \(使用者可以按一下以調整值\) 的組合。  這個控制項會顯示和設定選擇清單中的單一數值。  使用者可以按一下向上和向下按鈕、按向上鍵和向下鍵或輸入數字來遞增或遞減數值。  按一下向上鍵可向最大值移動；按一下向下鍵則向最小值移動。  這種控制項的使用範例之一是用於音樂播放機的音量控制。  在一些 Windows 控制台應用程式中都會使用到數字上下按鈕控制項。  
+# <a name="numericupdown-control-windows-forms"></a>NumericUpDown 控制項 (Windows Form)
+Windows Forms `NumericUpDown` 控制項看起來就像一個文字方塊與一對箭號的組合，而使用者可以按一下這個組合來調整值。 這個控制項會從選擇清單中顯示和設定單一數值。 使用者可以按一下向上和向下按鈕、按向上鍵和向下鍵，或輸入數字，來增加和減少數字。 按一下向上鍵將值移往其最大值；按一下向下鍵將位置移往最小值。 這類控制項可能有用的範例是針對音樂播放器的音量控制項。 數值上下按鈕控制項用於部分 Windows 控制台應用程式中。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [NumericUpDown 控制項概觀](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)  
- 簡介 `NumericUpDown` 控制項的一般概念，這個控制項允許使用者瀏覽數值清單並從中進行選取。  
+ 介紹 `NumericUpDown` 控制項的一般概念，以讓使用者從數值清單中進行瀏覽和選取。  
   
- [如何：使用 Windows Form NumericUpDown 控制項設定和傳回數值](../../../../docs/framework/winforms/controls/set-and-return-numeric-values-with-wf-numericupdown-control.md)  
- 說明如何測試控制項的值。  
+ [如何：使用 Windows Forms NumericUpDown 控制項設定和傳回數值](../../../../docs/framework/winforms/controls/set-and-return-numeric-values-with-wf-numericupdown-control.md)  
+ 描述如何測試控制項的值。  
   
- [如何：為 Windows Form NumericUpDown 控制項設定格式](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
- 說明如何設定數值在控制項中的顯示方式。  
+ [如何：為 Windows Forms NumericUpDown 控制項設定格式](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ 描述如何設定控制項中值的顯示方式。  
   
-## 參考  
- [NumericUpDown 類別](frlrfSystemWindowsFormsNumericUpDownClassTopic)  
- 提供 <xref:System.Windows.Forms.NumericUpDown> 類別及其成員的參考資訊。  
+## <a name="reference"></a>參考資料  
+ <xref:System.Windows.Forms.NumericUpDown>  
+ 提供這個 <xref:System.Windows.Forms.NumericUpDown> 類別及其成員的參考資訊。  
   
-## 相關章節  
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。  
+## <a name="related-sections"></a>相關章節  
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ 提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
  [DomainUpDown 控制項](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- 簡介與 <xref:System.Windows.Forms.NumericUpDown> 類似的控制項，不過 <xref:System.Windows.Forms.DomainUpDown> 控制項會顯示字串而不是數值。
+ 導入了類似的控制項<xref:System.Windows.Forms.NumericUpDown>，不同之處在於<xref:System.Windows.Forms.DomainUpDown>控制項會顯示而不是數字值的字串。

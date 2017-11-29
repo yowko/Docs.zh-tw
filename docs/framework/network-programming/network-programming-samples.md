@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eedeb700adc6c010677959831de8c3ad59c43ea3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b0e507e44fd9ce50269081c39eabc953e5b56dfd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
 本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.PeerToPeer>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。  
@@ -80,7 +74,6 @@ ms.lasthandoff: 08/21/2017
  <xref:System.Net.Sockets>  
   
 ## <a name="see-also"></a>另請參閱  
- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)   
- [網路程式設計「如何」主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
+ [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
+ [網路程式設計 how to 主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [.NET 的網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-

@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/18/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能
 如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。 您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。 本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/18/2017
 |[延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)|描述如何視需要初始化物件以提升效能，特別是在應用程式啟動時。|  
 |[可靠性](../../../docs/framework/performance/reliability.md)|提供有關防止伺服器環境中發生非同步例外狀況的資訊。|  
 |[撰寫大型且可回應的 .NET Framework 應用程式](../../../docs/framework/performance/writing-large-responsive-apps.md)|提供從以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器蒐集的效能提示，包含數個 C# 編譯器的實際範例。|
-

@@ -1,26 +1,28 @@
 ---
-title: "&lt;擴充功能&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;擴充功能&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5bdfd491cdc39accb396664500eef7c66142ef9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;擴充功能&gt;
-這個組態項目包含 XML 項目的集合，這些項目包含要與標準可探索中繼資料 \(EPR、ContractTypeName、BindingName、Scope 與 ListenURI\) 一併發行的 XML 項目集合。  以下是使用這個組態項目的範例。  
+# <a name="ltextensionsgt"></a>&lt;擴充功能&gt;
+這個組態項目包含 XML 項目的集合，這些項目包含要與標準可探索中繼資料 (EPR、ContractTypeName、BindingName、Scope 與 ListenURI) 一併發行的 XML 項目集合。 以下是使用這個組態項目的範例。  
   
-```  
-  
+```xml  
 <services>  
   <service name="CalculatorService"  
            behaviorConfiguration="CalculatorServiceBehavior">  
@@ -51,8 +53,7 @@ caps.handback.revision: 2
     </behavior>  
   </endpointBehaviors>  
 </behaviors>  
-  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

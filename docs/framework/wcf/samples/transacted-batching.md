@@ -1,61 +1,64 @@
 ---
-title: "交易的批次處理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "交易的批次處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dbd11f3dad60463a5650d7aa6e53f9e8f3f5021e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 交易的批次處理
-這個範例會示範如何使用訊息佇列 \(MSMQ\) 批次處理交易讀取作業。  「交易的批次處理」是效能最佳化功能，可用於佇列通訊中的交易讀取作業。  
+# <a name="transacted-batching"></a>交易的批次處理
+這個範例會示範如何使用訊息佇列 (MSMQ) 批次處理交易讀取作業。 「交易的批次處理」是效能最佳化功能，可用於佇列通訊中的交易讀取作業。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 在佇列通訊中，用戶端會使用佇列與服務通訊。  更精確地說，用戶端會傳送訊息至佇列。  服務會接收來自佇列的訊息。  因此，服務與用戶端不需同時執行，就能使用佇列通訊。  
+ 在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。  
   
- 這個範例會示範交易的批次處理。  交易的批次處理是一種行為，可在佇列中讀取許多訊息並進行處理時，使用單一的交易即可。  
+ 這個範例會示範交易的批次處理。 交易的批次處理是一種行為，可在佇列中讀取許多訊息並進行處理時，使用單一的交易即可。  
   
-### 若要安裝、建置及執行範例  
+### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  如果服務優先執行，它就會檢查以確定佇列存在。  如果佇列不存在，服務將建立一個佇列。  您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。  請依照下列步驟，在 Windows 2008 中建立佇列。  
+2.  如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。  
   
     1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中開啟伺服器管理員。  
   
-    2.  展開 \[**功能**\] 索引標籤。  
+    2.  展開**功能** 索引標籤。  
   
-    3.  以滑鼠右鍵按一下 \[**私用訊息佇列**\]，然後依序選取 \[**新增**\] 和 \[**私用佇列**\]。  
+    3.  以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。  
   
-    4.  核取 \[**可交易**\] 方塊。  
+    4.  請檢查**交易式**方塊。  
   
-    5.  輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。  
+    5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。  
   
     > [!NOTE]
-    >  在這個範例中，用戶端會在批次中傳送數百則訊息。  服務應用程式通常需要一些時間來處理這些訊息。  
+    >  在這個範例中，用戶端會在批次中傳送數百則訊息。 服務應用程式通常需要一些時間來處理這些訊息。  
   
-3.  若要建置方案的 C\# 或 Visual Basic .NET 版本，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4.  若要在單一或跨電腦的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-### 若要在加入工作群組，或是沒有 Active Directory 整合的電腦上執行這個範例  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>若要在加入工作群組，或是沒有 Active Directory 整合的電腦上執行這個範例  
   
-1.  根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。  MSMQ 傳輸安全性有兩個相關的屬性，即 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 和 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` 。根據預設，驗證模式會設定為 `Windows`，而保護層級會設定為 `Sign`。  若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。  如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。  
+1.  根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 有兩個相關的屬性，為 MSMQ 傳輸安全性，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>和<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`驗證模式設定為依預設，`Windows`和保護層級設為`Sign`。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。  
   
 2.  如果您的電腦不是網域的一部分，或是沒有安裝 Active Directory 整合，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下列範例組態所示：  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <behaviors>  
         <serviceBehaviors>  
@@ -101,30 +104,29 @@ caps.handback.revision: 23
       </bindings>  
   
     </system.serviceModel>  
-  
     ```  
   
 3.  請務必先變更伺服器與用戶端上的組態，再執行範例。  
   
     > [!NOTE]
-    >  將 `security` `mode` 設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。  
+    >  將 `security``mode` 設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。  
   
 4.  若要在遠端電腦上執行資料庫，請變更連接字串以指向資料庫所在的電腦。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  若要執行此範例，必須已安裝 MSMQ，而且需要 SQL 或 SQL Express。  
   
-## 示範  
- 範例會示範交易的批次處理行為。  交易的批次處理是與 MSMQ 佇列傳輸一起提供的效能最佳化功能。  
+## <a name="demonstrates"></a>示範  
+ 範例會示範交易的批次處理行為。 交易的批次處理是與 MSMQ 佇列傳輸一起提供的效能最佳化功能。  
   
- 當您使用交易來傳送及接收訊息時，實際上有兩個不同的交易。  當用戶端在交易範圍內傳送訊息時，對用戶端與用戶端佇列管理員來說，交易屬於本機範圍。  當服務在交易範圍內接收訊息時，對服務與接收佇列管理員來說，交易屬於本機範圍。  最重要的是了解用戶端與服務並未參與相同的交易；而是當使用佇列執行其作業 \(例如傳送與接收\) 時會使用不同的交易。  
+ 當您使用交易來傳送及接收訊息時，實際上有兩個不同的交易。 當用戶端在交易範圍內傳送訊息時，對用戶端與用戶端佇列管理員來說，交易屬於本機範圍。 當服務在交易範圍內接收訊息時，對服務與接收佇列管理員來說，交易屬於本機範圍。 最重要的是了解用戶端與服務並未參與相同的交易；而是當使用佇列執行其作業 (例如傳送與接收) 時會使用不同的交易。  
   
- 在範例中，將針對執行多個服務作業使用單一交易。  這項功能只會當做效能最佳化功能使用，而且不會影響應用程式的語意 \(Semantics\)。  此範例是以[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)為基礎。  
+ 在範例中，將針對執行多個服務作業使用單一交易。 這項功能只會當做效能最佳化功能使用，而且不會影響應用程式的語意 (Semantics)。 範例根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
   
-## 註解  
- 在這個範例中，用戶端會從交易範圍內將訊息批次傳送至服務。  若要顯示效能最佳化，可以傳送大量的訊息。在這個例子中，最多可以傳送 2500 則訊息。  
+## <a name="comments"></a>註解  
+ 在這個範例中，用戶端會從交易範圍內將訊息批次傳送至服務。 若要顯示效能最佳化，可以傳送大量的訊息。在這個例子中，最多可以傳送 2500 則訊息。  
   
- 接著，服務會在所定義的交易範圍內接收傳送至佇列的訊息。  沒有使用批次作業時，每次叫用服務作業就會產生 2500 筆交易。  這樣就會影響系統的效能。  由於在 MSMQ 佇列和 `Orders` 資料庫中牽涉到兩個資源管理員，因此這類交易就可說是 DTC 交易。  使用較少量的交易，確定訊息批次作業和服務作業叫用都是在單一交易上進行，即可最佳化效能。  
+ 接著，服務會在所定義的交易範圍內接收傳送至佇列的訊息。 沒有使用批次作業時，每次叫用服務作業就會產生 2500 筆交易。 這樣就會影響系統的效能。 由於在 MSMQ 佇列和 `Orders` 資料庫中牽涉到兩個資源管理員，因此這類交易就可說是 DTC 交易。 使用較少量的交易，確定訊息批次作業和服務作業叫用都是在單一交易上進行，即可最佳化效能。  
   
  您可透過下列方式使用批次作業功能：  
   
@@ -136,9 +138,9 @@ caps.handback.revision: 23
   
  在此範例中，藉由降低交易數以確定認可交易之前會在單一交易上叫用 100 個服務作業，就可看到效能增益。  
   
- 服務行為會定義 `TransactionScopeRequired` 已設為 `true` 的作業行為，  這樣會確定此方法存取的任何資源管理員都使用從佇列擷取訊息時所使用的相同交易範圍。  在此範例中，會使用基本資料庫來存放訊息中所含的訂單資訊。  交易範圍也會保證在方法擲回例外狀況時，訊息仍會傳回佇列。  如果沒有設定這個作業行為，佇列通道就會建立交易，在分派訊息之前讀取佇列中的訊息並自動認可，因此若作業失敗，訊息就會遺失。  最常見的案例是服務作業登記在用來從佇列讀取訊息的交易中，如同下列程式碼所示範。  
+ 服務行為會定義 `TransactionScopeRequired` 已設為 `true` 的作業行為， 這樣會確定此方法存取的任何資源管理員都使用從佇列擷取訊息時所使用的相同交易範圍。 在此範例中，會使用基本資料庫來存放訊息中所含的訂單資訊。 交易範圍也會保證在方法擲回例外狀況時，訊息仍會傳回佇列。 如果沒有設定這個作業行為，佇列通道就會建立交易，在分派訊息之前讀取佇列中的訊息並自動認可，因此若作業失敗，訊息就會遺失。 最常見的案例是服務作業登記在用來從佇列讀取訊息的交易中，如同下列程式碼所示範。  
   
- 請注意，`ReleaseServiceInstanceOnTransactionComplete` 設定為 `false`。  這是批次作業的重要需求。  `ServiceBehaviorAttribute` 上的 `ReleaseServiceInstanceOnTransactionComplete` 屬性會指出完成交易之後，服務執行個體應該執行的動作。  根據預設，完成交易時會釋放服務執行個體。  批次作業的核心觀念在於使用單一交易，就可讀取及分派佇列中的許多訊息。  因此，釋放服務執行個體就會永久停止完成交易，而不再使用批次作業。  如果這個屬性設定為 `true`，而且交易的批次處理行為已新增至端點，批次作業驗證行為就會擲回例外狀況。  
+ 請注意，`ReleaseServiceInstanceOnTransactionComplete` 設定為 `false`。 這是批次作業的重要需求。 `ReleaseServiceInstanceOnTransactionComplete` 上的 `ServiceBehaviorAttribute` 屬性會指出完成交易之後，服務執行個體應該執行的動作。 根據預設，完成交易時會釋放服務執行個體。 批次作業的核心觀念在於使用單一交易，就可讀取及分派佇列中的許多訊息。 因此，釋放服務執行個體就會永久停止完成交易，而不再使用批次作業。 如果這個屬性設定為 `true`，而且交易的批次處理行為已新增至端點，批次作業驗證行為就會擲回例外狀況。  
   
 ```  
 // Service class that implements the service contract.  
@@ -157,10 +159,9 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-  
 ```  
   
- `Orders` 類別會封裝訂單處理。  在此範例中，會使用訂單資訊更新資料庫。  
+ `Orders` 類別會封裝訂單處理。 在此範例中，會使用訂單資訊更新資料庫。  
   
 ```  
 // Order Processing Logic  
@@ -236,7 +237,7 @@ public class Orders
   
  會在服務應用程式組態中，指定批次作業行為與其組態。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <appSettings>  
@@ -281,15 +282,15 @@ public class Orders
 ```  
   
 > [!NOTE]
->  批次大小對系統而言是一種提示。  例如，如果將批次大小指定為 20，則會使用單一交易讀取及分派 20 則訊息，然後認可交易。  但在一些情況下，可能會在達到批次大小之前，交易就已認可批次。  
+>  批次大小對系統而言是一種提示。 例如，如果將批次大小指定為 20，則會使用單一交易讀取及分派 20 則訊息，然後認可交易。 但在一些情況下，可能會在達到批次大小之前，交易就已認可批次。  
 >   
->  與每個交易相關聯的項目為逾時，會在建立交易時立即開始計時。  此逾時到期時，就會中止交易。  也可能在達到批次大小之前，此逾時就已到期。  為了避免由於中止而重新執行批次，`TransactedBatchingBehavior` 會查看還剩多少時間可以執行交易。  如果已使用 80% 的交易逾時，就會認可交易。  
+>  與每個交易相關聯的項目為逾時，會在建立交易時立即開始計時。 此逾時到期時，就會中止交易。 也可能在達到批次大小之前，此逾時就已到期。 為了避免由於中止而重新執行批次，`TransactedBatchingBehavior` 會查看還剩多少時間可以執行交易。 如果已使用 80% 的交易逾時，就會認可交易。  
 >   
 >  如果佇列中沒有其他訊息，則不會等待到達批次大小，<xref:System.ServiceModel.Description.TransactedBatchingBehavior> 就會認可交易。  
 >   
->  批次的大小是由您的應用程式所決定。  如果批次大小太小，可能不會得到希望的效能。  另一方面，如果批次大小太大，可能使效能下降。  例如，交易可以存留較久的時間並在資料庫上持有鎖定，或者應用程式變成鎖死，因而導致回復批次並重做工作。  
+>  批次的大小是由您的應用程式所決定。 如果批次大小太小，可能不會得到希望的效能。 另一方面，如果批次大小太大，可能使效能下降。 例如，交易可以存留較久的時間並在資料庫上持有鎖定，或者應用程式變成鎖死，因而導致回復批次並重做工作。  
   
- 用戶端會建立一個交易範圍。  與佇列的通訊會發生在交易範圍內，導致其被視為原子單位 \(Atomic Unit\)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。  呼叫交易範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可交易。  
+ 用戶端會建立一個交易範圍。 與佇列的通訊會發生在交易範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫交易範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可交易。  
   
 ```  
 //Client implementation code.  
@@ -340,7 +341,7 @@ class Client
 }  
 ```  
   
- 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。  您可以查看來自用戶端的服務接收訊息。  在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。  您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。  以批次讀取訊息及處理訊息時，您會看到可以捲動的輸出。  
+ 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。 以批次讀取訊息及處理訊息時，您會看到可以捲動的輸出。  
   
 ```  
 The service is ready.  
@@ -375,12 +376,12 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 ```  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。  請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[適用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。  此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

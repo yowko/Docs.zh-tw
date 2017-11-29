@@ -1,40 +1,32 @@
 ---
-title: "XML 常值的視覺 Basic2 簡介 |Microsoft 文件"
+title: "簡介 Visual Basic2 中的 XML 常值"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 391dd14f971f91d4d128841a7ebd24981266846a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 常值簡介
-本節提供在 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中建立 XML 樹狀結構的相關資訊。  
+本節提供在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中建立 XML 樹狀結構的相關資訊。  
   
  使用 LINQ 查詢的結果做為內容，XML 樹狀結構的相關資訊，請參閱[功能建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
- 如需有關 XML 常值的[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，請參閱[概觀的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
+ 如需有關 XML 常值中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，請參閱[概觀的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
   
-## <a name="creating-xml-trees"></a>建立 XML 樹狀  
- 下列範例示範如何建立<xref:System.Xml.Linq.XElement>，在此情況下`contacts`:</xref:System.Xml.Linq.XElement>  
+## <a name="creating-xml-trees"></a>建立 XML 樹狀結構  
+ 下列範例顯示如何在此案例 <xref:System.Xml.Linq.XElement> 中建立 `contacts`：  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -53,7 +45,7 @@ Dim contacts As XElement = _
 ```  
   
 ### <a name="creating-an-xelement-with-simple-content"></a>建立包含簡單內容的 XElement  
- 您可以建立<xref:System.Xml.Linq.XElement>，其中包含簡單內容，如下所示︰</xref:System.Xml.Linq.XElement>  
+ 您可以建立包含簡單內容的 <xref:System.Xml.Linq.XElement>，如下所示：  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
@@ -67,7 +59,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="creating-an-empty-element"></a>建立空項目  
- 您可以建立空白<xref:System.Xml.Linq.XElement>，如下︰</xref:System.Xml.Linq.XElement>  
+ 您可以建立空的 <xref:System.Xml.Linq.XElement>，如下所示：  
   
 ```vb  
 Dim n As XElement = <Customer/>  
@@ -81,7 +73,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>使用內嵌的運算式  
- XML 常值的其中一個重要功能是，這些 XML 常值允許內嵌的運算式。 內嵌的運算式可讓您評估運算式，並將運算式的結果插入到 XML 樹狀中。 如果運算式評估為一種<xref:System.Xml.Linq.XElement>，項目插入到樹狀結構。</xref:System.Xml.Linq.XElement> 如果運算式評估為一種<xref:System.Xml.Linq.XAttribute>，將屬性插入到樹狀結構。</xref:System.Xml.Linq.XAttribute> 您可以將項目和屬性僅插入到有效的樹狀中。  
+ XML 常值的其中一個重要功能是，這些 XML 常值允許內嵌的運算式。 內嵌的運算式可讓您評估運算式，並將運算式的結果插入到 XML 樹狀結構中。 如果運算式評估 <xref:System.Xml.Linq.XElement> 的型別，會將項目插入到樹狀結構中。 如果運算式評估 <xref:System.Xml.Linq.XAttribute> 的型別，會將屬性插入到樹狀結構中。 您可以將項目和屬性僅插入到有效的樹狀結構中。  
   
  請注意，只有單一運算式可以插入到內嵌的運算式中，這點很重要。 您無法內嵌多個陳述式。 如果運算式的延伸超過單一行，您必須使用行接續字元。  
   

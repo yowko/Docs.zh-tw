@@ -5,31 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - performance counters
 - performance counters,and in-process side-by-side applications
 - performance,.NET Framework applications
 - performance monitoring,counters
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 713aa3a870c42014de01d6782d7452ab60792cc4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 16c43545b24f8c0290bfe993d91b7e4203ac11fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>效能計數器與同處理序並存應用程式
 使用效能監視器 (Perfmon.exe)，可以區分個別執行階段的效能計數器。 本主題描述啟用這項功能所需的登錄變更。  
@@ -59,7 +55,8 @@ ms.lasthandoff: 08/21/2017
   
  下列範例示範如何以程式設計方式變更 `ProcessNameFormat` 值。  
   
- [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)] [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
+ [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
+ [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
  當您對這個登錄進行變更時，Perfmon.exe 會將目標為 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的應用程式名稱顯示為 *application*_`p`*processID*\_`r`*runtimeID*，其中 *application* 是應用程式的名稱、*processID* 是應用程式的處理序識別碼，*runtimeID* 則是 Common Language Runtime 識別碼。 例如，如果名為 myapp.exe 的應用程式載入兩個 Common Language Runtime 執行個體，則 Perfmon.exe 可能會將其中一個執行個體識別為 myapp_p1416_r10，並將另一個執行個體識別為 myapp_p3160_r10。 執行階段識別碼只是用來釐清處理序內的執行階段；它未提供執行階段的任何其他資訊 (例如，執行階段識別碼與執行階段的版本或 SKU 無關)。  
   
@@ -69,4 +66,3 @@ ms.lasthandoff: 08/21/2017
 >  如果兩個應用程式同名且使用舊版執行階段，則處理序識別碼可消除解析它們的模稜兩可。 舊版本不需要執行階段識別碼，因為舊版 Common Language Runtime 不支援並存案例。  
   
  如果 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 不存在或尚未安裝，則設定登錄機碼不受影響。 這表示，兩個同名的應用程式將會繼續在 Perfmon.exe 中顯示為 *application* 和 *application#1* (例如，**myapp** 和 **myapp#1**)。
-

@@ -1,105 +1,109 @@
 ---
-title: "座標系統類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "座標系統"
-  - "裝置座標系統"
-  - "頁面座標系統"
-  - "頁面轉換"
-  - "轉換, 頁面"
-  - "轉換, 全局"
-  - "測量單位"
-  - "全局座標系統"
-  - "全局轉換"
+title: "座標系統類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- transformations [Windows Forms], page
+- unit of measure
+- world coordinate system
+- page coordinate system
+- page transformation
+- device coordinate system
+- world transformation
+- coordinate systems
+- transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 座標系統類型
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使用三個座標空間：全局、畫面和裝置。  全局座標 \(World Coordinate\) 是用來製作特定繪圖自然模型的座標，也就是在 .NET Framework 中傳遞到方法的座標。  畫面座標 \(Page Coordinate\) 則是指繪圖介面 \(例如表單或控制項\) 使用的座標系統。  裝置座標 \(Device Coordinate\) 是在其上進行繪圖的實體裝置 \(例如螢幕或紙張\) 所使用的座標。  呼叫 `myGraphics.DrawLine(myPen, 0, 0, 160, 80)` 時，傳遞至 <xref:System.Drawing.Graphics.DrawLine%2A> 方法的點 \(`(0, 0)` 和 `(160, 80)`\) 位於全局座標空間。  在 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以在螢幕上繪製線條之前，座標會先經過轉換序列。  一個名為「全局轉換」的轉換會將全局座標轉換為畫面座標，而另一個名為「畫面轉換」的轉換則是將畫面座標轉換為裝置座標。  
+# <a name="types-of-coordinate-systems"></a>座標系統類型
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]會使用三種座標空間： world、 頁面和裝置。 全局座標是用來建立模型特定的圖形範圍的座標，您將傳遞至方法在.NET Framework 中的座標。 頁面座標是指繪圖介面，例如表單或控制項所使用的座標系統。 裝置座標是實體裝置，例如螢幕或紙張繪製所使用的座標。 當您進行的呼叫`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，傳遞至的點<xref:System.Drawing.Graphics.DrawLine%2A>方法-`(0, 0)`和`(160, 80)`— 中全局座標空間。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在螢幕上繪製線條，通過一連串的轉換的座標。 一個轉換，稱為全局轉換，將全局座標轉換為頁面座標和另一個轉換，稱為 「 頁面 」 轉換，將頁面座標轉換為裝置座標。  
   
-## 轉換與座標系統  
- 假設您想要使用原點位於工作區 \(Client Area\) 主體中，而非位於左上角的座標系統。  例如，您希望原點位於距離工作區左邊緣 100 像素和距離工作區頂端 50 像素的位置。  下圖將顯示此座標系統。  
+## <a name="transforms-and-coordinate-systems"></a>轉換與座標系統  
+ 假設您想要搭配使用的原點本文工作區，而不是左上角的座標系統。 比方說，假設您想為 100 像素為單位，從工作區左邊緣和從用戶端區域的頂端 50 像素的原點。 下圖顯示這類的座標系統。  
   
- ![座標系統](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art01.png "AboutGdip05\_art01")  
+ ![座標系統](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art01.gif "AboutGdip05_art01")  
   
- 呼叫 `myGraphics.DrawLine(myPen, 0, 0, 160, 80)` 時，您會取得下圖中所顯示的線條。  
+ 當您建立呼叫`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，取得在下圖顯示的列。  
   
- ![座標系統](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art02.png "AboutGdip05\_art02")  
+ ![座標系統](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art02.gif "AboutGdip05_art02")  
   
- 在這三個座標空間中，您線條的結束點座標位置如下：  
+ 三種座標空間中的程式行的結束點的座標如下所示：  
   
 |||  
 |-|-|  
-|World|\(0, 0\) 到 \(160, 80\)|  
-|頁面|\(100, 50\) 到 \(260, 130\)|  
-|裝置|\(100, 50\) 到 \(260, 130\)|  
+|世界|（0，0） 到 160 (80）|  
+|頁面|（100，50） 到 （260、 130）|  
+|裝置|（100，50） 到 （260、 130）|  
   
- 請注意，畫面座標空間的原點一律位於工作區的左上角。  此外，由於度量單位為像素，因此裝置座標和畫面座標是相同的。  如果您將度量單位設為像素以外的單位 \(例如英吋\)，則裝置座標便與畫面座標不同。  
+ 請注意，畫面座標空間原點左上角的 用戶端的區域。一律是這樣的情況。 也請注意，因為量值的單位為像素，裝置座標畫面座標相同。 如果您設定的度量單位為像素為單位 （例如英吋） 以外的項目，則裝置座標會不同於畫面座標。  
   
- 將全局座標對應至畫面座標的全局轉換，會存放在 <xref:System.Drawing.Graphics> 類別的 <xref:System.Drawing.Graphics.Transform%2A> 屬性中。  上例中，全局轉換是指在 X 方向轉換 100 個單位和在 Y 方向轉換 50 個單位。  下列範例將設定 <xref:System.Drawing.Graphics> 物件的全局轉換，然後使用該 <xref:System.Drawing.Graphics> 物件來繪製上圖所顯示的線條：  
+ 全局轉換，以將全局座標對應頁面座標，保存在<xref:System.Drawing.Graphics.Transform%2A>屬性<xref:System.Drawing.Graphics>類別。 在上述範例中，自然變換是 x 方向的 100 個轉譯單位和 50 個單位，在 y 方向。 下列範例會設定的自然變換<xref:System.Drawing.Graphics>物件，並會使用該<xref:System.Drawing.Graphics>物件来繪製在上圖中顯示的列：  
   
  [!code-csharp[System.Drawing.CoordinateSystems#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.CoordinateSystems#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#31)]  
   
- 畫面轉換會將畫面座標對應至裝置座標。  <xref:System.Drawing.Graphics> 類別提供 <xref:System.Drawing.Graphics.PageUnit%2A> 和 <xref:System.Drawing.Graphics.PageScale%2A> 屬性，來管理畫面轉換。  <xref:System.Drawing.Graphics> 類別也提供兩個唯讀屬性，分別是 <xref:System.Drawing.Graphics.DpiX%2A> 和 <xref:System.Drawing.Graphics.DpiY%2A>，來檢視顯示裝置每英吋的水平點和垂直點。  
+ 頁面轉換會將頁面座標對應至裝置座標。 <xref:System.Drawing.Graphics>類別提供<xref:System.Drawing.Graphics.PageUnit%2A>和<xref:System.Drawing.Graphics.PageScale%2A>管理畫面轉換的屬性。 <xref:System.Drawing.Graphics>類別也提供兩個唯讀屬性，<xref:System.Drawing.Graphics.DpiX%2A>和<xref:System.Drawing.Graphics.DpiY%2A>，檢查水平和垂直 dpi 顯示裝置。  
   
- 您可以使用 <xref:System.Drawing.Graphics> 類別的 <xref:System.Drawing.Graphics.PageUnit%2A> 屬性來指定像素以外的度量單位。  
+ 您可以使用<xref:System.Drawing.Graphics.PageUnit%2A>屬性<xref:System.Drawing.Graphics>類別，以指定的像素以外的測量單位。  
   
 > [!NOTE]
->  您不能將 <xref:System.Drawing.Graphics.PageUnit%2A> 屬性設定為 <xref:System.Drawing.GraphicsUnit>，因為這不是實體單位，而且會造成例外狀況 \(Exception\)。  
+>  您不能設定<xref:System.Drawing.Graphics.PageUnit%2A>屬性<xref:System.Drawing.GraphicsUnit.World>，因為這不是實體裝置，並會導致例外狀況。  
   
- 下列範例從 \(0, 0\) 到 \(2, 1\) 繪製一條線，其中點 \(2, 1\) 是指距離 \(0, 0\) 點右邊 2 英吋和下方 1 英吋的位置：  
+ 下列範例會繪製線條，以從 （0，0） 到 （2，1），其中的點 （2，1） 是 2 英吋，向右和向下 1 英吋從點 （0，0）：  
   
  [!code-csharp[System.Drawing.CoordinateSystems#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.CoordinateSystems#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#32)]  
   
 > [!NOTE]
->  如果建構畫筆時未指定畫筆寬度，則上述範例將繪製出一條寬為一英吋的線條。  您可以在 <xref:System.Drawing.Pen> 建構函式的第二個引數中指定畫筆寬度：  
+>  如果您未指定畫筆寬度，當您建構您的畫筆時，上述範例中，會繪製為一英吋寬的線條。 您可以指定的第二個引數中的畫筆寬度<xref:System.Drawing.Pen>建構函式：  
   
  [!code-csharp[System.Drawing.CoordinateSystems#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#33)]
  [!code-vb[System.Drawing.CoordinateSystems#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#33)]  
   
- 如果假設顯示裝置的水平方向每英吋有 96 個點，且其垂直方向每英吋有 96 個點，則上述範例的線條結束點會分別在三種座標空間中使用下列座標：  
+ 如果我們假設顯示裝置，具有 96 dpi 的水平方向與 96 dpi 在垂直方向，在上述範例中線條的端點會有下列座標在三個座標空間：  
   
 |||  
 |-|-|  
-|World|\(0, 0\) 到 \(2, 1\)|  
-|頁面|\(0, 0\) 到 \(2, 1\)|  
-|裝置|\(0, 0\) 到 \(192, 96\)|  
+|世界|（0，0） 到 （2，1）|  
+|頁面|（0，0） 到 （2，1）|  
+|裝置|(0，0，以 192 (96）|  
   
- 請注意，由於全局座標空間的原點位於工作區的左上角，因此畫面座標和全局座標是相同的。  
+ 請注意，因為全局座標空間的原點位於左上角的用戶端區域時，畫面座標全局座標相同。  
   
- 您可以結合全局和畫面轉換來達到各種效果。  例如，假設您想要使用英吋做為度量單位，而且想要您的座標系統的原點位於工作區左邊緣的 2 英吋和工作區頂端的 1\/2 英吋處。  下列範例將設定 <xref:System.Drawing.Graphics> 物件的全局轉換和畫面轉換，然後從 \(0, 0\) 到 \(2, 1\) 繪製出一條線：  
+ 您可以結合全局和頁面轉換，以達成各種不同的效果。 例如，假設您想要使用的測量單位為英吋，而您想從左邊緣起 2 英吋的 1/2 英吋，從用戶端區域的頂端與工作區座標系統的原點。 下列範例會設定全局和頁面轉換<xref:System.Drawing.Graphics>物件，並再繪製的直線 （0，0） 到 （2，1）：  
   
  [!code-csharp[System.Drawing.CoordinateSystems#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.CoordinateSystems#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#34)]  
   
- 下列圖示將顯示該線條和座標系統。  
+ 下圖顯示的行和座標系統。  
   
- ![座標系統](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.png "AboutGdip05\_art03")  
+ ![座標系統](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.gif "AboutGdip05_art03")  
   
- 如果假設顯示裝置的水平方向每英吋有 96 個點，且其垂直方向每英吋有 96 個點，則上述範例的線條結束點會分別在三種座標空間中使用下列座標：  
+ 如果我們假設顯示裝置，具有 96 dpi 的水平方向與 96 dpi 在垂直方向，在上述範例中線條的端點會有下列座標在三個座標空間：  
   
 |||  
 |-|-|  
-|World|\(0, 0\) 到 \(2, 1\)|  
-|頁面|\(2, 0.5\) 到 \(4, 1.5\)|  
-|裝置|\(192, 48\) 到 \(384, 144\)|  
+|世界|（0，0） 到 （2，1）|  
+|頁面|（2，0.5） 到 （4，1.5）|  
+|裝置|（192，48） 到 （384、 144）|  
   
-## 請參閱  
- [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
+## <a name="see-also"></a>另請參閱  
+ [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [以矩陣來表示轉換](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)

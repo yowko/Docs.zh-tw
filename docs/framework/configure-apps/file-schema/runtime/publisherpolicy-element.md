@@ -1,81 +1,84 @@
 ---
-title: "&lt;publisherPolicy&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/publisherPolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#publisherPolicy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<publisherPolicy> 項目"
-  - "容器標記, <publisherPolicy> 項目"
-  - "publisherPolicy 項目"
+title: "&lt;p&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/publisherPolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#publisherPolicy
+helpviewer_keywords:
+- publisherPolicy element
+- container tags, <publisherPolicy> element
+- <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 654887c870a7f620c52fa402d6324de39fdb2feb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;publisherPolicy&gt; 項目
+# <a name="ltpublisherpolicygt-element"></a>&lt;p&gt;項目
 指定執行階段是否套用發行者原則。  
   
-## 語法  
+ \<configuration>  
+\<執行階段 >  
+\<assemblyBinding >  
+\<y >  
+\<p >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <publisherPolicy apply="yes|no"/>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|說明|  
-|--------|--------|  
+|---------------|-----------------|  
 |`apply`|指定是否套用發行者原則。|  
   
-## 套用屬性  
+## <a name="apply-attribute"></a>套用屬性  
   
 |值|說明|  
-|-------|--------|  
-|`yes`|套用發行者原則。  這是預設值。|  
+|-----------|-----------------|  
+|`yes`|套用發行者原則。 這是預設設定。|  
 |`no`|不套用發行者原則。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|項目|描述|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
-## 備註  
- 當元件廠商發行新版組件時，廠商可以加入發行者原則，如此使用舊版的應用程式現在就可以使用新版。  若要指定是否為特定組件的套用發行者原則，請將  **\<publisherPolicy\>** 項目放置到 **\<dependentAssembly\>** 項目中。  
+## <a name="remarks"></a>備註  
+ 當元件廠商發行新版的組件時，廠商可以包含發行者原則，因此現在使用舊版本的應用程式使用新的版本。 若要指定是否要針對特定的組件套用發行者原則，請將 **\<p >**中的項目 **\<dependentAssembly >**項目。  
   
- **apply** 屬性的預設設定為 **yes**。  將 **apply** 屬性設定為 **no**，會覆寫組件任何先前的 **yes** 設定。  
+ 預設設定**套用**屬性是**是**。 設定**套用**屬性**沒有**覆寫任何先前**是**組件的設定。  
   
- 應用程式必須擁有使用權限，才能明確忽略其使用應用程式組態檔中 [\<publisherPolicy apply\="no"\/\>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) 項目的發行者原則。  使用權限的授與方式是，在 [SecurityPermission Class](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic) 類別上設定 [BindingRedirects](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic) 旗標。  如需詳細資訊，請參閱[組件繫結重新導向安全性權限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
+ 若要明確地略過發行者原則使用的應用程式需要的權限[ \<p 套用 ="no"/ >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)應用程式組態檔中的項目。 藉由設定授與權<xref:System.Security.Permissions.SecurityPermissionFlag>加上旗標上<xref:System.Security.Permissions.SecurityPermission>。 如需詳細資訊，請參閱[組件繫結重新導向安全性權限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
   
-## 範例  
- 下列範例會將 `myAssembly` 組件的發行者原則關閉。  
+## <a name="example"></a>範例  
+ 下列範例會關閉發行者原則組件， `myAssembly`。  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -90,8 +93,8 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+## <a name="see-also"></a>另請參閱  
+ [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

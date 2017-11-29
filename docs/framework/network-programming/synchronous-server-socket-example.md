@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - synchronous server sockets
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6918042ac04a24f646ce8fd10a86d64c2aa4fd39
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4304a8928b2fe768f20b2ff0bde94921565155ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="synchronous-server-socket-example"></a>同步伺服器通訊端範例
 下列範例程式會建立從用戶端接收連線要求的伺服器。 伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，會暫停執行伺服器應用程式。 應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。 用戶端的字串必須包含字串 "\<EOF>" 來表示訊息結束。  
@@ -50,12 +47,12 @@ Public Class SynchronousSocketListener
         ' Establish the local endpoint for the socket.  
         ' Dns.GetHostName returns the name of the   
         ' host running the application.  
-        Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+        Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
         Dim localEndPoint As New IPEndPoint(ipAddress, 11000)  
   
         ' Create a TCP/IP socket.  
-        Dim listener As New Socket(AddressFamily.InterNetwork, _  
+        Dim listener As New Socket(ipAddress.AddressFamily, _  
             SocketType.Stream, ProtocolType.Tcp)  
   
         ' Bind the socket to the local endpoint and   
@@ -111,12 +108,12 @@ public class SynchronousSocketListener {
         // Establish the local endpoint for the socket.  
         // Dns.GetHostName returns the name of the   
         // host running the application.  
-        IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+        IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
         IPAddress ipAddress = ipHostInfo.AddressList[0];  
         IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
   
         // Create a TCP/IP socket.  
-        Socket listener = new Socket(AddressFamily.InterNetwork,  
+        Socket listener = new Socket(ipAddress.AddressFamily,  
             SocketType.Stream, ProtocolType.Tcp );  
   
         // Bind the socket to the local endpoint and   
@@ -170,7 +167,6 @@ public class SynchronousSocketListener {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [同步用戶端通訊端範例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)   
- [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
+ [同步用戶端通訊端範例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
+ [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
  [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
-

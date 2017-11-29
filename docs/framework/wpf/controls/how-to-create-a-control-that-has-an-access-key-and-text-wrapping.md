@@ -1,49 +1,50 @@
 ---
-title: "如何：建立有便捷鍵和自動換行的控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "便捷鍵, 控制項"
-  - "控制項, 便捷鍵"
-  - "控制項, 文字換行"
-  - "索引鍵, 控制項"
-  - "文字換行"
-  - "文字換行"
+title: "操作說明：建立具有便捷鍵和自動換行功能的控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access keys [WPF], control for
+- controls [WPF], text wrapping
+- wrapping text [WPF]
+- keys [WPF], control for
+- controls [WPF], access keys
+- text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a759011425a3f09a7b91b728442f8e8ea7b92fa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：建立有便捷鍵和自動換行的控制項
-本範例顯示如何建立具有[便捷鍵](GTMT) \(Access Key\) 並支援自動換行的控制項。  這個範例使用 <xref:System.Windows.Controls.Label> 控制項來說明這些概念。  
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>操作說明：建立具有便捷鍵和自動換行功能的控制項
+此範例示範如何建立具有便捷鍵並支援自動換行的控制項。 此範例會使用<xref:System.Windows.Controls.Label>來說明這些概念的控制項。  
   
-## 範例  
- **將自動換行加入到標籤**  
+## <a name="example"></a>範例  
+ **將自動換行功能新增到您的標籤**  
   
- <xref:System.Windows.Controls.Label> 控制項不支援自動換行。  如果您需要能夠自動換行的標籤，可以在標籤內巢狀嵌入另一個支援自動換行的項目。  下列範例顯示如何使用 <xref:System.Windows.Controls.TextBlock>，讓標籤能夠自動換行多行文字。  
+ <xref:System.Windows.Controls.Label>控制項不支援文字換行。 如果您需要一個多行換行的標籤，您可以將支援自動換行的另一個元素內嵌在巢狀結構中，並將該元素放在標籤內。 下列範例示範如何使用<xref:System.Windows.Controls.TextBlock>讓包裝幾行文字標籤。  
   
- <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
- <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
+ [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **將便捷鍵和自動換行加入到標籤**  
+ **將便捷鍵和自動換行功能新增到您的標籤**  
   
- 如果您需要有便捷鍵 \(助憶鍵 \(Mnemonic\)\) 的 <xref:System.Windows.Controls.Label>，請在 <xref:System.Windows.Controls.Label> 內使用 <xref:System.Windows.Controls.AccessText> 項目。  
+ 如果您需要<xref:System.Windows.Controls.Label>便捷鍵 （助憶鍵） 時，使用<xref:System.Windows.Controls.AccessText>內的項目<xref:System.Windows.Controls.Label>。  
   
- 像是 <xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.RadioButton>、<xref:System.Windows.Controls.CheckBox>、<xref:System.Windows.Controls.MenuItem>、<xref:System.Windows.Controls.TabItem>、<xref:System.Windows.Controls.Expander> 和 <xref:System.Windows.Controls.GroupBox> 之類的控制項都有預設控制項樣板。  這些樣板包含 <xref:System.Windows.Controls.ContentPresenter>。  您可以在 <xref:System.Windows.Controls.ContentPresenter> 上設定的其中一個屬性就是 <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>\="true"，這可用來指定控制項的便捷鍵。  
+ 例如，控制<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.RadioButton>， <xref:System.Windows.Controls.CheckBox>， <xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TabItem>， <xref:System.Windows.Controls.Expander>，和<xref:System.Windows.Controls.GroupBox>有預設控制項範本。 這些範本包含<xref:System.Windows.Controls.ContentPresenter>。 您可以設定屬性的其中一個<xref:System.Windows.Controls.ContentPresenter>是<xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>="true"，您可以用來指定控制項的便捷鍵。  
   
- 下列範例顯示如何建立具有便捷鍵並支援自動換行的 <xref:System.Windows.Controls.Label>。  為啟用自動換行，此範例設定了 <xref:System.Windows.Controls.AccessText.TextWrapping%2A> 屬性並使用底線字元指定便捷鍵   \(緊接在底線字元後面的字元就是便捷鍵\)。  
+ 下列範例示範如何建立<xref:System.Windows.Controls.Label>，具有存取金鑰，並支援文字換行。 若要啟用文字換行，範例會設定<xref:System.Windows.Controls.AccessText.TextWrapping%2A>屬性，並使用底線字元來指定存取金鑰。 (緊接在底線字元之後的字元就是便捷鍵)。  
   
- <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
- <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
+ [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
-## 請參閱  
- [How to: Set the Target Property of a Label](http://msdn.microsoft.com/zh-tw/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+## <a name="see-also"></a>另請參閱  
+ [操作說明：設定標籤的目標屬性](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

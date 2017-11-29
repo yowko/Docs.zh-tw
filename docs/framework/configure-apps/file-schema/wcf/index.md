@@ -5,24 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7a651746abe22b8f5eecd571b10de07b08af26bb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 05aeeea7d10c012804fe083890bcc8516aa8c8bc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wcf-configuration-schema"></a>WCF 組態結構描述
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 組態項目可讓您設定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務與用戶端應用程式。 您可使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 來建立並修改用戶端與服務的組態檔。 由於組態檔採用 XML 格式，因此，如果要使用文字編輯器手動編輯這些檔案，則必須熟悉 XML。 否則，您可能會碰到 XML 項目標記或屬性找不到等問題， 因為 XML 項目標記與屬性有區分大小寫。  
@@ -53,4 +48,3 @@ ms.lasthandoff: 09/05/2017
 ## <a name="related-sections"></a>相關章節  
  [設定 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  說明如何設定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務與用戶端。
-

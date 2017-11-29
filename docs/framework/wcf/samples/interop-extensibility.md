@@ -1,26 +1,29 @@
 ---
-title: "Interop 擴充性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Interop 擴充性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 384a012a-d92d-40d1-b1a5-9c18ca932fcc
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 45e567874634080d59f3e061735469501864c155
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Interop 擴充性
+# <a name="interop-extensibility"></a>Interop 擴充性
 本節包含示範自訂互通性的範例。  
   
-## 在本節中  
- [按本文項目分派](../../../../docs/framework/wcf/samples/dispatch-by-body-element.md)  
+## <a name="in-this-section"></a>本章節內容  
+ [本文項目分派](../../../../docs/framework/wcf/samples/dispatch-by-body-element.md)  
  示範如何實作將傳入訊息指派至作業的替代演算法。  
   
  [依本文路由](../../../../docs/framework/wcf/samples/route-by-body.md)  

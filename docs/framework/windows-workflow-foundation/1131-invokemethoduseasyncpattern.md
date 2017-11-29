@@ -1,39 +1,43 @@
 ---
-title: "1131 - InvokeMethodUseAsyncPattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1131 - InvokeMethodUseAsyncPattern
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eca50fa7-5276-4759-ad1c-e490b9bd1f82
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6f9f8f4e836d5c5b437edcfaff6460c7b97210ce
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 1131 - InvokeMethodUseAsyncPattern
-## 屬性  
+# <a name="1131---invokemethoduseasyncpattern"></a>1131 - InvokeMethodUseAsyncPattern
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|1131|  
 |關鍵字|WFRuntime|  
 |層級|資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|通道|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## 描述  
+## <a name="description"></a>描述  
  在 CacheMetadata 步驟期間，InvokeMethod 活動指出其於叫用方法時，使用非同步模式。  
   
-## 訊息  
- InvokeMethod '%1' \- 方法使用 '%2' 和 '%3' 非同步模式。  
+## <a name="message"></a>訊息  
+ InvokeMethod '%1' - 方法使用 '%2' 和 '%3' 非同步模式。  
   
-## 詳細資料  
+## <a name="details"></a>詳細資料  
   
 |資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
+|--------------------|--------------------|-----------------|  
 |InvokeMethod|xs:string|InvokeMethod 活動的顯示名稱。|  
 |BeginMethod|xs:string|Begin 方法的名稱。|  
 |EndMethod|xs:string|End 方法的名稱。|  

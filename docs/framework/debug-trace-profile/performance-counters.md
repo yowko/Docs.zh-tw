@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c67018df35816b38828e548a88d25efe16d6a15a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 本主題提供可以在[效能監視器](http://technet.microsoft.com/library/cc749249.aspx)中找到之效能計數器的清單。  
@@ -137,7 +130,7 @@ ms.lasthandoff: 08/21/2017
 |**# Gen 0 Collections**|顯示自應用程式啟動後層代 0 物件 (也就是最新且最近配置的物件) 被記憶體回收的次數。<br /><br /> 當層代 0 中可用的記憶體不足以滿足配置要求時，就會發生層代 0 記憶體回收。 此計數器會在層代 0 記憶體回收的結尾遞增。 較高的層代記憶體回收包含所有較低層代的回收。 當較高的層代 (層代 1 或 2) 記憶體回收發生時，這個計數器會明確地遞增。<br /><br /> 此計數器會顯示最後觀察到的值。 **_Global\_** 計數器的值不精確，應該予以忽略。|  
 |**# Gen 1 Collections**|顯示自應用程式啟動後層代 1 物件被記憶體回收的次數。<br /><br /> 此計數器會在層代 1 記憶體回收的結尾遞增。 較高的層代記憶體回收包含所有較低層代的回收。 當較高的層代 (層代 2) 記憶體回收發生時，這個計數器會明確地遞增。<br /><br /> 此計數器會顯示最後觀察到的值。 **_Global\_** 計數器的值不精確，應該予以忽略。|  
 |**# Gen 2 Collections**|顯示自應用程式啟動後層代 2 物件被記憶體回收的次數。 此計數器會在層代 2 記憶體回收的結尾遞增 (也稱為完整記憶體回收)。<br /><br /> 此計數器會顯示最後觀察到的值。 **_Global\_** 計數器的值不精確，應該予以忽略。|  
-|**# Induced GC**|顯示因為明確呼叫 <xref:System.GC.Collect%2A?displayProperty=fullName> 而執行記憶體回收的最高次數。 最佳作法是讓記憶體回收行程調整其回收的頻率。|  
+|**# Induced GC**|顯示因為明確呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 而執行記憶體回收的最高次數。 最佳作法是讓記憶體回收行程調整其回收的頻率。|  
 |**# of Pinned Objects**|顯示發生在最後一次記憶體回收中的 Pin 物件數目。 Pin 物件是記憶體回收行程無法在記憶體中移動的物件。 這個計數器只會在已經過記憶體回收的堆積中追蹤 Pin 物件。 例如，層代 0 記憶體回收造成只能在層代 0 堆積中列舉 Pin 物件。|  
 |**# of Sink Blocks in use**|顯示目前使用中的同步區塊數目。 同步區塊為配置來儲存同步處理資訊之每一物件的資料結構。 它們會保存 Managed 物件的弱式參考，且必須由記憶體回收行程進行掃描。 同步區塊並不僅限於儲存同步處理資訊；它們也可以儲存 COM Interop 中繼資料。 此計數器表示大量使用同步處理原始物件的效能問題。|  
 |**# Total committed Bytes**|顯示記憶體回收行程目前已認可的虛擬記憶體數目 (以位元組為單位)。 認可的記憶體是在磁碟分頁檔上已保留其空間的實體記憶體。|  
@@ -267,6 +260,5 @@ for (int i = 0; i < Array.Length; i++)
 |**Total Runtime Checks**|顯示自應用程式啟動後執行階段程式碼存取安全性檢查執行的總數。 當呼叫端要求特定權限時，會執行執行階段程式碼存取安全性檢查。 執行階段檢查在每次由呼叫端呼叫時進行，並且檢查目前呼叫端的執行緒堆疊。 搭配使用 **Stack Walk Depth** 計數器時，此計數器指出因安全性檢查而發生的效能降低。|  
   
 ## <a name="see-also"></a>另請參閱  
- [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)   
+ [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
-

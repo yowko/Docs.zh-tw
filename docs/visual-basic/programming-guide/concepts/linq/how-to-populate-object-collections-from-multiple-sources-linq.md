@@ -1,43 +1,35 @@
 ---
-title: "如何︰ 從多個來源 (LINQ) (Visual Basic) 填入物件集合 |Microsoft 文件"
+title: "如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25f504d862ef2176dc90a31fbccf18777b9d3d0a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何︰ 填入物件集合，從多個來源 (LINQ) (Visual Basic)
-這個範例示範如何從不同來源的資料合併到一系列新的型別。  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合
+此範例示範如何將不同來源的資料合併成新的類型。  
   
 > [!NOTE]
->  請勿嘗試在檔案系統仍在資料庫中的資料加入記憶體中的資料。 這類的跨網域聯結會產生未定義的結果，因為不同的方式，可以針對資料庫查詢和其他類型的來源定義中的聯結作業。 此外，也有這類作業可能導致記憶體不足例外狀況，如果資料庫中的資料量夠大的風險。 若要加入資料庫至記憶體中資料的資料，第一次呼叫`ToList`或`ToArray`資料庫查詢和則傳回的集合上執行聯結。  
+>  請勿嘗試將記憶體內部資料或檔案系統中的資料，與仍在資料庫中的資料聯結。 這類跨定義域的聯結會產生未定義的結果，因為針對資料庫查詢和其他類型的來源定義聯結作業的方式可能不同。 此外，如果資料庫中的資料量太大，這類作業也可能會導致記憶體不足的例外狀況。 若要將資料庫中的資料聯結至記憶體內部資料，請先在資料庫查詢中呼叫 `ToList` 或 `ToArray`，然後對傳回的集合執行聯結。  
   
 ### <a name="to-create-the-data-file"></a>建立資料檔  
   
--   Names.csv 和 scores.csv 將檔案複製到您的專案資料夾中所述[How to︰ 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。  
+-   Names.csv 和 scores.csv 將檔案複製到您的專案資料夾中所述[How to： 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用具名型別`Student`儲存合併的資料，從兩個記憶體中集合的模擬試算表資料存成.csv 格式的字串。 第一個集合的字串表示的學生名稱和識別碼，而第二個集合表示學生識別碼 （在第一個資料行中） 和四個測驗分數。 識別碼做為外部索引鍵。  
+ 下列範例示範如何使用具名類型 `Student`，來儲存將兩個記憶體內部字串集合合併得來的資料，這些字串模擬 .csv 格式的試算表資料。 第一個字串集合代表學生姓名和學號，第二個集合代表學生學號 (第一欄) 和四個測驗分數。 學號會作為外部索引鍵使用。  
   
 ```vb  
 Class Student  
@@ -112,9 +104,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- 在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句，物件初始設定式用來具現化每個新`Student`使用兩個來源的資料物件。  
+ 在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句，物件初始設定式來具現化每個新`Student`使用兩個來源的資料物件。  
   
- 如果您沒有儲存查詢的結果，匿名型別可以更方便比具名型別。 如果您傳遞查詢結果執行查詢的方法之外，會需要具名型別。 下列範例會執行與前一個範例中，相同的工作，但會使用匿名型別，而不是具名型別︰  
+ 如果您不需要儲存查詢的結果，則匿名型別會比具名類型更方便使用。 如果要在執行查詢的方法外傳遞查詢結果，則必須使用具名類型。 下列範例會執行與上述範例相同的工作，但使用匿名型別而不是具名類型：  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -141,7 +133,7 @@ Next
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

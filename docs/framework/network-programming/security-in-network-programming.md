@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c8adacd11aa256cd5d807cc92ec1a9c3c154ad77
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0908dd50c870c26284c1ef90d8433122b00e7be1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-in-network-programming"></a>網路程式設計的安全性
 .NET Framework <xref:System.Net> 命名空間類別會提供常用網際網路應用程式驗證機制和 .NET Framework 程式碼存取權限的內建支援。  
@@ -50,4 +44,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="related-sections"></a>相關章節  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
  介紹 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的類別。
-

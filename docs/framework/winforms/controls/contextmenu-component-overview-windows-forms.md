@@ -1,41 +1,41 @@
 ---
-title: "ContextMenu 元件概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ContextMenu"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "內容功能表, ContextMenu 元件"
-  - "ContextMenu 元件 [Windows Form], 關於 ContextMenu 元件"
-  - "捷徑功能表, ContextMenu 元件"
+title: "ContextMenu 元件概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ContextMenu
+helpviewer_keywords:
+- ContextMenu component [Windows Forms], about ContextMenu component
+- context menus [Windows Forms], ContextMenu component
+- shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f6c2542ca7ee27bec96bb5010bcdb2fcd7416f72
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ContextMenu 元件概觀 (Windows Form)
+# <a name="contextmenu-component-overview-windows-forms"></a>ContextMenu 元件概觀 (Windows Form)
 > [!IMPORTANT]
->  雖然 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.ContextMenuStrip> 會取代和加入功能至舊版的 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 控制項，但是會保留 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 以提供回溯相容性 \(Backward Compatibility\) 和未來使用 \(如果您選擇要用\)。  
+>  雖然<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>取代，並將功能加入至<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>的舊版中，控制項<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>您選擇保留的回溯相容性及供未來使用。  
   
- 利用 Windows Form <xref:System.Windows.Forms.ContextMenu> 元件，您可以提供捷徑功能表，供使用者輕鬆選取與所選物件關聯的常用命令。  捷徑功能表中的項目通常是出現在應用程式其他地方的主功能表項目子集。  通常使用者只要按一下滑鼠右鍵，即可存取捷徑功能表。  在 Windows Form 上，捷徑功能表是與控制項關聯。  
+ 使用 Windows Form<xref:System.Windows.Forms.ContextMenu>元件，您可以提供使用者更容易存取的快顯功能表與選取的物件相關聯的常用命令。 快顯功能表中的項目通常是從主應用程式中其他位置出現的功能表項目的子集。 使用者通常可以存取捷徑功能表上按一下滑鼠右鍵。 在 Windows Form 上快顯功能表與相關聯的控制項。  
   
-## 主要屬性  
- 您可以將控制項的 <xref:System.Windows.Forms.Control.ContextMenu%2A> 屬性設定為 <xref:System.Windows.Forms.ContextMenu> 元件，這麼做就可建立捷徑功能表與控制項的關聯。  單一捷徑功能表可以和多個控制項建立關聯，但是每個控制項只能有一個捷徑功能表。  
+## <a name="key-properties"></a>索引鍵屬性  
+ 您可以藉由設定控制項的捷徑功能表建立關聯的控制項一起<xref:System.Windows.Forms.Control.ContextMenu%2A>屬性<xref:System.Windows.Forms.ContextMenu>元件。 單一的捷徑功能表可以是多個控制項，與相關聯，但每個控制項都可以有只有一個快顯功能表。  
   
- <xref:System.Windows.Forms.ContextMenu> 元件的主要屬性是 <xref:System.Windows.Forms.Menu.MenuItems%2A> 屬性。  您可以加入功能表項目，方法是用程式設計方式來建立 <xref:System.Windows.Forms.MenuItem> 物件，然後將這些物件加入至捷徑功能表的 <xref:System.Windows.Forms.Menu.MenuItemCollection>。  由於捷徑功能表中的項目通常都源自於其他功能表，因此將項目加入捷徑功能表最常使用的方法就是複製它們。  
+ 索引鍵內容<xref:System.Windows.Forms.ContextMenu>元件是<xref:System.Windows.Forms.Menu.MenuItems%2A>屬性。 您可以加入功能表項目以程式設計方式建立<xref:System.Windows.Forms.MenuItem>物件並將它們加入至<xref:System.Windows.Forms.Menu.MenuItemCollection>的快顯功能表。 快顯功能表中的項目通常取自其他功能表，因為您會將它們複製，快顯功能表中最常加入項目。  
   
-## 請參閱  
- <xref:System.Windows.Forms.ContextMenu>   
- <xref:System.Windows.Forms.MenuStrip>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.ContextMenu>  
+ <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

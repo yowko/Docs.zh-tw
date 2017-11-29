@@ -1,117 +1,120 @@
 ---
-title: "&lt;runtime&gt; 的 &lt;assemblyIdentity&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<assemblyIdentity> 項目"
-  - "assemblyIdentity 項目"
-  - "容器標記, <assemblyIdentity> 項目"
+title: "&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity
+helpviewer_keywords:
+- <assemblyIdentity> element
+- container tags, <assemblyIdentity> element
+- assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 740b08806dff65d3ce1b8de378138c2647944fd4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;runtime&gt; 的 &lt;assemblyIdentity&gt; 項目
+# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;
 包含有關組件的識別資訊。  
   
-## 語法  
+ \<configuration>  
+\<執行階段 >  
+\<assemblyBinding >  
+\<y >  
+\<assemblyIdentity >  
   
-```  
+## <a name="syntax"></a>語法  
   
-   <assemblyIdentity    
+```xml  
+   <assemblyIdentity    
 name="assembly name"  
 publicKeyToken="public key token"  
 culture="assembly culture"/>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
-|--------|--------|  
-|`name`|必要屬性。<br /><br /> 組件的名稱。|  
-|`culture`|選擇性屬性。<br /><br /> 為字串，指定組件的語言和國家\/地區。|  
-|`publicKeyToken`|選擇性屬性。<br /><br /> 為十六進位值，指定組件的強式名稱 \(Strong Name\)。|  
-|`processorArchitecture`|選擇性屬性。<br /><br /> "x86"、"amd64"、"msil" 或 "ia64" 的其中一個值，會針對包含處理器特定程式碼的組件指定處理器架構。  這些值不區分大小寫。  如果為此屬性指派了任何其他值，則會忽略整個 `<assemblyIdentity>` 項目。  請參閱 <xref:System.Reflection.ProcessorArchitecture>。|  
+|屬性|描述|  
+|---------------|-----------------|  
+|`name`|必要屬性。<br /><br /> 組件名稱|  
+|`culture`|選擇性屬性。<br /><br /> 字串，指定的語言和國家/地區的組件。|  
+|`publicKeyToken`|選擇性屬性。<br /><br /> 指定組件的強式名稱的十六進位值。|  
+|`processorArchitecture`|選擇性屬性。<br /><br /> 其中一個值"x86"、"amd64"、"msil"或"ia64"，指定包含處理器特定程式碼組件的處理器架構。 值不區分大小寫。 如果屬性被指派任何其他值，將整個`<assemblyIdentity>`項目會被忽略。 請參閱 <xref:System.Reflection.ProcessorArchitecture>。|  
   
-## processorArchitecture 屬性  
+## <a name="processorarchitecture-attribute"></a>processorArchitecture 屬性  
   
 |值|說明|  
-|-------|--------|  
-|`amd64`|僅限 64 位元的 AMD 處理器。|  
-|`ia64`|僅限 64 位元的 Intel 處理器。|  
-|`msil`|與處理器和每個字組的位元數無關|  
-|`x86`|32 位元的 Intel 處理器 \(原生或位於 64 位元平台的 Windows on Windows \(WOW\) 環境下\)。|  
+|-----------|-----------------|  
+|`amd64`|將 64 位元的 AMD 處理器只。|  
+|`ia64`|64 位元 Intel 處理器只。|  
+|`msil`|處理器和每個字組的位元中性|  
+|`x86`|32 位元 Intel 處理器，其中一個原生或 Windows on Windows (WOW) 的 64 位元平台上的環境中。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|說明|  
-|--------|--------|  
+|項目|說明|  
+|-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`dependentAssembly`|封裝每一個組件的繫結原則和組件位置。  為每個組件 \(Assembly\) 使用一個 `<dependentAssembly>` 項目。|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|`dependentAssembly`|封裝每一個組件的繫結原則和組件位置。 使用其中一個`<dependentAssembly>`每個組件的項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
-## 備註  
- 每一個 **\<dependentAssembly\>**項目必須有一個 **\<assemblyIdentity\>**子項目。  
+## <a name="remarks"></a>備註  
+ 每個 **\<dependentAssembly >**項目必須有一個 **\<assemblyIdentity >**子項目。  
   
- 如果 `processorArchitecture` 屬性存在，則 `<assemblyIdentity>` 項目只會套用到具有對應處理器架構的組件上。  如果 `processorArchitecture` 屬性不存在，則 `<assemblyIdentity>` 項目可以套用到具有任何處理器架構的組件上。  
+ 如果`processorArchitecture`屬性已存在，`<assemblyIdentity>`項目只適用於具有對應的處理器架構的組件。 如果`processorArchitecture`屬性不存在，`<assemblyIdentity>`項目可以套用至任何處理器架構的組件。  
   
- 下列範例會示範適用於兩個同名組件的一個組態檔，這兩個組件是以兩種不同的處理器架構為目標，而且其版本尚未同步加以維護。  當應用程式在 x86 平台上執行時，會套用第一個 `<assemblyIdentity>` 項目，而忽略另一個項目。  如果在 x86 或 ia64 以外的平台上執行應用程式，這兩個項目皆會被忽略。  
+ 下列範例顯示兩個組件具有相同名稱以兩個不同的兩個處理器架構，以及其版本已受到維護的同步處理不組態檔。當應用程式執行 x86 平台的第一個`<assemblyIdentity>`元素會套用，而其他都會被忽略。 如果在非 x86 或 ia64 平台上，執行應用程式，兩者都會被忽略。  
   
-```  
+```xml  
 <configuration>  
-   <runtime>  
-      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <dependentAssembly>  
-            <assemblyIdentity name="MyAssembly"  
-                  publicKeyToken="14a739be0244c389"  
-                  culture="neutral"  
-                  processorArchitecture="x86" />  
-            <bindingRedirect oldVersion= "1.0.0.0"   
-                  newVersion="1.1.0.0" />  
-         </dependentAssembly>  
-         <dependentAssembly>  
-            <assemblyIdentity name="MyAssembly"  
-                  publicKeyToken="14a739be0244c389"  
-                  culture="neutral"   
-                  processorArchitecture="ia64" />  
-            <bindingRedirect oldVersion="1.0.0.0"   
-                  newVersion="2.0.0.0" />  
-         </dependentAssembly>  
-      </assemblyBinding>  
-   </runtime>  
+   <runtime>  
+      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
+         <dependentAssembly>  
+            <assemblyIdentity name="MyAssembly"  
+                  publicKeyToken="14a739be0244c389"  
+                  culture="neutral"  
+                  processorArchitecture="x86" />  
+            <bindingRedirect oldVersion= "1.0.0.0"   
+                  newVersion="1.1.0.0" />  
+         </dependentAssembly>  
+         <dependentAssembly>  
+            <assemblyIdentity name="MyAssembly"  
+                  publicKeyToken="14a739be0244c389"  
+                  culture="neutral"   
+                  processorArchitecture="ia64" />  
+            <bindingRedirect oldVersion="1.0.0.0"   
+                  newVersion="2.0.0.0" />  
+         </dependentAssembly>  
+      </assemblyBinding>  
+   </runtime>  
 </configuration>  
 ```  
   
- 如果組態檔包含一個沒有 `processorArchitecture` 屬性的 `<assemblyIdentity>` 項目，而且未包含符合此平台的項目，則會使用沒有 `processorArchitecture` 屬性的此項目。  
+ 如果組態檔包含`<assemblyIdentity>`項目不含`processorArchitecture`屬性，而且不包含符合的平台的項目不含的項目`processorArchitecture`屬性使用。  
   
-## 範例  
- 下列範例顯示如何提供有關組件的資訊。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何提供組件的相關資訊。  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -126,7 +129,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## 請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

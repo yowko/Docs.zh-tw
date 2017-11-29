@@ -1,41 +1,43 @@
 ---
-title: "如何：在 Windows Form 中連接多個事件至單一事件處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "事件處理常式 [Windows Form], 連接事件至"
-  - "事件 [Windows Form], 將多個連接至單一事件處理常式"
-  - "功能表項目, 多點傳送事件處理方法"
-  - "功能表, 多個功能表項目的事件處理方法"
-  - "Windows Form 控制項, 事件"
+title: "如何：在 Windows Form 中連接多個事件至單一事件處理常式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- events [Windows Forms], connecting multiple to single event handler
+- event handlers [Windows Forms], connecting events to
+- menus [Windows Forms], event-handling methods for multiple menu items
+- Windows Forms controls, events
+- menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa22b011b895a20cefdcc5a7c9e6c1cd0531923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows Form 中連接多個事件至單一事件處理常式
-設計應用程式時，您可能會發現多個事件必須使用同一個事件處理常式，或是多個事件會執行相同的程序。  例如，在所公開功能都相同的情況下，如果能讓功能表命令和表單上按鈕一樣引發相同事件的話，便可節省相當可觀的時間。  利用 C\# 中 \[屬性\] 視窗的 \[事件\] 檢視，或 Visual Basic 程式碼編輯器中的 `Handles`  關鍵字以及 \[**類別名稱**\] 和 \[**方法名稱**\] 下拉式方塊，都可以達到這項目的。  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>如何：在 Windows Form 中連接多個事件至單一事件處理常式
+設計您的應用程式，您可能會發現需要將多個事件使用單一事件處理常式，或是必須執行相同的程序的多個事件。 比方說，它通常是功能強大的節省時間讓功能表命令，您的表單上的按鈕不會公開相同的功能像引發相同的事件。 您可以使用 C# 中的 [屬性] 視窗的 [事件] 檢視或使用`Handles`關鍵字和**類別名稱**和**方法名稱**下拉式清單方塊在 Visual Basic 程式碼編輯器中。  
   
-### 若要在 Visual Basic 中將多個事件連接至同一個事件處理常式  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>若要連接到單一事件處理常式，在 Visual Basic 中的多個事件  
   
-1.  在表單上按一下滑鼠右鍵，並選擇 \[**檢視程式碼**\]。  
+1.  以滑鼠右鍵按一下表單，然後選擇 **檢視程式碼**。  
   
-2.  從 \[**類別名稱**\] 下拉式方塊中選取您指派給此事件處理常式處理的其中一個控制項。  
+2.  從**類別名稱**下拉式清單方塊中，選取您想要處理此事件處理常式的控制項的其中一個。  
   
-3.  從 \[**方法名稱**\] 下拉式方塊中選取您指派給此事件處理常式處理的其中一個事件。  
+3.  從**方法名稱**下拉式清單方塊中，選取其中一個要處理的事件處理常式的事件。  
   
-4.  程式碼編輯器會插入適當的事件處理常式並將插入點置入方法中。  在以下的範例中，即是 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Click> 事件。  
+4.  程式碼編輯器會插入適當的事件處理常式，並將插入點置於方法內。 在下列範例中，它是<xref:System.Windows.Forms.Control.Click>事件<xref:System.Windows.Forms.Button>控制項。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -43,7 +45,7 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-5.  將其他您想要處理的事件附加至 `Handles`  子句。  
+5.  新增其他您想要處理的事件至`Handles`子句。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  
@@ -51,22 +53,22 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-6.  加入適當的程式碼至事件處理常式。  
+6.  事件處理常式中加入適當的程式碼。  
   
-### 若要在 C\# 中連接多個事件至單一事件處理常式  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>若要連接到單一事件處理常式在 C# 中的多個事件  
   
-1.  選取您要連接事件處理常式的控制項。  
+1.  選取您要連接的事件處理常式的控制項。  
   
-2.  在 \[屬性\] 視窗中，按一下 \[**事件**\] 按鈕 ![事件符號](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton\_PropertiesWindow")。  
+2.  在 [屬性] 視窗中，按一下**事件**按鈕 (![事件按鈕](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow"))。  
   
-3.  按一下您要處理的事件名稱。  
+3.  按一下您想要處理之事件的名稱。  
   
-4.  在事件名稱旁的值區段中按一下下拉式按鈕，接著會顯示現有事件處理常式的清單，這些處理常式與您要處理事件的方法簽章相符。  
+4.  在事件名稱旁的 [值] 區段中，按一下下拉式按鈕，以顯示符合您想要處理事件的方法簽章的現有事件處理常式的清單。  
   
 5.  從清單中選取適當的事件處理常式。  
   
-     程式碼將會加入表單，來將事件與現有的事件處理常式繫結起來。  
+     程式碼會加入至表單，以將事件繫結至現有的事件處理常式。  
   
-## 請參閱  
- [在 Windows Form 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
+## <a name="see-also"></a>另請參閱  
+ [在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
  [事件處理常式概觀](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)

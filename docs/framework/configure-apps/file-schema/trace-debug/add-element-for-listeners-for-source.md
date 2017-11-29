@@ -1,103 +1,107 @@
 ---
-title: "&lt;source&gt; 的 &lt;listeners&gt; 適用之 &lt;add&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> 適用之 <listeners> 的 <add> 項目"
-  - "<source> 適用之 <listeners> 的 add 項目"
-  - "initializeData 屬性"
+title: "&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
+helpviewer_keywords:
+- initializeData attribute
+- add element for <listeners> for <source>
+- <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 69a5f855251f1f2c9c94ae3b571b8b78881631fb
+ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/23/2017
 ---
-# &lt;source&gt; 的 &lt;listeners&gt; 適用之 &lt;add&gt; 項目
-將接聽程式加入至追蹤來源的 `Listeners` 集合。  
+# <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;
+將接聽項新增至追蹤來源的 `Listeners` 集合。  
   
-## 語法  
+ \<configuration>  
+\<system.diagnostics >  
+\<來源 >  
+\<來源 >  
+\<接聽項 >  
+\<add>  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
   initializeData="data"/>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|說明|  
-|--------|--------|  
-|`type`|必要屬性。<br /><br /> 指定接聽程式的類型。  您必須使用符合[指定完整的類型名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)中指定之要求的字串。|  
-|`initializeData`|選擇性屬性。<br /><br /> 傳遞至指定類別的建構函式的字串。  如果此類別並沒有接受字串的建構函式，則會擲回 <xref:System.Configuration.ConfigurationException>。|  
-|`name`|選擇性屬性。<br /><br /> 指定接聽程式的名稱。|  
-|`traceOutputOptions`|選擇性屬性。<br /><br /> 為此追蹤接聽項指定 <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> 屬性值。|  
-|\[自訂屬性\]|選擇性屬性。<br /><br /> 針對該接聽項指定 <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> 方法所識別的接聽項特定的屬性值。  <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 是 <xref:System.Diagnostics.DelimitedListTraceListener> 類別特有的額外屬性之範例。|  
+|---------------|-----------------|  
+|`type`|必要屬性，除非您正在參考中的接聽程式`sharedListeners`集合中的情況下，您只需要依名稱參考它 (請參閱[範例](#example))。<br /><br /> 指定接聽程式的類型。 您必須使用符合在指定之需求的字串[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|`initializeData`|選擇性屬性。<br /><br /> 指定的類別傳遞至建構函式的字串。 A<xref:System.Configuration.ConfigurationException>如果類別沒有可接受 string 建構函式會擲回。|  
+|`name`|選擇性屬性。<br /><br /> 指定的接聽程式名稱。|  
+|`traceOutputOptions`|選擇性屬性。<br /><br /> 指定<xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A>追蹤接聽程式的屬性值。|  
+|[自訂屬性]|選擇性屬性。<br /><br /> 指定的值所識別的接聽程式的特定屬性<xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A>該接聽項的方法。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>是唯一的額外屬性範例<xref:System.Diagnostics.DelimitedListTraceListener>類別。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
   
-|元素|說明|  
-|--------|--------|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|將篩選條件加入至追蹤來源的 `Listeners` 集合中的接聽程式。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|將篩選新增至追蹤來源之 `Listeners` 集合中的接聽項。|  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`system.diagnostics`|指定收集、存放和傳送訊息的追蹤接聽程式，以及設定追蹤參數的層級。|  
-|`sources`|包含會啟始追蹤訊息的追蹤來源。|  
-|`source`|指定會啟始追蹤訊息的追蹤來源。|  
-|`listeners`|指定收集、存放和傳送訊息的接聽程式。|  
+|項目|描述|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
+|`sources`|包含起始追蹤訊息的追蹤來源。|  
+|`source`|指定起始追蹤訊息的追蹤來源。|  
+|`listeners`|指定接聽程式以收集、 儲存和路由傳送訊息。|  
   
-## 備註  
- .NET Framework 隨附的接聽程式類別是衍生自 <xref:System.Diagnostics.TraceListener> 類別。  
+## <a name="remarks"></a>備註  
+ .NET Framework 所隨附的接聽程式類別衍生自<xref:System.Diagnostics.TraceListener>類別。  
   
- 如果您未指定追蹤接聽項的 `name` 屬性，則追蹤接聽項的 <xref:System.Diagnostics.TraceListener.Name%2A> 屬性會預設為空字串 \(""\)。  如果您的應用程式僅有一個接聽項，可以不必指定名稱就進行新增，也可以為該名稱指定空字串來進行移除。  然而，如果應用程式有一個以上的接聽項，則應該為每一個追蹤接聽項指定唯一的名稱，如此可讓您識別及管理 <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=fullName> 集合中個別的追蹤接聽項。  
-  
-> [!NOTE]
->  加入多個具有相同型別與相同名稱的追蹤接聽程式，結果只有一個該型別和名稱的追蹤接聽程式會加入至 `Listeners` 集合。  不過，您可以經由程式設計方式將多個完全相同的接聽程式加入至 `Listeners` 集合中。  
-  
- `initializeData` 屬性的值需視您建立的接聽項之型別而定，  並非所有的追蹤接聽項都會要求您指定 `initializeData`。  
+ 如果您未指定`name`屬性的追蹤接聽項，<xref:System.Diagnostics.TraceListener.Name%2A>追蹤接聽項的屬性會預設為空字串 ("")。 如果您的應用程式只能有一個接聽程式，而不指定名稱，可以將它加入，您可以藉由指定名稱為空字串中移除。 不過，如果您的應用程式有多個接聽程式，您應該指定每個追蹤接聽程式，可讓您識別及管理中的個別追蹤接聽項的唯一名稱<xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType>集合。  
   
 > [!NOTE]
->  當您使用 `initializeData` 屬性時，可能會收到下列編譯器警告訊息：「'initializeData' 屬性未宣告」。這項警告出現的原因是驗證組態設定時其對象是基底型別 <xref:System.Diagnostics.TraceListener>，但此基底型別無法識別 `initializeData` 屬性。  如果追蹤接聽程式實作中包含採用參數的建構函式，您通常可以忽略這項警告。  
+>  加入一個以上的追蹤接聽程式相同的型別且具有相同名稱只能有一個追蹤接聽項中的該類型的結果和名稱新增至`Listeners`集合。 不過，您可以程式設計方式加入至多個相同的接聽程式`Listeners`集合。  
   
- 下表顯示 .NET Framework 隨附的追蹤接聽項，並描述其 `initializeData` 屬性的值。  
+ 值`initializeData`屬性取決於您所建立的接聽程式的類型。 並非所有的追蹤接聽程式會要求您指定`initializeData`。  
+  
+> [!NOTE]
+>  當您使用`initializeData`屬性，可能會遇到的編譯器警告"未宣告 'initializeData' 屬性。 」 發生這個警告是因為組態設定會根據抽象基底類別來驗證<xref:System.Diagnostics.TraceListener>，其無法辨識`initializeData`屬性。 一般而言，您可以忽略此警告具有參數的建構函式的追蹤接聽程式實作。  
+  
+ 下表顯示隨附於.NET Framework 追蹤接聽項，並描述的值及其`initializeData`屬性。  
   
 |追蹤接聽程式類別|initializeData 屬性值|  
-|--------------|------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> 建構函式的 `useErrorStream` 值。將 `initializeData` 屬性設定為 "`true`"，即可將追蹤和偵錯輸出寫入到標準錯誤資料流中；將它設定為 "`false`"，即可寫入到標準輸出資料流中。|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.DelimitedListTraceListener> 寫入的檔案名稱。|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>|現有事件記錄檔來源的名稱。|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.EventSchemaTraceListener> 寫入的檔案名稱。|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.TextWriterTraceListener> 寫入的檔案名稱。|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.XmlWriterTraceListener> 寫入的檔案名稱。|  
+|--------------------------|------------------------------------|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|`useErrorStream`值<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>建構函式。  設定`initializeData`屬性設定為"`true`"來寫入追蹤和偵錯輸出到標準錯誤資料流中，將它設定為"`false`"寫入標準輸出資料流。|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|檔案的名稱<xref:System.Diagnostics.DelimitedListTraceListener>寫入。|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|現有的事件記錄檔來源的名稱。|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|檔案的名稱，<xref:System.Diagnostics.EventSchemaTraceListener>寫入。|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|檔案的名稱，<xref:System.Diagnostics.TextWriterTraceListener>寫入。|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|檔案的名稱，<xref:System.Diagnostics.XmlWriterTraceListener>寫入。|  
   
-## 組態檔  
- 這個項目可以用於電腦組態檔 \(Machine.config\) 和應用程式組態檔。  
+## <a name="configuration-file"></a>組態檔  
+ 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
-## 範例  
- 下列範例將示範如何使用 `<add>` 項目將接聽項 `console` 和 `textListener` 加入到追蹤來源 `TraceSourceApp` 的 `Listeners` 集合中。  `textListener` 接聽項會將追蹤輸出寫入到 myListener.log 檔案中。  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用`<add>`項目將接聽項`console`和`textListener`至`Listeners`追蹤來源的集合`TraceSourceApp`。 `textListener`接聽程式會將追蹤輸出寫入檔案 myListener.log。  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -123,8 +127,8 @@ caps.handback.revision: 15
 </configuration>   
 ```  
   
-## 請參閱  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

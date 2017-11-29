@@ -1,42 +1,46 @@
 ---
-title: "如何：決定作用中的 MDI 子系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "子表單"
-  - "剪貼簿, 複製資料至"
-  - "MDI, 啟動表單"
-  - "MDI, 子視窗"
-  - "MDI, 找出焦點"
+title: "如何：決定作用中的 MDI 子系"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Clipboard [Windows Forms], copying data to
+- MDI [Windows Forms], child windows
+- child forms
+- MDI [Windows Forms], activating forms
+- MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 473cf67f01db8735eb3b32a7549296f827e66ef6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：決定作用中的 MDI 子系
-有時，您會想要提供一個在控制項執行的命令，而此控制項在目前作用中的子表單上取得焦點 \(Focus\)。  例如，假設您想要從子表單的文字方塊複製選取文字到剪貼簿。  您將會建立一個程序，使用標準 \[編輯\] 功能表中 \[複製\] 功能表項目的 <xref:System.Windows.Forms.Control.Click> 事件，將選取文字複製到剪貼簿。  
+# <a name="how-to-determine-the-active-mdi-child"></a>如何：決定作用中的 MDI 子系
+在某些情況下，您會想要提供目前使用中的子表單具有焦點在控制項上作業的命令。 例如，假設您想要選取的文字複製到剪貼簿的子表單的文字方塊。 您將建立的程序，將選取的文字複製到剪貼簿使用<xref:System.Windows.Forms.Control.Click>複製功能表項目，標準的 [編輯] 功能表上的事件。  
   
- 由於 MDI 應用程式對於同一子表單可以有許多執行個體，因此程序需要知道應使用的表單是哪一個。  若要指定正確的表單，請使用 <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> 屬性，傳回取得焦點或最近變成作用中的子表單。  
+ 由於 MDI 應用程式可以有相同的子表單的許多執行個體，則需要知道要使用哪個表單程序。 若要指定正確的格式，請使用<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>屬性，它會傳回具有焦點，或所最近使用的子表單。  
   
- 如果表單上有數個控制項，您也需要指定作用中的控制項是哪一個。  <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> 屬性與 <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> 屬性類似，都會傳回在作用中子表單上取得焦點的控制項。  下列程序說明可從子表單功能表、MDI 表單中的功能表或工具列按鈕呼叫的複製程序。  
+ 當您有數個控制項在表單上時，您也需要指定哪一個控制項是使用中。 像<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>屬性，<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A>屬性會傳回具有焦點的控制項作用中的子表單上。 下列程序將說明可從子表單功能表、 功能表 MDI 表單或工具列按鈕呼叫的複製程序。  
   
-### 若要決定作用中的 MDI 子系 \(複製其文字至剪貼簿\)  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>若要判斷使用中的 MDI 子系 （若要將它的文字複製到剪貼簿）  
   
-1.  在一個方法中，將作用中子表單的作用中控制項文字複製到剪貼簿。  
+1.  在方法中，將作用中子表單的作用中控制項的文字複製到剪貼簿。  
   
     > [!NOTE]
-    >  本範例假設 MDI 父表單 \(`Form1`\) 具有一或多個包含 <xref:System.Windows.Forms.RichTextBox> 控制項的 MDI 子視窗。  如需詳細資訊，請參閱[建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
+    >  這個範例假設有 MDI 父表單 (`Form1`) 具有一個或多個 MDI 子視窗包含<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱[建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -59,7 +63,6 @@ caps.handback.revision: 12
           End If  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -88,12 +91,11 @@ caps.handback.revision: 12
           }  
        }  
     }  
-  
     ```  
   
-## 請參閱  
- [多重文件介面 \(MDI\) 應用程式](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)   
- [如何：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [如何：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [如何：傳送資料至作用中的 MDI 子系](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)   
- [如何：安排 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>另請參閱  
+ [多重文件介面 (MDI) 應用程式](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [操作說明：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [操作說明：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [操作說明：傳送資料至作用中的 MDI 子系](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
+ [操作說明：安排 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

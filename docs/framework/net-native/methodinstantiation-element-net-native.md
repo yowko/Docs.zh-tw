@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d247b2ea8a1b6a908e3eee5082638813545f144d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 37e3ff3e792b8067b6d9409d799cf6e30350606a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltmethodinstantiationgt-element-net-native"></a>&lt;MethodInstantiation&gt; 項目 (.NET Native)
 將執行階段反映原則套用至建構的泛型方法。  
@@ -85,8 +83,7 @@ ms.lasthandoff: 08/21/2017
  `<MethodInstantiation>` 元素會覆寫其對應開放式泛型方法的執行階段反映原則。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
+ [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
  [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
-

@@ -1,53 +1,57 @@
 ---
-title: "如何：確保繫結至相同資料來源的多個控制項都能保持同步 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 繫結多個"
-  - "控制項 [Windows Form], 與資料來源同步處理"
+title: "如何：確保繫結至相同資料來源的多個控制項都能保持同步"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], binding multiple
+- controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2573f342530e59fa05e7f24342f251990b2ce47d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：確保繫結至相同資料來源的多個控制項都能保持同步
-在 Windows Form 中使用資料繫結 \(Data Binding\) 時，經常都會將多個控制項繫結到相同的資料來源。  在某些情況下必須採取額外的步驟，以確保控制項的繫結屬性會與彼此和資料來源維持同步。  遇到下面兩種情況時，必須採取這些步驟：  
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>如何：確保繫結至相同資料來源的多個控制項都能保持同步
+有時候當使用 Windows Form 中的資料繫結時，多個控制項所繫結至相同的資料來源。 在某些情況下，可能必須採取額外步驟以確保控制項的繫結的內容中與其他每個及資料來源同步處理。 這些步驟是兩個情況中，必須：  
   
--   如果資料來源沒有實作 <xref:System.ComponentModel.IBindingList>，並因此產生 <xref:System.ComponentModel.ListChangedType> 型別的 <xref:System.ComponentModel.IBindingList.ListChanged> 事件。  
+-   如果資料來源沒有實作<xref:System.ComponentModel.IBindingList>，並因此產生<xref:System.ComponentModel.IBindingList.ListChanged>類型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>。  
   
--   如果資料來源有實作 <xref:System.ComponentModel.IEditableObject>。  
+-   如果資料來源實作<xref:System.ComponentModel.IEditableObject>。  
   
- 在第一種情況下，您可以使用 <xref:System.Windows.Forms.BindingSource> 將資料來源繫結到控制項。  在第二種情況下，則是可以使用 <xref:System.Windows.Forms.BindingSource> 並處理 <xref:System.Windows.Forms.BindingSource.BindingComplete> 事件，以及呼叫關聯之 <xref:System.Windows.Forms.BindingManagerBase> 上的 <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A>。  
+ 在前一個案例中，您可以使用<xref:System.Windows.Forms.BindingSource>繫結至控制項的資料來源。 在後者的情況下，您可以使用<xref:System.Windows.Forms.BindingSource>及處理<xref:System.Windows.Forms.BindingSource.BindingComplete>事件和呼叫<xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A>上相關聯<xref:System.Windows.Forms.BindingManagerBase>。  
   
-## 範例  
- 下列程式碼範例示範如何使用 <xref:System.Windows.Forms.BindingSource> 元件，將三個控制項 \(兩個文字方塊控制項和一個 <xref:System.Windows.Forms.DataGridView> 控制項\) 繫結到 <xref:System.Data.DataSet> 中的同一欄。  這個範例示範如何處理 <xref:System.Windows.Forms.BindingSource.BindingComplete> 事件，並確保當一個文字方塊的文字值變更時，另一個文字方塊和 <xref:System.Windows.Forms.DataGridView> 控制項將會以正確的值進行更新。  
+## <a name="example"></a>範例  
+ 下列程式碼範例示範如何繫結的三個控制項，兩個文字方塊控制項和<xref:System.Windows.Forms.DataGridView>控制項 — 中的相同資料行<xref:System.Data.DataSet>使用<xref:System.Windows.Forms.BindingSource>元件。 這個範例示範如何處理<xref:System.Windows.Forms.BindingSource.BindingComplete>事件，並確定單一文字方塊的文字值變更時，其他文字方塊和<xref:System.Windows.Forms.DataGridView>控制項以正確的值更新。  
   
- 此範例使用 <xref:System.Windows.Forms.BindingSource> 來繫結資料來源和控制項。  或者，您也可以將控制項直接繫結到資料來源並擷取 <xref:System.Windows.Forms.BindingManagerBase>，以便從表單之 <xref:System.Windows.Forms.Control.BindingContext%2A> 進行繫結，然後再處理 <xref:System.Windows.Forms.BindingManagerBase> 的 <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> 事件。  如需執行這項操作的範例，請參閱關於 <xref:System.Windows.Forms.BindingManagerBase> 之 <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> 事件的說明頁。  
+ 此範例會使用<xref:System.Windows.Forms.BindingSource>繫結資料來源和控制項。 或者，您可以直接繫結控制項至資料來源並擷取<xref:System.Windows.Forms.BindingManagerBase>從表單的繫結<xref:System.Windows.Forms.Control.BindingContext%2A>然後處理<xref:System.Windows.Forms.BindingManagerBase.BindingComplete>事件<xref:System.Windows.Forms.BindingManagerBase>。 如何執行此動作的範例，請參閱 [說明] 頁面，關於<xref:System.Windows.Forms.BindingManagerBase.BindingComplete>事件<xref:System.Windows.Forms.BindingManagerBase>。  
   
  [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
--   這個程式碼範例需要  
+-   這個程式碼範例要求  
   
 -   <xref:System>、<xref:System.Windows.Forms> 和 <xref:System.Drawing> 組件的參考。  
   
--   已處理 <xref:System.Windows.Forms.Form.Load> 事件的表單，以及從表單的 <xref:System.Windows.Forms.Form.Load> 事件處理常式對範例中的 `InitializeControlsAndDataSource` 方法進行的呼叫。  
+-   表單具有<xref:System.Windows.Forms.Form.Load>處理事件和呼叫`InitializeControlsAndDataSource`從表單的範例方法<xref:System.Windows.Forms.Form.Load>事件處理常式。  
   
-## 請參閱  
- [如何：使用 BindingSource 元件跨表單共用繫結資料](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)   
- [Windows Form 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)   
- [與資料繫結相關的介面](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)   
- [Windows Form 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>另請參閱  
+ [操作說明：使用 BindingSource 元件跨表單共用繫結資料](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
+ [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [與資料繫結相關的介面](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
+ [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)

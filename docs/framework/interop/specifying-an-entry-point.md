@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - EntryPoint field
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f8d8f4a561248b7022b08ee15c9a726a58b80318
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7406e256acaea0c535c222386c529c4087bbdc6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-an-entry-point"></a>指定進入點
 進入點可識別函式在 DLL 中的位置。 在 Managed 專案中，目標函式的原始名稱或序數進入點可跨越交互操作界限識別該函式。 此外，您可以將進入點對應到不同的名稱，有效地重新命名函式。  
@@ -46,7 +39,7 @@ ms.lasthandoff: 08/21/2017
  本主題示範如何在 Managed 程式碼中重新命名 DLL 函式。  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>在 Visual Basic 中重新命名函式  
- Visual Basic 使用 **Function** 關鍵字在 **Declare** 陳述式中設定 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName> 欄位。 下列範例示範基本宣告。  
+ Visual Basic 使用 **Function** 關鍵字在 **Declare** 陳述式中設定 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 欄位。 下列範例示範基本宣告。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -71,7 +64,7 @@ End Class
 ```  
   
 ## <a name="renaming-a-function-in-c-and-c"></a>在 C# 和 C++ 中重新命名函式  
- 您可以使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName> 欄位來依名稱或序數指定 DLL 函式。 如果方法定義中的函式名稱與 DLL 中的進入點相同，則不必明確地以 **EntryPoint** 欄位來識別函式。 否則，請使用其中一種下列屬性形式來表示名稱或序數：  
+ 您可以使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 欄位來依名稱或序數指定 DLL 函式。 如果方法定義中的函式名稱與 DLL 中的進入點相同，則不必明確地以 **EntryPoint** 欄位來識別函式。 否則，請使用其中一種下列屬性形式來表示名稱或序數：  
   
 ```  
 [DllImport("dllname", EntryPoint="Functionname")]  
@@ -104,8 +97,7 @@ extern "C" int MsgBox(HWND hWnd,
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  
  [使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-

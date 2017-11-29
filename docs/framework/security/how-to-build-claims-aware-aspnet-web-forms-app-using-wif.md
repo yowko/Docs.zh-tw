@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d5b81e20ed1b39c7750329718729905484eb7fa1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/21/2017
   
 -   步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式  
+-   步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
   
 -   步驟 2 – 設定宣告型驗證的 ASP.NET Web Forms 應用程式  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 08/21/2017
   
 -   步驟 3 – 測試方案  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
  在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式。  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
@@ -218,4 +216,3 @@ ms.lasthandoff: 08/21/2017
 5.  按 **F5** 鍵執行方案。  
   
 6.  您應該會看到頁面，其中顯示安全性權杖服務所發出之權杖中的宣告。
-

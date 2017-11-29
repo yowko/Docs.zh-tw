@@ -1,29 +1,32 @@
 ---
-title: "HOW TO：匯出自訂的 WSDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：匯出自訂的 WSDL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 95016b658a679a47b6b37d0c4130ef8e816165c2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：匯出自訂的 WSDL
-本主題將說明如何匯出自訂的 WSDL 資訊。為了要這麼做，我們定義了一個名為 `WsdlDocumentationAttribute` 的新程式碼屬性，會將自訂的資訊加入至服務所產生的 WSDL。  
+# <a name="how-to-export-custom-wsdl"></a>HOW TO：匯出自訂的 WSDL
+本主題將說明如何匯出自訂的 WSDL 資訊。 為了要這麼做，我們定義了一個名為 `WsdlDocumentationAttribute` 的新程式碼屬性，會將自訂的資訊加入至服務所產生的 WSDL。  
   
-### 若要匯出自訂的 WSDL 資訊  
+### <a name="to-export-custom-wsdl-information"></a>若要匯出自訂的 WSDL 資訊  
   
-1.  請實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面。您可以在實作下列任何介面的類別上實作此介面：<xref:System.ServiceModel.Description.IOperationBehavior>、<xref:System.ServiceModel.Description.IContractBehavior> 或 <xref:System.ServiceModel.Description.IEndpointBehavior>。您也可以在衍生自 <xref:System.ServiceModel.Channels.BindingElement> 的類別上實作此介面。此範例在實作 <xref:System.ServiceModel.Description.IContractBehavior> 的屬性類別上實作了 <xref:System.ServiceModel.Description.IWsdlExportExtension>。  
+1.  實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面。 您可以在實作下列任何介面的類別上實作此介面：<xref:System.ServiceModel.Description.IOperationBehavior>、<xref:System.ServiceModel.Description.IContractBehavior> 或 <xref:System.ServiceModel.Description.IEndpointBehavior>。 您也可以在衍生自 <xref:System.ServiceModel.Channels.BindingElement> 的類別上實作此介面。 此範例在實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的屬性類別上實作了 <xref:System.ServiceModel.Description.IContractBehavior>。  
   
-2.  <xref:System.ServiceModel.Description.IWsdlExportExtension> 定義了兩個方法：<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 和 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>。這些方法可讓您修改或加入 \(或修改和加入\) 額外的資訊至 <xref:System.ServiceModel.Description.WsdlContractConversionContext>。這個範例的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法中，擷取了 <xref:System.ServiceModel.Description.OperationDescription> 物件的集合，接著並逐一查看集合，檢查是否有 `WsdlDocumentationAttribute`。如果找到任何一個，則會擷取與屬性關聯的文字、產生摘要項目，並將摘要項目加入至作業的 `DocumentationElement`。  
+2.  <xref:System.ServiceModel.Description.IWsdlExportExtension> 定義了兩個方法：<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 和 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>。 這些方法可讓您修改或加入 (或修改和加入) 額外的資訊至 <xref:System.ServiceModel.Description.WsdlContractConversionContext>。 這個範例的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法中，擷取了 <xref:System.ServiceModel.Description.OperationDescription> 物件的集合，接著並逐一查看集合，檢查是否有 `WsdlDocumentationAttribute`。 如果找到任何一個，則會擷取與屬性關聯的文字、產生摘要項目，並將摘要項目加入至作業的 `DocumentationElement`。  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -60,7 +63,7 @@ caps.handback.revision: 13
                 }  
     ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例顯示 `WsdlDocumentationAttribute` 類別的完整實作。  
   
 ```  
@@ -200,8 +203,7 @@ return lines;
       return returnsElement;  
     }  
   }  
-  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)

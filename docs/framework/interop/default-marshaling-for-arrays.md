@@ -5,29 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72b9cf51936df7b3b2055823ff33f7561640608f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ab9a72607f5201164f31d9e4cfdf058e9af804ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
 在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。 相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。  
@@ -46,7 +42,7 @@ ms.lasthandoff: 08/21/2017
   
 <a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Managed 陣列  
- Managed 陣列類別可能會不同；不過，<xref:System.Array?displayProperty=fullName> 類別是所有陣列類型的基底類別。 **System.Array** 類別的屬性可以判斷陣列的順位、長度以及下限和上限，以及用來存取、排序、搜尋、複製和建立陣列的方法。  
+ Managed 陣列類別可能會不同；不過，<xref:System.Array?displayProperty=nameWithType> 類別是所有陣列類型的基底類別。 **System.Array** 類別的屬性可以判斷陣列的順位、長度以及下限和上限，以及用來存取、排序、搜尋、複製和建立陣列的方法。  
   
  這些陣列類型是動態的，而且沒有基底類別庫中所定義的對應靜態類型。 很容易就會將每個項目類型和順位組合視為不同類型的陣列。 因此，一維整數陣列的類型與一維 Double 類型陣列不同。 同樣地，二維整數陣列與一維整數陣列不同。 比較類型時，不會考慮陣列界限。  
   
@@ -103,7 +99,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- 如果修改 Tlbimp.exe 所產生的方法簽章以指出項目類型為 **ELEMENT_TYPE_ARRAY** 而非 **ELEMENT_TYPE_SZARRAY**，則可以將多維度或非零繫結的安全陣列封送處理至 Managed 程式碼。 或者，您可以搭配使用 **/sysarray** 參數與 Tlbimp.exe，以將所有陣列匯入為 <xref:System.Array?displayProperty=fullName> 物件。 如果所傳遞的陣列已知為多維度，您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯。 如需如何修改 MSIL 程式碼的詳細資訊，請參閱[自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)。  
+ 如果修改 Tlbimp.exe 所產生的方法簽章以指出項目類型為 **ELEMENT_TYPE_ARRAY** 而非 **ELEMENT_TYPE_SZARRAY**，則可以將多維度或非零繫結的安全陣列封送處理至 Managed 程式碼。 或者，您可以搭配使用 **/sysarray** 參數與 Tlbimp.exe，以將所有陣列匯入為 <xref:System.Array?displayProperty=nameWithType> 物件。 如果所傳遞的陣列已知為多維度，您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯。 如需如何修改 MSIL 程式碼的詳細資訊，請參閱[自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)。  
   
 ### <a name="c-style-arrays"></a>C 樣式陣列  
  將 C 樣式陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成 **ELEMENT_TYPE_SZARRAY**。  
@@ -210,7 +206,7 @@ void New3(ref String ar);
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 類型是在簽章中提供。 順位一律為 1，下限一律為 0。 在執行階段，一律會知道大小。|  
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=fullName>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 在執行階段，一律可辨識類型、順位、界限和大小。|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 在執行階段，一律可辨識類型、順位、界限和大小。|  
   
  與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串] 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
   
@@ -336,7 +332,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- 將包含 <xref:System.Array?displayProperty=fullName> 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成 **_Array** 介面。 Managed 陣列的內容只能透過 **_Array** 介面的方法和屬性進行存取。 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將 **System.Array** 封送處理為 **SAFEARRAY**。 封送處理為安全陣列時，會將陣列項目封送處理為變異值。 例如：  
+ 將包含 <xref:System.Array?displayProperty=nameWithType> 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成 **_Array** 介面。 Managed 陣列的內容只能透過 **_Array** 介面的方法和屬性進行存取。 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將 **System.Array** 封送處理為 **SAFEARRAY**。 封送處理為安全陣列時，會將陣列項目封送處理為變異值。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -385,8 +381,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [方向屬性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [複製和釘選](../../../docs/framework/interop/copying-and-pinning.md)
-
+ [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [方向屬性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [複製和 Pin](../../../docs/framework/interop/copying-and-pinning.md)

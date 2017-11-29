@@ -1,42 +1,46 @@
 ---
-title: "如何：列出已安裝的解碼器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "影像轉碼器, 列出"
-  - "影像解碼器, 列出"
+title: "如何：列出已安裝的解碼器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image codecs [Windows Forms], listing
+- image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 17cbdebfa6cbb0cacacd923de4bd22125c812938
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：列出已安裝的解碼器
-您可能會想要列出電腦上可用的影像解碼器，以判斷應用程式是否能夠讀取特定的影像檔案格式。  <xref:System.Drawing.Imaging.ImageCodecInfo> 類別提供 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 靜態方法，讓您能夠判斷可用的影像解碼器。  <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 會傳回 <xref:System.Drawing.Imaging.ImageCodecInfo> 物件的陣列。  
+# <a name="how-to-list-installed-decoders"></a>如何：列出已安裝的解碼器
+若要列出的電腦上，可用的映像解碼器來判斷您的應用程式是否可以讀取特定的影像檔案格式。 <xref:System.Drawing.Imaging.ImageCodecInfo>類別提供<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>靜態方法，如此您就可以判斷哪一個映像解碼器可用。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>傳回的陣列<xref:System.Drawing.Imaging.ImageCodecInfo>物件。  
   
-## 範例  
- 下列程式碼範例會輸出已安裝之解碼器及其屬性值的清單。  
+## <a name="example"></a>範例  
+ 下列程式碼範例輸出的已安裝的解碼器清單和其屬性值。  
   
  [!code-csharp[UsingImageEncodersDecoders#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#2)]
  [!code-vb[UsingImageEncodersDecoders#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#2)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
 -   Windows Form 應用程式。  
   
--   <xref:System.Windows.Forms.PaintEventArgs>，是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
+-   A <xref:System.Windows.Forms.PaintEventArgs>，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
-## 請參閱  
- [如何：列出已安裝的編碼器](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)   
- [使用 Managed GDI\+ 中的影像編碼器和解碼器](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>另請參閱  
+ [操作說明：列出已安裝的編碼器](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [使用 Managed GDI+ 中的影像編碼器和解碼器](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

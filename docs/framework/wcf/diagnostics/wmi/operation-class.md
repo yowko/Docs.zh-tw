@@ -1,25 +1,28 @@
 ---
-title: "Operation 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Operation 類別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 739f8309e7a01eeecf921b50fcde24417fbbc515
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Operation 類別
-作業  
+# <a name="operation-class"></a>Operation 類別
+運算  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class Operation  
@@ -39,101 +42,101 @@ class Operation
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  Operation 類別不會定義任何方法。  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  Operation 類別具有下列屬性：  
   
-### Action  
+### <a name="action"></a>動作  
  資料型別：字串  
   
  存取類型：唯讀  
   
- 要求訊息的 WS\-Addressing 動作。  
+ 要求訊息的 WS-Addressing 動作。  
   
-### AsyncPattern  
+### <a name="asyncpattern"></a>AsyncPattern  
  資料型別：布林值  
   
  存取類型：唯讀  
   
- 代表在服務合約中使用 `Begin` \[open\/close angle brackets\] 與 `End` \[open\/close angle brackets\] 方法組，以非同步方式實作作業。  
+ 表示使用以非同步方式實作作業`Begin`[左右角括號] 和`End`服務合約中的 [開啟/關閉角度 brackets] 方法組。  
   
-### Behaviors  
+### <a name="behaviors"></a>「行為」  
  資料型別：行為陣列  
   
  存取類型：唯讀  
   
  與這個作業有關聯的行為。  
   
-### IsCallback  
+### <a name="iscallback"></a>IsCallback  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  當作業是回呼作業時為 True。  
   
-### IsInitiating  
+### <a name="isinitiating"></a>IsInitiating  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  代表方法是否實作可在伺服器上初始化工作階段的作業。  
   
-### IsOneWay  
+### <a name="isoneway"></a>IsOneWay  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  代表作業是否傳回回覆訊息。  
   
-### IsTerminating  
+### <a name="isterminating"></a>IsTerminating  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  代表作業是否傳回回覆訊息。  
   
-### MethodSignature  
+### <a name="methodsignature"></a>MethodSignature  
  資料型別：字串  
   
  存取類型：唯讀  
   
  作業的方法簽章。  
   
-### Name  
+### <a name="name"></a>名稱  
  資料型別：字串  
   
  存取類型：唯讀  
   
  作業的名稱。  
   
-### ParameterTypes  
+### <a name="parametertypes"></a>ParameterTypes  
  資料型別：字串陣列  
   
  存取類型：唯讀  
   
  作業的參數類型。  
   
-### ReplyAction  
+### <a name="replyaction"></a>ReplyAction  
  資料型別：字串  
   
  存取類型：唯讀  
   
  作業的回覆訊息的 SOAP 動作值。  
   
-### ReturnType  
+### <a name="returntype"></a>ReturnType  
  資料型別：字串  
   
  存取類型：唯讀  
   
- 作業的傳回類型。  
+ 作業的傳回型別。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|  
+|---------|-----------------------------------|  
+|命名空間|於 root\ServiceModel 中定義|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.OperationDescription>

@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ebe7d3aa48fa77287f20781938a0b9863f60de5f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-marshaling"></a>Interop 封送處理
 <a name="top"></a> Interop 封送處理會控制如何以方法引數傳遞資料，以及控制呼叫期間於 Managed 和 Unmanaged 記憶體之間的傳回值。 Interop 封送處理是由 Common Language Runtime 的封送處理服務所執行的執行階段活動。  
@@ -88,7 +81,7 @@ ms.lasthandoff: 08/21/2017
  如果您打算匯出 Managed 伺服器，請注意 COM 用戶端會決定伺服器的 Apartment。 由 MTA 中初始化的 COM 用戶端所呼叫的 Managed 伺服器必須確保執行緒安全。  
   
 ### <a name="managed-clients-and-com-servers"></a>Managed 用戶端和 COM 伺服器  
- Managed 用戶端 Apartment 的預設值為 MTA；不過，.NET 用戶端的應用程式類型可以變更預設值。 例如，[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 用戶端 Apartment 設定為 STA。 您可以使用 <xref:System.STAThreadAttribute?displayProperty=fullName>、<xref:System.MTAThreadAttribute?displayProperty=fullName>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> 屬性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=fullName> 屬性，來檢查及變更 Managed 用戶端的 Apartment 設定。  
+ Managed 用戶端 Apartment 的預設值為 MTA；不過，.NET 用戶端的應用程式類型可以變更預設值。 例如，[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 用戶端 Apartment 設定為 STA。 您可以使用 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 屬性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 屬性，來檢查及變更 Managed 用戶端的 Apartment 設定。  
   
  元件作者會設定 COM 伺服器的執行緒相似性。 下表顯示 .NET 用戶端和 COM 伺服器的 Apartment 設定組合， 並顯示組合所產生的封送處理需求。  
   
@@ -165,16 +158,15 @@ ms.lasthandoff: 08/21/2017
 |[使用 COM Interop 封送處理資料](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|描述如何自訂 COM 包裝函式來變更封送處理行為。|  
 |[如何：將 Managed 程式碼 DCOM 移轉至 WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何從 DCOM 移轉至 WCF。|  
 |[操作說明：對應 HRESULT 和例外狀況](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|描述如何將自訂例外狀況對應到 HRESULT，並提供每一個 HRESULT 與其在 .NET Framework 中可比較的例外狀況類別之完整對應。|  
-|[使用泛型型別交互操作](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|描述使用泛型類型來取得 COM 互通性時所支援的動作。|  
+|[使用泛型型別互通](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|描述使用泛型類型來取得 COM 互通性時所支援的動作。|  
 |[與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)|描述 Common Language Runtime 提供的互通性服務。|  
 |[進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|  
-|[互通的設計考量](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|提供撰寫整合式 COM 元件的秘訣。|  
+|[交互操作的設計考量](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|提供撰寫整合式 COM 元件的秘訣。|  
   
  [回到頁首](#top)  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>參考資料  
- <xref:System.Runtime.InteropServices?displayProperty=fullName>  
+ <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [回到頁首](#top)
-

@@ -1,31 +1,37 @@
 ---
-title: "HOW TO：檢查及修改服務中的訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：檢查及修改服務中的訊息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c919083b165233614a01faf3d63dacd6712fbd01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：檢查及修改服務中的訊息
-您可以檢查或修改傳入或傳出的訊息[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用戶端藉由實作<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>並將它插入服務執行階段。 如需詳細資訊，請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 在服務上對等的功能是<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>。  
+# <a name="how-to-inspect-and-modify-messages-on-the-service"></a>HOW TO：檢查及修改服務中的訊息
+您可實作 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 並將它插入服務執行階段，以檢查或修改 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> 用戶端內傳入或傳出的訊息。 如需詳細資訊，請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>。  
   
 ### <a name="to-inspect-or-modify-messages"></a>檢查或修改訊息  
   
-1.  實作<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>介面。  
+1.  實作 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> 介面。  
   
-2.  實作<xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=fullName>， <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName>，或<xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName>介面取決於您要輕鬆插入服務訊息偵測器的範圍而定。  
+2.  根據您要輕鬆插入服務訊息偵測器的範圍，決定實作 <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType><xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>或  介面。  
   
-3.  插入您的行為，然後才呼叫<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName>方法<xref:System.ServiceModel.ServiceHost?displayProperty=fullName>。 如需詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+3.  在 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 方法之前，請先插入您的行為。 如需詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會依序顯示：  
@@ -42,11 +48,9 @@ caps.handback.revision: 6
  [!code-csharp[Interceptors#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#8)]
  [!code-vb[Interceptors#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#8)]  
   
- <!-- TODO: review snippet reference [!code[Interceptors#9](../../../../samples/snippets/common/VS_Snippets_CFX/interceptors/common/hostapplication.exe.config#9)]  -->
- <!-- TODO: review snippet reference [!code-csharp[Interceptors#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]  -->
- <!-- TODO: review snippet reference [!code-vb[Interceptors#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/hostapplication.exe.config#9)]  -->  
+ [!code-xml[Interceptors#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>   
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
  [設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

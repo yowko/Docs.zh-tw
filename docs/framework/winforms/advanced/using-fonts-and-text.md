@@ -1,78 +1,79 @@
 ---
-title: "使用字型和文字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "範例 [Windows Form], 字型和文字"
-  - "字型, 在 Windows Form 中使用"
-  - "GDI, 描繪文字 [Windows Form]"
-  - "字串 [Windows Form], 在 Windows Form 中描繪"
-  - "文字 [Windows Form], 在 Windows Form 中描繪"
+title: "使用字型和文字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI [Windows Forms], drawing text [Windows Forms]
+- text [Windows Forms], drawing in Windows Forms
+- examples [Windows Forms], fonts and text
+- fonts [Windows Forms], using in Windows Forms
+- strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c18dde7265a07eb45e0211a882b19acc6342e924
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 使用字型和文字
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 和 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 提供幾種在 Windows Form 上繪製文字的類別。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> 類別有幾種 <xref:System.Drawing.Graphics.DrawString%2A> 方法可以讓您指定各種文字功能，例如位置、週框 \(Bounding Rectangle\)、字型和格式。  此外，您也可以搭配 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 使用 `TextRenderer` 類別提供的靜態 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 和 <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> 方法，以繪製和測量文字。  [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 方法也可以讓您指定位置、字型和格式。  您可以選擇 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 或 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 呈現文字。然而，[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 通常會提供更好的效能以及更精確的文字測量。  其他組成文字呈現的類別包括 `FontFamily`、`Font`、<xref:System.Drawing.StringFormat> 和 `TextFormatFlags`。  
+# <a name="using-fonts-and-text"></a>使用字型和文字
+所提供的許多類別[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]和[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]Windows Form 上繪製文字。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics>類別有數個<xref:System.Drawing.Graphics.DrawString%2A>方法可讓您指定的文字，例如位置、 週框矩形、 字型及格式的各種功能。 此外，您可以在 繪圖，並測量的文字[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]使用靜態<xref:System.Windows.Forms.TextRenderer.DrawText%2A>和<xref:System.Windows.Forms.TextRenderer.MeasureText%2A>方法所提供`TextRenderer`類別。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]方法也可讓您指定的位置、 字型及格式。 您可以任選[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]或[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]文字轉譯; 不過，[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]通常提供較佳的效能和更精確測量的文字。 用於文字轉譯的其他類別包含`FontFamily`， `Font`， <xref:System.Drawing.StringFormat>，和`TextFormatFlags`。  
   
-## 在本節中  
- [如何：建構字型系列和字型](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
- 示範如何建立 `Font` 和 `FontFamily` 物件。  
+## <a name="in-this-section"></a>本章節內容  
+ [操作說明：建構字型系列和字型](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ 示範如何建立`Font`和`FontFamily`物件。  
   
- [如何：在指定的位置繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
- 描述如何使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 和 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 在某些位置繪製文字。  
+ [操作說明：在指定的位置繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
+ 描述如何繪製文字中特定位置使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]和[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]。  
   
- [如何：在矩形中繪製被包圍的文字](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
- 解釋如何使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 和 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 在矩形中繪製文字。  
+ [操作說明：在矩形中繪製被包圍的文字](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
+ 說明如何繪製矩形，利用文字[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]和[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]。  
   
- [如何：使用 GDI 繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
- 示範如何使用 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 繪製文字。  
+ [操作說明：使用 GDI 繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ 示範如何使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]來繪製文字。  
   
- [如何：對齊繪製的文字](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
- 示範如何格式化 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 和 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 文字。  
+ [操作說明：對齊繪製的文字](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
+ 示範如何格式化[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]和[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]文字。  
   
- [如何：建立垂直文字](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
- 說明如何使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 描繪垂直對齊的文字。  
+ [操作說明：建立垂直文字](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
+ 描述如何繪製垂直對齊的文字與[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
   
- [如何：在已繪製的文字中設定定位停駐點](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
- 示範如何搭配定位停駐點使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 繪製文字。  
+ [操作說明：在已繪製的文字中設定定位停駐點](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
+ 顯示如何繪製文字的定位停駐點[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
   
- [如何：列舉已安裝的字型](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
- 說明如何列出已安裝字型的名稱。  
+ [操作說明：列舉已安裝的字型](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
+ 說明如何列出已安裝的字型名稱。  
   
- [如何：建立私用字型集合](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
- 示範如何建立 <xref:System.Drawing.Text.PrivateFontCollection> 物件。  
+ [操作說明：建立私用字型集合](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
+ 描述如何建立<xref:System.Drawing.Text.PrivateFontCollection>物件。  
   
- [如何：取得字型度量資訊](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
- 示範如何取得字型度量資訊，例如儲存格高度和深度。  
+ [操作說明：取得字型度量資訊](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
+ 示範如何取得字型度量資訊，例如方格上移和下移。  
   
- [如何：使用文字反鋸齒功能](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
- 說明在繪製文字時如何使用反鋸齒功能。  
+ [操作說明：使用文字反鋸齒功能](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
+ 說明如何使用時繪製文字的消除鋸齒。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Drawing.Font>  
- 不僅描述這個類別，並且提供連至它所有成員的連結。  
+ 描述這個類別，並包含其所有成員的連結。  
   
  <xref:System.Drawing.FontFamily>  
- 不僅描述這個類別，並且提供連至它所有成員的連結。  
+ 描述這個類別，並包含其所有成員的連結。  
   
  <xref:System.Drawing.Text.PrivateFontCollection>  
- 不僅描述這個類別，並且提供連至它所有成員的連結。  
+ 描述這個類別，並包含其所有成員的連結。  
   
  <xref:System.Windows.Forms.TextRenderer>  
- 不僅描述這個類別，並且提供連至它所有成員的連結。  
+ 描述這個類別，並包含其所有成員的連結。  
   
  <xref:System.Windows.Forms.TextFormatFlags>  
- 不僅描述這個類別，並且提供連至它所有成員的連結。
+ 描述這個類別，並包含其所有成員的連結。

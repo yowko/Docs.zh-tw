@@ -1,31 +1,34 @@
 ---
-title: "物件參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "物件參考"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 643cdf80900a02f269887aa6c95832429060fc8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 物件參考
-這個範例會示範如何以傳址 \(By Reference\) 方式，在伺服器和用戶端之間傳遞物件。範例會使用模擬的「*社交網路*」\(Social Network\)。社交網路由包含 friend 清單的 `Person` 類別 \(Class\) 組成，每個 friend 都是一個 `Person` 類別的執行個體 \(Instance\)，擁有各自的 friend 清單。這樣可以建立物件圖形。此服務會公開 \(Expose\) 這些社交網站上的作業。  
+# <a name="object-references"></a>物件參考
+這個範例會示範如何以傳址 (By Reference) 方式，在伺服器和用戶端之間傳遞物件。 範例會使用模擬*社交網路*。 社交網路由包含 friend 清單的 `Person` 類別 (Class) 組成，每個 friend 都是一個 `Person` 類別的執行個體 (Instance)，擁有各自的 friend 清單。 這樣可以建立物件圖形。 此服務會公開 (Expose) 這些社交網站上的作業。  
   
- 在這個範例中，服務是由網際網路資訊服務 \(IIS\) 所裝載，而用戶端是主控台應用程式 \(.exe\)。  
+ 在這個範例中，服務是由網際網路資訊服務 (IIS) 所裝載，而用戶端是主控台應用程式 (.exe)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
-## 服務  
- `Person` 類別已套用 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性 \(Attribute\)，而且 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 欄位設定為 `true` 以便將其宣告為參考型別 \(Reference Type\)。所有屬性 \(Property\) 都已經套用 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 \(Attribute\)。  
+## <a name="service"></a>服務  
+ `Person` 類別已套用 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性 (Attribute)，而且 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 欄位設定為 `true` 以便將其宣告為參考型別 (Reference Type)。 所有屬性 (Property) 都已經套用 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute)。  
   
 ```  
 [DataContract(IsReference=true)]  
@@ -85,7 +88,7 @@ public List<Person> GetMutualFriends(Person p)
 }  
 ```  
   
- `GetCommonFriends` 作業會採用型別為 `Person` 的清單。此清單應該會有兩個 `Person` 物件。此作業會傳回 `Person` 物件的清單，這些物件都位於輸入清單中兩個 `Person` 物件的 `friends` 清單內。  
+ `GetCommonFriends` 作業會採用型別為 `Person` 的清單。 此清單應該會有兩個 `Person` 物件。 此作業會傳回 `Person` 物件的清單，這些物件都位於輸入清單中兩個 `friends` 物件的 `Person` 清單內。  
   
 ```  
 public List<Person> GetCommonFriends(List<Person> people)  
@@ -98,28 +101,28 @@ public List<Person> GetCommonFriends(List<Person> people)
 }  
 ```  
   
-## 用戶端  
- 首先使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 的 \[**加入服務參考**\] 功能建立用戶端 Proxy。  
+## <a name="client"></a>用戶端  
+ 使用建立用戶端 proxy**加入服務參考**功能[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
   
- 然後建立包含五個 `Person` 物件的社交網路。這個用戶端會呼叫服務中所有三個方法。  
+ 然後建立包含五個 `Person` 物件的社交網路。 這個用戶端會呼叫服務中所有三個方法。  
   
-#### 若要設定、建置及執行範例  
+#### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C\# 或 Visual Basic .NET 版本，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨機器的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示進行。  
+3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## 請參閱  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
  [互通物件參考](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

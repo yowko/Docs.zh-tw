@@ -1,28 +1,24 @@
 ---
-title: "如何︰ 偵錯空白查詢結果集 (Visual Basic) |Microsoft 文件"
+title: "如何： 偵錯空白查詢結果集 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5564e88d1a861f2ce3760e9450d68aee5b57a64
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 1c483153f8ff41c08cfaa0141fed056de7f5f680
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>如何︰ 偵錯空白查詢結果集 (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>如何： 偵錯空白查詢結果集 (Visual Basic)
 查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
   
  本主題中的第一組範例會顯示將 XML 載入預設命名空間而且查詢錯誤的常見方式。  
@@ -64,7 +60,7 @@ End of result set
 ## <a name="example"></a>範例  
  此範例顯示 XML 在命名空間中的建立，以及編碼正確的查詢。  
   
- 解決方案是宣告並初始化全域預設命名空間。 這會將所有 XML 屬性放在預設的命名空間中。 此範例不需要其他任何修改，就可以讓它正常運作。  
+ 解決方案為宣告並初始化全域預設命名空間。 這會將所有 XML 屬性放在預設的命名空間中。 此範例不需要其他任何修改，就可以讓它正常運作。  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  

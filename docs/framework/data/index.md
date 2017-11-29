@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3edf0cbe10361b456469714747c074ba054e16a4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的資料與模型化
 本節將提供如何使用 ADO.NET、Language Integrated Query (LINQ)、WCF 資料服務和 XML 來存取資料的相關資訊。  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/05/2017
   
  [安全性](../../../docs/standard/security/index.md)  
  提供 Common Language Runtime 和 .NET Framework 中有關加強應用程式開發安全性的類別和服務詳細資訊連結。
-

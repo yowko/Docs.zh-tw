@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 排序或篩選文字資料，依任何字或欄位 (LINQ) (Visual Basic) |Microsoft 文件"
+title: "如何：依任何字或欄位排序或篩選文字資料 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 541da47893217e2915a6b001d1141eaadfa9e9e8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 19224bf51c95acdccbeb019631fdc884231610b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>如何：依任何字或欄位排序或篩選文字資料 (LINQ) (Visual Basic)
-下列範例顯示如何排序的結構化文字行，例如以逗號分隔的值，任何列中的欄位。 欄位可能會在執行階段以動態方式指定。 假設在 scores.csv 欄位代表後面接著一系列的四個測驗分數的學生識別碼編號。  
+下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。 此欄位可能會在執行階段以動態方式指定。 假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。  
   
-### <a name="to-create-a-file-that-contains-data"></a>若要建立包含資料的檔案  
+### <a name="to-create-a-file-that-contains-data"></a>建立內含資料的檔案  
   
-1.  從主題中複製 scores.csv 資料[How to︰ 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)並將它儲存到您的方案資料夾。  
+1.  複製主題 scores.csv 資料[How to： 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)並將它儲存到您的方案資料夾。  
   
 ## <a name="example"></a>範例  
   
@@ -86,10 +78,10 @@ End Class
 ' 115, 35, 72, 91, 70  
 ```  
   
- 這個範例也示範如何從函式傳回的查詢變數。  
+ 此範例也示範如何從函式傳回的查詢變數。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

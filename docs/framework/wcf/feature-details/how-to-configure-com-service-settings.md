@@ -1,30 +1,32 @@
 ---
-title: "HOW TO：設定 COM+ 服務設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "COM+ [WCF], 設定服務設定"
+title: "HOW TO：設定 COM+ 服務設定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7cbe038b55358ec8607d54b67861ef1743c2e301
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：設定 COM+ 服務設定
-使用 COM\+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。  在 COM\+ 裝載模式中，Application.config 檔案放在應用程式根目錄中 \(%PROGRAMFILES%\\ComPlus Applications\\{appid} 是預設值\)。  在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。  
+# <a name="how-to-configure-com-service-settings"></a>HOW TO：設定 COM+ 服務設定
+使用 COM+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。 在 COM + 裝載模式中，Application.config 檔案放在應用程式的根目錄中 (%PROGRAMFILES%\ComPlus 應用程式\\{appid} 是預設值)。 在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。  
   
 > [!NOTE]
->  訊息簽章應用來保護用戶端和伺服器之間的訊息不受竄改。  此外，訊息或傳輸層加密也應該用來保護用戶端和伺服器之間的訊息，以免資訊洩漏。  如同 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，您應使用節流來限制同時呼叫、連線、執行個體和暫止作業的數目。  這有助防止資源過度消耗。  節流行為是透過服務組態檔設定所指定的。  
+>  訊息簽章應用來保護用戶端和伺服器之間的訊息不受竄改。 此外，訊息或傳輸層加密也應該用來保護用戶端和伺服器之間的訊息，以免資訊洩漏。 如同 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，您應使用節流來限制同時呼叫、連線、執行個體和暫止作業的數目。 這有助防止資源過度消耗。 節流行為是透過服務組態檔設定所指定的。  
   
-## 範例  
+## <a name="example"></a>範例  
  試想實作下列介面的元件：  
   
 ```  
@@ -34,10 +36,9 @@ public interface IFinances
     string Debit(string accountNo, double amount);  
     string Credit(string accountNo, double amount);  
 }  
-  
 ```  
   
- 如果元件公開為 Web 服務，則公開 \(且用戶端必須符合\) 的對應服務合約如下：  
+ 如果元件公開為 Web 服務，則公開 (且用戶端必須符合) 的對應服務合約如下：  
   
 ```  
 [ServiceContract(Session = true,  
@@ -50,7 +51,6 @@ public interface IFinancesContract : IDisposable
     [OperationContract]  
     string Credit(string accountNo, double amount);  
 }  
-  
 ```  
   
 > [!NOTE]
@@ -58,19 +58,19 @@ public interface IFinancesContract : IDisposable
   
  使用這個服務的用戶端應用程式必須符合這個合約，並且使用與應用程式組態中所指定的繫結相容的繫結。  
   
- 下列程式碼範例中會示範預設組態檔。  它是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web 服務，符合標準的服務模型組態結構描述，而且可用其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務組態檔相同的方式加以編輯。  
+ 下列程式碼範例中會示範預設組態檔。 它是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web 服務，符合標準的服務模型組態結構描述，而且可用其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務組態檔相同的方式加以編輯。  
   
  一般修改包含：  
   
--   將端點位址從預設形式 ApplicationName\/ComponentName\/InterfaceName 變更為更容易使用的形式。  
+-   將端點位址從預設形式 ApplicationName/ComponentName/InterfaceName 變更為更容易使用的形式。  
   
--   將服務的命名空間從預設形式 "http:\/\/tempuri.org\/InterfaceID" 修改為更有意義的形式。  
+-   將服務的命名空間從預設形式 "http://tempuri.org/InterfaceID" 修改為更有意義的形式。  
   
 -   變更端點以使用不同的傳輸繫結。  
   
-     在 COM\+ 裝載案例中，預設會使用具名管道，但也可以使用像 TCP 的電腦外傳輸。  
+     在 COM+ 裝載案例中，預設會使用具名管道，但也可以使用像 TCP 的電腦外傳輸。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
     <system.serviceModel>  
@@ -103,8 +103,7 @@ public interface IFinancesContract : IDisposable
         </services>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 請參閱  
- [整合 COM\+ 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a>另請參閱  
+ [整合 COM + 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

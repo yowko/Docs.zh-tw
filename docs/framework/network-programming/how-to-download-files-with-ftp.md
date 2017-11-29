@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cd72ac27b2aaaf2afe7e2c307fcc1b40cde841da
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 656a8de6a508d6834fd1866df14ec5378d4f84af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-download-files-with-ftp"></a>如何：透過 FTP 下載檔案
 這個範例示範如何從 FTP 伺服器下載檔案。  
@@ -71,4 +65,3 @@ namespace Examples.System.Net
 ## <a name="robust-programming"></a>穩固程式設計  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性
-

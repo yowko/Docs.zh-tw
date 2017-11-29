@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d7aa4e4010da70f90bb18db9cd4e8179925bb58d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="downloading-the-validating-issuer-name-registry-package"></a>下載驗證簽發者名稱登錄套件
 本主題討論如何在您的專案中下載與使用驗證簽發者名稱登錄 (VINR)。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 08/21/2017
   
 1.  在 Visual Studio 中，以滑鼠右鍵按一下方案總管中的專案，然後選取 [管理 NuGet 套件]。  
   
-2.  在 [管理 NuGet 套件] 視窗中，按一下搜尋方塊並輸入 `ValidatingIssuerNameRegistry`，再按 **Enter**。  
+2.  在 [管理 NuGet 套件] 視窗中，按一下搜尋方塊並輸入 `ValidatingIssuerNameRegistry`，然後按 **Enter**。  
   
 3.  從 [結果] 窗格中，按一下第一個結果的 [安裝] 按鈕。  
   
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 3.  最新的 VINR 組件會下載並新增至您的專案。
-

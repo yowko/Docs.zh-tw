@@ -1,42 +1,46 @@
 ---
-title: "如何：繪製自訂短折線 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "線條, 自訂"
-  - "線條, 虛線"
-  - "線條, 繪製"
+title: "如何：繪製自訂短折線"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- lines [Windows Forms], custom
+- lines [Windows Forms], drawing
+- lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 90fcc99414e8d5c9542d643677c85d4ff670f50f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：繪製自訂短折線
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供數種列於 <xref:System.Drawing.Drawing2D.DashStyle> 列舉中的虛線樣式。  如果這些標準虛線樣式不符合您的需要，您可以建立自訂虛線圖樣。  
+# <a name="how-to-draw-a-custom-dashed-line"></a>如何：繪製自訂短折線
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供數種中所列的虛線樣式<xref:System.Drawing.Drawing2D.DashStyle>列舉型別。 如果這些標準虛線樣式不符合您的需求，您可以建立自訂虛線圖樣。  
   
-## 範例  
- 若要繪製自訂短折線，請將虛線長度和空格長度放入在陣列中，再將陣列指派為 <xref:System.Drawing.Pen> 物件的 <xref:System.Drawing.Pen.DashPattern%2A> 屬性值。  下列範例根據 `{5, 2, 15, 4}` 陣列繪製出一條自訂短折線。  如果您將該陣列元素乘以畫筆寬度 5，可得 `{25, 10, 75, 20}`。  顯示的虛線長度會在 25 和 75 之間交替，空格長度會在 10 和 20 之間交替。  
+## <a name="example"></a>範例  
+ 若要繪製自訂短折線，放在陣列中的虛線和間距的長度，並指派做為值的陣列<xref:System.Drawing.Pen.DashPattern%2A>屬性<xref:System.Drawing.Pen>物件。 下列範例會繪製自訂短折線陣列`{5, 2, 15, 4}`。 如果您將陣列項目的乘以 5 畫筆寬度時，您會收到`{25, 10, 75, 20}`。 長度介於 25 和 75，之間交替顯示的虛線和替代的長度介於 10 到 20 之間的空格。  
   
- 下圖顯示的是產生的短折線。  請注意，最後的虛線必須小於 25 個單位，線條才能結束在 \(405, 5\) 的位置。  
+ 下圖顯示產生的虛線。 請注意，最後的虛線必須是小於 25 個單位，在可以結束在列 405 (5）。  
   
- ![畫筆](../../../../docs/framework/winforms/advanced/media/pens6.png "pens6")  
+ ![畫筆](../../../../docs/framework/winforms/advanced/media/pens6.gif "pens6")  
   
  [!code-csharp[System.Drawing.UsingAPen#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.UsingAPen#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  
   
-## 編譯程式碼  
- 建立 Windows Form 並處理該表單的 <xref:System.Windows.Forms.Control.Paint> 事件。  將上述程式碼貼至 <xref:System.Windows.Forms.Control.Paint> 事件處理常式中。  
+## <a name="compiling-the-code"></a>編譯程式碼  
+ 建立 Windows 表單，並處理表單的<xref:System.Windows.Forms.Control.Paint>事件。 貼上上述程式碼到<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用畫筆繪製線條和形狀](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

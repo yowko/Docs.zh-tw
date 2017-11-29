@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2486aa4daa5682f09b9cd5da8eac4b9071671a3c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>評估使用 .NET Native 的啟動改善
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 可大幅改善應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
@@ -109,4 +107,3 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.Tracing.EventSource>
-

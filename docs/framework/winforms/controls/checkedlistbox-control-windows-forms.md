@@ -1,51 +1,52 @@
 ---
-title: "CheckedListBox 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "核取記號"
-  - "已核取的清單項目, Windows Form 控制項"
-  - "CheckedListBox 控制項 [Windows Form]"
-  - "CheckedListBox 控制項 [Windows Form], 參考"
-  - "清單方塊控制項"
-  - "清單方塊"
-  - "清單方塊, 顯示核取記號"
-  - "清單方塊, Windows Form 控制項"
-  - "清單控制項, Windows Form"
-  - "清單項目, 顯示的 Windows Form 控制項"
+title: "CheckedListBox 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CheckedListBox control [Windows Forms], reference
+- checked list items [Windows Forms], Windows Forms controls
+- list controls [Windows Forms], Windows Forms
+- CheckedListBox control [Windows Forms]
+- list box controls [Windows Forms]
+- check marks
+- list boxes [Windows Forms], displaying check marks
+- list boxes [Windows Forms], Windows Forms controls
+- list items [Windows Forms], Windows Forms controls that display
+- list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6926d72f5aae82588cb45d1a231e8f1b413b22c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# CheckedListBox 控制項 (Windows Form)
-Windows Form `CheckedListBox` 控制項和 <xref:System.Windows.Forms.ListBox> 控制項一樣會顯示項目清單，而且也可以在清單中的項目旁邊顯示核取記號。  
+# <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 控制項 (Windows Form)
+Windows Form`CheckedListBox`控制項會顯示清單的項目，例如<xref:System.Windows.Forms.ListBox>控制項，然後還可以顯示在清單中項目旁的核取記號。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [CheckedListBox 控制項概觀](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- 解釋這個控制項是什麼，以及其主要功能和屬性。  
+ 說明此控制項是什麼，並說明其重要功能與屬性。  
   
- [如何：判斷 Windows Form CheckedListBox 控制項中的已核取項目](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- 描述如何逐步執行清單以決定核取項目。  
+ [操作說明：判斷 Windows Forms CheckedListBox 控制項中的已核取項目](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ 描述如何逐步執行來判斷哪些項目會檢查清單。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.CheckedListBox> 類別  
- 描述這個類別並且連結到它所有的成員。  
+ 說明這個類別，並且提供其所有成員的連結。  
   
-## 相關章節  
- [用來列出選項的 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- 提供可以使用清單方塊、下拉式方塊和核取的清單方塊執行作業的清單。  
+## <a name="related-sections"></a>相關章節  
+ [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ 提供一份使用清單方塊、 下拉式方塊和選取的清單方塊可以執行的作業。  
   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ 提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。

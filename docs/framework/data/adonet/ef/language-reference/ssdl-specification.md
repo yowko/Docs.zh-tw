@@ -1,26 +1,25 @@
 ---
-title: "SSDL 規格 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "SSDL 規格"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9d6b29da-b363-4930-ba57-989f9d6dbf3f
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 32eef196d341d0a47a619b06e4c64894fbd85492
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# SSDL 規格
-[msdn.microsoft.com\/data\/ef](http://msdn.microsoft.com/data/ef) 網站現在是 Entity Framework 內容的主要位置。  
+# <a name="ssdl-specification"></a>SSDL 規格
+[Msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef)網站現在是 Entity Framework 內容的主要位置。  
   
- 現在，您可前往 [SSDL 規格](http://msdn.microsoft.com/data/jj652016)頁面取得此主題的內容。
+ 本主題的內容上現已提供的下列網頁： [SSDL 規格](http://msdn.microsoft.com/data/jj652016)。

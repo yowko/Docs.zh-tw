@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f446e20f37a83e9effd2a378ce576640bca99763
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 696b1d3dd7312b52c28f11f64f007c29fb8a94b5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>關於 System.Net.PeerToPeer.Collaboration 命名空間
 <xref:System.Net.PeerToPeer.Collaboration> 命名空間提供使用對等共同作業基礎結構，可用來實作對等共同作業活動的類別和 API。  
@@ -56,4 +50,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Net.PeerToPeer.Collaboration>
-

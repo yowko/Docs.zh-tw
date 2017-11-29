@@ -1,32 +1,27 @@
 ---
-title: "如何︰ 轉換 XML 樹狀結構 (Visual Basic) 的圖形 |Microsoft 文件"
+title: "如何： 轉換 XML 樹狀結構 (Visual Basic) 的圖形"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c71f4af829a395204bc17161547aa5fdd06cbb1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: cad7e5fc53b59593cf0c367d65d5bd44564bb1c7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>如何︰ 轉換 XML 樹狀結構 (Visual Basic) 的圖形
-*圖形*的 XML 文件參考其項目名稱、 屬性名稱，及其階層的特性。  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>如何： 轉換 XML 樹狀結構 (Visual Basic) 的圖形
+XML 文件的「組織結構」會參考其項目名稱、屬性名稱，及其階層的特性。  
   
- 有時候您必須變更 XML 文件的組織結構。 例如，您可能想要將現有的 XML 文件傳送到需要不同項目和屬性名稱的其他系統。 您可以瀏覽文件，在必要時刪除並重新命名項目，但使用功能結構會使程式碼更容易讀取與維護。 如需有關功能結構的詳細資訊，請參閱[功能建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ 有時候您必須變更 XML 文件的組織結構。 例如，您可能想要將現有的 XML 文件傳送到需要不同項目和屬性名稱的其他系統。 您可以瀏覽文件，在必要時刪除並重新命名項目，但使用功能結構會使程式碼更容易讀取與維護。 如需功能結構的詳細資訊，請參閱[功能建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
  第一個範例會變更 XML 文件的組織。 此範例會在樹狀結構中，將複雜的項目從一個位置移到另一個位置。  
   
@@ -37,7 +32,7 @@ ms.lasthandoff: 03/13/2017
   
  此範例中的 XML 來源文件包含的 `Customers` 項目在包含所有客戶的 `Root` 項目之下。 同時，它所包含的 `Orders` 項目在包含所有訂單的 `Root` 項目之下。 此範例會建立新的 XML 樹狀結構，其中每個客戶的訂單會包含在 `Orders` 項目的 `Customer` 項目中。 原始文件在 `CustomerID` 項目中也包含 `Order` 項目；這個項目將會從改變組織結構的文件中移除。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -106,9 +101,9 @@ Console.WriteLine(newCustOrd)
 ## <a name="example"></a>範例  
  此範例會重新命名某些項目，並將某些屬性轉換為項目。  
   
- 程式碼會呼叫`ConvertAddress`，它會傳回一份<xref:System.Xml.Linq.XElement>物件。</xref:System.Xml.Linq.XElement> 此方法的引數是一個查詢，可判斷 `Address` 屬性值為 `Type` 的 `"Shipping"` 複雜項目。  
+ 此程式馬會呼叫可傳回 `ConvertAddress` 物件之清單的 <xref:System.Xml.Linq.XElement>。 此方法的引數是一個查詢，可判斷 `Address` 屬性值為 `Type` 的 `"Shipping"` 複雜項目。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -158,4 +153,3 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-

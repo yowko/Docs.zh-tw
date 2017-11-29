@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - downloading Internet resources, steps
 - requesting data from Internet, steps
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a16860c9095c182de2e67013cae46fa05bc1da5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>如何：使用 WebRequest 類別要求資料
 下列程序描述用來向伺服器要求資源的步驟 ，例如網頁或檔案。 資源必須是以 URI 識別。  
@@ -79,7 +76,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
     > [!NOTE]
-    >  完成使用 <xref:System.Net.WebResponse> 物件之後，您必須呼叫 <xref:System.Net.WebResponse.Close%2A> 方法來關閉它。 或者，如果您已自回應物件取得回應資料流，則可呼叫 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 方法來關閉該資料流。 如果不關閉回應或資料流，應用程式就會耗盡所有與該伺服器的連線，而無法處理其他要求。  
+    >  完成使用 <xref:System.Net.WebResponse> 物件之後，您必須呼叫 <xref:System.Net.WebResponse.Close%2A> 方法來關閉它。 或者，如果您已自回應物件取得回應資料流，則可呼叫 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 方法來關閉該資料流。 如果不關閉回應或資料流，應用程式就會耗盡所有與該伺服器的連線，而無法處理其他要求。  
   
 4.  您可以存取 **WebResponse** 的屬性或將 **WebResponse** 轉換為通訊協定特定執行個體，以讀取通訊協定特定屬性。 例如，若要存取 <xref:System.Net.HttpWebResponse> 的 HTTP 特定屬性，請將 **WebResponse** 轉換為 **HttpWebResponse** 參考。 下列程式碼範例示範如何顯示與回應一起傳送的狀態資訊。  
   
@@ -185,9 +182,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立網際網路要求](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [在網路上使用資料流](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [透過 Proxy 存取網際網路](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [要求資料](../../../docs/framework/network-programming/requesting-data.md)   
- [何：使用 WebRequest 類別傳送資料](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
-
+ [建立網際網路要求](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [在網路上使用資料流](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [透過 Proxy 存取網際網路](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [要求資料](../../../docs/framework/network-programming/requesting-data.md)  
+ [如何：使用 WebRequest 類別傳送資料](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)

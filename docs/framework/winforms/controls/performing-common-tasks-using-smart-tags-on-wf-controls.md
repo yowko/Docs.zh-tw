@@ -1,82 +1,83 @@
 ---
-title: "逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "設計工具動作"
-  - "DesignerAction 物件模型"
-  - "智慧標籤"
+title: "逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DesignerAction object model
+- smart tags
+- designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2e6b815be85576f037e0f24668c44756b95abd6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作
-在您建構 Windows Form 應用程式的表單和控制項時，您會重複執行許多工作。  您會遇到某些經常執行的工作：  
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作
+Windows Form 應用程式中建構表單和控制項，有許多工作，您將會重複執行。 以下是一些經常執行的工作，您將會遇到的：  
   
--   加入或移除 <xref:System.Windows.Forms.TabControl> 上的索引標籤。  
+-   新增或移除索引標籤上<xref:System.Windows.Forms.TabControl>。  
   
--   將控制項停駐在父代。  
+-   將控制項固定到其父代。  
   
--   變更 <xref:System.Windows.Forms.SplitContainer> 控制項的方向。  
+-   變更的方向<xref:System.Windows.Forms.SplitContainer>控制項。  
   
- 為了加快開發的速度，許多控制項都提供有智慧標籤，這些標籤是可讓您執行一般工作 \(例如在設計階段單一筆勢中的這些工作\) 的區分內容的功能表。  這些工作稱為「*智慧標籤動作*」\(Smart\-tag Verbs\)。  
+ 為加速開發，許多控制項都提供智慧標籤，也就是即時線上功能表可讓您在設計階段執行常見工作，像是在單一的筆勢。 這些工作會呼叫*智慧標籤動詞*。  
   
- 在設計工具中，智慧標籤在存留期 \(Lifetime\) 內都會保持附加至控制項執行個體的狀態，並且永遠都可使用。  
+ 智慧標籤在設計工具中的存留期間保持附加至控制項的執行個體，並永遠都可以使用。  
   
- 逐步解說將說明的工作包括：  
+ 這個逐步解說中所述的工作包括：  
   
--   建立 Windows Form 專案  
+-   建立 Windows Forms 專案  
   
 -   使用智慧標籤  
   
 -   啟用和停用智慧標籤  
   
- 當您完成時，將會對這些重要的配置功能所扮演的角色有所了解。  
+ 完成後，您就會了解這些重要配置功能所扮演的角色。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
-## 建立專案  
+## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
-#### 若要建立專案  
+#### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立名為「SmartTagsExample」的 Windows 架構應用程式專案。  如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立 Windows 架構應用程式專案，稱為 「 SmartTagsExample"。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
-2.  從 \[**Windows Form 設計工具**\] 中選取表單。  
+2.  選取的表單中**Windows Form 設計工具**。  
   
-## 使用智慧標籤  
- 在設計階段時，永遠都可以在提供智慧標籤的控制項上使用智慧標籤。  
+## <a name="using-smart-tags"></a>使用智慧標籤  
+ 控制項提供設計階段，仍可以使用智慧標籤。  
   
-#### 若要使用智慧標籤  
+#### <a name="to-use-smart-tags"></a>若要使用智慧標籤  
   
-1.  將 <xref:System.Windows.Forms.TabControl> 從 \[**工具箱**\] 拖曳到表單上。  請注意出現在 <xref:System.Windows.Forms.TabControl> 旁邊的智慧標籤圖像 \(![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)。  
+1.  拖曳<xref:System.Windows.Forms.TabControl>從**工具箱**拖曳至表單。 請注意智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 出現在並存的<xref:System.Windows.Forms.TabControl>。  
   
-2.  按一下智慧標籤圖像。  在顯示於圖像旁邊的捷徑功能表中，選取 \[**加入索引標籤**\] 項目。  觀察新的索引標籤頁已加入至 <xref:System.Windows.Forms.TabControl>。  
+2.  按一下智慧標籤圖像 （glyph）。 在字符旁邊會出現快顯功能表中選取**加入索引標籤**項目。 觀察，加入新的索引標籤頁面<xref:System.Windows.Forms.TabControl>。  
   
-3.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項拖曳至表單。  
+3.  拖曳<xref:System.Windows.Forms.TableLayoutPanel>控制項從**工具箱**拖曳至表單。  
   
-4.  按一下智慧標籤圖像。  在顯示於圖像旁邊的捷徑功能表中，選取 \[**加入資料行**\] 項目。  觀察新的資料行已加入至 <xref:System.Windows.Forms.TableLayoutPanel> 控制項。  
+4.  按一下智慧標籤圖像 （glyph）。 在字符旁邊會出現快顯功能表中選取**加入資料行**項目。 觀察，加入新的資料行<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
   
-5.  從 \[**工具箱**\] 將 <xref:System.Windows.Forms.SplitContainer> 控制項拖曳至表單。  
+5.  拖曳<xref:System.Windows.Forms.SplitContainer>控制項從**工具箱**拖曳至表單。  
   
-6.  按一下智慧標籤圖像。  在顯示於圖像旁邊的捷徑功能表中，選取 \[**水平的分隔器方向**\] 項目。  觀察 <xref:System.Windows.Forms.SplitContainer> 控制項的分隔列現在是水平方向。  
+6.  按一下智慧標籤圖像 （glyph）。 在字符旁邊會出現快顯功能表中選取**水平分隔器方向**項目。 觀察<xref:System.Windows.Forms.SplitContainer>控制項的分隔列現在是水平方向。  
   
-## 請參閱  
- <xref:System.Windows.Forms.TextBox>   
- <xref:System.Windows.Forms.TabControl>   
- <xref:System.Windows.Forms.SplitContainer>   
- <xref:System.ComponentModel.Design.DesignerActionList>   
- [Walkthrough: Adding Smart Tags to a Windows Forms Component](../Topic/Walkthrough:%20Adding%20Smart%20Tags%20to%20a%20Windows%20Forms%20Component.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.TextBox>  
+ <xref:System.Windows.Forms.TabControl>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ <xref:System.ComponentModel.Design.DesignerActionList>  
+ [逐步解說： 加入 Windows Form 元件中的智慧標籤](http://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

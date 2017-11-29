@@ -1,75 +1,78 @@
 ---
-title: "&lt;sharedListeners&gt; 適用之 &lt;add&gt; 的 &lt;filter&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<sharedListeners> 適用之 <add> 的 <filter> 項目"
-  - "<sharedListeners> 適用之 <add> 的 filter 項目"
-  - "篩選條件, 追蹤接聽項"
-  - "initializeData 屬性"
-  - "追蹤接聽項, 篩選條件"
+title: "&lt;篩選&gt;元素&lt;新增&gt;如&lt;sharedListeners&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
+helpviewer_keywords:
+- filter element for <add> for <sharedListeners>
+- initializeData attribute
+- <filter> element for <add> for <sharedListeners>
+- filters, trace listeners
+- trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ce4134d9059d1f1d5bd2e435a3cc87d3fbccd422
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sharedListeners&gt; 適用之 &lt;add&gt; 的 &lt;filter&gt; 項目
-將篩選條件加入至 `sharedListeners` 集合中的接聽程式。  
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;篩選&gt;元素&lt;新增&gt;如&lt;sharedListeners&gt;
+將篩選新增至 `sharedListeners` 集合中的接聽項。  
   
-## 語法  
+ \<configuration>  
+\<system.diagnostics >  
+\<sharedListeners > 項目  
+\<add>  
+\<篩選條件 >  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <filter type="System.Diagnostics.EventTypeFilter"   
   initializeData="Warning" />  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
-|--------|--------|  
-|**type**|必要屬性。<br /><br /> 指定篩選條件的型別。  您只能使用此型別的完整名稱 \(使用 <xref:System.Type.FullName%2A?displayProperty=fullName> 屬性的格式\)，或者可以使用包括此組件資訊的完整型別名稱 \(使用 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> 屬性的格式\)。  如需建立完整型別名稱的詳細資訊，請參閱 [指定完整的類型名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
-|**initializeData**|選擇性屬性。<br /><br /> 傳遞至指定類別的建構函式的字串。|  
+|屬性|說明|  
+|---------------|-----------------|  
+|**type**|必要屬性。<br /><br /> 指定篩選器的類型。 您可以使用類型的完整名稱 (格式為<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性)，或者您可以使用的完整限定的類型名稱，包括組件資訊 (格式為<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>屬性)。 如需建立完整限定的類型名稱的資訊，請參閱[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|**initializeData**|選擇性屬性。<br /><br /> 指定的類別傳遞至建構函式的字串。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`system.diagnostics`|指定收集、存放和傳送訊息的追蹤接聽程式，以及設定追蹤參數的層級。|  
-|`sharedListeners`|任何來源或追蹤項目可以參考之接聽項的集合。|  
-|`add`|將接聽項加入至 **sharedListeners** 集合中。|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
+|`sharedListeners`|接聽程式可以參考任何來源或追蹤項目集合。|  
+|`add`|加入至接聽程式**sharedListeners**集合。|  
   
-## 備註  
- 如果接聽項定義在 `<sharedListeners>` 項目的 `<add>` 項目中，則該接聽項的篩選條件應該定義在做為 `<add>` 項目之子系的 `<filter>` 項目中。  
+## <a name="remarks"></a>備註  
+ 如果接聽程式已定義在`<add>`元素`<sharedListeners>`項目，應該在定義該接聽項的篩選條件`<filter>`是子系的項目`<add>`項目。  
   
- 這個項目可以用於電腦組態檔 \(Machine.config\) 和應用程式組態檔。  
+ 此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
-## 範例  
- 下列範例將示範如何使用 `<filter>` 項目，將篩選條件加入到 `sharedListeners` 集合中的追蹤接聽項 `console`。  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用`<filter>`將篩選加入追蹤接聽項的項目`console`中`sharedListeners`集合。  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -91,8 +94,8 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Diagnostics.TraceFilter>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.TraceSource>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Diagnostics.TraceFilter>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.TraceSource>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

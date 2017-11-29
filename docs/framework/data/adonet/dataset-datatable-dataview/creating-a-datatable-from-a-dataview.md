@@ -1,30 +1,36 @@
 ---
-title: "從 DataView 建立 DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "從 DataView 建立 DataTable"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e51188f550b7d910cb278165776133d6f4c03eb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 從 DataView 建立 DataTable
-從資料來源擷取資料並將資料填入 <xref:System.Data.DataTable> 後，您可能想要排序、篩選，或限制所傳回的資料，而不想再次擷取該資料。  <xref:System.Data.DataView> 類別使這成為可行。  此外，如果您需要從 <xref:System.Data.DataView> 建立新的 <xref:System.Data.DataTable>，則可使用 <xref:System.Data.DataView.ToTable%2A> 方法，將所有資料列和資料行，或資料的子集複製到新的 <xref:System.Data.DataTable>。  <xref:System.Data.DataView.ToTable%2A> 方法提供多載，以進行下列作業：  
+# <a name="creating-a-datatable-from-a-dataview"></a>從 DataView 建立 DataTable
+從資料來源擷取資料並將資料填入 <xref:System.Data.DataTable> 後，您可能想要排序、篩選，或限制所傳回的資料，而不想再次擷取該資料。 <xref:System.Data.DataView> 類別使這成為可行。 此外，如果您需要建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>，您可以使用<xref:System.Data.DataView.ToTable%2A>方法，將所有資料列和資料行或資料的子集複製到新<xref:System.Data.DataTable>。 <xref:System.Data.DataView.ToTable%2A> 方法提供多載，以進行下列作業：  
   
 -   建立含有資料行的 <xref:System.Data.DataTable>，其中的資料行是 <xref:System.Data.DataView> 之資料行的子集。  
   
--   建立 <xref:System.Data.DataTable>，其內含的資料列都與 <xref:System.Data.DataView> 的資料列不同，此功能類似於 Transact\-SQL 的 DISTINCT 關鍵字。  
+-   建立<xref:System.Data.DataTable>包含從只包含相異資料列<xref:System.Data.DataView>，類似地以在 TRANSACT-SQL 的 DISTINCT 關鍵字。  
   
-## 範例  
- 下列主控台應用程式範例會建立 <xref:System.Data.DataTable>，其中包含來自 **AdventureWorks** 範例資料庫之 **Person.Contact** 資料表的資料。  接下來，此範例會根據 <xref:System.Data.DataTable>，建立已排序和已篩選的 <xref:System.Data.DataView>。  在顯示 <xref:System.Data.DataTable> `` 及 <xref:System.Data.DataView> 的內容之後，此範例便會呼叫 <xref:System.Data.DataView.ToTable%2A> 方法並只選取可用資料行的子集，以從 <xref:System.Data.DataView> 建立新的 <xref:System.Data.DataTable>。  最後，此範例會顯示新 <xref:System.Data.DataTable> 的內容。  
+## <a name="example"></a>範例  
+ 下列主控台應用程式範例會建立<xref:System.Data.DataTable>，其中包含從資料**Person.Contact**資料表中**AdventureWorks**範例資料庫。 接下來，此範例會建立已排序和篩選的<xref:System.Data.DataView>根據<xref:System.Data.DataTable>。 顯示的內容之後<xref:System.Data.DataTable>和<xref:System.Data.DataView>，此範例會建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>藉由呼叫<xref:System.Data.DataView.ToTable%2A>方法中，選取可用的資料行的子集。 最後，此範例會顯示新 <xref:System.Data.DataTable> 的內容。  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -209,7 +215,7 @@ Console.WriteLine();
   
  }  
   
-## 請參閱  
- <xref:System.Data.DataView.ToTable%2A>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Data.DataView.ToTable%2A>  
+ [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

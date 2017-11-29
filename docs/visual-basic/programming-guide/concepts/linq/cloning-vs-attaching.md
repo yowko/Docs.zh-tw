@@ -1,33 +1,25 @@
 ---
-title: "複製與附加 (Visual Basic) |Microsoft 文件"
+title: "複製與附加 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81cbcb066d60851ba83bd4d783d34f8dd3bd1fac
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 811e0b9d6359287d779a8352482f5dc56a3b0035
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>複製與附加 (Visual Basic)
-當加入<xref:System.Xml.Linq.XNode>(包括<xref:System.Xml.Linq.XElement>) 或<xref:System.Xml.Linq.XAttribute>物件至新的樹狀目錄中，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XNode> 如果新內容已經成為父代，而且屬於其他 XML 樹狀結構的一部分，則會複製新內容。 然後，新複製的內容會附加到新的 XML 樹狀結構。  
+將 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件加入到新的樹狀結構時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。 如果新內容已經成為父代，而且屬於其他 XML 樹狀結構的一部分，則會複製新內容。 然後，新複製的內容會附加到新的 XML 樹狀結構。  
   
 ## <a name="example"></a>範例  
  下列程式碼示範將成為父代的項目加入到樹狀結構時，以及將沒有父代的項目加入樹狀結構時的行為。  

@@ -1,26 +1,29 @@
 ---
-title: "使用具有探索用戶端通道的自訂繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用具有探索用戶端通道的自訂繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 716dc09d38c778c49a1e2e5fa094ef1bf004eb46
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用具有探索用戶端通道的自訂繫結
-使用自訂繫結配合 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 時，您必須定義建立 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 執行個體的 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>。  
+# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>使用具有探索用戶端通道的自訂繫結
+使用自訂繫結配合 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 時，您必須定義建立 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 執行個體的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。  
   
-## 建立 DiscoveryEndpointProvider  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 負責在需要時建立 [T:System:ServiceModel.Discovery.DiscoveryEndpoints](assetId:///T:System:ServiceModel.Discovery.DiscoveryEndpoints?qualifyHint=False&amp;autoUpgrade=True)。若要定義探索端點提供者，請從 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 衍生一個類別，覆寫 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法並傳回新的探索端點。下列範例示範如何建立探索端點提供者。  
+## <a name="creating-a-discoveryendpointprovider"></a>建立 DiscoveryEndpointProvider  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>會負責建立<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>隨選執行個體。 若要定義探索端點提供者，請從 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 衍生一個類別，覆寫 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法並傳回新的探索端點。 下列範例示範如何建立探索端點提供者。  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -50,9 +53,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用探索用戶端通道的詳細資訊，請參閱[使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。如需完整的程式碼範例，請參閱[探索繫結項目範例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用探索用戶端通道，請參閱[使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。 如需完整的程式碼範例，請參閱[探索繫結項目範例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
   
-## 請參閱  
- [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)   
+## <a name="see-also"></a>另請參閱  
+ [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [探索繫結項目範例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)
