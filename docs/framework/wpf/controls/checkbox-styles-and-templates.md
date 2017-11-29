@@ -1,67 +1,70 @@
 ---
-title: "CheckBox 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CheckBox [WPF], 樣式和範本"
-  - "ControlTemplate [WPF], CheckBox"
-  - "組件 [WPF], CheckBox"
-  - "狀態 [WPF], CheckBox"
-  - "樣式 [WPF], CheckBox"
-  - "範本 [WPF], CheckBox"
+title: "CheckBox 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], CheckBox
+- templates [WPF], CheckBox
+- parts [WPF], CheckBox
+- ControlTemplate [WPF], CheckBox
+- CheckBox [WPF], styles and templates
+- styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c901d710e96cd111104b9fef2219b157377adc3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# CheckBox 樣式和範本
-本主題說明 <xref:System.Windows.Controls.CheckBox> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="checkbox-styles-and-templates"></a>CheckBox 樣式和範本
+本主題描述樣式和範本<xref:System.Windows.Controls.CheckBox>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
-## CheckBox 組件  
- <xref:System.Windows.Controls.CheckBox> 控制項沒有任何具名組件。  
+## <a name="checkbox-parts"></a>核取方塊組件  
+ <xref:System.Windows.Controls.CheckBox>控制項沒有任何已命名的組件。  
   
-## CheckBox 狀態  
- 下表列出 <xref:System.Windows.Controls.CheckBox> 控制項的可見狀態。  
+## <a name="checkbox-states"></a>核取方塊狀態  
+ 下表列出的視覺狀態<xref:System.Windows.Controls.CheckBox>控制項。  
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
-|--------------------|-------------------------|--------|  
-|Normal|CommonStates|預設狀態。|  
-|MouseOver|CommonStates|滑鼠指標位於控制項上方。|  
-|Pressed|CommonStates|已按下控制項。|  
-|Disabled|CommonStates|控制項已停用。|  
-|Focused|FocusStates|控制項擁有焦點。|  
-|Unfocused|FocusStates|控制項沒有焦點。|  
-|Checked|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `true`。|  
-|Unchecked|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `false`。|  
-|Indeterminate|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> 為 `true`，而 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `null`。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|----------------------|---------------------------|-----------------|  
+|一般|CommonStates|預設狀態。|  
+|MouseOver|CommonStates|滑鼠指標移到控制項上。|  
+|按下|CommonStates|已按下控制項。|  
+|已停用|CommonStates|已停用控制項。|  
+|已取得焦點|FocusStates|控制項已取得焦點。|  
+|未取得焦點|FocusStates|控制項未取得焦點。|  
+|已核取|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `true`。|  
+|若未選取|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `false`。|  
+|不定|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>是`true`，和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>是`null`。|  
+|驗證|ValidationStates|此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。|  
   
-## CheckBox ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.CheckBox> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="checkbox-controltemplate-example"></a>核取方塊 ControlTemplate 範例  
+ 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.CheckBox>控制項。  
   
- [!code-xml[ControlTemplateExamples#CheckBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/checkbox.xaml#checkbox)]  
+ [!code-xaml[ControlTemplateExamples#CheckBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/checkbox.xaml#checkbox)]  
   
- 前述範例使用了下列一或多項資源。  
+ 上述範例使用下列一或多項資源。  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱          [使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ 如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

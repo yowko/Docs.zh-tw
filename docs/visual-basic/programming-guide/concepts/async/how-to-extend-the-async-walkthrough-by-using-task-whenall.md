@@ -1,52 +1,44 @@
 ---
-title: "如何︰ 使用 Task.WhenAll (Visual Basic) 來擴充非同步逐步解說 |Microsoft 文件"
+title: "如何： 使用 Task.WhenAll (Visual Basic) 擴充非同步逐步解說"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 46c5cb9328f2fa1a4ffc5116d318bc3286419e13
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 49cca45336cb25850c888e3389e97b323c70d89d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何︰ 使用 Task.WhenAll (Visual Basic) 來擴充非同步逐步解說
-您可以改善效能的非同步方案中[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>方法。</xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 這個方法以非同步方式等候多個非同步作業，表示為工作的集合。  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何： 使用 Task.WhenAll (Visual Basic) 擴充非同步逐步解說
+您可以改善效能中的非同步方案[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。  
   
- 您可能已經注意到在這個逐步解說的網站下載不同的速率。 有時網站是非常緩慢，這會延遲所有剩餘的下載。 當您執行您建置的非同步方案逐步解說中，您可以結束程式輕鬆地如果不想等待，但更好的選項會啟動一次的所有下載並讓更快下載繼續而不需等待的延遲。  
+ 您在此逐步解說中可能已注意到網站下載的速度各自不同。 有時其中一個網站的速度很慢，而導致所有其餘下載延後執行。 當您執行在此逐步解說中建立的非同步方案時，如果不想要等候，您可以輕鬆地結束程式；但更好的做法是同時啟動所有下載，並讓較快的下載繼續執行而不等候延遲的下載。  
   
- 您套用`Task.WhenAll`的工作集合的方法。 應用程式的`WhenAll`傳回集合中的每項工作完成之前未完成的單一工作。 若要平行執行，就會出現的工作，但沒有其他執行緒會建立。 工作可以依任何順序完成。  
+ 您可以將 `Task.WhenAll` 方法套用至工作集合。 套用 `WhenAll` 會傳回未完成的單一工作，直到集合中的所有工作都完成為止。 工作似乎會平行執行，但不會建立其他任何執行緒。 工作可以依任何順序完成。  
   
 > [!IMPORTANT]
->  下列程序說明中的非同步應用程式的擴充功能[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以開發應用程式以完成這個逐步解說，或下載的程式碼來[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)。  
+>  下列程序描述擴充功能的非同步應用程式都是以開發[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以藉由完成此逐步解說，或從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)下載程式碼，來開發應用程式。  
 >   
->  若要執行此範例，您必須安裝 Visual Studio 2012 或更新版本安裝在電腦上。  
+>  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本。  
   
-### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>若要新增 Task.WhenAll GetURLContentsAsync 解決方案  
+### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>將 Task.WhenAll 新增至您的 GetURLContentsAsync 方案  
   
-1.  新增`ProcessURLAsync`開發中的第一個應用程式的方法[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1.  新增`ProcessURLAsync`開發中的第一個應用程式的方法[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)，開啟 AsyncWalkthrough 專案，然後再新增`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
+    -   如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)、 開啟 AsyncWalkthrough 專案，然後再將`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
   
-    -   如果您完成逐步解說開發的程式碼，加入`ProcessURLAsync`應用程式，其中包含`GetURLContentsAsync`方法。 此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節的第一個範例。  
+    -   如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至包含 `GetURLContentsAsync` 方法的應用程式。 此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節中的第一個範例。  
   
-     `ProcessURLAsync`方法會彙總的主體中的動作`For Each`迴圈`SumPageSizesAsync`在原始的逐步解說。 此方法以非同步方式為位元組陣列，指定網站的內容下載然後並顯示傳回的位元組陣列的長度。  
+     `ProcessURLAsync` 方法會合併原始逐步解說中 `SumPageSizesAsync` 之 `For Each` 迴圈主體內的動作。 此方法會以非同步方式將指定網站的內容下載為位元組陣列，然後顯示並傳回位元組陣列的長度。  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String) As Task(Of Integer)  
@@ -57,7 +49,7 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-2.  註解化或刪除`For Each`迴圈`SumPageSizesAsync`，如下列程式碼所示。  
+2.  將 `SumPageSizesAsync` 中的 `For Each` 迴圈註解化或刪除，如下列程式碼所示。  
   
     ```vb  
     'Dim total = 0  
@@ -79,9 +71,9 @@ ms.lasthandoff: 03/13/2017
     'Next  
     ```  
   
-3.  建立工作的集合。 下列程式碼定義[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，程式執行時<xref:System.Linq.Enumerable.ToArray%2A>方法建立的每個網站的內容下載工作的集合。</xref:System.Linq.Enumerable.ToArray%2A> 當評估查詢時，會啟動工作。  
+3.  建立工作集合。 下列程式碼定義一個[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
   
-     將下列程式碼加入至方法`SumPageSizesAsync`宣告後`urlList`。  
+     將下列程式碼新增至 `urlList` 宣告後面的 `SumPageSizesAsync` 方法。  
   
     ```vb  
     ' Create a query.   
@@ -92,9 +84,9 @@ ms.lasthandoff: 03/13/2017
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  套用`Task.WhenAll`至集合的工作， `downloadTasks`。 `Task.WhenAll`傳回已完成的工作集合中的所有工作完成的單一工作。  
+4.  將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。  
   
-     在下列範例中，`Await`運算式等候完成的單一工作`WhenAll`傳回。 運算式評估為整數，其中每個整數是下載網站的長度的陣列。 加入下列程式碼以`SumPageSizesAsync`，只是您在上一個步驟中加入的程式碼後面。  
+     在下列範例中，`Await` 運算式會等候 `WhenAll` 傳回的單一工作完成。 此運算式會評估為整數陣列，其中每個整數都是所下載網站的長度。 將下列程式碼新增至 `SumPageSizesAsync`，就在您於上一個步驟中新增的程式碼之後。  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -105,23 +97,23 @@ ms.lasthandoff: 03/13/2017
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  最後，使用<xref:System.Linq.Enumerable.Sum%2A>方法，以計算所有網站的長度總和。</xref:System.Linq.Enumerable.Sum%2A> 將下列行加入`SumPageSizesAsync`。  
+5.  最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法來計算所有網站的長度總和。 將下列程式碼行新增至 `SumPageSizesAsync`。  
   
     ```vb  
     Dim total = lengths.Sum()  
     ```  
   
-### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>若要新增 Task.WhenAll HttpClient.GetByteArrayAsync 解決方案  
+### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>將 Task.WhenAll 新增至 HttpClient.GetByteArrayAsync 方案  
   
-1.  加入下列版本`ProcessURLAsync`開發中的第二個應用程式[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1.  加入下列版本`ProcessURLAsync`開發中的第二個應用程式[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)，開啟 AsyncWalkthrough_HttpClient 專案，然後再新增`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
+    -   如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)、 開啟位於 AsyncWalkthrough_HttpClient 專案，然後再將`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
   
-    -   如果您完成逐步解說開發的程式碼，加入`ProcessURLAsync`應用程式使用`HttpClient.GetByteArrayAsync`方法。 此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節中的第二個範例。  
+    -   如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至使用 `HttpClient.GetByteArrayAsync` 方法的應用程式。 此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節中的第二個範例。  
   
-     `ProcessURLAsync`方法會彙總的主體中的動作`For Each`迴圈`SumPageSizesAsync`在原始的逐步解說。 此方法以非同步方式為位元組陣列，指定網站的內容下載然後並顯示傳回的位元組陣列的長度。  
+     `ProcessURLAsync` 方法會合併原始逐步解說中 `SumPageSizesAsync` 之 `For Each` 迴圈主體內的動作。 此方法會以非同步方式將指定網站的內容下載為位元組陣列，然後顯示並傳回位元組陣列的長度。  
   
-     唯一差別`ProcessURLAsync`在先前程序中的方法是使用<xref:System.Net.Http.HttpClient>執行個體， `client`。</xref:System.Net.Http.HttpClient>  
+     其與上一個步驟中 `ProcessURLAsync` 方法的唯一差別，在於使用了 <xref:System.Net.Http.HttpClient> 執行個體 `client`。  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -132,7 +124,7 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-2.  註解化或刪除`For Each`迴圈`SumPageSizesAsync`，如下列程式碼所示。  
+2.  將 `SumPageSizesAsync` 中的 `For Each` 迴圈註解化或刪除，如下列程式碼所示。  
   
     ```vb  
     'Dim total = 0   
@@ -150,12 +142,11 @@ ms.lasthandoff: 03/13/2017
     '    ' Update the total.   
     '    total += urlContents.Length   
     'Next  
-  
     ```  
   
-3.  定義[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，程式執行時<xref:System.Linq.Enumerable.ToArray%2A>方法建立的每個網站的內容下載工作的集合。</xref:System.Linq.Enumerable.ToArray%2A> 當評估查詢時，會啟動工作。  
+3.  定義一個[查詢](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
   
-     將下列程式碼加入至方法`SumPageSizesAsync`宣告後`client`和`urlList`。  
+     將下列程式碼新增至 `client` 和 `urlList` 宣告後面的 `SumPageSizesAsync` 方法。  
   
     ```vb  
     ' Create a query.  
@@ -166,9 +157,9 @@ ms.lasthandoff: 03/13/2017
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  接下來，套用`Task.WhenAll`至集合的工作， `downloadTasks`。 `Task.WhenAll`傳回已完成的工作集合中的所有工作完成的單一工作。  
+4.  接下來，將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。  
   
-     在下列範例中，`Await`運算式等候完成的單一工作`WhenAll`傳回。 完成時，`Await`運算式評估為整數，其中每個整數是下載網站的長度的陣列。 加入下列程式碼以`SumPageSizesAsync`，只是您在上一個步驟中加入的程式碼後面。  
+     在下列範例中，`Await` 運算式會等候 `WhenAll` 傳回的單一工作完成。 完成時，`Await` 運算式會評估為整數陣列，其中每個整數都是所下載網站的長度。 將下列程式碼新增至 `SumPageSizesAsync`，就在您於上一個步驟中新增的程式碼之後。  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -179,18 +170,18 @@ ms.lasthandoff: 03/13/2017
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  最後，使用<xref:System.Linq.Enumerable.Sum%2A>方法來取得所有網站的長度總和。</xref:System.Linq.Enumerable.Sum%2A> 將下列行加入`SumPageSizesAsync`。  
+5.  最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法取得所有網站的長度總和。 將下列程式碼行新增至 `SumPageSizesAsync`。  
   
     ```vb  
     Dim total = lengths.Sum()  
     ```  
   
-### <a name="to-test-the-taskwhenall-solutions"></a>若要測試 Task.WhenAll 解決方案  
+### <a name="to-test-the-taskwhenall-solutions"></a>測試 Task.WhenAll 方案  
   
--   其中一個解決方案中，選擇 F5 鍵以執行程式，然後選擇**啟動** 按鈕。 輸出應該類似的輸出中的非同步方案[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 但是請注意，網站會出現在不同的順序每次。  
+-   針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始] 按鈕。 輸出看起來應該像中的非同步方案的輸出[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 不過請注意，網站每次出現的順序都不同。  
   
 ## <a name="example"></a>範例  
- 下列程式碼顯示使用專案的擴充`GetURLContentsAsync`方法，從 web 下載內容。  
+ 下列程式碼顯示專案擴充，其使用 `GetURLContentsAsync` 方法從 Web 下載內容。  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -323,7 +314,7 @@ End Class
 ```  
   
 ## <a name="example"></a>範例  
- 下列程式碼顯示擴充方法會使用專案`HttpClient.GetByteArrayAsync`從 web 下載內容。  
+ 下列程式碼顯示專案擴充，其使用 `HttpClient.GetByteArrayAsync` 方法從 Web 下載內容。  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -438,5 +429,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName></xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
- [逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+ [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

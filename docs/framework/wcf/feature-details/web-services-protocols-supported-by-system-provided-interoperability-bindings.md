@@ -1,32 +1,35 @@
 ---
-title: "系統提供的互通性繫結所支援的 Web 服務通訊協定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WS 通訊協定"
-  - "Web 服務通訊協定"
-  - "Windows Communication Foundation Web 服務通訊協定"
+title: "系統提供的互通性繫結所支援的 Web 服務通訊協定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WS-protocols
+- Web services protocols
+- Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: 39
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 39
+caps.latest.revision: "39"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 92da011b6bd3fda342e827536b698c6ae6f4c6f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 系統提供的互通性繫結所支援的 Web 服務通訊協定
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 已建置成可與支援一組規格 (即所謂的 Web 服務規格) 的 Web 服務相互操作。 為了簡化服務組態，以獲得互通性最佳做法，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]引進三種互通系統提供繫結︰ <xref:System.ServiceModel.BasicHttpBinding?displayProperty=fullName>， <xref:System.ServiceModel.WSHttpBinding?displayProperty=fullName>，和<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=fullName>。 跨平台與組織可提升的 Structured Information Standards (OASIS) 標準，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]包含一個互通系統提供繫結︰ <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=fullName>。 中繼資料發行集，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]包含兩個互通系統提供繫結︰ [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ <> \</> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主題列出系統提供之繫結支援的規格。  
+# <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系統提供的互通性繫結所支援的 Web 服務通訊協定
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 已建置成可與支援一組規格 (即所謂的 Web 服務規格) 的 Web 服務相互操作。 為了簡化服務組態以獲得互通性最佳做法，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 引進三種互通的系統提供之繫結：<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>、<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 為了與美國先進結構化資訊標準組織 (OASIS) 標準互通，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一種互通的系統提供之繫結：<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 中繼資料發行集，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]包含兩個系統提供繫結： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主題列出系統提供之繫結支援的規格。  
   
 ## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>basicHttpBinding、wsHttpBinding、ws2007HttpBinding 和 wsDualHttpBinding 繫結支援的 Web 服務通訊協定  
   
 ### <a name="all-bindings"></a>所有繫結  
- The [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), and [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) bindings support the following protocols.  
+ [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)，和[ \<ws2007HttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)繫結支援下列通訊協定。  
   
 > [!NOTE]
 >  如需用於發行中繼資料之繫結的詳細資訊，請參閱本主題中稍後的「系統提供之中繼資料繫結」一節。  
@@ -54,9 +57,9 @@ caps.handback.revision: 39
   
 |分類|通訊協定|規格和用法|  
 |--------------|--------------|-----------------------------|  
-|傳訊|SOAP 1.2|[入門](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息傳遞架構](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
+|傳訊|SOAP 1.2|[入門](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息架構](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |訊息|Ws-addressing 2005/08|[Web 服務定址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding` 和 `wsDualHttpBinding` 會實作全球資訊網協會 (W3C) WS-Addressing 建議，以啟用非同步訊息、訊息相互關聯和傳輸中性的定址機制。<br /><br /> 雖然 WS-* 規格允許 WS-Addressing 標頭加密，但是 WCF 並不提供這項支援。|  
-|傳訊|WS-Addressing 1.0 - 中繼資料|[Ws-addressing 1.0 中繼資料](http://www.w3.org/2007/05/addressing/metadata)中 ServiceMetadata 行為的原則版本設定 policyversion 設定為 1.2 （預設值） 啟用此通訊協定的支援，wsdl 描述 policyversion 設定為 1.5 就是符合 Ws-addressing wsdl，wsdl 描述是符合的 ws 定址的中繼資料。<br /><br /> 雖然 WS-* 規格允許 WS-Addressing 標頭加密，但是 WCF 並不提供這項支援。|  
+|傳訊|WS-Addressing 1.0 - 中繼資料|[Ws-addressing 1.0 中繼資料](http://www.w3.org/2007/05/addressing/metadata)會啟用此通訊協定的支援設定的原則版本中 ServiceMetadata 行為-policyversion 設 1.2 （預設值），符合 Ws-addressing 的 wsdl，wsdl 描述與policyversion 設為 1.5，wsdl 描述會符合 ws 定址的中繼資料。<br /><br /> 雖然 WS-* 規格允許 WS-Addressing 標頭加密，但是 WCF 並不提供這項支援。|  
 |安全性|WSS SOAP 訊息安全性 1.0|[WSS SOAP 訊息安全性 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> `securityMode` 屬性設為 "wsSecurityOverHttp" (預設值) 且使用 `wsSecurity` 子項目設定參數時使用。<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
 |安全性|WSS SOAP 訊息安全性 UsernameToken 設定檔 1.1|[WSS SOAP 訊息安全性 UsernameToken 設定檔 1.0](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> `wsSecurity` 項目的 `authenticationMode` 屬性設為 "Username" 時使用。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
 |安全性|WSS SOAP 訊息安全性 X.509 憑證權杖設定檔 1.1|[WSS SOAP 訊息安全性 X.509 憑證權杖設定檔 1.1](http://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> 用於在 `wsSecurity` 項目的 `authenticationMode` 屬性設為 "Username"、"Certificate" 或 "None" 時保護訊息。 此外，當 `wsSecurity` 項目的 `authenticationMode` 屬性設為 "Certificate" 時，請使用此規格進行用戶端驗證。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
@@ -68,7 +71,7 @@ caps.handback.revision: 39
 |異動|WS-Coordination|[Ws-coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> 用於當 `flowTransactions` 屬性設為 "Allowed" 或 "Required" 時流動交易內容。<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding 和 ws2007FederationHttpBinding  
- [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)和[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)導入項目以支援聯合案例中，協力廠商簽發權杖，用來驗證用戶端的位置。 除了 `wsHttpBinding` 使用的通訊協定外，`wsFederationHttpBinding` 還使用：  
+ [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)和[ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)引入聯合案例中，提供支援，其中第三個項目合作對象會簽發權杖，用來驗證用戶端。 除了 `wsHttpBinding` 使用的通訊協定外，`wsFederationHttpBinding` 還使用：  
   
 -   `WS-Trust`，進行權杖發行。  
   
@@ -76,7 +79,7 @@ caps.handback.revision: 39
   
  範例：  
   
-```  
+```xml  
 <wsFederationHttpBinding>  
   <binding name="myBinding">  
      <security mode="Message">  
@@ -93,32 +96,32 @@ caps.handback.revision: 39
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ## <a name="system-provided-metadata-bindings"></a>系統提供之中繼資料繫結  
- 下表說明所公開的系統提供之互通中繼資料繫結所支援的通訊協定<xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=fullName>類別。  
+ 下表說明系統提供之互通中繼資料繫結所支援的通訊協定，該繫結由 <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> 類別公開。  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)繫結支援下列通訊協定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用此繫結，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
+ [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)繫結支援下列通訊協定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用此繫結，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
   
 |分類|通訊協定|規格和用法|  
 |--------------|--------------|-----------------------------|  
 |Transport|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
-|訊息|SOAP 1.2|[入門](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息傳遞架構](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
+|訊息|SOAP 1.2|[入門](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息架構](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |訊息|Ws-addressing 2005/08|[Web 服務定址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |中繼資料|WS-MetadataExchange|[Ws-metadataexchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WS-MetadataExchange 以擷取 XML 結構描述、WSDL 和 WS-Policy。|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)支援下列通訊協定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用此繫結，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)支援下列通訊協定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用此繫結，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
   
 |分類|通訊協定|規格和用法|  
 |--------------|--------------|-----------------------------|  
 |Transport|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> 已啟用傳輸安全性。|  
-|傳訊|SOAP 1.2|[入門](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息傳遞架構](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
+|傳訊|SOAP 1.2|[入門](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息架構](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |訊息|Ws-addressing 2005/08|[Web 服務定址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |中繼資料|WS-MetadataExchange|[Ws-metadataexchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WS-MetadataExchange 以擷取 XML 結構描述、WSDL 和 WS-Policy。|  
   
 ## <a name="see-also"></a>另請參閱  
- [系統提供繫結](../../../../docs/framework/wcf/system-provided-bindings.md)   
- [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)   
- [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)   
- [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)   
- [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)   
- [<>\>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)
+ [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
+ [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
+ [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
+ [\<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

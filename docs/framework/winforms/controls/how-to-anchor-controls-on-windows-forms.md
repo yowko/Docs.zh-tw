@@ -1,72 +1,73 @@
 ---
-title: "如何：錨定 Windows Form 上的控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anchor 屬性, 啟用可調整大小的表單"
-  - "控制項 [Windows Form], 錨定"
-  - "控制項 [Windows Form], 位置"
-  - "表單, 調整大小"
-  - "調整表單大小"
-  - "螢幕解析度和控制項顯示"
-  - "Windows Form 控制項, 螢幕解析度"
-  - "Windows Form 控制項, 大小"
-  - "Windows Form, 調整大小"
+title: "如何：錨定 Windows Form 上的控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Anchor property [Windows Forms], enabling resizable forms
+- Windows Forms controls, screen resolutions
+- resizing forms [Windows Forms]
+- Windows Forms controls, size
+- screen resolution and control display
+- controls [Windows Forms], anchoring
+- forms [Windows Forms], resizing
+- Windows Forms, resizing
+- controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c6f7cc527c7409ffecab2ac67386d0f819cce3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：錨定 Windows Form 上的控制項
-假如您設計一個表單讓使用者可以在執行階段調整它的大小，那麼表單上的控制項就應適當地重新調整大小和重新放置。  要控制項動態的隨畫面調整大小，您可以用 Windows Form 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性。  <xref:System.Windows.Forms.Control.Anchor%2A> 屬性定義了控制項的錨定位置。  當一個控制項錨定到表單，同時表單重新調整大小，則控制項仍舊維持控制項和錨定位置的距離。  例如，如果您有錨定到表單左邊、右邊和底部邊緣的 <xref:System.Windows.Forms.TextBox> 控制項，則當表單重新調整大小時，<xref:System.Windows.Forms.TextBox> 控制項會重新調整水平大小，如此就能和表單的左邊和右邊維持相同的距離。  除此之外，控制項本身也會做垂直定位，如此它與表單下緣就可維持同樣的距離。  假如控制項未錨定而表單重新調整了大小，那麼控制項相對應於表單邊緣的位置就會改變。  
+# <a name="how-to-anchor-controls-on-windows-forms"></a>如何：錨定 Windows Form 上的控制項
+如果您要設計的表單，使用者可以在執行階段調整大小，將表單上的控制項應調整大小，並適當地重新調整位置。 若要調整大小以動態方式使用表單的控制項，您可以使用<xref:System.Windows.Forms.Control.Anchor%2A>Windows Form 控制項的屬性。 <xref:System.Windows.Forms.Control.Anchor%2A>屬性會定義控制項的錨點位置。 當控制項錨定至表單，並調整表單大小時，控制項就會維護控制項的錨點位置之間的距離。 例如，如果您有<xref:System.Windows.Forms.TextBox>錨定的左方、 右方和下邊緣的表單，表單調整大小時，控制項<xref:System.Windows.Forms.TextBox>水平控制項會調整大小，以便保持相同的距離，從表單的左邊和右邊側邊。 此外，控制項本身也會做垂直定位，因此其位置一律會從表單的邊緣相同的距離。 如果控制項不錨定和調整表單大小時，會變更控制項相對於表單的邊緣的位置。  
   
- <xref:System.Windows.Forms.Control.Anchor%2A> 屬性和 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性互動。  如需詳細資訊，請參閱 [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。  
+ <xref:System.Windows.Forms.Control.Anchor%2A>屬性互動<xref:System.Windows.Forms.Control.AutoSize%2A>屬性。 如需詳細資訊，請參閱[AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 若要在表單上錨定控制項  
+### <a name="to-anchor-a-control-on-a-form"></a>若要錨定在表單上的控制項  
   
-1.  選取您要錨定的控制項。  
+1.  選取您想要錨定的控制項。  
   
     > [!NOTE]
-    >  您可以藉由按下 CTRL 鍵，再按一下每個控制項以進行選取，然後遵循此程序的其餘部分來同時錨定多個控制項。  
+    >  您可以按住 CTRL 鍵，按一下以選取它，每個控制項，然後遵循此程序的其餘同時錨定多個控制項。  
   
-2.  在 \[**屬性**\] 視窗內，按一下 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性右邊的箭頭。  
+2.  在**屬性**視窗中，按一下右邊的箭號<xref:System.Windows.Forms.Control.Anchor%2A>屬性。  
   
-     編輯器顯現並出現一個十字。  
+     編輯器會隨即出現，顯示交叉。  
   
-3.  要設定一個錨點，按一下十字的上、左、右或底部的部分。  
+3.  設定錨點，請按一下左上方、 右側或底端交叉區段。  
   
-     控制項預設錨定在上部和左邊。  
+     控制項可錨定至頂端，而且留下的預設值。  
   
-4.  若要清除已錨定的控制項一邊，請按一下十字的相應邊。  
+4.  若要清除已錨定的控制項的一邊，請按一下該 arm 的交叉。  
   
-5.  若要關閉 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性編輯器，請再按一下 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性名稱。  
+5.  若要關閉<xref:System.Windows.Forms.Control.Anchor%2A>屬性編輯器中，按一下<xref:System.Windows.Forms.Control.Anchor%2A>再次屬性名稱。  
   
- 當您在執行階段時顯示表單，控制項會重新調整大小，以便維持與表單兩邊同樣的距離。  跟錨定邊緣之間的距離始終維持和控制項放置在 Windows Form 設計工具內定義的距離一樣。  
+ 當表單出現在執行階段時，控制項會調整大小以便維持在相同的距離，從表單的邊緣。 錨定的邊緣之間的距離一定會保持相同的距離會定義當控制項放置在 Windows Form 設計工具。  
   
 > [!NOTE]
->  某些控制項，例如 <xref:System.Windows.Forms.ComboBox> 控制項，在高度方面會有限制。  將控制項錨定到它表單或容器 \(Container\) 的底部時，並不能夠強迫控制項超過其高度限制。  
+>  特定控制項，例如<xref:System.Windows.Forms.ComboBox>控制項，其高度限制。 錨定至底部其表單或容器控制項無法強制控制項超過其高度限制。  
   
- 繼承控制項必須是 `Protected` 才能夠加以錨定。  若要變更控制項的存取層級，請在 \[**屬性**\] 視窗中設定 `Modifiers` 屬性。  
+ 繼承的控制項必須是`Protected`能夠錨定。 若要變更控制項的存取層級，設定其`Modifiers`屬性**屬性**視窗。  
   
-## 請參閱  
- [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)   
- [排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [如何：將控制項停駐在 Windows Form 上](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>另請參閱  
+ [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
+ [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [操作說明：將控制項停駐在 Windows Forms 上](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

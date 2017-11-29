@@ -1,31 +1,27 @@
 ---
-title: "如何︰ 列出樹狀結構 (Visual Basic) 中的所有節點 |Microsoft 文件"
+title: "如何： 列出樹狀結構 (Visual Basic) 中的所有節點"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何︰ 列出樹狀結構 (Visual Basic) 中的所有節點
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何： 列出樹狀結構 (Visual Basic) 中的所有節點
 列出樹狀中的所有節點有時候很有幫助。 這在精確了解方法或屬性如何影響樹狀結構時相當實用。 以文字格式列出所有節點的其中一個方法為產生正確而且明確識別樹狀結構中任何節點的 XPath 運算式。  
   
- 若是使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 執行 XPath 運算式，則不會特別有幫助。 XPath 運算式的效能比 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢的效能差，而且 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢的功能更為強大。 不過，若是要識別 XML 樹狀中的節點，XPath 就非常適合。  
+ 若是使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行 XPath 運算式，則不會特別有幫助。 XPath 運算式的效能比 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的效能差，而且 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的功能更為強大。 不過，若是要識別 XML 樹狀中的節點，XPath 就非常適合。  
   
 ## <a name="example"></a>範例  
  這個範例顯示名稱為 `GetXPath` 的函式，可針對 XML 樹狀結構中的任何節點，產生特定的 XPath 運算式。 即使節點位於命名空間中，它也可以產生適當的 XPath 運算式。 XPath 運算式是利用命名空間前置詞產生。  
@@ -245,7 +241,7 @@ End Module
   
  這個範例會產生下列輸出：  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

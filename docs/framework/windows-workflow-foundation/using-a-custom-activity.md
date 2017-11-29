@@ -1,26 +1,30 @@
 ---
-title: "使用自訂活動 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用自訂活動"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e534f9a3e8d0a7d675e43bc03266e4863f95d45d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用自訂活動
-衍生自 <xref:System.Activities.Activity> 或其子類別的活動，可以編寫成較大的工作流程，或直接建立成程式碼。本主題說明如何在以程式碼或設計工具建立的工作流程中，使用自訂活動。  
+# <a name="using-a-custom-activity"></a>使用自訂活動
+衍生自 <xref:System.Activities.Activity> 或其子類別的活動，可以編寫成較大的工作流程，或直接建立成程式碼。 本主題說明如何在以程式碼或設計工具建立的工作流程中，使用自訂活動。  
   
 > [!NOTE]
->  自訂活動可以用在定義這些自訂活動的相同專案中，只要自訂活動和使用它的活動都經過編譯 \(也就是說，由建置程序產生的具現化類型載入\)。如果參考的活動是以動態方式載入 \(例如使用 ActivityXAMLServices\)，則參考的組件應放在不同的專案中，否則設計工具產生的 XAML 需要透過手動編輯來啟用此功能。  
+>  可以在相同的專案中，它們會定義，使用自訂活動，只要自訂活動和活動，使用它所編譯的 （也就是由建置流程所產生具現化類型載入） 載入參考的活動以動態方式 （例如使用 ActivityXAMLServices），然後參考的組件應放在不同的專案，或設計工具產生的 XAML 需要透過手動編輯來啟用此功能。  
   
-#### 將自訂活動用於工作流程專案  
+#### <a name="using-a-custom-activity-to-a-workflow-project"></a>將自訂活動用於工作流程專案  
   
 1.  將主專案的參考加入至包含自訂活動的活動程式庫專案。  
   

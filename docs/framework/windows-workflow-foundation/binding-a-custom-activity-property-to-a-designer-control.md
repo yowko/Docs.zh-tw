@@ -1,29 +1,33 @@
 ---
-title: "將自訂活動屬性繫結至設計工具控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將自訂活動屬性繫結至設計工具控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9edc168dc6e4111e5f2d58a62c2b0341f74aa04
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 將自訂活動屬性繫結至設計工具控制項
-將文字方塊設計工具控制項繫結至活動引數相當簡單。不過，將複雜的設計工具控制項 \(例如下拉式方塊\) 繫結至活動引數可能會呈現挑戰。本主題討論如何將活動引數繫結至自訂活動設計工具上的下拉式方塊控制項。  
+# <a name="binding-a-custom-activity-property-to-a-designer-control"></a>將自訂活動屬性繫結至設計工具控制項
+將文字方塊設計工具控制項繫結至活動引數相當簡單。不過，將複雜的設計工具控制項 (例如下拉式方塊) 繫結至活動引數可能會呈現挑戰。 本主題討論如何將活動引數繫結至自訂活動設計工具上的下拉式方塊控制項。  
   
-#### 建立下拉式方塊項目轉換器  
+#### <a name="creating-the-combo-box-item-converter"></a>建立下拉式方塊項目轉換器  
   
 1.  在 Visual Studio 中建立名為 CustomProperty 的空白新方案。  
   
-2.  建立名為 ComboBoxItemConverter 的新類別。加入 System.Windows.Data 的參考，並且讓此類別衍生自 <xref:System.Windows.Data.IValueConverter>。讓 Visual Studio 實作此介面，以便產生 <xref:System.Windows.Data.IValueConverter.Convert%2A> 和 <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 的 Stub。  
+2.  建立名為 ComboBoxItemConverter 的新類別。 加入 System.Windows.Data 的參考，並且讓此類別衍生自 <xref:System.Windows.Data.IValueConverter>。 讓 Visual Studio 實作此介面，以便產生 `Convert` 和 `ConvertBack` 的 Stub。  
   
-3.  將下列程式碼加入至 <xref:System.Windows.Data.IValueConverter.Convert%2A> 方法。這段程式碼會將型別為 <xref:System.String> 的活動 <xref:System.Activities.InArgument%601> 轉換成要置於設計工具中的值。  
+3.  將下列程式碼加入至 `Convert` 方法。 這段程式碼會將型別為 <xref:System.Activities.InArgument%601> 的活動 <xref:System.String> 轉換成要置於設計工具中的值。  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -48,10 +52,9 @@ caps.handback.revision: 3
         }  
     }  
     return null;  
-  
     ```  
   
-     您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 而不使用  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，建立上述程式碼片段中的運算式。  
+     您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼片段中的運算式。  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -76,10 +79,9 @@ caps.handback.revision: 3
         }  
     }  
     return null;  
-  
     ```  
   
-4.  將下列程式碼加入至 <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 方法。這段程式碼會將傳入的下拉式方塊項目轉換回 <xref:System.Activities.InArgument%601>。  
+4.  將下列程式碼加入至 `ConvertBack` 方法。 這段程式碼會將傳入的下拉式方塊項目轉換回 <xref:System.Activities.InArgument%601>。  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -87,10 +89,9 @@ caps.handback.revision: 3
                 VisualBasicValue<string> vbArgument = new VisualBasicValue<string>(itemContent);  
                 InArgument<string> inArgument = new InArgument<string>(vbArgument);  
                 return inArgument;  
-  
     ```  
   
-     您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 而不使用  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，建立上述程式碼片段中的運算式。  
+     您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼片段中的運算式。  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -98,16 +99,15 @@ caps.handback.revision: 3
                 CSharpValue<string> csArgument = new CSharpValue<string>(itemContent);  
                 InArgument<string> inArgument = new InArgument<string>(csArgument);  
                 return inArgument;  
-  
     ```  
   
-#### 將 ComboBoxItemConverter 加入至活動的自訂設計工具  
+#### <a name="adding-the-comboboxitemconverter-to-the-custom-designer-of-an-activity"></a>將 ComboBoxItemConverter 加入至活動的自訂設計工具  
   
-1.  將新的項目加入至專案。在 \[新增項目\] 對話方塊中，選取 \[工作流程\] 節點，然後選取 \[活動設計工具\] 當做新項目的型別。將此項目命名為 CustomPropertyDesigner。  
+1.  將新的項目加入至專案。 在 [新增項目] 對話方塊中，選取 [工作流程] 節點，然後選取 [活動設計工具] 當做新項目的型別。 將此項目命名為 CustomPropertyDesigner。  
   
-2.  將下拉式方塊加入至新的設計工具。在 \[項目\] 屬性中，將一些項目加入至 \[內容\] 值為「項目 1」和「項目 2」的下拉式方塊。  
+2.  將下拉式方塊加入至新的設計工具。 在 [項目] 屬性中，將一些項目加入至 [內容] 值為「項目 1」和「項目 2」的下拉式方塊。  
   
-3.  修改下拉式方塊的 XAML，以便加入新的項目轉換器當做要用於下拉式方塊的項目轉換器。此轉換器會加入成為 ActivityDesigner.Resources 區段中的資源，並且在 <xref:System.Windows.Controls.ComboBox> 的 Converter 屬性中指定轉換器。請注意，此專案的命名空間指定於活動設計工具的 namespaces 屬性中。如果此設計工具要用於不同的專案，就必須變更這個命名空間。  
+3.  修改下拉式方塊的 XAML，以便加入新的項目轉換器當做要用於下拉式方塊的項目轉換器。 此轉換器會加入成為 ActivityDesigner.Resources 區段中的資源，並且在 <xref:System.Windows.Controls.ComboBox> 的 Converter 屬性中指定轉換器。 請注意，此專案的命名空間指定於活動設計工具的 namespaces 屬性中。如果此設計工具要用於不同的專案，就必須變更這個命名空間。  
   
     ```  
     <sap:ActivityDesigner x:Class="CustomProperty.CustomPropertyDesigner"  
@@ -129,18 +129,16 @@ caps.handback.revision: 3
             </ComboBox>  
         </Grid>  
     </sap:ActivityDesigner>  
-  
     ```  
   
-4.  建立型別為 <xref:System.Activities.CodeActivity> 的新項目。活動 IDE 所建立的預設程式碼將足以說明此範例。  
+4.  建立型別為 <xref:System.Activities.CodeActivity> 的新項目。 活動 IDE 所建立的預設程式碼將足以說明此範例。  
   
 5.  將下列屬性加入至類別定義：  
   
     ```  
     [Designer(typeof(CustomPropertyDesigner))]  
-  
     ```  
   
      這一行程式碼會將新的設計工具與新的類別產生關聯。  
   
- 此時，新活動應該會與設計工具相關聯。若要測試新活動，請將它加入至工作流程，並將下拉式方塊設定為兩個值。然後，\[屬性\] 視窗應該會更新以反映下拉式方塊的值。
+ 此時，新活動應該會與設計工具相關聯。 若要測試新活動，請將它加入至工作流程，並將下拉式方塊設定為兩個值。 然後，[屬性] 視窗應該會更新以反映下拉式方塊的值。

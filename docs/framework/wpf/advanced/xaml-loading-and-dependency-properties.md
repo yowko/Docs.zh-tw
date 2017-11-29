@@ -1,55 +1,60 @@
 ---
-title: "XAML 載入和相依性屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自訂相依性屬性"
-  - "相依性屬性, XAML 載入和"
-  - "載入 XML 資料"
+title: "XAML 載入和相依性屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom dependency properties [WPF]
+- dependency properties [WPF], XAML loading and
+- loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 97970a8a292eee43b01b1eab235376ae9b8e6fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# XAML 載入和相依性屬性
-目前 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作其 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器的方式在本質上可以感知相依性屬性。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器在載入二進位 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 及處理本身為相依性屬性 \(Property\) 的屬性 \(Attribute\) 時，都會使用相依性屬性 \(Property\) 的屬性 \(Property\) 系統方法。  這可有效略過屬性包裝函式。  當您實作自訂相依性屬性時，必須說明這個行為，而且除了屬性系統方法 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 以外，您應該避免將其他任何程式碼放在屬性包裝函式中。  
+# <a name="xaml-loading-and-dependency-properties"></a>XAML 載入和相依性屬性
+目前 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作，在本質上就會感知相依性屬性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器在載入二進位 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和處理相依性屬性的屬性時，會使用相依性屬性的屬性系統方法。 這可有效略過屬性的包裝函式。 當您實作自訂的相依性屬性時，您必須負責這種行為，並置於您的內容包裝函式屬性系統方法以外的任何其他程式碼應該避免<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>。  
   
-   
   
 <a name="prerequisites"></a>   
-## 必要條件  
- 本主題假設您已了解如何使用和撰寫相依性屬性，而且閱讀過[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)和[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。  另外您也應該已閱讀過 [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)和 [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+## <a name="prerequisites"></a>必要條件  
+ 本主題假設您已從相依性屬性的消費者和作者角度了解相依性屬性，並已閱讀[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)和[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。 此外，您應已閱讀 [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 和 [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
   
 <a name="implementation"></a>   
-## WPF XAML 載入器實作和效能  
- 基於實作的考量，請將屬性識別為相依性屬性，並存取用來設定屬性的 <xref:System.Windows.DependencyObject.SetValue%2A> 方法，而不要使用屬性包裝函式及其 setter，以降低所需的運算成本。  這是因為 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器必須單就標記和各種字串結構所指定的已知型別與成員關係，推斷支援程式碼的完整物件模型。  
+## <a name="the-wpf-xaml-loader-implementation-and-performance"></a>WPF XAML 載入器實作與效能  
+ 基於實作原因，是較不費時屬性做為相依性屬性的識別及存取屬性系統<xref:System.Windows.DependencyObject.SetValue%2A>方法來設定它，而不是使用屬性的包裝函式和其 setter。 這是因為 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器僅能藉由各種字串和標記之結構所表示的型別和成員關聯性，來推斷支援程式碼的整個物件模型。  
   
- 型別是透過 xmlns 和組件 \(Assembly\) 屬性 \(Attribute\) 來查詢，但是識別成員、判斷何者可以設定為屬性 \(Attribute\)，以及解析屬性 \(Property\) 值支援之型別等作業，則需要使用 <xref:System.Reflection.PropertyInfo> 進行全面性的反映 \(Reflection\)。  因為指定之型別上的相依性屬性可以透過屬性系統存取成儲存表，所以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作其 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器時將會使用這個表格，並推斷只要使用相依性屬性識別項 *ABCProperty*，在包含 <xref:System.Windows.DependencyObject> 衍生型別 \(Derived Type\) 上呼叫 <xref:System.Windows.DependencyObject.SetValue%2A>，即可更有效率地設定任何指定的屬性 *ABC*。  
+ 型別查閱透過 xmlns 和組件屬性，但是識別的成員，決定無法設定屬性，為支援的組合和解決何種類型的屬性值支援否則會需要大量的反映使用<xref:System.Reflection.PropertyInfo>。 因為相依性屬性上指定的型別為屬性系統，透過儲存體資料表存取[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實作其[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器會使用此資料表，並且推斷的任何給定屬性*ABC*您可以更有效率地將藉由呼叫<xref:System.Windows.DependencyObject.SetValue%2A>上包含<xref:System.Windows.DependencyObject>衍生型別，使用相依性屬性的識別項*ABCProperty*。  
   
 <a name="implications"></a>   
-## 自訂相依性屬性的含意  
- 由於目前 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作屬性設定的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器行為會完全略過包裝函式，因此請勿將任何額外的邏輯放入自訂相依性屬性的包含函式集合定義。  如果您將這種邏輯放入集合定義中，則在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 而非程式碼中設定屬性時，並不會執行該邏輯。  
+## <a name="implications-for-custom-dependency-properties"></a>自訂相依性屬性的影響  
+ 由於目前 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作其屬性設定行為完全略過包裝函式，因此您不應該將任何其他邏輯放入自訂相依性屬性之包裝函式的集合定義中。 如果您在集合定義中放置這類邏輯，則在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中設定屬性 (而不是在程式碼中設定) 時，將不會執行邏輯。  
   
- 同樣地，從 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理取得屬性值的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器其他設定也可能會使用 <xref:System.Windows.DependencyObject.GetValue%2A>，而不會使用包裝函式。  因此，您也應該避免在 `get` 定義中包含 <xref:System.Windows.DependencyObject.GetValue%2A> 呼叫以外的其他任何實作。  
+ 同樣地，其他方面的[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]取得屬性值的處理器[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理也使用<xref:System.Windows.DependencyObject.GetValue%2A>而不是使用包裝函式。 因此，您也應該避免在任何其他實作`get`超出定義<xref:System.Windows.DependencyObject.GetValue%2A>呼叫。  
   
- 下列範例是內含包裝函式的建議相依性屬性定義，其中的屬性識別項儲存為 `public` `static` `readonly` 欄位，而且除了用來定義相依性屬性支援的必要屬性系統方法以外，`get` 和 `set` 定義中並未包含其他程式碼。  
+ 下列範例是建議的相依性屬性定義與包裝函式，其中將屬性識別項儲存為 `public` `static` `readonly` 欄位，而 `get` 和 `set` 定義所包含的程式碼也都在定義支援相依性屬性的必要屬性系統方法範圍內。  
   
  [!code-csharp[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
  [!code-vb[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
-## 請參閱  
- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)   
- [集合類型相依性屬性](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)   
- [相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)   
+## <a name="see-also"></a>另請參閱  
+ [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [集合類型的相依性屬性](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
+ [相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
  [DependencyObject 的安全建構函式模式](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)

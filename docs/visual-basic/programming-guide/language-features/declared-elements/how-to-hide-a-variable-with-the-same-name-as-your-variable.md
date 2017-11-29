@@ -1,60 +1,59 @@
 ---
-title: "How to: Hide a Variable with the Same Name as Your Variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "qualification, of element names"
-  - "declarations, elements"
-  - "element names, qualification"
-  - "references, declared elements"
-  - "declaration statements, declared elements"
-  - "declaring elements"
-  - "referencing declared elements"
-  - "declared elements, referencing"
-  - "declared elements, about declared elements"
+title: "如何：隱藏與您的變數名稱相同的變數 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- declarations [Visual Basic], elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declaration statements [Visual Basic], declared elements
+- declaring elements [Visual Basic]
+- referencing declared elements [Visual Basic]
+- declared elements [Visual Basic], referencing
+- declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Hide a Variable with the Same Name as Your Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-您可以利用「*遮蔽*」\(Shadow\) 變數的方式來隱藏變數，即使用相同名稱的變數來重新定義變數。  使用兩種方法來遮蔽要隱藏的變數：  
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隱藏與您的變數名稱相同的變數 (Visual Basic)
+您可以隱藏變數*遮蔽*它，也就是來重新定義具有相同名稱的變數。 您可以遮蔽的變數，您想要隱藏兩種方式：  
   
--   **透過範圍遮蔽。** 若某個區域包含要隱藏的變數，您可在該區域的子區域中重新宣告變數，即可透過範圍來遮蔽變數。  
+-   **透過範圍遮蔽。** 您可以透過範圍遮蔽它的宣告子區域的區域包含您想要隱藏的變數內。  
   
--   **透過繼承遮蔽。** 如果要隱藏的變數是在類別層級定義的，則可以在衍生類別中使用 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) 關鍵字重新宣告變數，然後透過繼承來遮蔽變數。  
+-   **透過繼承遮蔽。** 如果您想要隱藏的變數定義在類別層級，您可以透過繼承來遮蔽所遮蔽與[陰影](../../../../visual-basic/language-reference/modifiers/shadows.md)衍生類別中的關鍵字。  
   
-## 隱藏變數的兩種方法  
+## <a name="two-ways-to-hide-a-variable"></a>若要隱藏變數的兩種方式  
   
-#### 若要透過範圍來遮蔽變數以隱藏變數  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>若要隱藏變數來透過範圍遮蔽  
   
-1.  判斷定義要隱藏的變數所在區域，及判斷以您的變數重新定義該變數的子區域。  
+1.  判斷定義您想要隱藏，該的變數的區域，並判斷要重新定義它，以您的變數子區域。  
   
-    |變數的區域|允許重新定義的子區域|  
-    |-----------|----------------|  
-    |模組|模組中的類別|  
-    |類別|類別中的子類別<br /><br /> 類別中的程序|  
+    |變數的區域|重新定義它的可允許子地區|  
+    |-----------------------|-------------------------------------------|  
+    |模組|在模組中的類別|  
+    |類別|類別內的子類別<br /><br /> 類別內的程序|  
   
-     您不能在程序的區塊中重新定義程序變數，例如在 `If`...`End If` 結構或 `For` 迴圈中。  
+     您無法重新定義程序變數的區塊中的程序，例如在`If`...`End If`建構或`For`迴圈。  
   
-2.  如果子區域不存在，請予以建立。  
+2.  如果不存在，請予以建立。  
   
-3.  在子區域中，寫入 [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) 來宣告主導遮蔽的變數。  
+3.  在子區域中，撰寫[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)宣告遮蔽的變數。  
   
-     當子區域中的程式碼參考變數名稱時，編譯器就會解析對主導遮蔽變數的參考。  
+     當子地區內的程式碼參考變數的名稱時，則編譯器會解析遮蔽的變數的參考。  
   
-     下列範例示範如何透過範圍遮蔽和略過遮蔽的參考。  
+     下列範例示範如何透過範圍，以及略過遮蔽的參考遮蔽。  
   
     ```  
     Module shadowByScope  
@@ -76,21 +75,21 @@ caps.handback.revision: 25
     End Module  
     ```  
   
-     前面的範例同時在模組層級和程序層級 \(在程序 `show` 中\) 宣告變數 `num`。  區域變數 `num` 會遮蔽在 `show` 中的模組層級變數 `num`，所以區域變數會設定為 2。  不過，並沒有區域變數遮蔽 `useModuleLevelNum` 程序中的 `num`。  因此，`useModuleLevelNum` 會將模組層級變數的值設定為 1。  
+     上述範例中宣告變數`num`在模組層級和程序層級 (在程序`show`)。 本機變數`num`遮蔽模組層級變數`num`內`show`，因此本機變數設定為 2。 不過，沒有任何區域變數至陰影`num`中`useModuleLevelNum`程序。 因此，`useModuleLevelNum`模組層級變數的值設定為 1。  
   
-     限定具有模組名稱的 `num`，會使 `show` 中的 `MsgBox` 呼叫略過遮蔽機制。  因此，顯示的會是模組層級變數而非區域變數。  
+     `MsgBox`內呼叫`show`略過遮蔽的機制，來限定`num`模組名稱。 因此，它會顯示模組層級變數，而不是本機變數。  
   
-#### 若要透過繼承來遮蔽變數以隱藏變數  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>若要隱藏變數來透過繼承遮蔽  
   
-1.  確定要隱藏的變數是在類別內，而且是在類別層級 \(即在任何程序以外\) 宣告。  否則您無法透過繼承來遮蔽變數。  
+1.  請務必在類別中，並在類別層級 （以外的任何程序） 中宣告了您想要隱藏的變數。 否則您無法透過繼承遮蔽它。  
   
-2.  如果衍生自變數類別的類別不存在，請予以定義。  
+2.  定義衍生自變數的類別，如果不存在的類別。  
   
-3.  在衍生類別中寫入 `Dim` 陳述式來宣告您的變數。  在宣告中加入 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) 關鍵字。  
+3.  在衍生類別中，撰寫`Dim`陳述式來宣告變數。 包含[陰影](../../../../visual-basic/language-reference/modifiers/shadows.md)宣告中的關鍵字。  
   
-     當衍生類別中的程式碼參考變數名稱時，編譯器就會解析對變數的參考。  
+     當在衍生類別中的程式碼參考變數的名稱時，則編譯器會解析您變數的參考。  
   
-     下列範例示範如何透過繼承遮蔽。  這個範例會建立兩個參考，一個參考會存取主導遮蔽變數，另一個參考則會略過遮蔽。  
+     下列範例示範如何透過繼承遮蔽。 它可讓兩個參考會存取遮蔽的變數，一個略過遮蔽。  
   
     ```  
     Public Class shadowBaseClass  
@@ -107,17 +106,17 @@ caps.handback.revision: 25
     End Class  
     ```  
   
-     前面的範例在基底類別中宣告變數 `shadowString`，並且在衍生類別中遮蔽這個變數。  當名稱 `shadowString` 不限制時，在衍生類別中的 `showStrings` 程序會顯示字串的主導遮蔽版本。  接著當 `shadowString` 符合 `MyBase`關鍵字資格時，會顯示遮蔽的版本。  
+     上述範例中宣告變數`shadowString`基底類別及陰影衍生類別中。 此程序`showStrings`衍生類別中會顯示遮蔽版本的字串時名稱`shadowString`不合格。 接著會顯示加上陰影的版本時`shadowString`是以限定`MyBase`關鍵字。  
   
-## 穩固程式設計  
- 遮蔽會使用相同名稱引入多個變數版本。  當程式碼陳述式參考變數名稱時，編譯器 \(Compiler\) 所解析出的版本，取決於例如程式碼陳述式位置和限定字串的存在與否等因素。  這有可能會增加參考到遮蔽變數不必要版本的風險。  您可全面限定遮蔽變數的所有參考，以降低風險。  
+## <a name="robust-programming"></a>穩固程式設計  
+ 遮蔽導入了一個以上的版本具有相同名稱的變數。 當程式碼陳述式參考變數的名稱時，則編譯器會解析參考的版本取決於因素，例如程式碼陳述式的位置和限定字串的目前狀態。 這會增加到錯誤版本的遮蔽的變數參考的風險。 您可以降低風險來完整限定所有遮蔽的變數參考。  
   
-## 請參閱  
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Differences Between Shadowing and Overriding](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [How to: Hide an Inherited Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me, My, MyBase, and MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [Inheritance Basics](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a>另請參閱  
+ [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Visual Basic 中的遮蔽功能](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [遮蔽和覆寫的差異](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [如何：隱藏繼承的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [如何：存取衍生類別所隱藏的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [繼承的基本概念](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

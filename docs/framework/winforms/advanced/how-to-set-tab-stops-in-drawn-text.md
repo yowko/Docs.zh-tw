@@ -1,48 +1,52 @@
 ---
-title: "如何：在已繪製的文字中設定定位停駐點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "索引標籤, 描繪的文字"
-  - "文字, 以包含定位停駐點的方式描繪"
+title: "如何：在已繪製的文字中設定定位停駐點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [Windows Forms], drawing with tab stops
+- tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e561e8096780301230071e869dac482a6a908a5e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在已繪製的文字中設定定位停駐點
-您可以經由呼叫 <xref:System.Drawing.StringFormat> 物件的 <xref:System.Drawing.StringFormat.SetTabStops%2A> 方法，然後將該 <xref:System.Drawing.StringFormat> 物件傳遞至 <xref:System.Drawing.Graphics> 類別的 <xref:System.Drawing.Graphics.DrawString%2A> 方法，以設定文字的定位停駐點。  
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>如何：在已繪製的文字中設定定位停駐點
+您可以藉由呼叫設定定位停駐點的文字<xref:System.Drawing.StringFormat.SetTabStops%2A>方法<xref:System.Drawing.StringFormat>物件，然後再傳遞<xref:System.Drawing.StringFormat>物件<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>類別。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.TextRenderer?displayProperty=fullName> 不支援將定位停駐點加入至繪製的文字，但您可以使用 <xref:System.Windows.Forms.TextFormatFlags?displayProperty=fullName> 旗標擴充現有的定位停駐點。  
+>  <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType>無法支援新增定位停駐點繪製的文字中，雖然您可以擴充現有的索引標籤可讓您停止使用<xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType>旗標。  
   
-## 範例  
- 下列範例會在 150、250 和 350 設定定位停駐點。  然後程式碼會顯示名稱和考試成績的索引標籤式清單。  
+## <a name="example"></a>範例  
+ 下列範例會在 150、 250 和 350 設定定位停駐點。 然後，程式碼會顯示索引標籤式的名字和分數測試清單。  
   
- 下圖顯示的是索引標籤式文字。  
+ 下圖顯示索引標籤式的文字。  
   
  ![字型文字](../../../../docs/framework/winforms/advanced/media/fontstext4.png "fontstext4")  
   
- 下列程式碼會將兩個引數傳遞至 <xref:System.Drawing.StringFormat.SetTabStops%2A> 方法。  第二個引數是包含定位點位移 \(Offset\) 的陣列。  傳遞至 <xref:System.Drawing.StringFormat.SetTabStops%2A> 第一個引數是 0，表示陣列中的第一個位移是從週框左邊緣的位置 0 開始測量。  
+ 下列程式碼會傳遞兩個引數<xref:System.Drawing.StringFormat.SetTabStops%2A>方法。 第二個引數是陣列，其中包含的索引標籤的位移。 第一個引數傳遞至<xref:System.Drawing.StringFormat.SetTabStops%2A>為 0，表示陣列中的第一個位移，從位置 0，這個周框左邊緣算起。  
   
  [!code-csharp[System.Drawing.FontsAndText#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
--   前述範例是專為與 Windows Form 搭配使用而設計的，而且它需要有 <xref:System.Windows.Forms.PaintEventArgs> `e` \(這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數\)。  
+-   上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
   
-## 請參閱  
- [使用字型和文字](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
- [如何：使用 GDI 繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
+## <a name="see-also"></a>另請參閱  
+ [使用字型和文字](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [操作說明：使用 GDI 繪製文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

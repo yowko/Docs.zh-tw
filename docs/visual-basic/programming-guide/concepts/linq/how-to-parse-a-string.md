@@ -1,38 +1,30 @@
 ---
-title: "如何︰ 剖析字串 (Visual Basic) |Microsoft 文件"
+title: "如何： 剖析字串 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d062efd2e207f5db39e3be044450fd3f9a5d9e11
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 10b80c72cae70437ff812c4b67b2532d708f1e69
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>如何︰ 剖析字串 (Visual Basic)
+# <a name="how-to-parse-a-string-visual-basic"></a>如何： 剖析字串 (Visual Basic)
 本主題說明如何在 C# 中建立 XML 樹狀結構。  
   
 ## <a name="example"></a>範例  
- 您可以在字串中的剖析[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]使用`XElement.Parse`方法。 不過，它是使用 XML 常值，如下列程式碼所示，因為 XML 常值不會遭受相同的效能低落，從字串剖析 XML 更有效率。  
+ 您可以剖析的字串[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使用`XElement.Parse`方法。 不過，它是使用 XML 常值，如下列程式碼所示，因為 XML 常值不會發生相同的效能低落，從字串剖析 XML 更有效率。  
   
- 藉由使用 XML 常值，您只可以將您的 XML 複製並貼入您的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 程式中。  
+ 藉由使用 XML 常值，您只可以將您的 XML 複製並貼入您的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程式中。  
   
 > [!NOTE]
 >  從文字檔剖析文字或載入 XML 文件比功能結構沒有效率。 如果您要從程式碼初始化 XML 樹狀結構，使用功能結構比剖析文字所花的處理器時間少。  

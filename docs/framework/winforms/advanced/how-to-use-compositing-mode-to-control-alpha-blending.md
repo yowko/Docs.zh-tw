@@ -1,67 +1,71 @@
 ---
-title: "如何：使用複合模式控制 Alpha 混色 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Alpha 混色, 複合"
-  - "色彩, 混色"
-  - "色彩, 控制透明度"
+title: "如何：使用複合模式控制 Alpha 混色"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- alpha blending [Windows Forms], compositing
+- colors [Windows Forms], blending
+- colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 564d46cb2d72ac63962657b39146489aaafd6a5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用複合模式控制 Alpha 混色
-有時候，您可能會想要建立具有下列特性的螢幕外點陣圖：  
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>如何：使用複合模式控制 Alpha 混色
+有時可能會當您想要建立螢幕的點陣圖，具有下列特性：  
   
--   色彩中的 Alpha 值小於 255。  
+-   色彩的 alpha 值小於 255。  
   
--   建立點陣圖時不要使色彩彼此產生 Alpha 混色。  
+-   色彩不 alpha 彼此混合，當您建立的點陣圖。  
   
--   顯示完成的點陣圖時，點陣圖中的色彩已與顯示裝置上的背景色彩產生 Alpha 混色。  
+-   當您顯示完成的點陣圖時，點陣圖中的色彩是 alpha 混色與顯示裝置上的背景色彩。  
   
- 若要建立此類點陣圖，請先建構空白的 <xref:System.Drawing.Bitmap> 物件，然後再根據該點陣圖建構 <xref:System.Drawing.Graphics> 物件。  請將 <xref:System.Drawing.Graphics> 物件的複合模式設定為 <xref:System.Drawing.Drawing2D.CompositingMode?displayProperty=fullName>。  
+ 若要建立這類點陣圖，建構空白<xref:System.Drawing.Bitmap>物件，然後再建構<xref:System.Drawing.Graphics>物件會根據該點陣圖。 設定複合模式的<xref:System.Drawing.Graphics>物件<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>。  
   
-## 範例  
- 下列範例根據 <xref:System.Drawing.Bitmap> 物件來建立 <xref:System.Drawing.Graphics> 物件。  程式碼使用 <xref:System.Drawing.Graphics> 物件和兩個半透明筆刷 \(Alpha \= 160\) 在點陣圖上進行塗繪。  程式碼會使用半透明的筆刷來填滿紅色橢圓形和綠色橢圓形。  綠色橢圓形與紅色橢圓形重疊，但是因為 <xref:System.Drawing.Graphics> 物件的複合模式已設定為 <xref:System.Drawing.Drawing2D.CompositingMode>，因此綠色和紅色不會混合。  
+## <a name="example"></a>範例  
+ 下列範例會建立<xref:System.Drawing.Graphics>物件根據<xref:System.Drawing.Bitmap>物件。 程式碼會使用<xref:System.Drawing.Graphics>以及兩個半透明筆刷的物件 (alpha = 160) 來繪製在點陣圖。 程式碼會填入紅色橢圓形和綠色橢圓形使用半透明筆刷。 綠色橢圓形重疊紅色的省略符號，但因為綠色不會以紅色混合的複合模式<xref:System.Drawing.Graphics>物件設定為<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>。  
   
- 程式碼會在螢幕上繪製兩次點陣圖：一次是在白色背景上，一次是在多種色彩的背景上。  屬於這兩個橢圓形一部分的點陣圖中的像素具有 Alpha 元素值 160，因此橢圓形會與螢幕上的背景色彩混合。  
+ 程式碼繪製點陣圖螢幕上兩次： 彩色的背景上白色背景上一次，一次。 屬於兩個橢圓形的像素點陣圖中擁有的 alpha 元件為 160，因此橢圓形會與在螢幕上的背景色彩混合。  
   
- 下圖顯示的是程式碼範例的輸出。  請注意，橢圓形會與背景混合，但是不會彼此混合。  
+ 下圖顯示程式碼範例的輸出。 請注意，省略符號會混合背景，但它們不能與彼此。  
   
- ![原始檔複製](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
+ ![來源複製](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
   
- 程式碼範例中包含此陳述式：  
+ 程式碼範例包含此陳述式：  
   
  [!code-csharp[System.Drawing.AlphaBlending#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.AlphaBlending#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
- 如果想要將橢圓形彼此混合，同時也要與背景混合，請將上述陳述式變更如下：  
+ 如果您想要混合彼此以及與背景的省略符號，變更該陳述式所示：  
   
  [!code-csharp[System.Drawing.AlphaBlending#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.AlphaBlending#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
- 下圖顯示的是修改程式碼後的輸出。  
+ 下圖顯示已修訂的程式碼的輸出。  
   
- ![原始檔停留](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
+ ![來源透過](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
-## 編譯程式碼  
- 上述範例是專為與 Windows Form 搭配使用而設計的，而且它需要 <xref:System.Windows.Forms.PaintEventArgs> `e` \(即 <xref:System.Windows.Forms.PaintEventHandler> 的參數\)。  
+## <a name="compiling-the-code"></a>編譯程式碼  
+ 上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
   
-## 請參閱  
- <xref:System.Drawing.Color.FromArgb%2A>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Drawing.Color.FromArgb%2A>  
  [Alpha 混色線條和填色](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

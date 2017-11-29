@@ -1,25 +1,28 @@
 ---
-title: "DataContractResolver | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataContractResolver
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9346524ea1608d1f3337a5bd37bfac205f777221
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# DataContractResolver
-此範例示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別來自訂序列化和還原序列化程序。此範例會示範如何使用 DataContractResolver，在序列化和還原序列化期間來回對應 CLR 型別與 xsi:type 表示。  
+# <a name="datacontractresolver"></a>DataContractResolver
+此範例示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別來自訂序列化和還原序列化程序。 此範例會示範如何使用 DataContractResolver，在序列化和還原序列化期間來回對應 CLR 型別與 xsi:type 表示。  
   
-## 範例詳細資料  
+## <a name="sample-details"></a>範例詳細資料  
  此範例會定義下列 CLR 型別。  
   
 ```csharp  
@@ -52,14 +55,12 @@ namespace Types
     {  
     }  
 }  
-  
 ```  
   
- 此範例會載入組件、擷取其中每個型別，然後序列化和還原序列化這些型別。系統會將 <xref:System.Runtime.Serialization.DataContractResolver> 衍生類別的執行個體傳遞給 <xref:System.Runtime.Serialization.DataContractSerializer> 建構函式，藉以將 <xref:System.Runtime.Serialization.DataContractResolver> 插入序列化程序中，如下列範例所示。  
+ 此範例會載入組件、擷取其中每個型別，然後序列化和還原序列化這些型別。 系統會將 <xref:System.Runtime.Serialization.DataContractResolver> 衍生類別的執行個體傳遞給 <xref:System.Runtime.Serialization.DataContractResolver> 建構函式，藉以將 <xref:System.Runtime.Serialization.DataContractSerializer> 插入序列化程序中，如下列範例所示。  
   
 ```csharp  
 this.serializer = new DataContractSerializer(typeof(Object), null, int.MaxValue, false, true, null, new MyDataContractResolver(assembly));  
-  
 ```  
   
  然後，此範例會序列化這些 CLR 型別，如下列程式碼範例所示。  
@@ -89,7 +90,6 @@ public void serialize(Type type)
     }  
     Console.WriteLine(this.buffer.ToString());  
 }  
-  
 ```  
   
  然後，此範例會還原序列化這些 xsi:type，如下列程式碼範例所示。  
@@ -105,10 +105,9 @@ public void deserialize(Type type)
         Object obj = this.serializer.ReadObject(xmlReader);  
     }  
 }  
-  
 ```  
   
- 因為自訂 <xref:System.Runtime.Serialization.DataContractResolver> 已傳入 <xref:System.Runtime.Serialization.DataContractSerializer> 建構函式，所以系統會在序列化期間呼叫 <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A>，以便將 CLR 型別對應至對等的 `xsi:type`。同樣地，系統會在還原序列化期間呼叫 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>，以便將 `xsi:type` 對應至對等的 CLR 型別。在此範例中，<xref:System.Runtime.Serialization.DataContractResolver> 定義的方式如下列範例所示。  
+ 因為自訂 <xref:System.Runtime.Serialization.DataContractResolver> 已傳入 <xref:System.Runtime.Serialization.DataContractSerializer> 建構函式，所以系統會在序列化期間呼叫 <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A>，以便將 CLR 型別對應至對等的 `xsi:type`。 同樣地，系統會在還原序列化期間呼叫 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>，以便將 `xsi:type` 對應至對等的 CLR 型別。 在此範例中，<xref:System.Runtime.Serialization.DataContractResolver> 定義的方式如下列範例所示。  
   
  下列程式碼範例是從 <xref:System.Runtime.Serialization.DataContractResolver> 衍生的類別。  
   
@@ -157,25 +156,24 @@ class MyDataContractResolver : DataContractResolver
         }  
     }  
 }  
-  
 ```  
   
- 在此範例中，類型專案會產生包含此範例中使用之所有類型的組件。使用此專案加入、移除或修改即將序列化的類型。  
+ 在此範例中，類型專案會產生包含此範例中使用之所有類型的組件。 使用此專案加入、移除或修改即將序列化的類型。  
   
-#### 若要使用這個範例  
+#### <a name="to-use-this-sample"></a>若要使用這個範例  
   
 1.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 開啟 DCRSample.sln 方案檔案。  
   
 2.  若要執行方案，請按 F5  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用資料合約解析程式](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)

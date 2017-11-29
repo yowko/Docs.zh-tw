@@ -1,59 +1,68 @@
 ---
-title: "如何︰ 篩選項目名稱 (LINQ to XML) (Visual Basic) |Microsoft 文件"
+title: "如何： 篩選項目名稱 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07f7867b0fc5cf79ba5ce06f95b07b5c538e83d3
-ms.lasthandoff: 03/13/2017
-
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1dd63c2de233c2b33ce16de6649a5ffecdc7ade7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>如何︰ 篩選項目名稱 (LINQ to XML) (Visual Basic)
-當您呼叫其中一個方法會傳回<xref:System.Collections.Generic.IEnumerable%601>的<xref:System.Xml.Linq.XElement>，您可以篩選項目的名稱。</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601>  
+# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>如何： 篩選項目名稱 (LINQ to XML) (Visual Basic)
+當您呼叫可傳回 <xref:System.Collections.Generic.IEnumerable%601> 之 <xref:System.Xml.Linq.XElement> 的其中一個方法時，您可以篩選項目名稱。  
   
 ## <a name="example"></a>範例  
  這個範例會擷取子代 (Descendant) 的集合，而且該集合會篩選成僅包含具有指定之名稱的子代。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```vb  
+Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
+Dim items As IEnumerable(Of XElement) = _  
+    From el In po...<ProductName> _  
+    Select el  
+For Each prdName As XElement In items  
+    Console.WriteLine(prdName.Name.ToString & ":" & prdName.Value)  
+Next  
+```  
+  
  此程式碼會產生下列輸出：  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
- 其他的方法會傳回<xref:System.Collections.Generic.IEnumerable%601>的<xref:System.Xml.Linq.XElement>集合依循相同的模式。</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> 它們的簽章會類似於<xref:System.Xml.Linq.XContainer.Elements%2A>與<xref:System.Xml.Linq.XContainer.Descendants%2A>。</xref:System.Xml.Linq.XContainer.Descendants%2A> </xref:System.Xml.Linq.XContainer.Elements%2A> 下列是具有類似方法簽章之方法的完整清單：  
+```  
+ProductName:Lawnmower  
+ProductName:Baby Monitor  
+```  
   
--   <xref:System.Xml.Linq.XNode.Ancestors%2A></xref:System.Xml.Linq.XNode.Ancestors%2A>  
+ 其他傳回 <xref:System.Collections.Generic.IEnumerable%601> 集合之 <xref:System.Xml.Linq.XElement> 的方法都依照相同的模式。 它們的簽章類似於 <xref:System.Xml.Linq.XContainer.Elements%2A> 及 <xref:System.Xml.Linq.XContainer.Descendants%2A>。 下列是具有類似方法簽章之方法的完整清單：  
   
--   <xref:System.Xml.Linq.XContainer.Descendants%2A></xref:System.Xml.Linq.XContainer.Descendants%2A>  
+-   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A></xref:System.Xml.Linq.XContainer.Elements%2A>  
+-   <xref:System.Xml.Linq.XContainer.Descendants%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A></xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+-   <xref:System.Xml.Linq.XContainer.Elements%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A></xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
+-   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A></xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+-   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A></xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
+-   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+  
+-   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>範例  
  下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 命名空間中的典型採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的典型採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -79,4 +88,4 @@ End Module
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to XML 軸心方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+ [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

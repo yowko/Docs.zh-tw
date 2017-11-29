@@ -5,15 +5,9 @@ ms.date: 05/01/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework application configuration, configuration schema
 - machine configuration files
@@ -34,18 +28,16 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4c681f4798b36ce0d92b2101ab2d36988a0d19e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 7f2dec0d71c1a0822bf39ae420d4e56bdaf99e0d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework 的組態檔結構描述
 
 組態檔是標準的 XML 檔，可以用來變更應用程式的設定和設定應用程式的原則。 .NET Framework 組態結構描述所包含的項目可在組態檔中用來控制應用程式的行為。 本節的目錄反映出啟動、執行階段、網路和其他類型組態設定的結構描述階層架構。
@@ -100,4 +92,3 @@ ms.lasthandoff: 09/05/2017
 [Web 服務設定結構描述](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e) - 描述控制 ASP.NET Web 服務和其用戶端之行為的項目。
 
 [設定 .NET Framework 應用程式](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) - 描述如何在 .NET Framework 中設定安全性、組件繫結和遠端處理。
-

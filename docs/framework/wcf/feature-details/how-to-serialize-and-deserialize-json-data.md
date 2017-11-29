@@ -1,25 +1,28 @@
 ---
-title: "HOW TO：序列化及還原序列化 JSON 資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：序列化及還原序列化 JSON 資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 14029250f3bc26ff8598e0b8d4ccce8e9fcca331
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：序列化及還原序列化 JSON 資料
+# <a name="how-to-serialize-and-deserialize-json-data"></a>HOW TO：序列化及還原序列化 JSON 資料
 JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可以在用戶端瀏覽器與啟用 AJAX 的 Web 服務之間啟用快速的小量資料交換作業。  
   
- 本主題示範如何將.NET 型別物件序列化為 JSON 編碼資料，然後還原序列化為 JSON 格式的資料使用的.NET 型別的執行個體<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 這個範例會使用資料合約來示範使用者定義之 `Person` 型別的序列化與還原序列化。  
+ 本主題示範如何將 .NET 型別物件序列化為 JSON 編碼資料，然後透過 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>，將 JSON 格式的資料還原序列化為 .NET 型別執行個體。 這個範例會使用資料合約來示範使用者定義之 `Person` 型別的序列化與還原序列化。  
   
  一般來說，當您在啟用 AJAX 的端點上所公開的服務作業中使用資料合約類型時，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會自動處理 JSON 序列化和還原序列化。 但是，在某些情況下您可能需要直接使用 JSON 資料，而本主題就是要示範這種情況。  
   
@@ -30,7 +33,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
   
 ### <a name="to-define-the-data-contract-for-a-person"></a>若要定義 Person 的資料合約  
   
-1.  定義資料合約`Person`藉由附加<xref:System.Runtime.Serialization.DataContractAttribute>類別和<xref:System.Runtime.Serialization.DataMemberAttribute>屬性要序列化的成員。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]資料合約，請參閱[設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)。  
+1.  將 `Person` 附加到類別，並將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性附加到要序列化的成員中，以定義 <xref:System.Runtime.Serialization.DataMemberAttribute> 的資料合約。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]資料合約，請參閱[設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
     ```  
     [DataContract]  
@@ -54,14 +57,14 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
     p.age = 42;  
     ```  
   
-2.  序列化`Person`物件使用記憶體資料流<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。  
+2.  使用 `Person`，將 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 物件序列化為記憶體資料流。  
   
     ```  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  使用<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>方法將 JSON 資料寫入資料流。  
+3.  使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 方法，將 JSON 資料寫入資料流。  
   
     ```  
     ser.WriteObject(stream1, p);  
@@ -78,7 +81,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
   
 ### <a name="to-deserialize-an-instance-of-type-person-from-json"></a>若要從 JSON 還原序列化型別 Person 的執行個體  
   
-1.  還原序列化的 JSON 編碼資料的新執行個體`Person`使用<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A>方法<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。  
+1.  使用 `Person` 的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 方法，將 JSON 編碼的資料還原序列化為 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的新執行個體。  
   
     ```  
     stream1.Position = 0;  
@@ -125,7 +128,6 @@ public static User ReadToObject(string json)
     ms.Close();  
     return deserializedUser;  
 }  
-  
 ```  
   
 > [!NOTE]
@@ -147,5 +149,5 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)   
- [支援 JSON 和其他資料傳輸格式](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
+ [JSON 和其他資料傳輸格式的支援](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

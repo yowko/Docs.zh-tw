@@ -1,42 +1,24 @@
 ---
-title: "/addmodule |Microsoft 文件"
-ms.date: 2015-07-20
+title: /addmodule
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /addmodule compiler option [Visual Basic]
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 949962905ec933dc42301bf8c21654e73dbe2f70
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fff292605e125776ae25e667d4813d770ed0a0aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="addmodule"></a>/addmodule
 讓編譯器將所指定檔案的類型資訊全部提供給您目前編譯的專案。  
@@ -49,33 +31,33 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="arguments"></a>引數  
  `fileList`  
- 必要項。 檔案所含的中繼資料，但不是包含組件資訊清單的逗號分隔清單。 應該以引號括住包含空格的檔案名稱 ("")。  
+ 必要項。 包含中繼資料但不包含組件資訊清單檔案的逗號分隔清單。 應該以引號括住包含空格的檔案名稱 ("")。  
   
 ## <a name="remarks"></a>備註  
- 所列出的檔案`fileList`參數必須與建立`/target:module`選項，或以其他編譯器相當於`/target:module`。  
+ 所列出的檔案`fileList`參數必須以建立`/target:module`選項，或其他編譯器等同於`/target:module`。  
   
- 加上的所有模組`/addmodule`必須位於相同的目錄和輸出檔在執行階段。 也就是說，您可以在任何目錄指定模組在編譯時期，但該模組在執行階段時，必須在應用程式目錄。 如果不是，您收到<xref:System.TypeLoadException>錯誤。</xref:System.TypeLoadException>  
+ 使用新增的所有模組`/addmodule`必須位於執行階段的輸出檔相同的目錄。 也就是說，您可以在編譯時期，任一目錄中指定的模組，但該模組在執行階段時，必須在應用程式目錄。 如果不是，您會取得<xref:System.TypeLoadException>錯誤。  
   
- 如果您指定 （隱含或明確） 任何[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)以外的其他選項`/target:module`與`/addmodule`，傳遞至檔案`/addmodule`成為專案的組件的一部分。 組件，才可執行的輸出檔，都有一個或多個檔案加入`/addmodule`。  
+ 如果您指定 （隱含或明確） 任何[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)選項以外`/target:module`與`/addmodule`，您將傳遞至檔案`/addmodule`成為專案的組件的一部分。 組件，才能執行的輸出檔，具有一個或多個檔案加入`/addmodule`。  
   
  使用[/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)從包含組件檔案匯入中繼資料。  
   
 > [!NOTE]
->  `/addmodule`選項不是從 Visual Studio 開發環境中使用，可從命令列編譯時，才。  
+>  `/addmodule`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
   
 ## <a name="example"></a>範例  
  下列程式碼會建立模組。  
   
- [!code-vb[VbVbalrCompiler #&47;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
+ [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
   
- 下列程式碼會匯入模組的型別。  
+ 下列程式碼會匯入模組的類型。  
   
- [!code-vb[VbVbalrCompiler #&48;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
+ [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
   
  當您執行`t1`，它會輸出`802`。  
   
 ## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
+ [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

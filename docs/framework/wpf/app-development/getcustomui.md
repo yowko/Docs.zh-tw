@@ -1,57 +1,58 @@
 ---
-title: "GetCustomUI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自訂的錯誤訊息 [WPF]"
-  - "GetCustomUI 方法"
+title: GetCustomUI
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3f3c101ad13df9b99a2d872bac8783baed8b4b9a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# GetCustomUI
-透過 PresentationHost.exe 呼叫，用以取得來自主應用程式 \(Host\) 的自訂進度和錯誤訊息 \(如果已實作\)。  
+# <a name="getcustomui"></a>GetCustomUI
+如果實作，呼叫 PresentationHost.exe 從主機上，取得自訂的進度和錯誤訊息。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pwzProgressAssemblyName`  
   
- \[out\] 包含主應用程式提供之進度使用者介面的組件 \(Assembly\) 指標。  
+ [out]指標，包含主機提供進度使用者介面的組件。  
   
  `pwzProgressClassName`  
   
- \[out\] 為主應用程式提供之進度使用者介面的類別名稱，而它的最上層項目最好是具有 <xref:System.Windows.Controls.Page> 的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 檔案。  這個類別是位在 `pwzProgressAssemblyName` 指定的組件中。  
+ [out]最好是主機提供進度使用者介面、 類別名稱[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]檔案搭配<xref:System.Windows.Controls.Page>是其最上層元素。 這個類別位於所指定的組件`pwzProgressAssemblyName`。  
   
  `pwzErrorAssemblyName`  
   
- \[out\] 包含主應用程式提供之錯誤使用者介面的組件指標。  
+ [out]指標，包含主機提供的錯誤使用者介面的組件。  
   
  `pwzErrorClassName`  
   
- \[out\] 主應用程式提供之錯誤使用者介面的類別名稱，而它的最上層項目最好是具有 <xref:System.Windows.Controls.Page> 的 XAML 檔案。  這個類別是位在 `pwzErrorAssemblyName` 指定的組件中。  
+ [out]為主機提供的錯誤使用者類別的名稱介面，最好是使用 XAML 檔案<xref:System.Windows.Controls.Page>是其最上層元素。 這個類別位於所指定的組件`pwzErrorAssemblyName`。  
   
-## 屬性值\/傳回值  
- HRESULT：忽略。  
+## <a name="property-valuereturn-value"></a>屬性值/傳回值  
+ HRESULT： 忽略。  
   
-## 備註  
- 主應用程式 \(Host Application\) 可能會有 PresentationHost.exe 預設使用者介面未遵循的特定佈景主題。  如果是這種情況，則主應用程式可以實作 [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)，以將進度和錯誤使用者介面傳回給 PresentationHost.exe。  PresentationHost.exe 一律會先呼叫 [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)，再使用它的預設使用者介面。  
+## <a name="remarks"></a>備註  
+ 主應用程式可能 PresentationHost.exe 的預設使用者介面可能不符合特定主題。 如果這種情況，主應用程式可以實作[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)回到進度和錯誤的使用者介面 PresentationHost.exe。 一定會呼叫 PresentationHost.exe [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)才能使用其預設使用者介面。  
   
- 這個函式會在 PresentationHost 初始設定期間呼叫一次  
+ 一次 PresentationHost 的初始化期間，會呼叫此函式。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)

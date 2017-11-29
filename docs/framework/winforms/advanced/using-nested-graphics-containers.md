@@ -1,67 +1,71 @@
 ---
-title: "使用巢狀圖形容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "圖形 [Windows Form], 裁剪"
-  - "圖形, 巢狀容器"
-  - "圖形, 在巢狀物件中轉換"
+title: "使用巢狀圖形容器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], nested containers
+- graphics [Windows Forms], clipping
+- graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10c5a1b077e4339f17093e5eb935416bb1ae3d1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用巢狀圖形容器
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供的容器可用來暫時取代或擴大 <xref:System.Drawing.Graphics> 物件中的部分狀態。  建立容器的方式是呼叫 <xref:System.Drawing.Graphics> 物件的 <xref:System.Drawing.Graphics.BeginContainer%2A> 方法。  您可以重複呼叫 <xref:System.Drawing.Graphics.BeginContainer%2A>，便可形成巢狀容器。  每一次呼叫 <xref:System.Drawing.Graphics.BeginContainer%2A> 都必須搭配呼叫 <xref:System.Drawing.Graphics.EndContainer%2A>。  
+# <a name="using-nested-graphics-containers"></a>使用巢狀圖形容器
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供可用來暫時取代或擴充部分的狀態中的容器<xref:System.Drawing.Graphics>物件。 您可以建立一個容器呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>方法<xref:System.Drawing.Graphics>物件。 您可以呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>重複，以形成巢狀的容器。 每次呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>必須搭配呼叫<xref:System.Drawing.Graphics.EndContainer%2A>。  
   
-## 巢狀容器中的轉換  
- 下列範例建立 <xref:System.Drawing.Graphics> 物件和該 <xref:System.Drawing.Graphics> 物件中的容器。  <xref:System.Drawing.Graphics> 物件的全局轉換是 x 方向轉換 100 個單位和 y 方向轉換 80 個單位。  容器的全局轉換是 30 度旋轉。  程式碼會呼叫兩次 `DrawRectangle(pen, -60, -30, 120, 60)` 。  第一次呼叫 <xref:System.Drawing.Graphics.DrawRectangle%2A> 是在容器內；也就是說，這個呼叫是在 <xref:System.Drawing.Graphics.BeginContainer%2A> 和 <xref:System.Drawing.Graphics.EndContainer%2A> 兩個呼叫之間。  第二次呼叫 <xref:System.Drawing.Graphics.DrawRectangle%2A> 則是在呼叫 <xref:System.Drawing.Graphics.EndContainer%2A> 之後。  
+## <a name="transformations-in-nested-containers"></a>巢狀容器中的轉換  
+ 下列範例會建立<xref:System.Drawing.Graphics>物件和容器內的<xref:System.Drawing.Graphics>物件。 自然變換<xref:System.Drawing.Graphics>物件是在 x 方向轉譯 100 單位而 80 y 方向的單位。 容器的自然變換是 30 度旋轉。 程式碼會呼叫`DrawRectangle(pen, -60, -30, 120, 60)`兩次。 第一次呼叫<xref:System.Drawing.Graphics.DrawRectangle%2A>位於容器; 亦即，呼叫是對呼叫之間<xref:System.Drawing.Graphics.BeginContainer%2A>和<xref:System.Drawing.Graphics.EndContainer%2A>。 第二個呼叫<xref:System.Drawing.Graphics.DrawRectangle%2A>之後呼叫<xref:System.Drawing.Graphics.EndContainer%2A>。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- 在上述程式碼中，從容器內部繪製的矩形會先根據容器的全局轉換 \(旋轉\)，再根據 <xref:System.Drawing.Graphics> 物件的全局轉換 \(轉換\) 來轉換。  從容器外部繪製的矩形則只會根據 <xref:System.Drawing.Graphics> 物件的全局轉換 \(轉換\) 來轉換。  下圖顯示的是兩個矩形。  
+ 在上述程式碼中，從容器內繪製的矩形會轉換先依容器 （輪替） 的自然變換和的自然變換<xref:System.Drawing.Graphics>物件 （轉譯）。 從容器之外繪製的矩形會轉換只能由的自然變換<xref:System.Drawing.Graphics>物件 （轉譯）。 下圖顯示兩個矩形。  
   
  ![巢狀容器](../../../../docs/framework/winforms/advanced/media/csnestedcontainers1.png "csnestedcontainers1")  
   
-## 在巢狀容器中裁剪  
- 下列範例將說明巢狀容器如何處理裁剪區域。  程式碼會建立 <xref:System.Drawing.Graphics> 物件和該 <xref:System.Drawing.Graphics> 物件中的容器。  <xref:System.Drawing.Graphics> 物件的裁剪區域是矩形，而容器的裁剪區域則是橢圓形。  程式碼會呼叫兩次 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。  第一次呼叫 <xref:System.Drawing.Graphics.DrawLine%2A> 是在容器內，而第二次呼叫 <xref:System.Drawing.Graphics.DrawLine%2A> 則是在容器外 \(在呼叫 <xref:System.Drawing.Graphics.EndContainer%2A> 之後\)。  第一行會根據兩個裁剪區域的交集來裁剪，  第二行則只會根據 <xref:System.Drawing.Graphics> 物件的矩形裁剪區域來裁剪。  
+## <a name="clipping-in-nested-containers"></a>巢狀容器中的裁剪功能  
+ 下列範例會示範如何巢狀的容器處理裁剪區域。 程式碼會建立<xref:System.Drawing.Graphics>物件和容器內的<xref:System.Drawing.Graphics>物件。 裁剪區域<xref:System.Drawing.Graphics>物件是一個矩形，而容器的裁剪區域是橢圓形。 程式碼，使兩個呼叫<xref:System.Drawing.Graphics.DrawLine%2A>方法。 第一次呼叫<xref:System.Drawing.Graphics.DrawLine%2A>位於容器中，且第二個呼叫<xref:System.Drawing.Graphics.DrawLine%2A>超出容器 (在呼叫之後<xref:System.Drawing.Graphics.EndContainer%2A>)。 第一行會遭到裁剪，由兩個的裁剪區域的交集。 第二行只會裁剪矩形的裁剪區域<xref:System.Drawing.Graphics>物件。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- 下圖顯示的是兩條裁剪的線條。  
+ 下圖顯示兩個裁剪的線條。  
   
  ![巢狀容器](../../../../docs/framework/winforms/advanced/media/nestedcontainers2.png "nestedcontainers2")  
   
- 如上述兩個範例所示，在巢狀容器中的轉換和裁剪區域都是累積的。  如果設定容器和 <xref:System.Drawing.Graphics> 物件的全局轉換，這兩種轉換都將套用至從容器內部繪製的項目。  容器的轉換會先套用，然後再套用 <xref:System.Drawing.Graphics> 物件的轉換。  如果設定容器和 <xref:System.Drawing.Graphics> 物件的裁剪區域，則會根據兩個裁剪區域的交集來裁剪從容器內部繪製的項目。  
+ 如上述兩個範例所示，轉換和裁剪區域是累計巢狀容器中。 如果您將容器的全局轉換和<xref:System.Drawing.Graphics>物件，這兩種轉換會套用至繪製從容器內的項目。 容器的轉換會套用第一個，並轉換<xref:System.Drawing.Graphics>物件將會套用第二個。 如果您將容器的裁剪區域和<xref:System.Drawing.Graphics>物件，在兩個裁剪區域的交集會裁剪繪製從容器內的項目。  
   
-## 巢狀容器中的品質設定  
- 巢狀容器中的品質設定 \(<xref:System.Drawing.Graphics.SmoothingMode%2A>、<xref:System.Drawing.Graphics.TextRenderingHint%2A> 等等\) 不會累積；相反地，容器的品質設定會暫時取代 <xref:System.Drawing.Graphics> 物件的品質設定。  當您建立新的容器時，該容器的品質設定會設定為預設值。  例如，假設您有一個平滑化模式為 <xref:System.Drawing.Drawing2D.SmoothingMode> 的 <xref:System.Drawing.Graphics> 物件。  當您建立容器時，容器內部的平滑化模式就是預設的平滑化模式。  您可以任意設定容器的平滑化模式，從容器內部繪製的任何項目都將根據您所設定的模式來進行繪製。  在呼叫 <xref:System.Drawing.Graphics.EndContainer%2A> 之後所繪製的項目將會根據呼叫 <xref:System.Drawing.Graphics.BeginContainer%2A> 之前的平滑化模式 \(<xref:System.Drawing.Drawing2D.SmoothingMode>\) 來進行繪製。  
+## <a name="quality-settings-in-nested-containers"></a>巢狀容器中的品質設定  
+ 品質設定 (<xref:System.Drawing.Graphics.SmoothingMode%2A>， <xref:System.Drawing.Graphics.TextRenderingHint%2A>，等等) 中巢狀的容器並不會累計; 相反地，容器的品質設定暫時取代的品質設定<xref:System.Drawing.Graphics>物件。 當您建立新的容器時，該容器的品質設定會設定為預設值。 例如，假設您有<xref:System.Drawing.Graphics>平滑化模式的物件<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>。 當您建立一個容器時，容器內的平滑化模式是預設的平滑化模式。 您可以自由地設定平滑模式的容器，並繪製從容器內的任何項目會繪製根據您設定的模式。 繪製呼叫之後的項目<xref:System.Drawing.Graphics.EndContainer%2A>會繪製平滑模式根據 (<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>) 的已備妥的呼叫之前<xref:System.Drawing.Graphics.BeginContainer%2A>。  
   
-## 巢狀容器中的幾個圖層  
- 您並不受限於 <xref:System.Drawing.Graphics> 物件中只能有一個容器。  您可以建立一連串容器，每一個容器都是套疊於前一個容器內，而且可以為每一個巢狀容器指定全局轉換、裁剪區域和品質設定。  如果您從最內層的容器呼叫繪圖方法，轉換將會從最內層的容器依序套用到最外層的容器。  從最內層的容器繪製的項目將根據所有製剪區域的交集來進行裁剪。  
+## <a name="several-layers-of-nested-containers"></a>數個層級的巢狀容器  
+ 您並不限於一個容器中<xref:System.Drawing.Graphics>物件。 您可以建立一連串的容器、 每個巢狀方式置於前面，和您可以指定全局轉換、 裁剪區域和每個巢狀容器的品質設定。 如果您呼叫最內層的容器中的繪圖方法時，會將轉換套用順序，與最內層的容器開始和結束與最外層的容器。 所有的裁剪區域的交集會裁剪取自最內層的容器項目。  
   
- 下列範例建立 <xref:System.Drawing.Graphics> 物件，並將它的文字呈現提示設定為 <xref:System.Drawing.Drawing2D.SmoothingMode>。  程式碼會建立兩個容器，一個套疊於另一個。  外部容器的文字呈現提示是設定為 <xref:System.Drawing.Text.TextRenderingHint>，而內部容器的文字呈現提示則是設定為 <xref:System.Drawing.Drawing2D.SmoothingMode>。  這個程式碼繪製三個字串：一個從內部容器、一個從外部容器，另一個從 <xref:System.Drawing.Graphics> 物件本身。  
+ 下列範例會建立<xref:System.Drawing.Graphics>物件，並將其文字呈現提示設定為<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>。 程式碼會建立兩個容器，其中巢狀方式置於另一個。 外部容器的文字呈現提示設定為<xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>，而且文字呈現提示的內部的容器設定為<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>。 程式碼繪製三個字串： 從內部的容器，一個是從外部的容器，從<xref:System.Drawing.Graphics>物件本身。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#63](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#63)]
  [!code-vb[System.Drawing.MiscLegacyTopics#63](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#63)]  
   
- 下圖顯示的是三個字串。  從內部容器和從 <xref:System.Drawing.Graphics> 物件繪製的字串會由反鋸齒功能平滑化。  從外部容器繪製的字串則不會以反鋸齒功能平滑化，原因是 <xref:System.Drawing.Graphics.TextRenderingHint%2A> 屬性已設定為 <xref:System.Drawing.Text.TextRenderingHint>。  
+ 下圖顯示三個字串。 繪製從內部的容器以及字串<xref:System.Drawing.Graphics>平滑的反鋸齒功能的物件。 因為取自外部容器的字串不由消除鋸齒平滑<xref:System.Drawing.Graphics.TextRenderingHint%2A>屬性設定為<xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>。  
   
  ![巢狀容器](../../../../docs/framework/winforms/advanced/media/nestedcontainers3.png "nestedcontainers3")  
   
-## 請參閱  
- <xref:System.Drawing.Graphics>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Drawing.Graphics>  
  [管理圖形物件的狀態](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)

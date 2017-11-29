@@ -1,6 +1,6 @@
 ---
 title: "F# 語言參考"
-description: "F# 語言參考"
+description: "找到 F # 語言功能的資訊從這個語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構主題參考。"
 keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: b1707be1-7b7c-4fdd-a717-d9c190bc5fb5
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: e0b7058513b0487902b2a57b889e77df1abfef98
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 0d26d5a6f47ce8a92aefe338ea8c39295d042794
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="f-language-reference"></a>F# 語言參考
 
-本節是 F# 語言參考，此語言是以 .NET 平台為目標、具有多重開發架構的程式設計語言。 F# 語言支援函式、物件導向和命令式程式設計語言。
+此區段是 F # 語言，以.NET 為目標的多典範程式語言的參考。 F# 語言支援函式、物件導向和命令式程式設計語言。
 
 
 ## <a name="f-tokens"></a>F# 語彙基元

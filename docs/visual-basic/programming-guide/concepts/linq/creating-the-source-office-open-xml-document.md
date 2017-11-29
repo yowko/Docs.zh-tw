@@ -1,33 +1,29 @@
 ---
-title: "建立來源 Office Open XML 文件 (Visual Basic) |Microsoft 文件"
+title: "建立來源 Office Open XML 文件 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 928a3c34836464e7603c485b64c9c426913ae7b2
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c573f703ea3d7550dabd994f538e28e197874715
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>建立來源 Office Open XML 文件 (Visual Basic)
 這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。 如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。  
   
  不過，本教學課程中的範例將會使用任何有效的 WordprocessingML 文件。  
   
- 若要建立本教學課程使用的文件，您必須有 Microsoft Office 2007 安裝或更新版本，或您必須具有 Microsoft Office 2003 與 Microsoft Office Compatibility Pack for Word、 Excel 和 PowerPoint 2007 檔案格式。  
+ 若要建立本教學課程使用的文件，您必須已經安裝 Microsoft Office 2007 或更新版本；或者，您必須安裝 Microsoft Office 2003 與適用於 Word、Excel 和 PowerPoint 2007 檔案格式的 Microsoft Office 相容性套件。  
   
 ## <a name="creating-the-wordprocessingml-document"></a>建立 WordprocessingML 文件  
   
@@ -64,7 +60,7 @@ ms.lasthandoff: 03/13/2017
 6.  儲存文件，然後將其命名為 SampleDoc.docx。  
   
     > [!NOTE]
-    >  如果您使用 Microsoft Word 2003，請選取**Word 2007 文件**中**檔案類型**下拉式清單。  
+    >  如果您要使用 Microsoft Word 2003，在 [存檔類型] 下拉式清單中選取 [Word 2007 文件]。  
   
 ## <a name="see-also"></a>另請參閱  
- [教學課程︰ 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+ [教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

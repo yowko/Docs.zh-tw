@@ -1,37 +1,35 @@
 ---
-title: "Overflow (Visual Basic Run-Time Error) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrERRID_Overflow"
-dev_langs: 
-  - "VB"
+title: "溢位 (Visual Basic 執行階段錯誤)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d1908ad576a499e79102aff23e3e2f11d7d99d52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Overflow (Visual Basic Run-Time Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-嘗試進行的指派超出設定目標的限制時，就會造成溢位。  
+# <a name="overflow-visual-basic-run-time-error"></a>溢位 (Visual Basic 執行階段錯誤)
+嘗試設定超出限制的指派的目標時，就會造成溢位。  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  請確定指派、計算和資料型別轉換的結果，在該實值型別許可的變數範圍中不會太大，並且視需要將數值指定到可放置較大數值範圍的型別變數中。  
+1.  請確定指派、 計算和資料類型轉換不會太大，而無法表示變數的值，該類型所允許的範圍內，並將值指派給類型的變數的結果可以保存較大範圍的值如有必要。  
   
-2.  請確定屬性的指派，符合產生屬性的範圍。  
+2.  請確定屬性的指派，符合所建立的屬性的範圍。  
   
-3.  請確定計算中所使用之已強制轉換為整數的數字，不會產生大於整數範圍的結果。  
+3.  請確定強制轉換為整數的計算中使用的數字，並沒有比整數較大的結果。  
   
-## 請參閱  
- <xref:System.Int32.MaxValue?displayProperty=fullName>   
- <xref:System.Double.MaxValue?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Int32.MaxValue?displayProperty=nameWithType>  
+ <xref:System.Double.MaxValue?displayProperty=nameWithType>  
+ [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

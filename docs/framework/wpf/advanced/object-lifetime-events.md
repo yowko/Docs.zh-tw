@@ -1,90 +1,89 @@
 ---
-title: "物件存留期事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Activated 事件"
-  - "應用程式物件, 存留期事件"
-  - "類別, Frame"
-  - "類別, NavigationWindow"
-  - "Closed 事件"
-  - "Closing 事件"
-  - "ContentRendered 事件"
-  - "Deactivated 事件"
-  - "事件, Activated"
-  - "事件, 已關閉"
-  - "事件, Closing"
-  - "事件, ContentRendered"
-  - "事件, Deactivated"
-  - "事件, Initialized"
-  - "事件, Loaded"
-  - "事件, Unloaded"
-  - "結束事件"
-  - "Frame 類別"
-  - "Initialized 事件"
-  - "物件的存留期事件"
-  - "Loaded 事件"
-  - "NavigationWindow 類別"
-  - "物件的存留期事件"
-  - "啟動事件"
-  - "Unloaded 事件"
+title: "物件存留期事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [WPF], ContentRendered
+- events [WPF], Deactivated
+- events [WPF], Unloaded
+- Activated events [WPF]
+- events [WPF], Loaded
+- Application objects [WPF], lifetime events
+- events [WPF], Activated
+- ContentRendered events [WPF]
+- Deactivated events [WPF]
+- events [WPF], Initialized
+- events [WPF], Closing
+- Unloaded events [WPF]
+- exit events [WPF]
+- objects' lifetime events [WPF]
+- Loaded events [WPF]
+- Closing events [WPF]
+- events [WPF], Closed
+- Initialized events [WPF]
+- Closed events [WPF]
+- startup events [WPF]
+- lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e31997cfc1ff7500317bdfc59ac6ad12d3d27a23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 物件存留期事件
-本主題說明通知物件存留期當中建立、使用和解構各階段的特定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件。  
+# <a name="object-lifetime-events"></a>物件存留期事件
+本主題說明特定的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件，表示物件的建立、使用和解構存留期階段。  
   
-   
+
   
 <a name="prerequisites"></a>   
-## 必要條件  
- 本主題假設您已了解[相依性屬性](GTMT)，知道如何使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別上的現有相依性屬性，而且已閱讀過[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)主題。  為了能夠理解本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] \(請參閱 [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)\)，並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
+## <a name="prerequisites"></a>必要條件  
+ 本主題假設您已從 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)主題。 為了解本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (請參閱 [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)) 並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
   
 <a name="intro"></a>   
-## 物件存留期事件  
- [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] Managed 程式碼中的所有物件都會經歷類似的生命週期階段，即建立、使用和解構。  許多物件也有發生在解構期間的最終化階段。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件 \(更具體來說，是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 識別為項目的視覺物件\) 也有一組物件生命週期階段。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式設計和應用程式模型會將這些階段公開為一系列的事件。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 有四種主要的物件類型與存留期事件相關，分別是一般項目、視窗項目、巡覽裝載和應用程式物件。  視窗和巡覽裝載也屬於較大的視覺物件 \(項目\) 群組。  本主題說明所有項目通用的存留期事件，然後再介紹適用於應用程式定義、視窗或巡覽裝載的事件。  
+## <a name="object-lifetime-events"></a>物件存留期事件  
+ [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] Managed 程式碼中的所有物件都會經歷類似的生命、建立、使用和解構的系列階段。 許多物件的生命最終階段也會發生在解構階段，成為此階段的一部分。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件，更確切的說就是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 識別為項目的視覺物件，也有一系列常見的物件生命階段。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式設計和應用程式模型會將這些階段公開為一系列的事件。 關於存留期事件，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有四種主要的物件類型：一般項目、視窗項目、巡覽裝載和應用程式物件。 視窗和巡覽裝載也在較大的群組視覺物件 (項目) 內。 本主題說明通用於所有項目的存留期事件，再介紹適用於應用程式定義、視窗或巡覽裝載的較特定存留期事件。  
   
 <a name="common_events"></a>   
-## 項目的通用存留期事件  
- 任何 [WPF 架構層級](GTMT)項目 \(即衍生自 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 的物件\) 都有三個通用存留期事件：<xref:System.Windows.FrameworkElement.Initialized>、<xref:System.Windows.FrameworkElement.Loaded> 和 <xref:System.Windows.FrameworkElement.Unloaded>。  
+## <a name="common-lifetime-events-for-elements"></a>項目共通的存留期事件  
+ 任何 WPF 架構層級項目 (這些物件，從其中衍生<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>) 有三種常見的存留期事件： <xref:System.Windows.FrameworkElement.Initialized>， <xref:System.Windows.FrameworkElement.Loaded>，和<xref:System.Windows.FrameworkElement.Unloaded>。  
   
-### Initialized  
- <xref:System.Windows.FrameworkElement.Initialized> 會先引發，這大致上相當於呼叫物件的建構函式來對它進行初始設定。  由於事件會引發來回應初始設定，因此物件的所有屬性都確保能設定   \(但像是動態資源或繫結等運算式用法則例外，這些會是未評估的運算式\)。 由於所有屬性都必須設定，因此標記中定義的巢狀項目引發的 <xref:System.Windows.FrameworkElement.Initialized> 順序會是項目樹狀結構中最深層的項目最優先，然後是朝根部的父項目。  此順序是因為父\-子關係 \(Parent\-Child Relationship\) 和內含項目都是屬性，因此父項目要等到填入屬性的子項目都完全初始設定後，才能報告完成初始設定。  
+### <a name="initialized"></a>Initialized  
+ <xref:System.Windows.FrameworkElement.Initialized>會先引發，並呼叫其建構函式對應至物件的初始化。 因為事件是回應初始化而發生，所以保證設定物件的所有屬性。 (例外狀況是運算式使用方式，例如動態資源或繫結，這些是未評估的運算式。)根據需求設定的所有屬性，順序<xref:System.Windows.FrameworkElement.Initialized>標記中定義的巢狀項目所產生似乎發生的項目樹狀結構中最深的項目順序中第一次，然後父系到根項目。 此順序是因為父子式關聯性和內含項目都是屬性，因此在填滿屬性的子項目也完全初始化之前，父代無法報告初始化。  
   
- 當您撰寫回應 <xref:System.Windows.FrameworkElement.Initialized> 事件的處理常式時，必須考慮到，項目樹狀結構 \(無論是[邏輯樹狀結構](GTMT)或[視覺化樹狀結構](GTMT)\) 中附加處理常式的位置前後的所有其他項目不一定都已建立，特別是父項目。  成員變數可能為 null，或者資料來源尚未由基礎繫結填入 \(即使在運算式層級\)。  
+ 當您要撰寫處理常式以回應<xref:System.Windows.FrameworkElement.Initialized>事件，您必須考慮的項目樹狀目錄中 （邏輯樹狀結構或視覺化樹狀結構） 附加的處理常式周圍的其他所有項目已建立，特別是不保證父項目。 成員變數可能是 Null，或資料來源可能未填入基礎繫結 (即使在運算式層級)。  
   
-### Loaded  
- <xref:System.Windows.FrameworkElement.Loaded> 會接著引發。  <xref:System.Windows.FrameworkElement.Loaded> 事件引發的時機是在最後轉譯之前，但是在配置系統計算出轉譯需要的所有值之後。  <xref:System.Windows.FrameworkElement.Loaded> 會需要包含項目的邏輯樹狀結構是完整的，並且連接至提供 HWND 和轉譯介面的展示來源。  標準資料繫結 \(繫結至本機來源，例如其他屬性或直接定義的資料來源\) 將在 <xref:System.Windows.FrameworkElement.Loaded> 之前發生。  非同步資料繫結 \(外部或動態來源\) 可能會發生，但根據其非同步性質的定義，則不保證一定會發生。  
+### <a name="loaded"></a>已載入  
+ <xref:System.Windows.FrameworkElement.Loaded>接下來就會引發。 <xref:System.Windows.FrameworkElement.Loaded>最終呈現之前，但在版面配置系統有導出所有需要的值轉譯之後，就會引發事件。 <xref:System.Windows.FrameworkElement.Loaded>需要內含項目邏輯樹狀結構已完成，且連接到提供 HWND 和呈現表面的呈現來源。 標準的資料繫結 （繫結到本機的來源，例如其他屬性或直接定義的資料來源） 將會發生之前<xref:System.Windows.FrameworkElement.Loaded>。 非同步資料繫結 (外部或動態來源) 可能已發生，但根據其非同步性質的定義不能保證其已發生。  
   
- 引發 <xref:System.Windows.FrameworkElement.Loaded> 事件的機制與 <xref:System.Windows.FrameworkElement.Initialized> 不同。  <xref:System.Windows.FrameworkElement.Initialized> 事件是依個別項目引發，而沒有完整的項目樹狀結構直接協調。  相對地，<xref:System.Windows.FrameworkElement.Loaded> 事件則是透過整個項目樹狀結構 \(具體來說，就是[邏輯樹狀結構](GTMT)\) 協調而引發。  當樹狀結構中的所有項目都視為載入時，就會先在根項目上引發 <xref:System.Windows.FrameworkElement.Loaded> 事件。  接著會在後面的每個子項目上引發 <xref:System.Windows.FrameworkElement.Loaded> 事件。  
+ 機制可以用<xref:System.Windows.FrameworkElement.Loaded>引發不同<xref:System.Windows.FrameworkElement.Initialized>。 <xref:System.Windows.FrameworkElement.Initialized>事件則是項目，而不直接的協調作業已完成的項目樹狀架構所引發的項目。 相反地，<xref:System.Windows.FrameworkElement.Loaded>為整個項目樹狀結構 （具體而言，邏輯樹狀結構） 的人員共同引發事件。 在樹狀目錄中的所有項目時載入，它們被視為狀態<xref:System.Windows.FrameworkElement.Loaded>根項目上第一次引發事件。 <xref:System.Windows.FrameworkElement.Loaded>每個子項目然後連續引發事件。  
   
 > [!NOTE]
->  此行為在表面上可能類似[路由事件](GTMT)的通道。  不過，事件之間不會傳遞資訊。  每個項目都有機會處理其 <xref:System.Windows.FrameworkElement.Loaded> 事件，而將事件資料標記為已處理對該項目以外並無作用。  
+>  此行為表面上可能類似路由事件的通道。 但是事件與事件之間不傳遞任何資訊。 每個項目一律會有機會處理其<xref:System.Windows.FrameworkElement.Loaded>事件，並標示為已處理的事件資料已超過該元素沒有影響。  
   
-### Unloaded  
- <xref:System.Windows.FrameworkElement.Unloaded> 會最後引發，而且是由展示來源或要移除的視覺父項目所啟始。  引發和處理 <xref:System.Windows.FrameworkElement.Unloaded> 時，事件來源父項目 \(由 <xref:System.Windows.FrameworkElement.Parent%2A> 屬性決定\) 或在邏輯或視覺化樹狀結構中上層的任何指定項目可能已經取消設定，表示資料繫結、資源參考和樣式可能未設成一般或最後已知的執行階段值。  
+### <a name="unloaded"></a>已卸載  
+ <xref:System.Windows.FrameworkElement.Unloaded>最後引發，而由起始呈現來源或視覺化父項目，並被移除。 當<xref:System.Windows.FrameworkElement.Unloaded>會引發和處理，是事件來源父代的項目 (由<xref:System.Windows.FrameworkElement.Parent%2A>屬性) 或任何指定的項目中的邏輯或視覺化樹狀結構向上可能已經被取消，這表示該資料繫結，資源參考而樣式不設定為其標準或最後一個已知的執行階段值。  
   
 <a name="application_model_elements"></a>   
-## 存留期事件應用程式模型項目  
- 項目以通用存留期事件為基礎的包括下列應用程式模型項目：<xref:System.Windows.Application>、<xref:System.Windows.Window>、<xref:System.Windows.Controls.Page>、<xref:System.Windows.Navigation.NavigationWindow> 和 <xref:System.Windows.Controls.Frame>。  這些項目以與其特定用途相關的更多事件延伸了通用存留期事件。  下列章節將詳細討論這些項目：  
+## <a name="lifetime-events-application-model-elements"></a>存留期事件應用程式模型項目  
+ 建立一般的存留期事件項目為下列應用程式模型項目： <xref:System.Windows.Application>， <xref:System.Windows.Window>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>。 這些會延伸共通存留期事件及與其特定用途相關的其他事件。 下列位置對這些有詳細討論：  
   
--   <xref:System.Windows.Application>: [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+-   <xref:System.Windows.Application>:[應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
   
--   <xref:System.Windows.Window>: [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
+-   <xref:System.Windows.Window>: [WPF Windows 概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。  
   
--   <xref:System.Windows.Controls.Page>、<xref:System.Windows.Navigation.NavigationWindow> 和 <xref:System.Windows.Controls.Frame>: [巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+-   <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
   
-## 請參閱  
- [相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)   
+## <a name="see-also"></a>另請參閱  
+ [相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

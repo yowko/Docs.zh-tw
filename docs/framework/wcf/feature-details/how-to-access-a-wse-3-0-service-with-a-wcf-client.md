@@ -1,41 +1,47 @@
 ---
-title: "HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cd6ad4ed735cb94321adad8fd2e4cf396e2221fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務
-當 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端設定為使用 WS-Addressing August 2004 版本規格時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的連線層級與 Microsoft .NET 服務的 Web Services Enhancements (WSE) 3.0 相容。 不過，WSE 3.0 服務不支援中繼資料交換 (MEX) 通訊協定，因此當您使用[ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端類別的安全性設定不會套用至所產生[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端。 因此，在產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之後，您必須指定 WSE 3.0 服務所需的安全性設定。  
+# <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務
+當 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端設定為使用 WS-Addressing August 2004 版本規格時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的連線層級與 Microsoft .NET 服務的 Web Services Enhancements (WSE) 3.0 相容。 不過，WSE 3.0 服務不支援中繼資料交換 (MEX) 通訊協定，因此當您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端類別的安全性設定不會套用至產生[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端。 因此，在產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之後，您必須指定 WSE 3.0 服務所需的安全性設定。  
   
- 您可以使用自訂繫結來套用這些安全性設定，將 WSE 3.0 服務的需求，以及 WSE 3.0 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之間的互通需求納入考量。 這些互通性需求包含上述使用 August 2004 Ws-addressing 規格和 WSE 3.0default 訊息保護<xref:System.ServiceModel.Security.MessageProtectionOrder>。 預設訊息保護為[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]是<xref:System.ServiceModel.Security.MessageProtectionOrder>。 本主題詳細說明如何建立與 WSE 3.0 服務相互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會提供包含這個繫結的範例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]此範例中，請參閱[與 ASMX Web 服務互通](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)。  
+ 您可以使用自訂繫結來套用這些安全性設定，將 WSE 3.0 服務的需求，以及 WSE 3.0 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之間的互通需求納入考量。 這些互通性需求包含上述的 WS-Addressing August 2004 規格使用和 WSE 3.0 預設訊息保護 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的預設訊息保護為 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 本主題詳細說明如何建立與 WSE 3.0 服務相互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會提供包含這個繫結的範例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]此範例中，請參閱[與 ASMX Web 服務互通](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)。  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>若要使用 WCF 用戶端來存取 WSE 3.0 Web 服務  
   
-1.  執行[ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WSE 3.0 Web 服務用戶端。  
+1.  執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WSE 3.0 Web 服務用戶端。  
   
      隨即建立 WSE 3.0 Web 服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端。 因為 WSE 3.0 不支援 MEX 通訊協定，所以您無法使用此工具擷取 Web 服務的安全性需求。 應用程式開發人員必須為用戶端加入安全性設定。  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[How to︰ 建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[How to： 建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  建立類別，表示可與 WSE 3.0 Web 服務通訊的繫結。  
   
-     下列類別是部分[與 WSE 交互操作](http://msdn.microsoft.com/zh-tw/f6816861-96a0-45f9-8736-8e4e82cd3a41)範例︰  
+     下列類別是一部分[與 WSE 互通](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)範例：  
   
-    1.  建立衍生自類別<xref:System.ServiceModel.Channels.Binding>類別。  
+    1.  建立從 <xref:System.ServiceModel.Channels.Binding> 類別衍生的類別。  
   
-         下列程式碼範例會建立名為的類別`WseHttpBinding`衍生自<xref:System.ServiceModel.Channels.Binding>類別。  
+         下列程式碼範例會建立一個名為 `WseHttpBinding` 的類別，此類別衍生自 <xref:System.ServiceModel.Channels.Binding> 類別。  
   
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
@@ -47,7 +53,7 @@ caps.handback.revision: 12
          [!code-csharp[c_WCFClientToWSEService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#3)]
          [!code-vb[c_WCFClientToWSEService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#3)]  
   
-    3.  覆寫<xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>方法來設定繫結屬性。  
+    3.  覆寫 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法來設定繫結屬性。  
   
          下列程式碼範例會藉由取得 `SecurityAssertion` 和 `MessageProtectionOrder` 屬性的值，指定傳輸、訊息編碼和訊息保護設定。  
   
@@ -67,5 +73,5 @@ caps.handback.revision: 12
   
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.Binding>   
- [與 WSE 交互操作](http://msdn.microsoft.com/zh-tw/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ <xref:System.ServiceModel.Channels.Binding>  
+ [與 WSE 互通](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)

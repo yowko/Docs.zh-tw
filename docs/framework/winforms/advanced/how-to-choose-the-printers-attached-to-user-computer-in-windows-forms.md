@@ -1,38 +1,43 @@
 ---
-title: "如何：在 Windows Form 中選擇附加至使用者電腦的印表機 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "列印 [Windows Forms], 選擇印表機"
-  - "印表機, 選擇"
+title: "如何： 選擇印表機連接至使用者 &#39; s Windows Form 中的電腦"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- printing [Windows Forms], choosing printers
+- printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec334ff65095e11855d706f445fda1d4b7ea1472
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：在 Windows Form 中選擇附加至使用者電腦的印表機
-通常，使用者會想要選擇列印到非預設的印表機。 使用 <xref:System.Windows.Forms.PrintDialog> 元件，即可讓使用者從目前安裝的印表機中選擇印表機。 透過 <xref:System.Windows.Forms.PrintDialog> 元件，擷取 <xref:System.Windows.Forms.PrintDialog> 元件的 <xref:System.Windows.Forms.DialogResult> 並將其用來選取印表機。  
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>如何： 選擇印表機連接至使用者 &#39; s Windows Form 中的電腦
+通常，使用者會想要選擇列印到非預設的印表機。 使用 <xref:System.Windows.Forms.PrintDialog> 元件，即可讓使用者從目前安裝的印表機中選擇印表機。 透過 <xref:System.Windows.Forms.PrintDialog> 元件，擷取 <xref:System.Windows.Forms.DialogResult> 元件的 <xref:System.Windows.Forms.PrintDialog> 並將其用來選取印表機。  
   
  在下列程序中，選取要列印至預設印表機的文字檔案。 然後具現化 <xref:System.Windows.Forms.PrintDialog> 類別。  
   
-### 選擇印表機，然後列印檔案  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a>選擇印表機，然後列印檔案  
   
-1.  使用 <xref:System.Windows.Forms.PrintDialog>元件選取要使用的印表機。  
+1.  選取要使用印表機<xref:System.Windows.Forms.PrintDialog>元件。  
   
-     在下列程式碼範例中，有兩個要處理的事件。 在第一個事件 \(<xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Click> 事件\) 中，會具現化 <xref:System.Windows.Forms.PrintDialog>類別，並在 <xref:System.Windows.Forms.DialogResult>屬性中擷取使用者所選取的印表機。  
+     在下列程式碼範例中，有兩個要處理的事件。 首先，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件，<xref:System.Windows.Forms.PrintDialog>類別具現化，和擷取使用者所選印表機是<xref:System.Windows.Forms.DialogResult>屬性。  
   
-     在第二個事件 \(<xref:System.Drawing.Printing.PrintDocument>元件的 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件\) 中，會以指定的印表機來列印範例文件。  
+     在第二個事件中，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件<xref:System.Drawing.Printing.PrintDocument>元件，以指定的印表機列印範例文件。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -49,7 +54,6 @@ caps.handback.revision: 19
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
        e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))          
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +74,6 @@ caps.handback.revision: 19
        e.Graphics.FillRectangle(Brushes.Red,   
          new Rectangle(500, 500, 500, 500));  
     }  
-  
     ```  
   
     ```cpp  
@@ -96,14 +99,13 @@ caps.handback.revision: 19
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
        System.Drawing.Printing.PrintPageEventHandler  
        (this.printDocument1_PrintPage);  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -114,5 +116,5 @@ caps.handback.revision: 19
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## 請參閱  
- [Windows Form 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>另請參閱  
+ [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

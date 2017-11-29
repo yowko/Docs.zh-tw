@@ -1,33 +1,25 @@
 ---
-title: "如何︰ 統計某個字在字串 (LINQ) (Visual Basic) 中的出現次數 |Microsoft 文件"
+title: "如何： 計算的文字字串 (LINQ) (Visual Basic) 中的出現次數"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ec6bb31fa095786f7c507a66e831a90fd1c6e92
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 82b40e11a72d26858cc2b0b5c0c759517f5b5ee3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>如何︰ 統計某個字在字串 (LINQ) (Visual Basic) 中的出現次數
-這個範例示範如何使用 LINQ 查詢字串中指定單字的出現次數。 請注意，第一次執行計數，<xref:System.String.Split%2A>會呼叫方法來建立文字陣列。</xref:System.String.Split%2A> 效能的費用<xref:System.String.Split%2A>方法。</xref:System.String.Split%2A> 如果在字串上的唯一操作來統計字數，您應該考慮使用<xref:System.Text.RegularExpressions.Regex.Matches%2A>或<xref:System.String.IndexOf%2A>方法而。</xref:System.String.IndexOf%2A> </xref:System.Text.RegularExpressions.Regex.Matches%2A> 不過，如果效能不是嚴重的問題，或您已經將句子分割才能對它執行其他類型的查詢，然後合理計算之單字或片語，以及使用 LINQ。  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>如何： 計算的文字字串 (LINQ) (Visual Basic) 中的出現次數
+本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。 請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。 <xref:System.String.Split%2A> 方法有效能成本。 如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。 不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。  
   
 ## <a name="example"></a>範例  
   
@@ -75,7 +67,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

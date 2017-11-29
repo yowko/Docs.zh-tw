@@ -1,33 +1,37 @@
 ---
-title: "如何：在執行階段期間隱藏控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 在執行階段變成不可見"
-  - "自訂控制項 [Windows Form], 不可見的"
-  - "不可見的控制項"
-  - "執行階段, 讓控制項變成不可見"
-  - "使用者控制項 [Windows Form], 不可見的"
+title: "如何：在執行階段期間隱藏控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], making invisible at run time
+- invisible controls
+- user controls [Windows Forms], invisible
+- custom controls [Windows Forms], invisible
+- run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 310750df0786eb07158909eb5e322369d157d1cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在執行階段期間隱藏控制項
-有時候，您可能要建立會在執行階段隱藏的使用者控制項。  例如，只有在鬧鈴響的時候才出現的鬧鐘控制項。  您可藉由設定 <xref:System.Windows.Forms.Control.Visible%2A> 屬性來輕鬆達成這個目的。  如果 <xref:System.Windows.Forms.Control.Visible%2A> 屬性為 `true`，控制項會照常出現。  如果為 `false`，則會隱藏控制項。  雖然控制項在隱藏時還是可執行其中的程式碼，但您無法透過使用者介面與控制項互動。  如果您要建立還是能回應使用者輸入 \(例如按一下滑鼠\) 的不可見控制項，您應建立透明的控制項。  如需詳細資訊，請參閱[為您的控制項提供透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)。  
+# <a name="how-to-make-your-control-invisible-at-run-time"></a>如何：在執行階段期間隱藏控制項
+但有些的時候，當您可能想要建立使用者控制項在執行階段不可見。 例如，鬧鐘控制項可能不可見，除了當警示已響起。 輕鬆達成設定<xref:System.Windows.Forms.Control.Visible%2A>屬性。 如果<xref:System.Windows.Forms.Control.Visible%2A>屬性是`true`，控制項將顯示為一般。 如果`false`，將隱藏控制項。 雖然在隱藏時，仍可執行程式碼，在控制項中的，您無法透過使用者介面控制項互動。 如果您想要建立不可見的控制項仍然會回應使用者輸入 （例如滑鼠點按動作），您應該建立透明的控制項。 如需詳細資訊，請參閱[為您的控制項提供透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)。  
   
-### 若要在執行階段期間隱藏控制項  
+### <a name="to-make-your-control-invisible-at-run-time"></a>若要在執行階段隱藏控制項  
   
 1.  將 <xref:System.Windows.Forms.Control.Visible%2A> 屬性設定為 `false`。  
   
@@ -36,7 +40,6 @@ caps.handback.revision: 13
     Me.Visible = False  
     ' To set the Visible property from another object.  
     myControl1.Visible = False  
-  
     ```  
   
     ```csharp  
@@ -44,10 +47,9 @@ caps.handback.revision: 13
     this.Visible = false;  
     // To set the Visible property from another object.  
     myControl1.Visible = false;  
-  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.Control.Visible%2A>   
- [使用 .NET Framework 開發自訂的 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [如何：為控制項提供透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.Control.Visible%2A>  
+ [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [操作說明：為控制項提供透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)

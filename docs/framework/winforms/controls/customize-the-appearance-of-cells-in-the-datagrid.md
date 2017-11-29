@@ -1,44 +1,48 @@
 ---
-title: "如何：在 Windows Form DataGridView 控制項中自訂儲存格的外觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "儲存格, 在 DataGridView 控制項中自訂"
-  - "資料格, 自訂儲存格"
-  - "DataGridView 控制項 [Windows Form], 自訂儲存格"
+title: "如何：在 Windows Form DataGridView 控制項中自訂儲存格的外觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data grids [Windows Forms], customizing cells
+- DataGridView control [Windows Forms], customizing cells
+- cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 478b20c9-625c-4116-9c5c-5a16e6f4ec67
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 545a3bff5e810f9c0a995366e7f6460930f9e936
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows Form DataGridView 控制項中自訂儲存格的外觀
-您可以藉由管理 <xref:System.Windows.Forms.DataGridView> 控制項的 <xref:System.Windows.Forms.DataGridView.CellPainting> 事件，自訂任何儲存格的外觀。  您可以從 <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> 的 <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A> 屬性抽取 <xref:System.Windows.Forms.DataGridView> 控制項的 <xref:System.Drawing.Graphics>。  藉由這個 <xref:System.Drawing.Graphics>，您可以影響整個 <xref:System.Windows.Forms.DataGridView> 控制項的外觀，但通常您會只想影響目前正在繪製的儲存格外觀。  <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> 的 <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A> 屬性能讓您將繪製作業限制為目前正在繪製的儲存格。  
+# <a name="how-to-customize-the-appearance-of-cells-in-the-windows-forms-datagridview-control"></a>如何：在 Windows Form DataGridView 控制項中自訂儲存格的外觀
+您可以自訂處理的任何資料格的外觀<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.CellPainting>事件。 您可以擷取<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Drawing.Graphics>從<xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A>屬性<xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>。 與這個<xref:System.Drawing.Graphics>，您可能會影響整個外觀<xref:System.Windows.Forms.DataGridView>控制項，但是您通常會想要影響目前所繪製的儲存格的外觀。 <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A>屬性<xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>可讓您限制您到目前所繪製的儲存格的繪製作業。  
   
- 在下列程式碼範例中，將會使用 <xref:System.Windows.Forms.DataGridView> 控制項的色彩配置，在 `ContactName` 資料行中繪製所有儲存格。  每一個儲存格文字內容都會繪製於 <xref:System.Drawing.Color.Crimson%2A>，且會以 <xref:System.Windows.Forms.DataGridView> 控制項之 <xref:System.Windows.Forms.DataGridView.GridColor%2A> 屬性的相同顏色繪製內凹方框。  
+ 在下列程式碼範例中，您會繪製中的所有資料格`ContactName`資料行使用<xref:System.Windows.Forms.DataGridView>控制項的色彩配置。 每個資料格文字內容中繪製<xref:System.Drawing.Color.Crimson%2A>，而且在相同的色彩繪製內凹矩形<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.GridColor%2A>屬性。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-csharp[System.Windows.Forms.DataGridViewCellPainting#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/CS/form1.cs#10)]
  [!code-vb[System.Windows.Forms.DataGridViewCellPainting#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/VB/form1.vb#10)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項，且具有 `ContactName` 資料行 \(例如在 Northwind 範例資料庫的 Customers 資料表中的資料行\)。  
+-   A<xref:System.Windows.Forms.DataGridView>控制項，名為`dataGridView1`與`ContactName`例如 Northwind 範例資料庫中的 Customers 資料表中的一個資料行。  
   
 -   System、System.Windows.Forms 和 System.Drawing 組件的參考。  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.CellPainting>   
- [自訂 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.CellPainting>  
+ [自訂 Windows Forms DataGridView 控制項](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
