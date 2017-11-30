@@ -1,27 +1,30 @@
 ---
-title: "HOW TO：匯入自訂 WSDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：匯入自訂 WSDL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 00a845fe5c8321d521fb7baa3b16bd009fc3e660
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：匯入自訂 WSDL
-這個主題會描述如何匯入自訂 WSDL。  若要處理自訂 WSDL，您必須實作 <xref:System.ServiceModel.Description.IWsdlImportExtension> 介面。  
+# <a name="how-to-import-custom-wsdl"></a>HOW TO：匯入自訂 WSDL
+這個主題會描述如何匯入自訂 WSDL。 若要處理自訂 WSDL，您必須實作 <xref:System.ServiceModel.Description.IWsdlImportExtension> 介面。  
   
-### 匯入自訂 WSDL  
+### <a name="to-import-custom-wsdl"></a>匯入自訂 WSDL  
   
-1.  實作 <xref:System.ServiceModel.Description.IWsdlImportExtension>。  實作 <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> 方法，以便於匯入中繼資料前進行修改。  實作 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 和 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法，以便修改從中繼資料匯入的合約和端點。  若要存取匯入的合約或端點，請使用相對應的內容物件 \(<xref:System.ServiceModel.Description.WsdlContractConversionContext> 或 <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>\)：  
+1.  實作 <xref:System.ServiceModel.Description.IWsdlImportExtension>。 實作 <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> 方法，以便於匯入中繼資料前進行修改。 實作 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 和 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法，以便修改從中繼資料匯入的合約和端點。 若要存取匯入的合約或端點，請使用相對應的內容物件 (<xref:System.ServiceModel.Description.WsdlContractConversionContext> 或 <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>)：  
   
     ```  
     public class WsdlDocumentationImporter : IWsdlImportExtension  
@@ -59,9 +62,9 @@ caps.handback.revision: 9
        }  
     ```  
   
-2.  設定用戶端應用程式以使用自訂 WSDL 匯入工具。  請注意，如果正在使用 Svcutil.exe，您應該針對 Svcutil.exe \(Svcutil.exe.config\) 將此組態新增至組態檔：  
+2.  設定用戶端應用程式以使用自訂 WSDL 匯入工具。 請注意，如果正在使用 Svcutil.exe，您應該針對 Svcutil.exe (Svcutil.exe.config) 將此組態新增至組態檔：  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
           <client>  
             <endpoint   
@@ -76,17 +79,15 @@ caps.handback.revision: 9
             </metadata>  
           </client>  
         </system.serviceModel>  
-  
     ```  
   
-3.  建立新的 <xref:System.ServiceModel.Description.WsdlImporter> 執行個體 \(在包含您要匯入之 WSDL 文件的 <xref:System.ServiceModel.Description.MetadataSet> 執行個體中傳遞\)，並且呼叫 <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>：  
+3.  建立新的 <xref:System.ServiceModel.Description.WsdlImporter> 執行個體 (在包含您要匯入之 WSDL 文件的 <xref:System.ServiceModel.Description.MetadataSet> 執行個體中傳遞)，並且呼叫 <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>：  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);          System.Collections.ObjectModel.Collection<ContractDescription> contracts  = importer.ImportAllContracts();  
-  
     ```  
   
-## 請參閱  
- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)   
- [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)   
+## <a name="see-also"></a>另請參閱  
+ [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  [自訂 WSDL 發行物](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)

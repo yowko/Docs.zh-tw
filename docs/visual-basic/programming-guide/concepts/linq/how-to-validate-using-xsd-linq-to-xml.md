@@ -1,36 +1,28 @@
 ---
-title: "如何︰ 使用 XSD (LINQ to XML) 進行驗證 (Visual Basic) |Microsoft 文件"
+title: "如何： 使用 XSD (LINQ to XML) 進行驗證 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c6df61013b0007e5943060f8926b21d189a01519
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 53b4f96e4fe31588c948d8e860be2c3bd3fa372a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>如何︰ 使用 XSD (LINQ to XML) 進行驗證 (Visual Basic)
-<xref:System.Xml.Schema>命名空間包含擴充方法，可讓您輕鬆驗證對 XML 結構描述定義語言 (XSD) 檔案的 XML 樹狀結構。</xref:System.Xml.Schema> 如需詳細資訊，請參閱<xref:System.Xml.Schema.Extensions.Validate%2A>方法的文件。</xref:System.Xml.Schema.Extensions.Validate%2A>  
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>如何： 使用 XSD (LINQ to XML) 進行驗證 (Visual Basic)
+<xref:System.Xml.Schema> 命名空間包含的擴充方法可針對 XML 結構描述定義語言 (XSD) 檔，簡化 XML 樹狀結構的驗證。 如需詳細資訊，請參閱 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法的文件。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立<xref:System.Xml.Schema.XmlSchemaSet>，然後驗證兩個<xref:System.Xml.Linq.XDocument>針對結構描述集合的物件。</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Schema.XmlSchemaSet> 其中一個文件有效，另一個無效。  
+ 下列範例會建立 <xref:System.Xml.Schema.XmlSchemaSet>，然後針對結構描述設定驗證兩個 <xref:System.Xml.Linq.XDocument> 物件。 其中一個文件有效，另一個無效。  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -94,11 +86,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例將驗證的 XML 文件從[範例 XML 檔︰ 客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)根據從結構描述有效[範例 XSD 檔︰ 客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)。 接著，它會修改 XML 來源文件。 它會變更第一個客戶上的 `CustomerID` 屬性。 變更後，這些訂單將會參考不存在的客戶，因此 XML 文件將不再有效。  
+ 下列範例會根據[範例 XSD 檔：客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)中的結構描述，驗證[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) 中的 XML 文件是否有效。 接著，它會修改 XML 來源文件。 它會變更第一個客戶上的 `CustomerID` 屬性。 變更後，這些訂單將會參考不存在的客戶，因此 XML 文件將不再有效。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
- 這個範例會使用下列 XSD 結構描述︰[範例 XSD 檔︰ 客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)。  
+ 此範例使用下列 XSD 結構描述︰[範例 XSD 檔：客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)。  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -140,5 +132,5 @@ custOrdDoc did not validate
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Schema.Extensions.Validate%2A></xref:System.Xml.Schema.Extensions.Validate%2A>   
+ <xref:System.Xml.Schema.Extensions.Validate%2A>  
  [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

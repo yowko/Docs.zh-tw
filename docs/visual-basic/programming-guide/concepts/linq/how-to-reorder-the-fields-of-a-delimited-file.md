@@ -1,39 +1,31 @@
 ---
-title: "如何︰ 重新排列分隔檔案 (LINQ) (Visual Basic) 的欄位 |Microsoft 文件"
+title: "如何： 重新排列分隔檔案 (LINQ) (Visual Basic) 的欄位"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9abb0510ed3944cd80d6658238ef79d64dc0ca27
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f308495a21b671edf03fbd791ef77d668d55388d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>如何︰ 重新排列分隔檔案 (LINQ) (Visual Basic) 的欄位
-以逗號分隔值 (CSV) 檔案是文字檔經常用來儲存試算表資料或其他由資料列和資料行的表格式資料。 使用<xref:System.String.Split%2A>方法來分隔的欄位，它可以非常輕易地查詢及操作使用 LINQ 的 CSV 檔案。</xref:System.String.Split%2A> 事實上，相同的技巧可以用來重新排列任何結構化一行文字; 組件這並不限於 CSV 檔案。  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>如何： 重新排列分隔檔案 (LINQ) (Visual Basic) 的欄位
+逗號分隔值 (CSV) 檔案是一種文字檔，常用來儲存試算表資料或其他以資料列和資料行呈現的表格式資料。 使用 <xref:System.String.Split%2A> 方法隔開欄位後，就可以利用 LINQ 輕鬆地查詢和管理 CSV 檔案。 事實上，您可以使用此相同的方法來重新排列任何結構化文字行中的其中幾部分，而不限於 CSV 檔案。  
   
- 在下列範例中，假設三個資料行代表學生 「 姓氏 」 「 first name 」 和 「 識別碼 」。 欄位是根據學生的姓氏的字母順序。 此查詢會產生新的順序中的識別碼資料行顯示第一，後面接著結合學生的名字和姓氏的第二個資料行。 這些行會根據 ID 欄位。 結果會儲存到新檔案並不會修改原始資料。  
+ 在下列範例中，假設有三個資料行分別表示學生的「姓氏」、「名字」和「學號」。 這些欄位會依照學生的姓氏字母排序。 此查詢會產生新的順序，其中會先出現學號資料行，後面接著結合學生姓氏和名字的第二個資料行。 這些行會根據學號欄位重新排列。 結果會儲存至新的檔案，而且不會修改原始資料。  
   
 ### <a name="to-create-the-data-file"></a>建立資料檔  
   
-1.  將下列幾行複製到名為 spreadsheet1.csv 純文字檔。 在您的專案資料夾中儲存檔案。  
+1.  將下列幾行複製到名為 spreadsheet1.csv 的純文字檔。 將此檔案儲存在您的專案資料夾中。  
   
     ```  
     Adams,Terry,120  
@@ -94,6 +86,6 @@ End Class
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)   
+ [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [如何：從 CSV 檔案產生 XML](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

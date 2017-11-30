@@ -1,42 +1,24 @@
 ---
-title: "依字母順序列出 Visual Basic 編譯器選項 |Microsoft 文件"
-ms.date: 2015-07-20
+title: Visual Basic Compiler Options Listed Alphabetically
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93246b3a38002955234a7a93529d05b71ab4e580
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0bcb3b182ee224457165be2177dd90ad48b00e56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic Compiler Options Listed Alphabetically
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 命令列編譯器可作為從 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 整合式開發環境 (IDE) 內編譯程式的替代方法。 以下是依字母順序排序的 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 命令列編譯器選項清單。  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器可作為從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境 (IDE) 內編譯程式的替代方法。 以下是依字母順序排序的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器選項清單。  
   
 |選項|用途|  
 |------------|-------------|  
@@ -53,20 +35,20 @@ ms.lasthandoff: 03/13/2017
 |[/define](../../../visual-basic/reference/command-line-compiler/define.md)|定義條件式編譯的符號。|  
 |[/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定將要完整簽署還是部分簽署組件。|  
 |[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|將文件註解處理成 XML 檔案。|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 編譯器報告編譯器內部錯誤的方式。|  
+|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 編譯器報告編譯器內部錯誤的方式。|  
 |[/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定要對齊輸出檔案區段的位置。|  
 |[/help](../../../visual-basic/reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `/?` 選項。 未執行編譯。|  
 |[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|指出特定可執行檔是否支援高熵位址空間配置隨機載入 (ASLR)。|  
 |[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|從指定的組件匯入命名空間。|  
 |[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定金鑰組的金鑰容器名稱，為組件提供強式名稱。|  
 |[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本︰ 9 | 9.0 | 10 | 10.0 | 11 | 11.0。|  
-|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定所參考的組件的位置[/參考](../../../visual-basic/reference/command-line-compiler/reference.md)選項。|  
+|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本： 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0。|  
+|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定所參考的組件位置[/參考](../../../visual-basic/reference/command-line-compiler/reference.md)選項。|  
 |[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|建立與 Managed 資源的連結。|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|指定類別，其中包含`Sub``Main`程序在啟動時使用。|  
+|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|指定類別，其中包含`Sub Main`在啟動時使用的程序。|  
 |[/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定將包含模組的組件名稱。|  
 |`/modulename:<string>`|指定來源模組的名稱|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|設定要以 [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] 為目標的編譯器。|  
+|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|設定要以 [!INCLUDE[Compact](~/includes/compact-md.md)] 為目標的編譯器。|  
 |[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|不使用 Vbc.rsp 進行編譯。|  
 |[/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|隱藏編譯器橫幅資訊。|  
 |[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|使編譯器不要參考標準程式庫。|  
@@ -100,7 +82,7 @@ ms.lasthandoff: 03/13/2017
 |[/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|將 Win32 資源插入輸出檔中。|  
   
 ## <a name="see-also"></a>另請參閱  
- [依分類列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)   
- [專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
+ [依分類列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+ [專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)

@@ -1,81 +1,79 @@
 ---
-title: "GoTo Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.GoTo"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "GoTo statement"
-  - "control flow, branching"
-  - "unconditional branching"
-  - "branching"
-  - "branching, unconditional"
-  - "branching, conditional"
-  - "conditional statements, GoTo statement"
-  - "GoTo statement, syntax"
+title: "GoTo 陳述式"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.GoTo
+helpviewer_keywords:
+- GoTo statement [Visual Basic]
+- control flow [Visual Basic], branching
+- unconditional branching [Visual Basic]
+- branching [Visual Basic]
+- branching [Visual Basic], unconditional
+- branching [Visual Basic], conditional
+- conditional statements [Visual Basic], GoTo statement
+- GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# GoTo Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-無條件將程式分支到程序中指定的一行程式。  
+# <a name="goto-statement"></a>GoTo 陳述式
+無條件分支的程序中指定的行。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 GoTo line  
 ```  
   
-## 組件  
+## <a name="part"></a>組件  
  `line`  
- 必要項。  任何程式行標籤 \(Label\)。  
+ 必要項。 任何行標籤。  
   
-## 備註  
- `GoTo` 陳述式只能將程式分支到所在程序內的程式行。  該程式行必須具有程式行標籤，以供 `GoTo` 參考。  如需詳細資訊，請參閱 [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
+## <a name="remarks"></a>備註  
+ `GoTo`陳述式只能將程式分支中的程序中的行。 行必須擁有行加上標籤的`GoTo`可以參考。 如需詳細資訊，請參閱[How to： 標籤陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
   
 > [!NOTE]
->  `GoTo` 陳述式會使他人難以閱讀及維護您的程式碼。  如果可能，請使用控制結構。  如需詳細資訊，請參閱 [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
+>  `GoTo`陳述式會讓程式碼難以讀取和維護。 您應該盡可能改用控制結構。 如需詳細資訊，請參閱[控制流程](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
   
- 您無法使用 `GoTo` 陳述式，將程式從 `For`...`Next`、`For Each`...`Next`、`SyncLock`...`End SyncLock`、`Try`...`Catch`...`Finally`、`With`...`End With` 或 `Using`...`End Using` 語法結構以外的位置分支到語法結構內的標籤。  
+ 您無法使用`GoTo`陳述式來從外部的分支`For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`，或`Using`...`End Using`建構內的標籤。  
   
-## 分支和 Try 語法結構  
- 在 `Try`...`Catch`...`Finally` 語法結構內，使用 `GoTo` 陳述式進行分支適用於下列規則。  
+## <a name="branching-and-try-constructions"></a>分支，然後再次嘗試語法結構  
+ 內`Try`...`Catch`...`Finally`建構，下列規則適用於與分支`GoTo`陳述式。  
   
-|區塊或區域|由外往內分支|由內往外分支|  
-|-----------|------------|------------|  
-|`Try` 區塊|只能從同一語法結構的 `Catch` 區塊分支進來 <sup>1</sup>|只能分支到整個語法結構以外|  
-|`Catch` 區塊|絕不允許|只能分支到整個語法結構以外，或是分支到同一語法結構的 `Try` 區塊 <sup>1</sup>|  
-|`Finally` 區塊|絕不允許|絕不允許|  
+|區塊或地區|分支中從外部|從內部往外分支|  
+|---------------------|-------------------------------|-------------------------------|  
+|`Try`區塊|只能從`Catch`相同建構區塊<sup>1</sup>|只在整個建構之外|  
+|`Catch`區塊|不允許|僅外部整個建構，或為`Try`相同建構區塊<sup>1</sup>|  
+|`Finally`區塊|不允許|不允許|  
   
- <sup>1</sup> 若某個 `Try`...`Catch`...`Finally` 語法結構內嵌於其他的語法結構內，則 `Catch` 區塊可以分支到本身巢狀層次的 `Try` 區塊，但不能分支到其他的 `Try` 區塊。  內層的巢狀 `Try`...`Catch`...`Finally` 語法結構，必須完全包含在外層語法結構的 `Try` 或 `Catch` 區塊內。  
+ <sup>1</sup>如果一個`Try`...`Catch`...`Finally`建構，巢狀`Catch`區塊可以分支到`Try`區塊在它自己的巢狀層級，而不用到任何其他`Try`區塊。 巢狀`Try`...`Catch`...`Finally`建構必須完全在包含`Try`或`Catch`建構巢狀所在的區塊。  
   
- 下圖會顯示巢狀於其他語法結構內的 `Try` 語法結構。  這兩個語法結構區塊之間的各種分支會標示為有效或無效。  
+ 下圖顯示一個`Try`建構巢狀方式置於另一個。 兩個建構區塊之間的不同分支就會表示成有效或無效。  
   
- ![Try 語法結構中的分支示意圖](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Try 語法結構的有效和無效分支  
+ ![Try 語法結構的分支示意圖](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
+Try 語法結構的有效和無效的分支  
   
-## 範例  
- 下列範例會使用 `GoTo` 陳述式，將程式分支到程序內的程式行標籤。  
+## <a name="example"></a>範例  
+ 下列範例會使用`GoTo`分支到程序中的線條標籤的陳述式。  
   
  [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
-## 請參閱  
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [If...Then...Else Statement](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
- [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md)   
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>另請參閱  
+ [Do...Loop 陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [If...Then...Else 陳述式](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [Select...Case 陳述式](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [While...End While 陳述式](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [With...End With 陳述式](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

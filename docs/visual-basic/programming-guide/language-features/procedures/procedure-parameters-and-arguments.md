@@ -1,81 +1,80 @@
 ---
-title: "Procedure Parameters and Arguments (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, arguments"
-  - "procedures, argument lists"
-  - "values, passing to procedures"
-  - "arguments [Visual Basic], passing"
-  - "procedures, parameters"
-  - "Visual Basic code, argument lists"
-  - "Visual Basic code, procedures"
-  - "parameters, Visual Basic procedures"
-  - "parameters, lists"
-  - "arguments [Visual Basic], Visual Basic procedures"
-  - "arguments [Visual Basic], procedures"
-  - "parameter lists"
-  - "Visual Basic code, parameter lists"
-  - "argument lists"
-  - "procedures, parameter lists"
+title: "程序參數和引數 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], argument lists
+- values [Visual Basic], passing to procedures
+- arguments [Visual Basic], passing
+- procedures [Visual Basic], parameters
+- Visual Basic code, argument lists
+- Visual Basic code, procedures
+- parameters [Visual Basic], Visual Basic procedures
+- parameters [Visual Basic], lists
+- arguments [Visual Basic], Visual Basic procedures
+- arguments [Visual Basic], procedures
+- parameter lists [Visual Basic]
+- Visual Basic code, parameter lists
+- argument lists [Visual Basic]
+- procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Procedure Parameters and Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-在大多數情況下，程序需要一些可在其中呼叫程序之環境的相關資訊。  執行重複或共用工作的程序，每一次呼叫都使用不同的資訊。  該資訊是由呼叫程序時傳給它的變數、常數和運算式所組成。  
+# <a name="procedure-parameters-and-arguments-visual-basic"></a>程序參數和引數 (Visual Basic)
+在大部分情況下，需要一些資訊在其中呼叫的情況的相關程序。 執行重複或共用的工作的程序會針對每個呼叫使用不同的資訊。 這項資訊包含變數、 常數和呼叫它時傳遞至程序的運算式。  
   
- 「*參數*」\(Parameter\) 表示您必須在呼叫程序時提供的值，  程序的宣告會定義其參數。  
+ A*參數*表示程序需要您提供當您呼叫它的值。 程序的宣告會定義它的參數。  
   
- 您可以定義不含參數、含一個參數，或含多個參數的程序。  程序定義中用於指定參數的部分稱為「*參數清單*」\(Parameter List\)。  
+ 您可以定義具有任何參數，一個參數，或一個以上的程序。 呼叫程序定義指定之參數的一部分*參數清單*。  
   
- 「*引數*」\(Argument\) 表示呼叫程序時，提供給程序參數的值。  呼叫程式碼會在呼叫程序時提供引數。  用於指定引數的程序呼叫部分稱為「*引數清單*」\(Argument List\)。  
+ *引數*程序參數表示您提供的值時呼叫的程序。 呼叫程序時，如果呼叫程式碼所提供的引數。 指定的引數的程序呼叫的部份稱為*引數清單*。  
   
- 下圖顯示一段程式碼，該程式碼會從兩個不同的地點呼叫程序 `safeSquareRoot`。  第一個呼叫會將變數 `x` 值 \(4.0\) 傳遞到參數 `number`，並將 `root` 中的傳回值 \(2.0\) 指派給變數 `y`。  第二個呼叫會將常值 9.0 傳遞到 `number`，並將傳回值 \(3.0\) 指派給變數 `z`。  
+ 下圖顯示程式碼呼叫此程序`safeSquareRoot`兩個不同位置。 第一次呼叫會將變數的值傳遞`x`(4.0) 的參數`number`，和傳回值中的`root`(2.0) 指派給變數`y`。 第二個呼叫會傳遞至常值 9.0 `number`，並將傳回的值 (3.0) 指派給變數`z`。  
   
- ![傳遞引數至參數示意圖](../../../../visual-basic/programming-guide/language-features/procedures/media/parametersargue.gif "ParametersArgue")  
-將引數傳遞至參數  
+ ![傳遞引數至參數示意圖](./media/parametersargue.gif "ParametersArgue")  
+傳遞至參數的引數  
   
- 如需詳細資訊，請參閱[Differences Between Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)。  
+ 如需詳細資訊，請參閱[參數之間的差異和引數](./differences-between-parameters-and-arguments.md)。  
   
-## 參數資料型別  
- 您可以在參數宣告中使用 `As` 子句來定義參數的資料型別。  例如，下列函式可接受字串和整數。  
+## <a name="parameter-data-type"></a>參數資料類型  
+ 您定義資料類型的參數使用`As`在其宣告中的子句。 例如，下列函式會接受一個字串和整數。  
   
  [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
- 如果型別檢查參數 \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) 是 `Off,`，則 `As` 子句是選擇項，但若有任一參數使用此子句，則所有的參數都必須使用此子句。  如果型別檢查是 `On`，則所有的程序參數都必須使用 `As` 子句。  
+ 如果類型檢查參數 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`Off,``As`子句是選擇性的不同之處在於任何一個參數會使用它，如果所有參數必須都使用它。 如果型別檢查`On`、`As`子句是必要的所有程序參數。  
   
- 如果呼叫程式碼必須提供與對應參數不同資料型別的引數，例如 `Byte` 對 `String` 參數，則必須執行下列其中一項：  
+ 如果呼叫的程式碼必須不同於其對應的參數資料類型提供的引數，例如`Byte`至`String`參數，則必須執行下列其中之一：  
   
--   只提供資料型別可擴展至參數資料型別的引數  
+-   提供唯一可擴展參數資料類型; 資料類型的引數  
   
--   設定 `Option Strict Off` 以允許隱含的縮小轉換  
+-   設定`Option Strict Off`允許隱含的縮小轉換; 或  
   
--   使用轉換關鍵字以明確轉換資料型別  
+-   使用轉換關鍵字，明確地轉換資料類型。  
   
-### 型別參數  
- 除了一般參數以外，「*泛型程序*」\(Generic Procedure\) 也會定義一或多個「*型別參數*」\(Type Parameter\)。  泛型程序可讓呼叫程式碼在每次呼叫程序時，傳遞不同的資料型別，以便根據個別呼叫的需求，調整資料型別。  請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
+### <a name="type-parameters"></a>型別參數  
+ A*泛型程序*也會定義一或多個*型別參數*除了一般參數。 泛型程序可讓呼叫的程式碼傳遞不同的資料類型每次呼叫程序，讓它可以調整資料類型，每個個別呼叫的需求。 請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   
-## 請參閱  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [函式程序](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [屬性程序](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [How to: Define a Parameter for a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>另請參閱  
+ [程序](./index.md)  
+ [Sub 程序](./sub-procedures.md)  
+ [函式程序](./function-procedures.md)  
+ [屬性程序](./property-procedures.md)  
+ [運算子程序](./operator-procedures.md)  
+ [如何：定義程序的參數](./how-to-define-a-parameter-for-a-procedure.md)  
+ [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)  
+ [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)  
+ [程序多載化](./procedure-overloading.md)  
+ [在 Visual Basic 中的型別轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

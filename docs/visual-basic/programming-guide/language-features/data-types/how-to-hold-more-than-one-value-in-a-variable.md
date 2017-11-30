@@ -1,60 +1,59 @@
 ---
-title: "How to: Hold More Than One Value in a Variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "classes [Visual Basic], composite data types"
-  - "composite types"
-  - "composite data types"
-  - "data types [Visual Basic], composite"
-  - "arrays [Visual Basic], composite data types"
-  - "structures, composite data types"
-  - "arrays [Visual Basic], compilation errors"
-  - "types [Visual Basic], composite"
+title: "如何：在變數中存放多個值 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- classes [Visual Basic], composite data types
+- composite types [Visual Basic]
+- composite data types [Visual Basic]
+- data types [Visual Basic], composite
+- arrays [Visual Basic], composite data types
+- structures [Visual Basic], composite data types
+- arrays [Visual Basic], compilation errors
+- types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c8c567ec2ba01d094819c98a2937af75cd105956
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Hold More Than One Value in a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-如果將變數宣告為「*複合資料型別*」\(Composite Data Type\)，則此變數會存放一個以上的值。  
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在變數中存放多個值 (Visual Basic)
+如果您將它的宣告，變數會保留多個值*複合資料類型*。  
   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包括結構、陣列和類別。  複合資料型別的變數可存放基礎資料型別 \(Elementary Data Type\) 和其他複合型別的組合。  結構和類別可以存放程式碼及資料。  
+ [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包含結構、 陣列和類別。 複合資料類型的變數可以保存基本資料類型和其他複合類型的組合。 結構和類別可以保存的程式碼，以及資料。  
   
-### 若要在變數中存放一個以上的值  
+### <a name="to-hold-more-than-one-value-in-a-variable"></a>若要在變數中存放多個值  
   
-1.  決定想要用於變數的複合資料型別。  
+1.  決定您想要用於您的變數的複合資料類型。  
   
-2.  如果尚未定義複合資料型別，請先定義，以使變數能使用該資料型別。  
+2.  如果沒有已定義的複合資料類型，其定義，讓您的變數可以使用它。  
   
-    -   使用 [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md) 定義結構。  
+    -   定義與結構[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)。  
   
-    -   使用 [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) 定義陣列。  
+    -   定義與陣列[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
-    -   使用 [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md) 定義類別。  
+    -   定義具有類別[Class 陳述式](../../../../visual-basic/language-reference/statements/class-statement.md)。  
   
-3.  使用 `Dim` 陳述式 \(Statement\) 宣告變數。  
+3.  您以宣告變數`Dim`陳述式。  
   
-4.  在變數名稱之後加上 `As` 子句。  
+4.  變數名稱後面加`As`子句。  
   
-5.  在 `As` 關鍵字之後加上適當的複合資料型別名稱。  
+5.  請遵循`As`關鍵字搭配適當的複合資料類型的名稱。  
   
-## 請參閱  
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>另請參閱  
+ [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

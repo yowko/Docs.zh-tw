@@ -1,27 +1,29 @@
 ---
-title: "在工作階段中群組佇列訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "佇列 [WCF]。 群組訊息"
+title: "在工作階段中群組佇列訊息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0dbd9d28d56d8d473b9e92d977da409b74290224
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在工作階段中群組佇列訊息
+# <a name="grouping-queued-messages-in-a-session"></a>在工作階段中群組佇列訊息
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會提供工作階段，讓您將一系列相關的訊息群組在一起，以便透過單一接收應用程式進行處理。 本身是工作階段一部分的訊息，也必須是屬於相同的交易。 由於所有訊息都屬於相同的交易，所以如果有任何一個訊息無法進行處理，就會回復整個工作階段。 工作階段對於寄不出的信件佇列與有害佇列，會採取類似行為。 針對工作階段在佇列繫結上設定的存留時間 (TTL) 屬性會完整地套用到工作階段。 如果工作階段中只有部分訊息在 TTL 到期之前傳送出去，則整個工作階段將置於寄不出的信件佇列中。 同樣地，當工作階段中的訊息無法從應用程式佇列傳送到應用程式的話，則整個工作階段將置於有害佇列 (如果有的話)。  
   
 ## <a name="message-grouping-example"></a>訊息群組範例  
@@ -31,13 +33,13 @@ caps.handback.revision: 30
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>若要設定服務合約使用工作階段  
   
-1.  定義需要工作階段的服務合約。 執行這項作業<xref:System.ServiceModel.OperationContractAttribute>屬性並指定︰  
+1.  定義需要工作階段的服務合約。 若要這麼做，請使用 <xref:System.ServiceModel.OperationContractAttribute> 屬性並指定：  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  將合約中的作業標示為單向，因為這些方法無法傳回任何東西。 做法是使用<xref:System.ServiceModel.OperationContractAttribute>屬性並指定︰  
+2.  將合約中的作業標示為單向，因為這些方法無法傳回任何東西。 若要這麼做，請使用 <xref:System.ServiceModel.OperationContractAttribute> 屬性並指定：  
   
     ```  
     [OperationContract(IsOneWay = true)]  
@@ -49,17 +51,17 @@ caps.handback.revision: 30
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  每個服務作業都需要一筆異動。 指定此項與<xref:System.ServiceModel.OperationBehaviorAttribute>屬性。 完成交易的作業應該同時將 `TransactionAutoComplete` 設為 `true`。  
+4.  每個服務作業都需要一筆交易。 請使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性來加以指定。 完成交易的作業應該同時將 `TransactionAutoComplete` 設為 `true`。  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  設定使用系統提供之 `NetProfileMsmqBinding` 繫結的端點。  
+5.  設定使用系統提供之 `NetMsmqBinding` 繫結的端點。  
   
-6.  建立交易式佇列，使用<xref:System.Messaging>。 您也可以使用訊息佇列 (MSMQ) 或 MMC 來建立佇列。 如果您要這麼做，請建立異動式佇列。  
+6.  使用 <xref:System.Messaging> 來建立交易式佇列。 您也可以使用訊息佇列 (MSMQ) 或 MMC 來建立佇列。 如果您要這麼做，請建立交易式佇列。  
   
-7.  建立服務的服務主機使用<xref:System.ServiceModel.ServiceHost>。  
+7.  請使用 <xref:System.ServiceModel.ServiceHost> 來建立服務的服務主機。  
   
 8.  開啟服務主機來提供服務。  
   
@@ -69,7 +71,7 @@ caps.handback.revision: 30
   
 1.  建立異動範圍以寫入異動式佇列。  
   
-2.  建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端會使用[ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具。  
+2.  建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端會使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具。  
   
 3.  下訂單。  
   
@@ -93,5 +95,5 @@ caps.handback.revision: 30
   
   
 ## <a name="see-also"></a>另請參閱  
- [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)   
+ [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)

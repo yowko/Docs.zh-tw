@@ -1,37 +1,29 @@
 ---
-title: "範例 XML 檔︰ 客戶和訂單 (LINQ to XML) |Microsoft 文件"
+title: "範例 XML 檔：客戶和訂單 (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: be682b421173c7c226f17145db383aae1ebad154
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6cd8ba100335b4a523c2b99c04f5df3cf348762b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>範例 XML 檔：客戶和訂單 (LINQ to XML)
-下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。 這個檔案包含客戶和訂單。  
+下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含客戶和訂單。  
   
- 本主題[範例 XSD 檔︰ 客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)包含可用來驗證此文件的 XSD。 它會使用 XSD 的 `xs:key` 和 `xs:keyref` 功能來建立 `CustomerID` 項目的 `Customer` 屬性為索引鍵，並在每個 `CustomerID` 項目中的 `Order` 項目和每個 `CustomerID` 項目中的 `Customer` 屬性之間建立關聯性。  
+ [範例 XSD 檔：客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)主題包含可用於驗證此文件的 XSD。 它會使用 XSD 的 `xs:key` 和 `xs:keyref` 功能來建立 `CustomerID` 項目的 `Customer` 屬性為索引鍵，並在每個 `CustomerID` 項目中的 `Order` 項目和每個 `CustomerID` 項目中的 `Customer` 屬性之間建立關聯性。  
   
- 如需撰寫 LINQ 查詢，充分使用此關聯性的範例`Join`子句，請參閱[如何︰ 聯結兩個集合 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)。  
+ 如需撰寫 LINQ 查詢，利用此關聯性的範例`Join`子句，請參閱[如何： 聯結兩個集合 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)。  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   

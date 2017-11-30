@@ -7,26 +7,20 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - cache [.NET Framework], network applications
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bdd1416de418dfb9b8b5c68da205817ae6d6225b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b960942d17e402b333354bbd932cf63d11b1209f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="cache-management-for-network-applications"></a>網路應用程式的快取管理
 本主題和其相關子主題描述如何使用 <xref:System.Net.WebClient>、<xref:System.Net.WebRequest>、<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 類別所取得資源的快取。  
@@ -53,4 +47,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="reference"></a>參考資料  
  <xref:System.Net.Cache>  
  可定義類型和列舉，這些類型和列舉是用來定義使用 <xref:System.Net.WebRequest>、<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 類別所取得之資源的快取原則。
-

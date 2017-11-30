@@ -1,27 +1,30 @@
 ---
-title: "HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務
-本主題是三個主題中的第三個，討論如何實作探索 Proxy。在先前的主題 [HOW TO：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md) 中，您已實作透過探索 Proxy 註冊的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。在本主題中，您會建立使用探索 Proxy 來尋找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，。  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務
+本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在先前的主題， [How to： 實作使用探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，實作您[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]向探索 proxy 註冊其本身的服務。 在本主題中，您會建立使用探索 Proxy 來尋找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，。  
   
-### 實作用戶端  
+### <a name="implement-the-client"></a>實作用戶端  
   
-1.  將新的主控台應用程式專案加入至名為 `Client` 的 `DiscoveryProxyExample` 方案。  
+1.  將新的主控台應用程式專案加入至名為 `DiscoveryProxyExample` 的 `Client` 方案。  
   
 2.  加入下列組件的參考：  
   
@@ -32,9 +35,9 @@ caps.handback.revision: 12
 3.  將在此主題底部找到的 GeneratedClient.cs 加入至專案。  
   
     > [!NOTE]
-    >  這個檔案通常會使用 Svcutil.exe 之類的工具產生。本主題會提供該檔案以簡化這項工作。  
+    >  這個檔案通常會使用 Svcutil.exe 之類的工具產生。 本主題會提供該檔案以簡化這項工作。  
   
-4.  開啟 Program.cs 檔案並加入下列方法。此方法會採用端點位址，並將其用於初始化服務用戶端 \(Proxy\)。  
+4.  開啟 Program.cs 檔案並加入下列方法。 此方法會採用端點位址，並將其用於初始化服務用戶端 (Proxy)。  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -67,10 +70,9 @@ caps.handback.revision: 12
                 // Closing the client gracefully closes the connection and cleans up resources  
                 client.Close();  
             }  
-  
     ```  
   
-5.  將以下程式碼加入 `Main` 方法中。  
+5.  將下列程式碼加入至 `Main` 方法。  
   
     ```  
     public static void Main()  
@@ -107,12 +109,11 @@ caps.handback.revision: 12
                 Console.WriteLine("Press <ENTER> to exit.");  
                 Console.ReadLine();  
             }  
-  
     ```  
   
- 您已經完成實作用戶端應用程式。請繼續參閱 [HOW TO：測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
+ 您已經完成實作用戶端應用程式。 繼續前往[How to： 測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  以下是這個主題的完整程式碼清單。  
   
 ```  
@@ -205,7 +206,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -291,7 +291,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## 請參閱  
- [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [HOW TO：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [HOW TO：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a>另請參閱  
+ [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [如何： 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [如何： 實作使用探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
