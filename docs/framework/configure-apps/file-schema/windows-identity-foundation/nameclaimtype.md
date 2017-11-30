@@ -1,64 +1,75 @@
 ---
-title: "&lt;nameClaimType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;nameClaimType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e910333084aae9e47153cfe3ee4b5cd943a37f71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;nameClaimType&gt;
-設定指定 <xref:System.Security.Principal.IIdentity.Name%2A> 屬性的需求類型。  要求型別是用來搜尋 <xref:System.Security.Claims.ClaimsIdentity> 物件集合的 <xref:System.Security.Claims.Claim> 這個語彙基元的處理常式 <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> 方法傳回的。  比對要求的值會設定為，則從這個語彙基元的處理常式會產生的 <xref:System.Security.Principal.IIdentity> 的名稱。  
+# <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
+設定指定的宣告型別<xref:System.Security.Principal.IIdentity.Name%2A>屬性。 宣告類型用來搜尋<xref:System.Security.Claims.Claim>集合中的<xref:System.Security.Claims.ClaimsIdentity>所傳回的物件<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>此語彙基元處理常式的方法。 比對的宣告值會設定為名稱的<xref:System.Security.Principal.IIdentity>產生從這個語彙基元處理常式。  
   
-## 語法  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<add>  
+\<samlSecurityTokenRequirement >  
+\<nameClaimType >  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add>  
-        <samlSecurityTokenRequirement>  
-          <nameClaimType value=xs:string>  
-          </nameClaimType>  
-        </samlSecurityTokenRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add>  
+        <samlSecurityTokenRequirement>  
+          <nameClaimType value=xs:string>  
+          </nameClaimType>  
+        </samlSecurityTokenRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|值|指定 URI 表示所要求的型別。 <xref:System.Security.Principal.IIdentity.Name%2A> 屬性使用的字串。  必要項。|  
+|---------------|-----------------|  
+|值|字串，指定代表要用於宣告的宣告類型 URI<xref:System.Security.Principal.IIdentity.Name%2A>屬性。 必要項。|  
   
-### 子項目  
- None  
+### <a name="child-elements"></a>子元素  
+ 無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
-|--------|--------|  
-|[\<samlSecurityTokenRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 類別、類別或 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 這些類別的其中一個衍生的類別提供設定。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<samlSecurityTokenRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供組態<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>類別<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別或衍生的類別中的這些類別的其中一個。|  
   
-## 備註  
- `<nameClaimType>` 項目集合 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> 屬性，當 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> 物件從設定來初始化。  
+## <a name="remarks"></a>備註  
+ `<nameClaimType>`項目集合<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>屬性時<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>從設定初始化物件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
     <samlSecurityTokenRequirement>  
         <nameClaimType value="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" />  
@@ -66,5 +77,5 @@ caps.handback.revision: 4
 </add>  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

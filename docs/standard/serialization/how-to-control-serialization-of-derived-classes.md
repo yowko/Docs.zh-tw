@@ -8,21 +8,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: f09584345d10cece014da9604ffbfe01ad08d10f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6ef944b9c41d26736f044fff9d40efb5e3ef32f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>HOW TO：控制衍生類別的序列化
 使用 **XmlElementAttribute** 屬性變更 XML 項目的名稱並非自訂物件序列化的唯一方法。 您可從現有類別衍生以自訂化 XML 資料流並指示 <xref:System.Xml.Serialization.XmlSerializer> 執行個體如何序列化新類別。  
@@ -245,11 +242,10 @@ public class Run
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Serialization.XmlSerializer>   
- <xref:System.Xml.Serialization.XmlElementAttribute>   
- <xref:System.Xml.Serialization.XmlAttributes>   
- <xref:System.Xml.Serialization.XmlAttributeOverrides>   
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ <xref:System.Xml.Serialization.XmlElementAttribute>  
+ <xref:System.Xml.Serialization.XmlAttributes>  
+ <xref:System.Xml.Serialization.XmlAttributeOverrides>  
+ [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [如何：指定 XML 資料流的替代元素名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-

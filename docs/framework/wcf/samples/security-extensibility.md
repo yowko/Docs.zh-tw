@@ -1,25 +1,28 @@
 ---
-title: "安全性擴充 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安全性擴充"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2d3a35839aaf980331b3b84181027d9c170c619d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 安全性擴充
+# <a name="security-extensibility"></a>安全性擴充
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中自訂安全性的範例。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [永久性發行權杖提供者](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
  示範如何實作自訂用戶端發出的權杖提供者。  
   
@@ -27,7 +30,7 @@ caps.handback.revision: 7
  示範如何實作自訂用戶端 SAML 權杖提供者。  
   
  [支援權杖](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
- 示範如何將其他權杖加入至使用 WS\-Security 的訊息。  
+ 示範如何將其他權杖加入至使用 WS-Security 的訊息。  
   
  [權杖驗證器](../../../../docs/framework/wcf/samples/token-authenticator.md)  
  示範如何實作自訂權杖驗證器。  

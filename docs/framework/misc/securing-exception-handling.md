@@ -1,33 +1,32 @@
 ---
-title: "Securing Exception Handling | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "code security, exception handling"
-  - "security [.NET Framework], exception handling"
-  - "secure coding, exception handling"
-  - "exception handling, security"
+title: "設定例外狀況處理的安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: cpp
+helpviewer_keywords:
+- code security, exception handling
+- security [.NET Framework], exception handling
+- secure coding, exception handling
+- exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a028fcdfb6c85e456c8722decdb1bca8fd907a9f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Securing Exception Handling
-使用 Visual C\+\+ 和 Visual Basic 時，任何 **finally** 陳述式之前都會先執行可提升堆疊的篩選條件運算式。  **finally** 陳述式後面還會執行與該篩選條件關聯的 **catch** 區塊。  如需詳細資訊，請參閱[使用使用者篩選的例外狀況](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。  本章節旨在檢閱這個順序的安全性含意。  請先看看下列說明篩選條件陳述式和 **finally** 陳述式執行順序的虛擬程式碼範例。  
+# <a name="securing-exception-handling"></a>設定例外狀況處理的安全性
+在 Visual c + + 和 Visual Basic 中，執行才能進行任何進一步篩選條件運算式堆疊**最後**陳述式。 **攔截**與相關聯的區塊之後，該篩選條件執行**最後**陳述式。 如需詳細資訊，請參閱[使用使用者篩選例外狀況](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本節會檢查此順序的安全性含意。 請考慮下列虛擬程式碼範例所說明的篩選陳述式中的順序和**最後**執行的陳述式。  
   
 ```cpp  
 void Main()   
@@ -59,7 +58,7 @@ void Sub()
 }                        
 ```  
   
- 這個程式碼會列印下列內容。  
+ 此程式碼會列印下列項目。  
   
 ```  
 Throw  
@@ -68,7 +67,7 @@ Finally
 Catch  
 ```  
   
- 篩選條件會在 **finally** 陳述之前執行，因此使狀態變更的任何物件都可能會引發安全性問題，因為其他程式碼可能會利用這個變更來執行。  例如：  
+ 篩選條件之前執行**最後**陳述式，因此可以使狀態變更的其他程式碼的執行位置無法充分利用的任何項目所導入的安全性問題。 例如:   
   
 ```cpp  
 try   
@@ -87,7 +86,7 @@ finally
 }  
 ```  
   
- 這個虛擬程式碼允許篩選條件將堆疊提高，以執行任意程式碼。  類似效果的作業範例還包括其他識別的暫時模擬、設定略過某種安全性檢查的內部旗標，或是變更與執行緒關聯的文化特性 \(Culture\) 等。  建議的解決方法是採用例外狀況處理常式 \(Exception Handler\) 將程式碼中執行緒狀態的變更與呼叫端的篩選條件區塊隔離。  然而，引入例外狀況處理常式的方式必須正確，否則將無法修正這個問題。  以下的範例將切換 UI 文化特性，但同樣地也可能引起執行緒狀態變更的問題。  
+ 此虛擬程式碼可讓篩選器來執行任意程式碼的堆疊。 作業會有類似的效果的其他範例的其他身分識別，將會略過部分安全性檢查，內部旗標設定暫時模擬或變更文化特性與執行緒相關聯。 建議的解決方案是導入執行緒狀態來隔離的程式碼變更，從呼叫端的篩選條件區塊的例外狀況處理常式。 不過，很重要的例外狀況處理常式會正確導入，或將不會修正此問題。 下列範例會切換的 UI 文化特性，但可以同樣地公開任何種類的執行緒狀態變更。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -101,7 +100,6 @@ YourObject.YourMethod()
       Thread.CurrentThread.CurrentUICulture = saveCulture;  
    }  
 }  
-  
 ```  
   
 ```vb  
@@ -125,7 +123,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- 修正這種狀況的正確方法是將現有的 **try**\/**finally** 區塊包裝在 **try**\/**catch** 區塊中。  如以下範例所示，只將 **catch\-throw** 子句引入現有的 **try**\/**finally** 區塊中並不能修正這個問題。  
+ 正確的修正程式在此情況下會包裝現有**再試一次**/**最後**中區塊**再試一次**/**攔截**區塊。 只要簡介**catch throw**到現有的子句**再試一次**/**最後**區塊仍無法解決問題，如下列範例所示。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -145,9 +143,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- 這樣並不能修正問題，因為 **finally** 陳述式未在 `FilterFunc` 取得控制之前執行。  
+ 這樣無法修正問題，因為**最後**之前尚未執行陳述式`FilterFunc`取得控制項。  
   
- 以下的範例則是透過確保 **finally** 子句已先執行，然後才在呼叫端的例外狀況篩選條件區塊上提供例外狀況，以修正問題。  
+ 下列範例會修正此問題透過確保**最後**子句已先提供例外狀況，呼叫端的例外狀況篩選條件區塊上執行。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -169,5 +167,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## 請參閱  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>另請參閱  
+ [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

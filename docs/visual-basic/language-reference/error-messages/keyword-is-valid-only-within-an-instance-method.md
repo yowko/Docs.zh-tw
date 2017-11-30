@@ -1,37 +1,35 @@
 ---
-title: "&#39;&lt;keyword&gt;&#39; is valid only within an instance method | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30043"
-  - "vbc30043"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30043"
+title: "&#39;&lt;關鍵字&gt;&#39; 只能在執行個體方法"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30043
+- vbc30043
+helpviewer_keywords: BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a61314c036cec0fd1412a9c844a610fbd1401add
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;&lt;keyword&gt;&#39; is valid only within an instance method
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-`Me`、`MyClass` 和 `MyBase` 關鍵字參考特定的類別執行個體。  您不能在共用的 `Function` 或 `Sub` 程序中使用他們。  
+# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;關鍵字&gt;&#39; 只能在執行個體方法
+`Me`， `MyClass`，和`MyBase`關鍵字參考特定的類別執行個體。 您無法使用它們內共用`Function`或`Sub`程序。  
   
- **錯誤 ID**：BC30043  
+ **錯誤 ID:** BC30043  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   移除程序中的關鍵字，或移除程序宣告中的 `Shared` 關鍵字。  
+-   移除程序中的關鍵字，或移除`Shared`程序宣告中的關鍵字。  
   
-## 請參閱  
- [Object Variable Assignment](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)   
- [Me, My, MyBase, and MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a>另請參閱  
+ [物件變數指派](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
+ [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

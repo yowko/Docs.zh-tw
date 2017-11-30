@@ -1,25 +1,28 @@
 ---
-title: "HttpTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: HttpTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b1542406caf9bb3684ccf2d97ed441f1dc3d0db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HttpTransportBindingElement
+# <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class HttpTransportBindingElement : TransportBindingElement  
@@ -39,101 +42,101 @@ class HttpTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  HttpTransportBindingElement 類別並未定義任何方法。  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  HttpTransportBindingElement 類別具有下列屬性：  
   
-### AllowCookies  
+### <a name="allowcookies"></a>AllowCookies  
  資料型別：布林值  
   
  存取類型：唯讀  
   
- 代表用戶端是否接受 Cookie 並在未來的要求傳播 Cookie 的值。  
+ 表示用戶端是否接受 Cookie 並在未來的要求傳播 Cookie 的值。  
   
-### AuthenticationScheme  
+### <a name="authenticationscheme"></a>AuthenticationScheme  
  資料型別：字串  
   
  存取類型：唯讀  
   
  用於驗證由 HTTP 接聽項處理之用戶端要求的驗證配置。  
   
-### BypassProxyOnLocal  
+### <a name="bypassproxyonlocal"></a>BypassProxyOnLocal  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  代表是否針對本機位址略過 Proxy 的值。  
   
-### HostNameComparisonMode  
+### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
  資料型別：字串  
   
  存取類型：唯讀  
   
- 代表主機名稱是否用於連線到服務的值 \(當符合 URI 時\)。  
+ 代表主機名稱是否用於連線到服務的值 (當符合 URI 時)。  
   
-### KeepAliveEnabled  
+### <a name="keepaliveenabled"></a>KeepAliveEnabled  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  啟用時，不論活動等級為何，HTTP 連線會維持開啟。  
   
-### MaxBufferSize  
+### <a name="maxbuffersize"></a>MaxBufferSize  
  資料型別：sint32  
   
  存取類型：唯讀  
   
  緩衝集區的大小上限。  
   
-### ProxyAddress  
+### <a name="proxyaddress"></a>ProxyAddress  
  資料型別：字串  
   
  存取類型：唯讀  
   
  包含用於 HTTP 要求之 Proxy 位址的 URI。  
   
-### ProxyAuthenticationScheme  
+### <a name="proxyauthenticationscheme"></a>ProxyAuthenticationScheme  
  資料型別：字串  
   
  存取類型：唯讀  
   
  用於驗證由 HTTP Proxy 處理之用戶端要求的驗證配置。  
   
-### Realm  
+### <a name="realm"></a>Realm  
  資料型別：字串  
   
  存取類型：唯讀  
   
  驗證領域。  
   
-### TransferMode  
+### <a name="transfermode"></a>TransferMode  
  資料型別：字串  
   
  存取類型：唯讀  
   
  代表訊息是經過緩衝處理或資料流處理，或為要求或回應的值。  
   
-### UnsafeConnectionNtlmAuthentication  
+### <a name="unsafeconnectionntlmauthentication"></a>UnsafeConnectionNtlmAuthentication  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  代表是否已在伺服器啟用「不安全的連線共用」的值。  
   
-### UseDefaultWebProxy  
+### <a name="usedefaultwebproxy"></a>UseDefaultWebProxy  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  代表是否使用全機器追蹤 Proxy 設定，而非使用者特定設定的值。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|  
+|---------|-----------------------------------|  
+|命名空間|於 root\ServiceModel 中定義|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

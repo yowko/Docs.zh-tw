@@ -7,21 +7,20 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: a4c125493e1b59d329bf4626c45f48b2b222d308
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cc6df422359826bc908bd412aaf89aa784be59ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="steps-in-the-serialization-process"></a>序列化程序中的步驟
 在[格式子](xref:System.Runtime.Serialization.Formatter)上呼叫 <xref:System.Runtime.Serialization.Formatter.Serialize*> 方法時，物件序列化會遵循下列規則順序繼續進行：
 
-- 進行檢查以判斷格式子是否有代理選取器。 若格式子有代理選取器，檢查代理選取器是否處理指定型別的物件。 若選取器可處理物件類型，會對代理選取器呼叫 <xref:System.Runtime.Serialization.ISerializable.GetObjectData*?displayProperty=fullName>。
+- 進行檢查以判斷格式子是否有代理選取器。 若格式子有代理選取器，檢查代理選取器是否處理指定型別的物件。 若選取器可處理物件類型，會對代理選取器呼叫 <xref:System.Runtime.Serialization.ISerializable.GetObjectData*?displayProperty=nameWithType>。
 
 - 若無代理選取器，或它不處理物件類型，則檢查以判斷物件是否以 [Serializable](xref:System.SerializableAttribute) 屬性標記。 如果物件不是，就會擲回 <xref:System.Runtime.Serialization.SerializationException>。
 
@@ -32,5 +31,5 @@ ms.lasthandoff: 08/21/2017
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 ## <a name="see-also"></a>另請參閱  
- [二進位序列化](binary-serialization.md)   
+ [二進位序列化](binary-serialization.md)  
  [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

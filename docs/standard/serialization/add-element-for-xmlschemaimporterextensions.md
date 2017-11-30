@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <xmlSchemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 859e348359ed35e971baff8611fa4f676808f5a7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 766d04dd792534f0da33116ed959d81ff376e026
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltaddgt-element-for-ltxmlschemaimporterextensionsgt"></a>&lt;xmlSchemaImporterExtensions&gt; 的 &lt;add&gt; 元素
 加入 <xref:System.Xml.Serialization.XmlSchemaImporter> 使用的型別，將 XSD 型別對應至 .NET Framework 型別。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -76,7 +70,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Serialization.XmlSchemaImporter>   
- [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)   
+ <xref:System.Xml.Serialization.XmlSchemaImporter>  
+ [\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)  
  [\<schemaImporterExtensions>元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-

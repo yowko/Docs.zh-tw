@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - qualifying XML names
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: e8f84cad46899d0dcce1532231f2f17553098b6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 22ec3703331c43cd3b244ee3a5ce2e48d30314e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>HOW TO：限定 XML 元素和 XML 屬性名稱
 [程式碼範例](#cpconworkingwithxmlnamespacesanchor1)  
@@ -182,12 +179,11 @@ public class Book
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Serialization.XmlSerializer>   
- [XML 結構描述定義工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)   
- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)   
- [控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
- [如何：指定 XML 資料流的替代項目名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [XML 結構描述定義工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+ [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)  
+ [可控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [如何：指定 XML 資料流的替代元素名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

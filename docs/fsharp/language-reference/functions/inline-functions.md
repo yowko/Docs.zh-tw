@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 3fa31178-08f8-463d-9d41-d29220a90027
-ms.openlocfilehash: 8293a73e9468d3bc3eb51cd99860e52c48121ae3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 0489d411e2754eaab6a10ff0feb4405491b3b511
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="inline-functions"></a>內嵌函式
 

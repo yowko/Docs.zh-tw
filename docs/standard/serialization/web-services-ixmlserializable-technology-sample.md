@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0202d3f1-a50b-427d-a5bb-79208b8f1c22
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: d59b8a1be0de5c2725fbb9c3421936ece4be8065
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 72c7e9e1cbf47dd54726a16ddeb58a193d62dc31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="web-services-ixmlserializable-technology-sample"></a>Web 服務 IXmlSerializable 技術範例
 [下載範例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
@@ -53,13 +52,12 @@ ms.lasthandoff: 08/21/2017
 2.  輸入 **http://localhost/IXmlSerializable/Service.asmx**。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Serialization.IXmlSerializable>   
- <xref:System.Xml.Serialization>   
- <xref:System.Xml.XmlConvert>   
- <xref:System.Xml.XmlQualifiedName>   
- <xref:System.Xml.XmlReader>   
- <xref:System.Xml.Schema.XmlSchema>   
- <xref:System.Xml.Schema.XmlSchemaSet>   
- <xref:System.Xml.XmlUrlResolver>   
+ <xref:System.Xml.Serialization.IXmlSerializable>  
+ <xref:System.Xml.Serialization>  
+ <xref:System.Xml.XmlConvert>  
+ <xref:System.Xml.XmlQualifiedName>  
+ <xref:System.Xml.XmlReader>  
+ <xref:System.Xml.Schema.XmlSchema>  
+ <xref:System.Xml.Schema.XmlSchemaSet>  
+ <xref:System.Xml.XmlUrlResolver>  
  <xref:System.Xml.XmlWriter>
-

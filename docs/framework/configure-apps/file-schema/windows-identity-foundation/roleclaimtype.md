@@ -1,64 +1,75 @@
 ---
-title: "&lt;roleClaimType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;roleClaimType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 8a5de30d60478b6601781ac34fd481a6167462e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;roleClaimType&gt;
-指定可定義動作型別需要在 <xref:System.Security.Claims.ClaimsIdentity> 物件集合語彙基元之處理常式的 <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> 方法傳回的需求類型。  
+# <a name="ltroleclaimtypegt"></a>&lt;roleClaimType&gt;
+指定的集合中定義的角色類型宣告的宣告類型<xref:System.Security.Claims.ClaimsIdentity>所傳回的物件<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>語彙基元處理常式的方法。  
   
-## 語法  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<add>  
+\<samlSecurityTokenRequirement >  
+\<roleClaimType >  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add>  
-        <samlSecurityTokenRequirement>  
-          <roleClaimType value=xs:string>  
-          </roleClaimType>  
-        </samlSecurityTokenRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add>  
+        <samlSecurityTokenRequirement>  
+          <roleClaimType value=xs:string>  
+          </roleClaimType>  
+        </samlSecurityTokenRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|值|指定 URI 表示所要求的型別用於角色所要求型別的字串。|  
+|---------------|-----------------|  
+|值|字串，指定代表要用於角色宣告類型宣告的宣告類型的 URI。|  
   
-### 子項目  
- None  
+### <a name="child-elements"></a>子元素  
+ 無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
-|--------|--------|  
-|[\<samlSecurityTokenRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 類別、類別或 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 這些類別的其中一個衍生的類別提供設定。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<samlSecurityTokenRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供組態<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>類別<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別或衍生的類別中的這些類別的其中一個。|  
   
-## 備註  
- `<roleClaimType>` 項目集合 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> 屬性，當 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> 物件從設定來初始化。  
+## <a name="remarks"></a>備註  
+ `<roleClaimType>`項目集合<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>屬性時<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>從設定初始化物件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
     <samlSecurityTokenRequirement>  
         <roleClaimType value="schemas.microsoft.com/ws/2006/04/identity/claims/role" />  
@@ -66,5 +77,5 @@ caps.handback.revision: 4
 </add>  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>

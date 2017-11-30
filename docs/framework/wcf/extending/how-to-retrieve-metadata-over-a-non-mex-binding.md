@@ -1,29 +1,32 @@
 ---
-title: "HOW TO：透過非 MEX 繫結擷取中繼資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：透過非 MEX 繫結擷取中繼資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f214c45ea09c96d5cb77646f31b7c53338761621
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：透過非 MEX 繫結擷取中繼資料
-本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。這個範例中的程式碼是以[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)範例為基礎。  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>HOW TO：透過非 MEX 繫結擷取中繼資料
+本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。 此範例中的程式碼根據[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)範例。  
   
-### 透過非 MEX 繫結擷取中繼資料  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>透過非 MEX 繫結擷取中繼資料  
   
-1.  判定 MEX 端點使用的繫結。您可以藉由存取 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的組態檔來判定服務的 MEX 繫結。在此例中，MEX 繫結是定義於下列服務組態。  
+1.  判定 MEX 端點使用的繫結。 您可以藉由存取 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的組態檔來判定服務的 MEX 繫結。 在此例中，MEX 繫結是定義於下列服務組態。  
   
-    ```  
+    ```xml  
     <services>  
         <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
                 behaviorConfiguration="CalculatorServiceBehavior">  
@@ -55,9 +58,9 @@ caps.handback.revision: 10
      </bindings>  
     ```  
   
-2.  在用戶端組態檔中，設定相同的自訂繫結。在此用戶端也會定義 `clientCredentials` 行為以提供憑證，當要求 MEX 端點的中繼資料時可以用來驗證服務。當使用 Svcutil.exe 透過自訂繫結要求中繼資料時，您應該將 MEX 端點組態新增至 Svcutil.exe 的組態檔 \(Svcutil.exe.config\)，並且端點組態的名稱應符合 MEX 端點位址的 URI 結構描述，如下列程式碼所示。  
+2.  在用戶端組態檔中，設定相同的自訂繫結。 在此用戶端也會定義 `clientCredentials` 行為以提供憑證，當要求 MEX 端點的中繼資料時可以用來驗證服務。 當使用 Svcutil.exe 透過自訂繫結要求中繼資料時，您應該將 MEX 端點組態新增至 Svcutil.exe 的組態檔 (Svcutil.exe.config)，並且端點組態的名稱應符合 MEX 端點位址的 URI 結構描述，如下列程式碼所示。  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <client>  
         <endpoint name="http"  
@@ -90,7 +93,7 @@ caps.handback.revision: 10
     </system.serviceModel>  
     ```  
   
-3.  建立 `MetadataExchangeClient` 並呼叫 `GetMetadata`。這有兩種做法：您可以在組態中指定自訂繫結，或是在程式碼中指定自訂繫結，如下列範例所示。  
+3.  建立 `MetadataExchangeClient` 並呼叫 `GetMetadata`。 這有兩種做法：您可以在組態中指定自訂繫結，或是在程式碼中指定自訂繫結，如下列範例所示。  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -128,7 +131,7 @@ caps.handback.revision: 10
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  此時，您會擁有服務端點的集合。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]匯入中繼資料的詳細資訊，請參閱 [HOW TO：將中繼資料匯入服務端點](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
+5.  此時，您會擁有服務端點的集合。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]匯入中繼資料，請參閱[How to： 匯入到服務端點的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)

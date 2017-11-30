@@ -1,31 +1,34 @@
 ---
-title: "工作流程的 &lt;system.serviceModel&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "工作流程的 &lt;system.serviceModel&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97247abe629d12b6c60d8157786b9b82e9e14f4b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 工作流程的 &lt;system.serviceModel&gt;
+# <a name="ltsystemservicemodelgt-of-workflow"></a>工作流程的 &lt;system.serviceModel&gt;
 這個組態區段包含所有工作流程組態項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
-  
+```xml  
 <system.ServiceModel>  
   <behaviors>  
     <serviceBehaviors>  
     <behavior name="String">  
-      <bufferReceive maxPendingMessagesPerChannel=”Integer” />  
+      <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
      <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
@@ -44,14 +47,14 @@ caps.handback.revision: 4
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
+  <tracking>    
      <participants>   
       <add name="String"   
            profileName="String"  
            type="String" />   
      </participants>   
-    <trackingProfile name="String">  
-      <workflow activityDefinitionId="String">  
+    <trackingProfile name="String">  
+      <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
              <activityScheduledQuery activityName="String"  
                  childActivityName="String"/>  
@@ -83,34 +86,34 @@ caps.handback.revision: 4
                  faultHandlerActivityName="String"/>  
           </faultPropagationQueries>  
          <workflowInstanceQueries>  
-            <workflowInstanceQuery>  
-              <states>  
-                 <state name="String"/>  
-              </states>  
-          </workflowInstanceQuery>  
+            <workflowInstanceQuery>  
+              <states>  
+                 <state name="String"/>  
+              </states>  
+          </workflowInstanceQuery>  
         </workflowInstanceQueries>  
-      </workflow>  
-    </trackingProfile>          
-   </profiles>  
+      </workflow>  
+    </trackingProfile>          
+   </profiles>  
   </tracking>  
 </system.ServiceModel>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
  無  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
-|--------|--------|  
-|[\<behaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|這個區段會定義 **serviceBehaviors** 集合。  集合中的每個項目都會定義服務使用的行為項目。  每個行為項目都由其唯一的 **name** 屬性所識別。|  
-|[\<tracking\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|代表定義工作流程服務之追蹤設定的組態區段。<br /><br /> 如需工作流程追蹤及其組態的詳細資訊，請參閱[工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)和[設定工作流程的追蹤](../../../../../docs/framework/windows-workflow-foundation//configuring-tracking-for-a-workflow.md)。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|這個區段會定義**serviceBehaviors**集合。  集合中的每個項目都會定義服務使用的行為項目。 每個行為項目由其唯一**名稱**屬性。|  
+|[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|代表定義工作流程服務之追蹤設定的組態區段。<br /><br /> 如需工作流程追蹤和其設定的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[流程設定追蹤](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|\<configuration\>|.NET 組態檔中所有組態項目的根項目。|
+|項目|說明|  
+|-------------|-----------------|  
+|\<configuration>|.NET 組態檔中所有組態項目的根項目。|

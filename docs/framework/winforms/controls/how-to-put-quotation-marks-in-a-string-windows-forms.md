@@ -1,50 +1,53 @@
 ---
-title: "如何：將引號放入字串中 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "引號"
-  - "引號, 在文字方塊中加入字串"
-  - "TextBox 控制項 [Windows Form], 顯示引號"
+title: "如何：將引號放入字串中 (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- quotation marks
+- TextBox control [Windows Forms], displaying quotation marks
+- quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a4141a27a3b195dbb747a827d2bd9426a948f83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將引號放入字串中 (Windows Form)
-有時，可能會想在文字字串中放入引號 \(" "\)。  例如：  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：將引號放入字串中 (Windows Forms)
+您有時可能想要將引號 (" ") 放入文字字串中。 例如：  
   
- She said, "You deserve a treat\!"  
+ She said, "You deserve a treat!"  
   
- 或者，您也可以使用 <xref:Microsoft.VisualBasic.ControlChars.Quote> 欄位當做常數。  
+ 或者，您也可以使用<xref:Microsoft.VisualBasic.ControlChars.Quote>欄位做為常數。  
   
-### 若要在程式碼中的字串中放置引號  
+### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>將引號放入您的程式碼中的字串  
   
-1.  在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，請在資料列中插入兩個引號當做內嵌的引號。  在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)] 中，請插入逸出序列 \(Escape Sequence\) \\" 當做內嵌的引號。  例如，使用以下程式碼來建立前置字串：  
+1.  在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，將兩個引號插入資料列中當作內嵌引號。 在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)] 中，插入逸出序列 \\" 當作內嵌引號。 例如，若要建立前置字串，請使用下列程式碼。  
   
     ```vb  
     Private Sub InsertQuote()  
        TextBox1.Text = "She said, ""You deserve a treat!"" "  
     End Sub  
-  
     ```  
   
     ```csharp  
     private void InsertQuote(){  
        textBox1.Text = "She said, \"You deserve a treat!\" ";  
     }  
-  
     ```  
   
     ```cpp  
@@ -55,15 +58,14 @@ caps.handback.revision: 14
        }  
     ```  
   
-     \-或\-  
+     -或-  
   
-2.  插入 ASCII 或 Unicode 字元來當做引號。  在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中請使用 ASCII 字元 \(34\)。  在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中請使用 Unicode 字元 \(\\u0022\)。  
+2.  針對引號插入 ASCII 或 Unicode 字元。 在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，使用 ASCII 字元 (34)。 在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中，使用 Unicode 字元 (\u0022)。  
   
     ```vb  
     Private Sub InsertAscii()  
        TextBox1.Text = "She said, " & Chr(34) & "You deserve a treat!" & Chr(34)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -73,22 +75,20 @@ caps.handback.revision: 14
     ```  
   
     > [!NOTE]
-    >  在此範例中您無法使用 \\u0022，因為無法使用基礎字元集中用以指定字元的通用字元名稱。  否則的話，將會導致 C3851。  如需詳細資訊，請參閱[編譯器錯誤 C3851](../Topic/Compiler%20Error%20C3851.md)。  
+    >  在此範例中，您無法使用 \u0022，因為不能使用表明是基本字元集中字元的通用字元名稱。 否則，您會產生 c3851。 如需詳細資訊，請參閱[編譯器錯誤 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。  
   
-     \-或\-  
+     -或-  
   
-3.  您也可以定義字元的常數，並在需要時使用：  
+3.  您也可以定義字元的常數，並且在需要時使用它。  
   
     ```vb  
     Const quote As String = """"  
     TextBox1.Text = "She said, " & quote & "You deserve a treat!" & quote  
-  
     ```  
   
     ```csharp  
     const string quote = "\"";  
     textBox1.Text = "She said, " + quote +  "You deserve a treat!"+ quote ;  
-  
     ```  
   
     ```cpp  
@@ -98,13 +98,13 @@ caps.handback.revision: 14
        const_cast<String^>(quote));  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.TextBox>   
- <xref:Microsoft.VisualBasic.ControlChars.Quote>   
- [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [如何：控制 Windows Form TextBox 控制項的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [如何：使用 Windows Form TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [如何：建立唯讀文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [如何：在 Windows Form TextBox 控制項中選取文字](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [如何：檢視 Windows Form TextBox 控制項中的多行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.TextBox>  
+ <xref:Microsoft.VisualBasic.ControlChars.Quote>  
+ [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [操作說明：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [操作說明：使用 Windows Forms TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [操作說明：建立唯讀文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [操作說明：在 Windows Forms TextBox 控制項中選取文字](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [操作說明：在 Windows Forms TextBox 控制項中檢視多行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

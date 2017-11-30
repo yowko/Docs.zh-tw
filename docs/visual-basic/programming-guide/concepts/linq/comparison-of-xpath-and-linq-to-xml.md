@@ -1,43 +1,39 @@
 ---
-title: "比較 XPath 和 LINQ to XML1 |Microsoft 文件"
+title: "XPath 和 LINQ to XML1 的比較"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c3fd07c1-6761-4e4b-8eb1-ddd780ed8d44
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e9601c51468fdf5adab8e521f8f89ee7f2e12869
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 761df14ee4bdfa9ddeb3f742134f4f47f8bb283f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath 和 LINQ to XML 的比較
-XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 提供一些類似的功能。 兩者都可用於查詢 XML 樹狀結構，將此類結果當做項目的集合、屬性的集合、節點的集合，以及項目或屬性的值傳回。 不過，也有一些差異。  
+XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一些類似的功能。 兩者都可用於查詢 XML 樹狀結構，將此類結果當做項目的集合、屬性的集合、節點的集合，以及項目或屬性的值傳回。 不過，也有一些差異。  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>XPath 與 LINQ to XML 之間的差異  
- XPath 不允許評估新的型別。 它只能從樹狀結構傳回節點的集合，而 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 可以執行查詢並評估新圖案中的物件圖形或 XML 樹狀結構。 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢包含的功能更多，而且比 XPath 運算式的功能更強大。  
+ XPath 不允許評估新的型別。 它只能從樹狀結構傳回節點的集合，而 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可以執行查詢並評估新圖案中的物件圖形或 XML 樹狀結構。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢包含的功能更多，而且比 XPath 運算式的功能更強大。  
   
- XPath 運算式存在於字串內的隔離中。 Visual Basic 編譯器無法協助剖析 XPath 運算式，在編譯時期。 相較之下，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]剖析及 Visual Basic 編譯器所編譯的查詢。 該編譯器可以擷取許多查詢錯誤。  
+ XPath 運算式存在於字串內的隔離中。 Visual Basic 編譯器無法協助剖析 XPath 運算式，在編譯時間。 相反地，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]剖析和 theVisual 基本編譯器所編譯的查詢。 該編譯器可以擷取許多查詢錯誤。  
   
- XPath 結果不是強型別 (Strongly Typed)。 在許多情況下，評估 XPath 運算式的結果不是物件，而且開發人員可以決定適當的型別，並在必要時轉換結果。 相較之下，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢的評估為強型別。  
+ XPath 結果不是強型別 (Strongly Typed)。 在許多情況下，評估 XPath 運算式的結果不是物件，而且開發人員可以決定適當的型別，並在必要時轉換結果。 相較之下，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的評估為強型別。  
   
 ## <a name="result-ordering"></a>結果順序  
  XPath 1.0 建議事項說明評估 XPath 運算式之結果的集合沒有排序。  
   
- 不過，逐一查看由 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] XPath 軸方法傳回的集合時，會以文件順序傳回集合中的節點。 即使在存取 XPath 軸 (其中的述詞會根據反向的文件順序表示，例如，`preceding` 和 `preceding-sibling`) 時，也是如此。  
+ 不過，逐一查看由 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XPath 軸方法傳回的集合時，會以文件順序傳回集合中的節點。 即使在存取 XPath 軸 (其中的述詞會根據反向的文件順序表示，例如，`preceding` 和 `preceding-sibling`) 時，也是如此。  
   
- 相較之下，大部分的[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]軸會傳回集合中的文件順序，但其中，兩個<xref:System.Xml.Linq.XNode.Ancestors%2A>和<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>，以反向的文件順序傳回集合。</xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A> </xref:System.Xml.Linq.XNode.Ancestors%2A> 下表列舉座標軸，並指出每個座標軸的集合順序：  
+ 相較之下，大部分的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸會以文件順序傳回集合，但其中兩個 (<xref:System.Xml.Linq.XNode.Ancestors%2A> 和 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>) 會以反向的文件順序傳回集合。 下表列舉座標軸，並指出每個座標軸的集合順序：  
   
 |LINQ to XML 軸|排序|  
 |----------------------|--------------|  
@@ -62,17 +58,17 @@ XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/l
   
  相較之下，LINQ to XML 中的所有位置性述詞都一律會以座標軸的順序表示。 例如，`anElement.ElementsBeforeSelf().ToList()[0]` 會傳回所查詢項目之父代的第一個子項目，而非正前面的同層級。 另一個範例：`anElement.Ancestors().ToList()[0]` 會傳回父項目。  
   
- 請注意，上述的方法會具體化整個集合。 這不是撰寫該查詢的最有效方式。 此範例以該方式撰寫，以示範位置性述詞的行為。 若要撰寫相同查詢更適當的方式是使用<xref:System.Linq.Enumerable.First%2A>方法，如下︰ `anElement.ElementsBeforeSelf().First()`。</xref:System.Linq.Enumerable.First%2A>  
+ 請注意，上述的方法會具體化整個集合。 這不是撰寫該查詢的最有效方式。 此範例以該方式撰寫，以示範位置性述詞的行為。 撰寫相同查詢更適當的方式為使用 <xref:System.Linq.Enumerable.First%2A> 方法，如下所示：`anElement.ElementsBeforeSelf().First()`。  
   
- 如果您要在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中尋找正前面的項目，您可以撰寫下列運算式：  
+ 如果您要在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中尋找正前面的項目，您可以撰寫下列運算式：  
   
  `ElementsBeforeSelf().Last()`  
   
 ## <a name="performance-differences"></a>效能差異  
- 使用 XPath 功能中的 XPath 查詢[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]將不會執行，如同[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]查詢。  
+ 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中使用 XPath 功能的 XPath 查詢以及 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢將不會執行。  
   
 ## <a name="comparison-of-composition"></a>撰寫比較  
- 撰寫 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢與撰寫 XPath 運算式類似，但是在語法上非常不同。  
+ 撰寫 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢與撰寫 XPath 運算式類似，但是在語法上非常不同。  
   
  例如，如果您在變數中有一個名稱為 `customers` 的項目，而且您想要在名稱為 `CompanyName` 的所有子項目下，尋找名稱為 `Customer` 的後代子項目，您可以撰寫 XPath 運算式，如下所示：  
   
@@ -80,7 +76,7 @@ XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/l
 customers.XPathSelectElements("./Customer/CompanyName")  
 ```  
   
- 對等的 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢是：  
+ 對等的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢是：  
   
 ```vb  
 customers.Element("Customer").Elements("CompanyName")  
@@ -90,17 +86,17 @@ customers.Element("Customer").Elements("CompanyName")
   
 |XPath 座標軸|LINQ to XML 軸|  
 |----------------|----------------------|  
-|child (預設軸)|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName></xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|  
-|Parent (..)|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=fullName></xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=fullName>|  
-|attribute 軸 (@)|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|  
-|ancestor 軸|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|  
-|ancestor-or-self 軸|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|  
-|descendant 軸 (//)|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName></xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=fullName></xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=fullName>|  
-|descendant-or-self|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=fullName>|  
-|following-sibling|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=fullName>|  
-|preceding-sibling|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=fullName>|  
+|child (預設軸)|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|  
+|Parent (..)|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=nameWithType>|  
+|attribute 軸 (@)|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|  
+|ancestor 軸|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|  
+|ancestor-or-self 軸|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|  
+|descendant 軸 (//)|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=nameWithType>|  
+|descendant-or-self|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=nameWithType>|  
+|following-sibling|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=nameWithType>|  
+|preceding-sibling|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=nameWithType>|  
 |following|沒有直接的對等。|  
 |preceding|沒有直接的對等。|  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to XML 的 XPath 使用者 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
