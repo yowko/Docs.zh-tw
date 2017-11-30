@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - trace switches, configuring
 - tracing [.NET Framework], trace switches
@@ -21,29 +18,28 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5ba232e3c84f7bfa089822d4a4f792b179bf32
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f5fa8a0fbe6dc08811162ba9b1d4198af9256fc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：建立，初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
   
 <a name="create"></a>   
 ## <a name="creating-and-initializing-a-trace-switch"></a>建立和初始化追蹤參數  
- 為了使用追蹤參數，您必須先建立追蹤參數，並將其置於程式碼中。 您可從兩種預先定義的類別來建立參數物件：<xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> 類別和 <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName> 類別。 如果您只在意是否要顯示追蹤訊息，則可使用 <xref:System.Diagnostics.BooleanSwitch>；如果您想要區別追蹤層級，請使用 <xref:System.Diagnostics.TraceSwitch>。 如果您使用 <xref:System.Diagnostics.TraceSwitch>，則可定義您自己的偵錯訊息，並將其與不同的追蹤層級關聯。 您可使用這兩種類型的參數搭配追蹤或偵錯。 根據預設，<xref:System.Diagnostics.BooleanSwitch> 為停用狀態，而 <xref:System.Diagnostics.TraceSwitch> 會設定為層級 <xref:System.Diagnostics.TraceLevel.Off?displayProperty=fullName>。 您可以建立追蹤參數，並置於程式碼中任何可能需要使用的部分。  
+ 為了使用追蹤參數，您必須先建立追蹤參數，並將其置於程式碼中。 您可從兩種預先定義的類別來建立參數物件：<xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 類別和 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 類別。 如果您只在意是否要顯示追蹤訊息，則可使用 <xref:System.Diagnostics.BooleanSwitch>；如果您想要區別追蹤層級，請使用 <xref:System.Diagnostics.TraceSwitch>。 如果您使用 <xref:System.Diagnostics.TraceSwitch>，則可定義您自己的偵錯訊息，並將其與不同的追蹤層級關聯。 您可使用這兩種類型的參數搭配追蹤或偵錯。 根據預設，<xref:System.Diagnostics.BooleanSwitch> 為停用狀態，而 <xref:System.Diagnostics.TraceSwitch> 會設定為層級 <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>。 您可以建立追蹤參數，並置於程式碼中任何可能需要使用的部分。  
   
  雖然您可在程式碼中設定追蹤層級和其他組態選項，但是建議您使用組態檔來管理參數的狀態。 這是因為在組態系統中管理參數的組態讓您擁有更多的彈性，也就是說，您可開啟或關閉各種參數和變更層級，而不需要重新編譯應用程式。  
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>建立和初始化追蹤參數  
   
-1.  將參數定義為 <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> 類型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName> 類型，並設定參數的名稱和描述。  
+1.  將參數定義為 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 類型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 類型，並設定參數的名稱和描述。  
   
 2.  設定追蹤參數。 如需詳細資訊，請參閱[設定追蹤參數](#configure)。  
   
@@ -72,7 +68,7 @@ ms.lasthandoff: 08/21/2017
   
  在部署的應用程式中，您可以在應用程式未執行時，透過重新設定參數物件來啟用追蹤程式碼。 這通常涉及開啟和關閉參數物件，或是變更追蹤層級，然後再重新啟動應用程式。  
   
- 當您建立參數的執行個體時，也可以透過指定下列兩個引數來初始化執行個體：*displayName* 引數和 *description* 引數。 建構函式的 *displayName* 引數會設定 <xref:System.Diagnostics.Switch> 類別執行個體的 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=fullName> 屬性。 *displayName* 是用來在 .config 檔案中設定參數的名稱，而 *description* 引數則應傳回參數的簡短描述和其控制的訊息。  
+ 當您建立參數的執行個體時，也可以透過指定下列兩個引數來初始化執行個體：*displayName* 引數和 *description* 引數。 建構函式的 *displayName* 引數會設定 <xref:System.Diagnostics.Switch> 類別執行個體的 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> 屬性。 *displayName* 是用來在 .config 檔案中設定參數的名稱，而 *description* 引數則應傳回參數的簡短描述和其控制的訊息。  
   
  除了指定要設定的參數名稱之外，您也必須指定參數的值。 這個值是整數。 如果是 <xref:System.Diagnostics.BooleanSwitch>，0 值會對應至 **Off**，而任何非零值則對應至 **On**。 如果是 <xref:System.Diagnostics.TraceSwitch>，0、1、2、3 和 4 分別對應至 **Off**、**Error**、**Warning**、**Info** 和 **Verbose**。 大於 4 的任何數字都會視為 **Verbose**，而小於零的任何數字則會視為 **Off**。  
   
@@ -138,8 +134,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [如何： 將追蹤陳述式加入至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [追蹤和偵錯設定結構描述](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-

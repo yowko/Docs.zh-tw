@@ -1,104 +1,109 @@
 ---
-title: "逐步解說：在 WPF 中裝載 Win32 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "將 Win32 控制項裝載在 WPF 中"
-  - "Win32 程式碼, WPF 互通"
+title: "逐步解說：在 WPF 中裝載 Win32 控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hosting Win32 control in WPF [WPF]
+- Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 566be72cf330f6da83987f5e693176552471f091
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：在 WPF 中裝載 Win32 控制項
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。  然而，長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼時，更有效的方式是在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中重複使用至少一部分的程式碼，而不是完整地重新撰寫程式碼。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供直接在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面上裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗的機制。  
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：在 WPF 中裝載 Win32 控制項
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，當您擁有了大筆投資的[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]程式碼，它可能是更有效率地重複使用最少部分中的程式碼程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是它完全重寫應用程式。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供簡單的機制，以裝載[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗，請在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。  
   
- 本主題會逐步說明裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 清單方塊控制項的應用程式[在 WPF 中裝載 Win32 ListBox 控制項範例](http://go.microsoft.com/fwlink/?LinkID=159998) \(英文\)。  您可延伸應用這個通用程序，以裝載任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗。  
+ 本主題會引導您透過應用程式，[裝載 WPF 範例中的 Win32 ListBox 控制項](http://go.microsoft.com/fwlink/?LinkID=159998)、 該主機[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]清單方塊控制項。 可以擴充這個一般程序，以裝載任何[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。  
   
-   
   
 <a name="requirements"></a>   
-## 需求  
- 本主題假設您已熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式設計的基本概念。  如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式設計的基本簡介，請參閱[快速入門](../../../../docs/framework/wpf/getting-started/index.md)。  如需 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式設計的簡介，請參考討論此主題的各種書籍，尤其是 Charles Petzold 所著的《*Programming Windows*》。  
+## <a name="requirements"></a>需求  
+ 本主題假設與這兩個基本的認識[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式設計。 如需基本簡介[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程式設計，請參閱[入門](../../../../docs/framework/wpf/getting-started/index.md)。 如需簡介[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式設計，您應該參考任何許多書籍主旨，特別是*程式設計 Windows* Charles Petzold 所。  
   
- 由於本主題所附的範例是以 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 實作，因此它會利用[!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] 來存取 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。  若能對 [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] 有一定熟悉程度將很有幫助，但並非絕對必要。  
+ 因為隨附本主題的範例中實作[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]，它會使用[!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)]存取[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 疐裾[!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]會有所助益，但不是重要。  
   
 > [!NOTE]
->  本主題包括摘錄自相關範例的許多程式碼範例。  不過，為了方便閱讀，此課程並未包含完整的範例程式碼。  您可以從[在 WPF 中裝載 Win32 ListBox 控制項範例](http://go.microsoft.com/fwlink/?LinkID=159998) \(英文\) 取得或檢視完整的程式碼。  
+>  本主題包含一些來自相關聯範例的程式碼範例。 不過，為了方便閱讀，並未包含完整的範例程式碼。 您可以取得，或檢視完整的程式碼[裝載 WPF 範例中的 Win32 ListBox 控制項](http://go.microsoft.com/fwlink/?LinkID=159998)。  
   
 <a name="basic_procedure"></a>   
-## 基本程序  
- 本節概述將 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗裝載在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面上的基本程序。  其餘各節則提供每個步驟的詳細說明。  
+## <a name="the-basic-procedure"></a>基本程序  
+ 本節將概述裝載的基本程序[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗上的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。 其餘各節將說明每個步驟的詳細資料。  
   
- 基本的裝載程序如下：  
+ 基本裝載程序如下︰  
   
-1.  實作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面來裝載視窗。  其中一種方法是建立 <xref:System.Windows.Controls.Border> 項目，保留頁面的某個區段來裝載視窗。  
+1.  實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面，即可主控視窗。 若要建立的其中一個技術是<xref:System.Windows.Controls.Border>保留裝載視窗的頁面區段的項目。  
   
-2.  實作類別以裝載繼承自 <xref:System.Windows.Interop.HwndHost> 的控制項。  
+2.  實作類別來裝載控制項是繼承自<xref:System.Windows.Interop.HwndHost>。  
   
-3.  在該類別中，覆寫 <xref:System.Windows.Interop.HwndHost> 類別成員 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。  
+3.  在該類別，覆寫<xref:System.Windows.Interop.HwndHost>類別成員<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。  
   
-4.  建立裝載的視窗，做為包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面之視窗的子系。  雖然傳統的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式開發不需要明確使用它，但是裝載頁面是具有控制代碼 \(HWND\) 的視窗。  您可透過 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> 方法的 `hwndParent` 參數接收頁面 HWND。  您必須將裝載的視窗建立成這個 HWND 的子系。  
+4.  建立裝載之的視窗的視窗，其中包含子系[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。 雖然傳統[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程式設計不需要明確地將使用它，裝載的網頁是一種視窗控制代碼 (HWND)。 接收頁面 HWND 透過`hwndParent`參數<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>方法。 裝載的視窗應該建立為此 HWND 的子系。  
   
-5.  建立裝載視窗之後，請傳回所裝載之視窗的 HWND。  如果要裝載一個或多個 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控制項，您通常會建立一個裝載視窗做為 HWND 的子系，然後再將控制項變成該裝載視窗的子系。  將控制項包裝在裝載視窗中，可以提供一種簡單的方式，供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面用來接收控制項傳回的通知，以處理跨越 HWND 界限之通知的某些特定 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 問題。  
+5.  建立主視窗之後，即會傳回裝載之視窗的 HWND。 如果您想要主控一或多個[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]控制項，您通常建立主機視窗為 HWND 的子系，並讓控制項視窗的子系該主機。 包裝控制項在主視窗中提供簡單的方式，讓您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面上要從控制項，接收通知的處理某些特定[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]問題 HWND 界限之間的通知。  
   
-6.  處理傳送至裝載視窗的選定訊息，例如子控制項傳回的通知。  執行這項作業的方法有兩種。  
+6.  處理傳送至主視窗的已選取訊息，例如來自子控制項的通知。 執行這項作業的方法有兩種。  
   
-    -   如果您想在自己的裝載類別中處理訊息，請覆寫 <xref:System.Windows.Interop.HwndHost> 方法的 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 方法。  
+    -   如果您想要處理訊息中裝載的類別，覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法<xref:System.Windows.Interop.HwndHost>類別。  
   
-    -   如果您想讓 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 處理訊息，請在程式碼後置 \(Code\-Behind\) 中處理 <xref:System.Windows.Interop.HwndHost> 類別 <xref:System.Windows.Interop.HwndHost.MessageHook> 事件。  每次裝載的視窗收到訊息時，都會發生這個事件。  如果選擇這個選項，您仍然必須覆寫 <xref:System.Windows.Interop.HwndHost.WndProc%2A>，但是只需要進行最簡單的實作 \(Implementation\)。  
+    -   如果您想要有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]處理訊息、 處理<xref:System.Windows.Interop.HwndHost>類別<xref:System.Windows.Interop.HwndHost.MessageHook>中您的程式碼後置事件。 針對裝載的視窗接收到的每個訊息，都會發生此事件。 如果您選擇此選項時，您必須仍覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>，但是您只需要最簡單的實作。  
   
-7.  覆寫 <xref:System.Windows.Interop.HwndHost> 的 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 和 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 方法。  您必須覆寫這些方法以滿足 <xref:System.Windows.Interop.HwndHost> 合約，但是您可能只需要提供最簡單的實作。  
+7.  覆寫<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>和<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法<xref:System.Windows.Interop.HwndHost>。 您必須覆寫這些方法來滿足<xref:System.Windows.Interop.HwndHost>合約，但是您可能只需要提供最簡單的實作。  
   
-8.  在程式碼後置的檔案中，建立控制項裝載類別的執行個體，並將它設為要用來裝載視窗之 <xref:System.Windows.Controls.Border> 項目的子系。  
+8.  在程式碼後置檔案中，建立控制項的裝載類別的執行個體，並讓它的子系<xref:System.Windows.Controls.Border>要裝載在視窗的項目。  
   
-9. 與裝載的視窗進行通訊，方法是將 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 訊息傳送至裝載的視窗，並處理其子視窗傳回的訊息，例如控制項所傳送的通知。  
+9. 與之通訊所裝載之視窗傳送[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]訊息和來自其子視窗，例如控制項傳送的告知的處理訊息。  
   
 <a name="page_layout"></a>   
-## 實作頁面配置  
- 裝載 ListBox 控制項的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面，其配置由兩個區域組成。  頁面左邊裝載幾個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項，提供可用來管理 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控制項的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  頁面右上角有一塊方形區域，其中包含裝載的 ListBox 控制項。  
+## <a name="implement-the-page-layout"></a>實作版面配置  
+ 針對版面配置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]裝載 ListBox 控制項的頁面包含兩個區域。 頁面的左半部裝載數個[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項，可提供[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，可讓您操作[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]控制項。 頁面的右上角具有 ListBox 託管控制項的方形區域。  
   
- 用來實作這個配置的程式碼相當簡單。  其根項目 \(Root Element\) 是具有兩個子項目的 <xref:System.Windows.Controls.DockPanel>。  第一個子項目是裝載 ListBox 控制項的 <xref:System.Windows.Controls.Border> 項目。  這個項目佔用了頁面右上角 200x200 的方形區域。  第二個子項目則是 <xref:System.Windows.Controls.StackPanel> 項目，其中包含一組顯示資訊的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項，可以讓您透過設定公開的互通性屬性來管理 ListBox 控制項。  對於 <xref:System.Windows.Controls.StackPanel> 子系的每個項目，如需所用各種項目之定義或功能的詳細資訊，請參閱這些項目的參考資料；下面的範例程式碼雖然列出這些項目，但並未在此加以說明 \(基本的互通模型並不需要其中任何項目；提供這些項目的目的是為了讓範例增加一些互動性\)。  
+ 實作這個配置的程式碼是相當簡單。 根項目是<xref:System.Windows.Controls.DockPanel>，有兩個子項目。 第一個是<xref:System.Windows.Controls.Border>裝載 ListBox 控制項項目。 它會佔用頁面右上角的 200x200 方形。 第二個是<xref:System.Windows.Controls.StackPanel>包含一系列的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]顯示資訊，並讓您藉由設定操作 ListBox 控制項的控制項公開互通性的屬性。 針對每個元素的子系<xref:System.Windows.Controls.StackPanel>，請參閱 < 參考資料，如需詳細資訊，這些項目為何，或它們的用途上使用的各種項目，這些會列在下列範例程式碼，但不是會這裡所說明 (basic互通性的模型不需要它們，只要是將某些互動功能加入至範例）。  
   
- [!code-xml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
+ [!code-xaml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
 <a name="host_class"></a>   
-## 實作類別以裝載 Microsoft Win32 控制項  
- 這個範例的核心是實際裝載控制項的類別 ControlHost.cs。  它繼承自 <xref:System.Windows.Interop.HwndHost>。  此建構函式使用高度和寬度兩個參數，而這兩個參數對應於裝載 ListBox 控制項之 <xref:System.Windows.Controls.Border> 項目的高度和寬度。  稍後會使用這些值來確定控制項的大小是否與 <xref:System.Windows.Controls.Border> 項目相符。  
+## <a name="implement-a-class-to-host-the-microsoft-win32-control"></a>實作類別以裝載 Microsoft Win32 控制項  
+ 此範例的核心是實際裝載 ControlHost.cs 控制項的類別。 它繼承自<xref:System.Windows.Interop.HwndHost>。 建構函式接受兩個參數、 高度和寬度、 高度和寬度對應<xref:System.Windows.Controls.Border>裝載 ListBox 控制項項目。 這些值將稍後用來確保控制相符項目的大小<xref:System.Windows.Controls.Border>項目。  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
  [!code-vb[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
- 另外還有一組常數。  這些常數大部分都是取自 Winuser.h，而且可以讓您在呼叫 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 函式時使用傳統的名稱。  
+ 還有一組常數。 這些常數主要是取自 Winuser.h，並可讓您使用傳統的名稱呼叫時[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
  [!code-vb[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
-### 覆寫 BuildWindowCore 以建立 Microsoft Win32 視窗  
- 您可以覆寫這個方法，以建立頁面所要裝載的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗，並建立視窗與頁面的連接。  因為這個範例與裝載 ListBox 控制項有關，所以會建立兩個視窗。  第一個視窗是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面實際裝載的視窗。  ListBox 控制項會建立為該視窗的子系。  
+### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>覆寫 BuildWindowCore 以建立 Microsoft Win32 視窗  
+ 您覆寫此方法以建立[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗，將此網頁所裝載，並讓視窗和頁面之間的連線。 因為此範例包含裝載 ListBox 控制項，所以會建立兩個視窗。 第一個是實際上由主控視窗[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。 ListBox 控制項會建立為該視窗的子系。  
   
- 使用這種方法的原因是為了簡化從控制項接收通知的程序。  <xref:System.Windows.Interop.HwndHost> 類別可以讓您處理傳送至其所裝載之視窗的訊息。  如果直接裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控制項，您會收到傳送至該控制項內部迴圈 \(Loop\) 的訊息。  您可以顯示控制項，也可傳送訊息至控制項，但是不會收到控制項傳送給其父視窗的通知。  這表示您將無法偵測使用者何時與控制項互動等各種活動。  因此，請建立裝載視窗，並將控制項設成該視窗的子系。  這可讓您處理裝載視窗的訊息，包括控制項傳送至該視窗的通知。  因為裝載視窗比控制項的簡單包裝函式稍微複雜一點，所以為了方便起見，我們將這個封裝稱為 ListBox 控制項。  
+ 此方法的原因是要簡化接收來自控制項之通知的程序。 <xref:System.Windows.Interop.HwndHost>類別可讓您處理訊息傳送至它所裝載的視窗。 如果您主控[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]直接控制，您會收到傳送至控制項的內部訊息迴圈的訊息。 您可以顯示控制項並將訊息傳送給它，但收不到控制項傳送至其父視窗的通知。 這表示，除此之外，您偵測不到使用者何時與控制項互動。 相反地，會建立主視窗，並將控制項設定為該視窗的子系。 這可讓您處理主視窗的訊息，包括控制項傳送給它的通知。 為了方便起見，因為主視窗略高於控制項的簡單包裝函式，所以此套件將稱為 ListBox 控制項。  
   
 <a name="create_the_window_and_listbox"></a>   
-#### 建立裝載視窗和 ListBox 控制項  
- 您可以使用 [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]，透過建立及註冊視窗類別等方式，建立控制項的裝載視窗。  不過，比較簡單的方法是使用預先定義的「靜態」視窗類別建立視窗。  除了能夠提供必要的視窗程序供您接收控制項傳回的通知以外，這種方法所需撰寫的程式碼也最少。  
+#### <a name="create-the-host-window-and-listbox-control"></a>建立主視窗和 ListBox 控制項  
+ 您可以使用[!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]來建立和註冊視窗類別，來建立控制項的 [主機] 視窗等等。 不過，比較簡單的方法是使用預先定義的「靜態」視窗類別來建立視窗。 這提供接收來自控制項之通知所需的視窗程序，而且需要最少的程式碼。  
   
- 控制項公開 HWND 的方式是透過唯讀屬性，例如可以用它來傳送訊息至控制項的裝載頁面。  
+ 控制項的 HWND 是透過唯讀屬性所公開；因此，主頁面可以使用它，以將訊息傳送至控制項。  
   
  [!code-csharp[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
  [!code-vb[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
   
- ListBox 控制項會建立為裝載視窗的子系。  這兩個視窗的高度和寬度都會設定為傳遞至上述建構函式的值。  如此便可確保裝載視窗和控制項的大小與頁面上的保留區域相同。  在建立視窗之後，此範例會傳回 <xref:System.Runtime.InteropServices.HandleRef> 物件，其中包含裝載視窗的 HWND。  
+ ListBox 控制項會建立為主視窗的子系。 如上面所討論，這兩個視窗的高度和寬度都會設定為傳遞至建構函式的值。 這確保主視窗和控制項的大小與頁面上的保留區域相同。  建立 windows 之後，這個範例會傳回<xref:System.Runtime.InteropServices.HandleRef>物件，其中包含裝載視窗的 HWND。  
   
  [!code-csharp[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
  [!code-vb[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
@@ -107,8 +112,8 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
   
 <a name="destroywindow_wndproc"></a>   
-### 實作 DestroyWindow 和 WndProc  
- 除了 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> 之外，您還必須覆寫 <xref:System.Windows.Interop.HwndHost> 的 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 和 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 方法。  在這個範例中，控制項的訊息是由 <xref:System.Windows.Interop.HwndHost.MessageHook> 處理常式負責處理，因此 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 和 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 的實作相當簡單。  在 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 的案例中，請將 `handled` 設定為 `false`，指出未處理訊息並傳回 0。  如果是 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>，則直接終結視窗。  
+### <a name="implement-destroywindow-and-wndproc"></a>實作 DestroyWindow 和 WndProc  
+ 除了<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>，您也必須覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>和<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>方法<xref:System.Windows.Interop.HwndHost>。 在此範例中，控制項的訊息會由<xref:System.Windows.Interop.HwndHost.MessageHook>處理常式，因此實作<xref:System.Windows.Interop.HwndHost.WndProc%2A>和<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>降至最低。 如果是<xref:System.Windows.Interop.HwndHost.WndProc%2A>，將`handled`至`false`來表示未處理的訊息，並傳回 0。 如<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>，只需終結視窗。  
   
  [!code-csharp[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
  [!code-vb[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
@@ -117,13 +122,13 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
   
 <a name="host_the_control"></a>   
-## 將控制項裝載在頁面上  
- 若要將控制項裝載到頁面上，請先建立 `ControlHost` 類別的執行個體。  請將包含控制項之框線項目 \(`ControlHostElement`\) 的高度和寬度傳遞至 `ControlHost` 建構函式。  這個動作可確保 ListBox 會設定為正確的大小。  接著請將 `ControlHost` 物件指派給裝載 <xref:System.Windows.Controls.Border> 的 <xref:System.Windows.Controls.Decorator.Child%2A> 屬性，以便將控制項裝載在頁面上。  
+## <a name="host-the-control-on-the-page"></a>在頁面上裝載控制項  
+ 若要裝載的網頁上的控制項，您先建立的新執行個體`ControlHost`類別。 傳遞的高度和寬度，包含控制項的框線項目 (`ControlHostElement`) 至`ControlHost`建構函式。 這確保 ListBox 的大小正確。 然後主控網頁上的控制項指派`ControlHost`物件<xref:System.Windows.Controls.Decorator.Child%2A>主機屬性<xref:System.Windows.Controls.Border>。  
   
- 此範例會將處理常式附加至 `ControlHost` 的 <xref:System.Windows.Interop.HwndHost.MessageHook> 事件，以接收控制項傳回的訊息。  每次有訊息傳送到裝載的視窗時，都會引發這個事件。  在這個案例中，這些訊息是傳送至實際用來包裝 ListBox 控制項之視窗的訊息，包括控制項傳回的通知。  此範例會呼叫 SendMessage 從控制項取得資訊，並修改其內容。  下一節將詳細討論頁面與控制項通訊的方式。  
+ 此範例會將附加的處理常式，以<xref:System.Windows.Interop.HwndHost.MessageHook>事件`ControlHost`控制項從接收訊息。 針對傳送至裝載之視窗的每個訊息，都會引發此事件。 在此情況下，這些是傳送至包裝實際 ListBox 控制項之視窗的訊息，包括來自控制項的通知。 此範例會呼叫 SendMessage 以從控制項取得資訊，並修改其內容。 下節討論頁面如何與控制項進行通訊的詳細資料。  
   
 > [!NOTE]
->  請注意，SendMessage 有兩個 [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] 宣告。  這是必要的，因為其中一個會使用 `wParam` 參數來傳遞字串，而另一個則用它來傳遞整數。  每個簽章 \(Signature\) 都需要個別的宣告，以確保資料能夠正確封送處理。  
+>  請注意，有兩個[!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]SendMessage 的宣告。 這是必要的因為其中一個使用`wParam`傳遞字串和其他參數會使用它來傳遞整數。 每個簽章都必須要有不同的宣告，確保正確地封送處理資料。  
   
  [!code-csharp[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
  [!code-vb[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
@@ -132,33 +137,33 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
   
 <a name="communication"></a>   
-## 在控制項和頁面之間實作通訊  
- 您可透過傳送 [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] 訊息至控制項來管理控制項。  控制項會在使用者與其互動時傳送通知至其裝載視窗來通知您。  [在 WPF 中裝載 Win32 ListBox 控制項範例](http://go.microsoft.com/fwlink/?LinkID=159998) \(英文\) 包括一個 UI，提供如何執行這項操作的數個範例：  
+## <a name="implement-communication-between-the-control-and-the-page"></a>實作控制項與頁面之間的通訊  
+ 您傳送操作控制項[!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]訊息。 在使用者透過將通知傳送至其主視窗與控制項互動時，控制項就會通知您。 [裝載 WPF 範例中的 Win32 ListBox 控制項](http://go.microsoft.com/fwlink/?LinkID=159998)範例包括 UI，它會提供數個範例的運作方式：  
   
 -   將項目附加至清單。  
   
--   從清單刪除選取的項目。  
+-   刪除清單中選取的項目  
   
--   顯示目前所選項目的文字。  
+-   顯示目前所選取項目的文字。  
   
--   顯示清單中的項目數目。  
+-   顯示清單中的項目數。  
   
- 使用者也可以按一下以選取清單方塊中的項目，如同在傳統 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 應用程式中一樣。  每次使用者透過選取、加入或附加項目來變更清單方塊的狀態時，顯示的資料都會更新。  
+ 使用者也可以選取項目在清單方塊中按一下，就如同針對傳統[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式。 每次使用者透過選取、新增或附加項目來變更清單方塊的狀態時，都會更新顯示的資料。  
   
- 若要附加檔案，請將 LB\_ADDSTRING 訊息傳送至清單方塊。  若要刪除項目，請傳送 LB\_GETCURSEL 以取得目前選取範圍的索引，然後再傳送 LB\_DELETESTRING 來刪除項目。  此範例也會傳送 LB\_GETCOUNT，並使用傳回的值更新顯示項目數目的畫面。  這兩個 SendMessage 執行個體都會使用上一節討論的其中一個 [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] 宣告。  
+ 若要附加項目，請將 LB_ADDSTRING 訊息傳送給清單方塊。 若要刪除項目，請傳送 LB_GETCURSEL 以取得目前選取項目的索引，然後傳送 LB_DELETESTRING 以刪除項目。 此範例也會傳送 LB_GETCOUNT，並使用所傳回的值來更新可顯示項目數的顯示。 SendMessage 這兩個這些執行個體使用其中一種[!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]前一節中所討論的宣告。  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- 當使用者選取項目或變更其選擇時，控制項會傳送 WM\_COMMAND 訊息給裝載視窗來通知它，進而引發頁面的 <xref:System.Windows.Interop.HwndHost.MessageHook> 事件。  處理常式會收到裝載視窗之主要視窗程序所收到的相同資訊。  它也會傳遞布林 \(Boolean\) 值的參考 `handled`。  將 `handled` 設為 `true` 表示您已處理訊息，不需要進行其他處理。  
+ 當使用者選取的項目或變更其選取項目時，此控制項主控視窗會傳送通知它 WM_COMMAND 訊息，這會引發<xref:System.Windows.Interop.HwndHost.MessageHook>網頁事件。 處理常式會接收與主視窗的主要視窗程序相同的資訊。 它也會將布林值，參考傳遞`handled`。 您設定`handled`至`true`，表示您已處理訊息，而且需要進行任何處理。  
   
- 傳送 WM\_COMMAND 的原因很多，您必須查看通知 ID 來判斷它是不是您想要處理的事件。  這個 ID 包含在 `wParam` 參數的高位文字中。  因為 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 沒有 HIWORD 巨集，所以本範例使用位元 \(Bitwise\) 運算子來擷取此 ID。  如果使用者已經做出或變更其選擇，此 ID 便為 LBN\_SELCHANGE。  
+ 會基於各種原因傳送 WM_COMMAND，因此，您必須檢查通知識別碼來判斷它是否為您要處理的事件。 高的文字中包含識別碼`wParam`參數。 因為[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]沒有 HIWORD 巨集，此範例會使用位元運算子中擷取的識別碼。 如果使用者已建立或變更其選取項目，則識別碼會是 LBN_SELCHANGE。  
   
- 收到 LBN\_SELCHANGE 時，此範例會傳送 LB\_GETCURSEL 訊息到控制項，以取得所選項目的索引。  為了取得文字，您會先建立 <xref:System.Text.StringBuilder>，  然後傳送 LB\_GETTEXT 訊息到控制項。  請傳遞空的 <xref:System.Text.StringBuilder> 物件做為 `wParam` 參數。  當 SendMessage 傳回時，<xref:System.Text.StringBuilder> 會包含所選項目的文字。  SendMessage 的這種用法還需要另外一個 [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] 宣告。  
+ 收到 LBN_SELCHANGE 時，此範例會將 LB_GETCURSEL 訊息傳送給控制項，以取得所選取項目的索引。 若要取得的文字，您先建立<xref:System.Text.StringBuilder>。 您接著會將 LB_GETTEXT 訊息傳送給控制項。 傳遞空<xref:System.Text.StringBuilder>物件當做`wParam`參數。 當傳回 SendMessage、<xref:System.Text.StringBuilder>會包含所選項目的文字。 這種使用 SendMessage 還需要另一個[!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]宣告。  
   
- 最後，請將 `handled` 設定為 `true`，表示訊息已經過處理。  
+ 最後，設定`handled`至`true`表示已處理訊息。  
   
-## 請參閱  
- <xref:System.Windows.Interop.HwndHost>   
- [WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)   
- [逐步解說：WPF 使用者入門](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Interop.HwndHost>  
+ [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)

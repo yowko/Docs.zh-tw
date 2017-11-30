@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用非同步用戶端通訊端
 非同步用戶端通訊端等待網路作業完成時，不會暫停應用程式。 相反地，它會使用標準 .NET Framework 非同步程式設計模型，在一個執行緒上處理網路連線，同時應用程式繼續在原始執行緒上執行。 非同步通訊端適用於大量使用網路的應用程式，或是無法等候網路作業完成再繼續進行的應用程式。  
@@ -43,9 +40,9 @@ ms.lasthandoff: 08/21/2017
   
  非同步作業需要回呼方法以傳回作業的結果。 如果您的應用程式不需要知道結果，則不需要回呼方法。 本節的範例程式碼示範如何使用方法來開始連線到網路裝置以及使用回呼方法完成連線、使用方法開始傳送資料以及使用回呼方法完成傳送，還有使用方法開始接收資料以及使用回呼方法結束接收資料。  
   
- 非同步通訊端使用系統執行緒集區中的多個執行緒來處理網路連線。 一個執行緒負責初始化資料的傳送或接收；其他執行緒則完成與網路裝置的連線並且傳送或接收資料。 在下列範例中，<xref:System.Threading.ManualResetEvent?displayProperty=fullName> 類別的執行個體會暫停執行主執行緒，並在可以繼續執行時發出訊號。  
+ 非同步通訊端使用系統執行緒集區中的多個執行緒來處理網路連線。 一個執行緒負責初始化資料的傳送或接收；其他執行緒則完成與網路裝置的連線並且傳送或接收資料。 在下列範例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 類別的執行個體會暫停執行主執行緒，並在可以繼續執行時發出訊號。  
   
- 在下列範例中，為了將非同步通訊端連線到網路裝置，`Connect` 方法會初始化**通訊端**，然後呼叫 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName> 方法、傳遞代表網路裝置的遠端端點、連線回呼方法和狀態物件 (用戶端**通訊端**)，這用來在非同步呼叫之間傳遞狀態資訊。 此範例會實作 `Connect` 方法，將指定的**通訊端**連線到指定的端點。 它會假設一個名為 `connectDone` 的全域 **ManualResetEvent**。  
+ 在下列範例中，為了將非同步通訊端連線到網路裝置，`Connect` 方法會初始化**通訊端**，然後呼叫 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> 方法、傳遞代表網路裝置的遠端端點、連線回呼方法和狀態物件 (用戶端**通訊端**)，這用來在非同步呼叫之間傳遞狀態資訊。 此範例會實作 `Connect` 方法，將指定的**通訊端**連線到指定的端點。 它會假設一個名為 `connectDone` 的全域 **ManualResetEvent**。  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -298,7 +295,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [非同步用戶端通訊端範例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-

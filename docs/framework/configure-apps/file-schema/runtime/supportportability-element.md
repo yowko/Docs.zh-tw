@@ -1,78 +1,81 @@
 ---
-title: "&lt;supportPortability&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<supportPortability> 項目"
-  - "supportPortability 項目"
+title: "&lt;supportPortability&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- supportPortability element
+- <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b46d12ecebae17b7cfe2168b6313be45ad5b04d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;supportPortability&gt; 項目
-指定應用程式可以停用為了達到應用程式可攜性而將組件視為相等的預設行為，以參考兩個不同 .NET Framework 實作中的同一個組件。  
+# <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt;項目
+指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  
   
-## 語法  
+ \<設定 > 項目  
+\<runtime > 項目  
+\<assemblyBinding > 項目  
+\<supportPortability > 項目  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <supportPortability PKT="public_key_token" enabled="true|false"/>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|PKT|必要屬性。<br /><br /> 以字串形式指定受影響組件的公開金鑰語彙基元。|  
-|enabled|選擇性屬性。<br /><br /> 指定是否應該啟用指定的 .NET Framework 組件實作之間的可攜性支援。|  
+|---------------|-----------------|  
+|PKT|必要屬性。<br /><br /> 字串形式指定受影響的組件公開金鑰語彙基元。|  
+|enabled|選擇性屬性。<br /><br /> 指定是否應該啟用指定的.NET Framework 組件實作之間的可攜性的支援。|  
   
-## 啟用屬性  
+## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
-|-------|--------|  
-|true|啟用指定 .NET Framework 組件實作之間的可攜性支援。  這是預設值。|  
-|false|停用指定 .NET Framework 組件實作之間的可攜性支援。  這可讓應用程式參考指定組件的多個實作。|  
+|-----------|-----------------|  
+|true|啟用支援不同的實作指定的.NET Framework 組件的可攜性。 這是預設值。|  
+|false|停用指定的.NET Framework 組件實作之間的可攜性的支援。 這可讓應用程式具備多個指定的組件實作的參考。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|項目|描述|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
   
-## 備註  
- 自 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 開始，會自動提供支援給可使用兩個 .NET Framework 中任何一個的應用程式，例如可使用 .NET Framework 實作或 .NET Framework for Silverlight 實作。  組件繫結器會將特定 .NET Framework 組件的兩個實作視為相等。  在某些情況下，此應用程式的可攜性功能會發生問題。  在這些案例中，`<supportPortability>` 項目可用來停用此功能。  
+## <a name="remarks"></a>備註  
+ 開頭為[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，支援自動提供的應用程式可以使用其中一個的.NET Framework 中，兩個實作，例如.NET Framework 實作或.NET Framework for Silverlight 實作。 組件繫結器會將兩個實作特定的.NET Framework 組件視為對等項目。 在少數情況下，此應用程式可攜性功能會造成問題。 在這些情況下，`<supportPortability>`項目可以用來停用此功能。  
   
- 其中一個此類案例是組件，該組件同時參考特定參考組件的 .NET Framework 實作和 .NET Framework for Silverlight 實作。  例如，以 Windows Presentation Foundation \(WPF\) 撰寫的 XAML 設計工具需參考 WPF 桌面實作 \(適合設計人員的使用者介面\) 與 Silverlight 實作隨附的 WPF 的子集。  預設情況下，不同的參考會造成編譯器錯誤，因為組件繫結會將兩個組件視為相等。  這個項目會停用預設行為，並允許編譯成功。  
+ 這類案例之一是具有參考.NET Framework 實作和.NET Framework for Silverlight 實作的特定參考組件的組件。 例如，寫入 Windows Presentation Foundation (WPF) XAML 設計工具可能需要參考兩個 WPF 桌面實作中，在設計工具使用者介面，和包含 Silverlight 實作中的 WPF 子集。 根據預設，不同的參考會導致編譯器錯誤，因為組件繫結關係會將兩個組件視為對等項目。 這個項目停用預設的行為，並可讓編譯成功。  
   
 > [!IMPORTANT]
->  您必須使用 `/appconfig` 編譯器選項指定包含這個項目的 app.config 檔案的位置，編譯器才能將資訊傳遞至 Common Language Runtime 的組件繫結邏輯。  
+>  為了讓編譯器將資訊傳遞至 common language runtime 的組件繫結邏輯，您必須使用`/appconfig`編譯器選項以指定 app.config 檔案，其中包含這個元素的位置。  
   
-## 範例  
- 下列範例讓應用程式能夠參考 .NET Framework 實作，和存在於兩個實作中任何 .NET Framework 組件其 Silverlight 實作的 .NET Framework。  `/appconfig` 編譯器選項必須用來指定此 app.config 檔案的位置。  
+## <a name="example"></a>範例  
+ 下列範例會啟用應用程式的.NET Framework 實作和.NET Framework for Silverlight 實作這兩個實作中有任何.NET Framework 組件的參考。 `/appconfig`編譯器選項必須用來指定此 app.config 檔案的位置。  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding>  
@@ -83,6 +86,6 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 請參閱  
- [\/appconfig \(C\# 編譯器選項\)](http://msdn.microsoft.com/library/ee523958.aspx)   
- [.NET Framework Assembly Unification Overview](http://msdn.microsoft.com/zh-tw/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+## <a name="see-also"></a>另請參閱  
+ [/appconfig （C# 編譯器選項）](http://msdn.microsoft.com/library/ee523958.aspx)  
+ [.NET framework 組件統一概觀](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

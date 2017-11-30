@@ -1,61 +1,62 @@
 ---
-title: "對話方塊控制項和元件 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CommonDialog 控制項"
-  - "對話方塊, Windows Form"
-  - "Windows Form 對話方塊, 預先定義的"
-  - "Windows Form, 對話方塊"
+title: "對話方塊控制項和元件 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CommonDialog control
+- Windows Forms dialog boxes [Windows Forms], predefined
+- dialog boxes [Windows Forms], Windows Forms
+- Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ce4e6a62097fc673268f38a6db660b3bc9cba7b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 對話方塊控制項和元件 (Windows Form)
-下列 Windows Form 控制項和元件提供標準的對話方塊。  如需每個對話方塊所提供之功能的詳細資訊，請參閱下列連結。  
+# <a name="dialog-box-controls-and-components-windows-forms"></a>對話方塊控制項和元件 (Windows Form)
+下列 Windows Form 控制項和元件提供標準的對話方塊。 如需每個對話方塊所提供之功能的詳細資訊，請參閱下列連結。  
   
-## 參考  
- [ColorDialog 類別](frlrfSystemWindowsFormsColorDialogClassTopic)  
+## <a name="reference"></a>參考資料  
+ <xref:System.Windows.Forms.ColorDialog>  
  提供 <xref:System.Windows.Forms.ColorDialog> 類別及其成員的相關參考資訊。  
   
- [FontDialog 類別](frlrfSystemWindowsFormsFontDialogClassTopic)  
+ <xref:System.Windows.Forms.FontDialog>  
  提供 <xref:System.Windows.Forms.FontDialog> 類別及其成員的相關參考資訊。  
   
- [OpenFileDialog 類別](frlrfSystemWindowsFormsOpenFileDialogClassTopic)  
+ <xref:System.Windows.Forms.OpenFileDialog>  
  提供 <xref:System.Windows.Forms.OpenFileDialog> 類別及其成員的相關參考資訊。  
   
- [PageSetupDialog 類別](frlrfSystemWindowsFormsPageSetupDialogClassTopic)  
+ <xref:System.Windows.Forms.PageSetupDialog>  
  提供 <xref:System.Windows.Forms.PageSetupDialog> 類別及其成員的相關參考資訊。  
   
- [PrintDialog 類別](frlrfSystemWindowsFormsPrintDialogClassTopic)  
+ <xref:System.Windows.Forms.PrintDialog>  
  提供 <xref:System.Windows.Forms.PrintDialog> 類別及其成員的相關參考資訊。  
   
- [PrintPreviewDialog 類別](frlrfSystemWindowsFormsPrintPreviewDialogClassTopic)  
+ <xref:System.Windows.Forms.PrintPreviewDialog>  
  提供 <xref:System.Windows.Forms.PrintPreviewDialog> 類別及其成員的相關參考資訊。  
   
- [SaveFileDialog 類別](frlrfSystemWindowsFormsSaveFileDialogClassTopic)  
+ <xref:System.Windows.Forms.SaveFileDialog>  
  提供 <xref:System.Windows.Forms.SaveFileDialog> 類別及其成員的相關參考資訊。  
   
-## 相關章節  
- [Windows Form 中的對話方塊](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+## <a name="related-sections"></a>相關章節  
+ [Windows Forms 中的對話方塊](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
  描述如何為 Windows Form 建立對話方塊。  
   
  [ColorDialog 元件概觀](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
  讓使用者從預先設定之對話方塊中的調色盤選取色彩，並將自訂色彩加入該調色盤。  
   
- [FolderBrowserDialog 元件概觀 \(Windows Form\)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ [FolderBrowserDialog 元件概觀 (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  讓使用者瀏覽和選取資料夾。  
   
  [FontDialog 元件概觀](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
@@ -76,4 +77,4 @@ caps.handback.revision: 10
  [SaveFileDialog 元件概觀](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
  選取要儲存的檔案和儲存位置。  
   
- 另請參閱 [Windows Form 中的對話方塊](http://msdn.microsoft.com/library/2chz8edb%20\(v=vs.110\))。
+ 另請參閱 [Windows Forms 中的對話方塊](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\))。

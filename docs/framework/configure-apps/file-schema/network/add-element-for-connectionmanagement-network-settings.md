@@ -1,89 +1,91 @@
 ---
-title: "connectionManagement 的 &lt;add&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> 項目, connectionManagement"
-  - "<connectionManagement>, add 項目"
-  - "add 項目, connectionManagement"
-  - "connectionManagement, add 項目"
+title: "&lt;新增&gt;connectionManagement （網路設定） 的項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/add
+helpviewer_keywords:
+- <add> element, connectionManagement
+- <connectionManagement>, add element
+- add element, connectionManagement
+- connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: aec29ed6836671831130226a601358d5f6a1d3dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# connectionManagement 的 &lt;add&gt; 項目 (網路設定)
+# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;新增&gt;connectionManagement （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入連線管理清單中。  
   
-## 語法  
+ \<configuration>  
+\<system.net >  
+\<connectionManagement >  
+\<add>  
   
-```  
+## <a name="syntax"></a>語法  
   
-        <add   
-   address = "address expression"   
-   maxconnection = integer   
+```xml  
+<add   
+  address="address expression"   
+  maxconnection="integer"   
 />  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
-|**屬性**|**描述**|  
-|------------|------------|  
+|**屬性**|**說明**|  
+|-------------------|---------------------|  
 |`address`|描述 IP 位址或 DNS 名稱的字串。|  
-|`maxconnection`|允許連接到伺服器的連線數目上限。  如果未提供，預設值為 2。|  
+|`maxconnection`|允許連接到伺服器的連線數目上限。 如果未提供，預設值為 2。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
-|------------|------------|  
+|**目**|**說明**|  
+|-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
   
-## 備註  
+## <a name="remarks"></a>備註  
  `address` 屬性的值應該是表示所有連線的星號，或是 `<schema>://<idn_hostname>[:<port>]` 格式的字串。  
   
- 如果傳遞至任何 HTTP 應用程式開發介面的 URI 包含 Unicode，將會使用 <xref:System.Uri.DnsSafeHost%2A> 在內部轉換名稱，可能會傳回 punicode 字串 \(行為取決於目前的 IDN 組態\)。  
+ 如果傳遞至任何 HTTP 應用程式開發介面的 URI 包含 Unicode，將會使用 <xref:System.Uri.DnsSafeHost%2A> 在內部轉換名稱，可能會傳回 punicode 字串 (行為取決於目前的 IDN 組態)。  
   
-## 組態檔  
- 此項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a>組態檔  
+ 此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## 範例  
- 下列程式碼範例會設定一個應用程式，以使用四個連接至 www.contoso.com 伺服器的連線，以及兩個連接至所有其他伺服器的連線。  
+## <a name="example"></a>範例  
+ 下列範例會設定應用程式使用四個連接至 www.contoso.com 伺服器和所有其他伺服器的兩個連線。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <connectionManagement>  
-      <add address = "http://www.contoso.com" maxconnection = "4" />  
-      <add address = "*" maxconnection = "2" />  
+      <add address="http://www.contoso.com" maxconnection="4" />  
+      <add address="*" maxconnection="2" />  
     </connectionManagement>  
   </system.net>  
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net.ServicePoint>   
- <xref:System.Net.ServicePointManager>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Net.ServicePoint>  
+ <xref:System.Net.ServicePointManager>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,29 +1,33 @@
 ---
-title: "如何：播放內嵌在 Windows Form 資源中的音效 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "從資源播放音效"
-  - "播放音效的資源 [Windows Form]"
-  - "播放資源中的音效"
-  - "SoundPlayer 類別，播放資源中的音效"
+title: "如何：播放內嵌在 Windows Form 資源中的音效"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- sounds [Windows Forms], playing from resources
+- resources [Windows Forms], playing sounds
+- playing sounds [Windows Forms], from resources
+- SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 82e143a6c405d4f3065c18a1a118891e0e692b93
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：播放內嵌在 Windows Form 資源中的音效
+# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>如何：播放內嵌在 Windows Form 資源中的音效
 您可以使用<xref:System.Media.SoundPlayer>類別，以從內嵌資源播放音效。  
   
 ## <a name="example"></a>範例  
@@ -33,13 +37,13 @@ caps.handback.revision: 17
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
- 匯入<xref:System.Media?displayProperty=fullName>命名空間。  
+ 匯入<xref:System.Media?displayProperty=nameWithType>命名空間。  
   
- 為您的專案中的內嵌資源包含音效檔。  
+ 將音效檔包含為專案中的內嵌資源。  
   
- 取代 「<>\>"內嵌音效檔所在的組件的名稱。 不包含".dll"後置字元。  
+ 將「\<組件名稱>」取代為內嵌音效檔的組件名稱。 請不要包括 ".dll" 尾碼。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Media.SoundPlayer>   
- [如何︰ 播放 Windows Form 中的音效](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)   
- [如何︰ 循環播放 Windows Form 上的音效](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)
+ <xref:System.Media.SoundPlayer>  
+ [操作說明：播放 Windows Forms 中的音效](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [操作說明：在 Windows Forms 上循環播放音效](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)

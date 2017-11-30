@@ -1,53 +1,59 @@
 ---
-title: "沒有安全保障的網際網路用戶端與服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "沒有安全保障的網際網路用戶端與服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-caps.latest.revision: 17
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: cd7cc9da457424dede6f62ecefca8cee0d94fb88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 沒有安全保障的網際網路用戶端與服務
+# <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
 下圖顯示公開、不安全的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端與服務範例。  
   
- ![不安全的網際網路用戶端和服務情節](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
+ ![不安全的網際網路用戶端和服務案例](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
-|特性|說明|  
-|--------|--------|  
+|特性|描述|  
+|--------------------|-----------------|  
 |安全性模式|無|  
-|傳輸|HTTP|  
-|繫結|程式碼的 <xref:System.ServiceModel.BasicHttpBinding>，或組態中的 [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 項目。|  
+|Transport|HTTP|  
+|繫結|<xref:System.ServiceModel.BasicHttpBinding>在程式碼，或[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)組態中的項目。|  
 |互通性|使用現有的 Web 服務用戶端和服務|  
 |驗證|無|  
 |完整性|無|  
 |機密性|無|  
   
-## 服務  
- 下列程式碼和組態要獨立執行。執行下列其中一項：  
+## <a name="service"></a>服務  
+ 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
 -   使用不含組態的程式碼建立獨立服務。  
   
 -   使用提供的組態建立服務，但不要定義任何端點。  
   
-### 程式碼  
- 下列程式碼顯示如何建立無安全性的端點。根據預設值，<xref:System.ServiceModel.BasicHttpBinding> 的安全性模式設定為 <xref:System.ServiceModel.BasicHttpSecurityMode>。  
+### <a name="code"></a>程式碼  
+ 下列程式碼顯示如何建立無安全性的端點。 根據預設值，<xref:System.ServiceModel.BasicHttpBinding> 的安全性模式設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.None>。  
   
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
   
-### 服務組態  
+### <a name="service-configuration"></a>服務組態  
  下列程式碼會使用組態設定相同端點。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -71,26 +77,26 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 用戶端  
- 下列程式碼和組態要獨立執行。執行下列其中一項：  
+## <a name="client"></a>用戶端  
+ 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
--   使用此程式碼 \(和用戶端程式碼\) 建立獨立用戶端。  
+-   使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
--   建立未定義任何端點位址的用戶端，然後改用可接受組態名稱當做引數的用戶端建構函式。例如：  
+-   建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
  下列程式碼顯示使用不安全端點的基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端。  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
   
-### 用戶端組態  
+### <a name="client-configuration"></a>用戶端組態  
  下列程式碼會設定用戶端。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -113,7 +119,7 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 請參閱  
- [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)   
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Windows Server AppFabric 的資訊安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱  
+ [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

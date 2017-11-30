@@ -1,44 +1,40 @@
 ---
-title: "將項目、 屬性和節點加入至 XML 樹狀結構 (Visual Basic) |Microsoft 文件"
+title: "將項目、 屬性和節點加入至 XML 樹狀結構 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b8a1644757fb4ce9f1498e79b16d1077e412346b
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 710397e2a2a200dc5129ed42ca34f25617a071c5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>將項目、 屬性和節點加入至 XML 樹狀結構 (Visual Basic)
 您可以將內容 (項目、屬性、註解、處理指示、文字和 CDATA) 加入到現有的 XML 樹狀結構中。  
   
 ## <a name="methods-for-adding-content"></a>加入內容的方法  
- 下列方法會將子內容加入至<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>::</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement>  
+ 下列方法會將子內容加入到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>：  
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A></xref:System.Xml.Linq.XContainer.Add%2A>|將內容加入<xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer>目的子內容的結尾|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A></xref:System.Xml.Linq.XContainer.AddFirst%2A>|將內容加入<xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer>目的子內容的開頭|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|將內容加入到 <xref:System.Xml.Linq.XContainer> 之子內容的結尾。|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|將內容加入到 <xref:System.Xml.Linq.XContainer> 之子內容的開頭。|  
   
- 下列方法加入內容，做<xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>的同層級節點 最常見的節點，您可以新增同層級內容是<xref:System.Xml.Linq.XElement>，雖然您可以新增其他類型的節點，例如<xref:System.Xml.Linq.XText><xref:System.Xml.Linq.XComment>.</xref:System.Xml.Linq.XComment>或</xref:System.Xml.Linq.XText>有效的同層級內容</xref:System.Xml.Linq.XElement>  
+ 下列方法會加入內容，做為 <xref:System.Xml.Linq.XNode> 的同層級節點。 雖然您可以將有效的同層級內容加入到節點的其他型別 (例如，<xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XText>)，但是您加入同層級內容的最常見目標節點為 <xref:System.Xml.Linq.XComment>。  
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A></xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|將內容加入在<xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A></xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|新增<xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>之前的內容|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|將內容加入到 <xref:System.Xml.Linq.XNode> 之後。|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|將內容加入到 <xref:System.Xml.Linq.XNode> 之前。|  
   
 ## <a name="example"></a>範例  
   
@@ -75,7 +71,6 @@ xmlTree.Add( _
 ' will not throw an exception, and nothing will be added to xmlTree.  
 xmlTree.Add(srcTree.Element("Child9"))  
 Console.WriteLine(xmlTree)  
-  
 ```  
   
 ### <a name="comments"></a>註解  
@@ -95,4 +90,4 @@ Console.WriteLine(xmlTree)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+ [修改 XML 樹狀 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

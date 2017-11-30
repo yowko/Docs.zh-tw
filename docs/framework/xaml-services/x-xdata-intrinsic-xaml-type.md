@@ -1,62 +1,65 @@
 ---
-title: "x:XData Intrinsic XAML Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:XData"
-  - "XData"
-  - "xXData"
-helpviewer_keywords: 
-  - "XAML [XAML Services], x:XData directive element"
-  - "XData in XAML [XAML Services]"
-  - "x:XData XAML directive element [XAML Services]"
+title: "x:XData 內建 XAML 類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:XData
+- XData
+- xXData
+helpviewer_keywords:
+- XAML [XAML Services], x:XData directive element
+- XData in XAML [XAML Services]
+- x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-caps.latest.revision: 17
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# x:XData Intrinsic XAML Type
-允許將 XML 資料島放置於 XAML 生產中。  XAML 處理器不應將 `x:XData` 中的 XML 項目作用中預設 XAML 命名空間或其他任何 XAML 命名空間的一部分。  `x:XData` 可以包含任意格式的語式正確 XML。  
+# <a name="xxdata-intrinsic-xaml-type"></a>x:XData 內建 XAML 類型
+可讓在 XAML 生產的 XML 資料島的放置。 XML 項目內`x:XData`應該不會視為 XAML 處理器來做預設 XAML 命名空間的一部分或任何其他的 XAML 命名空間。 `x:XData`可以包含任意格式正確的 XML。  
   
-## XAML 物件項目用法  
+## <a name="xaml-object-element-usage"></a>XAML 物件項目用法  
   
 ```  
 <x:XData>  
-  <elementDataRoot>  
-    [elementData]  
-  </elementDataRoot>  
+  <elementDataRoot>  
+    [elementData]  
+  </elementDataRoot>  
 </x:XData>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|`elementDataRoot`|封入資料島的單一根項目 \(Root Element\)。  對於大多數的最終消費者，沒有單一根的 XML 都會被視為無效。  如果 `x:XData` 適用於 WPF 的 XML 資料來源或許多其他使用 XML 來源進行資料繫結的技術，則尤其需要單一根目錄。|  
-|`[elementData]`|選擇項。  代表 XML 資料的 XML。  包含的項目資料沒有數目的限制，並且巢狀項目可以包含在其他項目中，無論如何都適用 XML 的一般規則。|  
+|`elementDataRoot`|括住的資料島的單一根項目。 大部分的最終取用者，並沒有單一根節點的 XML 會被視為無效。 特別是，單一根節點時需要`x:XData`適用於 WPF 或許多其他 XML 來源使用資料繫結的技術做為 XML 資料來源。|  
+|`[elementData]`|選擇項。 代表 XML 資料的 XML。 項目資料可包含任意數目的項目和其他項目; 中可包含巢狀項目不過，適用於 XML 的一般規則。|  
   
-## 備註  
- `x:XData` 物件內的 XML 項目可以重新宣告所有可能的命名空間，以及資料內所包含 XMLDOM 的前置詞。  
+## <a name="remarks"></a>備註  
+ 中的 XML 元素`x:XData`所有可能的命名空間和前置詞的資料中包含的 XMLDOM 物件可以重新宣告。  
   
- 透過 <xref:System.Windows.Markup.XData> 類別，就可能在 .NET Framework XAML Services 中對 XML 資料和 `x:XData` 內建 XAML 型別進行程式設計的存取。  
+ 以程式設計方式存取 XML 資料和`x:XData`內建 XAML 類型是透過.NET Framework XAML 服務中可能有<xref:System.Windows.Markup.XData>類別。  
   
-## WPF 使用注意事項  
- `x:XData` 物件主要用來當做 <xref:System.Windows.Data.XmlDataProvider> 的子物件，或是當做 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> 屬性 \(在 XAML 中，這通常會以屬性項目語法表示\) 的子物件。  
+## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
+ `x:XData`物件主要是用來當做子物件的<xref:System.Windows.Data.XmlDataProvider>，或或者子物件的<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>屬性 （在 XAML 中，這通常表示在屬性項目語法）。  
   
- 資料通常會將資料島內的基底 XML 命名空間重新定義成新的預設 XML 命名空間 \(設定為空字串\)。  這是處理簡單資料島最容易的方法，因為用來參考和繫結至資料的 <xref:System.Windows.Data.Binding.XPath%2A> 運算式可以避免包含前置字元。  較為複雜的資料島可能為資料定義多個前置字元，並在根項目中使用 XML 命名空間的特定前置字元。  在這種情況下，所有的 <xref:System.Windows.Data.Binding.XPath%2A> 運算式參考都應該包含適當的命名空間對應前置字元。  如需詳細資訊，請參閱[資料繫結概觀](../../../ocs/framework/wpf/data/data-binding-overview.md)。  
+ 資料通常應該重新定義基底資料島是新 （設定為空字串） 的預設 XML 命名空間內的 XML 命名空間。 這是最簡單的簡單資料島因為<xref:System.Windows.Data.Binding.XPath%2A>用於參考和繫結至資料的運算式可以避免包含的前置詞。 更複雜的資料島可能定義多個前置詞的資料，並使用特定的前置詞的根目錄中的 XML 命名空間。 在此情況下，所有<xref:System.Windows.Data.Binding.XPath%2A>運算式參考應包含適當的命名空間對應前置詞。 如需詳細資訊，請參閱 [資料繫結概觀](../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
- 技術上來說，`x:XData` 可以當做型別為 <xref:System.Xml.Serialization.IXmlSerializable> 之任何屬性的內容。  然而，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> 是唯一的重要實作。  
+ 技術上來說，`x:XData`可用來當做類型的任何屬性的內容<xref:System.Xml.Serialization.IXmlSerializable>。 不過，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>是僅提供顯著的實作。  
   
-## 請參閱  
- <xref:System.Windows.Data.XmlDataProvider>   
- [資料繫結概觀](../../../ocs/framework/wpf/data/data-binding-overview.md)   
- [繫結標記延伸](../../../ocs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Data.XmlDataProvider>  
+ [資料繫結概觀](../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Binding 標記延伸](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

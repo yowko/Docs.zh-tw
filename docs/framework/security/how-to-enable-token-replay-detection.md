@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-token-replay-detection"></a>操作說明︰啟用權杖重新執行偵測
 ## <a name="applies-to"></a>適用於  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/21/2017
 2.  請按瀏覽器的**上一頁**按鈕。 您應該會看到 **Server Error in ‘/’ Application** 頁面以及下列描述：*ID1062: Replay has been detected for: Token: 'System.IdentityModel.Tokens.SamlSecurityToken'*，後面接著 *AssertionId* 和 *Issuer*。  
   
      因為在偵測到權杖重新執行時，會擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 類型的例外狀況，所以您會看到此錯誤頁面。 發生此錯誤的原因是您在權杖第一次出現時，嘗試重新傳送初始 POST 要求。 **上一頁**按鈕不會造成後續的伺服器要求發生這種行為。
-

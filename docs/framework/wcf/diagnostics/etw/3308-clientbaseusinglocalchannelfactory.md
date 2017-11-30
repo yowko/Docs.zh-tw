@@ -1,35 +1,38 @@
 ---
-title: "3308 - ClientBaseUsingLocalChannelFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3308 - ClientBaseUsingLocalChannelFactory
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f1488c75-38ab-47a0-9951-852488683f2a
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0641c58a0d0bac0585ed7289617832190af1b82e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 3308 - ClientBaseUsingLocalChannelFactory
-## 屬性  
+# <a name="3308---clientbaseusinglocalchannelfactory"></a>3308 - ClientBaseUsingLocalChannelFactory
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|3308|  
 |關鍵字|ServiceModel|  
 |層級|資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|通道|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## 描述  
+## <a name="description"></a>描述  
  未從快取使用通道處理站時，就會發出此事件。  
   
-## 訊息  
- 未從快取使用通道處理站，亦即  執行個體停用快取。  
+## <a name="message"></a>訊息  
+ 無法從快取使用通道處理站，也就是停用快取執行個體。  
   
-## 詳細資料
+## <a name="details"></a>詳細資料

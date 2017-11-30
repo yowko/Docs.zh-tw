@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
 - network tracing, configuring
@@ -22,21 +17,20 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a713b9b2d76d6198d035226aaa55be7345b87f1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：設定網路追蹤
 應用程式或電腦組態檔都會保存可決定網路追蹤格式和內容的設定。 在執行這個程序之前，請確認已啟用追蹤。 如需啟用追蹤的詳細資訊，請參閱[啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
   
- 電腦組態檔 (machine.config) 是儲存在 Windows 安裝目錄中的 %Windir%\Microsoft.NET\Framework 資料夾下。 另外還有一個 machine.config 檔案位於每個安裝於電腦上的 .NET Framework 版本的 %Windir%\Microsoft.NET\Framework 資料夾中 (例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config)。  
+ 電腦組態檔 (machine.config) 是儲存在 Windows 安裝目錄中的 %Windir%\Microsoft.NET\Framework 資料夾下。 （例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config 或 C:\Windows\ 在電腦上安裝的.NET Framework 的每個版本的 %Windir%\Microsoft.NET\Framework 資料夾中沒有一個 machine.config 檔案Microsoft.NET\Framework64\v4.0.30319\Config\machine.config。)。  
   
  您也可以在應用程式的組態檔中進行這些設定，它的優先順序高於電腦組態檔。  
   
@@ -112,8 +106,7 @@ ms.lasthandoff: 08/21/2017
 |`Tracemode`|選擇性 <xref:System.String> 屬性。 設定為 `includehex` 以便使用十六進位和文字格式來顯示通訊協定追蹤。 設定為 `protocolonly` 則只會顯示文字。 預設值是 `includehex`。<br /><br /> 您必須在 \<switches> 項目上設定這個屬性，如範例所示。 如果在 \<source> 項目下的某項目上設定這個屬性，就會擲回例外狀況。|  
   
 ## <a name="see-also"></a>另請參閱  
- [解譯網路追蹤](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
- [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)   
- [啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)   
+ [解譯網路追蹤](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)  
+ [啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [檢測和追蹤的簡介](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
-

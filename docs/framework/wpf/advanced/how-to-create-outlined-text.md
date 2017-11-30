@@ -1,65 +1,71 @@
 ---
-title: "如何：建立外框文字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "漸層筆刷"
-  - "線形漸層筆刷"
-  - "外框文字"
-  - "印刷樣式, 線形漸層筆刷"
-  - "印刷樣式, 外框效果"
+title: "如何：建立外框文字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- typography [WPF], linear gradient brush
+- outlined text [WPF]
+- gradient brush [WPF]
+- linear gradient brush [WPF]
+- typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 76d0dcf63f9d8a66106f4bcdc52a2bf98c75cdc4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：建立外框文字
-在大部分情況中，當您對 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的文字字串加入裝飾時，其實會使用由一組不同字元或圖像 \(Glyph\) 組成的字串。  例如，您可建立線形漸層筆刷，然後將它套用至 <xref:System.Windows.Controls.TextBox> 物件的 <xref:System.Windows.Controls.Control.Foreground%2A> 屬性。  當您顯示或編輯文字方塊時，線形漸層筆刷會自動套用至目前文字字串中的字元集。  
+# <a name="how-to-create-outlined-text"></a>如何：建立外框文字
+在大部分情況下，當您加入裝飾中的文字字串時您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式中，使用的文字方面的不連續字元或圖像 （glyph） 集合。 例如，您無法建立線形漸層筆刷並進行套用，以便<xref:System.Windows.Controls.Control.Foreground%2A>屬性<xref:System.Windows.Controls.TextBox>物件。 當您顯示或編輯文字方塊中時，線性漸層筆刷會自動套用至目前資料集的文字字串中的字元。  
   
- ![以線性漸層筆刷顯示的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext01.png "OutlinedText01")  
-套用線形漸層筆刷至文字方塊的範例  
+ ![以線性漸層筆刷顯示的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
+線性漸層筆刷套用至文字方塊中的範例  
   
- 但是，您也可以將文字轉換為 <xref:System.Windows.Media.Geometry> 物件，以便建立具有豐富外觀的其他文字類型。  例如，您可以根據文字字串的外框來建立 <xref:System.Windows.Media.Geometry> 物件。  
+ 不過，您也可以轉換成文字<xref:System.Windows.Media.Geometry>物件，可讓您建立其他類型的視覺化 rtf 文字。 例如，您可以建立<xref:System.Windows.Media.Geometry>物件根據外框的文字字串。  
   
- ![以線性漸層筆刷繪製外框的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext02.png "OutlinedText02")  
-套用線形漸層筆刷至文字外框幾何圖形的範例  
+ ![使用線性漸層筆刷文字外框](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")  
+線性漸層筆刷套用至文字的外框的幾何的範例  
   
- 將文字轉換為 <xref:System.Windows.Media.Geometry> 物件後，文字就不再是字元的集合，因此您無法修改文字字串中的字元。  不過，您可以透過修改轉換後文字的描邊和填滿屬性，影響文字的外觀。  描邊是指轉換後文字的外框，填滿則是指轉換後文字之外框內的區域。  
+ 當文字轉換成<xref:System.Windows.Media.Geometry>物件，它不會再為字元的集合，您無法修改的文字字串中的字元。 不過，您可以修改其筆劃與填滿屬性來影響轉換文字的外觀。 筆劃是指轉換文字的外框，填滿是指轉換文字外框內的區域。  
   
- 下列範例說明透過修改轉換後文字的描邊和填滿，建立視覺效果的數個方法。  
+ 下列範例會說明數種方式建立視覺效果，藉由修改筆劃和轉換的文字的填滿。  
   
- ![使用不同填色和筆觸色彩的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext03.png "OutlinedText03")  
-將筆劃和填滿設定為不同色彩的範例  
+ ![使用不同填色和筆觸色彩的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")  
+設定筆劃並填滿不同色彩的範例  
   
- ![影像筆刷套用至筆觸的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext04.png "OutlinedText04")  
-在筆劃上套用影像筆刷的範例  
+ ![影像筆刷套用至筆觸的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")  
+影像筆刷套用至筆劃的範例  
   
- 也可以修改轉換後文字的週框方塊矩形，或反白。  下列範例說明透過修改所轉換文字的描邊和反白顯示，建立視覺效果的方法。  
+ 它也可修改的週框方塊矩形或反白顯示轉換的文字。 下列範例會示範如何建立視覺效果藉由修改筆劃和反白顯示的轉換的文字。  
   
- ![影像筆刷套用至筆觸的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext05.png "OutlinedText05")  
-在筆劃和反白顯示上套用影像筆刷的範例  
+ ![影像筆刷套用至筆觸的文字](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
+影像筆刷套用至筆劃並反白顯示的範例  
   
-## 範例  
- 將文字轉換為 <xref:System.Windows.Media.Geometry> 物件的關鍵在於使用 <xref:System.Windows.Media.FormattedText> 物件。  建立這個物件之後，就可以使用 <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> 和 <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> 方法將文字轉換為 <xref:System.Windows.Media.Geometry> 物件。  第一個方法會傳回格式化文字的幾何圖形，第二個方法則會傳回格式化文字之週框方塊的幾何圖形。  下列程式碼範例顯示如何建立 <xref:System.Windows.Media.FormattedText> 物件，並擷取格式化文字和其週框方塊的幾何圖形。  
+## <a name="example"></a>範例  
+ 要轉換的文字的索引鍵<xref:System.Windows.Media.Geometry>物件是使用<xref:System.Windows.Media.FormattedText>物件。 當您建立此物件之後時，您可以使用<xref:System.Windows.Media.FormattedText.BuildGeometry%2A>和<xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A>方法，以將文字轉換成<xref:System.Windows.Media.Geometry>物件。 第一種方法傳回之幾何的格式化的文字。第二個方法會傳回之幾何的格式化文字的週框方塊。 下列程式碼範例示範如何建立<xref:System.Windows.Media.FormattedText>物件，以及擷取格式化的文字和其周框方塊的幾何。  
   
  [!code-csharp[OutlineTextControlViewer#CreateText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- 為了要顯示擷取後的 <xref:System.Windows.Media.Geometry> 物件，您必須存取用來顯示轉換後文字的物件的 <xref:System.Windows.Media.DrawingContext>。  在這些程式碼範例中，這是透過建立自訂控制項物件來達成，這個控制項物件是從支援使用者定義呈現的類別衍生而來。  
+ 若要顯示擷取<xref:System.Windows.Media.Geometry>物件，您需要存取<xref:System.Windows.Media.DrawingContext>轉換的文字中顯示的物件。 在這些程式碼範例中，這是藉由建立衍生自的類別，以支援使用者定義轉換的自訂控制項物件。  
   
- 若要在自訂控制項中顯示 <xref:System.Windows.Media.Geometry> 物件，請覆寫 <xref:System.Windows.UIElement.OnRender%2A> 方法。  您覆寫後的方法應該要使用 <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> 方法來繪製 <xref:System.Windows.Media.Geometry> 物件。  
+ 若要顯示<xref:System.Windows.Media.Geometry>自訂控制項中的物件提供的覆寫<xref:System.Windows.UIElement.OnRender%2A>方法。 覆寫的方法應該使用<xref:System.Windows.Media.DrawingContext.DrawGeometry%2A>方法繪製<xref:System.Windows.Media.Geometry>物件。  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [繪製格式化的文字](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

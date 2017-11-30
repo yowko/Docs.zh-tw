@@ -1,6 +1,6 @@
 ---
 title: "例外狀況處理 (F#)"
-description: "例外狀況處理 (F#)"
+description: "了解 F # 中處理的例外狀況的基本概念，並尋找例外狀況處理運算式和函數的連結。"
 keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ad475c4a-d94e-47d9-b27b-3ff000b65f8e
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: d95aca8c511524f0b9af67b34a5999f885cf3aaf
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: b61af66e0a70fdf9b86df37418c0284957d1f99e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="exception-handling"></a>例外狀況處理
 
 本節包含 F# 語言例外狀況處理支援的相關資訊。

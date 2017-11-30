@@ -1,33 +1,36 @@
 ---
-title: "路由 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "路由 [WCF]"
-  - "WCF [WCF], 傳送"
-  - "Windows Communication Foundation [WCF], 傳送"
+title: "路由"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- routing [WCF]
+- WCF [WCF], routing
+- Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4ea56330e4de55a7acbc6ccca737cd62b8f151d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 路由
-本節中的主題涵蓋路由服務。  路由服務是可設定的泛型 SOAP 媒介，可讓您設定以內容為基礎的路由、設定通訊協定橋接、處理通訊錯誤，以及在執行階段動態更新路由邏輯。  
+# <a name="routing"></a>路由
+本節中的主題涵蓋路由服務。 路由服務是可設定的泛型 SOAP 媒介，可讓您設定以內容為基礎的路由、設定通訊協定橋接、處理通訊錯誤，以及在執行階段動態更新路由邏輯。  
   
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [路由服務](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  提供路由服務的功能概觀。  
   
- [Routing Service](http://msdn.microsoft.com/zh-tw/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [路由服務](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  說明路由服務的各項功能。  
   
  [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

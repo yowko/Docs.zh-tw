@@ -1,35 +1,39 @@
 ---
-title: "GetSchema 和結構描述集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "GetSchema 和結構描述集合"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4790195d5f02ac1f68f8ab4c5ef39499052cd725
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# GetSchema 和結構描述集合
-每個 .NET Framework Managed 提供者中的 **Connection** 類別都會實作 **GetSchema** 方法，此方法用於擷取目前連接之資料庫的結構描述資訊，並且從 **GetSchema** 方法傳回之結構描述資訊的形式為 <xref:System.Data.DataTable>。  **GetSchema** 方法是一種多載方法，它為指定要傳回的結構描述集合及限制傳回的資訊量，提供選擇性參數。  
+# <a name="getschema-and-schema-collections"></a>GetSchema 和結構描述集合
+**連接**中每個.NET Framework managed 提供者實作的類別**GetSchema**方法用來擷取目前連接的資料庫結構描述資訊和從傳回的結構描述資訊**GetSchema**方法的形式提供<xref:System.Data.DataTable>。 **GetSchema**方法是多載的方法，為指定要傳回結構描述集合及限制傳回的資訊量，提供選擇性參數。  
   
-## 指定結構描述集合  
- **GetSchema** 方法的第一個選擇性參數是指定為字串的集合名稱。  結構描述集合有兩種型別：通用於所有提供者的通用結構描述集合與每個提供者特有的特定結構描述集合。  
+## <a name="specifying-the-schema-collections"></a>指定結構描述集合  
+ 第一個選擇性參數**GetSchema**方法是指定為字串的集合名稱。 結構描述集合有兩種型別：通用於所有提供者的通用結構描述集合與每個提供者特有的特定結構描述集合。  
   
- 您可以藉由呼叫 **GetSchema** 方法 \(不使用引數或使用結構描述集合名稱 MetaDataCollections\)，來查詢 .NET Framework Managed 提供者，以決定支援的結構描述集合清單。  這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
+ 您可以查詢.NET Framework managed 提供者以決定支援的結構描述集合的清單，藉由呼叫**GetSchema**方法沒有引數，或使用結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
   
-### 擷取結構描述集合範例  
- 下列範例示範如何使用 SQL Server 的 .NET Framework 資料提供者之 <xref:System.Data.SqlClient.SqlConnection> 類別的 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 方法，擷取 **AdventureWorks** 範例資料庫中包含之所有資料表的結構描述資訊：  
+### <a name="retrieving-schema-collections-example"></a>擷取結構描述集合範例  
+ 下列範例示範如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>方法的.NET Framework Data Provider for SQL Server<xref:System.Data.SqlClient.SqlConnection>類別來擷取所有所包含的資料表結構描述資訊**AdventureWorks**範例資料庫：  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System.Data.SqlClient  
   
 Module Module1  
@@ -65,9 +69,7 @@ Module Module1
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -112,6 +114,6 @@ class Program
 }  
 ```  
   
-## 請參閱  
- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

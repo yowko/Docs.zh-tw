@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -19,18 +14,17 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7901084f38099d74f3bcde086342bd3c90b34348
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 網際網路通訊協定第 6 版
+# <a name="internet-protocol-version-6"></a>網際網路通訊協定第 6 版
 網際網路通訊協定第 6 版 (IPv6) 是網際網路網路層級的新標準通訊協定套件。 IPv6 旨在解決網際網路通訊協定當前版本 (稱為 IPv4) 有關位址耗竭、安全性、自動組態和擴充性等等的許多問題。 IPv6 展開網際網路的功能，以啟用新種類的應用程式，包括點對點與行動應用程式。 以下是目前 IPv4 通訊協定的主要問題：  
   
 -   快速消耗位址空間。  
@@ -59,7 +53,7 @@ ms.lasthandoff: 08/21/2017
   
  如需詳細資訊，請參閱 [IPv6 定址](../../../docs/framework/network-programming/ipv6-addressing.md)、[IPv6 路由](../../../docs/framework/network-programming/ipv6-routing.md)、[IPv6 自動組態](../../../docs/framework/network-programming/ipv6-auto-configuration.md)、[啟用和停用 IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) 以及[如何：修改電腦組態檔以啟用 IPv6 支援](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
   
-## 參考  
+## <a name="references"></a>參考  
  以下是您可在網際網路工程任務推動小組網站中找到的精選 RFC 文件 ([http://www.ietf.org](http://www.ietf.org/))：  
   
 -   RFC 1287，前進未來網際網路架構。  
@@ -72,8 +66,7 @@ ms.lasthandoff: 08/21/2017
   
  您也可以在 [Technet 的 IPv6 區域](http://go.microsoft.com/fwlink/?LinkID=179658)找到 IPv6 的相關資訊。  
   
-## 另請參閱  
- [IPv6 通訊端範例](http://go.microsoft.com/fwlink/?LinkID=179568)   
- [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>另請參閱  
+ [IPv6 通訊端範例](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
  [通訊端](../../../docs/framework/network-programming/sockets.md)
-

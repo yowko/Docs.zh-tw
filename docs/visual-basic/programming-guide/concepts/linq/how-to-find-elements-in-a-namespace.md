@@ -1,36 +1,32 @@
 ---
-title: "如何︰ 尋找命名空間 (XPATH-LINQ to XML) 中的項目 (Visual Basic) |Microsoft 文件"
+title: "如何： 尋找命名空間 (XPATH-LINQ to XML) 中的項目 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d665ddc1e7ad7340b05c97e790195abbc53e4f95
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 257d4c37f849bbc50aac6b9cb4531d1084163db2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>如何︰ 尋找命名空間 (XPATH-LINQ to XML) 中的項目 (Visual Basic)
-XPath 運算式可以在特定的命名空間中尋找節點。 XPath 運算式使用命名空間前置詞來指定命名空間。 若要剖析包含命名空間前置詞的 XPath 運算式，必須將物件傳遞給實作<xref:System.Xml.IXmlNamespaceResolver>.</xref:System.Xml.IXmlNamespaceResolver>的 XPath 方法 這個範例會使用<xref:System.Xml.XmlNamespaceManager>。</xref:System.Xml.XmlNamespaceManager>  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>如何： 尋找命名空間 (XPATH-LINQ to XML) 中的項目 (Visual Basic)
+XPath 運算式可以在特定的命名空間中尋找節點。 XPath 運算式使用命名空間前置詞來指定命名空間。 若要剖析包含命名空間前置詞的 XPath 運算式，您必須將物件傳遞到實作 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法。 這個範例會使用 <xref:System.Xml.XmlNamespaceManager>。  
   
  XPath 運算式為：  
   
  `./aw:*`  
   
 ## <a name="example"></a>範例  
- 下列範例會讀取包含兩個命名空間的 XML 樹狀。 它會使用<xref:System.Xml.XmlReader>來讀取 XML 文件。</xref:System.Xml.XmlReader> 接著會取得<xref:System.Xml.XmlNameTable>從<xref:System.Xml.XmlReader>，以及<xref:System.Xml.XmlNamespaceManager>從<xref:System.Xml.XmlNameTable>.</xref:System.Xml.XmlNameTable> </xref:System.Xml.XmlNamespaceManager> </xref:System.Xml.XmlReader> </xref:System.Xml.XmlNameTable> 它會使用<xref:System.Xml.XmlNamespaceManager>選取項目時。</xref:System.Xml.XmlNamespaceManager>  
+ 下列範例會讀取包含兩個命名空間的 XML 樹狀。 該範例會使用 <xref:System.Xml.XmlReader> 來讀取 XML 文件。 接著，它會從 <xref:System.Xml.XmlNameTable> 取得 <xref:System.Xml.XmlReader>，並從 <xref:System.Xml.XmlNamespaceManager> 取得 <xref:System.Xml.XmlNameTable>。 選取項目時，它會使用 <xref:System.Xml.XmlNamespaceManager>。  
   
 ```vb  
 Dim reader As XmlReader = _  
@@ -94,4 +90,4 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to XML 的 XPath 使用者 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

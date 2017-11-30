@@ -1,34 +1,37 @@
 ---
-title: "HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 444fab903683b952d1a8c312c3f6032be880da68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
 Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型，如下：  
   
--   若要使用 Svcutil.exe 針對組件集合匯出所有編譯服務合約的中繼資料，請指定組件為輸入參數。這是預設行為。  
+-   若要使用 Svcutil.exe 針對組件集合匯出所有編譯服務合約的中繼資料，請指定組件為輸入參數。 這是預設行為。  
   
--   若要使用 Svcutil.exe 針對編譯服務匯出中繼資料，請指定服務組件或將組件指定為輸入參數。您必須使用 `/serviceName` 選項指示您想要匯出之服務的組態名稱。Svcutil.exe 自動載入特定可執行組件的組態檔。  
+-   若要使用 Svcutil.exe 針對編譯服務匯出中繼資料，請指定服務組件或將組件指定為輸入參數。 您必須使用 `/serviceName` 選項指示您想要匯出之服務的組態名稱。 Svcutil.exe 自動載入特定可執行組件的組態檔。  
   
 -   若要匯出組件集合內所有資料合約類型，請使用 `/dataContractOnly` 選項。  
   
 > [!NOTE]
 >  使用 `/reference` 選項為任何相依組件指定檔案路徑。  
   
-### 若要匯出編譯服務合約的中繼資料  
+### <a name="to-export-metadata-for-compiled-service-contracts"></a>若要匯出編譯服務合約的中繼資料  
   
 1.  將您的服務合約實作編譯成一個或多個類別程式庫。1  
   
@@ -41,13 +44,13 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
     svcutil.exe Contracts.dll  
     ```  
   
-### 若要匯出編譯服務的中繼資料  
+### <a name="to-export-metadata-for-a-compiled-service"></a>若要匯出編譯服務的中繼資料  
   
 1.  將您的服務實作編譯為可執行組件  
   
 2.  為您的服務可執行程式建立組態檔案並新增服務組態。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.serviceModel>  
@@ -69,7 +72,7 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
-### 若要匯出編譯資料合約的中繼資料  
+### <a name="to-export-metadata-for-compiled-data-contracts"></a>若要匯出編譯資料合約的中繼資料  
   
 1.  將您的資料合約實作編譯成一個或多個類別程式庫。  
   
@@ -82,7 +85,7 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例示範如何產生簡單服務實作與組態的中繼資料。  
   
  若要匯出服務合約的中繼資料  
@@ -167,9 +170,8 @@ public class MyService : IPersonFinder
     </services>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 請參閱  
- [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
+## <a name="see-also"></a>另請參閱  
+ [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

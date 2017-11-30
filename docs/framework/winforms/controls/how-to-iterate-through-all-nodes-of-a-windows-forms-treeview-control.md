@@ -1,39 +1,44 @@
 ---
-title: "如何：逐一查看 Windows Form TreeView 控制項的所有節點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "範例 [Windows Form], TreeView 控制項"
-  - "TreeView 控制項中的樹狀節點, 逐一查看"
-  - "TreeView 控制項 [Windows Form], 重複節點"
+title: "如何：逐一查看 Windows Forms TreeView 控制項的所有節點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- TreeView control [Windows Forms], iterating through nodes
+- tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 057612bfb28333df0aebaa5ca19555f4c4951687
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：逐一查看 Windows Form TreeView 控制項的所有節點
-有時候這在檢查 Windows Form <xref:System.Windows.Forms.TreeView> 控制項的每個節點，以便對節點值進行某些計算時非常有用。  這項作業可以利用逐一查看每個樹狀集合物件 \(Collection\) 中每個節點的遞迴程序 \(C\# 和 C\+\+ 中為遞迴方法\) 來完成。  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>如何：逐一查看 Windows Forms TreeView 控制項的所有節點
+可能會很有用，檢查 Windows Form 中的每個節點<xref:System.Windows.Forms.TreeView>才能執行某些計算節點值上的控制項。 使用遞迴程序 (採用 C# 和 C++ 的遞迴方法) 來逐一查看每個樹狀集合中的每個節點，即可完成這項作業。  
   
- 樹狀檢視中的每個 <xref:System.Windows.Forms.TreeNode> 物件都有屬性，您可以使用這些屬性來巡覽樹狀檢視：<xref:System.Windows.Forms.TreeNode.FirstNode%2A>、<xref:System.Windows.Forms.TreeNode.LastNode%2A>、<xref:System.Windows.Forms.TreeNode.NextNode%2A>、<xref:System.Windows.Forms.TreeNode.PrevNode%2A> 和 <xref:System.Windows.Forms.TreeNode.Parent%2A>。  <xref:System.Windows.Forms.TreeNode.Parent%2A> 屬性的值是目前節點的父節點。  如果有子節點時，目前節點的子節點將列於 <xref:System.Windows.Forms.TreeNode.Nodes%2A> 屬性中。  <xref:System.Windows.Forms.TreeView> 控制項本身具有 <xref:System.Windows.Forms.TreeView.TopNode%2A> 屬性，這是整個樹狀檢視的根 \(Root\) 節點。  
+ 每個<xref:System.Windows.Forms.TreeNode>樹狀檢視中的物件具有屬性可讓您瀏覽樹狀目錄檢視： <xref:System.Windows.Forms.TreeNode.FirstNode%2A>， <xref:System.Windows.Forms.TreeNode.LastNode%2A>， <xref:System.Windows.Forms.TreeNode.NextNode%2A>， <xref:System.Windows.Forms.TreeNode.PrevNode%2A>，和<xref:System.Windows.Forms.TreeNode.Parent%2A>。 值<xref:System.Windows.Forms.TreeNode.Parent%2A>屬性是目前節點的父節點。 子節點的目前節點中，如果有的話，會列出其<xref:System.Windows.Forms.TreeNode.Nodes%2A>屬性。 <xref:System.Windows.Forms.TreeView>控制項本身具有<xref:System.Windows.Forms.TreeView.TopNode%2A>屬性，這是整個樹狀結構檢視的根節點。  
   
-### 若要逐一查看 TreeView 控制項的所有節點  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>逐一查看 TreeView 控制項的所有節點  
   
-1.  建立測試每個節點的遞迴程序 \(C\# 和 C\+\+ 中為遞迴方法\)。  
+1.  建立用以測試每個節點的遞迴程序 (採用 C# 和 C++ 的遞迴方法)。  
   
 2.  呼叫此程序。  
   
-     下列範例顯示如何列印每個 <xref:System.Windows.Forms.TreeNode> 物件的 <xref:System.Windows.Forms.TreeNode.Text%2A> 屬性：  
+     下列範例示範如何列印每個<xref:System.Windows.Forms.TreeNode>物件的<xref:System.Windows.Forms.TreeNode.Text%2A>屬性：  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -52,7 +57,6 @@ caps.handback.revision: 14
           PrintRecursive(n)  
        Next  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -78,7 +82,6 @@ caps.handback.revision: 14
           PrintRecursive(n);  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -130,6 +133,6 @@ caps.handback.revision: 14
        }  
     ```  
   
-## 請參閱  
- [TreeView 控制項](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [Recursive Procedures](../Topic/Recursive%20Procedures%20\(Visual%20Basic\).md)
+## <a name="see-also"></a>另請參閱  
+ [TreeView 控制項](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [遞迴程序](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

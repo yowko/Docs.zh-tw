@@ -1,34 +1,32 @@
 ---
-title: "Array subscript expression missing | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30306"
-  - "vbc30306"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30306"
+title: "遺漏陣列註標運算式"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30306
+- vbc30306
+helpviewer_keywords: BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aac09a90abf69fe53f46910fe4b542c6cc632c3a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Array subscript expression missing
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-陣列初始化遺漏一或多個定義陣列界限的註標 \(Subscript\)。  例如，陳述式可能包含運算式 `myArray (5,5,,10)`，其中遺漏了第三個註標。  
+# <a name="array-subscript-expression-missing"></a>遺漏陣列註標運算式
+陣列初始設定省去了一個或多個定義陣列註標。 例如，陳述式可能會包含運算式`myArray (5,5,,10)`，，讓第三個註標出。  
   
- **錯誤 ID**︰BC30306  
+ **錯誤 ID:** BC30306  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
 -   提供遺漏的註標。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

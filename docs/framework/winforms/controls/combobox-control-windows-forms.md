@@ -1,48 +1,49 @@
 ---
-title: "ComboBox 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "下拉式方塊"
-  - "下拉式方塊, Windows Form 控制項"
-  - "ComboBox 控制項 [Windows Form]"
-  - "下拉式清單, ComboBox 控制項"
-  - "下拉式清單, Windows Form"
-  - "清單控制項, Windows Form"
-  - "清單項目, 顯示的 Windows Form 控制項"
+title: "ComboBox 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drop-down lists [Windows Forms], Windows Forms
+- list controls [Windows Forms], Windows Forms
+- combo boxes [Windows Forms], Windows Forms controls
+- combo boxes
+- list items [Windows Forms], Windows Forms controls that display
+- drop-down lists [Windows Forms], ComboBox control
+- ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# ComboBox 控制項 (Windows Form)
-Windows Form `ComboBox` 控制項是用來在下拉式清單方塊中顯示資料。  根據預設，`ComboBox` 控制項會顯示於兩個部分：上層部分是可讓使用者輸入清單項目的文字方塊。  第二個部分是顯示項目清單的清單方塊，使用者可從中選取一個項目。  
+# <a name="combobox-control-windows-forms"></a>ComboBox 控制項 (Windows Form)
+Windows Form`ComboBox`控制項用來在下拉式清單方塊中顯示資料。 根據預設，`ComboBox`控制項出現在兩個部分： 上半部是文字方塊，可讓使用者輸入的清單項目。 第二個部分是清單方塊會顯示，使用者可以從中選取一個項目清單。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [ComboBox 控制項概觀](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- 解釋這個控制項是什麼，以及其主要功能和屬性。  
+ 說明此控制項是什麼，並說明其重要功能與屬性。  
   
- [如何：在 ComboBox 控制項中建立各種大小的文字](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
- 示範 `ComboBox` 控制項中文字的自訂繪圖。  
+ [操作說明：在 ComboBox 控制項中建立各種大小的文字](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ 示範自訂繪圖中的文字`ComboBox`控制項。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ComboBox> 類別  
- 描述這個類別並且連結到它所有的成員。  
+ 說明這個類別，並且提供其所有成員的連結。  
   
-## 相關章節  
- [用來列出選項的 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- 提供可以使用清單方塊、下拉式方塊和核取的清單方塊執行作業的清單。  
+## <a name="related-sections"></a>相關章節  
+ [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ 提供一份使用清單方塊、 下拉式方塊和選取的清單方塊可以執行的作業。  
   
-## 請參閱  
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>另請參閱  
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

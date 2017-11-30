@@ -1,37 +1,42 @@
 ---
-title: "如何：從項目移除裝飾項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Adorner, 移除"
+title: "如何：從項目移除裝飾項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe11dc8df1a29518ba05792877bd26670f96b29d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：從項目移除裝飾項
-本範例示範如何以程式設計的方式，從指定的 <xref:System.Windows.UIElement> 移除特定裝飾項。  
+# <a name="how-to-remove-an-adorner-from-an-element"></a>如何：從項目移除裝飾項
+這個範例示範如何以程式設計方式移除特定的裝飾項指定<xref:System.Windows.UIElement>。  
   
-## 範例  
- 這個詳細的程式碼範例會移除 <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> 傳回之裝飾項陣列中的第一個裝飾項。  此範例擷取的裝飾項剛好位於名稱為 *myTextBox* 的 <xref:System.Windows.UIElement> 上。  如果呼叫 <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> 時指定的項目沒有任何裝飾項，則會傳回 `null`。  這個程式碼會明確檢查 null 陣列，因此最適合 null 陣列應該相當常見的應用程式。  
+## <a name="example"></a>範例  
+ 這個冗長的程式碼範例的提示所傳回陣列中移除第一個裝飾項<xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>。  此範例中會發生要擷取的裝飾項在<xref:System.Windows.UIElement>名為*myTextBox*。  如果指定的呼叫中的項目<xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>有無裝飾項，`null`傳回。  此程式碼明確檢查 null 的陣列，以及最適合應用程式其中 null 陣列必須是相對常見。  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerLong](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornerlong)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerLong](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornerlong)]  
   
-## 範例  
- 這個濃縮版的程式碼範例在功能上相當於前面顯示的詳細範例。  這個程式碼不會明確檢查 null 陣列，因此可能會引發 <xref:System.NullReferenceException> 例外狀況。  這個程式碼最適合 null 陣列較為少見的應用程式。  
+## <a name="example"></a>範例  
+ 此壓縮的程式碼範例是功能上相當於上面顯示的詳細資訊的範例。 此程式碼不會明確地檢查 null 的陣列，所以有可能，<xref:System.NullReferenceException>可能會引發例外狀況。  此程式碼最適合用於應用程式的 null 陣列應該很少見。  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornershort)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [裝飾項概觀](../../../../docs/framework/wpf/controls/adorners-overview.md)

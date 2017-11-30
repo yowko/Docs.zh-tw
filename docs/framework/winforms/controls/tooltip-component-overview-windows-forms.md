@@ -1,37 +1,37 @@
 ---
-title: "ToolTip 元件概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolTip"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ToolTip 元件 [Windows Form], 關於 ToolTip 元件"
-  - "工具提示 [Windows Form], 關於工具提示"
+title: "ToolTip 元件概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolTip
+helpviewer_keywords:
+- tooltips [Windows Forms], about tooltips
+- ToolTip component [Windows Forms], about ToolTip component
 ms.assetid: 3fbc6f08-c882-4acd-a960-a08efe3c7e6e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ff2364b5c7223c265571257920a7c7e794b4921b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ToolTip 元件概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.ToolTip> 元件會在使用者指向控制項時顯示文字。  工具提示 \(ToolTip\) 可以和任何控制項建立關聯。  使用這個元件的範例之一是：若要節省表單的空間，您可以在按鈕上顯示小圖示，並利用工具提示說明按鈕的功能。  
+# <a name="tooltip-component-overview-windows-forms"></a>ToolTip 元件概觀 (Windows Form)
+當使用者指向控制項時，Windows Form <xref:System.Windows.Forms.ToolTip> 元件會顯示文字。 工具提示可以與任何控制項產生關聯。 使用此元件的範例： 為了節省空間，在表單上，您可以在按鈕上顯示小圖示，並使用工具提示說明按鈕的功能。  
   
-## 使用 ToolTip 元件  
- <xref:System.Windows.Forms.ToolTip> 元件在 Windows Form 或其他容器 \(Container\) 上提供 `ToolTip` 屬性給多個控制項。  例如，如果在表單上加入 <xref:System.Windows.Forms.ToolTip> 元件，就可以為 <xref:System.Windows.Forms.TextBox> 控制項顯示「在這裡輸入您的姓名」，且為 <xref:System.Windows.Forms.Button> 控制項顯示「按這裡儲存變更」。  
+## <a name="working-with-the-tooltip-component"></a>使用 ToolTip 元件  
+ A<xref:System.Windows.Forms.ToolTip>元件提供`ToolTip`Windows 表單或其他容器上的多個控制項的屬性。 例如，如果您將其中一個<xref:System.Windows.Forms.ToolTip>表單上的元件，您可以顯示為 「 類型名稱 」<xref:System.Windows.Forms.TextBox>控制和"按一下這裡以儲存變更"的<xref:System.Windows.Forms.Button>控制項。  
   
- <xref:System.Windows.Forms.ToolTip> 元件的主要方法為 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 和 <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>。  您可以使用 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 方法設定針對控制項所顯示的工具提示。  如需詳細資訊，請參閱 [如何：在設計階段設定 Windows Form 上控制項的工具提示](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)。  主要屬性包括 <xref:System.Windows.Forms.ToolTip.Active%2A> \(必須設定為 `true` 以便顯示工具提示\) 以及 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> \(設定工具提示字串顯示的時間長度、使用者必須指向多長的時間控制項才會顯示，以及後續的工具提示視窗出現所需的時間\)。  如需詳細資訊，請參閱 [如何：變更 Windows Form ToolTip 元件的延遲時間](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)。  
+ 主要方法<xref:System.Windows.Forms.ToolTip>元件是<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>和<xref:System.Windows.Forms.ToolTip.GetToolTip%2A>。 您可以使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法，以設定控制項顯示的工具提示。 如需詳細資訊，請參閱[How to： 在設計階段的 Windows Form 上控制項的 設定工具提示](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)。 索引鍵屬性是<xref:System.Windows.Forms.ToolTip.Active%2A>，且必須設為`true`才會出現，工具提示和<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>、 可設定的工具提示字串會顯示的時間長度、 多久才會出現，工具提示控制項必須指向使用者和時間的方式會針對後續工具提示視窗出現。 如需詳細資訊，請參閱[如何： 變更 Windows Form ToolTip 元件的延遲](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)。  
   
-## 請參閱  
- <xref:System.Windows.Forms.ToolTip>   
- [如何：在設計階段設定 Windows Form 上控制項的工具提示](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)   
- [如何：變更 Windows Form ToolTip 元件的延遲時間](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.ToolTip>  
+ [操作說明：在設計階段設定 Windows Forms 上控制項的工具提示](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
+ [操作說明：變更 Windows Forms ToolTip 元件的延遲時間](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)

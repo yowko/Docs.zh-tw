@@ -1,61 +1,64 @@
 ---
-title: "OLE DB 資料型別對應 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "OLE DB 資料類型對應"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 350364c92d6159313d8fae6d6f9986a5e581d89c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# OLE DB 資料型別對應
-下表顯示來自 .NET Framework Data Provider for ADO 和 OLE DB \(<xref:System.Data.OleDb>\) 之資料型別的推斷 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別。  同時也一併列出 <xref:System.Data.OleDb.OleDbDataReader> 具型別的存取子方法。  
+# <a name="ole-db-data-type-mappings"></a>OLE DB 資料類型對應
+下表顯示來自 .NET Framework Data Provider for ADO 和 OLE DB ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 之資料型別的推斷 <xref:System.Data.OleDb> 型別。 同時也一併列出 <xref:System.Data.OleDb.OleDbDataReader> 具型別的存取子方法。  
   
 |ADO 型別|OLE DB 型別|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類型|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 具型別的存取子|  
-|------------|---------------|--------------------------------------------------------------------|-------------------------------------------------------------------------|  
-|adBigInt|DBTYPE\_I8|Int64|GetInt64\(\)|  
-|adBinary|DBTYPE\_BYTES|Byte\[\]|GetBytes\(\)|  
-|adBoolean|DBTYPE\_BOOL|Boolean|GetBoolean\(\)|  
-|adBSTR|DBTYPE\_BSTR|String|GetString\(\)|  
-|adChapter|DBTYPE\_HCHAPTER|透過 `DataReader` 支援。  請參閱 [使用 DataReader 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)。|GetValue\(\)|  
-|adChar|DBTYPE\_STR|String|GetString\(\)|  
-|adCurrency|DBTYPE\_CY|Decimal|GetDecimal\(\)|  
-|adDate|DBTYPE\_DATE|DateTime|GetDateTime\(\)|  
-|adDBDate|DBTYPE\_DBDATE|DateTime|GetDateTime\(\)|  
-|adDBTime|DBTYPE\_DBTIME|DateTime|GetDateTime\(\)|  
-|adDBTimeStamp|DBTYPE\_DBTIMESTAMP|DateTime|GetDateTime\(\)|  
-|adDecimal|DBTYPE\_DECIMAL|Decimal|GetDecimal\(\)|  
-|adDouble|DBTYPE\_R8|Double|GetDouble\(\)|  
-|adError|DBTYPE\_ERROR|ExternalException|GetValue\(\)|  
-|adFileTime|DBTYPE\_FILETIME|DateTime|GetDateTime\(\)|  
-|adGUID|DBTYPE\_GUID|Guid|GetGuid\(\)|  
-|adIDispatch|DBTYPE\_IDISPATCH \*|物件|GetValue\(\)|  
-|adInteger|DBTYPE\_I4|Int32|GetInt32\(\)|  
-|adIUnknown|DBTYPE\_IUNKNOWN \*|物件|GetValue\(\)|  
-|adNumeric|DBTYPE\_NUMERIC|Decimal|GetDecimal\(\)|  
-|adPropVariant|DBTYPE\_PROPVARIANT|物件|GetValue\(\)|  
-|adSingle|DBTYPE\_R4|Single|GetFloat\(\)|  
-|adSmallInt|DBTYPE\_I2|Int16|GetInt16\(\)|  
-|adTinyInt|DBTYPE\_I1|Byte|GetByte\(\)|  
-|adUnsignedBigInt|DBTYPE\_UI8|UInt64|GetValue\(\)|  
-|adUnsignedInt|DBTYPE\_UI4|UInt32|GetValue\(\)|  
-|adUnsignedSmallInt|DBTYPE\_UI2|UInt16|GetValue\(\)|  
-|adUnsignedTinyInt|DBTYPE\_UI1|Byte|GetByte\(\)|  
-|adVariant|DBTYPE\_VARIANT|物件|GetValue\(\)|  
-|adWChar|DBTYPE\_WSTR|String|GetString\(\)|  
-|adUserDefined|DBTYPE\_UDT|不支援||  
-|adVarNumeric|DBTYPE\_VARNUMERIC|不支援||  
+|--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
+|adBigInt|DBTYPE_I8|Int64|GetInt64()|  
+|adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
+|adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
+|adBSTR|DBTYPE_BSTR|String|GetString()|  
+|adChapter|DBTYPE_HCHAPTER|透過 `DataReader` 支援。 請參閱[使用 DataReader 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)。|GetValue()|  
+|adChar|DBTYPE_STR|String|GetString()|  
+|adCurrency|DBTYPE_CY|Decimal|GetDecimal()|  
+|adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
+|adDBDate|DBTYPE_DBDATE|DateTime|GetDateTime()|  
+|adDBTime|DBTYPE_DBTIME|DateTime|GetDateTime()|  
+|adDBTimeStamp|DBTYPE_DBTIMESTAMP|DateTime|GetDateTime()|  
+|adDecimal|DBTYPE_DECIMAL|Decimal|GetDecimal()|  
+|adDouble|DBTYPE_R8|Double|GetDouble()|  
+|adError|DBTYPE_ERROR|ExternalException|GetValue()|  
+|adFileTime|DBTYPE_FILETIME|DateTime|GetDateTime()|  
+|adGUID|DBTYPE_GUID|Guid|GetGuid()|  
+|adIDispatch|DBTYPE_IDISPATCH *|物件|GetValue()|  
+|adInteger|DBTYPE_I4|Int32|GetInt32()|  
+|adIUnknown|DBTYPE_IUNKNOWN *|物件|GetValue()|  
+|adNumeric|DBTYPE_NUMERIC|Decimal|GetDecimal()|  
+|adPropVariant|DBTYPE_PROPVARIANT|物件|GetValue()|  
+|adSingle|DBTYPE_R4|Single|GetFloat()|  
+|adSmallInt|DBTYPE_I2|Int16|GetInt16()|  
+|adTinyInt|DBTYPE_I1|Byte|GetByte()|  
+|adUnsignedBigInt|DBTYPE_UI8|UInt64|GetValue()|  
+|adUnsignedInt|DBTYPE_UI4|UInt32|GetValue()|  
+|adUnsignedSmallInt|DBTYPE_UI2|UInt16|GetValue()|  
+|adUnsignedTinyInt|DBTYPE_UI1|Byte|GetByte()|  
+|adVariant|DBTYPE_VARIANT|物件|GetValue()|  
+|adWChar|DBTYPE_WSTR|String|GetString()|  
+|adUserDefined|DBTYPE_UDT|不支援||  
+|adVarNumeric|DBTYPE_VARNUMERIC|不支援||  
   
- \* OLE DB 型別 `DBTYPE_IUNKNOWN` 和 `DBTYPE_IDISPATCH` 的物件參考是已封送處理的指標表示。  
+ \*OLE DB 型別`DBTYPE_IUNKNOWN`和`DBTYPE_IDISPATCH`，物件參考是已封送處理的指標表示。  
   
-## 請參閱  
- [擷取和修改 ADO.NET 中的資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

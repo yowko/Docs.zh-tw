@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>對等共同作業
 對等網路使用功能相當強大的電腦 (個人電腦)，而這些電腦存在於網際網路邊緣，並且不只是用於進行用戶端運算工作。 現代個人電腦 (PC) 具有極快速的處理器、大量記憶體和大型硬碟，但在執行電子郵件和網頁瀏覽這類常見運算工作時並未完全利用到它們。 現代電腦可以輕鬆地作為許多類型之應用程式的用戶端和伺服器 (對等)。  
@@ -56,6 +50,5 @@ ms.lasthandoff: 08/21/2017
  在 Active Directory 網域中，網域控制站使用 Kerberos 提供驗證服務。 在無伺服器對等環境中，對等必須提供自己的驗證。 針對對等網路，任何節點都可以作為 CA，因此不需要每個對等之受信任根存放區中的根憑證。 使用格式為 X.509 憑證的自我簽署憑證來提供驗證。 這些憑證是由每個對等所建立，而每個對等都會產生公開金鑰/私密金鑰配對，以及使用私密金鑰所簽署的憑證。 自我簽署憑證用來進行驗證，以及提供對等實體的相關資訊。 與 X.509 驗證類似，對等網路驗證依賴追蹤回信任公開金鑰的憑證鏈。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.PeerToPeer.Collaboration>   
+ <xref:System.Net.PeerToPeer.Collaboration>  
  [關於 System.Net.PeerToPeer.Collaboration 命名空間](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
-

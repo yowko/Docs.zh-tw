@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c0fcf7bec289d64b1faceef00b01278fa45caab0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 26efd43a05252e657626063d7dd04b1020dace18
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>將 COM 元件公開給 .NET Framework
 本節摘要說明向 Managed 程式碼公開現有 COM 元件所需要的程序。 如需撰寫與 .NET Framework 緊密整合的 COM 伺服器的詳細資訊，請參閱[交互操作的設計考量](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)。  
@@ -54,9 +47,8 @@ ms.lasthandoff: 08/21/2017
      Interop 應用程式最適合部署為全域組件快取中具有[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)的已簽署組件。  
   
 ## <a name="see-also"></a>另請參閱  
- [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)   
- [交互操作的設計考量](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)   
- [COM Interop 範例：.NET 用戶端與 COM 伺服器](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)   
- [語言獨立性以及與語言無關的元件](../../../docs/standard/language-independence-and-language-independent-components.md)   
+ [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)  
+ [交互操作的設計考量](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
+ [COM Interop 範例：.NET 用戶端與 COM 伺服器](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
+ [語言獨立性以及與語言無關的元件](../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-

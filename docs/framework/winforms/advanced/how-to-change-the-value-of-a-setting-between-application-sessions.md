@@ -1,43 +1,44 @@
 ---
-title: "如何：變更應用程式工作階段之間的設定值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式設定 [Windows Form], 應用程式工作階段之間"
-  - "應用程式設定 [Windows Form], 變更"
+title: "如何：變更應用程式工作階段之間的設定值"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application settings [Windows Forms], changing
+- application settings [Windows Forms], between application sessions
 ms.assetid: 1a85911f-97b2-476c-930b-83379edd890c
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2dff90e499ce421f372137903daf34c09c21d5c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：變更應用程式工作階段之間的設定值
-有時您可能會想要在編譯和部署應用程式之後，變更應用程式工作階段之間的設定值。  例如，您可能會想要變更指向正確資料位置的連接字串。  因為編譯和部署應用程式之後，設計階段工具將無法使用，所以您必須在檔案中手動變更設定。  
+# <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>如何：變更應用程式工作階段之間的設定值
+有時候，您可能想要變更應用程式工作階段之後編譯及部署應用程式之間的設定值。 例如，您可以變更連接字串，以指向正確的資料庫位置。 因為編譯和部署的應用程式後，就無法使用設計階段工具，您必須變更設定值，以手動方式在檔案中。  
   
-### 若要變更應用程式工作階段之間的設定值  
+### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a>若要變更應用程式工作階段之間的設定值  
   
-1.  使用 Microsoft \[記事本\] 或者某些其他文字或 XML 編輯器，開啟與應用程式相關聯的 .config 檔案。  
+1.  使用 Microsoft 記事本或其他文字或 XML 編輯器，開啟您的應用程式相關聯.config 檔案。  
   
-2.  找出您要變更其設定的項目，  應該會與下列呈現的範例類似。  
+2.  找出您想要變更設定的項目。 它看起來應該類似以下所顯示的範例。  
   
-    ```  
+    ```xml  
     <setting name="Setting1" serializeAs="String" >  
        <value>My Setting Value</value>  
     </setting>  
     ```  
   
-3.  為您的設定輸入新值並儲存檔案。  
+3.  輸入您設定的新值，然後儲存檔案。  
   
-## 請參閱  
- [使用應用程式設定和使用者設定](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)   
+## <a name="see-also"></a>另請參閱  
+ [使用應用程式設定和使用者設定](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [應用程式設定概觀](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

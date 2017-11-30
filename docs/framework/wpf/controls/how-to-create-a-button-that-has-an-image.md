@@ -1,36 +1,41 @@
 ---
-title: "如何：建立具有影像的按鈕 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Button 控制項 [WPF], 建立"
+title: "如何：建立具有影像的按鈕"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fa3aa5454629d53fd8864df6a4f204e22028208f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：建立具有影像的按鈕
-本範例說明如何將影像加入到 <xref:System.Windows.Controls.Button>。  
+# <a name="how-to-create-a-button-that-has-an-image"></a>如何：建立具有影像的按鈕
+這個範例示範如何在包含影像<xref:System.Windows.Controls.Button>。  
   
-## 範例  
- 下列範例會建立兩個 <xref:System.Windows.Controls.Button> 控制項。  一個 <xref:System.Windows.Controls.Button> 包含文字，另一個包含影像。  這個影像是位於範例專案資料夾底下名為 data 的子資料夾中。  使用者按一下有影像的 <xref:System.Windows.Controls.Button> 時，另一個 <xref:System.Windows.Controls.Button> 的背景和文字會改變。  
+## <a name="example"></a>範例  
+ 下列範例會建立兩個<xref:System.Windows.Controls.Button>控制項。 一個<xref:System.Windows.Controls.Button>包含文字和另一個包含映像。 影像是在呼叫資料，這是範例的專案資料夾的子資料夾中。 當使用者按一下<xref:System.Windows.Controls.Button>具有映像、 背景和其他項目的文字<xref:System.Windows.Controls.Button>變更。  
   
- 這個範例會使用標記建立 <xref:System.Windows.Controls.Button> 控制項，但用程式碼撰寫 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件處理常式。  
+ 這個範例會建立<xref:System.Windows.Controls.Button>控制使用的標記，但用來寫入的程式碼<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式。  
   
- [!code-xml[BtnColor#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#4)]  
+ [!code-xaml[BtnColor#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#4)]  
   
  [!code-csharp[BtnColor#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml.cs#6)]
  [!code-vb[BtnColor#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BtnColor/VisualBasic/Pane1.xaml.vb#6)]  
   
-## 請參閱  
- [控制項](../../../../docs/framework/wpf/controls/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [控制項](../../../../docs/framework/wpf/controls/index.md)  
  [控制項程式庫](../../../../docs/framework/wpf/controls/control-library.md)

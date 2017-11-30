@@ -1,6 +1,6 @@
 ---
 title: "成員 (F#)"
-description: "成員 (F#)"
+description: "深入了解 F # 程式語言中的物件成員。"
 keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: fe14657b25d122296a6826daba37ea99b6ee64b4
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="members"></a>Members
 
 本節描述 F# 物件類型的成員。
@@ -44,4 +43,3 @@ ms.lasthandoff: 04/05/2017
 |[運算子多載](../operator-overloading.md)|描述型別之自訂運算子的定義。|
 |[事件](events.md)|描述 F# 中的事件定義和事件處理支援。|
 |[明確欄位：`val` 關鍵字](explicit-fields-the-val-keyword.md)|描述類型中未初始化欄位的定義。|
-

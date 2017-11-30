@@ -1,29 +1,25 @@
 ---
-title: "在 Visual Basic 中的預設命名空間的範圍 |Microsoft 文件"
+title: "在 Visual Basic 中的預設命名空間的範圍"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c0152250cf7cfb4b6cadbcaab60eaad8ec2fb5ee
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3aaf5395f1216b0cb56f2d1f003e42ed30790012
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>在 Visual Basic 中的預設命名空間的範圍
-在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。 如果您擁有的預設命名空間中的 XML，您仍然必須宣告<xref:System.Xml.Linq.XNamespace>變數，並將其與要用於查詢中限定的名稱的本機名稱。</xref:System.Xml.Linq.XNamespace>  
+在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。 如果您擁有的 XML 位於預設命名空間中，您仍然必須宣告 <xref:System.Xml.Linq.XNamespace> 變數，然後將它與區域名稱結合，讓限定名稱 (Qualified Name) 得以用於查詢中。  
   
  查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
   

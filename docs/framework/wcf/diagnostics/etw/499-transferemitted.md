@@ -1,40 +1,43 @@
 ---
-title: "499 - TransferEmitted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 499 - TransferEmitted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 07a26434-a7a0-40fc-b5d0-3520a04328ae
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e786691ef3a6ee2a860461562c9de0f627fc907
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 499 - TransferEmitted
-## 屬性  
+# <a name="499---transferemitted"></a>499 - TransferEmitted
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|499|  
 |關鍵字|Troubleshooting，UserEvents，EndToEndMonitoring，ServiceModel，WFTracking，ServiceHost，WCFMessageLogging|  
 |層級|LogAlways|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|通道|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## 說明  
- 這個事件會在傳輸事件發生時發出。  
+## <a name="description"></a>描述  
+ 當傳輸事件發生時，就會發出此事件。  
   
-## 訊息  
- 已發出的傳輸事件。  
+## <a name="message"></a>訊息  
+ 已發出傳輸事件。  
   
-## 詳細資訊  
+## <a name="details"></a>詳細資料  
   
 |資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。範例：'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'。|  
+|--------------------|--------------------|-----------------|  
+|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'。|  
 |AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

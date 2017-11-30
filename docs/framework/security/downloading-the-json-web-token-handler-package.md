@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d3821ff1da945df7c6e07e5baf69730173eacc87
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="downloading-the-json-web-token-handler-package"></a>下載 JSON Web 語彙基元處理常式套件
 本主題討論如何在您的專案中下載並使用 JSON Web 權杖處理常式。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 3.  最新的 JSON Web 權杖處理常式會下載並新增至您的專案。
-

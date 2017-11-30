@@ -1,43 +1,44 @@
 ---
-title: "Windows Form Timer 元件的 Interval 屬性限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Interval 屬性, 限制"
-  - "Timer 元件 [Windows Form], Interval 屬性的限制"
-  - "計時器, 事件間隔"
-  - "計時器, Windows 架構"
+title: "限制的 Windows Form Timer 元件 &#39; s [間隔] 屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- timers [Windows Forms], event intervals
+- Interval property [Windows Forms], limitations
+- timers [Windows Forms], Windows-based
+- Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72af16b7dcb7709dd132a3748a454eda57acc168
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form Timer 元件的 Interval 屬性限制
-Windows Form <xref:System.Windows.Forms.Timer> 元件具有 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性，以指定計時器事件與下一個事件之間經過多少毫秒數。  除非元件被停用，否則計時器將持續在大約相等的時間間隔點，收到 <xref:System.Windows.Forms.Timer.Tick> 的事件。  
+# <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>限制的 Windows Form Timer 元件 &#39; s [間隔] 屬性
+Windows Form<xref:System.Windows.Forms.Timer>元件有<xref:System.Windows.Forms.Timer.Interval%2A>屬性，指定一個計時器事件和下之間所經過的毫秒數。 除非已停用該元件，計時器會繼續接收<xref:System.Windows.Forms.Timer.Tick>大致相等間隔的時間的事件。  
   
- 這個元件是專為 Windows Form 環境而設計的。  如需適用於伺服器環境的計時器，請參閱[Introduction to Server\-Based Timers](http://msdn.microsoft.com/zh-tw/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
+ 這個元件是專為 Windows Form 環境所設計。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
   
-## Interval 屬性  
- 當您在設計有關 <xref:System.Windows.Forms.Timer> 元件的程式時，必須考慮 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性的一些限制：  
+## <a name="the-interval-property"></a>[間隔] 屬性  
+ <xref:System.Windows.Forms.Timer.Interval%2A>屬性有幾項限制來進行程式設計時，請考慮<xref:System.Windows.Forms.Timer>元件：  
   
--   如果您的應用程式或其他應用程式對系統有大量的需求 \(例如長迴圈、密集的計算或磁碟機、網路或連接埠存取\)，則您的應用程式可能不會依照 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性的指定取得計時器事件。  
+-   如果您的應用程式或其他應用程式在系統上進行大量的需求 — 例如長迴圈、 需要大量計算，或磁碟機、 網路或通訊埠存取，您的應用程式可能不會得到計時器事件，通常為<xref:System.Windows.Forms.Timer.Interval%2A>屬性會指定。  
   
--   間隔不保證經過時間的精確性。  若要確保正確性，計時器應該檢查系統時鐘，而不是在內部追蹤累積的時間。  
+-   間隔不保證在時間上完全停用。 若要確保精確度，計時器應該檢查系統時鐘，如有需要而嘗試追蹤的累積的時間在內部。  
   
--   <xref:System.Windows.Forms.Timer.Interval%2A> 屬性的精確性為毫秒。  某些電腦提供高解析度的計數器，其解析度高於毫秒。  是否提供這類計數器則根據您電腦的處理器硬體而定。  如需詳細資訊，請參閱 http:\/\/support.microsoft.com 上的 Microsoft 知識庫文件 172338＜How To Use QueryPerformanceCounter to Time Code＞。  
+-   有效位數<xref:System.Windows.Forms.Timer.Interval%2A>屬性是以毫秒為單位。 某些電腦提供高解析度的計數器高於毫秒的解析度。 這類計數器的可用性取決於您的電腦的處理器硬體。 如需詳細資訊，請參閱 172338，」 方式來使用 QueryPerformanceCounter 到時間程式碼，"在 Microsoft 知識庫文件在 http://support.microsoft.com。  
   
-## 請參閱  
- <xref:System.Windows.Forms.Timer>   
- [Timer 元件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.Timer>  
+ [Timer 元件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
  [Timer 元件概觀](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

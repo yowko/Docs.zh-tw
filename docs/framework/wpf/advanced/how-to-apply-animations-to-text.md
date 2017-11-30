@@ -1,48 +1,51 @@
 ---
-title: "如何：對文字套用動畫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 文字"
-  - "印刷樣式, 動畫"
+title: "如何：對文字套用動畫"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], animations
+- animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0298462db5897e955bf0a2551cca7fc81bb27d89
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：對文字套用動畫
-動畫可以改變應用程式中文字的顯示及外觀。  下列範例會使用不同類型的動畫來影響 <xref:System.Windows.Controls.TextBlock> 控制項中的文字顯示。  
+# <a name="how-to-apply-animations-to-text"></a>如何：對文字套用動畫
+動畫可以變更應用程式中文字的顯示和外觀。 下列範例會使用不同類型的動畫來影響的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  
   
-## 範例  
- 下列範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimation> 顯示文字區塊寬度的動畫。  在 10 秒期間內，寬度值從文字區塊寬度變更為 0，然後回復寬度值並繼續播放。  這種類型的動畫會建立擦拭效果。  
+## <a name="example"></a>範例  
+ 下列範例會使用<xref:System.Windows.Media.Animation.DoubleAnimation>以動畫方式顯示的文字區塊的寬度。 寬度值會在 10 秒的期間內從文字區塊的寬度變更為 0，然後回復寬度值並繼續進行。 這種動畫會建立擦去效果。  
   
- [!code-xml[TextAnimationSample#TextAnimationSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample1)]  
+ [!code-xaml[TextAnimationSample#TextAnimationSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample1)]  
   
- 下列範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimation> 顯示文字區塊不透明度的動畫。  在 5 秒期間內，不透明值會從 1.0 漸變成 0，然後回復不透明值並繼續播放。  
+ 下列範例會使用<xref:System.Windows.Media.Animation.DoubleAnimation>以動畫方式顯示的文字區塊的不透明度。 不透明度值會在 5 秒的期間內從 1.0 變更為 0，然後回復不透明度值並繼續進行。  
   
- [!code-xml[TextAnimationSample#TextAnimationSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample2)]  
+ [!code-xaml[TextAnimationSample#TextAnimationSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample2)]  
   
- 下圖顯示在 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 所定義的 5 秒間隔內，<xref:System.Windows.Controls.TextBlock> 控制項的不透明值從 `1.00` 漸變成 `0.00` 的效果。  
+ 下圖顯示的效果<xref:System.Windows.Controls.TextBlock>控制項變更其透明度從`1.00`至`0.00`期間所定義的 5 秒間隔<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
   
- ![不透明度從 1.00 變更為 0.00 的文字](../../../../docs/framework/wpf/advanced/media/fadedtext01.png "FadedText01")  
-從 1.00 漸變成 0.00 的文字不透明效果  
+ ![文字不透明度從 1.00 變更為 0.00](../../../../docs/framework/wpf/advanced/media/fadedtext01.png "FadedText01")  
+不透明度從 1.00 變更為 0.00 的文字  
   
- 下列範例會使用 <xref:System.Windows.Media.Animation.ColorAnimation> 顯示文字區塊前景色彩的動畫。  在 5 秒期間內，前景色彩會從一個色彩漸變成第二個色彩，然後回復色彩值並繼續播放。  
+ 下列範例會使用<xref:System.Windows.Media.Animation.ColorAnimation>以動畫方式顯示的文字區塊的前景色彩。 前景色彩值會在 5 秒的期間內從某種色彩變更為第二種色彩，然後回復色彩值並繼續進行。  
   
- [!code-xml[TextAnimationSample#TextAnimationSample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  
+ [!code-xaml[TextAnimationSample#TextAnimationSample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  
   
- 下列程式碼範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimation> 旋轉文字區塊。  在 20 秒期間內，文字區塊會完整轉一圈，然後繼續重複旋轉。  
+ 下列範例會使用<xref:System.Windows.Media.Animation.DoubleAnimation>旋轉文字區塊。 文字區塊會在 20 秒的期間內執行完整旋轉，然後繼續重複進行旋轉。  
   
- [!code-xml[TextAnimationSample#TextAnimationSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
+ [!code-xaml[TextAnimationSample#TextAnimationSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

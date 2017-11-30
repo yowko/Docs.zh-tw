@@ -1,33 +1,25 @@
 ---
-title: "AttributeUsage (Visual Basic) |Microsoft 文件"
+title: AttributeUsage (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf56f40033f9d1547d63fccd25e3c0561bb62cb1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: aef00d201c3dea82f67395bee0d85f8989afa01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
-決定如何使用自訂屬性類別。 `AttributeUsage`是可以套用自訂屬性定義，來控制如何套用新屬性的屬性。 明確地套用時，預設值看起來像這樣︰  
+決定如何使用自訂屬性類別。 `AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。 明確套用時，預設設定看起來會像這樣︰  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -38,9 +30,9 @@ Class NewAttribute
 End Class  
 ```  
   
- 在此範例中，`NewAttribute`類別可以套用至任何可屬性的程式碼的實體，但可以一次只能套用至每個實體。 它會由衍生類別，當套用至基底類別繼承。  
+ 在此範例中，`NewAttribute` 類別可以套用至任何可屬性化的程式碼實體，但只能對每個實體套用一次。 當套用至基底類別時，其由衍生類別所繼承。  
   
- `AllowMultiple`和`Inherited`引數是選擇性的因此此程式碼有相同的效果︰  
+ `AllowMultiple` 和 `Inherited` 是選擇性引數，因此這個程式碼具有相同的效果︰  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -49,7 +41,7 @@ Class NewAttribute
 End Class  
 ```  
   
- 第一個`AttributeUsage`引數必須是一個或多個元素的<xref:System.AttributeTargets>列舉型別。</xref:System.AttributeTargets> 多個目標類型可以連結搭配 OR 運算子，就像這樣︰  
+ 第一個 `AttributeUsage` 引數必須是 <xref:System.AttributeTargets> 列舉的一或多個元素。 您可以使用 OR 運算子來連結多個目標類型，與下面類似：  
   
 ```vb  
 Imports System  
@@ -62,7 +54,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- 如果`AllowMultiple`引數設定為`true`，則產生的屬性可以多次套用至單一實體，就像這樣︰  
+ 如果 `AllowMultiple` 引數設為 `true`，則可以將產生的屬性多次套用至單一實體，與下面類似：  
   
 ```vb  
 Imports System  
@@ -79,9 +71,9 @@ Class Class1
 End Class  
 ```  
   
- 在此情況下`MultiUseAttr`因為可以重複套用`AllowMultiple`設為`true`。 顯示套用多個屬性的兩種格式都有效。  
+ 在此情況下，因為 `AllowMultiple` 設為 `true`，所以可以重複套用 `MultiUseAttr`。 套用多個屬性所顯示的兩種格式都有效。  
   
- 如果`Inherited`設為`false`，則衍生自類別，其屬性的類別不繼承屬性。 例如:   
+ 如果 `Inherited` 設為 `false`，則衍生自已屬性化類別的類別不會繼承屬性。 例如:   
   
 ```vb  
 Imports System  
@@ -103,15 +95,15 @@ Class DClass
 End Class  
 ```  
   
- 在此情況下`Attr1`不會套用至`DClass`經由繼承。  
+ 在此情況下，不會透過繼承將 `Attr1` 套用至 `DClass`。  
   
 ## <a name="remarks"></a>備註  
- `AttributeUsage`屬性是單次使用屬性-它無法套用一次以上至相同的類別。 `AttributeUsage`<xref:System.AttributeUsageAttribute>.</xref:System.AttributeUsageAttribute>的別名  
+ `AttributeUsage` 屬性是單次使用的屬性--它無法多次套用至相同的類別。 `AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的別名。  
   
- 如需詳細資訊，請參閱[存取的屬性，使用反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
+ 如需詳細資訊，請參閱[使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範的效果`Inherited`和`AllowMultiple`引數`AttributeUsage`屬性及可列舉的自訂屬性套用至類別的方式。  
+ 下列範例示範 `AttributeUsage` 屬性的 `Inherited` 和 `AllowMultiple` 引數的效果，以及如何列舉套用至類別的自訂屬性。  
   
 ```vb  
 Imports System  
@@ -179,11 +171,11 @@ A2
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Attribute></xref:System.Attribute>   
- <xref:System.Reflection></xref:System.Reflection>   
- [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)   
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)   
- [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [使用反映 (Visual Basic) 存取屬性](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ <xref:System.Attribute>  
+ <xref:System.Reflection>  
+ [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)  
+ [屬性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
+ [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

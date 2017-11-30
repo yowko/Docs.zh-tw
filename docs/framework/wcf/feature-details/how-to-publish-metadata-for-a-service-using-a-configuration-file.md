@@ -1,28 +1,31 @@
 ---
-title: "HOW TO：使用組態檔發行服務的中繼資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：使用組態檔發行服務的中繼資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e94fe7135d51c4e1578ca69768b6d0ba2aa6ae6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用組態檔發行服務的中繼資料
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>HOW TO：使用組態檔發行服務的中繼資料
 在兩個示範如何發行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務中繼資料的 HOW TO 主題中，這是其中一個。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用組態檔發行服務的中繼資料。  
   
 > [!CAUTION]
->  本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 如果您需要以安全的方式發行中繼資料服務，請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
+>  本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 如果您需要您的服務發行中繼資料以安全的方式，請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]發行中繼資料的程式碼，請參閱[How to︰ 服務使用程式碼發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定程式碼可以正常運作，請建立基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 為了方便使用，下列程式碼提供基本的自我裝載服務。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]發行中繼資料中的程式碼，請參閱[How to： 服務使用程式碼發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定程式碼可以正常運作，請建立基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 為了方便使用，下列程式碼提供基本的自我裝載服務。  
   
 ```csharp  
 using System;  
@@ -95,7 +98,6 @@ namespace Metadata.Samples
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>若要使用應用程式組態檔來發行 WCF 服務的中繼資料  
@@ -178,7 +180,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>若要使用預設端點  
   
-1.  若要使用預設端點的服務上設定中繼資料，請指定<xref:System.ServiceModel.Description.ServiceMetadataBehavior>在組態檔案，如同先前的範例，但不是指定任何端點。 組態檔如下所示。  
+1.  若要對使用預設端點的服務設定中繼資料，請在組態檔中指定 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> (如上一個範例所示)，但不要指定任何端點。 組態檔如下所示。  
   
     ```xml  
     <configuration>  
@@ -195,7 +197,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     由於服務<xref:System.ServiceModel.Description.ServiceMetadataBehavior>與`httpGetEnabled`設`true`服務已啟用，中繼資料發行，因為沒有明確加入端點，執行階段加入預設端點。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]預設端點、 繫結和行為，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+     因為服務有 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 且 `httpGetEnabled` 設為 `true`，服務已經啟用發行中繼資料，但是因為沒有明確加入端點，所以執行階段加入預設端點。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]預設端點、 繫結和行為，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例顯示基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的實作，以及發行服務中繼資料的組態檔。  
@@ -270,9 +272,9 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>   
- [如何︰ 將 WCF 服務裝載於 Managed 應用程式](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)   
- [自我裝載](../../../../docs/framework/wcf/samples/self-host.md)   
- [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)   
- [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)   
- [如何︰ 使用程式碼的服務發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
+ [如何：於受管理的應用程式中裝載 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [自我裝載](../../../../docs/framework/wcf/samples/self-host.md)  
+ [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [如何： 使用程式碼的服務發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

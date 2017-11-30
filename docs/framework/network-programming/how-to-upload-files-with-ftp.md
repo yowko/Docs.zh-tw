@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b90049c11e8eb1113155a400b7af159f2b6938ca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 08002bf223d96d49cffb67ec744659747fa49e26
+ms.sourcegitcommit: 32f5e1db8755ed7dfac0b4ec764fa809e5a7548c
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/25/2017
 ---
 # <a name="how-to-upload-files-with-ftp"></a>如何：透過 FTP 上傳檔案
 這個範例示範如何將檔案上傳至 FTP 伺服器。  
@@ -63,7 +57,6 @@ namespace Examples.System.Net
             Console.WriteLine("Upload File Complete, status {0}", response.StatusDescription);  
   
             response.Close();  
-            }  
         }  
     }  
 }  
@@ -77,4 +70,3 @@ namespace Examples.System.Net
 ## <a name="robust-programming"></a>穩固程式設計  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性
-

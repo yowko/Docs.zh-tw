@@ -1,39 +1,38 @@
 ---
-title: "Structures and Other Programming Elements (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "structures, arrays"
-  - "procedures, structures as arguments to"
-  - "objects [Visual Basic], structure elements"
-  - "arrays [Visual Basic], structure elements"
-  - "nested structures"
+title: "結構和其他程式設計項目 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- structures [Visual Basic], arrays
+- procedures [Visual Basic], structures as arguments to
+- objects [Visual Basic], structure elements
+- arrays [Visual Basic], structure elements
+- nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Structures and Other Programming Elements (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-結構可與陣列、物件及程序彼此結合使用。  這些項目之間互動所使用的語法與其個別使用的語法相同。  
+# <a name="structures-and-other-programming-elements-visual-basic"></a>結構和其他程式設計項目 (Visual Basic)
+您可以使用結構搭配陣列、 物件和程序，以及彼此搭配。 互動使用這些項目個別使用相同的語法。  
   
 > [!NOTE]
->  您無法在結構宣告中初始化任何結構項目。  您只能將值指派給已宣告為結構型別 \(Structure Type\) 的變數項目。  
+>  您無法初始化任何結構中的項目結構宣告。 您只能指派給值的變數已宣告為結構類型的項目。  
   
-## 結構與陣列  
- 結構可包含一個陣列做為其一個或多個元素。  下列範例將說明這點。  
+## <a name="structures-and-arrays"></a>結構和陣列  
+ 結構只能包含一個或多個元素的陣列。 下列範例將說明這點。  
   
-```vb#  
+```vb  
 Public Structure systemInfo  
     Public cPU As String  
     Public memory As Long  
@@ -42,32 +41,32 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- 存取結構中陣列的值，其方式與存取物件屬性的相同。  下列範例將說明這點。  
+ 存取陣列在結構中的值相同的方式存取物件上的屬性。 下列範例將說明這點。  
   
-```vb#  
+```vb  
 Dim mySystem As systemInfo  
 ReDim mySystem.diskDrives(3)  
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- 您也可以宣告結構的陣列。  下列範例將說明這點。  
+ 您也可以宣告結構的陣列。 下列範例將說明這點。  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- 您必須遵守相同的規則 \(Rule\) 以存取此資料架構的元件。  下列範例將說明這點。  
+ 您遵循相同的規則，來存取此資料架構的元件。 下列範例將說明這點。  
   
-```vb#  
+```vb  
 ReDim allSystems(5).diskDrives(3)  
 allSystems(5).CPU = "386SX"  
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## 結構與物件  
- 結構可包含一個物件做為一個或多個元素。  下列範例將說明這點。  
+## <a name="structures-and-objects"></a>結構和物件  
+ 結構只能包含一個或多個元素的物件。 下列範例將說明這點。  
   
-```vb#  
+```vb  
 Protected Structure userInput  
     Public userName As String  
     Public inputForm As System.Windows.Forms.Form  
@@ -75,12 +74,12 @@ Protected Structure userInput
 End Structure  
 ```  
   
- 在這類的宣告中，您應使用特定的物件類別，而非 `Object`。  
+ 您應該使用特定的物件類別中宣告，而非`Object`。  
   
-## 結構與程序  
- 您可以將結構當做程序引數傳遞。  下列範例將說明這點。  
+## <a name="structures-and-procedures"></a>結構和程序  
+ 您可以傳遞結構做為程序引數。 下列範例將說明這點。  
   
-```vb#  
+```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
 Public currentMemorySize As Long = 256  
 Public Sub fillSystem(ByRef someSystem As systemInfo)  
@@ -90,11 +89,11 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- 前述範例將結構以「*傳址方式*」\(By Reference\) 傳遞，讓程序能夠修改其元素，使變更在呼叫程式碼中產生效用。  若您不希望結構進行這類修改，則請以傳值 \(By Value\) 方式傳遞。  
+ 上述範例中將結構傳遞*傳*，可讓程序來修改其項目，讓呼叫的程式碼中所做的變更才會生效。 如果您想要保護進行這類修改的結構，傳值方式傳遞。  
   
- 您也可以從 `Function` 程序傳回結構。  下列範例將說明這點。  
+ 您也可以傳回的結構從`Function`程序。 下列範例將說明這點。  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 Function findByDate(ByVal searchDate As Date) As systemInfo  
     Dim i As Integer  
@@ -105,10 +104,10 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## 包含在結構中的結構  
- 結構中還可包含其他結構。  下列範例將說明這點。  
+## <a name="structures-within-structures"></a>在結構內的結構  
+ 結構可以包含其他結構。 下列範例將說明這點。  
   
-```vb#  
+```vb  
 Public Structure driveInfo  
     Public type As String  
     Public size As Long  
@@ -121,24 +120,24 @@ Public Structure systemInfo
 End Structure  
 ```  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 ReDim allSystems(1).diskDrives(3)  
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- 您也可以使用同樣的方法將一模組所定義的結構封裝到另一不同模組所定義的結構之中。  
+ 您也可以使用這項技術來封裝在模組內的不同模組中定義的結構中定義的結構。  
   
- 結構可以包含其他結構達任意多層。  
+ 結構可以包含到任意深度的其他結構。  
   
-## 請參閱  
- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [How to: Declare a Structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Structure Variables](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)   
- [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>另請參閱  
+ [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [結構變數](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [結構和類別](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)

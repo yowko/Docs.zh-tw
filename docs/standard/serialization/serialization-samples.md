@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 866294ebef7d16848f4fde28c05c6b3455969893
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework 的序列化範例
 這個章節示範如何在 .NET Framework 序列化物件。  
@@ -43,4 +42,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="related-sections"></a>相關章節  
  [序列化](../../../docs/standard/serialization/index.md)
-

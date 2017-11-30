@@ -1,66 +1,69 @@
 ---
-title: "&lt;oidMap&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<oidMap> 項目"
-  - "oidMap 項目"
+title: "&lt;oidMap&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap
+helpviewer_keywords:
+- <oidMap> element
+- oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eab9be57b6f8fac5f208e39a6aaa8eb7be92558d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;oidMap&gt; 項目
-包含類別的 ASN.1 物件識別項 \(OID\) 對應。  
+# <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;項目
+包含類別到 ASN.1 物件識別碼 (OID) 對應。  
   
-## 語法  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<oidMap >  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <oidMap>   
 </oidMap>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
  無。  
   
-### 子項目  
+### <a name="child-elements"></a>子項目  
   
-|元素|說明|  
-|--------|--------|  
-|[\<oidEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|將 ASN.1 OID 對應至易記名稱。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|對應 ASN.1 OID 為易記名稱。|  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|項目|描述|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
-|`mscorlib`|包含 `cryptographySettings`  項目。|  
+|`mscorlib`|包含`cryptographySettings`項目。|  
   
-## 範例  
- 下列範例顯示如何使用 **\<oidMap\>** 項目來將 RIPEMD\-160 雜湊演算法的 OID 對應包含至該雜湊演算法的實作。  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用 **\<oidMap >** OID ripemd-160 雜湊演算法，該雜湊演算法的實作對應包含的項目。  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -80,9 +83,9 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 請參閱  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)   
- [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
+## <a name="see-also"></a>另請參閱  
+ [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)  
+ [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [對應物件識別項至密碼編譯演算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

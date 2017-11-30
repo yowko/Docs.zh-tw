@@ -1,39 +1,43 @@
 ---
-title: "119 - WorkflowInstanceUpdatedRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 119 - WorkflowInstanceUpdatedRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 32485d0a-dcdb-45bc-b1e3-79fa9ad9439b
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2b838f764b1f86b0477dc797620dca5f99bb13d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 119 - WorkflowInstanceUpdatedRecord
-## 屬性  
+# <a name="119---workflowinstanceupdatedrecord"></a>119 - WorkflowInstanceUpdatedRecord
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|119|  
 |關鍵字|HealthMonitoring、WFTracking|  
 |層級|資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|通道|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## 描述  
+## <a name="description"></a>描述  
  當工作流程執行個體更新時，ETW 追蹤參與者就會發出此事件。  
   
-## 訊息  
- TrackRecord\= WorkflowInstanceUpdatedRecord、InstanceID \= %1、RecordNumber \= %2、EventTime \= %3、ActivityDefinitionId \= %4、State \= %5、OriginalDefinitionIdentity \= %6、UpdatedDefinitionIdentity \= %7、Annotations \= %8、ProfileName \= %9  
+## <a name="message"></a>訊息  
+ TrackRecord= WorkflowInstanceUpdatedRecord、InstanceID = %1、RecordNumber = %2、EventTime = %3、ActivityDefinitionId = %4、State = %5、OriginalDefinitionIdentity = %6、UpdatedDefinitionIdentity = %7、Annotations = %8、ProfileName = %9  
   
-## 詳細資料  
+## <a name="details"></a>詳細資料  
   
 |資料項目名稱|資料項目型別|描述|  
-|------------|------------|--------|  
+|--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|工作流程的執行個體 ID。|  
 |RecordNumber|xs:long|發出之記錄的序號。|  
 |EventTime|xs:dateTime|發出事件時的 UTC 時間。|  
@@ -41,7 +45,7 @@ caps.handback.revision: 4
 |狀態|xs:string|工作流程的目前狀態。|  
 |OriginalDefinitionIdentity|xs:string|原始工作流程定義 ID|  
 |UpdatedDefinitionIdentity|xs:string|更新的工作流程定義 ID|  
-|標註|xs:string|加入至此事件中的附註。  這些值會以下列格式儲存在 XML 元素中：\<items\>\< item name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>。  如果沒有指定的註釋，則字串會包含 \<items\/\>。  ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。  如果事件大小超過 ETW 限制，則會捨棄註釋並以 \<items\>...\<\/items\> 取代註釋值來截斷事件。|  
+|標註|xs:string|加入至此事件中的附註。 值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"type ="> annotationValue\</項目 > \< /i >。 如果沒有指定的註釋的字串，包含\<項目 / >。 ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。 如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代具有註釋值截斷\<項目 >... \< /i >。|  
 |ProfileName|xs:string|造成發送這個事件的名稱或追蹤設定檔。|  
 |WorkflowDefinitionIdentity|xs:string|工作流程定義 ID|  
 |AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

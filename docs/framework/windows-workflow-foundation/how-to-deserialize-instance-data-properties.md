@@ -1,21 +1,25 @@
 ---
-title: "HOW TO：還原序列化執行個體資料屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：還原序列化執行個體資料屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4c29c9c0151c253ec1e981413aea2d6d2a0672ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：還原序列化執行個體資料屬性
-有時候，使用者或工作流程管理員可能想要手動檢查持續工作流程執行個體的狀態。<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>提供公開下列四個資料行的執行個體資料表檢視：  
+# <a name="how-to-deserialize-instance-data-properties"></a>HOW TO：還原序列化執行個體資料屬性
+有時候，使用者或工作流程管理員可能會想要手動檢查持續工作流程執行個體的狀態。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供公開下列四個資料行的執行個體資料表檢視：  
   
 -   ReadWritePrimitiveDataProperties  
   
@@ -25,16 +29,15 @@ caps.handback.revision: 9
   
 -   WriteOnlyComplexDataProperties  
   
- 基本資料屬性是指其 .NET Framework 類型被視為「通用」的屬性 \(例如 Int32 和 String\)，而複雜資料屬性是指所有其他類型。稍後在這個程式碼範例中可找到完整的基本類型列舉。  
+ 基本資料屬性是指其.NET Framework 類型被視為是 「 通用 」 （例如 Int32 和 String），而複雜資料屬性是指所有其他類型的屬性。 稍後在這個程式碼範例中可找到完整的基本類型列舉。  
   
- Read\/Write 屬性是指在執行個體載入時傳回至工作流程執行階段的屬性。WriteOnly 屬性寫入至資料庫，絕不再次讀取。  
+ 讀/寫屬性是指在執行個體載入時傳回至工作流程執行階段的屬性。 WriteOnly 屬性寫入至資料庫，絕不再次讀取。  
   
- 這個範例提供可讓使用者還原序列化基本資料屬性的程式碼。根據從 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 資料行讀取的位元組陣列，這個程式碼會將二進位大型物件 \(BLOB\) 轉換成 \<XName, object\> 類型的 <xref:System.Collections.Generic.Dictionary%601>，其中每個鍵值組代表屬性名稱及其對應值。  
+ 這個範例提供可讓使用者還原序列化基本資料屬性的程式碼。 從 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 資料行讀取的位元組陣列，此程式碼會將轉換二進位大型物件 (BLOB) 到<xref:System.Collections.Generic.Dictionary%602>型別的\<XName、 物件 > 其中每個索引鍵的值組代表屬性名稱及其對應值。  
   
  這個範例不示範如何還原序列化複雜資料屬性，因為目前不支援此作業。  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -252,5 +255,4 @@ namespace PropertyReader
         }  
     }  
 }  
-  
 ```

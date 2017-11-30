@@ -1,45 +1,51 @@
 ---
-title: "如何：在格線之間共用調整大小屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grid 控制項, 共用資料行的調整大小資料"
-  - "Grid 控制項, 共用資料列的調整大小資料"
-  - "Grid 控制項中的調整大小資料"
+title: "操作說明：在方格之間共用調整大小屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Grid control [WPF], sharing sizing data of columns
+- sizing data in Grid controls [WPF]
+- Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f0e3be0a0b550f6fbbc9876709094d4a23abe1a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在格線之間共用調整大小屬性
-本範例說明如何共用 <xref:System.Windows.Controls.Grid> 項目之間的資料行和資料列調整大小資料，以維持調整大小的一致性。  
+# <a name="how-to-share-sizing-properties-between-grids"></a>操作說明：在方格之間共用調整大小屬性
+此範例顯示如何共用的資料行的調整大小資料和資料列之間<xref:System.Windows.Controls.Grid>為了保留以一致的調整大小的項目。  
   
-## 範例  
- 下列範例使用兩個 <xref:System.Windows.Controls.Grid> 項目，做為父代 <xref:System.Windows.Controls.DockPanel> 的子項目。  <xref:System.Windows.Controls.Grid> 的 <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> [附加屬性](GTMT)定義於父代 <xref:System.Windows.Controls.DockPanel>。  
+## <a name="example"></a>範例  
+ 下列範例中導入了兩個<xref:System.Windows.Controls.Grid>為父系的子元素的項目<xref:System.Windows.Controls.DockPanel>。 <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>附加屬性的<xref:System.Windows.Controls.Grid>定義父代上<xref:System.Windows.Controls.DockPanel>。  
   
- 此範例使用兩個 <xref:System.Windows.Controls.Button> 項目以控制屬性值，每個項目代表一個布林屬性值。  當 <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> 屬性值設定為 `true` 時，<xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A> 的每一資料行或資料列的成員，不論資料列或資料行的內容為何，都會共用調整大小資訊。  
+ 此範例使用兩個操作屬性值<xref:System.Windows.Controls.Button>項目，則每個項目代表一個布林屬性值。 當<xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>屬性值設定為`true`，每個資料行或資料列成員<xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>共用大小資訊，不論資料列或資料行的內容。  
   
- [!code-xml[gridIssharedsizescopeProp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#1)]  
+ [!code-xaml[gridIssharedsizescopeProp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#1)]  
   
  ...  
   
- [!code-xml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- 下列程式碼後置範例處理按鈕 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件所引發的方法。  此範例將這些方法呼叫的結果寫至 <xref:System.Windows.Controls.TextBlock> 項目，此項目使用相關的 Get 方法將新的屬性值輸出為字串。  
+ 下列範例中，程式碼後置處理方法的按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件引發。 範例會將這些方法呼叫的結果<xref:System.Windows.Controls.TextBlock>使用相關的項目有 get 的方法輸出為字串的新屬性值。  
   
  [!code-csharp[gridIssharedsizescopeProp#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml.cs#3)]
  [!code-vb[gridIssharedsizescopeProp#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gridIssharedsizescopeProp/VisualBasic/Window1.xaml.vb#3)]  
   
-## 請參閱  
- <xref:System.Windows.Controls.Grid>   
- <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Controls.Grid>  
+ <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)

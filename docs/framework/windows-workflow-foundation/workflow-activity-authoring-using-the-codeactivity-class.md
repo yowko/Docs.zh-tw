@@ -1,24 +1,28 @@
 ---
-title: "使用 CodeActivity 類別撰寫工作流程活動 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 CodeActivity 類別撰寫工作流程活動"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f9894926ba93461d332eaac248c71d20ea4e7d30
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用 CodeActivity 類別撰寫工作流程活動
+# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>使用 CodeActivity 類別撰寫工作流程活動
 繼承自 <xref:System.Activities.CodeActivity> 所建立的活動可藉由覆寫 <xref:System.Activities.CodeActivity.Execute%2A> 方法來實作基本命令式行為。  
   
-## 使用 CodeActivityContext  
- 工作流程執行階段的功能可透過 <xref:System.Activities.CodeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 \(型別為 <xref:System.Activities.CodeActivityContext>\)。透過 <xref:System.Activities.CodeActivityContext> 可使用的功能如下：  
+## <a name="using-codeactivitycontext"></a>使用 CodeActivityContext  
+ 工作流程執行階段的功能可透過 <xref:System.Activities.CodeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.CodeActivityContext>)。 透過 <xref:System.Activities.CodeActivityContext> 可使用的功能如下：  
   
 -   取得與設定引數和變數的值。  
   
@@ -26,15 +30,15 @@ caps.handback.revision: 11
   
 -   使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 存取活動的執行屬性。  
   
-#### 若要建立繼承自 CodeActivity 的自訂活動  
+#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>若要建立繼承自 CodeActivity 的自訂活動  
   
 1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  依序選取 \[**檔案**\]、\[**新增**\]、\[**專案**\]。在 \[**專案類型**\] 視窗中，選取 \[**Visual C\#**\] 下方 \[**Workflow 4.0**\]，然後選取 \[**v2010**\] 節點。選取 \[**範本**\] 視窗中的 \[**活動程式庫**\]。將新專案命名為 HelloActivity。  
+2.  選取**檔案**，**新**，然後**專案**。 選取**Workflow 4.0**下**Visual C#**中**專案類型**視窗，並選取**v2010**節點。 選取**活動程式庫**中**範本**視窗。 將新專案命名為 HelloActivity。  
   
-3.  以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取 \[**刪除**\]。  
+3.  以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取**刪除**。  
   
-4.  以滑鼠右鍵按一下 HelloActivity 專案並選取 \[**加入**\]，然後選取 \[**類別**\]。將新類別命名為 HelloActivity.cs。  
+4.  以滑鼠右鍵按一下 HelloActivity 專案並選取**新增**，然後**類別**。 將新類別命名為 HelloActivity.cs。  
   
 5.  在 HelloActivity.cs 檔案中加入下列 `using` 指示詞。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 11
     class HelloActivity : CodeActivity  
     ```  
   
-7.  新增 <xref:System.Activities.CodeActivity.Execute%2A> 方法，將功能加入至類別中。  
+7.  加入 <xref:System.Activities.CodeActivity.Execute%2A> 方法，藉此將功能加入至類別中。  
   
     ```csharp  
     protected override void Execute(CodeActivityContext context)  
@@ -68,5 +72,4 @@ caps.handback.revision: 11
         record.Data.Add(new KeyValuePair<String, Object>("ExecutionTime", DateTime.Now));  
         context.Track(record);  
     }  
-  
     ```

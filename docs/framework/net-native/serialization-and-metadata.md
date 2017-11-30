@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8da57c130f8b22a1e2de57678e86f84d00d11aaf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e7216f14fb0b8da27b870fc8e66b24f6d87fcaad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 如果您的應用程式將物件序列化和還原序列化，您可能需要將項目加入至執行階段指示詞 (.rd.xml) 檔案，以確保執行階段有必要的中繼資料存在。 有兩種類別的序列化程式，在執行階段指示詞檔案中，各需要不同的處理：  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/21/2017
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同樣地，如果您呼叫 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=fullName> 之類的建構函式，並提供要序列化的其他 <xref:System.Type> 物件陣列 (如下列程式碼)，則 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 編譯器無法解析這些類型。  
+ 同樣地，如果您呼叫 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 之類的建構函式，並提供要序列化的其他 <xref:System.Type> 物件陣列 (如下列程式碼)，則 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 編譯器無法解析這些類型。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -75,8 +73,7 @@ ms.lasthandoff: 08/21/2017
  如需範例中所使用語法的資訊，請參閱 [\<Type> 項目](../../../docs/framework/net-native/type-element-net-native.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [\<Type> 項目](../../../docs/framework/net-native/type-element-net-native.md)   
+ [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)  
  [\<Namespace> 項目](../../../docs/framework/net-native/namespace-element-net-native.md)
-

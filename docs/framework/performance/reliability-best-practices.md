@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -46,16 +45,15 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c3f93e90c330881ec5002b820569b27416e049a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 下列可靠性規則會導向至 SQL Server；不過，它們也會套用至任何主機型伺服器應用程式。 SQL Server 這類伺服器絕對不能流失資源，也不能關閉。  不過，撰寫每個改變物件狀態之方法的退出程式碼，無法完成該作業。  目標不是撰寫 100% 可靠的 Managed 程式碼，來復原每個具有退出程式碼的位置中的任何錯誤。  這會是成功機率很低的煩人工作。  Common Language Runtime (CLR) 無法輕易地強烈保證 Managed 程式碼可撰寫可行的完美程式碼。  請注意，與 ASP.NET 不同，SQL Server 只會使用一個無法回收的處理序，而不需要關閉資料庫一段無法接受的時間。  
@@ -96,7 +94,7 @@ ms.lasthandoff: 08/21/2017
   
  目前的完成項只能清除作業系統控制代碼的大部分類別都將不再需要完成項。 相反地，完成項會在 <xref:System.Runtime.InteropServices.SafeHandle> 衍生類別上。  
   
- 請注意，<xref:System.Runtime.InteropServices.SafeHandle> 不是 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 的取代項目。  仍然可能具有資源爭用和效能優點，可明確地處置作業系統資源。  您只需要了解，明確處置資源的 `finally` 區塊可能未執行，無法完成。  
+ 請注意，<xref:System.Runtime.InteropServices.SafeHandle> 不是 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的取代項目。  仍然可能具有資源爭用和效能優點，可明確地處置作業系統資源。  您只需要了解，明確處置資源的 `finally` 區塊可能未執行，無法完成。  
   
  <xref:System.Runtime.InteropServices.SafeHandle> 可讓您實作自己的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法，以執行控制代碼釋放工作，例如將狀態傳遞至作業系統控制代碼釋放常式，或釋放迴圈中的一組控制代碼。  CLR 保證會執行此方法。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作作者必須負責確保在所有情況下釋放控制代碼。 無法這麼做會導致控制代碼流失，這通常會造成與控制代碼建立關聯之原生資源的流失。 因此，請務必建構 <xref:System.Runtime.InteropServices.SafeHandle> 衍生類別，這樣 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作就不需要配置任何可能無法在叫用期間使用的資源。 請注意，允許呼叫在 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作內失敗的方法，前提是您的程式碼可以處理這類失敗，並且完成合約來釋放原生控制代碼。 為了進行偵錯，如果發生導致無法釋放資源的重大錯誤，則 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 的 <xref:System.Boolean> 傳回值可能設定為 `false`。 這麼做會啟用 [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA (啟用時)，協助識別問題。 它不會透過任何其他方法影響執行階段；將不會針對相同的資源再次呼叫<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>，因此控制代碼將流失。  
   
@@ -289,6 +287,5 @@ public static MyClass SingletonProperty
  這麼做會指示 Just-In-Time 編譯器在執行 `try` 區塊之前準備 finally 區塊中的所有程式碼。 這保證會建置 finally 區塊中的程式碼，而且在所有情況下都會執行該程式碼。 CER 中通常不會有空的 `try` 區塊。 使用 CER 可防止非同步執行緒中止和記憶體不足例外狀況。 請參閱 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>，以了解可額外處理極深層程式碼堆疊溢位的 CER 形式。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.ConstrainedExecution>  
  [SQL Server 程式設計和主機保護屬性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
-

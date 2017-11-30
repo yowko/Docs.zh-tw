@@ -1,36 +1,37 @@
 ---
-title: "使用 Managed GDI+ 中的轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "範例 [Windows Form], 轉換"
-  - "轉換"
+title: "使用 Managed GDI+ 中的轉換"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations
+- examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b25e6b3b09c4e39b53bab182ac70bb135f5f130c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用 Managed GDI+ 中的轉換
-仿射轉換包括旋轉、縮放、反射、切變和轉換。  在 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 中，<xref:System.Drawing.Drawing2D.Matrix> 類別提供了在向量繪圖、影像和文字上執行仿射轉換的基礎。  
+# <a name="using-transformations-in-managed-gdi"></a>使用 Managed GDI+ 中的轉換
+仿射轉換包含旋轉、 縮放、 反射、 切變和轉譯。 在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、<xref:System.Drawing.Drawing2D.Matrix>類別提供的基礎執行仿射轉換向量圖形、 影像和文字。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [使用全局轉換](../../../../docs/framework/winforms/advanced/using-the-world-transformation.md)  
- 說明如何使用全局轉換矩陣縮放及旋轉圖形。  
+ 描述如何縮放及旋轉圖形使用自然變換矩陣。  
   
  [為何轉換順序很重要](../../../../docs/framework/winforms/advanced/why-transformation-order-is-significant.md)  
- 示範為何轉換作業的順序很重要。  
+ 示範轉換作業的順序為何很重要。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Drawing.Drawing2D.Matrix>  
- 不僅描述這個類別，並且提供連至它所有成員的連結。
+ 描述這個類別，並包含其所有成員的連結。

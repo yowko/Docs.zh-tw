@@ -1,53 +1,51 @@
 ---
-title: "可攜式類別庫的跨平台開發 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "可攜式類別庫 [.NET Framework]"
-  - "以多重平台為目標"
-  - "目標的多個平台"
+title: "可攜式類別庫的跨平台開發"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Portable Class Library [.NET Framework]
+- targeting multiple platforms
+- multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: 95
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 95
+caps.latest.revision: "95"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 可攜式類別庫的跨平台開發
+# <a name="cross-platform-development-with-the-portable-class-library"></a>可攜式類別庫的跨平台開發
 Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您快速、輕鬆地建立適用於 Microsoft 平台的跨平台應用程式和程式庫。  
   
  可攜式類別庫可幫助您減少開發及測試程式碼的時間和成本。 使用此專案類型來撰寫及建立可攜式 .NET Framework 組件，然後從目標為多重平台 (例如 Windows 和 Windows Phone) 的應用程式參考那些組件。  
   
  即使在 Visual Studio 中建立可攜式類別庫專案並開始開發之後，您還是可以變更目標平台。 Visual Studio 會用新組件來編譯您的程式庫，可幫助您識別程式碼中需要進行的變更。  
   
- 本文討論 Visual Studio 中的應用程式開發，但是 Microsoft 也有提供可攜式類別庫參考組件，可供您用來搭配其他工具 (例如 Xamarin) 開發應用程式和程式庫。 您可以在非 Microsoft 平台上的任何 .NET Framework 執行階段中使用這些應用程式和程式庫。 如需參考組件的詳細資訊，請參閱部落格文章[可攜式類別庫 (PCL) 現在可用於所有平台](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx)。 若要下載組件，請參閱[Microsoft.NET 可攜式程式庫參考組件](http://www.microsoft.com/download/details.aspx?id=40727)「 Microsoft 下載中心 」 中。 如需如何使用組件來搭配 Xamarin 的詳細資訊，請參閱部落格文章[PCL 和.NET NuGet 程式庫現在已為 Xamarin 啟用](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx)。  
+ 本文討論 Visual Studio 中的應用程式開發，但是 Microsoft 也有提供可攜式類別庫參考組件，可供您用來搭配其他工具 (例如 Xamarin) 開發應用程式和程式庫。 您可以在非 Microsoft 平台上的任何 .NET Framework 執行階段中使用這些應用程式和程式庫。 如需參考組件的詳細資訊，請參閱部落格文章：[可攜式類別程式庫 (PCL) 現在適用於所有平台](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx)。 若要下載組件，請參閱[Microsoft.NET 可攜式程式庫參考組件](http://www.microsoft.com/download/details.aspx?id=40727)在 Microsoft 下載中心取得。 如需如何使用組件來搭配 Xamarin 的詳細資訊，請參閱部落格文章： [PCL 和.NET NuGet 程式庫現在已為 Xamarin 啟用](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx)。  
   
  Visual Studio 有提供範本，可協助您用可攜式類別庫進行開發。 依據您使用的 Visual Studio 版本，可用的範本和功能表可能會與本文說明的內容不同。  
   
 > [!WARNING]
->  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)包含可攜式類別庫範本的更新。 如果您有舊版的 Visual Studio 和 Visual Studio 2013 安裝在同一部電腦，然後再安裝 Update 2 中，所做的變更**目標 Framework**選項將會套用至這兩個版本的 Visual Studio。  
+>  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)包含可攜式類別庫範本的更新。 如果您有舊版的 Visual Studio 和 Visual Studio 2013 安裝在同一部電腦，然後再安裝 Update 2 中，若要變更**目標 Framework**選項將會套用至這兩個版本的 Visual Studio。  
   
  本主題內容：  
   
- [Visual Studio 支援](#vs_support)   
- [建立可攜式類別庫專案](#create_pcl)   
- [目標選項](#platforms)   
- [變更目標](#change_targets)   
- [支援的功能](#features)   
- [支援的類型和成員](#members)   
- [可攜式類別庫中的 API 差異](#API_diff)   
+ [Visual Studio 支援](#vs_support)  
+ [建立可攜式類別庫專案](#create_pcl)  
+ [目標選項](#platforms)  
+ [變更目標](#change_targets)  
+ [支援的功能](#features)  
+ [支援的型別和成員](#members)  
+ [可攜式類別庫中的 API 差異](#API_diff)  
  [使用可攜式類別庫](#using)  
   
 <a name="vs_support"></a>   
@@ -56,18 +54,18 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
   
 |Visual Studio SKU|支援建立可攜式類別庫|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010、Professional、Premium 或 Ultimate|是，當您安裝[可攜式程式庫工具](http://go.microsoft.com/fwlink/?LinkId=210823)。|  
+|Visual Studio 2010、Professional、Premium 或 Ultimate|是的當您安裝[可攜式文件庫工具](http://go.microsoft.com/fwlink/?LinkId=210823)。|  
 |Visual Studio Express 2010 版本|否。|  
 |Visual Studio 2012、Professional、Premium 或 Ultimate|可以。 如需電話支援安裝[Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772)。|  
 |Visual Studio Express 2012 版本|否。|  
 |Visual Studio 2013、Professional、Premium 或 Ultimate|可以。 如需 Windows Phone 8.1 支援安裝[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)。|  
-|Visual Studio Express 2013 for Windows|是，當您安裝[最新版本的 Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629)，包含 Update 2 中，或加入[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)。|  
+|Visual Studio Express 2013 for Windows|是的當您安裝[最新版本的 Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629)，其中包含 Update 2 中，或新增[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)。|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>建立可攜式類別庫專案  
- 若要建立可攜式類別庫，您應使用 Visual Studio 提供的其中一個範本。 建立新的專案，然後在**新的專案**對話方塊的 **範本**然後選取 您的目標語言 （C# 或 Visual Basic 中），然後選取其中一個做為目標平台。 您可以在下一個步驟選取其他平台。  
+ 若要建立可攜式類別庫，您應使用 Visual Studio 提供的其中一個範本。 建立新的專案，然後在**新專案**對話方塊的 **範本**，選取您的目標語言 （C# 或 Visual Basic 中），然後選取其中一個您要當做目標的平台。 您可以在下一個步驟選取其他平台。  
   
- 在 Visual Studio 2013 Update 2，您可以選擇**類別庫 （可攜式）**您所選擇的語言與平台建立可攜式類別庫範本。 您會看到適用於下列平台的這個範本：  
+ 在 Visual Studio 2013 Update 2 中，您可以選擇**類別庫 （可攜式）**您選擇的語言與平台，以建立可攜式類別庫範本。 您會看到適用於下列平台的這個範本：  
   
 -   市集應用程式  
   
@@ -75,7 +73,7 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
   
 -   Silverlight  
   
- 如果您想要在 C# 中建立目標為 Windows Phone 8.1 和 Windows 8.1 的程式庫，您可以選擇**市集應用程式**，然後選擇 **類別庫 （用於通用應用程式的可攜式）**。  
+ 如果您想要在 C# 中建立目標 Windows Phone 8.1 和 Windows 8.1 的程式庫，您可以選擇**市集應用程式**，然後選擇 **類別庫 （通用應用程式的可攜式）**。  
   
  ![市集應用程式的可攜式類別庫](../../../docs/standard/cross-platform/media/storeuniversalpcl.png "StoreUniversalPCL")  
   
@@ -85,7 +83,7 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
   
  ![選取可攜式程式庫專案](../../../docs/standard/cross-platform/media/portablelibrary-start.png "PortableLibrary_start")  
   
- **加入可攜式類別庫**對話方塊隨即出現，而且您可以選取其他平台。 該對話方塊會依據您選取的目標來提供相容性警告。  
+ **加入可攜式類別庫** 對話方塊隨即出現，而且您可以選取其他平台。 該對話方塊會依據您選取的目標來提供相容性警告。  
   
  ![變更 VS2013 的目標架構對話方塊](../../../docs/standard/cross-platform/media/clr-pcl-changeframeworks.png "CLR_PCL_ChangeFrameworks")  
 Visual Studio 2013 Update 2 的加入可攜式類別庫對話方塊  
@@ -94,27 +92,26 @@ Visual Studio 2013 Update 2 的加入可攜式類別庫對話方塊
   
 <a name="platforms"></a>   
 ## <a name="target-options"></a>目標選項  
- 當您建立可攜式類別庫專案時，可以選擇您要設為目標的作業系統和 .NET Framework 版本。 如果您使用 Visual Studio 2013，您已安裝 Update 2 或更新版本中，您可以選擇**類別庫 （用於通用應用程式的可攜式）**範本來建立目標為 Windows 8.1 和 Windows Phone 8.1 的可攜式類別庫。 下表顯示依據您使用之 Visual Studio 版本而定的可用目標。  
+ 當您建立可攜式類別庫專案時，可以選擇您要設為目標的作業系統和 .NET Framework 版本。 如果您使用 Visual Studio 2013，您已安裝 Update 2 或更新版本中，您可以選擇**類別庫 （通用應用程式的可攜式）**範本來建立以 Windows 8.1 和 Windows Phone 8.1 為目標的可攜式類別庫。 下表顯示依據您使用之 Visual Studio 版本而定的可用目標。  
   
-|||||  
-|-|-|-|-|  
 |目標選項|Visual Studio 2012|Visual Studio 2013|Visual Studio 2013 Update 2 或更新版|  
-|.NET Framework|.NET framework 4 和更新版本<br /><br /> .NET framework 4.0.3 （含) 以上<br /><br /> .NET framework 4.5|.NET framework 4 和更新版本<br /><br /> .NET framework 4.0.3 （含) 以上<br /><br /> .NET framework 4.5 和更新版本<br /><br /> .NET framework 4.5.1|.NET framework 4<br /><br /> .NET framework 4.0.3 （含)<br /><br /> .NET framework 4.5<br /><br /> .NET framework 4.5.1|  
-|Windows Phone|Windows Phone 7 和更新版本<br /><br /> Windows Phone 7.5 和更新版本<br /><br /> Windows Phone 8|Windows Phone 8|Windows Phone Silverlight 8<br /><br /> Windows Phone Silverlight 8.1<br /><br /> 如需 Windows 執行階段和 XAML 支援，請選擇：<br /><br /> Windows Phone 8.1|  
-|Windows 市集|的適用於 Windows 市集應用程式.NET|Windows 市集應用程式 (Windows 8) 和更新版本<br /><br /> Windows 市集應用程式 (Windows 8.1)|Windows 8<br /><br /> Windows 8.1|  
-|Silverlight|Silverlight 4 和更新版本<br /><br /> Silverlight 5|Silverlight 5|Silverlight 5|  
-|Xbox|為 Xbox 360|N/A|N/A|  
+|-|-|-|-|  
+|.NET Framework|.NET framework 4 和更新版本<br /><br /> .NET framework 4.0.3 （含） 以上<br /><br /> .NET framework 4.5|.NET framework 4 和更新版本<br /><br /> .NET framework 4.0.3 （含） 以上<br /><br /> .NET framework 4.5 和更新版本<br /><br /> .NET framework 4.5.1|.NET framework 4<br /><br /> .NET framework 4.0.3<br /><br /> .NET framework 4.5<br /><br /> .NET framework 4.5.1|  
+|Windows Phone|Windows Phone 7 和更新版本<br /><br /> Windows Phone 7.5 （含） 以上<br /><br /> Windows Phone 8|Windows Phone 8|Windows Phone Silverlight 8<br /><br /> Windows Phone Silverlight 8.1<br /><br /> 如需 Windows 執行階段和 XAML 支援，請選擇：<br /><br /> Windows Phone 8.1|  
+|Windows 市集|的適用於 Windows 市集應用程式.NET|Windows 市集應用程式 (Windows 8) 和更新版本<br /><br /> Windows 市集應用程式 (Windows 8.1)|Windows 8<br /><br /> -Windows 8.1|  
+|Silverlight|Silverlight 4 及更新版本<br /><br /> Silverlight 5|Silverlight 5|Silverlight 5|  
+|Xbox|-Xbox 360|N/A|N/A|  
   
 <a name="change_targets"></a>   
 ## <a name="changing-targets"></a>變更目標  
  當您選擇可攜式類別庫範本時，會為您選取預設平台，但這些預設值會依據您安裝的 Visual Studio 版本以及先前選取的目標而不同。 您可以在建立可攜式類別庫時，或是在開始開發可攜式類別庫之後變更平台。  
   
- 如果您想要在建立您的專案之後, 變更目標**方案總管 中**，開啟您的可攜式類別庫專案 （而非方案），捷徑功能表，然後選擇**屬性**。 在專案屬性頁面上，**程式庫** 索引標籤顯示的平台專案的目前目標。  
+ 如果您想要建立您的專案，在之後變更目標**方案總管 中**，開啟您的可攜式類別庫專案 （而非解決方案） 的捷徑功能表，然後選擇**屬性**. 在專案屬性頁面上，**文件庫**索引標籤會顯示在平台專案的目前目標。  
   
  ![專案屬性](../../../docs/standard/cross-platform/media/portablelibrary-projectproperties.png "PortableLibrary_ProjectProperties")  
 Visual Studio 2013 Update 2 的可攜式類別庫屬性頁  
   
- 若要新增或移除目標，請選擇 **變更**按鈕，然後選取及清除適當的核取方塊。  
+ 若要新增或移除目標，選擇 **變更**按鈕，然後選取及清除適當的核取方塊。  
   
  當您變更目標時，可供您用來開發專案的 API 會變更，以配合您的選項。 Visual Studio 會提報因為目標變更而可能發生的錯誤和警告。  
   
@@ -127,7 +124,7 @@ Visual Studio 2012 中的變更目標對話方塊
   
 <a name="features"></a>   
 ## <a name="supported-features"></a>支援的功能  
- 下表顯示可用平台和版本上支援的功能。 在某些情況下，Microsoft 已加入 NuGet 套件發行的支援，而這會記錄下來。 .NET framework NuGet 封裝的相關資訊，請參閱[.NET Framework 和 Out-of-band 的版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
+ 下表顯示可用平台和版本上支援的功能。 在某些情況下，Microsoft 已加入 NuGet 套件發行的支援，而這會記錄下來。 適用於.NET Framework NuGet 封裝的相關資訊，請參閱[的.NET Framework 和不足的頻外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
   
 |功能|.NET Framework|.NET Framework|.NET Framework|Windows 市集|Windows 市集|Windows Phone 市集|Windows Phone Silverlight|Windows Phone Silverlight|Windows Phone Silverlight|Silverlight|Silverlight|Xbox 360|  
 |-------------|--------------------|--------------------|--------------------|-------------------|-------------------|-------------------------|-------------------------------|-------------------------------|-------------------------------|-----------------|-----------------|--------------|  
@@ -151,11 +148,11 @@ Visual Studio 2012 中的變更目標對話方塊
 |XLINQ||✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|  
   
  ➊ 需要[Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/)封裝  
- ➋ 需要[Microsoft 壓縮](https://www.nuget.org/packages/Microsoft.Bcl.Compression)封裝  
- ➌ 需要[Microsoft HTTP 用戶端程式庫](http://www.nuget.org/packages/Microsoft.Net.Http)封裝  
+ ➋ 需要[Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression)封裝  
+ ➌ 需要[Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http)封裝  
   
 > [!WARNING]
->  當您參考時，可能會遇到錯誤[Microsoft 壓縮](https://www.nuget.org/packages/Microsoft.Bcl.Compression)和[Microsoft HTTP 用戶端程式庫](http://www.nuget.org/packages/Microsoft.Net.Http)封裝從 Windows Phone Silverlight 8.1 應用程式所使用的可攜式程式庫。 如需詳細資訊，請參閱[平台相容性與重大變更適用於 Windows Phone Silverlight 8.1 應用程式](http://go.microsoft.com/fwlink/p/?LinkId=394744)。  
+>  當您參考時，您可能會遇到錯誤[Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression)和[Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) Windows Phone Silverlight 8.1 應用程式所使用的可攜式程式庫中的封裝。 如需詳細資訊，請參閱[平台相容性與重大變更 Windows Phone Silverlight 8.1 應用程式](http://go.microsoft.com/fwlink/p/?LinkId=394744)。  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>支援的類型和成員  
@@ -169,14 +166,14 @@ Visual Studio 2012 中的變更目標對話方塊
   
 -   它們在可攜式環境中必須是合理的，尤其是支援成員無法移植時。  
   
- 例如，只有在目標為 Windows 8.1 和 Windows Phone 8.1 時，可攜式類別庫才會包含 UI 相關類型。 此外，如果您的目標平台 (例如 Xbox、.NET Framework 4 和 Windows Phone 7) 是在引進可攜式類別庫之前發行，可能也會遇到一些限制。 .NET Framework 透過 NuGet 發行套件，NuGet 可改善對部分較舊平台的可攜式類別庫支援。 如需詳細資訊和 NuGet 套件清單，請參閱[.NET Framework 和 Out-of-band 的版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
+ 例如，只有在目標為 Windows 8.1 和 Windows Phone 8.1 時，可攜式類別庫才會包含 UI 相關類型。 此外，如果您的目標平台 (例如 Xbox、.NET Framework 4 和 Windows Phone 7) 是在引進可攜式類別庫之前發行，可能也會遇到一些限制。 .NET Framework 透過 NuGet 發行套件，NuGet 可改善對部分較舊平台的可攜式類別庫支援。 如需詳細資訊和 NuGet 套件清單，請參閱[的.NET Framework 和不足的頻外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
   
- 如果可攜式類別庫和您選取的目標可支援某成員，該成員就會出現在 IntelliSense 的專案中。 此外，可攜式類別庫圖示![可攜式程式庫支援](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon")在成員資料表中，會出現在[.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkId=211358)支援成員旁邊。 例如下, 面的成員表格顯示<xref:System.String.Chars%2A>屬性<xref:System.String>可攜式類別庫中支援類別︰  
+ 如果可攜式類別庫和您選取的目標可支援某成員，該成員就會出現在 IntelliSense 的專案中。 此外，可攜式類別庫圖示![可攜式程式庫所支援](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon")在成員資料表中，會出現在[.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkId=211358)受支援成員旁邊。 例如，下面的成員表格顯示，可攜式類別庫可支援 <xref:System.String.Chars%2A> 類別中的 <xref:System.String> 屬性：  
   
  ![支援的成員圖示](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 可攜式類別庫圖示  
   
- 您也可以尋找**版本資訊**注意事項，指出類型或成員支援可攜式類別庫專案中參考主題的章節︰  
+ 您也可以查看**版本資訊**注意事項，指出類型或成員支援可攜式類別庫專案中的參考主題的章節：  
   
  ![可攜式程式庫版本資訊](../../../docs/standard/cross-platform/media/plibversioninformation.png "PlibVersionInformation")  
 版本資訊範例  
@@ -197,11 +194,11 @@ Visual Studio 2012 中的變更目標對話方塊
  當您建立參考可攜式類別庫組件的 Windows 市集或 Windows Phone 應用程式時，部署應用程式所需的一切都已內含在應用程式套件中，不需要進一步的步驟。  
   
 ### <a name="deploying-a-net-framework-app"></a>部署 .NET Framework 應用程式  
- 當您部署參考可攜式類別庫組件的 .NET Framework 應用程式時，必須指定正確 .NET Framework 版本的相依性。 藉由指定此相依性，您就可以確保所需的版本會隨著您的應用程式一起安裝。 如果您的目標.NET Framework 4 或更新版本中，電腦必須使用.NET Framework 4[更新](http://go.microsoft.com/fwlink/?LinkId=210824)，.NET Framework 4 或.NET Framework 4.5 安裝更新 4.0.3 （含）。  
+ 當您部署參考可攜式類別庫組件的 .NET Framework 應用程式時，必須指定正確 .NET Framework 版本的相依性。 藉由指定此相依性，您就可以確保所需的版本會隨著您的應用程式一起安裝。 如果您的目標.NET Framework 4 或更新版本中，電腦必須有.NET Framework 4 與[更新](http://go.microsoft.com/fwlink/?LinkId=210824)，.NET Framework 4 或.NET Framework 4.5 安裝的更新 4.0.3。  
   
--   若要建立與 ClickOnce 部署的相依性︰ 在**方案總管 中**，選擇您想要發行專案的專案節點。 (這是參考可攜式類別庫專案的專案。)在功能表列上選擇 **專案**，**屬性**，然後選擇 **發行** 索引標籤。 在**發行**頁面上，選擇**必要條件**。 選取所需的 .NET Framework 版本 (或 .NET Framework 4 更新) 做為必要條件。  
+-   若要建立與 ClickOnce 部署的相依性： 在**方案總管 中**，選擇您想要發行專案的專案節點。 (這是參考可攜式類別庫專案的專案。)在功能表列上選擇 **專案**，**屬性**，然後選擇 **發行** 索引標籤。在**發行**頁面上，選擇**必要條件**。 選取所需的 .NET Framework 版本 (或 .NET Framework 4 更新) 做為必要條件。  
   
--   若要建立與安裝專案的相依性︰ 在**方案總管] 中**，選擇 [安裝專案。 在功能表列上選擇 **專案**，**屬性**，**必要條件**。 選取所需的 .NET Framework 版本做為必要條件。  
+-   若要建立與安裝專案的相依性： 在**方案總管] 中**，選擇 [安裝專案。 在功能表列上選擇 **專案**，**屬性**，**必要條件**。 選取所需的 .NET Framework 版本做為必要條件。  
   
  如需部署.NET Framework 應用程式的詳細資訊，請參閱[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。  
   
@@ -227,12 +224,11 @@ Visual Studio 2012 中的變更目標對話方塊
               style="visibility:hidden;height:0px;width:0px;border:0px">  
    </iframe>  
 </div>  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [搭配 MVVM 使用可攜式類別庫](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)   
- [多個平台為目標的程式庫的應用程式資源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)   
- [.NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)   
- [Windows 市集應用程式和 Windows 執行階段的.NET framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)   
- [部署](../../../docs/framework/deployment/net-framework-and-applications.md)
+ [搭配 MVVM 使用可攜式類別庫](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+ [多個平台為目標的程式庫的應用程式資源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+ [.NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [部署](../../../docs/framework/deployment/net-framework-applications.md)

@@ -1,37 +1,40 @@
 ---
-title: "對應巢狀結構描述項目間的隱含關聯 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在巢狀結構描述項目之間進行隱含關聯對應"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b3e3243384bd1dd55661a87ee67cc3052b94e923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 對應巢狀結構描述項目間的隱含關聯
-XML 結構描述定義語言 \(XSD\) 結構描述可以是互呈巢狀的複雜型別。  在這樣的情況下，對應處理序會在 <xref:System.Data.DataSet> 內套用預設對應並建立下列各項：  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a>在巢狀結構描述項目之間進行隱含關聯對應
+XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型別。 在這樣的情況下，對應處理序會在 <xref:System.Data.DataSet> 內套用預設對應並建立下列各項：  
   
--   為每個複雜型別 \(父和子\) 建立一個資料表。  
+-   為每個複雜型別 (父和子) 建立一個資料表。  
   
--   如果父代上不存在唯一的條件約束，每個資料表定義便包括一個命名為 *TableName*\_Id \(這裡的 *TableName* 是父資料表的名稱\) 的額外主索引鍵資料行。  
+-   如果沒有唯一的條件約束存在於父代，一個額外主索引鍵資料行每個資料表定義名為*TableName*_Id 其中*TableName*是父資料表的名稱。  
   
--   父資料表中的主索引鍵條件約束將另一個資料行識別為主索引鍵 \(方法是將 **IsPrimaryKey** 屬性設定為 **True**\)。  該條件約束命名為 Constraint*\#* \(這裡的 *\#* 是 1、2 或 3 等等\)。  例如，第一個條件約束的預設名稱是 Constraint1。  
+-   識別主索引鍵資料行在父資料表上的主索引鍵條件約束 (藉由設定**IsPrimaryKey**屬性**True**)。 條件約束命名為 Constraint *#* 其中 *#* 是 1、 2、 3，依此類推。 例如，第一個條件約束的預設名稱是 Constraint1。  
   
--   子資料表中的外部索引鍵條件約束將另一個資料行識別為外部索引鍵，此外部索引鍵參考至父資料表的主索引鍵。  該條件約束命名為 *ParentTable\_ChildTable*，這裡的 *ParentTable* 是父資料表的名稱，而 *ChildTable* 是子資料表的名稱。  
+-   子資料表中的外部索引鍵條件約束將另一個資料行識別為外部索引鍵，此外部索引鍵參考至父資料表的主索引鍵。 名為條件約束*ParentTable_ChildTable*其中*ParentTable*是父資料表的名稱和*ChildTable*是子資料表的名稱。  
   
 -   父資料表和子資料表間的資料關聯。  
   
- 下列範例顯示的結構描述中，**OrderDetail** 為 **Order** 的項目子系。  
+ 下列範例顯示結構描述位置**OrderDetail**是子元素的**順序**。  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,16 @@ XML 結構描述定義語言 \(XSD\) 結構描述可以是互呈巢狀的複雜�
 </xs:schema>  
 ```  
   
- XML 結構描述對應處理序會在 **DataSet** 內建立下列各項：  
+ XML 結構描述對應處理序內建立下列**資料集**:  
   
--   **Order** 和 **OrderDetail** 資料表。  
+-   **順序**和**OrderDetail**資料表。  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   **Order** 資料表上唯一的條件約束。  請注意，**IsPrimaryKey** 屬性是設定為 **True**。  
+-   Unique 條件約束**順序**資料表。 請注意， **IsPrimaryKey**屬性設定為**True**。  
   
     ```  
     ConstraintName: Constraint1  
@@ -80,7 +83,7 @@ XML 結構描述定義語言 \(XSD\) 結構描述可以是互呈巢狀的複雜�
     IsPrimaryKey: True  
     ```  
   
--   **OrderDetail** 資料表上的外部索引鍵條件約束。  
+-   上的外部索引鍵條件約束**OrderDetail**資料表。  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -91,7 +94,7 @@ XML 結構描述定義語言 \(XSD\) 結構描述可以是互呈巢狀的複雜�
     RelatedColumns: Order_Id   
     ```  
   
--   **Order** 和 **OrderDetail** 資料表間的關聯性。  這項關聯性的 **Nested** 屬性設定為 **True**，因為 **Order** 和 **OrderDetail** 元素會巢狀化至結構描述內。  
+-   之間的關聯性**順序**和**OrderDetail**資料表。 **巢狀**此關聯性的屬性設定為**True**因為**順序**和**OrderDetail**元素的巢狀結構描述中.  
   
     ```  
     ParentTable: Order  
@@ -104,7 +107,7 @@ XML 結構描述定義語言 \(XSD\) 結構描述可以是互呈巢狀的複雜�
     Nested: True  
     ```  
   
-## 請參閱  
- [從 XML 結構描述 \(XSD\) 產生 DataSet 關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [將 XML 結構描述 \(XSD\) 條件約束對應至 DataSet 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

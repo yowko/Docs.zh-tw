@@ -1,60 +1,64 @@
 ---
-title: "如何：驗證應用程式設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式設定, 驗證"
-  - "應用程式設定, Windows Form"
-  - "驗證應用程式設定"
+title: "如何：驗證應用程式設定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- validating application settings
+- application settings [Windows Forms], Windows Forms
+- application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：驗證應用程式設定
-這個範例示範如何在保存應用程式設定之前先對它們進行驗證。  
+# <a name="how-to-validate-application-settings"></a>如何：驗證應用程式設定
+本主題示範如何在保存應用程式設定之前先行驗證。  
   
- 由於應用程式設定屬於強型別 \(Strongly Typed\)，所以，在某種程度上，您可以信任使用者不會將錯誤型別的資料指派給指定的設定。  但是，使用者仍然可以嘗試將落於可接受界限之外的值指派給設定，例如提供一個未來的出生日期。  所有應用程式設定類別的父類別 <xref:System.Configuration.ApplicationSettingsBase>，會公開四個事件以啟用如範圍檢查等工作。  處理這些事件時會將所有驗證程式碼置於單一位置，而不是將它四散於專案各處。  
+ 因為應用程式設定為強型別，對於使用者無法將型別不正確的資料指派給指定的設定這一點，您可以有些信心。 不過，使用者仍然可以嘗試將超出可接受界限的值指派給設定，例如，提供未來時間的出生日期。 <xref:System.Configuration.ApplicationSettingsBase>所有的應用程式設定類別的父類別公開的四個事件，若要啟用這類繫結檢查。 在處理這些事件時，您所有的驗證程式碼會放在單一位置，而不是零散分佈在整個專案。  
   
- 所使用的事件是取決於您需要驗證設定的時機，如以下表所示。  
+ 您所使用的事件取決於何時需要驗證設定，如下表所述。  
   
-|事件|發生時機和使用方法|  
-|--------|---------------|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|發生於初始載入設定屬性群組之後。<br /><br /> 若要先驗證全部屬性群組的初始值然後才在應用程式中使用此值，請使用這個事件。|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|發生於變更單一設定屬性值之前。<br /><br /> 若要在變更單一屬性之前先進行驗證，請使用這個事件。  它可以提供使用者與其動作和選擇相關的即時回應。|  
-|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|發生於變更單一設定屬性值之後。<br /><br /> 若要在變更單一屬性之後才進行驗證，請使用這個事件。  除非是需要冗長的非同步驗證過程，否則驗證時鮮少使用這個事件。|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|發生於儲存設定屬性群組之前。<br /><br /> 若要先驗證全部屬性群組的值然後才將它們保存於磁碟中，請使用這個事件。|  
+|事件|發生時機和用途|  
+|-----------|------------------------|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|在初次載入設定屬性群組之後發生。<br /><br /> 使用此事件可先驗證整個屬性群組的初始值，然後才將值用於應用程式。|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|在單一設定屬性值變更之前發生。<br /><br /> 使用此事件可先驗證單一屬性，然後才將它變更。 它可立即為使用者提供有關其動作和選擇的意見回應。|  
+|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|在單一設定屬性值變更之後發生。<br /><br /> 使用此事件可在單一屬性變更後，對此屬性進行驗證。 除非系統需要冗長的非同步驗證程序，否則此事件很少會用於進行驗證。|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|在儲存設定屬性群組之前發生。<br /><br /> 使用此事件可先驗證整個屬性群組的值，然後再儲存到磁碟中予以保存。|  
   
- 進行驗證時這些事件通常不會在相同應用程式內全部同時使用。  例如，只處理 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 事件即可能符合所有驗證需求。  
+ 一般而言，您不會在相同應用程式內將這些事件全都用於進行驗證。 例如，它通常是藉由只處理符合所有的驗證需求可能<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>事件。  
   
- 當事件處理常式偵測到無效值時，它通常會執行下列其中一項動作：  
+ 當事件處理常式偵測到無效值時，它通常會執行下列其中一個動作︰  
   
--   自動提供已知的正確值，例如預設值。  
+-   自動提供已知正確的值，例如預設值。  
   
--   重新詢問伺服端程式碼的使用者以取得資訊。  
+-   重新查詢伺服器程式碼的使用者以獲得資訊。  
   
--   如果是在執行相關動作前即先引發的事件，例如 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 和 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，會使用 <xref:System.ComponentModel.CancelEventArgs> 引數來取消作業。  
+-   事件引發之前及其相關聯的動作，例如<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>和<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，會使用<xref:System.ComponentModel.CancelEventArgs>取消作業的引數。  
   
- 如需事件處理的詳細資訊，請參閱 [事件處理常式概觀](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
+ 如需處理事件的詳細資訊，請參閱[事件處理常式概觀](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
   
- 在下列程序中，示範了如何使用 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 或 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 事件來測試是否為有效的出生日期。  此程序的假設是您已經建立了應用程式設定，而且在這個範例中，將會對名為  `DateOfBirth` 的設定執行範圍檢查。  如需建立設定的詳細資訊，請參閱 [如何：建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 下列程序顯示如何使用正確的出生日期測試<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>或<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。 我們在撰寫這些程序時，是假設您已建立應用程式設定；在此範例中，我們會對名為 `DateOfBirth` 的設定執行界限檢查。 如需建立設定的詳細資訊，請參閱[如何：建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
   
-### 若要取得應用程式設定物件  
+### <a name="to-obtain-the-application-settings-object"></a>取得應用程式設定物件  
   
--   請完成下列其中一項，以取得應用程式設定物件 \(包裝函式執行個體\) 的參考：  
+-   請完成下列其中一項來取得應用程式設定物件 (包裝函式執行個體) 的參考︰  
   
-    -   如果您是使用 \[**屬性編輯器**\] 中的 \[Visual Studio 應用程式設定\] 對話方塊來建立設定，則可利用以下運算式擷取配合程式語言而產生的預設設定物件。  
+    -   如果您是使用**屬性編輯器**中的 [Visual Studio 應用程式設定] 對話方塊來建立您的設定，您可以透過下列運算式擷取針對您的語言所產生的預設設定物件。  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -64,13 +68,13 @@ caps.handback.revision: 17
         MySettings.Default   
         ```  
   
-         \-或\-  
+         -或-  
   
-    -   如果您是 Visual Basic 開發人員而且使用專案設計工具來建立應用程式設定，則可使用 [My.Settings 物件](../../../../ocs/visual-basic/language-reference/objects/my-settings-object.md) 擷取設定。  
+    -   如果您是 Visual Basic 開發人員，並且使用專案設計工具來建立應用程式設定，您可以使用 [My.Settings 物件](~/docs/visual-basic/language-reference/objects/my-settings-object.md)來擷取您的設定。  
   
-         \-或\-  
+         -或-  
   
-    -   如果您是藉由直接從 <xref:System.Configuration.ApplicationSettingsBase> 衍生的方式來建立設定，則需要手動產生 \(Instantiate\) 類別。  
+    -   如果您建立您的設定由衍生自<xref:System.Configuration.ApplicationSettingsBase>直接管理，您必須手動將您的類別具現化。  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -80,15 +84,15 @@ caps.handback.revision: 17
         Dim Settings as New MyCustomSettings()  
         ```  
   
- 下列程序的依據假設是，您採取了本程序的最後一個項目來取得應用程式設定物件。  
+ 我們在撰寫下列程序時，是假設您已透過完成此程序中的最後一項來取得應用程式設定物件。  
   
-### 若要在設定變更時驗證應用程式設定  
+### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>在有設定變更時驗證應用程式設定  
   
-1.  如果您是 C\# 開發人員，請在表單或控制項的  `Load`  事件中加入 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 事件的事件處理常式。  
+1.  如果您是 C# 開發人員，在您的表單或控制項的`Load`事件，加入事件處理常式<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>事件。  
   
-     \-或\-  
+     -或-  
   
-     如果您是 Visual Basic 開發人員，則應使用 `WithEvents` 關鍵字宣告 `Settings` 變數。  
+     如果您是 Visual Basic 開發人員，您應該使用 `WithEvents` 關鍵字來宣告 `Settings` 變數。  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -103,7 +107,7 @@ caps.handback.revision: 17
     End Sub   
     ```  
   
-2.  定義事件處理常式，然後在其中撰寫程式碼以根據出生日期執行範圍檢查。  
+2.  定義事件處理常式，並在其內部撰寫程式碼以執行出生日期界限檢查。  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -130,9 +134,9 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-### 若要在發生儲存行為時驗證應用程式設定  
+### <a name="to-validate-application-settings-when-a-save-occurs"></a>在發生儲存時驗證應用程式設定  
   
-1.  請在表單或控制項的  `Load`  事件中加入 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 事件的事件處理常式。  
+1.  在您的表單或控制項的`Load`事件，加入事件處理常式<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -147,7 +151,7 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-2.  定義事件處理常式，然後在其中撰寫程式碼以根據出生日期執行範圍檢查。  
+2.  定義事件處理常式，並在其內部撰寫程式碼以執行出生日期界限檢查。  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  
@@ -166,6 +170,6 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-## 請參閱  
- [在 Windows Form 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
+## <a name="see-also"></a>另請參閱  
+ [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
  [如何：建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

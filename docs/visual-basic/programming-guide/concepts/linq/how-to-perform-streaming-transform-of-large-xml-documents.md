@@ -1,44 +1,36 @@
 ---
-title: "如何︰ 執行大型 XML 文件 (Visual Basic) 的資料流轉換 |Microsoft 文件"
+title: "如何： 執行大型 XML 文件 (Visual Basic) 的資料流轉換"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f35e42e29e316fe1610a011263aa68e622fb95a5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d211cbd1c94d485e0c41d23eb12dcae28ae7ad6e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>如何︰ 執行大型 XML 文件 (Visual Basic) 的資料流轉換
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>如何： 執行大型 XML 文件 (Visual Basic) 的資料流轉換
 有時候您必須轉換大型 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用非常大的 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比 (也就是，變成過度)。 因此，您應該改用資料流技術。  
   
- 在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。 特定的標準查詢運算子，例如<xref:System.Linq.Enumerable.OrderBy%2A>、 反覆查看其來源、 收集所有資料、 排序以及最後產生順序中的第一個項目。</xref:System.Linq.Enumerable.OrderBy%2A> 請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會為應用程式保留小的記憶體使用量。  
+ 在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。 特定的標準查詢運算子 (例如，<xref:System.Linq.Enumerable.OrderBy%2A>) 會反覆查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。 請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會為應用程式保留小的記憶體使用量。  
   
- 即使您使用中所述的技巧[How to︰ 資料流 XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)，如果您嘗試組合包含已轉換的文件，記憶體使用量將會太大的 XML 樹狀結構。  
+ 即使您使用中所述的技巧[How to： 標頭資訊 (Visual Basic) 的存取權的資料流 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)，如果您嘗試組合包含已轉換的文件，記憶體使用量將會太大的 XML 樹狀。  
   
- 有兩個主要方法。 其中一個方法是使用<xref:System.Xml.Linq.XStreamingElement>.</xref:System.Xml.Linq.XStreamingElement>延緩的處理特性 另一種方法是建立<xref:System.Xml.XmlWriter>，並使用的功能[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]將項目寫入至<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> 這個主題會示範這兩種方法。  
+ 有兩個主要方法。 其中一個方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延緩處理特性。 另一個方法則是建立 <xref:System.Xml.XmlWriter>，然後使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 這個主題會示範這兩種方法。  
   
 ## <a name="example"></a>範例  
- 下列範例中的範例是根據[How to︰ 資料流 XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
+ 下列範例中的範例上建置[How to： 標頭資訊 (Visual Basic) 的存取權的資料流 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
   
- 這個範例會使用延後的執行功能<xref:System.Xml.Linq.XStreamingElement>來串流輸出。</xref:System.Xml.Linq.XStreamingElement> 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
+ 這個範例會使用 <xref:System.Xml.Linq.XStreamingElement> 的延後執行功能來串流輸出。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   
  請注意，自訂座標軸 (`StreamCustomerItem`) 是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與下列 Source.xml 文件的排列方式相同。 不過，較為複雜的實作方法則用於剖析無效的文件。  
   
@@ -263,15 +255,15 @@ End Class
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例中的範例也會建立[How to︰ 資料流 XML 片段並存取標頭資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
+ 下列範例中的範例也會建立[How to： 標頭資訊 (Visual Basic) 的存取權的資料流 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
   
- 這個範例會使用的功能[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]至<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter>寫入項目 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
+ 此範例會使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   
  請注意，自訂座標軸 (`StreamCustomerItem`) 是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與下列 Source.xml 文件的排列方式相同。 不過，較為複雜的實作方法將會使用 XSD 驗證來源文件，或做為剖析無效文件的準備。  
   
  此範例會使用相同的來源文件 Source.xml 做為本主題中的上一個範例。 它也會產生完全相同的輸出。  
   
- 用於<xref:System.Xml.Linq.XStreamingElement>串流的輸出 XML 優於寫入<xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter>最好</xref:System.Xml.Linq.XStreamingElement>  
+ 使用 <xref:System.Xml.Linq.XStreamingElement> 串流輸出 XML 優於寫入 <xref:System.Xml.XmlWriter>。  
   
 ```vb  
 Module Module1  
