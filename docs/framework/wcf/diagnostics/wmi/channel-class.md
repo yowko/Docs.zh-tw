@@ -1,25 +1,28 @@
 ---
-title: "Channel 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Channel 類別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1df634a61cce695fca74fdfe53beea6c0f83d082
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Channel 類別
+# <a name="channel-class"></a>Channel 類別
 通道  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class Channel  
@@ -32,52 +35,52 @@ class Channel
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  Channel 類別並未定義任何方法。  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  Channel 類別具有下列屬性。  
   
-### LocalAddress  
+### <a name="localaddress"></a>LocalAddress  
  資料型別：字串  
   
  存取類型：唯讀  
   
  通道的本機端點。  
   
-### ref  
+### <a name="ref"></a>ref  
  資料型別：端點  
   
  存取類型：唯讀  
   
  通道所連接之端點的參考。  
   
-### RemoteAddress  
+### <a name="remoteaddress"></a>RemoteAddress  
  資料型別：字串  
   
  存取類型：唯讀  
   
  與通道相關聯的遠端位址。  
   
-### SessionId  
+### <a name="sessionid"></a>SessionId  
  資料型別：字串  
   
  存取類型：唯讀  
   
- 目前工作階段識別碼 \(如果有\)。  
+ 目前工作階段識別碼 (如果有)。  
   
-### 類型  
+### <a name="type"></a>類型  
  資料型別：字串  
   
  存取類型：唯讀  
   
  通道的類型。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|  
+|---------|-----------------------------------|  
+|命名空間|於 root\ServiceModel 中定義|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.ChannelBase>

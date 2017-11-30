@@ -1,34 +1,30 @@
 ---
-title: "查詢 XDocument 與查詢 xelement 的比較 (Visual Basic) |Microsoft 文件"
+title: "查詢 XDocument 與查詢 XElement (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29044cd118bfd8ecc12bddca722ee3656d455e0f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ee3c0c1cda12a74f50b4937263d80f526b5d7ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>查詢 XDocument 與查詢 xelement 的比較 (Visual Basic)
-當您載入文件<xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>，您會注意到，您必須撰寫查詢稍有不同於載入透過<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.</xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>時</xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>透過  
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>查詢 XDocument 與查詢 XElement (Visual Basic)
+當您透過 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 載入文件時，您將會注意到您必須撰寫的查詢與透過 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 載入時撰寫的查詢稍有不同。  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load 和 XElement.Load 之比較  
- 當您載入到 XML 文件<xref:System.Xml.Linq.XElement>透過<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>、<xref:System.Xml.Linq.XElement>根目錄中的 XML 樹狀結構會包含已載入文件的根項目。</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement> 不過，當您載入相同的 XML 文件<xref:System.Xml.Linq.XDocument><xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>樹狀結構的根<xref:System.Xml.Linq.XDocument>節點，然後載入文件的根項目是一個允許的子<xref:System.Xml.Linq.XElement>節點的<xref:System.Xml.Linq.XDocument>.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> ，</xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>透過</xref:System.Xml.Linq.XDocument> [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 座標軸會相對於根節點進行運算。  
+ 當您透過 <xref:System.Xml.Linq.XElement>，將 XML 文件載入到 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 時，XML 樹狀結構根目錄的 <xref:System.Xml.Linq.XElement> 會包含已載入之文件的根項目。 不過，當您透過 <xref:System.Xml.Linq.XDocument>，將相同的 XML 文件載入到 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 時，樹狀目錄的根目錄為 <xref:System.Xml.Linq.XDocument> 節點，而已載入之文件的根項目為允許 <xref:System.Xml.Linq.XElement> 之子系 <xref:System.Xml.Linq.XDocument> 節點的項目。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 座標軸會相對於根節點進行運算。  
   
- 這個第一個範例會載入使用<xref:System.Xml.Linq.XElement.Load%2A>.</xref:System.Xml.Linq.XElement.Load%2A> XML 樹狀結構 接著，它會針對樹狀結構根目錄的子項目進行查詢。  
+ 這個第一個範例會使用 <xref:System.Xml.Linq.XElement.Load%2A> 載入 XML 樹狀結構。 接著，它會針對樹狀結構根目錄的子項目進行查詢。  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -59,7 +55,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- 下列範例是上述，使用例外狀況的 XML 樹狀結構載入<xref:System.Xml.Linq.XDocument>而不是<xref:System.Xml.Linq.XElement>。</xref:System.Xml.Linq.XElement></xref:System.Xml.Linq.XDocument>相同  
+ 下列範例與上述範例幾乎相同，不同處在於會將 XML 樹狀結構載入到 <xref:System.Xml.Linq.XDocument> 而非 <xref:System.Xml.Linq.XElement>。  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -94,7 +90,7 @@ Querying tree loaded with XDocument.Load
   
  請注意，相同的查詢會傳回一個 `Root` 節點，而非三個子節點。  
   
- 其中一種處理方式是使用<xref:System.Xml.Linq.XDocument.Root%2A>屬性，才能存取座標軸方法，如下︰</xref:System.Xml.Linq.XDocument.Root%2A>  
+ 其中一個處理方法為，在存取座標軸方法之前，先使用 <xref:System.Xml.Linq.XDocument.Root%2A> 屬性，如下所示：  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -115,7 +111,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- 這個查詢會執行在同一個查詢樹狀結構的方式起源於<xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> 這個範例會產生下列輸出：  
+ 這個查詢現在會以查詢樹狀結構根目錄 <xref:System.Xml.Linq.XElement> 的相同方式執行。 這個範例會產生下列輸出：  
   
 ```  
 Querying tree loaded with XDocument.Load  

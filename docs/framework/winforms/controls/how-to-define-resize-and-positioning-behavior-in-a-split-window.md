@@ -1,45 +1,49 @@
 ---
-title: "如何：定義分隔視窗的調整大小和位置行為 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "分隔視窗, 調整大小"
-  - "SplitContainer 控制項 [Windows Form], 調整大小"
-  - "分隔視窗, 調整大小"
+title: "如何：定義分隔視窗的調整大小和位置行為"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- split windows [Windows Forms], resizing
+- splitter windows [Windows Forms], resizing
+- SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: db4a99c7dae7783e8ea51f43ad51fcd2214997e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：定義分隔視窗的調整大小和位置行為
-<xref:System.Windows.Forms.SplitContainer> 控制項的面板，讓他們本身可以輕易的調整大小和操作。  不過，當您要可程式化控制分隔器時 \-\- 它已定位並且可以移動他所能移動的。  
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>如何：定義分隔視窗的調整大小和位置行為
+個面板<xref:System.Windows.Forms.SplitContainer>控制項擔任也正在調整大小，並由使用者操作。 不過，可能會當您將想要以程式設計方式控制分隔器，它會定位，並且程度就可以移動它。  
   
- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性和其他在 <xref:System.Windows.Forms.SplitContainer> 控制項上的屬性，讓您對使用者介面的行為上具有實質掌控權，以搭配您的需求。  這些屬性已列示於下表中。  
+ <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>屬性與其他屬性上的<xref:System.Windows.Forms.SplitContainer>控制項可讓您精確掌控您的使用者介面，以符合您需求的行為。 下表會列出這些屬性。  
   
 |名稱|描述|  
-|--------|--------|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 屬性|決定分隔器是否可隨鍵盤或滑鼠移動。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 屬性|決定從左方或上方邊緣至可移動的分隔列間的距離 \(以像素計算\)。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性|決定使用者可移動分隔器之最短距離 \(以像素計算\)。|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 屬性|決定分隔器是否可以透過鍵盤或滑鼠移動。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 屬性|決定從左方或上方的邊緣可移動的分隔列以像素為單位的距離。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性|決定最小距離，單位為像素，使用者可以移動分隔器。|  
   
- 以下的範例修改了 <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性以建立「快照分隔器」效果；當使用者拖曳分隔器時，它會以 10 萬畫素為單位 \(而非 default 1\) 累積。  
+ 下列範例會修改<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>屬性來建立 「 貼齊分隔器 」 效果; 當使用者拖曳分隔器，它會自動遞增單位的 10 個像素，而不是預設值 1。  
   
-### 若要定義 SplitContainer 調整大小行為  
+### <a name="to-define-splitcontainer-resize-behavior"></a>若要定義 SplitContainer 調整大小行為  
   
-1.  在程序中，設定 <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性至想要的大小，因此，分隔器的「快照」行為已達成。  
+1.  在程序，設定<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>屬性至所需的大小達到 '貼齊' 分隔器的行為。  
   
-     在下列的範例程式碼中，表單中的 <xref:System.Windows.Forms.Form.Load> 事件，和在 <xref:System.Windows.Forms.SplitContainer> 控制項中的分隔器，已設定每次拖曳時跳 10 個畫素。  
+     在下列程式碼範例中，表單內<xref:System.Windows.Forms.Form.Load>事件、 分隔器內<xref:System.Windows.Forms.SplitContainer>控制設為跳 10 個像素拖曳時。  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, _  
@@ -49,7 +53,6 @@ caps.handback.revision: 13
         splitSnapper.Dock = DockStyle.Fill  
         splitSnapper.Parent = me  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -62,14 +65,14 @@ caps.handback.revision: 13
     }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\) 將下列程式碼加入表單的建構函式以註冊事件處理常式。  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-     稍微移動分隔器至左方或右方，將會沒有可識別的效果；然而，當滑鼠指標在不論哪個方向移動超過 10 個畫素，分隔器將快照至新的位置。  
+     稍微向左或向右移動分隔器不會影響差別。不過，當滑鼠指標進入任一方向的 10 個像素，分隔器會貼齊至新位置中。  
   
-## 請參閱  
- <xref:System.Windows.Forms.SplitContainer>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.SplitContainer>  
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

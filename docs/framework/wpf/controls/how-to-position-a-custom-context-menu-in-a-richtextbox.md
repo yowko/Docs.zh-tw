@@ -1,33 +1,39 @@
 ---
-title: "如何：在 RichTextBox 中放置自訂內容功能表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自訂內容功能表定位"
-  - "定位自訂內容功能表"
-  - "RichTextBox 控制項中，定位自訂內容功能表"
-  - "定位的內容功能表"
+title: "操作說明：在 RichTextBox 中放置自訂操作功能表"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom context menus [WPF], positioning
+- positioning custom context menus [WPF]
+- RichTextBox control [WPF], positioning custom context menus
+- context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1c0a4fd8d2df15dcca2d9d1751f3089922d9a5ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 RichTextBox 中放置自訂內容功能表
+# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>操作說明：在 RichTextBox 中放置自訂操作功能表
 這個範例示範如何將自訂內容功能表<xref:System.Windows.Controls.RichTextBox>。  
   
- 當您實作的自訂內容功能表**RichTextBox**，您必須負責處理內容功能表中的位置。  根據預設，自訂內容功能表開啟中間的**RichTextBox**。  
+ 當您實作 **RichTextBox** 的自訂操作功能表時，需負責處理操作功能表的位置。  自訂操作功能表預設會在 **RichTextBox** 的中央開啟。  
   
 ## <a name="example"></a>範例  
- 若要覆寫預設放置行為，將新增的接聽程式<xref:System.Windows.FrameworkContentElement.ContextMenuOpening>事件。  下列範例示範如何以程式設計方式執行這項操作。  
+ 若要覆寫預設配置行為，將加入接聽程式<xref:System.Windows.FrameworkContentElement.ContextMenuOpening>事件。  下列範例顯示如何以程式設計方式執行此操作。  
   
  [!code-csharp[RichTextBox_ContextMenu#_AddListener](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_addlistener)]
  [!code-vb[RichTextBox_ContextMenu#_AddListener](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_addlistener)]  
@@ -39,5 +45,5 @@ caps.handback.revision: 7
  [!code-vb[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
 ## <a name="see-also"></a>另請參閱  
- [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)   
+ [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)

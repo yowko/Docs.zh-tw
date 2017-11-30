@@ -1,23 +1,26 @@
 ---
-title: "自訂 Demux | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自訂 Demux"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: 41
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7c74648a249ec833f2b0fc8b8f5eea9247dc364
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 自訂 Demux
-這個範例會示範 MSMQ 訊息標頭如何對應至不同的服務作業，以便讓使用 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務不會受限於使用一項服務作業，如 [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) 和 [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) 範例所示。  
+# <a name="custom-demux"></a>自訂 Demux
+這個範例會示範 MSMQ 訊息標頭如何對應至不同的服務作業以便[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服務使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>不限於使用一項服務作業中所示[訊息佇列Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)和[Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)範例。  
   
  這個範例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
   
@@ -37,7 +40,7 @@ public interface IOrderProcessor
 }  
 ```  
   
- MSMQ 訊息沒有 Action 標頭。  無法將不同的 MSMQ 訊息自動對應至作業合約。  因此，這時只能有一個作業合約。  為了克服這項限制，服務會實作 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 介面的 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 方法。  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 方法能夠讓服務將指定的訊息標頭對應至特定服務作業。  在這個範例中，訊息的標籤標頭會對應至服務作業。  作業合約的 `Name` 參數會判定必須將指定訊息標籤分派到其中的服務作業。  例如，如果訊息的標籤標頭包含 "SubmitPurchaseOrder"，就會叫用 "SubmitPurchaseOrder" 服務作業。  
+ MSMQ 訊息沒有 Action 標頭。 無法將不同的 MSMQ 訊息自動對應至作業合約。 因此，這時只能有一個作業合約。 為了克服這項限制，服務會實作 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 介面的 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 方法。 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 方法能夠讓服務將指定的訊息標頭對應至特定服務作業。 在這個範例中，訊息的標籤標頭會對應至服務作業。 作業合約的 `Name` 參數會判定必須將指定訊息標籤分派到其中的服務作業。 例如，如果訊息的標籤標頭包含 "SubmitPurchaseOrder"，就會叫用 "SubmitPurchaseOrder" 服務作業。  
   
 ```  
 public class OperationSelector : IDispatchOperationSelector  
@@ -50,7 +53,7 @@ public class OperationSelector : IDispatchOperationSelector
 }  
 ```  
   
- 服務必須實作 <xref:System.ServiceModel.Description.IContractBehavior> 介面的 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> 方法，如下列範例程式碼所示。  這會將自訂 `OperationSelector` 套用至服務架構分派執行階段。  
+ 服務必須實作 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> 介面的 <xref:System.ServiceModel.Description.IContractBehavior> 方法，如下列範例程式碼所示。 這會將自訂 `OperationSelector` 套用至服務架構分派執行階段。  
   
 ```  
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
@@ -59,7 +62,7 @@ void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, Se
 }  
 ```  
   
- 在執行至 OperationSelector 之前，訊息必須通過發送器的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>。  根據預設，如果在服務實作之任何合約上都找不到訊息的動作，該訊息就會遭到拒絕。  為了避免這項檢查，我們會實作名為 `MatchAllFilterBehavior` 的 <xref:System.ServiceModel.Description.IEndpointBehavior>，此行為會藉由套用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 讓任何訊息通過 `ContractFilter`，如下列所示。  
+ 在執行至 OperationSelector 之前，訊息必須通過發送器的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>。 根據預設，如果在服務實作之任何合約上都找不到訊息的動作，該訊息就會遭到拒絕。 為了避免這項檢查，我們會實作名為 <xref:System.ServiceModel.Description.IEndpointBehavior> 的 `MatchAllFilterBehavior`，此行為會藉由套用 `ContractFilter` 讓任何訊息通過 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，如下列所示。  
   
 ```  
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
@@ -68,7 +71,7 @@ public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispa
 }  
 ```  
   
- 當服務接收到訊息時，便會使用該標籤標頭提供的資訊分派適當的服務作業。  訊息本文會還原序列化為 `PurchaseOrder` 物件，如下列範例程式碼所示。  
+ 當服務接收到訊息時，便會使用該標籤標頭提供的資訊分派適當的服務作業。 訊息本文會還原序列化為 `PurchaseOrder` 物件，如下列範例程式碼所示。  
   
 ```  
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -81,7 +84,7 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
 }  
 ```  
   
- 服務會自我裝載。  使用 MSMQ 時，必須事先建立使用的佇列。  這個動作可手動或透過程式碼完成。  在這個範例中，該服務包含的程式碼會檢查佇列的存在，並在佇列不存在時建立佇列。  佇列名稱會從組態檔中讀取。  
+ 服務會自我裝載。 使用 MSMQ 時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，該服務包含的程式碼會檢查佇列的存在，並在佇列不存在時建立佇列。 佇列名稱會從組態檔中讀取。  
   
 ```  
 public static void Main()  
@@ -116,14 +119,13 @@ public static void Main()
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中。  
   
 > [!NOTE]
->  佇列名稱會使用點 \(.\) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點位址會指定 msmq.formatname 配置，並使用 localhost 表示本機電腦。  在配置後面的是根據 MSMQ 格式名稱定址方針而正確格式化的佇列位址。  
+>  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點位址會指定 msmq.formatname 配置，並使用 localhost 表示本機電腦。 在配置後面的是根據 MSMQ 格式名稱定址方針而正確格式化的佇列位址。  
   
-```  
+```xml  
 <appSettings>  
     <!-- Use appSetting to configure the MSMQ queue name. -->  
     <add key="queueName" value=".\private$\Orders" />  
 </appSettings>  
-  
 ```  
   
 > [!NOTE]
@@ -160,31 +162,31 @@ Processing Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled  
 ```  
   
-### 若要安裝、建置及執行範例  
+### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  如果服務優先執行，它就會檢查以確定佇列存在。  如果佇列不存在，服務將建立一個佇列。  您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。  請依照下列步驟，在 Windows 2008 中建立佇列。  
+2.  如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。  
   
     1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中開啟伺服器管理員。  
   
-    2.  展開 \[**功能**\] 索引標籤。  
+    2.  展開**功能** 索引標籤。  
   
-    3.  以滑鼠右鍵按一下 \[**私用訊息佇列**\]，然後依序選取 \[**新增**\] 和 \[**私用佇列**\]。  
+    3.  以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。  
   
-    4.  核取 \[**可交易**\] 方塊。  
+    4.  請檢查**交易式**方塊。  
   
-    5.  輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。  
+    5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。  
   
-3.  若要建置方案的 C\# 或 Visual Basic .NET 版本，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4.  若要在單一或跨電腦的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-### 若要跨電腦執行範例  
+### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
-1.  將語言特定資料夾下 \\service\\bin\\ 資料夾中的服務程式檔複製到服務電腦中。  
+1.  將語言特定資料夾下 \service\bin\ 資料夾中的服務程式檔複製到服務電腦中。  
   
-2.  將語言特定資料夾下 \\client\\bin\\ 資料夾中的用戶端程式檔案複製到用戶端電腦。  
+2.  將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端電腦。  
   
 3.  在 Client.exe.config 檔案中，變更 orderQueueName 以取代 "." 指定服務電腦名稱。  
   
@@ -193,14 +195,14 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 5.  在用戶端電腦上，從命令提示字元啟動 Client.exe。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。  請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[適用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。  此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
-## 請參閱  
- [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)   
+## <a name="see-also"></a>另請參閱  
+ [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [訊息佇列](http://go.microsoft.com/fwlink/?LinkId=95143)

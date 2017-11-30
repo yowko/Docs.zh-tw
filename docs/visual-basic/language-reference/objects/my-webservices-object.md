@@ -1,67 +1,64 @@
 ---
-title: "My.WebServices Object | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "My.WebServices"
-  - "My.MyProject.WebServices"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.WebServices object"
+title: "My.WebServices 物件"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- My.WebServices
+- My.MyProject.WebServices
+helpviewer_keywords: My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a9f2c4017a1df8059f2cc57e7c30a96c474cfda0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# My.WebServices Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-提供屬性，這些屬性建立並存取目前專案參考之每個 XML Web Service 的單一執行個體。  
+# <a name="mywebservices-object"></a>My.WebServices 物件
+提供建立及存取目前的專案所參考的每個 XML Web 服務的單一執行個體的屬性。  
   
-## 備註  
- `My.WebServices` 物件會提供目前專案所參考之每個 Web 服務的執行個體。  每個執行個體都會視需要執行個體化。  您可以透過 `My.WebServices` 物件的屬性 \(Property\) 存取這些 Web 服務。  屬性名稱會與屬性所存取的 Web 服務名稱相同。  任何繼承自 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> 的類別 \(Class\) 都是 Web 服務。  如需將 Web 服務加入至專案的詳細資訊，請參閱 [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
+## <a name="remarks"></a>備註  
+ `My.WebServices` 物件會提供目前專案所參考之每個 Web 服務的執行個體。 每個執行個體都是依需要具現化。 您可以透過 `My.WebServices` 物件的屬性來存取這些 Web 服務。 屬性名稱和屬性存取的 Web 服務名稱相同。 任何繼承自 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> 的類別都是 Web 服務。 將 Web 服務加入專案的相關資訊，請參閱[存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
   
- `My.WebServices` 物件只會公開 \(Expose\) 與目前專案相關聯的 Web 服務。  它不會對在參考之 DLL 中宣告的 Web 服務提供存取權限。  若要存取 DLL 提供的 Web 服務，您必須使用 Web 服務的限定名稱 \(Qualified Name\)，格式為 *DllName*.*WebServiceName*。  如需詳細資訊，請參閱 [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
+ `My.WebServices`物件會公開只與目前的專案相關聯的 Web 服務。 它不會提供在被參考 Dll 中宣告的 Web 服務的存取權。 若要存取 DLL 所提供的 Web 服務，您必須在表單中使用 Web 服務中的限定的名稱*DllName*。*WebServiceName*。 如需詳細資訊，請參閱[存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
   
- Web 應用程式無法使用物件和它的屬性。  
+ 物件和其屬性不適用於 Web 應用程式。  
   
-## 屬性  
- `My.WebServices` 物件的每個屬性都會對目前專案所參考之 Web 服務的執行個體提供存取。  屬性名稱會與屬性所存取的 Web 服務名稱相同，而屬性型別會與 Web 服務型別相同。  
+## <a name="properties"></a>屬性  
+ 每一個屬性的`My.WebServices`物件提供存取目前的專案所參考的 Web 服務的執行個體。 名稱屬性的屬性存取，Web 服務的名稱相同，且屬性類型就是 Web 服務的型別相同。  
   
 > [!NOTE]
->  如果發生名稱衝突，存取 Web 服務的屬性名稱就是 *RootNamespace*\_*Namespace*\_*ServiceName*。  例如，假設有兩個名稱為 `Service1` 的 Web 服務。  如果其中一個服務位於根命名空間 `WindowsApplication1` 的命名空間 `Namespace1` 中，您可以使用 `My.WebServices.WindowsApplication1_Namespace1_Service1` 存取該服務。  
+>  如果沒有名稱衝突，存取 Web 服務的屬性名稱是*RootNamespace*_*命名空間*\_*ServiceName*。 例如，假設名為兩個 Web 服務`Service1`。 如果其中一個服務位於根命名空間`WindowsApplication1`和命名空間`Namespace1`，您會使用來存取該服務`My.WebServices.WindowsApplication1_Namespace1_Service1`。  
   
- 當您第一次存取其中一個 `My.WebServices` 物件的屬性時，會建立新的 Web 服務執行個體並儲存它。  該屬性後續的存取權限會傳回 Web 服務的該執行個體。  
+ 當您第一次存取其中一個`My.WebServices`物件的屬性，它會建立 Web 服務的新執行個體，並將它儲存。 後續存取該屬性會傳回該執行個體的 Web 服務。  
   
- 您可以藉由將 `Nothing` 指定給該 Web 服務的屬性來處置 Web 服務。  屬性 Setter 會將 `Nothing` 指定給儲存的值。  如果將 `Nothing` 以外的任何值指定給屬性，則 Setter 會擲回 <xref:System.ArgumentException> 例外狀況。  
+ 您可以藉由指派處置 Web 服務`Nothing`設為該 Web 服務的屬性。 屬性 setter 指派`Nothing`儲存值。 如果您指派以外的任何值`Nothing`於屬性 setter 會擲回<xref:System.ArgumentException>例外狀況。  
   
- 您可以使用 `Is` 或 `IsNot` 運算子，測試 `My.WebServices` 物件的屬性是否會儲存 Web 服務的執行個體。  也可以使用這些運算子，檢查屬性的值是否為 `Nothing`。  
+ 您可以測試是否屬性`My.WebServices`物件會使用儲存的 Web 服務執行個體`Is`或`IsNot`運算子。 您可以使用這些運算子來檢查屬性的值是否為`Nothing`。  
   
 > [!NOTE]
->  通常，`Is` 或 `IsNot` 運算子必須讀取屬性值，才能執行比較作業。  不過，如果屬性目前儲存 `Nothing`，則屬性會建立 Web 服務的新執行個體，然後傳回該執行個體。  然而，Visual Basic 編譯器會特別處理 `My.WebServices` 物件的屬性，並允許 `Is` 或 `IsNot` 運算子檢查屬性的狀態，但是不會變更屬性的值。  
+>  一般而言，`Is`或`IsNot`運算子具有讀取要比較之屬性的值。 不過，如果屬性目前儲存`Nothing`，屬性建立 Web 服務的新執行個體，然後傳回該執行個體。 不過，Visual Basic 編譯器會將屬性`My.WebServices`蓄意，物件，並可讓`Is`或`IsNot`運算子來檢查屬性狀態，而不會變更其值。  
   
-## 範例  
- 這個範例會呼叫 `TemperatureConverter` XML Web Service 的 `FahrenheitToCelsius` 方法，並傳回結果。  
+## <a name="example"></a>範例  
+ 這個範例會呼叫`FahrenheitToCelsius`方法`TemperatureConverter`XML Web 服務，並傳回結果。  
   
  [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
   
- 若要讓這個範例運作，您的專案必須參考名為 `Converter` 的 Web 服務，而且該 Web 服務必須公開 `ConvertTemperature` 方法。  如需詳細資訊，請參閱 [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
+ 要讓範例能夠運作，您的專案必須參考名為 Web 服務`Converter`，並且必須公開該 Web 服務`ConvertTemperature`方法。 如需詳細資訊，請參閱[存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
   
- 這個程式碼不會在 Web 應用程式專案中運作。  
+ 此程式碼無法運作的 Web 應用程式專案中。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 依專案類型的可用性  
+### <a name="availability-by-project-type"></a>專案類型的可用性  
   
-|||  
-|-|-|  
-|專案類型|是否可用|  
+|專案類型|可用|  
+|---|---|  
 |Windows 應用程式|**是**|  
 |類別庫|**是**|  
 |主控台應用程式|**是**|  
@@ -70,7 +67,7 @@ caps.handback.revision: 17
 |Windows 服務|**是**|  
 |網站|否|  
   
-## 請參閱  
- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>   
- <xref:System.ArgumentException>   
- [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>  
+ <xref:System.ArgumentException>  
+ [存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

@@ -1,54 +1,69 @@
 ---
-title: "Byte Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Byte"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Byte data type"
-  - "data types [Visual Basic], assigning"
+title: "Byte 資料類型 (Visual Basic)"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Byte
+helpviewer_keywords:
+- Byte data type
+- data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 6475ff3ed905abb022a9ef60204c04b45130ae22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Byte Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="byte-data-type-visual-basic"></a>Byte 資料類型 (Visual Basic)
+保留範圍從 0 到 255 的不帶正負號的 8 位元 （1 個位元組） 整數。
 
-存放不帶正負號的 8 位元 \(1 位元組\) 整數，範圍從 0 到 255。  
+## <a name="remarks"></a>備註
+
+使用`Byte`包含二進位資料的資料類型。  
   
-## 備註  
- 使用 `Byte` 資料型別來包含二進位資料。  
+`Byte` 的預設值為 0。
+
+## <a name="literal-assignments"></a>常值的指派
+
+您可以宣告和初始化`Byte`變數將其指派十進位常值、 十六進位常值、 八進位常值，或是 （從開始使用 Visual Basic 2017） 二進位常值。 如果整數常值超出範圍`Byte`(亦即，如果是小於<xref:System.Byte.MinValue?displayProperty=nameWithType>或大於<xref:System.Byte.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
+
+在下列範例中，整數等於會以十進位、 十六進位表示的 201 和二進位常值會隱含地轉換從[整數](integer-data-type.md)至`byte`值。
+
+[!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Byte)]
+
+> [!NOTE]
+> 使用前置詞`&h`或`&H`來表示十六進位常值前置詞`&b`或`&B`代表二進位常值，以及前置詞`&o`或`&O`代表八進位常值。 十進位常值沒有前置詞。
+
+從 Visual Basic 2017 開始，您也可以使用底線字元， `_`，當做數字分隔符號，以提升可讀性，如下列範例所示。
+
+[!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
+
+## <a name="programming-tips"></a>程式設計提示
+
+-   **負的數字。** 因為`Byte`是不帶正負號的類型，它無法表示為負數。 如果您使用一元減號 (`-`) 運算子的運算式評估為輸入`Byte`，Visual Basic 會將轉換的運算式`Short`第一次。
   
- `Byte` 的預設值為 0。  
+-   **格式轉換。** 當 Visual Basic 中讀取或寫入檔案，或其所呼叫的 Dll、 方法和屬性，它可以自動資料格式之間進行轉換。 二進位資料儲存在`Byte`格式轉換期間會保留變數和陣列。 您不應該使用`String`變數對於二進位資料，因為它的內容可以 ANSI 和 Unicode 格式之間轉換期間已損毀。
+
+-   **擴展。** `Byte`資料類型可擴展成`Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，或`Double`。 這表示您可以將轉換`Byte`而不會發生這些類型的任何<xref:System.OverflowException?displayProperty=nameWithType>錯誤。
   
-## 程式設計提示  
-  
--   **負數：** 由於 `Byte` 是不帶正負號的型別，故無法代表負數。  如果您在評估為 `Byte` 型別的運算式中使用一元 \(Unary\) 減號 \(`-`\) 運算子，則 Visual Basic 會先將運算式轉換為 `Short`。  
-  
--   **格式轉換** ：當 Visual Basic 讀取或寫入檔案，或呼叫 DLL、方法和屬性時，它可以在資料格式之間自動轉換。  儲存在 `Byte` 變數及陣列的二進位資料會在格式轉換時保留。  二進位資料不應使用 `String` 變數，因為資料內容可能會在 ANSI 和 Unicode 格式之間轉換時損毀。  
-  
--   **擴展：** `Byte` 資料型別可擴展至 `Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single` 或 `Double`。  這表示您可以將 `Byte` 轉換成這些類型的任何一項，而不會發生 <xref:System.OverflowException?displayProperty=fullName> 錯誤。  
-  
--   **型別字元**：`Byte` 沒有常值型別字元或識別項型別字元。  
-  
--   **架構型別。** 在 .NET Framework 中對應的型別為 <xref:System.Byte?displayProperty=fullName> 結構。  
-  
-## 範例  
- 下列範例中的 `b` 是 `Byte` 變數：  陳述式會說明變數的範圍，以及應用的位元移位運算子。  
-  
- [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
-  
-## 請參閱  
- <xref:System.Byte?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   **類型字元。** `Byte`沒有任何常值類型字元或識別項類型字元。
+
+-   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Byte?displayProperty=nameWithType> 結構。
+
+## <a name="example"></a>範例
+
+ 在下列範例中，`b`是`Byte`變數。 陳述式示範變數的範圍，並將位元移位運算子的應用程式。
+
+[!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
+
+## <a name="see-also"></a>另請參閱
+
+ <xref:System.Byte?displayProperty=nameWithType>  
+ [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

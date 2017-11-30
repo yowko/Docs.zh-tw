@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - time-based cache policies
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f462c55919025b92014a99d73b9a6b779465f98e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ae864b5f22f469d9a60b9faba90a5a66c65e8172
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>如何：為應用程式設定以時間為基礎的預設快取原則
 以時間為基礎的預設快取原則，可讓應用程式擁有與快取資源一起傳送之標頭所定義的快取行為，以及 RFC 2616 的第 13 節與第 14 節中定義的快取行為 (可從 [http://www.ietf.org](http://www.ietf.org/) 取得)。這是適用於大部分應用程式的快取行為。  
@@ -75,9 +72,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [快取原則](../../../docs/framework/network-programming/cache-policy.md)   
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
+ [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

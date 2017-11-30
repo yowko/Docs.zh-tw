@@ -1,40 +1,46 @@
 ---
-title: "HOW TO：建立安全性權杖服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聯合"
-  - "WCF, 聯合"
+title: "HOW TO：建立安全性權杖服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, federation
+- federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-caps.latest.revision: 12
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: bfb1acc5c1c665ebd410b0a49e8f357e5b9458f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：建立安全性權杖服務
-安全性權杖服務實作於 WS\-Trust 規格定義的通訊協定。此通訊協定定義用來核發、更新、取消及驗證安全性權杖的訊息格式以及訊息交換模式。指定的安全性權杖服務提供一個或一個以上的這些功能。此主題檢視最常見的狀況：實作權杖核發。  
+# <a name="how-to-create-a-security-token-service"></a>HOW TO：建立安全性權杖服務
+安全性權杖服務實作於 WS-Trust 規格定義的通訊協定。 此通訊協定定義用來核發、更新、取消及驗證安全性權杖的訊息格式以及訊息交換模式。 指定的安全性權杖服務提供一個或一個以上的這些功能。 此主題檢視最常見的狀況：實作權杖核發。  
   
-## 核發權杖  
- WS\-Trust 根據 `RequestSecurityToken` XML Schema 定義語言 \(XSD\) 結構描述項目以及執行權杖核發的 `RequestSecurityTokenResponse` XSD 結構描述項目，定義訊息的格式。除此之外，它還定義關聯的動作統一資源識別源 \(URI\)。與 `RequestSecurityToken` 訊息關聯的動作 URI 為 http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Issue。與 `RequestSecurityTokenResponse` 訊息關聯的動作 URI 為 http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Issue。  
+## <a name="issuing-tokens"></a>核發權杖  
+ WS-Trust 根據 `RequestSecurityToken` XML Schema 定義語言 (XSD) 結構描述項目以及執行權杖核發的 `RequestSecurityTokenResponse` XSD 結構描述項目，定義訊息的格式。 除此之外，它還定義關聯的動作統一資源識別源 (URI)。 與 `RequestSecurityToken` 訊息關聯的動作 URI 為 http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue。 與 `RequestSecurityTokenResponse` 訊息關聯的動作 URI 為 http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue。  
   
-### 要求訊息結構  
+### <a name="request-message-structure"></a>要求訊息結構  
  發出要求訊息結構通常包括下列項目：  
   
--   值為 http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/Issue 的要求型別 URI。  
+-   值為 http://schemas.xmlsoap.org/ws/2005/02/trust/Issue 的要求型別 URI。  
   
--   語彙基元型別 URI。對安全性聲明標記語言 \(Security Assertion Markup Language，SAML\) 1.1 的權杖而言，此 URI 的值為 http:\/\/docs.oasis\-open.org\/wss\/oasis\-wss\-saml\-token\-profile\-1.1\#SAMLV1.1。  
+-   語彙基元型別 URI。 對安全性聲明標記語言 (Security Assertion Markup Language，SAML) 1.1 的權杖而言，此 URI 的值為 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1。  
   
 -   此金鑰大小值表示關聯於核發之權杖的金鑰位元數。  
   
--   金鑰型別 URI。對稱金鑰的 URI 值為 http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/SymmetricKey。  
+-   金鑰型別 URI。 對稱金鑰的 URI 值為 http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey。  
   
  此外，也許存在一些其他項目：  
   
@@ -42,16 +48,16 @@ caps.handback.revision: 12
   
 -   表示將使用已發行權杖之目標服務的範圍資訊。  
   
- 安全性權杖服務在建構發出回應 \(Issue Response\) 訊息時，使用發出要求訊息內的資訊。  
+ 安全性權杖服務在建構發出回應 (Issue Response) 訊息時，使用發出要求訊息內的資訊。  
   
-## 回應訊息結構  
+## <a name="response-message-structure"></a>回應訊息結構  
  發出回應訊息結構通常包括下列項目：  
   
 -   例如，核發的安全性權杖為 SAML 1.1 判斷提示。  
   
--   與安全性權杖相關聯的證明權杖。就對稱金鑰而言，這經常是金鑰資料的加密格式。  
+-   與安全性權杖相關聯的證明權杖。 就對稱金鑰而言，這經常是金鑰資料的加密格式。  
   
--   核發的安全性權杖的參照。一般而言，安全性權杖服務會於已核發權杖出現於用戶端發出的後續訊息時，傳回可使用的參照，以及另一個當後續訊息無權杖時可使用的參照。  
+-   核發的安全性權杖的參照。 一般而言，安全性權杖服務會於已核發權杖出現於用戶端發出的後續訊息時，傳回可使用的參照，以及另一個當後續訊息無權杖時可使用的參照。  
   
  此外，也許存在一些其他項目：  
   
@@ -61,8 +67,8 @@ caps.handback.revision: 12
   
 -   核發權杖的存留期資訊。  
   
-## 處理要求訊息  
- 安全性權杖服務檢查各個要求訊息以處理核發要求，並且確保能核發滿足要求的權杖。在建構要核發的權杖前，安全性權杖服務必須決定下列項目：  
+## <a name="processing-request-messages"></a>處理要求訊息  
+ 安全性權杖服務檢查各個要求訊息以處理核發要求，並且確保能核發滿足要求的權杖。 在建構要核發的權杖前，安全性權杖服務必須決定下列項目：  
   
 -   所謂要求其實是核發權杖的要求。  
   
@@ -72,9 +78,9 @@ caps.handback.revision: 12
   
 -   安全性權杖服務可滿足要求者對金鑰資料的期望。  
   
- 建構權杖的兩個重要部分為決定要使用什麼金鑰簽署權杖，以及共用金鑰要用什麼金鑰加密。權杖需要簽署，這樣當用戶端對目標服務提出權杖時，該服務才能判斷此權杖是否為自己信賴之安全性權杖服務所核發的權杖。金鑰資料需要以目標服務能解密金鑰資料的方式進行加密。  
+ 建構權杖的兩個重要部分為決定要使用什麼金鑰簽署權杖，以及共用金鑰要用什麼金鑰加密。 權杖需要簽署，這樣當用戶端對目標服務提出權杖時，該服務才能判斷此權杖是否為自己信賴之安全性權杖服務所核發的權杖。 金鑰資料需要以目標服務能解密金鑰資料的方式進行加密。  
   
- 簽署 SAML 判斷提示包括建立 <xref:System.IdentityModel.Tokens.SigningCredentials> 執行個體。此類別的建構函式接受下列項目：  
+ 簽署 SAML 判斷提示包括建立 <xref:System.IdentityModel.Tokens.SigningCredentials> 執行個體。 此類別的建構函式接受下列項目：  
   
 -   <xref:System.IdentityModel.Tokens.SecurityKey> 用於金鑰簽署 SAML 判斷提示。  
   
@@ -87,7 +93,7 @@ caps.handback.revision: 12
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  
   
- 加密共用金鑰包含將金鑰資料以金鑰加密，目標服務能使用此金鑰解密共用金鑰。一般而言，會使用目標服務的公開金鑰。  
+ 加密共用金鑰包含將金鑰資料以金鑰加密，目標服務能使用此金鑰解密共用金鑰。 一般而言，會使用目標服務的公開金鑰。  
   
  [!code-csharp[c_CreateSTS#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#2)]
  [!code-vb[c_CreateSTS#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#2)]  
@@ -102,10 +108,10 @@ caps.handback.revision: 12
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
-## 建立回應訊息  
- 一旦安全性權杖服務處理發出的要求，並且建構出要核發之權杖以及證明金鑰後，就需要建構回應訊息，至少包括要求的權杖、證明權杖以及核發的權杖參照。此核發的權杖一般而言是 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 自 <xref:System.IdentityModel.Tokens.SamlAssertion> 所建造，如以下範例所示。  
+## <a name="creating-response-messages"></a>建立回應訊息  
+ 一旦安全性權杖服務處理發出的要求，並且建構出要核發之權杖以及證明金鑰後，就需要建構回應訊息，至少包括要求的權杖、證明權杖以及核發的權杖參照。 此核發的權杖一般而言是 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 自 <xref:System.IdentityModel.Tokens.SamlAssertion>所建造，如以下範例所示。  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
  [!code-vb[c_CreateSTS#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#5)]  
@@ -115,7 +121,7 @@ caps.handback.revision: 12
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 關於如何在用戶端與安全性權杖服務都提供共用金鑰的金鑰資料時，如何建構證明權杖的資訊，請參閱 [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何建構證明權杖，用戶端與安全性權杖服務同時時提供的共用金鑰的金鑰資料，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
  核發的權杖參照以建立 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> 類別執行個體而建構。  
   
@@ -124,15 +130,15 @@ caps.handback.revision: 12
   
  然後將這些不同的值序列化成回應訊息傳回用戶端。  
   
-## 範例  
- 如需有關安全性權杖服務的完整程式碼，請參閱 [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+## <a name="example"></a>範例  
+ 如需安全性權杖服務的完整程式碼，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
-## 請參閱  
- <xref:System.IdentityModel.Tokens.SigningCredentials>   
- <xref:System.IdentityModel.Tokens.SecurityKey>   
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>   
- <xref:System.IdentityModel.Tokens.SamlSecurityToken>   
- <xref:System.IdentityModel.Tokens.SamlAssertion>   
- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>   
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.IdentityModel.Tokens.SigningCredentials>  
+ <xref:System.IdentityModel.Tokens.SecurityKey>  
+ <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>  
+ <xref:System.IdentityModel.Tokens.SamlAssertion>  
+ <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>  
+ <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>  
  [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)

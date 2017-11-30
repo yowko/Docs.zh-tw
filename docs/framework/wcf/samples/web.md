@@ -1,33 +1,36 @@
 ---
-title: "Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Web
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3e7ddb3d56c707d1e7a6a9804e730c317ec4bf08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Web
+# <a name="web"></a>Web
 本節包含 Web 裝載的範例。  
   
-## 在本節中  
- [進階格式選取](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
+## <a name="in-this-section"></a>本章節內容  
+ [進階的格式選取](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
  示範如何擴充 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型，以支援新的傳出回應格式。  
   
  [自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- 示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型啟用自動格式選取 \(XML 或 JSON\)，以及如何明確設定作業碼中的格式。  
+ 示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型啟用自動格式選取 (XML 或 JSON)，以及如何明確設定作業碼中的格式。  
   
  [基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)  
- 示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型實作 HTTP、RPC 的服務，也就是一般所謂的 "POX" \(Plain Old XML\) 服務。  
+ 示範如何實作 HTTP、 RPC 服務，也就是一般所謂的"Pox"(Plain Old XML) 服務使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Web HTTP 程式設計模型。  
   
  [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)  
  示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型實作 HTTP 的服務，此模型會公開一組支援擷取、加入、刪除和取代作業的客戶。  
@@ -38,8 +41,8 @@ caps.handback.revision: 4
  [條件式 Get 和 Put](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
  示範如何針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型使用新的條件式擷取和更新 API。  
   
- [SOAP 及 HTTP 端點](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
- 示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型實作 RPC 服務，並且在 SOAP 格式和 "Plain Old XML" \(POX\) 格式中公開該服務。  
+ [SOAP 和 HTTP 端點](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
+ 示範如何實作以 RPC 為基礎的服務，並將它公開在 SOAP 格式和"Plain Old XML"(POX) 格式使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Web HTTP 程式設計模型。  
   
  [ASP.NET 快取整合](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
  示範如何使用 ASP.NET 輸出快取搭配 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型。  

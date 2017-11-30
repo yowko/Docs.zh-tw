@@ -1,68 +1,71 @@
 ---
-title: "x:ClassModifier Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xClassModifier"
-  - "x:ClassModifier"
-  - "ClassModifier"
-helpviewer_keywords: 
-  - "XAML [XAML Services], x:ClassModifier attribute"
-  - "x:ClassModifier attribute [XAML Services]"
-  - "ClassModifier attribute in XAML [XAML Services]"
+title: "x:ClassModifier 指示詞"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xClassModifier
+- x:ClassModifier
+- ClassModifier
+helpviewer_keywords:
+- XAML [XAML Services], x:ClassModifier attribute
+- x:ClassModifier attribute [XAML Services]
+- ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-caps.latest.revision: 22
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 111c4a6ed78a908ae3b171dc9349a3c9b81750de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# x:ClassModifier Directive
-修改同時提供 `x:Class` 時的 XAML 編譯行為。  具體而言，不建立部分 `class` \(具有`Public`存取級別 （預設值）\)，而是以 `NotPublic` 存取級別建立提供的 `x:Class`。  這個行為影響產生組件中的類別存取層級。  
+# <a name="xclassmodifier-directive"></a>x:ClassModifier 指示詞
+修改 XAML 編譯行為時`x:Class`也會提供。 具體來說，而不是建立在部分`class`具有`Public`存取層級 （預設值），提供`x:Class`會透過`NotPublic`存取層級。 這個行為會影響產生的組件中的類別的存取層級。  
   
-## XAML Attribute Usage  
+## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
 ```  
-<object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
+<object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
    ...  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|*NotPublic*|依據使用的程式碼後置程式設計語言而定，用於指定 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 與 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 的確切傳遞字串都會有所不同。  請參閱＜備註＞。|  
+|*NotPublic*|要傳遞至指定的完整字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>與<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>會有所差異，視您使用的程式碼後置程式語言而定。 請參閱＜備註＞。|  
   
-## 相依性  
- 在相同項目上也必須提供 [x:Class](../../../docs/framework/xaml-services/x-class-directive.md)，而且該項目必須是頁面的根項目。  如需詳細資訊，請參閱 [\[MS\-XAML\] 4.3.1.8 章](http://go.microsoft.com/fwlink/?LinkId=114525) \(英文\)。  
+## <a name="dependencies"></a>相依性  
+ [X:class](../../../docs/framework/xaml-services/x-class-directive.md)也必須提供在相同的項目，該項目必須是在網頁中的根項目。 如需詳細資訊，請參閱[ \[MS-XAML\]區段 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
-## 備註  
- .NET Framework XAML 服務使用方式中的 `x:ClassModifier` 值會隨程式設計語言而改變。  每個語言實作其 <xref:System.CodeDom.Compiler.CodeDomProvider> 的方式、它所傳回用來定義 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 和 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 意義的型別轉換子，以及該語言是否區分大小寫，都會決定所要使用的字串。  
+## <a name="remarks"></a>備註  
+ 值`x:ClassModifier`在.NET Framework XAML 服務使用方式會因程式語言。 要使用的字串取決於各種語言的實作方式其<xref:System.CodeDom.Compiler.CodeDomProvider>和類型轉換器，它會傳回定義意義<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及該語言是否區分大小寫。  
   
--   對於 [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)]，用於指定 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 的傳遞字串是 `internal`。  
+-   如[!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)]，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`internal`。  
   
--   對於 [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]，用於指定 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 的傳遞字串是 `Friend`。  
+-   如[!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`Friend`。  
   
--   針對 [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，沒有支援編譯 XAML 的目標存在；因此未指定要傳遞的值。  
+-   如[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，任何目標存在編譯 XAML 支援，因此，要傳遞的值未指定。  
   
- 您也可以指定 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> \([!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)] 中的 `public`、[!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)] 中的 `Public`\)，但是指定 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 並不常見，因為 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 已經是預設的行為。  
+ 您也可以指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public`中[!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)]，`Public`中[!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]); 不過，指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>不常是因為<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>已經是預設行為。  
   
- 其他具有對等使用者程式碼存取層級限制 \(例如，[!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)] 中的 `private`\) 與 `x:ClassModifier` 並不相關，因為 XAML 中並不支援巢狀類別參考，因此 <xref:System.Reflection.TypeAttributes?displayProperty=fullName> 修飾詞具有相同的作用。  
+ 其他值，與對等的使用者程式碼存取層級的限制，例如`private`中[!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)]，不相關的`x:ClassModifier`因為在 XAML 中，不支援巢狀的類別的參考，因此，<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>修飾詞具有相同的效果。  
   
-## 安全性提示  
- 在 `x:ClassModifier` 中所宣告的存取層級，依然取決於特定架構的解譯及其功能。  如果是透過 pack URI 從 WPF 資源參考該類別，WPF 就包括載入和執行個體化其 `x:ClassModifier` 為 `internal` 之型別的能力。  因為此情況與其他框架實作之相似情況的緣故，請勿僅只依靠 `x:ClassModifier` 來封鎖所有可能的執行個體化嘗試。  
+## <a name="security-notes"></a>安全性注意事項  
+ 中所宣告的存取層級`x:ClassModifier`仍受限於特定架構和其功能所解譯。 WPF 包含的功能，以載入和執行個體化類型其中`x:ClassModifier`是`internal`，如果該類別從 WPF 資源透過 URI 參考的組件參考。 由於此情況下，可能會類似其他架構所實作的其他人，不能以獨佔方式在`x:ClassModifier`封鎖所有可能的具現化嘗試。  
   
-## 請參閱  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [WPF 中的程式碼後置和 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
- [x:FieldModifier Directive](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)   
- [安全性 \(WPF\)](../../../ocs/framework/wpf/security-wpf.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>另請參閱  
+ [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [WPF 中的程式碼後置和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [x:FieldModifier 指示詞](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
+ [安全性 (WPF)](../../../docs/framework/wpf/security-wpf.md)  
+ [從 WPF 移轉至 System.Xaml 的類型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

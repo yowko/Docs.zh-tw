@@ -1,26 +1,25 @@
 ---
-title: "WCF Web HTTP 格式化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF Web HTTP 格式化"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3a41c6c7304234535993d83329c4faa464218e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WCF Web HTTP 格式化
-WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所使用的最佳格式。  兩種可用來判斷最適合格式的方法分別為：自動和明確。  
+# <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式化
+WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所使用的最佳格式。 兩種可用來判斷最適合格式的方法分別為：自動和明確。  
   
-## 自動格式化  
- 啟用時，自動格式化會選擇傳回回應所使用的最佳格式。  此方法會透過依序檢查下列各項來判斷最佳格式：  
+## <a name="automatic-formatting"></a>自動格式化  
+ 啟用時，自動格式化會選擇傳回回應所使用的最佳格式。 此方法會透過依序檢查下列各項來判斷最佳格式：  
   
 1.  要求訊息之 Accept 標頭中的媒體類型。  
   
@@ -30,9 +29,9 @@ WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所�
   
 4.  WebHttpBehavior 中的預設格式設定。  
   
- 如果要求訊息包含 Accept 標頭，則 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基礎結構會搜尋它支援的類型。  如果 `Accept` 標頭指定其媒體類型的優先權，則會遵循優先權。  如果 `Accept` 標頭中找不到適合的格式，則會使用要求訊息的內容類型。  如果未指定適合的內容類型，則會使用作業的預設格式設定。  預設格式會使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 屬性的 `ResponseFormat` 參數設定。  如果作業上未指定預設格式，則會使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 屬性的值。  自動格式化會仰賴 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 屬性。  當此屬性設定為 `true` 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構會判斷要使用的最佳格式。  為了提供回溯相容性，自動格式選取預設為停用。  自動格式選取可以透過程式設計方式或透過組態啟用。  下列範例顯示如何在程式碼中啟用自動格式選取。  
+ 如果要求訊息包含 Accept 標頭，則 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基礎結構會搜尋它支援的類型。 如果 `Accept` 標頭指定其媒體類型的優先權，則會遵循優先權。 如果 `Accept` 標頭中找不到適合的格式，則會使用要求訊息的內容類型。 如果未指定適合的內容類型，則會使用作業的預設格式設定。 預設格式會使用 `ResponseFormat` 和 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性的 <xref:System.ServiceModel.Web.WebInvokeAttribute> 參數設定。 如果作業上未指定預設格式，則會使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 屬性的值。 自動格式化會仰賴 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 屬性。 當此屬性設定為 `true` 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構會判斷要使用的最佳格式。 為了提供回溯相容性，自動格式選取預設為停用。 自動格式選取可以透過程式設計方式或透過組態啟用。 下列範例顯示如何在程式碼中啟用自動格式選取。  
   
-```  
+```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     
 Uri baseAddress = new Uri("http://localhost:8000");  
   
@@ -60,14 +59,13 @@ try
 }  
   catch(CommunicationException ex)  
   {  
-     Console.WriteLine(“An exception occurred: “ + ex.Message());  
+     Console.WriteLine("An exception occurred: " + ex.Message());  
   }  
-  
 ```  
   
- 自動格式化也可以透過組態啟用。  您可以直接在 <xref:System.ServiceModel.Description.WebHttpBehavior> 上設定 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 屬性，或是使用 <xref:System.ServiceModel.Description.WebHttpEndpoint>。  下列範例示範如何在 <xref:System.ServiceModel.Description.WebHttpBehavior> 上啟用自動格式選取。  
+ 自動格式化也可以透過組態啟用。 您可以直接在 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 上設定 <xref:System.ServiceModel.Description.WebHttpBehavior> 屬性，或是使用 <xref:System.ServiceModel.Description.WebHttpEndpoint>。 下列範例示範如何在 <xref:System.ServiceModel.Description.WebHttpBehavior> 上啟用自動格式選取。  
   
-```  
+```xml  
 <system.serviceModel>  
   <behaviors>  
     <endpointBehaviors>  
@@ -87,7 +85,7 @@ try
   
  下列範例顯示如何使用 <xref:System.ServiceModel.Description.WebHttpEndpoint> 啟用自動格式選取。  
   
-```  
+```xml  
 <system.serviceModel>  
     <standardEndpoints>  
       <webHttpEndpoint>  
@@ -98,12 +96,12 @@ try
   </system.serviceModel>  
 ```  
   
-## 明確格式化  
- 明確格式化如其名稱所指，可讓開發人員決定要在作業程式碼內使用的最佳格式。  如果最佳格式為 XML 或 JSON，則開發人員會將 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 設定為 <xref:System.ServiceModel.Web.WebMessageFormat> 或 <xref:System.ServiceModel.Web.WebMessageFormat>。  如果未明確設定 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 屬性，則會使用作業的預設格式。  
+## <a name="explicit-formatting"></a>明確格式化  
+ 明確格式化如其名稱所指，可讓開發人員決定要在作業程式碼內使用的最佳格式。 如果最佳格式為 XML 或 JSON，則開發人員會將 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 設定為 <xref:System.ServiceModel.Web.WebMessageFormat.Xml> 或 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。 如果未明確設定 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 屬性，則會使用作業的預設格式。  
   
- 下列範例會檢查格式查詢字串參數，找出要使用的格式。  如果已指定，則該參數會使用 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 設定作業的格式。  
+ 下列範例會檢查格式查詢字串參數，找出要使用的格式。 如果已指定，則該參數會使用 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 設定作業的格式。  
   
-```  
+```csharp
 public class Service : IService  
 {  
     [WebGet]  
@@ -131,7 +129,7 @@ public class Service : IService
     }  
 ```  
   
- 如果您需要支援 XML 或 JSON 以外的格式，請定義讓作業使用傳回型別 <xref:System.ServiceModel.Channels.Message>。  請在作業程式碼內決定要使用的適當格式，然後使用下列其中一個方法建立 <xref:System.ServiceModel.Channels.Message> 物件：  
+ 如果您需要支援 XML 或 JSON 以外的格式，請定義讓作業使用傳回型別 <xref:System.ServiceModel.Channels.Message>。 請在作業程式碼內決定要使用的適當格式，然後使用下列其中一個方法建立 <xref:System.ServiceModel.Channels.Message> 物件：  
   
 -   `WebOperationContext.CreateAtom10Response`  
   
@@ -143,10 +141,9 @@ public class Service : IService
   
 -   `WebOperationContext.CreateXmlResponse`  
   
- 每個方法都會以適當的格式取得內容並且建立訊息。  `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` 方法可用來取得用戶端慣用的格式清單，並依照由高到低的順序排列偏好設定。  下列程式碼顯示如何使用 `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` 決定要使用的格式，然後使用適當的建立回應方法建立回應訊息。  
+ 每個方法都會以適當的格式取得內容並且建立訊息。 `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` 方法可用來取得用戶端慣用的格式清單，並依照由高到低的順序排列偏好設定。 下列程式碼顯示如何使用 `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` 決定要使用的格式，然後使用適當的建立回應方法建立回應訊息。  
   
-```  
-  
+```csharp
 public class Service : IService  
 {  
     public Message EchoListWithGet(string list)  
@@ -170,13 +167,12 @@ public class Service : IService
     return CreateXmlResponse(returnList);  
     }  
 }  
-  
 ```  
   
-## 請參閱  
- <xref:System.UriTemplate>   
- <xref:System.UriTemplateMatch>   
- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)   
- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)   
+## <a name="see-also"></a>請參閱  
+ <xref:System.UriTemplate>  
+ <xref:System.UriTemplateMatch>  
+ [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

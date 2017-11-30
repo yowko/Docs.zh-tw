@@ -5,30 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, default
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4fad3c0021c14d11cd88a209c7a56cdb58e75fe6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7fe48904a59751da3f4089153b32ac68cc6f4b6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫端是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -87,7 +83,7 @@ BSTR MethodOne (BSTR b) {
   
 -   若為平台叫用，委派預設會封送處理為 Unmanaged 函式指標。  
   
--   若為 COM Interop，委派預設會封送處理為 **_Delegate** 類型的 COM 介面。 **_Delegate** 介面是在 Mscorlib.tlb 型別程式庫中定義，並且包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName> 方法，可讓您呼叫委派所參考的方法。  
+-   若為 COM Interop，委派預設會封送處理為 **_Delegate** 類型的 COM 介面。 **_Delegate** 介面是在 Mscorlib.tlb 型別程式庫中定義，並且包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 方法，可讓您呼叫委派所參考的方法。  
   
  下表顯示 Managed 委派資料類型的封送處理選項。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理委派。  
   
@@ -365,34 +361,34 @@ interface _Graphics {
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>系統實值類型  
- <xref:System> 命名空間具有數個實值類型，代表執行階段基本類型的 Boxed 格式。 例如，實值型別 <xref:System.Int32?displayProperty=fullName> 結構代表 **ELEMENT_TYPE_I4** 的 Boxed 格式。 如同其他格式化類型，封送處理這些類型的方式與這些類型 Box 處理基本類型的方式相同，而不是將其封送處理為結構。 因此會將 **System.Int32** 封送處理為 **ELEMENT_TYPE_I4**，而不是封送處理為包含 **long** 類型之單一成員的結構。 下表包含 **System** 命名空間中的實值型別清單，這些類型是基本類型的 Boxed 表示。  
+ <xref:System> 命名空間具有數個實值類型，代表執行階段基本類型的 Boxed 格式。 例如，實值型別 <xref:System.Int32?displayProperty=nameWithType> 結構代表 **ELEMENT_TYPE_I4** 的 Boxed 格式。 如同其他格式化類型，封送處理這些類型的方式與這些類型 Box 處理基本類型的方式相同，而不是將其封送處理為結構。 因此會將 **System.Int32** 封送處理為 **ELEMENT_TYPE_I4**，而不是封送處理為包含 **long** 類型之單一成員的結構。 下表包含 **System** 命名空間中的實值型別清單，這些類型是基本類型的 Boxed 表示。  
   
 |系統實值類型|項目類型|  
 |-----------------------|------------------|  
-|<xref:System.Boolean?displayProperty=fullName>|**ELEMENT_TYPE_BOOLEAN**|  
-|<xref:System.SByte?displayProperty=fullName>|**ELEMENT_TYPE_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**ELEMENT_TYPE_UI1**|  
-|<xref:System.Char?displayProperty=fullName>|**ELEMENT_TYPE_CHAR**|  
-|<xref:System.Int16?displayProperty=fullName>|**ELEMENT_TYPE_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**ELEMENT_TYPE_U2**|  
-|<xref:System.Int32?displayProperty=fullName>|**ELEMENT_TYPE_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**ELEMENT_TYPE_U4**|  
-|<xref:System.Int64?displayProperty=fullName>|**ELEMENT_TYPE_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**ELEMENT_TYPE_U8**|  
-|<xref:System.Single?displayProperty=fullName>|**ELEMENT_TYPE_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**ELEMENT_TYPE_R8**|  
-|<xref:System.String?displayProperty=fullName>|**ELEMENT_TYPE_STRING**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**ELEMENT_TYPE_I**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**ELEMENT_TYPE_U**|  
+|<xref:System.Boolean?displayProperty=nameWithType>|**ELEMENT_TYPE_BOOLEAN**|  
+|<xref:System.SByte?displayProperty=nameWithType>|**ELEMENT_TYPE_I1**|  
+|<xref:System.Byte?displayProperty=nameWithType>|**ELEMENT_TYPE_UI1**|  
+|<xref:System.Char?displayProperty=nameWithType>|**ELEMENT_TYPE_CHAR**|  
+|<xref:System.Int16?displayProperty=nameWithType>|**ELEMENT_TYPE_I2**|  
+|<xref:System.UInt16?displayProperty=nameWithType>|**ELEMENT_TYPE_U2**|  
+|<xref:System.Int32?displayProperty=nameWithType>|**ELEMENT_TYPE_I4**|  
+|<xref:System.UInt32?displayProperty=nameWithType>|**ELEMENT_TYPE_U4**|  
+|<xref:System.Int64?displayProperty=nameWithType>|**ELEMENT_TYPE_I8**|  
+|<xref:System.UInt64?displayProperty=nameWithType>|**ELEMENT_TYPE_U8**|  
+|<xref:System.Single?displayProperty=nameWithType>|**ELEMENT_TYPE_R4**|  
+|<xref:System.Double?displayProperty=nameWithType>|**ELEMENT_TYPE_R8**|  
+|<xref:System.String?displayProperty=nameWithType>|**ELEMENT_TYPE_STRING**|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|**ELEMENT_TYPE_I**|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|**ELEMENT_TYPE_U**|  
   
  **System** 命名空間中的其他一些實值型別會以不同方式處理。 由於 Unmanaged 程式碼已經有這些類型的確立格式，因此封送處理器針對這些類型有特殊的封送處理方式。 下表列出 **System** 命名空間中的特殊實值型別，以及要封送處理的目標 Unmanaged 類型。  
   
 |系統實值類型|IDL 類型|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=fullName>|**DATE**|  
-|<xref:System.Decimal?displayProperty=fullName>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=fullName>|**GUID**|  
-|<xref:System.Drawing.Color?displayProperty=fullName>|**OLE_COLOR**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  下列程式碼示範 Stdole2 型別程式庫中 Unmanaged 類型 **DATE**、**GUID**、**DECIMAL** 和 **OLE_COLOR** 的定義。  
   
@@ -451,9 +447,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [複製和固定](../../../docs/framework/interop/copying-and-pinning.md)   
- [陣列的預設封送處理](../../../docs/framework/interop/default-marshaling-for-arrays.md)   
- [物件的預設封送處理](../../../docs/framework/interop/default-marshaling-for-objects.md)   
+ [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [複製和 Pin](../../../docs/framework/interop/copying-and-pinning.md)  
+ [陣列的預設封送處理](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
+ [物件的預設封送處理](../../../docs/framework/interop/default-marshaling-for-objects.md)  
  [字串的預設封送處理](../../../docs/framework/interop/default-marshaling-for-strings.md)
-

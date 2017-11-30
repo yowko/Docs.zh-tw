@@ -1,33 +1,40 @@
 ---
-title: "如何：列舉列印佇列的子集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列舉, 列印佇列的子集"
-  - "列印佇列, 列舉子集"
+title: "如何：列舉列印佇列的子集"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- enumerating [WPF], subset of print queues
+- print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 393d1692526551b1eb9aa16f48d3c78c3cd6692f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：列舉列印佇列的子集
-資訊技術 \(IT\) 專業人員在管理全公司的印表機時經常面對的情況之一，是必須產生具有某些特性的印表機清單。  這項功能由 <xref:System.Printing.PrintServer> 物件與 <xref:System.Printing.EnumeratedPrintQueueTypes> 列舉型別的 <xref:System.Printing.PrintServer.GetPrintQueues%2A> 方法所提供。  
+# <a name="how-to-enumerate-a-subset-of-print-queues"></a>如何：列舉列印佇列的子集
+管理印表機的全公司的設定資訊技術 (IT) 專業人員所面臨的常見情況是產生一份具有特定特性的印表機。 這項功能由<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>物件和<xref:System.Printing.EnumeratedPrintQueueTypes>列舉型別。  
   
-## 範例  
- 在下列範例中，程式碼首先會建立旗標陣列，以指定我們要列出的列印佇列特性。  在此範例中，我們將尋找已安裝在本機列印伺服器上並且共用的列印佇列。  <xref:System.Printing.EnumeratedPrintQueueTypes> 列舉型別可提供許多其他可能性。  
+## <a name="example"></a>範例  
+ 在下列範例程式碼一開始會建立指定的特性，我們要列出的列印佇列的旗標的陣列。 在此範例中，我們正在為列印伺服器上本機安裝，並共用的列印佇列。 <xref:System.Printing.EnumeratedPrintQueueTypes>列舉型別提供許多其他的可能性。  
   
- 程式碼接著會建立 <xref:System.Printing.LocalPrintServer> 物件，此為衍生自 <xref:System.Printing.PrintServer> 的類別。  本機列印伺服器為執行應用程式的電腦。  
+ 程式碼接著會建立<xref:System.Printing.LocalPrintServer>物件的類別衍生自<xref:System.Printing.PrintServer>。 本機列印伺服器是應用程式執行所在的電腦。  
   
- 最後一個重要步驟是將陣列傳送至 <xref:System.Printing.PrintServer.GetPrintQueues%2A> 方法。  
+ 最後一個的重要步驟是將陣列傳遞給<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法。  
   
  最後，結果會呈現給使用者。  
   
@@ -35,15 +42,15 @@ caps.handback.revision: 8
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- 您可以讓每個列印佇列中所執行的 `foreach` 迴圈 \(Loop\) 進行進一步的篩選，以擴充此範例。  例如，您可以讓迴圈呼叫每個列印佇列的 <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> 方法以篩選掉不支援雙面列印的印表機，並測試雙面列印存在時的傳回值。  
+ 您可以擴充這個範例有`foreach`迴圈每個列印佇列會逐步執行進一步的檢測。 比方說，您無法篩選出印表機，讓迴圈呼叫不支援雙面列印每個列印佇列<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法，並測試傳回值出現的雙工。  
   
-## 請參閱  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>   
- <xref:System.Printing.PrintServer>   
- <xref:System.Printing.LocalPrintServer>   
- <xref:System.Printing.EnumeratedPrintQueueTypes>   
- <xref:System.Printing.PrintQueue>   
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>   
- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
+ <xref:System.Printing.PrintServer>  
+ <xref:System.Printing.LocalPrintServer>  
+ <xref:System.Printing.EnumeratedPrintQueueTypes>  
+ <xref:System.Printing.PrintQueue>  
+ <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
+ [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)

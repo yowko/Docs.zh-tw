@@ -1,23 +1,26 @@
 ---
-title: "SAML 權杖提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SAML 權杖提供者"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fc6eaa916507c7e1c530d4ee757097bf0bffcd34
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# SAML 權杖提供者
-這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的權杖提供者是用來提供認證給安全性基礎結構。  一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會隨附預設的認證管理員權杖提供者。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。  自訂權杖提供者適用於下列情況：  
+# <a name="saml-token-provider"></a>SAML 權杖提供者
+這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會隨附預設的認證管理員權杖提供者。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 -   如果您有這些權杖提供者無法使用的認證存放區。  
   
@@ -37,9 +40,9 @@ caps.handback.revision: 15
   
 -   用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。  
   
- 服務會公開兩個端點，以便與使用組態檔 App.config 定義的服務進行通訊。  每個端點是由位址、繫結及合約所組成。  繫結已設定成會使用訊息安全性的標準 `wsFederationHttpBinding`。  其中一個端點會預期用戶端經由使用對稱式證明金鑰的 SAML 權杖驗證，而另一個端點則預期用戶端經由使用非對稱式證明金鑰的 SAML 權杖驗證。  服務也會使用 `serviceCredentials` 行為來設定服務憑證。  `serviceCredentials` 行為可以讓您設定服務憑證。  服務憑證是由用戶端用來驗證服務並提供訊息保護。  下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如本主題結尾處的安裝指示所述。  `serviceCredentials` 行為也會允許您設定受信任可簽署 SAML 權杖的憑證。  下列組態會參考在範例期間安裝的 'Alice' 憑證。  
+ 服務會公開兩個端點，以便與使用組態檔 App.config 定義的服務進行通訊。每個端點是由位址、繫結及合約所組成。 繫結已設定成會使用訊息安全性的標準 `wsFederationHttpBinding`。 其中一個端點會預期用戶端經由使用對稱式證明金鑰的 SAML 權杖驗證，而另一個端點則預期用戶端經由使用非對稱式證明金鑰的 SAML 權杖驗證。 服務也會使用 `serviceCredentials` 行為來設定服務憑證。 `serviceCredentials` 行為可以讓您設定服務憑證。 服務憑證是由用戶端用來驗證服務並提供訊息保護。 下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如本主題結尾處的安裝指示所述。 `serviceCredentials` 行為也會允許您設定受信任可簽署 SAML 權杖的憑證。 下列組態會參考在範例期間安裝的 'Alice' 憑證。  
   
-```  
+```xml  
 <system.serviceModel>  
  <services>  
   <service   
@@ -124,7 +127,7 @@ caps.handback.revision: 15
   
      此範例會實作自訂 SAML 權杖提供者，此權杖提供者會根據建構階段所提供的 SAML 判斷提示傳回安全性權杖。  
   
-     為了執行這個工作，此自訂權杖提供者會衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別，並覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法。  這個方法會建立並傳回新的 `SecurityToken`。  
+     為了執行這個工作，此自訂權杖提供者會衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別，並覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法。 這個方法會建立並傳回新的 `SecurityToken`。  
   
     ```  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -165,7 +168,7 @@ caps.handback.revision: 15
   
 2.  撰寫自訂安全性權杖管理員。  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別會用來建立特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 物件的 <xref:System.IdentityModel.Selectors.SecurityTokenProvider>，而該提供者會透過 `CreateSecurityTokenProvider` 方法傳遞給該管理員。  安全性權杖管理員也會用來建立權杖驗證器與權杖序列化程式，但是這些不在本範例的討論範圍。  在這個範例中，自訂安全性權杖管理員繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別，並且會覆寫 `CreateSecurityTokenProvider` 方法，以便在傳遞的權杖需求表示要求 SAML 權杖時傳回自訂 SAML 權杖提供者。  如果用戶端認證類別 \(請參閱步驟 3\) 尚未指定判斷提示，安全性權杖管理員就會建立適當的執行個體。  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別會用來建立特定 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 物件的 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>，而該提供者會透過 `CreateSecurityTokenProvider` 方法傳遞給該管理員。 安全性權杖管理員也會用來建立權杖驗證器與權杖序列化程式，但是這些不在本範例的討論範圍。 在這個範例中，自訂安全性權杖管理員繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別，並且會覆寫 `CreateSecurityTokenProvider` 方法，以便在傳遞的權杖需求表示要求 SAML 權杖時傳回自訂 SAML 權杖提供者。 如果用戶端認證類別 (請參閱步驟 3) 尚未指定判斷提示，安全性權杖管理員就會建立適當的執行個體。  
   
     ```  
     public class SamlSecurityTokenManager :  
@@ -233,7 +236,6 @@ caps.handback.revision: 15
        return base.CreateSecurityTokenProvider(tokenRequirement);  
       }  
     }  
-  
     ```  
   
 3.  撰寫自訂用戶端憑證。  
@@ -304,18 +306,18 @@ caps.handback.revision: 15
     client.ChannelFactory.Endpoint.Behaviors.Add(samlCC);  
     ```  
   
- 服務端上會顯示與呼叫者關聯的宣告。  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。  在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
+ 服務端上會顯示與呼叫者關聯的宣告。 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-## 設定批次檔  
- 這個範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的自我裝載應用程式。  這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。  
+## <a name="setup-batch-file"></a>設定批次檔  
+ 這個範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。  
   
  下面提供批次檔的各區段簡要概觀，讓將批次檔得以修改為在適當的組態下執行。  
   
 -   建立伺服器憑證：  
   
-     下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。  `%SERVER_NAME%` 變數會指定伺服器名稱。  您可以變更這個變數來指定自己的伺服器名稱。  這個批次檔中的預設值為 localhost。  
+     下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔中的預設值為 localhost。  
   
-     憑證會儲存在 LocalMachine 存放區位置下的 My \(Personal\) 存放區中。  
+     憑證會儲存在 LocalMachine 存放區位置下的 My (Personal) 存放區中。  
   
     ```  
     echo ************  
@@ -329,7 +331,7 @@ caps.handback.revision: 15
   
 -   將伺服器憑證安裝至用戶端的受信任憑證存放區中。  
   
-     Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。  這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。  如果您已經有一個以用戶端信任的根憑證 \(例如 Microsoft 所發行的憑證\) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。  
+     Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople  
@@ -337,7 +339,7 @@ caps.handback.revision: 15
   
 -   建立簽發者憑證。  
   
-     下列 Setup.bat 批次檔中的程式行會建立要使用的簽發者憑證。  `%USER_NAME%` 變數會指定簽發者名稱。  您可以變更這個變數來指定自己的簽發者名稱。  這個批次檔中的預設值為 Alice。  
+     下列 Setup.bat 批次檔中的程式行會建立要使用的簽發者憑證。 `%USER_NAME%` 變數會指定簽發者名稱。 您可以變更這個變數來指定自己的簽發者名稱。 這個批次檔中的預設值為 Alice。  
   
      憑證會儲存在位於 CurrentUser 存放區位置下的 My 存放區中。  
   
@@ -353,59 +355,58 @@ caps.handback.revision: 15
   
 -   將簽發者憑證安裝至伺服器的受信任憑證存放區中。  
   
-     Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。  這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。  如果您已經有一個以用戶端信任的根憑證 \(例如 Microsoft 所發行的憑證\) 為基礎的憑證，就不需要這個將簽發者憑證填入伺服器憑證的步驟。  
+     Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將簽發者憑證填入伺服器憑證的步驟。  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
-  
     ```  
   
-#### 若要設定和建置範例  
+#### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案，請遵循 [建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md) 中的指示進行。  
+2.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 > [!NOTE]
 >  如果您使用 Svcutil.exe 重新產生這個範例的組態，請務必修改用戶端組態中的端點名稱，以符合用戶端程式碼。  
   
-#### 若要在同一部電腦上執行範例  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
-1.  在使用系統管理員權限執行的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元內部，執行範例安裝資料夾中的 Setup.bat。  這會安裝執行範例所需的所有憑證。  
+1.  在使用系統管理員權限執行的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元內部，執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。  
   
     > [!NOTE]
-    >  Setup.bat 批次檔是設計用來從 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元執行。  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元中設定的 PATH 環境變數會指向包含 Setup.bat 指令碼所需之可執行檔的目錄。  
+    >  Setup.bat 批次檔是設計用來從 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元執行。 在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元中設定的 PATH 環境變數會指向包含 Setup.bat 指令碼所需之可執行檔的目錄。  
   
-2.  從 service\\bin 啟動 Service.exe。  
+2.  從 service\bin 啟動 Service.exe。  
   
-3.  從 \\client\\bin 啟動 Client.exe。  用戶端活動會顯示在用戶端主控台應用程式上。  
+3.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務無法通訊，請參閱[Troubleshooting Tips](http://msdn.microsoft.com/zh-tw/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 若要跨電腦執行範例  
+#### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
 1.  在服務電腦上為服務二進位碼檔案建立一個目錄。  
   
-2.  將服務程式檔複製到服務電腦上的服務目錄。  同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
+2.  將服務程式檔複製到服務電腦上的服務目錄。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-3.  您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。  此 Service.exe.config 檔必須更新以反映這個新憑證名稱。  您可以修改 Setup.bat 批次檔來建立伺服器憑證。  請注意，您必須在使用系統管理員權限開啟的 Visual Studio 命令提示字元視窗中，執行 Setup.bat 檔案。  您必須將 `%SERVER_NAME%` 變數設定為用來裝載服務之電腦的完整主機名稱。  
+3.  您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 此 Service.exe.config 檔必須更新以反映這個新憑證名稱。 您可以修改 Setup.bat 批次檔來建立伺服器憑證。 請注意，您必須在使用系統管理員權限開啟的 Visual Studio 命令提示字元視窗中，執行 Setup.bat 檔案。 您必須將 `%SERVER_NAME%` 變數設定為用來裝載服務之電腦的完整主機名稱。  
   
-4.  將伺服器憑證複製到用戶端的 CurrentUser\-TrustedPeople 存放區中。  當伺服器憑證是由用戶端信任的簽發者發行時，就不需要這個步驟。  
+4.  將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 當伺服器憑證是由用戶端信任的簽發者發行時，就不需要這個步驟。  
   
 5.  在服務電腦的 Service.exe.config 檔中變更基底位址的值，以指定完整電腦名稱而不要指定 localhost。  
   
 6.  在服務電腦上，從命令提示字元執行 Service.exe。  
   
-7.  將語言特定資料夾下 \\client\\bin\\ 資料夾中的用戶端程式檔案複製到用戶端電腦。  
+7.  將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端電腦。  
   
 8.  在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。  
   
 9. 在用戶端電腦上，從命令提示字元視窗啟動 `Client.exe`。  
   
-10. 如果用戶端和服務無法通訊，請參閱[Troubleshooting Tips](http://msdn.microsoft.com/zh-tw/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 若要在使用範例之後進行清除  
+#### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

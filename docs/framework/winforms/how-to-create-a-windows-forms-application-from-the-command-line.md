@@ -1,33 +1,33 @@
 ---
-title: "如何：從命令列建立 Windows Form 應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Form, 從命令列開發應用程式"
-  - "Windows Form, 建立基本表單"
-  - "Windows Form, 使用者入門"
+title: "如何： 從命令列建立 Windows Forms 應用程式"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-winforms
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, application development from command line
+- Windows Forms, getting started
+- Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6ddb27f724e30071be339ac753cfd85599ccd86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：從命令列建立 Windows Form 應用程式
-下列程序說明若要從命令列建立及執行 Windows Form 應用程式，所必須完成的基本步驟。  在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說：建立簡單的 Windows Form](http://msdn.microsoft.com/library/z9w2f38k%20\(v=vs.110\))。  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何： 從命令列建立 Windows Forms 應用程式
+下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說： 建立簡單的 Windows Form](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
   
-## 程序  
+## <a name="procedure"></a>程序  
   
-#### 建立表單  
+#### <a name="to-create-the-form"></a>建立表單  
   
 1.  在空的程式碼檔案中，輸入下列匯入或使用陳述式：  
   
@@ -57,26 +57,26 @@ caps.handback.revision: 10
      [!code-csharp[System.Windows.Forms.BasicForm#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### 編譯和執行應用程式  
+#### <a name="to-compile-and-run-the-application"></a>編譯和執行應用程式  
   
 1.  在 .NET Framework 命令提示字元中，巡覽至您建立 `Form1` 類別的目錄。  
   
 2.  編譯表單。  
   
-    -   如果您是使用 C\#，請輸入：`csc form1.cs`  
+    -   如果您使用的 C#，輸入：`csc form1.cs`  
   
-         `-或-`  
+         `-or-`  
   
-    -   如果您是使用 Visual Basic，請輸入：`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   如果您使用 Visual Basic 中，類型：`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
   
 3.  在命令提示字元中，輸入：`Form1.exe`  
   
-## 加入控制項和處理事件  
- 先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。  下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。  如需您可以加入 Windows Form 之控制項的相關資訊，請參閱 [Windows Form 控制項](../../../docs/framework/winforms/controls/index.md)。  
+## <a name="adding-a-control-and-handling-an-event"></a>加入控制項和處理事件  
+ 先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。 下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。 如需您可以加入 Windows Form 控制項的相關資訊，請參閱[Windows Form 控制項](../../../docs/framework/winforms/controls/index.md)。  
   
- 除了了解如何建立 Windows Form 應用程式，您還應該了解以事件為基礎的程式設計，以及如何處理使用者輸入。  如需詳細資訊，請參閱[在 Windows Form 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)，以及[處理使用者輸入](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ 除了了解如何建立 Windows Forms 應用程式，您還應該了解以事件為基礎的程式設計，以及如何處理使用者輸入。 如需詳細資訊，請參閱[建立 Windows Form 中的事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)，和[處理使用者輸入](../../../docs/framework/winforms/controls/handling-user-input.md)  
   
-#### 宣告按鈕控制項及處理其 Click 事件  
+#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>宣告按鈕控制項及處理其 Click 事件  
   
 1.  宣告名為 `button1` 的按鈕控制項。  
   
@@ -107,19 +107,19 @@ caps.handback.revision: 10
   
 7.  依照先前程序的說明，編譯及執行應用程式。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例是先前程序的完整範例。  
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。  
   
-## 請參閱  
- <xref:System.Windows.Forms.Form>   
- <xref:System.Windows.Forms.Control>   
- [變更 Windows Form 的外觀](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)   
- [增強 Windows Form 應用程式](../../../docs/framework/winforms/advanced/index.md)   
- [Windows Form 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.Form>  
+ <xref:System.Windows.Forms.Control>  
+ [變更 Windows Forms 的外觀](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [增強 Windows Forms 應用程式](../../../docs/framework/winforms/advanced/index.md)  
+ [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

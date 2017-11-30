@@ -1,26 +1,29 @@
 ---
-title: "探索 (範例) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "探索 (範例)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 424d2be5e8aa5733f3fe8159ebbf181a1f906f3a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 探索 (範例)
+# <a name="discovery-samples"></a>探索 (範例)
 本節包含與探索功能相關的範例。  
   
-## 在本節中  
- [公告](../../../../docs/framework/wcf/samples/announcements-sample.md)  
+## <a name="in-this-section"></a>本章節內容  
+ [宣告](../../../../docs/framework/wcf/samples/announcements-sample.md)  
  示範如何搭配探索功能使用公告。  
   
  [非同步尋找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
@@ -33,13 +36,13 @@ caps.handback.revision: 11
  示範如何使用組態檔讓服務可以探索，以及如何透過組態使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 尋找該服務。  
   
  [探索繫結項目範例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
- 示範如何將探索繫結項目加入至自訂繫結。這可讓用戶端在通道開啟時探索服務。  
+ 示範如何將探索繫結項目加入至自訂繫結。 這可讓用戶端在通道開啟時探索服務。  
   
  [探索 Proxy 範例](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
  示範如何建立探索 Proxy 的實作以儲存現有服務的相關資訊，以及用戶端如何查詢該 Proxy 的資訊。  
   
- [使用唯一的接聽 URI 模式探索服務範例](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
- 示範如何探索其 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> 屬性設定為 <xref:System.ServiceModel.Description.ListenUriMode> 的服務。  
+ [探索服務，以唯一的接聽 Uri 模式範例](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
+ 示範如何探索其 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> 屬性設定為 <xref:System.ServiceModel.Description.ListenUriMode.Unique> 的服務。  
   
  [探索範圍](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  示範如何使用範圍分類可探索的端點，以及如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 執行端點的非同步搜尋。  

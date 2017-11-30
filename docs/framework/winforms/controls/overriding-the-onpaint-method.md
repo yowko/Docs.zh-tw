@@ -1,38 +1,42 @@
 ---
-title: "覆寫 OnPaint 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "OnPaint 方法, 在 Windows Form 自訂控制項中覆寫"
-  - "Paint 事件, 在 Windows Form 自訂控制項中處理"
+title: "覆寫 OnPaint 方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Paint event [Windows Forms], handling in Windows Forms custom control
+- OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 41205f7f0ec21e27b97d0b12415fca89ae526552
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 覆寫 OnPaint 方法
-覆寫定義在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中任何事件的基本步驟是相同的，並且摘要在下列清單中。  
+# <a name="overriding-the-onpaint-method"></a>覆寫 OnPaint 方法
+覆寫中定義的任何事件的基本步驟[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]是一樣的並在下列清單摘要說明。  
   
-#### 若要覆寫繼承的事件  
+#### <a name="to-override-an-inherited-event"></a>若要覆寫繼承的事件  
   
-1.  覆寫受保護的 `On`*EventName* 方法。  
+1.  覆寫的受保護`On` *EventName*方法。  
   
-2.  從覆寫的 `On`*EventName* 方法呼叫基底類別的 `On`*EventName* 方法，以便註冊的委派 \(Delegate\) 能接收事件。  
+2.  呼叫`On` *EventName*從覆寫基底類別方法`On` *EventName*方法，使已註冊的委派能接收到事件。  
   
- <xref:System.Windows.Forms.Control.Paint> 事件將在這裡詳細討論，因為每一個 Windows Form 控制項都必須覆寫繼承自 <xref:System.Windows.Forms.Control> 的 <xref:System.Windows.Forms.Control.Paint> 事件。  <xref:System.Windows.Forms.Control> 基底類別並不知如何繪製衍生控制項，而且不提供 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法中的任何繪製邏輯。  <xref:System.Windows.Forms.Control> 的 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法僅將 <xref:System.Windows.Forms.Control.Paint> 事件分派給已登錄的事件接收者。  
+ <xref:System.Windows.Forms.Control.Paint>必須覆寫的每個 Windows Form 控制項，因為此處詳細討論事件<xref:System.Windows.Forms.Control.Paint>它所繼承的事件<xref:System.Windows.Forms.Control>。 基底<xref:System.Windows.Forms.Control>類別並不知道如何衍生的控制項必須繪製，並不會提供中的任何繪製邏輯<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 <xref:System.Windows.Forms.Control.OnPaint%2A>方法<xref:System.Windows.Forms.Control>只會分派<xref:System.Windows.Forms.Control.Paint>已註冊的事件接收器的事件。  
   
- 若您是透過 [如何：開發簡單的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)中的範例來執行，則您已見過覆寫 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法的範例。  下列程式碼片段取自該範例。  
+ 如果您已完成中的範例[How to： 開發簡單的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)，您所見的覆寫範例<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 下列程式碼片段是取自該範例。  
   
 ```vb  
 Public Class FirstControl  
@@ -62,7 +66,7 @@ public class FirstControl : Control{
 }   
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs> 類別包含 <xref:System.Windows.Forms.Control.Paint> 事件的資料。  它具有兩個屬性，如下列程式碼所示。  
+ <xref:System.Windows.Forms.PaintEventArgs>類別包含的資料<xref:System.Windows.Forms.Control.Paint>事件。 它有兩個屬性，如下列程式碼所示。  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -88,11 +92,11 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 是要繪製的方框，且 <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> 屬性是參考至 <xref:System.Drawing.Graphics> 物件。  <xref:System.Drawing?displayProperty=fullName> 命名空間中的類別為 Managed 類別，提供對 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] \(新的 Windows 圖庫\) 功能的存取。  <xref:System.Drawing.Graphics> 物件具有方法，可繪製點、字串、直線、弧形、橢圓形和許多其他形狀。  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>是要繪製的矩形和<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>屬性參考到<xref:System.Drawing.Graphics>物件。 中的類別<xref:System.Drawing?displayProperty=nameWithType>命名空間所管理的功能提供存取的類別[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，新的 Windows 圖形文件庫。 <xref:System.Drawing.Graphics>物件有方法可以繪製點、 字串、 線條、 弧線、 省略符號，以及許多其他圖形。  
   
- 每當控制項需要變更其視覺顯示時，會叫用其 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法。  這個方法會接著引發 <xref:System.Windows.Forms.Control.Paint> 事件。  
+ 控制項叫用其<xref:System.Windows.Forms.Control.OnPaint%2A>方法每當程式需要變更其視覺顯示。 此方法接著就會引發<xref:System.Windows.Forms.Control.Paint>事件。  
   
-## 請參閱  
- [事件](../../../../docs/standard/events/index.md)   
- [呈現 Windows Form 控制項](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)   
+## <a name="see-also"></a>另請參閱  
+ [事件](../../../../docs/standard/events/index.md)  
+ [呈現 Windows Forms 控制項](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
  [定義事件](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

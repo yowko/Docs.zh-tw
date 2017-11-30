@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SOAP, XML serialization
 - XML serialization, SOAP
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 412468a03c15cedaa77a5e10be41793565039c4d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 809f1418d7ee0939c7e31124fbda7ef5fd8e2e5e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-and-soap-serialization"></a>XML 和 SOAP 序列化
 XML 序列化會將物件的公用 (Public) 欄位和屬性，或是方法的參數和傳回值，轉換 (序列化) 為與特定 XML 結構描述 (Schema) 定義語言 (XSD) 文件相符的 XML 資料流。 XML 序列化會產生強型別 (Strongly Typed) 類別，其中包含的公用屬性和欄位都轉換為序列格式 (此例為 XML) 以進行儲存或傳輸。  
@@ -83,7 +77,7 @@ XML 序列化會將物件的公用 (Public) 欄位和屬性，或是方法的參
  [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  列出用來控制 SOAP 編碼序列化的屬性。  
   
- [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+ [\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)  
  用來控制 XML 序列化的最上層組態項目。  
   
  [\<dateTimeSerialization> 元素](../../../docs/standard/serialization/datetimeserialization-element.md)  
@@ -104,4 +98,3 @@ XML 序列化會將物件的公用 (Public) 欄位和屬性，或是方法的參
   
 ## <a name="see-also"></a>另請參閱  
  [二進位序列化](../../../docs/standard/serialization/binary-serialization.md)
-

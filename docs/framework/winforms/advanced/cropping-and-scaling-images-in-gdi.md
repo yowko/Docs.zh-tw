@@ -1,57 +1,61 @@
 ---
-title: "在 GDI+ 中裁剪和縮放影像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "壓縮資料, 影像"
-  - "GDI+, 裁剪影像"
-  - "GDI+, 將影像縮放比例"
-  - "影像 [Windows Form], 壓縮"
-  - "影像 [Windows Form], 裁剪"
-  - "影像 [Windows Form], 擴充"
-  - "影像 [Windows Form], 縮放比例"
-  - "矩形, 目的"
-  - "矩形, 來源"
+title: "在 GDI+ 中裁剪和縮放影像"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- GDI+, scaling images
+- GDI+, cropping images
+- images [Windows Forms], cropping
+- compressing data [Windows Forms], images
+- images [Windows Forms], expansion
+- images [Windows Forms], scaling
+- rectangles [Windows Forms], source
+- rectangles [Windows Forms], destination
+- images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63e1e55e57d586cbbca87361b95c18f0f53b8c75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在 GDI+ 中裁剪和縮放影像
-您可以使用 <xref:System.Drawing.Graphics> 類別的 <xref:System.Drawing.Graphics.DrawImage%2A> 方法來繪製並定位向量影像和點陣影像。  <xref:System.Drawing.Graphics.DrawImage%2A> 是一個多載方法，因此可使用許多種方法提供引數給它。  
+# <a name="cropping-and-scaling-images-in-gdi"></a>在 GDI+ 中裁剪和縮放影像
+您可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>繪製及定位向量影像和點陣影像的類別。 <xref:System.Drawing.Graphics.DrawImage%2A>是多載的方法，因此沒有提供引數的數種方式。  
   
-## DrawImage 變異  
- <xref:System.Drawing.Graphics.DrawImage%2A> 方法的其中一個變異可接收 <xref:System.Drawing.Bitmap> 和 <xref:System.Drawing.Rectangle>。  矩形可指定繪製作業的目的地；也就是說，它可以指定繪製影像的位置。  如果目的矩形的大小和原始影像大小並不相同，該影像將縮放至適合目的矩形的大小。  下列程式碼範例會示範如何繪製三次相同的影像：一次不使用縮放、一次使用放大，還有一次使用縮小：  
+## <a name="drawimage-variations"></a>DrawImage 變化  
+ 其中一個變化<xref:System.Drawing.Graphics.DrawImage%2A>方法會接收<xref:System.Drawing.Bitmap>和<xref:System.Drawing.Rectangle>。 矩形指定的目的地繪圖作業。也就是說，它會指定要在其中繪製影像的矩形。 如果目的矩形的大小不同於原始的映像的大小，以符合目的地矩形縮放影像。 下列程式碼範例示範如何繪製相同的映像三次： 一次沒有縮放、 另一次使用的擴充和另一次使用的壓縮：  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
   
- 下圖將顯示這三個圖片。  
+ 下圖顯示三個圖片。  
   
- ![縮放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.png "AboutGdip03\_Art06")  
+ ![調整](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
   
- 有些 <xref:System.Drawing.Graphics.DrawImage%2A> 方法的變異具有來源矩形參數和目的矩形參數。  來源矩形參數指定要繪製的原始影像區域。  目的矩形指定用來繪製該影像區域的位置。  如果目的矩形大小和來源矩形大小並不相同，圖片將縮放至適合目的矩形的大小。  
+ 一些變化<xref:System.Drawing.Graphics.DrawImage%2A>方法有來源矩形參數，以及目的地矩形參數。 來源矩形參數會指定要繪製之原始影像的一部分。 目的矩形指定要在其中繪製影像的該部分。 如果目的矩形的大小不同於來源矩形的大小，圖片會調整為適合滿目的矩形。  
   
- 下列程式碼範例示範如何從 Runner.jpg 檔案建構 <xref:System.Drawing.Bitmap>。  整個影像從 \(0, 0\) 開始繪製，且不進行縮放。  接著影像中的一小部分會繪製兩次：一次使用縮小，另一次使用放大。  
+ 下列程式碼範例示範如何建構<xref:System.Drawing.Bitmap>Runner.jpg 檔案中。 在沒有縮放繪製整個影像 （0，0）。 然後一小部分的影像繪製兩次： 一次使用壓縮，另一次使用放大。  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
   
- 下列圖示將顯示未縮放的影像，以及經過縮小和放大的影像部分。  
+ 下圖顯示未縮放的影像，以及壓縮和展開的影像部分。  
   
- ![裁剪和縮放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.png "AboutGdip03\_Art07")  
+ ![裁剪和縮放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
-## 請參閱  
- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
+## <a name="see-also"></a>另請參閱  
+ [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

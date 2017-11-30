@@ -1,73 +1,72 @@
 ---
-title: "最大化 WPF 3D 效能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "立體圖形 [WPF]"
+title: "最大化 WPF 3D 效能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 26df55c9658721eb907db5837ac467a5899e84eb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 最大化 WPF 3D 效能
-當您使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 建置 3D 控制項並將 3D 場景加入應用程式中時，請務必考量效能最佳化的問題。本主題列出影響應用程式效能的 3D 類別和屬性，並提供使用這些類別和屬性時的效能最佳化建議。  
+# <a name="maximize-wpf-3d-performance"></a>最大化 WPF 3D 效能
+當您使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]建置 3D 控制項，並包含在應用程式中的 3D 場景，它是很重要考量效能最佳化。 本主題提供 3D 類別和應用程式，以及當您使用這些最佳化效能的建議事項會影響效能的屬性的清單。  
   
- 本主題假設您對 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 功能有深入的了解。  本文件中的建議適用於「轉譯層 2」\-\- 其粗略定義就是支援像素著色器 2.0 版和頂點著色器 2.0 版的硬體。  如需詳細資訊，請參閱 [圖形轉譯層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
+ 本主題假設進階的瞭解[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 功能。 這份文件中的建議套用至 「 轉譯層 2 」，大致上定義為支援像素著色器 2.0 版和頂點著色器 2.0 版的硬體。 如需詳細資訊，請參閱[圖形呈現層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
   
-## 效能影響：大  
+## <a name="performance-impact-high"></a>效能的影響： 高  
   
-|||  
-|-|-|  
 |屬性|建議|  
-|<xref:System.Windows.Media.Brush>|筆刷速度 \(從最快到最慢\)：<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> \(快取的\)<br /><br /> <xref:System.Windows.Media.VisualBrush> \(快取的\)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> \(取消快取\)<br /><br /> <xref:System.Windows.Media.VisualBrush> \(非快取的\)|  
-|<xref:System.Windows.UIElement.ClipToBoundsProperty>|只要您不需要 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 將 <xref:System.Windows.Controls.Viewport3D> 的內容明確裁剪為 Viewport3D 的矩形，就將 `Viewport3D.ClipToBounds` 設為 false。[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 反鋸齒裁剪可能很慢，而 <xref:System.Windows.Controls.Viewport3D> 上預設會啟用 `ClipToBounds` \(慢\)。|  
-|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|只要您在執行滑鼠點擊測試時不需要 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 考量 <xref:System.Windows.Controls.Viewport3D> 的內容，就將 `Viewport3D.IsHitTestVisible` 設為 false。3D 內容的點擊測試是在軟體中執行，萬一網狀結構很大就會變得很慢。<xref:System.Windows.Controls.Viewport3D> 上預設會啟用 <xref:System.Windows.UIElement.IsHitTestVisible%2A> \(慢\)。|  
-|<xref:System.Windows.Media.Media3D.GeometryModel3D>|只有在不同模型需要有不同「材質」或「轉換」時，才建立不同模型。  否則，試著將具有相同「材質」和「轉換」的多個 <xref:System.Windows.Media.Media3D.GeometryModel3D> 執行個體合併到幾個較大的 <xref:System.Windows.Media.Media3D.GeometryModel3D> 和 <xref:System.Windows.Media.Media3D.MeshGeometry3D> 執行個體中。|  
-|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中，網狀結構動畫 \(在每一畫面格上變更網狀結構的個別頂點\) 不一定很有效率。若要減少修改各點頂點時變更通知作業對效能所造成的影響，在修改各頂點之前請先中斷網狀結構與視覺化樹狀結構的連結。在網狀結構修改完成之後，再將它重新附加至視覺化樹狀結構。此外，也請盡量縮減以這種方式建立動畫的網狀結構大小。|  
-|3D Antialiasing|若要加快呈現速度，請將 <xref:System.Windows.Controls.Viewport3D> 上的附加屬性 <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> 設為 `Aliased` 以停用多重取樣。  根據預設，3D 消除鋸齒功能在 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 上會停用，而在 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] 上會啟用 \(每一像素 4 樣本\)。|  
-|文字|3D 場景中的實體文字 \(因為在 <xref:System.Windows.Media.DrawingBrush> 或 <xref:System.Windows.Media.VisualBrush> 中，所以稱為實體\) 可能會很慢。  除非文字會變更，否則請盡量改用文字影像 \(利用 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>\)。|  
-|<xref:System.Windows.Media.TileBrush>|如果因為筆刷的內容不是靜態內容，而必須在 3D 場景中使用 <xref:System.Windows.Media.VisualBrush> 或 <xref:System.Windows.Media.DrawingBrush>，請試著快取筆刷 \(將附加屬性 <xref:System.Windows.Media.RenderOptions.CachingHint%2A> 設定為 `Cache`\)。  設定最小和最大縮放失效臨界值 \(透過附加屬性 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> 和 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>\)，使快取的筆刷不會太常重新產生，同時仍能維持您想要的品質等級。  根據預設，並不會快取 <xref:System.Windows.Media.DrawingBrush> 和 <xref:System.Windows.Media.VisualBrush>，意思是說每次需要重新呈現用筆刷繪製的效果時，都必須先在中繼表面上重新呈現筆刷的完整內容。|  
-|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> 會在不使用硬體加速的情形下強制重新呈現所有受影響的內容。  為達到最佳效能，請不要使用 <xref:System.Windows.Media.Effects.BitmapEffect>。|  
-  
-## 效能影響：中  
-  
-|||  
 |-|-|  
+|<xref:System.Windows.Media.Brush>|筆刷速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>（快取）<br /><br /> <xref:System.Windows.Media.VisualBrush>（快取）<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>（未快取）<br /><br /> <xref:System.Windows.Media.VisualBrush>（未快取）|  
+|<xref:System.Windows.UIElement.ClipToBoundsProperty>|設定`Viewport3D.ClipToBounds`為 false 時不需要有[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]明確裁剪內容<xref:System.Windows.Controls.Viewport3D>Viewport3D 的矩形。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]反鋸齒補償裁剪可能會非常慢，和`ClipToBounds`預設為啟用 （慢） 上<xref:System.Windows.Controls.Viewport3D>。|  
+|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|設定`Viewport3D.IsHitTestVisible`為 false 時不需要[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]要考慮的內容<xref:System.Windows.Controls.Viewport3D>執行滑鼠點擊測試。  點擊測試的 3D 內容會在軟體中完成，而且可以是大型網狀結構慢。 <xref:System.Windows.UIElement.IsHitTestVisible%2A>預設為啟用 （慢） 上<xref:System.Windows.Controls.Viewport3D>。|  
+|<xref:System.Windows.Media.Media3D.GeometryModel3D>|它們需要不同的資料或轉換時，才建立不同的模型。  否則，嘗試聯合許多<xref:System.Windows.Media.Media3D.GeometryModel3D>成一些較大的執行個體具有相同的資料和轉換<xref:System.Windows.Media.Media3D.GeometryModel3D>和<xref:System.Windows.Media.Media3D.MeshGeometry3D>執行個體。|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Mesh 動畫 — 變更個別畫面格為基礎的 mesh 的個別端點 — 不一定有效率[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  若要修改每個頂點時降低變更通知的效能影響，卸離執行每個頂點修改之前的視覺化樹狀結構從網狀結構。  一旦網狀結構已被修改，重新附加它的視覺化樹狀結構。  此外，請嘗試以這種方式建立動畫的網狀結構的大小降到最低。|  
+|3D 反鋸齒功能|若要增加呈現的速度，停用多重採樣<xref:System.Windows.Controls.Viewport3D>藉由設定附加的屬性<xref:System.Windows.Media.RenderOptions.EdgeMode%2A>至`Aliased`。  根據預設，3D 的消除鋸齒會停用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]並在上啟用[!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]4 的範例，每個像素。|  
+|Text|Live 3D 場景中的文字 (live 因為它處於<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>) 可能會很慢。 請嘗試改為使用映像的文字 (透過<xref:System.Windows.Media.Imaging.RenderTargetBitmap>) 除非的文字會改變。|  
+|<xref:System.Windows.Media.TileBrush>|如果您必須使用<xref:System.Windows.Media.VisualBrush>或<xref:System.Windows.Media.DrawingBrush>3D 場景中因為筆刷的內容不是靜態的再試一次快取的筆刷 (設定附加的屬性<xref:System.Windows.Media.RenderOptions.CachingHint%2A>至`Cache`)。  設定最小和最大刻度失效的臨界值 (與附加的屬性<xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A>和<xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>)，以便快取的筆刷不會重新產生頻率太高，同時仍維持您所需的層級的品質。  根據預設，<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>不會快取，這表示，每次使用筆刷繪製的項目必須為重新轉譯，筆刷的整個內容必須先重新轉譯為中繼的介面。|  
+|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect>強制所有受影響的內容，但不限於硬體加速呈現。  為了達到最佳效能，請勿使用<xref:System.Windows.Media.Effects.BitmapEffect>。|  
+  
+## <a name="performance-impact-medium"></a>效能的影響： 中  
+  
 |屬性|建議|  
-|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|當網狀結構是定義為鄰接的三角形，這些三角形具有共用的頂點且這些頂點有相同的位置、法線和紋理座標，您只要定義各共用頂點一次，然後再用 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> 以索引鍵定義您的三角形即可。|  
-|<xref:System.Windows.Media.ImageBrush>|當您對大小有明確的控制時 \(當您使用 <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 和 \(或\) <xref:System.Windows.Media.ImageBrush> 時\)，請將紋理大小減至最小。  請注意，較低解析度的紋理會降低視覺品質，所以請盡量在品質和效能之間找到適當的平衡點。|  
-|Opacity|在呈現半透明 3D 內容時 \(如倒影\)，可以使用筆刷或材質上的不透明屬性 \(利用 <xref:System.Windows.Media.Brush.Opacity%2A> 或 <xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A>\)，而不是藉由將 `Viewport3D.Opacity` 設為低於 1 來建立另一個半透明 <xref:System.Windows.Controls.Viewport3D>。|  
-|<xref:System.Windows.Controls.Viewport3D>|將您在場景中使用的 <xref:System.Windows.Controls.Viewport3D> 物件數量減至最少。  將許多 3D 模型放在相同的 Viewport3D 中，而不是為每個模型建立個別的 Viewport3D 執行個體。|  
-|<xref:System.Windows.Freezable>|一般而言，重複使用 <xref:System.Windows.Media.Media3D.MeshGeometry3D>、<xref:System.Windows.Media.Media3D.GeometryModel3D>、「筆刷」和「材質」有許多好處。  因為它們都是衍生自 `Freezable`，所以它們可以有許多父系。|  
-|<xref:System.Windows.Freezable>|當 Freezable 的屬性在您的應用程式中會維持不變時，請呼叫 Freezable 的 <xref:System.Windows.Freezable.Freeze%2A> 方法。  凍結可減少工作集並增加速度。|  
-|<xref:System.Windows.Media.Brush>|當筆刷內容不會變更時，請使用 <xref:System.Windows.Media.ImageBrush> 而不是 <xref:System.Windows.Media.VisualBrush> 或 <xref:System.Windows.Media.DrawingBrush>。  您可以先利用 <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 將 2D 內容轉換為 <xref:System.Windows.Controls.Image>，然後再於 <xref:System.Windows.Media.ImageBrush> 中使用。|  
-|<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>|除非您真的需要看到 <xref:System.Windows.Media.Media3D.GeometryModel3D> 的背面，否則請不要使用 <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>。|  
-|<xref:System.Windows.Media.Media3D.Light>|光源速度 \(從最快到最慢\)：<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
-|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|請盡量讓網狀結構大小維持在下列上限之下：<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>：20,001 個 <xref:System.Windows.Media.Media3D.Point3D> 執行個體<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>：60,003 個 <xref:System.Int32> 執行個體|  
-|<xref:System.Windows.Media.Media3D.Material>|材質速度 \(從最快到最慢\)：<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
-|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 不會使用一致的方式來排除不可見的筆刷 \(黑色環境筆刷、清除筆刷等\)。請考慮不要在您的場景中使用這些筆刷。|  
-|<xref:System.Windows.Media.Media3D.MaterialGroup>|<xref:System.Windows.Media.Media3D.MaterialGroup> 中的每個 <xref:System.Windows.Media.Media3D.Material> 都會引起另一個呈現動作，因此加入許多材質，甚至是簡單的材質，都會大幅增加 GPU 的填滿要求。  請減少您 <xref:System.Windows.Media.Media3D.MaterialGroup> 中的材質數量。|  
-  
-## 效能影響：小  
-  
-|||  
 |-|-|  
-|屬性|建議|  
-|<xref:System.Windows.Media.Media3D.Transform3DGroup>|當您不需要動畫或資料繫結時，請不要使用含有多個轉換的轉換群組，而應當改用單一 <xref:System.Windows.Media.Media3D.MatrixTransform3D>，將它設定為所有轉換的乘積，這些轉換在其他情況下是個別存在轉換群組中的。|  
-|<xref:System.Windows.Media.Media3D.Light>|減少您場景中的光源數。  場景中的光源過多將會強制 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 切換回軟體轉譯。光源數上限約為 110 個 <xref:System.Windows.Media.Media3D.DirectionalLight> 物件、70 個 <xref:System.Windows.Media.Media3D.PointLight> 物件或 40 個 <xref:System.Windows.Media.Media3D.SpotLight> 物件。|  
-|<xref:System.Windows.Media.Media3D.ModelVisual3D>|將移動物件和靜態物件分開，做法是將它們放在不同的 <xref:System.Windows.Media.Media3D.ModelVisual3D> 執行個體中，以與靜態物件分開。  ModelVisual3D 會快取轉換後的邊界，因此比 <xref:System.Windows.Media.Media3D.GeometryModel3D> 更「厚重」。  GeometryModel3D 是模型時有最佳效能；而 ModelVisual3D 是場景節點時則有最佳效能。  請使用 ModelVisual3D 將共用的 GeometryModel3D 執行個體放入場景中。|  
-|<xref:System.Windows.Media.Media3D.Light>|減少您在場景中變更光源數的次數。  除非該組態之前已經存在 \(因此其著色器已快取\)，否則每次變更光源數量都會迫使著色器重新產生和重新編譯。|  
-|Light|您看不見黑色光源，但它們也會增加呈現時間；請考慮別使用它們。|  
-|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|若要在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中減少大型集合的建構時間，如 MeshGeometry3D 的 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>、<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>、<xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> 和 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>，請在填入值之前預先調整集合的大小。  可能的話，請傳遞已預先填入資料結構 \(如陣列或 List\) 的集合的建構函式。|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|當網狀結構定義為鄰接三角形有共用的頂點，這些端點擁有相同的位置、 normal 和材質座標，定義每個共用的頂點僅一次，而且然後使用索引來定義您三角形<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>。|  
+|<xref:System.Windows.Media.ImageBrush>|嘗試減少紋理大小時您可以明確控制大小 (當您使用<xref:System.Windows.Media.Imaging.RenderTargetBitmap>及/或<xref:System.Windows.Media.ImageBrush>)。  請注意，較低解析度的紋理可以減少視覺品質，因此嘗試尋找品質與效能之間的正確平衡。|  
+|不透明度|當半透明的 3D 轉譯內容 （例如反射） 時，使用的不透明度屬性上筆刷或資料 (透過<xref:System.Windows.Media.Brush.Opacity%2A>或<xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A>) 而不是建立另一個半透明<xref:System.Windows.Controls.Viewport3D>藉由設定`Viewport3D.Opacity`小於 1 的值。|  
+|<xref:System.Windows.Controls.Viewport3D>|減少數目<xref:System.Windows.Controls.Viewport3D>場景中使用的物件。  將許多 3D 模型放在相同的 Viewport3D，而不會建立每個模型的個別 Viewport3D 執行個體。|  
+|<xref:System.Windows.Freezable>|通常很有幫助重複使用<xref:System.Windows.Media.Media3D.MeshGeometry3D>， <xref:System.Windows.Media.Media3D.GeometryModel3D>，筆刷和資料。  所有都 multiparentable，因為它們衍生自`Freezable`。|  
+|<xref:System.Windows.Freezable>|呼叫<xref:System.Windows.Freezable.Freeze%2A>Freezable 時將會保留其屬性上的方法不變更您的應用程式中。  凍結可以降低工作集，並加快速度。|  
+|<xref:System.Windows.Media.Brush>|使用<xref:System.Windows.Media.ImageBrush>而不是<xref:System.Windows.Media.VisualBrush>或<xref:System.Windows.Media.DrawingBrush>時不會變更筆刷的內容。  2D 內容可以轉換成<xref:System.Windows.Controls.Image>透過<xref:System.Windows.Media.Imaging.RenderTargetBitmap>並接著用於<xref:System.Windows.Media.ImageBrush>。|  
+|<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>|請勿使用<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>除非您確實需要查看背景表面您<xref:System.Windows.Media.Media3D.GeometryModel3D>。|  
+|<xref:System.Windows.Media.Media3D.Light>|淺色速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|嘗試保留在這些限制的網狀結構大小：<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20,001<xref:System.Windows.Media.Media3D.Point3D>執行個體<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60,003<xref:System.Int32>執行個體|  
+|<xref:System.Windows.Media.Media3D.Material>|材質的速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
+|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 不退出一致的方式不可見的筆刷 （黑色的環境筆刷、 清除的筆刷等）。  請考慮從場景省略。|  
+|<xref:System.Windows.Media.Media3D.MaterialGroup>|每個<xref:System.Windows.Media.Media3D.Material>中<xref:System.Windows.Media.Media3D.MaterialGroup>導致另一個轉譯階段，因此包含許多資料，即使是簡單的資料，可以大幅提升您的 GPU 的填滿需求。  中材質數目最小化您<xref:System.Windows.Media.Media3D.MaterialGroup>。|  
   
-## 請參閱  
+## <a name="performance-impact-low"></a>效能的影響： 低  
+  
+|屬性|建議|  
+|-|-|  
+|<xref:System.Windows.Media.Media3D.Transform3DGroup>|當您不需要動畫，或資料繫結，而不使用此轉換群組中包含多個轉換，使用單一<xref:System.Windows.Media.Media3D.MatrixTransform3D>，它會存在，則為獨立轉換群組中的所有轉換的產品設定。|  
+|<xref:System.Windows.Media.Media3D.Light>|場景中的光源數目降到最低。 場景中太多的燈號會強制[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来改為使用軟體呈現。  限制大致上是 110<xref:System.Windows.Media.Media3D.DirectionalLight>物件，70<xref:System.Windows.Media.Media3D.PointLight>物件或 40<xref:System.Windows.Media.Media3D.SpotLight>物件。|  
+|<xref:System.Windows.Media.Media3D.ModelVisual3D>|從靜態物件移動物件，方法是將它們放置在不同的分隔<xref:System.Windows.Media.Media3D.ModelVisual3D>執行個體。  ModelVisual3D 是 「 高 」 比<xref:System.Windows.Media.Media3D.GeometryModel3D>因為它會快取已轉換的範圍。  GeometryModel3D 經過最佳化能夠模型;ModelVisual3D，已完成最佳化場景節點。  使用 ModelVisual3D GeometryModel3D 的共用執行個體放在場景。|  
+|<xref:System.Windows.Media.Media3D.Light>|您變更場景中的燈號的數字的次數降到最低。  淺色計數在每次變更強制的著色器重新產生金鑰和重新編譯，除非該組態之前已經存在 （並因此有其著色器快取）。|  
+|亮色調|黑色燈號不會顯示，但是這些物件會加入要呈現的時間;請考慮省略它們。|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|最小化的大型集合，在建構階段[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，例如 MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>，和<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>，預先調整大小的集合值的母體擴展之前。 可能的話，請傳遞的集合的建構函式已預先填入的資料結構，例如陣列或清單。|  
+  
+## <a name="see-also"></a>另請參閱  
  [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

@@ -1,34 +1,38 @@
 ---
-title: "設計工具重新裝載 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設計工具重新裝載"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 888282d10be9840817274e0fed36b3cb1cf6da32
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 設計工具重新裝載
-設計工具重新裝載是在自訂應用程式中裝載工作流程設計畫布的一般案例。大多數人熟悉的裝載應用程式是 Visual Studio，但在一些情況下，在應用程式中顯示工作流程設計工具可能很有用：  
+# <a name="designer-rehosting"></a>設計工具重新裝載
+設計工具重新裝載是在自訂應用程式中裝載工作流程設計畫布的一般案例。 大多數人熟悉的裝載應用程式是 Visual Studio，但在一些情況下，在應用程式中顯示工作流程設計工具可能很有用：  
   
--   監視應用程式 \(讓使用者視覺化處理序，以及有關處理序的執行階段資料，例如目前作用中狀態、彙總執行時間資料，或有關工作流程執行個體的其他資訊\)。  
+-   監視應用程式 (讓使用者視覺化處理序，以及有關處理序的執行階段資料，例如目前作用中狀態、彙總執行時間資料，或有關工作流程執行個體的其他資訊)。  
   
 -   讓使用者以有限活動集來自訂處理序的應用程式。  
   
- 為了支援這些類型的應用程式，.NET Framework 隨附工作流程設計工具，該設計工具可裝載於 WPF 應用程式或具有適當 WPF 裝載程式碼的 WinForms 應用程式。這個範例會示範下列情況：  
+ 為了支援這些類型的應用程式，.NET Framework 隨附工作流程設計工具，該設計工具可裝載於 WPF 應用程式或具有適當 WPF 裝載程式碼的 WinForms 應用程式。 這個範例會示範下列情況：  
   
 -   重新裝載 WF 設計工具。  
   
 -   使用重新裝載的工具箱以及屬性方格。  
   
-## 重新裝載設計工具  
- 這個範例示範如何建立 WPF 配置以包含設計工具，如下列方格配置所示 \(基於空間考量而省略工具箱程式碼\)。請注意包含設計工具和屬性方格之框線的命名。  
+## <a name="rehosting-the-designer"></a>重新裝載設計工具  
+ 這個範例示範如何建立 WPF 配置以包含設計工具，如下列方格配置所示 (基於空間考量而省略工具箱程式碼)。 請注意包含設計工具和屬性方格之框線的命名。  
   
 ```xaml  
 <Grid>  
@@ -43,10 +47,9 @@ caps.handback.revision: 9
     <Border Grid.Column="1" Name="DesignerBorder"/>  
     <Border Grid.Column="2" Name="PropertyBorder"/>  
 </Grid>  
-  
 ```  
   
- 範例接著建立設計工具，並且將其主要 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 與使用者介面中的適當容器產生關聯。在下列範例中有些其他程式碼行需要說明。要關聯 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 隨附之活動的預設活動設計工具，必須使用 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 呼叫。會呼叫 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 傳遞至要編輯的 WF 項目。最後，<xref:System.Activities.Presentation.WorkflowDesigner.View%2A> \(主要畫布\) 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> \(屬性方格\) 會放在使用者介面上。  
+ 範例接著建立設計工具，並且將其主要 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 與使用者介面中的適當容器產生關聯。 在下列範例中有些其他程式碼行需要說明。 若要針對 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 隨附的活動，與預設活動設計工具建立關聯，必須使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 呼叫。 會呼叫 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 以傳入所要編輯的 WF 項目。 最後，<xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (主要畫布) 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (屬性方格) 會放在使用者介面上。  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -61,11 +64,10 @@ protected override void OnInitialized(EventArgs e)
    DesignerBorder.Child = wd.View;  
    PropertyBorder.Child = wd.PropertyInspectorView;  
 }  
-  
 ```  
   
-## 使用重新裝載的工具列  
- 這個範例在 XAML 中以宣告方式使用重新裝載的工具箱控制項。請注意，在程式碼中可將類型傳遞給 <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> 建構函式。  
+## <a name="using-the-rehosted-toolbox"></a>使用重新裝載的工具列  
+ 這個範例在 XAML 中以宣告方式使用重新裝載的工具箱控制項。 請注意，在程式碼中可將類型傳遞給 <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> 建構函式。  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -117,10 +119,9 @@ protected override void OnInitialized(EventArgs e)
         <Border Grid.Column="2" Name="PropertyBorder"/>  
     </Grid>  
 </Window>  
-  
 ```  
   
-#### 使用範例  
+#### <a name="using-the-sample"></a>使用範例  
   
 1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 DesignerRehosting.sln 方案。  
   
@@ -129,12 +130,12 @@ protected override void OnInitialized(EventArgs e)
 3.  WPF 應用程式隨即以重新裝載的設計工具啟動。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

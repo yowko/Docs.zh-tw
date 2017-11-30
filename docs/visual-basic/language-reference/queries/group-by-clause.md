@@ -1,11 +1,10 @@
 ---
-title: "Group By 子句 (Visual Basic) |Microsoft 文件"
-ms.date: 2015-07-20
+title: "Group By 子句 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.QueryGroupByInto
@@ -13,35 +12,19 @@ f1_keywords:
 - vb.QueryGroupRef
 - vb.QueryGroupInto
 - vb.QueryGroup
-dev_langs:
-- VB
 helpviewer_keywords:
 - queries [Visual Basic], Group By
-- Group By statement
-- Group By clause
+- Group By statement [Visual Basic]
+- Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a40074c4602d6c0164c784d497fbfb134402bf62
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b719bfa2ebe4c324acf82a03e215e481283845fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 子句 (Visual Basic)
 群組查詢結果的項目。 也可用來將彙總函式套用至每個群組。 群組作業是根據一個或多個索引鍵。  
@@ -91,13 +74,13 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
 ## <a name="example"></a>範例  
  下列程式碼範例根據客戶的位置 (國家/地區) 進行客戶清單的分組，並提供每個群組中的客戶計數。 結果會依國家/地區名稱排序。 群組結果會依城市名稱排序。  
   
- [!code-vb[VbSimpleQuerySamples #&11;](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
- [在 Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查詢](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)   
+ [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [查詢](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)

@@ -1,23 +1,26 @@
 ---
-title: "HOW TO：實作以探索 Proxy 註冊的可探索服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：實作以探索 Proxy 註冊的可探索服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6633491ec3b01a4ca3494639e9537c9f6441da5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：實作以探索 Proxy 註冊的可探索服務
-本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在上一個主題中， [How to︰ 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，實作探索 proxy。 在這個主題中，您會建立一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，這個服務會傳送公告訊息 (`Hello` 和 `Bye`) 至探索 Proxy，使其向探索 Proxy 註冊和取消註冊其本身。  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>HOW TO：實作以探索 Proxy 註冊的可探索服務
+本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在先前的主題， [How to： 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，實作探索 proxy。 在這個主題中，您會建立一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，這個服務會傳送公告訊息 (`Hello` 和 `Bye`) 至探索 Proxy，使其向探索 Proxy 註冊和取消註冊其本身。  
   
 ### <a name="to-define-the-service-contract"></a>若要定義服務合約  
   
@@ -33,14 +36,14 @@ caps.handback.revision: 14
   
 4.  使用陳述式加入下列程式碼。  
   
-    ```  
+    ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
 5.  在 CalculatorService.cs 內定義服務合約。  
   
-    ```  
+    ```csharp  
     // Define a service contract.  
         [ServiceContract(Namespace = "http://Microsoft.Samples.Discovery")]  
         public interface ICalculatorService  
@@ -54,12 +57,11 @@ caps.handback.revision: 14
             [OperationContract]  
             double Divide(double n1, double n2);  
         }  
-  
     ```  
   
 6.  同樣地，在 CalculatorService.cs 內實作服務合約。  
   
-    ```  
+    ```csharp  
     // Service class which implements the service contract.      
         public class CalculatorService : ICalculatorService  
         {  
@@ -95,7 +97,6 @@ caps.handback.revision: 14
                 return result;  
             }  
         }  
-  
     ```  
   
 ### <a name="to-host-the-service"></a>若要裝載服務  
@@ -104,18 +105,16 @@ caps.handback.revision: 14
   
 2.  使用陳述式加入下列程式碼。  
   
-    ```  
+    ```csharp 
     using System;  
     using System.ServiceModel;  
     using System.ServiceModel.Description;  
     using System.ServiceModel.Discovery;  
-  
     ```  
   
 3.  在 `Main()` 方法內加入下列程式碼：  
   
-    ```  
-  
+    ```csharp  
     // Define the base address of the service  
     Uri baseAddress = new Uri("net.tcp://localhost:9002/CalculatorService/" + Guid.NewGuid().ToString());  
     // Define the endpoint address where announcement messages will be sent  
@@ -165,12 +164,12 @@ caps.handback.revision: 14
     }  
     ```  
   
- 您已經完成實作可探索的服務。 繼續[How to︰ 實作使用探索 Proxy 尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)。  
+ 您已經完成實作可探索的服務。 繼續前往[How to： 實作使用探索 Proxy 來尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)。  
   
 ## <a name="example"></a>範例  
  以下是本主題所使用之程式碼的完整清單。  
   
-```  
+```csharp  
 // CalculatorService.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -231,10 +230,9 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -295,10 +293,8 @@ namespace Microsoft.Samples.Discovery
     }  
 }  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
+
 ## <a name="see-also"></a>另請參閱  
- [WCF 探索](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)   
- [How to︰ 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [How to︰ 實作使用探索 Proxy 尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [WCF 探索](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [如何： 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [如何： 實作使用探索 Proxy 來尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

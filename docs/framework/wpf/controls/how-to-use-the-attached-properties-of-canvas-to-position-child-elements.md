@@ -1,41 +1,48 @@
 ---
-title: "如何：使用 Canvas 的附加屬性置放子項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "附加屬性 [WPF 設計工具]"
-  - "Canvas 控制項, 附加屬性"
+title: "操作說明：使用 Canvas 的附加屬性置放子元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- attached properties [WPF Designer]
+- Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 85ee852c868f26937494d5d340d2db4210224754
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Canvas 的附加屬性置放子項目
-本範例示範如何使用 <xref:System.Windows.Controls.Canvas> 的[附加屬性](GTMT)來置放子項目。  
+# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>操作說明：使用 Canvas 的附加屬性置放子元素
+這個範例示範如何使用附加的屬性<xref:System.Windows.Controls.Canvas>来放置子項目。  
   
-## 範例  
- 下列範例加入四個 <xref:System.Windows.Controls.Button> 項目，做為父代 <xref:System.Windows.Controls.Canvas> 的子項目。  每個子項目分別代表 <xref:System.Windows.Controls.Canvas>: <xref:System.Windows.Controls.Canvas.Bottom%2A>、<xref:System.Windows.Controls.Canvas.Left%2A>、<xref:System.Windows.Controls.Canvas.Right%2A> 和 <xref:System.Windows.Controls.Canvas.Top%2A> 的不同附加屬性。  每個 <xref:System.Windows.Controls.Button> 的放置位置都是對相於父代 <xref:System.Windows.Controls.Canvas> 的位置，而且是根據其指定的屬性值來放置。  
+## <a name="example"></a>範例  
+ 下列範例會將四個<xref:System.Windows.Controls.Button>為父系的子元素的項目<xref:System.Windows.Controls.Canvas>。 每個子項目代表相異的附加的屬性的<xref:System.Windows.Controls.Canvas>: <xref:System.Windows.Controls.Canvas.Bottom%2A>， <xref:System.Windows.Controls.Canvas.Left%2A>， <xref:System.Windows.Controls.Canvas.Right%2A>，和<xref:System.Windows.Controls.Canvas.Top%2A>。 每個<xref:System.Windows.Controls.Button>相對於父<xref:System.Windows.Controls.Canvas>並根據其指派的屬性值。  
   
  [!code-cpp[CanvasAttachedProperties#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
  [!code-csharp[CanvasAttachedProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]
  [!code-vb[CanvasAttachedProperties#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
   
-## 請參閱  
- <xref:System.Windows.Controls.Canvas>   
- <xref:System.Windows.Controls.Canvas.Bottom%2A>   
- <xref:System.Windows.Controls.Canvas.Left%2A>   
- <xref:System.Windows.Controls.Canvas.Right%2A>   
- <xref:System.Windows.Controls.Canvas.Top%2A>   
- <xref:System.Windows.Controls.Button>   
- [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)   
- [HOW TO 主題](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Controls.Canvas>  
+ <xref:System.Windows.Controls.Canvas.Bottom%2A>  
+ <xref:System.Windows.Controls.Canvas.Left%2A>  
+ <xref:System.Windows.Controls.Canvas.Right%2A>  
+ <xref:System.Windows.Controls.Canvas.Top%2A>  
+ <xref:System.Windows.Controls.Button>  
+ [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [操作說明主題](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
  [附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)

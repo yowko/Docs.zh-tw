@@ -1,34 +1,37 @@
 ---
-title: "工作 3：建立工具箱與 PropertyGrid 窗格 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "工作 3：建立工具箱與 PropertyGrid 窗格"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6896e97a4f9b7625efcef40164c3497ef4f7c90a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 工作 3：建立工具箱與 PropertyGrid 窗格
-在這個工作中，您將會建立 \[**工具箱**\] 和 \[**PropertyGrid**\] 窗格，並將它們加入至重新裝載的 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中。  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>工作 3：建立工具箱與 PropertyGrid 窗格
+在這個工作中，您將建立**工具箱**和**PropertyGrid**窗格並將其新增至重新裝載[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。  
   
- 如需參考，請參閱本主題結尾的程式碼，此程式碼是在完成[重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)主題系列後的 MainWindow.xaml.cs 檔案中。  
+ 如需參考，應該在 MainWindow.xaml.cs 檔案完成三個之後的程式碼中的工作[重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)一系列的主題會提供於本主題的結尾。  
   
-### 若要建立工具箱，並將它加入至方格  
+### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>若要建立工具箱，並將它加入至方格  
   
-1.  開啟您依照[工作 2：裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md) 中描述的程序所取得的 HostingApplication 專案。  
+1.  開啟 HostingApplication 專案中所述的程序取得[工作 2： 裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)。  
   
-2.  以滑鼠右鍵按一下 \[**方案總管**\] 窗格中的 MainWindow.xaml 檔案，然後選取 \[**檢視程式碼**\]。  
+2.  在**方案總管 中** 窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。  
   
-3.  將 `GetToolboxControl` 方法加入至 `MainWindow` 類別 \(此方法會建立 <xref:System.Activities.Presentation.Toolbox.ToolboxControl>\)、將新 \[**工具箱**\] 分類加入至 \[**工具箱**\]，然後指派 <xref:System.Activities.Statements.Assign> 和 <xref:System.Activities.Statements.Sequence> 活動型別至該分類。  
+3.  新增`GetToolboxControl`方法`MainWindow`類別會建立<xref:System.Activities.Presentation.Toolbox.ToolboxControl>，加入新**工具箱**類別**工具箱**，並指派<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動類型，該類別目錄。  
   
     ```csharp  
-  
     private ToolboxControl GetToolboxControl()  
     {  
         // Create the ToolBoxControl.  
@@ -53,26 +56,22 @@ caps.handback.revision: 15
         ctrl.Categories.Add(category);  
         return ctrl;  
     }  
-  
     ```  
   
-4.  將 `AddToolbox` 私用方法加入至 `MainWindow` 類別，將 \[**工具箱**\] 放置在資料格線的最左欄。  
+4.  加入私用`AddToolbox`方法`MainWindow`類別，將**工具箱**方格左側的資料行中。  
   
     ```csharp  
-  
     private void AddToolBox()  
     {  
         ToolboxControl tc = GetToolboxControl();  
         Grid.SetColumn(tc, 0);  
         grid1.Children.Add(tc);  
     }  
-  
     ```  
   
-5.  在 `MainWindow()` 類別建構函式中加入 `AddToolBox` 方法的呼叫，如下列程式碼所示。  
+5.  在 `AddToolBox` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。  
   
     ```csharp  
-  
     public MainWindow()  
     {  
         InitializeComponent();  
@@ -81,31 +80,27 @@ caps.handback.revision: 15
   
         this.AddToolBox();  
     }  
-  
     ```  
   
-6.  按 F5 以建置及執行您的方案。接著，應該會顯示 \[**工具箱**\]，其中包含 <xref:System.Activities.Statements.Assign> 和 <xref:System.Activities.Statements.Sequence> 活動。  
+6.  按 F5 以建置及執行您的方案。 **工具箱**包含<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動應該會顯示。  
   
-### 若要建立 PropertyGrid  
+### <a name="to-create-the-propertygrid"></a>若要建立 PropertyGrid  
   
-1.  以滑鼠右鍵按一下 \[**方案總管**\] 窗格中的 MainWindow.xaml 檔案，然後選取 \[**檢視程式碼**\]。  
+1.  在**方案總管 中** 窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。  
   
-2.  在 `MainWindow` 類別中加入 `AddPropertyInspector` 方法，將 **PropertyGrid** 窗格放置在資料格線的最右欄。  
+2.  新增`AddPropertyInspector`方法`MainWindow`類別來放置**PropertyGrid**在方格上最右側資料行中的窗格。  
   
     ```csharp  
-  
     private void AddPropertyInspector()  
     {  
         Grid.SetColumn(wd.PropertyInspectorView, 2);  
         grid1.Children.Add(wd.PropertyInspectorView);              
     }  
-  
     ```  
   
-3.  在 `MainWindow()` 類別建構函式中加入 `AddPropertyInspector` 方法的呼叫，如下列程式碼所示。  
+3.  在 `AddPropertyInspector` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。  
   
     ```csharp  
-  
     public MainWindow()  
     {  
         InitializeComponent();  
@@ -115,16 +110,14 @@ caps.handback.revision: 15
   
         this.AddPropertyInspector();   
     }  
-  
     ```  
   
-4.  按 F5 以建置及執行方案。\[**工具箱**\]、工作流程設計畫布與 \[**PropertyGrid**\] 窗格應會全部顯示，當您將 <xref:System.Activities.Statements.Assign> 活動或 <xref:System.Activities.Statements.Sequence> 活動拖曳到設計畫布上時，屬性方格應會根據反白標示的活動更新。  
+4.  按 F5 以建置及執行方案。 **工具箱**，工作流程設計畫布，和**PropertyGrid**窗格應會全部顯示，以及當您拖曳<xref:System.Activities.Statements.Assign>活動或<xref:System.Activities.Statements.Sequence>拖曳到設計畫布上的活動屬性方格應該更新根據反白顯示的活動。  
   
-## 範例  
+## <a name="example"></a>範例  
  MainWindow.xaml.cs 檔案現在應該會包含下列程式碼。  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -226,10 +219,9 @@ namespace HostingApplication
   
     }  
 }  
-  
 ```  
   
-## 請參閱  
- [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [工作 1：建立新的 Windows Presentation Foundation 應用程式](../../../docs/framework/windows-workflow-foundation//task-1-create-a-new-wpf-app.md)   
- [工作 2：裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a>另請參閱  
+ [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [工作 1：建立新的 Windows Presentation Foundation 應用程式](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
+ [工作 2：裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

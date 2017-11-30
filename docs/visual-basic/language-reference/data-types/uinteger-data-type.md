@@ -1,62 +1,84 @@
 ---
-title: "UInteger Data Type | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.uinteger"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "numbers, whole"
-  - "UInteger data type"
-  - "literal type characters, UI"
-  - "whole numbers"
-  - "integral data types"
-  - "integer numbers"
-  - "numbers, integer"
-  - "integers, data types"
-  - "integers, types"
-  - "UI literal type characters"
-  - "data types [Visual Basic], integral"
+title: "UInteger 資料類型"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.uinteger
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- UInteger data type
+- literal type characters [Visual Basic], UI
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- UI literal type characters [Visual Basic]
+- data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 3f3852bd56d11c19e327e6c2f3e23cfb082a54e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UInteger Data Type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="uinteger-data-type"></a>UInteger 資料類型
 
-存放不帶正負號的 32 位元 \(4 位元組\) 整數，其值的範圍是從 0 到 4,294,967,295。  
+存放不帶正負號的 32 位元 （4 個位元組） 整數，範圍從 0 到 4,294,967,295。  
   
-## 備註  
- `UInteger` 資料型別可利用最有效的資料寬度，提供不帶正負號的最大值。  
+## <a name="remarks"></a>備註
+
+ `UInteger`資料類型提供了最有效率的資料寬度不帶正負號的最大值。  
   
  `UInteger` 的預設值為 0。  
   
-## 程式設計提示  
- `UInteger` 和 `Integer` 資料型別在 32 位元處理器上可提供最佳效能，因為其整數型別 \(Integer Type\) 較小 \(`UShort`、`Short`、`Byte` 和 `SByte`\)，即使其使用較少的位元、需要更多載入、儲存和擷取時間。  
+## <a name="literal-assignments"></a>常值的指派
+
+您可以宣告和初始化`UInteger`變數將其指派十進位常值、 十六進位常值、 八進位常值，或是 （從開始使用 Visual Basic 2017） 二進位常值。 如果整數常值超出 `UInteger` 的範圍 (亦即，如果小於 <xref:System.UInt32.MinValue?displayProperty=nameWithType> 或大於 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
+
+在下列範例中，以十進位、十六進位和二進位常值表示的 3,000,000,000 整數，會指派給 `UInteger` 值。
   
--   **負數：** 由於 `UInteger` 是不帶正負號的型別，故無法代表負數。  如果您在評估為 `UInteger` 型別的運算式中使用一元 \(Unary\) 減號 \(`-`\) 運算子，則 Visual Basic 會先將運算式轉換為 `Long`。  
+[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]  
+
+> [!NOTE] 
+> 使用前置詞`&h`或`&H`來表示十六進位常值前置詞`&b`或`&B`代表二進位常值，以及前置詞`&o`或`&O`代表八進位常值。 十進位常值沒有前置詞。
+
+從 Visual Basic 2017 開始，您也可以使用底線字元， `_`，當做數字分隔符號，以提升可讀性，如下列範例所示。
+
+[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
+
+數值常值也可以包含`UI`或`ui`[類型字元](../../programming-guide\language-features\data-types/type-characters.md)代表`UInteger`資料類型，如下列範例所示。
+
+```vb
+Dim number = &H0FAC14D7ui
+```
+
+## <a name="programming-tips"></a>程式設計提示
+
+ `UInteger`和`Integer`資料型別提供最佳效能的 32 位元處理器，因為較小的整數類型 (`UShort`， `Short`， `Byte`，和`SByte`)，即使他們使用較少的位元，需要更多時間載入、 儲存和擷取。  
   
--   **符合 CLS 標準：** `UInteger` 資料型別不屬於 [語言獨立性以及與語言無關的元件](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) 的一部分，所以符合 CLS 標準的程式碼不可以採納使用此資料型別的元件。  
+-   **負的數字。** 因為`UInteger`是不帶正負號的類型，它無法表示為負數。 如果您使用一元減號 (`-`) 運算子的運算式評估為輸入`UInteger`，Visual Basic 會將轉換的運算式`Long`第一次。  
   
--   **Interop 考量：** 如果您正在使用不是針對 .NET Framework 所撰寫的元件，例如 Automation 或 COM 物件，請記住，如 `uint` 的型別在其他環境中可以有不同的資料寬度 \(16 位元\)。  如果您要將 16 位元引數傳遞到這類元件，則需將其宣告為 `UShort` 而不是 Managed Visual Basic 程式碼中的 `UInteger`。  
+-   **Cls 符合性。** `UInteger`資料類型不是屬於[Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法使用所使用的元件。
   
--   **擴展：** `UInteger` 資料型別會擴展成 `Long`、`ULong`、`Decimal`、`Single` 和 `Double`。  這表示您可以將 `UInteger` 轉換成這些類型的任何一項，而不會發生 <xref:System.OverflowException?displayProperty=fullName> 錯誤。  
+-   **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，這類類型`uint`在其他環境中可以有不同的資料寬度 （16 位元）。 如果您要將 16 位元引數至這類元件，將它宣告為`UShort`而不是`UInteger`受管理的 Visual Basic 程式碼。  
   
--   **型別字元。** 將常值型別字元 `UI` 附加到常值，會強制其成為 `UInteger` 資料型別。  `UInteger` 沒有識別項型別字元。  
+-   **擴展。** `UInteger`資料類型可擴展成`Long`， `ULong`， `Decimal`， `Single`，和`Double`。 這表示您可以將轉換`UInteger`而不會發生這些類型的任何<xref:System.OverflowException?displayProperty=nameWithType>錯誤。  
   
--   **架構型別。** 在 .NET Framework 中對應的型別為 <xref:System.UInt32?displayProperty=fullName> 結構。  
+-   **類型字元。** 將常值類型字元附加`UI`到常值會強制其成為`UInteger`資料型別。 `UInteger`有任何識別項類型字元。  
   
-## 請參閱  
- <xref:System.UInt32>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [How to: Call a Windows Function that Takes Unsigned Types](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.UInt32?displayProperty=nameWithType> 結構。  
+  
+## <a name="see-also"></a>另請參閱  
+ <xref:System.UInt32>  
+ [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -1,64 +1,63 @@
 ---
-title: "SplitContainer 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SplitContainer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SplitContainer 控制項 [Windows Form], 關於 SplitContainer 控制項"
+title: "SplitContainer 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SplitContainer
+helpviewer_keywords: SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10f18c46c85ed840b6625d9ed754d1d036a80975
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# SplitContainer 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個複合控制項；它有兩個由可移動的分隔列所分隔的面板。  當滑鼠指標移到此分隔列上，指標會變更其外觀，顯示此分隔列是可移動的。  
+# <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控制項概觀 (Windows Form)
+Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個複合控制項，其中包含兩個可移動的分隔列所分隔的面板。 將滑鼠指標移到分隔列上時，指標會變更形狀，以顯示分隔列是可移動的。  
   
 > [!IMPORTANT]
->  在 \[**工具箱**\] 中，<xref:System.Windows.Forms.SplitContainer> 控制項取代了在之前 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 版本的 <xref:System.Windows.Forms.Splitter> 控制項。  <xref:System.Windows.Forms.SplitContainer> 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中仍然包含 <xref:System.Windows.Forms.Splitter> 類別，以保障與現有應用程式間的相容性，但我們強烈建議您在新的專案使用 <xref:System.Windows.Forms.SplitContainer> 控制項。  
+>  在**工具箱**，<xref:System.Windows.Forms.SplitContainer>控制項取代<xref:System.Windows.Forms.Splitter>控制了在舊版的[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。 <xref:System.Windows.Forms.SplitContainer> 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 <xref:System.Windows.Forms.Splitter>類別仍然包含在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相容性與現有的應用程式，但強烈建議您將<xref:System.Windows.Forms.SplitContainer>新專案的控制項。  
   
- 使用 <xref:System.Windows.Forms.SplitContainer> 控制項，您可以建立複雜的使用者介面；通常，在面板的選擇會決定另一個面板中物件呈現的方式。  對於顯示和瀏覽資訊而言，這個安排非常的有效率。  在區域內，兩個面板可以讓您彙總 \(Aggregate\) 區域內的資訊，而分隔列，或是說「分隔器」\(Splitter\) 可以讓使用者更容易調整面板的大小。  
+ 與<xref:System.Windows.Forms.SplitContainer>控制項，您可以建立複雜的使用者介面; 通常，一個面板中的選擇會決定其他面板中所顯示的物件。 這種排列方式可有效地顯示及瀏覽資訊。 擁有兩個面板可讓您彙總資訊區域中，並提升列或 「 分隔器 」 可讓輕鬆調整面板的大小的使用者。  
   
- 一個以上的 <xref:System.Windows.Forms.SplitContainer> 控制項也可以是巢狀的，而第二個 <xref:System.Windows.Forms.SplitContainer> 控制項是水平導向，以建立上方和下方的面板。  
+ 多個<xref:System.Windows.Forms.SplitContainer>控制項也可以巢狀，第二個<xref:System.Windows.Forms.SplitContainer>控制項的水平導向建立上方和下方的面板。  
   
- 請注意，<xref:System.Windows.Forms.SplitContainer> 控制項預設是可以以鍵盤進行存取；如果 <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 屬性是設定為 `false`，使用者也可以按方向鍵來移動分隔器。  
+ 請注意，<xref:System.Windows.Forms.SplitContainer>鍵盤存取預設控制項; 使用者可以按下方向鍵，如果移動分隔器<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>屬性設定為`false`。  
   
- <xref:System.Windows.Forms.SplitContainer> 控制項的 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 屬性會決定分隔器的方向，而不是控制項本身的方向。  因此，當這個屬性設定為 <xref:System.Windows.Forms.Orientation> 時，分隔器會從上至下執行，建立左邊和右邊的面板。  
+ <xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>控制項會決定分隔器，而不是控制項本身的方向。 因此，當這個屬性設定為<xref:System.Windows.Forms.Orientation.Vertical>，分隔器執行由上往下，建立左、 右面板。  
   
- 此外，請注意 <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> 屬性的值視 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 屬性的值而有不同。  如需詳細資訊，請參閱 <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> 屬性。  
+ 此外，請注意，值<xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>屬性的值而有所不同<xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性。 如需詳細資訊，請參閱<xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>屬性。  
   
- 您也可以限制 <xref:System.Windows.Forms.SplitContainer> 控制項的大小及動作。  <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 屬性決定哪一個面板會在 <xref:System.Windows.Forms.SplitContainer> 控制項調整大小後保持相同大小，而 <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 屬性則是決定分隔器是否可由鍵盤或滑鼠來移動。  
+ 您也可以限制的大小和移動<xref:System.Windows.Forms.SplitContainer>控制項。 <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>屬性會決定哪個面板會維持相同大小之後<xref:System.Windows.Forms.SplitContainer>調整控制項大小，而<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>屬性會決定分隔器是否可移動的鍵盤或滑鼠。  
   
 > [!NOTE]
->  即使 <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 屬性設定為 `true`，分隔器仍舊可以以程式方式移動；例如，使用 <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 屬性。  
+>  即使<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>屬性設定為`true`，分隔器可能仍然以程式設計的方式，例如使用移動<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>屬性。  
   
- 最後，每個 <xref:System.Windows.Forms.SplitContainer> 控制項的面板都有可決定自己大小的屬性。  
+ 最後，每個面板<xref:System.Windows.Forms.SplitContainer>控制項具有屬性，以決定其個別的大小。  
   
-## 常用的屬性、方法和事件  
+## <a name="commonly-used-properties-methods-and-events"></a>常用屬性、方法和事件  
   
 |名稱|描述|  
-|--------|--------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 屬性|決定哪一個面板在 <xref:System.Windows.Forms.SplitContainer> 控制項已變更大小後，保持相同大小。|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 屬性|決定分隔器是否可隨鍵盤或滑鼠移動。|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> 屬性|決定分隔器要呈垂直或水平排列。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 屬性|決定從左方或上方邊緣至可移動的分隔列間的距離 \(以像素計算\)。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性|決定使用者可移動分隔器之最短距離 \(以像素計算\)。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 屬性|決定分隔器的厚度 \(以像素計算\)。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 事件|當分隔器移動時發生。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 事件|當分隔器移動後發生。|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 屬性|決定哪個面板維持相同大小之後<xref:System.Windows.Forms.SplitContainer>調整控制項大小。|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 屬性|決定分隔器是否可移動的鍵盤或滑鼠。|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> 屬性|決定分隔器是否垂直或水平排列。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 屬性|決定從左方或上方的邊緣可移動的分隔列以像素為單位的距離。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性|決定最小距離，單位為像素，使用者可以移動分隔器。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 屬性|決定的厚度，以像素的分隔器。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>事件|發生於分隔器移動。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>事件|發生於分隔器移動。|  
   
-## 請參閱  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
- [SplitContainer Control Sample](http://msdn.microsoft.com/zh-tw/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [SplitContainer 控制項範例](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)

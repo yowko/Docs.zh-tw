@@ -1,78 +1,80 @@
 ---
-title: "ClearType 概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ClearType, 技術"
-  - "印刷樣式, ClearType 技術"
+title: "ClearType 概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], ClearType technology
+- ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6c6881482203d86beb3b32b9650ed58b5f7562b8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# ClearType 概觀
-本主題概要說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技術。  
+# <a name="cleartype-overview"></a>ClearType 概觀
+本主題提供於 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中找到之 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技術的概觀。  
   
-   
   
 <a name="overview"></a>   
-## 技術概觀  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 開發的軟體技術，能夠改善現有 LCD \(液晶顯示，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器\) 文字的可讀性。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的運作方式是在 LCD 螢幕的每個像素中存取個別的垂直色碼元素。  在 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 之前，電腦可以顯示的最小細節是單一像素，但是透過 LCD 監視器上執行 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，我們現在可以顯示寬度最小為十分之一個像素的文字特色。  極高解析度會增加文字顯示中微小細節的清晰度，讓長時間閱讀方便得多。  
+## <a name="technology-overview"></a>技術概觀  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，後者改善了現有 LCD (液晶顯示器) 的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的運作方式是存取 LCD 螢幕中每個像素的個別垂直色帶項目。 在 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 之前，電腦能夠顯示的詳細資料最小層級是單一像素，但在 LCD 監視器上執行 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 之後，顯示的文字特性可以小到像素寬度的幾分之一。 額外的解析度可提高文字顯示細節的銳度，即使經過長時間也容易閱讀。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中提供的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是最新一代的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，其中包含幾項針對 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 提供之版本的改進功能。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是最新一代的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，其具有 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 中之版本的多項改進。  
   
 <a name="sub-pixel_positioning"></a>   
-## 子像素定位  
- 對舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 所做最重大的改進之處是子像素定義的使用。  不同於 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 實作，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 可以讓圖像 \(Glyph\) 從像素內部開始，而不只是像素的週框。  由於在定位像素上的這種額外解析度，使得圖像的間距和比例更為精準也更為一致。  
+## <a name="sub-pixel-positioning"></a>子像素定位  
+ 前一版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的重大改進就是使用子像素定位。 不同於 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 實作，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 允許字符在像素內開始，不是只能在像素界限上開始。 因為定位字符有此額外的解析度，所以字符的間距和比例更精確且一致。  
   
- 下列兩個範例顯示使用子像素定位時，圖像從任何子像素週框起始的外觀。  左邊的範例是使用舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 產生器呈現的結果，並未採用子像素定位功能。  右邊的範例是使用新版的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 產生器，利用子像素定義所呈現的外觀。  請注意右側影像中每個 **e** 和 **l** 都稍有不同，因為每個字母的起點都在不同的子像素中。  在螢幕上檢視正常大小的文字時，由於圖像影像的高對比，使得這項差異並不顯著。  只有在 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 中已加入複雜的色彩篩選功能，才會產生這種結果。  
+ 下列兩例示範使用子像素定位時，字符如何能在任何子像素界限上開始。 左邊的範例使用舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 轉譯器轉譯，未採用子像素定位。 右邊的範例使用新版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 轉譯器轉譯，採用子像素定位。 請注意右側映像中每個 **e** 和 **l** 的轉譯方式都略有不同，因為它們每一個都在不同的子像素上開始。 在螢幕上檢視正常大小的文字時，因為字符映像的高對比，所以這項差異不是很明顯。 這可能只是因為 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 納入的複雜色彩篩選。  
   
- ![以兩種 ClearType 版本顯示的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_01")  
-舊版和新版 ClearType 顯示的文字  
+ ![以兩種 ClearType 版本顯示的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+以新舊版 ClearType 顯示的文字  
   
- 下列兩個範例比較舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 產生器與新版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 產生器的輸出。  如右邊範例所示，子像素定位大幅改善了螢幕上的文字間距，尤其是尺寸較小，而使得子像素和完整像素之間差距代表了圖像寬度的明顯比例時。  請注意第二個影像中的字母間距較為平均。  子像素定位在文字螢幕整體外觀上的優勢已大幅提升，同時也代表 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 技術的一項重大革命。  
+ 下列兩例比較舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 轉譯器和新版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 轉譯器的輸出。 顯示在右側的子像素定位，可大幅提升畫面中的類型間距，尤其是子像素和完整像素在字符寬度有明顯比例差異的小尺寸狀況。 請注意，第二個映像中的字母間距更勻稱。 文字畫面整體外觀的子像素定位累積優勢會大幅增加，並以 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 技術表現顯著的演進。  
   
- ![以舊版 ClearType 顯示的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_02")  
-舊版和新版 ClearType 的文字  
+ ![以舊版 ClearType 顯示的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+以新舊版 ClearType 顯示的文字  
   
 <a name="y-direction_antialiasing"></a>   
-## Y 方向消除鋸齒  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改善是 Y 方向消除鋸齒。  [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 沒有 Y 方向消除鋸齒，因此只能在 X 軸提供較佳的解析度，但 Y 軸的解析度則較差。  在淺曲線的上下端，鋸齒邊緣降低了文字的可讀性。  
+## <a name="y-direction-antialiasing"></a>Y 方向消除鋸齒  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改進是 Y 方向消除鋸齒功能。 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 沒有 Y 方向消除鋸齒功能，能在 X 軸提供更好的解析度，Y 軸則否。 微曲部分頂端和底端的鋸齒狀邊緣會降低其可讀性。  
   
- 下列範例顯示沒有 Y 方向消除鋸齒的效果。  在這個案例中，字母上下兩端的鋸齒邊緣非常明顯。  
+ 下例顯示不使用 Y 方向消除鋸齒的效果。 在此情況下，字母上方與下方的鋸齒狀邊緣很明顯。  
   
- ![微曲部分產生鋸齒狀邊緣的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_03")  
-淺曲線上有鋸齒邊緣的文字  
+ ![微曲部分產生鋸齒狀邊緣的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+微曲部分產生鋸齒狀邊緣的文字  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 提供 Y 方向層級的消除鋸齒功能，讓所有的鋸齒邊緣變得平滑。  這項功能對於改善東亞語系的可讀性尤其重要，因為在東亞語系中，表意文字之水平和垂直淺曲線的數量幾乎相等。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 在 Y 方向層級上提供消除鋸齒功能，平滑所有的鋸齒狀邊緣。 這對改善東亞語言的可讀性特別重要，因為表意字元的水平和垂直微曲部分比重幾乎相同。  
   
- 下列範例顯示 Y 方向消除鋸齒的效果。  在這個案例中，字母上下兩端顯示平滑的曲線。  
+ 下例顯示使用 Y 方向消除鋸齒的效果。 在此情況下，字母的上方與下方會顯示平滑的曲線。  
   
- ![套用 ClearType Y 方向消除鋸齒功能的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_04")  
-使用 ClearType Y 方向消除鋸齒的文字  
+ ![使用 ClearType y &#45; 反方向 &#45;文字; 別名](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+以 ClearType Y 方向消除鋸齒功能顯示的文字  
   
 <a name="hardware_acceleration"></a>   
-## 硬體加速  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 可以利用硬體加速來提高效能，並降低 CPU 負載和系統記憶體需求。  透過圖形卡的像素著色器 \(Pixel Shader\) 和視訊記憶體，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 提供了快速呈現文字的功能，尤其是在使用動畫時。  
+## <a name="hardware-acceleration"></a>硬體加速  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 可以利用硬體加速提升效能，並降低 CPU 負載和系統記憶體需求。 使用圖形卡的像素著色器和視訊記憶體，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 可以更快速轉譯文字，特別是使用動畫時。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 不會修改全系統的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 設定。  停用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 會將 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的消除鋸齒設定為灰階模式。此外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 也不會修改 [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx) 的設定。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 不會修改整個系統的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 設定。 停用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 會將 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 消除鋸齒設成灰階模式。 此外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 不會修改 [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx) 的設定。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的其中一項架構設計決策是讓無關解析度的配置加強支援日漸普及的高解析度 DPI 監視器。  這項決策的結果是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 無法在某些東亞字型中支援鋸齒文字呈現或點陣圖，因為這兩者都與解析度相關。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構設計決策之一，就是解析度獨立的版面配置能更有效地支援日益普及的高解析度 DPI 監視器。 這樣做的後果是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 不支援別名文字轉譯或某些東亞文字字型的點陣圖，因為它們兩個都是解析度相依。  
   
 <a name="further_information"></a>   
-## 詳細資訊  
- [ClearType 資訊](http://www.microsoft.com/typography/ClearTypeInfo.mspx) \(英文\)  
+## <a name="further-information"></a>詳細資訊  
+ [ClearType 資訊](http://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
- [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx) \(英文\)  
+ [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ClearType 登錄設定](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)

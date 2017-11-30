@@ -1,29 +1,27 @@
 ---
-title: "Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30686"
-  - "bc30686"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30686"
+title: "預設屬性的存取權是繼承的介面成員 &#39; 中模稜兩可&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 1>.<&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 2>&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30686
+- bc30686
+helpviewer_keywords: BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-介面繼承自兩個介面，而這兩個介面都有以相同的名稱宣告預設屬性。  在不使用完整名稱的情況下，編譯器無法解析這個預設屬性的存取。  下列範例將說明這點。  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>預設屬性的存取權是繼承的介面成員 &#39; 中模稜兩可&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 1>.<&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 2>&gt;&#39;
+介面繼承自兩個介面，其中每個宣告預設屬性具有相同名稱。 編譯器無法解析存取無限制的這個預設屬性。 下列範例將說明這點。  
   
 ```  
 Public Interface Iface1  
@@ -43,21 +41,21 @@ Public Class testClass
 End Class  
 ```  
   
- 當您指定 `testObj(1)` 時，編譯器會嘗試將其解析為預設屬性。  然而，由於繼承介面的關係，有可能出現兩個預設屬性，所以編譯器會發出這個錯誤。  
+ 當您指定`testObj(1)`，編譯器會嘗試將它解析為預設屬性。 不過，有兩個可能的預設屬性因為繼承的介面，所以編譯器會發出這項錯誤。  
   
- **錯誤 ID**：BC30686  
+ **錯誤 ID:** BC30686  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   避免繼承有相同名稱的任何成員。  在前面的範例中，如果 `testObj` 並不需要 `Iface2` 的任何成員，那麼請以下列方式宣告：  
+-   避免繼承任何成員具有相同名稱。 在上述範例中，如果`testObj`不需要任何的成員，例如， `Iface2`，然後將它宣告，如下所示：  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     \-或\-  
+     -或-  
   
--   在類別中實作繼承介面。  然後，您可以使用不同的名稱實作每個繼承屬性。  然而，其中只有一項可以是實作類別的預設屬性。  下列範例將說明這點。  
+-   類別中實作繼承的介面。 然後您可以實作每個具有不同名稱的繼承屬性。 不過，其中只有一個元件可以實作類別的預設屬性。 下列範例將說明這點。  
   
     ```  
     Public Class useIface3  
@@ -71,5 +69,5 @@ End Class
     End Class  
     ```  
   
-## 請參閱  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>另請參閱  
+ [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

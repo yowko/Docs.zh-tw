@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - COM interop, packaging assemblies
@@ -29,16 +23,15 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73866ddc1e8199dfad188179dc668bc31ab3c93d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 149d0c2595844c5b71767e2ea3ee5b0c6002c080
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="packaging-an-assembly-for-com"></a>封裝 COM 的組件
 COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型的下列資訊：  
@@ -96,13 +89,12 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
  [.NET 服務安裝工具 (Regsvcs.exe)](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md) 會將 Managed 類別新增至 Windows 2000 元件服務，並將數項工作合併到單一工具。 除了載入和註冊組件之外，Regsvcs.exe 還可以在現有 COM+ 1.0 應用程式中產生、註冊和安裝型別程式庫。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.TypeLibConverter>   
- <xref:System.Runtime.InteropServices.ITypeLibConverter>   
- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [限定交互操作的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
- [類別介面簡介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [組件安全性考量](../../../docs/framework/app-domains/assembly-security-considerations.md)   
- [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)   
- [向 COM 註冊組件](../../../docs/framework/interop/registering-assemblies-with-com.md)   
+ <xref:System.Runtime.InteropServices.TypeLibConverter>  
+ <xref:System.Runtime.InteropServices.ITypeLibConverter>  
+ [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [限定互通的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
+ [類別介面簡介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [組件安全性考量](../../../docs/framework/app-domains/assembly-security-considerations.md)  
+ [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [向 COM 註冊組件](../../../docs/framework/interop/registering-assemblies-with-com.md)  
  [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
-

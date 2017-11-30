@@ -1,24 +1,26 @@
 ---
-title: "運算子對於 &#39;&lt;名稱1&gt;&#39; 和 &#39;&lt;名稱2&gt;&#39; 而言是無效的 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrNoValidOperator_TwoOperands"
+title: "運算子不是有效值 &#39;&lt;name1&gt;&#39; 和 &#39;&lt;name2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrNoValidOperator_TwoOperands
 ms.assetid: b2b1e6ce-d262-4644-8085-e48a2e2f06a6
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1898cf4830a587fbfc086d518be3e8aea801c7ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 運算子對於 &#39;&lt;名稱1&gt;&#39; 和 &#39;&lt;名稱2&gt;&#39; 而言是無效的
+# <a name="operator-is-not-valid-for-39ltname1gt39-and-39ltname2gt39"></a>運算子不是有效值 &#39;&lt;name1&gt;&#39; 和 &#39;&lt;name2&gt;&#39;
 運算子不適用於所操作的類型。  
   
-### 更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
 1.  請確定運算子適用於所操作的類型。  
   
-## 請參閱  
- [Operators](../../visual-basic/language-reference/operators/index.md)
+## <a name="see-also"></a>另請參閱  
+ [運算子](../../visual-basic/language-reference/operators/index.md)

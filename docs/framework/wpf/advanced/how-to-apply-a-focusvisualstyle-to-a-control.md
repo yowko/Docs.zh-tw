@@ -1,39 +1,42 @@
 ---
-title: "如何：對控制項套用 FocusVisualStyle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FocusVisualStyle 屬性"
-  - "屬性, FocusVisualStyle"
+title: "如何：對控制項套用 FocusVisualStyle"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- properties [WPF], FocusVisualStyle
+- FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f614e244293d08cd836edaf82496ca9e7b51423e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：對控制項套用 FocusVisualStyle
-本範例示範如何使用 <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> 屬性在資源中建立焦點視覺化樣式，並將該樣式套用至控制項。  
+# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>如何：對控制項套用 FocusVisualStyle
+此範例將示範如何建立資源中的焦點視覺化樣式，並套用樣式至控制項，使用<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>屬性。  
   
-## 範例  
- 下列範例定義可用來建立額外控制項複合的樣式；此複合只有當該控制項在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中取得鍵盤焦點時才適用。  這項作業的完成方式是使用 <xref:System.Windows.Controls.ControlTemplate> 定義樣式，然後在設定 <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> 屬性時將該樣式當做資源參考。  
+## <a name="example"></a>範例  
+ 下列範例會定義建立複合只適用於該控制項時的焦點的鍵盤的其他控制項的樣式[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 這會透過定義的樣式<xref:System.Windows.Controls.ControlTemplate>，然後設定時，該樣式參考做為資源<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>屬性。  
   
- 矩形區域外面會加上類似框線的外圍矩形。  除非另行修改，否則樣式的大小都會使用已套用焦點視覺化樣式之矩形控制項的 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 和 <xref:System.Windows.FrameworkElement.ActualWidth%2A>。  這個範例會設定負數值做為 <xref:System.Windows.FrameworkElement.Margin%2A>，讓框線顯示在焦點控制項向外一點的位置。  
+ 類似框線外部矩形被位於外部的矩形區域。 調整大小樣式的修改，除非使用<xref:System.Windows.FrameworkElement.ActualHeight%2A>和<xref:System.Windows.FrameworkElement.ActualWidth%2A>的矩形的控制項焦點視覺化樣式套用的位置。 此範例會設定為負數值<xref:System.Windows.FrameworkElement.Margin%2A>使稍微顯示取得焦點的控制項外框線。  
   
- [!code-xml[FEFocusVisualStyle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEFocusVisualStyle/CS/page1.xaml#xaml)]  
+ [!code-xaml[FEFocusVisualStyle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEFocusVisualStyle/CS/page1.xaml#xaml)]  
   
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> 可附加至來自明確樣式或佈景主題樣式的任何控制項樣板樣式；控制項的主要樣式仍然可以透過使用 <xref:System.Windows.Controls.ControlTemplate>，並將該樣式設定為 <xref:System.Windows.FrameworkElement.Style%2A> 屬性的方式來建立。  
+ A<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>是附加至任何控制項範本樣式出現明確樣式或佈景主題樣式; 從主控制項的樣式可以仍會建立使用<xref:System.Windows.Controls.ControlTemplate>並將該樣式設定為<xref:System.Windows.FrameworkElement.Style%2A>屬性。  
   
- 在整個主題佈景或 UI 中，應該使用一致的焦點視覺化樣式，而不是每個可焦點化項目分別使用一種不同的樣式。  如需詳細資訊，請參閱[設定控制項中焦點的樣式和 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)。  
+ 焦點視覺樣式應該一致使用跨主題或 UI，而不是使用不同的另一個用於每個可設定焦點的項目。 如需詳細資訊，請參閱[樣式的焦點在控制項和 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)。  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
+ [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [設定控制項中焦點的樣式和 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)

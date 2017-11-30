@@ -1,41 +1,36 @@
 ---
-title: "如何︰ 尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual Basic) |Microsoft 文件"
+title: "如何： 尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 90fe1bd9a7992c5e3f4c57f5596a88e5be506917
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c15ef409500a07d922563309301ea8f1442feee6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>如何︰ 尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>如何： 尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual Basic)
 XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。  
   
  XPath 運算式為：  
   
  `//Category|//Price`  
   
- 您可以使用，以達到相同的結果<xref:System.Linq.Enumerable.Concat%2A>標準查詢運算子。</xref:System.Linq.Enumerable.Concat%2A>  
+ 您可以使用 <xref:System.Linq.Enumerable.Concat%2A> 標準查詢運算子，達到相同的結果。  
   
 ## <a name="example"></a>範例  
- 此範例會尋找所有 `Category` 項目與所有 `Price` 項目，然後將它們串連為單一集合。 請注意，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]查詢會呼叫<xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>排序結果。</xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> XPath 運算式評估的結果也是以文件的順序排列。  
+ 此範例會尋找所有 `Category` 項目與所有 `Price` 項目，然後將它們串連為單一集合。 請注意，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢會呼叫 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> 來排列結果。 XPath 運算式評估的結果也是以文件的順序排列。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 數值資料 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：數值資料 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -80,5 +75,4 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to XML 的 XPath 使用者 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-
+ [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

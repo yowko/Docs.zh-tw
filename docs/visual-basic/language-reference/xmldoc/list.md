@@ -1,39 +1,38 @@
 ---
-title: "&lt;list&gt; (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "listheader XML tag"
-  - "<item> XML tag"
-  - "<list> XML tag"
-  - "<listheader> XML tag"
-  - "term XML tag"
-  - "list XML tag"
-  - "<description> XML tag"
-  - "description XML tag"
-  - "item XML tag"
-  - "<term> XML tag"
+title: "&lt;清單&gt;(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- listheader XML tag
+- <item> XML tag
+- <list> XML tag
+- <listheader> XML tag
+- term XML tag
+- list XML tag
+- <description> XML tag
+- description XML tag
+- item XML tag
+- <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 34347df88f1bc3097db0020526ec99943c8f7bd4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;list&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-定義清單或表格。  
+# <a name="ltlistgt-visual-basic"></a>&lt;清單&gt;(Visual Basic)
+定義清單或資料表。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```xml  
 <list type="type">  
    <listheader>  
       <term>term</term>  
@@ -46,29 +45,29 @@ caps.handback.revision: 12
 </list>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `type`  
- 清單的型別。  必須是項目符號清單的 "bullet"，編號清單的 "number"，或雙欄式資料表的 "table"。  
+ 清單的類型。 必須是"bullet"項目符號清單、 「 數字 」 編號的清單，或"table"的兩個資料行的資料表。  
   
  `term`  
- 只適用於 `type` 是 "table" 時。 要定義的術語，其定義在說明標記中。  
+ 僅當使用`type`是 「 資料表 」。 若要定義，詞彙描述標記中定義。  
   
  `description`  
- 當 `type` 是 "bullet" 或 "number"，`description` 是清單中的項目。當 `type` 是 "table"，`description` 是 `term` 的定義。  
+ 當`type`"bullet"或""`description`是清單中的項目時`type`是"table"`description`的定義`term`。  
   
-## 備註  
- `<listheader>` 區塊會定義表格或定義清單的標題。  在定義表格時，您只需提供一個 `term` 項目做為標題。  
+## <a name="remarks"></a>備註  
+ `<listheader>`區塊會定義表格或定義清單的標題。 當定義資料表，您只需要提供的項目`term`標題中。  
   
- 清單中的每個項目都以 `<item>` 區塊來指定。  建立定義清單時，您必須指定 `term` 和 `description`。  但是對於表格、項目符號清單或編號清單，您只需提供 `description` 的項目。  
+ 在清單中的每個項目指定`<item>`區塊。 在建立時定義清單，您必須同時指定`term`和`description`。 不過，針對資料表、 項目符號清單或編號的清單中，您只需要提供的項目`description`。  
   
- 在清單或表格中可以有全部需要的 `<item>` 區塊。  
+ 清單或資料表中可以有`<item>`視會封鎖。  
   
- 使用 [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 進行編譯，將文件註解處理為檔案。  
+ 編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。  
   
-## 範例  
- 這個範例會使用 `<list>` 標記 \(Tag\)，在註解區段中定義項目符號清單。  
+## <a name="example"></a>範例  
+ 這個範例會使用`<list>`標記來定義項目符號清單中的 < 備註 > 一節。  
   
  [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
-## 請參閱  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>另請參閱  
+ [XML 註解標記](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

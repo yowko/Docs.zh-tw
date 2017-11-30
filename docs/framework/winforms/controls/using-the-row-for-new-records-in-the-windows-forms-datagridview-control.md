@@ -1,73 +1,74 @@
 ---
-title: "使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView 控制項 [Windows Form], 加入新資料錄的資料列"
-  - "DataGridView 控制項 [Windows Form], 資料輸入"
-  - "資料列, 新資料錄"
+title: "使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], adding rows for new records
+- rows [Windows Forms], new records
+- DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f4633a70f6c3d010e6cc75236778cf2fd59c0e05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
-當您在應用程式中使用編輯資料的 <xref:System.Windows.Forms.DataGridView> 時，通常會想提供使用者加入新資料列或資料行至資料存放區的能力。  <xref:System.Windows.Forms.DataGridView> 控制項會藉由提供新資料錄的資料列來支援這項功能，此資料列永遠顯示為最後一列。  在資料列行首中，會以星號 \(\*\) 符號做標記。  下列章節討論若您要在進行程式設計時啟用新資料錄的資料列，所應該考量的一些事項。  
+# <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
+當您使用<xref:System.Windows.Forms.DataGridView>進行編輯您的應用程式中的資料，您通常想要讓使用者能夠將新的資料列加入至資料存放區。 <xref:System.Windows.Forms.DataGridView>控制項支援藉由提供一個資料列給新的記錄，這一律會顯示為最後一個資料列的這項功能。 它會標示有星號 （*） 符號，其資料列行首。 下列各節會討論一些程式與資料列的新記錄啟用時，您應該考慮的事項。  
   
-## 顯示新資料錄的資料列  
- 使用 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 屬性來表示是否顯示新資料錄的資料列。  此屬性的預設值為 `true`。  
+## <a name="displaying-the-row-for-new-records"></a>顯示新資料錄的資料列  
+ 使用<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>屬性，指出是否顯示為新的記錄資料列。 此屬性的預設值為 `true`。  
   
- 針對資料繫結的情況，如果控制項的 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 屬性和資料來源的 <xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=fullName> 屬性都為 `true`，便會顯示新資料錄的資料列。  如果其中一個為 `false`，就不會顯示資料列。  
+ 資料繫結案例，將會顯示為新的記錄資料列如果<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>控制項的屬性和<xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=nameWithType>資料來源的屬性都`true`。 如果任何一種`false`則不會顯示資料列。  
   
-## 將預設的資料填入新資料錄的資料列  
- 當使用者選取新資料錄的資料列做為目前的資料列時，<xref:System.Windows.Forms.DataGridView> 控制項會引發 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件。  
+## <a name="populating-the-row-for-new-records-with-default-data"></a>新的記錄，預設的資料填入的資料列  
+ 當使用者為目前的資料列中，選取新的記錄的資料列<xref:System.Windows.Forms.DataGridView>控制引發<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。  
   
- 這個事件提供對新 <xref:System.Windows.Forms.DataGridViewRow> 的存取，並且讓您將預設的資料填入新資料列。  如需詳細資訊，請參閱 [如何：指定 Windows Form DataGridView 控制項新資料列的預設值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ 此事件提供新的存取<xref:System.Windows.Forms.DataGridViewRow>並可讓您擴展新的資料列，預設的資料。 如需詳細資訊，請參閱[How to： 指定 Windows Form DataGridView 控制項中的新資料列的預設值的值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
   
-## 資料列集合  
- 新資料錄的資料列是包含在 <xref:System.Windows.Forms.DataGridView> 控制項的 <xref:System.Windows.Forms.DataGridView.Rows%2A> 集合中，但在行為上具有兩大方面的差異：  
+## <a name="the-rows-collection"></a>資料列集合  
+ 新記錄的資料列包含在<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.Rows%2A>集合但的行為方式會在兩個方面：  
   
--   新資料錄的資料列無法以程式設計方式從 <xref:System.Windows.Forms.DataGridView.Rows%2A> 集合中移除。  如果嘗試這麼做，就會擲回 <xref:System.InvalidOperationException>。  使用者也不能刪除新資料錄的資料列。  <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=fullName> 方法不會從 <xref:System.Windows.Forms.DataGridView.Rows%2A> 集合中移除這個資料列。  
+-   無法移除新記錄的資料列，從<xref:System.Windows.Forms.DataGridView.Rows%2A>集合以程式設計的方式。 <xref:System.InvalidOperationException>如果嘗試這麼做會擲回。 使用者也無法刪除新記錄的資料列。 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>方法不會移除這個資料列從<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。  
   
--   在新資料錄的資料列之後不能加入任何資料列。  如果嘗試這麼做，就會引發 <xref:System.InvalidOperationException>。  因此，新資料錄的資料列永遠都會是 <xref:System.Windows.Forms.DataGridView> 控制項中的最後一列。  加入資料列的 <xref:System.Windows.Forms.DataGridViewRowCollection> 上的方法 \(<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>、<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A> 和 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>\) 在呈現新資料錄的資料列時，全部都會在內部呼叫插入方法。  
+-   新記錄的資料列之後，就可以加入沒有資料列。 <xref:System.InvalidOperationException>如果嘗試這麼做會引發。 如此一來，新資料錄的資料列永遠是中的最後一個資料列<xref:System.Windows.Forms.DataGridView>控制項。 上的方法<xref:System.Windows.Forms.DataGridViewRowCollection>將資料列加入 —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>，和<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— 呼叫所有插入方法內部新記錄的資料列存在時。  
   
-## 新資料錄的資料列的視覺自訂  
- 在建立新資料錄的資料列時，會依據由 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 屬性所指定的資料列來進行。  任何不是指定給這個資料列的儲存格樣式，都是繼承自其他屬性。  如需儲存格樣式繼承的詳細資訊，請參閱 [Windows Form DataGridView 控制項中的儲存格樣式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
+## <a name="visual-customization-of-the-row-for-new-records"></a>視覺自訂資料列的新資料錄  
+ 建立新記錄的資料列時，它根據指定的資料列<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>屬性。 未指定這個資料列的任何儲存格樣式被繼承自其他屬性。 如需儲存格樣式繼承的詳細資訊，請參閱[Windows Form DataGridView 控制項中的儲存格樣式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
- 在新資料錄的資料列中，由儲存格所顯示的初始值是擷取自每一個儲存格的 <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> 屬性。  對於 <xref:System.Windows.Forms.DataGridViewImageCell> 型別的儲存格，這個屬性會傳回預留位置影像。  否則，這個函式會傳回 `null`。  您可以覆寫這個屬性，以傳回自訂值。  不過，當焦點輸入新資料錄的資料列時，這些初始值可用 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件處理常式加以取代。  
+ 從每個資料格會擷取新的記錄資料列中的儲存格所顯示的起始值<xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A>屬性。 類型的儲存格的<xref:System.Windows.Forms.DataGridViewImageCell>，這個屬性會傳回預留位置影像。 否則，這個屬性會傳回`null`。 您可以覆寫這個屬性，以傳回自訂值。 不過，這些初始的值可能會取代<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>當焦點資料列中輸入新記錄的事件處理常式。  
   
- 這個資料列行首的標準圖示 \(箭號或星號\) 並沒有公開 \(Expose\) 為公用圖示。  如果想要自訂圖示，就需要建立自訂的 <xref:System.Windows.Forms.DataGridViewRowHeaderCell> 類別。  
+ 不會公開公開此資料列標頭，也就是箭號或星號的標準圖示。 如果您想要自訂圖示，您必須建立自訂<xref:System.Windows.Forms.DataGridViewRowHeaderCell>類別。  
   
- 標準圖示使用由資料列行首儲存格所使用的 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 屬性。  若沒有足夠空間完整顯示標準圖示，就不會呈現標準圖示。  
+ 使用標準的圖示<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>屬性<xref:System.Windows.Forms.DataGridViewCellStyle>中使用資料列的標頭資料格。 如果空間不足，無法完整顯示，不會轉譯標準圖示。  
   
- 如果資料列行首儲存格具有字串值集，且如果沒有足夠空間供文字與圖示使用，便會先卸除圖示。  
+ 如果資料列的標頭資料格具有字串值設定，而且如果沒有足夠的空間為文字和圖示，圖示會先卸除。  
   
-## 排序  
- 在未繫結模式中，即便使用者已經排序 <xref:System.Windows.Forms.DataGridView> 的內容，新資料錄仍一定會加入至 <xref:System.Windows.Forms.DataGridView> 的結尾。  為了將資料列排序至正確的位置，使用者需要再次套用排序；這種行為與 <xref:System.Windows.Forms.ListView> 控制項的行為類似。  
+## <a name="sorting"></a>排序  
+ 在未繫結模式中，新的記錄會一律加入至結尾<xref:System.Windows.Forms.DataGridView>即使使用者已排序的內容<xref:System.Windows.Forms.DataGridView>。 使用者必須再次套用排序，若要排序資料列到正確的位置。此行為是類似的<xref:System.Windows.Forms.ListView>控制項。  
   
- 在資料繫結與虛擬模式中，套用排序時的插入行為會根據資料模型的實作而定。  對於 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，資料列則會馬上排序至正確的位置。  
+ 在資料繫結和虛擬模式，插入時的行為套用排序將會相依於資料模型的實作。 如[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，資料列會立即根據排序的正確位置。  
   
-## 新資料錄的資料列的其他注意事項  
- 您不能將此資料列的 <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> 屬性設定為 `false`。  如果嘗試這麼做，就會引發 <xref:System.InvalidOperationException>。  
+## <a name="other-notes-on-the-row-for-new-records"></a>其他的資料列的新記錄的注意事項  
+ 您不能設定<xref:System.Windows.Forms.DataGridViewRow.Visible%2A>屬性到此資料列的`false`。 <xref:System.InvalidOperationException>如果嘗試這麼做會引發。  
   
- 新資料錄的資料列一定會以未選取的狀態建立。  
+ 未選取狀態永遠被建立新記錄的資料列。  
   
-## 虛擬模式  
- 如果您實作虛擬模式，就會需要追蹤在資料模型中需要新資料錄的資料列的時機，以及復原加入資料列的時機。  這項功能的精確實作是依據資料模型的實作和交易語意 \(例如，認可範圍是否為儲存格或資料列層級\) 而定。  如需詳細資訊，請參閱 [Windows Form DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)。  
+## <a name="virtual-mode"></a>虛擬模式  
+ 如果您實作虛擬模式時，您必須為新記錄的資料列中的資料模型和何時要復原的資料列加入需要時加以追蹤。 確切實作這項功能的實作而定的資料模型和交易語意，例如，認可範圍是否在資料列層級。 如需詳細資訊，請參閱[Windows Form DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)。  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=fullName>   
- [Windows Form DataGridView 控制項中的資料輸入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)   
- [如何：指定 Windows Form DataGridView 控制項新資料列的預設值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
+ [Windows Forms DataGridView 控制項中的資料輸入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [操作說明：指定 Windows Forms DataGridView 控制項新資料列的預設值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)

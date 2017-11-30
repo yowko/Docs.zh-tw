@@ -1,36 +1,37 @@
 ---
-title: "如何：變更 Windows Form MonthCalendar 控制項的外觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "範例 [Windows Form], Calendar 控制項"
-  - "MonthBackColor 屬性"
-  - "MonthCalendar 控制項 [Windows Form], 格式化顯示"
-  - "TitleBackColor 屬性"
-  - "TitleForeColor 屬性"
-  - "TrailingForeColor 屬性"
+title: "如何： 變更 Windows Form MonthCalendar 控制項 &#39; s 外觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], calendar controls
+- MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38cddb4222077c21d72828371a8fe025184c4f75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：變更 Windows Form MonthCalendar 控制項的外觀
-Windows Form <xref:System.Windows.Forms.MonthCalendar> 控制項允許您以各種不同的方式自訂月曆的外觀。  例如，您可以設定色彩配置並選擇要顯示或隱藏週數和目前的日期。  
+# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 變更 Windows Form MonthCalendar 控制項 &#39; s 外觀
+Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在許多方面的行事曆的外觀。 例如，您可以設定色彩配置，以及選擇要顯示或隱藏週數和目前的日期。  
   
-### 若要變更月曆的色彩配置  
+### <a name="to-change-the-month-calendars-color-scheme"></a>若要變更月曆的色彩配置  
   
--   設定 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> 和 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 等屬性。  <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> 屬性也可決定星期天數的字型色彩。  <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 屬性決定顯示月份之前和之後日期的色彩。  
+-   設定屬性，例如<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>，<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>和<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>屬性也會決定的字型色彩的每週天數。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>屬性會決定日期前後的前面顯示的月或月份的色彩。  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -51,11 +52,11 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> 控制項允許您以各�
     ```  
   
     > [!NOTE]
-    >  從 Windows Vista 開始，依據背景主題而定，設定部分屬性可能不會變更行事曆的外觀。  例如，如果 Windows 設定為使用 Aero 背景主題，則設定 <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> 或 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 屬性不會有任何作用。  這是因為更新的行事曆版本會使用在執行階段從目前作業系統背景主題衍生的外觀呈現。  如果您想要使用這些屬性並且啟用舊版行事曆，可以停用應用程式的視覺化樣式。  停用視覺化樣式可能會影響應用程式中其他控制項的外觀和行為。  若要在 Visual Basic 中停用視覺化樣式，請開啟 \[專案設計工具\]，並且取消核取 \[**啟用 XP 視覺化樣式**\] 核取方塊。  若要在 C\# 中停用視覺化樣式，請開啟 \[Program.cs\]，並且註解 `Application.EnableVisualStyles();`。  如需視覺化樣式的詳細資訊，請參閱 [How to: Enable Windows XP Visual Styles](http://msdn.microsoft.com/zh-tw/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
+    >  從開始使用 Windows Vista，並根據佈景主題，設定某些屬性可能不會變更行事曆外觀。 例如，如果 Windows 設定為使用 Aero 的佈景主題，設定<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>屬性沒有任何作用。 這是因為在執行階段衍生自目前作業系統的佈景主題的外觀呈現行事曆的更新的版本。 如果您想要使用這些屬性並啟用行事曆的舊版，您可以停用您的應用程式視覺化樣式。 停用視覺化樣式，可能會影響的外觀和行為的應用程式中其他控制項。 若要停用在 Visual Basic 中的視覺化樣式，請開啟 專案設計工具並取消核取**啟用 XP 視覺化樣式**核取方塊。 若要停用 C# 中的視覺化樣式，請開啟 Program.cs 並標記為註解`Application.EnableVisualStyles();`。 如需視覺化樣式的詳細資訊，請參閱[How to： 啟用 Windows XP 視覺化樣式](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
   
-### 若要在控制項下方顯示目前日期  
+### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控制項底部顯示目前的日期  
   
--   將 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 屬性設為 `true`。  當按兩下表單時，以下範例將在顯示和省略今天日期之間切換。  
+-   將 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 屬性設定為 `true`。 下列範例將顯示和省略按兩下表單時的目前日期之間切換。  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -83,7 +84,7 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> 控制項允許您以各�
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]、[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 將下列程式碼加入表單的建構函式以註冊事件處理常式。  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
@@ -94,11 +95,11 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> 控制項允許您以各�
        &Form1::Form1_DoubleClick);  
     ```  
   
-### 若要顯示週數  
+### <a name="to-display-week-numbers"></a>若要顯示週數  
   
--   將 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 屬性設為 `true`。  您可以用程式碼或在 \[屬性\] 視窗中設定這項屬性。  
+-   將 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 屬性設定為 `true`。 在程式碼中或在 [屬性] 視窗中，您可以設定這個屬性。  
   
-     週數會顯示在每週第一天左方個別的行中。  
+     週數會出現在個別的資料行左邊的一週的第一天。  
   
     ```vb  
     MonthCalendar1.ShowWeekNumbers = True  
@@ -112,8 +113,8 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> 控制項允許您以各�
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## 請參閱  
- [MonthCalendar 控制項](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)   
- [如何：在 Windows Form 的 MonthCalendar 控制項中選取一個日期範圍](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)   
- [如何：使用 Windows Form MonthCalendar 控制項以粗體顯示特定日期](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)   
- [如何：在 Windows Form MonthCalendar 控制項中顯示多個月份](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>另請參閱  
+ [MonthCalendar 控制項](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [操作說明：在 Windows Forms 的 MonthCalendar 控制項中選取一個日期範圍](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
+ [操作說明：使用 Windows Forms MonthCalendar 控制項以粗體顯示特定日期](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
+ [操作說明：在 Windows Forms MonthCalendar 控制項中顯示多個月份](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
