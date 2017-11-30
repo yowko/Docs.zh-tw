@@ -1,65 +1,63 @@
 ---
-title: "Single Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Single"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Single data type"
-  - "F literal type character"
-  - "trailing zeros"
-  - "real numbers"
-  - "literal type characters, F"
-  - "trailing 0 characters"
-  - "identifier type characters, !"
-  - "single-precision numbers"
-  - "! identifier type character"
-  - "0 characters, trailing"
-  - "data types [Visual Basic], assigning"
-  - "floating-point numbers, Single data type"
-  - "numbers, real"
-  - "zeros, trailing"
-  - "numbers, floating point"
+title: "字串資料類型 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Single
+helpviewer_keywords:
+- Single data type
+- F literal type character [Visual Basic]
+- trailing zeros
+- real numbers
+- literal type characters [Visual Basic], F
+- trailing 0 characters [Visual Basic]
+- identifier type characters [Visual Basic], !
+- single-precision numbers
+- '! identifier type character'
+- 0 characters [Visual Basic], trailing
+- data types [Visual Basic], assigning
+- floating-point numbers [Visual Basic], Single data type
+- numbers [Visual Basic], real
+- zeros, trailing
+- numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c91dbdf73ed1e26393518001ec8651557e5b780f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Single Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-存放帶正負號的 IEEE 32 位元 \(4 個位元組\) 的單精確度浮點數 \(Floating\-Point Number\)，其值範圍在負值方面是從 \-3.4028235E\+38 至 \-1.401298E\-45，在正值方面則是從 1.401298E\-45 至 3.4028235E\+38。  單精確度數字會儲存實數的近似值。  
+# <a name="single-data-type-visual-basic"></a>字串資料類型 (Visual Basic)
+保存帶正負號的 IEEE 32 位元 （4 個位元組） 單精確度浮點數值範圍從-3.4028235 e + 38 到-1.401298-45 負值，並從 1.401298-45 到 3.4028235 e + 38 的正數值。 單精確度數字會儲存實際數字的近似值。  
   
-## 備註  
- 使用 `Single` 資料型別，包含不需要 `Double` 完整資料寬度的浮點值。  在某些情況下，Common Language Runtime 也許能夠將您的 `Single` 變數緊緊疊在一起，避免耗用記憶體。  
+## <a name="remarks"></a>備註  
+ 使用`Single`資料類型可包含不需要完整的資料寬度的浮點值`Double`。 在某些情況下 common language runtime 可以 pack 您`Single`緊密，並將記憶體耗用量儲存變數。  
   
  `Single` 的預設值為 0。  
   
-## 程式設計提示  
+## <a name="programming-tips"></a>程式設計提示  
   
--   **精確度：** 當您使用浮點數值時，請記住它們在記憶體中並非永遠有精確的表示。  這樣可能會因為某些作業，例如值比較和 `Mod` 運算子，而導致無法預期的結果。  如需詳細資訊，請參閱 [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+-   **有效位數。** 當您使用浮點數值，請記住它們在記憶體中不一定有精確的表示。 這可能會導致非預期的結果從某些作業，例如值比較而`Mod`運算子。 如需詳細資訊，請參閱[疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
   
--   **擴展：** `Single` 資料型別會擴大至 `Double`。  這表示您可以將 `Single` 轉換成 `Double`，而不會發生 <xref:System.OverflowException?displayProperty=fullName> 錯誤。  
+-   **擴展。** `Single`資料類型可擴展成`Double`。 這表示您可以將轉換`Single`至`Double`而不會發生<xref:System.OverflowException?displayProperty=nameWithType>錯誤。  
   
--   **結尾的零：** 浮點資料型別沒有結尾 0 字元的內部表示。  例如，它們無法區分 4.2000 與 4.2。  因此，當您顯示或列印浮點數值時，結尾 0 字元不會出現。  
+-   **尾端零。** 浮點資料類型沒有任何結尾 0 字元的內部表示法。 例如，它們不會區分 4.2000 與 4.2。 因此，結尾 0 字元並不會顯示當您顯示或列印浮點數的值。  
   
--   **型別字元。** 將常值型別字元 `F` 附加到常值會強制其成為 `Single` 資料型別。  將識別項型別字元 `!` 附加到任何識別項，會強制其成為 `Single`。  
+-   **類型字元。** 將常值類型字元 `F` 附加到常值，會強制其成為 `Single` 資料類型。 將識別項類型字元 `!` 附加到任何識別項，會強制其成為 `Single`。  
   
--   **架構型別。** 在 .NET Framework 中對應的型別為 <xref:System.Single?displayProperty=fullName> 結構。  
+-   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Single?displayProperty=nameWithType> 結構。  
   
-## 請參閱  
- <xref:System.Single?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Decimal Data Type](../../../visual-basic/language-reference/data-types/decimal-data-type.md)   
- [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Single?displayProperty=nameWithType>  
+ [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Decimal 資料類型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [Double 資料類型](../../../visual-basic/language-reference/data-types/double-data-type.md)  
+ [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [資料類型的疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

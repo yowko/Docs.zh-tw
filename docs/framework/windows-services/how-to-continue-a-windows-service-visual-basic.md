@@ -1,59 +1,62 @@
 ---
-title: "如何：繼續執行 Windows 服務 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceController.Continue"
-helpviewer_keywords: 
-  - "暫停 Windows 服務應用程式"
-  - "Windows 服務應用程式, 暫停"
+title: "如何：繼續執行 Windows 服務 (Visual Basic)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: ServiceController.Continue
+helpviewer_keywords:
+- Windows Service applications, pausing
+- pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
-caps.latest.revision: 16
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 28dbbf2376416a340ad7853c026b2f763f695dcb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：繼續執行 Windows 服務 (Visual Basic)
-本範例使用 <xref:System.ServiceProcess.ServiceController> 元件，繼續進行本機電腦上的 IIS 管理服務。  
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>如何：繼續執行 Windows 服務 (Visual Basic)
+這個範例會使用<xref:System.ServiceProcess.ServiceController>繼續在本機電腦上的 IIS 管理服務元件。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   
- 這個程式碼範例也可做為 IntelliSense 程式碼片段。  在程式碼片段選擇器中，它位於 \[**Windows 作業系統**\] \> \[Windows 服務\] 中。  如需詳細資訊，請參閱 [程式碼片段](../Topic/Code%20Snippets.md)。  
+ 這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，位於**Windows 作業系統 > Windows 服務**。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System.serviceprocess.dll 的專案參考。  
+-   System.serviceprocess.dll 專案參考。  
   
--   對 <xref:System.ServiceProcess> 命名空間成員的存取權。  如果您的程式碼中未完整限定成員名稱，請加入 `Imports` 陳述式。  如需詳細資訊，請參閱 [Imports Statement \(.NET Namespace and Type\)](../../../ocs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+-   <xref:System.ServiceProcess> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
-## 穩固程式設計  
- 根據預設，<xref:System.ServiceProcess.ServiceController> 類別的 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 屬性是本機電腦。  若要參考其他電腦上的 Windows 服務，請將 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 屬性變更為該電腦的名稱。  
+## <a name="robust-programming"></a>穩固程式設計  
+ <xref:System.ServiceProcess.ServiceController.MachineName%2A>屬性<xref:System.ServiceProcess.ServiceController>類別是預設的本機電腦。 若要參考另一部電腦上的 Windows 服務，變更<xref:System.ServiceProcess.ServiceController.MachineName%2A>屬性設為該電腦的名稱。  
   
- 當服務控制程式的狀態變為 <xref:System.ServiceProcess.ServiceControllerStatus> 之後，您才能呼叫該服務的 <xref:System.ServiceProcess.ServiceController.Continue%2A> 方法。  
+ 您不能呼叫<xref:System.ServiceProcess.ServiceController.Continue%2A>方法上的服務，直到服務控制站狀態<xref:System.ServiceProcess.ServiceControllerStatus.Paused>。  
   
- 下列情形可能會造成例外狀況 \(Exception\)：  
+ 以下條件可能會造成例外狀況：  
   
--   服務無法繼續執行   \(<xref:System.InvalidOperationException>\)  
+-   服務無法繼續。 (<xref:System.InvalidOperationException>)  
   
--   在存取系統 API 時發生錯誤   \(<xref:System.ComponentModel.Win32Exception>\)  
+-   存取系統 API 時發生的錯誤。 (<xref:System.ComponentModel.Win32Exception>)  
   
-## .NET Framework 安全性  
- 您可以藉由使用 <xref:System.ServiceProcess.ServiceControllerPermissionAccess> 列舉型別來設定 <xref:System.ServiceProcess.ServiceControllerPermission> 類別中的使用權限，以限制電腦上的服務控制。  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
+ 控制服務的電腦上可能會受到使用<xref:System.ServiceProcess.ServiceControllerPermissionAccess>中設定權限的列舉<xref:System.ServiceProcess.ServiceControllerPermission>類別。  
   
- 您可以透過使用 <xref:System.Security.Permissions.PermissionState> 列舉型別來設定 <xref:System.Security.Permissions.SecurityPermission> 類別中的使用權限，以限制服務資訊的存取。  
+ 服務資訊的存取權可能會受到使用<xref:System.Security.Permissions.PermissionState>中設定權限的列舉<xref:System.Security.Permissions.SecurityPermission>類別。  
   
-## 請參閱  
- <xref:System.ServiceProcess.ServiceController>   
- <xref:System.ServiceProcess.ServiceControllerStatus>   
- [如何：暫停 Windows 服務 \(Visual Basic\)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceProcess.ServiceController>  
+ <xref:System.ServiceProcess.ServiceControllerStatus>  
+ [如何： 暫停 Windows 服務 (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

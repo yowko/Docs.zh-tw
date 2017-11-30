@@ -1,87 +1,85 @@
 ---
-title: "\ Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.\"
-  - "\"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "division operator, integer"
-  - "integer division operator"
-  - "zero, division by zero"
-  - "arithmetic operators, division"
-  - "division, by zero"
-  - "backslash (\) [Visual Basic]"
-  - "\ operator [Visual Basic]"
-  - "integer quotient"
-  - "math operators"
-  - "quotients, integer"
-  - "truncation, integer division"
+title: "\\ 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.\
+- '\'
+helpviewer_keywords:
+- division operator [Visual Basic], integer
+- integer division operator [Visual Basic]
+- zero, division by zero
+- arithmetic operators [Visual Basic], division
+- division [Visual Basic], by zero
+- backslash (\) [Visual Basic]
+- '\ operator [Visual Basic]'
+- integer quotient
+- math operators [Visual Basic]
+- quotients, integer
+- truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 38718b109b4b3865238267039908ea1d51d06229
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# \ Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="-operator-visual-basic"></a>\ 運算子 (Visual Basic)
 兩數相除並傳回整數結果。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
 expression1 \ expression2  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `expression1`  
- 必要項。  任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
  `expression2`  
- 必要項。  任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
-## 支援類型  
- 所有數字型別，包括不帶正負號和浮點型別，以及 `Decimal`。  
+## <a name="supported-types"></a>支援的型別  
+ 所有數字類型，包括不帶正負號和浮點類型和`Decimal`。  
   
-## 結果  
- 結果是 `expression1` 除以 `expression2` 的整數商數，這會捨棄任何餘數而只保留整數部分。  這稱為「*截斷*」。  
+## <a name="result"></a>結果  
+ 結果是整數商數的`expression1`除以`expression2`，它會捨棄任何其餘部分，並保留只有整數部分。 這稱為*截斷*。  
   
- 結果資料型別會是數字型別，適用於 `expression1` 和 `expression2` 的資料型別。  請參閱[Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的「整數算術」表。  
+ 結果資料類型是數值類型適合的資料型別`expression1`和`expression2`。 請參閱中的 「 整數算術 」 資料表[運算子結果的資料類型的](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。  
   
- [\/ Operator](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) 會傳回完整商數 \(其保留小數部分的餘數\)。  
+ [/ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)傳回完整的商數，其中保留的小數部分中的其餘部分。  
   
-## 備註  
- 在執行除法之前，Visual Basic 會嘗試將任何浮點數值運算式轉換成 `Long`。  如果 `Option Strict` 為 `On`，則會發生編譯器錯誤。  如果 `Option Strict` 為 `Off`，則值在 [Long Data Type](../../../visual-basic/language-reference/data-types/long-data-type.md) 的範圍之外時，可能會發生 <xref:System.OverflowException>。  轉換成 `Long` 也就是「*Banker's Rounding\)*」\(四捨六入五成雙。  如需詳細資訊，請參閱[Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)中「小數部分」的部分。  
+## <a name="remarks"></a>備註  
+ 然後再執行除法運算，Visual Basic 會嘗試轉換到任何浮點數值運算式`Long`。 如果`Option Strict`是`On`，就會發生編譯器錯誤。 如果`Option Strict`是`Off`、<xref:System.OverflowException>值超出範圍時才可以執行[Long 資料型別](../../../visual-basic/language-reference/data-types/long-data-type.md)。 轉換為`Long`也*銀行進位*。 如需詳細資訊，請參閱"小數部分 」 中[類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)。  
   
- 如果 `expression1` 或 `expression2` 評估為 [Nothing](../../../visual-basic/language-reference/nothing.md)，即視為零。  
+ 如果`expression1`或`expression2`評估為[Nothing](../../../visual-basic/language-reference/nothing.md)，它會被視為零。  
   
-## 嘗試以零為除數  
- 如果 `expression2` 評估為零，則 `\` 運算子會擲回 <xref:System.DivideByZeroException> 例外狀況。  這對運算元的所有數字資料型別而言都為 true。  
+## <a name="attempted-division-by-zero"></a>嘗試的除以零  
+ 如果`expression2`判斷值為零，`\`運算子就會擲回<xref:System.DivideByZeroException>例外狀況。 這是所有的數值資料類型的運算元，則為 true。  
   
 > [!NOTE]
->  `\` 運算子可以「*多載*」，也就是，當運算元具備類別或結構的類型時，該類別或結構就可以重新定義其行為。  如果您的程式碼在這種類別或結構上使用此運算子，就一定要先瞭解其重新定義的行為。  如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+>  `\`運算子可以是*多載*，這表示，類別或結構可以重新定義它的行為時的運算元有該類別或結構的類型。 如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其重新定義的行為。 如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
-## 範例  
- 下列範例使用 `\` 運算子來執行整數除法。  結果是代表兩個運算元之整數商數的整數 \(捨棄餘數\)。  
+## <a name="example"></a>範例  
+ 下列範例會使用`\`執行整數除法運算子。 結果為整數，表示兩個運算元的整數商數捨棄餘數。  
   
  [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
- 上述範例中的運算式會分別傳回值 2、3、33 和 \-22。  
+ 在上述範例中的運算式會分別傳回值 2、 3、 33 與-22。  
   
-## 請參閱  
- [\\\= Operator](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)   
- [\/ Operator](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)   
- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>另請參閱  
+ [\\= 運算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [/ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
+ [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

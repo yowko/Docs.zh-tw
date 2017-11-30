@@ -1,47 +1,45 @@
 ---
-title: "Set Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Set"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "property procedures, Set statements"
-  - "Set statement"
-  - "Set statement, syntax"
-  - "write-only properties"
-  - "properties [Visual Basic], write-only"
+title: "Set 陳述式 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Set
+helpviewer_keywords:
+- property procedures [Visual Basic], Set statements
+- Set statement [Visual Basic]
+- Set statement [Visual Basic], syntax
+- write-only properties
+- properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Set Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-宣告用來將值指派至屬性 \(Property\) 的 `Set` 屬性 \(Property\) 程序。  
+# <a name="set-statement-visual-basic"></a>Set 陳述式 (Visual Basic)
+宣告`Set`用來將值指派給屬性的屬性程序。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
+    [ statements ]  
 End Set  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `attributelist`  
- 選擇項。  請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+ 選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `accessmodifier`  
- 在這個屬性之其中一個 `Get` 和 `Set` 陳述式上的選擇項。  可以是下列其中一項：  
+ 上一個選擇性`Get`和`Set`這個屬性中的陳述式。 可以是下列其中一項：  
   
 -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -51,52 +49,52 @@ End Set
   
 -   `Protected Friend`  
   
- 請參閱 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `value`  
- 必要項。  包含屬性之新值的參數。  
+ 必要項。 包含屬性的新值的參數。  
   
  `datatype`  
- 如果 `Option Strict` 為 `On`，則為必要項。  `value` 參數的資料型別。  指定的資料型別必須與宣告這個 `Set` 陳述式所在屬性 \(Property\) 的資料型別相同。  
+ 若`Option Strict`是`On`。 資料型別`value`參數。 指定的資料類型必須是屬性的資料類型相同，這`Set`宣告陳述式。  
   
  `statements`  
- 選擇項。  一或多個呼叫 `Set` 屬性程序時所執行的陳述式。  
+ 選擇項。 一或多個陳述式時執行`Set`呼叫屬性程序。  
   
  `End Set`  
- 必要項。  結束 `Set` 屬性程序的定義。  
+ 必要項。 結束的定義`Set`屬性程序。  
   
-## 備註  
- 除非屬性已標示為 `ReadOnly`，否則每個屬性都必須有 `Set` 屬性程序。  `Set` 程序是用於設定屬性的值。  
+## <a name="remarks"></a>備註  
+ 每個屬性必須有`Set`屬性程序除非屬性標記為`ReadOnly`。 `Set`程序用來設定屬性的值。  
   
- 當指派陳述式 \(Assignment Statement\) 提供要儲存於屬性中的值時，Visual Basic 會自動呼叫屬性的 `Set` 程序。  
+ Visual Basic 會自動呼叫屬性`Set`程序時在指派陳述式提供所要儲存在屬性值。  
   
- Visual Basic 在屬性指派期間會將參數傳遞至 `Set` 程序。  如果未提供 `Set` 的參數，則整合式開發環境 \(IDE\) 會使用名為 `value` 的隱含參數。  該參數會保留要指派給屬性的值。  通常會將這個值儲存在私用區域變數中，每當呼叫 `Get` 程序時就會傳回它。  
+ Visual Basic 會將傳遞的參數`Set`程序期間指派屬性。 如果您未提供的參數`Set`，整合式的開發環境 (IDE) 會使用名為的隱含參數`value`。 參數包含要指派給屬性的值。 通常這個值儲存在私用的本機變數，並將其傳回每當`Get`呼叫程序。  
   
- 屬性宣告主體只可在 [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)與 `End Property` 陳述式之間包含屬性的 `Get` 和 `Set` 程序，  除了這些程序以外，它無法儲存其他程序。  特別是無法儲存屬性的目前值。  因為如果將這個值儲存在任一屬性程序中，則其他屬性程序無法存取它，所以必須將它儲存在屬性外部。  一般的處理方式是將值儲存在與屬性相同層級上宣告的 [Private](../../../visual-basic/language-reference/modifiers/private.md) 變數中。  而您必須在所套用的屬性內定義 `Set` 程序。  
+ 屬性宣告的主體可以包含屬性的`Get`和`Set`程序之間[Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)和`End Property`陳述式。 無法將儲存這些程序之外的任何項目。 特別是，它無法儲存屬性的目前值。 您必須先儲存此值超出屬性，因為如果您將其儲存在任一屬性程序，其他屬性程序無法存取它。 一般的方法是將值儲存[私人](../../../visual-basic/language-reference/modifiers/private.md)屬性與相同層級宣告的變數。 您必須定義`Set`它所套用的屬性內的程序。  
   
- 除非是在 `Set` 陳述式中使用 `accessmodifier`，否則 `Set` 程序會預設為包含屬性的存取層級。  
+ `Set`程序會預設為其包含屬性的存取層級，除非您使用`accessmodifier`中`Set`陳述式。  
   
-## 規則  
+## <a name="rules"></a>規則  
   
--   **混合存取層級** 如果您要定義 read\-write 屬性，可以選擇指定 `Get` 或 `Set` 程序的不同存取層級，但不可同時指定這兩者。  如果您這樣做，程序的存取層級必須比屬性的存取層級更嚴格。  例如，如果屬性已宣告為 `Friend`，則您可以將 `Set` 程序宣告為 `Private`，但不能宣告為 `Public`。  
+-   **混合的存取層級。** 如果您要定義讀 / 寫屬性，您可以選擇其中一個指定的不同存取層`Get`或`Set`程序，但非兩者。 如果您這麼做時，程序的存取層級必須比屬性存取層級更受限。 例如，如果屬性宣告`Friend`，您可以宣告`Set`程序`Private`，但不是`Public`。  
   
-     如果正在定義 `WriteOnly` 屬性，則 `Set` 程序會代表整個屬性。  若為 `Set` 宣告不同的存取層級，則會為屬性設定兩種存取層級，因此您不能這樣做。  
+     如果您要定義`WriteOnly`屬性，`Set`程序都代表整個屬性。 您無法宣告不同的存取層級`Set`，因為，則會設定兩個屬性的存取層級。  
   
-## 行為  
+## <a name="behavior"></a>行為  
   
--   **從屬性程序傳回** 當 `Set` 程序傳回到呼叫程式碼時，仍會繼續執行提供所要儲存之值的陳述式後面的陳述式。  
+-   **傳回從屬性程序。** 當`Set`程序傳回呼叫程式碼，提供的儲存值的陳述式之後繼續執行。  
   
-     `Set` 屬性程序可以使用 [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) 或 [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md) 傳回。  
+     `Set`屬性程序可以傳回使用[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)或[Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)。  
   
-     `Exit Property` 和 `Return` 陳述式會造成立即退出屬性程序。  任意數目的 `Exit Property` 和 `Return` 陳述式可以出現在程序中的任何地方，並且 `Exit Property` 和 `Return` 陳述式可以混合使用。  
+     `Exit Property`和`Return`陳述式會導致屬性程序立即結束。 任何數目的`Exit Property`和`Return`陳述式可以出現在任何地方程序，且您可以混合`Exit Property`和`Return`陳述式。  
   
-## 範例  
- 下列範例會使用 `Set` 陳述式，設定屬性的值。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Set`陳述式來設定屬性的值。  
   
  [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
-## 請參閱  
- [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
+## <a name="see-also"></a>另請參閱  
+ [Get 陳述式](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
  [屬性程序](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
