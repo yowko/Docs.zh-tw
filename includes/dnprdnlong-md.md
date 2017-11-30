@@ -1,1 +1,1 @@
-.NET Framework 2.0
+<span data-ttu-id="4f15d-101">.NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="4f15d-101">.NET Framework 2.0</span></span>

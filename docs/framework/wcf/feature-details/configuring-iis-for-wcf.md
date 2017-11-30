@@ -1,66 +1,69 @@
 ---
-title: "設定 Internet Information Services 7.0 for Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定 Internet Information Services 7.0 for Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 185fa5e641a1834a7c5f7906b5e5cf84dacaa9f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 設定 Internet Information Services 7.0 for Windows Communication Foundation
-Internet Information Services \(IIS\) 7.0 具有模組化的設計，可以讓您選擇性地安裝所需的元件。這項設計是以 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中引進的新資訊清單驅動元件化技術為基礎。[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 有超過 40 項可以個別安裝的獨立功能元件。這讓 IT 專業人員能夠輕鬆地依其需要自訂安裝。本主題會討論如何設定 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 以搭配 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用，並判斷需要哪些元件。  
+# <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a><span data-ttu-id="e27bd-102">設定 Internet Information Services 7.0 for Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="e27bd-102">Configuring Internet Information Services 7.0 for Windows Communication Foundation</span></span>
+<span data-ttu-id="e27bd-103">Internet Information Services (IIS) 7.0 具有模組化的設計，可以讓您選擇性地安裝所需的元件。</span><span class="sxs-lookup"><span data-stu-id="e27bd-103">Internet Information Services (IIS) 7.0 has a modular design that allows you to selectively install components that are required.</span></span> <span data-ttu-id="e27bd-104">這項設計是以 [!INCLUDE[wv](../../../../includes/wv-md.md)]中引進的新資訊清單驅動元件化技術為基礎。</span><span class="sxs-lookup"><span data-stu-id="e27bd-104">This design is based on the new manifest-driven componentization technology introduced in [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="e27bd-105">[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 有超過 40 項可以個別安裝的獨立功能元件。</span><span class="sxs-lookup"><span data-stu-id="e27bd-105">There are more than 40 standalone feature components of [!INCLUDE[iisver](../../../../includes/iisver-md.md)] that can be installed independently.</span></span> <span data-ttu-id="e27bd-106">這讓 IT 專業人員能夠輕鬆地依其需要自訂安裝。</span><span class="sxs-lookup"><span data-stu-id="e27bd-106">This allows IT professionals to easily customize the installation as required.</span></span> <span data-ttu-id="e27bd-107">本主題會討論如何設定 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 以搭配 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用，並判斷需要哪些元件。</span><span class="sxs-lookup"><span data-stu-id="e27bd-107">This topic discusses how to configure [!INCLUDE[iisver](../../../../includes/iisver-md.md)] for use with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and determine which components are required.</span></span>  
   
-## 基本安裝：安裝 WAS  
- 完整 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 套件的基本安裝是安裝 Windows Process Activation Service \(WAS\)。WAS 是獨立的功能，而且是唯一能在所有 [!INCLUDE[wv](../../../../includes/wv-md.md)] 作業系統 \(Home Basic、Home Premium、Business、Ultimate 及 Enterprise\) 上提供的 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 功能。  
+## <a name="minimal-installation-installing-was"></a><span data-ttu-id="e27bd-108">基本安裝：安裝 WAS</span><span class="sxs-lookup"><span data-stu-id="e27bd-108">Minimal Installation: Installing WAS</span></span>  
+ <span data-ttu-id="e27bd-109">完整 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 套件的基本安裝是安裝 Windows Process Activation Service (WAS)。</span><span class="sxs-lookup"><span data-stu-id="e27bd-109">The minimal installation of the whole [!INCLUDE[iisver](../../../../includes/iisver-md.md)] package is to install the Windows Process Activation Service (WAS).</span></span> <span data-ttu-id="e27bd-110">WAS 是獨立的功能，而且是唯一能在所有 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 作業系統 (Home Basic、Home Premium、Business、Ultimate 及 Enterprise) 上提供的 [!INCLUDE[wv](../../../../includes/wv-md.md)] 功能。</span><span class="sxs-lookup"><span data-stu-id="e27bd-110">WAS is a standalone feature and it is the only feature from the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] that is available for all [!INCLUDE[wv](../../../../includes/wv-md.md)] operating systems (Home Basic, Home Premium, Business, and Ultimate and Enterprise).</span></span>  
   
- 從 \[控制台\] 按一下 \[**程式**\]，然後按一下 \[**程式和功能**\] 下的 \[**開啟或關閉 Windows 功能**\]，WAS 元件隨即顯示在清單中，如下圖所示。  
+ <span data-ttu-id="e27bd-111">從 [控制台] 中按一下**程式**，然後按一下 [**開啟或關閉 Windows 功能**] 下**程式和功能**，WAS 元件隨即顯示清單中，如下圖所示。</span><span class="sxs-lookup"><span data-stu-id="e27bd-111">From the Control Panel, click **Programs** and then click **Turn Windows features on or off** which is listed under **Programs and Features**, the WAS component is shown in the list as in the following illustration.</span></span>  
   
- ![開啟或關閉功能對話方塊](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc\_TurnFeaturesOnOrOffs")  
+ <span data-ttu-id="e27bd-112">![功能開啟或關閉對話方塊](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")</span><span class="sxs-lookup"><span data-stu-id="e27bd-112">![Turn Features On or Off Dialog](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")</span></span>  
   
- 這項功能具有下列子元件：  
+ <span data-ttu-id="e27bd-113">這項功能具有下列子元件：</span><span class="sxs-lookup"><span data-stu-id="e27bd-113">This feature has the following sub-components:</span></span>  
   
--   .NET 環境  
+-   <span data-ttu-id="e27bd-114">.NET 環境</span><span class="sxs-lookup"><span data-stu-id="e27bd-114">.NET Environment</span></span>  
   
--   組態 API  
+-   <span data-ttu-id="e27bd-115">組態 API</span><span class="sxs-lookup"><span data-stu-id="e27bd-115">Configuration APIs</span></span>  
   
--   處理序模型  
+-   <span data-ttu-id="e27bd-116">處理序模型</span><span class="sxs-lookup"><span data-stu-id="e27bd-116">Process Model</span></span>  
   
- 如果是選取 WAS 的根節點，根據預設將只核取 \[**處理序模型**\] 子節點。請注意，進行這項安裝時只會安裝 WAS，因為此時不支援 Web 伺服器。  
+ <span data-ttu-id="e27bd-117">如果您選取 WAS 的根節點僅**處理序模型**預設會核取子節點。</span><span class="sxs-lookup"><span data-stu-id="e27bd-117">If you select the root node of WAS, only the **Process Model** sub-node is checked by default.</span></span> <span data-ttu-id="e27bd-118">請注意，進行這項安裝時只會安裝 WAS，因為此時不支援 Web 伺服器。</span><span class="sxs-lookup"><span data-stu-id="e27bd-118">Please note that with this installation you are only installing WAS, because there is no support for a Web server.</span></span>  
   
- 若要讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 或任何 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式運作，請核取 \[**.NET 環境**\] 核取方塊。這表示需要所有的 WAS 元件才能讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 正常運作。一旦您安裝任何其中一個上述元件，這些應用程式便會自動核取。  
+ <span data-ttu-id="e27bd-119">若要讓[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]或任何[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式運作，檢查**.NET 環境**核取方塊。</span><span class="sxs-lookup"><span data-stu-id="e27bd-119">To make [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] or any [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application to work, check the **.NET Environment** checkbox.</span></span> <span data-ttu-id="e27bd-120">這表示需要所有的 WAS 元件才能讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 正常運作。</span><span class="sxs-lookup"><span data-stu-id="e27bd-120">This means that all of WAS components are required to make [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] to work well.</span></span> <span data-ttu-id="e27bd-121">一旦您安裝任何其中一個上述元件，這些應用程式便會自動核取。</span><span class="sxs-lookup"><span data-stu-id="e27bd-121">These are automatically checked once you install any of those components.</span></span>  
   
-## IIS 7.0：預設安裝  
- 透過核取 \[**網際網路資訊服務**\] 功能，便會自動核取一些子節點，如下圖所示。  
+## <a name="iis-70-default-installation"></a><span data-ttu-id="e27bd-122">IIS 7.0：預設安裝</span><span class="sxs-lookup"><span data-stu-id="e27bd-122">IIS 7.0: Default Installation</span></span>  
+ <span data-ttu-id="e27bd-123">藉由檢查**Internet Information Services**功能，某些子節點會自動核取下圖所示。</span><span class="sxs-lookup"><span data-stu-id="e27bd-123">By checking the **Internet Information Services** feature, some of the sub-nodes are automatically checked as shown in the following illustration.</span></span>  
   
- ![IIS 7.0 功能的預設設定](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc\_TurningFeaturesOnOrOff2")  
+ <span data-ttu-id="e27bd-124">![IIS 7.0 功能的預設設定](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")</span><span class="sxs-lookup"><span data-stu-id="e27bd-124">![Default settings for IIS 7.0 features](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")</span></span>  
   
- 這是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 的預設安裝。運用這項安裝，您可以使用 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 來提供靜態內容的服務 \(例如 HTML 頁面和其他內容\)。不過，您無法執行 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 或 CGI 應用程式，或是裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+ <span data-ttu-id="e27bd-125">這是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 的預設安裝。</span><span class="sxs-lookup"><span data-stu-id="e27bd-125">This is the default installation of [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span> <span data-ttu-id="e27bd-126">運用這項安裝，您可以使用 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 來提供靜態內容的服務 (例如 HTML 頁面和其他內容)。</span><span class="sxs-lookup"><span data-stu-id="e27bd-126">With this installation, you can use [!INCLUDE[iisver](../../../../includes/iisver-md.md)] to service static content (such as HTML pages and other content).</span></span> <span data-ttu-id="e27bd-127">不過，您無法執行 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 或 CGI 應用程式，或是裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。</span><span class="sxs-lookup"><span data-stu-id="e27bd-127">However, you cannot run [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] or CGI applications or host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
-## IIS 7.0：具有 ASP.NET 支援的安裝  
- 您必須安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 才能讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 在 IIS 7.0 上運作。在核取 \[**ASP.NET**\] 之後，您的畫面應該看起來類似下圖。  
+## <a name="iis-70-installation-with-aspnet-support"></a><span data-ttu-id="e27bd-128">IIS 7.0：具有 ASP.NET 支援的安裝</span><span class="sxs-lookup"><span data-stu-id="e27bd-128">IIS 7.0: Installation with ASP.NET Support</span></span>  
+ <span data-ttu-id="e27bd-129">您必須安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 才能讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 在 IIS 7.0 上運作。</span><span class="sxs-lookup"><span data-stu-id="e27bd-129">You must install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] to make [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] work on IIS 7.0.</span></span> <span data-ttu-id="e27bd-130">檢查後**ASP.NET**，您的畫面應該看起來像下圖。</span><span class="sxs-lookup"><span data-stu-id="e27bd-130">After checking **ASP.NET**, your screen should look like the following illustration.</span></span>  
   
- ![ASP.NET 的必要設定](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc\_TrunFeaturesOnOrOFf3s")  
+ <span data-ttu-id="e27bd-131">![Asp.NET 必要設定](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")</span><span class="sxs-lookup"><span data-stu-id="e27bd-131">![Asp.NET required settings](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")</span></span>  
   
- 這是讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中運作的基本環境。  
+ <span data-ttu-id="e27bd-132">這是讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中運作的基本環境。</span><span class="sxs-lookup"><span data-stu-id="e27bd-132">This is the minimal environment for both [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applications to work in [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span>  
   
-## IIS 7.0：具有 IIS 6.0 相容性元件的安裝  
- 若是在系統上，使用會將虛擬應用程式設定成使用 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Metabase API 之 Visual Studio 2005 或其他一些自動化指令碼或工具 \(例如 Adsutil.vbs\) 來安裝 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 時，請確定核取 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 的 \[**指令碼工具**\]。這樣便會自動核取 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] \[**管理相容性**\] 的其他子節點。下圖顯示完成此步驟之後的畫面。  
+## <a name="iis-70-installation-with-iis-60-compatibility-components"></a><span data-ttu-id="e27bd-133">IIS 7.0：具有 IIS 6.0 相容性元件的安裝</span><span class="sxs-lookup"><span data-stu-id="e27bd-133">IIS 7.0: Installation with IIS 6.0 Compatibility Components</span></span>  
+ <span data-ttu-id="e27bd-134">安裝時[!INCLUDE[iisver](../../../../includes/iisver-md.md)]Visual Studio 2005 或某些其他自動化指令碼或工具 （例如 Adsutil.vbs) 設定使用的虛擬應用程式的系統上[!INCLUDE[iis601](../../../../includes/iis601-md.md)]Metabase API，請確定[!INCLUDE[iis601](../../../../includes/iis601-md.md)] **指令碼工具**。</span><span class="sxs-lookup"><span data-stu-id="e27bd-134">When installing [!INCLUDE[iisver](../../../../includes/iisver-md.md)] on a system with Visual Studio 2005 or some other automation scripts or tools (such as Adsutil.vbs) that configure virtual applications that use [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Metabase API, ensure that you check the [!INCLUDE[iis601](../../../../includes/iis601-md.md)]**Scripting Tools**.</span></span> <span data-ttu-id="e27bd-135">這會自動檢查的其他子節點[!INCLUDE[iis601](../../../../includes/iis601-md.md)]**管理相容性**。</span><span class="sxs-lookup"><span data-stu-id="e27bd-135">This automatically checks the other sub-nodes of [!INCLUDE[iis601](../../../../includes/iis601-md.md)]**Management Compatibility**.</span></span> <span data-ttu-id="e27bd-136">下圖顯示完成此步驟之後的畫面。</span><span class="sxs-lookup"><span data-stu-id="e27bd-136">The following illustration shows the screen after this is done.</span></span>  
   
- ![IIS 6.0 管理相容性設定](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc\_TurnFeaturesOnOrOff5s")  
+ <span data-ttu-id="e27bd-137">![IIS 6.0 管理相容性設定](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")</span><span class="sxs-lookup"><span data-stu-id="e27bd-137">![IIS 6.0 Management Compatibility Settings](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")</span></span>  
   
- 運用這項安裝，您便具備使用 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能以及 Web 上提供範例的必要條件。  
+ <span data-ttu-id="e27bd-138">運用這項安裝，您便具備使用 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能以及 Web 上提供範例的必要條件。</span><span class="sxs-lookup"><span data-stu-id="e27bd-138">With this installation, you have everything required to use [!INCLUDE[iisver](../../../../includes/iisver-md.md)], [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] features and samples available on the Web.</span></span>  
   
-## 要求限制  
- 在具有 IIS 7 的 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，`maxUri` 和 `maxQueryStringSize` 設定的預設值已經變更。根據預設，IIS 7.0 中的要求篩選允許 URL 長度為 4096 個字元，查詢字串長度為 2048 個字元。若要變更這些預設值，請將下列 XML 加入至您的 App.config 檔中。  
+## <a name="request-limits"></a><span data-ttu-id="e27bd-139">要求限制</span><span class="sxs-lookup"><span data-stu-id="e27bd-139">Request Limits</span></span>  
+ <span data-ttu-id="e27bd-140">在具有 IIS 7 的 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，`maxUri` 和 `maxQueryStringSize` 設定的預設值已經變更。</span><span class="sxs-lookup"><span data-stu-id="e27bd-140">On [!INCLUDE[wv](../../../../includes/wv-md.md)] with IIS 7 the default value of the `maxUri` and `maxQueryStringSize` settings have been changed.</span></span> <span data-ttu-id="e27bd-141">根據預設，IIS 7.0 中的要求篩選允許 URL 長度為 4096 個字元，查詢字串長度為 2048 個字元。</span><span class="sxs-lookup"><span data-stu-id="e27bd-141">By default, request filtering in IIS 7.0 allows a URL length of 4096 characters and a query string length of 2048 characters.</span></span> <span data-ttu-id="e27bd-142">若要變更這些預設值，請將下列 XML 加入至您的 App.config 檔中。</span><span class="sxs-lookup"><span data-stu-id="e27bd-142">To change these defaults add the following XML to your App.config file.</span></span>  
   
  `<system.webServer>`  
   
@@ -68,7 +71,7 @@ Internet Information Services \(IIS\) 7.0 具有模組化的設計，可以讓�
   
  `<requestFiltering>`  
   
- `<requestLimits maxUrl=”8192” maxQueryString=”8192” />`  
+ `<requestLimits maxUrl="8192" maxQueryString="8192" />`  
   
  `</requestFiltering>`  
   
@@ -76,8 +79,8 @@ Internet Information Services \(IIS\) 7.0 具有模組化的設計，可以讓�
   
  `</system.webServer>`  
   
-## 請參閱  
- [WAS 啟用架構](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)   
- [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)   
- [HOW TO：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)   
- [Windows Server AppFabric 主控功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="e27bd-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e27bd-143">See Also</span></span>  
+ [<span data-ttu-id="e27bd-144">WAS 啟動架構</span><span class="sxs-lookup"><span data-stu-id="e27bd-144">WAS Activation Architecture</span></span>](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
+ [<span data-ttu-id="e27bd-145">設定用於 WCF 的 WAS</span><span class="sxs-lookup"><span data-stu-id="e27bd-145">Configuring WAS for Use with WCF</span></span>](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [<span data-ttu-id="e27bd-146">如何： 安裝及設定 WCF 啟用元件</span><span class="sxs-lookup"><span data-stu-id="e27bd-146">How to: Install and Configure WCF Activation Components</span></span>](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [<span data-ttu-id="e27bd-147">Windows Server App Fabric 裝載功能</span><span class="sxs-lookup"><span data-stu-id="e27bd-147">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

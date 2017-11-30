@@ -1,1 +1,1 @@
-元件物件模型 (COM)
+<span data-ttu-id="806d4-101">元件物件模型 (COM)</span><span class="sxs-lookup"><span data-stu-id="806d4-101">Component Object Model (COM)</span></span>

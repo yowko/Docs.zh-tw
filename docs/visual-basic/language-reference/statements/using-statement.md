@@ -1,96 +1,92 @@
 ---
-title: "Using Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.using"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "resource disposal"
-  - "Try...Catch...Finally statements, equivalent to Using statement"
-  - "resources [Visual Basic], disposing"
-  - "Using statement"
+title: "Using 陳述式 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.using
+helpviewer_keywords:
+- resource disposal
+- Try...Catch...Finally statements, equivalent to Using statement
+- resources [Visual Basic], disposing
+- Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 36
+caps.latest.revision: "36"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Using Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-宣告 `Using` 區塊的開頭，並選擇性地取得區塊所控制的系統資源。  
+# <a name="using-statement-visual-basic"></a><span data-ttu-id="71b01-102">Using 陳述式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="71b01-102">Using Statement (Visual Basic)</span></span>
+<span data-ttu-id="71b01-103">宣告的開頭`Using`封鎖，並選擇性地取得區塊所控制的系統資源。</span><span class="sxs-lookup"><span data-stu-id="71b01-103">Declares the beginning of a `Using` block and optionally acquires the system resources that the block controls.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="71b01-104">語法</span><span class="sxs-lookup"><span data-stu-id="71b01-104">Syntax</span></span>  
   
 ```  
-Using { resourcelist | resourceexpression }  
-    [ statements ]  
+Using { resourcelist | resourceexpression }  
+    [ statements ]  
 End Using  
 ```  
   
-## 組件  
+## <a name="parts"></a><span data-ttu-id="71b01-105">組件</span><span class="sxs-lookup"><span data-stu-id="71b01-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|詞彙|定義|  
-|`resourcelist`|如果未提供 `resourceexpression`，則為必要項。  一或多個系統資源清單 `Using` 方塊控制項，並以逗號分隔。|  
-|`resourceexpression`|如果未提供 `resourcelist`，則為必要項。  參考此 `Using` 區塊控制之系統資源的參考變數或運算式。|  
-|`statements`|選擇項。  `Using` 區塊執行的陳述式區塊。|  
-|`End Using`|必要項。  結束 `Using` 區塊的定義，並處置 \(Dispose\) 它控制的所有資源。|  
+|<span data-ttu-id="71b01-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="71b01-106">Term</span></span>|<span data-ttu-id="71b01-107">定義</span><span class="sxs-lookup"><span data-stu-id="71b01-107">Definition</span></span>|  
+|---|---|  
+|`resourcelist`|<span data-ttu-id="71b01-108">如果您未提供所需`resourceexpression`。</span><span class="sxs-lookup"><span data-stu-id="71b01-108">Required if you do not supply `resourceexpression`.</span></span> <span data-ttu-id="71b01-109">此清單的一或多個系統資源`Using`封鎖控制項，並以逗號分隔。</span><span class="sxs-lookup"><span data-stu-id="71b01-109">List of one or more system resources that this `Using` block controls, separated by commas.</span></span>|  
+|`resourceexpression`|<span data-ttu-id="71b01-110">如果您未提供所需`resourcelist`。</span><span class="sxs-lookup"><span data-stu-id="71b01-110">Required if you do not supply `resourcelist`.</span></span> <span data-ttu-id="71b01-111">參考變數或運算式參考之系統資源，這會由`Using`區塊。</span><span class="sxs-lookup"><span data-stu-id="71b01-111">Reference variable or expression referring to a system resource to be controlled by this `Using` block.</span></span>|  
+|`statements`|<span data-ttu-id="71b01-112">選擇項。</span><span class="sxs-lookup"><span data-stu-id="71b01-112">Optional.</span></span> <span data-ttu-id="71b01-113">陳述式區塊，`Using`封鎖執行。</span><span class="sxs-lookup"><span data-stu-id="71b01-113">Block of statements that the `Using` block runs.</span></span>|  
+|`End Using`|<span data-ttu-id="71b01-114">必要項。</span><span class="sxs-lookup"><span data-stu-id="71b01-114">Required.</span></span> <span data-ttu-id="71b01-115">結束的定義`Using`區塊，並處置它所控制的所有資源。</span><span class="sxs-lookup"><span data-stu-id="71b01-115">Terminates the definition of the `Using` block and disposes of all the resources that it controls.</span></span>|  
   
- 在 `resourcelist` 部分中的每個資源，都具備下列語法及參數：  
+ <span data-ttu-id="71b01-116">在每個資源`resourcelist`組件具有下列語法和組件：</span><span class="sxs-lookup"><span data-stu-id="71b01-116">Each resource in the `resourcelist` part has the following syntax and parts:</span></span>  
   
- `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
+ `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- \-或\-  
+ <span data-ttu-id="71b01-117">-或-</span><span class="sxs-lookup"><span data-stu-id="71b01-117">-or-</span></span>  
   
- `resourcename As resourcetype = resourceexpression`  
+ `resourcename As resourcetype = resourceexpression`  
   
-## resourcelist 參數  
+## <a name="resourcelist-parts"></a><span data-ttu-id="71b01-118">resourcelist 組件</span><span class="sxs-lookup"><span data-stu-id="71b01-118">resourcelist Parts</span></span>  
   
-|||  
-|-|-|  
-|詞彙|定義|  
-|`resourcename`|必要項。  參考變數，參考 `Using` 區塊控制的系統資源。|  
-|`New`|如果 `Using` 陳述式會取得資源，則為必要項。  如果您已取得資源，請使用第二個語法代替。|  
-|`resourcetype`|必要項。  資源的類別。  類別必須實作 <xref:System.IDisposable> 介面。|  
-|`arglist`|選擇項。  您傳遞至建構函式 \(Constructor\)，以建立 `resourcetype` 執行個體的引數清單。  請參閱 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`resourceexpression`|必要項。  變數或運算式，參考滿足 `resourcetype` 之需求的系統資源。  如果您使用第二個語法代替，必須先取得資源，才能將控制傳遞至 `Using` 陳述式。|  
+|<span data-ttu-id="71b01-119">詞彙</span><span class="sxs-lookup"><span data-stu-id="71b01-119">Term</span></span>|<span data-ttu-id="71b01-120">定義</span><span class="sxs-lookup"><span data-stu-id="71b01-120">Definition</span></span>|  
+|---|---|  
+|`resourcename`|<span data-ttu-id="71b01-121">必要項。</span><span class="sxs-lookup"><span data-stu-id="71b01-121">Required.</span></span> <span data-ttu-id="71b01-122">指的是系統資源的參考變數，`Using`封鎖控制項。</span><span class="sxs-lookup"><span data-stu-id="71b01-122">Reference variable that refers to a system resource that the `Using` block controls.</span></span>|  
+|`New`|<span data-ttu-id="71b01-123">若`Using`陳述式會取得資源。</span><span class="sxs-lookup"><span data-stu-id="71b01-123">Required if the `Using` statement acquires the resource.</span></span> <span data-ttu-id="71b01-124">如果您已取得資源，請使用第二個語法替代方案。</span><span class="sxs-lookup"><span data-stu-id="71b01-124">If you have already acquired the resource, use the second syntax alternative.</span></span>|  
+|`resourcetype`|<span data-ttu-id="71b01-125">必要項。</span><span class="sxs-lookup"><span data-stu-id="71b01-125">Required.</span></span> <span data-ttu-id="71b01-126">資源的類別。</span><span class="sxs-lookup"><span data-stu-id="71b01-126">The class of the resource.</span></span> <span data-ttu-id="71b01-127">此類別必須實作<xref:System.IDisposable>介面。</span><span class="sxs-lookup"><span data-stu-id="71b01-127">The class must implement the <xref:System.IDisposable> interface.</span></span>|  
+|`arglist`|<span data-ttu-id="71b01-128">選擇項。</span><span class="sxs-lookup"><span data-stu-id="71b01-128">Optional.</span></span> <span data-ttu-id="71b01-129">您要傳遞給要建立的執行個體建構函式的引數清單`resourcetype`。</span><span class="sxs-lookup"><span data-stu-id="71b01-129">List of arguments you are passing to the constructor to create an instance of `resourcetype`.</span></span> <span data-ttu-id="71b01-130">請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。</span><span class="sxs-lookup"><span data-stu-id="71b01-130">See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).</span></span>|  
+|`resourceexpression`|<span data-ttu-id="71b01-131">必要項。</span><span class="sxs-lookup"><span data-stu-id="71b01-131">Required.</span></span> <span data-ttu-id="71b01-132">變數或運算式參考到滿足需求的系統資源`resourcetype`。</span><span class="sxs-lookup"><span data-stu-id="71b01-132">Variable or expression referring to a system resource satisfying the requirements of `resourcetype`.</span></span> <span data-ttu-id="71b01-133">如果您使用第二個語法替代方案，您必須先取得資源，控制項傳遞至`Using`陳述式。</span><span class="sxs-lookup"><span data-stu-id="71b01-133">If you use the second syntax alternative, you must acquire the resource before passing control to the `Using` statement.</span></span>|  
   
-## 備註  
- 有時候程式碼需要 Unmanaged 資源，例如，檔案控制代碼 \(File Handle\)、COM 包裝函式或 SQL 連接。  程式碼完成處理一或多個這類資源時，`Using` 區塊保證會處置它們，  讓其他程式碼也可以使用它們。  
+## <a name="remarks"></a><span data-ttu-id="71b01-134">備註</span><span class="sxs-lookup"><span data-stu-id="71b01-134">Remarks</span></span>  
+ <span data-ttu-id="71b01-135">有時候您的程式碼需要 unmanaged 的資源，例如檔案控制代碼、 COM 包裝函式或 SQL 連接。</span><span class="sxs-lookup"><span data-stu-id="71b01-135">Sometimes your code requires an unmanaged resource, such as a file handle, a COM wrapper, or a SQL connection.</span></span> <span data-ttu-id="71b01-136">A`Using`區塊保證會處置的一或多個這類資源與其完成您的程式碼時。</span><span class="sxs-lookup"><span data-stu-id="71b01-136">A `Using` block guarantees the disposal of one or more such resources when your code is finished with them.</span></span> <span data-ttu-id="71b01-137">這可讓它們使用其他程式碼。</span><span class="sxs-lookup"><span data-stu-id="71b01-137">This makes them available for other code to use.</span></span>  
   
- Managed 資源是由 .NET Framework 記憶體回收行程 \(GC\) 處置，而不需另行編碼。  您不需要 `Using` 區塊即可使用 Managed 資源。  但是您仍然可以使用 `Using` 區塊，強制處置 Managed 資源，而不是等待記憶體回收行程。  
+ <span data-ttu-id="71b01-138">受管理的資源處置的.NET Framework 記憶體回收行程 (GC) 沒有任何額外撰寫程式碼。</span><span class="sxs-lookup"><span data-stu-id="71b01-138">Managed resources are disposed of by the .NET Framework garbage collector (GC) without any extra coding on your part.</span></span> <span data-ttu-id="71b01-139">您不需要`Using`managed 資源的區塊。</span><span class="sxs-lookup"><span data-stu-id="71b01-139">You do not need a `Using` block for managed resources.</span></span> <span data-ttu-id="71b01-140">不過，您仍然可以使用`Using`區塊，以強制執行的受管理的資源，而不是等待記憶體回收行程處置。</span><span class="sxs-lookup"><span data-stu-id="71b01-140">However, you can still use a `Using` block to force the disposal of a managed resource instead of waiting for the garbage collector.</span></span>  
   
- `Using` 區塊有三個參數：擷取、使用方式和處置。  
+ <span data-ttu-id="71b01-141">A`Using`區塊都具有三個部分： 擷取、 使用量及處置。</span><span class="sxs-lookup"><span data-stu-id="71b01-141">A `Using` block has three parts: acquisition, usage, and disposal.</span></span>  
   
--   「*擷取*」\(Acquisition\) 表示建立變數，並將該變數初始設定為參考系統資源。  `Using` 陳述式可以取得一或多個資源，或者可以在輸入區塊之前確切取得一個資源，然後將此資源提供給 `Using` 陳述式。  如果您提供 `resourceexpression`，則必須先取得資源，才能將控制傳遞至 `Using` 陳述式。  
+-   <span data-ttu-id="71b01-142">*擷取*表示建立的變數，並初始化參考系統資源。</span><span class="sxs-lookup"><span data-stu-id="71b01-142">*Acquisition* means creating a variable and initializing it to refer to the system resource.</span></span> <span data-ttu-id="71b01-143">`Using`陳述式可以取得一或多個資源，或者您可以取得輸入區塊之前的一個資源，其提供給`Using`陳述式。</span><span class="sxs-lookup"><span data-stu-id="71b01-143">The `Using` statement can acquire one or more resources, or you can acquire exactly one resource before entering the block and supply it to the `Using` statement.</span></span> <span data-ttu-id="71b01-144">如果您提供`resourceexpression`，您必須先取得資源，控制項傳遞至`Using`陳述式。</span><span class="sxs-lookup"><span data-stu-id="71b01-144">If you supply `resourceexpression`, you must acquire the resource before passing control to the `Using` statement.</span></span>  
   
--   「*使用方式*」\(Usage\) 表示會存取資源並利用這些資源來執行動作。  `Using` 和 `End Using` 之間的陳述式代表資源的使用方式。  
+-   <span data-ttu-id="71b01-145">*使用量*表示存取的資源，並使用它們執行動作。</span><span class="sxs-lookup"><span data-stu-id="71b01-145">*Usage* means accessing the resources and performing actions with them.</span></span> <span data-ttu-id="71b01-146">陳述式之間`Using`和`End Using`代表資源的使用量。</span><span class="sxs-lookup"><span data-stu-id="71b01-146">The statements between `Using` and `End Using` represent the usage of the resources.</span></span>  
   
--   「*處置*」\(Disposal\) 表示在 `resourcename` 中的物件上呼叫 <xref:System.IDisposable.Dispose%2A> 方法。  這可讓物件徹底終止其資源。  `End Using` 陳述式會在 `Using` 區塊的控制下處置資源。  
+-   <span data-ttu-id="71b01-147">*處置*方法呼叫<xref:System.IDisposable.Dispose%2A>方法中的物件上`resourcename`。</span><span class="sxs-lookup"><span data-stu-id="71b01-147">*Disposal* means calling the <xref:System.IDisposable.Dispose%2A> method on the object in `resourcename`.</span></span> <span data-ttu-id="71b01-148">這可讓物件正常終止其資源。</span><span class="sxs-lookup"><span data-stu-id="71b01-148">This allows the object to cleanly terminate its resources.</span></span> <span data-ttu-id="71b01-149">`End Using`陳述式下的資源處置`Using`區塊的控制項。</span><span class="sxs-lookup"><span data-stu-id="71b01-149">The `End Using` statement disposes of the resources under the `Using` block's control.</span></span>  
   
-## 行為  
- `Using` 區塊的運作方式類似於 `Try`...`Finally` 語法結構，但 `Try` 區塊會使用資源，而 `Finally` 區塊則會處置這些資源。  因此，不論結束區塊的方式為何，`Using` 區塊都保證會處置資源。  即使是未處理的例外狀況 \(Exception\) 也一樣 \(但 <xref:System.StackOverflowException> 除外\)。  
+## <a name="behavior"></a><span data-ttu-id="71b01-150">行為</span><span class="sxs-lookup"><span data-stu-id="71b01-150">Behavior</span></span>  
+ <span data-ttu-id="71b01-151">A`Using`區塊的行為類似`Try`...`Finally`所在建構`Try`區塊中使用的資源和`Finally`區塊處置它們。</span><span class="sxs-lookup"><span data-stu-id="71b01-151">A `Using` block behaves like a `Try`...`Finally` construction in which the `Try` block uses the resources and the `Finally` block disposes of them.</span></span> <span data-ttu-id="71b01-152">因為這個緣故，`Using`區塊保證會處置資源，不論您如何結束區塊。</span><span class="sxs-lookup"><span data-stu-id="71b01-152">Because of this, the `Using` block guarantees disposal of the resources, no matter how you exit the block.</span></span> <span data-ttu-id="71b01-153">即使有未處理的例外狀況，則為 true，這是除了<xref:System.StackOverflowException>。</span><span class="sxs-lookup"><span data-stu-id="71b01-153">This is true even in the case of an unhandled exception, except for a <xref:System.StackOverflowException>.</span></span>  
   
- `Using` 陳述式可取得的每個資源變數範圍會受限於 `Using` 區塊。  
+ <span data-ttu-id="71b01-154">來取得每個資源變數的範圍`Using`陳述式僅限於`Using`區塊。</span><span class="sxs-lookup"><span data-stu-id="71b01-154">The scope of every resource variable acquired by the `Using` statement is limited to the `Using` block.</span></span>  
   
- 如果您在 `Using` 陳述式中指定多個系統資源，效果就和將 `Using` 區塊彼此組成巢狀一樣。  
+ <span data-ttu-id="71b01-155">如果您指定一個以上的系統資源中`Using`陳述式，效果會相同，如同您巢狀`Using`封鎖另一個。</span><span class="sxs-lookup"><span data-stu-id="71b01-155">If you specify more than one system resource in the `Using` statement, the effect is the same as if you nested `Using` blocks one within another.</span></span>  
   
- 如果 `resourcename` 是 `Nothing`，對 <xref:System.IDisposable.Dispose%2A> 的呼叫沒有開啟，然後，例外狀況不會被擲回。  
+ <span data-ttu-id="71b01-156">如果`resourcename`是`Nothing`，不需要呼叫<xref:System.IDisposable.Dispose%2A>進行時，並擲回任何例外狀況。</span><span class="sxs-lookup"><span data-stu-id="71b01-156">If `resourcename` is `Nothing`, no call to <xref:System.IDisposable.Dispose%2A> is made, and no exception is thrown.</span></span>  
   
-## Using 區塊內的結構化例外狀況處理  
- 如果您需要處理可能是在 `Using` 區塊內發生的例外狀況，則可以在該區塊中新增完整的 `Try`...`Finally` 語法結構。  如果需要處理的狀況是 `Using` 陳述式未順利取得資源，則可以進行測試，以查看 `resourcename` 是否為 `Nothing`。  
+## <a name="structured-exception-handling-within-a-using-block"></a><span data-ttu-id="71b01-157">使用的區塊中處理結構化例外狀況</span><span class="sxs-lookup"><span data-stu-id="71b01-157">Structured Exception Handling Within a Using Block</span></span>  
+ <span data-ttu-id="71b01-158">如果您要處理的例外狀況可能會發生在`Using`區塊中，您可以加入完整`Try`...`Finally`建構它。</span><span class="sxs-lookup"><span data-stu-id="71b01-158">If you need to handle an exception that might occur within the `Using` block, you can add a complete `Try`...`Finally` construction to it.</span></span> <span data-ttu-id="71b01-159">如果您要處理的情況其中`Using`陳述式不成功取得資源，您可以測試以查看`resourcename`是`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="71b01-159">If you need to handle the case where the `Using` statement is not successful in acquiring a resource, you can test to see if `resourcename` is `Nothing`.</span></span>  
   
-## 取代 Using 區塊的結構化例外狀況處理  
- 如果您需要在擷取資源時有更好的控制，或是在 `Finally` 區塊中需要其他程式碼，則可以將 `Using` 區塊重新撰寫為 `Try`...`Finally` 語法結構。  下列範例會顯示基本架構 `Try` 和 `Using` 語法結構，這兩個語法結構同等於擷取和處置 `resource`。  
+## <a name="structured-exception-handling-instead-of-a-using-block"></a><span data-ttu-id="71b01-160">結構化例外狀況，而不使用區塊處理</span><span class="sxs-lookup"><span data-stu-id="71b01-160">Structured Exception Handling Instead of a Using Block</span></span>  
+ <span data-ttu-id="71b01-161">如果您需要更細微地控制的資源擷取，或需要額外的程式碼中`Finally`區塊中，您可以重新撰寫`Using`為封鎖`Try`...`Finally`建構。</span><span class="sxs-lookup"><span data-stu-id="71b01-161">If you need finer control over the acquisition of the resources, or you need additional code in the `Finally` block, you can rewrite the `Using` block as a `Try`...`Finally` construction.</span></span> <span data-ttu-id="71b01-162">下列範例顯示基本架構`Try`和`Using`語法結構，而且相當於擷取及處置`resource`。</span><span class="sxs-lookup"><span data-stu-id="71b01-162">The following example shows skeleton `Try` and `Using` constructions that are equivalent in the acquisition and disposal of `resource`.</span></span>  
   
 ```vb  
 Using resource As New resourceType   
@@ -110,16 +106,16 @@ End Try
 ```  
   
 > [!NOTE]
->  `Using` 區塊內部的程式碼不應該將 `resourcename` 中的物件指派給其他變數。  結束 `Using` 區塊時會處置資源，而其他變數則無法存取它所指向的資源。  
+>  <span data-ttu-id="71b01-163">內部的程式碼`Using`區塊不應該指派中的物件`resourcename`給另一個變數。</span><span class="sxs-lookup"><span data-stu-id="71b01-163">The code inside the `Using` block should not assign the object in `resourcename` to another variable.</span></span> <span data-ttu-id="71b01-164">當您結束`Using`處置資源的區塊，以及其他變數無法存取它所指向的資源。</span><span class="sxs-lookup"><span data-stu-id="71b01-164">When you exit the `Using` block, the resource is disposed, and the other variable cannot access the resource to which it points.</span></span>  
   
-## 範例  
- 下列範例會建立名為 log.txt 和寫入兩行文字至檔案。  這個範例也會盡量讀取檔案並顯示文字行。  
+## <a name="example"></a><span data-ttu-id="71b01-165">範例</span><span class="sxs-lookup"><span data-stu-id="71b01-165">Example</span></span>  
+ <span data-ttu-id="71b01-166">下列範例會建立名為.log.txt，並將兩行文字寫入檔案的檔案。</span><span class="sxs-lookup"><span data-stu-id="71b01-166">The following example creates a file that is named log.txt and writes two lines of text to the file.</span></span> <span data-ttu-id="71b01-167">此範例也會讀取該檔案，並且顯示的文字行。</span><span class="sxs-lookup"><span data-stu-id="71b01-167">The example also reads that same file and displays the lines of text.</span></span>  
   
- 由於 <xref:System.IO.TextWriter> 和 <xref:System.IO.TextReader> 類別實作介面 <xref:System.IDisposable> ，程式碼可以使用 `Using` 陳述式確保檔案在寫入和讀取作業之後正常關閉。  
+ <span data-ttu-id="71b01-168">因為<xref:System.IO.TextWriter>和<xref:System.IO.TextReader>類別會實作<xref:System.IDisposable>介面，可以使用程式碼`Using`陳述式，以確保檔案正確關閉之後寫入和讀取作業。</span><span class="sxs-lookup"><span data-stu-id="71b01-168">Because the <xref:System.IO.TextWriter> and <xref:System.IO.TextReader> classes implement the <xref:System.IDisposable> interface, the code can use `Using` statements to ensure that the file is correctly closed after the write and read operations.</span></span>  
   
  [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/using-statement_1.vb)]  
   
-## 請參閱  
- <xref:System.IDisposable>   
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [How to: Dispose of a System Resource](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)
+## <a name="see-also"></a><span data-ttu-id="71b01-169">另請參閱</span><span class="sxs-lookup"><span data-stu-id="71b01-169">See Also</span></span>  
+ <xref:System.IDisposable>  
+ [<span data-ttu-id="71b01-170">Try...Catch...Finally 陳述式</span><span class="sxs-lookup"><span data-stu-id="71b01-170">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [<span data-ttu-id="71b01-171">如何：處置系統資源</span><span class="sxs-lookup"><span data-stu-id="71b01-171">How to: Dispose of a System Resource</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

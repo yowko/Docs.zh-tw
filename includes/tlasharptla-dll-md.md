@@ -1,1 +1,1 @@
-動態連結程式庫 (DLL)
+<span data-ttu-id="d853c-101">動態連結程式庫 (DLL)</span><span class="sxs-lookup"><span data-stu-id="d853c-101">dynamic-link library (DLL)</span></span>

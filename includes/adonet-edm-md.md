@@ -1,1 +1,1 @@
-實體資料模型
+<span data-ttu-id="d5e8c-101">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="d5e8c-101">Entity Data Model</span></span>

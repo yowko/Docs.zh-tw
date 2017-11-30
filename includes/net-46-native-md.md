@@ -1,1 +1,1 @@
-自 4.6 開始提供，僅限 .NET Native
+<span data-ttu-id="da866-101">自 4.6 開始提供，僅限 .NET Native</span><span class="sxs-lookup"><span data-stu-id="da866-101">Available since 4.6, .NET Native only</span></span>

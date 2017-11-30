@@ -1,1 +1,1 @@
-Windows 8.x 市集
+<span data-ttu-id="4d6d1-101">Windows 8.x 市集</span><span class="sxs-lookup"><span data-stu-id="4d6d1-101">Windows 8.x Store</span></span>

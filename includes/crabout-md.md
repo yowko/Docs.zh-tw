@@ -1,1 +1,1 @@
-如需詳細資訊
+<span data-ttu-id="fe622-101">如需詳細資訊</span><span class="sxs-lookup"><span data-stu-id="fe622-101">For more information about</span></span>
