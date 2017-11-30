@@ -1,1 +1,1 @@
-圖形交換格式 (GIF)
+<span data-ttu-id="ddf4c-101">圖形交換格式 (GIF)</span><span class="sxs-lookup"><span data-stu-id="ddf4c-101">Graphics Interchange Format (GIF)</span></span>

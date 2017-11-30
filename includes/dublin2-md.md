@@ -1,1 +1,1 @@
-裝載功能
+<span data-ttu-id="54dd6-101">裝載功能</span><span class="sxs-lookup"><span data-stu-id="54dd6-101">hosting features</span></span>

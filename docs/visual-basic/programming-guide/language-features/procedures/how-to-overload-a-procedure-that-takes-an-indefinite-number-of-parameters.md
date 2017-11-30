@@ -1,91 +1,74 @@
 ---
-title: "如何︰ 多載不定數目參數 (Visual Basic) 的程序 |Microsoft 文件"
+title: "如何：多載使用不定數目參數的程序 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, parameters
-- procedure overloading, indefinite number of parameters
-- procedures, defining
+- procedures [Visual Basic], parameters
+- procedure overloading [Visual Basic], indefinite number of parameters
+- procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - procedure parameters
-- procedures, overloading
-- procedures, multiple versions
+- procedures [Visual Basic], overloading
+- procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7e09bd482e35c7ce7f28a6cc7de0379b7cc89f6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 37d5b47f06bad1c2a8871168c5642663aedcccf2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>如何：多載使用不定數目參數的程序 (Visual Basic)
-如果程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您不能定義採取參數陣列的一維陣列的多載的版本。 如需詳細資訊，請參閱 「 隱含多載的參數陣列參數 」 中[中多載化程序的考量](./considerations-in-overloading-procedures.md)。  
+# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a><span data-ttu-id="2100d-102">如何：多載使用不定數目參數的程序 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2100d-102">How to: Overload a Procedure that Takes an Indefinite Number of Parameters (Visual Basic)</span></span>
+<span data-ttu-id="2100d-103">如果程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您不能定義接受參數陣列的一維陣列的多載的版本。</span><span class="sxs-lookup"><span data-stu-id="2100d-103">If a procedure has a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, you cannot define an overloaded version taking a one-dimensional array for the parameter array.</span></span> <span data-ttu-id="2100d-104">如需詳細資訊，請參閱 「 隱含多載的參數陣列參數 」[中多載化程序的考量](./considerations-in-overloading-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="2100d-104">For more information, see "Implicit Overloads for a ParamArray Parameter" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).</span></span>  
   
-### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>若要多載接受可變數目之參數的程序  
+### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a><span data-ttu-id="2100d-105">若要多載使用不定數目參數的程序</span><span class="sxs-lookup"><span data-stu-id="2100d-105">To overload a procedure that takes a variable number of parameters</span></span>  
   
-1.  確定此程序與呼叫程式碼邏輯也可利用多載版本，從多個`ParamArray`參數。 請參閱 < 多載和參數陣列"[多載化程序的考量](./considerations-in-overloading-procedures.md)。  
+1.  <span data-ttu-id="2100d-106">確定此程序與呼叫程式碼邏輯受惠於多載版本，從多個`ParamArray`參數。</span><span class="sxs-lookup"><span data-stu-id="2100d-106">Ascertain that the procedure and calling code logic benefits from overloaded versions more than from a `ParamArray` parameter.</span></span> <span data-ttu-id="2100d-107">請參閱中的 < 多載和參數陣列 >[中多載程序的考量](./considerations-in-overloading-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="2100d-107">See "Overloads and ParamArrays" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).</span></span>  
   
-2.  決定程序應該接受的參數清單的變動部分的提供值的數目。 這可能包括大小寫的任何值，且可能包含單一的一維陣列的大小寫。  
+2.  <span data-ttu-id="2100d-108">判斷哪些數字提供值的程序應該接受在參數清單的變數。</span><span class="sxs-lookup"><span data-stu-id="2100d-108">Determine which numbers of supplied values the procedure should accept in the variable part of the parameter list.</span></span> <span data-ttu-id="2100d-109">這可能包括的任何值，大小寫，且它可能包含單一的一維陣列的大小寫。</span><span class="sxs-lookup"><span data-stu-id="2100d-109">This might include the case of no value, and it might include the case of a single one-dimensional array.</span></span>  
   
-3.  針對每個可接受提供的值數目，寫入`Sub`或`Function`宣告陳述式來定義對應的參數清單。 請勿使用 `Optional`或`ParamArray`這個多載版本中的關鍵字。  
+3.  <span data-ttu-id="2100d-110">對於每個可接受提供的值數目，撰寫`Sub`或`Function`定義對應的參數清單的宣告陳述式。</span><span class="sxs-lookup"><span data-stu-id="2100d-110">For each acceptable number of supplied values, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list.</span></span> <span data-ttu-id="2100d-111">請勿使用`Optional`或`ParamArray`關鍵字，在這個多載版本。</span><span class="sxs-lookup"><span data-stu-id="2100d-111">Do not use either the `Optional` or the `ParamArray` keyword in this overloaded version.</span></span>  
   
-4.  在每個宣告中前,`Sub`或`Function`關鍵字[多載](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字。  
+4.  <span data-ttu-id="2100d-112">在每個宣告中前,`Sub`或`Function`關鍵字搭配[多載](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字。</span><span class="sxs-lookup"><span data-stu-id="2100d-112">In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.</span></span>  
   
-5.  下列每個宣告，撰寫呼叫的程式碼提供與該宣告的參數清單的對應值時所應執行的程序程式碼。  
+5.  <span data-ttu-id="2100d-113">下列每個宣告中，撰寫呼叫的程式碼提供與該宣告的參數清單的對應值時應該執行的程序程式碼。</span><span class="sxs-lookup"><span data-stu-id="2100d-113">Following each declaration, write the procedure code that should execute when the calling code supplies values corresponding to that declaration's parameter list.</span></span>  
   
-6.  終止與每個程序`End Sub`或`End Function`視陳述式。  
+6.  <span data-ttu-id="2100d-114">終止與每個程序`End Sub`或`End Function`視陳述式。</span><span class="sxs-lookup"><span data-stu-id="2100d-114">Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例顯示定義的程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，然後再組多載程序。  
+## <a name="example"></a><span data-ttu-id="2100d-115">範例</span><span class="sxs-lookup"><span data-stu-id="2100d-115">Example</span></span>  
+ <span data-ttu-id="2100d-116">下列範例顯示定義的程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，然後再對等一組多載程序。</span><span class="sxs-lookup"><span data-stu-id="2100d-116">The following example shows a procedure defined with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, and then an equivalent set of overloaded procedures.</span></span>  
   
- [!code-vb[VbVbcnProcedures #&69;](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
   
- [!code-vb[VbVbcnProcedures #&70;](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
   
- 您無法多載，這樣的程序的參數清單，會採用參數陣列的一維陣列。 不過，您可以使用其他隱含多載的簽章。 下列宣告可說明這點。  
+ <span data-ttu-id="2100d-117">您無法多載會採用參數陣列的一維陣列的參數清單具有這類的程序。</span><span class="sxs-lookup"><span data-stu-id="2100d-117">You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array.</span></span> <span data-ttu-id="2100d-118">不過，您可以使用其他隱含多載的簽章。</span><span class="sxs-lookup"><span data-stu-id="2100d-118">However, you can use the signatures of the other implicit overloads.</span></span> <span data-ttu-id="2100d-119">下列宣告來說明這點。</span><span class="sxs-lookup"><span data-stu-id="2100d-119">The following declarations illustrate this.</span></span>  
   
- [!code-vb[VbVbcnProcedures #&71;](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- 若要測試是否呼叫的程式碼提供一個或多個值並沒有多載版本中的程式碼`ParamArray`參數，或如果是這樣，多少。 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]將控制項傳遞到符合呼叫的引數清單的版本。  
+ <span data-ttu-id="2100d-120">若要測試是否呼叫的程式碼提供一個或多個值沒有多載的版本中的程式碼`ParamArray`參數，或如果是這樣，多少。</span><span class="sxs-lookup"><span data-stu-id="2100d-120">The code in the overloaded versions does not have to test whether the calling code supplied one or more values for the `ParamArray` parameter, or if so, how many.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="2100d-121">將控制項傳遞至比對呼叫的引數清單的版本。</span><span class="sxs-lookup"><span data-stu-id="2100d-121"> passes control to the version matching the calling argument list.</span></span>  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 因為程序時使用`ParamArray`參數相當於一組多載版本，您無法多載，這樣的程序使用的參數清單，對應到任何這些隱含多載。 如需詳細資訊，請參閱[中多載化程序的考量](./considerations-in-overloading-procedures.md)。  
+## <a name="compiling-the-code"></a><span data-ttu-id="2100d-122">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="2100d-122">Compiling the Code</span></span>  
+ <span data-ttu-id="2100d-123">因為程序時使用`ParamArray`參數相當於一組多載版本，您無法多載，這種程序對應至任何這些隱含的多載參數清單。</span><span class="sxs-lookup"><span data-stu-id="2100d-123">Because a procedure with a `ParamArray` parameter is equivalent to a set of overloaded versions, you cannot overload such a procedure with a parameter list corresponding to any of these implicit overloads.</span></span> <span data-ttu-id="2100d-124">如需詳細資訊，請參閱[中多載化程序的考量](./considerations-in-overloading-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="2100d-124">For more information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 只要處理陣列，其中可能會無限期地大，會造成您的應用程式內部容量滿溢的風險。 如果您接受參數陣列時，您應該測試呼叫程式碼傳遞給它，陣列的長度，並採取適當步驟，如果您的應用程式而言太大。  
+## <a name="net-framework-security"></a><span data-ttu-id="2100d-125">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="2100d-125">.NET Framework Security</span></span>  
+ <span data-ttu-id="2100d-126">只要處理陣列，其中可能會無限期地大，會有風險的造成滿溢內部應用程式的容量。</span><span class="sxs-lookup"><span data-stu-id="2100d-126">Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application.</span></span> <span data-ttu-id="2100d-127">如果您接受參數陣列，您應該測試呼叫的程式碼傳遞給它，陣列的長度，並採取適當的步驟，是否對您的應用程式而言太大。</span><span class="sxs-lookup"><span data-stu-id="2100d-127">If you accept a parameter array, you should test for the length of the array the calling code passed to it, and take appropriate steps if it is too large for your application.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [程序](./index.md)   
- [程序參數和引數](./procedure-parameters-and-arguments.md)   
- [選擇性參數](./optional-parameters.md)   
- [參數陣列](./parameter-arrays.md)   
- [多載化程序](./procedure-overloading.md)   
- [疑難排解程序](./troubleshooting-procedures.md)   
- [如何︰ 定義程序的多個版本](./how-to-define-multiple-versions-of-a-procedure.md)   
- [如何︰ 呼叫多載程序](./how-to-call-an-overloaded-procedure.md)   
- [如何︰ 多載使用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [多載解析](./overload-resolution.md)
+## <a name="see-also"></a><span data-ttu-id="2100d-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2100d-128">See Also</span></span>  
+ [<span data-ttu-id="2100d-129">程序</span><span class="sxs-lookup"><span data-stu-id="2100d-129">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="2100d-130">程序參數和引數</span><span class="sxs-lookup"><span data-stu-id="2100d-130">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="2100d-131">選擇性參數</span><span class="sxs-lookup"><span data-stu-id="2100d-131">Optional Parameters</span></span>](./optional-parameters.md)  
+ [<span data-ttu-id="2100d-132">參數陣列</span><span class="sxs-lookup"><span data-stu-id="2100d-132">Parameter Arrays</span></span>](./parameter-arrays.md)  
+ [<span data-ttu-id="2100d-133">程序多載化</span><span class="sxs-lookup"><span data-stu-id="2100d-133">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="2100d-134">程序的疑難排解</span><span class="sxs-lookup"><span data-stu-id="2100d-134">Troubleshooting Procedures</span></span>](./troubleshooting-procedures.md)  
+ [<span data-ttu-id="2100d-135">如何：定義程序的多個版本</span><span class="sxs-lookup"><span data-stu-id="2100d-135">How to: Define Multiple Versions of a Procedure</span></span>](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [<span data-ttu-id="2100d-136">如何：呼叫多載程序</span><span class="sxs-lookup"><span data-stu-id="2100d-136">How to: Call an Overloaded Procedure</span></span>](./how-to-call-an-overloaded-procedure.md)  
+ [<span data-ttu-id="2100d-137">如何：使用選擇性參數的多載程序</span><span class="sxs-lookup"><span data-stu-id="2100d-137">How to: Overload a Procedure that Takes Optional Parameters</span></span>](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [<span data-ttu-id="2100d-138">多載解析</span><span class="sxs-lookup"><span data-stu-id="2100d-138">Overload Resolution</span></span>](./overload-resolution.md)

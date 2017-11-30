@@ -1,1 +1,1 @@
-Microsoft Windows Presentation Foundation 影像處理元件
+<span data-ttu-id="99119-101">Microsoft Windows Presentation Foundation 影像處理元件</span><span class="sxs-lookup"><span data-stu-id="99119-101">Microsoft Windows Presentation Foundation Imaging Component</span></span>

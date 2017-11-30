@@ -1,71 +1,72 @@
 ---
-title: "如何：使用設計工具將資料繫結至 Windows Form DataGridView 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料來源, 繫結至 Windows Form 控制項"
-  - "DataGridView 控制項 [Windows Form], 資料繫結"
-  - "Windows Form 控制項, 繫結至資料來源。"
+title: "如何：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, binding to a data source
+- data sources [Windows Forms], binding to Windows Forms controls
+- DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a203aa20865a4180b4eb9a7b192fc3c9b73a2f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用設計工具將資料繫結至 Windows Form DataGridView 控制項
-您可以使用設計工具，將 <xref:System.Windows.Forms.DataGridView> 控制項連接到數個不同類型的資料來源，包括資料庫、商務物件 \(Business Object\) 或 Web 服務。  當您使用設計工具繫結控制項至資料來源時，控制項會自動繫結至表示資料來源的 <xref:System.Windows.Forms.BindingSource> 元件。  此外，會在控制項中自動產生資料行，以符合資料來源提供的結構描述資訊。  
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="cd25d-102">如何：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="cd25d-102">How to: Bind Data to the Windows Forms DataGridView Control Using the Designer</span></span>
+<span data-ttu-id="cd25d-103">您可以使用設計工具來連接<xref:System.Windows.Forms.DataGridView>多種不同的不同，包括資料庫、 商務物件或 Web 服務的資料來源的控制項。</span><span class="sxs-lookup"><span data-stu-id="cd25d-103">You can use the designer to connect a <xref:System.Windows.Forms.DataGridView> control to data sources of several different varieties, including databases, business objects, or Web services.</span></span> <span data-ttu-id="cd25d-104">控制當您將控制項繫結至資料來源，使用設計工具時，自動繫結至<xref:System.Windows.Forms.BindingSource>代表資料來源的元件。</span><span class="sxs-lookup"><span data-stu-id="cd25d-104">When you bind the control to a data source using the designer, the control is automatically bound to a <xref:System.Windows.Forms.BindingSource> component that represents the data source.</span></span> <span data-ttu-id="cd25d-105">此外，控制項中會自動產生資料行，以符合資料來源所提供的結構描述資訊。</span><span class="sxs-lookup"><span data-stu-id="cd25d-105">Additionally, columns are automatically generated in the control to match the schema information provided by the data source.</span></span>  
   
- 在資料行產生後，您可進行修改以符合需要。  例如，您可以移除或隱藏不想顯示的資料行、重新整理資料行，或修改資料行型別。  如需修改資料行的詳細資訊，請參閱列於＜請參閱＞章節的主題。  
+ <span data-ttu-id="cd25d-106">產生資料行之後，您可加以修改以符合您的需求。</span><span class="sxs-lookup"><span data-stu-id="cd25d-106">After columns have been generated, you can modify them to meet your needs.</span></span> <span data-ttu-id="cd25d-107">例如，您可以移除或隱藏您不想顯示的資料行、可以重新排列資料行，或者可以修改資料行類型。</span><span class="sxs-lookup"><span data-stu-id="cd25d-107">For example, you can remove or hide columns you are not interested in displaying, you can rearrange the columns, or you can modify the column types.</span></span> <span data-ttu-id="cd25d-108">如需修改資料行的詳細資訊，請參閱＜另請參閱＞一節中所列的主題。</span><span class="sxs-lookup"><span data-stu-id="cd25d-108">For more information about modifying columns, see the topics listed in the See Also section.</span></span>  
   
- 您也可以將多個 <xref:System.Windows.Forms.DataGridView> 控制項繫結至關聯資料表，以建立主從式關聯性。  在這種關聯下，其中一個控制項會顯示父資料表，另一個控制項只會顯示在子資料表中與父資料表中目前資料列相關聯的那些資料列。  如需詳細資訊，請參閱 [如何：在 Windows Form 應用程式中顯示相關的資料](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md)。  
+ <span data-ttu-id="cd25d-109">您也可以繫結多個<xref:System.Windows.Forms.DataGridView>控制項加入相關資料表來建立主從式關聯性。</span><span class="sxs-lookup"><span data-stu-id="cd25d-109">You can also bind multiple <xref:System.Windows.Forms.DataGridView> controls to related tables to create master/detail relationships.</span></span> <span data-ttu-id="cd25d-110">在此組態中，一個控制項會顯示父資料表，而另一個控制項只會顯示子資料表中與父資料表中的目前資料列相關的資料列。</span><span class="sxs-lookup"><span data-stu-id="cd25d-110">In this configuration, one control displays a parent table and another control displays only those rows from a child table that are related to the current row in the parent table.</span></span> <span data-ttu-id="cd25d-111">如需詳細資訊，請參閱[如何：在 Windows Forms 應用程式中顯示相關的資料](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)。</span><span class="sxs-lookup"><span data-stu-id="cd25d-111">For more information, see [How to: Display Related Data in a Windows Forms Application](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).</span></span>  
   
- 在下列程序中，需要 \[**Windows 應用程式**\] 專案以及含有一個 <xref:System.Windows.Forms.DataGridView> 控制項的表單 \(如果具有主從式關聯性，則需要兩個控制項\)。  如需啟動這類專案的詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)和 [如何：將控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ <span data-ttu-id="cd25d-112">下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.DataGridView>控制項或主要/詳細資料關聯性的兩個控制項。</span><span class="sxs-lookup"><span data-stu-id="cd25d-112">The following procedure requires a **Windows Application** project with a form that contains a <xref:System.Windows.Forms.DataGridView> control or two controls for a master/detail relationship.</span></span> <span data-ttu-id="cd25d-113">如需啟動這類專案的相關資訊，請參閱[如何︰建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何︰將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="cd25d-113">For information about starting such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="cd25d-114">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="cd25d-114">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="cd25d-115">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="cd25d-115">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="cd25d-116">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="cd25d-116">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要將控制項繫結至資料來源  
+### <a name="to-bind-the-control-to-a-data-source"></a><span data-ttu-id="cd25d-117">將控制項繫結至資料來源</span><span class="sxs-lookup"><span data-stu-id="cd25d-117">To bind the control to a data source</span></span>  
   
-1.  按一下 <xref:System.Windows.Forms.DataGridView> 控制項右上角的智慧標籤圖像 \(![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)。  
+1.  <span data-ttu-id="cd25d-118">按一下智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="cd25d-118">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) on the upper-right corner of the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-2.  按一下 \[**選擇資料來源**\] 選項的下拉式箭號。  
+2.  <span data-ttu-id="cd25d-119">按一下 [選擇資料來源] 選項的下拉式箭號。</span><span class="sxs-lookup"><span data-stu-id="cd25d-119">Click the drop-down arrow for the **Choose Data Source** option.</span></span>  
   
-3.  如果您的專案尚未擁有資料來源，請按一下 \[**加入專案資料來源**\] 並遵循精靈所指示的步驟。  
+3.  <span data-ttu-id="cd25d-120">如果您的專案還沒有資料來源，請按一下 [新增專案資料來源] 並遵循精靈所指示的步驟。</span><span class="sxs-lookup"><span data-stu-id="cd25d-120">If your project does not already have a data source, click **Add Project Data Source** and follow the steps indicated by the wizard.</span></span>  
   
-     如需詳細資訊，請參閱[資料來源組態精靈](../Topic/Data%20Source%20Configuration%20Wizard.md)。  您的新資料來源將出現在 \[**選擇資料來源**\] 下拉式視窗中。  如果新的資料來源只包含一個成員 \(例如，單一資料庫資料表\)，則控制項將會自動繫結至該成員。  否則，請繼續進行下一個步驟。  
+     <span data-ttu-id="cd25d-121">如需詳細資訊，請參閱[資料來源設定精靈](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f)。</span><span class="sxs-lookup"><span data-stu-id="cd25d-121">For more information, see [Data Source Configuration Wizard](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f).</span></span> <span data-ttu-id="cd25d-122">新的資料來源會出現在 [選擇資料來源] 下拉式視窗中。</span><span class="sxs-lookup"><span data-stu-id="cd25d-122">Your new data source will appear in the **Choose Data Source** drop-down window.</span></span> <span data-ttu-id="cd25d-123">如果新的資料來源只包含一個成員，例如單一資料庫資料表，則控制項會自動繫結至該成員。</span><span class="sxs-lookup"><span data-stu-id="cd25d-123">If your new data source contains only one member, such as a single database table, the control will automatically bind to that member.</span></span> <span data-ttu-id="cd25d-124">否則請繼續下一個步驟。</span><span class="sxs-lookup"><span data-stu-id="cd25d-124">Otherwise, continue to the next step.</span></span>  
   
-4.  如果 \[**其他資料來源**\] 和 \[**專案資料來源**\] 節點尚未展開，請將它們展開，然後選取控制項要繫結的資料來源。  
+4.  <span data-ttu-id="cd25d-125">如果 [其他資料來源] 和 [專案資料來源] 節點尚未展開，請加以展開，然後選取控制項所要繫結的資料來源。</span><span class="sxs-lookup"><span data-stu-id="cd25d-125">Expand the **Other Data Sources** and **Project Data Sources** nodes if they are not already expanded, and then select the data source to bind the control to.</span></span>  
   
-5.  如果資料來源包含一個以上的成員 \(例如，如果已建立包含多個資料表的 <xref:System.Data.DataSet?displayProperty=fullName>\)，請展開資料來源，然後選取要繫結的特定成員。  
+5.  <span data-ttu-id="cd25d-126">如果您的資料來源包含多個成員，例如，如果您已建立<xref:System.Data.DataSet?displayProperty=nameWithType>，其中包含多個資料表，依序展開 資料來源，然後選取 繫結至特定的成員。</span><span class="sxs-lookup"><span data-stu-id="cd25d-126">If your data source contains more than one member, such as if you have created a <xref:System.Data.DataSet?displayProperty=nameWithType> that contains multiple tables, expand the data source, and then select the specific member to bind to.</span></span>  
   
-6.  若要建立主從式關聯性，請在第二個 <xref:System.Windows.Forms.DataGridView> 控制項的 \[**選擇資料來源**\] 下拉式視窗中，展開為父資料表建立的 <xref:System.Windows.Forms.BindingSource>，然後從顯示的清單中選取關聯的子資料表。  
+6.  <span data-ttu-id="cd25d-127">若要在建立主從式關聯性**選擇資料來源**第二個下拉式視窗<xref:System.Windows.Forms.DataGridView>控制中，展開<xref:System.Windows.Forms.BindingSource>建立父資料表，並從清單中選取相關的子系資料表顯示。</span><span class="sxs-lookup"><span data-stu-id="cd25d-127">To create a master/detail relationship, in the **Choose Data Source** drop-down window for a second <xref:System.Windows.Forms.DataGridView> control, expand the <xref:System.Windows.Forms.BindingSource> created for the parent table, and then select the related child table from the list shown.</span></span>  
   
     > [!NOTE]
-    >  如果專案已經有資料來源，您也可以使用 \[**資料來源**\] 視窗建立資料表單。  如需詳細資訊，請參閱[資料來源視窗](../Topic/Data%20Sources%20Window.md)。  
+    >  <span data-ttu-id="cd25d-128">如果專案已經有資料來源，您也可以使用 [資料來源] 視窗建立資料表單。</span><span class="sxs-lookup"><span data-stu-id="cd25d-128">If your project already has a data source, you can also use the **Data Sources** window to create a data form.</span></span> <span data-ttu-id="cd25d-129">如需詳細資訊，請參閱[資料來源視窗](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)。</span><span class="sxs-lookup"><span data-stu-id="cd25d-129">For more information, see [Data Sources Window](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>   
- [如何：連接至資料庫中的資料](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md)   
- [如何：使用設計工具在 Windows Form DataGridView 控制項中加入和移除資料行](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)   
- [如何：使用設計工具變更 Windows Form DataGridView 控制項中資料行的順序](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)   
- [如何：使用設計工具變更 Windows Form DataGridView 資料行的類型](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)   
- [如何：使用設計工具凍結 Windows Form DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)   
- [如何：使用設計工具隱藏 Windows Form DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)   
- [如何：使用設計工具將 Windows Form DataGridView 控制項中的資料行設為唯讀](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [如何：將控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [資料來源視窗](../Topic/Data%20Sources%20Window.md)   
- [如何：在 Windows Form 應用程式中顯示相關的資料](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md)
+## <a name="see-also"></a><span data-ttu-id="cd25d-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd25d-130">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="cd25d-131">如何：連接至資料庫中的資料</span><span class="sxs-lookup"><span data-stu-id="cd25d-131">How to: Connect to Data in a Database</span></span>](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)  
+ [<span data-ttu-id="cd25d-132">操作說明：使用設計工具在 Windows Forms DataGridView 控制項中新增和移除資料行</span><span class="sxs-lookup"><span data-stu-id="cd25d-132">How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="cd25d-133">操作說明：使用設計工具變更 Windows Forms DataGridView 控制項中資料行的順序</span><span class="sxs-lookup"><span data-stu-id="cd25d-133">How to: Change the Order of Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="cd25d-134">操作說明：使用設計工具變更 Windows Forms DataGridView 資料行的類型</span><span class="sxs-lookup"><span data-stu-id="cd25d-134">How to: Change the Type of a Windows Forms DataGridView Column Using the Designer</span></span>](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)  
+ [<span data-ttu-id="cd25d-135">操作說明：使用設計工具凍結 Windows Forms DataGridView 控制項中的資料行</span><span class="sxs-lookup"><span data-stu-id="cd25d-135">How to: Freeze Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="cd25d-136">操作說明：使用設計工具隱藏 Windows Forms DataGridView 控制項中的資料行</span><span class="sxs-lookup"><span data-stu-id="cd25d-136">How to: Hide Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="cd25d-137">操作說明：使用設計工具將 Windows Forms DataGridView 控制項中的資料行設為唯讀</span><span class="sxs-lookup"><span data-stu-id="cd25d-137">How to: Make Columns Read-Only in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="cd25d-138">如何： 建立 Windows 應用程式專案</span><span class="sxs-lookup"><span data-stu-id="cd25d-138">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [<span data-ttu-id="cd25d-139">操作說明：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cd25d-139">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="cd25d-140">資料來源視窗</span><span class="sxs-lookup"><span data-stu-id="cd25d-140">Data Sources Window</span></span>](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)  
+ [<span data-ttu-id="cd25d-141">如何：在 Windows Forms 應用程式中顯示相關的資料</span><span class="sxs-lookup"><span data-stu-id="cd25d-141">How to: Display Related Data in a Windows Forms Application</span></span>](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)

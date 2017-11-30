@@ -1,37 +1,43 @@
 ---
-title: "HOW TO：以內嵌方式呼叫使用者定義函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：以內嵌方式呼叫使用者定義函式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b39d71cd0f9aee855133c646fbec6a7f4f6f3c40
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：以內嵌方式呼叫使用者定義函式
-雖然您可以用內嵌 \(Inline\) 方式呼叫使用者定義的函式，但是在執行查詢之前，並不會執行已延後執行的查詢中所含的函式。  如需詳細資訊，請參閱[Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md)。  
+# <a name="how-to-call-user-defined-functions-inline"></a><span data-ttu-id="80759-102">如何：以內嵌方式呼叫使用者定義函式</span><span class="sxs-lookup"><span data-stu-id="80759-102">How to: Call User-Defined Functions Inline</span></span>
+<span data-ttu-id="80759-103">雖然您可以用內嵌 (Inline) 方式呼叫使用者定義的函式，但是在執行查詢之前，並不會執行已延後執行的查詢中所含的函式。</span><span class="sxs-lookup"><span data-stu-id="80759-103">Although you can call user-defined functions inline, functions that are included in a query whose execution is deferred are not executed until the query is executed.</span></span> <span data-ttu-id="80759-104">如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="80759-104">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
- 在查詢外部呼叫相同的函式時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會透過方法呼叫運算式來建立簡單的查詢。  下列是 SQL 語法 \(參數 `@p0` 會繫結至傳入的常數\)：  
+ <span data-ttu-id="80759-105">在查詢外部呼叫相同的函式時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會透過方法呼叫運算式來建立簡單的查詢。</span><span class="sxs-lookup"><span data-stu-id="80759-105">When you call the same function outside a query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a simple query from the method call expression.</span></span> <span data-ttu-id="80759-106">下列是 SQL 語法 (參數 `@p0` 會繫結至傳入的常數)：</span><span class="sxs-lookup"><span data-stu-id="80759-106">The following is the SQL syntax (the parameter `@p0` is bound to the constant passed in):</span></span>  
   
 ```  
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會建立下列項目：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="80759-107"> 會建立下列項目：</span><span class="sxs-lookup"><span data-stu-id="80759-107"> creates the following:</span></span>  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
   
-## 範例  
- 在下列 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢中，您可以看到所產生之使用者定義函式方法 `ReverseCustName` 的內嵌呼叫。  因為延後查詢執行，所以不會立即執行函式。  針對這個查詢建置的 SQL，會轉譯為對資料庫中使用者定義函式的呼叫 \(請參閱查詢後面的 SQL 程式碼\)。  
+## <a name="example"></a><span data-ttu-id="80759-108">範例</span><span class="sxs-lookup"><span data-stu-id="80759-108">Example</span></span>  
+ <span data-ttu-id="80759-109">在下列[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢中，您可以看到的內嵌呼叫產生的使用者定義函式方法`ReverseCustName`。</span><span class="sxs-lookup"><span data-stu-id="80759-109">In the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query, you can see an inline call to the generated user-defined function method `ReverseCustName`.</span></span> <span data-ttu-id="80759-110">因為延後查詢執行，所以不會立即執行函式。</span><span class="sxs-lookup"><span data-stu-id="80759-110">The function is not executed immediately because query execution is deferred.</span></span> <span data-ttu-id="80759-111">針對這個查詢建置的 SQL，會轉譯為對資料庫中使用者定義函式的呼叫 (請參閱查詢後面的 SQL 程式碼)。</span><span class="sxs-lookup"><span data-stu-id="80759-111">The SQL built for this query translates to a call to the user-defined function in the database (see the SQL code following the query).</span></span>  
   
  [!code-csharp[DLinqUDFS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#5)]
  [!code-vb[DLinqUDFS#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#5)]  
@@ -42,5 +48,5 @@ SELECT [t0].[ContactName],
 FROM [Customers] AS [t0]  
 ```  
   
-## 請參閱  
- [使用者定義函式](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a><span data-ttu-id="80759-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="80759-112">See Also</span></span>  
+ [<span data-ttu-id="80759-113">使用者定義函式</span><span class="sxs-lookup"><span data-stu-id="80759-113">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

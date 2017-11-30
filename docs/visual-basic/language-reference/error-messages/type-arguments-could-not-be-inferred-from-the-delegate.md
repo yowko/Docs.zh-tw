@@ -1,41 +1,39 @@
 ---
-title: "Type arguments could not be inferred from the delegate | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc36564"
-  - "vbc36564"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36564"
+title: "無法從委派推斷型別引數"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc36564
+- vbc36564
+helpviewer_keywords: BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 57a3a24af32d9eb85a0f905aa3a73a956723b6d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Type arguments could not be inferred from the delegate
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指派陳述式 \(Assignment Statement\) 使用 `AddressOf` 將泛型程序的位址指派給委派，但不會對泛型程序提供任何型別參數。  
+# <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a><span data-ttu-id="c4a65-102">無法從委派推斷型別引數</span><span class="sxs-lookup"><span data-stu-id="c4a65-102">Type arguments could not be inferred from the delegate</span></span>
+<span data-ttu-id="c4a65-103">指派陳述式使用 `AddressOf` 將泛型程序的位址指派給委派，但未將任何類型引數提供給泛型程序。</span><span class="sxs-lookup"><span data-stu-id="c4a65-103">An assignment statement uses `AddressOf` to assign the address of a generic procedure to a delegate, but it does not supply any type arguments to the generic procedure.</span></span>  
   
- 通常當您叫用 \(Invoke\) 泛型型別時，會對泛型型別定義的每個型別參數提供型別引數。  如果沒有提供任何型別引數，編譯器會嘗試推斷要傳遞至型別參數的型別。  如果內容沒有提供足夠的資訊讓編譯器推斷型別，就會產生錯誤。  
+ <span data-ttu-id="c4a65-104">通常，當您叫用泛型類型時，會針對泛型類型所定義的每個類型參數提供類型引數。</span><span class="sxs-lookup"><span data-stu-id="c4a65-104">Normally, when you invoke a generic type, you supply a type argument for each type parameter that the generic type defines.</span></span> <span data-ttu-id="c4a65-105">如果您未提供任何類型引數，編譯器會嘗試推斷要傳遞給類型參數的類型。</span><span class="sxs-lookup"><span data-stu-id="c4a65-105">If you do not supply any type arguments, the compiler attempts to infer the types to be passed to the type parameters.</span></span> <span data-ttu-id="c4a65-106">如果內容未提供足夠的資訊讓編譯器推斷類型，則會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="c4a65-106">If the context does not provide enough information for the compiler to infer the types, an error is generated.</span></span>  
   
- **錯誤 ID**：BC36564  
+ <span data-ttu-id="c4a65-107">**錯誤 ID:** BC36564</span><span class="sxs-lookup"><span data-stu-id="c4a65-107">**Error ID:** BC36564</span></span>  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c4a65-108">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="c4a65-108">To correct this error</span></span>  
   
--   在 `AddressOf` 運算式中，指定泛型程序的型別引數。  
+-   <span data-ttu-id="c4a65-109">在 `AddressOf` 運算式中指定泛型程序的類型引數。</span><span class="sxs-lookup"><span data-stu-id="c4a65-109">Specify the type arguments for the generic procedure in the `AddressOf` expression.</span></span>  
   
-## 請參閱  
- [Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
- [Type List](../../../visual-basic/language-reference/statements/type-list.md)   
- [擴充方法](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a><span data-ttu-id="c4a65-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c4a65-110">See Also</span></span>  
+ [<span data-ttu-id="c4a65-111">Visual Basic 中的泛型型別</span><span class="sxs-lookup"><span data-stu-id="c4a65-111">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="c4a65-112">AddressOf 運算子</span><span class="sxs-lookup"><span data-stu-id="c4a65-112">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="c4a65-113">在 Visual Basic 中的泛型程序</span><span class="sxs-lookup"><span data-stu-id="c4a65-113">Generic Procedures in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
+ [<span data-ttu-id="c4a65-114">類型清單</span><span class="sxs-lookup"><span data-stu-id="c4a65-114">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)  
+ [<span data-ttu-id="c4a65-115">擴充方法</span><span class="sxs-lookup"><span data-stu-id="c4a65-115">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

@@ -1,30 +1,37 @@
 ---
-title: "如何：將中繼資料寫入點陣圖 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "點陣圖, 將中繼資料寫入"
-  - "影像中繼資料"
-  - "中繼資料, 在影像中"
-  - "中繼資料, 寫入點陣圖"
+title: "如何：將中繼資料寫入點陣圖"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- image metadata [WPF]
+- metadata [WPF], writing to a bitmap
+- metadata [WPF], in images
+- bitmaps [WPF], writing metadata to
 ms.assetid: 68f0dc4b-c0fe-43be-94f2-9d7399378fb3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4bd345981e81cc2fec120ba0f33c32e5c8217109
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：將中繼資料寫入點陣圖
-本範例示範如何使用中繼資料 \(Metadata\) 查詢語言，將中繼資料寫入點陣圖。  
+# <a name="how-to-write-metadata-to-a-bitmap"></a><span data-ttu-id="9c14f-102">如何：將中繼資料寫入點陣圖</span><span class="sxs-lookup"><span data-stu-id="9c14f-102">How to: Write Metadata to a Bitmap</span></span>
+<span data-ttu-id="9c14f-103">這個範例示範如何將中繼資料寫入點陣圖使用中繼資料的查詢語言。</span><span class="sxs-lookup"><span data-stu-id="9c14f-103">This example shows how to write metadata to a bitmap using the metadata query language.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="9c14f-104">範例</span><span class="sxs-lookup"><span data-stu-id="9c14f-104">Example</span></span>  
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
  [!code-vb[BitmapMetadata#SetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]

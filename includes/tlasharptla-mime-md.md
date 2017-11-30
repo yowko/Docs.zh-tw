@@ -1,1 +1,1 @@
-多用途網際網路郵件延伸標準 (MIME)
+<span data-ttu-id="58e46-101">多用途網際網路郵件延伸標準 (MIME)</span><span class="sxs-lookup"><span data-stu-id="58e46-101">Multipurpose Internet Mail Extensions (MIME)</span></span>

@@ -1,1 +1,1 @@
-軟體開發套件 (SDK)
+<span data-ttu-id="0d2f9-101">軟體開發套件 (SDK)</span><span class="sxs-lookup"><span data-stu-id="0d2f9-101">software development kit (SDK)</span></span>

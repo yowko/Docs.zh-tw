@@ -1,99 +1,102 @@
 ---
-title: "開放式並行存取概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "開放式並行存取：概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 52e83f443c0ae74587b4585beb51ddbeb093486a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 開放式並行存取概觀
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援開放式並行存取 \(Optimistic Concurrency\) 控制。  下表說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 文件中與文件中開放式並行存取相關的詞彙：  
+# <a name="optimistic-concurrency-overview"></a><span data-ttu-id="d4d3f-102">開放式並行存取：概觀</span><span class="sxs-lookup"><span data-stu-id="d4d3f-102">Optimistic Concurrency: Overview</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d4d3f-103"> 支援開放式並行存取 (Optimistic Concurrency) 控制。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-103"> supports optimistic concurrency control.</span></span> <span data-ttu-id="d4d3f-104">下表描述在開放式並行存取的條款[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件：</span><span class="sxs-lookup"><span data-stu-id="d4d3f-104">The following table describes terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation:</span></span>  
   
-|詞彙|描述|  
-|--------|--------|  
-|並行|兩位以上的使用者同時嘗試更新相同資料庫資料列的情況。|  
-|並行衝突|兩位以上的使用者同時嘗試將衝突值送出給資料列的一個或多個資料行的情況。|  
-|並行控制|用來解決並行衝突的技術。|  
-|開放式並行存取控制項|此種技術會先檢查資料列中的其他交易是否已變更值，才允許送出變更。<br /><br /> 與「*封閉式並行存取控制*」\(Pessimistic Concurrency Control\) 不同的是，後者會鎖定資料錄，避免並行存取衝突。<br /><br /> 稱為「*開放式*」\(Optimistic\) 控制的原因是它會將某個交易干擾另一個交易的機會視為不可能。|  
-|衝突的解決方式|透過再次查詢資料庫，然後調整差異，以重新整理衝突項目的處理流程。<br /><br /> 重新整理物件時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 變更 Tracker 會保留下列資料：<br /><br /> -   一開始取自資料庫且用於更新檢查的值。<br />-   來自後續查詢的新資料庫值。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 接著會判斷物件是否發生衝突 \(也就是，它的其中一個或多個成員值是否變更\)。  如果物件衝突，則 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會接著判斷它的哪個成員發生衝突。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 發現的所有成員衝突都會加入至衝突清單中。|  
+|<span data-ttu-id="d4d3f-105">詞彙</span><span class="sxs-lookup"><span data-stu-id="d4d3f-105">Terms</span></span>|<span data-ttu-id="d4d3f-106">描述</span><span class="sxs-lookup"><span data-stu-id="d4d3f-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="d4d3f-107">並行</span><span class="sxs-lookup"><span data-stu-id="d4d3f-107">concurrency</span></span>|<span data-ttu-id="d4d3f-108">兩位以上的使用者同時嘗試更新相同資料庫資料列的情況。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-108">The situation in which two or more users at the same time try to update the same database row.</span></span>|  
+|<span data-ttu-id="d4d3f-109">並行衝突</span><span class="sxs-lookup"><span data-stu-id="d4d3f-109">concurrency conflict</span></span>|<span data-ttu-id="d4d3f-110">兩位以上的使用者同時嘗試將衝突值送出給資料列的一個或多個資料行的情況。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-110">The situation in which two or more users at the same time try to submit conflicting values to one or more columns of a row.</span></span>|  
+|<span data-ttu-id="d4d3f-111">並行控制</span><span class="sxs-lookup"><span data-stu-id="d4d3f-111">concurrency control</span></span>|<span data-ttu-id="d4d3f-112">用來解決並行衝突的技術。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-112">The technique used to resolve concurrency conflicts.</span></span>|  
+|<span data-ttu-id="d4d3f-113">開放式並行存取控制項</span><span class="sxs-lookup"><span data-stu-id="d4d3f-113">optimistic concurrency control</span></span>|<span data-ttu-id="d4d3f-114">此種技術會先檢查資料列中的其他異動是否已變更值，才允許送出變更。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-114">The technique that first investigates whether other transactions have changed values in a row before permitting changes to be submitted.</span></span><br /><br /> <span data-ttu-id="d4d3f-115">與*封閉式並行控制*，後者會鎖定資料錄，避免並行存取衝突。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-115">Contrast with *pessimistic concurrency control*, which locks the record to avoid concurrency conflicts.</span></span><br /><br /> <span data-ttu-id="d4d3f-116">*開放式*控制項 optimistic 的原因將它視為一筆交易干擾另一個可能的機會。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-116">*Optimistic* control is so termed because it considers the chances of one transaction interfering with another to be unlikely.</span></span>|  
+|<span data-ttu-id="d4d3f-117">衝突的解決方式</span><span class="sxs-lookup"><span data-stu-id="d4d3f-117">conflict resolution</span></span>|<span data-ttu-id="d4d3f-118">透過再次查詢資料庫，然後調整差異，以重新整理衝突項目的處理流程。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-118">The process of refreshing a conflicting item by querying the database again and then reconciling differences.</span></span><br /><br /> <span data-ttu-id="d4d3f-119">重新整理物件時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 變更 Tracker 會保留下列資料：</span><span class="sxs-lookup"><span data-stu-id="d4d3f-119">When an object is refreshed, the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] change tracker holds the following data:</span></span><br /><br /> <span data-ttu-id="d4d3f-120">-原本取自資料庫和值用於更新檢查。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-120">-   The values originally taken from the database and used for the update check.</span></span><br /><span data-ttu-id="d4d3f-121">的來自後續查詢新資料庫值。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-121">-   The new database values from the subsequent query.</span></span><br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d4d3f-122"> 接著會判斷物件是否發生衝突 (也就是，它的其中一個或多個成員值是否變更)。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-122"> then determines whether the object is in conflict (that is, whether one or more of its member values has changed).</span></span> <span data-ttu-id="d4d3f-123">如果物件衝突，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]接下來會決定哪些成員為衝突。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-123">If the object is in conflict, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] next determines which of its members are in conflict.</span></span><br /><br /> <span data-ttu-id="d4d3f-124">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 發現的所有成員衝突都會加入至衝突清單中。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-124">Any member conflict that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] discovers is added to a conflict list.</span></span>|  
   
- 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型 \(Object Model\) 中，「*開放式並行存取衝突*」\(Optimistic Concurrency Conflict\) 會在下列兩個條件都符合時發生：  
+ <span data-ttu-id="d4d3f-125">在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]物件模型*開放式並行存取衝突*兩個下列條件成立時發生：</span><span class="sxs-lookup"><span data-stu-id="d4d3f-125">In the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model, an *optimistic concurrency conflict* occurs when both of the following conditions are true:</span></span>  
   
--   用戶端嘗試將變更送出給資料庫。  
+-   <span data-ttu-id="d4d3f-126">用戶端嘗試將變更送出給資料庫。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-126">The client tries to submit changes to the database.</span></span>  
   
--   資料庫中的一個或多個更新檢查值，自用戶端最後一次讀取之後已更新過。  
+-   <span data-ttu-id="d4d3f-127">資料庫中的一個或多個更新檢查值，自用戶端最後一次讀取之後已更新過。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-127">One or more update-check values have been updated in the database since the client last read them.</span></span>  
   
- 解決這項衝突包括探索哪些物件成員發生衝突，然後決定要採取的動作。  
+ <span data-ttu-id="d4d3f-128">解決這項衝突包括探索哪些物件成員發生衝突，然後決定要採取的動作。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-128">Resolution of this conflict includes discovering which members of the object are in conflict, and then deciding what you want to do about it.</span></span>  
   
 > [!NOTE]
->  只有對應成 <xref:System.Data.Linq.Mapping.UpdateCheck> 或 <xref:System.Data.Linq.Mapping.UpdateCheck> 的成員才會參與開放式並行存取檢查。  而不會檢查標記為 <xref:System.Data.Linq.Mapping.UpdateCheck> 的成員。  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.UpdateCheck>。  
+>  <span data-ttu-id="d4d3f-129">只有對應成 <xref:System.Data.Linq.Mapping.UpdateCheck.Always> 或 <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> 的成員才會參與開放式並行存取檢查。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-129">Only members mapped as <xref:System.Data.Linq.Mapping.UpdateCheck.Always> or <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> participate in optimistic concurrency checks.</span></span> <span data-ttu-id="d4d3f-130">而不會檢查標記為 <xref:System.Data.Linq.Mapping.UpdateCheck.Never> 的成員。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-130">No check is performed for members marked <xref:System.Data.Linq.Mapping.UpdateCheck.Never>.</span></span> <span data-ttu-id="d4d3f-131">如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.UpdateCheck>。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-131">For more information, see <xref:System.Data.Linq.Mapping.UpdateCheck>.</span></span>  
   
-## 範例  
- 例如，在下列案例中，User1 查詢資料庫中的資料列，開始準備更新。  User1 會接收到值為 Alfreds、Maria 和 Sales 的一個資料列。  
+## <a name="example"></a><span data-ttu-id="d4d3f-132">範例</span><span class="sxs-lookup"><span data-stu-id="d4d3f-132">Example</span></span>  
+ <span data-ttu-id="d4d3f-133">例如，在下列案例中，User1 查詢資料庫中的資料列，開始準備更新。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-133">For example, in the following scenario, User1 starts to prepare an update by querying the database for a row.</span></span> <span data-ttu-id="d4d3f-134">User1 會接收到值為 Alfreds、Maria 和 Sales 的一個資料列。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-134">User1 receives a row with values of Alfreds, Maria, and Sales.</span></span>  
   
- User1 想將 Manager 資料行的值變更為 Alfred，並將 Department 資料行的值變更為 Marketing。  但是在 User1 送出那些變更之前，User2 就已經先送出變更給資料庫。  因此，現在 Assistant 資料行的值已變更為 Mary，而 Department 資料行的值已變更為 Service。  
+ <span data-ttu-id="d4d3f-135">User1 想將 Manager 資料行的值變更為 Alfred，並將 Department 資料行的值變更為 Marketing。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-135">User1 wants to change the value of the Manager column to Alfred and the value of the Department column to Marketing.</span></span> <span data-ttu-id="d4d3f-136">但是在 User1 送出那些變更之前，User2 就已經先送出變更給資料庫。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-136">Before User1 can submit those changes, User2 has submitted changes to the database.</span></span> <span data-ttu-id="d4d3f-137">因此，現在 Assistant 資料行的值已變更為 Mary，而 Department 資料行的值已變更為 Service。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-137">So now the value of the Assistant column has been changed to Mary and the value of the Department column to Service.</span></span>  
   
- 如果 User1 現在嘗試送出變更，則送出會失敗，而且會擲回 <xref:System.Data.Linq.ChangeConflictException> 例外狀況。  因為 Assistant 資料行和 Department 資料行的資料庫值並不是所預期的值，所以會發生這種結果。  因此表示 Assistant 和 Department 資料行的成員會產生衝突。  下表將摘要說明這種情況。  
+ <span data-ttu-id="d4d3f-138">如果 User1 現在嘗試送出變更，則送出會失敗，而且會擲回 <xref:System.Data.Linq.ChangeConflictException> 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-138">When User1 now tries to submit changes, the submission fails and a <xref:System.Data.Linq.ChangeConflictException> exception is thrown.</span></span> <span data-ttu-id="d4d3f-139">因為 Assistant 資料行和 Department 資料行的資料庫值並不是所預期的值，所以會發生這種結果。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-139">This result occurs because the database values for the Assistant column and the Department column are not those that were expected.</span></span> <span data-ttu-id="d4d3f-140">因此表示 Assistant 和 Department 資料行的成員會產生衝突。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-140">Members representing the Assistant and Department columns are in conflict.</span></span> <span data-ttu-id="d4d3f-141">下表將摘要說明這種情況。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-141">The following table summarizes the situation.</span></span>  
   
-||Manager|Assistant|Department|  
+||<span data-ttu-id="d4d3f-142">Manager</span><span class="sxs-lookup"><span data-stu-id="d4d3f-142">Manager</span></span>|<span data-ttu-id="d4d3f-143">Assistant</span><span class="sxs-lookup"><span data-stu-id="d4d3f-143">Assistant</span></span>|<span data-ttu-id="d4d3f-144">Department</span><span class="sxs-lookup"><span data-stu-id="d4d3f-144">Department</span></span>|  
 |------|-------------|---------------|----------------|  
-|原始狀態|Alfreds|Maria|Sales|  
-|User1|Alfred||Marketing|  
-|User2||Mary|服務|  
+|<span data-ttu-id="d4d3f-145">原始狀態</span><span class="sxs-lookup"><span data-stu-id="d4d3f-145">Original state</span></span>|<span data-ttu-id="d4d3f-146">Alfreds</span><span class="sxs-lookup"><span data-stu-id="d4d3f-146">Alfreds</span></span>|<span data-ttu-id="d4d3f-147">Maria</span><span class="sxs-lookup"><span data-stu-id="d4d3f-147">Maria</span></span>|<span data-ttu-id="d4d3f-148">Sales</span><span class="sxs-lookup"><span data-stu-id="d4d3f-148">Sales</span></span>|  
+|<span data-ttu-id="d4d3f-149">User1</span><span class="sxs-lookup"><span data-stu-id="d4d3f-149">User1</span></span>|<span data-ttu-id="d4d3f-150">Alfred</span><span class="sxs-lookup"><span data-stu-id="d4d3f-150">Alfred</span></span>||<span data-ttu-id="d4d3f-151">Marketing</span><span class="sxs-lookup"><span data-stu-id="d4d3f-151">Marketing</span></span>|  
+|<span data-ttu-id="d4d3f-152">User2</span><span class="sxs-lookup"><span data-stu-id="d4d3f-152">User2</span></span>||<span data-ttu-id="d4d3f-153">Mary</span><span class="sxs-lookup"><span data-stu-id="d4d3f-153">Mary</span></span>|<span data-ttu-id="d4d3f-154">服務</span><span class="sxs-lookup"><span data-stu-id="d4d3f-154">Service</span></span>|  
   
- 您可以使用不同方式來解決這類衝突。  如需詳細資訊，請參閱[HOW TO：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ <span data-ttu-id="d4d3f-155">您可以使用不同方式來解決這類衝突。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-155">You can resolve conflicts such as this in different ways.</span></span> <span data-ttu-id="d4d3f-156">如需詳細資訊，請參閱[如何： 管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-156">For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span></span>  
   
-## 衝突偵測和解決檢查清單  
- 您可以偵測和解決任何精細度等級的衝突。  其中一種極端的做法是，使用三種方式的其中一種方式來解決所有的衝突 \(請參閱 <xref:System.Data.Linq.RefreshMode>\)，而不考慮其他事項。  另一種極端的做法是，指定每個衝突成員之每種衝突類型的特定動作。  
+## <a name="conflict-detection-and-resolution-checklist"></a><span data-ttu-id="d4d3f-157">衝突偵測和解決檢查清單</span><span class="sxs-lookup"><span data-stu-id="d4d3f-157">Conflict Detection and Resolution Checklist</span></span>  
+ <span data-ttu-id="d4d3f-158">您可以偵測和解決任何精細度等級的衝突。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-158">You can detect and resolve conflicts at any level of detail.</span></span> <span data-ttu-id="d4d3f-159">其中一種極端的做法是，使用三種方式的其中一種方式來解決所有的衝突 (請參閱 <xref:System.Data.Linq.RefreshMode>)，而不考慮其他事項。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-159">At one extreme, you can resolve all conflicts in one of three ways (see <xref:System.Data.Linq.RefreshMode>) without additional consideration.</span></span> <span data-ttu-id="d4d3f-160">另一種極端的做法是，指定每個衝突成員之每種衝突類型的特定動作。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-160">At the other extreme, you can designate a specific action for each type of conflict on every member in conflict.</span></span>  
   
--   指定或修訂物件模型中的 <xref:System.Data.Linq.Mapping.UpdateCheck> 選項。  
+-   <span data-ttu-id="d4d3f-161">指定或修訂物件模型中的 <xref:System.Data.Linq.Mapping.UpdateCheck> 選項。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-161">Specify or revise <xref:System.Data.Linq.Mapping.UpdateCheck> options in your object model.</span></span>  
   
-     如需詳細資訊，請參閱[HOW TO：指定要測試哪些成員是否發生並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)。  
+     <span data-ttu-id="d4d3f-162">如需詳細資訊，請參閱[How to： 指定的成員會用於測試並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-162">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
   
--   在 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 呼叫的 try\/catch 區塊中，指定何時擲回例外狀況。  
+-   <span data-ttu-id="d4d3f-163">在 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 呼叫的 try/catch 區塊中，指定何時擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-163">In the try/catch block of your call to <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, specify at what point you want exceptions to be thrown.</span></span>  
   
-     如需詳細資訊，請參閱[HOW TO：指定何時擲回並行例外狀況](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)。  
+     <span data-ttu-id="d4d3f-164">如需詳細資訊，請參閱[How to： 指定當並行存取例外狀況擲回](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-164">For more information, see [How to: Specify When Concurrency Exceptions are Thrown](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span></span>  
   
--   決定想要擷取的衝突詳細資料量，並據此將程式碼併入 try\/catch 區域。  
+-   <span data-ttu-id="d4d3f-165">決定想要擷取的衝突詳細資料量，並據此將程式碼併入 try/catch 區域。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-165">Determine how much conflict detail you want to retrieve, and include code in your try/catch block accordingly.</span></span>  
   
-     如需詳細資訊，請參閱[HOW TO：擷取實體衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)與[HOW TO：擷取成員衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)。  
+     <span data-ttu-id="d4d3f-166">如需詳細資訊，請參閱[How to： 擷取實體衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)和[How to： 擷取成員衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-166">For more information, see [How to: Retrieve Entity Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) and [How to: Retrieve Member Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).</span></span>  
   
--   在 `try`\/`catch` 程式碼中併入想要解決所發現之各種衝突的方式。  
+-   <span data-ttu-id="d4d3f-167">包含在您`try` / `catch`您要如何解決所發現之各種衝突的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-167">Include in your `try`/`catch` code how you want to resolve the various conflicts you discover.</span></span>  
   
-     如需詳細資訊，請參閱[HOW TO：藉由保留資料庫值來解決並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)、[HOW TO：藉由覆寫資料庫值來解決並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)和[HOW TO：藉由合併資料庫值來解決並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)。  
+     <span data-ttu-id="d4d3f-168">如需詳細資訊，請參閱[如何： 解決衝突的保留資料庫值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)，[如何： 解決衝突所覆寫資料庫值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)，和[How to： 透過合併解決的衝突以資料庫值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)。</span><span class="sxs-lookup"><span data-stu-id="d4d3f-168">For more information, see [How to: Resolve Conflicts by Retaining Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [How to: Resolve Conflicts by Overwriting Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), and [How to: Resolve Conflicts by Merging with Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).</span></span>  
   
-## 支援衝突探索和解決的 LINQ to SQL 型別  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中支援開放式並行存取衝突解決的類別和功能包括：  
+## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a><span data-ttu-id="d4d3f-169">支援衝突探索和解決的 LINQ to SQL 型別</span><span class="sxs-lookup"><span data-stu-id="d4d3f-169">LINQ to SQL Types That Support Conflict Discovery and Resolution</span></span>  
+ <span data-ttu-id="d4d3f-170">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中支援開放式並行存取衝突解決的類別和功能包括：</span><span class="sxs-lookup"><span data-stu-id="d4d3f-170">Classes and features to support the resolution of conflicts in optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] include the following:</span></span>  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=fullName>  
+-   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
-## 請參閱  
- [HOW TO：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="d4d3f-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d4d3f-171">See Also</span></span>  
+ [<span data-ttu-id="d4d3f-172">如何： 管理變更衝突</span><span class="sxs-lookup"><span data-stu-id="d4d3f-172">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

@@ -1,41 +1,33 @@
 ---
-title: "如何︰ 修改運算式樹狀架構 (Visual Basic) |Microsoft 文件"
+title: "如何： 修改運算式樹狀架構 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fb4e818eed7d6547e091c914d40b3ce87af59512
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 28a79a2dc8817a3fc6c7f3e2e01c1270d2981334
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>如何︰ 修改運算式樹狀架構 (Visual Basic)
-本主題說明如何修改運算式樹狀架構。 運算式樹狀架構是不可變的也就是說，它們無法直接進行修改。 若要變更運算式樹狀架構，您必須建立一份現有運算式樹狀架構，並建立複本時進行必要的變更。 您可以使用<xref:System.Linq.Expressions.ExpressionVisitor>類別來周遊現有運算式樹狀架構，並複製造訪每個節點。</xref:System.Linq.Expressions.ExpressionVisitor>  
+# <a name="how-to-modify-expression-trees-visual-basic"></a><span data-ttu-id="0c2fd-102">如何： 修改運算式樹狀架構 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c2fd-102">How to: Modify Expression Trees (Visual Basic)</span></span>
+<span data-ttu-id="0c2fd-103">本主題示範如何修改運算式樹狀架構。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-103">This topic shows you how to modify an expression tree.</span></span> <span data-ttu-id="0c2fd-104">運算式樹狀架構為不可變，這表示無法直接對其進行修改。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-104">Expression trees are immutable, which means that they cannot be modified directly.</span></span> <span data-ttu-id="0c2fd-105">若要變更運算式樹狀架構，您必須建立現有運算式樹狀架構的複本，並且在建立複本時進行必要的變更。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-105">To change an expression tree, you must create a copy of an existing expression tree and when you create the copy, make the required changes.</span></span> <span data-ttu-id="0c2fd-106">您可以使用 <xref:System.Linq.Expressions.ExpressionVisitor> 類別周遊現有的運算式樹狀架構，並複製每個瀏覽的節點。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-106">You can use the <xref:System.Linq.Expressions.ExpressionVisitor> class to traverse an existing expression tree and to copy each node that it visits.</span></span>  
   
-### <a name="to-modify-an-expression-tree"></a>若要修改運算式樹狀架構  
+### <a name="to-modify-an-expression-tree"></a><span data-ttu-id="0c2fd-107">修改運算式樹狀架構</span><span class="sxs-lookup"><span data-stu-id="0c2fd-107">To modify an expression tree</span></span>  
   
-1.  建立新**主控台應用程式**專案。  
+1.  <span data-ttu-id="0c2fd-108">建立新的**主控台應用程式**專案。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-108">Create a new **Console Application** project.</span></span>  
   
-2.  新增`Imports`陳述式的檔案來`System.Linq.Expressions`命名空間。  
+2.  <span data-ttu-id="0c2fd-109">新增`Imports`陳述式的檔案來`System.Linq.Expressions`命名空間。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-109">Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.</span></span>  
   
-3.  新增`AndAlsoModifier`類別，以您的專案。  
+3.  <span data-ttu-id="0c2fd-110">將 `AndAlsoModifier` 類別新增至專案。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-110">Add the `AndAlsoModifier` class to your project.</span></span>  
   
     ```vb  
     Public Class AndAlsoModifier  
@@ -61,11 +53,11 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
-     此類別會繼承<xref:System.Linq.Expressions.ExpressionVisitor>類別，專門用來修改這些運算式表示條件式`AND`作業。</xref:System.Linq.Expressions.ExpressionVisitor> 它會從在條件變更這些作業`AND`conditional `OR`。 若要這樣做，類別覆寫<xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A>方法的基底型別，因為條件式`AND`運算式表示為二進位運算式。</xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> 在`VisitBinary`方法，如果傳遞給它的運算式代表條件式`AND`作業，程式碼會建構新的運算式，其中包含條件式`OR`而不是條件式運算子`AND`運算子。 如果傳遞給運算式`VisitBinary`不代表條件式`AND`作業，方法會延後的基底類別實作。 建構的節點類似，會傳入的運算式樹狀架構，但節點已取代的運算式樹狀架構及其子樹狀目錄的基底類別方法產生以遞迴方式訪客。  
+     <span data-ttu-id="0c2fd-111">此類別會繼承 <xref:System.Linq.Expressions.ExpressionVisitor> 類別，並針對代表 `AND` 條件運算的運算式進行修改。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-111">This class inherits the <xref:System.Linq.Expressions.ExpressionVisitor> class and is specialized to modify expressions that represent conditional `AND` operations.</span></span> <span data-ttu-id="0c2fd-112">它會將這些運算從 `AND` 條件運算變更為 `OR` 條件運算。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-112">It changes these operations from a conditional `AND` to a conditional `OR`.</span></span> <span data-ttu-id="0c2fd-113">為了執行這項操作，此類別會覆寫基底類型的 <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> 方法，因為 `AND` 條件運算式會以二元運算式來表示。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-113">To do this, the class overrides the <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> method of the base type, because conditional `AND` expressions are represented as binary expressions.</span></span> <span data-ttu-id="0c2fd-114">在 `VisitBinary` 方法中，如果傳遞給它的運算式代表 `AND` 條件運算，程式碼會建構新的運算式，以包含 `OR` 條件運算子來取代 `AND` 條件運算子。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-114">In the `VisitBinary` method, if the expression that is passed to it represents a conditional `AND` operation, the code constructs a new expression that contains the conditional `OR` operator instead of the conditional `AND` operator.</span></span> <span data-ttu-id="0c2fd-115">如果傳遞給 `VisitBinary` 的運算式不代表 `AND` 條件運算，此方法會延後到基底類別實作。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-115">If the expression that is passed to `VisitBinary` does not represent a conditional `AND` operation, the method defers to the base class implementation.</span></span> <span data-ttu-id="0c2fd-116">基底類別方法會建構類似傳入之運算式樹狀架構的節點，但這些節點的樹狀子目錄會由造訪者以遞迴方式產生的運算式樹狀架構來取代。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-116">The base class methods construct nodes that are like the expression trees that are passed in, but the nodes have their sub trees replaced with the expression trees that are produced recursively by the visitor.</span></span>  
   
-4.  新增`Imports`陳述式的檔案來`System.Linq.Expressions`命名空間。  
+4.  <span data-ttu-id="0c2fd-117">新增`Imports`陳述式的檔案來`System.Linq.Expressions`命名空間。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-117">Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.</span></span>  
   
-5.  將程式碼加入`Main`方法來建立運算式樹狀架構，並將它傳遞給方法的 Module1.vb 檔案中將修改它。  
+5.  <span data-ttu-id="0c2fd-118">將程式碼加入`Main`建立運算式樹狀架構，並將它傳遞給方法的 Module1.vb 檔案中的方法會修改它。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-118">Add code to the `Main` method in the Module1.vb file to create an expression tree and pass it to the method that will modify it.</span></span>  
   
     ```vb  
     Dim expr As Expression(Of Func(Of String, Boolean)) = _  
@@ -83,10 +75,10 @@ ms.lasthandoff: 03/13/2017
     ' name => ((name.Length > 10) || name.StartsWith("G"))  
     ```  
   
-     程式碼會建立包含條件運算式`AND`作業。 然後它會建立的執行個體`AndAlsoModifier`類別，並將運算式傳遞至`Modify`這個類別的方法。 原始和修改後的運算式樹狀結構會輸出到顯示變更。  
+     <span data-ttu-id="0c2fd-119">此程式碼會建立包含 `AND` 條件運算的運算式。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-119">The code creates an expression that contains a conditional `AND` operation.</span></span> <span data-ttu-id="0c2fd-120">然後建立 `AndAlsoModifier` 類別的執行個體，並將運算式傳遞給此類別的 `Modify` 的方法。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-120">It then creates an instance of the `AndAlsoModifier` class and passes the expression to the `Modify` method of this class.</span></span> <span data-ttu-id="0c2fd-121">此時會輸出原始和修改後的運算式樹狀架構，以顯示變更的情形。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-121">Both the original and the modified expression trees are outputted to show the change.</span></span>  
   
-6.  編譯並執行應用程式。  
+6.  <span data-ttu-id="0c2fd-122">編譯並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="0c2fd-122">Compile and run the application.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [如何︰ 執行運算式樹狀架構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
- [運算式樹狀架構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+## <a name="see-also"></a><span data-ttu-id="0c2fd-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0c2fd-123">See Also</span></span>  
+ [<span data-ttu-id="0c2fd-124">如何： 執行運算式樹狀架構 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c2fd-124">How to: Execute Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+ [<span data-ttu-id="0c2fd-125">運算式樹狀結構 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c2fd-125">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
