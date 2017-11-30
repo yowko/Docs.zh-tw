@@ -1,1 +1,1 @@
-Silverlight
+<span data-ttu-id="1b741-101">Silverlight</span><span class="sxs-lookup"><span data-stu-id="1b741-101">Silverlight</span></span>

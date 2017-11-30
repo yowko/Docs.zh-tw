@@ -1,60 +1,58 @@
 ---
-title: "Principal and Identity Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WindowsIdentity objects"
-  - "GenericIdentity objects"
-  - "GenericPrincipal objects"
-  - "identity objects, about identity objects"
-  - "security [.NET Framework], identity objects"
-  - "principal objects, about principal objects"
-  - "security [.NET Framework], principals"
-  - "WindowsPrincipal objects"
+title: "Principal 和 Identity 物件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WindowsIdentity objects
+- GenericIdentity objects
+- GenericPrincipal objects
+- identity objects, about identity objects
+- security [.NET Framework], identity objects
+- principal objects, about principal objects
+- security [.NET Framework], principals
+- WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ce3c5ce3d79a36320eee6b7312518d2559509127
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Principal and Identity Objects
-Managed 程式碼可以透過 [Principal](frlrfSystemSecurityPrincipalIPrincipalClassTopic) 物件 \(其包含對 [Identity](frlrfSystemSecurityPrincipalIIdentityClassTopic) 物件的參考\) 探索主體的識別或角色。  將 Identity 和 Principal 物件與像使用者和群組帳戶的類似概念相比較，可能很有幫助。  大部分的網路環境中，使用者帳戶代表人員或程式，而群組帳戶代表使用者的某些類別和他們擁有的權限。  同樣的，.NET Framework 的 Identity 物件代表使用者，而角色代表成員資格和安全性內容。  在 .NET Framework 中，Principal 物件會將 Identity 物件和角色兩者都封裝。.NET Framework 應用程式會根據它的識別或它的角色成員資格 \(更為常見\)，將權限授與主體。  
+# <a name="principal-and-identity-objects"></a><span data-ttu-id="4b599-102">Principal 和 Identity 物件</span><span class="sxs-lookup"><span data-stu-id="4b599-102">Principal and Identity Objects</span></span>
+<span data-ttu-id="4b599-103">Managed 程式碼可以找出身分識別或透過主體的角色<xref:System.Security.Principal.IPrincipal>物件，其中包含的參考<xref:System.Security.Principal.IIdentity>物件。</span><span class="sxs-lookup"><span data-stu-id="4b599-103">Managed code can discover the identity or the role of a principal through a <xref:System.Security.Principal.IPrincipal> object, which contains a reference to an <xref:System.Security.Principal.IIdentity> object.</span></span> <span data-ttu-id="4b599-104">它可能有助於您比較 Identity 和 Principal 物件，以熟悉例如使用者和群組帳戶的概念。</span><span class="sxs-lookup"><span data-stu-id="4b599-104">It might be helpful to compare identity and principal objects to familiar concepts like user and group accounts.</span></span> <span data-ttu-id="4b599-105">在大部分網路環境中，使用者帳戶代表人員或程式，而群組帳戶代表特定類別的使用者和他們擁有的權限。</span><span class="sxs-lookup"><span data-stu-id="4b599-105">In most network environments, user accounts represent people or programs, while group accounts represent certain categories of users and the rights they possess.</span></span> <span data-ttu-id="4b599-106">同樣地，.NET Framework Identity 物件代表使用者，而角色代表成員資格和安全性內容。</span><span class="sxs-lookup"><span data-stu-id="4b599-106">Similarly, .NET Framework identity objects represent users, while roles represent memberships and security contexts.</span></span> <span data-ttu-id="4b599-107">在 .NET Framework 中，Principal 物件會封裝身分識別物件和角色。</span><span class="sxs-lookup"><span data-stu-id="4b599-107">In the .NET Framework, the principal object encapsulates both an identity object and a role.</span></span> <span data-ttu-id="4b599-108">.NET framework 應用程式會根據主體的身分識別或更常見的是其角色成員資格，授與主體權限。</span><span class="sxs-lookup"><span data-stu-id="4b599-108">.NET Framework applications grant rights to the principal based on its identity or, more commonly, its role membership.</span></span>  
   
-## Identity 物件  
- Identity 物件會封裝有關使用者或驗證過的實體 \(Entity\) 的資訊。  在它們最基本的層級上，Identity 物件包含名稱和驗證類型。  名稱可以是使用者名稱或 Windows 帳戶名稱兩者之一，而驗證類型則可為所支援的登入通訊協定 \(例如 Kerberos V5\) 或自訂值兩者之一。  .NET Framework 定義可用於大多數自訂登入案例的 <xref:System.Security.Principal.GenericIdentity> 物件，和更特殊的 <xref:System.Security.Principal.WindowsIdentity> 物件，其可使用在您想要應用程式仰賴 Windows 驗證時。  此外，您可以定義您自己的 Identity 類別以封裝自訂的使用者資訊。  
+## <a name="identity-objects"></a><span data-ttu-id="4b599-109">Identity 物件</span><span class="sxs-lookup"><span data-stu-id="4b599-109">Identity Objects</span></span>  
+ <span data-ttu-id="4b599-110">Identity 物件會封裝已驗證的使用者或實體相關資訊。</span><span class="sxs-lookup"><span data-stu-id="4b599-110">The identity object encapsulates information about the user or entity being validated.</span></span> <span data-ttu-id="4b599-111">在其最基本層級中，Identity 物件會包含名稱和驗證類型。</span><span class="sxs-lookup"><span data-stu-id="4b599-111">At their most basic level, identity objects contain a name and an authentication type.</span></span> <span data-ttu-id="4b599-112">名稱可以是使用者的名稱或 Windows 帳戶的名稱，而驗證類型可以是支援的登入通訊協定，例如 Kerberos V5 或自訂值。</span><span class="sxs-lookup"><span data-stu-id="4b599-112">The name can either be a user's name or the name of a Windows account, while the authentication type can be either a supported logon protocol, such as Kerberos V5, or a custom value.</span></span> <span data-ttu-id="4b599-113">.NET Framework 會定義<xref:System.Security.Principal.GenericIdentity>物件，可用於大部分的自訂登入情節，並且更具特製化<xref:System.Security.Principal.WindowsIdentity>您希望依賴 Windows 驗證的應用程式時可用的物件。</span><span class="sxs-lookup"><span data-stu-id="4b599-113">The .NET Framework defines a <xref:System.Security.Principal.GenericIdentity> object that can be used for most custom logon scenarios and a more specialized <xref:System.Security.Principal.WindowsIdentity> object that can be used when you want your application to rely on Windows authentication.</span></span> <span data-ttu-id="4b599-114">此外，您可以定義自己的身分識別類別，它會封裝自訂使用者資訊。</span><span class="sxs-lookup"><span data-stu-id="4b599-114">Additionally, you can define your own identity class that encapsulates custom user information.</span></span>  
   
- <xref:System.Security.Principal.IIdentity> 介面定義存取名稱和驗證類型的屬性，例如 Kerberos V5 或 NTLM。  所有 **Identity** 類別實作 **IIdentity** 介面。  **Identity** 物件與 Windows NT 處理語彙基元 \(其下的執行緒目前正在執行\) 之間沒有必要的關係。  然而，如果 **Identity** 物件為 **WindowsIdentity** 物件，識別則假設為代表 Windows NT 安全性語彙基元。  
+ <span data-ttu-id="4b599-115"><xref:System.Security.Principal.IIdentity>介面會定義屬性來存取的名稱和驗證類型，例如 Kerberos V5 或 NTLM。</span><span class="sxs-lookup"><span data-stu-id="4b599-115">The <xref:System.Security.Principal.IIdentity> interface defines properties for accessing a name and an authentication type, such as Kerberos V5 or NTLM.</span></span> <span data-ttu-id="4b599-116">所有**身分識別**類別會實作 **IIdentity** 介面。</span><span class="sxs-lookup"><span data-stu-id="4b599-116">All **Identity** classes implement the **IIdentity** interface.</span></span> <span data-ttu-id="4b599-117">**Identity** 物件和 Windows NT 處理序語彙基元 (執行緒目前在其底下執行) 之間沒有任何必要的關聯性。</span><span class="sxs-lookup"><span data-stu-id="4b599-117">There is no required relationship between an **Identity** object and the Windows NT process token under which a thread is currently executing.</span></span> <span data-ttu-id="4b599-118">不過，如果 **Identity** 物件是 **WindowsIdentity** 物件時，身分識別會假設為代表 Windows NT 安全性語彙基元。</span><span class="sxs-lookup"><span data-stu-id="4b599-118">However, if the **Identity** object is a **WindowsIdentity** object, the identity is assumed to represent a Windows NT security token.</span></span>  
   
-## Principal 物件  
- Principal 物件代表其下程式碼正在執行的安全性內容。  實作以角色為基礎安全性的應用程式會根據與 Principal 物件相關的角色來授與權限。  類似於 Identity 物件，.NET Framework 提供 <xref:System.Security.Principal.GenericPrincipal> 物件和 <xref:System.Security.Principal.WindowsPrincipal> 物件。  您也可以定義您自己的自訂主體類別。  
+## <a name="principal-objects"></a><span data-ttu-id="4b599-119">Principal 物件</span><span class="sxs-lookup"><span data-stu-id="4b599-119">Principal Objects</span></span>  
+ <span data-ttu-id="4b599-120">Principal 物件代表執行程式碼所在的安全性內容。</span><span class="sxs-lookup"><span data-stu-id="4b599-120">The principal object represents the security context under which code is running.</span></span> <span data-ttu-id="4b599-121">實作以角色為基礎的安全性之應用程式，會根據與 Principal 物件相關聯的角色授與權限。</span><span class="sxs-lookup"><span data-stu-id="4b599-121">Applications that implement role-based security grant rights based on the role associated with a principal object.</span></span> <span data-ttu-id="4b599-122">.NET Framework 提供了類似於識別物件，<xref:System.Security.Principal.GenericPrincipal>物件和<xref:System.Security.Principal.WindowsPrincipal>物件。</span><span class="sxs-lookup"><span data-stu-id="4b599-122">Similar to identity objects, the .NET Framework provides a <xref:System.Security.Principal.GenericPrincipal> object and a <xref:System.Security.Principal.WindowsPrincipal> object.</span></span> <span data-ttu-id="4b599-123">您也可以定義自己的自訂主體類別。</span><span class="sxs-lookup"><span data-stu-id="4b599-123">You can also define your own custom principal classes.</span></span>  
   
- <xref:System.Security.Principal.IPrincipal> 介面會定義屬性以存取關聯的**Identity** 物件，而且也會定義方法以判斷 **Principal** 物件所識別的使用者是否為指定角色的成員。  所有 **Principal** 類別實作 **IPrincipal** 介面，而且也實作任何必要的額外屬性和方法。  例如，Common Language Runtime 提供 **WindowsPrincipal** 類別，實作額外功能來將 Windows NT 或 Windows 2000 群組成員資格對應至角色。  
+ <span data-ttu-id="4b599-124"><xref:System.Security.Principal.IPrincipal>介面會定義屬性，以存取相關聯**識別**物件方法來判斷使用者是否已由**主體**物件是的成員指定的角色。</span><span class="sxs-lookup"><span data-stu-id="4b599-124">The <xref:System.Security.Principal.IPrincipal> interface defines a property for accessing an associated **Identity** object as well as a method for determining whether the user identified by the **Principal** object is a member of a given role.</span></span> <span data-ttu-id="4b599-125">所有 **Principal** 類別會實作 **IPrincipal** 介面以及任何其他需要的屬性和方法。</span><span class="sxs-lookup"><span data-stu-id="4b599-125">All **Principal** classes implement the **IPrincipal** interface as well as any additional properties and methods that are necessary.</span></span> <span data-ttu-id="4b599-126">例如，通用語言執行平台提供 **WindowsPrincipal** 類別，實作其他功能以將 Windows NT 或 Windows 2000 群組成員資格對應至角色。</span><span class="sxs-lookup"><span data-stu-id="4b599-126">For example, the common language runtime provides the **WindowsPrincipal** class, which implements additional functionality for mapping Windows NT or Windows 2000 group membership to roles.</span></span>  
   
- **Principal** 物件是繫結至應用程式定義域 \(<xref:System.AppDomain>\) 內的呼叫內容 \(<xref:System.Runtime.Remoting.Messaging.CallContext>\) 物件。  預設的呼叫內容永遠與新的 **AppDomain** 一起建立，所以總是有呼叫內容可以用來接受 **Principal** 物件。  當新執行緒建立時，**CallContext** 物件也為執行緒而建立。  **Principal** 物件參考是自動從建立的執行緒複製到新執行緒的 **CallContext**。  如果執行階段不能判斷哪一個 **Principal** 物件屬於執行緒的建立者，則遵循建立 **Principal** 和 **Identity** 物件的預設原則。  
+ <span data-ttu-id="4b599-127">A**主體**物件繫結至呼叫內容 (<xref:System.Runtime.Remoting.Messaging.CallContext>) 應用程式定義域中的物件 (<xref:System.AppDomain>)。</span><span class="sxs-lookup"><span data-stu-id="4b599-127">A **Principal** object is bound to a call context (<xref:System.Runtime.Remoting.Messaging.CallContext>) object within an application domain (<xref:System.AppDomain>).</span></span> <span data-ttu-id="4b599-128">預設呼叫內容一律使用每個新的 **AppDomain** 建立，因此永遠有呼叫內容可以接受 **Principal** 物件。</span><span class="sxs-lookup"><span data-stu-id="4b599-128">A default call context is always created with each new **AppDomain**, so there is always a call context available to accept the **Principal** object.</span></span> <span data-ttu-id="4b599-129">建立新的執行緒時，也會針對執行緒建立 **CallContext** 物件。</span><span class="sxs-lookup"><span data-stu-id="4b599-129">When a new thread is created, a **CallContext** object is also created for the thread.</span></span> <span data-ttu-id="4b599-130">**Principal** 物件參考會自動從建立的執行緒複製到新執行緒的 **CallContext**。</span><span class="sxs-lookup"><span data-stu-id="4b599-130">The **Principal** object reference is automatically copied from the creating thread to the new thread's **CallContext**.</span></span> <span data-ttu-id="4b599-131">如果執行階段無法判斷哪個 **Principal** 物件屬於執行緒的建立者，它會依照 **Principal** 和 **Identity** 物件建立的預設原則。</span><span class="sxs-lookup"><span data-stu-id="4b599-131">If the runtime cannot determine which **Principal** object belongs to the creator of the thread, it follows the default policy for **Principal** and **Identity** object creation.</span></span>  
   
- 可設定的應用程式定義域特定原則定義規則，來決定什麼類型的 **Principal** 物件與新應用程式定義域相關聯。  若是安全性原則許可，執行階段可以建立 **Principal** 和 **Identity** 物件，以反映與執行的目前執行緒相關聯的作業系統語彙基元。  預設的情況下，執行階段使用代表未驗證使用者的 **Principal** 和 **Identity** 物件。  執行階段不會建立這些預設 **Principal** 和 **Identity** 物件，直到程式碼嘗試存取它們。  
+ <span data-ttu-id="4b599-132">可設定的應用程式定義域特定原則會定義規則，來決定哪種類型的 **Principal** 物件與新的應用程式定義域相關聯。</span><span class="sxs-lookup"><span data-stu-id="4b599-132">A configurable application domain-specific policy defines the rules for deciding what type of **Principal** object to associate with a new application domain.</span></span> <span data-ttu-id="4b599-133">安全性原則允許時，執行階段可以建立 **Principal** 和 **Identity** 物件，反映與目前執行緒相關聯的作業系統語彙基元。</span><span class="sxs-lookup"><span data-stu-id="4b599-133">Where security policy permits, the runtime can create **Principal** and **Identity** objects that reflect the operating system token associated with the current thread of execution.</span></span> <span data-ttu-id="4b599-134">根據預設，執行階段會使用 **Principal** 和 **Identity** 物件，代表未經授權的使用者。</span><span class="sxs-lookup"><span data-stu-id="4b599-134">By default, the runtime uses **Principal** and **Identity** objects that represent unauthenticated users.</span></span> <span data-ttu-id="4b599-135">執行階段不會建立這些預設 **Principal** 和 **Identity** 物件，直到程式碼嘗試存取它們為止。</span><span class="sxs-lookup"><span data-stu-id="4b599-135">The runtime does not create these default **Principal** and **Identity** objects until the code attempts to access them.</span></span>  
   
- 建立應用程式定義域的信任程式碼可以設定控制預設 **Principal** 和 **Identity** 物件建構的應用程式定義域原則。  這個應用程式定義域特定原則可套用到應用程式定義域中所有的執行緒。  Unmanaged 且信任的主應用程式原本就有能力設定這個原則，但設定這個原則的 Managed 程式碼必須擁有控制定義域原則的 <xref:System.Security.Permissions.SecurityPermission?displayProperty=fullName>。  
+ <span data-ttu-id="4b599-136">會建立應用程式定義域之信任的程式碼，可以設定應用程式定義域原則，控制預設 **Principal** 和 **Identity** 物件的建構。</span><span class="sxs-lookup"><span data-stu-id="4b599-136">Trusted code that creates an application domain can set the application domain policy that controls construction of the default **Principal** and **Identity** objects.</span></span> <span data-ttu-id="4b599-137">此應用程式定義域專屬的原則適用於所有應用程式定義域中的執行緒。</span><span class="sxs-lookup"><span data-stu-id="4b599-137">This application domain-specific policy applies to all execution threads in that application domain.</span></span> <span data-ttu-id="4b599-138">未受管理、 受信任的主控件原本就有能力設定此原則，但設定這項原則的 managed 程式碼都必須<xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>來控制網域原則。</span><span class="sxs-lookup"><span data-stu-id="4b599-138">An unmanaged, trusted host inherently has the ability to set this policy, but managed code that sets this policy must have the <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> for controlling domain policy.</span></span>  
   
- 當 **Principal** 物件在應用程式定義域間傳輸，但於相同處理序內 \(即因而在相同電腦上\) 時，遠端基礎結構會複製參考至 **Principal** 物件，將呼叫端內容關聯到被呼叫端內容。  
+ <span data-ttu-id="4b599-139">跨應用程式定義域但是在相同處理序內傳輸 **Principal** 物件時 (因此是在同一部電腦上)，遠端基礎結構會將參考複製到 **Principal** 物件，該物件將呼叫者的內容與被呼叫端的內容產生關聯。</span><span class="sxs-lookup"><span data-stu-id="4b599-139">When transmitting a **Principal** object across application domains but within the same process (and therefore on the same computer), the remoting infrastructure copies a reference to the **Principal** object associated with the caller's context to the callee's context.</span></span>  
   
-## 請參閱  
- [How to: Create a WindowsPrincipal Object](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)   
- [How to: Create GenericPrincipal and GenericIdentity Objects](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)   
- [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md)   
- [Impersonating and Reverting](../../../docs/standard/security/impersonating-and-reverting.md)   
- [Role\-Based Security](../../../docs/standard/security/role-based-security.md)   
- [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="4b599-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4b599-140">See Also</span></span>  
+ [<span data-ttu-id="4b599-141">操作說明：建立 WindowsPrincipal 物件</span><span class="sxs-lookup"><span data-stu-id="4b599-141">How to: Create a WindowsPrincipal Object</span></span>](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
+ [<span data-ttu-id="4b599-142">操作說明：建立 GenericPrincipal 和 GenericIdentity 物件</span><span class="sxs-lookup"><span data-stu-id="4b599-142">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
+ [<span data-ttu-id="4b599-143">取代 Principal 物件</span><span class="sxs-lookup"><span data-stu-id="4b599-143">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [<span data-ttu-id="4b599-144">模擬和還原</span><span class="sxs-lookup"><span data-stu-id="4b599-144">Impersonating and Reverting</span></span>](../../../docs/standard/security/impersonating-and-reverting.md)  
+ [<span data-ttu-id="4b599-145">以角色為基礎的安全性</span><span class="sxs-lookup"><span data-stu-id="4b599-145">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)  
+ [<span data-ttu-id="4b599-146">重要的安全性概念</span><span class="sxs-lookup"><span data-stu-id="4b599-146">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)

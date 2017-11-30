@@ -1,1 +1,1 @@
-RGB
+<span data-ttu-id="e0aa3-101">RGB</span><span class="sxs-lookup"><span data-stu-id="e0aa3-101">RGB</span></span>

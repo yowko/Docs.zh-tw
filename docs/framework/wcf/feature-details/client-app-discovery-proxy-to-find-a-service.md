@@ -1,40 +1,43 @@
 ---
-title: "HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務
-本主題是三個主題中的第三個，討論如何實作探索 Proxy。在先前的主題 [HOW TO：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md) 中，您已實作透過探索 Proxy 註冊的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。在本主題中，您會建立使用探索 Proxy 來尋找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，。  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="4b732-102">HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務</span><span class="sxs-lookup"><span data-stu-id="4b732-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
+<span data-ttu-id="4b732-103">本主題是三個主題中的第三個，討論如何實作探索 Proxy。</span><span class="sxs-lookup"><span data-stu-id="4b732-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="4b732-104">在先前的主題， [How to： 實作使用探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，實作您[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]向探索 proxy 註冊其本身的服務。</span><span class="sxs-lookup"><span data-stu-id="4b732-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="4b732-105">在本主題中，您會建立使用探索 Proxy 來尋找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，。</span><span class="sxs-lookup"><span data-stu-id="4b732-105">In this topic you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that uses the discovery proxy to find the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-### 實作用戶端  
+### <a name="implement-the-client"></a><span data-ttu-id="4b732-106">實作用戶端</span><span class="sxs-lookup"><span data-stu-id="4b732-106">Implement the client</span></span>  
   
-1.  將新的主控台應用程式專案加入至名為 `Client` 的 `DiscoveryProxyExample` 方案。  
+1.  <span data-ttu-id="4b732-107">將新的主控台應用程式專案加入至名為 `DiscoveryProxyExample` 的 `Client` 方案。</span><span class="sxs-lookup"><span data-stu-id="4b732-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
   
-2.  加入下列組件的參考：  
+2.  <span data-ttu-id="4b732-108">加入下列組件的參考：</span><span class="sxs-lookup"><span data-stu-id="4b732-108">Add references to the following assemblies:</span></span>  
   
-    1.  System.ServiceModel  
+    1.  <span data-ttu-id="4b732-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="4b732-109">System.ServiceModel</span></span>  
   
-    2.  System.ServiceModel.Discovery  
+    2.  <span data-ttu-id="4b732-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="4b732-110">System.ServiceModel.Discovery</span></span>  
   
-3.  將在此主題底部找到的 GeneratedClient.cs 加入至專案。  
+3.  <span data-ttu-id="4b732-111">將在此主題底部找到的 GeneratedClient.cs 加入至專案。</span><span class="sxs-lookup"><span data-stu-id="4b732-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
   
     > [!NOTE]
-    >  這個檔案通常會使用 Svcutil.exe 之類的工具產生。本主題會提供該檔案以簡化這項工作。  
+    >  <span data-ttu-id="4b732-112">這個檔案通常會使用 Svcutil.exe 之類的工具產生。</span><span class="sxs-lookup"><span data-stu-id="4b732-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="4b732-113">本主題會提供該檔案以簡化這項工作。</span><span class="sxs-lookup"><span data-stu-id="4b732-113">It is provided in this topic to simplify the task.</span></span>  
   
-4.  開啟 Program.cs 檔案並加入下列方法。此方法會採用端點位址，並將其用於初始化服務用戶端 \(Proxy\)。  
+4.  <span data-ttu-id="4b732-114">開啟 Program.cs 檔案並加入下列方法。</span><span class="sxs-lookup"><span data-stu-id="4b732-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="4b732-115">此方法會採用端點位址，並將其用於初始化服務用戶端 (Proxy)。</span><span class="sxs-lookup"><span data-stu-id="4b732-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -67,10 +70,9 @@ caps.handback.revision: 12
                 // Closing the client gracefully closes the connection and cleans up resources  
                 client.Close();  
             }  
-  
     ```  
   
-5.  將以下程式碼加入 `Main` 方法中。  
+5.  <span data-ttu-id="4b732-116">將下列程式碼加入至 `Main` 方法。</span><span class="sxs-lookup"><span data-stu-id="4b732-116">Add the following code to the `Main` method.</span></span>  
   
     ```  
     public static void Main()  
@@ -107,13 +109,12 @@ caps.handback.revision: 12
                 Console.WriteLine("Press <ENTER> to exit.");  
                 Console.ReadLine();  
             }  
-  
     ```  
   
- 您已經完成實作用戶端應用程式。請繼續參閱 [HOW TO：測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
+ <span data-ttu-id="4b732-117">您已經完成實作用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="4b732-117">You have completed implementing the client application.</span></span> <span data-ttu-id="4b732-118">繼續前往[How to： 測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。</span><span class="sxs-lookup"><span data-stu-id="4b732-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
   
-## 範例  
- 以下是這個主題的完整程式碼清單。  
+## <a name="example"></a><span data-ttu-id="4b732-119">範例</span><span class="sxs-lookup"><span data-stu-id="4b732-119">Example</span></span>  
+ <span data-ttu-id="4b732-120">以下是這個主題的完整程式碼清單。</span><span class="sxs-lookup"><span data-stu-id="4b732-120">This is the full code listing for this topic.</span></span>  
   
 ```  
 // GeneratedClient.cs  
@@ -205,7 +206,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -291,7 +291,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## 請參閱  
- [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [HOW TO：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [HOW TO：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="4b732-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4b732-121">See Also</span></span>  
+ [<span data-ttu-id="4b732-122">WCF 探索概觀</span><span class="sxs-lookup"><span data-stu-id="4b732-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="4b732-123">如何： 實作探索 Proxy</span><span class="sxs-lookup"><span data-stu-id="4b732-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [<span data-ttu-id="4b732-124">如何： 實作使用探索 Proxy 註冊的可探索服務</span><span class="sxs-lookup"><span data-stu-id="4b732-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

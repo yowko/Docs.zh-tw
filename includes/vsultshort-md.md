@@ -1,1 +1,1 @@
-Visual Studio Ultimate
+<span data-ttu-id="70a34-101">Visual Studio Ultimate</span><span class="sxs-lookup"><span data-stu-id="70a34-101">Visual Studio Ultimate</span></span>

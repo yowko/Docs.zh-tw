@@ -1,49 +1,41 @@
 ---
-title: "群組資料 (Visual Basic) |Microsoft 文件"
+title: "群組資料 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d89ae6d155ab901b03cf92a7508261fb147b97b7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5f2e5c4c4713f1056f1eb2243f27e5acf0494542
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="grouping-data-visual-basic"></a>群組資料 (Visual Basic)
-群組指的是將資料分成群組，讓每個群組中的項目共用相同屬性的作業。  
+# <a name="grouping-data-visual-basic"></a><span data-ttu-id="e2a1d-102">群組資料 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2a1d-102">Grouping Data (Visual Basic)</span></span>
+<span data-ttu-id="e2a1d-103">分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
   
- 下圖顯示的字元序列的分組結果。 每個群組的索引鍵是字元。  
+ <span data-ttu-id="e2a1d-104">下圖顯示一系列字元的分組結果。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="e2a1d-105">每個群組的索引鍵是字元。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-105">The key for each group is the character.</span></span>  
   
- ![LINQ 群組作業](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ <span data-ttu-id="e2a1d-106">![LINQ 群組作業](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span><span class="sxs-lookup"><span data-stu-id="e2a1d-106">![LINQ Grouping Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span></span>  
   
- 群組資料元素的標準查詢運算子方法詳列於下一節。  
+ <span data-ttu-id="e2a1d-107">分組資料項目的標準查詢運算子方法詳列於下一節。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
   
-## <a name="methods"></a>方法  
+## <a name="methods"></a><span data-ttu-id="e2a1d-108">方法</span><span class="sxs-lookup"><span data-stu-id="e2a1d-108">Methods</span></span>  
   
-|方法名稱|描述|Visual Basic 查詢運算式語法|更多資訊|  
+|<span data-ttu-id="e2a1d-109">方法名稱</span><span class="sxs-lookup"><span data-stu-id="e2a1d-109">Method Name</span></span>|<span data-ttu-id="e2a1d-110">說明</span><span class="sxs-lookup"><span data-stu-id="e2a1d-110">Description</span></span>|<span data-ttu-id="e2a1d-111">Visual Basic 查詢運算式語法</span><span class="sxs-lookup"><span data-stu-id="e2a1d-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="e2a1d-112">更多資訊</span><span class="sxs-lookup"><span data-stu-id="e2a1d-112">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|GroupBy|群組項目會共用共同的屬性。 每個群組由<xref:System.Linq.IGrouping%602>物件。</xref:System.Linq.IGrouping%602>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=fullName></xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=fullName></xref:System.Linq.Queryable.GroupBy%2A?displayProperty=fullName>|  
-|ToLookup|插入項目到<xref:System.Linq.Lookup%602>（一對多字典） 會根據索引鍵選取器函式。</xref:System.Linq.Lookup%602>|不適用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
+|<span data-ttu-id="e2a1d-113">GroupBy</span><span class="sxs-lookup"><span data-stu-id="e2a1d-113">GroupBy</span></span>|<span data-ttu-id="e2a1d-114">共用共同屬性的群組項目。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="e2a1d-115">每個群組都由一個 <xref:System.Linq.IGrouping%602> 物件代表。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="e2a1d-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="e2a1d-116">ToLookup</span></span>|<span data-ttu-id="e2a1d-117">根據索引鍵選取器函式，將元素插入 <xref:System.Linq.Lookup%602> (一對多字典)。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="e2a1d-118">不適用。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a>查詢運算式語法範例  
- 下列程式碼範例使用`Group By`子句群組清單，以根據是否為偶數或奇數的整數。  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="e2a1d-119">查詢運算式語法範例</span><span class="sxs-lookup"><span data-stu-id="e2a1d-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="e2a1d-120">下列程式碼範例使用 `Group By` 子句，將整數依奇偶數分組至清單。</span><span class="sxs-lookup"><span data-stu-id="e2a1d-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
   
 ```vb  
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
@@ -80,9 +72,9 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq></xref:System.Linq>   
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)   
- [如何︰ 依副檔名 (LINQ) (Visual Basic) 的檔案群組](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)   
- [如何︰ 使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a><span data-ttu-id="e2a1d-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e2a1d-121">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="e2a1d-122">標準查詢運算子概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2a1d-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="e2a1d-123">Group By 子句</span><span class="sxs-lookup"><span data-stu-id="e2a1d-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [<span data-ttu-id="e2a1d-124">如何： 依副檔名 (LINQ) (Visual Basic) 的檔案群組</span><span class="sxs-lookup"><span data-stu-id="e2a1d-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [<span data-ttu-id="e2a1d-125">如何： 將檔案分割成許多檔案中，使用群組 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2a1d-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

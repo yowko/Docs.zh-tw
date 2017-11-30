@@ -1,42 +1,40 @@
 ---
-title: "CheckBox 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CheckBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "繫結控制項, 核取方塊"
-  - "核取方塊, 關於核取方塊"
-  - "CheckBox 控制項 [Windows Form], 關於 CheckBox 控制項"
-  - "資料繫結, CheckBox 控制項"
-  - "資料繫結控制項, 核取方塊"
+title: "CheckBox 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CheckBox
+helpviewer_keywords:
+- CheckBox control [Windows Forms], about CheckBox control
+- data binding [Windows Forms], checkbox controls
+- check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a154a3f639102e3f3e2acd62626379e12bbd1344
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# CheckBox 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.CheckBox> 控制項會指出某個特定條件是開啟或關閉。  它通常針對使用者，呈現「是\/否」或「真\/假」的選擇。  您可以使用群組中的核取方塊控制項以顯示多個選擇，讓使用者從中選取一或多個。  
+# <a name="checkbox-control-overview-windows-forms"></a><span data-ttu-id="1e5b2-102">CheckBox 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="1e5b2-102">CheckBox Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="1e5b2-103">Windows Form <xref:System.Windows.Forms.CheckBox> 控制項表示特定的條件是開啟或關閉。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-103">The Windows Forms <xref:System.Windows.Forms.CheckBox> control indicates whether a particular condition is on or off.</span></span> <span data-ttu-id="1e5b2-104">它通常用來呈現是/否或 True/False 選取項目給使用者。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-104">It is commonly used to present a Yes/No or True/False selection to the user.</span></span> <span data-ttu-id="1e5b2-105">您可以使用群組中的核取方塊控制項來顯示使用者可以從中選取一個或多個的多重選擇。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-105">You can use check box controls in groups to display multiple choices from which the user can select one or more.</span></span>  
   
- 核取方塊控制項與選項按鈕控制項的相似之處在於：兩者都是用來指示使用者所做的選擇；  它們的差異則是您一次只能在選項按鈕群組中選取一個選項按鈕，  而使用核取方塊控制項則可選取任何數目的核取方塊。  
+ <span data-ttu-id="1e5b2-106">核取方塊控制項是類似於選項按鈕控制項都用來指出使用者所做的選擇。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-106">The check box control is similar to the radio button control in that each is used to indicate a selection that is made by the user.</span></span> <span data-ttu-id="1e5b2-107">它們與中，可以選取一個選項按鈕群組中的一次。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-107">They differ in that only one radio button in a group can be selected at a time.</span></span> <span data-ttu-id="1e5b2-108">使用核取方塊控制項，不過，任何數目的核取方塊可選取。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-108">With the check box control, however, any number of check boxes may be selected.</span></span>  
   
- 核取方塊可以透過簡單的資料繫結 \(Data Binding\) 連接到資料庫中的項目。  您可使用 <xref:System.Windows.Forms.GroupBox> 控制項將多個核取方塊分組。  這對視覺化外觀及使用者介面設計都很有用，因為群組的控制項可在表單設計工具上同時移動。  如需詳細資訊，請參閱 [Windows Form 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)和 [GroupBox 控制項](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)。  
+ <span data-ttu-id="1e5b2-109">使用簡單資料繫結的資料庫中的項目可能連接核取方塊。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-109">A check box may be connected to elements in a database using simple data binding.</span></span> <span data-ttu-id="1e5b2-110">多個核取方塊可以使用分組<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-110">Multiple check boxes may be grouped using the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="1e5b2-111">這非常有用的視覺外觀以及使用者介面的設計，因為群組的控制項可以同時移動表單設計工具上。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-111">This is useful for visual appearance and also for user interface design, since grouped controls can be moved around together on the form designer.</span></span> <span data-ttu-id="1e5b2-112">如需詳細資訊，請參閱[Windows Form 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)和[GroupBox 控制項](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-112">For more information, see [Windows Forms Data Binding](../../../../docs/framework/winforms/windows-forms-data-binding.md) and [GroupBox Control](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md).</span></span>  
   
- <xref:System.Windows.Forms.CheckBox> 控制項有兩個重要的屬性，<xref:System.Windows.Forms.CheckBox.Checked%2A> 和 <xref:System.Windows.Forms.CheckBox.CheckState%2A>。  <xref:System.Windows.Forms.CheckBox.Checked%2A> 屬性會傳回 `true` 或 `false`。  <xref:System.Windows.Forms.CheckBox.CheckState%2A> 屬性會傳回 <xref:System.Windows.Forms.CheckState> 或 <xref:System.Windows.Forms.CheckState>。或者如果將 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 屬性設為 `true`，則 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 也會傳回 <xref:System.Windows.Forms.CheckState>。  方塊在不定狀態中會顯示出暗灰色的外觀，以表示無法使用的選項。  
+ <span data-ttu-id="1e5b2-113"><xref:System.Windows.Forms.CheckBox>控制項有兩個重要屬性，<xref:System.Windows.Forms.CheckBox.Checked%2A>和<xref:System.Windows.Forms.CheckBox.CheckState%2A>。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-113">The <xref:System.Windows.Forms.CheckBox> control has two important properties, <xref:System.Windows.Forms.CheckBox.Checked%2A> and <xref:System.Windows.Forms.CheckBox.CheckState%2A>.</span></span> <span data-ttu-id="1e5b2-114"><xref:System.Windows.Forms.CheckBox.Checked%2A>屬性會傳回`true`或`false`。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-114">The <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns either `true` or `false`.</span></span> <span data-ttu-id="1e5b2-115"><xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性會傳回<xref:System.Windows.Forms.CheckState.Checked>或<xref:System.Windows.Forms.CheckState.Unchecked>; 或者，如果<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，<xref:System.Windows.Forms.CheckBox.CheckState%2A>也可能會傳回<xref:System.Windows.Forms.CheckState.Indeterminate>。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-115">The <xref:System.Windows.Forms.CheckBox.CheckState%2A> property returns either <xref:System.Windows.Forms.CheckState.Checked> or <xref:System.Windows.Forms.CheckState.Unchecked>; or, if the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> may also return <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span> <span data-ttu-id="1e5b2-116">處於不定狀態，會顯示與呈現暗灰色的外觀，以表示無法使用此選項。</span><span class="sxs-lookup"><span data-stu-id="1e5b2-116">In the indeterminate state, the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.CheckBox>   
- [如何：使用 Windows Form CheckBox 控制項設定選項](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)   
- [如何：回應 Windows Form CheckBox 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)   
- [CheckBox 控制項](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="1e5b2-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e5b2-117">See Also</span></span>  
+ <xref:System.Windows.Forms.CheckBox>  
+ [<span data-ttu-id="1e5b2-118">操作說明：使用 Windows Forms CheckBox 控制項設定選項</span><span class="sxs-lookup"><span data-stu-id="1e5b2-118">How to: Set Options with Windows Forms CheckBox Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ [<span data-ttu-id="1e5b2-119">操作說明：回應 Windows Forms CheckBox 按一下動作</span><span class="sxs-lookup"><span data-stu-id="1e5b2-119">How to: Respond to Windows Forms CheckBox Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [<span data-ttu-id="1e5b2-120">CheckBox 控制項</span><span class="sxs-lookup"><span data-stu-id="1e5b2-120">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

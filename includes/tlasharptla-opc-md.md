@@ -1,1 +1,1 @@
-開放式封裝慣例 (OPC)
+<span data-ttu-id="f8735-101">開放式封裝慣例 (OPC)</span><span class="sxs-lookup"><span data-stu-id="f8735-101">Open Packaging Conventions (OPC)</span></span>

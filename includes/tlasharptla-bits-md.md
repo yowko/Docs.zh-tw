@@ -1,1 +1,1 @@
-Microsoft 背景智慧型傳送服務 (BITS)
+<span data-ttu-id="414d4-101">Microsoft 背景智慧型傳送服務 (BITS)</span><span class="sxs-lookup"><span data-stu-id="414d4-101">Microsoft Background Intelligent Transfer Service (BITS)</span></span>

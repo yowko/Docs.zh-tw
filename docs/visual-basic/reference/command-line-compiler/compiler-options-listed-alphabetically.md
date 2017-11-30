@@ -1,106 +1,88 @@
 ---
-title: "依字母順序列出 Visual Basic 編譯器選項 |Microsoft 文件"
-ms.date: 2015-07-20
+title: Visual Basic Compiler Options Listed Alphabetically
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93246b3a38002955234a7a93529d05b71ab4e580
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0bcb3b182ee224457165be2177dd90ad48b00e56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic Compiler Options Listed Alphabetically
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 命令列編譯器可作為從 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 整合式開發環境 (IDE) 內編譯程式的替代方法。 以下是依字母順序排序的 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 命令列編譯器選項清單。  
+# <a name="visual-basic-compiler-options-listed-alphabetically"></a><span data-ttu-id="03b29-102">Visual Basic Compiler Options Listed Alphabetically</span><span class="sxs-lookup"><span data-stu-id="03b29-102">Visual Basic Compiler Options Listed Alphabetically</span></span>
+<span data-ttu-id="03b29-103">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器可作為從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境 (IDE) 內編譯程式的替代方法。</span><span class="sxs-lookup"><span data-stu-id="03b29-103">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler is provided as an alternative to compiling programs from the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment (IDE).</span></span> <span data-ttu-id="03b29-104">以下是依字母順序排序的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器選項清單。</span><span class="sxs-lookup"><span data-stu-id="03b29-104">The following is a list of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler options sorted alphabetically.</span></span>  
   
-|選項|用途|  
+|<span data-ttu-id="03b29-105">選項</span><span class="sxs-lookup"><span data-stu-id="03b29-105">Option</span></span>|<span data-ttu-id="03b29-106">用途</span><span class="sxs-lookup"><span data-stu-id="03b29-106">Purpose</span></span>|  
 |------------|-------------|  
-|[@ (指定回應檔)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定回應檔。|  
-|[/?](../../../visual-basic/reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `/help` 選項。 未執行編譯。|  
-|`/additionalfile`|命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。|  
-|[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|讓編譯器將所指定檔案的類型資訊全部提供給您目前編譯的專案。|  
-|`/analyzer`|從這個組件執行分析器 (簡短形式：/a)|  
-|[/baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定 DLL 的基底位址。|  
-|[/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|  
-|`/checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。|  
-|[/codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|  
-|[/debug](../../../visual-basic/reference/command-line-compiler/debug.md)|產生偵錯資訊。|  
-|[/define](../../../visual-basic/reference/command-line-compiler/define.md)|定義條件式編譯的符號。|  
-|[/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定將要完整簽署還是部分簽署組件。|  
-|[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|將文件註解處理成 XML 檔案。|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 編譯器報告編譯器內部錯誤的方式。|  
-|[/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定要對齊輸出檔案區段的位置。|  
-|[/help](../../../visual-basic/reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `/?` 選項。 未執行編譯。|  
-|[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|指出特定可執行檔是否支援高熵位址空間配置隨機載入 (ASLR)。|  
-|[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|從指定的組件匯入命名空間。|  
-|[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定金鑰組的金鑰容器名稱，為組件提供強式名稱。|  
-|[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本︰ 9 | 9.0 | 10 | 10.0 | 11 | 11.0。|  
-|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定所參考的組件的位置[/參考](../../../visual-basic/reference/command-line-compiler/reference.md)選項。|  
-|[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|建立與 Managed 資源的連結。|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|指定類別，其中包含`Sub``Main`程序在啟動時使用。|  
-|[/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定將包含模組的組件名稱。|  
-|`/modulename:<string>`|指定來源模組的名稱|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|設定要以 [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] 為目標的編譯器。|  
-|[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|不使用 Vbc.rsp 進行編譯。|  
-|[/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|隱藏編譯器橫幅資訊。|  
-|[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|使編譯器不要參考標準程式庫。|  
-|[/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|抑制編譯器產生警告的功能。|  
-|[/nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|指示編譯器不要將任何應用程式資訊清單內嵌在可執行檔中。|  
-|[/optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|啟用/停用程式碼最佳化。|  
-|[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|指定字串比較是否應為二進位，或是使用地區設定特定的文字語意。|  
-|[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|強制執行變數的明確宣告。|  
-|[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|可讓您在變數宣告中使用區域類型推斷。|  
-|[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|強制執行嚴格的語意。|  
-|[/out](../../../visual-basic/reference/command-line-compiler/out.md)|指定輸出檔。|  
-|`/parallel[+&#124;-]`|指定是否要使用並行組建 (+)。|  
-|[/platform](../../../visual-basic/reference/command-line-compiler/platform.md)|指定編譯器為輸出檔設為目標的處理器平台。|  
-|`/preferreduilang`|指定慣用的輸出語言名稱。|  
-|[/quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|防止編譯器顯示語法相關錯誤和警告的程式碼。|  
-|[/recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|搜尋要編譯之原始程式檔的子目錄。|  
-|[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)|從組匯入中繼資料。|  
-|[/removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|停用整數的溢位檢查。|  
-|[/resource](../../../visual-basic/reference/command-line-compiler/resource.md)|將 Managed 資源內嵌至組件中。|  
-|[/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|指定所有類型宣告的命名空間。|  
-|`/ruleset:<file>`|指定停用特定診斷的規則集檔案。|  
-|[/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|指定 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。|  
-|[/subsystemversion](../../../visual-basic/reference/command-line-compiler/subsystemversion.md)|指定所產生的可執行檔能夠使用的最低子系統版本。|  
-|[/target](../../../visual-basic/reference/command-line-compiler/target.md)|指定輸出檔的格式。|  
-|[/utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|使用 UTF-8 編碼顯示編譯器輸出。|  
-|[/vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|指定編譯器在編譯時不應使用 Visual Basic 執行階段程式庫的參考，或應使用特定執行階段程式庫的參考。|  
-|[/verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|在編譯期間輸出額外資訊。|  
-|[/warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|將警告提升為錯誤。|  
-|[/win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|將 .ico 檔插入輸出檔中。|  
-|[/win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|識別要內嵌到專案的可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。|  
-|[/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|將 Win32 資源插入輸出檔中。|  
+|[<span data-ttu-id="03b29-107">@ (指定回應檔)</span><span class="sxs-lookup"><span data-stu-id="03b29-107">@ (Specify Response File)</span></span>](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|<span data-ttu-id="03b29-108">指定回應檔。</span><span class="sxs-lookup"><span data-stu-id="03b29-108">Specifies a response file.</span></span>|  
+|[<span data-ttu-id="03b29-109">/?</span><span class="sxs-lookup"><span data-stu-id="03b29-109">/?</span></span>](../../../visual-basic/reference/command-line-compiler/help.md)|<span data-ttu-id="03b29-110">顯示編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="03b29-110">Displays compiler options.</span></span> <span data-ttu-id="03b29-111">此命令的效用等同於指定 `/help` 選項。</span><span class="sxs-lookup"><span data-stu-id="03b29-111">This command is the same as specifying the `/help` option.</span></span> <span data-ttu-id="03b29-112">未執行編譯。</span><span class="sxs-lookup"><span data-stu-id="03b29-112">No compilation occurs.</span></span>|  
+|`/additionalfile`|<span data-ttu-id="03b29-113">命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。</span><span class="sxs-lookup"><span data-stu-id="03b29-113">Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.</span></span>|  
+|[<span data-ttu-id="03b29-114">/addmodule</span><span class="sxs-lookup"><span data-stu-id="03b29-114">/addmodule</span></span>](../../../visual-basic/reference/command-line-compiler/addmodule.md)|<span data-ttu-id="03b29-115">讓編譯器將所指定檔案的類型資訊全部提供給您目前編譯的專案。</span><span class="sxs-lookup"><span data-stu-id="03b29-115">Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.</span></span>|  
+|`/analyzer`|<span data-ttu-id="03b29-116">從這個組件執行分析器 (簡短形式：/a)</span><span class="sxs-lookup"><span data-stu-id="03b29-116">Run the analyzers from this assembly (Short form: /a)</span></span>|  
+|[<span data-ttu-id="03b29-117">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="03b29-117">/baseaddress</span></span>](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|<span data-ttu-id="03b29-118">指定 DLL 的基底位址。</span><span class="sxs-lookup"><span data-stu-id="03b29-118">Specifies the base address of a DLL.</span></span>|  
+|[<span data-ttu-id="03b29-119">/bugreport</span><span class="sxs-lookup"><span data-stu-id="03b29-119">/bugreport</span></span>](../../../visual-basic/reference/command-line-compiler/bugreport.md)|<span data-ttu-id="03b29-120">建立檔案，其中包含可簡化錯誤回報的資訊。</span><span class="sxs-lookup"><span data-stu-id="03b29-120">Creates a file that contains information that makes it easy to report a bug.</span></span>|  
+|`/checksumalgorithm:<alg>`|<span data-ttu-id="03b29-121">指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。</span><span class="sxs-lookup"><span data-stu-id="03b29-121">Specify the algorithm for calculating the source file checksum stored in PDB.</span></span>  <span data-ttu-id="03b29-122">支援的值為：SHA1 (預設值) 或 SHA256。</span><span class="sxs-lookup"><span data-stu-id="03b29-122">Supported values are: SHA1 (default) or SHA256.</span></span>|  
+|[<span data-ttu-id="03b29-123">/codepage</span><span class="sxs-lookup"><span data-stu-id="03b29-123">/codepage</span></span>](../../../visual-basic/reference/command-line-compiler/codepage.md)|<span data-ttu-id="03b29-124">指定編譯過程中所有原始程式碼檔使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="03b29-124">Specifies the code page to use for all source code files in the compilation.</span></span>|  
+|[<span data-ttu-id="03b29-125">/debug</span><span class="sxs-lookup"><span data-stu-id="03b29-125">/debug</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)|<span data-ttu-id="03b29-126">產生偵錯資訊。</span><span class="sxs-lookup"><span data-stu-id="03b29-126">Produces debugging information.</span></span>|  
+|[<span data-ttu-id="03b29-127">/define</span><span class="sxs-lookup"><span data-stu-id="03b29-127">/define</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)|<span data-ttu-id="03b29-128">定義條件式編譯的符號。</span><span class="sxs-lookup"><span data-stu-id="03b29-128">Defines symbols for conditional compilation.</span></span>|  
+|[<span data-ttu-id="03b29-129">/delaysign</span><span class="sxs-lookup"><span data-stu-id="03b29-129">/delaysign</span></span>](../../../visual-basic/reference/command-line-compiler/delaysign.md)|<span data-ttu-id="03b29-130">指定將要完整簽署還是部分簽署組件。</span><span class="sxs-lookup"><span data-stu-id="03b29-130">Specifies whether the assembly will be fully or partially signed.</span></span>|  
+|[<span data-ttu-id="03b29-131">/doc</span><span class="sxs-lookup"><span data-stu-id="03b29-131">/doc</span></span>](../../../visual-basic/reference/command-line-compiler/doc.md)|<span data-ttu-id="03b29-132">將文件註解處理成 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="03b29-132">Processes documentation comments to an XML file.</span></span>|  
+|[<span data-ttu-id="03b29-133">/errorreport</span><span class="sxs-lookup"><span data-stu-id="03b29-133">/errorreport</span></span>](../../../visual-basic/reference/command-line-compiler/errorreport.md)|<span data-ttu-id="03b29-134">指定 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 編譯器報告編譯器內部錯誤的方式。</span><span class="sxs-lookup"><span data-stu-id="03b29-134">Specifies how the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler should report internal compiler errors.</span></span>|  
+|[<span data-ttu-id="03b29-135">/filealign</span><span class="sxs-lookup"><span data-stu-id="03b29-135">/filealign</span></span>](../../../visual-basic/reference/command-line-compiler/filealign.md)|<span data-ttu-id="03b29-136">指定要對齊輸出檔案區段的位置。</span><span class="sxs-lookup"><span data-stu-id="03b29-136">Specifies where to align the sections of the output file.</span></span>|  
+|[<span data-ttu-id="03b29-137">/help</span><span class="sxs-lookup"><span data-stu-id="03b29-137">/help</span></span>](../../../visual-basic/reference/command-line-compiler/help.md)|<span data-ttu-id="03b29-138">顯示編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="03b29-138">Displays compiler options.</span></span> <span data-ttu-id="03b29-139">此命令的效用等同於指定 `/?` 選項。</span><span class="sxs-lookup"><span data-stu-id="03b29-139">This command is the same as specifying the `/?` option.</span></span> <span data-ttu-id="03b29-140">未執行編譯。</span><span class="sxs-lookup"><span data-stu-id="03b29-140">No compilation occurs.</span></span>|  
+|[<span data-ttu-id="03b29-141">/highentropyva</span><span class="sxs-lookup"><span data-stu-id="03b29-141">/highentropyva</span></span>](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|<span data-ttu-id="03b29-142">指出特定可執行檔是否支援高熵位址空間配置隨機載入 (ASLR)。</span><span class="sxs-lookup"><span data-stu-id="03b29-142">Indicates whether a particular executable supports high entropy Address Space Layout Randomization (ASLR).</span></span>|  
+|[<span data-ttu-id="03b29-143">/imports</span><span class="sxs-lookup"><span data-stu-id="03b29-143">/imports</span></span>](../../../visual-basic/reference/command-line-compiler/imports.md)|<span data-ttu-id="03b29-144">從指定的組件匯入命名空間。</span><span class="sxs-lookup"><span data-stu-id="03b29-144">Imports a namespace from a specified assembly.</span></span>|  
+|[<span data-ttu-id="03b29-145">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="03b29-145">/keycontainer</span></span>](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|<span data-ttu-id="03b29-146">指定金鑰組的金鑰容器名稱，為組件提供強式名稱。</span><span class="sxs-lookup"><span data-stu-id="03b29-146">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>|  
+|[<span data-ttu-id="03b29-147">/keyfile</span><span class="sxs-lookup"><span data-stu-id="03b29-147">/keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)|<span data-ttu-id="03b29-148">指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。</span><span class="sxs-lookup"><span data-stu-id="03b29-148">Specifies a file that contains a key or key pair to give an assembly a strong name.</span></span>|  
+|[<span data-ttu-id="03b29-149">/langversion</span><span class="sxs-lookup"><span data-stu-id="03b29-149">/langversion</span></span>](../../../visual-basic/reference/command-line-compiler/langversion.md)|<span data-ttu-id="03b29-150">指定語言版本： 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0。</span><span class="sxs-lookup"><span data-stu-id="03b29-150">Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.</span></span>|  
+|[<span data-ttu-id="03b29-151">/libpath</span><span class="sxs-lookup"><span data-stu-id="03b29-151">/libpath</span></span>](../../../visual-basic/reference/command-line-compiler/libpath.md)|<span data-ttu-id="03b29-152">指定所參考的組件位置[/參考](../../../visual-basic/reference/command-line-compiler/reference.md)選項。</span><span class="sxs-lookup"><span data-stu-id="03b29-152">Specifies the location of assemblies referenced by the [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>|  
+|[<span data-ttu-id="03b29-153">/linkresource</span><span class="sxs-lookup"><span data-stu-id="03b29-153">/linkresource</span></span>](../../../visual-basic/reference/command-line-compiler/linkresource.md)|<span data-ttu-id="03b29-154">建立與 Managed 資源的連結。</span><span class="sxs-lookup"><span data-stu-id="03b29-154">Creates a link to a managed resource.</span></span>|  
+|[<span data-ttu-id="03b29-155">/main</span><span class="sxs-lookup"><span data-stu-id="03b29-155">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)|<span data-ttu-id="03b29-156">指定類別，其中包含`Sub Main`在啟動時使用的程序。</span><span class="sxs-lookup"><span data-stu-id="03b29-156">Specifies the class that contains the `Sub Main` procedure to use at startup.</span></span>|  
+|[<span data-ttu-id="03b29-157">/moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="03b29-157">/moduleassemblyname</span></span>](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|<span data-ttu-id="03b29-158">指定將包含模組的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="03b29-158">Specifies the name of the assembly that a module will be a part of.</span></span>|  
+|`/modulename:<string>`|<span data-ttu-id="03b29-159">指定來源模組的名稱</span><span class="sxs-lookup"><span data-stu-id="03b29-159">Specify the name of the source module</span></span>|  
+|[<span data-ttu-id="03b29-160">/netcf</span><span class="sxs-lookup"><span data-stu-id="03b29-160">/netcf</span></span>](../../../visual-basic/reference/command-line-compiler/netcf.md)|<span data-ttu-id="03b29-161">設定要以 [!INCLUDE[Compact](~/includes/compact-md.md)] 為目標的編譯器。</span><span class="sxs-lookup"><span data-stu-id="03b29-161">Sets the compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>|  
+|[<span data-ttu-id="03b29-162">/noconfig</span><span class="sxs-lookup"><span data-stu-id="03b29-162">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)|<span data-ttu-id="03b29-163">不使用 Vbc.rsp 進行編譯。</span><span class="sxs-lookup"><span data-stu-id="03b29-163">Do not compile with Vbc.rsp.</span></span>|  
+|[<span data-ttu-id="03b29-164">/nologo</span><span class="sxs-lookup"><span data-stu-id="03b29-164">/nologo</span></span>](../../../visual-basic/reference/command-line-compiler/nologo.md)|<span data-ttu-id="03b29-165">隱藏編譯器橫幅資訊。</span><span class="sxs-lookup"><span data-stu-id="03b29-165">Suppresses compiler banner information.</span></span>|  
+|[<span data-ttu-id="03b29-166">/nostdlib</span><span class="sxs-lookup"><span data-stu-id="03b29-166">/nostdlib</span></span>](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|<span data-ttu-id="03b29-167">使編譯器不要參考標準程式庫。</span><span class="sxs-lookup"><span data-stu-id="03b29-167">Causes the compiler not to reference the standard libraries.</span></span>|  
+|[<span data-ttu-id="03b29-168">/nowarn</span><span class="sxs-lookup"><span data-stu-id="03b29-168">/nowarn</span></span>](../../../visual-basic/reference/command-line-compiler/nowarn.md)|<span data-ttu-id="03b29-169">抑制編譯器產生警告的功能。</span><span class="sxs-lookup"><span data-stu-id="03b29-169">Suppresses the compiler's ability to generate warnings.</span></span>|  
+|[<span data-ttu-id="03b29-170">/nowin32manifest</span><span class="sxs-lookup"><span data-stu-id="03b29-170">/nowin32manifest</span></span>](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|<span data-ttu-id="03b29-171">指示編譯器不要將任何應用程式資訊清單內嵌在可執行檔中。</span><span class="sxs-lookup"><span data-stu-id="03b29-171">Instructs the compiler not to embed any application manifest into the executable file.</span></span>|  
+|[<span data-ttu-id="03b29-172">/optimize</span><span class="sxs-lookup"><span data-stu-id="03b29-172">/optimize</span></span>](../../../visual-basic/reference/command-line-compiler/optimize.md)|<span data-ttu-id="03b29-173">啟用/停用程式碼最佳化。</span><span class="sxs-lookup"><span data-stu-id="03b29-173">Enables/disables code optimization.</span></span>|  
+|[<span data-ttu-id="03b29-174">/optioncompare</span><span class="sxs-lookup"><span data-stu-id="03b29-174">/optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|<span data-ttu-id="03b29-175">指定字串比較是否應為二進位，或是使用地區設定特定的文字語意。</span><span class="sxs-lookup"><span data-stu-id="03b29-175">Specifies whether string comparisons should be binary or use locale-specific text semantics.</span></span>|  
+|[<span data-ttu-id="03b29-176">/optionexplicit</span><span class="sxs-lookup"><span data-stu-id="03b29-176">/optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|<span data-ttu-id="03b29-177">強制執行變數的明確宣告。</span><span class="sxs-lookup"><span data-stu-id="03b29-177">Enforces explicit declaration of variables.</span></span>|  
+|[<span data-ttu-id="03b29-178">/optioninfer</span><span class="sxs-lookup"><span data-stu-id="03b29-178">/optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|<span data-ttu-id="03b29-179">可讓您在變數宣告中使用區域類型推斷。</span><span class="sxs-lookup"><span data-stu-id="03b29-179">Enables the use of local type inference in variable declarations.</span></span>|  
+|[<span data-ttu-id="03b29-180">/optionstrict</span><span class="sxs-lookup"><span data-stu-id="03b29-180">/optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|<span data-ttu-id="03b29-181">強制執行嚴格的語意。</span><span class="sxs-lookup"><span data-stu-id="03b29-181">Enforces strict language semantics.</span></span>|  
+|[<span data-ttu-id="03b29-182">/out</span><span class="sxs-lookup"><span data-stu-id="03b29-182">/out</span></span>](../../../visual-basic/reference/command-line-compiler/out.md)|<span data-ttu-id="03b29-183">指定輸出檔。</span><span class="sxs-lookup"><span data-stu-id="03b29-183">Specifies an output file.</span></span>|  
+|`/parallel[+&#124;-]`|<span data-ttu-id="03b29-184">指定是否要使用並行組建 (+)。</span><span class="sxs-lookup"><span data-stu-id="03b29-184">Specifies whether to use concurrent build (+).</span></span>|  
+|[<span data-ttu-id="03b29-185">/platform</span><span class="sxs-lookup"><span data-stu-id="03b29-185">/platform</span></span>](../../../visual-basic/reference/command-line-compiler/platform.md)|<span data-ttu-id="03b29-186">指定編譯器為輸出檔設為目標的處理器平台。</span><span class="sxs-lookup"><span data-stu-id="03b29-186">Specifies the processor platform the compiler targets for the output file.</span></span>|  
+|`/preferreduilang`|<span data-ttu-id="03b29-187">指定慣用的輸出語言名稱。</span><span class="sxs-lookup"><span data-stu-id="03b29-187">Specify the preferred output language name.</span></span>|  
+|[<span data-ttu-id="03b29-188">/quiet</span><span class="sxs-lookup"><span data-stu-id="03b29-188">/quiet</span></span>](../../../visual-basic/reference/command-line-compiler/quiet.md)|<span data-ttu-id="03b29-189">防止編譯器顯示語法相關錯誤和警告的程式碼。</span><span class="sxs-lookup"><span data-stu-id="03b29-189">Prevents the compiler from displaying code for syntax-related errors and warnings.</span></span>|  
+|[<span data-ttu-id="03b29-190">/recurse</span><span class="sxs-lookup"><span data-stu-id="03b29-190">/recurse</span></span>](../../../visual-basic/reference/command-line-compiler/recurse.md)|<span data-ttu-id="03b29-191">搜尋要編譯之原始程式檔的子目錄。</span><span class="sxs-lookup"><span data-stu-id="03b29-191">Searches subdirectories for source files to compile.</span></span>|  
+|[<span data-ttu-id="03b29-192">/reference</span><span class="sxs-lookup"><span data-stu-id="03b29-192">/reference</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)|<span data-ttu-id="03b29-193">從組匯入中繼資料。</span><span class="sxs-lookup"><span data-stu-id="03b29-193">Imports metadata from an assembly.</span></span>|  
+|[<span data-ttu-id="03b29-194">/removeintchecks</span><span class="sxs-lookup"><span data-stu-id="03b29-194">/removeintchecks</span></span>](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|<span data-ttu-id="03b29-195">停用整數的溢位檢查。</span><span class="sxs-lookup"><span data-stu-id="03b29-195">Disables integer overflow checking.</span></span>|  
+|[<span data-ttu-id="03b29-196">/resource</span><span class="sxs-lookup"><span data-stu-id="03b29-196">/resource</span></span>](../../../visual-basic/reference/command-line-compiler/resource.md)|<span data-ttu-id="03b29-197">將 Managed 資源內嵌至組件中。</span><span class="sxs-lookup"><span data-stu-id="03b29-197">Embeds a managed resource in an assembly.</span></span>|  
+|[<span data-ttu-id="03b29-198">/rootnamespace</span><span class="sxs-lookup"><span data-stu-id="03b29-198">/rootnamespace</span></span>](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|<span data-ttu-id="03b29-199">指定所有類型宣告的命名空間。</span><span class="sxs-lookup"><span data-stu-id="03b29-199">Specifies a namespace for all type declarations.</span></span>|  
+|`/ruleset:<file>`|<span data-ttu-id="03b29-200">指定停用特定診斷的規則集檔案。</span><span class="sxs-lookup"><span data-stu-id="03b29-200">Specify a ruleset file that disables specific diagnostics.</span></span>|  
+|[<span data-ttu-id="03b29-201">/sdkpath</span><span class="sxs-lookup"><span data-stu-id="03b29-201">/sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|<span data-ttu-id="03b29-202">指定 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。</span><span class="sxs-lookup"><span data-stu-id="03b29-202">Specifies the location of Mscorlib.dll and Microsoft.VisualBasic.dll.</span></span>|  
+|[<span data-ttu-id="03b29-203">/subsystemversion</span><span class="sxs-lookup"><span data-stu-id="03b29-203">/subsystemversion</span></span>](../../../visual-basic/reference/command-line-compiler/subsystemversion.md)|<span data-ttu-id="03b29-204">指定所產生的可執行檔能夠使用的最低子系統版本。</span><span class="sxs-lookup"><span data-stu-id="03b29-204">Specifies the minimum version of the subsystem that the generated executable file can use.</span></span>|  
+|[<span data-ttu-id="03b29-205">/target</span><span class="sxs-lookup"><span data-stu-id="03b29-205">/target</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)|<span data-ttu-id="03b29-206">指定輸出檔的格式。</span><span class="sxs-lookup"><span data-stu-id="03b29-206">Specifies the format of the output file.</span></span>|  
+|[<span data-ttu-id="03b29-207">/utf8output</span><span class="sxs-lookup"><span data-stu-id="03b29-207">/utf8output</span></span>](../../../visual-basic/reference/command-line-compiler/utf8output.md)|<span data-ttu-id="03b29-208">使用 UTF-8 編碼顯示編譯器輸出。</span><span class="sxs-lookup"><span data-stu-id="03b29-208">Displays compiler output using UTF-8 encoding.</span></span>|  
+|[<span data-ttu-id="03b29-209">/vbruntime</span><span class="sxs-lookup"><span data-stu-id="03b29-209">/vbruntime</span></span>](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|<span data-ttu-id="03b29-210">指定編譯器在編譯時不應使用 Visual Basic 執行階段程式庫的參考，或應使用特定執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="03b29-210">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>|  
+|[<span data-ttu-id="03b29-211">/verbose</span><span class="sxs-lookup"><span data-stu-id="03b29-211">/verbose</span></span>](../../../visual-basic/reference/command-line-compiler/verbose.md)|<span data-ttu-id="03b29-212">在編譯期間輸出額外資訊。</span><span class="sxs-lookup"><span data-stu-id="03b29-212">Outputs extra information during compilation.</span></span>|  
+|[<span data-ttu-id="03b29-213">/warnaserror</span><span class="sxs-lookup"><span data-stu-id="03b29-213">/warnaserror</span></span>](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|<span data-ttu-id="03b29-214">將警告提升為錯誤。</span><span class="sxs-lookup"><span data-stu-id="03b29-214">Promotes warnings to errors.</span></span>|  
+|[<span data-ttu-id="03b29-215">/win32icon</span><span class="sxs-lookup"><span data-stu-id="03b29-215">/win32icon</span></span>](../../../visual-basic/reference/command-line-compiler/win32icon.md)|<span data-ttu-id="03b29-216">將 .ico 檔插入輸出檔中。</span><span class="sxs-lookup"><span data-stu-id="03b29-216">Inserts an .ico file into the output file.</span></span>|  
+|[<span data-ttu-id="03b29-217">/win32manifest</span><span class="sxs-lookup"><span data-stu-id="03b29-217">/win32manifest</span></span>](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|<span data-ttu-id="03b29-218">識別要內嵌到專案的可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。</span><span class="sxs-lookup"><span data-stu-id="03b29-218">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>|  
+|[<span data-ttu-id="03b29-219">/win32resource</span><span class="sxs-lookup"><span data-stu-id="03b29-219">/win32resource</span></span>](../../../visual-basic/reference/command-line-compiler/win32resource.md)|<span data-ttu-id="03b29-220">將 Win32 資源插入輸出檔中。</span><span class="sxs-lookup"><span data-stu-id="03b29-220">Inserts a Win32 resource into the output file.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [依分類列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)   
- [專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a><span data-ttu-id="03b29-221">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03b29-221">See Also</span></span>  
+ [<span data-ttu-id="03b29-222">依分類列出 Visual Basic 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="03b29-222">Visual Basic Compiler Options Listed by Category</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+ [<span data-ttu-id="03b29-223">專案設計工具簡介</span><span class="sxs-lookup"><span data-stu-id="03b29-223">Introduction to the Project Designer</span></span>](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [<span data-ttu-id="03b29-224">依字母順序列出 C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="03b29-224">C# Compiler Options Listed Alphabetically</span></span>](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [<span data-ttu-id="03b29-225">依分類列出的 C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="03b29-225">C# Compiler Options Listed by Category</span></span>](../../../csharp/language-reference/compiler-options/listed-by-category.md)

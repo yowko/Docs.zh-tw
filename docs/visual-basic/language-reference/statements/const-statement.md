@@ -1,120 +1,117 @@
 ---
-title: "Const Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Const"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Const statement [Visual Basic]"
+title: "Const 陳述式 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Const
+helpviewer_keywords: Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Const Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-宣告並定義一或多個常數。  
+# <a name="const-statement-visual-basic"></a><span data-ttu-id="3f4ba-102">Const 陳述式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4ba-102">Const Statement (Visual Basic)</span></span>
+<span data-ttu-id="3f4ba-103">宣告並定義一或多個常數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-103">Declares and defines one or more constants.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="3f4ba-104">語法</span><span class="sxs-lookup"><span data-stu-id="3f4ba-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ]   
+[ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
-## 組件  
+## <a name="parts"></a><span data-ttu-id="3f4ba-105">組件</span><span class="sxs-lookup"><span data-stu-id="3f4ba-105">Parts</span></span>  
  `attributelist`  
- 選擇項。  套用到這個陳述式中宣告之所有常數的屬性清單。  請參閱以角括弧 \("`<`" 和 "`>`"\) 括起來的[Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+ <span data-ttu-id="3f4ba-106">選擇項。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-106">Optional.</span></span> <span data-ttu-id="3f4ba-107">此陳述式中宣告的屬性套用至所有常數清單。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-107">List of attributes that apply to all the constants declared in this statement.</span></span> <span data-ttu-id="3f4ba-108">請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-108">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>  
   
  `accessmodifier`  
- 選擇項。  使用此項，指定哪一個程式碼可以存取這些常數。  選項如下：[Public](../../../visual-basic/language-reference/modifiers/public.md)、[Protected](../../../visual-basic/language-reference/modifiers/protected.md)、[Friend](../../../visual-basic/language-reference/modifiers/friend.md)、`Protected Friend` 或 [Private](../../../visual-basic/language-reference/modifiers/private.md)。  
+ <span data-ttu-id="3f4ba-109">選擇項。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-109">Optional.</span></span> <span data-ttu-id="3f4ba-110">使用此選項來指定哪些程式碼可以存取這些常數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-110">Use this to specify what code can access these constants.</span></span> <span data-ttu-id="3f4ba-111">可以是[公用](../../../visual-basic/language-reference/modifiers/public.md)，[保護](../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../visual-basic/language-reference/modifiers/friend.md)， `Protected Friend`，或[私人](../../../visual-basic/language-reference/modifiers/private.md)。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-111">Can be [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, or [Private](../../../visual-basic/language-reference/modifiers/private.md).</span></span>  
   
  `Shadows`  
- 選擇項。  使用此項，重新宣告並隱藏基底類別中的程式設計項目。  請參閱 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。  
+ <span data-ttu-id="3f4ba-112">選擇項。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-112">Optional.</span></span> <span data-ttu-id="3f4ba-113">使用此選項，重新宣告並隱藏基底類別中的程式設計項目。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-113">Use this to redeclare and hide a programming element in a base class.</span></span> <span data-ttu-id="3f4ba-114">請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-114">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>  
   
  `constantlist`  
- 必要項。  這個陳述式中要宣告的常數清單。  
+ <span data-ttu-id="3f4ba-115">必要項。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-115">Required.</span></span> <span data-ttu-id="3f4ba-116">常數，此陳述式所宣告的清單。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-116">List of constants being declared in this statement.</span></span>  
   
- `constant` `[ ,` `constant` `... ]`  
+ <span data-ttu-id="3f4ba-117">`constant` `[ ,` `constant` `... ]`</span><span class="sxs-lookup"><span data-stu-id="3f4ba-117">`constant` `[ ,` `constant` `... ]`</span></span>  
   
- 每個 `constant` 都具有下列語法和組成部分：  
+ <span data-ttu-id="3f4ba-118">每個 `constant` 都具有下列語法和組件：</span><span class="sxs-lookup"><span data-stu-id="3f4ba-118">Each `constant` has the following syntax and parts:</span></span>  
   
- `constantname` `[ As` `datatype` `] =` `initializer`  
+ <span data-ttu-id="3f4ba-119">`constantname` `[ As` `datatype` `] =` `initializer`</span><span class="sxs-lookup"><span data-stu-id="3f4ba-119">`constantname` `[ As` `datatype` `] =` `initializer`</span></span>  
   
-|組件|描述|  
-|--------|--------|  
-|`constantname`|必要項。  常數名稱。  請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`datatype`|如果 `Option Strict` 為 `On`，則為必要項。  常數的資料型別。|  
-|`initializer`|必要項。  在編譯時期評估並指派給常數的運算式。|  
+|<span data-ttu-id="3f4ba-120">組件</span><span class="sxs-lookup"><span data-stu-id="3f4ba-120">Part</span></span>|<span data-ttu-id="3f4ba-121">說明</span><span class="sxs-lookup"><span data-stu-id="3f4ba-121">Description</span></span>|  
+|----------|-----------------|  
+|`constantname`|<span data-ttu-id="3f4ba-122">必要項。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-122">Required.</span></span> <span data-ttu-id="3f4ba-123">常數的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-123">Name of the constant.</span></span> <span data-ttu-id="3f4ba-124">請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-124">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`datatype`|<span data-ttu-id="3f4ba-125">若`Option Strict`是`On`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-125">Required if `Option Strict` is `On`.</span></span> <span data-ttu-id="3f4ba-126">資料類型的常數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-126">Data type of the constant.</span></span>|  
+|`initializer`|<span data-ttu-id="3f4ba-127">必要項。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-127">Required.</span></span> <span data-ttu-id="3f4ba-128">在編譯時期評估，以及指派給常數的運算式。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-128">Expression that is evaluated at compile time and assigned to the constant.</span></span>|  
   
-## 備註  
- 如果應用程式中有一個永遠不會變更的值，則您可以定義一個具名常數，然後以這個常數代替常值 \(Literal\)。  因為名稱會比值更容易記住。  您只需定義這個常數一次，便可以將這個常數用在程式碼中的許多地方。  在更新的版本中，如果需要重新定義值，則 `Const` 陳述式會是唯一需要進行的變更。  
+## <a name="remarks"></a><span data-ttu-id="3f4ba-129">備註</span><span class="sxs-lookup"><span data-stu-id="3f4ba-129">Remarks</span></span>  
+ <span data-ttu-id="3f4ba-130">如果您將永遠不會變更值在您的應用程式時，您可以定義的具名的常數，並使用它來取代常值的值。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-130">If you have a value that never changes in your application, you can define a named constant and use it in place of a literal value.</span></span> <span data-ttu-id="3f4ba-131">名稱不容易記住的值。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-131">A name is easier to remember than a value.</span></span> <span data-ttu-id="3f4ba-132">您可以一次定義常數和程式碼中使用在許多地方。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-132">You can define the constant just once and use it in many places in your code.</span></span> <span data-ttu-id="3f4ba-133">如果您需要較新版本中重新定義值，`Const`陳述式是唯一您需要進行變更。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-133">If in a later version you need to redefine the value, the `Const` statement is the only place you need to make a change.</span></span>  
   
- 您只能在模組或程序層級使用 `Const`。  這表示變數的「*宣告內容*」\(Declaration Context\) 必須是類別、結構、模組、程序或區塊，且不可以是原始程式檔 \(Source File\)、命名空間 \(Namespace\) 或介面。  如需詳細資訊，請參閱[Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ <span data-ttu-id="3f4ba-134">您可以使用`Const`只能在模組或程序層級。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-134">You can use `Const` only at module or procedure level.</span></span> <span data-ttu-id="3f4ba-135">這表示*宣告內容*變數必須是類別、 結構、 模組、 程序或區塊，而且不能是原始程式檔、 命名空間或介面。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-135">This means the *declaration context* for a variable must be a class, structure, module, procedure, or block, and cannot be a source file, namespace, or interface.</span></span> <span data-ttu-id="3f4ba-136">如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-136">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- 在程序內的區域常數會預設為公用 \(Public\) 存取，而且您無法對這些常數使用任何存取修飾詞 \(Modifier\)。  類別和模組成員常數 \(在任何程序外\) 預設為私用 \(Private\) 存取，而結構成員常數則預設為公用存取。  您可以使用存取修飾詞調整存取層級。  
+ <span data-ttu-id="3f4ba-137">區域常數 （在程序） 預設為公用存取，因此您無法在其上使用任何存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-137">Local constants (inside a procedure) default to public access, and you cannot use any access modifiers on them.</span></span> <span data-ttu-id="3f4ba-138">類別和模組成員常數 （以外的任何程序） 預設為私用存取，而結構成員常數預設為公用存取。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-138">Class and module member constants (outside any procedure) default to private access, and structure member constants default to public access.</span></span> <span data-ttu-id="3f4ba-139">您可以調整其存取層級，使用存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-139">You can adjust their access levels with the access modifiers.</span></span>  
   
-## 規則  
+## <a name="rules"></a><span data-ttu-id="3f4ba-140">規則</span><span class="sxs-lookup"><span data-stu-id="3f4ba-140">Rules</span></span>  
   
--   **宣告內容：** 在模組層級宣告的常數 \(在任何程序外\) 是「*成員常數*」\(Member Constant\)，屬於宣告它的類別、結構或模組的成員。  
+-   <span data-ttu-id="3f4ba-141">**宣告內容。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-141">**Declaration Context.**</span></span> <span data-ttu-id="3f4ba-142">常數的宣告是在模組層級以外的任何程序，而是*成員常數*; 它是類別、 結構成員或模組宣告它。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-142">A constant declared at module level, outside any procedure, is a *member constant*; it is a member of the class, structure, or module that declares it.</span></span>  
   
-     在程序層級宣告的常數則是「*區域常數*」，屬於宣告它的程序或區塊的區域常數。  
+     <span data-ttu-id="3f4ba-143">在程序層級宣告的常數是*區域常數*; 它是本機程序或宣告它的區塊。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-143">A constant declared at procedure level is a *local constant*; it is local to the procedure or block that declares it.</span></span>  
   
--   **屬性** ：您只能將屬性套用到成員常數，不能套用到區域常數。  屬性會提供資訊給組件的中繼資料 \(Metadata\)，這對於區域常數之類的暫時儲存體並沒有意義。  
+-   <span data-ttu-id="3f4ba-144">**屬性。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-144">**Attributes.**</span></span> <span data-ttu-id="3f4ba-145">您可以將屬性套用到成員常數，而非區域常數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-145">You can apply attributes only to member constants, not to local constants.</span></span> <span data-ttu-id="3f4ba-146">屬性會提供資訊給組件的中繼資料，不是有意義的暫存儲存體，例如區域常數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-146">An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local constants.</span></span>  
   
--   **修飾詞。** 根據預設，所有的常數都是 `Shared`、`Static` 和 `ReadOnly`。  宣告常數時，您無法使用任何一個上述關鍵字。  
+-   <span data-ttu-id="3f4ba-147">**修飾詞。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-147">**Modifiers.**</span></span> <span data-ttu-id="3f4ba-148">根據預設，所有的常數是`Shared`， `Static`，和`ReadOnly`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-148">By default, all constants are `Shared`, `Static`, and `ReadOnly`.</span></span> <span data-ttu-id="3f4ba-149">宣告常數時，您無法使用這些關鍵字。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-149">You cannot use any of these keywords when declaring a constant.</span></span>  
   
-     在程序層級中，您無法使用 `Shadows` 或任何存取修飾詞宣告區域常數。  
+     <span data-ttu-id="3f4ba-150">在程序層級，您無法使用`Shadows`或任何存取修飾詞來宣告區域常數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-150">At procedure level, you cannot use `Shadows` or any access modifiers to declare local constants.</span></span>  
   
--   **多個常數** 您可以在同一個宣告陳述式中宣告數個常數，並為每一個常數指定 `constantname` 部分。  常數之間以逗號 \(,\) 來分隔。  
+-   <span data-ttu-id="3f4ba-151">**多個常數。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-151">**Multiple Constants.**</span></span> <span data-ttu-id="3f4ba-152">您可以宣告在相同的宣告陳述式中，數個常數指定`constantname`針對每個部分。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-152">You can declare several constants in the same declaration statement, specifying the `constantname` part for each one.</span></span> <span data-ttu-id="3f4ba-153">以逗號分隔多個常數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-153">Multiple constants are separated by commas.</span></span>  
   
-## 資料型別規則  
+## <a name="data-type-rules"></a><span data-ttu-id="3f4ba-154">資料類型的規則</span><span class="sxs-lookup"><span data-stu-id="3f4ba-154">Data Type Rules</span></span>  
   
--   **資料型別** `Const` 陳述式可以宣告變數的資料型別。  您可以指定任何資料型別或列舉型別名稱。  
+-   <span data-ttu-id="3f4ba-155">**資料型別。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-155">**Data Types.**</span></span> <span data-ttu-id="3f4ba-156">`Const`陳述式可以宣告一個變數的資料類型。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-156">The `Const` statement can declare the data type of a variable.</span></span> <span data-ttu-id="3f4ba-157">您可以指定任何資料類型或列舉型別的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-157">You can specify any data type or the name of an enumeration.</span></span>  
   
--   **預設型別。** 如果沒有指定 `datatype`，則常數會採用 `initializer` 的資料型別。  如果同時指定 `datatype` 和 `initializer`，則 `initializer` 的資料型別必須可以轉換為 `datatype`。  如果既不指定 `datatype`，也不指定 `initializer`，則資料型別會預設值為 `Object`。  
+-   <span data-ttu-id="3f4ba-158">**預設類型。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-158">**Default Type.**</span></span> <span data-ttu-id="3f4ba-159">如果您未指定`datatype`，常數會採用的資料型別`initializer`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-159">If you do not specify `datatype`, the constant takes the data type of `initializer`.</span></span> <span data-ttu-id="3f4ba-160">如果您同時指定`datatype`和`initializer`的資料類型`initializer`必須可轉換為`datatype`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-160">If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`.</span></span> <span data-ttu-id="3f4ba-161">如果沒有`datatype`也`initializer`沒有、 資料類型會預設為`Object`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-161">If neither `datatype` nor `initializer` is present, the data type defaults to `Object`.</span></span>  
   
--   **不同型別** 您宣告的每一個變數都可以使用個別的 `As` 子句，以便為不同常數指定不同資料型別。  不過無法使用一般 `As` 子句，宣告數個型別相同的常數。  
+-   <span data-ttu-id="3f4ba-162">**型別不同。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-162">**Different Types.**</span></span> <span data-ttu-id="3f4ba-163">您可以指定不同的常數的不同資料類型使用個別`As`子句宣告每個變數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-163">You can specify different data types for different constants by using a separate `As` clause for each variable you declare.</span></span> <span data-ttu-id="3f4ba-164">不過，您無法宣告為相同的型別使用一個通用的數個常數`As`子句。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-164">However, you cannot declare several constants to be of the same type by using a common `As` clause.</span></span>  
   
--   **初始設定**： 您必須初始化 `constantlist` 中每一個常數的值。  您可以使用 `initializer` 提供要指派給常數的運算式。  運算式可以是常值、其他已定義的常數，以及已定義之列舉型別成員的任意組合。  您可以利用算術和邏輯運算子 \(Logical Operator\) 來結合這樣的項目。  
+-   <span data-ttu-id="3f4ba-165">**初始化。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-165">**Initialization.**</span></span> <span data-ttu-id="3f4ba-166">您必須先初始化中的每個常數值`constantlist`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-166">You must initialize the value of every constant in `constantlist`.</span></span> <span data-ttu-id="3f4ba-167">您使用`initializer`提供要指派給常數的運算式。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-167">You use `initializer` to supply an expression to be assigned to the constant.</span></span> <span data-ttu-id="3f4ba-168">運算式可以是常值、 已定義，其他常數和列舉型別成員已經定義的任何組合。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-168">The expression can be any combination of literals, other constants that are already defined, and enumeration members that are already defined.</span></span> <span data-ttu-id="3f4ba-169">您可以使用算術和邏輯運算子來結合這類項目。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-169">You can use arithmetic and logical operators to combine such elements.</span></span>  
   
-     在 `initializer` 中不能使用變數或函式。  但是，您可以使用轉換關鍵字，例如 `CByte` 和 `CShort`。  如果您使用常數 `String` 或 `Char` 引數來呼叫，也可以使用 `AscW`，因為可以在編譯時期進行評估。  
+     <span data-ttu-id="3f4ba-170">您無法使用變數或函式中的`initializer`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-170">You cannot use variables or functions in `initializer`.</span></span> <span data-ttu-id="3f4ba-171">不過，您可以使用轉換關鍵字例如`CByte`和`CShort`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-171">However, you can use conversion keywords such as `CByte` and `CShort`.</span></span> <span data-ttu-id="3f4ba-172">您也可以使用`AscW`如果您呼叫與常數`String`或`Char`引數，因為，可以在編譯時期評估。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-172">You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.</span></span>  
   
-## 行為  
+## <a name="behavior"></a><span data-ttu-id="3f4ba-173">行為</span><span class="sxs-lookup"><span data-stu-id="3f4ba-173">Behavior</span></span>  
   
--   **範圍。** ：區域常數只能從其程序或區塊內進行存取。  成員常數則可以從其類別、結構或模組內的任意位置進行存取。  
+-   <span data-ttu-id="3f4ba-174">**範圍。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-174">**Scope.**</span></span> <span data-ttu-id="3f4ba-175">區域常數是只能從其程序或區塊內存取。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-175">Local constants are accessible only from within their procedure or block.</span></span> <span data-ttu-id="3f4ba-176">成員常數是可從其類別、 結構或模組內的任何位置存取。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-176">Member constants are accessible from anywhere within their class, structure, or module.</span></span>  
   
--   **限定性條件。** ：類別、結構或模組外的程式碼必須以該類別、結構或模組的名稱，限定成員常數的名稱。  程序或區塊外的程式碼，無法參考該程序或區塊內的任何區域常數。  
+-   <span data-ttu-id="3f4ba-177">**限定性條件。**</span><span class="sxs-lookup"><span data-stu-id="3f4ba-177">**Qualification.**</span></span> <span data-ttu-id="3f4ba-178">程式碼外部類別、 結構或模組必須限定成員常數的名稱，該類別、 結構或模組的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-178">Code outside a class, structure, or module must qualify a member constant's name with the name of that class, structure, or module.</span></span> <span data-ttu-id="3f4ba-179">程式碼的外部程序或區塊不能參考該程序或區塊內的任何區域常數。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-179">Code outside a procedure or block cannot refer to any local constants within that procedure or block.</span></span>  
   
-## 範例  
- 下列範例會利用 `Const` 陳述式，宣告用於取代常值的常數。  
+## <a name="example"></a><span data-ttu-id="3f4ba-180">範例</span><span class="sxs-lookup"><span data-stu-id="3f4ba-180">Example</span></span>  
+ <span data-ttu-id="3f4ba-181">下列範例會使用`Const`陳述式來宣告常數取代常值。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-181">The following example uses the `Const` statement to declare constants for use in place of literal values.</span></span>  
   
  [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
   
-## 範例  
- 如果您定義一個資料型別為 `Object` 的常數，則 Visual Basic 編譯器會指定這個常數的型別為 `initializer`，而不是 `Object`。  在下列範例中，常數 `naturalLogBase` 具有執行階段型別 `Decimal`。  
+## <a name="example"></a><span data-ttu-id="3f4ba-182">範例</span><span class="sxs-lookup"><span data-stu-id="3f4ba-182">Example</span></span>  
+ <span data-ttu-id="3f4ba-183">如果您定義資料類型的常數`Object`，Visual Basic 編譯器會提供其類型`initializer`，而不是`Object`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-183">If you define a constant with data type `Object`, the Visual Basic compiler gives it the type of `initializer`, instead of `Object`.</span></span> <span data-ttu-id="3f4ba-184">在下列範例中，常數`naturalLogBase`具有執行階段類型`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-184">In the following example, the constant `naturalLogBase` has the run-time type `Decimal`.</span></span>  
   
  [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
   
- 前一個範例會在 [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md)所傳回的 <xref:System.Type> 物件上使用 <xref:System.Type.ToString%2A> 方法，因為 <xref:System.Type> 無法使用 `CStr` 轉換為 `String`。  
+ <span data-ttu-id="3f4ba-185">上述範例會使用<xref:System.Type.ToString%2A>方法<xref:System.Type>所傳回物件[GetType 運算子](../../../visual-basic/language-reference/operators/gettype-operator.md)，因為<xref:System.Type>無法轉換成`String`使用`CStr`。</span><span class="sxs-lookup"><span data-stu-id="3f4ba-185">The preceding example uses the <xref:System.Type.ToString%2A> method on the <xref:System.Type> object returned by the [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), because <xref:System.Type> cannot be converted to `String` using `CStr`.</span></span>  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)   
- [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)   
- [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md)   
- [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Constants and Enumerations](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)   
- [Constants and Enumerations](../../../visual-basic/language-reference/constants-and-enumerations.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a><span data-ttu-id="3f4ba-186">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f4ba-186">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ [<span data-ttu-id="3f4ba-187">Enum 陳述式</span><span class="sxs-lookup"><span data-stu-id="3f4ba-187">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="3f4ba-188">#Const 指示詞</span><span class="sxs-lookup"><span data-stu-id="3f4ba-188">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [<span data-ttu-id="3f4ba-189">Dim 陳述式</span><span class="sxs-lookup"><span data-stu-id="3f4ba-189">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="3f4ba-190">ReDim 陳述式</span><span class="sxs-lookup"><span data-stu-id="3f4ba-190">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [<span data-ttu-id="3f4ba-191">隱含和明確轉換</span><span class="sxs-lookup"><span data-stu-id="3f4ba-191">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="3f4ba-192">常數和列舉</span><span class="sxs-lookup"><span data-stu-id="3f4ba-192">Constants and Enumerations</span></span>](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
+ [<span data-ttu-id="3f4ba-193">常數和列舉</span><span class="sxs-lookup"><span data-stu-id="3f4ba-193">Constants and Enumerations</span></span>](../../../visual-basic/language-reference/constants-and-enumerations.md)  
+ [<span data-ttu-id="3f4ba-194">類型轉換函式</span><span class="sxs-lookup"><span data-stu-id="3f4ba-194">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

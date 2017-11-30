@@ -1,71 +1,71 @@
 ---
-title: "ListView 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ListView"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "清單檢視"
-  - "清單"
-  - "ListView 控制項 [Windows Form], 關於 ListView 控制項"
+title: "ListView 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ListView
+helpviewer_keywords:
+- lists
+- ListView control [Windows Forms], about ListView control
+- list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bda009beb429345d05aeba4e04f2ce1f07e627da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ListView 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的項目清單。  您可以使用清單檢視來建立如 Windows 檔案總管右窗格的使用者介面。  控制項有四種檢視模式：LargeIcon、SmallIcon、List 和 Details。  
+# <a name="listview-control-overview-windows-forms"></a><span data-ttu-id="aaf88-102">ListView 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="aaf88-102">ListView Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="aaf88-103">Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的項目清單。</span><span class="sxs-lookup"><span data-stu-id="aaf88-103">The Windows Forms <xref:System.Windows.Forms.ListView> control displays a list of items with icons.</span></span> <span data-ttu-id="aaf88-104">若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。</span><span class="sxs-lookup"><span data-stu-id="aaf88-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span> <span data-ttu-id="aaf88-105">控制項有四個檢視模式： 使用 LargeIcon、 SmallIcon、 清單和詳細資料。</span><span class="sxs-lookup"><span data-stu-id="aaf88-105">The control has four view modes: LargeIcon, SmallIcon, List, and Details.</span></span>  
   
-## ListView 控制項可以做到的功能  
+## <a name="what-you-can-do-with-the-listview-control"></a><span data-ttu-id="aaf88-106">您可以執行使用 ListView 控制項</span><span class="sxs-lookup"><span data-stu-id="aaf88-106">What You Can Do with the ListView Control</span></span>  
   
 > [!NOTE]
->  「並排」是額外的檢視模式，只適用於 Windows XP 和 Windows Server 2003 作業系統。  如需詳細資訊，請參閱 [如何：在 Windows Form ListView 控制項中啟用並排顯示](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)。  
+>  <span data-ttu-id="aaf88-107">額外的檢視模式中，圖格，才可以使用 Windows XP 和 Windows Server 2003 作業系統。</span><span class="sxs-lookup"><span data-stu-id="aaf88-107">An additional view mode, Tile, is only available on Windows XP and the Windows Server 2003 operating system.</span></span> <span data-ttu-id="aaf88-108">如需詳細資訊，請參閱[How to： 在 Windows Form ListView 控制項中啟用並排顯示檢視](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="aaf88-108">For more information, see [How to: Enable Tile View in a Windows Forms ListView Control](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).</span></span>  
   
- LargeIcon 模式在項目文字旁顯示大圖示；如果控制項夠大，項目會以多行顯示。  SmallIcon 模式除了顯示的是小圖示之外，其餘與 LargeIcon 都相同。  List 模式顯示小圖示，但一定是單行。  Details 模式以多行顯示項目。  如需詳細資訊，請參閱 [如何：將資料行加入至 Windows Form ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)。  檢視模式由 <xref:System.Windows.Forms.ListView.View%2A> 屬性決定。  所有的檢視模式可以顯示來自影像清單 \(Image List\) 的影像。  如需詳細資訊，請參閱 [如何：顯示 Windows Form ListView 控制項的圖示](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)。  
+ <span data-ttu-id="aaf88-109">使用 LargeIcon 模式會顯示大圖示旁邊的項目文字。如果控制項為夠大，項目會出現在多個資料行中。</span><span class="sxs-lookup"><span data-stu-id="aaf88-109">The LargeIcon mode displays large icons next to the item text; the items appear in multiple columns if the control is large enough.</span></span> <span data-ttu-id="aaf88-110">不同之處在於它會顯示小圖示的 SmallIcon 模式都是相同的。</span><span class="sxs-lookup"><span data-stu-id="aaf88-110">The SmallIcon mode is the same except that it displays small icons.</span></span> <span data-ttu-id="aaf88-111">清單模式顯示小圖示，但一律是單一資料行中。</span><span class="sxs-lookup"><span data-stu-id="aaf88-111">The List mode displays small icons but is always in a single column.</span></span> <span data-ttu-id="aaf88-112">詳細資料模式下顯示多個資料行中的項目。</span><span class="sxs-lookup"><span data-stu-id="aaf88-112">The Details mode displays items in multiple columns.</span></span> <span data-ttu-id="aaf88-113">如需詳細資訊，請參閱[How to： 將資料行加入 Windows Form ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="aaf88-113">For details, see [How to: Add Columns to the Windows Forms ListView Control](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md).</span></span> <span data-ttu-id="aaf88-114">檢視模式由<xref:System.Windows.Forms.ListView.View%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="aaf88-114">The view mode is determined by the <xref:System.Windows.Forms.ListView.View%2A> property.</span></span> <span data-ttu-id="aaf88-115">所有的檢視模式可以顯示從影像清單的映像。</span><span class="sxs-lookup"><span data-stu-id="aaf88-115">All of the view modes can display images from image lists.</span></span> <span data-ttu-id="aaf88-116">如需詳細資訊，請參閱[如何： 顯示 Windows Form ListView 控制項的圖示](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="aaf88-116">For details, see [How to: Display Icons for the Windows Forms ListView Control](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).</span></span>  
   
- 下表列出一些 <xref:System.Windows.Forms.ListView> 的成員，以及檢視中有效的成員。  
+ <span data-ttu-id="aaf88-117">下表列出一些<xref:System.Windows.Forms.ListView>成員以及中是有效的檢視。</span><span class="sxs-lookup"><span data-stu-id="aaf88-117">The following table lists some of the <xref:System.Windows.Forms.ListView> members and the views they are valid in.</span></span>  
   
-|ListView 成員|檢視|  
-|-----------------|--------|  
-|<xref:System.Windows.Forms.ListView.Alignment%2A> 屬性|<xref:System.Windows.Forms.View> 或 <xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.AutoArrange%2A> 屬性|<xref:System.Windows.Forms.View> 或 <xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> 方法|<xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.Columns%2A> 屬性|<xref:System.Windows.Forms.View> 或 <xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.DrawSubItem> 事件|<xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View>、<xref:System.Windows.Forms.View> 或 <xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.FindNearestItem%2A> 方法|<xref:System.Windows.Forms.View> 或 <xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.GetItemAt%2A> 方法|<xref:System.Windows.Forms.View> 或 <xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> 屬性|所有檢視，除了 <xref:System.Windows.Forms.View>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 屬性|<xref:System.Windows.Forms.View>.|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A> 屬性|<xref:System.Windows.Forms.View>、<xref:System.Windows.Forms.View> 或 <xref:System.Windows.Forms.View>|  
+|<span data-ttu-id="aaf88-118">ListView 成員</span><span class="sxs-lookup"><span data-stu-id="aaf88-118">ListView member</span></span>|<span data-ttu-id="aaf88-119">檢視</span><span class="sxs-lookup"><span data-stu-id="aaf88-119">View</span></span>|  
+|---------------------|----------|  
+|<span data-ttu-id="aaf88-120"><xref:System.Windows.Forms.ListView.Alignment%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="aaf88-120"><xref:System.Windows.Forms.ListView.Alignment%2A> property</span></span>|<span data-ttu-id="aaf88-121"><xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.LargeIcon></span><span class="sxs-lookup"><span data-stu-id="aaf88-121"><xref:System.Windows.Forms.View.SmallIcon> or <xref:System.Windows.Forms.View.LargeIcon></span></span>|  
+|<span data-ttu-id="aaf88-122"><xref:System.Windows.Forms.ListView.AutoArrange%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="aaf88-122"><xref:System.Windows.Forms.ListView.AutoArrange%2A> property</span></span>|<span data-ttu-id="aaf88-123"><xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.LargeIcon></span><span class="sxs-lookup"><span data-stu-id="aaf88-123"><xref:System.Windows.Forms.View.SmallIcon> or <xref:System.Windows.Forms.View.LargeIcon></span></span>|  
+|<span data-ttu-id="aaf88-124"><xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="aaf88-124"><xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> method</span></span>|<xref:System.Windows.Forms.View.Details>|  
+|<span data-ttu-id="aaf88-125"><xref:System.Windows.Forms.ListView.Columns%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="aaf88-125"><xref:System.Windows.Forms.ListView.Columns%2A> property</span></span>|<span data-ttu-id="aaf88-126"><xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile></span><span class="sxs-lookup"><span data-stu-id="aaf88-126"><xref:System.Windows.Forms.View.Details> or <xref:System.Windows.Forms.View.Tile></span></span>|  
+|<span data-ttu-id="aaf88-127"><xref:System.Windows.Forms.ListView.DrawSubItem>事件</span><span class="sxs-lookup"><span data-stu-id="aaf88-127"><xref:System.Windows.Forms.ListView.DrawSubItem> event</span></span>|<xref:System.Windows.Forms.View.Details>|  
+|<span data-ttu-id="aaf88-128"><xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="aaf88-128"><xref:System.Windows.Forms.ListView.FindItemWithText%2A> method</span></span>|<span data-ttu-id="aaf88-129"><xref:System.Windows.Forms.View.Details>、<xref:System.Windows.Forms.View.List> 或 <xref:System.Windows.Forms.View.Tile></span><span class="sxs-lookup"><span data-stu-id="aaf88-129"><xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>, or <xref:System.Windows.Forms.View.Tile></span></span>|  
+|<span data-ttu-id="aaf88-130"><xref:System.Windows.Forms.ListView.FindNearestItem%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="aaf88-130"><xref:System.Windows.Forms.ListView.FindNearestItem%2A> method</span></span>|<span data-ttu-id="aaf88-131"><xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.LargeIcon></span><span class="sxs-lookup"><span data-stu-id="aaf88-131"><xref:System.Windows.Forms.View.SmallIcon> or <xref:System.Windows.Forms.View.LargeIcon></span></span>|  
+|<span data-ttu-id="aaf88-132"><xref:System.Windows.Forms.ListView.GetItemAt%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="aaf88-132"><xref:System.Windows.Forms.ListView.GetItemAt%2A> method</span></span>|<span data-ttu-id="aaf88-133"><xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile></span><span class="sxs-lookup"><span data-stu-id="aaf88-133"><xref:System.Windows.Forms.View.Details> or <xref:System.Windows.Forms.View.Tile></span></span>|  
+|<span data-ttu-id="aaf88-134"><xref:System.Windows.Forms.ListView.Groups%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="aaf88-134"><xref:System.Windows.Forms.ListView.Groups%2A> property</span></span>|<span data-ttu-id="aaf88-135">以外的所有模式<xref:System.Windows.Forms.View.List></span><span class="sxs-lookup"><span data-stu-id="aaf88-135">All views except <xref:System.Windows.Forms.View.List></span></span>|  
+|<span data-ttu-id="aaf88-136"><xref:System.Windows.Forms.ListView.HeaderStyle%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="aaf88-136"><xref:System.Windows.Forms.ListView.HeaderStyle%2A> property</span></span>|<span data-ttu-id="aaf88-137"><xref:System.Windows.Forms.View.Details>.</span><span class="sxs-lookup"><span data-stu-id="aaf88-137"><xref:System.Windows.Forms.View.Details>.</span></span>|  
+|<span data-ttu-id="aaf88-138"><xref:System.Windows.Forms.ListView.InsertionMark%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="aaf88-138"><xref:System.Windows.Forms.ListView.InsertionMark%2A> property</span></span>|<span data-ttu-id="aaf88-139"><xref:System.Windows.Forms.View.LargeIcon>、<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.Tile></span><span class="sxs-lookup"><span data-stu-id="aaf88-139"><xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, or <xref:System.Windows.Forms.View.Tile></span></span>|  
   
- <xref:System.Windows.Forms.ListView> 控制項的主要屬性是 <xref:System.Windows.Forms.ListView.Items%2A>，其中包含控制項顯示的項目。  <xref:System.Windows.Forms.ListView.SelectedItems%2A> 屬性包含控制項中目前選取的項目集合。  使用者可以選取多重項目，例如在 <xref:System.Windows.Forms.ListView.MultiSelect%2A> 屬性設定為 `true` 時，一次拖放數個項目到另一個控制項中。  如果 <xref:System.Windows.Forms.ListView.CheckBoxes%2A> 屬性設定為 `true`，則 <xref:System.Windows.Forms.ListView> 控制項可以在項目旁邊顯示核取方塊。  
+ <span data-ttu-id="aaf88-140">索引鍵內容<xref:System.Windows.Forms.ListView>控制項是<xref:System.Windows.Forms.ListView.Items%2A>，其中包含由控制項所顯示的項目。</span><span class="sxs-lookup"><span data-stu-id="aaf88-140">The key property of the <xref:System.Windows.Forms.ListView> control is <xref:System.Windows.Forms.ListView.Items%2A>, which contains the items displayed by the control.</span></span> <span data-ttu-id="aaf88-141"><xref:System.Windows.Forms.ListView.SelectedItems%2A>屬性包含控制項中目前選取的項目集合。</span><span class="sxs-lookup"><span data-stu-id="aaf88-141">The <xref:System.Windows.Forms.ListView.SelectedItems%2A> property contains a collection of the items currently selected in the control.</span></span> <span data-ttu-id="aaf88-142">使用者可以選取多個項目，例如拖放到另一個控制項，一次的數個項目，如果<xref:System.Windows.Forms.ListView.MultiSelect%2A>屬性設定為`true`。</span><span class="sxs-lookup"><span data-stu-id="aaf88-142">The user can select multiple items, for example to drag and drop several items at a time to another control, if the <xref:System.Windows.Forms.ListView.MultiSelect%2A> property is set to `true`.</span></span> <span data-ttu-id="aaf88-143"><xref:System.Windows.Forms.ListView>控制項可以顯示的項目旁邊的核取方塊，如果<xref:System.Windows.Forms.ListView.CheckBoxes%2A>屬性設定為`true`。</span><span class="sxs-lookup"><span data-stu-id="aaf88-143">The <xref:System.Windows.Forms.ListView> control can display check boxes next to the items, if the <xref:System.Windows.Forms.ListView.CheckBoxes%2A> property is set to `true`.</span></span>  
   
- <xref:System.Windows.Forms.ListView.Activation%2A> 屬性決定使用者必須採取哪種類型的動作，才能啟動清單中的項目：選項有 <xref:System.Windows.Forms.ItemActivation>、<xref:System.Windows.Forms.ItemActivation> 和 <xref:System.Windows.Forms.ItemActivation>。  <xref:System.Windows.Forms.ItemActivation> 啟動需要按一下來啟動項目。  <xref:System.Windows.Forms.ItemActivation> 啟動需要使用者按兩下來啟動項目；按一下則會變更項目文字的顏色。  <xref:System.Windows.Forms.ItemActivation> 啟動需要使用者按兩下來啟動項目，但是項目的外觀不會改變。  
+ <span data-ttu-id="aaf88-144"><xref:System.Windows.Forms.ListView.Activation%2A>屬性會決定使用者必須採取的動作類型啟用清單中的項目： 選項<xref:System.Windows.Forms.ItemActivation.Standard>， <xref:System.Windows.Forms.ItemActivation.OneClick>，和<xref:System.Windows.Forms.ItemActivation.TwoClick>。</span><span class="sxs-lookup"><span data-stu-id="aaf88-144">The <xref:System.Windows.Forms.ListView.Activation%2A> property determines what type of action the user must take to activate an item in the list: the options are <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, and <xref:System.Windows.Forms.ItemActivation.TwoClick>.</span></span> <span data-ttu-id="aaf88-145"><xref:System.Windows.Forms.ItemActivation.OneClick>啟用需要只要按一下来啟動的項目。</span><span class="sxs-lookup"><span data-stu-id="aaf88-145"><xref:System.Windows.Forms.ItemActivation.OneClick> activation requires a single click to activate the item.</span></span> <span data-ttu-id="aaf88-146"><xref:System.Windows.Forms.ItemActivation.TwoClick>啟用要求使用者按兩下以啟動項目。只要按一下變更項目文字的色彩。</span><span class="sxs-lookup"><span data-stu-id="aaf88-146"><xref:System.Windows.Forms.ItemActivation.TwoClick> activation requires the user to double-click to activate the item; a single click changes the color of the item text.</span></span> <span data-ttu-id="aaf88-147"><xref:System.Windows.Forms.ItemActivation.Standard>啟用要求使用者按兩下以啟動項，但項目不會變更外觀。</span><span class="sxs-lookup"><span data-stu-id="aaf88-147"><xref:System.Windows.Forms.ItemActivation.Standard> activation requires the user to double-click to activate an item, but the item does not change appearance.</span></span>  
   
- <xref:System.Windows.Forms.ListView> 控制項也支援 Windows XP 平台所提供的視覺化樣式和其他功能，包括群組、並排顯示和插入標記。  如需詳細資訊，請參閱 [Windows XP Features and Windows Forms Controls](http://msdn.microsoft.com/zh-tw/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
+ <span data-ttu-id="aaf88-148"><xref:System.Windows.Forms.ListView>控制項也支援視覺化樣式和其他可用的功能在 Windows XP 平台，包括群組、 並排顯示檢視和 插入標記。</span><span class="sxs-lookup"><span data-stu-id="aaf88-148">The <xref:System.Windows.Forms.ListView> control also supports the visual styles and other features available on the Windows XP platform, including grouping, tile view, and insertion marks.</span></span> <span data-ttu-id="aaf88-149">如需詳細資訊，請參閱[Windows XP 功能和 Windows Form 控制項](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。</span><span class="sxs-lookup"><span data-stu-id="aaf88-149">For more information, see [Windows XP Features and Windows Forms Controls](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.ListView>   
- [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
- [如何：使用 Windows Form ListView 控制項加入和移除項目](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)   
- [如何：將資料行加入至 Windows Form ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)   
- [如何：顯示 Windows Form ListView 控制項的圖示](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)   
- [如何：使用 Windows Form ListView 控制項以資料行顯示子項目](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)   
- [如何：選取 Windows Form ListView 控制項中的項目](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)   
- [如何：在 Windows Form ListView 控制項中群組項目](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)   
- [如何：在 Windows Form ListView 控制項中顯示插入標記](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)   
- [如何：將搜尋能力加入至 ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)   
- [如何：將自訂資訊加入 TreeView 或 ListView 控制項 \(Windows Form\)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)   
- [逐步解說：利用 Windows Form 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="aaf88-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aaf88-150">See Also</span></span>  
+ <xref:System.Windows.Forms.ListView>  
+ [<span data-ttu-id="aaf88-151">ListView 控制項</span><span class="sxs-lookup"><span data-stu-id="aaf88-151">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [<span data-ttu-id="aaf88-152">操作說明：使用 Windows Forms ListView 控制項加入和移除項目</span><span class="sxs-lookup"><span data-stu-id="aaf88-152">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="aaf88-153">操作說明：將資料行加入至 Windows Forms ListView 控制項</span><span class="sxs-lookup"><span data-stu-id="aaf88-153">How to: Add Columns to the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="aaf88-154">操作說明：顯示 Windows Forms ListView 控制項的圖示</span><span class="sxs-lookup"><span data-stu-id="aaf88-154">How to: Display Icons for the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="aaf88-155">操作說明：使用 Windows Forms ListView 控制項以資料行顯示子項目</span><span class="sxs-lookup"><span data-stu-id="aaf88-155">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="aaf88-156">操作說明：選取 Windows Forms ListView 控制項中的項目</span><span class="sxs-lookup"><span data-stu-id="aaf88-156">How to: Select an Item in the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="aaf88-157">操作說明：在 Windows Forms ListView 控制項中群組項目</span><span class="sxs-lookup"><span data-stu-id="aaf88-157">How to: Group Items in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
+ [<span data-ttu-id="aaf88-158">操作說明：在 Windows Forms ListView 控制項中顯示插入標記</span><span class="sxs-lookup"><span data-stu-id="aaf88-158">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
+ [<span data-ttu-id="aaf88-159">操作說明：將搜尋能力加入至 ListView 控制項</span><span class="sxs-lookup"><span data-stu-id="aaf88-159">How to: Add Search Capabilities to a ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+ [<span data-ttu-id="aaf88-160">操作說明：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="aaf88-160">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ [<span data-ttu-id="aaf88-161">逐步解說：利用 Windows Forms 建立多窗格使用者介面</span><span class="sxs-lookup"><span data-stu-id="aaf88-161">How to: Create a Multipane User Interface with Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)

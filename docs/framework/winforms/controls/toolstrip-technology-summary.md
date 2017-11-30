@@ -1,132 +1,133 @@
 ---
-title: "ToolStrip 技術摘要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "功能表 [Windows Form], 技術摘要"
-  - "狀態列, 技術摘要"
-  - "工具列 [Windows Form], 技術摘要"
-  - "ToolStrip 控制項 [Windows Forms], 技術摘要"
+title: "ToolStrip 技術摘要"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], technology summary
+- status bars [Windows Forms], technology summary
+- toolbars [Windows Forms], technology summary
+- menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-caps.latest.revision: 27
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 75b340bfb2d9106827d39a3253f65f3c2419bd94
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ToolStrip 技術摘要
-本主題提供有關 `ToolStrip` 控制項及支援這些控制項之類別的摘要資訊。  
+# <a name="toolstrip-technology-summary"></a><span data-ttu-id="6d004-102">ToolStrip 技術摘要</span><span class="sxs-lookup"><span data-stu-id="6d004-102">ToolStrip Technology Summary</span></span>
+<span data-ttu-id="6d004-103">本主題提供有關 `ToolStrip` 控制項及支援這些控制項之類別的摘要資訊。</span><span class="sxs-lookup"><span data-stu-id="6d004-103">This topic summarizes information about the `ToolStrip` control and the classes that support its use.</span></span>  
   
- `ToolStrip` 控制項以及與其相關聯的類別提供了完整的解決方案，可用於建立工具列、 狀態列和功能表。  
+ <span data-ttu-id="6d004-104">`ToolStrip` 控制項以及與其相關聯的類別提供了完整的解決方案，可用於建立工具列、 狀態列和功能表。</span><span class="sxs-lookup"><span data-stu-id="6d004-104">The `ToolStrip` control and its associated classes provide a complete solution for creating toolbars, status bars, and menus.</span></span>  
   
-## 命名空間  
- <xref:System.Windows.Forms?displayProperty=fullName>  
+## <a name="namespaces"></a><span data-ttu-id="6d004-105">命名空間</span><span class="sxs-lookup"><span data-stu-id="6d004-105">Namespaces</span></span>  
+ <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
-## 背景  
- 有了 `ToolStrip` 控制項以及與其相關聯的類別，您可以建立具有一致且專業的外觀和行為的進階工具列功能。   `ToolStrip` 控制項和類別透過先前的控制項提供下列改良功能：  
+## <a name="background"></a><span data-ttu-id="6d004-106">背景</span><span class="sxs-lookup"><span data-stu-id="6d004-106">Background</span></span>  
+ <span data-ttu-id="6d004-107">有了 `ToolStrip` 控制項以及與其相關聯的類別，您可以建立具有一致且專業的外觀和行為的進階工具列功能。</span><span class="sxs-lookup"><span data-stu-id="6d004-107">With the `ToolStrip` control and its associated classes, you can create advanced toolbar functionality that has consistent and professional appearance and behavior.</span></span> <span data-ttu-id="6d004-108">`ToolStrip` 控制項和類別透過先前的控制項提供下列改良功能：</span><span class="sxs-lookup"><span data-stu-id="6d004-108">The `ToolStrip` control and classes offer the following improvements over previous controls:</span></span>  
   
--   更一致的事件模型。  
+-   <span data-ttu-id="6d004-109">更一致的事件模型。</span><span class="sxs-lookup"><span data-stu-id="6d004-109">A more consistent event model.</span></span>  
   
--   更一致的設計階段行為，其中包含工作清單和項目集合編輯器。  
+-   <span data-ttu-id="6d004-110">更一致的設計階段行為，其中包含工作清單和項目集合編輯器。</span><span class="sxs-lookup"><span data-stu-id="6d004-110">A more consistent design-time behavior that contains task lists and item collection editors.</span></span>  
   
--   使用 `ToolStripManager` 和 `ToolStripRenderer` 來自訂轉譯。  
+-   <span data-ttu-id="6d004-111">使用 `ToolStripManager` 和 `ToolStripRenderer` 來自訂轉譯。</span><span class="sxs-lookup"><span data-stu-id="6d004-111">Custom rendering with `ToolStripManager` and `ToolStripRenderer`.</span></span>  
   
--   以 `ToolStripContainer` 和 `ToolStripPanel` 來進行內建浮動定位 \(共用停駐時工具區域內的水平或垂直空間\)。  
+-   <span data-ttu-id="6d004-112">以 `ToolStripContainer` 和 `ToolStripPanel` 來進行內建浮動定位 (共用停駐時工具區域內的水平或垂直空間)。</span><span class="sxs-lookup"><span data-stu-id="6d004-112">Built-in rafting (sharing of horizontal or vertical space within the tool area when docked) with the `ToolStripContainer` and `ToolStripPanel`.</span></span>  
   
--   設計階段和執行階段具有 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性的項目重新排列。  
+-   <span data-ttu-id="6d004-113">設計階段和執行階段具有 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性的項目重新排列。</span><span class="sxs-lookup"><span data-stu-id="6d004-113">Design-time and run-time reordering of items with the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property.</span></span>  
   
--   項目重新配置到具有 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 屬性的溢位功能表。  
+-   <span data-ttu-id="6d004-114">項目重新配置到具有 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 屬性的溢位功能表。</span><span class="sxs-lookup"><span data-stu-id="6d004-114">Relocation of items to an overflow menu with the <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> property.</span></span>  
   
--   具有 `ToolStripContainer` 、 `ToolStripPanel` 與 `ToolStripContentPanel` 的完全可設定之控制位置。  
+-   <span data-ttu-id="6d004-115">具有 `ToolStripContainer` 、 `ToolStripPanel` 與 `ToolStripContentPanel` 的完全可設定之控制位置。</span><span class="sxs-lookup"><span data-stu-id="6d004-115">Completely configurable control location with the `ToolStripContainer`, `ToolStripPanel`, and `ToolStripContentPanel`.</span></span>  
   
--   傳統的 `ToolStrip` 之裝載，或使用 `ToolStripControlHost` 的自訂控制項。  
+-   <span data-ttu-id="6d004-116">傳統的 `ToolStrip` 之裝載，或使用 `ToolStripControlHost` 的自訂控制項。</span><span class="sxs-lookup"><span data-stu-id="6d004-116">Hosting of `ToolStrip`, traditional, or custom controls using `ToolStripControlHost`.</span></span>  
   
--   合併使用 `ToolStripPanel` 的 `ToolStrip` 控制項。  
+-   <span data-ttu-id="6d004-117">合併使用 `ToolStripPanel` 的 `ToolStrip` 控制項。</span><span class="sxs-lookup"><span data-stu-id="6d004-117">Merging of `ToolStrip` controls using `ToolStripPanel`.</span></span>  
   
- `ToolStrip` 是 `MenuStrip`、`ContextMenuStrip` 和 `StatusStrip` 的可擴充基底類別。  這些控制項是 <xref:System.Windows.Forms.ToolStripItem> 容器，它們繼承了一般行為和事件處理、擴充以便讓每個實作處理適合它的行為。  衍生自 <xref:System.Windows.Forms.ToolStripItem> 的控制項如下表所示。  基底 `ToolStrip` 類別處理繪製、 使用者輸入，以及這些控制項的拖放事件。  
+ <span data-ttu-id="6d004-118">`ToolStrip` 是 `MenuStrip`、`ContextMenuStrip` 和 `StatusStrip` 的可擴充基底類別。</span><span class="sxs-lookup"><span data-stu-id="6d004-118">`ToolStrip` is the extensible base class for `MenuStrip`, `ContextMenuStrip`, and `StatusStrip`.</span></span> <span data-ttu-id="6d004-119">這些控制項是 <xref:System.Windows.Forms.ToolStripItem> 容器，它們繼承了一般行為和事件處理、擴充以便讓每個實作處理適合它的行為。</span><span class="sxs-lookup"><span data-stu-id="6d004-119">These controls are <xref:System.Windows.Forms.ToolStripItem> containers that inherit common behavior and event handling, extended so that each implementation deals with the behavior that is appropriate for it.</span></span> <span data-ttu-id="6d004-120">衍生自 <xref:System.Windows.Forms.ToolStripItem> 的控制項如下表所示。</span><span class="sxs-lookup"><span data-stu-id="6d004-120">Controls that derive from <xref:System.Windows.Forms.ToolStripItem> are listed in the following table.</span></span> <span data-ttu-id="6d004-121">基底 `ToolStrip` 類別處理繪製、 使用者輸入，以及這些控制項的拖放事件。</span><span class="sxs-lookup"><span data-stu-id="6d004-121">The base `ToolStrip` class handles painting, user input, and drag-and-drop events for these controls.</span></span>  
   
- `ToolStrip` 、 `MenuStrip` 、 `ContextMenuStrip` 和 `StatusStrip` 控制項取代先前的工具列、 功能表、捷徑功能表和狀態列控制項，雖然這些控制項是被保留來確保回溯相容性。  
+ <span data-ttu-id="6d004-122">`ToolStrip` 、 `MenuStrip` 、 `ContextMenuStrip` 和 `StatusStrip` 控制項取代先前的工具列、 功能表、捷徑功能表和狀態列控制項，雖然這些控制項是被保留來確保回溯相容性。</span><span class="sxs-lookup"><span data-stu-id="6d004-122">The `ToolStrip`, `MenuStrip`, `ContextMenuStrip`, and `StatusStrip` controls replace the previous toolbar, menu, shortcut menu, and status bar controls, although those controls are retained for backward compatibility.</span></span>  
   
-## ToolStrip 類別簡介  
- 下表顯示依技術領域分組的 ToolStrip 類別。  
+## <a name="toolstrip-classes-at-a-glance"></a><span data-ttu-id="6d004-123">ToolStrip 類別簡介</span><span class="sxs-lookup"><span data-stu-id="6d004-123">ToolStrip Classes at a Glance</span></span>  
+ <span data-ttu-id="6d004-124">下表顯示依技術領域分組的 ToolStrip 類別。</span><span class="sxs-lookup"><span data-stu-id="6d004-124">The following table shows the ToolStrip classes grouped by technology area.</span></span>  
   
-|技術範圍|類別|  
-|----------|--------|  
-|工具列、 狀態和功能表容器|<xref:System.Windows.Forms.ToolStrip><br /><br /> <xref:System.Windows.Forms.MenuStrip><br /><br /> <xref:System.Windows.Forms.ContextMenuStrip><br /><br /> <xref:System.Windows.Forms.StatusStrip><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownMenu>|  
-|ToolStrip 項目|<xref:System.Windows.Forms.ToolStripLabel><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownItem><br /><br /> <xref:System.Windows.Forms.ToolStripMenuItem><br /><br /> <xref:System.Windows.Forms.ToolStripButton><br /><br /> <xref:System.Windows.Forms.ToolStripStatusLabel><br /><br /> <xref:System.Windows.Forms.ToolStripSeparator><br /><br /> <xref:System.Windows.Forms.ToolStripControlHost><br /><br /> <xref:System.Windows.Forms.ToolStripComboBox><br /><br /> <xref:System.Windows.Forms.ToolStripTextBox><br /><br /> <xref:System.Windows.Forms.ToolStripProgressBar><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownButton><br /><br /> <xref:System.Windows.Forms.ToolStripSplitButton>|  
-|位置|<xref:System.Windows.Forms.ToolStripContainer><br /><br /> <xref:System.Windows.Forms.ToolStripContentPanel><br /><br /> <xref:System.Windows.Forms.ToolStripPanel>|  
-|展示和轉譯|<xref:System.Windows.Forms.ToolStripManager><br /><br /> <xref:System.Windows.Forms.ToolStripRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripProfessionalRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripRenderMode><br /><br /> <xref:System.Windows.Forms.ToolStripManagerRenderMode>|  
+|<span data-ttu-id="6d004-125">技術範圍</span><span class="sxs-lookup"><span data-stu-id="6d004-125">Technology area</span></span>|<span data-ttu-id="6d004-126">類別</span><span class="sxs-lookup"><span data-stu-id="6d004-126">Class</span></span>|  
+|---------------------|-----------|  
+|<span data-ttu-id="6d004-127">工具列、 狀態和功能表容器</span><span class="sxs-lookup"><span data-stu-id="6d004-127">Toolbar, Status, and Menu containers</span></span>|<xref:System.Windows.Forms.ToolStrip><br /><br /> <xref:System.Windows.Forms.MenuStrip><br /><br /> <xref:System.Windows.Forms.ContextMenuStrip><br /><br /> <xref:System.Windows.Forms.StatusStrip><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownMenu>|  
+|<span data-ttu-id="6d004-128">ToolStrip 項目</span><span class="sxs-lookup"><span data-stu-id="6d004-128">ToolStrip items</span></span>|<xref:System.Windows.Forms.ToolStripLabel><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownItem><br /><br /> <xref:System.Windows.Forms.ToolStripMenuItem><br /><br /> <xref:System.Windows.Forms.ToolStripButton><br /><br /> <xref:System.Windows.Forms.ToolStripStatusLabel><br /><br /> <xref:System.Windows.Forms.ToolStripSeparator><br /><br /> <xref:System.Windows.Forms.ToolStripControlHost><br /><br /> <xref:System.Windows.Forms.ToolStripComboBox><br /><br /> <xref:System.Windows.Forms.ToolStripTextBox><br /><br /> <xref:System.Windows.Forms.ToolStripProgressBar><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownButton><br /><br /> <xref:System.Windows.Forms.ToolStripSplitButton>|  
+|<span data-ttu-id="6d004-129">位置</span><span class="sxs-lookup"><span data-stu-id="6d004-129">Location</span></span>|<xref:System.Windows.Forms.ToolStripContainer><br /><br /> <xref:System.Windows.Forms.ToolStripContentPanel><br /><br /> <xref:System.Windows.Forms.ToolStripPanel>|  
+|<span data-ttu-id="6d004-130">展示和轉譯</span><span class="sxs-lookup"><span data-stu-id="6d004-130">Presentation and rendering</span></span>|<xref:System.Windows.Forms.ToolStripManager><br /><br /> <xref:System.Windows.Forms.ToolStripRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripProfessionalRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripRenderMode><br /><br /> <xref:System.Windows.Forms.ToolStripManagerRenderMode>|  
   
-## ToolStrip 設計階段功能  
- <xref:System.Windows.Forms.ToolStrip> 家族控制項提供一組豐富的工具和範本，它能夠就地編輯和定義使用者介面的基礎，讓您可以快速建立實用的應用程式。  
+## <a name="toolstrip-design-time-features"></a><span data-ttu-id="6d004-131">ToolStrip 設計階段功能</span><span class="sxs-lookup"><span data-stu-id="6d004-131">ToolStrip Design-Time Features</span></span>  
+ <span data-ttu-id="6d004-132"><xref:System.Windows.Forms.ToolStrip> 家族控制項提供一組豐富的工具和範本，它能夠就地編輯和定義使用者介面的基礎，讓您可以快速建立實用的應用程式。</span><span class="sxs-lookup"><span data-stu-id="6d004-132">The <xref:System.Windows.Forms.ToolStrip> family of controls provides a rich set of tools and templates for in-place editing and defining the foundation of the user interface so that you can quickly create a working application.</span></span>  
   
-### 工作對話方塊  
- 在 Visual Studio 中，按一下設計工具中控制項上的智慧標籤會顯示工作清單中，以便存取許多常用的命令。  
+### <a name="task-dialog-boxes"></a><span data-ttu-id="6d004-133">工作對話方塊</span><span class="sxs-lookup"><span data-stu-id="6d004-133">Task Dialog Boxes</span></span>  
+ <span data-ttu-id="6d004-134">在 Visual Studio 中，按一下設計工具中控制項上的智慧標籤會顯示工作清單中，以便存取許多常用的命令。</span><span class="sxs-lookup"><span data-stu-id="6d004-134">In Visual Studio, clicking the smart tag on a control in the designer displays a task list for convenient access to many frequently used commands.</span></span>  
   
--   [MenuStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   <span data-ttu-id="6d004-135">[MenuStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-135">[MenuStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span></span>  
   
--   [ToolStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   <span data-ttu-id="6d004-136">[ToolStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-136">[ToolStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))</span></span>  
   
--   [ContextMenuStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   <span data-ttu-id="6d004-137">[ContextMenuStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-137">[ContextMenuStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))</span></span>  
   
--   [StatusStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   <span data-ttu-id="6d004-138">[StatusStrip 工作對話方塊](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-138">[StatusStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))</span></span>  
   
--   [ToolStripContainer 工作對話方塊](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   <span data-ttu-id="6d004-139">[ToolStripContainer 工作對話方塊](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-139">[ToolStripContainer Tasks Dialog Box](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))</span></span>  
   
-### 項目集合編輯器  
- 在 Visual Studio 中，當您按一下工作清單上的 \[編輯項目\] ，或以滑鼠右鍵按一下控制項，然後選取快顯功能表中的 \[編輯項目\]，控制項的集合編輯器會隨即出現。  集合編輯器可讓您新增、 移除和重新排列控制項包含的項目。  您也可以檢視和變更控制項與控制項項目的屬性。  
+### <a name="items-collection-editors"></a><span data-ttu-id="6d004-140">項目集合編輯器</span><span class="sxs-lookup"><span data-stu-id="6d004-140">Items Collection Editors</span></span>  
+ <span data-ttu-id="6d004-141">在 Visual Studio 中，當您按一下**編輯項目**工作清單，或以滑鼠右鍵按一下控制項，然後選取**編輯項目**快顯功能表中，控制項的集合編輯器隨即出現。</span><span class="sxs-lookup"><span data-stu-id="6d004-141">In Visual Studio, when you click **Edit Items** on the task list or right-click the control and select **Edit Items** in the shortcut menu, the collection editor for the control is displayed.</span></span> <span data-ttu-id="6d004-142">集合編輯器可讓您新增、 移除和重新排列控制項包含的項目。</span><span class="sxs-lookup"><span data-stu-id="6d004-142">Collection editors let you add, remove, and reorder items that the control contains.</span></span> <span data-ttu-id="6d004-143">您也可以檢視和變更控制項與控制項項目的屬性。</span><span class="sxs-lookup"><span data-stu-id="6d004-143">You can also view and change the properties for the control and the control's items.</span></span>  
   
--   [MenuStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   <span data-ttu-id="6d004-144">[MenuStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-144">[MenuStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span></span>  
   
--   [StatusStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   <span data-ttu-id="6d004-145">[StatusStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-145">[StatusStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))</span></span>  
   
--   [ContextMenuStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   <span data-ttu-id="6d004-146">[ContextMenuStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-146">[ContextMenuStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))</span></span>  
   
--   [ToolStrip Items 項目集合編輯器](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   <span data-ttu-id="6d004-147">[ToolStrip 項目集合編輯器](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="6d004-147">[ToolStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))</span></span>  
   
-## 裝載控制項  
- <xref:System.Windows.Forms.ToolStripControlHost> 類別會提供內建的包裝函式給 <xref:System.Windows.Forms.ToolStripComboBox> 、 <xref:System.Windows.Forms.ToolStripTextBox> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項。  您也可以裝載任何其他現有或者 <xref:System.Windows.Forms.ToolStripControlHost> 中的 COM 控制項。  
+## <a name="hosting-controls"></a><span data-ttu-id="6d004-148">裝載控制項</span><span class="sxs-lookup"><span data-stu-id="6d004-148">Hosting Controls</span></span>  
+ <span data-ttu-id="6d004-149"><xref:System.Windows.Forms.ToolStripControlHost> 類別會提供內建的包裝函式給 <xref:System.Windows.Forms.ToolStripComboBox> 、 <xref:System.Windows.Forms.ToolStripTextBox> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項。</span><span class="sxs-lookup"><span data-stu-id="6d004-149">The <xref:System.Windows.Forms.ToolStripControlHost> class provides built-in wrappers for <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, and <xref:System.Windows.Forms.ToolStripProgressBar> controls.</span></span> <span data-ttu-id="6d004-150">您也可以裝載任何其他現有或者 <xref:System.Windows.Forms.ToolStripControlHost> 中的 COM 控制項。</span><span class="sxs-lookup"><span data-stu-id="6d004-150">You can also host any other existing or COM control in a <xref:System.Windows.Forms.ToolStripControlHost>.</span></span>  
   
- 如需控制項裝載的範例，請參閱[如何：使用 ToolStripControlHost 為 Windows Form 控制項換行](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)。  
+ <span data-ttu-id="6d004-151">如需控制項裝載的範例，請參閱[How to： 使用 ToolStripControlHost 為 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)。</span><span class="sxs-lookup"><span data-stu-id="6d004-151">For an example of control hosting, see [How to: Wrap a Windows Forms Control with ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).</span></span>  
   
-## 正在轉譯  
- <xref:System.Windows.Forms.ToolStrip> 類別會實作明顯不同於其他的 Windows Form 控制項的轉譯配置。  透過這種配置，您可以輕鬆地套用樣式和主題。  
+## <a name="rendering"></a><span data-ttu-id="6d004-152">正在轉譯</span><span class="sxs-lookup"><span data-stu-id="6d004-152">Rendering</span></span>  
+ <span data-ttu-id="6d004-153"><xref:System.Windows.Forms.ToolStrip> 類別會實作明顯不同於其他的 Windows Form 控制項的轉譯配置。</span><span class="sxs-lookup"><span data-stu-id="6d004-153"><xref:System.Windows.Forms.ToolStrip> classes implement a rendering scheme that is significantly different from other Windows Forms controls.</span></span> <span data-ttu-id="6d004-154">透過這種配置，您可以輕鬆地套用樣式和主題。</span><span class="sxs-lookup"><span data-stu-id="6d004-154">With this scheme, you can easily apply styles and themes.</span></span>  
   
- 要套用樣式到 <xref:System.Windows.Forms.ToolStrip> 和它所包含的所有 <xref:System.Windows.Forms.ToolStripItem> 物件，您不必針對每個項目處理 <xref:System.Windows.Forms.ToolStripItem.Paint> 事件。  相反地，您可以把 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 屬性設定為 <xref:System.Windows.Forms.ToolStripRenderMode> 以外任何一個 <xref:System.Windows.Forms.ToolStripRenderMode> 的值。  或者，您可以把 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 直接設定成繼承自 <xref:System.Windows.Forms.ToolStripRenderer> 類別的任何類別。  設定這個屬性會自動設定 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>。  
+ <span data-ttu-id="6d004-155">要套用樣式到 <xref:System.Windows.Forms.ToolStrip> 和它所包含的所有 <xref:System.Windows.Forms.ToolStripItem> 物件，您不必針對每個項目處理 <xref:System.Windows.Forms.ToolStripItem.Paint> 事件。</span><span class="sxs-lookup"><span data-stu-id="6d004-155">To apply a style to a <xref:System.Windows.Forms.ToolStrip> and all the <xref:System.Windows.Forms.ToolStripItem> objects it contains, you do not have to handle the <xref:System.Windows.Forms.ToolStripItem.Paint> event for each item.</span></span> <span data-ttu-id="6d004-156">相反地，您可以把 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 屬性設定為 <xref:System.Windows.Forms.ToolStripRenderMode.Custom> 以外任何一個 <xref:System.Windows.Forms.ToolStripRenderMode> 的值。</span><span class="sxs-lookup"><span data-stu-id="6d004-156">Instead, you can set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to one of the <xref:System.Windows.Forms.ToolStripRenderMode> values other than <xref:System.Windows.Forms.ToolStripRenderMode.Custom>.</span></span> <span data-ttu-id="6d004-157">或者，您可以把 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 直接設定成繼承自 <xref:System.Windows.Forms.ToolStripRenderer> 類別的任何類別。</span><span class="sxs-lookup"><span data-stu-id="6d004-157">Alternatively, you can set the <xref:System.Windows.Forms.ToolStrip.Renderer%2A> directly to any class that inherits from the <xref:System.Windows.Forms.ToolStripRenderer> class.</span></span> <span data-ttu-id="6d004-158">設定這個屬性會自動設定 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>。</span><span class="sxs-lookup"><span data-stu-id="6d004-158">Setting this property automatically sets the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>.</span></span>  
   
- 您可以將相同的樣式套用至多個相同的應用程式中的 <xref:System.Windows.Forms.ToolStrip> 物件，這可以藉由把 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 設定為 <xref:System.Windows.Forms.ToolStripRenderMode>以及分別把 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> 或 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 屬性設定為您想要的 <xref:System.Windows.Forms.ToolStripManagerRenderMode> 或 <xref:System.Windows.Forms.ToolStripRenderer> 值。  
+ <span data-ttu-id="6d004-159">您可以將相同的樣式套用至多個相同的應用程式中的 <xref:System.Windows.Forms.ToolStrip> 物件，這可以藉由把 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 設定為 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>以及分別把 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> 或 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 屬性設定為您想要的 <xref:System.Windows.Forms.ToolStripManagerRenderMode> 或 <xref:System.Windows.Forms.ToolStripRenderer> 值。</span><span class="sxs-lookup"><span data-stu-id="6d004-159">You can apply the same style to multiple <xref:System.Windows.Forms.ToolStrip> objects in the same application by setting the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> to <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> and setting the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> or <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> property to <xref:System.Windows.Forms.ToolStripManagerRenderMode> that you want or <xref:System.Windows.Forms.ToolStripRenderer> value, respectively.</span></span>  
   
- 如需呈現的範例，請參閱[如何：建立和設定 Windows Form 中的 ToolStrip 控制項自訂產生器](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)。  
+ <span data-ttu-id="6d004-160">如需轉譯的範例，請參閱[How to： 建立和設定 Windows Form 中 ToolStrip 控制項自訂產生器](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)。</span><span class="sxs-lookup"><span data-stu-id="6d004-160">For examples of rendering, see [How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).</span></span>  
   
-## 樣式和主題  
- <xref:System.Windows.Forms.ToolStrip> 以及關聯的類別可讓您輕鬆支援視覺化樣式和自訂外觀，而且不需要覆寫 <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> 方法的每個項目。  使用 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 和 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 屬性。  
+## <a name="styles-and-themes"></a><span data-ttu-id="6d004-161">樣式和主題</span><span class="sxs-lookup"><span data-stu-id="6d004-161">Styles and Themes</span></span>  
+ <span data-ttu-id="6d004-162"><xref:System.Windows.Forms.ToolStrip> 以及關聯的類別可讓您輕鬆支援視覺化樣式和自訂外觀，而且不需要覆寫 <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> 方法的每個項目。</span><span class="sxs-lookup"><span data-stu-id="6d004-162"><xref:System.Windows.Forms.ToolStrip> and associated classes provide an easy way to support visual styles and custom appearance that do not require overriding the <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> methods for each item.</span></span> <span data-ttu-id="6d004-163">使用 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 和 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="6d004-163">Use the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> and the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> and <xref:System.Windows.Forms.ToolStrip.Renderer%2A> properties.</span></span>  
   
-## 浮動定位和停駐  
- 您可以浮動定位、停駐或絕對定位 <xref:System.Windows.Forms.ToolStrip> 控制項。  <xref:System.Windows.Forms.ToolStrip> 項目由容器中的 <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> 來配置版面。  
+## <a name="rafting-and-docking"></a><span data-ttu-id="6d004-164">浮動定位和停駐</span><span class="sxs-lookup"><span data-stu-id="6d004-164">Rafting and Docking</span></span>  
+ <span data-ttu-id="6d004-165">您可以浮動定位、停駐或絕對定位 <xref:System.Windows.Forms.ToolStrip> 控制項。</span><span class="sxs-lookup"><span data-stu-id="6d004-165">You can raft, dock, or absolutely position <xref:System.Windows.Forms.ToolStrip> controls.</span></span> <span data-ttu-id="6d004-166"><xref:System.Windows.Forms.ToolStrip> 項目由容器中的 <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> 來配置版面。</span><span class="sxs-lookup"><span data-stu-id="6d004-166"><xref:System.Windows.Forms.ToolStrip> items are laid out by the <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> of the container.</span></span>  
   
- *浮動定位*是工具列共用水平或垂直空間的能力。  Windows Form 的 <xref:System.Windows.Forms.ToolStripContainer> 可以反過來有個面板，它可以在表單的左邊、 右邊、 上方和下方，並且用來定位和浮動定位 <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控制項。  如果您將多個 <xref:System.Windows.Forms.ToolStrip> 控制項放在左邊或右邊 <xref:System.Windows.Forms.ToolStripContainer>，它們會垂直堆疊。  如果您將它們放在頂端或底端 <xref:System.Windows.Forms.ToolStripContainer>，它們會水平堆疊。  您可以使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel>來定位在表單上的傳統控制項。  
+ <span data-ttu-id="6d004-167">*浮動定位*是工具列共用水平或垂直空間的能力。</span><span class="sxs-lookup"><span data-stu-id="6d004-167">*Rafting* is the ability of toolbars to share horizontal or vertical space.</span></span> <span data-ttu-id="6d004-168">Windows Form 的 <xref:System.Windows.Forms.ToolStripContainer> 可以反過來有個面板，它可以在表單的左邊、 右邊、 上方和下方，並且用來定位和浮動定位 <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控制項。</span><span class="sxs-lookup"><span data-stu-id="6d004-168">A Windows form can have a <xref:System.Windows.Forms.ToolStripContainer> that in turn has panels on the form's left, right, top, and bottom sides for positioning and rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> controls.</span></span> <span data-ttu-id="6d004-169">如果您將多個 <xref:System.Windows.Forms.ToolStrip> 控制項放在左邊或右邊 <xref:System.Windows.Forms.ToolStripContainer>，它們會垂直堆疊。</span><span class="sxs-lookup"><span data-stu-id="6d004-169">Multiple <xref:System.Windows.Forms.ToolStrip> controls stack vertically if you put them in the left or right <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="6d004-170">如果您將它們放在頂端或底端 <xref:System.Windows.Forms.ToolStripContainer>，它們會水平堆疊。</span><span class="sxs-lookup"><span data-stu-id="6d004-170">They stack horizontally if you put them in the top or bottom <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="6d004-171">您可以使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel>來定位在表單上的傳統控制項。</span><span class="sxs-lookup"><span data-stu-id="6d004-171">You can use the central <xref:System.Windows.Forms.ToolStripContentPanel> of the <xref:System.Windows.Forms.ToolStripContainer> to position traditional controls on the form.</span></span>  
   
- 任何或所有 <xref:System.Windows.Forms.ToolStripContainer> 控制項可直接在設計階段選取，而且可以刪除。  <xref:System.Windows.Forms.ToolStripContainer> 可展開及摺疊，並且可以使用它所包含的控制項調整大小。  
+ <span data-ttu-id="6d004-172">任何或所有 <xref:System.Windows.Forms.ToolStripContainer> 控制項可直接在設計階段選取，而且可以刪除。</span><span class="sxs-lookup"><span data-stu-id="6d004-172">Any or all <xref:System.Windows.Forms.ToolStripContainer> controls are directly selectable at design time and can be deleted.</span></span> <span data-ttu-id="6d004-173"><xref:System.Windows.Forms.ToolStripContainer> 可展開及摺疊，並且可以使用它所包含的控制項調整大小。</span><span class="sxs-lookup"><span data-stu-id="6d004-173">A <xref:System.Windows.Forms.ToolStripContainer> is expandable and collapsible, and resizes with the controls that it contains.</span></span>  
   
- *「停駐」*\(Docking\) 是在表單的左邊、 右邊、 上方，或底部指定控制項的簡單位置。  
+ <span data-ttu-id="6d004-174">*停駐*是指定的表單的左邊、 右邊、 上方或底部的控制項的簡單位置。</span><span class="sxs-lookup"><span data-stu-id="6d004-174">*Docking* is the specifying of a control's simple location on the form's left, right, top, or bottom side.</span></span>  
   
- 透過停駐來浮動定位的優點在於 <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控制項可以與其他控制項共用水平或垂直空間。  
+ <span data-ttu-id="6d004-175">透過停駐來浮動定位的優點在於 <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控制項可以與其他控制項共用水平或垂直空間。</span><span class="sxs-lookup"><span data-stu-id="6d004-175">The advantage of rafting over docking is that <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> controls can share horizontal or vertical space with other controls.</span></span>  
   
- 大部分的 <xref:System.Windows.Forms.ToolStrip> 控制項能夠如同其他控制項被定位到表單，而不使用浮動定位。  您也可以藉由將 <xref:System.Windows.Forms.ToolStrip> 控制項從它的 <xref:System.Windows.Forms.ToolStripContainer> 移出並且將 `Dock` 屬性設定為 `None`， 來指定它放置在表單的任意位置上，或者藉由個別設定 <xref:System.Windows.Forms.Control.Location%2A> 屬性來指定它的絕對位置。  請參閱[如何：將 ToolStrip 移出 ToolStripContainer 並移至表單上](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)。  
+ <span data-ttu-id="6d004-176">大部分的 <xref:System.Windows.Forms.ToolStrip> 控制項能夠如同其他控制項被定位到表單，而不使用浮動定位。</span><span class="sxs-lookup"><span data-stu-id="6d004-176">Most of the <xref:System.Windows.Forms.ToolStrip> controls can be docked to the form like other controls instead of using rafting.</span></span> <span data-ttu-id="6d004-177">您也可以藉由將 <xref:System.Windows.Forms.ToolStrip> 控制項從它的 <xref:System.Windows.Forms.ToolStripContainer> 移出並且將 `Dock` 屬性設定為 `None`， 來指定它放置在表單的任意位置上，或者藉由個別設定 <xref:System.Windows.Forms.Control.Location%2A> 屬性來指定它的絕對位置。</span><span class="sxs-lookup"><span data-stu-id="6d004-177">You can also specify that a <xref:System.Windows.Forms.ToolStrip> control be freely positioned on the form by removing it from its <xref:System.Windows.Forms.ToolStripContainer> and setting its `Dock` property to `None`, or you can specify its absolute position by setting the respective <xref:System.Windows.Forms.Control.Location%2A> property.</span></span> <span data-ttu-id="6d004-178">請參閱[How to： 將移出 toolstripcontainer 並移至表單 ToolStrip](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)。</span><span class="sxs-lookup"><span data-stu-id="6d004-178">See [How to: Move a ToolStrip Out of a ToolStripContainer onto a Form](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).</span></span>  
   
- 使用一或多個 <xref:System.Windows.Forms.ToolStripPanel> 控制項來獲得更大的彈性，特別是針對多重文件介面 \(MDI\) 應用程式，或如果您不需要 <xref:System.Windows.Forms.ToolStripContainer>。  <xref:System.Windows.Forms.ToolStripPanel> 提供一個可停駐空間來定位及浮動定位除了傳統控制項的 <xref:System.Windows.Forms.ToolStrip> 控制項。  根據預設，<xref:System.Windows.Forms.ToolStripPanel> 不會出現在設計工具 \[工具箱\]  中，但您可以把它放在那裡，只需要在 \[工具箱\] 按一下滑鼠右鍵，然後按一下 \[選擇項目\]。  您也以程式設計方式存取與 <xref:System.Windows.Forms.ToolStripPanel> 相似的任何其他類別。  
+ <span data-ttu-id="6d004-179">使用一或多個 <xref:System.Windows.Forms.ToolStripPanel> 控制項來獲得更大的彈性，特別是針對多重文件介面 (MDI) 應用程式，或如果您不需要 <xref:System.Windows.Forms.ToolStripContainer>。</span><span class="sxs-lookup"><span data-stu-id="6d004-179">Use one or more <xref:System.Windows.Forms.ToolStripPanel> controls for more flexibility, especially for Multiple Document Interface (MDI) applications, or if you do not need a <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="6d004-180"><xref:System.Windows.Forms.ToolStripPanel> 提供一個可停駐空間來定位及浮動定位除了傳統控制項的 <xref:System.Windows.Forms.ToolStrip> 控制項。</span><span class="sxs-lookup"><span data-stu-id="6d004-180">A <xref:System.Windows.Forms.ToolStripPanel> provides a dockable space for locating and rafting <xref:System.Windows.Forms.ToolStrip> controls but not traditional controls.</span></span> <span data-ttu-id="6d004-181">根據預設，<xref:System.Windows.Forms.ToolStripPanel>不會出現在設計工具中**工具箱**，但您可以將以滑鼠右鍵按一下**工具箱**，然後按一下 **選擇項目**。</span><span class="sxs-lookup"><span data-stu-id="6d004-181">By default, the <xref:System.Windows.Forms.ToolStripPanel> does not appear in the designer **Toolbox**, but you can put it there by right-clicking the **Toolbox**, and then click **Choose Items**.</span></span> <span data-ttu-id="6d004-182">您也以程式設計方式存取與 <xref:System.Windows.Forms.ToolStripPanel> 相似的任何其他類別。</span><span class="sxs-lookup"><span data-stu-id="6d004-182">You can also programmatically access the <xref:System.Windows.Forms.ToolStripPanel> like any other class.</span></span>  
   
- <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 讓項目溢位。  這與在 Microsoft Office 工具列上那些項目的使用方式類似。  
+ <span data-ttu-id="6d004-183"><xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 讓項目溢位。</span><span class="sxs-lookup"><span data-stu-id="6d004-183">The <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> let items overflow.</span></span> <span data-ttu-id="6d004-184">這與在 Microsoft Office 工具列上那些項目的使用方式類似。</span><span class="sxs-lookup"><span data-stu-id="6d004-184">This is similar to the way these items behave on Microsoft Office toolbars.</span></span>  
   
-## 請參閱  
- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+## <a name="see-also"></a><span data-ttu-id="6d004-185">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6d004-185">See Also</span></span>  
+ [<span data-ttu-id="6d004-186">ToolStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="6d004-186">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [<span data-ttu-id="6d004-187">ToolStrip 控制項架構</span><span class="sxs-lookup"><span data-stu-id="6d004-187">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)

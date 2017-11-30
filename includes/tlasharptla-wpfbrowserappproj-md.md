@@ -1,1 +1,1 @@
-XAML 瀏覽器應用程式 (WPF)
+<span data-ttu-id="f5f39-101">XAML 瀏覽器應用程式 (WPF)</span><span class="sxs-lookup"><span data-stu-id="f5f39-101">XAML Browser Application (WPF)</span></span>

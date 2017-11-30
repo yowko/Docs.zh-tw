@@ -1,1 +1,1 @@
-多重文件介面 (MDI)
+<span data-ttu-id="c65af-101">多重文件介面 (MDI)</span><span class="sxs-lookup"><span data-stu-id="c65af-101">multiple-document interface (MDI)</span></span>

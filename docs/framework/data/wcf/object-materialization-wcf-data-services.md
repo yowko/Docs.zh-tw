@@ -1,58 +1,61 @@
 ---
-title: "物件具體化 (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF Data Services, 用戶端程式庫"
-  - "WCF Data Services, 查詢"
+title: "物件具體化 (WCF 資料服務)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, client library
+- WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f671d3b41e0812916d1db342c211f2db6456ede3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 物件具體化 (WCF Data Services)
-當您使用 \[**加入服務參考**\] 對話方塊，在 .NET Framework 架構用戶端應用程式中取用 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要時，將會針對資料模型中此摘要所公開的每一個實體類型產生同等的資料類別。  如需詳細資訊，請參閱[產生資料服務用戶端程式庫](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。  查詢所傳回之實體資料會具體化為其中一個產生之用戶端資料服務類別的執行個體。  如需追蹤物件之合併選項和識別解析的詳細資訊，請參閱 [管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。  
+# <a name="object-materialization-wcf-data-services"></a><span data-ttu-id="41e3f-102">物件具體化 (WCF 資料服務)</span><span class="sxs-lookup"><span data-stu-id="41e3f-102">Object Materialization (WCF Data Services)</span></span>
+<span data-ttu-id="41e3f-103">當您使用**加入服務參考**對話方塊，即可取用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要中的.NET Framework 為基礎的用戶端應用程式時，對等的資料類別都會產生摘要所公開的資料模型中每個實體類型。</span><span class="sxs-lookup"><span data-stu-id="41e3f-103">When you use the **Add Service Reference** dialog to consume an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in a .NET Framework-based client application, equivalent data classes are generated for each entity type in the data model exposed by the feed.</span></span> <span data-ttu-id="41e3f-104">如需詳細資訊，請參閱[產生資料服務用戶端程式庫](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="41e3f-104">For more information, see [Generating the Data Service Client Library](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).</span></span> <span data-ttu-id="41e3f-105">查詢所傳回之實體資料會具體化為其中一個產生之用戶端資料服務類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="41e3f-105">Entity data that is returned by a query is materialized into an instance of one of these generated client data service classes.</span></span> <span data-ttu-id="41e3f-106">合併選項和識別解析為追蹤之物件的相關資訊，請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="41e3f-106">For information about merge options and identity resolution for tracked objects, see [Managing the Data Service Context](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).</span></span>  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 還能讓您定義自己的用戶端資料服務類別，而不必使用工具產生的資料類別。  這可讓您使用自己的資料類別，也就是「單純的 CLR 物件」\(POCO\) 資料類別。  使用這些自訂資料類別型別時，您應該使用 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 或 <xref:System.Data.Services.Common.DataServiceEntityAttribute> 將資料類別屬性化，並確保用戶端上的型別名稱與資料服務之資料模型中的型別名稱相符。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="41e3f-107"> 還能讓您定義自己的用戶端資料服務類別，而不必使用工具產生的資料類別。</span><span class="sxs-lookup"><span data-stu-id="41e3f-107"> also enables you to define your own client data service classes rather than using the tool-generated data classes.</span></span> <span data-ttu-id="41e3f-108">這可讓您使用自己的資料類別，也就是「單純的 CLR 物件」(POCO) 資料類別。</span><span class="sxs-lookup"><span data-stu-id="41e3f-108">This enables you to use your own data classes, also known as "plain-old CLR object" (POCO) data classes.</span></span> <span data-ttu-id="41e3f-109">使用這些類型的自訂資料類別時，您應該將資料類別屬性使用<xref:System.Data.Services.Common.DataServiceKeyAttribute>或<xref:System.Data.Services.Common.DataServiceEntityAttribute>，並確定在用戶端型別名稱相符的資料服務資料模型中的型別名稱。</span><span class="sxs-lookup"><span data-stu-id="41e3f-109">When using these types of custom data classes, you should attribute the data class with either <xref:System.Data.Services.Common.DataServiceKeyAttribute> or <xref:System.Data.Services.Common.DataServiceEntityAttribute> and ensure that type names on the client match type names in the data model of the data service.</span></span>  
   
- 程式庫接收查詢回應訊息後，它會將傳回的資料從 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要具體化為用戶端資料服務類別的執行個體，而該執行個體屬於查詢的型別。  具體化這些物件的一般程序如下所示：  
+ <span data-ttu-id="41e3f-110">文件庫接收查詢回應訊息之後，它會具體化傳回的資料從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要執行個體的用戶端資料服務類別的查詢類型。</span><span class="sxs-lookup"><span data-stu-id="41e3f-110">After the library receives the query response message, it materializes the returned data from the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed into instances of client data service classes that are of the type of the query.</span></span> <span data-ttu-id="41e3f-111">具體化這些物件的一般程序如下所示：</span><span class="sxs-lookup"><span data-stu-id="41e3f-111">The general process for materializing these objects is as follows:</span></span>  
   
-1.  用戶端程式庫會從回應訊息摘要中的 `entry` 項目讀取序列化的型別，並嘗試利用下列其中一種方式建立正確型別的新執行個體：  
+1.  <span data-ttu-id="41e3f-112">用戶端程式庫會從回應訊息摘要中的 `entry` 項目讀取序列化的型別，並嘗試利用下列其中一種方式建立正確型別的新執行個體：</span><span class="sxs-lookup"><span data-stu-id="41e3f-112">The client library reads the serialized type from the `entry` element in the response message feed and attempts to create a new instance of the correct type, in one of the following ways:</span></span>  
   
-    -   當摘要中宣告的型別所使用的名稱與 <xref:System.Data.Services.Client.DataServiceQuery%601> 的型別使用的名稱相同時，會使用空的建構函式來建立此型別的新執行個體。  
+    -   <span data-ttu-id="41e3f-113">當摘要中宣告的型別所使用的名稱與 <xref:System.Data.Services.Client.DataServiceQuery%601> 的型別使用的名稱相同時，會使用空的建構函式來建立此型別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="41e3f-113">When the type declared in the feed has the same name as the type of the <xref:System.Data.Services.Client.DataServiceQuery%601>, a new instance of this type is created by using the empty constructor.</span></span>  
   
-    -   當摘要中宣告的型別所使用的名稱與衍生自 <xref:System.Data.Services.Client.DataServiceQuery%601> 的型別所使用的名稱相同時，會利用空的建構函式來建立此衍生型別的新執行個體。  
+    -   <span data-ttu-id="41e3f-114">當摘要中宣告的型別所使用的名稱與衍生自 <xref:System.Data.Services.Client.DataServiceQuery%601> 的型別所使用的名稱相同時，會利用空的建構函式來建立此衍生型別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="41e3f-114">When the type declared in the feed has the same name as a type that is derived from the type of the <xref:System.Data.Services.Client.DataServiceQuery%601>, a new instance of this derived type is created by using the empty constructor.</span></span>  
   
-    -   當摘要中宣告的型別與 <xref:System.Data.Services.Client.DataServiceQuery%601> 的型別或任何衍生型別不相符時，會利用空的建構函式來建立所查詢型別的新執行個體。  
+    -   <span data-ttu-id="41e3f-115">當摘要中宣告的型別與 <xref:System.Data.Services.Client.DataServiceQuery%601> 的型別或任何衍生型別不相符時，會利用空的建構函式來建立所查詢型別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="41e3f-115">When the type declared in the feed cannot be matched to the type of the <xref:System.Data.Services.Client.DataServiceQuery%601> or any derived types, a new instance of the queried type is created by using the empty constructor.</span></span>  
   
-    -   如果已設定 <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A> 屬性，會呼叫提供的委派來覆寫預設的名稱架構型別對應，並建立由 <xref:System.Func%602> 傳回之型別的新執行個體來代替。  如果這個委派傳回 null 值，會建立所查詢型別的新執行個體來代替。  可能必須覆寫預設的名稱架構型別名稱對應來支援繼承案例。  
+    -   <span data-ttu-id="41e3f-116">如果已設定 <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A> 屬性，會呼叫提供的委派來覆寫預設的名稱架構型別對應，並建立由 <xref:System.Func%602> 傳回之型別的新執行個體來代替。</span><span class="sxs-lookup"><span data-stu-id="41e3f-116">When the <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A> property is set, the supplied delegate is called to override the default name-based type mapping and a new instance of the type returned by the <xref:System.Func%602> is created instead.</span></span> <span data-ttu-id="41e3f-117">如果這個委派傳回 null 值，會建立所查詢型別的新執行個體來代替。</span><span class="sxs-lookup"><span data-stu-id="41e3f-117">If this delegate returns a null value, a new instance of the queried type is created instead.</span></span> <span data-ttu-id="41e3f-118">可能必須覆寫預設的名稱架構型別名稱對應來支援繼承案例。</span><span class="sxs-lookup"><span data-stu-id="41e3f-118">It may be required to override the default name-based type name mapping to support inheritance scenarios.</span></span>  
   
-2.  用戶端程式庫會讀取 `entry` 之 `id` 項目的 URI 值，它就是實體的識別值。  除非使用 <xref:System.Data.Services.Client.MergeOption> 的 <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> 值，否則會使用識別值來追蹤 <xref:System.Data.Services.Client.DataServiceContext> 中的物件。  識別值也會用來保證只會建立單一實體執行個體，甚至當某個實體在查詢回應中被傳回多次時也一樣。  
+2.  <span data-ttu-id="41e3f-119">用戶端程式庫會讀取 `id` 之 `entry` 項目的 URI 值，它就是實體的識別值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-119">The client library reads the URI value from the `id` element of the `entry`, which is the identity value of the entity.</span></span> <span data-ttu-id="41e3f-120">除非使用 <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> 的 <xref:System.Data.Services.Client.MergeOption.NoTracking> 值，否則會使用識別值來追蹤 <xref:System.Data.Services.Client.DataServiceContext> 中的物件。</span><span class="sxs-lookup"><span data-stu-id="41e3f-120">Unless a <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> value of <xref:System.Data.Services.Client.MergeOption.NoTracking> is used, the identity value is used to track the object in the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="41e3f-121">識別值也會用來保證只會建立單一實體執行個體，甚至當某個實體在查詢回應中被傳回多次時也一樣。</span><span class="sxs-lookup"><span data-stu-id="41e3f-121">The identity value is also used to guarantee that only a single entity instance is created, even when an entity is returned multiple times in the query response.</span></span>  
   
-3.  用戶端程式庫會讀取摘要項目中的屬性，並在新建立的物件上設定對應的屬性。  當 <xref:System.Data.Services.Client.DataServiceContext> 中已存在與物件所具備之相同的識別值時，會根據 <xref:System.Data.Services.Client.DataServiceContext> 的 <xref:System.Data.Services.Client.MergeOption> 設定來設定屬性。  若某對應的屬性不存在用戶端型別中，則回應可能會包含屬性值。  若發生這種情況，動作會視 <xref:System.Data.Services.Client.DataServiceContext> 的 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 屬性而定。  當這個屬性設定為 `true` 時，會忽略遺漏的屬性。  否則，就會引發錯誤。  屬性設定如下所示：  
+3.  <span data-ttu-id="41e3f-122">用戶端程式庫會讀取摘要項目中的屬性，並在新建立的物件上設定對應的屬性。</span><span class="sxs-lookup"><span data-stu-id="41e3f-122">The client library reads properties from the feed entry and set the corresponding properties on the newly created object.</span></span> <span data-ttu-id="41e3f-123">當 <xref:System.Data.Services.Client.DataServiceContext> 中已存在與物件所具備之相同的識別值時，會根據 <xref:System.Data.Services.Client.MergeOption> 的 <xref:System.Data.Services.Client.DataServiceContext> 設定來設定屬性。</span><span class="sxs-lookup"><span data-stu-id="41e3f-123">When an object that has the same identity value already occurs in the <xref:System.Data.Services.Client.DataServiceContext>, the properties are set based on the <xref:System.Data.Services.Client.MergeOption> setting of the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="41e3f-124">若某對應的屬性不存在用戶端型別中，則回應可能會包含屬性值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-124">The response might contain property values for which a corresponding property does not occur in the client type.</span></span> <span data-ttu-id="41e3f-125">若發生這種情況，動作會視 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 屬性而定。</span><span class="sxs-lookup"><span data-stu-id="41e3f-125">When this occurs, the action depends on the value of the <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> property of the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="41e3f-126">當這個屬性設定為 `true` 時，會忽略遺漏的屬性。</span><span class="sxs-lookup"><span data-stu-id="41e3f-126">When this property is set to `true`, the missing property is ignored.</span></span> <span data-ttu-id="41e3f-127">否則，就會引發錯誤。</span><span class="sxs-lookup"><span data-stu-id="41e3f-127">Otherwise, an error is raised.</span></span> <span data-ttu-id="41e3f-128">屬性設定如下所示：</span><span class="sxs-lookup"><span data-stu-id="41e3f-128">Properties are set as follows:</span></span>  
   
-    -   純量屬性會設定為回應訊息之項目中的對應值。  
+    -   <span data-ttu-id="41e3f-129">純量屬性會設定為回應訊息之項目中的對應值。</span><span class="sxs-lookup"><span data-stu-id="41e3f-129">Scalar properties are set to the corresponding value in the entry in the response message.</span></span>  
   
-    -   複雜屬性會設定為新的複雜類型執行個體，其會與回應中的複雜類型屬性一起設定。  
+    -   <span data-ttu-id="41e3f-130">複雜屬性會設定為新的複雜類型執行個體，其會與回應中的複雜類型屬性一起設定。</span><span class="sxs-lookup"><span data-stu-id="41e3f-130">Complex properties are set to a new complex type instance, which are set with the properties of the complex type from the response.</span></span>  
   
-    -   導覽屬性會傳回相關實體的集合，它們會設定為新的或現有之 <xref:System.Collections.Generic.ICollection%601> 的執行個體，其中 `T` 指相關實體的類型。  除非已將相關物件載入 <xref:System.Data.Services.Client.DataServiceContext>，否則這是一個空的集合。  如需詳細資訊，請參閱[載入延後的內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。  
+    -   <span data-ttu-id="41e3f-131">導覽屬性會傳回相關實體的集合，它們會設定為新的或現有之 <xref:System.Collections.Generic.ICollection%601> 的執行個體，其中 `T` 指相關實體的類型。</span><span class="sxs-lookup"><span data-stu-id="41e3f-131">Navigation properties that return a collection of related entities are set to a new or existing instance of <xref:System.Collections.Generic.ICollection%601>, where `T` is the type of the related entity.</span></span> <span data-ttu-id="41e3f-132">除非已將相關物件載入 <xref:System.Data.Services.Client.DataServiceContext>，否則這是一個空的集合。</span><span class="sxs-lookup"><span data-stu-id="41e3f-132">This collection is empty unless the related objects have been loaded into the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="41e3f-133">如需詳細資訊，請參閱[載入延後內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="41e3f-133">For more information, see [Loading Deferred Content](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span></span>  
   
         > [!NOTE]
-        >  當產生之用戶端資料類別支援資料繫結時，導覽屬性會傳回 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體來代替。  如需詳細資訊，請參閱[將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  
+        >  <span data-ttu-id="41e3f-134">當產生之用戶端資料類別支援資料繫結時，導覽屬性會傳回 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體來代替。</span><span class="sxs-lookup"><span data-stu-id="41e3f-134">When the generated client data classes support data binding, navigation properties return instances of the <xref:System.Data.Services.Client.DataServiceCollection%601> class instead.</span></span> <span data-ttu-id="41e3f-135">如需詳細資訊，請參閱[資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="41e3f-135">For more information, see [Binding Data to Controls](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).</span></span>  
   
-4.  便會引發 <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> 事件。  
+4.  <span data-ttu-id="41e3f-136">便會引發 <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> 事件。</span><span class="sxs-lookup"><span data-stu-id="41e3f-136">The <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> event is raised.</span></span>  
   
-5.  用戶端程式庫會將物件附加至 <xref:System.Data.Services.Client.DataServiceContext>。  當 <xref:System.Data.Services.Client.MergeOption> 為 <xref:System.Data.Services.Client.MergeOption> 時，不會附加物件。  
+5.  <span data-ttu-id="41e3f-137">用戶端程式庫會將物件附加至 <xref:System.Data.Services.Client.DataServiceContext>。</span><span class="sxs-lookup"><span data-stu-id="41e3f-137">The client library attaches the object to the <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="41e3f-138">當 <xref:System.Data.Services.Client.MergeOption> 為 <xref:System.Data.Services.Client.MergeOption.NoTracking> 時，不會附加物件。</span><span class="sxs-lookup"><span data-stu-id="41e3f-138">The object is not attached when the <xref:System.Data.Services.Client.MergeOption> is <xref:System.Data.Services.Client.MergeOption.NoTracking>.</span></span>  
   
-## 請參閱  
- [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)   
- [查詢投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="41e3f-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="41e3f-139">See Also</span></span>  
+ [<span data-ttu-id="41e3f-140">查詢資料服務</span><span class="sxs-lookup"><span data-stu-id="41e3f-140">Querying the Data Service</span></span>](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ [<span data-ttu-id="41e3f-141">查詢投影</span><span class="sxs-lookup"><span data-stu-id="41e3f-141">Query Projections</span></span>](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

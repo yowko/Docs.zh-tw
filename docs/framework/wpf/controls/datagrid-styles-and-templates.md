@@ -1,195 +1,188 @@
 ---
-title: "DataGrid 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], DataGrid"
-  - "DataGrid [WPF], 樣式和範本"
-  - "組件 [WPF], DataGrid"
-  - "狀態 [WPF], DataGrid"
-  - "樣式 [WPF], DataGrid"
-  - "範本 [WPF], DataGrid"
+title: "DataGrid 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], DataGrid
+- ControlTemplate [WPF], DataGrid
+- DataGrid [WPF], styles and templates
+- templates [WPF], DataGrid
+- styles [WPF], DataGrid
+- parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2dd7e47454cdfa806ce025d905073468f70f7cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DataGrid 樣式和範本
-本主題說明 <xref:System.Windows.Controls.DataGrid> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="datagrid-styles-and-templates"></a><span data-ttu-id="d7098-102">DataGrid 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="d7098-102">DataGrid Styles and Templates</span></span>
+<span data-ttu-id="d7098-103">本主題描述樣式和範本<xref:System.Windows.Controls.DataGrid>控制項。</span><span class="sxs-lookup"><span data-stu-id="d7098-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.DataGrid> control.</span></span> <span data-ttu-id="d7098-104">您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。</span><span class="sxs-lookup"><span data-stu-id="d7098-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="d7098-105">如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。</span><span class="sxs-lookup"><span data-stu-id="d7098-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## DataGrid 組件  
- 下表列出 <xref:System.Windows.Controls.DataGrid> 控制項的具名組件。  
+## <a name="datagrid-parts"></a><span data-ttu-id="d7098-106">DataGrid 的組件</span><span class="sxs-lookup"><span data-stu-id="d7098-106">DataGrid Parts</span></span>  
+ <span data-ttu-id="d7098-107">下表列出的具名組件<xref:System.Windows.Controls.DataGrid>控制項。</span><span class="sxs-lookup"><span data-stu-id="d7098-107">The following table lists the named parts for the <xref:System.Windows.Controls.DataGrid> control.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-108">組件</span><span class="sxs-lookup"><span data-stu-id="d7098-108">Part</span></span>|<span data-ttu-id="d7098-109">類型</span><span class="sxs-lookup"><span data-stu-id="d7098-109">Type</span></span>|<span data-ttu-id="d7098-110">說明</span><span class="sxs-lookup"><span data-stu-id="d7098-110">Description</span></span>|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|包含資料行行首的資料列。|  
+|<span data-ttu-id="d7098-111">PART_ColumnHeadersPresenter</span><span class="sxs-lookup"><span data-stu-id="d7098-111">PART_ColumnHeadersPresenter</span></span>|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|<span data-ttu-id="d7098-112">包含資料行標頭的資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-112">The row that contains the column headers.</span></span>|  
   
- 當您建立 <xref:System.Windows.Controls.DataGrid> 的 <xref:System.Windows.Controls.ControlTemplate> 時，您的範本可能在 <xref:System.Windows.Controls.ScrollViewer> 內包含 <xref:System.Windows.Controls.ItemsPresenter> \(<xref:System.Windows.Controls.ItemsPresenter> 會顯示 <xref:System.Windows.Controls.DataGrid> 中的每一個項目，而 <xref:System.Windows.Controls.ScrollViewer> 會啟用控制項內的捲動功能\)。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer> 的直接子系，您必須將 <xref:System.Windows.Controls.ItemsPresenter> 命名為 `ItemsPresenter`。  
+ <span data-ttu-id="d7098-113">當您建立<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.DataGrid>，可能會包含您的範本<xref:System.Windows.Controls.ItemsPresenter>內<xref:System.Windows.Controls.ScrollViewer>。</span><span class="sxs-lookup"><span data-stu-id="d7098-113">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.DataGrid>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="d7098-114">(<xref:System.Windows.Controls.ItemsPresenter>會顯示每個項目<xref:System.Windows.Controls.DataGrid>;<xref:System.Windows.Controls.ScrollViewer>可捲動控制項內)。</span><span class="sxs-lookup"><span data-stu-id="d7098-114">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.DataGrid>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="d7098-115">如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子系<xref:System.Windows.Controls.ScrollViewer>，您必須提供<xref:System.Windows.Controls.ItemsPresenter>名稱`ItemsPresenter`。</span><span class="sxs-lookup"><span data-stu-id="d7098-115">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
- <xref:System.Windows.Controls.DataGrid> 的預設範本包含 <xref:System.Windows.Controls.ScrollViewer> 控制項。  如需 <xref:System.Windows.Controls.ScrollViewer> 所定義各組件的詳細資訊，請參閱 [ScrollViewer 樣式和範本](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)。  
+ <span data-ttu-id="d7098-116">預設範本<xref:System.Windows.Controls.DataGrid>包含<xref:System.Windows.Controls.ScrollViewer>控制項。</span><span class="sxs-lookup"><span data-stu-id="d7098-116">The default template for the <xref:System.Windows.Controls.DataGrid> contains a <xref:System.Windows.Controls.ScrollViewer> control.</span></span> <span data-ttu-id="d7098-117">如需有關所定義的組件<xref:System.Windows.Controls.ScrollViewer>，請參閱[ScrollViewer 樣式和範本](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)。</span><span class="sxs-lookup"><span data-stu-id="d7098-117">For more information about the parts defined by the <xref:System.Windows.Controls.ScrollViewer>, see [ScrollViewer Styles and Templates](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).</span></span>  
   
-## DataGrid 狀態  
- 下表列出 <xref:System.Windows.Controls.DataGrid> 控制項的可見狀態。  
+## <a name="datagrid-states"></a><span data-ttu-id="d7098-118">DataGrid 狀態</span><span class="sxs-lookup"><span data-stu-id="d7098-118">DataGrid States</span></span>  
+ <span data-ttu-id="d7098-119">下表列出的視覺狀態<xref:System.Windows.Controls.DataGrid>控制項。</span><span class="sxs-lookup"><span data-stu-id="d7098-119">The following table lists the visual states for the <xref:System.Windows.Controls.DataGrid> control.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-120">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-120">VisualState Name</span></span>|<span data-ttu-id="d7098-121">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-121">VisualStateGroup Name</span></span>|<span data-ttu-id="d7098-122">描述</span><span class="sxs-lookup"><span data-stu-id="d7098-122">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|Disabled|CommonStates|控制項已停用。|  
-|InvalidFocused|ValidationStates|控制項無效，但是有焦點。|  
-|InvalidUnfocused|ValidationStates|控制項無效且沒有焦點。|  
-|Valid|ValidationStates|控制項有效。|  
+|<span data-ttu-id="d7098-123">一般</span><span class="sxs-lookup"><span data-stu-id="d7098-123">Normal</span></span>|<span data-ttu-id="d7098-124">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-124">CommonStates</span></span>|<span data-ttu-id="d7098-125">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="d7098-125">The default state.</span></span>|  
+|<span data-ttu-id="d7098-126">已停用</span><span class="sxs-lookup"><span data-stu-id="d7098-126">Disabled</span></span>|<span data-ttu-id="d7098-127">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-127">CommonStates</span></span>|<span data-ttu-id="d7098-128">已停用控制項。</span><span class="sxs-lookup"><span data-stu-id="d7098-128">The control is disabled.</span></span>|  
+|<span data-ttu-id="d7098-129">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="d7098-129">InvalidFocused</span></span>|<span data-ttu-id="d7098-130">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-130">ValidationStates</span></span>|<span data-ttu-id="d7098-131">控制項無效且已取得焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-131">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="d7098-132">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="d7098-132">InvalidUnfocused</span></span>|<span data-ttu-id="d7098-133">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-133">ValidationStates</span></span>|<span data-ttu-id="d7098-134">控制項無效且未取得焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-134">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-135">驗證</span><span class="sxs-lookup"><span data-stu-id="d7098-135">Valid</span></span>|<span data-ttu-id="d7098-136">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-136">ValidationStates</span></span>|<span data-ttu-id="d7098-137">控制項有效。</span><span class="sxs-lookup"><span data-stu-id="d7098-137">The control is valid.</span></span>|  
   
-## DataGridCell 組件  
- <xref:System.Windows.Controls.DataGridCell> 項目沒有任何具名組件。  
+## <a name="datagridcell-parts"></a><span data-ttu-id="d7098-138">DataGridCell 組件</span><span class="sxs-lookup"><span data-stu-id="d7098-138">DataGridCell Parts</span></span>  
+ <span data-ttu-id="d7098-139"><xref:System.Windows.Controls.DataGridCell>項目沒有任何已命名的組件。</span><span class="sxs-lookup"><span data-stu-id="d7098-139">The <xref:System.Windows.Controls.DataGridCell> element does not have any named parts.</span></span>  
   
-## DataGridCell 狀態  
- 下表列出 <xref:System.Windows.Controls.DataGridCell> 項目的可見狀態。  
+## <a name="datagridcell-states"></a><span data-ttu-id="d7098-140">DataGridCell 狀態</span><span class="sxs-lookup"><span data-stu-id="d7098-140">DataGridCell States</span></span>  
+ <span data-ttu-id="d7098-141">下表列出的視覺狀態<xref:System.Windows.Controls.DataGridCell>項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-141">The following table lists the visual states for the <xref:System.Windows.Controls.DataGridCell> element.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-142">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-142">VisualState Name</span></span>|<span data-ttu-id="d7098-143">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-143">VisualStateGroup Name</span></span>|<span data-ttu-id="d7098-144">描述</span><span class="sxs-lookup"><span data-stu-id="d7098-144">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|MouseOver|CommonStates|滑鼠指標位於儲存格上。|  
-|Focused|FocusStates|儲存格擁有焦點。|  
-|Unfocused|FocusStates|儲存格沒有焦點。|  
-|Current|CurrentStates|儲存格是目前的儲存格。|  
-|Regular|CurrentStates|儲存格不是目前的儲存格。|  
-|Display|InteractionStates|儲存格處於顯示模式。|  
-|編輯|InteractionStates|儲存格處於編輯模式。|  
-|Selected|SelectionStates|儲存格。|  
-|Unselected|SelectionStates|儲存格為未選取。|  
-|InvalidFocused|ValidationStates|儲存格無效，但是有焦點。|  
-|InvalidUnfocused|ValidationStates|儲存格無效且沒有焦點。|  
-|Valid|ValidationStates|儲存格有效。|  
+|<span data-ttu-id="d7098-145">一般</span><span class="sxs-lookup"><span data-stu-id="d7098-145">Normal</span></span>|<span data-ttu-id="d7098-146">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-146">CommonStates</span></span>|<span data-ttu-id="d7098-147">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="d7098-147">The default state.</span></span>|  
+|<span data-ttu-id="d7098-148">MouseOver</span><span class="sxs-lookup"><span data-stu-id="d7098-148">MouseOver</span></span>|<span data-ttu-id="d7098-149">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-149">CommonStates</span></span>|<span data-ttu-id="d7098-150">滑鼠指標位於資料格。</span><span class="sxs-lookup"><span data-stu-id="d7098-150">The mouse pointer is positioned over the cell.</span></span>|  
+|<span data-ttu-id="d7098-151">已取得焦點</span><span class="sxs-lookup"><span data-stu-id="d7098-151">Focused</span></span>|<span data-ttu-id="d7098-152">FocusStates</span><span class="sxs-lookup"><span data-stu-id="d7098-152">FocusStates</span></span>|<span data-ttu-id="d7098-153">資料格具有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-153">The cell has focus.</span></span>|  
+|<span data-ttu-id="d7098-154">未取得焦點</span><span class="sxs-lookup"><span data-stu-id="d7098-154">Unfocused</span></span>|<span data-ttu-id="d7098-155">FocusStates</span><span class="sxs-lookup"><span data-stu-id="d7098-155">FocusStates</span></span>|<span data-ttu-id="d7098-156">資料格沒有焦點</span><span class="sxs-lookup"><span data-stu-id="d7098-156">The cell does not have focus</span></span>|  
+|<span data-ttu-id="d7098-157">目前</span><span class="sxs-lookup"><span data-stu-id="d7098-157">Current</span></span>|<span data-ttu-id="d7098-158">CurrentStates</span><span class="sxs-lookup"><span data-stu-id="d7098-158">CurrentStates</span></span>|<span data-ttu-id="d7098-159">資料格是目前儲存格。</span><span class="sxs-lookup"><span data-stu-id="d7098-159">The cell is the current cell.</span></span>|  
+|<span data-ttu-id="d7098-160">Regular</span><span class="sxs-lookup"><span data-stu-id="d7098-160">Regular</span></span>|<span data-ttu-id="d7098-161">CurrentStates</span><span class="sxs-lookup"><span data-stu-id="d7098-161">CurrentStates</span></span>|<span data-ttu-id="d7098-162">資料格不是目前儲存格。</span><span class="sxs-lookup"><span data-stu-id="d7098-162">The cell is not the current cell.</span></span>|  
+|<span data-ttu-id="d7098-163">顯示</span><span class="sxs-lookup"><span data-stu-id="d7098-163">Display</span></span>|<span data-ttu-id="d7098-164">InteractionStates</span><span class="sxs-lookup"><span data-stu-id="d7098-164">InteractionStates</span></span>|<span data-ttu-id="d7098-165">儲存格是在顯示模式。</span><span class="sxs-lookup"><span data-stu-id="d7098-165">The cell is in display mode.</span></span>|  
+|<span data-ttu-id="d7098-166">編輯</span><span class="sxs-lookup"><span data-stu-id="d7098-166">Editing</span></span>|<span data-ttu-id="d7098-167">InteractionStates</span><span class="sxs-lookup"><span data-stu-id="d7098-167">InteractionStates</span></span>|<span data-ttu-id="d7098-168">儲存格處於編輯模式。</span><span class="sxs-lookup"><span data-stu-id="d7098-168">The cell is in edit mode.</span></span>|  
+|<span data-ttu-id="d7098-169">已選取</span><span class="sxs-lookup"><span data-stu-id="d7098-169">Selected</span></span>|<span data-ttu-id="d7098-170">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="d7098-170">SelectionStates</span></span>|<span data-ttu-id="d7098-171">選取儲存格。</span><span class="sxs-lookup"><span data-stu-id="d7098-171">The cell is selected.</span></span>|  
+|<span data-ttu-id="d7098-172">未選取</span><span class="sxs-lookup"><span data-stu-id="d7098-172">Unselected</span></span>|<span data-ttu-id="d7098-173">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="d7098-173">SelectionStates</span></span>|<span data-ttu-id="d7098-174">未選取的資料格。</span><span class="sxs-lookup"><span data-stu-id="d7098-174">The cell is not selected.</span></span>|  
+|<span data-ttu-id="d7098-175">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="d7098-175">InvalidFocused</span></span>|<span data-ttu-id="d7098-176">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-176">ValidationStates</span></span>|<span data-ttu-id="d7098-177">資料格不正確，而且具有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-177">The cell is not valid and has focus.</span></span>|  
+|<span data-ttu-id="d7098-178">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="d7098-178">InvalidUnfocused</span></span>|<span data-ttu-id="d7098-179">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-179">ValidationStates</span></span>|<span data-ttu-id="d7098-180">資料格不是有效的而且沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-180">The cell is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-181">驗證</span><span class="sxs-lookup"><span data-stu-id="d7098-181">Valid</span></span>|<span data-ttu-id="d7098-182">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-182">ValidationStates</span></span>|<span data-ttu-id="d7098-183">資料格是有效的。</span><span class="sxs-lookup"><span data-stu-id="d7098-183">The cell is valid.</span></span>|  
   
-## DataGridRow 組件  
- <xref:System.Windows.Controls.DataGridRow> 項目沒有任何具名組件。  
+## <a name="datagridrow-parts"></a><span data-ttu-id="d7098-184">Datagridrow 不組件</span><span class="sxs-lookup"><span data-stu-id="d7098-184">DataGridRow Parts</span></span>  
+ <span data-ttu-id="d7098-185"><xref:System.Windows.Controls.DataGridRow>項目沒有任何已命名的組件。</span><span class="sxs-lookup"><span data-stu-id="d7098-185">The <xref:System.Windows.Controls.DataGridRow> element does not have any named parts.</span></span>  
   
-## DataGridRow 狀態  
- 下表列出 <xref:System.Windows.Controls.DataGridRow> 項目的可見狀態。  
+## <a name="datagridrow-states"></a><span data-ttu-id="d7098-186">Datagridrow 不狀態</span><span class="sxs-lookup"><span data-stu-id="d7098-186">DataGridRow States</span></span>  
+ <span data-ttu-id="d7098-187">下表列出的視覺狀態<xref:System.Windows.Controls.DataGridRow>項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-187">The following table lists the visual states for the <xref:System.Windows.Controls.DataGridRow> element.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-188">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-188">VisualState Name</span></span>|<span data-ttu-id="d7098-189">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-189">VisualStateGroup Name</span></span>|<span data-ttu-id="d7098-190">描述</span><span class="sxs-lookup"><span data-stu-id="d7098-190">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|MouseOver|CommonStates|滑鼠指標位於資料列上。|  
-|MouseOver\_Editing|CommonStates|滑鼠指標位於資料列上，且資料列處於編輯模式。|  
-|MouseOver\_Selected|CommonStates|滑鼠指標位於資料列上，且資料列為已選取。|  
-|MouseOver\_Unfocused\_Editing|CommonStates|滑鼠指標位於資料列上，且資料列處於編輯模式，但沒有焦點。|  
-|MouseOver\_Unfocused\_Selected|CommonStates|滑鼠指標位於資料列上，且資料列為已選取，但沒有焦點。|  
-|Normal\_AlternatingRow|CommonStates|資料列是替代資料列。|  
-|Normal\_Editing|CommonStates|資料列處於編輯模式。|  
-|Normal\_Selected|CommonStates|資料列為已選取。|  
-|Unfocused\_Editing|CommonStates|資料列處於編輯模式，但沒有焦點。|  
-|Unfocused\_Selected|CommonStates|資料列為已選取，但沒有焦點。|  
-|InvalidFocused|ValidationStates|控制項無效，但是有焦點。|  
-|InvalidUnfocused|ValidationStates|控制項無效且沒有焦點。|  
-|Valid|ValidationStates|控制項有效。|  
+|<span data-ttu-id="d7098-191">一般</span><span class="sxs-lookup"><span data-stu-id="d7098-191">Normal</span></span>|<span data-ttu-id="d7098-192">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-192">CommonStates</span></span>|<span data-ttu-id="d7098-193">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="d7098-193">The default state.</span></span>|  
+|<span data-ttu-id="d7098-194">MouseOver</span><span class="sxs-lookup"><span data-stu-id="d7098-194">MouseOver</span></span>|<span data-ttu-id="d7098-195">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-195">CommonStates</span></span>|<span data-ttu-id="d7098-196">滑鼠指標位於資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-196">The mouse pointer is positioned over the row.</span></span>|  
+|<span data-ttu-id="d7098-197">MouseOver_Editing</span><span class="sxs-lookup"><span data-stu-id="d7098-197">MouseOver_Editing</span></span>|<span data-ttu-id="d7098-198">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-198">CommonStates</span></span>|<span data-ttu-id="d7098-199">滑鼠指標位於資料列和資料列處於編輯模式。</span><span class="sxs-lookup"><span data-stu-id="d7098-199">The mouse pointer is positioned over the row and the row is in edit mode.</span></span>|  
+|<span data-ttu-id="d7098-200">MouseOver_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-200">MouseOver_Selected</span></span>|<span data-ttu-id="d7098-201">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-201">CommonStates</span></span>|<span data-ttu-id="d7098-202">滑鼠指標位於資料列，並在選取的資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-202">The mouse pointer is positioned over the row and the row is selected.</span></span>|  
+|<span data-ttu-id="d7098-203">MouseOver_Unfocused_Editing</span><span class="sxs-lookup"><span data-stu-id="d7098-203">MouseOver_Unfocused_Editing</span></span>|<span data-ttu-id="d7098-204">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-204">CommonStates</span></span>|<span data-ttu-id="d7098-205">滑鼠指標位於資料列、 資料列位於編輯模式，並沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-205">The mouse pointer is positioned over the row, the row is in edit mode, and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-206">MouseOver_Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-206">MouseOver_Unfocused_Selected</span></span>|<span data-ttu-id="d7098-207">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-207">CommonStates</span></span>|<span data-ttu-id="d7098-208">滑鼠指標位於資料列、 資料列已選取，並沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-208">The mouse pointer is positioned over the row, the row is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-209">Normal_AlternatingRow</span><span class="sxs-lookup"><span data-stu-id="d7098-209">Normal_AlternatingRow</span></span>|<span data-ttu-id="d7098-210">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-210">CommonStates</span></span>|<span data-ttu-id="d7098-211">資料列為交替的資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-211">The row is an alternating row.</span></span>|  
+|<span data-ttu-id="d7098-212">Normal_Editing</span><span class="sxs-lookup"><span data-stu-id="d7098-212">Normal_Editing</span></span>|<span data-ttu-id="d7098-213">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-213">CommonStates</span></span>|<span data-ttu-id="d7098-214">在資料列處於編輯模式。</span><span class="sxs-lookup"><span data-stu-id="d7098-214">The row is in edit mode.</span></span>|  
+|<span data-ttu-id="d7098-215">Normal_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-215">Normal_Selected</span></span>|<span data-ttu-id="d7098-216">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-216">CommonStates</span></span>|<span data-ttu-id="d7098-217">選取的資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-217">The row is selected.</span></span>|  
+|<span data-ttu-id="d7098-218">Unfocused_Editing</span><span class="sxs-lookup"><span data-stu-id="d7098-218">Unfocused_Editing</span></span>|<span data-ttu-id="d7098-219">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-219">CommonStates</span></span>|<span data-ttu-id="d7098-220">資料列處於編輯模式，而且沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-220">The row is in edit mode and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-221">Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-221">Unfocused_Selected</span></span>|<span data-ttu-id="d7098-222">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-222">CommonStates</span></span>|<span data-ttu-id="d7098-223">資料列已選取，而且沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-223">The row is selected and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-224">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="d7098-224">InvalidFocused</span></span>|<span data-ttu-id="d7098-225">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-225">ValidationStates</span></span>|<span data-ttu-id="d7098-226">控制項無效且已取得焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-226">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="d7098-227">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="d7098-227">InvalidUnfocused</span></span>|<span data-ttu-id="d7098-228">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-228">ValidationStates</span></span>|<span data-ttu-id="d7098-229">控制項無效且未取得焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-229">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-230">驗證</span><span class="sxs-lookup"><span data-stu-id="d7098-230">Valid</span></span>|<span data-ttu-id="d7098-231">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-231">ValidationStates</span></span>|<span data-ttu-id="d7098-232">控制項有效。</span><span class="sxs-lookup"><span data-stu-id="d7098-232">The control is valid.</span></span>|  
   
-## DataGridRowHeader 組件  
- 下表列出 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 項目的具名組件。  
+## <a name="datagridrowheader-parts"></a><span data-ttu-id="d7098-233">DataGridRowHeader 組件</span><span class="sxs-lookup"><span data-stu-id="d7098-233">DataGridRowHeader Parts</span></span>  
+ <span data-ttu-id="d7098-234">下表列出的具名組件<xref:System.Windows.Controls.Primitives.DataGridRowHeader>項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-234">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridRowHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-235">組件</span><span class="sxs-lookup"><span data-stu-id="d7098-235">Part</span></span>|<span data-ttu-id="d7098-236">類型</span><span class="sxs-lookup"><span data-stu-id="d7098-236">Type</span></span>|<span data-ttu-id="d7098-237">說明</span><span class="sxs-lookup"><span data-stu-id="d7098-237">Description</span></span>|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|項目，用來從頂端調整資料列行首的大小。|  
-|PART\_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|項目，用來從底部調整資料列行首的大小。|  
+|<span data-ttu-id="d7098-238">PART_TopHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="d7098-238">PART_TopHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="d7098-239">用來調整資料列行首，從頂端的項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-239">The element that is used to resize the row header from the top.</span></span>|  
+|<span data-ttu-id="d7098-240">PART_BottomHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="d7098-240">PART_BottomHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="d7098-241">用來調整資料列行首，從最下方的項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-241">The element that is used to resize the row header from the bottom.</span></span>|  
   
-## DataGridRowHeader 狀態  
- 下表列出 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 項目的可見狀態。  
+## <a name="datagridrowheader-states"></a><span data-ttu-id="d7098-242">DataGridRowHeader 狀態</span><span class="sxs-lookup"><span data-stu-id="d7098-242">DataGridRowHeader States</span></span>  
+ <span data-ttu-id="d7098-243">下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.DataGridRowHeader>項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-243">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridRowHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-244">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-244">VisualState Name</span></span>|<span data-ttu-id="d7098-245">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-245">VisualStateGroup Name</span></span>|<span data-ttu-id="d7098-246">描述</span><span class="sxs-lookup"><span data-stu-id="d7098-246">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|MouseOver|CommonStates|滑鼠指標位於資料列上。|  
-|MouseOver\_CurrentRow|CommonStates|滑鼠指標位於資料列上，且資料列是目前的資料列。|  
-|MouseOver\_CurrentRow\_Selected|CommonStates|滑鼠指標位於資料列上，且資料列是目前的資料列並已選取。|  
-|MouseOver\_EditingRow|CommonStates|滑鼠指標位於資料列上，且資料列處於編輯模式。|  
-|MouseOver\_Selected|CommonStates|滑鼠指標位於資料列上，且資料列為已選取。|  
-|MouseOver\_Unfocused\_CurrentRow\_Selected|CommonStates|滑鼠指標位於資料列上，且資料列是目前的資料列並已選取，但沒有焦點。|  
-|MouseOver\_Unfocused\_EditingRow|CommonStates|滑鼠指標位於資料列上，且資料列處於編輯模式，但沒有焦點。|  
-|MouseOver\_Unfocused\_Selected|CommonStates|滑鼠指標位於資料列上，且資料列為已選取，但沒有焦點。|  
-|Normal\_CurrentRow|CommonStates|資料列是目前的資料列。|  
-|Normal\_CurrentRow\_Selected|CommonStates|資料列是目前的資料列並已選取。|  
-|Normal\_EditingRow|CommonStates|資料列處於編輯模式。|  
-|Normal\_Selected|CommonStates|資料列為已選取。|  
-|Unfocused\_CurrentRow\_Selected|CommonStates|資料列是目前的資料列並已選取，但沒有焦點。|  
-|Unfocused\_EditingRow|CommonStates|資料列處於編輯模式，但沒有焦點。|  
-|Unfocused\_Selected|CommonStates|資料列為已選取，但沒有焦點。|  
-|InvalidFocused|ValidationStates|控制項無效，但是有焦點。|  
-|InvalidUnfocused|ValidationStates|控制項無效且沒有焦點。|  
-|Valid|ValidationStates|控制項有效。|  
+|<span data-ttu-id="d7098-247">一般</span><span class="sxs-lookup"><span data-stu-id="d7098-247">Normal</span></span>|<span data-ttu-id="d7098-248">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-248">CommonStates</span></span>|<span data-ttu-id="d7098-249">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="d7098-249">The default state.</span></span>|  
+|<span data-ttu-id="d7098-250">MouseOver</span><span class="sxs-lookup"><span data-stu-id="d7098-250">MouseOver</span></span>|<span data-ttu-id="d7098-251">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-251">CommonStates</span></span>|<span data-ttu-id="d7098-252">滑鼠指標位於資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-252">The mouse pointer is positioned over the row.</span></span>|  
+|<span data-ttu-id="d7098-253">MouseOver_CurrentRow</span><span class="sxs-lookup"><span data-stu-id="d7098-253">MouseOver_CurrentRow</span></span>|<span data-ttu-id="d7098-254">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-254">CommonStates</span></span>|<span data-ttu-id="d7098-255">滑鼠指標位於資料列和資料列是目前的資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-255">The mouse pointer is positioned over the row and the row is the current row.</span></span>|  
+|<span data-ttu-id="d7098-256">MouseOver_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-256">MouseOver_CurrentRow_Selected</span></span>|<span data-ttu-id="d7098-257">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-257">CommonStates</span></span>|<span data-ttu-id="d7098-258">滑鼠指標位於資料列，並將資料列是目前並已選取。</span><span class="sxs-lookup"><span data-stu-id="d7098-258">The mouse pointer is positioned over the row, and the row is current and selected.</span></span>|  
+|<span data-ttu-id="d7098-259">MouseOver_EditingRow</span><span class="sxs-lookup"><span data-stu-id="d7098-259">MouseOver_EditingRow</span></span>|<span data-ttu-id="d7098-260">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-260">CommonStates</span></span>|<span data-ttu-id="d7098-261">滑鼠指標位於資料列和資料列處於編輯模式。</span><span class="sxs-lookup"><span data-stu-id="d7098-261">The mouse pointer is positioned over the row and the row is in edit mode.</span></span>|  
+|<span data-ttu-id="d7098-262">MouseOver_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-262">MouseOver_Selected</span></span>|<span data-ttu-id="d7098-263">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-263">CommonStates</span></span>|<span data-ttu-id="d7098-264">滑鼠指標位於資料列，並在選取的資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-264">The mouse pointer is positioned over the row and the row is selected.</span></span>|  
+|<span data-ttu-id="d7098-265">MouseOver_Unfocused_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-265">MouseOver_Unfocused_CurrentRow_Selected</span></span>|<span data-ttu-id="d7098-266">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-266">CommonStates</span></span>|<span data-ttu-id="d7098-267">滑鼠指標位於資料列，資料列目前並加以選取，而且沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-267">The mouse pointer is positioned over the row, the row is current and selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-268">MouseOver_Unfocused_EditingRow</span><span class="sxs-lookup"><span data-stu-id="d7098-268">MouseOver_Unfocused_EditingRow</span></span>|<span data-ttu-id="d7098-269">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-269">CommonStates</span></span>|<span data-ttu-id="d7098-270">滑鼠指標位於資料列、 資料列位於編輯模式，並沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-270">The mouse pointer is positioned over the row, the row is in edit mode, and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-271">MouseOver_Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-271">MouseOver_Unfocused_Selected</span></span>|<span data-ttu-id="d7098-272">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-272">CommonStates</span></span>|<span data-ttu-id="d7098-273">滑鼠指標位於資料列、 資料列已選取，並沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-273">The mouse pointer is positioned over the row, the row is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-274">Normal_CurrentRow</span><span class="sxs-lookup"><span data-stu-id="d7098-274">Normal_CurrentRow</span></span>|<span data-ttu-id="d7098-275">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-275">CommonStates</span></span>|<span data-ttu-id="d7098-276">資料列是目前的資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-276">The row is the current row.</span></span>|  
+|<span data-ttu-id="d7098-277">Normal_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-277">Normal_CurrentRow_Selected</span></span>|<span data-ttu-id="d7098-278">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-278">CommonStates</span></span>|<span data-ttu-id="d7098-279">資料列目前資料列，並已選取。</span><span class="sxs-lookup"><span data-stu-id="d7098-279">The row is the current row and is selected.</span></span>|  
+|<span data-ttu-id="d7098-280">Normal_EditingRow</span><span class="sxs-lookup"><span data-stu-id="d7098-280">Normal_EditingRow</span></span>|<span data-ttu-id="d7098-281">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-281">CommonStates</span></span>|<span data-ttu-id="d7098-282">在資料列處於編輯模式。</span><span class="sxs-lookup"><span data-stu-id="d7098-282">The row is in edit mode.</span></span>|  
+|<span data-ttu-id="d7098-283">Normal_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-283">Normal_Selected</span></span>|<span data-ttu-id="d7098-284">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-284">CommonStates</span></span>|<span data-ttu-id="d7098-285">選取的資料列。</span><span class="sxs-lookup"><span data-stu-id="d7098-285">The row is selected.</span></span>|  
+|<span data-ttu-id="d7098-286">Unfocused_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-286">Unfocused_CurrentRow_Selected</span></span>|<span data-ttu-id="d7098-287">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-287">CommonStates</span></span>|<span data-ttu-id="d7098-288">資料列目前資料列、 已選取，而且沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-288">The row is the current row, is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-289">Unfocused_EditingRow</span><span class="sxs-lookup"><span data-stu-id="d7098-289">Unfocused_EditingRow</span></span>|<span data-ttu-id="d7098-290">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-290">CommonStates</span></span>|<span data-ttu-id="d7098-291">資料列處於編輯模式，而且沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-291">The row is in edit mode and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-292">Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="d7098-292">Unfocused_Selected</span></span>|<span data-ttu-id="d7098-293">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-293">CommonStates</span></span>|<span data-ttu-id="d7098-294">資料列已選取，而且沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-294">The row is selected and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-295">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="d7098-295">InvalidFocused</span></span>|<span data-ttu-id="d7098-296">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-296">ValidationStates</span></span>|<span data-ttu-id="d7098-297">控制項無效且已取得焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-297">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="d7098-298">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="d7098-298">InvalidUnfocused</span></span>|<span data-ttu-id="d7098-299">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-299">ValidationStates</span></span>|<span data-ttu-id="d7098-300">控制項無效且未取得焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-300">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-301">驗證</span><span class="sxs-lookup"><span data-stu-id="d7098-301">Valid</span></span>|<span data-ttu-id="d7098-302">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-302">ValidationStates</span></span>|<span data-ttu-id="d7098-303">控制項有效。</span><span class="sxs-lookup"><span data-stu-id="d7098-303">The control is valid.</span></span>|  
   
-## DataGridColumnHeadersPresenter 組件  
- 下表列出 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 項目的具名組件。  
+## <a name="datagridcolumnheaderspresenter-parts"></a><span data-ttu-id="d7098-304">DataGridColumnHeadersPresenter 組件</span><span class="sxs-lookup"><span data-stu-id="d7098-304">DataGridColumnHeadersPresenter Parts</span></span>  
+ <span data-ttu-id="d7098-305">下表列出的具名組件<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-305">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> element.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-306">組件</span><span class="sxs-lookup"><span data-stu-id="d7098-306">Part</span></span>|<span data-ttu-id="d7098-307">類型</span><span class="sxs-lookup"><span data-stu-id="d7098-307">Type</span></span>|<span data-ttu-id="d7098-308">說明</span><span class="sxs-lookup"><span data-stu-id="d7098-308">Description</span></span>|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|資料行行首的預留位置。|  
+|<span data-ttu-id="d7098-309">PART_FillerColumnHeader</span><span class="sxs-lookup"><span data-stu-id="d7098-309">PART_FillerColumnHeader</span></span>|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|<span data-ttu-id="d7098-310">資料行標頭預留位置。</span><span class="sxs-lookup"><span data-stu-id="d7098-310">The placeholder for column headers.</span></span>|  
   
-## DataGridColumnHeadersPresenter 狀態  
- 下表列出 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 項目的可見狀態。  
+## <a name="datagridcolumnheaderspresenter-states"></a><span data-ttu-id="d7098-311">DataGridColumnHeadersPresenter 狀態</span><span class="sxs-lookup"><span data-stu-id="d7098-311">DataGridColumnHeadersPresenter States</span></span>  
+ <span data-ttu-id="d7098-312">下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-312">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> element.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-313">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-313">VisualState Name</span></span>|<span data-ttu-id="d7098-314">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-314">VisualStateGroup Name</span></span>|<span data-ttu-id="d7098-315">說明</span><span class="sxs-lookup"><span data-stu-id="d7098-315">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|InvalidFocused|ValidationStates|儲存格無效，但是有焦點。|  
-|InvalidUnfocused|ValidationStates|儲存格無效且沒有焦點。|  
-|Valid|ValidationStates|儲存格有效。|  
+|<span data-ttu-id="d7098-316">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="d7098-316">InvalidFocused</span></span>|<span data-ttu-id="d7098-317">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-317">ValidationStates</span></span>|<span data-ttu-id="d7098-318">資料格不正確，而且具有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-318">The cell is not valid and has focus.</span></span>|  
+|<span data-ttu-id="d7098-319">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="d7098-319">InvalidUnfocused</span></span>|<span data-ttu-id="d7098-320">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-320">ValidationStates</span></span>|<span data-ttu-id="d7098-321">資料格不是有效的而且沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-321">The cell is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-322">驗證</span><span class="sxs-lookup"><span data-stu-id="d7098-322">Valid</span></span>|<span data-ttu-id="d7098-323">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-323">ValidationStates</span></span>|<span data-ttu-id="d7098-324">資料格是有效的。</span><span class="sxs-lookup"><span data-stu-id="d7098-324">The cell is valid.</span></span>|  
   
-## DataGridColumnHeader 組件  
- 下表列出 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 項目的具名組件。  
+## <a name="datagridcolumnheader-parts"></a><span data-ttu-id="d7098-325">DataGridColumnHeader 組件</span><span class="sxs-lookup"><span data-stu-id="d7098-325">DataGridColumnHeader Parts</span></span>  
+ <span data-ttu-id="d7098-326">下表列出的具名組件<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-326">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-327">組件</span><span class="sxs-lookup"><span data-stu-id="d7098-327">Part</span></span>|<span data-ttu-id="d7098-328">類型</span><span class="sxs-lookup"><span data-stu-id="d7098-328">Type</span></span>|<span data-ttu-id="d7098-329">說明</span><span class="sxs-lookup"><span data-stu-id="d7098-329">Description</span></span>|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|項目，用來從左側調整資料行行首的大小。|  
-|PART\_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|項目，用來從右側調整資料行行首的大小。|  
+|<span data-ttu-id="d7098-330">PART_LeftHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="d7098-330">PART_LeftHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="d7098-331">用來調整資料行行首從左邊的項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-331">The element that is used to resize the column header from the left.</span></span>|  
+|<span data-ttu-id="d7098-332">PART_RightHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="d7098-332">PART_RightHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="d7098-333">用來調整資料行行首從右邊項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-333">The element that is used to resize the column header from the right.</span></span>|  
   
-## DataGridColumnHeader 狀態  
- 下表列出 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 項目的可見狀態。  
+## <a name="datagridcolumnheader-states"></a><span data-ttu-id="d7098-334">DataGridColumnHeader 狀態</span><span class="sxs-lookup"><span data-stu-id="d7098-334">DataGridColumnHeader States</span></span>  
+ <span data-ttu-id="d7098-335">下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>項目。</span><span class="sxs-lookup"><span data-stu-id="d7098-335">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="d7098-336">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-336">VisualState Name</span></span>|<span data-ttu-id="d7098-337">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="d7098-337">VisualStateGroup Name</span></span>|<span data-ttu-id="d7098-338">描述</span><span class="sxs-lookup"><span data-stu-id="d7098-338">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|MouseOver|CommonStates|滑鼠指標位於控制項上方。|  
-|Pressed|CommonStates|已按下控制項。|  
-|SortAscending|SortStates|資料行以遞增方式排序。|  
-|SortDescending|SortStates|資料行以遞減方式排序。|  
-|Unsorted|SortStates|資料行未排序。|  
-|InvalidFocused|ValidationStates|控制項無效，但是有焦點。|  
-|InvalidUnfocused|ValidationStates|控制項無效且沒有焦點。|  
-|Valid|ValidationStates|控制項有效。|  
+|<span data-ttu-id="d7098-339">一般</span><span class="sxs-lookup"><span data-stu-id="d7098-339">Normal</span></span>|<span data-ttu-id="d7098-340">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-340">CommonStates</span></span>|<span data-ttu-id="d7098-341">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="d7098-341">The default state.</span></span>|  
+|<span data-ttu-id="d7098-342">MouseOver</span><span class="sxs-lookup"><span data-stu-id="d7098-342">MouseOver</span></span>|<span data-ttu-id="d7098-343">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-343">CommonStates</span></span>|<span data-ttu-id="d7098-344">滑鼠指標移到控制項上。</span><span class="sxs-lookup"><span data-stu-id="d7098-344">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="d7098-345">按下</span><span class="sxs-lookup"><span data-stu-id="d7098-345">Pressed</span></span>|<span data-ttu-id="d7098-346">CommonStates</span><span class="sxs-lookup"><span data-stu-id="d7098-346">CommonStates</span></span>|<span data-ttu-id="d7098-347">已按下控制項。</span><span class="sxs-lookup"><span data-stu-id="d7098-347">The control is pressed.</span></span>|  
+|<span data-ttu-id="d7098-348">SortAscending</span><span class="sxs-lookup"><span data-stu-id="d7098-348">SortAscending</span></span>|<span data-ttu-id="d7098-349">SortStates</span><span class="sxs-lookup"><span data-stu-id="d7098-349">SortStates</span></span>|<span data-ttu-id="d7098-350">資料行是以遞增順序排序。</span><span class="sxs-lookup"><span data-stu-id="d7098-350">The column is sorted in ascending order.</span></span>|  
+|<span data-ttu-id="d7098-351">SortDescending</span><span class="sxs-lookup"><span data-stu-id="d7098-351">SortDescending</span></span>|<span data-ttu-id="d7098-352">SortStates</span><span class="sxs-lookup"><span data-stu-id="d7098-352">SortStates</span></span>|<span data-ttu-id="d7098-353">資料行是以遞減順序排序。</span><span class="sxs-lookup"><span data-stu-id="d7098-353">The column is sorted in descending order.</span></span>|  
+|<span data-ttu-id="d7098-354">未排序</span><span class="sxs-lookup"><span data-stu-id="d7098-354">Unsorted</span></span>|<span data-ttu-id="d7098-355">SortStates</span><span class="sxs-lookup"><span data-stu-id="d7098-355">SortStates</span></span>|<span data-ttu-id="d7098-356">未排序的資料行。</span><span class="sxs-lookup"><span data-stu-id="d7098-356">The column is not sorted.</span></span>|  
+|<span data-ttu-id="d7098-357">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="d7098-357">InvalidFocused</span></span>|<span data-ttu-id="d7098-358">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-358">ValidationStates</span></span>|<span data-ttu-id="d7098-359">控制項無效且已取得焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-359">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="d7098-360">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="d7098-360">InvalidUnfocused</span></span>|<span data-ttu-id="d7098-361">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-361">ValidationStates</span></span>|<span data-ttu-id="d7098-362">控制項無效且未取得焦點。</span><span class="sxs-lookup"><span data-stu-id="d7098-362">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="d7098-363">驗證</span><span class="sxs-lookup"><span data-stu-id="d7098-363">Valid</span></span>|<span data-ttu-id="d7098-364">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="d7098-364">ValidationStates</span></span>|<span data-ttu-id="d7098-365">控制項有效。</span><span class="sxs-lookup"><span data-stu-id="d7098-365">The control is valid.</span></span>|  
   
-## DataGrid ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.DataGrid> 控制項的 <xref:System.Windows.Controls.ControlTemplate> 及其關聯的型別。  
+## <a name="datagrid-controltemplate-example"></a><span data-ttu-id="d7098-366">DataGrid ControlTemplate 範例</span><span class="sxs-lookup"><span data-stu-id="d7098-366">DataGrid ControlTemplate Example</span></span>  
+ <span data-ttu-id="d7098-367">下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.DataGrid>控制項和其相關聯的類型。</span><span class="sxs-lookup"><span data-stu-id="d7098-367">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.DataGrid> control and its associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
- 前述範例使用了下列一或多項資源。  
+ <span data-ttu-id="d7098-368">上述範例使用下列一或多項資源。</span><span class="sxs-lookup"><span data-stu-id="d7098-368">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱          [使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="d7098-369">如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。</span><span class="sxs-lookup"><span data-stu-id="d7098-369">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="d7098-370">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7098-370">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="d7098-371">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="d7098-371">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="d7098-372">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="d7098-372">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="d7098-373">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="d7098-373">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="d7098-374">透過建立 ControlTemplate 自訂現有控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="d7098-374">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

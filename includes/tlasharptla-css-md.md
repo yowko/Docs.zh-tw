@@ -1,1 +1,1 @@
-階層式樣式表 (CSS)
+<span data-ttu-id="2c450-101">階層式樣式表 (CSS)</span><span class="sxs-lookup"><span data-stu-id="2c450-101">Cascading Style Sheets (CSS)</span></span>
