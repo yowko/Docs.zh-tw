@@ -1,45 +1,51 @@
 ---
-title: "Managed Threading Best Practices | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], design guidelines"
-  - "threading [.NET Framework], best practices"
-  - "managed threading"
+title: "Managed 執行緒處理的最佳實施方針"
+ms.custom: 
+ms.date: 11/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- threading [.NET Framework], design guidelines
+- threading [.NET Framework], best practices
+- managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e396bb1f6a710e49e311ca1526a7aae9bca7bf90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Managed Threading Best Practices
-多執行緒處理需要仔細的程式設計。  對於大多數工作而言，您可以藉由執行緒集區執行緒將執行要求排入佇列，以減低複雜度。  這個主題提出更困難的狀況，例如協調多執行緒的工作，或處理封鎖的執行緒。  
+# <a name="managed-threading-best-practices"></a>Managed 執行緒處理的最佳實施方針
+在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  
   
 > [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，工作平行程式庫與 PLINQ 提供可簡化某種程度複雜性以及多執行序程式設計風險的 API。  如需詳細資訊，請參閱[Parallel Programming](../../../docs/standard/parallel-programming/index.md)。  
+> 從.NET Framework 4 開始，工作平行程式庫和 PLINQ 提供減少的複雜度和風險的多執行緒程式設計的 Api。 如需詳細資訊，請參閱[.NET 平行程式設計](../../../docs/standard/parallel-programming/index.md)。  
   
-## 死結和競爭情形  
- 多執行緒處理解決了生產率和回應效能的問題，但是這樣做也導致新的問題：死結 \(Deadlock\) 和競爭情形 \(Race Condition\)。  
+## <a name="deadlocks-and-race-conditions"></a>死結和競爭情形  
+ 多執行緒可透過輸送量和回應性來解決問題，但這麼做又會引發新的問題︰死結和競爭情形。  
   
-### 死結  
- 當兩個執行緒都嘗試鎖定另一個執行緒已經鎖定的資源時，就會發生死結。  兩個執行緒都不能繼續進行。  
+### <a name="deadlocks"></a>死結  
+ 當兩個執行緒各自嘗試鎖定彼此已鎖定的資源時，系統就會發生死結。 這兩個執行緒都無法再有所進展。  
   
- Managed 執行緒處理類別的許多方法都提供等候逾時，以幫助您偵測死結。  例如，下列程式碼嘗試對目前的執行個體取得鎖定。  如果無法在 300 毫秒內取得鎖定，則 <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=fullName> 會傳回 **false**。  
+ Managed 執行緒類別有許多方法會提供逾時機制，以幫助您偵測死結情形。 例如，下列程式碼嘗試命名的物件上取得鎖定`lockObject`。 如果不以 300 毫秒為單位，取得鎖定<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>傳回`false`。  
   
 ```vb  
 If Monitor.TryEnter(lockObject, 300) Then  
     Try  
         ' Place code protected by the Monitor here.  
     Finally  
-        Monitor.Exit(Me)  
+        Monitor.Exit(lockObject)  
     End Try  
 Else  
     ' Code to execute if the attempt times out.  
@@ -52,7 +58,7 @@ if (Monitor.TryEnter(lockObject, 300)) {
         // Place code protected by the Monitor here.  
     }  
     finally {  
-        Monitor.Exit(this);  
+        Monitor.Exit(lockObject);  
     }  
 }  
 else {  
@@ -60,67 +66,67 @@ else {
 }  
 ```  
   
-### 競爭情形  
- 競爭情形是一種錯誤，這種錯誤是指根據兩個或多個執行緒之中，哪一個先到達程式碼的特定區塊而決定程式的結果。  執行程式多次會產生不同的結果，並且無法預測任何指定的執行結果。  
+### <a name="race-conditions"></a>追蹤條件  
+ 當程式的結果取決於兩個以上的執行緒何者先到達特定程式碼區塊時，系統便會發生競爭情形這個錯誤。 執行程式多次會產生不同的結果，因而讓系統無法預測當回執行的結果。  
   
- 遞增欄位是競爭情形的一個簡單範例。  假設某個類別有一個私用 **static** 欄位 \(在 Visual Basic 中為 **Shared**\)，您可以使用類似 `objCt++;` \(C\#\) 或 `objCt += 1` \(Visual Basic\) 的程式碼，在每次建立此類別的執行個體時，該欄位就遞增。  這個作業需要從 `objCt` 載入值到暫存器、遞增這個值，並且將它儲存到 `objCt` 中。  
+ 遞增欄位值的作業就是簡單的競爭情形範例。 假設某個類別具有 **static** 私用欄位 (在 Visual Basic 中是 **Shared**)，每當該類別建立了執行個體，該欄位就會使用 `objCt++;` (C#) 或 `objCt += 1` (Visual Basic) 之類的程式碼來遞增值。 這項作業需要將 `objCt` 的值載入到暫存器、將值遞增，然後儲存在 `objCt` 中。  
   
- 在多執行緒的應用程式中，已經載入並遞增值的執行緒，可能被其他執行緒搶先並執行完所有步驟；當第一個執行緒繼續執行並儲存它的值時，它會覆寫 `objCt` 而沒有考慮到在這期間值已經變更的事實。  
+ 在多執行緒應用程式中，已經載入並遞增值的執行緒可能會讓另一個將三個步驟全都執行完畢的執行緒來先佔；當第一個執行緒繼續執行並儲存其值時，它會不顧值已在過渡期間變更的事實而覆寫 `objCt`。  
   
- 使用 <xref:System.Threading.Interlocked> 類別的方法，如 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=fullName>，很容易就可以避免這個特定的競爭情形。  若要閱讀有關同步處理多執行緒之間資料的其他技術，請參閱[同步處理多執行緒處理的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)。  
+ 使用方法來輕鬆地避免這個特定的競爭情形<xref:System.Threading.Interlocked>類別，例如<xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>。 若要了解其他可用來在多個執行緒之間同步處理資料的技術，請參閱[同步處理多執行緒的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)。  
   
- 競爭情形也可能在同步處理多執行緒的活動時發生。  當您撰寫一行程式碼時，必須要考慮在該行執行之前 \(或者在構成該行的任一個別電腦指令執行之前\)，如果執行緒已經優先執行而又被其他執行緒取代時會發生的問題。  
+ 當您同步處理多個執行緒的活動時，系統也會發生競爭情形。 每當您編寫一行程式碼時，您必須考慮如果某個執行緒在執行該行程式碼之前 (或在構成該行程式碼的個別電腦指令之前) 就讓其他執行緒先佔，而且另一個執行緒超過該執行緒時，系統可能會發生什麼狀況。  
   
-## 處理器的數量  
- 現在大部分電腦都有多個處理器 \(也稱為核心\)，即使像平板電腦和手機這樣的小型裝置也是如此。  如果您知道您正在開發的軟體也會在單一處理器電腦上執行，就應該了解多執行緒為單一處理器電腦和多處理器電腦解決的問題是有所不同的。  
+## <a name="number-of-processors"></a>處理器數目  
+ 現今大多數的電腦都有多個處理器 (也稱為核心)，即使是小如平板電腦和手機的裝置也是如此。 如果您知道您要開發的軟體也會在單一處理器的電腦上執行，您應該了解多執行緒可為單一處理器電腦和多處理器電腦解決不同的問題。  
   
-### 多處理器電腦  
- 多執行緒處理提供更佳的速度。  十個處理器可以做到一個處理器工作的十倍，但是工作必須分割，如此十份工作才能同時進行；執行緒提供簡單的方式來分割工作，並且利用額外的處理能力。  如果在多處理器電腦上使用多執行緒處理，則會有下列情況：  
+### <a name="multiprocessor-computers"></a>多處理器電腦  
+ 多執行緒可提供更大的輸送量。 十個處理器可以執行的工作是一個處理器的十倍，但前提是該項工作必須分割，方能讓十個處理器可以同時工作；執行緒可讓您輕鬆地分割工作，並利用額外的處理能力。 如果您在多處理器電腦上使用多執行緒︰  
   
--   可以並行執行的執行緒數量受限於處理器的數量。  
+-   可以同時執行的執行緒數目受限於處理器數目。  
   
--   只有在前景執行緒的執行數量小於處理器數量時，背景執行緒才會執行。  
+-   執行中的前景執行緒數目小於處理器數目時，背景執行緒才會執行。  
   
--   在執行緒呼叫 <xref:System.Threading.Thread.Start%2A?displayProperty=fullName> 方法時，該執行緒是否會立即開始執行，這要看處理器的數量和目前等待執行的執行緒數量而定。  
+-   當您呼叫<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>執行緒上的方法，該執行緒可能會或可能會立即開始執行，取決於處理器的數目和目前等待執行的執行緒數目。  
   
--   競爭情形不只因為執行緒未預期地被取代執行才可能發生，也可能因為在不同處理器上執行的兩個執行緒爭先到達相同的程式碼區塊而發生。  
+-   之所以會發生競爭情形，不僅是因為執行緒意外讓其他執行緒先佔，還因為在不同處理器上執行的兩個執行緒可能會競相到達相同的程式碼區塊。  
   
-### 單一處理器電腦  
- 多執行緒處理提供電腦使用者更佳的回應效能，並且利用閒置時間執行背景工作。  如果在單一處理器電腦上使用多執行緒處理，則會有下列情況：  
+### <a name="single-processor-computers"></a>單一處理器電腦  
+ 多執行緒可為電腦使用者提供更高的回應性，並且會使用閒置時間來處理背景工作。 如果您在單一處理器電腦上使用多執行緒︰  
   
--   在任一執行個體上只會執行一個執行緒。  
+-   不論何時都只會有一個執行緒執行。  
   
--   只有在主使用者執行緒閒置時才會執行背景執行緒。  不斷執行的前景執行緒會消耗掉背景執行緒所需的執行緒時間。  
+-   只有當主要的使用者執行緒閒置時，背景執行緒才會執行。 持續執行的前景執行緒會讓背景執行緒無法獲得半點處理器時間。  
   
--   在執行緒呼叫 <xref:System.Threading.Thread.Start%2A?displayProperty=fullName> 方法時，該執行緒會等到目前執行緒停止或被作業系統取代時才開始執行。  
+-   當您呼叫<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>方法執行緒，執行緒不會啟動執行，直到目前的執行緒會產生或清空的作業系統。  
   
--   競爭情形通常是因為程式設計師沒有預期執行緒會在不方便的時機被取代執行而發生，有時會允許其他執行緒先到達程式碼區塊。  
+-   競爭情形的一般發生原因是，程式設計人員實際上未預期到執行緒會在棘手的時機讓其他執行緒先佔，這有時會讓其他執行緒先到達程式碼區塊。  
   
-## 靜態成員和靜態建構函式  
- 當類別的類別建構函式 \(Constructor\) \(C\# 內為 `static` 建構函式，Visual Basic 內為 `Shared Sub New`\) 執行完畢之後，才會將此類別初始化。  為了避免在未初始化的型別上執行程式碼，Common Language Runtime 會封鎖所有從其他執行緒對該類別之 `static` 成員的呼叫 \(Visual Basic 內為 `Shared` 成員\)，直到類別建構函式執行完畢為止。  
+## <a name="static-members-and-static-constructors"></a>Static 成員和 Static 建構函式  
+ 類別要等到其類別建構函式 (C# 中是 `static` 建構函式，Visual Basic 中是 `Shared Sub New`) 執行完畢後才會初始化。 為避免程式碼在未初始化的型別上執行，通用語言執行平台會在類別建構函式執行完畢前，封鎖其他執行緒對該類別之 `static` 成員 (Visual Basic 中是 `Shared` 成員) 的所有呼叫。  
   
- 例如，如果某個類別建構函式啟動新的執行緒，而且該執行緒程序呼叫了此類別的 `static` 成員，則會封鎖新的執行緒，直到類別建構函式完成為止。  
+ 例如，如果類別建構函式會開始新的執行緒，而執行緒程序會呼叫該類別的 `static` 成員，則新的執行緒會封鎖起來，直到類別建構函式完成。  
   
- 這種情形適用於可擁有 `static` 建構函式的任何型別。  
+ 這適用於任何可以具有 `static` 建構函式的型別。  
   
-## 一般建議  
- 使用多執行緒時請考慮下列方針：  
+## <a name="general-recommendations"></a>一般建議  
+ 在使用多執行緒時，請考慮下列指導方針︰  
   
--   請不要使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> 來結束其他執行緒。  在其他執行緒呼叫 **Abort** 類似於在該執行緒傳回例外狀況，而不知道執行緒在處理中已到達哪個點。  
+-   請勿使用<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>終止其他執行緒。 對另一個執行緒呼叫 **Abort** 就像對該執行緒擲回例外狀況，卻不知道該執行緒已到達哪個處理階段。  
   
--   請不要使用 <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName> 和 <xref:System.Threading.Thread.Resume%2A?displayProperty=fullName> 來同步處理多個執行緒的活動。  請使用 <xref:System.Threading.Mutex>、<xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.Monitor>。  
+-   請勿使用<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>和<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>來同步處理多個執行緒的活動。 請勿使用<xref:System.Threading.Mutex>， <xref:System.Threading.ManualResetEvent>， <xref:System.Threading.AutoResetEvent>，和<xref:System.Threading.Monitor>。  
   
--   不要從主程式 \(例如使用事件\) 來控制背景工作執行緒 \(Worker Thread\) 的執行。  反而是在設計程式時，將背景工作執行緒設定在等待狀態，直到可以使用工作時才執行它，並在工作完成時通知程式的其他部分。  如果背景工作執行緒並未封鎖，請考慮使用執行緒集區執行緒。  <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=fullName> 在背景工作執行緒封鎖的狀況下非常有用。  
+-   不要從主要程式控制背景工作執行緒的執行 (例如，使用事件)。 相反地，請設計您的程式，讓背景工作執行緒負責等候到可進行工作、執行工作，並在工作完成時通知程式的其他組件。 如果背景工作執行緒不會封鎖起來，請考慮使用執行緒集區的執行緒。 <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>在其中工作者執行緒封鎖的情況下很有用。  
   
--   請勿將型別當做鎖定物件使用，  也就是說，要避免使用類似 C\# 內的 `lock(typeof(X))` 或 Visual Basic 內的 `SyncLock(GetType(X))` 程式碼，或是搭配 <xref:System.Type> 物件使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName>。  如果是指定的型別，每個應用程式定義域只能有一個 <xref:System.Type?displayProperty=fullName> 執行個體 \(Instance\)。  如果您鎖定的型別是公用 \(Public\) 型別，則如果使用您自己的程式碼之外的程式碼鎖定該型別，將會導致死結 \(Deadlock\)。  如需其他問題的詳細資訊，請參閱[可靠性最佳作法](../../../docs/framework/performance/reliability-best-practices.md)。  
+-   請勿使用型別來作為鎖定物件。 也就是避免程式碼，例如`lock(typeof(X))`在 C# 或`SyncLock(GetType(X))`中 Visual Basic 中或使用<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>與<xref:System.Type>物件。 指定的型別，有是只有一個執行個體<xref:System.Type?displayProperty=nameWithType>每個應用程式網域。 如果您鎖定的型別是公用的，則不是您自有的程式碼也可鎖定該型別，而導致死結。 若要了解其他問題，請參閱[可靠性最佳作法](../../../docs/framework/performance/reliability-best-practices.md)。  
   
--   在鎖定執行個體時要特別小心，例如，在 C\# 內使用 `lock(this)`，或在 Visual Basic 內使用 `SyncLock(Me)`。  如果應用程式內的其他程式碼 \(型別的外部\) 鎖定了物件，則可能會發生死結。  
+-   鎖定執行個體時請小心，例如 C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果您應用程式中屬於該型別之外的其他程式碼鎖定物件，系統可能會發生死結。  
   
--   請確認已經輸入監視器的執行緒永久保留該監視器，即使當執行緒在監視器中發生例外狀況。  C\# [lock](../Topic/lock%20Statement%20\(C%23%20Reference\).md) 陳述式和 Visual Basic [SyncLock](../../../ocs/visual-basic/language-reference/statements/synclock-statement.md) 陳述式藉由使用 **finally** 區塊，確認已經呼叫 <xref:System.Threading.Monitor.Exit%2A?displayProperty=fullName> 來自動提供這個行為。  如果您無法確認 **Exit** 會被呼叫，請考慮變更設計來使用 **Mutex**。  在目前擁有 Mutex 的執行緒結束時，Mutex 就會被自動釋放。  
+-   請務必要確定已進入監視器的執行緒一律會離開該監視器，即使執行緒還在監視器內卻發生例外狀況時亦然。 C#[鎖定](~/docs/csharp/language-reference/keywords/lock-statement.md)陳述式和 Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)陳述式提供這種行為會自動採用**最後**區塊，以確保<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>是呼叫。 如果您無法確保系統會呼叫 **Exit**，請考慮將您的設計改為使用 **Mutex**。 目前擁有 Mutex 的執行緒在終止時會自動將其釋放。  
   
--   請將多執行緒用於需要不同資源的工作，並且避免指派多執行緒給單一資源。  例如，凡是涉及 I\/O 的工作都可藉由擁有自己的執行緒而獲益，因為該執行緒會在 I\/O 作業期間封鎖，所以會允許其他執行緒執行。  使用者輸入是另一個從專屬執行緒中獲益的資源。  在單一處理器的電腦上，涉及大量計算的工作會與使用者輸入和包含 I\/O 的工作共存，但是多個大量計算的工作卻會互相競爭。  
+-   對於需要不同資源的工作，請使用多個執行緒，並避免將多個執行緒指派給單一資源。 例如，任何涉及 I/O 的工作都可受惠於擁有自己的執行緒，因為該執行緒會在 I/O 作業期間封鎖起來，進而讓其他執行緒得以執行。 使用者輸入是受惠於專用執行緒的另一項資源。 在單一處理器電腦上，涉及大量計算的工作會與使用者輸入共存，並與涉及 I/O 的工作共存，但多個需要大量計算的工作會彼此爭用。  
   
--   請考慮使用 <xref:System.Threading.Interlocked> 類別的方法進行簡單的狀態變更，而不要使用 `lock` 陳述式 \(Visual Basic 中的 `SyncLock`\)。  `lock` 陳述式是用於一般用途的好工具，但是 <xref:System.Threading.Interlocked> 類別能為不可部分完成的更新提供更佳的效能。  如果沒有爭用情形，此類別會在內部執行單一的鎖定前置詞。  在檢視程式碼時，請注意類似下列範例所示的程式碼。  在第一個範例中會遞增狀態變數：  
+-   請考慮使用的方法<xref:System.Threading.Interlocked>類別的簡單狀態變更，而不是使用`lock`陳述式 (`SyncLock`在 Visual Basic 中)。 `lock`陳述式是很好的一般用途工具，但<xref:System.Threading.Interlocked>類別會提供更佳的效能，必須是不可部分完成的更新。 就內部而言，如果沒有爭用的情況，它會執行單一鎖定前置詞。 在檢閱程式碼時，請注意如下列範例所示的程式碼。 在第一個範例中，狀態變數會遞增︰  
   
     ```vb  
     SyncLock lockObject  
@@ -135,7 +141,7 @@ else {
     }  
     ```  
   
-     您可以藉由使用 <xref:System.Threading.Interlocked.Increment%2A> 方法 \(而不是 `lock` 陳述式\) 改進效能，如下所示：  
+     您可以使用來改善效能<xref:System.Threading.Interlocked.Increment%2A>方法，而非`lock`陳述式，如下所示：  
   
     ```vb  
     System.Threading.Interlocked.Increment(myField)  
@@ -146,9 +152,9 @@ else {
     ```  
   
     > [!NOTE]
-    >  在 .NET Framework 2.0 版中，<xref:System.Threading.Interlocked.Add%2A> 方法會以大於 1 的遞增量提供不可部分完成的更新。  
+    >  在.NET Framework 2.0 版中，<xref:System.Threading.Interlocked.Add%2A>方法提供不可部分完成單位大於 1 的更新。  
   
-     在第二個範例中，參考型別變數只有在它是 null 參考 \(在 Visual Basic 中為 `Nothing`\) 時才會更新。  
+     在第二個範例中，只有當參考型別變數是 Null 參考 (在 Visual Basic 中是 `Nothing`) 時，該變數才會更新。  
   
     ```vb  
     If x Is Nothing Then  
@@ -173,7 +179,7 @@ else {
     }  
     ```  
   
-     可藉由改用 <xref:System.Threading.Interlocked.CompareExchange%2A> 方法改善效能，如下所示：  
+     可以使用來改善效能<xref:System.Threading.Interlocked.CompareExchange%2A>方法，如下：  
   
     ```vb  
     System.Threading.Interlocked.CompareExchange(x, y, Nothing)  
@@ -184,19 +190,19 @@ else {
     ```  
   
     > [!NOTE]
-    >  在 .NET Framework 2.0 版中，<xref:System.Threading.Interlocked.CompareExchange%2A> 方法具有泛型多載，可用於任何參考型別的型別安全取代。  
+    >  在.NET Framework 2.0 版中，<xref:System.Threading.Interlocked.CompareExchange%2A>方法具有可用於任何參考類型的型別安全取代一個泛型多載。  
   
-## 給類別庫的建議  
- 在設計多執行緒的類別庫時請考慮下列方針：  
+## <a name="recommendations-for-class-libraries"></a>類別庫的建議  
+ 在設計類別庫的多執行緒功能時，請考慮下列指導方針︰  
   
--   如有可能，請盡量減少同步處理的需要。  對於經常使用的程式碼特別是如此。  例如，可以將演算法調整為能夠接受某一競爭情形的程度，而不是排除該競爭情形。  不必要的同步處理會降低效能，並且可能會導致死結和競爭情形。  
+-   盡可能避免同步處理需求。 經常使用的程式碼更該避免這一點。 例如，您可以調整演算法，使它容許競爭情形，而非消除此情形。 不必要的同步處理會降低效能，並有可能產生死結和競爭情形。  
   
--   請將靜態資料 \(在 Visual Basic 中為 `Shared`\) 預設為執行緒安全。  
+-   讓 static 資料 (在 Visual Basic 中是 `Shared`) 的執行緒預設保有安全性。  
   
--   請勿將執行個體資料預設為執行緒安全。  增加鎖定以建立執行緒安全的程式碼會使效能降低、增加鎖定爭用，並製造死結發生的可能性。  在通用的應用程式模型中，一次只有一個執行緒會執行使用者程式碼，這樣可使執行緒安全性的需求降至最低。  因為這個原因，.NET Framework 類別庫預設並非執行緒安全。  
+-   不要讓執行個體資料的執行緒預設保有安全性。 新增鎖定以建立安全執行緒程式碼的作法，會降低效能、增加鎖定爭用並可能導致死結發生。 在一般的應用程式模型中，一次只會有一個執行緒執行使用者程式碼，這種方式可將執行緒安全性的需求降到最低。 為此，.NET Framework 類別庫依預設不會保有執行緒安全性。  
   
--   請避免提供會變更靜態狀態的靜態方法。  在一般的伺服器案例中，所有的要求都會共用靜態狀態，這表示該程式碼可由多執行緒同時執行。  這樣會增加發生執行緒處理錯誤的可能性。  請考慮使用將資料封裝在執行個體內的設計模式 \(這些執行個體不會在要求之間共用\)。  此外，如果靜態資料經過同步處理，則在能夠改變狀態的靜態方法之間的呼叫可能會導致死結或重複同步處理的情況，因而對效能造成負面的影響。  
+-   避免提供會變更靜態狀態的靜態方法。 在一般的伺服器案例中，所有要求會共用靜態狀態，這表示多個執行緒可以同時執行該程式碼。 這可能會讓執行緒發生錯誤。 請考慮使用某種設計模式，以將資料封裝到不會讓所有要求共用的執行個體。 此外，如果靜態資料會同步處理，會在靜態方法之間改變狀態的呼叫將會導致死結或多餘的同步處理，而對效能造成負面影響。  
   
-## 請參閱  
- [Threading](../../../docs/standard/threading/index.md)   
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>另請參閱  
+ [執行緒處理](../../../docs/standard/threading/index.md)  
+ [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)

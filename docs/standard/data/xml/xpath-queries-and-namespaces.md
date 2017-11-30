@@ -1,37 +1,38 @@
 ---
-title: "XPath 查詢及命名空間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XPath 查詢及命名空間"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b743410f19e7782eff38c10ec996484399e00133
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# XPath 查詢及命名空間
-XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。  使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。  
+# <a name="xpath-queries-and-namespaces"></a>XPath 查詢及命名空間
+XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。 使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。  
   
- 例如，如果前置詞 `books` 對應命名空間 `http://www.contoso.com/books`，則下列 XPath 查詢 `/books:books/books:book` 只會選取命名空間 `http://www.contoso.com/books` 中的那些 `book` 項目。  
+ 例如，如果前置詞 `books` 對應命名空間 `http://www.contoso.com/books`，則下列 XPath 查詢 `/books:books/books:book` 只會選取命名空間 `book` 中的那些 `http://www.contoso.com/books` 項目。  
   
-## XmlNamespaceManager  
+## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
  若要在 XPath 查詢中使用命名空間，需使用要包含在該 XPath 查詢中的命名空間 URI 及前置詞，建構自 <xref:System.Xml.IXmlNamespaceResolver> 介面衍生的物件，如 <xref:System.Xml.XmlNamespaceManager> 類別。  
   
  可以透過下列每一種方式將 <xref:System.Xml.XmlNamespaceManager> 物件用於查詢中。  
   
--   可藉由使用 <xref:System.Xml.XPath.XPathExpression> 物件的 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 方法，使 <xref:System.Xml.XmlNamespaceManager> 物件與現有 <xref:System.Xml.XPath.XPathExpression> 物件產生關聯。  您也可使用靜態 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 方法編譯新的 <xref:System.Xml.XPath.XPathExpression> 物件；該方法會採用表示 XPath 運算式的字串及 <xref:System.Xml.XmlNamespaceManager> 物件做為參數，並傳回新的 <xref:System.Xml.XPath.XPathExpression> 物件。  
+-   可藉由使用 <xref:System.Xml.XmlNamespaceManager> 物件的 <xref:System.Xml.XPath.XPathExpression> 方法，使 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 物件與現有 <xref:System.Xml.XPath.XPathExpression> 物件產生關聯。 您也可使用靜態 <xref:System.Xml.XPath.XPathExpression> 方法編譯新的 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 物件；該方法會採用表示 XPath 運算式的字串及 <xref:System.Xml.XmlNamespaceManager> 物件做為參數，並傳回新的 <xref:System.Xml.XPath.XPathExpression> 物件。  
   
 -   <xref:System.Xml.XmlNamespaceManager> 物件本身會做為參數，連同表示 XPath 運算式的字串一起傳遞至接受的 <xref:System.Xml.XPath.XPathNavigator> 類別方法。  
   
@@ -43,10 +44,10 @@ XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前�
   
 -   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
-### 預設命名空間  
+### <a name="the-default-namespace"></a>預設命名空間  
  在下面的 XML 文件中，會使用具有空前置詞的預設命名空間來宣告 `http://www.contoso.com/books` 命名空間。  
   
-```  
+```xml  
 <books xmlns="http://www.example.com/books">  
     <book>  
         <title>Title</title>  
@@ -56,13 +57,13 @@ XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前�
 </books>  
 ```  
   
- XPath 將空前置詞視為 `null` 命名空間。  換句話說，只有對應至命名空間的前置詞可用於 XPath 查詢。  這表示如果您要根據 XML 文件中的命名空間查詢，則即使它是預設命名空間，您也需要定義它的前置詞。  
+ XPath 將空前置詞視為 `null` 命名空間。 換句話說，只有對應至命名空間的前置詞可用於 XPath 查詢。 這表示如果您要根據 XML 文件中的命名空間查詢，則即使它是預設命名空間，您也需要定義它的前置詞。  
   
  例如，如果不定義上述 XML 文件的前置詞，XPath 查詢 `/books/book` 就不會傳回任何結果。  
   
  如果在有些節點不在命名空間中，有些節點在預設命名空間中的狀況下查詢文件，則必須繫結前置詞以避免模糊不清的情況。  
   
- 下列程式碼定義預設命名空間的前置詞，並從 `http://www.contoso.com/books` 命名空間選取所有的 `book` 項目。  
+ 下列程式碼定義預設命名空間的前置詞，並從 `book` 命名空間選取所有的 `http://www.contoso.com/books` 項目。  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -84,13 +85,13 @@ query.SetContext(manager);
 XPathNodeIterator nodes = navigator.Select(query);  
 ```  
   
-## 請參閱  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [使用 XPathNavigator 選取 XML 資料](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)   
- [使用 XPathNavigator 評估 XPath 運算式](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)   
- [使用 XPathNavigator 比對節點](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)   
- [在 XPath 查詢中辨識的節點型別](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)   
- [編譯 XPath 運算式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [使用 XPathNavigator 選取 XML 資料](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [使用 XPathNavigator 評估 XPath 運算式](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [使用 XPathNavigator 比對節點](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [XPath 查詢中辨識的節點型別](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+ [編譯的 XPath 運算式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

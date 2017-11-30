@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 55329bed71be21a787d6e77d8c0ea67d607676b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -46,7 +45,7 @@ dotnet test [-h|--help]
 
 測試專案也必須指定測試執行器。 這是使用一般 `<PackageReference>` 元素所指定，如下列範例專案檔中所示：
 
-[!code-xml[XUnit 基本範本](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+[!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="arguments"></a>引數
 
@@ -209,15 +208,14 @@ dotnet test [-h|--help]
 
 | 運算子 | 函式 |
 | :------: | :------: |
-| `|`      | 或       |
+| <code>&#124;</code>      | 或       |
 | `&`      | AND      |
 
-使用條件運算子時，您可以用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。
+您也可以將運算式括在括號使用條件式運算子時 (例如， `(Name~TestMethod1) | (Name~TestMethod2)`)。
 
 如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
 ## <a name="see-also"></a>請參閱
 
- [架構與目標](../../standard/frameworks.md)   
+ [架構與目標](../../standard/frameworks.md)  
  [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
-

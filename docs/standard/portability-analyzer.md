@@ -1,5 +1,5 @@
 ---
-title: .NET Portability Analyzer - .NET | Microsoft Docs
+title: .NET Portability Analyzer-.NET
 description: "了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同 .NET 實作之間的可行性。"
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
+ms.openlocfilehash: c204af75283278d16bf661e76f2ec5ae0f1d0b3e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: adb1971c14c8ff8c147dba378ae0e9a5bc0fb5ad
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
 要將您的程式庫變成多平台？ 想要查看花費多少功夫才能讓您的應用程式與其他 .NET 實作相容嗎？ [.NET Portability Analyzer](http://go.microsoft.com/fwlink/?LinkID=507467) 是一項工具，其藉由分析組件來提供您有關程式在跨 .NET 實作上之彈性的詳細報表。 Portability Analyzer 會以 Visual Studio 擴充功能和主控台應用程式的形式提供給您。
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/21/2017
 您的 .NET Portability 報表會以 Excel 檔案 (*.xlsx*) 格式儲存在您目前目錄中。 Excel 活頁簿中的 [詳細資料] 索引標籤會包含更多的資訊。
 
 如需 .NET Portability Analyzer 的詳細資訊，請瀏覽 [GitHub 文件](https://github.com/Microsoft/dotnet-apiport#documentation)和 Channel 9 影片 [Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) (.NET Portability Analyzer 簡介)。
-

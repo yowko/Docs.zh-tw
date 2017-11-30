@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f2f422c4001c2e6ec46fc796e8dbf1b85e6a2b77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: ff6a55157e886b54d631d1ca5d2598785de7608d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>自訂活動以切換到值的範圍
 這個範例示範如何建立可擴充 <xref:System.Activities.Statements.Switch%601> 用法的自訂活動。 傳統 <xref:System.Activities.Statements.Switch%601> 陳述式允許根據單一值的切換。 但有些商務狀況中活動必須根據值範圍來切換。 例如，當切換依據的值介於 1 和 5 之間時，活動可能會執行某個動作，當值介於 6 和 10 之間時執行另一個動作，並針對所有其他值執行預設動作。 這個自訂活動正是實現該狀況。  
@@ -112,6 +112,4 @@ Activity SwitchRange = new SwitchRange<int>
 >   
 >  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`  
-  
-## <a name="see-also"></a>另請參閱
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`

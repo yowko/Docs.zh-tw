@@ -1,67 +1,53 @@
 ---
 title: "ulong (C# 參考)"
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ulong_CSharpKeyword
 - ulong
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- ulong keyword [C#]
+helpviewer_keywords: ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2058d9f6a228b13938fe08d7e2fb11e3b9f4600a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ulong-c-reference"></a>ulong (C# 參考)
+
 `ulong` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數類型。  
   
 |類型|範圍|大小|.NET Framework 類型|  
 |----------|-----------|----------|-------------------------|  
-|`ulong`|0 到 18,446,744,073,709,551,615|不帶正負號的 64 位元整數|<xref:System.UInt64?displayProperty=fullName>|  
+|`ulong`|0 到 18,446,744,073,709,551,615|不帶正負號的 64 位元整數|<xref:System.UInt64?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>常值  
 
-您可以針對 `ulong` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。  如果整數常值超出 `ulong` 的範圍 (亦即，如果小於 <xref:System.UInt64.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt64.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
+您可以針對 `ulong` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。  如果整數常值超出 `ulong` 的範圍 (亦即，如果小於 <xref:System.UInt64.MinValue?displayProperty=nameWithType> 或大於 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。 
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 7,934,076,125 整數，會指派給 `ulong` 值。  
   
-[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+[!code-csharp[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
 
 > [!NOTE] 
 > 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。 
 
-自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
+開始使用 C# 7，已加入一組功能，以提升可讀性。 
+ - C# 7.0 可讓使用底線字元， `_`，做為千位分隔符號。
+ - 可讓 C# 7.2`_`来做為二進位或十六進位常值、 數字分隔符號 after 前置字元。 十進位常值不允許有前置底線。
 
-[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+某些範例如下所示。
+
+[!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- 整數常值亦可包含後置詞以表示類型。 `UL` 或 `ul` 後置詞明確地將數值常值識別為 `ulong` 值。 如果常值超出 <xref:System.Int64.MaxValue?displayProperty=fullName>，則 `L` 後置詞表示 `ulong`。 如果常值超出 <xref:System.UInt32.MaxValue?displayProperty=fullName>，則 `U` 或 `u` 後置詞表示 `ulong`。 下列範例會使用 `ul` 後置詞來表示長整數：
+ 整數常值亦可包含後置詞以表示類型。 `UL` 或 `ul` 後置詞明確地將數值常值識別為 `ulong` 值。 如果常值超出 <xref:System.Int64.MaxValue?displayProperty=nameWithType>，則 `L` 後置詞表示 `ulong`。 如果常值超出 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>，則 `U` 或 `u` 後置詞表示 `ulong`。 下列範例會使用 `ul` 後置詞來表示長整數：
  
-[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+[!code-csharp[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
 如果整數常值沒有後置詞，其類型會是下列類型中可表示其值的第一個類型： 
 
@@ -74,14 +60,14 @@ ms.lasthandoff: 07/28/2017
   
  後置詞的常見用法是搭配呼叫多載方法。 例如，請考慮使用下列使用 `ulong` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
  搭配使用後置詞與 `ulong` 參數時，可以保證呼叫正確的類型，例如：  
   
-```  
+```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
 SampleMethod(5UL);  // Calling the method with the ulong parameter  
 ```  
@@ -91,7 +77,7 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
   
  沒有從 `ulong` 轉換為任意整數類型的隱含轉換。 例如，下列陳述式會在未明確轉換的情況下產生編譯器錯誤：  
   
-```  
+```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
@@ -99,7 +85,7 @@ long long1 = 8UL;   // Error: no implicit conversion from ulong
   
  同時，沒有從浮點類型轉換為 `ulong` 的隱含轉換。 例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ulong x = 3.0;  
 // OK -- explicit conversion:  
@@ -114,12 +100,11 @@ ulong y = (ulong)3.0;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.UInt64>   
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.UInt64>  
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

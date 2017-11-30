@@ -1,74 +1,77 @@
 ---
-title: "EventWaitHandle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], EventWaitHandle class"
-  - "EventWaitHandle class"
-  - "event wait handles [.NET Framework]"
-  - "threading [.NET Framework], cross-process synchronization"
+title: EventWaitHandle
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], EventWaitHandle class
+- EventWaitHandle class
+- event wait handles [.NET Framework]
+- threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1bd248133bd95ff05246eb36a8e250247fd7ed61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# EventWaitHandle
-<xref:System.Threading.EventWaitHandle> 類別允許執行緒藉由發出信號和等候信號的方式，彼此互相通訊。  事件等候處理 \(又簡稱為事件\)，是一種可以接收信號，以便釋放一個或多個等候中執行緒的等候處理。  在收到信號之後，事件等候處理就會以手動或自動方式重設。  <xref:System.Threading.EventWaitHandle> 類別可以表示本機事件等候處理 \(本機事件\)，或是具名的系統事件等候處理 \(具名事件或系統事件，可見於所有的處理序\)。  
+# <a name="eventwaithandle"></a>EventWaitHandle
+<xref:System.Threading.EventWaitHandle>類別可讓執行緒信號和等候信號與對方進行通訊。 事件等候控制代碼 （也稱為事件） 都可以接收信號，才能發行一或多個等候中執行緒的等候控制代碼。 收到信號之後，手動或自動，會重設事件等候控制代碼。 <xref:System.Threading.EventWaitHandle>類別可代表其中一個本機事件等候控制代碼 （本機事件），或在具名的系統事件等候控制代碼 （名為可見的所有處理程序的系統事件）。  
   
 > [!NOTE]
->  事件等候處理與 .NET Framework 中「事件」一詞通常表示的意義並不相同。  在此並沒有涉及到委派 \(Delegate\) 或事件處理常式。  由於傳統習慣將委派和事件處理常式稱為作業系統事件，並且對等候處理發出信號的動作，會指示等候中執行緒事件已經發生，所以，用「事件」來描述它們。  
+>  事件等候控制代碼不是在概念上，通常是由這個文字的.NET Framework 中的事件。 沒有委派或事件處理常式。 「 事件 」 用來描述它們，因為它們具有傳統上稱為作業系統事件，而且發出信號，等候控制代碼的動作表示等候中執行緒已發生事件。  
   
- 本機和具名事件等候處理都會使用系統同步物件 \(Synchronization Object\)，這些物件由 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 包裝函式保護，以確定會釋放資源。  當您使用過物件之後，可以使用 <xref:System.Threading.WaitHandle.System%23IDisposable%23Dispose%2A> 方法立即釋放資源。  
+ 這兩個本機和具名事件等候控制代碼使用系統同步處理物件，後者會受到保護<xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>包裝函式，以確保會釋放資源。 您可以使用<xref:System.Threading.WaitHandle.Dispose%2A>方法，當您完成使用物件立即釋放資源。  
   
-## 自動重設的事件等候處理  
- 只要在建立 <xref:System.Threading.EventWaitHandle> 物件時，指定 <xref:System.Threading.EventResetMode?displayProperty=fullName>，即可建立自動重設的事件。  如同它的名稱所指的，這個同步處理事件會在收到信號，並且釋放單一等候中執行緒之後自動重設。  呼叫事件的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法，即可對事件發出信號。  
+## <a name="event-wait-handles-that-reset-automatically"></a>自動重設事件等候控制代碼  
+ 指定建立的自動重設事件<xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>當您建立<xref:System.Threading.EventWaitHandle>物件。 正如其名，這個同步處理事件會自動重設時收到信號之後釋出單一的等候執行緒。 發出事件訊號藉由呼叫其<xref:System.Threading.EventWaitHandle.Set%2A>方法。  
   
- 自動重設事件通常是用來一次對單一執行緒提供某項資源的獨佔存取權。  執行緒會呼叫 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法以要求資源。  如果沒有其他執行緒持有等候處理，方法就會傳回 `true`，而呼叫的執行緒便能夠控制資源。  
+ 自動重設事件通常用於一次提供單一執行緒的獨佔存取權的資源。 執行緒藉由呼叫要求資源<xref:System.Threading.WaitHandle.WaitOne%2A>方法。 如果沒有其他執行緒正在等候控制代碼，則方法會傳回`true`和呼叫端執行緒可以控制的資源。  
   
 > [!IMPORTANT]
->  就如同所有的同步處理機制般，在能夠存取受保護的資源以前，您必須確定所有的程式碼路徑都會等候適當的等候處理。  執行緒同步處理是具有合作性的。  
+>  如同所有的同步處理機制，您必須確定所有程式碼路徑等候適當的等候控制代碼上才能存取受保護的資源。 執行緒同步處理是合作式。  
   
- 如果自動重設事件在沒有執行緒等候時收到信號，就會維持收到信號的狀態，直到有執行緒嘗試等候這個事件為止。  事件會釋放該執行緒並立即重設，以封鎖住後續的執行緒。  
+ 如果自動重設事件收到信號時沒有執行緒等候，它會保留信號直到執行緒嘗試在其上等候。 事件會釋放執行緒，並立即重設，封鎖後續的執行緒。  
   
-## 手動重設的事件等候處理  
- 只要在建立 <xref:System.Threading.EventWaitHandle> 物件時，指定 <xref:System.Threading.EventResetMode?displayProperty=fullName>，即可建立手動重設的事件。  如同它的名稱所指的，這個同步處理事件必須在收到信號之後，以手動重設。  直到重設為止，藉著呼叫其 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法，等候事件處理的執行緒都會在無封鎖的情況下立即繼續進行。  
+## <a name="event-wait-handles-that-reset-manually"></a>事件等候控制代碼，手動重設  
+ 指定建立手動重設事件<xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>當您建立<xref:System.Threading.EventWaitHandle>物件。 正如其名，這個同步處理事件必須手動重設之後尚未收到信號。 重設，藉由呼叫其<xref:System.Threading.EventWaitHandle.Reset%2A>方法，等候事件控制代碼的執行緒立即繼續進行而不會封鎖。  
   
- 手動重設事件的作用與圍欄的門一樣。  當事件沒有收到信號時，等候事件的執行緒就會遭到封鎖，就像是圍欄中的馬匹。  當事件收到信號時，藉著呼叫其 <xref:System.Threading.EventWaitHandle.Set%2A> 方法，所有的等候中執行緒都能自由繼續進行。  事件會一直維持收到信號的狀態，直到有人呼叫其 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法為止。  如此，在需要等候一個執行緒完成工作時，手動重設事件會是阻擋其他執行緒的理想方式。  
+ 手動重設事件的作用與閘道圍欄一樣。 事件未收到信號時封鎖在其等候的執行緒，就像是圍欄中。 事件通知的時間，藉由呼叫其<xref:System.Threading.EventWaitHandle.Set%2A>方法，所有的等候中執行緒可用以繼續。 事件會保留已收到信號，直到其<xref:System.Threading.EventWaitHandle.Reset%2A>方法呼叫。 這可讓手動重設事件保留執行緒需要等候一個執行緒完成工作的理想方式。  
   
- 就像讓馬匹離開圍欄一樣，讓作業系統排程以釋放執行緒並繼續執行，需要耗費一些時間。  如果在所有的執行緒都繼續執行之前，呼叫 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法，其餘的執行緒就會再次遭到封鎖。  要繼續執行和封鎖那些執行緒，都取決於隨機的因素，例如系統的負載、等候排程器的執行緒數目等等。  如果對事件發出信號的執行緒在發出信號後便結束了 \(這是最常見的使用模式\)，這就不會造成問題。  如果要讓對事件發出信號的執行緒，在所有等候中執行緒都已繼續執行之後，才開始新的工作，您必須在所有等候中執行緒都繼續執行之前，一直封鎖那些執行緒。  否則，就會造成競爭情況，並使程式碼的行為變得無法預期。  
+ 就像是離開圍欄，這需要釋放執行緒排程作業系統，並繼續執行的時間。 如果<xref:System.Threading.EventWaitHandle.Reset%2A>方法在所有執行緒已都繼續執行之前呼叫，再次封鎖，剩餘的執行緒。 繼續執行與哪一個執行緒會封鎖取決於隨機因素，例如在系統上，執行緒數目負載等候排程器等等。 如果通知事件的執行緒結束後發出訊號，這是最常見的使用模式，這並不是問題。 如果您想要開始新的工作在所有對事件發出信號等候執行緒都繼續執行的執行緒，您必須有繼續所有等候中執行緒，直到它封鎖。 否則，您有競爭情形，，程式碼的行為無法預期。  
   
-## 自動和手動事件的通用功能  
- 通常，在未封鎖的執行緒呼叫 <xref:System.Threading.EventWaitHandle.Set%2A> 方法，以釋放一個等候中執行緒 \(在自動重設事件的情況中\)，或是所有等候中執行緒 \(在手動重設事件的情況中\) 之前，<xref:System.Threading.EventWaitHandle> 上都會封鎖一個或多個執行緒。  就像是不可部分完成的作業 \(Atomic Operation\) 一樣，執行緒可以藉由呼叫靜態 <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=fullName> 方法，對 <xref:System.Threading.EventWaitHandle> 發出信號，然後在其上封鎖。  
+## <a name="features-common-to-automatic-and-manual-events"></a>自動和手動事件通用的功能  
+ 一般而言，一個或多個執行緒封鎖<xref:System.Threading.EventWaitHandle>之前解除封鎖的執行緒呼叫<xref:System.Threading.EventWaitHandle.Set%2A>方法，這個方法會釋放其中一個等候執行緒 （如果是自動重設事件），或全都 （如果是手動重設事件）。 執行緒可以發出信號<xref:System.Threading.EventWaitHandle>再封鎖，成為不可部分完成的作業，藉由呼叫靜態<xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType>方法。  
   
- <xref:System.Threading.EventWaitHandle> 物件可以與靜態的 <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> 和 <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> 方法搭配使用。  由於 <xref:System.Threading.EventWaitHandle> 和 <xref:System.Threading.Mutex> 類別都衍生自 <xref:System.Threading.WaitHandle>，您可以將這兩種類別與這些方法搭配使用。  
+ <xref:System.Threading.EventWaitHandle>物件可以用具有靜態<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>和<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>方法。 因為<xref:System.Threading.EventWaitHandle>和<xref:System.Threading.Mutex>類別都衍生自<xref:System.Threading.WaitHandle>，您可以使用這兩個類別使用這些方法。  
   
-### 具名事件  
- Windows 作業系統允許事件等候處理具有名稱。  具名事件是全系統的。  也就是說，一旦建立具名事件，所有處理序中的所有執行緒都可以看見該事件。  因此，具名事件可以用來對處理序及執行緒的活動同步處理。  
+### <a name="named-events"></a>具名的事件  
+ Windows 作業系統可讓事件等候控制代碼具有的名稱。 具名的事件是全系統性的。 也就是說，一旦建立具名的事件時，即顯示所有處理序中的所有執行緒。 因此，具名的事件可用來同步處理程序及執行緒的活動。  
   
- 使用指定事件名稱的其中一個建構函式，即可建立表示具名系統事件的 <xref:System.Threading.EventWaitHandle> 物件。  
-  
-> [!NOTE]
->  由於具名事件是全系統的，因此可能會具有多個表示相同具名事件的 <xref:System.Threading.EventWaitHandle> 物件。  每當您呼叫建構函式或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A> 方法時，都會建立新的 <xref:System.Threading.EventWaitHandle> 物件。  重複指定相同的名稱，便會建立多個表示相同具名事件的物件。  
-  
- 請謹慎地使用具名事件。  由於具名事件是全系統的，使用相同名稱的另一個處理序可能會意外地封鎖您的執行緒。  在同一部電腦上執行的惡意程式碼，可能會利用這點發動拒絕服務攻擊。  
-  
- 請使用存取控制項安全性來保護表示具名物件的 <xref:System.Threading.EventWaitHandle> 物件，並且最好使用會指定 <xref:System.Security.AccessControl.EventWaitHandleSecurity> 物件的建構函式。  您也可以使用 <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> 方法來套用存取控制項安全性，不過這樣會在建立事件等候處理之後，以及事件等候處理得到保護之前，形成具有弱點的一段時間。  以存取控制項安全性來保護事件，有助於防止惡意攻擊，但是並不能解決意外名稱衝突的問題。  
+ 您可以建立<xref:System.Threading.EventWaitHandle>物件，使用指定的事件名稱的建構函式的其中一個表示具名的系統事件。  
   
 > [!NOTE]
->  不同於 <xref:System.Threading.EventWaitHandle> 類別，衍生類別 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 都只能表示本機等候處理。  這些類別不能表示具名系統事件。  
+>  因為具名的事件是全系統，所以可能有多個<xref:System.Threading.EventWaitHandle>物件，代表相同具名事件。 每次呼叫建構函式，或<xref:System.Threading.EventWaitHandle.OpenExisting%2A>方法中，新<xref:System.Threading.EventWaitHandle>建立物件。 重複指定相同的名稱，建立多個代表相同的具名的事件的物件。  
   
-## 請參閱  
- <xref:System.Threading.EventWaitHandle>   
- <xref:System.Threading.WaitHandle>   
- <xref:System.Threading.AutoResetEvent>   
- <xref:System.Threading.ManualResetEvent>   
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+ 請謹慎地使用具名事件。 因為它們是全系統時，會使用相同名稱的另一個處理序可以意外封鎖執行緒。 在同一部電腦上執行的惡意程式碼便可使用此點作為拒絕服務攻擊的基礎。  
+  
+ 使用存取控制安全性來保護<xref:System.Threading.EventWaitHandle>物件，代表具名的事件，最好是使用指定的建構函式<xref:System.Security.AccessControl.EventWaitHandleSecurity>物件。 您也可以套用存取控制安全性使用<xref:System.Threading.EventWaitHandle.SetAccessControl%2A>方法，但這離開視窗中的弱點可能會建立事件等候控制代碼時受到保護的時間之間。 保護事件使用存取控制安全性可以協助防止惡意攻擊，但不能解決意外名稱衝突的問題。  
+  
+> [!NOTE]
+>  不同於<xref:System.Threading.EventWaitHandle>類別，衍生的類別<xref:System.Threading.AutoResetEvent>和<xref:System.Threading.ManualResetEvent>可以在本機的代表等候控制代碼。 它們不能代表具名的系統事件。  
+  
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Threading.EventWaitHandle>  
+ <xref:System.Threading.WaitHandle>  
+ <xref:System.Threading.AutoResetEvent>  
+ <xref:System.Threading.ManualResetEvent>  
+ [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

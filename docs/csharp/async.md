@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
+ms.openlocfilehash: dc9b45e21f15ad92304685a1aff6760f3406cee2
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/22/2017
 ---
-
 # <a name="asynchronous-programming"></a>非同步程式設計
 
 如果您有任何 I/O 繫結需求 (例如，從網路要求資料，或存取資料庫)，則會想要利用非同步程式設計。  您也可能會有 CPU 繫結程式碼，例如執行耗費資源的計算，這也是不錯的非同步程式碼撰寫案例。
@@ -113,9 +111,9 @@ calculateButton.Clicked += async (o, e) =>
 
     如果您的答案為「是」，則工作是 **CPU 繫結**。
     
-如果您的工作是「I/O 繫結」****，請使用「沒有」**`Task.Run` 的 `async` 和 `await`。  您「不應該」**使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
+如果您的工作是「I/O 繫結」，請使用「沒有」`Task.Run` 的 `async` 和 `await`。  您「不應該」使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
 
-如果您的工作是「CPU 繫結」****，而且您關心回應性，請使用 `async` 和 `await`，但在「含」**`Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您也應該考慮使用 Task Parallel Library。
+如果您的工作是「CPU 繫結」，而且您關心回應性，請使用 `async` 和 `await`，但在「含」`Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您也應該考慮使用 Task Parallel Library。
 
 此外，您應該一律測量程式碼的執行。  例如，您可能會發現，在進行多執行緒處理時，與內容切換的負擔相較之下，CPU 繫結工作較不耗費資源。  每個選項都有其取捨，您應該挑選適用於您情況的正確取捨。
 
@@ -141,7 +139,7 @@ public async Task<int> GetDotNetCountAsync()
     // to accept another request, rather than blocking on this one.
     var html = await _httpClient.DownloadStringAsync("http://dotnetfoundation.org");
 
-    return Regex.Matches(html, ".NET").Count;
+    return Regex.Matches(html, @"\.NET").Count;
 }
 ```
 
@@ -164,7 +162,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
     // This is what allows the app to be responsive and not hang on the UI thread.
     var html = await getDotNetFoundationHtmlTask;
-    int count = Regex.Matches(html, ".NET").Count;
+    int count = Regex.Matches(html, @"\.NET").Count;
 
     DotNetCountLabel.Text = $"Number of .NETs on dotnetfoundation.org: {count}";
 
@@ -175,12 +173,12 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 
 ### <a name="waiting-for-multiple-tasks-to-complete"></a>正在等候多個工作完成
 
-您可能會發現必須同時擷取多個資料片段。  `Task` API 包含兩種方法︰`Task.WhenAll` 和 `Task.WhenAny`，可讓您撰寫非同步程式碼，以對多個背景工作執行非封鎖等候。
+您可能會發現必須同時擷取多個資料片段。  `Task`應用程式開發介面包含兩個方法，`Task.WhenAll`和`Task.WhenAny`可讓您撰寫非同步程式碼會執行非封鎖等候多個背景工作上。
 
 這個範例示範如何捕捉一組 `userId` 的 `User` 資料。
 
 ```csharp
-public async Task<User> GetUser(int userId)
+public async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
@@ -188,13 +186,13 @@ public async Task<User> GetUser(int userId)
     // to the entry in the database with {userId} as its Id.
 }
 
-public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
+public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
     
     foreach (int userId in userIds)
     {
-        getUserTasks.Add(GetUser(id));
+        getUserTasks.Add(GetUserAsync(userId));
     }
     
     return await Task.WhenAll(getUserTasks);
@@ -204,7 +202,7 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 以下是使用 LINQ 利用更簡潔的方式撰寫這個項目的另一種方式：
 
 ```csharp
-public async Task<User> GetUser(int userId)
+public async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
@@ -212,9 +210,9 @@ public async Task<User> GetUser(int userId)
     // to the entry in the database with {userId} as its Id.
 }
 
-public static async Task<User[]> GetUsers(IEnumerable<int> userIds)
+public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 {
-    var getUserTasks = userIds.Select(id => GetUser(id));
+    var getUserTasks = userIds.Select(id => GetUserAsync(id));
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -228,7 +226,7 @@ public static async Task<User[]> GetUsers(IEnumerable<int> userIds)
 
 這是需要記住的重要事項。  如果 `await` 未用於 `async` 方法的主體中，C# 編譯器將會產生警告，但程式碼的編譯和執行就像一般方法一樣。  請注意，因為 C# 編譯器針對非同步方法所產生的狀態機器不會完成任何作業，所以這也非常沒有效率。
 
-*   **您應該新增 “Async” 作為所撰寫的每個非同步方法名稱的尾碼。**
+*   **您應該新增 “Async” 作為所撰寫之每個非同步方法名稱的尾碼。**
 
 這是 .NET 中所使用的慣例，可更容易區分同步與非同步方法。 請注意，不一定會套用程式碼未明確呼叫的特定方法 (例如事件處理常式或 Web 控制器方法)。 因為您的程式碼未明確呼叫這些方法，則明確命名並不重要。
 
@@ -272,4 +270,3 @@ LINQ 中的 Lambda 運算式會使用延後執行，這表示程式碼可以在�
 
 * [深入了解非同步](../standard/async-in-depth.md)提供工作運作方式的詳細資訊。
 * Lucian Wischik 的 [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (非同步的六個必要祕訣) 是進行非同步程式設計的不錯資源。
-

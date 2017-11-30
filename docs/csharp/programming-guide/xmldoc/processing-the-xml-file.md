@@ -1,39 +1,21 @@
 ---
 title: "處理 XML 檔案 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 610f3ac5c88fb41a4b55f2990fecdc4c13074e19
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記程式碼的相關資訊，請參閱[建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md))。識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。  
@@ -54,7 +36,7 @@ ms.lasthandoff: 07/28/2017
     |P|屬性 (包括索引子或其他索引屬性)|  
     |M|方法 (包括像是建構函式、運算子之類的特殊方法)|  
     |E|Event - 事件|  
-    |!|錯誤字串<br /><br /> 字串的其餘部分提供錯誤的相關資訊。 C# 編譯器會針對無法解析的連結產生錯誤資訊。|  
+    |!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 C# 編譯器會針對無法解析的連結產生錯誤資訊。|  
   
 -   字串的第二個部分是項目的完整名稱 (從命名空間的根開始)。 項目名稱、其封入類型及命名空間會以句號來分隔。 如果項目名稱本身包含句點，則會以雜湊符號 ('#') 來取代它們。 假設沒有項目的名稱中直接含有雜湊符號。 例如，String 建構函式的完整名稱會是 "System.String.#ctor"。  
   
@@ -101,10 +83,9 @@ ms.lasthandoff: 07/28/2017
 ## <a name="examples"></a>範例  
  下列範例顯示針對類別及其成員產生識別碼字串的方式：  
   
- [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
+ [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [/doc （C# 編譯器選項）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-

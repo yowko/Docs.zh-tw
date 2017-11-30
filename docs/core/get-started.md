@@ -4,17 +4,16 @@ description: "尋找資源以了解如何在 Windows、Linux 和 macOS 上建置
 keywords: .NET, .NET Core
 author: johalex
 ms.author: johalex
-ms.date: 08/14/2017
+ms.date: 09/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
+ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1f016b73a375c5ab63bba28accf57c5572d581c8
-ms.openlocfilehash: 694800954134888a511a90f069f55004bb2a2dce
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -38,21 +37,14 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="linux"></a>Linux
 
-在您的散發/版本上安裝 .NET Core：
-
-* [Red Hat Enterprise Linux 7](https://www.microsoft.com/net/core#linuxredhat)
-* [Ubuntu 14.04、16.04、16.10、17.04 及 Linux Mint 17、18](https://www.microsoft.com/net/core#linuxubuntu)
-* [Debian 8.2+、8.7+、9](https://www.microsoft.com/net/core#linuxdebian)
-* [Fedora 24、25、26](https://www.microsoft.com/net/core#linuxfedora)
-* [CentOS 7.1 及 Oracle Linux 7.1](https://www.microsoft.com/net/core#linuxcentos)
-* [SUSE Enterprise Linux (SLES) 12 SP2、openSUSE 42.1、42.2](https://www.microsoft.com/net/core#linuxopensuse)
+在上安裝.NET Core [Linux](https://www.microsoft.com/net/core#linuxredhat)。
 
 遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
 
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (使用命令列開始使用 .NET Core)：使用任何程式碼編輯器與 [.NET Core 跨平台命令列介面 (CLI)](tools/index.md)。
 * [在 Ubuntu 上使用 C# 和 .NET Core 開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) \(英文\)：此 [Channel 9](https://channel9.msdn.com) \(英文\) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://code.visualstudio.com/) \(英文\)，在 Ubuntu 14.04 上建立您第一個 .NET Core 主控台應用程式。
 
-上列安裝連結中列出的 Linux 散發及版本都支援 .NET Core。
+請參閱[Prerequisites for Linux 開發](linux-prerequisites.md)主題，如需支援的 Linux 散發版本和版本的清單。
 
 ## <a name="os-x--macos"></a>OS X / macOS
 
@@ -67,4 +59,3 @@ ms.lasthandoff: 08/29/2017
 * [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](tutorials/using-on-mac-vs-full-solution.md) - 本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
 
 如需支援的 OS X/macOS 版本清單，請參閱 [Windows 開發的必要條件](macos-prerequisites.md)主題。
-

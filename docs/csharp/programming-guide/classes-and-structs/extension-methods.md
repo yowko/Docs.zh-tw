@@ -1,55 +1,37 @@
 ---
 title: "擴充方法 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: d74c1d0760d4e776c2cf4c7dea1dac060c85a83c
-ms.openlocfilehash: 657f9ebfba5d6f49d3a88cb1cf790e4a0134a007
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  
   
- 最常見的擴充方法是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子，這些運算子會將查詢功能新增至現有的 <xref:System.Collections.IEnumerable?displayProperty=fullName> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 類型。 若要使用標準查詢運算子，請先使用 `using System.Linq` 指示詞將它們帶入範圍內。 接著，任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型都會具有執行個體方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 如果在 <xref:System.Collections.Generic.IEnumerable%601> 類型 (如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>) 的執行個體後面輸入「點」，就可以在 IntelliSense 陳述式完成時看到這些額外的方法。  
+ 最常見的擴充方法是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子，這些運算子會將查詢功能新增至現有的 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 類型。 若要使用標準查詢運算子，請先使用 `using System.Linq` 指示詞將它們帶入範圍內。 接著，任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型都會具有執行個體方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 如果在 <xref:System.Collections.Generic.IEnumerable%601> 類型 (如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>) 的執行個體後面輸入「點」，就可以在 IntelliSense 陳述式完成時看到這些額外的方法。  
   
  下列範例將示範如何在整數陣列上呼叫標準查詢運算子 `OrderBy` 方法。 括號括住的運算式就是 Lambda 運算式。 許多標準查詢運算子會將 Lambda 運算式當成參數，但是擴充方法不會強制這樣做。 如需詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
- [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
   
  擴充方法會定義為靜態方法，但透過執行個體方法語法呼叫。 擴充方法的第一個參數會指定方法作業所在的類型，而且參數前面會加上 [this](../../../csharp/language-reference/keywords/this.md) 修飾詞。 您必須使用 `using` 指示詞將命名空間明確匯入至原始程式碼，擴充方法才會進入範圍中。  
   
- 下列範例顯示針對 <xref:System.String?displayProperty=fullName> 類別定義的擴充方法。 請注意，擴充方法是定義在非巢狀且非泛型的靜態類別內：  
+ 下列範例將示範針對 <xref:System.String?displayProperty=nameWithType> 類別定義的擴充方法。 請注意，擴充方法是定義在非巢狀且非泛型的靜態類別內：  
   
- [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
  使用這個 `WordCount` 指示詞就可以將 `using` 擴充方法帶入範圍中：  
   
@@ -74,7 +56,7 @@ int i = s.WordCount();
 using System.Linq;  
 ```  
   
- (您可能也要加入對 System.Core.dll 的參考)。您將會注意到，標準查詢運算子現在出現在 IntelliSense 中，作為適用於大部分 <xref:System.Collections.Generic.IEnumerable%601> 類型的額外方法。  
+ (您可能也要加入對 System.Core.dll 的參考)。您將會注意到，標準查詢運算子現在出現在 IntelliSense 中，做為適用於大部分 <xref:System.Collections.Generic.IEnumerable%601> 類型的額外方法。  
   
 > [!NOTE]
 >  雖然標準查詢運算子未針對 <xref:System.String> 出現在 IntelliSense 中，但是您仍然可以使用它們。  
@@ -89,7 +71,7 @@ using System.Linq;
   
  當編譯器找不到具有相符簽章的執行個體方法時，就會繫結至相符的擴充方法 (如果有的話)。  
   
- [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
   
 ## <a name="general-guidelines"></a>一般方針  
  一般而言，建議您應謹慎地實作擴充方法，而且只有在必要時才實作。 當用戶端程式碼必須擴充現有的類型時，應該盡可能以建立衍生自現有類型的新類型來達成此目的。 如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
@@ -105,12 +87,11 @@ using System.Linq;
  針對實作的類別庫，您不應該使用擴充方法阻止組件的版本號碼遞增。 如果您要在擁有其原始程式碼的程式庫中加入重要功能，則應遵循組件版本控制的標準 .NET Framework 方針。 如需詳細資訊，請參閱[組件版本控制](https://msdn.microsoft.com/library/51ket42z)。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [平行程式設計範例 (包括許多範例擴充方法)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)   
- [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)   
- [執行個體參數的轉換規則與其影響](http://go.microsoft.com/fwlink/?LinkId=112385)   
- [語言之間擴充方法的互通性](http://go.microsoft.com/fwlink/?LinkId=112386)   
- [擴充方法和局部調用委派](http://go.microsoft.com/fwlink/?LinkId=112387)   
- [擴充方法繫結和錯誤報告](http://go.microsoft.com/fwlink/?LinkId=112388)
-
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [平行程式設計範例 （這些包含許多擴充方法範例）](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [參數和其影響轉換規則執行個體](http://go.microsoft.com/fwlink/?LinkId=112385)  
+ [語言之間的擴充方法的互通性](http://go.microsoft.com/fwlink/?LinkId=112386)  
+ [擴充方法和局部調用委派](http://go.microsoft.com/fwlink/?LinkId=112387)  
+ [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388) (擴充方法繫結和錯誤報告)

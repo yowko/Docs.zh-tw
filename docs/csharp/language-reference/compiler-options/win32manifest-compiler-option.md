@@ -1,49 +1,30 @@
 ---
 title: "-win32manifest (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32manifest
-dev_langs:
-- CSharp
+f1_keywords: /win32manifest
 helpviewer_keywords:
 - /win32manifest compiler option [C#]
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 40b1fa1f9aa465a56eccaf5fff5cf7bb59144e85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 938317fdf0c56469b85b1231a47f83e9c2a7d0f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (C# 編譯器選項)
 使用 **/win32manifest** 選項，指定要內嵌到專案的可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /win32manifest: filename  
 ```  
   
@@ -52,12 +33,12 @@ ms.lasthandoff: 07/28/2017
  自訂資訊清單檔案的名稱和位置。  
   
 ## <a name="remarks"></a>備註  
- 根據預設，[!INCLUDE[csharp_current_short](../../../csharp/language-reference/compiler-options/includes/csharp_current_short_md.md)] 編譯器會內嵌應用程式資訊清單，以指定所要求之執行層級的 "asInvoker"。 編譯器會在建置可執行檔所在的資料夾中建立資訊清單，當您使用 Visual Studio 時，通常會是 bin\Debug 或是 bin\Release 資料夾。 如果您要提供自訂資訊清單，例如指定 "highestAvailable" 或 "requireAdministrator" 做為要求的執行層級，請使用此選項指定檔案名稱。  
+ 根據預設，[!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] 編譯器會內嵌應用程式資訊清單，以指定所要求之執行層級的 "asInvoker"。 編譯器會在建置可執行檔所在的資料夾中建立資訊清單，當您使用 Visual Studio 時，通常會是 bin\Debug 或是 bin\Release 資料夾。 如果您要提供自訂資訊清單，例如指定 "highestAvailable" 或 "requireAdministrator" 做為要求的執行層級，請使用此選項指定檔案名稱。  
   
 > [!NOTE]
 >  此選項與 [/win32res (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 選項互斥。 如果您嘗試在相同的命令列中使用這兩個選項，則會收到建置錯誤。  
   
- 如果應用程式的應用程式資訊清單未指定要求的執行層級，則會受限於 Windows Vista 中「使用者帳戶控制」功能下的檔案/登錄虛擬化。 如需虛擬化的詳細資訊，請參閱 [The Windows Vista Developer Story: Windows Vista Application Development Requirements for User Account Control (UAC)](http://go.microsoft.com/fwlink/?LinkId=95452)(Windows Vista 開發人員小故事：Windows Vista 應用程式開發的使用者帳戶控制 (UAC) 需求)。  
+ 沒有任何應用程式資訊清單的應用程式會指定要求的執行層級，都會受到在 Windows 中的使用者帳戶控制功能的檔案/登錄虛擬化。 如需詳細資訊，請參閱[使用者帳戶控制](/windows/access-protection/user-account-control/user-account-control-overview)。  
   
  如果符合上述任一個條件，您的應用程式將會受限於虛擬化︰  
   
@@ -75,7 +56,7 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  編譯器會將標準應用程式名稱 " MyApplication.app " 插入至 xml。 這是讓應用程式在 Windows Server 2003 Service Pack 3 上執行的因應措施。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
   <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>  
@@ -90,7 +71,6 @@ ms.lasthandoff: 07/28/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [/nowin32manifest (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+ [/nowin32manifest （C# 編譯器選項）](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-

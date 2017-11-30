@@ -9,25 +9,26 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 51b190fba32186cb4c52ccd773274d9ae22c8efb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="c-quick-start-collections"></a>C# 快速入門：集合 #
 
-本教學課程提供 C# 語言的簡介，以及 <xref:System.Collections.Generic.List%601> 類別的基礎知識。
+本快速入門會介紹如何使用 C# 語言和的基本概念<xref:System.Collections.Generic.List%601>類別。
 
-## <a name="a-simple-list-example"></a>簡單的清單範例。
+本快速入門預期要有可用於開發的機器。 .NET 主題[開始在 10 分鐘後](https://www.microsoft.com/net/core)已設定 Mac、 電腦或 Linux 本機開發環境的指示。
 
-> [!NOTE]
-> 如果您是從您於 [dot.net](https://dot.net/) \(英文\) 中撰寫的程式碼開始，您已經具有要在本節中撰寫的程式碼。 請跳至[修改清單內容](#modify-list-contents)。
-
-本課程假設您已經完成線上快速入門，並已安裝 [.NET Core SDK](http://dot.net/core) \(英文\) 和 [Visual Studio Code](https://code.visualstudio.com/) \(英文\)。 
+## <a name="a-basic-list-example"></a>基本的清單範例。
 
 建立名為 **list-quickstart** 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console`。
 
+> [!NOTE]
+> 如果您剛完成[在 10 分鐘後開始使用.NET](https://www.microsoft.com/net)，您可以繼續使用您剛才建立的 myApp 應用程式。
+ 
 在您最愛的編輯器中開啟 **Program.cs**，並以下列內容取代現有的程式碼：
 
 ```csharp
@@ -213,10 +214,10 @@ foreach(var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>完成挑戰
 
-您可以[在 GitHub 上查看完成的範例程式碼](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs) \(英文\) 來取得範例解決方案
+您可以[在 GitHub 上查看完成的範例程式碼](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23) \(英文\) 來取得範例解決方案
 
 在迴圈每次反覆運算時，您都必須取清單中的最後兩個整數，將它們加總，並將該值新增至清單。 迴圈會持續重複，直到將 20 個項目新增至清單為止。
 
-恭喜，您已完成清單的教學課程。
+恭喜您完成清單的快速入門。 您可以繼續使用[類別簡介](introduction-to-classes.md)開發環境中的快速入門。
 
 您可以在關於[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主題中，深入了解 `List` 類型的使用方式。 您也能學習到許多其他的集合類型。

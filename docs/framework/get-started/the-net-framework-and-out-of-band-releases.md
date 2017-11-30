@@ -1,24 +1,23 @@
 ---
-title: ".NET Framework 和不定期發行 | Microsoft Docs"
+title: ".NET Framework 和 Out-of-Band 發行版本"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ed352825df8ba187add4b0d8bba252361c7167aa
-ms.lasthandoff: 04/18/2017
-
+ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和 Out-of-Band 發行版本
 .NET Framework 持續朝向容納不同平台 (例如 Windows Phone 和 Windows 市集應用程式以及傳統桌面和 Web 應用程式)，以及獲得最大程式碼重複使用率而不斷進化。 除了定期發行的 .NET Framework 版本之外，我們還會發行非常態 (Out-of-Band，OOB) 新功能，藉此改善跨平台開發工作或引入新功能。 本主題將討論 .NET Framework 及其 OOB 版本的未來方向。  
@@ -29,9 +28,9 @@ ms.lasthandoff: 04/18/2017
  當您在應用程式中使用 OOB 功能時，使用者不需要安裝最新版的 .NET Framework 就能執行您的應用程式，因為 OOB 組件會隨您的應用程式套件一併部署。  
   
 ## <a name="how-oob-packages-are-distributed"></a>OOB 套件散發的方式  
- 核心通用語言執行平台 (CLR) 元件的 OOB 版本是透過 [NuGet 套件管理員](http://nuget.codeplex.com/) (英文) 提供，這是一項開放原始碼 Visual Studio 擴充功能。 NuGet 可讓您從 Visual Studio 的 [方案總管] 中，輕鬆地瀏覽程式庫並加入至 .NET Framework 專案。 從 Visual Studio 2012 開始，NuGet 隨附於所有 Visual Studio 版本。 若要查看是否已安裝 NuGet，請在 Visual Studio 的 [工具] 功能表上尋找 [程式庫套件管理員]。 如果尚未安裝：  
+核心通用語言執行平台 (CLR) 元件的 OOB 版本透過傳遞[NuGet](https://www.nuget.org/)，這是適用於.NET 的封裝管理員。 NuGet 可讓您從 Visual Studio 的 [方案總管] 中，輕鬆地瀏覽程式庫並加入至 .NET Framework 專案。 從 Visual Studio 2012 開始，NuGet 隨附於所有 Visual Studio 版本。 若要查看是否已安裝 NuGet，請在 Visual Studio 的 [工具] 功能表上尋找 [程式庫套件管理員]。 如果尚未安裝：  
   
-1.  在 Visual Studio 功能表列上，選擇 [工具]、[擴充功能和更新]\(在 Visual Studio 2010 中請選擇 [擴充管理員])。  
+1.  在 Visual Studio 功能表列上，選擇 [工具]、[擴充功能和更新] (在 Visual Studio 2010 中請選擇 [擴充管理員])。  
   
      [擴充功能和更新] 對話方塊隨即開啟。  
   

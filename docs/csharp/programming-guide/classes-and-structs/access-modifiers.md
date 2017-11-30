@@ -1,68 +1,50 @@
 ---
 title: "存取修飾詞 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c29ee4b05d350f8dc5cf7595124c402aa5dc7a4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 38b259b4d85d54467cd15cd49e5987f6198e8d99
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="access-modifiers-c-programming-guide"></a>存取修飾詞 (C# 程式設計手冊)
 所有類型和類型成員都具有存取範圍層級，以控制是否可以從組件中的其他程式碼或其他組件中使用它們。 您可以使用下列存取修飾詞，以在宣告類型或成員時指定其存取範圍：  
   
  [public](../../../csharp/language-reference/keywords/public.md)  
- 類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。  
+ 類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。 
   
  [private](../../../csharp/language-reference/keywords/private.md)  
  類型或成員只能由相同類別或結構中的程式碼進行存取。  
   
  [protected](../../../csharp/language-reference/keywords/protected.md)  
- 類型或成員只能由相同類別或結構中或衍生自該類別之類別中的程式碼進行存取。  
-  
+ 型別或成員可以存取只能由相同類別或衍生自該類別的類別中的程式碼。  
  [internal](../../../csharp/language-reference/keywords/internal.md)  
  類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。  
   
- `protected internal`  
- 類型或成員可以由宣告它的組件中的任何程式碼或從其他組件中的衍生類別進行存取。 從其他組件中的存取必須在衍生自宣告 protected internal 項目之類別的類別宣告中進行，而且必須透過衍生類別類型的執行個體進行。  
+ [保護內部](../../../csharp/language-reference/keywords/protected-internal.md)類型或成員可由任何程式碼中組件中宣告它，或從衍生的類別中另一個組件。 
+
+ [受保護的私用](../../../csharp/language-reference/keywords/private-protected.md)類型或成員可以透過只在其宣告的組件，在相同類別或衍生自該類別的類型程式碼。
   
  下列範例示範如何指定類型和成員的存取修飾詞︰  
   
- [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
  並非所有存取修飾詞都可以供所有類型或成員在所有內容中使用；而且，在某些情況下，類型成員的存取範圍會受限於其包含類型的存取範圍。 下列各節提供存取範圍的詳細資料。  
   
 ## <a name="class-and-struct-accessibility"></a>類別和結構存取範圍  
  直接在命名空間內宣告的類別和結構 (換句話說，未巢狀在其他類別或結構內) 可以是 public 或 internal。 如果未指定任何存取修飾詞，則 internal 是預設值。  
   
- 結構成員 (包括巢狀類別和結構) 可以宣告為 public、internal 或 private。 類別成員 (包括巢狀類別和結構) 可以是 public、protected internal、protected、internal 或 private。 類別成員和結構成員 (包括巢狀類別和結構) 的存取層級預設為 private。 無法從包含類型外部存取私用巢狀型別。  
+ 結構成員 (包括巢狀類別和結構) 可以宣告為 public、internal 或 private。 類別成員，包括巢狀的類別和結構，可以是公用、 受保護的內部、 protected、 internal、 私用受保護或私用。 類別成員和結構成員 (包括巢狀類別和結構) 的存取層級預設為 private。 無法從包含類型外部存取私用巢狀型別。  
   
  衍生類別的存取範圍不能大於其基底類型。 換句話說，您不能有衍生自內部類別 `A` 的公用類別 `B`。 因為 `A` 的所有 protected 或 internal 成員都可以從衍生類別進行存取，所以如果允許這樣做，則會有將 `A` 設為 public 的效果。  
   
@@ -81,10 +63,10 @@ ms.lasthandoff: 09/25/2017
   
  若要設定類別或結構成員的存取層級，請在成員宣告中新增適當的關鍵字，如下列範例所示。  
   
- [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
->  protected internal 存取範圍層級表示「protected 或 internal」，而非「protected 和 internal」。 換句話說，可以從相同組件的任何類別 (包括衍生類別) 中存取 protected internal 成員。 若要僅限於相同組件中衍生類別的存取範圍，請將類別本身宣告為 internal，並將它的成員宣告為 protected。  
+>  protected internal 存取範圍層級表示「protected 或 internal」，而非「protected 和 internal」。 換句話說，可以從相同組件的任何類別 (包括衍生類別) 中存取 protected internal 成員。 若要僅限於相同組件中衍生類別的存取範圍，請將類別本身宣告為 internal，並將它的成員宣告為 protected。 此外，透過從 C# 7.2 開始，您可以達到相同的結果，而不需要進行包含的類別內部使用的私用受保護的存取修飾詞。  
   
 ## <a name="other-types"></a>其他類型  
  直接在命名空間內宣告的介面可以宣告為 public 或 internal；而且，就像類別和結構，介面預設為內部存取。 介面成員一律都是 public，因為介面的目的是要讓其他類型存取類別或結構。 沒有存取修飾詞可以套用至介面成員。  
@@ -97,14 +79,15 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [介面](../../../csharp/programming-guide/interfaces/index.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [internal](../../../csharp/language-reference/keywords/internal.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [介面](../../../csharp/programming-guide/interfaces/index.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [保護內部](../../../csharp/language-reference/keywords/protected-internal.md)  
+ [受保護的私用](../../../csharp/language-reference/keywords/private-protected.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
  [interface](../../../csharp/language-reference/keywords/interface.md)
-

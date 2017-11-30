@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
+ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="classes-and-objects"></a>類別與物件
 
@@ -74,6 +73,8 @@ ms.lasthandoff: 07/28/2017
     - 存取限於包含類別或衍生自包含類別的類別
 * `private`
     - 存取僅限於此類別
+* `private protected`
+    - 衍生自包含類型中相同的組件的存取限制為包含的類別或類別
 
 ## <a name="type-parameters"></a>型別參數
 
@@ -140,7 +141,7 @@ ms.lasthandoff: 07/28/2017
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-「參數陣列」可允許將數目不固定的引數傳遞給方法。 宣告參數陣列時，是使用 `params` 修飾詞來宣告。 只有方法的最後一個參數可以是參數陣列，而參數陣列的型別必須是單一維度陣列型別。 `@System.Console` 類別的 Write 和 WriteLine 方法即為參數陣列用法的好例子。 其宣告方式如下。
+「參數陣列」可允許將數目不固定的引數傳遞給方法。 宣告參數陣列時，是使用 `params` 修飾詞來宣告。 只有方法的最後一個參數可以是參數陣列，而參數陣列的型別必須是單一維度陣列型別。 <xref:System.Console?displayProperty=nameWithType> 類別的 Write 和 WriteLine 方法即為參數陣列用法的好例子。 其宣告方式如下。
 
 [!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
@@ -301,4 +302,3 @@ set 存取子會與具有單一參數具名值且沒有任何傳回型別的方�
 >[!div class="step-by-step"]
 [上一頁](statements.md)
 [下一頁](structs.md)
-

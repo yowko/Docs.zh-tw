@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
+ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 468c86f36fe71558dcd7a9150337f5a3cce066b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="indexers"></a>索引子
 
 「索引子」類似於屬性。 從許多方面來看，索引子是建立在與[屬性](properties.md)相同的語言功能之上。 索引子可啟用「索引」屬性，也就是使用一或多個引數參考的屬性。 這些引數可對某些數值集合進行索引。
@@ -41,7 +39,7 @@ public int this[string key]
 }
 ```
 
-在第一個範例中，您可以看到屬性語法和索引子語法之間的關聯性。 這點相似性會出現在索引子的大部分語法規則中。 索引子可以有任何有效的存取修飾詞 (public、protected internal、protected、internal 或 private)。 它們可能是密封、虛擬或抽象的。 如同屬性，您可以為索引子中 get 和 set 存取子，指定不同的存取修飾詞。
+在第一個範例中，您可以看到屬性語法和索引子語法之間的關聯性。 這點相似性會出現在索引子的大部分語法規則中。 索引子可具有任何有效的存取修飾詞 （公用、 受保護內部、 受保護、 內部、 私用或私用受保護）。 它們可能是密封、虛擬或抽象的。 如同屬性，您可以為索引子中 get 和 set 存取子，指定不同的存取修飾詞。
 您也可以指定唯讀索引子 (藉由省略 set 存取子) 或唯寫索引子 (藉由省略 get 存取子)。
 
 您可以將使用屬性時所學到的幾乎所有知識應用到索引子。 這項規則的唯一例外是「自動實作屬性」。 編譯器不一定可為索引子產生正確的儲存體。
@@ -335,4 +333,3 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 每當您的類別中有屬性類元素，且該屬性不代表單一值，而代表數值集合 (其中每個項目是由一組引數所識別) 時，就應該建立索引子。 這些引數可唯一識別應參考集合中的哪個項目。
 索引子延伸[屬性](properties.md)的概念，其中的成員會當做類別外部的資料項目來處理，但索引子類似一旁的方法。 索引子允許引數在代表一組項目的屬性中尋找單一項目。
-

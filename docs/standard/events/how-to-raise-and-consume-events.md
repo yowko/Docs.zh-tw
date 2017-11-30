@@ -1,48 +1,55 @@
 ---
-title: "如何：引發和使用事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件 [.NET Framework], 引發"
-  - "事件 [.NET Framework], 範例"
-  - "引發事件"
+title: "如何：引發和使用事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- events [.NET Framework], raising
+- raising events
+- events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d052c865a554977ce5c8b0a347337d9d9b92fc57
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：引發和使用事件
-本主題中的範例示範如何使用事件。  包含由 <xref:System.EventHandler> 委派、 <xref:System.EventHandler%601> 委派和自訂委派的範例，以有資料和沒資料兩種情況說明事件。  
+# <a name="how-to-raise-and-consume-events"></a>如何：引發和使用事件
+本主題中的範例將示範如何使用事件。 包括 <xref:System.EventHandler> 委派、<xref:System.EventHandler%601> 委派和自訂委派的範例，用以說明包含和不包含資料的事件。  
   
- 範例使用 [事件](../../../docs/standard/events/index.md) 文章說明的概念。  
+ 範例會使用所述的概念[事件](../../../docs/standard/events/index.md)發行項。  
   
-## 範例  
- 第一個範例顯示如何引發和使用沒有資料的事件。  它包含有一個名為有 `ThresholdReached`事件的`Counter`類別名稱。  在計數器值等於或超過臨界值時，就會引發此事件。  因為未提供任何事件， <xref:System.EventHandler>委派與事件有關。  
+## <a name="example"></a>範例  
+ 第一個範例將示範如何引發和使用沒有資料的事件。 它包含名為 `Counter` 的類別，該類別中包含名為 `ThresholdReached` 的事件。 當計數器的值等於或超過臨界值時，就會引發此事件。 由於未提供任何事件資料，因此 <xref:System.EventHandler> 委派會與事件產生關聯。  
   
  [!code-csharp[EventsOverview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programnodata.cs#5)]
  [!code-vb[EventsOverview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1nodata.vb#5)]  
   
-## 範例  
- 下一個範例顯示如何引發和使用有提供資料的事件。  <xref:System.EventHandler%601> 委派與事件有關，因此提供自訂事件資料物件的執行個體。  
+## <a name="example"></a>範例  
+ 下一個範例將示範如何引發和使用有提供資料的事件。 <xref:System.EventHandler%601> 委派會與事件相關聯，而且會提供自訂事件資料物件的執行個體。  
   
  [!code-cpp[EventsOverview#6](../../../samples/snippets/cpp/VS_Snippets_CLR/eventsoverview/cpp/programwithdata.cpp#6)]
  [!code-csharp[EventsOverview#6](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdata.cs#6)]
  [!code-vb[EventsOverview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdata.vb#6)]  
   
-## 範例  
- 下一個範例顯示如何宣告事件的委派。  委派名稱為 `ThresholdReachedEventHandler`。  這只是個範例。  通常，因為您可以使用 <xref:System.EventHandler> 或 <xref:System.EventHandler%601> 委派，所以您不需要宣告委派給一個事件。  在罕見案例像是讓類別能夠在舊版程式碼\(不可使用泛型\)使用，您應該宣告一個委派。  
+## <a name="example"></a>範例  
+ 下一個範例將示範如何宣告事件的委派。 委派的名稱為 `ThresholdReachedEventHandler`。 這只是一個範例。 通常，您可以使用 <xref:System.EventHandler> 或 <xref:System.EventHandler%601> 委派，所以不需要為事件宣告委派。 在某些少見的案例中您會需要宣告委派，像是讓無法使用泛型的舊版程式碼使用您的類別。  
   
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [事件](../../../docs/standard/events/index.md)

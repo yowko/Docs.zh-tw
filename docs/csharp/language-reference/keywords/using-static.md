@@ -1,37 +1,18 @@
 ---
 title: "using static 指示詞 (C# 參考)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using static directive [C#]
+helpviewer_keywords: using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5838bede475cf2ad1b72518770241e86206a06bb
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7d69d0262ba6f450e2cc0d5b30692bba181f9d9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指示詞 (C# 參考)
 
@@ -49,13 +30,13 @@ using static <fully-qualified-type-name>
 
 ## <a name="remarks"></a>備註
  
-一般而言，當您呼叫靜態成員時，您會提供類型名稱及成員名稱。 重複輸入相同的類型名稱來叫用類型的成員，可能會導致冗長且難以理解的程式碼。 例如，`Circle` 類別的下列定義參考了 @System.Math 類別的一些成員。
+一般而言，當您呼叫靜態成員時，您會提供類型名稱及成員名稱。 重複輸入相同的類型名稱來叫用類型的成員，可能會導致冗長且難以理解的程式碼。 例如，`Circle` 類別的下列定義參考了 <xref:System.Math> 類別的一些成員。
   
-[!code-cs[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
+[!code-csharp[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
 
-`using static` 指示詞可避免每次參考成員時都必須明確參考 @System.Math 類別，因此所產生的程式碼會更簡潔：
+`using static` 指示詞可避免每次參考成員時都必須明確參考 <xref:System.Math> 類別，因此所產生的程式碼會更簡潔：
 
-[!code-cs[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
+[!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
 `using static` 只會匯入指定的類型中宣告的可存取靜態成員和巢狀類型。  不會匯入繼承的成員。  您可以使用 using 靜態指示詞從任何具名類型匯入，包括 Visual Basic 模組。  如果 F# 最上層函式出現在中繼資料中，作為具名類型的靜態成員，其名稱是有效的 C# 識別項，則可以匯入 F# 函式。  
   
@@ -65,11 +46,11 @@ using static <fully-qualified-type-name>
   
 ## <a name="example"></a>範例
 
-下列範例使用 `using static` 指示詞來提供 @System.Console、@System.Math 和 @System.String 類別的靜態成員，而不需要指定其類型名稱。
+下列範例使用 `using static` 指示詞來提供 <xref:System.Console>、<xref:System.Math> 和 <xref:System.String> 類別的靜態成員，而不需要指定其類型名稱。
 
-[!code-cs[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
+[!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-在此範例中，`using static` 指示詞也可能已套用至 @System.Double 類型。 因此不需要指定類型名稱，即可呼叫 @System.Double.TryParse(System.String,System.Double@) 方法。 不過，這會建立難以閱讀的程式碼，因為您必須檢查 `using static` 陳述式，以判斷呼叫了哪一個數字類型的 `TryParse` 方法。
+在此範例中，`using static` 指示詞也可能已套用至 <xref:System.Double> 類型。 這會使它可以呼叫<xref:System.Double.TryParse(System.String,System.Double@)>方法，而不指定型別名稱。 不過，這會建立難以閱讀的程式碼，因為您必須檢查 `using static` 陳述式，以判斷呼叫了哪一個數字類型的 `TryParse` 方法。
 
 ## <a name="see-also"></a>請參閱
 
@@ -79,4 +60,3 @@ using static <fully-qualified-type-name>
 [使用命名空間](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
 [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
 [命名空間](../../../csharp/programming-guide/namespaces/index.md)   
-

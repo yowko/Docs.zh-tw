@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 360733d81f049cd4356ecc47a27f97c3ec3a402a
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expressions"></a>查詢運算式
 
@@ -93,7 +93,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     <th>說明</th>
   </tr>
   <tr>
-  <td>`contains`</td>
+  <td><code>contains</code></td>
 <td>決定選取的項目是否包含指定的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
@@ -108,7 +108,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 
 <tr>
-  <td>`count`</td><td>傳回選取的項目數目。<br/><br/>
+  <td><code>count</code></td><td>傳回選取的項目數目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -118,7 +118,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`last`</td><td>選取那些已選取目前為止的最後一個元素。<br/><br/>
+<td><code>last</code></td><td>選取那些已選取目前為止的最後一個元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -127,7 +127,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`lastOrDefault`</td><td>如果不找到任何項目，請選取那些已選取目前為止，或預設值的最後一個元素。<br/><br/>
+<td><code>lastOrDefault</code></td><td>如果不找到任何項目，請選取那些已選取目前為止，或預設值的最後一個元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -137,7 +137,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOne`</td><td>選取單一特定項目選取目前為止。 如果有多個項目，則會擲回例外狀況。<br/><br/>
+<td><code>exactlyOne</code></td><td>選取單一特定項目選取目前為止。 如果有多個項目，則會擲回例外狀況。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -148,7 +148,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOneOrDefault`</td><td>如果找不到該項目，請選取單一特定項目那些已選取目前為止，或預設值。<br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td>如果找不到該項目，請選取單一特定項目那些已選取目前為止，或預設值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -159,7 +159,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`headOrDefault`</td><td>如果序列不包含任何項目，請選取那些已選取目前為止，或預設值的第一個元素。<br/><br/>
+<td><code>headOrDefault</code></td><td>如果序列不包含任何項目，請選取那些已選取目前為止，或預設值的第一個元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -169,7 +169,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`select`</td><td>規劃每個目前選取的項目。<br/><br/>
+<td><code>select</code></td><td>規劃每個目前選取的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -178,7 +178,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`where`</td><td>選取指定的述詞為基礎的項目。<br/><br/>
+<td><code>where</code></td><td>選取指定的述詞為基礎的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -188,7 +188,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minBy`</td><td>選取每個項目到目前為止所選取的值，並傳回產生的最小值。<br/><br/>
+<td><code>minBy</code></td><td>選取每個項目到目前為止所選取的值，並傳回產生的最小值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -197,7 +197,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxBy`</td><td>選取每個項目到目前為止所選取的值，並傳回產生的最大值。<br/><br/>
+<td><code>maxBy</code></td><td>選取每個項目到目前為止所選取的值，並傳回產生的最大值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -206,7 +206,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupBy`</td><td>群組會根據指定的索引鍵選取器目前選取項目。<br/><br/>
+<td><code>groupBy</code></td><td>群組會根據指定的索引鍵選取器目前選取項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -216,7 +216,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortBy`</td><td>排序到目前為止以遞增順序選取所指定的排序索引鍵的項目。<br/><br/>
+<td><code>sortBy</code></td><td>排序到目前為止以遞增順序選取所指定的排序索引鍵的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -226,7 +226,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByDescending`</td><td>排序到目前為止以遞減的順序選取所指定的排序索引鍵的項目。<br/><br/>
+<td><code>sortByDescending</code></td><td>排序到目前為止以遞減的順序選取所指定的排序索引鍵的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -236,7 +236,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenBy`</td><td>執行指定的排序索引鍵以遞增順序目前選取之項目的後續排序作業。 此運算子只可用在之後`sortBy`， `sortByDescending`， `thenBy`，或`thenByDescending`。<br/><br/>
+<td><code>thenBy</code></td><td>執行指定的排序索引鍵以遞增順序目前選取之項目的後續排序作業。 此運算子只可用在之後<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -248,7 +248,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByDescending`</td><td>執行指定的排序索引鍵以遞減順序目前選取之項目的後續排序作業。 此運算子只可用在之後`sortBy`， `sortByDescending`， `thenBy`，或`thenByDescending`。<br/><br/>
+<td><code>thenByDescending</code></td><td>執行指定的排序索引鍵以遞減順序目前選取之項目的後續排序作業。 此運算子只可用在之後<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -260,7 +260,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupValBy`</td><td>選取每個項目到目前為止所選取的值和群組所指定的索引鍵的項目。<br/><br/>
+<td><code>groupValBy</code></td><td>選取每個項目到目前為止所選取的值和群組所指定的索引鍵的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -270,7 +270,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`join`</td><td>相互關聯所選的值根據相符索引鍵的兩個集合。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。 在所有聯結中，如果列分割之後`-&gt;`符號，縮排至少必須為縮排就關鍵字`for`。<br/><br/>
+<td><code>join</code></td><td>相互關聯所選的值根據相符索引鍵的兩個集合。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。 在所有聯結中，如果列分割之後<code>-&gt;</code>符號，縮排至少必須為縮排就關鍵字<code>for</code>。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -281,7 +281,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupJoin`</td><td>相互關聯所選的值根據相符索引鍵的兩個集合，並將結果分組。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。<br/><br/>
+<td><code>groupJoin</code></td><td>相互關聯所選的值根據相符索引鍵的兩個集合，並將結果分組。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -295,7 +295,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`leftOuterJoin`</td><td>相互關聯所選的值根據相符索引鍵的兩個集合，並將結果分組。 如果任何群組是空的就會改為使用單一預設值群組。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。<br/><br/>
+<td><code>leftOuterJoin</code></td><td>相互關聯所選的值根據相符索引鍵的兩個集合，並將結果分組。 如果任何群組是空的就會改為使用單一預設值群組。 請注意，登入聯結運算式的周圍 = 索引鍵的順序非常重要。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -307,7 +307,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumByNullable`</td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的總和。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
+<td><code>sumByNullable</code></td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的總和。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -316,7 +316,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minByNullable`</td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的最小值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
+<td><code>minByNullable</code></td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的最小值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -325,7 +325,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxByNullable`</td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的最大值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
+<td><code>maxByNullable</code></td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的最大值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -334,7 +334,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageByNullable`</td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的平均值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
+<td><code>averageByNullable</code></td><td>選取每個項目到目前為止所選取的可為 null 值，並傳回這些值的平均值。 如果有任何可為 null 沒有值，則會忽略它。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -343,7 +343,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageBy`</td><td>選取每個項目到目前為止所選取的值，並傳回這些值的平均值。<br/><br/>
+<td><code>averageBy</code></td><td>選取每個項目到目前為止所選取的值，並傳回這些值的平均值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -352,7 +352,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`distinct`</td><td>選取不同的項目從目前選取的項目。<br/><br/>
+<td><code>distinct</code></td><td>選取不同的項目從目前選取的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -363,7 +363,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exists`</td><td>判斷目前選取任何項目是否符合條件。<br/><br/>
+<td><code>exists</code></td><td>判斷目前選取任何項目是否符合條件。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -376,7 +376,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`find`</td><td>選取第一個選取的項目到目前為止，皆滿足指定的條件。<br/><br/>
+<td><code>find</code></td><td>選取第一個選取的項目到目前為止，皆滿足指定的條件。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -385,7 +385,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`all`</td><td>決定選取目前為止的所有項目是否符合條件。<br/><br/>
+<td><code>all</code></td><td>決定選取目前為止的所有項目是否符合條件。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -394,7 +394,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`head`</td><td>選取第一個項目從那些已選取目前為止。<br/><br/>
+<td><code>head</code></td><td>選取第一個項目從那些已選取目前為止。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -403,7 +403,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`nth`</td><td>選取在選定的指定索引處的項目為止。<br/><br/>
+<td><code>nth</code></td><td>選取在選定的指定索引處的項目為止。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -412,7 +412,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skip`</td><td>略過指定的數目的目前選取的項目，然後選取 剩餘項目。<br/><br/>
+<td><code>skip</code></td><td>略過指定的數目的目前選取的項目，然後選取 剩餘項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -421,7 +421,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skipWhile`</td><td>只要指定的條件為 true，然後選取 剩餘項目，請略過序列中的項目。<br/><br/>
+<td><code>skipWhile</code></td><td>只要指定的條件為 true，然後選取 剩餘項目，請略過序列中的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -431,7 +431,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumBy`</td><td>選取每個項目到目前為止所選取的值，並傳回這些值的總和。<br/><br/>
+<td><code>sumBy</code></td><td>選取每個項目到目前為止所選取的值，並傳回這些值的總和。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -440,7 +440,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`take`</td><td>指定的連續的項目數會從選取選定為止。<br/><br/>
+<td><code>take</code></td><td>指定的連續的項目數會從選取選定為止。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -450,7 +450,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`takeWhile`</td><td>選取項目序列中，只要指定的條件為 true，而接著會略過其餘項目。<br/><br/>
+<td><code>takeWhile</code></td><td>選取項目序列中，只要指定的條件為 true，而接著會略過其餘項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -459,7 +459,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullable`</td><td>排序指定可為 null 的排序索引鍵以遞增順序目前選取的項目。<br/><br/>
+<td><code>sortByNullable</code></td><td>排序指定可為 null 的排序索引鍵以遞增順序目前選取的項目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -469,7 +469,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullableDescending`</td><td>排序所指定可為 null 的排序索引鍵以遞減的順序選取目前為止的元素。<br/><br/>
+<td><code>sortByNullableDescending</code></td><td>排序所指定可為 null 的排序索引鍵以遞減的順序選取目前為止的元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -479,7 +479,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullable`</td><td>執行指定可為 null 的排序索引鍵以遞增順序目前選取之項目的後續排序作業。 此運算子只可用之後立即`sortBy`， `sortByDescending`， `thenBy`，或`thenByDescending`，或其可為 null 的變異數。<br/><br/>
+<td><code>thenByNullable</code></td><td>執行指定可為 null 的排序索引鍵以遞增順序目前選取之項目的後續排序作業。 此運算子只可用之後立即<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>，或其可為 null 的變異數。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -490,7 +490,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullableDescending`</td><td>執行指定可為 null 的排序索引鍵以遞減順序目前選取之項目的後續排序作業。 此運算子只可用之後立即`sortBy`， `sortByDescending`， `thenBy`，或`thenByDescending`，或其可為 null 的變異數。<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>執行指定可為 null 的排序索引鍵以遞減順序目前選取之項目的後續排序作業。 此運算子只可用之後立即<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>，或其可為 null 的變異數。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -546,7 +546,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>`EXISTS`
+<td><code>EXISTS</code>
 </br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
@@ -680,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`IN`一組指定的值<br/>
+<code>IN</code>一組指定的值<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -703,7 +703,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE` 和 `TOP`。<br/>
+<code>LIKE</code> 和 <code>TOP</code>。<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -721,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`模式具有符合組件。<br/>
+<code>LIKE</code>模式具有符合組件。<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`設定排除模式。<br/>
+<code>LIKE</code>設定排除模式。<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`其中一個欄位，但選取不同的欄位。<br/>
+<code>LIKE</code>其中一個欄位，但選取不同的欄位。<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -772,7 +772,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td>`LIKE`與子字串的搜尋。<br/>
+</td></tr><tr><td><code>LIKE</code>與子字串的搜尋。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -789,7 +789,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-簡單`JOIN`與兩份資料表。<br/>
+簡單<code>JOIN</code>與兩份資料表。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -807,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`LEFT JOIN`與兩份資料表。<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>與兩份資料表。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +826,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`JOIN`與`COUNT`<br/>
+</td></tr><tr><td><code>JOIN</code>與<code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -844,7 +844,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`DISTINCT`<br/>
+</td></tr><tr><td><code>DISTINCT</code><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT StudentID FROM CourseSelection
 </code></pre>
@@ -877,7 +877,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`BETWEEN`<br/>
+</td></tr><tr><td><code>BETWEEN</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age BETWEEN 10 AND 15
@@ -893,7 +893,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`<br/>
+</td></tr><tr><td><code>OR</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -909,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`排序<br/>
+</td></tr><tr><td><code>OR</code>排序<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -927,7 +927,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`TOP``OR`，和排序。<br/>
+</td></tr><tr><td><code>TOP</code><code>OR</code>，和排序。<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -949,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`UNION`兩個查詢。<br/>
+</td></tr><tr><td><code>UNION</code>兩個查詢。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +998,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td>`CASE`條件。<br/>
+</td></tr><tr><td><code>CASE</code>條件。<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age

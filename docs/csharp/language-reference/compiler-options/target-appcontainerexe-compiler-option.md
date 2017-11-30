@@ -1,37 +1,18 @@
 ---
 title: "-target:appcontainerexe (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9ab407f14483bbb5abaf3dc23b0cf204091b74ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 77016d094ec7e82729a46208c17e2a77fe733103
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe (C# 編譯器選項)
 如果您使用 **/target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 這個選項相當於 [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)，但是專為 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式所設計。  
@@ -67,7 +48,6 @@ csc /target:appcontainerexe filename.cs
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [/target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
- [/target:winexe (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)   
+ [/target （C# 編譯器選項）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [/target: winexe （C# 編譯器選項）](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
-

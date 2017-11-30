@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cc095f5db48fd7545deda5413620d5f41ed6b39a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 1f9f201e14abdcfb98c33e947428137eca3caeaf
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hiring-process"></a>招聘程序
 此範例示範如何使用傳訊活動和裝載為工作流程服務的兩個工作流程來實作商務程序。 這些工作流程是虛擬公司 Contoso, Inc. 的 IT 基礎結構的一部分。  
@@ -242,6 +242,4 @@ ms.lasthandoff: 10/18/2017
   
 1.  執行 DbSetup 資料夾中的 Cleanup.bat，以刪除 SQL Server 執行個體存放區。  
   
-2.  從硬碟中刪除原始程式碼。  
-  
-## <a name="see-also"></a>另請參閱
+2.  從硬碟中刪除原始程式碼。

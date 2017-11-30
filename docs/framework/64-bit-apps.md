@@ -1,12 +1,11 @@
 ---
-title: "64 位元應用程式 | Microsoft Docs"
+title: "64 位元應用程式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: 1ee85512cde0ce50e6a5c34cc5f6acc531c24bc0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="64-bit-applications"></a>64 位元應用程式
 您在編譯應用程式時，可以指定其應以原生應用程式在 Windows 64 位元作業系統上或在 WOW64 下 (Windows 64 位元上的 Windows 32 位元) 執行。 WOW64 是讓 32 位元應用程式可在 64 位元系統上執行的相容性環境。 所有 64 位元版本的 Windows 作業系統中都包含 WOW64。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 05/10/2017
   
 -   將 `IntPtr` 轉換到 `Int32` 的程式碼。  
   
- 如需如何將 32 位元應用程式移植到 64 位元 CLR 上執行的詳細資訊，請參閱 MSDN Library 中的[將 32 位元 Managed 程式碼移轉至 64 位元](http://go.microsoft.com/fwlink/?LinkId=150542)。  
+ 如需如何移植到 64 位元 CLR 上執行的 32 位元應用程式的詳細資訊，請參閱[移轉 32 位元 Managed 程式碼至 64 位元](https://msdn.microsoft.com/library/ms973190.aspx)。  
   
 ## <a name="general-64-bit-programming-information"></a>64 位元程式設計的一般資訊  
  如需 64 位元程式設計的一般資訊，請參閱下列文件：  
@@ -73,4 +71,4 @@ ms.lasthandoff: 05/10/2017
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>判斷 .exe 檔或 .dll 檔的狀態  
  若要判斷 .exe 檔或 .dll 檔案是否只能在特定平台上或在 WOW64 下執行，請使用不含選項的 [CorFlags.exe (CorFlags 轉換工具)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)。 您也可以使用 CorFlags.exe 來變更 .exe 檔或 .dll 檔的平台狀態。 Visual Studio 組件的 CLR 標頭中的執行階段主要版本號碼設為 2，而執行階段次要版本號碼設為 5。 將次要執行階段版本設定為 0 的應用程式會被視為舊版應用程式，並一律在 WOW64 下執行。  
   
- 若要以程式設計方式查詢 .exe 或 .dll 以查看其是否只在特定平台上或在 WOW64 下執行，請使用 <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName> 方法。
+ 若要以程式設計方式查詢 .exe 或 .dll 以查看其是否只在特定平台上或在 WOW64 下執行，請使用 <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> 方法。

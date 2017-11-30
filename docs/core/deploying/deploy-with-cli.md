@@ -9,31 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
+ms.openlocfilehash: fc7a40667c9b0a623bb0ebdf4ad60783fa58e6c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 3d799c6f824bd5cf08c0e939b069a21092395268
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-title: "使用 CLI 工具部署.NET Core 應用程式"
-description: "了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式部署"
-keywords: ".NET、.NET Core、.NET Core 部署"
-author: rpetrusha
-ms.author: ronpet
-ms.date: 04/18/2017
-ms.topic: article
-ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 3d799c6f824bd5cf08c0e939b069a21092395268
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
-
----
-
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 
 您可以將 .NET Core 應用程式部署為「與 Framework 相依的部署」，其中包含您的應用程式二進位檔，但取決於目標系統上是否有 .NET Core 存在，也可以部署為「自封式部署」，其中包含您的應用程式和 .NET Core 二進位檔。 如需概觀，請參閱 [.NET Core 應用程式部署](index.md)。
@@ -63,11 +44,11 @@ ms.lasthandoff: 09/12/2017
 
    在您的編輯器中開啟 *Program.cs* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 更新專案的相依性和工具。
  
-   執行 [dotnet restore](../tools/dotnet-restore.md) 命令還原專案中指定的相依性。
+   執行[dotnet 還原](../tools/dotnet-restore.md)([請參閱附註](#dotnet-restore-note)) 命令還原您的專案中指定的相依性。
 
 1. 建立應用程式的偵錯組建。
 
@@ -90,7 +71,7 @@ ms.lasthandoff: 09/12/2017
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>有協力廠商相依性的 Framework 相依部署
 
-部署具有一或多個協力廠商相依性的 Framework 相依部署時，需要這些相依性都可供專案使用。 在執行 `dotnet restore` 命令之前，需要執行兩個額外步驟：
+部署具有一或多個協力廠商相依性的 Framework 相依部署時，需要這些相依性都可供專案使用。 您可以執行之前，兩個額外的步驟所需`dotnet restore`([請參閱附註](#dotnet-restore-note)) 命令：
 
 1. 將任何協力廠商程式庫參考新增至您 *csproj* 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會包含對 [Json.NET](http://www.newtonsoft.com/json) 的相依性作為協力廠商程式庫：
 
@@ -100,7 +81,7 @@ ms.lasthandoff: 09/12/2017
       </ItemGroup>
       ```
 
-1. 如果尚未如此做，請下載包含協力廠商相依性的 NuGet 封裝。 若要下載封裝，請在加入相依性後執行 `dotnet restore` 命令。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
+1. 如果尚未如此做，請下載包含協力廠商相依性的 NuGet 封裝。 若要下載的套件，請執行`dotnet restore`([請參閱附註](#dotnet-restore-note)) 命令之後新增相依性。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
 
 請注意，具有協力廠商相依性的 Framework 相依部署，可攜性只與其協力廠商相依性一致。 例如，如果協力廠商程式庫只支援 macOS，則應用程式就無法攜至 Windows 系統。 如果協力廠商相依性本身依賴於原生程式碼，就會發生這種情況。 其中一個絶佳範例是 [Kestrel 伺服器](/aspnet/core/fundamentals/servers/kestrel)，它需要對 [libuv](https://github.com/libuv/libuv) 的原生相依性。 當具有這類協力廠商相依性的應用程式建立了 FDD 時，已發行輸出就會包含原生相依性支援的每個[執行階段識別碼 (RID)](../rid-catalog.md) 資料夾 (存在於其 NuGet 套件中)。
 
@@ -120,7 +101,7 @@ ms.lasthandoff: 09/12/2017
 
    在您的編輯器中開啟 *Program.cs* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 定義您應用程式目標的平台。
 
@@ -138,7 +119,7 @@ ms.lasthandoff: 09/12/2017
 
 1. 更新專案的相依性和工具。
 
-   執行 [dotnet restore](../tools/dotnet-restore.md) 命令還原專案中指定的相依性。
+   執行[dotnet 還原](../tools/dotnet-restore.md)([請參閱附註](#dotnet-restore-note)) 命令還原您的專案中指定的相依性。
 
 1. 建立應用程式的偵錯組建。
 
@@ -173,7 +154,7 @@ ms.lasthandoff: 09/12/2017
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>有協力廠商相依性的自封式部署
 
-部署具有一或多個協力廠商相依性的自封式部署，涉及新增相依性。 在執行 `dotnet restore` 命令之前，需要執行兩個額外步驟：
+部署具有一或多個協力廠商相依性的自封式部署，涉及新增相依性。 您可以執行之前，兩個額外的步驟所需`dotnet restore`([請參閱附註](#dotnet-restore-note)) 命令：
 
 1. 將任何協力廠商程式庫參考新增至您 *csproj* 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會使用 Json.NET 作為協力廠商程式庫。
 
@@ -183,7 +164,7 @@ ms.lasthandoff: 09/12/2017
       </ItemGroup>
     ```
 
-1. 如果尚未如此做，請將包含協力廠商相依性的 NuGet 封裝下載至您的系統。 請在加入相依性後執行 `dotnet restore` 命令，讓應用程式取得相依性。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
+1. 如果尚未如此做，請將包含協力廠商相依性的 NuGet 封裝下載至您的系統。 若要讓相依性使用您的應用程式，請執行`dotnet restore`([請參閱附註](#dotnet-restore-note)) 命令之後新增相依性。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
 
 下面是此專案的完整 *csproj* 檔案：
 
@@ -203,6 +184,9 @@ ms.lasthandoff: 09/12/2017
 當您部署應用程式時，應用程式中任何協力廠商相依性也包含在應用程式檔案中。 應用程式執行所在的系統上不需要協力廠商程式庫。
 
 請注意，您只能將具有協力廠商程式庫的自封式部署，部署到該程式庫支援的平台上。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性必須與部署應用程式的平台相容。
+
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 # <a name="see-also"></a>請參閱
 

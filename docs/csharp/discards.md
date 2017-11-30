@@ -1,5 +1,5 @@
 ---
-title: "Discard - C# 指南 | Microsoft Docs"
+title: "Discard - C# 指南"
 description: "說明 C# 的 discard 支援，這是未指派且可捨棄的變數，並說明 discard 的使用方式。"
 keywords: .NET, .NET Core
 author: rpetrusha
@@ -9,21 +9,20 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
+ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
+ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南
 
 從 C# 7 開始，C# 支援 discard，這是應用程式程式碼中刻意未使用的暫存虛擬變數。 Discard 相當於未指派的變數，不具有任何值。 因為只有一個 discard 變數，而且該變數可能甚至未配置儲存空間，所以 discard 可減少記憶體配置。 這些變數讓您的程式碼意圖更清楚，因而提高其可讀性和可維護性。
 
-指定變數為 discard 的方式是在其名稱中指派底線 (`_`)。 例如，下列方法呼叫會傳回 3 元組，其中的第一個和第二個值為 discard：
+指定變數為 discard 的方式是在其名稱中指派底線 (`_`)。 例如，下列的方法呼叫會傳回 3 tuple 中第一個和第二個值會捨棄和*區域*是先前宣告的變數，可設定為對應所傳回的第三個元件*GetCityInformation*:
 
 ```csharp
-(var _, _, area) = city.GetCityInformation(cityName);
+(_, _, area) = city.GetCityInformation(cityName);
 ```
 
 在 C# 7 中，下列內容中的指派支援 discard：
@@ -89,4 +88,3 @@ ms.lasthandoff: 08/28/2017
 [解構元組和其他類型](deconstruct.md)   
 [`is` 關鍵字](language-reference/keywords/is.md)   
 [`switch` 關鍵字](language-reference/keywords/switch.md)   
-

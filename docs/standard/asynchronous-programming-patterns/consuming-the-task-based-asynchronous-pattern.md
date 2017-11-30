@@ -1,43 +1,46 @@
 ---
-title: "Consuming the Task-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework, and TAP"
-  - "asynchronous design patterns, .NET Framework"
-  - "TAP, .NET Framework support for"
-  - "Task-based Asynchronous Pattern, .NET Framework support for"
-  - ".NET Framework, asynchronous design patterns"
+title: "使用以工作為基礎的非同步模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework, and TAP
+- asynchronous design patterns, .NET Framework
+- TAP, .NET Framework support for
+- Task-based Asynchronous Pattern, .NET Framework support for
+- .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 90b2a36f0e6bf06b0fefe2191d5b17c9c07d1588
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Consuming the Task-based Asynchronous Pattern
-當您使用以工作為基礎的非同步模式 \(點選\) 來做非同步作業時，您可以使用回呼避免有阻礙的等待。如需工作，這是透過以下方法來達成，例如 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=fullName>。  以語言為基礎的非同步支援隱藏回呼，藉由讓非同步作業在一般控制流程中等待，且編譯器產生的程式碼會提供相同的應用程式開發介面支援層級。  
+# <a name="consuming-the-task-based-asynchronous-pattern"></a>使用以工作為基礎的非同步模式
+當您使用以工作為基礎的非同步模式 (TAP) 執行非同步作業時，您可以使用回撥來達到等待而不封鎖。  如需工作，這透過達成方法例如<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>。 以語言為基礎的非同步支援允許非同步作業在正常控制流程中等候，以隱藏回撥，而編譯器產生的程式碼提供這種相同的 API 層級支援。  
   
-## 等待時，執行暫停  
- 從開始 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，您可以使用 C\# [await](../Topic/await%20\(C%23%20Reference\).md) 關鍵字和 [Await Operator](../Topic/Await%20Operator%20\(Visual%20Basic\).md) Visual Basic 做非同步等候 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。  當您正在等候 <xref:System.Threading.Tasks.Task>時， `await` 運算式是 `void`型別。  當您正在等候 <xref:System.Threading.Tasks.Task%601>時， `await` 運算式是 `TResult`型別。  `await` 運算式必須發生在非同步方法的主體內。  如需更多 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]語言內C\# 和 Visual Basic支援的詳細資訊，請參閱支援 C\# 和 Visual Basic 語言規格。  
+## <a name="suspending-execution-with-await"></a>使用 Await 暫停執行  
+ 從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，您可以使用[await](~/docs/csharp/language-reference/keywords/await.md)關鍵字在 C# 和[Await 運算子](~/docs/visual-basic/language-reference/operators/await-operator.md)在 Visual Basic 中以非同步方式等候<xref:System.Threading.Tasks.Task>和<xref:System.Threading.Tasks.Task%601>物件。 當您正在等候<xref:System.Threading.Tasks.Task>、`await`運算式屬於類型`void`。 當您正在等候<xref:System.Threading.Tasks.Task%601>、`await`運算式屬於類型`TResult`。 `await` 運算式必須發生在非同步方法的主體內。 如需有關 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的 C# 和 Visual Basic 語言支援的詳細資訊，請參閱 C# 和 Visual Basic 語言規格。  
   
- 在此支援下，等候功能藉由使用接續來安裝工作回呼。此回呼在停止時會繼續非同步方法。  當成功完成等候作業和 <xref:System.Threading.Tasks.Task%601>，其 `TResult` 傳回時，非同步方法會重新開始。如果等候的 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 在 <xref:System.Threading.Tasks.TaskStatus> 結束狀態， <xref:System.OperationCanceledException> 例外狀況 \(Exception\)將會被丟出。如果 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 在 <xref:System.Threading.Tasks.TaskStatus> 結束狀態，其導致錯誤的例外狀況 \(Exception\)會被丟出。   `Task` fault的原因可能是有很多例外狀況 ，不過只有其中一個例外狀況會被傳遞出去。  不過， <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=fullName> 屬性會傳回包含所有錯誤的 <xref:System.AggregateException> 例外狀況。  
+ 實際上，等候功能會使用接續在工作上安裝回撥。  此回撥會從暫止點繼續非同步方法。 當非同步方法繼續時，如果等候的作業已順利完成，但已<xref:System.Threading.Tasks.Task%601>、 其`TResult`傳回。  如果<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>，等候結束<xref:System.Threading.Tasks.TaskStatus.Canceled>狀態，<xref:System.OperationCanceledException>擲回例外狀況。  如果<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>，等候結束<xref:System.Threading.Tasks.TaskStatus.Faulted>狀態時，會擲回的例外狀況，導致錯誤。 `Task` 會因為多個例外狀況而錯誤，但只會傳播其中一個例外狀況。 不過，<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>屬性會傳回<xref:System.AggregateException>所包含的所有錯誤的例外狀況。  
   
- 如果同步處理內容\(<xref:System.Threading.SynchronizationContext> 物件\) 與在停止時執行的非同步方法執行緒有關聯\(例如，若 <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=fullName> 屬性不是 `null`\)，非同步方法便會使用內容 <xref:System.Threading.SynchronizationContext.Post%2A> 方法來還原在該同步處理內容。  否則，它會根據工作排程器 \(<xref:System.Threading.Tasks.TaskScheduler> 物件\) 在停止時的最新資訊。  通常，這是使用執行緒集區的預設工作排程器 \(<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=fullName>\)。  這個工作排程器會判斷這個等候的非同步作業是否應該繼續完或還原是否應該被排程。  預設排程器通常會允許等候作業完成的執行緒繼續執行。  
+ 如果在同步處理內容 (<xref:System.Threading.SynchronizationContext>物件) 所執行的非同步方法時暫止的執行緒相關聯 (例如，如果<xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType>屬性不是`null`)，非同步方法會繼續執行的使用的內容相同的同步處理內容<xref:System.Threading.SynchronizationContext.Post%2A>方法。 否則，它會仰賴工作排程器 (<xref:System.Threading.Tasks.TaskScheduler>物件)，是目前在暫停的時間。 一般而言，這是預設工作排程器 (<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>)，其為目標的執行緒集區。 這個工作排程器決定等候的非同步作業是否應該在完成處繼續，還是應該排定繼續。 預設排程器通常允許在完成等候作業的執行緒上接續執行。  
   
- 當非同步方法被呼叫時，將以同步方式執行函式主體，直到第一個未完成的await函式處於等候中的狀態 ，此時回傳給呼叫者。  如果非同步方法沒有傳回 `void`， <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件會被傳回來表示正在執行的計算。  在non\-void的非同步方法中，如果碰到return 陳述式，或到方法主體的結尾時，工作在<xref:System.Threading.Tasks.TaskStatus>達成最終狀態。  如果未處理的例外狀況導致控制項離開非同步方法的主體中，工作將在 <xref:System.Threading.Tasks.TaskStatus> 狀態下完成。  如果例外狀況是 <xref:System.OperationCanceledException>，工作則會在 <xref:System.Threading.Tasks.TaskStatus> 狀態下結束。  因此，結果或例外狀況最終將被發行。  
+ 呼叫非同步方法時會同步執行函式主體，直到尚未完成的可等候執行個體上的第一個 await 運算式為止，此時引動過程會返回呼叫端。 如果非同步方法不會傳回`void`、<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>物件會傳回代表進行中的計算。 在非 void 的非同步方法，如果遇到 return 陳述式或方法主體的結尾為止，工作已完成中<xref:System.Threading.Tasks.TaskStatus.RanToCompletion>最終狀態。 工作處理的例外狀況會使控制項的非同步方法的主體離開，如果在結束<xref:System.Threading.Tasks.TaskStatus.Faulted>狀態。 如果例外狀況是 <xref:System.OperationCanceledException>，工作就會變成在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態下結束。 就這樣，最後會發佈結果或例外狀況。  
   
- 在此行為中，有幾個很重要的差異。基於效能考量，如果工作在等待資料時就已完成，則控制項將不提供，但函式會繼續執行。此外，回到原來的內容不一定是預期行為，而且可以變更，這會在下一節將詳細說明。  
+ 此行為有數個重要的變化。  基於效能考量，如果工作在開始等候之前已完成，則不會讓出控制權，函式會繼續執行。  此外，返回原始內容不一見得是想要的行為，可以變更；下一節會詳細說明。  
   
-### 設定暫止和繼續執行 Yield 和 ConfigureAwait  
- 數個方法會提供對非同步方法執行的更多控制。  例如，您可以使用 <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=fullName> 方法來引入生產點給非同步方法:  
+### <a name="configuring-suspension-and-resumption-with-yield-and-configureawait"></a>使用 Yield 和 ConfigureAwait 設定暫止和繼續  
+ 有數種方法可以更充分掌控非同步方法的執行。 例如，您可以使用<xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType>yield 點引入的非同步方法的方法：  
   
 ```csharp  
 public class Task : …  
@@ -45,13 +48,12 @@ public class Task : …
     public static YieldAwaitable Yield();  
     …  
 }  
-  
 ```  
   
- 這與非同步回傳或排程返回目前內容相似。  
+ 這相當於以非同步方式往回張貼或排定到目前的內容。  
   
 ```csharp  
-Task.Run(async  delegate  
+Task.Run(async delegate  
 {  
     for(int i=0; i<1000000; i++)  
     {  
@@ -59,70 +61,65 @@ Task.Run(async  delegate
         ...  
     }  
 });  
-  
 ```  
   
- 您可以使用 <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=fullName> 方法來控制在同步方法內暫停和還原。前面提過，在預設情況下，目前的內容在非同步方法暫停時會被擷取，並在恢復時用該擷取的內容來叫用非同步方法的接續符號。在許多情況下，這實際上是您想要的行為。在其他情況下，您不需考慮繼續內容，且可以避免這類張貼至原始的內容中，以達到較佳的效能。若要啟用此功能，請使用方法 <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=fullName> 來通知等候作業不再在內容中擷取和還原，但等候完成的非同步作業仍繼續執行的地方:  
+ 您也可以使用<xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType>以便更有效控制暫停與繼續非同步方法中的方法。  如前面所述，根據預設，目前的內容是在非同步方法暫停時擷取，並在恢復時用該擷取的內容來叫用非同步方法的接續動作。  在許多情況下，這就是您想要的行為。  在其他情況下，您可能不在意接續內容，您可以避免這樣往回張貼到原始內容，以達到更高效能。  若要啟用此功能，使用<xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType>方法，以通知不要擷取並繼續在內容中，而是繼續執行，只要正在等候非同步作業完成，await 作業：  
   
 ```csharp  
 await someTask.ConfigureAwait(continueOnCapturedContext:false);  
-  
 ```  
   
-## 取消非同步作業  
- 從[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，支援取消的點選方法\(TAP\)提供取消至少有一個多載語彙\(<xref:System.Threading.CancellationToken> 物件\)。  
+## <a name="canceling-an-asynchronous-operation"></a>取消非同步作業  
+ 從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，支援取消作業的 TAP 方法提供至少一個多載接受取消語彙基元 (<xref:System.Threading.CancellationToken>物件)。  
   
- 取消語彙基元是建立在取消語彙基元的來源 \(<xref:System.Threading.CancellationTokenSource> 物件\) 。來源中的 <xref:System.Threading.CancellationTokenSource.Token%2A> 屬性將傳回 當來源中的 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 方法被呼叫時的取消語彙基元。例如，如果要下載單一網頁而且您希望可以取消作業，請建立 <xref:System.Threading.CancellationTokenSource> 物件，透過屬性的語彙基元點選方法，然後呼叫來源的 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 方法:  
+ 取消語彙基元建立透過取消語彙基元來源 (<xref:System.Threading.CancellationTokenSource>物件)。  來源<xref:System.Threading.CancellationTokenSource.Token%2A>屬性會傳回通知的取消語彙基元時的來源<xref:System.Threading.CancellationTokenSource.Cancel%2A>方法呼叫。  例如，如果您想要下載單一網頁和您想要能夠取消作業，您建立<xref:System.Threading.CancellationTokenSource>物件、 將其權杖傳遞至 TAP 方法中，並接著呼叫來源<xref:System.Threading.CancellationTokenSource.Cancel%2A>方法，當您準備好要取消作業：  
   
 ```csharp  
 var cts = new CancellationTokenSource();  
 string result = await DownloadStringAsync(url, cts.Token);  
 … // at some point later, potentially on another thread  
 cts.Cancel();  
-  
 ```  
   
- 若要移除多個非同步引動過程，您可以傳遞相同的語彙基元 \(Token\) 至所有引動過程:  
+ 若要取消多個非同步引動過程，您可以將相同的語彙基元傳遞至所有引動過程︰  
   
 ```csharp  
-var cts = new CancellationTokenSource();  
-    IList<string> results = await Task.WhenAll(from url in urls select DownloadStringAsync(url, cts.Token));  
-    // at some point later, potentially on another thread  
-    …  
-    cts.Cancel();  
-  
+var cts = new CancellationTokenSource();  
+    IList<string> results = await Task.WhenAll(from url in urls select DownloadStringAsync(url, cts.Token));  
+    // at some point later, potentially on another thread  
+    …  
+    cts.Cancel();  
 ```  
   
- 或者，您可以傳遞相同的語彙基元至作業中的被選擇子集:  
+ 或者，您可以將相同的語彙基元傳遞至一組經過挑選的作業︰  
   
 ```csharp  
-var cts = new CancellationTokenSource();  
-    byte [] data = await DownloadDataAsync(url, cts.Token);  
-    await SaveToDiskAsync(outputPath, data, CancellationToken.None);  
-    … // at some point later, potentially on another thread  
-    cts.Cancel();  
-  
+var cts = new CancellationTokenSource();  
+    byte [] data = await DownloadDataAsync(url, cts.Token);  
+    await SaveToDiskAsync(outputPath, data, CancellationToken.None);  
+    … // at some point later, potentially on another thread  
+    cts.Cancel();  
 ```  
   
- 取消的要求可從任何執行緒被啟始。  
+ 任何執行緒都可能起始取消要求。  
   
- 您可以傳送 <xref:System.Threading.CancellationToken.None%2A?displayProperty=fullName> 值至可接收取消語彙基元的任意方法中，以表示此取消將不會再重複被要求。這會導致 <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=fullName> 屬性傳回至 `false`，因此呼叫方法可最佳化。為了進行測試，您可以傳送一個欲取消且使用可接受布林值 \(Boolean\)來確認此語彙基元是否應該在已取消或未取消狀態開始的建構函式來執行個體化的語彙基元。  
+ 您可以傳遞<xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType>接受取消語彙基元來表示永遠不會要求取消的任何方式的值。  這會導致<xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType>屬性，以傳回`false`，並呼叫的方法可以據此最佳化。  在測試時，您也可以傳入以建構函式具現化之預先取消的取消語彙基元，此建構函式接受布林值，以指出語彙基元最初應該處於已取消或不可取消狀態。  
   
- 此取消的方法有下列幾個優點:  
+ 這種取消方法有幾項優點︰  
   
--   您可以將相同的取消語彙基元傳到任何數目的非同步和同步處理作業。  
+-   您可以將相同的取消語彙基元傳遞至任何數目的非同步和同步作業。  
   
--   相同的取消要求可能激增至任何數目的接聽程式。  
+-   相同的取消要求可以擴散至任何數目的接聽程式。  
   
--   非同步應用程式開發介面的開發人員是完整控制取消是否會被要求且取消可能產生的影響。  
+-   非同步 API 的開發人員可以完全控制是否可要求取消及何時生效。  
   
--   消費應用程式開發介面的程式碼可能選擇性地判斷取消要求會被傳送到的非同步引動過程。  
+-   使用 API 的程式碼可能選擇性地決定要將取消要求傳播至其中的非同步引動過程。  
   
-## 監視進度  
- 某些非同步方法透過進度介面公開傳遞至非同步方法。比方說，請考慮以非同步方式下載的文字，並一路引發字串函式的進度更新，包括下載到目前為止完成的百分比。這種方法可以使用在 Windows Presentation Foundation\(WPF\) 應用程式中，如下所示：  
+## <a name="monitoring-progress"></a>監視進度  
+ 某些非同步方法會透過傳遞至非同步方法的進度介面來公開進度。  例如，假設一個函式以非同步方式下載文字字串，對於過程中以進度更新顯示目前為止完成的下載百分比。  Windows Presentation Foundation (WPF) 應用程式中可以使用這種方法，如下所示︰  
   
 ```csharp  
-private async  void btnDownload_Click(object sender, RoutedEventArgs e)    
+private async void btnDownload_Click(object sender, RoutedEventArgs e)    
 {  
     btnDownload.IsEnabled = false;  
     try  
@@ -132,18 +129,17 @@ private async  void btnDownload_Click(object sender, RoutedEventArgs e)
     }  
     finally { btnDownload.IsEnabled = true; }  
 }  
-  
 ```  
   
 <a name="combinators"></a>   
-## 使用內建的任務取向的結合功能  
- <xref:System.Threading.Tasks>命名空間包含了幾種方法來工作和撰寫任務。  
+## <a name="using-the-built-in-task-based-combinators"></a>使用內建以工作為基礎的組合器  
+ <xref:System.Threading.Tasks>命名空間包含的數種方法來撰寫和使用工作。  
   
-### Task.Run  
- <xref:System.Threading.Tasks.Task> 類別 包含多種<xref:System.Threading.Tasks.Task.Run%2A>方法如<xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 至執行緒集區來輕鬆地卸載工作，如下所示:  
+### <a name="taskrun"></a>Task.Run  
+ <xref:System.Threading.Tasks.Task>類別包含數個<xref:System.Threading.Tasks.Task.Run%2A>方法可讓您輕鬆地將卸載工作為<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>執行緒集區，例如：  
   
 ```csharp  
-public async  void button1_Click(object sender, EventArgs e)  
+public async void button1_Click(object sender, EventArgs e)  
 {  
     textBox1.Text = await Task.Run(() =>  
     {  
@@ -151,13 +147,12 @@ public async  void button1_Click(object sender, EventArgs e)
         return answer;  
     });  
 }  
-  
 ```  
   
- 某些 <xref:System.Threading.Tasks.Task.Run%2A> 方法，例如 <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=fullName> 多載，形式存在 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=fullName> 方法的簡略方式。其他多載，例如 <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=fullName>，可讓您在卸載的工作中等候，如下所示:  
+ 其中某些<xref:System.Threading.Tasks.Task.Run%2A>方法，例如<xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>多載，存在簡略的<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>方法。  其他多載，例如<xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>，啟用您使用 await 內卸載的工作，例如：  
   
 ```csharp  
-public async  void button1_Click(object sender, EventArgs e)  
+public async void button1_Click(object sender, EventArgs e)  
 {  
     pictureBox1.Image = await Task.Run(async() =>  
     {  
@@ -168,10 +163,10 @@ public async  void button1_Click(object sender, EventArgs e)
 }  
 ```  
   
- 此類多載在邏輯上等於使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=fullName> 方法與 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 擴充方法結合在工作平行程式庫中。  
+ 這類多載是以邏輯方式相當於使用<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>方法搭配<xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>工作平行程式庫中的擴充方法。  
   
-### Task.FromResult  
- 使用 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法資料可能必須已有和需要從某個工作會傳回的方法傳回之列舉型別 <xref:System.Threading.Tasks.Task%601>的案例:  
+### <a name="taskfromresult"></a>Task.FromResult  
+ 使用<xref:System.Threading.Tasks.Task.FromResult%2A>在案例中，資料可能已經是可用，然後直接的方法需要從工作傳回的方法，提高到傳回<xref:System.Threading.Tasks.Task%601>:  
   
 ```csharp  
 public Task<int> GetValueAsync(string key)  
@@ -182,25 +177,23 @@ public Task<int> GetValueAsync(string key)
         GetValueAsyncInternal();  
 }  
   
-private async  Task<int> GetValueAsyncInternal(string key)  
+private async Task<int> GetValueAsyncInternal(string key)  
 {  
     …  
 }  
-  
 ```  
   
-### Task.WhenAll  
- 使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法來非同步等候代表工作的多個非同步作業。這個方法支援一組非泛型工作或不一致的一組一般工作的多載 \(例如，非同步等候的多個 Null 傳回的作業或非同步等候多個傳回值的方法的值可能有不同的型別\) 和支援一組制式的一般工作 \(例如非同步等候多個 `TResult`\-傳回的方法\)。  
+### <a name="taskwhenall"></a>Task.WhenAll  
+ 使用<xref:System.Threading.Tasks.Task.WhenAll%2A>方法以非同步方式等候多個非同步作業工作的形式表示。  此方法有多個多載可支援一組非泛型工作或一組非統一泛型工作 (例如，非同步等候多個 void 傳回作業，或非同步等候多個值傳回方法，而每個值可能有不同型別)，也支援一組統一泛型工作 (例如，非同步等候多個 `TResult` 傳回方法)。  
   
- 假設您想要傳送電子郵件給多個客戶。  您可以重疊傳送訊息，因此不需在傳送下一封訊息之前等候此訊息完成。  您也可以得知傳送作業何時完成和是否有任何錯誤發生:  
+ 假設您想要將電子郵件訊息傳送給數個客戶。 您可以重疊傳送訊息，不必等待一個訊息完成才傳送下一個訊息。 您也可以查明傳送作業何時完成及是否發生任何錯誤︰  
   
 ```csharp  
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);  
 await Task.WhenAll(asyncOps);  
-  
 ```  
   
- 這個程式碼不會明確地處理可能發生的例外狀況，但是，讓例外狀況傳播到所產生工作的 `await` 外部從 <xref:System.Threading.Tasks.Task.WhenAll%2A>。若要處理例外狀況，您可以使用下列程式碼:  
+ 這段程式碼未明確地處理例外狀況可能會發生，但可讓例外狀況傳播出`await`上產生的工作，從<xref:System.Threading.Tasks.Task.WhenAll%2A>。  若要處理例外狀況，您可以使用下列程式碼︰  
   
 ```csharp  
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);  
@@ -212,10 +205,9 @@ catch(Exception exc)
 {  
     ...  
 }  
-  
 ```  
   
- 在這個案例中，如果任何非同步作業失敗，所有例外狀況都包含在 <xref:System.AggregateException> 例外狀況中，而此將會被儲存在從<xref:System.Threading.Tasks.Task.WhenAll%2A> 方法傳回的 <xref:System.Threading.Tasks.Task> 不過，只有一個例外狀況會藉由 `await` 關鍵字被傳播。如果您要檢查所有例外狀況，您可以重新撰寫上一個程式碼如下所示:  
+ 在此情況下，如果任何非同步作業失敗，所有例外狀況將會合併在<xref:System.AggregateException>例外狀況，它會儲存在<xref:System.Threading.Tasks.Task>從傳回<xref:System.Threading.Tasks.Task.WhenAll%2A>方法。  不過，`await` 關鍵字只會傳播其中一個例外狀況。  如果您想要檢查所有例外狀況，您可以改寫先前的程式碼，如下所示︰  
   
 ```csharp  
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();  
@@ -230,17 +222,16 @@ catch(Exception exc)
         … // work with faulted and faulted.Exception  
     }  
 }  
-  
 ```  
   
- 請參考從網路非同步地下載多個檔案之範例。在這個案例中，所有非同步作業有同類型結果型別，且很容易存取結果:  
+ 舉例說明，假設從 web 非同步下載多個檔案。  在此例子中，所有非同步作業有相同的結果型別，很容易存取結果︰  
   
 ```csharp  
 string [] pages = await Task.WhenAll(  
     from url in urls select DownloadStringAsync(url));  
 ```  
   
- 您可以使用先前討論傳回void案例中的例外狀況處理技術:  
+ 您可以使用我們在先前 void 傳回案例中討論過的相同例外狀況處理技術︰  
   
 ```csharp  
 Task [] asyncOps =   
@@ -257,22 +248,21 @@ catch(Exception exc)
         … // work with faulted and faulted.Exception  
     }  
 }  
-  
 ```  
   
-### Task.WhenAny  
- 您可以使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來非同步等候以工作的形式表示的多個非同步作業完成。這個方法為四個主要使用案例服務：  
+### <a name="taskwhenany"></a>Task.WhenAny  
+ 您可以使用<xref:System.Threading.Tasks.Task.WhenAny%2A>方法以非同步方式等候其中一個多個非同步作業以表示工作完成。  這個方法適用於四種主要的使用案例：  
   
--   重複：多次執行某作業並選擇最先完成者\(例如，聯絡多個提供股價報價服務的網站，而此會產生單一結果並且選擇最快完成的那一個\)  
+-   備援：多次執行某項作業並選擇最先完成的作業 (例如，連絡多個會產生單一結果的提供股價報價服務的網站，並且選擇最快完成的那一個)。  
   
--   插入：啟動多個作業並等候所有作業完成，不過當他們完成時處理它們。  
+-   交錯：啟動多項作業並等候所有作業完成，不過，會在作業完成時才進行處理。  
   
--   資料流程：當此作業完成時，允許其他作業開始。這是跨案例的延伸。  
+-   節流：當作業完成時，允許其他作業開始。  這是交錯情節的擴充。  
   
--   早期保釋：例如，工作 t1 所表示的作業可以在 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作中與另一個工作 t2合為一工作群組，然後，您可以在 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作上等候。  工作 T2 可以表示逾時或取消，或在 t1 完成之前，產生其他序號使 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作完成。  
+-   提早釋出：例如，工作 t1 代表的作業可以在 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作中與另一個工作 t2 合併成群組，然後您可以等候 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作。 工作 t2 可以表示逾時，或取消作業或導致某些其他訊號<xref:System.Threading.Tasks.Task.WhenAny%2A>工作 t1 完成之前完成。  
   
-#### 備援能力  
- 考量您將在哪裡決定是否購買股票的情況。有好幾個您信任的股票建議 Web 服務，不過依據每日負載，每個服務結束會可能會在不同時間點變得很慢。您可以使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來接收任何作業完成的告知：  
+#### <a name="redundancy"></a>備援性  
+ 假設您想決定是否購買股票。  您有好幾個信任的股票建議 Web 服務，不過依據每日負載，每個服務可能會在不同時間點變得很慢。  您可以使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來接收任何作業完成的通知：  
   
 ```csharp  
 var recommendations = new List<Task<bool>>()   
@@ -283,12 +273,11 @@ var recommendations = new List<Task<bool>>()
 };  
 Task<bool> recommendation = await Task.WhenAny(recommendations);  
 if (await recommendation) BuyStock(symbol);  
-  
 ```  
   
- 不同於 <xref:System.Threading.Tasks.Task.WhenAll%2A>，傳回所有工作完成時的未包裝結果， <xref:System.Threading.Tasks.Task.WhenAny%2A> 傳回完成的工作。  如果工作執行失敗，因此您必須瞭解它失敗，相反的，如果工作成功，因此您必須瞭解哪一項工作會傳回哪一個相對應的值。因此，如此範例所示，您需要存取這項所傳回之工作的結果或進一步等待。  
+ 不同於<xref:System.Threading.Tasks.Task.WhenAll%2A>，會傳回所有的工作已順利完成，未包裝的結果<xref:System.Threading.Tasks.Task.WhenAny%2A>傳回已完成的工作。 如果工作失敗，必須知道它已失敗，如果工作成功，必須知道與傳回值相關聯的工作。  因此，您需要存取所傳回工作的結果，或進一步等待，如這個範例所示。  
   
- 使用 <xref:System.Threading.Tasks.Task.WhenAll%2A>，必須可以容納例外狀況。由於您接收到已完成的工作，您可以等候這個傳回的工作來管理錯誤傳播和適當的 `try/catch` 它們;例如:  
+ 如同<xref:System.Threading.Tasks.Task.WhenAll%2A>，您必須能夠容納例外狀況。  因為您要收回已完成的工作，您可以等候傳回的工作傳播錯誤，並適當地 `try/catch`，例如︰  
   
 ```csharp  
 Task<bool> [] recommendations = …;  
@@ -305,10 +294,9 @@ while(recommendations.Count > 0)
         recommendations.Remove(recommendation);  
     }  
 }  
-  
 ```  
   
- 此外，即使第一項工作可順利完成，後續的工作也可能會失敗。此時，您有幾個選項來處理例外狀況：您可以等待，直到所有啟動的工作完成，在這種情況下，您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法的情況下，或者您可以決定所有例外狀況是很重要的，而且必須記錄。對此而言，當工作非同步完成時，您可以使用繼續接收告知:  
+ 此外，即使第一個工作成功完成，後續工作可能失敗。  此時，您有幾個處理例外狀況的選項：您可以等待所有啟動的工作完成，在這種情況下，您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法，或者您可以決定所有例外狀況都很重要，必須全部記錄。  對此，您可以使用接續，在工作完成時以非同步方式接收通知︰  
   
 ```csharp  
 foreach(Task recommendation in recommendations)  
@@ -316,7 +304,6 @@ foreach(Task recommendation in recommendations)
     var ignored = recommendation.ContinueWith(  
         t => { if (t.IsFaulted) Log(t.Exception); });  
 }  
-  
 ```  
   
  或：  
@@ -327,13 +314,12 @@ foreach(Task recommendation in recommendations)
     var ignored = recommendation.ContinueWith(  
         t => Log(t.Exception), TaskContinuationOptions.OnlyOnFaulted);  
 }  
-  
 ```  
   
- 或甚至是：  
+ 或甚至︰  
   
 ```  
-private static async  void LogCompletionIfFailed(IEnumerable<Task> tasks)  
+private static async void LogCompletionIfFailed(IEnumerable<Task> tasks)  
 {  
     foreach(var task in tasks)  
     {  
@@ -343,10 +329,9 @@ private static async  void LogCompletionIfFailed(IEnumerable<Task> tasks)
 }  
 …  
 LogCompletionIfFailed(recommendations);  
-  
 ```  
   
- 最後，您可能會想要移除所有剩餘的作業:  
+ 最後，您可能想要取消其餘所有作業︰  
   
 ```csharp  
 var cts = new CancellationTokenSource();  
@@ -360,11 +345,10 @@ var recommendations = new List<Task<bool>>()
 Task<bool> recommendation = await Task.WhenAny(recommendations);  
 cts.Cancel();  
 if (await recommendation) BuyStock(symbol);  
-  
 ```  
   
-#### 交錯  
- 考量您從網路下載影像並處理各個影像的情況下 \(例如，將影像加入至 UI 控制項\)。您必須在 UI 執行緒上進行循序處理，不過，您想要盡可能在同一時間內下載多個影像。  此外，您不想阻攔將影像加入至 UI，直到所有的影像都已下載結束\-也就是說，您想在他們都完成後，再將他們一併加入UI:  
+#### <a name="interleaving"></a>交錯  
+ 假設您從 web 下載影像並處理每個影像 (例如，將影像新增至 UI 控制項)。  您必須在 UI 執行緒上循序處理，但您想要盡可能同時下載影像。 此外，您不想等到影像全部下載後才新增至 UI，您想要在影像完成下載時就新增：  
   
 ```csharp  
 List<Task<Bitmap>> imageTasks =   
@@ -381,10 +365,9 @@ while(imageTasks.Count > 0)
     }  
     catch{}  
 }  
-  
 ```  
   
- 您也可以交錯應用在需要在 <xref:System.Threading.ThreadPool> 上精密計算地處理應用在下載影像的案例;例如:  
+ 您也可以套用交錯上包含耗用大量運算資源的處理案例<xref:System.Threading.ThreadPool>下載映像，例如：  
   
 ```csharp  
 List<Task<Bitmap>> imageTasks =   
@@ -402,11 +385,10 @@ while(imageTasks.Count > 0)
     }  
     catch{}  
 }  
-  
 ```  
   
-#### 節流  
- 考慮交錯範例，除了使用者正使用節流閥下載許多影像，例如，您控制特定數量的下載量在同一時間進行。  若要達成這個目的，您可以啟動非同步作業的子集。做為作業完成，您可以啟動其他作業來取代他們的位置:  
+#### <a name="throttling"></a>節流  
+ 在交錯範例中，除非使用者下載太多影像，以至於必須節流下載。例如，您只想要同時進行一定數量的下載。 為了達到此目的，您可以先啟動一部分的非同步作業。  當這些作業完成時，您可以再啟動另一批作業︰  
   
 ```csharp  
 const int CONCURRENCY_LEVEL = 15;  
@@ -437,11 +419,10 @@ while(imageTasks.Count > 0)
         nextIndex++;  
     }  
 }  
-  
 ```  
   
-#### 早期的備援  
- 考量您正在等待非同步作業完成時，同時回應使用者的取消要求時 \(例如，使用者按一下 \[取消\] 按鈕\)。  下列程式碼會說明這個行為：  
+#### <a name="early-bailout"></a>提早脫離  
+ 假設您以非同步方式等候作業完成，同時也回應使用者的取消要求 (例如，使用者按一下取消按鈕)。 下列程式碼說明這種情節：  
   
 ```csharp  
 private CancellationTokenSource m_cts;   
@@ -451,7 +432,7 @@ public void btnCancel_Click(object sender, EventArgs e)
     if (m_cts != null) m_cts.Cancel();  
 }  
   
-public async  void btnRun_Click(object sender, EventArgs e)  
+public async void btnRun_Click(object sender, EventArgs e)  
 {  
     m_cts = new CancellationTokenSource();  
     btnRun.Enabled = false;  
@@ -469,7 +450,7 @@ public async  void btnRun_Click(object sender, EventArgs e)
     finally { btnRun.Enabled = true; }  
 }  
   
-private static async  Task UntilCompletionOrCancellation(  
+private static async Task UntilCompletionOrCancellation(  
     Task asyncOp, CancellationToken ct)  
 {  
     var tcs = new TaskCompletionSource<bool>();  
@@ -477,15 +458,14 @@ private static async  Task UntilCompletionOrCancellation(
         await Task.WhenAny(asyncOp, tcs.Task);  
     return asyncOp;  
 }  
-  
 ```  
   
- 這個實作重新啟用使用者介面，一旦您決定使用備援，但不會移除對應的非同步作業。當您決定紓困時，另一種選擇是取消待判定的作業，但不要重新建置使用者介面，直到作業的完成，而此可能是因為取消要求而造成的提早結束:  
+ 當您決定脫離時，此實作會立即重新啟用使用者介面，但不取消幕後的非同步作業。  另一種方式是在您決定脫離時取消暫止的作業，但在作業實際完成之前不重新建立使用者介面，可能是由於取消要求而提早結束︰  
   
 ```csharp  
 private CancellationTokenSource m_cts;  
   
-public async  void btnRun_Click(object sender, EventArgs e)  
+public async void btnRun_Click(object sender, EventArgs e)  
 {  
     m_cts = new CancellationTokenSource();  
   
@@ -500,20 +480,19 @@ public async  void btnRun_Click(object sender, EventArgs e)
     catch(OperationCanceledException) {}  
     finally { btnRun.Enabled = true; }  
 }  
-  
 ```  
   
- 另一個關於早期紓困的範例使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法與 <xref:System.Threading.Tasks.Task.Delay%2A> 方法，如下一節中所述。  
+ 另一個範例的早期 bailout 牽涉到使用<xref:System.Threading.Tasks.Task.WhenAny%2A>方法搭配<xref:System.Threading.Tasks.Task.Delay%2A>方法下, 一節中所述。  
   
-### Task.Delay  
- 您可以使用 <xref:System.Threading.Tasks.Task.Delay%2A> 方法引入暫停的非同步方法。對於許多功能來說這是非常有用的，包括建置輪詢迴圈和延遲處理使用者在某一預先決定的時間。<xref:System.Threading.Tasks.Task.Delay%2A> 方法也可以與實作等待逾時的 <xref:System.Threading.Tasks.Task.WhenAny%2A> 整合將會更有用。  
+### <a name="taskdelay"></a>Task.Delay  
+ 您可以使用 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法在非同步方法的執行過程中引入暫停。  這適用於許多種功能，包括建置輪詢迴圈和將使用者輸入延遲一段預先定義的時間再處理。  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>方法也可用於搭配<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>的實作上的逾時等候。  
   
- 如果是較大的非同步作業工作 \(例如， ASP.NET Web 服務\) 的一部分需要很長的時間才能完成，而此作業沒有成功完成的畫，可能會受到相當程度的影響。因此，在等待非同步作業期間，能逾時是很重要的。同步處理 <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.%2A> WaitAll?qualifyHint=False&autoUpgrade=True, 和 <xref:System.Threading.Tasks.Task.%2A> WaitAny?qualifyHint=False&autoUpgrade=True 方法時，會接受逾時值，但是相對應的 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>\/<xref:System.Threading.Tasks.Task.WhenAny%2A> 和先前提到的 <xref:System.Threading.Tasks.Task.WhenAll%2A>\/<xref:System.Threading.Tasks.Task.WhenAny%2A> 則不能。相反地，您可以使用 <xref:System.Threading.Tasks.Task.Delay%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A> 的結合來實作逾時。  
+ 如果更大非同步作業 (例如，ASP.NET Web 服務) 中的一項工作太久才完成，將會波及整體作業，尤其是如果它根本無法完成。  因此，在非同步作業上等候時必須能夠逾時。  同步<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>， <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType>，和<xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType>方法接受逾時的值，但對應<xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>和先前所述<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>方法則否。  相反地，您可以使用<xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>組合來實作逾時。  
   
- 例如，在您的應用程式 UI，假設您想要下載影像並同時停用 UI 。  不過，如果下載時間太長，您想要重新啟用 UI 並捨棄下載:  
+ 例如，在您的應用程式 UI 中，假設您想要下載影像，並於下載影像時停用 UI。 不過，如果下載的時間太長，您想要重新啟用 UI 並放棄下載︰  
   
 ```csharp  
-public async  void btnDownload_Click(object sender, EventArgs e)  
+public async void btnDownload_Click(object sender, EventArgs e)  
 {  
     btnDownload.Enabled = false;  
     try  
@@ -523,25 +502,24 @@ public async  void btnDownload_Click(object sender, EventArgs e)
         {  
             Bitmap bmp = await download;  
             pictureBox.Image = bmp;  
-            status.Text = “Downloaded”;  
+            status.Text = "Downloaded";  
         }  
         else  
         {  
             pictureBox.Image = null;  
-            status.Text = “Timed out”;  
+            status.Text = "Timed out";  
             var ignored = download.ContinueWith(  
-                t => Trace(“Task finally completed”));  
+                t => Trace("Task finally completed"));  
         }  
     }  
     finally { btnDownload.Enabled = true; }  
 }  
-  
 ```  
   
- 因為 <xref:System.Threading.Tasks.Task.WhenAll%2A> 傳回一工作的關係，相同的可以應用在多個下載  
+ 同樣適用於多個下載，因為<xref:System.Threading.Tasks.Task.WhenAll%2A>傳回的工作：  
   
 ```csharp  
-public async  void btnDownload_Click(object sender, RoutedEventArgs e)  
+public async void btnDownload_Click(object sender, RoutedEventArgs e)  
 {  
     btnDownload.Enabled = false;  
     try  
@@ -551,24 +529,23 @@ public async  void btnDownload_Click(object sender, RoutedEventArgs e)
         if (downloads == await Task.WhenAny(downloads, Task.Delay(3000)))  
         {  
             foreach(var bmp in downloads) panel.AddImage(bmp);  
-            status.Text = “Downloaded”;  
+            status.Text = "Downloaded";  
         }  
         else  
         {  
-            status.Text = “Timed out”;  
+            status.Text = "Timed out";  
             downloads.ContinueWith(t => Log(t));  
         }  
     }  
     finally { btnDownload.Enabled = true; }  
 }  
-  
 ```  
   
-## 建置工作為基礎的結合器  
- 因為工作可以完全代表一非同步作業 \(Asynchronous Operation\) 和藉由指定聯結提供同步和非同步功能與作業，擷取其結果等等，您可以建立combinators 有用的程式庫來建構更大的工作模式。如上一節所述， .NET Framework 包括數個內建 combinators，不過，您也可以建立自己的控制項。  下列章節提供多個可能會使用的 combinator 方法和型別的範例。  
+## <a name="building-task-based-combinators"></a>建置以工作為基礎的組合器  
+ 因為工作能夠完全代表非同步作業，並提供同步和非同步功能來聯結作業、擷取其結果等等，所以您可以建置實用的組合器程式庫，將工作組合以建置更大的模式。  如上一節所述，.NET Framework 包含數個內建的組合器，但您也可以建立自己的組合器。 下列章節提供幾個範例說明可能的結合器方法和型別。  
   
-### RetryOnFault  
- 在大部分情況下，如果先前嘗試失敗，您可能想要重試作業。如需同步處理程式碼，您可以在接下來的範例中建置一個協助程式方法 \(例如 `RetryOnFault` :  
+### <a name="retryonfault"></a>RetryOnFault  
+ 在許多情況下，您可能想要在作業前次嘗試失敗時重試。  在同步程式碼中，您可能建置協助程式方法來達到這個目的，例如下列範例中的 `RetryOnFault`︰  
   
 ```csharp  
 public static T RetryOnFault<T>(  
@@ -581,13 +558,12 @@ public static T RetryOnFault<T>(
     }  
     return default(T);  
 }  
-  
 ```  
   
- 您可以建立一個與非同步作業中以TAP實作且會傳回工作的方法幾乎相同的協助程式方法:  
+ 對於以 TAP 實作而傳回工作的非同步作業，您可以建置幾乎完全相同的協助程式方法：  
   
 ```csharp  
-public static async  Task<T> RetryOnFault<T>(  
+public static async Task<T> RetryOnFault<T>(  
     Func<Task<T>> function, int maxTries)  
 {  
     for(int i=0; i<maxTries; i++)  
@@ -599,19 +575,18 @@ public static async  Task<T> RetryOnFault<T>(
 }  
 ```  
   
- 您可以使用這 combinator 編碼並重新載入應用程式的邏輯，例如:  
+ 然後，您可以利用此組合器，將重試編碼到應用程式的邏輯中，例如︰  
   
 ```csharp  
 // Download the URL, trying up to three times in case of failure  
 string pageContents = await RetryOnFault(  
     () => DownloadStringAsync(url), 3);  
-  
 ```  
   
- 您可以進一步延伸 `RetryOnFault` 函式。  例如，函式可接受 `Func<Task>` ，而此會在重新判斷是否在執行作業時會被引發，例如:  
+ 您可以進一步擴充 `RetryOnFault` 函式。 例如，此函式可以接受另一個 `Func<Task>` 在重試之間叫用，以判斷何時再次嘗試，例如︰  
   
 ```csharp  
-public static async  Task<T> RetryOnFault<T>(  
+public static async Task<T> RetryOnFault<T>(  
     Func<Task<T>> function, int maxTries, Func<Task> retryWhen)  
 {  
     for(int i=0; i<maxTries; i++)  
@@ -624,21 +599,20 @@ public static async  Task<T> RetryOnFault<T>(
 }  
 ```  
   
- 您可以使用下列函式，在重試作業前等待一秒:  
+ 然後，您可以如下所示使用此函式，先等待一秒再重試作業︰  
   
 ```csharp  
 // Download the URL, trying up to three times in case of failure,  
 // and delaying for a second between retries  
 string pageContents = await RetryOnFault(  
     () => DownloadStringAsync(url), 3, () => Task.Delay(1000));  
-  
 ```  
   
-### NeedOnlyOne  
- 在某些情況下，您可以利用冗位來改善作業的延遲，並且意外成功。考慮提供股價的多個 Web 服務，不過，一天幾次，每個服務可能都會提供不同的品質標準和回應時間。若要處理這些計算時，您可以向所有的Web 服務發出要求，並且當您從某一個取得回應後，取消其他剩餘的要求。您可以實作協助程式函式，來使實作啟動多個作業，等待任何移除，然後取消剩餘的這個通用模式更加輕鬆。  在下列範例中的 `NeedOnlyOne` 函式來說明這種情況:  
+### <a name="needonlyone"></a>NeedOnlyOne  
+ 有時候，您可以利用備援性來改善作業的延遲，提高成功機會。  假設有多個 Web 服務在一天中的不同時間提供股票報價，每個服務可能提供不同的品質等級和回應時間。  為了因應這些變動，您可以發出要求給所有 Web 服務，只要從其中一個服務收到回應，就立刻取消其餘要求。  您可以實作協助程式函式，更輕鬆地實作這種常見模式，亦即啟動多項作業、等候任何回應，然後取消其餘作業。 下列範例中的 `NeedOnlyOne` 函式說明此情節：  
   
 ```csharp  
-public static async  Task<T> NeedOnlyOne(  
+public static async Task<T> NeedOnlyOne(  
     params Func<CancellationToken,Task<T>> [] functions)  
 {  
     var cts = new CancellationTokenSource();  
@@ -655,17 +629,17 @@ public static async  Task<T> NeedOnlyOne(
 }  
 ```  
   
- 您可以使用這個函式:  
+ 然後，您可以如下所示使用此函式︰  
   
 ```csharp  
 double currentPrice = await NeedOnlyOne(  
-    ct => GetCurrentPriceFromServer1Async(“msft”, ct),  
-    ct => GetCurrentPriceFromServer2Async(“msft”, ct),  
-    ct => GetCurrentPriceFromServer3Async(“msft”, ct));  
+    ct => GetCurrentPriceFromServer1Async("msft", ct),  
+    ct => GetCurrentPriceFromServer2Async("msft", ct),  
+    ct => GetCurrentPriceFromServer3Async("msft", ct));  
 ```  
   
-### 交錯作業  
- 當您有非常大的工作量時，使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來支援跨案例，但此會有潛在的效能問題。對 <xref:System.Threading.Tasks.Task.WhenAny%2A> 的每個呼叫都會導致繼續移至每項工作註冊。  如需 N 個工作，則在跨作業的生命期中，會產生 O \(N2\) 個接續。如果您有很大量的工作，您可以使用 combinator \(如下列範例所示的`Interleaved` \) 來解決效能問題：  
+### <a name="interleaved-operations"></a>交錯作業  
+ 沒有使用的潛在效能問題<xref:System.Threading.Tasks.Task.WhenAny%2A>方法，以支援交錯的案例，當您使用非常大的工作集。  每次呼叫<xref:System.Threading.Tasks.Task.WhenAny%2A>導致向每個工作的接續。 以 N 個工作為例，這會導致在交錯作業的存留期建立 O(N2) 個接續。  如果您要處理的工作量很大，可以使用組合器 (如下列範例中的 `Interleaved`) 來解決效能問題：  
   
 ```csharp  
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)  
@@ -692,10 +666,9 @@ static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
     return from source in sources   
            select source.Task;  
 }  
-  
 ```  
   
- 您可以在工作完成時，使用 combinator 來處理結果;例如:  
+ 然後，您可以利用組合器處理工作完成時的結果，例如︰  
   
 ```csharp  
 IEnumerable<Task<int>> tasks = ...;  
@@ -706,35 +679,34 @@ foreach(var task in Interleaved(tasks))
 }  
 ```  
   
-### WhenAllOrFirstException  
- 在某些散佈\-收集式案例中，您可以等待一個集中的所有任務，除非其中有錯誤，在這種情況下您想要停止等候時就會發生例外狀況。您可以達成此目的，藉由使用該 combinator 方法 \(如下列範例中的 `WhenAllOrFirstException` :  
+### <a name="whenallorfirstexception"></a>WhenAllOrFirstException  
+ 在某些分散/集中的情節中，您可能想要等候一個集合的所有工作，但如果其中一個發生錯誤，您想要在發生例外狀況時立刻停止等候。  您可以使用結合器方法來達到此目的，如下列範例中的 `WhenAllOrFirstException`︰  
   
 ```csharp  
-public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)  
+public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)  
 {  
-    var inputs = tasks.ToList();  
-    var ce = new CountdownEvent(inputs.Count);  
-    var tcs = new TaskCompletionSource<T[]>();  
+    var inputs = tasks.ToList();  
+    var ce = new CountdownEvent(inputs.Count);  
+    var tcs = new TaskCompletionSource<T[]>();  
   
-    Action<Task> onCompleted = (Task completed) =>  
-    {  
-        if (completed.IsFaulted)   
-            tcs.TrySetException(completed.Exception.InnerExceptions);  
-        if (ce.Signal() && !tcs.Task.IsCompleted)  
-            tcs.TrySetResult(inputs.Select(t => t.Result).ToArray());  
-    };  
+    Action<Task> onCompleted = (Task completed) =>  
+    {  
+        if (completed.IsFaulted)   
+            tcs.TrySetException(completed.Exception.InnerExceptions);  
+        if (ce.Signal() && !tcs.Task.IsCompleted)  
+            tcs.TrySetResult(inputs.Select(t => t.Result).ToArray());  
+    };  
   
-    foreach (var t in inputs) t.ContinueWith(onCompleted);  
-    return tcs.Task;  
+    foreach (var t in inputs) t.ContinueWith(onCompleted);  
+    return tcs.Task;  
 }  
-  
 ```  
   
-## 建置工作為基礎的資料結構  
- 除了能夠建置自訂工作的 combinators外，有其資料結構在 <xref:System.Threading.Tasks.Task> ，和 <xref:System.Threading.Tasks.Task%601> ，此具有表示非同步作業的結果和必要的同步處理聯結結果，因此擁有一個建立於非同步案例中的自訂資料結構 的強大型別。  
+## <a name="building-task-based-data-structures"></a>建置以工作為基礎的資料結構  
+ 除了能夠建立自訂工作為基礎的 combinators，讓資料結構<xref:System.Threading.Tasks.Task>和<xref:System.Threading.Tasks.Task%601>，表示非同步作業的結果，並加入它需要同步處理，讓非常強大輸入要建置自訂的資料結構，以非同步的情況下使用。  
   
-### AsyncCache  
- 對一個工作而言，有一個非常重要的面向，那就是他可以分配給許多使用者，且他們全部都在等待註冊延遲，並取得它的結果 \(如果是<xref:System.Threading.Tasks.Task%601>\) 或例外狀況等等。這使 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 非常適合於使用在非同步快取基礎結構中。這是個小但強大且建置在 <xref:System.Threading.Tasks.Task%601>上方的非同步快取範例，:  
+### <a name="asynccache"></a>AsyncCache  
+ 一項工作的重要層面是，它可能會遞交給多個取用者，這些使用者可能會等待，註冊接續，取得其結果或例外狀況 (如果是<xref:System.Threading.Tasks.Task%601>)，依此類推。  這可讓<xref:System.Threading.Tasks.Task>和<xref:System.Threading.Tasks.Task%601>相當適用於非同步的快取基礎結構。  以下是一個小型的範例，但最上層的建置功能強大的非同步快取<xref:System.Threading.Tasks.Task%601>:  
   
 ```csharp  
 public class AsyncCache<TKey, TValue>  
@@ -759,23 +731,21 @@ public class AsyncCache<TKey, TValue>
         }  
     }  
 }  
-  
 ```  
   
- 做為委派的 [AsyncCache\<TKey， TValue\>](http://go.microsoft.com/fwlink/p/?LinkId=251941) 類別接受其建構函式中使用 `TKey` 並傳回 <xref:System.Threading.Tasks.Task%601>的函式。從先前儲存在內部字典中快取的值，和`AsyncCache` 是在確保即使快取在同一時間做存取，仍然只有一個工作會產生金鑰。  
+ [AsyncCache\<Dictionary<tkey，Tvalue> >](http://go.microsoft.com/fwlink/p/?LinkId=251941)類別作為其建構函式委派的函式接受`TKey`並傳回<xref:System.Threading.Tasks.Task%601>。  先前從快取中存取的任何值會儲存在內部字典中，`AsyncCache` 會確保每個索引鍵只產生一個工作，即使並行存取快取也一樣。  
   
- 例如，您可以建立一個下載網頁的快取:  
+ 例如，您可以為下載的網頁建置快取︰  
   
 ```csharp  
 private AsyncCache<string,string> m_webPages =   
     new AsyncCache<string,string>(DownloadStringAsync);  
-  
 ```  
   
- 您可以隨時在非同步方法中使用此快取。  `AsyncCache` 類別可確保您下載越少越好網頁，並快取結果。  
+ 然後，每當您需要網頁的內容時，您可以在非同步方法中使用此快取。 `AsyncCache` 類別可確保儘可能下載較少的頁面並快取結果。  
   
 ```csharp  
-private async  void btnDownload_Click(object sender, RoutedEventArgs e)   
+private async void btnDownload_Click(object sender, RoutedEventArgs e)   
 {  
     btnDownload.IsEnabled = false;  
     try  
@@ -784,13 +754,12 @@ private async  void btnDownload_Click(object sender, RoutedEventArgs e)
     }  
     finally { btnDownload.IsEnabled = true; }  
 }  
-  
 ```  
   
-### AsyncProducerConsumerCollection  
- 您也可以使用工作來建置協調非同步活動的資料結構。請考慮其中一種傳統的平行設計模式： 產生者\/取用者。在這個模式，生產者產生消費者使用的資料，因此，生產者和消費者可以平行執行。  例如，消費者處理項目 1，先前由現在產生項目 2的生產者所產生。對於生產者\/消費者模式，您不需要變更一些資料結構儲存生產者建立的工作，以便消費者可以被告知新資料，並在可用時尋找之。  
+### <a name="asyncproducerconsumercollection"></a>AsyncProducerConsumerCollection  
+ 您也可以使用工作來建置資料結構，以協調非同步活動。  請考量其中一種傳統的平行設計模式︰產生者/取用者。  在此模式中，產生者產生由取用者取用的資料，產生者和消費者可以平行執行。 比方說，取用者處理先前由產生者產生的項目 1，而產生者現在產生項目 2。  在產生者/取用者模式中，您無可避免地一定要使用某種資料結構來儲存產生者建立的工作，才能讓取用者在新資料出現時收到通知並且找到新資料。  
   
- 以下是在任務上建立簡單的資料結構，可讓非同步方法用在產生者和消費者：  
+ 以下是根據工作建置的簡單資料結構，可將非同步方法當做產生者和取用者︰  
   
 ```csharp  
 public class AsyncProducerConsumerCollection<T>  
@@ -827,15 +796,14 @@ public class AsyncProducerConsumerCollection<T>
         }  
     }  
 }  
-  
 ```  
   
- 有此適當的資料結構，您可以撰寫下列程式碼:  
+ 利用該資料結構，您可以撰寫如下所示的程式碼︰  
   
 ```csharp  
 private static AsyncProducerConsumerCollection<int> m_data = …;  
 …  
-private static async  Task ConsumerAsync()  
+private static async Task ConsumerAsync()  
 {  
     while(true)  
     {  
@@ -850,12 +818,12 @@ private static void Produce(int data)
 }  
 ```  
   
- <xref:System.Threading.Tasks.Dataflow> 命名空間包含 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 型別，您可以用類似的方式來使用，而不需要建立自訂集合型別:  
+ <xref:System.Threading.Tasks.Dataflow>命名空間包含<xref:System.Threading.Tasks.Dataflow.BufferBlock%601>類型，您可以使用類似的方式，但不需要建置自訂集合型別：  
   
 ```csharp  
 private static BufferBlock<int> m_data = …;  
 …  
-private static async  Task ConsumerAsync()  
+private static async Task ConsumerAsync()  
 {  
     while(true)  
     {  
@@ -868,13 +836,12 @@ private static void Produce(int data)
 {  
     m_data.Post(data);  
 }  
-  
 ```  
   
 > [!NOTE]
->  <xref:System.Threading.Tasks.Dataflow> 命名空間可在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 透過 \[**NuGet**\]使用。  若要安裝包含 <xref:System.Threading.Tasks.Dataflow> 命名空間的組件中，請在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]中開啟您的專案，請從專案功能表選取 \[**處理 NuGet 套件**\] ，並在線上搜尋 Microsoft.Tpl.Dataflow 封裝。  
+>  <xref:System.Threading.Tasks.Dataflow>命名空間是用於[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]透過**NuGet**。 若要安裝包含的組件<xref:System.Threading.Tasks.Dataflow>命名空間中，開啟您的專案中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，選擇**管理 NuGet 封裝**從 [專案] 功能表中，並線上搜尋 Microsoft.Tpl.Dataflow 封裝。  
   
-## 請參閱  
- [Task\-based Asynchronous Pattern \(TAP\)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)   
- [Implementing the Task\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)   
- [Interop with Other Asynchronous Patterns and Types](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+## <a name="see-also"></a>另請參閱  
+ [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [實作以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+ [與其他非同步模式和型別互通](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

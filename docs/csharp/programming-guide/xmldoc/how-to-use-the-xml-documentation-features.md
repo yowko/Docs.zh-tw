@@ -1,45 +1,27 @@
 ---
 title: "如何：使用 XML 文件功能 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eeee77db523bc0ad97f425d4ba8076ae5740dfe8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>如何：使用 XML 文件功能 (C# 程式設計手冊)
 下列範例提供已記載之類型的基本概觀。  
   
 ## <a name="example"></a>範例  
- [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **// 此 .xml 檔案是透過上述程式碼範例所產生。**  
 **\<?xml version="1.0"?>**  
@@ -52,7 +34,7 @@ ms.lasthandoff: 07/28/2017
  **\<summary>**  
  **類別層級摘要文件在此處出現。\</summary>**  
  **\<remarks>**  
- **可以將較長的註解經由備註標記**   
+ **較長的註解可以是類型或成員相關聯**  
  **和類型或成員產生關聯\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
@@ -60,14 +42,14 @@ ms.lasthandoff: 07/28/2017
  **Name 屬性的存放區\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
- **\<summary>類別建構函式。\</summary>**   
+ **\<摘要 > 的類別建構函式。\<摘要/>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **SomeMethod 的描述。\</summary>**  
  **\<param name="s"> s 的參數描述在此處出現\</param>**  
  **\<seealso cref="T:System.String">**  
- **您可以使用任何標記上的 cref 屬性來參考類型或成員**   
+ **您也可以任何標記上使用的 cref 屬性，參考類型或成員**  
  **而編譯器會檢查這個參考是否存在。\</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
@@ -116,7 +98,6 @@ ms.lasthandoff: 07/28/2017
         >  XML 檔案不會提供類型和成員的完整資訊 (例如，它不會包含任何類型資訊)。 若要取得類型或成員的完整資訊，文件檔案在使用時必須能夠反映實際類型或成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [/doc （C# 編譯器選項）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-

@@ -1,42 +1,24 @@
 ---
 title: "ref (C# 參考)"
-ms.date: 2017-05-30
+ms.date: 05/30/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
 - ref
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 003125ca6218d42a919d8bb592b5454a7cb387c7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -57,17 +39,17 @@ ms.lasthandoff: 07/28/2017
 
 若要使用 `ref` 參數，方法定義和呼叫方法都必須明確使用 `ref` 關鍵字，如下列範例所示。  
 
-[!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
 
 傳遞至 `ref` 參數的引數，在傳遞之前必須先初始化。 這與 [out](out.md) 參數不同，其引數不需要在傳遞之前先明確初始化。
 
 類別的成員不能擁有僅在 `ref` 和 `out` 方面不同的簽章。 如果類型的兩個成員之間唯一的區別在於其中一個具有 `ref` 參數，而另一個具有 `out` 參數，則編譯器會發生錯誤。 例如，下列程式碼不會進行編譯。  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
+ [!code-csharp[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
   
  不過，如果一種方法具有 `ref` 或 `out` 參數，而且另一種方法具有實值參數，則可以多載方法，如下列範例所示。
   
- [!code-cs[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
+ [!code-csharp[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
   
  在需要簽章比對的其他情況 (如隱藏或覆寫) 下，`ref` 和 `out` 是簽章的一部分，而且彼此不相符。  
   
@@ -85,7 +67,7 @@ ms.lasthandoff: 07/28/2017
 
 先前的範例會以傳址方式傳遞實值型別。 您也可以使用 `ref` 關鍵字，以傳址方式傳遞參考型別。 以傳址方式傳遞參考型別，可讓已呼叫方法取代參考參數在呼叫者中所參考的物件。 物件的儲存位置會以參考參數值的方式，傳遞至方法。 如果您變更參數儲存位置中的值 (指向新的物件)，則也會變更呼叫端所參考的儲存位置。 下列範例會以 `ref` 參數，傳遞參考類型的執行個體。   
   
- [!code-cs[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
+ [!code-csharp[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
 
 如需如何依傳值和依傳址方式來傳遞參考類型的詳細資訊，請參閱[傳遞參考類型參數](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)。
   
@@ -106,7 +88,7 @@ ms.lasthandoff: 07/28/2017
    ref return Decimal.Zero;
    ``` 
 
-為了讓呼叫者修改物件的狀態，參考傳回值必須儲存至明確定義為 [ref 區域變數](#ref-locals)的變數。 
+為了讓呼叫端若要修改物件的狀態，將參考傳回值必須存放至變數，明確定義為[參考本機](#ref-locals)。 
 
 如需範例，請參閱 [ref 傳回值和 ref 區域變數範例](#a-ref-returns-and-ref-locals-example)。
 
@@ -128,19 +110,18 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 
 下面範例會定義具有 `Title` 和 `Author` 這兩個 <xref:System.String> 欄位的 `Book` 類別。 它也會定義 `BookCollection` 類別，以包含 `Book` 物件的私用陣列。 以傳址方式傳回個別書籍物件，方法是呼叫其 `GetBookByTitle` 方法。
 
-[!code-cs[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
+[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
 
 呼叫者將 `GetBookByTitle` 方法所傳回的值儲存為 ref 區域變數時，呼叫者對傳回值進行的變更會反映在 `BookCollection` 物件中，如下列範例所示。
 
-[!code-cs[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
+[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
 
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
- [方法參數](../../../csharp/language-reference/keywords/method-parameters.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+ [方法參數](../../../csharp/language-reference/keywords/method-parameters.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-

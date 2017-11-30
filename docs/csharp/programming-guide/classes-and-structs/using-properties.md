@@ -1,40 +1,22 @@
 ---
 title: "使用屬性 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b1b1dbffa3af7fdaf1f3a93ecdf6183fe1c1cf2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-properties-c-programming-guide"></a>使用屬性 (C# 程式設計手冊)
 屬性會合併欄位和方法的各個層面。 對物件的使用者而言，屬性會呈現為欄位，而存取屬性需要相同的語法。 對於類別的實作器而言，屬性是一或兩個程式碼區塊，代表 [get](../../../csharp/language-reference/keywords/get.md) 存取子和 (或) [set](../../../csharp/language-reference/keywords/set.md) 存取子。 讀取屬性時，會執行 `get` 存取子的程式碼區塊；指派屬性的新值時，會執行 `set` 存取子的程式碼區塊。 沒有 `set` 存取子的屬性會視為唯讀。 沒有 `get` 存取子的屬性則視為唯讀。 具有這兩個存取子的屬性是讀寫。  
@@ -45,7 +27,7 @@ ms.lasthandoff: 07/28/2017
   
  在類別區塊中宣告屬性的方式是指定欄位存取層級，其後依序接著屬性類型、屬性名稱，以及宣告 `get` 存取子和 (或) `set` 存取子的程式碼區塊。 例如:   
   
- [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
+ [!code-csharp[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
  在此範例中，將 `Month` 宣告為屬性，因此，`set` 存取子可以確定設定的 `Month` 值介於 1 與 12 之間。 `Month` 屬性使用私用欄位來追蹤實際值。 屬性資料的實際位置通常稱為屬性的「備份存放區」。 屬性經常使用私用欄位作為備份存放區。 此欄位標示為私用，以確認只有呼叫屬性才能進行變更。 如需公用和私用存取限制的詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
@@ -54,37 +36,37 @@ ms.lasthandoff: 07/28/2017
 ## <a name="the-get-accessor"></a>get 存取子  
  `get` 存取子的主體與方法的主體類似。 它必須傳回屬性類型的值。 執行 `get` 存取子相當於讀取欄位的值。 例如，當您要從 `get` 存取子傳回私用變數並啟用最佳化時，則編譯器會內嵌 `get` 存取子方法呼叫，因此沒有任何方法呼叫額外負荷。 不過，因為編譯器在編譯時間不知道執行階段實際呼叫的方法，所以無法內嵌虛擬 `get` 存取子方法。 下列 `get` 存取子會傳回私用欄位 `name` 的值：  
   
- [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
+ [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
  當您參考指派目標以外的屬性時，會叫用 `get` 存取子來讀取屬性的值。 例如:   
   
- [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
+ [!code-csharp[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
  `get` 存取子必須結束於 [return](../../../csharp/language-reference/keywords/return.md) 或 [throw](../../../csharp/language-reference/keywords/throw.md) 陳述式，而且控制無法離開存取子主體。  
   
  這是使用 `get` 存取子變更物件狀態的不良程式設計樣式。 例如，下列存取子會產生每次存取 `number` 欄位時都變更物件狀態的副作用。  
   
- [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
+ [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
  `get` 存取子可用來傳回欄位值或計算它，並傳回它。 例如:   
   
- [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
+ [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
  在先前的程式碼區段中，如果您未指派 `Name` 屬性的值，則會傳回 NA 值。  
   
 ## <a name="the-set-accessor"></a>set 存取子  
  `set` 存取子與傳回型別為 [void](../../../csharp/language-reference/keywords/void.md) 的方法類似。 它使用稱為 `value` 的隱含參數，其類型為屬性的類型。 在下列範例中，將 `set` 存取子新增至 `Name` 屬性：  
   
- [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
+ [!code-csharp[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
  當您指派屬性的值時，會使用提供新值的引數來叫用 `set` 存取子。 例如:   
   
- [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
+ [!code-csharp[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   
  在 `set` 存取子中使用區域變數宣告的隱含參數名稱 `value` 是錯誤的。  
   
 ## <a name="remarks"></a>備註  
- 屬性可以標示為 `public`、`private`、`protected`、`internal` 或 `protected internal`。 這些存取修飾詞定義類別使用者如何存取屬性。 相同屬性的 `get` 和 `set` 存取子可能會有不同的存取修飾詞。 例如，`get` 可能是 `public` 以允許從類型外部進行唯讀存取，而 `set` 可能是 `private` 或 `protected`。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 屬性可以標示為`public`， `private`， `protected`， `internal`，`protected internal`或`private protected`。 這些存取修飾詞定義類別使用者如何存取屬性。 相同屬性的 `get` 和 `set` 存取子可能會有不同的存取修飾詞。 例如，`get` 可能是 `public` 以允許從類型外部進行唯讀存取，而 `set` 可能是 `private` 或 `protected`。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
  屬性可以使用 `static` 關鍵字宣告為靜態屬性。 這可隨時向呼叫者提供屬性，即使沒有任何類別執行個體也是一樣。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
@@ -98,33 +80,32 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>範例  
  此範例示範執行個體、靜態和唯讀屬性。 它會從鍵盤接受員工姓名、將 `NumberOfEmployees` 增加 1，並顯示員工姓名和編號。  
   
- [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
+ [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
 ## <a name="example"></a>範例  
  此範例示範如何存取基底類別中由衍生類別中同名的另一個屬性所隱藏的屬性。  
   
- [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
+ [!code-csharp[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
   
  上述範例中的重點如下：  
   
 -   衍生類別中的 `Name` 屬性會隱藏基底類別中的 `Name` 屬性。 在這類情況下，`new` 修飾詞用在衍生類別的屬性宣告中：  
   
-     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
+     [!code-csharp[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
   
 -   轉型 `(Employee)` 用來存取基底類別中的隱藏屬性：  
   
-     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
+     [!code-csharp[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
   
      如需隱藏成員的詳細資訊，請參閱 [new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md)。  
   
 ## <a name="example"></a>範例  
  在此範例中，`Cube` 和 `Square` 這兩個類別會實作抽象類別 `Shape`，並覆寫其抽象 `Area` 屬性。 請注意如何在屬性上使用 [override](../../../csharp/language-reference/keywords/override.md) 修飾詞。 程式接受這端作為輸入，並計算正方形和立方體的區域。 它也接受區域作為輸入，並計算正方形和立方體的對應端。  
   
- [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
+ [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [介面屬性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [介面屬性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
  [自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
-

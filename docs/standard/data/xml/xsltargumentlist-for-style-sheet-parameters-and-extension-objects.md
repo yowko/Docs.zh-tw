@@ -1,33 +1,34 @@
 ---
-title: "樣式表參數和擴充物件的 XsltArgumentList | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "樣式表參數和擴充物件的 XsltArgumentList"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: d4741551b1e6dd2694a0bd65e65a15953f808e59
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 樣式表參數和擴充物件的 XsltArgumentList
-<xref:System.Xml.Xsl.XsltArgumentList> 類別包含可擴充樣式表語言轉換 \(XSLT\) 參數和 XSLT 擴充物件。  傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>樣式表參數和擴充物件的 XsltArgumentList
+<xref:System.Xml.Xsl.XsltArgumentList> 類別包含可擴充樣式表語言轉換 (XSLT) 參數和 XSLT 擴充物件。 傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 和 <xref:System.Xml.Xsl.XsltArgumentList> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。  您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行 XSLT 轉換。  如需詳細資訊，請參閱 [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 和 [從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+>  <xref:System.Xml.Xsl.XslTransform> 和 <xref:System.Xml.Xsl.XsltArgumentList> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行 XSLT 轉換。 請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[移轉從 XslTransform 類別](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)如需詳細資訊。  
   
- <xref:System.Xml.Xsl.XsltArgumentList> 類別包含 XSLT 參數和 XSLT 擴充物件。  傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
+ <xref:System.Xml.Xsl.XsltArgumentList> 類別包含 XSLT 參數和 XSLT 擴充物件。 傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
   
  下列是傳遞物件，而不是使用內嵌指令碼的優點：  
   
@@ -39,31 +40,31 @@ caps.handback.revision: 3
   
 -   支援使用 <xref:System.Xml.XPath.XPathNodeIterator> 將結果樹狀結構片段傳遞給樣式表。  
   
-## XSLT 樣式表參數  
- XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法加入至 <xref:System.Xml.Xsl.XsltArgumentList>。  限定名稱和命名空間統一資源識別元 \(URI\) 會在此時與參數物件產生關聯。  
+## <a name="xslt-style-sheet-parameters"></a>XSLT 樣式表參數  
+ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 限定名稱和命名空間統一資源識別元 (URI) 會在此時與參數物件產生關聯。  
   
- 參數物件應對應至全球資訊網協會 \(W3C\) 型別。  下列表格將說明對應的 W3C 型別、對等的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類別 \(型別\)，以及 W3C 型別是 XML 路徑語言 \(XPath\) 型別還是 XSLT 型別。  
+ 參數物件應對應至全球資訊網協會 (W3C) 型別。 下列表格將說明對應的 W3C 型別、對等的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類別 (型別)，以及 W3C 型別是 XML 路徑語言 (XPath) 型別還是 XSLT 型別。  
   
-|W3C 型別|對等的 .NET Framework 類別 \(型別\)|XPath 型別或 XSLT 型別|  
-|------------|----------------------------------|-----------------------|  
+|W3C 型別|對等的.NET Framework 類別 （型別）|XPath 型別或 XSLT 型別|  
+|--------------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
 |數字|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- 如果參數物件不是以上類別之一，它會被強制成合適的 Double 或 String。  Int16、UInt16、Int32、UInt32、Int64、UInt64、Single 和 Decimal 型別被強制成 Double。  所有其他型別都會透過 `ToString` 方法而強制轉換為 String。  
+ 如果參數物件不是以上類別之一，它會被強制成合適的 Double 或 String。 Int16、UInt16、Int32、UInt32、Int64、UInt64、Single 和 Decimal 型別被強制成 Double。 所有其他型別都會透過 `ToString` 方法而強制轉換為 String。  
   
-#### 若要使用 XSLT 參數，使用者必須執行以下作業：  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>若要使用 XSLT 參數，使用者必須執行以下作業：  
   
-1.  使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 來建立 <xref:System.Xml.Xsl.XsltArgumentList>，並加入物件。  
+1.  使用 <xref:System.Xml.Xsl.XsltArgumentList> 來建立 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>，並加入物件。  
   
 2.  從樣式表呼叫參數。  
   
 3.  將 <xref:System.Xml.Xsl.XsltArgumentList> 傳遞至 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
-### 範例  
- 下列範例使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法來建立參數，以保留計算的折扣日期。  折扣日期計算為從訂購日期起的 20 天。  
+### <a name="example"></a>範例  
+ 下列範例使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法來建立參數，以保留計算的折扣日期。 折扣日期計算為從訂購日期起的 20 天。  
   
 ```vb  
 Imports System  
@@ -104,7 +105,6 @@ Public class Sample
   
   End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -146,10 +146,10 @@ public class Sample
 }  
 ```  
   
-### 輸入  
+### <a name="input"></a>輸入  
  order.xml  
   
-```  
+```xml  
 <!--Represents a customer order-->  
 <order>  
   <book ISBN='10-861003-324'>  
@@ -165,7 +165,7 @@ public class Sample
   
  discount.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
   <xsl:param name="discount"/>  
   <xsl:template match="/">  
@@ -178,34 +178,34 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### 輸出  
+### <a name="output"></a>輸出  
   
-```  
+```xml  
 <order>  
    <total>36.9</total>   
    15% discount if paid by: 5/6/2001 5:01:15 PM   
 </order>  
 ```  
   
-## XSLT 擴充物件  
- 使用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法，將 XSLT 擴充物件加入至 <xref:System.Xml.Xsl.XsltArgumentList>。  限定名稱和命名空間 URI 於當時與擴充物件產生關聯。  
+## <a name="xslt-extension-objects"></a>XSLT 擴充物件  
+ 使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，將 XSLT 擴充物件加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>。 限定名稱和命名空間 URI 於當時與擴充物件產生關聯。  
   
- 加入物件時，<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 的呼叫端必須在安全性原則中完全受信任。  如果呼叫端並非完全受信任，則無法加入。  
+ 加入物件時，<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 的呼叫端必須在安全性原則中完全受信任。 如果呼叫端並非完全受信任，則無法加入。  
   
- 雖然物件成功加入，但不保證會成功執行。  呼叫 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法時，即會針對 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期間所提供的辨識項計算使用權限，接著將該使用權限集指派給整個轉換程序。  如果擴充物件企圖啟始需要權限集中找不到的使用權限的動作，將擲回例外狀況。  
+ 雖然物件成功加入，但不保證會成功執行。 呼叫 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法時，即會針對 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期間所提供的辨識項計算使用權限，接著將該使用權限集指派給整個轉換程序。 如果擴充物件企圖啟始需要權限集中找不到的使用權限的動作，將擲回例外狀況。  
   
  從擴充物件中傳回的資料型別，是數字、字串、布林和節點集這四種基本 XPath 資料型別的其中一種。  
   
-#### 若要使用 XSLT 擴充物件，使用者必須執行以下作業：  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>若要使用 XSLT 擴充物件，使用者必須執行以下作業：  
   
-1.  使用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 來建立 <xref:System.Xml.Xsl.XsltArgumentList>，並加入擴充物件。  
+1.  使用 <xref:System.Xml.Xsl.XsltArgumentList> 來建立 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>，並加入擴充物件。  
   
 2.  從樣式表叫用擴充物件。  
   
 3.  將 <xref:System.Xml.Xsl.XsltArgumentList> 傳遞至 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
-### 範例  
- 以下範例計算圓的圓周 \(假設已經知道其半徑\)。  
+### <a name="example"></a>範例  
+ 以下範例計算圓的圓周 (假設已經知道其半徑)。  
   
 ```vb  
 Imports System  
@@ -257,7 +257,6 @@ Public Class Sample
     End Function  
   End Class  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -315,10 +314,10 @@ public class Sample
 }  
 ```  
   
-### 輸入  
+### <a name="input"></a>輸入  
  number.xml  
   
-```  
+```xml  
 <?xml version='1.0'?>  
 <data>  
   <circle>  
@@ -332,7 +331,7 @@ public class Sample
   
  circle.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
     xmlns:myObj="urn:myObj">  
   
@@ -351,7 +350,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### 輸出  
+### <a name="output"></a>輸出  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -372,5 +371,5 @@ public class Sample
   
  `</circles>`  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

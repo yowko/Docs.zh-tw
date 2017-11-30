@@ -3,16 +3,15 @@ title: "dotnet run 命令 - .NET Core CLI"
 description: "dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -74,6 +73,10 @@ dotnet myapp.dll
 
 使用指定的[架構](../../standard/frameworks.md)建置並執行應用程式。 架構必須在專案檔中指定。
 
+`--force`
+
+即使最後的還原成功，仍強制解析所有相依性。 這相當於刪除*project.assets.json*。
+
 `-h|--help`
 
 印出命令的簡短說明。
@@ -85,6 +88,10 @@ dotnet myapp.dll
 `--no-build`
 
 不會在執行前建置專案。
+
+`--no-dependencies`
+
+在還原包含專案對專案 (P2P) 參考的專案時，會還原根專案，而非參考。
 
 `--no-launch-profile`
 
@@ -142,4 +149,3 @@ dotnet myapp.dll
 執行目前目錄中的專案 (因為已使用 `--` 引數，所以這個範例中的 `--help` 引數會傳遞給應用程式)：
 
 `dotnet run --configuration Release -- --help`
-

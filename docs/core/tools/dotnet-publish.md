@@ -1,21 +1,17 @@
 ---
 title: "dotnet publish 命令 - .NET Core CLI"
 description: "dotnet publish 命令會將 .NET Core 專案發行到目錄中。"
-keywords: "dotnet-publish, CLI, CLI 命令, .NET Core"
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 08/12/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
+ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: db6e527a6132be0b6362c68945bb68884f5ad619
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -95,10 +91,11 @@ dotnet publish [-h|--help]
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定輸出目錄的路徑。 如果未指定，則預設為 *./bin/[configuration]/[framework]/* (與 Framework 相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]* (獨立部署)。
+如果提供相對路徑，則產生的輸出目錄是相對於專案檔案的位置，不會以目前的工作目錄。
 
 `--self-contained`
 
-使用您的應用程式發行 .NET Core 執行階段，讓目標電腦不需要安裝執行階段。 如已指定執行階段識別碼，則其預設值是 `true`。 如需不同部署類型的詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。
+使用您的應用程式發行 .NET Core 執行階段，讓目標電腦不需要安裝執行階段。 如已指定執行階段識別碼，則其預設值是 `true`。 如需不同部署類型的詳細資訊，請參閱[.NET Core 應用程式部署](../deploying/index.md)。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -133,6 +130,7 @@ dotnet publish [-h|--help]
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定輸出目錄的路徑。 如果未指定，則預設為 *./bin/[configuration]/[framework]/* (與 Framework 相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]* (獨立部署)。
+如果提供相對路徑，則產生的輸出目錄是相對於專案檔案的位置，不會以目前的工作目錄。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -170,4 +168,3 @@ dotnet publish [-h|--help]
 
 * [目標架構](../../standard/frameworks.md)
 * [執行階段識別項 (RID) 目錄](../rid-catalog.md)
-

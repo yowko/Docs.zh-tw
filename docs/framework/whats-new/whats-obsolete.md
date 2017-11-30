@@ -1,28 +1,23 @@
 ---
-title: ".NET Framework 類別庫中的過時功能 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
+title: ".NET Framework 類別庫中的過時功能"
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 68c71e26ac5e5a1872ac006d02adec84c1fb63da
-ms.lasthandoff: 04/18/2017
-
+ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中的過時功能
 .NET Framework 會隨著時間改變。 每個新版本都會加入一些提供新功能的新類型和類型成員。 現有的類型及其成員也會隨著時間改變。 例如，當某些類型所支援的技術由新技術取代時，這些類型的重要性會降低，而且某些方法會由更方便或功能更完整的新方法取代。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 04/18/2017
   
 2.  將下列內容加入組態檔。  
   
-    ```  
+    ```xml  
     <configuration>  
        <startup>   
           <supportedRuntime version="v4.0" />  
@@ -66,7 +61,7 @@ ms.lasthandoff: 04/18/2017
   
 |.NET Framework 版本|`version` 字串|
 |-|-|  
-|4.7|4.0 版起|  
+|4.7 （包括 4.7.1）|4.0 版起|  
 |4.6 (包括 4.6.1 和 4.6.2)|4.0 版起|  
 |4.5 (包括 4.5.1 和 4.5.2)|4.0 版起|  
 |4|4.0 版起|  

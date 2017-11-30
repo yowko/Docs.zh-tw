@@ -1,28 +1,29 @@
 ---
-title: "根據名稱或索引擷取的未排序節點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "根據名稱或索引擷取的未排序節點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a8bea8f373dced08fd7a2a828255a593533df9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 根據名稱或索引擷取的未排序節點
-根據全球資訊網協會 \(W3C\) 規格中的說明，**XmlNamedNodeMap** 是一種 NamedNodeMap，若要處理的是未排序節點集，則必須使用它，因為它可以根據名稱或索引而參考節點。  存取 **XmlNamedNodeMap** 的唯一方法，是當 **XmlNamedNodeMap** 經由方法或屬性傳回時。  有三種方法或屬性會傳回 **XmlNamedNodeMap**：  
+# <a name="unordered-node-retrieval-by-name-or-index"></a>根據名稱或索引擷取的未排序節點
+**XmlNamedNodeMap** namednodemap 的 World Wide Web Consortium (W3C) 規格所述，而且需要參考節點能夠處理未排序的節點集，根據名稱或索引。 您可以存取的唯一方式**XmlNamedNodeMap**時**XmlNamedNodeMap**透過方法或屬性會傳回。 有三種方法或屬性會傳回**XmlNamedNodeMap**:  
   
 -   XmlElement.Attributes  
   
@@ -30,9 +31,9 @@ caps.handback.revision: 3
   
 -   XmlDocumentType.Notations  
   
- 例如，**XmlDocumentType.Entities** 屬性會取得文件類型宣告中宣告的 **XmlEntity** 節點之集合。  這個集合會以 **XmlNamedNodeMap** 傳回，而且您可以使用 **Count** 屬性重複集合並且顯示實體資訊。  如需重複 **XmlNamedNodeMap** 的範例，請參閱 [XmlDocumentType.Entities 屬性](frlrfSystemXmlXmlDocumentTypeClassEntitiesTopic)。  
+ 例如， **XmlDocumentType.Entities**屬性取得的集合**XmlEntity**文件類型宣告中宣告的節點。 這個集合會當成**XmlNamedNodeMap**，您可以逐一查看集合的使用和**計數**屬性並且顯示實體資訊。 如需逐一查看**XmlNamedNodeMap**，請參閱<xref:System.Xml.XmlDocumentType.Entities%2A>。  
   
- **XmlAttributeCollection** 衍生自 **XmlNamedNodeMap** 而且只有其屬性可以修改，標記法和實體則是唯讀。  使用屬性的 **XmlNamedNodeMap**，您可以根據它們的 XML 名稱取得這些屬性的節點。  這提供簡單的方法來管理項目節點上的屬性集合。  這與直接使用 **XmlNodeList** 相反，後者也實作 `IEnumerable` 介面，但是是使用索引存取子 \(Accessor\) 而不是字串。  **RemoveNamedItem** 和 **SetNamedItem** 方法只能用於 **XmlAttributeCollection**。  從屬性集合加入或移除，無論是使用 **AttributeCollection** 或 **XmlNamedNodeMap** 實作，都會在項目上修改屬性集合。  下列程式碼範例將說明如何移動屬性及建立新屬性。  
+ **XmlAttributeCollection**衍生自**XmlNamedNodeMap**和只有屬性可以修改，標記法和實體處於唯讀狀態。 使用**XmlNamedNodeMap**屬性，您可以取得節點的那些屬性，根據其 XML 名稱。 這提供簡單的方法來管理項目節點上的屬性集合。 這可以對照直接與**XmlNodeList**，它也會實作**IEnumerable**介面，但使用索引存取子，而不是字串。 **RemoveNamedItem**和**SetNamedItem**方法只能用於**XmlAttributeCollection**。 新增或移除從屬性集合，是否使用**AttributeCollection**或**XmlNamedNodeMap**實作中，修改項目的屬性集合。 下列程式碼範例將說明如何移動屬性及建立新屬性。  
   
 ```vb  
 Imports System  
@@ -123,7 +124,7 @@ class test {
 }  
 ```  
   
- 若要查看會顯示從 **AttributeCollection** 移除屬性的其他程式碼範例，請參閱 [XmlNamedNodeMap.RemoveNamedItem 方法](frlrfSystemXmlXmlNamedNodeMapClassRemoveNamedItemTopic)。  如需方法和屬性的詳細資訊，請參閱 [XmlNamedNodeMap 成員](frlrfSystemXmlXmlNamedNodeMapMembersTopic)。  
+ 若要查看其他程式碼範例顯示移除從屬性**AttributeCollection**，請參閱[XmlNamedNodeMap.RemoveNamedItem 方法](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem)。 如需有關的方法和屬性的詳細資訊，請參閱[XmlNamedNodeMap 成員](AllMembers.T:System.Xml.XmlNamedNodeMap)。  
   
-## 請參閱  
- [XML 文件物件模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱  
+ [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

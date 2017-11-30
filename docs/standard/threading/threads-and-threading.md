@@ -1,100 +1,103 @@
 ---
-title: "Threads and Threading | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "multiple threads"
-  - "threading [.NET Framework]"
-  - "threading [.NET Framework], multiple threads"
+title: "執行緒和執行緒處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple threads
+- threading [.NET Framework]
+- threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b57cac34009e13c27c6d34a0ab402f9ecbe08305
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Threads and Threading
-作業系統使用處理序來分隔它們正在執行的不同應用程式。  執行緒是作業系統分配處理器時間的基本單元，而一個處理序中可有多個執行緒執行程式碼。  每個執行緒都維護例外狀況處理常式 \(Exception Handler\)、排程優先權，以及系統用來在執行緒排程之前儲存其內容的一組結構。  執行緒內容包含執行緒在執行緒之主處理序的位址空間中順利繼續執行所需的所有資訊，其中包括執行緒的一組 CPU 暫存器和堆疊。  
+# <a name="threads-and-threading"></a>執行緒和執行緒處理
+作業系統會使用處理程序，來分隔不同一起執行的應用程式。 執行緒會作業系統會配置處理器時間的基本單位，而且多個執行緒可執行該程序內的程式碼。 每個執行緒各維護例外狀況處理常式、 排程的優先權和一組系統用來儲存的執行緒內容，直到它已排程的結構。 執行緒內容會包含執行緒順利繼續執行，包括在執行緒的主控件程序的位址空間中 CPU 暫存器和堆疊、 執行緒的集所需的所有資訊。  
   
- .NET Framework 會進一步將作業系統處理序細分為輕量型 Managed 子處理序 \(稱為應用程式定義域\)，由 <xref:System.AppDomain?displayProperty=fullName> 表示。  一個或多個 Managed 執行緒 \(由 <xref:System.Threading.Thread?displayProperty=fullName> 表示\) 可在相同 Managed 處理序內的一個或數個應用程式定義域中執行。  雖然每個應用程式定義域是由單一執行緒所啟動，但應用程式定義域中的程式碼可建立其他應用程式定義域和其他執行緒。  結果是，Managed 執行緒可在同樣 Managed 處理序中的各個應用程式定義域之間自由移動；而您只能有一個執行緒在數個應用程式定義域之間移動。  
+ .NET Framework 進一步細分為輕量級 managed 子處理序，呼叫應用程式定義域，由的作業系統處理序<xref:System.AppDomain?displayProperty=nameWithType>。 一或多個 managed 的執行緒 (由<xref:System.Threading.Thread?displayProperty=nameWithType>) 可以在一個或多個相同的受管理處理序中的應用程式定義域中執行。 雖然每個應用程式定義域與單一執行緒啟動時，應用程式定義域中的程式碼可以建立其他應用程式定義域和其他執行緒。 結果是在相同的 managed 處理序; 的應用程式網域之間移動 managed 的執行緒可以自由地您可能必須只有一個執行緒在多個應用程式網域的網域間移動。  
   
- 支援先佔式多工的作業系統能夠從多個處理序產生同時執行多個執行緒的效果。  方法是將可用的處理器時間分給需要它的執行緒，依序將處理序時間量分配給每個執行緒。  目前執行的執行緒會在分配給它的時間量超過時暫止，同時另一個執行緒則繼續執行。  當系統從一執行緒切換至另一執行緒時，它會儲存先佔執行緒的執行緒內容，然後重新載入執行緒佇列中下一個執行緒的已存執行緒內容。  
+ 支援先佔式多工作業的作業系統從多個處理序，建立多個執行緒同時執行的效果。 其做法是除以需要它的執行緒之間可用的處理器時間，依序配置給每個執行緒的處理器時間配量。 當它的時間配量已超過，而另一個執行緒則繼續執行時，將暫停目前執行中執行緒。 系統會從一個執行緒切換到另一個，它會將儲存的先佔執行緒的執行緒內容，並重新載入已儲存的執行緒內容的執行緒佇列中的下一個執行緒。  
   
- 時間量的長度則要視作業系統和處理器而定。  由於每段時間極短，因此即使只有一個處理器，多個執行緒看起來還是像同時執行一樣。  這就是多處理器系統上的實際狀況，其中可執行的執行緒會在可用的處理器中散發。  
+ 長度的時間配量取決於作業系統和處理器。 因為每個時間配量很小，即使只有一個處理器來執行相同的時間，會顯示多個執行緒。 這是多處理器的系統上的實際狀況可執行的執行緒在可用的處理器之間的發佈位置。  
   
-## 何時使用多個執行緒  
- 需要使用者互動的軟體必須儘快回應使用者的活動，以便提供豐富的使用者經驗。  不過，同時它也必須執行需要的計算以儘快提供使用者資料。  如果您的應用程式只使用一個執行緒，您可將[非同步程式設計](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)和 [.NET 遠端處理](http://msdn.microsoft.com/zh-tw/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)或使用 ASP.NET 建立的 [XML Web Service](http://msdn.microsoft.com/zh-tw/1e64af78-d705-4384-b08d-591a45f4379c) 結合一起，如此在使用本身的處理時間之外還可加上其他電腦的處理時間，藉此增加對使用者的回應性，並減少您的應用程式處理資料的時間。  如果您是執行耗用大量的輸出入 \(I\/O\) 工作，您也可使用 I\/O 完成通訊埠來增加應用程式的回應速度。  
+## <a name="when-to-use-multiple-threads"></a>使用多個執行緒的時機  
+ 需要使用者互動的軟體必須儘可能提供豐富的使用者經驗快速回應使用者的活動。 不過，在相同的時間，它必須執行需要盡快對使用者顯示資料的計算。 如果您的應用程式只使用一個執行緒的執行，您可以結合[非同步程式設計](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)與[.NET Framework 遠端處理](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)或[XML Web service](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)建立使用 ASP.NET 的處理時間，其他電腦的功能使用的使用者及減少您的應用程式的資料處理時間增加自己回應性。 如果您進行大量輸入/輸出工作，您也可以使用以提高應用程式的回應 I/O 完成通訊埠。  
   
-### 多執行緒的優點  
- 不過，使用多個執行緒是現行最能夠增加對使用者的回應速度，而且又能幾乎同時處理完成工作所需的資料。  在具有一個處理器的電腦上，多個執行緒利用使用者事件之間的短暫時間來在背景 \(Background\) 處理資料就可達到這種效果。  例如，使用者可在另一個執行緒重新計算試算表其他部分時，在同一應用程式內編輯試算表。  
+### <a name="advantages-of-multiple-threads"></a>多執行緒的優點  
+ 不過，使用多個執行緒，是最強大的技術可用來加快對使用者和處理幾乎相同的時間完成工作所需的資料。 一個處理器的電腦上多個執行緒可以建立此效果，請利用短暫的時間來處理在背景中的資料的使用者事件之間。 例如，使用者可以編輯試算表，而另一個執行緒正在重新計算的試算表中同一個應用程式其他部分。  
   
- 在相同的條件下，當在具有多個處理器的電腦上執行時，相同的應用程式會大幅提升使用者的滿意度。  您的單一應用程式定義域可使用多個執行緒來完成下列工作：  
+ 不需修改相同的應用程式，會大幅增加在具有一個以上處理器的電腦上執行時，使用者滿意度。 單一應用程式定義域可以使用多個執行緒來完成下列工作：  
   
--   在網路上與 Web 伺服器和資料庫通訊。  
+-   在網路上的網頁伺服器，和資料庫通訊。  
   
--   執行需耗用大量時間的作業。  
+-   執行需要大量時間的作業。  
   
--   區分不同優先權的工作。  例如，高優先權執行緒處理時間緊急的工作，而低優先權執行緒執行其他工作。  
+-   區分不同優先權的工作。 例如，較高優先順序的執行緒管理時間緊急工作，並較低優先順序的執行緒會執行其他工作。  
   
--   允許使用者介面保持回應性，同時將時間分配給背景工作。  
+-   允許在配置給背景工作的時間時保持回應性，使用者介面。  
   
-### 多執行緒的缺點  
- 建議您盡量少用執行緒，這樣可使作業系統資源的使用量降到最低並增進效能。  當您設計應用程式時，也應將執行緒處理的資源需求和可能發生的衝突列入考量。  資源需求如下：  
+### <a name="disadvantages-of-multiple-threads"></a>多執行緒的缺點  
+ 建議您盡量，藉此將作業系統資源的使用降至最低並增進效能，使用執行緒數目。 執行緒也有資源需求，並視為設計您的應用程式時可能發生的衝突。 資源需求如下所示：  
   
--   系統會為處理序、**AppDomain** 物件和執行緒所需的內容資訊耗用記憶體。  因此，可以建立的處理序、**AppDomain** 物件和執行緒數量就會受到可用記憶體的限制。  
+-   系統會耗用記憶體的處理程序所需的內容資訊**AppDomain**物件和執行緒。 因此，處理序的數目， **AppDomain**物件和可以建立的執行緒會受到可用記憶體。  
   
--   記錄大量執行緒會耗用相當多的處理器時間。  如果同時有太多執行緒，則其中多數的進度會相當緩慢。  如果目前的執行緒大都在同一處理序中，則排到其他處理序中執行緒的機會就會減少。  
+-   追蹤的大量執行緒會耗用大量的處理器時間。 如果有太多執行緒，大部分不是會使大量的進度。 如果目前執行緒的大部分一個處理序中，其他處理序中的執行緒排定較少。  
   
--   控制其中使用許多執行緒的程式碼執行是相當複雜的一件事，而且可能會產生許多錯誤。  
+-   控制使用多執行緒程式碼執行相當複雜，而且可以很多 bug 的來源。  
   
--   您需要知道終結執行緒時可能發生何種情況，並知道如何處理。  
+-   終結執行緒需要了解可能發生什麼事，以及處理這些問題。  
   
- 提供資源的共用存取可能會產生衝突。  若要避免衝突發生，您必須同步或控制共用資源的存取。  無法適當同步存取 \(無論是在相同或不同的應用程式定義域中\) 可能會引發死結 \(兩個執行緒停止回應來等候對方完成工作\) 和競爭情形 \(因未預期且嚴重依賴兩事件執行時間而發生的異常結果\)。  系統提供可用來協調多個執行緒之間資源共用的同步物件 \(Synchronization Object\)。  減少執行緒的數量會使同步處理資源更為容易。  
+ 提供共用的資源的存取權可能會產生衝突。 若要避免衝突，您必須同步處理，或控制共用資源的存取。 以同步存取正確 （在相同或不同的應用程式網域中） 的失敗可能會造成問題，像是死結 （兩個執行緒停止回應每個等候另一個完成時） 和競爭情形 （由於發生的異常結果非預期且嚴重依賴兩個事件的計時）。 系統會提供可以用來協調多個執行緒之間共用資源的同步處理物件。 減少執行緒數目，可以更輕鬆地同步處理資源。  
   
- 需要同步的資源包括：  
+ 需要同步處理的資源包括：  
   
--   系統資源 \(例如通訊連接埠\)。  
+-   系統資源 （例如通訊連接埠）。  
   
--   多個處理序共用的資源 \(例如檔案控制代碼，File Handle\)。  
+-   資源 （例如檔案控制代碼） 的多個處理程序共用。  
   
--   多個執行緒存取的單一應用程式定義域的資源 \(例如全域、靜態和執行個體欄位\)。  
+-   單一應用程式網域的資源 (例如 全域、 靜態和執行個體欄位) 多個執行緒存取。  
   
-### 執行緒處理和應用程式設計  
- 一般來說，針對不會阻礙其他執行緒的較短時間工作，以及當您的工作沒有特定排程時，使用 <xref:System.Threading.ThreadPool> 類別是處理多個執行緒最簡單的方法。  不過，要建立您自己的執行緒的原因如下：  
+### <a name="threading-and-application-design"></a>執行緒和應用程式的設計  
+ 一般情況下，使用<xref:System.Threading.ThreadPool>類別是最簡單的方式處理多個執行緒進行相對較短的工作，不會封鎖其他執行緒，以及當您不希望特定排程的工作。 不過，有多種原因，若要建立您自己的執行緒：  
   
--   如果您要使一項工作具有特定的優先權。  
+-   如果您需要為特定優先順序的工作。  
   
--   如果您要使一項工作可長期執行 \(並因此而封鎖其他工作\)。  
+-   如果您有可能會執行很長的時間 （並因此而封鎖其他工作） 的工作。  
   
--   如果您必須將執行緒置入單一執行緒 Apartment 中 \(所有的 **ThreadPool** 執行緒均置於多執行緒 Apartment 中\)。  
+-   如果您需要將執行緒放入單一執行緒 apartment (所有**ThreadPool**執行緒都會在多執行緒的 apartment)。  
   
--   如果您需要與執行緒關聯的穩定識別。  例如，您應使用專用執行緒來中止、暫止或以名稱尋找它。  
+-   如果您需要一個與執行緒相關聯的固定識別。 比方說，您應該使用專用的執行緒中止的執行緒、 暫止，或依名稱探索它。  
   
--   如果您需要執行與使用者介面互動的背景執行緒，.NET Framework 2.0 版提供了 <xref:System.ComponentModel.BackgroundWorker> 元件，可使用事件來進行溝通，並以跨執行緒方式封送處理至使用者介面執行緒。  
+-   如果您需要執行與使用者介面互動的背景執行緒，.NET Framework 2.0 版提供<xref:System.ComponentModel.BackgroundWorker>通訊使用的事件，與跨執行緒封送處理，在使用者介面執行緒的元件。  
   
-### 執行緒處理和例外狀況  
- 一定要處理執行緒中的例外狀況。  執行緒 \(甚至是背景執行緒\) 中未處理的例外狀況，通常會結束處理序。  此項規則有三個例外情形：  
+### <a name="threading-and-exceptions"></a>執行緒和例外狀況  
+ 處理執行緒中的例外狀況。 執行緒，甚至是背景執行緒中的未處理例外狀況通常會終止處理序。 這項規則有三個例外狀況：  
   
--   在執行緒中擲回 <xref:System.Threading.ThreadAbortException>，因為已呼叫 <xref:System.Threading.Thread.Abort%2A>。  
+-   A<xref:System.Threading.ThreadAbortException>因為在執行緒中擲回<xref:System.Threading.Thread.Abort%2A>呼叫。  
   
--   在執行緒中擲回 <xref:System.AppDomainUnloadedException>，因為正在卸載應用程式定義域。  
+-   <xref:System.AppDomainUnloadedException>正在卸載應用程式定義域，因為在執行緒中擲回。  
   
--   Common Language Runtime 或主應用程式處理序會結束此執行緒。  
+-   Common Language Runtime 或主應用程式處理序會結束這個執行緒。  
   
- 如需詳細資訊，請參閱 [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
+ 如需詳細資訊，請參閱[Managed 執行緒中的例外狀況](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
   
 > [!NOTE]
->  在 .NET Framework 1.0 和 1.1 版中，Common Language Runtime 會以無訊息模式截獲某些例外狀況，例如，在執行緒集區執行緒中。  如此一來，可能會損壞應用程式狀態，而最後導致應用程式無回應，這樣可能會讓偵錯工作變得相當困難。  
+>  在.NET framework 1.0 和 1.1 版中，通用語言執行平台以無訊息模式設陷某些例外狀況，例如在執行緒集區。 這可能會破壞應用程式狀態，最終導致應用程式沒有回應，這可能很難偵錯。  
   
-## 請參閱  
- <xref:System.Threading.ThreadPool>   
- <xref:System.ComponentModel.BackgroundWorker>   
- [Synchronizing Data for Multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)   
- [The Managed Thread Pool](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ [同步處理多執行緒處理的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ [Managed 執行緒集區](../../../docs/standard/threading/the-managed-thread-pool.md)

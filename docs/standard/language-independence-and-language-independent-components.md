@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - language interoperability
 - Common Language Specification
@@ -16,16 +19,15 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: bc43226a508dfd0286c7667c02bdc2543346be9c
+ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 270a75e0c4e3da5ea87196580ab09dbff24b80c6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 .NET Framework 是與語言無關的。 這表示，身為開發人員，您可以用目標為 .NET Framework 的許多語言之一進行開發，例如 C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 和 Windows PowerShell。 您可以存取為 .NET Framework 開發的類別庫的類型和成員，而不需要知道最初的寫入語言，也不需遵循任何原始語言的語言慣例。 如果您是元件開發人員，則不論其語言為何，元件都可以由任何 .NET Framework 應用程式存取。  
@@ -89,11 +91,13 @@ ms.lasthandoff: 08/21/2017
   
  例如，除了 <xref:System.Byte> 以外的不帶正負號的整數都不符合 CLS 標準。 因為下面範例中的 `Person` 類別會公開類型為 `Age` 的 <xref:System.UInt16> 屬性，下面程式碼會顯示編譯器警告。  
   
- [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)] [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
+ [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)]
+ [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
   
  您可以藉由將 `Person` 屬性的類型從 `Age` 變更為符合 CLS 標準 16 位元帶正負號整數的 <xref:System.UInt16>，使 <xref:System.Int16> 類別符合 CLS 標準。 您不需要變更 `personAge` 私用欄位的類型。  
   
- [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)] [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
+ [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)]
+ [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
   
  程式庫的公用介面由下列各項組成：  
   
@@ -110,20 +114,20 @@ ms.lasthandoff: 08/21/2017
 |協助工具選項|[成員存取範圍](#MemberAccess)|在覆寫繼承的方法時，不得變更其存取範圍；但覆寫繼承自具有 `family-or-assembly` 存取範圍之不同組件的方法除外。 在這種情況下，覆寫應具有 `family` 存取範圍。|10|  
 |協助工具選項|[成員存取範圍](#MemberAccess)|類型和成員應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中的類型也應該是可見和可存取的。 例如，在組件外部是可見的公用方法不得有引數，其類型只有在組件內可見。 構成類型應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中所用的具現化泛型類型也應該是可見和可存取的。 例如，存在於組件外部可見成員的簽章中的具現化泛型類型，不得有類型只能在組件內可見的泛型引數。|12|  
 |陣列|[陣列](#arrays)|陣列必須有符合 CLS 標準之類型的項目，而且陣列所有維度的下限必須為零。 只有項目是陣列以及陣列的項目類型是需要在多載之間區別的事實。 當多載根據兩個或多個陣列類型時，項目類型應該是具名類型。|16|  
-|屬性|[屬性](#attributes)|屬性的類型必須為 <xref:System.Attribute?displayProperty=fullName> 或繼承自它的類型。|41|  
-|屬性|[屬性](#attributes)|CLS 只允許自訂屬性編碼的子集。 只有以下這些類型允許出現在這些編碼方式中 (請參閱第四篇)：<xref:System.Type?displayProperty=fullName>、<xref:System.String?displayProperty=fullName>、<xref:System.Char?displayProperty=fullName>、<xref:System.Boolean?displayProperty=fullName>、<xref:System.Byte?displayProperty=fullName>、<xref:System.Int16?displayProperty=fullName>、<xref:System.Int32?displayProperty=fullName>、<xref:System.Int64?displayProperty=fullName>、<xref:System.Single?displayProperty=fullName>、<xref:System.Double?displayProperty=fullName>，以及以 CLS 標準基底整數類型為基礎的所有列舉類型。|34|  
+|屬性|[屬性](#attributes)|屬性的類型必須為 <xref:System.Attribute?displayProperty=nameWithType> 或繼承自它的類型。|41|  
+|屬性|[屬性](#attributes)|CLS 只允許自訂屬性編碼的子集。 只有以下這些類型允許出現在這些編碼方式中 (請參閱第四篇)：<xref:System.Type?displayProperty=nameWithType>、<xref:System.String?displayProperty=nameWithType>、<xref:System.Char?displayProperty=nameWithType>、<xref:System.Boolean?displayProperty=nameWithType>、<xref:System.Byte?displayProperty=nameWithType>、<xref:System.Int16?displayProperty=nameWithType>、<xref:System.Int32?displayProperty=nameWithType>、<xref:System.Int64?displayProperty=nameWithType>、<xref:System.Single?displayProperty=nameWithType>、<xref:System.Double?displayProperty=nameWithType>，以及以 CLS 標準基底整數類型為基礎的所有列舉類型。|34|  
 |屬性|[屬性](#attributes)|CLS 不允許公開可見的必要修飾詞 (`modreq`，請參閱第二篇)，不過，允許它不了解的選擇性修飾詞 (`modopt`，請參閱第二篇)。|35|  
 |建構函式|[建構函式](#ctors)|物件建構函式必須先呼叫基底類別的某個執行個體建構函式，才能對繼承的執行個體資料進行任何存取  (這不適用於不需要具有建構函式的實值類型)。|21|  
 |建構函式|[建構函式](#ctors)|除非是做為物件建立程序的一部分，否則是不能呼叫物件建構函式的，而且也不能初始化物件兩次。|22|  
 |列舉|[列舉](#enums)|列舉的基礎類型應該是內建 CLS 整數類型，欄位的名稱應該是 "value__"，而且該欄位應該標記為 `RTSpecialName`。|7|  
-|列舉|[列舉](#enums)|有兩種不同的列舉，由 <xref:System.FlagsAttribute?displayProperty=fullName> (請參閱第四篇程式庫) 自訂屬性存在與否表示。 一個表示具名整數值；另一個則表示具名位元旗標 (可合併以產生未命名的值)。 `enum` 的值不限於指定的值。|8|  
+|列舉|[列舉](#enums)|有兩種不同的列舉，由 <xref:System.FlagsAttribute?displayProperty=nameWithType> (請參閱第四篇程式庫) 自訂屬性存在與否表示。 一個表示具名整數值；另一個則表示具名位元旗標 (可合併以產生未命名的值)。 `enum` 的值不限於指定的值。|8|  
 |列舉|[列舉](#enums)|列舉的常值靜態欄位必須有列舉本身的類型。|9|  
 |「事件」|[事件](#events)|實作事件的方法必須在中繼資料中標記為 `SpecialName`。|29|  
 |「事件」|[事件](#events)|事件及其存取子的存取範圍必須是相同的。|30|  
 |「事件」|[事件](#events)|事件的 `add` 和 `remove` 方法，兩者必須同時存在或同時不存在。|31|  
-|「事件」|[事件](#events)|事件的 `add` 和 `remove` 方法應各自採用一個其類型會定義事件類型的參數，而且必須是衍生自 <xref:System.Delegate?displayProperty=fullName>。|32|  
+|「事件」|[事件](#events)|事件的 `add` 和 `remove` 方法應各自採用一個其類型會定義事件類型的參數，而且必須是衍生自 <xref:System.Delegate?displayProperty=nameWithType>。|32|  
 |「事件」|[事件](#events)|事件必須遵守特定的命名模式。 在適當的名稱比較中應忽略 CLS 第 29 條規則中所提及的 `SpecialName` 屬性，並且應遵循識別項規則。|33|  
-|例外狀況|[例外狀況](#exceptions)|擲回的物件的類型必須為 <xref:System.Exception?displayProperty=fullName>，或繼承自它的類型。 然而，並不需要使用符合 CLS 標準的方法來封鎖其他類型例外狀況的傳播。|40|  
+|例外狀況|[例外狀況](#exceptions)|擲回的物件的類型必須為 <xref:System.Exception?displayProperty=nameWithType>，或繼承自它的類型。 然而，並不需要使用符合 CLS 標準的方法來封鎖其他類型例外狀況的傳播。|40|  
 |一般|[CLS 符合性：規則](#Rules)|CLS 規則只適用於類型的那些在定義組件以外可存取或可見的部分。|1|  
 |一般|[CLS 符合性：規則](#Rules)|不符合 CLS 標準之類型的成員不得標記為符合 CLS 標準。|2|  
 |泛型|[泛型類型及成員](#Generics)|巢狀類型應至少有與其封入類型 (Enclosing Type) 一樣多的泛型參數。 巢狀型別中的泛型參數，都與在其封入型別中泛型參數的位置對應。|42|  
@@ -143,7 +147,7 @@ ms.lasthandoff: 08/21/2017
 |多載化|[多載](#overloads)|只有屬性和方法可以多載。|37|  
 |多載化|[多載](#overloads)|屬性和方法只可以根據其參數數目和類型多載，除了名為 `op_Implicit` 和 `op_Explicit` 的轉換運算子，也可以根據其傳回類型多載。|38|  
 |多載化|--|如果在有相同名稱的類型中宣告兩個或更多符合 CLS 標準的方法，則對一組特定的類型具現化來說，它們具有相同的參數和傳回型別，而且所有這些方法在語意上與這些類型具現化相等。|48|  
-|類型|[類型和類型成員簽章](#Types)|<xref:System.Object?displayProperty=fullName> 符合 CLS 標準。 任何其他符合 CLS 標準的類別也都必須繼承自符合 CLS 標準的類別。|23|  
+|類型|[類型和類型成員簽章](#Types)|<xref:System.Object?displayProperty=nameWithType> 符合 CLS 標準。 任何其他符合 CLS 標準的類別也都必須繼承自符合 CLS 標準的類別。|23|  
 |屬性|[屬性](#properties)|實作屬性之 getter 和 setter 方法的方法在中繼資料中應標記為 `SpecialName`。|24|  
 |屬性|[屬性](#properties)|屬性的存取子必須全部為 static、全部為 virtual 或全部為 instance。|26|  
 |屬性|[屬性](#properties)|屬性的類型應是 getter 的傳回型別和 setter 最後一個引數的類型。 屬性參數的類型必須是 getter 參數的類型和 setter 除了最後一個參數之外的所有參數類型。 所有這些類型都必須符合 CLS 標準，而且不能是 Managed 指標 (也就是，不能以傳址方式傳遞)。|27|  
@@ -157,11 +161,12 @@ ms.lasthandoff: 08/21/2017
   
 <a name="Types"></a>   
 ### <a name="types-and-type-member-signatures"></a>類型和類型成員簽章  
- <xref:System.Object?displayProperty=fullName> 類型符合 CLS 標準，並且是 .NET Framework 類型系統中所有物件類型的基底類型。 .NET Framework 中的繼承若不是隱含的 (例如，<xref:System.String> 類別隱含繼承 <xref:System.Object> 類別) 就是明確的 (例如，<xref:System.Globalization.CultureNotFoundException> 類別明確繼承 <xref:System.ArgumentException> 類別，後者又明確繼承 <xref:System.SystemException> 類別，再依次明確繼承 <xref:System.Exception> 類別)。 若要讓衍生類型符合 CLS 標準，其基底類型必須符合 CLS 標準。  
+ <xref:System.Object?displayProperty=nameWithType> 類型符合 CLS 標準，並且是 .NET Framework 類型系統中所有物件類型的基底類型。 .NET Framework 中的繼承若不是隱含的 (例如，<xref:System.String> 類別隱含繼承 <xref:System.Object> 類別) 就是明確的 (例如，<xref:System.Globalization.CultureNotFoundException> 類別明確繼承 <xref:System.ArgumentException> 類別，後者又明確繼承 <xref:System.SystemException> 類別，再依次明確繼承 <xref:System.Exception> 類別)。 若要讓衍生類型符合 CLS 標準，其基底類型必須符合 CLS 標準。  
   
  下面範例會示範其基底類型不符合 CLS 標準的衍生類型。 它會定義基底 `Counter` 類別，這個類別使用不帶正負號的 32 位元整數做為計數器。 因為該類別會藉由包裝不帶正負號的整數提供計數器功能，所以該類別會標記為不符合 CLS 標準。 結果，衍生的類別 `NonZeroCounter` 也不符合 CLS 標準。  
   
- [!code-csharp[Conceptual.CLSCompliant#12](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type3.cs#12)] [!code-vb[Conceptual.CLSCompliant#12](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type3.vb#12)]  
+ [!code-csharp[Conceptual.CLSCompliant#12](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type3.cs#12)]
+ [!code-vb[Conceptual.CLSCompliant#12](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type3.vb#12)]  
   
  成員簽章中出現的所有類型 (包括方法的傳回型別或屬性類型) 都必須符合 CLS 標準。 此外，如果是泛型類型：  
   
@@ -208,11 +213,13 @@ ms.lasthandoff: 08/21/2017
   
  下面範例說明在方法簽章和泛型類型具現化中的 CLS 符合性問題。 它會定義 `InvoiceItem` 類別，包含 <xref:System.UInt32> 類型的屬性、`Nullable(Of UInt32)` 類型的屬性，以及參數類型為 <xref:System.UInt32> 和 `Nullable(Of UInt32)` 的建構函式。 當您嘗試編譯這個範例時，會收到四個編譯器警告。  
   
- [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)] [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
+ [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
+ [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
   
  若要排除編譯器警告，請將 `InvoiceItem` 公用介面中不符合 CLS 標準的類型取代為與符合標準的類型：  
   
- [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)] [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
+ [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)]
+ [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
   
  除了列出的特定類型之外，有些分類的類型也不符合 CLS 標準。 這些包括 Unmanaged 指標類型和函式指標類型。 下面範例會產生編譯器警告，因為它使用整數指標建立整數陣列。  
   
@@ -228,13 +235,14 @@ ms.lasthandoff: 08/21/2017
   
  程式語言識別項，例如命名空間、類型和成員的名稱，必須符合 [Unicode Standard 3.0 Technical Report 15 的 Annex 7](http://www.unicode.org/reports/tr15/tr15-18.html)。 這表示：  
   
--   識別項的第一個字元可以是任何 Unicode 大寫字母、小寫字母、標題大寫字母、修飾詞字母、其他字母或字母數字。 如需 Unicode 字元分類的詳細資訊，請參閱 <xref:System.Globalization.UnicodeCategory?displayProperty=fullName> 列舉。  
+-   識別項的第一個字元可以是任何 Unicode 大寫字母、小寫字母、標題大寫字母、修飾詞字母、其他字母或字母數字。 如需 Unicode 字元分類的詳細資訊，請參閱 <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> 列舉。  
   
 -   接下來的字元可以來自和第一個字元相同的任何分類，而且也可以包含非間距記號、間距組合記號、十進位數字、連接子標點符號和格式化程式碼。  
   
  在您比較識別項之前，應該先篩掉格式化程式碼，並將識別項轉換為 Unicode 正規化表單 C，因為單一字元可由多個 UTF 16 編碼字碼單位表示。 產生和 Unicode 正規化表單 C 相同的字碼單位的字元順序不符合 CLS 標準。 下面範例會定義名為 `Å` 的屬性和名為 `Å` 的第二個屬性。前者包含 ANGSTROM SIGN 字元 (U+212B)，後者包含 LATIN CAPITAL LETTER A WITH RING ABOVE 字元 (U+00C5)。 C# 和 Visual Basic 編譯器都會將原始程式碼標示為不符合 CLS 標準。  
   
- [!code-csharp[Conceptual.CLSCompliant#17](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#17)] [!code-vb[Conceptual.CLSCompliant#17](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming1.vb#17)]  
+ [!code-csharp[Conceptual.CLSCompliant#17](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#17)]
+ [!code-vb[Conceptual.CLSCompliant#17](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming1.vb#17)]  
   
  特定範圍內的成員名稱 (例如組件中的命名空間、命名空間中的類型或類型中的成員)，除了透過多載解析的名稱以外，都必須是唯一的。 這個需求比一般類型系統的需求更嚴格，後者允許在範圍內的多個成員具有相同名稱，只要它們是不同的類型成員 (例如，一個是方法，一個是欄位)。 特別是，如果是類型成員：  
   
@@ -244,7 +252,8 @@ ms.lasthandoff: 08/21/2017
   
  下面範例說明成員名稱在其範圍內必須是唯一的這個需求。 它會定義名為 `Converter` 的類別，其中包含四個名為 `Conversion` 的成員。 三個是方法，一個是屬性。 包含 <xref:System.Int64> 參數的方法具有唯一的名稱，但含有 <xref:System.Int32> 參數的兩個方法則沒有唯一名稱，因為傳回值不視為成員簽章的一部分。 `Conversion` 屬性也違反這項需求，因為屬性不能與多載方法同名。  
   
- [!code-csharp[Conceptual.CLSCompliant#19](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming3.cs#19)] [!code-vb[Conceptual.CLSCompliant#19](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming3.vb#19)]  
+ [!code-csharp[Conceptual.CLSCompliant#19](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming3.cs#19)]
+ [!code-vb[Conceptual.CLSCompliant#19](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming3.vb#19)]  
   
  個別語言包含唯一的關鍵字，因此以 Common Language Runtime 為目標的語言也必須提供一些參考符合關鍵字之識別碼 (例如類型名稱) 的機制。 例如，`case` 在 C# 和 Visual Basic 中都是關鍵字。 不過，下面 Visual Basic 範例可以使用左右大括號，讓名稱為 `case` 的類別與 `case` 關鍵字有所區分。 否則，這個範例會產生錯誤訊息「關鍵字做為識別項無效」，而無法編譯。  
   
@@ -266,7 +275,8 @@ ms.lasthandoff: 08/21/2017
   
  下面範例定義了符合 CLS 標準的隱含和明確轉換。 它會建立 `UDouble` 類別，表示帶正負號的雙精確度浮點數。 它支援從 `UDouble` 到 <xref:System.Double> 的隱含轉換，以及支援從 `UDouble` 到 <xref:System.Single>、<xref:System.Double> 到 `UDouble` 以及 <xref:System.Single> 到 `UDouble` 的明確轉換。 它也會定義 `ToDouble` 方法做為隱含轉換運算子的替代方法，以及定義 `ToSingle`、`FromDouble` 和 `FromSingle` 方法做為明確轉換運算子的替代方法。  
   
- [!code-csharp[Conceptual.CLSCompliant#15](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/convert1.cs#15)] [!code-vb[Conceptual.CLSCompliant#15](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/convert1.vb#15)]  
+ [!code-csharp[Conceptual.CLSCompliant#15](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/convert1.cs#15)]
+ [!code-vb[Conceptual.CLSCompliant#15](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/convert1.vb#15)]  
   
 <a name="arrays"></a>   
 ### <a name="arrays"></a>陣列  
@@ -274,15 +284,18 @@ ms.lasthandoff: 08/21/2017
   
 -   陣列所有維度的下限都必須為零。 下面範例會建立下限為一、不符合 CLS 標準的陣列。 請注意，儘管 <xref:System.CLSCompliantAttribute> 屬性存在，編譯器並不會偵測出 `Numbers.GetTenPrimes` 方法傳回的陣列不符合 CLS 標準。  
   
-     [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]  [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
+     [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
+     [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
 -   所有陣列項目都必須包含符合 CLS 標準的類型。 下面範例會定義傳回不符合 CLS 標準的陣列的兩個方法。 第一個會傳回 <xref:System.UInt32> 值的陣列。 第二個傳回包含 <xref:System.Object> 和 <xref:System.Int32> 值的 <xref:System.UInt32> 陣列。 雖然編譯器會因為其 <xref:System.UInt32> 類型而將第一個陣列識別為不符合標準，但是無法辨識出第二個陣列包含了不符合 CLS 標準的項目。  
   
-     [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]  [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
+     [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
+     [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
 -   具有陣列參數之方法的多載解析是根據它們是陣列和其項目類型。 因此，下面多載 `GetSquares` 方法的定義符合 CLS 標準。  
   
-     [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]  [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
+     [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
+     [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
   
 <a name="Interfaces"></a>   
 ### <a name="interfaces"></a>介面  
@@ -294,13 +307,15 @@ ms.lasthandoff: 08/21/2017
   
 -   不符合 CLS 標準的方法。 例如，下面介面定義包含標記為符合 CLS 標準的方法 `INumber.GetUnsigned`。 這個範例會產生編譯器警告。  
   
-     [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]  [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
+     [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
+     [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
   
      由於這項規則，在實作不符合 CLS 標準的成員時並不需要符合 CLS 標準的類型。 如果符合 CLS 標準的架構沒有公開實作不符合 CLS 標準介面的類別，也應該提供所有不符合 CLS 標準成員的具象實作。  
   
  符合 CLS 標準的語言編譯器也必須允許類別提供在多個介面中具有相同名稱及簽章的成員實作。  C# 和 Visual Basic 支援[明確介面實作](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md)，以提供相同具名方法的不同實作。 Visual Basic 也支援 `Implements` 關鍵字，可讓您明確指定特定成員實作的介面和成員。 下面範例會透過定義實作 `Temperature` 和 `ICelsius` 介面做為明確介面實作的 `IFahrenheit` 類別，來說明這種情況。  
   
- [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)] [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
+ [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
+ [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
   
 <a name="enums"></a>   
 ### <a name="enumerations"></a>列舉  
@@ -308,21 +323,22 @@ ms.lasthandoff: 08/21/2017
   
 -   列舉的基礎類型必須是內建的 CLS 標準整數 (<xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32> 或 <xref:System.Int64>)。 例如，下面程式碼會嘗試定義其基礎類型為 <xref:System.UInt32> 的列舉，並產生編譯器警告。  
   
-     [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]  [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
+     [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
+     [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   列舉類型必須具有以 `Value__` 屬性標記的單一執行個體欄位，名稱為 <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=fullName>。 這可讓您隱含參考欄位值。  
+-   列舉類型必須具有以 `Value__` 屬性標記的單一執行個體欄位，名稱為 <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>。 這可讓您隱含參考欄位值。  
   
 -   列舉會包含其類型符合列舉本身類型的常值靜態欄位。 例如，如果您定義含有 `State` 和 `State.On` 值的 `State.Off` 列舉，則 `State.On` 和 `State.Off` 都是常值靜態欄位，其類型為 `State`。  
   
 -   列舉有兩種：  
   
-    -   表示一組互斥具名整數值的列舉。 這個列舉類型是由缺少 <xref:System.FlagsAttribute?displayProperty=fullName> 自訂屬性來表示。  
+    -   表示一組互斥具名整數值的列舉。 這個列舉類型是由缺少 <xref:System.FlagsAttribute?displayProperty=nameWithType> 自訂屬性來表示。  
   
-    -   表示一組可合併產生未命名值之位元旗標的列舉。 這個列舉類型是由存在 <xref:System.FlagsAttribute?displayProperty=fullName> 自訂屬性來表示。  
+    -   表示一組可合併產生未命名值之位元旗標的列舉。 這個列舉類型是由存在 <xref:System.FlagsAttribute?displayProperty=nameWithType> 自訂屬性來表示。  
   
      如需詳細資訊，請參閱 <xref:System.Enum> 結構的說明文件。  
   
--   列舉的值不限於其指定值的範圍。 換句話說，列舉中的值範圍即是其基礎值的範圍。 您可以使用 <xref:System.Enum.IsDefined%2A?displayProperty=fullName> 方法來判斷某指定值是否為列舉的成員。  
+-   列舉的值不限於其指定值的範圍。 換句話說，列舉中的值範圍即是其基礎值的範圍。 您可以使用 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 方法來判斷某指定值是否為列舉的成員。  
   
 <a name="members"></a>   
 ### <a name="type-members-in-general"></a>一般類型成員  
@@ -336,39 +352,46 @@ ms.lasthandoff: 08/21/2017
   
  下面範例說明當 <xref:System.CLSCompliantAttribute> 屬性是設定為 `true`，並且 `Person` (衍生自 `Animal` 的類別) 嘗試將 `Species` 屬性的存取範圍從 public (公用) 變更為 private (私用) 時，所產生的錯誤。 如果它的存取範圍變更為 public (公用)，則此範例會編譯成功。  
   
- [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)] [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
+ [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
+ [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
   
  每當成員本身為可存取時，成員簽章中的類型也必須是可存取的。 例如，這表示 public 成員不能包含類型為 private、protected 或 internal 的參數。 下面範例說明當 `StringWrapper` 類別建構函式公開內部 `StringOperationType` 列舉值，決定如何包裝字串值時，所產生的編譯器錯誤。  
   
- [!code-csharp[Conceptual.CLSCompliant#27](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility3.cs#27)] [!code-vb[Conceptual.CLSCompliant#27](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility3.vb#27)]  
+ [!code-csharp[Conceptual.CLSCompliant#27](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility3.cs#27)]
+ [!code-vb[Conceptual.CLSCompliant#27](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility3.vb#27)]  
   
 <a name="Generics"></a>   
 ### <a name="generic-types-and-members"></a>泛型類型和成員  
  巢狀類型一律至少具有與其封入類型 (Enclosing Type) 一樣多的泛型參數。 這些在位置上對應於封入類型中的泛型參數。 泛型類型也可以包含新的泛型參數。  
   
- 個別語言的語法可能會隱藏包含類型和其巢狀類型的泛型類型參數之間的關聯性。 在下面範例中，泛型類型 `Outer<T>` 包含兩個巢狀類別：`Inner1A` 和 `Inner1B<U>`。 對 `ToString` 方法 (每個類別都是從 <xref:System.Object.ToString%2A?displayProperty=fullName> 繼承這個方法) 的呼叫，顯示出每個巢狀類別都會包含其所包含類別的類型參數。  
+ 個別語言的語法可能會隱藏包含類型和其巢狀類型的泛型類型參數之間的關聯性。 在下面範例中，泛型類型 `Outer<T>` 包含兩個巢狀類別：`Inner1A` 和 `Inner1B<U>`。 對 `ToString` 方法 (每個類別都是從 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 繼承這個方法) 的呼叫，顯示出每個巢狀類別都會包含其所包含類別的類型參數。  
   
- [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)] [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
+ [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
+ [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
  泛型型別名稱的編碼格式為 *name\`n*，其中 *name* 是類型名稱，\` 是字元常值，而 *n* 則是在類型上宣告的參數數目，或是巢狀泛型型別中，新引入之型別參數的數目。 這個泛型類型名稱編碼方式主要適用於使用反映來存取程式庫中符合 CLS 標準之泛型類型的開發人員。  
   
  如果限制式是套用至泛型類型，則任何當做限制式使用的類型也必須符合 CLS 標準。 下面範例定義了不符合 CLS 標準的類別 (名稱為 `BaseClass`) 以及類型參數必須衍生自 `BaseCollection` 的泛型類別 (名稱為 `BaseClass`)。 但是因為 `BaseClass` 不符合 CLS 標準，所以編譯器會發出警告。  
   
- [!code-csharp[Conceptual.CLSCompliant#34](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics5.cs#34)] [!code-vb[Conceptual.CLSCompliant#34](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics5.vb#34)]  
+ [!code-csharp[Conceptual.CLSCompliant#34](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics5.cs#34)]
+ [!code-vb[Conceptual.CLSCompliant#34](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics5.vb#34)]  
   
  如果泛型類型是衍生自泛型基底類型，就必須重新宣告任何限制式，才能保證同時符合基底類型上的限制式。 下面範例會定義可代表任何數字類型的 `Number<T>`。 它也會定義表示浮點值的 `FloatingPoint<T>` 類別。 不過，因為未將 `Number<T>` (其中 T 必須是實值類型) 的限制式套用至 `FloatingPoint<T>`，所以無法編譯原始程式碼。  
   
- [!code-csharp[Conceptual.CLSCompliant#30](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2a.cs#30)] [!code-vb[Conceptual.CLSCompliant#30](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2a.vb#30)]  
+ [!code-csharp[Conceptual.CLSCompliant#30](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2a.cs#30)]
+ [!code-vb[Conceptual.CLSCompliant#30](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2a.vb#30)]  
   
  如果將該條件約束加入至 `FloatingPoint<T>` 類別，則這個範例會編譯成功。  
   
- [!code-csharp[Conceptual.CLSCompliant#31](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2.cs#31)] [!code-vb[Conceptual.CLSCompliant#31](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2.vb#31)]  
+ [!code-csharp[Conceptual.CLSCompliant#31](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2.cs#31)]
+ [!code-vb[Conceptual.CLSCompliant#31](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2.vb#31)]  
   
  Common Language Specification 會對巢狀類型和保護的成員施加保守的每一個具現化模型。 開放式泛型類型無法公開其簽章包含受保護巢狀泛型類型的特定具現化的欄位或成員。 可擴充泛型基底類別或介面之特定具現化的非泛型類型，無法公開其簽章包含受保護巢狀泛型類型的不同具現化的欄位或成員。  
   
  下面範例會定義泛型類型 `C1<T>` (在 Visual Basic 中為 `C1(Of T)`) 和受保護的類別 `C1<T>.N` (在 Visual Basic 中為 `C1(Of T).N`)。 `C1<T>` 有兩個方法：`M1` 和 `M2`。 不過，`M1` 不符合 CLS 標準，因為它會嘗試從 C1\<T> (或 `C1(Of T)`) 傳回 `C1<int>.N` (或 `C1(Of Integer).N`) 物件。 第二個類別 `C2` 是衍生自 `C1<long>` (或 `C1(Of Long)`)。 它具有兩個方法：`M3` 和 `M4`。 `M3` 不符合 CLS 標準，因為它會嘗試從 `C1<int>.N` 的子類別傳回 `C1(Of Integer).N` (或 `C1<long>`) 物件。 請注意，語言編譯器的限制可能還要更嚴格。 在此範例中，Visual Basic 會在其嘗試編譯 `M4` 時顯示錯誤。  
   
- [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)] [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  
+ [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
+ [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  
   
 <a name="ctors"></a>   
 ### <a name="constructors"></a>建構函式  
@@ -378,9 +401,10 @@ ms.lasthandoff: 08/21/2017
   
      通常，編譯器會獨立強制執行此規則，而不需考慮 CLS 符合性，如下面範例所示。 它會建立衍生自 `Doctor` 類別的 `Person` 類別，但是 `Doctor` 類別無法呼叫 `Person` 類別建構函式來初始化繼承的執行個體欄位。  
   
-     [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]  [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
+     [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
+     [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   物件建構函式除了建立物件之外，無法被呼叫。 此外，物件無法初始化兩次。 例如，這表示 <xref:System.Object.MemberwiseClone%2A?displayProperty=fullName> 和還原序列化方法 (例如 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=fullName>) 不能呼叫建構函式。  
+-   物件建構函式除了建立物件之外，無法被呼叫。 此外，物件無法初始化兩次。 例如，這表示 <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> 和還原序列化方法 (例如 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>) 不能呼叫建構函式。  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>屬性  
@@ -394,11 +418,11 @@ ms.lasthandoff: 08/21/2017
   
 <a name="events"></a>   
 ### <a name="events"></a>事件  
- 事件是由它的名稱和類型來定義。 事件類型是用來表示事件的委派。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件的類型為 <xref:System.ResolveEventHandler>。 除了事件本身之外，具有以事件名稱為根據之名稱的三個方法會提供事件的實作，並且在組件的中繼資料中標記為 `SpecialName`：  
+ 事件是由它的名稱和類型來定義。 事件類型是用來表示事件的委派。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的類型為 <xref:System.ResolveEventHandler>。 除了事件本身之外，具有以事件名稱為根據之名稱的三個方法會提供事件的實作，並且在組件的中繼資料中標記為 `SpecialName`：  
   
--   用於加入事件處理常式的方法，名稱為 `add_`EventName。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件的事件訂閱方法是命名為 `add_AssemblyResolve`。  
+-   用於加入事件處理常式的方法，名稱為 `add_`EventName。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的事件訂閱方法是命名為 `add_AssemblyResolve`。  
   
--   用於移除事件處理常式的方法，名稱為 `remove_`EventName。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件的移除方法是命名為 `remove_AssemblyResolve`。  
+-   用於移除事件處理常式的方法，名稱為 `remove_`EventName。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的移除方法是命名為 `remove_AssemblyResolve`。  
   
 -   用於表示事件已發生的方法，名稱為 `raise_`EventName。  
   
@@ -409,7 +433,8 @@ ms.lasthandoff: 08/21/2017
   
  下面範例定義了符合 CLS 標準的類別 (名稱為 `Temperature`)，如果兩個讀數之間的溫度變更等於或超過臨界值，這個類別會引發 `TemperatureChanged` 事件。 `Temperature` 類別會明確地定義 `raise_TemperatureChanged` 方法，讓它可以選擇性地執行事件處理常式。  
   
- [!code-csharp[Conceptual.CLSCompliant#20](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/event1.cs#20)] [!code-vb[Conceptual.CLSCompliant#20](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/event1.vb#20)]  
+ [!code-csharp[Conceptual.CLSCompliant#20](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/event1.cs#20)]
+ [!code-vb[Conceptual.CLSCompliant#20](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/event1.vb#20)]  
   
 <a name="overloads"></a>   
 ### <a name="overloads"></a>Overloads  
@@ -426,21 +451,24 @@ ms.lasthandoff: 08/21/2017
   
 <a name="exceptions"></a>   
 ### <a name="exceptions"></a>例外狀況  
- 例外狀況物件必須衍生自 <xref:System.Exception?displayProperty=fullName>，或衍生自另一個衍生自 <xref:System.Exception?displayProperty=fullName> 的類型。 下面範例說明在名為 `ErrorClass` 的自訂類別用於例外狀況處理時，所造成的編譯器錯誤。  
+ 例外狀況物件必須衍生自 <xref:System.Exception?displayProperty=nameWithType>，或衍生自另一個衍生自 <xref:System.Exception?displayProperty=nameWithType> 的類型。 下面範例說明在名為 `ErrorClass` 的自訂類別用於例外狀況處理時，所造成的編譯器錯誤。  
   
- [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)] [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]  
+ [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)]
+ [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]  
   
- 若要更正這個錯誤，`ErrorClass` 類別必須繼承自 <xref:System.Exception?displayProperty=fullName>。 此外，還必須覆寫 `Message` 屬性。 下面範例會修正這些錯誤，以定義符合 CLS 標準的 `ErrorClass` 類別。  
+ 若要更正這個錯誤，`ErrorClass` 類別必須繼承自 <xref:System.Exception?displayProperty=nameWithType>。 此外，還必須覆寫 `Message` 屬性。 下面範例會修正這些錯誤，以定義符合 CLS 標準的 `ErrorClass` 類別。  
   
- [!code-csharp[Conceptual.CLSCompliant#14](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions2.cs#14)] [!code-vb[Conceptual.CLSCompliant#14](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions2.vb#14)]  
+ [!code-csharp[Conceptual.CLSCompliant#14](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions2.cs#14)]
+ [!code-vb[Conceptual.CLSCompliant#14](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions2.vb#14)]  
   
 <a name="attributes"></a>   
 ### <a name="attributes"></a>屬性  
- 在 .NET Framework 組件中，自訂屬性會提供可擴充機制，用於儲存自訂屬性和擷取程式設計物件 (例如組件、類型、成員和方法參數) 的相關中繼資料。 自訂屬性必須衍生自 <xref:System.Attribute?displayProperty=fullName>，或從衍生自 <xref:System.Attribute?displayProperty=fullName> 的類型衍生而來。  
+ 在 .NET Framework 組件中，自訂屬性會提供可擴充機制，用於儲存自訂屬性和擷取程式設計物件 (例如組件、類型、成員和方法參數) 的相關中繼資料。 自訂屬性必須衍生自 <xref:System.Attribute?displayProperty=nameWithType>，或從衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的類型衍生而來。  
   
- 下面範例違反這項規則。 它會定義不是衍生自 `NumericAttribute` 的 <xref:System.Attribute?displayProperty=fullName> 類別 請注意，只有在套用不符合 CLS 標準的屬性時，而不是在定義類別時，才會產生編譯器錯誤。  
+ 下面範例違反這項規則。 它會定義不是衍生自 `NumericAttribute` 的 <xref:System.Attribute?displayProperty=nameWithType> 類別 請注意，只有在套用不符合 CLS 標準的屬性時，而不是在定義類別時，才會產生編譯器錯誤。  
   
- [!code-csharp[Conceptual.CLSCompliant#18](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute1.cs#18)] [!code-vb[Conceptual.CLSCompliant#18](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute1.vb#18)]  
+ [!code-csharp[Conceptual.CLSCompliant#18](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute1.cs#18)]
+ [!code-vb[Conceptual.CLSCompliant#18](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute1.vb#18)]  
   
  建構函式或符合 CLS 標準的屬性 (attribute) 的屬性 (property) 只能公開下列類型：  
   
@@ -468,11 +496,12 @@ ms.lasthandoff: 08/21/2017
   
  下面範例會定義衍生自 `DescriptionAttribute` 的 <xref:System.Attribute> 類別。 類別建構函式具有類型為 `Descriptor` 的參數，因此類別不符合 CLS 標準。 請注意，C# 編譯器會發出警告，但編譯會成功，而 Visual Basic 編譯器則不會發出警告和錯誤。  
   
- [!code-csharp[Conceptual.CLSCompliant#33](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute2.cs#33)] [!code-vb[Conceptual.CLSCompliant#33](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute2.vb#33)]  
+ [!code-csharp[Conceptual.CLSCompliant#33](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute2.cs#33)]
+ [!code-vb[Conceptual.CLSCompliant#33](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute2.vb#33)]  
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 屬性  
- <xref:System.CLSCompliantAttribute> 屬性用於表示程式項目是否符合 Common Language Specification。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=fullName> 建構函式包含單一必要參數 `isCompliant`，表示程式項目是否符合 CLS 標準。  
+ <xref:System.CLSCompliantAttribute> 屬性用於表示程式項目是否符合 Common Language Specification。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> 建構函式包含單一必要參數 `isCompliant`，表示程式項目是否符合 CLS 標準。  
   
  在編譯時間，編譯器會偵測到假設符合 CLS 標準之不符合標準的項目，並發出警告。 對於明確宣告為不符合標準的類型或成員，編譯器不會發出警告。  
   
@@ -483,9 +512,9 @@ ms.lasthandoff: 08/21/2017
 -   確定元件庫的公用介面只公開符合 CLS 標準的程式項目。 如果項目不符合 CLS 標準，編譯器通常會發出警告。  
   
 > [!WARNING]
->  在某些情況下，語言編譯器會強制執行符合 CLS 標準的規則，而不論是否使用 <xref:System.CLSCompliantAttribute> 屬性。 例如，定義介面的靜態成員會違反 CLS 規則。 不過，如果您在介面中定義 `static` (在 C# 中) 或 `Shared` (在 Visual Basic 中) 成員，則 C# 和 Visual Basic 編譯器都會顯示錯誤訊息，並且無法編譯應用程式。  
+>  在某些情況下，語言編譯器會強制執行符合 CLS 標準的規則，而不論是否使用 <xref:System.CLSCompliantAttribute> 屬性。 例如，定義介面的靜態成員會違反 CLS 規則。 在這個問題，如果您定義`static`（C# 中） 或`Shared`（在 Visual Basic) 的介面中的成員，同時在 C# 和 Visual Basic 編譯器顯示錯誤訊息，並且無法編譯應用程式。  
   
- <xref:System.CLSCompliantAttribute> 屬性標記著具有 <xref:System.AttributeUsageAttribute> 值的 <xref:System.AttributeTargets.All?displayProperty=fullName> 屬性。 此值可讓您將 <xref:System.CLSCompliantAttribute> 屬性套用至任何程式項目，包括組件、模組、類型 (類別、結構、列舉、介面和委派)、類型成員 (建構函式、方法、屬性、欄位和事件)、參數、泛型參數和傳回值。 不過，在實務中，您應該只將該屬性套用至組件、類型和類型成員。 否則，當編譯器在您的程式庫的公用介面中遇到不符合標準的參數、泛型參數或傳回值時，會忽略該屬性並繼續產生編譯器警告。  
+ <xref:System.CLSCompliantAttribute> 屬性標記著具有 <xref:System.AttributeUsageAttribute> 值的 <xref:System.AttributeTargets.All?displayProperty=nameWithType> 屬性。 此值可讓您將 <xref:System.CLSCompliantAttribute> 屬性套用至任何程式項目，包括組件、模組、類型 (類別、結構、列舉、介面和委派)、類型成員 (建構函式、方法、屬性、欄位和事件)、參數、泛型參數和傳回值。 不過，在實務中，您應該只將該屬性套用至組件、類型和類型成員。 否則，當編譯器在您的程式庫的公用介面中遇到不符合標準的參數、泛型參數或傳回值時，會忽略該屬性並繼續產生編譯器警告。  
   
  <xref:System.CLSCompliantAttribute> 屬性的值是由內含的程式項目繼承。 例如，如果組件是標記為符合 CLS 標準，它的類型也會符合 CLS 標準。 如果類型是標記為符合 CLS 標準，其巢狀類型及成員也會符合 CLS 標準。  
   
@@ -507,7 +536,8 @@ ms.lasthandoff: 08/21/2017
   
  下面範例會使用 <xref:System.CLSCompliantAttribute> 屬性來定義符合 CLS 標準的組件和類型 `CharacterUtilities`，該類型有兩個不符合 CLS 標準的成員。 由於兩個成員都是以 `CLSCompliant(false)` 屬性來標記，因此編譯器沒有產生警告。 該類別也為這兩個方法提供符合 CLS 標準的替代項目。 通常，我們會將兩個多載加入至 `ToUTF16` 方法，以提供符合 CLS 標準的替代項目。 不過，因為方法無法根據傳回值來多載，所以符合 CLS 標準之方法的名稱與不符合 CLS 標準之方法的名稱不同。  
   
- [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)] [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]  
+ [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)]
+ [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]  
   
  如果您要開發的是應用程式而非程式庫 (也就是說，如果您不會公開可由其他應用程式開發人員使用的類型或成員)，則您的應用程式所使用之程式項目的 CLS 符合性，只有在您的語言不支援這些項目時才需要考慮。 在這種情況下，當您嘗試使用不符合 CLS 標準的項目時，您的語言編譯器會產生錯誤。  
   
@@ -547,7 +577,8 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  接著，下列範例會呼叫 `NumericLib.NearZero` 和 `StringLib.ToTitleCase` 方法。 請注意，Visual Basic 程式碼和 C# 程式碼都能存取這兩個類別中的方法。  
   
- [!code-csharp[Conceptual.CrossLanguage#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.crosslanguage/cs/useutilities1.cs#3)] [!code-vb[Conceptual.CrossLanguage#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/useutilities1.vb#3)]  
+ [!code-csharp[Conceptual.CrossLanguage#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.crosslanguage/cs/useutilities1.cs#3)]
+ [!code-vb[Conceptual.CrossLanguage#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/useutilities1.vb#3)]  
   
  若要編譯 Visual Basic 程式碼，請使用這個命令：  
   
@@ -563,4 +594,3 @@ csc example.cs /r:UtilityLib.dll
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.CLSCompliantAttribute>
-

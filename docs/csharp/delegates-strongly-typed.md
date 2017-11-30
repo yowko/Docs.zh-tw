@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
+ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a8185c21e129c91b2c3ecb1f74f8ce2f75c5db9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="strongly-typed-delegates"></a>強類型委派
 
 [上一個](delegate-class.md)
@@ -30,7 +28,7 @@ ms.lasthandoff: 07/28/2017
 
 還好，這不是必要的。 .NET 核心架構包含您只要需要委派類型即可重複使用的數個類型。 這些是[泛型](programming-guide/generics/index.md)定義，因此當您需要新的方法宣告時，可以宣告自訂項目。 
 
-這些類型的第一個是 @System.Action 類型和數個變化：
+這些類型的第一個是 <xref:System.Action> 類型和數個變化：
 
 ```csharp
 public delegate void Action();
@@ -41,7 +39,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 有關共變數的文章涵蓋泛型型別引數上的 `in` 修飾詞。
 
-最多包含 16 個引數的 `Action` 委派有多種變化，例如 @System.Action%6016。
+有多種變化`Action`委派，其中包含最多 16 個引數，例如<xref:System.Action%6016>。
 這些定義一定要為每個委派引數使用不同的泛型引數：這讓您擁有最大的彈性。 方法引數不需要但可以是相同的類型。
 
 針對任何具有 void 傳回型別的委派類型，使用其中一個 `Action` 類型。
@@ -57,12 +55,12 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 有關共變數的文章涵蓋結果泛型型別引數上的 `out` 修飾詞。
 
-最多有 16 個輸入引數的 `Func` 委派有多種變化，例如 @System.Func%6017。
+有多種變化`Func`這類最多 16 個輸入引數與委派<xref:System.Func%6017>。
 依照慣例，結果的類型一律是所有 `Func` 宣告中的最後一個型別參數。
 
 針對任何傳回值的委派類型，使用其中一個 `Func` 類型。
 
-針對在單一值上傳回測試的委派，也有特殊的 @System.Predicate%601 類型：
+沒有也特殊<xref:System.Predicate%601>委派，會傳回單一值的測試類型：
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -85,4 +83,3 @@ Predicate<string> AnotherTestForString;
 在下一篇文章中，您將看到實際使用委派的數個常見模式。
 
 [下一個](delegates-patterns.md)
-

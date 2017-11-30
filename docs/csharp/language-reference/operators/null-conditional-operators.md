@@ -1,36 +1,18 @@
 ---
 title: "Null 條件運算子 (C# 和 Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c95b4079cf4e71c0ef9cd436ec230337f512229a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
-ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>Null 條件運算子 (C# 和 Visual Basic)
 在執行成員存取 (`?.`) 或對 (`?[`) 作業編製索引之前，可用來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  
@@ -93,9 +75,8 @@ PropertyChanged?.Invoke(e)
  如需詳細資訊，請參閱 [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [?? (Null 聯合運算子)](null-conditional-operator.md)   
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)   
+ [??（null 聯合運算子）](null-conditional-operator.md)  
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
  [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)
-

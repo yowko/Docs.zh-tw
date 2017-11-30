@@ -6,16 +6,15 @@ ms.author: wiwagn
 ms.date: 09/08/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 6e986e89d47ba4de9b8563f1a95cb1ae89accc89
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 89657d766771bc73777a62c14e10cde3b4f6f75f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 C# 進行單元測試
 
-本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。
+本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="creating-the-source-project"></a>建立來源專案
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 09/14/2017
     /PrimeService
 ```
 
-將 *PrimeService* 設定為目前的目錄，然後執行 [`dotnet new classlib`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.cs* 重新命名為 *PrimeService.cs*。 為了使用測試導向開發 (TDD)，您必須建立 `PrimeService` 類別的失敗實作：
+將 *PrimeService* 設為目前的目錄，然後執行 [`dotnet new classlib`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.cs* 重新命名為 *PrimeService.cs*。 為了使用測試導向開發 (TDD)，您必須建立 `PrimeService` 類別的失敗實作：
 
 ```csharp
 using System;
@@ -50,7 +49,7 @@ namespace Prime.Services
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
-接著，建立 *MrimeService.Testss* 目錄。 下列大綱顯示目錄結構：
+接著，建立 *PrimeService.Tests* 目錄。 下列大綱顯示目錄結構：
 
 ```
 /unit-testing-using-dotnet-test
@@ -157,5 +156,6 @@ if (candidate < 2)
 
 繼續在主要程式庫中新增更多測試、更多理論和更多程式碼，以反覆執行。 您有[測試的完成版](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs)和[程式庫的完整實作](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)。
 
-您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，使得加入新套件與測試會依照目前工作流程執行。 您已集中大部分的時間與精力以解決應用程式目標。
+### <a name="additional-resources"></a>其他資源
 
+[在 ASP.NET Core 中測試控制器邏輯](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)

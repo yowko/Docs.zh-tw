@@ -1,31 +1,32 @@
 ---
-title: "使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理
-**XmlNodeChangedEventArgs** 會封裝傳入註冊在處理事件之 **XmlDocument** 物件上的事件處理常式之引數。  下列表格說明事件和引發事件的時機。  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理
+**XmlNodeChangedEventArgs**封裝上註冊的事件處理常式傳遞的引數**XmlDocument**處理事件的物件。 下列表格說明事件和引發事件的時機。  
   
 |事件|引發|  
-|--------|--------|  
+|-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|當屬於目前文件的節點要插入另一個節點。|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|當屬於目前文件的節點已經插入另一個節點。|  
 |<xref:System.Xml.XmlDocument.NodeRemoving>|當屬於這個文件的節點要從文件中移除。|  
@@ -34,7 +35,7 @@ caps.handback.revision: 3
 |<xref:System.Xml.XmlDocument.NodeChanged>|當節點的值已經變更。|  
   
 > [!NOTE]
->  若 **XmlDataDocument** 記憶體使用已完全最佳化為使用 **DataSet** 存放區，則在變更基礎 **DataSet** 時，**XmlDataDocument** 可能不會引發上列的任何事件。  如果您需要這些事件，則必須周遊整個 **XmlDocument** 一次，讓記憶體使用成為非完全最佳化。  
+>  如果**XmlDataDocument**記憶體使用量已完全最佳化為使用**資料集**儲存體， **XmlDataDocument**可能不會引發任何事件，進行變更時，上面所列對基礎**資料集**。 如果您需要這些事件時，您必須周遊整個**XmlDocument**一次，好讓非完全最佳化的記憶體使用量。  
   
  下列程式碼範例將說明如何定義事件處理常式，以及如何將事件處理常式加入事件中。  
   
@@ -79,9 +80,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- 有些 XML 文件物件模型 \(DOM\) 作業是可以引發多個事件的複合作業。  例如，**AppendChild** 也必須移除先前父代所附加的節點。  在這個案例中，您會看到先引發 **NodeRemoved** 事件，接著引發 **NodeInserted** 事件。  設定 **InnerXml** 這類的作業可以在多個事件中產生。  
+ 有些 XML 文件物件模型 (DOM) 作業是可以引發多個事件的複合作業。 例如， **AppendChild**可能也必須移除先前父代所附加的節點。 在此情況下，您會看到**NodeRemoved**首先，引發事件會緊接著**NodeInserted**事件。 之類的作業設定**InnerXml**可能會導致多個事件。  
   
- 下列程式碼範例將說明事件處理常式的建立以及 **NodeInserted** 事件的處理。  
+ 下列程式碼範例顯示建立事件處理常式，以及處理**NodeInserted**事件。  
   
 ```vb  
 Imports System  
@@ -212,7 +213,7 @@ public class Sample
 } // End class   
 ```  
   
- 如需詳細資訊，請參閱 [XmlNodeChangeEventArgs 成員](frlrfSystemXmlXmlNodeChangedEventArgsMembersTopic)和 [XmlNodeChangedEventHandler 委派](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic)。  
+ 如需詳細資訊，請參閱 <xref:System.Xml.XmlNodeChangedEventArgs> 與 <xref:System.Xml.XmlNodeChangedEventHandler>。  
   
-## 請參閱  
- [XML 文件物件模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱  
+ [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

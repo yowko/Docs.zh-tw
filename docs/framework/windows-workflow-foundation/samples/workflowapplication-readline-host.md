@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: a65ca3d3d4a787132246312e28213e71defc94ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 主機
 這個範例為泛型 ReadLine 主機。 您可以使用包含的 `ReadLine` 活動來載入及執行任何工作流程 (或是與它類似的其他活動，從使用字串繼續的書籤中取得資料)。 來自 `WriteLine` 活動的輸出或是寫入 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 延伸模組的任何內容都會導向主機視窗。 當執行個體閒置時，該執行個體可用的書籤會出現在下拉式方塊中。 選取書籤、輸入某些文字並按下繼續書籤按鈕，將會繼續執行工作流程。 您也可以取消、中止或終止選取的工作流程。 預設會啟用持續性，您可以關閉主機並將它開啟，執行個體清單就會填入資料庫內所存放的執行個體。 追蹤是用來將 <xref:System.Activities.WorkflowApplication> 層級的事件輸出到主機，而且包含了加入活動層級之詳細追蹤的選項。  
@@ -67,6 +67,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`  
-  
-## <a name="see-also"></a>另請參閱
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

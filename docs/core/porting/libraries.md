@@ -7,17 +7,14 @@ ms.author: mairaw
 ms.date: 07/14/2017
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
+ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---libraries"></a>移轉到 .NET Core - 程式庫
 
 本文討論將程式庫程式碼移植到 .NET Core 來使它能跨平台執行。
@@ -26,7 +23,8 @@ ms.lasthandoff: 08/04/2017
 
 本文假設您已具備下列條件：
 
-- 使用 Visual Studio 2017 或更新版本。 .NET Core 不支援較舊的 Visual Studio 版本。
+- 使用 Visual Studio 2017 或更新版本。
+  - .NET 核心不支援舊版的 Visual Studio
 - 了解[建議的移植程序](index.md)。
 - 已解決任何[協力廠商相依性](third-party-deps.md)問題。
 
@@ -57,7 +55,7 @@ ms.lasthandoff: 08/04/2017
 
 AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援，且通常具有較高的成本。 該功能尚未在 .NET Core 中實作。 我們並未計畫於未來加入此功能。 若要隔離程式碼，建議使用不同的處理序或使用容器作為替代方法。 若要以動態方式載入組件，建議使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 類別。
 
-為了使從 .NET Framework 的程式碼移植作業更加容易，我們已公開 .NET Core 中的部分 <xref:System.AppDomain> API 介面。 某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=fullName>)，某些成員則不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。 在 [dotnet/corefx GitHub 存放庫](https://github.com/dotnet/corefx) \(英文\) 中針對 [`System.AppDomain` 參考來源](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) \(英文\) 檢查您使用的類型，請務必選取符合您實作版本的分支。
+為了使從 .NET Framework 的程式碼移植作業更加容易，我們已公開 .NET Core 中的部分 <xref:System.AppDomain> API 介面。 某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>)，某些成員則不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。 在 [dotnet/corefx GitHub 存放庫](https://github.com/dotnet/corefx) \(英文\) 中針對 [`System.AppDomain` 參考來源](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) \(英文\) 檢查您使用的類型，請務必選取符合您實作版本的分支。
 
 ### <a name="remoting"></a>遠端處理
 
@@ -138,7 +136,7 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 
 ### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>留在 .NET Framework 直到解決可攜性問題
 
-如果您偏好在整個程序期間執行編譯的程式碼，這就是最佳方法。  方法如下所示︰
+如果您偏好在整個程序期間執行編譯的程式碼，這就是最佳方法。 方法如下所示︰
 
 1. 對專案執行 ApiPort。
 1. 使用不同的可攜式 API 來解決問題。
@@ -173,7 +171,7 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 
 ### <a name="mixing-approaches"></a>混合方法
 
-您可能會根據每個專案混用上述各種方法。  您應該做對您和程式碼基底而言最有意義的事。
+您可能會根據每個專案混用上述各種方法。 您應該做對您和程式碼基底而言最有意義的事。
 
 ## <a name="porting-your-tests"></a>移植測試
 
@@ -198,9 +196,3 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 1. 挑選要移植的下一層程式碼，並重複上述步驟。
 
 如果您是從程式庫基底向外進行移植，並視需要測試每一層，移植將會是個系統化的程序，並將所有問題都隔離在單層的程式碼內。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-

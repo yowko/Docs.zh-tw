@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
+ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 關鍵字
 
 [上一個](delegates-overview.md)
@@ -26,7 +24,7 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="defining-delegate-types"></a>定義委派型別
 
-首先讓我們說明 'delegate' 關鍵字，因為您在使用委派時主要會用到這個項目。 當您使用 `delegate` 關鍵字時，編譯器產生的程式碼會對應到叫用 @System.Delegate 和 @System.MulticastDelegate 類別成員的方法呼叫。 
+首先讓我們說明 'delegate' 關鍵字，因為您在使用委派時主要會用到這個項目。 當您使用 `delegate` 關鍵字時，編譯器產生的程式碼會對應到叫用 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 類別成員的方法呼叫。 
 
 定義委派型別的語法與定義方法簽章的語法類似。 您只需要將 `delegate` 關鍵字加入定義中。
 
@@ -122,7 +120,7 @@ Sort() 範例通常會將單一的目標方法附加至委派。 即便如此，
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Delegate 和 MulticastDelegate 類別
 
-上述語言支援提供使用委派時通常需要的功能與支援。 這些功能都是建置在 .NET Core Framework 的 @System.Delegate 和 @"System.MulticastDelegate" 兩個類別之上。
+上述語言支援提供使用委派時通常需要的功能與支援。 這些功能會根據.NET Core framework 中的兩個類別：<xref:System.Delegate>和<xref:System.MulticastDelegate>。
 
 `System.Delegate` 類別和其單一的直接子類別 `System.MulticastDelegate` 提供的架構支援，可用來建立委派、將方法註冊為委派目標，以及叫用註冊為委派目標的所有方法。 
 
@@ -143,4 +141,3 @@ Sort() 範例通常會將單一的目標方法附加至委派。 即便如此，
 現在，您已了解支援委派的語言語法與類別，讓我們來查看如何使用、建立及叫用強型別的委派。
 
 [下一個](delegates-strongly-typed.md)
-

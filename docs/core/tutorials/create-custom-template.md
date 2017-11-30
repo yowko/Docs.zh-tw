@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
+ms.openlocfilehash: c3955951c0367e1933342172c1bc1888fb58f60c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
-ms.openlocfilehash: 243c924826a54907840b337a91cf1e5d19cff985
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="create-a-custom-template-for-dotnet-new"></a>建立 dotnet new 的自訂範本
 
 本教學課程會示範如何：
@@ -41,7 +39,7 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="create-a-template-from-a-project"></a>從專案建立範本
 
-使用您已確認編譯和執行的現有專案，或在硬碟的資料夾中建立新的主控台應用程式專案。 本教學課程假設專案資料夾的名稱為 *GarciaSoftware.ConsoleTemplate.CSharp*，儲存在使用者設定檔的 *Documents/Templates*。 教學課程專案範本名稱的格式為 \<公司名稱>.\<範本類型>.\<程式設計語言>，但是您可以依喜好隨意命名您的專案與範本。
+使用現有的專案，您已確認會編譯和執行，或在您的硬碟上的資料夾中建立新的主控台應用程式專案。 本教學課程假設專案資料夾的名稱為 *GarciaSoftware.ConsoleTemplate.CSharp*，儲存在使用者設定檔的 *Documents/Templates*。 教學課程專案範本名稱的格式為 \<公司名稱>.\<範本類型>.\<程式設計語言>，但是您可以依喜好隨意命名您的專案與範本。
 
 1. 將資料夾新增至 *.template.config* 專案的根目錄。
 1. 在 *.template.config* 資料夾中建立 *template.json* 檔案，以設定您的範本。 如需 *template.json* 檔案的詳細資訊和成員定義，請參閱 [dotnet new 的自訂範本](../tools/custom-templates.md#templatejson)主題和 [JSON 結構描述存放區的 *template.json* 結構描述](http://json.schemastore.org/template)。
@@ -213,10 +211,9 @@ dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate
 > 若要將範本從您的本機檔案系統解除安裝，您需要使路徑成為完整路徑。 例如，*C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* 將有效，但來自包含資料夾的 *./GarciaSoftware.ConsoleTemplate.CSharp* 將無效。
 > 此外，請勿在範本路徑中包含最終結尾目錄斜線。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)  
 [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)  
 [如何建立您自己的 dotnet new 範本](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
 [JSON 結構描述保存區的 *template.json* 結構描述](http://json.schemastore.org/template)  
-
