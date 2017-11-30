@@ -1,27 +1,33 @@
 ---
-title: "DataRow 和 DataRowView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataRow 和 DataRowView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e342ce805880da848da1e17700c055aba2c74f19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DataRow 和 DataRowView
-<xref:System.Data.DataView> 公開可列舉之 <xref:System.Data.DataRowView> 物件的集合。  **DataRowView** 物件將值公開為物件陣列，而其索引則是由基底資料表內資料行的名稱或序數參考來編列。  您可以使用 **DataRowView** 的 <xref:System.Data.DataRowView.Row%2A> 屬性，存取 **DataRowView** 公開的 <xref:System.Data.DataRow>。  
+# <a name="datarows-and-datarowviews"></a><span data-ttu-id="f9b6b-102">DataRow 和 DataRowView</span><span class="sxs-lookup"><span data-stu-id="f9b6b-102">DataRows and DataRowViews</span></span>
+<span data-ttu-id="f9b6b-103"><xref:System.Data.DataView> 公開可列舉之 <xref:System.Data.DataRowView> 物件的集合。</span><span class="sxs-lookup"><span data-stu-id="f9b6b-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="f9b6b-104">**DataRowView**物件將值公開為物件陣列，會依名稱或序數參考的基礎資料表中的資料行編製索引。</span><span class="sxs-lookup"><span data-stu-id="f9b6b-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="f9b6b-105">您可以存取<xref:System.Data.DataRow>公開**DataRowView**使用<xref:System.Data.DataRowView.Row%2A>屬性**DataRowView**。</span><span class="sxs-lookup"><span data-stu-id="f9b6b-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
   
- 使用 **DataRowView** 檢視值時，**DataView** 的 <xref:System.Data.DataView.RowStateFilter%2A> 屬性會判斷要公開的是哪一個基礎 **DataRow** 的資料列版本。  如需使用 **DataRow** 存取不同資料列版本的詳細資訊，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+ <span data-ttu-id="f9b6b-106">當使用檢視值**DataRowView**、<xref:System.Data.DataView.RowStateFilter%2A>屬性**DataView**判斷哪一個資料列版本的基礎**DataRow**公開。</span><span class="sxs-lookup"><span data-stu-id="f9b6b-106">When you view values by using a **DataRowView**, the <xref:System.Data.DataView.RowStateFilter%2A> property of the **DataView** determines which row version of the underlying **DataRow** is exposed.</span></span> <span data-ttu-id="f9b6b-107">如需有關存取使用不同的資料列版本資訊**DataRow**，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。</span><span class="sxs-lookup"><span data-stu-id="f9b6b-107">For information about accessing different row versions using a **DataRow**, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
   
- 下列程式碼範例顯示資料表內所有的目前值和原始值。  
+ <span data-ttu-id="f9b6b-108">下列程式碼範例顯示資料表內所有的目前值和原始值。</span><span class="sxs-lookup"><span data-stu-id="f9b6b-108">The following code example displays all the current and original values in a table.</span></span>  
   
 ```vb  
 Dim catView As DataView = New DataView(catDS.Tables("Categories"))  
@@ -42,7 +48,6 @@ Public Shared Sub WriteView(thisDataView As DataView)
     Console.WriteLine()  
   Next  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -64,10 +69,10 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## 請參閱  
- <xref:System.Data.DataRowVersion>   
- <xref:System.Data.DataViewRowState>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f9b6b-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f9b6b-109">See Also</span></span>  
+ <xref:System.Data.DataRowVersion>  
+ <xref:System.Data.DataViewRowState>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [<span data-ttu-id="f9b6b-110">DataView</span><span class="sxs-lookup"><span data-stu-id="f9b6b-110">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="f9b6b-111">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="f9b6b-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

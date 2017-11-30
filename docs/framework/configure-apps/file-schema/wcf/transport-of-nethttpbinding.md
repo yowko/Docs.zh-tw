@@ -1,129 +1,134 @@
 ---
-title: "&lt;netHttpBinding&gt; 的 &lt;transport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;netHttpBinding&gt; 的 &lt;transport&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 67bacedb9a2e46903b97ea0747880bbb1af24a68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;netHttpBinding&gt; 的 &lt;transport&gt;
-定義可控制 HTTP 傳輸之驗證參數的屬性。  
+# <a name="lttransportgt-of-ltnethttpbindinggt"></a><span data-ttu-id="87639-102">&lt;netHttpBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="87639-102">&lt;transport&gt; of &lt;netHttpBinding&gt;</span></span>
+<span data-ttu-id="87639-103">定義可控制 HTTP 傳輸之驗證參數的屬性。</span><span class="sxs-lookup"><span data-stu-id="87639-103">Defines properties that control authentication parameters for the HTTP transport.</span></span>  
   
-## 語法  
+<span data-ttu-id="87639-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="87639-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="87639-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="87639-105">\<bindings></span></span>  
+<span data-ttu-id="87639-106">\<netHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="87639-106">\<netHttpBinding></span></span>  
+<span data-ttu-id="87639-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="87639-107">\<binding></span></span>  
+<span data-ttu-id="87639-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="87639-108">\<security></span></span>  
+<span data-ttu-id="87639-109">\<傳輸 ></span><span class="sxs-lookup"><span data-stu-id="87639-109">\<transport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="87639-110">語法</span><span class="sxs-lookup"><span data-stu-id="87639-110">Syntax</span></span>  
+  
+```xml
 <netHttpBinding>  
-    <binding>  
-        <security  
-        mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">  
-            <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"  
-             proxyCredentialType="None|Basic|Digest|Ntlm|Windows" realm="string" >  
-                <extendedProtectionPolicy  
-                     policyEnforcement="Never|WhenSupported|Always"  
-                     protectionScenario="TransportSelected|TrustedProxy">  
-                    <customServiceNames></customServiceNames>  
-                        </extendedProtectionPolicy>  
-            </transport>  
-        </security>  
-    </binding>  
-</basicHttpBinding>  
+  <binding>  
+    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">  
+      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"  
+                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows" realm="string">  
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"  
+                                  protectionScenario="TransportSelected|TrustedProxy">  
+          <customServiceNames></customServiceNames>  
+        </extendedProtectionPolicy>  
+      </transport>  
+    </security>  
+  </binding>  
+</netHttpBinding>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="87639-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="87639-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="87639-112">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="87639-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="87639-113">屬性</span><span class="sxs-lookup"><span data-stu-id="87639-113">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|clientCredentialType|-   指定當使用 HTTP 驗證執行用戶端驗證時，要使用的認證類型。  預設為 `None`。  此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
-|proxyCredentialType|-   指定當使用 Proxy over HTTP 從網域內執行用戶端驗證時，要使用的認證類型。  這個屬性僅適用於父 `security` 項目的 `mode` 屬性是 `Transport` 或 `TransportCredentialsOnly` 時。  此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
-|realm|字串，指定摘要式驗證或基本驗證的 HTTP 驗證配置所使用的領域。  預設為空字串。|  
-|policyEnforcement|此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtectionPolicy> 的時間。<br /><br /> 1.  Never：絕不強制執行此原則 \(延伸保護已停用\)。<br />2.  WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。<br />3.  Always：一律強制執行此原則。  不支援延伸保護的用戶端將無法驗證。|  
-|protectionScenario|此列舉會指定原則強制執行的保護案例。|  
+|<span data-ttu-id="87639-114">屬性</span><span class="sxs-lookup"><span data-stu-id="87639-114">Attribute</span></span>|<span data-ttu-id="87639-115">描述</span><span class="sxs-lookup"><span data-stu-id="87639-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="87639-116">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="87639-116">clientCredentialType</span></span>|<span data-ttu-id="87639-117">-指定要執行使用 HTTP 驗證的用戶端驗證時使用的認證類型。</span><span class="sxs-lookup"><span data-stu-id="87639-117">-   Specifies the type of credential to be used when performing client authentication using HTTP authentication.</span></span>  <span data-ttu-id="87639-118">預設為 `None`。</span><span class="sxs-lookup"><span data-stu-id="87639-118">The default is `None`.</span></span> <span data-ttu-id="87639-119">此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="87639-119">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
+|<span data-ttu-id="87639-120">proxyCredentialType</span><span class="sxs-lookup"><span data-stu-id="87639-120">proxyCredentialType</span></span>|<span data-ttu-id="87639-121">-指定要執行使用 proxy over HTTP 的網域內，從用戶端驗證時使用的認證類型。</span><span class="sxs-lookup"><span data-stu-id="87639-121">-   Specifies the type of credential to be used when performing client authentication from within a domain using a proxy over HTTP.</span></span> <span data-ttu-id="87639-122">這個屬性僅適用於父 `mode` 項目的 `security` 屬性是 `Transport` 或 `TransportCredentialsOnly` 時。</span><span class="sxs-lookup"><span data-stu-id="87639-122">This attribute is applicable only when the `mode` attribute of the parent `security` element is `Transport` or `TransportCredentialsOnly`.</span></span> <span data-ttu-id="87639-123">此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="87639-123">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
+|<span data-ttu-id="87639-124">realm</span><span class="sxs-lookup"><span data-stu-id="87639-124">realm</span></span>|<span data-ttu-id="87639-125">字串，指定摘要式驗證或基本驗證的 HTTP 驗證配置所使用的領域。</span><span class="sxs-lookup"><span data-stu-id="87639-125">A string that specifies the realm that is used by the HTTP authentication scheme for digest or basic authentication.</span></span> <span data-ttu-id="87639-126">預設為空字串。</span><span class="sxs-lookup"><span data-stu-id="87639-126">The default is an empty string.</span></span>|  
+|<span data-ttu-id="87639-127">policyEnforcement</span><span class="sxs-lookup"><span data-stu-id="87639-127">policyEnforcement</span></span>|<span data-ttu-id="87639-128">此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。</span><span class="sxs-lookup"><span data-stu-id="87639-128">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="87639-129">1.Never：絕不強制執行此原則 (延伸保護已停用)。</span><span class="sxs-lookup"><span data-stu-id="87639-129">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="87639-130">2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。</span><span class="sxs-lookup"><span data-stu-id="87639-130">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="87639-131">3.Always：一律強制執行此原則。</span><span class="sxs-lookup"><span data-stu-id="87639-131">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="87639-132">不支援延伸保護的用戶端將無法驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-132">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
+|<span data-ttu-id="87639-133">protectionScenario</span><span class="sxs-lookup"><span data-stu-id="87639-133">protectionScenario</span></span>|<span data-ttu-id="87639-134">此列舉會指定原則強制執行的保護案例。</span><span class="sxs-lookup"><span data-stu-id="87639-134">This enumeration specifies the protection scenario enforced by the policy.</span></span>|  
   
-## clientCredentialType 屬性  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="87639-135">clientCredentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="87639-135">clientCredentialType Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|無|傳輸期間不會保護訊息的安全。|  
-|基本|指定基本驗證。|  
-|摘要|指定摘要式驗證。|  
-|Ntlm|指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。|  
-|Windows|指定 Windows 整合式驗證。|  
+|<span data-ttu-id="87639-136">值</span><span class="sxs-lookup"><span data-stu-id="87639-136">Value</span></span>|<span data-ttu-id="87639-137">描述</span><span class="sxs-lookup"><span data-stu-id="87639-137">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="87639-138">無</span><span class="sxs-lookup"><span data-stu-id="87639-138">None</span></span>|<span data-ttu-id="87639-139">傳輸期間不會保護訊息的安全。</span><span class="sxs-lookup"><span data-stu-id="87639-139">Messages are not secured during transfer.</span></span>|  
+|<span data-ttu-id="87639-140">基本</span><span class="sxs-lookup"><span data-stu-id="87639-140">Basic</span></span>|<span data-ttu-id="87639-141">指定基本驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-141">Specifies basic authentication.</span></span>|  
+|<span data-ttu-id="87639-142">摘要</span><span class="sxs-lookup"><span data-stu-id="87639-142">Digest</span></span>|<span data-ttu-id="87639-143">指定摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-143">Specifies digest authentication.</span></span>|  
+|<span data-ttu-id="87639-144">Ntlm</span><span class="sxs-lookup"><span data-stu-id="87639-144">Ntlm</span></span>|<span data-ttu-id="87639-145">指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-145">Specifies NTLM authentication when possible, and if Windows authentication fails.</span></span>|  
+|<span data-ttu-id="87639-146">Windows</span><span class="sxs-lookup"><span data-stu-id="87639-146">Windows</span></span>|<span data-ttu-id="87639-147">指定 Windows 整合式驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-147">Specifies Windows integrated authentication.</span></span>|  
   
-## proxyCredentialType 屬性  
+## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="87639-148">proxyCredentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="87639-148">proxyCredentialType Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|無|-   傳輸期間不會保護訊息的安全。|  
-|基本|指定依照 RFC 2617 – HTTP Authentication: Basic and Digest Authentication 所定義的基本驗證。|  
-|摘要|指定依照 RFC 2617 – HTTP Authentication: Basic and Digest Authentication 所定義的摘要式驗證。|  
-|Ntlm|指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。|  
-|Windows|指定 Windows 整合式驗證。|  
-|憑證|使用憑證執行用戶端驗證。  這個選項只有在父 `security` 項目的 `Mode` 屬性設為 Transport 時才能使用，如果該屬性設為 TransportCredentialOnly，則無法使用。|  
+|<span data-ttu-id="87639-149">值</span><span class="sxs-lookup"><span data-stu-id="87639-149">Value</span></span>|<span data-ttu-id="87639-150">描述</span><span class="sxs-lookup"><span data-stu-id="87639-150">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="87639-151">無</span><span class="sxs-lookup"><span data-stu-id="87639-151">None</span></span>|<span data-ttu-id="87639-152">傳輸期間並未保護訊息數。</span><span class="sxs-lookup"><span data-stu-id="87639-152">-   Messages are not secured during transfer.</span></span>|  
+|<span data-ttu-id="87639-153">基本</span><span class="sxs-lookup"><span data-stu-id="87639-153">Basic</span></span>|<span data-ttu-id="87639-154">指定依照 RFC 2617 – HTTP Authentication: Basic and Digest Authentication 所定義的基本驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-154">Specifies basic authentication as defined by RFC 2617 – HTTP Authentication: Basic and Digest Authentication.</span></span>|  
+|<span data-ttu-id="87639-155">摘要</span><span class="sxs-lookup"><span data-stu-id="87639-155">Digest</span></span>|<span data-ttu-id="87639-156">指定依照 RFC 2617 – HTTP Authentication: Basic and Digest Authentication 所定義的摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-156">Specifies digest authentication as defined by RFC 2617 – HTTP Authentication: Basic and Digest Authentication.</span></span>|  
+|<span data-ttu-id="87639-157">Ntlm</span><span class="sxs-lookup"><span data-stu-id="87639-157">Ntlm</span></span>|<span data-ttu-id="87639-158">指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-158">Specifies NTLM authentication when possible, and if Windows authentication fails.</span></span>|  
+|<span data-ttu-id="87639-159">Windows</span><span class="sxs-lookup"><span data-stu-id="87639-159">Windows</span></span>|<span data-ttu-id="87639-160">指定 Windows 整合式驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-160">Specifies Windows integrated authentication.</span></span>|  
+|<span data-ttu-id="87639-161">憑證</span><span class="sxs-lookup"><span data-stu-id="87639-161">Certificate</span></span>|<span data-ttu-id="87639-162">使用憑證執行用戶端驗證。</span><span class="sxs-lookup"><span data-stu-id="87639-162">Performs client authentication using a certificate.</span></span> <span data-ttu-id="87639-163">這個選項只有在父 `Mode` 項目的 `security` 屬性設為 Transport 時才能使用，如果該屬性設為 TransportCredentialOnly，則無法使用。</span><span class="sxs-lookup"><span data-stu-id="87639-163">This option works only if the `Mode` attribute of the parent `security` element is set to Transport, and will not work if it is set to TransportCredentialOnly.</span></span>|  
   
-### 子項目  
- 無  
+### <a name="child-elements"></a><span data-ttu-id="87639-164">子元素</span><span class="sxs-lookup"><span data-stu-id="87639-164">Child Elements</span></span>  
+ <span data-ttu-id="87639-165">無</span><span class="sxs-lookup"><span data-stu-id="87639-165">None</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="87639-166">父項目</span><span class="sxs-lookup"><span data-stu-id="87639-166">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|定義 [\<netHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md) 的安全性功能。|  
+|<span data-ttu-id="87639-167">項目</span><span class="sxs-lookup"><span data-stu-id="87639-167">Element</span></span>|<span data-ttu-id="87639-168">說明</span><span class="sxs-lookup"><span data-stu-id="87639-168">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="87639-169">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="87639-169">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|<span data-ttu-id="87639-170">定義之安全性功能[ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="87639-170">Defines the security capabilities for the [\<netHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md).</span></span>|  
   
-## 範例  
- 下列範例示範透過基本繫結來使用 SSL 傳輸安全性。  根據預設，基本繫結支援 HTTP 通訊。  
+## <a name="example"></a><span data-ttu-id="87639-171">範例</span><span class="sxs-lookup"><span data-stu-id="87639-171">Example</span></span>  
+ <span data-ttu-id="87639-172">下列範例示範透過基本繫結來使用 SSL 傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="87639-172">The following example demonstrates the use of SSL transport security with the basic binding.</span></span> <span data-ttu-id="87639-173">根據預設，基本繫結支援 HTTP 通訊。</span><span class="sxs-lookup"><span data-stu-id="87639-173">By default, the basic binding supports HTTP communication.</span></span>  
   
-```  
+```xml
 <system.serviceModel>  
-   <services>  
-      <service   
-          type="Microsoft.ServiceModel.Samples.CalculatorService"  
-          behaviorConfiguration="CalculatorServiceBehavior">  
-         <endpoint address=""  
-               binding="netHttpBinding"  
-               bindingConfiguration="Binding1"   
-               contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-      </service>  
-   </services>  
-    <bindings>  
-        <netHttpBinding>  
-        <!-- Configure basicHttpBinding with Transport security -- >  
-        <!-- mode and clientCredentialType set to None.-->  
-           <binding name="Binding1">  
-               <security mode="Transport">  
-                   <transport clientCredentialType="None"  
-                              proxyCredentialType="None">  
-                       <extendedProtectionPolicy  
-                          policyEnforcement="WhenSupported"  
-                          protectionScenario="TransportSelected">  
-                    <customServiceNames></customServiceNames>  
-                       </extendedProtectionPolicy>  
-               </security>  
-           </binding>  
-        </netHttpBinding>  
-    </bindings>  
+  <services>  
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"  
+             behaviorConfiguration="CalculatorServiceBehavior">  
+      <endpoint address=""  
+                binding="netHttpBinding"  
+                bindingConfiguration="Binding1"   
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+    </service>  
+  </services>  
+  <bindings>  
+    <netHttpBinding>  
+      <!-- Configure basicHttpBinding with Transport security -- >  
+      <!-- mode and clientCredentialType set to None.-->  
+      <binding name="Binding1">  
+        <security mode="Transport">  
+          <transport clientCredentialType="None"  
+                     proxyCredentialType="None">  
+            <extendedProtectionPolicy policyEnforcement="WhenSupported"  
+                                      protectionScenario="TransportSelected">  
+              <customServiceNames></customServiceNames>  
+            </extendedProtectionPolicy>
+          </transport> 
+        </security>  
+      </binding>  
+    </netHttpBinding>  
+  </bindings>  
 </system.serviceModel>  
 ```  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.NetHttpSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.NetHttpSecurity.Transport%2A>   
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>   
- <xref:System.ServiceModel.HttpTransportSecurity>   
- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-tw/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<繫結\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="87639-174">另請參閱</span><span class="sxs-lookup"><span data-stu-id="87639-174">See Also</span></span>  
+ <span data-ttu-id="87639-175"><xref:System.ServiceModel.BasicHttpSecurityMode.Transport> <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement></span><span class="sxs-lookup"><span data-stu-id="87639-175"><xref:System.ServiceModel.BasicHttpSecurityMode.Transport> <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement></span></span>  
+ <xref:System.ServiceModel.HttpTransportSecurity>  
+ [<span data-ttu-id="87639-176">保護服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="87639-176">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="87639-177">繫結</span><span class="sxs-lookup"><span data-stu-id="87639-177">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="87639-178">設定系統提供繫結</span><span class="sxs-lookup"><span data-stu-id="87639-178">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="87639-179">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="87639-179">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="87639-180">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="87639-180">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

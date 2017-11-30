@@ -1,1 +1,1 @@
-Microsoft Visual Basic 6.0
+<span data-ttu-id="cba0b-101">Microsoft Visual Basic 6.0</span><span class="sxs-lookup"><span data-stu-id="cba0b-101">Microsoft Visual Basic 6.0</span></span>

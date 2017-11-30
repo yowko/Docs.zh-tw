@@ -1,16 +1,13 @@
 ---
-title: "類型關聯性的查詢作業 (Visual Basic) |Microsoft 文件"
+title: "查詢作業中的類型關聯性 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
 - type information inferred [LINQ in Visual Basic]
@@ -21,99 +18,118 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: 34
-author: stevehoag
-ms.author: shoag
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a966b69feca7a7021cafbccb7971913ea781c479
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "34"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="type-relationships-in-query-operations-visual-basic"></a>查詢作業中的類型關聯性 (Visual Basic)
-使用變數[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]查詢作業強型別，而且必須彼此相容。 強型別會使用資料來源、 查詢本身，以及執行查詢。 下圖識別用來描述[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查詢。 如需查詢的組件的詳細資訊，請參閱[基本查詢作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
+# <a name="type-relationships-in-query-operations-visual-basic"></a><span data-ttu-id="e5875-102">查詢作業中的類型關聯性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5875-102">Type Relationships in Query Operations (Visual Basic)</span></span>
+<span data-ttu-id="e5875-103">在中使用變數[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢作業強型別，而且必須為彼此相容。</span><span class="sxs-lookup"><span data-stu-id="e5875-103">Variables used in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operations are strongly typed and must be compatible with each other.</span></span> <span data-ttu-id="e5875-104">強型別會使用資料來源、 查詢本身，以及執行查詢。</span><span class="sxs-lookup"><span data-stu-id="e5875-104">Strong typing is used in the data source, in the query itself, and in the query execution.</span></span> <span data-ttu-id="e5875-105">如下圖所識別的詞彙用於描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢。</span><span class="sxs-lookup"><span data-stu-id="e5875-105">The following illustration identifies terms used to describe a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.</span></span> <span data-ttu-id="e5875-106">如需查詢的組件的詳細資訊，請參閱[基本查詢作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="e5875-106">For more information about the parts of a query, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).</span></span>  
   
- ![反白顯示項目的虛擬程式碼查詢。](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
-LINQ 查詢中的部分  
+ <span data-ttu-id="e5875-107">![虛擬程式碼查詢反白顯示的項目。] (../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")</span><span class="sxs-lookup"><span data-stu-id="e5875-107">![Pseudocode query with elements highlighted.](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")</span></span>  
+<span data-ttu-id="e5875-108">LINQ 查詢的組件</span><span class="sxs-lookup"><span data-stu-id="e5875-108">Parts of a LINQ query</span></span>  
   
- 在查詢中的範圍變數的型別必須與資料來源中的項目型別相容。 查詢變數的型別必須是相容的序列項目中定義`Select`子句。 最後，序列項目的型別也必須與使用中的迴圈控制變數的型別相容`For Each`執行查詢的陳述式。 這個強型別，可協助在編譯時期型別錯誤的識別碼。  
+ <span data-ttu-id="e5875-109">在查詢中範圍變數的類型必須是相容的資料來源中的項目類型。</span><span class="sxs-lookup"><span data-stu-id="e5875-109">The type of the range variable in the query must be compatible with the type of the elements in the data source.</span></span> <span data-ttu-id="e5875-110">查詢變數的型別必須與所定義的序列項目相容`Select`子句。</span><span class="sxs-lookup"><span data-stu-id="e5875-110">The type of the query variable must be compatible with the sequence element defined in the `Select` clause.</span></span> <span data-ttu-id="e5875-111">最後，序列項目的型別也必須相容於迴圈控制變數中所使用的型別`For Each`執行查詢的陳述式。</span><span class="sxs-lookup"><span data-stu-id="e5875-111">Finally, the type of the sequence elements also must be compatible with the type of the loop control variable that is used in the `For Each` statement that executes the query.</span></span> <span data-ttu-id="e5875-112">這個強型別，可協助識別在編譯時期型別錯誤。</span><span class="sxs-lookup"><span data-stu-id="e5875-112">This strong typing facilitates identification of type errors at compile time.</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]可以輸入強式方便實作區域型別推斷，也就是*隱含型別*。 在上述範例中，使用功能，和您會看見它用於整個[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]範例與文件。 在 Visual Basic 中區域型別推斷就會經由直接`Dim`陳述式，而不需要`As`子句。 在下列範例中，`city`強型別為字串。  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="e5875-113">可以輸入強式方便藉由實作區域類型推斷，也稱為*隱含型別*。</span><span class="sxs-lookup"><span data-stu-id="e5875-113"> makes strong typing convenient by implementing local type inference, also known as *implicit typing*.</span></span> <span data-ttu-id="e5875-114">在上述範例中，使用功能，您會看到它用於整個[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]範例與文件。</span><span class="sxs-lookup"><span data-stu-id="e5875-114">That feature is used in the previous example, and you will see it used throughout the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and documentation.</span></span> <span data-ttu-id="e5875-115">在 Visual Basic 中，區域類型推斷只使用達成`Dim`陳述式不含`As`子句。</span><span class="sxs-lookup"><span data-stu-id="e5875-115">In Visual Basic, local type inference is accomplished simply by using a `Dim` statement without an `As` clause.</span></span> <span data-ttu-id="e5875-116">在下列範例中，`city`強型別為字串。</span><span class="sxs-lookup"><span data-stu-id="e5875-116">In the following example, `city` is strongly typed as a string.</span></span>  
   
- [!code-vb[VbLINQTypeRels #&1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
 > [!NOTE]
->  區域型別推斷運作時，才`Option Infer`設為`On`。 如需詳細資訊，請參閱[Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
+>  <span data-ttu-id="e5875-117">區域類型推斷運作時，才`Option Infer`設`On`。</span><span class="sxs-lookup"><span data-stu-id="e5875-117">Local type inference works only when `Option Infer` is set to `On`.</span></span> <span data-ttu-id="e5875-118">如需詳細資訊，請參閱[Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="e5875-118">For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).</span></span>  
   
- 不過，即使您在查詢中使用區域型別推斷，相同的型別關聯性會出現在資料來源中的變數時，查詢變數和查詢執行迴圈。 對於有基本了解這些型別關聯性的當您撰寫[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查詢或使用範例和文件中的程式碼範例。  
+ <span data-ttu-id="e5875-119">不過，即使您在查詢中使用區域類型推斷，相同的類型關聯性會出現在資料來源中的變數、 查詢變數和查詢執行迴圈。</span><span class="sxs-lookup"><span data-stu-id="e5875-119">However, even if you use local type inference in a query, the same type relationships are present among the variables in the data source, the query variable, and the query execution loop.</span></span> <span data-ttu-id="e5875-120">對於有這些類型關聯性的基本了解，當您撰寫[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢或使用範例和文件中的程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="e5875-120">It is useful to have a basic understanding of these type relationships when you are writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, or working with the samples and code examples in the documentation.</span></span>  
   
- 若要指定資料來源傳回的型別不符的範圍變數的明確型別。 您可以使用指定的範圍變數的型別`As`子句。 不過，這會導致錯誤如果轉換[縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)和`Option Strict`設為`On`。 因此，我們建議您從資料來源擷取的值上執行轉換。 您可以將值從資料來源明確範圍變數型別使用<xref:System.Linq.Enumerable.Cast%2A>方法。</xref:System.Linq.Enumerable.Cast%2A> 您也可以轉換中所選取的值`Select`範圍變數的型別不同的明確型別子句。 這些點是以下列程式碼所示。  
+ <span data-ttu-id="e5875-121">若要指定明確的類型不符合資料來源傳回的型別範圍變數。</span><span class="sxs-lookup"><span data-stu-id="e5875-121">You may need to specify an explicit type for a range variable that does not match the type returned from the data source.</span></span> <span data-ttu-id="e5875-122">您可以使用，以指定範圍變數的型別`As`子句。</span><span class="sxs-lookup"><span data-stu-id="e5875-122">You can specify the type of the range variable by using an `As` clause.</span></span> <span data-ttu-id="e5875-123">不過，這會導致錯誤如果轉換[縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)和`Option Strict`設`On`。</span><span class="sxs-lookup"><span data-stu-id="e5875-123">However, this results in an error if the conversion is a [narrowing conversion](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and `Option Strict` is set to `On`.</span></span> <span data-ttu-id="e5875-124">因此，我們建議您執行轉換，從資料來源擷取的值。</span><span class="sxs-lookup"><span data-stu-id="e5875-124">Therefore, we recommend that you perform the conversion on the values retrieved from the data source.</span></span> <span data-ttu-id="e5875-125">您可以將值從資料來源明確範圍變數型別使用<xref:System.Linq.Enumerable.Cast%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e5875-125">You can convert the values from the data source to the explicit range variable type by using the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="e5875-126">您也可以轉型的值中選取`Select`子句來明確的類型不同的範圍變數的型別。</span><span class="sxs-lookup"><span data-stu-id="e5875-126">You can also cast the values selected in the `Select` clause to an explicit type that is different from the type of the range variable.</span></span> <span data-ttu-id="e5875-127">這些點是以下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="e5875-127">These points are illustrated in the following code.</span></span>  
   
- [!code-vb[VbLINQTypeRels #&4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
   
-## <a name="queries-that-return-entire-elements-of-the-source-data"></a>傳回來源資料的整個項目查詢  
- 下列範例所示[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查詢傳回的資料來源選取的項目序列的作業。 來源`names`，包含字串、 陣列和查詢輸出是序列，其中包含以字母 M 開頭的字串。  
+## <a name="queries-that-return-entire-elements-of-the-source-data"></a><span data-ttu-id="e5875-128">傳回來源資料的整個項目查詢</span><span class="sxs-lookup"><span data-stu-id="e5875-128">Queries That Return Entire Elements of the Source Data</span></span>  
+ <span data-ttu-id="e5875-129">下列範例所示[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢傳回的資料來源選取的項目序列的作業。</span><span class="sxs-lookup"><span data-stu-id="e5875-129">The following example shows a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operation that returns a sequence of elements selected from the source data.</span></span> <span data-ttu-id="e5875-130">來源`names`，包含陣列的字串，並查詢輸出會包含字串字母 M 開頭的順序。</span><span class="sxs-lookup"><span data-stu-id="e5875-130">The source, `names`, contains an array of strings, and the query output is a sequence containing strings that start with the letter M.</span></span>  
   
- [!code-vb[VbLINQTypeRels #&2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
   
- 這相當於下列程式碼，但是比較簡短也更容易撰寫。 在查詢中的區域類型推斷依賴是 Visual Basic 中慣用的樣式。  
+ <span data-ttu-id="e5875-131">這相當於下列程式碼，但更短也更容易撰寫。</span><span class="sxs-lookup"><span data-stu-id="e5875-131">This is equivalent to the following code, but is much shorter and easier to write.</span></span> <span data-ttu-id="e5875-132">在查詢中的區域類型推斷，因而會是在 Visual Basic 中的慣用的樣式。</span><span class="sxs-lookup"><span data-stu-id="e5875-132">Reliance on local type inference in queries is the preferred style in Visual Basic.</span></span>  
   
- [!code-vb[VbLINQTypeRels #&3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
   
- 下列關聯性存在於這兩個先前的程式碼範例中，是否隱含或明確決定型別。  
+ <span data-ttu-id="e5875-133">下列關聯性存在於這兩個先前的程式碼範例中，類型在隱含或明確地決定是否。</span><span class="sxs-lookup"><span data-stu-id="e5875-133">The following relationships exist in both of the previous code examples, whether the types are determined implicitly or explicitly.</span></span>  
   
-1.  資料來源中的項目類型`names`，是範圍變數的型別`name`，在查詢中。  
+1.  <span data-ttu-id="e5875-134">資料來源中的項目類型`names`，是的範圍變數的型別`name`，在查詢中。</span><span class="sxs-lookup"><span data-stu-id="e5875-134">The type of the elements in the data source, `names`, is the type of the range variable, `name`, in the query.</span></span>  
   
-2.  已選取的物件型別`name`，查詢變數的型別，決定`mNames`。 這裡`name`是一個字串，因此查詢變數是在 Visual Basic 的 IEnumerable (Of String)。  
+2.  <span data-ttu-id="e5875-135">已選取的物件型別`name`，查詢變數的類型會決定`mNames`。</span><span class="sxs-lookup"><span data-stu-id="e5875-135">The type of the object that is selected, `name`, determines the type of the query variable, `mNames`.</span></span> <span data-ttu-id="e5875-136">這裡`name`是一個字串，因此查詢變數是在 Visual Basic 的 IEnumerable (Of String)。</span><span class="sxs-lookup"><span data-stu-id="e5875-136">Here `name` is a string, so the query variable is IEnumerable(Of String) in Visual Basic.</span></span>  
   
-3.  中定義的查詢`mNames`中執行`For Each`迴圈。 迴圈會逐一執行查詢的結果。 因為`mNames`，當它執行時，會傳回字串，迴圈反覆運算變數序列`nm`，也是一個字串。  
+3.  <span data-ttu-id="e5875-137">中定義的查詢`mNames`中執行`For Each`迴圈。</span><span class="sxs-lookup"><span data-stu-id="e5875-137">The query defined in `mNames` is executed in the `For Each` loop.</span></span> <span data-ttu-id="e5875-138">迴圈會逐一執行查詢的結果。</span><span class="sxs-lookup"><span data-stu-id="e5875-138">The loop iterates over the result of executing the query.</span></span> <span data-ttu-id="e5875-139">因為`mNames`、 當它執行時，會傳回字串，迴圈反覆運算變數序列`nm`，也是字串。</span><span class="sxs-lookup"><span data-stu-id="e5875-139">Because `mNames`, when it is executed, will return a sequence of strings, the loop iteration variable, `nm`, also is a string.</span></span>  
   
-## <a name="queries-that-return-one-field-from-selected-elements"></a>從選取的項目傳回一個欄位的查詢  
- 下列範例所示[!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)]查詢傳回的序列則包含每個項目的選取自資料來源只有一個部分的作業。 查詢需要耗費大量`Customer`做為資料來源物件，並只專案`Name`結果中的屬性。 因為客戶名稱是字串，此查詢會產生一系列字串做為輸出。  
+## <a name="queries-that-return-one-field-from-selected-elements"></a><span data-ttu-id="e5875-140">從選取的項目傳回一個欄位的查詢</span><span class="sxs-lookup"><span data-stu-id="e5875-140">Queries That Return One Field from Selected Elements</span></span>  
+ <span data-ttu-id="e5875-141">下列範例所示[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]查詢傳回序列，包含選取自資料來源的每個項目只能有一個部分的作業。</span><span class="sxs-lookup"><span data-stu-id="e5875-141">The following example shows a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] query operation that returns a sequence containing only one part of each element selected from the data source.</span></span> <span data-ttu-id="e5875-142">查詢使用的集合`Customer`物件當做它的資料來源，並只投射`Name`結果中的屬性。</span><span class="sxs-lookup"><span data-stu-id="e5875-142">The query takes a collection of `Customer` objects as its data source and projects only the `Name` property in the result.</span></span> <span data-ttu-id="e5875-143">因為客戶名稱是字串，此查詢會產生一連串的字串做為輸出。</span><span class="sxs-lookup"><span data-stu-id="e5875-143">Because the customer name is a string, the query produces a sequence of strings as output.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- 變數之間的關聯性就像是在更簡單的範例。  
+```vb  
+' Method GetTable returns a table of Customer objects.  
+Dim customers = db.GetTable(Of Customer)()  
+Dim custNames = From cust In customers   
+                Where cust.City = "London"   
+                Select cust.Name  
   
-1.  資料來源中的項目類型`customers`，是範圍變數的型別`cust`，在查詢中。 在此範例中，型別是`Customer`。  
+For Each custName In custNames  
+    Console.WriteLine(custName)  
+Next  
+```  
   
-2.  `Select`陳述式會傳回`Name`每個屬性`Customer`而不是整個物件的物件。 因為`Name`為字串時，查詢變數`custNames`，會一次是 IEnumerable (Of String)，不`Customer`。  
+ <span data-ttu-id="e5875-144">就像是較簡單的範例中的變數之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="e5875-144">The relationships between variables are like those in the simpler example.</span></span>  
   
-3.  因為`custNames`代表序列的字串，`For Each`迴圈的反覆運算變數`custName`，必須為字串。  
+1.  <span data-ttu-id="e5875-145">資料來源中的項目類型`customers`，是的範圍變數的型別`cust`，在查詢中。</span><span class="sxs-lookup"><span data-stu-id="e5875-145">The type of the elements in the data source, `customers`, is the type of the range variable, `cust`, in the query.</span></span> <span data-ttu-id="e5875-146">在此範例中，類型`Customer`。</span><span class="sxs-lookup"><span data-stu-id="e5875-146">In this example, that type is `Customer`.</span></span>  
   
- 區域型別推斷，如果沒有上一個範例是較為撰寫，以及了解，如下列範例所示。  
+2.  <span data-ttu-id="e5875-147">`Select`陳述式會傳回`Name`每個屬性`Customer`而不是整個物件的物件。</span><span class="sxs-lookup"><span data-stu-id="e5875-147">The `Select` statement returns the `Name` property of each `Customer` object instead of the whole object.</span></span> <span data-ttu-id="e5875-148">因為`Name`為字串時，查詢變數`custNames`，一次會 IEnumerable (Of String) 不屬於`Customer`。</span><span class="sxs-lookup"><span data-stu-id="e5875-148">Because `Name` is a string, the query variable, `custNames`, will again be IEnumerable(Of String), not of `Customer`.</span></span>  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-## <a name="queries-that-require-anonymous-types"></a>需要匿名型別的查詢  
- 下列範例顯示更複雜的情況。 在上述範例中，很不方便明確地指定所有變數的型別。 在此範例中，就不可能。 而非選取整個`Customer`從資料來源或從每個元素的單一欄位的項目`Select`子句在此查詢會傳回兩個屬性的原始`Customer`物件︰`Name`和`City`。 為了回應`Select`子句，編譯器會定義匿名型別，其中包含這兩個屬性。 執行結果`nameCityQuery`中`For Each`迴圈是新的匿名型別的執行個體的集合。 因為匿名型別沒有可用的名稱，您無法指定的型別`nameCityQuery`或`custInfo`明確。 也就是匿名型別，有了您要用來取代任何型別名稱`String`中`IEnumerable(Of String)`。 如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+3.  <span data-ttu-id="e5875-149">因為`custNames`代表序列的字串，`For Each`迴圈的反覆運算變數， `custName`，必須是字串。</span><span class="sxs-lookup"><span data-stu-id="e5875-149">Because `custNames` represents a sequence of strings, the `For Each` loop's iteration variable, `custName`, must be a string.</span></span>  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- 雖然您不可以指定前一個範例中的所有變數的型別，關聯性維持不變。  
+ <span data-ttu-id="e5875-150">區域類型推斷，如果沒有上一個範例是比較麻煩，若要撰寫，而且了解，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="e5875-150">Without local type inference, the previous example would be more cumbersome to write and to understand, as the following example shows.</span></span>  
   
-1.  資料來源中的項目類型是一次在查詢中的範圍變數的型別。 在此範例中，`cust`的執行個體`Customer`。  
+```vb  
+' Method GetTable returns a table of Customer objects.  
+ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)()  
+ Dim custNames As IEnumerable(Of String) =  
+     From cust As Customer In customers   
+     Where cust.City = "London"   
+     Select cust.Name  
   
-2.  因為`Select`陳述式會產生匿名型別，查詢變數`nameCityQuery`，必須為匿名型別隱含型別。 匿名型別沒有可用的名稱，因此無法明確地指定。  
+ For Each custName As String In custNames  
+     Console.WriteLine(custName)  
+ Next  
+```  
   
-3.  在反覆項目變數的型別`For Each`迴圈是在步驟 2 中建立的匿名型別。 因為該型別沒有可用的名稱，必須以隱含方式決定迴圈反覆項目變數的型別。  
+## <a name="queries-that-require-anonymous-types"></a><span data-ttu-id="e5875-151">需要匿名類型的查詢</span><span class="sxs-lookup"><span data-stu-id="e5875-151">Queries That Require Anonymous Types</span></span>  
+ <span data-ttu-id="e5875-152">下列範例會示範更複雜的情況。</span><span class="sxs-lookup"><span data-stu-id="e5875-152">The following example shows a more complex situation.</span></span> <span data-ttu-id="e5875-153">在上述範例中，它不方便明確指定類型的所有變數。</span><span class="sxs-lookup"><span data-stu-id="e5875-153">In the previous example, it was inconvenient to specify types for all the variables explicitly.</span></span> <span data-ttu-id="e5875-154">在此範例中，就不可能。</span><span class="sxs-lookup"><span data-stu-id="e5875-154">In this example, it is impossible.</span></span> <span data-ttu-id="e5875-155">而非選取整個`Customer`項目從資料來源或從每個元素的單一欄位`Select`子句在此查詢會傳回兩個屬性的原始`Customer`物件：`Name`和`City`。</span><span class="sxs-lookup"><span data-stu-id="e5875-155">Instead of selecting entire `Customer` elements from the data source, or a single field from each element, the `Select` clause in this query returns two properties of the original `Customer` object: `Name` and `City`.</span></span> <span data-ttu-id="e5875-156">以回應`Select`子句，編譯器會定義包含這兩個屬性的匿名型別。</span><span class="sxs-lookup"><span data-stu-id="e5875-156">In response to the `Select` clause, the compiler defines an anonymous type that contains those two properties.</span></span> <span data-ttu-id="e5875-157">執行結果`nameCityQuery`中`For Each`迴圈是新的匿名型別的執行個體的集合。</span><span class="sxs-lookup"><span data-stu-id="e5875-157">The result of executing `nameCityQuery` in the `For Each` loop is a collection of instances of the new anonymous type.</span></span> <span data-ttu-id="e5875-158">因為匿名型別沒有可用的名稱，您無法指定的型別`nameCityQuery`或`custInfo`明確。</span><span class="sxs-lookup"><span data-stu-id="e5875-158">Because the anonymous type has no usable name, you cannot specify the type of `nameCityQuery` or `custInfo` explicitly.</span></span> <span data-ttu-id="e5875-159">也就是以匿名型別，您有沒有型別名稱，可使用取代`String`中`IEnumerable(Of String)`。</span><span class="sxs-lookup"><span data-stu-id="e5875-159">That is, with an anonymous type, you have no type name to use in place of `String` in `IEnumerable(Of String)`.</span></span> <span data-ttu-id="e5875-160">如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="e5875-160">For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [在 Visual Basic 中撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [在 Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [查詢](../../../../visual-basic/language-reference/queries/queries.md)
+```vb  
+' Method GetTable returns a table of Customer objects.  
+Dim customers = db.GetTable(Of Customer)()  
+Dim nameCityQuery = From cust In customers   
+                    Where cust.City = "London"   
+                    Select cust.Name, cust.City  
+  
+For Each custInfo In nameCityQuery  
+    Console.WriteLine(custInfo.Name)  
+Next  
+```  
+  
+ <span data-ttu-id="e5875-161">雖然您不可以指定在上述範例中的所有變數的型別，關聯性維持不變。</span><span class="sxs-lookup"><span data-stu-id="e5875-161">Although it is not possible to specify types for all the variables in the previous example, the relationships remain the same.</span></span>  
+  
+1.  <span data-ttu-id="e5875-162">資料來源中的項目類型是一次在查詢中範圍變數的類型。</span><span class="sxs-lookup"><span data-stu-id="e5875-162">The type of the elements in the data source is again the type of the range variable in the query.</span></span> <span data-ttu-id="e5875-163">在此範例中，`cust`的執行個體`Customer`。</span><span class="sxs-lookup"><span data-stu-id="e5875-163">In this example, `cust` is an instance of `Customer`.</span></span>  
+  
+2.  <span data-ttu-id="e5875-164">因為`Select`陳述式會產生匿名型別，查詢變數`nameCityQuery`，必須為匿名型別隱含型別。</span><span class="sxs-lookup"><span data-stu-id="e5875-164">Because the `Select` statement produces an anonymous type, the query variable, `nameCityQuery`, must be implicitly typed as an anonymous type.</span></span> <span data-ttu-id="e5875-165">匿名型別沒有可用的名稱，因此無法明確地指定。</span><span class="sxs-lookup"><span data-stu-id="e5875-165">An anonymous type has no usable name, and therefore cannot be specified explicitly.</span></span>  
+  
+3.  <span data-ttu-id="e5875-166">在反覆項目變數的型別`For Each`迴圈是步驟 2 中建立匿名型別。</span><span class="sxs-lookup"><span data-stu-id="e5875-166">The type of the iteration variable in the `For Each` loop is the anonymous type created in step 2.</span></span> <span data-ttu-id="e5875-167">由於類型具有沒有可用的名稱，必須以隱含方式決定迴圈的反覆項目變數的型別。</span><span class="sxs-lookup"><span data-stu-id="e5875-167">Because the type has no usable name, the type of the loop iteration variable must be determined implicitly.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="e5875-168">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e5875-168">See Also</span></span>  
+ [<span data-ttu-id="e5875-169">使用 Visual Basic 撰寫 LINQ 入門</span><span class="sxs-lookup"><span data-stu-id="e5875-169">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="e5875-170">匿名類型</span><span class="sxs-lookup"><span data-stu-id="e5875-170">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [<span data-ttu-id="e5875-171">區域類型推斷</span><span class="sxs-lookup"><span data-stu-id="e5875-171">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="e5875-172">Visual Basic 中的 LINQ 簡介</span><span class="sxs-lookup"><span data-stu-id="e5875-172">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="e5875-173">LINQ</span><span class="sxs-lookup"><span data-stu-id="e5875-173">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="e5875-174">查詢</span><span class="sxs-lookup"><span data-stu-id="e5875-174">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)

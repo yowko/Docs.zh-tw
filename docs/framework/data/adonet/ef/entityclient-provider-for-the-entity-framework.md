@@ -1,80 +1,79 @@
 ---
-title: "Entity Framework 的 EntityClient 提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Entity Framework 的 EntityClient 提供者"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: eb6d8d4db676502b8c363a7d45407384333b3f22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Entity Framework 的 EntityClient 提供者
-EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型中所描述之資料的資料提供者。  如需關於概念模型的詳細資訊，請參閱[模型化及對應檔案](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。  EntityClient 會使用其他 .NET Framework 資料提供者來存取資料來源。  例如，EntityClient 會在存取 SQL Server 資料庫時使用 .NET Framework Data Provider for SQL Server \(SqlClient\)。  如需有關 SqlClient 提供者的詳細資訊，請參閱 [Entity Framework 函式的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。  EntityClient 提供者是在 <xref:System.Data.EntityClient> 命名空間 \(Namespace\) 中實作的。  
+# <a name="entityclient-provider-for-the-entity-framework"></a><span data-ttu-id="47bb9-102">Entity Framework 的 EntityClient 提供者</span><span class="sxs-lookup"><span data-stu-id="47bb9-102">EntityClient Provider for the Entity Framework</span></span>
+<span data-ttu-id="47bb9-103">EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型中所描述之資料的資料提供者。</span><span class="sxs-lookup"><span data-stu-id="47bb9-103">The EntityClient provider is a data provider used by Entity Framework applications to access data described in a conceptual model.</span></span> <span data-ttu-id="47bb9-104">概念模型的相關資訊，請參閱[模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="47bb9-104">For information about conceptual models, see [Modeling and Mapping](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).</span></span> <span data-ttu-id="47bb9-105">EntityClient 會使用其他 .NET Framework 資料提供者來存取資料來源。</span><span class="sxs-lookup"><span data-stu-id="47bb9-105">EntityClient uses other .NET Framework data providers to access the data source.</span></span> <span data-ttu-id="47bb9-106">例如，EntityClient 會在存取 SQL Server 資料庫時使用 .NET Framework Data Provider for SQL Server (SqlClient)。</span><span class="sxs-lookup"><span data-stu-id="47bb9-106">For example, EntityClient uses the .NET Framework Data Provider for SQL Server (SqlClient) when accessing a SQL Server database.</span></span> <span data-ttu-id="47bb9-107">如需 SqlClient 提供者資訊，請參閱[適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。</span><span class="sxs-lookup"><span data-stu-id="47bb9-107">For information about the SqlClient provider, see [SqlClient for the Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md).</span></span> <span data-ttu-id="47bb9-108">EntityClient 提供者是在 <xref:System.Data.EntityClient> 命名空間 (Namespace) 中實作的。</span><span class="sxs-lookup"><span data-stu-id="47bb9-108">The EntityClient provider is implemented in the <xref:System.Data.EntityClient> namespace.</span></span>  
   
-## 管理連接  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會提供 <xref:System.Data.EntityClient.EntityConnection> 給基礎資料提供者和關聯式資料庫，利用這種方式建置於儲存體專用 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 資料提供者之上。  若要建構 <xref:System.Data.EntityClient.EntityConnection> 物件，您必須參考包含必要模型與對應的中繼資料集，以及儲存體專用資料提供者和連接字串。  建構好 <xref:System.Data.EntityClient.EntityConnection> 之後，便可透過從概念模型產生的類別存取實體。  
+## <a name="managing-connections"></a><span data-ttu-id="47bb9-109">管理連接</span><span class="sxs-lookup"><span data-stu-id="47bb9-109">Managing Connections</span></span>  
+ <span data-ttu-id="47bb9-110">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是建置基礎儲存區特定[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]藉由提供資料提供者<xref:System.Data.EntityClient.EntityConnection>到基礎資料提供者和關聯式資料庫。</span><span class="sxs-lookup"><span data-stu-id="47bb9-110">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] builds on top of storage-specific [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] data providers by providing an <xref:System.Data.EntityClient.EntityConnection> to an underlying data provider and relational database.</span></span> <span data-ttu-id="47bb9-111">若要建構<xref:System.Data.EntityClient.EntityConnection>物件，您必須參考一組包含必要的模型和對應，以及儲存體專用資料提供者名稱和連接字串的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="47bb9-111">To construct an <xref:System.Data.EntityClient.EntityConnection> object, you have to reference a set of metadata that contains the necessary models and mapping, and also a storage-specific data provider name and connection string.</span></span> <span data-ttu-id="47bb9-112">之後<xref:System.Data.EntityClient.EntityConnection>為就地，實體可以存取透過從概念模型產生的類別。</span><span class="sxs-lookup"><span data-stu-id="47bb9-112">After the <xref:System.Data.EntityClient.EntityConnection> is in place, entities can be accessed through the classes generated from the conceptual model.</span></span>  
   
- 您可以在 app.config 檔案中指定連接字串。  
+ <span data-ttu-id="47bb9-113">您可以在 app.config 檔案中指定連接字串。</span><span class="sxs-lookup"><span data-stu-id="47bb9-113">You can specify a connection string in app.config file.</span></span>  
   
- <xref:System.Data.EntityClient> 也包含 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別。  這個類別可讓開發人員使用此類別的屬性和方法，以程式設計方式建立語法正確的連接字串，以及剖析和重建現有的連接字串。  如需詳細資訊，請參閱[HOW TO：建立 EntityConnection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
+ <span data-ttu-id="47bb9-114"><xref:System.Data.EntityClient> 也包含 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別。</span><span class="sxs-lookup"><span data-stu-id="47bb9-114">The <xref:System.Data.EntityClient> also includes the <xref:System.Data.EntityClient.EntityConnectionStringBuilder> class.</span></span> <span data-ttu-id="47bb9-115">這個類別可讓開發人員使用此類別的屬性和方法，以程式設計方式建立語法正確的連接字串，以及剖析和重建現有的連接字串。</span><span class="sxs-lookup"><span data-stu-id="47bb9-115">This class enables developers to programmatically create syntactically correct connection strings, and parse and rebuild existing connection strings, by using properties and methods of the class.</span></span> <span data-ttu-id="47bb9-116">如需詳細資訊，請參閱[如何： 建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。</span><span class="sxs-lookup"><span data-stu-id="47bb9-116">For more information, see [How to: Build an EntityConnection Connection String](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).</span></span>  
   
-## 建立查詢  
- [!INCLUDE[esql](../../../../../includes/esql-md.md)] 語言是與儲存體無關的 SQL Dialect，可直接配合概念實體結構描述運作，並支援 Entity Data Model 概念 \(如繼承與關聯性\)。  <xref:System.Data.EntityClient.EntityCommand> 類別是用來針對實體模型執行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令。  建構 <xref:System.Data.EntityClient.EntityCommand> 物件時，您可以指定預存程序名稱或查詢文字。  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會與儲存區特定的資料提供者一起運作，將泛型 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 轉譯成儲存區特定的查詢。  如需有關撰寫 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢的詳細資訊，請參閱 [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)。  
+## <a name="creating-queries"></a><span data-ttu-id="47bb9-117">建立查詢</span><span class="sxs-lookup"><span data-stu-id="47bb9-117">Creating Queries</span></span>  
+ <span data-ttu-id="47bb9-118">[!INCLUDE[esql](../../../../../includes/esql-md.md)]語言是儲存體無關的 SQL dialect，直接搭配概念實體結構描述運作，且支援 Entity Data Model 概念，例如繼承和關聯性。</span><span class="sxs-lookup"><span data-stu-id="47bb9-118">The [!INCLUDE[esql](../../../../../includes/esql-md.md)] language is a storage-independent dialect of SQL that works directly with conceptual entity schemas and supports Entity Data Model concepts such as inheritance and relationships.</span></span> <span data-ttu-id="47bb9-119"><xref:System.Data.EntityClient.EntityCommand>類別用來執行[!INCLUDE[esql](../../../../../includes/esql-md.md)]命令針對實體模型。</span><span class="sxs-lookup"><span data-stu-id="47bb9-119">The <xref:System.Data.EntityClient.EntityCommand> class is used to execute an [!INCLUDE[esql](../../../../../includes/esql-md.md)] command against an entity model.</span></span> <span data-ttu-id="47bb9-120">建構 <xref:System.Data.EntityClient.EntityCommand> 物件時，您可以指定預存程序名稱或查詢文字。</span><span class="sxs-lookup"><span data-stu-id="47bb9-120">When you construct <xref:System.Data.EntityClient.EntityCommand> objects, you can specify a stored procedure name or a query text.</span></span> <span data-ttu-id="47bb9-121">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會與儲存區特定的資料提供者一起運作，將泛型 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 轉譯成儲存區特定的查詢。</span><span class="sxs-lookup"><span data-stu-id="47bb9-121">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] works with storage-specific data providers to translate generic [!INCLUDE[esql](../../../../../includes/esql-md.md)] into storage-specific queries.</span></span> <span data-ttu-id="47bb9-122">如需有關撰寫[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢，請參閱[Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)。</span><span class="sxs-lookup"><span data-stu-id="47bb9-122">For more information about writing [!INCLUDE[esql](../../../../../includes/esql-md.md)] queries, see [Entity SQL Language](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).</span></span>  
   
- 以下範例會建立 <xref:System.Data.EntityClient.EntityCommand> 物件並且將 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢文字指派給它的 <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=fullName> 屬性。  這個 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會從概念模型要求依定價排序的產品。  下列程式碼完全不了解儲存模型的相關資訊。  
+ <span data-ttu-id="47bb9-123">下列範例會建立<xref:System.Data.EntityClient.EntityCommand>物件，並指派[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢文字，以其<xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="47bb9-123">The following example creates an <xref:System.Data.EntityClient.EntityCommand> object and assigns an [!INCLUDE[esql](../../../../../includes/esql-md.md)] query text to its <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="47bb9-124">這[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢要求排序依據標價，從概念模型的產品。</span><span class="sxs-lookup"><span data-stu-id="47bb9-124">This [!INCLUDE[esql](../../../../../includes/esql-md.md)] query requests products ordered by the list price from the conceptual model.</span></span> <span data-ttu-id="47bb9-125">下列程式碼完全不了解儲存模型的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="47bb9-125">The following code has no knowledge of the storage model at all.</span></span>  
   
  `EntityCommand cmd = conn.CreateCommand();`  
   
- `cmd.CommandText = @"` `SELECT VALUE p`  
+ <span data-ttu-id="47bb9-126">`cmd.CommandText = @"` `SELECT VALUE p`</span><span class="sxs-lookup"><span data-stu-id="47bb9-126">`cmd.CommandText = @"` `SELECT VALUE p`</span></span>  
   
  `FROM AdventureWorksEntities.Product AS p`  
   
  `ORDER BY p.ListPrice ";`  
   
-## 執行查詢  
- 執行查詢時，會先剖析查詢然後將它轉換成標準命令樹。  所有後續的查詢處理都是在此命令樹上執行。  命令樹是 <xref:System.Data.EntityClient> 與基礎 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 資料提供者 \(例如 <xref:System.Data.SqlClient>\) 之間的通訊方式。  
+## <a name="executing-queries"></a><span data-ttu-id="47bb9-127">執行查詢</span><span class="sxs-lookup"><span data-stu-id="47bb9-127">Executing Queries</span></span>  
+ <span data-ttu-id="47bb9-128">執行查詢時，會先剖析查詢然後將它轉換成標準命令樹。</span><span class="sxs-lookup"><span data-stu-id="47bb9-128">When a query is executed, it is parsed and converted into a canonical command tree.</span></span> <span data-ttu-id="47bb9-129">所有後續的查詢處理都是在此命令樹上執行。</span><span class="sxs-lookup"><span data-stu-id="47bb9-129">All subsequent processing is performed on the command tree.</span></span> <span data-ttu-id="47bb9-130">命令樹是 <xref:System.Data.EntityClient> 與基礎 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 資料提供者 (例如 <xref:System.Data.SqlClient>) 之間的通訊方式。</span><span class="sxs-lookup"><span data-stu-id="47bb9-130">The command tree is the means of communication between the <xref:System.Data.EntityClient> and the underlying [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] data provider, such as <xref:System.Data.SqlClient>.</span></span>  
   
- <xref:System.Data.EntityClient.EntityDataReader> 會公開針對概念模型執行 <xref:System.Data.EntityClient.EntityCommand> 的結果。  若要執行可傳回 <xref:System.Data.EntityClient.EntityDataReader> 的命令，請呼叫 <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>。  <xref:System.Data.EntityClient.EntityDataReader> 會實作 <xref:System.Data.IExtendedDataRecord> 來描述豐富的結構化結果。  
+ <span data-ttu-id="47bb9-131"><xref:System.Data.EntityClient.EntityDataReader> 會公開針對概念模型執行 <xref:System.Data.EntityClient.EntityCommand> 的結果。</span><span class="sxs-lookup"><span data-stu-id="47bb9-131">The <xref:System.Data.EntityClient.EntityDataReader> exposes the results of executing a <xref:System.Data.EntityClient.EntityCommand> against a conceptual model.</span></span> <span data-ttu-id="47bb9-132">若要執行可傳回 <xref:System.Data.EntityClient.EntityDataReader> 的命令，請呼叫 <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>。</span><span class="sxs-lookup"><span data-stu-id="47bb9-132">To execute the command that returns the <xref:System.Data.EntityClient.EntityDataReader>, call <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.</span></span> <span data-ttu-id="47bb9-133"><xref:System.Data.EntityClient.EntityDataReader> 會實作 <xref:System.Data.IExtendedDataRecord> 來描述豐富的結構化結果。</span><span class="sxs-lookup"><span data-stu-id="47bb9-133">The <xref:System.Data.EntityClient.EntityDataReader> implements <xref:System.Data.IExtendedDataRecord> to describe rich structured results.</span></span>  
   
-## 異動管理  
- Entity Framework 中有兩種使用交易的方式：自動與明確。  自動交易會使用 <xref:System.Transactions> 命名空間，而明確交易會使用 <xref:System.Data.EntityClient.EntityTransaction> 類別。  
+## <a name="managing-transactions"></a><span data-ttu-id="47bb9-134">異動管理</span><span class="sxs-lookup"><span data-stu-id="47bb9-134">Managing Transactions</span></span>  
+ <span data-ttu-id="47bb9-135">Entity Framework 中有兩種使用交易的方式：自動與明確。</span><span class="sxs-lookup"><span data-stu-id="47bb9-135">In the Entity Framework, there are two ways to use transactions: automatic and explicit.</span></span> <span data-ttu-id="47bb9-136">自動交易會使用 <xref:System.Transactions> 命名空間，而明確交易會使用 <xref:System.Data.EntityClient.EntityTransaction> 類別。</span><span class="sxs-lookup"><span data-stu-id="47bb9-136">Automatic transactions use the <xref:System.Transactions> namespace, and explicit transactions use the <xref:System.Data.EntityClient.EntityTransaction> class.</span></span>  
   
- 若要更新透過概念模型公開的資料，請參閱 [How to: Manage Transactions in the Entity Framework](http://msdn.microsoft.com/zh-tw/4a55eb7f-f826-4a48-9df1-aebe2352ebef)。  
+ <span data-ttu-id="47bb9-137">若要更新概念模型中; 透過公開的資料請參閱[如何： 管理 Entity Framework 中的交易](http://msdn.microsoft.com/en-us/4a55eb7f-f826-4a48-9df1-aebe2352ebef)。</span><span class="sxs-lookup"><span data-stu-id="47bb9-137">To update data that is exposed through a conceptual model; see [How to: Manage Transactions in the Entity Framework](http://msdn.microsoft.com/en-us/4a55eb7f-f826-4a48-9df1-aebe2352ebef).</span></span>  
   
-## 本章節內容  
- [HOW TO：建立 EntityConnection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+## <a name="in-this-section"></a><span data-ttu-id="47bb9-138">本章節內容</span><span class="sxs-lookup"><span data-stu-id="47bb9-138">In This Section</span></span>  
+ [<span data-ttu-id="47bb9-139">如何： 建置 Entitycollection 連接字串</span><span class="sxs-lookup"><span data-stu-id="47bb9-139">How to: Build an EntityConnection Connection String</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [HOW TO：執行可傳回 PrimitiveType 結果的查詢](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [<span data-ttu-id="47bb9-140">如何： 執行可傳回 PrimitiveType 結果的查詢</span><span class="sxs-lookup"><span data-stu-id="47bb9-140">How to: Execute a Query that Returns PrimitiveType Results</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [HOW TO：執行可傳回 StructuralType 結果的查詢](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [<span data-ttu-id="47bb9-141">如何： 執行可傳回 StructuralType 結果的查詢</span><span class="sxs-lookup"><span data-stu-id="47bb9-141">How to: Execute a Query that Returns StructuralType Results</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [HOW TO：執行會傳回 RefType 結果的查詢](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
+ [<span data-ttu-id="47bb9-142">如何： 執行可傳回 RefType 結果的查詢</span><span class="sxs-lookup"><span data-stu-id="47bb9-142">How to: Execute a Query that Returns RefType Results</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
- [HOW TO：執行可傳回複雜類型的查詢](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
+ [<span data-ttu-id="47bb9-143">如何： 執行可傳回複雜類型的查詢</span><span class="sxs-lookup"><span data-stu-id="47bb9-143">How to: Execute a Query that Returns Complex Types</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [HOW TO：執行可傳回巢狀集合的查詢](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [<span data-ttu-id="47bb9-144">如何： 執行可傳回巢狀的集合的查詢</span><span class="sxs-lookup"><span data-stu-id="47bb9-144">How to: Execute a Query that Returns Nested Collections</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [HOW TO：使用 EntityCommand 執行參數化 Entity SQL 查詢](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [<span data-ttu-id="47bb9-145">如何： 使用 EntityCommand Entity SQL 查詢的執行</span><span class="sxs-lookup"><span data-stu-id="47bb9-145">How to: Execute a Parameterized Entity SQL Query Using EntityCommand</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [HOW TO：使用 EntityCommand 執行參數化預存程序](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [<span data-ttu-id="47bb9-146">如何： 執行參數化預存程序使用 EntityCommand</span><span class="sxs-lookup"><span data-stu-id="47bb9-146">How to: Execute a Parameterized Stored Procedure Using EntityCommand</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [HOW TO：執行多型查詢](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [<span data-ttu-id="47bb9-147">如何： 執行多型查詢</span><span class="sxs-lookup"><span data-stu-id="47bb9-147">How to: Execute a Polymorphic Query</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [HOW TO：使用 Navigate 運算子巡覽關聯性](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [<span data-ttu-id="47bb9-148">如何： 巡覽關聯性巡覽運算子</span><span class="sxs-lookup"><span data-stu-id="47bb9-148">How to: Navigate Relationships with the Navigate Operator</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
-## 請參閱  
- [Managing Connections and Transactions](http://msdn.microsoft.com/zh-tw/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)   
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)   
- [語言參考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="47bb9-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="47bb9-149">See Also</span></span>  
+ [<span data-ttu-id="47bb9-150">管理連接與交易</span><span class="sxs-lookup"><span data-stu-id="47bb9-150">Managing Connections and Transactions</span></span>](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [<span data-ttu-id="47bb9-151">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="47bb9-151">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="47bb9-152">語言參考</span><span class="sxs-lookup"><span data-stu-id="47bb9-152">Language Reference</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
