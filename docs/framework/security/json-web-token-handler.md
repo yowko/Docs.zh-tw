@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="json-web-token-handler"></a>JSON Web 語彙基元處理常式
 適用於 Windows Identity Foundation 的 JSON Web 權杖處理常式擴充功能可讓您在應用程式中建立和驗證 JSON Web 權杖 (JWT)。 如同其他內建安全性權杖處理常式一樣，JWT 權杖處理常式可以設定為在 WIF 管線中執行，但是它也可以單獨用來在輕量型應用程式中執行權杖驗證。 使用 OAuth 2.0 承載權杖配置 (例如驗證 Microsoft Azure Active Directory) 時，JWT 權杖處理常式特別有用。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 08/21/2017
 -   **驗證 JWT 權杖**：JWT 權杖可交由權杖處理常式的驗證邏輯輕鬆驗證，而權杖處理常式可設定為在應用程式的 WIF 管線中執行，也可以獨立於 WIF 之外呼叫。  
   
 -   **建立 JWT 權杖**：JWT 權杖處理常式可用來建立下游服務授權所需的 JWT 權杖。
-

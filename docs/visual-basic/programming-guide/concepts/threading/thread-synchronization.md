@@ -1,52 +1,44 @@
 ---
-title: "執行緒同步處理 (Visual Basic) |Microsoft 文件"
+title: "執行緒同步處理 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ec8fa89c8921eadee428a90971d9ae4ce305a109
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 643dbb6fdceb4e1cfd074d3a532787562dbfd03b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-synchronization-visual-basic"></a>執行緒同步處理 (Visual Basic)
-下列章節說明功能和類別，可用來同步處理多執行緒應用程式資源的存取權。  
+下列各節描述可用來同步處理多執行緒應用程式中資源存取的功能和類別。  
   
- 其中一個應用程式中使用多執行緒的優點是每個執行緒以非同步方式執行。 對於 Windows 應用程式，這可讓應用程式視窗時在背景執行耗時的工作和控制項仍能繼續回應。 伺服器應用程式，進行多執行緒處理會提供能夠處理不同的執行緒與每個傳入要求。 否則，每個新的要求會取得之前無法提供服務一個要求已完全沒有問題。  
+ 在應用程式中使用多個執行緒的其中一個優點是每個執行緒都是以非同步方式執行。 針對 Windows 應用程式，這可在應用程式視窗和控制項保持回應時，於背景執行耗時工作。 針對伺服器應用程式，多執行緒處理會提供可使用不同執行緒來處理每個傳入要求的能力。 否則，在完全滿足前一個要求之前，不會服務每個新的要求。  
   
- 不過，例如檔案控制代碼、 網路連線和記憶體資源存取權的執行緒方法的非同步性質，必須進行協調。 否則，兩個或多個執行緒可以存取相同資源一次，每個都不知道對方的動作。 結果是無法預期的資料損毀。  
+ 不過，執行緒的非同步性質表示必須協調檔案控制代碼、網路連線和記憶體這類資源的存取。 否則，兩個以上的執行緒可以同時存取相同的資源，而每個都不知道對方的動作。 結果是無法預期的資料損毀。  
   
- 整數的數值資料型別上的簡單運算，如同步處理執行緒可以完成與成員的<xref:System.Threading.Interlocked>類別。</xref:System.Threading.Interlocked> 所有其他資料型別和多執行緒處理的非執行緒安全資源只能安全地執行本主題中使用的建構。  
+ 針對整數數值資料類型的一些簡單運算，使用 <xref:System.Threading.Interlocked> 類別的成員可以完成執行緒的同步處理。 對於所有其他資料類型和非執行緒安全資源，只能使用本主題中的建構安全地執行多執行緒處理。  
   
- 如需多執行緒程式設計的背景資訊，請參閱︰  
+ 如需多執行緒程式設計的背景資訊，請參閱：  
   
--   [Managed 執行緒處理的基本概念](http://msdn.microsoft.com/library/b2944911-0e8f-427d-a8bb-077550618935)  
+-   [Managed 執行緒處理的基本概念](../../../../standard/threading/managed-threading-basics.md)  
   
--   [使用執行緒和執行緒處理](http://msdn.microsoft.com/library/9b5ec2cd-121b-4d49-b075-222cf26f2344)  
+-   [使用執行緒和執行緒處理](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [Managed 執行緒處理最佳作法](http://msdn.microsoft.com/library/e51988e7-7f4b-4646-a06d-1416cee8d557)  
+-   [Managed 執行緒處理的最佳實施方針](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>Lock 和 SyncLock 關鍵字  
- Visual Basic`SyncLock`陳述式可以由其他執行緒用來確保程式碼區塊執行到完成為止，而不會中斷。 這被透過程式碼區塊的持續時間內取得指定物件的互斥鎖定。  
+## <a name="the-lock-and-synclock-keywords"></a>鎖定和 SyncLock 關鍵字  
+ Visual Basic`SyncLock`陳述式可以由其他執行緒用來確保一段程式碼會執行到完成為止，而不會中斷。 這項作業的完成方式是取得程式碼區塊期間內所指定物件的互斥鎖定。  
   
- A`SyncLock`陳述式指定的物件做為引數，且後面接著一次只能由一個執行緒執行的程式碼區塊。 例如:   
+ `SyncLock` 陳述式是將物件指定為引數，而且後面接著一次只由一個執行緒執行的程式碼區塊。 例如:   
   
 ```vb  
 Public Class TestThreading  
@@ -60,18 +52,18 @@ Public Class TestThreading
 End Class  
 ```  
   
- 若要提供的引數`SyncLock`關鍵字必須是參考型別為基礎的物件和用來定義鎖定的範圍。 在上述範例中，鎖定的範圍僅限於此函式因為物件未參考`lockThis`存在外部函式。 如果存在這類的參考，鎖定範圍會延伸至該物件。 嚴格來說，提供的物件僅用於唯一識別的資源，因此它可以是任意的類別執行個體在多個執行緒之間共用。 在實務上，不過，這個物件通常代表執行緒同步處理所需要的資源。 比方說，如果容器物件是可供多個執行緒，然後容器可以傳遞至鎖定，並在鎖定之後的同步處理的程式碼區塊會存取容器。 只要其他執行緒會在相同鎖定包含之前存取它，然後安全地進行同步處理物件的存取權。  
+ 提供給 `SyncLock` 關鍵字的引數必須是根據參考型別的物件，並且用來定義鎖定範圍。 在上述範例中，因為函式外部沒有 `lockThis` 物件的參考，所以鎖定範圍限於此函式。 如果存在這類的參考，則鎖定範圍會延伸至該物件。 嚴格來說，提供的物件僅用於唯一識別在多個執行緒之間共用的資源，因此它可以是任意類別執行個體。 不過，實際上，這個物件通常代表需要執行緒同步處理的資源。 例如，如果容器物件是要供多個執行緒使用，則可以將容器傳遞至鎖定，而鎖定後面的已同步處理程式碼區塊將會存取容器。 只要其他執行緒在存取相同容器之前先將它鎖定，則可以放心地同步處理物件的存取權。  
   
- 一般而言，最好是避免鎖定`public`型別，或您的應用程式所控制的物件執行個體上。 例如，`lockThis`可能會造成問題，如果公開，存取的執行個體，因為您控制範圍之外的程式碼可能會鎖定物件。 這樣可能會建立兩個或多個執行緒會等待相同的物件版本的死結狀況。 鎖定在公用資料型別，而不是物件，可能會造成問題的理由。 常值字串鎖定是特別危險，因為常值字串完全*被保留了*common language runtime (CLR)。 這表示沒有任何指定之字串的一個執行個體的整個程式常值，完全相同的物件表示中所有的常值的所有執行緒上執行應用程式定義域。 如此一來，鎖定放在具有相同內容的字串中應用程式的處理序鎖定該字串的應用程式中的所有執行個體。 因此，最好鎖定不會被保留了私用或受保護成員。 某些類別會提供成員特別為鎖定。 的<xref:System.Array>型別，例如，提供<xref:System.Array.SyncRoot%2A>.</xref:System.Array.SyncRoot%2A> </xref:System.Array> 許多集合型別提供`SyncRoot`以及成員。  
+ 一般而言，最好是避免鎖定 `public` 類型，或鎖定不受您應用程式控制的物件執行個體。 例如，因為不受您控制的程式碼可能也會鎖定物件，所以如果可以公開存取執行個體，則 `lockThis` 可能會有問題。 這樣可能會建立兩個以上執行緒等待釋放相同物件的死結狀況。 鎖定公用資料類型，而不是物件，可能會因相同原因而造成問題。 鎖定常值字串特別危險，因為 Common Language Runtime (CLR) 會「保留」常值字串。 這表示整個程式之任何指定的字串常值都有一個執行個體，而完全相同的物件代表所有執行緒上所有執行中應用程式定義域中的常值。 因此，鎖定應用程式處理序中任意位置且內容相同的字串，即會鎖定應用程式中該字串的所有執行個體。 因此，最好鎖定未保留的私用或受保護成員。 某些類別會提供特別用於鎖定的成員。 例如，<xref:System.Array> 類型會提供 <xref:System.Array.SyncRoot%2A>。 許多集合類型也都會提供 `SyncRoot` 成員。  
   
- 如需詳細資訊`SyncLock`陳述式，請參閱下列主題︰  
+ 如需 `SyncLock` 陳述式的詳細資訊，請參閱下列主題：  
   
 -   [SyncLock 陳述式](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
   
--   @System.Threading.Monitor  
+-   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>監視  
- 像`SyncLock`關鍵字，監視器會避免由多個執行緒同時執行的程式碼區塊。 <xref:System.Threading.Monitor.Enter%2A>方法可讓只有一個執行緒繼續執行下列陳述式; 所有其他執行緒會被封鎖，直到執行的執行緒呼叫<xref:System.Threading.Monitor.Exit%2A>。</xref:System.Threading.Monitor.Exit%2A> </xref:System.Threading.Monitor.Enter%2A> 就像使用`SyncLock`關鍵字。 例如:   
+ 與 `SyncLock` 關鍵字類似，監視器會防止多個執行緒同時執行程式碼區塊。 <xref:System.Threading.Monitor.Enter%2A> 方法只允許在下列陳述式中繼續執行一個執行緒；除非執行中執行緒呼叫 <xref:System.Threading.Monitor.Exit%2A>，否則會封鎖所有其他執行緒。 這只要使用 `SyncLock` 關鍵字即可。 例如:   
   
 ```vb  
 SyncLock x  
@@ -79,7 +71,7 @@ SyncLock x
 End SyncLock  
 ```  
   
- 這相當於︰  
+ 這相當於：  
   
 ```vb  
 Dim obj As Object = CType(x, Object)  
@@ -91,16 +83,16 @@ Finally
 End Try  
 ```  
   
- 使用`SyncLock`關鍵字通常會優先使用<xref:System.Threading.Monitor>類別目錄，同時由於`SyncLock`更為精簡，而且因為`SyncLock`car 的基準監視會釋放，即使受保護的程式碼擲回例外狀況。</xref:System.Threading.Monitor> 這是與`Finally`關鍵字，它會執行其相關聯的程式碼區塊，不論是否擲回例外狀況。  
+ 通常會優先使用 `SyncLock` 關鍵字，而不是直接使用 <xref:System.Threading.Monitor> 類別，因為 `SyncLock` 更為精簡，而且 `SyncLock` 確保釋放基準監視器，即使受保護程式碼擲回例外狀況也是一樣。 這是使用 `Finally` 關鍵字所完成，而不論是否擲回例外狀況，這個關鍵字都會執行其關聯的程式碼區塊。  
   
 ## <a name="synchronization-events-and-wait-handles"></a>同步處理事件和等候控制代碼  
- 使用鎖定或監視器可用於防止同時執行的執行緒敏感程式碼區塊，但這些建構並不允許進行通訊的事件到另一個執行緒。 這需要*同步處理事件*，這是具有兩種狀態的其中一個物件收到信號，未收到信號，可以用來啟動和暫止執行緒。 執行緒會暫停等候信號，同步處理事件未發出，而且可以透過啟動變更為已收到訊號的事件狀態。 如果執行緒嘗試等候已收到信號的事件時，執行緒會繼續執行而不會延遲。  
+ 使用鎖定或監視器適用於防止同時執行執行緒敏感程式碼區塊，但這些建構不允許某個執行緒與另一個執行緒針對事件進行通訊。 這需要「同步處理事件」，這是一個具有可用來啟動和暫止執行緒的兩種狀態 (發出訊號和未發出訊號) 之一的物件。 執行緒的暫止方式是等候未發出訊號的同步處理事件，而啟動方式是將事件狀態變更為發出訊號。 如果執行緒嘗試等候已收到訊號的事件，則執行緒會繼續執行，而不會延遲。  
   
- 有兩種類型的同步處理事件︰ <xref:System.Threading.AutoResetEvent>，和<xref:System.Threading.ManualResetEvent>.</xref:System.Threading.ManualResetEvent> </xref:System.Threading.AutoResetEvent> 它們之間的差異只在於<xref:System.Threading.AutoResetEvent>變更通知到信號自動每當它會啟動執行緒。</xref:System.Threading.AutoResetEvent> 相反地，<xref:System.Threading.ManualResetEvent>允許任意數目的執行緒，其已收到信號的狀態，來啟動，並只將會還原成未發出信號狀態時其<xref:System.Threading.EventWaitHandle.Reset%2A>方法稱為 「。</xref:System.Threading.EventWaitHandle.Reset%2A> </xref:System.Threading.ManualResetEvent>  
+ 有兩種類型的同步處理事件：<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent>。 它們的差異只在於 <xref:System.Threading.AutoResetEvent> 會在啟動執行緒時即自動從發出訊號變更為未發出訊號。 相之，<xref:System.Threading.ManualResetEvent> 允許透過其發出信號狀態來啟動任意數目的執行緒，並只在呼叫其 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法時還原為未發出信號狀態。  
   
- 可以讓執行緒等待事件由呼叫其中一個等候方法，例如<xref:System.Threading.WaitHandle.WaitOne%2A>， <xref:System.Threading.WaitHandle.WaitAny%2A>，或<xref:System.Threading.WaitHandle.WaitAll%2A>.</xref:System.Threading.WaitHandle.WaitAll%2A> </xref:System.Threading.WaitHandle.WaitAny%2A> </xref:System.Threading.WaitHandle.WaitOne%2A> <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName>造成執行緒等候單一事件發出信號，<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName>封鎖執行緒，直到一或多個指定的事件變成已收到訊號，和<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName>封鎖執行緒，直到所有指定的事件變成已收到訊號。</xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> </xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName></xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> 事件發出信號時其<xref:System.Threading.EventWaitHandle.Set%2A>方法稱為 「。</xref:System.Threading.EventWaitHandle.Set%2A>  
+ 讓執行緒等候事件的方式，就是呼叫其中一個等待方法，例如 <xref:System.Threading.WaitHandle.WaitOne%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 或 <xref:System.Threading.WaitHandle.WaitAll%2A>。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType> 會使得執行緒等到單一事件變成發出信號狀態為止，<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> 則會封鎖執行緒，直到一或多個指定的事件變成發出信號狀態，而 <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> 會封鎖執行緒，直到所有指定的事件變成發出信號狀態。 呼叫事件的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法時，該事件就會變成發出信號狀態。  
   
- 在下列範例中，執行緒會建立並啟動`Main`函式。 新的執行緒在等待事件使用<xref:System.Threading.WaitHandle.WaitOne%2A>方法。</xref:System.Threading.WaitHandle.WaitOne%2A> 執行緒會暫停，直到對事件發出信號的主要執行緒正在執行`Main`函式。 一旦對事件發出信號，就會傳回輔助執行緒。 在此情況下，事件僅用於一個執行緒啟動，或是因為<xref:System.Threading.AutoResetEvent>或<xref:System.Threading.ManualResetEvent>可用類別。</xref:System.Threading.ManualResetEvent> </xref:System.Threading.AutoResetEvent>  
+ 在下列範例中，`Main` 函式會建立並啟動執行緒。 新的執行緒會使用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法等候事件。 除非執行 `Main` 函式的主要執行緒讓事件變成發出訊號，否則會暫止執行緒。 一旦事件變成發出訊號，就會傳回輔助執行緒。 在此情況下，由於事件僅用於啟動某個執行緒，因此可以使用 <xref:System.Threading.AutoResetEvent> 或 <xref:System.Threading.ManualResetEvent> 類別。  
   
 ```vb  
 Imports System.Threading  
@@ -131,42 +123,42 @@ End Module
 ```  
   
 ## <a name="mutex-object"></a>Mutex 物件  
- A *mutex*是類似於監視器; 它防止多個執行緒同時執行的程式碼區塊一次。 事實上，名稱"mutex 」 是 「 互斥。 」 一詞縮寫格式 不同於監視器，不過，mutex 可以用於跨處理序同步處理執行緒。 Mutex 被以<xref:System.Threading.Mutex>類別。</xref:System.Threading.Mutex>  
+ *Mutex* 與監視器類似，可防止多個執行緒一次同時執行程式碼區塊。 事實上，名稱 "Mutex" 是「互斥」這個詞彙的縮短格式。 不過，與監視器不同，Mutex 可以用來跨處理序同步處理執行緒。 Mutex 由 <xref:System.Threading.Mutex> 類別代表。  
   
- Mutex 時用於處理序間的同步處理時，會呼叫*具名 mutex*因為它是以供其他應用程式，因此它無法共用透過全域或靜態變數。 必須授與它的名稱，讓兩個應用程式可以存取同一個 mutex 物件。  
+ 用於處理序間同步處理時，Mutex 稱為「具名 Mutex」，因為它是要用在另一個應用程式中，因此無法透過全域或靜態變數共用。 必須指定它的名稱，以讓兩個應用程式可以存取相同的 Mutex 物件。  
   
- Mutex 可以用於進行了處理序的執行緒同步處理，但是使用<xref:System.Threading.Monitor>通常會優先，因為監視專為.NET Framework 設計，因此更妥善運用資源。</xref:System.Threading.Monitor> 相反地，<xref:System.Threading.Mutex>類別是 Win32 建構的包裝函式。</xref:System.Threading.Mutex> 雖然比監視器功能更強大，mutex 需要 interop 轉換時更耗費大量運算資源比所需的<xref:System.Threading.Monitor>類別。</xref:System.Threading.Monitor> 如需使用 mutex 的範例，請參閱[Mutex](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)。  
+ 雖然 Mutex 可以用於處理序間執行緒同步處理，但是一般偏好使用 <xref:System.Threading.Monitor>，因為已特別針對 .NET Framework 設計監視器，因此能夠更恰當地使用資源。 相反地，<xref:System.Threading.Mutex> 類別是 Win32 建構的包裝函式。 雖然 Mutex 比監視器的功能更為強大，但是所需的 Interop 轉換比 <xref:System.Threading.Monitor> 類別所需的 Interop 轉換耗費更大量的運算資源。 如需使用 Mutex 的範例，請參閱 [Mutex](../../../../standard/threading/mutexes.md)。  
   
-## <a name="interlocked-class"></a>Interlocked 的類別  
- 您可以使用的方法<xref:System.Threading.Interlocked>類別來防止當多個執行緒嘗試同時更新，或相同的值相比較時可能發生的問題。</xref:System.Threading.Interlocked> 這個類別的方法可讓您安全地遞增、 遞減、 交換，並比較值，從任何執行緒。  
+## <a name="interlocked-class"></a>Interlocked 類別  
+ 您可以使用 <xref:System.Threading.Interlocked> 類別的方法，防止多個執行緒嘗試同時更新或比較相同值時可能發生的問題。 這個類別的方法可讓您安全地遞增、遞減、交換和比較任何執行緒中的值。  
   
 ## <a name="readerwriter-locks"></a>ReaderWriter 鎖定  
- 在某些情況下，您可以只會被寫入資料時，鎖定資源，並允許多個用戶端無法更新資料時，同時讀取資料。 <xref:System.Threading.ReaderWriterLock>類別在執行緒正在修改資源，但它可讓非獨佔存取資源讀取時，會強制執行資源的獨佔存取權。</xref:System.Threading.ReaderWriterLock> ReaderWriter 鎖定是有用的替代方式，會造成其他執行緒等待，即使當這些執行緒不需要更新資料的獨佔鎖定。  
+ 在某些情況下，只有正在寫入資料時，才會想要鎖定資源，並允許多個用戶端在未更新資料時同時讀取資料。 <xref:System.Threading.ReaderWriterLock> 類別會在執行緒正在修改資源時強制獨佔資源存取，但在讀取資源時允許非獨佔存取。 ReaderWriter 鎖定是造成其他執行緒等待之獨佔鎖定的有用替代方式，即使這些執行緒不需要更新資料時也是一樣。  
   
-## <a name="deadlocks"></a>死結 （deadlock)  
- 執行緒同步處理是非常寶貴的功能，在多執行緒應用程式，但總是有之上建立`deadlock`的多個執行緒正在等候彼此，且應用程式停止暫止。 死結是類似於汽車停止在四個方向停止，且每個人等候到其他的情況。 避免死結的重要性;關鍵在於仔細規劃。 您通常可以圖表化多執行緒應用程式，然後再開始撰寫程式碼，以預測死結狀況的可能性。  
+## <a name="deadlocks"></a>死結  
+ 執行緒同步處理是多執行緒應用程式中十分寶貴的功能，但建立 `deadlock` 一律有其危險性；在其中，多個執行緒將等候彼此，而應用程式就像停止一樣。 死結類似汽車停在四方停車再開的位置，而每個人都在等候其他人先離開。 避免死結十分重要；關鍵在於仔細規劃。 在開始撰寫程式碼之前，先將多執行緒應用程式圖表化，通常就可以預測死結狀況。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.Thread></xref:System.Threading.Thread>   
- <xref:System.Threading.WaitHandle.WaitOne%2A></xref:System.Threading.WaitHandle.WaitOne%2A>   
- <xref:System.Threading.WaitHandle.WaitAny%2A></xref:System.Threading.WaitHandle.WaitAny%2A>   
- <xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.Thread.Join%2A></xref:System.Threading.Thread.Join%2A>   
- <xref:System.Threading.Thread.Start%2A></xref:System.Threading.Thread.Start%2A>   
- <xref:System.Threading.Thread.Sleep%2A></xref:System.Threading.Thread.Sleep%2A>   
- <xref:System.Threading.Monitor></xref:System.Threading.Monitor>   
- <xref:System.Threading.Mutex></xref:System.Threading.Mutex>   
- <xref:System.Threading.AutoResetEvent></xref:System.Threading.AutoResetEvent>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.Interlocked></xref:System.Threading.Interlocked>   
- <xref:System.Threading.WaitHandle></xref:System.Threading.WaitHandle>   
- <xref:System.Threading.EventWaitHandle></xref:System.Threading.EventWaitHandle>   
- <xref:System.Threading></xref:System.Threading>   
- <xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A>   
- [多執行緒應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [SyncLock 陳述式](../../../../visual-basic/language-reference/statements/synclock-statement.md)   
- [Mutex](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)   
- @System.Threading.Monitor   
- [連鎖的作業](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
- [同步處理資料的多執行緒處理](http://msdn.microsoft.com/library/b980eb4c-71d5-4860-864a-6dfe3692430a)
+ <xref:System.Threading.Thread>  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>  
+ <xref:System.Threading.WaitHandle.WaitAny%2A>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.Thread.Join%2A>  
+ <xref:System.Threading.Thread.Start%2A>  
+ <xref:System.Threading.Thread.Sleep%2A>  
+ <xref:System.Threading.Monitor>  
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.AutoResetEvent>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Interlocked>  
+ <xref:System.Threading.WaitHandle>  
+ <xref:System.Threading.EventWaitHandle>  
+ <xref:System.Threading>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.Monitor>  
+ [多執行緒應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [SyncLock 陳述式](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
+ [Mutex](../../../../standard/threading/mutexes.md)  
+ [Interlocked 作業](../../../../standard/threading/interlocked-operations.md)  
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+ [同步處理多執行緒處理的資料](../../../../standard/threading/synchronizing-data-for-multithreading.md)

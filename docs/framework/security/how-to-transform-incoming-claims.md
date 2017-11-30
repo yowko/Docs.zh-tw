@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: bcf0e640e6b6b45ddb87070c7d6df2fa6dadc834
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-transform-incoming-claims"></a>如何：轉換傳入宣告
 ## <a name="applies-to"></a>適用於  
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/21/2017
   
 -   步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式  
+-   步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
   
 -   步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
   
@@ -58,13 +56,13 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式  
+-   步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
   
 -   步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
   
 -   步驟 3 – 測試方案  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
  在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式。  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
@@ -174,7 +172,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="step-3--test-your-solution"></a>步驟 3 – 測試方案  
- 在此步驟中，您將測試 ASP.NET Web Forms 應用程式，並確認使用者使用表單驗證登入時會呈現宣告。  
+ 在此步驟中，您將測試 ASP.NET Web Forms 應用程式，並確認使用者使用表單驗證登入時呈現宣告。  
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>測試使用表單驗證之宣告的 ASP.NET Web Forms 應用程式  
   
@@ -185,4 +183,3 @@ ms.lasthandoff: 08/21/2017
     ||||||  
     |-|-|-|-|-|  
     |LOCAL AUTHORITY|LOCAL AUTHORITY|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|系統管理員|http://www.w3.org/2001/XMLSchema#string|
-
