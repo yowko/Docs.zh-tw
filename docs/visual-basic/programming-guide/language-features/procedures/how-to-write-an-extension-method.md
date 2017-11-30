@@ -1,47 +1,46 @@
 ---
-title: "How to: Write an Extension Method (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "extending data types"
-  - "writing extension methods"
-  - "extension methods [Visual Basic]"
+title: "如何：撰寫擴充方法 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- extending data types [Visual Basic]
+- writing extension methods [Visual Basic]
+- extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 65cdabf59886e7457a327ee9cde968a6a73f2280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Write an Extension Method (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-擴充方法讓您能夠將方法加入至現有的類別。  可以將擴充方法當做該類別的執行個體來呼叫。  
+# <a name="how-to-write-an-extension-method-visual-basic"></a>如何：撰寫擴充方法 (Visual Basic)
+擴充方法可讓您將方法加入至現有的類別。 可以呼叫擴充方法，就好像該類別的執行個體。  
   
-### 若要定義擴充方法  
+### <a name="to-define-an-extension-method"></a>若要定義的擴充方法  
   
-1.  在 Visual Studio 中開啟新的或現有的 Visual Basic 應用程式。  
+1.  Visual Studio 中開啟新的或現有的 Visual Basic 應用程式。  
   
-2.  在您要定義擴充方法的檔案頂端，加入下列匯入陳述式：  
+2.  在您要定義的擴充方法的檔案頂端，加入下列 import 陳述式：  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  在新的或現有應用程式的模組內，使用擴充屬性開始方法定義：  
+3.  在新的或現有應用程式中的模組，開始使用擴充屬性和方法定義：  
   
     ```  
     <Extension()>  
     ```  
   
-4.  以一般方式宣告方法，不過第一個參數的型別必須是您要擴充的資料型別。  
+4.  第一個參數的型別必須是您想要擴充的資料類型，請以一般方式，宣告您的方法。  
   
     ```  
     <Extension()>   
@@ -50,10 +49,10 @@ caps.handback.revision: 11
     End Sub  
     ```  
   
-## 範例  
- 下列範例會在 `StringExtensions` 模組中宣告擴充方法。  第二個模組 `Module1` 會匯入 `StringExtensions` 並呼叫該方法。  呼叫時，該擴充方法必須在範圍內。  擴充方法 `PrintAndPunctuate` 會使用方法擴充 <xref:System.String> 類別，而這個方法會顯示字串執行個體，後面接著當做參數傳送的標點符號字串。  
+## <a name="example"></a>範例  
+ 下列範例宣告模組中的擴充方法`StringExtensions`。 第二個模組， `Module1`，匯入`StringExtensions`呼叫的方法。 擴充方法必須在範圍內呼叫它。 擴充方法`PrintAndPunctuate`擴充<xref:System.String>類別顯示的字串執行個體的方法後面的標點符號中傳送做為參數的字串。  
   
-```vb#  
+```vb  
 ' Declarations will typically be in a separate module.  
 Imports System.Runtime.CompilerServices  
   
@@ -67,7 +66,7 @@ Module StringExtensions
 End Module  
 ```  
   
-```vb#  
+```vb  
 ' Import the module that holds the extension method you want to use,   
 ' and call it.  
   
@@ -82,18 +81,17 @@ Module Module1
     End Sub  
   
 End Module  
-  
 ```  
   
- 請注意，定義方法時會搭配兩個參數，但只會搭配一個參數來呼叫方法。  方法定義中的第一個參數 `aString` 會繫結至 `example`，這是呼叫方法的 `String` 執行個體。  範例的輸出如下：  
+ 請注意，方法是使用兩個參數定義只有一個呼叫。 第一個參數， `aString`，方法中定義為繫結至`example`，執行個體`String`用來呼叫方法。 範例的輸出如下所示：  
   
  `Hello?`  
   
  `Hello!!!!`  
   
-## 請參閱  
- <xref:System.Runtime.CompilerServices.ExtensionAttribute>   
- [擴充方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)   
- [Module Statement](../../../../visual-basic/language-reference/statements/module-statement.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
+ [擴充方法](./extension-methods.md)  
+ [Module 陳述式](../../../../visual-basic/language-reference/statements/module-statement.md)  
+ [程序參數和引數](./procedure-parameters-and-arguments.md)  
+ [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

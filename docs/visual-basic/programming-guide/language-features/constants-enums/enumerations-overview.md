@@ -1,45 +1,44 @@
 ---
-title: "Enumerations Overview (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, enumerations"
-  - "enumerations [Visual Basic], about enumerations"
+title: "列舉類型的概觀 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Visual Basic code, enumerations
+- enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5d50e6bae880e5dc4dcde203708c6b07c05bb4e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Enumerations Overview (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-列舉型別 \(Enumeration\) 提供使用相關常數組和建立常數值與名稱間關聯的便利方法。  例如，您可以宣告列舉來當做一組與每週日期關聯的整數常數，接著在程式碼中使用日期的名稱而不是它們的整數值。  
+# <a name="enumerations-overview-visual-basic"></a>列舉類型的概觀 (Visual Basic)
+列舉型別提供便利的方式來處理組相關的常數和常數值與名稱。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  
   
-## 涉及列舉型別的工作  
- 下表列出涉及列舉型別的常見工作。  
+## <a name="tasks-involving-enumerations"></a>包含列舉工作  
+ 下表列出常見的工作都涉及列舉型別。  
   
 |若要執行此工作|請參閱|  
-|-------------|---------|  
-|尋找預先定義的列舉型別|[Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
-|宣告列舉型別|[How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
-|列舉型別的完整名稱|[Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
-|參考列舉型別成員|[How to: Refer to an Enumeration Member](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
-|逐一查看列舉型別|[How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
-|判斷與列舉型別相關的字串|[How to: Determine the String Associated with an Enumeration Value](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
-|決定何時使用列舉型別|[When to Use an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
+|----------------|---------|  
+|找不到預先定義的列舉|[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
+|宣告列舉|[如何： 宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
+|完整限定名稱的列舉|[列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
+|為列舉成員，請參閱|[如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
+|逐一查看列舉類型|[如何： 逐一查看 Visual Basic 中列舉類型](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
+|決定與列舉型別相關聯的字串|[如何：決定與列舉值相關聯的字串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
+|決定何時使用列舉類型|[何時使用列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
-## 請參閱  
- [Constants Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [User\-Defined Constants](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)   
- [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)   
- [Constant and Literal Data Types](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)   
- [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)
+## <a name="see-also"></a>另請參閱  
+ [常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [使用者定義的常數](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  
+ [如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
+ [常數和常值資料類型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
+ [Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)

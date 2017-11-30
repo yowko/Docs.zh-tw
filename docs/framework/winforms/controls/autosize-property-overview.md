@@ -1,82 +1,82 @@
 ---
-title: "AutoSize 屬性概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自動調整大小"
-  - "AutoSize 屬性"
-  - "AutoSizeMode 屬性"
-  - "版面配置 [Windows Form], AutoSize"
-  - "調整大小, 自動"
+title: "AutoSize 屬性概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sizing [Windows Forms], automatic
+- layout [Windows Forms], AutoSize
+- automatic sizing
+- AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8216880ebdede03bbd01fe53b622c14ca8c514d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# AutoSize 屬性概觀
-<xref:System.Windows.Forms.Control.AutoSize%2A> 屬性允許控制項變更大小，如果需要，還可獲得由 <xref:System.Windows.Forms.Control.PreferredSize%2A> 屬性所指定的值。  您可藉由設定 `AutoSizeMode` 屬性，調整特定控制項的調整大小行為。  
+# <a name="autosize-property-overview"></a>AutoSize 屬性概觀
+<xref:System.Windows.Forms.Control.AutoSize%2A>屬性可讓控制項來變更其大小，如有必要，以達到所指定的值<xref:System.Windows.Forms.Control.PreferredSize%2A>屬性。 設定調整為特定控制項的調整大小行為`AutoSizeMode`屬性。  
   
-## AutoSize 行為  
- 只有某些控制項支援 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性。  此外，某些支援 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性的控制項也支援 `AutoSizeMode` 屬性。  
+## <a name="autosize-behavior"></a>AutoSize 行為  
+ 只有某些控制項支援<xref:System.Windows.Forms.Control.AutoSize%2A>屬性。 此外，某些控制項支援<xref:System.Windows.Forms.Control.AutoSize%2A>屬性也支援`AutoSizeMode`屬性。  
   
- 根據特定的控制項型別和 `AutoSizeMode` 屬性 \(如果該屬性存在\) 的值，<xref:System.Windows.Forms.Control.AutoSize%2A> 屬性可能會產生不同的行為。  下表描述一定是 true 的行為，並為每個行為提供簡短說明：  
+ <xref:System.Windows.Forms.Control.AutoSize%2A>屬性會產生稍有不同的行為，取決於特定控制項類型和值`AutoSizeMode`屬性，如果屬性存在。 下表描述永遠為 true 的行為，並提供簡短說明每個：  
   
 |永遠為 true 的行為|描述|  
-|------------------|--------|  
-|自動調整大小是執行階段功能。|這表示它絕對不會放大或縮小控制項，然後並不會有進一步的作用。|  
-|若控制項變更大小，則 <xref:System.Windows.Forms.Control.Location%2A> 屬性的值會永遠維持不變。|當控制項的內容導致該控制項放大時，控制項會向右及向下放大。  控制項不會向左邊放大。|  
-|當 <xref:System.Windows.Forms.Control.AutoSize%2A> 為 `true` 時，可以接受 <xref:System.Windows.Forms.Control.Dock%2A> 和 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性。|控制項的 <xref:System.Windows.Forms.Control.Location%2A> 屬性值會調整為正確的值。<br /><br /> **注意**：<xref:System.Windows.Forms.Label> 控制項是這個規則的例外狀況。  如果將停駐的 <xref:System.Windows.Forms.Label> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值設定為 `true`，<xref:System.Windows.Forms.Label> 控制項將不會延展。|  
-|不論控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值為何，一定都會接受 <xref:System.Windows.Forms.Control.MaximumSize%2A> 和 <xref:System.Windows.Forms.Control.MinimumSize%2A> 屬性。|<xref:System.Windows.Forms.Control.MaximumSize%2A> 和 <xref:System.Windows.Forms.Control.MinimumSize%2A> 屬性不會受到 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性的影響。|  
-|根據預設，大小沒有最小值。|這表示如果控制項是在 <xref:System.Windows.Forms.Control.AutoSize%2A> 設定為縮小且控制項沒有內容，則其 <xref:System.Windows.Forms.Control.Size%2A> 屬性的值會是 0,0。  在這種情況下，控制項將會縮小為一點，且並非輕易可見。|  
-|如果控制項未實作 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 方法，則 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 方法會傳回指定給 <xref:System.Windows.Forms.Control.Size%2A> 屬性的上一個值。|這意味著將 <xref:System.Windows.Forms.Control.AutoSize%2A> 設定為 `true` 不會發生作用。|  
-|在 <xref:System.Windows.Forms.TableLayoutPanel> 儲存格中的控制項，一定會縮小成儲存格大小，直至達到 <xref:System.Windows.Forms.Control.MinimumSize%2A> 為止。|這個大小會強制套用為最大大小。  當儲存格為部分的 <xref:System.Windows.Forms.SizeType> 資料列或資料行時，就不是這種情況了。|  
+|--------------------------|-----------------|  
+|自動調整大小是執行階段功能。|這表示它永遠不會成長或壓縮控制項，則會有任何進一步的作用。|  
+|如果控制項變更大小的值及其<xref:System.Windows.Forms.Control.Location%2A>屬性會一律維持不變。|當控制項的內容導致成長時，向右和向下拖曳，也會成長控制項。 控制項不會變得左邊。|  
+|<xref:System.Windows.Forms.Control.Dock%2A>和<xref:System.Windows.Forms.Control.Anchor%2A>屬性被接受時<xref:System.Windows.Forms.Control.AutoSize%2A>是`true`。|控制項的值<xref:System.Windows.Forms.Control.Location%2A>屬性調整為正確的值。<br /><br /> **請注意**<xref:System.Windows.Forms.Label>控制項是此規則的例外狀況。 當您設定的值停駐<xref:System.Windows.Forms.Label>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性`true`、<xref:System.Windows.Forms.Label>控制項將會自動縮放。|  
+|控制項的<xref:System.Windows.Forms.Control.MaximumSize%2A>和<xref:System.Windows.Forms.Control.MinimumSize%2A>一律採用屬性的值為何其<xref:System.Windows.Forms.Control.AutoSize%2A>屬性。|<xref:System.Windows.Forms.Control.MaximumSize%2A>和<xref:System.Windows.Forms.Control.MinimumSize%2A>屬性不會受到<xref:System.Windows.Forms.Control.AutoSize%2A>屬性。|  
+|沒有預設值來設定最小大小。|這表示，如果控制項設定為壓縮下<xref:System.Windows.Forms.Control.AutoSize%2A>它沒有任何內容的值和其<xref:System.Windows.Forms.Control.Size%2A>屬性為 0，0。 在此情況下，您的控制項將會壓縮至點，並不會輕易顯示出來。|  
+|如果控制項不會實作<xref:System.Windows.Forms.Control.GetPreferredSize%2A>方法，<xref:System.Windows.Forms.Control.GetPreferredSize%2A>方法會傳回最後一個值指派給<xref:System.Windows.Forms.Control.Size%2A>屬性。|這表示該設定<xref:System.Windows.Forms.Control.AutoSize%2A>至`true`會有任何作用。|  
+|中的控制項<xref:System.Windows.Forms.TableLayoutPanel>一律儲存格，無法納入資料格，直到壓縮其<xref:System.Windows.Forms.Control.MinimumSize%2A>為止。|此大小會強制執行最大大小。 這不是儲存格時的一部分案例<xref:System.Windows.Forms.SizeType.AutoSize>資料列或資料行。|  
   
-## AutoSizeMode 屬性  
- `AutoSizeMode` 屬性可對預設的 <xref:System.Windows.Forms.Control.AutoSize%2A> 行為提供更細微的控制。  `AutoSizeMode` 屬性指定控制項如何調整大小以符合其內容。  例如，內容可能是 <xref:System.Windows.Forms.Button> 控制項的文字，或是容器 \(Container\) 的子控制項。  
+## <a name="autosizemode-property"></a>AutoSizeMode 屬性  
+ `AutoSizeMode`屬性提供預設值更多更細微的控制<xref:System.Windows.Forms.Control.AutoSize%2A>行為。 `AutoSizeMode`屬性會指定如何控制其內容調整本身。 內容，例如，可能是文字<xref:System.Windows.Forms.Button>控制項或容器的子控制項。  
   
- 下表顯示 <xref:System.Windows.Forms.AutoSizeMode> 設定，以及每個設定所引起的行為描述。  
+ 下表顯示<xref:System.Windows.Forms.AutoSizeMode>設定和行為的說明每個設定 elicits。  
   
 |AutoSizeMode 設定|行為|  
-|---------------------|--------|  
-|GrowAndShrink|控制項會放大或縮小以包含它的內容。<br /><br /> 會接受 <xref:System.Windows.Forms.Control.MinimumSize%2A> 和 <xref:System.Windows.Forms.Control.MaximumSize%2A> 值，但會忽略 <xref:System.Windows.Forms.Control.Size%2A> 屬性目前的值。<br /><br /> 這種行為與具有 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性和不具有 `AutoSizeMode` 屬性的控制項相同。|  
-|GrowOnly|控制項會盡可能放大以包含它的內容，但不會縮小到比 <xref:System.Windows.Forms.Control.Size%2A> 屬性所指定的值還小。<br /><br /> 這是 `AutoSizeMode` 的預設值。|  
+|--------------------------|--------------|  
+|GrowAndShrink|控制項會放大或縮小以包含其內容。<br /><br /> <xref:System.Windows.Forms.Control.MinimumSize%2A>和<xref:System.Windows.Forms.Control.MaximumSize%2A>值都會被接受，但目前的值<xref:System.Windows.Forms.Control.Size%2A>屬性會被忽略。<br /><br /> 這是與控制項相同的行為<xref:System.Windows.Forms.Control.AutoSize%2A>屬性，且沒有`AutoSizeMode`屬性。|  
+|GrowOnly|控制項會依需要盡可能包含它的內容，但它並不會縮小所指定的值小於其<xref:System.Windows.Forms.Control.Size%2A>屬性。<br /><br /> 這是 `AutoSizeMode` 的預設值。|  
   
-## 支援 AutoSize 屬性的控制項  
- 下表列出支援 <xref:System.Windows.Forms.Control.AutoSize%2A> 和 `AutoSizeMode` 屬性的控制項。  
+## <a name="controls-that-support-the-autosize-property"></a>支援 AutoSize 屬性的控制項  
+ 下表列出支援的控制項<xref:System.Windows.Forms.Control.AutoSize%2A>和`AutoSizeMode`屬性。  
   
-|AutoSize 支援|控制項型別|  
-|-----------------|-----------|  
-|-   支援 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性。<br />-   沒有 `AutoSizeMode` 屬性。|<xref:System.Windows.Forms.CheckBox><br /><br /> <xref:System.Windows.Forms.DomainUpDown><br /><br /> <xref:System.Windows.Forms.Label><br /><br /> <xref:System.Windows.Forms.LinkLabel><br /><br /> <xref:System.Windows.Forms.MaskedTextBox> \(<xref:System.Windows.Forms.TextBox> 基底\)<br /><br /> <xref:System.Windows.Forms.NumericUpDown><br /><br /> <xref:System.Windows.Forms.RadioButton><br /><br /> <xref:System.Windows.Forms.TextBox><br /><br /> <xref:System.Windows.Forms.TrackBar>|  
-|-   支援 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性。<br />-   支援 `AutoSizeMode` 屬性。|<xref:System.Windows.Forms.Button><br /><br /> <xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.FlowLayoutPanel><br /><br /> <xref:System.Windows.Forms.Form><br /><br /> <xref:System.Windows.Forms.GroupBox><br /><br /> <xref:System.Windows.Forms.Panel><br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>|  
-|-   沒有 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性。|<xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.ComboBox><br /><br /> <xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DateTimePicker><br /><br /> <xref:System.Windows.Forms.ListBox><br /><br /> <xref:System.Windows.Forms.ListView><br /><br /> <xref:System.Windows.Forms.MaskedTextBox><br /><br /> <xref:System.Windows.Forms.MonthCalendar><br /><br /> <xref:System.Windows.Forms.ProgressBar><br /><br /> <xref:System.Windows.Forms.PropertyGrid><br /><br /> <xref:System.Windows.Forms.RichTextBox><br /><br /> <xref:System.Windows.Forms.SplitContainer><br /><br /> <xref:System.Windows.Forms.TabControl><br /><br /> <xref:System.Windows.Forms.TabPage><br /><br /> <xref:System.Windows.Forms.TreeView><br /><br /> <xref:System.Windows.Forms.WebBrowser><br /><br /> <xref:System.Windows.Forms.ScrollBar>|  
+|AutoSize 支援|控制項類型|  
+|----------------------|------------------|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A>支援的屬性。<br />-不`AutoSizeMode`屬性。|<xref:System.Windows.Forms.CheckBox><br /><br /> <xref:System.Windows.Forms.DomainUpDown><br /><br /> <xref:System.Windows.Forms.Label><br /><br /> <xref:System.Windows.Forms.LinkLabel><br /><br /> <xref:System.Windows.Forms.MaskedTextBox>(<xref:System.Windows.Forms.TextBox>基底)<br /><br /> <xref:System.Windows.Forms.NumericUpDown><br /><br /> <xref:System.Windows.Forms.RadioButton><br /><br /> <xref:System.Windows.Forms.TextBox><br /><br /> <xref:System.Windows.Forms.TrackBar>|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A>支援的屬性。<br />-   `AutoSizeMode`支援的屬性。|<xref:System.Windows.Forms.Button><br /><br /> <xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.FlowLayoutPanel><br /><br /> <xref:System.Windows.Forms.Form><br /><br /> <xref:System.Windows.Forms.GroupBox><br /><br /> <xref:System.Windows.Forms.Panel><br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>|  
+|-不<xref:System.Windows.Forms.Control.AutoSize%2A>屬性。|<xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.ComboBox><br /><br /> <xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DateTimePicker><br /><br /> <xref:System.Windows.Forms.ListBox><br /><br /> <xref:System.Windows.Forms.ListView><br /><br /> <xref:System.Windows.Forms.MaskedTextBox><br /><br /> <xref:System.Windows.Forms.MonthCalendar><br /><br /> <xref:System.Windows.Forms.ProgressBar><br /><br /> <xref:System.Windows.Forms.PropertyGrid><br /><br /> <xref:System.Windows.Forms.RichTextBox><br /><br /> <xref:System.Windows.Forms.SplitContainer><br /><br /> <xref:System.Windows.Forms.TabControl><br /><br /> <xref:System.Windows.Forms.TabPage><br /><br /> <xref:System.Windows.Forms.TreeView><br /><br /> <xref:System.Windows.Forms.WebBrowser><br /><br /> <xref:System.Windows.Forms.ScrollBar>|  
   
-## 在設計環境中的 AutoSize  
- 下表根據控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 和 `AutoSizeMode` 屬性值，描述控制項在設計階段的調整大小行為。  
+## <a name="autosize-in-the-design-environment"></a>在設計環境中的自動調整  
+ 下表描述控制項的調整大小行為在設計階段，根據的值及其<xref:System.Windows.Forms.Control.AutoSize%2A>和`AutoSizeMode`屬性。  
   
- 覆寫 <xref:System.Windows.Forms.Design.ControlDesigner.SelectionRules%2A> 屬性以判斷特定的控制項是否處於使用者可調整大小的狀態。  在下表中，「不可以」表示只能 <xref:System.Windows.Forms.Design.SelectionRules>，而「可以」則表示可以同時 <xref:System.Windows.Forms.Design.SelectionRules> 和 <xref:System.Windows.Forms.Design.SelectionRules>。  
+ 覆寫<xref:System.Windows.Forms.Design.ControlDesigner.SelectionRules%2A>屬性來判斷指定的控制項是否為使用者可調整大小的狀態。 下表中，「 無法 」 表示<xref:System.Windows.Forms.Design.SelectionRules.Moveable>，「 可以 」 表示<xref:System.Windows.Forms.Design.SelectionRules.AllSizeable>和<xref:System.Windows.Forms.Design.SelectionRules.Moveable>。  
   
-|AutoSize 設定|設計階段能否調整大小|  
-|-----------------|----------------|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   沒有 `AutoSizeMode` 屬性。|使用者不可以在設計階段調整控制項大小，但下列控制項除外：<br /><br /> -   <xref:System.Windows.Forms.TextBox><br />-   <xref:System.Windows.Forms.MaskedTextBox><br />-   <xref:System.Windows.Forms.RichTextBox><br />-   <xref:System.Windows.Forms.TrackBar>|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   `AutoSizeMode` \= <xref:System.Windows.Forms.AutoSizeMode>|使用者不可以在設計階段時調整控制項大小。|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   `AutoSizeMode` \= <xref:System.Windows.Forms.AutoSizeMode>|使用者可以在設計階段調整控制項大小。  如果有設定 <xref:System.Windows.Forms.Control.Size%2A> 屬性，使用者就只能增加控制項的大小。|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `false` 或 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性為隱藏。|使用者可以在設計階段時調整控制項大小。|  
+|自動調整設定|設計階段縮放筆勢|  
+|-----------------------|---------------------------------|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br />-不`AutoSizeMode`屬性。|使用者無法在設計階段，除了下列控制項調整控制項的大小：<br /><br /> -   <xref:System.Windows.Forms.TextBox><br />-   <xref:System.Windows.Forms.MaskedTextBox><br />-   <xref:System.Windows.Forms.RichTextBox><br />-   <xref:System.Windows.Forms.TrackBar>|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br />-   `AutoSizeMode` = <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>|使用者無法在設計階段調整控制項的大小。|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br />-   `AutoSizeMode` = <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>|使用者可以在設計階段調整控制項的大小。 當<xref:System.Windows.Forms.Control.Size%2A>屬性設定，使用者只能增加控制項的大小。|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `false`或<xref:System.Windows.Forms.Control.AutoSize%2A>屬性就會隱藏。|使用者可以在設計階段調整控制項的大小。|  
   
 > [!NOTE]
->  為了達到最大化產能，Windows Form 設計工具會遮蔽 <xref:System.Windows.Forms.Form> 類別的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性。  在設計階段期間，表單會當做 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性是設定為 `false` 來運作，而不管它的實際設定。  在執行階段中，沒有進行特殊調整，<xref:System.Windows.Forms.Control.AutoSize%2A> 屬性會根據屬性設定的指定而套用。  
+>  若要提升生產力，Windows Form 設計工具陰影<xref:System.Windows.Forms.Control.AutoSize%2A>屬性<xref:System.Windows.Forms.Form>類別。 在設計階段，在表單的行為一樣<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設定為`false`，不論其實際的設定。 在執行階段，進行任何特殊住宿，而<xref:System.Windows.Forms.Control.AutoSize%2A>屬性到底要套用屬性的設定值所指定。  
   
-## 請參閱  
- <xref:System.Windows.Forms.Control.AutoSize%2A>   
- <xref:System.Windows.Forms.Control.PreferredSize%2A>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.Control.AutoSize%2A>  
+ <xref:System.Windows.Forms.Control.PreferredSize%2A>  
  <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

@@ -1,40 +1,31 @@
 ---
-title: "如何︰ 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic) |Microsoft 文件"
+title: "如何： 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e4c41cc3813a9f96d944d115c6aaa5c5842a629b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a9b96e8acf9f5453ac035769ea7b279c4fedadfb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何︰ 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic)
-在非同步方法，在建立時即會啟動工作。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子會套用至方法中的點，而無法繼續處理直到工作完成工作。 通常工作會等候由於它建立，如下列範例所示。  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何： 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic)
+在非同步方法中，工作會在建立後啟動。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子會套用至其中程序無法繼續直到完成工作的方法中的點工作。 通常，工作會在建立後等候完成，如下列範例所示。  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
 ```  
   
- 不過，您可以將建立不相關的工作完成從等候工作，如果您的程式有其他工作来完成工作。  
+ 不過，如果您的程式有其他要完成的工作不需要等候此工作完成，您可以將建立工作與等候工作分開進行。  
   
 ```vb  
 ' The following line creates and starts the task.  
@@ -49,30 +40,30 @@ Dim myTask = someWebAccessMethodAsync(url)
 Dim result = Await myTask  
 ```  
   
- 啟動工作和之間等候它，您可以啟動其他工作。 以平行方式，以隱含方式執行的其他工作，但沒有其他執行緒會建立。  
+ 從工作啟動到等候完成的這段期間，您可以啟動其他工作。 其他工作會以隱含方式平行執行，但不會建立其他任何執行緒。  
   
- 下列程式會啟動三個非同步 web 下載項目，然後等候它們在所呼叫的順序。 請注意，當您執行的程式，工作不一定都他們所建立，以及等候完成。 便會開始執行時建立的與之前的方法到達 await 運算式，則可能會完成一或多個工作。  
+ 下列程式會啟動三個非同步的網頁下載，然後依呼叫順序等候完成。 請注意，當您執行此程式時，這些工作不一定會依建立和等候順序完成。 這些工作會在建立後開始執行，而且其中一或多個工作可能會在此方法到達 await 運算式之前就已完成。  
   
 > [!NOTE]
->  若要完成此專案，您必須擁有 Visual Studio 2012 或更新版本和.NET Framework 4.5 或更新版本安裝在電腦上。  
+>  若要完成此專案，您必須在電腦上安裝 Visual Studio 2012 或更高版本以及 .NET Framework 4.5 或更高版本。  
   
- 如需同時啟動多個工作的其他範例，請參閱[How to︰ 擴充非同步逐步解說使用 Task.WhenAll (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+ 如需同時啟動多個工作的其他範例，請參閱[如何： 擴充非同步逐步解說使用 task.whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
   
- 您可以下載這個範例中的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=254906)。  
+ 您可以從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=254906)下載此範例的程式碼。  
   
 ### <a name="to-set-up-the-project"></a>若要設定專案  
   
-1.  若要設定 WPF 應用程式，請完成下列步驟。 您可以找到這些步驟的詳細的指示[逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic) 的](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1.  若要設定 WPF 應用程式，請完成下列步驟。 您可以找到這些步驟的詳細的指示[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   建立 WPF 應用程式，其中包含一個文字方塊和按鈕。 將按鈕`startButton`，並將文字方塊`resultsTextBox`。  
+    -   建立 WPF 應用程式，其中包含一個文字方塊和一個按鈕。 將按鈕命名為 `startButton`，並將文字方塊命名為 `resultsTextBox`。  
   
-    -   加入<xref:System.Net.Http>.</xref:System.Net.Http>的參考  
+    -   加入 <xref:System.Net.Http> 的參考。  
   
     -   在 MainWindow.xaml.vb 檔案中，加入`Imports`陳述式`System.Net.Http`。  
   
-### <a name="to-add-the-code"></a>若要加入程式碼  
+### <a name="to-add-the-code"></a>新增程式碼  
   
-1.  在 [設計] 視窗，MainWindow.xaml，連按兩下按鈕，以建立`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
+1.  在 [設計] 視窗 MainWindow.xaml 中，按兩下按鈕以建立`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
   
 2.  下列程式碼中，複製並貼到主體`startButton_Click`MainWindow.xaml.vb 中。  
   
@@ -82,15 +73,15 @@ Dim result = Await myTask
     resultsTextBox.Text &= vbCrLf & "Control returned to button1_Click."  
     ```  
   
-     程式碼會呼叫非同步方法， `CreateMultipleTasksAsync`，哪些磁碟機的應用程式。  
+     此程式碼會呼叫非同步方法 `CreateMultipleTasksAsync` 來驅動應用程式。  
   
-3.  將下列的支援方法加入至專案︰  
+3.  將下列支援方法新增至專案：  
   
-    -   `ProcessURLAsync`使用<xref:System.Net.Http.HttpClient>方法，以下載網站，以做為位元組陣列的內容。</xref:System.Net.Http.HttpClient> 支援的方法，`ProcessURLAsync`然後顯示，並傳回陣列的長度。  
+    -   `ProcessURLAsync` 使用 <xref:System.Net.Http.HttpClient> 方法，將網站內容下載為位元組陣列。 然後，支援方法 `ProcessURLAsync` 會顯示並傳回陣列的長度。  
   
-    -   `DisplayResults`顯示每個 URL 位元組陣列中的位元組數目。 每一項工作已下載完成時，這會顯示說明。  
+    -   `DisplayResults` 會顯示每個 URL 的位元組陣列中的位元組數目。 當每個工作完成下載時，即會顯示此畫面。  
   
-     將下列方法中，複製並貼上它們之後`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
+     將下列方法，複製並貼上後`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -112,17 +103,17 @@ Dim result = Await myTask
     End Sub  
     ```  
   
-4.  最後，方法定義`CreateMultipleTasksAsync`，其可執行下列步驟。  
+4.  最後，定義 `CreateMultipleTasksAsync` 方法以執行下列步驟。  
   
-    -   方法宣告`HttpClient`物件，您需要存取方法<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>中`ProcessURLAsync`。</xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>  
+    -   方法宣告 `HttpClient` 物件，需要存取 `ProcessURLAsync` 中的方法<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>。  
   
-    -   此方法會建立並啟動三個類型的工作<xref:System.Threading.Tasks.Task%601>，其中`TResult`是一個整數。</xref:System.Threading.Tasks.Task%601> 隨著每個工作完成，`DisplayResults`會顯示工作的 URL 和下載內容的長度。 因為工作都以非同步方式執行，結果會出現的順序可能會因所宣告的順序。  
+    -   方法會建立並啟動三個 <xref:System.Threading.Tasks.Task%601> 類型的工作，其中 `TResult` 是整數。 當每個工作完成時，`DisplayResults` 會顯示工作的 URL 和下載內容的長度。 因為工作是以非同步方式執行，所以結果出現的順序可能會因宣告的順序而有所不同。  
   
-    -   此方法會等候每個工作的完成。 每個`Await`運算子暫停執行`CreateMultipleTasksAsync`直到等候的工作。 運算子也會擷取傳回值，呼叫`ProcessURLAsync`從每個已完成的工作。  
+    -   此方法會等候每個工作完成。 每個 `Await` 運算子會暫停執行 `CreateMultipleTasksAsync`，直到等候的工作完成為止。 此運算子也會從每個完成的工作擷取透過呼叫 `ProcessURLAsync` 傳回的值。  
   
-    -   當工作完成後，已擷取的整數值的方法加總長度的網站，並顯示結果。  
+    -   完成工作並擷取整數值之後，此方法會加總網站的長度並顯示結果。  
   
-     複製下列的方法，並將它貼到您的方案。  
+     將下列方法複製並貼到您的方案中。  
   
     ```vb  
     Private Async Function CreateMultipleTasksAsync() As Task  
@@ -156,7 +147,7 @@ Dim result = Await myTask
   
 5.  選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
   
-     若要確認三項工作不一定完成相同的順序和它們完成的順序不一定就是建立及等候的順序執行程式數次。  
+     執行此程式幾次，確認這三個工作不一定會依相同順序完成，而且其完成順序不一定是建立和等候順序。  
   
 ## <a name="example"></a>範例  
  下列程式碼包含完整的範例。  
@@ -222,7 +213,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [逐步解說︰ 存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [非同步程式設計使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [如何︰ 使用 Task.WhenAll (Visual Basic) 來擴充非同步逐步解說](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-
+ [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

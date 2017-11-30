@@ -1,46 +1,38 @@
 ---
-title: "建立 Variant 泛型介面 (Visual Basic) |Microsoft 文件"
+title: "建立 Variant 泛型介面 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 324e2a906e84950aa9019bbf68a524458492646e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>建立 Variant 泛型介面 (Visual Basic)
-您可以宣告泛型型別參數，在介面做為 covariant 或 contravariant。 *共變數*允許具有衍生程度較大的傳回型別比泛型型別參數所定義的介面方法。 *反變數*允許其較少衍生的泛型參數所指定的引數型別介面方法。 泛型介面具有 covariant 或 contravariant 的泛型型別參數呼叫*變異*。  
+您可以在介面中將泛型型別參數宣告為 Covariant 或 Contravariant。 「共變數」允許介面方法具有比泛型型別參數衍生程度更大的傳回型別。 「反變數」允許介面具有比泛型參數所指定引數型別衍生程度更小的引數類型。 具有 Covariant 或 Contravariant 泛型型別參數的泛型介面稱為「變異」。  
   
 > [!NOTE]
->  .NET framework 4 引入變異數支援數個現有的泛型介面。 .NET Framework 中的 variant 介面清單，請參閱[泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
+>  .NET Framework 4 引入了對於數個現有泛型介面的變異數支援。 .NET Framework 中的 variant 介面清單，請參閱[泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
   
-## <a name="declaring-variant-generic-interfaces"></a>宣告的 Variant 泛型介面  
- 您可以使用宣告 variant 泛型介面`in`和`out`泛型型別參數的關鍵字。  
+## <a name="declaring-variant-generic-interfaces"></a>宣告 Variant 泛型介面  
+ 您可以使用泛型型別參數的 `in` 和 `out` 關鍵字宣告 Variant 泛型介面。  
   
 > [!IMPORTANT]
->  `ByRef`在 Visual Basic 中的參數不能變體。 實值型別也不支援變異數。  
+>  `ByRef`在 Visual Basic 中的參數不可以是變數。 實值型別也不支援變異數。  
   
- 您可以宣告泛型型別參數 covariant 使用`out`關鍵字。 共變數的型別必須滿足下列條件︰  
+ 您可以使用 `out` 關鍵字將泛型型別參數宣告為 Covariant 。 Covariant 類型必須滿足下列條件︰  
   
--   型別是只用來做為介面方法的傳回型別，而不使用為方法引數的型別。 下列範例中，在其中所示的型別`R`宣告共變性。  
+-   類型僅用為介面方法的傳回型別，不用為方法引數的類型。 這說明於下列範例中，其中 `R` 類型已宣告為 Covariant。  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -50,7 +42,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
-     這個規則只有一個例外。 如果您有 contravariant 泛型委派做為方法參數，您可以使用泛型型別參數類型的委派。 說明這種型別所`R`在下列範例中。 如需詳細資訊，請參閱[委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[Func 與 Action 委派 (Visual Basic) 使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+     這個規則只有一個例外。 如果您以 Contravariant 泛型委派作為方法參數，則可將類型用作委派的泛型型別參數。 以下範例的 `R` 類型說明這種情況： 如需詳細資訊，請參閱[委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[Func 與 Action 委派 (Visual Basic) 使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -58,7 +50,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
--   型別不是做為泛型條件約束的介面方法。 下列程式碼所示。  
+-   類型不會用作介面方法的泛型條件約束。 下列程式碼說明此情形。  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -69,7 +61,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
- 您可以使用宣告泛型型別參數 contravariant`in`關鍵字。 可以使用 contravariant 類型，只為方法引數的型別，而不是介面方法的傳回型別。 Contravariant 類型也用於泛型條件約束。 下列程式碼示範如何宣告逆變性介面，並使用其中一個方法的泛型條件約束。  
+ 您可以使用 `in` 關鍵字將泛型型別參數宣告為 Contravariant 。 Contravariant 類型僅可用作方法引數的類型，而不能用作介面方法的傳回型別。 Contravariant 類型也用於泛型條件約束。 下列程式碼示範如何宣告 Contravariant 介面，並針對其中一個方法使用泛型條件約束。  
   
 ```vb  
 Interface IContravariant(Of In A)  
@@ -80,7 +72,7 @@ Interface IContravariant(Of In A)
 End Interface  
 ```  
   
- 它也可支援共變數和反變數相同的介面，但在不同的型別參數，如下列程式碼範例所示。  
+ 也可以在相同介面中同時支援共變數和反變數，但是對於不同的型別參數，如下列程式碼範例所示。  
   
 ```vb  
 Interface IVariant(Of Out R, In A)  
@@ -90,7 +82,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- 在 Visual Basic 中，您無法宣告 variant 介面中的事件，但未指定的委派型別。 此外，類別、 列舉或結構，變異數介面不能有巢狀，但它可以有巢狀介面。 下列程式碼所示。  
+ 在 Visual Basic 中，您無法宣告 variant 介面中的事件，但未指定委派類型。 此外，類別、 列舉或結構，variant 介面不能有巢狀，但它可以有巢狀介面。 下列程式碼說明此情形。  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -114,7 +106,7 @@ End Interface
 ```  
   
 ## <a name="implementing-variant-generic-interfaces"></a>實作 Variant 泛型介面  
- 您可以使用相同語法不變的介面是用於類別中實作 variant 泛型介面。 下列程式碼範例示範如何實作泛型類別中的共變數的介面。  
+ 您可以使用用於非變異介面的相同語法，在類別中實作 Variant 泛型介面。 下列程式碼範例示範如何在泛型類別中實作 Covariant 介面。  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -130,7 +122,7 @@ Class SampleImplementation(Of R)
 End Class  
 ```  
   
- 類別可實作 variant 介面都是不變。 例如，試想下列程式碼。  
+ 實作 Variant 介面的類別為非變異。 例如，試想下列程式碼。  
   
 ```vb  
  The interface is covariant.  
@@ -146,8 +138,8 @@ Dim button As SampleImplementation(Of Button) =
 ' Dim obj As SampleImplementation(Of Object) = button  
 ```  
   
-## <a name="extending-variant-generic-interfaces"></a>擴充的 Variant 泛型介面  
- 當您擴充 variant 泛型介面時，您必須使用`in`和`out`關鍵字明確指定衍生的介面是否支援變異數。 編譯器不會推斷要擴充的介面中的變異數。 例如，請考慮下列介面。  
+## <a name="extending-variant-generic-interfaces"></a>擴充 Variant 泛型介面  
+ 當您擴充 Variant 泛型介面時，必須使用 `in` 和 `out` 關鍵字明確指定衍生的介面是否支援變異數。 編譯器不會從要擴充的介面推斷變異數。 例如，請參考下列介面。  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -162,9 +154,9 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- 在`Invariant(Of T)`介面，泛型型別參數`T`不變，而在`IExtCovariant (Of Out T)`型別參數是共變數，雖然這兩個介面擴充相同的介面。 相同的規則會套用至 contravariant 泛型類型參數。  
+ 在`Invariant(Of T)`介面，泛型型別參數`T`為非變異值，而在`IExtCovariant (Of Out T)`型別參數是共變數，雖然這兩個介面擴充相同的介面。 相同的規則也套用至 Contravariant 泛型型別參數。  
   
- 您可以擴充泛型型別參數的兩個介面的介面建立`T`是 covariant 和介面反變數中的擴充介面的泛型型別參數`T`不變。 下列程式碼範例所示。  
+ 您可以建立介面，以便擴充 `T` 泛型型別參數為 Covariant 的介面，以及如果在擴充介面中， `T` 泛型型別參數為非變異的情況下，擴充其為 Contravariant 的介面。 下列程式碼範例說明此情形。  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -178,7 +170,7 @@ Interface IInvariant(Of T)
 End Interface  
 ```  
   
- 不過，如果泛型型別參數`T`是共變數的宣告一個介面，您無法將其宣告逆變性在擴充的介面，反之亦然。 下列程式碼範例所示。  
+ 不過，如果 `T` 泛型型別參數在一個介面中宣告為 Covariant，則無法在擴充的介面中將它宣告為 Contravariant，反之亦然。 下列程式碼範例說明此情形。  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -190,13 +182,13 @@ End Interface
 ' End Interface  
 ```  
   
-### <a name="avoiding-ambiguity"></a>避免模稜兩可  
- 當您實作 variant 泛型介面時，變異數有時會導致模稜兩可。 對此應該要設法避免。  
+### <a name="avoiding-ambiguity"></a>避免語意模糊  
+ 當您實作 Variant 泛型介面時，變異數有時會導致語意模糊。 對此應該要設法避免。  
   
- 例如，如果您明確地實作相同 variant 泛型介面具有不同的泛型型別參數，一個類別中，它可以建立模稜兩可。 編譯器不會在此情況下，產生錯誤，但未指定的介面實作，則會選擇在執行階段。 這可能會導致您的程式碼中的細微錯誤。 請考慮下列程式碼範例。  
+ 例如，如果您在一個類別中，明確地實作相同 Variant 泛型介面與不同泛型型別參數，它可能會造成語意模糊。 在此情況下，編譯器不會產生錯誤，但未指定在執行階段將選擇哪個介面實作。 這可能會導致您的程式碼中有細微錯誤。 請參考下列程式碼範例。  
   
 > [!NOTE]
->  使用`Option Strict Off`，Visual Basic 會產生編譯器警告，當模稜兩可的介面實作。 使用`Option Strict On`，Visual Basic 會產生編譯器錯誤。  
+>  與`Option Strict Off`，Visual Basic 會產生編譯器警告，模稜兩可的介面實作時。 與`Option Strict On`，Visual Basic 會產生編譯器錯誤。  
   
 ```vb  
 ' Simple class hierarchy.  
@@ -240,8 +232,8 @@ Sub Main()
 End Sub  
 ```  
   
- 在此範例中，並未指定如何`pets.GetEnumerator`方法之間選擇`Cat`和`Dog`。 在程式碼中，這可能會造成問題。  
+ 在此範例中，並未指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之間選擇。 這可能會在程式碼中造成問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
- [針對 Func 與 Action 委派 (Visual Basic) 中使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+ [泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

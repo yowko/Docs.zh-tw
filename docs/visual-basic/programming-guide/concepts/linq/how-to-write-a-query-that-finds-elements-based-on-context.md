@@ -1,28 +1,24 @@
 ---
-title: "如何︰ 撰寫查詢，以尋找項目根據內容 (Visual Basic) |Microsoft 文件"
+title: "如何： 撰寫查詢來尋找元素根據內容 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c26a6f0debd165a925bf45e2ac5063e1afff693f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 635a8c06d5ad928e192b8cd15862aa02192f94d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>如何︰ 撰寫查詢，以尋找項目根據內容 (Visual Basic)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>如何： 撰寫查詢來尋找元素根據內容 (Visual Basic)
 有時候您可能必須撰寫會依其內容選取項目的查詢。 您可能想要依據前面或後面的同層級項目進行篩選。 您可能想要依據子系或祖系項目進行篩選。  
   
  您僅能撰寫查詢並使用 `where` 子句中的查詢結果來達到這個目的。 如果您必須先依據 Null 進行測試，然後再測試值，在 `let` 子句中進行查詢，然後使用 `where` 子句中的結果會比較方便。  
@@ -60,7 +56,6 @@ Dim items As IEnumerable(Of XElement) = _
 For Each e As XElement In items  
     Console.WriteLine("id = {0}", e.@<id>)  
 Next  
-  
 ```  
   
  此程式碼會產生下列輸出：  
@@ -121,8 +116,8 @@ id = 6
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement.Parse%2A></xref:System.Xml.Linq.XElement.Parse%2A>   
- <xref:System.Xml.Linq.XContainer.Descendants%2A></xref:System.Xml.Linq.XContainer.Descendants%2A>   
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A></xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>   
- <xref:System.Linq.Enumerable.FirstOrDefault%2A></xref:System.Linq.Enumerable.FirstOrDefault%2A>   
+ <xref:System.Xml.Linq.XElement.Parse%2A>  
+ <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+ <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
  [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

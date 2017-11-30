@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 合併和比較字串集合 (LINQ) (Visual Basic) |Microsoft 文件"
+title: "如何： 合併和比較字串集合 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7240f9a8923060634e8824f2516c220b376e2e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何︰ 合併和比較字串集合 (LINQ) (Visual Basic)
-這個範例示範如何合併檔案包含的文字行，然後對結果進行排序。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、 等位和交集。  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何： 合併和比較字串集合 (LINQ) (Visual Basic)
+本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>若要設定專案和文字檔案  
+### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案  
   
-1.  這些名稱複製到名為 names1.txt 的文字檔，並將它儲存到專案資料夾中︰  
+1.  將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  這些名稱複製到名為 names2.txt 的文字檔，並將它儲存到專案資料夾中。 請注意兩個檔案有共同的部分名稱。  
+2.  將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾。 請注意兩個檔案有部分名稱相同。  
   
     ```  
     Liu, Jinghao  
@@ -180,8 +172,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

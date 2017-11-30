@@ -1,56 +1,55 @@
 ---
-title: "How to: Create a Procedure that Returns a Value (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "procedures, returning a value"
+title: "如何：建立傳回值的程序 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 787eddc1fd1cdb9dd6b655a8556b75044b2a49dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Procedure that Returns a Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-使用 `Function` 程序，將值傳回給呼叫程式碼。  
+# <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>如何：建立傳回值的程序 (Visual Basic)
+您使用`Function`程序來將值傳回給呼叫程式碼。  
   
-### 若要建立傳回值的程序  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>若要建立程序傳回值  
   
-1.  在任何其他程序之外，使用後面緊接 `End Function` 陳述式 \(Statement\) 的 `Function` 陳述式。  
+1.  任何其他程序，之外使用`Function`陳述式，後面接著`End Function`陳述式。  
   
-2.  在 `Function` 陳述式中，於 `Function` 關鍵字後面緊接著程序名稱，然後是用括號括住的參數清單。  
+2.  在`Function`陳述式，請遵循`Function`關鍵字與程序，然後按一下 參數清單括號括住的名稱。  
   
-3.  在括號後面緊接著 `As` 子句，以指定傳回值的資料型別。  
+3.  括號後面`As`子句來指定傳回值的資料類型。  
   
-4.  將程序的程式碼陳述式放在 `Function` 與 `End Function` 陳述式之間。  
+4.  放置程序的程式碼陳述式之間`Function`和`End Function`陳述式。  
   
-5.  使用 `Return` 陳述式，將值傳回給呼叫程式碼。  
+5.  使用`Return`陳述式來將值傳回給呼叫程式碼。  
   
-     下列 `Function` 程序會在已知其他兩邊值的情況下，計算直角三角形的最長邊 \(也稱為斜邊\)。  
+     下列`Function`已知值的其他兩個邊直角三角形斜邊的最長邊，程序會計算。  
   
      [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_1.vb)]  
   
-     下列範例顯示  `hypotenuse` 的典型呼叫。  
+     下列範例會示範一般呼叫`hypotenuse`。  
   
      [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_2.vb)]  
   
-## 請參閱  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [屬性程序](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md)   
- [How to: Return a Value from a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-return-a-value-from-a-procedure.md)   
- [How to: Call a Procedure That Returns a Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-procedure-that-returns-a-value.md)
+## <a name="see-also"></a>另請參閱  
+ [程序](./index.md)  
+ [Sub 程序](./sub-procedures.md)  
+ [屬性程序](./property-procedures.md)  
+ [運算子程序](./operator-procedures.md)  
+ [程序參數和引數](./procedure-parameters-and-arguments.md)  
+ [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [如何：傳回程序的值](./how-to-return-a-value-from-a-procedure.md)  
+ [如何：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)

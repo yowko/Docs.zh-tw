@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 0dea6233f2a13bd3b6c7e33ebf9ee1c96dae7577
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 74c7974f5f10a507f5344b9686c22015e381b27d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>HOW TO：覆寫已編碼的 SOAP XML 序列化
 [程式碼範例](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
@@ -294,10 +288,9 @@ public class Run
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)   
- [以 XML Web 服務進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)   
- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)   
+ [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [以 XML Web 服務進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+ [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
  [如何：將物件序列化為 SOAP 編碼的 XML 資料流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
-

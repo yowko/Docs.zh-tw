@@ -3,22 +3,20 @@ title: "選擇式序列化"
 ms.date: 08/07/2017
 ms.prod: .net
 ms.topic: article
-dev_langs:
-- CSharp
+dev_langs: CSharp
 helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 5cf437604f3072f3dec7b15897fcf5b6788289f0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f583c0c7f2895b16ac0aea883dd98b4768179127
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="selective-serialization"></a>選擇式序列化
 類別經常包含不應序列化的欄位。 例如，假設類別在成員變數中儲存執行緖 ID。 當類別還原序列化時，類別在序列化時儲存識別碼的執行緒可能已不再執行，因此序列化此值就沒有意義。 您可以使用 [NonSerialized](xref:System.NonSerializedAttribute) 屬性標示成員變數，避免成員變數遭到序列化，如下所示。  
@@ -38,6 +36,6 @@ public class MyObject
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 ## <a name="see-also"></a>請參閱  
- [二進位序列化](binary-serialization.md)   
- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)   
+ [二進位序列化](binary-serialization.md)  
+ [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
  [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)

@@ -1,38 +1,21 @@
 ---
-title: "Public 成員 &quot;&lt;membername&gt;&quot;on type&quot;&lt;typename&gt;&quot; 找不到 |Microsoft 文件"
-ms.date: 2015-07-20
+title: "Public 成員 &#39;&lt;membername&gt;&#39; 類型 &#39;&lt;typename&gt;&#39; 找不到"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrMissingMember_MemberNotFoundOnType2
+f1_keywords: vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aef57e597233e6179bc1a00b28182b46bb53cc59
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ca0ac50c9834bcf051d4e0f15409dd26a99046ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a>Public 成員 '&lt;membername&gt;'on type'&lt;typename&gt;' 找不到
+# <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a>Public 成員 &#39;&lt;membername&gt;&#39; 類型 &#39;&lt;typename&gt;&#39; 找不到
 找不到您嘗試存取的成員。 存取晚期繫結物件的非公用成員時，就會發生這個錯誤。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -40,5 +23,5 @@ ms.lasthandoff: 03/13/2017
 1.  如果成員存在，請確定它已宣告為 `Public`。  
   
 ## <a name="see-also"></a>另請參閱  
- [公用](../../visual-basic/language-reference/modifiers/public.md)   
+ [Public](../../visual-basic/language-reference/modifiers/public.md)  
  [早期和晚期繫結](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
