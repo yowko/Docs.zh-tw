@@ -1,37 +1,39 @@
 ---
-title: "如何：將樹狀檢視繫結至未知深度的資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView 控制項 [WPF], 繫結至未知深度的資料"
+title: "如何：將樹狀檢視繫結至未知深度的資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b16cae3a91eae73a4480484d89bb075862256b25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將樹狀檢視繫結至未知深度的資料
-有時您會想要將 <xref:System.Windows.Controls.TreeView> 繫結至資料深度未知的資料來源。  當資料具有遞迴的性質時，就可能發生這種情況。這類資料的範例包括檔案系統 \(資料夾能包含資料夾\)、公司組織結構 \(任何員工都有可能是其他員工的直屬上級\) 等等。  
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>如何：將樹狀檢視繫結至未知深度的資料
+有時當您想要繫結<xref:System.Windows.Controls.TreeView>深度不知道資料來源。  發生這個問題的資料是遞迴的本質，例如檔案系統，其中的資料夾可以包含資料夾或公司的組織結構，其中員工的直屬員工的其他員工。  
   
- 資料來源必須有階層式物件模型 \(Object Model\)。  舉例來說，`Employee` 類別可能包含本身為直屬報告者員工之 Employee 物件的集合。  如果資料的表示方式不是階層式，您就必須建置資料的階層式表示。  
+ 資料來源必須具有階層式物件模型。 例如，`Employee`類別可能包含員工的直屬員工的員工物件的集合。 如果資料以不是階層式的方式表示，您必須建置資料的階層式表示法。  
   
- 當您設定 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=fullName> 屬性時，如果 <xref:System.Windows.Controls.ItemsControl> 為每個子項目產生 <xref:System.Windows.Controls.ItemsControl>，則子系 <xref:System.Windows.Controls.ItemsControl> 會使用和父代一樣的 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>。  舉例來說，如果您在資料繫結 <xref:System.Windows.Controls.TreeView> 上設定 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 屬性，則每一個產生的 <xref:System.Windows.Controls.TreeViewItem> 都會使用已指派給 <xref:System.Windows.Controls.TreeView> 之 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 屬性的 <xref:System.Windows.DataTemplate>。  
+ 當您將<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=nameWithType>屬性，而且當<xref:System.Windows.Controls.ItemsControl>產生<xref:System.Windows.Controls.ItemsControl>每個子項目，則子系<xref:System.Windows.Controls.ItemsControl>會使用相同<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>做為父系。 例如，如果您設定<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>資料繫結上的屬性<xref:System.Windows.Controls.TreeView>，每個<xref:System.Windows.Controls.TreeViewItem>也就是產生的使用<xref:System.Windows.DataTemplate>，已指派給<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>屬性<xref:System.Windows.Controls.TreeView>。  
   
- <xref:System.Windows.HierarchicalDataTemplate> 可以讓您在資料樣板 \(Template\) 上指定 <xref:System.Windows.Controls.TreeViewItem> 的 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>，或是任何 <xref:System.Windows.Controls.HeaderedItemsControl>。  如果您設定 <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=fullName> 屬性，則在套用 <xref:System.Windows.HierarchicalDataTemplate> 的時候才會使用這個屬性值。  藉由使用 <xref:System.Windows.HierarchicalDataTemplate>，您就可以在 <xref:System.Windows.Controls.TreeView> 中為每個 <xref:System.Windows.Controls.TreeViewItem> 遞迴設定 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。  
+ <xref:System.Windows.HierarchicalDataTemplate>可讓您指定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>如<xref:System.Windows.Controls.TreeViewItem>，或任何<xref:System.Windows.Controls.HeaderedItemsControl>，資料範本。 當您將<xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=nameWithType>屬性的值時使用<xref:System.Windows.HierarchicalDataTemplate>套用。 使用<xref:System.Windows.HierarchicalDataTemplate>，您可以以遞迴方式組<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>每個<xref:System.Windows.Controls.TreeViewItem>中<xref:System.Windows.Controls.TreeView>。  
   
-## 範例  
- 在下列範例中，會示範如何將 <xref:System.Windows.Controls.TreeView> 繫結至階層式資料，並使用 <xref:System.Windows.HierarchicalDataTemplate> 來為每個 <xref:System.Windows.Controls.TreeViewItem> 指定 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。  <xref:System.Windows.Controls.TreeView> 會繫結至表示公司員工的 XML 資料。  每個 `Employee` 項目都能包含其他 `Employee` 項目來表示直屬報告者。  因為是遞迴性資料，所以每一層都能套用 <xref:System.Windows.HierarchicalDataTemplate>。  
+## <a name="example"></a>範例  
+ 下列範例示範如何將繫結<xref:System.Windows.Controls.TreeView>階層式資料和使用<xref:System.Windows.HierarchicalDataTemplate>指定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>每個<xref:System.Windows.Controls.TreeViewItem>。  <xref:System.Windows.Controls.TreeView>繫結至 XML 資料表示公司的員工。  每個`Employee`元素可包含其他`Employee`表示人員報告對項目。 因為資料是遞迴，<xref:System.Windows.HierarchicalDataTemplate>可以套用至每個層級。  
   
- [!code-xml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
-## 請參閱  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)

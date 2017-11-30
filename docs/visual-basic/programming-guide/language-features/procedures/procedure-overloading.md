@@ -1,105 +1,104 @@
 ---
-title: "Procedure Overloading (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "signatures"
-  - "Overloads keyword"
-  - "hiding by signature"
-  - "Visual Basic code, procedures"
-  - "procedures, signatures for"
-  - "procedures, overloading"
-  - "procedures, multiple versions"
-  - "parameters, lists"
-  - "signatures, procedure"
-  - "parameter lists"
-  - "Visual Basic code, parameter lists"
-  - "Shadows keyword"
-  - "procedure overloading"
-  - "procedures, parameter lists"
+title: "程序多載化 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- signatures
+- Overloads keyword [Visual Basic]
+- hiding by signature
+- Visual Basic code, procedures
+- procedures [Visual Basic], signatures for
+- procedures [Visual Basic], overloading
+- procedures [Visual Basic], multiple versions
+- parameters [Visual Basic], lists
+- signatures [Visual Basic], procedure
+- parameter lists [Visual Basic]
+- Visual Basic code, parameter lists
+- Shadows keyword [Visual Basic]
+- procedure overloading
+- procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Procedure Overloading (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-將程序「*多載化*」\(Overloading\)，表示使用同一個名稱但不同的參數清單，定義多個版本的程序。  多載化的目的是定義數個密切相關的程序版本，而不需以名稱區隔它們。  您可以修改參數清單以達到這個目的。  
+# <a name="procedure-overloading-visual-basic"></a>程序多載化 (Visual Basic)
+*多載*程序會表示定義在多個版本中，使用相同名稱但不同參數清單。 多載的用途是定義程序的數個密切相關的版本，而不需要加以區分名稱。 您可以不同的參數清單。  
   
-## 多載化規則  
- 當您多載化一個程序時，可套用下列規則：  
+## <a name="overloading-rules"></a>多載規則  
+ 當您多載程序時，適用下列規則：  
   
--   **相同名稱**：  每一個多載化版本必須使用相同的程序名稱。  
+-   **相同名稱**。 每個多載的版本必須使用相同的程序名稱。  
   
--   **不同的簽章**：  每一個多載化版本至少必須在下列其中一方面不同於其他多載化版本：  
+-   **不同的簽章**。 每個多載的版本必須與所有其他多載版本中至少一個下列方面不同：  
   
-    -   參數的數目  
+    -   參數數目  
   
     -   參數的順序  
   
-    -   參數的資料型別  
+    -   參數的資料類型  
   
-    -   型別參數的數目 \(適用於泛型程序\)  
+    -   （適用於泛型程序） 的型別參數數目  
   
-    -   傳回型別 \(僅適用於轉換運算子\)  
+    -   （僅適用於轉換運算子） 的傳回型別  
   
-     當前述項目與程序名稱搭配使用時，總稱為程序的「*簽章*」\(Signature\)。  呼叫多載程序時，編譯器會使用簽章來檢查呼叫是否正確符合定義。  
+     統稱為 「 程序名稱，以及先前的項目*簽章*程序。 當您呼叫多載的程序時，編譯器會用來檢查呼叫正確符合定義的簽章。  
   
--   **不屬於簽章一部分的項目**：  您無法不改變簽章而多載化一個程序。  尤其無法只改變下列一個或幾個項目以多載化一個程序：  
+-   **項目不屬於簽章**。 您無法多載程序，而不改變簽章。 特別是，您無法只改變一個或多個下列項目來多載程序：  
   
-    -   程序修飾詞關鍵字，例如 `Public`、`Shared` 和 `Static`  
+    -   程序修飾詞關鍵字，例如`Public`， `Shared`，和`Static`  
   
     -   參數或型別參數名稱  
   
-    -   型別參數限制 \(適用於泛型程序\)  
+    -   類型參數條件約束 （適用於泛型程序）  
   
-    -   參數修飾詞關鍵字，如 `ByRef` 和 `Optional`  
+    -   參數修飾詞關鍵字，例如`ByRef`和`Optional`  
   
-    -   是否傳回值  
+    -   傳回值  
   
-    -   傳回值的資料型別 \(轉換運算子除外\)。  
+    -   傳回值 （除了轉換運算子） 的資料類型  
   
-     上一張清單內的項目不是簽章的一部分。  雖然無法用它們來區隔多載版本，不過您可在已按簽章適當區隔的多載版本中，改變這些項目。  
+     上述清單中的項目不是簽章的一部分。 雖然您無法使用它們來區別多載版本，您可以將它們異正確簽章來區分的多載版本。  
   
--   **晚期繫結引數**：  如果您要將晚期繫結物件變數傳遞到多載版本，必須將適當的參數宣告為 <xref:System.Object>。  
+-   **晚期繫結引數**。 如果您想要將晚期繫結的物件變數傳遞給一個多載版本，您必須宣告適當的參數為<xref:System.Object>。  
   
-## 程序的多個版本  
- 假設您根據客戶的收支來撰寫一個 `Sub` 程序以公佈其異動，而且您希望可以用名稱或帳號代表該客戶。  要做到這一點，您可以定義兩個不同的 `Sub` 程序，如下列範例所示：  
+## <a name="multiple-versions-of-a-procedure"></a>多個版本的程序  
+ 假設您要撰寫`Sub`程序以公佈交易中針對客戶的平衡，而您想要能夠依名稱或帳戶是指客戶。 若要做到這一點，您可以定義兩個不同`Sub`程序，如下列範例所示：  
   
  [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
-### 多載版本  
- 另一個替代方式是多載化單一程序名稱。  您可以使用 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 關鍵字來為每一個參數清單定義該程序的版本，如下所示：  
+### <a name="overloaded-versions"></a>多載的版本  
+ 替代方法是將多載的單一程序名稱。 您可以使用[多載](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字來定義為每個參數清單中，程序的版本，如下所示：  
   
  [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
-#### 其他多載  
- 如果您也想以 `Decimal` 或 `Single` 接受交易數量，可以進一步多載化 `post` 以允許這個變化。  如果您在上一個範例中對每一個多載化這麼做，就會得到四個有相同名稱，但不同簽章的 `Sub` 程序。  
+#### <a name="additional-overloads"></a>其他多載  
+ 如果您也想要接受在交易量`Decimal`或`Single`，您無法進一步多載`post`以便進行這項差異。 如果您已將每個在上述範例中的多載有四個`Sub`程序有相同的名稱，但具有四個不同的簽章。  
   
-## 多載化的優點  
- 多載化一個程序的好處在於呼叫的彈性。  若要使用在上一個範例中宣告的 `post` 程序，呼叫程式碼可以用 `String` 或 `Integer` 取得客戶識別資訊，不論哪一種方式您都可以呼叫相同的程序。  下面這個範例可說明這點：  
+## <a name="advantages-of-overloading"></a>多載的優點  
+ 多載化程序的優點是在呼叫的彈性。 若要使用`post`程序宣告在上述範例中，呼叫程式碼可以取得客戶識別為`String`或`Integer`，然後在任一情況下呼叫相同的程序。 下面這個範例可說明這點：  
   
  [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
  [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
-## 請參閱  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [How to: Define Multiple Versions of a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)   
- [How to: Call an Overloaded Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-overloaded-procedure.md)   
- [How to: Overload a Procedure that Takes Optional Parameters](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [How to: Overload a Procedure that Takes an Indefinite Number of Parameters](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [Considerations in Overloading Procedures](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)   
- [Overload Resolution](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)   
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)   
- [Visual Basic 中的泛型類型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a>另請參閱  
+ [程序](./index.md)  
+ [如何：定義程序的多個版本](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [如何：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)  
+ [如何：使用選擇性參數的多載程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [如何：多載使用不確定參數數目的程序](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [多載化程序的考慮因素](./considerations-in-overloading-procedures.md)  
+ [多載解析](./overload-resolution.md)  
+ [多載](../../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

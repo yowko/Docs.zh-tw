@@ -1,43 +1,43 @@
 ---
-title: "何時使用 Windows Form ComboBox 取代 ListBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "繫結控制項, 下拉式方塊"
-  - "下拉式方塊, 與清單方塊比較"
-  - "ComboBox 控制項 [Windows Form], 與 ListBox 比較"
-  - "ListBox 控制項 [Windows Form], 存取項目"
-  - "ListBox 控制項 [Windows Form], 加入和移除項目"
-  - "ListBox 控制項 [Windows Form], 與 ComboBox 的比較"
-  - "ListCount 屬性"
-  - "ListIndex 屬性"
-  - "Windows Form 控制項, 資料繫結"
+title: "何時使用 Windows Form ComboBox 取代 ListBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ListBox control [Windows Forms], adding and removing items
+- ListBox control [Windows Forms], vs. ComboBox
+- bound controls [Windows Forms], combo boxes
+- Windows Forms controls, data binding
+- ComboBox control [Windows Forms], compared to ListBox
+- combo boxes [Windows Forms], compared to list boxes
+- ListBox control [Windows Forms], accessing items
+- ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b4eb1ce70b1ec4b249eb126b608c9f8578d327c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 何時使用 Windows Form ComboBox 取代 ListBox
-<xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.ListBox> 控制項的行為類似，而且在部分情況下可予以互換。  然而，它們各有適用的時機。  
+# <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>何時使用 Windows Form ComboBox 取代 ListBox
+<xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>控制項具有類似的行為，並在某些情況下可能會互換。 但有些的時候，不過，當其中一個是更適合工作。  
   
- 一般來說，當有建議的選擇清單時，較適用下拉式方塊，而當想要對清單的內容限制輸入時，則較適用清單方塊。  下拉式方塊包含一個文字方塊欄位，因此可輸入不在清單中的選擇。  不過，當 <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> 屬性設為 <xref:System.Windows.Forms.ComboBoxStyle> 時，則為例外。  如果發生這種情形，當輸入項目的第一個字母時此控制項就會選取該項目。  
+ 一般而言，下拉式方塊是適當的建議的選擇清單，而且當您想要限制清單上的輸入時，清單方塊是適當時。 下拉式方塊包含文字欄位，因此您可以依照輸入不在清單中選擇。 例外狀況是當<xref:System.Windows.Forms.ComboBox.DropDownStyle%2A>屬性設定為<xref:System.Windows.Forms.ComboBoxStyle.DropDownList>。 在此情況下，控制項就會選取項目，如果您輸入其第一個字母。  
   
- 此外，下拉式方塊可節省表單上的空間。  由於完整清單是在使用者按一下向下鍵時才會出現，所以可輕易將下拉式方塊放入無法放入清單方塊的狹小空間。  但是當將 <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> 屬性設為 <xref:System.Windows.Forms.ComboBoxStyle> 時則為例外，此時會顯示完整清單，而且下拉式方塊佔用的空間比清單方塊所佔用的空間還大。  
+ 此外，下拉式方塊會節省表單空間。 未顯示的完整清單，直到使用者按一下向下箭號，因為下拉式方塊可以輕易地容納小的空間，其中不會放在清單方塊中。 例外狀況時，<xref:System.Windows.Forms.ComboBox.DropDownStyle%2A>屬性設定為<xref:System.Windows.Forms.ComboBoxStyle.Simple>： 完整的清單隨即顯示，且會佔用更多空間，而不是清單方塊的下拉式方塊。  
   
-## 請參閱  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- [如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)   
- [如何：排序 Windows Form 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)   
- [用來列出選項的 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ [操作說明：從 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ [操作說明：排序 Windows Forms 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

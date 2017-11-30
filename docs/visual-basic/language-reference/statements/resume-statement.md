@@ -1,76 +1,75 @@
 ---
-title: "Resume Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Resume"
-  - "vb.ResumeNext"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Next statement, Resume"
-  - "Resume Next statement"
-  - "execution, resuming"
-  - "run-time errors, resuming after"
-  - "Resume statement, syntax"
-  - "errors [Visual Basic], resuming after"
-  - "Error statement, and Resume statement"
-  - "execution"
-  - "Resume statement"
+title: "Resume 陳述式"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Resume
+- vb.ResumeNext
+helpviewer_keywords:
+- Next statement [Visual Basic], Resume
+- Resume Next statement [Visual Basic]
+- execution [Visual Basic], resuming
+- run-time errors [Visual Basic], resuming after
+- Resume statement [Visual Basic], syntax
+- errors [Visual Basic], resuming after
+- Error statement [Visual Basic], and Resume statement
+- execution
+- Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Resume Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-在完成錯誤處理常式之後繼續執行。  
+# <a name="resume-statement"></a>Resume 陳述式
+在完成錯誤處理常式之後，請繼續執行。  
   
- 我們建議您使用結構化的例外處理，可能的話，程式碼中，而不是使用非結構化的例外處理和`On Error`和`Resume`陳述式。  如需詳細資訊，請參閱 [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+ 我們建議您使用結構化例外狀況處理，可能的話，程式碼中的，而不是使用非結構化例外狀況處理和`On Error`和`Resume`陳述式。 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Resume [ Next | line ]  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `Resume`  
- 必要項。  如果錯誤發生在與錯誤處理常式相同的程序中，則繼續執行導致錯誤的陳述式。  如果錯誤發生在呼叫的程序中，則從包含錯誤處理常式的程序中最後呼叫的陳述式繼續執行。  
+ 必要項。 如果在相同的程序中的錯誤處理常式發生錯誤，造成錯誤的陳述式將會繼續執行。 如果呼叫的程序中發生錯誤，在最後一次從程序包含錯誤處理常式呼叫的陳述式會繼續執行。  
   
  `Next`  
- 選擇項。  如果錯誤發生在與錯誤處理常式相同的程序中，則繼續執行導致錯誤發生的陳述式後面的陳述式。  如果錯誤發生在呼叫的程序中，則從包含錯誤處理常式 \(或 `On Error Resume Next` 陳述式\) 的程序中最後呼叫的陳述式後面的陳述式繼續執行。  
+ 選擇項。 如果錯誤發生的錯誤處理常式的相同程序中，緊接造成錯誤的陳述式的陳述式將會繼續執行。 如果呼叫的程序中發生錯誤，緊跟在最後一次從程序包含錯誤處理常式呼叫的陳述式的陳述式繼續執行 (或`On Error Resume Next`陳述式)。  
   
  `line`  
- 選擇項。  從必要的 `line` 引數中所指定的那一行繼續執行。  `line` 引數就是行標籤或行號，且必須位在與錯誤處理常式相同的程序中。  
+ 選擇項。 指定在所需的那一行就會繼續執行`line`引數。 `line`引數是行標籤或行號，且必須位於相同的程序的錯誤處理常式。  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  我們建議您使用結構化的例外處理，可能的話，程式碼中，而不是使用非結構化的例外處理和`On Error`和`Resume`陳述式。  如需詳細資訊，請參閱 [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+>  我們建議您使用結構化例外狀況處理，可能的話，程式碼中的，而不是使用非結構化例外狀況處理和`On Error`和`Resume`陳述式。 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
- 如果您在錯誤處理常式以外的位置使用 `Resume` 陳述式，將會發生錯誤。  
+ 如果您使用`Resume`陳述式中任何位置以外的錯誤處理常式中，會發生錯誤。  
   
- `Resume` 陳述式無法在含有 `Try...Catch...Finally` 陳述式的任何程序中使用。  
+ `Resume`陳述式不能包含任何程序在`Try...Catch...Finally`陳述式。  
   
-## 範例  
- 這個範例會使用 `Resume` 陳述式結束程序中的錯誤處理，然後繼續執行造成錯誤的陳述式。  產生錯誤代碼 55，說明如何使用 `Resume` 陳述式。  
+## <a name="example"></a>範例  
+ 這個範例會使用`Resume`結束處理程序中的錯誤，然後再繼續執行造成此錯誤的陳述式的陳述式。 錯誤號碼 55 產生來說明使用`Resume`陳述式。  
   
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
-## 需求  
- **命名空間**：[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>需求  
+ **命名空間：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **組件**：Visual Basic 執行階段程式庫 \(在 Microsoft.VisualBasic.dll 中\)  
+ **組件：** Visual Basic Runtime Library （位於 Microsoft.VisualBasic.dll)  
   
-## 請參閱  
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Error Statement](../../../visual-basic/language-reference/statements/error-statement.md)   
- [On Error Statement](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>另請參閱  
+ [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Error 陳述式](../../../visual-basic/language-reference/statements/error-statement.md)  
+ [On Error 陳述式](../../../visual-basic/language-reference/statements/on-error-statement.md)

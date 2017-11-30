@@ -1,58 +1,56 @@
 ---
-title: "IsTrue Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.istrue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "IsTrue operator"
-  - "OrElse operator [Visual Basic]"
+title: "IsTrue 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.istrue
+helpviewer_keywords:
+- IsTrue operator [Visual Basic]
+- OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c0d261186ce68f06cec95251e815248a189f6da5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# IsTrue Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-判斷運算式是否為 `True`。  
+# <a name="istrue-operator-visual-basic"></a>IsTrue 運算子 (Visual Basic)
+判斷運算式是否為`True`。  
   
- 您無法在程式碼中明確呼叫 `IsTrue`，但 Visual Basic 編譯器 \(Compiler\) 可利用它從 `OrElse` 子句產生程式碼。  如果定義類別或結構，然後在 `OrElse` 子句中使用該型別的變數，則必須在該類別或結構上定義 `IsTrue`。  
+ 您不能呼叫`IsTrue`明確地在您的程式碼，但 Visual Basic 編譯器可以用它來產生程式碼從`OrElse`子句。 如果您定義類別或結構，然後使用 在該類型的變數`OrElse`子句，您必須定義`IsTrue`該類別或結構上。  
   
- 編譯器會將 `IsTrue` 和 `IsFalse` 運算子視為「*相符的配對*」。  這表示如果定義其中一個，也必須定義另一個。  
+ 編譯器會考慮`IsTrue`和`IsFalse`運算子*相符配對*。 這表示，如果您定義其中一個，您也必須定義，另一個。  
   
-## IsTrue 的編譯器用途  
- 定義類別或結構後，可在 `For`、`If`、`Else` `If` 或 `While` 陳述式中，或在 `When` 子句中，使用該型別的變數。  如果您這麼做，編譯器會要求運算子將型別轉換成 `Boolean` 值，如此它才能測試條件。  它會依下列順序搜尋適當的運算子：  
+## <a name="compiler-use-of-istrue"></a>IsTrue 的編譯器使用  
+ 當您已經定義類別或結構時，您可以使用在該類型的變數`For`， `If`， `Else``If`，或`While`陳述式，或在`When`子句。 如果這樣做，編譯器會要求將轉換成您類型的運算子`Boolean`值讓它可以測試條件。 它會搜尋適當的運算子，以下列順序：  
   
-1.  從類別或結構至 `Boolean` 的擴展轉換運算子。  
+1.  擴展的轉換運算子，從您的類別或結構`Boolean`。  
   
-2.  從類別或結構至 `Boolean?` 的擴展轉換運算子。  
+2.  擴展的轉換運算子，從您的類別或結構`Boolean?`。  
   
-3.  類別或結構上的 `IsTrue` 運算子。  
+3.  `IsTrue`上類別或結構的運算子。  
   
-4.  不涉及從 `Boolean` 到 `Boolean?` 之轉換的 `Boolean?` 縮小轉換。  
+4.  若要縮小轉換`Boolean?`並不會從轉換`Boolean`至`Boolean?`。  
   
-5.  從類別或結構至 `Boolean` 的縮小轉換運算子。  
+5.  從您的類別或結構，以縮小轉換運算子`Boolean`。  
   
- 如果您尚未定義任何 `Boolean` 轉換，或 `IsTrue` 運算子，編譯器會發出錯誤信號。  
+ 如果您還沒有定義任何轉換`Boolean`或`IsTrue`運算子，編譯器會發出錯誤信號。  
   
 > [!NOTE]
->  `IsTrue` 運算子可以「*多載*」，也就是，當運算元具備類別或結構的類型時，該類別或結構就可以重新定義其行為。  如果您的程式碼在這種類別或結構上使用此運算子，就一定要先瞭解其重新定義的行為。  如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+>  `IsTrue`運算子可以是*多載*，這表示，類別或結構可以重新定義它的行為時其運算元的該類別或結構的類型。 如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其重新定義的行為。 如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
-## 範例  
- 下列程式碼範例所定義的結構大綱包含 `IsFalse` 和 `IsTrue` 運算子的定義。  
+## <a name="example"></a>範例  
+ 下列程式碼範例定義的結構，其中包含定義外框`IsFalse`和`IsTrue`運算子。  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
   
-## 請參閱  
- [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)   
- [How to: Define an Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md)
+## <a name="see-also"></a>另請參閱  
+ [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)

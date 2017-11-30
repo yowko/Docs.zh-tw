@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 將內容從不同的檔案 (LINQ) (Visual Basic) |Microsoft 文件"
+title: "如何： 將內容從不同的檔案 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 040290eb7ba768585254f92e17360c6f5d273311
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 00a3e776afbed3fd87a1f91eb83ada5d505aadfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何︰ 將內容從不同的檔案 (LINQ) (Visual Basic)
-這個範例會示範如何加入共用常用的值做為相符的索引鍵的兩個以逗號分隔的檔案中的資料。 如果您需要結合來自兩個的試算表資料或從試算表，並從檔案到新的檔案具有另一種格式，這個技巧就很有用。 您可以修改範例以使用任何一種結構化文字。  
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何： 將內容從不同的檔案 (LINQ) (Visual Basic)
+此範例示範如何將兩個逗號分隔檔案中資料的共同值當做相符的索引鍵，聯結這兩個檔案中的資料。 如果您必須將兩個試算表中的資料，或一個試算表和一個不同格式之檔案中的資料合併為新的檔案，這個方法就很有用。 您可以修改範例，以搭配任何類型的結構化文字使用。  
   
-### <a name="to-create-the-data-files"></a>若要建立資料檔案  
+### <a name="to-create-the-data-files"></a>建立資料檔  
   
-1.  將下列幾行複製到名為 scores.csv 檔案，並將它儲存到您的專案資料夾。 檔案代表試算表資料。 第 1 行是學生識別碼和資料行 2 到 5 測驗分數。  
+1.  將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 該檔案代表試算表資料。 第 1 欄是學生的學號，第 2 欄到第 5 欄則是測驗分數。  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ ms.lasthandoff: 03/13/2017
     122, 94, 92, 91, 91  
     ```  
   
-2.  將下列幾行複製到名為 names.csv 檔案，並將它儲存到您的專案資料夾。 檔案代表試算表，其中包含學生的姓氏、 名字和學生識別碼。  
+2.  將下列各行複製到名為 names.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 該檔案代表內含學生姓氏、名字和學號的試算表。  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -135,8 +127,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

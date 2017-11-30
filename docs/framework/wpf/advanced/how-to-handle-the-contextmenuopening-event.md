@@ -1,69 +1,71 @@
 ---
-title: "如何：處理 ContextMenuOpening 事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ContextMenuOpening 事件"
+title: "如何：處理 ContextMenuOpening 事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 61048a8db67986c55e1a1b07d62d5142069dd63e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：處理 ContextMenuOpening 事件
-您可以在應用程式中處理 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 事件，以便在顯示之前先調整現有的內容功能表，或是隱藏將在其他事件中透過將 <xref:System.Windows.RoutedEventArgs.Handled%2A> 屬性設定為 `true` 來顯示的功能表。  在事件資料中將 <xref:System.Windows.RoutedEventArgs.Handled%2A> 設定為 `true` 的原因通常是要將功能表全部取代成新的 <xref:System.Windows.Controls.ContextMenu> 物件，而這有時候必須取消作業並啟動新的開啟作業。  如果您撰寫 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 事件的處理常式，應該留意 <xref:System.Windows.Controls.ContextMenu> 控制項與通常負責開啟及定位控制項內容功能表之服務間的時機問題。  本主題說明適用於各種內容功能表開啟案例的部分程式碼技巧，並舉例說明必須注意時機問題的情況。  
+# <a name="how-to-handle-the-contextmenuopening-event"></a>如何：處理 ContextMenuOpening 事件
+<xref:System.Windows.FrameworkElement.ContextMenuOpening>可以處理事件，或是調整現有內容功能表之前，顯示或隱藏的功能表會顯示藉由設定應用程式中<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性`true`事件資料。 設定的一般原因<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`在事件資料的取代完全與新的功能表<xref:System.Windows.Controls.ContextMenu>物件，有時需要取消作業並啟動新的開啟。 如果您撰寫處理常式<xref:System.Windows.FrameworkElement.ContextMenuOpening>事件，您應該留意之間的時間問題<xref:System.Windows.Controls.ContextMenu>控制項和服務負責開啟並定位操作功能表控制項的一般情況下。 本主題說明一些不同的內容功能表開啟案例的程式碼技術，並將說明其中時間問題派上用場的情況。  
   
- 有幾個案例必須處理 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 事件：  
+ 有幾種情況，處理<xref:System.Windows.FrameworkElement.ContextMenuOpening>事件：  
   
--   在顯示之前調整功能表項目。  
+-   調整顯示器之前的功能表項目。  
   
--   在顯示之前取代整個功能表。  
+-   取代整個功能表顯示之前。  
   
--   完全隱藏任何現有的內容功能表，而且不顯示任何內容功能表。  
+-   完全隱藏任何現有的內容功能表，並不顯示任何內容功能表。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-## 在顯示之前調整功能表項目  
- 調整現有的功能表項目相當簡單，而且可能是最常見的案例。  您可以執行這個動作以便增加或減少內容功能表選項，藉以反應應用程式中目前的狀態資訊，或是在要求內容功能表之物件中做為屬性使用的特定狀態資訊。  
+## <a name="adjusting-the-menu-items-before-display"></a>調整顯示器之前的功能表項目  
+ 調整現有的功能表項目相當簡單，可能是最常見的案例。 您可能會執行這項操作才能新增或刪減內容功能表選項，以回應您的應用程式中的目前狀態資訊或可為要求的操作功能表所在之物件的屬性特定的狀態資訊。  
   
- 一般方法是取得事件的來源，也就是以滑鼠右鍵按一下的特定控制項，並從其中取得 <xref:System.Windows.FrameworkElement.ContextMenu%2A> 屬性。  您通常需要檢查 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合，確定功能表中已經存在哪些內容功能表項目，然後在集合中加入或移除適當的新 <xref:System.Windows.Controls.MenuItem> 項目。  
+ 一般的技巧是取得事件的來源，也就是已右鍵特定控制項，以及取得<xref:System.Windows.FrameworkElement.ContextMenu%2A>從它的屬性。 您通常想要檢查<xref:System.Windows.Controls.ItemsControl.Items%2A>集合，查看哪些內容功能表項目已經存在於功能表，然後新增或移除適當新<xref:System.Windows.Controls.MenuItem>或集合的項目。  
   
  [!code-csharp[ContextMenuOpeningHandlers#AddItemNoHandle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#additemnohandle)]  
   
-## 在顯示之前取代整個功能表  
- 另外一個案例是您想取代整個內容功能表。  您當然也可以使用前述程式碼的變化，移除現有內容功能表的每個項目，並從項目零開始加入新項目。  但是取代內容功能表中所有項目比較簡單直接的方法是建立新的 <xref:System.Windows.Controls.ContextMenu>、填入 \(Populate\) 項目，然後將控制項的 <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName> 屬性設定成新的 <xref:System.Windows.Controls.ContextMenu>。  
+## <a name="replacing-the-entire-menu-before-display"></a>取代整個之前顯示功能表  
+ 替代的情況是如果您想要取代整個內容功能表。 然後，您也可以當然使用上述的程式碼的變化來移除現有的內容功能表中的每個項目並加入新的開頭為零的項目。 但更直覺的方法取代內容功能表中的所有項目是建立新<xref:System.Windows.Controls.ContextMenu>，填入項目，然後設定<xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>屬性的新控制項<xref:System.Windows.Controls.ContextMenu>。  
   
- 下面是用來取代 <xref:System.Windows.Controls.ContextMenu> 的簡單處理常式程式碼。  此程式碼參考自訂 `BuildMenu` 方法，將此方法區隔開的原因是呼叫它的範例處理常式超過一個。  
+ 以下是簡單的處理常式程式碼取代<xref:System.Windows.Controls.ContextMenu>。 程式碼參考自訂`BuildMenu`方法，會以區隔出因為它會呼叫一個以上的範例處理常式。  
   
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceNoReopen](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacenoreopen)]  
   
  [!code-csharp[ContextMenuOpeningHandlers#BuildMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#buildmenu)]  
   
- 不過，將這種處理常式樣式用於 <xref:System.Windows.FrameworkElement.ContextMenuOpening>，如果您在其中設定 <xref:System.Windows.Controls.ContextMenu> 的物件沒有已經存在的內容功能表，可能會暴露出時機的問題。  當使用者以滑鼠右鍵按一下控制項時，即使現有的 <xref:System.Windows.Controls.ContextMenu> 是空白或 null，還是會引發 <xref:System.Windows.FrameworkElement.ContextMenuOpening>。  但是在這種情況下，您在來源項目上設定的任何新 <xref:System.Windows.Controls.ContextMenu> 都會因為送達的時間太晚而無法顯示。  此外，如果使用者正好又按了一次滑鼠右鍵，這一次當處理常式再次執行時，您的新 <xref:System.Windows.Controls.ContextMenu> 就會出現，值不是 null，而且處理常式也會正確取代及顯示功能表。  這代表可能的解決辦法有兩種：  
+ 不過，如果您使用這種樣式的處理常式<xref:System.Windows.FrameworkElement.ContextMenuOpening>，您可能可以公開的時間問題，如果您要在此對話方塊設定物件<xref:System.Windows.Controls.ContextMenu>並沒有預先存在的內容功能表。 當使用者以滑鼠右鍵按一下控制項，<xref:System.Windows.FrameworkElement.ContextMenuOpening>引發即使現有<xref:System.Windows.Controls.ContextMenu>為空白或 null。 但在此情況下，任何新<xref:System.Windows.Controls.ContextMenu>您在來源上設定項目太晚抵達時顯示。 此外，如果使用者以滑鼠右鍵按一下第二次，這次您的新<xref:System.Windows.Controls.ContextMenu>出現時，值為非 null，而且您的處理常式會正確取代並時的處理常式會執行第二次顯示功能表。 這可能表示兩個可能的因應措施：  
   
-1.  確定 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 處理常式執行對象一律為至少提供一個替代符號 \(Placeholder\) <xref:System.Windows.Controls.ContextMenu> 的控制項，而您想要將該替代符號取代為處理常式程式碼。  在這種情況下，您還是可以使用上述範例中顯示的處理常式，但是您通常需要在初始標記中指派替代符號 <xref:System.Windows.Controls.ContextMenu>。  
+1.  確保<xref:System.Windows.FrameworkElement.ContextMenuOpening>一律針對具有至少一個預留位置的控制項執行的處理常式<xref:System.Windows.Controls.ContextMenu>可用，其中您想要取代的處理常式程式碼。 在此情況下，您仍然可以使用前一個範例所示的處理常式，但您通常想要指派預留位置<xref:System.Windows.Controls.ContextMenu>在初始標記中：  
   
-     [!code-xml[ContextMenuOpeningHandlers#XAMLWithInitCM](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
+     [!code-xaml[ContextMenuOpeningHandlers#XAMLWithInitCM](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
   
-2.  假設根據某種初步邏輯，初始 <xref:System.Windows.Controls.ContextMenu> 值可能為 null，  您可以檢查 <xref:System.Windows.Controls.ContextMenu> 是否為 null，或是使用程式碼中的旗標檢查處理常式是否已經執行至少一次以上。  由於您認為 <xref:System.Windows.Controls.ContextMenu> 即將顯示，因此處理常式接著會在事件資料中將 <xref:System.Windows.RoutedEventArgs.Handled%2A> 設定為 `true`。  對於負責顯示內容功能表的 <xref:System.Windows.Controls.ContextMenuService> 而言，事件資料中 <xref:System.Windows.RoutedEventArgs.Handled%2A> 的 `true` 值代表要求取消顯示引發此事件的內容功能表\/控制項組合。  
+2.  假設初始<xref:System.Windows.Controls.ContextMenu>值可能是 null，根據一些初步的邏輯。 您可以查看<xref:System.Windows.Controls.ContextMenu>null，或使用的旗標來檢查是否已被您的處理常式程式碼中至少執行一次。 因為您假設<xref:System.Windows.Controls.ContextMenu>即將要顯示，您的處理常式，然後設定<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`事件資料。 若要<xref:System.Windows.Controls.ContextMenuService>負責內容功能表上顯示，`true`值<xref:System.Windows.RoutedEventArgs.Handled%2A>事件中的資料代表的要求取消的顯示內容功能表 / 控制引發事件的組合。  
   
- 現在，您已隱藏了可能有問題的內容功能表，下一個步驟是提供新的功能表，然後再顯示它。  設定新功能表基本上與前面的處理常式相同：您會建置新的 <xref:System.Windows.Controls.ContextMenu>，然後再用它設定控制項來源的 <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName> 屬性。  增加的步驟是您現在必須強制顯示內容功能表，因為您已抑制了第一次的嘗試。  若要強制顯示，請於處理常式內將 <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=fullName> 屬性設定為 `true`。  執行這個步驟時請特別小心，因為在處理常式中開啟內容功能表會再次引發 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 事件。  若您重新進入處理常式，它就會變成無限遞迴。  因此，如果您是從 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 事件處理常式 \(Event Handler\) 開啟內容功能表，請務必檢查 `null` 或使用旗標。  
+ 現在您已隱藏的潛在問題的內容功能表，下一個步驟是提供一個新加以顯示。 設定新的是基本上與前一個處理常式相同： 建置新<xref:System.Windows.Controls.ContextMenu>和設定控制項來源<xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>與其屬性。 額外的步驟是，您現在必須強制顯示的內容功能表中，因為隱藏第一次嘗試。 若要強制顯示，您將<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=nameWithType>屬性`true`在處理常式。 請小心時這樣做，因為開啟內容功能表處理常式中引發<xref:System.Windows.FrameworkElement.ContextMenuOpening>事件一次。 如果您重新輸入您的處理常式，它就會變成無限遞迴。 這就是為什麼您一定要先檢查`null`使用旗標，如果您從 內開啟內容功能表或<xref:System.Windows.FrameworkElement.ContextMenuOpening>事件處理常式。  
   
-## 隱藏任何現有的內容功能表而且不顯示任何內容功能表  
- 最後的案例，也就是撰寫完全隱藏功能表的處理常式，並不常見。  如果指定的控制項不應該顯示內容功能表，除了只在使用者要求時隱藏功能表以外，可能還有更適當的方法可以確保這一點。  但是如果您想使用處理常式隱藏內容功能表而且不想顯示任何項目，則處理常式應該直接在事件資料中將 <xref:System.Windows.RoutedEventArgs.Handled%2A> 設定為 `true`。  負責顯示內容功能表的 <xref:System.Windows.Controls.ContextMenuService> 將會檢查它在控制項上引發之事件的事件資料。  如果該事件在路由中任何地方標記為 <xref:System.Windows.RoutedEventArgs.Handled%2A>，便會隱藏啟始事件的內容功能表開啟動作。  
+## <a name="suppressing-any-existing-context-menu-and-displaying-no-context-menu"></a>隱藏任何現有的內容功能表，並不顯示任何內容功能表  
+ 最後一個案例中，撰寫完全，隱藏功能表處理常式是常見的。 如果指定的控制項不應該顯示操作功能表中，有可能更適當的方法，以確保這比只在使用者要求時隱藏功能表。 但如果您想要隱藏的內容功能表，並顯示任何內容，使用處理常式，則您的處理常式應該只設定<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`事件資料。 <xref:System.Windows.Controls.ContextMenuService> ，負責顯示內容功能表會檢查它在控制項引發的事件的事件資料。 如果事件已標示為<xref:System.Windows.RoutedEventArgs.Handled%2A>任何位置路徑，然後內容功能表開啟動作起始事件已隱藏。  
   
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
-## 請參閱  
- <xref:System.Windows.Controls.ContextMenu>   
- <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName>   
- [基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Controls.ContextMenu>  
+ <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>  
+ [基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
  [ContextMenu 概觀](../../../../docs/framework/wpf/controls/contextmenu-overview.md)

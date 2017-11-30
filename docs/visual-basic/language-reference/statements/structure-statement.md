@@ -1,126 +1,124 @@
 ---
-title: "Structure Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Structure"
-  - "Structure"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "user-defined types, Structure statement"
-  - "compound data types"
-  - "Structure keyword"
-  - "Structure statement"
-  - "UDT (user-defined types)"
-  - "types [Visual Basic], user-defined"
+title: "Structure 陳述式"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Structure
+- Structure
+helpviewer_keywords:
+- user-defined types [Visual Basic], Structure statement
+- compound data types [Visual Basic]
+- Structure keyword [Visual Basic]
+- Structure statement [Visual Basic]
+- UDT (user-defined types)
+- types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Structure Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-宣告結構的名稱，並引入組成結構之變數、屬性 \(Property\)、事件和程序的定義。  
+# <a name="structure-statement"></a>Structure 陳述式
+宣告結構的名稱，並導入的變數、 屬性、 事件和結構包含的程序定義。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
-Structure name [ ( Of typelist ) ]  
-    [ Implements interfacenames ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
+Structure name [ ( Of typelist ) ]  
+    [ Implements interfacenames ]  
     [ datamemberdeclarations ]  
-    [ methodmemberdeclarations ]  
+    [ methodmemberdeclarations ]  
 End Structure  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
   
-|||  
-|-|-|  
 |詞彙|定義|  
-|`attributelist`|選擇項。  請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇項。  可以是下列其中一項：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇項。  請參閱 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`Partial`|選擇項。  表示結構的部分定義。  請參閱 [Partial](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必要項。  這個結構的名稱。  請參閱[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|選擇項。  指定這是泛型結構。|  
-|`typelist`|如果使用 [Of](../../../visual-basic/language-reference/statements/of-clause.md) 關鍵字，則為必要項。  這個結構的型別參數清單。  請參閱[型別清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Implements`|選擇項。  表示此結構會實作一個或多個介面的成員。  請參閱 [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
-|`interfacenames`|如果使用 `Implements` 陳述式，則此為必要項。  這個結構所實作的介面名稱。|  
-|`datamemberdeclarations`|必要項。  沒有或多個 `Const`、`Dim`、`Enum` 或 `Event` 陳述式，宣告結構的 *資料成員*。|  
-|`methodmemberdeclarations`|選擇項。  零或多個 `Function`、`Operator`、`Property` 或 `Sub` 程序的宣告，可做為結構的「*方法成員*」。|  
-|`End Structure`|必要項。  結束 `Structure` 定義。|  
+|---|---|  
+|`attributelist`|選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|選擇項。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
+|`Partial`|選擇項。 指出此結構的部分定義。 請參閱[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
+|`name`|必要項。 此結構的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Of`|選擇項。 指定這為泛型結構。|  
+|`typelist`|如果您使用所需[的](../../../visual-basic/language-reference/statements/of-clause.md)關鍵字。 此結構的型別參數的清單。 請參閱[輸入清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
+|`Implements`|選擇項。 指出此結構實作一或多個介面的成員。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
+|`interfacenames`|如果您使用所需`Implements`陳述式。 此結構實作的介面名稱。|  
+|`datamemberdeclarations`|必要項。 零或多個`Const`， `Dim`， `Enum`，或`Event`宣告陳述式*資料成員*的結構。|  
+|`methodmemberdeclarations`|選擇項。 零或多個宣告的`Function`， `Operator`， `Property`，或`Sub`程序，做為*方法成員*的結構。|  
+|`End Structure`|必要項。 終止`Structure`定義。|  
   
-## 備註  
- `Structure` 陳述式定義可自訂的複合 \(Composite\) 實值型別。  「*結構*」是舊版 Visual Basic 的廣義使用者定義型別 \(UDT\)。  如需詳細資訊，請參閱[Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)。  
+## <a name="remarks"></a>備註  
+ `Structure`陳述式會定義您可以自訂複合的實值型別。 A*結構*為一般化的使用者定義型別 (UDT) 的先前版本的 Visual Basic。 如需詳細資訊，請參閱[結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)。  
   
- 結構支援許多和類別相同的功能。  例如，結構可以具有屬性和程序、可以實作介面，也可以具有參數型建構函式。  但是，結構與繼承 \(Inheritance\)、宣告和使用方式等區域中的類別之間有明顯的差異。  而且，類別是參考型別 \(Reference Type\)，而結構是實值型別 \(Value Type\)。  如需詳細資訊，請參閱[Structures and Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)。  
+ 結構可以支援許多與類別相同的功能。 例如，結構還可以具有屬性和程序、 可以實作介面，和可以有參數化建構函式。 不過，有明顯差異結構和類別方面，例如繼承的宣告和使用方式。 此外，類別是參考類型和結構是實值類型。 如需詳細資訊，請參閱[結構和類別](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)。  
   
- `Structure` 只能用於命名空間或模組層級。  這表示結構的「*宣告內容*」必須是原始程式檔 \(Source File\)、命名空間 \(Namespace\)、類別、結構、模組或介面，並且不可以是程序或區塊。  如需詳細資訊，請參閱[Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 您可以使用`Structure`只能在命名空間或模組層級。 這表示*宣告內容*結構必須是原始程式檔、 命名空間、 類別、 結構、 模組或介面，並且不能是程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 結構預設值為 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 存取。  您可以使用存取修飾詞調整存取層級。  如需詳細資訊，請參閱[Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 結構會預設為[Friend](../../../visual-basic/language-reference/modifiers/friend.md)存取。 您可以調整其存取層級，使用存取修飾詞。 如需詳細資訊，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-## 規則  
+## <a name="rules"></a>規則  
   
--   **巢狀**：可以在另一個結構內定義某個結構。  外部結構會稱為「*包含結構*」，而內部結構則稱為「*巢狀結構*」。  然而，無法透過包含結構存取巢狀結構的成員。  您必須改為宣告具有巢狀結構資料型別的變數。  
+-   **巢狀結構。** 您可以定義在另一個結構。 外部結構稱為*包含結構*，而內部結構稱為*巢狀結構*。 不過，您無法透過包含的結構來存取巢狀的結構的成員。 相反地，您必須宣告巢狀的結構的資料類型的變數。  
   
--   **成員宣告**：您必須宣告結構的每個成員。  因為無法從結構中繼承，所以結構成員不得為 [Protected](../../../visual-basic/language-reference/modifiers/protected.md) 或 `Protected Friend`。  然而，結構本身可以是 `Protected` 或 `Protected Friend`。  
+-   **成員宣告。** 您必須宣告結構的每個成員。 結構成員無法[保護](../../../visual-basic/language-reference/modifiers/protected.md)或`Protected Friend`因為不可以是繼承自結構。 結構本身，不過，可以是`Protected`或`Protected Friend`。  
   
-     您可以在結構中宣告零或多個非共用變數或非共用的非自訂事件。  您不能只有常數、屬性 \(Property\) 和程序，即使其中有些是非共用的。  
+     您可以在結構中宣告零個或多個非共用變數，或非共用、非自訂的事件。 您不能有常數、 屬性和程序，即使其中一些會共用。  
   
--   **初始設定**：：您不能將結構之任何非共用資料成員的值初始化為該資料成員宣告的一部分。  您必須在結構上以參數型建構函式來初始化這類資料成員，或在建立結構的執行個體後將值指派給成員。  
+-   **初始化。** 您無法初始化結構中宣告的任何非共用的資料成員的值。 您必須在結構上的參數化建構函式來初始化資料成員，或建立結構的執行個體之後，指派給成員值。  
   
--   **繼承**結構不可以繼承非 <xref:System.ValueType> 的其他任何型別，所有結構都是從該型別繼承。  特別地是，某個結構不可以繼承另一個結構。  
+-   **繼承**： 結構無法不是繼承自任何型別<xref:System.ValueType>，從其所有的結構會繼承。 特別是，一個結構無法繼承自另一個。  
   
-     即使指定 <xref:System.ValueType>，也不可以在結構定義中使用 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)。  
+     您無法使用[Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)在結構定義中，即使指定<xref:System.ValueType>。  
   
--   **實作**如果結構使用 [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md)，則必須實作 `interfacenames` 中所指定之每個介面定義的每個成員。  
+-   **實作。** 如果結構使用[Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)，您必須實作由您指定在每個介面所定義的每個成員`interfacenames`。  
   
--   **預設屬性**使用 [Default](../../../visual-basic/language-reference/modifiers/default.md) 修飾詞，結構最多可以將一個屬性指定成它的「*預設屬性*」\(Default Property\)。  如需詳細資訊，請參閱[Default](../../../visual-basic/language-reference/modifiers/default.md)。  
+-   **預設屬性。** 結構可以指定最多一個屬性做為其*預設屬性*，並使用[預設](../../../visual-basic/language-reference/modifiers/default.md)修飾詞。 如需詳細資訊，請參閱[預設](../../../visual-basic/language-reference/modifiers/default.md)。  
   
-## 行為  
+## <a name="behavior"></a>行為  
   
--   **存取層級**：在結構內，可宣告每個成員都具有它自己的存取層級。  所有結構成員預設值為 [Public](../../../visual-basic/language-reference/modifiers/public.md) 存取。  請注意，如果結構本身具有較嚴格的存取層級，則即使使用存取修飾詞調整成員的存取層級，也會自動限制成員的存取。  
+-   **存取層級。** 在結構內，您可以宣告具有自己的存取層級的每個成員。 所有的結構成員預設為[公用](../../../visual-basic/language-reference/modifiers/public.md)存取。 請注意，如果結構本身會有更多限制的存取層級，會自動限制存取其成員，即使您調整其存取層級，使用存取修飾詞。  
   
--   **範圍。**：結構是位在包含命名空間、類別、結構或模組中的範圍內。  
+-   **範圍。** 結構是在範圍中，其包含命名空間、 類別、 結構或模組。  
   
-     每一個結構成員的範圍是整個結構。  
+     每個結構成員的範圍是整個結構。  
   
--   **存留期**：結構本身不會有存留期。  而是，該結構的每個執行個體具有與其他所有執行個體無關的存留期。  
+-   **存留期。** 結構本身沒有的存留期。 相反地，每個執行個體，該結構有獨立的所有其他執行個體的存留期。  
   
-     [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) 子句建立執行個體時，會開始該執行個體的存留期。  保留變數的存留期時，則它會結束。  
+     執行個體的存留期開始時就會建立[New 運算子](../../../visual-basic/language-reference/operators/new-operator.md)子句。 它會結束保存之變數的存留期結束時。  
   
-     無法擴充結構執行個體的存留期。  靜態 \(Static\) 結構功能的大約值是由模組所提供。  如需詳細資訊，請參閱[Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)。  
+     您無法延伸結構執行個體的存留期。 模組會提供靜態結構功能的近似值。 如需詳細資訊，請參閱[Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)。  
   
-     結構成員的存留期依據宣告方式和位置而定。  如需詳細資訊，請參閱 [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) 中「存留期」的部分。  
+     結構成員的存留期取決於它們所宣告的方式和位置。 如需詳細資訊，請參閱 「 存留時間 」 中[Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)。  
   
--   **限定性條件。**：結構外面的程式碼必須使用該結構名稱限定成員名稱。  
+-   **限定性條件。** 結構之外的程式碼必須限定成員名稱，與該結構的名稱。  
   
-     如果巢狀結構內的程式碼進行程式設計項目的資格不符參考，則 Visual Basic 依序會在巢狀結構、包含結構，以及最外層包含項目的外面搜尋項目。  如需詳細資訊，請參閱[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+     如果巢狀結構內的程式碼會不合格的程式設計項目參考，Visual Basic 會搜尋項目的第一次在巢狀結構中，然後在其包含的結構，依此類推最外層包含的項目。 如需詳細資訊，請參閱[宣告之項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
--   **記憶體消耗量**：：和所有複合資料型別一樣，將成員的表面儲存配置加總起來不一定就是結構的總記憶體耗用量。  除此之外，您也不能就將記憶體中的儲存順序視為與您宣告的順序相同。  如果需要控制結構的儲存體配置，可將 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性 \(Attribute\) 套用到 `Structure` 陳述式。  
+-   **記憶體耗用量。** 如同所有的複合資料類型，您無法安全地將相加名義儲存配置，其成員的計算結構的總記憶體耗用量。 此外，您不能安全地假設在記憶體中的儲存體的順序是您宣告的順序相同。 如果您需要控制結構的儲存體配置，您可以套用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性`Structure`陳述式。  
   
-## 範例  
- 下列範例使用 `Structure` 陳述式定義員工的一組相關資料。  它顯示使用 `Public`、`Friend` 和 `Private` 成員，以反映資料項目的敏感度，  也顯示出程序、屬性和事件成員。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Structure`陳述式來定義一組相關資料的員工。 它示範如何使用`Public`， `Friend`，和`Private`成員，以反映資料項目的敏感度。 它也會顯示程序、 屬性和事件的成員。  
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## 請參閱  
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)   
- [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md)   
- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Structures and Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a>另請參閱  
+ [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [結構和類別](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

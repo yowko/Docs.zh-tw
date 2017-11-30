@@ -1,33 +1,25 @@
 ---
-title: "如何︰ 合併 LINQ 查詢與規則運算式 (Visual Basic) |Microsoft 文件"
+title: "如何：合併 LINQ 查詢與規則運算式 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 283b5e844c91da22aadd7bcf88ea327ccc080be7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6cf6ee296f142ce50a9448d80ab961dafe86ab4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>如何︰ 合併 LINQ 查詢與規則運算式 (Visual Basic)
-這個範例示範如何使用<xref:System.Text.RegularExpressions.Regex>類別來建立更複雜的文字字串中比對規則運算式。</xref:System.Text.RegularExpressions.Regex> LINQ 查詢輕鬆地篩選只您想要使用規則運算式中，搜尋並調整結果檔案。  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>如何：合併 LINQ 查詢與規則運算式 (Visual Basic)
+此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。 LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。  
   
 ## <a name="example"></a>範例  
   
@@ -38,18 +30,16 @@ Class LinqRegExVB
   
         ' Root folder to query, along with all subfolders.  
         ' Modify this path as necessary so that it accesses your Visual Studio folder.  
-        Dim startFolder As String = "C:\program files\Microsoft Visual Studio 9.0\"  
+        Dim startFolder As String = "C:\Program Files (x86)\Microsoft Visual Studio 14.0\"
         ' One of the following paths may be more appropriate on your computer.  
-        'string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 9.0\";  
-        'string startFolder = @"c:\program files\Microsoft Visual Studio 10.0\";  
-        'string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 10.0\";  
+        'Dim startFolder As String = "C:\Program Files (x86)\Microsoft Visual Studio\2017\"
   
         ' Take a snapshot of the file system.  
         Dim fileList As IEnumerable(Of System.IO.FileInfo) = GetFiles(startFolder)  
   
         ' Create a regular expression to find all things "Visual".  
         Dim searchTerm As System.Text.RegularExpressions.Regex =   
-            New System.Text.RegularExpressions.Regex("Visual (Basic|C#|C\+\+|J#|SourceSafe|Studio)")  
+            New System.Text.RegularExpressions.Regex("Visual (Basic|C#|C\+\+|Studio)")  
   
         ' Search the contents of each .htm file.  
         ' Remove the where clause to find even more matches!  
@@ -98,11 +88,11 @@ Class LinqRegExVB
 End Class  
 ```  
   
- 請注意，您也可以查詢<xref:System.Text.RegularExpressions.MatchCollection>所傳回的物件`RegEx`搜尋。</xref:System.Text.RegularExpressions.MatchCollection> 在此範例中的每個相符項目值所產生的結果。 不過，它，也可以使用 LINQ 來執行所有種類的篩選、 排序及群組的集合。 因為<xref:System.Text.RegularExpressions.MatchCollection>為非泛型<xref:System.Collections.IEnumerable>集合中，您必須明確指定在查詢中的範圍變數的類型。</xref:System.Collections.IEnumerable> </xref:System.Text.RegularExpressions.MatchCollection>  
+ 請注意，您也可以對由 `RegEx` 搜尋所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件進行查詢。 在本例中，結果只會產生每個相符項目的值。 不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。 因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

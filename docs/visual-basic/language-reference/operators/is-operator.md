@@ -1,68 +1,65 @@
 ---
-title: "Is Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.is"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "comparison operators"
-  - "equivalent objects"
-  - "TypeOf...Is expression"
-  - "Is operator [Visual Basic]"
+title: "Is 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.is
+helpviewer_keywords:
+- comparison operators [Visual Basic]
+- equivalent objects
+- TypeOf...Is expression
+- Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4b1f3f0fa1fd782550c08c816f47b7541399198e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Is Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="is-operator-visual-basic"></a>Is 運算子 (Visual Basic)
 比較兩個物件參考變數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
 result = object1 Is object2  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `result`  
- 必要項。  任何 `Boolean` 值。  
+ 必要項。 任何`Boolean`值。  
   
  `object1`  
- 必要項。  任何 `Object` 名稱。  
+ 必要項。 任何`Object`名稱。  
   
  `object2`  
- 必要項。  任何 `Object` 名稱。  
+ 必要項。 任何`Object`名稱。  
   
-## 備註  
- `Is` 運算子會判斷兩個物件參考是否代表同一物件。  但是，它不會執行值比較。  如果 `object1` 和 `object2` 都會參考完全相同的物件執行個體，則 `result` 為 `True`，如果不是，則 `result` 為 `False`。  
+## <a name="remarks"></a>備註  
+ `Is`運算子會判斷是否兩個物件參考會參考相同的物件。 不過，它不會執行值比較。 如果`object1`和`object2`完全相同的物件執行個體都會參考`result`是`True`; 如果沒有的話，`result`是`False`。  
   
- `Is` 也可與 `TypeOf` 關鍵字搭配使用，以組成 `TypeOf`...`Is` 運算式，用以測試物件變數是否會與資料型別相容。  
+ `Is`也可與`TypeOf`關鍵字進行`TypeOf`...`Is`測試是否與資料類型相容的物件變數的運算式。  
   
 > [!NOTE]
->  `Is` 關鍵字可以用於 [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md)。  
+>  `Is`關鍵字也用於[選取...陳述式的大小寫](../../../visual-basic/language-reference/statements/select-case-statement.md)。  
   
-## 範例  
- 下列範例會使用 `Is` 運算子，來比較物件參考的配對。  結果是指派給代表兩個物件是否完全一樣的 `Boolean` 值。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Is`運算子來比較的物件參考的組。 結果會指派給`Boolean`值，表示兩個物件是否相同。  
   
  [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
   
- 如以上範例所示範，可使用 `Is` 運算子來測試早期繫結 \(Early Bound\) 和晚期繫結 \(Late Bound\) 物件。  
+ 如上述範例所示，您可以使用`Is`運算子來測試兩者早期繫結和晚期繫結物件。  
   
-## 請參閱  
- [TypeOf Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)   
- [IsNot Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>另請參閱  
+ [TypeOf 運算子](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [在 Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

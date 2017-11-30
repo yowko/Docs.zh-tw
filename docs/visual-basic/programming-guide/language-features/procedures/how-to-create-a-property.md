@@ -1,81 +1,80 @@
 ---
-title: "How to: Create a Property (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "Visual Basic code, properties"
-  - "properties [Visual Basic]"
+title: "如何：建立屬性 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- Visual Basic code, properties
+- properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d140e6a10061f7fabe3d12c6cce5d0c201e103d6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-透過封入 `Property` 陳述式 \(Statement\) 與 `End Property` 陳述式來定義屬性。  在這個定義內，可定義 `Get` 程序和 \(或\) `Set` 程序。  所有屬性程式碼都落在這些程序內。  
+# <a name="how-to-create-a-property-visual-basic"></a>如何：建立屬性 (Visual Basic)
+您將屬性定義之間`Property`陳述式和`End Property`陳述式。 在您定義這個定義內`Get`程序，`Set`程序，或兩者。 所有屬性的程式碼位於這些程序內。  
   
- `Get` 程序會擷取屬性值，而 `Set` 程序會儲存值。  如果想要屬性具有讀取\/寫入存取權，則必須定義這兩個程序。  若為唯讀屬性，則只定義 `Get`，而若為唯寫屬性，則只定義 `Set`。  
+ `Get`程序會擷取屬性值和`Set`程序儲存值。 如果您想要擁有讀/寫存取的屬性，您必須定義兩個程序。 唯讀屬性，只定義`Get`，並為唯寫屬性，只定義`Set`。  
   
-### 若要建立屬性  
+### <a name="to-create-a-property"></a>若要建立屬性  
   
-1.  在任何屬性或程序外部，使用後面緊接 `End Property` 陳述式的 [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)。  
+1.  任何屬性或程序中，外部使用[Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)，後面接著`End Property`陳述式。  
   
-2.  如果屬性採用參數，請在 `Property` 關鍵字後面緊接著程序名稱，然後是以括弧括住的參數清單。  
+2.  如果此屬性會採用參數，請遵循`Property`關鍵字的程序，則參數清單括號括住名稱。  
   
-3.  在括弧後面緊接著 `As` 子句，以指定屬性值的資料型別。  即使是唯寫屬性，也必須指定資料型別。  
+3.  括號後面`As`子句來指定屬性值的資料類型。 您必須指定即使的唯寫屬性的資料類型。  
   
-4.  適當地加入 `Get` 和 `Set` 程序。  請參閱下列指示。  
+4.  新增`Get`和`Set`程序，視需要。 請參閱下列指示。  
   
-### 若要建立用來擷取屬性值的 Get 程序  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>若要建立擷取屬性值的 Get 程序  
   
-1.  在 `Property` 與 `End Property` 陳述式之間，寫入 [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)，後面緊接 `End Get` 陳述式。  您不需要定義 `Get` 程序的任何參數。  
+1.  之間`Property`和`End Property`陳述式中，撰寫[Get 陳述式](../../../../visual-basic/language-reference/statements/get-statement.md)，後面接著`End Get`陳述式。 您不需要定義任何參數`Get`程序。  
   
-2.  放置程式碼陳述式，以擷取 `Get` 和 `End Get` 陳述式間的屬性值。  除了產生和傳回屬性值外，這個程式碼可包含其他計算和資料操作。  
+2.  將程式碼陳述式來擷取屬性的值之間放`Get`和`End Get`陳述式。 此程式碼可包含其他計算和資料操作，除了產生並傳回屬性的值。  
   
-3.  使用 `Return` 陳述式，將屬性值傳回給呼叫程式碼。  
+3.  使用`Return`屬性的值傳回至呼叫的程式碼陳述式。  
   
- 對於讀寫屬性和唯讀屬性，您必須撰寫 `Get` 程序。  對於唯寫屬性，則不得定義 `Get` 程序。  
+ 您必須撰寫`Get`讀 / 寫屬性和唯讀屬性的程序。 您必須定義`Get`唯寫屬性的程序。  
   
-### 若要建立用來寫入屬性值的 Set 程序  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>若要建立的設定程序，將寫入屬性的值  
   
-1.  在 `Property` 與 `End Property` 陳述式之間，寫入 [Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)，後面緊接 `End Set` 陳述式。  
+1.  之間`Property`和`End Property`陳述式中，撰寫[Set 陳述式](../../../../visual-basic/language-reference/statements/set-statement.md)，後面接著`End Set`陳述式。  
   
-2.  在 `Set` 陳述式中，請在 `Set` 關鍵字後面緊接著以括弧括住的參數清單。  這個參數清單至少必須包含呼叫程式碼所傳遞之值的值參數。  這個值參數的預設名稱是 `Value`，但可視情況使用不同的名稱。  值參數的資料型別必須與屬性本身相同。  
+2.  在`Set`陳述式，請遵循`Set`使用的參數清單括號括住關鍵字。 這個參數清單必須包含至少一個值參數呼叫程式碼傳遞之值。 這個值參數的預設名稱是`Value`，但是如果適當的話，您可以使用不同的名稱。 Value 參數必須有相同的資料類型與屬性本身。  
   
-3.  放置程式碼陳述式，以將值儲存在 `Set` 與 `End Set` 陳述式間的屬性中。  除了驗證和儲存屬性值外，這個程式碼可包含其他計算和資料操作。  
+3.  將值儲存之間的屬性中的程式碼陳述式`Set`和`End Set`陳述式。 此程式碼可包含其他計算和資料操作，除了驗證和儲存屬性的值。  
   
-4.  使用值參數來接受 \(Accept\) 呼叫程式碼所提供的值。  您可直接將這個值儲存在指派陳述式 \(Assignment Statement\) 中，或將它用於運算式中，以計算所要儲存的內部值。  
+4.  您可以使用 value 參數來接受呼叫程式碼所提供的值。 您可以直接在指派陳述式，會將這個值或計算要儲存的內部值的運算式中使用。  
   
- 對於讀寫屬性和唯寫屬性，您必須撰寫 `Set` 程序。  對於唯讀屬性，則不得定義 `Set` 程序。  
+ 您必須撰寫`Set`讀 / 寫屬性和唯寫屬性的程序。 您必須定義`Set`唯讀屬性的程序。  
   
-## 範例  
- 下列範例建立讀取\/寫入屬性，以將完整名稱儲存成兩個構成名稱：名字和姓氏。  在呼叫程式碼讀取 `fullName` 時，`Get` 程序會結合這兩個構成名稱，並傳回完整名稱。  在呼叫程式碼指派新的完整名稱時，`Set` 程序會嘗試將新名稱分割成兩個構成名稱。  如果找不到空格，則會將它整個儲存成名字。  
+## <a name="example"></a>範例  
+ 下列範例會建立將儲存為兩個構成的名稱、 名字和姓氏的完整名稱的讀/寫屬性。 當呼叫程式碼讀取`fullName`、`Get`程序結合了兩個構成的名稱，並傳回的完整名稱。 當呼叫程式碼會指派新的完整名稱，`Set`程序會嘗試將它切為兩個構成的名稱。 如果找不到一個空格，則會儲存它全部都做為第一個名稱。  
   
  [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
   
- 下列範例會示範 `fullName` 之屬性程序的典型呼叫。  第一個呼叫會設定屬性值，而第二個呼叫則會擷取該值。  
+ 下列範例示範典型的屬性程序呼叫`fullName`。 第一次呼叫設定屬性值，第二個呼叫會擷取它。  
   
  [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
   
-## 請參閱  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [屬性程序](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [How to: Declare a Property with Mixed Access Levels](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)   
- [How to: Call a Property Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [How to: Put a Value in a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [How to: Get a Value from a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>另請參閱  
+ [程序](./index.md)  
+ [屬性程序](./property-procedures.md)  
+ [程序參數和引數](./procedure-parameters-and-arguments.md)  
+ [在 Visual Basic 中屬性和變數之間的差異](./differences-between-properties-and-variables.md)  
+ [如何：宣告混合存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [如何：呼叫屬性程序](./how-to-call-a-property-procedure.md)  
+ [如何： 宣告及呼叫在 Visual Basic 中的預設屬性](./how-to-declare-and-call-a-default-property.md)  
+ [如何：將值置入屬性](./how-to-put-a-value-in-a-property.md)  
+ [如何：取得屬性值](./how-to-get-a-value-from-a-property.md)
