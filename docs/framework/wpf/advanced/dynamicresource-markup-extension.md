@@ -1,89 +1,92 @@
 ---
-title: "DynamicResource 標記延伸 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DynamicResource"
-  - "DynamicResourceExtension"
-helpviewer_keywords: 
-  - "DynamicResource 標記延伸"
-  - "XAML, DynamicResource 標記延伸"
+title: "DynamicResource 標記延伸"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DynamicResource
+- DynamicResourceExtension
+helpviewer_keywords:
+- XAML [WPF], DynamicResource markup extension
+- DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c80d975e756fab449c254b9e1d8d1bc99a25652e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DynamicResource 標記延伸
-提供任何 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 屬性 \(Property\) 屬性 \(Attribute\) 的值，方法是將該值延後，使其變成定義之資源的參考。  該資源的查閱行為與執行階段查閱類似。  
+# <a name="dynamicresource-markup-extension"></a><span data-ttu-id="980e1-102">DynamicResource 標記延伸</span><span class="sxs-lookup"><span data-stu-id="980e1-102">DynamicResource Markup Extension</span></span>
+<span data-ttu-id="980e1-103">提供的任何值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]可以延遲是定義資源的參考值的屬性。</span><span class="sxs-lookup"><span data-stu-id="980e1-103">Provides a value for any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] property attribute by deferring that value to be a reference to a defined resource.</span></span> <span data-ttu-id="980e1-104">該資源的查閱行為相當於執行階段查閱。</span><span class="sxs-lookup"><span data-stu-id="980e1-104">Lookup behavior for that resource is analogous to run-time lookup.</span></span>  
   
-## XAML Attribute Usage  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="980e1-105">XAML Attribute Usage</span><span class="sxs-lookup"><span data-stu-id="980e1-105">XAML Attribute Usage</span></span>  
   
+```xml  
+<object property="{DynamicResource key}" .../>  
 ```  
-<object property="{DynamicResource key}" .../>  
-```  
   
-## XAML 屬性項目用法  
+## <a name="xaml-property-element-usage"></a><span data-ttu-id="980e1-106">XAML 屬性項目用法</span><span class="sxs-lookup"><span data-stu-id="980e1-106">XAML Property Element Usage</span></span>  
   
-```  
+```xml  
 <object>  
   <object.property>  
-    <DynamicResource ResourceKey="key" .../>  
+    <DynamicResource ResourceKey="key" .../>  
   </object.property>  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="980e1-107">XAML 值</span><span class="sxs-lookup"><span data-stu-id="980e1-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`key`|要求之資源的索引鍵。  這個索引鍵一開始是由 [x:Key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)指派 \(如果在標記中建立資源\)，或是在呼叫 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=fullName> 時提供以做為 `key` 參數 \(如果在程式碼中建立資源\)。|  
+|`key`|<span data-ttu-id="980e1-108">要求之資源的索引鍵。</span><span class="sxs-lookup"><span data-stu-id="980e1-108">The key for the requested resource.</span></span> <span data-ttu-id="980e1-109">此機碼一開始指派[X:key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)如果資源在標記中，建立或提供做為`key`參數呼叫時<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果此資源原先建立在程式碼中。</span><span class="sxs-lookup"><span data-stu-id="980e1-109">This key was initially assigned by the [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) if a resource was created in markup, or was provided as the `key` parameter when calling <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> if the resource was created in code.</span></span>|  
   
-## 備註  
- `DynamicResource` 會在初始編譯期間建立暫存運算式，因此在實際需要所要求的資源值以建構物件之前，並不會進行資源的查閱。  這個時機可能是在載入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 之後。  尋找資源值的方式是從目前的頁面範圍開始，對所有使用中的資源字典進行索引鍵搜尋，並以找到的資源值取代來自編譯的運算式替代符號。  
+## <a name="remarks"></a><span data-ttu-id="980e1-110">備註</span><span class="sxs-lookup"><span data-stu-id="980e1-110">Remarks</span></span>  
+ <span data-ttu-id="980e1-111">A`DynamicResource`會建立暫存的運算式，在初始的編譯期間和直到實際需要才能建構物件，而要求的資源值，因此延遲的資源查閱。</span><span class="sxs-lookup"><span data-stu-id="980e1-111">A `DynamicResource` will create a temporary expression during the initial compilation and thus defer lookup for resources until the requested resource value is actually required in order to construct an object.</span></span> <span data-ttu-id="980e1-112">這可能很之後[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]載入頁面。</span><span class="sxs-lookup"><span data-stu-id="980e1-112">This may potentially be after the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page is loaded.</span></span> <span data-ttu-id="980e1-113">資源值會根據針對從目前的頁面範圍，開始的所有作用中的資源字典的索引鍵搜尋找到並取代為來自編譯預留位置的運算式。</span><span class="sxs-lookup"><span data-stu-id="980e1-113">The resource value will be found based on key search against all active resource dictionaries starting from the current page scope, and is substituted for the placeholder expression from compilation.</span></span>  
   
 > [!IMPORTANT]
->  就相依性屬性優先順序而言，`DynamicResource` 運算式相當於套用動態資源參考的位置。  如果您將本機值設定給原本使用 `DynamicResource` 運算式做為本機值的屬性，則會將這個 `DynamicResource` 完全移除。  如需詳細資訊，請參閱[相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)。  
+>  <span data-ttu-id="980e1-114">相依性屬性在優先順序方面，`DynamicResource`運算式就相當於套用動態資源參考所在的位置。</span><span class="sxs-lookup"><span data-stu-id="980e1-114">In terms of dependency property precedence, a `DynamicResource` expression is equivalent to the position where the dynamic resource reference is applied.</span></span> <span data-ttu-id="980e1-115">如果您設定如先前所擁有的屬性為區域數值`DynamicResource`運算式做為區域數值，`DynamicResource`完全移除。</span><span class="sxs-lookup"><span data-stu-id="980e1-115">If you set a local value for a property that previously had a `DynamicResource` expression as the local value, the `DynamicResource` is completely removed.</span></span> <span data-ttu-id="980e1-116">如需詳細資訊，請參閱[相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)。</span><span class="sxs-lookup"><span data-stu-id="980e1-116">For details, see [Dependency Property Value Precedence](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).</span></span>  
   
- 相對於 [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)，某些資源存取案例特別適用於 `DynamicResource`。  如需 `DynamicResource` 和 `StaticResource` 相對優勢與效能含意的相關討論，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ <span data-ttu-id="980e1-117">特定資源的存取情況會特別適用於`DynamicResource`相[StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)。</span><span class="sxs-lookup"><span data-stu-id="980e1-117">Certain resource access scenarios are particularly appropriate for `DynamicResource` as opposed to a [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).</span></span> <span data-ttu-id="980e1-118">請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)有關的相對優點和效能影響`DynamicResource`和`StaticResource`。</span><span class="sxs-lookup"><span data-stu-id="980e1-118">See [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) for a discussion about the relative merits and performance implications of `DynamicResource` and `StaticResource`.</span></span>  
   
- 指定的 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 應該對應於 [x:Key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)在頁面、應用程式、可用控制項佈景主題和外部資源的某個層級上定義的現有資源，或是對應該系統資源，而且資源查閱將按照該順序來執行。  如需靜態和動態資源之資詢查閱的詳細資訊，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ <span data-ttu-id="980e1-119">指定<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>應該對應至現有的資源取決於[X:key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)某個層級中頁面、 應用程式、 可用的控制項佈景主題和外部資源或系統資源，而資源查閱將會發生的順序。</span><span class="sxs-lookup"><span data-stu-id="980e1-119">The specified <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> should correspond to an existing resource determined by [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) at some level in your page, application, the available control themes and external resources, or system resources, and the resource lookup will happen in that order.</span></span> <span data-ttu-id="980e1-120">如需靜態和動態資源的資源查閱的詳細資訊，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。</span><span class="sxs-lookup"><span data-stu-id="980e1-120">For more information about resource lookup for static and dynamic resources, see [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
- 資源索引鍵可以是 [XamlName 文法](../../../../docs/framework/xaml-services/xamlname-grammar.md)中定義的任何字串。  資源索引鍵也可以是其他物件型別，例如 <xref:System.Type>。  <xref:System.Type> 索引鍵是依佈景主題設定控制項樣式的基礎。  如需詳細資訊，請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)。  
+ <span data-ttu-id="980e1-121">資源索引鍵可能是任何字串中定義[XamlName 文法](../../../../docs/framework/xaml-services/xamlname-grammar.md)。</span><span class="sxs-lookup"><span data-stu-id="980e1-121">A resource key may be any string defined in the [XamlName Grammar](../../../../docs/framework/xaml-services/xamlname-grammar.md).</span></span> <span data-ttu-id="980e1-122">資源索引鍵可能也是其他物件類型，例如<xref:System.Type>。</span><span class="sxs-lookup"><span data-stu-id="980e1-122">A resource key may also be other object types, such as a <xref:System.Type>.</span></span> <span data-ttu-id="980e1-123">A<xref:System.Type>索引鍵是基本的佈景主題樣式的控制項可以為何。</span><span class="sxs-lookup"><span data-stu-id="980e1-123">A <xref:System.Type> key is fundamental to how controls can be styled by themes.</span></span> <span data-ttu-id="980e1-124">如需詳細資訊，請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="980e1-124">For more information, see [Control Authoring Overview](../../../../docs/framework/wpf/controls/control-authoring-overview.md).</span></span>  
   
- 用來查閱資源值的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] \(例如 <xref:System.Windows.FrameworkElement.FindResource%2A>\)，其遵偱的資源查閱邏輯與 `DynamicResource` 使用的邏輯相同。  
+ [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]<span data-ttu-id="980e1-125">查閱的資源值，例如<xref:System.Windows.FrameworkElement.FindResource%2A>，請依照下列所用的相同的資源查閱邏輯`DynamicResource`。</span><span class="sxs-lookup"><span data-stu-id="980e1-125"> for lookup of resource values, such as <xref:System.Windows.FrameworkElement.FindResource%2A>, follow the same resource lookup logic as used by `DynamicResource`.</span></span>  
   
- 另一種參考資源的宣告方式是 [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)。  
+ <span data-ttu-id="980e1-126">其他的宣告式方法的參考的資源是為[StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)。</span><span class="sxs-lookup"><span data-stu-id="980e1-126">The alternative declarative means of referencing a resource is as a [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).</span></span>  
   
- 屬性 \(Attribute\) 語法是最常配合這個標記延伸使用的語法。  `DynamicResource` 識別項字串之後所提供的字串語彙基元將會指派為基礎 <xref:System.Windows.DynamicResourceExtension> 延伸類別的 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 值。  
+ <span data-ttu-id="980e1-127">屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。</span><span class="sxs-lookup"><span data-stu-id="980e1-127">Attribute syntax is the most common syntax used with this markup extension.</span></span> <span data-ttu-id="980e1-128">`DynamicResource` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 延伸類別的 <xref:System.Windows.DynamicResourceExtension> 值。</span><span class="sxs-lookup"><span data-stu-id="980e1-128">The string token provided after the `DynamicResource` identifier string is assigned as the <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> value of the underlying <xref:System.Windows.DynamicResourceExtension> extension class.</span></span>  
   
- `DynamicResource` 可用於物件項目語法。  在這種情況下，您必須指定 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 屬性的值。  
+ <span data-ttu-id="980e1-129">`DynamicResource`可用於物件項目語法。</span><span class="sxs-lookup"><span data-stu-id="980e1-129">`DynamicResource` can be used in object element syntax.</span></span> <span data-ttu-id="980e1-130">在此情況下，指定的值<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>是必要屬性。</span><span class="sxs-lookup"><span data-stu-id="980e1-130">In this case, specifying the value of the <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> property is required.</span></span>  
   
- `DynamicResource` 也可用於將 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 屬性 \(Property\) 指定為 property\=value 配對的詳細屬性 \(Attribute\) 使用方式。  
+ <span data-ttu-id="980e1-131">`DynamicResource` 也可以用於會指定 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 屬性 (Property) 做為 property=value 配對組的詳細屬性 (Attribute) 使用方式中。</span><span class="sxs-lookup"><span data-stu-id="980e1-131">`DynamicResource` can also be used in a verbose attribute usage that specifies the <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> property as a property=value pair:</span></span>  
   
+```xml  
+<object property="{DynamicResource ResourceKey=key}" .../>  
 ```  
-<object property="{DynamicResource ResourceKey=key}" .../>  
-```  
   
- 繁複的使用方法所適用的擴充，通常是具有一個以上可設定屬性或有些屬性為選擇性。  因為 `DynamicResource` 只有一個必要的可設定屬性，所以這種詳細使用方式並不常見。  
+ <span data-ttu-id="980e1-132">詳細使用方式通常是適用於具有一個以上可設定屬性或有些屬性為選擇性屬性的標記延伸。</span><span class="sxs-lookup"><span data-stu-id="980e1-132">The verbose usage is often useful for extensions that have more than one settable property, or if some properties are optional.</span></span> <span data-ttu-id="980e1-133">因為 `DynamicResource` 只有一個必要的可設定屬性，所以這種詳細使用方式並不常見。</span><span class="sxs-lookup"><span data-stu-id="980e1-133">Because `DynamicResource` has only one settable property, which is required, this verbose usage is not typical.</span></span>  
   
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器實作中，這個標記延伸的處理是由 <xref:System.Windows.DynamicResourceExtension> 類別定義的。  
+ <span data-ttu-id="980e1-134">在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器實作所定義的這個標記延伸處理<xref:System.Windows.DynamicResourceExtension>類別。</span><span class="sxs-lookup"><span data-stu-id="980e1-134">In the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor implementation, the handling for this markup extension is defined by the <xref:System.Windows.DynamicResourceExtension> class.</span></span>  
   
- `DynamicResource` 是一種標記延伸。  如果必須將屬性 \(Attribute\) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 \(而不是只對特定型別或屬性 \(Property\) 設定型別轉換子 \(Type Converter\)\)，則通常會實作標記延伸。  所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記延伸都會在其屬性 \(Attribute\) 語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性 \(Attribute\)。  如需詳細資訊，請參閱 [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ <span data-ttu-id="980e1-135">`DynamicResource` 是一種標記延伸。</span><span class="sxs-lookup"><span data-stu-id="980e1-135">`DynamicResource` is a markup extension.</span></span> <span data-ttu-id="980e1-136">如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。</span><span class="sxs-lookup"><span data-stu-id="980e1-136">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="980e1-137">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。</span><span class="sxs-lookup"><span data-stu-id="980e1-137">All markup extensions in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] use the { and } characters in their attribute syntax, which is the convention by which a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor recognizes that a markup extension must process the attribute.</span></span> <span data-ttu-id="980e1-138">如需詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="980e1-138">For more information, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
-## 請參閱  
- [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)   
- [x:Key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)   
- [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
- [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)   
- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="980e1-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="980e1-139">See Also</span></span>  
+ [<span data-ttu-id="980e1-140">XAML 資源</span><span class="sxs-lookup"><span data-stu-id="980e1-140">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [<span data-ttu-id="980e1-141">資源和程式碼</span><span class="sxs-lookup"><span data-stu-id="980e1-141">Resources and Code</span></span>](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
+ [<span data-ttu-id="980e1-142">x:Key 指示詞</span><span class="sxs-lookup"><span data-stu-id="980e1-142">x:Key Directive</span></span>](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [<span data-ttu-id="980e1-143">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="980e1-143">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="980e1-144">標記延伸和 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="980e1-144">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="980e1-145">StaticResource 標記延伸</span><span class="sxs-lookup"><span data-stu-id="980e1-145">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [<span data-ttu-id="980e1-146">標記延伸和 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="980e1-146">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

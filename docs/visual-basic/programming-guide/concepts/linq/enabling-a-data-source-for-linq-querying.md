@@ -1,64 +1,56 @@
 ---
-title: "啟用資料來源的 LINQ Querying2 |Microsoft 文件"
+title: "啟用 LINQ Querying2 資料來源"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 34bdc4e056d982799eac35eb2398dd3f23f6f351
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2a6ec979c4c7ed36a9b9f56b04de762fe4ec7fec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="enabling-a-data-source-for-linq-querying"></a>啟用資料來源以進行 LINQ 查詢
-有很多方法來擴充[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]啟用任何資料來源進行查詢[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]模式。 資料來源可能是資料結構、Web 服務、檔案系統或資料庫等等。 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 模式可以讓用戶端輕鬆查詢已啟用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢的資料來源，因為查詢的語法和模式並未改變。 方式[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]可以擴充至這些資料來源包括下列︰  
+# <a name="enabling-a-data-source-for-linq-querying"></a><span data-ttu-id="a4e94-102">啟用資料來源以進行 LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="a4e94-102">Enabling a Data Source for LINQ Querying</span></span>
+<span data-ttu-id="a4e94-103">您可以使用各種方式來擴充 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以啟用要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式下進行查詢的任何資料來源。</span><span class="sxs-lookup"><span data-stu-id="a4e94-103">There are various ways to extend [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to enable any data source to be queried in the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pattern.</span></span> <span data-ttu-id="a4e94-104">資料來源可能是資料結構、Web 服務、檔案系統或資料庫等等。</span><span class="sxs-lookup"><span data-stu-id="a4e94-104">The data source might be a data structure, a Web service, a file system, or a database, to name some.</span></span> <span data-ttu-id="a4e94-105">[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式可以讓用戶端輕鬆查詢已啟用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的資料來源，因為查詢的語法和模式並未改變。</span><span class="sxs-lookup"><span data-stu-id="a4e94-105">The [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pattern makes it easy for clients to query a data source for which [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] querying is enabled, because the syntax and pattern of the query does not change.</span></span> <span data-ttu-id="a4e94-106">[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 可以擴充至這些資料來源的方式包括：</span><span class="sxs-lookup"><span data-stu-id="a4e94-106">The ways in which [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] can be extended to these data sources include the following:</span></span>  
   
--   實作<xref:System.Collections.Generic.IEnumerable%601>介面中輸入，以啟用[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]to Objects 查詢該型別的。</xref:System.Collections.Generic.IEnumerable%601>  
+-   <span data-ttu-id="a4e94-107">在類型中實作 <xref:System.Collections.Generic.IEnumerable%601> 介面，以啟用該類型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 查詢功能。</span><span class="sxs-lookup"><span data-stu-id="a4e94-107">Implementing the <xref:System.Collections.Generic.IEnumerable%601> interface in a type to enable [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects querying of that type.</span></span>  
   
--   例如，建立標準查詢運算子方法<xref:System.Linq.Enumerable.Where%2A>和<xref:System.Linq.Enumerable.Select%2A>擴充型別，若要啟用自訂[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]該類型的查詢。</xref:System.Linq.Enumerable.Select%2A> </xref:System.Linq.Enumerable.Where%2A>  
+-   <span data-ttu-id="a4e94-108">建立可擴充類型的標準查詢運算子方法 (例如 <xref:System.Linq.Enumerable.Where%2A> 和 <xref:System.Linq.Enumerable.Select%2A>)，以啟用該類型的自訂 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。</span><span class="sxs-lookup"><span data-stu-id="a4e94-108">Creating standard query operator methods such as <xref:System.Linq.Enumerable.Where%2A> and <xref:System.Linq.Enumerable.Select%2A> that extend a type, to enable custom [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] querying of that type.</span></span>  
   
--   建立資料來源實作的提供者<xref:System.Linq.IQueryable%601>介面。</xref:System.Linq.IQueryable%601> 實作此介面的提供者是以運算式樹狀架構的形式接收 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢，而它可以自訂方式 (例如從遠端) 執行這些查詢。  
+-   <span data-ttu-id="a4e94-109">為資料來源建立實作 <xref:System.Linq.IQueryable%601> 介面的提供者。</span><span class="sxs-lookup"><span data-stu-id="a4e94-109">Creating a provider for your data source that implements the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="a4e94-110">實作此介面的提供者是以運算式樹狀架構的形式接收 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，而它可以自訂方式 (例如從遠端) 執行這些查詢。</span><span class="sxs-lookup"><span data-stu-id="a4e94-110">A provider that implements this interface receives [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries in the form of expression trees, which it can execute in a custom way, for example remotely.</span></span>  
   
--   建立您利用現有的資料來源的提供者[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]技術。 這種提供者不只會啟用查詢功能，也會插入、更新及刪除使用者定義類型的作業和對應。  
+-   <span data-ttu-id="a4e94-111">為利用現有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技術的資料來源建立提供者。</span><span class="sxs-lookup"><span data-stu-id="a4e94-111">Creating a provider for your data source that takes advantage of an existing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] technology.</span></span> <span data-ttu-id="a4e94-112">這種提供者不只會啟用查詢功能，也會插入、更新及刪除使用者定義類型的作業和對應。</span><span class="sxs-lookup"><span data-stu-id="a4e94-112">Such a provider would enable not only querying, but also insert, update, and delete operations and mapping for user-defined types.</span></span>  
   
- 本主題將討論這些選項。  
+ <span data-ttu-id="a4e94-113">本主題將討論這些選項。</span><span class="sxs-lookup"><span data-stu-id="a4e94-113">This topic discusses these options.</span></span>  
   
-## <a name="how-to-enable-linq-querying-of-your-data-source"></a>如何啟用資料來源的 LINQ 查詢功能  
+## <a name="how-to-enable-linq-querying-of-your-data-source"></a><span data-ttu-id="a4e94-114">如何啟用資料來源的 LINQ 查詢功能</span><span class="sxs-lookup"><span data-stu-id="a4e94-114">How to Enable LINQ Querying of Your Data Source</span></span>  
   
-### <a name="in-memory-data"></a>記憶體中的資料  
- 有兩種方式，您可以啟用[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]記憶體中資料的查詢。 如果資料是實作之型別的<xref:System.Collections.Generic.IEnumerable%601>，您可以藉由查詢資料[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]物件。</xref:System.Collections.Generic.IEnumerable%601> 如果它毫無意義，以啟動列舉型別之型別實作<xref:System.Collections.Generic.IEnumerable%601>介面，您可以定義[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]標準查詢運算子方法，該型別中的，或是建立[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]可擴充類型的標準查詢運算子方法。</xref:System.Collections.Generic.IEnumerable%601> 標準查詢運算子的自訂實作 (Implementation) 應該會使用延後執行 (Deferred Execution) 來傳回結果。  
+### <a name="in-memory-data"></a><span data-ttu-id="a4e94-115">記憶體中的資料</span><span class="sxs-lookup"><span data-stu-id="a4e94-115">In-Memory Data</span></span>  
+ <span data-ttu-id="a4e94-116">您可以使用兩種方式來啟用記憶體中資料的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。</span><span class="sxs-lookup"><span data-stu-id="a4e94-116">There are two ways you can enable [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] querying of in-memory data.</span></span> <span data-ttu-id="a4e94-117">如果資料屬於實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型，您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 來查詢該資料。</span><span class="sxs-lookup"><span data-stu-id="a4e94-117">If the data is of a type that implements <xref:System.Collections.Generic.IEnumerable%601>, you can query the data by using [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects.</span></span> <span data-ttu-id="a4e94-118">如果透過實作 <xref:System.Collections.Generic.IEnumerable%601> 介面來啟用類型列舉並不合理，您可以在該類型中定義 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子方法，或是建立可擴充類型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子方法。</span><span class="sxs-lookup"><span data-stu-id="a4e94-118">If it does not make sense to enable enumeration of your type by implementing the <xref:System.Collections.Generic.IEnumerable%601> interface, you can define [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] standard query operator methods in that type or create [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] standard query operator methods that extend the type.</span></span> <span data-ttu-id="a4e94-119">標準查詢運算子的自訂實作 (Implementation) 應該會使用延後執行 (Deferred Execution) 來傳回結果。</span><span class="sxs-lookup"><span data-stu-id="a4e94-119">Custom implementations of the standard query operators should use deferred execution to return the results.</span></span>  
   
-### <a name="remote-data"></a>遠端資料  
- 啟用的最佳選項[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]遠端資料來源的查詢是實作<xref:System.Linq.IQueryable%601>介面。</xref:System.Linq.IQueryable%601> 不過，這與擴充資料來源之提供者 (例如 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)]) 不同。 不含任何提供者模型擴充現有[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]技術，例如[!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)]至其他資料來源類型可用於[!INCLUDE[vs_orcas_long](../../../../csharp/misc/includes/vs_orcas_long_md.md)]。  
+### <a name="remote-data"></a><span data-ttu-id="a4e94-120">遠端資料</span><span class="sxs-lookup"><span data-stu-id="a4e94-120">Remote Data</span></span>  
+ <span data-ttu-id="a4e94-121">啟用遠端資料來源之 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的最佳選擇是實作 <xref:System.Linq.IQueryable%601> 介面。</span><span class="sxs-lookup"><span data-stu-id="a4e94-121">The best option for enabling [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] querying of a remote data source is to implement the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="a4e94-122">不過，這與擴充資料來源之提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 不同。</span><span class="sxs-lookup"><span data-stu-id="a4e94-122">However, this differs from extending a provider such as [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] for a data source.</span></span> <span data-ttu-id="a4e94-123">[!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)] 中並無任何提供者模型可用來將現有的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技術 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 擴充至其他資料來源類型。</span><span class="sxs-lookup"><span data-stu-id="a4e94-123">No provider models for extending existing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] technologies, such as [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], to other types of data source are available in [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].</span></span>  
   
-## <a name="iqueryable-linq-providers"></a>IQueryable LINQ 提供者  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]實作提供者，<xref:System.Linq.IQueryable%601>可能大不相同在複雜度。</xref:System.Linq.IQueryable%601> 本節將討論不同層次的複雜度。  
+## <a name="iqueryable-linq-providers"></a><span data-ttu-id="a4e94-124">IQueryable LINQ 提供者</span><span class="sxs-lookup"><span data-stu-id="a4e94-124">IQueryable LINQ Providers</span></span>  
+ <span data-ttu-id="a4e94-125">實作 <xref:System.Linq.IQueryable%601> 的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者在複雜度上有很大的差異。</span><span class="sxs-lookup"><span data-stu-id="a4e94-125">[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] providers that implement <xref:System.Linq.IQueryable%601> can vary widely in their complexity.</span></span> <span data-ttu-id="a4e94-126">本節將討論不同層次的複雜度。</span><span class="sxs-lookup"><span data-stu-id="a4e94-126">This section discusses the different levels of complexity.</span></span>  
   
- 複雜度較低的 `IQueryable` 提供者可能會與 Web 服務的單一方法互動。 這種類型的提供者非常特別，因為它預期本身所處理的查詢中應該有特定的資訊。 這種提供者具有封閉類型系統，可能會公開單一結果類型。 大部分的查詢執行在本機進行，例如使用<xref:System.Linq.Enumerable>標準查詢運算子的實作。</xref:System.Linq.Enumerable> 複雜度較低的提供者可能只會在代表查詢的運算式樹狀架構中檢查一個方法呼叫運算式，並讓查詢的其餘邏輯在其他地方處理。  
+ <span data-ttu-id="a4e94-127">複雜度較低的 `IQueryable` 提供者可能會與 Web 服務的單一方法互動。</span><span class="sxs-lookup"><span data-stu-id="a4e94-127">A less complex `IQueryable` provider might interface with a single method of a Web service.</span></span> <span data-ttu-id="a4e94-128">這種類型的提供者非常特別，因為它預期本身所處理的查詢中應該有特定的資訊。</span><span class="sxs-lookup"><span data-stu-id="a4e94-128">This type of provider is very specific because it expects specific information in the queries that it handles.</span></span> <span data-ttu-id="a4e94-129">這種提供者具有封閉類型系統，可能會公開單一結果類型。</span><span class="sxs-lookup"><span data-stu-id="a4e94-129">It has a closed type system, perhaps exposing a single result type.</span></span> <span data-ttu-id="a4e94-130">多數的查詢執行工作都是在本機進行，例如利用標準查詢運算子的 <xref:System.Linq.Enumerable> 實作。</span><span class="sxs-lookup"><span data-stu-id="a4e94-130">Most of the execution of the query occurs locally, for example by using the <xref:System.Linq.Enumerable> implementations of the standard query operators.</span></span> <span data-ttu-id="a4e94-131">複雜度較低的提供者可能只會在代表查詢的運算式樹狀架構中檢查一個方法呼叫運算式，並讓查詢的其餘邏輯在其他地方處理。</span><span class="sxs-lookup"><span data-stu-id="a4e94-131">A less complex provider might examine only one method call expression in the expression tree that represents the query, and let the remaining logic of the query be handled elsewhere.</span></span>  
   
- 複雜度中等的 `IQueryable` 提供者可能以具有部分表示查詢語言的資料來源為目標。 若以 Web 服務做為目標，則其可能與該 Web 服務的多個方法連結，並依據查詢所提出的問題來選取要呼叫的方法。 中等複雜度的提供者擁有的類型系統雖然比簡單提供者更為多樣化，但仍然為固定類型系統。 例如，提供者可能會公開具有可周遊的一對多關聯性 (One-To-Many Relationship)，但卻不會提供使用者定義類型的對應。  
+ <span data-ttu-id="a4e94-132">複雜度中等的 `IQueryable` 提供者可能以具有部分表示查詢語言的資料來源為目標。</span><span class="sxs-lookup"><span data-stu-id="a4e94-132">An `IQueryable` provider of medium complexity might target a data source that has a partially expressive query language.</span></span> <span data-ttu-id="a4e94-133">若以 Web 服務做為目標，則其可能與該 Web 服務的多個方法連結，並依據查詢所提出的問題來選取要呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="a4e94-133">If it targets a Web service, it might interface with more than one method of the Web service and select the method to call based on the question that the query poses.</span></span> <span data-ttu-id="a4e94-134">中等複雜度的提供者擁有的類型系統雖然比簡單提供者更為多樣化，但仍然為固定類型系統。</span><span class="sxs-lookup"><span data-stu-id="a4e94-134">A provider of medium complexity would have a richer type system than a simple provider, but it would still be a fixed type system.</span></span> <span data-ttu-id="a4e94-135">例如，提供者可能會公開具有可周遊的一對多關聯性 (One-To-Many Relationship)，但卻不會提供使用者定義類型的對應。</span><span class="sxs-lookup"><span data-stu-id="a4e94-135">For example, the provider might expose types that have one-to-many relationships that can be traversed, but it would not provide mapping technology for user-defined types.</span></span>  
   
- 複雜的 `IQueryable` 提供者 (例如 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] 提供者) 可能會將完整的 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢解譯成表示查詢語言，例如 SQL。 複雜的提供者比複雜度較低的提供者更為廣泛，因為它可以在查詢中處理更多種類的問題。 它也具有開放類型系統，因此必須包含廣泛的基礎結構，以對應使用者定義的類型。 開發複雜的提供者需要花費相當大量的心力。  
+ <span data-ttu-id="a4e94-136">複雜的 `IQueryable` 提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 提供者) 可能會將完整的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢解譯成表示查詢語言，例如 SQL。</span><span class="sxs-lookup"><span data-stu-id="a4e94-136">A complex `IQueryable` provider, such as the [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] provider, might translate complete [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries to an expressive query language, such as SQL.</span></span> <span data-ttu-id="a4e94-137">複雜的提供者比複雜度較低的提供者更為廣泛，因為它可以在查詢中處理更多種類的問題。</span><span class="sxs-lookup"><span data-stu-id="a4e94-137">A complex provider is more general than a less complex provider, because it can handle a wider variety of questions in the query.</span></span> <span data-ttu-id="a4e94-138">它也具有開放類型系統，因此必須包含廣泛的基礎結構，以對應使用者定義的類型。</span><span class="sxs-lookup"><span data-stu-id="a4e94-138">It also has an open type system and therefore must contain extensive infrastructure to map user-defined types.</span></span> <span data-ttu-id="a4e94-139">開發複雜的提供者需要花費相當大量的心力。</span><span class="sxs-lookup"><span data-stu-id="a4e94-139">Developing a complex provider requires a significant amount of effort.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq.IQueryable%601></xref:System.Linq.IQueryable%601>   
- <xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>   
- <xref:System.Linq.Enumerable></xref:System.Linq.Enumerable>   
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="a4e94-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4e94-140">See Also</span></span>  
+ <xref:System.Linq.IQueryable%601>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ <xref:System.Linq.Enumerable>  
+ [<span data-ttu-id="a4e94-141">標準查詢運算子概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4e94-141">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="a4e94-142">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4e94-142">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

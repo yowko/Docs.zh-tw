@@ -1,135 +1,130 @@
 ---
-title: "Interface Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Interface"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "interface statement [Visual Basic]"
-  - "interfaces, interface definition"
+title: "Interface 陳述式 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Interface
+helpviewer_keywords:
+- interface statement [Visual Basic]
+- interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-caps.latest.revision: 26
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9418dc86ac6947ae951cb8fb757aed6e092a6668
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Interface Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-宣告介面的名稱並引入組成介面之成員的定義。  
+# <a name="interface-statement-visual-basic"></a><span data-ttu-id="761e9-102">Interface 陳述式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="761e9-102">Interface Statement (Visual Basic)</span></span>
+<span data-ttu-id="761e9-103">宣告介面的名稱，並引進組成介面成員的定義。</span><span class="sxs-lookup"><span data-stu-id="761e9-103">Declares the name of an interface and introduces the definitions of the members that the interface comprises.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="761e9-104">語法</span><span class="sxs-lookup"><span data-stu-id="761e9-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] _  
-Interface name [ ( Of typelist ) ]  
-    [ Inherits interfacenames ]  
-    [ [ modifiers ] Property membername ]  
-    [ [ modifiers ] Function membername ]  
-    [ [ modifiers ] Sub membername ]  
-    [ [ modifiers ] Event membername ]  
-    [ [ modifiers ] Interface membername ]  
-    [ [ modifiers ] Class membername ]  
-    [ [ modifiers ] Structure membername ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] _  
+Interface name [ ( Of typelist ) ]  
+    [ Inherits interfacenames ]  
+    [ [ modifiers ] Property membername ]  
+    [ [ modifiers ] Function membername ]  
+    [ [ modifiers ] Sub membername ]  
+    [ [ modifiers ] Event membername ]  
+    [ [ modifiers ] Interface membername ]  
+    [ [ modifiers ] Class membername ]  
+    [ [ modifiers ] Structure membername ]  
 End Interface  
 ```  
   
-## 組件  
+## <a name="parts"></a><span data-ttu-id="761e9-105">組件</span><span class="sxs-lookup"><span data-stu-id="761e9-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|詞彙|定義|  
-|`attributelist`|選擇項。  請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇項。  可以是下列其中一項：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇項。  請參閱 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`name`|必要項。  這個介面的名稱。  請參閱[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|選擇項。  指定這是泛型介面。|  
-|`typelist`|如果使用 [Of](../../../visual-basic/language-reference/statements/of-clause.md) 關鍵字，則為必要項。  這個介面的型別參數清單。  每個型別參數都可以使用 `In` 和 `Out` 泛型修飾詞宣告為 Variant。  請參閱[型別清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Inherits`|選擇項。  表示此介面會繼承其他介面的屬性和成員。  請參閱 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
-|`interfacenames`|如果使用 `Inherits` 陳述式，則此為必要項。  衍生這個介面的來源介面名稱。|  
-|`modifiers`|選擇項。  所定義之介面成員的適當修飾詞。|  
-|`Property`|選擇項。  定義屬於介面成員的屬性。|  
-|`Function`|選擇項。  定義屬於介面成員的 `Function` 程序。|  
-|`Sub`|選擇項。  定義屬於介面成員的 `Sub` 程序。|  
-|`Event`|選擇項。  定義屬於介面成員的事件。|  
-|`Interface`|選擇項。  定義此介面內的巢狀介面。  巢狀介面定義必須以 `End Interface` 陳述式做結尾。|  
-|`Class`|選擇項。  定義屬於介面成員的類別。  成員類別定義必須以 `End Class` 陳述式做結尾。|  
-|`Structure`|選擇項。  定義屬於介面成員的結構。  成員結構定義必須以 `End Structure` 陳述式做結尾。|  
-|`membername`|對於被定義為介面成員的每個屬性、程序、事件、介面、類別或結構而言為必要項。  成員的名稱。|  
-|`End Interface`|結束 `Interface` 定義。|  
+|<span data-ttu-id="761e9-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="761e9-106">Term</span></span>|<span data-ttu-id="761e9-107">定義</span><span class="sxs-lookup"><span data-stu-id="761e9-107">Definition</span></span>|  
+|---|---|  
+|`attributelist`|<span data-ttu-id="761e9-108">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-108">Optional.</span></span> <span data-ttu-id="761e9-109">請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="761e9-110">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-110">Optional.</span></span> <span data-ttu-id="761e9-111">可以是下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="761e9-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="761e9-112">-   [公用](../../../visual-basic/language-reference/modifiers/public.md)</span><span class="sxs-lookup"><span data-stu-id="761e9-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span></span><br /><span data-ttu-id="761e9-113">-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="761e9-113">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="761e9-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="761e9-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="761e9-115">-   [私用](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="761e9-115">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="761e9-116">請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-116">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`Shadows`|<span data-ttu-id="761e9-117">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-117">Optional.</span></span> <span data-ttu-id="761e9-118">請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>|  
+|`name`|<span data-ttu-id="761e9-119">必要項。</span><span class="sxs-lookup"><span data-stu-id="761e9-119">Required.</span></span> <span data-ttu-id="761e9-120">這個介面的名稱。</span><span class="sxs-lookup"><span data-stu-id="761e9-120">Name of this interface.</span></span> <span data-ttu-id="761e9-121">請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-121">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`Of`|<span data-ttu-id="761e9-122">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-122">Optional.</span></span> <span data-ttu-id="761e9-123">指定這為泛型介面。</span><span class="sxs-lookup"><span data-stu-id="761e9-123">Specifies that this is a generic interface.</span></span>|  
+|`typelist`|<span data-ttu-id="761e9-124">如果您使用所需[的](../../../visual-basic/language-reference/statements/of-clause.md)關鍵字。</span><span class="sxs-lookup"><span data-stu-id="761e9-124">Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword.</span></span> <span data-ttu-id="761e9-125">此介面的型別參數的清單。</span><span class="sxs-lookup"><span data-stu-id="761e9-125">List of type parameters for this interface.</span></span> <span data-ttu-id="761e9-126">（選擇性） 每個類型參數可以宣告變數使用`In`和`Out`泛型修飾詞。</span><span class="sxs-lookup"><span data-stu-id="761e9-126">Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers.</span></span> <span data-ttu-id="761e9-127">請參閱[輸入清單](../../../visual-basic/language-reference/statements/type-list.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-127">See [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>|  
+|`Inherits`|<span data-ttu-id="761e9-128">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-128">Optional.</span></span> <span data-ttu-id="761e9-129">表示此介面繼承的屬性和另一個介面或介面的成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-129">Indicates that this interface inherits the attributes and members of another interface or interfaces.</span></span> <span data-ttu-id="761e9-130">請參閱[Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-130">See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).</span></span>|  
+|`interfacenames`|<span data-ttu-id="761e9-131">如果您使用所需`Inherits`陳述式。</span><span class="sxs-lookup"><span data-stu-id="761e9-131">Required if you use the `Inherits` statement.</span></span> <span data-ttu-id="761e9-132">此介面衍生自介面的名稱。</span><span class="sxs-lookup"><span data-stu-id="761e9-132">The names of the interfaces from which this interface derives.</span></span>|  
+|`modifiers`|<span data-ttu-id="761e9-133">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-133">Optional.</span></span> <span data-ttu-id="761e9-134">適當的修飾詞所定義之介面成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-134">Appropriate modifiers for the interface member being defined.</span></span>|  
+|`Property`|<span data-ttu-id="761e9-135">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-135">Optional.</span></span> <span data-ttu-id="761e9-136">定義介面成員的屬性。</span><span class="sxs-lookup"><span data-stu-id="761e9-136">Defines a property that is a member of the interface.</span></span>|  
+|`Function`|<span data-ttu-id="761e9-137">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-137">Optional.</span></span> <span data-ttu-id="761e9-138">定義`Function`是介面成員的程序。</span><span class="sxs-lookup"><span data-stu-id="761e9-138">Defines a `Function` procedure that is a member of the interface.</span></span>|  
+|`Sub`|<span data-ttu-id="761e9-139">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-139">Optional.</span></span> <span data-ttu-id="761e9-140">定義`Sub`是介面成員的程序。</span><span class="sxs-lookup"><span data-stu-id="761e9-140">Defines a `Sub` procedure that is a member of the interface.</span></span>|  
+|`Event`|<span data-ttu-id="761e9-141">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-141">Optional.</span></span> <span data-ttu-id="761e9-142">定義事件介面的成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-142">Defines an event that is a member of the interface.</span></span>|  
+|`Interface`|<span data-ttu-id="761e9-143">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-143">Optional.</span></span> <span data-ttu-id="761e9-144">定義此介面內的巢狀的介面。</span><span class="sxs-lookup"><span data-stu-id="761e9-144">Defines an interface that is a nested within this interface.</span></span> <span data-ttu-id="761e9-145">巢狀的介面定義必須終止與`End Interface`陳述式。</span><span class="sxs-lookup"><span data-stu-id="761e9-145">The nested interface definition must terminate with an `End Interface` statement.</span></span>|  
+|`Class`|<span data-ttu-id="761e9-146">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-146">Optional.</span></span> <span data-ttu-id="761e9-147">定義的類別介面的成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-147">Defines a class that is a member of the interface.</span></span> <span data-ttu-id="761e9-148">成員類別定義必須終止與`End Class`陳述式。</span><span class="sxs-lookup"><span data-stu-id="761e9-148">The member class definition must terminate with an `End Class` statement.</span></span>|  
+|`Structure`|<span data-ttu-id="761e9-149">選擇項。</span><span class="sxs-lookup"><span data-stu-id="761e9-149">Optional.</span></span> <span data-ttu-id="761e9-150">定義介面成員的結構。</span><span class="sxs-lookup"><span data-stu-id="761e9-150">Defines a structure that is a member of the interface.</span></span> <span data-ttu-id="761e9-151">成員結構的定義必須終止與`End Structure`陳述式。</span><span class="sxs-lookup"><span data-stu-id="761e9-151">The member structure definition must terminate with an `End Structure` statement.</span></span>|  
+|`membername`|<span data-ttu-id="761e9-152">所需的每個屬性、 程序、 事件、 介面、 類別或結構定義為介面的成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-152">Required for each property, procedure, event, interface, class, or structure defined as a member of the interface.</span></span> <span data-ttu-id="761e9-153">成員的名稱。</span><span class="sxs-lookup"><span data-stu-id="761e9-153">The name of the member.</span></span>|  
+|`End Interface`|<span data-ttu-id="761e9-154">終止`Interface`定義。</span><span class="sxs-lookup"><span data-stu-id="761e9-154">Terminates the `Interface` definition.</span></span>|  
   
-## 備註  
- 「*介面*」會定義類別和結構可以實作的一組成員，例如屬性和程序。  介面只會定義成員的簽章，而非內部運作。  
+## <a name="remarks"></a><span data-ttu-id="761e9-155">備註</span><span class="sxs-lookup"><span data-stu-id="761e9-155">Remarks</span></span>  
+ <span data-ttu-id="761e9-156">*介面*定義一組成員，例如屬性和程序的類別和結構可以實作。</span><span class="sxs-lookup"><span data-stu-id="761e9-156">An *interface* defines a set of members, such as properties and procedures, that classes and structures can implement.</span></span> <span data-ttu-id="761e9-157">介面定義的成員和非內部運作的簽章。</span><span class="sxs-lookup"><span data-stu-id="761e9-157">The interface defines only the signatures of the members and not their internal workings.</span></span>  
   
- 類別或結構會為介面所定義的每個成員提供程式碼，以便實作介面。  最後，當應用程式根據該類別或結構建立介面時，此物件會存在並於記憶體中執行。  如需詳細資訊，請參閱 [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)和 [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
+ <span data-ttu-id="761e9-158">類別或結構實作介面，藉由提供由介面所定義的每一個成員的程式碼。</span><span class="sxs-lookup"><span data-stu-id="761e9-158">A class or structure implements the interface by supplying code for every member defined by the interface.</span></span> <span data-ttu-id="761e9-159">最後，應用程式從該類別或結構中建立執行個體，當物件存在，而且會在記憶體中執行。</span><span class="sxs-lookup"><span data-stu-id="761e9-159">Finally, when the application creates an instance from that class or structure, an object exists and runs in memory.</span></span> <span data-ttu-id="761e9-160">如需詳細資訊，請參閱[物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)和[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-160">For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).</span></span>  
   
- `Interface` 只能用於命名空間或模組層級。  這表示介面的「*宣告內容*」必須是原始程式檔 \(Source File\)、命名空間、類別、結構、模組或介面，而不能是程序或區塊。  如需詳細資訊，請參閱[Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ <span data-ttu-id="761e9-161">您可以使用`Interface`只能在命名空間或模組層級。</span><span class="sxs-lookup"><span data-stu-id="761e9-161">You can use `Interface` only at namespace or module level.</span></span> <span data-ttu-id="761e9-162">這表示*宣告內容*介面必須是原始程式檔、 命名空間、 類別、 結構、 模組或介面，並且不能是程序或區塊。</span><span class="sxs-lookup"><span data-stu-id="761e9-162">This means the *declaration context* for an interface must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block.</span></span> <span data-ttu-id="761e9-163">如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-163">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- 介面會預設為 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 存取。  您可以使用存取修飾詞調整存取層級。  如需詳細資訊，請參閱 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ <span data-ttu-id="761e9-164">介面會預設為[Friend](../../../visual-basic/language-reference/modifiers/friend.md)存取。</span><span class="sxs-lookup"><span data-stu-id="761e9-164">Interfaces default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access.</span></span> <span data-ttu-id="761e9-165">您可以調整其存取層級，使用存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="761e9-165">You can adjust their access levels with the access modifiers.</span></span> <span data-ttu-id="761e9-166">如需詳細資訊，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-166">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## 規則  
+## <a name="rules"></a><span data-ttu-id="761e9-167">規則</span><span class="sxs-lookup"><span data-stu-id="761e9-167">Rules</span></span>  
   
--   **巢狀介面** ：您可以在一個介面內部定義其他介面。  外部介面會稱為「*包含介面*」，而內部介面則稱為「*巢狀介面*」。  
+-   <span data-ttu-id="761e9-168">**巢狀介面。**</span><span class="sxs-lookup"><span data-stu-id="761e9-168">**Nesting Interfaces.**</span></span> <span data-ttu-id="761e9-169">您可以定義在另一個介面。</span><span class="sxs-lookup"><span data-stu-id="761e9-169">You can define one interface within another.</span></span> <span data-ttu-id="761e9-170">外部介面稱為*包含介面*，而內部介面稱為*巢狀的介面*。</span><span class="sxs-lookup"><span data-stu-id="761e9-170">The outer interface is called the *containing interface*, and the inner interface is called a *nested interface*.</span></span>  
   
--   **成員宣告** 當您宣告屬性或程序做為介面的成員時，只定義該屬性或程序的「*簽章*」\(Signature\)。  這包含了項目型別 \(屬性或程序\)、參數和參數型別，以及傳回型別。  因為如此，成員定義只會使用一行程式碼，並且結束介面中無效的陳述式，例如 `End Function` 或 `End Property`。  
+-   <span data-ttu-id="761e9-171">**成員宣告。**</span><span class="sxs-lookup"><span data-stu-id="761e9-171">**Member Declaration.**</span></span> <span data-ttu-id="761e9-172">當您宣告屬性或程序做為介面的成員時，您會定義只*簽章*的該屬性或程序。</span><span class="sxs-lookup"><span data-stu-id="761e9-172">When you declare a property or procedure as a member of an interface, you are defining only the *signature* of that property or procedure.</span></span> <span data-ttu-id="761e9-173">這包括項目類型 （屬性或程序），其參數和參數類型，以及其傳回型別。</span><span class="sxs-lookup"><span data-stu-id="761e9-173">This includes the element type (property or procedure), its parameters and parameter types, and its return type.</span></span> <span data-ttu-id="761e9-174">因此，成員定義使用只有一行的程式碼，以及終止陳述式，例如`End Function`或`End Property`介面中不正確。</span><span class="sxs-lookup"><span data-stu-id="761e9-174">Because of this, the member definition uses only one line of code, and terminating statements such as `End Function` or `End Property` are not valid in an interface.</span></span>  
   
-     相對地，當您定義列舉型別或結構時，或是巢狀類別或介面時，則必須包含資料成員。  
+     <span data-ttu-id="761e9-175">相反地，當您定義列舉型別或結構，或巢狀的類別或介面，則需要包含資料成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-175">In contrast, when you define an enumeration or structure, or a nested class or interface, it is necessary to include their data members.</span></span>  
   
--   **成員修飾詞** 定義模組成員時，您不能使用任何存取修飾詞，也不能指定 [Shared](../../../visual-basic/language-reference/modifiers/shared.md) 或除了 [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md) 以外的任何程序修飾詞。  您可以使用 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) 宣告任何成員，而且可以在定義屬性時，使用 [Default](../../../visual-basic/language-reference/modifiers/default.md)、[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) 或 [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)。  
+-   <span data-ttu-id="761e9-176">**成員修飾詞。**</span><span class="sxs-lookup"><span data-stu-id="761e9-176">**Member Modifiers.**</span></span> <span data-ttu-id="761e9-177">定義模組的成員時，您無法使用任何存取修飾詞，也不能指定[共用](../../../visual-basic/language-reference/modifiers/shared.md)或任何程序修飾詞，除了[多載](../../../visual-basic/language-reference/modifiers/overloads.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-177">You cannot use any access modifiers when defining module members, nor can you specify [Shared](../../../visual-basic/language-reference/modifiers/shared.md) or any procedure modifier except [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md).</span></span> <span data-ttu-id="761e9-178">您可以宣告任何成員與[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)，而且您可以使用[預設](../../../visual-basic/language-reference/modifiers/default.md)時定義屬性，以及[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)或[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-178">You can declare any member with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), and you can use [Default](../../../visual-basic/language-reference/modifiers/default.md) when defining a property, as well as [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) or [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).</span></span>  
   
--   **繼承** 如果介面使用 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)，則可以指定一個或多個基底介面。  即使兩個介面每個都定義同名的成員，也可以繼承這兩個介面。  如果這樣做，則實作程式碼必須使用名稱限定，以指定它所實作的成員。  
+-   <span data-ttu-id="761e9-179">**繼承**：</span><span class="sxs-lookup"><span data-stu-id="761e9-179">**Inheritance.**</span></span> <span data-ttu-id="761e9-180">如果介面會使用[Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)，您可以指定一或多個基底介面。</span><span class="sxs-lookup"><span data-stu-id="761e9-180">If the interface uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify one or more base interfaces.</span></span> <span data-ttu-id="761e9-181">您可以繼承自兩個介面，即使它們每個會定義具有相同名稱的成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-181">You can inherit from two interfaces even if they each define a member with the same name.</span></span> <span data-ttu-id="761e9-182">如果您這樣做時，實作程式碼必須使用名稱限定性條件來指定它所實作的成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-182">If you do so, the implementing code must use name qualification to specify which member it is implementing.</span></span>  
   
-     介面無法繼承另一個具有較受限存取層級的介面。  例如，`Public` 介面無法繼承 `Friend` 介面。  
+     <span data-ttu-id="761e9-183">介面無法繼承自另一個介面具有更嚴格的存取層級。</span><span class="sxs-lookup"><span data-stu-id="761e9-183">An interface cannot inherit from another interface with a more restrictive access level.</span></span> <span data-ttu-id="761e9-184">例如，`Public`介面無法繼承自`Friend`介面。</span><span class="sxs-lookup"><span data-stu-id="761e9-184">For example, a `Public` interface cannot inherit from a `Friend` interface.</span></span>  
   
-     介面無法繼承自內部的巢狀介面。  
+     <span data-ttu-id="761e9-185">介面無法繼承自介面巢狀。</span><span class="sxs-lookup"><span data-stu-id="761e9-185">An interface cannot inherit from an interface nested within it.</span></span>  
   
--   **實作** 當類別使用 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) 陳述式實作這個介面時，它必須實作每個定義在此介面中的成員。  此外，實作程式碼中的每個簽章必須完全符合這個介面中所定義的對應簽章。  不過，實作程式碼中的成員名稱不必符合介面中所定義的成員名稱。  
+-   <span data-ttu-id="761e9-186">**實作。**</span><span class="sxs-lookup"><span data-stu-id="761e9-186">**Implementation.**</span></span> <span data-ttu-id="761e9-187">類別會使用當[實作](../../../visual-basic/language-reference/statements/implements-clause.md)陳述式以實作這個介面，它必須實作介面內定義的每個成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-187">When a class uses the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) statement to implement this interface, it must implement every member defined within the interface.</span></span> <span data-ttu-id="761e9-188">此外，實作程式碼中的每個簽章必須完全符合對應的簽章定義此介面中。</span><span class="sxs-lookup"><span data-stu-id="761e9-188">Furthermore, each signature in the implementing code must exactly match the corresponding signature defined in this interface.</span></span> <span data-ttu-id="761e9-189">不過，實作程式碼中成員的名稱不必符合介面中所定義的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="761e9-189">However, the name of the member in the implementing code does not have to match the member name as defined in the interface.</span></span>  
   
-     當類別正在實作程序時，它無法將此程序指定為 `Shared`。  
+     <span data-ttu-id="761e9-190">在類別實作程序時，它不能指定為程序`Shared`。</span><span class="sxs-lookup"><span data-stu-id="761e9-190">When a class is implementing a procedure, it cannot designate the procedure as `Shared`.</span></span>  
   
--   **預設屬性** 介面最多可以指定一個屬性做為「*預設屬性*」\(Default Property\)，不需使用屬性名稱即可參考此屬性。  您可以利用 [Default](../../../visual-basic/language-reference/modifiers/default.md) 修飾詞宣告屬性，以便指定此種屬性。  
+-   <span data-ttu-id="761e9-191">**預設屬性。**</span><span class="sxs-lookup"><span data-stu-id="761e9-191">**Default Property.**</span></span> <span data-ttu-id="761e9-192">介面可以指定最多一個屬性做為其*預設屬性*，它可以參考而不需使用屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="761e9-192">An interface can specify at most one property as its *default property*, which can be referenced without using the property name.</span></span> <span data-ttu-id="761e9-193">您指定這類屬性，藉由宣告它具有[預設](../../../visual-basic/language-reference/modifiers/default.md)修飾詞。</span><span class="sxs-lookup"><span data-stu-id="761e9-193">You specify such a property by declaring it with the [Default](../../../visual-basic/language-reference/modifiers/default.md) modifier.</span></span>  
   
-     請注意，這表示只有在介面未繼承預設屬性時，才可以定義預設屬性。  
+     <span data-ttu-id="761e9-194">請注意，這表示只有當未繼承介面可以定義預設屬性。</span><span class="sxs-lookup"><span data-stu-id="761e9-194">Notice that this means that an interface can define a default property only if it inherits none.</span></span>  
   
-## 行為  
+## <a name="behavior"></a><span data-ttu-id="761e9-195">行為</span><span class="sxs-lookup"><span data-stu-id="761e9-195">Behavior</span></span>  
   
--   **存取層級** 所有介面隱含有 [Public](../../../visual-basic/language-reference/modifiers/public.md) 存取。  您在定義成員時，不能使用任何存取修飾詞。  不過，實作介面的類別可以為每個實作的成員宣告存取層級。  
+-   <span data-ttu-id="761e9-196">**存取層級。**</span><span class="sxs-lookup"><span data-stu-id="761e9-196">**Access Level.**</span></span> <span data-ttu-id="761e9-197">所有介面成員以隱含方式都具有[公用](../../../visual-basic/language-reference/modifiers/public.md)存取。</span><span class="sxs-lookup"><span data-stu-id="761e9-197">All interface members implicitly have [Public](../../../visual-basic/language-reference/modifiers/public.md) access.</span></span> <span data-ttu-id="761e9-198">定義成員時，您無法使用任何存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="761e9-198">You cannot use any access modifier when defining a member.</span></span> <span data-ttu-id="761e9-199">不過，實作介面的類別可以針對每個實作的成員宣告的存取層級。</span><span class="sxs-lookup"><span data-stu-id="761e9-199">However, a class implementing the interface can declare an access level for each implemented member.</span></span>  
   
-     如果您指派類別執行個體給變數，則成員的存取層級可視此變數的資料型別為基礎介面或實作類別而定。  下列範例將說明這點。  
+     <span data-ttu-id="761e9-200">如果您將類別執行個體指派給變數，其成員的存取層級可能會相依於是否變數的資料類型為基礎的介面或實作的類別。</span><span class="sxs-lookup"><span data-stu-id="761e9-200">If you assign a class instance to a variable, the access level of its members can depend on whether the data type of the variable is the underlying interface or the implementing class.</span></span> <span data-ttu-id="761e9-201">下列範例將說明這點。</span><span class="sxs-lookup"><span data-stu-id="761e9-201">The following example illustrates this.</span></span>  
   
      [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
   
-     如果您透過 `varAsInterface` 存取類別成員，則這些成員都具有公用存取。  不過，如果透過 `varAsClass` 存取成員，則 `Sub` 程序 `doSomething` 具有私用存取。  
+     <span data-ttu-id="761e9-202">如果您存取類別成員透過`varAsInterface`，它們都有公用存取權。</span><span class="sxs-lookup"><span data-stu-id="761e9-202">If you access class members through `varAsInterface`, they all have public access.</span></span> <span data-ttu-id="761e9-203">不過，如果您存取成員透過`varAsClass`、`Sub`程序`doSomething`具有私用存取。</span><span class="sxs-lookup"><span data-stu-id="761e9-203">However, if you access members through `varAsClass`, the `Sub` procedure `doSomething` has private access.</span></span>  
   
--   **範圍。** ：介面的命名空間、類別、結構或模組都會在範圍中。  
+-   <span data-ttu-id="761e9-204">**範圍。**</span><span class="sxs-lookup"><span data-stu-id="761e9-204">**Scope.**</span></span> <span data-ttu-id="761e9-205">介面是在範圍中的命名空間、 類別、 結構或模組。</span><span class="sxs-lookup"><span data-stu-id="761e9-205">An interface is in scope throughout its namespace, class, structure, or module.</span></span>  
   
-     每個介面成員的範圍都是整個介面。  
+     <span data-ttu-id="761e9-206">每個介面成員的範圍是整個介面。</span><span class="sxs-lookup"><span data-stu-id="761e9-206">The scope of every interface member is the entire interface.</span></span>  
   
--   **存留期** ：介面本身沒有存留期，成員也沒有存留期。  當類別實作介面且將某個物件建立為該類別的執行個體時，該物件會在執行所在的應用程式中有存留期。  如需詳細資訊，請參閱 [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) 中「存留期」的部分。  
+-   <span data-ttu-id="761e9-207">**存留期。**</span><span class="sxs-lookup"><span data-stu-id="761e9-207">**Lifetime.**</span></span> <span data-ttu-id="761e9-208">介面本身不會有存留期間，也不會影響其成員。</span><span class="sxs-lookup"><span data-stu-id="761e9-208">An interface does not itself have a lifetime, nor do its members.</span></span> <span data-ttu-id="761e9-209">當類別實作的介面和物件會建立為的執行個體的類別，物件具有存留期內正在執行的應用程式。</span><span class="sxs-lookup"><span data-stu-id="761e9-209">When a class implements an interface and an object is created as an instance of that class, the object has a lifetime within the application in which it is running.</span></span> <span data-ttu-id="761e9-210">如需詳細資訊，請參閱 「 存留時間 」 中[Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="761e9-210">For more information, see "Lifetime" in [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md).</span></span>  
   
-## 範例  
- 下列範例會使用 `Interface` 陳述式定義名為 `thisInterface` 的介面，這個介面必須以 `Property` 陳述式和 `Function` 陳述式實作。  
+## <a name="example"></a><span data-ttu-id="761e9-211">範例</span><span class="sxs-lookup"><span data-stu-id="761e9-211">Example</span></span>  
+ <span data-ttu-id="761e9-212">下列範例會使用`Interface`陳述式來定義名為介面`thisInterface`，它必須用來實作`Property`陳述式和`Function`陳述式。</span><span class="sxs-lookup"><span data-stu-id="761e9-212">The following example uses the `Interface` statement to define an interface named `thisInterface`, which must be implemented with a `Property` statement and a `Function` statement.</span></span>  
   
  [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
   
- 請注意，`Property` 和 `Function` 陳述式不會引入介面中以 `End Property` 和 `End Function` 結尾的區塊。  介面只會定義成員的簽章。  完整的 `Property` 和 `Function` 區塊會出現在實作 `thisInterface` 的類別中。  
+ <span data-ttu-id="761e9-213">請注意，`Property`和`Function`陳述式並不會引入區塊結尾`End Property`和`End Function`在介面中。</span><span class="sxs-lookup"><span data-stu-id="761e9-213">Note that the `Property` and `Function` statements do not introduce blocks ending with `End Property` and `End Function` within the interface.</span></span> <span data-ttu-id="761e9-214">介面定義的其成員的簽章。</span><span class="sxs-lookup"><span data-stu-id="761e9-214">The interface defines only the signatures of its members.</span></span> <span data-ttu-id="761e9-215">完整`Property`和`Function`區塊會出現在類別實作`thisInterface`。</span><span class="sxs-lookup"><span data-stu-id="761e9-215">The full `Property` and `Function` blocks appear in a class that implements `thisInterface`.</span></span>  
   
-## 請參閱  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)   
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [泛型介面中的變異數](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)   
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a><span data-ttu-id="761e9-216">另請參閱</span><span class="sxs-lookup"><span data-stu-id="761e9-216">See Also</span></span>  
+ [<span data-ttu-id="761e9-217">介面</span><span class="sxs-lookup"><span data-stu-id="761e9-217">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
+ [<span data-ttu-id="761e9-218">Class 陳述式</span><span class="sxs-lookup"><span data-stu-id="761e9-218">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="761e9-219">Module 陳述式</span><span class="sxs-lookup"><span data-stu-id="761e9-219">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="761e9-220">Structure 陳述式</span><span class="sxs-lookup"><span data-stu-id="761e9-220">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="761e9-221">Property 陳述式</span><span class="sxs-lookup"><span data-stu-id="761e9-221">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="761e9-222">Function 陳述式</span><span class="sxs-lookup"><span data-stu-id="761e9-222">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="761e9-223">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="761e9-223">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="761e9-224">Visual Basic 中的泛型型別</span><span class="sxs-lookup"><span data-stu-id="761e9-224">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="761e9-225">泛型介面中的變異數</span><span class="sxs-lookup"><span data-stu-id="761e9-225">Variance in Generic Interfaces</span></span>](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [<span data-ttu-id="761e9-226">In</span><span class="sxs-lookup"><span data-stu-id="761e9-226">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [<span data-ttu-id="761e9-227">Out</span><span class="sxs-lookup"><span data-stu-id="761e9-227">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

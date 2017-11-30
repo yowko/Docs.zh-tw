@@ -1,78 +1,61 @@
 ---
-title: "如何︰ 宣告列舉 (Visual Basic) |Microsoft 文件"
+title: "如何：宣告列舉 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- declarations, enumerations
+- declarations [Visual Basic], enumerations
 - enumerations [Visual Basic], declaring
-- declaring enumerations
+- declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8ff8bf2df39bed0597740bcda968283ec854f447
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 938550ebbfcf099729db3de96b809549cb234d81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-declare-enumerations-visual-basic"></a>如何：宣告列舉 (Visual Basic)
-建立列舉型別與`Enum`類別或模組的陳述式的宣告區段中。 您無法宣告列舉型別方法內。 若要指定適當的存取層級，請使用`Private`， `Protected`， `Friend`，或`Public`。  
+# <a name="how-to-declare-enumerations-visual-basic"></a><span data-ttu-id="b84ad-102">如何：宣告列舉 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b84ad-102">How to: Declare Enumerations (Visual Basic)</span></span>
+<span data-ttu-id="b84ad-103">建立列舉，含`Enum`陳述式的宣告區段中的類別或模組。</span><span class="sxs-lookup"><span data-stu-id="b84ad-103">You create an enumeration with the `Enum` statement in the declarations section of a class or module.</span></span> <span data-ttu-id="b84ad-104">您無法宣告列舉型別方法內。</span><span class="sxs-lookup"><span data-stu-id="b84ad-104">You cannot declare an enumeration within a method.</span></span> <span data-ttu-id="b84ad-105">若要指定適當的存取層級，請使用`Private`， `Protected`， `Friend`，或`Public`。</span><span class="sxs-lookup"><span data-stu-id="b84ad-105">To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.</span></span>  
   
- `Enum`型別具有名稱、 基礎型別，以及一組欄位，各代表一個常數。 名稱必須是有效[!INCLUDE[vbprvblong](../../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]限定詞。 基礎型別必須是整數類型的其中一個 —`Byte`， `Short`，`Long`或`Integer`。 `Integer` 是預設值。 列舉型別一律強型別，並不能互換使用整數的數字類型。  
+ <span data-ttu-id="b84ad-106">`Enum`型別具有名稱、 基礎類型和一組欄位，各代表常數。</span><span class="sxs-lookup"><span data-stu-id="b84ad-106">An `Enum` type has a name, an underlying type, and a set of fields, each representing a constant.</span></span> <span data-ttu-id="b84ad-107">名稱必須是有效的 Visual Basic.NET 限定詞。</span><span class="sxs-lookup"><span data-stu-id="b84ad-107">The name must be a valid Visual Basic .NET qualifier.</span></span> <span data-ttu-id="b84ad-108">基礎類型必須是整數類型的其中一個 —`Byte`， `Short`，`Long`或`Integer`。</span><span class="sxs-lookup"><span data-stu-id="b84ad-108">The underlying type must be one of the integer types—`Byte`, `Short`, `Long` or `Integer`.</span></span> <span data-ttu-id="b84ad-109">`Integer` 是預設值。</span><span class="sxs-lookup"><span data-stu-id="b84ad-109">`Integer` is the default.</span></span> <span data-ttu-id="b84ad-110">列舉型別一律強型別和不可互換的整數數字類型。</span><span class="sxs-lookup"><span data-stu-id="b84ad-110">Enumerations are always strongly typed and are not interchangeable with integer number types.</span></span>  
   
- 列舉型別不能有浮點值。 如果列舉型別指派的浮點值`Option Strict On`，造成編譯器錯誤。 如果`Option Strict`是`Off`，值會自動轉換為`Enum`型別。  
+ <span data-ttu-id="b84ad-111">列舉型別不能有浮點值。</span><span class="sxs-lookup"><span data-stu-id="b84ad-111">Enumerations cannot have floating-point values.</span></span> <span data-ttu-id="b84ad-112">如果列舉指派的浮點值`Option Strict On`，造成編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="b84ad-112">If an enumeration is assigned a floating-point value with `Option Strict On`, a compiler error results.</span></span> <span data-ttu-id="b84ad-113">如果`Option Strict`是`Off`，值會自動轉換為`Enum`型別。</span><span class="sxs-lookup"><span data-stu-id="b84ad-113">If `Option Strict` is `Off`, the value is automatically converted to the `Enum` type.</span></span>  
   
- 如需名稱及如何使用`Imports`陳述式，讓名稱限定不必要的請參閱[列舉型別和名稱限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)。  
+ <span data-ttu-id="b84ad-114">如需名稱資訊，以及如何使用`Imports`陳述式來進行名稱限定不必要的請參閱[列舉型別和名稱限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)。</span><span class="sxs-lookup"><span data-stu-id="b84ad-114">For information on names, and how to use the `Imports` statement to make name qualification unnecessary, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).</span></span>  
   
-### <a name="to-declare-an-enumeration"></a>若要宣告列舉類型  
+### <a name="to-declare-an-enumeration"></a><span data-ttu-id="b84ad-115">宣告列舉</span><span class="sxs-lookup"><span data-stu-id="b84ad-115">To declare an enumeration</span></span>  
   
-1.  撰寫包含程式碼存取層級宣告`Enum`關鍵字，且有效的名稱，如下列範例中，其中每個宣告不同`Enum`。  
+1.  <span data-ttu-id="b84ad-116">撰寫包含程式碼存取層級中，宣告`Enum`關鍵字和有效的名稱，如同下列範例中，其中每個宣告不同`Enum`。</span><span class="sxs-lookup"><span data-stu-id="b84ad-116">Write a declaration that includes a code access level, the `Enum` keyword, and a valid name, as in the following examples, each of which declares a different `Enum`.</span></span>  
   
-     [!code-vb[VbEnumsTask #&3;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
+     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
   
-2.  列舉中定義常數。 根據預設，列舉型別的第一個常數會初始化為`0`，而之後的常數會初始化為值&1; 的上一個常數。 例如，以下列舉`Days`，包含名為常數`Sunday`值`0`，名為常數`Monday`值`1`，名為常數`Tuesday`值是`2`，依此類推。  
+2.  <span data-ttu-id="b84ad-117">列舉型別中定義的常數。</span><span class="sxs-lookup"><span data-stu-id="b84ad-117">Define the constants in the enumeration.</span></span> <span data-ttu-id="b84ad-118">根據預設，第一個常數列舉型別會初始化為`0`，而後續的常數會初始化為值大於先前的常數。</span><span class="sxs-lookup"><span data-stu-id="b84ad-118">By default, the first constant in an enumeration is initialized to `0`, and subsequent constants are initialized to a value of one more than the previous constant.</span></span> <span data-ttu-id="b84ad-119">例如，下列的列舉， `Days`，包含名為常數`Sunday`值`0`，名為`Monday`值`1`，名為`Tuesday`值`2`，依此類推。</span><span class="sxs-lookup"><span data-stu-id="b84ad-119">For example, the following enumeration, `Days`, contains a constant named `Sunday` with the value `0`, a constant named `Monday` with the value `1`, a constant named `Tuesday` with the value of `2`, and so on.</span></span>  
   
-     [!code-vb[VbEnumsTask #&4;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
+     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
   
-3.  您可以使用在指派陳述式明確地指派列舉型別常數的值。 您可以指派任何整數值，包括負數。 例如，您可以常數的值小於零來表示錯誤狀況。 在下列的列舉常數`Invalid`已明確指派值`–1`，和常數`Sunday`會指派值`0`。 因為它是列舉型別，第一個常數`Saturday`也會初始化為值`0`。 值`Monday`是`1`(的值大於`Sunday`); 的值`Tuesday`是`2`，依此類推。  
+3.  <span data-ttu-id="b84ad-120">您可以使用在指派陳述式明確指派常數列舉中的值。</span><span class="sxs-lookup"><span data-stu-id="b84ad-120">You can explicitly assign values to constants in an enumeration by using an assignment statement.</span></span> <span data-ttu-id="b84ad-121">您可以指派任何整數值，包含負號。</span><span class="sxs-lookup"><span data-stu-id="b84ad-121">You can assign any integer value, including negative numbers.</span></span> <span data-ttu-id="b84ad-122">例如，您可以具有值小於零，表示錯誤狀況的常數。</span><span class="sxs-lookup"><span data-stu-id="b84ad-122">For example, you may want constants with values less than zero to represent error conditions.</span></span> <span data-ttu-id="b84ad-123">在下列的列舉常數`Invalid`明確指派值`–1`，和常數`Sunday`被指派的值`0`。</span><span class="sxs-lookup"><span data-stu-id="b84ad-123">In the following enumeration, the constant `Invalid` is explicitly assigned the value `–1`, and the constant `Sunday` is assigned the value `0`.</span></span> <span data-ttu-id="b84ad-124">因為它是在列舉中，第一個常數`Saturday`也會初始化為值`0`。</span><span class="sxs-lookup"><span data-stu-id="b84ad-124">Because it is the first constant in the enumeration, `Saturday` is also initialized to the value `0`.</span></span> <span data-ttu-id="b84ad-125">值`Monday`是`1`(的值大於`Sunday`); 的值`Tuesday`是`2`，依此類推。</span><span class="sxs-lookup"><span data-stu-id="b84ad-125">The value of `Monday` is `1` (one more than the value of `Sunday`); the value of `Tuesday` is `2`, and so on.</span></span>  
   
-     [!code-vb[VbEnumsTask #&5;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
+     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
   
-### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>若要宣告明確的型別為列舉型別  
+### <a name="to-declare-an-enumeration-as-an-explicit-type"></a><span data-ttu-id="b84ad-126">宣告列舉為明確的類型</span><span class="sxs-lookup"><span data-stu-id="b84ad-126">To declare an enumeration as an explicit type</span></span>  
   
--   使用指定的列舉類型`As`子句，如下列範例所示。  
+-   <span data-ttu-id="b84ad-127">使用指定的列舉類型`As`子句，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="b84ad-127">Specify the type of the enum by using the `As` clause, as shown in the following example.</span></span>  
   
-     [!code-vb[VbEnumsTask #&6;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
+     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [列舉型別和名稱限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [如何︰ 參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [如何︰ 逐一查看在 Visual Basic 中列舉類型](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)   
- [如何︰ 決定與列舉值關聯的字串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
- [何時使用列舉型別](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)   
- [常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [常數和常值資料類型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)   
- [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b84ad-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b84ad-128">See Also</span></span>  
+ [<span data-ttu-id="b84ad-129">列舉和名稱限定性條件</span><span class="sxs-lookup"><span data-stu-id="b84ad-129">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [<span data-ttu-id="b84ad-130">如何：參考列舉成員</span><span class="sxs-lookup"><span data-stu-id="b84ad-130">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [<span data-ttu-id="b84ad-131">如何： 逐一查看 Visual Basic 中列舉類型</span><span class="sxs-lookup"><span data-stu-id="b84ad-131">How to: Iterate Through An Enumeration in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)  
+ [<span data-ttu-id="b84ad-132">如何：決定與列舉值相關聯的字串</span><span class="sxs-lookup"><span data-stu-id="b84ad-132">How to: Determine the String Associated with an Enumeration Value</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
+ [<span data-ttu-id="b84ad-133">何時使用列舉</span><span class="sxs-lookup"><span data-stu-id="b84ad-133">When to Use an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
+ [<span data-ttu-id="b84ad-134">常數的概觀</span><span class="sxs-lookup"><span data-stu-id="b84ad-134">Constants Overview</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [<span data-ttu-id="b84ad-135">常數和常值資料類型</span><span class="sxs-lookup"><span data-stu-id="b84ad-135">Constant and Literal Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
+ [<span data-ttu-id="b84ad-136">常數和列舉</span><span class="sxs-lookup"><span data-stu-id="b84ad-136">Constants and Enumerations</span></span>](../../../../visual-basic/language-reference/constants-and-enumerations.md)

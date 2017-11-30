@@ -1,54 +1,46 @@
 ---
-title: "聯結作業 (Visual Basic) |Microsoft 文件"
+title: "聯結作業 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dce1adb5b918674bc8ee8fc48c8ff5b3c3814a88
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 21ff2c466db223720edf00be91c3516c641762ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="join-operations-visual-basic"></a>聯結作業 (Visual Basic)
-A*聯結*的兩個資料來源是指某個資料來源中的物件與另一個資料來源中的共同屬性的物件關聯。  
+# <a name="join-operations-visual-basic"></a><span data-ttu-id="54294-102">聯結作業 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54294-102">Join Operations (Visual Basic)</span></span>
+<span data-ttu-id="54294-103">兩個資料來源的「聯結」，就是某個資料來源中的物件，和另一個資料來源中共用通用屬性的物件的關聯。</span><span class="sxs-lookup"><span data-stu-id="54294-103">A *join* of two data sources is the association of objects in one data source with objects that share a common attribute in another data source.</span></span>  
   
- 對於不能直接追蹤目標資料來源彼此之間的關聯性的查詢而言，聯結是很重要的作業。 在物件導向的程式設計中，這可能表示物件之間的相互關聯沒有模組化，例如單向關聯性的返回方向。 一個單向關聯性的範例是「客戶」類別，其具有類型「城市」的屬性，但「城市」類別沒有「客戶」物件集合的屬性。 若您有「城市」物件清單，且您想要尋找每個城市中的所有客戶，您就可以使用聯結作業來尋找客戶。  
+ <span data-ttu-id="54294-104">對於不能直接追蹤目標資料來源彼此之間的關聯性的查詢而言，聯結是很重要的作業。</span><span class="sxs-lookup"><span data-stu-id="54294-104">Joining is an important operation in queries that target data sources whose relationships to each other cannot be followed directly.</span></span> <span data-ttu-id="54294-105">在物件導向的程式設計中，這可能表示物件之間的相互關聯沒有模組化，例如單向關聯性的返回方向。</span><span class="sxs-lookup"><span data-stu-id="54294-105">In object-oriented programming, this could mean a correlation between objects that is not modeled, such as the backwards direction of a one-way relationship.</span></span> <span data-ttu-id="54294-106">一個單向關聯性的範例是「客戶」類別，其具有類型「城市」的屬性，但「城市」類別沒有「客戶」物件集合的屬性。</span><span class="sxs-lookup"><span data-stu-id="54294-106">An example of a one-way relationship is a Customer class that has a property of type City, but the City class does not have a property that is a collection of Customer objects.</span></span> <span data-ttu-id="54294-107">若您有「城市」物件清單，且您想要尋找每個城市中的所有客戶，您就可以使用聯結作業來尋找客戶。</span><span class="sxs-lookup"><span data-stu-id="54294-107">If you have a list of City objects and you want to find all the customers in each city, you could use a join operation to find them.</span></span>  
   
- LINQ 架構中提供的聯結方法為<xref:System.Linq.Enumerable.Join%2A>和<xref:System.Linq.Enumerable.GroupJoin%2A>.</xref:System.Linq.Enumerable.GroupJoin%2A> </xref:System.Linq.Enumerable.Join%2A> 這些方法會執行聯結或根據索引鍵相等與否的兩個資料來源的聯結。 (相較下，Transact-SQL 支援「等於」運算子以外的聯結運算子，例如「小於」運算字)。在關聯式資料庫術語<xref:System.Linq.Enumerable.Join%2A>實作內部聯結，一種聯結中，只有在其他資料集中有相符的物件會傳回。</xref:System.Linq.Enumerable.Join%2A> <xref:System.Linq.Enumerable.GroupJoin%2A>方法在關聯式資料庫詞彙中，有沒有直接的對等用法，但它會實作內部聯結及左外部聯結的超集。</xref:System.Linq.Enumerable.GroupJoin%2A> 左外部聯結是傳回每個元素的第一個 （左） 資料來源的聯結，即使它具有其他資料來源中的任何相關項目。  
+ <span data-ttu-id="54294-108">LINQ 架構中所提供的 join 方法是 <xref:System.Linq.Enumerable.Join%2A> 和 <xref:System.Linq.Enumerable.GroupJoin%2A>。</span><span class="sxs-lookup"><span data-stu-id="54294-108">The join methods provided in the LINQ framework are <xref:System.Linq.Enumerable.Join%2A> and <xref:System.Linq.Enumerable.GroupJoin%2A>.</span></span> <span data-ttu-id="54294-109">這些方法會執行等聯結，或是執行根據其索引鍵相等與否配對兩個資料來源的聯結。</span><span class="sxs-lookup"><span data-stu-id="54294-109">These methods perform equijoins, or joins that match two data sources based on equality of their keys.</span></span> <span data-ttu-id="54294-110">(相較下，Transact-SQL 支援「等於」運算子以外的聯結運算子，例如「小於」運算字)。在關聯式資料庫規定中，<xref:System.Linq.Enumerable.Join%2A> 會實作內部聯結，在這種聯結中，只會傳回在其他資料集中有相符項目的物件。</span><span class="sxs-lookup"><span data-stu-id="54294-110">(For comparison, Transact-SQL supports join operators other than 'equals', for example the 'less than' operator.) In relational database terms, <xref:System.Linq.Enumerable.Join%2A> implements an inner join, a type of join in which only those objects that have a match in the other data set are returned.</span></span> <span data-ttu-id="54294-111"><xref:System.Linq.Enumerable.GroupJoin%2A> 方法從關聯式資料庫觀點來看沒有直接的對應項目，但它會實作內部聯結和左方外部聯結的超集。</span><span class="sxs-lookup"><span data-stu-id="54294-111">The <xref:System.Linq.Enumerable.GroupJoin%2A> method has no direct equivalent in relational database terms, but it implements a superset of inner joins and left outer joins.</span></span> <span data-ttu-id="54294-112">左方外部聯結是傳回第一個 (左) 資料來源中每個項目的聯結，即使它在其他資料來源中沒有相互關聯的項目也一樣。</span><span class="sxs-lookup"><span data-stu-id="54294-112">A left outer join is a join that returns each element of the first (left) data source, even if it has no correlated elements in the other data source.</span></span>  
   
- 以下概念圖示範兩個集合，以及兩個集合中包含在內部聯結或左外部聯結中的項目。  
+ <span data-ttu-id="54294-113">以下概念圖示範兩個集合，以及兩個集合中包含在內部聯結或左外部聯結中的項目。</span><span class="sxs-lookup"><span data-stu-id="54294-113">The following illustration shows a conceptual view of two sets and the elements within those sets that are included in either an inner join or a left outer join.</span></span>  
   
- ![兩個重疊圓形顯示內部/外部。] (../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ <span data-ttu-id="54294-114">![顯示內部&#47;外部的兩個重疊圓形。](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")</span><span class="sxs-lookup"><span data-stu-id="54294-114">![Two overlapping circles showing inner&#47;outer.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")</span></span>  
   
-## <a name="methods"></a>方法  
+## <a name="methods"></a><span data-ttu-id="54294-115">方法</span><span class="sxs-lookup"><span data-stu-id="54294-115">Methods</span></span>  
   
-|方法名稱|描述|Visual Basic 查詢運算式語法|更多資訊|  
+|<span data-ttu-id="54294-116">方法名稱</span><span class="sxs-lookup"><span data-stu-id="54294-116">Method Name</span></span>|<span data-ttu-id="54294-117">說明</span><span class="sxs-lookup"><span data-stu-id="54294-117">Description</span></span>|<span data-ttu-id="54294-118">Visual Basic 查詢運算式語法</span><span class="sxs-lookup"><span data-stu-id="54294-118">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="54294-119">更多資訊</span><span class="sxs-lookup"><span data-stu-id="54294-119">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Join|根據索引鍵選取器函式聯結兩個序列並擷取值組。|`From x In …, y In … Where x.a = y.a`<br /><br /> -或-<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Join%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=fullName></xref:System.Linq.Queryable.Join%2A?displayProperty=fullName>|  
-|GroupJoin|根據索引鍵選取器函式聯結兩個序列，並為每個項目的相符結果進行分組。|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=fullName></xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=fullName></xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=fullName>|  
+|<span data-ttu-id="54294-120">Join</span><span class="sxs-lookup"><span data-stu-id="54294-120">Join</span></span>|<span data-ttu-id="54294-121">根據索引鍵選取器函式聯結兩個序列並擷取值組。</span><span class="sxs-lookup"><span data-stu-id="54294-121">Joins two sequences based on key selector functions and extracts pairs of values.</span></span>|`From x In …, y In … Where x.a = y.a`<br /><br /> <span data-ttu-id="54294-122">-或-</span><span class="sxs-lookup"><span data-stu-id="54294-122">-or-</span></span><br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="54294-123">GroupJoin</span><span class="sxs-lookup"><span data-stu-id="54294-123">GroupJoin</span></span>|<span data-ttu-id="54294-124">根據索引鍵選取器函式聯結兩個序列，並為每個項目的相符結果進行分組。</span><span class="sxs-lookup"><span data-stu-id="54294-124">Joins two sequences based on key selector functions and groups the resulting matches for each element.</span></span>|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq></xref:System.Linq>   
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [制定聯結和交叉乘積查詢](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)   
- [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)   
- [如何︰ 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)   
- [如何︰ 填入物件集合，從多個來源 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+## <a name="see-also"></a><span data-ttu-id="54294-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="54294-125">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="54294-126">標準查詢運算子概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54294-126">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="54294-127">匿名類型</span><span class="sxs-lookup"><span data-stu-id="54294-127">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [<span data-ttu-id="54294-128">制定聯結和交叉乘積查詢</span><span class="sxs-lookup"><span data-stu-id="54294-128">Formulate Joins and Cross-Product Queries</span></span>](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [<span data-ttu-id="54294-129">Join 子句</span><span class="sxs-lookup"><span data-stu-id="54294-129">Join Clause</span></span>](../../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="54294-130">如何： 將內容從不同的檔案 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54294-130">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [<span data-ttu-id="54294-131">如何： 從 (LINQ) (Visual Basic) 的多個來源填入物件集合</span><span class="sxs-lookup"><span data-stu-id="54294-131">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

@@ -1,66 +1,48 @@
 ---
-title: "範例編譯命令列 (Visual Basic) |Microsoft 文件"
-ms.date: 2015-07-20
+title: "編譯命令列範例 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- command line, compilers
-- compilation, command-line
+- command line [Visual Basic], compilers
+- compilation [Visual Basic], command-line
 - command-line compilers
-- compiling source code, from command line
+- compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 918787b3377f2e5a636a6b098046ac2f455efcdd
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0e168d40a22ca3737bee18f966df95988a2736a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sample-compilation-command-lines-visual-basic"></a>編譯命令列範例 (Visual Basic)
-除了編譯[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]程式從[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]，您可以從要產生可執行檔 (.exe) 或動態連結程式庫 (.dll) 檔案的命令列進行編譯。  
+# <a name="sample-compilation-command-lines-visual-basic"></a><span data-ttu-id="0d885-102">編譯命令列範例 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d885-102">Sample Compilation Command Lines (Visual Basic)</span></span>
+<span data-ttu-id="0d885-103">做為編譯替代[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式從[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，您可以從命令列，以產生可執行檔 (.exe) 或動態連結程式庫 (.dll) 檔案進行編譯。</span><span class="sxs-lookup"><span data-stu-id="0d885-103">As an alternative to compiling [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programs from within [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.</span></span>  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]命令列編譯器支援一組完整的選項來控制輸入和輸出檔案、 組件，以及偵錯和前置處理器的選項。 每個選項可互換的兩種形式︰`-``option`和`/``option`。 這份文件只會顯示`/``option`表單。  
+ <span data-ttu-id="0d885-104">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]命令列編譯器支援一組完整的選項來控制輸入和輸出檔案、 組件，以及偵錯和前置處理器選項。</span><span class="sxs-lookup"><span data-stu-id="0d885-104">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler supports a complete set of options that control input and output files, assemblies, and debug and preprocessor options.</span></span> <span data-ttu-id="0d885-105">每個選項可互換的兩種形式：`-``option`和`/``option`。</span><span class="sxs-lookup"><span data-stu-id="0d885-105">Each option is available in two interchangeable forms: `-``option` and `/``option`.</span></span> <span data-ttu-id="0d885-106">這份文件只會顯示`/``option`表單。</span><span class="sxs-lookup"><span data-stu-id="0d885-106">This documentation shows only the `/``option` form.</span></span>  
   
- 下表列出您可以修改您自己使用的一些範例命令列。  
+ <span data-ttu-id="0d885-107">下表列出您可以修改您自己使用的一些範例命令列。</span><span class="sxs-lookup"><span data-stu-id="0d885-107">The following table lists some sample command lines you can modify for your own use.</span></span>  
   
-|以|用法|  
+|<span data-ttu-id="0d885-108">以</span><span class="sxs-lookup"><span data-stu-id="0d885-108">To</span></span>|<span data-ttu-id="0d885-109">用法</span><span class="sxs-lookup"><span data-stu-id="0d885-109">Use</span></span>|  
 |--------|---------|  
-|編譯 File.vb 並建立 File.exe|`vbc /reference:Microsoft.VisualBasic.dll File.vb`|  
-|編譯 File.vb 並建立 File.dll|`vbc /target:library File.vb`|  
-|編譯 File.vb 並建立 My.exe|`vbc /out:My.exe File.vb`|  
-|所有編譯[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]檔案在目前目錄中，以最佳化和`DEBUG`符號定義之後，產生 File2.exe|`vbc /define:DEBUG=1 /optimize /out:File2.exe *.vb`|  
-|所有編譯[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]中目前的目錄，而不會顯示標誌或警告產生 File2.dll 的偵錯版本的檔案|`vbc /target:library /out:File2.dll /nowarn /nologo /debug *.vb`|  
-|所有編譯[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Something.dll 目前的目錄中的檔案|`vbc /target:library /out:Something.dll *.vb`|  
+|<span data-ttu-id="0d885-110">編譯不能包含 File.vb 並建立 File.exe</span><span class="sxs-lookup"><span data-stu-id="0d885-110">Compile File.vb and create File.exe</span></span>|`vbc /reference:Microsoft.VisualBasic.dll File.vb`|  
+|<span data-ttu-id="0d885-111">編譯不能包含 File.vb 並建立 File.dll</span><span class="sxs-lookup"><span data-stu-id="0d885-111">Compile File.vb and create File.dll</span></span>|`vbc /target:library File.vb`|  
+|<span data-ttu-id="0d885-112">編譯不能包含 File.vb 並建立 My.exe</span><span class="sxs-lookup"><span data-stu-id="0d885-112">Compile File.vb and create My.exe</span></span>|`vbc /out:My.exe File.vb`|  
+|<span data-ttu-id="0d885-113">所有編譯[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]檔案在目前目錄中，以最佳化和`DEBUG`產生 File2.exe 定義，符號</span><span class="sxs-lookup"><span data-stu-id="0d885-113">Compile all [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] files in the current directory, with optimizations on and the `DEBUG` symbol defined, producing File2.exe</span></span>|`vbc /define:DEBUG=1 /optimize /out:File2.exe *.vb`|  
+|<span data-ttu-id="0d885-114">所有編譯[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]在目前目錄中，而不會顯示標誌或警告產生 File2.dll 的偵錯版本的檔案</span><span class="sxs-lookup"><span data-stu-id="0d885-114">Compile all [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] files in the current directory, producing a debug version of File2.dll without displaying the logo or warnings</span></span>|`vbc /target:library /out:File2.dll /nowarn /nologo /debug *.vb`|  
+|<span data-ttu-id="0d885-115">所有編譯[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Something.dll 目前的目錄中的檔案</span><span class="sxs-lookup"><span data-stu-id="0d885-115">Compile all [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] files in the current directory to Something.dll</span></span>|`vbc /target:library /out:Something.dll *.vb`|  
   
- 當從命令列進行編譯，您必須明確參考 Microsoft[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]透過執行階段程式庫`/reference`編譯器選項。  
+ <span data-ttu-id="0d885-116">當從命令列編譯時，您必須明確參考 Microsoft[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]透過執行階段程式庫`/reference`編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="0d885-116">When compiling from the command line, you must explicitly reference the Microsoft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] run-time library through the `/reference` compiler option.</span></span>  
   
 > [!TIP]
->  當您使用 Visual Studio IDE 建置專案時，您可以顯示相關聯的相關資訊**vbc**命令與相關的編譯器選項，在 [輸出] 視窗中。 若要顯示這項資訊，請開啟[選項對話方塊、 專案和方案、 建置和執行](https://docs.microsoft.com/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然後設定**MSBuild 專案建置輸出詳細程度**至**正常**或更高的層級的詳細資訊。 如需詳細資訊，請參閱[如何：檢閱、儲存和設定建置記錄檔](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)。  
+>  <span data-ttu-id="0d885-117">當您使用 Visual Studio IDE 建置專案時，您可以顯示相關聯的相關資訊**vbc**命令與輸出 視窗中其編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="0d885-117">When you build a project by using the Visual Studio IDE, you can display information about the associated **vbc** command with its compiler options in the output window.</span></span> <span data-ttu-id="0d885-118">若要顯示這項資訊，請開啟[選項對話方塊、 專案和方案、 建置和執行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然後設定**MSBuild 專案組建輸出詳細等級**至**一般**或更高的層級的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="0d885-118">To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity.</span></span> <span data-ttu-id="0d885-119">如需詳細資訊，請參閱[如何：檢閱、儲存和設定建置記錄檔](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)。</span><span class="sxs-lookup"><span data-stu-id="0d885-119">For more information, see [How to: View, Save, and Configure Build Log Files](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a><span data-ttu-id="0d885-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0d885-120">See Also</span></span>  
+ [<span data-ttu-id="0d885-121">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="0d885-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="0d885-122">條件式編譯</span><span class="sxs-lookup"><span data-stu-id="0d885-122">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

@@ -1,112 +1,117 @@
 ---
-title: "筆刷轉換概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筆刷, 轉換屬性"
-  - "屬性, 轉換"
-  - "轉換筆刷屬性"
+title: "筆刷轉換概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [WPF], transformation properties
+- properties [WPF], transformation
+- transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b57c5ee36c9ed9c89fc8ca1bfb7ea265c2460c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 筆刷轉換概觀
-Brush 類別提供兩種轉換屬性：<xref:System.Windows.Media.Brush.Transform%2A> 和 <xref:System.Windows.Media.Brush.RelativeTransform%2A>。  這些屬性可讓您旋轉、縮放、扭曲和轉譯筆刷的內容。  本主題描述這兩個屬性的差異，並提供它們使用方式的範例。  
+# <a name="brush-transformation-overview"></a><span data-ttu-id="d44cd-102">筆刷轉換概觀</span><span class="sxs-lookup"><span data-stu-id="d44cd-102">Brush Transformation Overview</span></span>
+<span data-ttu-id="d44cd-103">這個筆刷類別會提供兩個轉換屬性：<xref:System.Windows.Media.Brush.Transform%2A>和<xref:System.Windows.Media.Brush.RelativeTransform%2A>。</span><span class="sxs-lookup"><span data-stu-id="d44cd-103">The Brush class provides two transformation properties: <xref:System.Windows.Media.Brush.Transform%2A> and <xref:System.Windows.Media.Brush.RelativeTransform%2A>.</span></span> <span data-ttu-id="d44cd-104">上述屬性可讓您旋轉、縮放、扭曲及平移筆刷的內容。</span><span class="sxs-lookup"><span data-stu-id="d44cd-104">The properties enable you to rotate, scale, skew, and translate a brush's contents.</span></span> <span data-ttu-id="d44cd-105">本主題說明這兩種屬性之間的差異並提供使用方式範例。</span><span class="sxs-lookup"><span data-stu-id="d44cd-105">This topic describes the differences between these two properties and provides examples of their usage.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## 必要條件  
- 若要了解本主題，則應該先了解所轉換的筆刷功能。  如果是 <xref:System.Windows.Media.LinearGradientBrush> 和 <xref:System.Windows.Media.RadialGradientBrush>，請參閱[使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  如果是 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 或 <xref:System.Windows.Media.VisualBrush>，請參閱[使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  您也應該熟悉[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)中所述的 2D 轉換。  
+## <a name="prerequisites"></a><span data-ttu-id="d44cd-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="d44cd-106">Prerequisites</span></span>  
+ <span data-ttu-id="d44cd-107">若要了解本主題，您應該了解您要轉換的筆刷功能。</span><span class="sxs-lookup"><span data-stu-id="d44cd-107">To understand this topic, you should understand the features of the brush that you are transforming.</span></span> <span data-ttu-id="d44cd-108">如<xref:System.Windows.Media.LinearGradientBrush>和<xref:System.Windows.Media.RadialGradientBrush>，請參閱[使用單色和漸層概觀繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="d44cd-108">For <xref:System.Windows.Media.LinearGradientBrush> and <xref:System.Windows.Media.RadialGradientBrush>, see the [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span></span> <span data-ttu-id="d44cd-109">如<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>，請參閱[使用映像、 繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。</span><span class="sxs-lookup"><span data-stu-id="d44cd-109">For <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush>, see  [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span> <span data-ttu-id="d44cd-110">您也應該熟悉[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)中所述的 2D 轉換。</span><span class="sxs-lookup"><span data-stu-id="d44cd-110">You should also be familiar with the 2D transforms described in the  [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span></span>  
   
 <a name="transformversusrelativetransform"></a>   
-## Transform 與 RelativeTransform 屬性的差異  
- 當您將轉換套用至筆刷的 <xref:System.Windows.Media.Brush.Transform%2A> 屬性時，如果想要轉換所繪製中心的筆刷內容，則需要知道所繪製區域的大小。  假設所繪製區域的寬度為 200 個[與裝置無關的像素](GTMT)，而高度為 150。  如果使用 <xref:System.Windows.Media.RotateTransform> 在筆刷的中心將筆刷輸出旋轉 45 度，則會看到 <xref:System.Windows.Media.RotateTransform> 的 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 為 100，而 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 為 75。  
+## <a name="differences-between-the-transform-and-relativetransform-properties"></a><span data-ttu-id="d44cd-111">Transform 和 RelativeTransform 屬性之間的差異</span><span class="sxs-lookup"><span data-stu-id="d44cd-111">Differences between the Transform and RelativeTransform Properties</span></span>  
+ <span data-ttu-id="d44cd-112">當您將轉換套用至筆刷的<xref:System.Windows.Media.Brush.Transform%2A>屬性，您需要知道繪製區域的大小，如果您想要對其中心筆刷內容轉換。</span><span class="sxs-lookup"><span data-stu-id="d44cd-112">When you apply a transform to a brush's <xref:System.Windows.Media.Brush.Transform%2A> property, you need to know the size of the painted area if you want to transform the brush contents about its center.</span></span> <span data-ttu-id="d44cd-113">假設繪製的區域寬度為 200 裝置獨立像素且高度為 150。</span><span class="sxs-lookup"><span data-stu-id="d44cd-113">Suppose the painted area is 200 device independent pixels wide and 150 tall.</span></span>  <span data-ttu-id="d44cd-114">如果您使用<xref:System.Windows.Media.RotateTransform>輸出其中心點的 45 度旋轉筆刷、 可能賦予<xref:System.Windows.Media.RotateTransform><xref:System.Windows.Media.RotateTransform.CenterX%2A>為 100 和<xref:System.Windows.Media.RotateTransform.CenterY%2A>的 75。</span><span class="sxs-lookup"><span data-stu-id="d44cd-114">If you used a <xref:System.Windows.Media.RotateTransform> to rotate the brush's output 45 degrees about its center, you'd give the <xref:System.Windows.Media.RotateTransform> a <xref:System.Windows.Media.RotateTransform.CenterX%2A> of 100 and a <xref:System.Windows.Media.RotateTransform.CenterY%2A> of 75.</span></span>  
   
- 當您將轉換套用至筆刷的 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 屬性時，在筆刷輸出對應至所繪製區域之前，該轉換會先套用至筆刷。  下列清單說明筆刷內容的處理和轉換順序。  
+ <span data-ttu-id="d44cd-115">當您將轉換套用至筆刷的<xref:System.Windows.Media.Brush.RelativeTransform%2A>屬性，該轉換套用到筆刷之前它的輸出會對應至繪製區域。</span><span class="sxs-lookup"><span data-stu-id="d44cd-115">When you apply a transform to a brush's <xref:System.Windows.Media.Brush.RelativeTransform%2A> property, that transform is applied to the brush before its output is mapped to the painted area.</span></span> <span data-ttu-id="d44cd-116">下列清單說明筆刷內容的處理和轉換順序。</span><span class="sxs-lookup"><span data-stu-id="d44cd-116">The following list describes the order in which a brush’s contents are processed and transformed.</span></span>  
   
-1.  處理筆刷內容。  如果是 <xref:System.Windows.Media.GradientBrush>，這表示判斷漸層區域。  如果是 <xref:System.Windows.Media.TileBrush>，則 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 會對應至 <xref:System.Windows.Media.TileBrush.Viewport%2A>。  這會變成筆刷的輸出。  
+1.  <span data-ttu-id="d44cd-117">處理筆刷的內容。</span><span class="sxs-lookup"><span data-stu-id="d44cd-117">Process the brush’s contents.</span></span> <span data-ttu-id="d44cd-118">如<xref:System.Windows.Media.GradientBrush>，這表示決定漸層停駐區域。</span><span class="sxs-lookup"><span data-stu-id="d44cd-118">For a <xref:System.Windows.Media.GradientBrush>, this means determining the gradient area.</span></span> <span data-ttu-id="d44cd-119">如<xref:System.Windows.Media.TileBrush>、<xref:System.Windows.Media.TileBrush.Viewbox%2A>對應至<xref:System.Windows.Media.TileBrush.Viewport%2A>。</span><span class="sxs-lookup"><span data-stu-id="d44cd-119">For a <xref:System.Windows.Media.TileBrush>, the <xref:System.Windows.Media.TileBrush.Viewbox%2A> is mapped to the <xref:System.Windows.Media.TileBrush.Viewport%2A>.</span></span> <span data-ttu-id="d44cd-120">這會成為筆刷的輸出。</span><span class="sxs-lookup"><span data-stu-id="d44cd-120">This becomes the brush’s output.</span></span>  
   
-2.  將筆刷輸出投影至 1 x 1 的轉換矩形。  
+2.  <span data-ttu-id="d44cd-121">將筆刷的輸出投影至 1 x 1 轉換矩形。</span><span class="sxs-lookup"><span data-stu-id="d44cd-121">Project the brush’s output onto the 1 x 1 transformation rectangle.</span></span>  
   
-3.  套用筆刷的 <xref:System.Windows.Media.Brush.RelativeTransform%2A> \(如果有的話\)。  
+3.  <span data-ttu-id="d44cd-122">套用的筆刷<xref:System.Windows.Media.Brush.RelativeTransform%2A>，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="d44cd-122">Apply the brush’s <xref:System.Windows.Media.Brush.RelativeTransform%2A>, if it has one.</span></span>  
   
-4.  將轉換的輸出投影至要繪製的區域。  
+4.  <span data-ttu-id="d44cd-123">將轉換後的輸出投影至要繪製的區域。</span><span class="sxs-lookup"><span data-stu-id="d44cd-123">Project the transformed output onto the area to paint.</span></span>  
   
-5.  套用筆刷的 <xref:System.Windows.Media.Transform> \(如果有的話\)。  
+5.  <span data-ttu-id="d44cd-124">套用的筆刷<xref:System.Windows.Media.Transform>，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="d44cd-124">Apply the brush’s <xref:System.Windows.Media.Transform>, if it has one.</span></span>  
   
- 因為是在將筆刷輸出對應至 1 x 1 矩形時套用 <xref:System.Windows.Media.Brush.RelativeTransform%2A>，所以轉換中心和位移 \(Offset\) 值會是相對的。  例如，如果使用 <xref:System.Windows.Media.RotateTransform> 在筆刷的中心將筆刷輸出旋轉 45 度，則會看到 <xref:System.Windows.Media.RotateTransform> 的 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 為 0.5，而 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 為 0.5。  
+ <span data-ttu-id="d44cd-125">因為<xref:System.Windows.Media.Brush.RelativeTransform%2A>筆刷的輸出會對應至 1x1 矩形，轉換中心點和位移的值似乎是相對時套用。</span><span class="sxs-lookup"><span data-stu-id="d44cd-125">Because the <xref:System.Windows.Media.Brush.RelativeTransform%2A> is applied while the brush’s output is mapped to a 1 x 1 rectangle, transform center and offset values appear to be relative.</span></span> <span data-ttu-id="d44cd-126">例如，如果您使用<xref:System.Windows.Media.RotateTransform>輸出其中心點的 45 度旋轉筆刷、 可能賦予<xref:System.Windows.Media.RotateTransform><xref:System.Windows.Media.RotateTransform.CenterX%2A>為 0.5 和<xref:System.Windows.Media.RotateTransform.CenterY%2A>為 0.5。</span><span class="sxs-lookup"><span data-stu-id="d44cd-126">For example, if you used a <xref:System.Windows.Media.RotateTransform> to rotate the brush's output 45 degrees about its center, you'd give the <xref:System.Windows.Media.RotateTransform> a <xref:System.Windows.Media.RotateTransform.CenterX%2A> of 0.5 and a <xref:System.Windows.Media.RotateTransform.CenterY%2A> of 0.5.</span></span>  
   
- 下圖顯示數個使用 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 和 <xref:System.Windows.Media.Brush.Transform%2A> 屬性旋轉 45 度之筆刷的輸出。  
+ <span data-ttu-id="d44cd-127">下圖顯示的已旋轉 45 度使用的數個筆刷輸出<xref:System.Windows.Media.Brush.RelativeTransform%2A>和<xref:System.Windows.Media.Brush.Transform%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d44cd-127">The following illustration shows the output of several brushes that have been rotated by 45 degrees using the <xref:System.Windows.Media.Brush.RelativeTransform%2A> and <xref:System.Windows.Media.Brush.Transform%2A> properties.</span></span>  
   
- ![RelativeTransform 和 Transform 屬性](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm\_brushrelativetransform\_transform\_small")  
+ <span data-ttu-id="d44cd-128">![RelativeTransform 和 Transform 屬性](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")</span><span class="sxs-lookup"><span data-stu-id="d44cd-128">![RelativeTransform and Transform properties](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")</span></span>  
   
 <a name="relativetransformandtilebrush"></a>   
-## 搭配使用 RelativeTransform 與 TileBrush  
- 因為並排顯示筆刷比其他筆刷還要複雜，所以將 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 套用至並排顯示筆刷可能會產生未預期的結果。  以下列影像為例。  
+## <a name="using-relativetransform-with-a-tilebrush"></a><span data-ttu-id="d44cd-129">搭配 TileBrush 使用 RelativeTransform</span><span class="sxs-lookup"><span data-stu-id="d44cd-129">Using RelativeTransform with a TileBrush</span></span>  
+ <span data-ttu-id="d44cd-130">拼貼筆刷會比其他筆刷更為複雜，因為套用<xref:System.Windows.Media.Brush.RelativeTransform%2A>其中一個可能會產生非預期的結果。</span><span class="sxs-lookup"><span data-stu-id="d44cd-130">Because tile brushes are more complex than other brushes, applying a <xref:System.Windows.Media.Brush.RelativeTransform%2A> to one might produce unexpected results.</span></span> <span data-ttu-id="d44cd-131">例如，使用下列影像。</span><span class="sxs-lookup"><span data-stu-id="d44cd-131">For example, take the following image.</span></span>  
   
- ![影像來源](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-1-original-image.png "graphicsmm\_reltransform\_1\_original\_image")  
+ <span data-ttu-id="d44cd-132">![來源映像](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")</span><span class="sxs-lookup"><span data-stu-id="d44cd-132">![The source image](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")</span></span>  
   
- 下列範例使用 <xref:System.Windows.Media.ImageBrush> 來繪製內含先前影像的矩形區域。  它會將 <xref:System.Windows.Media.RotateTransform> 套用至 <xref:System.Windows.Media.ImageBrush> 物件的 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 屬性，並將它的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性設定為 <xref:System.Windows.Media.Stretch>，而在將影像自動縮放為完全填滿矩形時，應該保留影像的外觀比例 \(Aspect Ratio\)。  
+ <span data-ttu-id="d44cd-133">下列範例會使用<xref:System.Windows.Media.ImageBrush>來繪製的上述影像的矩形區域。</span><span class="sxs-lookup"><span data-stu-id="d44cd-133">The following example uses an <xref:System.Windows.Media.ImageBrush> to paint a rectangular area with the preceding image.</span></span> <span data-ttu-id="d44cd-134">它會套用<xref:System.Windows.Media.RotateTransform>至<xref:System.Windows.Media.ImageBrush>物件的<xref:System.Windows.Media.Brush.RelativeTransform%2A>屬性，並設定其<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性<xref:System.Windows.Media.Stretch.UniformToFill>，完全填滿的矩形拉長時，它應該保留影像的外觀比例。</span><span class="sxs-lookup"><span data-stu-id="d44cd-134">It applies a <xref:System.Windows.Media.RotateTransform> to the <xref:System.Windows.Media.ImageBrush> object's <xref:System.Windows.Media.Brush.RelativeTransform%2A> property, and sets its <xref:System.Windows.Media.TileBrush.Stretch%2A> property to <xref:System.Windows.Media.Stretch.UniformToFill>, which should preserve the image's aspect ratio when it is stretched to completely fill the rectangle.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMRelativeTransformExample2Inline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/RelativeTransformIllustration.xaml#graphicsmmrelativetransformexample2inline)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeTransformExample2Inline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/RelativeTransformIllustration.xaml#graphicsmmrelativetransformexample2inline)]  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="d44cd-135">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="d44cd-135">This example produces the following output:</span></span>  
   
- ![轉換後的輸出](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-6-output.png "graphicsmm\_reltransform\_6\_output")  
+ <span data-ttu-id="d44cd-136">![轉換後的輸出](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")</span><span class="sxs-lookup"><span data-stu-id="d44cd-136">![The transformed output](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")</span></span>  
   
- 請注意，即使筆刷的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 設定為 <xref:System.Windows.Media.Stretch>，影像還是會失真。  這是因為將筆刷的 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 對應至它的 <xref:System.Windows.Media.TileBrush.Viewport%2A> 之後，會套用相對轉換。  下列清單說明程序的每個步驟：  
+ <span data-ttu-id="d44cd-137">請注意，影像會扭曲，即使筆刷的<xref:System.Windows.Media.TileBrush.Stretch%2A>設<xref:System.Windows.Media.Stretch.UniformToFill>。</span><span class="sxs-lookup"><span data-stu-id="d44cd-137">Notice that the image is distorted, even though the brush's <xref:System.Windows.Media.TileBrush.Stretch%2A> was set to <xref:System.Windows.Media.Stretch.UniformToFill>.</span></span> <span data-ttu-id="d44cd-138">這是因為套用相對轉換後的筆刷<xref:System.Windows.Media.TileBrush.Viewbox%2A>對應到其<xref:System.Windows.Media.TileBrush.Viewport%2A>。</span><span class="sxs-lookup"><span data-stu-id="d44cd-138">That's because the relative transform is applied after the brush's <xref:System.Windows.Media.TileBrush.Viewbox%2A> is mapped to its <xref:System.Windows.Media.TileBrush.Viewport%2A>.</span></span> <span data-ttu-id="d44cd-139">下列清單描述程序的每個步驟︰</span><span class="sxs-lookup"><span data-stu-id="d44cd-139">The following list describes each step of the process:</span></span>  
   
-1.  使用筆刷的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 設定，將筆刷內容 \(<xref:System.Windows.Media.TileBrush.Viewbox%2A>\) 投影至它的基底並排顯示 \(<xref:System.Windows.Media.TileBrush.Viewport%2A>\)。  
+1.  <span data-ttu-id="d44cd-140">專案 筆刷的內容 (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 到其基底的並排顯示 (<xref:System.Windows.Media.TileBrush.Viewport%2A>) 使用筆刷的<xref:System.Windows.Media.TileBrush.Stretch%2A>設定。</span><span class="sxs-lookup"><span data-stu-id="d44cd-140">Project the brush's contents (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) onto its base tile (<xref:System.Windows.Media.TileBrush.Viewport%2A>) using the brush's <xref:System.Windows.Media.TileBrush.Stretch%2A> setting.</span></span>  
   
-     ![自動縮放 Viewbox 以符合檢視區](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm\_reltransform\_2\_viewbox\_to\_viewport")  
+     <span data-ttu-id="d44cd-141">![自動縮放 Viewbox 以符合檢視區](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")</span><span class="sxs-lookup"><span data-stu-id="d44cd-141">![Stretch the Viewbox to fit the Viewport](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")</span></span>  
   
-2.  將基底並排顯示投影至 1 x 1 的轉換矩形。  
+2.  <span data-ttu-id="d44cd-142">將基底的並排顯示投影至 1 x 1 轉換矩形。</span><span class="sxs-lookup"><span data-stu-id="d44cd-142">Project the base tile onto the 1 x 1 transformation rectangle.</span></span>  
   
-     ![將檢視區對應至轉換矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm\_reltransform\_3\_output\_to\_transform")  
+     <span data-ttu-id="d44cd-143">![將檢視區對應至轉換矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")</span><span class="sxs-lookup"><span data-stu-id="d44cd-143">![Map the Viewport to the transformation rectangle](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")</span></span>  
   
-3.  套用 <xref:System.Windows.Media.RotateTransform>。  
+3.  <span data-ttu-id="d44cd-144">套用<xref:System.Windows.Media.RotateTransform>。</span><span class="sxs-lookup"><span data-stu-id="d44cd-144">Apply the <xref:System.Windows.Media.RotateTransform>.</span></span>  
   
-     ![套用相對轉換](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm\_reltransform\_4\_transform\_rotate")  
+     <span data-ttu-id="d44cd-145">![套用相對轉換](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")</span><span class="sxs-lookup"><span data-stu-id="d44cd-145">![Apply the relative transform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")</span></span>  
   
-4.  將轉換的基底並排顯示投影至要繪製的區域。  
+4.  <span data-ttu-id="d44cd-146">將轉換後基底的並排顯示投影至要繪製的區域。</span><span class="sxs-lookup"><span data-stu-id="d44cd-146">Project the transformed base tile onto the area to paint.</span></span>  
   
-     ![將轉換後的筆刷投影至輸出區域](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm\_reltransform\_5\_transform\_to\_output")  
+     <span data-ttu-id="d44cd-147">![將轉換後的筆刷投影至輸出區域](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")</span><span class="sxs-lookup"><span data-stu-id="d44cd-147">![Project the transformed brush onto the output area](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")</span></span>  
   
 <a name="rotateexample"></a>   
-## 範例：將 ImageBrush 旋轉 45 度  
- 下列範例會將 <xref:System.Windows.Media.RotateTransform> 套用至 <xref:System.Windows.Media.ImageBrush> 的 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 屬性。  <xref:System.Windows.Media.RotateTransform> 物件的 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 和 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 屬性都設定為 0.5，這是內容中心點的相對座標。  因此，筆刷的內容會以其中心進行旋轉。  
+## <a name="example-rotate-an-imagebrush-45-degrees"></a><span data-ttu-id="d44cd-148">範例︰ 旋轉 ImageBrush 45 度</span><span class="sxs-lookup"><span data-stu-id="d44cd-148">Example: Rotate an ImageBrush 45 Degrees</span></span>  
+ <span data-ttu-id="d44cd-149">下列範例會套用<xref:System.Windows.Media.RotateTransform>至<xref:System.Windows.Media.Brush.RelativeTransform%2A>屬性<xref:System.Windows.Media.ImageBrush>。</span><span class="sxs-lookup"><span data-stu-id="d44cd-149">The following example applies a <xref:System.Windows.Media.RotateTransform> to the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property of an <xref:System.Windows.Media.ImageBrush>.</span></span> <span data-ttu-id="d44cd-150"><xref:System.Windows.Media.RotateTransform>物件的<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>屬性都設定為 0.5，相對座標的內容的中心點。</span><span class="sxs-lookup"><span data-stu-id="d44cd-150">The <xref:System.Windows.Media.RotateTransform> object's <xref:System.Windows.Media.RotateTransform.CenterX%2A> and <xref:System.Windows.Media.RotateTransform.CenterY%2A> properties are both set to 0.5, the relative coordinates of the content's center point.</span></span> <span data-ttu-id="d44cd-151">如此一來，會以筆刷內容的中心為中心點旋轉。</span><span class="sxs-lookup"><span data-stu-id="d44cd-151">As a result, the brush's contents are rotated about its center.</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
- [!code-xml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
+ [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- 下一個範例也會將 <xref:System.Windows.Media.RotateTransform> 套用至 <xref:System.Windows.Media.ImageBrush>，但是使用 <xref:System.Windows.Media.Brush.Transform%2A> 屬性，而不是 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 屬性。  若要以中心旋轉筆刷，則 <xref:System.Windows.Media.RotateTransform> 物件的 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 和 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 必須設定為絕對座標。  因為使用筆刷繪製的矩形是 175 x 90 個像素，所以它的中心點是 \(87.5, 45\)。  
+ <span data-ttu-id="d44cd-152">下一個範例也適用於<xref:System.Windows.Media.RotateTransform>至<xref:System.Windows.Media.ImageBrush>，但是會使用<xref:System.Windows.Media.Brush.Transform%2A>屬性而非<xref:System.Windows.Media.Brush.RelativeTransform%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d44cd-152">The next example also applies a <xref:System.Windows.Media.RotateTransform> to an <xref:System.Windows.Media.ImageBrush>, but uses the <xref:System.Windows.Media.Brush.Transform%2A> property instead of the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property.</span></span> <span data-ttu-id="d44cd-153">若要旋轉的中心，筆刷<xref:System.Windows.Media.RotateTransform>物件的<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>必須設為絕對座標。</span><span class="sxs-lookup"><span data-stu-id="d44cd-153">To rotate the brush about its center, the <xref:System.Windows.Media.RotateTransform> object's <xref:System.Windows.Media.RotateTransform.CenterX%2A> and <xref:System.Windows.Media.RotateTransform.CenterY%2A> must be set to absolute coordinates.</span></span> <span data-ttu-id="d44cd-154">因為使用筆刷繪製的矩形為 175 x 90 像素，所以其中心點為 (87.5, 45)。</span><span class="sxs-lookup"><span data-stu-id="d44cd-154">Because the rectangle being painted by the brush is 175 by 90 pixels, its center point is (87.5, 45).</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
- [!code-xml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
+ [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- 下圖顯示不含轉換的筆刷、將轉換套用至 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 屬性的筆刷，以及將轉換套用至 <xref:System.Windows.Media.Brush.Transform%2A> 屬性的筆刷。  
+ <span data-ttu-id="d44cd-155">下圖顯示的筆刷的轉換，轉換套用至沒有<xref:System.Windows.Media.Brush.RelativeTransform%2A>屬性，與套用至轉換<xref:System.Windows.Media.Brush.Transform%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d44cd-155">The following illustration shows the brush without a transform, with the transform applied to the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property, and with the transform applied to the <xref:System.Windows.Media.Brush.Transform%2A> property.</span></span>  
   
- ![筆刷的 RelativeTransform 和 Transform 設定](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk\_graphicsmm\_transformandrelativetransform")  
+ <span data-ttu-id="d44cd-156">![筆刷的 RelativeTransform 和 Transform 設定](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")</span><span class="sxs-lookup"><span data-stu-id="d44cd-156">![Brush RelativeTransform and Transform settings](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")</span></span>  
   
- 這個範例是完整範例的一部分。  如需完整範例，請參閱[筆刷範例](http://go.microsoft.com/fwlink/?LinkID=159973) \(英文\)。  如需筆刷的詳細資訊，請參閱 [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。  
+ <span data-ttu-id="d44cd-157">這個範例是某完整範例的一部分。</span><span class="sxs-lookup"><span data-stu-id="d44cd-157">This example is part of a larger sample.</span></span> <span data-ttu-id="d44cd-158">如需完整的範例，請參閱 [Brush 範例](http://go.microsoft.com/fwlink/?LinkID=159973)。</span><span class="sxs-lookup"><span data-stu-id="d44cd-158">For the complete sample, see the [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973).</span></span> <span data-ttu-id="d44cd-159">如需筆刷的詳細資訊，請參閱 [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="d44cd-159">For more information about brushes, see the  [WPF Brushes Overview](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.Brush.Transform%2A>   
- <xref:System.Windows.Media.Brush.RelativeTransform%2A>   
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.Brush>   
- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a><span data-ttu-id="d44cd-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d44cd-160">See Also</span></span>  
+ <xref:System.Windows.Media.Brush.Transform%2A>  
+ <xref:System.Windows.Media.Brush.RelativeTransform%2A>  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.Brush>  
+ [<span data-ttu-id="d44cd-161">使用純色和漸層繪製的概觀</span><span class="sxs-lookup"><span data-stu-id="d44cd-161">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="d44cd-162">使用影像、繪圖和視覺效果繪製</span><span class="sxs-lookup"><span data-stu-id="d44cd-162">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="d44cd-163">轉換概觀</span><span class="sxs-lookup"><span data-stu-id="d44cd-163">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

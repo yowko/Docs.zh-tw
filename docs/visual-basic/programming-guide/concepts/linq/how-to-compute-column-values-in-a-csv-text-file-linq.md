@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值 |Microsoft 文件"
+title: "如何： 計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36fbe64601ab66f7a87669fa4293f2e6d43d95c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何︰ 計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
-這個範例示範如何在.csv 檔案的資料行上執行彙總計算作業，例如總和、 平均、 最小值和最大值。 如下所示的範例原則可以套用至其他類型的結構化文字中。  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="d833b-102">如何： 計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值</span><span class="sxs-lookup"><span data-stu-id="d833b-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="d833b-103">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="d833b-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="d833b-104">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="d833b-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a>若要建立的原始程式檔  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="d833b-105">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="d833b-105">To create the source file</span></span>  
   
-1.  將下列幾行複製到名為 scores.csv 檔案，並將它儲存到專案資料夾中。 假設第一個資料行代表學，及後續的資料行代表四項測驗的分數。  
+1.  <span data-ttu-id="d833b-106">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="d833b-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="d833b-107">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="d833b-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ ms.lasthandoff: 03/13/2017
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="d833b-108">範例</span><span class="sxs-lookup"><span data-stu-id="d833b-108">Example</span></span>  
   
 ```vb  
 Class SumColumns  
@@ -157,11 +149,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- 查詢的運作方式是使用<xref:System.String.Split%2A>方法，將每一行文字轉換成陣列。</xref:System.String.Split%2A> 每個陣列項目表示的資料行。 最後，每個資料行中的文字會轉換成數值表示法。 如果您的檔案是定位鍵分隔檔案，只需要更新中的引數`Split`方法`\t`。  
+ <span data-ttu-id="d833b-109">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="d833b-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="d833b-110">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="d833b-110">Each array element represents a column.</span></span> <span data-ttu-id="d833b-111">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="d833b-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="d833b-112">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="d833b-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+## <a name="compiling-the-code"></a><span data-ttu-id="d833b-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="d833b-113">Compiling the Code</span></span>  
+ <span data-ttu-id="d833b-114">建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="d833b-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="d833b-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d833b-115">See Also</span></span>  
+ [<span data-ttu-id="d833b-116">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d833b-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="d833b-117">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d833b-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,107 +1,106 @@
 ---
-title: "Data Type Summary (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Boolean data type, supported types in Visual Basic"
-  - "storage, order of storage"
-  - "data types [Visual Basic], Visual Basic"
-  - "Single data type, supported types in Visual Basic"
-  - "notation, scientific"
-  - "memory requirements, data types"
-  - "user-defined data types, Visual Basic"
-  - "Date data type, Visual Basic"
-  - "Visual Basic, data types"
-  - "storage, allocation"
-  - "Integer data type, Visual Basic data types"
-  - "storage, space"
-  - "Variant data types, supported types in Visual Basic"
-  - "Char data type, Visual Basic data types"
-  - "intrinsic data types"
-  - "memory consumption, data types"
-  - "single-precision numbers"
-  - "data types [Visual Basic], order of storage"
-  - "Long data type, supported types in Visual Basic"
-  - "String data type, Visual Basic data types"
-  - "storage order, data types"
-  - "StructLayoutAttribute class, Visual Basic data type storage"
-  - "scientific notation"
-  - "Double data type, Visual Basic data types"
-  - "Byte data type, Visual Basic data types"
-  - "Object data type, supported types in Visual Basic"
-  - "data types [Visual Basic], storage allocation"
-  - "double-precision numbers"
-  - "data types [Visual Basic], summary"
-  - "dates [Visual Basic], data types"
-  - "strings [Visual Basic], data types"
-  - "memory consumption"
-  - "storage order, controlling in Visual Basic"
-  - "data types [Visual Basic], memory requirements"
+title: "資料類型摘要 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Boolean data type [Visual Basic], supported types in Visual Basic
+- storage [Visual Basic], order of storage
+- data types [Visual Basic], Visual Basic
+- Single data type [Visual Basic], supported types in Visual Basic
+- notation [Visual Basic], scientific
+- memory requirements, data types
+- user-defined data types [Visual Basic], Visual Basic
+- Date data type [Visual Basic], Visual Basic
+- Visual Basic, data types
+- storage [Visual Basic], allocation
+- Integer data type [Visual Basic], Visual Basic data types
+- storage [Visual Basic], space
+- Variant data types [Visual Basic], supported types in Visual Basic
+- Char data type [Visual Basic], Visual Basic data types
+- intrinsic data types [Visual Basic]
+- memory consumption [Visual Basic], data types
+- single-precision numbers
+- data types [Visual Basic], order of storage
+- Long data type [Visual Basic], supported types in Visual Basic
+- String data type [Visual Basic], Visual Basic data types
+- storage order, data types
+- StructLayoutAttribute class, Visual Basic data type storage
+- scientific notation
+- Double data type [Visual Basic], Visual Basic data types
+- Byte data type [Visual Basic], Visual Basic data types
+- Object data type [Visual Basic], supported types in Visual Basic
+- data types [Visual Basic], storage allocation
+- double-precision numbers
+- data types [Visual Basic], summary
+- dates [Visual Basic], data types
+- strings [Visual Basic], data types
+- memory consumption
+- storage order, controlling in Visual Basic
+- data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Data Type Summary (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-下表顯示 Visual Basic 資料型別，它們對 Common Language Runtime 型別的支援、它們的表面儲存配置和數值範圍。  
+# <a name="data-type-summary-visual-basic"></a><span data-ttu-id="067a1-102">資料類型摘要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="067a1-102">Data Type Summary (Visual Basic)</span></span>
+<span data-ttu-id="067a1-103">下表顯示 Visual Basic 資料類型、 其支援的 common language runtime 類型、 其表面的存放裝置配置和其值的範圍。</span><span class="sxs-lookup"><span data-stu-id="067a1-103">The following table shows the Visual Basic data types, their supporting common language runtime types, their nominal storage allocation, and their value ranges.</span></span>  
   
-|Visual Basic 型別|Common Language Runtime 型別結構|表面儲存配置|數值範圍|  
-|---------------------|----------------------------------|------------|----------|  
-|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|視實作平台而定|`True` 或 `False`|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 個位元組|0 至 255 \(不帶正負號\)|  
-|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) \(單一字元\)|<xref:System.Char>|2 個位元組|0 至 65535 \(不帶正負號\)|  
-|[日期](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 個位元組|0001 年 1 月 1 日 0:00:00 \(午夜\) 至 9999 年 12 月 31 日 11:59:59 PM|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 個位元組|0 到 \+\/\-79,228,162,514,264,337,593,543,950,335 \(\+\/\-7.9...E\+28\) <sup>†</sup> \(無小數點\)，0 到 \+\/\-7.9228162514264337593543950335 \(小數點右邊有 28 位數\)，<br /><br /> 最小的非零數字是 \+\/\-0.0000000000000000000000000001 \(\+\/\-1E\-28\) <sup>†</sup>|  
-|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) \(雙精度浮點數\)|<xref:System.Double>|8 個位元組|\-1.79769313486231570E\+308 到 \-4.94065645841246544E\-324 <sup>†</sup> \(負值\)，<br /><br /> 4.94065645841246544E\-324 到 1.79769313486231570E\+308 <sup>†</sup> \(正值\)|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 個位元組|\-2,147,483,648 至 2,147,483,647 \(帶正負號\)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) \(長整數\)|<xref:System.Int64>|8 個位元組|\-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 \(9.2...E\+18 <sup>†</sup>\) \(帶正負號\)|  
-|[物件](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> \(類別\)|32 位元平台上 4 個位元組<br /><br /> 64 位元平台上 8 個位元組|可以用 `Object` 型別之變數加以儲存的任何型別|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 個位元組|\-128 至 127 \(帶正負號\)|  
-|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) \(短整數\)|<xref:System.Int16>|2 個位元組|\-32,768 至 32,767 \(帶正負號\)|  
-|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) \(單精確度浮點數\)|<xref:System.Single>|4 個位元組|\-3.4028235E\+38 到 \-1.401298E\-45 <sup>†</sup> \(負值\)，<br /><br /> 1.401298E\-45 到 3.4028235E\+38 <sup>†</sup> \(正值\)|  
-|[String](../../../visual-basic/language-reference/data-types/string-data-type.md) \(可變長度\)|<xref:System.String> \(類別\)|視實作平台而定|0 至大約二十億個 Unicode 字元|  
-|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 個位元組|0 至 4,294,967,295 \(不帶正負號\)|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 個位元組|0 到 18,446,744,073,709,551,615 \(1.8...E\+19 <sup>†</sup>\) \(不帶正負號\)|  
-|[User\-Defined](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) \(結構\)|\(繼承自 <xref:System.ValueType>\)|視實作平台而定|結構的每個成員都有由其資料型別所決定的範圍，與其他成員的範圍無關|  
-|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 個位元組|0 至 65,535 \(不帶正負號\)|  
+|<span data-ttu-id="067a1-104">Visual Basic 型別</span><span class="sxs-lookup"><span data-stu-id="067a1-104">Visual Basic type</span></span>|<span data-ttu-id="067a1-105">通用語言執行階段類型結構</span><span class="sxs-lookup"><span data-stu-id="067a1-105">Common language runtime type structure</span></span>|<span data-ttu-id="067a1-106">名義型儲存體配置</span><span class="sxs-lookup"><span data-stu-id="067a1-106">Nominal storage allocation</span></span>|<span data-ttu-id="067a1-107">數值範圍</span><span class="sxs-lookup"><span data-stu-id="067a1-107">Value range</span></span>|  
+|-----------------------|--------------------------------------------|--------------------------------|-----------------|  
+|[<span data-ttu-id="067a1-108">布林值</span><span class="sxs-lookup"><span data-stu-id="067a1-108">Boolean</span></span>](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|<span data-ttu-id="067a1-109">作業取決於平台</span><span class="sxs-lookup"><span data-stu-id="067a1-109">Depends on implementing platform</span></span>|<span data-ttu-id="067a1-110">`True` 或 `False`</span><span class="sxs-lookup"><span data-stu-id="067a1-110">`True` or `False`</span></span>|  
+|[<span data-ttu-id="067a1-111">Byte</span><span class="sxs-lookup"><span data-stu-id="067a1-111">Byte</span></span>](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|<span data-ttu-id="067a1-112">1 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-112">1 byte</span></span>|<span data-ttu-id="067a1-113">0 到 255 之間 （不帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-113">0 through 255 (unsigned)</span></span>|  
+|<span data-ttu-id="067a1-114">[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) （單一字元）</span><span class="sxs-lookup"><span data-stu-id="067a1-114">[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (single character)</span></span>|<xref:System.Char>|<span data-ttu-id="067a1-115">2 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-115">2 bytes</span></span>|<span data-ttu-id="067a1-116">0 到 65535 （不帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-116">0 through 65535 (unsigned)</span></span>|  
+|[<span data-ttu-id="067a1-117">Date</span><span class="sxs-lookup"><span data-stu-id="067a1-117">Date</span></span>](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|<span data-ttu-id="067a1-118">8 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-118">8 bytes</span></span>|<span data-ttu-id="067a1-119">0:00:00 （午夜） 11:59:59 PM 9999 年 12 月 31 日 0001 年 1 月 1 日</span><span class="sxs-lookup"><span data-stu-id="067a1-119">0:00:00 (midnight) on January 1, 0001 through 11:59:59 PM on December 31, 9999</span></span>|  
+|[<span data-ttu-id="067a1-120">Decimal</span><span class="sxs-lookup"><span data-stu-id="067a1-120">Decimal</span></span>](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|<span data-ttu-id="067a1-121">16 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-121">16 bytes</span></span>|<span data-ttu-id="067a1-122">0 到 + /-79228162514264337593543950335 (+ /-7.9 … E + 28) <sup>†</sup>不含小數點，0 到 + /--7.9228162514264337593543950335 有 28 小數位數;</span><span class="sxs-lookup"><span data-stu-id="067a1-122">0 through +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9...E+28) <sup>†</sup> with no decimal point; 0 through +/-7.9228162514264337593543950335 with 28 places to the right of the decimal;</span></span><br /><br /> <span data-ttu-id="067a1-123">最小非零的數字是 + /-0.0000000000000000000000000001 （+ /-1E 28) <sup>†</sup></span><span class="sxs-lookup"><span data-stu-id="067a1-123">smallest nonzero number is +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup></span></span>|  
+|<span data-ttu-id="067a1-124">[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) （雙精度浮點數）</span><span class="sxs-lookup"><span data-stu-id="067a1-124">[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (double-precision floating-point)</span></span>|<xref:System.Double>|<span data-ttu-id="067a1-125">8 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-125">8 bytes</span></span>|<span data-ttu-id="067a1-126">-1.79769313486231570 e + 308 到-4.94065645841246544 e-324 <sup>†</sup>負數的值;</span><span class="sxs-lookup"><span data-stu-id="067a1-126">-1.79769313486231570E+308 through -4.94065645841246544E-324 <sup>†</sup> for negative values;</span></span><br /><br /> <span data-ttu-id="067a1-127">4.94065645841246544 e-324 1.79769313486231570 e + 308 到<sup>†</sup>的正數值</span><span class="sxs-lookup"><span data-stu-id="067a1-127">4.94065645841246544E-324 through 1.79769313486231570E+308 <sup>†</sup> for positive values</span></span>|  
+|[<span data-ttu-id="067a1-128">Integer</span><span class="sxs-lookup"><span data-stu-id="067a1-128">Integer</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|<span data-ttu-id="067a1-129">4 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-129">4 bytes</span></span>|<span data-ttu-id="067a1-130">-2147483648 到 2147483647 （帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-130">-2,147,483,648 through 2,147,483,647 (signed)</span></span>|  
+|<span data-ttu-id="067a1-131">[長](../../../visual-basic/language-reference/data-types/long-data-type.md)（長整數）</span><span class="sxs-lookup"><span data-stu-id="067a1-131">[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (long integer)</span></span>|<xref:System.Int64>|<span data-ttu-id="067a1-132">8 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-132">8 bytes</span></span>|<span data-ttu-id="067a1-133">-9223372036854775808 到 9,223,372,036,854,775,807 (9.2 … E + 18 <sup>†</sup>) （帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-133">-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18 <sup>†</sup>) (signed)</span></span>|  
+|[<span data-ttu-id="067a1-134">物件</span><span class="sxs-lookup"><span data-stu-id="067a1-134">Object</span></span>](../../../visual-basic/language-reference/data-types/object-data-type.md)|<span data-ttu-id="067a1-135"><xref:System.Object>（類別）</span><span class="sxs-lookup"><span data-stu-id="067a1-135"><xref:System.Object> (class)</span></span>|<span data-ttu-id="067a1-136">在 32 位元平台上的 4 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-136">4 bytes on 32-bit platform</span></span><br /><br /> <span data-ttu-id="067a1-137">在 64 位元平台上為 8 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-137">8 bytes on 64-bit platform</span></span>|<span data-ttu-id="067a1-138">任何類型可以儲存在類型的變數`Object`</span><span class="sxs-lookup"><span data-stu-id="067a1-138">Any type can be stored in a variable of type `Object`</span></span>|  
+|[<span data-ttu-id="067a1-139">SByte</span><span class="sxs-lookup"><span data-stu-id="067a1-139">SByte</span></span>](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|<span data-ttu-id="067a1-140">1 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-140">1 byte</span></span>|<span data-ttu-id="067a1-141">-128 到 127 （帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-141">-128 through 127 (signed)</span></span>|  
+|<span data-ttu-id="067a1-142">[簡短](../../../visual-basic/language-reference/data-types/short-data-type.md)（短整數）</span><span class="sxs-lookup"><span data-stu-id="067a1-142">[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (short integer)</span></span>|<xref:System.Int16>|<span data-ttu-id="067a1-143">2 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-143">2 bytes</span></span>|<span data-ttu-id="067a1-144">-32,768 到 32,767 （帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-144">-32,768 through 32,767 (signed)</span></span>|  
+|<span data-ttu-id="067a1-145">[單一](../../../visual-basic/language-reference/data-types/single-data-type.md)（單精確度浮點數）</span><span class="sxs-lookup"><span data-stu-id="067a1-145">[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (single-precision floating-point)</span></span>|<xref:System.Single>|<span data-ttu-id="067a1-146">4 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-146">4 bytes</span></span>|<span data-ttu-id="067a1-147">-3.4028235 e + 38 到-1.401298-45 <sup>†</sup>負數的值;</span><span class="sxs-lookup"><span data-stu-id="067a1-147">-3.4028235E+38 through -1.401298E-45 <sup>†</sup> for negative values;</span></span><br /><br /> <span data-ttu-id="067a1-148">1.401298-45 3.4028235 e + 38 到<sup>†</sup>的正數值</span><span class="sxs-lookup"><span data-stu-id="067a1-148">1.401298E-45 through 3.4028235E+38 <sup>†</sup> for positive values</span></span>|  
+|<span data-ttu-id="067a1-149">[字串](../../../visual-basic/language-reference/data-types/string-data-type.md)（可變長度）</span><span class="sxs-lookup"><span data-stu-id="067a1-149">[String](../../../visual-basic/language-reference/data-types/string-data-type.md) (variable-length)</span></span>|<span data-ttu-id="067a1-150"><xref:System.String>（類別）</span><span class="sxs-lookup"><span data-stu-id="067a1-150"><xref:System.String> (class)</span></span>|<span data-ttu-id="067a1-151">作業取決於平台</span><span class="sxs-lookup"><span data-stu-id="067a1-151">Depends on implementing platform</span></span>|<span data-ttu-id="067a1-152">0 到大約 2 10 億個 Unicode 字元</span><span class="sxs-lookup"><span data-stu-id="067a1-152">0 to approximately 2 billion Unicode characters</span></span>|  
+|[<span data-ttu-id="067a1-153">UInteger</span><span class="sxs-lookup"><span data-stu-id="067a1-153">UInteger</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|<span data-ttu-id="067a1-154">4 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-154">4 bytes</span></span>|<span data-ttu-id="067a1-155">0 到 4294967295 （不帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-155">0 through 4,294,967,295 (unsigned)</span></span>|  
+|[<span data-ttu-id="067a1-156">ULong</span><span class="sxs-lookup"><span data-stu-id="067a1-156">ULong</span></span>](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|<span data-ttu-id="067a1-157">8 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-157">8 bytes</span></span>|<span data-ttu-id="067a1-158">0 到 18446744073709551615 (1.8 … E + 19 <sup>†</sup>) （不帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-158">0 through 18,446,744,073,709,551,615 (1.8...E+19 <sup>†</sup>) (unsigned)</span></span>|  
+|<span data-ttu-id="067a1-159">[使用者定義](../../../visual-basic/language-reference/data-types/user-defined-data-type.md)（結構）</span><span class="sxs-lookup"><span data-stu-id="067a1-159">[User-Defined](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (structure)</span></span>|<span data-ttu-id="067a1-160">(繼承自<xref:System.ValueType>)</span><span class="sxs-lookup"><span data-stu-id="067a1-160">(inherits from <xref:System.ValueType>)</span></span>|<span data-ttu-id="067a1-161">作業取決於平台</span><span class="sxs-lookup"><span data-stu-id="067a1-161">Depends on implementing platform</span></span>|<span data-ttu-id="067a1-162">結構的每一個成員具有決定透過其資料類型且獨立於其他成員的範圍的範圍</span><span class="sxs-lookup"><span data-stu-id="067a1-162">Each member of the structure has a range determined by its data type and independent of the ranges of the other members</span></span>|  
+|[<span data-ttu-id="067a1-163">UShort</span><span class="sxs-lookup"><span data-stu-id="067a1-163">UShort</span></span>](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|<span data-ttu-id="067a1-164">2 個位元組</span><span class="sxs-lookup"><span data-stu-id="067a1-164">2 bytes</span></span>|<span data-ttu-id="067a1-165">0 到 65535 （不帶正負號）</span><span class="sxs-lookup"><span data-stu-id="067a1-165">0 through 65,535 (unsigned)</span></span>|  
   
- <sup>†</sup> 在「*科學標記法*」\(Scientific Notation\) 中，E 代表乘冪 10。  因此 3.56E\+ 2 表示 3.56 x 10<sup>2</sup> 或 356，而 3.56E\-2 表示 3.56 \/ 10<sup>2</sup> 或 0.0356。  
+ <span data-ttu-id="067a1-166"><sup>†</sup>中*科學記號標記法*，"E"是指的 10 乘冪。</span><span class="sxs-lookup"><span data-stu-id="067a1-166"><sup>†</sup> In *scientific notation*, "E" refers to a power of 10.</span></span> <span data-ttu-id="067a1-167">因此 3.56E + 2 表示 3.56 x 10<sup>2</sup>了 356，或 3.56E-2 表示 3.56 / 10<sup>2</sup>或 0.0356。</span><span class="sxs-lookup"><span data-stu-id="067a1-167">So 3.56E+2 signifies 3.56 x 10<sup>2</sup> or 356, and 3.56E-2 signifies 3.56 / 10<sup>2</sup> or 0.0356.</span></span>  
   
 > [!NOTE]
->  針對包含文字的字串，請使用 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 函式來從某一種文字格式轉換為另一種文字格式。  
+>  <span data-ttu-id="067a1-168">包含文字的字串，請使用<xref:Microsoft.VisualBasic.Strings.StrConv%2A>函式可從一個文字格式轉換為另一個。</span><span class="sxs-lookup"><span data-stu-id="067a1-168">For strings containing text, use the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function to convert from one text format to another.</span></span>  
   
- 使用型別字元，以及指定資料型別之外宣告陳述式，您可以強制一些程式設計項目的資料型別。  請參閱 [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)。  
+ <span data-ttu-id="067a1-169">除了宣告陳述式中指定的資料類型，您都可以使用的型別字元來強制執行一些程式設計項目資料的類型。</span><span class="sxs-lookup"><span data-stu-id="067a1-169">In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements by using a type character.</span></span> <span data-ttu-id="067a1-170">請參閱[輸入字元](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)。</span><span class="sxs-lookup"><span data-stu-id="067a1-170">See [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span></span>  
   
-## 記憶體消耗量  
- 當您宣告基本資料型別時，假設將它的記憶體消耗量與其表面儲存配置是相同的並不是安全的做法。  基於下列考量：  
+## <a name="memory-consumption"></a><span data-ttu-id="067a1-171">記憶體消耗量</span><span class="sxs-lookup"><span data-stu-id="067a1-171">Memory Consumption</span></span>  
+ <span data-ttu-id="067a1-172">當您宣告基本資料類型時，它並不安全假設其記憶體耗用量是其表面的儲存體配置相同。</span><span class="sxs-lookup"><span data-stu-id="067a1-172">When you declare an elementary data type, it is not safe to assume that its memory consumption is the same as its nominal storage allocation.</span></span> <span data-ttu-id="067a1-173">這是因為下列考量：</span><span class="sxs-lookup"><span data-stu-id="067a1-173">This is due to the following considerations:</span></span>  
   
--   **儲存體指派**：Common Language Runtime 會依據執行應用程式所在平台的目前特性來分配儲存區。  如果記憶體幾乎全滿，它就會盡量將宣告元素壓縮在一起。  在其他情況下，它可能會將其記憶體位址對齊自然硬體界限以取得最佳化效能。  
+-   <span data-ttu-id="067a1-174">**儲存體設定。**</span><span class="sxs-lookup"><span data-stu-id="067a1-174">**Storage Assignment.**</span></span> <span data-ttu-id="067a1-175">Common language runtime 可以指派儲存體，根據目前的應用程式執行所在的平台特性。</span><span class="sxs-lookup"><span data-stu-id="067a1-175">The common language runtime can assign storage based on the current characteristics of the platform on which your application is executing.</span></span> <span data-ttu-id="067a1-176">如果記憶體幾乎已滿時，它可能會盡可能一起組件成接近您宣告的項目。</span><span class="sxs-lookup"><span data-stu-id="067a1-176">If memory is nearly full, it might pack your declared elements as closely together as possible.</span></span> <span data-ttu-id="067a1-177">在其他情況下，它可能會對齊實體硬體界限來最佳化效能其記憶體位址。</span><span class="sxs-lookup"><span data-stu-id="067a1-177">In other cases it might align their memory addresses to natural hardware boundaries to optimize performance.</span></span>  
   
--   **平台寬度**：64 位元平台與 32 位元平台上的儲存體指派是不同的。  
+-   <span data-ttu-id="067a1-178">**平台的寬度。**</span><span class="sxs-lookup"><span data-stu-id="067a1-178">**Platform Width.**</span></span> <span data-ttu-id="067a1-179">在 64 位元平台上的儲存體設定是不同的 32 位元平台上。</span><span class="sxs-lookup"><span data-stu-id="067a1-179">Storage assignment on a 64-bit platform is different from assignment on a 32-bit platform.</span></span>  
   
-### 複合資料型別  
- 複合資料型別 \(例如結構或陣列\) 的每個成員都有相同的記憶體考量。  您不能只將型別成員的表面儲存配置加總。  請注意其他考量，如下所示：  
+### <a name="composite-data-types"></a><span data-ttu-id="067a1-180">複合資料類型</span><span class="sxs-lookup"><span data-stu-id="067a1-180">Composite Data Types</span></span>  
+ <span data-ttu-id="067a1-181">考量同樣適用於複合資料類型，例如結構或陣列的每個成員。</span><span class="sxs-lookup"><span data-stu-id="067a1-181">The same considerations apply to each member of a composite data type, such as a structure or an array.</span></span> <span data-ttu-id="067a1-182">您不能只是將總表面儲存配置類型的成員。</span><span class="sxs-lookup"><span data-stu-id="067a1-182">You cannot rely on simply adding together the nominal storage allocations of the type's members.</span></span> <span data-ttu-id="067a1-183">此外，有其他考量，如下所示：</span><span class="sxs-lookup"><span data-stu-id="067a1-183">Furthermore, there are other considerations, such as the following:</span></span>  
   
--   **負荷**：有些複合型別還有其他的記憶體需求。  例如，陣列本身和每個維度都需要使用額外的記憶體。  在 32 位元平台上，目前的耗用量是 12 個位元組加上每個維度的 8 個位元組。  在 64 位元平台上，需求則加倍。  
+-   <span data-ttu-id="067a1-184">**額外負荷。**</span><span class="sxs-lookup"><span data-stu-id="067a1-184">**Overhead.**</span></span> <span data-ttu-id="067a1-185">部分複合類型會有額外的記憶體需求。</span><span class="sxs-lookup"><span data-stu-id="067a1-185">Some composite types have additional memory requirements.</span></span> <span data-ttu-id="067a1-186">例如，陣列的陣列本身以及每個維度會使用額外的記憶體。</span><span class="sxs-lookup"><span data-stu-id="067a1-186">For example, an array uses extra memory for the array itself and also for each dimension.</span></span> <span data-ttu-id="067a1-187">在 32 位元平台上目前的耗用量是 12 個位元組，加上每個維度的 8 個位元組。</span><span class="sxs-lookup"><span data-stu-id="067a1-187">On a 32-bit platform, this overhead is currently 12 bytes plus 8 bytes for each dimension.</span></span> <span data-ttu-id="067a1-188">在 64 位元平台上，這項需求就會加倍。</span><span class="sxs-lookup"><span data-stu-id="067a1-188">On a 64-bit platform this requirement is doubled.</span></span>  
   
--   **儲存體佈置**：您也不能就將記憶體中的儲存順序視為與您宣告的順序相同。  您甚至無法對位元組對齊做假設，例如 2 位元組或 4 位元組界限。  如果您正在定義類別或結構，且需要控制其成員的儲存體配置，則可將 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性套用至類別或結構。  
+-   <span data-ttu-id="067a1-189">**儲存體的配置。**</span><span class="sxs-lookup"><span data-stu-id="067a1-189">**Storage Layout.**</span></span> <span data-ttu-id="067a1-190">您無法安全地假設在記憶體中的儲存體的順序是您宣告的順序相同。</span><span class="sxs-lookup"><span data-stu-id="067a1-190">You cannot safely assume that the order of storage in memory is the same as your order of declaration.</span></span> <span data-ttu-id="067a1-191">您甚至不能假設位元組對齊，例如 2 或 4 個位元組的界限。</span><span class="sxs-lookup"><span data-stu-id="067a1-191">You cannot even make assumptions about byte alignment, such as a 2-byte or 4-byte boundary.</span></span> <span data-ttu-id="067a1-192">如果您要定義類別或結構，而且您需要控制其成員的儲存體配置，您可以套用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性設定為類別或結構。</span><span class="sxs-lookup"><span data-stu-id="067a1-192">If you are defining a class or structure and you need to control the storage layout of its members, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the class or structure.</span></span>  
   
-### 物件負荷  
- 參考任何基本或複合資料型別的 `Object` 除了包含在資料型別中的資料之外，還需使用 4 個位元組。  
+### <a name="object-overhead"></a><span data-ttu-id="067a1-193">物件的負擔</span><span class="sxs-lookup"><span data-stu-id="067a1-193">Object Overhead</span></span>  
+ <span data-ttu-id="067a1-194">`Object`參考的任何基本或複合資料類型會使用 4 個位元組，除了資料類型中所包含的資料。</span><span class="sxs-lookup"><span data-stu-id="067a1-194">An `Object` referring to any elementary or composite data type uses 4 bytes in addition to the data contained in the data type.</span></span>  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="067a1-195">另請參閱</span><span class="sxs-lookup"><span data-stu-id="067a1-195">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [<span data-ttu-id="067a1-196">類型轉換函式</span><span class="sxs-lookup"><span data-stu-id="067a1-196">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="067a1-197">轉換摘要</span><span class="sxs-lookup"><span data-stu-id="067a1-197">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="067a1-198">類型字元</span><span class="sxs-lookup"><span data-stu-id="067a1-198">Type Characters</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="067a1-199">有效率地使用資料類型</span><span class="sxs-lookup"><span data-stu-id="067a1-199">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

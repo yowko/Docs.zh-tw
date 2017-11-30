@@ -1,88 +1,71 @@
 ---
-title: "COM Interop (Visual Basic) 簡介 |Microsoft 文件"
+title: "COM Interop 簡介 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - interop assemblies
-- COM interop, about COM interop
+- COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8866dbadca040c57ed2b59540dd2c341eb81758c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 81a9d0fc7036ff1b821c46687541311f26113212
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 簡介 (Visual Basic)
-元件物件模型 (COM) 可讓您公開其功能給其他元件和主應用程式的物件。 雖然已 Windows 程式設計多年的基礎 COM 物件，如 common language runtime (CLR) 所設計的應用程式有許多好處。  
+# <a name="introduction-to-com-interop-visual-basic"></a><span data-ttu-id="e1078-102">COM Interop 簡介 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e1078-102">Introduction to COM Interop (Visual Basic)</span></span>
+<span data-ttu-id="e1078-103">元件物件模型 (COM) 可讓您公開其功能給其他元件和主控件應用程式的物件。</span><span class="sxs-lookup"><span data-stu-id="e1078-103">The Component Object Model (COM) lets an object expose its functionality to other components and to host applications.</span></span> <span data-ttu-id="e1078-104">COM 物件已被 Windows 程式設計多年的基礎，而針對 common language runtime (CLR) 所設計的應用程式會提供許多優點。</span><span class="sxs-lookup"><span data-stu-id="e1078-104">While COM objects have been fundamental to Windows programming for many years, applications designed for the common language runtime (CLR) offer many advantages.</span></span>  
   
- [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]應用程式最終會取代開發的 com。 在那之前，您可能要使用或建立 COM 物件使用[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]。 與 COM 互通性或*COM interop*，可讓您使用現有的 COM 物件時，轉換到[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]您自己的步調。  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<span data-ttu-id="e1078-105">應用程式最終會取代開發的 com</span><span class="sxs-lookup"><span data-stu-id="e1078-105"> applications will eventually replace those developed with COM.</span></span> <span data-ttu-id="e1078-106">之前，您可能要使用或建立 COM 物件使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e1078-106">Until then, you may have to use or create COM objects by using [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span> <span data-ttu-id="e1078-107">與 COM 互通性或*COM interop*，可讓您使用現有的 COM 物件時轉換為[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]您自己的步調。</span><span class="sxs-lookup"><span data-stu-id="e1078-107">Interoperability with COM, or *COM interop*, enables you to use existing COM objects while transitioning to the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] at your own pace.</span></span>  
   
- 使用[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]建立 COM 元件，您可以使用免註冊 COM interop。 這可讓您控制當多個版本的電腦上，安裝並可讓使用者可以使用 XCOPY 或 FTP 將您的電腦上的適當目錄的應用程式可以執行它要啟用哪個 DLL 版本。 如需詳細資訊，請參閱[免註冊 COM Interop](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)。  
+ <span data-ttu-id="e1078-108">使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]若要建立 COM 元件，您可以使用免註冊 COM interop。</span><span class="sxs-lookup"><span data-stu-id="e1078-108">By using the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] to create COM components, you can use registration-free COM interop.</span></span> <span data-ttu-id="e1078-109">這可讓您控制的電腦上，安裝一個以上的版本，而且可讓使用者可以使用 XCOPY 或 FTP 將複製到其電腦上的適當目錄的應用程式可以執行它時，系統會啟用 DLL 版本。</span><span class="sxs-lookup"><span data-stu-id="e1078-109">This lets you control which DLL version is enabled when more than one version is installed on a computer, and lets end users use XCOPY or FTP to copy your application to an appropriate directory on their computer where it can be run.</span></span> <span data-ttu-id="e1078-110">如需詳細資訊，請參閱[免註冊 COM Interop](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)。</span><span class="sxs-lookup"><span data-stu-id="e1078-110">For more information, see [Registration-Free COM Interop](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).</span></span>  
   
-## <a name="managed-code-and-data"></a>Managed 程式碼和資料  
- 程式碼開發的[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]稱為*managed 程式碼*，並包含可由 CLR 的中繼資料。 所使用的資料[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]應用程式會呼叫*管理資料*因為執行階段會管理資料相關工作，例如配置與回收記憶體，以及執行型別檢查。 根據預設，[!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]使用 managed 程式碼和資料，但您可以存取 unmanaged 程式碼和資料的 COM 物件使用 interop 組件 （在此頁面稍後說明）。  
+## <a name="managed-code-and-data"></a><span data-ttu-id="e1078-111">Managed 程式碼和資料</span><span class="sxs-lookup"><span data-stu-id="e1078-111">Managed Code and Data</span></span>  
+ <span data-ttu-id="e1078-112">程式碼開發的[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]稱為*managed 程式碼*，且包含可由 CLR 的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e1078-112">Code developed for the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] is referred to as *managed code*, and contains metadata that is used by the CLR.</span></span> <span data-ttu-id="e1078-113">所使用的資料[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式會呼叫*受管理的資料*因為執行階段會與資料相關的工作，例如配置和回收記憶體，以及執行類型檢查。</span><span class="sxs-lookup"><span data-stu-id="e1078-113">Data used by [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applications is called *managed data* because the runtime manages data-related tasks such as allocating and reclaiming memory and performing type checking.</span></span> <span data-ttu-id="e1078-114">根據預設，Visual Basic.NET 中使用 managed 程式碼和資料，但您可以存取 unmanaged 程式碼和 COM 物件使用 interop 組件 （稍後會說明在此頁面上） 的資料。</span><span class="sxs-lookup"><span data-stu-id="e1078-114">By default, Visual Basic .NET uses managed code and data, but you can access the unmanaged code and data of COM objects using interop assemblies (described later on this page).</span></span>  
   
-## <a name="assemblies"></a>組件  
- 組件是主要建置組塊的[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]應用程式。 它是功能，可建置、 版本控制，以及部署為包含一或多個檔案的單一實作單元的集合。 每個組件包含組件資訊清單。  
+## <a name="assemblies"></a><span data-ttu-id="e1078-115">組件</span><span class="sxs-lookup"><span data-stu-id="e1078-115">Assemblies</span></span>  
+ <span data-ttu-id="e1078-116">組件為主要建置組塊的[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="e1078-116">An assembly is the primary building block of a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] application.</span></span> <span data-ttu-id="e1078-117">它是功能，可建置、 版本設定，以及部署為包含一或多個檔案的單一實作單元的集合。</span><span class="sxs-lookup"><span data-stu-id="e1078-117">It is a collection of functionality that is built, versioned, and deployed as a single implementation unit containing one or more files.</span></span> <span data-ttu-id="e1078-118">每個組件包含組件資訊清單。</span><span class="sxs-lookup"><span data-stu-id="e1078-118">Each assembly contains an assembly manifest.</span></span>  
   
-## <a name="type-libraries-and-assembly-manifests"></a>型別程式庫和組件資訊清單  
- 型別程式庫描述 COM 物件，例如成員名稱和資料類型的特性。 組件資訊清單執行相同的功能，如[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]應用程式。 包括下列資訊︰  
+## <a name="type-libraries-and-assembly-manifests"></a><span data-ttu-id="e1078-119">類型程式庫和組件資訊清單</span><span class="sxs-lookup"><span data-stu-id="e1078-119">Type Libraries and Assembly Manifests</span></span>  
+ <span data-ttu-id="e1078-120">類型程式庫描述的 COM 物件，例如成員名稱和資料類型的特性。</span><span class="sxs-lookup"><span data-stu-id="e1078-120">Type libraries describe characteristics of COM objects, such as member names and data types.</span></span> <span data-ttu-id="e1078-121">組件資訊清單執行相同的功能，如[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="e1078-121">Assembly manifests perform the same function for [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applications.</span></span> <span data-ttu-id="e1078-122">包括下列資訊：</span><span class="sxs-lookup"><span data-stu-id="e1078-122">They include information about the following:</span></span>  
   
--   組件識別、 版本、 文化特性和數位簽章。  
+-   <span data-ttu-id="e1078-123">組件識別、 版本、 文化特性和數位簽章。</span><span class="sxs-lookup"><span data-stu-id="e1078-123">Assembly identity, version, culture, and digital signature.</span></span>  
   
--   構成組件實作的檔案。  
+-   <span data-ttu-id="e1078-124">組成組件實作的檔案。</span><span class="sxs-lookup"><span data-stu-id="e1078-124">Files that make up the assembly implementation.</span></span>  
   
--   型別和構成組件的資源。 這包括從其匯出。  
+-   <span data-ttu-id="e1078-125">型別和構成組件的資源。</span><span class="sxs-lookup"><span data-stu-id="e1078-125">Types and resources that make up the assembly.</span></span> <span data-ttu-id="e1078-126">這包括從它匯出。</span><span class="sxs-lookup"><span data-stu-id="e1078-126">This includes those that are exported from it.</span></span>  
   
--   對其他組件的編譯時間相依性。  
+-   <span data-ttu-id="e1078-127">其他組件上的編譯時間相依性。</span><span class="sxs-lookup"><span data-stu-id="e1078-127">Compile-time dependencies on other assemblies.</span></span>  
   
--   組件正確執行所需的權限。  
+-   <span data-ttu-id="e1078-128">若要正確執行組件所需的權限。</span><span class="sxs-lookup"><span data-stu-id="e1078-128">Permissions required for the assembly to run correctly.</span></span>  
   
- 如需組件和組件資訊清單的詳細資訊，請參閱[組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。  
+ <span data-ttu-id="e1078-129">如需有關組件和組件資訊清單的詳細資訊，請參閱[組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e1078-129">For more information about assemblies and assembly manifests, see [Assemblies and the Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).</span></span>  
   
-### <a name="importing-and-exporting-type-libraries"></a>匯入和匯出類型程式庫  
- [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]包含公用程式，可讓您從類型程式庫匯入資訊的 Tlbimp[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]應用程式。 您可以使用 Tlbexp 公用程式，從組件產生型別程式庫。  
+### <a name="importing-and-exporting-type-libraries"></a><span data-ttu-id="e1078-130">匯入和匯出類型程式庫</span><span class="sxs-lookup"><span data-stu-id="e1078-130">Importing and Exporting Type Libraries</span></span>  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="e1078-131">包含的公用程式，可讓您從至類型程式庫匯入資訊的 Tlbimp[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="e1078-131"> contains a utility, Tlbimp, that lets you import information from a type library into a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] application.</span></span> <span data-ttu-id="e1078-132">您可以使用 Tlbexp 公用程式，從組件產生類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="e1078-132">You can generate type libraries from assemblies by using the Tlbexp utility.</span></span>  
   
- Tlbimp 和 Tlbexp 的相關資訊，請參閱[Tlbimp.exe （類型程式庫匯入工具）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)和[Tlbexp.exe （類型程式庫匯出工具）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。  
+ <span data-ttu-id="e1078-133">如需 Tlbimp 和 Tlbexp 資訊，請參閱[Tlbimp.exe （類型程式庫匯入工具）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)和[Tlbexp.exe （類型程式庫匯出工具）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。</span><span class="sxs-lookup"><span data-stu-id="e1078-133">For information about Tlbimp and Tlbexp, see [Tlbimp.exe (Type Library Importer)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382) and [Tlbexp.exe (Type Library Exporter)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).</span></span>  
   
-## <a name="interop-assemblies"></a>Interop 組件  
- Interop 組件是[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]組件的橋接器之間 managed 和 unmanaged 程式碼，為對等用法的對應 COM 物件成員[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]管理成員。 所建立的 interop 組件[!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]處理許多使用 COM 物件，例如交互操作性封送處理的詳細資料。  
+## <a name="interop-assemblies"></a><span data-ttu-id="e1078-134">Interop 組件</span><span class="sxs-lookup"><span data-stu-id="e1078-134">Interop Assemblies</span></span>  
+ <span data-ttu-id="e1078-135">Interop 組件是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件的橋接器之間 managed 和 unmanaged 程式碼，對應的對等項目至 COM 物件成員[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]管理成員。</span><span class="sxs-lookup"><span data-stu-id="e1078-135">Interop assemblies are [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies that bridge between managed and unmanaged code, mapping COM object members to equivalent [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] managed members.</span></span> <span data-ttu-id="e1078-136">Visual Basic.NET 所建立的 interop 組件可處理許多使用 COM 物件，例如封送處理的互通性的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="e1078-136">Interop assemblies created by Visual Basic .NET handle many of the details of working with COM objects, such as interoperability marshaling.</span></span>  
   
-## <a name="interoperability-marshaling"></a>互通性封送處理  
- 所有[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]應用程式都共用一組啟用物件，不論所使用的程式設計語言的互通性的一般型別。 參數和傳回值的 COM 物件有時候會使用 managed 程式碼中使用的不同資料類型。 *互通性封送處理*移動的 COM 物件會封裝參數和傳回值，為對等資料類型的程序。 如需詳細資訊，請參閱[Interop 封送處理](http://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a)。  
+## <a name="interoperability-marshaling"></a><span data-ttu-id="e1078-137">封送處理的互通性</span><span class="sxs-lookup"><span data-stu-id="e1078-137">Interoperability Marshaling</span></span>  
+ <span data-ttu-id="e1078-138">所有[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式共用常見的類型，可讓互通性的物件，不論語言所使用的一組。</span><span class="sxs-lookup"><span data-stu-id="e1078-138">All [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applications share a set of common types that enable interoperability of objects, regardless of the programming language that is used.</span></span> <span data-ttu-id="e1078-139">參數和傳回的 COM 物件的值有時候會使用與 managed 程式碼中使用的不同的資料類型。</span><span class="sxs-lookup"><span data-stu-id="e1078-139">The parameters and return values of COM objects sometimes use data types that differ from those used in managed code.</span></span> <span data-ttu-id="e1078-140">*封送處理的互通性*是封裝參數和傳回值為對等資料類型的程序與 COM 物件中移動。</span><span class="sxs-lookup"><span data-stu-id="e1078-140">*Interoperability marshaling* is the process of packaging parameters and return values into equivalent data types as they move to and from COM objects.</span></span> <span data-ttu-id="e1078-141">如需詳細資訊，請參閱[Interop 封送處理](../../../framework/interop/interop-marshaling.md)。</span><span class="sxs-lookup"><span data-stu-id="e1078-141">For more information, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)   
- [逐步解說︰ 實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)   
- [與 Unmanaged 程式碼互通](https://msdn.microsoft.com/library/sd10k43k)   
- [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)   
- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Tlbimp.exe （類型程式庫匯入工具）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)   
- [Tlbexp.exe （類型程式庫匯出工具）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)   
- [Interop 封送處理](http://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a)   
- [免註冊 COM Interop](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+## <a name="see-also"></a><span data-ttu-id="e1078-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e1078-142">See Also</span></span>  
+ [<span data-ttu-id="e1078-143">COM Interop</span><span class="sxs-lookup"><span data-stu-id="e1078-143">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [<span data-ttu-id="e1078-144">逐步解說：實作 COM 物件的繼承</span><span class="sxs-lookup"><span data-stu-id="e1078-144">Walkthrough: Implementing Inheritance with COM Objects</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [<span data-ttu-id="e1078-145">與 Unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="e1078-145">Interoperating with Unmanaged Code</span></span>](https://msdn.microsoft.com/library/sd10k43k)  
+ [<span data-ttu-id="e1078-146">互通性的疑難排解</span><span class="sxs-lookup"><span data-stu-id="e1078-146">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+ [<span data-ttu-id="e1078-147">組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="e1078-147">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="e1078-148">Tlbimp.exe (類型程式庫匯入工具)</span><span class="sxs-lookup"><span data-stu-id="e1078-148">Tlbimp.exe (Type Library Importer)</span></span>](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [<span data-ttu-id="e1078-149">Tlbexp.exe (類型程式庫匯出工具)</span><span class="sxs-lookup"><span data-stu-id="e1078-149">Tlbexp.exe (Type Library Exporter)</span></span>](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [<span data-ttu-id="e1078-150">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="e1078-150">Interop Marshaling</span></span>](../../../framework/interop/interop-marshaling.md)  
+ [<span data-ttu-id="e1078-151">免註冊的 COM Interop</span><span class="sxs-lookup"><span data-stu-id="e1078-151">Registration-Free COM Interop</span></span>](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

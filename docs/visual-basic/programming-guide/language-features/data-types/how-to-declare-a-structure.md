@@ -1,51 +1,50 @@
 ---
-title: "How to: Declare a Structure (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declarations, structures"
-  - "structure statements"
-  - "statements [Visual Basic], structure"
-  - "structures, declaring"
+title: "如何：宣告結構 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- declarations [Visual Basic], structures
+- structure statements [Visual Basic]
+- statements [Visual Basic], structure
+- structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8203327e189d095c9f7ceeb3b68ea24efe9ba882
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Declare a Structure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-您可以利用 [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md) 來開始結構的宣告，並利用 `End` `Structure` 陳述式結束宣告。  在兩陳述式之間至少要宣告一個「*項目*」\(Element\)。  雖然項目可以是任何資料型別，但是至少要有一個項目是非共用變數或非共用的非自訂事件。  
+# <a name="how-to-declare-a-structure-visual-basic"></a><span data-ttu-id="b9558-102">如何：宣告結構 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9558-102">How to: Declare a Structure (Visual Basic)</span></span>
+<span data-ttu-id="b9558-103">開始使用在 structure 宣告[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)，和您結束該處理序與`End``Structure`陳述式。</span><span class="sxs-lookup"><span data-stu-id="b9558-103">You begin a structure declaration with the [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md), and you end it with the `End` `Structure` statement.</span></span> <span data-ttu-id="b9558-104">這兩個陳述式之間必須宣告至少一個*元素*。</span><span class="sxs-lookup"><span data-stu-id="b9558-104">Between these two statements you must declare at least one *element*.</span></span> <span data-ttu-id="b9558-105">項目可以是任何資料類型，但至少一個必須非共用的變數或共用的非自訂的事件。</span><span class="sxs-lookup"><span data-stu-id="b9558-105">The elements can be of any data type, but at least one must be either a nonshared variable or a nonshared, noncustom event.</span></span>  
   
- 您無法在結構宣告中初始化任何結構項目。  當您將變數宣告為結構型別時，藉由透過變數存取項目就能將值指派給項目。  
+ <span data-ttu-id="b9558-106">您無法初始化任何結構中的項目結構宣告。</span><span class="sxs-lookup"><span data-stu-id="b9558-106">You cannot initialize any of the structure elements in the structure declaration.</span></span> <span data-ttu-id="b9558-107">當您宣告為結構類型的變數時，您將值指派至項目透過變數存取它們。</span><span class="sxs-lookup"><span data-stu-id="b9558-107">When you declare a variable to be of a structure type, you assign values to the elements by accessing them through the variable.</span></span>  
   
- 如需結構和類別 \(Class\) 之間差異的詳細討論，請參閱 [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)。  
+ <span data-ttu-id="b9558-108">如需結構和類別之間的差異的討論，請參閱[結構和類別](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)。</span><span class="sxs-lookup"><span data-stu-id="b9558-108">For a discussion of the differences between structures and classes, see [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).</span></span>  
   
- 為了便於示範，假設您想要記錄員工的姓名、電話分機和薪水。  使用結構，您只要利用單一變數就可以達到這個目的。  
+ <span data-ttu-id="b9558-109">針對示範用途，請考慮您想要用來追蹤員工的名稱、 電話分機號碼和薪資的情況。</span><span class="sxs-lookup"><span data-stu-id="b9558-109">For demonstration purposes, consider a situation where you want to keep track of an employee's name, telephone extension, and salary.</span></span> <span data-ttu-id="b9558-110">結構，可讓您在單一的變數中這麼做。</span><span class="sxs-lookup"><span data-stu-id="b9558-110">A structure allows you to do this in a single variable.</span></span>  
   
-### 宣告結構  
+### <a name="to-declare-a-structure"></a><span data-ttu-id="b9558-111">宣告結構</span><span class="sxs-lookup"><span data-stu-id="b9558-111">To declare a structure</span></span>  
   
-1.  建立結構的開始陳述式和結束陳述式。  
+1.  <span data-ttu-id="b9558-112">建立的開始和結束結構的陳述式。</span><span class="sxs-lookup"><span data-stu-id="b9558-112">Create the beginning and ending statements for the structure.</span></span>  
   
-     您可以使用 [Public](../../../../visual-basic/language-reference/modifiers/public.md)、[Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、[Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 或 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 關鍵字來指定結構的存取層級，或是保留預設值 `Public`。  
+     <span data-ttu-id="b9558-113">您可以指定的存取層級結構使用[公用](../../../../visual-basic/language-reference/modifiers/public.md)，[保護](../../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)，或[私人](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字，或您可以讓它預設為`Public`。</span><span class="sxs-lookup"><span data-stu-id="b9558-113">You can specify the access level of a structure using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, or you can let it default to `Public`.</span></span>  
   
     ```  
     Private Structure employee  
     End Structure  
     ```  
   
-2.  將項目加入至結構的主體。  
+2.  <span data-ttu-id="b9558-114">將項目加入至結構主體。</span><span class="sxs-lookup"><span data-stu-id="b9558-114">Add elements to the body of the structure.</span></span>  
   
-     結構至少要有一個項目。  您必須宣告每個項目並指定其存取層級。  如果您使用 [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) 而無任何關鍵字，存取範圍則預設值為 `Public`。  
+     <span data-ttu-id="b9558-115">結構必須至少一個元素。</span><span class="sxs-lookup"><span data-stu-id="b9558-115">A structure must have at least one element.</span></span> <span data-ttu-id="b9558-116">您必須宣告每個項目，並為其指定的存取層級。</span><span class="sxs-lookup"><span data-stu-id="b9558-116">You must declare every element and specify an access level for it.</span></span> <span data-ttu-id="b9558-117">如果您使用[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)存取範圍預設為不含任何關鍵字， `Public`。</span><span class="sxs-lookup"><span data-stu-id="b9558-117">If you use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) without any keywords, the accessibility defaults to `Public`.</span></span>  
   
     ```  
     Private Structure employee  
@@ -60,18 +59,18 @@ caps.handback.revision: 15
     End Structure  
     ```  
   
-     上述範例中的 `salary` 欄位是 `Private`，這表示這個欄位無法從結構之外的地方存取，即使是從內含類別也一樣。  不過，`giveRaise` 程序是 `Public`，所以它可以從結構之外的地方呼叫。  同樣地，您可以從結構之外的地方引發 `salaryReviewTime` 事件。  
+     <span data-ttu-id="b9558-118">`salary`在上述範例中的欄位是`Private`，這表示它是外部結構，甚至是從包含的類別無法存取。</span><span class="sxs-lookup"><span data-stu-id="b9558-118">The `salary` field in the preceding example is `Private`, which means it is inaccessible outside the structure, even from the containing class.</span></span> <span data-ttu-id="b9558-119">不過，`giveRaise`程序是`Public`，因此可以從中呼叫在結構之外。</span><span class="sxs-lookup"><span data-stu-id="b9558-119">However, the `giveRaise` procedure is `Public`, so it can be called from outside the structure.</span></span> <span data-ttu-id="b9558-120">同樣地，您可以提高`salaryReviewTime`在結構之外的事件。</span><span class="sxs-lookup"><span data-stu-id="b9558-120">Similarly, you can raise the `salaryReviewTime` event from outside the structure.</span></span>  
   
-     除了變數、`Sub` 程序和事件以外，您還可以在結構中定義常數、`Function` 程序和屬性。  您最多只能將一個屬性指定為「*預設屬性*」\(Default Property\)，前提是它至少要取得一個引數。  您可以使用 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` 程序來處理事件。  如需詳細資訊，請參閱 [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)。  
+     <span data-ttu-id="b9558-121">除了變數之外，`Sub`程序和事件，您也可以定義常數，`Function`程序和結構中的屬性。</span><span class="sxs-lookup"><span data-stu-id="b9558-121">In addition to variables, `Sub` procedures, and events, you can also define constants, `Function` procedures, and properties in a structure.</span></span> <span data-ttu-id="b9558-122">您可以指定最多一個屬性做為*預設屬性*，前提是它需要至少一個引數。</span><span class="sxs-lookup"><span data-stu-id="b9558-122">You can designate at most one property as the *default property*, provided it takes at least one argument.</span></span> <span data-ttu-id="b9558-123">您可以處理的事件，該[共用](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub`程序。</span><span class="sxs-lookup"><span data-stu-id="b9558-123">You can handle an event with a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure.</span></span> <span data-ttu-id="b9558-124">如需詳細資訊，請參閱[如何： 宣告及呼叫預設屬性在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)。</span><span class="sxs-lookup"><span data-stu-id="b9558-124">For more information, see [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).</span></span>  
   
-## 請參閱  
- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Structure Variables](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)   
- [Structures and Other Programming Elements](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)   
- [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [User\-Defined Data Type](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+## <a name="see-also"></a><span data-ttu-id="b9558-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b9558-125">See Also</span></span>  
+ [<span data-ttu-id="b9558-126">資料類型</span><span class="sxs-lookup"><span data-stu-id="b9558-126">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="b9558-127">基礎資料類型</span><span class="sxs-lookup"><span data-stu-id="b9558-127">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="b9558-128">複合資料類型</span><span class="sxs-lookup"><span data-stu-id="b9558-128">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="b9558-129">值類型和參考類型</span><span class="sxs-lookup"><span data-stu-id="b9558-129">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="b9558-130">結構</span><span class="sxs-lookup"><span data-stu-id="b9558-130">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="b9558-131">資料類型的疑難排解</span><span class="sxs-lookup"><span data-stu-id="b9558-131">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="b9558-132">結構變數</span><span class="sxs-lookup"><span data-stu-id="b9558-132">Structure Variables</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [<span data-ttu-id="b9558-133">結構和其他程式設計項目</span><span class="sxs-lookup"><span data-stu-id="b9558-133">Structures and Other Programming Elements</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [<span data-ttu-id="b9558-134">結構和類別</span><span class="sxs-lookup"><span data-stu-id="b9558-134">Structures and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [<span data-ttu-id="b9558-135">使用者定義的資料類型</span><span class="sxs-lookup"><span data-stu-id="b9558-135">User-Defined Data Type</span></span>](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

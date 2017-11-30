@@ -1,40 +1,46 @@
 ---
-title: "如何：將 Stretch 屬性套用至 Viewbox 的內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制項, Viewbox"
-  - "Stretch 屬性"
-  - "StretchDirection 屬性"
-  - "Viewbox 控制項"
+title: "如何：將 Stretch 屬性套用至 Viewbox 的內容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- StretchDirection properties [WPF]
+- Stretch properties [WPF]
+- controls [WPF], Viewbox
+- Viewbox control [WPF]
 ms.assetid: b9c22ef4-bce4-4300-9e0c-8260b7db83cc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f6e93c744a8d7c294556e80f0ac4bf1f973ea5c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將 Stretch 屬性套用至 Viewbox 的內容
-## 範例  
- 本範例說明如何變更 <xref:System.Windows.Controls.Viewbox> 的 <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> 和 <xref:System.Windows.Controls.Viewbox.Stretch%2A> 屬性值。  
+# <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a><span data-ttu-id="842f4-102">如何：將 Stretch 屬性套用至 Viewbox 的內容</span><span class="sxs-lookup"><span data-stu-id="842f4-102">How to: Apply Stretch Properties to the Contents of a Viewbox</span></span>
+## <a name="example"></a><span data-ttu-id="842f4-103">範例</span><span class="sxs-lookup"><span data-stu-id="842f4-103">Example</span></span>  
+ <span data-ttu-id="842f4-104">這個範例示範如何變更的值<xref:System.Windows.Controls.Viewbox.StretchDirection%2A>和<xref:System.Windows.Controls.Viewbox.Stretch%2A>屬性<xref:System.Windows.Controls.Viewbox>。</span><span class="sxs-lookup"><span data-stu-id="842f4-104">This example shows how to change the value of the <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> and <xref:System.Windows.Controls.Viewbox.Stretch%2A> properties of a <xref:System.Windows.Controls.Viewbox>.</span></span>  
   
- 第一個範例會使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定義 <xref:System.Windows.Controls.Viewbox> 項目。  它會指派值為 400 的 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A>。  此範例會在 <xref:System.Windows.Controls.Viewbox> 內將 <xref:System.Windows.Controls.Image> 項目巢狀化。  對應於 <xref:System.Windows.Controls.Viewbox.Stretch%2A> 與 <xref:System.Windows.Controls.StretchDirection> 列舉之屬性值的 <xref:System.Windows.Controls.Button> 項目，會管理巢狀 <xref:System.Windows.Controls.Image> 的自動縮放行為。  
+ <span data-ttu-id="842f4-105">第一個範例會使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定義<xref:System.Windows.Controls.Viewbox>項目。</span><span class="sxs-lookup"><span data-stu-id="842f4-105">The first example uses [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to define a <xref:System.Windows.Controls.Viewbox> element.</span></span> <span data-ttu-id="842f4-106">它會將指派<xref:System.Windows.FrameworkElement.MaxWidth%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>為 400。</span><span class="sxs-lookup"><span data-stu-id="842f4-106">It assigns a <xref:System.Windows.FrameworkElement.MaxWidth%2A> and <xref:System.Windows.FrameworkElement.MaxHeight%2A> of 400.</span></span> <span data-ttu-id="842f4-107">範例巢狀放置於<xref:System.Windows.Controls.Image>內的項目<xref:System.Windows.Controls.Viewbox>。</span><span class="sxs-lookup"><span data-stu-id="842f4-107">The example nests an <xref:System.Windows.Controls.Image> element within the <xref:System.Windows.Controls.Viewbox>.</span></span> <span data-ttu-id="842f4-108"><xref:System.Windows.Controls.Button>所對應的屬性值的項目<xref:System.Windows.Controls.Viewbox.Stretch%2A>和<xref:System.Windows.Controls.StretchDirection>列舉型別操作巢狀的自動縮放行為<xref:System.Windows.Controls.Image>。</span><span class="sxs-lookup"><span data-stu-id="842f4-108"><xref:System.Windows.Controls.Button> elements that correspond to the property values for the <xref:System.Windows.Controls.Viewbox.Stretch%2A> and <xref:System.Windows.Controls.StretchDirection> enumerations manipulate the stretching behavior of the nested <xref:System.Windows.Controls.Image>.</span></span>  
   
- [!code-xml[viewboxStretchLayoutSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml#1)]  
+ [!code-xaml[viewboxStretchLayoutSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml#1)]  
   
- 下列程式碼後置檔案會處理 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件，這些事件是由之前的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 範例所定義。  
+ <span data-ttu-id="842f4-109">下列程式碼後置檔案控制代碼<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件，先前[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]範例會定義。</span><span class="sxs-lookup"><span data-stu-id="842f4-109">The following code-behind file handles the <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> events that the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example defines.</span></span>  
   
  [!code-csharp[viewboxStretchLayoutSamp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml.cs#2)]
  [!code-vb[viewboxStretchLayoutSamp#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/viewboxStretchLayoutSamp/VisualBasic/Window1.xaml.vb#2)]  
   
-## 請參閱  
- <xref:System.Windows.Controls.Viewbox>   
- <xref:System.Windows.Media.Stretch>   
+## <a name="see-also"></a><span data-ttu-id="842f4-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="842f4-110">See Also</span></span>  
+ <xref:System.Windows.Controls.Viewbox>  
+ <xref:System.Windows.Media.Stretch>  
  <xref:System.Windows.Controls.StretchDirection>

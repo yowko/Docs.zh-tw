@@ -1,46 +1,38 @@
 ---
-title: "執行緒集區 (Visual Basic) |Microsoft 文件"
+title: "執行緒共用 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 4903fb7a-eaad-435a-9add-1d1b32de3b83
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6037d7ea17e260d44bae571aa25d413996f5a123
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 33b89d261aa2d038926f8c7e1832436b0cd34019
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="thread-pooling-visual-basic"></a>執行緒集區 (Visual Basic)
-A*執行緒集區*是可用來在背景中執行幾項工作的執行緒的集合。 (請參閱[執行緒 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)背景資訊。)這會使主要執行緒可以執行其他工作以非同步的方式。  
+# <a name="thread-pooling-visual-basic"></a><span data-ttu-id="6c81a-102">執行緒共用 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c81a-102">Thread Pooling (Visual Basic)</span></span>
+<span data-ttu-id="6c81a-103">「執行緒集區」是可用來在背景執行數項工作的執行緒集合。</span><span class="sxs-lookup"><span data-stu-id="6c81a-103">A *thread pool* is a collection of threads that can be used to perform several tasks in the background.</span></span> <span data-ttu-id="6c81a-104">(請參閱[執行緒 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)背景資訊。)這可讓主要執行緒非同步地執行其他工作。</span><span class="sxs-lookup"><span data-stu-id="6c81a-104">(See [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) for background information.) This leaves the primary thread free to perform other tasks asynchronously.</span></span>  
   
- 執行緒集區通常會運用在伺服器應用程式。 每個傳入要求被指派給一個執行緒在執行緒集區，以便可以以非同步方式處理要求，而不用中斷主要執行緒或延遲處理的後續要求。  
+ <span data-ttu-id="6c81a-105">執行緒集區通常運用於伺服器應用程式中。</span><span class="sxs-lookup"><span data-stu-id="6c81a-105">Thread pools are often employed in server applications.</span></span> <span data-ttu-id="6c81a-106">每個傳入要求都會指派給執行緒集區中的執行緒，因此可以非同步處理，而不需要輸入主要執行緒或延遲處理後續要求。</span><span class="sxs-lookup"><span data-stu-id="6c81a-106">Each incoming request is assigned to a thread from the thread pool, so that the request can be processed asynchronously, without tying up the primary thread or delaying the processing of subsequent requests.</span></span>  
   
- 當執行緒集區中的完成其工作時，它會回到佇列等待執行緒可重複使用。 這種重新使用可讓應用程式，以避免建立新的執行緒，每個工作的成本。  
+ <span data-ttu-id="6c81a-107">集區中的執行緒完成其工作之後，會回到可在其中重複使用它的等待中執行緒佇列。</span><span class="sxs-lookup"><span data-stu-id="6c81a-107">Once a thread in the pool completes its task, it is returned to a queue of waiting threads, where it can be reused.</span></span> <span data-ttu-id="6c81a-108">這項重複使用可讓應用程式避免建立每個工作之新執行緒的成本。</span><span class="sxs-lookup"><span data-stu-id="6c81a-108">This reuse enables applications to avoid the cost of creating a new thread for each task.</span></span>  
   
- 執行緒集區通常會有最大執行緒數目。 所有執行緒都都在忙碌中，如果其他工作都被放在佇列中，直到執行緒可提供服務。  
+ <span data-ttu-id="6c81a-109">執行緒集區一般會有最大數目的執行緒。</span><span class="sxs-lookup"><span data-stu-id="6c81a-109">Thread pools typically have a maximum number of threads.</span></span> <span data-ttu-id="6c81a-110">如果所有執行緒都忙碌中，則會將其他工作放在佇列中，直到執行緒變成可用時可以服務這些工作為止。</span><span class="sxs-lookup"><span data-stu-id="6c81a-110">If all the threads are busy, additional tasks are put in queue until they can be serviced as threads become available.</span></span>  
   
- 您可以實作自己的執行緒集區，但很容易使用透過<xref:System.Threading.ThreadPool>類別</xref:System.Threading.ThreadPool>的.NET Framework 所提供的執行緒集區  
+ <span data-ttu-id="6c81a-111">您可以實作自己的執行緒集區，但透過 <xref:System.Threading.ThreadPool> 類別較容易使用 .NET Framework 所提供的執行緒集區。</span><span class="sxs-lookup"><span data-stu-id="6c81a-111">You can implement your own thread pool, but it is easier to use the thread pool provided by the .NET Framework through the <xref:System.Threading.ThreadPool> class.</span></span>  
   
- 執行緒集區，您就呼叫<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>想要執行的程序的方法的委派和 Visual Basic 建立的執行緒，並執行您的程序。</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>  
+ <span data-ttu-id="6c81a-112">使用執行緒集區，您呼叫<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>要執行的委派程序的方法和 Visual Basic 建立執行緒，並執行您的程序。</span><span class="sxs-lookup"><span data-stu-id="6c81a-112">With thread pooling, you call the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> method with a delegate for the procedure you want to run, and Visual Basic creates the thread and runs your procedure.</span></span>  
   
-## <a name="thread-pooling-example"></a>執行緒集區範例  
- 下列範例顯示如何使用執行緒集區啟動數個工作。  
+## <a name="thread-pooling-example"></a><span data-ttu-id="6c81a-113">執行緒共用範例</span><span class="sxs-lookup"><span data-stu-id="6c81a-113">Thread Pooling Example</span></span>  
+ <span data-ttu-id="6c81a-114">下列範例示範如何使用執行緒共用來啟動數個工作。</span><span class="sxs-lookup"><span data-stu-id="6c81a-114">The following example shows how you can use thread pooling to start several tasks.</span></span>  
   
 ```vb  
 Public Sub DoWork()  
@@ -59,22 +51,22 @@ Private Sub AnotherLongTask(ByVal state As Object)
 End Sub  
 ```  
   
- 執行緒集區的其中一個優點是，您可以傳遞的狀態物件的引數給工作的程序。 如果您要呼叫的程序需要多個引數，則可以轉換的結構或到類別的執行個體`Object`資料型別。  
+ <span data-ttu-id="6c81a-115">執行緒共用的其中一個優點是您可以將狀態物件中的引數傳遞給工作程序。</span><span class="sxs-lookup"><span data-stu-id="6c81a-115">One advantage of thread pooling is that you can pass arguments in a state object to the task procedure.</span></span> <span data-ttu-id="6c81a-116">如果您要呼叫的程序需要多個引數，則可以將結構或類別執行個體轉換為 `Object` 資料類型。</span><span class="sxs-lookup"><span data-stu-id="6c81a-116">If the procedure you are calling requires more than one argument, you can cast a structure or an instance of a class into an `Object` data type.</span></span>  
   
-## <a name="thread-pool-parameters-and-return-values"></a>執行緒集區參數和傳回值  
- 傳回值，從執行緒集區執行緒並不簡單。 不允許從函式呼叫傳回值的標準方式，因為`Sub`程序是唯一可以排入執行緒集區的程序的類型。 其中一種您可以提供參數，並傳回值是藉由包裝參數，傳回的值與包裝函式中的方法類別中所述[參數和傳回值的多執行緒程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)。  
+## <a name="thread-pool-parameters-and-return-values"></a><span data-ttu-id="6c81a-117">執行緒集區參數和傳回值</span><span class="sxs-lookup"><span data-stu-id="6c81a-117">Thread Pool Parameters and Return Values</span></span>  
+ <span data-ttu-id="6c81a-118">從執行緒集區執行緒中傳回值並不直接。</span><span class="sxs-lookup"><span data-stu-id="6c81a-118">Returning values from a thread-pool thread is not straightforward.</span></span> <span data-ttu-id="6c81a-119">不允許從函式呼叫中傳回值的標準方式，因為 `Sub` 程序是唯一可放入執行緒集區佇列中的程序類型。</span><span class="sxs-lookup"><span data-stu-id="6c81a-119">The standard way of returning values from a function call is not allowed because `Sub` procedures are the only type of procedure that can be queued to a thread pool.</span></span> <span data-ttu-id="6c81a-120">其中一種方式您可以提供參數和傳回值為包裝參數，傳回值，並且包裝函式中的方法類別中所述[參數和傳回值的多執行緒程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="6c81a-120">One way you can provide parameters and return values is by wrapping the parameters, return values, and methods in a wrapper class as described in [Parameters and Return Values for Multithreaded Procedures (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).</span></span>  
   
- 提供的參數和傳回值解碼方法是使用選擇性`ByVal`狀態的物件變數<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>方法。</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 如果您使用此變數傳遞類別的執行個體的參考時，可以修改執行緒集區執行緒之執行個體成員，並當做傳回值。  
+ <span data-ttu-id="6c81a-121">提供參數和傳回值的較簡單方式是使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的選擇性 `ByVal` 狀態物件變數。</span><span class="sxs-lookup"><span data-stu-id="6c81a-121">An easer way to provide parameters and return values is by using the optional `ByVal` state object variable of the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span> <span data-ttu-id="6c81a-122">如果您使用此變數來傳遞類別執行個體的參考，則執行個體的成員可以透過執行緒集區執行緒進行修改，並當作傳回值。</span><span class="sxs-lookup"><span data-stu-id="6c81a-122">If you use this variable to pass a reference to an instance of a class, the members of the instance can be modified by the thread-pool thread and used as return values.</span></span>  
   
- 一開始它可能不明顯，您可以修改傳值方式傳遞變數所參考的物件。 您可以執行這項操作，因為物件參考傳值方式傳遞。 當您變更成員的物件參考所參考的物件時，所做的變更會套用至實際的類別執行個體。  
+ <span data-ttu-id="6c81a-123">一開始，可能不明顯，但您可以修改以傳值方式傳遞的變數所參考的物件。</span><span class="sxs-lookup"><span data-stu-id="6c81a-123">At first it may not be obvious that you can modify an object referred to by a variable that is passed by value.</span></span> <span data-ttu-id="6c81a-124">因為物件參考是以傳值方式傳遞，所以您可以執行這項作業。</span><span class="sxs-lookup"><span data-stu-id="6c81a-124">You can do this because only the object reference is passed by value.</span></span> <span data-ttu-id="6c81a-125">當您變更物件參考所參考的物件成員時，變更會套用至實際類別執行個體。</span><span class="sxs-lookup"><span data-stu-id="6c81a-125">When you make changes to members of the object referred to by the object reference, the changes apply to the actual class instance.</span></span>  
   
- 結構無法用於傳回狀態物件內的值。 由於結構是實值型別，對這個非同步處理序的變更，就不會變更原始結構的成員。 使用提供的參數，不需要傳回值時的結構。  
+ <span data-ttu-id="6c81a-126">結構無法用來傳回狀態物件內的值。</span><span class="sxs-lookup"><span data-stu-id="6c81a-126">Structures cannot be used to return values inside state objects.</span></span> <span data-ttu-id="6c81a-127">因為結構是實值型別，所以非同步處理程序所進行的變更不會變更原始結構的成員。</span><span class="sxs-lookup"><span data-stu-id="6c81a-127">Because structures are value types, changes that the asynchronous process makes do not change the members of the original structure.</span></span> <span data-ttu-id="6c81a-128">使用結構，以在不需要傳回值時提供參數。</span><span class="sxs-lookup"><span data-stu-id="6c81a-128">Use structures to provide parameters when return values are not needed.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading></xref:System.Threading>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- [如何︰ 使用執行緒集區 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [執行緒處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [多執行緒應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [執行緒同步處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)
+## <a name="see-also"></a><span data-ttu-id="6c81a-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6c81a-129">See Also</span></span>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [<span data-ttu-id="6c81a-130">如何：使用執行緒集區 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c81a-130">How to: Use a Thread Pool (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [<span data-ttu-id="6c81a-131">執行緒 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c81a-131">Threading (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [<span data-ttu-id="6c81a-132">多執行緒應用程式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c81a-132">Multithreaded Applications (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [<span data-ttu-id="6c81a-133">執行緒同步處理 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c81a-133">Thread Synchronization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)

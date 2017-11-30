@@ -1,41 +1,47 @@
 ---
-title: "如何：擷取文字選取項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "擷取文字"
-  - "文字, 擷取"
-  - "TextBox 控制項, 擷取文字"
+title: "如何：擷取文字選取項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [WPF], retrieving
+- TextBox control [WPF], retrieving text
+- retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8d5e1c362c02d2d1d9e1840ea2a55df6875a80ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：擷取文字選取項目
-此範例顯示如何使用 <xref:System.Windows.Controls.TextBox.SelectedText%2A> 屬性擷取使用者在 <xref:System.Windows.Controls.TextBox> 控制項中選取的文字。  
+# <a name="how-to-retrieve-a-text-selection"></a><span data-ttu-id="4bb37-102">如何：擷取文字選取項目</span><span class="sxs-lookup"><span data-stu-id="4bb37-102">How to: Retrieve a Text Selection</span></span>
+<span data-ttu-id="4bb37-103">這個範例會示範一個方式來使用<xref:System.Windows.Controls.TextBox.SelectedText%2A>屬性，以擷取使用者在選取的文字<xref:System.Windows.Controls.TextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="4bb37-103">This example shows one way to use the <xref:System.Windows.Controls.TextBox.SelectedText%2A> property to retrieve text that the user has selected in a <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
-## 範例  
- 下列[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 範例顯示如何定義包含要選取之部分文字的 <xref:System.Windows.Controls.TextBox> 控制項，以及含有指定 <xref:System.Windows.Controls.Button.OnClick%2A> 方法的 <xref:System.Windows.Controls.Button> 控制項。  
+## <a name="example"></a><span data-ttu-id="4bb37-104">範例</span><span class="sxs-lookup"><span data-stu-id="4bb37-104">Example</span></span>  
+ <span data-ttu-id="4bb37-105">下列[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]範例會示範定義<xref:System.Windows.Controls.TextBox>控制項，其中包含一些文字，若要選取，而<xref:System.Windows.Controls.Button>與指定的控制項<xref:System.Windows.Controls.Button.OnClick%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="4bb37-105">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] example shows the definition of a <xref:System.Windows.Controls.TextBox> control that contains some text to select, and a <xref:System.Windows.Controls.Button> control with a specified <xref:System.Windows.Controls.Button.OnClick%2A> method.</span></span>  
   
- 此範例會使用具有相關 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件處理常式的按鈕來擷取文字選取項目。  當使用者按一下按鈕時，<xref:System.Windows.Controls.Button.OnClick%2A> 方法即會將文字方塊中的所選文字複製到字串中。  據以擷取文字選取項目的特定情況 \(按一下按鈕\) 以及針對該選取所執行的動作 \(將文字選取項目複製到字串中\)，皆可輕易地修改以因應各種案例的需要。  
+ <span data-ttu-id="4bb37-106">在此範例中，具有相關聯的按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式用來擷取文字選取範圍。</span><span class="sxs-lookup"><span data-stu-id="4bb37-106">In this example, a button with an associated <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler is used to retrieve the text selection.</span></span> <span data-ttu-id="4bb37-107">當使用者按一下按鈕，<xref:System.Windows.Controls.Button.OnClick%2A>方法在文字方塊中選取的文字複製成字串。</span><span class="sxs-lookup"><span data-stu-id="4bb37-107">When the user clicks the button, the <xref:System.Windows.Controls.Button.OnClick%2A> method copies any selected text in the textbox into a string.</span></span> <span data-ttu-id="4bb37-108">特定情況下，根據的文字選取範圍會擷取 （按一下按鈕），以及與該選取項目 （複製為字串的文字選取範圍） 中，所採取的動作可以輕鬆地修改以容納各種案例。</span><span class="sxs-lookup"><span data-stu-id="4bb37-108">The particular circumstances by which the text selection is retrieved (clicking a button), as well as the action taken with that selection (copying the text selection to a string), can easily be modified to accommodate a wide variety of scenarios.</span></span>  
   
- [!code-xml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
   
-## 範例  
- 下列 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 範例顯示此範例之 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中定義的按鈕所適用的 <xref:System.Windows.Controls.Button.OnClick%2A> 事件處理常式。  
+## <a name="example"></a><span data-ttu-id="4bb37-109">範例</span><span class="sxs-lookup"><span data-stu-id="4bb37-109">Example</span></span>  
+ <span data-ttu-id="4bb37-110">下列[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]範例所示<xref:System.Windows.Controls.Button.OnClick%2A>按鈕中所定義的事件處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]此範例中。</span><span class="sxs-lookup"><span data-stu-id="4bb37-110">The following [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] example shows an <xref:System.Windows.Controls.Button.OnClick%2A> event handler for the button defined in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] for this example.</span></span>  
   
  [!code-csharp[TextBox_MiscCode#_SelectText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_selecttext)]
  [!code-vb[TextBox_MiscCode#_SelectText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
-## 請參閱  
- [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)   
- [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="4bb37-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4bb37-111">See Also</span></span>  
+ [<span data-ttu-id="4bb37-112">TextBox 概觀</span><span class="sxs-lookup"><span data-stu-id="4bb37-112">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [<span data-ttu-id="4bb37-113">RichTextBox 概觀</span><span class="sxs-lookup"><span data-stu-id="4bb37-113">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

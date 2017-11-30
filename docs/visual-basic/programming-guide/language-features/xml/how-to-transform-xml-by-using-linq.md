@@ -1,55 +1,38 @@
 ---
-title: "如何︰ 使用 LINQ (Visual Basic) 轉換 XML |Microsoft 文件"
+title: "如何：使用 LINQ 轉換 XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9f97466727064ea275c051b5916b0fb297e9e23a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: cf7c44598558b2c631ff3ef4c2ae0986a49ca2bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>如何：使用 LINQ 轉換 XML (Visual Basic)
-[XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)更容易讀取的 XML 從一個來源，並將其轉換為新的 XML 格式。 您可以利用 LINQ 查詢以擷取要轉換的內容，或將現有的文件中的內容變更為新的 XML 格式。  
+# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a><span data-ttu-id="668f6-102">如何：使用 LINQ 轉換 XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="668f6-102">How to: Transform XML by Using LINQ (Visual Basic)</span></span>
+<span data-ttu-id="668f6-103">[XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)輕鬆從一個來源讀取的 XML，並將其轉換成新的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="668f6-103">[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format.</span></span> <span data-ttu-id="668f6-104">您可以善用 LINQ 查詢來擷取要轉換的內容，或將現有的文件中的內容變更為新的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="668f6-104">You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.</span></span>  
   
- 本主題中的範例轉換從 XML 來源文件將在瀏覽器中檢視的 HTML 內容。  
+ <span data-ttu-id="668f6-105">本主題中的範例轉換從 XML 來源文件將在瀏覽器中檢視的 HTML 內容。</span><span class="sxs-lookup"><span data-stu-id="668f6-105">The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.</span></span>  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-transform-an-xml-document"></a>轉換 XML 文件  
+### <a name="to-transform-an-xml-document"></a><span data-ttu-id="668f6-106">要轉換的 XML 文件</span><span class="sxs-lookup"><span data-stu-id="668f6-106">To transform an XML document</span></span>  
   
-1.  在 Visual Studio 中建立新的 Visual Basic 專案中**主控台應用程式**專案範本。  
+1.  <span data-ttu-id="668f6-107">在 Visual Studio 中，建立新的 Visual Basic 專案中**主控台應用程式**專案範本。</span><span class="sxs-lookup"><span data-stu-id="668f6-107">In Visual Studio, create a new Visual Basic project in the **Console Application** project template.</span></span>  
   
-2.  按兩下要修改 Visual Basic 程式碼專案中建立的 Module1.vb 檔案。 加入下列程式碼以`Sub Main`的`Module1`模組。 此程式碼會建立來源 XML 文件當成<xref:System.Xml.Linq.XDocument>物件。</xref:System.Xml.Linq.XDocument>  
+2.  <span data-ttu-id="668f6-108">按兩下要修改的 Visual Basic 程式碼專案中建立的 Module1.vb 檔案。</span><span class="sxs-lookup"><span data-stu-id="668f6-108">Double-click the Module1.vb file created in the project to modify the Visual Basic code.</span></span> <span data-ttu-id="668f6-109">將下列程式碼加入`Sub Main`的`Module1`模組。</span><span class="sxs-lookup"><span data-stu-id="668f6-109">Add the following code to the `Sub Main` of the `Module1` module.</span></span> <span data-ttu-id="668f6-110">此程式碼會建立來源 XML 文件為<xref:System.Xml.Linq.XDocument>物件。</span><span class="sxs-lookup"><span data-stu-id="668f6-110">This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.</span></span>  
   
     ```vb  
     Dim catalog =   
@@ -83,11 +66,11 @@ ms.lasthandoff: 03/13/2017
         </Catalog>  
     ```  
   
-     [如何︰ 從檔案、 字串或資料流載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)。  
+     <span data-ttu-id="668f6-111">[如何： 從檔案、 字串或資料流載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)。</span><span class="sxs-lookup"><span data-stu-id="668f6-111">[How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).</span></span>  
   
-3.  若要建立來源 XML 文件的程式碼，後面加入下列程式碼來擷取所有\<通訊錄 > 物件項目並將它們轉換成 HTML 文件。 清單\<通訊錄 > 項目所使用的 LINQ 查詢，傳回的集合<xref:System.Xml.Linq.XElement>物件包含已轉換的 HTML。</xref:System.Xml.Linq.XElement> 您可以使用內嵌的運算式值放在新的 XML 格式將來源文件。  
+3.  <span data-ttu-id="668f6-112">若要建立來源 XML 文件的程式碼之後, 加入下列程式碼來擷取所有\<書籍 > 物件項目並將它們轉換成 HTML 文件。</span><span class="sxs-lookup"><span data-stu-id="668f6-112">After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document.</span></span> <span data-ttu-id="668f6-113">清單\<書籍 > 項目由使用 LINQ 查詢所傳回的集合<xref:System.Xml.Linq.XElement>物件，其中包含已轉換的 HTML。</span><span class="sxs-lookup"><span data-stu-id="668f6-113">The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML.</span></span> <span data-ttu-id="668f6-114">您可以使用內嵌的運算式值放在新的 XML 格式將來源文件。</span><span class="sxs-lookup"><span data-stu-id="668f6-114">You can use embedded expressions to put the values from the source document in the new XML format.</span></span>  
   
-     產生的 HTML 文件寫入至檔案，需使用<xref:System.Xml.Linq.XElement.Save%2A>方法。</xref:System.Xml.Linq.XElement.Save%2A>  
+     <span data-ttu-id="668f6-115">使用產生的 HTML 文件寫入至檔案<xref:System.Xml.Linq.XElement.Save%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="668f6-115">The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.</span></span>  
   
     ```vb  
     Dim htmlOutput =   
@@ -108,11 +91,11 @@ ms.lasthandoff: 03/13/2017
     htmlOutput.Save("BookDescription.html")  
     ```  
   
-4.  之後`Sub Main`的`Module1`，新增新方法 (`Sub`) 來轉換\<描述 > 節點插入指定的 HTML 格式。 這個方法稱為由上一個步驟中的程式碼和用來保留的格式\<描述 > 項目。  
+4.  <span data-ttu-id="668f6-116">之後`Sub Main`的`Module1`，加入新的方法 (`Sub`) 來轉換\<描述 > 節點到指定的 HTML 格式。</span><span class="sxs-lookup"><span data-stu-id="668f6-116">After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format.</span></span> <span data-ttu-id="668f6-117">這個方法會呼叫在上一個步驟中的程式碼和用來保留的格式\<描述 > 項目。</span><span class="sxs-lookup"><span data-stu-id="668f6-117">This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.</span></span>  
   
-     這個方法會取代的子元素\<描述 > 具有 HTML 項目。 `ReplaceWith`方法用來保留子元素的位置。 轉換後的內容\<描述 > 項目包含在 HTML 段落 (\<p >) 項目。 <xref:System.Xml.Linq.XContainer.Nodes%2A>屬性用來擷取轉換後的內容\<描述 > 項目。</xref:System.Xml.Linq.XContainer.Nodes%2A> 這可確保子元素，包含在轉換後的內容。  
+     <span data-ttu-id="668f6-118">這個方法會取代的子元素\<描述 > 具有 HTML 項目。</span><span class="sxs-lookup"><span data-stu-id="668f6-118">This method replaces sub-elements of the \<Description> element with HTML.</span></span> <span data-ttu-id="668f6-119">`ReplaceWith`方法用來保留的子元素的位置。</span><span class="sxs-lookup"><span data-stu-id="668f6-119">The `ReplaceWith` method is used to preserve the location of the sub-elements.</span></span> <span data-ttu-id="668f6-120">轉換後的內容\<描述 > HTML 段落中會包含元素 (\<p >) 項目。</span><span class="sxs-lookup"><span data-stu-id="668f6-120">The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element.</span></span> <span data-ttu-id="668f6-121"><xref:System.Xml.Linq.XContainer.Nodes%2A>屬性用來擷取已轉換的內容\<描述 > 項目。</span><span class="sxs-lookup"><span data-stu-id="668f6-121">The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element.</span></span> <span data-ttu-id="668f6-122">這可確保確定轉換的內容中包含的子項目。</span><span class="sxs-lookup"><span data-stu-id="668f6-122">This ensures that sub-elements are included in the transformed content.</span></span>  
   
-     加入下列程式碼之後`Sub Main`的`Module1`。  
+     <span data-ttu-id="668f6-123">加入下列程式碼之後`Sub Main`的`Module1`。</span><span class="sxs-lookup"><span data-stu-id="668f6-123">Add the following code after `Sub Main` of `Module1`.</span></span>  
   
     ```vb  
     Public Function TransformDescription(ByVal desc As XElement) As XElement  
@@ -140,9 +123,9 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-5.  儲存您的變更。  
+5.  <span data-ttu-id="668f6-124">儲存您的變更。</span><span class="sxs-lookup"><span data-stu-id="668f6-124">Save your changes.</span></span>  
   
-6.  按 f5 鍵執行的程式碼。 最後儲存的文件將會如下所示︰  
+6.  <span data-ttu-id="668f6-125">按 f5 鍵執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="668f6-125">Press F5 to run the code.</span></span> <span data-ttu-id="668f6-126">最後儲存的文件將會如下所示：</span><span class="sxs-lookup"><span data-stu-id="668f6-126">The resulting saved document will resemble the following:</span></span>  
   
     ```  
     <?xml version="1.0"?>  
@@ -181,11 +164,10 @@ ms.lasthandoff: 03/13/2017
     </html>  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)   
- [在 Visual Basic 中管理 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)   
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [如何︰ 從檔案、 字串或資料流載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [在 Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="668f6-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="668f6-127">See Also</span></span>  
+ [<span data-ttu-id="668f6-128">XML 常值</span><span class="sxs-lookup"><span data-stu-id="668f6-128">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="668f6-129">在 Visual Basic 中管理 XML</span><span class="sxs-lookup"><span data-stu-id="668f6-129">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
+ [<span data-ttu-id="668f6-130">XML</span><span class="sxs-lookup"><span data-stu-id="668f6-130">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
+ [<span data-ttu-id="668f6-131">如何：從檔案、字串或資料流載入 XML</span><span class="sxs-lookup"><span data-stu-id="668f6-131">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ [<span data-ttu-id="668f6-132">LINQ</span><span class="sxs-lookup"><span data-stu-id="668f6-132">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="668f6-133">Visual Basic 中的 LINQ 簡介</span><span class="sxs-lookup"><span data-stu-id="668f6-133">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

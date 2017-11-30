@@ -1,44 +1,40 @@
 ---
-title: "擷取段落 (Visual Basic) 的文字 |Microsoft 文件"
+title: "擷取段落的文字與 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 147c8e60e44fd71869df84cbee9836213d96c0fd
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 492fc0dffd007f0ccdb7454c62e86cac753ca06b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>擷取文字的段落 (Visual Basic)
-這個範例是根據上述範例中，[擷取段落及其樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)。 這個新的範例會將每個段落的文字當做字串擷取。  
+# <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a><span data-ttu-id="31bb9-102">擷取段落的文字與 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31bb9-102">Retrieving the Text of the Paragraphs (Visual Basic)</span></span>
+<span data-ttu-id="31bb9-103">本範例是上述範例中，基礎[擷取段落和其樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)。</span><span class="sxs-lookup"><span data-stu-id="31bb9-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="31bb9-104">這個新的範例會將每個段落的文字當做字串擷取。</span><span class="sxs-lookup"><span data-stu-id="31bb9-104">This new example retrieves the text of each paragraph as a string.</span></span>  
   
- 若要擷取文字，此範例可加入逐一查看匿名型別之集合的其他查詢，並規劃加入新成員 `Text` 之匿名型別的新集合。 它會使用<xref:System.Linq.Enumerable.Aggregate%2A>標準查詢運算子，將多個字串串連到一個字串。</xref:System.Linq.Enumerable.Aggregate%2A>  
+ <span data-ttu-id="31bb9-105">若要擷取文字，此範例可加入逐一查看匿名型別之集合的其他查詢，並規劃加入新成員 `Text` 之匿名型別的新集合。</span><span class="sxs-lookup"><span data-stu-id="31bb9-105">To retrieve the text, this example adds an additional query that iterates through the collection of anonymous types and projects a new collection of an anonymous type with the addition of a new member, `Text`.</span></span> <span data-ttu-id="31bb9-106">它會使用 <xref:System.Linq.Enumerable.Aggregate%2A> 標準查詢運算子，將多個字串串連到一個字串。</span><span class="sxs-lookup"><span data-stu-id="31bb9-106">It uses the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span>  
   
- 此技術 (也就是，先規劃為匿名型別的集合，然後使用此集合規劃為匿名型別的新集合) 是實用的常見慣用句。 在沒有規劃為第一個匿名型別的情況下，可能已經撰寫這個查詢。 不過，因為延遲評估的緣故，這麼做不會使用太多額外的處理電源。 此慣用句會在堆積上建立更多短期存在的物件，但實質上，這不會降低效能。  
+ <span data-ttu-id="31bb9-107">此技術 (也就是，先規劃為匿名型別的集合，然後使用此集合規劃為匿名型別的新集合) 是實用的常見慣用句。</span><span class="sxs-lookup"><span data-stu-id="31bb9-107">This technique (that is, first projecting to a collection of an anonymous type, then using this collection to project to a new collection of an anonymous type) is a common and useful idiom.</span></span> <span data-ttu-id="31bb9-108">在沒有規劃為第一個匿名型別的情況下，可能已經撰寫這個查詢。</span><span class="sxs-lookup"><span data-stu-id="31bb9-108">This query could have been written without projecting to the first anonymous type.</span></span> <span data-ttu-id="31bb9-109">不過，因為延遲評估的緣故，這麼做不會使用太多額外的處理電源。</span><span class="sxs-lookup"><span data-stu-id="31bb9-109">However, because of lazy evaluation, doing so does not use much additional processing power.</span></span> <span data-ttu-id="31bb9-110">此慣用句會在堆積上建立更多短期存在的物件，但實質上，這不會降低效能。</span><span class="sxs-lookup"><span data-stu-id="31bb9-110">The idiom creates more short lived objects on the heap, but this does not substantially degrade performance.</span></span>  
   
- 當然，此慣用句可能會撰寫包含功能的單一查詢以擷取段落、每個段落的樣式，以及每個段落的文字。 不過，這通常有助於將更複雜的查詢分割為多個查詢，因為所產生的程式碼更為模組化而且更容易維護。 此外，如果您需要重複使用某部分查詢，當查詢以此種方式撰寫時，重構比較容易。  
+ <span data-ttu-id="31bb9-111">當然，此慣用句可能會撰寫包含功能的單一查詢以擷取段落、每個段落的樣式，以及每個段落的文字。</span><span class="sxs-lookup"><span data-stu-id="31bb9-111">Of course, it would be possible to write a single query that contains the functionality to retrieve the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="31bb9-112">不過，這通常有助於將更複雜的查詢分割為多個查詢，因為所產生的程式碼更為模組化而且更容易維護。</span><span class="sxs-lookup"><span data-stu-id="31bb9-112">However, it often is useful to break up a more complicated query into multiple queries because the resulting code is more modular and easier to maintain.</span></span> <span data-ttu-id="31bb9-113">此外，如果您需要重複使用某部分查詢，當查詢以此種方式撰寫時，重構比較容易。</span><span class="sxs-lookup"><span data-stu-id="31bb9-113">Furthermore, if you need to reuse a portion of the query, it is easier to refactor if the queries are written in this manner.</span></span>  
   
- 鏈結在一起，這些查詢使用主題中詳細檢查的處理模型[教學課程︰ 延後執行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)。  
+ <span data-ttu-id="31bb9-114">這些查詢，會鏈結在一起，使用會檢查詳細資料 > 主題中的處理模型[教學課程： 延後執行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)。</span><span class="sxs-lookup"><span data-stu-id="31bb9-114">These queries, which are chained together, use the processing model that is examined in detail in the topic [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).</span></span>  
   
-## <a name="example"></a>範例  
- 此範例會處理 WordprocessingML 文件，以判斷項目節點、樣式名稱，以及每個段落的文字。 此範例在這個教學課程中，會在先前的範例上建置。 新的查詢會在以下程式碼的註解中叫出。  
+## <a name="example"></a><span data-ttu-id="31bb9-115">範例</span><span class="sxs-lookup"><span data-stu-id="31bb9-115">Example</span></span>  
+ <span data-ttu-id="31bb9-116">此範例會處理 WordprocessingML 文件，以判斷項目節點、樣式名稱，以及每個段落的文字。</span><span class="sxs-lookup"><span data-stu-id="31bb9-116">This example processes a WordprocessingML document, determining the element node, the style name, and the text of each paragraph.</span></span> <span data-ttu-id="31bb9-117">此範例在這個教學課程中，會在先前的範例上建置。</span><span class="sxs-lookup"><span data-stu-id="31bb9-117">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="31bb9-118">新的查詢會在以下程式碼的註解中叫出。</span><span class="sxs-lookup"><span data-stu-id="31bb9-118">The new query is called out in comments in the code below.</span></span>  
   
- 如需建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ <span data-ttu-id="31bb9-119">建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="31bb9-119">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用中的型別<xref:System.IO.Packaging?displayProperty=fullName>命名空間。</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="31bb9-120">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="31bb9-120">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="31bb9-121">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="31bb9-121">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -129,7 +125,7 @@ Module Module1
 End Module  
 ```  
   
- 這個範例會產生下列輸出時套用至文件中所述[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ <span data-ttu-id="31bb9-122">這個範例會產生下列輸出時套用至文件中所述[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="31bb9-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -149,11 +145,11 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="next-steps"></a>後續步驟  
- 下一個範例示範如何使用擴充方法，而不是<xref:System.Linq.Enumerable.Aggregate%2A>，將多個字串串連成單一字串。</xref:System.Linq.Enumerable.Aggregate%2A>  
+## <a name="next-steps"></a><span data-ttu-id="31bb9-123">後續步驟</span><span class="sxs-lookup"><span data-stu-id="31bb9-123">Next Steps</span></span>  
+ <span data-ttu-id="31bb9-124">下一個範例顯示如何使用擴充方法 (而非 <xref:System.Linq.Enumerable.Aggregate%2A>)，將多個字串串連到一個字串。</span><span class="sxs-lookup"><span data-stu-id="31bb9-124">The next example shows how to use an extension method, instead of <xref:System.Linq.Enumerable.Aggregate%2A>, to concatenate multiple strings into a single string.</span></span>  
   
--   [重構的擴充方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+-   [<span data-ttu-id="31bb9-125">使用擴充方法 (Visual Basic) 進行重構</span><span class="sxs-lookup"><span data-stu-id="31bb9-125">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>另請參閱  
- [教學課程︰ 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [延後的執行與延遲評估在 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="31bb9-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="31bb9-126">See Also</span></span>  
+ [<span data-ttu-id="31bb9-127">教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容</span><span class="sxs-lookup"><span data-stu-id="31bb9-127">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [<span data-ttu-id="31bb9-128">延後的執行與延遲評估 linq to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31bb9-128">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
